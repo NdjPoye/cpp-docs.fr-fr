@@ -1,0 +1,59 @@
+---
+title: "&lt; liste &gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "<list>"
+  - "std.<list>"
+  - "std::<list>"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "list (en-tête)"
+ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
+caps.latest.revision: 20
+caps.handback.revision: 20
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# &lt; liste &gt;
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+Définit la classe de modèle de conteneur list et plusieurs modèles de prise en charge.  
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```  
+#include <list>  
+```  
+  
+### <a name="operators"></a>Opérateurs  
+  
+|||  
+|-|-|  
+|[opérateur ! =](../Topic/%3Clist%3E%20operators.md#operator_neq)|Teste si l'objet de liste situé à gauche de l'opérateur n'est pas égal à l'objet de liste situé à droite.|  
+|[opérateur <](../Topic/%3Clist%3E%20operators.md#operator_lt_)|Teste si l'objet de liste situé à gauche de l'opérateur est inférieur à l'objet de liste situé à droite.|  
+|[opérateur \< =](../Topic/%3Clist%3E%20operators.md#operator_lt__eq)|Teste si l'objet de liste situé à gauche de l'opérateur est inférieur ou égal à l'objet de liste situé à droite.|  
+|[opérateur ==](../Topic/%3Clist%3E%20operators.md#operator_eq_eq)|Teste si l'objet de liste situé à gauche de l'opérateur est égal à l'objet de liste situé à droite.|  
+|[opérateur >](../Topic/%3Clist%3E%20operators.md#operator_gt_)|Teste si l'objet de liste situé à gauche de l'opérateur est supérieur à l'objet de liste situé à droite.|  
+|[opérateur > =](../Topic/%3Clist%3E%20operators.md#operator_gt__eq)|Teste si l'objet de liste situé à gauche de l'opérateur est supérieur ou égal à l'objet de liste situé à droite.|  
+  
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[List, classe](../standard-library/list-class.md)|Classe de modèle de conteneurs de séquences. Ces derniers conservent leurs éléments dans une disposition linéaire, et permettent des insertions et des suppressions efficaces à n'importe quel emplacement de la séquence.|  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   
+ [Sécurité des threads dans la bibliothèque Standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Bibliothèque de modèles standard](../misc/standard-template-library.md)
+
