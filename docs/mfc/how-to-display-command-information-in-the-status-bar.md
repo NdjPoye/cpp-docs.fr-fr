@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: afficher les informations sur les commandes dans la barre d&#39;&#233;tat | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "barres d'état, zone de message"
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Comment&#160;: afficher les informations sur les commandes dans la barre d&#39;&#233;tat
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Contextes de p&#233;riph&#233;rique | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -43,10 +42,10 @@ helpviewer_keywords:
   - "fenêtres (C++), dessiner directement dans"
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Contextes de p&#233;riph&#233;rique
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

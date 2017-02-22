@@ -1,8 +1,7 @@
 ---
 title: "Bits par caract&#232;re | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,13 +10,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 ms.assetid: ce317fce-67bf-4963-9e6d-13682cda5f3f
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Bits par caract&#232;re
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

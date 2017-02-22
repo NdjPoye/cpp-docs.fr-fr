@@ -1,8 +1,7 @@
 ---
 title: "Interpr&#233;tation des s&#233;quences de caract&#232;res multioctets | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "c.character.multibyte"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "MBCS (C++), page de codes de paramètres régionaux"
 ms.assetid: da9150de-70ea-4d2f-90e6-ddb9202dd80b
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Interpr&#233;tation des s&#233;quences de caract&#232;res multioctets
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

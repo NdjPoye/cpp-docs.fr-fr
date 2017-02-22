@@ -1,8 +1,7 @@
 ---
 title: "Cr&#233;ation d&#39;un document/d&#39;une vue | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "vues, créer"
 ms.assetid: bda14f41-ed50-439d-af9e-591174e7dd64
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Cr&#233;ation d&#39;un document/d&#39;une vue
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

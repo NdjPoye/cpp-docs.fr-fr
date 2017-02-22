@@ -1,8 +1,7 @@
 ---
 title: "D&#233;finitions et d&#233;clarations de fonctions | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "déclarer des fonctions"
   - "déclarer des fonctions, définitions de fonction"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "déclarations locales"
 ms.assetid: 43fd98eb-7441-4473-a5d9-fc88c75577f7
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # D&#233;finitions et d&#233;clarations de fonctions
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

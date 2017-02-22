@@ -1,8 +1,7 @@
 ---
 title: "D&#233;veloppement des arguments avec caract&#232;res g&#233;n&#233;riques | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "caractère générique astérisque"
   - "développer des arguments de caractères génériques"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "caractères génériques, développer"
 ms.assetid: 80a11c4b-0199-420e-a342-cf1d803be5bc
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # D&#233;veloppement des arguments avec caract&#232;res g&#233;n&#233;riques
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

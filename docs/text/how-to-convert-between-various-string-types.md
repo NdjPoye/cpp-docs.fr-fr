@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: effectuer une conversion entre diff&#233;rents types de cha&#238;nes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "chaînes (C++), convertir"
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Comment&#160;: effectuer une conversion entre diff&#233;rents types de cha&#238;nes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

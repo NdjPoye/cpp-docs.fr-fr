@@ -1,8 +1,7 @@
 ---
 title: "/INCREMENTAL (Lier par incr&#233;ment) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "LINK (outil C++), options pour effectuer une liaison complète"
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /INCREMENTAL (Lier par incr&#233;ment)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

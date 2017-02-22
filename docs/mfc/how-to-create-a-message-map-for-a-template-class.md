@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: cr&#233;er une table des messages pour une classe de mod&#232;le | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "classes de modèle, créer des tables des messages"
 ms.assetid: 4e7e24f8-06df-4b46-82aa-7435c8650de3
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Comment&#160;: cr&#233;er une table des messages pour une classe de mod&#232;le
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

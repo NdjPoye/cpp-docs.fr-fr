@@ -1,8 +1,7 @@
 ---
 title: "Serveurs&#160;: probl&#232;mes d&#39;interface utilisateur | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "interface utilisateur (problèmes)"
 ms.assetid: 7ef55702-b439-43fa-8ced-c69b96239a89
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Serveurs&#160;: probl&#232;mes d&#39;interface utilisateur
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

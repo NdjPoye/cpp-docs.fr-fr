@@ -1,8 +1,7 @@
 ---
 title: "Lecture et &#233;criture de fichiers | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "écrire dans les fichiers (C++)"
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Lecture et &#233;criture de fichiers
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

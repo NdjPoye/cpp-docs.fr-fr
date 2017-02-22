@@ -1,8 +1,7 @@
 ---
 title: "Proc&#233;dure pas &#224; pas&#160;: cr&#233;ation d&#39;un r&#233;seau de traitement d&#39;image | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "réseaux de traitement d'image, créer (runtime d'accès concurrentiel)"
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
 caps.latest.revision: 15
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Proc&#233;dure pas &#224; pas&#160;: cr&#233;ation d&#39;un r&#233;seau de traitement d&#39;image
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

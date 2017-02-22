@@ -1,8 +1,7 @@
 ---
 title: "Bo&#238;te de dialogue Police de l&#39;outil texte (&#201;diteur d&#39;images pour les ic&#244;nes) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "Police de l'outil texte (boîte de dialogue)"
   - "polices, changement sur une image"
   - "texte, sur des images"
 ms.assetid: c398e2e7-0263-43c1-9ab4-768a280c2407
 caps.latest.revision: 8
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Bo&#238;te de dialogue Police de l&#39;outil texte (&#201;diteur d&#39;images pour les ic&#244;nes)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

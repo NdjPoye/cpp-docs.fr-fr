@@ -1,8 +1,7 @@
 ---
 title: "R&#233;f&#233;rence d&#39;encodage ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "encoder, fonctions"
 ms.assetid: 82d4fdf3-3c4a-4fe2-b297-8ffb4714406f
 caps.latest.revision: 8
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # R&#233;f&#233;rence d&#39;encodage ATL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: stocker la r&#233;f&#233;rence d&#39;un objet dans une m&#233;moire non manag&#233;e | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "références, à des objets dans des fonctions natives"
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
 caps.latest.revision: 10
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Comment&#160;: stocker la r&#233;f&#233;rence d&#39;un objet dans une m&#233;moire non manag&#233;e
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

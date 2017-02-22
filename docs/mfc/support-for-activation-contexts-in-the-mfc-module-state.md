@@ -1,8 +1,7 @@
 ---
 title: "Prise en charge des contextes d&#39;activation dans l&#39;&#233;tat du module MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "contextes d'activation (C++), prise en charge des MFC"
 ms.assetid: 1e49eea9-3620-46dd-bc5f-d664749567c7
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Prise en charge des contextes d&#39;activation dans l&#39;&#233;tat du module MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

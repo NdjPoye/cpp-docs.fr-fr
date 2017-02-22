@@ -1,8 +1,7 @@
 ---
 title: "Gestion de la m&#233;moire&#160;: exemples | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,10 +29,10 @@ helpviewer_keywords:
   - "types (C++), allocation de mémoire"
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Gestion de la m&#233;moire&#160;: exemples
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

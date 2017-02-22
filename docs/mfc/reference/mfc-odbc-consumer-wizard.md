@@ -1,8 +1,7 @@
 ---
 title: "Consommateur ODBC MFC (Assistant) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Assistants (MFC)"
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
 caps.latest.revision: 7
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Consommateur ODBC MFC (Assistant)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

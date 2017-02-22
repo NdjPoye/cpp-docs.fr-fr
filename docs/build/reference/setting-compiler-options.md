@@ -1,8 +1,7 @@
 ---
 title: "D&#233;finition des options du compilateur | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "options du compilateur, définir"
 ms.assetid: 4b079f5b-0017-4124-aad6-0d2b58e427e0
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # D&#233;finition des options du compilateur
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

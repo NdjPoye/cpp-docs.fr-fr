@@ -1,8 +1,7 @@
 ---
-title: "_setmode | Microsoft Docs"
+title: "setmode | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,23 +24,17 @@ apilocation:
   - "api-ms-win-crt-stdio-l1-1-0.dll"
 apitype: "DLLExport"
 f1_keywords: 
-  - "_setmode"
+  - "setmode"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "_setmode (fonction)"
-  - "translation de fichier (C++), définir le mode"
-  - "fichiers (C++), modes"
-  - "fichiers (C++), translation"
   - "setmode (fonction)"
-  - "Unicode (C++), sortie de la console"
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
 caps.latest.revision: 23
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # _setmode
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

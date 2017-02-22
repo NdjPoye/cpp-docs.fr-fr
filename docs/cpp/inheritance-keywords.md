@@ -1,8 +1,7 @@
 ---
 title: "Mots cl&#233; d&#39;h&#233;ritage | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "mots clés (C++), mots clé d'héritage"
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Mots cl&#233; d&#39;h&#233;ritage
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

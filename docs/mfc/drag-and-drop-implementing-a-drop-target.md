@@ -1,8 +1,7 @@
 ---
 title: "Glisser-d&#233;placer&#160;: impl&#233;mentation d&#39;une cible de d&#233;placement | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OLE (glisser-déplacer), implémenter des cibles de déplacement"
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Glisser-d&#233;placer&#160;: impl&#233;mentation d&#39;une cible de d&#233;placement
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

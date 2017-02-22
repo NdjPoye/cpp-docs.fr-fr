@@ -1,8 +1,7 @@
 ---
 title: "compilateur, intrins&#232;ques | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "intrinsèques, compilateur"
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # compilateur, intrins&#232;ques
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

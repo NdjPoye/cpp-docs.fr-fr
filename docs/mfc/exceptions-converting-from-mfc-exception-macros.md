@@ -1,8 +1,7 @@
 ---
 title: "Exceptions&#160;: conversion &#224; partir de macros d&#39;exception MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "macros, mots clés C++"
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Exceptions&#160;: conversion &#224; partir de macros d&#39;exception MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

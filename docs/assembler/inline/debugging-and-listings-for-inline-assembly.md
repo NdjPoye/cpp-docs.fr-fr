@@ -1,8 +1,7 @@
 ---
 title: "D&#233;bogage et listes pour l&#39;assembly inline | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "débogueur au niveau de la source"
 ms.assetid: 69266930-6f9a-433d-b704-f4f44e7b2583
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # D&#233;bogage et listes pour l&#39;assembly inline
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

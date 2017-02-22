@@ -1,8 +1,7 @@
 ---
 title: "Cr&#233;ation d&#39;un contr&#244;le de zone de liste d&#233;roulante &#233;tendue | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "zones de liste déroulante étendues, créer"
 ms.assetid: a964267e-97b6-4e77-9f89-55bb5c68913f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Cr&#233;ation d&#39;un contr&#244;le de zone de liste d&#233;roulante &#233;tendue
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

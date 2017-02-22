@@ -1,8 +1,7 @@
 ---
 title: "Gestion de la m&#233;moire&#160;: blocs de m&#233;moire redimensionnables | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "blocs de mémoire redimensionnables"
 ms.assetid: f0efe6f4-a3ed-4541-9195-51ec1291967a
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Gestion de la m&#233;moire&#160;: blocs de m&#233;moire redimensionnables
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

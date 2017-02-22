@@ -1,8 +1,7 @@
 ---
 title: "Utilisation d&#39;une barre de bo&#238;te de dialogue avec un contr&#244;le rebar | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "WS_EX_TRANSPARENT (style)"
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Utilisation d&#39;une barre de bo&#238;te de dialogue avec un contr&#244;le rebar
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

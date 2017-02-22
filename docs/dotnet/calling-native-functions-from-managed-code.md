@@ -1,8 +1,7 @@
 ---
 title: "Appel &#224; des fonctions natives &#224; partir de code manag&#233; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "appel de code non managé (C++), interopérabilité"
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Appel &#224; des fonctions natives &#224; partir de code manag&#233;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

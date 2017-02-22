@@ -1,8 +1,7 @@
 ---
 title: "Contr&#244;les ActiveX MFC&#160;: ajout d&#39;une page de propri&#233;t&#233;s personnalis&#233;es | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "pages de propriétés (C++), contrôles ActiveX MFC"
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Contr&#244;les ActiveX MFC&#160;: ajout d&#39;une page de propri&#233;t&#233;s personnalis&#233;es
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

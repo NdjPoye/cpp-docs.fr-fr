@@ -1,8 +1,7 @@
 ---
 title: "Cr&#233;ation et utilisation de contr&#244;les | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "contrôles Windows communs (C++), à propos des contrôles communs"
 ms.assetid: a252acad-3cc0-440e-bbc6-43eaaf8cb7bb
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Cr&#233;ation et utilisation de contr&#244;les
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

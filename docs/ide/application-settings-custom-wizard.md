@@ -1,8 +1,7 @@
 ---
 title: "Param&#232;tres de l&#39;application, Assistant personnalis&#233; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Assistant personnalisé, paramètres de l’application"
 ms.assetid: 3e0e0dbc-8848-4fca-a23a-d947a1a93f2a
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Param&#232;tres de l&#39;application, Assistant personnalis&#233;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

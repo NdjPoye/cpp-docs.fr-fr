@@ -1,8 +1,7 @@
 ---
 title: "&#201;criture d&#39;un gestionnaire des terminaisons | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "try-catch (mot clé) (C++), gestionnaires de terminaisons"
 ms.assetid: 52aa1f8f-f8dd-44b8-be94-5e2fc88d44fb
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # &#201;criture d&#39;un gestionnaire des terminaisons
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

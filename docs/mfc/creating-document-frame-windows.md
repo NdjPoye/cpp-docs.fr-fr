@@ -1,8 +1,7 @@
 ---
 title: "Cr&#233;ation de fen&#234;tres frame de document | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "fenêtres (C++), créer"
 ms.assetid: 8671e239-b76f-4dea-afa8-7024e6e58ff5
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Cr&#233;ation de fen&#234;tres frame de document
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

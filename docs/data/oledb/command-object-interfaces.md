@@ -1,8 +1,7 @@
 ---
 title: "Interfaces de l&#39;objet de commande | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OLE DB (C++), interfaces de l'objet commande"
 ms.assetid: dacff5ae-252c-4f20-9ad7-4e602cc48536
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Interfaces de l&#39;objet de commande
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

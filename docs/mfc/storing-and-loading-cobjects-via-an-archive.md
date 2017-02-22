@@ -1,8 +1,7 @@
 ---
 title: "Stockage et chargement de CObjects via une archive | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Serialize (méthode), différences par rapport aux opérateurs CArchive"
 ms.assetid: a829b6dd-bc31-47e0-8108-fbb946722db9
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Stockage et chargement de CObjects via une archive
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

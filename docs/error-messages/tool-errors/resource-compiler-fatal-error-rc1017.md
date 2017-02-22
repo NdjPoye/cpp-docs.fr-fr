@@ -1,8 +1,7 @@
 ---
 title: "Erreur irr&#233;cup&#233;rable RC1017 du compilateur de ressources  | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RC1017"
 ms.assetid: 62ac1356-4481-49a0-8873-36daf42ffdcd
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Erreur irr&#233;cup&#233;rable RC1017 du compilateur de ressources 
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

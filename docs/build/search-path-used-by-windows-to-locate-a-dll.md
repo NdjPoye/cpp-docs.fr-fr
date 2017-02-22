@@ -1,8 +1,7 @@
 ---
 title: "Chemin de recherche utilis&#233; par Windows pour localiser une DLL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Windows (C++), chemin de recherche de DLL"
 ms.assetid: 84bfb380-ad7b-4962-b2d0-51b19a45f1bb
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Chemin de recherche utilis&#233; par Windows pour localiser une DLL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

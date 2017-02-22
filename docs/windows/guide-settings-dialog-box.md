@@ -1,8 +1,7 @@
 ---
 title: "Param&#232;tres du rep&#232;re, bo&#238;te de dialogue | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -10,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
-  - "C++"
   - "C++"
 helpviewer_keywords: 
   - "DLU (unités de boîte de dialogue)"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "Paramètres du repère (boîte de dialogue de l'Éditeur de boîtes de dialogue)"
 ms.assetid: 55381e1c-146a-4fa7-b1b3-b1492817615f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Param&#232;tres du rep&#232;re, bo&#238;te de dialogue
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

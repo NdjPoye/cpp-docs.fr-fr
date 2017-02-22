@@ -1,8 +1,7 @@
 ---
 title: "Int&#233;gration du format OLE au format MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "OLE (éléments)"
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Int&#233;gration du format OLE au format MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

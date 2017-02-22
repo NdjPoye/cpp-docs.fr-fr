@@ -1,8 +1,7 @@
 ---
 title: "Appels de fonction | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "appels de fonction"
   - "appels de fonction, à propos des appels de fonction"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "fonctions (C), appeler"
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Appels de fonction
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

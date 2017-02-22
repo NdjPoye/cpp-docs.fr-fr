@@ -1,8 +1,7 @@
 ---
 title: "Proc&#233;dure de fen&#234;tre, points d&#39;entr&#233;e | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "procédure de fenêtre (points d'entrée)"
 ms.assetid: a6b46a7f-6e42-45f2-9ae6-82e19fc57148
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Proc&#233;dure de fen&#234;tre, points d&#39;entr&#233;e
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

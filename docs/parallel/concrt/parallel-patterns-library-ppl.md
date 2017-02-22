@@ -1,8 +1,7 @@
 ---
 title: "Biblioth&#232;que de mod&#232;les parall&#232;les | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Bibliothèque de modèles parallèles"
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
 caps.latest.revision: 27
-caps.handback.revision: 27
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # Biblioth&#232;que de mod&#232;les parall&#232;les
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

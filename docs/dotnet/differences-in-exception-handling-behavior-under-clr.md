@@ -1,8 +1,7 @@
 ---
 title: "Diff&#233;rences du comportement de gestion des exceptions dans /CLR | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "set_se_translator (fonction)"
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Diff&#233;rences du comportement de gestion des exceptions dans /CLR
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

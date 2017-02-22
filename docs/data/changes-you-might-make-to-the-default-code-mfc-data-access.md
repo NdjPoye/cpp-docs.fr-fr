@@ -1,8 +1,7 @@
 ---
 title: "Modifications possibles dans le code par d&#233;faut (Acc&#232;s aux donn&#233;es MFC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "vues des enregistrements (C++), personnaliser le code par défaut"
 ms.assetid: 9992ed37-a6bf-45a5-a572-5c14e42b6628
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Modifications possibles dans le code par d&#233;faut (Acc&#232;s aux donn&#233;es MFC)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Windows Sockets&#160;: conversion de cha&#238;nes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Windows Sockets (C++), conversion de chaînes de caractères multioctets"
 ms.assetid: 9df522b5-6b23-41e0-bb96-e4e623baf141
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Windows Sockets&#160;: conversion de cha&#238;nes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

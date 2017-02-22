@@ -1,8 +1,7 @@
 ---
 title: "Expressions et assignations | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "assigner des valeurs en C"
   - "opérateurs d'assignation, assigner des valeurs dans des expressions"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "Visual C, expressions"
 ms.assetid: 9c72919f-0768-4b47-85ca-afdfec6847f4
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Expressions et assignations
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

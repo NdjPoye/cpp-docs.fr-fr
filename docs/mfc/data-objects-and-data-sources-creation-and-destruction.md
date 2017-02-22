@@ -1,8 +1,7 @@
 ---
 title: "Objets de donn&#233;es et sources de donn&#233;es&#160;: cr&#233;ation et destruction | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "création d'objet (C++), objets source de données"
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Objets de donn&#233;es et sources de donn&#233;es&#160;: cr&#233;ation et destruction
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

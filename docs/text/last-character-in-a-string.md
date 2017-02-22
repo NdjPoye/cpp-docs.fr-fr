@@ -1,8 +1,7 @@
 ---
 title: "Dernier caract&#232;re d&#39;une cha&#238;ne | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "MBCS (C++), dernier caractère de chaîne"
 ms.assetid: 0a180376-4e55-41e8-9c64-539c7b6d8047
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Dernier caract&#232;re d&#39;une cha&#238;ne
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Recordset&#160;: extraction globale d&#39;enregistrements (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "jeux de lignes, extraire les lignes en bloc"
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Recordset&#160;: extraction globale d&#39;enregistrements (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

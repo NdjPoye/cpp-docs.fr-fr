@@ -1,8 +1,7 @@
 ---
 title: "Mise en forme de CString et affichage des bo&#238;tes de message | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "objets CString, boîtes de message et de mise en forme"
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
 caps.latest.revision: 14
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Mise en forme de CString et affichage des bo&#238;tes de message
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

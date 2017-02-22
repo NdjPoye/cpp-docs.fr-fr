@@ -1,8 +1,7 @@
 ---
 title: "Bo&#238;te de dialogue Outil texte (&#201;diteur d&#39;images pour les ic&#244;nes) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "vc.editors.texttool"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "texte, ajout à une image"
   - "Outil texte (boîte de dialogue)"
 ms.assetid: a6036ef4-1871-40db-8239-6ddbe8f422f5
 caps.latest.revision: 8
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Bo&#238;te de dialogue Outil texte (&#201;diteur d&#39;images pour les ic&#244;nes)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

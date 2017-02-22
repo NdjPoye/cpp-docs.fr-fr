@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: ajouter une &#233;tape de g&#233;n&#233;ration personnalis&#233;e &#224; des projets MSBuild | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MSBuild (C++), comment : ajouter une étape de génération personnalisée"
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Comment&#160;: ajouter une &#233;tape de g&#233;n&#233;ration personnalis&#233;e &#224; des projets MSBuild
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

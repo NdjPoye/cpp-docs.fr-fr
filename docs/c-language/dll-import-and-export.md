@@ -1,8 +1,7 @@
 ---
 title: "Importation et exportation de DLL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "dllexport (attribut) (C++)"
   - "dllexport (attribut) (C++), attribut de classe de stockage"
   - "dllimport (attribut) (C++), attribut de classe de stockage"
 ms.assetid: ab058610-0190-4354-8955-86db66add7c6
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Importation et exportation de DLL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

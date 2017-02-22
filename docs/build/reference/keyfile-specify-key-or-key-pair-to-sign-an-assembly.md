@@ -1,8 +1,7 @@
 ---
 title: "/KEYFILE (Sp&#233;cifier une cl&#233; ou une paire de cl&#233;s pour signer un assembly) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-KEYFILE (option de l'éditeur de liens)"
 ms.assetid: 9b71f8c0-541c-4fe5-a0c7-9364f42ecb06
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /KEYFILE (Sp&#233;cifier une cl&#233; ou une paire de cl&#233;s pour signer un assembly)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

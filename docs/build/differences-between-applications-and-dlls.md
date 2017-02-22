@@ -1,8 +1,7 @@
 ---
 title: "Diff&#233;rences entre les applications et les DLL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "fichiers exécutables (C++), DLL (différences par rapport aux applications)"
 ms.assetid: 8f271523-d8d0-4ad1-84d2-0c5645d7fd5b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Diff&#233;rences entre les applications et les DLL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

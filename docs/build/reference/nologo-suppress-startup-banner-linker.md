@@ -1,8 +1,7 @@
 ---
 title: "/NOLOGO (Suppression de la banni&#232;re de d&#233;marrage) (&#201;diteur de liens) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "numéros de version, empêcher l'affichage de l'éditeur de liens"
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /NOLOGO (Suppression de la banni&#232;re de d&#233;marrage) (&#201;diteur de liens)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

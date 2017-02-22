@@ -1,8 +1,7 @@
 ---
 title: "Champs de sp&#233;cification de format&#160;: fonctions scanf et wscanf | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,7 +21,6 @@ f1_keywords:
   - "scanf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "largeur, spécifications dans fonction scanf"
   - "spécification de format scanf"
@@ -33,10 +31,10 @@ helpviewer_keywords:
   - "champs de type"
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Champs de sp&#233;cification de format&#160;: fonctions scanf et wscanf
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/OUT (Nom du fichier de sortie) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "fichiers de sortie, nom (option de l'éditeur de liens)"
 ms.assetid: 976210a4-e51f-4cfb-af5e-c16344455834
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /OUT (Nom du fichier de sortie)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

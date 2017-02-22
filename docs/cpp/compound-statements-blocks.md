@@ -1,8 +1,7 @@
 ---
 title: "Instructions compos&#233;es (blocs) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "instructions composées"
 ms.assetid: 23855939-7430-498e-8936-0c70055ea701
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Instructions compos&#233;es (blocs)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

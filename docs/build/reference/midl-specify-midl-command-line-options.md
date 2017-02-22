@@ -1,8 +1,7 @@
 ---
 title: "/MIDL (Sp&#233;cification d&#39;options de ligne de commande MIDL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "MIDL, options de ligne de commande"
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /MIDL (Sp&#233;cification d&#39;options de ligne de commande MIDL)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "M&#233;thodes de cr&#233;ation d&#39;une barre d&#39;outils | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "contrôles de barre d'outils (MFC), créer"
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # M&#233;thodes de cr&#233;ation d&#39;une barre d&#39;outils
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

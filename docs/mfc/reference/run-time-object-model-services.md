@@ -1,8 +1,7 @@
 ---
 title: "Services du mod&#232;le objet au moment de l&#39;ex&#233;cution | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "macros des services du modèle objet au moment de l'exécution"
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
 caps.latest.revision: 15
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # Services du mod&#232;le objet au moment de l&#39;ex&#233;cution
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

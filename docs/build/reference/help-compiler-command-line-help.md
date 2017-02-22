@@ -1,8 +1,7 @@
 ---
 title: "/HELP (Aide du compilateur relative &#224; la ligne de commande) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "Aide, pour la ligne de commande du compilateur"
 ms.assetid: 192533e7-86f2-48e0-a08f-b5e4e3a4e784
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /HELP (Aide du compilateur relative &#224; la ligne de commande)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

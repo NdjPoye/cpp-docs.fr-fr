@@ -1,8 +1,7 @@
 ---
 title: "Ex&#233;cution de l&#39;automation &#224; distance &#224; l&#39;aide d&#39;AUTOCLIK et d&#39;AUTODRIV | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "AUTOCLIK (exemple) (MFC)"
 ms.assetid: 8900c0de-8dba-4f0a-8d9e-7db77a1f4f46
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Ex&#233;cution de l&#39;automation &#224; distance &#224; l&#39;aide d&#39;AUTOCLIK et d&#39;AUTODRIV
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: utiliser parallel_invoke pour &#233;crire une routine de tri parall&#232;le | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "améliorer les performances parallèles avec des groupes de tâches (runtime d'accès concurrentiel)"
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
 caps.latest.revision: 23
-caps.handback.revision: 20
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Comment&#160;: utiliser parallel_invoke pour &#233;crire une routine de tri parall&#232;le
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

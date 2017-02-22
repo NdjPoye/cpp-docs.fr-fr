@@ -1,8 +1,7 @@
 ---
 title: "Cr&#233;ation d&#39;objet dynamique | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "objets (C++), créer dynamiquement au moment de l'exécution"
 ms.assetid: 3e0f51cb-3e24-4231-817f-1c0ce9f2d5df
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Cr&#233;ation d&#39;objet dynamique
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

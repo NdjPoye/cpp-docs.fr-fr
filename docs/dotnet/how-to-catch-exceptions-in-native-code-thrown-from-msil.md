@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: intercepter des exceptions en code natif lev&#233;es &#224; partir de MSIL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MSIL, intercepter des exception en code natif"
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
 caps.latest.revision: 9
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Comment&#160;: intercepter des exceptions en code natif lev&#233;es &#224; partir de MSIL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

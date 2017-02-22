@@ -1,8 +1,7 @@
 ---
 title: "Op&#233;rateurs pr&#233;fix&#233;s d&#39;incr&#233;mentation et de d&#233;cr&#233;mentation | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "opérateurs de décrémentation"
   - "opérateurs de décrémentation, syntaxe"
   - "opérateur d'incrémentation, types de"
 ms.assetid: 9a441bb9-d94a-4b6a-9db2-0d0d76bc480d
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Op&#233;rateurs pr&#233;fix&#233;s d&#39;incr&#233;mentation et de d&#233;cr&#233;mentation
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

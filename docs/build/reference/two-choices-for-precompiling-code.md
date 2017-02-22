@@ -1,8 +1,7 @@
 ---
 title: "Deux m&#233;thodes au choix pour la pr&#233;compilation du code | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "précompiler le code"
 ms.assetid: f50ac76f-e2a2-462d-bda5-0e2ab7cccdeb
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Deux m&#233;thodes au choix pour la pr&#233;compilation du code
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "try-finally, instruction&#160;(C) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,7 +15,6 @@ f1_keywords:
   - "finally_cpp"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__finally (mot clé) (C)"
   - "__finally (mot clé) (C), syntaxe de l'instruction try-finally"
@@ -26,10 +24,10 @@ helpviewer_keywords:
   - "try-finally (mot clé) (C)"
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # try-finally, instruction&#160;(C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

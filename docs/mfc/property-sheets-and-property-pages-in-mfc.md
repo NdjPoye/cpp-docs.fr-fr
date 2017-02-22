@@ -1,8 +1,7 @@
 ---
 title: "Pages et feuilles de propri&#233;t&#233;s dans MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "boîtes de dialogue avec onglets"
 ms.assetid: e1bede2b-0285-4b88-a052-0f8a372807a2
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Pages et feuilles de propri&#233;t&#233;s dans MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

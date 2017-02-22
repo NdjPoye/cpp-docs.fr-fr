@@ -1,8 +1,7 @@
 ---
 title: "/MANIFESTUAC (Incorporer des informations sur le contr&#244;le de compte d&#39;utilisateur dans le manifeste) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "-MANIFESTUAC (option de l'Éditeur de liens)"
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /MANIFESTUAC (Incorporer des informations sur le contr&#244;le de compte d&#39;utilisateur dans le manifeste)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

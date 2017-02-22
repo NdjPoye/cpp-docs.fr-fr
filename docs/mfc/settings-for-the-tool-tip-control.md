@@ -1,8 +1,7 @@
 ---
 title: "Param&#232;tres du contr&#244;le d’info-bulle | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Classe CToolTipCtrl, paramètres"
 ms.assetid: ff8c5c46-2047-403a-bd98-ffec3d21ee3a
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Param&#232;tres du contr&#244;le d’info-bulle
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

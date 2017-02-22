@@ -1,8 +1,7 @@
 ---
 title: "Proc&#233;dure&#160;: utilisation du Kit de d&#233;veloppement logiciel (SDK) Windows&#160;10 dans une application de bureau Windows | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # Proc&#233;dure&#160;: utilisation du Kit de d&#233;veloppement logiciel (SDK) Windows&#160;10 dans une application de bureau Windows
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

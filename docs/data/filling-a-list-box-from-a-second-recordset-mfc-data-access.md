@@ -1,8 +1,7 @@
 ---
 title: "Remplissage d&#39;une zone de liste &#224; partir d&#39;un second recordset (Acc&#232;s aux donn&#233;es MFC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "recordsets (C++), remplir des zones de liste ou des zones de liste déroulante"
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Remplissage d&#39;une zone de liste &#224; partir d&#39;un second recordset (Acc&#232;s aux donn&#233;es MFC)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

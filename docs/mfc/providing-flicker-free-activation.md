@@ -1,8 +1,7 @@
 ---
 title: "Mise &#224; disposition de l&#39;activation sans scintillement | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "contrôles ActiveX MFC (C++), sans scintillement"
 ms.assetid: bcb24b77-31d8-44a0-8c58-2ea6213b4c43
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Mise &#224; disposition de l&#39;activation sans scintillement
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

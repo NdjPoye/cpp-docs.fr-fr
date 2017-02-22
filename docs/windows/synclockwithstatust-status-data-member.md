@@ -1,8 +1,7 @@
 ---
 title: "SyncLockWithStatusT::status_, donn&#233;es de membre | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "status_ (membre de données)"
 ms.assetid: 466fa336-b5ff-4d43-8efd-1e87e5fddf88
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # SyncLockWithStatusT::status_, donn&#233;es de membre
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

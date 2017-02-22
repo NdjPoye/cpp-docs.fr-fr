@@ -1,8 +1,7 @@
 ---
 title: "Pages de propri&#233;t&#233;s HLSL&#160;: G&#233;n&#233;ral | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ dev_langs:
   - "C++"
 ms.assetid: 0e02f2a6-f123-43da-b04b-a0719a7c2b03
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "BrianPeek"
 ms.author: "brpeek"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Pages de propri&#233;t&#233;s HLSL&#160;: G&#233;n&#233;ral
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/PDBSTRIPPED (Supprimer les symboles priv&#233;s) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-PDBSTRIPPED (option de l'éditeur de liens)"
 ms.assetid: 9b9e0070-6a13-4142-8180-19c003fbbd55
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /PDBSTRIPPED (Supprimer les symboles priv&#233;s)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

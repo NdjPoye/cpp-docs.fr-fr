@@ -1,8 +1,7 @@
 ---
 title: "Utilisation d&#39;info-bulles dans un objet CStatusBarCtrl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "info-bulles (C++), utiliser dans les barres d'états"
 ms.assetid: a77597a7-43ef-4b8f-87bc-a8ea1dc63dc3
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Utilisation d&#39;info-bulles dans un objet CStatusBarCtrl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

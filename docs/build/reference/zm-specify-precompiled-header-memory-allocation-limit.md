@@ -1,8 +1,7 @@
 ---
 title: "/Zm (Sp&#233;cifier la limite d&#39;allocation m&#233;moire d&#39;en-t&#234;te pr&#233;compil&#233;) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "-Zm (option du compilateur C++)"
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # /Zm (Sp&#233;cifier la limite d&#39;allocation m&#233;moire d&#39;en-t&#234;te pr&#233;compil&#233;)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

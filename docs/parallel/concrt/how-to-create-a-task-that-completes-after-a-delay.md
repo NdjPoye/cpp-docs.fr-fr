@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: cr&#233;er une t&#226;che qui se termine apr&#232;s un certain d&#233;lai. | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "créer une tâche se termine après un certain délai, exemple (C++)"
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
 caps.latest.revision: 9
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Comment&#160;: cr&#233;er une t&#226;che qui se termine apr&#232;s un certain d&#233;lai.
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

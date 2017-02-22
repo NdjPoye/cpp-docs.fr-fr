@@ -1,8 +1,7 @@
 ---
 title: "Liaison dynamique des colonnes dans votre fournisseur | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "fournisseurs (C++), liaison de colonne dynamique"
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Liaison dynamique des colonnes dans votre fournisseur
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

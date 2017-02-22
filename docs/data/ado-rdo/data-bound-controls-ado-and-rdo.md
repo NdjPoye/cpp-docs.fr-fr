@@ -1,8 +1,7 @@
 ---
 title: "Contr&#244;les li&#233;s aux donn&#233;es (ADO et RDO) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "contrôles liés aux données (C++), ActiveX"
 ms.assetid: 337fdc86-7916-41a9-a7df-13355c8218e9
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Contr&#244;les li&#233;s aux donn&#233;es (ADO et RDO)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

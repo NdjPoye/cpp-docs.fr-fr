@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: compiler du code MFC et ATL &#224; l&#39;aide de /clr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "DLL normales (C++), /clr (option du compilateur)"
 ms.assetid: 12464bec-33a4-482c-880a-c078de7f6ea5
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Comment&#160;: compiler du code MFC et ATL &#224; l&#39;aide de /clr
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/GZ (Activer les v&#233;rifications des erreurs au moment de l&#39;ex&#233;cution pour le frame de pile) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "erreurs de version Release"
 ms.assetid: b3efeeff-d5e3-4057-91c9-f6fc73d0270c
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # /GZ (Activer les v&#233;rifications des erreurs au moment de l&#39;ex&#233;cution pour le frame de pile)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

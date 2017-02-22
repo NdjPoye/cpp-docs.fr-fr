@@ -1,8 +1,7 @@
 ---
 title: "Rendre des contr&#244;les header owner-drawn | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "contrôles header owner-drawn"
 ms.assetid: 455c113b-e8d0-400c-8690-dbb92cba0d05
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Rendre des contr&#244;les header owner-drawn
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

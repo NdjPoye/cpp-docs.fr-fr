@@ -1,8 +1,7 @@
 ---
 title: "/LTCG (G&#233;n&#233;ration de code durant l&#39;&#233;dition de liens) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "-LTCG (option de l'éditeur de liens)"
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # /LTCG (G&#233;n&#233;ration de code durant l&#39;&#233;dition de liens)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

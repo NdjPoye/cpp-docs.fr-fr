@@ -1,8 +1,7 @@
 ---
 title: "/GUARD (activer les contr&#244;les de protection) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 72758e23-70ac-4616-94d7-d767477406d1
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # /GUARD (activer les contr&#244;les de protection)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

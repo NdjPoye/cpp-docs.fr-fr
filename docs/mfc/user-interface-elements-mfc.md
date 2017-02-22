@@ -1,8 +1,7 @@
 ---
 title: "&#201;l&#233;ments de l&#39;interface utilisateur (MFC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "interfaces utilisateur, créer"
 ms.assetid: f5daf2c1-bc08-4b71-9b03-da2c0aab5764
 caps.latest.revision: 17
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # &#201;l&#233;ments de l&#39;interface utilisateur (MFC)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

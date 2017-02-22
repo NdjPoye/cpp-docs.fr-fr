@@ -1,8 +1,7 @@
 ---
 title: "Consid&#233;rations relatives &#224; l&#39;&#233;criture du code de prologue/&#233;pilogue | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__LOCAL_SIZE (constante)"
   - "dispositions, frame de pile"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "pile, disposition de la frame de pile"
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Consid&#233;rations relatives &#224; l&#39;&#233;criture du code de prologue/&#233;pilogue
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Personnalisation du traitement de ligne de commande C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_exec (fonction)"
   - "_setargv (fonction)"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "supprimer le traitement de l'environnement"
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Personnalisation du traitement de ligne de commande C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

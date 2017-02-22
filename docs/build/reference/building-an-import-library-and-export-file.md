@@ -1,8 +1,7 @@
 ---
 title: "G&#233;n&#233;ration d&#39;une biblioth&#232;que d&#39;importation et d&#39;un fichier d&#39;exportation | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -36,10 +35,10 @@ helpviewer_keywords:
   - "-OUT (option du Gestionnaire de bibliothèque)"
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # G&#233;n&#233;ration d&#39;une biblioth&#232;que d&#39;importation et d&#39;un fichier d&#39;exportation
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

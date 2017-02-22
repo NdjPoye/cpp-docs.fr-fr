@@ -1,8 +1,7 @@
 ---
 title: "Recordset&#160;: cr&#233;ation d&#39;une jointure (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "recordsets (C++), joindre des tables"
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Recordset&#160;: cr&#233;ation d&#39;une jointure (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

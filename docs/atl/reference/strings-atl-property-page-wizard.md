@@ -1,8 +1,7 @@
 ---
 title: "Cha&#238;nes, Assistant Page de propri&#233;t&#233;s ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Assistant Page de propriétés ATL, chaînes"
 ms.assetid: 00547db6-911f-49eb-92e1-2ba67079d4df
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Cha&#238;nes, Assistant Page de propri&#233;t&#233;s ATL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

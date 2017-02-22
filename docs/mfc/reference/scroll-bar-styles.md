@@ -1,8 +1,7 @@
 ---
 title: "Styles de barre de d&#233;filement | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,10 +33,10 @@ helpviewer_keywords:
   - "barres de défilement, styles"
 ms.assetid: 8bcde35b-387d-49ae-bdd6-7cda9f5dae26
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Styles de barre de d&#233;filement
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: utiliser la gestion des exceptions pour rompre une boucle parall&#232;le | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "écrire un algorithme de recherche (runtime d'accès concurrentiel)"
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
 caps.latest.revision: 15
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Comment&#160;: utiliser la gestion des exceptions pour rompre une boucle parall&#232;le
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

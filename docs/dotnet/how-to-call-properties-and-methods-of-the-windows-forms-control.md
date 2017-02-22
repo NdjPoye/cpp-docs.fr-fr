@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: appeler des propri&#233;t&#233;s et des m&#233;thodes du contr&#244;le Windows Forms | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "contrôles Windows Forms (C++), propriétés"
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Comment&#160;: appeler des propri&#233;t&#233;s et des m&#233;thodes du contr&#244;le Windows Forms
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

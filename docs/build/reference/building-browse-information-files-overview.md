@@ -1,8 +1,7 @@
 ---
 title: "G&#233;n&#233;ration de fichiers d&#39;informations de consultation&#160;: vue d&#39;ensemble | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "fichiers bsc, à propos des fichiers bsc"
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # G&#233;n&#233;ration de fichiers d&#39;informations de consultation&#160;: vue d&#39;ensemble
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

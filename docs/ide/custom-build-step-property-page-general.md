@@ -1,8 +1,7 @@
 ---
 title: "&#201;tape de g&#233;n&#233;ration personnalis&#233;e, page de propri&#233;t&#233;s&#160;: g&#233;n&#233;ral | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "étape de génération personnalisée (général)"
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # &#201;tape de g&#233;n&#233;ration personnalis&#233;e, page de propri&#233;t&#233;s&#160;: g&#233;n&#233;ral
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

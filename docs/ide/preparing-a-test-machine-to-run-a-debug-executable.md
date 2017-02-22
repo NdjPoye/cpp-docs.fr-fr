@@ -1,8 +1,7 @@
 ---
 title: "Pr&#233;paration d&#39;un ordinateur de test pour lancer un ex&#233;cutable de d&#233;bogage | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "exécutable de débogage, préparer un ordinateur de test pour lancer un"
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Pr&#233;paration d&#39;un ordinateur de test pour lancer un ex&#233;cutable de d&#233;bogage
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

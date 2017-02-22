@@ -1,8 +1,7 @@
 ---
-title: "new, op&#233;rateur (CRT) | Microsoft Docs"
+title: "op&#233;rateur new(CRT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,16 +18,15 @@ apilocation:
 apitype: "DLLExport"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "new (opérateur)"
-  - "scalaire new"
+  - "opérateur new[]"
+  - "new (vecteur)"
 ms.assetid: 4ae51618-a4e6-4172-b324-b99d86d1bdca
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # new, op&#233;rateur (CRT)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

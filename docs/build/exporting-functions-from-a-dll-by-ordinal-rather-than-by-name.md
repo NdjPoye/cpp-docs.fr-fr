@@ -1,8 +1,7 @@
 ---
 title: "Exportation de fonctions &#224; partir d&#39;une DLL par ordinal plut&#244;t que par nom | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "exportations par ordinal (C++)"
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Exportation de fonctions &#224; partir d&#39;une DLL par ordinal plut&#244;t que par nom
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

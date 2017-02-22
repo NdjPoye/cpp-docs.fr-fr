@@ -1,8 +1,7 @@
 ---
 title: "Arri&#232;re-plan OLE&#160;: strat&#233;gies d&#39;impl&#233;mentation | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OLE (applications) (C++), implémenter OLE"
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Arri&#232;re-plan OLE&#160;: strat&#233;gies d&#39;impl&#233;mentation
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

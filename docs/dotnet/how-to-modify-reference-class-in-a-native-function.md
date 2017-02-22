@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: modifier la classe de r&#233;f&#233;rence dans une fonction native | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "types référence, modifier dans une fonction native C++"
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Comment&#160;: modifier la classe de r&#233;f&#233;rence dans une fonction native
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

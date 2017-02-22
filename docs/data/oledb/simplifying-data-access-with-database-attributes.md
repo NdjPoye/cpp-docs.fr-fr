@@ -1,8 +1,7 @@
 ---
 title: "Simplification de l&#39;acc&#232;s aux donn&#233;es &#224; l&#39;aide d&#39;attributs de base de donn&#233;es | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "OLE DB (consommateurs) (C++), attributs de bases de données"
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Simplification de l&#39;acc&#232;s aux donn&#233;es &#224; l&#39;aide d&#39;attributs de base de donn&#233;es
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Serveurs Automation&#160;: probl&#232;mes li&#233;s &#224; la dur&#233;e de vie des objets | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "serveurs, durée de vie d'Automation"
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Serveurs Automation&#160;: probl&#232;mes li&#233;s &#224; la dur&#233;e de vie des objets
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

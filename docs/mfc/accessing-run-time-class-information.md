@@ -1,8 +1,7 @@
 ---
 title: "Acc&#232;s aux informations de classe d&#39;ex&#233;cution | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "RUNTIME_CLASS (macro), utilisation"
 ms.assetid: 3445a9af-0bd6-4496-95c3-aa59b964570b
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Acc&#232;s aux informations de classe d&#39;ex&#233;cution
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Classes de jeu de lignes du sch&#233;ma et classes Typedef | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "jeux de lignes du schéma, classes"
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Classes de jeu de lignes du sch&#233;ma et classes Typedef
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

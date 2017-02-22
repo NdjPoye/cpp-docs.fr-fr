@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: personnaliser la barre d&#39;outils Acc&#232;s rapide | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "barre d'outils Accès rapide, personnalisation"
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Comment&#160;: personnaliser la barre d&#39;outils Acc&#232;s rapide
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

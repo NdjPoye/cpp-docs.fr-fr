@@ -1,8 +1,7 @@
 ---
 title: "Classes de bo&#238;tes de dialogue communes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "boîtes de dialogue Windows communes (C++)"
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Classes de bo&#238;tes de dialogue communes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

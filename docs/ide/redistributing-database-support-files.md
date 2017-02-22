@@ -1,8 +1,7 @@
 ---
 title: "Redistribution de fichiers de prise en charge de base de donn&#233;es | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "redistribuer des fichiers de prise en charge des bases de données"
 ms.assetid: d80cffe0-177c-4515-9de7-fbf0517eb8d6
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Redistribution de fichiers de prise en charge de base de donn&#233;es
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Prise en charge des jeux de caract&#232;res Unicode et MBCS (Multibyte Character Set) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "chaînes [C++], prise en charge des jeux de caractères"
 ms.assetid: 44b3193b-c92d-40c5-9fa8-5774da303cce
 caps.latest.revision: 17
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Prise en charge des jeux de caract&#232;res Unicode et MBCS (Multibyte Character Set)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Communication avec un contr&#244;le d&#39;arborescence | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "contrôles d'arborescence, communiquer avec"
 ms.assetid: 680ad9ee-b11f-452d-93fa-501ca7d7e069
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Communication avec un contr&#244;le d&#39;arborescence
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "&#201;l&#233;ments parents et enfants du contr&#244;le d&#39;arborescence | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "contrôles d'arborescence, éléments parents et enfants"
 ms.assetid: abcea1e4-fe9b-40d9-86dc-1db235f8f103
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # &#201;l&#233;ments parents et enfants du contr&#244;le d&#39;arborescence
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

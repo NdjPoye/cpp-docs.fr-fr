@@ -1,8 +1,7 @@
 ---
 title: "Ex&#233;cution de LIB | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -37,10 +36,10 @@ helpviewer_keywords:
   - "-VERBOSE (option du Gestionnaire de bibliothèque)"
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Ex&#233;cution de LIB
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

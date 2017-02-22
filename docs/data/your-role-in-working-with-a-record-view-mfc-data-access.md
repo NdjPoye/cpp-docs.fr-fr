@@ -1,8 +1,7 @@
 ---
 title: "Votre r&#244;le dans l&#39;utilisation d&#39;une vue de l&#39;enregistrement (Acc&#232;s aux donn&#233;es MFC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "vues des enregistrements, personnaliser le code par défaut"
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Votre r&#244;le dans l&#39;utilisation d&#39;une vue de l&#39;enregistrement (Acc&#232;s aux donn&#233;es MFC)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

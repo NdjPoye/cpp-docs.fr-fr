@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: utiliser l&#39;annulation pour rompre une boucle parall&#232;le | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "écrire un algorithme de recherche parallèle (runtime d'accès concurrentiel)"
 ms.assetid: 421cd2de-f058-465f-b890-dd8fcc0df273
 caps.latest.revision: 19
-caps.handback.revision: 18
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Comment&#160;: utiliser l&#39;annulation pour rompre une boucle parall&#232;le
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

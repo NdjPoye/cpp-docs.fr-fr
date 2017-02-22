@@ -1,8 +1,7 @@
 ---
 title: "/ASSEMBLYMODULE (Ajouter un module MSIL &#224; l&#39;assembly) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-ASSEMBLYMODULE (option de l'éditeur de liens)"
 ms.assetid: 67357da8-e4b6-49fd-932c-329a5777f143
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /ASSEMBLYMODULE (Ajouter un module MSIL &#224; l&#39;assembly)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

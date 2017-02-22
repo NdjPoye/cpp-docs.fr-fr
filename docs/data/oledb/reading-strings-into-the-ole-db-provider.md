@@ -1,8 +1,7 @@
 ---
 title: "Lecture de cha&#238;nes dans le fournisseur OLE&#160;DB | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "fournisseurs OLE DB, lire des chaînes dans les"
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Lecture de cha&#238;nes dans le fournisseur OLE&#160;DB
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

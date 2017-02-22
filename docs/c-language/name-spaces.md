@@ -1,8 +1,7 @@
 ---
 title: "Espaces de noms | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "balises d'énumération"
   - "espaces de noms (C++)"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "union (mot clé) (C), balises"
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Espaces de noms
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

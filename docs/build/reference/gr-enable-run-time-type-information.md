@@ -1,8 +1,7 @@
 ---
 title: "/GR (Activer les informations de type au moment de l&#39;ex&#233;cution) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "RTTI (option du compilateur)"
 ms.assetid: d1f9f850-dcec-49fd-96ef-e72d01148906
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # /GR (Activer les informations de type au moment de l&#39;ex&#233;cution)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

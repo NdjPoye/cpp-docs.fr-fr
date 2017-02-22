@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: utiliser parallel_invoke pour ex&#233;cuter des op&#233;rations parall&#232;les | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "appeler plusieurs fonctions en parallèle (runtime d'accès concurrentiel)"
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
 caps.latest.revision: 18
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # Comment&#160;: utiliser parallel_invoke pour ex&#233;cuter des op&#233;rations parall&#232;les
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

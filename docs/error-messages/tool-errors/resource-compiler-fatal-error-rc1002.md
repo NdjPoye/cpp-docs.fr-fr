@@ -1,8 +1,7 @@
 ---
 title: "Erreur irr&#233;cup&#233;rable RC1002 du compilateur de ressources  | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RC1002"
 ms.assetid: b43dfece-0dc3-4d0b-9d8f-509699b9ae80
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Erreur irr&#233;cup&#233;rable RC1002 du compilateur de ressources 
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
