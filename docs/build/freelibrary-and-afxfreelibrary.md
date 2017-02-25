@@ -1,8 +1,7 @@
 ---
 title: "FreeLibrary et AfxFreeLibrary | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "DLL [C++], déchargement"
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # FreeLibrary et AfxFreeLibrary
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

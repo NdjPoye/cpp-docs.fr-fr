@@ -1,8 +1,7 @@
 ---
 title: "Classes bas&#233;es sur un mod&#232;le | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,10 +32,10 @@ helpviewer_keywords:
   - "collections de type sécurisé"
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Classes bas&#233;es sur un mod&#232;le
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: it&#233;rer au sein d&#39;une collection g&#233;n&#233;rique en utilisant for each | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "collection générique, itérer"
 ms.assetid: 00288d53-3d41-44d0-be5b-b3033456ceaa
 caps.latest.revision: 13
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Comment&#160;: it&#233;rer au sein d&#39;une collection g&#233;n&#233;rique en utilisant for each
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

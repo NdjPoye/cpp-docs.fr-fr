@@ -1,8 +1,7 @@
 ---
 title: "Vue d&#39;ensemble des instructions C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "point-virgule"
   - "point-virgule, dans les instructions C"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "Visual C, instructions"
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Vue d&#39;ensemble des instructions C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

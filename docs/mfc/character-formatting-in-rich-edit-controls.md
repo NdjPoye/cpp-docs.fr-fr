@@ -1,8 +1,7 @@
 ---
 title: "Mise en forme des caract&#232;res dans les contr&#244;les RichEdit | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "contrôles RichEdit, formatage de caractères dans"
 ms.assetid: c80f4305-75ad-45f9-8d17-d83d0fe79be5
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Mise en forme des caract&#232;res dans les contr&#244;les RichEdit
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

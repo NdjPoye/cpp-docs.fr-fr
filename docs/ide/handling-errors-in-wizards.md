@@ -1,8 +1,7 @@
 ---
 title: "Gestion des erreurs dans les Assistants | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "JScript, erreurs dans l'Assistant personnalisé"
 ms.assetid: 13c99f41-7a7e-4cc7-9228-bfbfbd0a0272
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Gestion des erreurs dans les Assistants
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

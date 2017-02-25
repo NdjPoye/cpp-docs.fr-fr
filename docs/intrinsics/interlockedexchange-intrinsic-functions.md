@@ -1,8 +1,7 @@
 ---
 title: "_InterlockedExchange, fonctions intrins&#232;ques | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -55,10 +54,10 @@ helpviewer_keywords:
   - "InterlockedExchange64_acq, intrinsèque"
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _InterlockedExchange, fonctions intrins&#232;ques
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

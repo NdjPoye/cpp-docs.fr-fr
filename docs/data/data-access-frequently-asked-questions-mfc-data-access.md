@@ -1,8 +1,7 @@
 ---
 title: "Forum aux Questions sur l&#39;acc&#232;s aux donn&#233;es (Acc&#232;s aux donn&#233;es MFC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "FAQ (Forum Aux Questions) (C++), accès aux données"
 ms.assetid: 88424da7-e735-4e01-8110-11e817163647
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Forum aux Questions sur l&#39;acc&#232;s aux donn&#233;es (Acc&#232;s aux donn&#233;es MFC)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

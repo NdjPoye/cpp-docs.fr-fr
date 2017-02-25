@@ -1,8 +1,7 @@
 ---
 title: "Manipulateurs personnalis&#233;s avec arguments | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "flux, personnalisés (manipulateurs de flux)"
 ms.assetid: fa4655a7-d68f-4fea-a26e-73c3ad5c90a5
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Manipulateurs personnalis&#233;s avec arguments
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Constantes d&#39;acc&#232;s fichier en lecture/&#233;criture | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.constants.file"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "constantes d'accès pour lire et écrire dans un fichier"
   - "constantes (C++), attributs de fichiers"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "constantes d'accès pour écrire"
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Constantes d&#39;acc&#232;s fichier en lecture/&#233;criture
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

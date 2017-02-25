@@ -1,8 +1,7 @@
 ---
 title: "Mappage des constantes et des variables globales | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,7 +14,6 @@ f1_keywords:
   - "_tfinddata_t"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tenviron (fonction)"
   - "_TEOF (type)"
@@ -26,10 +24,10 @@ helpviewer_keywords:
   - "tfinddata_t (fonction)"
 ms.assetid: 3af4fd3e-9ed5-4ed9-96fd-7031e5126fd1
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Mappage des constantes et des variables globales
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

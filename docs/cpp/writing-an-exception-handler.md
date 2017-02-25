@@ -1,8 +1,7 @@
 ---
 title: "&#201;criture d&#39;un gestionnaire d&#39;exceptions | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "gestion structurée des exceptions, gestionnaires d'exceptions"
 ms.assetid: 71473fee-f773-4a34-bf12-82a3af79579c
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # &#201;criture d&#39;un gestionnaire d&#39;exceptions
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

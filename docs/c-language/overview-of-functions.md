@@ -1,8 +1,7 @@
 ---
 title: "Vue d&#39;ensemble des fonctions | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "flux de contrôle, appels de fonction"
   - "fonctions (C++)"
 ms.assetid: b6f4637f-02b9-49d8-8601-1f886bd2cfb9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Vue d&#39;ensemble des fonctions
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

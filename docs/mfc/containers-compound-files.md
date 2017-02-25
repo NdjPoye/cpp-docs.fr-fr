@@ -1,8 +1,7 @@
 ---
 title: "Conteneurs&#160;: fichiers compos&#233;s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "structure de fichiers standardisée (fichiers composés)"
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Conteneurs&#160;: fichiers compos&#233;s
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

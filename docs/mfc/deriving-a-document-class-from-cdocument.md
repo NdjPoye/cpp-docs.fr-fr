@@ -1,8 +1,7 @@
 ---
 title: "D&#233;rivation d&#39;une classe de document de CDocument | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "objets Document, dérivés"
 ms.assetid: e6a198e0-9799-43c0-83c5-04174d8b532c
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # D&#233;rivation d&#39;une classe de document de CDocument
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

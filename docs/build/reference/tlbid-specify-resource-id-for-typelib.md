@@ -1,8 +1,7 @@
 ---
 title: "/TLBID (Sp&#233;cifier l&#39;ID de ressource de TypeLib) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "bibliothèques de types, spécifier l'ID de ressource"
 ms.assetid: 434b28a2-4656-4d52-ac82-8b18bf486fb2
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /TLBID (Sp&#233;cifier l&#39;ID de ressource de TypeLib)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

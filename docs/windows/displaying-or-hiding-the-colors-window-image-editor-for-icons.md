@@ -1,8 +1,7 @@
 ---
 title: "Affichage ou masquage de la fen&#234;tre Couleurs (&#201;diteur d&#39;images pour les ic&#244;nes) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "fenêtre Couleurs, affichage des couleurs"
 ms.assetid: 43ba728d-2b69-47a1-a23a-94f82d88a26d
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Affichage ou masquage de la fen&#234;tre Couleurs (&#201;diteur d&#39;images pour les ic&#244;nes)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

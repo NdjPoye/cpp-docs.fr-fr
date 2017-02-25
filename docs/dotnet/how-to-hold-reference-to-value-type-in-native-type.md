@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: stocker une r&#233;f&#233;rence &#224; un type valeur dans un type natif | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "type valeur (référence au) dans un type natif"
 ms.assetid: 1eabf8be-7d4f-4339-9027-48d5c4244483
 caps.latest.revision: 8
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Comment&#160;: stocker une r&#233;f&#233;rence &#224; un type valeur dans un type natif
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

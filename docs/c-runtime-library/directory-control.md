@@ -1,8 +1,7 @@
 ---
 title: "Contr&#244;le de r&#233;pertoire | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "c.programs"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "contrôles (C++), répertoire"
   - "routines de contrôle de répertoire"
 ms.assetid: a72dcf6f-f366-4d20-8850-0e19cc53ca18
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Contr&#244;le de r&#233;pertoire
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

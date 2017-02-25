@@ -1,8 +1,7 @@
 ---
 title: "Conversions d&#39;appel de fonction | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "appels de fonction, conversions de type d'argument"
   - "appels de fonction, convertir"
   - "fonctions (C), conversions d'argument"
 ms.assetid: 04ea0f81-509a-4913-8b12-0937a81babcf
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Conversions d&#39;appel de fonction
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Prise en charge de l&#39;&#233;diteur de liens pour les DLL &#224; chargement diff&#233;r&#233; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "chargement différé de DLL, prise en charge de l'éditeur de liens"
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Prise en charge de l&#39;&#233;diteur de liens pour les DLL &#224; chargement diff&#233;r&#233;
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

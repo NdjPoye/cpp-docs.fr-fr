@@ -1,8 +1,7 @@
 ---
 title: "R&#233;f&#233;rence des mod&#232;les du fournisseur OLE DB | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "modèles du fournisseur OLE DB"
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # R&#233;f&#233;rence des mod&#232;les du fournisseur OLE DB
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

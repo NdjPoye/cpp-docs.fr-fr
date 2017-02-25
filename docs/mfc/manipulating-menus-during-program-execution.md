@@ -1,8 +1,7 @@
 ---
 title: "Manipulation des menus pendant l&#39;ex&#233;cution du programme | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "menus, manipuler pendant l'exécution"
 ms.assetid: 722c7c00-4be2-4967-877d-f96aaa604396
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Manipulation des menus pendant l&#39;ex&#233;cution du programme
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

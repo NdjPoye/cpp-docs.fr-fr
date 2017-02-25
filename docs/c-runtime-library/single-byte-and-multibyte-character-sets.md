@@ -1,8 +1,7 @@
 ---
 title: "Jeux de caract&#232;res cod&#233;s sur un octet et multioctets | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.character.multibyte"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "jeux de caractères (C++), multioctets"
   - "jeux de caractères (C++), octet unique"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "SBCS (jeu de caractères codé sur un octet)"
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Jeux de caract&#232;res cod&#233;s sur un octet et multioctets
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

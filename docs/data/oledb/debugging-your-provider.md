@@ -1,8 +1,7 @@
 ---
 title: "D&#233;bogage de votre fournisseur | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "débogueur Visual C++, déboguer les fournisseurs"
 ms.assetid: 90d4e7db-06ea-4de0-a7f4-4f3751d50d93
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # D&#233;bogage de votre fournisseur
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

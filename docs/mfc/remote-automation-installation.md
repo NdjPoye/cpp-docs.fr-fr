@@ -1,8 +1,7 @@
 ---
 title: "Installation de l&#39;Automation &#224; distance | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Automation à distance, installation"
 ms.assetid: 9a02c9f6-dfc6-4489-b240-a1afe25fa0c5
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Installation de l&#39;Automation &#224; distance
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

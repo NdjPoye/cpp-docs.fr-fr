@@ -1,8 +1,7 @@
 ---
 title: "Utilisation d&#39;un mod&#232;le de bo&#238;te de dialogue en m&#233;moire | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "modèles, pour les boîtes de dialogue"
 ms.assetid: edb443bb-e614-4f77-8a3b-74d93871e9bd
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Utilisation d&#39;un mod&#232;le de bo&#238;te de dialogue en m&#233;moire
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

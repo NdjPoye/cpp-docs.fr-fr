@@ -1,8 +1,7 @@
 ---
 title: "Construction d&#39;objets de flux d&#39;entr&#233;e | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "objets de flux d'entrée"
 ms.assetid: ab94866e-6ffe-4f15-b4db-0bd23e636075
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Construction d&#39;objets de flux d&#39;entr&#233;e
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

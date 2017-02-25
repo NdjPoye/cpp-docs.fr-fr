@@ -1,8 +1,7 @@
 ---
 title: "Utilisation de biblioth&#232;ques d&#39;importation et de fichiers d&#39;exportation | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "LIB (C++), bibliothèques d'importation et fichiers d'exportation"
 ms.assetid: d8175596-9773-4c2f-959d-b05b065a5161
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Utilisation de biblioth&#232;ques d&#39;importation et de fichiers d&#39;exportation
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

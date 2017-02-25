@@ -1,8 +1,7 @@
 ---
 title: "Outils d&#233;finis par l&#39;utilisateur | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "outils définis par l'utilisateur (extensions MFC)"
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
 caps.latest.revision: 18
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Outils d&#233;finis par l&#39;utilisateur
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

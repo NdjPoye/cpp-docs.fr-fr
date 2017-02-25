@@ -1,8 +1,7 @@
 ---
-title: "Avertissement du compilateurs C4001 Through C4099 | Microsoft Docs"
+title: "C4000 d’avertissements du compilateur via C4199 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -102,10 +101,10 @@ dev_langs:
   - "C++"
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Avertissement du compilateurs C4001 Through C4099
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

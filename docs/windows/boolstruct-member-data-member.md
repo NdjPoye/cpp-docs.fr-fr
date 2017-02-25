@@ -1,8 +1,7 @@
 ---
 title: "BoolStruct::Member, donn&#233;es de membre | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Member (membre de données)"
 ms.assetid: 7e270602-6552-49c8-9ac7-d143babc1231
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # BoolStruct::Member, donn&#233;es de membre
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

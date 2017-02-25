@@ -1,8 +1,7 @@
 ---
 title: "Fonction main et ex&#233;cution du programme | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "points d'entrée, programme"
   - "main (fonction)"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "code de démarrage, main (fonction)"
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Fonction main et ex&#233;cution du programme
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

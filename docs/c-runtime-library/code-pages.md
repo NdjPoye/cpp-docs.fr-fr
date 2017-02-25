@@ -1,8 +1,7 @@
 ---
 title: "Pages de codes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.international"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "ANSI (C++), pages de codes"
   - "jeux de caractères (C++), pages de codes"
@@ -24,10 +22,10 @@ helpviewer_keywords:
   - "page de code du système par défaut"
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Pages de codes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Syntaxe de nom de fichier&#160;CL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "syntaxe, nom de fichier du compilateur"
 ms.assetid: 3ca72586-75be-4477-b323-a1be232e80d4
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Syntaxe de nom de fichier&#160;CL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

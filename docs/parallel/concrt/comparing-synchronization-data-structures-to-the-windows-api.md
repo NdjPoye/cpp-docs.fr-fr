@@ -1,8 +1,7 @@
 ---
 title: "Comparaison des structures de donn&#233;es de synchronisation avec l’API Windows | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "event, classe, exemple"
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
 caps.latest.revision: 16
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Comparaison des structures de donn&#233;es de synchronisation avec l’API Windows
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

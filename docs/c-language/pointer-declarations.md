@@ -1,8 +1,7 @@
 ---
 title: "D&#233;clarations de pointeur | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "const (mot clé) (C)"
   - "déclarations, pointeurs"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "pointeurs, déclarations"
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # D&#233;clarations de pointeur
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Prise en charge des jeux de caract&#232;res multioctets (MBCS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "caractères multioctets (C++)"
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Prise en charge des jeux de caract&#232;res multioctets (MBCS)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

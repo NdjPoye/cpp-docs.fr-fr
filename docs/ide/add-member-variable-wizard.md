@@ -1,8 +1,7 @@
 ---
 title: "Assistant Ajout de variable membre | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Ajout de variable membre (Assistant C++)"
 ms.assetid: 73e8fa99-ac1a-42e2-8fc2-4684b9eb6d4d
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Assistant Ajout de variable membre
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

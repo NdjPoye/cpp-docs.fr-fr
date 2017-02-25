@@ -1,8 +1,7 @@
 ---
 title: "Routines de d&#233;bogage | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.debug"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "débogage [CRT], à l’aide de macros"
   - "macros, débogage avec"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "débogage [CRT], routines d’exécution"
 ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Routines de d&#233;bogage
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

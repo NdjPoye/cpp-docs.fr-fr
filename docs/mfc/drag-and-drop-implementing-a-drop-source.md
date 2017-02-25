@@ -1,8 +1,7 @@
 ---
 title: "Glisser-d&#233;placer&#160;: impl&#233;mentation d&#39;une source de d&#233;placement | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "OLE (glisser-déplacer), lancer des opérations de glissement"
 ms.assetid: 0ed2fda0-63fa-4b1e-b398-f1f142f40035
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Glisser-d&#233;placer&#160;: impl&#233;mentation d&#39;une source de d&#233;placement
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: &#233;tendre la biblioth&#232;que de marshaling | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "bibliothèque de marshaling, étendre"
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
 caps.latest.revision: 27
-caps.handback.revision: 25
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # Comment&#160;: &#233;tendre la biblioth&#232;que de marshaling
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Erreur irr&#233;cup&#233;rable RC1203 du compilateur de ressources  | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RC1203"
 ms.assetid: 60d08fb1-6a51-407c-854e-9a68080cfe2d
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Erreur irr&#233;cup&#233;rable RC1203 du compilateur de ressources 
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/CLRIMAGETYPE (Sp&#233;cifier le type d&#39;une image CLR) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-CLRIMAGETYPE (option de l'éditeur de liens)"
 ms.assetid: 04c60ee6-9dd7-4391-bc03-6926ad0fa116
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # /CLRIMAGETYPE (Sp&#233;cifier le type d&#39;une image CLR)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

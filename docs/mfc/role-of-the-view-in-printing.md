@@ -1,8 +1,7 @@
 ---
 title: "R&#244;le de la vue dans l&#39;impression | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "vues, imprimer"
 ms.assetid: 8d4a3c8e-1fce-4edc-b608-94cb5f3e487e
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # R&#244;le de la vue dans l&#39;impression
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

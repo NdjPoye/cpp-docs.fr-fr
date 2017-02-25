@@ -1,8 +1,7 @@
 ---
 title: "/LN (Cr&#233;er le module MSIL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "-LN (option du compilateur C++)"
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # /LN (Cr&#233;er le module MSIL)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

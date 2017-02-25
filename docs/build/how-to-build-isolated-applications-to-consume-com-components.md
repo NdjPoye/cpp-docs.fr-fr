@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: g&#233;n&#233;rer des applications isol&#233;es pour consommer des composants COM | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "applications isolées (C++)"
 ms.assetid: 04587547-1174-44ab-bd99-1292358fba20
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Comment&#160;: g&#233;n&#233;rer des applications isol&#233;es pour consommer des composants COM
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

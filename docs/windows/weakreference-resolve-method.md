@@ -1,8 +1,7 @@
 ---
 title: "WeakReference::Resolve, m&#233;thode | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Resolve (méthode)"
 ms.assetid: fc65a4b7-48a0-4d64-a793-37f566fdd8e7
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # WeakReference::Resolve, m&#233;thode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

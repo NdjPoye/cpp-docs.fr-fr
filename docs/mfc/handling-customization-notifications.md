@@ -1,8 +1,7 @@
 ---
 title: "Gestion des notifications de personnalisation | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -60,10 +59,10 @@ helpviewer_keywords:
   - "TBN_GETBUTTONINFO (notification)"
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Gestion des notifications de personnalisation
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Fourniture de l&#39;aide contextuelle | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Assistants personnalisés, implémenter l'aide"
 ms.assetid: c6c4d961-29d3-4d16-9f39-b12545aba540
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Fourniture de l&#39;aide contextuelle
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

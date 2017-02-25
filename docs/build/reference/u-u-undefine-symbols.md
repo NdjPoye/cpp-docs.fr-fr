@@ -1,8 +1,7 @@
 ---
 title: "/U, /u (Annuler la d&#233;finition de symboles) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "annuler la définition de symboles (option du compilateur)"
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # /U, /u (Annuler la d&#233;finition de symboles)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/GT (Prendre en charge le stockage local des threads avec fibres s&#233;curis&#233;es) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "stockage local des threads"
 ms.assetid: 071fec79-c701-432b-9970-457344133159
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /GT (Prendre en charge le stockage local des threads avec fibres s&#233;curis&#233;es)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

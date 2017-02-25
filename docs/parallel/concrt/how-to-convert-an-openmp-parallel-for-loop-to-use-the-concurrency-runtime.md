@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: convertir une boucle OpenMP parall&#232;le pour utiliser le runtime d’acc&#232;s concurrentiel | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "boucles parallèles, convertir d’OpenMP en runtime d’accès concurrentiel"
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
 caps.latest.revision: 13
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Comment&#160;: convertir une boucle OpenMP parall&#232;le pour utiliser le runtime d’acc&#232;s concurrentiel
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

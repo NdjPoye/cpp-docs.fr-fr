@@ -1,8 +1,7 @@
 ---
 title: "FactoryCache, structure | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "FactoryCache (structure)"
 ms.assetid: 624544e6-0989-47f6-a3e9-edb60e1ee6d4
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # FactoryCache, structure
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

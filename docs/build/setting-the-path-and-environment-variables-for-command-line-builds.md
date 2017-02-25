@@ -1,8 +1,7 @@
 ---
 title: "D&#233;finition du chemin d&#39;acc&#232;s et des variables d&#39;environnement pour la g&#233;n&#233;ration &#224; partir de la ligne de commande | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "fichier VCVARS32.bat"
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
 caps.latest.revision: 17
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # D&#233;finition du chemin d&#39;acc&#232;s et des variables d&#39;environnement pour la g&#233;n&#233;ration &#224; partir de la ligne de commande
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

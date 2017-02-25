@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: marshaler des cha&#238;nes &#224; l&#39;aide de PInvoke | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "appel de code non managé (C++), chaînes"
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Comment&#160;: marshaler des cha&#238;nes &#224; l&#39;aide de PInvoke
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

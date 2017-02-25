@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: marshaler des pointeurs fonction &#224; l&#39;aide de PInvoke | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "appel de code non managé (C++), rappels et délégués"
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # Comment&#160;: marshaler des pointeurs fonction &#224; l&#39;aide de PInvoke
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

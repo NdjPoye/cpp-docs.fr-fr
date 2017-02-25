@@ -1,8 +1,7 @@
 ---
 title: "Fichiers d&#39;en-t&#234;te et fichiers sources de contr&#244;le ou de programme MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "types de fichiers (C++), source et en-tête MFC"
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Fichiers d&#39;en-t&#234;te et fichiers sources de contr&#244;le ou de programme MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

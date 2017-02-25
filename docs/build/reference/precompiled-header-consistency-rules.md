@@ -1,8 +1,7 @@
 ---
 title: "R&#232;gles de coh&#233;rence s&#39;appliquant aux en-t&#234;tes pr&#233;compil&#233;s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "fichiers d'en-tête précompilés, règles de cohérence"
 ms.assetid: 844b1a14-5b0b-4276-a1f5-cc62f13f6dda
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # R&#232;gles de coh&#233;rence s&#39;appliquant aux en-t&#234;tes pr&#233;compil&#233;s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

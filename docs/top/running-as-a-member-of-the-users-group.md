@@ -1,32 +1,6 @@
 ---
-title: "Ex&#233;cution en tant que membre du groupe Utilisateurs | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PRJ0050"
-  - "VCD0047"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "groupe Utilisateurs [C++]"
-  - "sécurité [C++], groupe d’utilisateurs"
-  - "comptes Windows [C++]"
-  - "utilisateurs non administrateurs [C++]"
-  - "comptes d’utilisateurs [C++]"
-  - "administrateur (ne pas exécuter en tant que) [C++]"
-ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-caps.latest.revision: 17
+redirect_url: /cpp/security/running-as-a-member-of-the-users-group
 caps.handback.revision: 17
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
 ---
 # Ex&#233;cution en tant que membre du groupe Utilisateurs
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

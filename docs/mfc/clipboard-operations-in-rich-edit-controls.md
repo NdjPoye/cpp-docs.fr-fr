@@ -1,8 +1,7 @@
 ---
 title: "Op&#233;rations du Presse-papiers dans les contr&#244;les RichEdit | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "contrôles RichEdit, opérations du Presse-papiers"
 ms.assetid: 15ce66bc-2636-4a35-a2ae-d52285dc1af6
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Op&#233;rations du Presse-papiers dans les contr&#244;les RichEdit
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

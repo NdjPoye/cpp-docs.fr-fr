@@ -1,8 +1,7 @@
 ---
 title: "Objets d&#39;interface utilisateur et ID de commande | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "objets de l'interface utilisateur, associer à des ID"
 ms.assetid: 4ea19e9b-ed1e-452e-bd33-7f509107a45b
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Objets d&#39;interface utilisateur et ID de commande
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

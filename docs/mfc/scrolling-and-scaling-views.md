@@ -1,8 +1,7 @@
 ---
 title: "D&#233;filement et mise &#224; l&#39;&#233;chelle des vues | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "faire défiler les vues"
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # D&#233;filement et mise &#224; l&#39;&#233;chelle des vues
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

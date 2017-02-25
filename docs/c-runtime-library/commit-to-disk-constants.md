@@ -1,8 +1,7 @@
 ---
 title: "Commit-To-Disk, constantes | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "vc.constants"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "commit-to-disk (constantes)"
 ms.assetid: 0b903b23-b4fa-431e-a937-51d95f695ecf
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Commit-To-Disk, constantes
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

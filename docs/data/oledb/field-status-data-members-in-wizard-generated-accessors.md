@@ -1,8 +1,7 @@
 ---
 title: "Donn&#233;es membres de l&#39;&#233;tat des champs dans les accesseurs g&#233;n&#233;r&#233;s par l&#39;Assistant | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "OLE DB (modèles du consommateur), état du champ"
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Donn&#233;es membres de l&#39;&#233;tat des champs dans les accesseurs g&#233;n&#233;r&#233;s par l&#39;Assistant
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

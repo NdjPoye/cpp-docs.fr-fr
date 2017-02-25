@@ -1,8 +1,7 @@
 ---
 title: "Cr&#233;ation du texte d&#39;un fichier inline | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "texte, fichier inline"
 ms.assetid: b8a332ed-8244-4ff8-89e6-029d7f659725
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Cr&#233;ation du texte d&#39;un fichier inline
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

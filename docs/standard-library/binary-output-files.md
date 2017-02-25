@@ -1,8 +1,7 @@
 ---
 title: "Fichiers de sortie binaires | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "E/S (C++), fichiers de sortie binaires"
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Fichiers de sortie binaires
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

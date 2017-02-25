@@ -1,8 +1,7 @@
 ---
 title: "Sp&#233;cification des outils de g&#233;n&#233;ration personnalis&#233;e | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "outils de génération personnalisée (C++), spécifier"
 ms.assetid: e5161946-8002-418d-991e-219e6a8586f5
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Sp&#233;cification des outils de g&#233;n&#233;ration personnalis&#233;e
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: proc&#233;der &#224; une conversion entre System::Guid et _GUID | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "System::GUID, convertir en GUID"
 ms.assetid: 022c934c-3395-4f04-b498-85ad9bf8c646
 caps.latest.revision: 10
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Comment&#160;: proc&#233;der &#224; une conversion entre System::Guid et _GUID
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

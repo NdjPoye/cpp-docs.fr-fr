@@ -1,8 +1,7 @@
 ---
 title: "Erreur RC2104 du compilateur de ressources  | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "RC2104"
 ms.assetid: 792a3bd8-cb4c-4817-b288-4ce37082b582
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Erreur RC2104 du compilateur de ressources 
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

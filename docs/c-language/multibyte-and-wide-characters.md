@@ -1,8 +1,7 @@
 ---
 title: "Multioctets et caract&#232;res larges | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "codes de caractères (C++), multioctets"
   - "codes de caractères (C++), larges"
@@ -26,10 +24,10 @@ helpviewer_keywords:
   - "caractères larges (C++)"
 ms.assetid: 1943c469-200d-4724-b18f-781d70520f9e
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Multioctets et caract&#232;res larges
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

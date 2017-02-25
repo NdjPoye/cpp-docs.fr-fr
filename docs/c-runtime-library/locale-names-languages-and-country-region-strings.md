@@ -1,8 +1,7 @@
 ---
 title: "Noms des param&#232;tres r&#233;gionaux, langues et cha&#238;nes de pays-r&#233;gions | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.strings"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "chaînes pays/région"
   - "localisation, paramètres régionaux"
@@ -22,10 +20,10 @@ helpviewer_keywords:
   - "chaînes de langue"
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Cha&#238;nes relatives aux noms, aux langues, au pays et &#224; la r&#233;gion
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

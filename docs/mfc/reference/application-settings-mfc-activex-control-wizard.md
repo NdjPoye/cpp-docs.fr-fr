@@ -1,8 +1,7 @@
 ---
 title: "Param&#232;tres de l’application, Assistant Contr&#244;le ActiveX&#160;MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Contrôle ActiveX MFC (Assistant), paramètres de l’application"
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Param&#232;tres de l’application, Assistant Contr&#244;le ActiveX&#160;MFC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

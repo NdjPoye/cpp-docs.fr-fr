@@ -1,8 +1,7 @@
 ---
 title: "Assistant Ajout de fonction membre | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Ajout de fonction membre (Assistant C++)"
 ms.assetid: 13b6defc-faa6-4d57-83db-9dd854cbea3d
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Assistant Ajout de fonction membre
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

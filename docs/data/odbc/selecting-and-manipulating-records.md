@@ -1,8 +1,7 @@
 ---
 title: "S&#233;lection et manipulation d&#39;enregistrements | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "enregistrements, sélectionner"
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # S&#233;lection et manipulation d&#39;enregistrements
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

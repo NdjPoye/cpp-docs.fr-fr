@@ -1,8 +1,7 @@
 ---
 title: "Conversion de projets du mode mixte en langage interm&#233;diaire pur | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "projets (C++), convertir en intermediate language"
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Conversion de projets du mode mixte en langage interm&#233;diaire pur
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

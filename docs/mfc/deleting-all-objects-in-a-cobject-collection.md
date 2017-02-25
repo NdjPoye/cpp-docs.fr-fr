@@ -1,8 +1,7 @@
 ---
 title: "Suppression de tous les objets d&#39;une collection CObject | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "objets dans les collections CObject, supprimer"
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Suppression de tous les objets d&#39;une collection CObject
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

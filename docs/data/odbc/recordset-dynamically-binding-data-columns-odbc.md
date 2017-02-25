@@ -1,8 +1,7 @@
 ---
 title: "Recordset&#160;: liaison dynamique de colonnes de donn&#233;es (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "recordsets (C++), lier des données"
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Recordset&#160;: liaison dynamique de colonnes de donn&#233;es (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

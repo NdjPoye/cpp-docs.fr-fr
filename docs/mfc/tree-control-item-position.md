@@ -1,8 +1,7 @@
 ---
 title: "Position d&#39;&#233;l&#233;ment de contr&#244;le d&#39;arborescence | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "contrôles d'arborescence, position des éléments"
 ms.assetid: cd264344-2cf9-4d90-9ea8-c6900b6f60e7
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Position d&#39;&#233;l&#233;ment de contr&#244;le d&#39;arborescence
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

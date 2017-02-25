@@ -1,8 +1,7 @@
 ---
 title: "Conteneurs de contr&#244;les ActiveX&#160;: activation manuelle d&#39;une relation contenant-contenu de contr&#244;le ActiveX | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "AfxEnableControlContainer (méthode)"
 ms.assetid: 833bcde9-c9ad-4709-ad12-2fc2150fb6a5
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Conteneurs de contr&#244;les ActiveX&#160;: activation manuelle d&#39;une relation contenant-contenu de contr&#244;le ActiveX
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

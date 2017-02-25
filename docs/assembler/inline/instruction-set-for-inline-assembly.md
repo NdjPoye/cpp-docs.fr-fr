@@ -1,8 +1,7 @@
 ---
 title: "Instruction set pour un assembly inline | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "jeu d'instructions (C++), assembleur inline"
 ms.assetid: a45b5b22-9b5f-4545-81ec-70eb8ea2ef9b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Instruction set pour un assembly inline
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

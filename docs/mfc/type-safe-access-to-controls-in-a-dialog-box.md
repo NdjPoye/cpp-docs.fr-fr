@@ -1,8 +1,7 @@
 ---
 title: "Acc&#232;s de type s&#233;curis&#233; aux contr&#244;les d&#39;une bo&#238;te de dialogue | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "contrôles Windows communs (C++), dans des boîtes de dialogue"
 ms.assetid: 67021025-dd93-4d6a-8bed-a1348fe50685
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Acc&#232;s de type s&#233;curis&#233; aux contr&#244;les d&#39;une bo&#238;te de dialogue
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "ActivationFactory::GetRuntimeClassName, m&#233;thode | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "GetRuntimeClassName (méthode)"
 ms.assetid: 74e34f0a-9c51-4b40-89f5-45c6c5886ece
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # ActivationFactory::GetRuntimeClassName, m&#233;thode
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

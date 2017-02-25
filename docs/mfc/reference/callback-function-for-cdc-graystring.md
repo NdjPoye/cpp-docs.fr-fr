@@ -1,8 +1,7 @@
 ---
 title: "Fonction de rappel pour CDC::GrayString | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "fonctions de rappel, for CDC::GrayString"
 ms.assetid: 5217e183-df48-426b-931b-6245022ca36f
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Fonction de rappel pour CDC::GrayString
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

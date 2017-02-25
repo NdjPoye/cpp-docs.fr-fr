@@ -1,8 +1,7 @@
 ---
 title: "Conseils pour l&#39;am&#233;lioration du code &#224; dur&#233;e critique | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -41,10 +40,10 @@ helpviewer_keywords:
   - "threads (C++), performances"
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Conseils pour l&#39;am&#233;lioration du code &#224; dur&#233;e critique
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

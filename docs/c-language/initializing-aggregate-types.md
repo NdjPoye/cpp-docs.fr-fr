@@ -1,8 +1,7 @@
 ---
 title: "Initialisation des types d&#39;agr&#233;gats | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "types d'agrégats (C++)"
   - "agrégats (C++), initialiser"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "union (mot clé) (C), déclarations"
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Initialisation des types d&#39;agr&#233;gats
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

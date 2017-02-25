@@ -1,8 +1,7 @@
 ---
 title: "Exportation et importation &#224; l&#39;aide de AFX_EXT_CLASS | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "importer des DLL (C++)"
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Exportation et importation &#224; l&#39;aide de AFX_EXT_CLASS
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

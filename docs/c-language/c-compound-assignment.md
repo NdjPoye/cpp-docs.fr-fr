@@ -1,8 +1,7 @@
 ---
 title: "Assignation compos&#233;e C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "opérateurs d'assignation, composée"
   - "opérateurs d'assignation composée"
   - "opérateurs (C), d'assignation"
 ms.assetid: db7b5893-cd56-4f1c-9981-5a024200ab63
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Assignation compos&#233;e C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

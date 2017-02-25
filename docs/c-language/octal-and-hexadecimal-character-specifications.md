@@ -1,8 +1,7 @@
 ---
 title: "Sp&#233;cifications de caract&#232;res octaux et hexad&#233;cimaux | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "caractères hexadécimaux"
   - "caractères octaux"
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Sp&#233;cifications de caract&#232;res octaux et hexad&#233;cimaux
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

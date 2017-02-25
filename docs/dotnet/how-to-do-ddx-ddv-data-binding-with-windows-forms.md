@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: &#233;tablir la liaison des donn&#233;es DDX/DDV avec Windows Forms | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Windows Forms (C++), prise en charge des MFC"
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Comment&#160;: &#233;tablir la liaison des donn&#233;es DDX/DDV avec Windows Forms
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

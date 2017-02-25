@@ -1,8 +1,7 @@
 ---
 title: "R&#233;sum&#233; de la dur&#233;e de vie et de la visibilit&#233; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "durée de vie, et visibilité"
   - "visibilité, identificateurs"
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # R&#233;sum&#233; de la dur&#233;e de vie et de la visibilit&#233;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Cr&#233;ation d&#39;un objet CToolBarCtrl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "contrôles de barre d'outils (MFC), créer"
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
 caps.latest.revision: 11
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Cr&#233;ation d&#39;un objet CToolBarCtrl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

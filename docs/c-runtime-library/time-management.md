@@ -1,8 +1,7 @@
 ---
 title: "Gestion du temps | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.memory"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "dates, membres de la bibliothèque runtime"
   - "time, gestion de l’heure"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "fonctions d’heure"
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # Gestion du temps
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

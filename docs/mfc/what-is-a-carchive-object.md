@@ -1,8 +1,7 @@
 ---
 title: "Qu&#39;est-ce qu&#39;un objet CArchive&#160;? | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "CArchive (classe), à propos de la classe CArchive"
 ms.assetid: 843f1825-288d-4d89-a1fa-70e1f92d9b8b
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Qu&#39;est-ce qu&#39;un objet CArchive&#160;?
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

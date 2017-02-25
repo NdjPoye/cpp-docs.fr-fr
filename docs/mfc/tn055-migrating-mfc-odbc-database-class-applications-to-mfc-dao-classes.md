@@ -1,8 +1,7 @@
 ---
 title: "TN055&#160;: Migration des applications de classe de base de donn&#233;es ODBC MFC vers des classes DAO MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "TN055"
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # TN055&#160;: Migration des applications de classe de base de donn&#233;es ODBC MFC vers des classes DAO MFC
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

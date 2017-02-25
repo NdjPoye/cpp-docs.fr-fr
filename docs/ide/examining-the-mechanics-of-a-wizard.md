@@ -1,8 +1,7 @@
 ---
 title: "Examen du m&#233;canisme d&#39;un Assistant | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Assistants personnalisés, projets de l'Assistant"
 ms.assetid: 79917075-a843-40f6-abf8-64d98e5f6bdc
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Examen du m&#233;canisme d&#39;un Assistant
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

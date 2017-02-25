@@ -1,8 +1,7 @@
 ---
 title: "Modifications du syst&#232;me de g&#233;n&#233;ration | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "MSBuild, modifications du système de génération"
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Modifications du syst&#232;me de g&#233;n&#233;ration
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

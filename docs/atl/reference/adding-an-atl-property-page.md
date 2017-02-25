@@ -1,8 +1,7 @@
 ---
 title: "Ajout d&#39;une page de propri&#233;t&#233;s ATL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "pages de propriétés, ajouter"
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Ajout d&#39;une page de propri&#233;t&#233;s ATL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

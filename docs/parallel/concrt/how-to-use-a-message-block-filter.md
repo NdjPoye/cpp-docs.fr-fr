@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: utiliser un filtre de bloc de message | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "utiliser des filtres de blocs de messages [Runtime d’accès concurrentiel]"
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # Comment&#160;: utiliser un filtre de bloc de message
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

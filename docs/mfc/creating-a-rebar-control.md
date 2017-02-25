@@ -1,8 +1,7 @@
 ---
 title: "Cr&#233;ation d&#39;un contr&#244;le rebar | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "rebar (contrôles), créer"
 ms.assetid: 0a012e08-772b-4f6a-af86-7cb651d11d3e
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Cr&#233;ation d&#39;un contr&#244;le rebar
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

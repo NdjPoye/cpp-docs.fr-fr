@@ -1,8 +1,7 @@
 ---
 title: "Am&#233;lioration du fournisseur simple accessible en lecture seule | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "lecture seule (fournisseur simple) (C++)"
 ms.assetid: cba0e09f-44c1-41c1-9456-332aa13dc158
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Am&#233;lioration du fournisseur simple accessible en lecture seule
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

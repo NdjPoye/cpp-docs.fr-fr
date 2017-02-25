@@ -1,8 +1,7 @@
 ---
 title: "Prise en charge de l&#39;interaction souris pendant l&#39;inactivit&#233; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "contrôles ActiveX MFC, interaction souris"
 ms.assetid: b09106bf-44c7-4b9b-a6d9-0d624f16f5b3
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Prise en charge de l&#39;interaction souris pendant l&#39;inactivit&#233;
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

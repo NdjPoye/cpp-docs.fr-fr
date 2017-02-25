@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: impl&#233;menter divers mod&#232;les de producteur-consommateur | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "implémenter des modèles de producteur-consommateur (runtime d'accès concurrentiel)"
 ms.assetid: 75f2c7cc-5399-49ea-98eb-847fe6747169
 caps.latest.revision: 17
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Comment&#160;: impl&#233;menter divers mod&#232;les de producteur-consommateur
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

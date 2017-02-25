@@ -1,8 +1,7 @@
 ---
 title: "Ajout d&#39;&#233;l&#233;ments au contr&#244;le | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "CListCtrl (classe), ajouter des éléments"
 ms.assetid: 715994bd-340d-4ad2-9882-411654137830
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Ajout d&#39;&#233;l&#233;ments au contr&#244;le
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Substitution d&#39;un accesseur dynamique | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "substituer, accesseurs dynamiques"
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Substitution d&#39;un accesseur dynamique
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

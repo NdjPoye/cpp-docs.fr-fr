@@ -1,8 +1,7 @@
 ---
 title: "Informations de type au moment de l&#39;ex&#233;cution | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "informations de type, vérification des types au moment de l'exécution"
 ms.assetid: becbd0e5-0439-4c61-854f-8a74f7160c54
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Informations de type au moment de l&#39;ex&#233;cution
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

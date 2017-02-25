@@ -1,8 +1,7 @@
 ---
 title: "Litt&#233;raux de cha&#238;ne C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "chaînes littérales, C"
   - "littéraux de chaîne, syntaxe"
   - "chaînes (C++), littéraux de chaîne"
 ms.assetid: 4b05523e-49a2-4900-b21a-754350af3328
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Litt&#233;raux de cha&#238;ne C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

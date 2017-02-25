@@ -1,8 +1,7 @@
 ---
 title: "Mise en forme de la sortie d&#39;une &#233;tape de g&#233;n&#233;ration personnalis&#233;e ou d&#39;un &#233;v&#233;nement de build | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "événements (C++), build"
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Mise en forme de la sortie d&#39;une &#233;tape de g&#233;n&#233;ration personnalis&#233;e ou d&#39;un &#233;v&#233;nement de build
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

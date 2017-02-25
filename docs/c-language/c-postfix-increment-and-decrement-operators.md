@@ -1,8 +1,7 @@
 ---
 title: "Op&#233;rateurs suffix&#233;s d&#39;incr&#233;mentation et de d&#233;cr&#233;mentation C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "opérateur d'incrémentation, syntaxe"
   - "opérateurs scalaires"
   - "types (C), scalaires"
 ms.assetid: 56ba218d-65f9-405f-8684-caccc0ca33aa
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Op&#233;rateurs suffix&#233;s d&#39;incr&#233;mentation et de d&#233;cr&#233;mentation C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

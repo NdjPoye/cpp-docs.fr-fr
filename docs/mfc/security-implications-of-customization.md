@@ -1,8 +1,7 @@
 ---
 title: "Implications en mati&#232;re de s&#233;curit&#233; de la personnalisation | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "sécurité, MFC Feature Pack"
 ms.assetid: 9be96b12-be38-43bd-a133-5d671265f7a1
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Implications en mati&#232;re de s&#233;curit&#233; de la personnalisation
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

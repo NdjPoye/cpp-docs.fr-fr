@@ -1,8 +1,7 @@
 ---
 title: "Gestion de la notification TTN_NEEDTEXT pour les info-bulles | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "TTN_NEEDTEXT (message)"
 ms.assetid: d0370a65-21ba-4676-bcc5-8cf851bbb15c
 caps.latest.revision: 16
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Gestion de la notification TTN_NEEDTEXT pour les info-bulles
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

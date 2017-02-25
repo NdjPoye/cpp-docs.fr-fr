@@ -1,8 +1,7 @@
 ---
 title: "Op&#233;rateurs relationnels et d&#39;&#233;galit&#233; C | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "opérateur d'égalité"
   - "opérateur d'égalité, syntaxe"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "opérateurs relationnels, syntaxe"
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Op&#233;rateurs relationnels et d&#39;&#233;galit&#233; C
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

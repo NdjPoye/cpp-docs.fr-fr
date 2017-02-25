@@ -1,8 +1,7 @@
 ---
 title: "Directives de donn&#233;es et op&#233;rateurs dans un assembly inline | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "structures (C++), MASM"
 ms.assetid: fb7410c7-156a-4131-bcfc-211aa70533e3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Directives de donn&#233;es et op&#233;rateurs dans un assembly inline
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Pr&#233;sentation des &#233;tapes de g&#233;n&#233;ration personnalis&#233;e et des &#233;v&#233;nements de build | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "événements (C++), build"
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Pr&#233;sentation des &#233;tapes de g&#233;n&#233;ration personnalis&#233;e et des &#233;v&#233;nements de build
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

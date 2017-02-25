@@ -1,8 +1,7 @@
 ---
 title: "Sp&#233;cification d&#39;un fichier inline | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "programme NMAKE, fichiers inline"
 ms.assetid: 393eccfb-3fc9-4bac-a30c-8ac8d221cca3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Sp&#233;cification d&#39;un fichier inline
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

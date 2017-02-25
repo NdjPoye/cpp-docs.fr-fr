@@ -1,8 +1,7 @@
 ---
 title: "Proc&#233;dures pas &#224; pas relatives au runtime d&#39;acc&#232;s concurrentiel | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "procédures pas à pas (runtime d'accès concurrentiel)"
 ms.assetid: 7374c5e9-54eb-44bf-9ed9-5e190cfd290b
 caps.latest.revision: 14
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Proc&#233;dures pas &#224; pas relatives au runtime d&#39;acc&#232;s concurrentiel
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

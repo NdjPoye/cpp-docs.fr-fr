@@ -1,8 +1,7 @@
 ---
 title: "Fonctions de valeur cha&#238;ne en valeur num&#233;rique | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,16 +21,15 @@ f1_keywords:
   - "_tcstoi64"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "analyser, chaînes numériques"
   - "conversion de chaînes, en valeurs numériques"
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Fonctions de valeur cha&#238;ne en valeur num&#233;rique
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "&#201;viter des exceptions &#224; l&#39;arr&#234;t du CLR lors de l&#39;utilisation d&#39;objets COM g&#233;n&#233;r&#233;s avec&#160;/clr | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "assemblys mixtes (C++), exceptions d'arrêt CLR"
 ms.assetid: 41249d83-4b51-4e46-866f-27f475f2498c
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # &#201;viter des exceptions &#224; l&#39;arr&#234;t du CLR lors de l&#39;utilisation d&#39;objets COM g&#233;n&#233;r&#233;s avec&#160;/clr
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

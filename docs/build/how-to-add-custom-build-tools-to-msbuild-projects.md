@@ -1,8 +1,7 @@
 ---
 title: "Comment&#160;: ajouter des outils de g&#233;n&#233;ration personnalis&#233;e &#224; des projets MSBuild | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MSBuild (C++), comment : ajouter des outils de génération personnalisée"
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Comment&#160;: ajouter des outils de g&#233;n&#233;ration personnalis&#233;e &#224; des projets MSBuild
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

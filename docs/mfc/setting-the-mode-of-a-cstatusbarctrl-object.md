@@ -1,8 +1,7 @@
 ---
 title: "D&#233;finition du mode d&#39;un objet CStatusBarCtrl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "contrôles de barre d'état, modes simple et non simple"
 ms.assetid: ca6076e5-1501-4e33-8d35-9308941e46c0
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # D&#233;finition du mode d&#39;un objet CStatusBarCtrl
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

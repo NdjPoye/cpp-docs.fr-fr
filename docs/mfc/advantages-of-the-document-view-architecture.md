@@ -1,8 +1,7 @@
 ---
 title: "Avantages de l&#39;architecture document/vue | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "vues, avantages"
 ms.assetid: 0bc27071-e120-4889-939c-ce1e61fb9cb3
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Avantages de l&#39;architecture document/vue
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

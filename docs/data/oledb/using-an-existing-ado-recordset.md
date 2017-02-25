@@ -1,8 +1,7 @@
 ---
 title: "Utilisation d&#39;un recordset ADO existant | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "recordsets (C++), utiliser dans OLE DB"
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Utilisation d&#39;un recordset ADO existant
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

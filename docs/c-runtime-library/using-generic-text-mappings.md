@@ -1,8 +1,7 @@
 ---
 title: "Utilisation des mappages de texte g&#233;n&#233;rique | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "_UNICODE"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_MBCS (type de données)"
   - "_T (type)"
@@ -39,10 +37,10 @@ helpviewer_keywords:
   - "UNICODE (constante)"
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # Utilisation des mappages de texte g&#233;n&#233;rique
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

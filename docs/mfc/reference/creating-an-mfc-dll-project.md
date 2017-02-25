@@ -1,8 +1,7 @@
 ---
 title: "Cr&#233;ation d&#39;un projet DLL MFC | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "projets (C++), créer"
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # Cr&#233;ation d&#39;un projet DLL MFC
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

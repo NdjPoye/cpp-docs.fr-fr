@@ -1,8 +1,7 @@
 ---
 title: "&#201;change de donn&#233;es de bo&#238;tes de dialogue pour CRecordView et CDaoRecordView | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "ODBC (C++), échange de données de boîtes de dialogue (DDX) (prise en charge)"
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
 caps.latest.revision: 13
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # &#201;change de donn&#233;es de bo&#238;tes de dialogue pour CRecordView et CDaoRecordView
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
