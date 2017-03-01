@@ -1,36 +1,51 @@
 ---
-title: "Erreur du compilateur C3622 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3622"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3622"
+title: Erreur du compilateur C3622 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3622
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3622
 ms.assetid: 02836f78-0cf2-4947-b87e-710187d81014
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3622
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: ed81cc21e3c3ae574a0c83a692f75638d24111de
+ms.lasthandoff: 02/24/2017
 
-'classe' : une classe déclarée comme 'MotClé' ne peut pas être instanciée  
+---
+# <a name="compiler-error-c3622"></a>Erreur du compilateur C3622
+'classe' : une classe déclarée comme 'mot clé' ne peut pas être instanciée.  
   
- Vous avez essayé d'instancier une classe marquée [abstract](../../windows/abstract-cpp-component-extensions.md) \(ou [\_\_abstract](../../misc/abstract.md)\).  Une classe marquée abstract peut être une classe de base, mais elle ne peut pas être instanciée.  
+Une tentative d’instancier une classe marquée en tant que [abstraite](../../windows/abstract-cpp-component-extensions.md). Une classe marquée comme `abstract` peut être une classe de base, mais elle ne peut pas être instanciée.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C3622 :  
+## <a name="example"></a>Exemple  
+L’exemple suivant génère C3622.  
   
 ```  
 // C3622.cpp  
@@ -41,16 +56,4 @@ int main() {
    a aa;   // C3622  
 }  
 ```  
-  
-## Exemple  
- L'exemple suivant génère l'erreur C3622 :  
-  
-```  
-// C3622_b.cpp  
-// compile with: /clr:oldSyntax  
-__abstract class a {  
-};  
-int main() {  
-   a aa;   // C3622  
-}  
-```
+

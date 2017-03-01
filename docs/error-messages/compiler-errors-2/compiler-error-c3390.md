@@ -1,43 +1,75 @@
 ---
-title: "Erreur du compilateur C3390 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C3390"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3390"
+title: "C3390 d’erreur du compilateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C3390
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C3390
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
+ms.openlocfilehash: 257b0678ded15815f6673091d1adb26dea1dec12
+ms.lasthandoff: 02/24/2017
 
-'type\_arg' : argument de type non valide pour le paramètre générique 'param' du générique 'generic\_type', doit être un type référence  
+---
+# <a name="compiler-error-c3390"></a>Erreur du compilateur C3390
+'type_arg' : argument de type non valide pour le paramètre générique 'param' du générique 'generic_type', doit être un type référence  
   
- Un type générique a été instancié de manière incorrecte.  Vérifiez la définition du type.  Pour plus d'informations, consultez [Generics](../../windows/generics-cpp-component-extensions.md).  
+Un type générique a été instancié de manière incorrecte.  Vérifiez la définition du type.  Pour plus d’informations, consultez [génériques](../../windows/generics-cpp-component-extensions.md).  
   
-## Exemple  
- Dans l’exemple suivant, en C\#, un composant contenant un type générique est créé avec certaines contraintes non prises en charge pendant la création de types génériques dans [!INCLUDE[vcprvclong](../../error-messages/compiler-errors-2/includes/vcprvclong_md.md)]. Pour plus d’informations, consultez [Contraintes sur les paramètres de type](../Topic/Constraints%20on%20Type%20Parameters%20\(C%23%20Programming%20Guide\).md).  
+## <a name="example"></a>Exemple  
+Le premier exemple utilise c# pour créer un composant qui contient un type générique qui comporte certaines contraintes qui ne sont pas pris en charge lors de la création de types génériques dans C++ / CLR. Pour plus d’informations, consultez [contraintes sur les paramètres de Type](/dotnet/articles/csharp/programming-guide/generics/constraints-on-type-parameters).  
   
+```cs  
+// C3390.cs  
+// Compile by using: csc /target:library C3390.cs  
+// a C# program  
+public class GR<C, V, N>  
+where C : class  
+where V : struct  
+where N : new() {}  
 ```  
-// C3390.cs // compile with: /target:library // a C# program public class GR<C, V, N> where C : class where V : struct where N : new() {}  
-```  
   
-## Exemple  
- L’exemple suivant génère l’erreur C3390.  
+Lorsque le composant C3390.dll est disponible, l’exemple suivant génère C3390.  
   
-```  
-// C3390_b.cpp // compile with: /clr #using <C3390.dll> ref class R { R(int) {} }; value class V {}; ref struct N { N() {} }; int main () { GR<V, V, N^>^ gr2;   // C3390 first type must be a ref type GR<R^, V, N^>^ gr2b;   // OK }  
+```cpp  
+// C3390_b.cpp  
+// Compile by using: cl /clr C3390_b.cpp
+#using <C3390.dll>  
+ref class R { R(int) {} };  
+value class V {};  
+ref struct N { N() {} };  
+  
+int main () {  
+   GR<V, V, N^>^ gr2;   // C3390 first type must be a ref type  
+   GR<R^, V, N^>^ gr2b; // OK  
+}  
 ```

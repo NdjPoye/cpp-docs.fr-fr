@@ -1,33 +1,48 @@
 ---
-title: "critical | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Critical"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "critical OpenMP directive"
+title: critiques | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Critical
+dev_langs:
+- C++
+helpviewer_keywords:
+- critical OpenMP directive
 ms.assetid: 2ab87d6d-5ca4-43ae-9f0a-1f517a6a2bab
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# critical
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 5693a16faebbc0f8c0a29cf28910110fbff66318
+ms.lasthandoff: 02/24/2017
 
-Spécifie que le code est que ne soit exécuté sur un thread à la fois.  
+---
+# <a name="critical"></a>critical
+Spécifie que code est uniquement exécutée sur un thread à la fois.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 #pragma omp critical [(name)]  
@@ -36,18 +51,18 @@ Spécifie que le code est que ne soit exécuté sur un thread à la fois.
 }  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
  où,  
   
- \(`name`\) \(facultatif\)  
- Un nom pour identifier le code critique.  Notez que le nom doit être mis entre parenthèses.  
+ (`name`) (facultatif)  
+ Un nom pour identifier le code critique. Notez que ce nom doit être entre parenthèses.  
   
-## Notes  
- La directive de **critique** ne prend en charge aucune clauses OpenMP.  
+## <a name="remarks"></a>Remarques  
+ Le **critique** directive prend en charge aucune clause OpenMP.  
   
- Pour plus d'informations, consultez [2.6.2 critical Construct](../../../parallel/openmp/2-6-2-critical-construct.md).  
+ Pour plus d’informations, consultez [critique&2;.6.2 construction](../../../parallel/openmp/2-6-2-critical-construct.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // omp_critical.cpp  
@@ -91,16 +106,19 @@ int main()
 }  
 ```  
   
-  **41**  
-**18467**  
-**6334**  
-**26500**  
-**19169**  
-**15724**  
-**11478**  
-**29358**  
-**26962**  
-**24464**  
-**\= 29358 maximale**   
-## Voir aussi  
+```Output  
+41  
+18467  
+6334  
+26500  
+19169  
+15724  
+11478  
+29358  
+26962  
+24464  
+max = 29358  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [Directives](../../../parallel/openmp/reference/openmp-directives.md)

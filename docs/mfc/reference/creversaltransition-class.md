@@ -1,70 +1,121 @@
 ---
-title: "Classe CReversalTransition | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxanimationcontroller/CReversalTransition"
-  - "CReversalTransition"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CReversalTransition (classe)"
+title: Classe CReversalTransition | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxanimationcontroller/CReversalTransition
+- CReversalTransition
+dev_langs:
+- C++
+helpviewer_keywords:
+- CReversalTransition class
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Classe CReversalTransition
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 028ea275cc345513248e76dcf5b0eba931823b7a
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="creversaltransition-class"></a>CReversalTransition, classe
 Encapsule une transition inverse.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 class CReversalTransition : public CBaseTransition;  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[CReversalTransition::CReversalTransition](../Topic/CReversalTransition::CReversalTransition.md)|Construit un objet de transition inverse et initialise sa durée.|  
-  
-### Méthodes publiques  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CReversalTransition::Create](../Topic/CReversalTransition::Create.md)|Appelle la bibliothèque des transitions pour créer l'objet COM de la transition encapsulé.  \(Substitue [CBaseTransition::Create](../Topic/CBaseTransition::Create.md).\)|  
+|----------|-----------------|  
+|[CReversalTransition::CReversalTransition](#creversaltransition)|Construit un objet de transition inverse et initialise sa durée.|  
   
-### Données membres publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CReversalTransition::m\_duration](../Topic/CReversalTransition::m_duration.md)|Durée de la transition.|  
+|----------|-----------------|  
+|[CReversalTransition::Create](#create)|Appelle la bibliothèque des transitions pour créer l’objet COM de transition encapsulé. (Substitue [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-## Notes  
- Une transition inverse change de direction de manière souple sur une durée donnée.  La valeur finale sera identique à la valeur initiale et la rapidité finale correspond à la valeur négative de la rapidité initiale.  Comme toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l'aide de l'opérateur new.  L'objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup ; jusque\-là sa valeur est NULL.  La modification des variables des membres après la création de cet objet COM n'a aucun effet.  
+### <a name="public-data-members"></a>Membres de données publics  
   
-## Hiérarchie d'héritage  
+|Nom|Description|  
+|----------|-----------------|  
+|[CReversalTransition::m_duration](#m_duration)|La durée de la transition.|  
+  
+## <a name="remarks"></a>Notes  
+ Une transition inverse change sans heurts de direction sur une durée donnée. La valeur finale sera identique à la valeur initiale et la rapidité finale sera la valeur négative de la rapidité initiale. Car toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouveau opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que c’est NULL. Modification des variables de membre après que la création de cet objet COM n’a aucun effet.  
+  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  [CReversalTransition](../../mfc/reference/creversaltransition-class.md)  
   
-## Configuration requise  
- **En\-tête :** afxanimationcontroller.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** afxanimationcontroller.h  
   
-## Voir aussi  
+##  <a name="a-namecreatea--creversaltransitioncreate"></a><a name="create"></a>CReversalTransition::Create  
+ Appelle la bibliothèque des transitions pour créer l’objet COM de transition encapsulé.  
+  
+```  
+virtual BOOL Create(
+    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionFactory* \*not used*\);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `pLibrary`  
+ Pointeur vers la bibliothèque de transitions qui est responsable de la création de transitions standards.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ TRUE si la transition est créée avec succès ; Sinon, FALSE.  
+  
+##  <a name="a-namecreversaltransitiona--creversaltransitioncreversaltransition"></a><a name="creversaltransition"></a>CReversalTransition::CReversalTransition  
+ Construit un objet de transition inverse et initialise sa durée.  
+  
+```  
+CReversalTransition(UI_ANIMATION_SECONDS duration);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `duration`  
+ La durée de la transition.  
+  
+##  <a name="a-namemdurationa--creversaltransitionmduration"></a><a name="m_duration"></a>CReversalTransition::m_duration  
+ La durée de la transition.  
+  
+```  
+UI_ANIMATION_SECONDS m_duration;  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)
+

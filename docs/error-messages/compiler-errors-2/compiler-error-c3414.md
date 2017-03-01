@@ -1,35 +1,50 @@
 ---
-title: "Erreur du compilateur C3414 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3414"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3414"
+title: Erreur du compilateur C3414 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3414
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3414
 ms.assetid: 715f5432-b509-4f8f-84f5-e1463bac490f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3414
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 0aee8d8860183f73f638e1ec41c6841ad45573d7
+ms.lasthandoff: 02/24/2017
 
-'membre' : la fonction membre importée ne peut pas être définie  
+---
+# <a name="compiler-error-c3414"></a>Erreur du compilateur C3414
+'membre' : fonction membre importée ne peut pas être définie.  
   
- Un membre défini dans le code est déjà défini dans un assembly référencé.  
+ Un membre a été défini dans le code qui est également défini dans un assembly référencé.  
   
- L'exemple suivant génère l'erreur C3414 :  
+ L’exemple suivant génère l’erreur C3414 :  
   
 ```  
 // C3414a2.cpp  
@@ -40,7 +55,7 @@ public:
 };  
 ```  
   
- et ensuite :  
+ puis :  
   
 ```  
 // C3414b2.cpp  
@@ -53,33 +68,4 @@ void MyClass::Test() {    // C3414
 System::Object::Object() {    // C3414  
 }  
 ```  
-  
- L'exemple suivant génère l'erreur C3414 :  
-  
-```  
-// C3414a.cpp  
-// compile with: /clr:oldSyntax /LD  
-#using <mscorlib.dll>  
-public __gc class MyClass  
-{  
-public:  
-   void Test(){}  
-};  
-```  
-  
- et ensuite :  
-  
-```  
-// C3414b.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-#using <C3414a.dll>  
-  
-void MyClass::Test()  
-{    // C3414  
-}  
-  
-System::Object::Object()  
-{    // C3414  
-}  
-```
+

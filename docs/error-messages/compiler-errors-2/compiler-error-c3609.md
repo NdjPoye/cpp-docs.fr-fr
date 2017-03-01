@@ -1,33 +1,48 @@
 ---
-title: "Erreur du compilateur C3609 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3609"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3609"
+title: Erreur du compilateur C3609 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3609
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3609
 ms.assetid: 801e7f79-4ac6-4f8f-955f-703cdf095d00
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3609
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: ffb46df64ac0a18847c3595f9fb3fffc3bd26c51
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="compiler-error-c3609"></a>Erreur du compilateur C3609
 'membre' : une fonction sealed ou final doit être virtuelle  
   
- Les mots clés [sealed](../../windows/sealed-cpp-component-extensions.md) et [final](../../cpp/final-specifier.md) sont autorisés uniquement sur une fonction de classe, struct ou membre marquée `virtual`.  
+ Le [scellé](../../windows/sealed-cpp-component-extensions.md) et [final](../../cpp/final-specifier.md) mots clés sont autorisés uniquement sur une fonction de classe, struct ou membre marquée `virtual`.  
   
  L'exemple suivant génère l'erreur C3609 :  
   
@@ -39,16 +54,4 @@ ref class C {
    virtual int f2() sealed;   // OK  
 };  
 ```  
-  
- **Extensions managées pour C\+\+**  
-  
- L'exemple suivant génère l'erreur C3609 :  
-  
-```  
-// C3609c.cpp  
-// compile with: /clr:oldSyntax /c  
-__gc class C {  
-   __sealed int f();   // C3609  
-   __sealed virtual int f2();   // OK  
-};  
-```
+

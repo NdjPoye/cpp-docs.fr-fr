@@ -1,36 +1,53 @@
 ---
-title: "Erreur du compilateur C3612 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3612"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3612"
+title: Erreur du compilateur C3612 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3612
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3612
 ms.assetid: aa6e3a2b-4afa-481c-98c1-1b6d1f82f869
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Erreur du compilateur C3612
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: fa36c033cf311538e1d77ce37b2d3e4a3936b7d7
+ms.lasthandoff: 02/24/2017
 
-'type' : une classe sealed ne peut pas être abstraite  
+---
+# <a name="compiler-error-c3612"></a>Erreur du compilateur C3612
+'type' : une classe sealed ne peut pas être abstract  
   
- Les types définis avec `value` \(ou [\_\_value](../../misc/value.md)\) sont sealed par défaut et une classe est abstraite sauf si elle implémente toutes les méthodes de sa base.  Une classe sealed abstraite ne peut ni être une classe de base ni être instanciée.  
+Les types définis à l’aide de `value` sont scellées par défaut, et une classe est abstraite sauf si elle implémente toutes les méthodes de sa base. Une classe abstraite sealed ne peut ni être une classe de base ni être instanciée.  
   
- Pour plus d'informations, consultez [Classes and Structs](../../windows/classes-and-structs-cpp-component-extensions.md).  
+Pour plus d’informations, consultez [les Classes et Structs](../../windows/classes-and-structs-cpp-component-extensions.md).  
   
- L'exemple suivant génère l'erreur C3612 :  
+## <a name="example"></a>Exemple  
+L’exemple suivant génère l’erreur C3612 :  
   
 ```  
 // C3612.cpp  

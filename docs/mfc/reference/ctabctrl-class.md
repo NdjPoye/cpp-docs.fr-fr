@@ -1,92 +1,108 @@
 ---
-title: "CTabCtrl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CTabCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTabCtrl class"
-  - "CTabCtrl class, contrôles communs"
-  - "contrôles onglet"
+title: CTabCtrl (classe) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CTabCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- tab controls
+- CTabCtrl class, common controls
+- CTabCtrl class
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CTabCtrl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: e1d8497b444e4dd5ee1e2803c1a763f67e2e0054
+ms.lasthandoff: 02/24/2017
 
-Fournit les fonctionnalités du contrôle onglet communs windows.  
+---
+# <a name="ctabctrl-class"></a>CTabCtrl (classe)
+Fournit les fonctionnalités du contrôle commun d'onglet Windows.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 class CTabCtrl : public CWnd  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[CTabCtrl::CTabCtrl](../Topic/CTabCtrl::CTabCtrl.md)|Construit un objet `CTabCtrl`.|  
-  
-### Méthodes publiques  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CTabCtrl::AdjustRect](../Topic/CTabCtrl::AdjustRect.md)|Calcule la zone d'affichage d'un contrôle onglet donnée un rectangle de fenêtre, ou calcule le rectangle de fenêtre qui correspondrait à une zone d'affichage donnée.|  
-|[CTabCtrl::Create](../Topic/CTabCtrl::Create.md)|Crée un contrôle onglet et l'attache à une instance d'un objet d' `CTabCtrl` .|  
-|[CTabCtrl::CreateEx](../Topic/CTabCtrl::CreateEx.md)|Crée un contrôle onglet avec les styles étendus par windows spécifiées et l'attache à une instance d'un objet d' `CTabCtrl` .|  
-|[CTabCtrl::DeleteAllItems](../Topic/CTabCtrl::DeleteAllItems.md)|Supprime tous les éléments d'un contrôle onglet.|  
-|[CTabCtrl::DeleteItem](../Topic/CTabCtrl::DeleteItem.md)|Supprime un élément d'un contrôle onglet.|  
-|[CTabCtrl::DeselectAll](../Topic/CTabCtrl::DeselectAll.md)|En réinitialise des éléments dans un contrôle onglet, la suppression qui ont été appuyés.|  
-|[CTabCtrl::DrawItem](../Topic/CTabCtrl::DrawItem.md)|Dessine un élément spécifié d'un contrôle onglet.|  
-|[CTabCtrl::GetCurFocus](../Topic/CTabCtrl::GetCurFocus.md)|Récupère l'onglet avec le focus actuel d'un contrôle onglet.|  
-|[CTabCtrl::GetCurSel](../Topic/CTabCtrl::GetCurSel.md)|Détermine l'onglet sélectionné dans un contrôle onglet.|  
-|[CTabCtrl::GetExtendedStyle](../Topic/CTabCtrl::GetExtendedStyle.md)|Récupère les styles étendus qui sont actuellement utilisées pour le contrôle onglet.|  
-|[CTabCtrl::GetImageList](../Topic/CTabCtrl::GetImageList.md)|Récupère la liste d'images associée à un contrôle onglet.|  
-|[CTabCtrl::GetItem](../Topic/CTabCtrl::GetItem.md)|Récupère des informations sur un onglet dans un contrôle onglet.|  
-|[CTabCtrl::GetItemCount](../Topic/CTabCtrl::GetItemCount.md)|Récupère le nombre d'onglets dans le contrôle onglet.|  
-|[CTabCtrl::GetItemRect](../Topic/CTabCtrl::GetItemRect.md)|Récupère le rectangle englobant d'un onglet dans un contrôle onglet.|  
-|[CTabCtrl::GetItemState](../Topic/CTabCtrl::GetItemState.md)|Récupère l'état de l'élément désigné de contrôle tab.|  
-|[CTabCtrl::GetRowCount](../Topic/CTabCtrl::GetRowCount.md)|Récupère le nombre de lignes actuel d'onglets dans un contrôle onglet.|  
-|[CTabCtrl::GetToolTips](../Topic/CTabCtrl::GetToolTips.md)|Récupère le handle du contrôle d'info\-bulle associé à un contrôle onglet.|  
-|[CTabCtrl::HighlightItem](../Topic/CTabCtrl::HighlightItem.md)|Définit l'état de mise en surbrillance d'un élément d'onglet.|  
-|[CTabCtrl::HitTest](../Topic/CTabCtrl::HitTest.md)|Détermine quel onglet, le cas échéant, est à une position spécifiée d'écran.|  
-|[CTabCtrl::InsertItem](../Topic/CTabCtrl::InsertItem.md)|Insère un nouvel onglet dans un contrôle onglet.|  
-|[CTabCtrl::RemoveImage](../Topic/CTabCtrl::RemoveImage.md)|Supprime une image de la liste d'images d'un contrôle onglet.|  
-|[CTabCtrl::SetCurFocus](../Topic/CTabCtrl::SetCurFocus.md)|Définit le focus sur un onglet spécifié dans un contrôle onglet.|  
-|[CTabCtrl::SetCurSel](../Topic/CTabCtrl::SetCurSel.md)|Sélectionne un onglet dans un contrôle onglet.|  
-|[CTabCtrl::SetExtendedStyle](../Topic/CTabCtrl::SetExtendedStyle.md)|Définit les styles étendus pour un contrôle onglet.|  
-|[CTabCtrl::SetImageList](../Topic/CTabCtrl::SetImageList.md)|Assigne une liste d'images à un contrôle onglet.|  
-|[CTabCtrl::SetItem](../Topic/CTabCtrl::SetItem.md)|Définit une partie ou l'ensemble des attributs d'un onglet.|  
-|[CTabCtrl::SetItemExtra](../Topic/CTabCtrl::SetItemExtra.md)|Définit le nombre d'octets par onglet réservé pour les données définies par l'application dans un contrôle onglet.|  
-|[CTabCtrl::SetItemSize](../Topic/CTabCtrl::SetItemSize.md)|Définit la largeur et la hauteur d'un élément.|  
-|[CTabCtrl::SetItemState](../Topic/CTabCtrl::SetItemState.md)|Définit l'état de l'élément désigné de contrôle tab.|  
-|[CTabCtrl::SetMinTabWidth](../Topic/CTabCtrl::SetMinTabWidth.md)|Définit la largeur minimale des éléments dans un contrôle onglet.|  
-|[CTabCtrl::SetPadding](../Topic/CTabCtrl::SetPadding.md)|Définit la quantité d'espace \(padding\) autour de l'icône et de l'étiquette de chaque onglet dans un contrôle onglet.|  
-|[CTabCtrl::SetToolTips](../Topic/CTabCtrl::SetToolTips.md)|Assigne un contrôle d'info\-bulle à un contrôle onglet.|  
+|----------|-----------------|  
+|[CTabCtrl::CTabCtrl](#ctabctrl)|Construit un objet `CTabCtrl`.|  
   
-## Notes  
- Un « contrôle tab » est analogue à des séparateurs dans un livre ou aux étiquettes dans un classeur.  En utilisant un contrôle onglet, une application peut définir plusieurs pages pour la même zone d'une fenêtre ou boîte de dialogue.  Chaque page se compose d'un jeu d'informations ou d'un groupe de contrôles que l'application affiche lorsque l'utilisateur sélectionne la table correspondante.  Un type particulier de contrôle onglet affiche les onglets qui ressemblent aux boutons.  Cliquez sur un bouton doit immédiatement exécuter une commande au lieu d'afficher une page.  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
- Ce contrôle \(et par conséquent la classe d' `CTabCtrl` \) est disponible uniquement aux programmes s'exécutant sous la version 3,51 de Windows 95\/98 et Windows NT et versions ultérieures.  
+|Nom|Description|  
+|----------|-----------------|  
+|[CTabCtrl::AdjustRect](#adjustrect)|Calcule la zone d’affichage d’un contrôle onglet donné un rectangle de la fenêtre, ou calcule le rectangle de la fenêtre qui correspond à une zone d’affichage donné.|  
+|[CTabCtrl::Create](#create)|Crée un contrôle onglet et l’attache à une instance d’un `CTabCtrl` objet.|  
+|[CTabCtrl::CreateEx](#createex)|Crée un contrôle onglet avec les styles étendus Windows spécifiés et l’attache à une instance d’un `CTabCtrl` objet.|  
+|[CTabCtrl::DeleteAllItems](#deleteallitems)|Supprime tous les éléments d’un contrôle onglet.|  
+|[CTabCtrl::DeleteItem](#deleteitem)|Supprime un élément d’un contrôle onglet.|  
+|[CTabCtrl::DeselectAll](#deselectall)|Réinitialise les éléments dans un contrôle onglet, désélectionnez les qui ont été enfoncées.|  
+|[CTabCtrl::DrawItem](#drawitem)|Dessine un élément spécifié d’un contrôle onglet.|  
+|[CTabCtrl::GetCurFocus](#getcurfocus)|Récupère l’onglet actif dans un contrôle onglet.|  
+|[CTabCtrl::GetCurSel](#getcursel)|Détermine l’onglet actuellement sélectionné dans un contrôle onglet.|  
+|[CTabCtrl::GetExtendedStyle](#getextendedstyle)|Récupère les styles étendus qui sont actuellement en cours d’utilisation pour le contrôle onglet.|  
+|[CTabCtrl::GetImageList](#getimagelist)|Récupère la liste d’images associée à un contrôle onglet.|  
+|[CTabCtrl::GetItem](#getitem)|Récupère des informations sur un onglet dans un contrôle onglet.|  
+|[CTabCtrl::GetItemCount](#getitemcount)|Récupère le nombre d’onglets dans le contrôle onglet.|  
+|[CTabCtrl::GetItemRect](#getitemrect)|Récupère le rectangle englobant d’un onglet dans un contrôle onglet.|  
+|[CTabCtrl::GetItemState](#getitemstate)|Récupère l’état de l’élément de contrôle onglet indiqué.|  
+|[CTabCtrl::GetRowCount](#getrowcount)|Récupère le nombre actuel de lignes d’onglets dans un contrôle onglet.|  
+|[CTabCtrl::GetToolTips](#gettooltips)|Récupère le handle du contrôle ToolTip associé à un contrôle onglet.|  
+|[CTabCtrl::HighlightItem](#highlightitem)|Définit l’état de mise en surbrillance d’un élément de l’onglet.|  
+|[CTabCtrl::HitTest](#hittest)|Détermine quel onglet, le cas échéant, est à un emplacement spécifié à l’écran.|  
+|[CTabCtrl::InsertItem](#insertitem)|Insère un nouvel onglet dans un contrôle onglet.|  
+|[CTabCtrl::RemoveImage](#removeimage)|Supprime une image de la liste d’images d’un contrôle onglet.|  
+|[CTabCtrl::SetCurFocus](#setcurfocus)|Définit le focus sur un onglet spécifié dans un contrôle onglet.|  
+|[CTabCtrl::SetCurSel](#setcursel)|Sélectionne un onglet dans un contrôle onglet.|  
+|[CTabCtrl::SetExtendedStyle](#setextendedstyle)|Définit les styles étendus pour un contrôle onglet.|  
+|[CTabCtrl::SetImageList](#setimagelist)|Affecte une liste d’images à un contrôle onglet.|  
+|[CTabCtrl::SetItem](#setitem)|Définit certains ou tous les attributs d’un onglet.|  
+|[CTabCtrl::SetItemExtra](#setitemextra)|Définit le nombre d’octets par onglet réservé pour les données définies par l’application dans un contrôle onglet.|  
+|[CTabCtrl::SetItemSize](#setitemsize)|Définit la largeur et la hauteur d’un élément.|  
+|[CTabCtrl::SetItemState](#setitemstate)|Définit l’état de l’élément de contrôle onglet indiqué.|  
+|[CTabCtrl::SetMinTabWidth](#setmintabwidth)|Définit la largeur minimale des éléments dans un contrôle onglet.|  
+|[CTabCtrl::SetPadding](#setpadding)|Définit la quantité d’espace (remplissage) autour de de chaque onglet icône et une étiquette dans un contrôle onglet.|  
+|[CTabCtrl::SetToolTips](#settooltips)|Assigne un contrôle info-bulle pour un contrôle onglet.|  
   
- Pour plus d'informations sur l'utilisation `CTabCtrl`, consultez [contrôles](../../mfc/controls-mfc.md) et l' [Utilisation CTabCtrl](../../mfc/using-ctabctrl.md).  
+## <a name="remarks"></a>Remarques  
+ Un « contrôle onglet » est semblable aux intercalaires d’un agenda ou les étiquettes dans un fichier CAB. En utilisant un contrôle tab, une application peut définir plusieurs pages pour la même zone d’une fenêtre ou d’une boîte de dialogue. Chaque page se compose d’un ensemble d’informations ou un groupe de contrôles de l’application s’affiche lorsque l’utilisateur sélectionne l’onglet correspondant. Un type spécial de contrôle onglet affiche les onglets qui ressemblent à des boutons. En cliquant sur un bouton doit effectuer immédiatement une commande au lieu d’afficher une page.  
   
-## Hiérarchie d'héritage  
+ Ce contrôle (et par conséquent la `CTabCtrl` classe) est disponible uniquement pour les programmes s’exécutant sous Windows 95/98 et Windows NT version 3.51 et ultérieures.  
+  
+ Pour plus d’informations sur l’utilisation de `CTabCtrl`, consultez [contrôles](../../mfc/controls-mfc.md) et [l’utilisation de CTabCtrl](../../mfc/using-ctabctrl.md).  
+  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -95,11 +111,671 @@ class CTabCtrl : public CWnd
   
  `CTabCtrl`  
   
-## Configuration requise  
- **Header:** afxcmn.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** afxcmn.h  
   
-## Voir aussi  
- [CWnd, classe](../../mfc/reference/cwnd-class.md)   
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
- [CHeaderCtrl Class](../../mfc/reference/cheaderctrl-class.md)   
- [CListCtrl Class](../../mfc/reference/clistctrl-class.md)
+##  <a name="a-nameadjustrecta--ctabctrladjustrect"></a><a name="adjustrect"></a>CTabCtrl::AdjustRect  
+ Calcule la zone d’affichage d’un contrôle onglet donné un rectangle de la fenêtre, ou calcule le rectangle de la fenêtre qui correspond à une zone d’affichage donné.  
+  
+```  
+void AdjustRect(BOOL bLarger,   LPRECT lpRect);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `bLarger`  
+ Indique l’opération à effectuer. Si ce paramètre est **TRUE**, `lpRect` spécifie un rectangle d’affichage et reçoit le rectangle de la fenêtre correspondante. Si ce paramètre est **FALSE**, `lpRect` spécifie un rectangle de la fenêtre et reçoit le rectangle d’affichage correspondant.  
+  
+ `lpRect`  
+ Pointeur vers un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui spécifie le rectangle donné et reçoit le rectangle calculé.  
+  
+### <a name="example"></a>Exemple  
+ [!code-cpp[NVC_MFC_CTabCtrl n °&1;](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]  
+  
+##  <a name="a-namecreatea--ctabctrlcreate"></a><a name="create"></a>CTabCtrl::Create  
+ Crée un contrôle onglet et l’attache à une instance d’un `CTabCtrl` objet.  
+  
+```  
+virtual BOOL Create(
+    DWORD dwStyle,
+    const RECT& rect,
+    CWnd* pParentWnd,
+    UINT nID);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `dwStyle`  
+ Spécifie le style du contrôle onglet. Appliquer n’importe quelle combinaison de [onglet styles de contrôle](http://msdn.microsoft.com/library/windows/desktop/bb760549), décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Consultez la page **remarques** pour obtenir la liste des styles de fenêtre que vous pouvez également appliquer au contrôle.  
+  
+ `rect`  
+ Spécifie la taille et la position du contrôle onglet. Il peut être soit un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
+  
+ `pParentWnd`  
+ Spécifie les fenêtre du parent du contrôle onglet, généralement un `CDialog`. Il ne doit pas être **NULL**.  
+  
+ `nID`  
+ Spécifie l’ID. du contrôle de l’onglet  
+  
+### <a name="return-value"></a>Valeur de retour  
+ **TRUE** si l’initialisation de l’objet a réussi ; sinon **FALSE**.  
+  
+### <a name="remarks"></a>Remarques  
+ Vous construisez un `CTabCtrl` objet en deux étapes. Tout d’abord, appelez le constructeur, puis appelez **créer**, qui crée le contrôle onglet et l’attache à le `CTabCtrl` objet.  
+  
+ En plus des styles de contrôle onglet, vous pouvez appliquer les styles de fenêtre suivants à un contrôle tab :  
+  
+- **WS_CHILD** crée une fenêtre enfant qui représente le contrôle onglet. Ne peut pas être utilisé avec les `WS_POPUP` style.  
+  
+- **WS_VISIBLE** crée un contrôle d’onglet est visible initialement.  
+  
+- **WS_DISABLED** crée une fenêtre qui est initialement désactivée.  
+  
+- **WS_GROUP** Spécifie le premier contrôle d’un groupe de contrôles dans lesquels l’utilisateur peut déplacer d’un contrôle à l’autre avec les touches de direction. Tous les contrôles définis avec la **WS_GROUP** après le premier contrôle appartiennent au même groupe de style. Le contrôle suivant avec les **WS_GROUP** style met fin au groupe de style et démarre le groupe suivant (autrement dit, un groupe se termine où commence la prochaine).  
+  
+- **WS_TABSTOP** spécifie un nombre quelconque de contrôles par le biais duquel l’utilisateur peut passer à l’aide de la touche TAB. La touche TAB déplace l’utilisateur vers le contrôle suivant est spécifié par le **WS_TABSTOP** style.  
+  
+ Pour créer un contrôle onglet avec des styles de fenêtre étendus, appelez [CTabCtrl::CreateEx](#createex) au lieu de **créer**.  
+  
+### <a name="example"></a>Exemple  
+ [!code-cpp[NVC_MFC_CTabCtrl n °&2;](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
+  
+##  <a name="a-namecreateexa--ctabctrlcreateex"></a><a name="createex"></a>CTabCtrl::CreateEx  
+ Crée un contrôle (une fenêtre enfant) et l’associe à la `CTabCtrl` objet.  
+  
+```  
+virtual BOOL CreateEx(
+    DWORD dwExStyle,
+    DWORD dwStyle,
+    const RECT& rect,
+    CWnd* pParentWnd,
+    UINT nID);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `dwExStyle`  
+ Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le `dwExStyle` paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+ `dwStyle`  
+ Spécifie le style du contrôle onglet. Appliquer n’importe quelle combinaison de [onglet styles de contrôle](http://msdn.microsoft.com/library/windows/desktop/bb760549), décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Consultez la page **remarques** dans [créer](#create) pour obtenir la liste des styles de fenêtre que vous pouvez également appliquer au contrôle.  
+  
+ `rect`  
+ Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, dans les coordonnées clientes de `pParentWnd`.  
+  
+ `pParentWnd`  
+ Pointeur vers la fenêtre parent du contrôle.  
+  
+ `nID`  
+ ID de fenêtre enfant. du contrôle  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Différent de zéro si l’opération réussit sinon 0.  
+  
+### <a name="remarks"></a>Notes  
+ Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus Windows, spécifiés par la préface de style étendu Windows **WS_EX_**.  
+  
+ `CreateEx`crée le contrôle avec les styles étendus de Windows spécifiés par `dwExStyle`. Ensemble spécifique d’un contrôle à l’aide de styles étendus [SetExtendedStyle](#setextendedstyle). Par exemple, utilisez `CreateEx` pour définir ces styles en tant que **WS_EX_CONTEXTHELP**, mais utiliser `SetExtendedStyle` pour définir ces styles en tant que **TCS_EX_FLATSEPARATORS**. Pour plus d’informations, consultez les styles décrits dans [Styles étendus de contrôle d’onglet](http://msdn.microsoft.com/library/windows/desktop/bb760546) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-namectabctrla--ctabctrlctabctrl"></a><a name="ctabctrl"></a>CTabCtrl::CTabCtrl  
+ Construit un objet `CTabCtrl`.  
+  
+```  
+CTabCtrl();
+```  
+  
+##  <a name="a-namedeleteallitemsa--ctabctrldeleteallitems"></a><a name="deleteallitems"></a>CTabCtrl::DeleteAllItems  
+ Supprime tous les éléments d’un contrôle onglet.  
+  
+```  
+BOOL DeleteAllItems();
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Valeur différente de zéro cas de réussite ; sinon, 0.  
+  
+##  <a name="a-namedeleteitema--ctabctrldeleteitem"></a><a name="deleteitem"></a>CTabCtrl::DeleteItem  
+ Supprime l’élément spécifié à partir d’un contrôle onglet.  
+  
+```  
+BOOL DeleteItem(int nItem);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `nItem`  
+ Valeur de base zéro de l’élément à supprimer.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Valeur différente de zéro cas de réussite ; sinon, 0.  
+  
+### <a name="example"></a>Exemple  
+ [!code-cpp[NVC_MFC_CTabCtrl n °&3;](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]  
+  
+##  <a name="a-namedeselectalla--ctabctrldeselectall"></a><a name="deselectall"></a>CTabCtrl::DeselectAll  
+ Réinitialise les éléments dans un contrôle onglet, désélectionnez les qui ont été enfoncées.  
+  
+```  
+void DeselectAll(BOOL fExcludeFocus);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ *fExcludeFocus*  
+ Indicateur qui spécifie la portée de la désélection de l’élément. Si ce paramètre est défini sur **FALSE**, tous les boutons de l’onglet seront réinitialisées. Si elle est définie sur **TRUE**, puis tous les éléments d’onglet à l’exception de celui actuellement sélectionné seront réinitialisés.  
+  
+### <a name="remarks"></a>Notes  
+ Cette fonction membre implémente le comportement du message Win32, [TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-namedrawitema--ctabctrldrawitem"></a><a name="drawitem"></a>CTabCtrl::DrawItem  
+ Appelé par l’infrastructure lorsqu’un aspect visuel d’une modification de contrôle onglet en mode owner-draw.  
+  
+```  
+virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `lpDrawItemStruct`  
+ Un pointeur vers un [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) structure décrivant l’élément à peindre.  
+  
+### <a name="remarks"></a>Remarques  
+ Le **itemAction** membre de la `DRAWITEMSTRUCT` structure définit l’action de dessin qui doit être effectuée.  
+  
+ Par défaut, cette fonction membre ne fait rien. Remplacez cette fonction membre pour implémenter le dessin pour un mode owner-draw `CTabCtrl` objet.  
+  
+ L’application doit restaurer tous les objets interface (GDI) périphérique graphique sélectionnés pour le contexte d’affichage fournie dans `lpDrawItemStruct` avant cette fonction se termine.  
+  
+##  <a name="a-namegetcurfocusa--ctabctrlgetcurfocus"></a><a name="getcurfocus"></a>CTabCtrl::GetCurFocus  
+ Récupère l’index de l’onglet actif en cours.  
+  
+```  
+int GetCurFocus() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Index de base zéro de l’onglet actif en cours.  
+  
+##  <a name="a-namegetcursela--ctabctrlgetcursel"></a><a name="getcursel"></a>CTabCtrl::GetCurSel  
+ Récupère l’onglet actuellement sélectionné dans un contrôle onglet.  
+  
+```  
+int GetCurSel() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Index de base zéro de l’onglet sélectionné en cas de réussite ou – 1 si aucun onglet n’est sélectionné.  
+  
+##  <a name="a-namegetextendedstylea--ctabctrlgetextendedstyle"></a><a name="getextendedstyle"></a>CTabCtrl::GetExtendedStyle  
+ Récupère les styles étendus qui sont actuellement en cours d’utilisation pour le contrôle onglet.  
+  
+```  
+DWORD GetExtendedStyle();
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Représente les styles étendus en cours d’utilisation pour le contrôle onglet. Cette valeur est une combinaison de [onglet contrôle de styles étendus](http://msdn.microsoft.com/library/windows/desktop/bb760546), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+### <a name="remarks"></a>Remarques  
+ Cette fonction membre implémente le comportement du message Win32 [TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-namegetimagelista--ctabctrlgetimagelist"></a><a name="getimagelist"></a>CTabCtrl::GetImageList  
+ Récupère la liste d’images associée à un contrôle onglet.  
+  
+```  
+CImageList* GetImageList() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Si l’opération réussit, un pointeur vers la liste d’images de l’onglet de contrôle ; dans le cas contraire, **NULL**.  
+  
+##  <a name="a-namegetitema--ctabctrlgetitem"></a><a name="getitem"></a>CTabCtrl::GetItem  
+ Récupère des informations sur un onglet dans un contrôle onglet.  
+  
+```  
+BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `nItem`  
+ Index de base zéro de l’onglet.  
+  
+ `pTabCtrlItem`  
+ Pointeur vers un [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure, utilisée pour spécifier les informations à récupérer. Également utilisé pour recevoir des informations sur l’onglet. Cette structure est utilisée avec la `InsertItem`, `GetItem`, et `SetItem` les fonctions membres.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne **TRUE** en cas de réussite ; **FALSE** dans le cas contraire.  
+  
+### <a name="remarks"></a>Remarques  
+ Lorsque le message est envoyé, le **masque** membre spécifie quels attributs retourner. Si le **masque** membre spécifie le `TCIF_TEXT` valeur, le **pszText** membre doit contenir l’adresse de la mémoire tampon qui reçoit le texte de l’élément et la **cchTextMax** membre doit spécifier la taille de la mémoire tampon.  
+  
+ **masque**  
+ Valeur spécifiant quel `TCITEM` pour récupérer ou définir les membres de structure. Ce membre peut être zéro ou une combinaison des valeurs suivantes :  
+  
+- `TCIF_TEXT`Le **pszText** membre est valide.  
+  
+- `TCIF_IMAGE`Le `iImage` membre est valide.  
+  
+- `TCIF_PARAM`Le **lParam** membre est valide.  
+  
+- `TCIF_RTLREADING`Le texte de **pszText** est affichée à l’aide de l’ordre de lecture de droite à gauche sur les systèmes hébreu et arabe.  
+  
+- `TCIF_STATE`Le **dwState** membre est valide.  
+  
+ **pszText**  
+ Pointeur vers une chaîne terminée par le caractère null qui contient le texte de l’onglet si la structure contient des informations sur un onglet. Si la structure reçoit des informations, ce membre spécifie l’adresse de la mémoire tampon qui reçoit le texte de l’onglet.  
+  
+ **cchTextMax**  
+ Taille de la mémoire tampon vers laquelle pointe **pszText**. Ce membre est ignoré si la structure ne reçoit pas d’informations.  
+  
+ `iImage`  
+ Index dans le contrôle d’onglet liste d’images, ou -1 s’il n’existe aucune image de l’onglet.  
+  
+ **lParam**  
+ Données définies par l’application associées à l’onglet. S’il existe plus de quatre octets de données défini par l’application par onglet, une application doit définir une structure et l’utiliser à la place de la `TCITEM` structure. Le premier membre de la structure définie par l’application doit être un [TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)structure. Le **TCITEMHEADER** structure est identique à la `TCITEM` de la structure, mais sans la **lParam** membre. La différence entre la taille de votre structure et la taille de la **TCITEMHEADER** structure doit égal au nombre d’octets supplémentaires par onglet.  
+  
+### <a name="example"></a>Exemple  
+ [!code-cpp[NVC_MFC_CTabCtrl n °&4;](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
+  
+##  <a name="a-namegetitemcounta--ctabctrlgetitemcount"></a><a name="getitemcount"></a>CTabCtrl::GetItemCount  
+ Récupère le nombre d’onglets dans le contrôle onglet.  
+  
+```  
+int GetItemCount() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Nombre d’éléments dans le contrôle onglet.  
+  
+### <a name="example"></a>Exemple  
+  Consultez l’exemple de [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+  
+##  <a name="a-namegetitemrecta--ctabctrlgetitemrect"></a><a name="getitemrect"></a>CTabCtrl::GetItemRect  
+ Récupère le rectangle englobant pour l’onglet spécifié dans un contrôle onglet.  
+  
+```  
+BOOL GetItemRect(int nItem,   LPRECT lpRect) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `nItem`  
+ Index de base zéro de l’élément tab.  
+  
+ `lpRect`  
+ Pointeur vers un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui reçoit le rectangle englobant de l’onglet. Ces coordonnées utilisent le mode de mappage en cours de la fenêtre d’affichage.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Valeur différente de zéro cas de réussite ; sinon, 0.  
+  
+### <a name="example"></a>Exemple  
+  Consultez l’exemple de [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+  
+##  <a name="a-namegetitemstatea--ctabctrlgetitemstate"></a><a name="getitemstate"></a>CTabCtrl::GetItemState  
+ Récupère l’état de l’élément de contrôle onglet identifié par `nItem`.  
+  
+```  
+DWORD GetItemState(
+    int nItem,  
+    DWORD dwMask) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `nItem`  
+ Numéro d’index de base zéro de l’élément pour lequel récupérer les informations d’état.  
+  
+ `dwMask`  
+ Masque spécifiant les de l’état de l’élément indicateurs à retourner. Pour une liste de valeurs, consultez le membre masque le [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) de structure, comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Une référence à un `DWORD` valeur reçoit les informations d’état. Peut avoir l'une des valeurs suivantes :  
+  
+|Valeur|Description|  
+|-----------|-----------------|  
+|**TCIS_BUTTONPRESSED**|L’élément de contrôle d’onglet est sélectionné.|  
+|**TCIS_HIGHLIGHTED**|L’élément de contrôle d’onglet est mis en surbrillance et l’onglet et le texte sont dessinées à l’aide de la couleur de surbrillance actuel. Lorsque vous utilisez la couleur de surbrillance, il s’agit d’une interpolation true, pas une couleur dégradée.|  
+  
+### <a name="remarks"></a>Remarques  
+ État d’un élément spécifié par le **dwState** membre de la `TCITEM` structure.  
+  
+##  <a name="a-namegetrowcounta--ctabctrlgetrowcount"></a><a name="getrowcount"></a>CTabCtrl::GetRowCount  
+ Récupère le nombre actuel de lignes dans un contrôle onglet.  
+  
+```  
+int GetRowCount() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Le nombre de lignes d’onglets dans le contrôle onglet.  
+  
+### <a name="remarks"></a>Remarques  
+ Onglet uniquement les contrôles qui ont le **TCS_MULTILINE** style peut avoir plusieurs lignes d’onglets.  
+  
+##  <a name="a-namegettooltipsa--ctabctrlgettooltips"></a><a name="gettooltips"></a>CTabCtrl::GetToolTips  
+ Récupère le handle du contrôle ToolTip associé à un contrôle onglet.  
+  
+```  
+CToolTipCtrl* GetToolTips() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Handle du contrôle info-bulle en cas de réussite ; dans le cas contraire **NULL**.  
+  
+### <a name="remarks"></a>Notes  
+ Un contrôle onglet crée un contrôle info-bulle si elle a la **TCS_TOOLTIPS** style. Vous pouvez également affecter un contrôle info-bulle pour un contrôle onglet en utilisant la `SetToolTips` fonction membre.  
+  
+##  <a name="a-namehighlightitema--ctabctrlhighlightitem"></a><a name="highlightitem"></a>CTabCtrl::HighlightItem  
+ Définit l’état de mise en surbrillance d’un élément de l’onglet.  
+  
+```  
+BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `idItem`  
+ Index de base zéro d’un élément de contrôle onglet.  
+  
+ `fHighlight`  
+ Valeur qui spécifie l’état de mise en surbrillance à définir. Si cette valeur est **TRUE**, l’onglet est mis en surbrillance ; si **FALSE**, l’onglet est défini à son état par défaut.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Valeur différente de zéro en cas de réussite ; sinon, zéro.  
+  
+### <a name="remarks"></a>Notes  
+ Cette fonction membre implémente le message Win32 [TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-namehittesta--ctabctrlhittest"></a><a name="hittest"></a>CTabCtrl::HitTest  
+ Détermine quel onglet, le cas échéant, est à la position d’écran spécifiées.  
+  
+```  
+int HitTest(TCHITTESTINFO* pHitTestInfo) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `pHitTestInfo`  
+ Pointeur vers un [TCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760553) de structure, comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)], qui spécifie la position d’écran à tester.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne l’index de base zéro de l’onglet ou – 1 si aucun onglet n’est à la position spécifiée.  
+  
+##  <a name="a-nameinsertitema--ctabctrlinsertitem"></a><a name="insertitem"></a>CTabCtrl::InsertItem  
+ Insère un nouvel onglet dans un contrôle onglet existant.  
+  
+```  
+LONG InsertItem(
+    int nItem,
+    TCITEM* pTabCtrlItem);
+
+ 
+LONG InsertItem(
+    int nItem,
+    LPCTSTR lpszItem);
+
+ 
+LONG InsertItem(
+    int nItem,
+    LPCTSTR lpszItem,
+    int nImage);
+
+ 
+LONG InsertItem(
+    UINT nMask,
+    int nItem,
+    LPCTSTR lpszItem,
+    int nImage,
+    LPARAM lParam);
+
+ 
+LONG InsertItem(
+    UINT nMask,  
+    int nItem,  
+    LPCTSTR lpszItem,  
+    int nImage,  
+    LPARAM lParam,  
+    DWORD dwState,  
+    DWORD dwStateMask);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `nItem`  
+ Index de base zéro du nouvel onglet.  
+  
+ `pTabCtrlItem`  
+ Pointeur vers un [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure qui spécifie les attributs de l’onglet.  
+  
+ `lpszItem`  
+ Adresse d’une chaîne terminée par le caractère null qui contient le texte de l’onglet.  
+  
+ `nImage`  
+ Index de base zéro d’une image à insérer à partir d’une liste d’images.  
+  
+ `nMask`  
+ Spécifie les `TCITEM` pour définir les attributs de la structure. Peut être zéro ou une combinaison des valeurs suivantes :  
+  
+- `TCIF_TEXT`Le **pszText** membre est valide.  
+  
+- `TCIF_IMAGE`Le `iImage` membre est valide.  
+  
+- `TCIF_PARAM`Le **lParam** membre est valide.  
+  
+- `TCIF_RTLREADING`Le texte de **pszText** est affichée à l’aide de l’ordre de lecture de droite à gauche sur les systèmes hébreu et arabe.  
+  
+- `TCIF_STATE`Le **dwState** membre est valide.  
+  
+ `lParam`  
+ Données définies par l’application associées à l’onglet.  
+  
+ `dwState`  
+ Spécifie des valeurs pour les États de l’élément. Pour plus d’informations, consultez [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+ *dwStateMask*  
+ Spécifie les États doivent être définis. Pour plus d’informations, consultez [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Index de base zéro de l’onglet nouveau en cas de réussite ; Sinon,-1.  
+  
+### <a name="example"></a>Exemple  
+ [!code-cpp[NVC_MFC_CTabCtrl n °&5;](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]  
+  
+##  <a name="a-nameremoveimagea--ctabctrlremoveimage"></a><a name="removeimage"></a>CTabCtrl::RemoveImage  
+ Supprime l’image spécifiée à partir de la liste d’images d’un contrôle onglet.  
+  
+```  
+void RemoveImage(int nImage);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `nImage`  
+ Index de base zéro de l’image à supprimer.  
+  
+### <a name="remarks"></a>Notes  
+ Le contrôle onglet met à jour l’index de l’image de chaque onglet afin que chaque onglet reste associé à la même image.  
+  
+##  <a name="a-namesetcurfocusa--ctabctrlsetcurfocus"></a><a name="setcurfocus"></a>CTabCtrl::SetCurFocus  
+ Définit le focus sur un onglet spécifié dans un contrôle onglet.  
+  
+```  
+void SetCurFocus(int nItem);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `nItem`  
+ Spécifie l’index de l’onglet qui obtient le focus.  
+  
+### <a name="remarks"></a>Remarques  
+ Cette fonction membre implémente le comportement du message Win32 [TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-namesetcursela--ctabctrlsetcursel"></a><a name="setcursel"></a>CTabCtrl::SetCurSel  
+ Sélectionne un onglet dans un contrôle onglet.  
+  
+```  
+int SetCurSel(int nItem);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `nItem`  
+ Index de base zéro de l’élément à sélectionner.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Index de base zéro de l’onglet sélectionné précédemment en cas de réussite, sinon-1.  
+  
+### <a name="remarks"></a>Notes  
+ Un contrôle tab n’envoie pas un **TCN_SELCHANGING** ou **TCN_SELCHANGE** message de notification lorsqu’un onglet est sélectionné à l’aide de cette fonction. Ces notifications sont envoyées, à l’aide de **WM_NOTIFY**, lorsque l’utilisateur clique ou utilise le clavier pour changer d’onglet.  
+  
+##  <a name="a-namesetextendedstylea--ctabctrlsetextendedstyle"></a><a name="setextendedstyle"></a>CTabCtrl::SetExtendedStyle  
+ Définit les styles étendus pour un contrôle onglet.  
+  
+```  
+DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `dwNewStyle`  
+ Valeur qui spécifie une combinaison de l’onglet contrôle les styles étendus.  
+  
+ `dwExMask`  
+ A `DWORD` valeur qui indique les styles dans `dwNewStyle` sont affectés. Seuls les styles étendus dans `dwExMask` sera modifié. Tous les autres styles seront conservées en l’état. Si ce paramètre est zéro, tous les styles dans `dwNewStyle` seront affectées.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ A `DWORD` qui contient la dernière valeur [onglet contrôle de styles étendus](http://msdn.microsoft.com/library/windows/desktop/bb760546), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Cette fonction membre implémente le comportement du message Win32 [TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-namesetimagelista--ctabctrlsetimagelist"></a><a name="setimagelist"></a>CTabCtrl::SetImageList  
+ Affecte une liste d’images à un contrôle onglet.  
+  
+```  
+CImageList* SetImageList(CImageList* pImageList);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `pImageList`  
+ Pointeur vers la liste d’images à assigner au contrôle onglet.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne un pointeur vers la liste d’images ou **NULL** s’il n’existe aucune liste d’images.  
+  
+##  <a name="a-namesetitema--ctabctrlsetitem"></a><a name="setitem"></a>CTabCtrl::SetItem  
+ Définit certains ou tous les attributs d’un onglet.  
+  
+```  
+BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `nItem`  
+ Index de base zéro de l’élément.  
+  
+ `pTabCtrlItem`  
+ Pointeur vers un [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure qui contient les nouveaux attributs de l’élément. Le **masque** membre spécifie quels attributs à définir. Si le **masque** membre spécifie le `TCIF_TEXT` valeur, le **pszText** membre est l’adresse d’une chaîne terminée par null et la **cchTextMax** membre est ignoré.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Valeur différente de zéro cas de réussite ; sinon, 0.  
+  
+### <a name="example"></a>Exemple  
+  Consultez l’exemple de [GetItem](#getitem).  
+  
+##  <a name="a-namesetitemextraa--ctabctrlsetitemextra"></a><a name="setitemextra"></a>CTabCtrl::SetItemExtra  
+ Définit le nombre d’octets par onglet réservé pour les données définies par l’application dans un contrôle onglet.  
+  
+```  
+BOOL SetItemExtra(int nBytes);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `nBytes`  
+ Le nombre d’octets supplémentaires à définir.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Valeur différente de zéro en cas de réussite ; sinon, zéro.  
+  
+### <a name="remarks"></a>Remarques  
+ Cette fonction membre implémente le comportement du message Win32 [TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-namesetitemsizea--ctabctrlsetitemsize"></a><a name="setitemsize"></a>CTabCtrl::SetItemSize  
+ Définit la largeur et la hauteur des éléments du contrôle des tabulations.  
+  
+```  
+CSize SetItemSize(CSize size);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `size`  
+ Nouvelles largeur et hauteur, en pixels, des éléments du contrôle des tabulations.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne les anciennes largeur et hauteur des éléments du contrôle des tabulations.  
+  
+##  <a name="a-namesetitemstatea--ctabctrlsetitemstate"></a><a name="setitemstate"></a>CTabCtrl::SetItemState  
+ Définit l’état de l’élément de contrôle onglet identifié par `nItem`.  
+  
+```  
+BOOL SetItemState(
+    int nItem,
+    DWORD dwMask,
+    DWORD dwState);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `nItem`  
+ Numéro d’index de base zéro de l’élément pour lequel définir les informations d’état.  
+  
+ `dwMask`  
+ Masque spécifiant les de l’état de l’élément indicateurs à définir. Pour une liste de valeurs, consultez le membre masque le [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) de structure, comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+ `dwState`  
+ Une référence à un `DWORD` valeur contenant les informations d’état. Peut avoir l'une des valeurs suivantes :  
+  
+|Valeur|Description|  
+|-----------|-----------------|  
+|**TCIS_BUTTONPRESSED**|L’élément de contrôle d’onglet est sélectionné.|  
+|**TCIS_HIGHLIGHTED**|L’élément de contrôle d’onglet est mis en surbrillance et l’onglet et le texte sont dessinées à l’aide de la couleur de surbrillance actuel. Lorsque vous utilisez la couleur de surbrillance, il s’agit d’une interpolation true, pas une couleur dégradée.|  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Valeur différente de zéro cas de réussite ; sinon, 0.  
+  
+##  <a name="a-namesetmintabwidtha--ctabctrlsetmintabwidth"></a><a name="setmintabwidth"></a>CTabCtrl::SetMinTabWidth  
+ Définit la largeur minimale des éléments dans un contrôle onglet.  
+  
+```  
+int SetMinTabWidth(int cx);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `cx`  
+ Largeur minimale à définir pour un élément de contrôle onglet. Si ce paramètre est défini sur -1, le contrôle utilise la largeur par défaut des tabulations.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ La largeur minimale onglet précédent.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Cette fonction membre implémente le comportement du message Win32 [TCM_SETMINTABWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760637), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+  
+##  <a name="a-namesetpaddinga--ctabctrlsetpadding"></a><a name="setpadding"></a>CTabCtrl::SetPadding  
+ Définit la quantité d’espace (remplissage) autour de de chaque onglet icône et une étiquette dans un contrôle onglet.  
+  
+```  
+void SetPadding(CSize size);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `size`  
+ Définit la quantité d’espace (remplissage) autour de de chaque onglet icône et une étiquette dans un contrôle onglet.  
+  
+##  <a name="a-namesettooltipsa--ctabctrlsettooltips"></a><a name="settooltips"></a>CTabCtrl::SetToolTips  
+ Assigne un contrôle info-bulle pour un contrôle onglet.  
+  
+```  
+void SetToolTips(CToolTipCtrl* pWndTip);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `pWndTip`  
+ Handle du contrôle ToolTip.  
+  
+### <a name="remarks"></a>Remarques  
+ Vous pouvez obtenir le contrôle d’info-bulle associé à un contrôle onglet en effectuant un appel à `GetToolTips`.  
+  
+### <a name="example"></a>Exemple  
+  Consultez l’exemple de [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [CWnd (classe)](../../mfc/reference/cwnd-class.md)   
+ [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
+ [CHeaderCtrl (classe)](../../mfc/reference/cheaderctrl-class.md)   
+ [CListCtrl (classe)](../../mfc/reference/clistctrl-class.md)
+

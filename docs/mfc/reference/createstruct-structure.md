@@ -1,64 +1,78 @@
 ---
-title: "CREATESTRUCT, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CREATESTRUCT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CREATESTRUCT (structure)"
+title: CREATESTRUCT (Structure) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CREATESTRUCT
+dev_langs:
+- C++
+helpviewer_keywords:
+- CREATESTRUCT structure
 ms.assetid: 028c7b5e-4fdc-48da-a550-d3e4f9e6cc85
 caps.latest.revision: 14
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CREATESTRUCT, structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: ec72d4725cb7e5959369b24a6ff7f0e3e9da1ca7
+ms.lasthandoff: 02/24/2017
 
-La structure `CREATESTRUCT` définit les paramètres d'initialisation transmis à la procédure d'affichage d'une application.  
+---
+# <a name="createstruct-structure"></a>CREATESTRUCT, structure
+Le `CREATESTRUCT` structure définit les paramètres d’initialisation passés à la procédure de fenêtre d’une application.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      typedef struct tagCREATESTRUCT {  
-   LPVOID lpCreateParams;  
-   HANDLE hInstance;  
-   HMENU hMenu;  
-   HWND hwndParent;  
-   int cy;  
-   int cx;  
-   int y;  
-   int x;  
-   LONG style;  
-   LPCSTR lpszName;  
-   LPCSTR lpszClass;  
-   DWORD dwExStyle;  
+typedef struct tagCREATESTRUCT {  
+    LPVOID lpCreateParams;  
+    HANDLE hInstance;  
+    HMENU hMenu;  
+    HWND hwndParent;  
+    int cy;  
+    int cx;  
+    int y;  
+    int x;  
+    LONG style;  
+    LPCSTR lpszName;  
+    LPCSTR lpszClass;  
+    DWORD dwExStyle;  
 } CREATESTRUCT;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `lpCreateParams`  
  Points de données à utiliser pour créer la fenêtre.  
   
  `hInstance`  
- Identifie le gestionnaire d'instance du module de celui qui possède la nouvelle fenêtre.  
+ Identifie le handle d’instance du module du module propriétaire de la nouvelle fenêtre.  
   
  `hMenu`  
- Identifie le menu à utiliser dans une nouvelle fenêtre.  S'il s'agit d'une fenêtre enfant, contient l'ID de type entier.  
+ Identifie le menu pour être utilisé par la nouvelle fenêtre. Si une fenêtre enfant, contient l’ID d’entier.  
   
  `hwndParent`  
- Identifie la fenêtre propriétaire de la nouvelle fenêtre.  Ce membre est **NULL** si la nouvelle fenêtre est une fenêtre de niveau supérieur.  
+ Identifie la fenêtre propriétaire de la nouvelle fenêtre. Ce membre est **NULL** si la nouvelle fenêtre est une fenêtre de niveau supérieur.  
   
  `cy`  
  Spécifie la hauteur de la nouvelle fenêtre.  
@@ -67,26 +81,29 @@ La structure `CREATESTRUCT` définit les paramètres d'initialisation transmis �
  Spécifie la largeur de la nouvelle fenêtre.  
   
  `y`  
- Spécifie la coordonnée y de l'angle supérieur gauche de la nouvelle fenêtre.  Les coordonnées sont relatives à la fenêtre parente si une nouvelle fenêtre est une fenêtre enfant ; sinon les coordonnées sont relatives à l'origine de l'écran.  
+ Spécifie la coordonnée y de l’angle supérieur gauche de la nouvelle fenêtre. Coordonnées sont relatives à la fenêtre parent si la nouvelle fenêtre est une fenêtre enfant ; dans le cas contraire coordonnées sont exprimées par rapport à l’origine de l’écran.  
   
  `x`  
- Spécifie la coordonnée x de l'angle supérieur gauche de la nouvelle fenêtre.  Les coordonnées sont relatives à la fenêtre parente si une nouvelle fenêtre est une fenêtre enfant ; sinon les coordonnées sont relatives à l'origine de l'écran.  
+ Spécifie la coordonnée x de l’angle supérieur gauche de la nouvelle fenêtre. Coordonnées sont relatives à la fenêtre parent si la nouvelle fenêtre est une fenêtre enfant ; dans le cas contraire coordonnées sont exprimées par rapport à l’origine de l’écran.  
   
  `style`  
- Spécifie le [style](../../mfc/reference/styles-used-by-mfc.md) de la nouvelle fenêtre.  
+ Spécifie la nouvelle fenêtre [style](../../mfc/reference/styles-used-by-mfc.md).  
   
  `lpszName`  
- Pointe vers la chaîne terminée par le caractère NULL qui spécifie le nom de la nouvelle fenêtre.  
+ Pointe vers une chaîne terminée par le caractère null qui spécifie le nom de la nouvelle fenêtre.  
   
  `lpszClass`  
- Pointe vers la chaîne terminée par le caractère NULL qui spécifie le nom de classe windows de la nouvelle fenêtre \(une structure [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) ; pour plus d'informations, consultez [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]\).  
+ Pointe vers une chaîne terminée par le caractère null qui spécifie le nom de la classe de la nouvelle fenêtre Windows (un [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure ; pour plus d’informations, consultez le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]).  
   
  `dwExStyle`  
- Spécifie le [style étendue](../../mfc/reference/extended-window-styles.md) pour la nouvelle fenêtre.  
+ Spécifie le [style étendu](../../mfc/reference/extended-window-styles.md) pour la nouvelle fenêtre.  
   
-## Configuration requise  
- **En\-tête :** winuser.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** winuser.h  
   
-## Voir aussi  
- [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnCreate](../Topic/CWnd::OnCreate.md)
+## <a name="see-also"></a>Voir aussi  
+ [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate)
+
+
+

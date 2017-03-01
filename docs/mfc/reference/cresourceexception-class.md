@@ -1,55 +1,71 @@
 ---
-title: "CResourceException Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CResourceException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CResourceException class"
-  - "exceptions, ressource"
-  - "resource allocation exception"
-  - "resource exceptions"
-  - "ressources (C++), allouer"
+title: Classe de CResourceException | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CResourceException
+dev_langs:
+- C++
+helpviewer_keywords:
+- resource allocation exception
+- resources [C++], allocating
+- resource exceptions
+- exceptions, resource
+- CResourceException class
 ms.assetid: af6ae043-d124-4bfd-b35e-7bb0db67d289
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CResourceException Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 2013a73f91687277df9dd1e6747aba2dd02a4346
+ms.lasthandoff: 02/24/2017
 
-Généré lorsque les fenêtres ne peuvent pas trouver ou allouer une ressource demandée.  
+---
+# <a name="cresourceexception-class"></a>CResourceException (classe)
+Générée lorsque Windows ne peut pas trouver ou allouer une ressource demandée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 class CResourceException : public CSimpleException  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CResourceException::CResourceException](../Topic/CResourceException::CResourceException.md)|Construit un objet `CResourceException`.|  
+|----------|-----------------|  
+|[CResourceException::CResourceException](#cresourceexception)|Construit un objet `CResourceException`.|  
   
-## Notes  
- Aucune autre qualification n'est nécessaire ou possible.  
+## <a name="remarks"></a>Remarques  
+ Sans qualification supplémentaire est nécessaire ou possible.  
   
- Pour plus d'informations sur l'utilisation `CResourceException`, consultez l'article [gestion des exceptions \(MFC\)](../../mfc/exception-handling-in-mfc.md).  
+ Pour plus d’informations sur l’utilisation de `CResourceException`, consultez l’article [la gestion des exceptions (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
@@ -58,9 +74,22 @@ class CResourceException : public CSimpleException
   
  `CResourceException`  
   
-## Configuration requise  
- **En\-tête :** afxwin.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** afxwin.h  
   
-## Voir aussi  
- [CException Class](../../mfc/reference/cexception-class.md)   
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
+##  <a name="a-namecresourceexceptiona--cresourceexceptioncresourceexception"></a><a name="cresourceexception"></a>CResourceException::CResourceException  
+ Construit un objet `CResourceException`.  
+  
+```  
+CResourceException();
+```  
+  
+### <a name="remarks"></a>Remarques  
+ N’utilisez pas ce constructeur directement, mais plutôt appeler la fonction globale [AfxThrowResourceException](exception-processing.md#afxthrowresourceexception). Pour plus d’informations sur les exceptions, consultez l’article [la gestion des exceptions dans MFC](../exception-handling-in-mfc.md).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [CException (classe)](cexception-class.md)   
+ [Graphique de la hiérarchie](../hierarchy-chart.md)
+
+
+

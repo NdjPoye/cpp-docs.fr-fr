@@ -1,103 +1,350 @@
 ---
-title: "CSimpleMap Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CSimpleMap"
-  - "ATL.CSimpleMap"
-  - "CSimpleMap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSimpleMap class"
+title: Classe de CSimpleMap | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CSimpleMap
+- ATL.CSimpleMap
+- CSimpleMap
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CSimpleMap Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: c02ef1d9d3fafebf38abaaa55d77511f4476a02f
+ms.lasthandoff: 02/24/2017
 
-Cette classe fournit la prise en charge d'un tableau de mappage simple.  
+---
+# <a name="csimplemap-class"></a>CSimpleMap (classe)
+Cette classe prend en charge un tableau de mappage simple.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+template <class TKey, class TVal, class TEqual = CSimpleMapEqualHelper<TKey, TVal>>  
+class CSimpleMap
 ```  
   
-      template <   
-   class TKey,  
-   class TVal,  
-   class TEqual = CSimpleMapEqualHelper< TKey, TVal >   
->   
-class CSimpleMap  
-```  
-  
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `TKey`  
- Le type d'élément clé.  
+ Le type d’élément clé.  
   
  `TVal`  
- Le type d'élément de valeur.  
+ Le type d’élément de valeur.  
   
  `TEqual`  
- Un objet de fonctionnalités, en définissant le test d'égalité pour les éléments de type `T`.  
+ Un objet de caractéristique en définissant le test d’égalité pour les éléments de type `T`.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Typedefs publics  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[CSimpleMap::\_ArrayElementType](../Topic/CSimpleMap::_ArrayElementType.md)|Typedef pour le type valeur.|  
-|[CSimpleMap::\_ArrayKeyType](../Topic/CSimpleMap::_ArrayKeyType.md)|Typedef pour le type de clé.|  
-  
-### Constructeurs publics  
+### <a name="public-typedefs"></a>Typedefs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CSimpleMap::CSimpleMap](../Topic/CSimpleMap::CSimpleMap.md)|Constructeur.|  
-|[CSimpleMap::~CSimpleMap](../Topic/CSimpleMap::~CSimpleMap.md)|Le destructeur.|  
+|----------|-----------------|  
+|[CSimpleMap::_ArrayElementType](#_arrayelementtype)|TypeDef pour le type de valeur.|  
+|[CSimpleMap::_ArrayKeyType](#_arraykeytype)|TypeDef pour le type de clé.|  
   
-### Méthodes publiques  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CSimpleMap::Add](../Topic/CSimpleMap::Add.md)|Ajoute une clé et une valeur associée au tableau de mappage.|  
-|[CSimpleMap::FindKey](../Topic/CSimpleMap::FindKey.md)|Recherche une clé spécifique.|  
-|[CSimpleMap::FindVal](../Topic/CSimpleMap::FindVal.md)|Recherche une valeur spécifique.|  
-|[CSimpleMap::GetKeyAt](../Topic/CSimpleMap::GetKeyAt.md)|Extrait la clé spécifiée.|  
-|[CSimpleMap::GetSize](../Topic/CSimpleMap::GetSize.md)|Retourne le nombre d'entrées dans la table de mappage.|  
-|[CSimpleMap::GetValueAt](../Topic/CSimpleMap::GetValueAt.md)|Extrait la valeur spécifiée.|  
-|[CSimpleMap::Lookup](../Topic/CSimpleMap::Lookup.md)|Retourne la valeur associée à la clé spécifiée.|  
-|[CSimpleMap::Remove](../Topic/CSimpleMap::Remove.md)|Supprime une clé et une valeur de correspondance.|  
-|[CSimpleMap::RemoveAll](../Topic/CSimpleMap::RemoveAll.md)|Supprime toutes les clés et valeurs.|  
-|[CSimpleMap::RemoveAt](../Topic/CSimpleMap::RemoveAt.md)|Supprime une clé et une valeur spécifiques de correspondance.|  
-|[CSimpleMap::ReverseLookup](../Topic/CSimpleMap::ReverseLookup.md)|Retourne la clé associée à la valeur donnée.|  
-|[CSimpleMap::SetAt](../Topic/CSimpleMap::SetAt.md)|Définit la valeur associée à la clé spécifiée.|  
-|[CSimpleMap::SetAtIndex](../Topic/CSimpleMap::SetAtIndex.md)|Définit la clé et la valeur spécifiques.|  
+|----------|-----------------|  
+|[CSimpleMap::CSimpleMap](#csimplemap)|Constructeur.|  
+|[CSimpleMap :: ~ CSimpleMap](#dtor)|Destructeur.|  
   
-## Notes  
- `CSimpleMap` fournit la prise en charge d'un tableau de mappage simple de n'importe quel type donné `T`, la gestion d'un tableau non ordonné d'éléments clés et leurs valeurs associées.  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
- Le paramètre `TEqual` offre un moyen de définir une fonction d'égalité de deux éléments de type `T`.  En créant une classe semblable à [CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md), il est possible de modifier le comportement du test d'égalité pour toute tableau donné.  Par exemple, lors d'un tableau de pointeurs, il peut être utile de définir l'égalité en fonction de les valeurs des pointeurs de référence.  L'implémentation par défaut utilise **operator\=\=\(\)**.  
+|Nom|Description|  
+|----------|-----------------|  
+|[CSimpleMap::Add](#add)|Ajoute une clé et une valeur associée dans le tableau du mappage.|  
+|[CSimpleMap::FindKey](#findkey)|Recherche une clé spécifique.|  
+|[CSimpleMap::FindVal](#findval)|Recherche une valeur spécifique.|  
+|[CSimpleMap::GetKeyAt](#getkeyat)|Récupère la clé spécifiée.|  
+|[CSimpleMap::GetSize](#getsize)|Retourne le nombre d’entrées dans le tableau de mappage.|  
+|[CSimpleMap::GetValueAt](#getvalueat)|Récupère la valeur spécifiée.|  
+|[CSimpleMap::Lookup](#lookup)|Retourne la valeur associée à la clé donnée.|  
+|[CSimpleMap::Remove](#remove)|Supprime une clé et une valeur correspondante.|  
+|[CSimpleMap::RemoveAll](#removeall)|Supprime toutes les clés et valeurs.|  
+|[CSimpleMap::RemoveAt](#removeat)|Supprime une clé spécifique et la valeur correspondante.|  
+|[CSimpleMap::ReverseLookup](#reverselookup)|Retourne la clé associée à la valeur donnée.|  
+|[CSimpleMap::SetAt](#setat)|Définit la valeur associée à la clé donnée.|  
+|[CSimpleMap::SetAtIndex](#setatindex)|Définit la clé spécifique et la valeur.|  
   
- `CSimpleMap` et [CSimpleArray](../../atl/reference/csimplearray-class.md) sont fournis pour la compatibilité avec les versions précédentes ATL, les implémentations et plus complètes et plus efficace de collection sont fournies par [CAtlArray](../../atl/reference/catlarray-class.md) et [CAtlMap](../../atl/reference/catlmap-class.md).  
+## <a name="remarks"></a>Remarques  
+ `CSimpleMap`prend en charge un tableau de mappage simple d’un type donné `T`, la gestion d’un tableau non ordonné des éléments clés et leurs valeurs associées.  
   
- Contrairement à d'autres collections de cartes de ATL et MFC, cette classe est implémentée avec un tableau simple, et la recherche de correspondance nécessitent une recherche linéaire.  `CAtlMap` doit être utilisé lorsque le tableau contient un grand nombre d'éléments.  
+ Le paramètre `TEqual` fournit un moyen de définir une fonction de l’égalité de deux éléments de type `T`. En créant une classe similaire à [CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md), il est possible de modifier le comportement du test d’égalité pour n’importe quel tableau donné. Par exemple, lorsque vous travaillez avec un tableau de pointeurs, il peut être utile définir l’égalité comme en fonction des valeurs de référence les pointeurs. L’implémentation par défaut utilise **operator==()**.  
   
-## Configuration requise  
- **Header:** atlsimpcoll.h  
+ Les deux `CSimpleMap` et [CSimpleArray](../../atl/reference/csimplearray-class.md) sont fournies pour la compatibilité avec les précédente ATL libère et implémentations de collections plus complets et efficaces sont fournies par [CAtlArray](../../atl/reference/catlarray-class.md) et [CAtlMap](../../atl/reference/catlmap-class.md).  
   
-## Exemple  
- [!code-cpp[NVC_ATL_Utilities#91](../../atl/codesnippet/CPP/csimplemap-class_1.cpp)]  
+ Contrairement à d’autres collections de carte dans ATL et MFC, cette classe est implémentée avec un simple tableau, et les recherches de recherche requièrent une recherche linéaire. `CAtlMap`doit être utilisé lorsque le tableau contient un grand nombre d’éléments.  
   
-## Voir aussi  
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atlsimpcoll.h  
+  
+## <a name="example"></a>Exemple  
+ [!code-cpp[NVC_ATL_Utilities&#91;](../../atl/codesnippet/cpp/csimplemap-class_1.cpp)]  
+  
+##  <a name="a-nameadda--csimplemapadd"></a><a name="add"></a>CSimpleMap::Add  
+ Ajoute une clé et une valeur associée dans le tableau du mappage.  
+  
+```
+BOOL Add(const TKey& key, const TVal& val);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `key`  
+ Clé.  
+  
+ *Val*  
+ La valeur associée.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne la valeur TRUE si la clé et la valeur a été ajouté avec succès, la valeur FALSE dans le cas contraire.  
+  
+### <a name="remarks"></a>Notes  
+ Chaque paire clé / valeur ajoutée entraîne le mappage mémoire libérée et réalloué, afin de garantir les données pour chaque sont toujours stockées de façon contiguë de tableau. Autrement dit, le deuxième élément clé directement suit toujours le premier élément clé dans la mémoire et ainsi de suite.  
+  
+##  <a name="a-namearrayelementtypea--csimplemaparrayelementtype"></a><a name="_arrayelementtype"></a>CSimpleMap::_ArrayElementType  
+ Typedef pour le type de clé.  
+  
+```
+typedef TVal _ArrayElementType;
+```  
+  
+##  <a name="a-namearraykeytypea--csimplemaparraykeytype"></a><a name="_arraykeytype"></a>CSimpleMap::_ArrayKeyType  
+ Typedef pour le type de valeur.  
+  
+```
+typedef TKey _ArrayKeyType;
+```  
+  
+##  <a name="a-namecsimplemapa--csimplemapcsimplemap"></a><a name="csimplemap"></a>CSimpleMap::CSimpleMap  
+ Constructeur.  
+  
+```
+CSimpleMap();
+```  
+  
+### <a name="remarks"></a>Remarques  
+ Initialise les membres de données.  
+  
+##  <a name="a-namedtora--csimplemapcsimplemap"></a><a name="dtor"></a>CSimpleMap :: ~ CSimpleMap  
+ Destructeur.  
+  
+```
+~CSimpleMap();
+```  
+  
+### <a name="remarks"></a>Notes  
+ Libère toutes les ressources attribuées.  
+  
+##  <a name="a-namefindkeya--csimplemapfindkey"></a><a name="findkey"></a>CSimpleMap::FindKey  
+ Recherche une clé spécifique.  
+  
+```
+int FindKey(const TKey& key) const;
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `key`  
+ Clé à rechercher.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne l’index de la touche si trouvée, sinon retourne -1.  
+  
+##  <a name="a-namefindvala--csimplemapfindval"></a><a name="findval"></a>CSimpleMap::FindVal  
+ Recherche une valeur spécifique.  
+  
+```
+int FindVal(const TVal& val) const;
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ *Val*  
+ La valeur à rechercher.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne que l’index de la valeur si elle est trouvée, sinon, retourne -1.  
+  
+##  <a name="a-namegetkeyata--csimplemapgetkeyat"></a><a name="getkeyat"></a>CSimpleMap::GetKeyAt  
+ Récupère la clé à l’index spécifié.  
+  
+```
+TKey& GetKeyAt(int nIndex) const;
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `nIndex`  
+ L’index de la clé à retourner.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne la clé référencée par `nIndex`.  
+  
+### <a name="remarks"></a>Remarques  
+ L’index passé par `nIndex` doit être valide pour la valeur de retour explicite.  
+  
+##  <a name="a-namegetsizea--csimplemapgetsize"></a><a name="getsize"></a>CSimpleMap::GetSize  
+ Retourne le nombre d’entrées dans le tableau de mappage.  
+  
+```
+int GetSize() const;
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne le nombre d’entrées (une clé et la valeur est une entrée) dans le tableau de mappage.  
+  
+##  <a name="a-namegetvalueata--csimplemapgetvalueat"></a><a name="getvalueat"></a>CSimpleMap::GetValueAt  
+ Récupère la valeur à l’index spécifié.  
+  
+```
+TVal& GetValueAt(int nIndex) const;
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `nIndex`  
+ L’index de la valeur de retour.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne la valeur référencée par `nIndex`.  
+  
+### <a name="remarks"></a>Notes  
+ L’index passé par `nIndex` doit être valide pour la valeur de retour explicite.  
+  
+##  <a name="a-namelookupa--csimplemaplookup"></a><a name="lookup"></a>CSimpleMap::Lookup  
+ Retourne la valeur associée à la clé donnée.  
+  
+```
+TVal Lookup(const TKey& key) const;
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `key`  
+ Clé.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne la valeur associée. Si aucune clé n’est trouvé, NULL est retournée.  
+  
+##  <a name="a-nameremovea--csimplemapremove"></a><a name="remove"></a>CSimpleMap::Remove  
+ Supprime une clé et une valeur correspondante.  
+  
+```
+BOOL Remove(const TKey& key);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `key`  
+ Clé.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne la valeur TRUE si la clé et la valeur correspondante, a été supprimé avec succès, FALSE dans le cas contraire.  
+  
+##  <a name="a-nameremovealla--csimplemapremoveall"></a><a name="removeall"></a>CSimpleMap::RemoveAll  
+ Supprime toutes les clés et valeurs.  
+  
+```
+void RemoveAll();
+```  
+  
+### <a name="remarks"></a>Remarques  
+ Supprime toutes les clés et valeurs de l’objet de tableau de mappage.  
+  
+##  <a name="a-nameremoveata--csimplemapremoveat"></a><a name="removeat"></a>CSimpleMap::RemoveAt  
+ Supprime une clé et une valeur associée à l’index spécifié.  
+  
+```
+BOOL RemoveAt(int nIndex);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `nIndex`  
+ L’index de la clé et la valeur associée à supprimer.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne TRUE en cas de réussite, FALSE si l’index spécifié est un index non valide.  
+  
+##  <a name="a-namereverselookupa--csimplemapreverselookup"></a><a name="reverselookup"></a>CSimpleMap::ReverseLookup  
+ Retourne la clé associée à la valeur donnée.  
+  
+```
+TKey ReverseLookup(const TVal& val) const;
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ *Val*  
+ La valeur.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne la clé associée. Si aucune clé n’est trouvé, NULL est retournée.  
+  
+##  <a name="a-namesetata--csimplemapsetat"></a><a name="setat"></a>CSimpleMap::SetAt  
+ Définit la valeur associée à la clé donnée.  
+  
+```
+BOOL SetAt(const TKey& key, const TVal& val);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `key`  
+ Clé.  
+  
+ *Val*  
+ La nouvelle valeur à affecter.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne TRUE si la clé a été trouvée, et la valeur a été modifié avec succès.  
+  
+##  <a name="a-namesetatindexa--csimplemapsetatindex"></a><a name="setatindex"></a>CSimpleMap::SetAtIndex  
+ Définit la clé et la valeur à l’index spécifié.  
+  
+```
+BOOL SetAtIndex(  
+    int nIndex,
+    const TKey& key,
+    const TVal& val);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `nIndex`  
+ L’index, faisant référence à la clé et la valeur appariement pour modifier.  
+  
+ `key`  
+ La nouvelle clé.  
+  
+ *Val*  
+ Nouvelle valeur.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne TRUE si réussi et FALSE si l’index n’est pas valide.  
+  
+### <a name="remarks"></a>Notes  
+ Met à jour la clé et la valeur pointée par `nIndex`.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+

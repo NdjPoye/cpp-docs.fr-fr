@@ -1,179 +1,198 @@
 ---
-title: "Concurrency::precise_math, espace de noms | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_math/Concurrency::precise_math"
-dev_langs: 
-  - "C++"
+title: Concurrency::precise_math Namespace | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_math/Concurrency::precise_math
+dev_langs:
+- C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Concurrency::precise_math, espace de noms
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: b64bd3e3702701ae2685d6688d88988dd91dc5d0
+ms.lasthandoff: 02/24/2017
 
-Les fonctions dans l'espace de noms `precise_math` sont conforme C99 .  La simple précision et les versions à double précision de chaque fonction sont incluses.  Par exemple, `acos` est la version en double précision et `acosf` est la version en simple précision.  Ces fonctions, y compris les fonctions en simple précision, requièrent la prise en charge en double précision étendu sur l'accélérateur.  Vous pouvez utiliser [accelerator::supports\_double\_precision, données membres](../Topic/accelerator::supports_double_precision%20Data%20Member.md) pour déterminer si vous pouvez exécuter ces fonctions sur un accélérateur spécifique.  
+---
+# <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math, espace de noms
+Les fonctions dans le `precise_math` espace de noms sont C99 conforme. À la fois simple précision et double précision versions de chaque fonction sont incluses. Par exemple, `acos` est la version double précision et `acosf` est la version simple précision. Ces fonctions, y compris les fonctions simple précision, requièrent la prise en charge de double précision étendue sur l’accélérateur. Vous pouvez utiliser la [Accelerator::supports_double_precision, données membres](accelerator-class.md#supports_double_precision) pour déterminer si vous pouvez exécuter ces fonctions sur un accélérateur spécifique. 
+
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
-```vb  
+```cpp  
 namespace precise_math;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Fonctions  
+### <a name="functions"></a>Fonctions  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[Fonction acos](../Topic/acos%20Function.md)|Surchargé.  Calcule l'arccosinus de l'argument|  
-|[acosf, fonction](../Topic/acosf%20Function.md)|Calcule l'arccosinus de l'argument|  
-|[acosh, fonction](../Topic/acosh%20Function.md)|Surchargé.  Calcule le cosinus hyperbolique de l'argument|  
-|[acoshf, fonction](../Topic/acoshf%20Function.md)|Calcule le cosinus hyperbolique de l'argument|  
-|[Fonction asin](../Topic/asin%20Function.md)|Surchargé.  Calcule l'arcsinus de l'argument|  
-|[asinf, fonction](../Topic/asinf%20Function.md)|Calcule l'arcsinus de l'argument|  
-|[asinh, fonction](../Topic/asinh%20Function.md)|Surchargé.  Calcule le sinus hyperbolique inverse de l'argument|  
-|[asinhf, fonction](../Topic/asinhf%20Function.md)|Calcule le sinus hyperbolique inverse de l'argument|  
-|[Fonction atan](../Topic/atan%20Function.md)|Surchargé.  Calcule l'arctangente de l'argument|  
-|[Fonction atan2](../Topic/atan2%20Function.md)|Surchargé.  Calcule l'arctangente de \_Y\/\_X|  
-|[atan2f, fonction](../Topic/atan2f%20Function.md)|Calcule l'arctangente de \_Y\/\_X|  
-|[atanf, fonction](../Topic/atanf%20Function.md)|Calcule l'arctangente de l'argument|  
-|[atanh, fonction](../Topic/atanh%20Function.md)|Surchargé.  Calcule la tangente hyperbolique inverse de l'argument|  
-|[atanhf, fonction](../Topic/atanhf%20Function.md)|Calcule la tangente hyperbolique inverse de l'argument|  
-|[cbrt, fonction](../Topic/cbrt%20Function.md)|Surchargé.  Calcule la racine cubique réelle de l'argument|  
-|[cbrtf, fonction](../Topic/cbrtf%20Function.md)|Calcule la racine cubique réelle de l'argument|  
-|[Fonction ceil](../Topic/ceil%20Function.md)|Surchargé.  Calcule la valeur entière supérieure de l'argument|  
-|[ceilf, fonction](../Topic/ceilf%20Function.md)|Calcule la valeur entière supérieure de l'argument|  
-|[copysign, fonction](../Topic/copysign%20Function.md)|Surchargé.  Génère une valeur avec l'importance de \_X et le signe de \_Y|  
-|[copysignf, fonction](../Topic/copysignf%20Function.md)|Génère une valeur avec l'importance de \_X et le signe de \_Y|  
-|[Fonction cos](../Topic/cos%20Function.md)|Surchargé.  Calcule le cosinus de l'argument|  
-|[cosf, fonction](../Topic/cosf%20Function.md)|Calcule le cosinus de l'argument|  
-|[cosh, fonction](../Topic/cosh%20Function.md)|Surchargé.  Calcule la valeur du cosinus hyperbolique de l'argument|  
-|[coshf, fonction](../Topic/coshf%20Function.md)|Calcule la valeur du cosinus hyperbolique de l'argument|  
-|[cospi, fonction](../Topic/cospi%20Function.md)|Surchargé.  Calcule la valeur du cosinus de pi \* \_X|  
-|[cospif, fonction](../Topic/cospif%20Function.md)|Calcule la valeur du cosinus de pi \* \_X|  
-|[erf, fonction](../Topic/erf%20Function.md)|Surchargé.  Calcule la fonction d'erreur de \_X|  
-|[erfc, fonction](../Topic/erfc%20Function.md)|Surchargé.  Calcule la fonction d'erreur complémentaire de \_X|  
-|[erfcf, fonction](../Topic/erfcf%20Function.md)|Calcule la fonction d'erreur complémentaire de \_X|  
-|[erfcinv, fonction](../Topic/erfcinv%20Function.md)|Surchargé.  Calcule la fonction erreur du complément inverse à \_X|  
-|[erfcinvf, fonction](../Topic/erfcinvf%20Function.md)|Calcule la fonction erreur du complément inverse à \_X|  
-|[erff, fonction](../Topic/erff%20Function.md)|Calcule la fonction d'erreur de \_X|  
-|[erfinv, fonction](../Topic/erfinv%20Function.md)|Surchargé.  Calcule l'inverse de la fonction d'erreur de \_X|  
-|[erfinvf, fonction](../Topic/erfinvf%20Function.md)|Calcule l'inverse de la fonction d'erreur de \_X|  
-|[Fonction exp](../Topic/exp%20Function.md)|Surchargé.  Calcule la base e exponentielle du paramètre|  
-|[exp10, fonction](../Topic/exp10%20Function.md)|Surchargé.  Calcule l´exponentiel en base\-10 de l'argument|  
-|[exp10f, fonction](../Topic/exp10f%20Function.md)|Calcule l´exponentiel en base\-10 de l'argument|  
-|[exp2, fonction](../Topic/exp2%20Function.md)|Surchargé.  Calcule l´exponentiel en base\-2 de l'argument|  
-|[exp2f, fonction](../Topic/exp2f%20Function.md)|Calcule l´exponentiel en base\-2 de l'argument|  
-|[expf, fonction](../Topic/expf%20Function.md)|Calcule la base e exponentielle du paramètre|  
-|[expm1, fonction](../Topic/expm1%20Function.md)|Surchargé.  Calcule la base e exponentielle de l'argument, moins 1|  
-|[expm1f, fonction](../Topic/expm1f%20Function.md)|Calcule la base e exponentielle de l'argument, moins 1|  
-|[fabs, fonction](../Topic/fabs%20Function.md)|Surchargé.  Retourne la valeur absolue de l'argument|  
-|[fabsf, fonction](../Topic/fabsf%20Function.md)|Retourne la valeur absolue de l'argument|  
-|[fdim, fonction](../Topic/fdim%20Function.md)|Surchargé.  Détermine la différence positive entre les arguments|  
-|[fdimf, fonction](../Topic/fdimf%20Function.md)|Détermine la différence positive entre les arguments|  
-|[Fonction floor](../Topic/floor%20Function.md)|Surchargé.  Calcule le plus grand entier qui n'est pas supérieur à l'argument.|  
-|[floorf, fonction](../Topic/floorf%20Function.md)|Calcule le plus grand entier qui n'est pas supérieur à l'argument.|  
-|[fma, fonction](../Topic/fma%20Function.md)|Surchargé.  Calcule \(\_X \* \_Y\) \+ \_Z, arrondi en tant qu'opération ternaire|  
-|[fmaf, fonction](../Topic/fmaf%20Function.md)|Calcule \(\_X \* \_Y\) \+ \_Z, arrondi en tant qu'opération ternaire|  
-|[fmax, fonction](../Topic/fmax%20Function.md)|Surchargé.  Détermine la valeur numérique maximale des arguments|  
-|[fmaxf, fonction](../Topic/fmaxf%20Function.md)|Détermine la valeur numérique maximale des arguments|  
-|[fmin, fonction](../Topic/fmin%20Function.md)|Surchargé.  Détermine la valeur numérique minimale des arguments|  
-|[fminf, fonction](../Topic/fminf%20Function.md)|Détermine la valeur numérique minimale des arguments|  
-|[fmod, fonction \(C\+\+ AMP\)](../Topic/fmod%20Function%20\(C++%20AMP\).md)|Surchargé.  Calcule le reste à virgule flottante de \_X\/\_Y.|  
-|[fmodf, fonction](../Topic/fmodf%20Function.md)|Calcule le reste à virgule flottante de \_X\/\_Y.|  
-|[fpclassify, fonction](../Topic/fpclassify%20Function.md)|Surchargé.  Classifie la valeur de l'argument en tant que valeur non numérique \(NaN\) Non, infinie, normale, subnormal, zéro|  
-|[frexp, fonction](../Topic/frexp%20Function.md)|Surchargé.  Obtient la mantisse et l'exposant de \_X|  
-|[frexpf, fonction](../Topic/frexpf%20Function.md)|Obtient la mantisse et l'exposant de \_X|  
-|[hypot, fonction](../Topic/hypot%20Function.md)|Surchargé.  Calcule la racine carrée de la somme des carrés de \_X et \_Y|  
-|[hypotf, fonction](../Topic/hypotf%20Function.md)|Calcule la racine carrée de la somme des carrés de \_X et \_Y|  
-|[ilogb, fonction](../Topic/ilogb%20Function.md)|Surchargé.  Récupère l'exposant de \_X sous forme d'int signé|  
-|[ilogbf, fonction](../Topic/ilogbf%20Function.md)|Récupère l'exposant de \_X sous forme d'int signé|  
-|[isfinite, fonction](../Topic/isfinite%20Function.md)|Surchargé.  Détermine si l'argument a une valeur finie|  
-|[isinf, fonction](../Topic/isinf%20Function.md)|Surchargé.  Détermine si l'argument est un infini|  
-|[isnan, fonction](../Topic/isnan%20Function.md)|Surchargé.  Détermine si l'argument est un NaN|  
-|[isnormal, fonction](../Topic/isnormal%20Function.md)|Surchargé.  Détermine si l'argument est une normale|  
-|[ldexp, fonction](../Topic/ldexp%20Function.md)|Surchargé.  Calcule un nombre réel à partir de la mantisse et de l'exposant.|  
-|[ldexpf, fonction](../Topic/ldexpf%20Function.md)|Calcule un nombre réel à partir de la mantisse et de l'exposant.|  
-|[lgamma, fonction](../Topic/lgamma%20Function.md)|Surchargé.  Calcule le logarithme népérien de la valeur absolue gamma de l'argument|  
-|[lgammaf, fonction](../Topic/lgammaf%20Function.md)|Calcule le logarithme népérien de la valeur absolue gamma de l'argument|  
-|[Fonction log](../Topic/log%20Function.md)|Surchargé.  Calcule le logarithme en base e de l'argument|  
-|[log10, fonction](../Topic/log10%20Function.md)|Surchargé.  Calcule le logarithme en base 10 de l'argument.|  
-|[log10f, fonction](../Topic/log10f%20Function.md)|Calcule le logarithme en base 10 de l'argument.|  
-|[log1p, fonction](../Topic/log1p%20Function.md)|Surchargé.  Calcule le logarithme de base e de 1 ainsi que l'argument|  
-|[log1pf, fonction](../Topic/log1pf%20Function.md)|Calcule le logarithme de base e de 1 ainsi que l'argument|  
-|[log2, fonction](../Topic/log2%20Function.md)|Surchargé.  Calcule le logarithme de base 2 de l'argument|  
-|[log2f, fonction](../Topic/log2f%20Function.md)|Calcule le logarithme de base 2 de l'argument|  
-|[logb, fonction](../Topic/logb%20Function.md)|Surchargé.  Récupère l'exposant de \_X, comme valeur d'entier signé au format à virgule flottante|  
-|[logbf, fonction](../Topic/logbf%20Function.md)|Récupère l'exposant de \_X, comme valeur d'entier signé au format à virgule flottante|  
-|[logf, fonction](../Topic/logf%20Function.md)|Calcule le logarithme en base e de l'argument|  
-|[modf, fonction](../Topic/modf%20Function.md)|Surchargé.  Fractionne \_X en une partie fractionnaire et une partie entière.|  
-|[modff, fonction](../Topic/modff%20Function.md)|Fractionne \_X en une partie fractionnaire et une partie entière.|  
-|[nan, fonction](../Topic/nan%20Function.md)|Retourne silencieusement NaN|  
-|[nanf, fonction](../Topic/nanf%20Function.md)|Retourne silencieusement NaN|  
-|[nearbyint, fonction](../Topic/nearbyint%20Function.md)|Surchargé.  Arrondit l'argument en une valeur entière à virgule flottante, à l'aide de la direction actuelle d'arrondi.|  
-|[nearbyintf, fonction](../Topic/nearbyintf%20Function.md)|Arrondit l'argument en une valeur entière à virgule flottante, à l'aide de la direction actuelle d'arrondi.|  
-|[nextafter, fonction](../Topic/nextafter%20Function.md)|Surchargé.  Déterminez la prochaine valeur représentable, dans le type de la fonction, après \_X dans la direction de \_Y|  
-|[nextafterf, fonction](../Topic/nextafterf%20Function.md)|Déterminez la prochaine valeur représentable, dans le type de la fonction, après \_X dans la direction de \_Y|  
-|[phi, fonction](../Topic/phi%20Function.md)|Surchargé.  Retourne la fonction de répartition cumulative de l'argument|  
-|[phif, fonction](../Topic/phif%20Function.md)|Retourne la fonction de répartition cumulative de l'argument|  
-|[Fonction pow](../Topic/pow%20Function.md)|Surchargé.  Calcule \_X élevé à la puissance de \_Y|  
-|[powf, fonction](../Topic/powf%20Function.md)|Calcule \_X élevé à la puissance de \_Y|  
-|[probit, fonction](../Topic/probit%20Function.md)|Surchargé.  Retourne la fonction de répartition cumulative inverse de l'argument|  
-|[probitf, fonction](../Topic/probitf%20Function.md)|Retourne la fonction de répartition cumulative inverse de l'argument|  
-|[rcbrt, fonction](../Topic/rcbrt%20Function.md)|Surchargé.  Retourne le réciproque de la racine cubique de l'argument|  
-|[rcbrtf, fonction](../Topic/rcbrtf%20Function.md)|Retourne le réciproque de la racine cubique de l'argument|  
-|[remainder, fonction](../Topic/remainder%20Function.md)|Surchargé.  Calcule le reste : \_X REM \_Y|  
-|[remainderf, fonction](../Topic/remainderf%20Function.md)|Calcule le reste : \_X REM \_Y|  
-|[remquo, fonction](../Topic/remquo%20Function.md)|Surchargé.  Calcule le même reste que \_X REM \_Y.  Calcule également les 23 bits inférieurs du quotient intégral \_X\/\_Y, et donne à cette valeur le même signe que \_X\/\_Y.  Il stocke cette valeur signée dans l'integer pointé par \_Quo.|  
-|[remquof, fonction](../Topic/remquof%20Function.md)|Calcule le même reste que \_X REM \_Y.  Calcule également les 23 bits inférieurs du quotient intégral \_X\/\_Y, et donne à cette valeur le même signe que \_X\/\_Y.  Il stocke cette valeur signée dans l'integer pointé par \_Quo.|  
-|[Fonction round](../Topic/round%20Function.md)|Surchargé.  Arrondit \_X à l'entier le plus proche|  
-|[roundf, fonction](../Topic/roundf%20Function.md)|Arrondit \_X à l'entier le plus proche|  
-|[rsqrt, fonction](../Topic/rsqrt%20Function.md)|Surchargé.  Retourne la réciproque de la racine carrée de l'argument|  
-|[rsqrtf, fonction](../Topic/rsqrtf%20Function.md)|Retourne la réciproque de la racine carrée de l'argument|  
-|[scalb, fonction](../Topic/scalb%20Function.md)|Surchargé.  Multiplie \_X par FLT\_RADIX puissance \_Y|  
-|[scalbf, fonction](../Topic/scalbf%20Function.md)|Multiplie \_X par FLT\_RADIX puissance \_Y|  
-|[scalbn, fonction](../Topic/scalbn%20Function.md)|Surchargé.  Multiplie \_X par FLT\_RADIX puissance \_Y|  
-|[scalbnf, fonction](../Topic/scalbnf%20Function.md)|Multiplie \_X par FLT\_RADIX puissance \_Y|  
-|[signbit, fonction](../Topic/signbit%20Function.md)|Surchargé.  Détermine si le signe de \_X est négatif|  
-|[signbitf, fonction](../Topic/signbitf%20Function.md)|Détermine si le signe de \_X est négatif|  
-|[Fonction sin](../Topic/sin%20Function.md)|Surchargé.  Calcule la valeur du sinus de l'argument|  
-|[sincos, fonction](../Topic/sincos%20Function.md)|Surchargé.  Calcule la valeur du sinus et du cosinus du \_X|  
-|[sincosf, fonction](../Topic/sincosf%20Function.md)|Calcule la valeur du sinus et du cosinus du \_X|  
-|[sinf, fonction](../Topic/sinf%20Function.md)|Calcule la valeur du sinus de l'argument|  
-|[sinh, fonction](../Topic/sinh%20Function.md)|Surchargé.  Calcule la valeur hyperbolique du sinus de l'argument|  
-|[sinhf, fonction](../Topic/sinhf%20Function.md)|Calcule la valeur hyperbolique du sinus de l'argument|  
-|[sinpi, fonction](../Topic/sinpi%20Function.md)|Surchargé.  Calcule la valeur du sinus de pi \* \_X|  
-|[sinpif, fonction](../Topic/sinpif%20Function.md)|Calcule la valeur du sinus de pi \* \_X|  
-|[Fonction sqrt](../Topic/sqrt%20Function.md)|Surchargé.  Calcule la racine carrée de l'argument|  
-|[sqrtf, fonction](../Topic/sqrtf%20Function.md)|Calcule la racine carrée de l'argument|  
-|[Fonction tan](../Topic/tan%20Function.md)|Surchargé.  Calcule la valeur de la tangente de l'argument|  
-|[tanf, fonction](../Topic/tanf%20Function.md)|Calcule la valeur de la tangente de l'argument|  
-|[tanh, fonction](../Topic/tanh%20Function.md)|Surchargé.  Calcule la valeur de la tangente hyperbolique de l'argument|  
-|[tanhf, fonction](../Topic/tanhf%20Function.md)|Calcule la valeur de la tangente hyperbolique de l'argument|  
-|[tanpi, fonction](../Topic/tanpi%20Function.md)|Surchargé.  Calcule la valeur de la tangente de pi \* \_X|  
-|[tanpif, fonction](../Topic/tanpif%20Function.md)|Calcule la valeur de la tangente de pi \* \_X|  
-|[tgamma, fonction](../Topic/tgamma%20Function.md)|Surchargé.  Calcule la fonction gamma de \_X|  
-|[tgammaf, fonction](../Topic/tgammaf%20Function.md)|Calcule la fonction gamma de \_X|  
-|[trunc, fonction](../Topic/trunc%20Function.md)|Surchargé.  Tronque l'argument en composant entier|  
-|[truncf, fonction](../Topic/truncf%20Function.md)|Tronque l'argument en composant entier|  
+|[ACOS (fonction)](concurrency-precise-math-namespace-functions.md#acos)|Surchargé. Calcule l’arc cosinus de l’argument|  
+|[acosf, fonction](concurrency-precise-math-namespace-functions.md#acosf)|Calcule l’arc cosinus de l’argument|  
+|[ACOSH, fonction](concurrency-precise-math-namespace-functions.md#acosh)|Surchargé. Calcule le cosinus hyperbolique inverse de l’argument|  
+|[acoshf, fonction](concurrency-precise-math-namespace-functions.md#acoshf)|Calcule le cosinus hyperbolique inverse de l’argument|  
+|[ASIN (fonction)](concurrency-precise-math-namespace-functions.md#asin)|Surchargé. Calcule l’arc sinus de l’argument|  
+|[asinf, fonction](concurrency-precise-math-namespace-functions.md#asinf)|Calcule l’arc sinus de l’argument|  
+|[Asinh, fonction](concurrency-precise-math-namespace-functions.md#asinh)|Surchargé. Calcule le sinus hyperbolique inverse de l’argument|  
+|[asinhf, fonction](concurrency-precise-math-namespace-functions.md#asinhf)|Calcule le sinus hyperbolique inverse de l’argument|  
+|[ATAN (fonction)](concurrency-precise-math-namespace-functions.md#atan)|Surchargé. Calcule l’arc tangente de l’argument|  
+|[ATAN2 (fonction)](concurrency-precise-math-namespace-functions.md#atan2)|Surchargé. Calcule l’arc tangente de _Y/_X|  
+|[atan2f (fonction)](concurrency-precise-math-namespace-functions.md#atan2f)|Calcule l’arc tangente de _Y/_X|  
+|[atanf, fonction](concurrency-precise-math-namespace-functions.md#atanf)|Calcule l’arc tangente de l’argument|  
+|[ATANH, fonction](concurrency-precise-math-namespace-functions.md#atanh)|Surchargé. Calcule la tangente hyperbolique inverse de l’argument|  
+|[atanhf, fonction](concurrency-precise-math-namespace-functions.md#atanhf)|Calcule la tangente hyperbolique inverse de l’argument|  
+|[cbrt, fonction](concurrency-precise-math-namespace-functions.md#cbrt)|Surchargé. Calcule la racine cubique réelle de l’argument|  
+|[cbrtf, fonction](concurrency-precise-math-namespace-functions.md#cbrtf)|Calcule la racine cubique réelle de l’argument|  
+|[ceil (fonction)](concurrency-precise-math-namespace-functions.md#ceil)|Surchargé. Calcule le plafond de l’argument|  
+|[ceilf, fonction](concurrency-precise-math-namespace-functions.md#ceilf)|Calcule le plafond de l’argument|  
+|[copysign, fonction](concurrency-precise-math-namespace-functions.md#copysign)|Surchargé. Produit une valeur avec l’ampleur des _X et le signe de _Y|  
+|[copysignf, fonction](concurrency-precise-math-namespace-functions.md#copysignf)|Produit une valeur avec l’ampleur des _X et le signe de _Y|  
+|[COS (fonction)](concurrency-precise-math-namespace-functions.md#cos)|Surchargé. Calcule le cosinus de l’argument|  
+|[cosf, fonction](concurrency-precise-math-namespace-functions.md#cosf)|Calcule le cosinus de l’argument|  
+|[COSH (fonction)](concurrency-precise-math-namespace-functions.md#cosh)|Surchargé. Calcule la valeur de cosinus hyperbolique de l’argument|  
+|[coshf, fonction](concurrency-precise-math-namespace-functions.md#coshf)|Calcule la valeur de cosinus hyperbolique de l’argument|  
+|[cospi, fonction](concurrency-precise-math-namespace-functions.md#cospi)|Surchargé. Calcule la valeur du cosinus de pi * _X|  
+|[cospif, fonction](concurrency-precise-math-namespace-functions.md#cospif)|Calcule la valeur du cosinus de pi * _X|  
+|[ERF, fonction](concurrency-precise-math-namespace-functions.md#erf)|Surchargé. Calcule la fonction d’erreur de _X|  
+|[ERFC, fonction](concurrency-precise-math-namespace-functions.md#erfc)|Surchargé. Calcule la fonction d’erreur complémentaire de _X|  
+|[erfcf, fonction](concurrency-precise-math-namespace-functions.md#erfcf)|Calcule la fonction d’erreur complémentaire de _X|  
+|[erfcinv, fonction](concurrency-precise-math-namespace-functions.md#erfcinv)|Surchargé. Calcule la fonction d’erreur complémentaire inverse de _X|  
+|[erfcinvf, fonction](concurrency-precise-math-namespace-functions.md#erfcinvf)|Calcule la fonction d’erreur complémentaire inverse de _X|  
+|[erff, fonction](concurrency-precise-math-namespace-functions.md#erff)|Calcule la fonction d’erreur de _X|  
+|[erfinv, fonction](concurrency-precise-math-namespace-functions.md#erfinv)|Surchargé. Calcule la fonction d’erreur inverse de _X|  
+|[erfinvf, fonction](concurrency-precise-math-namespace-functions.md#erfinvf)|Calcule la fonction d’erreur inverse de _X|  
+|[EXP (fonction)](concurrency-precise-math-namespace-functions.md#exp)|Surchargé. Calcule la valeur exponentielle de l’argument de base e|  
+|[exp10 (fonction)](concurrency-precise-math-namespace-functions.md#exp10)|Surchargé. Calcule la valeur exponentielle de l’argument de base&10;|  
+|[exp10f (fonction)](concurrency-precise-math-namespace-functions.md#exp10f)|Calcule la valeur exponentielle de l’argument de base&10;|  
+|[exp2 (fonction)](concurrency-precise-math-namespace-functions.md#exp2)|Surchargé. Calcule la valeur exponentielle de l’argument base-2|  
+|[exp2f (fonction)](concurrency-precise-math-namespace-functions.md#exp2f)|Calcule la valeur exponentielle de l’argument base-2|  
+|[expf, fonction](concurrency-precise-math-namespace-functions.md#expf)|Calcule la valeur exponentielle de l’argument de base e|  
+|[expm1 (fonction)](concurrency-precise-math-namespace-functions.md#expm1)|Surchargé. Calcule l’exponentielle de base e de l’argument, moins 1|  
+|[expm1f (fonction)](concurrency-precise-math-namespace-functions.md#expm1f)|Calcule l’exponentielle de base e de l’argument, moins 1|  
+|[fabs, fonction](concurrency-precise-math-namespace-functions.md#fabs)|Surchargé. Retourne la valeur absolue de l’argument|  
+|[fabsf, fonction](concurrency-precise-math-namespace-functions.md#fabsf)|Retourne la valeur absolue de l’argument|  
+|[fdim, fonction](concurrency-precise-math-namespace-functions.md#fdim)|Surchargé. Détermine la différence entre les arguments positive|  
+|[fdimf, fonction](concurrency-precise-math-namespace-functions.md#fdimf)|Détermine la différence entre les arguments positive|  
+|[Floor, fonction](concurrency-precise-math-namespace-functions.md#floor)|Surchargé. Calcule le plancher de l’argument|  
+|[floorf, fonction](concurrency-precise-math-namespace-functions.md#floorf)|Calcule le plancher de l’argument|  
+|[FMA (fonction)](concurrency-precise-math-namespace-functions.md#fma)|Surchargé. Calcul (_X * _Y) + _Z, arrondi comme une seule opération ternaire|  
+|[fmaf, fonction](concurrency-precise-math-namespace-functions.md#fmaf)|Calcul (_X * _Y) + _Z, arrondi comme une seule opération ternaire|  
+|[Fmax, fonction](concurrency-precise-math-namespace-functions.md#fmax)|Surchargé. Déterminer la valeur numérique maximale des arguments|  
+|[fmaxf, fonction](concurrency-precise-math-namespace-functions.md#fmaxf)|Déterminer la valeur numérique maximale des arguments|  
+|[fmin, fonction](concurrency-precise-math-namespace-functions.md#fmin)|Surchargé. Déterminer la valeur numérique minimale des arguments|  
+|[fminf, fonction](concurrency-precise-math-namespace-functions.md#fminf)|Déterminer la valeur numérique minimale des arguments|  
+|[fmod, fonction (C++ AMP)](concurrency-precise-math-namespace-functions.md#fmod)|Surchargé. Calcule le reste à virgule flottante de _X/_Y|  
+|[fmodf, fonction](concurrency-precise-math-namespace-functions.md#fmodf)|Calcule le reste à virgule flottante de _X/_Y|  
+|[fpclassify, fonction](concurrency-precise-math-namespace-functions.md#fpclassify)|Surchargé. Classe de la valeur d’argument comme une valeur NaN, infinie, normale subnormal, zéro|  
+|[frexp, fonction](concurrency-precise-math-namespace-functions.md#frexp)|Surchargé. Obtient la mantisse et l’exposant de _X|  
+|[frexpf, fonction](concurrency-precise-math-namespace-functions.md#frexpf)|Obtient la mantisse et l’exposant de _X|  
+|[hypot, fonction](concurrency-precise-math-namespace-functions.md#hypot)|Surchargé. Calcule la racine carrée de la somme des carrés des _X et _Y|  
+|[hypotf, fonction](concurrency-precise-math-namespace-functions.md#hypotf)|Calcule la racine carrée de la somme des carrés des _X et _Y|  
+|[ilogb, fonction](concurrency-precise-math-namespace-functions.md#ilogb)|Surchargé. Extraire l’exposant de _X comme une valeur int signée|  
+|[ilogbf, fonction](concurrency-precise-math-namespace-functions.md#ilogbf)|Extraire l’exposant de _X comme une valeur int signée|  
+|[isFinite, fonction](concurrency-precise-math-namespace-functions.md#isfinite)|Surchargé. Détermine si l’argument a une valeur finie|  
+|[isinf, fonction](concurrency-precise-math-namespace-functions.md#isinf)|Surchargé. Détermine si l’argument est une infinité|  
+|[isNaN (fonction)](concurrency-precise-math-namespace-functions.md#isnan)|Surchargé. Détermine si l’argument est une valeur NaN|  
+|[isnormal, fonction](concurrency-precise-math-namespace-functions.md#isnormal)|Surchargé. Détermine si l’argument est normale|  
+|[ldexp, fonction](concurrency-precise-math-namespace-functions.md#ldexp)|Surchargé. Calcule le nombre réel de la mantisse et exposant|  
+|[ldexpf, fonction](concurrency-precise-math-namespace-functions.md#ldexpf)|Calcule le nombre réel de la mantisse et exposant|  
+|[lgamma, fonction](concurrency-precise-math-namespace-functions.md#lgamma)|Surchargé. Calcule le logarithme népérien de la valeur absolue de gamma de l’argument|  
+|[lgammaf, fonction](concurrency-precise-math-namespace-functions.md#lgammaf)|Calcule le logarithme népérien de la valeur absolue de gamma de l’argument|  
+|[log, fonction](concurrency-precise-math-namespace-functions.md#log)|Surchargé. Calcule le logarithme de base e de l’argument|  
+|[LOG10 (fonction)](concurrency-precise-math-namespace-functions.md#log10)|Surchargé. Calcule le logarithme en base&10; de l’argument|  
+|[log10f (fonction)](concurrency-precise-math-namespace-functions.md#log10f)|Calcule le logarithme en base&10; de l’argument|  
+|[log1p (fonction)](concurrency-precise-math-namespace-functions.md#log1p)|Surchargé. Calcule le logarithme de base e de 1 et de l’argument|  
+|[log1pf (fonction)](concurrency-precise-math-namespace-functions.md#log1pf)|Calcule le logarithme de base e de 1 et de l’argument|  
+|[LOG2 (fonction)](concurrency-precise-math-namespace-functions.md#log2)|Surchargé. Calcule le logarithme base&2; de l’argument|  
+|[log2f (fonction)](concurrency-precise-math-namespace-functions.md#log2f)|Calcule le logarithme base&2; de l’argument|  
+|[logb, fonction](concurrency-precise-math-namespace-functions.md#logb)|Surchargé. Extrait l’exposant de _X, comme une valeur d’entier signé dans un format à virgule flottante|  
+|[logbf, fonction](concurrency-precise-math-namespace-functions.md#logbf)|Extrait l’exposant de _X, comme une valeur d’entier signé dans un format à virgule flottante|  
+|[logf, fonction](concurrency-precise-math-namespace-functions.md#logf)|Calcule le logarithme de base e de l’argument|  
+|[modf, fonction](concurrency-precise-math-namespace-functions.md#modf)|Surchargé. Fractionne _X en une fraction et un nombre entier.|  
+|[modff, fonction](concurrency-precise-math-namespace-functions.md#modff)|Fractionne _X en une fraction et un nombre entier.|  
+|[NaN (fonction)](concurrency-precise-math-namespace-functions.md#nan)|Retourne une valeur NaN silencieuse|  
+|[nanf (fonction)](concurrency-precise-math-namespace-functions.md#nanf)|Retourne une valeur NaN silencieuse|  
+|[nearbyint, fonction](concurrency-precise-math-namespace-functions.md#nearbyint)|Surchargé. Arrondit l’argument en une valeur entière dans un format à virgule flottante, à l’aide de la direction d’arrondi actuelle.|  
+|[nearbyintf, fonction](concurrency-precise-math-namespace-functions.md#nearbyintf)|Arrondit l’argument en une valeur entière dans un format à virgule flottante, à l’aide de la direction d’arrondi actuelle.|  
+|[nextafter, fonction](concurrency-precise-math-namespace-functions.md#nextafter)|Surchargé. Déterminer la valeur représentable, dans le type de la fonction, après _X dans la direction de _Y|  
+|[nextafterf, fonction](concurrency-precise-math-namespace-functions.md#nextafterf)|Déterminer la valeur représentable, dans le type de la fonction, après _X dans la direction de _Y|  
+|[phi, fonction](concurrency-precise-math-namespace-functions.md#phi)|Surchargé. Retourne la fonction de distribution cumulative de l’argument|  
+|[phif, fonction](concurrency-precise-math-namespace-functions.md#phif)|Retourne la fonction de distribution cumulative de l’argument|  
+|[Fonction pow](concurrency-precise-math-namespace-functions.md#pow)|Surchargé. Calcule _X élevé à la puissance de _Y|  
+|[powf, fonction](concurrency-precise-math-namespace-functions.md#powf)|Calcule _X élevé à la puissance de _Y|  
+|[probit, fonction](concurrency-precise-math-namespace-functions.md#probit)|Surchargé. Retourne la fonction de distribution cumulée inverse de l’argument|  
+|[probitf, fonction](concurrency-precise-math-namespace-functions.md#probitf)|Retourne la fonction de distribution cumulée inverse de l’argument|  
+|[rcbrt, fonction](concurrency-precise-math-namespace-functions.md#rcbrt)|Surchargé. Retourne l’inverse de la racine cubique de l’argument|  
+|[rcbrtf, fonction](concurrency-precise-math-namespace-functions.md#rcbrtf)|Retourne l’inverse de la racine cubique de l’argument|  
+|[Remainder (fonction)](concurrency-precise-math-namespace-functions.md#remainder)|Surchargé. Calcule le reste : _X REM _Y|  
+|[remainderf, fonction](concurrency-precise-math-namespace-functions.md#remainderf)|Calcule le reste : _X REM _Y|  
+|[remquo, fonction](concurrency-precise-math-namespace-functions.md#remquo)|Surchargé. Calcule le reste même comme _X REM _Y. Également calcule les 23 bits de poids faible de l’intégrale quotient _X/_Y, ainsi que cette valeur de la même signature que _X/_Y. Elle stocke cette valeur signée dans l’entier indiqué par _Quo.|  
+|[remquof, fonction](concurrency-precise-math-namespace-functions.md#remquof)|Calcule le reste même comme _X REM _Y. Également calcule les 23 bits de poids faible de l’intégrale quotient _X/_Y, ainsi que cette valeur de la même signature que _X/_Y. Elle stocke cette valeur signée dans l’entier indiqué par _Quo.|  
+|[Round (fonction)](concurrency-precise-math-namespace-functions.md#round)|Surchargé. Arrondit _X à l’entier le plus proche|  
+|[roundf, fonction](concurrency-precise-math-namespace-functions.md#roundf)|Arrondit _X à l’entier le plus proche|  
+|[rsqrt, fonction](concurrency-precise-math-namespace-functions.md#rsqrt)|Surchargé. Retourne l’inverse de la racine carrée de l’argument|  
+|[rsqrtf, fonction](concurrency-precise-math-namespace-functions.md#rsqrtf)|Retourne l’inverse de la racine carrée de l’argument|  
+|[scalb, fonction](concurrency-precise-math-namespace-functions.md#scalb)|Surchargé. Multiplie _X par FLT_RADIX à la _Y de l’alimentation|  
+|[scalbf, fonction](concurrency-precise-math-namespace-functions.md#scalbf)|Multiplie _X par FLT_RADIX à la _Y de l’alimentation|  
+|[scalbn, fonction](concurrency-precise-math-namespace-functions.md#scalbn)|Surchargé. Multiplie _X par FLT_RADIX à la _Y de l’alimentation|  
+|[scalbnf, fonction](concurrency-precise-math-namespace-functions.md#scalbnf)|Multiplie _X par FLT_RADIX à la _Y de l’alimentation|  
+|[signbit, fonction](concurrency-precise-math-namespace-functions.md#signbit)|Surchargé. Détermine si le signe de _X est négatif|  
+|[signbitf, fonction](concurrency-precise-math-namespace-functions.md#signbitf)|Détermine si le signe de _X est négatif|  
+|[SIN (fonction)](concurrency-precise-math-namespace-functions.md#sin)|Surchargé. Calcule la valeur du sinus de l’argument|  
+|[sincos, fonction](concurrency-precise-math-namespace-functions.md#sincos)|Surchargé. Calcule le sinus et le cosinus valeur _X|  
+|[sincosf, fonction](concurrency-precise-math-namespace-functions.md#sincosf)|Calcule le sinus et le cosinus valeur _X|  
+|[Sinf, fonction](concurrency-precise-math-namespace-functions.md#sinf)|Calcule la valeur du sinus de l’argument|  
+|[sinh (fonction)](concurrency-precise-math-namespace-functions.md#sinh)|Surchargé. Calcule la valeur du sinus hyperbolique de l’argument|  
+|[sinhf, fonction](concurrency-precise-math-namespace-functions.md#sinhf)|Calcule la valeur du sinus hyperbolique de l’argument|  
+|[sinpi, fonction](concurrency-precise-math-namespace-functions.md#sinpi)|Surchargé. Calcule la valeur du sinus de pi * _X|  
+|[sinpif, fonction](concurrency-precise-math-namespace-functions.md#sinpif)|Calcule la valeur du sinus de pi * _X|  
+|[SQRT (fonction)](concurrency-precise-math-namespace-functions.md#sqrt)|Surchargé. Calcule la racine squre de l’argument|  
+|[sqrtf, fonction](concurrency-precise-math-namespace-functions.md#sqrtf)|Calcule la racine squre de l’argument|  
+|[tan (fonction)](concurrency-precise-math-namespace-functions.md#tan)|Surchargé. Calcule la valeur de l’argument de tangente|  
+|[tanf, fonction](concurrency-precise-math-namespace-functions.md#tanf)|Calcule la valeur de l’argument de tangente|  
+|[TANH, fonction](concurrency-precise-math-namespace-functions.md#tanh)|Surchargé. Calcule la valeur de la tangente hyperbolique de l’argument|  
+|[tanhf, fonction](concurrency-precise-math-namespace-functions.md#tanhf)|Calcule la valeur de la tangente hyperbolique de l’argument|  
+|[tanpi, fonction](concurrency-precise-math-namespace-functions.md#tanpi)|Surchargé. Calcule la valeur de tangente de pi * _X|  
+|[tanpif, fonction](concurrency-precise-math-namespace-functions.md#tanpif)|Calcule la valeur de tangente de pi * _X|  
+|[tgamma, fonction](concurrency-precise-math-namespace-functions.md#tgamma)|Surchargé. Calcule la fonction gamma de _X|  
+|[tgammaf, fonction](concurrency-precise-math-namespace-functions.md#tgammaf)|Calcule la fonction gamma de _X|  
+|[trunc, fonction](concurrency-precise-math-namespace-functions.md#trunc)|Surchargé. Tronque l’argument pour le composant entier|  
+|[truncf, fonction](concurrency-precise-math-namespace-functions.md#truncf)|Tronque l’argument pour le composant entier|  
   
-## Configuration requise  
- **En\-tête:** amp\_math.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** amp_math.h  
   
- **Espace de noms d'accès :** Concurrency  
+ **Espace de noms :** Concurrency  
   
-## Voir aussi  
- [Concurrency, espace de noms \(C\+\+ AMP\)](../../../parallel/amp/reference/concurrency-namespace-cpp-amp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Accès concurrentiel Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
+
