@@ -1,50 +1,66 @@
 ---
-title: "wcrtomb_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wcrtomb_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcrtomb_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caractères larges, conversion"
-  - "wcrtomb_s (fonction)"
-  - "caractères multioctets"
-  - "conversion des caractères"
+title: wcrtomb_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wcrtomb_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcrtomb_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- wide characters, converting
+- wcrtomb_s function
+- multibyte characters
+- characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# wcrtomb_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: eec9f8620ed6533304568704444de6df33503818
+ms.lasthandoff: 02/24/2017
 
-Convertir un caractère large en sa représentation sous forme de caractères multioctets. Une version de [wcrtomb](../../c-runtime-library/reference/wcrtomb.md) avec des améliorations de sécurité comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="wcrtombs"></a>wcrtomb_s
+Convertit un caractère large dans sa représentation de caractère multioctet. Version de [wcrtomb](../../c-runtime-library/reference/wcrtomb.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 errno_t wcrtomb_s(  
@@ -63,38 +79,38 @@ errno_t wcrtomb_s(
 ); // C++ only  
 ```  
   
-#### Paramètres  
- \[out\] `pReturnValue`  
- Retourne le nombre d’octets écrits ou \-1 si une erreur s’est produite.  
+#### <a name="parameters"></a>Paramètres  
+ [out] `pReturnValue`  
+ Retourne le nombre de caractères écrits ou -1 si une erreur s’est produite.  
   
- \[out\] `mbchar`  
- Le multioctets résultant convertis en caractères.  
+ [out] `mbchar`  
+ Résultat de la conversion du caractère multioctet.  
   
- \[in\] `sizeOfmbchar`  
- La taille de la `mbchar` variable en octets.  
+ [in] `sizeOfmbchar`  
+ Taille de la variable `mbchar` en octets.  
   
- \[in\] `wchar`  
+ [in] `wchar`  
  Caractère large à convertir.  
   
- \[in\] `mbstate`  
- Pointeur vers un objet `mbstate_t`.  
+ [in] `mbstate`  
+ Pointeur vers un objet `mbstate_t` .  
   
-## Valeur de retour  
- Retourne zéro ou un `errno` valeur si une erreur se produit.  
+## <a name="return-value"></a>Valeur de retour  
+ Retourne zéro ou une valeur `errno` si une erreur se produit.  
   
-## Notes  
- Le `wcrtomb_s` fonction convertit un caractère large, à compter de l’état de la conversion spécifiée contenue dans `mbstate`, à partir de la valeur contenue dans `wchar`, à l’adresse représentée par `mbchar`. Le `pReturnValue` valeur sera le nombre d’octets convertis, mais pas plus de `MB_CUR_MAX` octets, ou une valeur \-1 si une erreur s’est produite.  
+## <a name="remarks"></a>Notes  
+ La fonction `wcrtomb_s` convertit un caractère large, en commençant dans l’état de conversion spécifié dans `mbstate`, à partir de la valeur contenue dans `wchar`, en adresse représentée par `mbchar`. La valeur `pReturnValue` correspond au nombre d’octets convertis, mais pas plus de `MB_CUR_MAX` octets, ou -1 si une erreur s’est produite.  
   
- Si `mbstate` a la valeur null, le texte interne `mbstate_t` état de la conversion est utilisé. Si le caractère figurant `wchar` ne dispose pas d’un caractère multioctet correspondant, la valeur de `pReturnValue` sera \-1 et la fonction retournera le `errno` valeur `EILSEQ`.  
+ Si `mbstate` a la valeur null, l’état de conversion `mbstate_t` interne est utilisé. Si le caractère contenu dans `wchar` ne correspond à aucun caractère multioctet, la valeur de `pReturnValue` est égale à -1 et la fonction retourne la valeur `errno` de `EILSEQ`.  
   
- Le `wcrtomb_s` fonction diffère de [wctomb\_s, \_wctomb\_s\_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md) par sa capacité à redémarrer. L'état de la conversion est stocké dans `mbstate` pour les appels suivants à la même ou à d'autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables. Par exemple, une application utilise `wcsrlen` plutôt que `wcslen`, si un appel ultérieur à `wcsrtombs_s` ont été utilisés au lieu de `wcstombs_s.`  
+ La fonction `wcrtomb_s` se distingue de [wctomb_s, _wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md) par sa capacité à redémarrer. L'état de la conversion est stocké dans `mbstate` pour les appels suivants à la même ou à d'autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables. Par exemple, une application utiliserait `wcsrlen` plutôt que `wcslen` si un appel ultérieur à `wcsrtombs_s` était utilisé à la place de `wcstombs_s.`.  
   
- En C\+\+, l’utilisation de cette fonction est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement \(inutile de spécifier un argument taille\) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées avec leurs équivalents plus récents et sécurisés. Pour plus d'informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, l’utilisation de cette fonction est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument de taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalents plus récents et sécurisés. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
   
-## Exceptions  
- Le `wcrtomb_s` fonction est multithread\-safe tant qu’aucune fonction dans le thread actuel n’appelle `setlocale` pendant l’exécution de cette fonction et le `mbstate` est null.  
+## <a name="exceptions"></a>Exceptions  
+ La fonction `wcrtomb_s` est multithread-safe tant qu’aucune fonction du thread actif n’appelle `setlocale` pendant l’exécution de cette fonction et que `mbstate` a la valeur Null.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_wcrtomb_s.c  
@@ -135,19 +151,19 @@ int main( void )
 ```  
   
 ```Output  
-Le caractère large correspondant « Q » a été converti en un le caractère multioctet « Q ».  
+The corresponding wide character "Q" was converted to a the "Q" multibyte character.  
 ```  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`wcrtomb_s`|\<wchar.h\>|  
+|`wcrtomb_s`|\<wchar.h>|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
  [Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

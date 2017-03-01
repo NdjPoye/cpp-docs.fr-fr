@@ -1,51 +1,66 @@
 ---
-title: "vsscanf, vswscanf | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "vsscanf"
-  - "vswscanf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_vstscanf"
-  - "vsscanf"
-  - "vswscanf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vsscanf (fonction)"
-  - "vswscanf (fonction)"
+title: vsscanf, vswscanf | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- vsscanf
+- vswscanf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _vstscanf
+- vsscanf
+- vswscanf
+dev_langs:
+- C++
+helpviewer_keywords:
+- vswscanf function
+- vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
 caps.latest.revision: 9
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# vsscanf, vswscanf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: bdcf6f48a7f921913d51cea801e76490c58ae8c1
+ms.lasthandoff: 02/24/2017
 
-Lit les données mises en forme à partir d'une chaîne.  Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [vsscanf\_s, vswscanf\_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md).  
+---
+# <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
+Lit les données mises en forme d’une chaîne. Il existe des versions plus sécurisées de ces fonctions. Consultez [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int vsscanf(  
@@ -60,47 +75,47 @@ int vswscanf(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `buffer`  
  Données stockées  
   
  `format`  
- Chaîne de contrôle de format.  Pour plus d'informations, consultez [Champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
+ Chaîne de contrôle de format. Pour plus d’informations, consultez [Champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
   
  `arglist`  
- Liste d'arguments variable.  
+ Liste d’arguments de variable.  
   
-## Valeur de retour  
- Chacune de ces fonctions retourne le nombre de champs qui sont correctement convertis et assignés ; la valeur de retour n'inclut pas les champs qui ont été lus mais non assignés.  La valeur de retour 0 indique qu'aucun champ n'a été assigné.  La valeur de retour est `EOF` pour une erreur ou si la fin de la chaîne est atteinte avant la première conversion.  
+## <a name="return-value"></a>Valeur de retour  
+ Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. La valeur de retour est `EOF` en cas d’erreur ou si la fin de la chaîne est atteinte avant la première conversion.  
   
- Si `buffer` ou `format` est un pointeur `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, ces fonctions retournent \-1 et attribuent à `errno` la valeur `EINVAL`.  
+ Si `buffer` ou `format` est un pointeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent -1 et définissent `errno` avec la valeur `EINVAL`.  
   
- Pour plus d'informations sur ces codes de retour et autres, consultez [errno, \_doserrno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- La fonction `vsscanf` lit les données de `buffer` dans les emplacements fournis par chaque argument de la liste d'arguments `arglist`.  Chaque argument de la liste doit être un pointeur vers une variable dont le type correspond à un spécificateur de type dans `format`.  L'argument `format` contrôle l'interprétation des champs d'entrée et a la même forme et fonction que l'argument `format` pour la fonction `scanf`.  Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.  
+## <a name="remarks"></a>Notes  
+ La fonction `vsscanf` lit les données de `buffer` dans les emplacements fournis par chaque argument figurant dans la liste d’arguments `arglist`. Chaque argument de la liste doit être un pointeur désignant une variable dont le type correspond à un spécificateur de type dans `format`. L’argument `format` contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que l’argument `format` de la fonction `scanf`. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.  
   
 > [!IMPORTANT]
->  Lorsque vous utilisez `vsscanf` pour lire une chaîne, spécifiez toujours une largeur du format de `%s` \(par exemple, `"%32s"` au lieu de `"%s"`\) ; sinon, l'entrée mal mise en forme peut provoquer un dépassement de mémoire tampon.  
+>  Quand vous utilisez `vsscanf` pour lire une chaîne, spécifiez toujours la largeur du format `%s` (par exemple, `"%32s"` au lieu de `"%s"`) ; une entrée mal formatée peut en effet entraîner un dépassement de mémoire tampon.  
   
- `vswscanf` est une version à caractères larges de `vsscanf` ; les arguments vers `vswscanf` sont des chaînes à caractères larges.  `vsscanf` ne gère pas les caractères hexadécimaux multi octets.  `vswscanf` ne gère pas les caractères pleine chasse hexadécimaux Unicode ou de « zone de compatibilité ».  Sinon, `vswscanf` et `vsscanf` se comportent de la même façon.  
+ `vswscanf` est une version à caractères larges de `vsscanf` ; les arguments de `vswscanf` sont des chaînes à caractères larges. `vsscanf` ne gère pas les caractères hexadécimaux multioctets. `vswscanf` ne gère pas les caractères de « zone de compatibilité » ni les caractères hexadécimaux entiers Unicode. Sinon, `vswscanf` et `vsscanf` se comportent de la même façon.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vstscanf`|`vsscanf`|`vsscanf`|`vswscanf`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`vsscanf`|\<stdio.h\>|  
-|`vswscanf`|\<stdio.h\> ou \<wchar.h\>|  
+|`vsscanf`|\<stdio.h>|  
+|`vswscanf`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_vsscanf.c  
@@ -144,16 +159,19 @@ int main( void )
 }  
 ```  
   
-  **Chaîne    \= 15**  
-**Caractère \= 1**  
-**Entier :  \= 15**  
-**Réel :     \= 15.000000**   
-## Équivalent .NET Framework  
- Voir également les méthodes `Parse`, telles que [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+```Output  
+String    = 15  
+Character = 1  
+Integer:  = 15  
+Real:     = 15.000000  
+```  
   
-## Voir aussi  
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [vsscanf\_s, vswscanf\_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md)
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Voir les méthodes `Parse`, telles que [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md)

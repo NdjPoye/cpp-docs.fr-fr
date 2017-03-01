@@ -1,70 +1,86 @@
 ---
-title: "va_arg, va_copy, va_end, va_start | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "va_arg"
-  - "va_end"
-  - "va_copy"
-  - "va_start"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "va_arg"
-  - "va_start"
-  - "va_list"
-  - "va_alist"
-  - "va_dcl"
-  - "va_copy"
-  - "va_end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "l’accès à des listes d’arguments variables"
-  - "va_start (macro)"
-  - "va_arg (macro)"
-  - "va_end (macro)"
-  - "arguments (C++), des listes d’arguments"
-  - "va_list (macro)"
-  - "va_dcl (macro)"
-  - "va_alist (macro)"
-  - "va_copy (macro)"
+title: va_arg, va_copy, va_end, va_start | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- va_arg
+- va_end
+- va_copy
+- va_start
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- va_arg
+- va_start
+- va_list
+- va_alist
+- va_dcl
+- va_copy
+- va_end
+dev_langs:
+- C++
+helpviewer_keywords:
+- variable argument lists, accessing
+- va_start macro
+- va_arg macro
+- va_end macro
+- arguments [C++], argument lists
+- va_list macro
+- va_dcl macro
+- va_alist macro
+- va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# va_arg, va_copy, va_end, va_start
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 5caea89460070402fc8dc5b38912e290d4c5798d
+ms.lasthandoff: 02/24/2017
 
-Listes d’arguments variables accède.  
+---
+# <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
+Accède à des listes d’arguments variables.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      type va_arg(  
+type va_arg(  
    va_list arg_ptr,  
    type   
-);void va_copy(  
+);
+void va_copy(  
    va_list dest,  
    va_list src  
 ); // (ISO C99 and later)  
@@ -77,47 +93,47 @@ void va_start(
 ); // (ANSI C89 and later)  
 void va_start(  
    arg_ptr   
-);  // (Pre-ANSI C89 standardization version)  
+);  // (deprecated Pre-ANSI C89 standardization version)  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
  `type`  
- Type d’argument doit être récupéré.  
+ Type d’argument à récupérer.  
   
  `arg_ptr`  
- Pointeur vers la liste d’arguments.  
+ Pointeur désignant la liste d’arguments.  
   
  `dest`  
- Pointeur vers la liste d’arguments à initialiser à partir de `src`  
+ Pointeur désignant la liste d’arguments à initialiser à partir de `src`.  
   
  `src`  
- Pointeur vers la liste d’arguments à copier vers initialisée `dest`.  
+ Pointeur désignant la liste d’arguments initialisée à copier dans `dest`.  
   
  `prev_param`  
  Paramètre qui précède le premier argument facultatif.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `va_arg` Retourne l’argument actuel. `va_copy`, `va_start` et `va_end` ne retournent pas de valeurs.  
+ `va_arg` retourne l’argument actif. `va_copy`, `va_start` et `va_end` ne retournent pas de valeurs.  
   
-## <a name="remarks"></a>Remarques  
- Le `va_arg`, `va_copy`, `va_end`, et `va_start` macros fournissent un moyen pratique d’accéder aux arguments d’une fonction lorsque la fonction prend un nombre variable d’arguments. Il existe deux versions des macros : les macros définies dans STDARG. H sont conformes à l’ISO C99 standard ; les macros définies dans VARARGS. H sont déconseillées, mais sont conservés pour la compatibilité descendante avec le code qui a été écrit avant le C89 ANSI standard.  
+## <a name="remarks"></a>Notes  
+ Les macros `va_arg`, `va_copy`, `va_end` et `va_start` offrent un moyen portable d’accéder aux arguments pour une fonction qui accepte un nombre variable d’arguments. Il existe deux versions de ces macros : les macros définies dans STDARG.H, qui sont conformes à la norme ISO C99, et les macros définies dans VARARGS.H qui, bien que dépréciées, sont conservées pour des besoins de compatibilité descendante avec le code qui a été écrit avant la norme ANSI C89.  
   
- Ces macros supposent que la fonction accepte un nombre fixe d’arguments, suivi d’un nombre variable d’arguments facultatifs. Les arguments requis sont déclarées en tant que paramètres ordinaires à la fonction et sont accessibles via les noms de paramètre. Les arguments facultatifs sont accessibles via les macros dans STDARG. H (ou VARARGS. H pour le code qui a été écrit avant la norme ANSI C89), qui définit un pointeur vers le premier argument facultatif dans la liste d’arguments, récupère les arguments de la liste et réinitialise le pointeur lorsque le traitement de l’argument est terminé.  
+ Ces macros considèrent que la fonction accepte un nombre fixe d’arguments obligatoires, suivi d’un nombre variable d’arguments facultatifs. Les arguments obligatoires sont déclarés à la fonction en tant que paramètres ordinaires et sont accessibles via les noms des paramètres. Les arguments facultatifs sont accessibles via les macros contenues dans STDARG.H (ou dans VARARGS.H pour le code qui a été écrit avant la norme ANSI C89). Ils définissent le pointeur désignant le premier argument facultatif de la liste d’arguments, récupère les arguments de la liste et réinitialise le pointeur dès que le traitement de l’argument est terminé.  
   
- Les macros standards de C, définies dans STDARG. H, sont utilisées comme suit :  
+ Les macros standard C, définies dans STDARG.H, sont utilisées comme suit :  
   
--   `va_start` définit `arg_ptr` pour le premier argument facultatif dans la liste d’arguments est passé à la fonction. L’argument `arg_ptr` doit avoir le `va_list` type. L’argument `prev_param` est le nom du paramètre requis qui précède immédiatement le premier argument facultatif dans la liste d’arguments. Si `prev_param` est déclarée avec la classe de stockage register, comportement de la macro n’est pas défini. `va_start` doit être utilisée avant `va_arg` est utilisé pour la première fois.  
+-   `va_start` définit `arg_ptr` comme étant le premier argument facultatif de la liste d’arguments à être passé à la fonction. L’argument `arg_ptr` doit être de type `va_list`. L’argument `prev_param` est le nom du paramètre obligatoire qui précède immédiatement le premier argument facultatif dans la liste d’arguments. Si `prev_param` est déclarée avec la classe de stockage register, le comportement de la macro est indéfini. `va_start` doit être utilisée avant la première utilisation de `va_arg`.  
   
--   `va_arg` Récupère une valeur de `type` à partir de l’emplacement qui est fourni par `arg_ptr`, et incrémente `arg_ptr` pour pointer vers l’argument suivant dans la liste à l’aide de la taille de `type` pour déterminer où commence l’argument suivant. `va_arg` peut être utilisée n’importe quel nombre de fois dans la fonction pour récupérer les arguments de la liste.  
+-   `va_arg` récupère une valeur de `type` à partir de l’emplacement indiqué par `arg_ptr` et incrémente `arg_ptr` pour pointer vers le prochain argument de la liste en utilisant la taille de `type` pour déterminer le point de départ du prochain argument. `va_arg` peut être utilisé autant de fois que nécessaire dans la fonction pour récupérer les arguments de la liste.  
   
--   `va_copy` effectue une copie d’une liste d’arguments dans son état actuel. Le `src` paramètre doit déjà être initialisé avec `va_start`; il peut avoir été mis à jour avec `va_arg` appelle, mais ne devez pas ont été réinitialisés avec `va_end`. L’argument suivant est extrait par `va_arg` de `dest` est identique à l’argument suivant est extrait de `src`.  
+-   `va_copy` crée une copie d’une liste d’arguments dans son état actuel. Le paramètre `src` doit déjà être initialisé avec `va_start` ; il peut avoir été mis à jour avec des appels `va_arg`, mais il ne doit pas avoir été réinitialisé avec `va_end`. Le prochain argument à être récupéré par `va_arg` à partir de `dest` est le même que celui qui est récupéré à partir de `src`.  
   
--   Une fois que tous les arguments ont été récupérées, `va_end` réinitialise le pointeur **NULL**. `va_end` doit être appelée pour chaque liste d’arguments qui est initialisée avec `va_start` ou `va_copy` avant le retour de la fonction.  
+-   Une fois que tous les arguments ont été récupérés, `va_end` réinitialise le pointeur en lui affectant la valeur **NULL**. `va_end` doit être appelé pour chaque liste d’arguments qui est initialisée avec `va_start` ou `va_copy` avant le retour de la fonction.  
   
 > [!NOTE]
->  Les macros de VARARGS. H sont obsolètes et est conservé uniquement pour assurer la compatibilité avec le code qui a été écrit avant la norme ANSI C89. Dans tous les autres cas, utilisez les macros dans STDARGS. H.  
+>  Les macros contenues dans VARARGS.H sont obsolètes et sont conservées uniquement pour assurer une compatibilité descendante avec le code qui a été écrit avant la norme ANSI C89. Dans tous les autres cas, utilisez les macros contenues dans STDARGS.H.  
   
- Lorsqu’elles sont compilées à l’aide de [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), les programmes qui utilisent ces macros peuvent générer des résultats inattendus en raison de différences entre les systèmes de type natif et le common language runtime (CLR). Tenez compte de ce programme :  
+ Quand ils sont compilés à l’aide de [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), les programmes qui utilisent ces macros peuvent générer des résultats inattendus en raison des différences entre les systèmes de type natif et les systèmes de type CLR (Common Language Runtime). Prenons l’exemple de ce programme :  
   
 ```  
 #include <stdio.h>  
@@ -138,6 +154,8 @@ void testit (int i, ...)
         char *s = va_arg(argptr, char*);  
         printf("%s\n", s);  
     }  
+
+    va_end(argptr);  
 }  
   
 int main()  
@@ -147,7 +165,7 @@ int main()
 }  
 ```  
   
- Notez que `testit` attend que son deuxième paramètre soit une `int` ou un `char*`. Les arguments passés sont 0xffffffff (une `unsigned int`, et non un `int`) et `NULL` (en fait une `int`, et non un `char*`). Lorsque le programme est compilé pour le code natif, il génère cette sortie :  
+ Notez que `testit` s’attend à ce que son deuxième paramètre soit un `int` ou un `char*`. Les arguments transmis sont 0xffffffff (un `unsigned int`, et non un `int`) et `NULL` (en réalité un `int`, et non un `char*`). Quand le programme est compilé pour du code natif, il génère cette sortie :  
   
 ```Output  
 -1  
@@ -155,23 +173,13 @@ int main()
 (null)  
 ```  
   
- Toutefois, lorsque le programme est compilé à l’aide de **/clr : pure**, les incompatibilités de type qu’elle génère une exception. La solution consiste à utiliser des conversions explicites :  
-  
-```  
-int main()  
-{  
-   testit( 0, (int)0xFFFFFFFF ); // cast unsigned to int  
-   testit( 1, (char*)NULL );     // cast int to char*  
-}  
-```  
-  
 ## <a name="requirements"></a>Spécifications  
- **En-tête :** \< stdio.h > et \< stdarg.h >  
+ **En-tête :** \<stdio.h> et \<stdarg.h>  
   
- **En-tête obsolète :** \< varargs.h >  
+ **En-tête obsolète :** \<varargs.h>  
   
 ## <a name="libraries"></a>Bibliothèques  
- Toutes les versions de le [les bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
+ Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Exemple  
   
@@ -244,7 +252,7 @@ Deviation is: 0.000000
 ```  
   
 ## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- [System::ParamArrayAttribute (classe)](https://msdn.microsoft.com/en-us/library/system.paramarrayattribute.aspx)  
+ [System::ParamArrayAttribute Class](https://msdn.microsoft.com/en-us/library/system.paramarrayattribute.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Accès à un argument](../../c-runtime-library/argument-access.md)   

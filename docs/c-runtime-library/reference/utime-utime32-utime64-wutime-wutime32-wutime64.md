@@ -1,84 +1,100 @@
 ---
-title: "_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_utime64"
-  - "_utime"
-  - "_wutime"
-  - "_wutime64"
-  - "_wutime32"
-  - "_utime32"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tutime"
-  - "_utime64"
-  - "wutime"
-  - "utime32"
-  - "wutime64"
-  - "_utime"
-  - "wutime32"
-  - "_wutime"
-  - "utime"
-  - "utime64"
-  - "_wutime64"
-  - "_utime32"
-  - "_tutime64"
-  - "_wutime32"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tutime, fonction"
-  - "utime32, fonction"
-  - "utime64, fonction"
-  - "_utime, fonction"
-  - "_tutime32, fonction"
-  - "date/heure [C++], modification des fichiers"
-  - "wutime, fonction"
-  - "_wutime, fonction"
-  - "_wutime32, fonction"
-  - "_tutime64, fonction"
-  - "_tutime, fonction"
-  - "fichiers [C++], date/heure de modification"
-  - "_wutime64, fonction"
-  - "_utime32, fonction"
-  - "utime, fonction"
-  - "_utime64, fonction"
-  - "wutime64, fonction"
-  - "wutime32, fonction"
-  - "tutime64, fonction"
-  - "tutime32, fonction"
+title: _utime, _utime32, _utime64, _wutime, _wutime32, _wutime64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _utime64
+- _utime
+- _wutime
+- _wutime64
+- _wutime32
+- _utime32
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tutime
+- _utime64
+- wutime
+- utime32
+- wutime64
+- _utime
+- wutime32
+- _wutime
+- utime
+- utime64
+- _wutime64
+- _utime32
+- _tutime64
+- _wutime32
+dev_langs:
+- C++
+helpviewer_keywords:
+- tutime function
+- utime32 function
+- utime64 function
+- _utime function
+- _tutime32 function
+- time [C++], file modification
+- wutime function
+- _wutime function
+- _wutime32 function
+- _tutime64 function
+- _tutime function
+- files [C++], modification time
+- _wutime64 function
+- _utime32 function
+- utime function
+- _utime64 function
+- wutime64 function
+- wutime32 function
+- tutime64 function
+- tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 7d8823bfe5650634d3fb079d2910e98409622ec6
+ms.lasthandoff: 02/24/2017
 
-Définir l’heure de modification de fichier.  
+---
+# <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
+Définissent l’heure de modification des fichiers.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int _utime(  
@@ -107,69 +123,69 @@ int _wutime64(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `filename`  
- Pointeur vers une chaîne qui contient le chemin d’accès ou le nom de fichier.  
+ Pointeur désignant une chaîne qui contient le chemin ou le nom de fichier.  
   
  `times`  
- Pointeur vers les valeurs stockées.  
+ Pointeur désignant les valeurs d’heure stockées.  
   
-## Valeur de retour  
- Chacune de ces fonctions retourne 0 si l’heure de modification de fichier a été modifié. Une valeur de retour égale à –1 indique une erreur. Si un paramètre non valide est passé, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent \-1 et `errno` est défini sur l’une des valeurs suivantes :  
+## <a name="return-value"></a>Valeur de retour  
+ Chacune de ces fonctions retourne 0 si l’heure de modification de fichier a changé. Une valeur de retour égale à –1 indique une erreur. Si un paramètre non valide est transmis, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent -1 et `errno` prend l’une des valeurs suivantes :  
   
  `EACCES`  
- Chemin d’accès spécifie le répertoire ou le fichier en lecture seule  
+ Le chemin indique le répertoire ou un fichier en lecture seule.  
   
  `EINVAL`  
- Non valide `times` argument  
+ Argument `times` non valide.  
   
  `EMFILE`  
- Trop de fichiers ouverts \(le fichier doit être ouvert pour modifier son heure de modification\)  
+ Trop de fichiers ouverts (le fichier doit être ouvert pour modifier son heure de modification).  
   
  `ENOENT`  
- Chemin d’accès ou nom de fichier introuvable  
+ Chemin ou nom de fichier introuvable.  
   
- Consultez la page [\_doserrno, errno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur les autres codes de retour.  
+ Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- La date peut être modifiée pour un fichier si la date de modification est après le 1er janvier 1970 à minuit et avant la date de fin de la fonction utilisée.`_utime` et `_wutime` utilisent une valeur d’heure de 64 bits, la date de fin est 23:59:59 le 31 décembre 3000, UTC. Si `_USE_32BIT_TIME_T` est définie pour forcer l’ancien comportement, la date de fin est 23:59:59 18 janvier 2038, UTC.`_utime32` ou `_wutime32` utiliser un type 32 bits temps indépendamment de si `_USE_32BIT_TIME_T` est défini, et ont toujours la date de fin antérieure.`_utime64` ou `_wutime64` utilisent toujours le type au moment de 64 bits, ces fonctions toujours prendre en charge que la date de fin ultérieure.  
+ La date d’un fichier peut être modifiée si la date de modification est postérieure au 1er janvier 1970 à minuit et antérieure à la date de fin de la fonction utilisée. `_utime` et `_wutime` utilisent une valeur d’heure de 64 bits, de sorte que la date de fin est le 31 décembre 3000, UTC à 23:59:59. Si `_USE_32BIT_TIME_T` est définie pour imposer l’ancien comportement, la date de fin est le 18 janvier 2038, UTC à 23:59:59. `_utime32` ou `_wutime32` utilisent un type d’heure de 32 bits, que la fonction `_USE_32BIT_TIME_T` soit ou non définie, et ont toujours la date de fin la plus ancienne. `_utime64` ou `_wutime64` utilisent toujours le type d’heure de 64 bits, si bien que ces fonctions prennent toujours en charge la date de fin la plus lointaine.  
   
-## Notes  
- Le `_utime` fonction définit l’heure de modification pour le fichier spécifié par `filename`*.* Pour modifier l’heure, le processus doit avoir un accès en écriture au fichier. Dans le système d’exploitation Windows, vous pouvez modifier le temps d’accès et l’heure de modification dans le `_utimbuf` structure. Si `times` est un `NULL` pointeur, l’heure de modification est définie à l’heure locale actuelle. Dans le cas contraire, `times` doit pointer vers une structure de type `_utimbuf`, défini dans SYS\\UTIME. H.  
+## <a name="remarks"></a>Notes  
+ La fonction `_utime` définit l’heure de modification du fichier spécifié par `filename`*.* Pour que la modification de l’heure soit possible, le processus doit avoir un accès en écriture au fichier. Dans le système d’exploitation Windows, vous pouvez modifier l’heure d’accès et l’heure de modification dans la structure `_utimbuf`. Si `times` est un pointeur `NULL`, l’heure de modification correspond à l’heure locale du moment. Dans le cas contraire, `times` doit pointer vers une structure de type `_utimbuf`, définie dans SYS\UTIME.H.  
   
- Le `_utimbuf` structure stocke les heures d’accès et de modification de fichier utilisés par `_utime` pour modifier les dates de modification de fichier. La structure a les champs suivants, qui sont tous deux de type `time_t`:  
+ La structure `_utimbuf` stocke les heures d’accès et de modification de fichier utilisées par `_utime` pour changer les dates de modification de fichier. La structure contient les champs suivants, qui sont tous deux de type `time_t` :  
   
  `actime`  
- Temps d’accès au fichier  
+ Heure d’accès au fichier.  
   
  `modtime`  
- Heure de modification de fichier  
+ Heure de modification du fichier.  
   
- Des versions spécifiques de le `_utimbuf` structure \(`_utimebuf32` et `__utimbuf64`\) sont définies en utilisant les versions 32 bits et 64 bits de type heure. Ils sont utilisés dans les versions 32 bits et 64 bits spécifiques de cette fonction.`_utimbuf` par défaut utilise lui\-même un type au moment de 64 bits, sauf si `_USE_32BIT_TIME_T` est défini.  
+ Des versions spécifiques de la structure `_utimbuf` (`_utimebuf32` et `__utimbuf64`) sont définies avec les versions 32 bits et 64 bits du type d’heure. Elles sont utilisées dans les versions spécifiques 32 bits et 64 bits de cette fonction. La structure `_utimbuf` proprement dite utilise par défaut un type d’heure de 64 bits, à moins que `_USE_32BIT_TIME_T` soit défini.  
   
- `_utime` est identique à `_futime` sauf que le `filename` argument de `_utime` est un nom de fichier ou un chemin d’accès à un fichier, plutôt qu’un descripteur de fichier d’un fichier ouvert.  
+ `_utime` est identique à `_futime`, sauf que l’argument `filename` de `_utime` est un nom de fichier ou un chemin de fichier, et non un descripteur de fichier ouvert.  
   
- `_wutime` est une version à caractères larges de `_utime` ; l'argument `filename` de `_wutime` est une chaîne à caractères larges. Ces fonctions se comportent sinon de façon identique.  
+ `_wutime` est une version à caractères larges de `_utime` ; l'argument `filename` de `_wutime` est une chaîne à caractères larges. Ces fonctions se comportent sinon de façon identique.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE et \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|-------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tutime`|`_utime`|`_utime`|`_wutime`|  
 |`_tutime32`|`_utime32`|`_utime32`|`_wutime32`|  
 |`_tutime64`|`_utime64`|`_utime64`|`_wutime64`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-têtes requis|En\-têtes facultatifs|  
-|-------------|----------------------|---------------------------|  
-|`_utime`, `_utime32`, `_utime64`|\< sys\/utime.h \>|\<errno.h\>|  
-|`_utime64`|\< sys\/utime.h \>|\<errno.h\>|  
-|`_wutime`|\< utime.h \> ou \< wchar.h \>|\<errno.h\>|  
+|Routine|En-têtes obligatoires|En-têtes facultatifs|  
+|-------------|----------------------|----------------------|  
+|`_utime`, `_utime32`, `_utime64`|\<sys/utime.h>|\<errno.h>|  
+|`_utime64`|\<sys/utime.h>|\<errno.h>|  
+|`_wutime`|\<utime.h> ou \<wchar.h>|\<errno.h>|  
   
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
- Ce programme utilise `_utime` pour définir l’heure de modification de fichier à l’heure actuelle.  
+## <a name="example"></a>Exemple  
+ Ce programme utilise `_utime` pour fixer l’heure de modification de fichier à l’heure du moment.  
   
 ```  
 // crt_utime.c  
@@ -216,7 +232,7 @@ int main( void )
 }  
 ```  
   
-## Résultat de l'exemple  
+## <a name="sample-output"></a>Résultat de l'exemple  
   
 ```  
 Volume in drive C has no label.  
@@ -238,17 +254,17 @@ File time modified
                0 Dir(s)  20,742,955,008 bytes free  
 ```  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion du temps](../../c-runtime-library/time-management.md)   
- [asctime, \_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [ctime, \_ctime32, \_ctime64, \_wctime, \_wctime32, \_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [\_fstat, \_fstat32, \_fstat64, \_fstati64, \_fstat32i64, \_fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [\_ftime, \_ftime32, \_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [\_futime, \_futime32, \_futime64](../../c-runtime-library/reference/futime-futime32-futime64.md)   
- [gmtime, \_gmtime32, \_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime, \_localtime32, \_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [\_stat, \_wstat, fonctions](../../c-runtime-library/reference/stat-functions.md)   
- [time, \_time32, \_time64](../../c-runtime-library/reference/time-time32-time64.md)
+ [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
+ [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [_futime, _futime32, _futime64](../../c-runtime-library/reference/futime-futime32-futime64.md)   
+ [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [_stat, _wstat, fonctions](../../c-runtime-library/reference/stat-functions.md)   
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

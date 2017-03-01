@@ -1,32 +1,50 @@
 ---
-title: "Utilisation d&#39;op&#233;rateurs d&#39;extraction | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ">> (opérateur), opérateurs d'extraction"
-  - "opérateurs d'extraction"
-  - "opérateurs (C++), extraction"
+title: "Utilisation d’opérateurs d’extraction | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- extraction operators
+- '>> operator, extraction operators'
+- operators [C++], extraction
 ms.assetid: a961e1a9-4897-41de-b210-89d5b2d051ae
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Utilisation d&#39;op&#233;rateurs d&#39;extraction
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: e5dcc1e57b807ee7ff7b4292f31563d4041c0bdd
+ms.lasthandoff: 02/24/2017
 
-L'opérateur d'extraction \(`>>`\), qui est préprogrammé pour tous les types de données standard C\+\+, est la méthode la plus simple d'obtenir les octets d'un objet de flux d'entrée.  
+---
+# <a name="using-extraction-operators"></a>Utilisation d'opérateurs d'extraction
+L’opérateur d’extraction (`>>`), préprogrammé pour tous les types de données C++ standard, représente le moyen le plus simple pour obtenir des octets à partir d’un objet de flux d’entrée.  
   
- Les opérateurs d'extraction d'entrée de texte mis en forme dépend des espaces pour séparer les valeurs de données entrantes.  Il s'agit incommode lorsqu'un champ de texte contient plusieurs mots ou lorsque des virgules séparent les nombres.  Dans ce cas, une alternative consiste à utiliser la fonction non formatée [istream::getline](../Topic/basic_istream::getline.md) de membre d'entrée pour lire un bloc de texte comportant l'espace fourni, puis analyse le bloc avec des fonctions spéciales.  Une autre méthode consiste à partir une classe de flux d'entrée à une fonction membre par exemple `GetNextToken`, qui peut appeler des membres d'istream pour extraire et de caractères de format.  
+ Les opérateurs d’extraction d’entrée de texte mis en forme dépendent de l’espace blanc pour séparer les valeurs des données entrantes. Cela n’est pas pratique lorsqu’un champ de texte contient plusieurs mots ou lorsque des virgules séparent les nombres. Dans ce cas, une solution consiste à utiliser la fonction membre d’entrée sans mise en forme [istream::getline](../standard-library/basic-istream-class.md#basic_istream__getline) pour lire un bloc de texte incluant des espaces blancs, puis analyser le bloc avec des fonctions spéciales. Une autre méthode consiste à dériver une classe de flux d’entrée avec une fonction membre telle que `GetNextToken`, qui peut appeler des membres istream pour extraire et mettre en forme les données caractères.  
   
-## Voir aussi  
- [Flux d'entrée](../standard-library/input-streams.md)
+## <a name="see-also"></a>Voir aussi  
+ [Flux d’entrée](../standard-library/input-streams.md)
+
+

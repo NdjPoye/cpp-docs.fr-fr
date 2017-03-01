@@ -1,49 +1,63 @@
 ---
-title: "vfscanf_s, vfwscanf_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "vfscanf_s"
-  - "vfwscanf_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vfscanf_s"
-  - "vfwscanf_s"
-  - "_vftscanf_s"
-dev_langs: 
-  - "C++"
-  - "C"
+title: vfscanf_s, vfwscanf_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- vfscanf_s
+- vfwscanf_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vfscanf_s
+- vfwscanf_s
+- _vftscanf_s
+dev_langs:
+- C++
 ms.assetid: 9b0133f0-9a18-4581-b24b-3b72683ad432
 caps.latest.revision: 6
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# vfscanf_s, vfwscanf_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 17f7f284bfa8cacc895949f5392b009bc86ee427
+ms.lasthandoff: 02/24/2017
 
-Lit les données mises en forme à partir d'un flux.  Ces versions de vfscanf, vfwscanf présentent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="vfscanfs-vfwscanfs"></a>vfscanf_s, vfwscanf_s
+Lit les données mises en forme d’un flux. Ces versions de vfscanf, vfwscanf intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int vfscanf_s(   
@@ -59,45 +73,45 @@ int vfwscanf_s(
   
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `stream`  
- Pointeur vers la structure `FILE`.  
+ Pointeur vers la structure `FILE` .  
   
  `format`  
  Chaîne de contrôle de format.  
   
  `arglist`  
- Liste d'arguments variable.  
+ Liste d’arguments de variable.  
   
-## Valeur de retour  
- Chacune de ces fonctions retourne le nombre de champs qui sont correctement convertis et assignés ; la valeur de retour n'inclut pas les champs qui ont été lus mais non assignés.  La valeur de retour 0 indique qu'aucun champ n'a été assigné.  Si une erreur se produit, ou si la fin du flux de fichiers est atteinte avant la première conversion, la valeur de retour est `EOF` pour `vfscanf_s` et `vfwscanf_s`.  
+## <a name="return-value"></a>Valeur de retour  
+ Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. Si une erreur se produit ou si la fin du flux de fichier est atteinte avant la première conversion, la valeur de retour est `EOF` pour `vfscanf_s` et `vfwscanf_s`.  
   
- Ces fonctions valident leurs paramètres.  Si `stream` est un pointeur de fichier valide ou `format` est un pointeur null, ces fonctions appelleront le gestionnaire de paramètres non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, ces fonctions retournent `EOF` et définissent `errno` avec la valeur `EINVAL`.  
+ Ces fonctions valident leurs paramètres. Si `stream` est un pointeur de fichier non valide ou si `format` est un pointeur Null, ces fonctions appellent le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent `EOF` et définissent `errno` avec la valeur `EINVAL`.  
   
-## Notes  
- La fonction `vfscanf_s` lit les données à partir de la position actuelle de `stream` dans les emplacements fournis par la liste d'arguments `arglist` \(le cas échéant\).  Chaque argument de la liste doit être un pointeur vers une variable dont le type correspond à un spécificateur de type dans `format`.  `format` contrôle l'interprétation des champs d'entrée et a le même formulaire et la même fonction que l'argument `format` pour `scanf_s` ; consultez [Champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) pour une description de `format`.  `vfwscanf_s` est une version à caractères larges de `vfscanf_s` ; l'argument de format de `vfwscanf_s` est une chaîne à caractères larges.  Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI.  `vfscanf_s` ne prend actuellement pas en charge la saisie à partir d'un flux d'UNICODE.  
+## <a name="remarks"></a>Notes  
+ La fonction `vfscanf_s` lit les données à partir de la position actuelle de `stream` aux emplacements fournis par liste d’arguments `arglist` éventuelle. Chaque argument de la liste doit être un pointeur désignant une variable d’un type qui correspond à un spécificateur de type dans `format`. `format` contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que l’argument `format` pour `scanf_s`. Consultez [Champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) pour obtenir une description de `format`. `vfwscanf_s` est une version à caractères larges de `vfscanf_s`. L’argument format pour `vfwscanf_s` est une chaîne de caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. `vfscanf_s` ne prend pas en charge actuellement les entrées à partir d'un flux UNICODE.  
   
- La principale différence entre les fonctions plus sécurisées \(qui disposent du suffixe `_s` \) et les autres versions réside dans le fait que les fonctions plus sécurisées requièrent que la taille en caractères de chaque type de champ `c`, `C`, `s`, `S` et `[` soit passée comme argument immédiatement après la variable.  Pour plus d’informations, consultez [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) et [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).  
+ La principale différence entre les fonctions plus sécurisées (repérables au suffixe `_s`) et les autres est que les premières exigent la transmission de la taille en caractères de chaque champ de type `c`, `C`, `s`, `S` et `[` en tant qu’argument de suite après la variable. Pour plus d’informations, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) et [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).  
   
 > [!NOTE]
->  Le paramètre size est de type `unsigned`, et non du type `size_t`.  
+>  Le paramètre relatif à la taille est de type `unsigned`, et non `size_t`.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vftscanf_s`|`vfscanf_s`|`vfscanf_s`|`vfwscanf_s`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Fonction|En\-tête requis|  
+|Fonction|En-tête requis|  
 |--------------|---------------------|  
-|`vfscanf_s`|\<stdio.h\>|  
-|`vfwscanf_s`|\<stdio.h\> ou \<wchar.h\>|  
+|`vfscanf_s`|\<stdio.h>|  
+|`vfwscanf_s`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_vfscanf_s.c  
@@ -159,18 +173,21 @@ int main(void)
   
 ```  
   
-  **a\-string**  
-**65000**  
-**3.141590**  
-**x**   
-## Équivalent .NET Framework  
- [System::IO::StreamReader::ReadLine](https://msdn.microsoft.com/en-us/library/system.io.streamreader.readline.aspx). Voir également des méthodes `Parse`, telles que [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+```Output  
+a-string  
+65000  
+3.141590  
+x  
+```  
   
-## Voir aussi  
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
- [\_cscanf\_s, \_cscanf\_s\_l, \_cwscanf\_s, \_cwscanf\_s\_l](../../c-runtime-library/reference/cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)   
- [fprintf\_s, \_fprintf\_s\_l, fwprintf\_s, \_fwprintf\_s\_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
- [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
- [sscanf\_s, \_sscanf\_s\_l, swscanf\_s, \_swscanf\_s\_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
- [fscanf, \_fscanf\_l, fwscanf, \_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ [System::IO::StreamReader::ReadLine](https://msdn.microsoft.com/en-us/library/system.io.streamreader.readline.aspx). Voir aussi les méthodes `Parse`, telles que [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
+ [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](../../c-runtime-library/reference/cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)   
+ [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
+ [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
+ [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
  [vfscanf, vfwscanf](../../c-runtime-library/reference/vfscanf-vfwscanf.md)
