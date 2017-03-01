@@ -1,78 +1,95 @@
 ---
-title: "SYSTEMTIME Structure1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SYSTEMTIME"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SYSTEMTIME (structure)"
+title: SYSTEMTIME Structure1 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SYSTEMTIME
+dev_langs:
+- C++
+helpviewer_keywords:
+- SYSTEMTIME structure
 ms.assetid: 9aaef4d6-de79-4fa1-8158-86b245ef5bff
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# SYSTEMTIME, structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 298b2673a3eb05525683f8269fcd415d5be1c80a
+ms.lasthandoff: 02/24/2017
 
-La structure `SYSTEMTIME` représente une date et une heure qui utilise différents membres pour le mois, le jour, l'année, le jour de la semaine, l'heure, la minute, la seconde et la milliseconde.  
+---
+# <a name="systemtime-structure1"></a>SYSTEMTIME Structure1
+Le `SYSTEMTIME` structure représente une date et une heure à l’aide de membres individuels pour les mois, jour, année, jour de la semaine, heure, minute, seconde et milliseconde.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      typedef struct _SYSTEMTIME {  
-   WORD wYear;  
-   WORD wMonth;  
-   WORD wDayOfWeek;  
-   WORD wDay;  
-   WORD wHour;  
-   WORD wMinute;  
-   WORD wSecond;  
-   WORD wMilliseconds;  
+typedef struct _SYSTEMTIME {  
+    WORD wYear;  
+    WORD wMonth;  
+    WORD wDayOfWeek;  
+    WORD wDay;  
+    WORD wHour;  
+    WORD wMinute;  
+    WORD wSecond;  
+    WORD wMilliseconds;  
 } SYSTEMTIME;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *wYear*  
- Année en cours.  
+ L’année en cours.  
   
- *wMonth*  
- Mois actuel. Janvier correspond à 1.  
+ *Propriété*  
+ Le mois en cours ; Janvier est 1.  
   
  *wDayOfWeek*  
- Jour actuel de la semaine. Dimanche correspond à 0, lundi à 1, etc.  
+ Le jour actuel de la semaine ; 0 étant le dimanche, lundi est 1 et ainsi de suite.  
   
  *wDay*  
- Jour du mois actuel.  
+ Le jour du mois actuel.  
   
- *wHour*  
- Heure en cours.  
+ *exactes*  
+ L’heure actuelle.  
   
- *wMinute*  
- Minute en cours.  
+ *Absolu*  
+ La minute en cours.  
   
  *wSecond*  
- Seconde en cours.  
+ La seconde actuelle.  
   
- *wMillisecondes*  
- Milliseconde en cours.  
+ *Heure*  
+ La milliseconde en cours.  
   
-## Exemple  
- [!code-cpp[NVC_MFC_Utilities#39](../../mfc/codesnippet/CPP/systemtime-structure1_1.cpp)]  
+## <a name="example"></a>Exemple  
+ [!code-cpp[NVC_MFC_Utilities n °&39;](../../mfc/codesnippet/cpp/systemtime-structure1_1.cpp)]  
   
-## Configuration requise  
- **En\-tête :** winbase.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** winbase.h  
   
-## Voir aussi  
- [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CTime::CTime](../Topic/CTime::CTime.md)
+## <a name="see-also"></a>Voir aussi  
+ [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CTime::CTime](../../atl-mfc-shared/reference/ctime-class.md#ctime)
+
+

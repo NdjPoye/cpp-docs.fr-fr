@@ -1,56 +1,86 @@
 ---
-title: "improper_scheduler_reference, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::improper_scheduler_reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "improper_scheduler_reference (classe)"
+title: improper_scheduler_reference, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::improper_scheduler_reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- improper_scheduler_reference class
 ms.assetid: 434a7512-7796-4255-92a7-f3bf71c6a7a7
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# improper_scheduler_reference, classe
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: fef830b502f43473bc683fdcb246be526bfb6db8
+ms.lasthandoff: 02/24/2017
 
-Cette classe décrit une exception levée lorsque la méthode d' `Reference` est appelée sur un objet d' `Scheduler` qui s'arrête, d'un contexte qui ne fait pas partie de ce planificateur.  
+---
+# <a name="improperschedulerreference-class"></a>improper_scheduler_reference, classe
+Cette classe décrit une exception levée quand la méthode `Reference` est appelée sur un objet `Scheduler` en cours d'arrêt, à partir d'un contexte qui ne fait pas partie de ce planificateur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+class improper_scheduler_reference : public std::exception;
 ```  
-class improper_scheduler_reference : public std::exception;  
-```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[improper\_scheduler\_reference::improper\_scheduler\_reference, constructeur](../Topic/improper_scheduler_reference::improper_scheduler_reference%20Constructor.md)|Surchargé.  Construit un objet `improper_scheduler_reference`.|  
+|----------|-----------------|  
+|[improper_scheduler_reference, constructeur](#ctor)|Surchargé. Construit un objet `improper_scheduler_reference`.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `exception`  
   
  `improper_scheduler_reference`  
   
-## Configuration requise  
- **En\-tête :** concrt.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** concrt.h  
   
- Accès concurrentiel de**l'espace de noms :**  
+ **Espace de noms :** concurrency  
   
-## Voir aussi  
- [concurrency, espace de noms](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Scheduler, classe](../../../parallel/concrt/reference/scheduler-class.md)   
- [Scheduler::Reference, méthode](../Topic/Scheduler::Reference%20Method.md)
+##  <a name="a-namectora-improperschedulerreference"></a><a name="ctor"></a>improper_scheduler_reference 
+
+ Construit un objet `improper_scheduler_reference`.  
+  
+```
+explicit _CRTIMP improper_scheduler_reference(_In_z_ const char* _Message) throw();
+
+improper_scheduler_reference() throw();
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `_Message`  
+ Message descriptif de l'erreur.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [accès concurrentiel Namespace](concurrency-namespace.md)   
+ [Scheduler (classe)](scheduler-class.md)
+

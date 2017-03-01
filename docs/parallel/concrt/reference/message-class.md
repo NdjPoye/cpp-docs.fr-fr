@@ -1,83 +1,179 @@
 ---
-title: "message, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "agents/concurrency::message"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "message (classe)"
+title: Classe de message | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- agents/concurrency::message
+dev_langs:
+- C++
+helpviewer_keywords:
+- message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# message, classe
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 08d67f2899f27a92250d6fedbf755a5413e01ebd
+ms.lasthandoff: 02/24/2017
 
-Enveloppe de message de base qui contient la charge utile de données qui est passée entre des blocs de messagerie.  
+---
+# <a name="message-class"></a>message, classe
+Enveloppe de message de base contenant la charge utile de données transmise entre les blocs de messagerie.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+template<class T>
+class message : public ::Concurrency::details::_Runtime_object;
 ```  
-template<  
-   class _Type  
->  
-class message : public ::Concurrency::details::_Runtime_object;  
-```  
   
-#### Paramètres  
- `_Type`  
- Le type de données de la charge utile dans le message.  
+#### <a name="parameters"></a>Paramètres  
+ `T`  
+ Le type de données de la charge utile du message.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Typedefs publics  
+### <a name="public-typedefs"></a>Typedefs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|`type`|Alias de type pour `_Type`.|  
+|----------|-----------------|  
+|`type`|Alias de type pour `T`.|  
   
-### Constructeurs publics  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[message::message, constructeur](../Topic/message::message%20Constructor.md)|Surchargé.  Construit un objet `message`.|  
-|[message::~message, destructeur](../Topic/message::~message%20Destructor.md)|Détruit l'objet `message`.|  
-  
-### Méthodes publiques  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[message::add\_ref, méthode](../Topic/message::add_ref%20Method.md)|Ajoute au décompte de références pour l'objet `message`.  Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie des messages.|  
-|[message::msg\_id, méthode](../Topic/message::msg_id%20Method.md)|Retourne l'ID de l'objet `message`.|  
-|[message::remove\_ref, méthode](../Topic/message::remove_ref%20Method.md)|Soustrait du nombre de références de l'objet `message`.  Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie des messages.|  
+|----------|-----------------|  
+|[message, constructeur](#ctor)|Surchargé. Construit un objet `message`.|  
+|[~ message, destructeur](#dtor)|Détruit le `message` objet.|  
   
-### Données membres publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[Données membres message::payload](../Topic/message::payload%20Data%20Member.md)|Charge utile de l'objet `message`.|  
+|----------|-----------------|  
+|[add_ref (méthode)](#add_ref)|Ajoute au décompte de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie des messages.|  
+|[msg_id (méthode)](#msg_id)|Retourne l’ID de la `message` objet.|  
+|[remove_ref (méthode)](#remove_ref)|Soustrait le nombre de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie des messages.|  
   
-## Notes  
- Pour plus d'informations, consultez [Blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).  
+### <a name="public-data-members"></a>Membres de données publics  
   
-## Hiérarchie d'héritage  
+|Nom|Description|  
+|----------|-----------------|  
+|[Payload (donnée membre)](#payload)|La charge utile de la `message` objet.|  
+  
+## <a name="remarks"></a>Remarques  
+ Pour plus d’informations, consultez [blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).  
+  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `message`  
   
-## Configuration requise  
- **En\-tête :** agents.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** agents.h  
   
- Accès concurrentiel de**l'espace de noms :**  
+ **Espace de noms :** concurrency  
   
-## Voir aussi  
- [concurrency, espace de noms](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-nameaddrefa-addref"></a><a name="add_ref"></a>add_ref 
+
+ Ajoute au décompte de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie des messages.  
+  
+```
+long add_ref();
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ La nouvelle valeur du décompte de références.  
+  
+##  <a name="a-namectora-message"></a><a name="ctor"></a>Message 
+
+ Construit un objet `message`.  
+  
+```
+message(
+    T const& _P);
+
+message(
+    T const& _P,
+    runtime_object_identity _Id);
+
+message(
+    message const& _Msg);
+
+message(
+    _In_ message const* _Msg);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `_P`  
+ La charge utile de ce message.  
+  
+ `_Id`  
+ ID unique de ce message.  
+  
+ `_Msg`  
+ Une référence ou un pointeur vers un `message` objet.  
+  
+### <a name="remarks"></a>Remarques  
+ Le constructeur qui prend un pointeur vers un `message` de l’objet comme argument lève une [invalid_argument](../../../standard-library/invalid-argument-class.md) exception si le paramètre `_Msg` est `NULL`.  
+  
+##  <a name="a-namedtora-message"></a><a name="dtor"></a>~ message 
+
+ Détruit le `message` objet.  
+  
+```
+virtual ~message();
+```  
+  
+##  <a name="a-namemsgida-msgid"></a><a name="msg_id"></a>msg_id 
+
+ Retourne l’ID de la `message` objet.  
+  
+```
+runtime_object_identity msg_id() const;
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Le `runtime_object_identity` de la `message` objet.  
+  
+##  <a name="a-namepayloada-payload"></a><a name="payload"></a>charge utile 
+
+ La charge utile de la `message` objet.  
+  
+```
+T const payload;
+```  
+  
+##  <a name="a-nameremoverefa-removeref"></a><a name="remove_ref"></a>remove_ref 
+
+ Soustrait le nombre de références pour le `message` objet. Utilisé pour les blocs de messages qui nécessitent un décompte de références pour déterminer la durée de vie des messages.  
+  
+```
+long remove_ref();
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ La nouvelle valeur du décompte de références.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [accès concurrentiel Namespace](concurrency-namespace.md)
+

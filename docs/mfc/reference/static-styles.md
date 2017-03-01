@@ -1,143 +1,160 @@
 ---
-title: "Styles statiques | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SS_SUNKEN"
-  - "SS_CENTER"
-  - "SS_ENHMETAFILE"
-  - "SS_RIGHT"
-  - "SS_BLACKRECT"
-  - "SS_LEFTNOWORDWRAP"
-  - "SS_GRAYFRAME"
-  - "SS_USERITEM"
-  - "SS_GRAYRECT"
-  - "SS_WHITEFRAME"
-  - "SS_ETCHEDFRAME"
-  - "SS_ETCHEDVERT"
-  - "SS_WHITERECT"
-  - "SS_PATHELLIPSIS"
-  - "SS_WORDELLIPSIS"
-  - "SS_NOPREFIX"
-  - "SS_BITMAP"
-  - "SS_SIMPLE"
-  - "SS_CENTERIMAGE"
-  - "SS_BLACKFRAME"
-  - "SS_OWNERDRAW"
-  - "SS_REALSIZEIMAGE"
-  - "SS_RIGHTJUST"
-  - "SS_ICON"
-  - "SS_NOTIFY"
-  - "SS_ETCHEDHORZ"
-  - "SS_LEFT"
-  - "SS_ENDELLIPSIS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SS_BITMAP (constante)"
-  - "SS_BLACKFRAME (constante)"
-  - "SS_BLACKRECT (constante)"
-  - "SS_CENTER (constante)"
-  - "SS_CENTERIMAGE (constante)"
-  - "SS_ENDELLIPSIS (constante)"
-  - "SS_ENHMETAFILE (constante)"
-  - "SS_ETCHEDFRAME (constante)"
-  - "SS_ETCHEDHORZ (constante)"
-  - "SS_ETCHEDVERT (constante)"
-  - "SS_GRAYFRAME (constante)"
-  - "SS_GRAYRECT (constante)"
-  - "SS_ICON (constante)"
-  - "SS_LEFT (constante)"
-  - "SS_LEFTNOWORDWRAP (constante)"
-  - "SS_NOPREFIX (constante)"
-  - "SS_NOTIFY (constante)"
-  - "SS_OWNERDRAW (constante)"
-  - "SS_PATHELLIPSIS (constante)"
-  - "SS_REALSIZEIMAGE (constante)"
-  - "SS_RIGHT (constante)"
-  - "SS_RIGHTJUST (constante)"
-  - "SS_SIMPLE (constante)"
-  - "SS_SUNKEN (constante)"
-  - "SS_USERITEM (constante)"
-  - "SS_WHITEFRAME (constante)"
-  - "SS_WHITERECT (constante)"
-  - "SS_WORDELLIPSIS (constante)"
-  - "styles statiques"
+title: Styles statiques | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SS_SUNKEN
+- SS_CENTER
+- SS_ENHMETAFILE
+- SS_RIGHT
+- SS_BLACKRECT
+- SS_LEFTNOWORDWRAP
+- SS_GRAYFRAME
+- SS_USERITEM
+- SS_GRAYRECT
+- SS_WHITEFRAME
+- SS_ETCHEDFRAME
+- SS_ETCHEDVERT
+- SS_WHITERECT
+- SS_PATHELLIPSIS
+- SS_WORDELLIPSIS
+- SS_NOPREFIX
+- SS_BITMAP
+- SS_SIMPLE
+- SS_CENTERIMAGE
+- SS_BLACKFRAME
+- SS_OWNERDRAW
+- SS_REALSIZEIMAGE
+- SS_RIGHTJUST
+- SS_ICON
+- SS_NOTIFY
+- SS_ETCHEDHORZ
+- SS_LEFT
+- SS_ENDELLIPSIS
+dev_langs:
+- C++
+helpviewer_keywords:
+- SS_ICON constant
+- SS_WHITEFRAME constant
+- SS_BLACKFRAME constant
+- SS_ETCHEDHORZ constant
+- SS_OWNERDRAW constant
+- SS_BITMAP constant
+- SS_NOPREFIX constant
+- SS_NOTIFY constant
+- SS_CENTER constant
+- SS_REALSIZEIMAGE constant
+- SS_ETCHEDFRAME constant
+- SS_CENTERIMAGE constant
+- SS_SUNKEN constant
+- SS_ENDELLIPSIS constant
+- SS_WORDELLIPSIS constant
+- SS_WHITERECT constant
+- SS_ETCHEDVERT constant
+- SS_GRAYFRAME constant
+- SS_LEFTNOWORDWRAP constant
+- SS_LEFT constant
+- SS_SIMPLE constant
+- static styles
+- SS_ENHMETAFILE constant
+- SS_GRAYRECT constant
+- SS_USERITEM constant
+- SS_PATHELLIPSIS constant
+- SS_BLACKRECT constant
+- SS_RIGHT constant
+- SS_RIGHTJUST constant
 ms.assetid: a1114548-fc6d-491d-8c46-21d11b8574f5
 caps.latest.revision: 12
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Styles statiques
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: ad34c688fdfd3c2b4c81a0a03fbce53a905162ad
+ms.lasthandoff: 02/24/2017
 
--   **SS\_BITMAP** spécifie une bitmap où doit être affiché dans le contrôle statique.  Le texte donné est le nom de bitmap \(pas un nom fichier\) défini plus dans le fichier de ressources.  Le style ignore les éventuels paramètres de nWidth et de nHeight ; le contrôle de la classe s'ajuste automatiquement à la bitmap.  
+---
+# <a name="static-styles"></a>Styles statiques
+-   **SS_BITMAP** spécifie une image bitmap à afficher dans le contrôle statique. Le texte spécifié est le nom de la bitmap (pas un nom de fichier) définie ailleurs dans le fichier de ressources. Le style ignore les paramètres nWidth et nHeight ; le contrôle redimensionne automatiquement pour prendre en charge de la bitmap.  
   
--   **SS\_BLACKFRAME** spécifie une zone avec un cadre dessiné à la même couleur que les cadres de fenêtre.  La valeur par défaut est noir.  
+-   **SS_BLACKFRAME** spécifie une zone avec une image dessinée avec la même couleur que les cadres de fenêtres. La valeur par défaut est noir.  
   
--   **SS\_BLACKRECT** Spécifie un rectangle rempli avec la couleur utilisée pour ajouter des cadres de fenêtre.  La valeur par défaut est noir.  
+-   **SS_BLACKRECT** spécifie un rectangle rempli avec la couleur utilisée pour dessiner des cadres de fenêtre. La valeur par défaut est noir.  
   
--   **SS\_CENTRE** indique un rectangle simple et affiche le texte centré donné dans le rectangle.  Le texte est mis en forme pour qu'il s'affiche.  Les mots qui étendraient après la fin d'une ligne sont automatiquement inclus dans le début de la ligne centrée suivante.  
+-   **SS_CENTER** désigne un rectangle simple et affiche le texte donné est centré dans le rectangle. Le texte est mis en forme avant d’être affiché. Les mots qui seraient étend au-delà de la fin d’une ligne sont automatiquement renvoyées au début de la ligne suivante centré.  
   
--   **SS\_CENTERIMAGE** spécifie que, si la bitmap ou l'icône est inférieure à la zone client du contrôle statique, le reste de la zone client est rempli avec les couleurs au minimum dans le coin supérieur gauche de la bitmap ou l'icône.  Si la vérification des types statiques contient une seule ligne de texte, le texte est centré verticalement dans la zone client du contrôle.  
+-   **SS_CENTERIMAGE** Spécifie que si l’icône ou le bitmap est inférieure à la zone cliente du contrôle statique, le reste de la zone cliente est rempli avec la couleur du pixel dans le coin supérieur gauche de l’image bitmap ou icône. Si le contrôle statique contient une seule ligne de texte, le texte est centré verticalement dans la zone cliente du contrôle.  
   
--   **SS\_ENDELLIPSIS** ou **SS\_PATHELLIPSIS** remplace la partie de la chaîne donnée par des points de suspension si nécessaire, afin que les résultats s'intègrent dans le rectangle spécifié.  
+-   **SS_ENDELLIPSIS** ou **SS_PATHELLIPSIS** remplace une partie de la chaîne donnée par les points de suspension, si nécessaire, pour que le résultat tienne dans le rectangle spécifié.  
   
-     Vous pouvez spécifier **SS\_END\_ELLIPSIS** pour remplacer les caractères à la fin de la chaîne, ou **SS\_PATHELLIPSIS** pour remplacer des caractères au milieu de la chaîne.  Si la chaîne contient des caractères de barre oblique inverse \(\\\), **SS\_PATHELLIPSIS** conserve autant de texte après la dernière barre oblique inverse que possible.  
+     Vous pouvez spécifier **SS_END_ELLIPSIS** pour remplacer des caractères à la fin de la chaîne, ou **SS_PATHELLIPSIS** pour remplacer des caractères au milieu de la chaîne. Si la chaîne contient une barre oblique inverse (\\) caractères, **SS_PATHELLIPSIS** conserve autant du texte après la dernière barre oblique inverse que possible.  
   
--   **SS\_ENHMETAFILE** spécifie un métafichier amélioré qui doit être affiché dans le contrôle statique.  Le texte donné est le nom d'un métafichier.  Un contrôle statique de métafichier amélioré a une taille fixe ; un métafichier est mis à l'échelle à la zone client de vérification des types statiques.  
+-   **SS_ENHMETAFILE** spécifie un métafichier amélioré doit être affichée dans le contrôle statique. Le texte spécifié est le nom d’un métafichier. Un contrôle statique métafichier amélioré a une taille fixe ; le métafichier est redimensionné pour s’ajuster à la zone du client du contrôle statique.  
   
--   **SS\_ETCHEDFRAME** dessine le cadre de vérification des types statiques avec le style de bord de **EDGE\_ETCHED**.  
+-   **SS_ETCHEDFRAME** Dessine le cadre du contrôle statique en utilisant le **EDGE_ETCHED** edge du style.  
   
--   **SS\_ETCHEDHORZ** dessine les sessions de haut et bas du contrôle statique à l'aide du style de bord de **EDGE\_ETCHED**.  
+-   **SS_ETCHEDHORZ** dessine les bords supérieur et inférieur du contrôle statique en utilisant le **EDGE_ETCHED** edge du style.  
   
--   **SS\_ETCHEDVERT** dessine les bords droit et gauche du contrôle statique à l'aide du style de bord de EDGE\_ETCHED.  
+-   **SS_ETCHEDVERT** dessine les bords gauche et droit du contrôle statique à l’aide du style de contour EDGE_ETCHED.  
   
--   **SS\_GRAYFRAME** spécifie une zone avec un cadre dessiné à la même couleur de l'arrière\-plan \(ordinateur\).  La valeur par défaut est gris.  
+-   **SS_GRAYFRAME** spécifie une zone avec une image dessinée avec la même couleur que l’arrière-plan de l’écran (bureau). La valeur par défaut est gris.  
   
--   **SS\_GRAYRECT** spécifie un rectangle rempli avec la couleur utilisée pour remplir l'arrière\-plan.  La valeur par défaut est gris.  
+-   **SS_GRAYRECT** spécifie un rectangle rempli avec la couleur utilisée pour remplir l’arrière-plan de l’écran. La valeur par défaut est gris.  
   
--   **SS\_ICON** affiche une icône affichée dans la boîte de dialogue.  Le texte donné est le nom d'une icône \(pas un nom fichier\) défini dans le fichier de ressources.  Les paramètres de `nWidth` et de `nHeight` sont ignorés ; l'icône de classe se calibre automatiquement.  
+-   **SS_ICON** désigne une icône s’affichée dans la boîte de dialogue. Le texte spécifié est le nom d’une icône (pas un nom de fichier) définie ailleurs dans le fichier de ressources. Le `nWidth` et `nHeight` sont ignorés ; l’icône se redimensionne automatiquement.  
   
--   **SS\_GAUCHE** indique un rectangle simple et affiche le vidage\- gauche donné de texte au rectangle.  Le texte est mis en forme pour qu'il s'affiche.  Les mots qui étendraient après la fin d'une ligne sont automatiquement inclus dans le début de la ligne centrée suivante.  
+-   **SS_LEFT** désigne un rectangle simple et affiche le texte donné de vidage à gauche dans le rectangle. Le texte est mis en forme avant d’être affiché. Les mots qui seraient étend au-delà de la fin d’une ligne sont automatiquement renvoyées au début de la ligne suivante de vidage à gauche.  
   
--   **SS\_LEFTNOWORDWRAP** indique un rectangle simple et affiche le vidage\- gauche donné de texte au rectangle.  Les Onglets sont développés, mais les mots ne sont pas inclus.  Texte qui s'étend au delà de la fin d'une ligne est tronqué.  
+-   **SS_LEFTNOWORDWRAP** désigne un rectangle simple et affiche le texte donné de vidage à gauche dans le rectangle. Onglets sont développées, mais les mots ne sont pas encapsulées. Texte qui s’étend au-delà de la fin d’une ligne est coupé.  
   
--   **SS\_NOPREFIX** à moins que le style est spécifié, Windows interprètera les caractères commercial \(&\) dans le texte du contrôle qui soient des caractères de préfixe des accélérateurs.  Dans ce cas, le commercial est supprimé et le caractère suivant dans la chaîne est souligné.  Si un contrôle statique est de type contenant le texte où cette fonctionnalité n'est pas demandée, **SS\_NOPREFIX** peut être ajoutée.  Ce style de contrôle statique peut être inclus dans les contrôles statiques définis.  Vous pouvez combiner **SS\_PASDEPREFIXE** avec d'autres styles à l'aide de l'opérateur de bits OR.  C'est le plus souvent lorsque les noms de fichiers ou d'autres chaînes qui peuvent contenir un besoin commercial d'être affiché dans un contrôle statique dans une boîte de dialogue.  
+-   **SS_NOPREFIX** à moins que ce style est spécifié, Windows interprète les caractères « et commercial » (&) dans le texte du contrôle accélérateur des caractères de préfixe. Dans ce cas, l’et commercial est supprimé et le caractère suivant dans la chaîne est souligné. Si un contrôle statique doit contenir du texte dans lequel cette fonctionnalité n’est pas souhaitée, **SS_NOPREFIX** peuvent être ajoutés. Ce style de contrôle de code statique peut être inclus dans les contrôles statiques définis. Vous pouvez combiner **SS_NOPREFIX** avec d’autres styles à l’aide de l’opérateur OR. Cela est généralement utilisée lorsque des noms de fichiers ou d’autres chaînes qui peuvent contenir une esperluette doivent être affichés dans un contrôle statique dans une boîte de dialogue.  
   
--   **SS\_NOTIFy** envoie les messages parents de la fenêtre **STN\_CLICKED**, aux notifications de **STN\_DBLCLK** de **STN\_DISABLE**, et de **STN\_ENABLE** lorsque l'utilisateur clique ou double\-clique sur le contrôle.  
+-   **SS_NOTIFY** envoie la fenêtre parente **STN_CLICKED**, **STN_DBLCLK**, **STN_DISABLE**, et **STN_ENABLE** les messages de notification lorsque l’utilisateur clique ou double-clique sur le contrôle.  
   
--   **SS\_OWNERDRAW** spécifie que le propriétaire du contrôle statique est chargé de dessiner le contrôle.  La fenêtre propriétaire reçoit un message de `WM_DRAWITEM` chaque fois que les contrôles ont besoin d'être dessiné.  
+-   **SS_OWNERDRAW** Spécifie que le propriétaire du contrôle statique est responsable du dessin du contrôle. La fenêtre propriétaire reçoit un `WM_DRAWITEM` message chaque fois que le contrôle doit être dessiné.  
   
--   **SS\_REALSIZEIMAGE** empêche une vérification des types d'icône ou bitmap \(autrement dit, les contrôles statiques qui ont le style de **SS\_ICON** ou de **SS\_BITMAP** \) d'être redimensionné tel qu'il est chargé ou dessiné.  Si l'icône ou bitmap est supérieure à la zone de destination, l'image est découpée.  
+-   **SS_REALSIZEIMAGE** empêche un contrôle statique d’une icône ou bitmap (autrement dit, les contrôles statiques dont le **SS_ICON** ou **SS_BITMAP** style) d’être redimensionnée lorsqu’il est chargé ou dessiner. Si l’icône ou le bitmap est supérieure à la zone de destination, l’image est découpée.  
   
--   **SS\_RIGHT** indique un rectangle simple et affiche le vidage\-droit donné de texte au rectangle.  Le texte est mis en forme pour qu'il s'affiche.  Les mots qui étendraient après la fin d'une ligne sont automatiquement inclus dans le début de la ligne centrée droite suivante.  
+-   **SS_RIGHT** désigne un rectangle simple et affiche le texte donné de vidage à droite dans le rectangle. Le texte est mis en forme avant d’être affiché. Les mots qui seraient étend au-delà de la fin d’une ligne sont automatiquement renvoyées au début de la ligne suivante de vidage à droite.  
   
--   **SS\_RIGHTJUST** spécifie que l'angle inférieur droit d'un contrôle statique avec le style de **SS\_BITMAP** ou de **SS\_ICON** doit rester là où le contrôle est redimensionné.  Seuls les premiers et les parties gauche sont ajustés pour permettre une nouvelle image ou icône.  
+-   **SS_RIGHTJUST** qui spécifie le coin inférieur droit d’un contrôle statique avec le **SS_BITMAP** ou **SS_ICON** style doit rester fixe lorsque le contrôle est redimensionné. Seuls les côtés gauche et supérieures sont ajustées pour prendre en charge une nouvelle image bitmap ou une icône.  
   
--   **SS\_SIMPLE** indique un rectangle simple et contient une seule ligne de vidage\-gauche de texte au rectangle.  La ligne de texte ne peut pas se raccourcir ou être modifié de quelque manière que ce soit. \(La fenêtre parente ou la boîte de dialogue du contrôle ne doit pas traiter le message de `WM_CTLCOLOR` .\)  
+-   **SS_SIMPLE** désigne un rectangle simple et affiche une seule ligne de texte de vidage à gauche dans le rectangle. La ligne de texte ne peut pas être réduite ou modifiée. (Boîte de dialogue ou la fenêtre parent du contrôle ne doit pas traiter la `WM_CTLCOLOR` message.)  
   
--   **SS\_SUNKEN** dessine une bordure semi\-enterrée autour d'un contrôle statique.  
+-   **SS_SUNKEN** Dessine une bordure autour d’un contrôle statique demi enfoncée.  
   
--   **SS\_USERITEM** spécifie un élément défini par l'utilisateur.  
+-   **SS_USERITEM** spécifie un élément défini par l’utilisateur.  
   
--   **SS\_WHITEFRAME** spécifie une zone avec un cadre dessiné avec la même couleur de l'arrière\-plan de la fenêtre.  La valeur par défaut est blanc.  
+-   **SS_WHITEFRAME** spécifie une zone avec une image dessinée avec la même couleur que l’arrière-plan de la fenêtre. La valeur par défaut est blanc.  
   
--   **SS\_RECTANGLEBLANC** spécifie un rectangle rempli avec la même couleur utilisée pour remplir l'arrière\-plan de la fenêtre.  La valeur par défaut est blanc.  
+-   **SS_WHITERECT** spécifie un rectangle rempli avec la couleur utilisée pour remplir l’arrière-plan de la fenêtre. La valeur par défaut est blanc.  
   
--   **SS\_WORDELLIPSIS** tronque les textes qui ne s'ajustent pas et ajoute des points de suspension.  
+-   **SS_WORDELLIPSIS** tronque le texte qui ne tient pas et ajoute les points de suspension.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Styles utilisés par MFC](../../mfc/reference/styles-used-by-mfc.md)   
- [CStatic::Create](../Topic/CStatic::Create.md)   
+ [CStatic::Create](../../mfc/reference/cstatic-class.md#create)   
  [DrawEdge](http://msdn.microsoft.com/library/windows/desktop/dd162477)   
- [Static Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760773)
+ [Styles de contrôle statique](http://msdn.microsoft.com/library/windows/desktop/bb760773)
+
+

@@ -1,62 +1,162 @@
 ---
-title: "IVirtualProcessorRoot, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrtrm/concurrency::IVirtualProcessorRoot"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IVirtualProcessorRoot (structure)"
+title: IVirtualProcessorRoot (Structure) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrtrm/concurrency::IVirtualProcessorRoot
+dev_langs:
+- C++
+helpviewer_keywords:
+- IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# IVirtualProcessorRoot, structure
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: ca095a249ee0eb9e1393e232ab7957a7060a2002
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot, structure
 Abstraction d'un thread matériel sur laquelle un proxy de thread peut s'exécuter.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+struct IVirtualProcessorRoot : public IExecutionResource;
 ```  
-struct IVirtualProcessorRoot : public IExecutionResource;  
-```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[IVirtualProcessorRoot::Activate, méthode](../Topic/IVirtualProcessorRoot::Activate%20Method.md)|Implique que le proxy de thread associé au `pContext` d'interface du contexte d'exécution démarre l'exécution sur cette racine de processeur virtuel.|  
-|[IVirtualProcessorRoot::Deactivate, méthode](../Topic/IVirtualProcessorRoot::Deactivate%20Method.md)|Implique que le proxy de thread qui s'exécute actuellement sur cette racine de processeur virtuel arrête de distribuer le contexte d'exécution.  Le proxy de thread reprendra l'exécution au moment de l'appel à la méthode `Activate`.|  
-|[IVirtualProcessorRoot::EnsureAllTasksVisible, méthode](../Topic/IVirtualProcessorRoot::EnsureAllTasksVisible%20Method.md)|A pour effet de rendre visibles à tous les processeurs sur le système les données stockées dans la hiérarchie de la mémoire de processeurs individuels.  Il vérifie qu'une barrière de mémoire a été exécuté sur tous les processeurs avant que la méthode ne soit retournée.|  
-|[IVirtualProcessorRoot::GetId, méthode](../Topic/IVirtualProcessorRoot::GetId%20Method.md)|Retourne un identificateur unique pour la racine de processeur virtuel.|  
+|----------|-----------------|  
+|[IVirtualProcessorRoot::Activate, méthode](#activate)|Implique que le proxy de thread associé lié l’interface du contexte d’exécution `pContext` pour lancer l’exécution sur cette racine de processeur virtuel.|  
+|[IVirtualProcessorRoot::Deactivate, méthode](#deactivate)|Implique que le proxy de thread en cours d’exécution sur cette racine de processeur virtuel arrête de distribuer le contexte d’exécution. Le proxy de thread reprendra l’exécution sur un appel à la `Activate` (méthode).|  
+|[IVirtualProcessorRoot::EnsureAllTasksVisible, méthode](#ensurealltasksvisible)|Provoque des données stockées dans la hiérarchie de la mémoire de processeurs individuels soit visible pour tous les processeurs sur le système. Il s’assure qu’une barrière de mémoire a été exécutée sur tous les processeurs avant le retour de la méthode.|  
+|[IVirtualProcessorRoot::GetId, méthode](#getid)|Retourne un identificateur unique pour la racine de processeur virtuel.|  
   
-## Notes  
- Chaque racine de processeur virtuel a une ressource d'exécution associée.  L'interface hérite de la classe `IVirtualProcessorRoot` à partir de l'interface [IExecutionResource](../../../parallel/concrt/reference/iexecutionresource-structure.md).  Plusieurs racines de processeur virtuel peuvent correspondre au même thread matériel sous\-jacent.  
+## <a name="remarks"></a>Remarques  
+ Chaque racine de processeur virtuel a une ressource d’exécution associés. Le `IVirtualProcessorRoot` interface hérite de la [IExecutionResource](iexecutionresource-structure.md) interface. Plusieurs racines de processeur virtuel peuvent correspondre au même thread matériel sous-jacent.  
   
- Le Gestionnaire des ressources accorde des racines de processeur virtuel aux planificateurs en réponse aux demandes de ressources.  Un planificateur peut utiliser une racine de processeur virtuel pour exécuter un travail en l'activant avec un contexte d'exécution.  
+ Le Gestionnaire des ressources accorde des racines de processeur virtuel aux planificateurs en réponse aux demandes de ressources. Un planificateur peut utiliser une racine de processeur virtuel pour effectuer le travail en l’activant avec un contexte d’exécution.  
   
-## Hiérarchie d'héritage  
- [IExecutionResource](../../../parallel/concrt/reference/iexecutionresource-structure.md)  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+ [IExecutionResource](iexecutionresource-structure.md)  
   
  `IVirtualProcessorRoot`  
   
-## Configuration requise  
- **En\-tête :** concrtrm.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** concrtrm.h  
   
- Accès concurrentiel de**l'espace de noms :**  
+ **Espace de noms :** concurrency  
   
-## Voir aussi  
- [concurrency, espace de noms](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-nameactivatea--ivirtualprocessorrootactivate-method"></a><a name="activate"></a>IVirtualProcessorRoot::Activate, méthode  
+ Implique que le proxy de thread associé lié l’interface du contexte d’exécution `pContext` pour lancer l’exécution sur cette racine de processeur virtuel.  
+  
+```
+virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `pContext`  
+ Une interface dans le contexte d’exécution qui sera distribué sur cette racine de processeur virtuel.  
+  
+### <a name="remarks"></a>Notes  
+ Le Gestionnaire des ressources fournira un proxy de thread si ce n’est associé à l’interface du contexte d’exécution`pContext`  
+  
+ Le `Activate` méthode peut être utilisée pour lancer l’exécution du travail sur une nouvelle racine de processeur virtuel retournée par le Gestionnaire de ressources ou pour reprendre le proxy de thread sur une racine de processeur virtuel désactivé ou est sur le point de désactiver. Consultez la page [IVirtualProcessorRoot::Deactivate](#deactivate) pour plus d’informations sur la désactivation. Lorsque vous reprenez une racine de processeur virtuel désactivée, le paramètre `pContext` doit être le même que le paramètre utilisé pour désactiver la racine de processeur virtuel.  
+  
+ Une fois une racine de processeur virtuel a été activée pour la première fois, les paires suivantes d’appels à `Deactivate` et `Activate` peuvent être en concurrence avec eux. Cela signifie que le Gestionnaire des ressources peut recevoir un appel à `Activate` avant de recevoir le `Deactivate` appel prévu.  
+  
+ Lorsque vous activez une racine de processeur virtuel, vous signalez au Gestionnaire de ressources que cette racine de processeur virtuel est actuellement occupée. Si votre planificateur ne peut pas trouver de travail à exécuter sur cette racine, il est supposé appeler la `Deactivate` méthode pour informer le Gestionnaire de ressources que la racine de processeur virtuel est inactive. Le Gestionnaire de ressources utilise ces données pour le système d’équilibrer la charge.  
+  
+ `invalid_argument`est levée si l’argument `pContext` a la valeur `NULL`.  
+  
+ `invalid_operation`est levée si l’argument `pContext` ne représente pas le contexte d’exécution qui a été distribué le plus récemment par cette racine de processeur virtuel.  
+  
+ L’acte d’activation d’une racine de processeur virtuel augmente le niveau d’abonnement du thread matériel sous-jacent d’une unité. Pour plus d’informations sur les niveaux d’abonnement, consultez [IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
+  
+##  <a name="a-namedeactivatea--ivirtualprocessorrootdeactivate-method"></a><a name="deactivate"></a>IVirtualProcessorRoot::Deactivate, méthode  
+ Implique que le proxy de thread en cours d’exécution sur cette racine de processeur virtuel arrête de distribuer le contexte d’exécution. Le proxy de thread reprendra l’exécution sur un appel à la `Activate` (méthode).  
+  
+```
+virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `pContext`  
+ Contexte actuellement distribué par cette racine.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Valeur booléenne. Une valeur de `true` indique que le proxy de thread renvoyé à partir de la `Deactivate` méthode en réponse à un appel à la `Activate` (méthode). Valeur `false` indique que le proxy de thread renvoyé par la méthode en réponse à un événement de notification dans le Gestionnaire de ressources. Sur un planificateur de thread (UMS) en mode utilisateur planifiable, cela indique qu’éléments apparaissent dans la liste de saisie semi-automatique du planificateur et le planificateur est requis pour les gérer.  
+  
+### <a name="remarks"></a>Remarques  
+ Utilisez cette méthode pour arrêter temporairement l’exécution d’une racine de processeur virtuel lorsque vous ne peut pas trouver de travail dans votre planificateur. Un appel à la `Deactivate` méthode doit provenir de la `Dispatch` méthode du contexte d’exécution de la dernière activation avec la racine de processeur virtuel. En d’autres termes, le proxy de thread appelle le `Deactivate` méthode doit être celui qui est en cours d’exécution sur la racine de processeur virtuel. Appelez la méthode sur une racine de processeur virtuel que vous n’exécutez pas sur pourrait entraîner un comportement non défini.  
+  
+ Une racine de processeur virtuel désactivée peut être réveillée par un appel à la `Activate` (méthode), avec le même argument qui a été passé à la `Deactivate` (méthode). Le planificateur est chargé de s’assurer que les appels à la `Activate` et `Deactivate` méthodes sont associés, mais ils ne sont pas obligatoirement être reçus dans un ordre spécifique. Le Gestionnaire de ressources peut gérer la réception d’un appel à la `Activate` avant qu’il reçoit un appel à la `Deactivate` méthode prévu.  
+  
+ Si la sortie de veille une racine de processeur virtuel et la valeur de retour à partir de la `Deactivate` méthode est la valeur `false`, le planificateur doit interroger la liste de saisie semi-automatique UMS via la `IUMSCompletionList::GetUnblockNotifications` (méthode), agir sur ces informations, puis appeler la `Deactivate` méthode à nouveau. Cela doit être répété jusqu'à ce que la `Deactivate` méthode renvoie la valeur `true`.  
+  
+ `invalid_argument`est levée si l’argument `pContext` a la valeur `NULL`.  
+  
+ `invalid_operation`est levé si la racine de processeur virtuel n’a jamais été activée, ou l’argument `pContext` ne représente pas le contexte d’exécution qui a été distribué le plus récemment par cette racine de processeur virtuel.  
+  
+ L’acte de désactivation d’une racine de processeur virtuel diminue le niveau d’abonnement du thread matériel sous-jacent de&1;. Pour plus d’informations sur les niveaux d’abonnement, consultez [IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
+  
+##  <a name="a-nameensurealltasksvisiblea--ivirtualprocessorrootensurealltasksvisible-method"></a><a name="ensurealltasksvisible"></a>IVirtualProcessorRoot::EnsureAllTasksVisible, méthode  
+ Provoque des données stockées dans la hiérarchie de la mémoire de processeurs individuels soit visible pour tous les processeurs sur le système. Il s’assure qu’une barrière de mémoire a été exécutée sur tous les processeurs avant le retour de la méthode.  
+  
+```
+virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `pContext`  
+ Contexte actuellement distribué par cette racine de processeur virtuel.  
+  
+### <a name="remarks"></a>Notes  
+ Vous trouverez cette méthode utiles lorsque vous souhaitez synchroniser la désactivation d’une racine de processeur virtuel avec l’ajout de nouvelles tâches dans le planificateur. Pour des raisons de performances, vous pouvez décider ajouter des éléments de travail à votre planificateur sans exécuter de cloisonnement de mémoire, ce qui signifie que les éléments de travail ajoutés par un thread d’exécution sur un seul processeur ne sont pas immédiatement visibles pour tous les autres processeurs. À l’aide de cette méthode en conjonction avec la `Deactivate` racines de la méthode que vous pouvez vous assurer que votre planificateur ne désactive pas son du processeur virtuel lorsqu’il existent des éléments de travail dans les collections de votre planificateur.  
+  
+ Un appel à la `EnsureAllTasksVisibleThe` méthode doit provenir de la `Dispatch` méthode du contexte d’exécution de la dernière activation avec la racine de processeur virtuel. En d’autres termes, le proxy de thread appelle le `EnsureAllTasksVisible` méthode doit être celui qui est en cours d’exécution sur la racine de processeur virtuel. Appelez la méthode sur une racine de processeur virtuel que vous n’exécutez pas sur pourrait entraîner un comportement non défini.  
+  
+ `invalid_argument`est levée si l’argument `pContext` a la valeur `NULL`.  
+  
+ `invalid_operation`est levé si la racine de processeur virtuel n’a jamais été activée, ou l’argument `pContext` ne représente pas le contexte d’exécution qui a été distribué le plus récemment par cette racine de processeur virtuel.  
+  
+##  <a name="a-namegetida--ivirtualprocessorrootgetid-method"></a><a name="getid"></a>IVirtualProcessorRoot::GetId, méthode  
+ Retourne un identificateur unique pour la racine de processeur virtuel.  
+  
+```
+virtual unsigned int GetId() const = 0;
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Identificateur entier.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [accès concurrentiel Namespace](concurrency-namespace.md)
+

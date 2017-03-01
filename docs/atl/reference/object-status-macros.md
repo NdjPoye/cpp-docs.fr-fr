@@ -1,31 +1,67 @@
 ---
-title: "Object Status Macros | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Macros de l’état de l’objet | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 727dbef2-a342-4157-9d64-a421805d9747
 caps.latest.revision: 16
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Object Status Macros
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: 433a816b19690f22f482f26f6ab70c73ed102673
+ms.lasthandoff: 02/24/2017
 
-Cette macro définit des indicateurs qui appartiennent aux contrôles ActiveX.  
+---
+# <a name="object-status-macros"></a>Objet état Macros
+Cette macro définit des indicateurs qui appartiennent à des contrôles ActiveX.  
   
 |||  
 |-|-|  
-|[DECLARE\_OLEMISC\_STATUS](../Topic/DECLARE_OLEMISC_STATUS.md)|Utilisé dans les contrôles ActiveX ATL pour définir les balises d' **OLEMISC** .|  
+|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Utilisé dans les contrôles ActiveX ATL pour définir le **OLEMISC** indicateurs.|  
+
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atlcom.h  
+
+##  <a name="a-namedeclareolemiscstatusa--declareolemiscstatus"></a><a name="declare_olemisc_status"></a>DECLARE_OLEMISC_STATUS  
+ Pour définir les indicateurs OLEMISC, utilisé dans les contrôles ActiveX ATL.  
   
-## Voir aussi  
+```
+DECLARE_OLEMISC_STATUS( miscstatus )
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ *MiscStatus*  
+ Indicateurs OLEMISC toutes applicables.  
+  
+### <a name="remarks"></a>Remarques  
+ Cette macro est utilisée pour définir les indicateurs OLEMISC pour un contrôle ActiveX. Reportez-vous à [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) pour plus de détails.  
+  
+### <a name="example"></a>Exemple  
+ [!code-cpp[NVC_ATL_Windowing&#124;](../../atl/codesnippet/cpp/object-status-macros_1.h)]  
+  
+## <a name="see-also"></a>Voir aussi  
  [Macros](../../atl/reference/atl-macros.md)
+

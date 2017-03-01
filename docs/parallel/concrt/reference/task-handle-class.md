@@ -1,84 +1,127 @@
 ---
-title: "task_handle, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ppl/concurrency::task_handle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "task_handle (classe)"
+title: task_handle, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ppl/concurrency::task_handle
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# task_handle, classe
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: b113cf519f4326650dc1ed4d20dd2ed00921eda9
+ms.lasthandoff: 02/24/2017
 
-La classe `task_handle` représente un élément de travail parallèle individuel.  Il encapsule les instructions et les données obligatoires pour exécuter un travail.  
+---
+# <a name="taskhandle-class"></a>task_handle, classe
+La classe `task_handle` représente un élément de travail parallèle individuel. Elle encapsule les instructions et les données requises pour exécuter un élément de travail.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-template<  
-   typename _Function  
+template<
+    typename _Function  
 >  
 class task_handle : public ::Concurrency::details::_UnrealizedChore;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `_Function`  
- Type de l'objet de fonction qui sera appelé pour exécuter le travail représenté par l'objet `task_handle`.  
+ Le type de l’objet de fonction qui sera appelée pour exécuter le travail représenté par la `task_handle` objet.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[task\_handle::task\_handle, constructeur](../Topic/task_handle::task_handle%20Constructor.md)|Construit un nouvel objet `task_handle`.  Le travail de la tâche est réalisé en appelant la fonction spécifiée comme un paramètre au constructeur.|  
-|[task\_handle::~task\_handle, destructeur](../Topic/task_handle::~task_handle%20Destructor.md)|Détruit l'objet `task_handle`.|  
-  
-### Opérateurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[task\_handle::operator\(\), opérateur](../Topic/task_handle::operator\(\)%20Operator.md)|Opérateur d'appel de fonction appelé par le runtime pour exécuter le travail du handle de tâche.|  
+|----------|-----------------|  
+|[task_handle, constructeur](#ctor)|Construit un nouveau `task_handle` objet. Le travail de la tâche est effectué en appelant la fonction spécifiée en tant que paramètre au constructeur.|  
+|[~ task_handle, destructeur](#dtor)|Détruit le `task_handle` objet.|  
   
-## Notes  
- Les objets `task_handle` peuvent être utilisés conjointement à un `structured_task_group` ou un objet `task_group` plus général, pour décomposer le travail en tâches parallèles.  Pour plus d'informations, consultez [Parallélisme des tâches](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+### <a name="public-operators"></a>Op&#233;rateurs publics  
   
- Notez que le créateur d'un objet `task_handle` est chargé de la maintenance de la durée de vie de l'objet `task_handle` créé, jusqu'à ce qu'il ne soit plus requis par le runtime d'accès concurrentiel.  En général, cela signifie que l'objet `task_handle` ne doit détruire jusqu'à ce que la méthode `wait` ou `run_and_wait` du `task_group` ou `structured_task_group` dans lequel il est mis en file d'attente ait été appelée.  
+|Nom|Description|  
+|----------|-----------------|  
+|[operator() (opérateur)](#task_handle__operator_call)|L’opérateur d’appel de fonction appelé par le runtime pour effectuer le travail du handle de tâche.|  
   
- Les objets `task_handle` sont utilisés en général conjointement à des expressions lambda C\+\+.  Étant donné que vous ne connaissez pas le type réel de lambda, la fonction [make\_task](../Topic/make_task%20Function.md) est généralement utilisée pour créer un objet `task_handle`.  
+## <a name="remarks"></a>Remarques  
+ `task_handle`objets peuvent être utilisés conjointement avec un `structured_task_group` ou plus général `task_group` objet, pour décomposer le travail en tâches parallèles. Pour plus d’informations, consultez [le parallélisme des tâches](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
- Le runtime créé une copie de la fonction de travail que vous passez sur un objet `task_handle`.  Par conséquent, aucune modification d'état se produisant dans un objet de fonction que vous passez à un objet `task_handle` ne s'affichera dans votre copie de cet objet de fonction.  
+ Notez que le créateur d’une `task_handle` objet est responsable de la durée de vie du `task_handle` objet jusqu'à ce qu’il n’est plus requis par le Runtime d’accès concurrentiel. En règle générale, cela signifie que la `task_handle` objet ne doit pas être détruit tant que le `wait` ou `run_and_wait` procédé de la `task_group` ou `structured_task_group` à laquelle elle est mise en attente a été appelée.  
   
-## Hiérarchie d'héritage  
+ `task_handle`les objets sont généralement utilisés conjointement à des expressions lambda C++. Étant donné que vous ne connaissez pas le type réel de l’expression lambda, le [make_task](concurrency-namespace-functions.md#make_task) fonction est généralement utilisée pour créer un `task_handle` objet.  
+  
+ Le runtime crée une copie de la fonction de travail que vous passez à un `task_handle` objet. Par conséquent, toute modification d’état qui se produire dans une fonction de l’objet que vous passez à un `task_handle` objet n’apparaît pas dans votre copie de cet objet de fonction.  
+  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `task_handle`  
   
-## Configuration requise  
- **En\-tête :** ppl.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** ppl.h  
   
- Accès concurrentiel de**l'espace de noms :**  
+ **Espace de noms :** concurrency  
   
-## Voir aussi  
- [concurrency, espace de noms](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [task\_group, classe](../Topic/task_group%20Class.md)   
- [structured\_task\_group, classe](../../../parallel/concrt/reference/structured-task-group-class.md)   
- [make\_task, fonction](../Topic/make_task%20Function.md)   
- [task\_group::run, méthode](../Topic/task_group::run%20Method.md)   
- [task\_group::wait, méthode](../Topic/task_group::wait%20Method.md)   
- [task\_group::run\_and\_wait, méthode](../Topic/task_group::run_and_wait%20Method.md)   
- [structured\_task\_group::run, méthode](../Topic/structured_task_group::run%20Method.md)   
- [structured\_task\_group::wait, méthode](../Topic/structured_task_group::wait%20Method.md)   
- [structured\_task\_group::run\_and\_wait, méthode](../Topic/structured_task_group::run_and_wait%20Method.md)
+##  <a name="a-nametaskhandleoperatorcalla-operator"></a><a name="task_handle__operator_call"></a>operator() 
+
+ L’opérateur d’appel de fonction appelé par le runtime pour effectuer le travail du handle de tâche.  
+  
+```  
+void operator()() const;
+
+ 
+```  
+  
+##  <a name="a-nametaskhandlectora-taskhandle"></a><a name="task_handle__ctor"></a>task_handle 
+
+ Construit un nouveau `task_handle` objet. Le travail de la tâche est effectué en appelant la fonction spécifiée en tant que paramètre au constructeur.  
+  
+```  
+task_handle(const _Function& _Func);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `_Func`  
+ La fonction qui sera appelée pour exécuter le travail représenté par la `task_handle` objet. Il peut s’agir d’un functor de lambda, un pointeur vers une fonction, ou de tout objet qui prend en charge une version de l’opérateur d’appel de fonction avec la signature `void operator()()`.  
+  
+### <a name="remarks"></a>Remarques  
+ Le runtime crée une copie de la fonction de travail que vous passez au constructeur. Par conséquent, toute modification d’état qui se produire dans une fonction de l’objet que vous passez à un `task_handle` objet n’apparaît pas dans votre copie de cet objet de fonction.  
+  
+##  <a name="a-namedtora-taskhandle"></a><a name="dtor"></a>~ task_handle 
+
+ Détruit le `task_handle` objet.  
+  
+```  
+~task_handle();
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [accès concurrentiel Namespace](concurrency-namespace.md)   
+ [task_group, classe](task-group-class.md)   
+ [structured_task_group, classe](structured-task-group-class.md)
+

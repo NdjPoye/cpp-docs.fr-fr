@@ -1,58 +1,94 @@
 ---
-title: "uninitialized_object, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amprt/Concurrency::uninitialized_object"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "uninitialized_object (classe)"
+title: uninitialized_object, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amprt/Concurrency::uninitialized_object
+dev_langs:
+- C++
+helpviewer_keywords:
+- uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
 caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# uninitialized_object, classe
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 1ff7840ec3ff4ab00b7e13d647c329a892dade42
+ms.lasthandoff: 02/24/2017
 
-L'exception levée quand un objet non\-initialisé est utilisé.  
+---
+# <a name="uninitializedobject-class"></a>uninitialized_object, classe
+Exception levée lorsqu’un objet non initialisé est utilisé.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 class uninitialized_object : public runtime_exception;  
-  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
-|[uninitialized\_object::uninitialized\_object, constructeur](../Topic/uninitialized_object::uninitialized_object%20Constructor.md)|Initialise une nouvelle instance de la classe `uninitialized_object`.|  
+|[uninitialized_object, constructeur](#ctor)|Initialise une nouvelle instance de la classe `uninitialized_object`.|  
+
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `exception`  
   
  `runtime_exception`  
   
  `uninitialized_object`  
   
-## Configuration requise  
- **En\-tête :** amprt.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** amprt.h  
   
- **Espace de noms d'accès :** Concurrency  
+ **Espace de noms :** Concurrency  
+## <a name="a-nameuninitializedobjectctora-unsupportedfeature"></a><a name="uninitialized_object__ctor"></a>unsupported_feature 
+
+Construit une nouvelle instance de l’exception d’unsupported_feature.  
   
-## Voir aussi  
- [Concurrency, espace de noms \(C\+\+ AMP\)](../../../parallel/amp/reference/concurrency-namespace-cpp-amp.md)
+### <a name="syntax"></a>Syntaxe  
+  
+```  
+explicit unsupported_feature(  
+    const char * _Message ) throw();  
+  
+unsupported_feature() throw();  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `_Message`  
+ Description de l'erreur.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Objet `unsupported_feature`. 
+
+## <a name="see-also"></a>Voir aussi  
+ [Accès concurrentiel Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
+

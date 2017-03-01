@@ -1,90 +1,107 @@
 ---
-title: "LOGBRUSH, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LOGBRUSH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LOGBRUSH (structure)"
+title: LOGBRUSH (Structure) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LOGBRUSH
+dev_langs:
+- C++
+helpviewer_keywords:
+- LOGBRUSH structure
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# LOGBRUSH, structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: eea7caf6139fd43dd77163271701d170c7a744e2
+ms.lasthandoff: 02/24/2017
 
-La structure `LOGBRUSH` définit le style, la couleur, et le modèle d'un pinceau physique.  Elle est utilisée par les fonctions Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) et [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705).  
+---
+# <a name="logbrush-structure"></a>LOGBRUSH, structure
+Le `LOGBRUSH` structure définit le style, la couleur et le motif d’un pinceau physique. Il est utilisé par Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) et [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) fonctions.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      typedef struct tag LOGBRUSH { /* lb */  
-   UINT lbStyle;  
-   COLORREF lbColor;  
-   LONG lbHatch;  
+typedef struct tag LOGBRUSH { /* lb */  
+    UINT lbStyle;  
+    COLORREF lbColor;  
+    LONG lbHatch;  
 } LOGBRUSH;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `lbStyle`  
- Spécifie le style de pinceau.  Le membre `lbStyle` doit être l'un des styles suivants :  
+ Spécifie le style de pinceau. Le `lbStyle` membre doit être un des styles suivants :  
   
--   Pinceau de modèle **BS\_DIBPATTERN**défini par une spécification \(DIB\) bitmap indépendante du périphérique.  Si `lbStyle` est **BS\_DIBPATTERN**, le membre de **lbHatch** contient un handle vers DIB compressé.  
+- **BS_DIBPATTERN** un pinceau de modèle défini par une spécification de bitmap indépendante du périphérique (DIB). Si `lbStyle` est **BS_DIBPATTERN**, le **lbHatch** membre contient un handle vers un DIB compressé.  
   
--   **BS\_DIBPATTERNPT** pinceau de modèle défini par une spécification \(DIB\) bitmap indépendante du périphérique.  Si `lbStyle` est **BS\_DIBPATTERNPT**, le membre **lbHatch** contient un pointeur vers un DIB compressé.  
+- **BS_DIBPATTERNPT** un pinceau de modèle défini par une spécification de bitmap indépendante du périphérique (DIB). Si `lbStyle` est **BS_DIBPATTERNPT**, le **lbHatch** membre contient un pointeur vers un DIB compressé.  
   
--   **BS\_HATCHED** pinceau hachuré.  
+- **BS_HATCHED** hachée pinceau.  
   
--   **BS\_HOLLOW** pinceau de cavité.  
+- **BS_HOLLOW** creuse pinceau.  
   
--   **BS\_NULL** de même que **BS\_HOLLOW**.  
+- **BS_NULL** identique **BS_HOLLOW**.  
   
--   Pinceau de modèle **BS\_PATTERN**défini par un bitmap en mémoire.  
+- **BS_PATTERN** modèle pinceau défini par un bitmap de la mémoire.  
   
--   Pinceau plein **BS\_SOLID**.  
+- **BS_SOLID** pinceau solide.  
   
  `lbColor`  
- Spécifie la couleur dans laquelle le pinceau doit être dessiné.  Si `lbStyle` est le style **BS\_HOLLOW** ou **BS\_PATTERN**, **lbColor** est ignoré.  Si `lbStyle` est **BS\_DIBPATTERN** ou **BS\_DIBPATTERNBT**, le mot d'ordre inférieur de **lbColor** spécifie si les membres de **bmiColors** de la structure [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) contiennent des valeurs ou index RGB \(rouge vert bleu\) explicites dans la palette logique actuellement réalisée.  Le membre de **lbColor** doit être l'une des valeurs suivantes :  
+ Spécifie la couleur dans laquelle le pinceau doit être dessiné. Si `lbStyle` est la **BS_HOLLOW** ou **BS_PATTERN** style, **lbColor** est ignoré. Si `lbStyle` est **BS_DIBPATTERN** ou **BS_DIBPATTERNBT**, le mot de poids faible de **lbColor** Spécifie si les **bmiColors** membres de la [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) structure contiennent explicite rouge, vert, bleu (valeurs) ou index dans la palette logique actuellement réalisée. Le **lbColor** membre doit être une des valeurs suivantes :  
   
--   **DIB\_PAL\_COLORS** la table des couleurs consiste en un tableau d'index 16 bits dans la palette logique actuellement réalisée.  
+- **DIB_PAL_COLORS** la table des couleurs se compose d’un tableau d’index 16 bits dans la palette logique actuellement réalisée.  
   
--   **DIB\_RGB\_COLORS** la table des couleurs contient les valeurs RVB littérales.  
+- **DIB_RGB_COLORS** la table des couleurs contient des valeurs littérales.  
   
  *lbHatch*  
- Spécifie un style de hachurage .  La signification dépend du style de pinceau défini par `lbStyle`.  Si `lbStyle` est **BS\_DIBPATTERN**, le membre **lbHatch** contient un handle vers un DIB compressé.  Si `lbStyle` est **BS\_DIBPATTERNPT**, le membre **lbHatch** contient un pointeur vers un DIB compressé.  Si `lbStyle` est **BS\_HATCHED**, le membre de **lbHatch** spécifie l'orientation des lignes utilisées pour créer la hachurage.  Cela peut avoir l'une des valeurs suivantes :  
+ Spécifie le style de hachurage. La signification varie selon le style de pinceau défini par `lbStyle`. Si `lbStyle` est **BS_DIBPATTERN**, le **lbHatch** membre contient un handle vers un DIB compressé. Si `lbStyle` est **BS_DIBPATTERNPT**, le **lbHatch** membre contient un pointeur vers un DIB compressé. Si `lbStyle` est **BS_HATCHED**, le **lbHatch** membre spécifie l’orientation des lignes utilisées pour créer le hachurage. Il peut prendre l’une des valeurs suivantes :  
   
--   `HS_BDIAGONAL` hachurage de gauche à droite, orienté à 45 degrés vers le haut.  
+- `HS_BDIAGONAL`Un hachurage de 45 degrés vers le haut, de gauche à droite  
   
--   hachurage croisé horizontal et vertical `HS_CROSS`  
+- `HS_CROSS`Hachurage horizontal et vertical  
   
--   hachurage croisé de 45 degrés `HS_DIAGCROSS`  
+- `HS_DIAGCROSS`hachurage de 45 degrés  
   
--   `HS_FDIAGONAL` hachurage de gauche à droite, orienté à 45 degrés vers le bas.  
+- `HS_FDIAGONAL`Un hachurage de 45 degrés vers le bas, de gauche à droite  
   
--   hachurage horizontal `HS_HORIZONTAL`  
+- `HS_HORIZONTAL`Hachage horizontal  
   
--   de hachurage vertical `HS_VERTICAL`  
+- `HS_VERTICAL`Hachage vertical  
   
- Si `lbStyle` est **BS\_PATTERN**, **lbHatch** est un handle du bitmap qui définit le modèle.  Si `lbStyle` est **BS\_SOLID** ou **BS\_HOLLOW**, **lbHatch** est ignoré.  
+ Si `lbStyle` est **BS_PATTERN**, **lbHatch** est un handle de bitmap qui définit le modèle. Si `lbStyle` est **BS_SOLID** ou **BS_HOLLOW**, **lbHatch** est ignoré.  
   
-## Notes  
- Bien que **lbColor** contrôle la couleur de premier plan d'un pinceau à hachures, les fonctions [CDC::SetBkMode](../Topic/CDC::SetBkMode.md) et [CDC::SetBkColor](../Topic/CDC::SetBkColor.md) contrôlent la couleur d'arrière\-plan.  
+## <a name="remarks"></a>Remarques  
+ Bien que **lbColor** contrôle la couleur de premier plan d’un pinceau à hachure, la [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) et [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) fonctions de contrôlent la couleur d’arrière-plan.  
   
-## Configuration requise  
- **Header:** wingdi.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** wingdi.h  
   
-## Voir aussi  
- [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDC::GetCharABCWidths](../Topic/CDC::GetCharABCWidths.md)
+## <a name="see-also"></a>Voir aussi  
+ [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
+
+

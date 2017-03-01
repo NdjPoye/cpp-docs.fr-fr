@@ -1,68 +1,87 @@
 ---
-title: "Macros de table des messages (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.messages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "démarquer des messages Windows"
-  - "macros de table des messages"
-  - "plages de table des messages"
-  - "macros de mappage des messages"
-  - "tables des messages (C++), déclaration et démarcation"
-  - "tables des messages (C++), macros"
-  - "plages, table des messages"
-  - "messages Windows (C++), déclaration"
+title: Message de Macros de mappage (MFC) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.messages
+dev_langs:
+- C++
+helpviewer_keywords:
+- message map macros
+- Windows messages [C++], declaration
+- demarcating Windows messages
+- message maps [C++], macros
+- message maps [C++], declaration and demarcation
+- message mapping macros
+- ranges, message map
+- message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Macros de table des messages (MFC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: f890e0675be58c8e20e313bea54b4145e2ce0bf3
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="message-map-macros-mfc"></a>Macros de table des messages (MFC)
 Pour prendre en charge les tables des messages, MFC fournit les macros suivantes :  
   
-### Macros de déclaration et de démarcation des tables des messages  
+### <a name="message-map-declaration-and-demarcation-macros"></a>Déclaration de la table des messages et les Macros de délimitation  
   
 |||  
 |-|-|  
-|[DECLARE\_MESSAGE\_MAP](../Topic/DECLARE_MESSAGE_MAP.md)|Indique qu'une table des messages est utilisée dans une classe pour mapper des messages aux fonctions \(doit être utilisé dans la déclaration de classe\).|  
-|[BEGIN\_MESSAGE\_MAP](../Topic/BEGIN_MESSAGE_MAP.md)|Démarre la définition d'une table de messages \(doit être utilisé dans l'implémentation de classe\).|  
-|[END\_MESSAGE\_MAP](../Topic/END_MESSAGE_MAP.md)|Termine la définition d'une table de messages \(doit être utilisé dans l'implémentation de classe\).|  
+|[DECLARE_MESSAGE_MAP](http://msdn.microsoft.com/library/c225e7e0-a81b-495c-97f9-3e0aa1f65036)|Indique qu’une table des messages est utilisée dans une classe pour mapper les messages à des fonctions (doit être utilisé dans la déclaration de classe).|  
+|[BEGIN_MESSAGE_MAP](http://msdn.microsoft.com/library/d9201e18-04e0-4639-9810-f15768627fc2)|Commence la définition d’une table des messages (doit être utilisé dans l’implémentation de classe).|  
+|[END_MESSAGE_MAP](http://msdn.microsoft.com/library/40f611f1-a3b4-4097-b683-091bf7cfab8b)|Termine la définition d’une table des messages (doit être utilisé dans l’implémentation de classe).|  
   
-### macros de mappage des messages  
-  
-|||  
-|-|-|  
-|[ON\_COMMAND](../Topic/ON_COMMAND.md)|Indique que la fonction traite un message spécifié de commande.|  
-|[ON\_CONTROL](../Topic/ON_CONTROL.md)|Indique quelle fonction traite un message de notification de contrôle personnalisé.|  
-|[ON\_MESSAGE](../Topic/ON_MESSAGE.md)|Indique quelle fonction traitera un message défini par l'utilisateur.|  
-|[ON\_OLECMD](../Topic/ON_OLECMD.md)|Indique que la fonction gérera une commande de menu d'un DocObject ou son conteneur.|  
-|[ON\_REGISTERED\_MESSAGE](../Topic/ON_REGISTERED_MESSAGE.md)|Indique quelle fonction traitera un message enregistré défini par l'utilisateur.|  
-|[ON\_REGISTERED\_THREAD\_MESSAGE](../Topic/ON_REGISTERED_THREAD_MESSAGE.md)|Indique que la fonction traite un message défini par l'utilisateur et lorsque vous avez une classe `CWinThread`.|  
-|[ON\_THREAD\_MESSAGE](../Topic/ON_THREAD_MESSAGE.md)|Indique que la fonction traite un message défini par l'utilisateur et lorsque vous avez une classe `CWinThread`.|  
-|[ON\_UPDATE\_COMMAND\_UI](../Topic/ON_UPDATE_COMMAND_UI.md)|Indique quelle la fonction traite un message de commande de mise à jour de l'interface utilisateur.|  
-  
-### Macros de chaîne de la table des messages  
+### <a name="message-mapping-macros"></a>Macros de mappage des messages  
   
 |||  
 |-|-|  
-|[ON\_COMMAND\_RANGE](../Topic/ON_COMMAND_RANGE.md)|Indique que la fonction géreront la plage des ID de commande spécifiées dans les deux premiers paramètres de la macro.|  
-|[ON\_UPDATE\_COMMAND\_UI\_RANGE](../Topic/ON_UPDATE_COMMAND_UI_RANGE.md)|Indique que le gestionnaire de mise à jour gérera la plage des ID de commande spécifiés dans les deux premiers paramètres de la macro.|  
-|[ON\_CONTROL\_RANGE](../Topic/ON_CONTROL_RANGE.md)|Indique que la fonction traite les notifications de la plage des ID de contrôle spécifiés dans les deuxième et troisième paramètres de la macro.  Le premier paramètre est un message de notification contrôle, tel que **BN\_CLICKED**.|  
+|[ON_COMMAND](http://msdn.microsoft.com/library/f24f8bda-2cf4-49d5-aa3d-6f2e6bb003f2)|Indique que la fonction gère un message de commande spécifiée.|  
+|[ON_CONTROL](http://msdn.microsoft.com/library/2cb7ebdf-296b-4606-b191-3449835003db)|Indique que la fonction gère un message de notification de contrôle spécifié.|  
+|[ON_MESSAGE](http://msdn.microsoft.com/library/e2faeb13-9f6e-4c0d-9f6d-b2e141a0db1e)|Indique que la fonction gère un message défini par l’utilisateur.|  
+|[ON_OLECMD](http://msdn.microsoft.com/library/6c86327c-3d48-42ac-9dae-e0ccd3a81793)|Indique que la fonction gère une commande de menu à partir de DocObject ou son conteneur.|  
+|[ON_REGISTERED_MESSAGE](http://msdn.microsoft.com/library/93c1c068-ae8c-4e04-8a60-a603800ab57d)|Indique que la fonction gère un message défini par l’utilisateur inscrit.|  
+|[ON_REGISTERED_THREAD_MESSAGE](http://msdn.microsoft.com/library/3f598bc2-b2f0-410f-8ba0-7714502170f3)|Indique que la fonction gère un message défini par l’utilisateur inscrit lorsque vous avez un `CWinThread` classe.|  
+|[ON_THREAD_MESSAGE](http://msdn.microsoft.com/library/f718f47a-d5b1-4514-914b-e3fe2d919003)|Indique que la fonction gère un message défini par l’utilisateur lorsque vous avez un `CWinThread` classe.|  
+|[ON_UPDATE_COMMAND_UI](http://msdn.microsoft.com/library/c4de3c21-2d2e-4b89-a4ce-d0c0e2d9edc4)|Indique que la fonction gère un message de commande update-interface utilisateur spécifié.|  
   
- Pour plus d'informations sur les tables des messages, les macros\-instructions de déclaration de table des messages et de démarcation, et les macros\-instructions de message\- mappage, consultez [Tables des messages](../../mfc/reference/message-maps-mfc.md) et [Rubriques de gestion des messages et de mappage](../../mfc/message-handling-and-mapping.md).  Pour plus d'informations sur les séries de message de mappage, consultez [Gestionnaires pour les plages de table des messages](../../mfc/handlers-for-message-map-ranges.md).  
+### <a name="message-map-range-macros"></a>Macros de plage de la table des messages  
   
-## Voir aussi  
+|||  
+|-|-|  
+|[ON_COMMAND_RANGE](http://msdn.microsoft.com/library/c52719fc-dd6e-48c9-af79-383f48d608e0)|Indique que la fonction gère la plage d’ID de commande spécifiés dans les deux premiers paramètres à la macro.|  
+|[ON_UPDATE_COMMAND_UI_RANGE](http://msdn.microsoft.com/library/b7105bf1-44ad-4b00-b947-31478f964729)|Indique que le Gestionnaire de mise à jour gère la plage d’ID de commande spécifiés dans les deux premiers paramètres à la macro.|  
+|[ON_CONTROL_RANGE](http://msdn.microsoft.com/library/46f0e1bb-569b-4b8b-9b80-89701d1cd7fd)|Indique la fonction qui gérera les notifications à partir de la plage d’ID spécifiés dans les deuxième et troisième paramètres à la macro de contrôle. Le premier paramètre est un message de notification de contrôle, tel que **BN_CLICKED**.|  
+  
+ Pour plus d’informations sur les tables des messages, la déclaration de table des messages et des macros de délimitation et les macros de mappage des messages, consultez [tables des messages](../../mfc/reference/message-maps-mfc.md) et [rubriques de mappage et de gestion des messages](../../mfc/message-handling-and-mapping.md). Pour plus d’informations sur les plages de tables, consultez [gestionnaires pour les plages de la table des messages](../../mfc/handlers-for-message-map-ranges.md).  
+  
+## <a name="see-also"></a>Voir aussi  
  [Tables des messages](../../mfc/reference/message-maps-mfc.md)
+
+
+

@@ -1,39 +1,55 @@
 ---
-title: "Erreur du compilateur C3104 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3104"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3104"
+title: Erreur du compilateur C3104 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3104
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Erreur du compilateur C3104
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 5df018fe26e66ed480ed2464c19c876adfac8dd1
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="compiler-error-c3104"></a>Erreur du compilateur C3104
 argument non conforme pour l'attribut  
   
  Vous avez spécifié un argument non valide pour un attribut.  
   
- Pour plus d'informations, consultez [Attribute Parameter Types](../../windows/attribute-parameter-types-cpp-component-extensions.md).  
+ Consultez la page [Types de paramètre d’attribut](../../windows/attribute-parameter-types-cpp-component-extensions.md) pour plus d’informations.  
   
- Cette erreur peut être due à la mise en conformité du compilateur pour Visual C\+\+ 2005 : lors du passage de tableaux managés à des attributs personnalisés, le type du tableau n'est plus déduit de la liste d'initialisation d'agrégats.  Le compilateur exige désormais que vous spécifiiez le type du tableau ainsi que la liste d'initialiseurs.  
+ Cette erreur peut être due à la mise en conformité du compilateur pour Visual C++ 2005 : lors du passage de tableaux managés à des attributs personnalisés, le type du tableau n’est plus déduit de la liste d’initialisation d’agrégats. Le compilateur requiert désormais vous permet de spécifier le type de tableau, ainsi que la liste d’initialiseurs.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C3104 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C3104.  
   
 ```  
 // C3104a.cpp  
@@ -52,8 +68,8 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};  
 ```  
   
-## Exemple  
- L'exemple suivant génère l'erreur C3104 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C3104.  
   
 ```  
 // C3104b.cpp  
@@ -79,27 +95,4 @@ ref class B {};
 [A(0)]  
 ref class B {};  
 ```  
-  
-## Exemple  
- L'exemple suivant génère l'erreur C3104 :  
-  
-```  
-// C3104c.cpp  
-// compile with: /clr:oldSyntax /c  
-using namespace System;  
-  
-[ attribute(Class) ]  
-public __gc class AnotherAttr {  
-public:  
-   AnotherAttr(Object* arr __gc[]) : var0(arr) {}  
-   Object* var1 __gc[];  
-   Object* var0 __gc[];  
-};  
-  
-[ AnotherAttr( { __box(3.14159), S"pi" }, var1 = { S"a", S"b" } ) ]   // C3104  
-public __gc class Class1 {};  
-  
-// OK  
-[ AnotherAttr( new Object * __gc[] {__box(3.14159), S"pi" }, var1 = new Object * __gc[] { S"a", S"b" } ) ]  
-public __gc class Class2 {};  
-```
+

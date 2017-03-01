@@ -1,91 +1,270 @@
 ---
-title: "join, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "agents/concurrency::join"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "join (classe)"
+title: Join, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- agents/concurrency::join
+dev_langs:
+- C++
+helpviewer_keywords:
+- join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# join, classe
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: b9671e6c9d29fb5f93977fe080e90dd087429460
+ms.lasthandoff: 02/24/2017
 
-Un bloc de messagerie `join` est un `propagator_block` de cible unique, de source multiple et classé qui combine ensemble des messages de type `_Type` à partir de chacune de ses sources.  
+---
+# <a name="join-class"></a>join, classe
+Un bloc de messagerie `join` est un `propagator_block` à cible unique, à sources multiples et ordonné qui combine des messages de type `T` en provenance de chacune de ses sources.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
-```  
-template<  
-   class _Type,  
-   join_type _Jtype = non_greedy  
->  
-class join : public propagator_block<single_link_registry<ITarget<std::vector<_Type>>>, multi_link_registry<ISource<_Type>>>;  
-```  
+```
+template<class T,
+    join_type _Jtype = non_greedy>
+class join : public propagator_block<single_link_registry<ITarget<std::vector<T>>>,
+    multi_link_registry<ISource<T>>>;
+```   
   
-#### Paramètres  
- `_Type`  
- Le type de charge utile des messages joints et propagés par le bloc.  
+#### <a name="parameters"></a>Paramètres  
+ `T`  
+ Type de charge utile des messages joints et propagés par le bloc.  
   
  `_Jtype`  
- Le genre de bloc `join` qui est `greedy` ou `non_greedy`  
+ Le genre de `join` bloc est `greedy` ou`non_greedy`  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[join::join, constructeur](../Topic/join::join%20Constructor.md)|Surchargé.  Construit un bloc de messagerie `join`.|  
-|[join::~join, destructeur](../Topic/join::~join%20Destructor.md)|Détruit le bloc `join`.|  
-  
-### Méthodes protégées  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[join::accept\_message, méthode](../Topic/join::accept_message%20Method.md)|Accepte un message qui a été transmis par ce bloc de messagerie `join`, en transférant la propriété à l'appelant.|  
-|[join::consume\_message, méthode](../Topic/join::consume_message%20Method.md)|Consomme un message offert précédemment par le bloc de messagerie `join` et réservé par la cible, en transférant la propriété à l'appelant.|  
-|[join::link\_target\_notification, méthode](../Topic/join::link_target_notification%20Method.md)|Rappel qui notifie qu'une nouvelle cible a été liée à ce bloc de messagerie `join`.|  
-|[join::propagate\_message, méthode](../Topic/join::propagate_message%20Method.md)|Passe un message de façon asynchrone d'un bloc `ISource` à ce bloc de messagerie `join`.  Il est appelé par la méthode `propagate`, en cas d'appel par un bloc source.|  
-|[join::propagate\_to\_any\_targets, méthode](../Topic/join::propagate_to_any_targets%20Method.md)|Construit un message de sortie contenant un message d'entrée de chaque source lorsqu'ils ont tous propagé un message.  Envoie ce message de sortie à chacune de ses cibles.|  
-|[join::release\_message, méthode](../Topic/join::release_message%20Method.md)|Libère une réservation de message précédente. \(Substitue [source\_block::release\_message](../Topic/source_block::release_message%20Method.md).\)|  
-|[join::reserve\_message, méthode](../Topic/join::reserve_message%20Method.md)|Réserve un message précédemment offert par ce bloc de messagerie `join`. \(Substitue [source\_block::reserve\_message](../Topic/source_block::reserve_message%20Method.md).\)|  
-|[join::resume\_propagation, méthode](../Topic/join::resume_propagation%20Method.md)|Reprend la propagation après qu'une réservation a été libérée. \(Substitue [source\_block::resume\_propagation](../Topic/source_block::resume_propagation%20Method.md).\)|  
+|----------|-----------------|  
+|[joindre le constructeur](#ctor)|Surchargé. Construit un `join` bloc de messagerie.|  
+|[~ join, destructeur](#dtor)|Détruit le `join` bloc.|  
   
-## Notes  
- Pour plus d'informations, consultez [Blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).  
+### <a name="protected-methods"></a>Méthodes protégées  
   
-## Hiérarchie d'héritage  
- [ISource](../../../parallel/concrt/reference/isource-class.md)  
+|Nom|Description|  
+|----------|-----------------|  
+|[accept_message (méthode)](#accept_message)|Accepte un message qui a été transmis par ce `join` messagerie bloc, en transférant la propriété à l’appelant.|  
+|[consume_message (méthode)](#consume_message)|Consomme un message précédemment offert par le `join` bloc de messagerie et réservé par la cible, en transférant la propriété à l’appelant.|  
+|[link_target_notification (méthode)](#link_target_notification)|Rappel qui notifie qu’une nouvelle cible a été liée à ce `join` bloc de messagerie.|  
+|[propagate_message (méthode)](#propagate_message)|Passe de façon asynchrone un message à partir d’un `ISource` à ce bloc `join` bloc de messagerie. Il est appelé par le `propagate` la méthode appelée par un bloc source.|  
+|[propagate_to_any_targets (méthode)](#propagate_to_any_targets)|Construit un message de sortie contenant un message d’entrée de chaque source lorsqu’ils ont tous propagé un message. Envoie ce message de sortie à chacune de ses cibles.|  
+|[release_message (méthode)](#release_message)|Libère une réservation de message précédente. (Substitue [source_block::release_message](source-block-class.md#release_message).)|  
+|[reserve_message (méthode)](#reserve_message)|Réserve un message précédemment offert par ce `join` bloc de messagerie. (Substitue [source_block::reserve_message](source-block-class.md#reserve_message).)|  
+|[resume_propagation (méthode)](#resume_propagation)|Reprend la propagation après qu’une réservation a été libérée. (Substitue [source_block::resume_propagation](source-block-class.md#resume_propagation).)|  
   
- [ITarget](../../../parallel/concrt/reference/itarget-class.md)  
+## <a name="remarks"></a>Remarques  
+ Pour plus d’informations, consultez [blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).  
   
- [source\_block](../../../parallel/concrt/reference/source-block-class.md)  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+ [ISource](isource-class.md)  
   
- [propagator\_block](../../../parallel/concrt/reference/propagator-block-class.md)  
+ [ITarget](itarget-class.md)  
+  
+ [source_block](source-block-class.md)  
+  
+ [propagator_block](propagator-block-class.md)  
   
  `join`  
   
-## Configuration requise  
- **En\-tête :** agents.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** agents.h  
   
- **Espace de noms :** concurrency  
+ **Espace de noms :** concurrency  
   
-## Voir aussi  
- [concurrency, espace de noms](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Classe choice](../../../parallel/concrt/reference/choice-class.md)   
- [multitype\_join, classe](../../../parallel/concrt/reference/multitype-join-class.md)   
- [join\_type, énumération](../Topic/join_type%20Enumeration.md)
+##  <a name="a-nameacceptmessagea-acceptmessage"></a><a name="accept_message"></a>accept_message 
+
+ Accepte un message qui a été transmis par ce `join` messagerie bloc, en transférant la propriété à l’appelant.  
+  
+```
+virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `_MsgId`  
+ Le `runtime_object_identity` de l’offerte `message` objet.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Un pointeur vers le `message` que l’appelant est désormais propriétaire de l’objet.  
+  
+##  <a name="a-nameconsumemessagea-consumemessage"></a><a name="consume_message"></a>consume_message 
+
+ Consomme un message précédemment offert par le `join` bloc de messagerie et réservé par la cible, en transférant la propriété à l’appelant.  
+  
+```
+virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `_MsgId`  
+ Le `runtime_object_identity` de la `message` de l’objet en cours de consommation.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Un pointeur vers le `message` que l’appelant est désormais propriétaire de l’objet.  
+  
+### <a name="remarks"></a>Notes  
+ Semblable à `accept`, mais est toujours précédé par un appel à `reserve`.  
+  
+##  <a name="a-namectora-join"></a><a name="ctor"></a>jointure 
+
+ Construit un `join` bloc de messagerie.  
+  
+```
+join(
+    size_t _NumInputs);
+
+join(
+    size_t _NumInputs,
+    filter_method const& _Filter);
+
+join(
+    Scheduler& _PScheduler,
+    size_t _NumInputs);
+
+join(
+    Scheduler& _PScheduler,
+    size_t _NumInputs,
+    filter_method const& _Filter);
+
+join(
+    ScheduleGroup& _PScheduleGroup,
+    size_t _NumInputs);
+
+join(
+    ScheduleGroup& _PScheduleGroup,
+    size_t _NumInputs,
+    filter_method const& _Filter);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `_NumInputs`  
+ Nombre d’entrées cela `join` bloc sera autorisé.  
+  
+ `_Filter`  
+ Fonction de filtre qui détermine si les messages transmis doivent être acceptés.  
+  
+ `_PScheduler`  
+ Le `Scheduler` objet dans lequel la tâche de propagation pour le `join` bloc de messagerie est planifiée.  
+  
+ `_PScheduleGroup`  
+ Le `ScheduleGroup` objet dans lequel la tâche de propagation pour le `join` bloc de messagerie est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.  
+  
+### <a name="remarks"></a>Notes  
+ Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les paramètres `_PScheduler` ou `_PScheduleGroup` .  
+  
+ Le type `filter_method` est un functor avec la signature `bool (T const &)` qui est appelé par ce `join` bloc de messagerie afin de déterminer si elle doit accepter un message proposé.  
+  
+##  <a name="a-namedtora-join"></a><a name="dtor"></a>~ join 
+
+ Détruit le `join` bloc.  
+  
+```
+~join();
+```  
+  
+##  <a name="a-namelinktargetnotificationa-linktargetnotification"></a><a name="link_target_notification"></a>link_target_notification 
+
+ Rappel qui notifie qu’une nouvelle cible a été liée à ce `join` bloc de messagerie.  
+  
+```
+virtual void link_target_notification(_Inout_ ITarget<std::vector<T>> *);
+```  
+  
+##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+
+ Passe de façon asynchrone un message à partir d’un `ISource` à ce bloc `join` bloc de messagerie. Il est appelé par le `propagate` la méthode appelée par un bloc source.  
+  
+```
+message_status propagate_message(
+    _Inout_ message<T>* _PMessage,
+    _Inout_ ISource<T>* _PSource);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `_PMessage`  
+ Pointeur vers l'objet `message`.  
+  
+ `_PSource`  
+ Pointeur vers le bloc source qui transmet le message.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ A [message_status](concurrency-namespace-enums.md) indication de ce que la cible a décidé de faire avec ce message.  
+  
+##  <a name="a-namepropagatetoanytargetsa-propagatetoanytargets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+
+ Construit un message de sortie contenant un message d’entrée de chaque source lorsqu’ils ont tous propagé un message. Envoie ce message de sortie à chacune de ses cibles.  
+  
+```
+void propagate_to_any_targets(_Inout_opt_ message<_OutputType> *);
+```  
+  
+##  <a name="a-namereleasemessagea-releasemessage"></a><a name="release_message"></a>release_message 
+
+ Libère une réservation de message précédente.  
+  
+```
+virtual void release_message(runtime_object_identity _MsgId);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `_MsgId`  
+ Le `runtime_object_identity` de la `message` libéré de l’objet.  
+  
+##  <a name="a-namereservemessagea-reservemessage"></a><a name="reserve_message"></a>reserve_message 
+
+ Réserve un message précédemment offert par ce `join` bloc de messagerie.  
+  
+```
+virtual bool reserve_message(runtime_object_identity _MsgId);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `_MsgId`  
+ Le `runtime_object_identity` de l’offerte `message` objet.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ `true`Si le message a été réservé, `false` dans le cas contraire.  
+  
+### <a name="remarks"></a>Notes  
+ Après avoir `reserve` est appelée, si elle retourne `true`, `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.  
+  
+##  <a name="a-nameresumepropagationa-resumepropagation"></a><a name="resume_propagation"></a>resume_propagation 
+
+ Reprend la propagation après qu’une réservation a été libérée.  
+  
+```
+virtual void resume_propagation();
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [accès concurrentiel Namespace](concurrency-namespace.md)   
+ [Classe Choice](choice-class.md)   
+ [multitype_join, classe](multitype-join-class.md)
+

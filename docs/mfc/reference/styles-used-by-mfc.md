@@ -1,57 +1,74 @@
 ---
-title: "Styles utilis&#233;s par MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.styles"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "boutons, barres d'outils MFC"
-  - "zones de liste déroulante, styles"
-  - "modifier les styles (MFC)"
-  - "styles de fenêtre étendus"
-  - "fenêtres frame, styles"
-  - "zones de liste, styles"
-  - "styles de boîte de message"
-  - "styles de barre de défilement (MFC)"
-  - "styles statiques"
-  - "styles"
-  - "styles, MFC"
-  - "styles de fenêtres, dans MFC"
+title: "Styles utilisés par MFC | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.styles
+dev_langs:
+- C++
+helpviewer_keywords:
+- edit styles [MFC]
+- window styles, in MFC
+- styles
+- frame windows, styles
+- message-box styles
+- styles, MFC
+- buttons, MFC toolbars
+- list boxes, styles
+- static styles
+- scroll-bar styles [MFC]
+- combo boxes, styles
+- extended window styles
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Styles utilis&#233;s par MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 344d2ce3de15403e17f29dc9504253cbb0ade607
+ms.lasthandoff: 02/24/2017
 
-Utilisez les styles suivants lorsque vous créez l'objet MFC correspondant.  Dans la plupart des cas, ces styles sont définis dans le paramètre `dwStyle` de la fonction de classe **Créer** .  
+---
+# <a name="styles-used-by-mfc"></a>Styles utilisés par MFC
+Utiliser les styles suivants lorsque vous créez l’objet MFC correspondant. Dans la plupart des cas, ces styles sont définies dans le `dwStyle` paramètre de la classe **créer** (fonction).  
   
-### ..\/styles\/{0}  
+### <a name="mfc-styles"></a>Styles de MFC  
   
 |Style|Description|  
 |-----------|-----------------|  
-|[Styles des boutons](../../mfc/reference/button-styles.md)|Applique aux [Classe de CButton](../../mfc/reference/cbutton-class.md) des objets, tels que les cases d'option, les cases à cocher et les boutons poussoirs.  Spécifiez une combinaison de styles dans le paramètre d' `dwStyle` [CButton::Create](../Topic/CButton::Create.md).|  
-|[Styles de zone de liste déroulante](../../mfc/reference/combo-box-styles.md)|Applique à la [Classe de CComboBox](../../mfc/reference/ccombobox-class.md) des objets.  Spécifiez une combinaison de styles dans le paramètre d' `dwStyle` [CComboBox::Create](../Topic/CComboBox::Create.md).|  
-|[Modifier les styles](../../mfc/reference/edit-styles.md)|Applique à [Classe d'objets de CEdit](../../mfc/reference/cedit-class.md).  Spécifiez une combinaison de styles dans le paramètre `dwStyle` [CButton::Create](../Topic/CEdit::Create.md).|  
-|[Styles des cadres des fenêtres](../../mfc/reference/frame-window-styles-mfc.md)|Applique à [Classe d'objets de CFrameWnd](../../mfc/reference/cframewnd-class.md).  Spécifiez une combinaison de styles dans le paramètre `dwStyle` [CComboBox::Create](../Topic/CFrameWnd::Create.md).|  
-|[Styles des zones des listes](../../mfc/reference/list-box-styles.md)|Applique à [Classe d'objets de CListBox](../../mfc/reference/clistbox-class.md).  Spécifiez une combinaison de styles dans le paramètre `dwStyle` [CComboBox::Create](../Topic/CListBox::Create.md).|  
-|[Styles des fenêtres des messages](../../mfc/reference/message-box-styles.md)|Applique à [AfxMessageBox](../Topic/AfxMessageBox.md) des éléments.  Spécifiez une combinaison des styles dans le paramètre `nType` de `AfxMessageBox`.|  
-|[Styles des barres de défilement](../../mfc/reference/scroll-bar-styles.md)|Applique à [Classe des objets de CScrollBar](../../mfc/reference/cscrollbar-class.md).  Spécifiez une combinaison de styles dans le paramètre `dwStyle` [CComboBox::Create](../Topic/CScrollBar::Create.md).|  
-|[Styles statiques](../../mfc/reference/static-styles.md)|Applique à [la Classe des objets CStatic](../../mfc/reference/cstatic-class.md).  Spécifiez une combinaison de styles dans le paramètre `dwStyle` [CButton::Create](../Topic/CStatic::Create.md).|  
-|[Styles de fenêtre](../../mfc/reference/window-styles.md)|[S'applique aux éléments suivants:](../../mfc/reference/cwnd-class.md) classe, propriété.  Spécifiez une combinaison de styles dans le paramètre `dwStyle` [CComboBox::Create](../Topic/CWnd::Create.md).|  
-|[Styles de fenêtre avancés](../../mfc/reference/extended-window-styles.md)|S'applique aux éléments [suivants](../../mfc/reference/cwnd-class.md) classe, propriété.  Spécifiez une combinaison de styles dans le paramètre `dwExStyle` de [CButton::Create](../Topic/CWnd::CreateEx.md).|  
+|[Styles des boutons](../../mfc/reference/button-styles.md)|S’applique aux [CButton classe](../../mfc/reference/cbutton-class.md) objets, tels que des cases d’option, cases à cocher et boutons de commande. Spécifier une combinaison de styles dans le `dwStyle` paramètre de [CButton::Create](../../mfc/reference/cbutton-class.md#create).|  
+|[Styles de zone de liste déroulante](../../mfc/reference/combo-box-styles.md)|S’applique aux [CComboBox (classe)](../../mfc/reference/ccombobox-class.md) objets. Spécifier une combinaison de styles dans le `dwStyle` paramètre de [CComboBox::Create](../../mfc/reference/ccombobox-class.md#create).|  
+|[Modifier les styles](../../mfc/reference/edit-styles.md)|S’applique aux [classe CEdit](../../mfc/reference/cedit-class.md) objets. Spécifier une combinaison de styles dans le `dwStyle` paramètre de [CEdit::Create](../../mfc/reference/cedit-class.md#create).|  
+|[Styles de fenêtre frame](../../mfc/reference/frame-window-styles-mfc.md)|S’applique aux [CFrameWnd (classe)](../../mfc/reference/cframewnd-class.md) objets. Spécifier une combinaison de styles dans le `dwStyle` paramètre de [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create).|  
+|[Styles de zone de liste](../../mfc/reference/list-box-styles.md)|S’applique aux [CListBox (classe)](../../mfc/reference/clistbox-class.md) objets. Spécifier une combinaison de styles dans le `dwStyle` paramètre de [CListBox::Create](../../mfc/reference/clistbox-class.md#create).|  
+|[Styles de zone de message](../../mfc/reference/message-box-styles.md)|S’applique aux [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) éléments. Spécifier une combinaison de styles dans le `nType` paramètre de `AfxMessageBox`.|  
+|[Styles de barre de défilement](../../mfc/reference/scroll-bar-styles.md)|S’applique aux [CScrollBar classe](../../mfc/reference/cscrollbar-class.md) objets. Spécifier une combinaison de styles dans le `dwStyle` paramètre de [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create).|  
+|[Styles statiques](../../mfc/reference/static-styles.md)|S’applique aux [CStatic classe](../../mfc/reference/cstatic-class.md) objets. Spécifier une combinaison de styles dans le `dwStyle` paramètre de [CStatic::Create](../../mfc/reference/cstatic-class.md#create).|  
+|[Styles de fenêtre](../../mfc/reference/window-styles.md)|S’applique aux [classe CWnd](../../mfc/reference/cwnd-class.md) objets. Spécifier une combinaison de styles dans le `dwStyle` paramètre de [CWnd::Create](../../mfc/reference/cwnd-class.md#create) ou [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex).|  
+|[Styles de fenêtre étendus](../../mfc/reference/extended-window-styles.md)|S’applique aux [classe CWnd](../../mfc/reference/cwnd-class.md) objets. Spécifier une combinaison de styles dans le `dwExStyle` paramètre de [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex).|  
   
-## Voir aussi  
- [Vue d'ensemble des classes](../../mfc/class-library-overview.md)
+## <a name="see-also"></a>Voir aussi  
+ [Vue d’ensemble de la classe](../../mfc/class-library-overview.md)
+
+

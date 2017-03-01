@@ -1,82 +1,283 @@
 ---
-title: "index, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp/Concurrency::index"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "index (structure)"
+title: index, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp/Concurrency::index
+dev_langs:
+- C++
+helpviewer_keywords:
+- index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# index, classe
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 55a44499ca9bbd5149a4528a31c1417b60ba7fa3
+ms.lasthandoff: 02/24/2017
 
-Définit un point d'index dimensionnel *N*.  
+---
+# <a name="index-class"></a>index, classe
+Définit un *N*-dimensionnel index pographics-cpp-amp.md.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-template <  
-   int _Rank  
->  
+template <int _Rank>  
 class index;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `_Rank`  
- Rang ou nombre de dimensions.  
+ Le classement, ou le nombre de dimensions.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[index::index, constructeur](../Topic/index::index%20Constructor.md)|Initialise une nouvelle instance de la classe `index`.|  
-  
-### Opérateurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[index::operator\-\-, opérateur](../Topic/index::operator--%20Operator.md)|Décrémente chaque élément de l'objet `index`.|  
-|[index::operator\(mod\)\=, opérateur](../Topic/index::operator\(mod\)=%20Operator.md)|Calcule le modulo \(reste\) de chaque élément dans l'objet `index` lorsque cet élément est divisé par un nombre.|  
-|[index::operator\*\=, opérateur](../Topic/index::operator*=%20Operator.md)|Multiplie chaque élément de l'objet `index` par un nombre.|  
-|[index::operator\/\=, opérateur](../Topic/index::operator-=%20Operator2.md)|Divise chaque élément de l'objet `index` par un nombre.|  
-|[index::operatorOperator](../Topic/index::operatorOperator.md)|Retourne l'élément à l'index spécifié.|  
-|[index::operator\+\+, opérateur](../Topic/index::operator++%20Operator.md)|Incrémente chaque élément de l'objet `index`.|  
-|[index::operator\+\=, opérateur](../Topic/index::operator+=%20Operator.md)|Ajoute le nombre spécifié à chaque élément de l'objet `index`.|  
-|[index::operator\=, opérateur](../Topic/index::operator=%20Operator.md)|Copie le contenu de l'objet `index` spécifié dans cet objet.|  
-|[index::operator\-\=, opérateur](../Topic/index::operator-=%20Operator1.md)|Soustrait le nombre spécifié de chaque élément de l'objet `index`.|  
+|----------|-----------------|  
+|[index, constructeur](#ctor)|Initialise une nouvelle instance de la classe `index`.|  
   
-### Constantes publiques  
+### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[index::rank, constante](../Topic/index::rank%20Constant.md)|Stocke le rang de l'objet `index`.|  
+|----------|-----------------|  
+|[opérateur--(opérateur)](#operator--)|Décrémente chaque élément de la `index` objet.|  
+|[operator(MOD) =, opérateur](#operator_mod_eq)|Calcule le modulo (reste) de chaque élément dans le `index` de l’objet lorsque cet élément est divisé par un nombre.|  
+|[opérateur * =, opérateur](#operator_star_eq)|Multiplie chaque élément de la `index` objet par un nombre.|  
+|[opérateur / =, opérateur](#operator_div_eq)|Divise chaque élément de la `index` objet par un nombre.|  
+|[index::operator\[\]](#operator_at)|Retourne l’élément situé à l’index spécifié.|  
+|[operator ++ (opérateur)](#operator_add_add)|Incrémente chaque élément de la `index` objet.|  
+|[opérateur +=, opérateur](#operator_add_eq)|Ajoute le nombre spécifié pour chaque élément de la `index` objet.|  
+|[opérateur =, opérateur](#operator_eq)|Copie le contenu de l’objet `index` objet dans celui-ci.|  
+|[operator-= (opérateur)](#operator_-_eq)|Soustrait le nombre spécifié de chaque élément de la `index` objet.|  
+
   
-## Hiérarchie d'héritage  
+### <a name="public-constants"></a>Constantes publiques  
+  
+|Nom|Description|  
+|----------|-----------------|  
+|[RANK (constante)](#rank)|Stocke le rang de la `index` objet.|  
+  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `index`  
   
-## Remarques  
- La structure `index` représente un vecteur de coordonnées des entiers de *N* qui spécifie une seule position dans un espace dimensionnel *N*.  Les valeurs du vecteur sont classées de la plus significative à la moins significative.  Vous pouvez récupérer les valeurs des composants à l'aide de [index::operator\=, opérateur](../Topic/index::operator=%20Operator.md).  
+## <a name="remarks"></a>Remarques  
+ Le `index` structure représente un vecteur de coordonnées *N* entiers qui spécifie une position unique dans une *N*-espace&3;D. Les valeurs du vecteur sont triés du plus significatif au moins significatif. Vous pouvez récupérer les valeurs des composants à l’aide de [opérateur =, opérateur](#operator_eq).  
   
-## Configuration requise  
- **En\-tête :** amp.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** amp.h  
   
- **Espace de noms d'accès :** Concurrency  
-  
-## Voir aussi  
- [Concurrency, espace de noms \(C\+\+ AMP\)](../../../parallel/amp/reference/concurrency-namespace-cpp-amp.md)
+ **Espace de noms :** Concurrency  
+
+
+## <a name="a-nameindexctora-index-constructor"></a><a name="index_ctor"></a>index, constructeur
+Initialise une nouvelle instance de la classe d’index.
+
+```  
+index() restrict(amp,cpu);
+
+index(
+   const index<_Rank>& _Other
+) restrict(amp,cpu);
+
+explicit index(
+   int _I
+) restrict(amp,cpu);
+
+index(
+   int _I0,
+   int _I1
+) restrict(amp,cpu);
+
+index(
+   int _I0,
+   int _I1,
+   int _I2
+) restrict(amp,cpu);
+
+explicit index(
+   const int _Array[_Rank]
+) restrict(amp,cpu);
+``` 
+
+### <a name="parameters"></a>Paramètres
+
+_ARRAY  
+Un tableau unidimensionnel avec les valeurs de classement.  
+_I  
+Position d’index dans un index de dimension.  
+_I0  
+La longueur de la dimension la plus importante.  
+_I1  
+La longueur de la dimension suivant-à-plus significatif.  
+_I2  
+La longueur de la dimension moins significative.  
+_Other  
+Objet index sur lequel est basé le nouvel objet index.  
+
+## <a name="a-nameoperator--a--operator--"></a><a name="operator--"></a>opérateur--
+Décrémente chaque élément de l’objet index.  
+```  
+index<_Rank>& operator--() restrict(amp,cpu);  
+
+index operator--(
+   int
+) restrict(amp,cpu);
+```  
+### <a name="return-values"></a>Valeurs de retour
+Pour l’opérateur de l’objet index (* cela). Pour l’opérateur de suffixe, un nouvel objet index.
+
+## <a name="a-nameoperatormodeqa--operatormod"></a><a name="operator_mod_eq"></a>operator(MOD) =   
+Calcule le modulo (reste) de chaque élément dans l’objet index lorsque cet élément est divisé par le nombre spécifié.
+
+```  
+index<_Rank>& operator%=(
+   int _Rhs
+) restrict(cpu, amp);
+```  
+### <a name="parameters"></a>Paramètres
+_Rhs le nombre à diviser par pour trouver le modulo.
+Valeur de retour l’objet index.
+
+## <a name="a-nameoperatorstareqa--operator"></a><a name="operator_star_eq"></a>opérateur * =   
+Multiplie chaque élément dans l’objet index par le nombre spécifié.
+```
+index<_Rank>& operator*=(
+   int _Rhs
+) restrict(amp,cpu);
+```
+
+### <a name="parameters"></a>Paramètres
+_Rhs le nombre à multiplier.
+
+## <a name="a-nameoperatordiveqa--operator"></a><a name="operator_div_eq"></a>/ = (opérateur) 
+Divise chaque élément dans l’objet index par le nombre spécifié.
+
+```
+index<_Rank>& operator/=(
+   int _Rhs
+) restrict(amp,cpu);
+``` 
+### <a name="parameters"></a>Paramètres
+_Rhs le nombre à diviser par.
+
+## <a name="a-nameoperatorata--operator"></a><a name="operator_at"></a>  operator\[\]  
+Retourne le composant de l’index à l’emplacement spécifié.
+
+```
+int operator[] (
+   unsigned _Index
+) const restrict(amp,cpu);
+
+int& operator[] (
+   unsigned _Index
+) restrict(amp,cpu);
+```
+
+### <a name="parameters"></a>Paramètres
+_Index un entier compris entre 0 et le rang moins 1.
+
+### <a name="return-value"></a>Valeur de retour
+L’élément qui est à l’index spécifié.
+
+### <a name="remarks"></a>Notes
+L’exemple suivant affiche les valeurs de composant de l’index.
+```  
+// Prints 1 2 3.
+concurrency::index<3> idx(1, 2, 3);
+std::cout << idx[0] << "\n";
+std::cout << idx[1] << "\n";
+std::cout << idx[2] << "\n";
+```
+
+## <a name="a-nameoperatoraddadda--operator"></a><a name="operator_add_add"></a>operator ++   
+Incrémente chaque élément de l’objet index.
+```  
+index<_Rank>& operator++() restrict(amp,cpu);
+
+index<_Rank> operator++(
+   int
+) restrict(amp,cpu);
+```  
+### <a name="return-value"></a>Valeur de retour
+Pour l’opérateur de l’objet index (* cela). Pour l’opérateur de suffixe, un nouvel objet index.
+
+## <a name="a-nameoperatoraddeqa--operator"></a><a name="operator_add_eq"></a>opérateur +=   
+Ajoute le nombre spécifié pour chaque élément de l’objet index.
+```  
+index<_Rank>& operator+=(
+   const index<_Rank>& _Rhs
+) restrict(amp,cpu);
+
+index<_Rank>& operator+=(
+   int _Rhs
+) restrict(amp,cpu);
+``` 
+### <a name="parameters"></a>Paramètres
+_Rhs le numéro à ajouter.
+
+### <a name="return-value"></a>Valeur de retour
+L’objet index.
+
+## <a name="a-nameoperatoreqa--operator"></a><a name="operator_eq"></a>  operator=   
+Copie le contenu de l’objet de l’index spécifié dans celle-ci.
+```  
+index<_Rank>& operator=(
+   const index<_Rank>& _Other
+) restrict(amp,cpu);
+``` 
+### <a name="parameters"></a>Paramètres
+L’objet index à copier à partir de _Other.
+
+### <a name="return-value"></a>Valeur de retour
+Une référence à cet objet index.
+
+## <a name="a-nameoperator-eqa--operator-"></a><a name="operator_-_eq"></a>opérateur =
+Soustrait le nombre spécifié de chaque élément de l’objet index.
+```  
+index<_Rank>& operator-=(
+   const index<_Rank>& _Rhs
+) restrict(amp,cpu);
+
+index<_Rank>& operator-=(
+   int _Rhs
+) restrict(amp,cpu);
+```  
+### <a name="parameters"></a>Paramètres
+_Rhs le nombre à soustraire.
+
+### <a name="return-value"></a>Valeur de retour
+L’objet index.   
+
+## <a name="a-nameranka--rank"></a><a name="rank"></a>Rang  
+  Obtient le classement de l’objet index.
+```
+static const int rank = _Rank;
+``` 
+## <a name="see-also"></a>Voir aussi  
+ [Accès concurrentiel Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
+

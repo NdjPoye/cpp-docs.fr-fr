@@ -1,80 +1,139 @@
 ---
-title: "task_completion_event, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ppltasks/concurrency::task_completion_event"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "task_completion_event (classe)"
+title: task_completion_event, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ppltasks/concurrency::task_completion_event
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
 caps.latest.revision: 11
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# task_completion_event, classe
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 2cd3e7381402cc65f3220010a71c969cda1c7e2d
+ms.lasthandoff: 02/24/2017
 
-La classe `task_completion_event` vous permet de différer l'exécution d'une tâche jusqu'à ce qu'une condition soit remplie, ou de démarrer une tâche en réponse à un événement externe.  
+---
+# <a name="taskcompletionevent-class"></a>task_completion_event, classe
+La classe `task_completion_event` vous permet de retarder l'exécution d'une tâche jusqu'à ce qu'une condition soit satisfaite, ou de démarrer une tâche en réponse à un événement externe.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+template<typename _ResultType>
+class task_completion_event;
+
+template<>
+class task_completion_event<void>;
 ```  
-template<  
-   typename _ResultType  
->  
-class task_completion_event;  
   
-template<>  
-class task_completion_event<void>;  
-```  
-  
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `_ResultType`  
  Type de résultat de cette classe `task_completion_event`.  
   
  `T`  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[task\_completion\_event::task\_completion\_event, constructeur](../Topic/task_completion_event::task_completion_event%20Constructor.md)|Construit un objet `task_completion_event`.|  
-  
-### Méthodes publiques  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[task\_completion\_event::set, méthode](../Topic/task_completion_event::set%20Method.md)|Surchargé.  Définit l'événement d'achèvement de tâche.|  
-|[task\_completion\_event::set\_exception, méthode](../Topic/task_completion_event::set_exception%20Method.md)|Surchargé.  Propage une exception à toutes les tâches associées à cet événement.|  
+|----------|-----------------|  
+|[task_completion_event, constructeur](#ctor)|Construit un objet `task_completion_event`.|  
   
-## Notes  
- Utilisez une tâche créée à partir d'un événement d'achèvement de tâche lorsque votre scénario requiert que vous créiez une tâche qui se terminer, et par conséquent, que ses continuations soient planifiées pour l'exécution, à un moment donné dans le futur.  La classe `task_completion_event` doit avoir le même type que la tâche que vous créez, et l'appel de la méthode Set sur l'événement d'achèvement de tâche avec une valeur de ce type provoquera l'exécution de la tâche associée, et fournir cette valeur à la suite de ses continuations.  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
- Si l'événement d'achèvement de tâche n'est jamais signalé, toutes les tâches créées à partir de cette source seront annulées une fois détruite.  
+|Nom|Description|  
+|----------|-----------------|  
+|[Set, méthode](#set)|Surchargé. Définit l’événement de fin de tâche.|  
+|[set_exception (méthode)](#set_exception)|Surchargé. Propage une exception à toutes les tâches associées à cet événement.|  
   
- `task_completion_event` se comporte comme un pointeur intelligent, et doit être passé par valeur.  
+## <a name="remarks"></a>Remarques  
+ Utilisez une tâche créée à partir d’un événement de fin de tâche quand votre scénario vous oblige à créer une tâche qui va se terminer. La continuation de son exécution est ainsi planifiée, à un moment donné dans le futur. Le `task_completion_event` doit avoir le même type que la tâche que vous créez et l'appel de la méthode set sur l'événement de fin de tâche avec une valeur de ce type entraîne la fin de tâche associée et fournit cette valeur comme résultat de la continuation de la tâche.  
   
-## Hiérarchie d'héritage  
+ Si l'événement de fin de tâche n'est jamais signalé, toutes les tâches créées à partir de celle-ci seront annulées durant sa destruction.  
+  
+ `task_completion_event` se comporte comme un pointeur intelligent et doit être passé par valeur.  
+  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `task_completion_event`  
   
-## Configuration requise  
- **En\-tête :** ppltasks.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** ppltasks.h  
   
- **Espace de noms :** concurrency  
+ **Espace de noms :** concurrency  
   
-## Voir aussi  
- [concurrency, espace de noms](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [task Class](http://msdn.microsoft.com/fr-fr/5389e8a5-5038-40b6-844a-55e9b58ad35f)
+##  <a name="a-nameseta-set"></a><a name="set"></a>ensemble 
+
+ Définit l’événement de fin de tâche.  
+  
+```
+bool set(_ResultType _Result) const ;
+
+bool set() const ;
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `_Result`  
+ Le résultat pour définir cet événement.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ La méthode retourne `true` si elle a réussi dans la définition de l’événement. Elle retourne `false` si l’événement est déjà défini.  
+  
+### <a name="remarks"></a>Remarques  
+ En présence de plusieurs ou d’appels simultanés à `set`, seul le premier appel réussit et que son résultat (le cas échéant) est stocké dans l’événement d’achèvement de tâche. Les jeux restants sont ignorés et la méthode retourne la valeur false. Lorsque vous définissez un événement d’achèvement de tâche, toutes les tâches créés à partir qu’événements seront termine immédiatement et ses continuations, le cas échéant, sont planifiées. Tâches des objets d’achèvement qui ont un `_ResultType` autre que `void` passe la valeur de leur continuation.  
+  
+##  <a name="a-namesetexceptiona-setexception"></a><a name="set_exception"></a>set_exception 
+
+ Propage une exception à toutes les tâches associées à cet événement.  
+  
+```
+template<typename _E>
+__declspec(noinline) bool set_exception(_E _Except) const;
+
+__declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const ;
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `_E`  
+ `_Except`  
+ `_ExceptionPtr`  
+  
+### <a name="return-value"></a>Valeur de retour  
+  
+##  <a name="a-namectora-taskcompletionevent"></a><a name="ctor"></a>task_completion_event 
+
+ Construit un objet `task_completion_event`.  
+  
+```
+task_completion_event();
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [accès concurrentiel Namespace](concurrency-namespace.md)
+

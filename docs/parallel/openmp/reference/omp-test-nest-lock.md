@@ -1,33 +1,48 @@
 ---
-title: "omp_test_nest_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_test_nest_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_test_nest_lock OpenMP function"
+title: omp_test_nest_lock | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- omp_test_nest_lock
+dev_langs:
+- C++
+helpviewer_keywords:
+- omp_test_nest_lock OpenMP function
 ms.assetid: 4c909bbe-80e0-4100-aca6-d415d7dc5294
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# omp_test_nest_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 61f1a227400354a9d8c22f87e14093e6992a950e
+ms.lasthandoff: 02/24/2017
 
-Essaie de définir un verrou empilable mais ne bloque pas l'exécution des threads.  
+---
+# <a name="omptestnestlock"></a>omp_test_nest_lock
+Tente de définir un verrou pouvant mais ne bloque pas l’exécution du thread.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int omp_test_nest_lock(  
@@ -35,16 +50,16 @@ int omp_test_nest_lock(
 );  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
  où,  
   
  `lock`  
- une variable du type [omp\_nest\_lock\_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) qui a été initialisé avec [omp\_init\_nest\_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
+ Une variable de type [être imbriqué omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) qui a été initialisée avec [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
   
-## Notes  
- Pour plus d'informations, consultez [3.2.5 omp\_test\_lock and omp\_test\_nest\_lock Functions](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).  
+## <a name="remarks"></a>Remarques  
+ Pour plus d’informations, consultez [3.2.5 fonctions omp_test_lock and omp_test_nest_lock](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // omp_test_nest_lock.cpp  
@@ -82,36 +97,39 @@ int main() {
 }  
 ```  
   
-  **Thread 1 \- nestable\_lock interrompu**  
-**thread 0 \- pour acquérir le nestable\_lock**  
-**Thread 1 \- nestable\_lock acquis par le nouveau**  
-**thread 0 \- pour acquérir le nestable\_lock**  
-**thread 1 \- nestable\_lock finale**  
-**thread 0 \- pour acquérir le nestable\_lock**  
-**thread 1 \- nestable\_lock finale**  
-**thread 0 \- pour acquérir le nestable\_lock**  
-**Thread 3 \- nestable\_lock interrompu**  
-**thread 0 \- pour acquérir le nestable\_lock**  
-**Thread 3 \- nestable\_lock acquis par le nouveau**  
-**thread 0 \- pour acquérir le nestable\_lock**  
-**thread 2 \- pour acquérir le nestable\_lock**  
-**thread 3 \- nestable\_lock finale**  
-**thread 2 \- pour acquérir le nestable\_lock**  
-**thread 3 \- nestable\_lock finale**  
-**thread 2 \- pour acquérir le nestable\_lock**  
-**Thread 0 \- nestable\_lock interrompu**  
-**thread 2 \- pour acquérir le nestable\_lock**  
-**thread 2 \- pour acquérir le nestable\_lock**  
-**thread 2 \- pour acquérir le nestable\_lock**  
-**Thread 0 \- nestable\_lock acquis par le nouveau**  
-**thread 2 \- pour acquérir le nestable\_lock**  
-**thread 0 \- nestable\_lock finale**  
-**thread 2 \- pour acquérir le nestable\_lock**  
-**thread 0 \- nestable\_lock finale**  
-**thread 2 \- pour acquérir le nestable\_lock**  
-**Thread 2 \- nestable\_lock interrompu**  
-**Thread 2 \- nestable\_lock acquis par le nouveau**  
-**thread 2 \- nestable\_lock finale**  
-**thread 2 \- nestable\_lock finale**   
-## Voir aussi  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+Thread 1 - acquired nestable_lock  
+Thread 0 - failed to acquire nestable_lock  
+Thread 1 - acquired nestable_lock again  
+Thread 0 - failed to acquire nestable_lock  
+Thread 1 - released nestable_lock  
+Thread 0 - failed to acquire nestable_lock  
+Thread 1 - released nestable_lock  
+Thread 0 - failed to acquire nestable_lock  
+Thread 3 - acquired nestable_lock  
+Thread 0 - failed to acquire nestable_lock  
+Thread 3 - acquired nestable_lock again  
+Thread 0 - failed to acquire nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 3 - released nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 3 - released nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 0 - acquired nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 0 - acquired nestable_lock again  
+Thread 2 - failed to acquire nestable_lock  
+Thread 0 - released nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 0 - released nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 2 - acquired nestable_lock  
+Thread 2 - acquired nestable_lock again  
+Thread 2 - released nestable_lock  
+Thread 2 - released nestable_lock  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Fonctions](../../../parallel/openmp/reference/openmp-functions.md)

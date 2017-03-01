@@ -1,53 +1,86 @@
 ---
-title: "static_partitioner, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ppl/concurrency::static_partitioner"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "static_partitioner (classe)"
+title: static_partitioner, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ppl/concurrency::static_partitioner
+dev_langs:
+- C++
+helpviewer_keywords:
+- static_partitioner class
 ms.assetid: 2b3dbdf0-6eb9-49f6-8639-03df1d974143
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# static_partitioner, classe
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: f36b1e1dcc68d94bdebd8b7b10f4fec735ce9fb5
+ms.lasthandoff: 02/24/2017
 
-La classe d' `static_partitioner` représente un partitionnement statique de la plage itérée au sein de par `parallel_for`.  Le partitionneur divise la plage dans autant de segments comme il existe des ouvriers disponibles au planificateur underyling.  
+---
+# <a name="staticpartitioner-class"></a>static_partitioner, classe
+La classe `static_partitioner` représente un partitionnement statique de la plage itérée par `parallel_for`. Le partitionneur divise la plage en autant de segments que de travaux disponibles pour le planificateur sous-jacent.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+class static_partitioner;
 ```  
-class static_partitioner;  
-```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[static\_partitioner::static\_partitioner, constructeur](../Topic/static_partitioner::static_partitioner%20Constructor.md)|Construit un objet `static_partitioner`.|  
-|[static\_partitioner::~static\_partitioner, destructeur](../Topic/static_partitioner::~static_partitioner%20Destructor.md)|Détruit un objet `static_partitioner`.|  
+|----------|-----------------|  
+|[static_partitioner, constructeur](#ctor)|Construit un objet `static_partitioner`.|  
+|[~ static_partitioner, destructeur](#dtor)|Détruit un objet `static_partitioner`.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `static_partitioner`  
   
-## Configuration requise  
- **En\-tête :** ppl.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** ppl.h  
   
- Accès concurrentiel de**l'espace de noms :**  
+ **Espace de noms :** concurrency  
   
-## Voir aussi  
- [concurrency, espace de noms](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namedtora-staticpartitioner"></a><a name="dtor"></a>~ static_partitioner 
+
+ Détruit un objet `static_partitioner`.  
+  
+```
+~static_partitioner();
+```  
+  
+##  <a name="a-namectora-staticpartitioner"></a><a name="ctor"></a>static_partitioner 
+
+ Construit un objet `static_partitioner`.  
+  
+```
+static_partitioner();
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [accès concurrentiel Namespace](concurrency-namespace.md)
+
