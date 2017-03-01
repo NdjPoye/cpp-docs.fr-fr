@@ -1,35 +1,51 @@
 ---
-title: "Erreur du compilateur C2249 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2249"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2249"
+title: Erreur du compilateur C2249 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2249
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2249
 ms.assetid: bdd6697c-e04b-49b9-8e40-d9eb6d74f2b6
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Erreur du compilateur C2249
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 043c28c9fa11dc28425c58aea2efc6a2cefe4065
+ms.lasthandoff: 02/24/2017
 
-'membre' : aucun chemin accessible vers membre déclaré dans la 'classe' de base virtuelle  
+---
+# <a name="compiler-error-c2249"></a>Erreur du compilateur C2249
+'membre' : aucun chemin accessible vers membre déclaré dans la base virtuelle 'classe'  
   
- Le `member` est hérité d'une classe de base ou structure `virtual` non publique.  
+ Le `member` est héritée d’un publiques `virtual` classe de base ou une structure.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C2249 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C2249.  
   
 ```  
 // C2249.cpp  
@@ -48,8 +64,8 @@ int main() {
 }  
 ```  
   
-## Exemple  
- L'erreur C2249 peut également se produire si vous essayez d'assigner un flux de données de la bibliothèque C\+\+ standard à un autre flux de données.  L'exemple suivant génère l'erreur C2249 :  
+## <a name="example"></a>Exemple  
+ C2249 peut également se produire si vous essayez d’assigner un flux de données à partir de la bibliothèque C++ Standard dans un autre flux.  L’exemple suivant génère C2249.  
   
 ```  
 // C2249_2.cpp  

@@ -1,91 +1,538 @@
 ---
-title: "Classe CD2DGeometry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CD2DGeometry"
-  - "afxrendertarget/CD2DGeometry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CD2DGeometry (classe)"
+title: Classe de CD2DGeometry | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CD2DGeometry
+- afxrendertarget/CD2DGeometry
+dev_langs:
+- C++
+helpviewer_keywords:
+- CD2DGeometry class
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# Classe CD2DGeometry
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 948b2e2154259557e3a52c2045586cffce2a16f8
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cd2dgeometry-class"></a>CD2DGeometry, classe
 Wrapper pour ID2D1Geometry.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 class CD2DGeometry : public CD2DResource;  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[CD2DGeometry::CD2DGeometry](../Topic/CD2DGeometry::CD2DGeometry.md)|Construit un objet CD2DGeometry.|  
-|[CD2DGeometry::~CD2DGeometry](../Topic/CD2DGeometry::~CD2DGeometry.md)|Le destructeur.  Appelé lorsqu'un objet de géométrie D2D est détruit.|  
-  
-### Méthodes publiques  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CD2DGeometry::Attach](../Topic/CD2DGeometry::Attach.md)|Attache l'interface de la ressource existante à l'objet|  
-|[CD2DGeometry::CombineWithGeometry](../Topic/CD2DGeometry::CombineWithGeometry.md)|Combine cette géométrie avec la géométrie spécifiée et stocke le résultat dans un ID2D1SimplifiedGeometrySink.|  
-|[CD2DGeometry::CompareWithGeometry](../Topic/CD2DGeometry::CompareWithGeometry.md)|Décrit l'intersection entre cette géométrie et la géométrie spécifiée.  La comparaison est exécutée à l'aide de la tolérance d'aplatissement spécifiée.|  
-|[CD2DGeometry::ComputeArea](../Topic/CD2DGeometry::ComputeArea.md)|Calcule la zone de la géométrie après sa transformation par la matrice spécifiée et son aplatissement à l'aide de la tolérance spécifiée.|  
-|[CD2DGeometry::ComputeLength](../Topic/CD2DGeometry::ComputeLength.md)|Calcule la longueur de la géométrie comme si chaque segment était déroulé dans une ligne.|  
-|[CD2DGeometry::ComputePointAtLength](../Topic/CD2DGeometry::ComputePointAtLength.md)|Calcule le point et le vecteur de la tangente à la distance spécifiée le long de la géométrie après sa transformation par la matrice spécifiée et aplati à l'aide de la tolérance spécifiée.|  
-|[CD2DGeometry::Destroy](../Topic/CD2DGeometry::Destroy.md)|Détruit un objet CD2DGeometry.  \(Substitue [CD2DResource::Destroy](../Topic/CD2DResource::Destroy.md).\)|  
-|[CD2DGeometry::Detach](../Topic/CD2DGeometry::Detach.md)|Détache l'interface de la ressource de l'objet|  
-|[CD2DGeometry::FillContainsPoint](../Topic/CD2DGeometry::FillContainsPoint.md)|Indique si la zone rempli par la géométrie contient le point spécifié selon la tolérance de l'aplatissement spécifiée.|  
-|[CD2DGeometry::Get](../Topic/CD2DGeometry::Get.md)|Renvoie l'interface ID2D1Geometry|  
-|[CD2DGeometry::GetBounds](../Topic/CD2DGeometry::GetBounds.md)||  
-|[CD2DGeometry::GetWidenedBounds](../Topic/CD2DGeometry::GetWidenedBounds.md)|Obtient les limites de la géométrie après son élargissement par la largeur du trait et style spécifiés et après sa transformation par la matrice spécifiée.|  
-|[CD2DGeometry::IsValid](../Topic/CD2DGeometry::IsValid.md)|Vérifie la validité des ressources \(substitue [CD2DResource::IsValid](../Topic/CD2DResource::IsValid.md).\)|  
-|[CD2DGeometry::Outline](../Topic/CD2DGeometry::Outline.md)|Calcule le plan de la géométrie et enregistre le résultat dans un ID2D1SimplifiedGeometrySink.|  
-|[CD2DGeometry::Simplify](../Topic/CD2DGeometry::Simplify.md)|Crée une version simplifiée de la géométrie que contient uniquement des lignes et \(éventuellement\) des courbes de Bézier cubiques, puis écrit le résultat dans un objet ID2D1SimplifiedGeometrySink.|  
-|[CD2DGeometry::StrokeContainsPoint](../Topic/CD2DGeometry::StrokeContainsPoint.md)|Détermine si le trait de la géométrie contient le point spécifié en fonction de l'épaisseur du trait, du style et de la transformation spécifiés.|  
-|[CD2DGeometry::Tessellate](../Topic/CD2DGeometry::Tessellate.md)|Crée un ensemble de triangles enroulés dans le sens des aiguilles d'une montre qui couvrent la géométrie après sa transformation à l'aide de la matrice spécifiée et son aplatissement à l'aide de la tolérance spécifiée.|  
-|[CD2DGeometry::Widen](../Topic/CD2DGeometry::Widen.md)|Élargit la géométrie par le trait spécifié et écrit le résultat dans ID2D1SimplifiedGeometrySink après sa transformation par la matrice spécifiée et son aplatissement à l'aide de la tolérance spécifiée.|  
+|----------|-----------------|  
+|[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Construit un objet CD2DGeometry.|  
+|[CD2DGeometry :: ~ CD2DGeometry](#_dtorcd2dgeometry)|Destructeur. Appelé lorsqu’un objet de géométrie D2D est détruit.|  
   
-### Opérateurs publics  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CD2DGeometry::operator ID2D1Geometry\*](../Topic/CD2DGeometry::operator%20ID2D1Geometry*.md)|Renvoie l'interface ID2D1Geometry|  
+|----------|-----------------|  
+|[CD2DGeometry::Attach](#attach)|Attache existant à l’objet interface de la ressource|  
+|[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|Combine cette géométrie avec la géométrie spécifiée et stocke le résultat dans un ID2D1SimplifiedGeometrySink.|  
+|[CD2DGeometry::CompareWithGeometry](#comparewithgeometry)|Décrit l’intersection entre cette géométrie et la géométrie spécifiée. La comparaison est effectuée à l’aide de la tolérance d’aplatissement spécifiée.|  
+|[CD2DGeometry::ComputeArea](#computearea)|Calcule la surface de la géométrie après qu’elle a été transformés par la matrice spécifiée et son aplatissement à l’aide de la tolérance spécifiée.|  
+|[CD2DGeometry::ComputeLength](#computelength)|Calcule la longueur de la géométrie comme si chaque segment étaient déroulées dans une ligne.|  
+|[CD2DGeometry::ComputePointAtLength](#computepointatlength)|Calcule le vecteur de point et la tangente à la distance spécifiée le long de la géométrie après qu’elle a été transformés par la matrice spécifiée et son aplatissement à l’aide de la tolérance spécifiée.|  
+|[CD2DGeometry::Destroy](#destroy)|Détruit un objet CD2DGeometry. (Substitue [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
+|[CD2DGeometry::Detach](#detach)|Détache l’interface de la ressource à partir de l’objet|  
+|[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|Indique si la zone remplie par la géométrie contient le point spécifié selon la tolérance d’aplatissement spécifiée.|  
+|[CD2DGeometry::Get](#get)|Renvoie l’interface ID2D1Geometry|  
+|[CD2DGeometry::GetBounds](#getbounds)||  
+|[CD2DGeometry::GetWidenedBounds](#getwidenedbounds)|Obtient les limites de la géométrie après que qu’il a été élargie par la largeur de trait spécifié et le style et transformé par la matrice spécifiée.|  
+|[CD2DGeometry::IsValid](#isvalid)|Vérifie la validité des ressources (substitue [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
+|[CD2DGeometry::Outline](#outline)|Calcule le plan de la géométrie et écrit le résultat dans un ID2D1SimplifiedGeometrySink.|  
+|[CD2DGeometry::Simplify](#simplify)|Crée une version simplifiée de la géométrie qui contient uniquement des lignes et des courbes de Bézier cubiques (éventuellement) et écrit le résultat dans un ID2D1SimplifiedGeometrySink.|  
+|[CD2DGeometry::StrokeContainsPoint](#strokecontainspoint)|Détermine si le trait de la géométrie contient le point spécifié selon l’épaisseur du trait spécifié, le style et la transformation.|  
+|[CD2DGeometry::Tessellate](#tessellate)|Crée un ensemble de triangles enroulés dans le sens horaire qui couvrent la géométrie après avoir été transformés à l’aide de la matrice spécifiée et son aplatissement à l’aide de la tolérance spécifiée.|  
+|[CD2DGeometry::widen](#widen)|Élargit la géométrie par le trait spécifié et écrit le résultat dans un ID2D1SimplifiedGeometrySink après avoir été transformés par la matrice spécifiée et son aplatissement à l’aide de la tolérance spécifiée.|  
   
-### Données membres protégées  
+### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CD2DGeometry::m\_pGeometry](../Topic/CD2DGeometry::m_pGeometry.md)|Pointeur vers un ID2D1Geometry.|  
+|----------|-----------------|  
+|[CD2DGeometry::operator ID2D1Geometry *](#operator_id2d1geometry_star)|Renvoie l’interface ID2D1Geometry|  
   
-## Hiérarchie d'héritage  
+### <a name="protected-data-members"></a>Membres de données protégés  
+  
+|Nom|Description|  
+|----------|-----------------|  
+|[CD2DGeometry::m_pGeometry](#m_pgeometry)|Pointeur vers un ID2D1Geometry.|  
+  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
- [CD2DGeometry](../../mfc/reference/cd2dgeometry-class.md)  
+ `CD2DGeometry`  
   
-## Configuration requise  
- **En\-tête :** afxrendertarget.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** afxrendertarget.h  
   
-## Voir aussi  
+##  <a name="a-namedtorcd2dgeometrya--cd2dgeometrycd2dgeometry"></a><a name="_dtorcd2dgeometry"></a>CD2DGeometry :: ~ CD2DGeometry  
+ Destructeur. Appelé lorsqu’un objet de géométrie D2D est détruit.  
+  
+```  
+virtual ~CD2DGeometry();
+```  
+  
+##  <a name="a-nameattacha--cd2dgeometryattach"></a><a name="attach"></a>CD2DGeometry::Attach  
+ Attache existant à l’objet interface de la ressource  
+  
+```  
+void Attach(ID2D1Geometry* pResource);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `pResource`  
+ Interface de la ressource existante. Ne peut pas être NULL  
+  
+##  <a name="a-namecd2dgeometrya--cd2dgeometrycd2dgeometry"></a><a name="cd2dgeometry"></a>CD2DGeometry::CD2DGeometry  
+ Construit un objet CD2DGeometry.  
+  
+```  
+CD2DGeometry(
+    CRenderTarget* pParentTarget,  
+    BOOL bAutoDestroy = TRUE);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `pParentTarget`  
+ Pointeur vers la cible de rendu.  
+  
+ `bAutoDestroy`  
+ Indique que l’objet sera détruit par le propriétaire (pParentTarget).  
+  
+##  <a name="a-namecombinewithgeometrya--cd2dgeometrycombinewithgeometry"></a><a name="combinewithgeometry"></a>CD2DGeometry::CombineWithGeometry  
+ Combine cette géométrie avec la géométrie spécifiée et stocke le résultat dans un ID2D1SimplifiedGeometrySink.  
+  
+```  
+BOOL CombineWithGeometry(
+    CD2DGeometry& inputGeometry,  
+    D2D1_COMBINE_MODE combineMode,  
+    const D2D1_MATRIX_3X2_F& inputGeometryTransform,  
+    ID2D1SimplifiedGeometrySink* geometrySink,  
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `inputGeometry`  
+ Géométrie à combiner avec cette instance.  
+  
+ `combineMode`  
+ Le type d’opération de combinaison à effectuer.  
+  
+ `inputGeometryTransform`  
+ La transformation à appliquer à inputGeometry avant la combinaison.  
+  
+ `geometrySink`  
+ Le résultat de l’opération de combinaison.  
+  
+ `flatteningTolerance`  
+ Limites maximales de la distance entre les points de l’approximation polygonale des géométries. Plus petites valeurs produisent des résultats plus précis mais ralentissent l’exécution.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.  
+  
+##  <a name="a-namecomparewithgeometrya--cd2dgeometrycomparewithgeometry"></a><a name="comparewithgeometry"></a>CD2DGeometry::CompareWithGeometry  
+ Décrit l’intersection entre cette géométrie et la géométrie spécifiée. La comparaison est effectuée à l’aide de la tolérance d’aplatissement spécifiée.  
+  
+```  
+D2D1_GEOMETRY_RELATION CompareWithGeometry(
+    CD2DGeometry& inputGeometry,  
+    const D2D1_MATRIX_3X2_F& inputGeometryTransform,  
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `inputGeometry`  
+ Géométrie à tester.  
+  
+ `inputGeometryTransform`  
+ La transformation à appliquer à inputGeometry.  
+  
+ `flatteningTolerance`  
+ Limites maximales de la distance entre les points de l’approximation polygonale des géométries. Plus petites valeurs produisent des résultats plus précis mais ralentissent l’exécution.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.  
+  
+##  <a name="a-namecomputeareaa--cd2dgeometrycomputearea"></a><a name="computearea"></a>CD2DGeometry::ComputeArea  
+ Calcule la surface de la géométrie après qu’elle a été transformés par la matrice spécifiée et son aplatissement à l’aide de la tolérance spécifiée.  
+  
+```  
+BOOL ComputeArea(
+    const D2D1_MATRIX_3X2_F& worldTransform,  
+    FLOAT& area,  
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `worldTransform`  
+ La transformation à appliquer à cette géométrie avant de calculer sa zone.  
+  
+ `area`  
+ Lorsque cette méthode est retournée, contient un pointeur vers la zone de la version transformée et aplatie de cette géométrie. Vous devez allouer le stockage pour ce paramètre.  
+  
+ `flatteningTolerance`  
+ Limites maximales de la distance entre les points de l’approximation polygonale de la géométrie. Plus petites valeurs produisent des résultats plus précis mais ralentissent l’exécution.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.  
+  
+##  <a name="a-namecomputelengtha--cd2dgeometrycomputelength"></a><a name="computelength"></a>CD2DGeometry::ComputeLength  
+ Calcule la longueur de la géométrie comme si chaque segment étaient déroulées dans une ligne.  
+  
+```  
+BOOL ComputeLength(
+    const D2D1_MATRIX_3X2_F& worldTransform,  
+    FLOAT& length,  
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `worldTransform`  
+ Transformation à appliquer à la géométrie avant de calculer sa longueur.  
+  
+ `length`  
+ Lorsque cette méthode est retournée, contient un pointeur vers la longueur de la géométrie. Pour les géométries fermées, la longueur inclut un segment de fermeture implicite. Vous devez allouer le stockage pour ce paramètre.  
+  
+ `flatteningTolerance`  
+ Limites maximales de la distance entre les points de l’approximation polygonale de la géométrie. Plus petites valeurs produisent des résultats plus précis mais ralentissent l’exécution.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.  
+  
+##  <a name="a-namecomputepointatlengtha--cd2dgeometrycomputepointatlength"></a><a name="computepointatlength"></a>CD2DGeometry::ComputePointAtLength  
+ Calcule le vecteur de point et la tangente à la distance spécifiée le long de la géométrie après qu’elle a été transformés par la matrice spécifiée et son aplatissement à l’aide de la tolérance spécifiée.  
+  
+```  
+BOOL ComputePointAtLength(
+    FLOAT length,  
+    const D2D1_MATRIX_3X2_F& worldTransform,  
+    CD2DPointF& point,  
+    CD2DPointF& unitTangentVector,  
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `length`  
+ La distance le long de la géométrie du point et touchant à rechercher. Si cette distance est inférieure à 0, cette méthode calcule le premier point dans la géométrie. Si cette distance est supérieure à la longueur de la géométrie, cette méthode calcule le dernier point dans la géométrie.  
+  
+ `worldTransform`  
+ Transformation à appliquer à la géométrie avant de calculer le point spécifié et la tangente.  
+  
+ `point`  
+ L’emplacement à la distance spécifiée le long de la géométrie. Si la géométrie est vide, ce point contient NaN x et y valeurs.  
+  
+ `unitTangentVector`  
+ Lorsque cette méthode est retournée, contient un pointeur vers le vecteur de tangente à la distance spécifiée le long de la géométrie. Si la géométrie est vide, ce vecteur contient NaN x et y valeurs. Vous devez allouer le stockage pour ce paramètre.  
+  
+ `flatteningTolerance`  
+ Limites maximales de la distance entre les points de l’approximation polygonale de la géométrie. Plus petites valeurs produisent des résultats plus précis mais ralentissent l’exécution.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.  
+  
+##  <a name="a-namedestroya--cd2dgeometrydestroy"></a><a name="destroy"></a>CD2DGeometry::Destroy  
+ Détruit un objet CD2DGeometry.  
+  
+```  
+virtual void Destroy();
+```  
+  
+##  <a name="a-namedetacha--cd2dgeometrydetach"></a><a name="detach"></a>CD2DGeometry::Detach  
+ Détache l’interface de la ressource à partir de l’objet  
+  
+```  
+ID2D1Geometry* Detach();
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Pointeur vers l’interface de la ressource détachée.  
+  
+##  <a name="a-namefillcontainspointa--cd2dgeometryfillcontainspoint"></a><a name="fillcontainspoint"></a>CD2DGeometry::FillContainsPoint  
+ Indique si la zone remplie par la géométrie contient le point spécifié selon la tolérance d’aplatissement spécifiée.  
+  
+```  
+BOOL FillContainsPoint(
+    CD2DPointF point,  
+    const D2D1_MATRIX_3X2_F& worldTransform,  
+    BOOL* contains,  
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `point`  
+ Point à tester.  
+  
+ `worldTransform`  
+ Transformation à appliquer à la géométrie avant le test de la relation contenant-contenu.  
+  
+ `contains`  
+ Lorsque cette méthode est retournée, contient une valeur booléenne qui est TRUE si la zone remplie par la géométrie contient le point ; Sinon, FALSE. Vous devez allouer le stockage pour ce paramètre.  
+  
+ `flatteningTolerance`  
+ La précision numérique avec lequel l’intersection de chemin d’accès et un tracé géométrique précise est calculée. Points manquants remplissage inférieur à la tolérance sont toujours considérés à l’intérieur. Plus petites valeurs produisent des résultats plus précis mais ralentissent l’exécution.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.  
+  
+##  <a name="a-namegeta--cd2dgeometryget"></a><a name="get"></a>CD2DGeometry::Get  
+ Renvoie l’interface ID2D1Geometry  
+  
+```  
+ID2D1Geometry* Get();
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Pointeur vers une interface de ID2D1Geometry ou NULL si l’objet n’est pas encore initialisé.  
+  
+##  <a name="a-namegetboundsa--cd2dgeometrygetbounds"></a><a name="getbounds"></a>CD2DGeometry::GetBounds  
+  
+```   
+BOOL GetBounds(
+const D2D1_MATRIX_3X2_F& worldTransform,  
+CD2DRectF& bounds) const; 
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `worldTransform`  
+ `bounds`  
+  
+### <a name="return-value"></a>Valeur de retour  
+  
+##  <a name="a-namegetwidenedboundsa--cd2dgeometrygetwidenedbounds"></a><a name="getwidenedbounds"></a>CD2DGeometry::GetWidenedBounds  
+ Obtient les limites de la géométrie après que qu’il a été élargie par la largeur de trait spécifié et le style et transformé par la matrice spécifiée.  
+  
+```  
+BOOL GetWidenedBounds(
+    FLOAT strokeWidth,  
+    ID2D1StrokeStyle* strokeStyle,  
+    const D2D1_MATRIX_3X2_F& worldTransform,  
+    CD2DRectF& bounds,  
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `strokeWidth`  
+ La quantité d’élargissement de la géométrie en traçant le contour.  
+  
+ `strokeStyle`  
+ Style de trait qui élargit la géométrie.  
+  
+ `worldTransform`  
+ Une transformation à appliquer à la géométrie après la transformation de la géométrie et la géométrie a été tracée.  
+  
+ `bounds`  
+ Lorsque cette méthode est retournée, contient les limites de la géométrie élargie. Vous devez allouer le stockage pour ce paramètre.  
+  
+ `flatteningTolerance`  
+ Limites maximales de la distance entre les points de l’approximation polygonale des géométries. Plus petites valeurs produisent des résultats plus précis mais ralentissent l’exécution.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.  
+  
+##  <a name="a-nameisvalida--cd2dgeometryisvalid"></a><a name="isvalid"></a>CD2DGeometry::IsValid  
+ Vérifications de validité des ressources  
+  
+```  
+virtual BOOL IsValid() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ TRUE si la ressource est valide ; Sinon, FALSE.  
+  
+##  <a name="a-namempgeometrya--cd2dgeometrympgeometry"></a><a name="m_pgeometry"></a>CD2DGeometry::m_pGeometry  
+ Pointeur vers un ID2D1Geometry.  
+  
+```  
+ID2D1Geometry* m_pGeometry;  
+```  
+  
+##  <a name="a-nameoperatorid2d1geometrystara--cd2dgeometryoperator-id2d1geometry"></a><a name="operator_id2d1geometry_star"></a>CD2DGeometry::operator ID2D1Geometry *  
+ Renvoie l’interface ID2D1Geometry  
+  
+```  
+operator ID2D1Geometry*();
+```   
+  
+### <a name="return-value"></a>Valeur de retour  
+ Pointeur vers une interface de ID2D1Geometry ou NULL si l’objet n’est pas encore initialisé.  
+  
+##  <a name="a-nameoutlinea--cd2dgeometryoutline"></a><a name="outline"></a>CD2DGeometry::Outline  
+ Calcule le plan de la géométrie et écrit le résultat dans un ID2D1SimplifiedGeometrySink.  
+  
+```  
+BOOL Outline(
+    const D2D1_MATRIX_3X2_F& worldTransform,  
+    ID2D1SimplifiedGeometrySink* geometrySink,  
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `worldTransform`  
+ La transformation à appliquer au contour de la géométrie.  
+  
+ `geometrySink`  
+ Le ID2D1SimplifiedGeometrySink auquel la géométrie a transformé le plan est ajouté.  
+  
+ `flatteningTolerance`  
+ Limites maximales de la distance entre les points de l’approximation polygonale de la géométrie. Plus petites valeurs produisent des résultats plus précis mais ralentissent l’exécution.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.  
+  
+##  <a name="a-namesimplifya--cd2dgeometrysimplify"></a><a name="simplify"></a>CD2DGeometry::Simplify  
+ Crée une version simplifiée de la géométrie qui contient uniquement des lignes et des courbes de Bézier cubiques (éventuellement) et écrit le résultat dans un ID2D1SimplifiedGeometrySink.  
+  
+```  
+BOOL Simplify(
+    D2D1_GEOMETRY_SIMPLIFICATION_OPTION simplificationOption,  
+    const D2D1_MATRIX_3X2_F& worldTransform,  
+    ID2D1SimplifiedGeometrySink* geometrySink,  
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `simplificationOption`  
+ Une valeur qui indique si la géométrie simplifiée doit contenir des courbes.  
+  
+ `worldTransform`  
+ Transformation à appliquer à la géométrie simplifiée.  
+  
+ `geometrySink`  
+ Le ID2D1SimplifiedGeometrySink auquel la géométrie simplifiée est ajoutée.  
+  
+ `flatteningTolerance`  
+ Limites maximales de la distance entre les points de l’approximation polygonale de la géométrie. Plus petites valeurs produisent des résultats plus précis mais ralentissent l’exécution.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.  
+  
+##  <a name="a-namestrokecontainspointa--cd2dgeometrystrokecontainspoint"></a><a name="strokecontainspoint"></a>CD2DGeometry::StrokeContainsPoint  
+ Détermine si le trait de la géométrie contient le point spécifié selon l’épaisseur du trait spécifié, le style et la transformation.  
+  
+```  
+BOOL StrokeContainsPoint(
+    CD2DPointF point,  
+    FLOAT strokeWidth,  
+    ID2D1StrokeStyle* strokeStyle,  
+    const D2D1_MATRIX_3X2_F& worldTransform,  
+    BOOL* contains,  
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `point`  
+ Point à tester pour la relation contenant-contenu.  
+  
+ `strokeWidth`  
+ L’épaisseur de trait à appliquer.  
+  
+ `strokeStyle`  
+ Style de trait à appliquer.  
+  
+ `worldTransform`  
+ Transformation à appliquer à la géométrie de tracé.  
+  
+ `contains`  
+ Lorsque cette méthode est retournée, contient une valeur booléenne définie sur TRUE si le trait de la géométrie contient le point spécifié ; Sinon, FALSE. Vous devez allouer le stockage pour ce paramètre.  
+  
+ `flatteningTolerance`  
+ La précision numérique avec lequel l’intersection de chemin d’accès et un tracé géométrique précise est calculée. Points manquants le contour inférieur à la tolérance sont toujours considérés à l’intérieur. Plus petites valeurs produisent des résultats plus précis mais ralentissent l’exécution.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.  
+  
+##  <a name="a-nametessellatea--cd2dgeometrytessellate"></a><a name="tessellate"></a>CD2DGeometry::Tessellate  
+ Crée un ensemble de triangles enroulés dans le sens horaire qui couvrent la géométrie après avoir été transformés à l’aide de la matrice spécifiée et son aplatissement à l’aide de la tolérance spécifiée.  
+  
+```  
+BOOL Tessellate(
+    const D2D1_MATRIX_3X2_F& worldTransform,  
+    ID2D1TessellationSink* tessellationSink,  
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `worldTransform`  
+ La transformation à appliquer à cette géométrie, ou NULL.  
+  
+ `tessellationSink`  
+ Le ID2D1TessellationSink auquel est ajouté.  
+  
+ `flatteningTolerance`  
+ Limites maximales de la distance entre les points de l’approximation polygonale de la géométrie. Plus petites valeurs produisent des résultats plus précis mais ralentissent l’exécution.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.  
+  
+##  <a name="a-namewidena--cd2dgeometrywiden"></a><a name="widen"></a>CD2DGeometry::widen  
+ Élargit la géométrie par le trait spécifié et écrit le résultat dans un ID2D1SimplifiedGeometrySink après avoir été transformés par la matrice spécifiée et son aplatissement à l’aide de la tolérance spécifiée.  
+  
+```  
+BOOL Widen(
+    FLOAT strokeWidth,  
+    ID2D1StrokeStyle* strokeStyle,  
+    const D2D1_MATRIX_3X2_F& worldTransform,  
+    ID2D1SimplifiedGeometrySink* geometrySink,  
+    FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `strokeWidth`  
+ La quantité d’élargissement de la géométrie.  
+  
+ `strokeStyle`  
+ Le style de trait à appliquer à la géométrie, ou NULL.  
+  
+ `worldTransform`  
+ Transformation à appliquer à la géométrie après son élargissement.  
+  
+ `geometrySink`  
+ Le ID2D1SimplifiedGeometrySink auquel la géométrie élargie est ajoutée.  
+  
+ `flatteningTolerance`  
+ Limites maximales de la distance entre les points de l’approximation polygonale de la géométrie. Plus petites valeurs produisent des résultats plus précis mais ralentissent l’exécution.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.  
+  
+## <a name="see-also"></a>Voir aussi  
  [Classes](../../mfc/reference/mfc-classes.md)
+

@@ -1,46 +1,62 @@
 ---
-title: "COleControlModule Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "COleControlModule"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COleControlModule class"
-  - "control modules"
-  - "MFC ActiveX controls, OLE control modules"
-  - "OLE control modules"
+title: Classe de COleControlModule | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- COleControlModule
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE control modules
+- MFC ActiveX controls, OLE control modules
+- COleControlModule class
+- control modules
 ms.assetid: 0721724d-d4af-4eda-ad34-5a2b27810dd4
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# COleControlModule Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
+ms.openlocfilehash: 2e77c386875d25f47f0cc07eb3b7d315f1678c56
+ms.lasthandoff: 02/24/2017
 
-La classe de base dont vous dérivez un objet de module de contrôle OLE.  
+---
+# <a name="colecontrolmodule-class"></a>Classe de COleControlModule
+Classe de base à partir de laquelle vous dérivez un objet de module de contrôle OLE.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 class COleControlModule : public CWinApp  
 ```  
   
-## Notes  
- Cette classe fournit les fonctions membres pour initialiser votre package de commande.  Chaque package de contrôle OLE qui utilise les classes MFC \(Microsoft Foundation peut uniquement contenir un objet dérivé d' `COleControlModule`.  Cet objet est généré lorsque d'autres objets globaux C\+\+ sont construits.  Déclarez votre objet dérivé d' `COleControlModule` au niveau global.  
+## <a name="remarks"></a>Notes  
+ Cette classe fournit des fonctions membres pour initialiser le module de votre contrôle. Chaque module de contrôle OLE qui utilise les classes Microsoft Foundation ne peut contenir un objet dérivé de `COleControlModule`. Cet objet est construit lorsque les autres objets globaux C++ sont construites. Déclarez votre dérivée `COleControlModule` objet au niveau global.  
   
- Pour plus d'informations sur l'utilisation de la classe d' `COleControlModule` , consultez la classe et l'article [Contrôles ActiveX](../../mfc/mfc-activex-controls.md)de [CWinApp](../../mfc/reference/cwinapp-class.md) .  
+ Pour plus d’informations sur l’utilisation de la `COleControlModule` de classe, consultez la [CWinApp](../../mfc/reference/cwinapp-class.md) classe et l’article [contrôles ActiveX](../../mfc/mfc-activex-controls.md).  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -51,9 +67,13 @@ class COleControlModule : public CWinApp
   
  `COleControlModule`  
   
-## Configuration requise  
- **Header:** afxctl.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** afxctl.h  
   
-## Voir aussi  
- [exemple MFC TESTHELP](../../top/visual-cpp-samples.md)   
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>Voir aussi  
+ [Exemple MFC TESTHELP](../../visual-cpp-samples.md)   
+ [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)
+
+
+
+

@@ -1,36 +1,52 @@
 ---
-title: "Erreur du compilateur C2327 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2327"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2327"
+title: Erreur du compilateur C2327 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2327
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Erreur du compilateur C2327
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 62834115e3ad9c9733326a1bc94e5fa51209f485
+ms.lasthandoff: 02/24/2017
 
-'symbole' : n'est pas un nom de type, un membre static, ni un énumérateur  
+---
+# <a name="compiler-error-c2327"></a>Erreur du compilateur C2327
+'symbole' : n’est pas un nom de type, statique ou d’énumérateur  
   
- Le code contenu dans une classe imbriquée tente d'accéder à un membre de la classe englobante qui n'est ni un nom de type, ni un membre statique, ni un énumérateur.  
+ Code au sein d’une classe imbriquée tente d’accéder à un membre de la classe englobante qui n’est pas un nom de type, un membre statique ou un énumérateur.  
   
- Lors de la compilation avec **\/clr**, l'erreur C2327 est souvent due à une propriété portant le même nom que le type de propriété.  
+ Lors de la compilation avec **/clr**, une cause fréquente de l’erreur C2327 est une propriété portant le même nom que le type de propriété.  
   
- L'exemple suivant génère l'erreur C2327 :  
+ L’exemple suivant génère l’erreur C2327 :  
   
 ```  
 // C2327.cpp  
@@ -49,7 +65,7 @@ public:
 };  
 ```  
   
- L'erreur C2327 peut également se produire si le nom d'un type est masqué par le nom d'un membre :  
+ L’erreur C2327 peut également se produire si le nom d’un type est masqué par le nom de membre :  
   
 ```  
 // C2327b.cpp  
@@ -63,7 +79,7 @@ class S {
 };  
 ```  
   
- L'erreur C2327 peut également se déclencher dans ce cas, lorsque vous devez spécifier le type de données complet du paramètre :  
+ L’erreur C2327 peut également se produire dans ce cas, où vous devez spécifier entièrement le type de données du paramètre :  
   
 ```  
 // C2327c.cpp  
@@ -78,7 +94,7 @@ struct B {
 };  
 ```  
   
- L'exemple suivant génère l'erreur C2327 :  
+ L’exemple suivant génère l’erreur C2327 :  
   
 ```  
 // C2327d.cpp  
@@ -112,35 +128,7 @@ namespace NA {
 }  
 ```  
   
- L'erreur 2327 peut aussi se produire lorsque vous utilisez des extensions managées pour C\+\+ :  
-  
-```  
-// C2327e.cpp  
-// compile with: /clr:oldSyntax /c  
-using namespace System;  
-namespace NA {  
-   public __value enum E : Int32 {  
-      one = 1, two = 2, three = 3  
-   };  
-  
-   public __gc class A {  
-      E m_e;  
-      public:  
-         __property E get_E() {  
-            return m_e;  
-         }  
-         // At set_E compiler doesn't know whether E is get_E or   
-         // Enum E, therefore fully qualifying Enum E is necessary  
-         __property void set_E(E e) {   // C2327  
-         // try the following line instead  
-         // __property void set_E(NA::E e) {  
-            m_e = e;  
-         }  
-   };  
-}  
-```  
-  
- L'exemple suivant génère l'erreur C2327 lorsqu'une propriété porte le même nom que le type de propriété :  
+L’exemple suivant montre l’erreur C2327 lorsqu’une propriété a le même nom que le type de propriété :  
   
 ```  
 // C2327f.cpp  
@@ -165,31 +153,4 @@ private:
    // ::Address address;  
 };  
 ```  
-  
- L'exemple suivant génère l'erreur C2327 lorsqu'une propriété porte le même nom que le type de propriété :  
-  
-```  
-// C2327g.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-public __value struct Address {};  
-  
-public __gc class Person {  
-public:  
-   __property ::Address get_Address() {     
-      return address;  
-   }  
-  
-   __property void set_Address(Address addr)   // C2327  
-   // try the following line instead  
-   // __property void set_Address(::Address addr) {  
-      address = addr;   
-   }  
-  
-private:  
-   Address address;   // C2327  
-  
-   // try the following line instead  
-   // ::Address address;  
-};  
-```
+
