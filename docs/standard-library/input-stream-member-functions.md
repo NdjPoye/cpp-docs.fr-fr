@@ -1,60 +1,76 @@
 ---
-title: "Fonctions membres de flux de fichiers d&#39;entr&#233;e | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objets de flux d'entrée"
-  - "flux d'entrée, fonctions membres"
+title: "Fonctions membres de flux d’entrée | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- input stream objects
+- input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
 caps.latest.revision: 7
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Fonctions membres de flux de fichiers d&#39;entr&#233;e
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: d270a9790f33fe5258108663f9618f0da1ed5b37
+ms.lasthandoff: 02/24/2017
 
-Les fonctions membres du flux d'entrée sont utilisées pour l'entrée de disque.  Les fonctions membres sont les suivantes :  
+---
+# <a name="input-stream-member-functions"></a>Fonctions membres de flux d'entrée
+Les fonctions membres de flux d’entrée sont utilisées pour l’entrée de disque. Il s’agit des fonctions membres suivantes :  
   
--   [La fonction ouverte pour les flux d'entrée](#vclrftheopenfunctionforinputstreamsanchor11)  
+- [Fonction open pour les flux d’entrée](#vclrftheopenfunctionforinputstreamsanchor11)  
   
--   [La fonction système](#vclrfthegetfunctionanchor12)  
+- [Fonction get](#vclrfthegetfunctionanchor12)  
   
--   [La fonction de getline](#vclrfthegetlinefunctionanchor13)  
+- [Fonction getline](#vclrfthegetlinefunctionanchor13)  
   
--   [La fonction de lecture](#vclrfthereadfunctionanchor14)  
+- [Fonction read](#vclrfthereadfunctionanchor14)  
   
--   [Les fonctions de seekg et de tellg](#vclrftheseekgandtellgfunctionsanchor7)  
+- [Fonctions seekg et tellg](#vclrftheseekgandtellgfunctionsanchor7)  
   
--   [La fonction proche pour les flux d'entrée](#vclrftheclosefunctionforinputstreamsanchor15)  
+- [Fonction close pour les flux d’entrée](#vclrftheclosefunctionforinputstreamsanchor15)  
   
-##  <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> La fonction ouverte pour les flux d'entrée  
- Si vous utilisez un flux de fichier d'entrée \(ifstream\), vous devez associer ce flux de données avec un fichier de disque spécifique.  Effectuez cette opération dans le constructeur, ou vous pouvez utiliser la fonction de **ouvrir**.  Dans l'un et l'autre cas, les arguments sont les mêmes.  
+##  <a name="a-namevclrftheopenfunctionforinputstreamsanchor11a-the-open-function-for-input-streams"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a> Fonction open pour les flux d’entrée  
+ Si vous utilisez un flux d’entrée (ifstream), vous devez associer ce flux à un fichier de disque spécifique. Vous pouvez le faire dans le constructeur, ou vous pouvez utiliser la fonction **open**. Dans les deux cas, les arguments sont les mêmes.  
   
- Vous spécifiez en général un indicateur de [ios\_base::openmode](../Topic/ios_base::openmode.md) lorsque vous ouvrez le fichier associé à un flux d'entrée \(mode par défaut est **ios::in**\).  Pour obtenir la liste des indicateurs d'**open\_mode**, consultez l'[La fonction ouverte](#vclrftheopenfunctionforinputstreamsanchor11).  Les indicateurs peuvent être combinées avec le niveau de le bit \( &#124; opérateur.\)  
+ En général, vous spécifiez un indicateur [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode) quand vous ouvrez le fichier associé à un flux d’entrée (le mode par défaut est **ios::in**). Pour obtenir la liste des indicateurs **open_mode**, consultez [Fonction open](#vclrftheopenfunctionforinputstreamsanchor11). Les indicateurs peuvent être combinés avec l’opérateur de bits OR ( &#124; ).  
   
- Pour lire un fichier, utilisez tout d'abord la fonction membre du **Échec** pour déterminer si elle est remplie :  
+ Pour lire un fichier, utilisez d’abord la fonction membre **fail** pour déterminer s’il existe :  
   
 ```  
-istream ifile( "FILENAME" );  
-if ( ifile.fail() )  
+istream ifile("FILENAME");
+
+if (ifile.fail())  
 // The file does not exist ...  
 ```  
   
-##  <a name="vclrfthegetfunctionanchor12"></a> La fonction système  
- Les travaux non formatés de fonction membre du **obtenir** comme l'opérateur de **\>\>** à deux exceptions.  En premier lieu, la fonction de **obtenir** inclut les espaces blancs, tandis que l'extracteur exclut l'espace blanc si l'indicateur d'[skipws](../Topic/skipws.md) a la valeur \(valeur par défaut\).  Ensuite, la fonction de **obtenir** est inférieure pour générer un flux de sortie attaché \(`cout`, par exemple\) à vider.  
+##  <a name="a-namevclrfthegetfunctionanchor12a-the-get-function"></a><a name="vclrfthegetfunctionanchor12"></a> Fonction get  
+ La fonction membre **get** non mise en forme fonctionne comme l’opérateur ** >> **, à deux exceptions près. Tout d’abord, la fonction **get** inclut des espaces blancs, alors que l’extracteur exclut les espaces blancs quand l’indicateur **skipws** est défini (valeur par défaut). Ensuite, la fonction **get** est moins susceptible de provoquer le vidage d’un flux de sortie lié (`cout`, par exemple).  
   
- Une variante de la fonction de **obtenir** spécifie une adresse de mémoire tampon et le nombre maximal de caractères à lire.  Cette option est utile pour limiter le nombre de caractères envoyés à une variable spécifique, car cet exemple montre :  
+ Une variation de la fonction **get** spécifie une adresse de mémoire tampon et le nombre maximal de caractères à lire. Ceci est utile pour limiter le nombre de caractères envoyés à une variable spécifique, comme le montre cet exemple :  
   
 ```  
 // ioo_get_function.cpp  
@@ -73,22 +89,22 @@ int main()
 }  
 ```  
   
-### Entrée  
+### <a name="input"></a>Entrée  
   
 ```  
 1234  
 ```  
   
-### Résultat de l'exemple  
+### <a name="sample-output"></a>Résultat de l'exemple  
   
 ```  
 1234  
 ```  
   
-##  <a name="vclrfthegetlinefunctionanchor13"></a> La fonction de getline  
- La fonction membre du **getline** est similaire à la fonction de **obtenir**.  Les deux fonctions permettent un troisième argument qui spécifie le caractère de fin pour l'entrée.  La valeur par défaut est le caractère de saut de ligne.  Les deux fonctions réservent un caractère du caractère de fin requis.  Toutefois, **obtenir** permet le caractère de fin du flux de données et **getline** supprime le caractère de fin.  
+##  <a name="a-namevclrfthegetlinefunctionanchor13a-the-getline-function"></a><a name="vclrfthegetlinefunctionanchor13"></a> Fonction getline  
+ La fonction membre **getline** est similaire à la fonction **get**. Toutes deux autorisent un troisième argument qui spécifie le caractère de fin pour l’entrée. La valeur par défaut est le caractère de saut de ligne. Ces deux fonctions réservent un caractère pour le caractère de fin obligatoire. Toutefois, **get** laisse le caractère de fin dans le flux, alors que **getline** le supprime.  
   
- L'exemple suivant spécifie un caractère de fin du flux d'entrée :  
+ L’exemple suivant spécifie un caractère de fin pour le flux d’entrée :  
   
 ```  
 // getline_func.cpp  
@@ -105,16 +121,16 @@ int main( )
 }  
 ```  
   
-### Entrée  
+### <a name="input"></a>Entrée  
   
 ```  
 test  
 ```  
   
-##  <a name="vclrfthereadfunctionanchor14"></a> La fonction de lecture  
- La fonction membre du **lecture** lit les octets à partir d'un fichier dans une zone de mémoire spécifiée.  L'argument de longueur détermine le nombre d'octets.  Si vous n'incluez pas cet argument, lire s'arrête lorsque la fin de fichier physique est atteint ou, dans le cas d'un fichier de mode texte, lorsqu'un caractère incorporée d'`EOF` est lu.  
+##  <a name="a-namevclrfthereadfunctionanchor14a-the-read-function"></a><a name="vclrfthereadfunctionanchor14"></a> Fonction read  
+ La fonction membre **read** lit les octets d’un fichier à la zone de mémoire spécifiée. L’argument de longueur détermine le nombre d’octets lus. Si vous n’incluez pas cet argument, la lecture s’arrête quand la fin du fichier physique est atteinte ou, dans le cas d’un fichier en mode texte, quand un caractère `EOF` incorporé est lu.  
   
- Cet exemple lit un enregistrement binaire à partir d'un fichier de registre du personnel dans une structure :  
+ Cet exemple lit un enregistrement binaire à partir d’un fichier de paie dans une structure :  
   
 ```  
 #include <fstream>  
@@ -140,10 +156,10 @@ int main()
 }  
 ```  
   
- Le programme suppose que les enregistrements de données sont mis en forme exactement comme spécifié par la structure sans arrêter les caractères de retour chariot ou de saut de ligne.  
+ Le programme part du principe que les enregistrements de données sont mis en forme exactement comme spécifié par la structure, sans caractère de retour chariot ou de saut de ligne de fin.  
   
-##  <a name="vclrftheseekgandtellgfunctionsanchor7"></a> Les fonctions de seekg et de tellg  
- Les flux de fichier d'entrée conservent un pointeur interne à la position du fichier dans lequel les données doivent être lues suivant.  Vous définissez le pointeur à la fonction d'`seekg`, comme indiqué ici :  
+##  <a name="a-namevclrftheseekgandtellgfunctionsanchor7a-the-seekg-and-tellg-functions"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a> Fonctions seekg et tellg  
+ Les flux de fichiers d’entrée conservent un pointeur interne vers la position suivante dans le fichier où les données doivent être lues. Vous définissez ce pointeur avec la fonction `seekg`, comme indiqué ici :  
   
 ```  
 #include <iostream>  
@@ -169,9 +185,9 @@ int main( )
 }  
 ```  
   
- Pour utiliser `seekg` pour implémenter les systèmes de gestion de données enregistrement\- orientés, multipliez la taille d'enregistrement de longueur fixe par le numéro d'enregistrement pour obtenir la position d'octets par rapport à la fin de le fichier, puis utiliser l'objet de **obtenir** pour lire l'enregistrement.  
+ Pour utiliser `seekg` pour implémenter des systèmes de gestion de données orientés enregistrements, multipliez la taille d’enregistrement de longueur fixe par le nombre d’enregistrements pour obtenir la position d’octet par rapport à la fin du fichier, puis utilisez l’objet **get** pour lire l’enregistrement.  
   
- La fonction membre d'`tellg` retourne la position actuelle du fichier en lecture.  Cette valeur est de type `streampos`, `typedef` défini dans \<l'iostream\>.  L'exemple suivant lit un fichier et affiche des messages indiquant les positions des espaces.  
+ La fonction membre `tellg` retourne la position actuelle du fichier pour la lecture. Cette valeur est de type `streampos`, un `typedef` défini dans \<iostream>. L’exemple suivant lit un fichier et affiche des messages indiquant la position des espaces.  
   
 ```  
 #include <fstream>  
@@ -196,8 +212,10 @@ int main( )
 }  
 ```  
   
-##  <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> La fonction proche pour les flux d'entrée  
- La fonction membre du **fermer** ferme le fichier disque associé à un flux de fichier d'entrée et libère le handle de fichier du système d'exploitation.  Le destructeur de [ifstream](../standard-library/basic-ifstream-class.md) ferme le fichier pour vous, mais vous pouvez utiliser la fonction de **fermer** si vous devez ouvrir un autre fichier pour le même objet de flux.  
+##  <a name="a-namevclrftheclosefunctionforinputstreamsanchor15a-the-close-function-for-input-streams"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a> Fonction close pour les flux d’entrée  
+ La fonction membre **close** ferme le fichier de disque associé à un flux de fichier d’entrée et libère le handle de fichier du système d’exploitation. Le destructeur [ifstream](../standard-library/basic-ifstream-class.md) ferme le fichier pour vous, mais vous pouvez utiliser la fonction **close** si vous devez ouvrir un autre fichier pour le même objet de flux.  
   
-## Voir aussi  
- [Flux d'entrée](../standard-library/input-streams.md)
+## <a name="see-also"></a>Voir aussi  
+ [Flux d’entrée](../standard-library/input-streams.md)
+
+

@@ -1,55 +1,68 @@
 ---
-title: "is_array, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_array"
-  - "std.tr1.is_array"
-  - "std::tr1::is_array"
-  - "std.is_array"
-  - "std::is_array"
-  - "type_traits/std::is_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_array (classe) (TR1)"
-  - "is_array"
+title: is_array, classe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_array
+- std::is_array
+- type_traits/std::is_array
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_array class
+- is_array
 ms.assetid: 61fb2201-8de3-4746-9721-617f02df170f
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# is_array, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: c884a52096f69c057e3a376052c62b939f52528d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isarray-class"></a>is_array, classe
 Teste si le type est un tableau.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-template<class Ty>  
-    struct is_array;  
+template <class Ty>  
+struct is_array;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `Ty`  
  Type à interroger.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Une instance du prédicat de type a la valeur true si le type `Ty` est un type tableau. Sinon, sa valeur est false.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
-// std_tr1__type_traits__is_array.cpp   
+```cpp  
+// std__type_traits__is_array.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -70,18 +83,21 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
-  **is\_array\<trivial\> \=\= false**  
-**is\_array\<int\> \=\= false**  
-**is\_array\<int\[5\]\> \=\= true**   
-## Configuration requise  
- **En\-tête :** \<type\_traits\>  
+```Output  
+is_array<trivial> == false  
+is_array<int> == false  
+is_array<int[5]> == true  
+```  
   
- **Espace de noms :** std  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<type_traits>  
   
-## Voir aussi  
- [\<type\_traits\>](../standard-library/type-traits.md)   
+ **Espace de noms :** std  
+  
+## <a name="see-also"></a>Voir aussi  
+ [<type_traits>](../standard-library/type-traits.md)   
  [extent, classe](../standard-library/extent-class.md)   
  [rank, classe](../standard-library/rank-class.md)
+

@@ -1,374 +1,618 @@
 ---
-title: "&lt;filesystem&gt;, fonctions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FILESYSTEM/std::experimental::filesystem::v1::absolute"
-  - "std::experimental::filesystem::v1::absolute"
-  - "FILESYSTEM/std::experimental::filesystem::v1::canonical"
-  - "std::experimental::filesystem::v1::canonical"
-  - "FILESYSTEM/std::experimental::filesystem::v1::copy"
-  - "std::experimental::filesystem::v1::copy"
-  - "FILESYSTEM/std::experimental::filesystem::v1::copy_file"
-  - "std::experimental::filesystem::v1::copy_file"
-  - "FILESYSTEM/std::experimental::filesystem::v1::copy_symlink"
-  - "std::experimental::filesystem::v1::copy_symlink"
-  - "FILESYSTEM/std::experimental::filesystem::v1::create_directories"
-  - "std::experimental::filesystem::v1::create_directories"
-  - "FILESYSTEM/std::experimental::filesystem::v1::create_directory"
-  - "std::experimental::filesystem::v1::create_directory"
-  - "FILESYSTEM/std::experimental::filesystem::v1::create_directory_symlink"
-  - "std::experimental::filesystem::v1::create_directory_symlink"
-  - "FILESYSTEM/std::experimental::filesystem::v1::create_hard_link"
-  - "std::experimental::filesystem::v1::create_hard_link"
-  - "FILESYSTEM/std::experimental::filesystem::v1::create_symlink"
-  - "std::experimental::filesystem::v1::create_symlink"
-  - "FILESYSTEM/std::experimental::filesystem::v1::current_path"
-  - "std::experimental::filesystem::v1::current_path"
-  - "FILESYSTEM/std::experimental::filesystem::v1::equivalent"
-  - "std::experimental::filesystem::v1::equivalent"
-  - "FILESYSTEM/std::experimental::filesystem::v1::exists"
-  - "std::experimental::filesystem::v1::exists"
-  - "FILESYSTEM/std::experimental::filesystem::v1::file_size"
-  - "std::experimental::filesystem::v1::file_size"
-  - "FILESYSTEM/std::experimental::filesystem::v1::hard_link_count"
-  - "std::experimental::filesystem::v1::hard_link_count"
-  - "FILESYSTEM/std::experimental::filesystem::v1::hash_value"
-  - "std::experimental::filesystem::v1::hash_value"
-  - "FILESYSTEM/std::experimental::filesystem::v1::is_block_file"
-  - "std::experimental::filesystem::v1::is_block_file"
-  - "FILESYSTEM/std::experimental::filesystem::v1::is_character_file"
-  - "std::experimental::filesystem::v1::is_character_file"
-  - "FILESYSTEM/std::experimental::filesystem::v1::is_directory"
-  - "std::experimental::filesystem::v1::is_directory"
-  - "FILESYSTEM/std::experimental::filesystem::v1::is_empty"
-  - "std::experimental::filesystem::v1::is_empty"
-  - "FILESYSTEM/std::experimental::filesystem::v1::is_fifo"
-  - "std::experimental::filesystem::v1::is_fifo"
-  - "FILESYSTEM/std::experimental::filesystem::v1::is_other"
-  - "std::experimental::filesystem::v1::is_other"
-  - "FILESYSTEM/std::experimental::filesystem::v1::is_regular_file"
-  - "std::experimental::filesystem::v1::is_regular_file"
-  - "FILESYSTEM/std::experimental::filesystem::v1::is_socket"
-  - "std::experimental::filesystem::v1::is_socket"
-  - "FILESYSTEM/std::experimental::filesystem::v1::is_symlink"
-  - "std::experimental::filesystem::v1::is_symlink"
-  - "FILESYSTEM/std::experimental::filesystem::v1::last_write_time"
-  - "std::experimental::filesystem::v1::last_write_time"
-  - "FILESYSTEM/std::experimental::filesystem::v1::permissions"
-  - "std::experimental::filesystem::v1::permissions"
-  - "FILESYSTEM/std::experimental::filesystem::v1::read_symlink"
-  - "std::experimental::filesystem::v1::read_symlink"
-  - "FILESYSTEM/std::experimental::filesystem::v1::remove"
-  - "std::experimental::filesystem::v1::remove"
-  - "FILESYSTEM/std::experimental::filesystem::v1::remove_all"
-  - "std::experimental::filesystem::v1::remove_all"
-  - "FILESYSTEM/std::experimental::filesystem::v1::rename"
-  - "std::experimental::filesystem::v1::rename"
-  - "FILESYSTEM/std::experimental::filesystem::v1::resize_file"
-  - "std::experimental::filesystem::v1::resize_file"
-  - "FILESYSTEM/std::experimental::filesystem::v1::space"
-  - "std::experimental::filesystem::v1::space"
-  - "FILESYSTEM/std::experimental::filesystem::v1::status"
-  - "std::experimental::filesystem::v1::status"
-  - "FILESYSTEM/std::experimental::filesystem::v1::status_known"
-  - "std::experimental::filesystem::v1::status_known"
-  - "FILESYSTEM/std::experimental::filesystem::v1::swap"
-  - "std::experimental::filesystem::v1::swap"
-  - "FILESYSTEM/std::experimental::filesystem::v1::symlink_status"
-  - "std::experimental::filesystem::v1::symlink_status"
-  - "FILESYSTEM/std::experimental::filesystem::v1::system_complete"
-  - "std::experimental::filesystem::v1::system_complete"
-  - "FILESYSTEM/std::experimental::filesystem::v1::temp_directory_path"
-  - "std::experimental::filesystem::v1::temp_directory_path"
-  - "FILESYSTEM/std::experimental::filesystem::v1::u8path"
-  - "std::experimental::filesystem::v1::u8path"
-dev_langs: 
-  - "C++"
+title: '&lt;filesystem&gt;, fonctions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- FILESYSTEM/std::experimental::filesystem::absolute
+- std::experimental::filesystem::absolute
+- FILESYSTEM/std::experimental::filesystem::canonical
+- std::experimental::filesystem::canonical
+- FILESYSTEM/std::experimental::filesystem::copy
+- std::experimental::filesystem::copy
+- FILESYSTEM/std::experimental::filesystem::copy_file
+- std::experimental::filesystem::copy_file
+- FILESYSTEM/std::experimental::filesystem::copy_symlink
+- std::experimental::filesystem::copy_symlink
+- FILESYSTEM/std::experimental::filesystem::create_directories
+- std::experimental::filesystem::create_directories
+- FILESYSTEM/std::experimental::filesystem::create_directory
+- std::experimental::filesystem::create_directory
+- FILESYSTEM/std::experimental::filesystem::create_directory_symlink
+- std::experimental::filesystem::create_directory_symlink
+- FILESYSTEM/std::experimental::filesystem::create_hard_link
+- std::experimental::filesystem::create_hard_link
+- FILESYSTEM/std::experimental::filesystem::create_symlink
+- std::experimental::filesystem::create_symlink
+- FILESYSTEM/std::experimental::filesystem::current_path
+- std::experimental::filesystem::current_path
+- FILESYSTEM/std::experimental::filesystem::equivalent
+- std::experimental::filesystem::equivalent
+- FILESYSTEM/std::experimental::filesystem::exists
+- std::experimental::filesystem::exists
+- FILESYSTEM/std::experimental::filesystem::file_size
+- std::experimental::filesystem::file_size
+- FILESYSTEM/std::experimental::filesystem::hard_link_count
+- std::experimental::filesystem::hard_link_count
+- FILESYSTEM/std::experimental::filesystem::hash_value
+- std::experimental::filesystem::hash_value
+- FILESYSTEM/std::experimental::filesystem::is_block_file
+- std::experimental::filesystem::is_block_file
+- FILESYSTEM/std::experimental::filesystem::is_character_file
+- std::experimental::filesystem::is_character_file
+- FILESYSTEM/std::experimental::filesystem::is_directory
+- std::experimental::filesystem::is_directory
+- FILESYSTEM/std::experimental::filesystem::is_empty
+- std::experimental::filesystem::is_empty
+- FILESYSTEM/std::experimental::filesystem::is_fifo
+- std::experimental::filesystem::is_fifo
+- FILESYSTEM/std::experimental::filesystem::is_other
+- std::experimental::filesystem::is_other
+- FILESYSTEM/std::experimental::filesystem::is_regular_file
+- std::experimental::filesystem::is_regular_file
+- FILESYSTEM/std::experimental::filesystem::is_socket
+- std::experimental::filesystem::is_socket
+- FILESYSTEM/std::experimental::filesystem::is_symlink
+- std::experimental::filesystem::is_symlink
+- FILESYSTEM/std::experimental::filesystem::last_write_time
+- std::experimental::filesystem::last_write_time
+- FILESYSTEM/std::experimental::filesystem::permissions
+- std::experimental::filesystem::permissions
+- FILESYSTEM/std::experimental::filesystem::read_symlink
+- std::experimental::filesystem::read_symlink
+- FILESYSTEM/std::experimental::filesystem::remove
+- std::experimental::filesystem::remove
+- FILESYSTEM/std::experimental::filesystem::remove_all
+- std::experimental::filesystem::remove_all
+- FILESYSTEM/std::experimental::filesystem::rename
+- std::experimental::filesystem::rename
+- FILESYSTEM/std::experimental::filesystem::resize_file
+- std::experimental::filesystem::resize_file
+- FILESYSTEM/std::experimental::filesystem::space
+- std::experimental::filesystem::space
+- FILESYSTEM/std::experimental::filesystem::status
+- std::experimental::filesystem::status
+- FILESYSTEM/std::experimental::filesystem::status_known
+- std::experimental::filesystem::status_known
+- FILESYSTEM/std::experimental::filesystem::swap
+- std::experimental::filesystem::swap
+- FILESYSTEM/std::experimental::filesystem::symlink_status
+- std::experimental::filesystem::symlink_status
+- FILESYSTEM/std::experimental::filesystem::system_complete
+- std::experimental::filesystem::system_complete
+- FILESYSTEM/std::experimental::filesystem::temp_directory_path
+- std::experimental::filesystem::temp_directory_path
+- FILESYSTEM/std::experimental::filesystem::u8path
+- std::experimental::filesystem::u8path
+dev_langs:
+- C++
 ms.assetid: be3cb821-4728-4d47-ab78-858fa8aa5045
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# &lt;filesystem&gt;, fonctions
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 31a7a65ed759ec552e11f2eccc5d425c2b2b765d
+ms.openlocfilehash: 253af6748b2d46ee1421604ed6f16fd97bf5a459
+ms.lasthandoff: 02/24/2017
 
-Ces fonctions libres de l’en\-tête [\<filesystem\>](../standard-library/filesystem.md) effectuent des opérations de modification et de requête sur des chemins, des fichiers, des liens symboliques, des répertoires et des volumes. Pour plus d’informations et des exemples de code, consultez [Navigation dans le système de fichiers \(C\+\+\)](../standard-library/file-system-navigation.md).  
-  
-## absolute  
+---
+# <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt;, fonctions
+Ces fonctions libres de l’en-tête [\<filesystem>](../standard-library/filesystem.md) effectuent des opérations de modification et de requête sur des chemins, des fichiers, des liens symboliques, des répertoires et des volumes. Pour plus d’informations et pour obtenir des exemples de code, consultez [Navigation dans le système de fichiers (C++)](../standard-library/file-system-navigation.md).  
+||||  
+|-|-|-|  
+|[absolute](#absolute)|[begin](#begin)|[canonical](#canonical)|
+|[copy](#copy)|[copy_file](#copy_file)|[copy_symlink](#copy_symlink)|
+|[create_directories](#create_directories)|[create_directory](#create_directory)|[create_directory_symlink](#create_directory_symlink)|
+|[create_hard_link](#create_hard_link)|[create_symlink](#create_symlink)|[current_path](#current_path)|
+|[end](#end)|[equivalent](#equivalent)|[exists](#exists)|
+|[file_size](#file_size)|[hard_link_count](#hard_link_count)|[hash_value](#hash_value)|
+|[is_block_file](#is_block_file)|[is_character_file](#is_character_file)|[is_directory](#is_directory)|
+|[is_empty](#is_empty)|[is_fifo](#is_fifo)|[is_other](#is_other)|
+|[is_regular_file](#is_regular_file)|[is_socket](#is_socket)|[is_symlink](#is_symlink)|
+|[last_write_time](#last_write_time)|[permissions](#permissions)|[read_symlink](#read_symlink)|
+|[remove](#remove)|[remove_all](#remove_all)|[rename](#rename)|
+|[resize_file](#resize_file)|[space](#space)|[status](#status)|
+|[status_known](#status_known)|[swap](#swap)|[symlink_status](#symlink_status)|
+|[system_complete](#system_complete)|[temp_directory_path](#temp_directory_path)|[u8path](#u8path)|  
+
+
+## <a name="a-namea--a-nameabsolutea-absolute"></a><a name=""></a>  <a name="absolute"></a> absolute  
   
 ```  
-path absolute(const path& pval, const path& base = current_path());  
-  
+path absolute(const path& pval, const path& base = current_path());
 ```  
   
- La fonction retourne le chemin absolu correspondant au pval relatif à la base du nom du chemin :  
+ La fonction retourne le chemin absolu correspondant au `pval` relatif à l’objet `base` du chemin :  
   
-1.  Si pval.has\_root\_name\(\) && pval.has\_root\_directory\(\), la fonction retourne pval.  
+1.  Si pval.has_root_name() && pval.has_root_directory(), la fonction retourne pval.  
   
-2.  Si pval.has\_root\_name\(\) && \!pval.has\_root\_directory\(\), la fonction retourne pval.root\_name\(\) \/ absolute\(base\).root\_directory\(\) \/ absolute\(base\).relative\_path\(\) \/ pval.relative\_path\(\).  
+2.  Si pval.has_root_name() && !pval.has_root_directory(), la fonction retourne pval.root_name() / absolute(base).root_directory() / absolute(base).relative_path() / pval.relative_path().  
   
-3.  Si \!pval.has\_root\_name\(\) && pval.has\_root\_directory\(\), la fonction retourne absolute\(base\).root\_name\(\) \/ pval.  
+3.  Si !pval.has_root_name() && pval.has_root_directory(), la fonction retourne absolute(base).root_name() / pval.  
   
-4.  Si \!pval.has\_root\_name\(\) && \!pval.has\_root\_directory\(\), la fonction retourne absolute\(base\) \/ pval.  
+4.  Si !pval.has_root_name() && !pval.has_root_directory(), la fonction retourne absolute(base) / pval.  
   
-5.  
-  
-## begin  
+## <a name="a-namebegina--begin"></a><a name="begin"></a>  begin  
   
 ```  
 const directory_iterator& begin(const directory_iterator& iter) noexcept;  
-const recursive_directory_iterator&  
+const recursive_directory_iterator& 
     begin(const recursive_directory_iterator& iter) noexcept;  
-  
 ```  
   
- Les deux fonctions retournent iter.  
+ Les deux fonctions retournent `iter`.  
   
-## canonical  
+## <a name="a-namecanonicala--canonical"></a><a name="canonical"></a>  canonical  
   
 ```  
-path canonical(const path& pval, const path& base = current_path());  
-path canonical(const path& pval,  
-    error_code& ec);  
-path canonical(const path& pval, const path& base,  
-    error_code& ec);  
+path canonical(const path& pval, const path& base = current_path());
+path canonical(const path& pval, error_code& ec);
+path canonical(const path& pval, const path& base, error_code& ec);
 ```  
   
- Les fonctions forment toutes un nom de chemin absolu pabs \= absolute\(pval, base\) \(ou pabs \= absolute\(pval\) pour la surcharge sans paramètre base\), puis le réduisent à une forme canonique dans la séquence d’étapes suivante :  
+ Les fonctions forment toutes un nom de chemin absolu pabs = absolute(pval, base) (ou pabs = absolute(pval) pour la surcharge sans paramètre base), puis le réduisent à une forme canonique dans la séquence d’étapes suivante :  
   
-1.  Chaque composant X du chemin pour lequel is\_symlink\(X\) est true est remplacé par read\_symlink\(X\).  
+1.  Chaque composant X du chemin pour lequel is_symlink(X) est true est remplacé par read_symlink(X).  
   
-2.  Chaque composant du chemin. \(point \[dot\] est le répertoire actuel établi par les composants du chemin précédent\) est supprimé.  
+2.  Chaque composant du chemin. (point [dot] est le répertoire actuel établi par les composants du chemin précédent) est supprimé.  
   
-3.  Chaque paire de composants du chemin X\/.. \(point\-point \[dot\-dot\] est le répertoire parent établi par les composants du chemin précédent\) est supprimée.  
+3.  Chaque paire de composants du chemin X/.. (point-point [dot-dot] est le répertoire parent établi par les composants du chemin précédent) est supprimée.  
   
  La fonction retourne alors pabs.  
   
-## copy  
+## <a name="a-namecopya--copy"></a><a name="copy"></a>  copy  
   
 ```  
-void copy(const path& from, const path& to);  
-void copy(const path& from, const path& to,  
-    error_code& ec) noexcept;  
-void copy(const path& from, const path& to, copy_options opts);  
-void copy(const path& from, const path& to, copy_options opts,  
-    error_code& ec) noexcept;  
+void copy(const path& from, const path& to);
+void copy(const path& from, const path& to, error_code& ec) noexcept;  
+void copy(const path& from, const path& to, copy_options opts);
+void copy(const path& from, const path& to, copy_options opts, error_code& ec) noexcept;  
 ```  
   
- Les fonctions sont toutes susceptibles de copier ou de lier un ou plusieurs fichiers à l’emplacement from vers to sous le contrôle de opts, qui est pris comme copy\_options::none pour les surcharges sans paramètre opts. opts contiendra au plus un des éléments suivants :  
+ Les fonctions sont toutes susceptibles de copier ou de lier un ou plusieurs fichiers à partir de `from` dans `to` sous le contrôle de `opts`, qui est pris comme copy_options::none pour les surcharges sans paramètre `opts`. `opts` contient au maximum un des éléments suivants :  
   
--   skip\_existing, overwrite\_existing ou update\_existing  
+-   skip_existing, overwrite_existing ou update_existing  
   
--   copy\_symlinks ou skip\_symlinks  
+-   copy_symlinks ou skip_symlinks  
   
--   directories\_only, create\_symlinks ou create\_hard\_links  
+-   directories_only, create_symlinks ou create_hard_links  
   
- Les fonctions déterminent d’abord les valeurs de file\_status f pour from et t pour to :  
+ Les fonctions déterminent d’abord les valeurs de file_status f pour `from` et t pour `to` :  
   
--   si opts & \(copy\_options::create\_symlinks &#124; copy\_options::skip\_symlinks\), en appelant symlink\_status  
+-   si opts & (copy_options::create_symlinks &#124; copy_options::skip_symlinks), en appelant symlink_status  
   
 -   sinon, en appelant status  
   
 -   Sinon, elles signalent une erreur.  
   
- Si \!exists\(f\) &#124;&#124; equivalent\(f, t\) &#124;&#124; is\_other\(f\) &#124;&#124; is\_other\(t\) &#124;&#124; is\_directory\(f\)&& is\_regular\_file\(t\), elles signalent une erreur \(et ne font rien d’autre\).  
+ Si !exists(f) &#124;&#124; equivalent(f, t) &#124;&#124; is_other(f) &#124;&#124; is_other(t) &#124;&#124; is_directory(f)&& is_regular_file(t), elles signalent une erreur (et n’effectuent aucune autre opération).  
   
- Sinon, si is\_symlink\(f\) :  
+ Sinon, si is_symlink(f) :  
   
--   Si options & copy\_options::skip\_symlinks, ne rien faire.  
+-   Si options & copy_options::skip_symlinks, ne rien faire.  
   
--   Sinon, si \!exists\(t\)&& options & copy\_options::copy\_symlinks, copy\_symlink\(from, to, opts\).  
+-   Sinon, si !exists(t)&& options & copy_options::copy_symlinks, copy_symlink(from, to, opts).  
   
 -   Sinon, elles signalent une erreur.  
   
- Sinon, si is\_regular\_file\(f\) :  
+ Sinon, si is_regular_file(f) :  
   
--   Si opts & copy\_options::directories\_only, ne rien faire.  
+-   Si opts & copy_options::directories_only, ne rien faire.  
   
--   Sinon, si opts & copy\_options::create\_symlinks, create\_symlink\(to, from\).  
+-   Sinon, si opts & copy_options::create_symlinks, create_symlink(to, from).  
   
--   Sinon, si opts & copy\_options::create\_hard\_links, create\_hard\_link\(to, from\).  
+-   Sinon, si opts & copy_options::create_hard_links, create_hard_link(to, from).  
   
--   Sinon, si is\_directory\(f\), copy\_file\(from, to \/ from.filename\(\), opts\).  
+-   Sinon, si is_directory(f), copy_file(from, to / from.filename(), opts).  
   
--   Sinon, copy\_file\(from, to, opts\).  
+-   Sinon, copy_file(from, to, opts).  
   
- Sinon, si is\_directory\(f\) && \(opts & copy\_options::recursive &#124;&#124; \!opts\) :  
+ Sinon, si is_directory(f) && (opts & copy_options::recursive &#124;&#124; !opts) :  
   
--   ```  
-    if (!exists(t))  
-        {  // copy directory contents recursively  
-        create_directory(to, from, ec);  
-        for (directory_iterator next(from), end;  
-            ec == error_code() && next != end; ++next)  
-            copy(next->path(),  
-                to / next->path().filename(), opts, ec);  
-        }  
-<CodeContentPlaceHolder>4</CodeContentPlaceHolder>bool copy_file(const path& from, const path& to);  
-bool copy_file(const path& from, const path& to,  
-    error_code& ec) noexcept;  
-bool copy_file(const path& from, const path& to, copy_options opts);  
-bool copy_file(const path& from, const path& to, copy_options opts,  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>void copy_symlink(const path& from, const path& to);  
-void copy_symlink(const path& from, const path& to,  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>bool create_directories(const path& pval);  
-bool create_directories(const path& pval,  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>7</CodeContentPlaceHolder>bool create_directory(const path& pval);  
-bool create_directory(const path& pval,  
-    error_code& ec) noexcept;  
-bool create_directory(const path& pval, const path& attr);  
-bool create_directory(const path& pval, const path& attr,  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>void create_directory_symlink(const path& to, const path& link);  
-void create_directory_symlink(const path& to, const path& link),  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>void create_hard_link(const path& to, const path& link);  
-void create_hard_link(const path& to, const path& link),  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>10</CodeContentPlaceHolder>void create_symlink(const path& to, const path& link);  
-void create_symlink(const path& to, const path& link),  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>11</CodeContentPlaceHolder>path current_path();  
-path current_path(  
-    error_code& ec);  
-void current_path(const path& pval);  
-void current_path(const path& pval,  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>12</CodeContentPlaceHolder>directory_iterator& end(const directory_iterator& iter) noexcept;  
-recursive_directory_iterator&  
-    end(const recursive_directory_iterator& iter) noexcept;  
-<CodeContentPlaceHolder>13</CodeContentPlaceHolder>bool equivalent(const path& left, const path& right);  
-bool equivalent(const path& left, const path& right,  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>14</CodeContentPlaceHolder>bool exists(file_status stat) noexcept;  
-bool exists(const path& pval);  
-bool exists(const path& pval,  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>15</CodeContentPlaceHolder>uintmax_t file_size(const path& pval);  
-uintmax_t file_size(const path& pval,  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>16</CodeContentPlaceHolder>uintmax_t hard_link_count(const path& pval);  
-uintmax_t hard_link_count(const path& pval,  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>17</CodeContentPlaceHolder>size_t hash_value(const path& pval) noexcept;  
-<CodeContentPlaceHolder>18</CodeContentPlaceHolder>bool is_block_file(file_status stat) noexcept;  
-bool is_block_file(const path& pval);  
-bool is_block_file(const path& pval,  
-    error_code& ec) noexcept;  
-  
-<CodeContentPlaceHolder>19</CodeContentPlaceHolder>  
-bool is_character_file(file_status stat) noexcept;  
-bool is_character_file(const path& pval);  
-bool is_character_file(const path& pval,  
-    error_code& ec) noexcept;  
-  
-<CodeContentPlaceHolder>20</CodeContentPlaceHolder>  
-bool is_directory(file_status stat) noexcept;  
-bool is_directory(const path& pval);  
-bool is_directory(const path& pval,  
-    error_code& ec) noexcept;  
-  
-<CodeContentPlaceHolder>21</CodeContentPlaceHolder>  
-bool is_empty(file_status stat) noexcept;  
-bool is_empty(const path& pval);  
-bool is_empty(const path& pval,  
-    error_code& ec) noexcept;  
-  
-<CodeContentPlaceHolder>22</CodeContentPlaceHolder>bool is_fifo(file_status stat) noexcept;  
-bool is_fifo(const path& pval);  
-bool is_fifo(const path& pval,  
-    error_code& ec) noexcept;  
-  
-<CodeContentPlaceHolder>23</CodeContentPlaceHolder>bool is_other(file_status stat) noexcept;  
-bool is_other(const path& pval);  
-bool is_other(const path& pval,  
-    error_code& ec) noexcept;  
-  
-<CodeContentPlaceHolder>24</CodeContentPlaceHolder>  
-bool is_regular_file(file_status stat) noexcept;  
-bool is_regular_file(const path& pval);  
-bool is_regular_file(const path& pval,  
-    error_code& ec) noexcept;  
-  
-<CodeContentPlaceHolder>25</CodeContentPlaceHolder>  
-bool is_socket(file_status stat) noexcept;  
-bool is_socket(const path& pval);  
-bool is_socket(const path& pval,  
-    error_code& ec) noexcept;  
-  
-<CodeContentPlaceHolder>26</CodeContentPlaceHolder>  
-bool is_symlink(file_status stat) noexcept;  
-bool is_symlink(const path& pval);  
-bool is_symlink(const path& pval,  
-    error_code& ec) noexcept;  
-  
-<CodeContentPlaceHolder>27</CodeContentPlaceHolder>  
-file_time_type last_write_time(const path& pval);  
-file_time_type last_write_time(const path& pval,  
-    error_code& ec) noexcept;  
-void last_write_time(const path& pval, file_time_type new_time);  
-void last_write_time(const path& pval, file_time_type new_time,  
-    error_code& ec) noexcept;  
-  
-<CodeContentPlaceHolder>28</CodeContentPlaceHolder>void permissions(const path& pval, perms mask);  
-void permissions(const path& pval, perms mask,  
-    error_code& ec) noexcept;  
-  
-<CodeContentPlaceHolder>29</CodeContentPlaceHolder>path read_symlink(const path& pval);  
-path read_symlink(const path& pval.  
-    error_code& ec);  
-<CodeContentPlaceHolder>30</CodeContentPlaceHolder>bool remove(const path& pval);  
-bool remove(const path& pval,  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>31</CodeContentPlaceHolder>uintmax_t remove_all(const path& pval);  
-uintmax_t remove_all(const path& pval,  
-    error_code& ec) noexcept;  
-  
-<CodeContentPlaceHolder>32</CodeContentPlaceHolder>void rename(const path& from, const path& to);  
-void rename(const path& from, const path& to,  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>33</CodeContentPlaceHolder>void resize(const path& pval, uintmax_t size);  
-void resize(const path& pval, uintmax_t size,  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>34</CodeContentPlaceHolder>space_info space(const path& pval);  
-space_info space(const path& pval,  
-    error_code& ec) noexcept;  
-<CodeContentPlaceHolder>35</CodeContentPlaceHolder>file_status status(const path& pval);  
-file_status status(const path& pval,  
-    error_code& ec) noexcept;  
-  
-<CodeContentPlaceHolder>36</CodeContentPlaceHolder>bool status_known(file_status stat) noexcept;  
-<CodeContentPlaceHolder>37</CodeContentPlaceHolder>void swap(path& left, path& right) noexcept;  
-  
-<CodeContentPlaceHolder>38</CodeContentPlaceHolder>file_status symlink_status(const path& pval);  
-file_status symlink_status(const path& pval,  
-    erroxr_code& ec) noexcept;  
-  
-<CodeContentPlaceHolder>39</CodeContentPlaceHolder>path system_complete(const path& pval);  
-path system_complete(const path& pval,  
-    error_code& ec);  
-  
-<CodeContentPlaceHolder>40</CodeContentPlaceHolder>path temp_directory_path();  
-path temp_directory_path(  
-    error_code& ec);  
-  
-<CodeContentPlaceHolder>41</CodeContentPlaceHolder>template<class Source>  
-    path u8path(const Source& source);  
-template<class InIt>  
-    path u8path(InIt first, InIt last);  
-  
+```cpp  
+if (!exists(t))
+{  // copy directory contents recursively  
+    create_directory(to, from, ec);
+
+    for (directory_iterator next(from), end; ec == error_code() && next != end; ++next)
+    {
+        copy(next->path(), to / next->path().filename(), opts, ec);
+    }
+
+}
 ```  
   
- La première fonction se comporte comme path\(source\) et la seconde fonction se comporte comme path\(first, last\), excepté que la source désignée dans chaque cas est prise comme une séquence d’éléments char encodés en UTF\-8, quel que soit le système de fichiers.
+ Sinon, ne rien faire.  
+  
+## <a name="a-nameopyfilea--copyfile"></a><a name="opy_file"></a>  copy_file  
+  
+```  
+bool copy_file(const path& from, const path& to);
+bool copy_file(const path& from, const path& to, error_code& ec) noexcept;  
+bool copy_file(const path& from, const path& to, copy_options opts);
+bool copy_file(const path& from, const path& to, copy_options opts, error_code& ec) noexcept;  
+```  
+  
+ Les fonctions sont toutes susceptibles de copier le fichier à partir de `from` dans `to` sous le contrôle de `opts`, qui est pris comme copy_options::none pour les surcharges sans paramètre `opts`. `opts` contient au maximum un élément skip_existing, overwrite_existing ou update_existing.  
+  
+ Si exists\(to\) && \!\(opts & \(copy_options::skip_existing &#124; copy_options::overwrite_existing &#124; copy_options::update_existing\)\), signaler comme une erreur le fait que le fichier existe déjà.  
+  
+ Sinon, si \!exists\(to\) &#124;&#124; opts & copy_options::overwrite_existing &#124;&#124; opts & copy_options::update_existing&& last_write_time\(to\) \< last_write_time\(from\) &#124;&#124; \!\(opts & \(copy_options::skip_existing &#124; copy_options::overwrite_existing &#124; copy_options:update_existing\)\), essayer de copier le contenu et les attributs du fichier from dans le fichier to. Signaler comme erreur si la tentative de copie échoue.  
+  
+ Les fonctions retournent true (vrai) si la copie est tentée et qu’elle réussit, sinon false (faux).  
+  
+## <a name="a-namecopysymlink-a--copysymlink"></a><a name="copy_symlink "></a>  copy_symlink  
+  
+```  
+void copy_symlink(const path& from, const path& to);
+void copy_symlink(const path& from, const path& to, error_code& ec) noexcept;  
+```  
+  
+ Si is_directory\(from\) la fonction appelle create_directory_symlink\(from, to\). Sinon, elle appelle create_symlink\(from, to\).  
+  
+## <a name="a-namecreatedirectoriesa--createdirectories"></a><a name="create_directories"></a>  create_directories  
+  
+```  
+bool create_directories(const path& pval);
+bool create_directories(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ Pour un chemin comme a\/b\/c, la fonction crée si nécessaire les répertoires a et a\/b pour pouvoir créer le répertoire a\/b\/c, si nécessaire. Elle retourne true seulement si elle crée réellement le répertoire `pval`.  
+  
+## <a name="a-namecreatedirectorya--createdirectory"></a><a name="create_directory"></a>  create_directory  
+  
+```  
+bool create_directory(const path& pval);
+
+bool create_directory(const path& pval, error_code& ec) noexcept;  
+bool create_directory(const path& pval, const path& attr);
+bool create_directory(const path& pval, const path& attr, error_code& ec) noexcept;  
+```  
+  
+ La fonction crée le répertoire `pval`, si nécessaire. Elle retourne true seulement si elle crée réellement le répertoire `pval`, auquel cas elle copie les autorisations du fichier `attr` existant ou elle utilise perms::all pour les surcharges sans paramètre `attr`.  
+  
+## <a name="a-namecreatedirectorysymlink-a--createdirectorysymlink"></a><a name="create_directory_symlink "></a>  create_directory_symlink  
+  
+```  
+void create_directory_symlink(const path& to, const path& link);
+void create_directory_symlink(const path& to, const path& link, error_code& ec) noexcept;  
+```  
+  
+ La fonction crée un lien sous forme de lien symbolique vers le répertoire `to`.  
+  
+## <a name="a-namecreatehardlinka--createhardlink"></a><a name="create_hard_link"></a>  create_hard_link  
+  
+```  
+void create_hard_link(const path& to,  const path& link);
+void create_hard_link(const path& to, const path& link, error_code& ec) noexcept;  
+```  
+  
+ La fonction crée un lien sous forme de lien physique vers le répertoire ou le fichier `to`.  
+  
+## <a name="a-namecreatesymlink-a--createsymlink"></a><a name="create_symlink "></a>  create_symlink  
+  
+```  
+void create_symlink(const path& to,  const path& link);
+
+void create_symlink(const path& to, const path& link, error_code& ec) noexcept;  
+```  
+  
+ La fonction crée `link` sous forme de lien symbolique vers le fichier `to`.  
+  
+## <a name="a-namecurrentpatha--currentpath"></a><a name="current_path"></a>  current_path  
+  
+```  
+path current_path();
+path current_path(error_code& ec);
+void current_path(const path& pval);
+void current_path(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ Les fonctions sans paramètre `pval` retournent le chemin du répertoire actuel. Les autres fonctions définissent le répertoire actuel sur `pval`.  
+  
+## <a name="a-nameenda--end"></a><a name="end"></a>  end  
+  
+```  
+directory_iterator& end(const directory_iterator& iter) noexcept;  
+recursive_directory_iterator& end(const recursive_directory_iterator& iter) noexcept;  
+```  
+  
+ La première fonction retourne directory_iterator\(\) et la deuxième fonction retourne recursive_directory_iterator\(\)  
+  
+## <a name="a-nameequivalenta--equivalent"></a><a name="equivalent"></a>  equivalent  
+  
+```  
+bool equivalent(const path& left, const path& right);
+bool equivalent(const path& left, const path& right, error_code& ec) noexcept;  
+```  
+  
+ Les fonctions retournent true seulement si `left` et `right` désignent la même entité filesystem.  
+  
+## <a name="a-nameexistsa--exists"></a><a name="exists"></a>  exists  
+  
+```  
+bool exists(file_status stat) noexcept;  
+bool exists(const path& pval);
+bool exists(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ La première fonction retourne status_known && stat.type\(\) \!\= file_not_found. Les deuxième et troisième fonctions retournent exists\(status\(pval\)\).  
+  
+## <a name="a-namefilesizea--filesize"></a><a name="file_size"></a>  file_size  
+  
+```  
+uintmax_t file_size(const path& pval);
+uintmax_t file_size(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ Les fonctions retournent la taille en octets du fichier désigné par `pval`, si exists\(pval\) && is_regular_file\(pval\) et que la taille du fichier peut être déterminée. Sinon, elles signalent une erreur et retournent uintmax_t\(\-1\).  
+  
+## <a name="a-namehardlinkcounta--hardlinkcount"></a><a name="hard_link_count"></a>  hard_link_count  
+  
+```  
+uintmax_t hard_link_count(const path& pval);
+uintmax_t hard_link_count(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ La fonction retourne le nombre de liens physiques pour `pval`, ou \-1 si une erreur se produit.  
+  
+## <a name="a-namehashvaluea--hashvalue"></a><a name="hash_value"></a>  hash_value  
+  
+```  
+size_t hash_value(const path& pval) noexcept;  
+```  
+  
+ La fonction retourne une valeur de hachage pour pval.native\(\).  
+  
+## <a name="a-nameisblockfilea--isblockfile"></a><a name="is_block_file"></a>  is_block_file  
+  
+```  
+bool is_block_file(file_status stat) noexcept;  
+bool is_block_file(const path& pval);
+bool is_block_file(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ La première fonction retourne stat.type\(\) \=\= file_type::block. Les autres fonctions retournent is_block_file\(status\(pval\)\).  
+  
+## <a name="a-nameischaracterfilea--ischaracterfile"></a><a name="is_character_file"></a>  is_character_file  
+  
+```   
+bool is_character_file(file_status stat) noexcept;  
+bool is_character_file(const path& pval);
+bool is_character_file(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ La première fonction retourne stat.type\(\) \=\= file_type::character. Les autres fonctions retournent is_character_file\(status\(pval\)\).  
+  
+## <a name="a-nameisdirectory-a--isdirectory"></a><a name="is_directory "></a>  is_directory  
+  
+```   
+bool is_directory(file_status stat) noexcept;  
+bool is_directory(const path& pval);
+bool is_directory(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ La première fonction retourne stat.type\(\) \=\= file_type::directory. Les autres fonctions retournent is_directory_file\(status\(pval\)\).  
+  
+## <a name="a-nameisemptya--isempty"></a><a name="is_empty"></a>  is_empty  
+  
+```   
+bool is_empty(file_status stat) noexcept;  
+bool is_empty(const path& pval);
+bool is_empty(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ Si is_directory\(pval\), la fonction retourne directory_iterator\(pval\) \=\= directory_iterator\(\) ; sinon elle retourne file_size\(pval\) \=\= 0.  
+  
+## <a name="a-nameisfifoa--isfifo"></a><a name="is_fifo"></a>  is_fifo  
+  
+```  
+bool is_fifo(file_status stat) noexcept;  
+bool is_fifo(const path& pval);
+bool is_fifo(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ La première fonction retourne stat.type\(\) \=\= file_type::fifo. Les autres fonctions retournent is_fifo\(status\(pval\)\).  
+  
+## <a name="a-nameisothera--isother"></a><a name="is_other"></a>  is_other  
+  
+```  
+bool is_other(file_status stat) noexcept;  
+bool is_other(const path& pval);
+bool is_other(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ La première fonction retourne stat.type\(\) \=\= file_type::other. Les autres fonctions retournent is_other\(status\(pval\)\).  
+  
+## <a name="a-namesregularfilea--isregularfile"></a><a name="s_regular_file"></a>  is_regular_file  
+  
+```   
+bool is_regular_file(file_status stat) noexcept;  
+bool is_regular_file(const path& pval);
+bool is_regular_file(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ La première fonction retourne stat.type\(\) \=\= file_type::regular. Les autres fonctions retournent is_regular_file\(status\(pval\)\).  
+  
+## <a name="a-nameissocketa--issocket"></a><a name="is_socket"></a>  is_socket  
+  
+```   
+bool is_socket(file_status stat) noexcept;  
+bool is_socket(const path& pval);
+bool is_socket(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ La première fonction retourne stat.type\(\) \=\= file_type::socket. Les autres fonctions retournent is_socket\(status\(pval\)\).  
+  
+## <a name="a-nameissymlinka--issymlink"></a><a name="is_symlink"></a>  is_symlink  
+  
+```   
+bool is_symlink(file_status stat) noexcept;  
+bool is_symlink(const path& pval);
+bool is_symlink(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ La première fonction retourne stat.type\(\) \=\= file_type::symlink. Les autres fonctions retournent is_symlink\(status\(pval\)\).  
+  
+## <a name="a-namelastwritetimea--lastwritetime"></a><a name="last_write_time"></a>  last_write_time  
+  
+```   
+file_time_type last_write_time(const path& pval);
+file_time_type last_write_time(const path& pval, error_code& ec) noexcept;  
+void last_write_time(const path& pval, file_time_type new_time);
+void last_write_time(const path& pval, file_time_type new_time, error_code& ec) noexcept;  
+```  
+  
+ Les deux premières fonctions retournent la date/heure de la dernière modification des données pour `pval`, ou file_time_type\(\-1\) si une erreur se produit. Les deux dernières fonctions définissent la date/heure de la dernière modification des données pour `pval` sur new_time.  
+  
+## <a name="a-namepermissionsa--permissions"></a><a name="permissions"></a>  permissions  
+  
+```  
+void permissions(const path& pval, perms mask);
+void permissions(const path& pval, perms mask, error_code& ec) noexcept;  
+```  
+  
+ Les fonctions définissent les autorisations du chemin désigné par `pval` sur mask & perms::mask sous le contrôle de perms & \(perms::add_perms &#124; perms::remove_perms\). mask contiendra au plus un des éléments perms::add_perms et perms::remove_perms.  
+  
+ Si mask & perms::add_perms, les fonctions définissent les autorisations sur status\(pval\).permissions\(\) &#124; mask & perms::mask. Sinon, si mask & perms::remove_perms, les fonctions définissent les autorisations sur status\(pval\).permissions\(\) & ~\(mask & perms::mask\). Sinon, les fonctions définissent les autorisations sur mask & perms::mask.  
+  
+## <a name="a-namereadsymlinka--readsymlink"></a><a name="read_symlink"></a>  read_symlink  
+  
+```  
+path read_symlink(const path& pval);
+path read_symlink(const path& pval, error_code& ec);
+```  
+  
+ Les fonctions signalent une erreur et retournent path\(\) si \!is_symlink\(pval\). Sinon, les fonctions retournent un objet de type `path` contenant le lien symbolique.  
+  
+## <a name="a-nameremovea--remove"></a><a name="remove"></a>  remove  
+  
+```  
+bool remove(const path& pval);
+bool remove(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ Les fonctions retournent true seulement si exists\(symlink_status\(pval\)\) et que le fichier est supprimé. Un lien symbolique est lui-même supprimé, mais pas le fichier qu’il désigne.  
+  
+## <a name="a-nameremovealla--removeall"></a><a name="remove_all"></a>  remove_all  
+  
+```  
+uintmax_t remove_all(const path& pval);
+uintmax_t remove_all(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ Si `pval` est un répertoire, les fonctions suppriment de façon récursive toutes les entrées de répertoire, puis l’entrée elle-même. Sinon, les fonctions appellent remove. Elles retournent un comptage de tous les éléments qui ont été supprimés.  
+  
+## <a name="a-namerenamea--rename"></a><a name="rename"></a>  rename  
+  
+```  
+void rename(const path& from,  const path& to);
+void rename(const path& from,  const path& to, error_code& ec) noexcept;  
+```  
+  
+ Les fonctions renomment `from` en `to`. Un lien symbolique est lui-même renommé, mais pas le fichier qu’il désigne.  
+  
+## <a name="a-nameresizefilea--resizefile"></a><a name="resize_file"></a>  resize_file  
+  
+```  
+void resize(const path& pval, uintmax_t size);
+void resize(const path& pval, uintmax_t size, error_code& ec) noexcept;  
+```  
+  
+ Les fonctions modifient la taille d’un fichier de sorte que file_size\(pval\) \=\= size  
+  
+## <a name="a-namespacea--space"></a><a name="space"></a>  space  
+  
+```  
+space_info space(const path& pval);
+space_info space(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ La fonction retourne des informations sur le volume désigné par `pval`, dans une structure de type `space_info`. La structure contient uintmax_t\(\-1\) pour les valeurs qui ne peuvent pas être déterminées.  
+  
+## <a name="a-namestatusa--status"></a><a name="status"></a>  status  
+  
+```  
+file_status status(const path& pval);
+file_status status(const path& pval, error_code& ec) noexcept;  
+```  
+  
+ Les fonctions retournent l’état du chemin, le type de fichier et les autorisations associés à `pval`. Le lien symbolique n’est pas vérifié, contrairement au fichier qu’il désigne.  
+  
+## <a name="a-namestatusknowna--statusknown"></a><a name="status_known"></a>  status_known  
+  
+```  
+bool status_known(file_status stat) noexcept;  
+```  
+  
+ La fonction retourne stat.type\(\) \!\= file_type::none  
+  
+## <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+  
+```  
+void swap(path& left, path& right) noexcept;  
+```  
+  
+ La fonction échange le contenu de `left` et `right`.  
+  
+## <a name="a-namesymlinkstatusa--symlinkstatus"></a><a name="symlink_status"></a>  symlink_status  
+  
+```  
+file_status symlink_status(const path& pval);
+file_status symlink_status(const path& pval, erroxr_code& ec) noexcept;  
+```  
+  
+ Les fonctions retournent l’état du lien symbolique du chemin, le type de fichier et les autorisations associés à `pval`. Les fonctions se comportent de la même façon que status\(pval\), excepté que le lien symbolique est vérifié, mais pas le fichier qu’il désigne.  
+  
+## <a name="a-namesystemcompletea--systemcomplete"></a><a name="system_complete"></a>  system_complete  
+  
+```  
+path system_complete(const path& pval);
+path system_complete(const path& pval, error_code& ec);
+```  
+  
+ Les fonctions retournent un nom de chemin absolu qui prend en compte si nécessaire le répertoire actuel associé au nom de sa racine. \(Pour Posix, les fonctions retournent absolute\(pval\).\)  
+  
+## <a name="a-nametempdirectorypatha--tempdirectorypath"></a><a name="temp_directory_path"></a>  temp_directory_path  
+  
+```  
+path temp_directory_path();
+path temp_directory_path(error_code& ec);
+```  
+  
+ Les fonctions retournent un nom de chemin pour un répertoire approprié à des fichiers conteneurs temporaires.  
+  
+## <a name="a-nameu8patha--u8path"></a><a name="u8path"></a>  u8path  
+  
+```  
+template <class Source>  
+path u8path(const Source& source);
+
+template <class InIt>  
+path u8path(InIt first, InIt last);
+```  
+  
+ La première fonction se comporte comme path(source) et la seconde fonction se comporte comme path(first, last), excepté que la source désignée dans chaque cas est prise comme une séquence d’éléments char encodés en UTF-8, quel que soit le système de fichiers.
+
+
+

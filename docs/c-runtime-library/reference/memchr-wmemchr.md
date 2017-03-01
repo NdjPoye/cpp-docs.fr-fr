@@ -1,49 +1,65 @@
 ---
-title: "memchr, wmemchr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wmemchr"
-  - "memchr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "memchr"
-  - "wmemchr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "memchr (fonction)"
-  - "wmemchr (fonction)"
+title: memchr, wmemchr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wmemchr
+- memchr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- memchr
+- wmemchr
+dev_langs:
+- C++
+helpviewer_keywords:
+- memchr function
+- wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# memchr, wmemchr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: f9a0a16f6af3fd8b357a979a64c4d8b38b0a1ea9
+ms.lasthandoff: 02/24/2017
 
-Recherchez les caractères dans une mémoire tampon.  
+---
+# <a name="memchr-wmemchr"></a>memchr, wmemchr
+Rechercher des caractères dans une mémoire tampon.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void *memchr(  
@@ -78,9 +94,9 @@ const wchar_t *wmemchr(
 ); // C++ only  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `buf`  
- Pointeur vers une mémoire tampon.  
+ Pointeur désignant la mémoire tampon.  
   
  `c`  
  Caractère à rechercher.  
@@ -88,27 +104,27 @@ const wchar_t *wmemchr(
  `count`  
  Nombre de caractères à vérifier.  
   
-## Valeur de retour  
- En cas de réussite, retourne un pointeur vers le premier emplacement de `c` dans `buf`.  Sinon, il retourne `NULL`.  
+## <a name="return-value"></a>Valeur de retour  
+ En cas de réussite, retourne un pointeur désignant le premier emplacement de `c` dans `buf`. Sinon, elle retourne `NULL`.  
   
-## Notes  
- `memchr` et `wmemchr` recherchent la première occurrence de `c` dans les premiers octets `count` de `buf`.  Il s'arrête lorsqu'il trouve `c` ou lorsqu'il a vérifié les premiers octets `count`.  
+## <a name="remarks"></a>Notes  
+ `memchr` et `wmemchr` recherchent la première occurrence de `c` dans les `count` premiers octets de `buf`. Elles s’arrêtent quand elles trouvent `c` ou qu’elles ont vérifié les `count` premiers octets.  
   
- En C, ces fonctions acceptent un pointeur `const` comme premier argument.  En C\+\+, deux surcharges sont disponibles.  La surcharge acceptant un pointeur vers `const` retourne un pointeur vers `const` ; la version qui accepte un pointeur vers non\-`const` retourne un pointeur vers non\-`const`.  La macro \_CONST\_CORRECT\_OVERLOADS est définie si les versions `const` et non\-`const` de ces fonctions sont disponibles.  Si vous avez besoin d'un comportement non\-`const` pour les deux surcharges C\+\+ en C\+\+, définissez le symbol \_CONST\_RETURN.  
+ En C, ces fonctions acceptent un pointeur `const` comme premier argument. En C++, deux surcharges sont disponibles. La surcharge acceptant un pointeur vers `const` retourne un pointeur vers `const` ; la version qui accepte un pointeur vers non-`const` retourne un pointeur vers non-`const`. La macro _CONST_CORRECT_OVERLOADS est définie si les versions `const` et non-`const` de ces fonctions sont disponibles. Si vous avez besoin d’un comportement non-`const` pour les deux surcharges C++ dans C++, définissez le symbole _CONST_RETURN.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`memchr`|\<memory.h\> ou \<string.h\>|  
-|`wmemchr`|\<wchar.h\>|  
+|`memchr`|\<memory.h> ou \<string.h>|  
+|`wmemchr`|\<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Bibliothèques  
+## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_memchr.c  
@@ -139,7 +155,7 @@ int main( void )
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 String to be searched:  
@@ -151,13 +167,13 @@ Search char: r
 Result:      r found at position 12  
 ```  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Manipulation de la mémoire tampon](../../c-runtime-library/buffer-manipulation.md)   
- [\_memccpy](../../c-runtime-library/reference/memccpy.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memcmp, wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
  [memset, wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [strchr, wcschr, \_mbschr, \_mbschr\_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)
+ [strchr, wcschr, _mbschr, _mbschr_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)

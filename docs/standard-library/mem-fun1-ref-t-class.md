@@ -1,74 +1,93 @@
 ---
-title: "mem_fun1_ref_t, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xfunctional/std::mem_fun1_ref_t"
-  - "std::mem_fun1_ref_t"
-  - "mem_fun1_ref_t"
-  - "std.mem_fun1_ref_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mem_fun1_ref_t (classe)"
+title: mem_fun1_ref_t, classe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xfunctional/std::mem_fun1_ref_t
+- std::mem_fun1_ref_t
+- mem_fun1_ref_t
+- std.mem_fun1_ref_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- mem_fun1_ref_t class
 ms.assetid: 7d6742f6-19ba-4523-b3c8-0e5b8f11464f
 caps.latest.revision: 20
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# mem_fun1_ref_t, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 32430ca2b66fc9772c01a29451986403c8d1d4b0
+ms.lasthandoff: 02/24/2017
 
-Une classe d'adaptateur qui permet à une fonction membre **non\_const** qui prend un seul argument d'être appelée comme objet fonction binaire une fois initialisée avec un argument de référence.  
+---
+# <a name="memfun1reft-class"></a>mem_fun1_ref_t, classe
+Classe d’adaptateur qui permet à une fonction membre **non_const** qui accepte un seul argument d’être appelée comme objet de fonction binaire en cas d’initialisation avec un argument de référence.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+template <class Result, class Type, class Arg>
+class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
+    explicit mem_fun1_ref_t(
+    Result (Type::* _Pm)(Arg));
+
+    Result operator()(
+    Type& left,
+    Arg right) const;
+
+ };
 ```  
-template<class Result, class Type, class Arg>  
-   class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {  
-      explicit mem_fun1_ref_t(  
-         Result (Type::* _Pm )( Arg )  
-      );  
-      Result operator()(  
-         Type& _Left,   
-         Arg _Right  
-      ) const;  
-   };  
-```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `_Pm`  
- Pointeur vers la fonction membre de la classe **Type** à convertir en un objet de la fonction.  
+ Pointeur vers la fonction membre de la classe **Type** à convertir en objet de fonction.  
   
- `_Left`  
- L'objet que la fonction membre d'`_Pm` est appelée.  
+ `left`  
+ Objet sur lequel la fonction membre `_Pm` est appelée.  
   
- `_Right`  
- L'argument fourni pour `_Pm`.  
+ `right`  
+ Argument donné pour `_Pm`.  
   
-## Valeur de retour  
- Une fonction binaire adaptable.  
+## <a name="return-value"></a>Valeur de retour  
+ Fonction binaire adaptable.  
   
-## Notes  
- La classe de modèle stocke une copie d'`_Pm`, qui doit être un pointeur vers une fonction membre de la classe **Type**, dans un objet de membre privée.  Il définit sa fonction membre `operator()` comme retourner \(**\_Left**. \* `_Pm`\) \(**\_Right**\).  
+## <a name="remarks"></a>Notes  
+ La classe de modèle stocke une copie de `_Pm`, qui doit être un pointeur vers une fonction membre de la classe **Type**, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant ( **left**.\* `_Pm`)( **right**).  
   
-## Exemple  
- Le constructeur d'`mem_fun1_ref_t` n'est généralement pas utilisé directement ; la fonction d'assistance `mem_fun_ref` permet d'ajuster les fonctions de membre.  Voir le [mem\_fun\_ref](../Topic/mem_fun_ref%20Function.md) pour obtenir un exemple de l'utilisation des adaptateurs de fonction membre.  
+## <a name="example"></a>Exemple  
+ Le constructeur de `mem_fun1_ref_t` n’est généralement pas utilisé directement ; la fonction d’assistance `mem_fun_ref` est utilisée pour adapter les fonctions membres. Pour obtenir un exemple d’utilisation des adaptateurs de fonction membre, consultez [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function).  
   
-## Configuration requise  
- **En\-tête :** \<functional\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<functional>  
   
- **Espace de noms :** std  
+ **Espace de noms :** std  
   
-## Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Bibliothèque STL \(Standard Template Library\)](../misc/standard-template-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

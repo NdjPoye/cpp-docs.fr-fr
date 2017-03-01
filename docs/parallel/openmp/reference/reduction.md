@@ -1,59 +1,74 @@
 ---
-title: "reduction | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "reduction"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reduction OpenMP clause"
+title: "réduction | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- reduction
+dev_langs:
+- C++
+helpviewer_keywords:
+- reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
 caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# reduction
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: c9b2d13ac10005590c51275cc9ecbab0407e5a9e
+ms.lasthandoff: 02/24/2017
 
-Spécifie qu'un ou plusieurs variables qui sont spécifiques à chaque thread sont la rubrique d'une opération de réduction à la fin de la zone parallèle.  
+---
+# <a name="reduction"></a>reduction
+Spécifie qu’une ou plusieurs variables qui sont privées pour chaque thread font l’objet d’une opération de réduction à la fin de la région parallèle.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 reduction(operation:var)  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
  où,  
   
  `operation`  
- L'opérateur pour que l'opération exécute sur les variables \(`var`\) à la fin de la zone parallèle.  
+ L’opérateur de l’opération à effectuer sur les variables (`var`) à la fin de la région parallèle.  
   
  `var`  
- Un plus plusieurs variables sur lesquelles pour exécuter la réduction scalaire.  Si plusieurs variables est spécifiée, séparez les noms de variables par une virgule.  
+ Variables de plus d’une sur laquelle effectuer une réduction scalaire. Si plus d’une variable est spécifiée, séparez les noms de variables par des virgules.  
   
-## Notes  
- `reduction` s'applique aux directives suivantes :  
+## <a name="remarks"></a>Notes  
+ `reduction`s’applique aux directives suivantes :  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [parallel](../../../parallel/openmp/reference/parallel.md)  
+-   [parallèle](../../../parallel/openmp/reference/parallel.md)  
   
 -   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Pour plus d'informations, consultez [2.7.2.6 reduction](../../../parallel/openmp/2-7-2-6-reduction.md).  
+ Pour plus d’informations, consultez [2.7.2.6 réduction](../../../parallel/openmp/2-7-2-6-reduction.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // omp_reduction.cpp  
@@ -160,7 +175,11 @@ int main( )
 }  
 ```  
   
-  **la section parallèle a été exécutée 4 fois en parallèle.  la somme des entiers consécutifs de 1 à 10, est 55**  
-**Toutes les fonctions, func1 via func5 ont réussi \!**    
-## Voir aussi  
+```Output  
+The parallel section was executed 4 times in parallel.  
+The sum of the consecutive integers from 1 to 10, is 55  
+All of the the functions, func1 through func5 succeeded!  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)

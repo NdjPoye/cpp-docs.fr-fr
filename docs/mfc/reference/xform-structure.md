@@ -1,36 +1,51 @@
 ---
-title: "XFORM, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "XFORM"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "XFORM (structure)"
+title: XForm, Structure | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- XFORM
+dev_langs:
+- C++
+helpviewer_keywords:
+- XFORM structure
 ms.assetid: 4fb4ef5b-05d2-4884-82d1-1cb8f7be6302
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# XFORM, structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 2d23b3838f1e2dcabb2affb96fa6f18942581ff8
+ms.lasthandoff: 02/24/2017
 
-La structure `XFORM` se présente sous la forme suivante :  
+---
+# <a name="xform-structure"></a>XFORM, structure
+Le `XFORM` structure a la forme suivante :  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      typedef struct  tagXFORM {  /* xfrm */  
+typedef struct  tagXFORM {  /* xfrm */  
     FLOAT eM11;  
     FLOAT eM12;  
     FLOAT eM21;  
@@ -40,19 +55,21 @@ La structure `XFORM` se présente sous la forme suivante :
 } XFORM;  
 ```  
   
-## Notes  
- La structure `XFORM` spécifie une transformation d'espace de texte à espace de page.  Les membres **eDx** et **eDy** spécifient les composants horizontaux et verticaux de la translation, respectivement.  Le tableau suivant illustre comment les autres membres sont utilisés, selon l'opération :  
+## <a name="remarks"></a>Notes  
+ Le `XFORM` structure spécifie un espace universel pour la transformation de l’espace de page. Le **eDx** et **eDy** membres spécifient les composants de la translation horizontale et verticale, respectivement. Le tableau suivant montre comment les autres membres sont utilisés, en fonction de l’opération :  
   
 |Opération|eM11|eM12|eM21|eM22|  
 |---------------|----------|----------|----------|----------|  
-|`Rotation`|Cosinus de l'angle de rotation|Sinus de l'angle de rotation|Sinus négatif d'angle de rotation|Cosinus de l'angle de rotation|  
-|**Mise à l'échelle**|Composant horizontal de mise à l'échelle|Nothing|Nothing|Composant vertical de mise à l'échelle|  
-|**Inclinaison**|Nothing|Constante de proportionnalité horizontale|Constante verticale de proportionnalité|Nothing|  
-|**Réflexion**|Composant horizontal de réflexion|Nothing|Nothing|Composant vertical de réflexion|  
+|`Rotation`|Cosinus de l’angle de rotation|Sinus de l’angle de rotation|Négatif sinus de l’angle de rotation|Cosinus de l’angle de rotation|  
+|**Mise à l’échelle**|Composant de mise à l’échelle horizontale|Nothing|Nothing|Composant de mise à l’échelle verticale|  
+|**Inclinaison**|Nothing|Constante de proportionnalité horizontal|Constante de proportionnalité verticale|Nothing|  
+|**Réflexion**|Composant de réflexion horizontal|Nothing|Nothing|Composant de réflexion verticale|  
   
-## Configuration requise  
- **Header:** wingdi.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** wingdi.h  
   
-## Voir aussi  
- [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CRgn::CreateFromData](../Topic/CRgn::CreateFromData.md)
+## <a name="see-also"></a>Voir aussi  
+ [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CRgn::CreateFromData](../../mfc/reference/crgn-class.md#createfromdata)
+
+

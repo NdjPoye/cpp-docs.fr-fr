@@ -1,51 +1,68 @@
 ---
-title: "Options, Assistant Page de propri&#233;t&#233;s ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.ppg.options"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistant Page de propriétés ATL, options"
+title: "Options, Assistant Page de propriétés ATL | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- vc.codewiz.class.atl.ppg.options
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
 caps.latest.revision: 13
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Options, Assistant Page de propri&#233;t&#233;s ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: bea768cf456fadfbe05e450c5e6652d1f7f378f5
+ms.lasthandoff: 02/24/2017
 
-Utilisez cette page de l'Assistant pour définir le modèle de thread et le niveau d'agrégation de la page de propriétés que vous créez.  
+---
+# <a name="options-atl-property-page-wizard"></a>Options, Assistant Page de propriétés ATL
+Utilisez cette page de l’Assistant pour définir le niveau d’agrégation et le modèle de thread de page de propriétés que vous créez.  
   
  **Modèle de thread**  
  Spécifie le modèle de thread utilisé par la page de propriétés.  
   
- Pour plus d'informations, consultez [Spécification du modèle de thread du projet](../../atl/specifying-the-threading-model-for-a-project-atl.md).  
+ Consultez la page [en spécifiant le modèle de thread du projet](../../atl/specifying-the-threading-model-for-a-project-atl.md) pour plus d’informations.  
   
 |Option|Description|  
 |------------|-----------------|  
-|`Single`|La page de propriétés s'exécute uniquement dans le thread COM principal.|  
-|**Apartment \(cloisonné\)**|La page de propriétés peut être créée dans n'importe quel mode STA \(Single Thread Apartment\).  Valeur par défaut.|  
+|`Single`|La page de propriétés s’exécute uniquement dans le thread COM principal.|  
+|**Cloisonnement**|La page de propriétés peut être créée dans n’importe quel thread unique cloisonné. Valeur par défaut.|  
   
- **Aggregation**  
- Ajoute la prise en charge de l'agrégation pour la page de propriétés que vous créez.  Pour plus d'informations, consultez [Agrégation](../../atl/aggregation.md).  
+ **Agrégation**  
+ Ajoute la prise en charge de l’agrégation de la page de propriétés que vous créez. Consultez la page [agrégation](../../atl/aggregation.md) pour plus d’informations.  
   
 |Option|Description|  
 |------------|-----------------|  
-|**Oui**|Crée une page de propriétés pouvant être regroupée en agrégats.|  
-|**Non**|Crée une page de propriétés ne pouvant pas être regroupée en agrégats.|  
-|**Uniquement**|Crée une page de propriétés qui ne peut être instanciée qu'à l'aide de l'agrégation.|  
+|**Oui**|Créer une page de propriétés qui peut être regroupée.|  
+|**No**|Créer une page de propriétés qui ne peut pas être agrégée.|  
+|**Uniquement**|Créer une page de propriétés qui ne peut être instanciée par le biais d’agrégation.|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Assistant Page de propriétés ATL](../../atl/reference/atl-property-page-wizard.md)   
  [Chaînes, Assistant Page de propriétés ATL](../../atl/reference/strings-atl-property-page-wizard.md)
+
+

@@ -1,73 +1,90 @@
 ---
-title: "_getdrives | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_getdrives"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "getdrives"
-  - "_getdrives"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_getdrives (fonction)"
-  - "lecteurs de disques"
-  - "getdrives (fonction)"
+title: _getdrives | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _getdrives
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- getdrives
+- _getdrives
+dev_langs:
+- C++
+helpviewer_keywords:
+- _getdrives function
+- getdrives function
+- disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _getdrives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b8052d82a223402849b6ba48ce5f6621a7d27ed9
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="getdrives"></a>_getdrives
 Retourne un masque de bits qui représente les lecteurs de disque actuellement disponibles.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Pour plus d'informations, voir [Fonctions CRT non prises en charge avec \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned long _getdrives( void );  
 ```  
   
-## Valeur de retour  
- Si la fonction aboutit, la valeur de retour est un masque de bits qui représente les lecteurs de disque actuellement disponibles.  La position de bit 0 \(bit de poids faible\) est le lecteur A, la position de bit 1 est le lecteur B, la position de bit 2 est le lecteur C, et ainsi de suite.  Si la fonction échoue, la valeur de retour est égale à zéro.  Pour obtenir des informations plus complètes sur les erreurs, appelez `GetLastError`.  
+## <a name="return-value"></a>Valeur de retour  
+ Si la fonction aboutit, la valeur de retour est un masque de bits qui représente les lecteurs de disque actuellement disponibles. La position de bit 0 (bit de poids faible) est le lecteur A, la position de bit 1 est le lecteur B, la position de bit 2 est le lecteur C, et ainsi de suite. Si la fonction échoue, la valeur de retour est égale à zéro. Pour obtenir des informations plus complètes sur les erreurs, appelez `GetLastError`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_getdrives`|\<direct.h\>|  
+|`_getdrives`|\<direct.h>|  
   
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
-// crt_getdrives.c  
+  
+      // crt_getdrives.c  
 // This program retrives and lists out  
 // all the logical drives that are   
 // currently mounted on the machine.  
@@ -102,13 +119,16 @@ int main(int argc, char* argv[]) {
 }  
 ```  
   
-  **Les lecteurs logiques utilisés sont les suivants :**  
-**A:**  
-**C:**  
-**D:**  
-**E:**   
-## Équivalent .NET Framework  
- Non applicable.  Pour appeler la fonction C standard, utilisez `PInvoke`.  Pour plus d'informations, consultez [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+The following logical drives are being used:  
+A:  
+C:  
+D:  
+E:  
+```  
   
-## Voir aussi  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Voir aussi  
  [Contrôle de répertoire](../../c-runtime-library/directory-control.md)

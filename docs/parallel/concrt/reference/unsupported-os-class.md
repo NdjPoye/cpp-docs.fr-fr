@@ -1,54 +1,85 @@
 ---
-title: "unsupported_os, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::unsupported_os"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unsupported_os (classe)"
+title: unsupported_os, classe | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::unsupported_os
+dev_langs:
+- C++
+helpviewer_keywords:
+- unsupported_os class
 ms.assetid: 6fa57636-341b-4b51-84cc-261d283ff736
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# unsupported_os, classe
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: d104a9f270196e04a6d84912b6051f43a69a0dc4
+ms.lasthandoff: 02/24/2017
 
-Cette classe décrit une exception qui est renvoyée dès qu'un système d'exploitation non pris en charge est utilisé.  
+---
+# <a name="unsupportedos-class"></a>unsupported_os, classe
+Cette classe décrit une exception levée quand un système d'exploitation non pris en charge est utilisé.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+class unsupported_os : public std::exception;
 ```  
-class unsupported_os : public std::exception;  
-```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[unsupported\_os::unsupported\_os, constructeur](../Topic/unsupported_os::unsupported_os%20Constructor.md)|Surchargé.  Construit un objet `unsupported_os`.|  
+|----------|-----------------|  
+|[unsupported_os, constructeur](#ctor)|Surchargé. Construit un objet `unsupported_os`.|  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `exception`  
   
  `unsupported_os`  
   
-## Configuration requise  
- **En\-tête :** concrt.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** concrt.h  
   
- **Espace de noms :** concurrency  
+ **Espace de noms :** concurrency  
   
-## Voir aussi  
- [concurrency, espace de noms](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namectora-unsupportedos"></a><a name="ctor"></a>unsupported_os 
+
+ Construit un objet `unsupported_os`.  
+  
+```
+explicit _CRTIMP unsupported_os(_In_z_ const char* _Message) throw();
+
+unsupported_os() throw();
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `_Message`  
+ Message descriptif de l'erreur.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [accès concurrentiel Namespace](concurrency-namespace.md)
+

@@ -1,62 +1,76 @@
 ---
-title: "_mbsnbcmp, _mbsnbcmp_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsnbcmp"
-  - "_mbsnbcmp_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbsnbcmp"
-  - "tcsnbmp"
-  - "_mbsnbcmp_l"
-  - "mbsnbcmp_l"
-  - "_mbsnbcmp"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_mbsnbcmp (fonction)"
-  - "_mbsnbcmp_l (fonction)"
-  - "_tcsncmp (fonction)"
-  - "mbsnbcmp (fonction)"
-  - "mbsnbcmp_l (fonction)"
-  - "tcsncmp (fonction)"
+title: _mbsnbcmp, _mbsnbcmp_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsnbcmp
+- _mbsnbcmp_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbsnbcmp
+- tcsnbmp
+- _mbsnbcmp_l
+- mbsnbcmp_l
+- _mbsnbcmp
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbsnbcmp_l function
+- mbsnbcmp function
+- tcsncmp function
+- _mbsnbcmp_l function
+- _tcsncmp function
+- _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
 caps.latest.revision: 23
-caps.handback.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _mbsnbcmp, _mbsnbcmp_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 052aed3d0897821ae617677913ed37e773f6d02d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
 Compare les `n` premiers octets de deux chaînes de caractères multioctets.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Pour plus d'informations, voir [Fonctions CRT non prises en charge avec \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int _mbsnbcmp(  
@@ -72,7 +86,7 @@ int _mbsnbcmp_l(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `string1, string2`  
  Chaînes à comparer.  
   
@@ -82,43 +96,43 @@ int _mbsnbcmp_l(
  `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
- La valeur de retour indique la relation ordinale entre les sous\-chaînes de `string1` et de `string`.  
+## <a name="return-value"></a>Valeur de retour  
+ La valeur de retour indique la relation ordinale entre les sous-chaînes de `string1` et de `string`.  
   
 |Valeur de retour|Description|  
-|----------------------|-----------------|  
-|\< 0|La sous\-chaîne de `string1` est inférieure à la sous\-chaîne de `string2`.|  
-|0|La sous\-chaîne de `string1` est identique à la sous\-chaîne de `string2`.|  
-|\> 0|La sous\-chaîne de `string1` est supérieure à la sous\-chaîne de `string2`.|  
+|------------------|-----------------|  
+|< 0|La sous-chaîne de `string1` est inférieure à la sous-chaîne de `string2`.|  
+|0|La sous-chaîne de `string1` est identique à la sous-chaîne de `string2`.|  
+|> 0|La sous-chaîne de `string1` est supérieure à la sous-chaîne de `string2`.|  
   
- En cas d'erreur de validation d'un paramètre, `_mbsnbcmp` et `_mbsnbcmp_l` retournent `_NLSCMPERROR`, qui est défini dans \<string.h\> et dans \<mbstring.h\>.  
+ En cas d’erreur de validation d’un paramètre, `_mbsnbcmp` et `_mbsnbcmp_l` retournent `_NLSCMPERROR`, qui est défini dans \<string.h> et \<mbstring.h>.  
   
-## Notes  
- Les fonctions `_mbsnbcmp` comparent au plus les `count` premiers octets de `string1` et de `string2`, et retournent une valeur qui indique la relation entre les sous\-chaînes.  `_mbsnbcmp` est une version respectant la casse de `_mbsnbicmp`.  Contrairement à `_mbsnbcoll`, `_mbsnbcmp` n'est pas affectée par l'ordre de classement des paramètres régionaux.  `_mbsnbcmp` reconnaît les séquences de caractères multioctets en fonction de la [page de codes](../../c-runtime-library/code-pages.md) multioctet active.  
+## <a name="remarks"></a>Notes  
+ Les fonctions `_mbsnbcmp` comparent au plus les `count` premiers octets de `string1` et de `string2`, et retournent une valeur qui indique la relation entre les sous-chaînes. `_mbsnbcmp` est une version respectant la casse de `_mbsnbicmp`. Contrairement à `_mbsnbcoll`, `_mbsnbcmp` n'est pas affectée par l'ordre de classement des paramètres régionaux. `_mbsnbcmp` reconnaît les séquences de caractères multioctets en fonction de la [page de codes](../../c-runtime-library/code-pages.md) multioctet active.  
   
  `_mbsnbcmp` ressemble à `_mbsncmp`, sauf que `_mbsncmp` compare des chaînes de caractères et non pas des octets.  
   
- La valeur de sortie est affectée par le paramètre de catégorie `LC_CTYPE` des paramètres régionaux, qui spécifie les octets de début et de fin des caractères multioctets.  Pour plus d'informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  La fonction `_mbsnbcmp` utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux.  La fonction `_mbsnbcmp_l` est identique, sauf qu'elle utilise à la place le paramètre `locale`.  Pour plus d'informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La valeur de sortie est affectée par le paramètre de catégorie `LC_CTYPE` des paramètres régionaux, qui spécifie les octets de début et de fin des caractères multioctets. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La fonction `_mbsnbcmp` utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux. La fonction `_mbsnbcmp_l` est identique, sauf qu'elle utilise à la place le paramètre `locale`. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
- Si `string1` ou `string2` est un pointeur null, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à continuer, les fonctions retournent `_NLSCMPERROR` et `errno` est défini à `EINVAL`.  
+ Si `string1` ou `string2` est un pointeur null, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à continuer, les fonctions retournent `_NLSCMPERROR` et `errno` est défini à `EINVAL`.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine Tchar.h|\_UNICODE et \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|-------------------------------------|-------------------|----------------------|  
+|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|---------------------------------------|--------------------|-----------------------|  
 |`_tcsncmp`|[strncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|`_mbsnbcmp`|[wcsncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|  
 |`_tcsncmp_l`|[strncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|`_mbsnbcml`|[wcsncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_mbsnbcmp`|\<mbstring.h\>|  
-|`_mbsnbcmp_l`|\<mbstring.h\>|  
+|`_mbsnbcmp`|\<mbstring.h>|  
+|`_mbsnbcmp_l`|\<mbstring.h>|  
   
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_mbsnbcmp.c  
@@ -155,7 +169,7 @@ int main( void )
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 Compare strings:  
@@ -169,14 +183,14 @@ Function: _mbsnicmp _mbsnicmp (first 10 characters only)
 Result:   String 1 is equal to string 2  
 ```  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   
- [\_mbsnbcat, \_mbsnbcat\_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [\_mbsnbicmp, \_mbsnbicmp\_l](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [_mbsnbicmp, _mbsnbicmp_l](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
  [Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

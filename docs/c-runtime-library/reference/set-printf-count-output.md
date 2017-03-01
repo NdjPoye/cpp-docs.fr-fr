@@ -1,52 +1,66 @@
 ---
-title: "_set_printf_count_output | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_printf_count_output"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "set_printf_count_output"
-  - "_set_printf_count_output"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "%n (format)"
-  - "_set_printf_count_output (fonction)"
-  - "set_printf_count_output (fonction)"
+title: _set_printf_count_output | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _set_printf_count_output
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- set_printf_count_output
+- _set_printf_count_output
+dev_langs:
+- C++
+helpviewer_keywords:
+- '%n format'
+- set_printf_count_output function
+- _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _set_printf_count_output
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: dfb86b7d6e52168fda5ec28bd66edc29b24432e4
+ms.lasthandoff: 02/24/2017
 
-Activer ou désactiver la prise en charge du format `%n` dans les familles de fonctions [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+---
+# <a name="setprintfcountoutput"></a>_set_printf_count_output
+Active ou désactive la prise en charge du format `%n` dans les fonctions de famille [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int _set_printf_count_output(  
@@ -54,25 +68,25 @@ int _set_printf_count_output(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `enable`  
- Une valeur différente de zéro pour permettre la prise en charge de `%n`, 0 pour désactiver la prise en charge de `%n`.  
+ Valeur différente de zéro pour activer la prise en charge de `%n`, 0 pour désactiver la prise en charge de `%n`.  
   
-## Valeur de propriété\/valeur de retour  
- L'état de la prise en charge de `%n` avant d'appeler cette fonction : différent de zéro si la prise en charge de `%n` a été activée, 0 s'il est désactivé.  
+## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
+ État de la prise en charge de `%n` avant l’appel de cette fonction : valeur différente de zéro si la prise en charge de `%n` était activée, 0 si elle était désactivée.  
   
-## Notes  
- Pour des raisons de sécurité, la prise en charge du spécificateur de format `%n` est désactivée par défaut dans `printf` et toutes ses variantes.  Si `%n` se rencontre dans une spécification du format `printf`, le comportement par défaut consiste à appeler le gestionnaire de paramètre non valide comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Appeler `_set_printf_count_output` avec l'argument différent de zéro entraîne les familles de fonction`printf`à interpréter `%n` comme décrit dans [Caractères du champ de type printf](../../c-runtime-library/printf-type-field-characters.md).  
+## <a name="remarks"></a>Notes  
+ Pour des raisons de sécurité, la prise en charge du spécificateur de format `%n` est désactivée par défaut dans `printf` et toutes ses variantes. Si `%n` est rencontré dans une spécification de format `printf`, le comportement par défaut est d’appeler le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Le fait d’appeler `_set_printf_count_output` avec un argument différent de zéro conduit les fonctions de famille `printf` à interpréter `%n` comme décrit dans [Caractères du champ de type printf](../../c-runtime-library/printf-type-field-characters.md).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_set_printf_count_output`|\<stdio.h\>|  
+|`_set_printf_count_output`|\<stdio.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_set_printf_count_output.c  
@@ -92,7 +106,7 @@ int main()
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 %n support was disabled.  
@@ -101,8 +115,8 @@ int main()
 i = 5  
 ```  
   
-## Équivalent .NET Framework  
- Non applicable.  Pour appeler la fonction C standard, utilisez `PInvoke`.  Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
- [\_get\_printf\_count\_output](../../c-runtime-library/reference/get-printf-count-output.md)
+## <a name="see-also"></a>Voir aussi  
+ [_get_printf_count_output](../../c-runtime-library/reference/get-printf-count-output.md)

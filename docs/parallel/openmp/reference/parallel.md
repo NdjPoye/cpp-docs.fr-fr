@@ -1,33 +1,48 @@
 ---
-title: "parallel | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "parallel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "parallel OpenMP directive"
+title: "parallèle | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- parallel
+dev_langs:
+- C++
+helpviewer_keywords:
+- parallel OpenMP directive
 ms.assetid: b8e90073-e85b-4d39-8ed8-0364441794fb
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# parallel
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 74bad2cbe60e7f03c39d243e380db5dea7430c28
+ms.lasthandoff: 02/24/2017
 
-Définit une zone parallèle, qui est le code qui sera exécuté par plusieurs threads en parallèle.  
+---
+# <a name="parallel"></a>parallel
+Définit une région parallèle, qui est le code qui sera exécuté par plusieurs threads en parallèle.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 #pragma omp parallel [clauses]  
@@ -36,14 +51,14 @@ Définit une zone parallèle, qui est le code qui sera exécuté par plusieurs t
 }  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  où,  
   
- `clause` \(facultatif\)  
- zéro clauses ou plus.  Consultez la section Notes pour une liste des clauses prises en charge par **parallèle**.  
+ `clause`(facultatif)  
+ Zéro ou plusieurs clauses.  Consultez la section Notes pour obtenir la liste des clauses prises en charge par **parallèles**.  
   
-## Notes  
- La directive de **parallèle** prend en charge les clauses suivantes OpenMP :  
+## <a name="remarks"></a>Notes  
+ Le **parallèles** directive prend en charge les clauses OpenMP suivantes :  
   
 -   [copyin](../../../parallel/openmp/reference/copyin.md)  
   
@@ -51,22 +66,22 @@ Définit une zone parallèle, qui est le code qui sera exécuté par plusieurs t
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
--   [if](../../../parallel/openmp/reference/if-openmp.md)  
+-   [If](../../../parallel/openmp/reference/if-openmp.md)  
   
--   [num\_threads](../../../parallel/openmp/reference/num-threads.md)  
+-   [num_threads](../../../parallel/openmp/reference/num-threads.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
--   [reduction](../../../parallel/openmp/reference/reduction.md)  
+-   [réduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [shared](../../../parallel/openmp/reference/shared-openmp.md)  
+-   [partagé](../../../parallel/openmp/reference/shared-openmp.md)  
   
- **parallèle** peut également être utilisé avec les directives de [sections](../../../parallel/openmp/reference/sections-openmp.md) et de [for](../../../parallel/openmp/reference/for-openmp.md) .  
+ **parallèle** peut également être utilisé avec les [sections](../../../parallel/openmp/reference/sections-openmp.md) et [pour](../../../parallel/openmp/reference/for-openmp.md) directives.  
   
- Pour plus d'informations, consultez [2.3 parallel Construct](../../../parallel/openmp/2-3-parallel-construct.md).  
+ Pour plus d’informations, consultez [2.3 construction parallèle](../../../parallel/openmp/2-3-parallel-construct.md).  
   
-## Exemple  
- L'exemple suivant indique comment définir le nombre de threads et de définir une région parallèle.  Par défaut, le nombre de threads est égal au nombre de processeurs logiques sur l'ordinateur.  Par exemple, si vous avez un ordinateur avec un processeur physique équipée d'hyperthreading activé, il possède deux processeurs logiques et, par conséquent, plusieurs threads.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre comment définir le nombre de threads et de définir une région parallèle. Par défaut, le nombre de threads est égal au nombre de processeurs logiques sur l’ordinateur. Par exemple, si vous avez un ordinateur avec un processeur physique avec l’hyperthreading est activée, il aura deux processeurs logiques et, par conséquent, les deux threads.  
   
 ```  
 // omp_parallel.cpp  
@@ -83,12 +98,15 @@ int main() {
 }  
 ```  
   
-  **Hello du thread 0**  
-**Hello du thread 1**  
-**Hello du thread 2**  
-**Hello du thread 3**   
-## Commentaire  
- Notez que l'ordre de sortie peut varier sur des ordinateurs différents.  
+```Output  
+Hello from thread 0  
+Hello from thread 1  
+Hello from thread 2  
+Hello from thread 3  
+```  
   
-## Voir aussi  
+## <a name="comment"></a>Commentaire  
+ Notez que l’ordre de sortie peut varier sur des ordinateurs différents.  
+  
+## <a name="see-also"></a>Voir aussi  
  [Directives](../../../parallel/openmp/reference/openmp-directives.md)

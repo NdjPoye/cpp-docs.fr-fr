@@ -1,84 +1,102 @@
 ---
-title: "Modifier les styles | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ES_READONLY"
-  - "ES_WANTRETURN"
-  - "ES_UPPERCASE"
-  - "ES_NUMBER"
-  - "ES_AUTOHSCROLL"
-  - "ES_LOWERCASE"
-  - "ES_RIGHT"
-  - "ES_MULTILINE"
-  - "ES_PASSWORD"
-  - "ES_NOHIDESEL"
-  - "ES_OEMCONVERT"
-  - "ES_LEFT"
-  - "ES_CENTER"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modifier les styles (MFC)"
-  - "ES_AUTOHSCROLL (constante)"
-  - "ES_AUTOVSCROLL (constante)"
-  - "ES_CENTER (constante)"
-  - "ES_LEFT (constante)"
-  - "ES_LOWERCASE (constante)"
-  - "ES_MULTILINE (constante)"
-  - "ES_NOHIDESEL (constante)"
-  - "ES_NUMBER (constante)"
-  - "ES_OEMCONVERT (constante)"
-  - "ES_PASSWORD (constante)"
-  - "ES_READONLY (constante)"
-  - "ES_RIGHT (constante)"
-  - "ES_UPPERCASE (constante)"
-  - "ES_WANTRETURN (constante)"
+title: Modifier les Styles | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ES_READONLY
+- ES_WANTRETURN
+- ES_UPPERCASE
+- ES_NUMBER
+- ES_AUTOHSCROLL
+- ES_LOWERCASE
+- ES_RIGHT
+- ES_MULTILINE
+- ES_PASSWORD
+- ES_NOHIDESEL
+- ES_OEMCONVERT
+- ES_LEFT
+- ES_CENTER
+dev_langs:
+- C++
+helpviewer_keywords:
+- ES_WANTRETURN constant
+- edit styles [MFC]
+- ES_RIGHT constant
+- ES_READONLY constant
+- ES_PASSWORD constant
+- ES_MULTILINE constant
+- ES_LEFT constant
+- ES_AUTOVSCROLL constant
+- ES_OEMCONVERT constant
+- ES_LOWERCASE constant
+- ES_NUMBER constant
+- ES_UPPERCASE constant
+- ES_NOHIDESEL constant
+- ES_AUTOHSCROLL constant
+- ES_CENTER constant
 ms.assetid: e6291dd6-f2cb-4ce2-ac31-32272526625c
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Modifier les styles
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 275e0d2dede038bdbe9061bc8051408442aa70bf
+ms.lasthandoff: 02/24/2017
 
--   **ES\_AUTOHSCROLL** Automatically scrolls text to the right by 10 characters when the user types a character at the end of the line.  When the user presses the ENTER key, the control scrolls all text back to position 0.  
+---
+# <a name="edit-styles"></a>Modifier les styles
+-   **ES_AUTOHSCROLL** défile automatiquement le texte à droite de 10 caractères lorsque l’utilisateur tape un caractère à la fin de la ligne. Lorsque l’utilisateur appuie sur la touche entrée, le contrôle défile tout le texte à la position 0.  
   
--   **ES\_AUTOVSCROLL** Automatically scrolls text up one page when the user presses ENTER on the last line.  
+-   **ES_AUTOVSCROLL** fait défiler automatiquement le texte d’une page lorsque l’utilisateur appuie sur entrée sur la dernière ligne.  
   
--   **ES\_CENTER** Centers text in a single\-line or multiline edit control.  
+-   **ES_CENTER** Centre le texte dans une seule ligne ou un multiline contrôle d’édition.  
   
--   **ES\_LEFT** Left\-aligns text in a single\-line or multiline edit control.  
+-   **ES_LEFT** gauche-aligne le texte dans une seule ligne ou un multiligne contrôle d’édition.  
   
--   **ES\_LOWERCASE** Converts all characters to lowercase as they are typed into the edit control.  
+-   **ES_LOWERCASE** convertit tous les caractères en minuscules lorsqu’ils sont tapés dans le contrôle d’édition.  
   
--   **ES\_MULTILINE** Designates a multiple\-line edit control. \(The default is single line.\) If the **ES\_AUTOVSCROLL** style is specified, the edit control shows as many lines as possible and scrolls vertically when the user presses the ENTER key.  If **ES\_AUTOVSCROLL** is not given, the edit control shows as many lines as possible and beeps if ENTER is pressed when no more lines can be displayed.  If the **ES\_AUTOHSCROLL** style is specified, the multiple\-line edit control automatically scrolls horizontally when the caret goes past the right edge of the control.  To start a new line, the user must press ENTER.  If **ES\_AUTOHSCROLL** is not given, the control automatically wraps words to the beginning of the next line when necessary; a new line is also started if ENTER is pressed.  The position of the wordwrap is determined by the window size.  If the window size changes, the wordwrap position changes and the text is redisplayed.  Multiple\-line edit controls can have scroll bars.  An edit control with scroll bars processes its own scroll\-bar messages.  Edit controls without scroll bars scroll as described above and process any scroll messages sent by the parent window.  
+-   **ES_MULTILINE** désigne un contrôle d’édition de plusieurs lignes. (La valeur par défaut est la seule ligne.) Si le **ES_AUTOVSCROLL** style est spécifié, le contrôle edit affiche autant de lignes que possible et fait défiler verticalement lorsque l’utilisateur appuie sur la touche ENTRÉE. Si **ES_AUTOVSCROLL** est ne pas accordée, le contrôle edit affiche autant de lignes que possible et les signaux sonores si la touche entrée quand plus aucune ligne ne peut être affichés. Si le **ES_AUTOHSCROLL** style est spécifié, le contrôle d’édition de plusieurs lignes défile horizontalement lorsque le signe insertion dépasse le bord droit du contrôle. Pour démarrer une nouvelle ligne, l’utilisateur doit appuyer sur ENTRÉE. Si **ES_AUTOHSCROLL** est ne pas accordée, le contrôle renvoie les mots au début de la ligne suivante lorsque cela est nécessaire, une nouvelle ligne est également démarrée si vous appuyez sur ENTRÉE. La position de la propriété wordwrap est déterminée par la taille de la fenêtre. Si la taille de la fenêtre change, les changements de position wordwrap et le texte s’affiche de nouveau. Les contrôles d’édition de plusieurs lignes peuvent avoir des barres de défilement. Un contrôle d’édition avec barres de défilement traite ses propres messages de la barre de défilement. Modifier des contrôles sans défilement de barres de défilement comme décrit ci-dessus et traiter les messages de défilement envoyés par la fenêtre parente.  
   
--   **ES\_NOHIDESEL** Normally, an edit control hides the selection when the control loses the input focus and inverts the selection when the control receives the input focus.  Specifying **ES\_NOHIDESEL** deletes this default action.  
+-   **ES_NOHIDESEL** normalement, un contrôle d’édition masque la sélection lorsque le contrôle perd le focus d’entrée et inverse la sélection lorsque le contrôle reçoit le focus d’entrée. Spécification de **ES_NOHIDESEL** supprime cette action par défaut.  
   
--   **ES\_NUMBER** Allows only digits to be entered into the edit control.  
+-   **ES_NUMBER** permet uniquement de chiffres doit être entrée dans le contrôle d’édition.  
   
--   **ES\_OEMCONVERT** Text entered in the edit control is converted from the ANSI character set to the OEM character set and then back to ANSI.  This ensures proper character conversion when the application calls the `AnsiToOem` Windows function to convert an ANSI string in the edit control to OEM characters.  This style is most useful for edit controls that contain filenames.  
+-   **ES_OEMCONVERT** texte entré dans le contrôle d’édition est converti dans le jeu de caractères ANSI pour le jeu de caractères OEM et puis de nouveau en ANSI. Cela garantit une conversion correcte des caractères lorsque l’application appelle la `AnsiToOem` fonction pour convertir une chaîne ANSI dans le contrôle d’édition en caractères OEM de Windows. Ce style est particulièrement utile pour les contrôles d’édition qui contiennent des noms de fichiers.  
   
--   **ES\_PASSWORD** Displays all characters as an asterisk \(**\***\) as they are typed into the edit control.  An application can use the `SetPasswordChar` member function to change the character that is displayed.  
+-   **ES_PASSWORD** affiche tous les caractères sous la forme d’un astérisque (**\***) lorsqu’ils sont tapés dans le contrôle d’édition. Une application peut utiliser le `SetPasswordChar` fonction membre pour modifier le caractère qui s’affiche.  
   
--   **ES\_READONLY** Prevents the user from entering or editing text in the edit control.  
+-   **ES_READONLY** empêche l’utilisateur d’entrer ou de modifier du texte dans le contrôle d’édition.  
   
--   **ES\_RIGHT** Right\-aligns text in a single\-line or multiline edit control.  
+-   **ES_RIGHT** contrôle d’édition de droite-Aligne le texte dans une seule ligne ou un multiligne.  
   
--   **ES\_UPPERCASE** Converts all characters to uppercase as they are typed into the edit control.  
+-   **ES_UPPERCASE** convertit tous les caractères en majuscules lorsqu’ils sont tapés dans le contrôle d’édition.  
   
--   **ES\_WANTRETURN** Specifies that a carriage return be inserted when the user presses the ENTER key while entering text into a multiple\-line edit control in a dialog box.  Without this style, pressing the ENTER key has the same effect as pressing the dialog boxs default pushbutton.  This style has no effect on a single\-line edit control.  
+-   **ES_WANTRETURN** Spécifie qu’un retour chariot est insérée lorsque l’utilisateur appuie sur la touche entrée lors de la saisie de texte dans un contrôle d’édition de plusieurs lignes dans une boîte de dialogue. Sans ce style, en appuyant sur la touche entrée a le même effet que d’appuyer sur le bouton de commande par défaut de zones boîte de dialogue. Ce style n’a aucun effet sur une seule ligne contrôle d’édition.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Styles utilisés par MFC](../../mfc/reference/styles-used-by-mfc.md)   
- [CEdit::Create](../Topic/CEdit::Create.md)   
- [Edit Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775464)
+ [CEdit::Create](../../mfc/reference/cedit-class.md#create)   
+ [Modifier les Styles de contrôle](http://msdn.microsoft.com/library/windows/desktop/bb775464)
+
+

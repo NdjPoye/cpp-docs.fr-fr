@@ -1,68 +1,144 @@
 ---
-title: "Worker Archetype | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Worker archetype"
+title: "Archétype de travail | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# Worker Archetype
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 046160644cca3bd23e4293a3c52692d2b4c94cd5
+ms.lasthandoff: 02/24/2017
 
-Les classes conformes à l'archétype *de travail* fournissent le code aux éléments de travail par processus mis en file d'attente sur un pool de threads.  
+---
+# <a name="worker-archetype"></a>Archétype de travail
+Les classes qui se conforment à la *travail* archétype fournissent le code pour traiter des éléments de travail en file d’attente sur un pool de threads.  
   
- **Implémentation**  
+ **Mise en œuvre**  
   
- Pour implémenter une classe conformes à cet archétype, la classe doit fournir les fonctionnalités suivantes :  
+ Pour implémenter une classe conforme à cette archétype, la classe doit fournir les fonctionnalités suivantes :  
   
 |Méthode|Description|  
+|------------|-----------------|  
+|[Initialiser](#initialize)|Appelée pour initialiser l’objet de travail avant que toutes les demandes sont transmises à [Execute](#execute).|  
+|[Exécuter](#execute)|Appelée pour traiter un élément de travail.|  
+|[Arrêter](#terminate)|Appelé pour annuler l’initialisation de l’objet de travail une fois que toutes les demandes qui ont été transmis au [Execute](#execute).|  
+  
+|TypeDef|Description|  
 |-------------|-----------------|  
-|[Initialize](../Topic/WorkerArchetype::Initialize.md)|Appelé pour initialiser l'objet de travail avant toutes les demandes sont passés à [exécutez](../Topic/WorkerArchetype::Execute.md).|  
-|[Execute](../Topic/WorkerArchetype::Execute.md)|Appelé pour traiter un élément de travail.|  
-|[Terminer](../Topic/WorkerArchetype::Terminate.md)|Appelée pour uninitialize les requêtes d'objet de travail après que tous ont été passés à [exécutez](../Topic/WorkerArchetype::Execute.md).|  
+|[RequestType](#requesttype)|Typedef pour le type d’élément de travail qui peut être traité par la classe de travail.|  
   
-|Typedef|Description|  
-|-------------|-----------------|  
-|[RequestType](../Topic/WorkerArchetype::RequestType.md)|Un typedef pour le type d'élément de travail qui peut être traité par la classe de travail.|  
+ Par défaut *travail* classe ressemble à ceci :  
   
- Recherche *de travail* typiques d'une classe ressemble à ceci :  
-  
- [!code-cpp[NVC_ATL_Utilities#137](../../atl/codesnippet/CPP/worker-archetype_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities&#137;](../../atl/codesnippet/cpp/worker-archetype_1.cpp)]  
   
  **Implémentations existantes**  
   
- Ces classes sont conformes à cet archétype :  
+ Ces classes sont conformes à cette archétype :  
   
 |Classe|Description|  
-|------------|-----------------|  
-|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Accepte les demandes du pool de threads et les transmet à un objet de travail créé et détruit pour chaque demande.|  
+|-----------|-----------------|  
+|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Reçoit les demandes du pool de threads et les transmet à un objet de travail qui est créé et détruit pour chaque demande.|  
   
  **Utilisation**  
   
- Ces paramètres de modèle s'attendent à ce que la classe est conforme à cet archétype :  
+ Ces paramètres de modèle que la classe conforme à cette archétype :  
   
-|Nom de paramètre|Utilisé par|  
-|----------------------|-----------------|  
-|*Ouvrier*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|  
-|*Ouvrier*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|  
+|Nom du paramètre|Utilisé par|  
+|--------------------|-------------|  
+|*Travail*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|  
+|*Travail*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|  
   
-## Configuration requise  
- **Header:** atlutil.h  
+### <a name="requirements"></a>Spécifications  
+ **En-tête :** atlutil.h  
   
-## Voir aussi  
- [Archetypes](../../atl/reference/atl-archetypes.md)   
+## <a name="a-nameexecuteaworkerarchetypeexecute"></a><a name="execute"></a>WorkerArchetype::Execute
+Appelée pour traiter un élément de travail.  
+  
+  
+  
+```  
+void Execute(
+    RequestType request,  
+    void* pvWorkerParam,  
+    OVERLAPPED* pOverlapped);
+```  
+  
+#### <a name="parameters"></a>Paramètres  
+ `request`  
+ L’élément de travail à traiter. L’élément de travail est du même type que `RequestType`.  
+  
+ `pvWorkerParam`  
+ Un paramètre personnalisé compris par la classe de travail. Également transmis à `WorkerArchetype::Initialize` et `Terminate`.  
+  
+ `pOverlapped`  
+ Un pointeur vers le [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) structure utilisée pour créer la file d’attente à laquelle les éléments ont été en file d’attente.  
+  
+## <a name="a-nameinitializea-workerarchetypeinitialize"></a><a name="initialize"></a>WorkerArchetype::Initialize
+Appelée pour initialiser l’objet de travail avant que toutes les demandes sont transmises à `WorkerArchetype::Execute`.  
+```
+BOOL Initialize(void* pvParam) throw();
+```  
+  
+#### <a name="parameters"></a>Paramètres  
+ `pvParam`  
+ Un paramètre personnalisé compris par la classe de travail. Également transmis à `WorkerArchetype::Terminate` et `WorkerArchetype::Execute`.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourner **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
+  
+## <a name="a-namerequesttypea-workerarchetyperequesttype"></a><a name="requesttype"></a>WorkerArchetype::RequestType
+Typedef pour le type d’élément de travail qui peut être traité par la classe de travail.  
+  
+```  
+typedef MyRequestType RequestType;    
+```  
+  
+### <a name="remarks"></a>Remarques  
+ Ce type doit être utilisé comme premier paramètre de `WorkerArchetype::Execute` et doit pouvoir être casté vers et depuis un ULONG_PTR entière.  
+  
+## <a name="a-nameterminatea-workerarchetypeterminate"></a><a name="terminate"></a>WorkerArchetype::Terminate
+Appelé pour annuler l’initialisation de l’objet de travail une fois que toutes les demandes qui ont été transmis au `WorkerArchetype::Execute`).  
+    
+``` 
+void Terminate(void* pvParam) throw();
+```  
+  
+#### <a name="parameters"></a>Paramètres  
+ `pvParam`  
+ Un paramètre personnalisé compris par la classe de travail. Également transmis à `WorkerArchetype::Initialize` et `WorkerArchetype::Execute`.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Archétypes](../../atl/reference/atl-archetypes.md)   
  [Concepts](../../atl/active-template-library-atl-concepts.md)   
- [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md)
+ [Composants COM bureau ATL](../../atl/atl-com-desktop-components.md)
+
+
+
+

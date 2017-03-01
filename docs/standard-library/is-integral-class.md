@@ -1,57 +1,70 @@
 ---
-title: "is_integral, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::is_integral"
-  - "std.tr1.is_integral"
-  - "is_integral"
-  - "std.is_integral"
-  - "std::is_integral"
-  - "type_traits/std::is_integral"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_integral (classe) (TR1)"
-  - "is_integral"
+title: is_integral, classe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_integral
+- std::is_integral
+- type_traits/std::is_integral
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_integral class
+- is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# is_integral, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 71e6db05a48cfc5433afc3dda38c3005ad24a7e8
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isintegral-class"></a>is_integral, classe
 Teste si le type est intégral.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-template<class Ty>  
-    struct is_integral;  
+template <class Ty>  
+struct is_integral;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `Ty`  
  Type à interroger.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Une instance du prédicat de type a la valeur true si le type `Ty` est l'un des types intégraux ou une forme `cv-qualified` de l'un des types intégraux. Sinon, sa valeur est false.  
   
- `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long` et `unsigned long` sont des types intégraux.  En outre, avec les compilateurs qui les fournissent, un type intégral peut être `long long`, `unsigned long long`, `__int64` ou `unsigned __int64`.  
+ `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long` et `unsigned long` sont des types intégraux. En outre, avec les compilateurs qui les fournissent, un type intégral peut être `long long`, `unsigned long long`, `__int64` ou `unsigned __int64`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
-// std_tr1__type_traits__is_integral.cpp   
+```cpp  
+// std__type_traits__is_integral.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -75,15 +88,19 @@ int main()
   
 ```  
   
-  **is\_integral\<trivial\> \=\= false**  
-**is\_integral\<int\> \=\= true**  
-**is\_integral\<float\> \=\= false**   
-## Configuration requise  
- **En\-tête :** \<type\_traits\>  
+```Output  
+is_integral<trivial> == false  
+is_integral<int> == true  
+is_integral<float> == false  
+```  
   
- **Espace de noms :** std  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<type_traits>  
   
-## Voir aussi  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [is\_enum, classe](../standard-library/is-enum-class.md)   
- [is\_floating\_point, classe](../standard-library/is-floating-point-class.md)
+ **Espace de noms :** std  
+  
+## <a name="see-also"></a>Voir aussi  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [is_enum, classe](../standard-library/is-enum-class.md)   
+ [is_floating_point, classe](../standard-library/is-floating-point-class.md)
+

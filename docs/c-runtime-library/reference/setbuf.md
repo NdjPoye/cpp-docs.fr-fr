@@ -1,48 +1,64 @@
 ---
-title: "setbuf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "setbuf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "setbuf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "setbuf (fonction)"
-  - "mise en mémoire tampon du flux"
+title: setbuf | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- setbuf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- setbuf
+dev_langs:
+- C++
+helpviewer_keywords:
+- setbuf function
+- stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# setbuf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ce7ea86029a99b5727fa1d7bd033044431a1fbff
+ms.lasthandoff: 02/24/2017
 
-Contrôle du chargement du flux  Cette fonction est déconseillée ; utilisez [setvbuf](../../c-runtime-library/reference/setvbuf.md) à la place.  
+---
+# <a name="setbuf"></a>setbuf
+Contrôle la mise en mémoire tampon de flux. Cette fonction est dépréciée. Utilisez à la place [setvbuf](../../c-runtime-library/reference/setvbuf.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void setbuf(  
@@ -51,27 +67,27 @@ void setbuf(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `stream`  
- Pointeur vers la structure `FILE`.  
+ Pointeur vers la structure `FILE` .  
   
  `buffer`  
- Mémoire tampon allouée par l'utilisateur.  
+ Mémoire tampon allouée par l’utilisateur.  
   
-## Notes  
- La fonction d'`setbuf` contrôle la mise en mémoire tampon pour `stream`.  L'argument `stream` doit faire référence à un fichier ouvert qui n'a pas été lu ou n'a pas été écrit.  Si l'argument `buffer` est `NULL`, le flux de données n'est pas tamponné.  Sinon, la mémoire tampon doit afficher un tableau de caractères de longueur `BUFSIZ`, où `BUFSIZ` est la taille du tampon comme défini dans. STDIO.H.  La mémoire tampon spécifiée par l'utilisateur, au lieu de la mémoire tampon allouée système par défaut pour le flux de données spécifié, est utilisé pour la mise en mémoire tampon d'E\/S.  Le flux d'`stderr` n'est pas tamponné par défaut, mais vous pouvez utiliser `setbuf` pour affecter des tampons à `stderr`.  
+## <a name="remarks"></a>Notes  
+ La fonction `setbuf` contrôle la mise en mémoire pour `stream`. L’argument `stream` doit faire référence à un fichier ouvert qui n’a pas été lu ou écrit. Si l’argument `buffer` a la valeur `NULL`, le flux n’est pas mis en mémoire tampon. Sinon, la mémoire tampon doit pointer vers un tableau de caractères de longueur `BUFSIZ`, `BUFSIZ` correspondant à la taille de la mémoire tampon telle que définie dans STDIO.H. La mémoire tampon spécifiée par l’utilisateur est utilisée pour la mise en mémoire tampon des E/S à la place de la mémoire tampon par défaut allouée par le système. Par défaut, le flux `stderr` n’est pas mis en mémoire tampon, mais vous pouvez utiliser `setbuf` pour assigner des mémoires tampon à `stderr`.  
   
- `setbuf` a été remplacé par [setvbuf](../../c-runtime-library/reference/setvbuf.md), qui est une routine par défaut pour un nouveau code.  `setbuf` est fourni pour la compatibilité avec le code existant.  
+ La fonction `setbuf` a été remplacée par [setvbuf](../../c-runtime-library/reference/setvbuf.md), qui est la routine par défaut pour le nouveau code. `setbuf` est conservée pour assurer la compatibilité avec le code existant.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`setbuf`|\<stdio.h\>|  
+|`setbuf`|\<stdio.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_setbuf.c  
@@ -105,14 +121,17 @@ int main( void )
 }  
 ```  
   
-  **stream1 à la mémoire tampon définie par l'utilisateur à : 0012FCDC**  
-**mise en mémoire tampon stream2 désactivée**   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+stream1 set to user-defined buffer at: 0012FCDC  
+stream2 buffering disabled  
+```  
   
-## Voir aussi  
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
- [fclose, \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
+ [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [fflush](../../c-runtime-library/reference/fflush.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [setvbuf](../../c-runtime-library/reference/setvbuf.md)

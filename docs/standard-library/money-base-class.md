@@ -1,76 +1,78 @@
 ---
-title: "money_base, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "locale/std::money_base"
-  - "money_base"
-  - "std::money_base"
-  - "std.money_base"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "money_base (classe)"
+title: money_base, classe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- locale/std::money_base
+- money_base
+- std::money_base
+- std.money_base
+dev_langs:
+- C++
+helpviewer_keywords:
+- money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# money_base, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4af0f51a820fc0011285b6c5a690f496e8fd4afe
+ms.lasthandoff: 02/24/2017
 
-La classe décrit une énumération et une structure commun à toutes les spécialisations de classe de modèle [moneypunct](../standard-library/moneypunct-class.md).  
+---
+# <a name="moneybase-class"></a>money_base, classe
+Cette classe décrit une énumération et une structure communes à toutes les spécialisations de la classe de modèle [moneypunct](../standard-library/moneypunct-class.md).  
   
-## Syntaxe  
-  
-```  
-struct money_base : public locale::facet  
-{  
-    enum  
-    {  
-        symbol = '$',  
-        sign = '+',  
-        space = ' ',  
-        value = 'v',  
-        none = 'x'  
-    };  
-    typedef int part;  
-    struct pattern  
-    {  
-        char field[_PATTERN_FIELD_SIZE];  
-    };  
-    money_base(  
-        size_t _Refs = 0  
-    );  
-    ~money_base();  
+## <a name="syntax"></a>Syntaxe  
+```    
+struct pattern
+{
+   char field[_PATTERN_FIELD_SIZE];
 };  
 ```  
+## <a name="remarks"></a>Remarques  
+ L’énumération **part** décrit les valeurs possibles dans les éléments du champ de tableau dans le modèle de structure. Les valeurs de **part** sont les suivantes :  
   
-## Notes  
- L'énumération **part** décrit les valeurs possibles dans les éléments du champ de table du modèle de structure.  Les valeurs de **part** sont:  
+- **none** pour faire correspondre zéro, un ou plusieurs espaces ou pour ne rien générer.  
   
--   **none** pour associer zéro ou plus d'espace ou ne génère rien.  
+- **sign** pour faire correspondre ou générer un signe positif ou négatif.  
   
--   **sign** pour aossicier ou générer un signe positif ou négatif.  
+- **space** pour faire correspondre zéro, un ou plusieurs espaces ou pour générer un espace.  
   
--   **space** pour associer zéro ou plus d'espace ou ne génère rien.  
+- **symbol** pour faire correspondre ou générer un symbole monétaire.  
   
--   **symbole** pour associer ou générer un symbole monétaire.  
+- **value** pour faire correspondre ou générer une valeur monétaire.  
   
--   **valeur** pour associer ou générer une valeur monétaire.  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<locale>  
   
-## Configuration requise  
- **En\-tête:** \<paramètres régionaux\>  
+ **Espace de noms :** std  
   
- **Espace de noms :** std  
-  
-## Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

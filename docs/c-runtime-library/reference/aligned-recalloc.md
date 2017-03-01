@@ -1,49 +1,66 @@
 ---
-title: "_aligned_recalloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_recalloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "aligned_recalloc"
-  - "_aligned_recalloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aligned_recalloc (fonction)"
-  - "_aligned_recalloc (fonction)"
+title: _aligned_recalloc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_recalloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- aligned_recalloc
+- _aligned_recalloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- aligned_recalloc function
+- _aligned_recalloc function
 ms.assetid: d3da3dcc-79ef-4273-8af5-ac7469420142
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# _aligned_recalloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3f750db538a74cd19571ea8cd107ceb707d33207
+ms.lasthandoff: 02/24/2017
 
-Modifie la taille d'un bloc de mémoire qui a été allouée avec [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md) ou [\_aligned\_offset\_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) et initialise la mémoire à 0.  
+---
+# <a name="alignedrecalloc"></a>_aligned_recalloc
+Modifie la taille d’un bloc de mémoire qui a été alloué avec [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) ou [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) et initialise la mémoire à 0.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void * _aligned_recalloc(  
@@ -54,39 +71,39 @@ void * _aligned_recalloc(
 );  
 ```  
   
-#### Paramètres  
- \[in\] `memblock`  
- Le pointeur de bloc mémoire actuel.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `memblock`  
+ Pointeur de bloc de mémoire actif.  
   
- \[in\] `num`  
+ [in] `num`  
  Nombre d'éléments.  
   
- \[in\] `size`  
- La taille en octets de chaque élément du tableau.  
+ [in] `size`  
+ Taille en octets de chaque élément.  
   
- \[in\] `alignment`  
- La valeur d'alignement, qui doit être une puissance entière de 2.  
+ [in] `alignment`  
+ Valeur de l'alignement, qui doit être un entier à la puissance 2.  
   
-## Valeur de retour  
- `_aligned_recalloc` retourne un pointeur void sur le bloc mémoire realloué \(et éventuellement déplacé\).  La valeur de retour est `NULL` si la taille est de zéro et que l'argument de mémoire tampon n'est pas `NULL`, ou s'il n'y a pas assez de mémoire disponible pour développer le bloc jusqu'à la taille spécifiée.  Dans le premier cas, le bloc d'origine est libéré.  Dans le deuxième cas, le bloc d'origine reste inchangé.  Les valeur de retour pointent vers un espace de stockage, qui est garanti d'etre aligné correctement pour le stockage de n'importe quel types d'objet.  Pour obtenir un pointeur sur un type autre que void, utilisez un cast de type sur la valeur de retour.  
+## <a name="return-value"></a>Valeur de retour  
+ `_aligned_recalloc` retourne un pointeur void vers le bloc de mémoire réalloué (et éventuellement déplacé). La valeur de retour est `NULL` si la taille est égale à zéro et l'argument de mémoire tampon n'est pas `NULL`, ou si la mémoire disponible est insuffisante pour étendre le bloc à la taille donnée. Dans le premier cas, le bloc d'origine est libéré. Dans le second cas, le bloc d'origine est inchangé. La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur vers un type autre que void, utilisez un cast de type sur la valeur de retour.  
   
- C'est une erreur de réallouer la mémoire et de modifier l'alignement d'un bloc.  
+ Le fait de réallouer la mémoire et de modifier l'alignement d'un bloc constitue une erreur.  
   
-## Notes  
- `_aligned_recalloc` est basé sur `malloc`.  Pour plus d'informations sur l'utilisation de `_aligned_offset_malloc`, consultez [](../../c-runtime-library/reference/malloc.md "malloc").  
+## <a name="remarks"></a>Notes  
+ `_aligned_recalloc` est basé sur `malloc`. Pour plus d’informations sur l’utilisation de `_aligned_offset_malloc`, consultez [malloc](../../c-runtime-library/reference/malloc.md).  
   
- Cette fonction alloue à `errno` la valeur `ENOMEM` si l'allocation de mémoire a échoué ou si la taille demandée est supérieure à `_HEAP_MAXREQ`.  Pour plus d'informations sur `errno`, consultez [errno, \_doserrno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  Aussi, `_aligned_recalloc` valide ses paramètres.  Si `alignment` n'est pas une puissance de 2, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, cette fonction renvoie `NULL` et définit `errno` avec la valeur `EINVAL`.  
+ Cette fonction affecte à `errno` la valeur `ENOMEM` si l'allocation de mémoire a échoué ou si la taille demandée était supérieure à `_HEAP_MAXREQ`. Pour plus d’informations sur `errno`, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). De plus, `_aligned_recalloc` valide ses paramètres. Si `alignment` n’est pas une puissance de 2, cette fonction appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction retourne `NULL` et affecte la valeur `errno` à `EINVAL`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_aligned_recalloc`|\<malloc.h\>|  
+|`_aligned_recalloc`|\<malloc.h>|  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Alignement des données](../../c-runtime-library/data-alignment.md)   
- [\_recalloc](../../c-runtime-library/reference/recalloc.md)   
- [\_aligned\_offset\_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md)
+ [_recalloc](../../c-runtime-library/reference/recalloc.md)   
+ [_aligned_offset_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md)

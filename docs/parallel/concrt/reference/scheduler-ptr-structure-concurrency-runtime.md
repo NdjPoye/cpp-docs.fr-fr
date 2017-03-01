@@ -1,63 +1,117 @@
 ---
-title: "scheduler_ptr::Structure (runtime d&#39;acc&#232;s concurrentiel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "pplinterface/concurrency::scheduler_ptr"
-dev_langs: 
-  - "C++"
+title: scheduler_ptr::structure | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- pplinterface/concurrency::scheduler_ptr
+dev_langs:
+- C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# scheduler_ptr::Structure (runtime d&#39;acc&#232;s concurrentiel)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: 022b5fafc437a8103fe17967a9a5ea54d5b82a39
+ms.lasthandoff: 02/24/2017
 
-Représente un pointeur vers un planificateur.  Cette classe existe pour permettre la spécification d'une durée de vie partagée à l'aide de shared\_ptr ou d'une référence simple à l'aide d'un pointeur brut.  
+---
+# <a name="schedulerptr-structure"></a>scheduler_ptr::structure
+Représente un pointeur vers un planificateur. Cette classe a pour fonction de permettre la spécification d'une durée de vie partagée à l'aide de shared_ptr ou d'une référence simple à l'aide d'un pointeur brut.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+struct scheduler_ptr;
 ```  
-struct scheduler_ptr;  
-```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[scheduler\_ptr::scheduler\_ptr, constructeur \(runtime d'accès concurrentiel\)](../Topic/scheduler_ptr::scheduler_ptr%20Constructor%20\(Concurrency%20Runtime\).md)|Surchargé.  Crée un pointeur de planificateur de shared\_ptr vers le planificateur|  
+|----------|-----------------|  
+|[scheduler_ptr::scheduler_ptr, constructeur](#ctor)|Surchargé. Crée un pointeur de planificateur de shared_ptr vers le planificateur|  
   
-### Méthodes publiques  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[scheduler\_ptr::get, méthode \(runtime d'accès concurrentiel\)](../Topic/scheduler_ptr::get%20Method%20\(Concurrency%20Runtime\).md)|Retourne le pointeur brut au planificateur|  
-  
-### Opérateurs publics  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[scheduler\_ptr::operator, opérateur booléen \(runtime d'accès concurrentiel\)](../Topic/scheduler_ptr::operator%20bool%20Operator%20\(Concurrency%20Runtime\).md)|Teste si le pointeur du planificateur a une valeur non null|  
-|[scheduler\_ptr::operator\-\>, opérateur \(runtime d'accès concurrentiel\)](../Topic/scheduler_ptr::operator-%3E%20Operator%20\(Concurrency%20Runtime\).md)|Se comporte comme un pointeur|  
+|----------|-----------------|  
+|[scheduler_ptr::Get, méthode](#get)|Retourne le pointeur brut au planificateur|  
   
-## Hiérarchie d'héritage  
+### <a name="public-operators"></a>Op&#233;rateurs publics  
+  
+|Nom|Description|  
+|----------|-----------------|  
+|[scheduler_ptr::operator, opérateur booléen](#operator_bool)|Teste si le pointeur du planificateur a une valeur non null|  
+|[scheduler_ptr::operator -&gt; (opérateur)](#operator_ptr)|Se comporte comme un pointeur|  
+  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `scheduler_ptr`  
   
-## Configuration requise  
- **En\-tête :** pplinterface.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** pplinterface.h  
   
- **Espace de noms :** concurrency  
+ **Espace de noms :** concurrency  
   
-## Voir aussi  
- [concurrency, espace de noms](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namegeta--schedulerptrget-method"></a><a name="get"></a>scheduler_ptr::Get, méthode  
+ Retourne le pointeur brut au planificateur  
+  
+```
+scheduler_interface* get() const;
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+  
+##  <a name="a-nameoperatorboola--schedulerptroperator-bool"></a><a name="operator_bool"></a>scheduler_ptr::operator bool   
+ Teste si le pointeur du planificateur a une valeur non null  
+  
+''' opérateur bool() const ;
+```  
+  
+##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;   
+ Behave like a pointer  
+  
+```
+scheduler_interface * operator->() const ;
+```  
+  
+### Return Value  
+  
+##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor  
+ Creates a scheduler pointer from shared_ptr to scheduler  
+  
+```
+explicite scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler) ;</scheduler_interface>
+
+scheduler_ptr explicite (_In_opt_ scheduler_interface * pScheduler) ;
+```  
+  
+### Parameters  
+ `scheduler`  
+ `pScheduler`  
+  
+## See Also  
+ [concurrency Namespace](concurrency-namespace.md)
+

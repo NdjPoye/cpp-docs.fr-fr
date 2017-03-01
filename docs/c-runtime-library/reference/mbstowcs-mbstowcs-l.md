@@ -1,50 +1,66 @@
 ---
-title: "mbstowcs, _mbstowcs_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "mbstowcs"
-  - "_mbstowcs_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbstowcs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbstowcs_l (fonction)"
-  - "mbstowcs (fonction)"
-  - "mbstowcs_l (fonction)"
+title: mbstowcs, _mbstowcs_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- mbstowcs
+- _mbstowcs_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbstowcs
+dev_langs:
+- C++
+helpviewer_keywords:
+- _mbstowcs_l function
+- mbstowcs_l function
+- mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# mbstowcs, _mbstowcs_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 484ecd12490eab00c02fb4184edcaa55f346c3a8
+ms.lasthandoff: 02/24/2017
 
-Convertit une séquence de caractères multioctets en une séquence correspondante de caractères larges.  Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [mbstowcs\_s, \_mbstowcs\_s\_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md).  
+---
+# <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
+Convertit une séquence de caractères multioctets en séquence correspondante de caractères larges. Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [mbstowcs_s, _mbstowcs_s_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 size_t mbstowcs(  
@@ -73,46 +89,46 @@ size_t _mbstowcs_l(
 ); // C++ only  
 ```  
   
-#### Paramètres  
- \[out\] `wcstr`  
- L'adresse d'une séquence de caractères larges.  
+#### <a name="parameters"></a>Paramètres  
+ [out] `wcstr`  
+ Adresse d’une séquence de caractères larges.  
   
- \[in\] `mbstr`  
- L'adresse d'une séquence de caractères multioctets terminés par null.  
+ [in] `mbstr`  
+ Adresse d’une séquence de caractères multioctets se terminant par un caractère Null.  
   
- \[in\] `count`  
+ [in] `count`  
  Nombre maximal de caractères multioctets à convertir.  
   
- \[in\] `locale`  
+ [in] `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
- Si `mbstowcs` convertit correctement la chaîne source, elle retourne le nombre de caractères multioctets convertis.  Si l'argument `wcstr` est `NULL`, la fonction retourne la taille requise \(en caractères larges\) de la chaîne de destination.  Si `mbstowcs` rencontre un caractère multioctets non valide, il retourne – 1.  Si la valeur de retour est `count`, la chaîne de caractères larges n'est pas terminée par le caractère NULL.  
+## <a name="return-value"></a>Valeur de retour  
+ Si `mbstowcs` convertit correctement la chaîne source, elle retourne le nombre de caractères multioctets convertis. Si l’argument `wcstr` a la valeur `NULL`, la fonction retourne la taille exigée, en caractères larges, de la chaîne de destination. Si `mbstowcs` rencontre un caractère multioctet non valide, elle retourne −1. Si la valeur de retour est `count`, la chaîne de caractères larges ne se termine pas par un caractère Null.  
   
 > [!IMPORTANT]
->  Vérifiez que `wcstr` et `mbstr` ne se chevauchent pas, et que `count` reflète fidèlement le nombre de caractères multioctets à convertir.  
+>  Vérifiez que `wcstr` et `mbstr` ne se chevauchent pas, et que `count` reflète correctement le nombre de caractères multioctets à convertir.  
   
-## Notes  
- La fonction `mbstowcs` convertit jusqu'à un nombre maximal de caractères multioctets `count` référencés par `mbstr` vers une chaîne de caractères correspondants qui sont déterminés par les paramètres régionaux actuels.  Il enregistre la chaîne de caractères larges générée à l'adresse représentée par `wcstr`*.* Le résultat est similaire à une série d'appels à `mbtowc`.  Si `mbstowcs` rencontre le caractère NULL codé sur un octet \("\\0 "\) avant ou lorsque `count` se produit, elle convertit le caractère NULL en un caractère Null de caractères étendus \(" L "\\0 "\) et s'arrête.  Par conséquent, la chaîne de caractères larges à `wcstr` se termine par null uniquement si un caractère NULL est rencontré lors de la conversion.  Si les séquences désignées par `wcstr` et `mbstr` se chevauchent, le comportement n'est pas défini.  
+## <a name="remarks"></a>Notes  
+ La fonction `mbstowcs` convertit un nombre maximal de `count` caractères multioctets désignés par `mbstr` en une chaîne de caractères larges correspondants qui sont déterminés par les paramètres régionaux actuels. Elle stocke la chaîne de caractères larges obtenue à l’adresse représentée par `wcstr`*.* Le résultat est similaire à une série d’appels à `mbtowc`. Si `mbstowcs` rencontre le caractère Null codé sur un octet ('\0') quand `count` se produit ou avant, elle convertit le caractère Null en un caractère Null large (L'\0') et s’arrête. Ainsi, la chaîne de caractères larges dans `wcstr` n’est terminée par un caractère Null que si un caractère Null est rencontré pendant la conversion. Si les séquences pointées par `wcstr` et `mbstr` se chevauchent, le comportement n’est pas défini.  
   
- Si l'argument `wcstr` est `NULL`, `mbstowcs` retourne le nombre de caractères larges qui résulteraient d'une conversion, à l'exclusion d'une marque de fin null.  La chaîne source doit se terminer par null pour que la valeur correcte soit retournée.  Si vous avez besoin qu'une chaîne de caractères larges résultante se termine par null, ajoutez un à la valeur retournée.  
+ Si l’argument `wcstr` a la valeur `NULL`, `mbstowcs` retourne le nombre de caractères larges qui résulterait de la conversion, sans inclure une marque de fin Null. La chaîne source doit se terminer par un caractère Null pour que la valeur correcte soit retournée. S’il est nécessaire que la chaîne de caractères larges résultante se termine par un caractère Null, ajoutez un à la valeur retournée.  
   
- Si l'argument `mbstr` est `NULL`, ou si `count` est \> `INT_MAX`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) .  Si l'exécution est autorisée à se poursuivre, errno est défini à `EINVAL` et la fonction retourne \-1.  
+ Si l’argument `mbstr` a la valeur `NULL` ou que `count` est supérieur à `INT_MAX`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, errno a la valeur `EINVAL` et la fonction retourne -1.  
   
- `mbstowcs` utilise les paramètres régionaux actuels pour tout comportement dépend des paramètres régionaux ; `_mbstowcs_l`  est identique à la différence qu'il utilise les paramètres régionaux transmis à la place.  Pour plus d'informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La fonction `mbstowcs` utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; la fonction `_mbstowcs_l` est identique, à ceci près qu’elle utilise à la place les paramètres régionaux qui ont été passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
- En C\+\+, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions.  Pour plus d'informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`mbstowcs`|\<stdlib.h\>|  
-|`_mbstowcs_l`|\<stdlib.h\>|  
+|`mbstowcs`|\<stdlib.h>|  
+|`_mbstowcs_l`|\<stdlib.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_mbstowcs.c  
@@ -194,24 +210,28 @@ int main( void )
 }  
 ```  
   
-  **Les informations relatives aux paramètres régionaux sont définies comme Japanese\_Japan.932**  
-**Convertit en une chaîne multioctets:**  
- **Taille requise : 4**  
- **Nombre d'octets écrits dans la chaîne de caractères multioctets : 4**  
- **Valeurs hexadécimales des caractères multioctets : 0x82 0xa0 0x82 0xa1**  
- **La page de codes 932 utilise 0x81 à 0x9f comme octets de tête.**  
-**Reconvertit en une chaîne à caractères élargis:**  
- **Caractères convertis : 2**  
- **Valeur hexadécimale des 2 premiers caractères larges : 0x3042 0x3043**   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Locale information set to Japanese_Japan.932  
+Convert to multibyte string:  
+  Required Size: 4  
+  Number of bytes written to multibyte string: 4  
+  Hex values of the  multibyte characters: 0x82 0xa0 0x82 0xa1  
+  Codepage 932 uses 0x81 to 0x9f as lead bytes.  
   
-## Voir aussi  
+Convert back to wide-character string:  
+  Characters converted: 2  
+  Hex value of first 2 wide characters: 0x3042 0x3043  
+```  
+  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
  [Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbclen, mblen, \_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbtowc, \_mbtowc\_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wcstombs, \_wcstombs\_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
  [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)

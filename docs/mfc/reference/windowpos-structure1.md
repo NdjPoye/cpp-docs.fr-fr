@@ -1,52 +1,67 @@
 ---
-title: "WINDOWPOS Structure1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WINDOWPOS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WINDOWPOS (structure)"
+title: WINDOWPOS Structure1 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- WINDOWPOS
+dev_langs:
+- C++
+helpviewer_keywords:
+- WINDOWPOS structure
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# WINDOWPOS, structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 522b15d630c3a5a3593010250db0491601493c69
+ms.lasthandoff: 02/24/2017
 
-La structure de `WINDOWPOS` contient des informations sur la taille et l'emplacement d'un point.  
+---
+# <a name="windowpos-structure1"></a>WINDOWPOS Structure1
+Le `WINDOWPOS` structure contient des informations sur la taille et la position d’une fenêtre.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      typedef struct tagWINDOWPOS { /* wp */  
-   HWND hwnd;  
-   HWND hwndInsertAfter;  
-   int x;  
-   int y;  
-   int cx;  
-   int cy;  
-   UINT flags;  
+typedef struct tagWINDOWPOS { /* wp */  
+    HWND hwnd;  
+    HWND hwndInsertAfter;  
+    int x;  
+    int y;  
+    int cx;  
+    int cy;  
+    UINT flags;  
 } WINDOWPOS;  
 ```  
   
-#### Paramètres  
- *hwnd*  
+#### <a name="parameters"></a>Paramètres  
+ *HWND*  
  Identifie la fenêtre.  
   
- *hwndInsererApres*  
- Identifie la fenêtre par rapport à laquelle cette fenêtre est placée.  
+ *hwndInsertAfter*  
+ Identifie la fenêtre derrière lequel se trouve cette fenêtre.  
   
  *x*  
  Spécifie la position du bord gauche de la fenêtre.  
@@ -55,43 +70,45 @@ La structure de `WINDOWPOS` contient des informations sur la taille et l'emplace
  Spécifie la position du bord droit de la fenêtre.  
   
  `cx`  
- Spécifie la largeur de fenêtre en pixels de périphérique.  
+ Spécifie la largeur de la fenêtre, en pixels.  
   
  `cy`  
- Spécifie la hauteur de la fenêtre en pixels.  
+ Spécifie la hauteur de la fenêtre, en pixels.  
   
  `flags`  
- Spécifie la fenêtre\- positionnement des options.  Ce membre peut avoir l'une des valeurs suivantes :  
+ Spécifie les options de positionnement de fenêtre. Ce membre peut être une des valeurs suivantes :  
   
--   **SWP\_DESSINERCADRE** Dessine un cadre \(défini dans la description de la classe de la fenêtre\) autour de la fenêtre.  La fenêtre reçoit un message de `WM_NCCALCSIZE`.  
+- **SWP_DRAWFRAME** Dessine une image (définie dans la description de la classe de la fenêtre) autour de la fenêtre. La fenêtre reçoit un `WM_NCCALCSIZE` message.  
   
--   **SWP\_FRAMECHANGED** envoie un message de `WM_NCCALCSIZE` dans la fenêtre, même si la taille de la fenêtre n'est pas modifiée.  Si cette valeur n'est spécifiée, `WM_NCCALCSIZE` est envoyé uniquement lorsque la taille de la fenêtre est modifiée.  
+- **SWP_FRAMECHANGED** envoie un `WM_NCCALCSIZE` de message dans la fenêtre, même si la taille de la fenêtre n’est pas modifiée. Si cet indicateur n’est pas spécifié, `WM_NCCALCSIZE` est envoyée uniquement lorsque la taille de la fenêtre est en cours de modification.  
   
--   **SWP\_MASQUERFENETRE** masque la fenêtre.  
+- **SWP_HIDEWINDOW** masque la fenêtre.  
   
--   `SWP_NOACTIVATE` N'active pas la fenêtre.  
+- `SWP_NOACTIVATE`N’active pas la fenêtre.  
   
--   **SWP\_PASDECOPIEDESBITS** ignore le contenu entier de la zone client.  Si cet indicateur n'est pas spécifiée, le contenu valide de la zone client est stocké et copié dans la zone client après que la fenêtre soit triée ou replacée.  
+- **SWP_NOCOPYBITS** ignore tout le contenu de la zone cliente. Si cet indicateur n’est pas spécifié, le contenu valid de la zone cliente est enregistré et copié dans la zone cliente, une fois que la fenêtre est dimensionnée ou repositionnée.  
   
--   `SWP_NOMOVE` conserve la position actuelle \(ignore les membres de **x** et de **y** \).  
+- `SWP_NOMOVE`Conserve la position actuelle (ignore le **x** et **y** membres).  
   
--   **SWP\_NOOWNERZORDER** ne modifie pas la position de la fenêtre propriétaire dans l'ordre de plan.  
+- **SWP_NOOWNERZORDER** ne modifie pas la position de la fenêtre propriétaire de l’axe z.  
   
--   `SWP_NOSIZE` conserve la taille actuelle \(ignore les membres de **cx** et de **cy** \).  
+- `SWP_NOSIZE`Conserve la taille actuelle (ignore le **cx** et **cy** membres).  
   
--   **SWP\_PASDERAFRAICHISSEMENT** ne rafraîchit pas les modifications.  
+- **SWP_NOREDRAW** ne redessine pas les modifications.  
   
--   **SWP\_NOREPOSITION** mêmes que **SWP\_NOOWNERZORDER**.  
+- **SWP_NOREPOSITION** identique **SWP_NOOWNERZORDER**.  
   
--   **SWP\_NOSENDCHANGING** empêche la fenêtre de recevoir le message de `WM_WINDOWPOSCHANGING`.  
+- **SWP_NOSENDCHANGING** empêche la fenêtre de réception du `WM_WINDOWPOSCHANGING` message.  
   
--   `SWP_NOZORDER` conserve le classement en cours \(ignore le membre de **hwndInsererApres** \).  
+- `SWP_NOZORDER`Conserve le classement actuel (ignore le **hwndInsertAfter** membre).  
   
--   Affiche la fenêtre **SWP\_MONTRERFENETRE**.  
+- **SWP_SHOWWINDOW** affiche la fenêtre.  
   
-## Configuration requise  
- **En\-tête :** winuser.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** winuser.h  
   
-## Voir aussi  
- [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnWindowPosChanging](../Topic/CWnd::OnWindowPosChanging.md)
+## <a name="see-also"></a>Voir aussi  
+ [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)
+
+
