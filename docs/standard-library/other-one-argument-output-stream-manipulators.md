@@ -1,32 +1,48 @@
 ---
-title: "Autres manipulateurs de flux de sortie &#224; un argument | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "flux de sortie, argument unique (manipulateurs)"
+title: "Autres manipulateurs de flux de sortie à un argument | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Autres manipulateurs de flux de sortie &#224; un argument
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9a2162085b6a78cb376c5bbd7d76943f76115d30
+ms.lasthandoff: 02/24/2017
 
-L'exemple suivant utilise une classe `money`, un type d'`long`.  Le manipulateur d'`setpic` joint une chaîne de « image » forme de la classe qui peut être utilisée par l'opérateur insert surchargé de flux de données de la classe `money`.  La chaîne d'image est stockée en tant que variable statique dans la classe d'`money` plutôt que comme le membre de données d'une classe de flux de données, vous ne devez pas dériver une nouvelle classe du flux de sortie.  
+---
+# <a name="other-one-argument-output-stream-manipulators"></a>Autres manipulateurs de flux de sortie à un argument
+L’exemple suivant utilise une classe `money`, qui est un type `long`. Le manipulateur `setpic` attache une chaîne « image » mise en forme à la classe qui peut être utilisée par l’opérateur d’insertion de flux surchargé de la classe `money`. La chaîne image est stockée comme variable statique dans la classe `money` au lieu d’être stockée comme membre d’une classe stream. Vous n’avez donc pas à dériver une nouvelle classe output stream.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // one_arg_output.cpp  
 // compile with: /GR /EHsc  
 #include <iostream>  
@@ -84,5 +100,7 @@ int main( )
 }  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Manipulateurs personnalisés avec arguments](../standard-library/custom-manipulators-with-arguments.md)
+
+

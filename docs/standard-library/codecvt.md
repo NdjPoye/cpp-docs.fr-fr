@@ -1,34 +1,49 @@
 ---
-title: "&lt; codecvt &gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "codecvt"
-  - "std::<codecvt>"
-  - "std.<codecvt>"
-  - "<codecvt>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "codecvt (en-tête)"
+title: '&lt;codecvt&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- codecvt
+- std::<codecvt>
+- std.<codecvt>
+- <codecvt>
+dev_langs:
+- C++
+helpviewer_keywords:
+- codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
 caps.latest.revision: 21
-caps.handback.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# &lt; codecvt &gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: 119af430ef2d333780587ce72fb5be65faf43892
+ms.lasthandoff: 02/24/2017
 
-Définit plusieurs classes de modèle qui décrivent les objets en fonction de la classe de modèle [codecvt](../standard-library/codecvt-class.md). Ces objets peuvent servir de [facettes de paramètres régionaux](../standard-library/locale-class.md#facet_class) que contrôler les conversions entre une séquence de valeurs de type `Elem` et une séquence de valeurs de type `char`.  
+---
+# <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
+Définit plusieurs classes de modèle qui décrivent les objets basés sur la classe de modèle [codecvt](../standard-library/codecvt-class.md). Ces objets peuvent servir de [facettes de paramètres régionaux](../standard-library/locale-class.md#facet_class) pour contrôler les conversions entre une séquence de valeurs de type `Elem` et une séquence de valeurs de type `char`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,56 +52,58 @@ Définit plusieurs classes de modèle qui décrivent les objets en fonction de l
   
 ```  
   
-## <a name="remarks"></a>Remarques  
- Les facettes de paramètres régionaux déclarées dans cet en-tête convertir entre plusieurs codages de caractères. Pour les caractères larges (stockés dans le programme en entiers de taille fixe) :  
+## <a name="remarks"></a>Notes  
+ Les facettes de paramètres régionaux déclarées dans cet en-tête effectuent la conversion entre plusieurs codages de caractère. Pour les caractères larges (stockés dans le programme en entiers de taille fixe) :  
   
--   UCS-4 est au format Unicode (ISO 10646) codé dans le programme  
+-   UCS-4 est codé en Unicode (ISO 10646) dans le programme  
   
--   UCS-4 est au format Unicode (ISO 10646) codé dans le programme comme un entier de 32 bits.  
+-   UCS-4 est codé en Unicode (ISO 10646) dans le programme sous la forme d’un entier 32 bits.  
   
--   UCS-2 est Unicode encodée dans le programme  
+-   UCS-2 est codé en Unicode dans le programme  
   
--   UCS-2 est Unicode encodée dans le programme sous la forme d’un entier 16 bits.  
+-   UCS-2 est codé en Unicode dans le programme sous la forme d’un entier 16 bits.  
   
--   UTF-16 est Unicode encodée dans le programme en tant qu’un  
+-   UTF-16 est codé en Unicode dans le programme sous la forme d’un  
   
--   UTF-16 est Unicode encodée dans le programme en tant qu’un ou deux entiers 16 bits. (Notez que cela ne répond pas aux toutes les exigences d’un encodage de caractères larges valide des Standard C ou C++ Standard. Toutefois il est largement utilisé en tant que tel.)  
+-   UTF-16 est codé en Unicode dans le programme sous la forme d’un ou plusieurs entiers 16 bits. (Notez que cela ne répond pas à toutes les exigences d’un codage de caractères larges valide pour C Standard ou C++ Standard. Toutefois, ce codage est largement utilisé sous cette forme.)  
   
- Pour les flux d’octets (stockées dans un fichier, transmis sous la forme d’une séquence d’octets ou stockés dans le programme dans un tableau de `char`) :  
+ Pour les flux d’octets (stockés dans un fichier, transmis sous la forme d’une séquence d’octets ou stockés dans le programme dans un tableau de `char`) :  
   
--   UTF-8 est encodé en Unicode  
+-   UTF-8 est codé en Unicode  
   
--   Unicode encodée au sein d’un flux d’octets sous la forme d’un ou plusieurs octets 8 bits avec un ordre d’octet déterministe est UTF-8.  
+-   UTF-8 est codé en Unicode au sein d’un flux d’octets sous la forme d’un ou plusieurs octets&8; bits avec un ordre d’octet déterministe.  
   
--   UTF-16LE est encodé en Unicode  
+-   UTF-16LE est codé en Unicode  
   
--   UTF-16LE est Unicode encodée dans un flux d’octets au format UTF-16 avec chaque entier 16 bits affiche deux octets de 8 bits, moins significatif.  
+-   UTF-16LE est codé en Unicode dans un flux d’octets au format UTF-16 avec chaque entier 16 bits présenté sous la forme de deux octets 8 bits, l’octet le moins significatif en premier.  
   
--   UTF-16BE est encodé en Unicode  
+-   UTF-16BE est codé en Unicode  
   
--   UTF-16BE est Unicode encodée dans un flux d’octets au format UTF-16 avec chaque entier 16 bits proposé avec deux octets de 8 bits, octet le plus significatif en premier lieu.  
+-   UTF-16BE est codé en Unicode dans un flux d’octets au format UTF-16 avec chaque entier 16 bits présenté sous la forme de deux octets 8 bits, l’octet le plus significatif en premier.  
   
 ### <a name="enumerations"></a>Énumérations  
   
 |||  
 |-|-|  
-|[codecvt_mode](../Topic/%3Ccodecvt%3E%20enums.md#codecvt_mode_enumeration)|Spécifie les informations de configuration de facettes de paramètres régionaux.|  
+|[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode_enumeration)|Spécifie des informations de configuration pour les facettes de paramètres régionaux.|  
   
 ### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[codecvt_utf8](../Topic/%3Ccodecvt%3E%20functions.md#codecvt_utf8)|Représente une facette de paramètres régionaux qui effectue la conversion entre des caractères larges encodées sous la forme UCS-2 ou UCS-4 et un flux d’octets encodée en UTF-8.|  
-|[codecvt_utf8_utf16](%3Ccodecvt%3E%20functions.md#codecvt_utf8_utf16)|Représente une facette de paramètres régionaux qui effectue la conversion entre encodé en UTF-16 de caractères larges et un flux d’octets encodée en UTF-8.|  
-|[codecvt_utf16](../Topic/%3Ccodecvt%3E%20functions.md#codecvt_utf16)|Représente une facette de paramètres régionaux qui effectue la conversion entre des caractères larges encodées sous la forme UCS-2 ou UCS-4 et un flux d’octets encodée en UTF-16LE ou UTF-16BE.|  
+|[codecvt_utf8](codecvt-utf8-class.md)|Représente une facette de paramètres régionaux qui effectue la conversion entre des caractères larges codés au format UCS-2 ou UCS-4 et un flux d’octets codé au format UTF-8.|  
+|[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Représente une facette de paramètres régionaux qui effectue la conversion entre des caractères larges codés au format UTF-16 et un flux d’octets codé au format UTF-8.|  
+|[codecvt_utf16](codecvt-utf16-class.md)|Représente une facette de paramètres régionaux qui effectue la conversion entre des caractères larges codés au format UCS-2 ou UCS-4 et un flux d’octets codé au format UTF-16LE ou UTF-16BE.|  
+
   
 ## <a name="requirements"></a>Spécifications  
- **En-tête :** \< codecvt>  
+ **En-tête :** \<codecvt>  
   
- **Namespace :** stdt  
+ **Espace de noms :** std  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)
+ [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)
+
 
 
 

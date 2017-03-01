@@ -1,108 +1,107 @@
 ---
-title: "iterator_traits, struct | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::iterator_traits"
-  - "xutility/std::iterator_traits"
-  - "iterator_traits"
-  - "std.iterator_traits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iterator_traits (classe)"
-  - "iterator_traits (struct)"
+title: iterator_traits, struct | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::iterator_traits
+- xutility/std::iterator_traits
+- iterator_traits
+- std.iterator_traits
+dev_langs:
+- C++
+helpviewer_keywords:
+- iterator_traits struct
+- iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# iterator_traits, struct
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 24cdef3317b1a2c982858a3832e0085ba7ba7d20
+ms.lasthandoff: 02/24/2017
 
-Une structure d'assistance de modèle utilisé pour spécifier toutes les définitions de type critiques qu'un itérateur doit être.  
+---
+# <a name="iteratortraits-struct"></a>iterator_traits, struct
+Struct d’assistance de modèle utilisé pour spécifier toutes les définitions de type critiques qu’un itérateur doit avoir.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
+
+```    
+struct iterator_traits {
+   typedef typename Iterator::iterator_category iterator_category;
+   typedef typename Iterator::value_type value_type;
+   typedef typename Iterator::difference_type difference_type;
+   typedef difference_type distance_type;
+   typedef typename Iterator::pointer pointer;
+   typedef typename Iterator::reference reference;
+   };  
+```    
+## <a name="remarks"></a>Remarques  
+ Le struct de modèle définit les types de membres  
   
-```  
-template<class Iterator>  
-    struct iterator_traits {  
-        typedef typename Iterator::iterator_category iterator_category;  
-        typedef typename Iterator::value_type value_type;  
-        typedef typename Iterator::difference_type difference_type;  
-        typedef difference_type distance_type;  
-        typedef typename Iterator::pointer pointer;  
-        typedef typename Iterator::reference reference;  
-    };  
-template<class Type>  
-    struct iterator_traits<Type*> {  
-        typedef random_access_iterator_tag iterator_category;  
-        typedef Type value_type;  
-        typedef ptrdiff_t difference_type;  
-        typedef difference_type distance_type;  
-        typedef Type *pointer;  
-        typedef Type& reference;  
-    };  
-template<class Type>  
-    struct iterator_traits<const Type*> {  
-        typedef random_access_iterator_tag iterator_category;  
-        typedef Type value_type;  
-        typedef ptrdiff_t difference_type;  
-        typedef difference_type distance_type;  
-        typedef const Type *pointer;  
-        typedef const Type& reference;  
-    };  
-```  
+- **iterator_category** : synonyme de **Iterator::iterator_category**.  
   
-## Notes  
- La structure de modèle définit les types de membres  
+- `value_type` : synonyme de **Iterator::value_type**.  
   
--   **iterator\_category**: un synonyme pour **Iterator::iterator\_category**.  
+- `difference_type` : synonyme de **Iterator::difference_type**.  
   
--   `value_type`: un synonyme pour **Iterator::value\_type**.  
+- `distance_type` : synonyme de **Iterator::difference_type.**  
   
--   `difference_type`: un synonyme pour **Iterator::difference\_type**.  
+- **pointer** : synonyme de **Iterator::pointer**.  
   
--   `distance_type`: un synonyme pour **Iterator::difference\_type.**  
+- **reference** : synonyme de **Iterator::reference**.  
   
--   **pointer**: un synonyme pour **Iterator::pointer**.  
+ Les spécialisations partielles déterminent les types critiques associés à un pointeur d’objet de type **Type \*** ou const **Type \***.  
   
--   **référence**: un synonyme pour **Iterator::reference**.  
+ Dans cette implémentation, vous pouvez également utiliser plusieurs fonctions de modèle qui n’utilisent pas de spécialisation partielle :  
   
- Les spécialisations partielles déterminent les types critiques associés à un pointeur de type **Type \*** ou **Type \***const.  
-  
- Dans cette implémentation vous pouvez également utiliser plusieurs fonctions de modèle qui n'utilisent pas de la spécialisation partielle :  
-  
-```  
-template<class Category, class Type, class Diff>  
-C _Iter_cat(const iterator<Category, Ty, Diff>&);  
-template<class Ty>  
-    random_access_iterator_tag _Iter_cat(const Ty *);  
-  
-template<class Category, class Ty, class Diff>  
-Ty *_Val_type(const iterator<Category, Ty, Diff>&);  
-template<class Ty>  
-    Ty *_Val_type(const Ty *);  
-  
-template<class Category, class Ty, class Diff>  
-Diff *_Dist_type(const iterator<Category, Ty, Diff>&);  
-template<class Ty>  
-    ptrdiff_t *_Dist_type(const Ty *);  
+```cpp  
+template <class Category, class Type, class Diff>
+C _Iter_cat(const iterator<Category, Ty, Diff>&);
+
+template <class Ty>
+random_access_iterator_tag _Iter_cat(const Ty *);
+
+template <class Category, class Ty, class Diff>
+Ty *val_type(const iterator<Category, Ty, Diff>&);
+
+template <class Ty>
+Ty *val_type(const Ty *);
+
+template <class Category, class Ty, class Diff>
+Diff *_Dist_type(const iterator<Category, Ty, Diff>&);
+
+template <class Ty>
+ptrdiff_t *_Dist_type(const Ty *);
 ```  
   
- ce qui déterminent de nombreuses types ou plus.  Vous pouvez utiliser ces fonctions comme arguments dans un appel de fonction.  Le seul objectif est de fournir un paramètre de classe de modèle utile à la fonction appelée.  
+ qui déterminent plusieurs des mêmes types plus indirectement. Vous utilisez ces fonctions comme arguments dans un appel de fonction. Leur seul but est de fournir un paramètre de classe de modèle utile à la fonction appelée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // iterator_traits.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -135,18 +134,24 @@ int main( )
    function( vc.begin( ), vc.end( ) );  
    function( li.begin( ), li.end( ) );  
 }  
+\* Output:   
+struct std::random_access_iterator_tag  
+a a a a a a a a a a   
+struct std::bidirectional_iterator_tag  
+0 0 0 0 0 0 0 0 0 0   
+*\  
 ```  
   
-  **std::random\_access\_iterator\_tag de structure**  
-**un**   
-**std::bidirectional\_iterator\_tag de structure**  
-**0 0 0 0 0 0 0 0 0 0**    
-## Configuration requise  
- **En\-tête :** \<iterator\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<iterator>  
   
- **Espace de noms :** std  
+ **Espace de noms :** std  
   
-## Voir aussi  
- [\<iterator\>](../standard-library/iterator.md)   
- [Sécurité des threads dans la bibliothèque standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Bibliothèque STL \(Standard Template Library\)](../misc/standard-template-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [\<iterator>](../standard-library/iterator.md)   
+ [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

@@ -1,69 +1,74 @@
 ---
-title: "pair, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "utility/std::pair"
-  - "pair"
-  - "std::pair"
-  - "std.pair"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pair (classe)"
+title: pair, structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- utility/std::pair
+- pair
+- std::pair
+- std.pair
+dev_langs:
+- C++
+helpviewer_keywords:
+- pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# pair, structure
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: f9f6574029dd40d0c8c2a2ff2a5f73f4744f5ffe
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="pair-structure"></a>pair, structure
 Struct qui offre la possibilité de traiter deux objets comme un objet unique.  
   
-## Syntaxe  
-  
+## <a name="syntax"></a>Syntaxe  
 ```  
-template<class T1, class T2>  
-   struct pair   
-   {  
-   typedef T1 first_type;  
-   typedef T2 second_type;  
-   T1 first;  
-   T2 second;  
-  
-   constexpr pair( );  
-   constexpr pair(  
-      const T1& Val1,   
-      const T2& Val2  
-   );  
-  
-   template<class Other1, class Other2>  
-      constexpr pair(  
-         const pair<Other1, Other2>& Right  
-      );  
-  
-template<class Other1, class Other2>  
-      constexpr pair(  
-        const pair <Other1 Val1, Other2 Val2>&& Right  
-      );  
-  
-   template<class Other1, class Other2>  
-      constexpr pair(  
-         Other1&& Val1, Other2&& Val2  
-      );  
-   };  
+struct pair
+{
+    typedef T1 first_type;
+    typedef T2 second_type;
+    T1 first;
+    T2 second;
+    constexpr pair();
+    constexpr pair(
+        const T1& Val1,
+        const T2& Val2);
+
+    template <class Other1, class Other2>
+    constexpr pair(const pair<Other1, Other2>& Right);
+
+    template <class Other1, class Other2>
+    constexpr pair(const pair <Other1 Val1, Other2 Val2>&& Right);
+
+    template <class Other1, class Other2>
+    constexpr pair(Other1&& Val1, Other2&& Val2);
+};
 ```  
-  
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `Val1`  
  Valeur initialisant le premier élément de `pair`.  
   
@@ -73,21 +78,21 @@ template<class Other1, class Other2>
  `Right`  
  Paire dont les valeurs doivent être utilisées pour initialiser les éléments d'une autre paire.  
   
-## Valeur de retour  
- Le premier constructeur \(par défaut\) initialise le premier élément de la paire à la valeur par défaut de type **T1** et le second élément à la valeur par défaut de type **T2**.  
+## <a name="return-value"></a>Valeur de retour  
+ Le premier constructeur (par défaut) initialise le premier élément de la paire à la valeur par défaut de type **T1**, et le second élément à la valeur par défaut de type **T2**.  
   
- Le deuxième constructeur initialise le premier élément de la paire à `Val1` et le deuxième élément à *Val2*.  
+ Le deuxième constructeur initialise le premier élément de la paire à `Val1`, et le deuxième élément à *Val2*.  
   
- Le troisième constructeur \(modèle\) initialise le premier élément de la paire à `Right`.**first** et le deuxième élément à `Right`.**second**.  
+ Le troisième constructeur (modèle) initialise le premier élément de la paire à `Right`. **first**, et le second à `Right`. **second**.  
   
- Le quatrième constructeur initialise le premier élément de la paire à `Val1` et le deuxième élément à *Val2* à l'aide de [Déclarateur de référence Rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Le quatrième constructeur initialise le premier élément de la paire à `Val1`, et le deuxième élément à *Val2* à l’aide du [déclarateur de référence Rvalue &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-## Notes  
- La structure de modèle stocke une paire d'objets respectivement de type **T1** et **T2**.  Le type **first\_type** est identique au paramètre de modèle **T1** et le type **second\_type** est identique au paramètre de modèle **T2**.  **T1** et **T2** doivent chacun fournir uniquement un constructeur par défaut, un constructeur à argument unique et un destructeur.  Tous les membres du type `pair` sont publics, car le type est déclaré comme un `struct` plutôt que comme une **classe**.  Les deux utilisations les plus courantes pour une paire sont en tant que types de retour pour des fonctions qui retournent deux valeurs et en tant qu'éléments pour les classes de conteneurs associatifs \([classe map](../standard-library/map-class.md) et [classe multimap](../standard-library/multimap-class.md)\) qui ont à la fois une clé et un type de valeur associés à chaque élément.  Cette dernière satisfait à l'exigence relative à un conteneur associatif de paires et a un type de valeur de la forme `pair`\<**const** `key_type`, `mapped_type`\>.  
+## <a name="remarks"></a>Notes  
+ La structure de modèle stocke une paire d’objets respectivement de type **T1** et **T2**. Le type **first_type** est identique au paramètre de modèle **T1** et le type **second_type** est identique au paramètre de modèle **T2**. **T1** et **T2** doivent chacun fournir uniquement un constructeur par défaut, un constructeur à argument unique et un destructeur. Tous les membres du type `pair` sont publics, car le type est déclaré comme un `struct` plutôt que comme une **classe**. Les deux utilisations les plus courantes pour une paire sont en tant que types de retour pour des fonctions qui retournent deux valeurs et en tant qu’éléments pour les classes de conteneurs associatifs ([classe map](../standard-library/map-class.md) et [classe multimap](../standard-library/multimap-class.md)) qui ont à la fois une clé et un type de valeur associés à chaque élément. Cette dernière satisfait à l’exigence relative à un conteneur associatif de paires et a un type de valeur de la forme `pair`< **const**`key_type`, `mapped_type`>.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // utility_pair.cpp  
 // compile with: /EHsc  
 #include <utility>  
@@ -162,16 +167,26 @@ int main( )
            << " is already in m1,\n so the insertion failed." << endl;  
    }  
 }  
+\* Output:   
+The pair p1 is: ( 10, 0.011 ).  
+The pair p2 is: ( 10, 0.222 ).  
+The pair p3 is: ( 10, 0.011 ).  
+The element pairs of the map m1 are: ( 1, 10 ) ( 2, 20 ) ( 3, 30 ).  
+The element (4,40) was inserted successfully in m1.  
+The element with a key value of  
+ ( (pr2.first) -> first ) = 1 is already in m1,  
+ so the insertion failed.  
+*\  
 ```  
   
-  **The pair p1 is: \( 10, 0.011 \).  The pair p2 is: \( 10, 0.222 \).  The pair p3 is: \( 10, 0.011 \).  The element pairs of the map m1 are: \( 1, 10 \) \( 2, 20 \) \( 3, 30 \).  The element \(4,40\) was inserted successfully in m1.  The element with a key value of**  
- **\( \(pr2.first\) \-\> first \) \= 1 is already in m1,**  
- **so the insertion failed.**    
-## Configuration requise  
- **En\-tête :** \<utility\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<utility>  
   
- **Espace de noms :** std  
+ **Espace de noms :** std  
   
-## Voir aussi  
- [pair, opérateur logique](../misc/pair-logical-operator.md)   
- [Sécurité des threads dans la bibliothèque standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

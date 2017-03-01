@@ -1,55 +1,70 @@
 ---
-title: "exp, expf | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "expf"
-  - "exp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_expl"
-  - "expf"
-  - "exp"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "calculs exponentiels"
-  - "expf (fonction)"
-  - "calculer les exponentiels"
-  - "exp (fonction)"
+title: exp, expf | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- expf
+- exp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _expl
+- expf
+- exp
+dev_langs:
+- C++
+helpviewer_keywords:
+- exponential calculations
+- expf function
+- calculating exponentials
+- exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
 caps.latest.revision: 13
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# exp, expf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 4f6fb2d2dc585633915587ff7b6e5cfbd69c4deb
+ms.lasthandoff: 02/24/2017
 
-Calcule l'exponentielle.  
+---
+# <a name="exp-expf"></a>exp, expf
+Calcule la valeur exponentielle.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 double exp(   
@@ -66,34 +81,34 @@ float expf(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `x`  
  Valeur à virgule flottante.  
   
-## Valeur de retour  
- La fonction `exp` renvoie la valeur exponentielle du paramètre à virgule flottante, `x`, en cas de succès.  Autrement dit, le résultat est e à la puissance `x`, où e est la base du logarithme népérien.  En cas de dépassement de capacité par valeur supérieure, la fonction retourne INF \(infini\) et En cas de dépassement de capacité par valeur inférieure, `exp` retourne 0.  
+## <a name="return-value"></a>Valeur de retour  
+ La fonction `exp` retourne la valeur exponentielle du paramètre à virgule flottante, `x`, en cas de réussite. Autrement dit, le résultat est e à la puissance `x`, où e est la base du logarithme népérien. En cas de dépassement, la fonction retourne INF (infini), tandis qu’en cas de soupassement, `exp` retourne la valeur 0.  
   
-|Entrée|Exception SEH|Exception Matherr|  
-|------------|-------------------|-----------------------|  
-|± QNAN,IND|None|\_DOMAIN|  
-|± ∞|NON VALIDE|\_DOMAIN|  
-|X ≥ 7.097827e\+002|INEXACT\+OVERFLOW|Dépassement de capacité.|  
-|X ≤ \-7.083964e\+002|INEXACT\+UNDERFLOW|UNDERFLOW|  
+|Entrée|Exception SEH|Exception{b> <b}Matherr|  
+|-----------|-------------------|-----------------------|  
+|± QNAN,IND|None|_DOMAIN|  
+|± ∞|INVALID|_DOMAIN|  
+|x ≥ 7,097827e+002|INEXACT+OVERFLOW|OVERFLOW|  
+|X ≤ -7,083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|  
   
- `exp` a une implémentation qui utilise les extensions Streaming SIMD 2 \(SSE2\).  Voir le [\_set\_SSE2\_enable](../../c-runtime-library/reference/set-sse2-enable.md) pour des informations ainsi que connaitre l'état des restrictions sur l'usage de l'implémentation SSE2.  
+ `exp` présente une implémentation qui utilise SSE2 (Streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.  
   
-## Notes  
- Comme le C\+\+ permet la surcharge de méthode, vous pouvez appeler des surcharges de `exp`.  Dans un programme C, `exp` prend en argument et retourne toujours un double.  
+## <a name="remarks"></a>Notes  
+ C++ autorisant la surcharge, vous pouvez appeler des surcharges de `exp`. Dans un programme C, `exp` accepte et retourne toujours un double.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Fonction|En\-tête requis|  
+|Fonction|En-tête requis|  
 |--------------|---------------------|  
-|`exp`, `expf`|\<math.h\>|  
+|`exp`, `expf`|\<math.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_exp.c  
@@ -110,11 +125,14 @@ int main( void )
 }  
 ```  
   
-  **exp\( 2.302585 \) \= 10.000000**   
-## Équivalent .NET Framework  
+```Output  
+exp( 2.302585 ) = 10.000000  
+```  
+  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
  [System::Math::Exp](https://msdn.microsoft.com/en-us/library/system.math.exp.aspx)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
  [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)   
- [\_CIexp](../../c-runtime-library/ciexp.md)
+ [_CIexp](../../c-runtime-library/ciexp.md)

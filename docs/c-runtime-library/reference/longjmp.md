@@ -1,49 +1,63 @@
 ---
-title: "longjmp | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "longjmp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "longjmp"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "longjmp (fonction)"
-  - "restaurer l'environnement de la pile et les paramètres régionaux d'exécution"
+title: longjmp | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- longjmp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- longjmp
+dev_langs:
+- C++
+helpviewer_keywords:
+- restoring stack environment and execution locale
+- longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# longjmp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8d6ae9f6207bc0cc42ec2a0749ddfb6253c496f6
+ms.lasthandoff: 02/24/2017
 
-restaure l'environnement de la pile et les paramètres régionaux d'exécution  
+---
+# <a name="longjmp"></a>longjmp
+Restaure l’environnement de la pile et les paramètres régionaux d’exécution.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -53,47 +67,47 @@ restaure l'environnement de la pile et les paramètres régionaux d'exécution
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `env`  
- Variable dans laquelle l'environnement est enregistré.  
+ Variable dans laquelle l’environnement est stocké.  
   
- *correspondante*  
- Valeur à retourner à l'appel de `setjmp`.  
+ *value*  
+ Valeur à retourner à l’appel `setjmp`.  
   
-## Notes  
- La fonction `longjmp` restaure les paramètres régionaux d'environnement et de pile précédemment enregistrés dans `env` par `setjmp`.  `setjmp` et `longjmp` donne un moçyen d'exécuter un `goto` non local; Ils sont généralement utilisés pour passer le contrôle d'exécution au code de gestion des erreurs ou le code récupération dans une routine appelée précédemment sans utiliser l'appel standard ou les conventions de retour.  
+## <a name="remarks"></a>Notes  
+ La fonction `longjmp` restaure un environnement de pile et des paramètres régionaux d’exécution enregistrés dans `env` par `setjmp`. `setjmp` et `longjmp` permettent d’exécuter un `goto` non local ; ils sont généralement utilisés pour passer le contrôle d’exécution au code de gestion des erreurs ou le code récupération dans une routine appelée sans utiliser l’appel normal et les conventions de retour.  
   
- Un appel à entraîne `setjmp` l'environnement actuel de pile à stocker dans `env`.  Un appel suivant à `longjmp` restaure l'environnement enregistré et retourne le contrôle au point juste après l'appel correspondant `setjmp`.  Résumés d'exécution que si a *la valeur* vient d'être retournée par l'appel de `setjmp`.  Les valeurs des variables \(à l'exception des variables de registre\) accessibles au contrôle récepteur de routine contiennent les valeurs qu'elles avaient lorsque `longjmp` a été appelé.  Les valeurs des variables de registre sont imprévisibles.  La valeur retournée par `setjmp` doit être différente de zéro.  Si *la valeur* est passée comme 0, la valeur 1 est remplacée dans le retour réel.  
+ Quand `setjmp` est appelé, l’environnement de pile actuel est enregistré dans `env`. Un appel ultérieur à `longjmp` restaure l’environnement enregistré et retourne le contrôle au point qui suit immédiatement l’appel `setjmp` correspondant. L’exécution reprend comme si *value* avait simplement été retourné par l’appel `setjmp`. Les valeurs de toutes les variables (sauf les variables de Registre) qui sont accessibles à la routine qui reçoit le contrôle contiennent les valeurs qu’elles avaient quand `longjmp` a été appelé. Les valeurs des variables de Registre sont imprévisibles. La valeur retournée par `setjmp` doit être différente de zéro. Si *value* est passé en tant que 0, la valeur 1 est substituée dans le retour effectif.  
   
- Appelez `longjmp` avant que la fonction retourne `setjmp` appelé ; sinon les résultats sont imprévisibles.  
+ Appelez `longjmp` avant que la fonction qui a appelé `setjmp` ne retourne le contrôle ; sinon, les résultats sont imprévisibles.  
   
- Observez les restrictions suivantes lors de l'utilisation `longjmp`:  
+ Respectez les restrictions suivantes quand vous utilisez `longjmp` :  
   
--   Ne voulez pas que les valeurs des variables de registre reste inchangé.  Les valeurs des variables de registre dans `setjmp` appelant actuel ne peuvent être restaurées les valeurs correctes lorsqu' `longjmp` exécuté.  
+-   Ne partez pas du principe que les valeurs des variables de Registre restent les mêmes. Les valeurs des variables de Registre dans la routine qui appelle `setjmp` peuvent ne pas être restaurées aux valeurs appropriées après l’exécution de `longjmp`.  
   
--   N'utilisez pas `longjmp` au contrôle de migration depuis une routine d'interruption\- gestion sauf si l'interruption soit provoquée par une exception à virgule flottante.  Dans ce cas, un programme peut retourner d'un gestionnaire d'interruptions via `longjmp` s'il réinitialise tout d'abord le progiciel arithmétique à virgule flottante en appelant `_fpreset`.  
+-   N’utilisez pas `longjmp` pour transférer le contrôle hors d’une routine de gestion d’interruption, sauf si l’interruption est provoquée par une exception de virgule flottante. Dans ce cas, un programme peut retourner à partir d’un gestionnaire d’interruption par le biais de `longjmp` s’il réinitialise tout d’abord le package mathématique à virgule flottante en appelant `_fpreset`.  
   
-     **Remarque** Fasse prudent lorsque vous utilisez `setjmp` et `longjmp` dans les applications C\+\+.  Comme ces fonctions ne prennent pas en charge la sémantique de l'objet C\+\+, il est plus sécurisé pour utiliser le mécanisme de gestion des exceptions C\+\+.  
+     **Remarque** Soyez prudent quand vous utilisez `setjmp` et `longjmp` dans les programmes C++. Étant donné que ces fonctions ne prennent pas en charge la sémantique d’objet C++, il est préférable d’utiliser le mécanisme de gestion des exceptions C++.  
   
- Pour plus d'informations, consultez [Using setjmp and longjmp](../../cpp/using-setjmp-longjmp.md).  
+ Pour plus d’informations, consultez [Utilisation de setjmp et longjmp](../../cpp/using-setjmp-longjmp.md).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`longjmp`|\<setjmp.h\>|  
+|`longjmp`|\<setjmp.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Bibliothèques  
+## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemple  
- Consultez l'exemple de [\_fpreset](../../c-runtime-library/reference/fpreset.md).  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple relatif à [_fpreset](../../c-runtime-library/reference/fpreset.md).  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
- [Contrôle de processus et d'environnement](../../c-runtime-library/process-and-environment-control.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)   
  [setjmp](../../c-runtime-library/reference/setjmp.md)

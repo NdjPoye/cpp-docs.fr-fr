@@ -1,40 +1,56 @@
 ---
-title: "Surcharge de l&#39;op&#233;rateur &lt;&lt; pour vos propres classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opérateur <<, surcharge pour vos propres classes"
-  - "operator<<, surcharge pour vos propres classes"
+title: "Surcharge de l’opérateur &lt;&lt; pour vos propres classes | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator<<, overloading for your own classes
+- operator <<, overloading for your own classes
 ms.assetid: ad1d2c49-d84e-48a8-9c09-121f28b10bf0
 caps.latest.revision: 12
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Surcharge de l&#39;op&#233;rateur &lt;&lt; pour vos propres classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 22eb3fbef373c2e80989c49887cfa8b3c9eadc61
+ms.lasthandoff: 02/24/2017
 
-Les flux de sortie utilisent l'opérateur insert \(`<<`\) pour les types standard.  Vous pouvez également de surcharger l'opérateur d'`<<` pour vos propres classes.  
+---
+# <a name="overloading-the-ltlt-operator-for-your-own-classes"></a>Surcharge de l’opérateur &lt;&lt; pour vos propres classes
+Les flux de sortie utilisent l’opérateur d’insertion (`<<`) pour les types standard. Vous pouvez aussi surcharger l’opérateur `<<` pour vos propres classes.  
   
-## Exemple  
- L'exemple de fonction d'`write` indiquée l'utilisation d'une structure d'`Date`.  Une date est un candidat idéal pour la classe actuelle c \+\+ dans laquelle les membres de données \(mois, jour, et année\) sont masqués de la vue.  Un flux de sortie est la destination logique pour afficher une telle structure.  Ce code affiche une date à l'objet d'`cout` :  
+## <a name="example"></a>Exemple  
+ L’exemple de fonction `write` a montré l’utilisation d’une structure `Date`. Les dates sont une parfaite illustration de classe C++ dans laquelle les membres de données (mois, jour et année) sont masqués. Un flux de sortie est la destination logique pour l’affichage d’une structure de ce type. Ce code affiche une date à l’aide de l’objet `cout` :  
   
 ```  
-Date dt( 1, 2, 92 );  
-cout << dt;  
+Date dt(1, 2, 92);
+
+cout <<dt;  
 ```  
   
- Pour obtenir `cout` de recevoir un objet d'`Date` après l'opérateur insert, surchargez l'opérateur d'insertion pour identifier un objet d'`ostream` à gauche et un `Date` à droite.  La fonction surchargée d'opérateur `<<` doit être déclarée comme une fonction friend de la classe `Date` ce qui peut accéder à des données privées dans un objet d'`Date`.  
+ Pour que `cout` accepte un objet `Date` après l’opérateur d’insertion, surchargez l’opérateur d’insertion pour reconnaître un objet `ostream` à gauche et un objet `Date` à droite. La fonction d’opérateur `<<` surchargé doit ensuite être déclarée comme ami (friend) de la classe `Date` pour pouvoir accéder aux données privées dans un objet `Date`.  
   
 ```  
 // overload_date.cpp  
@@ -66,13 +82,18 @@ int main()
 }  
 ```  
   
-  **5\/6\/92**   
-## Notes  
- L'opérateur surchargé retourne une référence à l'objet d'origine des `ostream`, ce qui signifie que vous pouvez combiner des insertions :  
-  
-```  
-cout << "The date is" << dt << flush;  
+```Output  
+5/6/92  
 ```  
   
-## Voir aussi  
+## <a name="remarks"></a>Notes  
+ L’opérateur surchargé retourne une référence à l’objet `ostream` d’origine, ce qui signifie que vous pouvez combiner des insertions :  
+  
+```  
+cout <<"The date is" <<dt <<flush;  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [Flux de sortie](../standard-library/output-streams.md)
+
+

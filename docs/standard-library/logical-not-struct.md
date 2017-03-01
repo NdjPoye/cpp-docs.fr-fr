@@ -1,70 +1,84 @@
 ---
-title: "logical_not, struct | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.logical_not"
-  - "logical_not"
-  - "xfunctional/std::logical_not"
-  - "std::logical_not"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_not (classe)"
-  - "logical_not (struct)"
+title: logical_not, struct | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.logical_not
+- logical_not
+- xfunctional/std::logical_not
+- std::logical_not
+dev_langs:
+- C++
+helpviewer_keywords:
+- logical_not class
+- logical_not struct
 ms.assetid: 892db678-31da-4540-974b-17b05efc0849
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# logical_not, struct
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 2f84361ba71a50601349542797840e2d45ffad21
+ms.lasthandoff: 02/24/2017
 
-Un objet de fonction prédéfinie qui exécute l'opération logique non \(`operator!`\) à son argument.  
+---
+# <a name="logicalnot-struct"></a>logical_not, struct
+Objet de fonction prédéfini qui effectue l’opération NOT logique ( `operator!`) sur ses arguments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+template <class Type = void>
+struct logical_not : public unary_function<Type, bool>  
+{
+    bool operator()(const Type& Left) const;
+};
+
+// specialized transparent functor for operator!
+template <>
+struct logical_not<void>  
+{
+  template <class Type>
+  auto operator()(Type&& Left) const`
+     -> decltype(!std::forward<Type>(Left));
+ };
 ```  
-template<class Type = void>  
-   struct logical_not : public unary_function<Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left  
-      ) const;  
-   };  
   
-// specialized transparent functor for operator!  
-template<>  
-   struct logical_not<void>  
-   {  
-      template<class Type>  
-      auto operator()(Type&& Left) const  
-         -> decltype(!std::forward<Type>(Left));  
-   };  
-  
-```  
-  
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `Type`  
- Tout type qui prend en charge `operator!` qui prend un opérande de type spécifié ou déduit.  
+ Tout type qui prend en charge un `operator!` qui accepte un opérande du type spécifié ou déduit.  
   
  `Left`  
- L'opérande de l'opérateur NOT logique.  Le modèle non spécialisé prend un argument de référence lvalue de type `Type`.  Le modèle spécialisé perfectionne le transfert des arguments de référence lvalue et rvalue de type déduit `Type`.  
+ Opérande de l’opération NOT logique. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `Type`.  
   
-## Valeur de retour  
- Le résultat de `!` \* `Left` \+ .  Le modèle spécialisé effectue de façon parfaite le transfert du résultat, qui a le type retourné par `operator!`.  
+## <a name="return-value"></a>Valeur de retour  
+ Résultat de `!``Left`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator!`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // functional_logical_not.cpp  
 // compile with: /EHsc  
 #include <deque>  
@@ -99,17 +113,23 @@ int main( )
       cout << *iter2 << " ";  
    cout << ")" << endl;  
 }  
+/* Output:  
+Original deque:  
+ d1 = ( false true false true false true false )  
+The deque with its values negated is:  
+ d2 = ( true false true false true false true )  
+ */  
 ```  
   
-  **Deque d'origine :**  
- **d1 \= \( false true false true false true false \)**  
-**Le deque avec ses valeurs négative est :**  
- **d2 \= \( true false true false true false true \)**   
-## Configuration requise  
- **En\-tête :** \<functional\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<functional>  
   
- **Espace de noms :** std  
+ **Espace de noms :** std  
   
-## Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Bibliothèque STL \(Standard Template Library\)](../misc/standard-template-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

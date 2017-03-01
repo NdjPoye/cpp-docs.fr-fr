@@ -1,56 +1,72 @@
 ---
-title: "perror, _wperror | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wperror"
-  - "perror"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wperror"
-  - "_tperror"
-  - "perror"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tperror (fonction)"
-  - "_wperror (fonction)"
-  - "messages d'erreur, imprimer"
-  - "perror (fonction)"
-  - "messages d'erreur d'impression"
-  - "tperror (fonction)"
-  - "wperror (fonction)"
+title: perror, _wperror | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wperror
+- perror
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wperror
+- _tperror
+- perror
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tperror function
+- tperror function
+- wperror function
+- error messages, printing
+- printing error messages
+- _wperror function
+- perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# perror, _wperror
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b826a1539581aee3d58f49f68c5ba04139a14328
+ms.lasthandoff: 02/24/2017
 
-Retourner un message d'erreur.  
+---
+# <a name="perror-wperror"></a>perror, _wperror
+Imprime un message d’erreur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -62,40 +78,40 @@ void _wperror(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `string`  
- Chaîne du message à retourner.  
+ Message de type chaîne à imprimer.  
   
-## Notes  
- La fonction `perror` affiche un message d'erreur à `stderr`.  `_wperror` est une version à large caractères de **\_perror**; l'argument `string` de `_wperror` est une chaîne de larges caractères.  Pour le reste, `_wperror` et **\_perror** se comportent de la même manière.  
+## <a name="remarks"></a>Notes  
+ La fonction `perror` imprime un message d’erreur dans `stderr`. `_wperror` est une version à caractères larges de **_perror** ; l’argument `string` de `_wperror` est une chaîne de caractères larges. Sinon, `_wperror` et **_perror** se comportent de la même façon.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tperror`|`perror`|`perror`|`_wperror`|  
   
- `string` est retourné tout d'abord, suivi de deux\-points, puis par le message d'erreur du système pour le dernier appel de bibliothèque qui a généré l'erreur, et enfin par un caractère de saut de ligne.  Si `string` est un pointeur null ou un pointeur vers une chaîne Null, `perror` affiche uniquement le message d'erreur système.  
+ `string` est imprimé en premier, suivi de deux-points, du message d’erreur système relatif au dernier appel de bibliothèque qui a généré l’erreur et enfin d’un caractère de saut de ligne. Si `string` est un pointeur Null ou un pointeur désignant une chaîne de valeur Null, `perror` imprime uniquement le message d’erreur système.  
   
- Numéro d'erreur stocké dans [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) variable \(défini dans ERRNO.H\).  Les messages d'erreur système sont accessibles via le variable [\_sys\_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), qui est un tableau du nombre par erreur classé par messages.  `perror` imprime le message d'erreur approprié à la valeur `errno` en tant qu'index de `_sys_errlist`.  La valeur de la variable [\_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) est définie comme nombre maximal d'éléments du tableau `_sys_errlist`.  
+ Le numéro d’erreur est stocké dans la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (définie dans ERRNO.H). Les messages d’erreur système sont accessibles via la variable [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), qui est un tableau de messages classés par numéro d’erreur. `perror` imprime le message d’erreur approprié en utilisant la valeur `errno` comme index de `_sys_errlist`. La valeur de la variable [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) est définie comme étant le nombre maximal d’éléments dans le tableau `_sys_errlist`.  
   
- Pour des résultats exacts, appelez `perror` immédiatement après une routine de bibliothèque retourne avec une erreur.  Sinon, les appels suivants peuvent réecrire la valeur `errno`.  
+ Pour des résultats précis, appelez `perror` de suite après le retour avec erreur d’une routine de bibliothèque. Sinon, les appels suivants peuvent remplacer la valeur `errno`.  
   
- Dans le système d'exploitation Windows, certaines valeurs `errno` répertoriées dans ERRNO.H sont non\-utilisées.  Ces valeurs sont réservés pour une utilisation par le système d'exploitation UNIX.  Voir [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour une liste de valeurs `errno` utilisées par le système d'exploitation Windows.  `perror` affiche une chaîne vide pour toute valeur `errno` non utilisée par ces plateformes.  
+ Dans le système d’exploitation Windows, certaines valeurs `errno` répertoriées dans ERRNO. H ne sont pas utilisées. Ces valeurs sont réservées au système d’exploitation UNIX. Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour obtenir la liste des valeurs `errno` utilisées par le système d’exploitation Windows. `perror` imprime une chaîne vide pour toute valeur `errno` non utilisée par ces plateformes.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`perror`|\<stdio.h\> or \<stdlib.h\>|  
-|`_wperror`|\<stdio.h\> ou \<wchar.h\>|  
+|`perror`|\<stdio.h > ou \<stdlib.h >|  
+|`_wperror`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Bibliothèques  
+## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_perror.c  
@@ -137,7 +153,7 @@ int main( void )
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 perror says open failed: No such file or directory  
@@ -145,11 +161,11 @@ strerror says open failed: No such file or directory
 _strerror says open failed: No such file or directory  
 ```  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
- [Contrôle de processus et d'environnement](../../c-runtime-library/process-and-environment-control.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)   
  [clearerr](../../c-runtime-library/reference/clearerr.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   
- [strerror, \_strerror, \_wcserror, \_\_wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)
+ [strerror, _strerror, _wcserror, \__wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)

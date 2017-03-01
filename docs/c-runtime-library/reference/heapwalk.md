@@ -1,53 +1,69 @@
 ---
-title: "_heapwalk | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_heapwalk"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "heapwalk"
-  - "_heapwalk"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_heapwalk (fonction)"
-  - "déboguer (CRT), problèmes liés au tas"
-  - "heapwalk (fonction)"
+title: _heapwalk | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _heapwalk
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- heapwalk
+- _heapwalk
+dev_langs:
+- C++
+helpviewer_keywords:
+- debugging [CRT], heap-related problems
+- heapwalk function
+- _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# _heapwalk
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8ead1e2102ce55e747799d0b1b198e6ff0f27865
+ms.lasthandoff: 02/24/2017
 
-Parcourt le tas et retourne des informations sur l'entrée suivante.  
+---
+# <a name="heapwalk"></a>_heapwalk
+Parcourt le tas et retourne des informations sur l’entrée suivante.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime sauf dans les builds de déboguage.  Pour plus d'informations, consultez [Fonctions CRT non prises en charge avec \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime, sauf dans les builds de débogage. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int _heapwalk(   
@@ -55,58 +71,58 @@ int _heapwalk(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `entryinfo`  
- Mémoire tampon pour contenir les informations du tas.  
+ Mémoire tampon destinée à contenir les informations relatives au tas.  
   
-## Valeur de retour  
- `_heapwalk` retourne un des constantes de manifeste d'entiers suivantes définies dans Malloc.h.  
+## <a name="return-value"></a>Valeur de retour  
+ `_heapwalk` retourne une des constantes manifestes entières suivantes définies dans Malloc.h.  
   
  `_HEAPBADBEGIN`  
- Les informations d'en\-tête initiales sont non valides ou introuvables.  
+ Informations d’en-tête initiales non valides ou introuvables.  
   
  `_HEAPBADNODE`  
  Tas endommagé ou nœud incorrect trouvé.  
   
  `_HEAPBADPTR`  
- Le champ`_pentry` de la structure `_HEAPINFO` ne contient pas un pointeur valide dans le tas ou `entryinfo` est un pointeur null.  
+Le champ  `_pentry` de la structure `_HEAPINFO` ne contient pas un pointeur valide vers le tas ou `entryinfo` est un pointeur Null.  
   
  `_HEAPEND`  
- Fin du tas atteint.  
+ Fin du tas atteinte avec succès.  
   
  `_HEAPEMPTY`  
- Tas pas encore initialisé  
+ Tas non initialisé.  
   
  `_HEAPOK`  
- Aucune erreur jusque\-là ; `entryinfo` est mis à jour avec des informations sur l'entrée suivante du tas.  
+ Aucune erreur jusqu’à présent ; `entryinfo` est mis à jour avec des informations sur l’entrée suivante du tas.  
   
- En outre, si une erreur se produit, `_heapwalk` définit `errno` à `ENOSYS`.  
+ En outre, si une erreur se produit, `_heapwalk` définit `errno` sur `ENOSYS`.  
   
-## Notes  
- La fonction `_heapwalk` aide au déboguage des problèmes liés au tas par dans les programmes.  La fonction traverse le tas, parcourant une entrée par appel, et retourne un pointeur vers une structure de type `_HEAPINFO` qui contient des informations sur l'entrée suivante du tas.  Le type `_HEAPINFO`, défini dans Malloc.h, contient les éléments suivants.  
+## <a name="remarks"></a>Notes  
+ La fonction `_heapwalk` permet de déboguer les problèmes liés au tas dans les programmes. La fonction parcourt le tas, à raison d’une entrée par appel, et retourne un pointeur désignant une structure de type `_HEAPINFO` qui contient des informations sur l’entrée suivante du tas. Le type `_HEAPINFO`, défini dans Malloc.h, contient les éléments suivants.  
   
  `int *_pentry`  
- Pointeur d'entrée du tas.  
+ Pointeur vers une entrée du tas.  
   
  `size_t _size`  
- Taille de l'entrée de tas.  
+ Taille de l’entrée du tas.  
   
  `int _useflag`  
- Indicateur qui détermine si le l'entrée du tas est en cours d'utilisation.  
+ Indicateur qui indique si l’entrée du tas est en cours d’utilisation.  
   
- Un appel à `_heapwalk` qui retourne`_HEAPOK` enregistre la taille de l'entrée dans le champ `_size` et définit le champ `_useflag` soit à `_FREEENTRY` ou à `_USEDENTRY` \(les deux sont des constantes de Malloc.h\).  Pour obtenir ces informations sur la première entrée dans le tas, donnez à `_heapwalk` un pointeur vers une structure `_HEAPINFO` dont le membre `_pentry` est `NULL`.  Si le système d'exploitation ne prend pas en charge `_heapwalk`\(par exemple, Windows 98\), la fonction retourne `_HEAPEND` et affecte à `errno` la valeur `ENOSYS`.  
+ Un appel à `_heapwalk` qui retourne `_HEAPOK` stocke la taille de l’entrée dans le champ `_size` et définit le champ `_useflag` sur `_FREEENTRY` ou `_USEDENTRY` (les deux sont des constantes définies dans Malloc.h). Pour obtenir ces informations sur la première entrée du tas, passez à `_heapwalk` un pointeur désignant une structure `_HEAPINFO` dont le membre `_pentry` a la valeur `NULL`. Si le système d’exploitation ne prend pas en charge `_heapwalk` (par exemple Windows 98), la fonction retourne `_HEAPEND` et définit `errno` sur `ENOSYS`.  
   
- Cette fonction valide son paramètre.  Si `entryinfo` est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, `errno` est défini comme `EINVAL` et la fonction retourne `_HEAPBADPTR`.  
+ Cette fonction valide son paramètre. Si `entryinfo` est un pointeur Null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, `errno` a la valeur `EINVAL` et la fonction retourne une valeur `_HEAPBADPTR`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|En\-tête facultatif|  
-|-------------|---------------------|-------------------------|  
-|`_heapwalk`|\<malloc.h\>|\<errno.h\>|  
+|Routine|En-tête requis|En-tête facultatif|  
+|-------------|---------------------|---------------------|  
+|`_heapwalk`|\<malloc.h>|\<errno.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_heapwalk.c  
@@ -173,25 +189,28 @@ void heapdump(void)
 }  
 ```  
   
-  **Bloc UTILISÉ à 00310650 de taille 0100**  
- **Bloc UTILISÉ à 00310758 de taille 0800**  
- **Bloc UTILISÉ à 00310F60 de taille 0800**  
- **Bloc LIBRE à 00310FF0 de taille 0398**  
- **Bloc UTILISÉ à 00311390 de taille 0800**  
- **Bloc UTILISÉ à 003113A8 de taille 00B4**  
- **Bloc UTILISÉ à 00311468 de taille 0034**  
- **Bloc UTILISÉ à 003114A8 de taille 0039**  
-**...**  
- **Bloc UTILISÉ à 00312228 de taille 0010**  
- **Bloc UTILISÉ à 00312240 de taille 1000**  
- **Bloc LIBRE à 00311390 de taille 0800**  
-**OK \- fin du tas**   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+  USED block at 00310650 of size 0100  
+  USED block at 00310758 of size 0800  
+  USED block at 00310F60 of size 0080  
+  FREE block at 00310FF0 of size 0398  
+  USED block at 00311390 of size 000D  
+  USED block at 003113A8 of size 00B4  
+  USED block at 00311468 of size 0034  
+  USED block at 003114A8 of size 0039  
+...  
+  USED block at 00312228 of size 0010  
+  USED block at 00312240 of size 1000  
+  FREE block at 00313250 of size 1DB0  
+OK - end of heap  
+```  
   
-## Voir aussi  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Voir aussi  
  [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)   
- [\_heapadd](../../c-runtime-library/heapadd.md)   
- [\_heapchk](../../c-runtime-library/reference/heapchk.md)   
- [\_heapmin](../../c-runtime-library/reference/heapmin.md)   
- [\_heapset](../../c-runtime-library/heapset.md)
+ [_heapadd](../../c-runtime-library/heapadd.md)   
+ [_heapchk](../../c-runtime-library/reference/heapchk.md)   
+ [_heapmin](../../c-runtime-library/reference/heapmin.md)   
+ [_heapset](../../c-runtime-library/heapset.md)

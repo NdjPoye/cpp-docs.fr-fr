@@ -1,66 +1,88 @@
 ---
-title: "mem_fun_t, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "mem_fun_t"
-  - "xfunctional/std::mem_fun_t"
-  - "std::mem_fun_t"
-  - "std.mem_fun_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mem_fun_t (classe)"
+title: mem_fun_t, classe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mem_fun_t
+- xfunctional/std::mem_fun_t
+- std::mem_fun_t
+- std.mem_fun_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- mem_fun_t class
 ms.assetid: 242566d4-750c-4c87-9d63-2e2c9d19ca2a
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# mem_fun_t, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 0f30a83291abb804e10a6692bf0b0df54bcabc34
+ms.lasthandoff: 02/24/2017
 
-Une classe d'adaptateur qui permet à une fonction membre **non\_const** qui ne prend pas d'arguments d'être appelée comme objet fonction unaire une fois initialisée avec un argument de pointeur.  
+---
+# <a name="memfunt-class"></a>mem_fun_t, classe
+Classe d’adaptateur qui permet à une fonction membre **non_const** qui n’accepte aucun argument d’être appelée comme objet de fonction unaire en cas d’initialisation avec un argument de pointeur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+template <class Result, class Type>
+class mem_fun_t : public unary_function<Type *, Result> {
+    explicit mem_fun_t(Result (Type::* _Pm)());
+
+    Result operator()(Type* _Pleft) const;
+
+ };
 ```  
-template<class Result, class Type>  
-   class mem_fun_t : public unary_function<Type *, Result> {  
-      explicit mem_fun_t(Result ( Type::*_Pm )( ) );  
-      Result operator()( Type* _Pleft ) const;  
-   };  
-```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `_Pm`  
- Pointeur vers la fonction membre de la classe **Type** à convertir en une fonction objet.  
+ Pointeur vers la fonction membre de la classe **Type** à convertir en objet de fonction.  
   
  `_Pleft`  
- L'objet que la méthode `_Pm`  a appelé.  
+ Objet sur lequel la fonction membre `_Pm` est appelée.  
   
-## Valeur de retour  
- Une fonction unaire adaptable.  
+## <a name="return-value"></a>Valeur de retour  
+ Fonction unaire adaptable.  
   
-## Notes  
- La classe de modèle stocke une copie de `_Pm`, qui doit être un pointeur vers une fonction membre de classe **Type**, dans un objet membre privé.  Cette option définit sa méthode `operator()` comme retournant \(`_Pleft`\-\>\* `_Pm`\)\( \).  
+## <a name="remarks"></a>Notes  
+ La classe de modèle stocke une copie de `_Pm`, qui doit être un pointeur vers une fonction membre de classe **Type**, dans un objet de membre privé. Elle définit sa fonction membre `operator()` comme retournant ( `_Pleft`->* `_Pm`)( ).  
   
-## Exemple  
- Le constructeur de `mem_fun_t` n'est généralement pas utilisé directement; la fonction d'assistance `mem_fun` permet d'ajuster les fonctions membre.  Voir [mem\_fun](../Topic/mem_fun%20Function.md) pour obtenir un exemple de l'utilisation des adaptateurs de fonction membre.  
+## <a name="example"></a>Exemple  
+ Le constructeur de `mem_fun_t` n’est généralement pas utilisé directement ; la fonction d’assistance `mem_fun` est utilisée pour adapter les fonctions membres. Pour obtenir un exemple d’utilisation des adaptateurs de fonction membre, consultez [mem_fun](../standard-library/functional-functions.md#mem_fun_function).  
   
-## Configuration requise  
- **En\-tête :** \<functional\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<functional>  
   
- **Espace de noms :** std  
+ **Espace de noms :** std  
   
-## Voir aussi  
- [\<functional\>](../standard-library/functional.md)   
- [Sécurité des threads dans la bibliothèque standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Bibliothèque STL \(Standard Template Library\)](../misc/standard-template-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [\<functional>](../standard-library/functional.md)   
+ [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

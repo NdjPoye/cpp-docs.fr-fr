@@ -1,59 +1,75 @@
 ---
-title: "_splitpath, _wsplitpath | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wsplitpath"
-  - "_splitpath"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wsplitpath"
-  - "_splitpath"
-  - "splitpath"
-  - "_wsplitpath"
-  - "_tsplitpath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_splitpath (fonction)"
-  - "_tsplitpath (fonction)"
-  - "_wsplitpath (fonction)"
-  - "noms de chemin d'accès"
-  - "noms de chemins d'accès"
-  - "splitpath (fonction)"
-  - "tsplitpath (fonction)"
-  - "wsplitpath (fonction)"
+title: _splitpath, _wsplitpath | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wsplitpath
+- _splitpath
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wsplitpath
+- _splitpath
+- splitpath
+- _wsplitpath
+- _tsplitpath
+dev_langs:
+- C++
+helpviewer_keywords:
+- _splitpath function
+- pathnames
+- wsplitpath function
+- splitpath function
+- _wsplitpath function
+- tsplitpath function
+- path names
+- _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _splitpath, _wsplitpath
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: af46452d23eb6194a0562dc37bbe082a56762a2b
+ms.lasthandoff: 02/24/2017
 
-Divise un nom de chemin d'accès en ses composants élémentaires.  Des versions plus sécurisées de ces fonctions sont disponibles; consultez [\_splitpath\_s, \_wsplitpath\_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md).  
+---
+# <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
+Divisent un nom de chemin en composants. Il existe des versions plus sécurisées de ces fonctions. Consultez [_searchenv_s, _wsearchenv_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void _splitpath(  
@@ -72,71 +88,71 @@ void _wsplitpath(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `path`  
- Chemin d'accès complet.  
+ Chemin complet.  
   
  `drive`  
- Lettre de lecteur, suivi de deux\-points \(`:`\).  Vous pouvez passer `NULL` pour ce paramètre si vous n'avez pas besoin de la lettre de lecteur.  
+ Lettre de lecteur suivie de deux-points (`:`). Vous pouvez passer la valeur `NULL` pour ce paramètre si vous n’avez pas besoin de la lettre de lecteur.  
   
  `dir`  
- Chemin d'accès au répertoire, invluant la barre oblique finale.  Des barres obliques \( `/`\), les barres obliques inverses \( `\` \), ou les deux peuvent être utilisées.  Vous pouvez passer `NULL` pour ce paramètre si vous n'avez pas besoin du chemin d'accès.  
+ Chemin de répertoire incluant une barre oblique de fin. Il est possible d’utiliser des barres obliques ( `/` ), des barres obliques inverses ( `\` ) ou les deux à la fois. Vous pouvez passer la valeur `NULL` pour ce paramètre si vous n’avez pas besoin du chemin de répertoire.  
   
  `fname`  
- Nom du fichier de base \(aucune extension\).  Vous pouvez renvoyer `NULL` pour ce paramètre si vous n'avez pas besoin du nom du fichier.  
+ Nom de fichier de base (sans extension). Vous pouvez passer la valeur `NULL` pour ce paramètre si vous n’avez pas besoin du nom de fichier.  
   
  `ext`  
- Extension du nom de fichier, y compris le principal point \(`.`\).  Vous pouvez passer `NULL` pour ce paramètre si vous n'avez pas besoin de l'extension du nom de fichier.  
+ Extension de nom de fichier incluant le point de début (`.`). Vous pouvez passer la valeur `NULL` pour ce paramètre si vous n’avez pas besoin de l’extension de nom de fichier.  
   
-## Notes  
- La fonction `_splitpath`divise un chemin d'accès par ses quatre composants.  `_splitpath` gère automatiquement des arguments de chaîne de caractères multi\-octets comme appropriés, en identifiant des séquences de caractères multi\-octets d'après la page de codes multioctets en cours d'utilisation.  `_wsplitpath` est une version à caractères larges de `_splitpath` ; les arguments de `_wsplitpath` sont des chaînes à caractères larges.  Ces fonctions se comportent sinon de façon identique.  
+## <a name="remarks"></a>Notes  
+ La fonction `_splitpath` divise un chemin en quatre composants. `_splitpath` gère automatiquement les arguments de chaîne de caractères multioctets si nécessaire, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d’utilisation. `_wsplitpath` est une version à caractères larges de `_splitpath` ; les arguments de `_wsplitpath` sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique.  
   
- **Note de sécurité** Ces fonctions entraînent un risque potentiel provoqué par un dépassement de mémoire tampon.  Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée.  Pour plus d'informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).  Des versions plus sécurisées de ces fonctionnalités sont disponibles ; voir le [\_splitpath\_s, \_wsplitpath\_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md).  
+ **Remarque relative à la sécurité** Ces fonctions sont exposées à une menace potentielle liée à un problème de dépassement de mémoire tampon. Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795). Il existe des versions plus sécurisées de ces fonctions. Consultez [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md).  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tsplitpath`|`_splitpath`|`_splitpath`|`_wsplitpath`|  
   
- Chaque composant du chemin d'accès complet est stockée dans une mémoire tampon distincte ; les constantes explicites `_MAX_DRIVE`, `_MAX_DIR`, `_MAX_FNAME`, et `_MAX_EXT`\(définies dans STDLIB.H\) spécifient la taille maximale autorisée pour chaque composant de fichier.  Les composants des fichiers qui sont de dimensions supérieures aux constantes explicites correspondantes engendrent la corruption des données des segments de mémoires.  
+ Chaque composant du chemin complet est stocké dans une mémoire tampon distincte ; les constantes manifestes `_MAX_DRIVE`, `_MAX_DIR`, `_MAX_FNAME` et `_MAX_EXT` (définies dans STDLIB.H) spécifient la taille maximale de chaque composant de fichier. Les composants de fichier dont la taille dépasse celle des constantes manifestes correspondantes occasionnent une altération du tas.  
   
- Chaque mémoire tampon doit aussis grande que la constante explicite correspondante pour éviter un dépassement de mémoire tampon potentiel.  
+ Chaque mémoire tampon doit être aussi volumineuse que sa constante manifeste correspondante pour éviter un possible dépassement de mémoire tampon.  
   
- Le tableau suivant répertorie les valeurs des constantes explicites.  
+ Le tableau suivant répertorie les valeurs des constantes manifestes.  
   
 |Nom|Valeur|  
-|---------|------------|  
-|\_MAX\_DRIVE|3|  
-|\_MAX\_DIR|256|  
-|\_MAX\_FNAME|256|  
-|\_MAX\_EXT|256|  
+|----------|-----------|  
+|_MAX_DRIVE|3|  
+|_MAX_DIR|256|  
+|_MAX_FNAME|256|  
+|_MAX_EXT|256|  
   
- Si le chemin complet ne contient aucun composant \(par exemple, un nom de fichier\), `_splitpath` affecte une chaîne vide à la mémoire tampon correspondante.  
+ Si le chemin complet ne contient pas de composant (par exemple, un nom de fichier), `_splitpath` affecte des chaînes vides aux mémoires tampons correspondantes.  
   
- Vous pouvez passer `NULL` à `_splitpath` pour un paramètre autre que `path` lequel vous n'avez pas besoin.  
+ Vous pouvez passer la valeur `NULL` à `_splitpath` pour tout paramètre autre que `path` dont vous n’avez pas besoin.  
   
- Si `path` est `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, `errno` est défini comme `EINVAL` et la fonction retourne `EINVAL`.  
+ Si `path` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, `errno` a la valeur `EINVAL` et la fonction retourne une valeur `EINVAL`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_splitpath`|\<stdlib.h\>|  
-|`_wsplitpath`|\<stdlib.h\> ou \<wchar.h\>|  
+|`_splitpath`|\<stdlib.h>|  
+|`_wsplitpath`|\<stdlib.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
- Consultez l'exemple sur [\_makepath](../../c-runtime-library/reference/makepath-wmakepath.md).  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple relatif à [_makepath](../../c-runtime-library/reference/makepath-wmakepath.md).  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion de fichiers](../../c-runtime-library/file-handling.md)   
- [\_fullpath, \_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [\_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [\_makepath, \_wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
- [\_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
- [\_splitpath\_s, \_wsplitpath\_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)
+ [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+ [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
+ [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)

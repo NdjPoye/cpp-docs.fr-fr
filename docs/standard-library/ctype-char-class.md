@@ -1,33 +1,49 @@
 ---
-title: "CType &lt; char &gt; (classe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ctype<char>"
-  - "locale/std::ctype<char>"
-  - "std::ctype<char>"
-  - "std.ctype<char>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CType < char > (classe)"
+title: ctype&lt;char&gt;, classe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ctype<char>
+- locale/std::ctype<char>
+- std::ctype<char>
+- std.ctype<char>
+dev_langs:
+- C++
+helpviewer_keywords:
+- ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# CType &lt; char &gt; (classe)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 0acae30ecbe670c87179f4cc2f5a2b8066ef3a4c
+ms.lasthandoff: 02/24/2017
 
-La classe est une spécialisation explicite de la classe de modèle **ctype \< CharType**> vers le type `char`, qui décrit un objet pouvant servir de facette de paramètres régionaux pour caractériser diverses propriétés d’un caractère de type `char`.  
+---
+# <a name="ctypeltchargt-class"></a>ctype&lt;char&gt;, classe
+Classe constituant une spécialisation explicite de la classe de modèle **ctype\<CharType**> en type `char`, décrivant un objet qui peut servir de facette de paramètres régionaux pour caractériser diverses propriétés d’un caractère de type `char`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -129,30 +145,31 @@ protected:
 };  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La spécialisation explicite diffère de la classe de modèle de plusieurs façons :  
   
--   Un objet de classe ctype < `char`> stocke un pointeur vers le premier élément d’un tableau de masque ctype, un tableau de UCHAR_MAX + 1 éléments de type **ctype_base::mask**. Il stocke également un objet de type Boolean qui indique si le tableau doit être supprimé (à l’aide de `operator delete[]`) lorsque la fonction ctype \< **Elem**> détruit.  
+-   Un objet de classe ctype< `char`> stocke un pointeur vers le premier élément d’un tableau de masque ctype, un tableau de UCHAR_MAX + 1 éléments de type **ctype_base::mask**. Il stocke également un objet booléen qui indique si le tableau doit être supprimé (à l’aide de `operator delete[]`) quand l’objet ctype\< **Elem**> est détruit.  
   
--   Son seul constructeur public vous permet de spécifier **onglet**, la table de masque ctype, et **del**, l’objet Boolean qui est true si le tableau doit être supprimé lorsque la fonction ctype < `char`> objet est détruit, ainsi que les références de paramètre un décompte de références.  
+-   Son seul constructeur public vous permet de spécifier **tab**, le tableau de masque ctype, et **del**, l’objet booléen qui a la valeur true si le tableau doit être supprimé quand l’objet ctype< `char`> est détruit, ainsi que les références de paramètre reference-count.  
   
--   La fonction membre **table** retourne la table de masque ctype stockée.  
+-   La fonction membre protégée **table** retourne le tableau de masque ctype stocké.  
   
--   L’objet de membre statique **table_size** Spécifie le nombre minimal d’éléments dans un tableau de masque ctype.  
+-   L’objet de membre statique **table_size** spécifie le nombre minimal d’éléments dans un tableau de masque ctype.  
   
--   La fonction membre statique **classic_table**(retourne la table de masque ctype appropriée aux paramètres régionaux « C ».  
+-   La fonction membre statique protégée **classic_table**( retourne le tableau de masque ctype approprié pour les paramètres régionaux « C ».  
   
--   Aucune fonction membre virtuelle protégée [do_is](../standard-library/ctype-class.md#ctype__do_is), [do_scan_is](../standard-library/ctype-class.md#ctype__do_scan_is), ou [do_scan_not](../standard-library/ctype-class.md#ctype__do_scan_not). Les fonctions membres publiques correspondantes effectuent les opérations équivalentes eux-mêmes.  
+-   Il n’y a aucune fonction membre virtuelle protégée [do_is](../standard-library/ctype-class.md#ctype__do_is), [do_scan_is](../standard-library/ctype-class.md#ctype__do_scan_is) ou [do_scan_not](../standard-library/ctype-class.md#ctype__do_scan_not). Les fonctions membres publiques correspondantes effectuent les opérations équivalentes.  
   
- Les fonctions membres [do_narrow](../standard-library/ctype-class.md#ctype__do_narrow) et [do_widen](../standard-library/ctype-class.md#ctype__do_widen) copier des éléments non modifiés.  
+ Les fonctions membres [do_narrow](../standard-library/ctype-class.md#ctype__do_narrow) et [do_widen](../standard-library/ctype-class.md#ctype__do_widen) copient des éléments non modifiés.  
   
 ## <a name="requirements"></a>Spécifications  
- **En-tête :** \< paramètres régionaux>  
+ **En-tête :** \<locale>  
   
- **Namespace :** std  
+ **Espace de noms :** std  
   
 ## <a name="see-also"></a>Voir aussi  
- [Facet, classe](../Topic/facet%20Class.md)   
+ [facet, classe](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)   
  [ctype_base, classe](../standard-library/ctype-base-class.md)   
- [Sécurité des threads dans la bibliothèque Standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 

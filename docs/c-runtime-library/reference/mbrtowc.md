@@ -1,49 +1,63 @@
 ---
-title: "mbrtowc | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "mbrtowc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbrtowc"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "mbrtowc (fonction)"
+title: mbrtowc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- mbrtowc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbrtowc
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# mbrtowc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: de5737e8427d88b192d59291fc7b4805a7f6510b
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="mbrtowc"></a>mbrtowc
 Convertir un caractère multioctet dans les paramètres régionaux actuels en un caractère large équivalent, avec la possibilité de redémarrer au milieu d'un caractère multioctet.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 size_t mbrtowc(  
@@ -54,46 +68,46 @@ size_t mbrtowc(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `wchar`  
- Adresse d'un caractère large pour recevoir la chaîne de caractères larges convertie \(type `wchar_t`\).  Cette valeur peut être un pointeur null si un caractère large n'est pas requis en retour.  
+ Adresse d'un caractère large pour recevoir la chaîne de caractères larges convertie (type `wchar_t`). Cette valeur peut être un pointeur null si un caractère large n'est pas requis en retour.  
   
  `mbchar`  
- Adresse d'une séquence d'octets \(un caractère multioctet\).  
+ Adresse d'une séquence d'octets (un caractère multioctet).  
   
  `count`  
  Nombre d'octets à vérifier.  
   
  `mbstate`  
- Pointeur vers un objet d'état de conversion.  Si cette valeur est un pointeur null, la fonction utilise un objet d'état de conversion interne statique.  Comme l'objet `mbstate_t` interne n'est pas thread\-safe, nous vous recommandons de toujours passer votre propre argument `mbstate`.  
+ Pointeur vers un objet d'état de conversion. Si cette valeur est un pointeur null, la fonction utilise un objet d'état de conversion interne statique. Comme l'objet `mbstate_t` interne n'est pas thread-safe, nous vous recommandons de toujours passer votre propre argument `mbstate`.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  Une des valeurs suivantes :  
   
  0  
- Les `count` \(ou moins\) octets suivants terminent le caractère multioctet qui représente le caractère large null, qui est stocké dans `wchar`, si `wchar` n'est pas un pointeur null.  
+ Les `count` (ou moins) octets suivants terminent le caractère multioctet qui représente le caractère large null, qui est stocké dans `wchar`, si `wchar` n'est pas un pointeur null.  
   
  1 à `count`, inclusivement  
- Les `count` \(ou moins\) octets suivants terminent un caractère multioctet valide.  La valeur retournée est le nombre d'octets qui terminent le caractère multioctet.  Le caractère large équivalent est stocké dans `wchar`, si `wchar` n'est pas un pointeur null.  
+ Les `count` (ou moins) octets suivants terminent un caractère multioctet valide. La valeur retournée est le nombre d'octets qui terminent le caractère multioctet. Le caractère large équivalent est stocké dans `wchar`, si `wchar` n'est pas un pointeur null.  
   
- \(size\_t\)\(\-1\)  
- Une erreur d'encodage s'est produite.  Les `count` \(ou moins\) octets suivants ne contribuent pas à un caractère multioctet complet et valide.  Dans ce cas, `errno` est défini à EILSEQ et l'état du décalage de la conversion dans `mbstate` n'est pas spécifié.  
+ (size_t)(-1)  
+ Une erreur d'encodage s'est produite. Les `count` (ou moins) octets suivants ne contribuent pas à un caractère multioctet complet et valide. Dans ce cas, `errno` est défini à EILSEQ et l'état du décalage de la conversion dans `mbstate` n'est pas spécifié.  
   
- \(size\_t\)\(\-2\)  
- Les `count` octets suivants contribuent à un caractère multioctets incomplet mais potentiellement valide, et tous les `count` octets ont été traités.  Aucune valeur n'est stockée dans `wchar`, mais `mbstate` est mis à jour pour redémarrer la fonction.  
+ (size_t)(-2)  
+ Les `count` octets suivants contribuent à un caractère multioctets incomplet mais potentiellement valide, et tous les `count` octets ont été traités. Aucune valeur n'est stockée dans `wchar`, mais `mbstate` est mis à jour pour redémarrer la fonction.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Si `mbchar` est un pointeur null, la fonction est équivalente à l'appel :  
   
  `mbrtowc(NULL, "", 1, &mbstate)`  
   
  Dans ce cas, les valeurs des arguments `wchar` et `count` sont ignorées.  
   
- Si `mbchar` n'est pas un pointeur null, la fonction examine `count` octets de `mbchar` pour déterminer le nombre d'octets nécessaires pour terminer le caractère multioctet suivant.  Si le caractère suivant est valide, le caractère multioctet correspondant est stocké dans `wchar` s'il ne s'agit pas d'un pointeur null.  Si le caractère est le caractère null large correspondant, l'état résultant de `mbstate` est l'état de la conversion initiale.  
+ Si `mbchar` n'est pas un pointeur null, la fonction examine `count` octets de `mbchar` pour déterminer le nombre d'octets nécessaires pour terminer le caractère multioctet suivant. Si le caractère suivant est valide, le caractère multioctet correspondant est stocké dans `wchar` s'il ne s'agit pas d'un pointeur null. Si le caractère est le caractère null large correspondant, l'état résultant de `mbstate` est l'état de la conversion initiale.  
   
- La fonction `mbrtowc` diffère de [mbtowc, \_mbtowc\_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md) par sa capacité à redémarrer.  L'état de la conversion est stocké dans `mbstate` pour les appels suivants à la même ou à d'autres fonctions redémarrables.  Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables.  Par exemple, une application doit utiliser `wcsrlen` au lieu de `wcslen` si un appel ultérieur à `wcsrtombs` est utilisé à la place de `wcstombs`  
+ La fonction `mbrtowc` diffère de [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md) par sa capacité à redémarrer. L'état de la conversion est stocké dans `mbstate` pour les appels suivants à la même ou à d'autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables.  Par exemple, une application doit utiliser `wcsrlen` au lieu de `wcslen` si un appel ultérieur à `wcsrtombs` est utilisé à la place de `wcstombs`  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  Convertit un caractère multioctet en son équivalent en caractère large.  
   
 ```  
@@ -202,7 +216,7 @@ int main(int argc, char* argv[])
 }  
 ```  
   
-## Résultat de l'exemple  
+## <a name="sample-output"></a>Résultat de l'exemple  
   
 ```  
 Locale set to: "French_Canada.1252"  
@@ -211,16 +225,16 @@ Multibyte String: AaBbCcÜïα∩≡xXyYzZ
 WC String: AaBbCcÜïα∩≡xXyYzZ  
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`mbrtowc`|\<wchar.h\>|  
+|`mbrtowc`|\<wchar.h>|  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, voir [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
  [Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

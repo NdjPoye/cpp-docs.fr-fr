@@ -1,89 +1,105 @@
 ---
-title: "_heapchk | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_heapchk"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_heapchk"
-  - "heapchk"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_heapchk (fonction)"
-  - "vérifier la cohérence des tas"
-  - "déboguer (CRT), problèmes liés au tas"
-  - "heapchk (fonction)"
-  - "tas, vérifier la cohérence"
+title: _heapchk | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _heapchk
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _heapchk
+- heapchk
+dev_langs:
+- C++
+helpviewer_keywords:
+- debugging [CRT], heap-related problems
+- consistency checking of heaps
+- heapchk function
+- heaps, checking consistency
+- _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# _heapchk
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d75464be51440dfd171323ad91d32946310ea956
+ms.lasthandoff: 02/24/2017
 
-Effectue des vérifications de cohérence sur le tas.  
+---
+# <a name="heapchk"></a>_heapchk
+Exécute des vérifications de cohérence sur le tas.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int _heapchk( void );  
 ```  
   
-## Valeur de retour  
- `_heapchk` retourne un des constantes de manifeste d'entiers suivantes définies dans Malloc.h.  
+## <a name="return-value"></a>Valeur de retour  
+ `_heapchk` retourne une des constantes manifestes entières suivantes définies dans Malloc.h.  
   
  `_HEAPBADBEGIN`  
- Les informations d'en\-tête initiales sont incorrectes ou ne peuvent pas être trouvées.  
+ Les informations d’en-tête initiales sont incorrectes ou introuvables.  
   
  `_HEAPBADNODE`  
  Un nœud incorrect a été trouvé ou le tas est endommagé.  
   
  `_HEAPBADPTR`  
- Le pointeur vers le tas n'est pas valide.  
+ Le pointeur vers le tas n’est pas valide.  
   
  `_HEAPEMPTY`  
- Le tas n'a pas été initialisé.  
+ Le tas n’a pas été initialisé.  
   
  `_HEAPOK`  
- Le tas apparaît être cohérent.  
+ Le tas est cohérent.  
   
- En outre, si une erreur se produit, `_heapchk` définit `errno` à `ENOSYS`.  
+ En outre, si une erreur se produit, `_heapchk` définit `errno` sur `ENOSYS`.  
   
-## Notes  
- La fonction `_heapchk` aide au débogage des problèmes liés au tas en vérifiant la cohérence minimale du tas.  Si le système d'exploitation ne prend pas en charge `_heapchk`\(par exemple, Windows 98\), la fonction retourne `_HEAPOK` et affecte à `errno` la valeur `ENOSYS`.  
+## <a name="remarks"></a>Notes  
+ La fonction `_heapchk` aide à déboguer les problèmes liés au tas en vérifiant la cohérence minimale de celui-ci. Si le système d’exploitation ne prend pas en charge `_heapchk` (par exemple Windows 98), la fonction retourne `_HEAPOK` et définit `errno` sur `ENOSYS`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|En\-tête facultatif|  
-|-------------|---------------------|-------------------------|  
-|`_heapchk`|\<malloc.h\>|\<errno.h\>|  
+|Routine|En-tête requis|En-tête facultatif|  
+|-------------|---------------------|---------------------|  
+|`_heapchk`|\<malloc.h>|\<errno.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_heapchk.c  
@@ -122,13 +138,16 @@ int main( void )
 }  
 ```  
   
-  **OK \- le tas est bien.**   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+OK - heap is fine  
+```  
   
-## Voir aussi  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Voir aussi  
  [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)   
- [\_heapadd](../../c-runtime-library/heapadd.md)   
- [\_heapmin](../../c-runtime-library/reference/heapmin.md)   
- [\_heapset](../../c-runtime-library/heapset.md)   
- [\_heapwalk](../../c-runtime-library/reference/heapwalk.md)
+ [_heapadd](../../c-runtime-library/heapadd.md)   
+ [_heapmin](../../c-runtime-library/reference/heapmin.md)   
+ [_heapset](../../c-runtime-library/heapset.md)   
+ [_heapwalk](../../c-runtime-library/reference/heapwalk.md)

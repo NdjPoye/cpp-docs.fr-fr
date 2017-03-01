@@ -1,64 +1,82 @@
 ---
-title: "Algorithmes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "algorithme (fonction avec modèle) (conventions de bibliothèque C++)"
-  - "algorithmes (C++), C++"
-  - "conventions (C++), C++ (algorithme)"
-  - "bibliothèques (C++), C++ (algorithm) (conventions)"
-  - "bibliothèque C++ standard, algorithmes"
+title: Algorithmes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- libraries [C++], C++ algorithm conventions
+- algorithms [C++], C++
+- C++ Standard Library, algorithms
+- algorithm template function C++ library conventions
+- conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Algorithmes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 5b5ffafb841fcb883dc66880933e8d123256e575
+ms.lasthandoff: 02/24/2017
 
-Les algorithmes sont un élément fondamental de la Bibliothèque STL \(Standard Template Library\).  Ils ne fonctionnent pas avec des conteneurs proprement dits, mais plutôt avec des itérateurs.  Ainsi, le même algorithme peut être utilisé par la plupart des conteneurs STL \(voire tous\).  Cette section traite des conventions et de la terminologie des algorithmes STL.  
+---
+# <a name="algorithms"></a>Algorithmes
+Les algorithmes sont un élément fondamental de la bibliothèque C++ Standard. Ils ne fonctionnent pas avec des conteneurs proprement dits, mais plutôt avec des itérateurs. Par conséquent, le même algorithme peut être utilisé par la plupart des conteneurs de la bibliothèque C++ Standard (voire tous). Cette section traite des conventions et de la terminologie des algorithmes de la bibliothèque C++ Standard.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Les descriptions des fonctions de modèle d'algorithme emploient plusieurs expressions raccourcies :  
   
--   L'expression « dans la plage \[*A*, *B*\) » signifie la séquence de zéro, une ou plusieurs valeurs discrètes commençant à *A* et allant jusqu'à *B* non compris.  Une plage est valide uniquement si *B* est accessible à partir de *A* ; vous pouvez stocker *A* dans un objet *N* \(*N* \= *A*\), incrémenter l'objet zéro, une ou plusieurs fois \(\+\+*N*\) et comparer l'égalité de l'objet à *B* après un nombre fini d'incréments \(N \=\= B*\).*  
+-   L’expression « dans la plage [*A*, *B*) » désigne une séquence de zéro, une ou plusieurs valeurs discrètes commençant par *A* et allant jusqu’à *B* non compris. Une plage est valide uniquement si *B* est accessible à partir de *A*. Vous pouvez stocker *A* dans un objet *N* (*N* = *A*), incrémenter l’objet zéro, une ou plusieurs fois (++*N*) et vérifier si l’objet est égal à *B* après un nombre fini d’incréments (N == B*).*  
   
--   L'expression « chaque *N* dans la plage \[*A*, *B*\) » signifie que *N* commence à la valeur *A* et est incrémenté zéro, une ou plusieurs fois jusqu'à être égal à la valeur *B*.  Le cas *N* \=\= *B* n'est pas dans la plage.  
+-   L’expression « chaque *N* dans la plage [*A*, *B*) » signifie que *N* commence par la valeur *A* et est incrémenté zéro, une ou plusieurs fois jusqu’à être égal à la valeur *B*. Le cas *N* == *B* n’est pas dans la plage.  
   
--   La phrase « la valeur la plus faible de *N* dans la plage \[*A*, *B*\) telle que *X* » signifie que la condition *X* est déterminée pour chaque *N* dans la plage \[*A*, *B*\) jusqu'à ce que la condition *X* soit remplie.  
+-   L’expression « la plus petite valeur de *N* dans la plage [*A*, *B*) telle que *X* » signifie que la condition *X* est déterminée pour chaque *N* dans la plage [*A*, *B*) jusqu’à ce que la condition *X* soit remplie.  
   
--   La phrase « la valeur la plus élevée de *N* dans la plage \[*A*, *B*\) telle que *X* » signifie que *X* est déterminée pour chaque *N* dans la plage \[*A*, *B*\).  La fonction stocke dans `K` une copie de *N* chaque fois que la condition *X* est remplie.  Si ce stockage se produit, la fonction remplace la valeur finale de *N*, qui est égale à *B*, par la valeur de `K`.  Pour un itérateur bidirectionnel ou à accès aléatoire, toutefois, cela peut également signifier que *N* commence à la valeur la plus élevée dans la plage et est décrémenté sur la plage jusqu'à ce que la condition *X* soit remplie.  
+-   L’expression « la plus grande valeur de *N* dans la plage [*A*, *B*) telle que *X* » signifie que *X* est déterminé pour chaque *N* dans la plage [*A*, *B*). La fonction stocke dans `K` une copie de *N* chaque fois que la condition *X* est remplie. Si ce stockage se produit, la fonction remplace la valeur finale de *N*, qui est égale à *B*, par la valeur de `K`. Pour un itérateur bidirectionnel ou d’accès aléatoire, toutefois, cela peut également signifier que *N* commence par la plus grande valeur de la plage et est décrémenté sur la plage jusqu’à ce que la condition *X* soit remplie.  
   
--   Des expressions telles que *X* \- *Y*, où *X* et *Y* peuvent être des itérateurs autres que des itérateurs à accès aléatoire, doivent être prises au sens mathématique.  La fonction n'évalue pas nécessairement l'opérateur**\-** si elle doit déterminer une telle valeur.  Cela vaut également pour les expressions telles que *X* \+ *N* et *X* \- *N*, où *N* est de type entier.  
+-   Les expressions comme *X* - *Y*, où *X* et *Y* peuvent être des itérateurs autres que des itérateurs d’accès aléatoire, doivent être interprétées au sens mathématique. La fonction n’évalue pas nécessairement operator**-** si elle doit déterminer cette valeur. Cela vaut également pour les expressions comme *X* + *N* et *X* - *N*, où *N* est un type entier.  
   
- Plusieurs algorithmes utilisent un prédicat qui effectue une comparaison par paire, par exemple avec `operator==`, pour générer un résultat `bool`.  La fonction de prédicat `operator==`, ou tout remplacement, ne doit pas modifier l'un de ses opérandes.  Elle doit générer le même résultat `bool` chaque fois qu'elle est évaluée et doit générer le même résultat si l'opérande est remplacé par une copie de l'un ou l'autre opérande.  
+ Plusieurs algorithmes utilisent un prédicat qui effectue une comparaison par paire, par exemple avec `operator==`, pour générer un résultat `bool`. La fonction de prédicat `operator==`, ou tout remplacement, ne doit pas modifier l'un de ses opérandes. Elle doit générer le même résultat `bool` chaque fois qu'elle est évaluée et doit générer le même résultat si l'opérande est remplacé par une copie de l'un ou l'autre opérande.  
   
- Plusieurs algorithmes utilisent un prédicat qui doit imposer un classement faible strict sur des paires d'éléments d'une séquence.  Pour le prédicat `pr`\(*X*, *Y*\) :  
+ Plusieurs algorithmes utilisent un prédicat qui doit imposer un classement faible strict sur des paires d’éléments d’une séquence. Pour le prédicat `pr`(*X*, *Y*) :  
   
--   Strict signifie que `pr`\(*X*, *X*\) a la valeur false.  
+-   Strict signifie que `pr`(*X*, *X*) a la valeur false.  
   
--   Faible signifie que *X* et *Y* ont un classement équivalent si \!`pr`\(*X*, *Y*\) && \!`pr`\(*Y*, *X*\) \(*X* \=\= *Y* ne doit pas obligatoirement être défini\).  
+-   Faible signifie que *X* et *Y* ont un ordre équivalent si !`pr`(*X*, *Y*) && !`pr`(*Y*, *X*) (*X* == *Y* ne doit pas obligatoirement être défini).  
   
--   Classement signifie que `pr`\(*X*, *Y*\) && `pr`\(*Y*, Z\) implique `pr`\(*X*, Z\).  
+-   Ordre signifie que `pr`(*X*, *Y*) && `pr`(*Y*, Z) implique `pr`(*X*, Z).  
   
- Certains de ces algorithmes utilisent implicitement le prédicat *X* \< *Y*.  *X* \> *Y*, **less**\(*X*, *Y*\) et `greater`\(*X*, *Y*\) sont d'autres prédicats qui répondent en général à l'impératif de classement faible strict.  Notez cependant que des prédicats tels que *X* \<\= *Y* et *X* \>\= *Y* ne répondent pas à cet impératif.  
+ Certains de ces algorithmes utilisent implicitement le prédicat *X* \< *Y*. *X* > *Y*, **less**(*X*, *Y*) et `greater`(*X*, *Y*) sont d’autres prédicats qui répondent en général à l’exigence d’ordre faible strict. Notez cependant que des prédicats comme *X* \<= *Y* et *X* >= *Y* ne répondent pas à cet impératif.  
   
- Une séquence d'éléments désignée par des itérateurs dans la plage \[`First`, `Last`\) est une séquence ordonnée par l'opérateur**\<** si, pour chaque *N* dans la plage \[0, `Last` \- `First`\) et pour chaque *M* dans la plage \(N, `Last` \- `First`\) le prédicat \!\(\*\(`First` \+ *M*\) \< \*\(*First* \+ *N*\)\) a la valeur true.  \(Notez que les éléments sont triés par ordre croissant\). La fonction de prédicat **operator\<**, ou tout remplacement, ne doit pas modifier l'un de ses opérandes.  Elle doit générer le même résultat `bool` chaque fois qu'elle est évaluée et doit générer le même résultat si l'opérande est remplacé par une copie de l'un ou l'autre opérande.  En outre, elle doit imposer un classement faible strict sur les opérandes qu'elle compare.  
+ Une séquence d’éléments désignée par des itérateurs dans la plage [`First`, `Last`) est une séquence ordonnée par operator**<** si, pour chaque *N* de la plage [0, `Last` - `First`) et pour chaque *M* de la plage (N, `Last` - `First`), le prédicat !(\*(`First` + *M*) < \*(*First* + *N*)) a la valeur true. (Notez que les éléments sont triés par ordre croissant). La fonction de prédicat **operator<**, ou tout remplacement, ne doit pas modifier l’un de ses opérandes. Elle doit générer le même résultat `bool` chaque fois qu'elle est évaluée et doit générer le même résultat si l'opérande est remplacé par une copie de l'un ou l'autre opérande. En outre, elle doit imposer un classement faible strict sur les opérandes qu’elle compare.  
   
- Une séquence d'éléments désignée par des itérateurs dans la plage \[`First`, `Last`\) est un tas ordonné par l'opérateur**\<** si, pour chaque *N* dans la plage \[1, `Last` \- `First`\) le prédicat \!\(\*`First` \< \*\(`First` \+ *N*\)\) a la valeur true.  \(Le premier élément est le plus grand.\) Sa structure interne est autrement connue uniquement des fonctions de modèle [make\_heap](../Topic/make_heap.md), [pop\_heap](../Topic/pop_heap.md) et [push\_heap](../Topic/push_heap.md).  Comme avec une séquence ordonnée, la fonction de prédicat **operator\<**, ou tout remplacement, ne doit pas modifier l'un de ses opérandes et elle doit imposer un classement faible strict sur les opérandes qu'elle compare.  Elle doit générer le même résultat `bool` chaque fois qu'elle est évaluée et doit générer le même résultat si l'opérande est remplacé par une copie de l'un ou l'autre opérande.  
+ Une séquence d’éléments désignée par des itérateurs dans la plage [`First`, `Last`) est un tas ordonné par **operator<** si, pour chaque *N* de la plage [1, `Last` - `First`) le prédicat !(\*`First` < \*(`First` + *N*)) a la valeur true. (Le premier élément est le plus grand.) Sa structure interne est également connue uniquement pour les fonctions de modèle [make_heap](http://msdn.microsoft.com/Library/b09f795c-f368-4aa8-b57e-61ee6100ddc2), [pop_heap]--brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#pop_heap), and [push_heap]-brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#push_heap). Comme avec une séquence ordonnée, la fonction de prédicat **operator<**, ou tout remplacement, ne doit pas modifier l’un de ses opérandes et elle doit imposer un ordre faible strict sur les opérandes qu’elle compare. Elle doit générer le même résultat `bool` chaque fois qu'elle est évaluée et doit générer le même résultat si l'opérande est remplacé par une copie de l'un ou l'autre opérande.  
   
- Les algorithmes STL se trouvent dans les fichiers d'en\-tête [\<algorithm\>](../standard-library/algorithm.md) et [\<numeric\>](../standard-library/numeric.md).  
+ Les algorithmes de la bibliothèque C++ Standard se trouvent dans les fichiers d’en-tête [\<algorithm>](../standard-library/algorithm.md) et [\<numeric>](../standard-library/numeric.md).  
   
-## Voir aussi  
- [Bibliothèque STL \(Standard Template Library\)](../misc/standard-template-library.md)   
- [Sécurité des threads dans la bibliothèque standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [Référence de bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)   
+ [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

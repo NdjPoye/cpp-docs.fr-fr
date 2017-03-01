@@ -1,72 +1,98 @@
 ---
-title: "Fonctions membres de flux de fichiers de sortie | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "flux de sortie, fonctions membres"
+title: Fonctions membres de flux de fichiers de sortie | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- output streams, member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Fonctions membres de flux de fichiers de sortie
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 62d10faef9b1958f0ad5cee7b8ff2b4e491c617a
+ms.lasthandoff: 02/24/2017
 
-Les méthodes du flux de sortie contiennent trois types : celles qui sont équivalentes aux manipulateurs, celles qui effectuent des opérations d'écriture non formatées, et celles qui modifient d'une autre manière l'état du flux de données et n'ont aucun manipulateur ou opérateur d'insertion équivalent.  Pour des résultat mis en forme, séquentiel, vous pourriez n'utiliser que des opérateurs d'insertion et des manipulateurs.  Pour la sortie d'un accès aléatoire binaire aux disques, vous utilisez d'autres méthodes, avec ou sans les opérateurs d'insertion.  
+---
+# <a name="output-file-stream-member-functions"></a>Fonctions membres de flux de fichiers de sortie
+Les fonctions membres de flux de sortie ont trois types : celles qui sont équivalentes aux manipulateurs, celles qui effectuent des opérations d'écriture non formatées et celles qui modifient autrement l'état du flux et n'ont aucun manipulateur ou opérateur d'insertion équivalent. Pour une sortie séquentielle mise en forme, vous ne pouvez utiliser que des opérateurs et manipulateurs d'insertion. Pour une sortie binaire sur disque à accès aléatoire, utilisez d'autres fonctions membres, avec ou sans opérateurs d'insertion.  
   
-## La fonction ouverte pour les flux de sortie  
- Pour utiliser un flux de sortie \([ofstream](../Topic/ofstream.md)\), vous devez associer ce flux de données avec un fichier de disque spécifique dans le constructeur ou la fonction de **ouvrir**.  Si vous utilisez la fonction de **ouvrir**, vous pouvez réutiliser le même objet de flux avec une série de fichiers.  Dans l'un et l'autre cas, les arguments décrivant le fichier sont identiques.  
+## <a name="the-open-function-for-output-streams"></a>Fonction open pour les flux de sortie  
+ Pour utiliser un flux de fichier de sortie ([ofstream](../standard-library/basic-ofstream-class.md)), vous devez associer ce flux à un fichier sur disque spécifique dans le constructeur ou la fonction **open**. Si vous utilisez la fonction **open**, vous pouvez réutiliser le même objet de flux avec une série de fichiers. Dans les deux cas, les arguments décrivant le fichier sont identiques.  
   
- Lorsque vous ouvrez le fichier associé à un flux de sortie, vous avez généralement un indicateur d' **open\_mode**.  Vous pouvez combiner ces indicateurs, définis comme des énumérateurs dans la classe `ios`, avec l'opérateur OU de bit \( &#124; \).  Voir le [ios\_base::openmode](../Topic/ios_base::openmode.md) pour obtenir la liste des énumérateurs.  
+ Quand vous ouvrez le fichier associé à un flux de sortie, vous spécifiez généralement un indicateur **open_mode**. Vous pouvez combiner ces indicateurs, définis comme énumérateurs dans la classe `ios`, avec l’opérateur OR ( &#124; ) au niveau du bit. Consultez [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode) pour obtenir la liste des énumérateurs.  
   
- Trois cas actuelles du flux de sortie impliquent des options d'affichage :  
+ Trois situations de flux de sortie courantes impliquent des options de mode :  
   
--   Créer un fichier.  Si le fichier existe déjà, l'ancienne version est supprimée.  
+-   Création d'un fichier. Si le fichier existe déjà, l'ancienne version est supprimée.  
   
-    ```  
-    ostream ofile( "FILENAME" );  // Default is ios::out  
-    ofstream ofile( "FILENAME", ios::out ); // Equivalent to above  
-    ```  
-  
--   Ajout d'enregistrements à un fichier existant ou création du fichier s'il n'existe pas.  
-  
-    ```  
-    ofstream ofile( "FILENAME", ios::app );  
-    ```  
-  
--   Ouvrez deux fichiers, un par un, du même flux de données.  
-  
-    ```  
-    ofstream ofile();  
-    ofile.open( "FILE1", ios::in );  
-    // Do some output  
-    ofile.close(); // FILE1 closed  
-    ofile.open( "FILE2", ios::in );  
-    // Do some more output  
-    ofile.close(); // FILE2 closed  
-    // When ofile goes out of scope it is destroyed.  
-    ```  
-  
-## La fonction put  
- La fonction de **put** écrit un caractère dans le flux de sortie.  Les deux instructions suivantes sont identiques par défaut, mais la deuxième est affectée par les arguments du format de flux de données :  
-  
-```  
-cout.put( 'A' ); // Exactly one character written  
-cout << 'A'; // Format arguments 'width' and 'fill' apply   
+ ```  
+    ostream ofile("FILENAME");
+// Default is ios::out  
+    ofstream ofile("FILENAME", ios::out);
+
+// Equivalent to above  
 ```  
   
-## La fonction écrire  
- La fonction de **écrire** écrit un bloc de mémoire à un flux de sortie.  L'argument de longueur spécifie le nombre d'octets écrits.  Cet exemple crée un flux de sortie et il écrit la valeur binaire de la structure de `Date` :  
+-   Ajout d'enregistrements à un fichier existant ou création d'un fichier s'il n'existe pas.  
+  
+ ```  
+    ofstream ofile("FILENAME", ios::app);
+```  
+  
+-   Ouverture de deux fichiers, un par un, sur le même flux.  
+  
+ ```  
+    ofstream ofile();
+ofile.open("FILE1",
+    ios::in);
+// Do some output  
+    ofile.close();
+
+// FILE1 closed  
+    ofile.open("FILE2",
+    ios::in);
+// Do some more output  
+    ofile.close();
+
+// FILE2 closed  // When ofile goes out of scope it is destroyed.  
+```  
+  
+## <a name="the-put-function"></a>Fonction put  
+ La fonction **put** écrit un caractère dans le flux de sortie. Les deux instructions suivantes sont identiques par défaut, mais la deuxième est affectée par les arguments de format du flux :  
+  
+```  
+cout.put('A');
+
+// Exactly one character written  
+cout <<'A'; // Format arguments 'width' and 'fill' apply   
+```  
+  
+## <a name="the-write-function"></a>Fonction write  
+ La fonction **write** écrit un bloc de mémoire dans un flux de fichier de sortie. L’argument de longueur spécifie le nombre d’octets écrits. Cet exemple crée un flux de fichier de sortie et y écrit la valeur binaire de la structure `Date` :  
   
 ```  
 // write_function.cpp  
@@ -87,53 +113,55 @@ int main( )
 }  
 ```  
   
- La fonction **écrire** n'arrête pas lorsqu'elle atteint un caractère NULL, ainsi la structure de fichiers complète est écrite.  La fonction accepte deux arguments : un pointeur de `char` et un nombre de caractères à écrire.  Notez la conversion nécessaire à **char\*** avant l'adressage de l'objet de structure.  
+ La fonction **write** ne s’arrête pas quand elle atteint un caractère Null, de sorte que la structure de classe complète est écrite. La fonction accepte deux arguments : un pointeur `char` et un nombre de caractères à écrire. Notez le cast requis à **char\*** avant l’adresse de l’objet de structure.  
   
-## Les fonctions seekp et tellp  
- Un flux de sortie conserve un pointeur interne qui indique l'emplacement où les données doivent être écrites ensuite.  La méthode `seekp` définit le pointeur et fournit la sortie à accès aléatoire de fichier disque.  La méthode `tellp` retourne la position du fichier.  Pour obtenir des exemples qui utilisent les flux d'entrée équivalents à `seekp` et `tellp`, consultez [Les fonctions seekg et tellg](../standard-library/input-stream-member-functions.md).  
+## <a name="the-seekp-and-tellp-functions"></a>Fonctions seekp et tellp  
+ Un flux de fichier de sortie conserve un pointeur interne qui pointe vers l'emplacement où les données doivent être écrites par la suite. La fonction membre `seekp` définit ce pointeur et fournit une sortie de fichier sur disque à accès aléatoire. La fonction membre `tellp` retourne l'emplacement du fichier. Pour obtenir des exemples qui utilisent les équivalents de flux d’entrée à `seekp` et `tellp`, consultez [Fonctions seekg et tellg](../standard-library/input-stream-member-functions.md).  
   
-## La fonction fermer pour les flux de sortie  
- La méthode **fermer** ferme le fichier disque associé à un flux de sortie.  Le fichier doit être fermé pour effectuer toute la sortie de disque.  Si nécessaire, le destructeur de `ofstream` ferme le fichier pour vous, mais vous pouvez utiliser la fonction **fermer** si vous devez ouvrir un autre fichier pour le même objet de flux.  
+## <a name="the-close-function-for-output-streams"></a>Fonction close pour les flux de sortie  
+ La fonction membre **close** ferme le fichier sur disque associé à un flux de fichier de sortie. Le fichier doit être fermé pour effectuer la sortie sur disque. Si nécessaire, le destructeur `ofstream` ferme le fichier automatiquement, mais vous pouvez utiliser la fonction **close** si vous devez ouvrir un autre fichier pour le même objet de flux.  
   
- Le destructeur de flux de sortie ferme automatiquement le fichier d'un flux de données uniquement si le constructeur ou la méthode **ouvrir** a ouvert le fichier.  Si vous passez au constructeur un descripteur de fichier d'un fichier déjà ouvert ou si vous utilisez la méthode **attacher**, fermez le fichier explicitement.  
+ Le destructeur de flux de sortie ferme automatiquement le fichier d’un flux uniquement si le constructeur ou la fonction membre **open** a ouvert le fichier. Si vous passez au constructeur le descripteur d’un fichier déjà ouvert ou si vous utilisez la fonction membre **attach**, vous devez fermer le fichier explicitement.  
   
-##  <a name="vclrferrorprocessingfunctionsanchor10"></a> Erreur de traitement des fonctions  
- Utilisez ces méthodes pour déterminer les erreurs lors de l'écriture dans un flux de données :  
+##  <a name="a-namevclrferrorprocessingfunctionsanchor10a-error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a> Fonctions de traitement des erreurs  
+ Utilisez les fonctions membres ci-après pour tester les erreurs lors de l'écriture dans un flux :  
   
 |Fonction|Valeur de retour|  
-|--------------|----------------------|  
-|[mauvais](../Topic/basic_ios::bad.md)|Retourne **vrai** si une erreur est irrécupérable.|  
-|[échec](../Topic/basic_ios::fail.md)|Retourne **vrai** s'il se produit une erreur irrécupérable ou un état « attendu », tel qu'une erreur de conversion, ou si le fichier est introuvable.  Le traitement peut souvent continuer après un appel à **effacer** avec l'argument zéro.|  
-|[bon](../Topic/basic_ios::good.md)|Retourne **vrai** s'il n'existe aucune condition d'erreur irrécupérable \(ou autre\) et l'indicateur de fin de fichier n'est pas défini.|  
-|[eof](../Topic/basic_ios::eof.md)|Retourne **vrai** sur la condition de fin du fichier.|  
-|[clear](../Topic/basic_ios::clear.md)|Définit l'état d'erreur interne.  Si elle est appelée avec les arguments par défaut, elle efface tous les bits d'erreur.|  
-|[rdstate](../Topic/basic_ios::rdstate.md)|Retourne l'état d'erreur courant.|  
+|--------------|------------------|  
+|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Retourne **true** s’il se produit une erreur irrécupérable.|  
+|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Retourne **true** s’il se produit une erreur irrécupérable ou une condition « attendue », par exemple une erreur de conversion, ou si le fichier est introuvable. Le traitement peut souvent reprendre après un appel à **clear** avec un argument zéro.|  
+|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Retourne **true** s’il n’y a pas de condition d’erreur (irrécupérable ou autre) et si l’indicateur de fin de fichier n’est pas défini.|  
+|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Retourne **true** sur la condition de fin de fichier.|  
+|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Définit l'état d'erreur interne. Si la fonction est appelée avec les arguments par défaut, elle efface tous les bits d’erreur.|  
+|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Retourne l'état d'erreur actuel.|  
   
- L'opérateur **\!** est surchargé pour effectuer la même fonction que la fonction **échec**.  D'où l'expression suivante :  
+ L’opérateur **!** est surchargé pour exécuter la même fonction que la fonction **fail**. Ainsi, l'expression :  
   
 ```  
-if( !cout)...  
+if(!cout)...  
 ```  
   
  équivaut à :  
   
 ```  
-if( cout.fail() )...  
+if(cout.fail())...  
 ```  
   
- L'opérateur **void\*\(\)** est surchargé afin d'être l'inverse de l'opérateur de **\!** ; d'où l'expression suivante :  
+ L’opérateur **void\*()** est surchargé pour être l’opposé de l’opérateur **!**. Ainsi, l’expression :  
   
 ```  
-if( cout)...  
+if(cout)...  
 ```  
   
- est égal à :  
+ est égale à :  
   
 ```  
-if( !cout.fail() )...  
+if(!cout.fail())...  
 ```  
   
- L'opérateur **void\*\(\)** n'est pas équivalent à **bon** car il ne test pas à la recherche de la fin du fichier.  
+ L’opérateur **void\*()** n’est pas équivalent à **good**, car il ne teste pas la fin de fichier.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Flux de sortie](../standard-library/output-streams.md)
+
+

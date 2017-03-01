@@ -1,61 +1,131 @@
 ---
-title: "negative_binomial_distribution, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tr1::negative_binomial_distribution"
-  - "tr1.negative_binomial_distribution"
-  - "std.tr1.negative_binomial_distribution"
-  - "random/std::tr1::negative_binomial_distribution"
-  - "std::tr1::negative_binomial_distribution"
-  - "negative_binomial_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "negative_binomial_distribution (classe)"
+title: negative_binomial_distribution, classe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- negative_binomial_distribution
+- std::negative_binomial_distribution
+- random/std::negative_binomial_distribution
+- std::negative_binomial_distribution::reset
+- random/std::negative_binomial_distribution::reset
+- std::negative_binomial_distribution::k
+- random/std::negative_binomial_distribution::k
+- std::negative_binomial_distribution::p
+- random/std::negative_binomial_distribution::p
+- std::negative_binomial_distribution::param
+- random/std::negative_binomial_distribution::param
+- std::negative_binomial_distribution::min
+- random/std::negative_binomial_distribution::min
+- std::negative_binomial_distribution::max
+- random/std::negative_binomial_distribution::max
+- std::negative_binomial_distribution::operator()
+- random/std::negative_binomial_distribution::operator()
+- std::negative_binomial_distribution::param_type
+- random/std::negative_binomial_distribution::param_type
+- std::negative_binomial_distribution::param_type::k
+- random/std::negative_binomial_distribution::param_type::k
+- std::negative_binomial_distribution::param_type::p
+- random/std::negative_binomial_distribution::param_type::p
+- std::negative_binomial_distribution::param_type::operator==
+- random/std::negative_binomial_distribution::param_type::operator==
+- std::negative_binomial_distribution::param_type::operator!=
+- random/std::negative_binomial_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- negative_binomial_distribution class
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# negative_binomial_distribution, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 40a3c3faad6d6b6182bf9419f184314f4e5d966c
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution, classe
 Génère une distribution négative binomiale.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
-```  
-template<class IntType = int> class negative_binomial_distribution { public:     // types     typedef IntType result_type;     struct param_type;     // constructor and reset functions     explicit negative_binomial_distribution(IntType k = 1, double p = 0.5);     explicit negative_binomial_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     IntType k() const;     double p() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
-```  
+```
+template<class IntType = int>
+class negative_binomial_distribution
+{
+public:
+    // types 
+    typedef IntType result_type;
+    struct param_type;   
+    
+    // constructor and reset functions
+    explicit negative_binomial_distribution(result_type k = 1, double p = 0.5);
+    explicit negative_binomial_distribution(const param_type& parm);
+    void reset();
+    
+    // generating functions 
+    template `<`class URNG>  
+    result_type operator()(URNG& gen);
+    template `<`class URNG>
+    result_type operator()(URNG& gen, const param_type& parm);
+    
+    // property functions     
+    result_type k() const;
+    double p() const;
+    param_type param() const;
+    void param(const param_type& parm);
+    result_type min() const;
+    result_type max() const; 
+};
   
-#### Paramètres  
- `IntType`  
- Le type des résultats entiers est `int` par défaut.  Pour plus d'informations sur les types possibles, voir [\<random\>](../standard-library/random.md).  
+### Parameters  
+*IntType*  
+The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## Notes  
- La classe de modèle décrit une distribution qui produit des valeurs d'un type intégral spécifié par l'utilisateur, ou du type `int` si aucun n'est fourni, distribuées selon la fonction de probabilité discrète de distribution négative binomiale.  Le tableau suivant contient des liens vers des articles sur différents membres.  
+## Remarks  
+The template class describes a distribution that produces values of a user-specified integral type, or type `int` if none is provided, distributed according to the Negative Binomial Distribution discrete probability function. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
-|[negative\_binomial\_distribution::negative\_binomial\_distribution](../Topic/negative_binomial_distribution::negative_binomial_distribution.md)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|  
-|`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[negative\_binomial\_distribution::param\_type](../Topic/negative_binomial_distribution::param_type.md)|  
+|[negative_binomial_distribution::negative_binomial_distribution](#negative_binomial_distribution__negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|  
+|`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[negative_binomial_distribution::param_type](#negative_binomial_distribution__param_type)|  
   
- Les membres de propriétés `k()` et `p()` retournent les valeurs des paramètres de distribution stockés actuellement `k` et `p`, respectivement.  
+The property members `k()` and `p()` return the currently stored distribution parameter values *k* and *p* respectively.  
   
- Pour plus d'informations sur les classes de distribution et leurs membres, voir [\<random\>](../standard-library/random.md).  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
+
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
- Pour plus d'informations sur la fonction de probabilité discrète de distribution négative binomiale, voir l'article de Wolfram MathWorld [Negative Binomial Distribution](http://go.microsoft.com/fwlink/?LinkId=400516).  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-## Exemple  
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
+  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
+  
+For detailed information about the negative binomial distribution discrete probability function, see the Wolfram MathWorld article [Negative Binomial Distribution](http://go.microsoft.com/fwlink/LinkId=400516).  
+  
+## Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -111,15 +181,14 @@ int main()
   
 ```  
   
-## Sortie  
- Première exécution :  
+Première exécution :  
   
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
-Enter an integer value for k distribution (where 0 < k): 1  
-Enter a double value for p distribution (where 0.0 < p <= 1.0): .5  
+Enter an integer value for k distribution (where 0 `<` k): 1  
+Enter a double value for p distribution (where 0.0 `<`p `<`= 1.0): .5  
 Enter an integer value for a sample count: 100  
-  
+ 
 k == 1  
 p == 0.5  
 Histogram for 100 samples:  
@@ -131,54 +200,104 @@ Histogram for 100 samples:
     5 ::  
 ```  
   
- Seconde exécution :  
+Deuxième exécution :  
   
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
-Enter an integer value for k distribution (where 0 < k): 100  
-Enter a double value for p distribution (where 0.0 < p <= 1.0): .667  
+Enter an integer value for k distribution (where 0 `<` k): 100  
+Enter a double value for p distribution (where 0.0 `<` p <= 1.0): .667  
 Enter an integer value for a sample count: 100  
-  
+ 
 k == 100  
 p == 0.667  
 Histogram for 100 samples:  
-   31 ::  
-   32 :  
-   33 ::  
-   34 :  
-   35 ::  
-   37 ::  
-   38 :  
-   39 :  
-   40 ::  
-   41 :::  
-   42 :::  
-   43 :::::  
-   44 :::::  
-   45 ::::  
-   46 ::::::  
-   47 ::::::::  
-   48 :::  
-   49 :::  
-   50 :::::::::  
-   51 :::::::  
-   52 ::  
-   53 :::  
-   54 :::::  
-   56 ::::  
-   58 :  
-   59 :::::  
-   60 ::  
-   61 :  
-   62 ::  
-   64 :  
-   69 ::::  
+    31 ::  
+    32 :  
+    33 ::  
+    34 :  
+    35 ::  
+    37 ::  
+    38 :  
+    39 :  
+    40 ::  
+    41 :::  
+    42 :::  
+    43 :::::  
+    44 :::::  
+    45 ::::  
+    46 ::::::  
+    47 ::::::::  
+    48 :::  
+    49 :::  
+    50 :::::::::  
+    51 :::::::  
+    52 ::  
+    53 :::  
+    54 :::::  
+    56 ::::  
+    58 :  
+    59 :::::  
+    60 ::  
+    61 :  
+    62 ::  
+    64 :  
+    69 ::::  
 ```  
   
-## Configuration requise  
- **En\-tête :** \<random\>  
+## <a name="requirements"></a>Spécifications  
+**En-tête :** \<random>  
   
- **Espace de noms :** std  
+**Espace de noms :** std  
   
-## Voir aussi  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-namenegativebinomialdistributionnegativebinomialdistributiona--negativebinomialdistributionnegativebinomialdistribution"></a><a name="negative_binomial_distribution__negative_binomial_distribution"></a>  negative_binomial_distribution::negative_binomial_distribution  
+Construit la distribution.  
+  
+```  
+explicit negative_binomial_distribution(result_type k = 1, double p = 0.5);
+explicit negative_binomial_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+*k*  
+Paramètre de distribution `k`.  
+  
+*p*  
+Paramètre de distribution `p`.  
+  
+*parm*  
+Structure de paramètre utilisée pour construire la distribution.  
+  
+### <a name="remarks"></a>Notes  
+**Condition préalable :** `0.0 < k` et `0.0 < p ≤ 1.0`  
+  
+Le premier constructeur construit un objet dont la valeur `p` stockée contient la valeur *p* et dont la valeur `k` stockée contient la valeur *k*.  
+  
+Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.  
+  
+##  <a name="a-namenegativebinomialdistributionparamtypea--negativebinomialdistributionparamtype"></a><a name="negative_binomial_distribution__param_type"></a>  negative_binomial_distribution::param_type  
+Stocke les paramètres de la distribution.  
+  
+struct param_type {  
+   typedef negative_binomial_distribution`<`result_type> distribution_type;  
+   param_type(result_type k = 1, double p = 0.5); result_type k() const; double p() const;
+
+   bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };  
+  
+### <a name="parameters"></a>Paramètres  
+*k*  
+Paramètre de distribution `k`.  
+  
+*p*  
+Paramètre de distribution `p`.  
+  
+*right*  
+Structure `param_type` utilisée pour comparer.  
+  
+### <a name="remarks"></a>Remarques  
+**Condition préalable :** `0.0 < k` et `0.0 < p ≤ 1.0`  
+  
+Cette structure peut être passée au constructeur de classe de la distribution au moment de l'instanciation, à la fonction membre `param()` pour définir les paramètres stockés d'une distribution existante et à `operator()` pour une utilisation à la place des paramètres stockés.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [\<random>](../standard-library/random.md)
+

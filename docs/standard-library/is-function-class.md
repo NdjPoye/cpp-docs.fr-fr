@@ -1,55 +1,68 @@
 ---
-title: "is_function, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::is_function"
-  - "std.tr1.is_function"
-  - "is_function"
-  - "std.is_function"
-  - "std::is_function"
-  - "type_traits/std::is_function"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_function (classe) (TR1)"
-  - "is_function"
+title: is_function, classe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_function
+- std::is_function
+- type_traits/std::is_function
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_function class
+- is_function
 ms.assetid: e5c0dbcd-829b-415f-853f-8c5be47c5040
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# is_function, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 8f718f24d0751a1050b76f8fb2cab09b0b970647
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isfunction-class"></a>is_function, classe
 Teste si le type est un type de fonction.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-template<class Ty>  
-    struct is_function;  
+template <class Ty>  
+struct is_function;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `Ty`  
  Type à interroger.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Une instance du prédicat de type a la valeur true si le type `Ty` est un type de fonction. Sinon, sa valeur est false.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
-// std_tr1__type_traits__is_function.cpp   
+```cpp  
+// std__type_traits__is_function.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -78,14 +91,18 @@ int main()
   
 ```  
   
-  **is\_function\<trivial\> \=\= false**  
-**is\_function\<functional\> \=\= false**  
-**is\_function\<float\(\)\> \=\= true**   
-## Configuration requise  
- **En\-tête :** \<type\_traits\>  
+```Output  
+is_function<trivial> == false  
+is_function<functional> == false  
+is_function<float()> == true  
+```  
   
- **Espace de noms :** std  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<type_traits>  
   
-## Voir aussi  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [is\_object, classe](../standard-library/is-object-class.md)
+ **Espace de noms :** std  
+  
+## <a name="see-also"></a>Voir aussi  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [is_object, classe](../standard-library/is-object-class.md)
+

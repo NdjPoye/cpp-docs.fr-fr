@@ -1,48 +1,65 @@
 ---
-title: "_CrtSetReportMode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtSetReportMode"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_CrtSetReportMode"
-  - "CrtSetReportMode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CrtSetReportMode (fonction)"
-  - "CrtSetReportMode (fonction)"
+title: _CrtSetReportMode | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtSetReportMode
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _CrtSetReportMode
+- CrtSetReportMode
+dev_langs:
+- C++
+helpviewer_keywords:
+- _CrtSetReportMode function
+- CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _CrtSetReportMode
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: dfd6e5fb1b8f8daa7e7693d3811c756c5509deb1
+ms.lasthandoff: 02/24/2017
 
-Spécifie la destination ou les destinations pour un type spécifique de rapport généré par `_CrtDbgReport` et toutes les macros qui appellent [\_CrtDbgReport, \_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md), [\_ASSERT, \_ASSERTE, \_ASSERT\_EXPR \(macros\)](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), [\_ASSERT, \_ASSERTE, \_ASSERT\_EXPR \(macros\)](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), [\_RPT, \_RPTF, \_RPTW, \_RPTFW, macros](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md), et [\_RPT, \_RPTF, \_RPTW, \_RPTFW, macros](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) \(version Debug uniquement\).  
+---
+# <a name="crtsetreportmode"></a>_CrtSetReportMode
+Spécifie la ou les destinations d’un type de rapport particulier généré par `_CrtDbgReport` et toutes les macros qui appellent [_CrtDbgReport, _CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md), telles que les [macros _ASSERT, _ASSERTE, _ASSERT_EXPR](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), les [macros _ASSERT, _ASSERTE, _ASSERT_EXPR](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), les [macros _RPT, _RPTF, _RPTW, _RPTFW](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) et les [macros _RPT, _RPTF, _RPTW, _RPTFW](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) (version de débogage uniquement).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int _CrtSetReportMode(   
@@ -51,67 +68,67 @@ int _CrtSetReportMode(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `reportType`  
- Type de rapport: `_CRT_WARN`, `_CRT_ERROR`, et `_CRT_ASSERT`.  
+ Type de rapport : `_CRT_WARN`, `_CRT_ERROR` et `_CRT_ASSERT`.  
   
  `reportMode`  
- Nouveaux mode de Rapport ou modes pour `reportType`.  
+ Nouveau(x) mode(s) de rapport pour `reportType`.  
   
-## Valeur de retour  
- Dans l'achèvement réussi, `_CrtSetReportMode` renvoie le mode Rapport ou les modes précédents pour le type de rapport spécifié dans `reportType`.  Si une valeur valide est passée comme mode `reportType` ou non valide est spécifié pour `reportMode`, `_CrtSetReportMode` appelle le gestionnaire de paramètre non valide comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, cette fonction définit `errno` à `EINVAL` et retourne \-1.  Pour plus d'informations, consultez [errno, \_doserrno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+## <a name="return-value"></a>Valeur de retour  
+ Quand l’opération réussit, `_CrtSetReportMode` retourne le(s) mode(s) de rapport précédent(s) pour le type de rapport spécifié dans `reportType`. Si une valeur non valide est passée comme `reportType` ou qu’un mode non valide est spécifié pour `reportMode`, `_CrtSetReportMode` appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction affecte à `errno` la valeur `EINVAL` et retourne -1. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- `_CrtSetReportMode` spécifie la destination de sortie pour `_CrtDbgReport`.  Les macros `_ASSERT`, `_ASSERTE`, `_RPT`, et `_RPTF` appellant `_CrtDbgReport`, `_CrtSetReportMode` spécifie la destination de sortie de texte spécifiée avec ces macros.  
+## <a name="remarks"></a>Notes  
+ `_CrtSetReportMode` spécifie la destination de sortie pour `_CrtDbgReport`. Étant donné que les macros `_ASSERT`, `_ASSERTE`, `_RPT` et `_RPTF` appellent `_CrtDbgReport`, `_CrtSetReportMode` spécifie la destination de sortie du texte spécifié avec ces macros.  
   
- Lorsque [\_DEBUG](../../c-runtime-library/debug.md) n'est pas défini, les appels à `_CrtSetReportMode` sont supprimés pendant le prétraitement.  
+ Quand [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à `_CrtSetReportMode` sont supprimés durant le prétraitement.  
   
- Si vous n'appelez pas `_CrtSetReportMode` pour définir la destination de sortie des messages, les valeurs par défaut suivantes sont activées :  
+ Si vous n’appelez pas `_CrtSetReportMode` pour définir la destination de sortie des messages, les valeurs par défaut suivantes sont appliquées :  
   
--   Les échecs Assert et les erreurs sont dirigées vers une fenêtre de message de débogage.  
+-   Les erreurs et les échecs d’assertion sont dirigés vers une fenêtre de message de débogage.  
   
--   Les avertissements d'applications Windows sont envoyés à la fenêtre Sortie du débogueur.  
+-   Les avertissements émanant des applications Windows sont envoyés à la fenêtre de sortie du débogueur.  
   
--   Les avertissements des applications console ne sont pas affichés.  
+-   Les avertissements issus des applications de console ne sont pas affichés.  
   
- Le tableau suivant répertorie les types de rapports définis dans Crtdbg.h.  
+ Le tableau suivant répertorie les types de rapport définis dans Crtdbg.h.  
   
-|Rapport type|Description|  
-|------------------|-----------------|  
-|`_CRT_WARN`|Avertissements, messages, les informations qui n'ont pas besoin d'attention immédiate.|  
-|`_CRT_ERROR`|Erreurs, problèmes irrécupérables, et problèmes qui nécessitent une attention immédiate.|  
-|`_CRT_ASSERT`|Échecs d'assertion \(expressions affirmées qui correspondent à `FALSE`\).|  
+|Type de rapport|Description|  
+|-----------------|-----------------|  
+|`_CRT_WARN`|Avertissements, messages et informations qui ne nécessitent pas une attention immédiate.|  
+|`_CRT_ERROR`|Erreurs, problèmes irrécupérables et problèmes qui requièrent une attention immédiate.|  
+|`_CRT_ASSERT`|Échecs d’assertion (expressions déclarées évaluées à `FALSE`).|  
   
- La fonction `_CrtSetReportMode` assigne le nouveau mode Rapport spécifié dans `reportMode` au type de rapport spécifié dans `reportType` et renvoie le mode Rapport précédemment défini pour `reportType`.  Le tableau suivant répertorie les options disponibles pour `reportMode` et le comportement résultant de `_CrtDbgReport`.  Ces options sont définies comme bits indicateurs dans Crtdbg.h.  
+ La fonction `_CrtSetReportMode` assigne le nouveau mode de rapport spécifié dans `reportMode` au type de rapport spécifié dans `reportType` et retourne le mode de rapport défini pour `reportType`. Le tableau suivant répertorie les options disponibles pour `reportMode` et le comportement résultant de `_CrtDbgReport`. Ces options sont définies sous forme d’indicateurs binaires dans Crtdbg.h.  
   
-|Mode Rapport|comportement de \_CrtDbgReport|  
-|------------------|------------------------------------|  
-|`_CRTDBG_MODE_DEBUG`|Écrit le message dans la fenêtre Sortie du débogueur.|  
-|`_CRTDBG_MODE_FILE`|Écrit le message à un handle de fichier fournie par l'utilisateur.  [\_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) doit être appelé pour définir un fichier spécifique ou un flux à utiliser comme destination.|  
-|`_CRTDBG_MODE_WNDW`|Crée un message pour afficher le message avec `Abort`, `Retry`, et les boutons `Ignore`.|  
-|`_CRTDBG_REPORT_MODE`|Renvoie une `reportMode` pour le `reportType` spécifié:<br /><br /> 1   `_CRTDBG_MODE_FILE`<br /><br /> 2   `_CRTDBG_MODE_DEBUG`<br /><br /> 4   `_CRTDBG_MODE_WNDW`|  
+|Mode de rapport|Comportement de _CrtDbgReport|  
+|-----------------|-----------------------------|  
+|`_CRTDBG_MODE_DEBUG`|Écrit le message dans la fenêtre de sortie du débogueur.|  
+|`_CRTDBG_MODE_FILE`|Écrit le message dans un handle de fichier fourni par l’utilisateur. [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) doit être appelée pour définir le flux ou fichier spécifique à utiliser comme destination.|  
+|`_CRTDBG_MODE_WNDW`|Crée une boîte de message pour afficher le message avec les boutons `Abort`, `Retry` et `Ignore`.|  
+|`_CRTDBG_REPORT_MODE`|Retourne `reportMode` pour le `reportType` spécifié :<br /><br /> 1   `_CRTDBG_MODE_FILE`<br /><br /> 2   `_CRTDBG_MODE_DEBUG`<br /><br /> 4   `_CRTDBG_MODE_WNDW`|  
   
- Chaque type de rapport peut être enregistré avec un, deux, ou trois modes ou aucun mode.  Par conséquent, il est possible d'avoir plusieurs destination définie pour un seul type de rapport.  Par exemple, le fragment de code suivant provoque des échecs d'assertion à être envoyés vers une fenêtre de message de débogage et à `stderr`:  
+ Chaque type de rapport peut être signalé à l’aide d’un, deux ou trois modes ou sans aucun mode. Ainsi, plusieurs destinations peuvent être définies pour un même type de rapport. Par exemple, le fragment de code suivant envoie les échecs d’assertion à une fenêtre de message de débogage et à `stderr` :  
   
 ```  
 _CrtSetReportMode( _CRT_ASSERT, _CRTDBG_MODE_FILE | _CRTDBG_MODE_WNDW );  
 _CrtSetReportFile( _CRT_ASSERT, _CRTDBG_FILE_STDERR );  
 ```  
   
- En outre, le mode de création de rapport ou les modes pour chaque type de rapport peuvent être séparément contrôlés.  Par exemple, il est possible de spécifier que `reportType` de `_CRT_WARN` soit envoyé dans une chaîne de sortie de débogage, tandis que `_CRT_ASSERT` soit affiché dans une fenêtre de message de débogage et envoyé à `stderr`, comme illustré précédemment.  
+ En outre, vous pouvez contrôler séparément le(s) mode(s) de création de rapports pour chaque type de rapport. Par exemple, vous pouvez spécifier qu’un `reportType` `_CRT_WARN` soit envoyé à une chaîne de débogage de sortie, et que `_CRT_ASSERT` soit affiché à l’aide d’une fenêtre de message de débogage et envoyé à `stderr`, comme illustré précédemment.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|En\-tête facultatif|  
-|-------------|---------------------|-------------------------|  
-|`_CrtSetReportMode`|\<crtdbg.h\>|\<errno.h\>|  
+|Routine|En-tête requis|En-tête facultatif|  
+|-------------|---------------------|---------------------|  
+|`_CrtSetReportMode`|\<crtdbg.h>|\<errno.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
- **Bibliothèques :** Versions Debug de [Fonctions de bibliothèque CRT](../../c-runtime-library/crt-library-features.md) uniquement.  
+ **Bibliothèques :** uniquement les versions de débogage des [fonctions de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Routines de débogage](../../c-runtime-library/debug-routines.md)

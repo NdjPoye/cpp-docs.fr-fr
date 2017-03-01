@@ -1,49 +1,69 @@
 ---
-title: "nothrow_t, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "nothrow_t"
-  - "std.nothrow_t"
-  - "std::nothrow_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nothrow_t (classe)"
+title: nothrow_t, structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- nothrow_t
+- std.nothrow_t
+- std::nothrow_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- nothrow_t class
 ms.assetid: dc7d5d42-ed5a-4919-88fe-bbad519b7a1d
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# nothrow_t, structure
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: b490cccf048b5d5b9be53508331cba89e66c952f
+ms.lasthandoff: 02/24/2017
 
-Le struct est utilisé comme paramètre de fonction à l'opérateur nouveau pour indiquer que la fonction doit retourner un pointeur null pour stocker un échec d'allocation, plutôt que lèvent une exception.  
+---
+# <a name="nothrowt-structure"></a>nothrow_t, structure
+Le struct est utilisé comme paramètre de fonction de l’opérateur new pour indiquer que la fonction doit retourner un pointeur null pour signaler un échec d’allocation, au lieu de lever une exception.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+struct std::nothrow_t {};
 ```  
-struct std::nothrow_t {};  
-```  
   
-## Notes  
- Le struct aide de le compilateur de sélectionner la version correcte du constructeur.  [nothrow](../Topic/nothrow%20\(%3Cnew%3E\).md) est un synonyme pour les objets de type `std::nothrow_t`.  
+## <a name="remarks"></a>Remarques  
+ Le struct aide le compilateur à sélectionner la version correcte du constructeur. [nothrow](../standard-library/new-functions.md#nothrow) est un synonyme des objets de type `std::nothrow_t`.  
   
-## Exemple  
- Consultez [opérateur nouveau](../Topic/operator%20new%20\(%3Cnew%3E\).md) et l'[opérateur nouveau &#91;&#93;](../Topic/operator%20new\(%3Cnew%3E\).md) pour obtenir des exemples de la manière dont `std::nothrow_t` est utilisé comme paramètre de fonction.  
+## <a name="example"></a>Exemple  
+ Pour obtenir des exemples d’utilisation de `std::nothrow_t` comme paramètre de fonction, consultez [new, opérateur](../standard-library/new-operators.md#operator_new) et [new &#91;&#93;, opérateur](../standard-library/new-operators.md#operator_new_arr).  
   
-## Configuration requise  
- **En\-tête :** \<nouveau\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<new>  
   
- **Espace de noms :** std  
+ **Espace de noms :** std  
   
-## Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

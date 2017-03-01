@@ -1,52 +1,68 @@
 ---
-title: "_eof | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_eof"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_eof"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_eof (fonction)"
-  - "fin du fichier"
-  - "fin du fichier, test de"
-  - "eof (fonction)"
-  - "fichiers (C++), fin de"
-  - "tester, fin du fichier"
+title: _eof | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _eof
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _eof
+dev_langs:
+- C++
+helpviewer_keywords:
+- eof function
+- end of file, testing for
+- _eof function
+- files [C++], end of
+- testing, for end-of-file
+- end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _eof
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 454e4870f63d5a66c67f493e065c328bdb72837e
+ms.lasthandoff: 02/24/2017
 
-Tests pour la fin de fichier \(EOF\).  
+---
+# <a name="eof"></a>_eof
+Tests de fin de fichier (EOF).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int _eof(   
@@ -54,25 +70,25 @@ int _eof(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `fd`  
- Descripteurs de fichier faisant référence au fichier ouvert.  
+ Descripteur de fichier qui fait référence au fichier ouvert.  
   
-## Valeur de retour  
- `_eof` retourne 1 si la position actuelle est à la fin du fichier, ou 0 dans le cas contraire.  Valeur de retours – 1 indique une erreur ; dans ce cas, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'execution est toujours permise, `errno` retourne `EBADF`, ce qui indique un descripteur de fichier valide.  
+## <a name="return-value"></a>Valeur de retour  
+ `_eof` retourne 1 si la position actuelle est la fin du fichier, sinon 0. Si la valeur de retour est −1, une erreur s’est produite ; dans ce cas, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` est défini sur `EBADF`, indiquant ainsi un descripteur de fichier non valide.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  La fonction `_eof` détermine si la fin du fichier associé à `fd` a été atteinte.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Fonction|En\-tête requis|En\-tête facultatif|  
-|--------------|---------------------|-------------------------|  
-|`_eof`|\<io.h,\>|\<errno.h\>|  
+|Fonction|En-tête requis|En-tête facultatif|  
+|--------------|---------------------|---------------------|  
+|`_eof`|\<io.h>|\<errno.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_eof.c  
@@ -112,25 +128,25 @@ int main( void )
 }  
 ```  
   
-## Entrée : crt\_eof.txt  
+## <a name="input-crteoftxt"></a>Entrée : crt_eof.txt  
   
 ```  
 This file contains some text.  
 ```  
   
-### Sortie  
+### <a name="output"></a>Sortie  
   
 ```  
 Number of bytes read = 29  
 ```  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion des erreurs](../../c-runtime-library/error-handling-crt.md)   
- [E\/S niveau bas](../../c-runtime-library/low-level-i-o.md)   
+ [E/S de bas niveau](../../c-runtime-library/low-level-i-o.md)   
  [clearerr](../../c-runtime-library/reference/clearerr.md)   
  [feof](../../c-runtime-library/reference/feof.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   
- [perror, \_wperror](../../c-runtime-library/reference/perror-wperror.md)
+ [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)
