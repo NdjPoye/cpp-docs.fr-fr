@@ -1,36 +1,52 @@
 ---
-title: "Erreur du compilateur C3181 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3181"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3181"
+title: Erreur du compilateur C3181 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3181
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3181
 ms.assetid: 5d450f8b-6cef-4452-a0c4-2076e967451d
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Erreur du compilateur C3181
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 4229a9d9811bad46035451c5d64b7ed06da476d2
+ms.lasthandoff: 02/24/2017
 
-'type' : opérande non valide pour opérateur  
+---
+# <a name="compiler-error-c3181"></a>Erreur du compilateur C3181
+'type' : opérande non valide pour l’opérateur  
   
- Un paramètre non valide a été passé à l'opérateur [\_\_typeof](../../misc/typeof.md) ou [typeid](../../windows/typeid-cpp-component-extensions.md).  Le paramètre doit être un type managé.  
+Un paramètre non valide a été passé à la [typeid](../../windows/typeid-cpp-component-extensions.md) opérateur. Le paramètre doit être un type managé.  
   
- Notez que le compilateur emploie des alias pour les types natifs qui renvoient aux types dans le Common Language Runtime.  
+Notez que le compilateur utilise des alias pour les types natifs qui correspondent aux types dans le common language runtime.  
   
- L'exemple suivant génère l'erreur C3181 :  
+L’exemple suivant génère l’erreur C3181 :  
   
 ```  
 // C3181a.cpp  
@@ -42,17 +58,4 @@ int main() {
    Type ^pType2 = int::typeid;   // OK  
 }  
 ```  
-  
- L'exemple suivant génère l'erreur C3181 :  
-  
-```  
-// C3181b.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-using namespace System;  
-  
-int main() {  
-   Type *pType1 = __typeof(int __gc*);   // C3181  
-   Type *pType2 = __typeof(int*);   // OK  
-}  
-```
+
