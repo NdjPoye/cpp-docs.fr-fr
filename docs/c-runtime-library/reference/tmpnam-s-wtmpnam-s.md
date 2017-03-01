@@ -1,56 +1,72 @@
 ---
-title: "tmpnam_s, _wtmpnam_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "tmpnam_s"
-  - "_wtmpnam_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "tmpnam_s"
-  - "_wtmpnam_s"
-  - "L_tmpnam_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_wtmpnam_s (fonction)"
-  - "noms de fichiers (C++), créer temporaire"
-  - "noms de fichiers (C++), temporaires"
-  - "L_tmpnam_s (constante)"
-  - "fichiers temporaires, créer"
-  - "tmpnam_s (fonction)"
-  - "wtmpnam_s (fonction)"
+title: tmpnam_s, _wtmpnam_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- tmpnam_s
+- _wtmpnam_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- tmpnam_s
+- _wtmpnam_s
+- L_tmpnam_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- tmpnam_s function
+- file names [C++], creating temporary
+- _wtmpnam_s function
+- L_tmpnam_s constant
+- temporary files, creating
+- file names [C++], temporary
+- wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# tmpnam_s, _wtmpnam_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3635e551e54a36d8eafb0727c7bb4e7056df36f5
+ms.lasthandoff: 02/24/2017
 
-Génére des noms que vous pouvez utiliser pour créer des fichiers temporaires.  Il s'agit de versions de [](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md "_tempnam, _wtempnam, tmpnam, _wtmpnam")[Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
+Génèrent des noms que vous pouvez utiliser pour créer des fichiers temporaires. Ces versions de [tmpnam et _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 errno_t tmpnam_s(  
@@ -71,51 +87,51 @@ errno_t _wtmpnam_s(
 ); // C++ only  
 ```  
   
-#### Paramètres  
- \[out\] `str`  
- Pointeur qui contiendra le nom généré.  
+#### <a name="parameters"></a>Paramètres  
+ [out] `str`  
+ Pointeur destiné à contenir le nom généré.  
   
- \[in\] `sizeInChars`  
- La taille en nombre de caractères de la mémoire tampon.  
+ [in] `sizeInChars`  
+ Taille de la mémoire tampon en caractères.  
   
-## Valeur de retour  
- Ces deux fonctions retournent 0 en cas de réussite ou un numéro d'erreur en cas de échec.  
+## <a name="return-value"></a>Valeur de retour  
+ Ces deux fonctions retournent 0 en cas de réussite ou un numéro d’erreur en cas d’échec.  
   
-### Conditions d'erreur  
+### <a name="error-conditions"></a>Conditions d’erreur  
   
 |||||  
 |-|-|-|-|  
-|`str`|`sizeInChars`|**Valeur de retour**|**Contenu de** `str`|  
-|`NULL`|any|`EINVAL`|non modifié|  
-|Non  `NULL` \(pointe vers de la mémoire valide\)|trop court|`ERANGE`|non modifié|  
+|`str`|`sizeInChars`|**Valeur de retour**|**Contenu de**  `str`|  
+|`NULL`|indifférent|`EINVAL`|non modifié|  
+|non `NULL` (pointe vers une mémoire valide)|trop court|`ERANGE`|non modifié|  
   
- Si `str` est `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno` à la valeur `EINVAL` et retournent `EINVAL`.  
+ Si `str` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions attribuent à `errno` la valeur `EINVAL` et retournent `EINVAL`.  
   
-## Notes  
- Chacune de ces fonctions retourne le nom d'un fichier qui n'existe pas.  `tmpnam_s` retourne un nom unique dans le répertoire de travail actuel.  Notez que lorsqu'un nom de fichier est ajouté au début avec une barre oblique inverse et sans informations de chemin d'accès, par exempl comme \\fname21, cela indique que le nom est valide pour le répertoire de travail actuel.  
+## <a name="remarks"></a>Notes  
+ Chacune de ces fonctions retourne le nom d’un fichier qui n’existe pas actuellement. `tmpnam_s` retourne un nom unique dans le répertoire de travail actif. Notez que lorsqu’un nom de fichier est précédé d’une barre oblique inverse et d’aucune information de chemin, comme \fname21, cela indique que le nom est valide pour le répertoire de travail actif.  
   
- Pour `tmpnam_s`, vous pouvez stocker le nom de fichier généré dans `str`.  La longueur maximale d'une chaîne retournée par `tmpnam_s` est `L_tmpnam_s`, défini dans. STDIO.H.  Si `str` est `NULL`, alors `tmpnam_s` laisse le résultat dans un tampon interne statique.  Par conséquent tout appel à cette meme fonction par la suite détruit cette valeur  Le nom généré par `tmpnam_s` se compose d'un nom de fichier programme généré et, après le premier appel à `tmpnam_s`, d'une extension de fichier composée des numéros séquentiels en base 32 \(.1\-.1vvvvvu, lorsque `TMP_MAX_S` dans STDIO.H est INT\_MAX\).  
+ Pour `tmpnam_s`, vous pouvez stocker ce nom de fichier généré dans `str`. La longueur maximale d’une chaîne retournée par `tmpnam_s` est `L_tmpnam_s`, qui est défini dans STDIO.H. Si `str` a la valeur `NULL`, `tmpnam_s` maintient le résultat dans une mémoire tampon statique interne. Par conséquent, tous les appels suivants détruisent cette valeur. Le nom généré par `tmpnam_s` se compose d’un nom de fichier généré par le programme et, après le premier appel à `tmpnam_s`, d’une extension de fichier constituée de numéros séquentiels en base 32 (.1-.1vvvvvu, quand `TMP_MAX_S` dans STDIO.H a la valeur INT_MAX).  
   
- `tmpnam_s` gère automatiquement les arguments de chaîne de caractères multi\-octets comme approprié, identifiant des séquences de caractères multioctets selon la page de codes OEM extraite du système d'exploitation.  `_wtmpnam_s` est une version caractères larges de `tmpnam_s`; l'argument et la valeur de retour de  `_wtmpnam_s` sont des chaînes de caractères larges.  `_wtmpnam_s` et `tmpnam_s` se comportent de la même manière que `_wtmpnam_s` mais ne gèrent pas les chaînes de caractères multi\-octets.  
+ `tmpnam_s` gère automatiquement les arguments de chaîne de caractères multioctets comme il convient, en identifiant les séquences de caractères multioctets en fonction de la page de codes OEM obtenue du système d’exploitation. `_wtmpnam_s` est une version à caractères larges de `tmpnam_s` ; l'argument et la valeur de retour de `_wtmpnam_s` sont des chaînes à caractères larges. `_wtmpnam_s` et `tmpnam_s` se comportent de la même manière, sauf que `_wtmpnam_s` ne gère pas les chaînes de caractères multioctets.  
   
- En C\+\+, l'utilisation de ces fonctions est simplifiée par des surcharges de modèle ; les surcharges peuvent également déduire la longueur de la mémoire tampon automatiquement, en éliminant le besoin de spécifier un argument de taille.  Pour plus d'informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; celles-ci peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ttmpnam_s`|`tmpnam_s`|`tmpnam_s`|`_wtmpnam_s`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`tmpnam_s`|\<stdio.h\>|  
-|`_wtmpnam_s`|\<stdio.h\> ou \<wchar.h\>|  
+|`tmpnam_s`|\<stdio.h>|  
+|`_wtmpnam_s`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_tmpnam_s.c  
@@ -148,12 +164,12 @@ int main( void )
 }  
 ```  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
- [\_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+## <a name="see-also"></a>Voir aussi  
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
- [\_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
- [tmpfile\_s](../../c-runtime-library/reference/tmpfile-s.md)
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
+ [tmpfile_s](../../c-runtime-library/reference/tmpfile-s.md)

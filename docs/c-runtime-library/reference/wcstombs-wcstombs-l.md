@@ -1,55 +1,71 @@
 ---
-title: "wcstombs, _wcstombs_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wcstombs"
-  - "_wcstombs_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcstombs"
-  - "_wcstombs_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_wcstombs_l (fonction)"
-  - "caractères, convertir"
-  - "conversion de chaînes, chaînes de caractères multioctets"
-  - "conversion de chaînes, caractères larges"
-  - "wcstombs (fonction)"
-  - "wcstombs_l (fonction)"
-  - "caractères larges, convertir"
+title: wcstombs, _wcstombs_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wcstombs
+- _wcstombs_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcstombs
+- _wcstombs_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wcstombs_l function
+- wcstombs function
+- string conversion, wide characters
+- wide characters, converting
+- wcstombs_l function
+- characters, converting
+- string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# wcstombs, _wcstombs_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: dead533ee11db7c40faa7d3611b30c6a6159ee50
+ms.lasthandoff: 02/24/2017
 
-Convertit la séquence de caractères multioctets en la séquence correspondante de caractères larges.  Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [wcstombs\_s, \_wcstombs\_s\_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md).  
+---
+# <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
+Convertit une séquence de caractères larges en une séquence correspondante de caractères multioctets. Il existe des versions plus sécurisées de ces fonctions. Consultez [wcstombs_s, _wcstombs_s_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 size_t wcstombs(  
@@ -78,45 +94,45 @@ size_t _wcstombs_l(
 ); // C++ only  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `mbstr`  
- L'adresse d'une séquence de caractères multioctets.  
+ Adresse d’une séquence de caractères multioctets.  
   
  `wcstr`  
- L'adresse d'une séquence de caractères larges.  
+ Adresse d’une séquence de caractères larges.  
   
  `count`  
- Le nombre maximal d'octets qui peuvent être stockés dans la chaîne de sortie multioctets.  
+ Nombre maximal d’octets pouvant être stockés dans la chaîne de sortie multioctet.  
   
  `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
- Si `wcstombs` convertit correctement la chaîne multioctets, elle retourne le nombre d'octets écrits dans la chaîne de sortie multioctets, à l'exception du `NULL` de fin \(le cas échéant\).  Si l'argument `mbstr` est `NULL`, `wcstombs` retourne la taille requise en octets de la chaine de destination.  Si `wcstombs` rencontre un caractère large qu'il ne peut pas convertir en caractères multioctets, il retourne – 1 converti en type `size_t` et définit `errno` à `EILSEQ`.  
+## <a name="return-value"></a>Valeur de retour  
+ Si la fonction `wcstombs` convertit correctement la chaîne multioctet, elle retourne le nombre d’octets écrits dans la chaîne de sortie multioctet, à l’exclusion du caractère `NULL` de fin (le cas échéant). Si l’argument `mbstr` a la valeur `NULL`, `wcstombs` retourne la taille requise en octets de la chaîne de destination. Si la fonction `wcstombs` rencontre un caractère large qu’elle ne peut pas convertir en caractère multioctet, elle retourne la valeur -1 castée en type `size_t` et affecte à `errno` la valeur `EILSEQ`.  
   
-## Notes  
- La fonction `wcstombs` convertit la chaîne de caractères larges désignée par `wcstr` en les caractères multioctets correspondants et stocke les résultats dans le tableau `mbstr`.  Le paramètre `count` indique le nombre maximal d'octets qui peuvent être stockés dans la chaîne de sortie multioctets \(autrement dit, la taille de `mbstr`\).  En général, on ne sait pas combien d'octets sont requis quand on convertit une chaîne de caractères larges.  Certains caractères larges ont besoin d'un seul octet dans la chaîne de sortie ; d'autres nécessitent deux.  S'il existe deux octets dans la chaîne de sortie multioctets pour chaque caractère large dans la chaîne d'entrée caractère large \(y compris le caractère large `NULL`\), le résultat est garanti de s'ajuster.  
+## <a name="remarks"></a>Notes  
+ La fonction `wcstombs` convertit la chaîne de caractères larges vers laquelle pointe `wcstr` en caractères multioctets correspondants et stocke les résultats dans le tableau `mbstr`. Le paramètre `count` indique le nombre maximal d’octets qui peuvent être stockés dans la chaîne de sortie multioctet (c’est-à-dire, la taille de `mbstr`). En général, le nombre d’octets exigé au moment de la conversion d’une chaîne de caractères larges n’est pas connu. Certains caractères larges peuvent en exiger un seul dans la chaîne de sortie, alors que d’autres peuvent en exiger deux. Si la chaîne de sortie multioctet contient deux octets pour chaque caractère large présent dans la chaîne d’entrée (en incluant le caractère large `NULL`), le résultat est assuré de s’intégrer.  
   
- Si `wcstombs` rencontre le caractère NULL de caractères étendus \(L '\\0\) avant ou lorsque `count` arrive, il le convertit en un 0 de 8 bits et s'arrête.  Par conséquent, la chaîne de caractères multioctets à `mbstr` se termine par null uniquement si `wcstombs` rencontre un caractère NULL de caractères larges lors de la conversion.  Si les séquences désignées par `wcstr` et `mbstr` se chevauchent, le comportement de `wcstombs` n'est pas défini.  
+ Si la fonction `wcstombs` rencontre le caractère null à caractère large (L'\0') avant ou quand `count` est atteint, elle le convertit en 0 de 8 bits et s’arrête. Par conséquent, la chaîne de caractères multioctets au niveau de `mbstr` se termine par un caractère null seulement si `wcstombs` rencontre un caractère null de caractère large pendant la conversion. Si les séquences pointées par `wcstr` et `mbstr` se chevauchent, le comportement de `wcstombs` n'est pas défini.  
   
- Si l'argument `mbstr` est `NULL`, `wcstombs` retourne la taille requise en octets de la chaine de destination.  
+ Si l’argument `mbstr` a la valeur `NULL`, `wcstombs` retourne la taille requise en octets de la chaîne de destination.  
   
- `wcstombs` valide ses paramètres.  Si `wcstr` est `NULL`, ou si `count` est supérieur à`INT_MAX`, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, la fonction définit `errno` à la valeur `EINVAL` et retourne \-1.  
+ `wcstombs` valide ses paramètres. Si `wcstr` a la valeur `NULL` ou si `count` est supérieur à `INT_MAX`, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction affecte à `errno` la valeur `EINVAL` et retourne -1.  
   
- `wcstombs` utilise les paramètres régionaux actuels pour tout comportement dépend des paramètres régionaux ; `_wcstombs_l` est identique à la différence qu'il utilise les paramètres régionaux transmis à la place.  Pour plus d'informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La fonction `wcstombs` utilise les paramètres régionaux actifs pour tout comportement dépendant des paramètres régionaux ; la fonction `_wcstombs_l` est identique sauf qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
- En C\+\+, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions.  Pour plus d'informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`wcstombs`|\<stdlib.h\>|  
-|`_wcstombs_l`|\<stdlib.h\>|  
+|`wcstombs`|\<stdlib.h>|  
+|`_wcstombs_l`|\<stdlib.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  Ce programme illustre le comportement de la fonction `wcstombs`.  
   
 ```  
@@ -151,17 +167,20 @@ int main( void )
 }  
 ```  
   
-  **Convertit la chaîne à caractères élargis:**  
- **Caractères convertis : 13**  
- **Caractères multioctets : Hello world.**   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Convert wide-character string:  
+   Characters converted: 13  
+    Multibyte character: Hello, world.  
+```  
   
-## Voir aussi  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
- [\_mbclen, mblen, \_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs, \_mbstowcs\_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc, \_mbtowc\_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wctomb, \_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
  [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)

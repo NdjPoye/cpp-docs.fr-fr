@@ -1,63 +1,79 @@
 ---
-title: "_searchenv, _wsearchenv | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_searchenv"
-  - "_wsearchenv"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-environment-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wsearchenv"
-  - "_tsearchenv"
-  - "wsearchenv"
-  - "_searchenv"
-  - "searchenv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_searchenv (fonction)"
-  - "_tsearchenv (fonction)"
-  - "_wsearchenv (fonction)"
-  - "chemins d'accès d'environnement"
-  - "chemins d'accès d'environnement, rechercher des fichiers"
-  - "fichiers (C++), rechercher"
-  - "searchenv (fonction)"
-  - "tsearchenv (fonction)"
-  - "wsearchenv (fonction)"
+title: _searchenv, _wsearchenv | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _searchenv
+- _wsearchenv
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-environment-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wsearchenv
+- _tsearchenv
+- wsearchenv
+- _searchenv
+- searchenv
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wsearchenv function
+- files [C++], finding
+- _searchenv function
+- tsearchenv function
+- environment paths, searching for files
+- _tsearchenv function
+- wsearchenv function
+- searchenv function
+- environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
 caps.latest.revision: 33
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 33
----
-# _searchenv, _wsearchenv
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3370ea3fcad8874fe9bdcd737d2488509f740fd6
+ms.lasthandoff: 02/24/2017
 
-Utilise des chemins d'accès d'environnement pour rechercher un fichier.  Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [\_searchenv\_s, \_wsearchenv\_s](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md).  
+---
+# <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
+Utilise des chemins d’accès d’environnement pour rechercher un fichier. Il existe des versions plus sécurisées de ces fonctions. Consultez [_searchenv_s, _wsearchenv_s](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md).  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Pour plus d'informations, voir [Fonctions CRT non prises en charge avec \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void _searchenv(  
@@ -84,7 +100,7 @@ void _wsearchenv(
 ); // C++ only  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `filename`  
  Nom du fichier à rechercher.  
   
@@ -92,44 +108,45 @@ void _wsearchenv(
  Environnement dans lequel effectuer la recherche.  
   
  `pathname`  
- Mémoire tampon destinée à stocker le chemin d'accès complet.  
+ Mémoire tampon destinée à stocker le chemin d’accès complet.  
   
-## Notes  
- La routine `_searchenv` recherche le fichier cible dans le domaine spécifié.  La variable `varname` peut être un environnement ou une variable définie par l'utilisateur quelconque, par exemple, `PATH`, `LIB` ou `INCLUDE`, qui spécifie une liste de chemins d'accès de répertoires.  Sachant que `_searchenv` respecte la casse, `varname` doit correspondre à la casse de la variable d'environnement.  
+## <a name="remarks"></a>Notes  
+ La routine `_searchenv` recherche le fichier cible dans le domaine spécifié. La variable `varname` peut être un environnement ou une variable définie par l'utilisateur quelconque, par exemple, `PATH`, `LIB` ou `INCLUDE`, qui spécifie une liste de chemins d'accès de répertoires. Sachant que `_searchenv` respecte la casse, `varname` doit correspondre à la casse de la variable d'environnement.  
   
- La routine recherche d'abord le fichier dans le répertoire de travail actuel.  Si elle ne le trouve pas, elle parcourt les répertoires spécifiés par la variable d'environnement.  Si le fichier cible se trouve dans l'un de ces répertoires, le chemin d'accès qui vient d'être créé est copié dans `pathname`.  Si le fichier `filename` est introuvable, `pathname` contient une chaîne vide se terminant par null.  
+ La routine recherche d'abord le fichier dans le répertoire de travail actuel. Si elle ne le trouve pas, elle parcourt les répertoires spécifiés par la variable d'environnement. Si le fichier cible se trouve dans l'un de ces répertoires, le chemin d'accès qui vient d'être créé est copié dans `pathname`. Si le fichier `filename` est introuvable, `pathname` contient une chaîne vide se terminant par null.  
   
- La mémoire tampon `pathname` doit faire une longueur minimale de `_MAX_PATH` caractères pour loger le nom de chemin d'accès construit dans son intégralité.  Sinon, `_searchenv` risque de saturer la mémoire tampon `pathname` et occasionner un comportement inattendu.  
+ La mémoire tampon `pathname` doit faire une longueur minimale de `_MAX_PATH` caractères pour loger le nom de chemin d'accès construit dans son intégralité. Sinon, `_searchenv` risque de saturer la mémoire tampon `pathname` et occasionner un comportement inattendu.  
   
- `_wsearchenv` est une version à caractères larges de `_searchenv`, et les arguments de `_wsearchenv` sont des chaînes à caractères larges.  Sinon, `_wsearchenv` et `_searchenv` se comportent de la même façon.  
+ `_wsearchenv` est une version à caractères larges de `_searchenv`, et les arguments de `_wsearchenv` sont des chaînes à caractères larges. Sinon, `_wsearchenv` et `_searchenv` se comportent de la même façon.  
   
  Si `filename` est une chaîne vide, ces fonctions retournent `ENOENT`.  
   
- Si `filename` ou `pathname` est un pointeur `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, ces fonctions retournent \-1 et définissent `errno` avec la valeur `EINVAL`.  
+ Si `filename` ou `pathname` est un pointeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent -1 et définissent `errno` avec la valeur `EINVAL`.  
   
- Pour plus d'informations sur `errno` et les codes d'erreurs, consultez [errno, constantes](../../c-runtime-library/errno-constants.md).  
+ Pour plus d’informations sur `errno` et les codes d’erreur, consultez [errno, constantes](../../c-runtime-library/errno-constants.md).  
   
- En C\+\+, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et plus sécurisés de ces fonctions.  Pour plus d'informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et plus sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine Tchar.h|\_UNICODE et \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|-------------------------------------|-------------------|----------------------|  
+|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tsearchenv`|`_searchenv`|`_searchenv`|`_wsearchenv`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_searchenv`|\<stdlib.h\>|  
-|`_wsearchenv`|\<stdlib.h\> ou \<wchar.h\>|  
+|`_searchenv`|\<stdlib.h>|  
+|`_wsearchenv`|\<stdlib.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
-// crt_searchenv.c  
+  
+      // crt_searchenv.c  
 // compile with: /W3  
 // This program searches for a file in  
 // a directory that's specified by an environment variable.  
@@ -153,13 +170,16 @@ int main( void )
 }  
 ```  
   
-  **Path for CL.EXE:**  
-**C:\\Program Files\\Microsoft Visual Studio 8\\VC\\BIN\\CL.EXE**   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Path for CL.EXE:  
+C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE  
+```  
   
-## Voir aussi  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Voir aussi  
  [Contrôle de répertoire](../../c-runtime-library/directory-control.md)   
- [getenv, \_wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   
- [\_putenv, \_wputenv](../../c-runtime-library/reference/putenv-wputenv.md)   
- [\_searchenv\_s, \_wsearchenv\_s](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md)
+ [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   
+ [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md)   
+ [_searchenv_s, _wsearchenv_s](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md)

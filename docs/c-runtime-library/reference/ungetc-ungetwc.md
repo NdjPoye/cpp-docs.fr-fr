@@ -1,54 +1,70 @@
 ---
-title: "ungetc, ungetwc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "ungetwc"
-  - "ungetc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ungettc"
-  - "ungetwc"
-  - "ungetc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ungettc (fonction)"
-  - "caractères, push vers le flux"
-  - "ungetc (fonction)"
-  - "ungettc (fonction)"
-  - "ungetwc (fonction)"
+title: ungetc, ungetwc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- ungetwc
+- ungetc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ungettc
+- ungetwc
+- ungetc
+dev_langs:
+- C++
+helpviewer_keywords:
+- ungetwc function
+- ungettc function
+- characters, pushing back onto stream
+- _ungettc function
+- ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# ungetc, ungetwc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 9f33416614f18a5a1cd7a61ccf4acfb9276de8e5
+ms.lasthandoff: 02/24/2017
 
-Repousse un caractère vers le flux.  
+---
+# <a name="ungetc-ungetwc"></a>ungetc, ungetwc
+Renvoie un caractère dans le flux via une transmission de type push.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int ungetc(  
@@ -61,45 +77,45 @@ wint_t ungetwc(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `c`  
- Caractère à renvoyer.  
+ Caractère à renvoyer (transmission push).  
   
  `stream`  
- Pointeur vers la structure `FILE`.  
+ Pointeur vers la structure `FILE` .  
   
-## Valeur de retour  
- En cas de réussite, chacune de ces fonctions retourne l'argument `c`de caractère*.* Si `c` ne peut pas être refoulé ou si aucun caractère n'a été lu, le flux d'entrée est inchangé et `ungetc` retourne `EOF`; `ungetwc` retourne `WEOF`.  Si `stream` est `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre,  `EOF` ou `WEOF` est retourné et `errno` est affecté à la valeur `EINVAL`.  
+## <a name="return-value"></a>Valeur de retour  
+ En cas de réussite, chacune de ces fonctions retourne l’argument de caractère `c`*.* Si `c` ne peut pas être renvoyé via une transmission de type push ou si aucun caractère n’a été lu, le flux d’entrée est inchangé et `ungetc` retourne `EOF` ; `ungetwc` retourne `WEOF`. Si `stream` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `EOF` ou `WEOF` est retourné et `errno` prend la valeur `EINVAL`.  
   
- Pour plus d'informations sur ces codes d'erreur et autres, consultez [\_doserrno, errno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- La fonction `ungetc` renvoie le caractère `c` vers `stream` et désactive l'indicateur de fin de fichier.  Le flux doit être ouvert pour la lecture.  Une opération de lecture à venir sur `stream` commence avec `c`*.* Une tentative de pousser `EOF` sur le flux en utilisant `ungetc` est ignorée.  
+## <a name="remarks"></a>Notes  
+ La fonction `ungetc` renvoie le caractère `c` à `stream` via une transmission de type push et efface l’indicateur de fin de fichier. Le flux doit être ouvert pour lecture. Une opération de lecture ultérieure démarre au niveau de `stream` avec `c`*.* Une tentative de transmission de type push de `EOF` vers le flux à l’aide de `ungetc` est ignorée.  
   
- Les caractères placés sur le flux par `ungetc` peuvent être effacés si `fflush`, `fseek`, `fsetpos`, ou `rewind` est appelé avant que le caractère soit lu depuis le flux.  L'indicateur de la position du fichier aura la valeur qu'il avait avant que les caractères ont été refoulés.  Le stockage externe correspondant au flux reste inchangé.  Dans un appel réussi `ungetc` à un flux de texte, l'indicateur de position de fichier n'est pas spécifié jusqu'à ce que tous les caractères refoulés soient lus ou ignorés.  À chaque appel réussi `ungetc` à un flux binaire, l'indicateur de position de fichier est décrémenté ; si sa valeur était 0 avant un appel, la valeur n'est pas définie après l'appel.  
+ Les caractères positionnés dans le flux par `ungetc` peuvent être effacés si la fonction `fflush`, `fseek`, `fsetpos` ou `rewind` est appelée avant que le caractère soit lu dans le flux. L’indicateur de position de fichier prend alors la valeur qui était la sienne avant que les caractères soient renvoyés via la transmission push. Le stockage externe correspondant au flux est inchangé. Si l’appel de la fonction `ungetc` pour un flux de texte aboutit, l’indicateur de position de fichier n’est pas spécifié tant que tous les caractères renvoyés via une transmission push ne sont pas lus ou ignorés. À chaque appel réussi de la fonction `ungetc` sur un flux binaire, l’indicateur de position de fichier est décrémenté ; si sa valeur était égale à 0 avant un appel, la valeur est indéfinie après l’appel.  
   
- Les résultats sont imprévisibles si `ungetc` est appelé deux fois sans opération de lecture ou de positionnement de fichier entre les deux appels.  Après un appel à `fscanf`, un appel à `ungetc` peut échouer à moins qu'une autre opération de lecture \(comme `getc`\) a été effectuée.  Ceci car `fscanf` lui\-même appelle `ungetc`.  
+ Les résultats sont imprévisibles si la fonction `ungetc` est appelée à deux reprises sans qu’aucune opération de lecture ou de positionnement de fichier n’ait lieu entre les deux appels. Après un appel à la fonction `fscanf`, un appel à `ungetc` peut échouer si une autre opération de lecture (telle que `getc`) n’a pas été exécutée. Cela est dû au fait que la fonction `fscanf` elle-même appelle `ungetc`.  
   
- `ungetwc` est une version à caractère élargi de `ungetc`.  Toutefois, à chaque appel réussi `ungetwc` à un texte ou un flux binaire, la valeur de l'indicateur de position de fichier n'est pas spécifiée jusqu'à ce que tous les caractères refoulés soient lus ou ignorés.  
+ `ungetwc` est une version à caractères larges de `ungetc`. Cependant, à chaque appel réussi de la fonction `ungetwc` sur un flux de texte ou binaire, la valeur de l’indicateur de position de fichier n’est pas spécifié tant que tous les caractères renvoyés via une transmission push ne sont pas lus ou ignorés.  
   
- Ces fonctions sont des données sécurisées du point de vue du thread et sensibles au lock pendant l'exécution.  Pour une version non verrouillante, consultez [\_ungetc\_nolock, \_ungetwc\_nolock](../../c-runtime-library/reference/ungetc-nolock-ungetwc-nolock.md).  
+ Ces fonctions sont thread-safe et verrouillent les données sensibles pendant l’exécution. Pour une version sans verrouillage, consultez [_ungetc_nolock, _ungetwc_nolock](../../c-runtime-library/reference/ungetc-nolock-ungetwc-nolock.md).  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ungettc`|`ungetc`|`ungetc`|`ungetwc`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`ungetc`|\<stdio.h\>|  
-|`ungetwc`|\<stdio.h\> ou \<wchar.h\>|  
+|`ungetc`|\<stdio.h>|  
+|`ungetwc`|\<stdio.h> ou \<wchar.h>|  
   
- La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] .  Les handles de flux standard associés à la console, `stdin`, `stdout` et `stderr` doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] .  Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Les handles de flux standard associés à la console (`stdin`, `stdout` et `stderr`) doivent être redirigés pour que les fonctions Runtime C puissent les utiliser dans les applications du [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_ungetc.c  
@@ -127,12 +143,16 @@ int main( void )
 }  
 ```  
   
-  **Nombre `521a` \= 521**  
-**Caractère suivant du flux \= « a »**   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
   
-## Voir aussi  
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
+      521aNumber = 521  
+Next character in stream = 'a'  
+```  
+  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
  [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)   
  [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)

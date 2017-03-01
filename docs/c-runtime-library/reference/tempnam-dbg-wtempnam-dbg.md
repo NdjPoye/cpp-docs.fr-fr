@@ -1,72 +1,99 @@
 ---
-title: "_tempnam_dbg, _wtempnam_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wtempnam_dbg"
-  - "_tempnam_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wtempnam_dbg"
-  - "tempnam_dbg"
-  - "_tempnam_dbg"
-  - "_wtempnam_dbg"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_tempnam_dbg (fonction)"
-  - "_wtempnam_dbg (fonction)"
-  - "noms de fichiers (C++), créer temporaire"
-  - "noms de fichiers (C++), temporaires"
-  - "tempnam_dbg (fonction)"
-  - "fichiers temporaires, créer"
-  - "wtempnam_dbg (fonction)"
+title: _tempnam_dbg, _wtempnam_dbg | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wtempnam_dbg
+- _tempnam_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- wtempnam_dbg
+- tempnam_dbg
+- _tempnam_dbg
+- _wtempnam_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- file names [C++], creating temporary
+- tempnam_dbg function
+- temporary files, creating
+- file names [C++], temporary
+- wtempnam_dbg function
+- _tempnam_dbg function
+- _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _tempnam_dbg, _wtempnam_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 4f407dce7825a593273206ada02680d6da99e9a0
+ms.lasthandoff: 02/24/2017
 
-Versions des fonctions [\_tempnam, \_wtempnam, tmpnam, \_wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) qui utilisent la version de débogage de `malloc, _malloc_dbg`.  
+---
+# <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
+Versions des fonctions [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) qui utilisent la version debug de `malloc, _malloc_dbg`.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-char *_tempnam_dbg(    const char *dir,    const char *prefix,    int blockType,    const char *filename,    int linenumber  ); wchar_t *_wtempnam_dbg(    const wchar_t *dir,    const wchar_t *prefix,    int blockType,    const char *filename,    int linenumber  );  
+char *_tempnam_dbg(  
+   const char *dir,  
+   const char *prefix,  
+   int blockType,  
+   const char *filename,  
+   int linenumber   
+);  
+wchar_t *_wtempnam_dbg(  
+   const wchar_t *dir,  
+   const wchar_t *prefix,  
+   int blockType,  
+   const char *filename,  
+   int linenumber   
+);  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `dir`  
- Chemin d'accès utilisé dans le nom de fichier en l'absence de variable d'environnement TMP ou si TMP n'est pas un répertoire valide.  
+ Chemin d’accès utilisé dans le nom de fichier en l’absence de variable d’environnement TMP ou si TMP n’est pas un répertoire valide.  
   
  `prefix`  
  Chaîne qui sera ajoutée aux noms retournés par `_tempnam`.  
   
  `blockType`  
- Type de bloc de mémoire demandé : `_CLIENT_BLOCK`ou `_NORMAL_BLOCK`.  
+ Type de bloc de mémoire demandé : `_CLIENT_BLOCK` ou `_NORMAL_BLOCK`.  
   
  `filename`  
  Pointeur vers le nom du fichier source qui a demandé l'opération d'allocation ou `NULL`.  
@@ -74,35 +101,35 @@ char *_tempnam_dbg(    const char *dir,    const char *prefix,    int blockType,
  `linenumber`  
  Numéro de ligne dans le fichier source où l'opération d'allocation a été demandée ou `NULL`.  
   
-## Valeur de retour  
- Chaque fonction retourne un pointeur vers le nom généré ou `NULL` en cas de défaillance.  Une défaillance peut se produire si un nom de répertoire non valide a été spécifié dans la variable d'environnement TMP et dans le paramètre `dir`.  
+## <a name="return-value"></a>Valeur de retour  
+ Chaque fonction retourne un pointeur vers le nom généré ou `NULL` en cas de défaillance. Une défaillance peut se produire si un nom de répertoire non valide a été spécifié dans la variable d'environnement TMP et dans le paramètre `dir`.  
   
 > [!NOTE]
->  `free` \(ou `free_dbg`\) doit être appelé pour les pointeurs alloués par `_tempnam_dbg` et `_wtempnam_dbg`.  
+>  `free` (ou `free_dbg`) doit être appelé pour les pointeurs alloués par `_tempnam_dbg` et `_wtempnam_dbg`.  
   
-## Notes  
- Les fonctions `_tempnam_dbg`et `_wtempnam_dbg`sont identiques à `_tempnam`et `_wtempnam`sauf que, quand `_DEBUG`est défini, ces fonctions utilisent la version de débogage de `malloc` et `_malloc_dbg` pour allouer la mémoire si la valeur `NULL` est passée comme premier paramètre.  Pour plus d'informations, voir [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
+## <a name="remarks"></a>Notes  
+ Les fonctions `_tempnam_dbg` et `_wtempnam_dbg` sont identiques à `_tempnam` et `_wtempnam` sauf que, quand `_DEBUG` est défini, ces fonctions utilisent la version debug de `malloc` et `_malloc_dbg` pour allouer de la mémoire si la valeur `NULL` est transmise comme premier paramètre. Pour plus d’informations, consultez [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
- Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite.  À la place, vous pouvez définir l'indicateur `_CRTDBG_MAP_ALLOC`.  Quand `_CRTDBG_MAP_ALLOC` est défini, les appels à `_tempnam` et `_wtempnam` sont remappés à  `_tempnam_dbg` et `_wtempnam_dbg`, respectivement, avec le `blockType` défini sur `_NORMAL_BLOCK`.  Ainsi, vous n'avez pas besoin d'appeler ces fonctions de manière explicite sauf si vous souhaitez marquer les blocs du tas comme `_CLIENT_BLOCK`.  Pour plus d'informations, voir [Types de bloc sur le tas de débogage](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap).  
+ Dans la plupart des cas, vous n'avez pas besoin d'appeler ces fonctions de manière explicite. À la place, vous pouvez définir l'indicateur `_CRTDBG_MAP_ALLOC`. Quand `_CRTDBG_MAP_ALLOC` est défini, les appels à `_tempnam` et `_wtempnam` sont remappés à `_tempnam_dbg` et `_wtempnam_dbg`, respectivement, avec `blockType` défini sur `_NORMAL_BLOCK`. Ainsi, vous n'avez pas besoin d'appeler ces fonctions de manière explicite sauf si vous souhaitez marquer les blocs du tas comme `_CLIENT_BLOCK`. Pour plus d’informations, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE et \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|-------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ttempnam_dbg`|`_tempnam_dbg`|`_tempnam_dbg`|`_wtempnam_dbg`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_tempnam_dbg`, `_wtempnam_dbg`|\<crtdbg.h\>|  
+|`_tempnam_dbg`, `_wtempnam_dbg`|\<crtdbg.h>|  
   
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, voir [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
- [\_tempnam, \_wtempnam, tmpnam, \_wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
- [Versions Debug des fonctions d'allocation du tas](../Topic/Debug%20Versions%20of%20Heap%20Allocation%20Functions.md)
+## <a name="see-also"></a>Voir aussi  
+ [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
+ [Versions Debug des fonctions d'allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)

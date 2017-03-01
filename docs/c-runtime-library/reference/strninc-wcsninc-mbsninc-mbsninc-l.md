@@ -1,71 +1,87 @@
 ---
-title: "_strninc, _wcsninc, _mbsninc, _mbsninc_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsninc"
-  - "_mbsninc_l"
-  - "_wcsninc"
-  - "_strninc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "strninc"
-  - "wcsninc"
-  - "mbsninc_l"
-  - "_strninc"
-  - "_tcsninc"
-  - "mbsninc"
-  - "_mbsninc_l"
-  - "_ftcsninc"
-  - "_wcsninc"
-  - "_mbsninc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsninc (fonction)"
-  - "_mbsninc_l (fonction)"
-  - "_strninc (fonction)"
-  - "_tcsninc (fonction)"
-  - "_wcsninc (fonction)"
-  - "mbsninc (fonction)"
-  - "mbsninc_l (fonction)"
-  - "strninc (fonction)"
-  - "tcsninc (fonction)"
-  - "wcsninc (fonction)"
+title: _strninc, _wcsninc, _mbsninc, _mbsninc_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsninc
+- _mbsninc_l
+- _wcsninc
+- _strninc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- strninc
+- wcsninc
+- mbsninc_l
+- _strninc
+- _tcsninc
+- mbsninc
+- _mbsninc_l
+- _ftcsninc
+- _wcsninc
+- _mbsninc
+dev_langs:
+- C++
+helpviewer_keywords:
+- _mbsninc_l function
+- mbsninc function
+- _strninc function
+- tcsninc function
+- wcsninc function
+- _mbsninc function
+- strninc function
+- _wcsninc function
+- mbsninc_l function
+- _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _strninc, _wcsninc, _mbsninc, _mbsninc_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: a019117da70bc81bcf2ffd79c750f8862bc50c0b
+ms.lasthandoff: 02/24/2017
 
-Avance un pointeur de chaîne de `n` caractères.  
+---
+# <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
+Fait avancer un pointeur de chaîne de `n` caractères.  
   
 > [!IMPORTANT]
->  `_mbsninc` et `_mbsninc_l` ne peuvent pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime.  Pour plus d'informations, consultez [Fonctions CRT non prises en charge avec \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsninc` et `_mbsninc_l` ne peuvent pas être utilisées dans les applications qui s'exécutent dans Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 char *_strninc(  
@@ -87,50 +103,50 @@ unsigned char *_mbsninc(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `str`  
  Chaîne source.  
   
  `count`  
- Nombre de caractères à incrémenter un pointeur de chaîne.  
+ Nombre de caractères dont un pointeur de chaîne est incrémenté.  
   
  `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
- Chacune de ces routines retourne un pointeur vers `str` après que `str` a été incrémenté par `count` caractères ou `NULL` si le pointeur fourni est `NULL`.  Si `count` est supérieur ou égal au nombre de caractères de `str`, le résultat est indéfini.  
+## <a name="return-value"></a>Valeur de retour  
+ Chacune de ces routines retourne un pointeur vers `str` après que `str` a été incrémenté de `count` caractères ou `NULL` si le pointeur fourni a la valeur `NULL`. Si la valeur de `count` est supérieure ou égale au nombre de caractères contenus dans `str`, le résultat n’est pas défini.  
   
-## Notes  
- La fonction `_mbsninc` incrémente `str` par `count` caractères multioctets .  `_mbsninc` identifie des séquences de caractères multioctets selon la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d'utilisation.  
+## <a name="remarks"></a>Notes  
+ La fonction `_mbsninc` incrémente `str` de `count` caractères multioctets. `_mbsninc` reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine Tchar.h|\_UNICODE et \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|-------------------------------------|-------------------|----------------------|  
+|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsninc`|`_strninc`|`_mbsninc`|`_wcsninc`|  
   
- `_strninc` et `_wcsninc` sont des versions de `_mbsninc` traitant des chaînes de caractères sur un seul octet et à caractères élargis respectivement.  `_wcsninc` et `_strninc` sont fournis uniquement pour ce mappage et ne doivent pas être utilisés sinon.  Pour plus d'informations, consultez [Utilisation des mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).  
+ `_strninc` et `_wcsninc` sont des versions de chaînes de caractères codés sur un octet et de chaînes de caractères larges de `_mbsninc`. `_wcsninc` et `_strninc` sont fournies uniquement pour ce mappage et ne doivent sinon pas être utilisées. Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).  
   
- `_mbsninc_l` est identique sauf qu'il utilise à la place les paramètres régionaux qui sont passés.  Pour plus d'informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La fonction `_mbsninc_l` est identique, sauf qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_mbsninc`|\<mbstring.h\>|  
-|`_mbsninc_l`|\<mbstring.h\>|  
-|`_strninc`|\<tchar.h\>|  
-|`_wcsninc`|\<tchar.h\>|  
+|`_mbsninc`|\<mbstring.h>|  
+|`_mbsninc_l`|\<mbstring.h>|  
+|`_strninc`|\<tchar.h>|  
+|`_wcsninc`|\<tchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
  [Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_strdec, \_wcsdec, \_mbsdec, \_mbsdec\_l](../../c-runtime-library/reference/strdec-wcsdec-mbsdec-mbsdec-l.md)   
- [\_strinc, \_wcsinc, \_mbsinc, \_mbsinc\_l](../../c-runtime-library/reference/strinc-wcsinc-mbsinc-mbsinc-l.md)   
- [\_strnextc, \_wcsnextc, \_mbsnextc, \_mbsnextc\_l](../../c-runtime-library/reference/strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)
+ [_strdec, _wcsdec, _mbsdec, _mbsdec_l](../../c-runtime-library/reference/strdec-wcsdec-mbsdec-mbsdec-l.md)   
+ [_strinc, _wcsinc, _mbsinc, _mbsinc_l](../../c-runtime-library/reference/strinc-wcsinc-mbsinc-mbsinc-l.md)   
+ [_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l](../../c-runtime-library/reference/strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)

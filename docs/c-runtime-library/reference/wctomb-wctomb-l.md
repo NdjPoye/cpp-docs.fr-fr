@@ -1,56 +1,70 @@
 ---
-title: "wctomb, _wctomb_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wctomb_l"
-  - "wctomb"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wctomb"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_wctomb_l (fonction)"
-  - "caractères, convertir"
-  - "conversion de chaînes, chaînes de caractères multioctets"
-  - "conversion de chaînes, caractères larges"
-  - "wctomb (fonction)"
-  - "wctomb_l (fonction)"
-  - "caractères larges, convertir"
+title: wctomb, _wctomb_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wctomb_l
+- wctomb
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wctomb
+dev_langs:
+- C++
+helpviewer_keywords:
+- string conversion, wide characters
+- wide characters, converting
+- _wctomb_l function
+- wctomb function
+- wctomb_l function
+- characters, converting
+- string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
 caps.latest.revision: 23
-caps.handback.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# wctomb, _wctomb_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3d95aae18858582f732459e136c998c15d70189e
+ms.lasthandoff: 02/24/2017
 
-Convertis le caractère large en caractère multioctets correspondant.  Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [wctomb\_s, \_wctomb\_s\_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md).  
+---
+# <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
+Convertit un caractère large en caractère multioctet correspondant. Il existe des versions plus sécurisées de ces fonctions. Consultez [wctomb_s, _wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int wctomb(  
@@ -64,31 +78,31 @@ int _wctomb_l(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `mbchar`  
- L'adresse d'un caractère multioctets.  
+ Adresse d’un caractère multioctet.  
   
  `wchar`  
- Un caractère large.  
+ Caractère large.  
   
-## Valeur de retour  
- Si `wctomb` convertis le caractère large en un caractères multioctets, il retourne le nombre d'octets \(qui n'est jamais supérieur à `MB_CUR_MAX`\) dans le caractère large.  Si `wchar` est le caractère NULL en caractères étendus \(L'\\0'\), la fonction `wctomb` retourne 1.  Si le pointeur cible `mbchar` est NULL, `wctomb` retourne 0.  Si la conversion n'est pas possible dans les paramètres régionaux actuels, `wctomb` retourne – 1 et `errno` prends la valeur `EILSEQ`.  
+## <a name="return-value"></a>Valeur de retour  
+ Si `wctomb` convertit le caractère large en caractère multioctet, il retourne le nombre d’octets (qui n’est jamais supérieure à `MB_CUR_MAX`) dans le caractère large. Si `wchar` correspond au caractère Null à caractère large (L'\0'), `wctomb` retourne 1. Si le pointeur cible `mbchar` a la valeur NULL, `wctomb` retourne 0. Si la conversion n’est pas possible dans les paramètres régionaux actifs, `wctomb` retourne -1 et `errno` prend la valeur `EILSEQ`.  
   
-## Notes  
- La fonction `wctomb` convertit son argument `wchar` en le caractère multioctets correspondant et stocke le résultat dans `mbchar`.  Vous pouvez appeler la fonction de n'importe quel point dans tout programme.  `wctomb` utilise les paramètres régionaux actuels pour tout comportement dépend des paramètres régionaux ; `_wctomb_l` est identique à `wctomb` à l'exception qu'il utilise les paramètres régionaux transmis à la place.  Pour plus d'informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+## <a name="remarks"></a>Notes  
+ La fonction `wctomb` convertit son argument `wchar` en caractère multioctet correspondant et stocke le résultat au niveau de `mbchar`. Vous pouvez appeler la fonction de n’importe quel endroit dans n’importe quel programme. La fonction `wctomb` utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; la fonction `_wctomb_l` est identique à `wctomb` sauf qu'elle utilise les paramètres régionaux passés à la place. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
- `wctomb` valide ses paramètres.  Si `mbchar` est `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, `errno` est défini comme `EINVAL` et la fonction retourne \-1.  
+ `wctomb` valide ses paramètres. Si `mbchar` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` est défini sur `EINVAL` et la fonction retourne -1.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`wctomb`|\<stdlib.h\>|  
+|`wctomb`|\<stdlib.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
- Ce programme illustre le comportement de la fonction wctcomb.  
+## <a name="example"></a>Exemple  
+ Ce programme illustre le comportement de la fonction wctomb.  
   
 ```  
 // crt_wctomb.cpp  
@@ -110,17 +124,20 @@ int main( void )
 }  
 ```  
   
-  **Convertir un caractère large :**  
- **Caractères convertis : 1**  
- **Caractère multioctets: a**   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Convert a wide character:  
+   Characters converted: 1  
+   Multibyte character: a  
+```  
   
-## Voir aussi  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
- [\_mbclen, mblen, \_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs, \_mbstowcs\_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc, \_mbtowc\_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wcstombs, \_wcstombs\_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
+ [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)

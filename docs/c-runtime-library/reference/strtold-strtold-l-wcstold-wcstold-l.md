@@ -1,54 +1,69 @@
 ---
-title: "strtold, _strtold_l, wcstold, _wcstold_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wcstold"
-  - "strtold"
-  - "_strtold_l"
-  - "_wcstold_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tcstold_l"
-  - "_wcstold_l"
-  - "_tcstold"
-  - "strtold"
-  - "_strtold_l"
-  - "wcstold"
-dev_langs: 
-  - "C++"
+title: strtold, _strtold_l, wcstold, _wcstold_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wcstold
+- strtold
+- _strtold_l
+- _wcstold_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tcstold_l
+- _wcstold_l
+- _tcstold
+- strtold
+- _strtold_l
+- wcstold
+dev_langs:
+- C++
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
 caps.latest.revision: 8
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# strtold, _strtold_l, wcstold, _wcstold_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 60c3b2c8c897558d45dc644cfef5c99b336cf06f
+ms.lasthandoff: 02/24/2017
 
-Convertit les chaînes en une valeur longue à virgule flottante double précision.  
+---
+# <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
+Convertit les chaînes en valeur à virgule flottante double précision long.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 long double strtold(  
@@ -71,53 +86,53 @@ long double wcstold_l(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `nptr`  
- Chaîne terminée par Null à convertir.  
+ Chaîne se terminant par un caractère Null à convertir.  
   
  `endptr`  
- Pointeur vers le caractère qui arrête l'analyse.  
+ Pointeur désignant le caractère qui arrête l’analyse.  
   
  `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
- `strtold` retourne la valeur du nombre à virgule flottante en tant que `long double`, sauf lorsque la représentation provoque un dépassement de capacité, auquel cas la fonction retourne la valeur \+\/\-`HUGE_VALL`.  Le signe de `HUGE_VALL` correspond au signe de la valeur qui ne peut pas être représentée.  `strtold` retourne 0 si aucune conversion ne peut être exécutée ou un dépassement de capacité se produit.  
+## <a name="return-value"></a>Valeur de retour  
+ `strtold` retourne la valeur du nombre à virgule flottante sous forme de `long double`, sauf dans le cas où la représentation entraînerait un dépassement de capacité positif (dans ce cas, la fonction retourne +/-`HUGE_VALL`. Le signe de `HUGE_VALL` correspond au signe de la valeur qui ne peut pas être représentée. `strtold` retourne 0 si aucune conversion ne peut être effectuée ou en cas de dépassement de capacité négatif.  
   
- `wcstold` retourne les valeurs de façon analogue à `strtold`.  Pour les deux fonctions, `errno` a la valeur `ERANGE` en cas de surcapacité ou de sous\-capacité et en cas d'appel du gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  
+ `wcstold` retourne des valeurs de façon analogue à `strtold`. Pour les deux fonctions, `errno` prend la valeur `ERANGE` si un dépassement de capacité positif ou négatif se produit et le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  
   
- Pour plus d'informations sur les codes de retour, consultez [errno, \_doserrno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- Chaque fonction convertit la chaîne d'entrée `nptr` en `long double`.  La fonction `strtold` convertit `nptr` en une valeur longue double précision.  La fonction `strtold` arrête de lire la chaîne `nptr` au premier caractère qu'elle ne peut pas reconnaître comme faisant partie d'un nombre.  Il peut s'agir du caractère null de fin.  La version à caractères larges de `strtold` est `wcstold`; son argument `nptr` est une chaîne à caractères larges.  Sinon, ces fonctions se comportent sinon de façon identique.  
+## <a name="remarks"></a>Notes  
+ Chaque fonction convertit la chaîne d’entrée `nptr` en `long double`. La fonction `strtold` convertit `nptr` en valeur double précision long. La fonction `strtold` arrête de lire la chaîne `nptr` au premier caractère qu’elle ne peut pas identifier comme faisant partie intégrante d’un nombre. Il peut s’agir du caractère Null de fin. La version à caractères larges de `strtold` est `wcstold` ; son argument `nptr` est une chaîne de caractères larges. Sinon, ces fonctions se comportent de façon identique.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcstold`|`strtold`|`strtold`|`wcstold`|  
 |`_tcstold_l`|`_strtold_l`|`_strtold_l`|`_wcstold_l`|  
   
- Le paramètre de la catégorie `LC_NUMERIC` des paramètres régionaux actuels détermine la reconnaissance des caractères de base dans `nptr`.  Pour plus d'informations, consultez [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  Les fonctions sans le suffixe `_l` utilisent les paramètres régionaux locaux ; `_strtold_l` et `_wcstold_l` sont identiques à `_strtold` et `_wcstold` sauf qu'elles utilisent les paramètres régionaux qui sont transmis.  Pour plus d'informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ Le paramètre de catégorie `LC_NUMERIC` des paramètres régionaux actifs détermine la reconnaissance du caractère de base dans `nptr`. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les fonctions sans suffixe `_l` utilisent les paramètres régionaux actifs ; `_strtold_l` et `_wcstold_l` sont identiques à `_strtold` et `_wcstold`, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
- Si `endptr` n'a pas la valeur `NULL`, un pointeur vers le caractère qui a arrêté l'analyse est enregistré à l'emplacement désigné par `endptr`.  Si aucune conversion ne peut être effectuée \(aucun chiffre valide n'a été trouvé ou une base non valide a été spécifiée\), la valeur de `nptr` est enregistrée à l'emplacement désigné par `endptr`.  
+ Si `endptr` n’a pas la valeur `NULL`, un pointeur désignant le caractère qui a arrêté l’analyse est stocké à l’emplacement désigné par `endptr`. Si aucune conversion ne peut être effectuée (aucun chiffre valide n’a été trouvé ou la base spécifiée n’est pas valide), la valeur de `nptr` est stockée à l’emplacement désigné par `endptr`.  
   
- `strtold` attend `nptr` pour pointer vers une chaîne au format suivant :  
+ `strtold` s’attend à ce que `nptr` pointe vers une chaîne au format suivant :  
   
- \[`whitespace`\] \[`sign`\] \[`digits`\] \[`.digits`\] \[ {`d` &#124; `D` &#124; `e` &#124; `E`}\[`sign`\]`digits`\]  
+ [`whitespace`] [`sign`] [`digits`] [`.digits`] [ {`d` &#124; `D` &#124; `e` &#124; `E`}[`sign`]`digits`]  
   
- Un `whitespace` peut se composer d'espaces et de caractères de tabulations, qui sont ignorés ; un `sign` est soit plus \(`+`\) soit moins \(`–`\) ; et des `digits` se composent d'un ou plusieurs chiffres décimaux.  Si aucun chiffre ne s'affiche avant le caractère de base, au moins un doit apparaître après le caractère de base.  Les nombres décimaux peuvent être suivis d'un exposant, qui comprend une lettre préliminaire \(`d`, `D`, `e` ou `E`\) et éventuellement un entier signé.  Si ni une partie d'exposant ni un caractère de base n'apparaît, il suppose qu'un caractère de base suit le dernier chiffre dans la chaîne.  Le premier caractère qui ne correspond pas à ce formulaire arrête l'analyse.  
+ Un `whitespace` peut se composer d’espaces et de tabulations, qui sont ignorés ; `sign` est un signe plus (`+`) ou moins (`–`) ; et `digits` représente un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (`d`, `D`, `e` ou `E`) et éventuellement d’un entier signé. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`strtold`, `_strtold_l`|\<stdlib.h\>|  
-|`wcstold`, `_wcstold_l`|\<stdlib.h\> ou \<wchar.h\>|  
+|`strtold`, `_strtold_l`|\<stdlib.h>|  
+|`wcstold`, `_wcstold_l`|\<stdlib.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_strtold.c  
@@ -142,22 +157,26 @@ int main( void )
 }  
 ```  
   
-  **string \= 3.1415926535898This stopped it**  
- **strtold \= 3.1415926535898**  
- **Analyse arrêtée à : Cela l'a arrêté**   
-## Équivalent .NET Framework  
+```Output  
+string = 3.1415926535898This stopped it  
+   strtold = 3.1415926535898  
+   Stopped scan at: This stopped it  
+  
+```  
+  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
  [System::Convert::ToDouble](https://msdn.microsoft.com/en-us/library/system.convert.todouble.aspx)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
  [Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
  [Fonctions de valeur chaîne en valeur numérique](../../c-runtime-library/string-to-numeric-value-functions.md)   
- [strtod, \_strtod\_l, wcstod, \_wcstod\_l](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
- [strtol, wcstol, \_strtol\_l, \_wcstol\_l](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
- [strtoul, \_strtoul\_l, wcstoul, \_wcstoul\_l](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [strtod, _strtod_l, wcstod, _wcstod_l](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
+ [strtol, wcstol, _strtol_l, _wcstol_l](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
+ [strtoul, _strtoul_l, wcstoul, _wcstoul_l](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [\_create\_locale, \_wcreate\_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
- [\_free\_locale](../../c-runtime-library/reference/free-locale.md)
+ [_create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)   
+ [_free_locale](../../c-runtime-library/reference/free-locale.md)

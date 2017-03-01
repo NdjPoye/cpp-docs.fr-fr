@@ -1,51 +1,67 @@
 ---
-title: "_setmaxstdio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_setmaxstdio"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "setmaxstdio"
-  - "_setmaxstdio"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_setmaxstdio (fonction)"
-  - "nombre maximum de fichiers ouverts"
-  - "fichiers ouverts, maximum"
-  - "setmaxstdio (fonction)"
+title: _setmaxstdio | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _setmaxstdio
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- setmaxstdio
+- _setmaxstdio
+dev_langs:
+- C++
+helpviewer_keywords:
+- maximum open files
+- _setmaxstdio function
+- setmaxstdio function
+- open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _setmaxstdio
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 7947bb8de34b5e80321ddacf03e4606a53b5dc90
+ms.lasthandoff: 02/24/2017
 
-Définit un maximum pour le nombre de fichiers ouverts simultanément au niveau `stdio`.  
+---
+# <a name="setmaxstdio"></a>_setmaxstdio
+Définit un nombre maximal de fichiers ouverts simultanément au niveau `stdio`.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int _setmaxstdio(  
@@ -53,40 +69,40 @@ int _setmaxstdio(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `newmax`  
- Nouveau maximum pour le nombre de fichiers ouverts simultanément au niveau `stdio`.  
+ Nouveau nombre maximal de fichiers ouverts simultanément au niveau `stdio`.  
   
-## Valeur de retour  
- Retourne `newmax` si l'opération réussit ; sinon, –1 .  
+## <a name="return-value"></a>Valeur de retour  
+ Retourne `newmax` en cas de réussite ; -1 dans un autre cas.  
   
- Si `newmax` est inférieur à `_IOB_ENTRIES` ou supérieur au nombre maximal de descripteurs disponibles dans le système d'exploitation, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, cette fonction renvoie \-1 et définit `errno` à la valeur `EINVAL`.  
+ Si `newmax` est inférieur à `_IOB_ENTRIES` ou supérieur au nombre maximal de descripteurs disponibles dans le système d’exploitation, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne -1 et affecte à `errno` la valeur `EINVAL`.  
   
- Pour plus d'informations sur ces éléments et autres codes d'erreur, consultez [\_doserrno, errno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- La fonction `_setmaxstdio` change la valeur maximale du nombre de fichiers qui peuvent être ouverts simultanément au niveau `stdio`.  
+## <a name="remarks"></a>Notes  
+ La fonction `_setmaxstdio` modifie la valeur maximale pour le nombre de fichiers pouvant être ouverts simultanément au niveau `stdio`.  
   
- Le runtime E\/S C prend maintenant en charge beaucoup plus de fichiers ouverts sur les plateformes Win32 que dans les versions antérieures.  Jusqu'à 2.048 fichiers peuvent être ouverts simultanément sur [lowio de niveau](../../c-runtime-library/low-level-i-o.md) \(autrement dit, ouverts et accessibles au moyen de `_open`, `_read`, `_write`, etc. famille des fonctions d'E\/S\).  Jusqu'à 512 fichiers peuvent être ouverts simultanément sur [stdio level](../../c-runtime-library/stream-i-o.md) \(autrement dit, ouverts et accessibles au moyen de `fopen`, `fgetc`, `fputc`, etc. famille des fonctions d'E\/S\).  La limite de 512 fichiers ouverts au niveau de `stdio` peut être augmentée à 2.048 au moyen de la fonction `_setmaxstdio`.  
+ Les E/S du Runtime C prennent désormais en charge beaucoup plus de fichiers ouverts sur les plateformes Win32 que dans les versions précédentes. Jusqu’à 2 048 fichiers peuvent être ouverts simultanément au [niveau lowio](../../c-runtime-library/low-level-i-o.md) (autrement dit, leur ouverture et leur accès s’effectue par le biais de la famille de fonctions d’E/S `_open`, `_read`, `_write`, etc.). Jusqu’à 512 fichiers peuvent être ouverts simultanément au [niveau stdio](../../c-runtime-library/stream-i-o.md) (autrement dit, leur ouverture et leur accès s’effectue par le biais de la famille de fonctions `fopen`, `fgetc`, `fputc`, etc.). La limite de 512 fichiers ouverts au niveau `stdio` peut être portée à un maximum de 2 048 par le biais de la fonction `_setmaxstdio`.  
   
- Étant donné que des fonctions de niveau `stdio`, telles que `fopen`, sont générées à partir de fonctions `lowio`, la valeur maximale de 2.048 est une limite supérieure difficile pour le même nombre de fichiers ouverts accessibles via la bibliothèque Runtime C.  
+ Sachant que les fonctions de niveau `stdio`, telles que `fopen`, s’appuient sur les fonctions `lowio`, le maximum de 2 048 est une limite supérieure stricte pour le nombre de fichiers ouverts simultanément accessibles via la bibliothèque Runtime C.  
   
 > [!NOTE]
->  Cette limite supérieure peut être au delà de ce qui est pris en charge par une plateforme et une configuration spécifiques Win32.  
+>  Il est possible que cette limite supérieure soit au-delà de ce qu’une plateforme et une configuration Win32 particulières peuvent prendre en charge.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_setmaxstdio`|\<stdio.h\>|  
+|`_setmaxstdio`|\<stdio.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
- Consultez [\_getmaxstdio](../../c-runtime-library/reference/getmaxstdio.md) pour un exemple de l'utilisation de `_setmaxstdio`.  
+## <a name="example"></a>Exemple  
+ Pour obtenir un exemple d’utilisation de `_setmaxstdio`, consultez [_getmaxstdio](../../c-runtime-library/reference/getmaxstdio.md).  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)
+## <a name="see-also"></a>Voir aussi  
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)

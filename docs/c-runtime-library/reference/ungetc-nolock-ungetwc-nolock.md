@@ -1,58 +1,74 @@
 ---
-title: "_ungetc_nolock, _ungetwc_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ungetwc_nolock"
-  - "_ungetc_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ungettc_nolock"
-  - "ungetwc_nolock"
-  - "ungetc_nolock"
-  - "_ungetc_nolock"
-  - "_ungetwc_nolock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ungetc_nolock (fonction)"
-  - "_ungettc_nolock (fonction)"
-  - "_ungetwc_nolock (fonction)"
-  - "caractères, push vers le flux"
-  - "ungetc_nolock (fonction)"
-  - "ungettc_nolock (fonction)"
-  - "ungetwc_nolock (fonction)"
+title: _ungetc_nolock, _ungetwc_nolock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ungetwc_nolock
+- _ungetc_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ungettc_nolock
+- ungetwc_nolock
+- ungetc_nolock
+- _ungetc_nolock
+- _ungetwc_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ungettc_nolock function
+- _ungetwc_nolock function
+- characters, pushing back onto stream
+- _ungetc_nolock function
+- ungetwc_nolock function
+- ungettc_nolock function
+- ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# _ungetc_nolock, _ungetwc_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 9a16b7d6152ce3070eb8e4ea7552ab83200c0910
+ms.lasthandoff: 02/24/2017
 
-Repousse un caractère vers le flux.  
+---
+# <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
+Renvoie un caractère dans le flux via une transmission de type push.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int _ungetc_nolock(  
@@ -65,40 +81,40 @@ wint_t _ungetwc_nolock(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `c`  
- Caractère à renvoyer.  
+ Caractère à renvoyer (transmission push).  
   
  `stream`  
- Pointeur vers la structure `FILE`.  
+ Pointeur vers la structure `FILE` .  
   
-## Valeur de retour  
- En cas de réussite, chacune de ces fonctions retourne l'argument `c`de caractère*.* Si `c` ne peut pas être refoulé ou si aucun caractère n'a été lu, le flux d'entrée est inchangé et `_ungetc_nolock` retourne `EOF`; `_ungetwc_nolock` retourne `WEOF`.  Si `stream` est `NULL`, `EOF` ou `WEOF` est retourné et `errno` a la valeur `EINVAL`.  
+## <a name="return-value"></a>Valeur de retour  
+ En cas de réussite, chacune de ces fonctions retourne l’argument de caractère `c`*.* Si `c` ne peut pas être renvoyé via une transmission de type push ou si aucun caractère n’a été lu, le flux d’entrée est inchangé et `_ungetc_nolock` retourne `EOF` ; `_ungetwc_nolock` retourne `WEOF`. Si `stream` a la valeur `NULL`, `EOF` ou `WEOF` est retourné et `errno` prend la valeur `EINVAL`.  
   
- Pour plus d'informations sur ces codes d'erreur et autres, consultez [\_doserrno, errno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- Ces fonctions sont les versions sans verrouillage de `ungetc` et de `ungetwc`.  Les versions avec le suffixe `_nolock` sont identiques mais elles ne sont pas protégées contre les interférence en provenance d'autres threads.  Elles peuvent être plus rapides car elles n'entraînent pas la charge du verrouillage des autres threads.  Utilisez ces fonctions uniquement dans les contextes thread\-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.  
+## <a name="remarks"></a>Notes  
+ Ces fonctions sont les versions sans verrouillage de `ungetc` et `ungetwc`. Les versions avec suffixe `_nolock` sont identiques, sauf qu’elles ne sont pas protégées contre les interférences avec les autres threads. Elles peuvent être plus rapides, car elles n’entraînent pas la surcharge liée au verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ungettc_nolock`|`_ungetc_nolock`|`_ungetc_nolock`|`_ungetwc_nolock`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_ungetc_nolock`|\<stdio.h\>|  
-|`_ungetwc_nolock`|\<stdio.h\> ou \<wchar.h\>|  
+|`_ungetc_nolock`|\<stdio.h>|  
+|`_ungetwc_nolock`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Voir aussi  
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
  [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)   
  [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)

@@ -1,66 +1,82 @@
 ---
-title: "_tempnam, _wtempnam, tmpnam, _wtmpnam | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wtempnam"
-  - "_wtmpnam"
-  - "tmpnam"
-  - "_tempnam"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wtempnam"
-  - "_wtmpnam"
-  - "wtmpnam"
-  - "tmpnam"
-  - "_wtempnam"
-  - "_tempnam"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tempnam (fonction)"
-  - "_ttmpnam (fonction)"
-  - "_wtempnam (fonction)"
-  - "_wtmpnam (fonction)"
-  - "noms de fichiers (C++), créer temporaire"
-  - "noms de fichiers (C++), temporaires"
-  - "tempnam (fonction)"
-  - "fichiers temporaires, créer"
-  - "tmpnam (fonction)"
-  - "ttmpnam (fonction)"
-  - "wtempnam (fonction)"
-  - "wtmpnam (fonction)"
+title: _tempnam, _wtempnam, tmpnam, _wtmpnam | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wtempnam
+- _wtmpnam
+- tmpnam
+- _tempnam
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wtempnam
+- _wtmpnam
+- wtmpnam
+- tmpnam
+- _wtempnam
+- _tempnam
+dev_langs:
+- C++
+helpviewer_keywords:
+- wtempnam function
+- file names [C++], creating temporary
+- _tempnam function
+- ttmpnam function
+- tmpnam function
+- tempnam function
+- wtmpnam function
+- temporary files, creating
+- file names [C++], temporary
+- _ttmpnam function
+- _wtmpnam function
+- _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _tempnam, _wtempnam, tmpnam, _wtmpnam
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e4f0eff8758694e97bfb310f9cfa650cb28cefa4
+ms.lasthandoff: 02/24/2017
 
-Génére des noms que vous pouvez utiliser pour créer des fichiers temporaires.  Des versions plus sécurisées de certaines de ces fonctions sont disponibles ; consultez [tmpnam\_s, \_wtmpnam\_s](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md).  
+---
+# <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
+Génèrent des noms que vous pouvez utiliser pour créer des fichiers temporaires. Il existe des versions plus sécurisées de ces fonctions. Consultez [tmpnam_s, _wtmpnam_s](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 char *_tempnam(  
@@ -79,59 +95,59 @@ wchar_t *_wtmpnam(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `prefix`  
- La chaîne qui sera ajoutée au début des noms retournés par `_tempnam`.  
+ Chaîne qui sera ajoutée aux noms retournés par `_tempnam`.  
   
  `dir`  
- Le chemin d'accès utilisé dans le nom du fichier s'il n'existe aucune variable d'environnement TMP, ou si TMP n'est pas un répertoire valide.  
+ Chemin d’accès utilisé dans le nom de fichier en l’absence de variable d’environnement TMP ou si TMP n’est pas un répertoire valide.  
   
  `str`  
- Pointeur qui contiendra le nom généré et qui sera identique au nom retourné par la fonction.  Il s'agit d'un moyen commode d'enregistrer le nom généré.  
+ Pointeur destiné à contenir le nom généré et qui sera identique à celui retourné par la fonction. Il s’agit d’un moyen pratique d’enregistrer le nom généré.  
   
-## Valeur de retour  
- Chacune de ces fonctions retourne un pointeur vers le nom généré ou `NULL` en cas de échec.  L'erreur peut se produire si vous tentez plus que `TMP_MAX` \(voir STDIO.H\) appels avec `tmpnam` ou si vous utilisez `_tempnam`et qu'il y a un nom de répertoire invalide spécifié dans la variable d'environnement TMP et dans le paramètre `dir`.  
+## <a name="return-value"></a>Valeur de retour  
+ Chacune de ces fonctions retourne un pointeur désignant le nom généré ou `NULL` en cas de défaillance. Un échec peut se produire si vous tentez plus de `TMP_MAX` (voir STDIO.H) appels avec `tmpnam` ou si vous utilisez `_tempnam` et qu’un nom de répertoire non valide a été spécifié dans la variable d’environnement TMP et dans le paramètre `dir`.  
   
 > [!NOTE]
->  Les pointeurs retournés par `tmpnam` et le point `_wtmpnam` aux tampons statiques internes.  [disponible](../../c-runtime-library/reference/free.md) ne doit pas être appelé pour libérer les pointeurs.  `free` doit être appelé pour les pointeurs alloués par `_tempnam` et `_wtempnam`.  
+>  Les pointeurs retournés par `tmpnam` et `_wtmpnam` pointent vers des mémoires tampons internes statiques. [free](../../c-runtime-library/reference/free.md) ne doit pas être appelé pour libérer ces pointeurs. `free` doit être appelé pour les pointeurs alloués par `_tempnam` et `_wtempnam`.  
   
-## Notes  
- Chacune de ces fonctions retourne le nom d'un fichier qui n'existe pas.  `tmpnam` retourne un nom unique dans le répertoire de travail actuel et `_tempnam` vous permet de générer un nom unique dans un répertoire autre que le actuel.  Notez que lorsqu'un nom de fichier est ajouté au début avec une barre oblique inverse et sans informations de chemin d'accès, par exempl comme \\fname21, cela indique que le nom est valide pour le répertoire de travail actuel.  
+## <a name="remarks"></a>Notes  
+ Chacune de ces fonctions retourne le nom d’un fichier qui n’existe pas actuellement. `tmpnam` retourne un nom unique dans le répertoire de travail actif et `_tempnam` vous permet de générer un nom unique dans un répertoire autre que le répertoire actif. Notez que lorsqu’un nom de fichier est précédé d’une barre oblique inverse et d’aucune information de chemin, comme \fname21, cela indique que le nom est valide pour le répertoire de travail actif.  
   
- Pour `tmpnam`, vous pouvez stocker le nom de fichier généré dans `str`.  Si `str` est `NULL`, alors `tmpnam` laisse le résultat dans un tampon interne statique.  Par conséquent tout appel à cette meme fonction par la suite détruit cette valeur  Le nom généré par `tmpnam` se compose d'un nom de fichier programme généré et, après le premier appel à `tmpnam`, d'une extension de fichier composée des numéros séquentiels en base 32 \(.1\-.vvvu, lorsque `TMP_MAX` dans STDIO.H est 32,67\).  
+ Pour `tmpnam`, vous pouvez stocker ce nom de fichier généré dans `str`. Si `str` a la valeur `NULL`, `tmpnam` maintient le résultat dans une mémoire tampon statique interne. Par conséquent, tous les appels suivants détruisent cette valeur. Le nom généré par `tmpnam` se compose d’un nom de fichier généré par le programme et, après le premier appel à `tmpnam`, d’une extension de fichier constituée de numéros séquentiels en base 32 (.1-.vvu, quand `TMP_MAX` dans STDIO.H a la valeur 32 767).  
   
- `_tempnam` génère un nom unique de répertoire choisi selon les règles suivantes :  
+ `_tempnam` génère un nom de fichier unique pour un répertoire choisi par les règles suivantes :  
   
--   Si la variable d'environnement TMP est définie et est fixée sur un nom de répertoire valide, des noms de fichier seront générés pour le répertoire spécifié par TMP.  
+-   Si la variable d’environnement TMP est définie avec un nom de répertoire valide, des noms de fichiers uniques sont générés pour le répertoire spécifié par TMP.  
   
--   Si la variable d'environnement TMP n'est pas définie ou si elle est définie sur le nom d'un répertoire qui n'existe pas, `_tempnam` utilise le paramètre `dir` comme chemin d'accès pour lequel il génère des noms uniques.  
+-   Si la variable d’environnement TMP n’est pas définie ou si elle l’est avec un nom de répertoire qui n’existe pas, `_tempnam` utilise le paramètre `dir` comme chemin pour lequel elle génère des noms uniques.  
   
--   Si la variable d'environnement TMP n'est pas définie ou si elle est définie sur le nom d'un répertoire qui n'existe pas, et si `dir` est `NULL` ou est associée à un nom de dossier qui n'existe pas, `_tempnam` utilise le répertoire de travail actuel pour générer des noms uniques.  Actuellement, si le TMP et `dir` spécifient des noms de répertoires qui n'existent pas, l'appel de la fonction `_tempnam` échoue.  
+-   Si la variable d’environnement TMP n’est pas définie ou si elle l’est avec un nom de répertoire qui n’existe pas, et si `dir` a la valeur `NULL` ou est défini avec un nom de répertoire qui n’existe pas, `_tempnam` utilise le répertoire de travail actif pour générer des noms uniques. Pour l’heure, si TMP et `dir` spécifient tous deux des noms de répertoires qui n’existent pas, l’appel de la fonction `_tempnam` échoue.  
   
- Le nom retourné par `_tempnam` est une concaténation de `prefix` et d'un numéro séquentiel, qui seront mixés pour créer un nom de fichier unique du répertoire spécifié.  `_tempnam` génère les noms de fichiers qui n'ont aucune extension.  `_tempnam` utilise [malloc](../../c-runtime-library/reference/malloc.md) pour allouer de l'espace pour le nom de fichier ; le programme est chargé de récupérer de l'espace lorsque vous n'en avez plus besoin.  
+ Le nom retourné par `_tempnam` est une concaténation de `prefix` et d’un numéro séquentiel, qui sont associés pour créer un nom de fichier unique pour le répertoire spécifié. `_tempnam` génère des noms de fichiers sans extension. `_tempnam` utilise [malloc](../../c-runtime-library/reference/malloc.md) pour allouer de l’espace pour le nom de fichier. Le programme est chargé de libérer cet espace quand il n’a plus d’utilité.  
   
- `_tempnam` et \<languageKeyword\>tmpnam\<\/languageKeyword\> gèrent automatiquement les arguments de chaîne de caractères multi\-octets comme approprié, identifiant des séquences de caractères multioctets selon la page de codes OEM extraite du système d'exploitation.  `_wtempnam` est une version caractères larges de `_tempnam`; les arguments et la valeur de retour de  `_wtempnam` sont des chaînes de caractères larges.  `_wtempnam` et `_tempnam` se comportent de la même manière que `_wtempnam` mais ne gèrent pas les chaînes de caractères multi\-octets.  `_wtmpnam` est une version caractères larges de `tmpnam`; l'argument et la valeur de retour de  `_wtmpnam` sont des chaînes de caractères larges.  `_wtmpnam` et `tmpnam` se comportent de la même manière que `_wtmpnam` mais ne gèrent pas les chaînes de caractères multi\-octets.  
+ `_tempnam` et `tmpnam` gèrent automatiquement les arguments de chaîne de caractères multioctets comme il convient, en identifiant les séquences de caractères multioctets en fonction de la page de codes OEM obtenue du système d’exploitation. `_wtempnam` est une version à caractères larges de `_tempnam` ; les arguments et la valeur de retour de `_wtempnam` sont des chaînes de caractères larges. `_wtempnam` et `_tempnam` se comportent de la même manière, sauf que `_wtempnam` ne gère pas les chaînes de caractères multioctets. `_wtmpnam` est une version à caractères larges de `tmpnam` ; l'argument et la valeur de retour de `_wtmpnam` sont des chaînes à caractères larges. `_wtmpnam` et `tmpnam` se comportent de la même manière, sauf que `_wtmpnam` ne gère pas les chaînes de caractères multioctets.  
   
- Si `_DEBUG` et `_CRTDBG_MAP_ALLOC` sont définis, `_tempnam` et `_wtempnam` sont remplacés par des appels à [\_tempnam\_dbg et \_wtempnam\_dbg](../../c-runtime-library/reference/tempnam-dbg-wtempnam-dbg.md).  
+ Si `_DEBUG` et `_CRTDBG_MAP_ALLOC` sont définis, `_tempnam` et `_wtempnam` sont remplacés par des appels à [_tempnam_dbg et _wtempnam_dbg](../../c-runtime-library/reference/tempnam-dbg-wtempnam-dbg.md).  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ttmpnam`|`tmpnam`|`tmpnam`|`_wtmpnam`|  
 |`_ttempnam`|`_tempnam`|`_tempnam`|`_wtempnam`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_tempnam`|\<stdio.h\>|  
-|`_wtempnam`, `_wtmpnam`|\<stdio.h\> ou \<wchar.h\>|  
-|`tmpnam`|\<stdio.h\>|  
+|`_tempnam`|\<stdio.h>|  
+|`_wtempnam`, `_wtmpnam`|\<stdio.h> ou \<wchar.h>|  
+|`tmpnam`|\<stdio.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_tempnam.c  
@@ -172,15 +188,18 @@ int main( void )
 }  
 ```  
   
-  **\\ s1gk. est sécurisé pour utiliser dans un fichier temporaire.**  
-**Il est sûr d'utiliser C:\\DOCUME~1\\user\\LOCALS~1\\Temp\\2\\stq2 dans un fichier temporaire.**   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+\s1gk. is safe to use as a temporary file.  
+C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.  
+```  
   
-## Voir aussi  
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
- [\_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
- [\_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
  [tmpfile](../../c-runtime-library/reference/tmpfile.md)   
- [tmpfile\_s](../../c-runtime-library/reference/tmpfile-s.md)
+ [tmpfile_s](../../c-runtime-library/reference/tmpfile-s.md)

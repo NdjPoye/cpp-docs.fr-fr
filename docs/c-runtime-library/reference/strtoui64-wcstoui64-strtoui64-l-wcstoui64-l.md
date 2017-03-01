@@ -1,67 +1,81 @@
 ---
-title: "_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_strtoui64"
-  - "_strtoui64_l"
-  - "_wcstoui64"
-  - "_wcstoui64_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wcstoui64_l"
-  - "strtoui64_l"
-  - "wcstoui64"
-  - "_wcstoui64"
-  - "_strtoui64_l"
-  - "strtoui64"
-  - "_strtoui64"
-  - "wcstoui64_l"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_strtoui64 (fonction)"
-  - "_strtoui64_l (fonction)"
-  - "_wcstoui64 (fonction)"
-  - "_wcstoui64_l (fonction)"
-  - "conversion de chaînes, en entiers"
-  - "strtoui64 (fonction)"
-  - "strtoui64_l (fonction)"
-  - "wcstoui64 (fonction)"
-  - "wcstoui64_l (fonction)"
+title: _strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _strtoui64
+- _strtoui64_l
+- _wcstoui64
+- _wcstoui64_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wcstoui64_l
+- strtoui64_l
+- wcstoui64
+- _wcstoui64
+- _strtoui64_l
+- strtoui64
+- _strtoui64
+- wcstoui64_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _strtoui64_l function
+- _wcstoui64_l function
+- string conversion, to integers
+- wcstoui64_l function
+- _strtoui64 function
+- _wcstoui64 function
+- wcstoui64 function
+- strtoui64_l function
+- strtoui64 function
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
 caps.latest.revision: 19
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 6d7253994d7f9920a4fcca3844766dce38f5c5d8
+ms.lasthandoff: 02/24/2017
 
-Convertit une chaîne en valeur non signée `__int64`.  
+---
+# <a name="strtoui64-wcstoui64-strtoui64l-wcstoui64l"></a>_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
+Convertit une chaîne en valeur `__int64` non signée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned __int64 _strtoui64(  
@@ -88,12 +102,12 @@ unsigned __int64 _wcstoui64(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `nptr`  
- Chaîne terminée par Null à convertir.  
+ Chaîne se terminant par un caractère Null à convertir.  
   
  `endptr`  
- Pointeur vers le caractère qui arrête l'analyse.  
+ Pointeur désignant le caractère qui arrête l’analyse.  
   
  `base`  
  Base numérique à utiliser.  
@@ -101,49 +115,49 @@ unsigned __int64 _wcstoui64(
  `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
- `_strtoui64` renvoie la valeur qui est représentée dans la chaîne `nptr`, sauf lorsque la représentation provoque un dépassement de capacité, dans ce cas, elle retourne `_UI64_MAX`. \_`strtoui64`renvoie 0 si aucune conversion ne peut être exécutée.  
+## <a name="return-value"></a>Valeur de retour  
+ La fonction `_strtoui64` retourne la valeur représentée dans la chaîne `nptr`, sauf dans le cas où la représentation entraînerait un dépassement de capacité positif, auquel cas elle retourne `_UI64_MAX`. `strtoui64` retourne 0 si aucune conversion ne peut être effectuée.  
   
  `_UI64_MAX` est défini dans LIMITS.H.  
   
- Si `nptr` est `NULL` ou `base` est différent de zéro et inférieurs à 2 ou supérieur à 36, `errno` a la valeur `EINVAL`.  
+ Si `nptr` a la valeur `NULL` ou que `base` est différent de zéro et inférieur à 2 ou supérieur à 36, `errno` prend la valeur `EINVAL`.  
   
- Consultez [\_doserrno, errno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d'informations sur ces éléments et autres codes de retour.  
+ Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- La fonction `_strtoui64`convertit `nptr` en `unsigned` `__int64`.  `_wcstoui64` est une version à caractères larges de `_strtoui64`; son argument `nptr` est une chaîne à caractères larges.  Sinon ces fonctions se comportent de façon identique.  
+## <a name="remarks"></a>Notes  
+ La fonction `_strtoui64` convertit `nptr` en `unsigned` `__int64`. `_wcstoui64` est une version à caractères larges de `_strtoui64` ; son argument `nptr` est une chaîne de caractères larges. Sinon, ces fonctions se comportent de façon identique.  
   
- Les deux fonctions cessent de lire la chaîne `nptr` au premier caractère qu'elles ne peuvent pas reconnaître comme faisant partie d'un nombre.  Il peut s'agir du caractère null de fin, ou il peut s'agir du premier caractère numérique supérieur ou égal à `base`.  
+ Les deux fonctions arrêtent de lire la chaîne `nptr` au premier caractère qu’elles ne peuvent pas identifier comme faisant partie intégrante d’un nombre. Il peut s’agir du caractère Null de fin ou bien du premier caractère numérique supérieur ou égal à `base`.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcstoui64`|`_strtoui64`|`_strtoui64`|`_wstrtoui64`|  
 |`_tcstoui64_l`|`_strtoui64_l`|`_strtoui64_l`|`_wstrtoui64_l`|  
   
- Le paramètre de la catégorie `LC_NUMERIC` des paramètres régionaux actuels détermine la reconnaissance des caractères de base dans `nptr`; pour plus d'informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  Les fonctions qui ne disposent pas du suffixe \_l utilisent les paramètres régionaux actuels `_strtoui64_l` et les suffixes`_wcstoui64_l` sont identiques aux fonctions correspondantes qui ne disposent pas du suffixe `_l`, sauf qu'elles utilisent à la place les paramètres régionaux passés.  Pour plus d'informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La valeur du paramètre de catégorie `LC_NUMERIC` des paramètres régionaux actifs détermine la reconnaissance du caractère de base dans `nptr`. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les fonctions sans suffixe _l utilisent les paramètres régionaux actifs ;`_strtoui64_l` et `_wcstoui64_l` sont identiques aux fonctions correspondantes sans suffixe `_l`, à ceci près qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
- Si `endptr` n'a pas la valeur `NULL`, un pointeur vers le caractère qui a arrêté l'analyse est enregistré à l'emplacement désigné par `endptr`.  Si aucune conversion ne peut être effectuée \(aucun chiffre valide n'a été trouvé ou une base non valide a été spécifiée\), la valeur de `nptr` est enregistrée à l'emplacement désigné par `endptr`.  
+ Si `endptr` n’a pas la valeur `NULL`, un pointeur désignant le caractère qui a arrêté l’analyse est stocké à l’emplacement désigné par `endptr`. Si aucune conversion ne peut être effectuée (aucun chiffre valide n’a été trouvé ou la base spécifiée n’est pas valide), la valeur de `nptr` est stockée à l’emplacement désigné par `endptr`.  
   
- `_strtoui64` attend `nptr` pour pointer vers une chaîne au format suivant:  
+ `_strtoui64` s’attend à ce que `nptr` pointe vers une chaîne au format suivant :  
   
- \[`whitespace`\] \[{`+` &#124; `–`}\] \[`0` \[{ `x` &#124; `X` }\]\] \[`digits`\]  
+ [`whitespace`] [{`+` &#124; `–`}] [`0` [{ `x` &#124; `X` }]] [`digits`]  
   
- Un `whitespace` peut être composé de caractères espace et tabulation, qui sont ignorés ; `digits` sont un ou plusieurs chiffres décimaux.  Le premier caractère qui ne correspond pas à ce formulaire arrête l'analyse.  Si `base` est compris entre 2 et 36, il est utilisé comme base du nombre.  Si `base` est 0, les caractères initiaux de la chaîne désignée par `nptr` sont utilisés pour déterminer la base.  Si le premier caractère est 0 et le deuxième caractère n'est pas « x » ou « X », la chaîne est interprétée comme un entier octal.  Si le premier caractère est « 0 » et le deuxième caractère est « x » ou « X », la chaîne est interprétée comme un entier hexadécimal.  Si le premier caractère est compris entre « 1 » et « 9 », la chaîne est interprétée comme un entier décimal.  Les valeurs 10 à 35 sont assignées aux lettres « à » à « z » \(ou « À » à « Z »\) ; seules les lettres dont les valeurs assignées sont inférieures à `base` sont autorisées.  Le premier caractère en dehors de la plage de la base arrête l'analyse.  Par exemple, si `base` correspond à 0 et le premier caractère analysé est « 0 », un entier octal est supposé et un caractère « 8 » ou « 9 » arrêtera l'analyse.  
+ Un `whitespace` peut être constitué d’espaces et de tabulations, qui sont ignorés ; `digits` se compose d’un ou plusieurs chiffres décimaux. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse. Si `base` a une valeur comprise entre 2 et 36, elle est utilisée comme base numérique. Si `base` a la valeur 0, les premiers caractères de la chaîne désignée par `nptr` servent à déterminer la base. Si le premier caractère est 0 et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à `base`. Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, si `base` est égal à 0 et que le premier caractère analysé est « 0 », il est supposé qu’il s’agit d’un entier octal et un caractère « 8 » ou « 9 » a pour effet de stopper l’analyse.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_strtoui64`|\<stdlib.h\>|  
-|`_wcstoui64`|\<stdlib.h\> ou \<wchar.h\>|  
-|`_strtoui64_l`|\<stdlib.h\>|  
-|`_wcstoui64_l`|\<stdlib.h\> ou \<wchar.h\>|  
+|`_strtoui64`|\<stdlib.h>|  
+|`_wcstoui64`|\<stdlib.h> ou \<wchar.h>|  
+|`_strtoui64_l`|\<stdlib.h>|  
+|`_wcstoui64_l`|\<stdlib.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_strtoui64.c  
@@ -159,13 +173,16 @@ int main() {
 }  
 ```  
   
-  **u \= 18446744073709551615**   
-## Voir aussi  
+```Output  
+u = 18446744073709551615  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [Fonctions de valeur chaîne en valeur numérique](../../c-runtime-library/string-to-numeric-value-functions.md)   
- [strtod, \_strtod\_l, wcstod, \_wcstod\_l](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
- [strtoul, \_strtoul\_l, wcstoul, \_wcstoul\_l](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
+ [strtod, _strtod_l, wcstod, _wcstod_l](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
+ [strtoul, _strtoul_l, wcstoul, _wcstoul_l](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

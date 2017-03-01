@@ -1,75 +1,89 @@
 ---
-title: "_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ungetch_nolock"
-  - "_ungetwch_nolock"
-  - "_ungetwch"
-  - "_ungetch"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-conio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ungetch_nolock"
-  - "ungetwch"
-  - "ungetch_nolock"
-  - "_ungetwch"
-  - "ungetch"
-  - "ungetwch_nolock"
-  - "_ungetch"
-  - "_ungettch_nolock"
-  - "_ungettch"
-  - "_ungetwch_nolock"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_ungetch (fonction)"
-  - "_ungetch_nolock (fonction)"
-  - "_ungettch (fonction)"
-  - "_ungettch_nolock (fonction)"
-  - "_ungetwch (fonction)"
-  - "_ungetwch_nolock (fonction)"
-  - "caractères, push vers la console"
-  - "ungetch_nolock (fonction)"
-  - "ungettch (fonction)"
-  - "ungettch_nolock (fonction)"
-  - "ungetwch (fonction)"
-  - "ungetwch_nolock (fonction)"
+title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ungetch_nolock
+- _ungetwch_nolock
+- _ungetwch
+- _ungetch
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ungetch_nolock
+- ungetwch
+- ungetch_nolock
+- _ungetwch
+- ungetch
+- ungetwch_nolock
+- _ungetch
+- _ungettch_nolock
+- _ungettch
+- _ungetwch_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ungetch function
+- ungetwch function
+- characters, pushing back to console
+- _ungettch_nolock function
+- ungettch function
+- _ungettch function
+- ungetch_nolock function
+- ungettch_nolock function
+- _ungetwch_nolock function
+- _ungetch_nolock function
+- ungetwch_nolock function
+- _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
 caps.latest.revision: 17
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 71e7784eefcfa69d12de2229b360845d1fd99a30
+ms.lasthandoff: 02/24/2017
 
-Renvoie le dernier caractère qui est lu de la console.  
+---
+# <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
+Renvoie le dernier caractère lu à partir de la console via une transmission push.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime.  Pour plus d'informations, consultez [Fonctions CRT non prises en charge avec \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int _ungetch(  
@@ -86,35 +100,35 @@ wint_t _ungetwch_nolock(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `c`  
- Caractère à renvoyer.  
+ Caractère à renvoyer (transmission push).  
   
-## Valeur de retour  
- Les fonctions retournent le caractère `c` en cas de réussite.  S'il y a une erreur, `_ungetch` retourne la valeur `EOF` et `_ungetwch`retourne`WEOF`.  
+## <a name="return-value"></a>Valeur de retour  
+ Ces deux fonctions retournent le caractère `c` en cas de réussite. En cas d’erreur, `_ungetch` retourne la valeur `EOF` et `_ungetwch` la valeur `WEOF`.  
   
-## Notes  
- Ces fonctions poussent le caractère `c` dans la console, et `c` est le caractère suivant lu par `_getch` ou `_getche` \(`_getwch` ou`_getwche`\).  `_ungetch` et `_ungetwch` échouent si elles sont appelées plusieurs fois avant la lecture suivante.  L'argument `c` ne peut pas être `EOF` \(ou `WEOF`\).  
+## <a name="remarks"></a>Notes  
+ Ces fonctions renvoient le caractère `c` à la console via une transmission push , ce qui fait de `c` le prochain caractère à être lu par `_getch` ou `_getche` (ou `_getwch` ou `_getwche`). Les fonctions `_ungetch` et `_ungetwch` échouent si elles sont appelées plusieurs fois avant la prochaine opération de lecture. L’argument `c` ne peut pas être différent de `EOF` (ou `WEOF`).  
   
- Les versions avec le suffixe `_nolock` sont identiques mais elles ne sont pas protégées contre les interférence en provenance d'autres threads.  Elles peuvent être plus rapides car elles n'entraînent pas la charge du verrouillage des autres threads.  Utilisez ces fonctions uniquement dans les contextes thread\-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.  
+ Les versions avec suffixe `_nolock` sont identiques, sauf qu’elles ne sont pas protégées contre les interférences avec les autres threads. Elles peuvent être plus rapides, car elles n’entraînent pas la surcharge liée au verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ungettch`|`_ungetch`|`_ungetch`|`_ungetwch`|  
 |`_ungettch_nolock`|`_ungetch_nolock`|`_ungetch_nolock`|`_ungetwch_nolock`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_ungetch`, `_ungetch_nolock`|\<conio.h\>|  
-|`_ungetwch`, `_ungetwch_nolock`|\<conio.h\> or \<wchar.h\>|  
+|`_ungetch`, `_ungetch_nolock`|\<conio.h>|  
+|`_ungetwch`, `_ungetwch_nolock`|\<conio.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_ungetch.c  
@@ -151,8 +165,12 @@ int main( void )
 }  
 ```  
   
-  **`Blanc` jeton \= blanc**   
-## Voir aussi  
- [Console et port E\/S](../../c-runtime-library/console-and-port-i-o.md)   
- [\_cscanf, \_cscanf\_l, \_cwscanf, \_cwscanf\_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
- [\_getch, \_getwch](../../c-runtime-library/reference/getch-getwch.md)
+```Output  
+  
+Whitetoken = White  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [E/S de console et de port](../../c-runtime-library/console-and-port-i-o.md)   
+ [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
+ [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)

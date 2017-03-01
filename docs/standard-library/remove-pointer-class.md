@@ -1,57 +1,70 @@
 ---
-title: "remove_pointer, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "remove_pointer"
-  - "std.tr1.remove_pointer"
-  - "std::tr1::remove_pointer"
-  - "std.remove_pointer"
-  - "std::remove_pointer"
-  - "type_traits/std::remove_pointer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remove_pointer (classe) (TR1)"
-  - "remove_pointer"
+title: remove_pointer, classe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- remove_pointer
+- std::remove_pointer
+- type_traits/std::remove_pointer
+dev_langs:
+- C++
+helpviewer_keywords:
+- remove_pointer class
+- remove_pointer
 ms.assetid: 2cd4e417-32fb-4f53-bd16-4e8a98240832
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# remove_pointer, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: b9e00cba8b892c9834f56846f698ee59aca523cf
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="removepointer-class"></a>remove_pointer, classe
 Transforme un pointeur en type.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-template<class T>  
-    struct remove_pointer;  
-  
-template<class T>  
-  using remove_pointer_t = typename remove_pointer<T>::type;  
+template <class T>  
+struct remove_pointer;  
+ 
+template <class T>  
+using remove_pointer_t = typename remove_pointer<T>::type;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
  Type à modifier.  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Une instance de `remove_pointer<T>` contient un type modifié qui est `T1` quand `T` est au format `T1*`, `T1* const`, `T1* volatile` ou `T1* const volatile`. Sinon, `T`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 #include <type_traits>   
 #include <iostream>   
   
@@ -65,15 +78,18 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
-  **remove\_pointer\_t\<int \*\> \=\= int**   
-## Configuration requise  
- **En\-tête :** \<type\_traits\>  
+```Output  
+remove_pointer_t<int *> == int  
+```  
   
- **Espace de noms :** std  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<type_traits>  
   
-## Voir aussi  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [add\_pointer, classe](../standard-library/add-pointer-class.md)
+ **Espace de noms :** std  
+  
+## <a name="see-also"></a>Voir aussi  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [add_pointer, classe](../standard-library/add-pointer-class.md)
+
