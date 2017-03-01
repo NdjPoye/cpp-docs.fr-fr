@@ -1,49 +1,65 @@
 ---
-title: "_CrtMemCheckpoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtMemCheckpoint"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtMemCheckpoint"
-  - "_CrtMemCheckpoint"
-  - "crtdbg/_CrtMemCheckpoint"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CrtMemCheckpoint (fonction)"
-  - "_CrtMemCheckpoint (fonction)"
+title: _CrtMemCheckpoint | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtMemCheckpoint
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtMemCheckpoint
+- _CrtMemCheckpoint
+- crtdbg/_CrtMemCheckpoint
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtMemCheckpoint function
+- _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _CrtMemCheckpoint
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5f9b0615a51318ea0e783a90d7a450b6e11372d2
+ms.lasthandoff: 02/24/2017
 
-Obtient l'état actuel du tas de débogage et le stocke dans une structure `_CrtMemState` fournie par l'application \(version debug uniquement\).  
+---
+# <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
+Obtient l'état actuel du tas de débogage et le stocke dans une structure `_CrtMemState` fournie par l'application (version debug uniquement).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void _CrtMemCheckpoint(  
@@ -51,32 +67,32 @@ void _CrtMemCheckpoint(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `state`  
  Pointeur vers la structure `_CrtMemState` à remplir avec le point de contrôle de mémoire.  
   
-## Notes  
- La fonction `_CrtMemCheckpoint` crée un instantané de l'état actuel du tas de débogage à tout moment donné. Cet instantané peut être utilisé par d’autres fonctions d’état du tas, comme [\_CrtMemDifference](../../c-runtime-library/reference/crtmemdifference.md), pour aider à détecter les fuites de mémoire et d’autres problèmes. Quand [\_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à `_CrtMemState` sont supprimés lors du prétraitement.  
+## <a name="remarks"></a>Notes  
+ La fonction `_CrtMemCheckpoint` crée un instantané de l'état actuel du tas de débogage à tout moment donné. Cet instantané peut être utilisé par d’autres fonctions d’état du tas, comme [_CrtMemDifference](../../c-runtime-library/reference/crtmemdifference.md), pour aider à détecter les fuites de mémoire et d’autres problèmes. Quand [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à `_CrtMemState` sont supprimés durant le prétraitement.  
   
- L'application doit passer un pointeur vers une instance précédemment allouée de la structure `_CrtMemState`, définie dans Crtdbg.h, dans le paramètre `state`. Si `_CrtMemCheckpoint` rencontre une erreur pendant la création du point de contrôle, la fonction génère un rapport de débogage `_CRT_WARN` qui décrit le problème.  
+ L'application doit passer un pointeur vers une instance précédemment allouée de la structure `_CrtMemState` , définie dans Crtdbg.h, dans le paramètre `state` . Si `_CrtMemCheckpoint` rencontre une erreur pendant la création du point de contrôle, la fonction génère un rapport de débogage `_CRT_WARN` qui décrit le problème.  
   
- Pour plus d’informations sur les fonctions d’état du tas et sur la structure `_CrtMemState`, consultez [Fonctions de création de rapports sur l'état du tas](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Heap_State_Reporting_Functions). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [Détails du tas de débogage CRT](../Topic/CRT%20Debug%20Heap%20Details.md).  
+ Pour plus d’informations sur les fonctions d’état du tas et sur la structure `_CrtMemState`, consultez [Fonctions de création de rapports sur l’état du tas](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [Détails du tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
- Si `state` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, [errno, \_doserrno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) est défini sur `EINVAL` et la fonction se termine.  
+ Si `state` a la valeur `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, [errno, _doserrno, _sys_errlist, et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) ont la valeur `EINVAL` et la fonction retourne le contrôle.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_CrtMemCheckpoint`|\<crtdbg.h\>, \<errno.h\>|  
+|`_CrtMemCheckpoint`|\<crtdbg.h>, \<errno.h>|  
   
  Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
- **Bibliothèques :** uniquement les versions Debug de la bibliothèque UCRT.  
+ **Bibliothèques :** uniquement les versions Debug de la bibliothèque UCRT.  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Routines de débogage](../../c-runtime-library/debug-routines.md)   
- [\_CrtMemDifference](../../c-runtime-library/reference/crtmemdifference.md)
+ [_CrtMemDifference](../../c-runtime-library/reference/crtmemdifference.md)

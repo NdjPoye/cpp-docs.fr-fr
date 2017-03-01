@@ -1,48 +1,65 @@
 ---
-title: "_CrtSetAllocHook | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtSetAllocHook"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_CrtSetAllocHook"
-  - "CrtSetAllocHook"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CrtSetAllocHook (fonction)"
-  - "CrtSetAllocHook (fonction)"
+title: _CrtSetAllocHook | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtSetAllocHook
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _CrtSetAllocHook
+- CrtSetAllocHook
+dev_langs:
+- C++
+helpviewer_keywords:
+- _CrtSetAllocHook function
+- CrtSetAllocHook function
 ms.assetid: 405df37b-2fd1-42c8-83bc-90887f17f29d
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _CrtSetAllocHook
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 00e878414b2aaa71a8cbfc78997e934225f4e6fc
+ms.lasthandoff: 02/24/2017
 
-Installe une fonction d'allocation définie par le client en l'accrochant dans le processus d'allocation mémoire de débogage du runtime C \(version Debug uniquement\).  
+---
+# <a name="crtsetallochook"></a>_CrtSetAllocHook
+Installe une fonction d’allocation définie par le client en la raccordant au processus d’allocation de mémoire de débogage du runtime C (version de débogage uniquement).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 _CRT_ALLOC_HOOK _CrtSetAllocHook(  
@@ -50,17 +67,17 @@ _CRT_ALLOC_HOOK _CrtSetAllocHook(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `allocHook`  
- Nouvelle fonction d'allocation définie par le client pour connecter dans le processus d'allocation mémoire du débogage du runtime C.  
+ Nouvelle fonction d’allocation définie par le client à raccorder au processus d’allocation de mémoire de débogage du runtime C  
   
-## Valeur de retour  
- Renvoie la fonction définie précédemment de raccordement d'allocation, ou `NULL` si `allocHook` est `NULL`.  
+## <a name="return-value"></a>Valeur de retour  
+ Retourne la fonction de raccordement d’allocation définie, ou `NULL` si `allocHook` est `NULL`.  
   
-## Notes  
- `_CrtSetAllocHook` permet à une application de raccorder sa propre fonction d'allocation dans le processus d'allocation de mémoire de bibliothèque de débogage du runtime C.  En conséquence, chaque appel à une fonction d'allocation de débogage pour allouer, réallouer, ou supprimer un bloc de mémoire déclenche un appel à la fonction de raccordement de l'application.  `_CrtSetAllocHook` fournit une application avec une méthode simple pour vérifier comment l'application gère les situations de mémoire insuffisante, la capacité d'examiner les modèles d'allocation, et la possibilité d'enregistrer les informations d'allocations pour l'analyse ultérieure.  Lorsque [\_DEBUG](../../c-runtime-library/debug.md) n'est pas défini, Les appels de `_CrtSetAllocHook` sont supprimés pendant le prétraitement.  
+## <a name="remarks"></a>Notes  
+ `_CrtSetAllocHook` permet à une application de raccorder sa propre fonction d’allocation au processus d’allocation de mémoire de bibliothèque de débogage du runtime C. Ainsi, chaque appel à une fonction d’allocation de débogage pour allouer, réallouer ou libérer un bloc de mémoire déclenche un appel à la fonction de raccordement de l’application. `_CrtSetAllocHook` fournit à une application une méthode simple pour tester comment l’application gère les situations de mémoire insuffisante, la possibilité d’examiner les modèles d’allocation et la possibilité de consigner les informations d’allocation pour une analyse ultérieure. Quand [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à `_CrtSetAllocHook` sont supprimés durant le prétraitement.  
   
- La fonction `_CrtSetAllocHook` installe la nouvelle fonction définie par le client d'allocation spécifiée dans `allocHook` et renvoie la fonction définie précédemment de raccordement.  L'exemple suivant montre comment une allocation définie par le client doit être prototypé:  
+ La fonction `_CrtSetAllocHook` installe la nouvelle fonction d’allocation définie par le client spécifiée dans `allocHook` et retourne la fonction de raccordement définie. L’exemple suivant montre comment un raccordement d’allocation défini par le client doit être prototypé :  
   
 ```  
 int YourAllocHook( int allocType, void *userData, size_t size, int   
@@ -68,38 +85,38 @@ blockType, long requestNumber, const unsigned char *filename, int
 lineNumber);  
 ```  
   
- L'argument `allocType` spécifie le type d'opération d'allocation, `(_HOOK_ALLOC`, `_HOOK_REALLOC`et `_HOOK_FREE`\) qui a déclenché l'appel à la fonction de raccordement d'allocation.  Lorsque le type de déclenchement d'allocation est `_HOOK_FREE`, `userData` est un pointeur vers la section des données utilisateur du bloc de mémoire qui va être libéré.  Toutefois, lorsque le type de déclenchement d'allocation est `_HOOK_ALLOC` ou `_HOOK_REALLOC`, `userData` est `NULL` car le bloc de mémoire n'a pas encore été alloué.  
+ L’argument `allocType` spécifie le type de l’opération d’allocation `(_HOOK_ALLOC`, `_HOOK_REALLOC` et `_HOOK_FREE`) qui a déclenché l’appel à la fonction de raccordement de l’allocation. Quand le type d’allocation de déclenchement est `_HOOK_FREE`, `userData` est un pointeur désignant la section de données utilisateur du bloc de mémoire sur le point d’être libéré. Toutefois, quand le type d’allocation de déclenchement est `_HOOK_ALLOC` ou `_HOOK_REALLOC`, `userData` est `NULL`, car le bloc de mémoire n’a pas encore été alloué.  
   
- `size` spécifie la taille du bloc de mémoire en octets, `blockType` indique le type du bloc de mémoire, `requestNumber` est le numéro de commande d'allocation d'objet du bloc de mémoire, et, si disponible, `filename` et `lineNumber` spécifiez le nom du fichier et le numéro de ligne source où l'opération de déclenchement d'allocation a été initialisée.  
+ `size` spécifie la taille du bloc de mémoire en octets, `blockType` indique le type du bloc de mémoire, `requestNumber` est le numéro d’ordre d’allocation d’objet du bloc de mémoire et, le cas échéant, `filename` et `lineNumber` spécifient le nom du fichier source et le numéro de ligne où l’opération d’allocation de déclenchement a été lancée.  
   
- Une fois que la fonction de raccordement a terminé le traitement, elle doit retourner une valeur booléenne, qui indique au processus d'allocation principal du runtime C comment continuer.  Lorsque la fonction de raccordement souhaite que le processus d'allocation principal continue comme si la fonction de raccordement n'a jamais été appelée, la fonction de raccordement doit renvoyer `TRUE`.  Cela provoque l'opération de déclenchement d'origine d'allocation à être exécuté.  En utilisant cette implémentation, la fonction de raccordement peut rassembler et enregistrer des informations d'allocation pour l'analyse ultérieure, sans interférer avec l'opération d'allocation ou l'état actuel de la pile de débogage.  
+ Une fois que la fonction de raccordement a terminé le traitement, elle doit retourner une valeur booléenne, qui indique la marche à suivre au processus d’allocation du runtime C principal. Quand la fonction de raccordement souhaite que le processus d’allocation principal se poursuive comme si elle n’avait jamais été appelée, elle doit retourner `TRUE`. Ainsi, l’opération d’allocation de déclenchement d’origine est exécutée. À l’aide de cette implémentation, la fonction de raccordement peut rassembler et enregistrer les informations d’allocation pour une analyse ultérieure, sans interférer avec l’opération d’allocation actuelle ou l’état du tas de débogage.  
   
- Lorsque la fonction de raccordement souhaite le processus d'allocation principal pour continuer comme si l'opération de déclenchement d'allocation a été appelée et il a échoué, la fonction de raccordement doit retourner `FALSE`.  En utilisant cette implémentation, la fonction de raccordement peut simuler une large gamme d'états de mémoire et des états du tas de débogage pour tester comment l'application gère chaque situation.  
+ Quand la fonction de raccordement souhaite que le processus d’allocation principal se poursuive comme si l’opération d’allocation de déclenchement avait été appelée et avait échoué, elle doit retourner `FALSE`. À l’aide de cette implémentation, la fonction de raccordement peut simuler un large éventail de conditions de mémoire et d’états de tas de débogage pour tester comment l’application gère chaque situation.  
   
- Pour désactiver la fonction de raccordement, exécutez `NULL` à `_CrtSetAllocHook`.  
+ Pour désactiver la fonction de raccordement, transmettez `NULL` à `_CrtSetAllocHook`.  
   
- Pour plus d'informations sur la façon dont `_CrtSetAllocHook` peut être utilisé avec d'autres fonctions de gestion de la mémoire ou comment écrire vos propres fonctions de raccordement définies par le client, consultez [Écriture de fonctions de raccordement de débogage](../Topic/Debug%20Hook%20Function%20Writing.md).  
+ Pour plus d’informations sur la façon dont `_CrtSetAllocHook` peut être utilisé avec d’autres fonctions de gestion de mémoire ou sur la façon d’écrire vos propres fonctions de raccordement définies par le client, consultez [Écriture de fonctions de raccordement de débogage](/visualstudio/debugger/debug-hook-function-writing).  
   
 > [!NOTE]
->  `_CrtSetAllocHook` n'est pas pris en charge sous `/clr:pure`.  
+>  `_CrtSetAllocHook` n’est pas pris en charge sous `/clr:pure`. Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_CrtSetAllocHook`|\<crtdbg.h\>|  
+|`_CrtSetAllocHook`|\<crtdbg.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Bibliothèques  
- Seulement les versions debug des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Bibliothèques  
+ Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemple  
- Pour un exemple d'utilisation de `_CrtSetAllocHook`, consultez [crt\_dbg2](http://msdn.microsoft.com/fr-fr/21e1346a-6a17-4f57-b275-c76813089167).  
+## <a name="example"></a>Exemple  
+ Pour obtenir un exemple d’utilisation de `_CrtSetAllocHook`, consultez [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167).  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Routines de débogage](../../c-runtime-library/debug-routines.md)   
- [\_CrtGetAllocHook](../../c-runtime-library/reference/crtgetallochook.md)
+ [_CrtGetAllocHook](../../c-runtime-library/reference/crtgetallochook.md)

@@ -1,65 +1,79 @@
 ---
-title: "hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_hypotf"
-  - "hypot"
-  - "hypotf"
-  - "_hypot"
-  - "_hypotl"
-  - "hypotl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "hypotf"
-  - "hypotl"
-  - "_hypotl"
-  - "hypot"
-  - "_hypot"
-  - "_hypotf"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_hypot (fonction)"
-  - "calculer les hypoténuses"
-  - "hypot (fonction)"
-  - "calcul des hypoténuses"
-  - "hypotf (fonction)"
-  - "hypotl (fonction)"
-  - "triangles, calculer l'hypoténuse"
+title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _hypotf
+- hypot
+- hypotf
+- _hypot
+- _hypotl
+- hypotl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- hypotf
+- hypotl
+- _hypotl
+- hypot
+- _hypot
+- _hypotf
+dev_langs:
+- C++
+helpviewer_keywords:
+- hypotenuse calculation
+- hypot function
+- hypotf function
+- triangles, calculating hypotenuse
+- hypotl function
+- calculating hypotenuses
+- _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
 caps.latest.revision: 17
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: c372095f4ae5903f27e5f6add9a79de728a5e202
+ms.lasthandoff: 02/24/2017
 
-Calcule l'hypoténuse.  
+---
+# <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
+Calcule l’hypoténuse.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 double hypot(   
@@ -88,29 +102,29 @@ long double _hypotl(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `x`, `y`  
- Valeurs à virgule flottante  
+ Valeurs à virgule flottante.  
   
-## Valeur de retour  
- En cas de réussite, `hypot` retourne la longueur de l'hypoténuse ; sur un dépassement de capacité, `hypot` retourne INF \(Infini\) et la variable `errno` a la valeur `ERANGE`.  Vous pouvez utiliser `_matherr` pour modifier la gestion des erreurs.  
+## <a name="return-value"></a>Valeur de retour  
+ En cas de réussite, `hypot` retourne la longueur de l’hypoténuse ; en cas de dépassement, `hypot` retourne INF (infini) et la variable `errno` est définie sur `ERANGE`. Vous pouvez utiliser `_matherr` pour modifier la gestion des erreurs.  
   
- Pour plus d'informations sur les codes de retour, consultez [errno, \_doserrno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- Les fonctions `hypot` calculent la longueur de l'hypoténuse d'un triangle rectangle, selon la longueur des deux côtés `x` et `y` \(en d'autres termes, la racine carrée de <sup>2</sup>`x`\+ <sup>2</sup>`y`\).  
+## <a name="remarks"></a>Notes  
+ Les fonctions `hypot` calculent la longueur de l’hypoténuse d’un triangle rectangle, d’après la longueur des deux côtés `x` et `y` (en d’autres termes, la racine carrée de `x`<sup>2</sup> + `y`<sup>2</sup>).  
   
- Les versions des fonctions qui ont des traits de soulignement sont fournies pour la compatibilité avec les précédents standards.  Leur comportement est identique aux versions qui n'ont pas des traits de soulignement.  Nous recommandons d'utiliser les versions sans principaux traits de soulignement pour le nouveau code.  
+ Les versions des fonctions qui comportent des traits de soulignement de début sont fournies à des fins de compatibilité avec les normes précédentes. Elles ont le même comportement que les versions qui n’en ont pas. Nous vous recommandons d’utiliser les versions sans traits de soulignement de début pour le nouveau code.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`hypot`, `hypotf`, `hypotl`, `_hypot`, `_hypotf`, `_hypotl`|\<math.h\>|  
+|`hypot`, `hypotf`, `hypotl`, `_hypot`, `_hypotf`, `_hypotl`|\<math.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_hypot.c  
@@ -128,11 +142,14 @@ int main( void )
 }  
 ```  
   
-  **Si un triangle rectangle a ses côtés de longueur 3,0 et 4,0, son hypoténuse est 5,0**   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0  
+```  
   
-## Voir aussi  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [\_cabs](../../c-runtime-library/reference/cabs.md)   
- [\_matherr](../../c-runtime-library/reference/matherr.md)
+ [_cabs](../../c-runtime-library/reference/cabs.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)

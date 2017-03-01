@@ -1,75 +1,87 @@
 ---
-title: "divides, struct | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xfunctional/std::divides"
-  - "std::divides"
-  - "std.divides"
-  - "divides"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "divides (struct)"
-  - "divides (classe)"
+title: divides, struct | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xfunctional/std::divides
+- std::divides
+- std.divides
+- divides
+dev_langs:
+- C++
+helpviewer_keywords:
+- divides struct
+- divides class
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# divides, struct
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: a82ec380e3be786dfdac2b8ebe3b108d5776c3a9
+ms.lasthandoff: 02/24/2017
 
-Un objet de fonction prédéfinie qui exécute l'opération de division \( `operator/`\) à ses arguments.  
+---
+# <a name="divides-struct"></a>divides, struct
+Objet de fonction prédéfini qui effectue l’opération de division (`operator/`) sur ses arguments.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
-```  
-template<class Type = void>  
-   struct divides : public binary_function <Type, Type, Type>   
-   {  
-      Type operator()(  
-         const Type& Left,   
-         const Type& Right   
-         ) const;  
-   };  
-  
-// specialized transparent functor for operator/  
-template<>  
-   struct divides<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-         -> decltype(std::forward<Type1>(Left)  
-            / std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct divides : public binary_function <Type, Type, Type>  
+{
+    Type operator()(const Type& Left, const Type& Right) const;
+};
+
+// specialized transparent functor for operator/
+template <>
+struct divides<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const
+    -> decltype(std::forward<T>(Left)*/ std::forward<U>(Right));
+ };
 ```  
   
-#### Paramètres  
- `Type`, `Type1`, `Type2`  
- Un type qui prend en charge `operator/` qui prend des opérandes des types spécifiés ou déduits.  
+#### <a name="parameters"></a>Paramètres  
+ `Type`, `T`, `U`  
+ Tout type prenant en charge un `operator/` qui accepte des opérandes des types spécifiés ou inférés.  
   
  `Left`  
- L'opérande de gauche de l'opération de division.  Le modèle non spécialisé prend un argument de référence lvalue de type `Type`.  Le modèle spécialisé perfectionne le transfert des arguments de référence lvalue et rvalue de type déduit `Type1`.  
+ Opérande gauche de l’opération de division. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `T`.  
   
  `Right`  
- L'opérande de droite de l'opération de division.  Le modèle non spécialisé prend un argument de référence lvalue de type `Type`.  Le modèle spécialisé perfectionne le transfert des arguments de référence lvalue et rvalue de type déduit `Type2`.  
+ Opérande droit de l’opération de division. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `U`.  
   
-## Valeur de retour  
- Le résultat de `Left` \* `/` \+ `Right`.  Le modèle spécialisé effectue de façon parfaite le transfert du résultat, qui a le type retourné par `operator/`.  
+## <a name="return-value"></a>Valeur de retour  
+ Résultat de `Left``/``Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator/`.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // functional_divides.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -115,16 +127,23 @@ int main( )
       cout << *Iter3 << " ";  
    cout << ")" << endl;  
 }  
+  
+/* Output:  
+The vector v1 = ( 0 7 14 21 28 35 )  
+The vector v2 = ( 2 4 6 8 10 12 )  
+The element-wise quotients are: ( 0 1.75 2.33333 2.625 2.8 2.91667 )  
+*/  
 ```  
   
-  **Le vecteur v1 \= \(0 7 14 21 28 35\)**  
-**Le vecteur v2 \= \( 2 4 6 8 10 12 \)**  
-**Les quotients en ce qui concerne l'élément sont : \(0 1,75 2,33333 2,625 2,8 2,91667\)**   
-## Configuration requise  
- **En\-tête :** \<functional\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<functional>  
   
- **Espace de noms :** std  
+ **Espace de noms :** std  
   
-## Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Bibliothèque STL \(Standard Template Library\)](../misc/standard-template-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

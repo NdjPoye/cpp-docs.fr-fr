@@ -1,73 +1,88 @@
 ---
-title: "&lt;allocators&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdext::<allocators>"
-  - "allocators/stdext::allocators"
-  - "<allocators>"
-  - "stdext.<allocators>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "allocators (en-tête)"
+title: '&lt;allocators&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- stdext::<allocators>
+- allocators/stdext::allocators
+- <allocators>
+- stdext.<allocators>
+dev_langs:
+- C++
+helpviewer_keywords:
+- allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
 caps.latest.revision: 19
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# &lt;allocators&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: fa76512c47fd7412227a26de3de05190c687c4b3
+ms.lasthandoff: 02/24/2017
 
-Defines several templates that help allocate and free memory blocks for node\-based containers.  
+---
+# <a name="ltallocatorsgt"></a>&lt;allocators&gt;
+Définit plusieurs modèles qui permettent d’allouer et de libérer des blocs de mémoire pour les conteneurs basés sur des nœuds.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 #include <allocators>  
 ```  
   
-## Notes  
- The \<allocators\> header provides six allocator templates that can be used to select memory\-management strategies for node\-based containers.  For use with these templates, it also provides several different synchronization filters to tailor the memory\-management strategy to a variety of different multithreading schemes \(including none\).  Matching a memory management strategy to the known memory usage patterns, and synchronization requirements, of a particular application can often increase the speed or reduce the overall memory requirements of an application.  
+## <a name="remarks"></a>Notes  
+ L’en-tête \<allocators> fournit six modèles d’allocation qui peuvent être utilisés pour sélectionner des stratégies de gestion de mémoire pour les conteneurs basés sur des nœuds. En complément de ces modèles, il fournit également plusieurs filtres de synchronisation pour adapter la stratégie de gestion de mémoire à différents schémas de multithreading (y compris aucun). Quand vous adaptez une stratégie de gestion de mémoire aux modèles d’utilisation de mémoire connus et aux exigences de synchronisation d’une application particulière, vous pouvez souvent augmenter la vitesse de cette application ou réduire ses besoins en mémoire globale.  
   
- The allocator templates are implemented with reusable components that can be customized or replaced to provide additional memory\-management strategies.  
+ Les modèles d’allocation sont implémentés avec des composants réutilisables qui peuvent être personnalisés ou remplacés pour fournir des stratégies de gestion de mémoire supplémentaires.  
   
- The node\-based containers in the Standard C\+\+ library \(std::list, std::set, std::multiset, std::map and std::multimap\) store their elements in individual nodes.  All the nodes for a particular container type are the same size, so the flexibility of a general\-purpose memory manager is not needed.  Because the size of each memory block is known at compile time, the memory manager can be much simpler and faster.  
+ Les conteneurs basés sur des nœuds dans la bibliothèque C++ Standard (std::list, std::set, std::multiset, std::map et std::multimap) stockent leurs éléments dans des nœuds individuels. Tous les nœuds d’un type de conteneur particulier ont la même taille, il n’est donc pas nécessaire d’avoir recourt à la flexibilité d’un gestionnaire de mémoire à usage général. Comme la taille de chaque bloc de mémoire est connue au moment de la compilation, le gestionnaire de mémoire peut être beaucoup plus simple et plus rapide.  
   
- When used with containers that are not node\-based \(such as the Standard C\+\+ library containers std::vector std::deque, and std::basic\_string\), the alllocator templates will work correctly, but are not likely to provide any performance improvement over the default allocator.  
+ Quand ils sont utilisés avec des conteneurs qui ne sont pas basés sur des nœuds (par exemple, les conteneurs de bibliothèque C++ Standard std::vector, std::deque et std::basic_string), les modèles d’allocation fonctionnent correctement, mais n’améliorent pas forcément les performances par rapport à l’allocateur par défaut.  
   
- An allocator is a template class that describes an object that manages storage allocation and freeing for objects and arrays of objects of a designated type.  Allocator objects are used by several container template classes in the Standard C\+\+ library.  
+ Un allocateur est une classe de modèle qui décrit un objet gérant l’allocation et la libération de stockage pour des objets et des tableaux d’objets d’un type désigné. Les objets allocateur sont utilisés par plusieurs classes de modèle de conteneur dans la bibliothèque C++ Standard.  
   
- The allocators are all templates of this type:  
+ Les allocateurs sont tous des modèles de ce type :  
   
- `template<class`  `Type` `>`  
+ `template<class` `Type` `>`  
   
  `class allocator;`  
   
- where the template argument `Type` is the type managed by the allocator instance.  The Standard C\+\+ library provides a default allocator, template class [allocator](../standard-library/allocator-class.md), which is defined in [\<memory\>](../standard-library/memory.md).  The \<allocators\> header provides the following allocators:  
+ où l’argument de modèle `Type` est le type géré par l’instance d’allocateur. La bibliothèque C++ Standard fournit un allocateur par défaut, la classe de modèle [allocator](../standard-library/allocator-class.md), définie dans [\<memory>](../standard-library/memory.md). L’en-tête \<allocators> fournit les allocateurs suivants :  
   
--   [allocator\_newdel](../standard-library/allocator-newdel-class.md)  
+- [allocator_newdel](../standard-library/allocator-newdel-class.md)  
   
--   [allocator\_unbounded](../standard-library/allocator-unbounded-class.md)  
+- [allocator_unbounded](../standard-library/allocator-unbounded-class.md)  
   
--   [allocator\_fixed\_size](../standard-library/allocator-fixed-size-class.md)  
+- [allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)  
   
--   [allocator\_variable\_size](../standard-library/allocator-variable-size-class.md)  
+- [allocator_variable_size](../standard-library/allocator-variable-size-class.md)  
   
--   [allocator\_suballoc](../standard-library/allocator-suballoc-class.md)  
+- [allocator_suballoc](../standard-library/allocator-suballoc-class.md)  
   
--   [allocator\_chunklist](../standard-library/allocator-chunklist-class.md)  
+- [allocator_chunklist](../standard-library/allocator-chunklist-class.md)  
   
- Use an appropriate instantiation of an allocator as the second type argument when creating a container, such as the following code example.  
+ Utilisez une instanciation d’allocateur appropriée comme deuxième argument de type quand vous créez un conteneur, comme dans l’exemple de code suivant.  
   
  `#include <list>`  
   
@@ -75,9 +90,9 @@ Defines several templates that help allocate and free memory blocks for node\-ba
   
  `std::list<int, stdext::allocators::allocator_chunklist<int> > _List0;`  
   
- \_List0 allocates nodes with `allocator_chunklist` and the default synchronization filter.  
+ _List0 alloue des nœuds avec `allocator_chunklist` et le filtre de synchronisation par défaut.  
   
- Use the macro [ALLOCATOR\_DECL](../Topic/ALLOCATOR_DECL%20\(%3Callocators%3E\).md) to create allocator templates with synchronization filters other than the default:  
+ Utilisez la macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) pour créer des modèles d’allocateur avec des filtres de synchronisation autre que celui par défaut :  
   
  `#include <list>`  
   
@@ -87,94 +102,98 @@ Defines several templates that help allocate and free memory blocks for node\-ba
   
  `std::list<int, alloc<int> > _List1;`  
   
- \_Lst1 allocates nodes with `allocator_chunklist` and the [sync\_per\_thread](../standard-library/sync-per-thread-class.md) synchronization filter.  
+ _Lst1 alloue des nœuds avec `allocator_chunklist` et le filtre de synchronisation [sync_per_thread](../standard-library/sync-per-thread-class.md).  
   
- A block allocator is a cache or a filter.  A cache is a template class that takes one argument of type std::size\_t.  It defines a block allocator that allocates and deallocates memory blocks of a single size.  It must obtain memory using operator `new`, but it need not make a separate call to operator `new` for each block.  It may, for example, suballocate from a larger block or cache deallocated blocks for subsequent reallocation.  
+ Un allocateur de blocs est un cache ou un filtre. Un cache est une classe de modèle qui accepte un argument de type std::size_t. Il définit un allocateur de blocs qui alloue et désalloue des blocs de mémoire de taille unique. Il doit obtenir de la mémoire à l’aide de l’opérateur `new`, mais il n’a pas besoin d’effectuer un appel distinct à l’opérateur `new` pour chaque bloc. Il peut, par exemple, sous-allouer la mémoire d’un bloc plus grand ou mettre en cache des blocs désalloués en vue d’une réallocation ultérieure.  
   
- With a compiler that cannot compile rebind the value of the std::size\_t argument used when the template was instantiated is not necessarily the value of the argument \_Sz passed to a cache's member functions allocate and deallocate.  
+ Avec un compilateur qui ne peut pas compiler rebind, la valeur de l’argument std::size_t utilisé quand le modèle a été instancié n’est pas nécessairement la valeur de l’argument _Sz passé aux fonctions membres allocate et deallocate d’un cache.  
   
- \<allocators\> provides the following cache templates:  
+ \<allocators> fournit les modèles de cache suivants :  
   
--   [cache\_freelist](../standard-library/cache-freelist-class.md)  
+- [cache_freelist](../standard-library/cache-freelist-class.md)  
   
--   [cache\_suballoc](../standard-library/cache-suballoc-class.md)  
+- [cache_suballoc](../standard-library/cache-suballoc-class.md)  
   
--   [cache\_chunklist](../standard-library/cache-chunklist-class.md)  
+- [cache_chunklist](../standard-library/cache-chunklist-class.md)  
   
- A filter is a block allocator that implements its member functions using another block allocator which is passed to it as a template argument.  The most common form of filter is a synchronization filter, which applies a synchronization policy to control access to the member functions of an instance of another block allocator. \<allocators\> provides the following synchronization filters:  
+ Un filtre est un allocateur de blocs qui implémente ses fonctions membres à l’aide d’un autre allocateur de blocs transmis comme un argument de modèle. La forme de filtre la plus courante est le filtre de synchronisation, qui applique une stratégie de synchronisation pour contrôler l’accès aux fonctions membres d’une instance d’un autre allocateur de blocs. \<allocators> fournit les filtres de synchronisation suivants :  
   
--   [sync\_none](../standard-library/sync-none-class.md)  
+- [sync_none](../standard-library/sync-none-class.md)  
   
--   [sync\_per\_container](../standard-library/sync-per-container-class.md)  
+- [sync_per_container](../standard-library/sync-per-container-class.md)  
   
--   [sync\_per\_thread](../standard-library/sync-per-thread-class.md)  
+- [sync_per_thread](../standard-library/sync-per-thread-class.md)  
   
--   [sync\_shared](../standard-library/sync-shared-class.md)  
+- [sync_shared](../standard-library/sync-shared-class.md)  
   
- \<allocators\> also provides the filter [rts\_alloc](../standard-library/rts-alloc-class.md), which holds multiple block allocator instances and determines which instance to use for allocation or deallocation at runtime instead of at compile time.  It is used with compilers that cannot compile rebind.  
+ \<allocators> fournit également le filtre [rts_alloc](../standard-library/rts-alloc-class.md), qui contient plusieurs instances d’allocateur de blocs, et détermine l’instance à utiliser pour l’allocation ou la désallocation au moment de l’exécution plutôt qu’au moment de la compilation. Elle est utilisée avec les compilateurs qui ne peuvent pas compiler la reliaison.  
   
- A synchronization policy determines how an allocator instance handles simultaneous allocation and deallocation requests from multiple threads.  The simplest policy is to pass all requests directly through to the underlying cache object, leaving synchronization management to the user.  A more complex policy could be to use a mutex to serialize access to the underlying cache object.  
+ Une stratégie de synchronisation détermine comment une instance d’allocateur gère des demandes d’allocation et de désallocation simultanées à partir de plusieurs threads. La stratégie la plus simple consiste à passer toutes les demandes directement à l’objet cache sous-jacent, laissant à l’utilisateur la gestion de la synchronisation. Une stratégie plus complexe consiste à utiliser un mutex pour sérialiser l’accès à l’objet cache sous-jacent.  
   
- If a compiler supports compiling both single\-threaded and multi\-threaded applications, the default synchronization filter for single\-threaded applications is `sync_none`; for all other cases it is `sync_shared`.  
+ Si un compilateur prend en charge la compilation d’applications monothread et multithread, le filtre de synchronisation pour les applications monothread est `sync_none` ; et pour tous les autres cas `sync_shared`.  
   
- The cache template `cache_freelist` takes a max class argument which determines the maximum number of elements to be stored in the free list.  
+ Le modèle de cache `cache_freelist` accepte un argument de classe max qui détermine le nombre maximal d’éléments à stocker dans la liste de libération.  
   
- \<allocators\> provides the following max classes:  
+ \<allocators> fournit les classes max suivantes :  
   
--   [max\_none](../standard-library/max-none-class.md)  
+- [max_none](../standard-library/max-none-class.md)  
   
--   [max\_unbounded](../standard-library/max-unbounded-class.md)  
+- [max_unbounded](../standard-library/max-unbounded-class.md)  
   
--   [max\_fixed\_size](../standard-library/max-fixed-size-class.md)  
+- [max_fixed_size](../standard-library/max-fixed-size-class.md)  
   
--   [max\_variable\_size](../standard-library/max-variable-size-class.md)  
+- [max_variable_size](../standard-library/max-variable-size-class.md)  
   
-### Macros  
-  
-|||  
-|-|-|  
-|[ALLOCATOR\_DECL](../Topic/ALLOCATOR_DECL%20\(%3Callocators%3E\).md)|Yields an allocator template class.|  
-|[CACHE\_CHUNKLIST](../Topic/CACHE_CHUNKLIST%20\(%3Callocators%3E\).md)|Yields `stdext::allocators::cache_chunklist<sizeof(Type)>`.|  
-|[CACHE\_FREELIST](../Topic/CACHE_FREELIST%20\(%3Callocators%3E\).md)|Yields `stdext::allocators::cache_freelist<sizeof(Type), max>`.|  
-|[CACHE\_SUBALLOC](../Topic/CACHE_SUBALLOC%20\(%3Callocators%3E\).md)|Yields `stdext::allocators::cache_suballoc<sizeof(Type)>`.|  
-|[SYNC\_DEFAULT](../Topic/SYNC_DEFAULT%20\(%3Callocators%3E\).md)|Yields a synchronization filter.|  
-  
-### Opérateurs  
+### <a name="macros"></a>Macros  
   
 |||  
 |-|-|  
-|[\!\=, opérateur](../Topic/operator!=%20\(%3Callocators%3E\).md)|Vérifie l'inégalité entre des objets d'allocation d'une classe spécifiée.|  
-|[\=\= \(opérateur\)](../Topic/operator==%20\(%3Callocators%3E\).md)|Vérifie l'égalité entre des objets d'allocation d'une classe spécifiée.|  
+|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|Génère une classe de modèle allocator.|  
+|[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|Génère `stdext::allocators::cache_chunklist<sizeof(Type)>`.|  
+|[CACHE_FREELIST](../standard-library/allocators-functions.md#cache_freelist)|Génère `stdext::allocators::cache_freelist<sizeof(Type), max>`.|  
+|[CACHE_SUBALLOC](../standard-library/allocators-functions.md#cache_suballoc)|Génère `stdext::allocators::cache_suballoc<sizeof(Type)>`.|  
+|[SYNC_DEFAULT](../standard-library/allocators-functions.md#sync_default)|Génère un filtre de synchronisation.|  
   
-### Classes  
+### <a name="operators"></a>Opérateurs  
   
 |||  
 |-|-|  
-|[allocator\_base](../standard-library/allocator-base-class.md)|Defines the base class and common functions needed to create a user\-defined allocator from a synchronization filter.|  
-|[allocator\_chunklist](../standard-library/allocator-chunklist-class.md)|Describes an object that manages storage allocation and freeing for objects using a cache of type [cache\_chunklist](../standard-library/cache-chunklist-class.md).|  
-|[allocator\_fixed\_size](../standard-library/allocator-fixed-size-class.md)|Describes an object that manages storage allocation and freeing for objects of type `Type` using a cache of type [cache\_freelist](../standard-library/cache-freelist-class.md) with a length managed by [max\_fixed\_size](../standard-library/max-fixed-size-class.md).|  
-|[allocator\_newdel](../standard-library/allocator-newdel-class.md)|Implements an allocator that uses `operator delete` to deallocate a memory block and `operator new` to allocate a memory block.|  
-|[allocator\_suballoc](../standard-library/allocator-suballoc-class.md)|Describes an object that manages storage allocation and freeing for objects of type `Type` using a cache of type [cache\_suballoc](../standard-library/cache-suballoc-class.md).|  
-|[allocator\_unbounded](../standard-library/allocator-unbounded-class.md)|Describes an object that manages storage allocation and freeing for objects of type `Type` using a cache of type [cache\_freelist](../standard-library/cache-freelist-class.md) with a length managed by [max\_unbounded](../standard-library/max-unbounded-class.md).|  
-|[allocator\_variable\_size](../standard-library/allocator-variable-size-class.md)|Describes an object that manages storage allocation and freeing for objects of type `Type` using a cache of type [cache\_freelist](../standard-library/cache-freelist-class.md) with a length managed by [max\_variable\_size](../standard-library/max-variable-size-class.md).|  
-|[cache\_chunklist](../standard-library/cache-chunklist-class.md)|Defines a block allocator that allocates and deallocates memory blocks of a single size.|  
-|[cache\_freelist](../standard-library/cache-freelist-class.md)|Defines a block allocator that allocates and deallocates memory blocks of a single size.|  
-|[cache\_suballoc](../standard-library/cache-suballoc-class.md)|Defines a block allocator that allocates and deallocates memory blocks of a single size.|  
-|[freelist](../standard-library/freelist-class.md)|Manages a list of memory blocks.|  
-|[max\_fixed\_size](../standard-library/max-fixed-size-class.md)|Describes a max class object that limits a [freelist](../standard-library/freelist-class.md) object to a fixed maximum length.|  
-|[max\_none](../standard-library/max-none-class.md)|Describes a max class object that limits a [freelist](../standard-library/freelist-class.md) object to a maximum length of zero.|  
-|[max\_unbounded](../standard-library/max-unbounded-class.md)|Describes a max class object that does not limit the maximum length of a [freelist](../standard-library/freelist-class.md) object.|  
-|[max\_variable\_size](../standard-library/max-variable-size-class.md)|Describes a max class object that limits a [freelist](../standard-library/freelist-class.md) object to a maximum length that is roughly proportional to the number of allocated memory blocks.|  
-|[rts\_alloc](../standard-library/rts-alloc-class.md)|The rts\_alloc template class describes a [filter](../standard-library/allocators-header.md) that holds an array of cache instances and determines which instance to use for allocation and deallocation at runtime instead of at compile time.|  
-|[sync\_none](../standard-library/sync-none-class.md)|Describes a synchronization filter that provides no synchronization.|  
-|[sync\_per\_container](../standard-library/sync-per-container-class.md)|Describes a synchronization filter that provides a separate cache object for each allocator object.|  
-|[sync\_per\_thread](../standard-library/sync-per-thread-class.md)|Describes a synchronization filter that provides a separate cache object for each thread.|  
-|[sync\_shared](../standard-library/sync-shared-class.md)|Describes a synchronization filter that uses a mutex to control access to a cache object that is shared by all allocators.|  
+|[operator!= (\<allocators>)](../standard-library/allocators-operators.md#operator_neq)|Vérifie l'inégalité entre les objets allocateurs d'une classe spécifiée.|  
+|[operator== (\<allocators>)](../standard-library/allocators-operators.md#operator_eq_eq)|Vérifie l'égalité entre les objets allocateurs d'une classe spécifiée.|  
   
-## Configuration requise  
- **Header:** \<allocators\>  
+### <a name="classes"></a>Classes  
   
- **Espace de noms :** stdext  
+|||  
+|-|-|  
+|[allocator_base](../standard-library/allocator-base-class.md)|Définit la classe de base et les fonctions communes nécessaires à la création d’un allocateur défini par l’utilisateur à partir d’un filtre de synchronisation.|  
+|[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Décrit un objet qui gère l’allocation et la libération de stockage pour des objets à l’aide d’un cache de type [cache_chunklist](../standard-library/cache-chunklist-class.md).|  
+|[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Décrit un objet qui gère l’allocation et la libération de stockage pour des objets de type `Type` à l’aide d’un cache de type [cache_freelist](../standard-library/cache-freelist-class.md) avec une longueur gérée par [max_fixed_size](../standard-library/max-fixed-size-class.md).|  
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implémente un allocateur qui utilise `operator delete` pour désallouer un bloc de mémoire et `operator new` pour allouer un bloc de mémoire.|  
+|[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Décrit un objet qui gère l’allocation et la libération de stockage pour des objets de type `Type` à l’aide d’un cache de type [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
+|[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|Décrit un objet qui gère l’allocation et la libération de stockage pour des objets de type `Type` à l’aide d’un cache de type [cache_freelist](../standard-library/cache-freelist-class.md) avec une longueur gérée par [max_unbounded](../standard-library/max-unbounded-class.md).|  
+|[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|Décrit un objet qui gère l’allocation et la libération de stockage pour des objets de type `Type` à l’aide d’un cache de type [cache_freelist](../standard-library/cache-freelist-class.md) avec une longueur gérée par [max_variable_size](../standard-library/max-variable-size-class.md).|  
+|[cache_chunklist](../standard-library/cache-chunklist-class.md)|Définit un allocateur de blocs qui alloue et désalloue des blocs de mémoire de taille unique.|  
+|[cache_freelist](../standard-library/cache-freelist-class.md)|Définit un allocateur de blocs qui alloue et désalloue des blocs de mémoire de taille unique.|  
+|[cache_suballoc](../standard-library/cache-suballoc-class.md)|Définit un allocateur de blocs qui alloue et désalloue des blocs de mémoire de taille unique.|  
+|[freelist](../standard-library/freelist-class.md)|Gère une liste de blocs de mémoire.|  
+|[max_fixed_size](../standard-library/max-fixed-size-class.md)|Décrit un objet de classe max qui limite un objet [freelist](../standard-library/freelist-class.md) à une longueur maximale fixe.|  
+|[max_none](../standard-library/max-none-class.md)|Décrit un objet de classe max qui limite un objet [freelist](../standard-library/freelist-class.md) à une longueur maximale de zéro.|  
+|[max_unbounded](../standard-library/max-unbounded-class.md)|Décrit un objet de classe max qui ne limite pas la longueur maximale d’un objet [freelist](../standard-library/freelist-class.md).|  
+|[max_variable_size](../standard-library/max-variable-size-class.md)|Décrit un objet de classe max qui limite un objet [freelist](../standard-library/freelist-class.md) à une longueur maximale qui est à peu près proportionnelle au nombre de blocs de mémoire alloués.|  
+|[rts_alloc](../standard-library/rts-alloc-class.md)|La classe de modèle rts_alloc décrit un [filtre](../standard-library/allocators-header.md) qui contient un tableau d’instances de cache et détermine l’instance à utiliser pour l’allocation et la désallocation au moment de l’exécution plutôt qu’au moment de la compilation.|  
+|[sync_none](../standard-library/sync-none-class.md)|Décrit un filtre de synchronisation qui ne fournit aucune synchronisation.|  
+|[sync_per_container](../standard-library/sync-per-container-class.md)|Décrit un filtre de synchronisation qui fournit un objet de cache distinct pour chaque objet allocateur.|  
+|[sync_per_thread](../standard-library/sync-per-thread-class.md)|Décrit un filtre de synchronisation qui fournit un objet de cache distinct pour chaque thread.|  
+|[sync_shared](../standard-library/sync-shared-class.md)|Décrit un filtre de synchronisation qui utilise un mutex pour contrôler l’accès à un objet de cache partagé par tous les allocateurs.|  
   
-## Voir aussi  
- [Référence de fichiers d'en\-tête](../standard-library/cpp-standard-library-header-files.md)
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<allocators>  
+  
+ **Espace de noms :** stdext  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

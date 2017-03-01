@@ -1,54 +1,70 @@
 ---
-title: "_lsearch_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_lsearch_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_lsearch_s"
-  - "lsearch_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_lsearch_s (fonction)"
-  - "tableaux (CRT), rechercher"
-  - "clés, rechercher dans les tableaux"
-  - "recherche linéaire"
-  - "lsearch_s (fonction)"
-  - "rechercher, linéaires"
-  - "valeurs, rechercher"
+title: _lsearch_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _lsearch_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _lsearch_s
+- lsearch_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- linear searching
+- values, searching for
+- keys, finding in arrays
+- arrays [CRT], searching
+- searching, linear
+- _lsearch_s function
+- lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _lsearch_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 6f89899e5fe2c00cf17a7a18c9de2eac2ba8462f
+ms.lasthandoff: 02/24/2017
 
-Effectue une recherche linéaire sur la valeur.  Il s'agit de versions de [\_lsearch](../../c-runtime-library/reference/lsearch.md) avec des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="lsearchs"></a>_lsearch_s
+Effectue une recherche linéaire portant sur une valeur. Version de [_lsearch](../../c-runtime-library/reference/lsearch.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void *_lsearch_s(  
@@ -61,59 +77,59 @@ void *_lsearch_s(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `key`  
- Objet  à rechercher.  
+ Objet à rechercher.  
   
  `base`  
- Pointeur vers la base de la table à rechercher.  
+ Pointeur désignant la base du tableau à explorer.  
   
  `num`  
- Nombre d'éléments  
+ Nombre d'éléments.  
   
  `size`  
- Taille de chaque élément du tableau en octets.  
+ Taille de chaque élément de tableau en octets.  
   
  `compare`  
- Pointeur vers la routine de comparaison.  Le deuxième paramètre est un pointeur vers la clé pour la recherche.  Le troisième paramètre est un pointeur vers un élément de tableau à comparer à la clé.  
+ Pointeur désignant la routine de comparaison. Le deuxième paramètre est un pointeur désignant la clé pour la recherche. Le troisième paramètre est un pointeur désignant un élément de tableau à comparer à la clé.  
   
  `context`  
- Un pointeur vers un objet, qui peut être accessible dans la fonction de comparaison.  
+ Pointeur désignant un objet accessible dans la fonction de comparaison.  
   
-## Valeur de retour  
- Si `key` est trouvé, `_lsearch_s` retourne un pointeur vers l'élément du tableau à la `base` qui correspond à `key`.  Si `key` est introuvable, `_lsearch_s` retourne un pointeur sur l'élément récemment ajouté à la fin du tableau.  
+## <a name="return-value"></a>Valeur de retour  
+ Si `key` est trouvé, `_lsearch_s` retourne un pointeur désignant l’élément du tableau à `base` qui correspond à `key`. Si `key` est introuvable, `_lsearch_s` retourne un pointeur désignant l’élément qui vient d’être ajouté à la fin du tableau.  
   
- Si des paramètres non valides sont transmis à la fonction, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno`  avec la valeur `EINVAL` et retournent `NULL`.  Pour plus d'informations, consultez [errno, \_doserrno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Si des paramètres non valides sont passés à la fonction, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` est défini sur `EINVAL` et la fonction retourne `NULL`. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-### Conditions d'erreur  
+### <a name="error-conditions"></a>Conditions d’erreur  
   
 |`key`|`base`|`compare`|`num`|`size`|`errno`|  
 |-----------|------------|---------------|-----------|------------|-------------|  
 |`NULL`|any|any|any|any|`EINVAL`|  
-|any|`NULL`|any|\!\= 0|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
 |any|any|any|any|zéro|`EINVAL`|  
-|any|any|`NULL`|Un|any|`EINVAL`|  
+|any|any|`NULL`|an|any|`EINVAL`|  
   
-## Notes  
- La fonction `_lsearch_s` effectue une recherche séquentielle pour la valeur `key` dans un tableau d'éléments de `num`éléments, chacun de`width`octets.  Contrairement à `bsearch_s`, `_lsearch_s` ne nécessite pas que le tableau soit trié.  Si `key` est introuvable, alors `_lsearch_s` l'ajoute à la fin de la table et incrémente `num`.  
+## <a name="remarks"></a>Notes  
+ La fonction `_lsearch_s` effectue une recherche linéaire portant sur la valeur `key` dans un tableau de `num` éléments, chacun d’une taille de `width` octets. Contrairement à `bsearch_s`, `_lsearch_s` ne nécessite pas que le tableau soit trié. Si `key` n’est pas trouvé, `_lsearch_s` l’ajoute à la fin du tableau et incrémente `num`.  
   
- La fonction `compare` est un pointeur à une routine fournie à l'utilisateur qui compare deux éléments de tableau et retourne une valeur qui spécifie leur relation.  La fonction `compare` prend également le pointeur au contexte comme premier argument.  `_lsearch_s` appelle `compare` à une ou plusieurs reprises lors de la recherche, en passant des pointeurs vers deux éléments de tableau à chaque appel.  `compare` doit comparer les éléments puis retourner ou une valeur différente de zéro \(c'est\-à\-dire que les éléments sont différents\) ou 0 \(ce qui signifie les éléments sont identiques\).  
+ La fonction `compare` est un pointeur désignant une routine fournie par l’utilisateur qui compare deux éléments de tableau et retourne une valeur spécifiant leur relation. La fonction `compare` accepte également le pointeur désignant le contexte comme premier argument. `_lsearch_s` appelle `compare` une ou plusieurs fois pendant la recherche, passant les pointeurs désignant deux éléments de tableau à chaque appel. `compare` doit comparer les éléments, puis retourner une valeur différente de zéro (les éléments sont différents) ou 0 (les éléments sont identiques).  
   
- Le pointeur de `context` peut être utile si la structure de données est fait partie d'un objet et que la fonction `compare` doit accéder à des membres de l'objet.  Par exemple, le code de la fonction `compare` peut convertir le pointeur void au type objet approprié et accéder aux membres de cet objet.  L'ajout du pointeur `context` permet de rendre`_lsearch_s` plus sécurisé car le contexte supplémentaire peut être utilisé pour éviter les bogues de reentrées associés à l'utilisation des variables statiques pour rendre les données disponibles à la fonction `compare`.  
+ Le pointeur `context` peut être utile si la structure de données explorée fait partie d’un objet et que la fonction `compare` doit accéder aux membres de l’objet. Par exemple, le code dans la fonction `compare` peut effectuer un cast du pointeur void vers le type d’objet approprié et accéder aux membres de cet objet. L’ajout du pointeur `context` sécurise `_lsearch_s`, car un contexte supplémentaire peut être utilisé pour éviter les bogues de réentrance associés à l’utilisation de variables statiques et rendre les données accessibles à la fonction `compare`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_lsearch_s`|\<Rechercher\>|  
+|`_lsearch_s`|\<search.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Recherche et tri](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch\_s](../../c-runtime-library/reference/bsearch-s.md)   
- [\_lfind\_s](../../c-runtime-library/reference/lfind-s.md)   
- [\_lsearch](../../c-runtime-library/reference/lsearch.md)
+ [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
+ [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)

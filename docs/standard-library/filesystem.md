@@ -1,89 +1,106 @@
 ---
-title: "&lt;filesystem&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "filesystem/std::tr2::sys::directory_entry"
-  - "filesystem/std::tr2::sys::recursive_directory_iterator"
-  - "filesystem/std::tr2::sys::path"
-  - "filesystem/std::tr2::sys::filesystem_error"
-  - "filesystem/std::tr2::sys::directory_iterator"
-  - "<filesystem>"
-dev_langs: 
-  - "C++"
+title: '&lt;filesystem&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- filesystem/std::experimental::filesystem::directory_entry
+- filesystem/std::experimental::filesystem::recursive_directory_iterator
+- filesystem/std::experimental::filesystem::path
+- filesystem/std::experimental::filesystem::filesystem_error
+- filesystem/std::experimental::filesystem::directory_iterator
+- <filesystem>
+dev_langs:
+- C++
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# &lt;filesystem&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 25cfc0cc7c9f22a495b409e6e08d133b0f29ff8e
+ms.lasthandoff: 02/24/2017
 
-Incluez l’en\-tête \<filesystem\> pour accéder aux classes et aux fonctions qui manipulent et récupèrent des informations sur les chemins, les fichiers et les répertoires.  
+---
+# <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
+Incluez l’en-tête \<filesystem> pour accéder aux classes et aux fonctions qui manipulent et récupèrent des informations sur les chemins, les fichiers et les répertoires.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
-#include <filesystem>  
-using namespace std::tr2::sys;  
+#include <experimental/filesystem> // C++-standard header file name  
+#include <filesystem> // Microsoft-specific implementation header file name  
+using namespace std::experimental::filesystem::v1;  
 ```  
   
 > [!IMPORTANT]
->  Dans C\+\+ 14, l’en\-tête \<filesystem\> n’est pas encore une norme C\+\+, même si sa normalisation est prévue dans sa forme plus ou moins actuelle d’ici C\+\+ 17.  
+>  Au moment de la publication de Visual Studio 2017, l’en-tête \<experimental/filesystem> n’était pas encore une norme C++. Visual C++ 2017 implémente le projet final de la norme, qui se trouve dans [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).  
   
- Cet en\-tête prend en charge les systèmes de fichiers des deux grandes classes de systèmes d’exploitation : Microsoft Windows et Posix.  
+ Cet en-tête prend en charge les systèmes de fichiers des deux grandes classes de systèmes d’exploitation : Microsoft Windows et Posix.  
   
  Bien que la plupart des fonctionnalités soit communes aux deux systèmes d’exploitation, ce document met l’accent sur les différences. Exemple :  
   
--   Windows prend en charge plusieurs noms de racines, par exemple c: ou \\\\nom\_réseau. Ainsi, un système de fichiers se compose d’une forêt d’arborescences, chacune ayant son propre répertoire racine, par exemple c:\\ ou \\\\nom\_réseau, et chacun ayant son propre répertoire actif, pour compléter un chemin relatif \(le contraire d’un chemin absolu\).  
+-   Windows prend en charge plusieurs noms de racines, par exemple, c: ou \\\nom_réseau. Un système de fichiers se compose d’une forêt d’arborescences, chacune ayant son propre répertoire racine, par exemple, c:\ ou \\\nom_réseau\\, et chacune ayant son propre répertoire actif pour compléter un chemin relatif (le contraire d’un chemin absolu).  
   
--   Posix prend en charge une arborescence unique \(sans nom de la racine\), le répertoire racine unique \/ et un répertoire actif unique.  
+-   Posix prend en charge une arborescence unique (sans nom de la racine), le répertoire racine unique / et un répertoire actif unique.  
   
- Une autre différence importante réside dans la représentation native des chemins :  
+ Une autre différence importante réside dans la représentation native des chemins :  
   
--   Windows utilise une séquence wchar\_t terminée par un caractère Null, encodée au format UTF\-16 \(un ou deux éléments pour chaque caractère\).  
+-   Windows utilise une séquence wchar_t terminée par un caractère null, codée au format UTF-16 (un ou deux éléments pour chaque caractère).  
   
--   Posix utilise une séquence char terminée par un caractère Null, encodée au format UTF\-8 \(un ou plusieurs éléments pour chaque caractère\).  
+-   Posix utilise une séquence char terminée par un caractère null, codée au format UTF-8 (un ou plusieurs éléments pour chaque caractère).  
   
--   Un objet de classe path stocke le chemin au format natif. Toutefois, il prend en charge la conversion \(avec simplicité\) entre ce format stocké et plusieurs formats externes :  
+-   Un objet de classe path stocke le chemin au format natif. Toutefois, il prend en charge la conversion (avec simplicité) entre ce format stocké et plusieurs formats externes :  
   
-    -   Séquence char terminée par un caractère Null, encodée au format préconisé par le système d’exploitation.  
+    -   Séquence char terminée par un caractère null, codée au format préconisé par le système d’exploitation.  
   
-    -   Séquence char terminée par un caractère Null, encodée au format UTF\-8.  
+    -   Séquence char terminée par un caractère null, codée au format UTF-8.  
   
-    -   Séquence wchar\_t terminée par un caractère Null, encodée au format préconisé par le système d’exploitation.  
+    -   Séquence wchar_t terminée par un caractère null, codée au format préconisé par le système d’exploitation.  
   
-    -   Séquence char16\_t terminée par un caractère Null, encodée au format UTF\-16.  
+    -   Séquence char16_t terminée par un caractère null, codée au format UTF-16.  
   
-    -   Séquence char32\_t terminée par un caractère Null, encodée au format UTF\-32.  
+    -   Séquence char32_t terminée par un caractère null, codée au format UTF-32.  
   
- Selon les besoins, les conversions entre ces représentations passent par une ou plusieurs facettes codecvt. Si aucun objet de paramètres régionaux spécifique n’est désigné, ces facettes sont obtenues à partir des paramètres régionaux globaux.  
+ Selon les besoins, les conversions entre ces représentations passent par une ou plusieurs facettes `codecvt`. Si aucun objet de paramètres régionaux spécifique n’est désigné, ces facettes sont obtenues à partir des paramètres régionaux globaux.  
   
- Il existe une autre différence, la précision avec laquelle chaque système d’exploitation vous permet de spécifier les autorisations d’accès aux fichiers ou répertoires :  
+ Il existe une autre différence, la précision avec laquelle chaque système d’exploitation vous permet de spécifier les autorisations d’accès aux fichiers ou répertoires :  
   
 1.  Windows enregistre si un fichier est accessible en lecture seule ou en écriture, un attribut qui n’a aucune signification pour les répertoires.  
   
-2.  Posix enregistre si un fichier peut être lu, écrit ou exécuté \(analysé, s’il s’agit d’un répertoire\) par son propriétaire, par le groupe de son propriétaire ou par tout le monde. En outre, il enregistre quelques autorisations supplémentaires.  
+2.  Posix enregistre si un fichier peut être lu, écrit ou exécuté (analysé, s’il s’agit d’un répertoire) par son propriétaire, par le groupe de son propriétaire ou par tout le monde. En outre, il enregistre quelques autorisations supplémentaires.  
   
- Pour les deux systèmes, la structure imposée au chemin après le nom de la racine est la même. Pour le chemin c:\/abc\/xyz\/def.ext :  
+ Pour les deux systèmes, la structure imposée au chemin après le nom de la racine est la même. Pour le chemin c:/abc/xyz/def.ext :  
   
 -   Le nom de la racine est c:.  
   
--   Le répertoire racine est \/.  
+-   Le répertoire racine est /.  
   
--   Le chemin racine est c: \/.  
+-   Le chemin racine est c: /.  
   
--   Le chemin relatif est abc\/xyz\/def.ext.  
+-   Le chemin relatif est abc/xyz/def.ext.  
   
--   Le chemin parent est c:\/abc\/xyz.  
+-   Le chemin parent est c:/abc/xyz.  
   
 -   Le nom de fichier est def.ext.  
   
@@ -91,43 +108,47 @@ using namespace std::tr2::sys;
   
 -   L’extension est .ext.  
   
- Il existe une petite différence au niveau du **séparateur par défaut** dans la séquence de répertoires d’un chemin. Les deux systèmes d’exploitation vous permettent d’écrire une barre oblique \/. Toutefois, dans certains contextes, Windows préfère une barre oblique inverse \\.  
+ Il existe une petite différence au niveau du **séparateur par défaut**dans la séquence de répertoires d’un chemin. Les deux systèmes d’exploitation vous permettent d’écrire une barre oblique /, toutefois, dans certains contextes, Windows préfère une barre oblique inverse \\.  
   
- Enfin, il existe une fonctionnalité importante qui concerne les objets path. Vous pouvez les utiliser partout où un argument appelé « nom de fichier » est nécessaire au sein des classes définies dans l’en\-tête \<fstream\>.  
+ Enfin, les objets path ont une fonctionnalité importante : vous pouvez les utiliser partout où un argument de nom de fichier est nécessaire dans les classes définies dans l’en-tête \<fstream>.  
   
- Pour plus d’informations et d’exemples de code, consultez [Navigation dans le système de fichiers \(C\+\+\)](../standard-library/file-system-navigation.md).  
+ Pour plus d’informations et pour obtenir des exemples de code, consultez [Navigation dans le système de fichiers (C++)](../standard-library/file-system-navigation.md).  
   
-## Classes  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|directory\_entry, classe|Décrit un objet retourné par un directory\_iterator ou un recursive\_directory\_iterator et qui contient des informations sur un|  
-|directory\_iterator, classe|Décrit un itérateur d'entrée qui parcourt les noms de fichiers dans un répertoire de système de fichiers.|  
-|filesystem\_error, classe|Classe de base pour les exceptions qui sont levées pour signaler un dépassement de capacité du système de bas niveau.|  
-|path, classe|Définit une classe qui stocke un objet de type de modèle `String` qui peut être utilisé comme nom de fichier.|  
-|recursive\_directory\_iterator, classe|Décrit un itérateur d'entrée qui parcourt les noms de fichiers dans un répertoire de système de fichiers. L'itérateur peut également descendre dans des sous\-répertoires.|  
-|[file\_status, classe](../standard-library/file-status-class.md)|Encapsule un `file_type`.|  
-  
-## Structures  
+## <a name="classes"></a>Classes  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[space\_info, structure](../standard-library/space-info-structure.md)|Contient des informations sur un volume.|  
+|----------|-----------------|  
+|[directory_entry, classe](../standard-library/directory-entry-class.md)|Décrit un objet retourné par un `directory_iterator` ou un `recursive_directory_iterator` et contient un chemin.|  
+|[directory_iterator, classe](../standard-library/directory-iterator-class.md)|Décrit un itérateur d'entrée qui parcourt les noms de fichiers dans un répertoire de système de fichiers.|  
+|[filesystem_error, classe](../standard-library/filesystem-error-class.md)|Classe de base pour les exceptions qui sont levées pour signaler un dépassement de capacité du système de bas niveau.|  
+|[path, classe](../standard-library/path-class.md)|Définit une classe qui stocke un objet de type de modèle `String` qui peut être utilisé comme nom de fichier.|  
+|[recursive_directory_iterator, classe](../standard-library/recursive-directory-iterator-class.md)|Décrit un itérateur d'entrée qui parcourt les noms de fichiers dans un répertoire de système de fichiers. L'itérateur peut également descendre dans des sous-répertoires.|  
+|[file_status, classe](../standard-library/file-status-class.md)|Encapsule un `file_type`.|  
   
-## Fonctions  
- [\<filesystem\>, fonctions](../standard-library/filesystem-functions.md)  
-  
-## Opérateurs  
- [\<filesystem\>, opérateurs](../standard-library/filesystem-operators.md)  
-  
-## Énumérations  
+## <a name="structs"></a>Structures  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[copy\_option, énumération](../Topic/copy_option%20Enumeration%20%3Cfilesystem%3E.md)|Énumération utilisée avec [copy\_file](http://msdn.microsoft.com/fr-fr/4af7a9b0-8861-45ed-b84e-0307f0669d60) et qui détermine le comportement si un fichier de destination existe déjà.|  
-|[directory\_options, énumération](../Topic/directory_options%20Enumeration.md)|Énumération qui spécifie les options pour les itérateurs de répertoire.|  
-|[file\_type, énumération](../Topic/file_type%20Enumeration.md)|Énumération pour les types de fichiers.|  
-|[perms, énumération](../Topic/perms%20Enumeration.md)|Type de masque de bits utilisé pour transmettre les autorisations et les options des autorisations|  
+|----------|-----------------|  
+|[space_info, structure](../standard-library/space-info-structure.md)|Contient des informations sur un volume.|  
   
-## Voir aussi  
- [Référence de fichiers d'en\-tête](../standard-library/cpp-standard-library-header-files.md)
+## <a name="functions"></a>Fonctions  
+ [\<filesystem>, fonctions](../standard-library/filesystem-functions.md)  
+  
+## <a name="operators"></a>Opérateurs  
+ [\<filesystem>, opérateurs](../standard-library/filesystem-operators.md)  
+  
+## <a name="enumerations"></a>Énumérations  
+  
+|Nom|Description|  
+|----------|-----------------|  
+|[copy_options, énumération](../standard-library/filesystem-enumerations.md#filesystem__copy_options)|Énumération utilisée avec [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) qui détermine le comportement si un fichier de destination existe déjà.|  
+|[directory_options, énumération](../standard-library/filesystem-enumerations.md#filesystem__directory_options)|Énumération qui spécifie les options pour les itérateurs de répertoire.|  
+|[file_type, énumération](../standard-library/filesystem-enumerations.md#filesystem__file_type)|Énumération pour les types de fichiers.|  
+|[perms, énumération](../standard-library/filesystem-enumerations.md#filesystem__perms)|Type de masque de bits utilisé pour transmettre les autorisations et les options des autorisations|  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

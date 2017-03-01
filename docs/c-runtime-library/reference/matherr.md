@@ -1,48 +1,64 @@
 ---
-title: "_matherr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_matherr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_matherr"
-  - "matherr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_matherr (fonction)"
-  - "matherr (fonction)"
+title: _matherr | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _matherr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _matherr
+- matherr
+dev_langs:
+- C++
+helpviewer_keywords:
+- _matherr function
+- matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# _matherr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: bd2ab4ac1c6772a06a2da6ac15f7f4b29f83c120
+ms.lasthandoff: 02/24/2017
 
-Handles math errors.  
+---
+# <a name="matherr"></a>_matherr
+Gère les erreurs mathématiques.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -51,70 +67,70 @@ Handles math errors.
 );  
 ```  
   
-#### Paramètres  
- *\_\_except*  
- Pointeur vers une structure contenant des informations sur les messages.  
+#### <a name="parameters"></a>Paramètres  
+ *except*  
+ Pointeur vers la structure contenant des informations sur l’erreur.  
   
-## Valeur de retour  
- \_**matherr** retourne 0 pour indiquer une erreur ou une valeur différente de zéro pour indiquer le succès.  Si le \_**matherr** retourne 0, un message d'erreur peut s'afficher et `errno` a une valeur d'erreur appropriée.  Si le \_**matherr** retourne une valeur différente de zéro, aucun message d'erreur n'est affiché et `errno` reste inchangé.  
+## <a name="return-value"></a>Valeur de retour  
+ _**matherr** retourne 0 pour indiquer une erreur, ou une valeur différente de zéro en cas de réussite. Si \_**matherr** retourne 0, un message d’erreur peut être affiché et `errno` est défini sur une valeur d’erreur appropriée. Si \_**matherr** retourne une valeur différente de zéro, aucun message d’erreur ne s’affiche et `errno` reste inchangé.  
   
- Pour plus d'informations sur ces codes de retour et autres, consultez [\_doserrno, errno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d’informations sur ces codes de retour, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- La fonction**matherr** gère les erreurs généres par les fonctions à virgule flottante de la bibliothèque mathématique.  Ces fonctions appellent **matherr**lorsqu'une erreur est détectée.  
+## <a name="remarks"></a>Notes  
+ La fonction _**matherr** traite les erreurs générées par les fonctions à virgule flottante de la bibliothèque mathématique. Ces fonctions appellent \_**matherr** si une erreur est détectée.  
   
- Pour la gestion des erreurs particulières, vous pouvez fournir une autre définition de  **matherr**.  Si vous utilisez la versiondu lien dynamique ou de la bibliothèque Runtime C \(Msvcr90.dll\), vous pouvez remplacer la routine par défaut de**matherr** \_dans un fichier exécutable client par une version définie par l'utilisateur.  Toutefois, vous ne pouvez pas remplacer la routine par défaut de`_matherr` dans un client de DLL Msvcr90.dll.  
+ Pour une gestion particulière des erreurs, vous pouvez fournir une autre définition de _**matherr**. Si vous utilisez la version à liaison dynamique de la bibliothèque Runtime C (Msvcr90.dll), vous pouvez remplacer la routine \_**matherr** par défaut dans un fichier exécutable client par une version définie par l’utilisateur. Toutefois, vous ne pouvez pas remplacer la routine `_matherr` par défaut dans un client DLL de Msvcr90.dll.  
   
- Lorsqu'une erreur se produit dans une routine mathématiques, \_**matherr** est appelé avec un pointeur vers une structure de type  **\_exception** \(définie dans Math.h\) comme argument.  La structure **\_exception** contient les éléments suivants :  
+ Quand une erreur se produit dans une routine mathématique, _**matherr** est appelée avec un pointeur désignant une structure de type **_exception** (définie dans Math.h) comme argument. La structure **_exception** contient les éléments suivants.  
   
- Type : **int**  
- Type d'exception  
+ **int type**  
+ Type d’exception.  
   
  **char \*name**  
- Nom de la fonction où l'erreur s'est produite.  
+ Nom de la fonction où l’erreur s’est produite.  
   
  **double arg1**, **arg2**  
- Le Premier argument et le second\(le cas échéant\)à la fonction.  
+ Premier et second (le cas échéant) arguments de la fonction.  
   
  **double retval**  
- Valeur retournée par la fonction.  
+ Valeur que la fonction doit retourner.  
   
- **type** Spécifie le type d'erreur mathématiques.  Elle est l'une des valeurs suivantes, défini dans Math.h.  
+ Le **type** spécifie le type d’erreur mathématique. Il a une des valeurs suivantes, définies dans Math.h.  
   
  `_DOMAIN`  
- Erreur de domaine argument.  
+ Erreur de domaine d’argument.  
   
  `_SING`  
- Singularité argument.  
+ Singularité de l’argument.  
   
  `_OVERFLOW`  
- Erreur sur le champ de débordement.  
+ Erreur de plage avec dépassement.  
   
  `_PLOSS`  
- Perte partielle d'importance.  
+ Perte partielle de précision.  
   
  `_TLOSS`  
- Perte totale de signification.  
+ Perte totale de précision.  
   
  `_UNDERFLOW`  
- Le résultat est trop petit pour être représenté. Cette propriété n'est pas prise en charge actuellement.  
+ Le résultat est trop petit pour être représenté. (Cette condition n’est pas prise en charge.)  
   
- Le membre de structure **Nom** est un pointeur vers une chaîne terminée par le caractère NULL qui contient le nom de la fonction qui a provoqué l'erreur.  Les membres de la structure **arg1** et **arg2** spécifient les valeurs qui ont provoqué l'erreur. \(Si un seul argument est fourni, il est stocké dans **arg1**.\)  
+ Le membre de structure **name** est un pointeur désignant une chaîne terminée par le caractère Null qui contient le nom de la fonction ayant provoqué l’erreur. Les membres de structure **arg1** et **arg2** spécifient les valeurs qui ont provoqué l’erreur. (Si un seul argument est fourni, il est stocké dans **arg1**.)  
   
- La valeur renvoyée par défaut de l'erreur est **retval**.  Si vous modifiez la valeur de retour, elle doit spécifier si une erreur a eu lieu.  
+ La valeur de retour par défaut pour l’erreur donnée est **retval**. Si vous modifiez la valeur de retour, elle doit spécifier si une erreur s’est effectivement produite.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_matherr`|\<math.h\>|  
+|`_matherr`|\<math.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Bibliothèques  
+## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_matherr.c  
@@ -168,7 +184,7 @@ int _matherr( struct _exception *except )
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 Special: using absolute value: log: _DOMAIN error  
@@ -178,9 +194,8 @@ log10( -5.0 ) = 6.989700e-001
 Normal: log( 0.0 ) = -1.#INF00e+000  
 ```  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [Long double](../../misc/long-double.md)

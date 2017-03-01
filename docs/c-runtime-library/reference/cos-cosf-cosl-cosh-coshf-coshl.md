@@ -1,69 +1,83 @@
 ---
-title: "cos, cosf, cosl, cosh, coshf, coshl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "coshl"
-  - "cosh"
-  - "cos"
-  - "cosl"
-  - "cosf"
-  - "coshf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "coshl"
-  - "cos"
-  - "cosf"
-  - "cosh"
-  - "cosl"
-  - "coshf"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "calculer le cosinus"
-  - "cos (fonction)"
-  - "cosf (fonction)"
-  - "cosh (fonction)"
-  - "coshf (fonction)"
-  - "coshl (fonction)"
-  - "cosinus"
-  - "cosinus, calculer"
-  - "cosl (fonction)"
-  - "fonctions hyperboliques"
-  - "fonctions trigonométriques"
+title: cos, cosf, cosl, cosh, coshf, coshl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- coshl
+- cosh
+- cos
+- cosl
+- cosf
+- coshf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- coshl
+- cos
+- cosf
+- cosh
+- cosl
+- coshf
+dev_langs:
+- C++
+helpviewer_keywords:
+- cosines
+- cosl function
+- calculating cosine
+- cosf function
+- cos function
+- cosh function
+- coshf function
+- trigonometric functions
+- cosines, calculating
+- coshl function
+- hyperbolic functions
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
 caps.latest.revision: 17
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# cos, cosf, cosl, cosh, coshf, coshl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 7b0107b94853080f1c6adfa114a7a207dde7b36f
+ms.lasthandoff: 02/24/2017
 
-Calcule le cosinus \(`cos`, `cosf`, ou `cosl`\), ou le cosinus hyperbolique \(`cosh`, `coshf`, ou `coshl`\).  
+---
+# <a name="cos-cosf-cosl-cosh-coshf-coshl"></a>cos, cosf, cosl, cosh, coshf, coshl
+Calcule le cosinus (`cos`, `cosf` ou `cosl`), ou le cosinus hyperbolique (`cosh`, `coshf` ou `coshl`).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 double cos(   
@@ -98,47 +112,47 @@ long double coshl(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `x`  
  Angle en radians.  
   
-## Valeur de retour  
- Cosinus ou cosinus hyperbolique de `x`.  Si `x` est supérieur ou égale à 263, ou inférieur ou égale à – 263, une perte d'importance dans le résultat d'un appel à `cos`, `cosf`, ou `cosl` se produit.  
+## <a name="return-value"></a>Valeur de retour  
+ Cosinus ou cosinus hyperbolique de `x`. Si `x` est supérieur ou égal à 263 ou inférieur ou égal à −263, le résultat d’un appel à `cos`, `cosf` ou `cosl` perd du sens.  
   
- Par défaut, si le résultat est trop important dans un `cosh`, `coshf`, ou un appel de `coshl`, la fonction retourne `HUGE_VAL` et affecte `errno` à la valeur `ERANGE`.  
+ Par défaut, si le résultat est trop grand dans un appel `cosh`, `coshf` ou `coshl`, la fonction retourne `HUGE_VAL` et définit `errno` sur `ERANGE`.  
   
 |Entrée|Exception SEH|Exception Matherr|  
-|------------|-------------------|-----------------------|  
+|-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|aucun|`_DOMAIN`|  
-|± ∞  \(`cosf`, `cos`, `cosl`\)|`INVALID`|`_DOMAIN`|  
-|X ≥ 7,104760e\+002 \(`cosh`, `coshf`, `coshl`\)|`INEXACT`\+`OVERFLOW`|`OVERFLOW`|  
+|± ∞ (`cosf`, `cos`, `cosl`)|`INVALID`|`_DOMAIN`|  
+|x ≥ 7,104760e+002 (`cosh`, `coshf`, `coshl`)|`INEXACT`+`OVERFLOW`|`OVERFLOW`|  
   
-## Notes  
- Comme C\+\+ permet la surcharge, il est possible d'appeler les surcharges de `cos` et `cosh` qui acceptent et renvoient les valeurs `float` ou `long double` .  Dans un programme C, `cos` et `cosh` prennent et retournent toujours `double`.  
+## <a name="remarks"></a>Notes  
+ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de `cos` et `cosh` qui acceptent et retournent des valeurs `float` ou `long double`. Dans un programme C, `cos` et `cosh` acceptent et retournent toujours un `double`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`cos`, `cosh`, `cosf`, `coshf`, `cosl`, `coshl`|\<math.h\>|  
+|`cos`, `cosh`, `cosf`, `coshf`, `cosl`, `coshl`|\<math.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
- Consultez l'exemple dans [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md).  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple dans [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md).  
   
-## Équivalent .NET Framework  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
   
 -   [System::Math::Cos](https://msdn.microsoft.com/en-us/library/system.math.cos.aspx)  
   
 -   [System::Math::Cosh](https://msdn.microsoft.com/en-us/library/system.math.cosh.aspx)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
  [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [atan, atanf, atanl, atan2, atan2f, atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
- [\_matherr](../../c-runtime-library/reference/matherr.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)   
  [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
  [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
- [\_CIcos](../../c-runtime-library/cicos.md)
+ [_CIcos](../../c-runtime-library/cicos.md)

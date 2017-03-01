@@ -1,62 +1,78 @@
 ---
-title: "copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "copysignf"
-  - "copysignl"
-  - "_copysignl"
-  - "_copysign"
-  - "_copysignf"
-  - "copysign"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_copysignl"
-  - "copysign"
-  - "copysignf"
-  - "_copysign"
-  - "copysignl"
-  - "_copysignf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_copysign (fonction)"
-  - "_copysignf (fonction)"
-  - "_copysignl (fonction)"
-  - "copysign (fonction)"
-  - "copysignf (fonction)"
-  - "copysignl (fonction)"
+title: copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- copysignf
+- copysignl
+- _copysignl
+- _copysign
+- _copysignf
+- copysign
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _copysignl
+- copysign
+- copysignf
+- _copysign
+- copysignl
+- _copysignf
+dev_langs:
+- C++
+helpviewer_keywords:
+- copysignl function
+- _copysignl function
+- copysign function
+- _copysignf function
+- _copysign function
+- copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 513ba53a63351b7239c0612103c41977e930eafa
+ms.lasthandoff: 02/24/2017
 
-Renvoie une valeur qui a l'importance d'un argument et le signe des autres.  
+---
+# <a name="copysign-copysignf-copysignl-copysign-copysignf-copysignl"></a>copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
+Retourne une valeur qui a la grandeur d’un argument et le signe d’un autre.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 double copysign(   
@@ -89,33 +105,33 @@ long double _copysignl(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `x`  
- La valeur à virgule flottante qui est retournée comme importance du résultat.  
+ Valeur à virgule flottante retournée en tant que grandeur du résultat.  
   
  `y`  
- La valeur à virgule flottante qui est retournée en tant que signe du résultat.  
+ Valeur à virgule flottante retournée en tant que signe du résultat.  
   
- [Routines de support à virgule flottante](../../c-runtime-library/floating-point-support.md)  
+ [Routines de prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)  
   
-## Valeur de retour  
- Les fonctions `copysign` retournent une valeur à virgule flottante qui combine l'importance du `x` et le signe du `y`.  Aucun retour d'erreur.  
+## <a name="return-value"></a>Valeur de retour  
+ Les fonctions `copysign` retournent une valeur à virgule flottante qui combine la grandeur de `x` et le signe de `y`. Aucun retour d'erreur.  
   
-## Notes  
- Comme C\+\+ permet la surcharge, vous pouvez appeler les surcharges de `copysign` qui acceptent et retournent les valeurs `float` ou `long double`.  Dans un programme C, `copysign` prend et retourne toujours `double`.  
+## <a name="remarks"></a>Notes  
+ C++ autorisant la surcharge, vous pouvez appeler des surcharges de `copysign` qui acceptent et retournent des valeurs `float` ou `long double`. Dans un programme C, `copysign` accepte et retourne toujours un `double`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_copysign`|\<float.h\>|  
-|`copysign`, `copysignf`, `copysignl`, `_copysignf` `_copysignl`|\<math.h\>|  
+|`_copysign`|\<float.h>|  
+|`copysign`, `copysignf`, `copysignl`, `_copysignf``_copysignl`|\<math.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [fabs, fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
- [\_chgsign, \_chgsignf, \_chgsignl](../../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)
+ [_chgsign, _chgsignf, _chgsignl](../../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)

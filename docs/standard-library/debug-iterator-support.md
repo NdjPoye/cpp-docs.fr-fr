@@ -1,50 +1,64 @@
 ---
-title: "It&#233;rateurs de d&#233;bogage, prise en charge | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_HAS_ITERATOR_DEBUGGING symbol"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "itérateurs de débogage (prise en charge)"
-  - "itérateurs incompatibles"
-  - "itérateurs, itérateurs de débogage (prise en charge)"
-  - "itérateurs, incompatibles"
-  - "bibliothèques sécurisées"
-  - "bibliothèques sécurisées, bibliothèque C++ standard"
-  - "bibliothèque C++ standard sécurisée"
-  - "bibliothèque C++ standard, itérateurs de débogage (prise en charge)"
+title: "Prise en charge des itérateurs de débogage | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Safe Libraries
+- Safe Libraries, C++ Standard Library
+- Safe C++ Standard Library
+- C++ Standard Library, debug iterator support
+- iterators, debug iterator support
+- iterators, incompatible
+- incompatible iterators
+- debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
 caps.latest.revision: 22
-caps.handback.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# It&#233;rateurs de d&#233;bogage, prise en charge
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 9e2bfb1095c28ea3592c5af2b89cb2fbeddcb60c
+ms.openlocfilehash: 37f3450fbd320105781fa5398e838d3a8e317879
+ms.lasthandoff: 02/24/2017
 
-La bibliothèque Runtime Visual C\+\+ détecte l'utilisation incorrecte itérateur, et affirme et affiche une boîte de dialogue lors de l'exécution.  Pour permettre la prise en charge d'itérateur de débogage, vous devez utiliser une version de débogage de la bibliothèque Runtime c en cours pour compiler votre programme.  Pour plus d'informations, consultez [Fonctions de bibliothèque CRT](../c-runtime-library/crt-library-features.md).  Pour plus d'informations sur l'utilisation des itérateurs, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md).  
+---
+# <a name="debug-iterator-support"></a>Debug Iterator Support
+La bibliothèque Runtime Visual C++ détecte l’utilisation d’itérateurs incorrects, et effectue une assertion et affiche une boîte de dialogue au moment de l’exécution. Pour activer la prise en charge des itérateurs de débogage, vous devez utiliser les versions Debug de la bibliothèque C++ Standard et de la bibliothèque Runtime C pour compiler votre programme. Pour plus d’informations, consultez [Fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md). Pour plus d’informations sur l’utilisation d’itérateurs vérifiés, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md).  
   
- La norme C\+\+ décrit comment les fonctions membres peuvent entraîner des itérateurs à un conteneur valides.  Deux exemples :  
+ La norme C++ décrit comment les fonctions membres peuvent entraîner la non-validité des itérateurs vers un conteneur. En voici deux exemples:  
   
--   Effacer un élément d'un conteneur a pour devenir des itérateurs à l'élément non valide.  
+-   La suppression d’un élément d’un conteneur entraîne la non-validité des itérateurs vers l’élément.  
   
--   Augmenter la taille d'[vecteur](../standard-library/vector.md) \(par émission ou insert\) entraîne devenir des itérateurs dans `vector` valide.  
+-   L’augmentation de la taille d’un [vecteur](../standard-library/vector.md) à l’aide de push ou insert entraîne la non-validité des itérateurs dans le `vector`.  
   
-## Exemple  
- Si vous compilez le programme suivant en mode débogage, au moment de l'exécution de données SQL server vérifie et de fin.  
+## <a name="example"></a>Exemple  
+Si vous compilez cet exemple de programme en mode débogage, au moment de l’exécution il effectue une assertion et s’arrête.  
   
 ```cpp  
-/* compile with /EHsc /MDd */  
+// iterator_debugging_0.cpp  
+// compile by using /EHsc /MDd  
 #include <vector>  
 #include <iostream>  
   
@@ -61,25 +75,21 @@ int main() {
    std::vector<int>::iterator j = v.end();  
    --j;  
   
-   std::cout<<*j<<'\n';  
+   std::cout << *j << '\n';  
   
    v.insert(i,25);   
   
-   std::cout<<*j<<'\n'; // Using an old iterator after an insert  
+   std::cout << *j << '\n'; // Using an old iterator after an insert  
 }  
-  
 ```  
   
-## Exemple  
- Vous pouvez utiliser le symbole [\_HAS\_ITERATOR\_DEBUGGING](../standard-library/has-iterator-debugging.md) pour désactiver la fonctionnalité de débogage d'itération dans une version de débogage.  Le programme suivant n'affirme pas, mais les déclencheurs éliminaient toujours le comportement.  
-  
-> [!IMPORTANT]
->  Utilisation `_ITERATOR_DEBUG_LEVEL` de contrôler `_HAS_ITERATOR_DEBUGGING`.  Pour plus d'informations, consultez [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md).  
+## <a name="example"></a>Exemple  
+Vous pouvez utiliser la macro de préprocesseur [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) pour désactiver la fonctionnalité de débogage des itérateurs dans une version Debug. Ce programme n’effectue pas d’assertion, mais déclenche un comportement non défini.  
   
 ```cpp  
-// iterator_debugging.cpp  
-// compile with: /EHsc /MDd  
-#define _HAS_ITERATOR_DEBUGGING 0  
+// iterator_debugging_1.cpp  
+// compile by using: /EHsc /MDd  
+#define _ITERATOR_DEBUG_LEVEL 0  
 #include <vector>  
 #include <iostream>  
   
@@ -96,23 +106,28 @@ int main() {
    std::vector<int>::iterator j = v.end();  
    --j;  
   
-   std::cout<<*j<<'\n';  
+   std::cout << *j << '\n';  
   
    v.insert(i,25);   
   
-   std::cout<<*j<<'\n'; // Using an old iterator after an insert  
+   std::cout << *j << '\n'; // Using an old iterator after an insert  
 }  
 ```  
   
-  **20**  
-**\-572662307**   
-## Exemple  
- Une assertion se produit également si vous tentez d'utiliser un itérateur avant d'être initialisé, comme indiqué ici :  
+```Output  
+20  
+-572662307  
+```  
+  
+## <a name="example"></a>Exemple  
+Une assertion se produit également si vous essayez d’utiliser un itérateur avant son initialisation, comme illustré ici :  
   
 ```cpp  
-/* compile with /EHsc /MDd */  
+// iterator_debugging_2.cpp  
+// compile by using: /EHsc /MDd  
 #include <string>  
 using namespace std;  
+  
 int main() {  
    string::iterator i1, i2;  
    if (i1 == i2)  
@@ -120,11 +135,12 @@ int main() {
 }  
 ```  
   
-## Exemple  
- L'exemple suivant provoque une assertion car les deux itérateurs à l'algorithme d'[for\_each](../Topic/for_each.md) sont incompatibles.  Les algorithmes permettent de déterminer si les itérateurs fournis à elles référencent le même conteneur.  
+## <a name="example"></a>Exemple  
+L’exemple de code suivant provoque une assertion, car les deux itérateurs vers l’algorithme [for_each](../standard-library/algorithm-functions.md#for_each) ne sont pas compatibles. Les algorithmes vérifient si les itérateurs qui leur sont fournis référencent le même conteneur.  
   
 ```cpp  
-/* compile with /EHsc /MDd */  
+// iterator_debugging_3.cpp  
+// compile by using /EHsc /MDd  
 #include <algorithm>  
 #include <vector>  
 using namespace std;  
@@ -140,20 +156,20 @@ int main()
     v2.push_back(10);  
     v2.push_back(20);  
   
-    // The next line will assert because v1 and v2 are  
+    // The next line asserts because v1 and v2 are  
     // incompatible.  
     for_each(v1.begin(), v2.end(), [] (int& elem) { elem *= 2; } );  
 }  
 ```  
   
- Notez que cet exemple utilise l'expression lambda `[] (int& elem) { elem *= 2; }` au lieu d'un functor.  Bien que ce tableau est pas portant sur l'échec \(FCI\) assertion le functor que similaire changerait le même problème \- lambdas sont très une méthode utile d'effectuer des tâches compact de fonction.  Pour plus d'informations sur les expressions lambda, consultez [Expressions lambda](../cpp/lambda-expressions-in-cpp.md).  
+Notez que cet exemple utilise l’expression lambda `[] (int& elem) { elem *= 2; }` au lieu d’un foncteur. Bien que ce choix n’ait aucune incidence sur l’échec de l’assertion (un foncteur similaire entraîne un échec de la même façon), les expressions lambda sont un moyen très utile d’accomplir des tâches d’objet de fonction compact. Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda](../cpp/lambda-expressions-in-cpp.md).  
   
-## Exemple  
- Déboguer l'itérateur vérification également provoque une variable itérateur déclarée dans une boucle d'`for` soit hors de portée lorsque l'étendue de boucle d'`for` se termine.  
+## <a name="example"></a>Exemple  
+La vérification des itérateur de débogage provoque également une variable d’itérateur déclarée dans une boucle `for` comme étant hors de portée quand la portée de la boucle `for` se termine.  
   
 ```cpp  
-// debug_iterator.cpp  
-// compile with: /EHsc /MDd  
+// iterator_debugging_4.cpp  
+// compile by using: /EHsc /MDd  
 #include <vector>  
 #include <iostream>  
 int main() {  
@@ -163,20 +179,21 @@ int main() {
    v.push_back(15);  
    v.push_back(20);  
   
-   for (std::vector<int>::iterator i = v.begin() ; i != v.end(); ++i)  
-   ;  
+   for (std::vector<int>::iterator i = v.begin(); i != v.end(); ++i)  
+      ;   // do nothing  
    --i;   // C2065  
 }  
 ```  
   
-## Exemple  
- Les itérateurs de débogage ont les destructeurs non triviaux.  Si un destructeur ne fonctionne pas, pour quelque raison que ce soit, les violations d'accès et les données endommagées peuvent se produire.  Considérez cet exemple :  
+## <a name="example"></a>Exemple  
+Les itérateurs de débogage ont des destructeurs non triviaux. Si un destructeur ne s’exécute pas pour une raison quelconque, des violations d’accès et une altération des données peuvent se produire. Considérez cet exemple :  
   
 ```cpp  
-/* compile with: /EHsc /MDd */  
+// iterator_debugging_5.cpp  
+// compile by using: /EHsc /MDd  
 #include <vector>  
 struct base {  
-   // FIX: uncomment the next line  
+   // TO FIX: uncomment the next line  
    // virtual ~base() {}  
 };  
   
@@ -194,5 +211,10 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [Vue d'ensemble de la bibliothèque STL](../standard-library/cpp-standard-library-overview.md)
+## <a name="see-also"></a>Voir aussi  
+[Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)
+
+
+
+
+

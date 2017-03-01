@@ -1,47 +1,66 @@
 ---
-title: "Flux d&#39;entr&#233;e/sortie | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "E/S (C++), flux de données"
-  - "E/S de flux"
+title: "Flux d’entrée/sortie | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- I/O [C++], stream
+- stream I/O
 ms.assetid: 21a97566-91a7-42d6-b2f8-a4c16bc926f1
 caps.latest.revision: 11
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Flux d&#39;entr&#233;e/sortie
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 4fdfb4ece713c071a4b740127428c16303c0ab10
+ms.lasthandoff: 02/24/2017
 
-`basic_iostream`, défini dans le fichier d'en\-tête \<istream\>, est le modèle de la classe pour les objets qui gèrent les deux flux d'E\/S basés caractérisé en entrée et sortie.  
+---
+# <a name="inputoutput-streams"></a>Flux d'entrée/sortie
+`basic_iostream`, qui est défini dans le fichier d’en-tête \<istream>, est le modèle de classe qui gère les flux d’E/S de caractères d’entrée et de sortie.  
   
- Il existe deux typedefs qui définissent des spécialisations de caractères spécifique à `basic_iostream` et peuvent aider à simplifier le code pour lire : `iostream` \(ne pas être confondu avec le fichier d'en\-tête \<iostream\>\) est un flux d'E\/S basé sur `basic_iostream<char>`; `wiostream` est un flux d'E\/S basé sur `basic_iostream<wchar_t>`.  
+ Il existe deux typedefs qui définissent des spécialisations de `basic_iostream` propres aux caractères et peuvent aider à améliorer la lisibilité du code : `iostream` (à ne pas confondre avec le fichier d’en-tête \<iostream>) est un flux d’E/S basé sur `basic_iostream<char>` ; `wiostream` est un flux d’E/S basé sur `basic_iostream<wchar_t>`.  
   
- Pour plus d'informations, consultez [basic\_iostream, classe](../standard-library/basic-iostream-class.md), [iostream](../Topic/iostream.md) et [wiostream](../Topic/wiostream.md).  
+ Pour plus d’informations, consultez [basic_iostream, classe](../standard-library/basic-iostream-class.md), [iostream](../standard-library/basic-iostream-class.md) et [wiostream](../standard-library/basic-iostream-class.md).  
   
- Dérivant de `basic_iostream`, le modèle de la classe `basic_fstream` est utilisé pour transmettre en continu des données caractères vers et à partir de fichiers.  
+ Le modèle de classe `basic_fstream` dérive de `basic_iostream`. Il sert à transmettre des données de caractères vers et à partir des fichiers.  
   
- Il existe également des typedefs qui fournissent des spécialisations de caractères spécifique à `basic_fstream`.  Elles sont `fstream`, un flux d'E\/S de fichier qui est basé sur `char`, et `wfstream`, un flux d'E\/S de fichier qui est basé sur `wchar_t`.  Pour plus d'informations, consultez [basic\_fstream, classe](../standard-library/basic-fstream-class.md), [fstream](../Topic/fstream.md) et [wfstream](../Topic/wfstream.md).  Ces typedefs requiert l'inclusion du fichier d'en\-tête \<fstream\>.  
+ Il existe également des typedefs qui fournissent des spécialisations de `basic_fstream` propres aux caractères. Il s’agit de `fstream`, qui est un flux d’E/S de fichier basé sur `char`, et de `wfstream`, qui est un flux d’E/S de fichier basé sur `wchar_t`. Pour plus d’informations, consultez [basic_fstream, classe](../standard-library/basic-fstream-class.md), [fstream](../standard-library/basic-fstream-class.md) et [wfstream](../standard-library/basic-fstream-class.md). L’utilisation de ces typedefs nécessite l’inclusion du fichier d’en-tête \<fstream>.  
   
 > [!NOTE]
->  Lorsqu'un objet `basic_fstream` est utilisé pour effectuer les E\/S d'un fichier, même si la mémoire tampon sous\-jacente contient les positions désignées séparément pour la lecture et pour l'écriture, les positions actuelles d'entrée et de sortie sont liées ensemble ; par conséquent, la lecture de certaines données déplace la position de sortie.  
+>  Quand un objet `basic_fstream` est utilisé pour effectuer des E/S de fichiers, bien que la mémoire tampon sous-jacente contienne des positions distinctes désignées pour la lecture et l’écriture, les positions actuelles d’entrée et de sortie sont liées. Ainsi, la lecture de certaines données déplace la position de sortie.  
   
- Le modèle de la classe `basic_stringstream` et la spécialisation commune, `stringstream`, sont souvent utilisés pour traiter les objets de flux d'E\/S pour insérer et extraire des données de caractères.  Pour plus d'informations, consultez [basic\_stringstream, classe](../standard-library/basic-stringstream-class.md).  
+ Le modèle de classe `basic_stringstream` et sa spécialisation courante, `stringstream`, sont souvent utilisés pour travailler avec des objets de flux d’E/S pour insérer et extraire des données de type caractère. Pour plus d’informations, consultez [basic_stringstream, classe](../standard-library/basic-stringstream-class.md).  
   
-## Voir aussi  
- [stringstream](../Topic/stringstream.md)   
- [basic\_stringstream, classe](../standard-library/basic-stringstream-class.md)   
- [\<sstream\>](../standard-library/sstream.md)   
+## <a name="see-also"></a>Voir aussi  
+ [stringstream](../standard-library/basic-stringstream-class.md)   
+ [basic_stringstream, classe](../standard-library/basic-stringstream-class.md)   
+ [\<sstream>](../standard-library/sstream.md)   
  [iostream, programmation](../standard-library/iostream-programming.md)   
- [Bibliothèque standard C\+\+](../standard-library/cpp-standard-library-reference.md)
+ [Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

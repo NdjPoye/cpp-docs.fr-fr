@@ -1,69 +1,85 @@
 ---
-title: "_fpreset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fpreset"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fpreset"
-  - "fpreset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fpreset (fonction)"
-  - "chiffres à virgule flottante, réinitialiser le package mathématique"
-  - "fpreset (fonction)"
+title: _fpreset | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fpreset
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fpreset
+- fpreset
+dev_langs:
+- C++
+helpviewer_keywords:
+- fpreset function
+- floating-point numbers, resetting math package
+- _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _fpreset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 0d5bf6ef97700e010a6565eccf7087a613adf9c3
+ms.lasthandoff: 02/24/2017
 
-Réinitialise le package de virgule flottante.  
+---
+# <a name="fpreset"></a>_fpreset
+Réinitialise le package à virgule flottante.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void _fpreset( void );  
 ```  
   
-## Notes  
- La fonction `_fpreset` réinitialise le package mathématique de virgule flottante.  `_fpreset` est généralement utilisé avec `signal`, `system`, ou les fonctions `_exec` ou `_spawn`.  Si un programme intercepte le signal d'erreur de virgule flottante\(`SIGFPE`\) avec `signal`, il peut, sans risque, récupérer des erreurs de virgule flottante en appelant `_fpreset` et en utilisant `longjmp`.  
+## <a name="remarks"></a>Notes  
+ La fonction `_fpreset` réinitialise le package mathématique à virgule flottante. `_fpreset` est généralement utilisée avec `signal`, `system` ou les fonctions `_exec` ou `_spawn`. Si un programme intercepte des signaux d’erreur de virgule flottante (`SIGFPE`) avec `signal`, il peut récupérer en toute sécurité les erreurs de virgule flottante en appelant `_fpreset` et en utilisant `longjmp`.  
   
- Cette fonction est ignorée lorsque vous utilisez [\/clr \(Compilation pour le Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md) ou `/clr:pure` pour compiler car le Common Langage Runtime \(CLR\) ne prend en charge que la précision de virgule flottante par défaut.  
+ Cette fonction est déconseillée lors de la compilation avec [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , car le common language runtime prend uniquement en charge la précision en virgule flottante par défaut.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Fonction|En\-tête requis|  
+|Fonction|En-tête requis|  
 |--------------|---------------------|  
-|`_fpreset`|\<float.h\>|  
+|`_fpreset`|\<float.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_fpreset.c  
@@ -172,11 +188,14 @@ void fpcheck( void )
 }  
 ```  
   
-  **Divisant 5 par      0...**  
-**Erreur 131 : Division par zéro**   
-## Voir aussi  
+```Output  
+Dividing    5 by    0...  
+Error 131: Divide by zero  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [\_exec, \_wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md)   
+ [_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md)   
  [signal](../../c-runtime-library/reference/signal.md)   
- [\_spawn, \_wspawn, fonctions](../../c-runtime-library/spawn-wspawn-functions.md)   
- [system, \_wsystem](../../c-runtime-library/reference/system-wsystem.md)
+ [_spawn, _wspawn, fonctions](../../c-runtime-library/spawn-wspawn-functions.md)   
+ [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)

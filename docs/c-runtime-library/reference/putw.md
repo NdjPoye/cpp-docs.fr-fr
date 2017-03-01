@@ -1,51 +1,67 @@
 ---
-title: "_putw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_putw"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_putw"
-  - "putw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_putw (fonction)"
-  - "entiers, écrire dans des flux"
-  - "putw (fonction)"
-  - "flux, écrire des entiers dans"
+title: _putw | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _putw
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _putw
+- putw
+dev_langs:
+- C++
+helpviewer_keywords:
+- integers, writing to streams
+- putw function
+- streams, writing integers to
+- _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _putw
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ae689f0f299f307bdda9771d4929623e04a7196f
+ms.lasthandoff: 02/24/2017
 
-Écrit un entier sur un flux de données.  
+---
+# <a name="putw"></a>_putw
+Écrit un entier dans un flux.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -55,33 +71,33 @@ caps.handback.revision: 14
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *binint*  
  Entier binaire à sortir.  
   
  `stream`  
- \[in\] Pointeur vers la structure **FILE**.  
+ Pointeur désignant la structure **FILE**.  
   
-## Valeur de retour  
- Retourne la valeur écrite.  Une valeur de retour de `EOF` peut indiquer une erreur.  Comme `EOF` est également une valeur entière légitime, utilisez `ferror` pour vérifier une erreur.  Si `stream` est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, cette fonction paramètre `errno` à `EINVAL` et renvoie `EOF`.  
+## <a name="return-value"></a>Valeur de retour  
+ Retourne la valeur écrite. La valeur de retour `EOF` peut indiquer une erreur. Sachant que `EOF` est aussi une valeur entière légitime, utilisez `ferror` pour vérifier une erreur. Si `stream` est un pointeur Null, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction affecte la valeur `errno` à `EINVAL` et retourne `EOF`.  
   
- Pour plus d'informations sur ces éléments et autres codes d'erreur, consultez [\_doserrno, errno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- La fonction `_putw` écrit une valeur binaire de type `int` à l'emplacement actuel du *flux de données.* `_putw` n'affecte pas l'alignement des éléments du flux de données ni ne suppose un alignement particulier.  `_putw` est principalement à des fins de compatibilité avec les bibliothèques précédentes.  Les problèmes de portabilité peuvent se poser avec `_putw` car la taille d'un `int` et l'ordre des octets dans un `int` diffèrent entre les systèmes.  
+## <a name="remarks"></a>Notes  
+ La fonction `_putw` écrit une valeur binaire de type `int` à la position actuelle de *stream.* `_putw` n’affecte pas l’alignement des éléments du flux alignés ni ne présume aucun alignement spécial. `_putw` vise principalement à assurer la compatibilité avec les bibliothèques précédentes. Des problèmes de portabilité peuvent se présenter avec `_putw`, car la taille d’un `int` et l’ordre des octets au sein d’un `int` diffèrent d’un système à l’autre.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_putw`|\<stdio.h\>|  
+|`_putw`|\<stdio.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Bibliothèques  
+## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_putw.c  
@@ -113,15 +129,15 @@ int main( void )
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 Wrote ten words  
 ```  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
- [\_getw](../../c-runtime-library/reference/getw.md)
+## <a name="see-also"></a>Voir aussi  
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
+ [_getw](../../c-runtime-library/reference/getw.md)

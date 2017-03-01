@@ -1,47 +1,67 @@
 ---
-title: "chsize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_chsize"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "chsize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "chsize (fonction)"
+title: _chsize | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _chsize
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _chsize
+dev_langs:
+- C++
+helpviewer_keywords:
+- size
+- _chsize function
+- size, changing file
+- files [C++], changing size
+- chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _chsize
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: bde424088fad3661105e92b0a7aa035137bed249
+ms.lasthandoff: 02/24/2017
 
-Changes the size of a file.  Un version plus sûr de [\_chsize\_s](../../c-runtime-library/reference/chsize-s.md) est disponible ; consultez .  
+---
+# <a name="chsize"></a>_chsize
+Modifie la taille d’un fichier. Une version plus sécurisée est disponible. Consultez [_chsize_s](../../c-runtime-library/reference/chsize-s.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int _chsize(   
@@ -50,32 +70,32 @@ int _chsize(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `fd`  
- Descripteurs de fichier faisant référence au fichier ouvert.  
+ Descripteur de fichier qui fait référence à un fichier ouvert.  
   
  `size`  
- Longueur du fichier en octets.  
+ Nouvelle longueur, en octets, du fichier.  
   
-## Valeur de retour  
- `_chsize` retourne la valeur 0 si la taille du fichier a été modifiée.  Une valeur de retour de – 1 indique une erreur : `errno` a la valeur `EACCES` si le fichier spécifié est verrouillé contre tout accès, à `EBADF` si le fichier spécifié est en lecture seule ou si l'un descripteur est invalide, à `ENOSPC` si aucun espace ne reste sur le périphérique, ou à `EINVAL` si `size` est inférieure à zéro.  
+## <a name="return-value"></a>Valeur de retour  
+ `_chsize` retourne la valeur 0 si la taille du fichier a été correctement modifiée. Une valeur de retour égale à −1 indique une erreur : `errno` est défini sur `EACCES` si le fichier spécifié est verrouillé contre tout accès, sur `EBADF` si le fichier spécifié est en lecture seule ou si le descripteur n’est pas valide, sur `ENOSPC` en l’absence d’espace disponible sur le périphérique ou sur `EINVAL` si `size` est inférieur à zéro.  
   
- Consultez [\_doserrno, errno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d'informations sur ces éléments et autres codes de retour.  
+ Pour plus d’informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- La fonction `_chsize` étend ou tronque le fichier associé à `fd` à la longueur spécifiée par `size`.  Le fichier doit être ouvert dans un mode qui permet d'écrire.  Les caractères Null \("\\0 "\) sont ajoutés si le fichier est étendu.  Si le fichier est tronqué, toutes les données de la fin du fichier original raccourci sont perdues.  
+## <a name="remarks"></a>Notes  
+ La fonction `_chsize` étend ou tronque le fichier associé à `fd` à la longueur spécifiée par `size`. Le fichier doit être ouvert dans un mode qui permet l’écriture. Des caractères Null (« \0 ») sont ajoutés si le fichier est étendu. Si le fichier est tronqué, toutes les données depuis la fin du fichier raccourci jusqu’à la longueur d’origine du fichier sont perdues.  
   
- Cette fonction valide ses paramètres.  Si `size` est inférieure à zéro ou que`fd` est un mauvais descripteur de fichier, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  
+ Cette fonction valide ses paramètres. Si `size` est inférieur à zéro ou que `fd` est un descripteur de fichier incorrect, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|En\-tête facultatif|  
-|-------------|---------------------|-------------------------|  
-|`_chsize`|\<io.h,\>|\<errno.h\>|  
+|Routine|En-tête requis|En-tête facultatif|  
+|-------------|---------------------|---------------------|  
+|`_chsize`|\<io.h>|\<errno.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_chsize.c  
@@ -109,17 +129,20 @@ int main( void )
 }  
 ```  
   
-  **Longueur de fichier jusque là : 0**  
-**Taille correctement modifiée**  
-**Longueur de fichier après :  329678**   
-## Équivalent .NET Framework  
+```Output  
+File length before: 0  
+Size successfully changed  
+File length after:  329678  
+```  
+  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
   
 -   [System::IO::Stream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.stream.setlength.aspx)  
   
--   [System::IO::FileStream::FileStream](https://msdn.microsoft.com/en-us/library/system.io.filestream.setlength.aspx)  
+-   [System::IO::FileStream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.filestream.setlength.aspx)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion de fichiers](../../c-runtime-library/file-handling.md)   
- [\_close](../../c-runtime-library/reference/close.md)   
- [\_sopen, \_wsopen](../../c-runtime-library/reference/sopen-wsopen.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+ [_close](../../c-runtime-library/reference/close.md)   
+ [_sopen, _wsopen](../../c-runtime-library/reference/sopen-wsopen.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

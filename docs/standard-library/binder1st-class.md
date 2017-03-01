@@ -1,84 +1,95 @@
 ---
-title: "binder1st, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xfunctional/std::binder1st"
-  - "std::binder1st"
-  - "binder1st"
-  - "std.binder1st"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binder1st (classe)"
+title: binder1st, classe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xfunctional/std::binder1st
+- std::binder1st
+- binder1st
+- std.binder1st
+dev_langs:
+- C++
+helpviewer_keywords:
+- binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
 caps.latest.revision: 22
-caps.handback.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# binder1st, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 71d06115b1f6cc0df5a3dee9ce60482e641407ef
+ms.lasthandoff: 02/24/2017
 
-Une classe de modèle fournissant un constructeur qui convertit un objet fonction binaire en un objet fonction unaire en liant le premier argument de la fonction binaire à une valeur spécifiée.  
+---
+# <a name="binder1st-class"></a>binder1st, classe
+Classe de modèle fournissant un constructeur qui convertit un objet de fonction binaire en objet de fonction unaire en liant le premier argument de la fonction binaire à une valeur spécifiée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
-```  
-template<class Operation>  
-class binder1st  
-   : public unary_function <  
-      typename Operation::second_argument_type,  
-      typename Operation::result_type>   
-  {  
-   public:  
-   typedef typename Operation::argument_type argument_type;  
-   typedef typename Operation::result_type result_type;  
-   binder1st(  
-      const Operation & _Func,  
-      const typename Operation::first_argument_type& _Left  
-   );  
-   result_type operator()(  
-      const argument_type& _Right  
-   ) const;  
-   result_type operator()(  
-      const argument_type& _Right  
-   ) const;  
-   protected:  
-   Operation op;  
-   typename Operation::first_argument_type value;  
-   };  
+```
+template <class Operation>
+class binder1st
+    : public unaryFunction <typename Operation::second_argument_type,
+                             typename Operation::result_type>
+{
+public:
+    typedef typename Operation::argument_type argument_type;
+    typedef typename Operation::result_type result_type;
+    binder1st(
+        const Operation& Func,
+        const typename Operation::first_argument_type& left);
+
+    result_type operator()(const argument_type& right) const;
+    result_type operator()(const argument_type& right) const;
+
+protected:
+    Operation op;
+    typename Operation::first_argument_type value;
+};
 ```  
   
-#### Paramètres  
- `_Func`  
- L'objet de la fonction binaire à convertir en un objet de fonction unaire.  
+#### <a name="parameters"></a>Paramètres  
+ `Func`  
+ Objet de fonction binaire à convertir en un objet de fonction unaire.  
   
- `_Left`  
- La valeur à laquelle le premier argument de l'objet de la fonction binaire doit être lié.  
+ `left`  
+ Valeur à laquelle le premier argument de l’objet de fonction binaire doit être lié.  
   
- `_Right`  
- La valeur de l'argument que l'objet binaire approprié compare à la valeur fixe du second argument.  
+ `right`  
+ Valeur de l’argument que l’objet binaire adapté compare à la valeur fixe du deuxième argument.  
   
-## Valeur de retour  
- L'objet de la fonction unaire qui résulte de la liaison le premier argument de l'objet de fonction binaire à la valeur `_Left.`  
+## <a name="return-value"></a>Valeur de retour  
+ Objet de fonction unaire qui résulte de la liaison du premier argument de l’objet de fonction binaire avec la valeur `left.`  
   
-## Notes  
- La classe de modèle stocke une copie d'un objet binaire `_Func` de fonction dans **op**, et une copie d'`_Left` dans **valeur**.  Cette option définit la fonction membre `operator()` comme retourner **op**\(**valeur**, `_Right`\).  
+## <a name="remarks"></a>Notes  
+ La classe de modèle stocke une copie d’un objet de fonction binaire `Func` dans **op** et une copie de `left` dans **value**. Elle définit sa fonction membre `operator()` comme retournant **op**( **value**, `right`).  
   
- Si `_Func` est un objet de type **Opération** et `c` constante, puis [bind1st](../Topic/bind1st%20Function.md) \( `_Func`, `c` \) est équivalent au constructeur `binder1st`\<**Opération**\> \( `_Func`, `c` \) de la classe d'`binder1st` et plus pratique.  
+ Si `Func` est un objet de type **Operation** et que `c` est une constante, [bind1st](../standard-library/functional-functions.md#bind1st_function) ( `Func`, `c` ) est équivalent au constructeur de classe `binder1st` `binder1st`\< **Operation**> ( `Func`, `c` ) et il est plus pratique.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // functional_binder1st.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -119,16 +130,22 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "  
          << result2 << "." << endl;  
 }  
+\* Output:   
+The vector v1 = ( 0 5 10 15 20 25 )  
+The number of elements in v1 greater than 10 is: 3.  
+The number of elements in v1 less than 10 is: 2.  
+*\  
 ```  
   
-  **Le vecteur v1 \= \(0 5 10 15 20 25\)**  
-**Le nombre d'éléments dans v1 plus grand que 10 est : 3.**  
-**Le nombre d'éléments dans v1 inférieur à 10 est: 2.**   
-## Configuration requise  
- **En\-tête :** \<functional\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<functional>  
   
- **Espace de noms :** std  
+ **Espace de noms :** std  
   
-## Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Bibliothèque STL \(Standard Template Library\)](../misc/standard-template-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

@@ -1,49 +1,67 @@
 ---
-title: "C++, d&#233;marrage et terminaison de programme | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contrôle (flux de texte)"
-  - "fonction Main (procédures)"
-  - "main (fonction), démarrage du programme"
-  - "bibliothèque C++ standard, programme (démarrage et terminaison)"
-  - "code de démarrage, et terminaison du programme (C++)"
-  - "terminer l'exécution"
+title: "C++, démarrage et arrêt du programme | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ Standard Library, program startup and termination
+- terminating execution
+- Function Main procedures
+- control text streams
+- startup code, and C++ program termination
+- main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
 caps.latest.revision: 9
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C++, d&#233;marrage et terminaison de programme
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 53e31f3f3a175013a248401f4231bb87cf444681
+ms.lasthandoff: 02/24/2017
 
-Le programme actuelle c \+\+ effectue les mêmes opérations que le programme en cours c effectué au démarrage du programme et l'arrêt du programme, ainsi que certains plus à tracer les grandes lignes ici.  
+---
+# <a name="c-program-startup-and-termination"></a>C++, démarrage et terminaison de programme
+Un programme C++ exécute les mêmes opérations qu’un programme C au démarrage et à l’arrêt du programme, plus quelques autres décrites ici.  
   
- Avant que l'environnement cible appelle la fonction `main`, et après qu'il enregistre toutes les valeurs initiales constantes que vous spécifiez dans tous les objets dont la durée statique, le programme exécute toutes autres constructeurs pour ces objets statiques.  L'ordre d'exécution n'est pas spécifiée entre les unités de traduction, mais vous pouvez néanmoins en supposant que certains objets d'[iostreams](../standard-library/iostreams-conventions.md) sont correctement initialisés destinée à ces constructeurs statiques.  Ces flux de texte du contrôle sont :  
+ Avant que l’environnement cible n’appelle la fonction `main` et une fois qu’il a stocké toutes les valeurs initiales constante spécifiées dans tous les objets qui ont une durée statique, le programme exécute tous les constructeurs restants pour ces objets statiques. L’ordre d’exécution n’est pas spécifié entre les unités de traduction, mais vous pouvez néanmoins supposer que certains objets [iostreams](../standard-library/iostreams-conventions.md) sont initialisés correctement pour être utilisés par ces constructeurs statiques. Ces flux de texte de contrôle sont :  
   
--   [cin](../Topic/cin.md) — pour l'entrée standard.  
+-   [cin](../standard-library/iostream.md#cin), pour une entrée standard.  
   
--   [cout](../Topic/cout.md) — pour la sortie standard.  
+-   [cout](../standard-library/iostream.md#cout), pour une sortie standard.  
   
--   [cerr](../Topic/cerr.md) — pour la sortie d'erreur standard non tamponnée.  
+-   [cerr](../standard-library/iostream.md#cerr), pour une sortie d’erreur standard sans mémoire tampon.  
   
--   [entrave](../Topic/clog.md) — pour la sortie d'erreur standard mise en mémoire tampon.  
+-   [clog](../standard-library/iostream.md#clog), pour une sortie d’erreur standard avec mémoire tampon.  
   
- Vous pouvez également utiliser ces objets dans les destructeurs appelés des objets statiques, pendant l'arrêt du programme.  
+ Vous pouvez également utiliser ces objets dans les destructeurs appelés pour les objets statiques pendant l’arrêt du programme.  
   
- Comme avec l'Assistant De c, retour d'`main` ou appelant `exit` appelle les fonctions stockées avec `atexit` dans l'ordre inverse de Registre.  Une exception levée d'appels de fonction si `terminate`stockés.  
+ Comme avec C, le retour de `main` ou l’appel de `exit` appelle toutes les fonctions enregistrées avec `atexit` dans l’ordre inverse du Registre. Une exception levée par une de ces fonctions enregistrées appelle `terminate`.  
   
-## Voir aussi  
- [Vue d'ensemble de la bibliothèque STL](../standard-library/cpp-standard-library-overview.md)   
- [Sécurité des threads dans la bibliothèque standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)   
+ [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+

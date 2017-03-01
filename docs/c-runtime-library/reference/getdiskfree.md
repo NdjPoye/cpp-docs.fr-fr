@@ -1,55 +1,71 @@
 ---
-title: "_getdiskfree | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_getdiskfree"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "getdiskfree"
-  - "_getdiskfree"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_diskfree_t (type)"
-  - "_getdiskfree (fonction)"
-  - "taille de disque"
-  - "diskfree_t (type)"
-  - "getdiskfree (fonction)"
+title: _getdiskfree | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _getdiskfree
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- getdiskfree
+- _getdiskfree
+dev_langs:
+- C++
+helpviewer_keywords:
+- diskfree_t type
+- _getdiskfree function
+- _diskfree_t type
+- disk size
+- getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _getdiskfree
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5d4d3fea944955b75002e88e3692d42954612a3a
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="getdiskfree"></a>_getdiskfree
 Utilise les informations relatives à un lecteur de disque pour remplir une structure `_diskfree_t`.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Pour plus d'informations, voir [Fonctions CRT non prises en charge avec \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned _getdiskfree(  
@@ -58,17 +74,17 @@ unsigned _getdiskfree(
 );  
 ```  
   
-#### Paramètres  
- \[in\] `drive`  
+#### <a name="parameters"></a>Paramètres  
+ [in] `drive`  
  Lecteur de disque pour lequel vous voulez obtenir des informations.  
   
- \[out\] `driveinfo`  
+ [out] `driveinfo`  
  Structure `_diskfree_t` qui sera remplie avec les informations sur le lecteur.  
   
-## Valeur de retour  
- Si la fonction aboutit, la valeur de retour est égale à zéro.  Si la fonction échoue, la valeur de retour est le code d'erreur.  La valeur `errno` est définie pour les erreurs retournées par le système d'exploitation.  Pour plus d'informations sur les conditions d'erreur indiquées par `errno`, consultez [errno, constantes](../../c-runtime-library/errno-constants.md).  
+## <a name="return-value"></a>Valeur de retour  
+ Si la fonction aboutit, la valeur de retour est égale à zéro. Si la fonction échoue, la valeur de retour est le code d'erreur. La valeur `errno` est définie pour les erreurs retournées par le système d'exploitation. Pour plus d’informations sur les conditions d’erreur indiquées par `errno`, consultez [errno, constantes](../../c-runtime-library/errno-constants.md).  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  La structure `_diskfree_t` est définie dans Direct.h.  
   
 ```  
@@ -80,7 +96,7 @@ struct _diskfree_t {
 };  
 ```  
   
- Cette fonction valide ses paramètres.  Si le pointeur `driveinfo` a la valeur `NULL` ou que `drive` spécifie un lecteur non valide, cette fonction appelle un gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à continuer, cette fonction retourne `EINVAL` et définit à `errno` à `EINVAL`.  Plage de lecteurs valide de 0 à 26.  Avec la valeur 0, `drive` désigne le lecteur actif ; après quoi, les nombres sont mappés aux lettres de l'alphabet anglais, si bien que 1 indique le lecteur A, 3 le lecteur C, etc.  
+ Cette fonction valide ses paramètres. Si le pointeur `driveinfo` a la valeur `NULL` ou que `drive` spécifie un lecteur non valide, cette fonction appelle un gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à continuer, cette fonction retourne `EINVAL` et définit à `errno` à `EINVAL`. Plage de lecteurs valide de 0 à 26. Avec la valeur 0, `drive` désigne le lecteur actif ; après quoi, les nombres sont mappés aux lettres de l'alphabet anglais, si bien que 1 indique le lecteur A, 3 le lecteur C, etc.  
   
  `total_clusters`  
  Nombre total de clusters utilisés et disponibles sur le disque.  
@@ -94,18 +110,19 @@ struct _diskfree_t {
  `bytes_per_sector`  
  Taille de chaque secteur en octets.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_getdiskfree`|\<direct.h\>|  
+|`_getdiskfree`|\<direct.h>|  
   
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
-// crt_getdiskfree.c  
+  
+      // crt_getdiskfree.c  
 // compile with: /c  
 #include <windows.h>  
 #include <direct.h>  
@@ -193,16 +210,19 @@ void utoiRightJustified(TCHAR* szLeft, TCHAR* szRight, unsigned uVal) {
 }  
 ```  
   
-  **\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=**  
-**&#124;DRIVE&#124;TOTAL CLUSTERS&#124;AVAIL CLUSTERS&#124;SECTORS \/ CLUSTER&#124;BYTES \/ SECTOR&#124;**  
-**&#124;\=\=\=\=\=&#124;\=\=\=\=\=\=\=\=\=\=\=\=\=\=&#124;\=\=\=\=\=\=\=\=\=\=\=\=\=\=&#124;\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=&#124;\=\=\=\=\=\=\=\=\=\=\=\=\=\=&#124;**  
-**&#124;  A: &#124; The device is not ready.  &#124;                 &#124;              &#124;**  
-**&#124;  C: &#124;    4,721,093 &#124;    3,778,303 &#124;               8 &#124;          512 &#124;**  
-**&#124;  D: &#124;    1,956,097 &#124;    1,800,761 &#124;               8 &#124;          512 &#124;**  
-**&#124;  E: &#124; The device is not ready.  &#124;                 &#124;              &#124;**  
-**\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=\=**    
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Platform Invoke Examples](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+======================================================================  
+|DRIVE|TOTAL CLUSTERS|AVAIL CLUSTERS|SECTORS / CLUSTER|BYTES / SECTOR|  
+|=====|==============|==============|=================|==============|  
+|  A: | The device is not ready.    |                 |              |  
+|  C: |    4,721,093 |    3,778,303 |               8 |          512 |  
+|  D: |    1,956,097 |    1,800,761 |               8 |          512 |  
+|  E: | The device is not ready.    |                 |              |  
+======================================================================  
+```  
   
-## Voir aussi  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+  
+## <a name="see-also"></a>Voir aussi  
  [Contrôle de répertoire](../../c-runtime-library/directory-control.md)
