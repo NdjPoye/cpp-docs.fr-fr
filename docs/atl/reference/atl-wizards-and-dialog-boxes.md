@@ -1,41 +1,58 @@
 ---
-title: "ATL, assistants et bo&#238;tes de dialogue | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, class wizards"
+title: "Boîtes de dialogue et Assistants ATL | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL, class wizards
 ms.assetid: 51cf002a-83bc-41ba-aeb8-364ea2331375
 caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# ATL, assistants et bo&#238;tes de dialogue
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 18380bd421b715dabf1e15aeac5c72d6971f876e
+ms.lasthandoff: 02/24/2017
 
-Les assistants de \(ATL\) active template library\) génèrent le code de zones fixes pour différents types d'objets COM.  Vous pouvez exécuter les assistants en ouvrant le menu contextuel d'un projet dans **Explorateur de solutions** et en choisissant **Ajouter**, **Classe**.  
+---
+# <a name="atl-wizards-and-dialog-boxes"></a>Boîtes de dialogue et Assistants ATL
+Les Assistants de la bibliothèque ATL (Active Template Library) génèrent un code réutilisable pour les différents types d’objets COM. Vous pouvez exécuter les Assistants en ouvrant le menu contextuel pour un projet dans **l’Explorateur de solutions** et en choisissant **ajouter**, **classe**.  
   
-## Articles connexes  
+## <a name="related-articles"></a>Articles connexes  
   
 |Titre|Description|  
 |-----------|-----------------|  
-|[Création d'un projet ATL](../../atl/reference/creating-an-atl-project.md)|Décrit l'assistant projet ATL et ses paramètres.|  
-|[ATL Simple Object](../../atl/reference/adding-an-atl-simple-object.md)|Crée un objet de base.|  
-|[ATL Property Page](../../atl/reference/adding-an-atl-property-page.md)|Crée une page de propriétés de base.|  
-|[ATL OLE DB Provider](../../atl/reference/adding-an-atl-ole-db-provider.md)|Crée un fournisseur OLE DB de base.|  
-|[ATL OLE DB Consumer](../../atl/reference/adding-an-atl-ole-db-consumer.md)|Crée un consommateur OLE DB de base.|  
-|[ATL Dialog Box](../../atl/reference/adding-an-atl-dialog-box.md)|Crée une boîte de dialogue de base.|  
-|[ATL Control](../../atl/reference/adding-an-atl-control.md)|Crée un contrôle ActiveX de base.|  
-|[ATL COM\+ 1.0 Component](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)|Crée un composant de base ATL COM\+ 1,0|  
-|[ATL Active Server Page Component](../../atl/reference/adding-an-atl-active-server-page-component.md)|Crée un composant de base de la Page active de serveur ATL.|  
-|[ATL COM Desktop Components](../../atl/atl-com-desktop-components.md)|Liens vers la documentation ATL.|
+|[Création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)|Décrit l’Assistant Projet ATL et ses paramètres.|  
+|[Objet Simple ATL](../../atl/reference/adding-an-atl-simple-object.md)|Crée un objet de base.|  
+|[Page de propriétés ATL](../../atl/reference/adding-an-atl-property-page.md)|Crée une page de propriétés de base.|  
+|[Fournisseur ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-provider.md)|Crée un fournisseur OLE DB de base.|  
+|[Consommateur OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)|Crée un consommateur OLE DB de base.|  
+|[Boîte de dialogue ATL](../../atl/reference/adding-an-atl-dialog-box.md)|Crée une boîte de dialogue de base.|  
+|[Contrôle ATL](../../atl/reference/adding-an-atl-control.md)|Crée un contrôle ActiveX de base.|  
+|[Composant ATL COM + 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)|Crée un composant ATL COM + 1.0 de base|  
+|[Composant de Active Server Page ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)|Crée un composant ASP ATL de base.|  
+|[Composants COM bureau ATL](../../atl/atl-com-desktop-components.md)|Liens vers la documentation ATL.|
+
+

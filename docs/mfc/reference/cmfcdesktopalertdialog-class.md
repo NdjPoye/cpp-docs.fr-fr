@@ -1,60 +1,76 @@
 ---
-title: "CMFCDesktopAlertDialog Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCDesktopAlertDialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCDesktopAlertDialog class"
+title: Classe de CMFCDesktopAlertDialog | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCDesktopAlertDialog
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCDesktopAlertDialog class
 ms.assetid: a53c60aa-9607-485b-b826-ec64962075f6
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 26
----
-# CMFCDesktopAlertDialog Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: a782b48c842bf7cf79b0c01a527132b18700535b
+ms.lasthandoff: 02/24/2017
 
-La classe `CMFCDesktopAlertDialog` est utilisée conjointement avec la [CMFCDesktopAlertWnd Class](../../mfc/reference/cmfcdesktopalertwnd-class.md) pour afficher une boîte de dialogue personnalisée dans une fenêtre contextuelle.  
+---
+# <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog (classe)
+Le `CMFCDesktopAlertDialog` classe est utilisée conjointement avec la [CMFCDesktopAlertWnd classe](../../mfc/reference/cmfcdesktopalertwnd-class.md) pour afficher une boîte de dialogue personnalisée dans une fenêtre contextuelle.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 class CMFCDesktopAlertDialog : public CDialogEx  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### M&\#233;thodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CMFCDesktopAlertDialog::CreateFromParams](../Topic/CMFCDesktopAlertDialog::CreateFromParams.md)||  
-|[CMFCDesktopAlertDialog::GetDlgSize](../Topic/CMFCDesktopAlertDialog::GetDlgSize.md)||  
-|[CMFCDesktopAlertDialog::HasFocus](../Topic/CMFCDesktopAlertDialog::HasFocus.md)||  
-|[CMFCDesktopAlertDialog::PreTranslateMessage](../Topic/CMFCDesktopAlertDialog::PreTranslateMessage.md)|\(Substitue `CDialogEx::PreTranslateMessage`.\)|  
+|----------|-----------------|  
+|[CMFCDesktopAlertDialog::CreateFromParams](#createfromparams)||  
+|[CMFCDesktopAlertDialog::GetDlgSize](#getdlgsize)||  
+|[CMFCDesktopAlertDialog::HasFocus](#hasfocus)||  
+|[CMFCDesktopAlertDialog::PreTranslateMessage](#pretranslatemessage)|(Substitue `CDialogEx::PreTranslateMessage`.)|  
   
-### Notes  
+### <a name="remarks"></a>Notes  
  Pour afficher une boîte de dialogue personnalisé dans une fenêtre contextuelle, procédez comme suit :  
   
 1.  Dérivez une classe de `CMFCDesktopAlertDialog`.  
   
 2.  Créez un modèle de boîte de dialogue enfant dans les ressources du projet.  
   
-3.  Appelez [CMFCDesktopAlertWnd::Create](../Topic/CMFCDesktopAlertWnd::Create.md) avec, en guise de paramètres, l'ID de ressource du modèle de boîte de dialogue et un pointeur vers les informations de classe Runtime de la classe dérivée.  
+3.  Appelez [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) avec l’ID de ressource de modèle de la boîte de dialogue et un pointeur vers les informations de classe d’exécution de la classe dérivée en tant que paramètres.  
   
 4.  Programmez la boîte de dialogue personnalisée de sorte qu'elle traite toutes les notifications en provenance des contrôles hébergés ou programmez les contrôles hébergés de sorte qu'ils traitent directement ces notifications.  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -67,12 +83,66 @@ class CMFCDesktopAlertDialog : public CDialogEx
   
  [CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)  
   
-## Configuration requise  
- **En\-tête :** afxDesktopAlertDialog.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** afxDesktopAlertDialog.h  
   
-## Voir aussi  
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
+##  <a name="a-namecreatefromparamsa--cmfcdesktopalertdialogcreatefromparams"></a><a name="createfromparams"></a>CMFCDesktopAlertDialog::CreateFromParams  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+BOOL CreateFromParams(
+    CMFCDesktopAlertWndInfo& params,  
+    CMFCDesktopAlertWnd* pParent);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `params`  
+ [in] `pParent`  
+  
+### <a name="return-value"></a>Valeur de retour  
+  
+### <a name="remarks"></a>Remarques  
+  
+##  <a name="a-namegetdlgsizea--cmfcdesktopalertdialoggetdlgsize"></a><a name="getdlgsize"></a>CMFCDesktopAlertDialog::GetDlgSize  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+CSize GetDlgSize();
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+  
+### <a name="remarks"></a>Remarques  
+  
+##  <a name="a-namehasfocusa--cmfcdesktopalertdialoghasfocus"></a><a name="hasfocus"></a>CMFCDesktopAlertDialog::HasFocus  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+BOOL HasFocus() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+  
+### <a name="remarks"></a>Notes  
+  
+##  <a name="a-namepretranslatemessagea--cmfcdesktopalertdialogpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCDesktopAlertDialog::PreTranslateMessage  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL PreTranslateMessage(MSG* pMsg);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `pMsg`  
+  
+### <a name="return-value"></a>Valeur de retour  
+  
+### <a name="remarks"></a>Remarques  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCDesktopAlertWnd Class](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
- [CMFCDesktopAlertWndInfo Class](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   
- [CDialogEx Class](../../mfc/reference/cdialogex-class.md)
+ [CMFCDesktopAlertWnd (classe)](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
+ [CMFCDesktopAlertWndInfo (classe)](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)   
+ [CDialogEx (classe)](../../mfc/reference/cdialogex-class.md)
+

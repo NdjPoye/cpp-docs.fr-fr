@@ -1,60 +1,76 @@
 ---
-title: "CDaoRelationFieldInfo, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoRelationFieldInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoRelationFieldInfo (structure)"
-  - "DAO (Data Access Objects), Relations (collection)"
+title: CDaoRelationFieldInfo (Structure) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoRelationFieldInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- DAO (Data Access Objects), Relations collection
+- CDaoRelationFieldInfo structure
 ms.assetid: 47cb89ca-dc80-47ce-96fd-cc4b88512558
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# CDaoRelationFieldInfo, structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 23d7497502f611cf2311e574556186dc5f7c7d3d
+ms.lasthandoff: 02/24/2017
 
-La structure `CDaoRelationFieldInfo` contient des informations sur un champ dans une relation défini pour les objets d'accès aux données \(DAO\).  
+---
+# <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo, structure
+Le `CDaoRelationFieldInfo` structure contient des informations sur un champ dans une relation définie pour les objets d’accès aux données (DAO).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      struct CDaoRelationFieldInfo  
+struct CDaoRelationFieldInfo  
 {  
-   CString m_strName;           // Primary  
-   CString m_strForeignName;    // Primary  
+    CString m_strName;           // Primary  
+    CString m_strForeignName;    // Primary  
 };  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `m_strName`  
- Nom du champ dans la table primaire de la relation.  
+ Le nom du champ dans la table primaire de la relation.  
   
  `m_strForeignName`  
- Nom du champ dans la table étrangère de la relation.  
+ Le nom du champ dans la table étrangère de la relation.  
   
-## Notes  
- Un objet de relation DAO spécifie les champs dans la table primaire et les champs dans la table étrangère qui définissent la relation.  Les références à Primary dans la définition de la structure ci\-dessus montrent comment les informations sont retournées dans le membre `m_pFieldInfos` d'un objet [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) obtenu en appelant la méthode [GetRelationInfo](../Topic/CDaoDatabase::GetRelationInfo.md) de la classe `CDaoDatabase`.  
+## <a name="remarks"></a>Remarques  
+ Un objet de relation DAO spécifie les champs dans une table principale et les champs d’une table étrangère qui définissent la relation. Les références à primaire dans la définition de la structure ci-dessus indiquent comment les informations sont retournées dans le `m_pFieldInfos` membre d’un [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) objet obtenu en appelant le [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) fonction membre de classe `CDaoDatabase`.  
   
- Les objets relation et les champs de relations ne sont pas représentés par une classe MFC.  En revanche, les objets DAO sous\-jacents des objets MFC de la classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) contiennent une collection d'objets relation, appelée la collection de relations.  Chaque objet relation, à son tour, contient une collection de champs de relation.  Chaque objet champ de relation corrèle un champ dans la table primaire avec un champ dans la table étrangère.  Pris ensemble, les champs de relation définissent un groupe de champs dans chaque table, qui définissent définir la relation.  `CDaoDatabase` vous permet d'accéder aux objets relation avec un objet `CDaoRelationInfo` en appelant la méthode `GetRelationInfo`.  L'objet `CDaoRelationInfo` possède alors un membre de données, `m_pFieldInfos`, qui pointe vers un tableau d'objets `CDaoRelationFieldInfo`.  
+ Objets relation et les objets de champ de relation ne sont pas représentées par une classe MFC. Au lieu de cela, le DAO des objets MFC sous-jacente de la classe d’objets [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) contient une collection d’objets de relation, appelée la collection de Relations. Chaque objet de relation, contient une collection d’objets de champ de relation. Chaque objet de champ de relation met en corrélation un champ dans la table primaire avec un champ dans la table. Prises ensemble, les objets de champ relation définissent un groupe de champs dans chaque table, qui définissent la relation. `CDaoDatabase`Permet d’accéder à des objets de relation avec un `CDaoRelationInfo` objet en appelant le `GetRelationInfo` fonction membre. Le `CDaoRelationInfo` objet, ensuite, a un membre de données, `m_pFieldInfos`, qui pointe vers un tableau de `CDaoRelationFieldInfo` objets.  
   
- Appelez la méthode [GetRelationInfo](../Topic/CDaoDatabase::GetRelationInfo.md) de l'objet conteneur `CDaoDatabase` dont la	collection de relations contient l'objet relation qui vous intéresse.  Accédez ensuite au membre `m_pFieldInfos` de l'objet [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md).  `CDaoRelationFieldInfo` définit également une méthode `Dump` dans les versions de débogage.  Vous pouvez utiliser `Dump` pour vider le contenu d'un objet `CDaoRelationFieldInfo`.  
+ Appelez le [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) fonction membre de conteneur `CDaoDatabase` dans dont Relations collection est stocké l’objet de relation que vous êtes intéressé par l’objet. Ensuite accéder à la `m_pFieldInfos` membre de la [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) objet. `CDaoRelationFieldInfo`définit également un `Dump` builds de la fonction membre en mode de débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoRelationFieldInfo` objet.  
   
-## Configuration requise  
- **En\-tête :** afxdao.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** afxdao.h  
   
-## Voir aussi  
- [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoRelationInfo, structure](../../mfc/reference/cdaorelationinfo-structure.md)
+## <a name="see-also"></a>Voir aussi  
+ [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoRelationInfo (Structure)](../../mfc/reference/cdaorelationinfo-structure.md)
+

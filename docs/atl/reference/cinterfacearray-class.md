@@ -1,78 +1,99 @@
 ---
-title: "CInterfaceArray Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CInterfaceArray"
-  - "CInterfaceArray"
-  - "ATL::CInterfaceArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CInterfaceArray class"
+title: Classe de CInterfaceArray | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CInterfaceArray
+- CInterfaceArray
+- ATL::CInterfaceArray
+dev_langs:
+- C++
+helpviewer_keywords:
+- CInterfaceArray class
 ms.assetid: 1f29cf66-a086-4a7b-b6a8-64f73da39f79
 caps.latest.revision: 18
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CInterfaceArray Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: a2a99eb3cff4f2381d4c58e4d1a7aaa167e83896
+ms.lasthandoff: 02/24/2017
 
-Cette classe fournit des méthodes utiles lorsque vous construisez un tableau de pointeurs d'interface COM.  
+---
+# <a name="cinterfacearray-class"></a>CInterfaceArray (classe)
+Cette classe fournit des méthodes utiles lors de la construction d’un tableau de pointeurs d’interface COM.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+template <class I, const IID* piid=& __uuidof(I)>  
+class CInterfaceArray : 
+   public CAtlArray<ATL::CComQIPtr<I, piid>,
+                    CComQIPtrElementTraits<I, piid>>
 ```  
   
-      template<  
-   class I,  
-   const IID* piid = & __uuidof( I )  
->  
-class CInterfaceArray : public CAtlArray<  
-   ATL::CComQIPtr< I, piid >,  
-   CComQIPtrElementTraits< I, piid >  
->  
-```  
-  
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `I`  
- Une interface COM qui spécifie le type de pointeur à enregistrer.  
+ Une interface COM qui spécifie le type de pointeur à stocker.  
   
  `piid`  
- Pointeur vers l'IID d' `I`.  
+ Un pointeur vers l’IID de `I`.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CInterfaceArray::CInterfaceArray](../Topic/CInterfaceArray::CInterfaceArray.md)|Le constructeur de tableau d'interface.|  
+|----------|-----------------|  
+|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Le constructeur pour le tableau de l’interface.|  
   
-## Notes  
- Cette classe fournit un constructeur et des méthodes dérivées pour créer un tableau de pointeurs d'interface COM.  Utilisation [CInterfaceList](../../atl/reference/cinterfacelist-class.md) lorsque la liste est requise.  
+## <a name="remarks"></a>Remarques  
+ Cette classe fournit un constructeur et méthodes dérivées pour la création d’un tableau de pointeurs d’interface COM. Utilisez [CInterfaceList](../../atl/reference/cinterfacelist-class.md) lorsqu’une liste est nécessaire.  
   
- Pour plus d'informations, consultez [Classes de collection ATL](../../atl/atl-collection-classes.md).  
+ Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `CAtlArray`  
   
  `CInterfaceArray`  
   
-## Configuration requise  
- **Header:** atlcoll.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atlcoll.h  
   
-## Voir aussi  
- [CAtlArray Class](../../atl/reference/catlarray-class.md)   
- [CComQIPtr Class](../../atl/reference/ccomqiptr-class.md)   
- [CComQIPtrElementTraits Class](../../atl/reference/ccomqiptrelementtraits-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-namecinterfacearraya--cinterfacearraycinterfacearray"></a><a name="cinterfacearray"></a>CInterfaceArray::CInterfaceArray  
+ Constructeur.  
+  
+```
+CInterfaceArray() throw();
+```  
+  
+### <a name="remarks"></a>Remarques  
+ Initialise le tableau de pointeurs intelligents.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Classe CAtlArray](../../atl/reference/catlarray-class.md)   
+ [CComQIPtr (classe)](../../atl/reference/ccomqiptr-class.md)   
+ [CComQIPtrElementTraits (classe)](../../atl/reference/ccomqiptrelementtraits-class.md)   
+ [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+

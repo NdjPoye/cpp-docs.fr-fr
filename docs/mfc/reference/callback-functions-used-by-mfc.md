@@ -1,33 +1,51 @@
 ---
-title: "Fonctions de rappel utilis&#233;es par MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.functions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fonctions de rappel"
-  - "fonctions de rappel, MFC"
-  - "fonctions (C++), rappel"
-  - "MFC, fonctions de rappel"
+title: "Fonctions de rappel utilisées par MFC | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.functions
+dev_langs:
+- C++
+helpviewer_keywords:
+- callback functions, MFC
+- MFC, callback functions
+- functions [C++], callback
+- callback functions
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Fonctions de rappel utilis&#233;es par MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: b4d104fa76347da43c84611672f843511f0f3725
+ms.lasthandoff: 02/24/2017
 
-Trois fonctions de rappel apparaissent dans la bibliothèque MFC.  Une description des fonctionnalités de rappel transmises à [CDC::EnumObjects](../Topic/CDC::EnumObjects.md), [CDC::GrayString](../Topic/CDC::GrayString.md), et [CDC::SetAbortProc](../Topic/CDC::SetAbortProc.md) suit cette rubrique.  Pour l'utilisation générale des fonctions de rappel, consultez la section remarques de ces fonctions membres.  Notez que toutes les fonctions de rappel doivent intercepter les exceptions de MFC avant le renvoi à Windows, les exceptions ne peuvent pas être levées sur les limites de rappel.  Pour plus d'informations sur les exceptions, consultez l'article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
+---
+# <a name="callback-functions-used-by-mfc"></a>Fonctions de rappel utilisées par MFC
+Trois fonctions de rappel apparaissent dans la bibliothèque Microsoft Foundation Class. Une description des fonctions de rappel qui sont passées à [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), et [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc) suit cette section. Pour une utilisation générale des fonctions de rappel, consultez la section Notes de ces fonctions membres. Notez que toutes les fonctions de rappel doivent intercepter les exceptions MFC avant de retourner à Windows, étant donné que les exceptions ne peuvent pas être levées au-delà des limites de rappel. Pour plus d’informations sur les exceptions, consultez l’article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-## Voir aussi  
- [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+## <a name="see-also"></a>Voir aussi  
+ [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+
+

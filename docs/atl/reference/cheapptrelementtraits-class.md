@@ -1,72 +1,82 @@
 ---
-title: "CHeapPtrElementTraits Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CHeapPtrElementTraits"
-  - "CHeapPtrElementTraits"
-  - "ATL::CHeapPtrElementTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeapPtrElementTraits class"
+title: Classe de CHeapPtrElementTraits | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CHeapPtrElementTraits
+- CHeapPtrElementTraits
+- ATL::CHeapPtrElementTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHeapPtrElementTraits class
 ms.assetid: 910e0e06-3c8b-4242-bf00-b57eb74fbc77
 caps.latest.revision: 20
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CHeapPtrElementTraits Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: cf442a47a8f7f56a9563b73d03224165248232d5
+ms.lasthandoff: 02/24/2017
 
-Cette classe fournit des méthodes, des fonctions static, et les typedefs utiles pour créer des collections de pointeurs de tas.  
+---
+# <a name="cheapptrelementtraits-class"></a>CHeapPtrElementTraits (classe)
+Cette classe fournit des méthodes, les fonctions statiques et les typedefs utiles lors de la création de collections de pointeurs de tas.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s'exécutent dans les fenêtres d'exécution.  
+>  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+template<typename T, class Allocator = ATL::CCRTAllocator>  
+class CHeapPtrElementTraits : 
+   public CDefaultElementTraits<ATL::CHeapPtr<T, Allocator>>
 ```  
   
-      template<  
-typename T,  
-class Allocator= ATL::CCRTAllocator  
->  
-class CHeapPtrElementTraits : public CDefaultElementTraits<  
-ATL::CHeapPtr< T, Allocator>  
->  
-```  
-  
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
- Le type d'objet à stocker dans la classe de collection.  
+ Le type d’objet à stocker dans la classe de collection.  
   
  `Allocator`  
- La classe d'allocation de mémoire à utiliser.  La valeur par défaut est [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
+ La classe de l’allocation de mémoire à utiliser. La valeur par défaut est [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Typedefs publics  
+### <a name="public-typedefs"></a>Typedefs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CHeapPtrElementTraits::INARGTYPE](../Topic/CHeapPtrElementTraits::INARGTYPE.md)|Le type de données à utiliser pour ajouter des éléments à l'objet de classe de collection.|  
-|[CHeapPtrElementTraits::OUTARGTYPE](../Topic/CHeapPtrElementTraits::OUTARGTYPE.md)|Le type de données à utiliser pour récupérer des éléments de l'objet de classe de collection.|  
+|----------|-----------------|  
+|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.|  
+|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.|  
   
-## Notes  
- Cette classe fournit des méthodes, des fonctions static, et les typedefs pour faciliter la création des objets de classe de collection contenant des pointeurs de tas.  La classe `CHeapPtrList` dérive d' `CHeapPtrElementTraits`.  
+## <a name="remarks"></a>Remarques  
+ Cette classe fournit des méthodes, des fonctions statiques et typedefs pour contribuer à la création d’objets de classe de collection qui contient des pointeurs de tas. La classe `CHeapPtrList` dérive de `CHeapPtrElementTraits`.  
   
- Pour plus d'informations, consultez [Classes de collection ATL](../../atl/atl-collection-classes.md).  
+ Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
   
  [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
@@ -77,10 +87,25 @@ ATL::CHeapPtr< T, Allocator>
   
  `CHeapPtrElementTraits`  
   
-## Configuration requise  
- **Header:** atlcoll.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atlcoll.h  
   
-## Voir aussi  
- [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)   
- [CComHeapPtr Class](../../atl/reference/ccomheapptr-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameinargtypea--cheapptrelementtraitsinargtype"></a><a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE  
+ Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.  
+  
+```
+typedef CHeapPtr<T, Allocator>& INARGTYPE;
+```  
+  
+##  <a name="a-nameoutargtypea--cheapptrelementtraitsoutargtype"></a><a name="outargtype"></a>CHeapPtrElementTraits::OUTARGTYPE  
+ Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.  
+  
+```
+typedef T *& OUTARGTYPE;
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [CDefaultElementTraits (classe)](../../atl/reference/cdefaultelementtraits-class.md)   
+ [CComHeapPtr (classe)](../../atl/reference/ccomheapptr-class.md)   
+ [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+

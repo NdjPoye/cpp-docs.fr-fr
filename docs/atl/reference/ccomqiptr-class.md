@@ -1,81 +1,136 @@
 ---
-title: "CComQIPtr Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CComQIPtr"
-  - "ATL::CComQIPtr"
-  - "CComQIPtr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComQIPtr class"
+title: Classe de CComQIPtr | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CComQIPtr
+- ATL::CComQIPtr
+- CComQIPtr
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CComQIPtr Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: e2060a0be3f9780191c316c2df41115e66033d4d
+ms.lasthandoff: 02/24/2017
 
-Une classe intelligente de pointeur pour gérer des pointeurs d'interface COM.  
+---
+# <a name="ccomqiptr-class"></a>CComQIPtr (classe)
+Une classe de pointeur intelligent pour la gestion des pointeurs d’interface COM.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+template<class T, const IID* piid= &__uuidof(T)>  
+class CComQIPtr: public CComPtr<T>
 ```  
   
-      template<  
-   class T,  
-   const IID* piid = &__uuidof(T)  
->  
-class CComQIPtr: public CComPtr<T>  
-```  
-  
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
- Une interface COM qui spécifie le type de pointeur à enregistrer.  
+ Une interface COM qui spécifie le type de pointeur à stocker.  
   
  `piid`  
- Pointeur vers l'IID d' `T`.  
+ Un pointeur vers l’IID de `T`.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[CComQIPtr::CComQIPtr](../Topic/CComQIPtr::CComQIPtr.md)|Constructeur.|  
-  
-### Opérateurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CComQIPtr::operator \=](../Topic/CComQIPtr::operator%20=.md)|Assigne un pointeur vers un pointeur de membre.|  
+|----------|-----------------|  
+|[CComQIPtr::CComQIPtr](#ccomqiptr)|Constructeur.|  
   
-## Notes  
- ATL utilise `CComQIPtr` et [CComPtr](../../atl/reference/ccomptr-class.md) pour gérer des pointeurs d'interface COM, qui dérivent de [CComPtrBase](../../atl/reference/ccomptrbase-class.md).  Les deux classes effectuent le décompte de références automatique par des appels à `AddRef` et à **Release**.  Les opérateurs surchargés effectuent des opérations de pointeur.  
+### <a name="public-operators"></a>Op&#233;rateurs publics  
   
-## Hiérarchie d'héritage  
+|Nom|Description|  
+|----------|-----------------|  
+|[CComQIPtr::operator =](#operator_eq)|Assigne un pointeur vers le pointeur de membre.|  
+  
+## <a name="remarks"></a>Notes  
+ ATL utilise `CComQIPtr` et [CComPtr](../../atl/reference/ccomptr-class.md) pour gérer les pointeurs d’interface COM, qui dérivent de [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Les deux classes d’effectuent le décompte automatique via des appels de `AddRef` et **version**. Les opérateurs surchargés traiter les opérations de pointeur.  
+  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
   
  [CComPtr](../../atl/reference/ccomptr-class.md)  
   
  `CComQIPtr`  
   
-## Configuration requise  
- **Header:** atlcomcli.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atlcomcli.h  
   
-## Voir aussi  
- [CComPtr::CComPtr](../Topic/CComPtr::CComPtr.md)   
- [CComQIPtr::CComQIPtr](../Topic/CComQIPtr::CComQIPtr.md)   
- [CComPtrBase Class](../../atl/reference/ccomptrbase-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)   
- [CComQIPtrElementTraits Class](../../atl/reference/ccomqiptrelementtraits-class.md)
+##  <a name="a-nameccomqiptra--ccomqiptrccomqiptr"></a><a name="ccomqiptr"></a>CComQIPtr::CComQIPtr  
+ Constructeur.  
+  
+```
+CComQIPtr() throw();
+CComQIPtr(T* lp) throw();
+CComQIPtr(IUnknown* lp) throw();
+CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `lp`  
+ Utilisé pour initialiser le pointeur d’interface.  
+  
+ `T`  
+ Une interface COM.  
+  
+ `piid`  
+ Un pointeur vers l’IID de `T`.  
+  
+##  <a name="a-nameoperatoreqa--ccomqiptroperator-"></a><a name="operator_eq"></a>CComQIPtr::operator =  
+ L’opérateur d’assignation.  
+  
+```
+T* operator= (T* lp) throw();
+T* operator= (const CComQIPtr<T, piid>& lp) throw();
+T* operator= (IUnknown* lp) throw();
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `lp`  
+ Utilisé pour initialiser le pointeur d’interface.  
+  
+ `T`  
+ Une interface COM.  
+  
+ `piid`  
+ Un pointeur vers l’IID de `T`.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne un pointeur vers la mise à jour `CComQIPtr` objet.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)   
+ [CComQIPtr::CComQIPtr](#ccomqiptr)   
+ [CComPtrBase (classe)](../../atl/reference/ccomptrbase-class.md)   
+ [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
+ [CComQIPtrElementTraits (classe)](../../atl/reference/ccomqiptrelementtraits-class.md)
+

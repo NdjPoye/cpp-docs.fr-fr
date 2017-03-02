@@ -1,83 +1,109 @@
 ---
-title: "CAtlAutoThreadModuleT Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CAtlAutoThreadModuleT"
-  - "ATL::CAtlAutoThreadModuleT"
-  - "CAtlAutoThreadModuleT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAtlAutoThreadModuleT class"
+title: Classe de CAtlAutoThreadModuleT | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CAtlAutoThreadModuleT
+- ATL::CAtlAutoThreadModuleT
+- CAtlAutoThreadModuleT
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAtlAutoThreadModuleT class
 ms.assetid: ae1667c6-3fb8-47bc-b35d-9ea5e9896d7f
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CAtlAutoThreadModuleT Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: 86b35f0a6a3ab43c170ee710838ec9ba0e2fc5b0
+ms.lasthandoff: 02/24/2017
 
-Cette classe fournit des méthodes pour implémenter un regroupé par thread, serveur COM de modèle cloisonné.  
+---
+# <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT (classe)
+Cette classe fournit des méthodes pour implémenter un pool de threads cloisonnés COM serveur.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s'exécutent dans les fenêtres d'exécution.  
+>  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+template <class T, 
+         class ThreadAllocator = CComSimpleThreadAllocator,
+         DWORD dwWait = INFINITE>  
+class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```  
   
-      template <  
-class T,  
-class ThreadAllocator= CComSimpleThreadAllocator,  
-DWORD dwWait= INFINITE   
->  
-class ATL_NO_VTABLE CAtlAutoThreadModuleT :  
-public IAtlAutoThreadModule  
-```  
-  
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
- La classe qui implémentera le serveur COM.  
+ La classe qui implémente le serveur COM.  
   
  `ThreadAllocator`  
- La classe gestion de la sélection de thread.  La valeur par défaut est [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
+ La classe de la gestion de sélection de thread. La valeur par défaut est [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
   
  `dwWait`  
- Spécifie l'intervalle de délai d'attente, en millisecondes.  La valeur par défaut est INFINIE, ce qui signifie que l'intervalle de délai d'attente de la méthode ne s'écoule jamais.  
+ Spécifie l’intervalle de délai d’attente, en millisecondes. La valeur par défaut est INFINITE, ce qui signifie que le délai d’utilisation de la méthode jamais est écoulé.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CAtlAutoThreadModuleT::GetDefaultThreads](../Topic/CAtlAutoThreadModuleT::GetDefaultThreads.md)|Cette fonction statique calcule dynamiquement et retourne le nombre maximal de threads pour le package EXE, en fonction de le nombre de processeurs.|  
+|----------|-----------------|  
+|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Cette fonction statique dynamiquement calcule et retourne le nombre maximal de threads pour le module EXE, en fonction du nombre de processeurs.|  
   
-## Notes  
- La classe [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) dérive d' `CAtlAutoThreadModuleT` pour implémenter un regroupé par thread, serveur COM de modèle cloisonné.  Il substitue la classe obsolète [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+## <a name="remarks"></a>Remarques  
+ La classe [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) dérive `CAtlAutoThreadModuleT` afin d’implémenter un pool de threads cloisonnés COM serveur. Il remplace la classe obsolète [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
 > [!NOTE]
->  Cette classe ne doit pas être utilisée dans une DLL, comme valeur par défaut d' `dwWait` d'INFINITÉ provoque un interblocage quand la DLL est déchargé.  
+>  Cette classe ne doit pas être utilisée dans une DLL, comme la valeur par défaut `dwWait` valeur INFINITE provoque un blocage lors de la DLL est déchargée.  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `IAtlAutoThreadModule`  
   
  `CAtlAutoThreadModuleT`  
   
-## Configuration requise  
- **Header:** atlbase.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atlbase.h  
   
-## Voir aussi  
- [IAtlAutoThreadModule Class](../../atl/reference/iatlautothreadmodule-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)   
- [IAtlAutoThreadModule Class](../../atl/reference/iatlautothreadmodule-class.md)   
- [Module, classes](../../atl/atl-module-classes.md)
+##  <a name="a-namegetdefaultthreadsa--catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads  
+ Cette fonction statique dynamiquement calcule et retourne le nombre maximal de threads pour le module EXE, en fonction du nombre de processeurs.  
+  
+```
+static int GetDefaultThreads();
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Le nombre de threads doit être créé dans le module du fichier EXE.  
+  
+### <a name="remarks"></a>Remarques  
+ Substituez cette méthode si vous souhaitez utiliser une autre méthode pour calculer le nombre de threads. Par défaut, le nombre de threads est basé sur le nombre de processeurs.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [IAtlAutoThreadModule (classe)](../../atl/reference/iatlautothreadmodule-class.md)   
+ [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
+ [IAtlAutoThreadModule (classe)](../../atl/reference/iatlautothreadmodule-class.md)   
+ [Module (Classes)](../../atl/atl-module-classes.md)
+

@@ -1,64 +1,87 @@
 ---
-title: "_ATL_MODULE70 Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_ATL_MODULE70"
-  - "ATL::_ATL_MODULE70"
-  - "ATL._ATL_MODULE70"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ATL_MODULE70 structure"
-  - "ATL_MODULE70 structure"
+title: Structure de _ATL_MODULE70 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _ATL_MODULE70
+- ATL::_ATL_MODULE70
+- ATL._ATL_MODULE70
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL_MODULE70 structure
+- _ATL_MODULE70 structure
 ms.assetid: b059b2c8-dfd1-4ac9-b07d-39df638cc7b3
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _ATL_MODULE70 Structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
+ms.openlocfilehash: ea1d87d3d500fc08f3da16de6820ca003e899419
+ms.lasthandoff: 02/24/2017
 
-Contient des données utilisées par chaque module ATL.  
+---
+# <a name="atlmodule70-structure"></a>Structure de _ATL_MODULE70
+Contient les données utilisées par chaque module ATL.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+struct _ATL_MODULE70 {
+    UINT cbSize;
+    LONG m_nLockCnt;
+    _ATL_TERMFUNC_ELEM* m_pTermFuncs;
+    CComCriticalSection m_csStaticDataInitAndTypeInfo;
+};
 ```  
   
-      struct _ATL_MODULE70{  
-   UINT cbSize;  
-   LONG m_nLockCnt;  
-   _ATL_TERMFUNC_ELEM* m_pTermFuncs;  
-   CComCriticalSection m_csStaticDataInitAndTypeInfo;  
-};  
-```  
-  
-## Membres  
+## <a name="members"></a>Membres  
  `cbSize`  
- La taille de la structure, utilisée pour le contrôle de version.  
+ La taille de la structure utilisée pour le contrôle de version.  
   
  `m_nLockCnt`  
- Nombre de références pour déterminer la durée le package doit rester actif.  
+ Décompte de références pour déterminer la durée pendant laquelle le module doit rester actif.  
   
- **m\_pTermFuncs**  
- Fonctions de suivi qui ont été enregistrées pour être appelées lorsque ATL arrête.  
+ **m_pTermFuncs**  
+ Fonctions de pistes qui ont été inscrits pour être appelée lorsque ATL s’arrête.  
   
- **m\_csStaticDataInitAndTypeInfo**  
- Utilisé pour coordonner l'accès aux données internes dans des situations multithread.  
+ **m_csStaticDataInitAndTypeInfo**  
+ Utilisé pour coordonner l’accès aux données internes dans les situations multithreads.  
   
-## Notes  
- [\_ATL\_MODULE](../Topic/_ATL_MODULE.md) est défini comme un typedef d' `_ATL_MODULE70`.  
+## <a name="remarks"></a>Remarques  
+ [_ATL_MODULE](atl-typedefs.md#_atl_module) est défini comme un typedef de `_ATL_MODULE70`.  
   
-## Configuration requise  
- **Header:** atlbase.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atlbase.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Structures](../../atl/reference/atl-structures.md)
+
+
+
+
+
+
+
+

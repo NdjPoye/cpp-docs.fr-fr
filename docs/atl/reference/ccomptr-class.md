@@ -1,79 +1,123 @@
 ---
-title: "CComPtr Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CComPtr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComPtr class"
+title: Classe CComPtr | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CComPtr
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComPtr class
 ms.assetid: 22d9ea8d-ed66-4c34-940f-141db11e83bd
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CComPtr Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: ae7bb5e85f23492bdbef4af86d9f68fa83c991e2
+ms.lasthandoff: 02/24/2017
 
-Une classe intelligente de pointeur pour gérer des pointeurs d'interface COM.  
+---
+# <a name="ccomptr-class"></a>Classe CComPtr
+Une classe de pointeur intelligent pour la gestion des pointeurs d’interface COM.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+template<class T>  
+class CComPtr
 ```  
   
-      template<  
-   class T   
->  
-class CComPtr  
-```  
-  
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
- Une interface COM qui spécifie le type de pointeur à enregistrer.  
+ Une interface COM qui spécifie le type de pointeur à stocker.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[CComPtr::CComPtr](../Topic/CComPtr::CComPtr.md)|Constructeur.|  
-  
-### Opérateurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CComPtr::operator \=](../Topic/CComPtr::operator%20=.md)|Assigne un pointeur vers un pointeur de membre.|  
+|----------|-----------------|  
+|[CComPtr::CComPtr](#ccomptr)|Constructeur.|  
   
-## Notes  
- ATL utilise `CComPtr` et [CComQIPtr](../../atl/reference/ccomqiptr-class.md) pour gérer des pointeurs d'interface COM.  Les deux sont dérivés de [CComPtrBase](../../atl/reference/ccomptrbase-class.md), et elles effectuent un décompte de références automatique.  
+### <a name="public-operators"></a>Op&#233;rateurs publics  
   
- Les classes de **CComPtr** et de [CComQIPtr](../../atl/reference/ccomqiptr-class.md) peuvent aider à éviter des fuites de mémoire en exécutant le décompte de références automatique.  Les fonctions suivantes elles exécutent les mêmes opérations logiques ; toutefois, notez comment la deuxième version peut être moins sujette aux erreurs à l'aide de la classe de **CComPtr** :  
+|Nom|Description|  
+|----------|-----------------|  
+|[CComPtr::operator =](#operator_eq)|Assigne un pointeur vers le pointeur de membre.|  
   
- [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/CPP/ccomptr-class_1.cpp)]  
+## <a name="remarks"></a>Notes  
+ ATL utilise `CComPtr` et [CComQIPtr](../../atl/reference/ccomqiptr-class.md) pour gérer les pointeurs d’interface COM. Tous deux sont dérivés de [CComPtrBase](../../atl/reference/ccomptrbase-class.md), et tous deux effectuant le comptage de références automatique.  
   
- [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/CPP/ccomptr-class_2.cpp)]  
+ Le **CComPtr** et [CComQIPtr](../../atl/reference/ccomqiptr-class.md) classes peuvent aider à éliminer les fuites de mémoire en effectuant le décompte de références automatique.  Les fonctions suivantes à la fois effectuent les mêmes opérations logiques ; Toutefois, notez comment la deuxième version peut être moins sujette aux erreurs à l’aide de la **CComPtr** classe :  
   
- Dans les versions debug, lien atlsd.lib pour le traçage de code.  
+ [!code-cpp[NVC_ATL_Utilities&#130;](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
   
-## Hiérarchie d'héritage  
+ [!code-cpp[NVC_ATL_Utilities&#131;](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
+  
+ Dans les versions Debug, lier atlsd.lib pour le suivi du code.  
+  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
   
  `CComPtr`  
   
-## Configuration requise  
- **Header:** atlbase.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atlbase.h  
   
-## Voir aussi  
- [CComPtr::CComPtr](../Topic/CComPtr::CComPtr.md)   
- [CComQIPtr::CComQIPtr](../Topic/CComQIPtr::CComQIPtr.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameccomptra--ccomptrccomptr"></a><a name="ccomptr"></a>CComPtr::CComPtr  
+ Constructeur.  
+  
+```
+CComPtr() throw ();
+CComPtr(T* lp) throw ();
+CComPtr (const CComPtr<T>& lp) throw ();
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `lp`  
+ Utilisé pour initialiser le pointeur d’interface.  
+  
+ `T`  
+ Une interface COM.  
+  
+##  <a name="a-nameoperatoreqa--ccomptroperator-"></a><a name="operator_eq"></a>CComPtr::operator =  
+ Opérateur d'assignation.  
+  
+```
+T* operator= (T* lp) throw ();
+T* operator= (const CComPtr<T>& lp) throw ();
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne un pointeur vers la mise à jour `CComPtr` objet  
+  
+### <a name="remarks"></a>Notes  
+ Cette opération AddRefs le nouvel objet et versions de l’objet existant, s’il existe.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [CComPtr::CComPtr](#ccomptr)   
+ [CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
+ [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+

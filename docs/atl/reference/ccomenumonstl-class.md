@@ -1,88 +1,99 @@
 ---
-title: "CComEnumOnSTL Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CComEnumOnSTL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComEnumOnSTL class"
+title: CComEnumOnSTL (classe) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CComEnumOnSTL
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CComEnumOnSTL Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 23e234f82ce8c77a6ebde50070475deeab59f362
+ms.lasthandoff: 02/24/2017
 
-Cette classe définit un objet énumérateur COM selon une collection STL.  
+---
+# <a name="ccomenumonstl-class"></a>CComEnumOnSTL (classe)
+Cette classe définit un objet d’énumérateur COM basé sur une collection de la bibliothèque C++ Standard.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+template <class Base,
+    const IID* piid, class T, class Copy, class CollType, class ThreadModel = CComObjectThreadModel>  
+class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
+ T,
+    Copy,
+ CollType>,
+    public CComObjectRootEx<ThreadModel>
 ```  
   
-      template <  
-   class Base,  
-   const IID* piid,  
-   class T,  
-   class Copy,  
-   class CollType,  
-   class ThreadModel = CComObjectThreadModel  
->  
-class ATL_NO_VTABLE CComEnumOnSTL :  
-   public IEnumOnSTLImpl<Base, piid, T, Copy, CollType>,  
-   public CComObjectRootEx< ThreadModel >  
-```  
-  
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `Base`  
- Une interface d'énumérateur COM \([IEnumXXXX](https://msdn.microsoft.com/en-us/library/ms680089.aspx)\).  
+ Un énumérateur COM ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) interface.  
   
  `piid`  
- Pointeur vers l'ID d'interface de l'interface d'énumérateur.  
+ Pointeur vers l’ID de l’interface de l’énumérateur.  
   
  `T`  
- Le type d'élément exposé par l'interface d'énumérateur.  
+ Le type d’élément exposé par l’interface de l’énumérateur.  
   
  `Copy`  
- Une classe de [stratégie de copie](../../atl/atl-copy-policy-classes.md) .  
+ A [Copier stratégie](../../atl/atl-copy-policy-classes.md) classe.  
   
  `CollType`  
- Une classe de conteneur STL.  
+ Une classe de conteneur de bibliothèque C++ Standard.  
   
-## Notes  
- `CComEnumOnSTL` définit un objet énumérateur COM selon une collection STL.  Cette classe peut être utilisée seule ou conjointement avec [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md).  Les étapes standard pour l'utilisation de cette classe sont dessinées les grandes lignes ci\-dessous.  Pour plus d'informations, consultez [Collections et énumérateurs ATL](../../atl/atl-collections-and-enumerators.md).  
+## <a name="remarks"></a>Notes  
+ `CComEnumOnSTL`définit un objet d’énumérateur COM basé sur une collection de la bibliothèque C++ Standard. Cette classe peut être utilisée sur sa propre ou en association avec [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md). Procédure standard d’utilisation de cette classe est décrites ci-dessous. Pour plus d’informations, consultez [Collections et énumérateurs ATL](../../atl/atl-collections-and-enumerators.md).  
   
-## Pour utiliser cette classe avec ICollectionOnSTLImpl :  
+## <a name="to-use-this-class-with-icollectiononstlimpl"></a>Pour utiliser cette classe avec ICollectionOnSTLImpl :  
   
--   `typedef` une spécialisation de cette classe.  
+- `typedef`une spécialisation de cette classe.  
   
--   Utilisez `typedef` comme argument template final dans une spécialisation d' `ICollectionOnSTLImpl`.  
+-   Utilisez le `typedef` comme argument dans une spécialisation de modèle final `ICollectionOnSTLImpl`.  
   
- Consultez [Collections et énumérateurs ATL](../../atl/atl-collections-and-enumerators.md) pour un exemple.  
+ Consultez la page [Collections et énumérateurs ATL](../../atl/atl-collections-and-enumerators.md) pour obtenir un exemple.  
   
-## Pour utiliser cette classe indépendamment de ICollectionOnSTLImpl :  
+## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>Pour utiliser cette classe indépendamment de ICollectionOnSTLImpl :  
   
--   `typedef` une spécialisation de cette classe.  
+- `typedef`une spécialisation de cette classe.  
   
--   Utilisez `typedef` comme argument template dans une spécialisation d' `CComObject`.  
+-   Utilisez le `typedef` comme argument dans une spécialisation de modèle `CComObject`.  
   
--   Créez une instance de la spécialisation d' `CComObject` .  
+-   Créez une instance de la `CComObject` spécialisation.  
   
--   Initialisez l'objet énumérateur en appelant [IEnumOnSTLImpl::Init](../Topic/IEnumOnSTLImpl::Init.md).  
+-   Initialiser l’objet énumérateur en appelant [IEnumOnSTLImpl::Init](../../atl/reference/ienumonstlimpl-class.md#init).  
   
--   Retourne l'interface de l'énumérateur au client.  
+-   L’interface de l’énumérateur de retour au client.  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `CComObjectRootBase`  
   
  `Base`  
@@ -93,24 +104,25 @@ class ATL_NO_VTABLE CComEnumOnSTL :
   
  `CComEnumOnSTL`  
   
-## Configuration requise  
- **Header:** atlcom.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atlcom.h  
   
-## Exemple  
- Le code indiqué ci\-dessous fournit une fonction générique pour traiter la création et l'initialisation d'un objet énumérateur :  
+## <a name="example"></a>Exemple  
+ Le code ci-dessous fournit une fonction pour gérer la création et l’initialisation d’un objet énumérateur générique :  
   
- [!code-cpp[NVC_ATL_COM#34](../../atl/codesnippet/CPP/ccomenumonstl-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM&#34;](../../atl/codesnippet/cpp/ccomenumonstl-class_1.h)]  
   
- Cette fonction de modèle peut être utilisée pour implémenter la propriété d' `_NewEnum` d'une interface de collection comme indiqué ci\-dessous :  
+ Cette fonction de modèle peut être utilisée pour implémenter le `_NewEnum` propriété d’une interface de collection, comme indiqué ci-dessous :  
   
- [!code-cpp[NVC_ATL_COM#35](../../atl/codesnippet/CPP/ccomenumonstl-class_2.h)]  
+ [!code-cpp[NVC_ATL_COM&#35;](../../atl/codesnippet/cpp/ccomenumonstl-class_2.h)]  
   
- Ce code crée `typedef` pour `CComEnumOnSTL` qui expose un vecteur d' `CComVariant`s au moyen de l'interface d' **IEnumVariant** .  La classe de **CVariantCollection** spécialise simplement **CreateSTLEnumerator** pour utiliser les objets énumérateurs de ce type.  
+ Ce code crée un `typedef` de `CComEnumOnSTL` qui expose un vecteur de `CComVariant`s au moyen de la **IEnumVariant** interface. Le **CVariantCollection** classe spécialisée simplement **CreateSTLEnumerator** pour travailler avec des objets d’énumérateur de ce type.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)   
- [ATLCollections : Illustre ICollectionOnSTLImpl, CComEnumOnSTL, et classes personnalisées de stratégie de copie](../../top/visual-cpp-samples.md)   
- [Class Overview](../../atl/atl-class-overview.md)   
- [CComObjectRootEx Class](../../atl/reference/ccomobjectrootex-class.md)   
- [CComObjectThreadModel](../Topic/CComObjectThreadModel.md)   
- [IEnumOnSTLImpl Class](../../atl/reference/ienumonstlimpl-class.md)
+ [ATLCollections, exemple : Illustre ICollectionOnSTLImpl, CComEnumOnSTL et des Classes de stratégie de copie personnalisées](../../visual-cpp-samples.md)   
+ [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
+ [CComObjectRootEx (classe)](../../atl/reference/ccomobjectrootex-class.md)   
+ [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
+ [IEnumOnSTLImpl (classe)](../../atl/reference/ienumonstlimpl-class.md)
+

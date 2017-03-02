@@ -1,61 +1,77 @@
 ---
-title: "CComClassFactoryAutoThread Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CComClassFactoryAutoThread"
-  - "ATL.CComClassFactoryAutoThread"
-  - "CComClassFactoryAutoThread"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComClassFactoryAutoThread class"
+title: Classe de CComClassFactoryAutoThread | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CComClassFactoryAutoThread
+- ATL.CComClassFactoryAutoThread
+- CComClassFactoryAutoThread
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComClassFactoryAutoThread class
 ms.assetid: 22008042-533f-4dd9-bf7e-191ee571f9a1
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CComClassFactoryAutoThread Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: fcc5671fc136b061bf3e8109999ac91d302d3d3b
+ms.lasthandoff: 02/24/2017
 
-Cette classe implémente l'interface d' [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) , et autorise les objets à créer dans plusieurs des apartments.  
+---
+# <a name="ccomclassfactoryautothread-class"></a>CComClassFactoryAutoThread (classe)
+Cette classe implémente le [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) de l’interface et permet aux objets d’être créés dans des compartiments à plusieurs.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s'exécutent dans les fenêtres d'exécution.  
+>  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+class CComClassFactoryAutoThread 
+   : public IClassFactory, 
+     public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
-      class CComClassFactoryAutoThread : public IClassFactory,   
-public CComObjectRootEx< CComGlobalsThreadModel >  
-```  
+## <a name="members"></a>Membres  
   
-## Membres  
-  
-### Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CComClassFactoryAutoThread::CreateInstance](../Topic/CComClassFactoryAutoThread::CreateInstance.md)|Crée un objet de le CLSID spécifié.|  
-|[CComClassFactoryAutoThread::LockServer](../Topic/CComClassFactoryAutoThread::LockServer.md)|Verrouille la fabrique de classe en mémoire.|  
+|----------|-----------------|  
+|[CComClassFactoryAutoThread::CreateInstance](#createinstance)|Crée un objet du CLSID spécifié.|  
+|[CComClassFactoryAutoThread::LockServer](#lockserver)|Verrouille la fabrique de classe en mémoire.|  
   
-## Notes  
- `CComClassFactoryAutoThread` est semblable à [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), mais autorise les objets à créer dans plusieurs des apartments.  Pour tirer parti de cette prise en charge, dérivez votre package EXE de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+## <a name="remarks"></a>Remarques  
+ `CComClassFactoryAutoThread`est semblable à [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), mais permet aux objets d’être créés dans des compartiments à plusieurs. Pour tirer parti de cette prise en charge, dérivez votre module EXE à partir de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
- Les objets ATL dans normalement une fabrique de classe en dérivant de [CComCoClass](../../atl/reference/ccomcoclass-class.md).  Cette classe inclut un [DECLARE\_CLASSFACTORY](../Topic/DECLARE_CLASSFACTORY.md), qui déclare [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) comme une fabrique de classe par défaut.  Pour utiliser `CComClassFactoryAutoThread`, spécifiez la macro de [DECLARE\_CLASSFACTORY\_AUTO\_THREAD](../Topic/DECLARE_CLASSFACTORY_AUTO_THREAD.md) dans la définition de classe de votre objet.  Par exemple :  
+ Objets ATL acquièrent normalement une fabrique de classe en dérivant de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Cette classe inclut la macro [DECLARE_CLASSFACTORY](http://msdn.microsoft.com/library/51a6b925-07c0-4d3a-9174-0b8c808975e4), qui déclare [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) en tant que la fabrique de classe par défaut. Pour utiliser `CComClassFactoryAutoThread`, spécifiez la [DECLARE_CLASSFACTORY_AUTO_THREAD](http://msdn.microsoft.com/library/19d7105e-03e8-4412-9f5e-5384c8a5e18f) macro dans la définition de classe de votre objet. Exemple :  
   
- [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/CPP/ccomclassfactoryautothread-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM&#9;](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `CComObjectRootBase`  
   
  [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)  
@@ -64,13 +80,59 @@ public CComObjectRootEx< CComGlobalsThreadModel >
   
  `CComClassFactoryAutoThread`  
   
-## Configuration requise  
- **Header:** atlcom.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atlcom.h  
   
-## Voir aussi  
+##  <a name="a-namecreateinstancea--ccomclassfactoryautothreadcreateinstance"></a><a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
+ Crée un objet du CLSID spécifié et récupère un pointeur d’interface vers cet objet.  
+  
+```
+STDMETHODIMP CreateInstance(
+    LPUNKNOWN pUnkOuter,
+    REFIID riid,
+    void** ppvObj);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `pUnkOuter`  
+ [in] Si l’objet est créé dans le cadre d’un agrégat, puis `pUnkOuter` doit être inconnu externe. Dans le cas contraire, `pUnkOuter` doit être **NULL**.  
+  
+ `riid`  
+ [in] L’IID de l’interface demandée. Si `pUnkOuter` est non - **NULL**, `riid` doit être **IID_IUnknown**.  
+  
+ `ppvObj`  
+ [out] Un pointeur vers le pointeur d’interface identifié par `riid`. Si l’objet ne prend pas en charge cette interface, `ppvObj` a **NULL**.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Valeur `HRESULT` standard.  
+  
+### <a name="remarks"></a>Notes  
+ Si votre module dérive [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` sélectionne tout d’abord créer l’objet dans le compartiment associé à un thread.  
+  
+##  <a name="a-namelockservera--ccomclassfactoryautothreadlockserver"></a><a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
+ Incrémente et décrémente le module nombre de verrous en appelant **_Module::Lock** et **_Module::Unlock**, respectivement.  
+  
+```
+STDMETHODIMP LockServer(BOOL fLock);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `fLock`  
+ [in] Si **TRUE**, le nombre de verrous est incrémenté ; sinon, le nombre de verrous est décrémenté.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Valeur `HRESULT` standard.  
+  
+### <a name="remarks"></a>Remarques  
+ Lorsque vous utilisez `CComClassFactoryAutoThread`, **_Module** fait généralement référence à l’instance globale de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+  
+ L’appel `LockServer` permet à un client à maintenir une fabrique de classe afin que plusieurs objets peuvent être rapidement créés.  
+  
+## <a name="see-also"></a>Voir aussi  
  [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
- [CComClassFactory2 Class](../../atl/reference/ccomclassfactory2-class.md)   
- [CComClassFactorySingleton Class](../../atl/reference/ccomclassfactorysingleton-class.md)   
- [CComObjectRootEx Class](../../atl/reference/ccomobjectrootex-class.md)   
- [CComGlobalsThreadModel](../Topic/CComGlobalsThreadModel.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+ [CComClassFactory2 (classe)](../../atl/reference/ccomclassfactory2-class.md)   
+ [CComClassFactorySingleton (classe)](../../atl/reference/ccomclassfactorysingleton-class.md)   
+ [CComObjectRootEx (classe)](../../atl/reference/ccomobjectrootex-class.md)   
+ [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+ [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+

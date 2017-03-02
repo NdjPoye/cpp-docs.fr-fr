@@ -1,67 +1,80 @@
 ---
-title: "CAtlAutoThreadModule Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CAtlAutoThreadModule"
-  - "CAtlAutoThreadModule"
-  - "ATL::CAtlAutoThreadModule"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAtlAutoThreadModule class"
+title: Classe de CAtlAutoThreadModule | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CAtlAutoThreadModule
+- CAtlAutoThreadModule
+- ATL::CAtlAutoThreadModule
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAtlAutoThreadModule class
 ms.assetid: 3be834aa-55ef-403e-94ae-41979691b15f
 caps.latest.revision: 19
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CAtlAutoThreadModule Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 09f4a7061ce1e4a09d0d27bd90dfcc16a37f4d5b
+ms.lasthandoff: 02/24/2017
 
-Cette classe implémente un regroupé par thread, serveur COM de modèle cloisonné.  
+---
+# <a name="catlautothreadmodule-class"></a>Classe de CAtlAutoThreadModule
+Cette classe implémente un pool de threads cloisonnés COM serveur.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s'exécutent dans les fenêtres d'exécution.  
+>  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
 ```  
   
-      class CAtlAutoThreadModule :  
-public CAtlAutoThreadModuleT< CAtlAutoThreadModule >  
-```  
+## <a name="remarks"></a>Remarques  
+ `CAtlAutoThreadModule`dérive de [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) et implémente un pool de threads cloisonnés COM serveur. `CAtlAutoThreadModule`utilise [CComApartment](../../atl/reference/ccomapartment-class.md) pour gérer un cloisonnement pour chaque thread dans le module.  
   
-## Notes  
- `CAtlAutoThreadModule` dérive de [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) et implémente un regroupé par thread, serveur COM de modèle cloisonné.  `CAtlAutoThreadModule` utilise [CComApartment](../../atl/reference/ccomapartment-class.md) pour gérer un " apartment " pour chaque thread dans le module.  
-  
- Vous devez utiliser la macro de [DECLARE\_CLASSFACTORY\_AUTO\_THREAD](../Topic/DECLARE_CLASSFACTORY_AUTO_THREAD.md) dans la définition de classe de votre objet pour spécifier [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) comme une fabrique de classe.  Vous devez ensuite ajouter une seule instance d'une classe dérivée d' `CAtlAutoThreadModuleT` tel qu' `CAtlAutoThreadModule`.  Par exemple :  
+ Vous devez utiliser le [DECLARE_CLASSFACTORY_AUTO_THREAD](http://msdn.microsoft.com/library/19d7105e-03e8-4412-9f5e-5384c8a5e18f) macro dans votre définition de l’objet classe pour spécifier [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) en tant que la fabrique de classe. Vous devez ensuite ajouter une instance unique d’une classe dérivée de `CAtlAutoThreadModuleT` comme `CAtlAutoThreadModule`. Exemple :  
   
  `CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`  
   
 > [!NOTE]
->  Cette classe substitue la classe obsolète de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) .  
+>  Cette classe remplace obsolète [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) classe.  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `IAtlAutoThreadModule`  
   
  [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)  
   
  `CAtlAutoThreadModule`  
   
-## Configuration requise  
- **Header:** atlbase.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atlbase.h  
   
-## Voir aussi  
- [CAtlAutoThreadModuleT Class](../../atl/reference/catlautothreadmodulet-class.md)   
- [IAtlAutoThreadModule Class](../../atl/reference/iatlautothreadmodule-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)   
- [Module, classes](../../atl/atl-module-classes.md)
+## <a name="see-also"></a>Voir aussi  
+ [CAtlAutoThreadModuleT (classe)](../../atl/reference/catlautothreadmodulet-class.md)   
+ [IAtlAutoThreadModule (classe)](../../atl/reference/iatlautothreadmodule-class.md)   
+ [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)   
+ [Module (Classes)](../../atl/atl-module-classes.md)

@@ -1,68 +1,79 @@
 ---
-title: "CAutoVectorPtrElementTraits Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CAutoVectorPtrElementTraits<T>"
-  - "ATL.CAutoVectorPtrElementTraits"
-  - "ATL.CAutoVectorPtrElementTraits<T>"
-  - "ATL::CAutoVectorPtrElementTraits"
-  - "CAutoVectorPtrElementTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAutoVectorPtrElementTraits class"
+title: Classe de CAutoVectorPtrElementTraits | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CAutoVectorPtrElementTraits<T>
+- ATL.CAutoVectorPtrElementTraits
+- ATL.CAutoVectorPtrElementTraits<T>
+- ATL::CAutoVectorPtrElementTraits
+- CAutoVectorPtrElementTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAutoVectorPtrElementTraits class
 ms.assetid: 16b81a56-55fb-46ca-b376-66a1884231a6
 caps.latest.revision: 19
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CAutoVectorPtrElementTraits Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: d7b7418b713993f539f56e70715296d5af265d28
+ms.lasthandoff: 02/24/2017
 
-Cette classe fournit des méthodes, des fonctions static, et les typedefs utiles pour créer des collections de pointeurs intelligents à nouveau vectorielles et d'opérateurs delete.  
+---
+# <a name="cautovectorptrelementtraits-class"></a>CAutoVectorPtrElementTraits (classe)
+Cette classe fournit des méthodes et fonctions statiques typedefs utiles pour la création de collections de pointeurs intelligents à l’aide de nouveau vecteur et supprimer des opérateurs.  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s'exécutent dans les fenêtres d'exécution.  
+>  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
-```  
+```
+template <typename T>  
+class CAutoVectorPtrElementTraits : 
+   public CDefaultElementTraits<ATL::CAutoVectorPtr<T>>
+```    
   
-      template<  
-typename T  
->  
-class CAutoVectorPtrElementTraits : public CDefaultElementTraits<  
-ATL::CAutoVectorPtr< T>  
->  
-```  
-  
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `T`  
- Le type pointeur.  
+ Le type de pointeur.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Typedefs publics  
+### <a name="public-typedefs"></a>Typedefs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CAutoVectorPtrElementTraits::INARGTYPE](../Topic/CAutoVectorPtrElementTraits::INARGTYPE.md)|Le type de données à utiliser pour ajouter des éléments à l'objet de classe de collection.|  
-|[CAutoVectorPtrElementTraits::OUTARGTYPE](../Topic/CAutoVectorPtrElementTraits::OUTARGTYPE.md)|Le type de données à utiliser pour récupérer des éléments de l'objet de classe de collection.|  
+|----------|-----------------|  
+|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.|  
+|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.|  
   
-## Notes  
- Cette classe fournit des méthodes, des fonctions static, et les typedefs pour faciliter la création des objets de classe de collection contenant les pointeurs intelligents.  Contrairement à [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md), cette classe utilise nouveau vectorielles et des opérateurs delete.  
+## <a name="remarks"></a>Remarques  
+ Cette classe fournit des méthodes, des fonctions statiques et typedefs pour contribuer à la création d’objets de classe de collection qui contient des pointeurs intelligents. Contrairement aux [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md), cette classe vector nouveaux et supprimer des opérateurs.  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
   
  [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
@@ -73,10 +84,25 @@ ATL::CAutoVectorPtr< T>
   
  `CAutoVectorPtrElementTraits`  
   
-## Configuration requise  
- **Header:** atlcoll.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atlcoll.h  
   
-## Voir aussi  
- [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)   
- [CAutoVectorPtr Class](../../atl/reference/cautovectorptr-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameinargtypea--cautovectorptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoVectorPtrElementTraits::INARGTYPE  
+ Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.  
+  
+```
+typedef CAutoVectorPtr<T>& INARGTYPE;
+```  
+  
+##  <a name="a-nameoutargtypea--cautovectorptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoVectorPtrElementTraits::OUTARGTYPE  
+ Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.  
+  
+```
+typedef T*& OUTARGTYPE;
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [CDefaultElementTraits (classe)](../../atl/reference/cdefaultelementtraits-class.md)   
+ [CAutoVectorPtr (classe)](../../atl/reference/cautovectorptr-class.md)   
+ [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+

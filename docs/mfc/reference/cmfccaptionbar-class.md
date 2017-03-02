@@ -1,107 +1,123 @@
 ---
-title: "CMFCCaptionBar, Classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCCaptionBar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCCaptionBar, classe"
+title: Classe de CMFCCaptionBar | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCCaptionBar
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCCaptionBar class
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
 caps.latest.revision: 28
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CMFCCaptionBar, Classe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: c9be93449392de9d04e4869db8dcd73e08125c88
+ms.lasthandoff: 02/24/2017
 
-Un objet d' `CMFCCaptionBar` est une barre de contrôles qui peut afficher trois éléments : un bouton, une étiquette de texte, et une bitmap.  Il ne peut afficher un élément de chaque type à la fois.  Vous pouvez aligner chaque élément aux bords gauche ou droit du contrôle ou centre.  Vous pouvez également appliquer un plate ou un style 3D aux zones de haut et bas de la barre de légende.  
+---
+# <a name="cmfccaptionbar-class"></a>CMFCCaptionBar, Classe
+Un `CMFCCaptionBar` objet est une barre de contrôle qui peut afficher trois éléments : un bouton, une étiquette de texte et une image bitmap. Elle ne peut afficher qu'un élément de chaque type à la fois. Vous pouvez aligner chaque élément sur le bord gauche ou droit du contrôle ou le centrer. Vous pouvez également appliquer un style 2D ou 3D aux bordures supérieure et inférieure de la barre de légende.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 class CMFCCaptionBar : public CPane  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Méthodes publiques  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[CMFCCaptionBar::Create](../Topic/CMFCCaptionBar::Create.md)|Crée le contrôle de barre de titre et l'attache à l'objet d' `CMFCCaptionBar`.|  
-|[CMFCCaptionBar::DoesAllowDynInsertBefore](../Topic/CMFCCaptionBar::DoesAllowDynInsertBefore.md)|Indique si un autre volet peut être dynamiquement inséré entre la barre de légende et son frame parent.  \(Substitutions [CBasePane::DoesAllowDynInsertBefore](../Topic/CBasePane::DoesAllowDynInsertBefore.md).\)|  
-|[CMFCCaptionBar::EnableButton](../Topic/CMFCCaptionBar::EnableButton.md)|Active ou désactive le bouton dans la barre de légende.|  
-|[CMFCCaptionBar::GetAlignment](../Topic/CMFCCaptionBar::GetAlignment.md)|Retourne l'alignement de l'élément spécifié.|  
-|[CMFCCaptionBar::GetBorderSize](../Topic/CMFCCaptionBar::GetBorderSize.md)|Retourne la taille de la bordure de la barre de légende.|  
-|[CMFCCaptionBar::GetButtonRect](../Topic/CMFCCaptionBar::GetButtonRect.md)|Récupère le rectangle englobant du bouton sur la barre de légende.|  
-|[CMFCCaptionBar::GetMargin](../Topic/CMFCCaptionBar::GetMargin.md)|Retourne la distance entre le bord des éléments de barre de titre et le bord du contrôle de barre de titre.|  
-|[CMFCCaptionBar::IsMessageBarMode](../Topic/CMFCCaptionBar::IsMessageBarMode.md)|Spécifie si la barre de légende est en mode de barre des messages.|  
-|[CMFCCaptionBar::RemoveBitmap](../Topic/CMFCCaptionBar::RemoveBitmap.md)|Supprime l'image bitmap de la barre de légende.|  
-|[CMFCCaptionBar::RemoveButton](../Topic/CMFCCaptionBar::RemoveButton.md)|Supprime le bouton de la barre de légende.|  
-|[CMFCCaptionBar::RemoveIcon](../Topic/CMFCCaptionBar::RemoveIcon.md)|Supprime l'icône de la barre de légende.|  
-|[CMFCCaptionBar::RemoveText](../Topic/CMFCCaptionBar::RemoveText.md)|Supprime l'étiquette de texte de la barre de légende.|  
-|[CMFCCaptionBar::SetBitmap](../Topic/CMFCCaptionBar::SetBitmap.md)|Définit l'image bitmap pour la barre de légende.|  
-|[CMFCCaptionBar::SetBorderSize](../Topic/CMFCCaptionBar::SetBorderSize.md)|Définit la taille de la bordure de la barre de légende.|  
-|[CMFCCaptionBar::SetButton](../Topic/CMFCCaptionBar::SetButton.md)|Définit le bouton pour la barre de légende.|  
-|[CMFCCaptionBar::SetButtonPressed](../Topic/CMFCCaptionBar::SetButtonPressed.md)|Spécifie si reste du bouton est enfoncé.|  
-|[CMFCCaptionBar::SetButtonToolTip](../Topic/CMFCCaptionBar::SetButtonToolTip.md)|Définit l'info\-bulle pour le bouton.|  
-|[CMFCCaptionBar::SetFlatBorder](../Topic/CMFCCaptionBar::SetFlatBorder.md)|Définit le style de bordure de la barre de légende.|  
-|[CMFCCaptionBar::SetIcon](../Topic/CMFCCaptionBar::SetIcon.md)|Définit l'icône pour une barre de légende.|  
-|[CMFCCaptionBar::SetImageToolTip](../Topic/CMFCCaptionBar::SetImageToolTip.md)|Définit l'info\-bulle de l'image pour la barre de légende.|  
-|[CMFCCaptionBar::SetMargin](../Topic/CMFCCaptionBar::SetMargin.md)|Définit la distance entre le bord de l'élément de la barre de légende et le bord du contrôle de barre de titre.|  
-|[CMFCCaptionBar::SetText](../Topic/CMFCCaptionBar::SetText.md)|Définit l'étiquette de texte de la barre de légende.|  
-  
-### Méthodes protégées  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CMFCCaptionBar::OnDrawBackground](../Topic/CMFCCaptionBar::OnDrawBackground.md)|Appelé par l'infrastructure pour remplir arrière\-plan de la barre de légende.|  
-|[CMFCCaptionBar::OnDrawBorder](../Topic/CMFCCaptionBar::OnDrawBorder.md)|Appelé par l'infrastructure pour dessiner la bordure de la barre de légende.|  
-|[CMFCCaptionBar::OnDrawButton](../Topic/CMFCCaptionBar::OnDrawButton.md)|Appelé par l'infrastructure pour dessiner le bouton de la barre de légende.|  
-|[CMFCCaptionBar::OnDrawImage](../Topic/CMFCCaptionBar::OnDrawImage.md)|Appelé par l'infrastructure pour dessiner l'image de la barre de légende.|  
-|[CMFCCaptionBar::OnDrawText](../Topic/CMFCCaptionBar::OnDrawText.md)|Appelé par l'infrastructure pour dessiner le texte de la barre de légende.|  
+|----------|-----------------|  
+|[CMFCCaptionBar::Create](#create)|Crée le contrôle de barre de légende et l’attache à le `CMFCCaptionBar` objet.|  
+|[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Indique si un autre volet peut être dynamiquement inséré entre la barre de légende et le cadre de son parent. (Substitue [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
+|[CMFCCaptionBar::EnableButton](#enablebutton)|Active ou désactive le bouton de la barre de légende.|  
+|[CMFCCaptionBar::GetAlignment](#getalignment)|Retourne l’alignement de l’élément spécifié.|  
+|[CMFCCaptionBar::GetBorderSize](#getbordersize)|Retourne la taille de la bordure de la barre de légende.|  
+|[CMFCCaptionBar::GetButtonRect](#getbuttonrect)|Récupère le rectangle englobant du bouton sur la barre de légende.|  
+|[CMFCCaptionBar::GetMargin](#getmargin)|Retourne la distance entre le bord des éléments de barre de légende et le bord du contrôle de barre de légende.|  
+|[CMFCCaptionBar::IsMessageBarMode](#ismessagebarmode)|Spécifie si la barre de légende est en mode d’affichage du message.|  
+|[CMFCCaptionBar::RemoveBitmap](#removebitmap)|Supprime l’image bitmap de la barre de légende.|  
+|[CMFCCaptionBar::RemoveButton](#removebutton)|Supprime le bouton de la barre de légende.|  
+|[CMFCCaptionBar::RemoveIcon](#removeicon)|Supprime l’icône de la barre de légende.|  
+|[CMFCCaptionBar::RemoveText](#removetext)|Supprime l’étiquette de texte de la barre de légende.|  
+|[CMFCCaptionBar::SetBitmap](#setbitmap)|Définit l’image bitmap de la barre de légende.|  
+|[CMFCCaptionBar::SetBorderSize](#setbordersize)|Définit la taille de la bordure de la barre de légende.|  
+|[CMFCCaptionBar::SetButton](#setbutton)|Définit le bouton de la barre de légende.|  
+|[CMFCCaptionBar::SetButtonPressed](#setbuttonpressed)|Spécifie si le bouton reste enfoncé.|  
+|[CMFCCaptionBar::SetButtonToolTip](#setbuttontooltip)|Définit l’info-bulle pour le bouton.|  
+|[CMFCCaptionBar::SetFlatBorder](#setflatborder)|Définit le style de bordure de la barre de légende.|  
+|[CMFCCaptionBar::SetIcon](#seticon)|Définit l’icône d’une barre de légende.|  
+|[CMFCCaptionBar::SetImageToolTip](#setimagetooltip)|Définit l’info-bulle de l’image de la barre de légende.|  
+|[CMFCCaptionBar::SetMargin](#setmargin)|Définit la distance entre le bord de l’élément de barre de légende et le bord du contrôle de barre de légende.|  
+|[CMFCCaptionBar::SetText](#settext)|Définit l’étiquette de texte de la barre de légende.|  
   
-### Membres de données  
+### <a name="protected-methods"></a>Méthodes protégées  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CMFCCaptionBar::m\_clrBarBackground](../Topic/CMFCCaptionBar::m_clrBarBackground.md)|La couleur d'arrière\-plan de la barre de légende.|  
-|[CMFCCaptionBar::m\_clrBarBorder](../Topic/CMFCCaptionBar::m_clrBarBorder.md)|La couleur de la bordure de la barre de légende.|  
-|[CMFCCaptionBar::m\_clrBarText](../Topic/CMFCCaptionBar::m_clrBarText.md)|La couleur du texte de la barre de légende.|  
+|----------|-----------------|  
+|[CMFCCaptionBar::OnDrawBackground](#ondrawbackground)|Appelé par l’infrastructure pour remplir l’arrière-plan de la barre de légende.|  
+|[CMFCCaptionBar::OnDrawBorder](#ondrawborder)|Appelé par l’infrastructure pour dessiner la bordure de la barre de légende.|  
+|[CMFCCaptionBar::OnDrawButton](#ondrawbutton)|Appelée par l’infrastructure pour dessiner le bouton de barre de légende.|  
+|[CMFCCaptionBar::OnDrawImage](#ondrawimage)|Appelé par l’infrastructure pour dessiner l’image de barre de légende.|  
+|[CMFCCaptionBar::OnDrawText](#ondrawtext)|Appelé par l’infrastructure pour dessiner le texte de la barre de légende.|  
   
-## Notes  
- Pour créer une barre de légende, suivez ces étapes :  
+### <a name="data-members"></a>Membres de données  
   
-1.  Construisez l'objet d' `CMFCCaptionBar` .  En général, vous ajoutez la barre de titre à une classe de fenêtre frame.  
+|Nom|Description|  
+|----------|-----------------|  
+|[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|La couleur d’arrière-plan de la barre de légende.|  
+|[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|Couleur de la bordure de la barre de légende.|  
+|[CMFCCaptionBar::m_clrBarText](#m_clrbartext)|La couleur du texte de la barre de légende.|  
   
-2.  Appelez la méthode [CMFCCaptionBar::Create](../Topic/CMFCCaptionBar::Create.md) pour créer le contrôle de barre de titre et le lier à l'objet d' `CMFCCaptionBar` .  
+## <a name="remarks"></a>Remarques  
+ Pour créer une barre de légende, procédez comme suit :  
   
-3.  Appelez [CMFCCaptionBar::SetButton](../Topic/CMFCCaptionBar::SetButton.md), [CMFCCaptionBar::SetText](../Topic/CMFCCaptionBar::SetText.md), [CMFCCaptionBar::SetIcon](../Topic/CMFCCaptionBar::SetIcon.md), et [CMFCCaptionBar::SetBitmap](../Topic/CMFCCaptionBar::SetBitmap.md) pour définir les éléments de barre de titre.  
+1.  Construire la `CMFCCaptionBar` objet. En règle générale, vous devez ajouter la barre de légende à une classe de fenêtre frame.  
   
- Lorsque vous affectez à l'élément de bouton, vous devez assigner un ID de commande du bouton.  Lorsque l'utilisateur clique sur le bouton, la barre de légende route les messages d' `WM_COMMAND` qui ont cet ID à la fenêtre frame parente.  
+2.  Appelez le [CMFCCaptionBar::Create](#create) méthode pour créer le contrôle de barre de légende et l’attacher à la `CMFCCaptionBar` objet.  
   
- La barre de légende peut également s'exécuter en mode de barre des messages, qui émule la barre des messages qui apparaît dans les applications Microsoft Office 2007.  En mode de barre des messages, la barre de titre affiche une bitmap, un message, et un bouton \(qui ouvre généralement une boîte de dialogue.\) Vous pouvez assigner une info\-bulle à la bitmap.  
+3.  Appelez [CMFCCaptionBar::SetButton](#setbutton), [CMFCCaptionBar::SetText](#settext), [CMFCCaptionBar::SetIcon](#seticon), et [CMFCCaptionBar::SetBitmap](#setbitmap) de définir les éléments de barre de légende.  
   
- Pour activer le mode de barre des messages, l'appel [CMFCCaptionBar::Create](../Topic/CMFCCaptionBar::Create.md) et définir le quatrième paramètre \(bIsMessageBarMode\) à `TRUE`.  
+ Lorsque vous définissez l’élément de bouton, vous devez affecter un ID de commande pour le bouton. Lorsque l’utilisateur clique sur le bouton, les itinéraires de barre de légende du `WM_COMMAND` messages avec ce code à la fenêtre frame parente.  
   
-## Exemple  
- L'exemple suivant montre comment utiliser différentes méthodes dans la classe d' `CMFCCaptionBar` .  L'exemple montre comment créer le contrôle de barre de titre, définir une bordure 3D de la barre de légende, définir la distance, en pixels, entre le bord des éléments de barre de titre et le bord du contrôle de barre de titre, le positionnement du bouton pour la barre de légende, définir l'info\-bulle pour le bouton, définir l'étiquette de texte de la barre de légende, définir l'image bitmap pour la barre de légende, et définir l'info\-bulle de l'image dans la barre de légende.  Cet extrait de code fait partie d' [Exemple 2007 de démonstration de MS Office](../../top/visual-cpp-samples.md).  
+ La barre de légende peut également fonctionner en mode d’affichage de message, qui émule la barre de message qui apparaît dans les applications Microsoft Office 2007. En mode d’affichage des messages, la barre de légende affiche une bitmap, un message et un bouton (en général, ouvre une boîte de dialogue) Vous pouvez affecter une info-bulle pour l’image bitmap.  
   
- [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/CPP/cmfccaptionbar-class_1.h)]  
-[!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/CPP/cmfccaptionbar-class_2.cpp)]  
+ Pour activer le mode d’affichage des messages, appelez [CMFCCaptionBar::Create](#create) et le quatrième paramètre (bIsMessageBarMode) la valeur `TRUE`.  
   
-## Hiérarchie d'héritage  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre comment utiliser différentes méthodes dans la `CMFCCaptionBar` classe. L’exemple montre comment créer le contrôle de barre de légende, définir une bordure 3D de la barre de légende, définissez la distance, en pixels, entre le bord de la légende des éléments de la barre et le bord du contrôle de barre de légende, le bouton de la barre de légende, définir l’info-bulle pour le bouton, l’étiquette de texte de la barre de légende, définir l’image bitmap de la barre de légende et définissez l’info-bulle pour l’image dans la barre de légende. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_MSOffice2007Demo n °&1;](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]  
+[!code-cpp[NVC_MFC_MSOffice2007Demo n °&2;](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -114,9 +130,502 @@ class CMFCCaptionBar : public CPane
   
  [CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md)  
   
-## Configuration requise  
- **En\-tête :** afxcaptionbar.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** afxcaptionbar.h  
   
-## Voir aussi  
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
+##  <a name="a-namecreatea--cmfccaptionbarcreate"></a><a name="create"></a>CMFCCaptionBar::Create  
+ Crée le contrôle de barre de légende et l’attache à le `CMFCCaptionBar` objet.  
+  
+```  
+BOOL Create(
+    DWORD dwStyle,  
+    CWnd* pParentWnd,  
+    UINT uID,  
+    int nHeight=-1,  
+    BOOL bIsMessageBarMode=FALSE);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `dwStyle`  
+ La combinaison OR logique des styles de barre de légende.  
+  
+ `pParentWnd`  
+ La fenêtre parent du contrôle de barre de légende.  
+  
+ `uID`  
+ L’ID du contrôle de barre de légende.  
+  
+ `nHeight`  
+ La hauteur, en pixels, du contrôle de barre de légende. Si la valeur est -1, la hauteur est calculée en fonction de la hauteur de l’icône, le texte et le bouton qui affiche le contrôle de barre de légende.  
+  
+ `bIsMessageBarMode`  
+ `TRUE`Si la barre de légende est dans le mode d’affichage des messages ; `FALSE` dans le cas contraire.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ `TRUE`Si le contrôle de barre de légende est créé avec succès ; `FALSE` dans le cas contraire.  
+  
+### <a name="remarks"></a>Remarques  
+ Vous construisez un `CMFCCaptionBar` objet en deux étapes. Tout d’abord, vous appelez le constructeur, et que vous appelez ensuite la `Create` méthode qui crée le contrôle Windows et l’attache à le `CMFCCaptionBar` objet.  
+  
+##  <a name="a-namedoesallowdyninsertbeforea--cmfccaptionbardoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CMFCCaptionBar::DoesAllowDynInsertBefore  
+ Indique si un autre volet peut être dynamiquement inséré entre la barre de légende et le cadre de son parent.  
+  
+```  
+virtual BOOL DoesAllowDynInsertBefore() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Retourne `FALSE` sauf substitution.  
+  
+### <a name="remarks"></a>Remarques  
+  
+##  <a name="a-nameenablebuttona--cmfccaptionbarenablebutton"></a><a name="enablebutton"></a>CMFCCaptionBar::EnableButton  
+ Active ou désactive le bouton de la barre de légende.  
+  
+```  
+void EnableButton(BOOL bEnable=TRUE);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `bEnable`  
+ `TRUE`Pour activer le bouton, `FALSE` pour désactiver le bouton.  
+  
+##  <a name="a-namegetalignmenta--cmfccaptionbargetalignment"></a><a name="getalignment"></a>CMFCCaptionBar::GetAlignment  
+ Retourne l’alignement de l’élément spécifié.  
+  
+```  
+BarElementAlignment GetAlignment(BarElement elem);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `elem`  
+ Un élément de barre de légende pour lequel récupérer l’alignement.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ L’alignement d’un élément, comme un bouton, une image bitmap, texte ou une icône.  
+  
+### <a name="remarks"></a>Notes  
+ L’alignement de l’élément peut être une des valeurs suivantes :  
+  
+-   ALIGN_INVALID  
+  
+-   ALIGN_LEFT  
+  
+-   ALIGN_RIGHT  
+  
+-   ALIGN_CENTER  
+  
+##  <a name="a-namegetbordersizea--cmfccaptionbargetbordersize"></a><a name="getbordersize"></a>CMFCCaptionBar::GetBorderSize  
+ Retourne la taille de la bordure de la barre de légende.  
+  
+```  
+int GetBorderSize() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ La taille, en pixels, de la bordure.  
+  
+##  <a name="a-namegetbuttonrecta--cmfccaptionbargetbuttonrect"></a><a name="getbuttonrect"></a>CMFCCaptionBar::GetButtonRect  
+ Récupère le rectangle englobant du bouton sur la barre de légende.  
+  
+```  
+CRect GetButtonRect() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Un `CRect` objet qui contient les coordonnées du rectangle englobant du bouton sur la barre de légende.  
+  
+##  <a name="a-namegetmargina--cmfccaptionbargetmargin"></a><a name="getmargin"></a>CMFCCaptionBar::GetMargin  
+ Retourne la distance entre le bord des éléments de barre de légende et le bord du contrôle de barre de légende.  
+  
+```  
+int GetMargin() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ La distance, en pixels, entre le bord des éléments de barre de légende et le bord du contrôle de barre de légende.  
+  
+##  <a name="a-nameismessagebarmodea--cmfccaptionbarismessagebarmode"></a><a name="ismessagebarmode"></a>CMFCCaptionBar::IsMessageBarMode  
+ Spécifie si la barre de légende est en mode d’affichage du message.  
+  
+```  
+BOOL IsMessageBarMode() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ `TRUE`Si la barre de légende est dans le mode d’affichage des messages ; `FALSE` dans le cas contraire.  
+  
+### <a name="remarks"></a>Notes  
+ Dans le mode d’affichage des messages, la barre de légende affiche une image avec une info-bulle, un message texte et un bouton.  
+  
+##  <a name="a-namemclrbarbackgrounda--cmfccaptionbarmclrbarbackground"></a><a name="m_clrbarbackground"></a>CMFCCaptionBar::m_clrBarBackground  
+ La couleur d’arrière-plan de la barre de légende.  
+  
+```  
+COLORREF m_clrBarBackground  
+```  
+  
+##  <a name="a-namemclrbarbordera--cmfccaptionbarmclrbarborder"></a><a name="m_clrbarborder"></a>CMFCCaptionBar::m_clrBarBorder  
+ Couleur de la bordure de la barre de légende.  
+  
+```  
+COLORREF m_clrBarBorder  
+```  
+  
+##  <a name="a-namemclrbartexta--cmfccaptionbarmclrbartext"></a><a name="m_clrbartext"></a>CMFCCaptionBar::m_clrBarText  
+ La couleur du texte de la barre de légende.  
+  
+```  
+COLORREF m_clrBarText  
+```  
+  
+##  <a name="a-nameondrawbackgrounda--cmfccaptionbarondrawbackground"></a><a name="ondrawbackground"></a>CMFCCaptionBar::OnDrawBackground  
+ Appelé par l’infrastructure pour remplir l’arrière-plan de la barre de légende.  
+  
+```  
+virtual void OnDrawBackground(
+    CDC* pDC,  
+    CRect rect);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `pDC`  
+ Pointeur vers le contexte de périphérique de la barre de légende.  
+  
+ [in] `rect`  
+ Le rectangle à remplir.  
+  
+### <a name="remarks"></a>Remarques  
+ Le `OnDrawBackground` méthode est appelée lorsque l’arrière-plan de la barre de légende est sur le point d’être rempli. L’implémentation par défaut remplit l’arrière-plan à l’aide de la [CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground) couleur.  
+  
+ Substituez cette méthode dans un `CMFCCaptionBar` classe pour personnaliser l’apparence de la barre de légende dérivée.  
+  
+##  <a name="a-nameondrawbordera--cmfccaptionbarondrawborder"></a><a name="ondrawborder"></a>CMFCCaptionBar::OnDrawBorder  
+ Appelé par l’infrastructure pour dessiner la bordure de la barre de légende.  
+  
+```  
+virtual void OnDrawBorder(
+    CDC* pDC,  
+    CRect rect);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `pDC`  
+ Un contexte de périphérique qui est utilisé pour afficher les bordures.  
+  
+ [in] `rect`  
+ Rectangle englobant.  
+  
+### <a name="remarks"></a>Remarques  
+ Par défaut, les bordures ont le style à deux dimensions.  
+  
+ Substituez cette méthode dans un `CMFCCaptionBar` classe pour personnaliser l’apparence des bordures de la barre légende dérivée.  
+  
+##  <a name="a-nameondrawbuttona--cmfccaptionbarondrawbutton"></a><a name="ondrawbutton"></a>CMFCCaptionBar::OnDrawButton  
+ Appelée par l’infrastructure pour dessiner le bouton de barre de légende.  
+  
+```  
+virtual void OnDrawButton(
+    CDC* pDC,  
+    CRect rect,  
+    const CString& strButton,  
+    BOOL bEnabled);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `pDC`  
+ Pointeur vers un contexte de périphérique qui est utilisé pour afficher le bouton.  
+  
+ [in] `rect`  
+ Le rectangle englobant du bouton.  
+  
+ [in] `strButton`  
+ Étiquette de texte du bouton.  
+  
+ [in] `bEnabled`  
+ `TRUE`Si le bouton est activé ; `FALSE` dans le cas contraire.  
+  
+### <a name="remarks"></a>Remarques  
+ Substituez cette méthode dans un `CMFCCaptionBar` classe pour personnaliser l’apparence du bouton de la barre légende dérivée.  
+  
+##  <a name="a-nameondrawimagea--cmfccaptionbarondrawimage"></a><a name="ondrawimage"></a>CMFCCaptionBar::OnDrawImage  
+ Appelé par l’infrastructure pour dessiner l’image de barre de légende.  
+  
+```  
+virtual void OnDrawImage(
+    CDC* pDC,  
+    CRect rect);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `pDC`  
+ Pointeur vers un contexte de périphérique qui est utilisé pour afficher l’image.  
+  
+ [in] `rect`  
+ Spécifie le rectangle englobant de l’image.  
+  
+### <a name="remarks"></a>Remarques  
+ Substituez cette méthode dans un `CMFCCaptionBar` dérivée de la classe pour personnaliser l’apparence de l’image.  
+  
+##  <a name="a-nameondrawtexta--cmfccaptionbarondrawtext"></a><a name="ondrawtext"></a>CMFCCaptionBar::OnDrawText  
+ Appelé par l’infrastructure pour dessiner le texte de la barre de légende.  
+  
+```  
+virtual void OnDrawText(
+    CDC* pDC,  
+    CRect rect,  
+    const CString& strText);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `pDC`  
+ Pointeur vers un contexte de périphérique qui est utilisé pour afficher le bouton.  
+  
+ [in] `rect`  
+ Le rectangle englobant du texte.  
+  
+ [in] `strText`  
+ La chaîne de texte à afficher.  
+  
+### <a name="remarks"></a>Remarques  
+ L’implémentation par défaut affiche le texte à l’aide de `CDC::DrawText` et [CMFCCaptionBar::m_clrBarText](#m_clrbartext) couleur.  
+  
+ Substituez cette méthode dans un `CMFCCaptionBar` classe pour personnaliser l’apparence du texte de la barre légende dérivée.  
+  
+##  <a name="a-nameremovebitmapa--cmfccaptionbarremovebitmap"></a><a name="removebitmap"></a>CMFCCaptionBar::RemoveBitmap  
+ Supprime l’image bitmap de la barre de légende.  
+  
+```  
+void RemoveBitmap();
+```  
+  
+##  <a name="a-nameremovebuttona--cmfccaptionbarremovebutton"></a><a name="removebutton"></a>CMFCCaptionBar::RemoveButton  
+ Supprime le bouton de la barre de légende.  
+  
+```  
+void RemoveButton();
+```  
+  
+### <a name="remarks"></a>Remarques  
+ La disposition des éléments de barre de légende sont ajustés automatiquement.  
+  
+##  <a name="a-nameremoveicona--cmfccaptionbarremoveicon"></a><a name="removeicon"></a>CMFCCaptionBar::RemoveIcon  
+ Supprime l’icône de la barre de légende.  
+  
+```  
+void RemoveIcon();
+```  
+  
+##  <a name="a-nameremovetexta--cmfccaptionbarremovetext"></a><a name="removetext"></a>CMFCCaptionBar::RemoveText  
+ Supprime l’étiquette de texte de la barre de légende.  
+  
+```  
+void RemoveText();
+```  
+  
+##  <a name="a-namesetbitmapa--cmfccaptionbarsetbitmap"></a><a name="setbitmap"></a>CMFCCaptionBar::SetBitmap  
+ Définit l’image bitmap de la barre de légende.  
+  
+```  
+void SetBitmap(
+    HBITMAP hBitmap,  
+    COLORREF clrTransparent,  
+    BOOL bStretch=FALSE,  
+    BarElementAlignment bmpAlignment=ALIGN_RIGHT);
+
+ 
+void SetBitmap(
+    UINT uiBmpResID,  
+    COLORREF clrTransparent,  
+    BOOL bStretch=FALSE,  
+    BarElementAlignment bmpAlignment=ALIGN_RIGHT);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `hBitmap`  
+ Handle de bitmap à définir.  
+  
+ [in] `clrTransparent`  
+ Une valeur RVB qui spécifie la couleur transparente de la bitmap.  
+  
+ [in] `bStretch`  
+ Si `TRUE`, la bitmap est étirée si elle n’est pas adapté à l’image du rectangle englobant. Dans le cas contraire, l’image bitmap n’est pas étirée.  
+  
+ [in] `bmpAlignment`  
+ L’alignement de l’image bitmap.  
+  
+### <a name="remarks"></a>Remarques  
+ Utilisez cette méthode pour définir une image bitmap sur une barre de légende.  
+  
+ La bitmap précédente est supprimée automatiquement. Si la barre de légende affiche une icône, car vous avez appelé la [CMFCCaptionBar::SetIcon](#seticon) (méthode), la bitmap n’est pas affichée sauf si vous supprimez l’icône en appelant [CMFCCaptionBar::RemoveIcon](#removeicon).  
+  
+ L’image bitmap est aligné comme spécifié par le `bmpAlignment` paramètre.  Ce paramètre peut avoir l'une des valeurs `BarElementAlignment` suivantes :  
+  
+-   ALIGN_INVALID  
+  
+-   ALIGN_LEFT  
+  
+-   ALIGN_RIGHT  
+  
+-   ALIGN_CENTER  
+  
+##  <a name="a-namesetbordersizea--cmfccaptionbarsetbordersize"></a><a name="setbordersize"></a>CMFCCaptionBar::SetBorderSize  
+ Définit la taille de la bordure de la barre de légende.  
+  
+```  
+void SetBorderSize(int nSize);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `nSize`  
+ La nouvelle taille, en pixels, de la bordure de barre de légende.  
+  
+##  <a name="a-namesetbuttona--cmfccaptionbarsetbutton"></a><a name="setbutton"></a>CMFCCaptionBar::SetButton  
+ Définit le bouton de la barre de légende.  
+  
+```  
+void SetButton(
+    LPCTSTR lpszLabel,  
+    UINT uiCmdUI,  
+    BarElementAlignment btnAlignmnet=ALIGN_LEFT,  
+    BOOL bHasDropDownArrow=TRUE);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `lpszLabel`  
+ L’étiquette du bouton commande.  
+  
+ `uiCmdUI`  
+ ID de commande. du bouton  
+  
+ `btnAlignmnet`  
+ Alignement du bouton.  
+  
+ `bHasDropDownArrow`  
+ `TRUE`Si le bouton affiche une flèche déroulante `FALSE` dans le cas contraire.  
+  
+##  <a name="a-namesetbuttonpresseda--cmfccaptionbarsetbuttonpressed"></a><a name="setbuttonpressed"></a>CMFCCaptionBar::SetButtonPressed  
+ Spécifie si le bouton reste enfoncé.  
+  
+```  
+void SetButtonPressed(BOOL bPresed=TRUE);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `bPresed`  
+ `TRUE`Si le bouton conserve son état enfoncé, `FALSE` dans le cas contraire.  
+  
+##  <a name="a-namesetbuttontooltipa--cmfccaptionbarsetbuttontooltip"></a><a name="setbuttontooltip"></a>CMFCCaptionBar::SetButtonToolTip  
+ Définit l’info-bulle pour le bouton.  
+  
+```  
+void SetButtonToolTip(
+    LPCTSTR lpszToolTip,  
+    LPCTSTR lpszDescription=NULL);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `lpszToolTip`  
+ La légende de l’info-bulle.  
+  
+ [in] `lpszDescription`  
+ La description de l’info-bulle.  
+  
+##  <a name="a-namesetflatbordera--cmfccaptionbarsetflatborder"></a><a name="setflatborder"></a>CMFCCaptionBar::SetFlatBorder  
+ Définit le style de bordure de la barre de légende.  
+  
+```  
+void SetFlatBorder(BOOL bFlat=TRUE);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `bFlat`  
+ `TRUE`Si la bordure d’une barre de légende est plate. `FALSE`Si la bordure est 3D.  
+  
+##  <a name="a-nameseticona--cmfccaptionbarseticon"></a><a name="seticon"></a>CMFCCaptionBar::SetIcon  
+ Définit l’icône d’une barre de légende.  
+  
+```  
+void SetIcon(
+    HICON hIcon,  
+    BarElementAlignment iconAlignment=ALIGN_RIGHT);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `hIcon`  
+ Handle de l’icône à définir.  
+  
+ [in] `iconAlignment`  
+ L’alignement de l’icône.  
+  
+### <a name="remarks"></a>Notes  
+ Barres de légende peuvent afficher des icônes ou des bitmaps. Consultez la page [CMFCCaptionBar::SetBitmap](#setbitmap) pour savoir comment procéder afficher une image bitmap. Si vous définissez une icône et une image bitmap, l’icône est toujours affichée. Appelez [CMFCCaptionBar::RemoveIcon](#removeicon) pour supprimer une icône de la barre de légende.  
+  
+ L’icône est alignée en fonction de le `iconAlignment` paramètre. Il peut prendre l’une des opérations suivantes `BarElementAlignment` valeurs :  
+  
+-   ALIGN_INVALID  
+  
+-   ALIGN_LEFT  
+  
+-   ALIGN_RIGHT  
+  
+-   ALIGN_CENTER  
+  
+##  <a name="a-namesetimagetooltipa--cmfccaptionbarsetimagetooltip"></a><a name="setimagetooltip"></a>CMFCCaptionBar::SetImageToolTip  
+ Définit l’info-bulle pour l’image dans la barre de légende.  
+  
+```  
+void SetImageToolTip(
+    LPCTSTR lpszToolTip,  
+    LPCTSTR lpszDescription=NULL);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `lpszToolTip`  
+ Le texte de l’info-bulle.  
+  
+ [in] `lpszDescription`  
+ La description de l’info-bulle.  
+  
+##  <a name="a-namesetmargina--cmfccaptionbarsetmargin"></a><a name="setmargin"></a>CMFCCaptionBar::SetMargin  
+ Définit la distance entre le bord de l’élément de barre de légende et le bord du contrôle de barre de légende.  
+  
+```  
+void SetMargin(int nMargin);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `nMargin`  
+ La distance, en pixels, entre le bord des éléments de barre de légende et le bord du contrôle de barre de légende.  
+  
+##  <a name="a-namesettexta--cmfccaptionbarsettext"></a><a name="settext"></a>CMFCCaptionBar::SetText  
+ Définit l’étiquette de texte de la barre de légende.  
+  
+```  
+void SetText(
+    const CString& strText,  
+    BarElementAlignment textAlignment=ALIGN_RIGHT);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `strText`  
+ La chaîne de texte à définir.  
+  
+ [in] `textAlignment`  
+ L’alignement du texte.  
+  
+### <a name="remarks"></a>Remarques  
+ L’étiquette de texte est aligné comme spécifié par le `textAlignment` paramètre. Il peut prendre l’une des opérations suivantes `BarElementAlignment` valeurs :  
+  
+-   ALIGN_INVALID  
+  
+-   ALIGN_LEFT  
+  
+-   ALIGN_RIGHT  
+  
+-   ALIGN_CENTER  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)
+

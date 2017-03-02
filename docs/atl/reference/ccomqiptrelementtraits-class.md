@@ -1,67 +1,78 @@
 ---
-title: "CComQIPtrElementTraits Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CComQIPtrElementTraits"
-  - "CComQIPtrElementTraits"
-  - "ATL::CComQIPtrElementTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComQIPtrElementTraits class"
+title: Classe de CComQIPtrElementTraits | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CComQIPtrElementTraits
+- CComQIPtrElementTraits
+- ATL::CComQIPtrElementTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- CComQIPtrElementTraits class
 ms.assetid: 9df9250a-5413-4362-b133-332932a597c4
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CComQIPtrElementTraits Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: d6405cc3ec04988d0e0d7dd9a98f22c271b3608d
+ms.lasthandoff: 02/24/2017
 
-Cette classe fournit des méthodes, des fonctions static, et les typedefs utiles pour créer des collections de pointeurs d'interface COM.  
+---
+# <a name="ccomqiptrelementtraits-class"></a>CComQIPtrElementTraits (classe)
+Cette classe fournit des méthodes et fonctions statiques typedefs utiles lors de la création de collections de pointeurs d’interface COM.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+template<typename I, const IID* piid=& __uuidof(I)>  
+class CComQIPtrElementTraits : 
+   public CDefaultElementTraits<ATL::CComQIPtr<I, piid>>
 ```  
   
-      template<  
-   typename I,  
-   const IID* piid = & __uuidof( I )   
->   
-class CComQIPtrElementTraits : public CDefaultElementTraits<  
-   ATL::CComQIPtr< I, piid >  
->  
-```  
-  
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `I`  
- Une interface COM qui spécifie le type de pointeur à enregistrer.  
+ Une interface COM qui spécifie le type de pointeur à stocker.  
   
  `piid`  
- Pointeur vers l'IID d' `I`.  
+ Un pointeur vers l’IID de `I`.  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Typedefs publics  
+### <a name="public-typedefs"></a>Typedefs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CComQIPtrElementTraits::INARGTYPE](../Topic/CComQIPtrElementTraits::INARGTYPE.md)|Le type de données à utiliser pour ajouter des éléments à l'objet de classe de collection.|  
+|----------|-----------------|  
+|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.|  
   
-## Notes  
- Cette classe dérive des méthodes et fournit un typedef utile en créant une classe de collection du pointeur d'interface COM de [CComQIPtr](../../atl/reference/ccomqiptr-class.md) objets.  Cette classe est utilisée par les classes de [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) et de [CInterfaceList](../../atl/reference/cinterfacelist-class.md) .  
+## <a name="remarks"></a>Remarques  
+ Cette classe est dérivée des méthodes et fournit un typedef utile lors de la création d’une classe de collection de [CComQIPtr](../../atl/reference/ccomqiptr-class.md) objets de pointeur d’interface COM. Cette classe est utilisée à la fois par le [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) et [CInterfaceList](../../atl/reference/cinterfacelist-class.md) classes.  
   
- Pour plus d'informations, consultez [Classes de collection ATL](../../atl/atl-collection-classes.md).  
+ Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
   
  [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
@@ -72,9 +83,17 @@ class CComQIPtrElementTraits : public CDefaultElementTraits<
   
  `CComQIPtrElementTraits`  
   
-## Configuration requise  
- **Header:** atlcoll.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atlcoll.h  
   
-## Voir aussi  
- [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameinargtypea--ccomqiptrelementtraitsinargtype"></a><a name="inargtype"></a>CComQIPtrElementTraits::INARGTYPE  
+ Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.  
+  
+```
+typedef I* INARGTYPE;
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [CDefaultElementTraits (classe)](../../atl/reference/cdefaultelementtraits-class.md)   
+ [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+
