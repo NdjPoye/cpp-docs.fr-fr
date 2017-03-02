@@ -1,76 +1,96 @@
 ---
-title: "_ATL_FUNC_INFO Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_ATL_FUNC_INFO"
-  - "ATL::_ATL_FUNC_INFO"
-  - "ATL._ATL_FUNC_INFO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ATL_FUNC_INFO structure"
-  - "ATL_FUNC_INFO structure"
+title: Les structures _ATL_FUNC_INFO structure | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _ATL_FUNC_INFO
+- ATL::_ATL_FUNC_INFO
+- ATL._ATL_FUNC_INFO
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ATL_FUNC_INFO structure
+- ATL_FUNC_INFO structure
 ms.assetid: 441ebe2c-f971-47de-9f52-a258e8d6f88e
 caps.latest.revision: 21
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _ATL_FUNC_INFO Structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
+ms.openlocfilehash: c18e1c5a41ef910cfe327fdbdd8d8885ef30a092
+ms.lasthandoff: 02/24/2017
 
-Contient des informations de type utilisées pour décrire une méthode ou une propriété dans une dispinterface.  
+---
+# <a name="atlfuncinfo-structure"></a>Les structures _ATL_FUNC_INFO structure
+Contient des informations de type permet de décrire une méthode ou propriété sur une dispinterface.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+struct _ATL_FUNC_INFO {
+    CALLCONV cc;
+    VARTYPE vtReturn;
+    SHORT nParams;
+    VARTYPE pVarTypes[_ATL_MAX_VARTYPES];
+};
 ```  
   
-      struct _ATL_FUNC_INFO{  
-   CALLCONV cc;  
-   VARTYPE vtReturn;  
-   SHORT nParams;  
-   VARTYPE pVarTypes[_ATL_MAX_VARTYPES];  
-};  
-```  
-  
-## Membres  
+## <a name="members"></a>Membres  
  **cc**  
- la convention d'appel ;  En utilisant cette structure avec la classe d' [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) , ce membre doit être **CC\_STDCALL**.  `CC_CDECL` est la seule option prise en charge dans Windows CE pour le champ d' `CALLCONV` de la structure d' `_ATL_FUNC_INFO` .  Toute autre valeur est donc pas prise en charge son comportement indéfini.  
+ Convention d’appel. Lors de l’utilisation de cette structure avec la [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) (classe), ce membre doit être **CC_STDCALL**. `CC_CDECL`est la seule option prise en charge par Windows CE pour la `CALLCONV` champ le `_ATL_FUNC_INFO` structure. Toute autre valeur non pris en charge ainsi son comportement non défini.  
   
  **vtReturn**  
- Le type variant de la valeur de retour de fonction.  
+ Le type variant de la fonction de valeur de retour.  
   
  **nParams**  
  Le nombre de paramètres de fonction.  
   
  **pVarTypes**  
- Un tableau de types variant des paramètres de fonction.  
+ Un tableau de types variants des paramètres de fonction.  
   
-## Notes  
- En interne, ATL utilise cette structure pour stocker les informations obtenues à partir d'une bibliothèque de types.  Vous devrez peut\-être manipuler cette structure directement si vous fournissez des informations de type pour un gestionnaire d'événements utilisé avec la classe d' [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) et la macro de [SINK\_ENTRY\_INFORMATION](../Topic/SINK_ENTRY_INFO.md) .  
+## <a name="remarks"></a>Remarques  
+ ATL utilise en interne, cette structure pour conserver les informations obtenues à partir d’une bibliothèque de types. Vous devrez peut-être manipuler cette structure directement si vous fournissez des informations de type pour un gestionnaire d’événements utilisé avec le [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) classe et [macro SINK_ENTRY_INFO](http://msdn.microsoft.com/library/1a0ae260-2c82-4926-a537-db01e5f206a7) (macro).  
   
-## Exemple  
- À partir d'une méthode dispinterface définie dans IDL :  
+## <a name="example"></a>Exemple  
+ Selon une méthode dispinterface définie dans le fichier IDL :  
   
- [!code-cpp[NVC_ATL_Windowing#139](../../atl/codesnippet/CPP/atl-func-info-structure_1.idl)]  
+ [!code-cpp[NVC_ATL_Windowing&#139;](../../atl/codesnippet/cpp/atl-func-info-structure_1.idl)]  
   
- vous définissez une structure d' `_ATL_FUNC_INFO` :  
+ Vous devez définir un `_ATL_FUNC_INFO` structure :  
   
- [!code-cpp[NVC_ATL_Windowing#140](../../atl/codesnippet/CPP/atl-func-info-structure_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing&#140;](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]  
   
-## Configuration requise  
- **Header:** atlcom.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atlcom.h  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Structures](../../atl/reference/atl-structures.md)   
- [IDispEventSimpleImpl Class](../../atl/reference/idispeventsimpleimpl-class.md)   
- [SINK\_ENTRY\_INFO](../Topic/SINK_ENTRY_INFO.md)
+ [IDispEventSimpleImpl (classe)](../../atl/reference/idispeventsimpleimpl-class.md)   
+ [MACRO SINK_ENTRY_INFO](http://msdn.microsoft.com/library/1a0ae260-2c82-4926-a537-db01e5f206a7)
+
+
+
+
+
+

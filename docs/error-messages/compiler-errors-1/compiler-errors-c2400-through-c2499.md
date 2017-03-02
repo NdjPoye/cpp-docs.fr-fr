@@ -1,26 +1,42 @@
 ---
-title: "Erreur du compilateurs C2400 Through C2499 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "Erreurs du compilateur C2400 à C2499 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Erreur du compilateurs C2400 Through C2499
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: eb0c1bf407d1478451c246cf615d031ef6c45bf9
+ms.openlocfilehash: dafd64aff08c48b4a0c3d56bced4bfa7f7bc923c
+ms.lasthandoff: 02/24/2017
 
-Les articles de cette partie de la documentation contiennent des informations sur une sous\-section des erreurs du compilateur Visual C\+\+.  Vous pouvez accéder aux informations ici, ou dans la fenêtre **Sortie** de Visual Studio, vous pouvez sélectionner un numéro d'erreur, puis appuyer sur F1.  
+---
+# <a name="compiler-errors-c2400-through-c2499"></a>Erreurs du compilateur C2400 à C2499
+Les articles de cette partie de la documentation contiennent des informations sur une sous-section des erreurs du compilateur Visual C++. Vous pouvez accéder aux informations ici, ou dans la fenêtre **Sortie** de Visual Studio, vous pouvez sélectionner un numéro d’erreur, puis appuyer sur F1.  
   
  [Erreur du compilateur C2400](../../error-messages/compiler-errors-1/compiler-error-c2400.md)  
   
@@ -44,7 +60,7 @@ Les articles de cette partie de la documentation contiennent des informations su
   
  [Erreur du compilateur C2422](../../error-messages/compiler-errors-1/compiler-error-c2422.md)  
   
- [Erreur du compilateur C2423](../../error-messages/compiler-errors-1/compiler-error-c2423.md)  
+ [Erreur C2423 erreur de compilateur](../../error-messages/compiler-errors-1/compiler-error-c2423.md)  
   
  [Erreur du compilateur C2425](../../error-messages/compiler-errors-1/compiler-error-c2425.md)  
   
@@ -53,6 +69,8 @@ Les articles de cette partie de la documentation contiennent des informations su
  [Erreur du compilateur C2427](../../error-messages/compiler-errors-1/compiler-error-c2427.md)  
   
  [Erreur du compilateur C2428](../../error-messages/compiler-errors-1/compiler-error-c2428.md)  
+  
+ [C2429 d’erreur du compilateur](../../error-messages/compiler-errors-1/compiler-error-c2429.md)  
   
  [Erreur du compilateur C2430](../../error-messages/compiler-errors-1/compiler-error-c2430.md)  
   

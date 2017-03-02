@@ -1,97 +1,117 @@
 ---
-title: "CMapStringToPtr Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMapStringToPtr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMapStringToPtr class"
-  - "classes de collection, string mapping"
-  - "chaînes (C++), class for mapping"
+title: Classe de CMapStringToPtr | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMapStringToPtr
+dev_langs:
+- C++
+helpviewer_keywords:
+- collection classes, string mapping
+- strings [C++], class for mapping
+- CMapStringToPtr class
 ms.assetid: 1ac11143-eb0a-4511-a662-2df0d1d9005b
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CMapStringToPtr Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 3513e348c3f76f9bdb5ae60f0508f5bd9c59faa8
+ms.lasthandoff: 02/24/2017
 
-Le préfixe prend en charge des pointeurs indexés void par `CString` objets.  
+---
+# <a name="cmapstringtoptr-class"></a>CMapStringToPtr (classe)
+Prend en charge les mappages de pointeurs void indexés par des objets `CString` .  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 class CMapStringToPtr : public CObject  
 ```  
   
-## Membres  
- Les fonctions membres d' `CMapStringToPtr` sont semblables aux fonctions membres de la classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md).  En raison de cette ressemblance, vous pouvez utiliser la documentation de référence des `CMapStringToOb` pour les détails de la fonction membre.  Partout où vous consultez un pointeur d' `CObject` comme paramètre de fonction ou de valeur de retour, remplacez un pointeur vers `void`.  
+## <a name="members"></a>Membres  
+ Les fonctions membres de `CMapStringToPtr` sont similaires aux fonctions membres de classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CMapStringToOb` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un `CObject` pointeur comme un paramètre de fonction ou de la valeur de retour, remplacez par un pointeur vers `void`.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   
  `CObject*& <rValue> ) const;`  
   
- par exemple, traduit la valeur  
+ par exemple, se traduit par  
   
  `BOOL CMapStringToPtr::Lookup( LPCTSTR <key>, void*& <rValue> )`  
   
  `const;`  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CMapStringToOb::CMapStringToOb](../Topic/CMapStringToOb::CMapStringToOb.md)|Constructeur.|  
+|----------|-----------------|  
+|[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Constructeur.|  
   
-### Méthodes publiques  
-  
-|Nom|Description|  
-|---------|-----------------|  
-|[CMapStringToOb::GetCount](../Topic/CMapStringToOb::GetCount.md)|Retourne le nombre d'éléments dans ce mappage.|  
-|[CMapStringToOb::GetHashTableSize](../Topic/CMapStringToOb::GetHashTableSize.md)|Détermine le nombre actuel d'éléments dans la table de hachage.|  
-|[CMapStringToOb::GetNextAssoc](../Topic/CMapStringToOb::GetNextAssoc.md)|Obtient l'élément pour itérer.|  
-|[CMapStringToOb::GetSize](../Topic/CMapStringToOb::GetSize.md)|Retourne le nombre d'éléments dans ce mappage.|  
-|[CMapStringToOb::GetStartPosition](../Topic/CMapStringToOb::GetStartPosition.md)|Retourne la position du premier élément.|  
-|[CMapStringToOb::HashKey](../Topic/CMapStringToOb::HashKey.md)|Calcule la valeur de hachage d'une clé spécifiée.|  
-|[CMapStringToOb::InitHashTable](../Topic/CMapStringToOb::InitHashTable.md)|Initialise la table de hachage.|  
-|[CMapStringToOb::IsEmpty](../Topic/CMapStringToOb::IsEmpty.md)|Tests de l'état de vide\- aucun mappage \(éléments\).|  
-|[CMapStringToOb::Lookup](../Topic/CMapStringToOb::Lookup.md)|Recherche un pointeur void sur la clé de pointeur void.  La valeur de pointeur, pas l'entité qu'elle indique, est utilisée pour la comparaison principale.|  
-|[CMapStringToOb::LookupKey](../Topic/CMapStringToOb::LookupKey.md)|Retourne une référence à la clé associée à la valeur de clé spécifiée.|  
-|[CMapStringToOb::RemoveAll](../Topic/CMapStringToOb::RemoveAll.md)|Supprime tous les éléments de ce mappage.|  
-|[CMapStringToOb::RemoveKey](../Topic/CMapStringToOb::RemoveKey.md)|Supprime un élément spécifié par une clé.|  
-|[CMapStringToOb::SetAt](../Topic/CMapStringToOb::SetAt.md)|Insère un élément dans le mappage ; remplace un élément existant si une clé correspondante est trouvée.|  
-  
-### Opérateurs publics  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
-|---------|-----------------|  
-|[CMapStringToOb::operator](../Topic/CMapStringToOb::operator.md)|Insère un élément dans le mappage de remplacement d'opérateur pour `SetAt`.|  
+|----------|-----------------|  
+|[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Retourne le nombre d’éléments dans ce mappage.|  
+|[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Détermine le nombre actuel d’éléments dans la table de hachage.|  
+|[CMapStringToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Obtient l’élément suivant pour l’itération.|  
+|[CMapStringToOb::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Retourne le nombre d’éléments dans ce mappage.|  
+|[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Retourne la position du premier élément.|  
+|[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Calcule la valeur de hachage d’une clé spécifiée.|  
+|[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Initialise la table de hachage.|  
+|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Vérifie si la condition de mappage vide (aucun élément).|  
+|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Recherche un pointeur void en fonction de la clé de pointeur void. La valeur du pointeur, pas l’entité qu’il pointe, est utilisée pour la comparaison de clés.|  
+|[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Retourne une référence à la clé associée à la valeur de clé spécifiée.|  
+|[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Supprime tous les éléments de cette carte.|  
+|[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Supprime un élément spécifié par une clé.|  
+|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Insère un élément dans la carte ; remplace un élément existant si une clé est trouvée.|  
   
-## Notes  
- `CMapStringToPtr` incorpore la macro d' `IMPLEMENT_DYNAMIC` pour prendre en charge l'accès de type au moment de l'exécution et faire un dump à `CDumpContext` un objet.  Si vous avez besoin d'un dump des éléments de table, vous devez définir la profondeur du contexte de dump à 1 ou supérieur.  
+### <a name="public-operators"></a>Op&#233;rateurs publics  
   
- Les mappages de chaîne en pointeur ne peuvent être sérialisées.  
+|Nom|Description|  
+|----------|-----------------|  
+|[[] CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans le mappage, substitution de l’opérateur pour `SetAt`.|  
   
- Lorsqu'un objet d' `CMapStringToPtr` est supprimé, ou lorsque ses éléments sont supprimés, la clé d' `CString` objets et les mots sont supprimés.  
+## <a name="remarks"></a>Remarques  
+ `CMapStringToPtr`incorpore la `IMPLEMENT_DYNAMIC` macro pour prendre en charge les accès de type au moment de l’exécution et le vidage à un `CDumpContext` objet. Si vous avez besoin d’un vidage des éléments cartographiques individuels, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.  
   
-## Hiérarchie d'héritage  
+ Les mappages de pointeur de chaîne ne peuvent pas être sérialisés.  
+  
+ Lorsqu’un `CMapStringToPtr` objet est supprimé, ou lorsque ses éléments sont supprimés, le `CString` les objets de clé et les mots sont supprimés.  
+  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMapStringToPtr`  
   
-## Configuration requise  
- **Header:** afxcoll.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** afxcoll.h  
   
-## Voir aussi  
- [CObject Class](../../mfc/reference/cobject-class.md)   
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>Voir aussi  
+ [CObject (classe)](../../mfc/reference/cobject-class.md)   
+ [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)
+
+
+
+

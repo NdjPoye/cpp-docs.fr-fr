@@ -1,48 +1,65 @@
 ---
-title: "ASP, Assistant Composant ASP ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.asp.asp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistant Composant ASP ATL, ASP"
+title: ASP, Assistant de composant Active Server ATL | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- vc.codewiz.class.atl.asp.asp
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL Active Server Page Component Wizard, ASP
 ms.assetid: 4d8cafd6-5e12-4461-8911-29288896af3c
 caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# ASP, Assistant Composant ASP ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 8652215b98738a2482a9f71b8f48b45ee1ff644b
+ms.lasthandoff: 02/24/2017
 
-Utilisez la page ASP de l'Assistant Composant Active Server Page ATL pour spécifier des paramètres facultatifs permettant de gérer les informations et l'état concernant le composant ASP.  
+---
+# <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Assistant Composant ASP ATL
+Utilisez cette page de l’Assistant composant Active Server Page ATL pour spécifier des paramètres facultatifs pour la gestion des informations et l’état associé à votre composant ASP.  
   
  **Méthodes facultatives**  
- Ajoute les méthodes ASP facultatives **OnStartPage** et **OnEndPage** à votre objet.  Cette option doit être sélectionnée pour pouvoir définir des objets intrinsèques Active Server Pages.  Elle est sélectionnée par défaut.  
+ Ajoute les méthodes ASP facultatives, **OnStartPage** et **OnEndPage**, à votre objet. Cette option doit être sélectionnée pour définir des objets intrinsèques Active Server Pages. Par défaut, il est sélectionné.  
   
--   **OnStartPage\/OnEndPage** [OnStartPage](https://msdn.microsoft.com/en-us/library/ms691624.aspx) est appelé la première fois que le script essaie d'accéder à l'objet.  La méthode **OnEndPage** est appelée lorsque l'objet a terminé le traitement du script.  
+-   **OnStartPage/OnEndPage** [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) est appelée la première fois que le script essaie d’accéder à l’objet. **OnEndPage** est appelée lorsque l’objet a terminé le script de traitement.  
   
- **Objets intrinsèques**  
- Vous devez sélectionner l'option **OnStartPage\/OnEndPage** pour pouvoir définir des objets intrinsèques ASP.  
+ **Objet intrinsèque**  
+ Vous devez sélectionner le **OnStartPage/OnEndPage** possibilité de définir des objets intrinsèques ASP..  
   
 |Option|Description|  
 |------------|-----------------|  
-|**Requête**|Permet d'accéder à l'objet **Request** intrinsèque Active Server Pages.  L'objet Request est utilisé pour passer une demande HTTP.|  
-|**Réponse**|Permet d'accéder à l'objet **Response** intrinsèque Active Server Pages.  En réponse à une demande, l'objet Response envoie au navigateur des informations à afficher à l'écran de l'utilisateur.|  
-|**Session**|Permet d'accéder à l'objet **Session** intrinsèque Active Server Pages.  L'objet **Session** conserve les informations concernant la session utilisateur en cours, en procédant notamment au stockage et à l'extraction des informations d'état.|  
-|**Application**|Permet d'accéder à l'objet **Application** intrinsèque Active Server Pages.  L'objet **Application** gère l'état partagé entre plusieurs objets ASP.|  
-|**Serveur**|Permet d'accéder à l'objet **Server** intrinsèque Active Server Pages.  L'objet **Server** vous permet de créer d'autres objets ASP.|  
+|**Demande**|Fournit l’accès à l’intrinsèque Active Server Pages **demande** objet. L’objet Request est utilisé pour transmettre une requête HTTP.|  
+|**Réponse**|Fournit l’accès à l’intrinsèque Active Server Pages **réponse** objet. En réponse à une demande, l’objet Response envoie des informations au navigateur pour afficher à l’utilisateur.|  
+|**Session**|Fournit l’accès à l’intrinsèque Active Server Pages **Session** objet. Le **Session** objet gère les informations sur la session utilisateur en cours, y compris le stockage et la récupération des informations d’état.|  
+|**Application**|Fournit l’accès à l’intrinsèque Active Server Pages **Application** objet. Le **Application** objet gère l’état partagé entre plusieurs objets ASP..|  
+|**Serveur**|Fournit l’accès à l’intrinsèque Active Server Pages **Server** objet. Le **Server** objet vous permet de créer d’autres objets ASP..|  
   
-## Voir aussi  
- [Composant Active Server Page ATL \(Assistant\)](../../atl/reference/atl-active-server-page-component-wizard.md)   
- [ATL Active Server Page Component](../../atl/reference/adding-an-atl-active-server-page-component.md)
+## <a name="see-also"></a>Voir aussi  
+ [Assistant de composant Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md)   
+ [Composant de Active Server Page ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)
+
+

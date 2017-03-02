@@ -1,200 +1,210 @@
 ---
-title: "Assistant Consommateur OLE DB ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.consumer.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistant Consommateur OLE DB ATL"
-  - "projets ATL, ajouter des consommateurs OLE DB ATL"
-  - "chaînes de connexion (C++), consommateurs OLE DB"
+title: "L’Assistant Consommateur ATL OLE DB | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- vc.codewiz.class.atl.consumer.overview
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL projects, adding ATL OLE DB consumers
+- connection strings [C++], OLE DB consumers
+- ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Assistant Consommateur OLE DB ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 6e35ce9038a8fd8f7aeeb00139511a8f45c1257d
+ms.lasthandoff: 02/24/2017
 
-L'Assistant Consommateur OLE DB ATL permet de définir une classe de consommateur OLE DB avec les liaisons de données nécessaires pour accéder à la source de données spécifiée, par le biais du fournisseur OLE DB indiqué.  
+---
+# <a name="atl-ole-db-consumer-wizard"></a>Assistant Consommateur OLEDB ATL
+Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de données nécessaire pour accéder à la source de données spécifié via le fournisseur OLE DB spécifié.  
   
 > [!NOTE]
->  Cet Assistant nécessite que vous cliquiez sur le bouton **Source de données** pour sélectionner une source de données, avant d'entrer des noms dans les champs `Class` et **Fichier .h**.  
+>  Cet Assistant nécessite que vous cliquez sur le **Source de données** bouton pour sélectionner une source de données avant d’entrer des noms dans le `Class` et **fichier .h** champs.  
   
-## Liste UIElement  
+## <a name="uielement-list"></a>Liste UIElement  
  **Source de données**  
- Le bouton **Source de données** vous permet de définir la source de données spécifiée à l'aide du fournisseur OLE DB indiqué.  Lorsque vous cliquez sur ce bouton, la boîte de dialogue **Propriétés des liaisons de données** s'affiche.  Pour plus d'informations sur la génération de chaînes de connexion et la boîte de dialogue **Propriétés des liaisons de données**, consultez [Vue d'ensemble des API de liaison de données](https://msdn.microsoft.com/en-us/library/ms718102.aspx) dans la documentation du [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)].  
+ Le **Source de données** bouton vous permet de définir la source de données spécifiée à l’aide du fournisseur OLE DB spécifié. Lorsque vous cliquez sur ce bouton, le **propriétés des liaisons de données** boîte de dialogue s’affiche. Pour plus d’informations sur la création de chaînes de connexion et le **propriétés des liaisons de données** boîte de dialogue, consultez [Data Link API Overview](https://msdn.microsoft.com/library/ms718102.aspx) dans les [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)] documentation.  
   
 > [!NOTE]
->  Dans les versions précédentes, cliquer sur la touche MAJ et sur le bouton **Source de données** ouvrait une boîte de dialogue d'ouverture de fichier pour vous permettre de sélectionner un fichier .udl.  Cette fonctionnalité n'est plus prise en charge.  
+>  Dans les versions précédentes, en cliquant sur MAJ le **Source de données** bouton ouverte une boîte de dialogue Ouvrir le fichier pour vous permettre de sélectionner un fichier Data Link (.udl). Cette fonctionnalité n’est plus pris en charge.  
   
- La boîte de dialogue se compose de quatre onglets :  
+ La boîte de dialogue comporte quatre onglets :  
   
--   Onglet **Fournisseur**  
+- **Fournisseur** onglet  
   
--   Onglet **Connexion**  
+- **Connexion** onglet  
   
--   Onglet **Avancé**  
+- **Advanced** onglet  
   
--   Onglet **Tous**  
+- **Tous les** onglet  
   
-     Les informations supplémentaires suivantes décrivent les onglets de la boîte de dialogue **Propriétés des liaisons de données**.  
+     Les informations supplémentaires suivantes décrivent les onglets de la **propriétés des liaisons de données** boîte de dialogue.  
   
-     Cliquez sur **OK** pour terminer.  La boîte de dialogue **Sélectionner l'objet de base de données** s'affiche.  Dans cette boîte de dialogue, sélectionnez le tableau, la vue ou la procédure stockée que le consommateur doit utiliser.  
+     Cliquez sur **OK** à terminer. Le **sélectionner un objet de base de données** boîte de dialogue s’affiche. Dans cette boîte de dialogue, sélectionnez la table, une vue ou une procédure stockée que le consommateur doit utiliser.  
   
-     **Fournisseur**  
-     Sélectionnez un fournisseur approprié pour gérer la connexion à la source de données.  Le type de fournisseur est en général déterminé par le type de base de données auquel vous vous connectez.  Cliquez sur le bouton `Next` ou sur l'onglet **Connexion**.  
+ **Fournisseur**  
+     Sélectionnez un fournisseur approprié pour gérer la connexion à la source de données. Le type de fournisseur est généralement déterminé par le type de base de données à laquelle vous vous connectez. Cliquez sur le `Next` bouton ou cliquez sur le **connexion** onglet.  
   
-     **Connexion**  
-     Le contenu de cet onglet dépend du fournisseur que vous avez sélectionné.  Bien qu'il existe de nombreux types de fournisseurs, cette section couvre les connexions pour les deux plus courants : données SQL et ODBC.  Les autres sont des variations similaires sur les champs décrits ici.  
+ **Connexion**  
+     Le contenu de cet onglet dépend du fournisseur sélectionné. Bien qu’il existe de nombreux types de fournisseurs, cette section traite des connexions pour les deux plus courants : données SQL et ODBC. Les autres sont des variations similaires sur les champs décrits ici.  
   
      Pour les données SQL :  
   
-    1.  **Sélectionnez ou tapez un nom de serveur :** cliquez sur le menu de la liste déroulante pour afficher tous les serveurs de données stockés sur le réseau, puis sélectionnez\-en un.  
+    1. **Sélectionner ou entrer un nom de serveur :** cliquez sur le menu déroulant pour afficher tous les serveurs de données inscrites sur le réseau, puis sélectionnez une.  
   
-    2.  **Entrez des informations pour vous connecter au serveur :** Entrez un nom d'utilisateur et un mot de passe pour ouvrir une session sur le serveur de données.  
+    2. **Entrez les informations pour vous connecter au serveur :** permet d’entrer un nom d’utilisateur et le mot de passe pour ouvrir une session sur le serveur de données.  
   
-    3.  **Sélectionnez la base de données sur serveur :** cliquez sur le menu de la liste déroulante pour afficher toutes les bases de données stockées sur le serveur de données, puis sélectionnez\-en une.  
+    3. **Sélectionnez la base de données sur le serveur :** cliquez sur le menu déroulant pour afficher inscrits toutes les bases de données sur le serveur de données et sélectionnez un.  
   
          ou  
   
-         **Attacher un fichier de base de données en tant que nom de base de données :** pour spécifier un fichier à utiliser comme base de données ; entrez le chemin d'accès explicite.  
+ **Joindre un fichier de base de données comme un nom de base de données :** spécifier un fichier à utiliser comme base de données, entrez le chemin d’accès explicite.  
   
         > [!NOTE]
-        >  La fonctionnalité Autoriser l'enregistrement du mot de passe de la boîte de dialogue Propriétés des liaisons de données présente un problème de sécurité.  Dans « Entrez les informations de connexion au serveur », il y a deux cases d'option :  
+        >  There is a security problem with the "Allow saving of password" feature of the Data Link Properties dialog box. In "Enter information to log on to the server," there are two radio buttons:  
   
-         **Utiliser la sécurité intégrée de Windows NT**  
+ **Utilisez la sécurité intégrée de Windows NT**  
   
-         **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
+ **Utilisez un nom d’utilisateur spécifique et un mot de passe**  
   
-         Si vous sélectionnez **Utiliser un nom d'utilisateur et un mot de passe spécifiques**, vous avez la possibilité d'enregistrer le mot de passe \(à l'aide de la case à cocher « Autoriser l'enregistrement du mot de passe »\). Cependant, cette option n'est pas sécurisée.  Il est recommandé de sélectionner **Utiliser la sécurité intégrée de Windows NT** ; cette option est sécurisée car elle chiffre le mot de passe.  
+         If you select **Use a specific user name and password**, you have the option of saving the password (using the check box for "Allow saving password"); however, this option is not secure. It is recommended that you select **Use Windows NT integrated security**; this option is secure because it encrypts the password.  
   
-         Il peut y avoir des situations dans lesquelles vous souhaitez sélectionner "Autoriser l'enregistrement du mot de passe". Par exemple, si vous libérez une bibliothèque avec une solution privée de la base de données, vous ne devez pas accéder à la base de données directement mais plutôt employer une application intermédiaire pour vérifier l'utilisateur \(via les schémas d'authentification que vous sélectionnez\), puis limiter le tri des données disponibles pour l'utilisateur.  
+         There might be situations in which you want to select "Allow saving password." For example, if you are releasing a library with a private database solution, you should not access the database directly but instead use a middle-tier application to verify the user (through whatever authentication scheme you choose) and then limit the sort of data available to the user.  
   
-         Pour les données ODBC :  
+         For ODBC data:  
   
-         1.  **Spécifier la source des données :** vous pouvez utiliser un nom de source de données ou une chaîne de connexion.  
+         1. **Specify the source of data:** You can use a data source name or a connection string.  
   
-         **Utilisez Nom de la source de données :** cette liste déroulante affiche les sources de données stockées dans votre ordinateur.  Vous pouvez installer des sources de données d'avance à l'aide [ODBC Data Source Administrator](!Alink("dasdkODBCDataSourceAdmin")).\-ou\-**\*\*\* Use connection string: \*\*\*** Soit vous entrez une chaîne de connexion que vous avez déjà obtenue, ou vous cliquez sur le bouton **Générer** ; la boîte de dialogue **\*\*\* Select Data Source \*\*\*** apparaît.  Sélectionnez un fichier ou une source de données de l'ordinateur, puis cliquez sur **OK**.  
+ **Nom de source de données utilisation :** cette liste déroulante affiche les sources de données inscrites sur votre ordinateur. Vous pouvez définir des sources de données à l’aide de l’administrateur de sources de données ODBC- ou -**utiliser la chaîne de connexion :** Entrez une chaîne de connexion que vous avez déjà obtenu, ou cliquez sur le **Build** bouton ; le **sélectionner une Source de données** boîte de dialogue s’affiche. Sélectionnez une source de données fichier ou machine, cliquez sur **OK**.  
   
         > [!NOTE]
-        >  Vous pouvez obtenir une chaîne de connexion en affichant les propriétés d'une connexion existante dans l'explorateur de serveurs, ou vous pouvez créer une connexion en double\-cliquant sur **Ajouter une connexion** dans l'explorateur de serveurs.  
+        >  You can obtain a connection string by viewing the properties of an existing connection in Server Explorer, or you can create a connection by double-clicking **Add Connection** in Server Explorer.  
   
-         2.  **Entrez des informations pour vous connecter au serveur :** Entrez un nom d'utilisateur et un mot de passe pour ouvrir une session sur le serveur de données.  
+         2. **Enter information to log on to the server:** Enter a user name and password to log on to the data server.  
   
-         3.  Entrez le catalogue initial à utiliser.  
+         3. Enter the initial catalog to use.  
   
-         4.  Cliquez sur **Tester la connexion** ; si le test est réussi, cliquez sur **OK**.  Dans le cas contraire, vérifiez vos informations de connexion, essayez une autre base de données ou tentez un autre serveur de données.  
+         4. Click **Test Connection**; if the test succeeds, click **OK**. If not, check your logon information, try another database, or try another data server.  
   
-     **Avancé**  
-     **Network settings:** Spécifient [Impersonation level](!Alink("_com_Impersonation_Levels")) \(le niveau d'emprunt d'identité que le serveur est autorisé à utiliser en empruntant l'identité du client ; correspond directement à des niveaux d'emprunt d'identité RPC\) et au **Protection level** \(le niveau de protection des données envoyées entre le client et le serveur ; correspond directement à des niveaux de sécurité RPC\).  
+ **Avancé**  
+ **Paramètres réseau :** spécifier le **au niveau d’emprunt d’identité** (le niveau d’emprunt d’identité que le serveur est autorisé à utiliser lors de l’emprunt d’identité du client ; correspond directement aux niveaux d’emprunt d’identité RPC) et **niveau de Protection** (le niveau de protection des données envoyées entre le client et le serveur ; correspond directement à des niveaux de protection RPC).  
   
-     **Autre :** dans **Connect timeout**, spécifiez le nombre de secondes d'inactivité autorisées avant l'expiration.  Dans **Autorisations d'accès**, spécifiez les autorisations d'accès sur la connexion de données.  
+ **Autres :** dans **délai de connexion**, spécifiez le nombre de secondes d’inactivité autorisée avant qu’un délai d’attente se produit. Dans **les autorisations d’accès**, spécifiez les autorisations d’accès sur la connexion de données.  
   
-     Pour plus d'informations sur les propriétés avancées d'initialisation, reportez\-vous à la documentation de chaque fournisseur OLE DB.  
+     Pour plus d’informations sur les propriétés avancées d’initialisation, reportez-vous à la documentation fournie avec chaque fournisseur OLE DB.  
   
-     **Tous**  
-     Cet onglet affiche un résumé des propriétés d'initialisation pour la source de données et la connexion que vous avez spécifiées.  Vous pouvez modifier ces valeurs.  
+ **All**  
+     Cet onglet affiche un résumé des propriétés d’initialisation pour la source de données et de la connexion que vous avez spécifié. Vous pouvez modifier ces valeurs.  
   
-     Cliquez sur **OK** pour terminer.  La boîte de dialogue **Sélectionner l'objet de base de données** s'affiche.  Dans cette boîte de dialogue, sélectionnez le tableau, la vue ou la procédure stockée que le consommateur doit utiliser.  
+     Cliquez sur **OK** à terminer. Le **sélectionner un objet de base de données** boîte de dialogue s’affiche. Dans cette boîte de dialogue, sélectionnez la table, une vue ou une procédure stockée que le consommateur doit utiliser.  
   
  `Class`  
- Une fois que vous avez sélectionné une source de données, cette zone contient un nom de classe par défaut basé sur la table ou la procédure stockée que vous avez sélectionnée \(consultez **Sélectionner la source de données** ci\-dessous\).  Vous pouvez modifier le nom de la classe.  
+ Après avoir sélectionné une source de données, cette zone est remplie avec un nom de classe par défaut basé sur la table ou la procédure stockée que vous avez sélectionné (voir **sélectionner une source de données** ci-dessous). Vous pouvez modifier le nom de classe.  
   
  **fichier .h**  
- Une fois que vous avez sélectionné une source de données, cette zone contient un nom de classe d'en\-tête par défaut basé sur la table ou la procédure stockée que vous avez sélectionnée \(consultez **Sélectionner la source de données** ci\-dessous\).  Vous pouvez modifier le nom du fichier d'en\-tête ou sélectionner un fichier d'en\-tête existant.  
+ Après avoir sélectionné une source de données, cette zone est remplie avec un nom de classe d’en-tête par défaut basé sur la table ou la procédure stockée que vous avez sélectionnée (consultez **sélectionner une source de données** ci-dessous). Vous pouvez modifier le nom du fichier d’en-tête ou sélectionner un fichier d’en-tête existant.  
   
- **Avec attributs**  
- Cette option indique si l'Assistant crée des classes de consommateur à l'aide d'attributs ou de déclarations de modèle.  Lorsque vous sélectionnez cette option, l'Assistant utilise des attributs au lieu des déclarations de modèle \(il s'agit de l'option par défaut\).  Lorsque vous désélectionnez cette option, l'Assistant utilise des déclarations de modèle à la place des attributs.  
+ **Par attributs**  
+ Cette option spécifie si l’Assistant va créer des classes de consommateur à l’aide d’attributs ou déclarations de modèle. Lorsque vous sélectionnez cette option, l’Assistant utilise les attributs au lieu des déclarations de modèle (il s’agit de l’option par défaut). Lorsque vous désélectionnez cette option, l’Assistant utilise des déclarations de modèle plutôt que des attributs.  
   
--   Si vous sélectionnez un **Type** de consommateur de Table, l'Assistant utilise les attributs `db_source` et **db\_table** pour créer les déclarations de la table et de la classe d'accesseur de la table et utilise **db\_column** pour créer le mappage de colonnes, par exemple :  
+-   Si vous sélectionnez un consommateur **Type** de Table, l’Assistant utilise le `db_source` et **db_table** pour créer la table et l’accesseur de tableau de déclarations de classe d’attributs et utilise **db_column** pour créer le mappage de colonnes, par exemple :  
   
-    ```  
-    // Inject table class and table accessor class declarations  
-    [  
-        db_source("<initialization_string>"),  
-        db_table("dbo.Orders")  
-    ]  
-    ...  
-    // Column map  
-        [ db_column(1, status=m_dwOrderIDStatus,         length=m_dwOrderIDLength) ] LONG m_OrderID;  
-        [ db_column(2, status=m_dwCustomerIDStatus,         length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];  
-        ...  
-    ```  
+ ``` 
+ // Inject table class and table accessor class declarations  
+ [db_source("<initialization_string>"), db_table("dbo.Orders")]  
+ ... 
+ // Column map  
+ [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;  
+ [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];  
+ ...  
+ ```  
   
-     au lieu d'utiliser la classe de modèle `CTable` pour déclarer la table et la classe d'accesseur de la table, et les macros BEGIN\_COLUMN\_MAP et END\_COLUMN\_MAP pour créer le mappage de colonnes, par exemple :  
+     au lieu d’utiliser la `CTable` classe de modèle pour déclarer la table et classe d’accesseur de table et les macros BEGIN_COLUMN_MAP et END_COLUMN_MAP pour créer le mappage de colonnes, par exemple :  
   
-    ```  
-    // Table accessor class  
-    class COrdersAccessor;  
-    // Table class  
-    class COrders : public CTable<CAccessor<COrdersAccessor> >;  
-    ...  
-    // Column map  
-    BEGIN_COLUMN_MAP(COrderDetailsAccessor)  
-        COLUMN_ENTRY_LENGTH_STATUS(1, m_OrderID,         m_dwOrderIDLength, m_dwOrderIDStatus)  
-        COLUMN_ENTRY_LENGTH_STATUS(2, m_CustomerID,         m_dwCustomerIDLength, m_dwCustomerIDStatus)  
-        ...  
-    END_COLUMN_MAP()  
-    ```  
+ ``` 
+ // Table accessor class  
+    class COrdersAccessor; *// Table class  
+    class COrders : public CTable<CAccessor<COrdersAccessor>>;  
+ ... 
+ // Column map  
+    BEGIN_COLUMN_MAP(COrderDetailsAccessor) 
+    COLUMN_ENTRY_LENGTH_STATUS(1, m_OrderID, m_dwOrderIDLength, m_dwOrderIDStatus)  
+    COLUMN_ENTRY_LENGTH_STATUS(2, m_CustomerID, m_dwCustomerIDLength, m_dwCustomerIDStatus)  
+ ...  
+    END_COLUMN_MAP() 
+ ```  
   
--   Si vous sélectionnez un **Type** de consommateur de Command, l'Assistant utilise les attributs `db_source` et **db\_command**, ainsi que **db\_column** pour créer le mappage de colonnes, par exemple :  
+-   Si vous sélectionnez un consommateur **Type** de commande, l’Assistant utilise le `db_source` et **db_command** d’attributs et utilise **db_column** pour créer le mappage de colonnes, par exemple :  
   
-    ```  
-    [  
-        db_source("<initialization_string>"),  
-        db_command("SQL_command")  
-    ]  
-    ...  
-    // Column map using db_column is the same as for consumer type of 'table'  
-    ```  
+ ```  
+ [db_source("<initialization_string>"), db_command("SQL_command")]  
+ ... 
+ // Column map using db_column is the same as for consumer type of 'table'  
+ ```  
   
-     au lieu d'utiliser les déclarations de la commande et de la classe d'accesseur de la commande dans le fichier .h de la classe Command, par exemple :  
+     au lieu d’utiliser la commande et les déclarations de classes accesseur de commande dans le fichier .h de la classe de commande, par exemple :  
   
-    ```  
+ ```  
     Command accessor class:  
     class CListOrdersAccessor;  
     Command class:  
-    class CListOrders : public CCommand<CAccessor<CListOrdersAccessor> >;  
-    ...  
-    // Column map using BEGIN_COLUMN_MAP ... END_COLUMN_MAP is the same as  
-    // for consumer type of 'table'  
-    ```  
+    class CListOrders : public CCommand<CAccessor<CListOrdersAccessor>>;  
+ ... 
+ // Column map using BEGIN_COLUMN_MAP ... END_COLUMN_MAP is the same as
+ // for consumer type of 'table'  
+ ```  
   
- Consultez [Basic Mechanics of Attributes](../../windows/basic-mechanics-of-attributes.md) pour plus d'informations.  
+ Consultez la page [mécanismes de base des attributs](../../windows/basic-mechanics-of-attributes.md) pour plus d’informations.  
   
- **Tapez**  
- Activez l'une de ces cases d'option pour spécifier si la classe de consommateur est dérivée de `CTable` ou de `CCommand`.  
+ **Type**  
+ Sélectionnez une de ces cases d’option pour spécifier si la classe de consommateur est dérivée de `CTable` ou `CCommand` (valeur par défaut).  
   
  **Table**  
- Sélectionnez cette option si vous voulez utiliser `CTable` ou **db\_table** pour créer les déclarations de classe de table et d'accesseur de table.  
+ Sélectionnez cette option si vous souhaitez utiliser `CTable` ou **db_table** pour créer la table et l’accesseur de tableau de déclarations de classe.  
   
  **Commande**  
- Sélectionnez cette option si vous voulez utiliser `CCommand` ou **db\_command** pour créer les déclarations de classe de commande et d'accesseur de commande.  Il s'agit du paramètre défini par défaut.  
+ Sélectionnez cette option si vous souhaitez utiliser `CCommand` ou **db_command** pour créer la commande et l’accesseur de commande de déclarations de classe. Il s’agit de la sélection par défaut.  
   
  **Prise en charge**  
- Activez les cases à cocher pour spécifier les types de mises à jour prises en charge par le consommateur \(la valeur par défaut correspond à aucune prise en charge\).  Chacune des options suivantes définit [DBPROP\_IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715892.aspx) et les entrées adéquates pour [DBPROP\_UPDATABILITY](https://msdn.microsoft.com/en-us/library/ms722676.aspx) dans le mappage de la propriété Set.  
+ Activez les cases à cocher pour spécifier les types de mises à jour pour être prise en charge par le consommateur (la valeur par défaut est none). Chaque élément suivant définira [DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx) et les entrées appropriées pour [DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx) dans le jeu de carte.  
   
- **Change**  
- Spécifie que le consommateur prend en charge les mises à jour des données de ligne dans le jeu de lignes.  
+ **Modification**  
+ Spécifie que le consommateur prend en charge les mises à jour des données de ligne dans l’ensemble de lignes.  
   
- **Insert**  
- Spécifie que le consommateur prend en charge l'insertion de lignes dans le jeu de lignes.  
+ **Insérer**  
+ Spécifie que le consommateur prend en charge l’insertion de lignes dans l’ensemble de lignes.  
   
  **Supprimer**  
- Spécifie que le consommateur prend en charge la suppression de lignes dans le jeu de lignes.  
+ Spécifie que le consommateur prend en charge la suppression de lignes à partir de l’ensemble de lignes.  
   
-## Voir aussi  
- [ATL OLE DB Consumer](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
- [Ajout de fonctionnalités à l'aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Chaînes de connexion et liaisons de données \(OLE DB\)](https://msdn.microsoft.com/en-us/library/ms718376.aspx)
+## <a name="see-also"></a>Voir aussi  
+ [Consommateur OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
+ [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Chaînes de connexion et des liaisons de données (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)
+

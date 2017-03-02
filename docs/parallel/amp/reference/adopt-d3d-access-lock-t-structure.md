@@ -1,42 +1,59 @@
 ---
-title: "adopt_d3d_access_lock_t, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Structure d’adopt_d3d_access_lock_t | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: ef10bb06-88d6-420b-bb81-35895b2e02e6
 caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# adopt_d3d_access_lock_t, structure
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
+ms.openlocfilehash: c045618647526df93c9d23f3d0dd015f368238cc
+ms.lasthandoff: 02/24/2017
 
-Type de balise pour indiquer que le verrou d'accès D3D doit être adopté plutôt qu'interrompu.  
+---
+# <a name="adoptd3daccesslockt-structure"></a>adopt_d3d_access_lock_t, structure
+Type de balise pour indiquer le verrou d’accès D3D doit être adoptée plutôt qu’acquises.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 struct adopt_d3d_access_lock_t;  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `adopt_d3d_access_lock_t`  
   
-## Configuration requise  
- **En\-tête :** amprt.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** amprt.h  
   
- **Espace de noms :** concurrency::direct3d  
+ **Namespace :** concurrency::direct3d  
   
-## Voir aussi  
- [Concurrency::direct3d, espace de noms](../../../parallel/amp/reference/concurrency-direct3d-namespace.md)
+## <a name="see-also"></a>Voir aussi  
+ [Concurrency::Direct3D Namespace](concurrency-direct3d-namespace.md)
+
