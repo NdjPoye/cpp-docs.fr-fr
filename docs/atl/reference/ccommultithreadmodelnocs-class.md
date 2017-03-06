@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 718aac826916b977eec4fb8400da81b5e32d4afa
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: dd14e5c941da5383dce19e9f7f539bfb9909759f
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS (classe)
@@ -69,10 +69,10 @@ class CComMultiThreadModelNoCS
 |[CComMultiThreadModelNoCS::Decrement](#decrement)|(Statique) Décrémente la valeur de la variable spécifiée de manière thread-safe.|  
 |[CComMultiThreadModelNoCS::Increment](#increment)|(Statique) Incrémente la valeur de la variable spécifiée de manière thread-safe.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CComMultiThreadModelNoCS`est semblable à [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) car elle fournit des méthodes thread-safe pour l’incrémentation et décrémentation de variable. Toutefois, lorsque vous référencez une classe de la section critique via `CComMultiThreadModelNoCS`, des méthodes telles que `Lock` et `Unlock` ne fera rien.  
   
- En général, vous utilisez `CComMultiThreadModelNoCS` via la `ThreadModelNoCS``typedef` nom. Cela `typedef` est défini dans `CComMultiThreadModelNoCS`, `CComMultiThreadModel`, et [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md).  
+ En général, vous utilisez `CComMultiThreadModelNoCS` via la `ThreadModelNoCS` `typedef` nom. Cela `typedef` est défini dans `CComMultiThreadModelNoCS`, `CComMultiThreadModel`, et [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md).  
   
 > [!NOTE]
 >  Global `typedef` noms [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) et [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel) ne font pas référence à `CComMultiThreadModelNoCS`.  
@@ -142,7 +142,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Si le résultat de la décrémentation est 0, puis `Decrement` retourne 0. Si le résultat de la décrémentation est différente de zéro, la valeur de retour est également différente de zéro, mais ne peut-être pas égaler le résultat de la décrémentation.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  **InterlockedDecrement** empêche que plusieurs threads simultanément à l’aide de cette variable.  
   
 ##  <a name="a-nameincrementa--ccommultithreadmodelnocsincrement"></a><a name="increment"></a>CComMultiThreadModelNoCS::Increment  
@@ -169,7 +169,7 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) et [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) contiennent également des définitions pour `ThreadModelNoCS`. Le tableau suivant montre la relation entre la classe de modèle de thread et la classe référencée par `ThreadModelNoCS`:  
   
 |Classe définie dans|Classe référencée|  

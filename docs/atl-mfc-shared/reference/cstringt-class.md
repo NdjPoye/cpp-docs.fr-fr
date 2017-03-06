@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9660db5ff0d41a31f7d2a4e824df4e4bdf6a00e6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 961dc75623ec04993d118e46e1d4ba73a9aadcec
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="cstringt-class"></a>CStringT (classe)
@@ -260,7 +260,7 @@ BSTR AllocSysString() const;
 void AnsiToOem();
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La fonction n’est pas disponible si `_UNICODE` est défini.  
   
 ### <a name="example"></a>Exemple  
@@ -284,7 +284,7 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
  `argument`  
  Arguments facultatifs.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction met en forme et ajoute une série de caractères et de valeurs dans le `CStringT`. Chaque argument facultatif (le cas échéant) est converti et ajouté en fonction de la spécification de format correspondante dans `pszFormat` ou à partir de la ressource de chaîne identifié par `nFormatID`.  
   
 ### <a name="example"></a>Exemple  
@@ -487,7 +487,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
  `pString`  
  Un handle pour un `CStringT` objet.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Étant donné que les constructeurs de copient des données d’entrée dans le nouveau stockage alloué, vous devez être conscient que la mémoire peuvent entraîner des exceptions. Notez que certaines de ces constructeurs agissent comme des fonctions de conversion. Cela vous permet de remplacer, par exemple, un `LPTSTR` où un `CStringT` objet est attendu.  
   
 - `CStringT`( `LPCSTR` `lpsz` ) : Construit Unicode `CStringT` à partir d’une chaîne ANSI. Vous pouvez également utiliser ce constructeur pour charger une ressource de chaîne, comme indiqué dans l’exemple ci-dessous.  
@@ -568,7 +568,7 @@ int Find(XCHAR ch, int iStart=0) const throw();
  Un seul caractère à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Index de base zéro du premier caractère dans ce `CStringT` objet qui correspond à la sous-chaîne demandée ou caractères ; -1 si la sous-chaîne ou le caractère est introuvable.  
+ Index de base zéro du premier caractère dans cette `CStringT` objet qui correspond à la sous-chaîne demandée ou caractères ; -1 si les caractères ou une sous-chaîne est introuvable.  
   
 ### <a name="remarks"></a>Remarques  
  La fonction est surchargée pour accepter les caractères uniques (similaire à la fonction d’exécution `strchr`) et les chaînes (semblable à `strstr`).  
@@ -614,7 +614,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
  `argument`  
  Arguments facultatifs.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette fonction met en forme et stocke une série de caractères et de valeurs dans le `CStringT`. Chaque argument facultatif (le cas échéant) est converti et sorti selon la spécification de format correspondante dans `pszFormat` ou à partir de la ressource de chaîne identifié par `nFormatID`.  
   
  L’appel échoue si l’objet chaîne lui-même est proposé en tant que paramètre `Format`. Par exemple, le code suivant génère des résultats imprévisibles :  
@@ -644,7 +644,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
  `argument`  
  Arguments facultatifs.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction requiert une définition de message en tant qu’entrée. La définition de message est déterminée par `pszFormat` ou à partir de la ressource de chaîne identifié par `nFormatID`. La fonction copie le texte du message mis en forme à le `CStringT` objet, traitement incorporé Insérer séquences si nécessaire.  
   
 > [!NOTE]
@@ -691,7 +691,7 @@ void FormatV(PCXSTR pszFormat, va_list args);
  `args`  
  Pointeur vers une liste d’arguments.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Écrit une chaîne mise en forme et une liste variable d’arguments à un `CStringT` chaîne de la même façon que `vsprintf_s` des formats de données dans un tableau de caractères de style C.  
   
 ### <a name="example"></a>Exemple  
@@ -713,7 +713,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Récupère la valeur de la variable spécifiée dans le bloc d’environnement du processus appelant. La valeur est sous la forme d’une chaîne de caractères.  
   
 ### <a name="example"></a>Exemple  
@@ -740,7 +740,7 @@ int Insert(int iIndex, XCHAR ch);
 ### <a name="return-value"></a>Valeur de retour  
  La longueur de la chaîne modifiée.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le `iIndex` paramètre identifie le premier caractère qui sera déplacé pour libérer de l’espace pour le caractère ou la sous-chaîne. Si `nIndex` est égal à zéro, l’insertion se produit avant la chaîne entière. Si `nIndex` est supérieur à la longueur de la chaîne, la fonction concatène la chaîne actuelle et les nouveaux documents fournis par le `ch` ou `psz`.  
   
 ### <a name="example"></a>Exemple  
@@ -790,7 +790,7 @@ BOOL LoadString(UINT nID);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la charge des ressources a réussi ; sinon 0.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Charge la ressource de chaîne ( `nID`) à partir du module spécifié ( `hInstance`) à l’aide de la langue spécifiée ( `wLanguage`).  
   
 ### <a name="example"></a>Exemple  
@@ -832,7 +832,7 @@ CStringT& MakeUpper();
 ### <a name="return-value"></a>Valeur de retour  
  La chaîne obtenue en majuscules.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
   
 ### <a name="example"></a>Exemple  
  [!code-cpp[127 NVC_ATLMFC_Utilities](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_22.cpp)]  
@@ -855,7 +855,7 @@ CStringT Mid(int iFirst) const;
 ### <a name="return-value"></a>Valeur de retour  
  Objet `CStringT` qui contient une copie de la plage spécifiée des caractères. Notez que le code `CStringT` objet peut être vide.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La fonction retourne une copie de la sous-chaîne extraite. `Mid`est similaire à la fonction Mid base (sauf que les index de base sont de base&1;).  
   
  Pour les jeux de caractères multioctets (MBCS), `nCount` fait référence à chaque octet de 8 bits caractère ; autrement dit, un responsable et de piste dans un caractères multioctets sont comptés comme deux caractères.  
@@ -1256,9 +1256,9 @@ int ReverseFind(XCHAR ch) const throw();
  Caractère à rechercher.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Index de base zéro du dernier caractère dans ce `CStringT` objet qui correspond aux caractères demandé, ou -1 si le caractère est introuvable.  
+ Index de base zéro du dernier caractère dans cette `CStringT` objet qui correspond aux caractères demandé, ou -1 si le caractère est introuvable.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction est similaire à la fonction d’exécution `strrchr`.  
   
 ### <a name="example"></a>Exemple  
@@ -1278,7 +1278,7 @@ CStringT Right(int nCount) const;
 ### <a name="return-value"></a>Valeur de retour  
  Objet `CStringT` qui contient une copie de la plage spécifiée des caractères. Notez que le code `CStringT` objet peut être vide.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si `nCount` dépasse la longueur de la chaîne, la chaîne entière est extraite. `Right`est similaire à la base `Right` (sauf que les index de base sont de base zéro) de la fonction.  
   
  Pour les jeux de caractères multioctets (MBCS), `nCount` fait référence à chaque octet de 8 bits caractère ; autrement dit, un responsable et de piste dans un caractères multioctets sont comptés comme deux caractères.  
@@ -1300,7 +1300,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 ### <a name="return-value"></a>Valeur de retour  
  La nouvelle chaîne.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En fonction du contenu de la `CStringT` objet, la valeur de la `BSTR` référencé par `pbstr` peut changer. La fonction lève une `CMemoryException` en cas de mémoire insuffisante.  
   
  Cette fonction est généralement utilisée pour modifier la valeur de chaînes passé par référence pour l’automatisation.  
@@ -1322,7 +1322,7 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 ### <a name="return-value"></a>Valeur de retour  
  Une sous-chaîne qui contient des caractères qui ne sont pas dans la chaîne `pszCharSet`, commençant par le premier caractère dans la chaîne et se terminant par le premier caractère dans la chaîne est également dans `pszCharSet` (autrement dit, commençant par le premier caractère dans la chaîne et à exclu le premier caractère dans la chaîne est trouvée `pszCharSet`). Elle retourne la chaîne entière si aucun caractère dans `pszCharSet` se trouve dans la chaîne.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  `SpanExcluding`extrait et retourne tous les caractères qui précède la première occurrence d’un caractère à partir de `pszCharSet` (en d’autres termes, le caractère à partir de `pszCharSet` et tous les caractères suivant dans la chaîne, ne sont pas retournés). Si aucun caractère de `pszCharSet` se trouve dans la chaîne, puis `SpanExcluding` renvoie la chaîne entière.  
   
 ### <a name="example"></a>Exemple  
@@ -1340,9 +1340,9 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
  Une chaîne est interprétée comme un jeu de caractères.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Une sous-chaîne qui contienne des caractères dans la chaîne qui se trouvent dans `pszCharSet`, commençant par le premier caractère dans la chaîne et de fin lorsqu’un caractère est trouvé dans la chaîne qui n’est pas `pszCharSet.``SpanIncluding` retourne une sous-chaîne vide si le premier caractère de la chaîne n’est pas dans le jeu spécifié.  
+ Une sous-chaîne qui contienne des caractères dans la chaîne qui se trouvent dans `pszCharSet`, commençant par le premier caractère dans la chaîne et de fin lorsqu’un caractère est trouvé dans la chaîne qui n’est pas `pszCharSet`. `SpanIncluding`Retourne une sous-chaîne vide si le premier caractère de la chaîne n’est pas dans le jeu spécifié.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si le premier caractère de la chaîne n’est pas, dans le jeu de caractères `SpanIncluding` renvoie une chaîne vide. Sinon, elle retourne une séquence de caractères consécutifs dans le jeu.  
   
 ### <a name="example"></a>Exemple  
@@ -1365,7 +1365,7 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 ### <a name="return-value"></a>Valeur de retour  
  Un `CStringT` objet contenant la valeur du jeton en cours.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le `Tokenize` fonction recherche le jeton suivant dans la chaîne cible. Le jeu de caractères dans `pszTokens` spécifie des délimiteurs possibles du jeton doit être recherché. À chaque appel à `Tokenize` la fonction commence à `iStart`, ignore les délimiteurs de début et retourne un `CStringT` objet contenant le jeton actuel, qui est la chaîne de caractères jusqu’au prochain caractère délimiteur. La valeur de `iStart` est mis à jour à la position qui suit le caractère délimiteur de fin, ou -1 si la fin de la chaîne a été atteinte. Plus de jetons peuvent être arrêtées hors du reste de la chaîne cible par une série d’appels à `Tokenize`, à l’aide `iStart` pour effectuer le suivi de where dans la chaîne de jeton suivant doit être lu. Lorsqu’il n’y a aucuns jetons plus la fonction renvoie une chaîne vide et `iStart` est définie sur -1.  
   
  Contrairement à la bibliothèque CRT marquer des fonctions telles que [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md), `Tokenize` ne modifie pas la chaîne cible.  
@@ -1373,7 +1373,7 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATLMFC_Utilities&#135;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_39.cpp)]  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La sortie de cet exemple est la suivante :  
   
  `Resulting Token: First`  

@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 5ac891241f29df515864c01fc449197f39bbaedd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 56b8b5c3574a7a53a4e259412b1b1326973bcac9
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="ctime-class"></a>CTime (classe)
@@ -89,7 +89,7 @@ class CTime
 |[opérateur =](#operator_eq)|L’opérateur d’assignation.|  
 |[opérateur ==< ,="">](#ctime_comparison_operators)|Opérateurs de comparaison.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  `CTime`n’a pas d’une classe de base.  
   
  `CTime`les valeurs sont basées sur le temps universel (UTC), qui est équivalent au temps universel (Greenwich Mean Time, GMT). Consultez la page [gestion du temps](../../c-runtime-library/time-management.md) pour plus d’informations sur la façon dont le fuseau horaire est déterminé.  
@@ -183,13 +183,13 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 ### <a name="remarks"></a>Notes  
  Chaque constructeur est décrit ci-dessous :  
   
-- **() CTime ; **Construit non initialisé `CTime` objet. Ce constructeur vous permet de définir `CTime` tableaux d’objet. Vous devez initialiser ces tableaux avec des heures valides avant de l’utiliser.  
+- **CTime() ; ** Construit non initialisé `CTime` objet. Ce constructeur vous permet de définir `CTime` tableaux d’objet. Vous devez initialiser ces tableaux avec des heures valides avant de l’utiliser.  
   
-- **CTime (const CTime se); **Construit un `CTime` objet à partir d’un autre `CTime` valeur.  
+- **CTime (const CTime se); ** Construit un `CTime` objet à partir d’un autre `CTime` valeur.  
   
-- **CTime (__time64_t) ; **Construit un `CTime` de l’objet d’une **__time64_t** type. Ce constructeur s’attend à une heure UTC et convertit le résultat à une heure locale avant de stocker le résultat.  
+- **CTime (__time64_t) ; ** Construit un `CTime` de l’objet d’une **__time64_t** type. Ce constructeur s’attend à une heure UTC et convertit le résultat à une heure locale avant de stocker le résultat.  
   
-- **CTime (int, int,...) ; **Construit un `CTime` objet à partir de composants heure locale chaque composant limitées pour les plages suivantes :  
+- **CTime (int, int,...) ; ** Construit un `CTime` objet à partir de composants heure locale chaque composant limitées pour les plages suivantes :  
   
     |Composant|Range|  
     |---------------|-----------|  
@@ -202,11 +202,11 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
   
      Ce constructeur effectue la conversion appropriée au format UTC. La version Debug de la bibliothèque Microsoft Foundation Class déclare si un ou plusieurs des composants heure sont hors limites. Vous devez valider les arguments avant l’appel. Ce constructeur s’attend à une heure locale.  
   
-- `CTime`( **WORD, WORD** ) **;** Construit un `CTime` objet à partir des valeurs de date et heure de MS-DOS spécifiés. Ce constructeur s’attend à une heure locale.  
+- **CTime (WORD, WORD) ; ** Construit un `CTime` objet à partir des valeurs de date et heure de MS-DOS spécifiés. Ce constructeur s’attend à une heure locale.  
   
-- `CTime`( **const SYSTEMTIME&** ) **;** Construit un `CTime` de l’objet d’un `SYSTEMTIME` structure. Ce constructeur s’attend à une heure locale.  
+- **CTime (const SYSTEMTIME se); ** Construit un `CTime` de l’objet d’un `SYSTEMTIME` structure. Ce constructeur s’attend à une heure locale.  
   
-- `CTime`( **const FILETIME&** ) **;** Construit un `CTime` de l’objet d’un `FILETIME` structure. Vous aurez probablement n’utilisez pas `CTime``FILETIME` directement l’initialisation. Si vous utilisez un `CFile` objet pour manipuler un fichier, `CFile::GetStatus` récupère l’horodatage du fichier pour vous via un `CTime` objet initialisé avec un `FILETIME` structure. Ce constructeur suppose une heure UTC et convertit automatiquement la valeur en heure locale avant de stocker le résultat.  
+- **CTime (const FILETIME se); ** Construit un `CTime` de l’objet d’un `FILETIME` structure. Vous aurez probablement n’utilisez pas `CTime FILETIME` directement l’initialisation. Si vous utilisez un `CFile` objet pour manipuler un fichier, `CFile::GetStatus` récupère l’horodatage du fichier pour vous via un `CTime` objet initialisé avec un `FILETIME` structure. Ce constructeur suppose une heure UTC et convertit automatiquement la valeur en heure locale avant de stocker le résultat.  
   
     > [!NOTE]
     >  Le constructeur à l’aide de **DBTIMESTAMP** paramètre n’est disponible que lorsque OLEDB.h est inclus.  
@@ -234,7 +234,7 @@ CString Format(UINT nFormatID) const;
 ### <a name="return-value"></a>Valeur de retour  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) qui contient l’heure de mise en forme.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Si l’état de ce `CTime` objet est null, la valeur de retour est une chaîne vide.  
   
  Cette méthode lève une exception si la valeur de date et d’heure à mettre en forme n’est pas compris entre le 1er janvier 1970 à 31 décembre 3000 à minuit heure universelle coordonnée (UTC).  
@@ -385,7 +385,7 @@ int GetHour() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Renvoie l’heure, en fonction de l’heure locale, dans la plage 0 à 23.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction appelle `GetLocalTm`, qui utilise de manière statique interne tampon allouée. Les données dans cette mémoire tampon sont remplacées en raison d’appels à d’autres `CTime` les fonctions membres.  
   
 ### <a name="example"></a>Exemple  
@@ -455,7 +455,7 @@ int GetSecond() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la seconde, en fonction de l’heure locale, dans la plage 0 à 59.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction appelle `GetLocalTm`, qui utilise de manière statique interne tampon allouée. Les données dans cette mémoire tampon sont remplacées en raison d’appels à d’autres `CTime` les fonctions membres.  
   
 ### <a name="example"></a>Exemple  
@@ -504,7 +504,7 @@ CTime& operator=(__time64_t time) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Mise à jour `CTime` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cet opérateur d’assignation surchargés copie la source dans ce `CTime` objet. Le stockage interne dans un `CTime` objet est indépendant du fuseau horaire. Conversion de fuseau horaire n’est pas nécessaire lors de l’attribution.  
   
 ##  <a name="a-nameoperatoradd-a--ctimeoperator---"></a><a name="operator_add_-"></a>CTime::operator +, -  
