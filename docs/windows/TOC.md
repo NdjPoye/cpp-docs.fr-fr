@@ -2,6 +2,7 @@
 # [Bibliothèque ATL (Active Template Library)](../atl/TOC.md)
 # [Microsoft Foundation Classes (MFC)](../mfc/TOC.md)
 # [Classes partagées ATL et  MFC](../atl-mfc-shared/TOC.md)
+# [C++/CX](../cppcx/TOC.md)
 # [Extensions de composant pour les plateformes Runtime](component-extensions-for-runtime-platforms.md)
 ## [Opérateur de référence de suivi (extensions du composant C++)](tracking-reference-operator-cpp-component-extensions.md)
 ## [Handle sur l’opérateur Object (^) (extensions du composant C++)](handle-to-object-operator-hat-cpp-component-extensions.md)
