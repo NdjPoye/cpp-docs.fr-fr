@@ -1,46 +1,62 @@
 ---
-title: "V&#233;rifications des erreurs au moment de l&#39;ex&#233;cution | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.runtime"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vérifications des erreurs au moment de l'exécution"
-  - "erreurs d'exécution, vérifier"
+title: "Vérifications des erreurs d’exécution │ Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
+helpviewer_keywords:
+- run-time error checking
+- run-time errors, checking
 ms.assetid: c965dd01-57ad-4a3c-b1d6-5aa04f920501
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# V&#233;rifications des erreurs au moment de l&#39;ex&#233;cution
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e5ffb6d3321637b662790a32cce65e6908b4778d
+ms.lasthandoff: 02/24/2017
 
-La bibliothèque Runtime C contient des fonctions qui prennent en charge les contrôles d'erreur d'exécution \(RTC\).  La vérification des erreurs d'exécution vous permet de générer votre programme de telle manière que certains types d'erreurs d'exécution soient rapportées.  Vous spécifiez la façon dont les erreurs sont signalées et lesquelles les sont.  Pour plus d'informations, consultez [Vérifications des erreurs à l'exécution](../Topic/How%20to:%20Use%20Native%20Run-Time%20Checks.md).  
+---
+# <a name="run-time-error-checking"></a>Vérifications des erreurs d’exécution
+La bibliothèque Runtime C contient les fonctions qui prennent en charge les vérifications d’erreurs d’exécution (RTC). La vérification des erreurs d’exécution vous permet de générer votre programme afin que certains types d’erreurs d’exécution soient signalés. Vous spécifiez la façon dont les erreurs sont signalées et les types d’erreurs qui doivent l’être. Pour plus d’informations, consultez [Vérifications des erreurs d’exécution](http://msdn.microsoft.com/Library/dc7b2f1e-5ff6-42e0-89b3-dc9dead83ee1).  
   
- Utilisez les fonctions suivantes pour personnaliser la façon dont votre programme effetue la vérification des erreurs d'exécution.  
+ Utilisez les fonctions suivantes pour personnaliser la façon dont votre programme effectue la vérification des erreurs d’exécution.  
   
-### Active les fonctions vérifiant les erreurs au moment de l'exécution.  
+### <a name="run-time-error-checking-functions"></a>Fonctions de vérification des erreurs d’exécution  
   
-|Fonction|Utilisez|Équivalent de .NET Framework|  
-|--------------|--------------|----------------------------------|  
-|[\_RTC\_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|Retourne une brève description d'un type de contrôle d'erreur d'exécution.||  
-|[\_RTC\_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|Retourne le nombre total d'erreurs détectés par les vérifications des erreurs au moment de l'exécution.||  
-|[\_RTC\_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|Désigne une fonction comme gestionnaire pour stocker les logs des contrôles d'erreur d'exécution \(RTC\).||  
-|[\_RTC\_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|Associe une erreur qui est identifiée par les contrôles d'erreur d'exécution avec un type.||  
+|Fonction|Utilisation|Équivalent .NET Framework|  
+|--------------|---------|-------------------------------|  
+|[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|Retourne une brève description d’un type de vérification des erreurs d’exécution.||  
+|[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|Retourne le nombre total d’erreurs pouvant être détectées par les vérifications d’erreurs d’exécution.||  
+|[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|Désigne une fonction comme gestionnaire de rapport pour les vérifications d’erreurs d’exécution.||  
+|[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|Associe une erreur détectée par les vérifications d’erreurs d’exécution à un type.||  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Routines runtime par catégorie](../c-runtime-library/run-time-routines-by-category.md)   
- [\/RTC \(Vérifications des erreurs au moment de l'exécution\)](../build/reference/rtc-run-time-error-checks.md)   
- [runtime\_checks](../preprocessor/runtime-checks.md)   
- [RTC sample](http://msdn.microsoft.com/fr-fr/b3415b09-f6fd-43dc-8c02-9a910bc2574e)   
+ [/RTC (Vérifications des erreurs d’exécution)](../build/reference/rtc-run-time-error-checks.md)   
+ [runtime_checks](../preprocessor/runtime-checks.md)   
+ [Exemple RTC](http://msdn.microsoft.com/en-us/b3415b09-f6fd-43dc-8c02-9a910bc2574e)   
  [Routines de débogage](../c-runtime-library/debug-routines.md)

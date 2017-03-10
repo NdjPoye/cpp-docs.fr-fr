@@ -1,64 +1,76 @@
 ---
-title: "Constantes &#224; virgule flottante C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "constantes, virgule flottante"
-  - "double (type de données), constantes à virgule flottante"
-  - "constantes à virgule flottante"
-  - "constantes à virgule flottante, à propos des constantes à virgule flottante"
-  - "chiffres à virgule flottante, constantes à virgule flottante"
-  - "types (C), constantes"
+title: "Constantes à virgule flottante C │ Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- types [C], constants
+- floating-point numbers, floating-point constants
+- constants, floating-point
+- floating-point constants
+- floating-point constants, about floating-point constants
+- double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Constantes &#224; virgule flottante C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: c4c0e4de99d0d700f04f235a4bd5f7afd83937fb
+ms.lasthandoff: 02/24/2017
 
-« Une constante à virgule flottante » est un nombre décimal qui représente un nombre réel signé.  La représentation d'un nombre réel signé inclut une partie entière, une partie fractionnelle, et un exposant.  Utilisez des constantes à virgule flottante pour représenter les valeurs à virgule flottante qui ne peuvent pas être modifiées.  
+---
+# <a name="c-floating-point-constants"></a>Constantes à virgule flottante C
+Une « constante à virgule flottante » est un nombre décimal qui représente un nombre réel signé. La représentation d’un nombre réel signé comprend une partie entière, une partie fractionnaire et un exposant. Utilisez des constantes à virgule flottante pour représenter des valeurs à virgule flottante qui ne peuvent pas être modifiées.  
   
-## Syntaxe  
- *Constantes à virgule flottante*:  
- *partie constante\-fractionnelle\-exponentielle* opt *suffixe flottant*opt  
+## <a name="syntax"></a>Syntaxe  
+ *floating-point-constant* :  
+ &nbsp;&nbsp; *fractional-constant exponent-part*<sub>opt</sub> *floating-suffix*<sub>opt</sub>  
+ &nbsp;&nbsp; *digit-sequence exponent-part floating-suffix*<sub>opt</sub>  
   
- *Séquence de chiffre partie exponentielle suffixe flottant* opt  
+ *fractional-constant* :  
+ &nbsp;&nbsp; *digit-sequence*<sub>opt</sub> **.** *digit-sequence*  
+ &nbsp;&nbsp; *digit-sequence*  **.**  
   
- *constante\-fractionnelle*:  
- *séquence de chiffres*  opt               **.**  *séquence de chiffres*  
+ *exponent-part* :  
+ &nbsp;&nbsp; **e**  *sign*<sub>opt</sub> *digit-sequence*  
+ &nbsp;&nbsp; **E**  *sign*<sub>opt</sub> *digit-sequence*  
   
- *séquence de chiffres* **.**  
+ *sign* : un des éléments suivants  
+ &nbsp;&nbsp; **+ –**  
   
- *partie exponentielle*:  
- **e**  *signe*  opt *séquence de chiffres*  
+ *digit-sequence* :  
+ &nbsp;&nbsp; *digit*  
+ &nbsp;&nbsp; *digit-sequence digit*  
   
- **E**  *signe*  opt *séquence de chiffres*  
+ *floating-suffix* : un des éléments suivants  
+ &nbsp;&nbsp; **f l F L**  
   
- *signe* : un de  
- **\+ –**  
+ Vous pouvez omettre les chiffres avant la virgule (la partie entière de la valeur) ou les chiffres après la virgule (la partie fractionnaire), mais pas les deux. Vous pouvez laisser la virgule uniquement si vous incluez un exposant. Aucun espace blanc ne peut séparer les chiffres ou caractères d’une constante.  
   
- *séquence de chiffres*:  
- *digit*  
-  
- *chiffre\-séquence de chiffre*  
-  
- *suffixe flottant* : un parmi  
- **f l F L**  
-  
- Vous pouvez omettre les chiffres avant la virgule décimale \(la partie entière de la valeur\) ou les chiffres après la virgule décimale \(la partie fractionnaire\), mais pas les deux.  Omettez la virgule décimale uniquement si vous incluez un exposant.  Aucun espace blanc ne peut séparer les chiffres ou des caractères de la constante.  
-  
- Les exemples suivants montrent des formes des constantes à virgule flottante et d'expressions :  
+ Les exemples suivants illustrent certaines formes de constantes et expressions à virgule flottante :  
   
 ```  
 15.75  
@@ -68,18 +80,18 @@ caps.handback.revision: 12
 25E-4     /* =  0.0025 */  
 ```  
   
- Les constantes à virgule flottante sont positives à moins qu'elles soient précédées par un signe moins \(**–**\).  Dans ce cas, le signe moins est traité comme opérateur unaire arithmétique de négation.  Les constantes à virgule flottante ont le type **float**, **Double**, ou `long double`.  
+ Les constantes à virgule flottante sont positives, à moins d’être précédées du signe moins (**–**). Dans ce cas, le signe moins est considéré comme un opérateur de négation arithmétique unaire. Les constantes à virgule flottante sont de type `float`, `double` ou `long double`.  
   
- Une constante à virgule flottante sans **f**, **F**, **l**, ou suffixe **L** a le type **Double**.  Si la lettre **f** ou **F** est le suffixe, la constante a le type **float**.  Si le suffixe est la lettre **l** ou **L**, elle a le type `long double`.  Par exemple :  
+ Une constante à virgule flottante sans suffixe **f**, **F**, **l** ou **L** est de type `double`. Si la lettre **f** ou **F** est le suffixe, la constante est de type `float`. Si elle est suivie de la lettre **l** ou **L**, elle est de type `long double`. Exemple :  
   
 ```  
 100L  /* Has type long double  */  
 100F  /* Has type float        */  
 ```  
   
- Notez que le compilateur C Microsoft mappe **long double** pour le type **Double**.  Consultez [Stockage des types de base](../c-language/storage-of-basic-types.md) pour plus d'informations sur le type **Double**, **float**, et **long**.  
+ Notez que le compilateur Microsoft C en interne représente `long double` de la même façon que le type `double`. Consultez [Stockage des types de base](../c-language/storage-of-basic-types.md) pour plus d’informations sur le type `double`, `float` et `long double`.  
   
- Vous pouvez omettre la partie entière de la constante à virgule flottante, comme indiqué dans les exemples suivants.  Le nombre ,75 peut être exprimé plusieurs manières, notamment :  
+ Vous pouvez omettre la partie entière de la constante à virgule flottante, comme indiqué dans les exemples suivants. Le nombre .75 peut être exprimé de plusieurs façons, notamment :  
   
 ```  
 .0075e2  
@@ -88,5 +100,5 @@ caps.handback.revision: 12
 75e-2  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Constantes C](../c-language/c-constants.md)

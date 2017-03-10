@@ -1,73 +1,90 @@
 ---
-title: "_get_output_format | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_get_output_format"
-apilocation: 
-  - "msvcr110_clr0400.dll"
-  - "msvcr100.dll"
-  - "msvcr80.dll"
-  - "msvcrt.dll"
-  - "msvcr90.dll"
-  - "msvcr120.dll"
-  - "msvcr110.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "get_output_format"
-  - "_get_output_format"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_get_output_format (fonction)"
-  - "get_output_format (fonction)"
-  - "mise en forme de la sortie"
+title: _get_output_format | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _get_output_format
+apilocation:
+- msvcr110_clr0400.dll
+- msvcr100.dll
+- msvcr80.dll
+- msvcrt.dll
+- msvcr90.dll
+- msvcr120.dll
+- msvcr110.dll
+apitype: DLLExport
+f1_keywords:
+- get_output_format
+- _get_output_format
+dev_langs:
+- C++
+helpviewer_keywords:
+- output formatting
+- get_output_format function
+- _get_output_format function
 ms.assetid: 0ce42f3b-3479-41c4-bcbf-1d21f7ee37e7
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# _get_output_format
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e923c8f4dcfbf2a2392c6b70fee2c5dc423c34c6
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="getoutputformat"></a>_get_output_format
 Obtient la valeur actuelle de l’indicateur de format de sortie.  
   
 > [!IMPORTANT]
->  Cette fonction est obsolète. Depuis Visual Studio 2015, elle n’est pas disponible dans la bibliothèque CRT.  
+>  Cette fonction est obsolète. Depuis Visual Studio 2015, elle n’est pas disponible dans la bibliothèque CRT.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned int _get_output_format();  
 ```  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  La valeur actuelle de l’indicateur de format de sortie.  
   
-## Notes  
- L’indicateur de format de sortie contrôle les fonctionnalités de l’E\/S mise en forme. Pour l’instant, l’indicateur a deux valeurs possibles : 0 et `_TWO_DIGIT_EXPONENT`. Si `_TWO_DIGIT_EXPONENT` est défini, les nombres à virgule flottante sont générés avec seulement deux chiffres dans l’exposant, sauf si un troisième chiffre est requis par la taille de l’exposant. Si l’indicateur est défini sur zéro, la virgule flottante générée affiche trois chiffres dans l’exposant, en utilisant si nécessaire des zéros pour compléter la valeur sur trois chiffres.  
+## <a name="remarks"></a>Notes  
+ L’indicateur de format de sortie contrôle les fonctionnalités de l’E/S mise en forme. Pour l’instant, l’indicateur a deux valeurs possibles : 0 et `_TWO_DIGIT_EXPONENT`. Si `_TWO_DIGIT_EXPONENT` est défini, les nombres à virgule flottante sont générés avec seulement deux chiffres dans l’exposant, sauf si un troisième chiffre est requis par la taille de l’exposant. Si l’indicateur est défini sur zéro, la virgule flottante générée affiche trois chiffres dans l’exposant, en utilisant si nécessaire des zéros pour compléter la valeur sur trois chiffres.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_get_output_format`|\<stdio.h\>|  
+|`_get_output_format`|\<stdio.h>|  
   
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).  
+## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
+ Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
-## Voir aussi  
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [printf\_s, \_printf\_s\_l, wprintf\_s, \_wprintf\_s\_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
+## <a name="see-also"></a>Voir aussi  
+ [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
  [Caractères du champ de type printf](../c-runtime-library/printf-type-field-characters.md)   
- [\_set\_output\_format](../c-runtime-library/set-output-format.md)
+ [_set_output_format](../c-runtime-library/set-output-format.md)

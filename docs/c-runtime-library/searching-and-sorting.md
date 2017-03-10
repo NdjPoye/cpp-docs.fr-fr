@@ -1,46 +1,62 @@
 ---
-title: "Recherche et tri | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.programs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "données (CRT), rechercher"
-  - "rechercher (C++)"
-  - "rechercher (C++), fonctions de recherche CRT"
-  - "trier les données"
+title: Recherche et tri | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.programs
+dev_langs:
+- C++
+helpviewer_keywords:
+- sorting data
+- data [CRT], searching
+- searching [C++], CRT search functions
+- searching [C++]
 ms.assetid: 15e984f0-e155-46f5-8542-51c458792f54
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Recherche et tri
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5ba605d61ddcf1ae6bd2adc24c41737536fa2ce9
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="searching-and-sorting"></a>Recherche et tri
 Utilisez les fonctions suivantes pour la recherche et le tri.  
   
-### Recherche et le tri des fonctions  
+### <a name="searching-and-sorting-functions"></a>Fonctions de recherche et de tri  
   
-|Fonction|Recherche ou tri|Équivalent de .NET Framework|  
-|--------------|----------------------|----------------------------------|  
-|[bsearch](../c-runtime-library/reference/bsearch.md)|binary\_search|[\<caps:sentence id\="tgt8" sentenceid\="07fe7161f1b3ff07a50d0fdb13bc8ade" class\="tgtSentence"\>System::Collections::ArrayList::BinarySearch\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.binarysearch.aspx)|  
-|[bsearch\_s](../c-runtime-library/reference/bsearch-s.md)|Une version plus sûre pour `bsearch`.|[\<caps:sentence id\="tgt10" sentenceid\="07fe7161f1b3ff07a50d0fdb13bc8ade" class\="tgtSentence"\>System::Collections::ArrayList::BinarySearch\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.binarysearch.aspx)|  
-|[\_lfind](../c-runtime-library/reference/lfind.md)|Recherche séquentielle pour la valeur donnée|[\<caps:sentence id\="tgt13" sentenceid\="2b0a5c761626afecd7137a4eab4525f0" class\="tgtSentence"\>System::Collections::ArrayList::Contains\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)|  
-|[\_lfind\_s](../c-runtime-library/reference/lfind-s.md)|Une version plus sûre pour `_lfind`.|[\<caps:sentence id\="tgt15" sentenceid\="2b0a5c761626afecd7137a4eab4525f0" class\="tgtSentence"\>System::Collections::ArrayList::Contains\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)|  
-|[\_lsearch](../c-runtime-library/reference/lsearch.md)|La recherche séquentielle pour la valeur fournie, ajoutée pour ranger s'il est introuvable|Non applicable.  Pour appeler la fonction C standard, utilisez `PInvoke`.  Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).|  
-|[\_lsearch\_s](../c-runtime-library/reference/lsearch-s.md)|Une version plus sûre pour `_lsearch`.|Non applicable.  Pour appeler la fonction C standard, utilisez `PInvoke`.  Pour plus d'informations, consultez [Exemples d'appel de plateforme](../Topic/Platform%20Invoke%20Examples.md).|  
-|[qsort](../c-runtime-library/reference/qsort.md)|Tri rapide|[\<caps:sentence id\="tgt27" sentenceid\="f0305a177c6971f2c3c37537da538229" class\="tgtSentence"\>System::Collections::ArrayList::Sort\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx)|  
-|[qsort\_s](../c-runtime-library/reference/qsort-s.md)|Une version plus sûre pour `qsort`.|[\<caps:sentence id\="tgt29" sentenceid\="f0305a177c6971f2c3c37537da538229" class\="tgtSentence"\>System::Collections::ArrayList::Sort\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx)|  
+|Fonction|Rechercher ou trier|Équivalent .NET Framework|  
+|--------------|--------------------|-------------------------------|  
+|[bsearch](../c-runtime-library/reference/bsearch.md)|Recherche binaire|[System::Collections::ArrayList::BinarySearch](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.binarysearch.aspx)|  
+|[bsearch_s](../c-runtime-library/reference/bsearch-s.md)|Version plus sécurisée de `bsearch`.|[System::Collections::ArrayList::BinarySearch](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.binarysearch.aspx)|  
+|[_lfind](../c-runtime-library/reference/lfind.md)|Recherche linéaire pour une valeur donnée|[System::Collections::ArrayList::Contains](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)|  
+|[_lfind_s](../c-runtime-library/reference/lfind-s.md)|Version plus sécurisée de `_lfind`|[System::Collections::ArrayList::Contains](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)|  
+|[_lsearch](../c-runtime-library/reference/lsearch.md)|Recherche linéaire pour une valeur donnée, ajoutée au tableau si introuvable|Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[_lsearch_s](../c-runtime-library/reference/lsearch-s.md)|Version plus sécurisée de `_lsearch`|Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).|  
+|[qsort](../c-runtime-library/reference/qsort.md)|Tri rapide|[System::Collections::ArrayList::Sort](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx)|  
+|[qsort_s](../c-runtime-library/reference/qsort-s.md)|Version plus sécurisée de `qsort`|[System::Collections::ArrayList::Sort](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx)|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Routines runtime par catégorie](../c-runtime-library/run-time-routines-by-category.md)

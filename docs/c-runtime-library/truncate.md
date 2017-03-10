@@ -1,77 +1,93 @@
 ---
-title: "_TRUNCATE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_TRUNCATE"
-  - "TRUNCATE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_TRUNCATE (constante)"
-  - "TRUNCATE (constante)"
+title: _TRUNCATE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _TRUNCATE
+- TRUNCATE
+dev_langs:
+- C++
+helpviewer_keywords:
+- TRUNCATE constant
+- _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _TRUNCATE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8aa045caaaaa198c4ddbf19d03decca8d1372155
+ms.lasthandoff: 02/24/2017
 
-Spécifie le comportement de la troncation de chaîne.  
+---
+# <a name="truncate"></a>_TRUNCATE
+Spécifie le comportement de troncation de chaîne.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 #include <stdlib.h>  
 ```  
   
-## Notes  
- `_TRUNCATE` active le comportement de la troncation quand il est transmis comme le paramètre `count` à ces fonctions :  
+## <a name="remarks"></a>Notes  
+ `_TRUNCATE` active le comportement de troncation quand il est passé en tant que paramètre `count` à ces fonctions :  
   
- [strncpy\_s, \_strncpy\_s\_l, wcsncpy\_s, \_wcsncpy\_s\_l, \_mbsncpy\_s, \_mbsncpy\_s\_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
+ [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
   
- [strncat\_s, \_strncat\_s\_l, wcsncat\_s, \_wcsncat\_s\_l, \_mbsncat\_s, \_mbsncat\_s\_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
+ [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
   
- [mbstowcs\_s, \_mbstowcs\_s\_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
+ [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
   
- [mbsrtowcs\_s](../c-runtime-library/reference/mbsrtowcs-s.md)  
+ [mbsrtowcs_s](../c-runtime-library/reference/mbsrtowcs-s.md)  
   
- [wcstombs\_s, \_wcstombs\_s\_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)  
+ [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)  
   
- [wcsrtombs\_s](../c-runtime-library/reference/wcsrtombs-s.md)  
+ [wcsrtombs_s](../c-runtime-library/reference/wcsrtombs-s.md)  
   
- [\_snprintf\_s, \_snprintf\_s\_l, \_snwprintf\_s, \_snwprintf\_s\_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
+ [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
   
- [vsnprintf\_s, \_vsnprintf\_s, \_vsnprintf\_s\_l, \_vsnwprintf\_s, \_vsnwprintf\_s\_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
+ [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
   
- Si la mémoire tampon de destination est trop petite pour traiter la chaîne entière, le fonctionnement normal de ces fonctions est de traiter ça comme un cas d'erreur \(consultez [Validation de paramètre](../c-runtime-library/parameter-validation.md)\).  Toutefois, si la troncation de chaîne est activée en passant `_TRUNCATE`, ces fonctions copieront uniquement autant de la chaîne que ce qui peut tenir, en laissant la mémoire tampon de destination terminée par le caractère NULL, et retourneront correctement.  
+ Si la mémoire tampon de destination est trop petite pour contenir la chaîne entière, le comportement normal de ces fonctions consiste à la traiter comme une situation d’erreur (consultez [Validation de paramètre](../c-runtime-library/parameter-validation.md)). Toutefois, si la troncation de chaîne est activée en passant `_TRUNCATE`, ces fonctions copient uniquement le maximum possible de la chaîne, en arrêtant la mémoire tampon de destination sur une valeur Null et génèrent une valeur de retour correcte.  
   
- Chaîne de troncation modifie les valeurs de retour des fonctions affectées.  Les fonctions suivantes retournent 0 si aucune troncation ne se produit, ou `STRUNCATE` si la troncation se produit :  
+ La troncation de chaîne modifie les valeurs de retour des fonctions affectées. Les fonctions suivantes retournent 0 si aucune troncature ne se produit, ou `STRUNCATE` si une troncation se produit :  
   
- [strncpy\_s, \_strncpy\_s\_l, wcsncpy\_s, \_wcsncpy\_s\_l, \_mbsncpy\_s, \_mbsncpy\_s\_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
+ [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
   
- [strncat\_s, \_strncat\_s\_l, wcsncat\_s, \_wcsncat\_s\_l, \_mbsncat\_s, \_mbsncat\_s\_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
+ [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
   
- [wcstombs\_s, \_wcstombs\_s\_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)  
+ [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)  
   
- [mbstowcs\_s, \_mbstowcs\_s\_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
+ [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
   
- Les fonctions suivantes retournent le nombre de caractères copiés si aucune troncation ne se produit, ou \-1 si la troncation se produit \(correspondant au comportement des fonctions d'origine snprintf\) :  
+ Les fonctions suivantes retournent le nombre de caractères copiés si aucune troncation se produit, ou -1 si la troncation se produit (selon le comportement des fonctions snprintf d’origine) :  
   
- [\_snprintf\_s, \_snprintf\_s\_l, \_snwprintf\_s, \_snwprintf\_s\_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
+ [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
   
- [vsnprintf\_s, \_vsnprintf\_s, \_vsnprintf\_s\_l, \_vsnwprintf\_s, \_vsnwprintf\_s\_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
+ [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_truncate.c  
@@ -89,7 +105,10 @@ int main()
 }  
 ```  
   
-  **troncation s'est produite \!**  
-**'1234'**   
-## Voir aussi  
+```Output  
+truncation occurred!  
+'1234'  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [Constantes globales](../c-runtime-library/global-constants.md)
