@@ -1,0 +1,233 @@
+---
+title: '&lt;type_traits&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <type_traits>
+dev_langs:
+- C++
+helpviewer_keywords:
+- typetrait header
+- type_traits
+ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
+caps.latest.revision: 35
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 76f96a1e0b88e7b43a2d4efa55cc57e84efdb3b5
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
+Définit des modèles offrant des constantes de compilation qui fournissent des informations sur les propriétés de leurs arguments de type ou produisent des types transformés.  
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```  
+#include <type_traits>  
+```  
+  
+## <a name="remarks"></a>Notes  
+ Les classes et les modèles dans `<type_traits>` sont utilisés pour prendre en charge l’inférence de type, la classification et la transformation au moment de la compilation, pour détecter les erreurs liées au type et pour vous aider à optimiser votre code générique. Ces classes et ces modèles incluent les caractéristiques de type qui décrivent une propriété d’un type, les caractéristiques de type binaire qui décrivent une relation entre des types et les caractéristiques de transformation qui modifient une propriété d’un type.  
+  
+ Pour prendre en charge les caractéristiques de type, une classe d’assistance, `integral_constant`, est définie. Elle a des spécialisations de modèle `true_type` et `false_type` qui forment les classes de base des prédicats de type. Un *prédicat de type* est un modèle qui accepte un ou plusieurs arguments de type. Quand un prédicat de type *a la valeur true*, il est publiquement dérivé, directement ou indirectement, de [true_type](../standard-library/type-traits-typedefs.md#true_type_typedef). Quand un prédicat de type *a la valeur false*, il est publiquement dérivé, directement ou indirectement, de [false_type](../standard-library/type-traits-typedefs.md#false_type_typedef).  
+  
+ Un *modificateur de type* ou une *caractéristique de transformation* est un modèle qui accepte un ou plusieurs arguments de modèle et possède un seul membre `type`, qui est un synonyme du type modifié.  
+  
+### <a name="alias-templates"></a>Modèles d'alias  
+ Pour simplifier les expressions de caractéristiques de type, des [modèles d’alias](../cpp/aliases-and-typedefs-cpp.md) pour `typename some_trait<T>::type` sont fournis, où « `some_trait` » est le nom de la classe de modèle. Par exemple, [add_const](../standard-library/add-const-class.md) a un modèle d’alias pour son type, `add_const_t`, défini comme suit :  
+  
+```cpp  
+template <class T>
+using add_const_t = typename add_const<T>::type;
+```  
+  
+|||||  
+|-|-|-|-|  
+|add_const_t|aligned_storage_t|make_signed_t|remove_pointer_t|  
+|add_cv_t|aligned_union_t|make_unsigned_t|remove_reference_t|  
+|add_lvalue_reference_t|common_type_t|remove_all_extents_t|remove_volatile_t|  
+|add_pointer_t|conditional_t|remove_const_t|result_of_t|  
+|add_rvalue_reference_t|decay_t|remove_cv_t|underlying_type_t|  
+|add_volatile_t|enable_if_t|remove_extent_t||  
+  
+### <a name="classes"></a>Classes  
+ Typedefs et classe d’assistance  
+  
+|||  
+|-|-|  
+|[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|Crée une constante intégrale à partir d’un type et d’une valeur.|  
+|[true_type](../standard-library/type-traits-typedefs.md#true_type_typedef)|Contient une constante intégrale avec la valeur true.|  
+|[false_type](../standard-library/type-traits-typedefs.md#false_type_typedef)|Contient une constante intégrale avec la valeur false.|  
+  
+ Catégories de type principal  
+  
+|||  
+|-|-|  
+|[is_void](../standard-library/is-void-class.md)|Teste si le type est `void`.|  
+|[is_null_pointer](../standard-library/is-null-pointer-class.md)|Teste si le type est `std::nullptr_t`.|  
+|[is_integral](../standard-library/is-integral-class.md)|Teste si le type est intégral.|  
+|[is_floating_point](../standard-library/is-floating-point-class.md)|Teste si le type est à virgule flottante.|  
+|[is_array](../standard-library/is-array-class.md)|Teste si le type est un tableau.|  
+|[is_pointer](../standard-library/is-pointer-class.md)|Teste si le type est un pointeur.|  
+|[is_lvalue_reference](../standard-library/is-lvalue-reference-class.md)|Teste si le type est une référence lvalue.|  
+|[is_rvalue_reference](../standard-library/is-rvalue-reference-class.md)|Teste si le type est une référence rvalue.|  
+|[is_member_object_pointer](../standard-library/is-member-object-pointer-class.md)|Teste si le type est un pointeur vers un objet membre.|  
+|[is_member_function_pointer](../standard-library/is-member-function-pointer-class.md)|Teste si le type est un pointeur vers une fonction membre.|  
+|[is_enum](../standard-library/is-enum-class.md)|Teste si le type est une énumération.|  
+|[is_union](../standard-library/is-union-class.md)|Teste si le type est une union.|  
+|[is_class](../standard-library/is-class-class.md)|Teste si le type est une classe.|  
+|[is_function](../standard-library/is-function-class.md)|Teste si le type est un type de fonction.|  
+  
+ Catégories de type composite  
+  
+|||  
+|-|-|  
+|[is_reference](../standard-library/is-reference-class.md)|Teste si le type est une référence.|  
+|[is_arithmetic](../standard-library/is-arithmetic-class.md)|Teste si le type est arithmétique.|  
+|[is_fundamental](../standard-library/is-fundamental-class.md)|Teste si le type est `void` ou arithmétique.|  
+|[is_object](../standard-library/is-object-class.md)|Teste si le type est un type d'objet.|  
+|[is_scalar](../standard-library/is-scalar-class.md)|Teste si le type est scalaire.|  
+|[is_compound](../standard-library/is-compound-class.md)|Teste si le type n'est pas scalaire.|  
+|[is_member_pointer](../standard-library/is-member-pointer-class.md)|Teste si le type est un pointeur vers un membre.|  
+  
+ Propriétés de type  
+  
+|||  
+|-|-|  
+|[is_const](../standard-library/is-const-class.md)|Teste si le type est `const`.|  
+|[is_volatile](../standard-library/is-volatile-class.md)|Teste si le type est `volatile`.|  
+|[is_trivial](../standard-library/is-trivial-class.md)|Teste si le type est trivial.|  
+|[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Teste si le type peut être copié de façon triviale.|  
+|[is_standard_layout](../standard-library/is-standard-layout-class.md)|Teste si le type est un type de disposition standard.|  
+|[is_pod](../standard-library/is-pod-class.md)|Teste si le type est POD.|  
+|[is_literal_type](../standard-library/is-literal-type-class.md)|Teste si le type peut être une variable `constexpr` ou peut être utilisé dans une fonction `constexpr`.|  
+|[is_empty](../standard-library/is-empty-class.md)|Teste si le type est une classe vide.|  
+|[is_polymorphic](../standard-library/is-polymorphic-class.md)|Teste si le type est une classe polymorphe.|  
+|[is_abstract](../standard-library/is-abstract-class.md)|Teste si le type est une classe abstraite.|  
+|[is_final](../standard-library/is-final-class.md)|Teste si le type est un type de classe marqué `final`.|  
+|[is_signed](../standard-library/is-signed-class.md)|Teste si le type est un entier signé.|  
+|[is_unsigned](../standard-library/is-unsigned-class.md)|Teste si le type est un entier non signé.|  
+|[is_constructible](../standard-library/is-constructible-class.md)|Teste si le type est constructible à l’aide des types d’argument spécifiés.|  
+|[is_default_constructible](../standard-library/type-traits-functions.md#is_default_constructible)|Teste si le type a un constructeur par défaut.|  
+|[is_copy_constructible](../standard-library/type-traits-functions.md#is_copy_constructible)|Teste si le type a un constructeur de copie.|  
+|[is_move_constructible](../standard-library/type-traits-functions.md#is_move_constructible)|Teste si le type a un constructeur de déplacement.|  
+|[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|Teste si le premier type peut se voir assigner une valeur du second type.|  
+|[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|Teste si un type peut se voir assigner une valeur de référence const du type.|  
+|[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|Teste si un type peut se voir assigner une référence rvalue du type.|  
+|[is_destructible](../standard-library/is-destructible-class.md)|Teste si le type est destructible.|  
+|[is_trivially_constructible](../standard-library/is-trivially-constructible-class.md)|Teste si le type n’utilise aucune opération non triviale lorsqu’il est construit à l’aide des types spécifiés.|  
+|[is_trivially_default_constructible](../standard-library/is-trivially-default-constructible-class.md)|Teste si le type n’utilise aucune opération non triviale lorsqu’il est construit par défaut.|  
+|[is_trivially_copy_constructible](../standard-library/is-trivially-copy-constructible-class.md)|Teste si le type n’utilise aucune opération non triviale lorsqu’il est construit par copie.|  
+|[is_trivially_move_constructible](../standard-library/type-traits-functions.md#is_trivially_move_constructible)|Teste si le type n’utilise aucune opération non triviale lorsqu’il est construit par déplacement.|  
+|[is_trivially_assignable](../standard-library/is-trivially-assignable-class.md)|Teste si les types peuvent être assignés et si l’assignation n’utilise aucune opération non triviale.|  
+|[is_trivially_copy_assignable](../standard-library/type-traits-functions.md#is_trivially_copy_assignable)|Teste si le type peut être assigné par copie et si l’assignation n’utilise aucune opération non triviale.|  
+|[is_trivially_move_assignable](../standard-library/type-traits-functions.md#is_trivially_move_assignable)|Teste si le type peut être assigné par déplacement et si l’assignation n’utilise aucune opération non triviale.|  
+|[is_trivially_destructible](../standard-library/is-trivially-destructible-class.md)|Teste si le type est destructible et si le destructeur n’utilise aucune opération non triviale.|  
+|[is_nothrow_constructible](../standard-library/is-nothrow-constructible-class.md)|Teste si le type est constructible et est connu comme ne levant pas d’exception quand il est construit à l’aide des types spécifiés.|  
+|[is_nothrow_default_constructible](../standard-library/is-nothrow-default-constructible-class.md)|Teste si le type est constructible par défaut et connu comme ne levant pas d’exception lorsqu’il est construit par défaut.|  
+|[is_nothrow_copy_constructible](../standard-library/is-nothrow-copy-constructible-class.md)|Teste si le type est constructible par copie et si le constructeur de copie est connu comme ne levant pas d’exception.|  
+|[is_nothrow_move_constructible](../standard-library/is-nothrow-move-constructible-class.md)|Teste si le type est constructible par déplacement et si le constructeur de déplacement est connu comme ne levant pas d’exception.|  
+|[is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)|Teste si le type peut être assigné à l’aide du type spécifié et si l’assignation est connue comme ne levant pas d’exception.|  
+|[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Teste si le type peut être assigné par copie et si l’assignation est connue comme ne levant pas d’exception.|  
+|[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Teste si le type peut être assigné par déplacement et si l’assignation est connue comme ne levant pas d’exception.|  
+|[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Teste si le type est destructible et si le destructeur est connu comme ne levant pas d’exception.|  
+|[has_virtual_destructor](http://msdn.microsoft.com/en-us/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Teste si le type a un destructeur virtuel.|  
+  
+ Requêtes de propriétés de type  
+  
+|||  
+|-|-|  
+|[alignment_of](../standard-library/alignment-of-class.md)|Obtient l’alignement d’un type.|  
+|[rank](../standard-library/rank-class.md)|Obtient le nombre de dimensions de tableau.|  
+|[extent](../standard-library/extent-class.md)|Obtient le nombre d’éléments dans la dimension de tableau spécifiée.|  
+  
+ Relations de types  
+  
+|||  
+|-|-|  
+|[is_same](../standard-library/is-same-class.md)|Teste si deux types sont identiques.|  
+|[is_base_of](../standard-library/is-base-of-class.md)|Teste si un type est une base d’un autre.|  
+|[is_convertible](../standard-library/is-convertible-class.md)|Teste si un type est convertible en un autre.|  
+  
+ Modifications const-volatile  
+  
+|||  
+|-|-|  
+|[add_const](../standard-library/add-const-class.md)|Génère un type `const` à partir d’un type.|  
+|[add_volatile](../standard-library/add-volatile-class.md)|Génère un type `volatile` à partir d’un type.|  
+|[add_cv](../standard-library/add-cv-class.md)|Génère un type `const``volatile` à partir d’un type.|  
+|[remove_const](../standard-library/remove-const-class.md)|Génère un type non const à partir d’un type.|  
+|[remove_volatile](../standard-library/remove-volatile-class.md)|Génère un type non volatile à partir d’un type.|  
+|[remove_cv](../standard-library/remove-cv-class.md)|Génère un type non const non volatile à partir d’un type.|  
+  
+ Modifications de référence  
+  
+|||  
+|-|-|  
+|[add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)|Génère une référence vers un type à partir d’un type.|  
+|[add_rvalue_reference](../standard-library/add-rvalue-reference-class.md)|Génère une référence rvalue vers un type à partir d’un type.|  
+|[remove_reference](../standard-library/remove-reference-class.md)|Génère un type non-référence à partir d’un type.|  
+  
+ Modifications de signe  
+  
+|||  
+|-|-|  
+|[make_signed](../standard-library/make-signed-class.md)|Génère le type si signé, ou le plus petit type signé supérieur ou égal en taille au type.|  
+|[make_unsigned](../standard-library/make-unsigned-class.md)|Génère le type si non signé, ou le plus petit type non signé supérieur ou égal en taille au type.|  
+  
+ Modifications de tableau  
+  
+|||  
+|-|-|  
+|[remove_all_extents](../standard-library/remove-all-extents-class.md)|Génère un type non-tableau à partir d’un type tableau.|  
+|[remove_extent](../standard-library/remove-extent-class.md)|Génère le type d’élément à partir d’un type tableau.|  
+  
+ Modifications de pointeur  
+  
+|||  
+|-|-|  
+|[add_pointer](../standard-library/add-pointer-class.md)|Génère un pointeur vers un type à partir d’un type.|  
+|[remove_pointer](../standard-library/remove-pointer-class.md)|Génère un type à partir d’un pointeur vers un type.|  
+  
+ Autres transformations  
+  
+|||  
+|-|-|  
+|[aligned_storage](../standard-library/aligned-storage-class.md)|Alloue la mémoire non initialisée pour un type aligné.|  
+|[aligned_union](../standard-library/aligned-union-class.md)|Alloue la mémoire non initialisée pour une union alignée avec un constructeur ou un destructeur non trivial.|  
+|[common_type](../standard-library/common-type-class.md)|Génère le type commun de tous les types du package de paramètres.|  
+|[conditional](../standard-library/conditional-class.md)|Si la condition est true, génère le premier type spécifié, sinon le second type spécifié.|  
+|[decay](../standard-library/decay-class.md)|Génère le type comme passé par la valeur. Crée un type non-référence, non const ou non volatile, ou crée un pointeur vers un type.|  
+|[enable_if](../standard-library/enable-if-class.md)|Si la condition est true, génère le type spécifié, sinon ne génère aucun type.|  
+|[result_of](../standard-library/result-of-class.md)|Détermine le type de retour du type pouvant être appelé qui accepte les types d’argument spécifiés.|  
+|[underlying_type](../standard-library/underlying-type-class.md)|Génère le type intégral sous-jacent pour un type d’énumération.|  
+  
+## <a name="see-also"></a>Voir aussi  
+ [\<functional>](../standard-library/functional.md)
+
+
+
+

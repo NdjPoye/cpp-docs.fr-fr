@@ -1,0 +1,383 @@
+---
+title: Classe de CMFCRibbonComboBox | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCRibbonComboBox
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCRibbonComboBox class
+ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
+caps.latest.revision: 35
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 747006ee66445eb312c22d658706e5fe81d2a958
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox (classe)
+La `CMFCRibbonComboBox` classe implémente un contrôle de zone de liste déroulante que vous pouvez ajouter à une barre Ruban, un panneau de ruban ou un menu contextuel de ruban.  
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```  
+class CMFCRibbonComboBox : public CMFCRibbonEdit  
+```  
+  
+## <a name="members"></a>Membres  
+  
+### <a name="constructors"></a>Constructeurs  
+  
+|Nom|Description|  
+|----------|-----------------|  
+|[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|Construit un objet CMFCRibbonComboBox.|  
+  
+### <a name="public-methods"></a>M&#233;thodes publiques  
+  
+|Nom|Description|  
+|----------|-----------------|  
+|[CMFCRibbonComboBox::AddItem](#additem)|Ajoute un élément unique à la zone de liste.|  
+|[CMFCRibbonComboBox::DeleteItem](#deleteitem)|Supprime un élément spécifié dans la zone de liste.|  
+|[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|Indique si la zone de liste peut changer de taille lorsque cela se déroule.|  
+|[CMFCRibbonComboBox::FindItem](#finditem)|Retourne l’index du premier élément dans la zone de liste qui correspond à une chaîne spécifiée.|  
+|[CMFCRibbonComboBox::GetCount](#getcount)|Retourne le nombre d’éléments dans la zone de liste.|  
+|[CMFCRibbonComboBox::GetCurSel](#getcursel)|Obtient l’index de l’élément actuellement sélectionné dans la zone de liste.|  
+|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|Obtient la hauteur de la zone de liste lors de la zone de liste est déroulée.|  
+|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|Retourne la taille de la zone de liste déroulante affichées en mode intermédiaire.|  
+|[CMFCRibbonComboBox::GetItem](#getitem)|Retourne la chaîne associée à un élément à l’index spécifié dans la zone de liste.|  
+|[CMFCRibbonComboBox::GetItemData](#getitemdata)|Retourne les données associées à un élément à l’index spécifié dans la zone de liste.|  
+|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|Indique si le contrôle contient une zone d’édition.|  
+|[CMFCRibbonComboBox::IsResizeDropDownList](#isresizedropdownlist)|Indique si la zone de liste peut être redimensionnée.|  
+|[CMFCRibbonComboBox::OnSelectItem](#onselectitem)|Appelé par l’infrastructure lorsque l’utilisateur sélectionne un élément dans la zone de liste.|  
+|[CMFCRibbonComboBox::RemoveAllItems](#removeallitems)|Supprime tous les éléments à partir de la zone de liste et la zone d’édition.|  
+|[CMFCRibbonComboBox::SelectItem](#selectitem)|Sélectionne un élément dans la zone de liste.|  
+|[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|Définit la hauteur de la zone de liste lorsqu’il est déplacé vers le bas.|  
+  
+## <a name="remarks"></a>Remarques  
+ La zone de liste déroulante du ruban se compose d’une zone de liste associée à une étiquette statique ou une étiquette qui peut être modifié par l’utilisateur. Vous devez spécifier le type souhaité lorsque vous créez votre zone de liste déroulante du ruban.  
+  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre comment construire un objet de la `CMFCRibbonComboBox` classe, ajouter un élément à la zone de liste déroulante, sélectionnez un élément dans la zone de liste déroulante et ajouter une zone de liste déroulante à un panneau de configuration.  
+  
+ [!code-cpp[NVC_MFC_RibbonApp&#11;](../../mfc/reference/codesnippet/cpp/cmfcribboncombobox-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+ [CObject](../../mfc/reference/cobject-class.md)  
+  
+ [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
+  
+ [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)  
+  
+ [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)  
+  
+ [CMFCRibbonComboBox](../../mfc/reference/cmfcribboncombobox-class.md)  
+  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** afxribboncombobox.h  
+  
+##  <a name="a-nameadditema--cmfcribboncomboboxadditem"></a><a name="additem"></a>CMFCRibbonComboBox::AddItem  
+ Ajoute un élément unique à la zone de liste.  
+  
+```  
+virtual INT_PTR AddItem(
+    LPCTSTR lpszItem,  
+    DWORD_PTR dwData=0);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `lpszItem`  
+ La chaîne de l’élément à ajouter.  
+  
+ [in] `dwData`  
+ Les données associées à l’élément à ajouter.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Index de base zéro de l’élément ajouté.  
+  
+##  <a name="a-namecmfcribboncomboboxa--cmfcribboncomboboxcmfcribboncombobox"></a><a name="cmfcribboncombobox"></a>CMFCRibbonComboBox::CMFCRibbonComboBox  
+ Construit un objet `CMFCRibbonComboBox`.  
+  
+```  
+public:  
+CMFCRibbonComboBox(
+    UINT nID,  
+    BOOL bHasEditBox=TRUE,  
+    Int nWidth=-1,  
+    LPCTSTR lpszLabel=NULL,  
+    Int nImage=-1);
+
+protected:  
+CMFCRibbonComboBox();
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `nID`  
+ ID de la zone de liste déroulante.  
+  
+ [in] `bHasEditBox`  
+ `TRUE`Si vous souhaitez une zone d’édition dans le contrôle ; `FALSE` dans le cas contraire.  
+  
+ [in] `nWidth`  
+ Largeur de la zone de liste déroulante en pixels. ou -1 pour la largeur par défaut.  
+  
+ [in] `lpszLabel`  
+ Le libellé de la zone de liste déroulante.  
+  
+ [in] `nImage`  
+ L’index de la petite image de la zone de liste déroulante.  
+  
+### <a name="remarks"></a>Remarques  
+ La largeur par défaut est 108 pixels.  
+  
+##  <a name="a-namedeleteitema--cmfcribboncomboboxdeleteitem"></a><a name="deleteitem"></a>CMFCRibbonComboBox::DeleteItem  
+ Supprime un élément spécifié dans la zone de liste.  
+  
+```  
+BOOL DeleteItem(int iIndex);
+BOOL DeleteItem(DWORD_PTR dwData);
+
+BOOL DeleteItem(LPCTSTR lpszText);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `iIndex`  
+ Index de base zéro de l’élément à supprimer.  
+  
+ [in] `dwData`  
+ Les données associées à l’élément à supprimer.  
+  
+ [in] `lpszText`  
+ La chaîne de l’élément à supprimer. S’il existe plusieurs éléments avec la même chaîne, le premier élément est supprimé.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ `TRUE`Si l’élément spécifié a été supprimé ; dans le cas contraire, `FALSE`.  
+  
+### <a name="remarks"></a>Remarques  
+  
+##  <a name="a-nameenabledropdownlistresizea--cmfcribboncomboboxenabledropdownlistresize"></a><a name="enabledropdownlistresize"></a>CMFCRibbonComboBox::EnableDropDownListResize  
+ Indique si la zone de liste peut changer de taille lorsque cela se déroule.  
+  
+```  
+void EnableDropDownListResize(BOOL bEnable=FALSE);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `bEnable`  
+ `TRUE`Pour activer le redimensionnement ; `FALSE` pour désactiver le redimensionnement.  
+  
+### <a name="remarks"></a>Remarques  
+ Lorsque le redimensionnement est activé, la zone de liste change taille pour ajuster les éléments qu’il affiche.  
+  
+##  <a name="a-namefinditema--cmfcribboncomboboxfinditem"></a><a name="finditem"></a>CMFCRibbonComboBox::FindItem  
+ Retourne l’index du premier élément dans la zone de liste qui correspond à une chaîne spécifiée.  
+  
+```  
+int FindItem(LPCTSTR lpszText) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `lpszText`  
+ La chaîne d’un élément dans la zone de liste.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Index de base zéro de l’élément ; ou -1 si l’élément est introuvable.  
+  
+### <a name="remarks"></a>Remarques  
+  
+##  <a name="a-namegetcounta--cmfcribboncomboboxgetcount"></a><a name="getcount"></a>CMFCRibbonComboBox::GetCount  
+ Retourne le nombre d’éléments dans la zone de liste.  
+  
+```  
+INT_PTR GetCount() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Le nombre d’éléments dans la zone de liste, ou 0 si la zone de liste ne contient aucun élément.  
+  
+### <a name="remarks"></a>Remarques  
+  
+##  <a name="a-namegetcursela--cmfcribboncomboboxgetcursel"></a><a name="getcursel"></a>CMFCRibbonComboBox::GetCurSel  
+ Obtient l’index de l’élément actuellement sélectionné dans la zone de liste.  
+  
+```  
+int GetCurSel() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Index de base zéro de l’élément actuellement sélectionné dans la zone de liste ; ou -1 si aucun élément n’est sélectionné.  
+  
+##  <a name="a-namegetdropdownheighta--cmfcribboncomboboxgetdropdownheight"></a><a name="getdropdownheight"></a>CMFCRibbonComboBox::GetDropDownHeight  
+ Obtient la hauteur de la zone de liste lors de la zone de liste est déroulée.  
+  
+```  
+int GetDropDownHeight();
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ La hauteur, en pixels, de la zone de liste.  
+  
+### <a name="remarks"></a>Remarques  
+  
+##  <a name="a-namegetintermediatesizea--cmfcribboncomboboxgetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonComboBox::GetIntermediateSize  
+ Retourne la taille de la zone de liste déroulante affichées en mode intermédiaire.  
+  
+```  
+virtual CSize GetIntermediateSize(CDC* pDC);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `pDC`  
+ Pointeur vers un contexte de périphérique pour la zone de liste déroulante.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ La taille de la zone de liste déroulante.  
+  
+### <a name="remarks"></a>Notes  
+ La taille retournée est basée sur la taille de la zone de liste déroulante lors de l’affichage de petites images.  
+  
+##  <a name="a-namegetitema--cmfcribboncomboboxgetitem"></a><a name="getitem"></a>CMFCRibbonComboBox::GetItem  
+ Retourne la chaîne associée à un élément à l’index spécifié dans la zone de liste.  
+  
+```  
+LPCTSTR GetItem(int iIndex) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `iIndex`  
+ Index de base zéro d’un élément dans la zone de liste.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Un pointeur vers la chaîne associée à l’élément ; dans le cas contraire, `NULL` si le paramètre d’index n’est pas valide ou si le paramètre d’index est -1 et il n’existe aucun élément sélectionné dans la zone de liste déroulante.  
+  
+### <a name="remarks"></a>Notes  
+  
+##  <a name="a-namegetitemdataa--cmfcribboncomboboxgetitemdata"></a><a name="getitemdata"></a>CMFCRibbonComboBox::GetItemData  
+ Retourne les données associées à un élément à l’index spécifié dans la zone de liste.  
+  
+```  
+DWORD_PTR GetItemData(int iIndex) const;  
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `iIndex`  
+ Index de base zéro d’un élément dans la zone de liste.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Les données associées à l’élément ; ou 0 si l’élément n’existe pas, ou si le paramètre d’index est -1 et il n’existe aucun élément sélectionné dans la zone de liste.  
+  
+##  <a name="a-namehaseditboxa--cmfcribboncomboboxhaseditbox"></a><a name="haseditbox"></a>CMFCRibbonComboBox::HasEditBox  
+ Indique si le contrôle contient une zone d’édition.  
+  
+```  
+BOOL HasEditBox() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ `TRUE`Si le contrôle contient une zone d’édition ; dans le cas contraire, `FALSE`.  
+  
+### <a name="remarks"></a>Notes  
+  
+##  <a name="a-nameisresizedropdownlista--cmfcribboncomboboxisresizedropdownlist"></a><a name="isresizedropdownlist"></a>CMFCRibbonComboBox::IsResizeDropDownList  
+ Indique si la zone de liste peut être redimensionnée.  
+  
+```  
+BOOL IsResizeDropDownList() const;  
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ `TRUE`Si la zone de liste peut être redimensionnée ; dans le cas contraire `FALSE`. [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
+  
+### <a name="remarks"></a>Notes  
+ Vous pouvez activer le redimensionnement de zone de liste à l’aide de la [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize) (méthode).  
+  
+##  <a name="a-nameonselectitema--cmfcribboncomboboxonselectitem"></a><a name="onselectitem"></a>CMFCRibbonComboBox::OnSelectItem  
+ Appelé par l’infrastructure lorsqu’un utilisateur sélectionne un élément dans la zone de liste.  
+  
+```  
+virtual void OnSelectItem(int nItem);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `nItem`  
+ L’index de l’élément sélectionné.  
+  
+### <a name="remarks"></a>Remarques  
+ Substituez cette méthode si vous souhaitez traiter une sélection d’entrée utilisateur.  
+  
+##  <a name="a-nameremoveallitemsa--cmfcribboncomboboxremoveallitems"></a><a name="removeallitems"></a>CMFCRibbonComboBox::RemoveAllItems  
+ Supprime tous les éléments à partir de la zone de liste et la zone d’édition.  
+  
+```  
+void RemoveAllItems();
+```  
+  
+### <a name="remarks"></a>Remarques  
+  
+##  <a name="a-nameselectitema--cmfcribboncomboboxselectitem"></a><a name="selectitem"></a>CMFCRibbonComboBox::SelectItem  
+ Sélectionne un élément dans la zone de liste.  
+  
+```  
+BOOL SelectItem(int iIndex);
+BOOL SelectItem(DWORD_PTR dwData);
+
+BOOL SelectItem(LPCTSTR lpszText);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `iIndex`  
+ Index de base zéro d’un élément dans la zone de liste.  
+  
+ [in] `dwData`  
+ Les données associées à un élément dans la zone de liste.  
+  
+ [in] `lpszText`  
+ La chaîne d’un élément dans la zone de liste.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ `TRUE`Si la méthode a réussi ; dans le cas contraire `FALSE`.  
+  
+### <a name="remarks"></a>Remarques  
+  
+##  <a name="a-namesetdropdownheighta--cmfcribboncomboboxsetdropdownheight"></a><a name="setdropdownheight"></a>CMFCRibbonComboBox::SetDropDownHeight  
+ Définit la hauteur de la zone de liste lorsqu’il est déplacé vers le bas.  
+  
+```  
+void SetDropDownHeight(int nHeight);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ [in] `nHeight`  
+ La hauteur, en pixels, de la zone de liste.  
+  
+### <a name="remarks"></a>Notes  
+ La hauteur par défaut est 150 pixels.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonEdit (classe)](../../mfc/reference/cmfcribbonedit-class.md)
+

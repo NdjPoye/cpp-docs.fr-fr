@@ -1,0 +1,234 @@
+---
+title: Avertissements du compilateur C4600 via C4799 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4602
+- C4603
+- C4609
+- C4612
+- C4613
+- C4620
+- C4622
+- C4629
+- C4631
+- C4634
+- C4635
+- C4636
+- C4637
+- C4638
+- C4645
+- C4646
+- C4655
+- C4657
+- C4658
+- C4662
+- C4670
+- C4671
+- C4672
+- C4674
+- C4676
+- C4678
+- C4681
+- C4682
+- C4685
+- C4688
+- C4689
+- C4690
+- C4693
+- C4694
+- C4695
+- C4696
+- C4718
+- C4719
+- C4720
+- C4721
+- C4722
+- C4724
+- C4725
+- C4728
+- C4729
+- C4732
+- C4739
+- C4750
+- C4751
+- C4752
+- C4754
+- C4755
+- C4757
+- C4764
+- C4767
+- C4770
+- C4792
+- C4794
+dev_langs:
+- C++
+ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
+caps.latest.revision: 23
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: ee761da63cf827800604d605bb71bad6ff829713
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="compiler-warnings-c4600-through-c4799"></a>Avertissements du compilateur C4600 via C4799
+Les articles de cette partie de la documentation contiennent des informations sur un sous-ensemble des avertissements du compilateur Visual C++. Vous pouvez accéder à ces informations ici ou dans la fenêtre Sortie dans Visual Studio, vous pouvez sélectionner un numéro d’erreur et appuyez sur la touche F1.  
+  
+## <a name="in-this-section"></a>Dans cette section  
+  
+|Avertissement|Message|  
+|-------------|-------------|  
+|[Compilateur avertissement (niveau 1) C4600](../../error-messages/compiler-warnings/compiler-warning-level-1-c4600.md)|#pragma 'nom macro' : chaîne valide non vide attendue|  
+|Avertissement du compilateur (niveau 1) C4602|#pragma pop_macro : 'nom macro' pas de #pragma push_macro défini au préalable pour cet identificateur|  
+|Avertissement du compilateur (niveau 1) C4603|«\<identificateur >': macro n’est pas définie ou la définition est différente après l’en-tête précompilé|  
+|[Compilateur avertissement (niveau 1) C4606](../../error-messages/compiler-warnings/compiler-warning-level-1-c4606.md)|#(pragma) warning : 'numéro d’avertissement ignorée ; Avertissements d’analyse du code ne sont pas associés à des niveaux d’avertissement|  
+|[Compilateur avertissement (niveau 3) C4608](../../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md)|'union_member' a déjà été initialisé par un autre membre union dans la liste des initialiseurs, 'union_member'|  
+|Avertissement du compilateur (niveau 3) C4609|'%$S' dérive de l’interface par défaut '%$S' type '%$S'. Utiliser une interface par défaut différente pour '%$S' ou rompre le dérivé/de base.|  
+|[Compilateur avertissement (niveau 4) C4610](../../error-messages/compiler-warnings/compiler-warning-level-4-c4610.md)|objet 'classe' ne peut jamais être instancié - constructeur requis défini par l’utilisateur|  
+|[Compilateur avertissement (niveau 4) C4611](../../error-messages/compiler-warnings/compiler-warning-level-4-c4611.md)|l’interaction entre 'fonction' et la destruction d’objets C++ n’est pas portable|  
+|Avertissement du compilateur (niveau 1) C4612|erreur dans le nom de fichier Include|  
+|Avertissement du compilateur (niveau 1) C4613|'%$S' : la classe d'un segment ne peut pas être modifiée|  
+|[Compilateur avertissement (niveau 1) C4615](../../error-messages/compiler-warnings/compiler-warning-level-1-c4615.md)|#pragma avertissement : type d’avertissement utilisateur inconnu|  
+|[Compilateur avertissement (niveau 1) C4616](../../error-messages/compiler-warnings/compiler-warning-level-1-c4616.md)|#(pragma) warning : numéro d’avertissement 'numéro' pas un avertissement de compilateur valide|  
+|[Compilateur avertissement (niveau 1) C4618](../../error-messages/compiler-warnings/compiler-warning-level-1-c4618.md)|les paramètres pragma comportaient une chaîne vide ; pragma ignoré|  
+|[Compilateur avertissement (niveau 3) C4619](../../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md)|#pragma avertissement : aucun numéro d’avertissement 'numéro'|  
+|Avertissement du compilateur (niveau 1) C4620|aucune forme suffixée de l’opérateur 'operator ++' trouvée pour le type 'type' ; utilisez la forme préfixée|  
+|[Compilateur avertissement (niveau 1) C4621](../../error-messages/compiler-warnings/compiler-warning-level-1-c4621.md)|aucune forme suffixée de 'operator--' trouvée pour le type 'type', utilisez la forme préfixée|  
+|Avertissement du compilateur (niveau 3) C4622|remplacement des informations de débogage formées lors de la création de l’en-tête précompilé du fichier objet : 'fichier'|  
+|[Compilateur avertissement (niveau 4) C4623](../../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md)|'classe dérivée' : constructeur par défaut a été défini de manière implicite comme supprimé, car un constructeur par défaut de la classe de base est inaccessible ou supprimé|  
+|[Compilateur avertissement (niveau 1) C4624](../../error-messages/compiler-warnings/compiler-warning-level-1-c4624.md)|'classe dérivée' : destructeur a été défini de manière implicite comme supprimé, car un destructeur de classe de base est inaccessible ou supprimé|  
+|[Compilateur avertissement (niveau 4) C4625](../../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md)|'classe dérivée' : le constructeur de copie a été défini de manière implicite comme supprimé, car un constructeur de copie de la classe de base est inaccessible ou supprimé|  
+|[Compilateur avertissement (niveau 4) C4626](../../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md)|'classe dérivée' : l’opérateur d’assignation a été défini de manière implicite comme supprimé, car un opérateur d’assignation de la classe de base est inaccessible ou supprimé|  
+|[Compilateur avertissement (niveau 1) C4627](../../error-messages/compiler-warnings/compiler-warning-level-1-c4627.md)|«\<identificateur >': ignoré lorsque vous recherchez précompilés l’utilisation d’un en-tête|  
+|[Compilateur avertissement (niveau 1) C4628](../../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md)|digrammes non pris en charge avec -Ze. Séquence de caractères 'digramme' non interprétée comme jeton de remplacement pour « %s »|  
+|Avertissement du compilateur (niveau 4) C4629|digrammes utilisés, séquence de caractères 'digramme' interprétée comme jeton 'caractère' (insérez un espace entre les deux caractères si cela n’est pas ce que vous souhaitiez)|  
+|[Compilateur avertissement (niveau 1) C4630](../../error-messages/compiler-warnings/compiler-warning-level-1-c4630.md)|'symbole' : spécificateur de classe de stockage 'extern' non conforme sur définition de membre|  
+|Avertissement du compilateur (niveau 2) C4631|MSXML ou XPath non disponible, les commentaires de document XML ne seront pas traités. raison|  
+|[Compilateur avertissement (niveau 1) C4632](../../error-messages/compiler-warnings/compiler-warning-level-1-c4632.md)|Commentaire de document XML : fichier - accès refusé : raison|  
+|[Compilateur avertissement (niveau 3) C4633](../../error-messages/compiler-warnings/compiler-warning-level-3-c4633.md)|Cible de commentaire de document XML : erreur : raison|  
+|Avertissement du compilateur (niveau 4) C4634|Cible de commentaire de document XML : ne peut pas être appliqué : raison|  
+|Avertissement du compilateur (niveau 3) C4635|Cible de commentaire de document XML : code XML incorrect : raison|  
+|Avertissement du compilateur (niveau 3) C4636|Commentaire de document XML appliqué pour construire : la balise requiert non vide ' attribut '.|  
+|Avertissement du compilateur (niveau 3 et 4) C4637|Cible de commentaire de document XML : \<inclure > balise ignorée. Raison|  
+|Avertissement du compilateur (niveau 3) C4638|Cible de commentaire de document XML : référence à un symbole inconnu 'symbole'.|  
+|[Compilateur avertissement (niveau 4) C4639](../../error-messages/compiler-warnings/compiler-warning-level-4-c4639.md)|Erreur MSXML, document XML commentaires ne seront pas traités. Raison|  
+|[Compilateur avertissement (niveau 3) C4640](../../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md)|'instance' : la construction d'un objet static local n'est pas thread-safe|  
+|[Compilateur avertissement (niveau 3) C4641](../../error-messages/compiler-warnings/compiler-warning-level-3-c4641.md)|Le commentaire de document XML comporte une référence croisée ambiguë :|  
+|Avertissement du compilateur (niveau 3) C4645|la fonction déclarée avec __declspec(noreturn) a une instruction return|  
+|Avertissement du compilateur (niveau 3) C4646|la fonction déclarée avec __declspec(noreturn) a un type de retour non void|  
+|[Compilateur (niveau 1) d’avertissement C4650](../../error-messages/compiler-warnings/compiler-warning-level-1-c4650.md)|informations de débogage absentes de l'en-tête précompilé ; seuls les symboles globaux de l'en-tête seront disponibles|  
+|[Compilateur avertissement (niveau 1) C4651](../../error-messages/compiler-warnings/compiler-warning-level-1-c4651.md)|'définition' spécifiée pour l’en-tête précompilé mais non pour la compilation en cours|  
+|[Compilateur avertissement (niveau 1) C4652](../../error-messages/compiler-warnings/compiler-warning-level-1-c4652.md)|option du compilateur 'option' non cohérente avec l’en-tête précompilé ; option de ligne de commande actuelle remplacera défini dans l’en-tête précompilé|  
+|[C4653 d’avertissement (niveau 2) du compilateur](../../error-messages/compiler-warnings/compiler-warning-level-2-c4653.md)|option du compilateur 'option' non cohérente avec l’en-tête précompilé ; option de ligne de commande en cours ignorée|  
+|Avertissement du compilateur (niveau 1) C4655|'symbole' : type de variable postérieur à la dernière génération, ou défini différemment ailleurs|  
+|[Compilateur avertissement (niveau 1) C4656](../../error-messages/compiler-warnings/compiler-warning-level-1-c4656.md)|'symbole' : type de données est nouveau ou a été modifié depuis la dernière build ou est défini différemment ailleurs|  
+|Avertissement du compilateur (niveau 1) C4657|l'expression implique un type de données postérieur à la dernière génération|  
+|Avertissement du compilateur (niveau 1) C4658|'fonction' : prototype de fonction est nouveau depuis la dernière génération, ou est déclaré différemment à un autre emplacement|  
+|[Compilateur avertissement (niveau 1) C4659](../../error-messages/compiler-warnings/compiler-warning-level-1-c4659.md)|#pragma 'pragma' : utilisation du segment réservé 'segment' a un comportement indéfini, utilisez #pragma comment (linker,...)|  
+|[Compilateur avertissement (niveau 1) C4661](../../error-messages/compiler-warnings/compiler-warning-level-1-c4661.md)|'identificateur' : aucune définition appropriée pour la demande d’instanciation explicite du modèle|  
+|Avertissement du compilateur (niveau 1) C4662|instanciation explicite ; la classe de modèle 'identificateur1' n’a aucune définition pour spécialiser 'identificateur2'|  
+|[Compilateur avertissement (niveau 1) C4667](../../error-messages/compiler-warnings/compiler-warning-level-1-c4667.md)|'fonction' : aucun modèle de fonction défini correspondant à l’instanciation d’imposée|  
+|[Compilateur avertissement (niveau 4) C4668](../../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md)|'symbole' n’est pas défini comme préprocesseur ou macro, remplacement par '0' pour 'directive'|  
+|[Compilateur avertissement (niveau 1) C4669](../../error-messages/compiler-warnings/compiler-warning-level-1-c4669.md)|'cast' : conversion risquée : 'classe' est un objet de type managé|  
+|Avertissement du compilateur (niveau 4) C4670|'identificateur' : cette classe de base est inaccessible|  
+|Avertissement du compilateur (niveau 4) C4671|'identificateur' : le constructeur de copie est inaccessible|  
+|Avertissement du compilateur (niveau 4) C4672|'identificateur1' : ambigu. Déjà rencontré comme 'identifier2'|  
+|[Compilateur avertissement (niveau 4) C4673](../../error-messages/compiler-warnings/compiler-warning-level-4-c4673.md)|levant 'identificateur' les types suivants n’est pas prises en compte au niveau du site catch|  
+|Avertissement du compilateur (niveau 1) C4674|'method' doit être déclaré 'static' et avoir un seul paramètre|  
+|Avertissement du compilateur (niveau 4) C4676|'%s' : le destructeur est inaccessible|  
+|[Compilateur avertissement (niveau 1) C4677](../../error-messages/compiler-warnings/compiler-warning-level-1-c4677.md)|'fonction' : la signature de membre non privée contient un type privé d’assembly 'type_privé'|  
+|Avertissement du compilateur (niveau 1) C4678|La classe de base 'base_type' est moins accessible que 'derived_type'|  
+|[Compilateur avertissement (niveau 1) C4679](../../error-messages/compiler-warnings/compiler-warning-level-1-c4679.md)|'membre' : Impossible d’importer le membre|  
+|[Compilateur avertissement (niveau 4) C4680](../../error-messages/compiler-warnings/compiler-warning-level-4-c4680.md)|'classe' : coclasse ne spécifie pas une interface par défaut|  
+|Avertissement du compilateur (niveau 4) C4681|'classe' : coclasse ne spécifie pas une interface par défaut qui est une source d’événement|  
+|Avertissement du compilateur (niveau 4) C4682|'paramètre' : aucun attribut de paramètre directionnel spécifié, [in] pris par défaut|  
+|[Compilateur avertissement (niveau 1) C4683](../../error-messages/compiler-warnings/compiler-warning-level-1-c4683.md)|'fonction' : source de l’événement a un 'out'-paramètre ; Faites preuve de prudence lorsque vous raccordez plusieurs gestionnaires d’événements|  
+|[Compilateur avertissement (niveau 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribut' : avertissement ! attribut peut entraîner la génération de code non valide : utilisez avec précaution|  
+|Avertissement du compilateur (niveau 1) C4685|'> >' attendu, '>>' trouvé lors de l'analyse des paramètres du modèle|  
+|[Compilateur avertissement (niveau 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|’type défini par l’utilisateur’ : changement de comportement possible, changement de la convention d’appel de retour UDT|  
+|[Avertissement du compilateur C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'classe' : une classe abstraite sealed ne peut pas implémenter une interface 'interface'|  
+|Avertissement du compilateur (niveau 1) C4688|'constraint' : la liste des contraintes contient un type privé d’assembly 'type'|  
+|Avertissement du compilateur (niveau 1) C4689|'%c' : caractère non pris en charge dans #pragma detect_mismatch ; #pragma ignoré|  
+|Avertissement du compilateur (niveau 4) C4690|[emitidl (pop)] : plus de POP que de push|  
+|[Compilateur Warning (level 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'type' : type référencé était attendu dans l’assembly non référencé 'fichier', type défini dans l’unité de traduction actuelle utilisée à la place|  
+|[Compilateur avertissement (niveau 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'fonction' : la signature de membre non privée contient un type natif privé d'assembly 'type_natif'|  
+|Avertissement du compilateur (niveau 1) C4693|'classe' : une classe abstraite sealed ne peut pas avoir de n’importe quelle instance membres' instance'|  
+|Avertissement du compilateur (niveau 1) C4694|'classe' : une classe abstraite sealed ne peut pas avoir une classe de base 'classe_base'|  
+|Avertissement du compilateur (niveau 1) C4695|#pragma execution_character_set : jeu de caractères' n’est pas un argument pris en charge : actuellement, seul « UTF-8 » est pris en charge|  
+|Avertissement du compilateur (niveau 1) C4696|/ Option ZBvalue1 hors limites ; en supposant que 'value2'|  
+|[Compilateur avertissement (niveaux 1 et 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)|variable locale non initialisée 'nom' utilisée|  
+|[Compilateur avertissement (niveau 4) C4701](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)|potentiellement non initialisée variable locale 'nom' utilisée|  
+|[Compilateur avertissement (niveau 4) C4702](../../error-messages/compiler-warnings/compiler-warning-level-4-c4702.md)|impossible d'atteindre le code|  
+|[Compilateur avertissement (niveau 4) C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)|variable de pointeur locale potentiellement non initialisée '%s' utilisée|  
+|[Compilateur avertissement (niveau 4) C4706](../../error-messages/compiler-warnings/compiler-warning-level-4-c4706.md)|assignation au sein d'une expression conditionnelle|  
+|[Compilateur avertissement (niveau 4) C4709](../../error-messages/compiler-warnings/compiler-warning-level-4-c4709.md)|opérateur virgule au sein d'une expression d'index de tableau|  
+|[Compilateur avertissement (niveau 4) C4710](../../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md)|'fonction' : fonction non inline|  
+|[Compilateur avertissement (niveau 1) C4711](../../error-messages/compiler-warnings/compiler-warning-level-1-c4711.md)|' fonction ' sélectionnée pour expansion inline automatique|  
+|[Compilateur avertissement (niveau 4) C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md)|' fonction ' marquée comme __forceinline non inline|  
+|[Compilateur avertissement (niveau 1) C4715](../../error-messages/compiler-warnings/compiler-warning-level-1-c4715.md)|'fonction' : une valeur de retour pas tous les chemins d’accès de contrôle|  
+|[Compilateur avertissement (niveau 1) C4716](../../error-messages/compiler-warnings/compiler-warning-level-1-c4716.md)|'fonction' : doit retourner une valeur|  
+|[Compilateur avertissement (niveau 1) C4717](../../error-messages/compiler-warnings/compiler-warning-level-1-c4717.md)|'fonction' : récurrent sur tous les chemins d’accès de contrôle, la fonction entraînera un débordement de pile d’exécution|  
+|Avertissement du compilateur (niveau 4) C4718|appel de fonction' : appel récurrent n’a pas d’effets secondaires, suppression|  
+|Avertissement du compilateur (niveau 1) C4719|constante double trouvée avec Qfast spécifié - utilisez 'f' comme suffixe pour indiquer simple précision|  
+|Avertissement du compilateur (niveau 2) C4720|rapports d’assembleur en ligne : « message »|  
+|Avertissement du compilateur (niveau 1) C4721|'fonction' : non disponible comme intrinsèque|  
+|Avertissement du compilateur (niveau 1) C4722|'fonction' : aucun retour du destructeur, fuite de mémoire|  
+|[Compilateur avertissement (niveau 3) C4723](../../error-messages/compiler-warnings/compiler-warning-level-3-c4723.md)|division potentielle par 0|  
+|Avertissement du compilateur (niveau 3) C4724|modulo potentiel par 0|  
+|Avertissement du compilateur (niveau 3) C4725|l'instruction peut manquer de précision sur certains processeurs Pentium|  
+|[Erreur C4727 de compilateur avertissement (niveau 1)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4727.md)|PCH nommé fichier_pch comportant le même horodatage dans fichier_obj_1 et fichier_obj_2.  Utilisation du premier PCH.|  
+|Avertissement du compilateur (niveau 1) C4728|Option /Yl- ignorée, car la référence PCH est requise|  
+|Avertissement du compilateur (niveau 4) C4729|fonction trop importante pour les avertissements bas‚s sur les graphes de flux|  
+|[Compilateur avertissement (niveau 1) C4730](../../error-messages/compiler-warnings/compiler-warning-level-1-c4730.md)Avertissement du compilateur (niveau 1) C4730|« principal » : _m64 et expressions peuvent entraîner un code erroné de virgule flottante|  
+|[Avertissement (niveau 1) du compilateur C4731](../../error-messages/compiler-warnings/compiler-warning-level-1-c4731.md)|'pointeur' : 'Registre' modifié par le code assembleur inline de Registre de pointeur frame|  
+|Avertissement du compilateur (niveau 1) C4732|'%s' intrinsèque n'est pas pris en charge dans cette architecture|  
+|[Compilateur avertissement (niveau 1) C4733](../../error-messages/compiler-warnings/compiler-warning-level-1-c4733.md)|affectation de Inline asm à 'FS:0' : gestionnaire non inscrit en tant que gestionnaire safe|  
+|[Compilateur avertissement (niveau 3) C4738](../../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md)|stockage de résultat flottant 32 bits en mémoire, perte possible de performances|  
+|Avertissement du compilateur (niveau 1) C4739|la référence à la variable ’var’ dépasse la taille de son espace de stockage|  
+|[Avertissement (niveau 4) du compilateur C4740](../../error-messages/compiler-warnings/compiler-warning-level-4-c4740.md)|le flux entrant ou sortant du code asm incorporé supprime l'optimisation globale|  
+|[Avertissement (niveau 1) du compilateur C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|'var' a un alignement différent dans 'fichier1' et 'fichier2' : nombre et nombre|  
+|[Avertissement (niveau 1) du compilateur C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' a une taille différente dans 'fichier1' et 'fichier2' : nombre et le nombre d’octets|  
+|[Compilateur avertissement (niveau 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'var' a un type différent dans 'fichier1' et 'fichier2' : 'type1' et 'type2'|  
+|[C4746 d’avertissement du compilateur](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|accès volatile de « %s » est soumis à /volatile :\<iso | ms > configuration ; envisagez d’utiliser des fonctions intrinsèques __iso_volatile_load/store|  
+|[Compilateur Warning (level 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Appel managé 'entrypoint' : Impossible d’exécuter du code managé lors du verrouillage du chargeur, y compris le point d’entrée DLL et les appels accessibles à partir du point d’entrée DLL|  
+|Avertissement du compilateur (niveau 1) C4750|'identifier' : fonction with _alloca() inline dans une boucle|  
+|Avertissement du compilateur (niveau 4) C4751|/arch:AVX ne s'applique pas aux extensions SIMD Streaming Intel(R) qui se trouvent dans inline ASM|  
+|Avertissement du compilateur (niveau 4) C4752|Intel(R) Advanced Vector Extensions trouvé ; utilisez /arch:AVX à la place|  
+|Avertissement du compilateur (niveau 4) C4754|Les règles de conversion pour les opérations arithmétiques dans la comparaison à %s(%d) signifient qu’une branche ne peut pas être exécutée. Effectuer un cast de « %s » à « %s » (ou un type similaire de %d octets).|  
+|Avertissement C4755 du compilateur|Les règles de conversion pour les opérations arithmétiques dans la comparaison à %s(%d) signifient qu’une branche ne peut pas être exécutée dans une fonction inline. Effectuer un cast de « %s » à « %s » (ou un type similaire de %d octets).|  
+|[Compilateur avertissement (niveau 2) C4756](../../error-messages/compiler-warnings/compiler-warning-level-2-c4756.md)|dépassement d'une opération arithmétique de constante|  
+|Avertissement du compilateur (niveau 4) C4757|valeur d'indice non signée et élevée, souhaitiez-vous une constante négative ?|  
+|Avertissement du compilateur (niveau 4) C4764|Impossible d'aligner les objets de bloc catch sur plus de 16 octets|  
+|Avertissement du compilateur (niveau 4) C4767|le nom de section '%s' contient plus que 8 caractères et sera tronqué par l'Éditeur de liens|  
+|Avertissement C4770 du compilateur|enum partiellement validé '%s' utilisé en tant qu'index|  
+|[Compilateur avertissement (niveau 1) C4772](../../error-messages/compiler-warnings/compiler-warning-level-1-c4772.md)|#importation a référencé un type à partir d’une bibliothèque de types manquante ; 'type_manquant' utilisé comme espace réservé|  
+|[Avertissement (niveau 1) du compilateur C4788](../../error-messages/compiler-warnings/compiler-warning-level-1-c4788.md)|'identificateur' : identificateur tronqué à 'nombre' caractères|  
+|[Avertissement (niveau 1) du compilateur C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|la mémoire tampon 'identificateur' d'une taille de N octets sera dépassée ; M octets seront écrits en commençant à l'offset L|  
+|Avertissement du compilateur (niveau 2) C4792|fonction '%s' déclarée à l'aide de sysimport et référencée à partir du code natif ; bibliothèque d'importation requise pour établir la liaison|  
+|[Compilateur avertissement (niveaux 1 et 3) C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)|'fonction' : fonction compilée comme native : \n\t'reason'|  
+|Avertissement du compilateur (niveau 1) C4794|segment de variable de thread de stockage local '%s' modifié de '%s' en '%s'|  
+|[Compilateur avertissement (niveau 1) C4799](../../error-messages/compiler-warnings/compiler-warning-level-1-c4799.md)|' fonction ' a aucune instruction EMMS|
