@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton::CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton::PreTranslateMessage
+- AFXMENUBUTTON/CMFCMenuButton::SizeToContent
+- AFXMENUBUTTON/CMFCMenuButton::m_bOSMenu
+- AFXMENUBUTTON/CMFCMenuButton::m_bRightArrow
+- AFXMENUBUTTON/CMFCMenuButton::m_bStayPressed
+- AFXMENUBUTTON/CMFCMenuButton::m_hMenu
+- AFXMENUBUTTON/CMFCMenuButton::m_nMenuResult
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,14 +110,14 @@ class CMFCMenuButton : public CMFCButton
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxmenubutton.h  
   
-##  <a name="a-namecmfcmenubuttona--cmfcmenubuttoncmfcmenubutton"></a><a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
+##  <a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
  Construit un nouveau [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md) objet.  
   
 ```  
 CMFCMenuButton();
 ```  
   
-##  <a name="a-namembosmenua--cmfcmenubuttonmbosmenu"></a><a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
+##  <a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
  Une variable membre de type Boolean qui indique le menu contextuel affiche de l’infrastructure.  
   
 ```  
@@ -118,7 +127,7 @@ BOOL m_bOSMenu;
 ### <a name="remarks"></a>Remarques  
  Si `m_bOSMenu` est `TRUE`, le framework appelle la `TrackPopupMenu` méthode pour cet objet. Sinon, le framework appelle [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).  
   
-##  <a name="a-namembrightarrowa--cmfcmenubuttonmbrightarrow"></a><a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
+##  <a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
  Une variable de membre de type Boolean qui indique l’emplacement du menu contextuel.  
   
 ```  
@@ -128,7 +137,7 @@ BOOL m_bRightArrow;
 ### <a name="remarks"></a>Notes  
  Lorsque l’utilisateur appuie sur le bouton de menu, l’application affiche un menu contextuel. L’infrastructure affiche le menu contextuel en cliquant sur le bouton ou à droite du bouton. Le bouton possède également une petite flèche qui indique où le menu contextuel s’affiche. Si `m_bRightArrow` est `TRUE`, l’infrastructure affiche le menu contextuel à droite du bouton. Sinon, elle affiche le menu contextuel sous le bouton.  
   
-##  <a name="a-namembstaypresseda--cmfcmenubuttonmbstaypressed"></a><a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
+##  <a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
  Une variable de membre de type Boolean qui indique si le bouton de menu apparaît enfoncée alors que l’utilisateur effectue une sélection dans le menu contextuel.  
   
 ```  
@@ -140,7 +149,7 @@ BOOL m_bStayPressed;
   
  Si le `m_bStayPressed` membre est `TRUE`, le bouton de menu est activé lorsque l’utilisateur clique sur le bouton. Il reste enfoncé jusqu'à une fois que l’utilisateur ferme le menu contextuel, en effectuant une sélection ou de l’annulation.  
   
-##  <a name="a-namemhmenua--cmfcmenubuttonmhmenu"></a><a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
+##  <a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
  Le handle du menu attaché.  
   
 ```  
@@ -150,7 +159,7 @@ HMENU m_hMenu;
 ### <a name="remarks"></a>Notes  
  L’infrastructure affiche le menu indiqué par cette variable membre lorsque l’utilisateur clique sur le bouton de menu.  
   
-##  <a name="a-namemnmenuresulta--cmfcmenubuttonmnmenuresult"></a><a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
+##  <a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
  Entier qui indique quel élément de l’utilisateur sélectionne dans le menu contextuel.  
   
 ```  
@@ -160,7 +169,7 @@ int m_nMenuResult;
 ### <a name="remarks"></a>Remarques  
  La valeur de cette variable membre est égal à zéro si l’utilisateur annule le menu sans effectuer de sélection, ou si une erreur se produit.  
   
-##  <a name="a-namepretranslatemessagea--cmfcmenubuttonpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
  Appelé par l’infrastructure pour convertir des messages de fenêtre avant leur distribution.  
   
 ```  
@@ -176,7 +185,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesizetocontenta--cmfcmenubuttonsizetocontent"></a><a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
  Modifie la taille du bouton en fonction de sa taille du texte et la taille de l’image.  
   
 ```  

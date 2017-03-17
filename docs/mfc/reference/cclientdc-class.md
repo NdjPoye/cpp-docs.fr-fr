@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CClientDC
+- AFXWIN/CClientDC
+- AFXWIN/CClientDC::CClientDC
+- AFXWIN/CClientDC::m_hWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +83,7 @@ class CClientDC : public CDC
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="a-namecclientdca--cclientdccclientdc"></a><a name="cclientdc"></a>CClientDC::CClientDC  
+##  <a name="cclientdc"></a>CClientDC::CClientDC  
  Construit un `CClientDC` objet qui accède à la zone cliente de la [CWnd](../../mfc/reference/cwnd-class.md) désigné par `pWnd`.  
   
 ```  
@@ -99,7 +102,7 @@ explicit CClientDC(CWnd* pWnd);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView&#42;](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
   
-##  <a name="a-namemhwnda--cclientdcmhwnd"></a><a name="m_hwnd"></a>CClientDC::m_hWnd  
+##  <a name="m_hwnd"></a>CClientDC::m_hWnd  
  Le `HWND` de la `CWnd` pointeur utilisé pour construire le `CClientDC` objet.  
   
 ```  

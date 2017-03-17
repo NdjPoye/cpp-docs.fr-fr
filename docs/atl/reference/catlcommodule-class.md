@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlComModule
 - CAtlComModule
-- ATL::CAtlComModule
+- ATLBASE/ATL::CAtlComModule
+- ATLBASE/ATL::CAtlComModule::CAtlComModule
+- ATLBASE/ATL::CAtlComModule::RegisterServer
+- ATLBASE/ATL::CAtlComModule::RegisterTypeLib
+- ATLBASE/ATL::CAtlComModule::UnregisterServer
+- ATLBASE/ATL::CAtlComModule::UnRegisterTypeLib
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +85,7 @@ class CAtlComModule : public _ATL_COM_MODULE
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
   
-##  <a name="a-namecatlcommodulea--catlcommodulecatlcommodule"></a><a name="catlcommodule"></a>CAtlComModule::CAtlComModule  
+##  <a name="catlcommodule"></a>CAtlComModule::CAtlComModule  
  Constructeur.  
   
 ```
@@ -91,7 +95,7 @@ CAtlComModule() throw();
 ### <a name="remarks"></a>Remarques  
  Initialise le module.  
   
-##  <a name="a-namedtora--catlcommodulecatlcommodule"></a><a name="dtor"></a>CAtlComModule :: ~ CAtlComModule  
+##  <a name="dtor"></a>CAtlComModule :: ~ CAtlComModule  
  Destructeur.  
   
 ```
@@ -101,7 +105,7 @@ CAtlComModule() throw();
 ### <a name="remarks"></a>Remarques  
  Libère toutes les fabriques de classes.  
   
-##  <a name="a-nameregisterservera--catlcommoduleregisterserver"></a><a name="registerserver"></a>CAtlComModule::RegisterServer  
+##  <a name="registerserver"></a>CAtlComModule::RegisterServer  
  Appelez cette méthode pour mettre à jour le Registre système pour chaque objet du mappage d’objets.  
   
 ```
@@ -121,7 +125,7 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ### <a name="remarks"></a>Remarques  
  Appelle la fonction globale [AtlComModuleRegisterServer](http://msdn.microsoft.com/library/d11a0c91-0c56-4b1b-a5f5-1287970f798b).  
   
-##  <a name="a-nameregistertypeliba--catlcommoduleregistertypelib"></a><a name="registertypelib"></a>CAtlComModule::RegisterTypeLib  
+##  <a name="registertypelib"></a>CAtlComModule::RegisterTypeLib  
  Appelez cette méthode pour inscrire une bibliothèque de types.  
   
 ```
@@ -139,7 +143,7 @@ HRESULT RegisterTypeLib();
 ### <a name="remarks"></a>Remarques  
  Ajoute des informations sur une bibliothèque de types dans le Registre système. Si l’instance de module contient plusieurs bibliothèques de types, utilisez la première version de cette méthode pour spécifier le type de bibliothèque doit être utilisé.  
   
-##  <a name="a-nameunregisterservera--catlcommoduleunregisterserver"></a><a name="unregisterserver"></a>CAtlComModule::UnregisterServer  
+##  <a name="unregisterserver"></a>CAtlComModule::UnregisterServer  
  Appelez cette méthode pour annuler l’inscription de chaque objet dans la table des objets.  
   
 ```
@@ -161,7 +165,7 @@ HRESULT UnregisterServer(
 ### <a name="remarks"></a>Notes  
  Appelle la fonction globale [AtlComModuleUnregisterServer](http://msdn.microsoft.com/library/c4ef3da4-def7-4aaf-b005-573a02e389d5).  
   
-##  <a name="a-nameunregistertypeliba--catlcommoduleunregistertypelib"></a><a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib  
+##  <a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib  
  Appelez cette méthode pour annuler l’inscription d’une bibliothèque de types.  
   
 ```

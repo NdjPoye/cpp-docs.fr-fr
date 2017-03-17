@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CLinearTransitionFromSpeed
 - CLinearTransitionFromSpeed
+- AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed
+- AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed::CLinearTransitionFromSpeed
+- AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed::Create
+- AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed::m_dblSpeed
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +87,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="a-nameclineartransitionfromspeeda--clineartransitionfromspeedclineartransitionfromspeed"></a><a name="clineartransitionfromspeed"></a>CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
+##  <a name="clineartransitionfromspeed"></a>CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
  Construit un objet de transition de vitesse linéaire et l’initialise avec la vitesse et la valeur finale.  
   
 ```  
@@ -99,7 +103,7 @@ CLinearTransitionFromSpeed(
  `dblFinalValue`  
  La valeur de la variable d’animation à la fin de la transition.  
   
-##  <a name="a-namecreatea--clineartransitionfromspeedcreate"></a><a name="create"></a>CLinearTransitionFromSpeed::Create  
+##  <a name="create"></a>CLinearTransitionFromSpeed::Create  
  Appelle la bibliothèque des transitions pour créer l’objet COM de transition encapsulé.  
   
 ```  
@@ -115,14 +119,14 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la transition est créée avec succès ; Sinon, FALSE.  
   
-##  <a name="a-namemdblfinalvaluea--clineartransitionfromspeedmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CLinearTransitionFromSpeed::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CLinearTransitionFromSpeed::m_dblFinalValue  
  La valeur de la variable d’animation à la fin de la transition.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemdblspeeda--clineartransitionfromspeedmdblspeed"></a><a name="m_dblspeed"></a>CLinearTransitionFromSpeed::m_dblSpeed  
+##  <a name="m_dblspeed"></a>CLinearTransitionFromSpeed::m_dblSpeed  
  La valeur absolue de la rapidité de la variable.  
   
 ```  

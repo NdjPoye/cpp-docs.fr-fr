@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IObjectWithSiteImpl
-- ATL.IObjectWithSiteImpl<T>
 - IObjectWithSiteImpl
-- ATL.IObjectWithSiteImpl
-- ATL::IObjectWithSiteImpl<T>
+- ATLCOM/ATL::IObjectWithSiteImpl
+- ATLCOM/ATL::IObjectWithSiteImpl::GetSite
+- ATLCOM/ATL::IObjectWithSiteImpl::SetChildSite
+- ATLCOM/ATL::IObjectWithSiteImpl::SetSite
+- ATLCOM/ATL::IObjectWithSiteImpl::m_spUnkSite
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +90,7 @@ template <class T>
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="a-namegetsitea--iobjectwithsiteimplgetsite"></a><a name="getsite"></a>IObjectWithSiteImpl::GetSite  
+##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite  
  Interroge le site d’un pointeur vers l’interface identifié par `riid`.  
   
 ```
@@ -103,7 +104,7 @@ STDMETHOD(GetSite)(
   
  Consultez la page [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namemspunksitea--iobjectwithsiteimplmspunksite"></a><a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
+##  <a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
  Gestion du site **IUnknown** pointeur.  
   
 ```
@@ -113,7 +114,7 @@ CComPtr<IUnknown> m_spUnkSite;
 ### <a name="remarks"></a>Remarques  
  `m_spUnkSite`reçoit le pointeur this via un appel à [SetSite](#setsite).  
   
-##  <a name="a-namesetchildsitea--iobjectwithsiteimplsetchildsite"></a><a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
+##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
  Fournit l’objet du site **IUnknown** pointeur.  
   
 ```
@@ -127,7 +128,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK`.  
   
-##  <a name="a-namesetsitea--iobjectwithsiteimplsetsite"></a><a name="setsite"></a>IObjectWithSiteImpl::SetSite  
+##  <a name="setsite"></a>IObjectWithSiteImpl::SetSite  
  Fournit l’objet du site **IUnknown** pointeur.  
   
 ```

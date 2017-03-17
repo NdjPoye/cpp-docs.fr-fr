@@ -10,6 +10,35 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoWorkspace
+- AFXDAO/CDaoWorkspace
+- AFXDAO/CDaoWorkspace::CDaoWorkspace
+- AFXDAO/CDaoWorkspace::Append
+- AFXDAO/CDaoWorkspace::BeginTrans
+- AFXDAO/CDaoWorkspace::Close
+- AFXDAO/CDaoWorkspace::CommitTrans
+- AFXDAO/CDaoWorkspace::CompactDatabase
+- AFXDAO/CDaoWorkspace::Create
+- AFXDAO/CDaoWorkspace::GetDatabaseCount
+- AFXDAO/CDaoWorkspace::GetDatabaseInfo
+- AFXDAO/CDaoWorkspace::GetIniPath
+- AFXDAO/CDaoWorkspace::GetIsolateODBCTrans
+- AFXDAO/CDaoWorkspace::GetLoginTimeout
+- AFXDAO/CDaoWorkspace::GetName
+- AFXDAO/CDaoWorkspace::GetUserName
+- AFXDAO/CDaoWorkspace::GetVersion
+- AFXDAO/CDaoWorkspace::GetWorkspaceCount
+- AFXDAO/CDaoWorkspace::GetWorkspaceInfo
+- AFXDAO/CDaoWorkspace::Idle
+- AFXDAO/CDaoWorkspace::IsOpen
+- AFXDAO/CDaoWorkspace::Open
+- AFXDAO/CDaoWorkspace::RepairDatabase
+- AFXDAO/CDaoWorkspace::Rollback
+- AFXDAO/CDaoWorkspace::SetDefaultPassword
+- AFXDAO/CDaoWorkspace::SetDefaultUser
+- AFXDAO/CDaoWorkspace::SetIniPath
+- AFXDAO/CDaoWorkspace::SetIsolateODBCTrans
+- AFXDAO/CDaoWorkspace::SetLoginTimeout
+- AFXDAO/CDaoWorkspace::m_pDAOWorkspace
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -173,7 +202,7 @@ class CDaoWorkspace : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
   
-##  <a name="a-nameappenda--cdaoworkspaceappend"></a><a name="append"></a>CDaoWorkspace::Append  
+##  <a name="append"></a>CDaoWorkspace::Append  
  Appelez cette fonction membre après avoir appelé [créer](#create).  
   
 ```  
@@ -187,7 +216,7 @@ virtual void Append();
   
  Pour plus d’informations, consultez la rubrique « Ajout de méthode » dans l’aide de DAO.  
   
-##  <a name="a-namebegintransa--cdaoworkspacebegintrans"></a><a name="begintrans"></a>CDaoWorkspace::BeginTrans  
+##  <a name="begintrans"></a>CDaoWorkspace::BeginTrans  
  Appelez cette fonction membre pour initier une transaction.  
   
 ```  
@@ -205,7 +234,7 @@ void BeginTrans();
   
  Si vous avez besoin d’isoler les transactions sur une source de données ODBC de celles sur une autre source de données ODBC, consultez le [SetIsolateODBCTrans](#setisolateodbctrans) fonction membre.  
   
-##  <a name="a-namecdaoworkspacea--cdaoworkspacecdaoworkspace"></a><a name="cdaoworkspace"></a>CDaoWorkspace::CDaoWorkspace  
+##  <a name="cdaoworkspace"></a>CDaoWorkspace::CDaoWorkspace  
  Construit un objet `CDaoWorkspace`.  
   
 ```  
@@ -223,7 +252,7 @@ CDaoWorkspace();
   
  Pour libérer un espace de travail et les objets qu’elle contient, appelez l’objet espace de travail [fermer](#close) fonction membre.  
   
-##  <a name="a-nameclosea--cdaoworkspaceclose"></a><a name="close"></a>CDaoWorkspace::Close  
+##  <a name="close"></a>CDaoWorkspace::Close  
  Appelez cette fonction membre pour fermer l’objet de l’espace de travail.  
   
 ```  
@@ -240,7 +269,7 @@ virtual void Close();
   
  Pour plus d’informations, consultez la rubrique « Méthode Close » dans l’aide de DAO.  
   
-##  <a name="a-namecommittransa--cdaoworkspacecommittrans"></a><a name="committrans"></a>CDaoWorkspace::CommitTrans  
+##  <a name="committrans"></a>CDaoWorkspace::CommitTrans  
  Appelez cette fonction membre pour valider une transaction, enregistrer un groupe de mises à jour et des modifications à une ou plusieurs bases de données dans l’espace de travail.  
   
 ```  
@@ -258,7 +287,7 @@ void CommitTrans();
 > [!NOTE]
 >  Cela n’est pas un mécanisme de validation en deux phases. Si une mise à jour ne parvient pas à valider, d’autres encore valide.  
   
-##  <a name="a-namecompactdatabasea--cdaoworkspacecompactdatabase"></a><a name="compactdatabase"></a>CDaoWorkspace::CompactDatabase  
+##  <a name="compactdatabase"></a>CDaoWorkspace::CompactDatabase  
  Appelez cette fonction membre pour compacter une spécifié Microsoft Jet (. Base de données MDB).  
   
 ```  
@@ -351,7 +380,7 @@ static void PASCAL CompactDatabase(
   
  Pour plus d’informations sur le compactage des bases de données, consultez la rubrique « Méthode CompactDatabase » dans l’aide de DAO.  
   
-##  <a name="a-namecreatea--cdaoworkspacecreate"></a><a name="create"></a>CDaoWorkspace::Create  
+##  <a name="create"></a>CDaoWorkspace::Create  
  Appelez cette fonction membre pour créer un nouvel objet d’espace de travail DAO et l’associer à la bibliothèque MFC `CDaoWorkspace` objet.  
   
 ```  
@@ -382,7 +411,7 @@ virtual void Create(
   
  Après le **créer** appel, l’objet de l’espace de travail est dans un état ouvert, prêt à être utilisé. Vous n’appelez pas **Open** après **créer**. Vous n’appelez pas **créer** si l’espace de travail existe déjà dans la collection d’espaces de travail. **Créer** initialise le moteur de base de données si elle n’a pas déjà été initialisé pour votre application.  
   
-##  <a name="a-namegetdatabasecounta--cdaoworkspacegetdatabasecount"></a><a name="getdatabasecount"></a>CDaoWorkspace::GetDatabaseCount  
+##  <a name="getdatabasecount"></a>CDaoWorkspace::GetDatabaseCount  
  Appelez cette fonction membre pour récupérer le nombre d’objets de base de données DAO dans la collection de bases de données de l’espace de travail, le nombre de bases de données ouvertes dans l’espace de travail.  
   
 ```  
@@ -395,7 +424,7 @@ short GetDatabaseCount();
 ### <a name="remarks"></a>Notes  
  `GetDatabaseCount`est utile si vous devez effectuer une boucle sur toutes les bases de données définies dans la collection de bases de données de l’espace de travail. Pour obtenir des informations sur une base de données dans la collection, consultez [GetDatabaseInfo](#getdatabaseinfo). L’utilisation classique consiste à appeler `GetDatabaseCount` pour le nombre de bases de données ouvertes, puis utiliser ce nombre comme un index de boucle pour les appels répétés à `GetDatabaseInfo`.  
   
-##  <a name="a-namegetdatabaseinfoa--cdaoworkspacegetdatabaseinfo"></a><a name="getdatabaseinfo"></a>CDaoWorkspace::GetDatabaseInfo  
+##  <a name="getdatabaseinfo"></a>CDaoWorkspace::GetDatabaseInfo  
  Appelez cette fonction membre pour obtenir différents types d’informations sur une base de données est ouverte dans l’espace de travail.  
   
 ```  
@@ -435,7 +464,7 @@ void GetDatabaseInfo(
   
  Pour obtenir une description des informations renvoyées dans `dbinfo`, consultez la [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) structure. Cette structure possède des membres qui correspondent aux éléments d’information répertoriées ci-dessus dans la description de `dwInfoOptions`. Lorsque vous demandez des informations à un niveau, vous obtenez des informations pour les niveaux de préalables.  
   
-##  <a name="a-namegetinipatha--cdaoworkspacegetinipath"></a><a name="getinipath"></a>CDaoWorkspace::GetIniPath  
+##  <a name="getinipath"></a>CDaoWorkspace::GetIniPath  
  Appelez cette fonction membre pour obtenir des paramètres d’initialisation du moteur dans le Registre Windows de l’emplacement de la base de données Microsoft Jet.  
   
 ```  
@@ -450,7 +479,7 @@ static CString PASCAL GetIniPath();
   
  Pour plus d’informations, consultez les rubriques « Propriété IniPath » et « Personnalisation Windows Registre paramètres d’accès aux données » dans l’aide de DAO.  
   
-##  <a name="a-namegetisolateodbctransa--cdaoworkspacegetisolateodbctrans"></a><a name="getisolateodbctrans"></a>CDaoWorkspace::GetIsolateODBCTrans  
+##  <a name="getisolateodbctrans"></a>CDaoWorkspace::GetIsolateODBCTrans  
  Appelez cette fonction membre pour obtenir la valeur actuelle de la propriété DAO IsolateODBCTrans pour l’espace de travail.  
   
 ```  
@@ -467,7 +496,7 @@ BOOL GetIsolateODBCTrans();
   
  Pour plus d’informations, consultez la rubrique « Propriété IsolateODBCTrans » dans l’aide de DAO.  
   
-##  <a name="a-namegetlogintimeouta--cdaoworkspacegetlogintimeout"></a><a name="getlogintimeout"></a>CDaoWorkspace::GetLoginTimeout  
+##  <a name="getlogintimeout"></a>CDaoWorkspace::GetLoginTimeout  
  Appelez cette fonction membre pour obtenir la valeur actuelle de la propriété DAO LoginTimeout pour l’espace de travail.  
   
 ```  
@@ -484,7 +513,7 @@ static short PASCAL GetLoginTimeout();
   
  Pour plus d’informations, consultez la rubrique « Propriété LoginTimeout » dans l’aide de DAO.  
   
-##  <a name="a-namegetnamea--cdaoworkspacegetname"></a><a name="getname"></a>CDaoWorkspace::GetName  
+##  <a name="getname"></a>CDaoWorkspace::GetName  
  Appelez cette fonction membre pour obtenir le nom défini par l’utilisateur de l’objet actif espace de travail DAO sous-jacent le `CDaoWorkspace` objet.  
   
 ```  
@@ -499,7 +528,7 @@ CString GetName();
   
  Pour plus d’informations, consultez la rubrique « Nom de propriété » dans l’aide de DAO.  
   
-##  <a name="a-namegetusernamea--cdaoworkspacegetusername"></a><a name="getusername"></a>CDaoWorkspace::GetUserName  
+##  <a name="getusername"></a>CDaoWorkspace::GetUserName  
  Appelez cette fonction membre pour obtenir le nom du propriétaire de l’espace de travail.  
   
 ```  
@@ -514,7 +543,7 @@ CString GetUserName();
   
  Pour plus d’informations sur l’appel de DAO directement, consultez [Note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md). Pour plus d’informations, consultez la rubrique « Propriété de nom d’utilisateur » dans l’aide de DAO.  
   
-##  <a name="a-namegetversiona--cdaoworkspacegetversion"></a><a name="getversion"></a>CDaoWorkspace::GetVersion  
+##  <a name="getversion"></a>CDaoWorkspace::GetVersion  
  Appelez cette fonction membre pour déterminer la version du moteur de base de données Microsoft Jet en cours d’utilisation.  
   
 ```  
@@ -529,7 +558,7 @@ static CString PASCAL GetVersion();
   
  Pour plus d’informations, consultez la rubrique « Propriété de Version » dans l’aide de DAO.  
   
-##  <a name="a-namegetworkspacecounta--cdaoworkspacegetworkspacecount"></a><a name="getworkspacecount"></a>CDaoWorkspace::GetWorkspaceCount  
+##  <a name="getworkspacecount"></a>CDaoWorkspace::GetWorkspaceCount  
  Appelez cette fonction membre pour récupérer le nombre d’objets d’espace de travail DAO dans la collection d’espaces de travail du moteur de base de données.  
   
 ```  
@@ -542,7 +571,7 @@ short GetWorkspaceCount();
 ### <a name="remarks"></a>Remarques  
  Ce nombre n’inclut pas d’espace de travail ouvert ne pas ajouté à la collection. `GetWorkspaceCount`est utile si vous devez effectuer une boucle sur tous les espaces de travail définis dans la collection d’espaces de travail. Pour obtenir des informations sur un espace de travail donné dans la collection, consultez [GetWorkspaceInfo](#getworkspaceinfo). L’utilisation classique consiste à appeler `GetWorkspaceCount` pour le nombre d’espaces de travail ouverts, puis utiliser ce nombre comme un index de boucle pour les appels répétés à `GetWorkspaceInfo`.  
   
-##  <a name="a-namegetworkspaceinfoa--cdaoworkspacegetworkspaceinfo"></a><a name="getworkspaceinfo"></a>CDaoWorkspace::GetWorkspaceInfo  
+##  <a name="getworkspaceinfo"></a>CDaoWorkspace::GetWorkspaceInfo  
  Appelez cette fonction membre pour obtenir différents types d’informations à propos d’un espace de travail est ouvert dans la session.  
   
 ```  
@@ -580,7 +609,7 @@ void GetWorkspaceInfo(
 ### <a name="remarks"></a>Remarques  
  Pour obtenir une description des informations renvoyées dans `wkspcinfo`, consultez la [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md) structure. Cette structure possède des membres qui correspondent aux éléments d’information répertoriées ci-dessus dans la description de `dwInfoOptions`. Lorsque vous demandez des informations à un niveau, vous obtenez des informations pour des niveaux antérieurs.  
   
-##  <a name="a-nameidlea--cdaoworkspaceidle"></a><a name="idle"></a>CDaoWorkspace::Idle  
+##  <a name="idle"></a>CDaoWorkspace::Idle  
  Appelez **inactif** pour fournir le moteur de base de données avec la possibilité d’effectuer des tâches en arrière-plan qui ne peuvent pas être à jour en raison de l’intensité du traitement des données.  
   
 ```  
@@ -603,7 +632,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
   
  Pour plus d’informations, consultez la rubrique « Méthode Idle » dans l’aide de DAO.  
   
-##  <a name="a-nameisopena--cdaoworkspaceisopen"></a><a name="isopen"></a>CDaoWorkspace::IsOpen  
+##  <a name="isopen"></a>CDaoWorkspace::IsOpen  
  Appelez cette fonction membre pour déterminer si les `CDaoWorkspace` objet est ouvert, autrement dit, si l’objet MFC a été initialisé par un appel à [ouvrir](#open) ou un appel à [créer](#create).  
   
 ```  
@@ -616,7 +645,7 @@ BOOL IsOpen() const;
 ### <a name="remarks"></a>Remarques  
  Vous pouvez appeler une du membre de fonctions d’un espace de travail est dans un état ouvert.  
   
-##  <a name="a-namempdaoworkspacea--cdaoworkspacempdaoworkspace"></a><a name="m_pdaoworkspace"></a>CDaoWorkspace::m_pDAOWorkspace  
+##  <a name="m_pdaoworkspace"></a>CDaoWorkspace::m_pDAOWorkspace  
  Pointeur vers l’objet d’espace de travail DAO sous-jacent.  
   
 ### <a name="remarks"></a>Notes  
@@ -624,7 +653,7 @@ BOOL IsOpen() const;
   
  Pour plus d’informations sur l’accès aux objets DAO directement, consultez [Note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
   
-##  <a name="a-nameopena--cdaoworkspaceopen"></a><a name="open"></a>CDaoWorkspace::Open  
+##  <a name="open"></a>CDaoWorkspace::Open  
  Ouvre explicitement un objet de l’espace de travail associé à espace de travail par défaut de DAO.  
   
 ```  
@@ -652,7 +681,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 |[GetIniPath](#getinipath)|[Inactivité](#idle)|[SetIniPath](#setinipath)|  
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|  
   
-##  <a name="a-namerepairdatabasea--cdaoworkspacerepairdatabase"></a><a name="repairdatabase"></a>CDaoWorkspace::RepairDatabase  
+##  <a name="repairdatabase"></a>CDaoWorkspace::RepairDatabase  
  Appelez cette fonction membre, si vous devez essayer de réparer une base de données endommagée qui accède au moteur de base de données Microsoft Jet.  
   
 ```  
@@ -673,7 +702,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
   
  Pour plus d’informations sur la réparation des bases de données, consultez la rubrique « Méthode RepairDatabase » dans l’aide de DAO.  
   
-##  <a name="a-namerollbacka--cdaoworkspacerollback"></a><a name="rollback"></a>CDaoWorkspace::Rollback  
+##  <a name="rollback"></a>CDaoWorkspace::Rollback  
  Appelez cette fonction membre pour mettre fin à la transaction en cours et rétablir toutes les bases de données dans l’espace de travail avant que la transaction a commencé.  
   
 ```  
@@ -690,7 +719,7 @@ void Rollback();
 > [!NOTE]
 >  Lorsque vous commencez une transaction, le moteur de base de données enregistre ses opérations dans un fichier conservé dans le répertoire spécifié par la variable d’environnement TEMP sur le poste de travail. Si le fichier journal épuise la capacité de stockage sur le lecteur TEMP, le moteur de base de données entraîne des MFC lever un `CDaoException` (erreur DAO 2004). À ce stade, si vous appelez **CommitTrans**, un nombre indéterminé d’opérations est validé, mais les opérations non terminées restantes sont perdues, et l’opération doit être redémarré. Appel de **restauration** libère le journal des transactions et annule toutes les opérations dans la transaction.  
   
-##  <a name="a-namesetdefaultpassworda--cdaoworkspacesetdefaultpassword"></a><a name="setdefaultpassword"></a>CDaoWorkspace::SetDefaultPassword  
+##  <a name="setdefaultpassword"></a>CDaoWorkspace::SetDefaultPassword  
  Appelez cette fonction membre pour définir le mot de passe par défaut par le moteur de base de données pour un objet de l’espace de travail est créé sans mot de passe spécifique.  
   
 ```  
@@ -716,7 +745,7 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
   
  Pour plus d’informations sur la sécurité, consultez la rubrique « Autorisations Property » dans l’aide de DAO. Pour plus d’informations, consultez les rubriques « Propriété mot » et « Propriété DefaultUser » dans l’aide de DAO.  
   
-##  <a name="a-namesetdefaultusera--cdaoworkspacesetdefaultuser"></a><a name="setdefaultuser"></a>CDaoWorkspace::SetDefaultUser  
+##  <a name="setdefaultuser"></a>CDaoWorkspace::SetDefaultUser  
  Appelez cette fonction membre pour définir le nom d’utilisateur par défaut par le moteur de base de données pour un objet de l’espace de travail est créé sans nom d’utilisateur spécifique.  
   
 ```  
@@ -742,7 +771,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
  Pour plus d’informations, consultez les rubriques « Propriété DefaultUser » et « Mot Property » dans l’aide de DAO.  
   
-##  <a name="a-namesetinipatha--cdaoworkspacesetinipath"></a><a name="setinipath"></a>CDaoWorkspace::SetIniPath  
+##  <a name="setinipath"></a>CDaoWorkspace::SetIniPath  
  Appelez cette fonction membre pour spécifier l’emplacement des paramètres du Registre Windows pour le moteur de base de données Microsoft Jet.  
   
 ```  
@@ -761,7 +790,7 @@ static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
   
  Vous pouvez utiliser ce mécanisme pour configurer le moteur de base de données avec les paramètres de Registre fourni par l’utilisateur. La portée de cet attribut est limitée à votre application et ne peut pas être modifiée sans redémarrer votre application.  
   
-##  <a name="a-namesetisolateodbctransa--cdaoworkspacesetisolateodbctrans"></a><a name="setisolateodbctrans"></a>CDaoWorkspace::SetIsolateODBCTrans  
+##  <a name="setisolateodbctrans"></a>CDaoWorkspace::SetIsolateODBCTrans  
  Appelez cette fonction membre pour définir la valeur de la propriété DAO IsolateODBCTrans pour l’espace de travail.  
   
 ```  
@@ -777,7 +806,7 @@ void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
   
  Certains serveurs ODBC, telles que Microsoft SQL Server, n’autorisent pas les transactions simultanées sur une seule connexion. Si vous avez besoin d’avoir plusieurs transactions en cours sur une base de données, définissez la propriété IsolateODBCTrans **TRUE** chaque espace de travail dès que vous l’ouvrez. Cette option force une connexion ODBC séparée pour chaque espace de travail.  
   
-##  <a name="a-namesetlogintimeouta--cdaoworkspacesetlogintimeout"></a><a name="setlogintimeout"></a>CDaoWorkspace::SetLoginTimeout  
+##  <a name="setlogintimeout"></a>CDaoWorkspace::SetLoginTimeout  
  Appelez cette fonction membre pour définir la valeur de la propriété DAO LoginTimeout pour l’espace de travail.  
   
 ```  

@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- DDX_DHtml
+- AFXDHTML/DDX_DHtml_ElementValue
+- AFXDHTML/DDX_DHtml_ElementInnerText
+- AFXDHTML/DDX_DHtml_ElementInnerHtml
+- AFXDHTML/DDX_DHtml_Anchor_Href
+- AFXDHTML/DDX_DHtml_Anchor_Target
+- AFXDHTML/DDX_DHtml_Img_Src
+- AFXDHTML/DDX_DHtml_Frame_Src
+- AFXDHTML/DDX_DHtml_IFrame_Src
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -62,7 +69,7 @@ Les macros d’assistance DDX_DHtml permettent un accès facile aux propriétés
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdhtml.h  
 
-## <a name="a-nameddxdhtmlanchorhrefa-ddxdhtmlanchorhref"></a><a name="ddx_dhtml_anchor_href"></a>DDX_DHtml_Anchor_Href
+## <a name="ddx_dhtml_anchor_href"></a>DDX_DHtml_Anchor_Href
 Définit ou récupère la destination URL ou point d’ancrage.  
   
   
@@ -87,7 +94,7 @@ DDX_DHtml_Anchor_Href(
 ## <a name="remarks"></a>Remarques  
  Cette macro appelle la [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) ID de dispatch de fonction à l’aide de la DISPID_IHTMLANCHORELEMENT_HREF
 
-## <a name="a-nameddxdhtmlanchortargeta--ddxdhtmlanchortarget"></a><a name="ddx_dhtml_anchor_target"></a>DDX_DHtml_Anchor_Target
+## <a name="ddx_dhtml_anchor_target"></a>DDX_DHtml_Anchor_Target
  Définit ou récupère la fenêtre ou frame cible.  
     
 ```  
@@ -110,7 +117,7 @@ DDX_DHtml_Anchor_Target(
 ## <a name="remarks"></a>Notes  
  Cette macro appelle la [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) ID de dispatch de fonction à l’aide de la DISPID_IHTMLANCHORELEMENT_TARGET  
 
-## <a name="a-nameddxdhtmlelementinnerhtmla--ddxdhtmlelementinnerhtml"></a><a name="ddx_dhtml_elementinnerhtml"></a>DDX_DHtml_ElementInnerHtml
+## <a name="ddx_dhtml_elementinnerhtml"></a>DDX_DHtml_ElementInnerHtml
  Définit ou récupère le code HTML entre les balises de début et de fin de l’élément actuel.  
   
   
@@ -136,7 +143,7 @@ DDX_DHtml_ElementInnerHtml(
  Cette macro appelle la [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) ID de dispatch de fonction à l’aide de la DISPID_IHTMLELEMENT_INNERHTML  
   
 
-## <a name="a-nameddxdhtmlelementinnertexta--ddxdhtmlelementinnertext"></a><a name="ddx_dhtml_elementinnertext"></a>DDX_DHtml_ElementInnerText
+## <a name="ddx_dhtml_elementinnertext"></a>DDX_DHtml_ElementInnerText
 Définit ou récupère le texte entre les balises de début et de fin de l’élément actuel.  
   
   
@@ -161,7 +168,7 @@ DDX_DHtml_ElementInnerText(
 ## <a name="remarks"></a>Remarques  
  Cette macro appelle la [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) ID de dispatch de fonction à l’aide de la DISPID_IHTMLELEMENT_INNERTEXT 
 
-## <a name="a-nameddxdhtmlelementvaluea-ddxdhtmlelementvalue"></a><a name="ddx_dhtml_elementvalue"></a>DDX_DHtml_ElementValue  
+## <a name="ddx_dhtml_elementvalue"></a>DDX_DHtml_ElementValue  
 Définit ou récupère la propriété Value du contrôle sélectionné.  
  
 ```  
@@ -186,7 +193,7 @@ DDX_DHtml_ElementValue(
   
  Cette macro appelle la [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) ID de dispatch de fonction à l’aide de la DISPID_A_VALUE  
 
-## <a name="a-nameddxdhtmlframesrca-ddxdhtmlframesrc"></a><a name="ddx_dhtml_frame_src"></a>DDX_DHtml_Frame_Src
+## <a name="ddx_dhtml_frame_src"></a>DDX_DHtml_Frame_Src
 Définit ou extrait l’URL de l’image associée.  
   
 ```  
@@ -209,7 +216,7 @@ DDX_DHtml_Frame_Src(
 ## <a name="remarks"></a>Remarques  
  Cette macro appelle la [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) ID de dispatch de fonction à l’aide de la DISPID_IHTMLFRAMEBASE_SRC  
 
-## <a name="a-nameddxdhtmliframesrca-ddxdhtmliframesrc"></a><a name="ddx_dhtml_iframe_src"></a>DDX_DHtml_IFrame_Src
+## <a name="ddx_dhtml_iframe_src"></a>DDX_DHtml_IFrame_Src
 Définit ou extrait l’URL de l’image associée.  
   
   
@@ -234,7 +241,7 @@ DDX_DHtml_IFrame_Src(
 ## <a name="remarks"></a>Notes  
  Cette macro appelle la [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) ID de dispatch de fonction à l’aide de la DISPID_IHTMLFRAMEBASE_SRC 
 
-## <a name="a-nameddxdhtmlimgsrcaddxdhtmlimgsrc"></a><a name="ddx_dhtml_img_src"></a>DDX_DHtml_Img_Src
+## <a name="ddx_dhtml_img_src"></a>DDX_DHtml_Img_Src
 Obtient ou récupère le nom d’une image ou un clip vidéo dans le document.  
   
 ```  

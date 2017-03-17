@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CStringElementTraitsI
 - CStringElementTraitsI
-- ATL.CStringElementTraitsI
+- ATLCOLL/ATL::CStringElementTraitsI
+- ATLCOLL/ATL::CStringElementTraitsI::INARGTYPE
+- ATLCOLL/ATL::CStringElementTraitsI::OUTARGTYPE
+- ATLCOLL/ATL::CStringElementTraitsI::CompareElements
+- ATLCOLL/ATL::CStringElementTraitsI::CompareElementsOrdered
+- ATLCOLL/ATL::CStringElementTraitsI::Hash
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +89,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcoll.h  
   
-##  <a name="a-namecompareelementsa--cstringelementtraitsicompareelements"></a><a name="compareelements"></a>CStringElementTraitsI::CompareElements  
+##  <a name="compareelements"></a>CStringElementTraitsI::CompareElements  
  Appelez cette fonction pour comparer deux éléments de chaîne sont égales, en ignorant les différences de casse statique.  
   
 ```
@@ -105,7 +109,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>Remarques  
  Les comparaisons respectent la casse.  
   
-##  <a name="a-namecompareelementsordereda--cstringelementtraitsicompareelementsordered"></a><a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered  
  Appelez cette fonction pour comparer deux éléments de chaîne, en ignorant les différences de casse statique.  
   
 ```
@@ -126,7 +130,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>Remarques  
  Les comparaisons respectent la casse.  
   
-##  <a name="a-namehasha--cstringelementtraitsihash"></a><a name="hash"></a>CStringElementTraitsI::Hash  
+##  <a name="hash"></a>CStringElementTraitsI::Hash  
  Appelez cette fonction statique pour calculer une valeur de hachage pour l’élément de la chaîne donnée.  
   
 ```
@@ -140,14 +144,14 @@ static ULONG Hash(INARGTYPE str) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une valeur de hachage calculée à l’aide du contenu de la chaîne.  
   
-##  <a name="a-nameinargtypea--cstringelementtraitsiinargtype"></a><a name="inargtype"></a>CStringElementTraitsI::INARGTYPE  
+##  <a name="inargtype"></a>CStringElementTraitsI::INARGTYPE  
  Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cstringelementtraitsioutargtype"></a><a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE  
+##  <a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE  
  Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.  
   
 ```

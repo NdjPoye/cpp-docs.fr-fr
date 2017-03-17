@@ -8,6 +8,13 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- CSplitButton
+- AFXCMN/CSplitButton
+- AFXCMN/CSplitButton::CSplitButton
+- AFXCMN/CSplitButton::Create
+- AFXCMN/CSplitButton::SetDropDownMenu
+- AFXCMN/CSplitButton::OnDropDown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +99,7 @@ class CSplitButton : public CButton
   
  Exigences supplémentaires pour cette classe sont décrites dans [Build Configuration requise pour les contrôles communs Windows Vista](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
-##  <a name="a-namecreatea--csplitbuttoncreate"></a><a name="create"></a>CSplitButton::Create  
+##  <a name="create"></a>CSplitButton::Create  
  Crée un contrôle bouton partagé avec des styles spécifiés et l’attache à actuel `CSplitButton` objet.  
   
 ```  
@@ -115,7 +122,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
   
-##  <a name="a-namecsplitbuttona--csplitbuttoncsplitbutton"></a><a name="csplitbutton"></a>CSplitButton::CSplitButton  
+##  <a name="csplitbutton"></a>CSplitButton::CSplitButton  
  Construit un objet `CSplitButton`. Les paramètres du constructeur spécifient un sous-menu qui s’affiche lorsqu’un utilisateur clique sur la flèche déroulante du contrôle split button.  
   
 ```  
@@ -139,7 +146,7 @@ CSplitButton(CMenu* pMenu)
 ### <a name="remarks"></a>Remarques  
  Utilisez le [CSplitButton::Create](#create) méthode pour créer un contrôle bouton partagé et l’attacher à la `CSplitButton` objet.  
   
-##  <a name="a-nameondropdowna--csplitbuttonondropdown"></a><a name="ondropdown"></a>CSplitButton::OnDropDown  
+##  <a name="ondropdown"></a>CSplitButton::OnDropDown  
  Gère la `BCN_DROPDOWN` notification envoyé par le système lorsqu’un utilisateur clique sur la flèche déroulante du contrôle de bouton Fractionner en cours.  
   
 ```  
@@ -169,7 +176,7 @@ BEGIN_MESSAGE_MAP(CMySplitButton,
 END_MESSAGE_MAP()  
 ```  
   
-##  <a name="a-namesetdropdownmenua--csplitbuttonsetdropdownmenu"></a><a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
+##  <a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
  Définit le menu déroulant qui s’affiche lorsqu’un utilisateur clique sur la flèche déroulante du contrôle de bouton Fractionner en cours.  
   
 ```  

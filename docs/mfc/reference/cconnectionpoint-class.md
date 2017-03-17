@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CConnectionPoint
+- AFXDISP/CConnectionPoint
+- AFXDISP/CConnectionPoint::CConnectionPoint
+- AFXDISP/CConnectionPoint::GetConnections
+- AFXDISP/CConnectionPoint::GetContainer
+- AFXDISP/CConnectionPoint::GetIID
+- AFXDISP/CConnectionPoint::GetMaxConnections
+- AFXDISP/CConnectionPoint::GetNextConnection
+- AFXDISP/CConnectionPoint::GetStartPosition
+- AFXDISP/CConnectionPoint::OnAdvise
+- AFXDISP/CConnectionPoint::QuerySinkInterface
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,14 +116,14 @@ class CConnectionPoint : public CCmdTarget
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdisp.h  
   
-##  <a name="a-namecconnectionpointa--cconnectionpointcconnectionpoint"></a><a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
+##  <a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
  Construit un objet `CConnectionPoint`.  
   
 ```  
 CConnectionPoint();
 ```  
   
-##  <a name="a-namegetconnectionsa--cconnectionpointgetconnections"></a><a name="getconnections"></a>CConnectionPoint::GetConnections  
+##  <a name="getconnections"></a>CConnectionPoint::GetConnections  
  Appelez cette fonction pour récupérer toutes les connexions actives pour un point de connexion.  
   
 ```  
@@ -123,7 +133,7 @@ const CPtrArray* GetConnections();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un tableau de connexions actives (récepteurs). Certaines des pointeurs dans le tableau peuvent être NULL. Chaque pointeur non NULL dans ce tableau peut être converti en toute sécurité vers un pointeur vers l’interface du récepteur à l’aide d’un opérateur de conversion.  
   
-##  <a name="a-namegetcontainera--cconnectionpointgetcontainer"></a><a name="getcontainer"></a>CConnectionPoint::GetContainer  
+##  <a name="getcontainer"></a>CConnectionPoint::GetContainer  
  Appelé par l’infrastructure pour récupérer le **IConnectionPointContainer** du point de connexion.  
   
 ```  
@@ -136,7 +146,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 ### <a name="remarks"></a>Notes  
  Cette fonction est généralement implémentée par le `BEGIN_CONNECTION_PART` (macro).  
   
-##  <a name="a-namegetiida--cconnectionpointgetiid"></a><a name="getiid"></a>CConnectionPoint::GetIID  
+##  <a name="getiid"></a>CConnectionPoint::GetIID  
  Appelée par l’infrastructure pour extraire l’ID d’interface d’un point de connexion.  
   
 ```  
@@ -149,7 +159,7 @@ virtual REFIID GetIID() = 0;
 ### <a name="remarks"></a>Remarques  
  Remplacez cette fonction pour retourner l’ID de ce point de connexion.  
   
-##  <a name="a-namegetmaxconnectionsa--cconnectionpointgetmaxconnections"></a><a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
+##  <a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
  Appelé par l’infrastructure pour récupérer le nombre maximal de connexions prises en charge par le point de connexion.  
   
 ```  
@@ -164,7 +174,7 @@ virtual int GetMaxConnections();
   
  Remplacez cette fonction si vous souhaitez limiter le nombre de récepteurs qui peuvent se connecter à votre contrôle.  
   
-##  <a name="a-namegetnextconnectiona--cconnectionpointgetnextconnection"></a><a name="getnextconnection"></a>CConnectionPoint::GetNextConnection  
+##  <a name="getnextconnection"></a>CConnectionPoint::GetNextConnection  
  Récupère un pointeur vers l’élément de connexion à `pos`.  
   
 ```  
@@ -184,7 +194,7 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCConnectionPoints n °&4;](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
-##  <a name="a-namegetstartpositiona--cconnectionpointgetstartposition"></a><a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
+##  <a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
  Démarre une itération de la carte en retournant un **POSITION** valeur qui peut être passé à un [GetNextConnection](#getnextconnection) appeler.  
   
 ```  
@@ -200,7 +210,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CConnectionPoint::GetNextConnection](#getnextconnection).  
   
-##  <a name="a-nameonadvisea--cconnectionpointonadvise"></a><a name="onadvise"></a>CConnectionPoint::OnAdvise  
+##  <a name="onadvise"></a>CConnectionPoint::OnAdvise  
  Appelé par l’infrastructure lorsqu’une connexion est établie ou interrompue.  
   
 ```  
@@ -216,7 +226,7 @@ virtual void OnAdvise(BOOL bAdvise);
   
  Remplacez cette fonction si vous souhaitez une notification lorsque les récepteurs de connecter ou déconnecter votre point de connexion.  
   
-##  <a name="a-namequerysinkinterfacea--cconnectionpointquerysinkinterface"></a><a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
+##  <a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
  Récupère un pointeur vers l’interface du récepteur demandé.  
   
 ```  

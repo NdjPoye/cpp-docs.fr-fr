@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHtmlEditCtrl
+- AFXHTML/CHtmlEditCtrl
+- AFXHTML/CHtmlEditCtrl::CHtmlEditCtrl
+- AFXHTML/CHtmlEditCtrl::Create
+- AFXHTML/CHtmlEditCtrl::GetDHtmlDocument
+- AFXHTML/CHtmlEditCtrl::GetStartDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,14 +87,14 @@ class CHtmlEditCtrl: public CWnd,
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxhtml.h  
   
-##  <a name="a-namechtmleditctrla--chtmleditctrlchtmleditctrl"></a><a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl  
+##  <a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl  
  Construit un objet `CHtmlEditCtrl`.  
   
 ```  
 CHtmlEditCtrl();
 ```  
   
-##  <a name="a-namecreatea--chtmleditctrlcreate"></a><a name="create"></a>CHtmlEditCtrl::Create  
+##  <a name="create"></a>CHtmlEditCtrl::Create  
  Crée un contrôle WebBrowser ActiveX et l’attache à le `CHtmlEditCtrl` objet. Le WebBrowser ActiveX contrôle navigue automatiquement vers un document par défaut et est ensuite placé dans le mode édition par cette fonction.  
   
 ```  
@@ -124,7 +129,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-##  <a name="a-namegetdhtmldocumenta--chtmleditctrlgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument  
  Récupère le [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface sur le document actuellement chargé dans le contrôle WebBrowser relation contenant-contenu  
   
 ```  
@@ -135,7 +140,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  L’interface de document.  
   
-##  <a name="a-namegetstartdocumenta--chtmleditctrlgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument  
+##  <a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument  
  Récupère l’URL d’un document par défaut à charger dans le contrôle WebBrowser relation contenant-contenu.  
   
 ```  

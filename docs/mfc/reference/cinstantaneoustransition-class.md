@@ -9,8 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CInstantaneousTransition
 - CInstantaneousTransition
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition::CInstantaneousTransition
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition::Create
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition::m_dblFinalValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CInstantaneousTransition : public CBaseTransition;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="a-namecinstantaneoustransitiona--cinstantaneoustransitioncinstantaneoustransition"></a><a name="cinstantaneoustransition"></a>CInstantaneousTransition::CInstantaneousTransition  
+##  <a name="cinstantaneoustransition"></a>CInstantaneousTransition::CInstantaneousTransition  
  Construit un objet de transition et initialise sa valeur finale.  
   
 ```  
@@ -93,7 +96,7 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
  `dblFinalValue`  
  La valeur de la variable d’animation à la fin de la transition.  
   
-##  <a name="a-namecreatea--cinstantaneoustransitioncreate"></a><a name="create"></a>CInstantaneousTransition::Create  
+##  <a name="create"></a>CInstantaneousTransition::Create  
  Appelle la bibliothèque des transitions pour créer l’objet COM de transition encapsulé.  
   
 ```  
@@ -110,7 +113,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la transition est créée avec succès ; Sinon, FALSE.  
   
-##  <a name="a-namemdblfinalvaluea--cinstantaneoustransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CInstantaneousTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CInstantaneousTransition::m_dblFinalValue  
  La valeur de la variable d’animation à la fin de la transition.  
   
 ```  

@@ -9,8 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CSinusoidalTransitionFromRange
 - CSinusoidalTransitionFromRange
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::Create
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_dblMaximumValue
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_dblMinimumValue
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_duration
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_period
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_slope
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +93,7 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="a-namecreatea--csinusoidaltransitionfromrangecreate"></a><a name="create"></a>CSinusoidalTransitionFromRange::Create  
+##  <a name="create"></a>CSinusoidalTransitionFromRange::Create  
  Appelle la bibliothèque des transitions pour créer l’objet COM de transition encapsulé.  
   
 ```  
@@ -102,7 +109,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la transition est créée avec succès ; Sinon, FALSE.  
   
-##  <a name="a-namecsinusoidaltransitionfromrangea--csinusoidaltransitionfromrangecsinusoidaltransitionfromrange"></a><a name="csinusoidaltransitionfromrange"></a>CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange  
+##  <a name="csinusoidaltransitionfromrange"></a>CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange  
  Construit un objet de transition.  
   
 ```  
@@ -130,35 +137,35 @@ CSinusoidalTransitionFromRange(
  `slope`  
  La courbe au début de la transition.  
   
-##  <a name="a-namemdblmaximumvaluea--csinusoidaltransitionfromrangemdblmaximumvalue"></a><a name="m_dblmaximumvalue"></a>CSinusoidalTransitionFromRange::m_dblMaximumValue  
+##  <a name="m_dblmaximumvalue"></a>CSinusoidalTransitionFromRange::m_dblMaximumValue  
  La valeur de la variable d’animation à une crête de l’onde sinusoïdale.  
   
 ```  
 DOUBLE m_dblMaximumValue;  
 ```  
   
-##  <a name="a-namemdblminimumvaluea--csinusoidaltransitionfromrangemdblminimumvalue"></a><a name="m_dblminimumvalue"></a>CSinusoidalTransitionFromRange::m_dblMinimumValue  
+##  <a name="m_dblminimumvalue"></a>CSinusoidalTransitionFromRange::m_dblMinimumValue  
  La valeur de la variable d’animation à un bac de l’onde sinusoïdale.  
   
 ```  
 DOUBLE m_dblMinimumValue;  
 ```  
   
-##  <a name="a-namemdurationa--csinusoidaltransitionfromrangemduration"></a><a name="m_duration"></a>CSinusoidalTransitionFromRange::m_duration  
+##  <a name="m_duration"></a>CSinusoidalTransitionFromRange::m_duration  
  La durée de la transition.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="a-namemperioda--csinusoidaltransitionfromrangemperiod"></a><a name="m_period"></a>CSinusoidalTransitionFromRange::m_period  
+##  <a name="m_period"></a>CSinusoidalTransitionFromRange::m_period  
  La période d’oscillation de l’onde sinusoïdale en secondes.  
   
 ```  
 UI_ANIMATION_SECONDS m_period;  
 ```  
   
-##  <a name="a-namemslopea--csinusoidaltransitionfromrangemslope"></a><a name="m_slope"></a>CSinusoidalTransitionFromRange::m_slope  
+##  <a name="m_slope"></a>CSinusoidalTransitionFromRange::m_slope  
  La courbe au début de la transition.  
   
 ```  

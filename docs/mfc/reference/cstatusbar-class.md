@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStatusBar
+- AFXEXT/CStatusBar
+- AFXEXT/CStatusBar::CStatusBar
+- AFXEXT/CStatusBar::CommandToIndex
+- AFXEXT/CStatusBar::Create
+- AFXEXT/CStatusBar::CreateEx
+- AFXEXT/CStatusBar::DrawItem
+- AFXEXT/CStatusBar::GetItemID
+- AFXEXT/CStatusBar::GetItemRect
+- AFXEXT/CStatusBar::GetPaneInfo
+- AFXEXT/CStatusBar::GetPaneStyle
+- AFXEXT/CStatusBar::GetPaneText
+- AFXEXT/CStatusBar::GetStatusBarCtrl
+- AFXEXT/CStatusBar::SetIndicators
+- AFXEXT/CStatusBar::SetPaneInfo
+- AFXEXT/CStatusBar::SetPaneStyle
+- AFXEXT/CStatusBar::SetPaneText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +138,7 @@ class CStatusBar : public CControlBar
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxext.h  
   
-##  <a name="a-namecommandtoindexa--cstatusbarcommandtoindex"></a><a name="commandtoindex"></a>CStatusBar::CommandToIndex  
+##  <a name="commandtoindex"></a>CStatusBar::CommandToIndex  
  Obtient l’index de l’indicateur pour un ID donné.  
   
 ```  
@@ -139,7 +155,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="remarks"></a>Notes  
  L’index du premier indicateur est 0.  
   
-##  <a name="a-namecreatea--cstatusbarcreate"></a><a name="create"></a>CStatusBar::Create  
+##  <a name="create"></a>CStatusBar::Create  
  Crée un état de la barre (une fenêtre enfant) et l’associe à la `CStatusBar` objet.  
   
 ```  
@@ -171,7 +187,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Remarques  
  Également définit la police initiale et définit l’état de la hauteur de la barre à une valeur par défaut.  
   
-##  <a name="a-namecreateexa--cstatusbarcreateex"></a><a name="createex"></a>CStatusBar::CreateEx  
+##  <a name="createex"></a>CStatusBar::CreateEx  
  Appelez cette fonction pour créer un état de la barre (une fenêtre enfant) et l’associer avec le `CStatusBar` objet.  
   
 ```  
@@ -209,14 +225,14 @@ virtual BOOL CreateEx(
   
  Utilisez `CreateEx`, au lieu de [créer](#create), lorsque certains styles doivent être présents lors de la création du contrôle barre d’état incorporée. Par exemple, définissez `dwCtrlStyle` à **SBT_TOOLTIPS** pour afficher des info-bulles dans un objet de barre d’état.  
   
-##  <a name="a-namecstatusbara--cstatusbarcstatusbar"></a><a name="cstatusbar"></a>CStatusBar::CStatusBar  
+##  <a name="cstatusbar"></a>CStatusBar::CStatusBar  
  Construit un `CStatusBar` objet, crée une police de barre d’état par défaut, si nécessaire et définit les caractéristiques de police pour les valeurs par défaut.  
   
 ```  
 CStatusBar();
 ```  
   
-##  <a name="a-namedrawitema--cstatusbardrawitem"></a><a name="drawitem"></a>CStatusBar::DrawItem  
+##  <a name="drawitem"></a>CStatusBar::DrawItem  
  Cette fonction membre est appelée par l’infrastructure lorsqu’un aspect visuel d’une modification de barre d’état owner-drawn.  
   
 ```  
@@ -230,7 +246,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="remarks"></a>Remarques  
  Le **itemAction** membre de la `DRAWITEMSTRUCT` structure définit l’action de dessin qui doit être effectuée. Remplacez cette fonction membre pour implémenter le dessin pour un mode owner-draw `CStatusBar` objet. L’application doit restaurer tous les objets interface (GDI) périphérique graphique sélectionnés pour le contexte d’affichage fournie dans `lpDrawItemStruct` avant l’arrêt de cette fonction membre.  
   
-##  <a name="a-namegetitemida--cstatusbargetitemid"></a><a name="getitemid"></a>CStatusBar::GetItemID  
+##  <a name="getitemid"></a>CStatusBar::GetItemID  
  Retourne l’ID de l’indicateur spécifié par `nIndex`.  
   
 ```  
@@ -244,7 +260,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="return-value"></a>Valeur de retour  
  L’ID de l’indicateur spécifié par `nIndex`.  
   
-##  <a name="a-namegetitemrecta--cstatusbargetitemrect"></a><a name="getitemrect"></a>CStatusBar::GetItemRect  
+##  <a name="getitemrect"></a>CStatusBar::GetItemRect  
  Copie les coordonnées de l’indicateur spécifié par `nIndex` dans la structure vers laquelle pointée `lpRect`.  
   
 ```  
@@ -263,7 +279,7 @@ void GetItemRect(
 ### <a name="remarks"></a>Remarques  
  Coordonnées sont exprimées en pixels par rapport au coin supérieur gauche de la barre d’état.  
   
-##  <a name="a-namegetpaneinfoa--cstatusbargetpaneinfo"></a><a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
+##  <a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
  Jeux de `nID`, `nStyle`, et `cxWidth` à l’ID, le style et la largeur de la fenêtre de l’indicateur à l’emplacement spécifié par `nIndex`.  
   
 ```  
@@ -287,7 +303,7 @@ void GetPaneInfo(
  `cxWidth`  
  Référence à un entier qui est défini sur la largeur du volet.  
   
-##  <a name="a-namegetpanestylea--cstatusbargetpanestyle"></a><a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
+##  <a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
  Appelez cette fonction membre pour récupérer le style du volet d’une barre état.  
   
 ```  
@@ -306,7 +322,7 @@ UINT GetPaneStyle(int nIndex) const;
   
  Pour obtenir la liste des styles disponibles pour les barres d’état, consultez [créer](#create).  
   
-##  <a name="a-namegetpanetexta--cstatusbargetpanetext"></a><a name="getpanetext"></a>CStatusBar::GetPaneText  
+##  <a name="getpanetext"></a>CStatusBar::GetPaneText  
  Appelez cette fonction membre pour récupérer le texte qui apparaît dans un volet de barre d’état.  
   
 ```  

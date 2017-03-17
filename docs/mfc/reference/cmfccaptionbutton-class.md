@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCCaptionButton
+- AFXCAPTIONBUTTON/CMFCCaptionButton
+- AFXCAPTIONBUTTON/CMFCCaptionButton::CMFCCaptionButton
+- AFXCAPTIONBUTTON/CMFCCaptionButton::GetHit
+- AFXCAPTIONBUTTON/CMFCCaptionButton::GetIconID
+- AFXCAPTIONBUTTON/CMFCCaptionButton::GetRect
+- AFXCAPTIONBUTTON/CMFCCaptionButton::GetSize
+- AFXCAPTIONBUTTON/CMFCCaptionButton::IsMiniFrameButton
+- AFXCAPTIONBUTTON/CMFCCaptionButton::Move
+- AFXCAPTIONBUTTON/CMFCCaptionButton::OnDraw
+- AFXCAPTIONBUTTON/CMFCCaptionButton::SetMiniFrameButton
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +101,7 @@ class CMFCCaptionButton : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcaptionbutton.h  
   
-##  <a name="a-namecmfccaptionbuttona--cmfccaptionbuttoncmfccaptionbutton"></a><a name="cmfccaptionbutton"></a>CMFCCaptionButton::CMFCCaptionButton  
+##  <a name="cmfccaptionbutton"></a>CMFCCaptionButton::CMFCCaptionButton  
  Construit un objet `CMFCCaptionButton`.  
   
 ```  
@@ -127,7 +137,7 @@ CMFCCaptionButton(
   
  Boutons de légende sont alignés sur la droite ou la gauche.  
   
-##  <a name="a-namegethita--cmfccaptionbuttongethit"></a><a name="gethit"></a>CMFCCaptionButton::GetHit  
+##  <a name="gethit"></a>CMFCCaptionButton::GetHit  
  Retourne la commande représentée par le bouton.  
   
 ```  
@@ -149,7 +159,7 @@ UINT GetHit() const;
 |`AFX_HTMENU`|La flèche de menu.|  
 |`HTNOWHERE`|La valeur par défaut ; ne représente un aucun commande.|  
   
-##  <a name="a-namegeticonida--cmfccaptionbuttongeticonid"></a><a name="geticonid"></a>CMFCCaptionButton::GetIconID  
+##  <a name="geticonid"></a>CMFCCaptionButton::GetIconID  
  Retourne l’ID de l’image associée au bouton.  
   
 ```  
@@ -171,7 +181,7 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ### <a name="remarks"></a>Remarques  
  Les paramètres de spécifient l’ID d’image pour réduire ou agrandir les boutons de légende.  
   
-##  <a name="a-namegetrecta--cmfccaptionbuttongetrect"></a><a name="getrect"></a>CMFCCaptionButton::GetRect  
+##  <a name="getrect"></a>CMFCCaptionButton::GetRect  
  Retourne le rectangle occupé par le bouton.  
   
 ```  
@@ -184,7 +194,7 @@ virtual CRect GetRect() const;
 ### <a name="remarks"></a>Remarques  
  Si vous ne voyez pas le bouton, la valeur retournée est 0.  
   
-##  <a name="a-namegetsizea--cmfccaptionbuttongetsize"></a><a name="getsize"></a>CMFCCaptionButton::GetSize  
+##  <a name="getsize"></a>CMFCCaptionButton::GetSize  
  Retourne la largeur et la hauteur du bouton.  
   
 ```  
@@ -197,7 +207,7 @@ static CSize GetSize();
 ### <a name="remarks"></a>Remarques  
  La taille retournée inclut des bordures et des marges du bouton.  
   
-##  <a name="a-nameisminiframebuttona--cmfccaptionbuttonisminiframebutton"></a><a name="isminiframebutton"></a>CMFCCaptionButton::IsMiniFrameButton  
+##  <a name="isminiframebutton"></a>CMFCCaptionButton::IsMiniFrameButton  
  Indique si la hauteur de barre de titre est définie à la taille de miniature.  
   
 ```  
@@ -209,7 +219,7 @@ BOOL IsMiniFrameButton() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namemovea--cmfccaptionbuttonmove"></a><a name="move"></a>CMFCCaptionButton::Move  
+##  <a name="move"></a>CMFCCaptionButton::Move  
  Définit l’emplacement du bouton de dessin et l’état de la fenêtre Afficher.  
   
 ```  
@@ -225,7 +235,7 @@ void Move(
  [in] `bHide`  
  Si vous souhaitez afficher le bouton.  
   
-##  <a name="a-nameondrawa--cmfccaptionbuttonondraw"></a><a name="ondraw"></a>CMFCCaptionButton::OnDraw  
+##  <a name="ondraw"></a>CMFCCaptionButton::OnDraw  
  Dessine le bouton de légende.  
   
 ```  
@@ -256,7 +266,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>Notes  
  Le `bMaximized` paramètre est utilisé lorsque le bouton est un agrandissement ou bouton de réduction.  
   
-##  <a name="a-namesetminiframebuttona--cmfccaptionbuttonsetminiframebutton"></a><a name="setminiframebutton"></a>CMFCCaptionButton::SetMiniFrameButton  
+##  <a name="setminiframebutton"></a>CMFCCaptionButton::SetMiniFrameButton  
  Définit la taille de miniature de la barre de titre.  
   
 ```  

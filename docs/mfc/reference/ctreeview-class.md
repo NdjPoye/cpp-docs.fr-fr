@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTreeView
+- AFXCVIEW/CTreeView
+- AFXCVIEW/CTreeView::CTreeView
+- AFXCVIEW/CTreeView::GetTreeCtrl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,14 +88,14 @@ class CTreeView : public CCtrlView
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcview.h  
   
-##  <a name="a-namectreeviewa--ctreeviewctreeview"></a><a name="ctreeview"></a>CTreeView::CTreeView  
+##  <a name="ctreeview"></a>CTreeView::CTreeView  
  Construit un objet `CTreeView`.  
   
 ```  
 CTreeView();
 ```  
   
-##  <a name="a-namegettreectrla--ctreeviewgettreectrl"></a><a name="gettreectrl"></a>CTreeView::GetTreeCtrl  
+##  <a name="gettreectrl"></a>CTreeView::GetTreeCtrl  
  Retourne une référence au contrôle d’arborescence associée à la vue.  
   
 ```  

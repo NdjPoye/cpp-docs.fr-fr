@@ -10,7 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CLinearTransition
-- afxanimationcontroller/CLinearTransition
+- AFXANIMATIONCONTROLLER/CLinearTransition
+- AFXANIMATIONCONTROLLER/CLinearTransition::CLinearTransition
+- AFXANIMATIONCONTROLLER/CLinearTransition::Create
+- AFXANIMATIONCONTROLLER/CLinearTransition::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CLinearTransition::m_duration
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +87,7 @@ class CLinearTransition : public CBaseTransition;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="a-nameclineartransitiona--clineartransitionclineartransition"></a><a name="clineartransition"></a>CLinearTransition::CLinearTransition  
+##  <a name="clineartransition"></a>CLinearTransition::CLinearTransition  
  Construit un objet de transition linéaire et l’initialise avec la durée et la valeur finale.  
   
 ```  
@@ -99,7 +103,7 @@ CLinearTransition(
  `dblFinalValue`  
  La valeur de la variable d’animation à la fin de la transition.  
   
-##  <a name="a-namecreatea--clineartransitioncreate"></a><a name="create"></a>CLinearTransition::Create  
+##  <a name="create"></a>CLinearTransition::Create  
  Appelle la bibliothèque des transitions pour créer l’objet COM de transition encapsulé.  
   
 ```  
@@ -115,14 +119,14 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la transition est créée avec succès ; Sinon, FALSE.  
   
-##  <a name="a-namemdblfinalvaluea--clineartransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CLinearTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CLinearTransition::m_dblFinalValue  
  La valeur de la variable d’animation à la fin de la transition.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemdurationa--clineartransitionmduration"></a><a name="m_duration"></a>CLinearTransition::m_duration  
+##  <a name="m_duration"></a>CLinearTransition::m_duration  
  La durée de la transition.  
   
 ```  

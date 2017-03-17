@@ -10,6 +10,58 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComboBox
+- AFXWIN/CComboBox
+- AFXWIN/CComboBox::CComboBox
+- AFXWIN/CComboBox::AddString
+- AFXWIN/CComboBox::Clear
+- AFXWIN/CComboBox::CompareItem
+- AFXWIN/CComboBox::Copy
+- AFXWIN/CComboBox::Create
+- AFXWIN/CComboBox::Cut
+- AFXWIN/CComboBox::DeleteItem
+- AFXWIN/CComboBox::DeleteString
+- AFXWIN/CComboBox::Dir
+- AFXWIN/CComboBox::DrawItem
+- AFXWIN/CComboBox::FindString
+- AFXWIN/CComboBox::FindStringExact
+- AFXWIN/CComboBox::GetComboBoxInfo
+- AFXWIN/CComboBox::GetCount
+- AFXWIN/CComboBox::GetCueBanner
+- AFXWIN/CComboBox::GetCurSel
+- AFXWIN/CComboBox::GetDroppedControlRect
+- AFXWIN/CComboBox::GetDroppedState
+- AFXWIN/CComboBox::GetDroppedWidth
+- AFXWIN/CComboBox::GetEditSel
+- AFXWIN/CComboBox::GetExtendedUI
+- AFXWIN/CComboBox::GetHorizontalExtent
+- AFXWIN/CComboBox::GetItemData
+- AFXWIN/CComboBox::GetItemDataPtr
+- AFXWIN/CComboBox::GetItemHeight
+- AFXWIN/CComboBox::GetLBText
+- AFXWIN/CComboBox::GetLBTextLen
+- AFXWIN/CComboBox::GetLocale
+- AFXWIN/CComboBox::GetMinVisible
+- AFXWIN/CComboBox::GetTopIndex
+- AFXWIN/CComboBox::InitStorage
+- AFXWIN/CComboBox::InsertString
+- AFXWIN/CComboBox::LimitText
+- AFXWIN/CComboBox::MeasureItem
+- AFXWIN/CComboBox::Paste
+- AFXWIN/CComboBox::ResetContent
+- AFXWIN/CComboBox::SelectString
+- AFXWIN/CComboBox::SetCueBanner
+- AFXWIN/CComboBox::SetCurSel
+- AFXWIN/CComboBox::SetDroppedWidth
+- AFXWIN/CComboBox::SetEditSel
+- AFXWIN/CComboBox::SetExtendedUI
+- AFXWIN/CComboBox::SetHorizontalExtent
+- AFXWIN/CComboBox::SetItemData
+- AFXWIN/CComboBox::SetItemDataPtr
+- AFXWIN/CComboBox::SetItemHeight
+- AFXWIN/CComboBox::SetLocale
+- AFXWIN/CComboBox::SetMinVisibleItems
+- AFXWIN/CComboBox::SetTopIndex
+- AFXWIN/CComboBox::ShowDropDown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -183,7 +235,7 @@ class CComboBox : public CWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="a-nameaddstringa--ccomboboxaddstring"></a><a name="addstring"></a>CComboBox::AddString  
+##  <a name="addstring"></a>CComboBox::AddString  
  Ajoute une chaîne à la zone de liste d’une zone de liste déroulante.  
   
 ```  
@@ -208,7 +260,7 @@ int AddString(LPCTSTR lpszString);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox n °&3;](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]  
   
-##  <a name="a-nameccomboboxa--ccomboboxccombobox"></a><a name="ccombobox"></a>CComboBox::CComboBox  
+##  <a name="ccombobox"></a>CComboBox::CComboBox  
  Construit un objet `CComboBox`.  
   
 ```  
@@ -218,7 +270,7 @@ CComboBox();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox n °&1;](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]  
   
-##  <a name="a-namecleara--ccomboboxclear"></a><a name="clear"></a>CComboBox::Clear  
+##  <a name="clear"></a>CComboBox::Clear  
  Supprime (efface) la sélection actuelle, le cas échéant, dans le contrôle d’édition de la zone de liste déroulante.  
   
 ```  
@@ -231,7 +283,7 @@ void Clear();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox n °&4;](../../mfc/reference/codesnippet/cpp/ccombobox-class_3.cpp)]  
   
-##  <a name="a-namecompareitema--ccomboboxcompareitem"></a><a name="compareitem"></a>CComboBox::CompareItem  
+##  <a name="compareitem"></a>CComboBox::CompareItem  
  Appelé par l’infrastructure pour déterminer la position relative d’un nouvel élément dans la partie zone de liste d’une zone de liste déroulante owner draw trié.  
   
 ```  
@@ -259,7 +311,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox n °&5;](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]  
   
-##  <a name="a-namecopya--ccomboboxcopy"></a><a name="copy"></a>CComboBox::Copy  
+##  <a name="copy"></a>CComboBox::Copy  
  Copie la sélection actuelle, éventuellement dans le contrôle d’édition de la zone de liste déroulante dans le Presse-papiers dans **CF_TEXT** format.  
   
 ```  
@@ -269,7 +321,7 @@ void Copy();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox n °&6;](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]  
   
-##  <a name="a-namecreatea--ccomboboxcreate"></a><a name="create"></a>CComboBox::Create  
+##  <a name="create"></a>CComboBox::Create  
  Crée la zone de liste déroulante et l’attache à le `CComboBox` objet.  
   
 ```  
@@ -322,7 +374,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox n °&2;](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]  
   
-##  <a name="a-namecuta--ccomboboxcut"></a><a name="cut"></a>CComboBox::Cut  
+##  <a name="cut"></a>CComboBox::Cut  
  Supprime (réduit) la sélection actuelle, si une, dans la zone de liste déroulante Modifier contrôler et copie le texte supprimé dans le Presse-papiers dans **CF_TEXT** format.  
   
 ```  
@@ -335,7 +387,7 @@ void Cut();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#7;](../../mfc/reference/codesnippet/cpp/ccombobox-class_7.cpp)]  
   
-##  <a name="a-namedeleteitema--ccomboboxdeleteitem"></a><a name="deleteitem"></a>CComboBox::DeleteItem  
+##  <a name="deleteitem"></a>CComboBox::DeleteItem  
  Appelé par l’infrastructure lorsque l’utilisateur supprime un élément à partir d’un mode owner-draw `CComboBox` détruit la zone de liste déroulante ou d’objet.  
   
 ```  
@@ -352,7 +404,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox n °&8;](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
   
-##  <a name="a-namedeletestringa--ccomboboxdeletestring"></a><a name="deletestring"></a>CComboBox::DeleteString  
+##  <a name="deletestring"></a>CComboBox::DeleteString  
  Supprime l’élément dans la position `nIndex` dans la zone de liste déroulante.  
   
 ```  
@@ -372,7 +424,7 @@ int DeleteString(UINT nIndex);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#9;](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
   
-##  <a name="a-namedira--ccomboboxdir"></a><a name="dir"></a>CComboBox::Dir  
+##  <a name="dir"></a>CComboBox::Dir  
  Ajoute une liste de noms de fichiers ou de lecteurs à la zone de liste d’une zone de liste déroulante.  
   
 ```  
@@ -413,7 +465,7 @@ int Dir(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#10;](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
   
-##  <a name="a-namedrawitema--ccomboboxdrawitem"></a><a name="drawitem"></a>CComboBox::DrawItem  
+##  <a name="drawitem"></a>CComboBox::DrawItem  
  Appelé par l’infrastructure lorsqu’un aspect visuel d’une modification de zone de liste déroulante owner-draw.  
   
 ```  
@@ -432,7 +484,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#11;](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
   
-##  <a name="a-namefindstringa--ccomboboxfindstring"></a><a name="findstring"></a>CComboBox::FindString  
+##  <a name="findstring"></a>CComboBox::FindString  
  Recherche, mais ne sélectionne la première chaîne qui contient le préfixe spécifié dans la zone de liste d’une zone de liste déroulante.  
   
 ```  
@@ -457,7 +509,7 @@ int FindString(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#12;](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
   
-##  <a name="a-namefindstringexacta--ccomboboxfindstringexact"></a><a name="findstringexact"></a>CComboBox::FindStringExact  
+##  <a name="findstringexact"></a>CComboBox::FindStringExact  
  Appelez le `FindStringExact` fonction membre pour rechercher la première chaîne de zone de liste (dans une zone de liste modifiable) qui correspond à la chaîne spécifiée dans `lpszFind`.  
   
 ```  
@@ -482,7 +534,7 @@ int FindStringExact(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#13;](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
   
-##  <a name="a-namegetcomboboxinfoa--ccomboboxgetcomboboxinfo"></a><a name="getcomboboxinfo"></a>CComboBox::GetComboBoxInfo  
+##  <a name="getcomboboxinfo"></a>CComboBox::GetComboBoxInfo  
  Récupère les informations de la `CComboBox` objet.  
   
 ```  
@@ -499,7 +551,7 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
 ### <a name="remarks"></a>Remarques  
  Cette fonction membre émule les fonctionnalités de la [CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839) d’un message, comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetcounta--ccomboboxgetcount"></a><a name="getcount"></a>CComboBox::GetCount  
+##  <a name="getcount"></a>CComboBox::GetCount  
  Appelez cette fonction membre pour récupérer le nombre d’éléments dans la partie zone de liste d’une zone de liste déroulante.  
   
 ```  
@@ -512,7 +564,7 @@ int GetCount() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#14;](../../mfc/reference/codesnippet/cpp/ccombobox-class_14.cpp)]  
   
-##  <a name="a-namegetcuebannera--ccomboboxgetcuebanner"></a><a name="getcuebanner"></a>CComboBox::GetCueBanner  
+##  <a name="getcuebanner"></a>CComboBox::GetCueBanner  
  Obtient le texte d’indication qui s’affiche pour un contrôle de zone de liste déroulante.  
   
 ```  
@@ -542,7 +594,7 @@ BOOL GetCueBanner(
   
  Cette méthode envoie le [CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843) message, qui est décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetcursela--ccomboboxgetcursel"></a><a name="getcursel"></a>CComboBox::GetCurSel  
+##  <a name="getcursel"></a>CComboBox::GetCurSel  
  Appelez cette fonction membre pour déterminer quel élément dans la zone de liste déroulante est sélectionné.  
   
 ```  
@@ -558,7 +610,7 @@ int GetCurSel() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#15;](../../mfc/reference/codesnippet/cpp/ccombobox-class_15.cpp)]  
   
-##  <a name="a-namegetdroppedcontrolrecta--ccomboboxgetdroppedcontrolrect"></a><a name="getdroppedcontrolrect"></a>CComboBox::GetDroppedControlRect  
+##  <a name="getdroppedcontrolrect"></a>CComboBox::GetDroppedControlRect  
  Appelez le `GetDroppedControlRect` fonction membre pour récupérer les coordonnées d’écran de la zone visible (supprimé) la liste déroulante d’une zone de liste déroulante modifiable.  
   
 ```  
@@ -572,7 +624,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#16;](../../mfc/reference/codesnippet/cpp/ccombobox-class_16.cpp)]  
   
-##  <a name="a-namegetdroppedstatea--ccomboboxgetdroppedstate"></a><a name="getdroppedstate"></a>CComboBox::GetDroppedState  
+##  <a name="getdroppedstate"></a>CComboBox::GetDroppedState  
  Appelez le `GetDroppedState` fonction membre pour déterminer si la zone de liste d’une zone de liste déroulante modifiable est visible (diminué).  
   
 ```  
@@ -585,7 +637,7 @@ BOOL GetDroppedState() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#17;](../../mfc/reference/codesnippet/cpp/ccombobox-class_17.cpp)]  
   
-##  <a name="a-namegetdroppedwidtha--ccomboboxgetdroppedwidth"></a><a name="getdroppedwidth"></a>CComboBox::GetDroppedWidth  
+##  <a name="getdroppedwidth"></a>CComboBox::GetDroppedWidth  
  Appelez cette fonction pour récupérer la largeur minimale autorisée, en pixels, de la zone de liste d’une zone de liste déroulante.  
   
 ```  
@@ -603,7 +655,7 @@ int GetDroppedWidth() const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [SetDroppedWidth](#setdroppedwidth).  
   
-##  <a name="a-namegeteditsela--ccomboboxgeteditsel"></a><a name="geteditsel"></a>CComboBox::GetEditSel  
+##  <a name="geteditsel"></a>CComboBox::GetEditSel  
  Obtient les positions de caractère de début et de fin de la sélection actuelle dans le contrôle d’édition d’une zone de liste déroulante.  
   
 ```  
@@ -616,7 +668,7 @@ DWORD GetEditSel() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#18;](../../mfc/reference/codesnippet/cpp/ccombobox-class_18.cpp)]  
   
-##  <a name="a-namegetextendeduia--ccomboboxgetextendedui"></a><a name="getextendedui"></a>CComboBox::GetExtendedUI  
+##  <a name="getextendedui"></a>CComboBox::GetExtendedUI  
  Appelez le `GetExtendedUI` fonction membre pour déterminer si une zone de liste déroulante dispose de l’interface utilisateur par défaut ou l’interface utilisateur améliorée.  
   
 ```  
@@ -638,7 +690,7 @@ BOOL GetExtendedUI() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox n °&19;](../../mfc/reference/codesnippet/cpp/ccombobox-class_19.cpp)]  
   
-##  <a name="a-namegethorizontalextenta--ccomboboxgethorizontalextent"></a><a name="gethorizontalextent"></a>CComboBox::GetHorizontalExtent  
+##  <a name="gethorizontalextent"></a>CComboBox::GetHorizontalExtent  
  Récupère la largeur en pixels par laquelle la partie de la zone de liste de la zone de liste déroulante peut défiler horizontalement dans la zone de liste déroulante.  
   
 ```  
@@ -654,7 +706,7 @@ UINT GetHorizontalExtent() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#20;](../../mfc/reference/codesnippet/cpp/ccombobox-class_20.cpp)]  
   
-##  <a name="a-namegetitemdataa--ccomboboxgetitemdata"></a><a name="getitemdata"></a>CComboBox::GetItemData  
+##  <a name="getitemdata"></a>CComboBox::GetItemData  
  Récupère la valeur de 32 bits fournie par l’application associée à l’élément de zone de liste déroulante spécifiée.  
   
 ```  
@@ -674,7 +726,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox n °&21;](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
-##  <a name="a-namegetitemdataptra--ccomboboxgetitemdataptr"></a><a name="getitemdataptr"></a>CComboBox::GetItemDataPtr  
+##  <a name="getitemdataptr"></a>CComboBox::GetItemDataPtr  
  Récupère la valeur de 32 bits fournie par l’application associée à l’élément de zone de liste déroulante spécifiée en tant que pointeur ( **void\***).  
   
 ```  
@@ -691,7 +743,7 @@ void* GetItemDataPtr(int nIndex) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#22;](../../mfc/reference/codesnippet/cpp/ccombobox-class_22.cpp)]  
   
-##  <a name="a-namegetitemheighta--ccomboboxgetitemheight"></a><a name="getitemheight"></a>CComboBox::GetItemHeight  
+##  <a name="getitemheight"></a>CComboBox::GetItemHeight  
  Appelez le `GetItemHeight` fonction membre pour récupérer la hauteur des éléments de liste dans une zone de liste déroulante.  
   
 ```  
@@ -708,7 +760,7 @@ int GetItemHeight(int nIndex) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox n °&23;](../../mfc/reference/codesnippet/cpp/ccombobox-class_23.cpp)]  
   
-##  <a name="a-namegetlbtexta--ccomboboxgetlbtext"></a><a name="getlbtext"></a>CComboBox::GetLBText  
+##  <a name="getlbtext"></a>CComboBox::GetLBText  
  Obtient une chaîne à partir de la zone de liste d’une zone de liste déroulante.  
   
 ```  
@@ -740,7 +792,7 @@ void GetLBText(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#24;](../../mfc/reference/codesnippet/cpp/ccombobox-class_24.cpp)]  
   
-##  <a name="a-namegetlbtextlena--ccomboboxgetlbtextlen"></a><a name="getlbtextlen"></a>CComboBox::GetLBTextLen  
+##  <a name="getlbtextlen"></a>CComboBox::GetLBTextLen  
  Obtient la longueur d’une chaîne dans la zone de liste d’une zone de liste déroulante.  
   
 ```  
@@ -757,7 +809,7 @@ int GetLBTextLen(int nIndex) const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CComboBox::GetLBText](#getlbtext).  
   
-##  <a name="a-namegetlocalea--ccomboboxgetlocale"></a><a name="getlocale"></a>CComboBox::GetLocale  
+##  <a name="getlocale"></a>CComboBox::GetLocale  
  Récupère les paramètres régionaux utilisés par la zone de liste déroulante.  
   
 ```  
@@ -773,7 +825,7 @@ LCID GetLocale() const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CComboBox::SetLocale](#setlocale).  
   
-##  <a name="a-namegetminvisiblea--ccomboboxgetminvisible"></a><a name="getminvisible"></a>CComboBox::GetMinVisible  
+##  <a name="getminvisible"></a>CComboBox::GetMinVisible  
  Obtient le nombre minimal d’éléments visibles dans la liste déroulante du contrôle zone de liste déroulante en cours.  
   
 ```  
@@ -786,7 +838,7 @@ int GetMinVisible() const;
 ### <a name="remarks"></a>Remarques  
  Cette méthode envoie le [CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) message, qui est décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegettopindexa--ccomboboxgettopindex"></a><a name="gettopindex"></a>CComboBox::GetTopIndex  
+##  <a name="gettopindex"></a>CComboBox::GetTopIndex  
  Récupère l’index de base zéro du premier élément visible dans la partie zone de liste de la zone de liste déroulante.  
   
 ```  
@@ -802,7 +854,7 @@ int GetTopIndex() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#25;](../../mfc/reference/codesnippet/cpp/ccombobox-class_25.cpp)]  
   
-##  <a name="a-nameinitstoragea--ccomboboxinitstorage"></a><a name="initstorage"></a>CComboBox::InitStorage  
+##  <a name="initstorage"></a>CComboBox::InitStorage  
  Alloue de la mémoire pour le stockage des éléments de liste dans la partie zone de liste de la zone de liste déroulante.  
   
 ```  
@@ -831,7 +883,7 @@ int InitStorage(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#26;](../../mfc/reference/codesnippet/cpp/ccombobox-class_26.cpp)]  
   
-##  <a name="a-nameinsertstringa--ccomboboxinsertstring"></a><a name="insertstring"></a>CComboBox::InsertString  
+##  <a name="insertstring"></a>CComboBox::InsertString  
  Insère une chaîne dans la zone de liste d’une zone de liste modifiable.  
   
 ```  
@@ -859,7 +911,7 @@ int InsertString(
 ### <a name="example"></a>Exemple  
  [!code-cpp[27 NVC_MFC_CComboBox](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
   
-##  <a name="a-namelimittexta--ccomboboxlimittext"></a><a name="limittext"></a>CComboBox::LimitText  
+##  <a name="limittext"></a>CComboBox::LimitText  
  Limite la longueur en octets du texte que l’utilisateur peut entrer dans le contrôle d’édition d’une zone de liste déroulante.  
   
 ```  
@@ -881,7 +933,7 @@ BOOL LimitText(int nMaxChars);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#28;](../../mfc/reference/codesnippet/cpp/ccombobox-class_28.cpp)]  
   
-##  <a name="a-namemeasureitema--ccomboboxmeasureitem"></a><a name="measureitem"></a>CComboBox::MeasureItem  
+##  <a name="measureitem"></a>CComboBox::MeasureItem  
  Appelé par l’infrastructure lors de la création d’une zone de liste déroulante avec un style de dessin.  
   
 ```  
@@ -902,7 +954,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#29;](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]  
   
-##  <a name="a-namepastea--ccomboboxpaste"></a><a name="paste"></a>CComboBox::Paste  
+##  <a name="paste"></a>CComboBox::Paste  
  Insère les données à partir du Presse-papiers dans le contrôle d’édition de la zone de liste déroulante à la position actuelle du curseur.  
   
 ```  
@@ -915,7 +967,7 @@ void Paste();
 ### <a name="example"></a>Exemple  
  [!code-cpp[30 NVC_MFC_CComboBox](../../mfc/reference/codesnippet/cpp/ccombobox-class_30.cpp)]  
   
-##  <a name="a-nameresetcontenta--ccomboboxresetcontent"></a><a name="resetcontent"></a>CComboBox::ResetContent  
+##  <a name="resetcontent"></a>CComboBox::ResetContent  
  Supprime tous les éléments de la liste de zone et de modifier le contrôle de zone de liste déroulante.  
   
 ```  
@@ -925,7 +977,7 @@ void ResetContent();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#31;](../../mfc/reference/codesnippet/cpp/ccombobox-class_31.cpp)]  
   
-##  <a name="a-nameselectstringa--ccomboboxselectstring"></a><a name="selectstring"></a>CComboBox::SelectString  
+##  <a name="selectstring"></a>CComboBox::SelectString  
  Recherche une chaîne dans la zone de liste d’une zone de liste modifiable et si la chaîne est trouvée, sélectionne la chaîne dans la zone de liste et le copie dans le contrôle d’édition.  
   
 ```  
@@ -952,7 +1004,7 @@ int SelectString(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox n°&32;](../../mfc/reference/codesnippet/cpp/ccombobox-class_32.cpp)]  
   
-##  <a name="a-namesetcuebannera--ccomboboxsetcuebanner"></a><a name="setcuebanner"></a>CComboBox::SetCueBanner  
+##  <a name="setcuebanner"></a>CComboBox::SetCueBanner  
  Définit le texte de la file d’attente qui est affiché pour un contrôle de zone de liste déroulante.  
   
 ```  
@@ -983,7 +1035,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
  [!code-cpp[NVC_MFC_CComboBox_s1 n °&2;](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
   
-##  <a name="a-namesetcursela--ccomboboxsetcursel"></a><a name="setcursel"></a>CComboBox::SetCurSel  
+##  <a name="setcursel"></a>CComboBox::SetCurSel  
  Sélectionne une chaîne dans la zone de liste d’une zone de liste déroulante.  
   
 ```  
@@ -1003,7 +1055,7 @@ int SetCurSel(int nSelect);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#33;](../../mfc/reference/codesnippet/cpp/ccombobox-class_35.cpp)]  
   
-##  <a name="a-namesetdroppedwidtha--ccomboboxsetdroppedwidth"></a><a name="setdroppedwidth"></a>CComboBox::SetDroppedWidth  
+##  <a name="setdroppedwidth"></a>CComboBox::SetDroppedWidth  
  Appelez cette fonction pour définir la largeur minimale autorisée, en pixels, de la zone de liste d’une zone de liste déroulante.  
   
 ```  
@@ -1025,7 +1077,7 @@ int SetDroppedWidth(UINT nWidth);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#34;](../../mfc/reference/codesnippet/cpp/ccombobox-class_36.cpp)]  
   
-##  <a name="a-nameseteditsela--ccomboboxseteditsel"></a><a name="seteditsel"></a>CComboBox::SetEditSel  
+##  <a name="seteditsel"></a>CComboBox::SetEditSel  
  Sélectionne des caractères dans le contrôle d’édition d’une zone de liste déroulante.  
   
 ```  
@@ -1053,7 +1105,7 @@ BOOL SetEditSel(
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CComboBox::GetEditSel](#geteditsel).  
   
-##  <a name="a-namesetextendeduia--ccomboboxsetextendedui"></a><a name="setextendedui"></a>CComboBox::SetExtendedUI  
+##  <a name="setextendedui"></a>CComboBox::SetExtendedUI  
  Appelez le `SetExtendedUI` fonction membre pour sélectionner l’interface utilisateur par défaut ou l’interface utilisateur améliorée pour une zone de liste modifiable comportant le [CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md) ou [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) style.  
   
 ```  
@@ -1079,7 +1131,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CComboBox::GetExtendedUI](#getextendedui).  
   
-##  <a name="a-namesethorizontalextenta--ccomboboxsethorizontalextent"></a><a name="sethorizontalextent"></a>CComboBox::SetHorizontalExtent  
+##  <a name="sethorizontalextent"></a>CComboBox::SetHorizontalExtent  
  Définit la largeur, en pixels, par laquelle la partie de la zone de liste de la zone de liste déroulante peut défiler horizontalement.  
   
 ```  
@@ -1096,7 +1148,7 @@ void SetHorizontalExtent(UINT nExtent);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#35;](../../mfc/reference/codesnippet/cpp/ccombobox-class_37.cpp)]  
   
-##  <a name="a-namesetitemdataa--ccomboboxsetitemdata"></a><a name="setitemdata"></a>CComboBox::SetItemData  
+##  <a name="setitemdata"></a>CComboBox::SetItemData  
  Définit la valeur de 32 bits associée à l’élément spécifié dans une zone de liste déroulante.  
   
 ```  
@@ -1121,7 +1173,7 @@ int SetItemData(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox n °&36;](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
-##  <a name="a-namesetitemdataptra--ccomboboxsetitemdataptr"></a><a name="setitemdataptr"></a>CComboBox::SetItemDataPtr  
+##  <a name="setitemdataptr"></a>CComboBox::SetItemDataPtr  
  Définit la valeur de 32 bits associée à l’élément spécifié dans une zone de liste déroulante pour être le pointeur spécifié ( **void\***).  
   
 ```  
@@ -1146,7 +1198,7 @@ int SetItemDataPtr(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#37;](../../mfc/reference/codesnippet/cpp/ccombobox-class_39.cpp)]  
   
-##  <a name="a-namesetitemheighta--ccomboboxsetitemheight"></a><a name="setitemheight"></a>CComboBox::SetItemHeight  
+##  <a name="setitemheight"></a>CComboBox::SetItemHeight  
  Appelez le `SetItemHeight` fonction membre pour définir la hauteur des éléments de liste dans une zone de liste déroulante ou la hauteur de la partie du contrôle d’édition (ou texte statique) d’une zone de liste déroulante.  
   
 ```  
@@ -1175,7 +1227,7 @@ int SetItemHeight(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox&#38;](../../mfc/reference/codesnippet/cpp/ccombobox-class_40.cpp)]  
   
-##  <a name="a-namesetlocalea--ccomboboxsetlocale"></a><a name="setlocale"></a>CComboBox::SetLocale  
+##  <a name="setlocale"></a>CComboBox::SetLocale  
  Définit l’identificateur de paramètres régionaux pour cette zone de liste déroulante.  
   
 ```  
@@ -1195,7 +1247,7 @@ LCID SetLocale(LCID nNewLocale);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox n °&39;](../../mfc/reference/codesnippet/cpp/ccombobox-class_41.cpp)]  
   
-##  <a name="a-namesetminvisibleitemsa--ccomboboxsetminvisibleitems"></a><a name="setminvisibleitems"></a>CComboBox::SetMinVisibleItems  
+##  <a name="setminvisibleitems"></a>CComboBox::SetMinVisibleItems  
  Définit le nombre minimal d’éléments visibles dans la liste déroulante de la zone de liste déroulante en cours de contrôle de zone.  
   
 ```  
@@ -1224,7 +1276,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
  [!code-cpp[NVC_MFC_CComboBox_s1 n °&2;](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
   
-##  <a name="a-namesettopindexa--ccomboboxsettopindex"></a><a name="settopindex"></a>CComboBox::SetTopIndex  
+##  <a name="settopindex"></a>CComboBox::SetTopIndex  
  Garantit qu’un élément particulier est visible dans la partie zone de liste de la zone de liste déroulante.  
   
 ```  
@@ -1244,7 +1296,7 @@ int SetTopIndex(int nIndex);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CComboBox numéro&40;](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  
   
-##  <a name="a-nameshowdropdowna--ccomboboxshowdropdown"></a><a name="showdropdown"></a>CComboBox::ShowDropDown  
+##  <a name="showdropdown"></a>CComboBox::ShowDropDown  
  Affiche ou masque la zone de liste d’une zone de liste modifiable comportant le [CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md) ou [CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md) style.  
   
 ```  

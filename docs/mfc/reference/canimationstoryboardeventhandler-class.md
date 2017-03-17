@@ -9,8 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationStoryboardEventHandler
 - CAnimationStoryboardEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationStoryboardEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationStoryboardEventHandler::CreateInstance
+- AFXANIMATIONCONTROLLER/CAnimationStoryboardEventHandler::OnStoryboardStatusChanged
+- AFXANIMATIONCONTROLLER/CAnimationStoryboardEventHandler::OnStoryboardUpdated
+- AFXANIMATIONCONTROLLER/CAnimationStoryboardEventHandler::SetAnimationController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,14 +84,14 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="a-namecanimationstoryboardeventhandlera--canimationstoryboardeventhandlercanimationstoryboardeventhandler"></a><a name="canimationstoryboardeventhandler"></a>CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler  
+##  <a name="canimationstoryboardeventhandler"></a>CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler  
  Construit un objet CAnimationStoryboardEventHandler.  
   
 ```  
 CAnimationStoryboardEventHandler();
 ```  
   
-##  <a name="a-namecreateinstancea--canimationstoryboardeventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationStoryboardEventHandler::CreateInstance  
+##  <a name="createinstance"></a>CAnimationStoryboardEventHandler::CreateInstance  
  Crée une instance de rappel CAnimationStoryboardEventHandler.  
   
 ```  
@@ -104,7 +109,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
   
-##  <a name="a-nameonstoryboardstatuschangeda--canimationstoryboardeventhandleronstoryboardstatuschanged"></a><a name="onstoryboardstatuschanged"></a>CAnimationStoryboardEventHandler::OnStoryboardStatusChanged  
+##  <a name="onstoryboardstatuschanged"></a>CAnimationStoryboardEventHandler::OnStoryboardStatusChanged  
  Gère les événements OnStoryboardStatusChanged qui se produisent lorsque l’état d’un storyboard  
   
 ```  
@@ -127,7 +132,7 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 ### <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; sinon E_FAIL.  
   
-##  <a name="a-nameonstoryboardupdateda--canimationstoryboardeventhandleronstoryboardupdated"></a><a name="onstoryboardupdated"></a>CAnimationStoryboardEventHandler::OnStoryboardUpdated  
+##  <a name="onstoryboardupdated"></a>CAnimationStoryboardEventHandler::OnStoryboardUpdated  
  Gère les événements OnStoryboardUpdated qui se produisent lorsqu’un storyboard est mis à jour.  
   
 ```  
@@ -141,7 +146,7 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 ### <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; sinon E_FAIL.  
   
-##  <a name="a-namesetanimationcontrollera--canimationstoryboardeventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationStoryboardEventHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>CAnimationStoryboardEventHandler::SetAnimationController  
  Stocke un pointeur vers le contrôleur de l’animation pour acheminer les événements.  
   
 ```  

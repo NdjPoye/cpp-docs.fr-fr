@@ -10,7 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleChangeSourceDialog
-- OLEUICHANGESOURCE
+- AFXODLGS/COleChangeSourceDialog
+- AFXODLGS/COleChangeSourceDialog::COleChangeSourceDialog
+- AFXODLGS/COleChangeSourceDialog::DoModal
+- AFXODLGS/COleChangeSourceDialog::GetDisplayName
+- AFXODLGS/COleChangeSourceDialog::GetFileName
+- AFXODLGS/COleChangeSourceDialog::GetFromPrefix
+- AFXODLGS/COleChangeSourceDialog::GetItemName
+- AFXODLGS/COleChangeSourceDialog::GetToPrefix
+- AFXODLGS/COleChangeSourceDialog::IsValidSource
+- AFXODLGS/COleChangeSourceDialog::m_cs
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +113,7 @@ class COleChangeSourceDialog : public COleDialog
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxodlgs.h  
   
-##  <a name="a-namecolechangesourcedialoga--colechangesourcedialogcolechangesourcedialog"></a><a name="colechangesourcedialog"></a>COleChangeSourceDialog::COleChangeSourceDialog  
+##  <a name="colechangesourcedialog"></a>COleChangeSourceDialog::COleChangeSourceDialog  
  Cette fonction génère une `COleChangeSourceDialog` objet.  
   
 ```  
@@ -125,7 +134,7 @@ explicit COleChangeSourceDialog(
   
  Pour plus d’informations, consultez la [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) structure et [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) fonction [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedomodala--colechangesourcedialogdomodal"></a><a name="domodal"></a>COleChangeSourceDialog::DoModal  
+##  <a name="domodal"></a>COleChangeSourceDialog::DoModal  
  Appelez cette fonction pour afficher la boîte de dialogue OLE changer de Source.  
   
 ```  
@@ -152,7 +161,7 @@ virtual INT_PTR DoModal();
   
 - [GetItemName](#getitemname)  
   
-##  <a name="a-namegetdisplaynamea--colechangesourcedialoggetdisplayname"></a><a name="getdisplayname"></a>COleChangeSourceDialog::GetDisplayName  
+##  <a name="getdisplayname"></a>COleChangeSourceDialog::GetDisplayName  
  Appelez cette fonction pour récupérer le nom d’affichage complet de l’élément client lié.  
   
 ```  
@@ -162,7 +171,7 @@ CString GetDisplayName();
 ### <a name="return-value"></a>Valeur de retour  
  Nom d’affichage (moniker) source complet pour le [COleClientItem](../../mfc/reference/coleclientitem-class.md) spécifié dans le constructeur.  
   
-##  <a name="a-namegetfilenamea--colechangesourcedialoggetfilename"></a><a name="getfilename"></a>COleChangeSourceDialog::GetFileName  
+##  <a name="getfilename"></a>COleChangeSourceDialog::GetFileName  
  Appelez cette fonction pour récupérer la partie du moniker de fichier du nom complet de l’élément client lié.  
   
 ```  
@@ -175,7 +184,7 @@ CString GetFileName();
 ### <a name="remarks"></a>Remarques  
  Le moniker du fichier ainsi que le moniker d’élément donne le nom de l’affichage complet.  
   
-##  <a name="a-namegetfromprefixa--colechangesourcedialoggetfromprefix"></a><a name="getfromprefix"></a>COleChangeSourceDialog::GetFromPrefix  
+##  <a name="getfromprefix"></a>COleChangeSourceDialog::GetFromPrefix  
  Appelez cette fonction pour obtenir la chaîne de préfixe précédent de la source.  
   
 ```  
@@ -192,7 +201,7 @@ CString GetFromPrefix();
   
  Pour plus d’informations, consultez la [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) dans la structure [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetitemnamea--colechangesourcedialoggetitemname"></a><a name="getitemname"></a>COleChangeSourceDialog::GetItemName  
+##  <a name="getitemname"></a>COleChangeSourceDialog::GetItemName  
  Appelez cette fonction pour récupérer la partie de moniker d’élément du nom complet de l’élément client lié.  
   
 ```  
@@ -205,7 +214,7 @@ CString GetItemName();
 ### <a name="remarks"></a>Remarques  
  Le moniker du fichier ainsi que le moniker d’élément donne le nom de l’affichage complet.  
   
-##  <a name="a-namegettoprefixa--colechangesourcedialoggettoprefix"></a><a name="gettoprefix"></a>COleChangeSourceDialog::GetToPrefix  
+##  <a name="gettoprefix"></a>COleChangeSourceDialog::GetToPrefix  
  Appelez cette fonction pour obtenir la nouvelle chaîne de préfixe pour la source.  
   
 ```  
@@ -222,7 +231,7 @@ CString GetToPrefix();
   
  Pour plus d’informations, consultez la [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) dans la structure [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namemcsa--colechangesourcedialogmcs"></a><a name="m_cs"></a>COleChangeSourceDialog::m_cs  
+##  <a name="m_cs"></a>COleChangeSourceDialog::m_cs  
  Ce membre de données est une structure de type [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160).  
   
 ```  
@@ -234,7 +243,7 @@ OLEUICHANGESOURCE m_cs;
   
  Pour plus d’informations, consultez la [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) dans la structure [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameisvalidsourcea--colechangesourcedialogisvalidsource"></a><a name="isvalidsource"></a>COleChangeSourceDialog::IsValidSource  
+##  <a name="isvalidsource"></a>COleChangeSourceDialog::IsValidSource  
  Appelez cette fonction pour déterminer si la nouvelle source est valide.  
   
 ```  

@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComClassFactoryAutoThread
-- ATL.CComClassFactoryAutoThread
 - CComClassFactoryAutoThread
+- ATLCOM/ATL::CComClassFactoryAutoThread
+- ATLCOM/ATL::CComClassFactoryAutoThread::CreateInstance
+- ATLCOM/ATL::CComClassFactoryAutoThread::LockServer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +84,7 @@ class CComClassFactoryAutoThread
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomclassfactoryautothreadcreateinstance"></a><a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
+##  <a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
  Crée un objet du CLSID spécifié et récupère un pointeur d’interface vers cet objet.  
   
 ```
@@ -109,7 +110,7 @@ STDMETHODIMP CreateInstance(
 ### <a name="remarks"></a>Notes  
  Si votre module dérive [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` sélectionne tout d’abord créer l’objet dans le compartiment associé à un thread.  
   
-##  <a name="a-namelockservera--ccomclassfactoryautothreadlockserver"></a><a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
+##  <a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
  Incrémente et décrémente le module nombre de verrous en appelant **_Module::Lock** et **_Module::Unlock**, respectivement.  
   
 ```

@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CDefaultCompareTraits<T>
-- ATL::CDefaultCompareTraits
-- ATL.CDefaultCompareTraits
-- ATL::CDefaultCompareTraits<T>
 - CDefaultCompareTraits
+- ATLCOLL/ATL::CDefaultCompareTraits
+- ATLCOLL/ATL::CDefaultCompareTraits::CompareElements
+- ATLCOLL/ATL::CDefaultCompareTraits::CompareElementsOrdered
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +73,7 @@ class CDefaultCompareTraits
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcoll.h  
   
-##  <a name="a-namecompareelementsa--cdefaultcomparetraitscompareelements"></a><a name="compareelements"></a>CDefaultCompareTraits::CompareElements  
+##  <a name="compareelements"></a>CDefaultCompareTraits::CompareElements  
  Appelez cette fonction pour comparer deux éléments sont égaux.  
   
 ```
@@ -94,7 +93,7 @@ static bool CompareElements(const T& element1, const T& element2);
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut de cette fonction est l’égalité ( `==`) (opérateur). Pour les objets autres que les types de données simples, cette fonction peut-être être remplacé.  
   
-##  <a name="a-namecompareelementsordereda--cdefaultcomparetraitscompareelementsordered"></a><a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
  Appelez cette fonction pour déterminer l’élément supérieur et inférieur.  
   
 ```

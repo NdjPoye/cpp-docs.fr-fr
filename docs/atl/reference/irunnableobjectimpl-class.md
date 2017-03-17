@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IRunnableObjectImpl
+- ATLCTL/ATL::IRunnableObjectImpl
+- ATLCTL/ATL::IRunnableObjectImpl::GetRunningClass
+- ATLCTL/ATL::IRunnableObjectImpl::IsRunning
+- ATLCTL/ATL::IRunnableObjectImpl::LockRunning
+- ATLCTL/ATL::IRunnableObjectImpl::Run
+- ATLCTL/ATL::IRunnableObjectImpl::SetContainedObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +91,7 @@ class IRunnableObjectImpl
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlctl.h  
   
-##  <a name="a-namegetrunningclassa--irunnableobjectimplgetrunningclass"></a><a name="getrunningclass"></a>IRunnableObjectImpl::GetRunningClass  
+##  <a name="getrunningclass"></a>IRunnableObjectImpl::GetRunningClass  
  Retourne le CLSID du contrôle en cours d’exécution.  
   
 ```
@@ -98,7 +104,7 @@ HRESULT GetRunningClass(LPCLSID lpClsid);
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IRunnableObject::GetRunningClass](http://msdn.microsoft.com/library/windows/desktop/ms693734) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameisrunninga--irunnableobjectimplisrunning"></a><a name="isrunning"></a>IRunnableObjectImpl::IsRunning  
+##  <a name="isrunning"></a>IRunnableObjectImpl::IsRunning  
  Détermine si le contrôle est en cours d’exécution.  
   
 ```
@@ -111,7 +117,7 @@ virtual BOOL IsRunning();
 ### <a name="remarks"></a>Notes  
  Consultez la page [IRunnableObject::IsRunning](http://msdn.microsoft.com/library/windows/desktop/ms678496) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namelockrunninga--irunnableobjectimpllockrunning"></a><a name="lockrunning"></a>IRunnableObjectImpl::LockRunning  
+##  <a name="lockrunning"></a>IRunnableObjectImpl::LockRunning  
  Verrouille le contrôle à l’état en cours d’exécution.  
   
 ```
@@ -124,7 +130,7 @@ HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IRunnableObject::LockRunning](http://msdn.microsoft.com/library/windows/desktop/ms693361) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameruna--irunnableobjectimplrun"></a><a name="run"></a>IRunnableObjectImpl::Run  
+##  <a name="run"></a>IRunnableObjectImpl::Run  
  Force le contrôle à exécuter.  
   
 ```
@@ -137,7 +143,7 @@ HRESULT Run(LPBINDCTX lpbc);
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IRunnableObject::Run](http://msdn.microsoft.com/library/windows/desktop/ms694517) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetcontainedobjecta--irunnableobjectimplsetcontainedobject"></a><a name="setcontainedobject"></a>IRunnableObjectImpl::SetContainedObject  
+##  <a name="setcontainedobject"></a>IRunnableObjectImpl::SetContainedObject  
  Indique que le contrôle est incorporé.  
   
 ```

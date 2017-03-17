@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CGlobalHeap
-- ATL::CGlobalHeap
 - CGlobalHeap
+- ATLMEM/ATL::CGlobalHeap
+- ATLMEM/ATL::CGlobalHeap::Allocate
+- ATLMEM/ATL::CGlobalHeap::Free
+- ATLMEM/ATL::CGlobalHeap::GetSize
+- ATLMEM/ATL::CGlobalHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +84,7 @@ class CGlobalHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlmem.h  
   
-##  <a name="a-nameallocatea--cglobalheapallocate"></a><a name="allocate"></a>CGlobalHeap::Allocate  
+##  <a name="allocate"></a>CGlobalHeap::Allocate  
  Appelez cette méthode pour allouer un bloc de mémoire.  
   
 ```
@@ -100,7 +103,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implémenté à l’aide de [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) avec un paramètre d’indicateur de **GMEM_FIXED**.  
   
-##  <a name="a-namefreea--cglobalheapfree"></a><a name="free"></a>CGlobalHeap::Free  
+##  <a name="free"></a>CGlobalHeap::Free  
  Appelez cette méthode pour libérer un bloc de mémoire alloué par ce gestionnaire de mémoire.  
   
 ```
@@ -114,7 +117,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Notes  
  Implémenté à l’aide de [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579).  
   
-##  <a name="a-namegetsizea--cglobalheapgetsize"></a><a name="getsize"></a>CGlobalHeap::GetSize  
+##  <a name="getsize"></a>CGlobalHeap::GetSize  
  Appelez cette méthode pour obtenir la taille d’un bloc de mémoire alloué par ce gestionnaire de mémoire allouée.  
   
 ```
@@ -131,7 +134,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Remarques  
  Implémenté à l’aide de [GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593).  
   
-##  <a name="a-namereallocatea--cglobalheapreallocate"></a><a name="reallocate"></a>CGlobalHeap::Reallocate  
+##  <a name="reallocate"></a>CGlobalHeap::Reallocate  
  Appelez cette méthode pour réallouer la mémoire allouée par ce gestionnaire de mémoire.  
   
 ```

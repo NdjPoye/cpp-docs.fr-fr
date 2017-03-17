@@ -9,8 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- BLOB
 - CLongBinary
+- AFXDB_/CLongBinary
+- AFXDB_/CLongBinary::CLongBinary
+- AFXDB_/CLongBinary::m_dwDataLength
+- AFXDB_/CLongBinary::m_hData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,14 +89,14 @@ class CLongBinary : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb_.h  
   
-##  <a name="a-nameclongbinarya--clongbinaryclongbinary"></a><a name="clongbinary"></a>CLongBinary::CLongBinary  
+##  <a name="clongbinary"></a>CLongBinary::CLongBinary  
  Construit un objet `CLongBinary`.  
   
 ```  
 CLongBinary();
 ```  
   
-##  <a name="a-namemdwdatalengtha--clongbinarymdwdatalength"></a><a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
+##  <a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
  Stocke la taille réelle en octets des données stockées dans les `HGLOBAL` gérer dans `m_hData`.  
   
 ```  
@@ -103,7 +106,7 @@ SQLULEN m_dwDataLength;
 ### <a name="remarks"></a>Notes  
  Cette taille peut être inférieure à la taille du bloc de mémoire alloué pour les données. Appelez Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593) fonction permettant d’obtenir la taille allouée.  
   
-##  <a name="a-namemhdataa--clongbinarymhdata"></a><a name="m_hdata"></a>CLongBinary::m_hData  
+##  <a name="m_hdata"></a>CLongBinary::m_hData  
  Stocke un Windows `HGLOBAL` handle vers les données d’objet BLOB réel.  
   
 ```  

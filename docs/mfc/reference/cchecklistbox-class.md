@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCheckListBox
+- AFXWIN/CCheckListBox
+- AFXWIN/CCheckListBox::CCheckListBox
+- AFXWIN/CCheckListBox::Create
+- AFXWIN/CCheckListBox::DrawItem
+- AFXWIN/CCheckListBox::Enable
+- AFXWIN/CCheckListBox::GetCheck
+- AFXWIN/CCheckListBox::GetCheckStyle
+- AFXWIN/CCheckListBox::IsEnabled
+- AFXWIN/CCheckListBox::MeasureItem
+- AFXWIN/CCheckListBox::OnGetCheckPosition
+- AFXWIN/CCheckListBox::SetCheck
+- AFXWIN/CCheckListBox::SetCheckStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +125,7 @@ class CCheckListBox : public CListBox
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="a-namecchecklistboxa--cchecklistboxcchecklistbox"></a><a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
+##  <a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
  Construit un objet `CCheckListBox`.  
   
 ```  
@@ -126,7 +138,7 @@ CCheckListBox();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCControlLadenDialog&#60;](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
-##  <a name="a-namecreatea--cchecklistboxcreate"></a><a name="create"></a>CCheckListBox::Create  
+##  <a name="create"></a>CCheckListBox::Create  
  Crée la zone de liste de vérification de Windows et l’attache à le `CCheckListBox` objet.  
   
 ```  
@@ -176,7 +188,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP** pour permettre la tabulation pour ce contrôle  
   
-##  <a name="a-namedrawitema--cchecklistboxdrawitem"></a><a name="drawitem"></a>CCheckListBox::DrawItem  
+##  <a name="drawitem"></a>CCheckListBox::DrawItem  
  Appelé par l’infrastructure lorsqu’un aspect visuel d’une modification de zone de liste owner-drawn.  
   
 ```  
@@ -196,7 +208,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Si les éléments de zone de liste de vérification ne sont pas toutes la même hauteur, la liste de contrôle de zone de style (spécifié dans **créer**) doivent être **LBS_OWNERVARIABLE**, et vous devez substituer les [MeasureItem](#measureitem) (fonction).  
   
-##  <a name="a-nameenablea--cchecklistboxenable"></a><a name="enable"></a>CCheckListBox::Enable  
+##  <a name="enable"></a>CCheckListBox::Enable  
  Appelez cette fonction pour activer ou désactiver un élément de la liste de vérification.  
   
 ```  
@@ -212,7 +224,7 @@ void Enable(
  `bEnabled`  
  Spécifie si l’élément est activé ou désactivé.  
   
-##  <a name="a-namegetchecka--cchecklistboxgetcheck"></a><a name="getcheck"></a>CCheckListBox::GetCheck  
+##  <a name="getcheck"></a>CCheckListBox::GetCheck  
  Récupère l’état de la case à cocher spécifiée.  
   
 ```  
@@ -232,7 +244,7 @@ int GetCheck(int nIndex);
 |`BST_UNCHECKED`|La case à cocher n’est pas vérifiée.|  
 |`BST_INDETERMINATE`|L’état de la case à cocher est indéterminé.|  
   
-##  <a name="a-namegetcheckstylea--cchecklistboxgetcheckstyle"></a><a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
+##  <a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
  Appelez cette fonction pour obtenir le style de la zone de liste de vérification.  
   
 ```  
@@ -245,7 +257,7 @@ UINT GetCheckStyle();
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur les styles possibles, consultez la page [SetCheckStyle](#setcheckstyle).  
   
-##  <a name="a-nameisenableda--cchecklistboxisenabled"></a><a name="isenabled"></a>CCheckListBox::IsEnabled  
+##  <a name="isenabled"></a>CCheckListBox::IsEnabled  
  Appelez cette fonction pour déterminer si un élément est activé.  
   
 ```  
@@ -259,7 +271,7 @@ BOOL IsEnabled(int nIndex);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’élément est activé ; sinon 0.  
   
-##  <a name="a-namemeasureitema--cchecklistboxmeasureitem"></a><a name="measureitem"></a>CCheckListBox::MeasureItem  
+##  <a name="measureitem"></a>CCheckListBox::MeasureItem  
  Appelé par l’infrastructure lors de la création d’une zone de liste de contrôle avec un style différent.  
   
 ```  
@@ -273,7 +285,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="remarks"></a>Remarques  
  Par défaut, cette fonction membre ne fait rien. Remplacez cette fonction membre et renseignez les `MEASUREITEMSTRUCT` structure d’informer Windows des dimensions d’éléments de zone de liste de vérification. Si la zone de liste de contrôle est créée avec le [LBS_OWNERDRAWVARIABLE](../../mfc/reference/list-box-styles.md) style, l’infrastructure appelle cette fonction membre pour chaque élément dans la zone de liste. Sinon, ce membre est appelé une seule fois.  
   
-##  <a name="a-nameongetcheckpositiona--cchecklistboxongetcheckposition"></a><a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
+##  <a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
  L’infrastructure appelle cette fonction pour obtenir la position et la taille de la case à cocher dans un élément.  
   
 ```  
@@ -295,7 +307,7 @@ virtual CRect OnGetCheckPosition(
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut retourne uniquement la position par défaut et la taille de la case à cocher ( `rectCheckBox`). Par défaut, une case à cocher est aligné dans le coin supérieur gauche d’un élément et la taille de la case à cocher standard. Il peut arriver dans lequel vous souhaitez les cases à cocher sur la droite, ou une case à cocher supérieure ou inférieure. Dans ce cas, vous devez substituer `OnGetCheckPosition` pour modifier la position de la case à cocher et la taille de l’élément.  
   
-##  <a name="a-namesetchecka--cchecklistboxsetcheck"></a><a name="setcheck"></a>CCheckListBox::SetCheck  
+##  <a name="setcheck"></a>CCheckListBox::SetCheck  
  Définit l’état de la case à cocher spécifiée.  
   
 ```  
@@ -320,7 +332,7 @@ void SetCheck(
 |**BST_UNCHECKED**|Désactivez la case à cocher spécifiée.|  
 |**BST_INDETERMINATE**|Définir l’état de la case à cocher spécifiée à une valeur indéterminée.<br /><br /> Cet état est disponible uniquement si le style de case à cocher est `BS_AUTO3STATE` ou `BS_3STATE`. Pour plus d’informations, consultez [Styles des boutons](../../mfc/reference/button-styles.md).|  
   
-##  <a name="a-namesetcheckstylea--cchecklistboxsetcheckstyle"></a><a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
+##  <a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
  Appelez cette fonction pour définir le style des cases à cocher dans la zone de liste de vérification.  
   
 ```  

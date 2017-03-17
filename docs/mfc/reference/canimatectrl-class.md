@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAnimateCtrl
+- AFXCMN/CAnimateCtrl
+- AFXCMN/CAnimateCtrl::CAnimateCtrl
+- AFXCMN/CAnimateCtrl::Close
+- AFXCMN/CAnimateCtrl::Create
+- AFXCMN/CAnimateCtrl::CreateEx
+- AFXCMN/CAnimateCtrl::IsPlaying
+- AFXCMN/CAnimateCtrl::Open
+- AFXCMN/CAnimateCtrl::Play
+- AFXCMN/CAnimateCtrl::Seek
+- AFXCMN/CAnimateCtrl::Stop
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +118,7 @@ class CAnimateCtrl : public CWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcmn.h  
   
-##  <a name="a-namecanimatectrla--canimatectrlcanimatectrl"></a><a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl  
+##  <a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl  
  Construit un objet `CAnimateCtrl`.  
   
 ```  
@@ -121,7 +131,7 @@ CAnimateCtrl();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCControlLadenDialog&#56;](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]  
   
-##  <a name="a-nameclosea--canimatectrlclose"></a><a name="close"></a>CAnimateCtrl::Close  
+##  <a name="close"></a>CAnimateCtrl::Close  
  Ferme le clip AVI qui a été précédemment ouvert dans le contrôle animation (le cas échéant) et le supprime de la mémoire.  
   
 ```  
@@ -134,7 +144,7 @@ BOOL Close();
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="a-namecreatea--canimatectrlcreate"></a><a name="create"></a>CAnimateCtrl::Create  
+##  <a name="create"></a>CAnimateCtrl::Create  
  Crée un contrôle animation et l’attache à une `CAnimateCtrl` objet.  
   
 ```  
@@ -179,7 +189,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="a-namecreateexa--canimatectrlcreateex"></a><a name="createex"></a>CAnimateCtrl::CreateEx  
+##  <a name="createex"></a>CAnimateCtrl::CreateEx  
  Crée un contrôle (une fenêtre enfant) et l’associe à la `CAnimateCtrl` objet.  
   
 ```  
@@ -213,7 +223,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Notes  
  Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus Windows, spécifiés par la préface de style étendu Windows **WS_EX_**.  
   
-##  <a name="a-nameisplayinga--canimatectrlisplaying"></a><a name="isplaying"></a>CAnimateCtrl::IsPlaying  
+##  <a name="isplaying"></a>CAnimateCtrl::IsPlaying  
  Indique si un clip Audio-Video Interleaved (AVI) lecture.  
   
 ```  
@@ -226,7 +236,7 @@ BOOL IsPlaying() const;
 ### <a name="remarks"></a>Remarques  
  Cette méthode envoie le [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) message, qui est décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameopena--canimatectrlopen"></a><a name="open"></a>CAnimateCtrl::Open  
+##  <a name="open"></a>CAnimateCtrl::Open  
  Appelez cette fonction pour ouvrir un clip AVI et afficher sa première image.  
   
 ```  
@@ -258,7 +268,7 @@ BOOL Open(UINT nID);
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="a-nameplaya--canimatectrlplay"></a><a name="play"></a>CAnimateCtrl::Play  
+##  <a name="play"></a>CAnimateCtrl::Play  
  Appelez cette fonction pour lire un clip AVI dans un contrôle animation.  
   
 ```  
@@ -287,7 +297,7 @@ BOOL Play(
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="a-nameseeka--canimatectrlseek"></a><a name="seek"></a>CAnimateCtrl::Seek  
+##  <a name="seek"></a>CAnimateCtrl::Seek  
  Appelez cette fonction pour afficher statiquement une seule image de votre clip AVI.  
   
 ```  
@@ -307,7 +317,7 @@ BOOL Seek(UINT nTo);
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="a-namestopa--canimatectrlstop"></a><a name="stop"></a>CAnimateCtrl::Stop  
+##  <a name="stop"></a>CAnimateCtrl::Stop  
  Appelez cette fonction pour arrêter la lecture d’un clip AVI dans un contrôle animation.  
   
 ```  

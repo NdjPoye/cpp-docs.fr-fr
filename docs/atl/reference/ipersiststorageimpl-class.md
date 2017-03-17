@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IPersistStorageImpl
-- ATL::IPersistStorageImpl<T>
-- ATL.IPersistStorageImpl<T>
 - IPersistStorageImpl
-- ATL.IPersistStorageImpl
+- ATLCOM/ATL::IPersistStorageImpl
+- ATLCOM/ATL::IPersistStorageImpl::GetClassID
+- ATLCOM/ATL::IPersistStorageImpl::HandsOffStorage
+- ATLCOM/ATL::IPersistStorageImpl::InitNew
+- ATLCOM/ATL::IPersistStorageImpl::IsDirty
+- ATLCOM/ATL::IPersistStorageImpl::Load
+- ATLCOM/ATL::IPersistStorageImpl::Save
+- ATLCOM/ATL::IPersistStorageImpl::SaveCompleted
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +94,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="a-namegetclassida--ipersiststorageimplgetclassid"></a><a name="getclassid"></a>IPersistStorageImpl::GetClassID  
+##  <a name="getclassid"></a>IPersistStorageImpl::GetClassID  
  Récupère le CLSID de l’objet.  
   
 ```
@@ -100,7 +104,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namehandsoffstoragea--ipersiststorageimplhandsoffstorage"></a><a name="handsoffstorage"></a>IPersistStorageImpl::HandsOffStorage  
+##  <a name="handsoffstorage"></a>IPersistStorageImpl::HandsOffStorage  
  Demande à l’objet pour libérer tous les objets de stockage et de passer en mode HandsOff.  
   
 ```
@@ -113,7 +117,7 @@ STDMETHOD(HandsOffStorage)(void);
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IPersistStorage::HandsOffStorage](http://msdn.microsoft.com/library/windows/desktop/ms679742) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameinitnewa--ipersiststorageimplinitnew"></a><a name="initnew"></a>IPersistStorageImpl::InitNew  
+##  <a name="initnew"></a>IPersistStorageImpl::InitNew  
  Initialise un nouveau stockage.  
   
 ```
@@ -125,7 +129,7 @@ STDMETHOD(InitNew)(IStorage*);
   
  Consultez la page [IPersistStorage:InitNew](http://msdn.microsoft.com/library/windows/desktop/ms687194) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameisdirtya--ipersiststorageimplisdirty"></a><a name="isdirty"></a>IPersistStorageImpl::IsDirty  
+##  <a name="isdirty"></a>IPersistStorageImpl::IsDirty  
  Vérifie si les données de l’objet a changé depuis son dernier enregistrement.  
   
 ```
@@ -137,7 +141,7 @@ STDMETHOD(IsDirty)(void);
   
  Consultez la page [IPersistStorage:IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameloada--ipersiststorageimplload"></a><a name="load"></a>IPersistStorageImpl::Load  
+##  <a name="load"></a>IPersistStorageImpl::Load  
  Charge les propriétés de l’objet à partir du stockage spécifié.  
   
 ```
@@ -149,7 +153,7 @@ STDMETHOD(Load)(IStorage* pStorage);
   
  Consultez la page [IPersistStorage:Load](http://msdn.microsoft.com/library/windows/desktop/ms680557) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesavea--ipersiststorageimplsave"></a><a name="save"></a>IPersistStorageImpl::Save  
+##  <a name="save"></a>IPersistStorageImpl::Save  
  Enregistre les propriétés de l’objet dans le stockage spécifié.  
   
 ```
@@ -161,7 +165,7 @@ STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
   
  Consultez la page [IPersistStorage:Save](http://msdn.microsoft.com/library/windows/desktop/ms680680) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesavecompleteda--ipersiststorageimplsavecompleted"></a><a name="savecompleted"></a>IPersistStorageImpl::SaveCompleted  
+##  <a name="savecompleted"></a>IPersistStorageImpl::SaveCompleted  
  Avertit un objet qu’il peut retourner en mode Normal pour écrire dans son objet de stockage.  
   
 ```

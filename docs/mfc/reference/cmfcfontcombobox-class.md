@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCFontComboBox
+- AFXFONTCOMBOBOX/CMFCFontComboBox
+- AFXFONTCOMBOBOX/CMFCFontComboBox::CMFCFontComboBox
+- AFXFONTCOMBOBOX/CMFCFontComboBox::GetSelFont
+- AFXFONTCOMBOBOX/CMFCFontComboBox::SelectFont
+- AFXFONTCOMBOBOX/CMFCFontComboBox::Setup
+- AFXFONTCOMBOBOX/CMFCFontComboBox::m_bDrawUsingFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +102,7 @@ class CMFCFontComboBox : public CComboBox
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxfontcombobox.h  
   
-##  <a name="a-namecmfcfontcomboboxa--cmfcfontcomboboxcmfcfontcombobox"></a><a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
+##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
  Construit un objet `CMFCFontComboBox`.  
   
 ```  
@@ -107,7 +113,7 @@ CMFCFontComboBox();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namegetselfonta--cmfcfontcomboboxgetselfont"></a><a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
+##  <a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
  Récupère des informations sur la police actuellement sélectionnée.  
   
 ```  
@@ -119,7 +125,7 @@ CMFCFontInfo* GetSelFont() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namembdrawusingfonta--cmfcfontcomboboxmbdrawusingfont"></a><a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
+##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
  Indique à l’infrastructure de la police à utiliser pour dessiner les étiquettes d’élément dans la zone de liste déroulante de police actuelle.  
   
 ```  
@@ -129,7 +135,7 @@ static BOOL m_bDrawUsingFont;
 ### <a name="remarks"></a>Remarques  
  Affecter à ce membre `TRUE` pour diriger l’infrastructure d’utiliser la même police pour dessiner chaque étiquette de l’élément. Affecter à ce membre `FALSE` pour diriger l’infrastructure pour dessiner chaque étiquette d’élément avec la police dont le nom est identique à l’étiquette. La valeur par défaut de ce membre est `FALSE`.  
   
-##  <a name="a-nameselectfonta--cmfcfontcomboboxselectfont"></a><a name="selectfont"></a>CMFCFontComboBox::SelectFont  
+##  <a name="selectfont"></a>CMFCFontComboBox::SelectFont  
  Sélectionne la police qui correspond aux critères spécifiés dans la zone de liste déroulante de police.  
   
 ```  
@@ -163,7 +169,7 @@ BOOL SelectFont(
  [!code-cpp[NVC_MFC_NewControls&#34;](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls&#35;](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]  
   
-##  <a name="a-namesetupa--cmfcfontcomboboxsetup"></a><a name="setup"></a>CMFCFontComboBox::Setup  
+##  <a name="setup"></a>CMFCFontComboBox::Setup  
  Initialise la liste des éléments dans la zone de liste déroulante de police.  
   
 ```  

@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleIPFrameWnd
+- AFXOLE/COleIPFrameWnd
+- AFXOLE/COleIPFrameWnd::COleIPFrameWnd
+- AFXOLE/COleIPFrameWnd::OnCreateControlBars
+- AFXOLE/COleIPFrameWnd::RepositionFrame
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +89,7 @@ class COleIPFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxole.h  
   
-##  <a name="a-namecoleipframewnda--coleipframewndcoleipframewnd"></a><a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
+##  <a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
  Construit un `COleIPFrameWnd` de l’objet et initialise ses informations d’état de la place, ce qui sont stockées dans une structure de type **OLEINPLACEFRAMEINFO**.  
   
 ```  
@@ -95,7 +99,7 @@ COleIPFrameWnd();
 ### <a name="remarks"></a>Remarques  
  Pour plus d’informations, consultez [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameoncreatecontrolbarsa--coleipframewndoncreatecontrolbars"></a><a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
+##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
  Le framework appelle la `OnCreateControlBars` fonctionner lorsqu’un élément est activé pour la modification sur place.  
   
 ```  
@@ -122,7 +126,7 @@ virtual BOOL OnCreateControlBars(
 ### <a name="remarks"></a>Remarques  
  L'implémentation par défaut n'exécute aucune opération. Remplacez cette fonction pour effectuer tout traitement spécial requis lors de la création de barres de contrôles.  
   
-##  <a name="a-namerepositionframea--coleipframewndrepositionframe"></a><a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
+##  <a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
  Le framework appelle la `RepositionFrame` fonction membre pour disposer les barres de contrôles et repositionner la fenêtre de modification sur place sont visibles.  
   
 ```  

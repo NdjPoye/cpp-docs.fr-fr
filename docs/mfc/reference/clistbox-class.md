@@ -10,6 +10,55 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CListBox
+- AFXWIN/CListBox
+- AFXWIN/CListBox::CListBox
+- AFXWIN/CListBox::AddString
+- AFXWIN/CListBox::CharToItem
+- AFXWIN/CListBox::CompareItem
+- AFXWIN/CListBox::Create
+- AFXWIN/CListBox::DeleteItem
+- AFXWIN/CListBox::DeleteString
+- AFXWIN/CListBox::Dir
+- AFXWIN/CListBox::DrawItem
+- AFXWIN/CListBox::FindString
+- AFXWIN/CListBox::FindStringExact
+- AFXWIN/CListBox::GetAnchorIndex
+- AFXWIN/CListBox::GetCaretIndex
+- AFXWIN/CListBox::GetCount
+- AFXWIN/CListBox::GetCurSel
+- AFXWIN/CListBox::GetHorizontalExtent
+- AFXWIN/CListBox::GetItemData
+- AFXWIN/CListBox::GetItemDataPtr
+- AFXWIN/CListBox::GetItemHeight
+- AFXWIN/CListBox::GetItemRect
+- AFXWIN/CListBox::GetListBoxInfo
+- AFXWIN/CListBox::GetLocale
+- AFXWIN/CListBox::GetSel
+- AFXWIN/CListBox::GetSelCount
+- AFXWIN/CListBox::GetSelItems
+- AFXWIN/CListBox::GetText
+- AFXWIN/CListBox::GetTextLen
+- AFXWIN/CListBox::GetTopIndex
+- AFXWIN/CListBox::InitStorage
+- AFXWIN/CListBox::InsertString
+- AFXWIN/CListBox::ItemFromPoint
+- AFXWIN/CListBox::MeasureItem
+- AFXWIN/CListBox::ResetContent
+- AFXWIN/CListBox::SelectString
+- AFXWIN/CListBox::SelItemRange
+- AFXWIN/CListBox::SetAnchorIndex
+- AFXWIN/CListBox::SetCaretIndex
+- AFXWIN/CListBox::SetColumnWidth
+- AFXWIN/CListBox::SetCurSel
+- AFXWIN/CListBox::SetHorizontalExtent
+- AFXWIN/CListBox::SetItemData
+- AFXWIN/CListBox::SetItemDataPtr
+- AFXWIN/CListBox::SetItemHeight
+- AFXWIN/CListBox::SetLocale
+- AFXWIN/CListBox::SetSel
+- AFXWIN/CListBox::SetTabStops
+- AFXWIN/CListBox::SetTopIndex
+- AFXWIN/CListBox::VKeyToItem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -166,7 +215,7 @@ class CListBox : public CWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="a-nameaddstringa--clistboxaddstring"></a><a name="addstring"></a>CListBox::AddString  
+##  <a name="addstring"></a>CListBox::AddString  
  Ajoute une chaîne à une zone de liste.  
   
 ```  
@@ -188,7 +237,7 @@ int AddString(LPCTSTR lpszItem);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox n °&3;](../../mfc/codesnippet/cpp/clistbox-class_1.cpp)]  
   
-##  <a name="a-namechartoitema--clistboxchartoitem"></a><a name="chartoitem"></a>CListBox::CharToItem  
+##  <a name="chartoitem"></a>CListBox::CharToItem  
  Appelé par l’infrastructure lors de la fenêtre parente de la zone de liste reçoit un `WM_CHARTOITEM` message dans la zone de liste.  
   
 ```  
@@ -225,7 +274,7 @@ virtual int CharToItem(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox n °&4;](../../mfc/codesnippet/cpp/clistbox-class_2.cpp)]  
   
-##  <a name="a-nameclistboxa--clistboxclistbox"></a><a name="clistbox"></a>CListBox::CListBox  
+##  <a name="clistbox"></a>CListBox::CListBox  
  Construit un objet `CListBox`.  
   
 ```  
@@ -238,7 +287,7 @@ CListBox();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox n °&1;](../../mfc/codesnippet/cpp/clistbox-class_3.cpp)]  
   
-##  <a name="a-namecompareitema--clistboxcompareitem"></a><a name="compareitem"></a>CListBox::CompareItem  
+##  <a name="compareitem"></a>CListBox::CompareItem  
  Appelé par l’infrastructure pour déterminer la position relative d’un nouvel élément dans une zone de liste triée mode owner-draw.  
   
 ```  
@@ -266,7 +315,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox n °&5;](../../mfc/codesnippet/cpp/clistbox-class_4.cpp)]  
   
-##  <a name="a-namecreatea--clistboxcreate"></a><a name="create"></a>CListBox::Create  
+##  <a name="create"></a>CListBox::Create  
  Crée la zone de liste Windows et l’attache à le `CListBox` objet.  
   
 ```  
@@ -319,7 +368,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox n °&2;](../../mfc/codesnippet/cpp/clistbox-class_5.cpp)]  
   
-##  <a name="a-namedeleteitema--clistboxdeleteitem"></a><a name="deleteitem"></a>CListBox::DeleteItem  
+##  <a name="deleteitem"></a>CListBox::DeleteItem  
  Appelé par l’infrastructure lorsque l’utilisateur supprime un élément à partir d’un mode owner-draw `CListBox` détruit la zone de liste ou d’objet.  
   
 ```  
@@ -338,7 +387,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox n °&6;](../../mfc/codesnippet/cpp/clistbox-class_6.cpp)]  
   
-##  <a name="a-namedeletestringa--clistboxdeletestring"></a><a name="deletestring"></a>CListBox::DeleteString  
+##  <a name="deletestring"></a>CListBox::DeleteString  
  Supprime l’élément dans la position `nIndex` à partir de la zone de liste.  
   
 ```  
@@ -358,7 +407,7 @@ int DeleteString(UINT nIndex);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#7;](../../mfc/codesnippet/cpp/clistbox-class_7.cpp)]  
   
-##  <a name="a-namedira--clistboxdir"></a><a name="dir"></a>CListBox::Dir  
+##  <a name="dir"></a>CListBox::Dir  
  Ajoute une liste de noms de fichiers, les lecteurs ou à une zone de liste.  
   
 ```  
@@ -391,7 +440,7 @@ int Dir(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox n °&8;](../../mfc/codesnippet/cpp/clistbox-class_8.cpp)]  
   
-##  <a name="a-namedrawitema--clistboxdrawitem"></a><a name="drawitem"></a>CListBox::DrawItem  
+##  <a name="drawitem"></a>CListBox::DrawItem  
  Appelé par l’infrastructure lorsqu’un aspect visuel d’une modification de zone de liste owner-draw.  
   
 ```  
@@ -412,7 +461,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#9;](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]  
   
-##  <a name="a-namefindstringa--clistboxfindstring"></a><a name="findstring"></a>CListBox::FindString  
+##  <a name="findstring"></a>CListBox::FindString  
  Recherche la première chaîne dans une zone de liste qui contient le préfixe spécifié sans modifier la sélection de la zone de liste.  
   
 ```  
@@ -437,7 +486,7 @@ int FindString(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#10;](../../mfc/codesnippet/cpp/clistbox-class_10.cpp)]  
   
-##  <a name="a-namefindstringexacta--clistboxfindstringexact"></a><a name="findstringexact"></a>CListBox::FindStringExact  
+##  <a name="findstringexact"></a>CListBox::FindStringExact  
  Recherche la première chaîne de zone de liste qui correspond à la chaîne spécifiée dans `lpszFind`.  
   
 ```  
@@ -462,7 +511,7 @@ int FindStringExact(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#11;](../../mfc/codesnippet/cpp/clistbox-class_11.cpp)]  
   
-##  <a name="a-namegetanchorindexa--clistboxgetanchorindex"></a><a name="getanchorindex"></a>CListBox::GetAnchorIndex  
+##  <a name="getanchorindex"></a>CListBox::GetAnchorIndex  
  Récupère l’index de base zéro de l’élément d’ancrage actif dans la zone de liste.  
   
 ```  
@@ -478,7 +527,7 @@ int GetAnchorIndex() const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CListBox::SetAnchorIndex](#setanchorindex).  
   
-##  <a name="a-namegetcaretindexa--clistboxgetcaretindex"></a><a name="getcaretindex"></a>CListBox::GetCaretIndex  
+##  <a name="getcaretindex"></a>CListBox::GetCaretIndex  
  Détermine l’index de l’élément qui a le rectangle de focus dans une zone de liste à sélection multiple.  
   
 ```  
@@ -494,7 +543,7 @@ int GetCaretIndex() const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CListBox::SetCaretIndex](#setcaretindex).  
   
-##  <a name="a-namegetcounta--clistboxgetcount"></a><a name="getcount"></a>CListBox::GetCount  
+##  <a name="getcount"></a>CListBox::GetCount  
  Récupère le nombre d’éléments dans une zone de liste.  
   
 ```  
@@ -510,7 +559,7 @@ int GetCount() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#12;](../../mfc/codesnippet/cpp/clistbox-class_12.cpp)]  
   
-##  <a name="a-namegetcursela--clistboxgetcursel"></a><a name="getcursel"></a>CListBox::GetCurSel  
+##  <a name="getcursel"></a>CListBox::GetCurSel  
  Récupère l’index de base zéro de l’élément actuellement sélectionné, éventuellement dans une zone de liste à sélection unique.  
   
 ```  
@@ -528,7 +577,7 @@ int GetCurSel() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#13;](../../mfc/codesnippet/cpp/clistbox-class_13.cpp)]  
   
-##  <a name="a-namegethorizontalextenta--clistboxgethorizontalextent"></a><a name="gethorizontalextent"></a>CListBox::GetHorizontalExtent  
+##  <a name="gethorizontalextent"></a>CListBox::GetHorizontalExtent  
  Récupère la largeur en pixels auxquelles il peut défiler horizontalement dans la zone de liste.  
   
 ```  
@@ -544,7 +593,7 @@ int GetHorizontalExtent() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#14;](../../mfc/codesnippet/cpp/clistbox-class_14.cpp)]  
   
-##  <a name="a-namegetitemdataa--clistboxgetitemdata"></a><a name="getitemdata"></a>CListBox::GetItemData  
+##  <a name="getitemdata"></a>CListBox::GetItemData  
  Récupère la valeur DWORD fournie par l’application associée à l’élément de zone de liste spécifié.  
   
 ```  
@@ -564,7 +613,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#15;](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
   
-##  <a name="a-namegetitemdataptra--clistboxgetitemdataptr"></a><a name="getitemdataptr"></a>CListBox::GetItemDataPtr  
+##  <a name="getitemdataptr"></a>CListBox::GetItemDataPtr  
  Récupère la valeur de 32 bits fournie par l’application associée à l’élément de zone de liste spécifié en tant que pointeur ( **void\***).  
   
 ```  
@@ -581,7 +630,7 @@ void* GetItemDataPtr(int nIndex) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#16;](../../mfc/codesnippet/cpp/clistbox-class_16.cpp)]  
   
-##  <a name="a-namegetitemheighta--clistboxgetitemheight"></a><a name="getitemheight"></a>CListBox::GetItemHeight  
+##  <a name="getitemheight"></a>CListBox::GetItemHeight  
  Détermine la hauteur d’éléments dans une zone de liste.  
   
 ```  
@@ -598,7 +647,7 @@ int GetItemHeight(int nIndex) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#17;](../../mfc/codesnippet/cpp/clistbox-class_17.cpp)]  
   
-##  <a name="a-namegetitemrecta--clistboxgetitemrect"></a><a name="getitemrect"></a>CListBox::GetItemRect  
+##  <a name="getitemrect"></a>CListBox::GetItemRect  
  Récupère les dimensions du rectangle de cet élément de limites d’une zone de liste tel qu’il est actuellement affiché dans la fenêtre de la zone de liste.  
   
 ```  
@@ -620,7 +669,7 @@ int GetItemRect(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#18;](../../mfc/codesnippet/cpp/clistbox-class_18.cpp)]  
   
-##  <a name="a-namegetlistboxinfoa--clistboxgetlistboxinfo"></a><a name="getlistboxinfo"></a>CListBox::GetListBoxInfo  
+##  <a name="getlistboxinfo"></a>CListBox::GetListBoxInfo  
  Récupère le nombre d’éléments par colonne.  
   
 ```  
@@ -633,7 +682,7 @@ DWORD GetListBoxInfo() const;
 ### <a name="remarks"></a>Remarques  
  Cette fonction membre émule les fonctionnalités de la [LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208) d’un message, comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetlocalea--clistboxgetlocale"></a><a name="getlocale"></a>CListBox::GetLocale  
+##  <a name="getlocale"></a>CListBox::GetLocale  
  Récupère les paramètres régionaux utilisés par la zone de liste.  
   
 ```  
@@ -649,7 +698,7 @@ LCID GetLocale() const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CListBox::SetLocale](#setlocale).  
   
-##  <a name="a-namegetsela--clistboxgetsel"></a><a name="getsel"></a>CListBox::GetSel  
+##  <a name="getsel"></a>CListBox::GetSel  
  Récupère l’état de sélection d’un élément.  
   
 ```  
@@ -671,7 +720,7 @@ int GetSel(int nIndex) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox n °&19;](../../mfc/codesnippet/cpp/clistbox-class_19.cpp)]  
   
-##  <a name="a-namegetselcounta--clistboxgetselcount"></a><a name="getselcount"></a>CListBox::GetSelCount  
+##  <a name="getselcount"></a>CListBox::GetSelCount  
  Récupère le nombre total d’éléments sélectionnés dans une zone de liste à sélection multiple.  
   
 ```  
@@ -684,7 +733,7 @@ int GetSelCount() const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CListBox::GetSelItems](#getselitems).  
   
-##  <a name="a-namegetselitemsa--clistboxgetselitems"></a><a name="getselitems"></a>CListBox::GetSelItems  
+##  <a name="getselitems"></a>CListBox::GetSelItems  
  Remplit un tampon avec un tableau d’entiers qui indique les numéros d’article des éléments sélectionnés dans une zone de liste à sélection multiple.  
   
 ```  
@@ -706,7 +755,7 @@ int GetSelItems(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#20;](../../mfc/codesnippet/cpp/clistbox-class_20.cpp)]  
   
-##  <a name="a-namegettexta--clistboxgettext"></a><a name="gettext"></a>CListBox::GetText  
+##  <a name="gettext"></a>CListBox::GetText  
  Obtient une chaîne à partir d’une zone de liste.  
   
 ```  
@@ -738,7 +787,7 @@ void GetText(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox n °&21;](../../mfc/codesnippet/cpp/clistbox-class_21.cpp)]  
   
-##  <a name="a-namegettextlena--clistboxgettextlen"></a><a name="gettextlen"></a>CListBox::GetTextLen  
+##  <a name="gettextlen"></a>CListBox::GetTextLen  
  Obtient la longueur d’une chaîne dans un élément de zone de liste.  
   
 ```  
@@ -755,7 +804,7 @@ int GetTextLen(int nIndex) const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CListBox::GetText](#gettext).  
   
-##  <a name="a-namegettopindexa--clistboxgettopindex"></a><a name="gettopindex"></a>CListBox::GetTopIndex  
+##  <a name="gettopindex"></a>CListBox::GetTopIndex  
  Récupère l’index de base zéro du premier élément visible dans une zone de liste.  
   
 ```  
@@ -771,7 +820,7 @@ int GetTopIndex() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#22;](../../mfc/codesnippet/cpp/clistbox-class_22.cpp)]  
   
-##  <a name="a-nameinitstoragea--clistboxinitstorage"></a><a name="initstorage"></a>CListBox::InitStorage  
+##  <a name="initstorage"></a>CListBox::InitStorage  
  Alloue de la mémoire pour stocker les éléments de la zone de liste.  
   
 ```  
@@ -800,7 +849,7 @@ int InitStorage(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox n °&23;](../../mfc/codesnippet/cpp/clistbox-class_23.cpp)]  
   
-##  <a name="a-nameinsertstringa--clistboxinsertstring"></a><a name="insertstring"></a>CListBox::InsertString  
+##  <a name="insertstring"></a>CListBox::InsertString  
  Insère une chaîne dans la zone de liste.  
   
 ```  
@@ -825,7 +874,7 @@ int InsertString(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#24;](../../mfc/codesnippet/cpp/clistbox-class_24.cpp)]  
   
-##  <a name="a-nameitemfrompointa--clistboxitemfrompoint"></a><a name="itemfrompoint"></a>CListBox::ItemFromPoint  
+##  <a name="itemfrompoint"></a>CListBox::ItemFromPoint  
  Détermine l’élément de zone de liste le plus proche du point spécifié dans `pt`.  
   
 ```  
@@ -850,7 +899,7 @@ UINT ItemFromPoint(
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CListBox::SetAnchorIndex](#setanchorindex).  
   
-##  <a name="a-namemeasureitema--clistboxmeasureitem"></a><a name="measureitem"></a>CListBox::MeasureItem  
+##  <a name="measureitem"></a>CListBox::MeasureItem  
  Appelé par l’infrastructure lors de la création d’une zone de liste avec un style de dessin.  
   
 ```  
@@ -871,7 +920,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#25;](../../mfc/codesnippet/cpp/clistbox-class_25.cpp)]  
   
-##  <a name="a-nameresetcontenta--clistboxresetcontent"></a><a name="resetcontent"></a>CListBox::ResetContent  
+##  <a name="resetcontent"></a>CListBox::ResetContent  
  Supprime tous les éléments d’une zone de liste.  
   
 ```  
@@ -881,7 +930,7 @@ void ResetContent();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#26;](../../mfc/codesnippet/cpp/clistbox-class_26.cpp)]  
   
-##  <a name="a-nameselectstringa--clistboxselectstring"></a><a name="selectstring"></a>CListBox::SelectString  
+##  <a name="selectstring"></a>CListBox::SelectString  
  Recherche d’un élément de zone de liste qui correspond à la chaîne spécifiée, et si un élément correspondant est trouvé, il sélectionne l’élément.  
   
 ```  
@@ -912,7 +961,7 @@ int SelectString(
 ### <a name="example"></a>Exemple  
  [!code-cpp[27 NVC_MFC_CListBox](../../mfc/codesnippet/cpp/clistbox-class_27.cpp)]  
   
-##  <a name="a-nameselitemrangea--clistboxselitemrange"></a><a name="selitemrange"></a>CListBox::SelItemRange  
+##  <a name="selitemrange"></a>CListBox::SelItemRange  
  Sélectionner plusieurs éléments consécutifs dans une zone de liste à sélection multiple.  
   
 ```  
@@ -941,7 +990,7 @@ int SelItemRange(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#28;](../../mfc/codesnippet/cpp/clistbox-class_28.cpp)]  
   
-##  <a name="a-namesetanchorindexa--clistboxsetanchorindex"></a><a name="setanchorindex"></a>CListBox::SetAnchorIndex  
+##  <a name="setanchorindex"></a>CListBox::SetAnchorIndex  
  Définit le point d’ancrage dans une zone de liste à sélection multiple pour commencer une sélection étendue.  
   
 ```  
@@ -958,7 +1007,7 @@ void SetAnchorIndex(int nIndex);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#29;](../../mfc/codesnippet/cpp/clistbox-class_29.cpp)]  
   
-##  <a name="a-namesetcaretindexa--clistboxsetcaretindex"></a><a name="setcaretindex"></a>CListBox::SetCaretIndex  
+##  <a name="setcaretindex"></a>CListBox::SetCaretIndex  
  Définit le rectangle de focus sur l’élément à l’index spécifié dans une zone de liste à sélection multiple.  
   
 ```  
@@ -983,7 +1032,7 @@ int SetCaretIndex(
 ### <a name="example"></a>Exemple  
  [!code-cpp[30 NVC_MFC_CListBox](../../mfc/codesnippet/cpp/clistbox-class_30.cpp)]  
   
-##  <a name="a-namesetcolumnwidtha--clistboxsetcolumnwidth"></a><a name="setcolumnwidth"></a>CListBox::SetColumnWidth  
+##  <a name="setcolumnwidth"></a>CListBox::SetColumnWidth  
  Définit la largeur en pixels de toutes les colonnes dans une zone de liste multicolonne (créé avec le [LBS_MULTICOLUMN](../../mfc/reference/list-box-styles.md) style).  
   
 ```  
@@ -997,7 +1046,7 @@ void SetColumnWidth(int cxWidth);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#31;](../../mfc/codesnippet/cpp/clistbox-class_31.cpp)]  
   
-##  <a name="a-namesetcursela--clistboxsetcursel"></a><a name="setcursel"></a>CListBox::SetCurSel  
+##  <a name="setcursel"></a>CListBox::SetCurSel  
  Sélectionne une chaîne et fait défiler dans la vue, si nécessaire.  
   
 ```  
@@ -1021,7 +1070,7 @@ int SetCurSel(int nSelect);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox n°&32;](../../mfc/codesnippet/cpp/clistbox-class_32.cpp)]  
   
-##  <a name="a-namesethorizontalextenta--clistboxsethorizontalextent"></a><a name="sethorizontalextent"></a>CListBox::SetHorizontalExtent  
+##  <a name="sethorizontalextent"></a>CListBox::SetHorizontalExtent  
  Définit la largeur, en pixels, par lequel une zone de liste peut défiler horizontalement.  
   
 ```  
@@ -1042,7 +1091,7 @@ void SetHorizontalExtent(int cxExtent);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#33;](../../mfc/codesnippet/cpp/clistbox-class_33.cpp)]  
   
-##  <a name="a-namesetitemdataa--clistboxsetitemdata"></a><a name="setitemdata"></a>CListBox::SetItemData  
+##  <a name="setitemdata"></a>CListBox::SetItemData  
  Définit une valeur 32 bits associée à l’élément spécifié dans une zone de liste.  
   
 ```  
@@ -1064,7 +1113,7 @@ int SetItemData(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#34;](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]  
   
-##  <a name="a-namesetitemdataptra--clistboxsetitemdataptr"></a><a name="setitemdataptr"></a>CListBox::SetItemDataPtr  
+##  <a name="setitemdataptr"></a>CListBox::SetItemDataPtr  
  Définit la valeur de 32 bits associée à l’élément spécifié dans une zone de liste du pointeur spécifié ( **void\***).  
   
 ```  
@@ -1089,7 +1138,7 @@ int SetItemDataPtr(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#35;](../../mfc/codesnippet/cpp/clistbox-class_35.cpp)]  
   
-##  <a name="a-namesetitemheighta--clistboxsetitemheight"></a><a name="setitemheight"></a>CListBox::SetItemHeight  
+##  <a name="setitemheight"></a>CListBox::SetItemHeight  
  Définit la hauteur des éléments dans une zone de liste.  
   
 ```  
@@ -1114,7 +1163,7 @@ int SetItemHeight(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox n °&36;](../../mfc/codesnippet/cpp/clistbox-class_36.cpp)]  
   
-##  <a name="a-namesetlocalea--clistboxsetlocale"></a><a name="setlocale"></a>CListBox::SetLocale  
+##  <a name="setlocale"></a>CListBox::SetLocale  
  Définit l’identificateur de paramètres régionaux pour cette zone de liste.  
   
 ```  
@@ -1134,7 +1183,7 @@ LCID SetLocale(LCID nNewLocale);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#37;](../../mfc/codesnippet/cpp/clistbox-class_37.cpp)]  
   
-##  <a name="a-namesetsela--clistboxsetsel"></a><a name="setsel"></a>CListBox::SetSel  
+##  <a name="setsel"></a>CListBox::SetSel  
  Sélectionne une chaîne dans une zone de liste à sélection multiple.  
   
 ```  
@@ -1161,7 +1210,7 @@ int SetSel(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox&#38;](../../mfc/codesnippet/cpp/clistbox-class_38.cpp)]  
   
-##  <a name="a-namesettabstopsa--clistboxsettabstops"></a><a name="settabstops"></a>CListBox::SetTabStops  
+##  <a name="settabstops"></a>CListBox::SetTabStops  
  Définit les positions des taquets de tabulation dans une zone de liste.  
   
 ```  
@@ -1197,7 +1246,7 @@ BOOL SetTabStops(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox n °&39;](../../mfc/codesnippet/cpp/clistbox-class_39.cpp)]  
   
-##  <a name="a-namesettopindexa--clistboxsettopindex"></a><a name="settopindex"></a>CListBox::SetTopIndex  
+##  <a name="settopindex"></a>CListBox::SetTopIndex  
  Garantit qu’un élément de zone de liste particulière est visible.  
   
 ```  
@@ -1217,7 +1266,7 @@ int SetTopIndex(int nIndex);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CListBox numéro&40;](../../mfc/codesnippet/cpp/clistbox-class_40.cpp)]  
   
-##  <a name="a-namevkeytoitema--clistboxvkeytoitem"></a><a name="vkeytoitem"></a>CListBox::VKeyToItem  
+##  <a name="vkeytoitem"></a>CListBox::VKeyToItem  
  Appelé par l’infrastructure lors de la fenêtre parente de la zone de liste reçoit un `WM_VKEYTOITEM` message dans la zone de liste.  
   
 ```  

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDispatchException
+- AFXDISP/COleDispatchException
+- AFXDISP/COleDispatchException::m_dwHelpContext
+- AFXDISP/COleDispatchException::m_strDescription
+- AFXDISP/COleDispatchException::m_strHelpFile
+- AFXDISP/COleDispatchException::m_strSource
+- AFXDISP/COleDispatchException::m_wCode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +86,7 @@ class COleDispatchException : public CException
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdisp.h  
   
-##  <a name="a-namemdwhelpcontexta--coledispatchexceptionmdwhelpcontext"></a><a name="m_dwhelpcontext"></a>COleDispatchException::m_dwHelpContext  
+##  <a name="m_dwhelpcontext"></a>COleDispatchException::m_dwHelpContext  
  Identifie le contexte d’aide dans l’aide de votre application (. Fichier (HLP).  
   
 ```  
@@ -93,7 +99,7 @@ DWORD m_dwHelpContext;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  
   
-##  <a name="a-namemstrdescriptiona--coledispatchexceptionmstrdescription"></a><a name="m_strdescription"></a>COleDispatchException::m_strDescription  
+##  <a name="m_strdescription"></a>COleDispatchException::m_strDescription  
  Contient une description d’erreur, par exemple « Disque plein ».  
   
 ```  
@@ -106,14 +112,14 @@ CString m_strDescription;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  
   
-##  <a name="a-namemstrhelpfilea--coledispatchexceptionmstrhelpfile"></a><a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile  
+##  <a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile  
  L’infrastructure complète de cette chaîne par le nom du fichier d’aide de l’application.  
   
 ```  
 CString m_strHelpFile;  
 ```  
   
-##  <a name="a-namemstrsourcea--coledispatchexceptionmstrsource"></a><a name="m_strsource"></a>COleDispatchException::m_strSource  
+##  <a name="m_strsource"></a>COleDispatchException::m_strSource  
  L’infrastructure complète de cette chaîne avec le nom de l’application qui a généré l’exception.  
   
 ```  
@@ -123,7 +129,7 @@ CString m_strSource;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  
   
-##  <a name="a-namemwcodea--coledispatchexceptionmwcode"></a><a name="m_wcode"></a>COleDispatchException::m_wCode  
+##  <a name="m_wcode"></a>COleDispatchException::m_wCode  
  Contient un code d’erreur spécifique à votre application.  
   
 ```  

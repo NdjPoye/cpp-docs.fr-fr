@@ -9,13 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- GetThisClass
-- CMFCRibbonSeparator::GetThisClass
-- CMFCRibbonSeparator.CreateObject
-- CMFCRibbonSeparator::CreateObject
 - CMFCRibbonSeparator
-- CreateObject
-- CMFCRibbonSeparator.GetThisClass
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::CMFCRibbonSeparator
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::AddToListBox
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::CopyFrom
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::GetRegularSize
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::IsSeparator
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::IsTabStop
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::OnDraw
+- AFXBASERIBBONELEMENT/CMFCRibbonSeparator::OnDrawOnList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +114,7 @@ Appelez [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-clas
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxbaseribbonelement.h  
   
-##  <a name="a-nameaddtolistboxa--cmfcribbonseparatoraddtolistbox"></a><a name="addtolistbox"></a>CMFCRibbonSeparator::AddToListBox  
+##  <a name="addtolistbox"></a>CMFCRibbonSeparator::AddToListBox  
  Ajoute un séparateur à la **commandes** liste dans le **personnaliser** boîte de dialogue.  
   
 ```  
@@ -130,7 +133,7 @@ virtual int AddToListBox(
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de la chaîne dans la zone de liste spécifiée par `pWndListBox`.  
   
-##  <a name="a-namecmfcribbonseparatora--cmfcribbonseparatorcmfcribbonseparator"></a><a name="cmfcribbonseparator"></a>CMFCRibbonSeparator::CMFCRibbonSeparator  
+##  <a name="cmfcribbonseparator"></a>CMFCRibbonSeparator::CMFCRibbonSeparator  
  Construit un objet `CMFCRibbonSeparator`.  
   
 ```  
@@ -149,7 +152,7 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
   
  [!code-cpp[NVC_MFC_RibbonApp n °&19;](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]  
   
-##  <a name="a-namecopyfroma--cmfcribbonseparatorcopyfrom"></a><a name="copyfrom"></a>CMFCRibbonSeparator::CopyFrom  
+##  <a name="copyfrom"></a>CMFCRibbonSeparator::CopyFrom  
  Une méthode de copie qui définit les membres d’un séparateur variables à partir d’un autre objet.  
   
 ```  
@@ -160,7 +163,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
  [in] `Src`  
  L’élément de ruban source d’origine.  
   
-##  <a name="a-namegetregularsizea--cmfcribbonseparatorgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonSeparator::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonSeparator::GetRegularSize  
  Retourne la taille d’un séparateur.  
   
 ```  
@@ -174,7 +177,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="return-value"></a>Valeur de retour  
  La taille du séparateur dans le contexte de périphérique donné.  
   
-##  <a name="a-nameisseparatora--cmfcribbonseparatorisseparator"></a><a name="isseparator"></a>CMFCRibbonSeparator::IsSeparator  
+##  <a name="isseparator"></a>CMFCRibbonSeparator::IsSeparator  
  Indique s’il s’agit d’un séparateur.  
   
 ```  
@@ -184,7 +187,7 @@ virtual BOOL IsSeparator() const;
 ### <a name="return-value"></a>Valeur de retour  
  Toujours `TRUE` à cette classe.  
   
-##  <a name="a-nameistabstopa--cmfcribbonseparatoristabstop"></a><a name="istabstop"></a>CMFCRibbonSeparator::IsTabStop  
+##  <a name="istabstop"></a>CMFCRibbonSeparator::IsTabStop  
  Indique s’il s’agit d’un taquet de tabulation.  
   
 ```  
@@ -197,7 +200,7 @@ virtual BOOL IsTabStop() const;
 ### <a name="remarks"></a>Notes  
  Un séparateur de ruban n’est pas un taquet de tabulation.  
   
-##  <a name="a-nameondrawa--cmfcribbonseparatorondraw"></a><a name="ondraw"></a>CMFCRibbonSeparator::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonSeparator::OnDraw  
  Appelée par le système pour dessiner le séparateur sur le ruban ou la barre d’outils Accès rapide.  
   
 ```  
@@ -208,7 +211,7 @@ virtual void OnDraw(CDC* pDC);
  [in] `pDC`  
  Pointeur vers un contexte de périphérique.  
   
-##  <a name="a-nameondrawonlista--cmfcribbonseparatorondrawonlist"></a><a name="ondrawonlist"></a>CMFCRibbonSeparator::OnDrawOnList  
+##  <a name="ondrawonlist"></a>CMFCRibbonSeparator::OnDrawOnList  
  Appelée par le système pour dessiner le séparateur sur le **commandes** liste.  
   
 ```  

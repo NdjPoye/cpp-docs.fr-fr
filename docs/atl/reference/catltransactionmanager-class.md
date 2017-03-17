@@ -10,7 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAtlTransactionManager
-- atltransactionmanager/ATL::CAtlTransactionManager
+- ATLTRANSACTIONMANAGER/ATL::CAtlTransactionManager
+- ATLTRANSACTIONMANAGER/ATL::CAtlTransactionManager
+- ATLTRANSACTIONMANAGER/ATL::Close
+- ATLTRANSACTIONMANAGER/ATL::Commit
+- ATLTRANSACTIONMANAGER/ATL::Create
+- ATLTRANSACTIONMANAGER/ATL::CreateFile
+- ATLTRANSACTIONMANAGER/ATL::DeleteFile
+- ATLTRANSACTIONMANAGER/ATL::FindFirstFile
+- ATLTRANSACTIONMANAGER/ATL::GetFileAttributes
+- ATLTRANSACTIONMANAGER/ATL::GetFileAttributesEx
+- ATLTRANSACTIONMANAGER/ATL::GetHandle
+- ATLTRANSACTIONMANAGER/ATL::IsFallback
+- ATLTRANSACTIONMANAGER/ATL::MoveFile
+- ATLTRANSACTIONMANAGER/ATL::RegCreateKeyEx
+- ATLTRANSACTIONMANAGER/ATL::RegDeleteKey
+- ATLTRANSACTIONMANAGER/ATL::RegOpenKeyEx
+- ATLTRANSACTIONMANAGER/ATL::Rollback
+- ATLTRANSACTIONMANAGER/ATL::SetFileAttributes
+- ATLTRANSACTIONMANAGER/ATL::m_bFallback
+- ATLTRANSACTIONMANAGER/ATL::m_hTransaction
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +116,7 @@ class CAtlTransactionManager;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atltransactionmanager.h  
   
-##  <a name="a-namedtora--catltransactionmanager"></a><a name="dtor"></a>~ CAtlTransactionManager  
+##  <a name="dtor"></a>~ CAtlTransactionManager  
  CAtlTransactionManager destructeur.  
   
 ```
@@ -107,7 +126,7 @@ virtual ~CAtlTransactionManager();
 ### <a name="remarks"></a>Remarques  
  Dans le traitement normal, la transaction est automatiquement validée et fermée. Si le destructeur est appelé pendant un déroulement d’exception, la transaction est restaurée et fermée.  
   
-##  <a name="a-namecatltransactionmanagera--catltransactionmanager"></a><a name="catltransactionmanager"></a>CAtlTransactionManager  
+##  <a name="catltransactionmanager"></a>CAtlTransactionManager  
  Constructeur CAtlTransactionManager.  
   
 ```
@@ -123,7 +142,7 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameclosea--close"></a><a name="close"></a>Fermer  
+##  <a name="close"></a>Fermer  
  Ferme le handle de transaction.  
   
 ```
@@ -136,7 +155,7 @@ inline BOOL Close();
 ### <a name="remarks"></a>Remarques  
  Ce wrapper appelle la `CloseHandle` (fonction). La méthode est appelée automatiquement dans le destructeur.  
   
-##  <a name="a-namecommita--commit"></a><a name="commit"></a>Validation  
+##  <a name="commit"></a>Validation  
  Demande que la transaction soit validée.  
   
 ```
@@ -149,7 +168,7 @@ inline BOOL Commit();
 ### <a name="remarks"></a>Remarques  
  Ce wrapper appelle la `CommitTransaction` (fonction). La méthode est appelée automatiquement dans le destructeur.  
   
-##  <a name="a-namecreatea--create"></a><a name="create"></a>Créer  
+##  <a name="create"></a>Créer  
  Crée le handle de transaction.  
   
 ```
@@ -162,7 +181,7 @@ inline BOOL Create();
 ### <a name="remarks"></a>Remarques  
  Ce wrapper appelle la `CreateTransaction` (fonction). Vérifiez  
   
-##  <a name="a-namecreatefilea--createfile"></a><a name="createfile"></a>CreateFile  
+##  <a name="createfile"></a>CreateFile  
  Crée ou ouvre un fichier, un flux de fichier ou un répertoire en tant qu’une opération.  
   
 ```
@@ -204,7 +223,7 @@ inline HANDLE CreateFile(
 ### <a name="remarks"></a>Notes  
  Ce wrapper appelle la `CreateFileTransacted` (fonction).  
   
-##  <a name="a-namedeletefilea--deletefile"></a><a name="deletefile"></a>DeleteFile  
+##  <a name="deletefile"></a>DeleteFile  
  Supprime un fichier existant comme une opération.  
   
 ```
@@ -218,7 +237,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Remarques  
  Ce wrapper appelle la `DeleteFileTransacted` (fonction).  
   
-##  <a name="a-namefindfirstfilea--findfirstfile"></a><a name="findfirstfile"></a>FindFirstFile  
+##  <a name="findfirstfile"></a>FindFirstFile  
  Recherche dans un répertoire pour un fichier ou un sous-répertoire comme une opération.  
   
 ```
@@ -240,7 +259,7 @@ inline HANDLE FindFirstFile(
 ### <a name="remarks"></a>Remarques  
  Ce wrapper appelle la `FindFirstFileTransacted` (fonction).  
   
-##  <a name="a-namegetfileattributesa--getfileattributes"></a><a name="getfileattributes"></a>GetFileAttributes  
+##  <a name="getfileattributes"></a>GetFileAttributes  
  Récupère les attributs de système de fichiers pour un fichier ou répertoire spécifié sous la forme d’une opération.  
   
 ```
@@ -254,7 +273,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Remarques  
  Ce wrapper appelle la `GetFileAttributesTransacted` (fonction).  
   
-##  <a name="a-namegetfileattributesexa--getfileattributesex"></a><a name="getfileattributesex"></a>GetFileAttributesEx  
+##  <a name="getfileattributesex"></a>GetFileAttributesEx  
  Récupère les attributs de système de fichiers pour un fichier ou répertoire spécifié sous la forme d’une opération.  
   
 ```
@@ -277,7 +296,7 @@ inline BOOL GetFileAttributesEx(
 ### <a name="remarks"></a>Remarques  
  Ce wrapper appelle la `GetFileAttributesTransacted` (fonction).  
   
-##  <a name="a-namegethandlea--gethandle"></a><a name="gethandle"></a>GetHandle  
+##  <a name="gethandle"></a>GetHandle  
  Retourne le handle de transaction.  
   
 ```
@@ -289,7 +308,7 @@ HANDLE GetHandle() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameisfallbacka--isfallback"></a><a name="isfallback"></a>IsFallback  
+##  <a name="isfallback"></a>IsFallback  
  Détermine si les appels de secours sont activés.  
   
 ```
@@ -301,7 +320,7 @@ BOOL IsFallback() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namembfallbacka--mbfallback"></a><a name="m_bfallback"></a>m_bFallback  
+##  <a name="m_bfallback"></a>m_bFallback  
  `TRUE`Si le basculement est pris en charge ; `FALSE` dans le cas contraire.  
   
 ```
@@ -310,7 +329,7 @@ BOOL m_bFallback;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namemhtransactiona--mhtransaction"></a><a name="m_htransaction"></a>m_hTransaction  
+##  <a name="m_htransaction"></a>m_hTransaction  
  Le descripteur de transaction.  
   
 ```
@@ -319,7 +338,7 @@ HANDLE m_hTransaction;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namemovefilea--movefile"></a><a name="movefile"></a>MoveFile  
+##  <a name="movefile"></a>MoveFile  
  Déplace un fichier ou un répertoire, y compris ses enfants, comme une opération.  
   
 ```
@@ -336,7 +355,7 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ### <a name="remarks"></a>Notes  
  Ce wrapper appelle la `MoveFileTransacted` (fonction).  
   
-##  <a name="a-nameregcreatekeyexa--regcreatekeyex"></a><a name="regcreatekeyex"></a>RegCreateKeyEx  
+##  <a name="regcreatekeyex"></a>RegCreateKeyEx  
  Crée la clé de Registre spécifiée et l’associe à une transaction. Si la clé existe déjà, la fonction l’ouvre.  
   
 ```
@@ -386,7 +405,7 @@ inline LSTATUS RegCreateKeyEx(
 ### <a name="remarks"></a>Notes  
  Ce wrapper appelle la `RegCreateKeyTransacted` (fonction).  
   
-##  <a name="a-nameregdeletekeya--regdeletekey"></a><a name="regdeletekey"></a>RegDeleteKey  
+##  <a name="regdeletekey"></a>RegDeleteKey  
  Supprime une sous-clé et ses valeurs à partir de la vue spécifique à la plateforme spécifiée du Registre en tant qu’une opération.  
   
 ```
@@ -406,7 +425,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ### <a name="remarks"></a>Remarques  
  Ce wrapper appelle la `RegDeleteKeyTransacted` (fonction).  
   
-##  <a name="a-nameregopenkeyexa--regopenkeyex"></a><a name="regopenkeyex"></a>RegOpenKeyEx  
+##  <a name="regopenkeyex"></a>RegOpenKeyEx  
  Ouvre la clé de Registre spécifiée et l’associe à une transaction.  
   
 ```
@@ -440,7 +459,7 @@ inline LSTATUS RegOpenKeyEx(
 ### <a name="remarks"></a>Notes  
  Ce wrapper appelle la `RegOpenKeyTransacted` (fonction).  
   
-##  <a name="a-namerollbacka--rollback"></a><a name="rollback"></a>Restauration  
+##  <a name="rollback"></a>Restauration  
  Demande que la transaction est restaurée.  
   
 ```
@@ -453,7 +472,7 @@ inline BOOL Rollback();
 ### <a name="remarks"></a>Remarques  
  Ce wrapper appelle la `RollbackTransaction` (fonction).  
   
-##  <a name="a-namesetfileattributesa--setfileattributes"></a><a name="setfileattributes"></a>SetFileAttributes  
+##  <a name="setfileattributes"></a>SetFileAttributes  
  Définit les attributs d’un fichier ou répertoire comme une opération.  
   
 ```

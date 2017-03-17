@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleCmdUI
+- AFXDOCOBJ/COleCmdUI
+- AFXDOCOBJ/COleCmdUI::COleCmdUI
+- AFXDOCOBJ/COleCmdUI::Enable
+- AFXDOCOBJ/COleCmdUI::SetCheck
+- AFXDOCOBJ/COleCmdUI::SetText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class COleCmdUI : public CCmdUI
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdocobj.h  
   
-##  <a name="a-namecolecmduia--colecmduicolecmdui"></a><a name="colecmdui"></a>COleCmdUI::COleCmdUI  
+##  <a name="colecmdui"></a>COleCmdUI::COleCmdUI  
  Construit un `COleCmdUI` objet associé à une commande d’interface utilisateur spécifique.  
   
 ```  
@@ -107,7 +112,7 @@ COleCmdUI(
 ### <a name="remarks"></a>Notes  
  Le `COleCmdUI` objet fournit une interface de programmation pour la mise à jour des objets d’interface utilisateur de DocObject tels que les éléments de menu ou des boutons de barre de contrôle. Les objets d’interface utilisateur peuvent être activés, désactivés, activés, et/ou désactivées via la `COleCmdUI` objet.  
   
-##  <a name="a-nameenablea--colecmduienable"></a><a name="enable"></a>COleCmdUI::Enable  
+##  <a name="enable"></a>COleCmdUI::Enable  
  Appelez cette fonction pour définir l’indicateur de commande de la `COleCmdUI` objet **OLECOMDF_ENABLED**, ce qui indique la commande à l’interface est disponible et activée, ou pour effacer l’indicateur de commande.  
   
 ```  
@@ -118,7 +123,7 @@ virtual void Enable(BOOL bOn);
  `bOn`  
  Indique si la commande associée à la `COleCmdUI` objet doit être activé ou désactivé. NonZero permet à la commande. 0 désactive la commande.  
   
-##  <a name="a-namesetchecka--colecmduisetcheck"></a><a name="setcheck"></a>COleCmdUI::SetCheck  
+##  <a name="setcheck"></a>COleCmdUI::SetCheck  
  Appelez cette fonction pour définir l’état d’un bouton marche/arrêt bascule commande.  
   
 ```  
@@ -135,7 +140,7 @@ virtual void SetCheck(int nCheck);
 |**2**|Définit la commande à indéterminé ; l’état ne peut pas être déterminé, car l’attribut de cette commande est dans à la fois et désactiver les États dans la sélection appropriée.|  
 |toute autre valeur|Définit la commande à off.|  
   
-##  <a name="a-namesettexta--colecmduisettext"></a><a name="settext"></a>COleCmdUI::SetText  
+##  <a name="settext"></a>COleCmdUI::SetText  
  Appelez cette fonction pour retourner une chaîne de texte Nom ou l’état d’une commande.  
   
 ```  

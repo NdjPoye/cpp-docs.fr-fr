@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRectTracker
+- AFXEXT/CRectTracker
+- AFXEXT/CRectTracker::CRectTracker
+- AFXEXT/CRectTracker::AdjustRect
+- AFXEXT/CRectTracker::Draw
+- AFXEXT/CRectTracker::DrawTrackerRect
+- AFXEXT/CRectTracker::GetHandleMask
+- AFXEXT/CRectTracker::GetTrueRect
+- AFXEXT/CRectTracker::HitTest
+- AFXEXT/CRectTracker::NormalizeHit
+- AFXEXT/CRectTracker::OnChangedRect
+- AFXEXT/CRectTracker::SetCursor
+- AFXEXT/CRectTracker::Track
+- AFXEXT/CRectTracker::TrackRubberBand
+- AFXEXT/CRectTracker::m_nHandleSize
+- AFXEXT/CRectTracker::m_nStyle
+- AFXEXT/CRectTracker::m_rect
+- AFXEXT/CRectTracker::m_sizeMin
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +117,7 @@ class CRectTracker
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxext.h  
   
-##  <a name="a-nameadjustrecta--crecttrackeradjustrect"></a><a name="adjustrect"></a>CRectTracker::AdjustRect  
+##  <a name="adjustrect"></a>CRectTracker::AdjustRect  
  Appelé par l’infrastructure lorsque le rectangle de suivi est redimensionné à l’aide d’une poignée de redimensionnement.  
   
 ```  
@@ -123,7 +140,7 @@ virtual void AdjustRect(
   
  Les fonctionnalités spéciales qui ne sont pas directement pris en charge par `CRectTracker`, tel que le composant logiciel enfichable sur la grille ou keep-proportions, peut être implémentée en remplaçant cette fonction.  
   
-##  <a name="a-namecrecttrackera--crecttrackercrecttracker"></a><a name="crecttracker"></a>CRectTracker::CRectTracker  
+##  <a name="crecttracker"></a>CRectTracker::CRectTracker  
  Crée et initialise un `CRectTracker` objet.  
   
 ```  
@@ -157,7 +174,7 @@ CRectTracker(
 ### <a name="remarks"></a>Notes  
  Le constructeur par défaut initialise le `CRectTracker` objet avec les valeurs de `lpSrcRect` et initialise les autres tailles pour les valeurs système par défaut. Si l’objet est créé sans paramètres, la `m_rect` et `m_nStyle` les membres de données sont sans être initialisé.  
   
-##  <a name="a-namedrawa--crecttrackerdraw"></a><a name="draw"></a>CRectTracker::Draw  
+##  <a name="draw"></a>CRectTracker::Draw  
  Appelez cette fonction pour dessiner du rectangle lignes externes et une région interne.  
   
 ```  
@@ -171,7 +188,7 @@ void Draw(CDC* pDC) const;
 ### <a name="remarks"></a>Remarques  
  Le style du dispositif de suivi détermine comment le dessin est effectué. Consultez le constructeur de `CRectTracker` pour plus d’informations sur les styles disponibles.  
   
-##  <a name="a-namedrawtrackerrecta--crecttrackerdrawtrackerrect"></a><a name="drawtrackerrect"></a>CRectTracker::DrawTrackerRect  
+##  <a name="drawtrackerrect"></a>CRectTracker::DrawTrackerRect  
  Appelé par l’infrastructure lorsque la position du dispositif de suivi a changé tandis que dans le `Track` ou `TrackRubberBand` fonction membre.  
   
 ```  
@@ -200,7 +217,7 @@ virtual void DrawTrackerRect(
   
  Remplacez cette fonction pour fournir des commentaires différents lors de l’opération de suivi.  
   
-##  <a name="a-namegethandlemaska--crecttrackergethandlemask"></a><a name="gethandlemask"></a>CRectTracker::GetHandleMask  
+##  <a name="gethandlemask"></a>CRectTracker::GetHandleMask  
  L’infrastructure appelle cette fonction membre pour récupérer le masque de poignées de redimensionnement d’un rectangle.  
   
 ```  
@@ -221,7 +238,7 @@ virtual UINT GetHandleMask() const;
   
  Remplacez cette fonction membre pour masquer ou afficher les que poignées de redimensionnement indiqué.  
   
-##  <a name="a-namegettruerecta--crecttrackergettruerect"></a><a name="gettruerect"></a>CRectTracker::GetTrueRect  
+##  <a name="gettruerect"></a>CRectTracker::GetTrueRect  
  Appelez cette fonction pour récupérer les coordonnées du rectangle.  
   
 ```  
@@ -235,7 +252,7 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ### <a name="remarks"></a>Notes  
  Les dimensions du rectangle incluent la hauteur et la largeur de des poignées de redimensionnement situées sur la bordure externe. Lors du retour, `lpTrueRect` est toujours un rectangle normalisé en coordonnées de périphérique.  
   
-##  <a name="a-namehittesta--crecttrackerhittest"></a><a name="hittest"></a>CRectTracker::HitTest  
+##  <a name="hittest"></a>CRectTracker::HitTest  
  Appelez cette fonction pour déterminer si l’utilisateur a saisi une poignée de redimensionnement.  
   
 ```  
@@ -269,7 +286,7 @@ int HitTest(CPoint point) const;
   
 - **CRectTracker::hitMiddle** 8  
   
-##  <a name="a-namemnhandlesizea--crecttrackermnhandlesize"></a><a name="m_nhandlesize"></a>CRectTracker::m_nHandleSize  
+##  <a name="m_nhandlesize"></a>CRectTracker::m_nHandleSize  
  La taille, en pixels, de la `CRectTracker` des poignées de redimensionnement.  
   
 ```  
@@ -279,14 +296,14 @@ int m_nHandleSize;
 ### <a name="remarks"></a>Notes  
  Initialisé avec la valeur par défaut du système.  
   
-##  <a name="a-namemrecta--crecttrackermrect"></a><a name="m_rect"></a>CRectTracker::m_rect  
+##  <a name="m_rect"></a>CRectTracker::m_rect  
  La position actuelle du rectangle en coordonnées clientes (pixels).  
   
 ```  
 CRect m_rect;  
 ```  
   
-##  <a name="a-namemsizemina--crecttrackermsizemin"></a><a name="m_sizemin"></a>CRectTracker::m_sizeMin  
+##  <a name="m_sizemin"></a>CRectTracker::m_sizeMin  
  La taille minimale du rectangle.  
   
 ```  
@@ -296,7 +313,7 @@ CSize m_sizeMin;
 ### <a name="remarks"></a>Remarques  
  Les valeurs par défaut, **cx** et **cy**, sont calculées à partir de la valeur système par défaut pour la largeur de bordure. Ce membre de données est utilisé uniquement par les `AdjustRect` fonction membre.  
   
-##  <a name="a-namemnstylea--crecttrackermnstyle"></a><a name="m_nstyle"></a>CRectTracker::m_nStyle  
+##  <a name="m_nstyle"></a>CRectTracker::m_nStyle  
  Style actuel du rectangle.  
   
 ```  
@@ -306,7 +323,7 @@ UINT m_nStyle;
 ### <a name="remarks"></a>Notes  
  Consultez la page [CRectTracker::CRectTracker](#crecttracker) pour obtenir la liste des styles possibles.  
   
-##  <a name="a-namenormalizehita--crecttrackernormalizehit"></a><a name="normalizehit"></a>CRectTracker::NormalizeHit  
+##  <a name="normalizehit"></a>CRectTracker::NormalizeHit  
  Appelez cette fonction pour convertir un handle potentiellement inversé.  
   
 ```  
@@ -323,7 +340,7 @@ int NormalizeHit(int nHandle) const;
 ### <a name="remarks"></a>Remarques  
  Lors de la `CRectTracker::Track` ou `CRectTracker::TrackRubberBand` est appelée avec inversion des autorisé, il est possible pour le rectangle à inverser l’axe des abscisses, l’axe des y, ou les deux. Dans ce cas, `HitTest` retournera les descripteurs sont également inversés en ce qui concerne le rectangle. Cela est inapproprié pour dessiner le curseur car les commentaires dépend de la position d’écran du rectangle, pas la partie de la structure de données rectangulaire qui sera modifiée.  
   
-##  <a name="a-nameonchangedrecta--crecttrackeronchangedrect"></a><a name="onchangedrect"></a>CRectTracker::OnChangedRect  
+##  <a name="onchangedrect"></a>CRectTracker::OnChangedRect  
  Appelé par l’infrastructure lorsque le rectangle de suivi a changé pendant un appel à `Track`.  
   
 ```  
@@ -339,7 +356,7 @@ virtual void OnChangedRect(const CRect& rectOld);
   
  Remplacez cette fonction lorsque vous souhaitez effectuer des actions après que le rectangle a été redimensionné.  
   
-##  <a name="a-namesetcursora--crecttrackersetcursor"></a><a name="setcursor"></a>CRectTracker::SetCursor  
+##  <a name="setcursor"></a>CRectTracker::SetCursor  
  Appelez cette fonction pour modifier la forme de curseur au-dessus de la `CRectTracker` région de l’objet.  
   
 ```  
@@ -361,7 +378,7 @@ BOOL SetCursor(
 ### <a name="remarks"></a>Remarques  
  Appelez cette fonction à partir de la fonction de votre fenêtre qui gère la `WM_SETCURSOR` message (généralement `OnSetCursor`).  
   
-##  <a name="a-nametracka--crecttrackertrack"></a><a name="track"></a>CRectTracker::Track  
+##  <a name="track"></a>CRectTracker::Track  
  Appelez cette fonction pour afficher l’interface utilisateur pour redimensionner le rectangle.  
   
 ```  
@@ -395,7 +412,7 @@ BOOL Track(
   
  Si `bAllowInvert` est **TRUE**, le rectangle de suivi peut être inversé sur l’axe des abscisses ou l’axe des y.  
   
-##  <a name="a-nametrackrubberbanda--crecttrackertrackrubberband"></a><a name="trackrubberband"></a>CRectTracker::TrackRubberBand  
+##  <a name="trackrubberband"></a>CRectTracker::TrackRubberBand  
  Appelez cette fonction pour faire la sélection élastique.  
   
 ```  

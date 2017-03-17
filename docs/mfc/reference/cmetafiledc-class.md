@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMetaFileDC
+- AFXEXT/CMetaFileDC
+- AFXEXT/CMetaFileDC::CMetaFileDC
+- AFXEXT/CMetaFileDC::Close
+- AFXEXT/CMetaFileDC::CloseEnhanced
+- AFXEXT/CMetaFileDC::Create
+- AFXEXT/CMetaFileDC::CreateEnhanced
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +100,7 @@ class CMetaFileDC : public CDC
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxext.h  
   
-##  <a name="a-nameclosea--cmetafiledcclose"></a><a name="close"></a>CMetaFileDC::Close  
+##  <a name="close"></a>CMetaFileDC::Close  
  Ferme le contexte de périphérique de métafichier et crée un handle de métafichier de Windows qui peut être utilisé pour lire le métafichier à l’aide de la [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) fonction membre.  
   
 ```  
@@ -109,7 +115,7 @@ HMETAFILE Close();
   
  Supprimer le métafichier après utilisation en appelant Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) (fonction).  
   
-##  <a name="a-namecloseenhanceda--cmetafiledccloseenhanced"></a><a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
+##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
  Ferme un contexte de périphérique de métafichier amélioré et retourne un handle qui identifie un métafichier de format amélioré.  
   
 ```  
@@ -140,7 +146,7 @@ HENHMETAFILE CloseEnhanced();
   
  Lorsque l’application n’a plus besoin du handle de métafichier amélioré, elle doit libérer le handle en appelant Win32 **DeleteEnhMetaFile** (fonction).  
   
-##  <a name="a-namecmetafiledca--cmetafiledccmetafiledc"></a><a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
+##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
  Construire un `CMetaFileDC` objet en deux étapes.  
   
 ```  
@@ -150,7 +156,7 @@ CMetaFileDC();
 ### <a name="remarks"></a>Remarques  
  Tout d’abord, appelez `CMetaFileDC`, puis appelez **créer**, ce qui crée le contexte de périphérique de métafichier Windows et l’attache à le `CMetaFileDC` objet.  
   
-##  <a name="a-namecreatea--cmetafiledccreate"></a><a name="create"></a>CMetaFileDC::Create  
+##  <a name="create"></a>CMetaFileDC::Create  
  Construire un `CMetaFileDC` objet en deux étapes.  
   
 ```  
@@ -167,7 +173,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="remarks"></a>Remarques  
  Tout d’abord, appelez le constructeur `CMetaFileDC`, puis appelez **créer**, ce qui crée le contexte de périphérique de métafichier Windows et l’attache à le `CMetaFileDC` objet.  
   
-##  <a name="a-namecreateenhanceda--cmetafiledccreateenhanced"></a><a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
+##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
  Crée un contexte de périphérique pour un métafichier de format amélioré.  
   
 ```  

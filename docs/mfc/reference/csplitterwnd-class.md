@@ -10,6 +10,40 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSplitterWnd
+- AFXEXT/CSplitterWnd
+- AFXEXT/CSplitterWnd::CSplitterWnd
+- AFXEXT/CSplitterWnd::ActivateNext
+- AFXEXT/CSplitterWnd::CanActivateNext
+- AFXEXT/CSplitterWnd::Create
+- AFXEXT/CSplitterWnd::CreateScrollBarCtrl
+- AFXEXT/CSplitterWnd::CreateStatic
+- AFXEXT/CSplitterWnd::CreateView
+- AFXEXT/CSplitterWnd::DeleteColumn
+- AFXEXT/CSplitterWnd::DeleteRow
+- AFXEXT/CSplitterWnd::DeleteView
+- AFXEXT/CSplitterWnd::DoKeyboardSplit
+- AFXEXT/CSplitterWnd::DoScroll
+- AFXEXT/CSplitterWnd::DoScrollBy
+- AFXEXT/CSplitterWnd::GetActivePane
+- AFXEXT/CSplitterWnd::GetColumnCount
+- AFXEXT/CSplitterWnd::GetColumnInfo
+- AFXEXT/CSplitterWnd::GetPane
+- AFXEXT/CSplitterWnd::GetRowCount
+- AFXEXT/CSplitterWnd::GetRowInfo
+- AFXEXT/CSplitterWnd::GetScrollStyle
+- AFXEXT/CSplitterWnd::IdFromRowCol
+- AFXEXT/CSplitterWnd::IsChildPane
+- AFXEXT/CSplitterWnd::IsTracking
+- AFXEXT/CSplitterWnd::RecalcLayout
+- AFXEXT/CSplitterWnd::SetActivePane
+- AFXEXT/CSplitterWnd::SetColumnInfo
+- AFXEXT/CSplitterWnd::SetRowInfo
+- AFXEXT/CSplitterWnd::SetScrollStyle
+- AFXEXT/CSplitterWnd::SplitColumn
+- AFXEXT/CSplitterWnd::SplitRow
+- AFXEXT/CSplitterWnd::OnDraw
+- AFXEXT/CSplitterWnd::OnDrawSplitter
+- AFXEXT/CSplitterWnd::OnInvertTracker
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -158,7 +192,7 @@ class CSplitterWnd : public CWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxext.h  
   
-##  <a name="a-nameactivatenexta--csplitterwndactivatenext"></a><a name="activatenext"></a>CSplitterWnd::ActivateNext  
+##  <a name="activatenext"></a>CSplitterWnd::ActivateNext  
  Appelé par le framework d’exécuter la commande volet suivant ou précédent.  
   
 ```  
@@ -172,7 +206,7 @@ virtual void ActivateNext(BOOL bPrev = FALSE);
 ### <a name="remarks"></a>Remarques  
  Cette fonction membre est une commande de haut niveau qui est utilisée par le [CView](../../mfc/reference/cview-class.md) classe déléguer à la `CSplitterWnd` mise en œuvre.  
   
-##  <a name="a-namecanactivatenexta--csplitterwndcanactivatenext"></a><a name="canactivatenext"></a>CSplitterWnd::CanActivateNext  
+##  <a name="canactivatenext"></a>CSplitterWnd::CanActivateNext  
  Appelée par l’infrastructure pour vérifier si la commande volet suivant ou volet précédent est actuellement possible.  
   
 ```  
@@ -189,7 +223,7 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 ### <a name="remarks"></a>Remarques  
  Cette fonction membre est une commande de haut niveau qui est utilisée par le [CView](../../mfc/reference/cview-class.md) classe déléguer à la `CSplitterWnd` mise en œuvre.  
   
-##  <a name="a-namecreatea--csplitterwndcreate"></a><a name="create"></a>CSplitterWnd::Create statiques  
+##  <a name="create"></a>CSplitterWnd::Create statiques  
  Pour créer une fenêtre fractionnée dynamique, appelez le **créer** fonction membre.  
   
 ```  
@@ -246,7 +280,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCWindowing&#125;](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_1.cpp)]  
   
-##  <a name="a-namecreatescrollbarctrla--csplitterwndcreatescrollbarctrl"></a><a name="createscrollbarctrl"></a>CSplitterWnd::CreateScrollBarCtrl  
+##  <a name="createscrollbarctrl"></a>CSplitterWnd::CreateScrollBarCtrl  
  Appelé par le framework pour créer un contrôle de barre de défilement partagé.  
   
 ```  
@@ -268,7 +302,7 @@ virtual BOOL CreateScrollBarCtrl(
 ### <a name="remarks"></a>Remarques  
  Substituer `CreateScrollBarCtrl` pour inclure les contrôles supplémentaires en regard d’une barre de défilement. Le comportement par défaut consiste à créer des contrôles de barre de défilement Windows normales.  
   
-##  <a name="a-namecreatestatica--csplitterwndcreatestatic"></a><a name="createstatic"></a>CSplitterWnd::CreateStatic  
+##  <a name="createstatic"></a>CSplitterWnd::CreateStatic  
  Pour créer une fenêtre fractionnée statique, appelez le `CreateStatic` fonction membre.  
   
 ```  
@@ -318,7 +352,7 @@ virtual BOOL CreateStatic(
   
  Consultez la rubrique « Fenêtres fractionnées » dans l’article [plusieurs Types de documents, vues et fenêtres Frame](../../mfc/multiple-document-types-views-and-frame-windows.md), [Technical Note 29](../../mfc/tn029-splitter-windows.md)et le `CSplitterWnd` vue d’ensemble de la classe pour plus d’informations sur les fenêtres fractionnées statiques.  
   
-##  <a name="a-namecreateviewa--csplitterwndcreateview"></a><a name="createview"></a>CSplitterWnd::CreateView  
+##  <a name="createview"></a>CSplitterWnd::CreateView  
  Crée les volets d’une fenêtre fractionnée statique.  
   
 ```  
@@ -357,7 +391,7 @@ virtual BOOL CreateView(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCWindowing n °&4;](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_2.cpp)]  
   
-##  <a name="a-namecsplitterwnda--csplitterwndcsplitterwnd"></a><a name="csplitterwnd"></a>CSplitterWnd::CSplitterWnd  
+##  <a name="csplitterwnd"></a>CSplitterWnd::CSplitterWnd  
  Appel à construire un `CSplitterWnd` objet.  
   
 ```  
@@ -367,7 +401,7 @@ CSplitterWnd();
 ### <a name="remarks"></a>Remarques  
  Construire un `CSplitterWnd` objet en deux étapes. Tout d’abord, appelez le constructeur, qui crée la `CSplitterWnd` de l’objet, puis appelez le [créer](#create) fonction membre, ce qui crée la fenêtre fractionnée et l’attache à le `CSplitterWnd` objet.  
   
-##  <a name="a-namedeletecolumna--csplitterwnddeletecolumn"></a><a name="deletecolumn"></a>CSplitterWnd::DeleteColumn  
+##  <a name="deletecolumn"></a>CSplitterWnd::DeleteColumn  
  Supprime une colonne de la fenêtre fractionnée.  
   
 ```  
@@ -381,7 +415,7 @@ virtual void DeleteColumn(int colDelete);
 ### <a name="remarks"></a>Notes  
  Cette fonction membre est appelée par l’infrastructure pour implémenter la logique de la fenêtre fractionnée dynamique (autrement dit, si la fenêtre fractionnée a la **SPLS_DYNAMIC_SPLIT** style). Il peut être personnalisé, ainsi que la fonction virtuelle [CreateView](#createview)pour implémenter des fenêtres fractionnées dynamiques plus avancées.  
   
-##  <a name="a-namedeleterowa--csplitterwnddeleterow"></a><a name="deleterow"></a>CSplitterWnd::DeleteRow  
+##  <a name="deleterow"></a>CSplitterWnd::DeleteRow  
  Supprime une ligne de la fenêtre fractionnée.  
   
 ```  
@@ -395,7 +429,7 @@ virtual void DeleteRow(int rowDelete);
 ### <a name="remarks"></a>Remarques  
  Cette fonction membre est appelée par l’infrastructure pour implémenter la logique de la fenêtre fractionnée dynamique (autrement dit, si la fenêtre fractionnée a la **SPLS_DYNAMIC_SPLIT** style). Il peut être personnalisé, ainsi que la fonction virtuelle [CreateView](#createview)pour implémenter des fenêtres fractionnées dynamiques plus avancées.  
   
-##  <a name="a-namedeleteviewa--csplitterwnddeleteview"></a><a name="deleteview"></a>CSplitterWnd::DeleteView  
+##  <a name="deleteview"></a>CSplitterWnd::DeleteView  
  Supprime une vue de la fenêtre fractionnée.  
   
 ```  
@@ -416,7 +450,7 @@ virtual void DeleteView(
   
  Cette fonction membre est appelée par l’infrastructure pour implémenter la logique de la fenêtre fractionnée dynamique (autrement dit, si la fenêtre fractionnée a la **SPLS_DYNAMIC_SPLIT** style). Il peut être personnalisé, ainsi que la fonction virtuelle [CreateView](#createview)pour implémenter des fenêtres fractionnées dynamiques plus avancées.  
   
-##  <a name="a-namedokeyboardsplita--csplitterwnddokeyboardsplit"></a><a name="dokeyboardsplit"></a>CSplitterWnd::DoKeyboardSplit  
+##  <a name="dokeyboardsplit"></a>CSplitterWnd::DoKeyboardSplit  
  Effectue le clavier fractionner la commande, généralement « fractionnement de la fenêtre ».  
   
 ```  
@@ -429,7 +463,7 @@ virtual BOOL DoKeyboardSplit();
 ### <a name="remarks"></a>Remarques  
  Cette fonction membre est une commande de haut niveau qui est utilisée par le [CView](../../mfc/reference/cview-class.md) classe déléguer à la `CSplitterWnd` mise en œuvre.  
   
-##  <a name="a-namedoscrolla--csplitterwnddoscroll"></a><a name="doscroll"></a>CSplitterWnd::DoScroll  
+##  <a name="doscroll"></a>CSplitterWnd::DoScroll  
  Exécute un défilement synchronisé des fenêtres fractionnées.  
   
 ```  
@@ -467,7 +501,7 @@ virtual BOOL DoScroll(
 ### <a name="remarks"></a>Remarques  
  Cette fonction membre est appelée par l’infrastructure pour effectuer un défilement synchronisé des fenêtres fractionnées lors de l’affichage reçoit un message de défilement. Remplacement nécessitent une action de l’utilisateur avant le défilement synchronisé est autorisé.  
   
-##  <a name="a-namedoscrollbya--csplitterwnddoscrollby"></a><a name="doscrollby"></a>CSplitterWnd::DoScrollBy  
+##  <a name="doscrollby"></a>CSplitterWnd::DoScrollBy  
  Fait défiler les fenêtres fractionnées selon un nombre donné de pixels.  
   
 ```  
@@ -495,7 +529,7 @@ virtual BOOL DoScrollBy(
   
  Remplacement nécessitent une action de l’utilisateur avant d’autoriser le défilement.  
   
-##  <a name="a-namegetactivepanea--csplitterwndgetactivepane"></a><a name="getactivepane"></a>CSplitterWnd::GetActivePane  
+##  <a name="getactivepane"></a>CSplitterWnd::GetActivePane  
  Détermine le volet actif à partir du focus ou de la vue active dans le frame.  
   
 ```  
@@ -517,7 +551,7 @@ virtual CWnd* GetActivePane(
 ### <a name="remarks"></a>Remarques  
  Cette fonction membre est appelée par l’infrastructure pour déterminer le volet actif dans une fenêtre fractionnée. Remplacement nécessitent une action de l’utilisateur avant d’obtenir le volet actif.  
   
-##  <a name="a-namegetcolumncounta--csplitterwndgetcolumncount"></a><a name="getcolumncount"></a>CSplitterWnd::GetColumnCount  
+##  <a name="getcolumncount"></a>CSplitterWnd::GetColumnCount  
  Retourne le nombre de colonnes volet en cours.  
   
 ```  
@@ -527,7 +561,7 @@ int GetColumnCount() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le nombre actuel de colonnes dans le séparateur. Pour un séparateur statique, ce sera également le nombre maximal de colonnes.  
   
-##  <a name="a-namegetcolumninfoa--csplitterwndgetcolumninfo"></a><a name="getcolumninfo"></a>CSplitterWnd::GetColumnInfo  
+##  <a name="getcolumninfo"></a>CSplitterWnd::GetColumnInfo  
  Retourne des informations sur la colonne spécifiée.  
   
 ```  
@@ -547,7 +581,7 @@ void GetColumnInfo(
  `cxMin`  
  Une référence à un `int` à la largeur minimale actuelle de la colonne.  
   
-##  <a name="a-namegetpanea--csplitterwndgetpane"></a><a name="getpane"></a>CSplitterWnd::GetPane  
+##  <a name="getpane"></a>CSplitterWnd::GetPane  
  Retourne le volet à la ligne spécifiée et la colonne.  
   
 ```  
@@ -566,7 +600,7 @@ CWnd* GetPane(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le volet à la ligne spécifiée et la colonne. Le volet retourné est généralement un [CView](../../mfc/reference/cview-class.md)-classe dérivée.  
   
-##  <a name="a-namegetrowcounta--csplitterwndgetrowcount"></a><a name="getrowcount"></a>CSplitterWnd::GetRowCount  
+##  <a name="getrowcount"></a>CSplitterWnd::GetRowCount  
  Retourne le nombre de lignes de volet en cours.  
   
 ```  
@@ -576,7 +610,7 @@ int GetRowCount() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le nombre actuel de lignes dans la fenêtre fractionnée. Pour une fenêtre fractionnée statique, ce sera également le nombre maximal de lignes.  
   
-##  <a name="a-namegetrowinfoa--csplitterwndgetrowinfo"></a><a name="getrowinfo"></a>CSplitterWnd::GetRowInfo  
+##  <a name="getrowinfo"></a>CSplitterWnd::GetRowInfo  
  Retourne des informations sur la ligne spécifiée.  
   
 ```  
@@ -599,7 +633,7 @@ void GetRowInfo(
 ### <a name="remarks"></a>Remarques  
  Appelez cette fonction membre pour obtenir des informations sur la ligne spécifiée. Le `cyCur` paramètre est rempli avec la hauteur actuelle de la ligne spécifiée, et `cyMin` est rempli avec la hauteur minimale de la ligne.  
   
-##  <a name="a-namegetscrollstylea--csplitterwndgetscrollstyle"></a><a name="getscrollstyle"></a>CSplitterWnd::GetScrollStyle  
+##  <a name="getscrollstyle"></a>CSplitterWnd::GetScrollStyle  
  Retourne le style de barre de défilement partagé pour la fenêtre fractionnée.  
   
 ```  
@@ -615,7 +649,7 @@ DWORD GetScrollStyle() const;
   
  Si zéro, la fenêtre fractionnée ne gère pas actuellement toutes les barres de défilement partagé.  
   
-##  <a name="a-nameidfromrowcola--csplitterwndidfromrowcol"></a><a name="idfromrowcol"></a>CSplitterWnd::IdFromRowCol  
+##  <a name="idfromrowcol"></a>CSplitterWnd::IdFromRowCol  
  Obtient l’enfant du volet à la ligne spécifiée et la colonne ID de fenêtre.  
   
 ```  
@@ -640,7 +674,7 @@ int IdFromRowCol(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCWindowing n °&5;](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]  
   
-##  <a name="a-nameischildpanea--csplitterwndischildpane"></a><a name="ischildpane"></a>CSplitterWnd::IsChildPane  
+##  <a name="ischildpane"></a>CSplitterWnd::IsChildPane  
  Détermine si `pWnd` est actuellement un volet enfant de cette fenêtre fractionnée.  
   
 ```  
@@ -670,7 +704,7 @@ BOOL IsChildPane(
   
  Cette version est désormais obsolète et ne doit pas être utilisée.  
   
-##  <a name="a-nameistrackinga--csplitterwndistracking"></a><a name="istracking"></a>CSplitterWnd::IsTracking  
+##  <a name="istracking"></a>CSplitterWnd::IsTracking  
  Appelez cette fonction membre pour déterminer si la barre de fractionnement de la fenêtre est actuellement déplacée.  
   
 ```  
@@ -680,7 +714,7 @@ BOOL IsTracking();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si une opération de fractionnement est en cours ; sinon 0.  
   
-##  <a name="a-nameondrawsplittera--csplitterwndondrawsplitter"></a><a name="ondrawsplitter"></a>CSplitterWnd::OnDrawSplitter  
+##  <a name="ondrawsplitter"></a>CSplitterWnd::OnDrawSplitter  
  Affiche une image d’une fenêtre fractionnée.  
   
 ```  
@@ -713,7 +747,7 @@ virtual void OnDrawSplitter(
   
  Pour plus d’informations sur les fenêtres fractionnées dynamiques, voir « Fenêtres fractionnées » dans l’article [plusieurs Types de documents, vues et fenêtres Frame](../../mfc/multiple-document-types-views-and-frame-windows.md), [Technical Note 29](../../mfc/tn029-splitter-windows.md)et le `CSplitterWnd` vue d’ensemble de la classe.  
   
-##  <a name="a-nameoninverttrackera--csplitterwndoninverttracker"></a><a name="oninverttracker"></a>CSplitterWnd::OnInvertTracker  
+##  <a name="oninverttracker"></a>CSplitterWnd::OnInvertTracker  
  Affiche l’image d’une fenêtre fractionnée à la même taille et forme que la fenêtre frame.  
   
 ```  
@@ -729,7 +763,7 @@ virtual void OnInvertTracker(const CRect& rect);
   
  Pour plus d’informations sur les fenêtres fractionnées dynamiques, voir « Fenêtres fractionnées » dans l’article [plusieurs Types de documents, vues et fenêtres Frame](../../mfc/multiple-document-types-views-and-frame-windows.md), [Technical Note 29](../../mfc/tn029-splitter-windows.md)et le `CSplitterWnd` vue d’ensemble de la classe.  
   
-##  <a name="a-namerecalclayouta--csplitterwndrecalclayout"></a><a name="recalclayout"></a>CSplitterWnd::RecalcLayout  
+##  <a name="recalclayout"></a>CSplitterWnd::RecalcLayout  
  L’appel à afficher de nouveau la fenêtre fractionnée après modification de la taille de ligne ou de colonne.  
   
 ```  
@@ -744,7 +778,7 @@ virtual void RecalcLayout();
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CSplitterWnd::SetColumnInfo](#setcolumninfo).  
   
-##  <a name="a-namesetactivepanea--csplitterwndsetactivepane"></a><a name="setactivepane"></a>CSplitterWnd::SetActivePane  
+##  <a name="setactivepane"></a>CSplitterWnd::SetActivePane  
  Définit un volet à l’actif dans le cadre.  
   
 ```  
@@ -769,7 +803,7 @@ virtual void SetActivePane(
   
  Spécifiez le volet en fournissant une ligne et colonne, **ou** en fournissant `pWnd`.  
   
-##  <a name="a-namesetcolumninfoa--csplitterwndsetcolumninfo"></a><a name="setcolumninfo"></a>CSplitterWnd::SetColumnInfo  
+##  <a name="setcolumninfo"></a>CSplitterWnd::SetColumnInfo  
  Appel permettant de définir les informations de la colonne spécifiée.  
   
 ```  
@@ -797,7 +831,7 @@ void SetColumnInfo(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCWindowing n °&6;](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_4.cpp)]  
   
-##  <a name="a-namesetrowinfoa--csplitterwndsetrowinfo"></a><a name="setrowinfo"></a>CSplitterWnd::SetRowInfo  
+##  <a name="setrowinfo"></a>CSplitterWnd::SetRowInfo  
  Appel permettant de définir les informations de la ligne spécifiée.  
   
 ```  
@@ -822,7 +856,7 @@ void SetRowInfo(
   
  Lorsque le framework affiche la fenêtre fractionnée, elle présente les volets de colonnes et de lignes en fonction de leurs dimensions idéale, fonctionne à partir de l’angle supérieur gauche vers le coin inférieur droit de la zone cliente de la fenêtre séparateur.  
   
-##  <a name="a-namesetscrollstylea--csplitterwndsetscrollstyle"></a><a name="setscrollstyle"></a>CSplitterWnd::SetScrollStyle  
+##  <a name="setscrollstyle"></a>CSplitterWnd::SetScrollStyle  
  Spécifie que le nouveau style de défilement de la fenêtre de fractionnement partagée prise en charge de la barre de défilement.  
   
 ```  
@@ -840,7 +874,7 @@ void SetScrollStyle(DWORD dwStyle);
 ### <a name="remarks"></a>Remarques  
  Après la création d’une barre de défilement il n’est pas détruit même si `SetScrollStyle` est appelée sans ce style ; à la place des barres de défilement sont masquées. Ainsi, les barres de défilement conserver leur état, même si elles sont masquées. Après avoir appelé `SetScrollStyle` qu’il est nécessaire d’appeler [RecalcLayout](#recalclayout) pour toutes les modifications prennent effet.  
   
-##  <a name="a-namesplitcolumna--csplitterwndsplitcolumn"></a><a name="splitcolumn"></a>CSplitterWnd::SplitColumn  
+##  <a name="splitcolumn"></a>CSplitterWnd::SplitColumn  
  Indique où une fenêtre frame se divise verticalement.  
   
 ```  
@@ -859,7 +893,7 @@ virtual BOOL SplitColumn(int cxBefore);
   
  `SplitColumn`est appelée par l’infrastructure pour implémenter la logique de la fenêtre fractionnée dynamique (autrement dit, si la fenêtre fractionnée a la **SPLS_DYNAMIC_SPLIT** style). Il peut être personnalisé, ainsi que la fonction virtuelle [CreateView](#createview)pour implémenter des fenêtres fractionnées dynamiques plus avancées.  
   
-##  <a name="a-namesplitrowa--csplitterwndsplitrow"></a><a name="splitrow"></a>CSplitterWnd::SplitRow  
+##  <a name="splitrow"></a>CSplitterWnd::SplitRow  
  Indique où une fenêtre frame fractionne horizontalement.  
   
 ```  
@@ -878,7 +912,7 @@ virtual BOOL SplitRow(int cyBefore);
   
  `SplitRow`est appelée par l’infrastructure pour implémenter la logique de la fenêtre fractionnée dynamique (autrement dit, si la fenêtre fractionnée a la **SPLS_DYNAMIC_SPLIT** style). Il peut être personnalisé, ainsi que la fonction virtuelle [CreateView](#createview)pour implémenter des fenêtres fractionnées dynamiques plus avancées.  
   
-##  <a name="a-nameondrawa--csplitterwndondraw"></a><a name="ondraw"></a>CSplitterWnd::OnDraw  
+##  <a name="ondraw"></a>CSplitterWnd::OnDraw  
  Appelé par l’infrastructure pour dessiner la fenêtre fractionnée.  
   
 ```  

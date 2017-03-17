@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAdapt
-- ATL.CAdapt<T>
-- ATL::CAdapt
-- ATL::CAdapt<T>
 - CAdapt
+- ATLCOMCLI/ATL::CAdapt
+- ATLCOMCLI/ATL::CAdapt::CAdapt
+- ATLCOMCLI/ATL::CAdapt::m_T
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +96,7 @@ class CAdapt
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcomcli.h  
   
-##  <a name="a-namecadapta--cadaptcadapt"></a><a name="cadapt"></a>CAdapt::CAdapt  
+##  <a name="cadapt"></a>CAdapt::CAdapt  
  Les constructeurs permettent à un objet d’adaptateur comme valeur par défaut construit, copié à partir d’un objet du type adapté ou copiés à partir d’un autre objet de carte.  
   
 ```
@@ -115,7 +114,7 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
  *rSrCA*  
  Un objet d’adaptateur dont les données qu’ils contiennent doivent être copiées (ou déplacées) dans l’objet adaptateur nouvellement construit.  
   
-##  <a name="a-namemta--cadaptmt"></a><a name="m_t"></a>CAdapt::m_T  
+##  <a name="m_t"></a>CAdapt::m_T  
  Contient des données adaptées.  
   
 ```
@@ -125,7 +124,7 @@ T m_T;
 ### <a name="remarks"></a>Notes  
  Cela **public** membre de données est accessible directement ou indirectement avec [opérateur const T se](#operator_const_t_amp) et [opérateur T se](#operator_t_amp).  
   
-##  <a name="a-nameoperatorconsttampa--cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a>CAdapt::operator const T&amp;  
+##  <a name="operator_const_t_amp"></a>CAdapt::operator const T&amp;  
  Retourne un **const** une référence vers le [m_T](#m_t) membre, permettant ainsi l’objet d’adaptateur est traitée comme s’il s’agissait d’un objet de type `T`.  
   
 ```  
@@ -135,7 +134,7 @@ operator const T&() const;
 ### <a name="return-value"></a>Valeur de retour  
  A **const** référence à `m_T`.  
   
-##  <a name="a-nameoperatortampa--cadaptoperator-tamp"></a><a name="operator_t_amp"></a>CAdapt::operator T&amp;  
+##  <a name="operator_t_amp"></a>CAdapt::operator T&amp;  
  Retourne une référence à la [m_T](#m_t) membre, permettant ainsi l’objet d’adaptateur est traitée comme s’il s’agissait d’un objet de type `T`.  
   
 ```  
@@ -145,7 +144,7 @@ operator T&();
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à `m_T`.  
   
-##  <a name="a-nameoperatorlta--cadaptoperator-lt"></a><a name="operator_lt"></a>CAdapt::operator&lt;  
+##  <a name="operator_lt"></a>CAdapt::operator&lt;  
  Compare un objet du type adapté à [m_T](#m_t).  
   
 ```
@@ -159,7 +158,7 @@ bool operator<(const T& rSrc) const;
 ### <a name="return-value"></a>Valeur de retour  
  Le résultat de la comparaison entre `m_T` et `rSrc`.  
   
-##  <a name="a-nameoperatoreqa--cadaptoperator-"></a><a name="operator_eq"></a>CAdapt::operator =  
+##  <a name="operator_eq"></a>CAdapt::operator =  
  L’opérateur d’assignation assigne l’argument, `rSrc`, pour le membre de données [m_T](#m_t) et retourne l’objet en cours de la carte.  
   
 ```
@@ -178,7 +177,7 @@ Une référence à un objet à déplacer.
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à l’objet actuel.  
   
-##  <a name="a-nameoperatoreqeqa--cadaptoperator-"></a><a name="operator_eq_eq"></a>CAdapt::operator ==  
+##  <a name="operator_eq_eq"></a>CAdapt::operator ==  
  Compare un objet du type adapté à [m_T](#m_t).  
   
 ```

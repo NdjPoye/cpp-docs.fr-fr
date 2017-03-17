@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRecordView
+- AFXDB/CRecordView
+- AFXDB/CRecordView::CRecordView
+- AFXDB/CRecordView::IsOnFirstRecord
+- AFXDB/CRecordView::IsOnLastRecord
+- AFXDB/CRecordView::OnGetRecordset
+- AFXDB/CRecordView::OnMove
+- AFXDB/CRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +115,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
   
-##  <a name="a-namecrecordviewa--crecordviewcrecordview"></a><a name="crecordview"></a>CRecordView::CRecordView  
+##  <a name="crecordview"></a>CRecordView::CRecordView  
  Lorsque vous créez un objet d’un type dérivé de `CRecordView`, appelez des deux formes de constructeur pour initialiser l’objet de vue et d’identifier la ressource de boîte de dialogue sur laquelle repose la vue.  
   
 ```  
@@ -137,7 +144,7 @@ explicit CRecordView(UINT nIDTemplate);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDatabase n°&32;](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
   
-##  <a name="a-nameisonfirstrecorda--crecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
  Appelez cette fonction membre pour déterminer si l’enregistrement actif est le premier enregistrement de l’objet recordset associé à cette vue de l’enregistrement.  
   
 ```  
@@ -152,7 +159,7 @@ BOOL IsOnFirstRecord();
   
  Si l’utilisateur se déplace vers le premier enregistrement, le framework désactive les objets d’interface utilisateur pour atteindre la première ou de l’enregistrement précédent.  
   
-##  <a name="a-nameisonlastrecorda--crecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
  Appelez cette fonction membre pour déterminer si l’enregistrement actif est le dernier enregistrement de l’objet recordset associé à cette vue de l’enregistrement.  
   
 ```  
@@ -168,7 +175,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  Le résultat de cette fonction est fiable, à ceci près que la vue ne peut pas détecter la fin du jeu d’enregistrements jusqu'à ce que l’utilisateur a déplacé au-delà de celle-ci. L’utilisateur doit déplacer au-delà du dernier enregistrement avant l’affichage de l’enregistrement peut indiquer qu’il doit désactiver les objets d’interface utilisateur pour les déplacer vers l’enregistrement suivant ou le dernier. Si l’utilisateur déplace au-delà du dernier enregistrement, puis revient au dernier enregistrement (ou avant qu’elle), la vue de l’enregistrement peut effectuer le suivi de la position de l’utilisateur dans le jeu d’enregistrements et désactiver les objets d’interface utilisateur correctement. `IsOnLastRecord`est également non fiable après un appel à la fonction de mise en œuvre **OnRecordLast**, qui gère les `ID_RECORD_LAST` commande, ou `CRecordset::MoveLast`.  
   
-##  <a name="a-nameongetrecordseta--crecordviewongetrecordset"></a><a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
  Retourne un pointeur vers le `CRecordset`-dérivés d’objet associé à la vue de l’enregistrement.  
   
 ```  
@@ -183,7 +190,7 @@ virtual CRecordset* OnGetRecordset() = 0;
   
  Pour plus d’informations et d’exemples, consultez l’article [vues des enregistrements : utilisation d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="a-nameonmovea--crecordviewonmove"></a><a name="onmove"></a>CRecordView::OnMove  
+##  <a name="onmove"></a>CRecordView::OnMove  
  Appelez cette fonction membre pour déplacer vers un autre enregistrement dans le jeu d’enregistrements et afficher ses champs dans les contrôles de la vue de l’enregistrement.  
   
 ```  

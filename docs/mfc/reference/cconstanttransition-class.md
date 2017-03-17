@@ -9,8 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CConstantTransition
 - CConstantTransition
+- AFXANIMATIONCONTROLLER/CConstantTransition
+- AFXANIMATIONCONTROLLER/CConstantTransition::CConstantTransition
+- AFXANIMATIONCONTROLLER/CConstantTransition::Create
+- AFXANIMATIONCONTROLLER/CConstantTransition::m_duration
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CConstantTransition : public CBaseTransition;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="a-namecconstanttransitiona--cconstanttransitioncconstanttransition"></a><a name="cconstanttransition"></a>CConstantTransition::CConstantTransition  
+##  <a name="cconstanttransition"></a>CConstantTransition::CConstantTransition  
  Construit un objet de transition et initialise sa durée.  
   
 ```  
@@ -93,7 +96,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
  `duration`  
  La durée de la transition.  
   
-##  <a name="a-namecreatea--cconstanttransitioncreate"></a><a name="create"></a>CConstantTransition::Create  
+##  <a name="create"></a>CConstantTransition::Create  
  Appelle la bibliothèque des transitions pour créer l’objet COM de transition encapsulé.  
   
 ```  
@@ -109,7 +112,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la transition est créée avec succès ; Sinon, FALSE.  
   
-##  <a name="a-namemdurationa--cconstanttransitionmduration"></a><a name="m_duration"></a>CConstantTransition::m_duration  
+##  <a name="m_duration"></a>CConstantTransition::m_duration  
  La durée de la transition.  
   
 ```  

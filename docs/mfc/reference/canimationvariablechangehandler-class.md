@@ -9,8 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationVariableChangeHandler
 - CAnimationVariableChangeHandler
+- AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler
+- AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::OnValueChanged
+- AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::SetAnimationController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +80,7 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="a-nameonvaluechangeda--canimationvariablechangehandleronvaluechanged"></a><a name="onvaluechanged"></a>CAnimationVariableChangeHandler::OnValueChanged  
+##  <a name="onvaluechanged"></a>CAnimationVariableChangeHandler::OnValueChanged  
  Appelé lorsqu’une valeur d’une variable d’animation a changé.  
   
 ```  
@@ -105,7 +107,7 @@ IFACEMETHOD(OnValueChanged) (
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
   
-##  <a name="a-namesetanimationcontrollera--canimationvariablechangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationVariableChangeHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>CAnimationVariableChangeHandler::SetAnimationController  
  Stocke un pointeur vers le contrôleur de l’animation pour acheminer les événements.  
   
 ```  

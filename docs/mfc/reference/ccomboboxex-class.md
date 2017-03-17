@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComboBoxEx
+- AFXCMN/CComboBoxEx
+- AFXCMN/CComboBoxEx::CComboBoxEx
+- AFXCMN/CComboBoxEx::Create
+- AFXCMN/CComboBoxEx::CreateEx
+- AFXCMN/CComboBoxEx::DeleteItem
+- AFXCMN/CComboBoxEx::GetComboBoxCtrl
+- AFXCMN/CComboBoxEx::GetEditCtrl
+- AFXCMN/CComboBoxEx::GetExtendedStyle
+- AFXCMN/CComboBoxEx::GetImageList
+- AFXCMN/CComboBoxEx::GetItem
+- AFXCMN/CComboBoxEx::HasEditChanged
+- AFXCMN/CComboBoxEx::InsertItem
+- AFXCMN/CComboBoxEx::SetExtendedStyle
+- AFXCMN/CComboBoxEx::SetImageList
+- AFXCMN/CComboBoxEx::SetItem
+- AFXCMN/CComboBoxEx::SetWindowTheme
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -118,14 +134,14 @@ class CComboBoxEx : public CComboBox
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcmn.h  
   
-##  <a name="a-nameccomboboxexa--ccomboboxexccomboboxex"></a><a name="ccomboboxex"></a>CComboBoxEx::CComboBoxEx  
+##  <a name="ccomboboxex"></a>CComboBoxEx::CComboBoxEx  
  Appelez cette fonction membre pour créer un `CComboBoxEx` objet.  
   
 ```  
 CComboBoxEx();
 ```  
   
-##  <a name="a-namecreatea--ccomboboxexcreate"></a><a name="create"></a>CComboBoxEx::Create  
+##  <a name="create"></a>CComboBoxEx::Create  
  Crée la zone de liste déroulante et l’attache à le `CComboBoxEx` objet.  
   
 ```  
@@ -177,7 +193,7 @@ virtual BOOL Create(
   
  Si vous souhaitez utiliser les styles étendus windows avec votre contrôle, appelez [CreateEx](#createex) au lieu de **créer**.  
   
-##  <a name="a-namecreateexa--ccomboboxexcreateex"></a><a name="createex"></a>CComboBoxEx::CreateEx  
+##  <a name="createex"></a>CComboBoxEx::CreateEx  
  Appelez cette fonction pour créer un contrôle de zone de liste déroulante étendue (une fenêtre enfant) et l’associer avec le `CComboBoxEx` objet.  
   
 ```  
@@ -213,7 +229,7 @@ virtual BOOL CreateEx(
   
  `CreateEx`crée le contrôle avec les styles étendus de Windows spécifiés par `dwExStyle`. Vous devez définir des styles étendus spécifique à un contrôle de zone de liste déroulante étendue à l’aide [SetExtendedStyle](#setextendedstyle). Par exemple, utilisez `CreateEx` pour définir ces styles en tant que **WS_EX_CONTEXTHELP**, mais utiliser `SetExtendedStyle` pour définir ces styles en tant que **CBES_EX_CASESENSITIVE**. Pour plus d’informations, consultez les styles décrites dans la rubrique [ComboBoxEx contrôle étendu Styles](http://msdn.microsoft.com/library/windows/desktop/bb775742) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedeleteitema--ccomboboxexdeleteitem"></a><a name="deleteitem"></a>CComboBoxEx::DeleteItem  
+##  <a name="deleteitem"></a>CComboBoxEx::DeleteItem  
  Supprime un élément d’un **ComboBoxEx** contrôle.  
   
 ```  
@@ -230,7 +246,7 @@ int DeleteItem(int iIndex);
 ### <a name="remarks"></a>Remarques  
  Cette fonction membre implémente les fonctionnalités du message [CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Lorsque vous appelez DeleteItem, un [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) des messages avec **CBEN_DELETEITEM** notification sera envoyée à la fenêtre parente.  
   
-##  <a name="a-namegetcomboboxctrla--ccomboboxexgetcomboboxctrl"></a><a name="getcomboboxctrl"></a>CComboBoxEx::GetComboBoxCtrl  
+##  <a name="getcomboboxctrl"></a>CComboBoxEx::GetComboBoxCtrl  
  Appelez cette fonction membre pour obtenir un pointeur vers un contrôle de zone de liste déroulante dans un `CComboBoxEx` objet.  
   
 ```  
@@ -245,7 +261,7 @@ CComboBox* GetComboBoxCtrl();
   
  Le `CComboBox` objet désigné par la valeur de retour est un objet temporaire et détruit pendant le temps de traitement inactif suivant.  
   
-##  <a name="a-namegeteditctrla--ccomboboxexgeteditctrl"></a><a name="geteditctrl"></a>CComboBoxEx::GetEditCtrl  
+##  <a name="geteditctrl"></a>CComboBoxEx::GetEditCtrl  
  Appelez cette fonction membre pour obtenir un pointeur vers le contrôle d’édition pour une zone de liste déroulante.  
   
 ```  
@@ -260,7 +276,7 @@ CEdit* GetEditCtrl();
   
  Le `CEdit` objet désigné par la valeur de retour est un objet temporaire et détruit pendant le temps de traitement inactif suivant.  
   
-##  <a name="a-namegetextendedstylea--ccomboboxexgetextendedstyle"></a><a name="getextendedstyle"></a>CComboBoxEx::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>CComboBoxEx::GetExtendedStyle  
  Appelez cette fonction membre pour obtenir les styles étendus utilisés pour un `CComboBoxEx` contrôle.  
   
 ```  
@@ -273,7 +289,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>Remarques  
  Consultez la page [ComboBoxEx contrôle étendu Styles](http://msdn.microsoft.com/library/windows/desktop/bb775742) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] pour plus d’informations sur ces styles.  
   
-##  <a name="a-namegetimagelista--ccomboboxexgetimagelist"></a><a name="getimagelist"></a>CComboBoxEx::GetImageList  
+##  <a name="getimagelist"></a>CComboBoxEx::GetImageList  
  Appelez cette fonction membre pour obtenir un pointeur vers la liste d’images utilisée par un `CComboBoxEx` contrôle.  
   
 ```  
@@ -286,7 +302,7 @@ CImageList* GetImageList() const;
 ### <a name="remarks"></a>Remarques  
  Le `CImageList` objet désigné par la valeur de retour est un objet temporaire et détruit pendant le temps de traitement inactif suivant.  
   
-##  <a name="a-namegetitema--ccomboboxexgetitem"></a><a name="getitem"></a>CComboBoxEx::GetItem  
+##  <a name="getitem"></a>CComboBoxEx::GetItem  
  Extrait d’élément d’informations pour une donnée **ComboBoxEx** élément.  
   
 ```  
@@ -303,7 +319,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>Notes  
  Cette fonction membre implémente les fonctionnalités du message [CBEM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775779), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namehaseditchangeda--ccomboboxexhaseditchanged"></a><a name="haseditchanged"></a>CComboBoxEx::HasEditChanged  
+##  <a name="haseditchanged"></a>CComboBoxEx::HasEditChanged  
  Détermine si l’utilisateur a modifié le contenu de la **ComboBoxEx** contrôle d’édition en tapant.  
   
 ```  
@@ -316,7 +332,7 @@ BOOL HasEditChanged();
 ### <a name="remarks"></a>Remarques  
  Cette fonction membre implémente les fonctionnalités du message [CBEM_HASEDITCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb775782), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameinsertitema--ccomboboxexinsertitem"></a><a name="insertitem"></a>CComboBoxEx::InsertItem  
+##  <a name="insertitem"></a>CComboBoxEx::InsertItem  
  Insère un nouvel élément dans un **ComboBoxEx** contrôle.  
   
 ```  
@@ -333,7 +349,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>Notes  
  Lorsque vous appelez `InsertItem`, un [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) des messages avec [CBEN_INSERTITEM](http://msdn.microsoft.com/library/windows/desktop/bb775764) notification sera envoyée à la fenêtre parente.  
   
-##  <a name="a-namesetextendedstylea--ccomboboxexsetextendedstyle"></a><a name="setextendedstyle"></a>CComboBoxEx::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>CComboBoxEx::SetExtendedStyle  
  Appelez cette fonction membre pour définir les styles étendus utilisés pour une zone de liste déroulante étendues du contrôle.  
   
 ```  
@@ -357,7 +373,7 @@ DWORD SetExtendedStyle(
   
  Pour créer une zone de liste déroulante étendue de contrôle avec les styles étendus windows, utilisez [CreateEx](#createex).  
   
-##  <a name="a-namesetimagelista--ccomboboxexsetimagelist"></a><a name="setimagelist"></a>CComboBoxEx::SetImageList  
+##  <a name="setimagelist"></a>CComboBoxEx::SetImageList  
  Définit une liste d’images pour un **ComboBoxEx** contrôle.  
   
 ```  
@@ -376,7 +392,7 @@ CImageList* SetImageList(CImageList* pImageList);
   
  Le `CImageList` objet désigné par la valeur de retour est un objet temporaire et détruit pendant le temps de traitement inactif suivant.  
   
-##  <a name="a-namesetitema--ccomboboxexsetitem"></a><a name="setitem"></a>CComboBoxEx::SetItem  
+##  <a name="setitem"></a>CComboBoxEx::SetItem  
  Définit les attributs d’un élément dans un **ComboBoxEx** contrôle.  
   
 ```  
@@ -393,7 +409,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>Remarques  
  Cette fonction membre implémente les fonctionnalités du message [CBEM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775788), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetwindowthemea--ccomboboxexsetwindowtheme"></a><a name="setwindowtheme"></a>CComboBoxEx::SetWindowTheme  
+##  <a name="setwindowtheme"></a>CComboBoxEx::SetWindowTheme  
  Définit le style visuel de la liste déroulante étendues de contrôle de zone.  
   
 ```  

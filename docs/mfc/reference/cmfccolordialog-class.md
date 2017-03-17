@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCColorDialog
+- AFXCOLORDIALOG/CMFCColorDialog
+- AFXCOLORDIALOG/CMFCColorDialog::CMFCColorDialog
+- AFXCOLORDIALOG/CMFCColorDialog::GetColor
+- AFXCOLORDIALOG/CMFCColorDialog::GetPalette
+- AFXCOLORDIALOG/CMFCColorDialog::RebuildPalette
+- AFXCOLORDIALOG/CMFCColorDialog::SetCurrentColor
+- AFXCOLORDIALOG/CMFCColorDialog::SetNewColor
+- AFXCOLORDIALOG/CMFCColorDialog::SetPageOne
+- AFXCOLORDIALOG/CMFCColorDialog::SetPageTwo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -126,7 +135,7 @@ class CMFCColorDialog : public CDialogEx
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcolordialog.h  
   
-##  <a name="a-namecmfccolordialoga--cmfccolordialogcmfccolordialog"></a><a name="cmfccolordialog"></a>CMFCColorDialog::CMFCColorDialog  
+##  <a name="cmfccolordialog"></a>CMFCColorDialog::CMFCColorDialog  
  Construit un objet `CMFCColorDialog`.  
   
 ```  
@@ -154,7 +163,7 @@ CMFCColorDialog(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetcolora--cmfccolordialoggetcolor"></a><a name="getcolor"></a>CMFCColorDialog::GetColor  
+##  <a name="getcolor"></a>CMFCColorDialog::GetColor  
  Récupère la couleur de l’utilisateur sélectionne dans la boîte de dialogue couleur.  
   
 ```  
@@ -167,7 +176,7 @@ COLORREF GetColor() const;
 ### <a name="remarks"></a>Notes  
  Appelez cette fonction après avoir appelé la `DoModal` méthode.  
   
-##  <a name="a-namegetpalettea--cmfccolordialoggetpalette"></a><a name="getpalette"></a>CMFCColorDialog::GetPalette  
+##  <a name="getpalette"></a>CMFCColorDialog::GetPalette  
  Récupère la palette de couleurs qui est disponible dans la boîte de dialogue couleur actuelle.  
   
 ```  
@@ -180,14 +189,14 @@ CPalette* GetPalette() const;
 ### <a name="remarks"></a>Notes  
  La palette de couleurs spécifie les couleurs de l’utilisateur peut choisir.  
   
-##  <a name="a-namerebuildpalettea--cmfccolordialogrebuildpalette"></a><a name="rebuildpalette"></a>CMFCColorDialog::RebuildPalette  
+##  <a name="rebuildpalette"></a>CMFCColorDialog::RebuildPalette  
  Dérive une palette de la palette système.  
   
 ```  
 void RebuildPalette();
 ```  
   
-##  <a name="a-namesetcurrentcolora--cmfccolordialogsetcurrentcolor"></a><a name="setcurrentcolor"></a>CMFCColorDialog::SetCurrentColor  
+##  <a name="setcurrentcolor"></a>CMFCColorDialog::SetCurrentColor  
  Définit la couleur de la boîte de dialogue actuelle.  
   
 ```  
@@ -200,7 +209,7 @@ void SetCurrentColor(COLORREF rgb);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namesetnewcolora--cmfccolordialogsetnewcolor"></a><a name="setnewcolor"></a>CMFCColorDialog::SetNewColor  
+##  <a name="setnewcolor"></a>CMFCColorDialog::SetNewColor  
  Définit la couleur actuelle à la couleur de la palette actuelle est la plus proche.  
   
 ```  
@@ -213,7 +222,7 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetpageonea--cmfccolordialogsetpageone"></a><a name="setpageone"></a>CMFCColorDialog::SetPageOne  
+##  <a name="setpageone"></a>CMFCColorDialog::SetPageOne  
  Spécifie explicitement les composants rouges, verts et bleus de la couleur sélectionnée sur la première page de propriété de boîte de dialogue couleur.  
   
 ```  
@@ -235,7 +244,7 @@ void SetPageOne(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namesetpagetwoa--cmfccolordialogsetpagetwo"></a><a name="setpagetwo"></a>CMFCColorDialog::SetPageTwo  
+##  <a name="setpagetwo"></a>CMFCColorDialog::SetPageTwo  
  Spécifie explicitement les composants rouges, verts et bleus de la couleur sélectionnée sur la deuxième page de propriété de boîte de dialogue couleur.  
   
 ```  

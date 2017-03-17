@@ -9,8 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationTimerEventHandler
 - CAnimationTimerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::CreateInstance
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnPostUpdate
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnPreUpdate
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnRenderingTooSlow
+- AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::SetAnimationController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +79,7 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="a-namecreateinstancea--canimationtimereventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationTimerEventHandler::CreateInstance  
+##  <a name="createinstance"></a>CAnimationTimerEventHandler::CreateInstance  
  Crée une instance de rappel CAnimationTimerEventHandler.  
   
 ```  
@@ -92,7 +97,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
   
-##  <a name="a-nameonpostupdatea--canimationtimereventhandleronpostupdate"></a><a name="onpostupdate"></a>CAnimationTimerEventHandler::OnPostUpdate  
+##  <a name="onpostupdate"></a>CAnimationTimerEventHandler::OnPostUpdate  
  Gère les événements qui se produisent après qu’une mise à jour de l’animation terminée.  
   
 ```  
@@ -102,7 +107,7 @@ IFACEMETHOD(OnPostUpdate)();
 ### <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; sinon E_FAIL.  
   
-##  <a name="a-nameonpreupdatea--canimationtimereventhandleronpreupdate"></a><a name="onpreupdate"></a>CAnimationTimerEventHandler::OnPreUpdate  
+##  <a name="onpreupdate"></a>CAnimationTimerEventHandler::OnPreUpdate  
  Gère les événements qui se produisent avant le début d’une mise à jour de l’animation.  
   
 ```  
@@ -112,7 +117,7 @@ IFACEMETHOD(OnPreUpdate)();
 ### <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; sinon E_FAIL.  
   
-##  <a name="a-nameonrenderingtooslowa--canimationtimereventhandleronrenderingtooslow"></a><a name="onrenderingtooslow"></a>CAnimationTimerEventHandler::OnRenderingTooSlow  
+##  <a name="onrenderingtooslow"></a>CAnimationTimerEventHandler::OnRenderingTooSlow  
  Gère les événements qui se produisent lorsque la cadence de rendu d’une animation tombe en dessous de la fréquence d’images souhaitable minimale.  
   
 ```  
@@ -125,7 +130,7 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 ### <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; sinon E_FAIL.  
   
-##  <a name="a-namesetanimationcontrollera--canimationtimereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationTimerEventHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>CAnimationTimerEventHandler::SetAnimationController  
  Stocke un pointeur vers le contrôleur de l’animation pour acheminer les événements.  
   
 ```  

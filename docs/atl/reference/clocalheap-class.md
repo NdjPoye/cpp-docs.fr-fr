@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CLocalHeap
-- ATL::CLocalHeap
 - CLocalHeap
+- ATLMEM/ATL::CLocalHeap
+- ATLMEM/ATL::CLocalHeap::Allocate
+- ATLMEM/ATL::CLocalHeap::Free
+- ATLMEM/ATL::CLocalHeap::GetSize
+- ATLMEM/ATL::CLocalHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +84,7 @@ class CLocalHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlmem.h  
   
-##  <a name="a-nameallocatea--clocalheapallocate"></a><a name="allocate"></a>CLocalHeap::Allocate  
+##  <a name="allocate"></a>CLocalHeap::Allocate  
  Appelez cette méthode pour allouer un bloc de mémoire.  
   
 ```
@@ -100,7 +103,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implémenté à l’aide de [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) avec un paramètre d’indicateur de **LMEM_FIXED**.  
   
-##  <a name="a-namefreea--clocalheapfree"></a><a name="free"></a>CLocalHeap::Free  
+##  <a name="free"></a>CLocalHeap::Free  
  Appelez cette méthode pour libérer un bloc de mémoire alloué par ce gestionnaire de mémoire.  
   
 ```
@@ -114,7 +117,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Remarques  
  Implémenté à l’aide de [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730).  
   
-##  <a name="a-namegetsizea--clocalheapgetsize"></a><a name="getsize"></a>CLocalHeap::GetSize  
+##  <a name="getsize"></a>CLocalHeap::GetSize  
  Appelez cette méthode pour obtenir la taille d’un bloc de mémoire alloué par ce gestionnaire de mémoire allouée.  
   
 ```
@@ -131,7 +134,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Notes  
  Implémenté à l’aide de [LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745).  
   
-##  <a name="a-namereallocatea--clocalheapreallocate"></a><a name="reallocate"></a>CLocalHeap::Reallocate  
+##  <a name="reallocate"></a>CLocalHeap::Reallocate  
  Appelez cette méthode pour réallouer la mémoire allouée par ce gestionnaire de mémoire.  
   
 ```

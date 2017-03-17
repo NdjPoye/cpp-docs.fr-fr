@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCImageEditorPaletteBar
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar::GetRowHeight
+- AFXIMAGEEDITORDIALOG/CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +86,7 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afximageeditordialog.h  
   
-##  <a name="a-namegetrowheighta--cmfcimageeditorpalettebargetrowheight"></a><a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight  
+##  <a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight  
  Retourne la hauteur des boutons de barre d’outils.  
   
 ```  
@@ -93,7 +96,7 @@ virtual int GetRowHeight() const;
 ### <a name="return-value"></a>Valeur de retour  
  La hauteur de chaque bouton de la barre d’outils.  
   
-##  <a name="a-nameisbuttonextrasizeavailablea--cmfcimageeditorpalettebarisbuttonextrasizeavailable"></a><a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
+##  <a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
  Détermine si la barre d’outils peut afficher des boutons que vous avez étendu les bordures.  
   
 ```  

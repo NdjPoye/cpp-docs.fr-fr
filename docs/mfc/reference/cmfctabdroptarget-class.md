@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTabDropTarget
+- AFXBASETABCTRL/CMFCTabDropTarget
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDragEnter
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDragLeave
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDragOver
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDropEx
+- AFXBASETABCTRL/CMFCTabDropTarget::Register
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +96,7 @@ class CMFCTabDropTarget : public COleDropTarget
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxbasetabctrl.h  
   
-##  <a name="a-nameondragentera--cmfctabdroptargetondragenter"></a><a name="ondragenter"></a>CMFCTabDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>CMFCTabDropTarget::OnDragEnter  
  Appelé par l’infrastructure lorsque l’utilisateur fait glisser un objet dans une fenêtre de l’onglet.  
   
 ```  
@@ -129,7 +135,7 @@ virtual DROPEFFECT OnDragEnter(
   
  Pour plus d’informations sur le mode de personnalisation, consultez [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Pour plus d’informations sur les formats de données du Presse-papiers, consultez [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
-##  <a name="a-nameondragleavea--cmfctabdroptargetondragleave"></a><a name="ondragleave"></a>CMFCTabDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>CMFCTabDropTarget::OnDragLeave  
  Appelé par l’infrastructure lorsque l’utilisateur fait glisser un objet en dehors de la fenêtre de l’onglet qui a le focus.  
   
 ```  
@@ -146,7 +152,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ### <a name="remarks"></a>Remarques  
  Cette méthode appelle la `CMFCBaseTabCtrl::OnDragLeave` méthode pour effectuer l’opération glisser.  
   
-##  <a name="a-nameondragovera--cmfctabdroptargetondragover"></a><a name="ondragover"></a>CMFCTabDropTarget::OnDragOver  
+##  <a name="ondragover"></a>CMFCTabDropTarget::OnDragOver  
  Appelé par l’infrastructure lorsque l’utilisateur fait glisser un objet sur la fenêtre de l’onglet qui a le focus.  
   
 ```  
@@ -185,7 +191,7 @@ virtual DROPEFFECT OnDragOver(
   
  Pour plus d’informations sur le mode de personnalisation, consultez [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Pour plus d’informations sur les formats de données du Presse-papiers, consultez [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
-##  <a name="a-nameondropexa--cmfctabdroptargetondropex"></a><a name="ondropex"></a>CMFCTabDropTarget::OnDropEx  
+##  <a name="ondropex"></a>CMFCTabDropTarget::OnDropEx  
  Appelé par l’infrastructure lorsque l’utilisateur relâche le bouton de la souris à la fin d’une opération glisser.  
   
 ```  
@@ -226,7 +232,7 @@ virtual DROPEFFECT OnDropEx(
   
  Pour plus d’informations sur le mode de personnalisation, consultez [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Pour plus d’informations sur les formats de données du Presse-papiers, consultez [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
-##  <a name="a-nameregistera--cmfctabdroptargetregister"></a><a name="register"></a>CMFCTabDropTarget::Register  
+##  <a name="register"></a>CMFCTabDropTarget::Register  
  Inscrit le contrôle en tant que peut être la cible d’une opération de glisser-déplacer OLE.  
   
 ```  

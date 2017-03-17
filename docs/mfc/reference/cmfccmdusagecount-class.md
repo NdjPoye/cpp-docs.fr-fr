@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCCmdUsageCount
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount::AddCmd
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount::GetCount
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount::HasEnoughInformation
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount::IsFreqeuntlyUsedCmd
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount::Reset
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount::Serialize
+- AFXCMDUSAGECOUNT/CMFCCmdUsageCount::SetOptions
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +102,7 @@ class CMFCCmdUsageCount : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcmdusagecount.h  
   
-##  <a name="a-nameaddcmda--cmfccmdusagecountaddcmd"></a><a name="addcmd"></a>CMFCCmdUsageCount::AddCmd  
+##  <a name="addcmd"></a>CMFCCmdUsageCount::AddCmd  
  Incrémente d’une unité le compteur associé à la commande donnée.  
   
 ```  
@@ -119,7 +127,7 @@ void AddCmd(UINT uiCmd);
   
 - `uiCmd`fait référence à une commande standard (global `IsStandardCommand` fonction retourne une valeur différente de zéro).  
   
-##  <a name="a-namegetcounta--cmfccmdusagecountgetcount"></a><a name="getcount"></a>CMFCCmdUsageCount::GetCount  
+##  <a name="getcount"></a>CMFCCmdUsageCount::GetCount  
  Récupère le décompte d’utilisation qui est associé à l’ID de commande donné.  
   
 ```  
@@ -136,7 +144,7 @@ UINT GetCount(UINT uiCmd) const;
 ### <a name="return-value"></a>Valeur de retour  
  Le décompte d’utilisation qui est associé à l’ID de commande donné.  
   
-##  <a name="a-namehasenoughinformationa--cmfccmdusagecounthasenoughinformation"></a><a name="hasenoughinformation"></a>CMFCCmdUsageCount::HasEnoughInformation  
+##  <a name="hasenoughinformation"></a>CMFCCmdUsageCount::HasEnoughInformation  
  Détermine si cet objet a reçu la quantité minimale de données de suivi.  
   
 ```  
@@ -151,7 +159,7 @@ BOOL HasEnoughInformation() const;
   
  Cette méthode est utilisée par [CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands) pour déterminer s’il faut afficher toutes les commandes de menu disponibles.  
   
-##  <a name="a-nameisfreqeuntlyusedcmda--cmfccmdusagecountisfreqeuntlyusedcmd"></a><a name="isfreqeuntlyusedcmd"></a>CMFCCmdUsageCount::IsFreqeuntlyUsedCmd  
+##  <a name="isfreqeuntlyusedcmd"></a>CMFCCmdUsageCount::IsFreqeuntlyUsedCmd  
  Détermine si la commande donnée est fréquemment utilisée.  
   
 ```  
@@ -173,7 +181,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
   
  [CMFCToolBar::IsCommandRarelyUsed](../../mfc/reference/cmfctoolbar-class.md#iscommandrarelyused) utilise cette méthode pour déterminer si une commande est rarement utilisée.  
   
-##  <a name="a-namereseta--cmfccmdusagecountreset"></a><a name="reset"></a>CMFCCmdUsageCount::Reset  
+##  <a name="reset"></a>CMFCCmdUsageCount::Reset  
  Efface le décompte d’utilisation de toutes les commandes.  
   
 ```  
@@ -183,7 +191,7 @@ void Reset();
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour effacer toutes les entrées de la structure du plan du nombre de commandes, `m_CmdUsage`et de réinitialiser l’utilisation de la commande total, `m_nTotalUsage`, compteur à 0.  
   
-##  <a name="a-nameserializea--cmfccmdusagecountserialize"></a><a name="serialize"></a>CMFCCmdUsageCount::Serialize  
+##  <a name="serialize"></a>CMFCCmdUsageCount::Serialize  
  Lit de cet objet à partir d’une archive, ou écrit dans une archive.  
   
 ```  
@@ -202,7 +210,7 @@ virtual void Serialize(CArchive& ar);
   
  Pour des exemples de sérialisation, consultez [sérialisation : sérialisation d’un objet](../../mfc/serialization-serializing-an-object.md).  
   
-##  <a name="a-namesetoptionsa--cmfccmdusagecountsetoptions"></a><a name="setoptions"></a>CMFCCmdUsageCount::SetOptions  
+##  <a name="setoptions"></a>CMFCCmdUsageCount::SetOptions  
  Définit les valeurs de partagées `CMFCCmdUsageCount` données membres de classe.  
   
 ```  

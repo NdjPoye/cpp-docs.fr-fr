@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownFrame
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::Create
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::GetParentMenuBar
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::GetParentPopupMenu
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::RecalcLayout
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::SetAutoDestroy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +103,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdropdowntoolbar.h  
   
-##  <a name="a-namecreatea--cmfcdropdownframecreate"></a><a name="create"></a>CMFCDropDownFrame::Create  
+##  <a name="create"></a>CMFCDropDownFrame::Create  
  Crée un objet `CMFCDropDownFrame`.  
   
 ```  
@@ -126,7 +132,7 @@ virtual BOOL Create(
   
  Le `CMFCDropDownFrame` classe crée une copie de le `CMFCDropDownToolBar` paramètre. Cette méthode copie les images des boutons et les États de bouton à partir de la `pWndOriginToolbar` paramètre à le `m_pWndOriginToolbar` membre de données.  
   
-##  <a name="a-namegetparentmenubara--cmfcdropdownframegetparentmenubar"></a><a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
  Récupère la barre de menu parent de l’image de la liste déroulante.  
   
 ```  
@@ -139,7 +145,7 @@ CMFCMenuBar* GetParentMenuBar() const;
 ### <a name="remarks"></a>Remarques  
  Cette méthode récupère la barre de menus du parent à partir du bouton parent. Cette méthode retourne `NULL` si le cadre de la liste déroulante n’a pas de bouton parent ou le bouton parent aucune barre de menu parent.  
   
-##  <a name="a-namegetparentpopupmenua--cmfcdropdownframegetparentpopupmenu"></a><a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
+##  <a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
  Récupère le menu contextuel du parent de l’image de la liste déroulante.  
   
 ```  
@@ -152,7 +158,7 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 ### <a name="remarks"></a>Remarques  
  Cette méthode récupère le menu parent à partir du bouton parent. Cette méthode retourne `NULL` si le cadre de la liste déroulante n’a pas de bouton parent ou le bouton parent aucun menu parent.  
   
-##  <a name="a-namerecalclayouta--cmfcdropdownframerecalclayout"></a><a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
+##  <a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
  Repositionne le cadre de la liste déroulante.  
   
 ```  
@@ -169,7 +175,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>Notes  
  L’infrastructure appelle cette méthode lorsque l’image de la liste déroulante est créée ou la fenêtre parent est redimensionnée. Cette méthode calcule la position et la taille de l’image de la liste déroulante à l’aide de la position et la taille de la fenêtre parente.  
   
-##  <a name="a-namesetautodestroya--cmfcdropdownframesetautodestroy"></a><a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
+##  <a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
  Définit si la fenêtre de la barre d’outils déroulante enfant est supprimée automatiquement.  
   
 ```  

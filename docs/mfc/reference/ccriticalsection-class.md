@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCriticalSection
+- AFXMT/CCriticalSection
+- AFXMT/CCriticalSection::CCriticalSection
+- AFXMT/CCriticalSection::Lock
+- AFXMT/CCriticalSection::Unlock
+- AFXMT/CCriticalSection::m_sect
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +111,7 @@ class CCriticalSection : public CSyncObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxmt.h  
   
-##  <a name="a-nameccriticalsectiona--ccriticalsectionccriticalsection"></a><a name="ccriticalsection"></a>CCriticalSection::CCriticalSection  
+##  <a name="ccriticalsection"></a>CCriticalSection::CCriticalSection  
  Construit un objet `CCriticalSection`.  
   
 ```  
@@ -121,7 +126,7 @@ CCriticalSection();
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CCriticalSection::Lock](#lock).  
   
-##  <a name="a-namelocka--ccriticalsectionlock"></a><a name="lock"></a>CCriticalSection::Lock  
+##  <a name="lock"></a>CCriticalSection::Lock  
  Appelez cette fonction membre pour accéder à l’objet de section critique.  
   
 ```  
@@ -148,14 +153,14 @@ BOOL Lock(DWORD dwTimeout);
   
  [!code-cpp[NVC_MFC_Utilities&#11;](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
   
-##  <a name="a-namemsecta--ccriticalsectionmsect"></a><a name="m_sect"></a>CCriticalSection::m_sect  
+##  <a name="m_sect"></a>CCriticalSection::m_sect  
  Contient un objet de section critique qui est utilisé par tous les `CCriticalSection` méthodes.  
   
 ```  
 CRITICAL_SECTION m_sect;  
 ```  
   
-##  <a name="a-nameoperatorcriticalsectionstara--ccriticalsectionoperator-criticalsection"></a><a name="operator_critical_section_star"></a>CCriticalSection::operator CRITICAL_SECTION *  
+##  <a name="operator_critical_section_star"></a>CCriticalSection::operator CRITICAL_SECTION *  
  Récupère un **CRITICAL_SECTION** objet.  
   
 ```  
@@ -165,7 +170,7 @@ operator CRITICAL_SECTION*();
 ### <a name="remarks"></a>Remarques  
  Appelez cette fonction pour récupérer un pointeur vers l’interne **CRITICAL_SECTION** objet.  
   
-##  <a name="a-nameunlocka--ccriticalsectionunlock"></a><a name="unlock"></a>CCriticalSection::Unlock  
+##  <a name="unlock"></a>CCriticalSection::Unlock  
  Versions du `CCriticalSection` objet pour une utilisation par un autre thread.  
   
 ```  

@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IOleInPlaceActiveObjectImpl
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::ContextSensitiveHelp
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::EnableModeless
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::GetWindow
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::OnDocWindowActivate
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::OnFrameWindowActivate
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::ResizeBorder
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::TranslateAccelerator
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +94,7 @@ class IOleInPlaceActiveObjectImpl
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlctl.h  
   
-##  <a name="a-namecontextsensitivehelpa--ioleinplaceactiveobjectimplcontextsensitivehelp"></a><a name="contextsensitivehelp"></a>IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
+##  <a name="contextsensitivehelp"></a>IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
  Permet à l’aide contextuelle.  
   
 ```
@@ -99,7 +107,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameenablemodelessa--ioleinplaceactiveobjectimplenablemodeless"></a><a name="enablemodeless"></a>IOleInPlaceActiveObjectImpl::EnableModeless  
+##  <a name="enablemodeless"></a>IOleInPlaceActiveObjectImpl::EnableModeless  
  Permet de boîtes de dialogue non modale.  
   
 ```
@@ -112,7 +120,7 @@ HRESULT EnableModeless(BOOL fEnable);
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetwindowa--ioleinplaceactiveobjectimplgetwindow"></a><a name="getwindow"></a>IOleInPlaceActiveObjectImpl::GetWindow  
+##  <a name="getwindow"></a>IOleInPlaceActiveObjectImpl::GetWindow  
  Le conteneur appelle cette fonction pour obtenir le handle de fenêtre du contrôle.  
   
 ```
@@ -124,7 +132,7 @@ HRESULT GetWindow(HWND* phwnd);
   
  Consultez la page [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameondocwindowactivatea--ioleinplaceactiveobjectimplondocwindowactivate"></a><a name="ondocwindowactivate"></a>IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
+##  <a name="ondocwindowactivate"></a>IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
  Notifie le contrôle lors de la fenêtre de document du conteneur est activée ou désactivée.  
   
 ```
@@ -137,7 +145,7 @@ HRESULT OnDocWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonframewindowactivatea--ioleinplaceactiveobjectimplonframewindowactivate"></a><a name="onframewindowactivate"></a>IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
+##  <a name="onframewindowactivate"></a>IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
  Notifie le contrôle lors de la fenêtre de niveau supérieur du conteneur est activée ou désactivée.  
   
 ```
@@ -150,7 +158,7 @@ HRESULT OnFrameWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameresizebordera--ioleinplaceactiveobjectimplresizeborder"></a><a name="resizeborder"></a>IOleInPlaceActiveObjectImpl::ResizeBorder  
+##  <a name="resizeborder"></a>IOleInPlaceActiveObjectImpl::ResizeBorder  
  Indique au contrôle qu’il a besoin redimensionner ses bordures.  
   
 ```
@@ -166,7 +174,7 @@ HRESULT ResizeBorder(
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nametranslateacceleratora--ioleinplaceactiveobjectimpltranslateaccelerator"></a><a name="translateaccelerator"></a>IOleInPlaceActiveObjectImpl::TranslateAccelerator  
+##  <a name="translateaccelerator"></a>IOleInPlaceActiveObjectImpl::TranslateAccelerator  
  Traite les messages de touche d’accès rapide de menu du conteneur.  
   
 ```

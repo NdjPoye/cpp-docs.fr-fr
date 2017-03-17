@@ -9,9 +9,38 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlList
 - CAtlList
-- ATL::CAtlList
+- ATLCOLL/ATL::CAtlList
+- ATLCOLL/ATL::CAtlList::INARGTYPE
+- ATLCOLL/ATL::CAtlList::CAtlList
+- ATLCOLL/ATL::CAtlList::AddHead
+- ATLCOLL/ATL::CAtlList::AddHeadList
+- ATLCOLL/ATL::CAtlList::AddTail
+- ATLCOLL/ATL::CAtlList::AddTailList
+- ATLCOLL/ATL::CAtlList::AssertValid
+- ATLCOLL/ATL::CAtlList::Find
+- ATLCOLL/ATL::CAtlList::FindIndex
+- ATLCOLL/ATL::CAtlList::GetAt
+- ATLCOLL/ATL::CAtlList::GetCount
+- ATLCOLL/ATL::CAtlList::GetHead
+- ATLCOLL/ATL::CAtlList::GetHeadPosition
+- ATLCOLL/ATL::CAtlList::GetNext
+- ATLCOLL/ATL::CAtlList::GetPrev
+- ATLCOLL/ATL::CAtlList::GetTail
+- ATLCOLL/ATL::CAtlList::GetTailPosition
+- ATLCOLL/ATL::CAtlList::InsertAfter
+- ATLCOLL/ATL::CAtlList::InsertBefore
+- ATLCOLL/ATL::CAtlList::IsEmpty
+- ATLCOLL/ATL::CAtlList::MoveToHead
+- ATLCOLL/ATL::CAtlList::MoveToTail
+- ATLCOLL/ATL::CAtlList::RemoveAll
+- ATLCOLL/ATL::CAtlList::RemoveAt
+- ATLCOLL/ATL::CAtlList::RemoveHead
+- ATLCOLL/ATL::CAtlList::RemoveHeadNoReturn
+- ATLCOLL/ATL::CAtlList::RemoveTail
+- ATLCOLL/ATL::CAtlList::RemoveTailNoReturn
+- ATLCOLL/ATL::CAtlList::SetAt
+- ATLCOLL/ATL::CAtlList::SwapElements
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -116,7 +145,7 @@ class CAtlList
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcoll.h  
   
-##  <a name="a-nameaddheada--catllistaddhead"></a><a name="addhead"></a>CAtlList::AddHead  
+##  <a name="addhead"></a>CAtlList::AddHead  
  Appelez cette méthode pour ajouter un élément au début de la liste.  
   
 ```
@@ -137,7 +166,7 @@ POSITION AddHead(INARGTYPE element);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#13;](../../atl/codesnippet/cpp/catllist-class_1.cpp)]  
   
-##  <a name="a-nameaddheadlista--catllistaddheadlist"></a><a name="addheadlist"></a>CAtlList::AddHeadList  
+##  <a name="addheadlist"></a>CAtlList::AddHeadList  
  Appelez cette méthode pour ajouter une liste existante à la tête de la liste.  
   
 ```
@@ -154,7 +183,7 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#14;](../../atl/codesnippet/cpp/catllist-class_2.cpp)]  
   
-##  <a name="a-nameaddtaila--catllistaddtail"></a><a name="addtail"></a>CAtlList::AddTail  
+##  <a name="addtail"></a>CAtlList::AddTail  
  Appelez cette méthode pour ajouter un élément à la fin de cette liste.  
   
 ```
@@ -175,7 +204,7 @@ POSITION AddTail(INARGTYPE element);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#15;](../../atl/codesnippet/cpp/catllist-class_3.cpp)]  
   
-##  <a name="a-nameaddtaillista--catllistaddtaillist"></a><a name="addtaillist"></a>CAtlList::AddTailList  
+##  <a name="addtaillist"></a>CAtlList::AddTailList  
  Appelez cette méthode pour ajouter une liste existante à la fin de cette liste.  
   
 ```
@@ -192,7 +221,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#16;](../../atl/codesnippet/cpp/catllist-class_4.cpp)]  
   
-##  <a name="a-nameassertvalida--catllistassertvalid"></a><a name="assertvalid"></a>CAtlList::AssertValid  
+##  <a name="assertvalid"></a>CAtlList::AssertValid  
  Appelez cette méthode pour confirmer la validité de la liste.  
   
 ```
@@ -205,7 +234,7 @@ void AssertValid() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#17;](../../atl/codesnippet/cpp/catllist-class_5.cpp)]  
   
-##  <a name="a-namecatllista--catllistcatllist"></a><a name="catllist"></a>CAtlList::CAtlList  
+##  <a name="catllist"></a>CAtlList::CAtlList  
  Constructeur.  
   
 ```
@@ -222,7 +251,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#18;](../../atl/codesnippet/cpp/catllist-class_6.cpp)]  
   
-##  <a name="a-namedtora--catllistcatllist"></a><a name="dtor"></a>CAtlList :: ~ CAtlList  
+##  <a name="dtor"></a>CAtlList :: ~ CAtlList  
  Destructeur.  
   
 ```
@@ -234,7 +263,7 @@ CAtlList(UINT nBlockSize = 10) throw();
   
  Dans les versions debug, un échec d’assertion se produit si la liste contient toujours des éléments après l’appel à `RemoveAll`.  
   
-##  <a name="a-namefinda--catllistfind"></a><a name="find"></a>CAtlList::Find  
+##  <a name="find"></a>CAtlList::Find  
  Appelez cette méthode pour rechercher la liste de l’élément spécifié.  
   
 ```
@@ -257,7 +286,7 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities n °&19;](../../atl/codesnippet/cpp/catllist-class_7.cpp)]  
   
-##  <a name="a-namefindindexa--catllistfindindex"></a><a name="findindex"></a>CAtlList::FindIndex  
+##  <a name="findindex"></a>CAtlList::FindIndex  
  Appelez cette méthode pour obtenir la position d’un élément, une valeur d’index.  
   
 ```
@@ -279,7 +308,7 @@ POSITION FindIndex(size_t iElement) const throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#20;](../../atl/codesnippet/cpp/catllist-class_8.cpp)]  
   
-##  <a name="a-namegetata--catllistgetat"></a><a name="getat"></a>CAtlList::GetAt  
+##  <a name="getat"></a>CAtlList::GetAt  
  Appelez cette méthode pour retourner l’élément à la position spécifiée dans la liste.  
   
 ```
@@ -304,7 +333,7 @@ const E& GetAt(POSITION pos) const throw();
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlList::FindIndex](#findindex).  
   
-##  <a name="a-namegetcounta--catllistgetcount"></a><a name="getcount"></a>CAtlList::GetCount  
+##  <a name="getcount"></a>CAtlList::GetCount  
  Appelez cette méthode pour retourner le nombre d’objets dans la liste.  
   
 ```
@@ -317,7 +346,7 @@ size_t GetCount() const throw();
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlList::Find](#find).  
   
-##  <a name="a-namegetheada--catllistgethead"></a><a name="gethead"></a>CAtlList::GetHead  
+##  <a name="gethead"></a>CAtlList::GetHead  
  Appelez cette méthode pour retourner l’élément au début de la liste.  
   
 ```
@@ -338,7 +367,7 @@ const E& GetHead() const throw();
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlList::AddHead](#addhead).  
   
-##  <a name="a-namegetheadpositiona--catllistgetheadposition"></a><a name="getheadposition"></a>CAtlList::GetHeadPosition  
+##  <a name="getheadposition"></a>CAtlList::GetHeadPosition  
  Appelez cette méthode pour obtenir la position de la tête de la liste.  
   
 ```
@@ -354,7 +383,7 @@ POSITION GetHeadPosition() const throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities n °&21;](../../atl/codesnippet/cpp/catllist-class_9.cpp)]  
   
-##  <a name="a-namegetnexta--catllistgetnext"></a><a name="getnext"></a>CAtlList::GetNext  
+##  <a name="getnext"></a>CAtlList::GetNext  
  Appelez cette méthode pour retourner l’élément suivant dans la liste.  
   
 ```
@@ -377,7 +406,7 @@ const E& GetNext(POSITION& pos) const throw();
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlList::GetHeadPosition](#getheadposition).  
   
-##  <a name="a-namegetpreva--catllistgetprev"></a><a name="getprev"></a>CAtlList::GetPrev  
+##  <a name="getprev"></a>CAtlList::GetPrev  
  Appelez cette méthode pour renvoyer l’élément précédent de la liste.  
   
 ```
@@ -400,7 +429,7 @@ const E& GetPrev(POSITION& pos) const throw();
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlList::GetTailPosition](#gettailposition).  
   
-##  <a name="a-namegettaila--catllistgettail"></a><a name="gettail"></a>CAtlList::GetTail  
+##  <a name="gettail"></a>CAtlList::GetTail  
  Appelez cette méthode pour retourner l’élément à la fin de la liste.  
   
 ```
@@ -421,7 +450,7 @@ const E& GetTail() const throw();
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlList::AddTail](#addtail).  
   
-##  <a name="a-namegettailpositiona--catllistgettailposition"></a><a name="gettailposition"></a>CAtlList::GetTailPosition  
+##  <a name="gettailposition"></a>CAtlList::GetTailPosition  
  Appelez cette méthode pour obtenir la position de la fin de la liste.  
   
 ```
@@ -437,14 +466,14 @@ POSITION GetTailPosition() const throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#22;](../../atl/codesnippet/cpp/catllist-class_10.cpp)]  
   
-##  <a name="a-nameinargtypea--catllistinargtype"></a><a name="inargtype"></a>CAtlList::INARGTYPE  
+##  <a name="inargtype"></a>CAtlList::INARGTYPE  
  Type utilisé lorsqu’un élément est passé comme argument d’entrée.  
   
 ```
 typedef ETraits::INARGTYPE INARGTYPE;
 ```  
   
-##  <a name="a-nameinsertaftera--catllistinsertafter"></a><a name="insertafter"></a>CAtlList::InsertAfter  
+##  <a name="insertafter"></a>CAtlList::InsertAfter  
  Appelez cette méthode pour insérer un nouvel élément dans la liste après la position spécifiée.  
   
 ```
@@ -467,7 +496,7 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities n °&23;](../../atl/codesnippet/cpp/catllist-class_11.cpp)]  
   
-##  <a name="a-nameinsertbeforea--catllistinsertbefore"></a><a name="insertbefore"></a>CAtlList::InsertBefore  
+##  <a name="insertbefore"></a>CAtlList::InsertBefore  
  Appelez cette méthode pour insérer un nouvel élément dans la liste avant la position spécifiée.  
   
 ```
@@ -490,7 +519,7 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#24;](../../atl/codesnippet/cpp/catllist-class_12.cpp)]  
   
-##  <a name="a-nameisemptya--catllistisempty"></a><a name="isempty"></a>CAtlList::IsEmpty  
+##  <a name="isempty"></a>CAtlList::IsEmpty  
  Appelez cette méthode pour déterminer si la liste est vide.  
   
 ```
@@ -503,7 +532,7 @@ bool IsEmpty() const throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#25;](../../atl/codesnippet/cpp/catllist-class_13.cpp)]  
   
-##  <a name="a-namemovetoheada--catllistmovetohead"></a><a name="movetohead"></a>CAtlList::MoveToHead  
+##  <a name="movetohead"></a>CAtlList::MoveToHead  
  Appelez cette méthode pour déplacer l’élément spécifié au début de la liste.  
   
 ```
@@ -520,7 +549,7 @@ void MoveToHead(POSITION pos) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#26;](../../atl/codesnippet/cpp/catllist-class_14.cpp)]  
   
-##  <a name="a-namemovetotaila--catllistmovetotail"></a><a name="movetotail"></a>CAtlList::MoveToTail  
+##  <a name="movetotail"></a>CAtlList::MoveToTail  
  Appelez cette méthode pour déplacer l’élément spécifié à la fin de la liste.  
   
 ```
@@ -537,7 +566,7 @@ void MoveToTail(POSITION pos) throw();
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlList::MoveToHead](#movetohead).  
   
-##  <a name="a-nameremovealla--catllistremoveall"></a><a name="removeall"></a>CAtlList::RemoveAll  
+##  <a name="removeall"></a>CAtlList::RemoveAll  
  Appelez cette méthode pour supprimer tous les éléments de la liste.  
   
 ```
@@ -550,7 +579,7 @@ void RemoveAll() throw();
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlList::IsEmpty](#isempty).  
   
-##  <a name="a-nameremoveata--catllistremoveat"></a><a name="removeat"></a>CAtlList::RemoveAt  
+##  <a name="removeat"></a>CAtlList::RemoveAt  
  Appelez cette méthode pour supprimer un seul élément dans la liste.  
   
 ```
@@ -569,7 +598,7 @@ void RemoveAt(POSITION pos) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[27 NVC_ATL_Utilities](../../atl/codesnippet/cpp/catllist-class_15.cpp)]  
   
-##  <a name="a-nameremoveheada--catllistremovehead"></a><a name="removehead"></a>CAtlList::RemoveHead  
+##  <a name="removehead"></a>CAtlList::RemoveHead  
  Appelez cette méthode pour supprimer l’élément au début de la liste.  
   
 ```
@@ -585,7 +614,7 @@ E RemoveHead();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#28;](../../atl/codesnippet/cpp/catllist-class_16.cpp)]  
   
-##  <a name="a-nameremoveheadnoreturna--catllistremoveheadnoreturn"></a><a name="removeheadnoreturn"></a>CAtlList::RemoveHeadNoReturn  
+##  <a name="removeheadnoreturn"></a>CAtlList::RemoveHeadNoReturn  
  Appelez cette méthode pour supprimer l’élément au début de la liste sans retourner une valeur.  
   
 ```
@@ -598,7 +627,7 @@ void RemoveHeadNoReturn() throw();
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlList::IsEmpty](#isempty).  
   
-##  <a name="a-nameremovetaila--catllistremovetail"></a><a name="removetail"></a>CAtlList::RemoveTail  
+##  <a name="removetail"></a>CAtlList::RemoveTail  
  Appelez cette méthode pour supprimer l’élément à la fin de la liste.  
   
 ```
@@ -614,7 +643,7 @@ E RemoveTail();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#29;](../../atl/codesnippet/cpp/catllist-class_17.cpp)]  
   
-##  <a name="a-nameremovetailnoreturna--catllistremovetailnoreturn"></a><a name="removetailnoreturn"></a>CAtlList::RemoveTailNoReturn  
+##  <a name="removetailnoreturn"></a>CAtlList::RemoveTailNoReturn  
  Appelez cette méthode pour supprimer l’élément à la fin de la liste sans retourner une valeur.  
   
 ```
@@ -627,7 +656,7 @@ void RemoveTailNoReturn() throw();
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlList::IsEmpty](#isempty).  
   
-##  <a name="a-namesetata--catllistsetat"></a><a name="setat"></a>CAtlList::SetAt  
+##  <a name="setat"></a>CAtlList::SetAt  
  Appelez cette méthode pour définir la valeur de l’élément à une position donnée dans la liste.  
   
 ```
@@ -647,7 +676,7 @@ void SetAt(POSITION pos, INARGTYPE element);
 ### <a name="example"></a>Exemple  
  [!code-cpp[30 NVC_ATL_Utilities](../../atl/codesnippet/cpp/catllist-class_18.cpp)]  
   
-##  <a name="a-nameswapelementsa--catllistswapelements"></a><a name="swapelements"></a>CAtlList::SwapElements  
+##  <a name="swapelements"></a>CAtlList::SwapElements  
  Appelez cette méthode pour remplacer les éléments de la liste.  
   
 ```

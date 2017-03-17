@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocItem
+- AFXOLE/CDocItem
+- AFXOLE/CDocItem::GetDocument
+- AFXOLE/CDocItem::IsBlank
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,7 +82,7 @@ class CDocItem : public CCmdTarget
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxole.h  
   
-##  <a name="a-namegetdocumenta--cdocitemgetdocument"></a><a name="getdocument"></a>CDocItem::GetDocument  
+##  <a name="getdocument"></a>CDocItem::GetDocument  
  Appelez cette fonction pour obtenir le document qui contient l’élément.  
   
 ```  
@@ -92,7 +95,7 @@ CDocument* GetDocument() const;
 ### <a name="remarks"></a>Notes  
  Cette fonction est substituée dans les classes dérivées [COleClientItem](../../mfc/reference/coleclientitem-class.md) et [COleServerItem](../../mfc/reference/coleserveritem-class.md), qui retourne un pointeur soit un [COleDocument](../../mfc/reference/coledocument-class.md), un [COleLinkingDoc plutôt](../../mfc/reference/colelinkingdoc-class.md), ou un [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) objet.  
   
-##  <a name="a-nameisblanka--cdocitemisblank"></a><a name="isblank"></a>CDocItem::IsBlank  
+##  <a name="isblank"></a>CDocItem::IsBlank  
  Appelé par l’infrastructure lors de la sérialisation par défaut.  
   
 ```  

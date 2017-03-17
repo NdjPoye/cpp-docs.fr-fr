@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComUnkArray
-- ATL.CComUnkArray<nMaxSize>
-- ATL::CComUnkArray<nMaxSize>
-- ATL::CComUnkArray
 - CComUnkArray
+- ATLCOM/ATL::CComUnkArray
+- ATLCOM/ATL::CComUnkArray::CComUnkArray
+- ATLCOM/ATL::CComUnkArray::Add
+- ATLCOM/ATL::CComUnkArray::begin
+- ATLCOM/ATL::CComUnkArray::end
+- ATLCOM/ATL::CComUnkArray::GetCookie
+- ATLCOM/ATL::CComUnkArray::GetUnknown
+- ATLCOM/ATL::CComUnkArray::Remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +94,7 @@ class CComUnkArray
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="a-nameadda--ccomunkarrayadd"></a><a name="add"></a>CComUnkArray::Add  
+##  <a name="add"></a>CComUnkArray::Add  
  Appelez cette méthode pour ajouter un **IUnknown** pointeur vers le tableau.  
   
 ```
@@ -104,7 +108,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le cookie associé avec le pointeur nouvellement ajouté, ou 0 si le tableau n’est pas suffisamment grand pour contenir le nouveau pointeur.  
   
-##  <a name="a-namebegina--ccomunkarraybegin"></a><a name="begin"></a>CComUnkArray::begin  
+##  <a name="begin"></a>CComUnkArray::begin  
  Retourne un pointeur vers le début de la collection de **IUnknown** des pointeurs d’interface.  
   
 ```
@@ -120,7 +124,7 @@ IUnknown**
   
  Avant d’utiliser la **IUnknown** interface, vous devez vérifier qu’il n’est pas **NULL**.  
   
-##  <a name="a-nameccomunkarraya--ccomunkarrayccomunkarray"></a><a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
+##  <a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
  Constructeur.  
   
 ```
@@ -130,7 +134,7 @@ CComUnkArray();
 ### <a name="remarks"></a>Notes  
  Définit la collection `nMaxSize` **IUnknown** des pointeurs et initialise les pointeurs vers des **NULL**.  
   
-##  <a name="a-nameenda--ccomunkarrayend"></a><a name="end"></a>CComUnkArray::end  
+##  <a name="end"></a>CComUnkArray::end  
  Retourne un pointeur vers l’élément suivant le dernier **IUnknown** pointeur dans la collection.  
   
 ```
@@ -146,7 +150,7 @@ IUnknown**
   
  [!code-cpp[NVC_ATL_COM&#44;](../../atl/codesnippet/cpp/ccomunkarray-class_1.cpp)]  
   
-##  <a name="a-namegetcookiea--ccomunkarraygetcookie"></a><a name="getcookie"></a>CComUnkArray::GetCookie  
+##  <a name="getcookie"></a>CComUnkArray::GetCookie  
  Appelez cette méthode pour obtenir le cookie associé à une donnée **IUnknown** pointeur.  
   
 ```
@@ -163,7 +167,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>Remarques  
  S’il existe plus d’une instance du même **IUnknown** pointeur, cette fonction renvoie le cookie pour le premier.  
   
-##  <a name="a-namegetunknowna--ccomunkarraygetunknown"></a><a name="getunknown"></a>CComUnkArray::GetUnknown  
+##  <a name="getunknown"></a>CComUnkArray::GetUnknown  
  Appelez cette méthode pour obtenir le **IUnknown** pointeur associé à un cookie donné.  
   
 ```
@@ -177,7 +181,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le **IUnknown** pointeur, ou NULL si aucun cookie n’est trouvée.  
   
-##  <a name="a-nameremovea--ccomunkarrayremove"></a><a name="remove"></a>CComUnkArray::Remove  
+##  <a name="remove"></a>CComUnkArray::Remove  
  Appelez cette méthode pour supprimer un **IUnknown** pointeur à partir du tableau.  
   
 ```

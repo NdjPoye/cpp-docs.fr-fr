@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCLinkCtrl
+- AFXLINKCTRL/CMFCLinkCtrl
+- AFXLINKCTRL/CMFCLinkCtrl::SetURL
+- AFXLINKCTRL/CMFCLinkCtrl::SetURLPrefix
+- AFXLINKCTRL/CMFCLinkCtrl::SizeToContent
+- AFXLINKCTRL/CMFCLinkCtrl::OnDrawFocusRect
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +94,7 @@ class CMFCLinkCtrl : public CMFCButton
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxlinkctrl.h  
   
-##  <a name="a-nameondrawfocusrecta--cmfclinkctrlondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
  Appelé par l’infrastructure avant que le rectangle de focus du bouton est dessiné.  
   
 ```  
@@ -108,7 +113,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>Remarques  
  Substituez cette méthode lorsque vous souhaitez utiliser votre propre code pour dessiner le rectangle de focus du bouton.  
   
-##  <a name="a-nameseturla--cmfclinkctrlseturl"></a><a name="seturl"></a>CMFCLinkCtrl::SetURL  
+##  <a name="seturl"></a>CMFCLinkCtrl::SetURL  
  Affiche une URL spécifiée comme texte du bouton.  
   
 ```  
@@ -121,7 +126,7 @@ void SetURL(LPCTSTR lpszURL);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameseturlprefixa--cmfclinkctrlseturlprefix"></a><a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
+##  <a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
  Définit le protocole implicit (par exemple, « http : ») de l’URL.  
   
 ```  
@@ -135,7 +140,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ### <a name="remarks"></a>Remarques  
  Utilisez cette méthode pour définir le préfixe d’URL. Le préfixe n’est pas affiché dans l’image de, mais vous pouvez l’utiliser pour accéder à la cible de l’URL.  
   
-##  <a name="a-namesizetocontenta--cmfclinkctrlsizetocontent"></a><a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
  Redimensionne le bouton pour contenir le texte du bouton ou bitmap.  
   
 ```  

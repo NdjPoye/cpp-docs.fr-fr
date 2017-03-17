@@ -9,8 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxvisualmanagerwindows7/CMFCVisualManagerWindows7
 - CMFCVisualManagerWindows7
+- AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7
+- AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7::CMFCVisualManagerWindows7
+- AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor
+- AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7::OnFillMenuImageRect
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -136,21 +139,21 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxvisualmanagerwindows7.h  
   
-##  <a name="a-namedtorcmfcvisualmanagerwindows7a--cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="_dtorcmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7 :: ~ CMFCVisualManagerWindows7  
+##  <a name="_dtorcmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7 :: ~ CMFCVisualManagerWindows7  
  Destructeur par défaut.  
   
 ```  
 virtual ~CMFCVisualManagerWindows7();
 ```  
   
-##  <a name="a-namecmfcvisualmanagerwindows7a--cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="cmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7::CMFCVisualManagerWindows7  
+##  <a name="cmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7::CMFCVisualManagerWindows7  
  Constructeur par défaut.  
   
 ```  
 CMFCVisualManagerWindows7();
 ```  
   
-##  <a name="a-namegetribboneditbackgroundcolora--cmfcvisualmanagerwindows7getribboneditbackgroundcolor"></a><a name="getribboneditbackgroundcolor"></a>CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor  
+##  <a name="getribboneditbackgroundcolor"></a>CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor  
  Obtient la couleur d’arrière-plan d’une zone d’édition du ruban.  
   
 ```  
@@ -179,7 +182,7 @@ virtual COLORREF GetRibbonEditBackgroundColor (
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonfillmenuimagerecta--cmfcvisualmanagerwindows7onfillmenuimagerect"></a><a name="onfillmenuimagerect"></a>CMFCVisualManagerWindows7::OnFillMenuImageRect  
+##  <a name="onfillmenuimagerect"></a>CMFCVisualManagerWindows7::OnFillMenuImageRect  
  L’infrastructure appelle cette méthode lorsqu’il remplit la zone autour d’un élément de menu.  
   
 ```  

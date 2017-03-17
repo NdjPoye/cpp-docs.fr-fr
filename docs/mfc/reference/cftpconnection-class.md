@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFtpConnection
+- AFXINET/CFtpConnection
+- AFXINET/CFtpConnection::CFtpConnection
+- AFXINET/CFtpConnection::Command
+- AFXINET/CFtpConnection::CreateDirectory
+- AFXINET/CFtpConnection::GetCurrentDirectory
+- AFXINET/CFtpConnection::GetCurrentDirectoryAsURL
+- AFXINET/CFtpConnection::GetFile
+- AFXINET/CFtpConnection::OpenFile
+- AFXINET/CFtpConnection::PutFile
+- AFXINET/CFtpConnection::Remove
+- AFXINET/CFtpConnection::RemoveDirectory
+- AFXINET/CFtpConnection::Rename
+- AFXINET/CFtpConnection::SetCurrentDirectory
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +108,7 @@ class CFtpConnection : public CInternetConnection
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxinet.h  
   
-##  <a name="a-namecftpconnectiona--cftpconnectioncftpconnection"></a><a name="cftpconnection"></a>CFtpConnection::CFtpConnection  
+##  <a name="cftpconnection"></a>CFtpConnection::CFtpConnection  
  Cette fonction membre est appelée pour construire un `CFtpConnection` objet.  
   
 ```  
@@ -151,7 +164,7 @@ CFtpConnection(
 ### <a name="remarks"></a>Remarques  
  Vous ne créez jamais un `CFtpConnection` directement l’objet. Au lieu de cela, appelez [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), ce qui crée le **CFptConnection** objet.  
   
-##  <a name="a-namecommanda--cftpconnectioncommand"></a><a name="command"></a>CFtpConnection::Command  
+##  <a name="command"></a>CFtpConnection::Command  
  Envoie une commande directement à un serveur FTP.  
   
 ```  
@@ -187,7 +200,7 @@ CInternetFile* Command(
   
  Si une erreur se produit, MFC lève une exception de type [classe CInternetException](../../mfc/reference/cinternetexception-class.md).  
   
-##  <a name="a-namecreatedirectorya--cftpconnectioncreatedirectory"></a><a name="createdirectory"></a>CFtpConnection::CreateDirectory  
+##  <a name="createdirectory"></a>CFtpConnection::CreateDirectory  
  Appelez cette fonction membre pour créer un répertoire sur le serveur connecté.  
   
 ```  
@@ -206,7 +219,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
   
  Le `pstrDirName` paramètre peut être soit un partiellement ou un nom de fichier complet relatif au répertoire actif. Une barre oblique inverse (\\) ou une barre oblique (/) peut être utilisée comme séparateur de répertoire pour le nom. `CreateDirectory`se traduit par des séparateurs de nom de répertoire pour les caractères appropriés avant de les utiliser.  
   
-##  <a name="a-namegetcurrentdirectorya--cftpconnectiongetcurrentdirectory"></a><a name="getcurrentdirectory"></a>CFtpConnection::GetCurrentDirectory  
+##  <a name="getcurrentdirectory"></a>CFtpConnection::GetCurrentDirectory  
  Appelez cette fonction membre pour obtenir le nom du répertoire actif.  
   
 ```  
@@ -240,7 +253,7 @@ BOOL GetCurrentDirectory(
   
  Les paramètres `pstrDirName` ou `strDirName` peut être soit noms partiellement qualifiés relatif au répertoire en cours ou complet. Une barre oblique inverse (\\) ou une barre oblique (/) peut être utilisée comme séparateur de répertoire pour le nom. `GetCurrentDirectory`se traduit par des séparateurs de nom de répertoire pour les caractères appropriés avant de les utiliser.  
   
-##  <a name="a-namegetcurrentdirectoryasurla--cftpconnectiongetcurrentdirectoryasurl"></a><a name="getcurrentdirectoryasurl"></a>CFtpConnection::GetCurrentDirectoryAsURL  
+##  <a name="getcurrentdirectoryasurl"></a>CFtpConnection::GetCurrentDirectoryAsURL  
  Appelez cette fonction membre pour obtenir le cours nom du répertoire en tant qu’URL.  
   
 ```  
@@ -274,7 +287,7 @@ BOOL GetCurrentDirectoryAsURL(
   
  Le paramètre `strDirName` peut être soit noms partiellement qualifiés relatif au répertoire en cours ou complet. Une barre oblique inverse (\\) ou une barre oblique (/) peut être utilisée comme séparateur de répertoire pour le nom. `GetCurrentDirectoryAsURL`se traduit par des séparateurs de nom de répertoire pour les caractères appropriés avant de les utiliser.  
   
-##  <a name="a-namegetfilea--cftpconnectiongetfile"></a><a name="getfile"></a>CFtpConnection::GetFile  
+##  <a name="getfile"></a>CFtpConnection::GetFile  
  Appelez cette fonction membre pour obtenir un fichier à partir d’un serveur FTP et le stocker sur l’ordinateur local.  
   
 ```  
@@ -334,7 +347,7 @@ BOOL GetFile(
   
  Remplacer le `dwContext` par défaut pour définir l’identificateur de contexte pour une valeur de votre choix. L’identificateur de contexte est associé à cette opération spécifique de la `CFtpConnection` objet créé par son [CInternetSession](../../mfc/reference/cinternetsession-class.md) objet. La valeur est retournée à [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état de l’opération à laquelle elle est identifiée. Consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.  
   
-##  <a name="a-nameopenfilea--cftpconnectionopenfile"></a><a name="openfile"></a>CFtpConnection::OpenFile  
+##  <a name="openfile"></a>CFtpConnection::OpenFile  
  Appelez cette fonction membre pour ouvrir un fichier situé sur un serveur FTP pour lire ou écrire.  
   
 ```  
@@ -380,7 +393,7 @@ CInternetFile* OpenFile(
   
  Remplacer le `dwContext` par défaut pour définir l’identificateur de contexte pour une valeur de votre choix. L’identificateur de contexte est associé à cette opération spécifique de la `CFtpConnection` objet créé par son [CInternetSession](../../mfc/reference/cinternetsession-class.md) objet. La valeur est retournée à [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état de l’opération à laquelle elle est identifiée. Consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.  
   
-##  <a name="a-nameputfilea--cftpconnectionputfile"></a><a name="putfile"></a>CFtpConnection::PutFile  
+##  <a name="putfile"></a>CFtpConnection::PutFile  
  Appelez cette fonction membre pour stocker un fichier sur un serveur FTP.  
   
 ```  
@@ -412,7 +425,7 @@ BOOL PutFile(
   
  Remplacer le `dwContext` par défaut pour définir l’identificateur de contexte pour une valeur de votre choix. L’identificateur de contexte est associé à cette opération spécifique de la `CFtpConnection` objet créé par son [CInternetSession](../../mfc/reference/cinternetsession-class.md) objet. La valeur est retournée à [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état de l’opération à laquelle elle est identifiée. Consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.  
   
-##  <a name="a-nameremovea--cftpconnectionremove"></a><a name="remove"></a>CFtpConnection::Remove  
+##  <a name="remove"></a>CFtpConnection::Remove  
  Appelez cette fonction membre pour supprimer le fichier spécifié à partir du serveur connecté.  
   
 ```  
@@ -429,7 +442,7 @@ BOOL Remove(LPCTSTR pstrFileName);
 ### <a name="remarks"></a>Notes  
  Le `pstrFileName` paramètre peut être soit un nom partiellement qualifié qualifié complet ou relatif au répertoire actif. Une barre oblique inverse (\\) ou une barre oblique (/) peut être utilisée comme séparateur de répertoire pour le nom. Le **supprimer** fonction traduit les séparateurs de nom de répertoire pour les caractères appropriés avant de les utiliser.  
   
-##  <a name="a-nameremovedirectorya--cftpconnectionremovedirectory"></a><a name="removedirectory"></a>CFtpConnection::RemoveDirectory  
+##  <a name="removedirectory"></a>CFtpConnection::RemoveDirectory  
  Appelez cette fonction membre pour supprimer le répertoire spécifié à partir du serveur connecté.  
   
 ```  
@@ -448,7 +461,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
   
  Le `pstrDirName` paramètre peut être soit un nom de fichier qualifié complet ou partiel relatif au répertoire actif. Une barre oblique inverse (\\) ou une barre oblique (/) peut être utilisée comme séparateur de répertoire pour le nom. `RemoveDirectory`se traduit par des séparateurs de nom de répertoire pour les caractères appropriés avant de les utiliser.  
   
-##  <a name="a-namerenamea--cftpconnectionrename"></a><a name="rename"></a>CFtpConnection::Rename  
+##  <a name="rename"></a>CFtpConnection::Rename  
  Appelez cette fonction membre pour renommer le fichier spécifié sur le serveur connecté.  
   
 ```  
@@ -470,7 +483,7 @@ BOOL Rename(
 ### <a name="remarks"></a>Remarques  
  Le `pstrExisting` et `pstrNew` les paramètres peuvent être soit un nom partiellement qualifié qualifié complet ou relatif au répertoire actif. Une barre oblique inverse (\\) ou une barre oblique (/) peut être utilisée comme séparateur de répertoire pour le nom. **Renommez** se traduit par des séparateurs de nom de répertoire pour les caractères appropriés avant de les utiliser.  
   
-##  <a name="a-namesetcurrentdirectorya--cftpconnectionsetcurrentdirectory"></a><a name="setcurrentdirectory"></a>CFtpConnection::SetCurrentDirectory  
+##  <a name="setcurrentdirectory"></a>CFtpConnection::SetCurrentDirectory  
  Appelez cette fonction membre pour passer à un autre répertoire sur le serveur FTP.  
   
 ```  

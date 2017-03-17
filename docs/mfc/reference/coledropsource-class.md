@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDropSource
+- AFXOLE/COleDropSource
+- AFXOLE/COleDropSource::COleDropSource
+- AFXOLE/COleDropSource::GiveFeedback
+- AFXOLE/COleDropSource::OnBeginDrag
+- AFXOLE/COleDropSource::QueryContinueDrag
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,14 +91,14 @@ class COleDropSource : public CCmdTarget
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxole.h  
   
-##  <a name="a-namecoledropsourcea--coledropsourcecoledropsource"></a><a name="coledropsource"></a>COleDropSource::COleDropSource  
+##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
  Construit un objet `COleDropSource`.  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="a-namegivefeedbacka--coledropsourcegivefeedback"></a><a name="givefeedback"></a>COleDropSource::GiveFeedback  
+##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
  Appelé par l’infrastructure après avoir appelé [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) ou [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).  
   
 ```  
@@ -122,7 +127,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
  Pour plus d’informations, consultez [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129), et [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonbegindraga--coledropsourceonbegindrag"></a><a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
+##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
  Appelée par l’infrastructure lorsque survient un événement qui pourrait commencer une opération glisser, telles que le bouton gauche de la souris.  
   
 ```  
@@ -139,7 +144,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="remarks"></a>Remarques  
  Remplacez cette fonction si vous souhaitez modifier la manière dont le processus de déplacement est démarré. L’implémentation par défaut capture la souris et reste en mode glisser jusqu'à ce que l’utilisateur clique sur le bouton gauche ou droit de la souris ou appuie sur ÉCHAP, le moment auquel il relâche la souris.  
   
-##  <a name="a-namequerycontinuedraga--coledropsourcequerycontinuedrag"></a><a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
+##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
  Lorsque vous commencez, cette fonction est appelée plusieurs fois par l’infrastructure jusqu'à ce que l’opération glisser soit annulée ou terminée.  
   
 ```  

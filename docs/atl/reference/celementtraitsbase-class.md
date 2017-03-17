@@ -10,10 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CElementTraitsBase
-- ATL::CElementTraitsBase
-- ATL.CElementTraitsBase<T>
-- ATL::CElementTraitsBase<T>
-- ATL.CElementTraitsBase
+- ATLCOLL/ATL::CElementTraitsBase
+- ATLCOLL/ATL::CElementTraitsBase::INARGTYPE
+- ATLCOLL/ATL::CElementTraitsBase::OUTARGTYPE
+- ATLCOLL/ATL::CElementTraitsBase::CopyElements
+- ATLCOLL/ATL::CElementTraitsBase::RelocateElements
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class CElementTraitsBase
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcoll.h  
   
-##  <a name="a-namecopyelementsa--celementtraitsbasecopyelements"></a><a name="copyelements"></a>CElementTraitsBase::CopyElements  
+##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
  Appelez cette méthode pour copier les éléments stockés dans un objet de classe de collection.  
   
 ```
@@ -104,21 +105,21 @@ static void CopyElements(
 ### <a name="remarks"></a>Remarques  
  Les éléments source et de destination ne doivent pas se chevaucher.  
   
-##  <a name="a-nameinargtypea--celementtraitsbaseinargtype"></a><a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
+##  <a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
  Le type de données à utiliser pour ajouter des éléments à la collection.  
   
 ```
 typedef const T& INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--celementtraitsbaseoutargtype"></a><a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
+##  <a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
  Le type de données à utiliser pour récupérer des éléments de la collection.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
-##  <a name="a-namerelocateelementsa--celementtraitsbaserelocateelements"></a><a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
+##  <a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
  Appelez cette méthode pour déplacer des éléments stockés dans un objet de classe de collection.  
   
 ```

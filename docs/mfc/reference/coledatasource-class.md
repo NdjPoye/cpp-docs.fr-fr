@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDataSource
+- AFXOLE/COleDataSource
+- AFXOLE/COleDataSource::COleDataSource
+- AFXOLE/COleDataSource::CacheData
+- AFXOLE/COleDataSource::CacheGlobalData
+- AFXOLE/COleDataSource::DelayRenderData
+- AFXOLE/COleDataSource::DelayRenderFileData
+- AFXOLE/COleDataSource::DelaySetData
+- AFXOLE/COleDataSource::DoDragDrop
+- AFXOLE/COleDataSource::Empty
+- AFXOLE/COleDataSource::FlushClipboard
+- AFXOLE/COleDataSource::GetClipboardOwner
+- AFXOLE/COleDataSource::OnRenderData
+- AFXOLE/COleDataSource::OnRenderFileData
+- AFXOLE/COleDataSource::OnRenderGlobalData
+- AFXOLE/COleDataSource::OnSetData
+- AFXOLE/COleDataSource::SetClipboard
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +118,7 @@ class COleDataSource : public CCmdTarget
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxole.h  
   
-##  <a name="a-namecachedataa--coledatasourcecachedata"></a><a name="cachedata"></a>COleDataSource::CacheData  
+##  <a name="cachedata"></a>COleDataSource::CacheData  
  Appelez cette fonction pour spécifier un format dans lequel données sont proposées pendant les données les opérations de transfert.  
   
 ```  
@@ -135,7 +151,7 @@ void CacheData(
   
  Pour plus d’informations, consultez [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecacheglobaldataa--coledatasourcecacheglobaldata"></a><a name="cacheglobaldata"></a>COleDataSource::CacheGlobalData  
+##  <a name="cacheglobaldata"></a>COleDataSource::CacheGlobalData  
  Appelez cette fonction pour spécifier un format dans lequel données sont proposées pendant les données les opérations de transfert.  
   
 ```  
@@ -164,14 +180,14 @@ void CacheGlobalData(
   
  Pour plus d’informations, consultez [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecoledatasourcea--coledatasourcecoledatasource"></a><a name="coledatasource"></a>COleDataSource::COleDataSource  
+##  <a name="coledatasource"></a>COleDataSource::COleDataSource  
  Construit un objet `COleDataSource`.  
   
 ```  
 COleDataSource();
 ```  
   
-##  <a name="a-namedelayrenderdataa--coledatasourcedelayrenderdata"></a><a name="delayrenderdata"></a>COleDataSource::DelayRenderData  
+##  <a name="delayrenderdata"></a>COleDataSource::DelayRenderData  
  Appelez cette fonction pour spécifier un format dans lequel données sont proposées pendant les données les opérations de transfert.  
   
 ```  
@@ -198,7 +214,7 @@ void DelayRenderData(
   
  Pour plus d’informations, consultez [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedelayrenderfiledataa--coledatasourcedelayrenderfiledata"></a><a name="delayrenderfiledata"></a>COleDataSource::DelayRenderFileData  
+##  <a name="delayrenderfiledata"></a>COleDataSource::DelayRenderFileData  
  Appelez cette fonction pour spécifier un format dans lequel données sont proposées pendant les données les opérations de transfert.  
   
 ```  
@@ -225,7 +241,7 @@ void DelayRenderFileData(
   
  Pour plus d’informations, consultez [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedelaysetdataa--coledatasourcedelaysetdata"></a><a name="delaysetdata"></a>COleDataSource::DelaySetData  
+##  <a name="delaysetdata"></a>COleDataSource::DelaySetData  
  Appelez cette fonction pour prendre en charge la modification du contenu de la source de données.  
   
 ```  
@@ -248,7 +264,7 @@ void DelaySetData(
   
  Pour plus d’informations, consultez [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedodragdropa--coledatasourcedodragdrop"></a><a name="dodragdrop"></a>COleDataSource::DoDragDrop  
+##  <a name="dodragdrop"></a>COleDataSource::DoDragDrop  
  Appelez le `DoDragDrop` fonction membre pour effectuer une opération de glisser-déplacer pour cette source de données, en général dans un [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) gestionnaire.  
   
 ```  
@@ -294,7 +310,7 @@ DROPEFFECT DoDragDrop(
   
  Pour plus d’informations, consultez l’article [glisser -déplacer : implémentation d’une Source supprimer](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
   
-##  <a name="a-nameemptya--coledatasourceempty"></a><a name="empty"></a>COleDataSource::Empty  
+##  <a name="empty"></a>COleDataSource::Empty  
  Appelez cette fonction pour vider le `COleDataSource` objet de données.  
   
 ```  
@@ -306,7 +322,7 @@ void Empty();
   
  Pour plus d’informations, consultez [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameflushclipboarda--coledatasourceflushclipboard"></a><a name="flushclipboard"></a>COleDataSource::FlushClipboard  
+##  <a name="flushclipboard"></a>COleDataSource::FlushClipboard  
  Restitue les données dans le Presse-papiers, puis vous permet de coller des données à partir du Presse-papiers après l’arrêt de votre application.  
   
 ```  
@@ -316,7 +332,7 @@ static void PASCAL FlushClipboard();
 ### <a name="remarks"></a>Remarques  
  Utilisez [l’activation du Presse-papiers](#setclipboard) pour placer des données dans le Presse-papiers.  
   
-##  <a name="a-namegetclipboardownera--coledatasourcegetclipboardowner"></a><a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
+##  <a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
  Détermine si les données du Presse-papiers a changé depuis [l’activation du Presse-papiers](#setclipboard) dernier appel et, dans ce cas, identifie le propriétaire actuel.  
   
 ```  
@@ -326,7 +342,7 @@ static COleDataSource* PASCAL GetClipboardOwner();
 ### <a name="return-value"></a>Valeur de retour  
  La source de données dans le Presse-papiers, ou **NULL** s’il n’y a rien dans le Presse-papiers, ou si le Presse-papiers n’est pas détenu par l’application appelante.  
   
-##  <a name="a-nameonrenderdataa--coledatasourceonrenderdata"></a><a name="onrenderdata"></a>COleDataSource::OnRenderData  
+##  <a name="onrenderdata"></a>COleDataSource::OnRenderData  
  Appelé par l’infrastructure pour récupérer des données au format spécifié.  
   
 ```  
@@ -354,7 +370,7 @@ virtual BOOL OnRenderData(
   
  Pour plus d’informations, consultez la [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) et [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) des structures, les [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) type énumération, et [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
   
-##  <a name="a-nameonrenderfiledataa--coledatasourceonrenderfiledata"></a><a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
  Appelée par l’infrastructure pour récupérer des données dans le format spécifié lorsque le support de stockage spécifié est un fichier.  
   
 ```  
@@ -380,7 +396,7 @@ virtual BOOL OnRenderFileData(
   
  Pour plus d’informations, consultez la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure et [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
   
-##  <a name="a-nameonrenderglobaldataa--coledatasourceonrenderglobaldata"></a><a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
  Appelée par l’infrastructure pour récupérer des données dans le format spécifié lorsque le support de stockage spécifié est la mémoire globale.  
   
 ```  
@@ -408,7 +424,7 @@ virtual BOOL OnRenderGlobalData(
   
  Pour plus d’informations, consultez la [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure et [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
   
-##  <a name="a-nameonsetdataa--coledatasourceonsetdata"></a><a name="onsetdata"></a>COleDataSource::OnSetData  
+##  <a name="onsetdata"></a>COleDataSource::OnSetData  
  Appelé par l’infrastructure pour définir ou remplacer les données dans le `COleDataSource` objet au format spécifié.  
   
 ```  
@@ -438,7 +454,7 @@ virtual BOOL OnSetData(
   
  Pour plus d’informations, consultez la [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) et [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structures et [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) et [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) fonctionne dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *.*  
   
-##  <a name="a-namesetclipboarda--coledatasourcesetclipboard"></a><a name="setclipboard"></a>COleDataSource::SetClipboard  
+##  <a name="setclipboard"></a>COleDataSource::SetClipboard  
  Place les données contenues dans le `COleDataSource` objet dans le Presse-papiers après l’appel d’une des fonctions suivantes : [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), ou [DelayRenderFileData](#delayrenderfiledata).  
   
 ```  

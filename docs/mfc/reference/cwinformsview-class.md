@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinFormsView
+- AFXWINFORMS/CWinFormsView
+- AFXWINFORMS/CWinFormsView::CWinFormsView
+- AFXWINFORMS/CWinFormsView::GetControl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +87,7 @@ class CWinFormsView : public CView;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwinforms.h  
   
-##  <a name="a-namecwinformsviewa--cwinformsviewcwinformsview"></a><a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
+##  <a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
  Construit un objet `CWinFormsView`.  
   
 ```  
@@ -102,7 +105,7 @@ CWinFormsView(System::Type^ pManagedViewType);
   
  [!code-cpp[NVC_MFC_Managed n °&2;](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]  
   
-##  <a name="a-namegetcontrola--cwinformsviewgetcontrol"></a><a name="getcontrol"></a>CWinFormsView::GetControl  
+##  <a name="getcontrol"></a>CWinFormsView::GetControl  
  Récupère un pointeur vers le contrôle Windows Forms.  
   
 ```  
@@ -115,7 +118,7 @@ System::Windows::Forms::Control^ GetControl() const;
 ### <a name="remarks"></a>Remarques  
  Pour obtenir un exemple d’utilisation de Windows Forms, consultez [à l’aide d’un contrôle utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="a-nameoperatorcontrola--cwinformsviewoperator-control"></a><a name="operator_control"></a>Contrôle de CWinFormsView::operator ^  
+##  <a name="operator_control"></a>Contrôle de CWinFormsView::operator ^  
  Convertit un type comme un pointeur vers un contrôle Windows Forms.  
   
 ```  

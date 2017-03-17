@@ -10,6 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocTemplate
+- AFXWIN/CDocTemplate
+- AFXWIN/CDocTemplate::CDocTemplate
+- AFXWIN/CDocTemplate::AddDocument
+- AFXWIN/CDocTemplate::CloseAllDocuments
+- AFXWIN/CDocTemplate::CreateNewDocument
+- AFXWIN/CDocTemplate::CreateNewFrame
+- AFXWIN/CDocTemplate::CreateOleFrame
+- AFXWIN/CDocTemplate::CreatePreviewFrame
+- AFXWIN/CDocTemplate::GetDocString
+- AFXWIN/CDocTemplate::GetFirstDocPosition
+- AFXWIN/CDocTemplate::GetNextDoc
+- AFXWIN/CDocTemplate::InitialUpdateFrame
+- AFXWIN/CDocTemplate::LoadTemplate
+- AFXWIN/CDocTemplate::MatchDocType
+- AFXWIN/CDocTemplate::OpenDocumentFile
+- AFXWIN/CDocTemplate::RemoveDocument
+- AFXWIN/CDocTemplate::SaveAllModified
+- AFXWIN/CDocTemplate::SetContainerInfo
+- AFXWIN/CDocTemplate::SetDefaultTitle
+- AFXWIN/CDocTemplate::SetPreviewInfo
+- AFXWIN/CDocTemplate::SetServerInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +136,7 @@ class CDocTemplate : public CCmdTarget
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="a-nameadddocumenta--cdoctemplateadddocument"></a><a name="adddocument"></a>CDocTemplate::AddDocument  
+##  <a name="adddocument"></a>CDocTemplate::AddDocument  
  Cette fonction permet d’ajouter un document à un modèle.  
   
 ```  
@@ -129,7 +150,7 @@ virtual void AddDocument(CDocument* pDoc);
 ### <a name="remarks"></a>Remarques  
  Les classes dérivées [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) et [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) remplacent cette fonction. Si vous dérivez votre propre classe de modèle de document de `CDocTemplate`, votre classe dérivée doit substituer cette fonction.  
   
-##  <a name="a-namecdoctemplatea--cdoctemplatecdoctemplate"></a><a name="cdoctemplate"></a>CDocTemplate::CDocTemplate  
+##  <a name="cdoctemplate"></a>CDocTemplate::CDocTemplate  
  Construit un objet `CDocTemplate`.  
   
 ```  
@@ -170,7 +191,7 @@ CDocTemplate (
 ### <a name="remarks"></a>Notes  
  Utilisez cette fonction membre pour construire un `CDocTemplate` objet. Allouer dynamiquement un `CDocTemplate` de l’objet et le passer à [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) à partir de la `InitInstance` fonction membre de classe de votre application.  
   
-##  <a name="a-nameclosealldocumentsa--cdoctemplateclosealldocuments"></a><a name="closealldocuments"></a>CDocTemplate::CloseAllDocuments  
+##  <a name="closealldocuments"></a>CDocTemplate::CloseAllDocuments  
  Appelez cette fonction membre pour fermer tous les documents ouverts.  
   
 ```  
@@ -186,7 +207,7 @@ virtual void CloseAllDocuments(BOOL bEndSession);
   
  Remplacez cette fonction si vous souhaitez que l’utilisateur effectuer le traitement de nettoyage spécial avant la fermeture du document. Par exemple, si le document représente un enregistrement dans une base de données, vous souhaiterez peut-être de remplacer cette fonction pour fermer la base de données.  
   
-##  <a name="a-namecreatenewdocumenta--cdoctemplatecreatenewdocument"></a><a name="createnewdocument"></a>CDocTemplate::CreateNewDocument  
+##  <a name="createnewdocument"></a>CDocTemplate::CreateNewDocument  
  Appelez cette fonction membre pour créer un document de type associé à ce modèle de document.  
   
 ```  
@@ -196,7 +217,7 @@ virtual CDocument* CreateNewDocument();
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le nouveau document, ou **NULL** si une erreur se produit.  
   
-##  <a name="a-namecreatenewframea--cdoctemplatecreatenewframe"></a><a name="createnewframe"></a>CDocTemplate::CreateNewFrame  
+##  <a name="createnewframe"></a>CDocTemplate::CreateNewFrame  
  Crée une fenêtre frame contenant un document et la vue.  
   
 ```  
@@ -220,7 +241,7 @@ virtual CFrameWnd* CreateNewFrame(
   
  Le `pOther` paramètre est utilisé pour implémenter la commande nouvelle fenêtre. Il fournit une fenêtre frame permettant de modéliser la fenêtre frame. La fenêtre frame est généralement créée invisible. Appelez cette fonction pour créer des fenêtres frame en dehors de l’implémentation de nouveaux fichiers et ouvrir le fichier framework standard.  
   
-##  <a name="a-namecreateoleframea--cdoctemplatecreateoleframe"></a><a name="createoleframe"></a>CDocTemplate::CreateOleFrame  
+##  <a name="createoleframe"></a>CDocTemplate::CreateOleFrame  
  Crée une fenêtre frame d’OLE.  
   
 ```  
@@ -246,7 +267,7 @@ CFrameWnd* CreateOleFrame(
 ### <a name="remarks"></a>Remarques  
  Si `bCreateView` est égal à zéro, un cadre vide est créé.  
   
-##  <a name="a-namegetdocstringa--cdoctemplategetdocstring"></a><a name="getdocstring"></a>CDocTemplate::GetDocString  
+##  <a name="getdocstring"></a>CDocTemplate::GetDocString  
  Récupère une chaîne associée au type de document.  
   
 ```  
@@ -284,7 +305,7 @@ virtual BOOL GetDocString(
   
  Appelez cette fonction uniquement si vous dérivez votre propre classe de `CDocTemplate`.  
   
-##  <a name="a-namegetfirstdocpositiona--cdoctemplategetfirstdocposition"></a><a name="getfirstdocposition"></a>CDocTemplate::GetFirstDocPosition  
+##  <a name="getfirstdocposition"></a>CDocTemplate::GetFirstDocPosition  
  Récupère la position du premier document associé à ce modèle.  
   
 ```  
@@ -299,7 +320,7 @@ virtual POSITION GetFirstDocPosition() const = 0;
   
  [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) et [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) substituent tous deux cette fonction virtuelle pure. Toute classe que vous dérivez de `CDocTemplate` doit également substituer cette fonction.  
   
-##  <a name="a-namegetnextdoca--cdoctemplategetnextdoc"></a><a name="getnextdoc"></a>CDocTemplate::GetNextDoc  
+##  <a name="getnextdoc"></a>CDocTemplate::GetNextDoc  
  Récupère l’élément de liste identifié par `rPos`, puis définit `rPos` à la **POSITION** la valeur de l’entrée suivante dans la liste.  
   
 ```  
@@ -320,7 +341,7 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
   
  Vous devez vous assurer que votre **POSITION** valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
   
-##  <a name="a-nameinitialupdateframea--cdoctemplateinitialupdateframe"></a><a name="initialupdateframe"></a>CDocTemplate::InitialUpdateFrame  
+##  <a name="initialupdateframe"></a>CDocTemplate::InitialUpdateFrame  
  Initialise la fenêtre frame et éventuellement rend visible.  
   
 ```  
@@ -345,7 +366,7 @@ virtual void InitialUpdateFrame(
   
  Il n’est pas nécessaire d’appeler cette fonction lorsque vous utilisez l’implémentation de l’infrastructure du nouveau fichier et ouvrir le fichier.  
   
-##  <a name="a-nameloadtemplatea--cdoctemplateloadtemplate"></a><a name="loadtemplate"></a>CDocTemplate::LoadTemplate  
+##  <a name="loadtemplate"></a>CDocTemplate::LoadTemplate  
  Charge les ressources pour une donnée `CDocTemplate` ou de la classe dérivée.  
   
 ```  
@@ -355,7 +376,7 @@ virtual void LoadTemplate();
 ### <a name="remarks"></a>Remarques  
  Cette fonction membre est appelée par l’infrastructure pour charger les ressources pour une donnée `CDocTemplate` ou de la classe dérivée. Normalement il est appelé pendant la construction, sauf lorsque le modèle est en cours de construction globalement. Dans ce cas, l’appel à `LoadTemplate` est différée jusqu'à ce que [CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate) est appelée.  
   
-##  <a name="a-namematchdoctypea--cdoctemplatematchdoctype"></a><a name="matchdoctype"></a>CDocTemplate::MatchDocType  
+##  <a name="matchdoctype"></a>CDocTemplate::MatchDocType  
  Détermine le degré de confiance dans la correspondance entre un type de document et de ce modèle.  
   
 ```  
@@ -403,7 +424,7 @@ virtual Confidence MatchDocType(
   
  L’implémentation par défaut ne retourne pas **CDocTemplate::maybeAttemptForeign** ou **CDocTemplate::maybeAttemptNative**. Remplacez cette fonction pour implémenter la logique de correspondance de type appropriée pour votre application, éventuellement à l’aide de ces deux valeurs à partir de la **confiance** énumération.  
   
-##  <a name="a-nameopendocumentfilea--cdoctemplateopendocumentfile"></a><a name="opendocumentfile"></a>CDocTemplate::OpenDocumentFile  
+##  <a name="opendocumentfile"></a>CDocTemplate::OpenDocumentFile  
  Ouvre un fichier spécifié par un chemin d’accès.  
   
 ```  
@@ -427,7 +448,7 @@ virtual CDocument* OpenDocumentFile(
 ### <a name="remarks"></a>Remarques  
  Ouvre le fichier dont le chemin est spécifié par `lpszPathName`. Si `lpszPathName` est `NULL`, un nouveau fichier qui contient un document de type associé à ce modèle est créé.  
   
-##  <a name="a-nameremovedocumenta--cdoctemplateremovedocument"></a><a name="removedocument"></a>CDocTemplate::RemoveDocument  
+##  <a name="removedocument"></a>CDocTemplate::RemoveDocument  
  Supprime le document vers lequel pointé `pDoc` dans la liste des documents associés à ce modèle.  
   
 ```  
@@ -441,7 +462,7 @@ virtual void RemoveDocument(CDocument* pDoc);
 ### <a name="remarks"></a>Notes  
  Les classes dérivées `CMultiDocTemplate` et `CSingleDocTemplate` remplacent cette fonction. Si vous dérivez votre propre classe de modèle de document de `CDocTemplate`, votre classe dérivée doit substituer cette fonction.  
   
-##  <a name="a-namesaveallmodifieda--cdoctemplatesaveallmodified"></a><a name="saveallmodified"></a>CDocTemplate::SaveAllModified  
+##  <a name="saveallmodified"></a>CDocTemplate::SaveAllModified  
  Enregistre tous les documents qui ont été modifiés.  
   
 ```  
@@ -451,7 +472,7 @@ virtual BOOL SaveAllModified();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’opération a réussi ; sinon 0.  
   
-##  <a name="a-namesetcontainerinfoa--cdoctemplatesetcontainerinfo"></a><a name="setcontainerinfo"></a>CDocTemplate::SetContainerInfo  
+##  <a name="setcontainerinfo"></a>CDocTemplate::SetContainerInfo  
  Détermine les ressources pour les conteneurs OLE lors de la modification des éléments OLE sur place.  
   
 ```  
@@ -467,7 +488,7 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
   
  Le menu associé `nIDOleInPlaceContainer` contient des séparateurs qui permettent le menu de l’élément en place activé à fusionner avec le menu de l’application conteneur. Pour plus d’informations sur la fusion de menus de serveur et un conteneur, consultez l’article [Menus et ressources (OLE)](../../mfc/menus-and-resources-ole.md).  
   
-##  <a name="a-namesetdefaulttitlea--cdoctemplatesetdefaulttitle"></a><a name="setdefaulttitle"></a>CDocTemplate::SetDefaultTitle  
+##  <a name="setdefaulttitle"></a>CDocTemplate::SetDefaultTitle  
  Appelez cette fonction pour charger le titre du document par défaut et l’afficher dans la barre de titre du document.  
   
 ```  
@@ -481,7 +502,7 @@ virtual void SetDefaultTitle(CDocument* pDocument) = 0;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations sur le titre par défaut, consultez la description de **CDocTemplate::docName** dans [CDocTemplate::GetDocString](#getdocstring).  
   
-##  <a name="a-namesetserverinfoa--cdoctemplatesetserverinfo"></a><a name="setserverinfo"></a>CDocTemplate::SetServerInfo  
+##  <a name="setserverinfo"></a>CDocTemplate::SetServerInfo  
  Détermine les ressources et les classes lorsque le document serveur est incorporé ou modifié sur place.  
   
 ```  
@@ -510,7 +531,7 @@ void SetServerInfo(
   
  Le menu associé `nIDOleInPlaceServer` contient des séparateurs qui permettent le menu serveur à fusionner avec le menu du conteneur. Pour plus d’informations sur la fusion de menus de serveur et un conteneur, consultez l’article [Menus et ressources (OLE)](../../mfc/menus-and-resources-ole.md).  
   
-##  <a name="a-namecreatepreviewframea--cdoctemplatecreatepreviewframe"></a><a name="createpreviewframe"></a>CDocTemplate::CreatePreviewFrame  
+##  <a name="createpreviewframe"></a>CDocTemplate::CreatePreviewFrame  
  Crée un frame enfant utilisé pour l’aperçu riche.  
   
 ```  
@@ -531,7 +552,7 @@ CFrameWnd* CreatePreviewFrame(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetpreviewinfoa--cdoctemplatesetpreviewinfo"></a><a name="setpreviewinfo"></a>CDocTemplate::SetPreviewInfo  
+##  <a name="setpreviewinfo"></a>CDocTemplate::SetPreviewInfo  
  Définit le Gestionnaire d’aperçus de processus à l’emploi.  
   
 ```  

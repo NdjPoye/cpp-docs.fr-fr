@@ -9,9 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComEnumImpl
-- ATL::CComEnumImpl
 - CComEnumImpl
+- ATLCOM/ATL::CComEnumImpl
+- ATLCOM/ATL::CComEnumImpl::CComEnumImpl
+- ATLCOM/ATL::CComEnumImpl::Clone
+- ATLCOM/ATL::CComEnumImpl::Init
+- ATLCOM/ATL::CComEnumImpl::Next
+- ATLCOM/ATL::CComEnumImpl::Reset
+- ATLCOM/ATL::CComEnumImpl::Skip
+- ATLCOM/ATL::CComEnumImpl::m_begin
+- ATLCOM/ATL::CComEnumImpl::m_dwFlags
+- ATLCOM/ATL::CComEnumImpl::m_end
+- ATLCOM/ATL::CComEnumImpl::m_iter
+- ATLCOM/ATL::CComEnumImpl::m_spUnk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,21 +124,21 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="a-nameccomenumimpla--ccomenumimplccomenumimpl"></a><a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
+##  <a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
  Constructeur.  
   
 ```
 CComEnumImpl();
 ```  
   
-##  <a name="a-namedtora--ccomenumimplccomenumimpl"></a><a name="dtor"></a>CComEnumImpl :: ~ CComEnumImpl  
+##  <a name="dtor"></a>CComEnumImpl :: ~ CComEnumImpl  
  Destructeur.  
   
 ```
 ~CComEnumImpl();
 ```  
   
-##  <a name="a-nameinita--ccomenumimplinit"></a><a name="init"></a>CComEnumImpl::Init  
+##  <a name="init"></a>CComEnumImpl::Init  
  Vous devez appeler cette méthode avant de passer un pointeur à l’interface de l’énumérateur sur tous les clients.  
   
 ```
@@ -183,7 +193,7 @@ HRESULT Init(
 > [!NOTE]
 >  Le prototype de cette méthode spécifie les éléments du tableau comme étant de type **T**, où **T** a été défini comme un paramètre de modèle à la classe. Il s’agit du même type qui est exposé au moyen de la méthode d’interface COM [CComEnumImpl::Next](#next). Cela est que, contrairement à [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), cette classe ne prend pas en charge les différents stockages et exposé les types de données. Le type de données des éléments du tableau doit être le même que le type de données exposé à l’aide de l’interface COM.  
   
-##  <a name="a-nameclonea--ccomenumimplclone"></a><a name="clone"></a>CComEnumImpl::Clone  
+##  <a name="clone"></a>CComEnumImpl::Clone  
  Cette méthode fournit l’implémentation de la [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) méthode en créant un objet de type `CComEnum`, l’initialiser avec le même tableau et itérateur utilisé par l’objet actuel et le renvoi de l’interface sur l’objet nouvellement créé.  
   
 ```
@@ -200,42 +210,42 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="remarks"></a>Remarques  
  Notez que les énumérateurs clonés jamais leurs propre copie (ou prendre possession) des données utilisées par l’énumérateur d’origine. Si nécessaire, les énumérateurs clonés conservera l’énumérateur d’origine actif (à l’aide d’une référence COM) pour vous assurer que les données sont disponibles pour tant qu’ils en ont besoin.  
   
-##  <a name="a-namemspunka--ccomenumimplmspunk"></a><a name="m_spunk"></a>CComEnumImpl::m_spUnk  
+##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk  
  Ce pointeur intelligent conserve une référence de l’objet passé à [CComEnumImpl::Init](#init), s’assurer qu’il reste actif pendant la durée de vie de l’énumérateur.  
   
 ```
 CComPtr<IUnknown> m_spUnk;
 ```  
   
-##  <a name="a-namembegina--ccomenumimplmbegin"></a><a name="m_begin"></a>CComEnumImpl::m_begin  
+##  <a name="m_begin"></a>CComEnumImpl::m_begin  
  Pointeur vers l’emplacement situé juste après le dernier élément du tableau qui contient les éléments à énumérer.  
   
 ```
 T* m_begin;
 ```  
   
-##  <a name="a-namemenda--ccomenumimplmend"></a><a name="m_end"></a>CComEnumImpl::m_end  
+##  <a name="m_end"></a>CComEnumImpl::m_end  
  Pointeur vers le premier élément du tableau qui contient les éléments à énumérer.  
   
 ```
 T* m_end;
 ```  
   
-##  <a name="a-namemitera--ccomenumimplmiter"></a><a name="m_iter"></a>CComEnumImpl::m_iter  
+##  <a name="m_iter"></a>CComEnumImpl::m_iter  
  Pointeur vers l’élément actuel du tableau contenant les éléments à énumérer.  
   
 ```
 T* m_iter;
 ```  
   
-##  <a name="a-namemdwflagsa--ccomenumimplmdwflags"></a><a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
+##  <a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
  Les indicateurs passés à [CComEnumImpl::Init](#init).  
   
 ```
 DWORD m_dwFlags;
 ```  
   
-##  <a name="a-namenexta--ccomenumimplnext"></a><a name="next"></a>CComEnumImpl::Next  
+##  <a name="next"></a>CComEnumImpl::Next  
  Cette méthode fournit l’implémentation de la [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) (méthode).  
   
 ```
@@ -255,7 +265,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="a-namereseta--ccomenumimplreset"></a><a name="reset"></a>CComEnumImpl::Reset  
+##  <a name="reset"></a>CComEnumImpl::Reset  
  Cette méthode fournit l’implémentation de la [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) (méthode).  
   
 ```
@@ -265,7 +275,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="a-nameskipa--ccomenumimplskip"></a><a name="skip"></a>CComEnumImpl::Skip  
+##  <a name="skip"></a>CComEnumImpl::Skip  
  Cette méthode fournit l’implémentation de la [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) (méthode).  
   
 ```

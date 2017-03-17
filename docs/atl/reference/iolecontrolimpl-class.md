@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IOleControlImpl
+- ATLCTL/ATL::IOleControlImpl
+- ATLCTL/ATL::IOleControlImpl::FreezeEvents
+- ATLCTL/ATL::IOleControlImpl::GetControlInfo
+- ATLCTL/ATL::IOleControlImpl::OnAmbientPropertyChange
+- ATLCTL/ATL::IOleControlImpl::OnMnemonic
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +85,7 @@ class IOleControlImpl
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlctl.h  
   
-##  <a name="a-namefreezeeventsa--iolecontrolimplfreezeevents"></a><a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
+##  <a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
  Dans l’implémentation d’ATL, `FreezeEvents` incrémente la classe de contrôle `m_nFreezeEvents` membre de données si `bFreeze` est **TRUE**et décrémente `m_nFreezeEvents` si `bFreeze` est **FALSE**.  
   
 ```
@@ -92,7 +97,7 @@ HRESULT FreezeEvents(BOOL bFreeze);
   
  Consultez la page [IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetcontrolinfoa--iolecontrolimplgetcontrolinfo"></a><a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
+##  <a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
  Remplit les informations sur le comportement du clavier du contrôle.  
   
 ```
@@ -105,7 +110,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-##  <a name="a-nameonambientpropertychangea--iolecontrolimplonambientpropertychange"></a><a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
+##  <a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
  Indique un contrôle qu’un ou plusieurs des propriétés ambiantes du conteneur a changé.  
   
 ```
@@ -118,7 +123,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
 ### <a name="remarks"></a>Notes  
  Consultez la page [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameonmnemonica--iolecontrolimplonmnemonic"></a><a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
+##  <a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
  Indique au contrôle qu’un utilisateur a appuyé sur une combinaison de touches spécifiée.  
   
 ```

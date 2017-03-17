@@ -10,10 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComPolyObject
-- ATL.CComPolyObject<contained>
-- ATL::CComPolyObject
-- ATL::CComPolyObject<contained>
-- ATL.CComPolyObject
+- ATLCOM/ATL::CComPolyObject
+- ATLCOM/ATL::CComPolyObject::CComPolyObject
+- ATLCOM/ATL::CComPolyObject::AddRef
+- ATLCOM/ATL::CComPolyObject::CreateInstance
+- ATLCOM/ATL::CComPolyObject::FinalConstruct
+- ATLCOM/ATL::CComPolyObject::FinalRelease
+- ATLCOM/ATL::CComPolyObject::QueryInterface
+- ATLCOM/ATL::CComPolyObject::Release
+- ATLCOM/ATL::CComPolyObject::m_contained
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +116,7 @@ class CComPolyObject : public IUnknown,
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="a-nameaddrefa--ccompolyobjectaddref"></a><a name="addref"></a>CComPolyObject::AddRef  
+##  <a name="addref"></a>CComPolyObject::AddRef  
  Incrémente le décompte de références sur l’objet.  
   
 ```
@@ -121,7 +126,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur qui peut être utile pour les tests de diagnostic ou de test.  
   
-##  <a name="a-nameccompolyobjecta--ccompolyobjectccompolyobject"></a><a name="ccompolyobject"></a>CComPolyObject::CComPolyObject  
+##  <a name="ccompolyobject"></a>CComPolyObject::CComPolyObject  
  Constructeur.  
   
 ```
@@ -137,7 +142,7 @@ CComPolyObject(void* pv);
   
  Le décrémente destructeur le module nombre de verrous.  
   
-##  <a name="a-namedtora--ccompolyobjectccompolyobject"></a><a name="dtor"></a>CComPolyObject :: ~ CComPolyObject  
+##  <a name="dtor"></a>CComPolyObject :: ~ CComPolyObject  
  Destructeur.  
   
 ```
@@ -147,7 +152,7 @@ CComPolyObject(void* pv);
 ### <a name="remarks"></a>Remarques  
  Libère toutes les ressources attribuées, les appels [FinalRelease](#finalrelease), et décrémente le module nombre de verrous.  
   
-##  <a name="a-namecreateinstancea--ccompolyobjectcreateinstance"></a><a name="createinstance"></a>CComPolyObject::CreateInstance  
+##  <a name="createinstance"></a>CComPolyObject::CreateInstance  
  Permet de créer un nouveau **CComPolyObject** `contained` ** > ** objet sans avoir à [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
@@ -168,7 +173,7 @@ static HRESULT WINAPI CreateInstance(
   
  Si vous n’avez besoin un accès direct à l’objet, mais que vous souhaitez toujours créer un nouvel objet sans avoir à `CoCreateInstance`, utilisez [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) à la place.  
   
-##  <a name="a-namefinalconstructa--ccompolyobjectfinalconstruct"></a><a name="finalconstruct"></a>CComPolyObject::FinalConstruct  
+##  <a name="finalconstruct"></a>CComPolyObject::FinalConstruct  
  Appelé pendant les dernières étapes de construction d’objets, cette méthode effectue une initialisation finale sur le [m_contained](#m_contained) membre de données.  
   
 ```
@@ -178,14 +183,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="a-namefinalreleasea--ccompolyobjectfinalrelease"></a><a name="finalrelease"></a>CComPolyObject::FinalRelease  
+##  <a name="finalrelease"></a>CComPolyObject::FinalRelease  
  Appelée pendant la destruction d’objets, cette méthode libère le [m_contained](#m_contained) membre de données.  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="a-namemcontaineda--ccompolyobjectmcontained"></a><a name="m_contained"></a>CComPolyObject::m_contained  
+##  <a name="m_contained"></a>CComPolyObject::m_contained  
  A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) objet dérivé votre classe.  
   
 ```
@@ -199,7 +204,7 @@ CComContainedObject<contained> m_contained;
 ### <a name="remarks"></a>Remarques  
  **IUnknown** appelle via `m_contained` sont déléguées à inconnu externe si l’objet est agrégée, ou à la **IUnknown** de cet objet si l’objet n’est pas agrégé.  
   
-##  <a name="a-namequeryinterfacea--ccompolyobjectqueryinterface"></a><a name="queryinterface"></a>CComPolyObject::QueryInterface  
+##  <a name="queryinterface"></a>CComPolyObject::QueryInterface  
  Récupère un pointeur vers l'interface demandée.  
   
 ```
@@ -227,7 +232,7 @@ HRESULT QueryInterface(Q** pp);
 ### <a name="remarks"></a>Notes  
  Pour un objet, si l’interface demandée est **IUnknown**, `QueryInterface` retourne un pointeur vers l’agrégées propre à l’objet **IUnknown** et incrémente le décompte de références. Sinon, cette méthode interroge l’interface via la `CComContainedObject` membre de données, [m_contained](#m_contained).  
   
-##  <a name="a-namereleasea--ccompolyobjectrelease"></a><a name="release"></a>CComPolyObject::Release  
+##  <a name="release"></a>CComPolyObject::Release  
  Décrémente le décompte de références sur l’objet.  
   
 ```

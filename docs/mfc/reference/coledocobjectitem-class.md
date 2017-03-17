@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDocObjectItem
+- AFXOLE/COleDocObjectItem
+- AFXOLE/COleDocObjectItem::COleDocObjectItem
+- AFXOLE/COleDocObjectItem::DoDefaultPrinting
+- AFXOLE/COleDocObjectItem::ExecCommand
+- AFXOLE/COleDocObjectItem::GetActiveView
+- AFXOLE/COleDocObjectItem::GetPageCount
+- AFXOLE/COleDocObjectItem::OnPreparePrinting
+- AFXOLE/COleDocObjectItem::OnPrint
+- AFXOLE/COleDocObjectItem::QueryCommand
+- AFXOLE/COleDocObjectItem::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +112,7 @@ class COleDocObjectItem : public COleClientItem
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxole.h  
   
-##  <a name="a-namecoledocobjectitema--coledocobjectitemcoledocobjectitem"></a><a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
+##  <a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
  Appelez cette fonction membre pour initialiser le `COleDocObjectItem` objet.  
   
 ```  
@@ -113,7 +123,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
  `pContainerDoc`  
  Un pointeur vers le `COleDocument` objet agissant en tant que le conteneur de documents actifs. Ce paramètre doit être **NULL** pour activer **IMPLEMENT_SERIALIZE**. Normalement les éléments OLE sont construits avec un non - **NULL** pointeur de document.  
   
-##  <a name="a-namedodefaultprintinga--coledocobjectitemdodefaultprinting"></a><a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting  
+##  <a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting  
  Appelée par l’infrastructure pour un document en utilisant les paramètres par défaut.  
   
 ```  
@@ -129,7 +139,7 @@ static HRESULT DoDefaultPrinting(
  `pInfo`  
  Un pointeur vers un [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) objet qui décrit le travail d’impression.  
   
-##  <a name="a-nameexeccommanda--coledocobjectitemexeccommand"></a><a name="execcommand"></a>COleDocObjectItem::ExecCommand  
+##  <a name="execcommand"></a>COleDocObjectItem::ExecCommand  
  Appelez cette fonction membre pour exécuter la commande spécifiée par l’utilisateur.  
   
 ```  
@@ -166,7 +176,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>Remarques  
  Le `pguidCmdGroup` et `nCmdID` paramètres identifier de façon unique la commande à appeler. Le `nCmdExecOpt` paramètre spécifie l’action à entreprendre exacte.  
   
-##  <a name="a-namegetactiveviewa--coledocobjectitemgetactiveview"></a><a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
+##  <a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
  Appelez cette fonction membre pour obtenir un pointeur vers le `IOleDocumentView` interface de la vue actuellement active.  
   
 ```  
@@ -179,7 +189,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ### <a name="remarks"></a>Remarques  
  Le décompte de références sur le `IOleDocumentView` pointeur n’est pas incrémenté avant d’être retournée par cette fonction.  
   
-##  <a name="a-namegetpagecounta--coledocobjectitemgetpagecount"></a><a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
+##  <a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
  Appelez cette fonction membre pour récupérer le nombre de pages dans le document.  
   
 ```  
@@ -198,7 +208,7 @@ BOOL GetPageCount(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-##  <a name="a-nameonprepareprintinga--coledocobjectitemonprepareprinting"></a><a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
  Cette fonction membre est appelée par l’infrastructure pour préparer un document pour l’impression.  
   
 ```  
@@ -221,7 +231,7 @@ static BOOL OnPreparePrinting(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-##  <a name="a-nameonprinta--coledocobjectitemonprint"></a><a name="onprint"></a>COleDocObjectItem::OnPrint  
+##  <a name="onprint"></a>COleDocObjectItem::OnPrint  
  Cette fonction membre est appelée par l’infrastructure pour imprimer un document.  
   
 ```  
@@ -241,7 +251,7 @@ static void OnPrint(
  `bPrintAll`  
  Spécifie si l’ensemble du document doit être imprimée.  
   
-##  <a name="a-namequerycommanda--coledocobjectitemquerycommand"></a><a name="querycommand"></a>COleDocObjectItem::QueryCommand  
+##  <a name="querycommand"></a>COleDocObjectItem::QueryCommand  
  Demande l’état d’une ou plusieurs commandes générées par des événements d’interface utilisateur.  
   
 ```  
@@ -271,7 +281,7 @@ HRESULT QueryCommand(
 ### <a name="remarks"></a>Remarques  
  Cette fonction membre émule les fonctionnalités de la [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) (méthode), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namereleasea--coledocobjectitemrelease"></a><a name="release"></a>COleDocObjectItem::Release  
+##  <a name="release"></a>COleDocObjectItem::Release  
  Libère la connexion à un élément lié OLE et la ferme si elle a été ouvert. Ne supprime pas l’élément client.  
   
 ```  

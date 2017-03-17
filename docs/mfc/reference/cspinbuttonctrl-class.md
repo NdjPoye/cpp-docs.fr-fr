@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSpinButtonCtrl
+- AFXCMN/CSpinButtonCtrl
+- AFXCMN/CSpinButtonCtrl::CSpinButtonCtrl
+- AFXCMN/CSpinButtonCtrl::Create
+- AFXCMN/CSpinButtonCtrl::CreateEx
+- AFXCMN/CSpinButtonCtrl::GetAccel
+- AFXCMN/CSpinButtonCtrl::GetBase
+- AFXCMN/CSpinButtonCtrl::GetBuddy
+- AFXCMN/CSpinButtonCtrl::GetPos
+- AFXCMN/CSpinButtonCtrl::GetRange
+- AFXCMN/CSpinButtonCtrl::SetAccel
+- AFXCMN/CSpinButtonCtrl::SetBase
+- AFXCMN/CSpinButtonCtrl::SetBuddy
+- AFXCMN/CSpinButtonCtrl::SetPos
+- AFXCMN/CSpinButtonCtrl::SetRange
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +116,7 @@ class CSpinButtonCtrl : public CWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcmn.h  
   
-##  <a name="a-namecreatea--cspinbuttonctrlcreate"></a><a name="create"></a>CSpinButtonCtrl::Create  
+##  <a name="create"></a>CSpinButtonCtrl::Create  
  Crée un contrôle de bouton toupie (spin) et l’attache à une `CSpinButtonCtrl` objet...  
   
 ```  
@@ -134,7 +148,7 @@ virtual BOOL Create(
   
  Pour créer un contrôle de bouton toupie (spin) avec les styles de fenêtre étendus, appelez [CSpinButtonCtrl::CreateEx](#createex) au lieu de **créer**.  
   
-##  <a name="a-namecreateexa--cspinbuttonctrlcreateex"></a><a name="createex"></a>CSpinButtonCtrl::CreateEx  
+##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
  Crée un contrôle (une fenêtre enfant) et l’associe à la `CSpinButtonCtrl` objet.  
   
 ```  
@@ -168,14 +182,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Remarques  
  Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus Windows, spécifiés par la préface de style étendu Windows **WS_EX_**.  
   
-##  <a name="a-namecspinbuttonctrla--cspinbuttonctrlcspinbuttonctrl"></a><a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
+##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
  Construit un objet `CSpinButtonCtrl`.  
   
 ```  
 CSpinButtonCtrl();
 ```  
   
-##  <a name="a-namegetaccela--cspinbuttonctrlgetaccel"></a><a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
+##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
  Récupère les informations de l’accélération d’un contrôle de bouton toupie (spin).  
   
 ```  
@@ -194,7 +208,7 @@ UINT GetAccel(
 ### <a name="return-value"></a>Valeur de retour  
  Nombre de structures d’accélérateur récupérés.  
   
-##  <a name="a-namegetbasea--cspinbuttonctrlgetbase"></a><a name="getbase"></a>CSpinButtonCtrl::GetBase  
+##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
  Extrait de la base d’un contrôle de bouton toupie (spin).  
   
 ```  
@@ -204,7 +218,7 @@ UINT GetBase() const;
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de base en cours.  
   
-##  <a name="a-namegetbuddya--cspinbuttonctrlgetbuddy"></a><a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
+##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
  Récupère un pointeur vers la fenêtre associée en cours.  
   
 ```  
@@ -214,7 +228,7 @@ CWnd* GetBuddy() const;
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers la fenêtre associée en cours.  
   
-##  <a name="a-namegetposa--cspinbuttonctrlgetpos"></a><a name="getpos"></a>CSpinButtonCtrl::GetPos  
+##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
  Récupère la position actuelle d’un contrôle de bouton toupie (spin).  
   
 ```  

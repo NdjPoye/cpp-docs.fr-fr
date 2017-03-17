@@ -9,8 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DLayer
 - CD2DLayer
+- AFXRENDERTARGET/CD2DLayer
+- AFXRENDERTARGET/CD2DLayer::CD2DLayer
+- AFXRENDERTARGET/CD2DLayer::Attach
+- AFXRENDERTARGET/CD2DLayer::Create
+- AFXRENDERTARGET/CD2DLayer::Destroy
+- AFXRENDERTARGET/CD2DLayer::Detach
+- AFXRENDERTARGET/CD2DLayer::Get
+- AFXRENDERTARGET/CD2DLayer::GetSize
+- AFXRENDERTARGET/CD2DLayer::IsValid
+- AFXRENDERTARGET/CD2DLayer::m_pLayer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,14 +101,14 @@ class CD2DLayer : public CD2DResource;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dlayera--cd2dlayercd2dlayer"></a><a name="_dtorcd2dlayer"></a>CD2DLayer :: ~ CD2DLayer  
+##  <a name="_dtorcd2dlayer"></a>CD2DLayer :: ~ CD2DLayer  
  Destructeur. Appelé lorsqu’un objet de couche D2D est détruit.  
   
 ```  
 virtual ~CD2DLayer();
 ```  
   
-##  <a name="a-nameattacha--cd2dlayerattach"></a><a name="attach"></a>CD2DLayer::Attach  
+##  <a name="attach"></a>CD2DLayer::Attach  
  Attache existant à l’objet interface de la ressource  
   
 ```  
@@ -110,7 +119,7 @@ void Attach(ID2D1Layer* pResource);
  `pResource`  
  Interface de la ressource existante. Ne peut pas être NULL  
   
-##  <a name="a-namecd2dlayera--cd2dlayercd2dlayer"></a><a name="cd2dlayer"></a>CD2DLayer::CD2DLayer  
+##  <a name="cd2dlayer"></a>CD2DLayer::CD2DLayer  
  Construit un objet CD2DLayer.  
   
 ```  
@@ -126,7 +135,7 @@ CD2DLayer(
  `bAutoDestroy`  
  Indique que l’objet sera détruit par le propriétaire (pParentTarget).  
   
-##  <a name="a-namecreatea--cd2dlayercreate"></a><a name="create"></a>CD2DLayer::Create  
+##  <a name="create"></a>CD2DLayer::Create  
  Crée un CD2DLayer.  
   
 ```  
@@ -140,14 +149,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
   
-##  <a name="a-namedestroya--cd2dlayerdestroy"></a><a name="destroy"></a>CD2DLayer::Destroy  
+##  <a name="destroy"></a>CD2DLayer::Destroy  
  Détruit un objet CD2DLayer.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dlayerdetach"></a><a name="detach"></a>CD2DLayer::Detach  
+##  <a name="detach"></a>CD2DLayer::Detach  
  Détache l’interface de la ressource à partir de l’objet  
   
 ```  
@@ -157,7 +166,7 @@ ID2D1Layer* Detach();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers l’interface de la ressource détachée.  
   
-##  <a name="a-namegeta--cd2dlayerget"></a><a name="get"></a>CD2DLayer::Get  
+##  <a name="get"></a>CD2DLayer::Get  
  Renvoie l’interface ID2D1Layer  
   
 ```  
@@ -167,7 +176,7 @@ ID2D1Layer* Get();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers une interface de ID2D1Layer ou NULL si l’objet n’est pas encore initialisé.  
   
-##  <a name="a-namegetsizea--cd2dlayergetsize"></a><a name="getsize"></a>CD2DLayer::GetSize  
+##  <a name="getsize"></a>CD2DLayer::GetSize  
  Retourne la taille de la cible de rendu en pixels indépendants du périphérique  
   
 ```  
@@ -177,7 +186,7 @@ CD2DSizeF GetSize() const;
 ### <a name="return-value"></a>Valeur de retour  
  La taille actuelle de la cible de rendu en pixels indépendants du périphérique  
   
-##  <a name="a-nameisvalida--cd2dlayerisvalid"></a><a name="isvalid"></a>CD2DLayer::IsValid  
+##  <a name="isvalid"></a>CD2DLayer::IsValid  
  Vérifications de validité des ressources  
   
 ```  
@@ -187,14 +196,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la ressource est valide ; Sinon, FALSE.  
   
-##  <a name="a-namemplayera--cd2dlayermplayer"></a><a name="m_player"></a>CD2DLayer::m_pLayer  
+##  <a name="m_player"></a>CD2DLayer::m_pLayer  
  Stocke un pointeur vers un objet ID2D1Layer.  
   
 ```  
 ID2D1Layer* m_pLayer;  
 ```  
   
-##  <a name="a-nameoperatorid2d1layerstara--cd2dlayeroperator-id2d1layer"></a><a name="operator_id2d1layer_star"></a>CD2DLayer::operator ID2D1Layer *  
+##  <a name="operator_id2d1layer_star"></a>CD2DLayer::operator ID2D1Layer *  
  Renvoie l’interface ID2D1Layer  
   
 ```  

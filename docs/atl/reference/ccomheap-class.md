@@ -10,8 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComHeap
-- ATL.CComHeap
-- ATL::CComHeap
+- ATLCOMMEM/ATL::CComHeap
+- ATLCOMMEM/ATL::CComHeap::Allocate
+- ATLCOMMEM/ATL::CComHeap::Free
+- ATLCOMMEM/ATL::CComHeap::GetSize
+- ATLCOMMEM/ATL::CComHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +81,7 @@ class CComHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** ATLComMem.h  
   
-##  <a name="a-nameallocatea--ccomheapallocate"></a><a name="allocate"></a>CComHeap::Allocate  
+##  <a name="allocate"></a>CComHeap::Allocate  
  Appelez cette méthode pour allouer un bloc de mémoire.  
   
 ```
@@ -97,7 +100,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implémenté à l’aide de [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727).  
   
-##  <a name="a-namefreea--ccomheapfree"></a><a name="free"></a>CComHeap::Free  
+##  <a name="free"></a>CComHeap::Free  
  Appelez cette méthode pour libérer un bloc de mémoire alloué par ce gestionnaire de mémoire.  
   
 ```
@@ -111,7 +114,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Remarques  
  Implémenté à l’aide de [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722).  
   
-##  <a name="a-namegetsizea--ccomheapgetsize"></a><a name="getsize"></a>CComHeap::GetSize  
+##  <a name="getsize"></a>CComHeap::GetSize  
  Appelez cette méthode pour obtenir la taille d’un bloc de mémoire alloué par ce gestionnaire de mémoire allouée.  
   
 ```
@@ -128,7 +131,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Notes  
  Implémenté à l’aide de [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226).  
   
-##  <a name="a-namereallocatea--ccomheapreallocate"></a><a name="reallocate"></a>CComHeap::Reallocate  
+##  <a name="reallocate"></a>CComHeap::Reallocate  
  Appelez cette méthode pour réallouer la mémoire allouée par ce gestionnaire de mémoire.  
   
 ```

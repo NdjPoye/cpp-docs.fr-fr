@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IDispEventImpl
+- ATLCOM/ATL::IDispEventImpl
+- ATLCOM/ATL::IDispEventImpl::IDispEventImpl
+- ATLCOM/ATL::IDispEventImpl::GetFuncInfoFromId
+- ATLCOM/ATL::IDispEventImpl::GetIDsOfNames
+- ATLCOM/ATL::IDispEventImpl::GetTypeInfo
+- ATLCOM/ATL::IDispEventImpl::GetTypeInfoCount
+- ATLCOM/ATL::IDispEventImpl::GetUserDefinedType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -135,7 +142,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="a-namegetfuncinfofromida--idispeventimplgetfuncinfofromid"></a><a name="getfuncinfofromid"></a>IDispEventImpl::GetFuncInfoFromId  
+##  <a name="getfuncinfofromid"></a>IDispEventImpl::GetFuncInfoFromId  
  Recherche l’index de la fonction de l’identificateur de dispatch spécifié.  
   
 ```
@@ -162,7 +169,7 @@ HRESULT GetFuncInfoFromId(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="a-namegetidsofnamesa--idispeventimplgetidsofnames"></a><a name="getidsofnames"></a>IDispEventImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>IDispEventImpl::GetIDsOfNames  
  Mappe un membre unique et un jeu facultatif de noms d’arguments avec un jeu correspondant d’entier DISPID, qui peut être utilisé dans les appels ultérieurs à [IDispatch::Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
   
 ```
@@ -177,7 +184,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>Notes  
  Consultez la page [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegettypeinfoa--idispeventimplgettypeinfo"></a><a name="gettypeinfo"></a>IDispEventImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>IDispEventImpl::GetTypeInfo  
  Récupère les informations de type pour un objet, qui peuvent être utilisées ensuite pour obtenir les informations de type d'une interface.  
   
 ```
@@ -189,7 +196,7 @@ STDMETHOD(GetTypeInfo)(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegettypeinfocounta--idispeventimplgettypeinfocount"></a><a name="gettypeinfocount"></a>IDispEventImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>IDispEventImpl::GetTypeInfoCount  
  Récupère le nombre d'interfaces d'informations de type fourni par un objet (0 ou 1).  
   
 ```
@@ -199,7 +206,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ### <a name="remarks"></a>Notes  
  Consultez la page [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetuserdefinedtypea--idispeventimplgetuserdefinedtype"></a><a name="getuserdefinedtype"></a>IDispEventImpl::GetUserDefinedType  
+##  <a name="getuserdefinedtype"></a>IDispEventImpl::GetUserDefinedType  
  Récupère le type de base d’un type défini par l’utilisateur.  
   
 ```
@@ -221,14 +228,14 @@ VARTYPE GetUserDefinedType(
 ### <a name="remarks"></a>Remarques  
  Consultez la page [ITypeInfo::GetRefTypeInfo a](http://msdn.microsoft.com/en-us/61d3b31d-6591-4e55-9e82-5246a168be00).  
   
-##  <a name="a-nameidispeventimpla--idispeventimplidispeventimpl"></a><a name="idispeventimpl"></a>IDispEventImpl::IDispEventImpl  
+##  <a name="idispeventimpl"></a>IDispEventImpl::IDispEventImpl  
  Constructeur. Stocke les valeurs des paramètres du modèle de classe `plibid`, `pdiid`, `wMajor`, et `wMinor`.  
   
 ```
 IDispEventImpl();
 ```  
   
-##  <a name="a-nametihclassa--idispeventimpltihclass"></a><a name="tihclass"></a>IDispEventImpl::tihclass  
+##  <a name="tihclass"></a>IDispEventImpl::tihclass  
  Ce typedef est une instance de la classe du paramètre de modèle `tihclass`.  
   
 ```

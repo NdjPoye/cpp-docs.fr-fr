@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlFileMappingBase
-- ATL::CAtlFileMappingBase
 - CAtlFileMappingBase
+- ATLFILE/ATL::CAtlFileMappingBase
+- ATLFILE/ATL::CAtlFileMappingBase::CAtlFileMappingBase
+- ATLFILE/ATL::CAtlFileMappingBase::CopyFrom
+- ATLFILE/ATL::CAtlFileMappingBase::GetData
+- ATLFILE/ATL::CAtlFileMappingBase::GetHandle
+- ATLFILE/ATL::CAtlFileMappingBase::GetMappingSize
+- ATLFILE/ATL::CAtlFileMappingBase::MapFile
+- ATLFILE/ATL::CAtlFileMappingBase::MapSharedMem
+- ATLFILE/ATL::CAtlFileMappingBase::OpenMapping
+- ATLFILE/ATL::CAtlFileMappingBase::Unmap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +97,7 @@ class CAtlFileMappingBase
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlfile.h  
   
-##  <a name="a-namecatlfilemappingbasea--catlfilemappingbasecatlfilemappingbase"></a><a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase  
+##  <a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase  
  Constructeur.  
   
 ```
@@ -107,7 +115,7 @@ CAtlFileMappingBase() throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#71;](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]  
   
-##  <a name="a-namedtora--catlfilemappingbasecatlfilemappingbase"></a><a name="dtor"></a>CAtlFileMappingBase :: ~ CAtlFileMappingBase  
+##  <a name="dtor"></a>CAtlFileMappingBase :: ~ CAtlFileMappingBase  
  Destructeur.  
   
 ```
@@ -117,7 +125,7 @@ CAtlFileMappingBase() throw();
 ### <a name="remarks"></a>Remarques  
  Libère toutes les ressources allouées par la classe et appelle le [CAtlFileMappingBase::Unmap](#unmap) (méthode).  
   
-##  <a name="a-namecopyfroma--catlfilemappingbasecopyfrom"></a><a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom  
+##  <a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom  
  Appelez cette méthode pour copier à partir d’un objet de mappage de fichier.  
   
 ```
@@ -131,7 +139,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `S_OK` sur la réussite ou une erreur `HRESULT` en cas d’échec.  
   
-##  <a name="a-namegetdataa--catlfilemappingbasegetdata"></a><a name="getdata"></a>CAtlFileMappingBase::GetData  
+##  <a name="getdata"></a>CAtlFileMappingBase::GetData  
  Appelez cette méthode pour obtenir les données à partir d’un objet de mappage de fichier.  
   
 ```
@@ -141,7 +149,7 @@ void* GetData() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers les données.  
   
-##  <a name="a-namegethandlea--catlfilemappingbasegethandle"></a><a name="gethandle"></a>CAtlFileMappingBase::GetHandle  
+##  <a name="gethandle"></a>CAtlFileMappingBase::GetHandle  
  Appelez cette méthode pour retourner un handle à l’objet de mappage de fichier.  
   
 ```
@@ -151,7 +159,7 @@ HANDLE GetHandle() throw ();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un handle vers l’objet de mappage de fichier.  
   
-##  <a name="a-namegetmappingsizea--catlfilemappingbasegetmappingsize"></a><a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize  
+##  <a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize  
  Appelez cette méthode pour obtenir la taille du mappage d’un objet de mappage de fichier.  
   
 ```
@@ -164,7 +172,7 @@ SIZE_T GetMappingSize() throw();
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
-##  <a name="a-namemapfilea--catlfilemappingbasemapfile"></a><a name="mapfile"></a>CAtlFileMappingBase::MapFile  
+##  <a name="mapfile"></a>CAtlFileMappingBase::MapFile  
  Appelez cette méthode pour ouvrir ou créer un objet de mappage de fichier pour le fichier spécifié.  
   
 ```
@@ -201,7 +209,7 @@ HRESULT MapFile(
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
-##  <a name="a-namemapsharedmema--catlfilemappingbasemapsharedmem"></a><a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem  
+##  <a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem  
  Appelez cette méthode pour créer un objet de mappage de fichier qui permet un accès total à tous les processus.  
   
 ```
@@ -239,7 +247,7 @@ HRESULT MapSharedMem(
 ### <a name="remarks"></a>Remarques  
  **MapShareMem** permet à un objet de mappage de fichier existant, créé par [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), pour être partagée entre plusieurs processus.  
   
-##  <a name="a-nameopenmappinga--catlfilemappingbaseopenmapping"></a><a name="openmapping"></a>CAtlFileMappingBase::OpenMapping  
+##  <a name="openmapping"></a>CAtlFileMappingBase::OpenMapping  
  Appelez cette méthode pour ouvrir un objet de mappage de fichier nommé pour le fichier spécifié.  
   
 ```
@@ -269,7 +277,7 @@ HRESULT OpenMapping(
 ### <a name="remarks"></a>Remarques  
  Dans les versions debug, une erreur d’assertion se produira si les paramètres d’entrée ne sont pas valides.  
   
-##  <a name="a-nameoperatoreqa--catlfilemappingbaseoperator-"></a><a name="operator_eq"></a>CAtlFileMappingBase::operator =  
+##  <a name="operator_eq"></a>CAtlFileMappingBase::operator =  
  Définit l’objet de mappage de fichier en cours à un autre objet de mappage de fichier.  
   
 ```
@@ -283,7 +291,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une référence à l’objet actuel.  
   
-##  <a name="a-nameunmapa--catlfilemappingbaseunmap"></a><a name="unmap"></a>CAtlFileMappingBase::Unmap  
+##  <a name="unmap"></a>CAtlFileMappingBase::Unmap  
  Appelez cette méthode pour annuler le mappage d’un objet de mappage de fichier.  
   
 ```

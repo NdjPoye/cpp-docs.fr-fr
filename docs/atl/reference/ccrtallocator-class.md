@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCRTAllocator
+- ATLCORE/ATL::CCRTAllocator
+- ATLCORE/ATL::CCRTAllocator::Allocate
+- ATLCORE/ATL::CCRTAllocator::Free
+- ATLCORE/ATL::CCRTAllocator::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -64,7 +68,7 @@ class ATL::CCRTAllocator
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcore.h  
   
-##  <a name="a-nameallocatea--ccrtallocatorallocate"></a><a name="allocate"></a>CCRTAllocator::Allocate  
+##  <a name="allocate"></a>CCRTAllocator::Allocate  
  Appelez cette fonction statique pour allouer de la mémoire.  
   
 ```
@@ -81,7 +85,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Notes  
  Alloue de la mémoire. Consultez la page [malloc](../../c-runtime-library/reference/malloc.md) pour plus de détails.  
   
-##  <a name="a-namefreea--ccrtallocatorfree"></a><a name="free"></a>CCRTAllocator::Free  
+##  <a name="free"></a>CCRTAllocator::Free  
  Appelez cette fonction pour libérer de la mémoire statique.  
   
 ```
@@ -95,7 +99,7 @@ static void Free(void* p) throw();
 ### <a name="remarks"></a>Remarques  
  Libère la mémoire allouée. Consultez la page [libre](../../c-runtime-library/reference/free.md) pour plus de détails.  
   
-##  <a name="a-namereallocatea--ccrtallocatorreallocate"></a><a name="reallocate"></a>CCRTAllocator::Reallocate  
+##  <a name="reallocate"></a>CCRTAllocator::Reallocate  
  Appelez cette fonction statique pour réallouer de la mémoire.  
   
 ```

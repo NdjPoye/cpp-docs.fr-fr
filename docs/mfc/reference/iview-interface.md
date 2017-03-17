@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IView
+- No header/IView
+- No header/IView::OnActivateView
+- No header/IView::OnInitialUpdate
+- No header/IView::OnUpdate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +75,7 @@ interface class IView
 ## <a name="requirements"></a>Spécifications  
  En-tête : les afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)  
 
-## <a name="a-nameonactivateviewa-iviewonactivateview"></a><a name="onactivateview"></a>IView::OnActivateView  
+## <a name="onactivateview"></a>IView::OnActivateView  
 Appelée par MFC lorsqu’une vue est activée ou désactivée.
 ```
 void OnActivateView(bool activate);
@@ -80,13 +84,13 @@ void OnActivateView(bool activate);
 `activate`  
 Indique si la vue est activée ou désactivée.  
 
-## <a name="a-nameoninitialupdatea-iviewoninitialupdate"></a><a name="oninitialupdate"></a>IView::OnInitialUpdate
+## <a name="oninitialupdate"></a>IView::OnInitialUpdate
 Appelée par l’infrastructure une fois que la vue est d’abord attachée au document, mais avant l’affichage initial.
 ```
 void OnInitialUpdate();
 ```
 
-## <a name="a-nameonupdatea-iviewonupdate"></a><a name="onupdate"></a>IView::OnUpdate 
+## <a name="onupdate"></a>IView::OnUpdate 
 Appelé par MFC lorsque document de la vue a été modifié.  
 ```
 void OnUpdate();

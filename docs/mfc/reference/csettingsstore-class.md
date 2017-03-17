@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore::CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore::Close
+- AFXSETTINGSSTORE/CSettingsStore::CreateKey
+- AFXSETTINGSSTORE/CSettingsStore::DeleteKey
+- AFXSETTINGSSTORE/CSettingsStore::DeleteValue
+- AFXSETTINGSSTORE/CSettingsStore::Open
+- AFXSETTINGSSTORE/CSettingsStore::Read
+- AFXSETTINGSSTORE/CSettingsStore::Write
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +93,7 @@ class CSettingsStore : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxsettingsstore.h  
   
-##  <a name="a-nameclosea--csettingsstoreclose"></a><a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>CSettingsStore::Close  
  Ferme la clé de Registre ouverte.  
   
 ```  
@@ -94,7 +103,7 @@ virtual void Close();
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode est appelée à partir du destructeur de la [CSettingsStore classe](../../mfc/reference/csettingsstore-class.md).  
   
-##  <a name="a-namecreatekeya--csettingsstorecreatekey"></a><a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>CSettingsStore::CreateKey  
  Ouvre une clé de Registre ou le crée s’il n’existe pas.  
   
 ```  
@@ -111,7 +120,7 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ### <a name="remarks"></a>Remarques  
  `CreateKey`utilise `m_hKey` comme racine de recherches de Registre. Il recherche `pszPath` en tant que sous-clé de `m_hKey`. Si la clé n’existe pas, `CreateKey` le crée. Sinon, il ouvre la clé. `CreateKey`définit ensuite `m_hKey` à la clé créée ou ouverte.  
   
-##  <a name="a-namecsettingsstorea--csettingsstorecsettingsstore"></a><a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
  Crée un objet `CSettngsStore`.  
   
 ```  
@@ -134,7 +143,7 @@ CSettingsStore(
   
  Le destructeur de `CSettingsStore` versions `m_hKey` automatiquement.  
   
-##  <a name="a-namedeletekeya--csettingsstoredeletekey"></a><a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
  Supprime une clé et tous ses enfants à partir du Registre.  
   
 ```  
@@ -158,7 +167,7 @@ virtual BOOL DeleteKey(
   
  Si le paramètre `bAdmin` est égal à zéro, `DeleteKey` recherche la clé à supprimer sous `HKEY_CURRENT_USER`. Si `bAdmin` est différent de zéro, `DeleteKey` recherche la clé à supprimer sous `HKEY_LOCAL_MACHINE`.  
   
-##  <a name="a-namedeletevaluea--csettingsstoredeletevalue"></a><a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
  Supprime une valeur à partir de `m_hKey`.  
   
 ```  
@@ -172,7 +181,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-##  <a name="a-nameopena--csettingsstoreopen"></a><a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>CSettingsStore::Open  
  Ouvre une clé de Registre.  
   
 ```  
@@ -189,7 +198,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>Notes  
  Une fois cette méthode ouvre correctement la clé spécifiée, il définit `m_hKey` vers le handle de cette clé.  
   
-##  <a name="a-namereada--csettingsstoreread"></a><a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>CSettingsStore::Read  
  Lit une valeur dans une clé de Registre.  
   
 ```  
@@ -319,7 +328,7 @@ virtual BOOL Read(
 ### <a name="remarks"></a>Notes  
  `Read`vérifie le `pszKey` en tant que sous-clé de `m_hKey`.  
   
-##  <a name="a-namewritea--csettingsstorewrite"></a><a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>CSettingsStore::Write  
  Écrit une valeur dans le Registre sous la clé ouverte.  
   
 ```  

@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CObject
+- AFX/CObject
+- AFX/CObject::CObject
+- AFX/CObject::AssertValid
+- AFX/CObject::Dump
+- AFX/CObject::GetRuntimeClass
+- AFX/CObject::IsKindOf
+- AFX/CObject::IsSerializable
+- AFX/CObject::Serialize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +112,7 @@ class AFX_NOVTABLE CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afx.h  
   
-##  <a name="a-nameassertvalida--cobjectassertvalid"></a><a name="assertvalid"></a>CObject::AssertValid  
+##  <a name="assertvalid"></a>CObject::AssertValid  
  Valide l’intégrité de cet objet.  
   
 ```  
@@ -127,7 +135,7 @@ virtual void AssertValid() const;
   
  Pour un autre exemple, consultez la page [AfxDoForAllObjects](diagnostic-services.md#afxdoforallobjects).  
   
-##  <a name="a-namecobjecta--cobjectcobject"></a><a name="cobject"></a>CObject::CObject  
+##  <a name="cobject"></a>CObject::CObject  
  Ces fonctions sont la norme `CObject` constructeurs.  
   
 ```  
@@ -151,7 +159,7 @@ CObject(const CObject& objectSrc);
   
  [!code-cpp[NVC_MFCCObjectSample n °&8;](../../mfc/codesnippet/cpp/cobject-class_2.cpp)]  
   
-##  <a name="a-namedumpa--cobjectdump"></a><a name="dump"></a>CObject::Dump  
+##  <a name="dump"></a>CObject::Dump  
  Vide le contenu de l’objet pour un [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objet.  
   
 ```  
@@ -181,7 +189,7 @@ virtual void Dump(CDumpContext& dc) const;
   
  [!code-cpp[NVC_MFCCObjectSample&#9;](../../mfc/codesnippet/cpp/cobject-class_3.cpp)]  
   
-##  <a name="a-namegetruntimeclassa--cobjectgetruntimeclass"></a><a name="getruntimeclass"></a>CObject::GetRuntimeClass  
+##  <a name="getruntimeclass"></a>CObject::GetRuntimeClass  
  Retourne le `CRuntimeClass` structure correspondant à cette classe de l’objet.  
   
 ```  
@@ -213,7 +221,7 @@ virtual CRuntimeClass* GetRuntimeClass() const;
   
  [!code-cpp[NVC_MFCCObjectSample&#10;](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]  
   
-##  <a name="a-nameiskindofa--cobjectiskindof"></a><a name="iskindof"></a>CObject::IsKindOf  
+##  <a name="iskindof"></a>CObject::IsKindOf  
  Teste la relation de cet objet dans une classe donnée.  
   
 ```  
@@ -237,7 +245,7 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
   
  [!code-cpp[NVC_MFCCObjectSample&#11;](../../mfc/codesnippet/cpp/cobject-class_5.cpp)]  
   
-##  <a name="a-nameisserializablea--cobjectisserializable"></a><a name="isserializable"></a>CObject::IsSerializable  
+##  <a name="isserializable"></a>CObject::IsSerializable  
  Teste si cet objet est éligible pour la sérialisation.  
   
 ```  
@@ -258,7 +266,7 @@ BOOL IsSerializable() const;
   
  [!code-cpp[NVC_MFCCObjectSample&#12;](../../mfc/codesnippet/cpp/cobject-class_6.cpp)]  
   
-##  <a name="a-nameoperatordeletea--cobjectoperator-delete"></a><a name="operator_delete"></a>Suppression de CObject::operator  
+##  <a name="operator_delete"></a>Suppression de CObject::operator  
  Pour la version de la bibliothèque, opérateur **supprimer** libère la mémoire allouée par l’opérateur **nouveau**.  
   
 ```  
@@ -294,7 +302,7 @@ void PASCAL operator delete(
   
  [!code-cpp[NVC_MFCCObjectSample&#15;](../../mfc/codesnippet/cpp/cobject-class_8.cpp)]  
   
-##  <a name="a-nameoperatornewa--cobjectoperator-new"></a><a name="operator_new"></a>Nouvelle CObject::operator  
+##  <a name="operator_new"></a>Nouvelle CObject::operator  
  Pour la version de la bibliothèque, opérateur **nouveau** effectue une allocation de mémoire optimale de façon similaire à `malloc`.  
   
 ```  
@@ -327,7 +335,7 @@ void* PASCAL operator new(
   
  [!code-cpp[NVC_MFCCObjectSample&#16;](../../mfc/codesnippet/cpp/cobject-class_9.h)]  
   
-##  <a name="a-nameserializea--cobjectserialize"></a><a name="serialize"></a>CObject::Serialize  
+##  <a name="serialize"></a>CObject::Serialize  
  Lit ou écrit cet objet dans une archive.  
   
 ```  

@@ -9,9 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CHeapPtr
 - CHeapPtr
-- ATL.CHeapPtr
+- ATLCORE/ATL::CHeapPtr
+- ATLCORE/ATL::CHeapPtr::CHeapPtr
+- ATLCORE/ATL::CHeapPtr::Allocate
+- ATLCORE/ATL::CHeapPtr::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +95,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcore.h  
   
-##  <a name="a-nameallocatea--cheapptrallocate"></a><a name="allocate"></a>CHeapPtr::Allocate  
+##  <a name="allocate"></a>CHeapPtr::Allocate  
  Appelez cette méthode pour allouer de la mémoire sur le tas pour stocker des objets.  
   
 ```
@@ -113,7 +115,7 @@ bool Allocate(size_t nElements = 1) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#77;](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]  
   
-##  <a name="a-namecheapptra--cheapptrcheapptr"></a><a name="cheapptr"></a>CHeapPtr::CHeapPtr  
+##  <a name="cheapptr"></a>CHeapPtr::CHeapPtr  
  Constructeur.  
   
 ```
@@ -132,7 +134,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#78;](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]  
   
-##  <a name="a-nameoperatoreqa--cheapptroperator-"></a><a name="operator_eq"></a>CHeapPtr::operator =  
+##  <a name="operator_eq"></a>CHeapPtr::operator =  
  Opérateur d'assignation.  
   
 ```
@@ -150,7 +152,7 @@ CHeapPtr<T, Allocator>& operator=(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#80;](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]  
   
-##  <a name="a-namereallocatea--cheapptrreallocate"></a><a name="reallocate"></a>CHeapPtr::Reallocate  
+##  <a name="reallocate"></a>CHeapPtr::Reallocate  
  Appelez cette méthode pour réallouer la mémoire sur le tas.  
   
 ```

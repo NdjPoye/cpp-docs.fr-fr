@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStdioFile
+- AFX/CStdioFile
+- AFX/CStdioFile::CStdioFile
+- AFX/CStdioFile::Open
+- AFX/CStdioFile::ReadString
+- AFX/CStdioFile::Seek
+- AFX/CStdioFile::WriteString
+- AFX/CStdioFile::m_pStream
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +101,7 @@ class CStdioFile : public CFile
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afx.h  
   
-##  <a name="a-namecstdiofilea--cstdiofilecstdiofile"></a><a name="cstdiofile"></a>CStdioFile::CStdioFile  
+##  <a name="cstdiofile"></a>CStdioFile::CStdioFile  
  Construit et initialise un objet `CStdioFile`.  
   
 ```  
@@ -143,7 +150,7 @@ CStdioFile(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCFiles&#37;](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
   
-##  <a name="a-namempstreama--cstdiofilempstream"></a><a name="m_pstream"></a>CStdioFile::m_pStream  
+##  <a name="m_pstream"></a>CStdioFile::m_pStream  
  Le `m_pStream` membre de données est le pointeur vers un fichier ouvert, tel que retourné par la fonction d’exécution C `fopen`.  
   
 ```  
@@ -153,7 +160,7 @@ FILE* m_pStream;
 ### <a name="remarks"></a>Remarques  
  Il est **NULL** si le fichier n’a jamais été ouvert ou a été fermé.  
   
-##  <a name="a-nameopena--cstdiofileopen"></a><a name="open"></a>CStdioFile::Open  
+##  <a name="open"></a>CStdioFile::Open  
  Surchargé. Ouvrez est conçu pour une utilisation avec la valeur par défaut `CStdioFile` constructeur.  
   
 ```  
@@ -188,7 +195,7 @@ virtual BOOL Open(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namereadstringa--cstdiofilereadstring"></a><a name="readstring"></a>CStdioFile::ReadString  
+##  <a name="readstring"></a>CStdioFile::ReadString  
  Lit les données de texte dans une mémoire tampon, jusqu'à une limite de `nMax`-1, utilisez des caractères à partir du fichier associé à le `CStdioFile` objet.  
   
 ```  
@@ -223,7 +230,7 @@ virtual BOOL ReadString(CString& rString);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCFiles&#38;](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
   
-##  <a name="a-nameseeka--cstdiofileseek"></a><a name="seek"></a>CStdioFile::Seek  
+##  <a name="seek"></a>CStdioFile::Seek  
  Repositionne le pointeur dans un fichier déjà ouvert.  
   
 ```  
@@ -260,7 +267,7 @@ virtual ULONGLONG Seek(
   
  [!code-cpp[NVC_MFCFiles n °&39;](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
   
-##  <a name="a-namewritestringa--cstdiofilewritestring"></a><a name="writestring"></a>CStdioFile::WriteString  
+##  <a name="writestring"></a>CStdioFile::WriteString  
  Écrit des données depuis une mémoire tampon dans le fichier associé à le `CStdioFile` objet.  
   
 ```  

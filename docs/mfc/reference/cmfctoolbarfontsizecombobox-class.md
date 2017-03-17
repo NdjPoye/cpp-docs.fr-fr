@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontSizeComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::GetTwipSize
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::RebuildFontSizes
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::SetTwipSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,14 +93,14 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxtoolbarfontcombobox.h  
   
-##  <a name="a-namecmfctoolbarfontsizecomboboxa--cmfctoolbarfontsizecomboboxcmfctoolbarfontsizecombobox"></a><a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
+##  <a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
  Construit un objet `CMFCToolBarFontSizeComboBox`.  
   
 ```  
 CMFCToolBarFontSizeComboBox();
 ```  
   
-##  <a name="a-namegettwipsizea--cmfctoolbarfontsizecomboboxgettwipsize"></a><a name="gettwipsize"></a>CMFCToolBarFontSizeComboBox::GetTwipSize  
+##  <a name="gettwipsize"></a>CMFCToolBarFontSizeComboBox::GetTwipSize  
  Récupère la taille de police, en twips, à partir de la zone de texte d’une zone de liste déroulante de taille de police.  
   
 ```  
@@ -105,7 +110,7 @@ int GetTwipSize() const;
 ### <a name="return-value"></a>Valeur de retour  
  Si la valeur de retour est positive, il est la taille de police en twips. Il est -1 si la zone de texte de la zone de liste déroulante est vide. Il est -2 si une erreur se produit.  
   
-##  <a name="a-namerebuildfontsizesa--cmfctoolbarfontsizecomboboxrebuildfontsizes"></a><a name="rebuildfontsizes"></a>CMFCToolBarFontSizeComboBox::RebuildFontSizes  
+##  <a name="rebuildfontsizes"></a>CMFCToolBarFontSizeComboBox::RebuildFontSizes  
  Remplit une zone de liste déroulante de taille de police avec toutes les tailles valides de la police donnée.  
   
 ```  
@@ -119,7 +124,7 @@ void RebuildFontSizes(const CString& strFontName);
 ### <a name="remarks"></a>Notes  
  Appelez cette fonction lorsque vous souhaitez synchroniser entre la sélection dans une zone de liste déroulante de police et une zone de liste déroulante taille de police, comme un [CMFCToolBarFontComboBox classe](../../mfc/reference/cmfctoolbarfontcombobox-class.md).  
   
-##  <a name="a-namesettwipsizea--cmfctoolbarfontsizecomboboxsettwipsize"></a><a name="settwipsize"></a>CMFCToolBarFontSizeComboBox::SetTwipSize  
+##  <a name="settwipsize"></a>CMFCToolBarFontSizeComboBox::SetTwipSize  
  Arrondit spécifié une taille (en twips) de la taille la plus proche des points, puis définit la taille sélectionnée dans la zone de liste déroulante valeur.  
   
 ```  

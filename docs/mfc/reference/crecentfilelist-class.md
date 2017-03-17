@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRecentFileList
+- AFXADV/CRecentFileList
+- AFXADV/CRecentFileList::CRecentFileList
+- AFXADV/CRecentFileList::Add
+- AFXADV/CRecentFileList::GetDisplayName
+- AFXADV/CRecentFileList::GetSize
+- AFXADV/CRecentFileList::ReadList
+- AFXADV/CRecentFileList::Remove
+- AFXADV/CRecentFileList::UpdateMenu
+- AFXADV/CRecentFileList::WriteList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +98,7 @@ class CRecentFileList
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxadv.h  
   
-##  <a name="a-nameadda--crecentfilelistadd"></a><a name="add"></a>CRecentFileList::Add  
+##  <a name="add"></a>CRecentFileList::Add  
  Ajoute un fichier à la liste des fichiers récemment utilisée (MRU).  
   
 ```  
@@ -135,7 +144,7 @@ void Add(
 ### <a name="remarks"></a>Notes  
  Le nom de fichier est ajouté en haut de la liste des derniers fichiers utilisés. Si le nom de fichier existe déjà dans la liste des derniers fichiers utilisés, il sera déplacé vers le haut.  
   
-##  <a name="a-namecrecentfilelista--crecentfilelistcrecentfilelist"></a><a name="crecentfilelist"></a>CRecentFileList::CRecentFileList  
+##  <a name="crecentfilelist"></a>CRecentFileList::CRecentFileList  
  Construit un objet `CRecentFileList`.  
   
 ```  
@@ -166,7 +175,7 @@ CRecentFileList(
 ### <a name="remarks"></a>Remarques  
  La chaîne de format vers lequel pointe `lpszEntryFormat` doit contenir « %d », qui sera utilisé pour la substitution de l’index de chaque élément des derniers fichiers utilisés. Par exemple, si la chaîne de format est `"file%d"` alors les entrées seront nommées `file0`, `file1`, et ainsi de suite.  
   
-##  <a name="a-namegetdisplaynamea--crecentfilelistgetdisplayname"></a><a name="getdisplayname"></a>CRecentFileList::GetDisplayName  
+##  <a name="getdisplayname"></a>CRecentFileList::GetDisplayName  
  Obtient un nom d’affichage d’un fichier dans la liste des fichiers MRU, pour une utilisation dans l’affichage du menu de la liste des derniers fichiers utilisés.  
   
 ```  
@@ -200,7 +209,7 @@ virtual BOOL GetDisplayName(
 ### <a name="remarks"></a>Remarques  
  Si le fichier se trouve dans le répertoire en cours, la fonction quitte le répertoire désactive l’affichage. Si le nom de fichier est trop long, le répertoire et l’extension sont supprimés. Si le nom de fichier est toujours trop long, le nom d’affichage est défini sur une chaîne vide, sauf si `bAtLeastName` est différente de zéro.  
   
-##  <a name="a-namegetsizea--crecentfilelistgetsize"></a><a name="getsize"></a>CRecentFileList::GetSize  
+##  <a name="getsize"></a>CRecentFileList::GetSize  
  Récupère le nombre de fichiers dans la liste des derniers fichiers utilisés.  
   
 ```  
@@ -210,7 +219,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de fichiers en cours utilisé récemment la liste (MRU).  
   
-##  <a name="a-nameoperatorata--crecentfilelistoperator--"></a><a name="operator_at"></a>[] CRecentFileList::operator  
+##  <a name="operator_at"></a>[] CRecentFileList::operator  
  L’indice surchargé ( `[]`) opérateur retourne une seule `CString` spécifié par l’index de base zéro dans `nIndex`.  
   
 ```  
@@ -221,14 +230,14 @@ CString& operator[ ](int nindex);
  `nIndex`  
  Index de base zéro d’un `CString` dans un ensemble de `CString`s.  
   
-##  <a name="a-namereadlista--crecentfilelistreadlist"></a><a name="readlist"></a>CRecentFileList::ReadList  
+##  <a name="readlist"></a>CRecentFileList::ReadList  
  Lit le plus récemment utilisé la liste (MRU) à partir du Registre ou l’application. Fichier INI.  
   
 ```  
 virtual void ReadList();
 ```  
   
-##  <a name="a-nameremovea--crecentfilelistremove"></a><a name="remove"></a>CRecentFileList::Remove  
+##  <a name="remove"></a>CRecentFileList::Remove  
  Supprime un fichier dans la liste des derniers fichiers utilisés.  
   
 ```  
@@ -239,7 +248,7 @@ virtual void Remove(int nIndex);
  `nIndex`  
  Index de base zéro du fichier à supprimer de la liste des fichiers récemment utilisée (MRU).  
   
-##  <a name="a-nameupdatemenua--crecentfilelistupdatemenu"></a><a name="updatemenu"></a>CRecentFileList::UpdateMenu  
+##  <a name="updatemenu"></a>CRecentFileList::UpdateMenu  
  Met à jour l’affichage du menu de la liste des fichiers des derniers fichiers utilisés.  
   
 ```  
@@ -250,7 +259,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
  `pCmdUI`  
  Un pointeur vers le [CCmdUI](../../mfc/reference/ccmdui-class.md) objet pour le menu de liste des derniers fichiers utilisé (MRU) fichier.  
   
-##  <a name="a-namewritelista--crecentfilelistwritelist"></a><a name="writelist"></a>CRecentFileList::WriteList  
+##  <a name="writelist"></a>CRecentFileList::WriteList  
  Écrit le plus récemment (MRU) liste des fichiers utilisés dans le Registre ou l’application. Fichier INI.  
   
 ```  

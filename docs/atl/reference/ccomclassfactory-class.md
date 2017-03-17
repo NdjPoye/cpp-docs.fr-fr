@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComClassFactory
 - CComClassFactory
-- ATL::CComClassFactory
+- ATLCOM/ATL::CComClassFactory
+- ATLCOM/ATL::CComClassFactory::CreateInstance
+- ATLCOM/ATL::CComClassFactory::LockServer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class CComClassFactory
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomclassfactorycreateinstance"></a><a name="createinstance"></a>CComClassFactory::CreateInstance  
+##  <a name="createinstance"></a>CComClassFactory::CreateInstance  
  Crée un objet du CLSID spécifié et récupère un pointeur d’interface vers cet objet.  
   
 ```
@@ -101,7 +102,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="a-namelockservera--ccomclassfactorylockserver"></a><a name="lockserver"></a>CComClassFactory::LockServer  
+##  <a name="lockserver"></a>CComClassFactory::LockServer  
  Incrémente et décrémente le module nombre de verrous en appelant **_Module::Lock** et **_Module::Unlock**, respectivement.  
   
 ```

@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: 
+dev_langs:
+- C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
 caps.latest.revision: 9
 author: mikeblome
@@ -24,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|  
 |[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==   
+##  <a name="operator_eq_eq"></a>  operator==   
  Détermine si les arguments spécifiés sont égaux.  
   
 ```  
@@ -50,7 +53,7 @@ bool operator== (
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si les tuples sont identiques ; dans le cas contraire, `false`.  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=   
+##  <a name="operator_neq"></a>  operator!=   
  Détermine si les arguments spécifiés ne sont pas égales.  
   
 ```  
@@ -76,7 +79,7 @@ bool operator!= (
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si les tuples ne sont pas égales ; dans le cas contraire, `false`.  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>  operator+   
+##  <a name="operator_add"></a>  operator+   
 
  Calcule la somme de component-wise des arguments spécifiés.  
   
@@ -121,7 +124,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="return-value"></a>Valeur de retour  
  Component-wise somme des arguments spécifiés.  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>  operator-   
+##  <a name="operator-"></a>  operator-   
 
  Calcule la différence component-wise entre les arguments spécifiés.  
   
@@ -166,7 +169,7 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="return-value"></a>Valeur de retour  
  La différence component-wise entre les arguments spécifiés.  
   
-##  <a name="a-nameoperatorstara--operator"></a><a name="operator_star"></a>  operator*   
+##  <a name="operator_star"></a>  operator*   
 
  Calcule le produit component-wise des arguments spécifiés.  
   
@@ -203,7 +206,7 @@ _Tuple_type<_Rank>   operator*(
  Le produit component-wise des arguments spécifiés.  
   
 
-##  <a name="a-nameoperatordiva--operator"></a><a name="operator_div"></a>  operator/   
+##  <a name="operator_div"></a>  operator/   
  Calcule le quotient component-wise des arguments spécifiés.  
   
 ```  
@@ -238,7 +241,7 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="return-value"></a>Valeur de retour  
  Quotient component-wise des arguments spécifiés.  
   
-##  <a name="a-nameoperatormoda--operator"></a><a name="operator_mod"></a>  operator%   
+##  <a name="operator_mod"></a>  operator%   
 
  Calcule le modulo du premier argument spécifié par le deuxième argument spécifié.  
   

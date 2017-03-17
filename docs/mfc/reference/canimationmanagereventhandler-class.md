@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationManagerEventHandler
 - CAnimationManagerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::CAnimationManagerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::CreateInstance
+- AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::OnManagerStatusChanged
+- AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::SetAnimationController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +82,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="a-namecanimationmanagereventhandlera--canimationmanagereventhandlercanimationmanagereventhandler"></a><a name="canimationmanagereventhandler"></a>CAnimationManagerEventHandler::CAnimationManagerEventHandler  
+##  <a name="canimationmanagereventhandler"></a>CAnimationManagerEventHandler::CAnimationManagerEventHandler  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
  Construit un objet CAnimationManagerEventHandler.  
@@ -87,7 +91,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 CAnimationManagerEventHandler();
 ```  
   
-##  <a name="a-namecreateinstancea--canimationmanagereventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationManagerEventHandler::CreateInstance  
+##  <a name="createinstance"></a>CAnimationManagerEventHandler::CreateInstance  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
  Crée une instance de l’objet CAnimationManagerEventHandler.  
@@ -108,7 +112,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
   
-##  <a name="a-nameonmanagerstatuschangeda--canimationmanagereventhandleronmanagerstatuschanged"></a><a name="onmanagerstatuschanged"></a>CAnimationManagerEventHandler::OnManagerStatusChanged  
+##  <a name="onmanagerstatuschanged"></a>CAnimationManagerEventHandler::OnManagerStatusChanged  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
  Appelée lorsque l’état du Gestionnaire d’animations a changé.  
@@ -129,7 +133,7 @@ IFACEMETHOD(OnManagerStatusChanged)(
 ### <a name="return-value"></a>Valeur de retour  
  Implémentation actuelle retourne toujours S_OK ;  
   
-##  <a name="a-namesetanimationcontrollera--canimationmanagereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationManagerEventHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>CAnimationManagerEventHandler::SetAnimationController  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
  Stocke un pointeur vers le contrôleur de l’animation pour acheminer les événements.  

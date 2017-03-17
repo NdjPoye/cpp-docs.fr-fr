@@ -9,11 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComCritSecLock
-- ATL.CComCritSecLock<TLock>
-- ATL::CComCritSecLock<TLock>
-- ATL.CComCritSecLock
 - CComCritSecLock
+- ATLBASE/ATL::CComCritSecLock
+- ATLBASE/ATL::CComCritSecLock::CComCritSecLock
+- ATLBASE/ATL::CComCritSecLock::Lock
+- ATLBASE/ATL::CComCritSecLock::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +78,7 @@ template<class TLock> class CComCritSecLock
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
   
-##  <a name="a-namectora--ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock  
+##  <a name="ctor"></a>CComCritSecLock::CComCritSecLock  
  Constructeur.  
   
 ```
@@ -95,7 +95,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>Remarques  
  Initialise l’objet de section critique.  
   
-##  <a name="a-namedtora--ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock :: ~ CComCritSecLock  
+##  <a name="dtor"></a>CComCritSecLock :: ~ CComCritSecLock  
  Destructeur.  
   
 ```
@@ -105,7 +105,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>Remarques  
  Déverrouille l’objet de section critique.  
   
-##  <a name="a-namelocka--ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock::Lock  
+##  <a name="lock"></a>CComCritSecLock::Lock  
  Appelez cette méthode pour verrouiller l’objet de section critique.  
   
 ```
@@ -118,7 +118,7 @@ HRESULT Lock() throw();
 ### <a name="remarks"></a>Notes  
  Si l’objet est déjà verrouillée, une erreur d’assertion se produit dans les versions debug.  
   
-##  <a name="a-nameunlocka--ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock::Unlock  
+##  <a name="unlock"></a>CComCritSecLock::Unlock  
  Appelez cette méthode pour déverrouiller l’objet de section critique.  
   
 ```

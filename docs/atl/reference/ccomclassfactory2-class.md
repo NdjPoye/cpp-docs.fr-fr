@@ -9,11 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComClassFactory2<license>
 - CComClassFactory2
-- ATL.CComClassFactory2<license>
-- ATL::CComClassFactory2
-- ATL.CComClassFactory2
+- ATLCOM/ATL::CComClassFactory2
+- ATLCOM/ATL::CComClassFactory2::CreateInstance
+- ATLCOM/ATL::CComClassFactory2::CreateInstanceLic
+- ATLCOM/ATL::CComClassFactory2::GetLicInfo
+- ATLCOM/ATL::CComClassFactory2::LockServer
+- ATLCOM/ATL::CComClassFactory2::RequestLicKey
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +106,7 @@ class CComClassFactory2 : public IClassFactory2,
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomclassfactory2createinstance"></a><a name="createinstance"></a>CComClassFactory2::CreateInstance  
+##  <a name="createinstance"></a>CComClassFactory2::CreateInstance  
  Crée un objet du CLSID spécifié et récupère un pointeur d’interface vers cet objet.  
   
 ```
@@ -127,7 +129,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="remarks"></a>Notes  
  Nécessite que l’ordinateur pour être entièrement sous licence. Si une licence de l’ordinateur complet n’existe pas, appelez [CreateInstanceLic](#createinstancelic).  
   
-##  <a name="a-namecreateinstancelica--ccomclassfactory2createinstancelic"></a><a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
+##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
  Semblable à [CreateInstance](#createinstance), sauf que `CreateInstanceLic` requiert une clé de licence.  
   
 ```
@@ -162,7 +164,7 @@ STDMETHOD(CreateInstanceLic)(
 ### <a name="remarks"></a>Notes  
  Vous pouvez obtenir une clé de licence à l’aide [RequestLicKey](#requestlickey). Pour créer un objet sur un ordinateur sans licence, vous devez appeler `CreateInstanceLic`.  
   
-##  <a name="a-namegetlicinfoa--ccomclassfactory2getlicinfo"></a><a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
+##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
  Remplit un [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) structure avec des informations qui décrivent la fabrique de classe de licences de capacités.  
   
 ```
@@ -179,7 +181,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 ### <a name="remarks"></a>Remarques  
  Le `fRuntimeKeyAvail` membre de cette structure indique si, étant donné une clé de licence, la fabrique de classe permet aux objets d’être créé sur un ordinateur sans licence. Le *fLicVerified* membre indique l’existence d’une licence de l’ordinateur complet.  
   
-##  <a name="a-namelockservera--ccomclassfactory2lockserver"></a><a name="lockserver"></a>CComClassFactory2::LockServer  
+##  <a name="lockserver"></a>CComClassFactory2::LockServer  
  Incrémente et décrémente le module nombre de verrous en appelant **_Module::Lock** et **_Module::Unlock**, respectivement.  
   
 ```
@@ -198,7 +200,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
  L’appel `LockServer` permet à un client à maintenir une fabrique de classe afin que plusieurs objets peuvent être rapidement créés.  
   
-##  <a name="a-namerequestlickeya--ccomclassfactory2requestlickey"></a><a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
+##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
  Crée et retourne une clé de licence, à condition que la `fRuntimeKeyAvail` membre de la [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) structure est **TRUE**.  
   
 ```

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleChangeIconDialog
+- AFXODLGS/COleChangeIconDialog
+- AFXODLGS/COleChangeIconDialog::COleChangeIconDialog
+- AFXODLGS/COleChangeIconDialog::DoChangeIcon
+- AFXODLGS/COleChangeIconDialog::DoModal
+- AFXODLGS/COleChangeIconDialog::GetIconicMetafile
+- AFXODLGS/COleChangeIconDialog::m_ci
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +105,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxodlgs.h  
   
-##  <a name="a-namecolechangeicondialoga--colechangeicondialogcolechangeicondialog"></a><a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
+##  <a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
  Cette fonction crée uniquement une `COleChangeIconDialog` objet.  
   
 ```  
@@ -134,7 +140,7 @@ explicit COleChangeIconDialog(
   
  Pour plus d’informations, consultez la [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) de la structure dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedochangeicona--colechangeicondialogdochangeicon"></a><a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
+##  <a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
  Appelez cette fonction pour modifier l’icône qui représente l’élément à celui sélectionné dans la boîte de dialogue après [DoModal](#domodal) retourne **IDOK**.  
   
 ```  
@@ -148,7 +154,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la modification aboutit ; sinon 0.  
   
-##  <a name="a-namedomodala--colechangeicondialogdomodal"></a><a name="domodal"></a>COleChangeIconDialog::DoModal  
+##  <a name="domodal"></a>COleChangeIconDialog::DoModal  
  Appelez cette fonction pour afficher la boîte de dialogue OLE changer d’icône.  
   
 ```  
@@ -169,7 +175,7 @@ virtual INT_PTR DoModal();
   
  Si `DoModal` retourne **IDOK**, vous pouvez appeler des fonctions pour récupérer les paramètres ou les informations qui a été entrées par l’utilisateur dans la boîte de dialogue autres membres.  
   
-##  <a name="a-namegeticonicmetafilea--colechangeicondialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
  Appelez cette fonction pour obtenir un handle de métafichier qui contient l’aspect de l’élément sélectionné sous forme d’icône.  
   
 ```  
@@ -179,7 +185,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le handle du métafichier contenant l’aspect sous forme d’icône de l’icône Nouveau, si la boîte de dialogue a été fermée en choisissant **OK**; sinon, l’icône telle qu’elle était avant l’affichage de la boîte de dialogue.  
   
-##  <a name="a-namemcia--colechangeicondialogmci"></a><a name="m_ci"></a>COleChangeIconDialog::m_ci  
+##  <a name="m_ci"></a>COleChangeIconDialog::m_ci  
  Structure de type **OLEUICHANGEICON** utilisé pour contrôler le comportement de la boîte de dialogue Changer d’icône.  
   
 ```  

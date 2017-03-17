@@ -9,11 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IServiceProviderImpl<T>
-- ATL.IServiceProviderImpl<T>
-- ATL.IServiceProviderImpl
-- ATL::IServiceProviderImpl
 - IServiceProviderImpl
+- ATLCOM/ATL::IServiceProviderImpl
+- ATLCOM/ATL::IServiceProviderImpl::QueryService
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +81,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="a-namequeryservicea--iserviceproviderimplqueryservice"></a><a name="queryservice"></a>Méthode IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>Méthode IServiceProviderImpl::QueryService  
  Crée ou accède au service spécifié et retourne un pointeur d’interface pour l’interface spécifiée pour le service.  
   
 ```

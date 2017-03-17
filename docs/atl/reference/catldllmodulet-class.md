@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlDllModuleT
-- ATL::CAtlDllModuleT<T>
-- ATL::CAtlDllModuleT
-- ATL.CAtlDllModuleT<T>
 - CAtlDllModuleT
+- ATLBASE/ATL::CAtlDllModuleT
+- ATLBASE/ATL::CAtlDllModuleT::CAtlDllModuleT
+- ATLBASE/ATL::CAtlDllModuleT::DllCanUnloadNow
+- ATLBASE/ATL::CAtlDllModuleT::DllGetClassObject
+- ATLBASE/ATL::CAtlDllModuleT::DllMain
+- ATLBASE/ATL::CAtlDllModuleT::DllRegisterServer
+- ATLBASE/ATL::CAtlDllModuleT::DllUnregisterServer
+- ATLBASE/ATL::CAtlDllModuleT::GetClassObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,21 +99,21 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
   
-##  <a name="a-namecatldllmoduleta--catldllmoduletcatldllmodulet"></a><a name="catldllmodulet"></a>CAtlDllModuleT::CAtlDllModuleT  
+##  <a name="catldllmodulet"></a>CAtlDllModuleT::CAtlDllModuleT  
  Constructeur.  
   
 ```
 CAtlDllModuleT() throw();
 ```  
   
-##  <a name="a-namedtora--catldllmoduletcatldllmodulet"></a><a name="dtor"></a>CAtlDllModuleT :: ~ CAtlDllModuleT  
+##  <a name="dtor"></a>CAtlDllModuleT :: ~ CAtlDllModuleT  
  Destructeur.  
   
 ```
 ~CAtlDllModuleT() throw();
 ```  
   
-##  <a name="a-namedllcanunloadnowa--catldllmoduletdllcanunloadnow"></a><a name="dllcanunloadnow"></a>CAtlDllModuleT::DllCanUnloadNow  
+##  <a name="dllcanunloadnow"></a>CAtlDllModuleT::DllCanUnloadNow  
  Teste si la DLL peut être déchargée.  
   
 ```
@@ -119,7 +123,7 @@ HRESULT DllCanUnloadNow() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK si la DLL peut être déchargée ou S_FALSE si elle ne peut pas.  
   
-##  <a name="a-namedllgetclassobjecta--catldllmoduletdllgetclassobject"></a><a name="dllgetclassobject"></a>CAtlDllModuleT::DllGetClassObject  
+##  <a name="dllgetclassobject"></a>CAtlDllModuleT::DllGetClassObject  
  Retourne la fabrique de classe.  
   
 ```
@@ -142,7 +146,7 @@ HRESULT DllGetClassObject(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-##  <a name="a-namedllmaina--catldllmoduletdllmain"></a><a name="dllmain"></a>CAtlDllModuleT::DllMain  
+##  <a name="dllmain"></a>CAtlDllModuleT::DllMain  
  Le point d’entrée facultative dans une bibliothèque de liens dynamiques (DLL).  
   
 ```
@@ -162,7 +166,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 ### <a name="remarks"></a>Remarques  
  La désactivation DLL_THREAD_ATTACH et DLL_THREAD_DETACH d’appels de notification peuvent être une optimisation utile pour les applications multithread qui ont de nombreuses DLL, qui souvent de créer et de supprimer des threads, et dont les DLL n’est pas nécessaire de ces notifications au niveau du thread d’attachement/détachement.  
   
-##  <a name="a-namedllregisterservera--catldllmoduletdllregisterserver"></a><a name="dllregisterserver"></a>CAtlDllModuleT::DllRegisterServer  
+##  <a name="dllregisterserver"></a>CAtlDllModuleT::DllRegisterServer  
  Ajoute des entrées au Registre du système pour les objets dans la DLL.  
   
 ```
@@ -176,7 +180,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-##  <a name="a-namedllunregisterservera--catldllmoduletdllunregisterserver"></a><a name="dllunregisterserver"></a>CAtlDllModuleT::DllUnregisterServer  
+##  <a name="dllunregisterserver"></a>CAtlDllModuleT::DllUnregisterServer  
  Supprime les entrées dans le Registre système pour les objets dans la DLL.  
   
 ```
@@ -190,7 +194,7 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-##  <a name="a-namegetclassobjecta--catldllmoduletgetclassobject"></a><a name="getclassobject"></a>CAtlDllModuleT::GetClassObject  
+##  <a name="getclassobject"></a>CAtlDllModuleT::GetClassObject  
  Crée un objet du CLSID spécifié.  
   
 ```

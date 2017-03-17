@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMultiPageDHtmlDialog
+- AFXDHTML/CMultiPageDHtmlDialog
+- AFXDHTML/CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +97,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdhtml.h  
   
-##  <a name="a-namecmultipagedhtmldialoga--cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
+##  <a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
  Construit un objet de boîte de dialogue multipage (de type Assistant) DHTML.  
   
 ```  
@@ -129,7 +131,7 @@ CMultiPageDHtmlDialog();
  `nHtmlResID`  
  Contient le numéro d’ID d’une ressource HTML.  
   
-##  <a name="a-namedtorcmultipagedhtmldialoga--cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog :: ~ CMultiPageDHtmlDialog  
+##  <a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog :: ~ CMultiPageDHtmlDialog  
  Détruit un objet de boîte de dialogue multipage DHTML.  
   
 ```  

@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDataPathProperty
+- AFXCTL/CDataPathProperty
+- AFXCTL/CDataPathProperty::CDataPathProperty
+- AFXCTL/CDataPathProperty::GetControl
+- AFXCTL/CDataPathProperty::GetPath
+- AFXCTL/CDataPathProperty::Open
+- AFXCTL/CDataPathProperty::ResetData
+- AFXCTL/CDataPathProperty::SetControl
+- AFXCTL/CDataPathProperty::SetPath
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +105,7 @@ class CDataPathProperty : public CAsyncMonikerFile
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxctl.h  
   
-##  <a name="a-namecdatapathpropertya--cdatapathpropertycdatapathproperty"></a><a name="cdatapathproperty"></a>CDataPathProperty::CDataPathProperty  
+##  <a name="cdatapathproperty"></a>CDataPathProperty::CDataPathProperty  
  Construit un objet `CDataPathProperty`.  
   
 ```  
@@ -115,7 +123,7 @@ CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
 ### <a name="remarks"></a>Remarques  
  Le `COleControl` objet pointé par `pControl` est utilisé par **Open** et récupéré par les classes dérivées. Si `pControl` est **NULL**, le contrôle utilisé avec **Open** doit être défini avec `SetControl`. Si `lpszPath` est **NULL**, vous pouvez transmettre le chemin d’accès via **Open** ou définissez-le avec `SetPath`.  
   
-##  <a name="a-namegetcontrola--cdatapathpropertygetcontrol"></a><a name="getcontrol"></a>CDataPathProperty::GetControl  
+##  <a name="getcontrol"></a>CDataPathProperty::GetControl  
  Appelez cette fonction membre pour récupérer le `COleControl` objet associé à le `CDataPathProperty` objet.  
   
 ```  
@@ -125,7 +133,7 @@ COleControl* GetControl();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un pointeur vers le contrôle OLE associé le `CDataPathProperty` objet. **NULL** si pas de contrôle est associé.  
   
-##  <a name="a-namegetpatha--cdatapathpropertygetpath"></a><a name="getpath"></a>CDataPathProperty::GetPath  
+##  <a name="getpath"></a>CDataPathProperty::GetPath  
  Appelez cette fonction membre pour récupérer le chemin d’accès, définie lorsque le `CDataPathProperty` objet a été construit, ou spécifié dans **Open**, ou spécifié dans un appel précédent à la `SetPath` fonction membre.  
   
 ```  
@@ -135,7 +143,7 @@ CString GetPath() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le chemin d’accès à la propriété proprement dite. Peut être vide si aucun chemin d’accès n’a été spécifié.  
   
-##  <a name="a-nameopena--cdatapathpropertyopen"></a><a name="open"></a>CDataPathProperty::Open  
+##  <a name="open"></a>CDataPathProperty::Open  
  Appelez cette fonction membre pour lancer le chargement de la propriété asynchrone du contrôle associé.  
   
 ```  
@@ -179,7 +187,7 @@ virtual BOOL Open(CFileException* pError = NULL);
   
  Toutes les surcharges de [CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open) sont également disponibles à partir de `CDataPathProperty`.  
   
-##  <a name="a-nameresetdataa--cdatapathpropertyresetdata"></a><a name="resetdata"></a>CDataPathProperty::ResetData  
+##  <a name="resetdata"></a>CDataPathProperty::ResetData  
  Appelez cette fonction pour obtenir `CAsyncMonikerFile::OnDataAvailable` pour notifier au conteneur que les propriétés de contrôle ont été modifiés, et toutes les informations chargées de façon asynchrone ne sont plus utiles.  
   
 ```  
@@ -189,7 +197,7 @@ virtual void ResetData();
 ### <a name="remarks"></a>Notes  
  Ouverture doit être redémarré. Classes dérivées peuvent substituer cette fonction pour différentes valeurs par défaut.  
   
-##  <a name="a-namesetcontrola--cdatapathpropertysetcontrol"></a><a name="setcontrol"></a>CDataPathProperty::SetControl  
+##  <a name="setcontrol"></a>CDataPathProperty::SetControl  
  Appelez cette fonction membre pour associer un contrôle OLE asynchrone avec le `CDataPathProperty` objet.  
   
 ```  
@@ -200,7 +208,7 @@ void SetControl(COleControl* pControl);
  `pControl`  
  Pointeur vers le contrôle OLE asynchrone à associer à la propriété.  
   
-##  <a name="a-namesetpatha--cdatapathpropertysetpath"></a><a name="setpath"></a>CDataPathProperty::SetPath  
+##  <a name="setpath"></a>CDataPathProperty::SetPath  
  Appelez cette fonction membre pour définir le chemin d’accès de la propriété.  
   
 ```  

@@ -9,8 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DRectF
 - CD2DRectF
+- AFXRENDERTARGET/CD2DRectF
+- AFXRENDERTARGET/CD2DRectF::CD2DRectF
+- AFXRENDERTARGET/CD2DRectF::IsNull
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +79,7 @@ class CD2DRectF : public D2D1_RECT_F;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxrendertarget.h  
   
-##  <a name="a-namecd2drectfa--cd2drectfcd2drectf"></a><a name="cd2drectf"></a>CD2DRectF::CD2DRectF  
+##  <a name="cd2drectf"></a>CD2DRectF::CD2DRectF  
  Construit un objet CD2DRectF à partir de l’objet CRect.  
   
 ```  
@@ -109,7 +111,7 @@ CD2DRectF(
  `fBottom`  
  Coordonnée inférieure source  
   
-##  <a name="a-nameisnulla--cd2drectfisnull"></a><a name="isnull"></a>CD2DRectF::IsNull  
+##  <a name="isnull"></a>CD2DRectF::IsNull  
  Retourne une valeur booléenne qui indique si une expression ne contient aucune donnée valide (Null).  
   
 ```  
@@ -119,7 +121,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si ce rectangle en haut, gauche, inférieure et valeurs sont toujours égaux à 0 ; Sinon, FALSE.  
   
-##  <a name="a-nameoperatorcrecta--cd2drectfoperator-crect"></a><a name="operator_crect"></a>CD2DRectF::operator CRect  
+##  <a name="operator_crect"></a>CD2DRectF::operator CRect  
  Convertit CD2DRectF en objet CRect.  
   
 ```  

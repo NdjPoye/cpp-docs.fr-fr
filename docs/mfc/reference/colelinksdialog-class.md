@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleLinksDialog
+- AFXODLGS/COleLinksDialog
+- AFXODLGS/COleLinksDialog::COleLinksDialog
+- AFXODLGS/COleLinksDialog::DoModal
+- AFXODLGS/COleLinksDialog::m_el
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +103,7 @@ class COleLinksDialog : public COleDialog
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxodlgs.h  
   
-##  <a name="a-namedomodala--colelinksdialogdomodal"></a><a name="domodal"></a>COleLinksDialog::DoModal  
+##  <a name="domodal"></a>COleLinksDialog::DoModal  
  Affiche la boîte de dialogue OLE modifier les liens.  
   
 ```  
@@ -118,7 +122,7 @@ virtual INT_PTR DoModal();
 ### <a name="remarks"></a>Remarques  
  Si vous souhaitez initialiser les différents contrôles de boîte de dialogue en définissant les membres de la [m_el](#m_el) structure, vous devez le faire avant d’appeler `DoModal`, mais une fois que l’objet de la boîte de dialogue est construit.  
   
-##  <a name="a-namecolelinksdialoga--colelinksdialogcolelinksdialog"></a><a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
+##  <a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
  Construit un objet `COleLinksDialog`.  
   
 ```  
@@ -145,7 +149,7 @@ COleLinksDialog (
 ### <a name="remarks"></a>Notes  
  Cette fonction crée uniquement une `COleLinksDialog` objet. Pour afficher la boîte de dialogue, appelez le [DoModal](#domodal) (fonction).  
   
-##  <a name="a-namemela--colelinksdialogmel"></a><a name="m_el"></a>COleLinksDialog::m_el  
+##  <a name="m_el"></a>COleLinksDialog::m_el  
  Structure de type **OLEUIEDITLINKS** utilisé pour contrôler le comportement de la boîte de dialogue Modifier les liaisons.  
   
 ```  

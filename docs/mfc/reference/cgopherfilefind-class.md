@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CGopherFileFind
+- AFXINET/CGopherFileFind
+- AFXINET/CGopherFileFind::CGopherFileFind
+- AFXINET/CGopherFileFind::FindFile
+- AFXINET/CGopherFileFind::FindNextFile
+- AFXINET/CGopherFileFind::GetCreationTime
+- AFXINET/CGopherFileFind::GetLastAccessTime
+- AFXINET/CGopherFileFind::GetLastWriteTime
+- AFXINET/CGopherFileFind::GetLength
+- AFXINET/CGopherFileFind::GetLocator
+- AFXINET/CGopherFileFind::GetScreenName
+- AFXINET/CGopherFileFind::IsDots
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +117,7 @@ class CGopherFileFind : public CFileFind
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxinet.h  
   
-##  <a name="a-namecgopherfilefinda--cgopherfilefindcgopherfilefind"></a><a name="cgopherfilefind"></a>CGopherFileFind::CGopherFileFind  
+##  <a name="cgopherfilefind"></a>CGopherFileFind::CGopherFileFind  
  Cette fonction membre est appelée pour construire un `CGopherFileFind` objet.  
   
 ```  
@@ -125,7 +136,7 @@ explicit CGopherFileFind(
 ### <a name="remarks"></a>Remarques  
  La valeur par défaut `dwContext` est envoyé par MFC pour le `CGopherFileFind` à partir de l’objet le [CInternetSession](../../mfc/reference/cinternetsession-class.md) de l’objet qui a créé le `CGopherFileFind` objet. Lorsque vous construisez un `CGopherFileFind` de l’objet, vous pouvez remplacer la valeur par défaut pour définir l’identificateur de contexte pour une valeur de votre choix. L’identificateur de contexte est renvoyé au [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état de l’objet avec lequel il est identifié. Consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.  
   
-##  <a name="a-namefindfilea--cgopherfilefindfindfile"></a><a name="findfile"></a>CGopherFileFind::FindFile  
+##  <a name="findfile"></a>CGopherFileFind::FindFile  
  Appelez cette fonction membre pour rechercher un fichier gopher.  
   
 ```  
@@ -164,7 +175,7 @@ virtual BOOL FindFile(
 ### <a name="remarks"></a>Remarques  
  Après avoir appelé **FindFile** pour récupérer le premier objet gopher, vous pouvez appeler [FindNextFile](#findnextfile) pour récupérer les fichiers suivants gopher.  
   
-##  <a name="a-namefindnextfilea--cgopherfilefindfindnextfile"></a><a name="findnextfile"></a>CGopherFileFind::FindNextFile  
+##  <a name="findnextfile"></a>CGopherFileFind::FindNextFile  
  Appelez cette fonction membre pour continuer une recherche de fichier lancée par un appel à [CGopherFileFind::FindFile](#findfile).  
   
 ```  
@@ -174,7 +185,7 @@ virtual BOOL FindNextFile();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro s’il existe plusieurs fichiers ; zéro si le fichier est le dernier dans le répertoire ou si une erreur s’est produite. Pour obtenir des informations d’erreur étendu appeler la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Si le fichier est le dernier fichier dans le répertoire, ou si aucun des fichiers peuvent être trouvés, le `GetLastError` fonction renvoie ERROR_NO_MORE_FILES.  
   
-##  <a name="a-namegetcreationtimea--cgopherfilefindgetcreationtime"></a><a name="getcreationtime"></a>CGopherFileFind::GetCreationTime  
+##  <a name="getcreationtime"></a>CGopherFileFind::GetCreationTime  
  Obtient l’heure de création du fichier en cours.  
   
 ```  
@@ -198,7 +209,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 > [!NOTE]
 >  Pas tous les systèmes de fichiers utilisent la même sémantique pour implémenter l’horodatage retourné par cette fonction. Cette fonction peut retourner la même valeur retournée par d’autres fonctions de cachet de temps si le système de fichiers sous-jacent ou le serveur ne prend pas en charge en conservant l’attribut de durée. Consultez le [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure pour plus d’informations sur les formats d’heure. Sur certains systèmes d’exploitation, l’heure retournée est dans l’heure locale de zone à l’ordinateur ont été trouve le fichier. Consultez Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API pour plus d’informations.  
   
-##  <a name="a-namegetlastaccesstimea--cgopherfilefindgetlastaccesstime"></a><a name="getlastaccesstime"></a>CGopherFileFind::GetLastAccessTime  
+##  <a name="getlastaccesstime"></a>CGopherFileFind::GetLastAccessTime  
  Obtient l’heure de que dernier accès au fichier spécifié.  
   
 ```  
@@ -222,7 +233,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 > [!NOTE]
 >  Pas tous les systèmes de fichiers utilisent la même sémantique pour implémenter l’horodatage retourné par cette fonction. Cette fonction peut retourner la même valeur retournée par d’autres fonctions de cachet de temps si le système de fichiers sous-jacent ou le serveur ne prend pas en charge en conservant l’attribut de durée. Consultez le [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure pour plus d’informations sur les formats d’heure. Sur certains systèmes d’exploitation, l’heure retournée est dans l’heure locale de zone à l’ordinateur ont été trouve le fichier. Consultez Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API pour plus d’informations.  
   
-##  <a name="a-namegetlastwritetimea--cgopherfilefindgetlastwritetime"></a><a name="getlastwritetime"></a>CGopherFileFind::GetLastWriteTime  
+##  <a name="getlastwritetime"></a>CGopherFileFind::GetLastWriteTime  
  Obtient la dernière fois que le fichier a été modifié.  
   
 ```  
@@ -246,7 +257,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 > [!NOTE]
 >  Pas tous les systèmes de fichiers utilisent la même sémantique pour implémenter l’horodatage retourné par cette fonction. Cette fonction peut retourner la même valeur retournée par d’autres fonctions de cachet de temps si le système de fichiers sous-jacent ou le serveur ne prend pas en charge en conservant l’attribut de durée. Consultez le [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) structure pour plus d’informations sur les formats d’heure. Sur certains systèmes d’exploitation, l’heure retournée est dans l’heure locale de zone à l’ordinateur ont été trouve le fichier. Consultez Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API pour plus d’informations.  
   
-##  <a name="a-namegetlengtha--cgopherfilefindgetlength"></a><a name="getlength"></a>CGopherFileFind::GetLength  
+##  <a name="getlength"></a>CGopherFileFind::GetLength  
  Appelez cette fonction membre pour obtenir la longueur, en octets, du fichier trouvé.  
   
 ```  
@@ -265,7 +276,7 @@ virtual ULONGLONG GetLength() const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) (l’implémentation de classe de base).  
   
-##  <a name="a-namegetlocatora--cgopherfilefindgetlocator"></a><a name="getlocator"></a>CGopherFileFind::GetLocator  
+##  <a name="getlocator"></a>CGopherFileFind::GetLocator  
  Appelez cette fonction membre pour obtenir le [objet CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objet [FindFile](#findfile) utilise pour rechercher le fichier gopher.  
   
 ```  
@@ -275,7 +286,7 @@ CGopherLocator GetLocator() const;
 ### <a name="return-value"></a>Valeur de retour  
  Objet `CGopherLocator`.  
   
-##  <a name="a-namegetscreennamea--cgopherfilefindgetscreenname"></a><a name="getscreenname"></a>CGopherFileFind::GetScreenName  
+##  <a name="getscreenname"></a>CGopherFileFind::GetScreenName  
  Appelez cette fonction membre pour obtenir le nom de l’écran gopher.  
   
 ```  
@@ -285,7 +296,7 @@ CString GetScreenName() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nom de l’écran gopher.  
   
-##  <a name="a-nameisdotsa--cgopherfilefindisdots"></a><a name="isdots"></a>CGopherFileFind::IsDots  
+##  <a name="isdots"></a>CGopherFileFind::IsDots  
  Vérifie si les marqueurs d’Active directory et parent actuels lors de l’itération dans les fichiers.  
   
 ```  

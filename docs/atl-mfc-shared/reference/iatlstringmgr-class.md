@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAtlStringMgr
+- ATLSIMPSTR/ATL::IAtlStringMgr
+- ATLSIMPSTR/ATL::Allocate
+- ATLSIMPSTR/ATL::Clone
+- ATLSIMPSTR/ATL::Free
+- ATLSIMPSTR/ATL::GetNilString
+- ATLSIMPSTR/ATL::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -70,7 +76,7 @@ __interface IAtlStringMgr
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlsimpstr.h  
   
-##  <a name="a-nameallocatea--iatlstringmgrallocate"></a><a name="allocate"></a>IAtlStringMgr::Allocate  
+##  <a name="allocate"></a>IAtlStringMgr::Allocate  
  Alloue une nouvelle structure de données de chaîne.  
   
 ```
@@ -96,7 +102,7 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 > [!NOTE]
 >  Pour obtenir des exemples, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="a-nameclonea--iatlstringmgrclone"></a><a name="clone"></a>IAtlStringMgr::Clone  
+##  <a name="clone"></a>IAtlStringMgr::Clone  
  Retourne un pointeur vers un nouveau gestionnaire de chaîne pour une utilisation avec une autre instance de `CSimpleStringT`.  
   
 ```
@@ -114,7 +120,7 @@ IAtlStringMgr* Clone() throw();
 > [!NOTE]
 >  Pour obtenir des exemples, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="a-namefreea--iatlstringmgrfree"></a><a name="free"></a>IAtlStringMgr::Free  
+##  <a name="free"></a>IAtlStringMgr::Free  
  Libère une structure de données de chaîne.  
   
 ```
@@ -131,7 +137,7 @@ void Free(CStringData* pData) throw();
 > [!NOTE]
 >  Pour obtenir des exemples, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="a-namegetnilstringa--iatlstringmgrgetnilstring"></a><a name="getnilstring"></a>IAtlStringMgr::GetNilString  
+##  <a name="getnilstring"></a>IAtlStringMgr::GetNilString  
  Retourne un pointeur vers une structure de données de chaîne pour une chaîne vide.  
   
 ```
@@ -150,7 +156,7 @@ CStringData* GetNilString() throw();
 > [!NOTE]
 >  Pour obtenir des exemples, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="a-namereallocatea--iatlstringmgrreallocate"></a><a name="reallocate"></a>IAtlStringMgr::Reallocate  
+##  <a name="reallocate"></a>IAtlStringMgr::Reallocate  
  Réaffecte une structure de données de chaîne.  
   
 ```

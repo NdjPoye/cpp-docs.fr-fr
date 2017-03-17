@@ -6,6 +6,19 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::all_memory_fence
+- amp/Concurrency::atomic_compare_exchange
+- amp/Concurrency::atomic_fetch_dec
+- amp/Concurrency::atomic_fetch_max
+- amp/Concurrency::atomic_fetch_min
+- amp/Concurrency::copy
+- amp/Concurrency::direct3d_abort
+- amp/Concurrency::direct3d_printf
+- amp/Concurrency::global_memory_fence
+- amp/Concurrency::tile_static_memory_fence
+dev_langs:
+- C++
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 caps.latest.revision: 9
 author: mikeblome
@@ -28,7 +41,7 @@ ms.lasthandoff: 02/24/2017
 |[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|  
 |[global_memory_fence](#global_memory_fence)|[parallel_for_each, fonction (C++ AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|  
   
-##  <a name="a-nameallmemoryfencea--allmemoryfence"></a><a name="all_memory_fence"></a>all_memory_fence  
+##  <a name="all_memory_fence"></a>all_memory_fence  
  Empêche l’exécution de tous les threads dans une mosaïque jusqu'à ce que tous les accès mémoire ont été effectuées. Cela garantit que tous les accès mémoire sont visibles à d’autres threads dans la vignette de thread et sont exécutées dans l’ordre du programme.  
   
 ```  
@@ -39,14 +52,14 @@ inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
  `_Barrier`  
  Objet `tile_barrier`.  
   
-##  <a name="a-nameampuninitializea--ampuninitialize"></a><a name="amp_uninitialize"></a>amp_uninitialize  
+##  <a name="amp_uninitialize"></a>amp_uninitialize  
  N’initialise pas le runtime C++ AMP. Il est permis d’appeler cette fonction plusieurs fois pendant une durée de vie des applications. Appel de toute fois API C++ AMP appeler cette fonction sera réinitialisé le runtime C++ AMP. Notez qu’il est interdit d’utiliser des objets de C++ AMP dans les appels à cette fonction, et cela entraînerait un comportement non défini. En outre, simultanément appeler cette fonction et toutes les autres APIs AMP est non conforme et entraînerait un comportement non défini.  
   
 ```  
 void __cdecl amp_uninitialize();
 ```  
   
-##  <a name="a-nameatomiccompareexchangea--atomiccompareexchange"></a><a name="atomic_compare_exchange"></a>atomic_compare_exchange  
+##  <a name="atomic_compare_exchange"></a>atomic_compare_exchange  
  Atomiquement compare la valeur stockée dans un emplacement mémoire spécifié dans le premier argument d’égalité avec la valeur du deuxième argument spécifié et si les valeurs sont identiques, la valeur à l’emplacement de mémoire est modifiée et que du troisième argument spécifié.  
   
 ```  
@@ -78,7 +91,7 @@ inline bool atomic_compare_exchange(
  `true` si l'opération réussit ; sinon `false`.  
   
 
-##  <a name="a-nameatomicexchangea--atomicexchange-function-c-amp"></a><a name="atomic_exchange"></a>atomic_exchange, fonction (C++ AMP)  
+##  <a name="atomic_exchange"></a>atomic_exchange, fonction (C++ AMP)  
  Définit la valeur de l’emplacement de destination comme une opération atomique.  
   
 ```  
@@ -111,7 +124,7 @@ inline float atomic_exchange(
  La valeur d’origine de l’emplacement de destination.  
   
 
-##  <a name="a-nameatomicfetchadda--atomicfetchadd-function-c-amp"></a><a name="atomic_fetch_add"></a>atomic_fetch_add, fonction (C++ AMP)  
+##  <a name="atomic_fetch_add"></a>atomic_fetch_add, fonction (C++ AMP)  
  Atomiquement, ajoutez une valeur à la valeur d’un emplacement de mémoire.  
   
 ```  
@@ -137,7 +150,7 @@ inline unsigned int atomic_fetch_add(
 ### <a name="return-value"></a>Valeur de retour  
  La valeur d’origine de l’emplacement de mémoire.  
   
-##  <a name="a-nameatomicfetchanda--atomicfetchand-function-c-amp"></a><a name="atomic_fetch_and"></a>atomic_fetch_and, fonction (C++ AMP)  
+##  <a name="atomic_fetch_and"></a>atomic_fetch_and, fonction (C++ AMP)  
  Atomiquement effectue une opération AND au niveau du bit d’une valeur et la valeur d’un emplacement de mémoire.  
   
 ```  
@@ -163,7 +176,7 @@ inline unsigned int atomic_fetch_and(
 ### <a name="return-value"></a>Valeur de retour  
  La valeur d’origine de l’emplacement de mémoire.  
   
-##  <a name="a-nameatomicfetchdeca--atomicfetchdec"></a><a name="atomic_fetch_dec"></a>atomic_fetch_dec  
+##  <a name="atomic_fetch_dec"></a>atomic_fetch_dec  
  Atomiquement décrémente la valeur stockée dans l’emplacement mémoire spécifié.  
   
 ```  
@@ -181,7 +194,7 @@ inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  La valeur d’origine stockée à l’emplacement de mémoire.  
   
-##  <a name="a-nameatomicfetchinca--atomicfetchinc"></a><a name="atomic_fetch_inc"></a>atomic_fetch_inc  
+##  <a name="atomic_fetch_inc"></a>atomic_fetch_inc  
  Atomiquement incrémente la valeur stockée à l’emplacement mémoire spécifié.  
   
 ```  
@@ -198,7 +211,7 @@ inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  La valeur d’origine stockée à l’emplacement de mémoire.  
   
-##  <a name="a-nameatomicfetchmaxa--atomicfetchmax"></a><a name="atomic_fetch_max"></a>atomic_fetch_max  
+##  <a name="atomic_fetch_max"></a>atomic_fetch_max  
  Atomiquement calcule la valeur maximale entre la valeur stockée à l’emplacement de mémoire spécifié dans le premier argument et la valeur spécifiée dans le deuxième argument et le stocke dans le même emplacement de mémoire.  
   
 ```  
@@ -224,7 +237,7 @@ inline unsigned int atomic_fetch_max(
 ### <a name="return-value"></a>Valeur de retour  
  La valeur d’origine stockée à l’emplacement de l’emplacement spécifié.  
   
-##  <a name="a-nameatomicfetchmina--atomicfetchmin"></a><a name="atomic_fetch_min"></a>atomic_fetch_min  
+##  <a name="atomic_fetch_min"></a>atomic_fetch_min  
  Atomiquement calcule la valeur minimale entre la valeur stockée à l’emplacement de mémoire spécifié dans le premier argument et la valeur spécifiée dans le deuxième argument et le stocke dans le même emplacement de mémoire.  
   
 ```  
@@ -250,7 +263,7 @@ inline unsigned int atomic_fetch_min(
 ### <a name="return-value"></a>Valeur de retour  
  La valeur d’origine stockée à l’emplacement de l’emplacement spécifié.  
   
-##  <a name="a-nameatomicfetchora--atomicfetchor-function-c-amp"></a><a name="atomic_fetch_or"></a>atomic_fetch_or, fonction (C++ AMP)  
+##  <a name="atomic_fetch_or"></a>atomic_fetch_or, fonction (C++ AMP)  
  Atomiquement effectue une opération OR au niveau du bit avec une valeur et la valeur d’un emplacement de mémoire.  
   
 ```  
@@ -276,7 +289,7 @@ inline unsigned int atomic_fetch_or(
 ### <a name="return-value"></a>Valeur de retour  
  La valeur d’origine de l’emplacement de mémoire.  
   
-##  <a name="a-nameatomicfetchsuba--atomicfetchsub-function-c-amp"></a><a name="atomic_fetch_sub"></a>atomic_fetch_sub, fonction (C++ AMP)  
+##  <a name="atomic_fetch_sub"></a>atomic_fetch_sub, fonction (C++ AMP)  
  Atomiquement soustrait une valeur à partir d’un emplacement de mémoire.  
   
 ```  
@@ -302,7 +315,7 @@ inline unsigned int atomic_fetch_sub(
 ### <a name="return-value"></a>Valeur de retour  
  La valeur d’origine de l’emplacement de mémoire.  
   
-##  <a name="a-nameatomicfetchxora--atomicfetchxor-function-c-amp"></a><a name="atomic_fetch_xor"></a>atomic_fetch_xor, fonction (C++ AMP)  
+##  <a name="atomic_fetch_xor"></a>atomic_fetch_xor, fonction (C++ AMP)  
  Effectue une opération XOR au niveau du bit d’une valeur et un emplacement de mémoire de manière atomique.  
   
 ```  
@@ -328,7 +341,7 @@ inline unsigned int atomic_fetch_xor(
 ### <a name="return-value"></a>Valeur de retour  
  La valeur d’origine de l’emplacement de mémoire.  
   
-##  <a name="a-namecopya--copy"></a><a name="copy"></a>  copy  
+##  <a name="copy"></a>  copy  
  Copie un objet C++ AMP. Toutes les conditions de transfert de données synchrone sont remplies. Vous ne pouvez pas copier les données lors de l’exécution de code sur un accélérateur. La forme générale de cette fonction est `copy(src, dest)`.  
   
 ```  
@@ -434,7 +447,7 @@ void copy(
  `value_type`  
  Le type de données des éléments qui sont copiés.  
   
-##  <a name="a-namecopyasynca--copyasync"></a><a name="copy_async"></a>copy_async  
+##  <a name="copy_async"></a>copy_async  
  Copie un objet C++ AMP et retourne un [completion_future](completion-future-class.md) objet qui peut être attendu. Vous ne pouvez pas copier les données lors de l’exécution de code sur un accélérateur.  La forme générale de cette fonction est `copy(src, dest)`.  
   
 ```  
@@ -535,14 +548,14 @@ concurrency::completion_future copy_async(
 ### <a name="return-value"></a>Valeur de retour  
  Un `future<void>` qui peut être attendu.  
   
-##  <a name="a-namedirect3daborta--direct3dabort"></a><a name="direct3d_abort"></a>direct3d_abort  
+##  <a name="direct3d_abort"></a>direct3d_abort  
  Interrompt l’exécution d’une fonction avec la clause de restriction `restrict(amp)` . Lorsque le runtime AMP détecte l’appel, il déclenche une [runtime_exception](runtime-exception-class.md) exception avec le message d’erreur « rastériseur de référence : nuanceur abandonner l’instruction atteint ».  
   
 ```  
 void direct3d_abort() restrict(amp);
 ```  
   
-##  <a name="a-namedirect3derrorfa--direct3derrorf"></a><a name="direct3d_errorf"></a>direct3d_errorf  
+##  <a name="direct3d_errorf"></a>direct3d_errorf  
  Affiche une chaîne mise en forme dans la fenêtre Sortie de Visual Studio. Elle est appelée à partir d’une fonction avec la `restrict(amp)` clause de restriction. Lorsque le runtime AMP détecte l’appel, il déclenche une [runtime_exception](runtime-exception-class.md) exception avec la même chaîne de mise en forme.  
   
 ```  
@@ -551,7 +564,7 @@ void direct3d_errorf(
  ...) restrict(amp);
 ```  
   
-##  <a name="a-namedirect3dprintfa--direct3dprintf"></a><a name="direct3d_printf"></a>direct3d_printf  
+##  <a name="direct3d_printf"></a>direct3d_printf  
  Affiche une chaîne mise en forme dans la fenêtre Sortie de Visual Studio. Elle est appelée à partir d’une fonction avec la `restrict(amp)` clause de restriction.  
   
 ```  
@@ -560,7 +573,7 @@ void direct3d_printf(
  ...) restrict(amp);
 ```  
   
-##  <a name="a-nameglobalmemoryfencea--globalmemoryfence"></a><a name="global_memory_fence"></a>global_memory_fence  
+##  <a name="global_memory_fence"></a>global_memory_fence  
  Empêche l’exécution de tous les threads dans une mosaïque jusqu'à ce que l’accès à la mémoire globale toutes ont été effectuées. Cela garantit que les accès à la mémoire globale sont visibles à d’autres threads dans la vignette de thread et sont exécutées dans l’ordre du programme.  
   
 ```  
@@ -571,7 +584,7 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
  `_Barrier`  
  Un objet tile_barrier  
   
-##  <a name="a-nameparallelforeacha--parallelforeach-function-c-amp"></a><a name="parallel_for_each"></a>parallel_for_each, fonction (C++ AMP)  
+##  <a name="parallel_for_each"></a>parallel_for_each, fonction (C++ AMP)  
  Exécute une fonction dans le domaine de calcul. Pour plus d’informations, consultez [présentation de C++ AMP](../../../parallel/amp/cpp-amp-overview.md).  
   
 ```  
@@ -652,7 +665,7 @@ void parallel_for_each(
  `_Rank`  
  Le rang de l’étendue.  
   
-##  <a name="a-nametilestaticmemoryfencea--tilestaticmemoryfence"></a><a name="tile_static_memory_fence"></a>tile_static_memory_fence  
+##  <a name="tile_static_memory_fence"></a>tile_static_memory_fence  
  Bloque l’exécution de tous les threads dans une mosaïque jusqu'à ce que toutes en attente `tile_static` accès mémoire ont été effectuées. Cela garantit que `tile_static` accès mémoire sont visibles à d’autres threads dans la vignette de thread et d’accès sont exécutées dans l’ordre du programme.  
   
 ```  

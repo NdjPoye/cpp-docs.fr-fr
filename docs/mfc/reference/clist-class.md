@@ -10,6 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CList
+- AFXTEMPL/CList
+- AFXTEMPL/CList::CList
+- AFXTEMPL/CList::AddHead
+- AFXTEMPL/CList::AddTail
+- AFXTEMPL/CList::Find
+- AFXTEMPL/CList::FindIndex
+- AFXTEMPL/CList::GetAt
+- AFXTEMPL/CList::GetCount
+- AFXTEMPL/CList::GetHead
+- AFXTEMPL/CList::GetHeadPosition
+- AFXTEMPL/CList::GetNext
+- AFXTEMPL/CList::GetPrev
+- AFXTEMPL/CList::GetSize
+- AFXTEMPL/CList::GetTail
+- AFXTEMPL/CList::GetTailPosition
+- AFXTEMPL/CList::InsertAfter
+- AFXTEMPL/CList::InsertBefore
+- AFXTEMPL/CList::IsEmpty
+- AFXTEMPL/CList::RemoveAll
+- AFXTEMPL/CList::RemoveAt
+- AFXTEMPL/CList::RemoveHead
+- AFXTEMPL/CList::RemoveTail
+- AFXTEMPL/CList::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -116,7 +139,7 @@ class CList : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxtempl.h  
   
-##  <a name="a-nameaddheada--clistaddhead"></a><a name="addhead"></a>CList::AddHead  
+##  <a name="addhead"></a>CList::AddHead  
  Ajoute un nouvel élément ou une liste d’éléments à la tête de la liste.  
   
 ```  
@@ -143,7 +166,7 @@ void AddHead(CList* pNewList);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections n °&36;](../../mfc/codesnippet/cpp/clist-class_2.cpp)]  
   
-##  <a name="a-nameaddtaila--clistaddtail"></a><a name="addtail"></a>CList::AddTail  
+##  <a name="addtail"></a>CList::AddTail  
  Ajoute un nouvel élément ou une liste d’éléments à la fin de cette liste.  
   
 ```  
@@ -170,7 +193,7 @@ void AddTail(CList* pNewList);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections&#37;](../../mfc/codesnippet/cpp/clist-class_3.cpp)]  
   
-##  <a name="a-nameclista--clistclist"></a><a name="clist"></a>CList::CList  
+##  <a name="clist"></a>CList::CList  
  Construit une liste vide.  
   
 ```  
@@ -187,7 +210,7 @@ CList(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections&#38;](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
-##  <a name="a-namefinda--clistfind"></a><a name="find"></a>CList::Find  
+##  <a name="find"></a>CList::Find  
  Recherche dans la liste après l’autre pour rechercher le premier élément correspondant spécifié `searchValue`.  
   
 ```  
@@ -212,7 +235,7 @@ POSITION Find(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections n °&39;](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
   
-##  <a name="a-namefindindexa--clistfindindex"></a><a name="findindex"></a>CList::FindIndex  
+##  <a name="findindex"></a>CList::FindIndex  
  Utilise la valeur de `nIndex` en tant qu’index dans la liste.  
   
 ```  
@@ -232,7 +255,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections numéro&40;](../../mfc/codesnippet/cpp/clist-class_6.cpp)]  
   
-##  <a name="a-namegetata--clistgetat"></a><a name="getat"></a>CList::GetAt  
+##  <a name="getat"></a>CList::GetAt  
  Obtient l’élément de liste à une position donnée.  
   
 ```  
@@ -258,7 +281,7 @@ const TYPE& GetAt(POSITION position) const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CList::GetHeadPosition](#getheadposition).  
   
-##  <a name="a-namegetcounta--clistgetcount"></a><a name="getcount"></a>CList::GetCount  
+##  <a name="getcount"></a>CList::GetCount  
  Obtient le nombre d’éléments dans cette liste.  
   
 ```  
@@ -274,7 +297,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CList::RemoveHead](#removehead).  
   
-##  <a name="a-namegetheada--clistgethead"></a><a name="gethead"></a>CList::GetHead  
+##  <a name="gethead"></a>CList::GetHead  
  Obtient l’élément head (ou une référence à l’élément head) de cette liste.  
   
 ```  
@@ -298,7 +321,7 @@ TYPE& GetHead();
 ### <a name="example"></a>Exemple  
  [!code-cpp[# NVC_MFCCollections&41;](../../mfc/codesnippet/cpp/clist-class_7.cpp)]  
   
-##  <a name="a-namegetheadpositiona--clistgetheadposition"></a><a name="getheadposition"></a>CList::GetHeadPosition  
+##  <a name="getheadposition"></a>CList::GetHeadPosition  
  Obtient la position de l’élément head de cette liste.  
   
 ```  
@@ -311,7 +334,7 @@ POSITION GetHeadPosition() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections&#42;](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
-##  <a name="a-namegetnexta--clistgetnext"></a><a name="getnext"></a>CList::GetNext  
+##  <a name="getnext"></a>CList::GetNext  
  Obtient l’élément de liste identifié par `rPosition`, puis définit `rPosition` à la **POSITION** la valeur de l’entrée suivante dans la liste.  
   
 ```  
@@ -341,7 +364,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections&#43;](../../mfc/codesnippet/cpp/clist-class_9.cpp)]  
   
-##  <a name="a-namegetpreva--clistgetprev"></a><a name="getprev"></a>CList::GetPrev  
+##  <a name="getprev"></a>CList::GetPrev  
  Obtient l’élément de liste identifié par `rPosition`, puis définit `rPosition` à la **POSITION** la valeur de l’entrée précédente dans la liste.  
   
 ```  
@@ -371,7 +394,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections&#44;](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
   
-##  <a name="a-namegetsizea--clistgetsize"></a><a name="getsize"></a>CList::GetSize  
+##  <a name="getsize"></a>CList::GetSize  
  Retourne le nombre d’éléments de liste.  
   
 ```  
@@ -387,7 +410,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections n °&45;](../../mfc/codesnippet/cpp/clist-class_11.cpp)]  
   
-##  <a name="a-namegettaila--clistgettail"></a><a name="gettail"></a>CList::GetTail  
+##  <a name="gettail"></a>CList::GetTail  
  Obtient le `CObject` pointeur qui représente l’élément de fin de cette liste.  
   
 ```  
@@ -408,7 +431,7 @@ const TYPE& GetTail() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections&#46;](../../mfc/codesnippet/cpp/clist-class_12.cpp)]  
   
-##  <a name="a-namegettailpositiona--clistgettailposition"></a><a name="gettailposition"></a>CList::GetTailPosition  
+##  <a name="gettailposition"></a>CList::GetTailPosition  
  Obtient la position de l’élément de fin de cette liste. **NULL** si la liste est vide.  
   
 ```  
@@ -421,7 +444,7 @@ POSITION GetTailPosition() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections&#47;](../../mfc/codesnippet/cpp/clist-class_13.cpp)]  
   
-##  <a name="a-nameinsertaftera--clistinsertafter"></a><a name="insertafter"></a>CList::InsertAfter  
+##  <a name="insertafter"></a>CList::InsertAfter  
  Ajoute un élément à cette liste après l’élément à la position spécifiée.  
   
 ```  
@@ -444,7 +467,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections&#48;](../../mfc/codesnippet/cpp/clist-class_14.cpp)]  
   
-##  <a name="a-nameinsertbeforea--clistinsertbefore"></a><a name="insertbefore"></a>CList::InsertBefore  
+##  <a name="insertbefore"></a>CList::InsertBefore  
  Ajoute un élément à cette liste avant l’élément à la position spécifiée.  
   
 ```  
@@ -470,7 +493,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 ### <a name="example"></a>Exemple  
  [!code-cpp[49 NVC_MFCCollections](../../mfc/codesnippet/cpp/clist-class_15.cpp)]  
   
-##  <a name="a-nameisemptya--clistisempty"></a><a name="isempty"></a>CList::IsEmpty  
+##  <a name="isempty"></a>CList::IsEmpty  
  Indique si cette liste ne contient aucun élément.  
   
 ```  
@@ -483,7 +506,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections&#50;](../../mfc/codesnippet/cpp/clist-class_16.cpp)]  
   
-##  <a name="a-nameremovealla--clistremoveall"></a><a name="removeall"></a>CList::RemoveAll  
+##  <a name="removeall"></a>CList::RemoveAll  
  Supprime tous les éléments de cette liste et libère la mémoire associée.  
   
 ```  
@@ -496,7 +519,7 @@ void RemoveAll();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections&#51;](../../mfc/codesnippet/cpp/clist-class_17.cpp)]  
   
-##  <a name="a-nameremoveata--clistremoveat"></a><a name="removeat"></a>CList::RemoveAt  
+##  <a name="removeat"></a>CList::RemoveAt  
  Supprime l’élément spécifié dans cette liste.  
   
 ```  
@@ -513,7 +536,7 @@ void RemoveAt(POSITION position);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections&#52;](../../mfc/codesnippet/cpp/clist-class_18.cpp)]  
   
-##  <a name="a-nameremoveheada--clistremovehead"></a><a name="removehead"></a>CList::RemoveHead  
+##  <a name="removehead"></a>CList::RemoveHead  
  Supprime l’élément au début de la liste et retourne un pointeur vers elle.  
   
 ```  
@@ -533,7 +556,7 @@ TYPE RemoveHead();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections&#53;](../../mfc/codesnippet/cpp/clist-class_19.cpp)]  
   
-##  <a name="a-nameremovetaila--clistremovetail"></a><a name="removetail"></a>CList::RemoveTail  
+##  <a name="removetail"></a>CList::RemoveTail  
  Supprime l’élément de la fin de la liste et retourne un pointeur vers elle.  
   
 ```  
@@ -553,7 +576,7 @@ TYPE RemoveTail();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections&#54;](../../mfc/codesnippet/cpp/clist-class_20.cpp)]  
   
-##  <a name="a-namesetata--clistsetat"></a><a name="setat"></a>CList::SetAt  
+##  <a name="setat"></a>CList::SetAt  
  Une variable de type **POSITION** est une clé pour la liste.  
   
 ```  

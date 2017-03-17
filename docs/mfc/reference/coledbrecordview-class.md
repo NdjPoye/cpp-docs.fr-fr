@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDBRecordView
+- AFXOLEDB/COleDBRecordView
+- AFXOLEDB/COleDBRecordView::COleDBRecordView
+- AFXOLEDB/COleDBRecordView::OnGetRowset
+- AFXOLEDB/COleDBRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +98,7 @@ class COleDBRecordView : public CFormView
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxoledb.h  
   
-##  <a name="a-namecoledbrecordviewa--coledbrecordviewcoledbrecordview"></a><a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
+##  <a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
  Construit un objet `COleDBRecordView`.  
   
 ```  
@@ -115,7 +119,7 @@ COleDBRecordView(UINT nIDTemplate);
 > [!NOTE]
 >  Votre classe dérivée *doit* fournir son propre constructeur. Dans le constructeur, appelez le constructeur, `COleDBRecordView::COleDBRecordView`, avec le nom de la ressource ou l’ID en tant qu’argument.  
   
-##  <a name="a-nameongetrowseta--coledbrecordviewongetrowset"></a><a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
+##  <a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
  Retourne un handle pour le **CRowset<> </> ** objet associé à la vue de l’enregistrement.  
   
 ```  
@@ -137,7 +141,7 @@ virtual CRowset<>* OnGetRowset(Â) = 0;
   
  Pour plus d’informations et d’exemples, consultez l’article [vues des enregistrements : utilisation d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="a-nameonmovea--coledbrecordviewonmove"></a><a name="onmove"></a>COleDBRecordView::OnMove  
+##  <a name="onmove"></a>COleDBRecordView::OnMove  
  Permet d’afficher se déplace vers un autre enregistrement dans le jeu de lignes et d’afficher ses champs dans les contrôles de l’enregistrement.  
   
 ```  

@@ -10,6 +10,120 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonBaseElement
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::AddToKeyList
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::AddToListBox
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::CanBeCompacted
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::CanBeStretched
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::CanBeStretchedHorizontally
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::CleanUpSizes
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::ClosePopupMenu
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::CopyFrom
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::DestroyCtrl
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::DrawImage
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::Find
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::FindByData
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::FindByID
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::FindByOriginal
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetCompactSize
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetData
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetDescription
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetDroppedDown
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetElements
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetElementsByID
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetHighlighted
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetID
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetImageSize
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetIntermediateSize
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetKeys
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetKeyTipRect
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetKeyTipSize
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetLocationInGroup
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetMenuKeys
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetNotifyID
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetOriginal
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetParentCategory
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetParentPanel
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetParentRibbonBar
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetParentWnd
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetPressed
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetQuickAccessToolBarID
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetRect
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetRegularSize
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetSize
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetText
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetToolTipText
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetTopLevelRibbonBar
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::HasCompactMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::HasFocus
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::HasIntermediateMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::HasLargeMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::HasMenu
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::HitTest
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsAlignByColumn
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsAlwaysLargeImage
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsAutoRepeatMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsChecked
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsCompactMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsDefaultMenuLook
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsDisabled
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsDroppedDown
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsFocused
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsGalleryIcon
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsHighlighted
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsIntermediateMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsLargeMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsMenuMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsPressed
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsQATMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsSeparator
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsShowGroupBorder
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsShowTooltipOnBottom
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsTabStop
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsTextAlwaysOnRight
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsVisible
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsWholeRowHeight
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::NotifyCommand
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::NotifyHighlightListItem
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnAddToQAToolbar
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnAfterChangeRect
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnAutoRepeat
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnCalcTextSize
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnChangeMenuHighlight
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnDraw
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnDrawKeyTip
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnDrawMenuImage
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnDrawOnList
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnKey
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnMenuKey
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnRTLChanged
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnShow
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnShowPopupMenu
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::PostMenuCommand
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::Redraw
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetACCData
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetCompactMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetData
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetDefaultMenuLook
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetDescription
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetID
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetInitialMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetKeys
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetOriginal
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetParentCategory
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetParentMenu
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetParentRibbonBar
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetRect
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetText
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetTextAlwaysOnRight
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetToolTipText
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetVisible
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::StretchHorizontally
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::StretchToWholeRow
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::UpdateTooltipInfo
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnProcessKey
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnSetFocus
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -204,7 +318,7 @@ class CMFCRibbonBaseElement : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxbaseribbonelement.h  
   
-##  <a name="a-nameaddtokeylista--cmfcribbonbaseelementaddtokeylist"></a><a name="addtokeylist"></a>CMFCRibbonBaseElement::AddToKeyList  
+##  <a name="addtokeylist"></a>CMFCRibbonBaseElement::AddToKeyList  
  Ajoute une touche d’accès de l’élément de ruban à un tableau des touches accélératrices.  
   
 ```  
@@ -219,7 +333,7 @@ virtual void AddToKeyList(
 ### <a name="remarks"></a>Notes  
  Lorsque la fonctionnalité de combinaisons de touches du ruban est activée, le framework affiche les combinaisons de touches du ruban lorsque l’utilisateur appuie sur la touche ALT ou F10.  
   
-##  <a name="a-nameaddtolistboxa--cmfcribbonbaseelementaddtolistbox"></a><a name="addtolistbox"></a>CMFCRibbonBaseElement::AddToListBox  
+##  <a name="addtolistbox"></a>CMFCRibbonBaseElement::AddToListBox  
  Ajoute un élément de ruban à la zone de liste des commandes de ruban spécifié.  
   
 ```  
@@ -241,7 +355,7 @@ virtual int AddToListBox(
 ### <a name="remarks"></a>Remarques  
  Le framework ajoute les éléments de ruban à une zone de liste de commandes pour permettre aux utilisateurs de personnaliser l’interface utilisateur.  
   
-##  <a name="a-namecanbeaddedtoquickaccesstoolbara--cmfcribbonbaseelementcanbeaddedtoquickaccesstoolbar"></a><a name="canbeaddedtoquickaccesstoolbar"></a>CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar  
+##  <a name="canbeaddedtoquickaccesstoolbar"></a>CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar  
  Indique si l’élément de ruban peut être ajouté à la barre d’outils Accès rapide.  
   
 ```  
@@ -253,7 +367,7 @@ virtual BOOL CanBeAddedToQuickAccessToolBar() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namecanbecompacteda--cmfcribbonbaseelementcanbecompacted"></a><a name="canbecompacted"></a>CMFCRibbonBaseElement::CanBeCompacted  
+##  <a name="canbecompacted"></a>CMFCRibbonBaseElement::CanBeCompacted  
  Indique si la taille de l’élément de ruban peut être compacte.  
   
 ```  
@@ -266,7 +380,7 @@ virtual BOOL CanBeCompacted() const;
 ### <a name="remarks"></a>Remarques  
  La taille d’un élément de ruban peut être compact, intermédiaire ou de grande taille.  
   
-##  <a name="a-namecanbestretcheda--cmfcribbonbaseelementcanbestretched"></a><a name="canbestretched"></a>CMFCRibbonBaseElement::CanBeStretched  
+##  <a name="canbestretched"></a>CMFCRibbonBaseElement::CanBeStretched  
  Indique si la hauteur de l’élément de ruban peut augmenter verticalement à la hauteur d’une ligne de ruban.  
   
 ```  
@@ -279,7 +393,7 @@ virtual BOOL CanBeStretched();
 ### <a name="remarks"></a>Notes  
  Par défaut cette méthode retourne toujours `TRUE`. Substituez cette méthode pour indiquer si la hauteur de l’élément de ruban peut augmenter verticalement à la hauteur d’une ligne de ruban.  
   
-##  <a name="a-namecanbestretchedhorizontallya--cmfcribbonbaseelementcanbestretchedhorizontally"></a><a name="canbestretchedhorizontally"></a>CMFCRibbonBaseElement::CanBeStretchedHorizontally  
+##  <a name="canbestretchedhorizontally"></a>CMFCRibbonBaseElement::CanBeStretchedHorizontally  
  Indique si la largeur de l’élément de ruban peut changer.  
   
 ```  
@@ -292,7 +406,7 @@ virtual BOOL CanBeStretchedHorizontally();
 ### <a name="remarks"></a>Remarques  
  Par défaut cette méthode retourne toujours `FALSE`. Substituez cette méthode pour indiquer si la largeur de l’élément de ruban peut modifier.  
   
-##  <a name="a-namecleanupsizesa--cmfcribbonbaseelementcleanupsizes"></a><a name="cleanupsizes"></a>CMFCRibbonBaseElement::CleanUpSizes  
+##  <a name="cleanupsizes"></a>CMFCRibbonBaseElement::CleanUpSizes  
  Nettoie les paramètres de dimension pour l’élément de ruban.  
   
 ```  
@@ -302,7 +416,7 @@ virtual void CleanUpSizes();
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode ne fait rien. Substituez cette méthode dans une classe dérivée pour réinitialiser les paramètres de dimension de l’élément de ruban.  
   
-##  <a name="a-nameclosepopupmenua--cmfcribbonbaseelementclosepopupmenu"></a><a name="closepopupmenu"></a>CMFCRibbonBaseElement::ClosePopupMenu  
+##  <a name="closepopupmenu"></a>CMFCRibbonBaseElement::ClosePopupMenu  
  Ferme le menu contextuel pour l’élément de ruban.  
   
 ```  
@@ -311,7 +425,7 @@ virtual void ClosePopupMenu();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namecopyfroma--cmfcribbonbaseelementcopyfrom"></a><a name="copyfrom"></a>CMFCRibbonBaseElement::CopyFrom  
+##  <a name="copyfrom"></a>CMFCRibbonBaseElement::CopyFrom  
  Copie de l’état de l’objet [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) à l’objet actuel.  
   
 ```  
@@ -324,7 +438,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namedestroyctrla--cmfcribbonbaseelementdestroyctrl"></a><a name="destroyctrl"></a>CMFCRibbonBaseElement::DestroyCtrl  
+##  <a name="destroyctrl"></a>CMFCRibbonBaseElement::DestroyCtrl  
  Supprime l’élément de ruban.  
   
 ```  
@@ -334,7 +448,7 @@ virtual void DestroyCtrl();
 ### <a name="remarks"></a>Remarques  
  Par défaut, cette méthode ne fait rien. Substituez cette méthode dans une classe dérivée pour détruire l’élément de ruban.  
   
-##  <a name="a-namedrawimagea--cmfcribbonbaseelementdrawimage"></a><a name="drawimage"></a>CMFCRibbonBaseElement::DrawImage  
+##  <a name="drawimage"></a>CMFCRibbonBaseElement::DrawImage  
  Dessine l’image pour l’élément de ruban.  
   
 ```  
@@ -365,7 +479,7 @@ virtual void DrawImage(
  `RibbonImageSmall`  
  Petite taille de l’image 16 x 16 pixels.  
   
-##  <a name="a-namefinda--cmfcribbonbaseelementfind"></a><a name="find"></a>CMFCRibbonBaseElement::Find  
+##  <a name="find"></a>CMFCRibbonBaseElement::Find  
  Retourne le pointeur spécifié s’il pointe vers l’objet actuel.  
   
 ```  
@@ -381,7 +495,7 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namefindbydataa--cmfcribbonbaseelementfindbydata"></a><a name="findbydata"></a>CMFCRibbonBaseElement::FindByData  
+##  <a name="findbydata"></a>CMFCRibbonBaseElement::FindByData  
  Récupère un pointeur vers l’élément ribbon s’il contient les données spécifiées.  
   
 ```  
@@ -397,7 +511,7 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namefindbyida--cmfcribbonbaseelementfindbyid"></a><a name="findbyid"></a>CMFCRibbonBaseElement::FindByID  
+##  <a name="findbyid"></a>CMFCRibbonBaseElement::FindByID  
  Récupère un pointeur vers l’élément ribbon si cet élément est identifié par l’ID de commande spécifié.  
   
 ```  
@@ -413,7 +527,7 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namefindbyoriginala--cmfcribbonbaseelementfindbyoriginal"></a><a name="findbyoriginal"></a>CMFCRibbonBaseElement::FindByOriginal  
+##  <a name="findbyoriginal"></a>CMFCRibbonBaseElement::FindByOriginal  
  Récupère un pointeur vers l’élément de ruban actuelle si son élément de ruban d’origine correspond à l’élément de ruban spécifié.  
   
 ```  
@@ -430,7 +544,7 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ### <a name="remarks"></a>Remarques  
  Les éléments de ruban qui sont copiés vers un autre conteneur conservent un pointeur vers l’élément de ruban d’origine.  
   
-##  <a name="a-namegetcompactsizea--cmfcribbonbaseelementgetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonBaseElement::GetCompactSize  
+##  <a name="getcompactsize"></a>CMFCRibbonBaseElement::GetCompactSize  
  Retourne la taille réduite de l'élément de ruban.  
   
 ```  
@@ -447,7 +561,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 > [!NOTE]
 >  Compacte signifie que l’élément de ruban est tronqué (il affiche une petite image ou une image sans texte).  
   
-##  <a name="a-namegetdataa--cmfcribbonbaseelementgetdata"></a><a name="getdata"></a>CMFCRibbonBaseElement::GetData  
+##  <a name="getdata"></a>CMFCRibbonBaseElement::GetData  
  Récupère les données définies par l’utilisateur associées à l’élément de ruban.  
   
 ```  
@@ -457,7 +571,7 @@ DWORD_PTR GetData() const;
 ### <a name="return-value"></a>Valeur de retour  
  Les données définies par l’utilisateur associées à l’élément de ruban.  
   
-##  <a name="a-namegetdescriptiona--cmfcribbonbaseelementgetdescription"></a><a name="getdescription"></a>CMFCRibbonBaseElement::GetDescription  
+##  <a name="getdescription"></a>CMFCRibbonBaseElement::GetDescription  
  Retourne la description de l’élément de ruban.  
   
 ```  
@@ -467,7 +581,7 @@ virtual CString GetDescription() const;
 ### <a name="return-value"></a>Valeur de retour  
  La description de l’élément du ruban. La description est affichée sur la barre d’état, ou dans une info-bulle ou sous le bouton de menu si l’élément de ruban se trouve sur le [CMFCRibbonMainPanel classe](../../mfc/reference/cmfcribbonmainpanel-class.md).  
   
-##  <a name="a-namegetdroppeddowna--cmfcribbonbaseelementgetdroppeddown"></a><a name="getdroppeddown"></a>CMFCRibbonBaseElement::GetDroppedDown  
+##  <a name="getdroppeddown"></a>CMFCRibbonBaseElement::GetDroppedDown  
  Récupère un pointeur vers l’élément ribbon s’est déroulée son menu contextuel.  
   
 ```  
@@ -479,7 +593,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetelementsa--cmfcribbonbaseelementgetelements"></a><a name="getelements"></a>CMFCRibbonBaseElement::GetElements  
+##  <a name="getelements"></a>CMFCRibbonBaseElement::GetElements  
  Ajoute l’élément de ruban actuelle dans le tableau spécifié.  
   
 ```  
@@ -493,7 +607,7 @@ virtual void GetElements(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namegetelementsbyida--cmfcribbonbaseelementgetelementsbyid"></a><a name="getelementsbyid"></a>CMFCRibbonBaseElement::GetElementsByID  
+##  <a name="getelementsbyid"></a>CMFCRibbonBaseElement::GetElementsByID  
  Ajoute l’élément de ruban actuelle dans le tableau spécifié si l’élément de ruban actuelle contient l’ID de commande spécifié.  
   
 ```  
@@ -511,7 +625,7 @@ virtual void GetElementsByID(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namegethighlighteda--cmfcribbonbaseelementgethighlighted"></a><a name="gethighlighted"></a>CMFCRibbonBaseElement::GetHighlighted  
+##  <a name="gethighlighted"></a>CMFCRibbonBaseElement::GetHighlighted  
  Récupère un pointeur vers l’élément ribbon si elle est mise en surbrillance.  
   
 ```  
@@ -523,7 +637,7 @@ virtual CMFCRibbonBaseElement* GetHighlighted();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetida--cmfcribbonbaseelementgetid"></a><a name="getid"></a>CMFCRibbonBaseElement::GetID  
+##  <a name="getid"></a>CMFCRibbonBaseElement::GetID  
  Retourne l’ID de commande de l’élément de ruban.  
   
 ```  
@@ -533,7 +647,7 @@ UINT GetID() const;
 ### <a name="return-value"></a>Valeur de retour  
  L’ID de commande de l’élément de ruban.  
   
-##  <a name="a-namegetimagesizea--cmfcribbonbaseelementgetimagesize"></a><a name="getimagesize"></a>CMFCRibbonBaseElement::GetImageSize  
+##  <a name="getimagesize"></a>CMFCRibbonBaseElement::GetImageSize  
  Retourne la taille d'image de l'élément de ruban.  
   
 ```  
@@ -543,7 +657,7 @@ virtual CSize GetImageSize(RibbonImageType R) const;
 ### <a name="return-value"></a>Valeur de retour  
  La taille de l’image de l’élément de ruban.  
   
-##  <a name="a-namegetintermediatesizea--cmfcribbonbaseelementgetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonBaseElement::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>CMFCRibbonBaseElement::GetIntermediateSize  
  Retourne la taille de l'élément de ruban dans son état intermédiaire.  
   
 ```  
@@ -557,7 +671,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="return-value"></a>Valeur de retour  
  La taille de l’élément de ruban dans son état intermédiaire.  
   
-##  <a name="a-namegetkeysa--cmfcribbonbaseelementgetkeys"></a><a name="getkeys"></a>CMFCRibbonBaseElement::GetKeys  
+##  <a name="getkeys"></a>CMFCRibbonBaseElement::GetKeys  
  Retourne la touche d’accès associée à l’élément de ruban.  
   
 ```  
@@ -567,7 +681,7 @@ LPCTSTR GetKeys() const;
 ### <a name="return-value"></a>Valeur de retour  
  Une touche d’accès associée à l’élément de ruban.  
   
-##  <a name="a-namegetkeytiprecta--cmfcribbonbaseelementgetkeytiprect"></a><a name="getkeytiprect"></a>CMFCRibbonBaseElement::GetKeyTipRect  
+##  <a name="getkeytiprect"></a>CMFCRibbonBaseElement::GetKeyTipRect  
  Récupère le rectangle de limite de touche d’accès de l’élément de ruban.  
   
 ```  
@@ -589,7 +703,7 @@ virtual CRect GetKeyTipRect(
 ### <a name="remarks"></a>Remarques  
  Substituez cette méthode dans une classe dérivée pour retourner le rectangle de limite de touche d’accès.  
   
-##  <a name="a-namegetkeytipsizea--cmfcribbonbaseelementgetkeytipsize"></a><a name="getkeytipsize"></a>CMFCRibbonBaseElement::GetKeyTipSize  
+##  <a name="getkeytipsize"></a>CMFCRibbonBaseElement::GetKeyTipSize  
  Récupère la taille du texte de la touche d’accès.  
   
 ```  
@@ -605,7 +719,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namegetlocationingroupa--cmfcribbonbaseelementgetlocationingroup"></a><a name="getlocationingroup"></a>CMFCRibbonBaseElement::GetLocationInGroup  
+##  <a name="getlocationingroup"></a>CMFCRibbonBaseElement::GetLocationInGroup  
  Indique l’emplacement d’affichage de l’élément de ruban dans un groupe de ruban.  
   
 ```  
@@ -626,7 +740,7 @@ RibbonElementLocation GetLocationInGroup() const;
 ### <a name="remarks"></a>Remarques  
  Groupes d’éléments du ruban sont alignées uniquement horizontalement.  
   
-##  <a name="a-namegetmenukeysa--cmfcribbonbaseelementgetmenukeys"></a><a name="getmenukeys"></a>CMFCRibbonBaseElement::GetMenuKeys  
+##  <a name="getmenukeys"></a>CMFCRibbonBaseElement::GetMenuKeys  
  Retourne la touche d’accès menu pour l’élément de ruban.  
   
 ```  
@@ -639,7 +753,7 @@ LPCTSTR GetMenuKeys() const;
 ### <a name="remarks"></a>Notes  
  Lorsqu’elle est appelée, une touche d’accès menu affiche un menu contextuel.  
   
-##  <a name="a-namegetnotifyida--cmfcribbonbaseelementgetnotifyid"></a><a name="getnotifyid"></a>CMFCRibbonBaseElement::GetNotifyID  
+##  <a name="getnotifyid"></a>CMFCRibbonBaseElement::GetNotifyID  
  Récupère l’ID de commande de notification pour l’élément de ruban.  
   
 ```  
@@ -651,7 +765,7 @@ virtual UINT GetNotifyID();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namegetoriginala--cmfcribbonbaseelementgetoriginal"></a><a name="getoriginal"></a>CMFCRibbonBaseElement::GetOriginal  
+##  <a name="getoriginal"></a>CMFCRibbonBaseElement::GetOriginal  
  Récupère l’élément de ruban d’origine.  
   
 ```  
@@ -664,7 +778,7 @@ CMFCRibbonBaseElement* GetOriginal() const;
 ### <a name="remarks"></a>Remarques  
  Les éléments de ruban qui sont copiés vers un autre conteneur conservent un pointeur vers l’élément de ruban d’origine.  
   
-##  <a name="a-namegetparentcategorya--cmfcribbonbaseelementgetparentcategory"></a><a name="getparentcategory"></a>CMFCRibbonBaseElement::GetParentCategory  
+##  <a name="getparentcategory"></a>CMFCRibbonBaseElement::GetParentCategory  
  Récupère la catégorie de ruban de l’élément de ruban.  
   
 ```  
@@ -676,7 +790,7 @@ CMFCRibbonCategory* GetParentCategory() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namegetparentpanela--cmfcribbonbaseelementgetparentpanel"></a><a name="getparentpanel"></a>CMFCRibbonBaseElement::GetParentPanel  
+##  <a name="getparentpanel"></a>CMFCRibbonBaseElement::GetParentPanel  
  Récupère le volet du ruban qui contient l’élément de ruban.  
   
 ```  
@@ -688,7 +802,7 @@ virtual CMFCRibbonPanel* GetParentPanel() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetparentribbonbara--cmfcribbonbaseelementgetparentribbonbar"></a><a name="getparentribbonbar"></a>CMFCRibbonBaseElement::GetParentRibbonBar  
+##  <a name="getparentribbonbar"></a>CMFCRibbonBaseElement::GetParentRibbonBar  
  Récupère le ruban du parent de l’élément de ruban.  
   
 ```  
@@ -700,7 +814,7 @@ CMFCRibbonBar* GetParentRibbonBar() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetparentwnda--cmfcribbonbaseelementgetparentwnd"></a><a name="getparentwnd"></a>CMFCRibbonBaseElement::GetParentWnd  
+##  <a name="getparentwnd"></a>CMFCRibbonBaseElement::GetParentWnd  
  Récupère la fenêtre parente de l’élément de ruban.  
   
 ```  
@@ -713,7 +827,7 @@ virtual CWnd* GetParentWnd() const;
 ### <a name="remarks"></a>Notes  
  La fenêtre parent pour un élément de ruban est une [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md) ou [CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/en-us/7bd4b986-8b7b-493e-9746-bd3161b78581).  
   
-##  <a name="a-namegetpresseda--cmfcribbonbaseelementgetpressed"></a><a name="getpressed"></a>CMFCRibbonBaseElement::GetPressed  
+##  <a name="getpressed"></a>CMFCRibbonBaseElement::GetPressed  
  Récupère un pointeur vers l’élément ribbon si actuellement, l’utilisateur appuie dessus.  
   
 ```  
@@ -725,7 +839,7 @@ virtual CMFCRibbonBaseElement* GetPressed();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetquickaccesstoolbarida--cmfcribbonbaseelementgetquickaccesstoolbarid"></a><a name="getquickaccesstoolbarid"></a>CMFCRibbonBaseElement::GetQuickAccessToolBarID  
+##  <a name="getquickaccesstoolbarid"></a>CMFCRibbonBaseElement::GetQuickAccessToolBarID  
  Récupère l’ID de commande de l’élément de ruban lorsqu’il est situé dans la barre d’outils Accès rapide.  
   
 ```  
@@ -737,7 +851,7 @@ virtual UINT GetQuickAccessToolBarID() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetrecta--cmfcribbonbaseelementgetrect"></a><a name="getrect"></a>CMFCRibbonBaseElement::GetRect  
+##  <a name="getrect"></a>CMFCRibbonBaseElement::GetRect  
  Retourne le rectangle englobant de l’élément de ruban.  
   
 ```  
@@ -747,7 +861,7 @@ CRect GetRect() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le rectangle englobant de l’élément de ruban. La position du rectangle est dans les coordonnées du ruban contrôle parent.  
   
-##  <a name="a-namegetregularsizea--cmfcribbonbaseelementgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonBaseElement::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonBaseElement::GetRegularSize  
  Retourne la taille normale de l'élément de ruban.  
   
 ```  
@@ -766,7 +880,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 > [!NOTE]
 >  La taille standard est la taille maximale possible de l’élément de ruban.  
   
-##  <a name="a-namegetsizea--cmfcribbonbaseelementgetsize"></a><a name="getsize"></a>CMFCRibbonBaseElement::GetSize  
+##  <a name="getsize"></a>CMFCRibbonBaseElement::GetSize  
  Retourne la taille actuelle de l’élément de ruban.  
   
 ```  
@@ -780,7 +894,7 @@ virtual CSize GetSize(CDC* pDC);
 ### <a name="return-value"></a>Valeur de retour  
  La taille actuelle de l’élément de ruban.  
   
-##  <a name="a-namegettexta--cmfcribbonbaseelementgettext"></a><a name="gettext"></a>CMFCRibbonBaseElement::GetText  
+##  <a name="gettext"></a>CMFCRibbonBaseElement::GetText  
  Renvoie le texte associé à l’élément de ruban.  
   
 ```  
@@ -790,7 +904,7 @@ LPCTSTR GetText() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le texte associé à l’élément de ruban.  
   
-##  <a name="a-namegettooltiptexta--cmfcribbonbaseelementgettooltiptext"></a><a name="gettooltiptext"></a>CMFCRibbonBaseElement::GetToolTipText  
+##  <a name="gettooltiptext"></a>CMFCRibbonBaseElement::GetToolTipText  
  Retourne le texte d'info-bulle de l'élément de ruban.  
   
 ```  
@@ -800,7 +914,7 @@ virtual CString GetToolTipText() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le texte info-bulle de l’élément de ruban.  
   
-##  <a name="a-namegettoplevelribbonbara--cmfcribbonbaseelementgettoplevelribbonbar"></a><a name="gettoplevelribbonbar"></a>CMFCRibbonBaseElement::GetTopLevelRibbonBar  
+##  <a name="gettoplevelribbonbar"></a>CMFCRibbonBaseElement::GetTopLevelRibbonBar  
  Récupère la barre Ruban de niveau supérieur de l’élément de ruban.  
   
 ```  
@@ -812,7 +926,7 @@ CMFCRibbonBar* GetTopLevelRibbonBar() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namehascompactmodea--cmfcribbonbaseelementhascompactmode"></a><a name="hascompactmode"></a>CMFCRibbonBaseElement::HasCompactMode  
+##  <a name="hascompactmode"></a>CMFCRibbonBaseElement::HasCompactMode  
  Précise si l'élément de ruban a un mode réduit.  
   
 ```  
@@ -827,7 +941,7 @@ virtual BOOL HasCompactMode() const;
 > [!NOTE]
 >  En mode compact, un élément s’affiche uniquement une petite image.  
   
-##  <a name="a-namehasintermediatemodea--cmfcribbonbaseelementhasintermediatemode"></a><a name="hasintermediatemode"></a>CMFCRibbonBaseElement::HasIntermediateMode  
+##  <a name="hasintermediatemode"></a>CMFCRibbonBaseElement::HasIntermediateMode  
  Précise si l'élément de ruban a un mode intermédiaire.  
   
 ```  
@@ -839,7 +953,7 @@ virtual BOOL HasIntermediateMode() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namehaslargemodea--cmfcribbonbaseelementhaslargemode"></a><a name="haslargemode"></a>CMFCRibbonBaseElement::HasLargeMode  
+##  <a name="haslargemode"></a>CMFCRibbonBaseElement::HasLargeMode  
  Détermine si l'élément de ruban a un mode grand.  
   
 ```  
@@ -852,7 +966,7 @@ virtual BOOL HasLargeMode() const;
 ### <a name="remarks"></a>Notes  
  Dans le mode de grande taille, un élément peut prendre la hauteur totale du panneau parent.  
   
-##  <a name="a-namehasmenua--cmfcribbonbaseelementhasmenu"></a><a name="hasmenu"></a>CMFCRibbonBaseElement::HasMenu  
+##  <a name="hasmenu"></a>CMFCRibbonBaseElement::HasMenu  
  Indique si l’élément de ruban possède un menu.  
   
 ```  
@@ -865,7 +979,7 @@ virtual BOOL HasMenu() const;
 ### <a name="remarks"></a>Remarques  
  Par défaut cette méthode retourne toujours `FALSE`. Substituez cette méthode dans une classe dérivée pour indiquer si l’élément de ruban possède un menu.  
   
-##  <a name="a-namehittesta--cmfcribbonbaseelementhittest"></a><a name="hittest"></a>CMFCRibbonBaseElement::HitTest  
+##  <a name="hittest"></a>CMFCRibbonBaseElement::HitTest  
  Récupère un pointeur vers l’élément ribbon si le point spécifié se trouve dans celui-ci.  
   
 ```  
@@ -882,7 +996,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ### <a name="remarks"></a>Notes  
  Par défaut cette méthode retourne toujours un pointeur valide à l’élément de ruban lorsqu’il existe. Substituez cette méthode pour indiquer si le point se trouve dans l’élément de ruban.  
   
-##  <a name="a-nameisalignbycolumna--cmfcribbonbaseelementisalignbycolumn"></a><a name="isalignbycolumn"></a>CMFCRibbonBaseElement::IsAlignByColumn  
+##  <a name="isalignbycolumn"></a>CMFCRibbonBaseElement::IsAlignByColumn  
  Indique si l’élément de ruban est alignée verticalement avec d’autres éléments de ruban.  
   
 ```  
@@ -895,7 +1009,7 @@ virtual BOOL IsAlignByColumn() const;
 ### <a name="remarks"></a>Remarques  
  Par défaut cette méthode retourne toujours `TRUE`. Substituez cette méthode dans une classe dérivée pour indiquer si l’élément de ruban dérivée est alignée verticalement avec d’autres éléments de ruban.  
   
-##  <a name="a-nameisalwayslargeimagea--cmfcribbonbaseelementisalwayslargeimage"></a><a name="isalwayslargeimage"></a>CMFCRibbonBaseElement::IsAlwaysLargeImage  
+##  <a name="isalwayslargeimage"></a>CMFCRibbonBaseElement::IsAlwaysLargeImage  
  Indique si la taille d’image de l’élément du ruban est toujours important.  
   
 ```  
@@ -908,7 +1022,7 @@ virtual BOOL IsAlwaysLargeImage() const;
 ### <a name="remarks"></a>Notes  
  Taille de l’image de grande taille est de 32 x 32 pixels.  
   
-##  <a name="a-nameisautorepeatmodea--cmfcribbonbaseelementisautorepeatmode"></a><a name="isautorepeatmode"></a>CMFCRibbonBaseElement::IsAutoRepeatMode  
+##  <a name="isautorepeatmode"></a>CMFCRibbonBaseElement::IsAutoRepeatMode  
  Indique si l’élément de ruban est automatiquement en mode de répétition.  
   
 ```  
@@ -927,7 +1041,7 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
   
  Auto mode de répétition, l’élément de ruban répond à un intervalle défini, mesurée en millisecondes, à l’entrée utilisateur soutenue.  
   
-##  <a name="a-nameischeckeda--cmfcribbonbaseelementischecked"></a><a name="ischecked"></a>CMFCRibbonBaseElement::IsChecked  
+##  <a name="ischecked"></a>CMFCRibbonBaseElement::IsChecked  
  Spécifie si l’élément de ruban est vérifiée.  
   
 ```  
@@ -937,7 +1051,7 @@ virtual BOOL IsChecked() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si l’élément de ruban est activé ; dans le cas contraire `FALSE`.  
   
-##  <a name="a-nameiscompactmodea--cmfcribbonbaseelementiscompactmode"></a><a name="iscompactmode"></a>CMFCRibbonBaseElement::IsCompactMode  
+##  <a name="iscompactmode"></a>CMFCRibbonBaseElement::IsCompactMode  
  Spécifie si l’élément de ruban est en mode compact.  
   
 ```  
@@ -947,7 +1061,7 @@ BOOL IsCompactMode() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si l’élément de ruban est en mode compact ; dans le cas contraire `FALSE`.  
   
-##  <a name="a-nameisdefaultmenulooka--cmfcribbonbaseelementisdefaultmenulook"></a><a name="isdefaultmenulook"></a>CMFCRibbonBaseElement::IsDefaultMenuLook  
+##  <a name="isdefaultmenulook"></a>CMFCRibbonBaseElement::IsDefaultMenuLook  
  Indique si l’élément de ruban est définie sur apparaissent sous la forme d’une commande contextuelle.  
   
 ```  
@@ -959,7 +1073,7 @@ BOOL IsDefaultMenuLook() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameisdisableda--cmfcribbonbaseelementisdisabled"></a><a name="isdisabled"></a>CMFCRibbonBaseElement::IsDisabled  
+##  <a name="isdisabled"></a>CMFCRibbonBaseElement::IsDisabled  
  Spécifie si l’élément de ruban est désactivé.  
   
 ```  
@@ -969,7 +1083,7 @@ virtual BOOL IsDisabled() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si l’élément de ruban est désactivé ; dans le cas contraire `FALSE`.  
   
-##  <a name="a-nameisdroppeddowna--cmfcribbonbaseelementisdroppeddown"></a><a name="isdroppeddown"></a>CMFCRibbonBaseElement::IsDroppedDown  
+##  <a name="isdroppeddown"></a>CMFCRibbonBaseElement::IsDroppedDown  
  Spécifie si l’élément de ruban affiche un menu contextuel et est déroulée.  
   
 ```  
@@ -979,7 +1093,7 @@ virtual BOOL IsDroppedDown() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si l’élément de ruban est déroulée et affiche un menu contextuel. dans le cas contraire `FALSE`.  
   
-##  <a name="a-nameisfocuseda--cmfcribbonbaseelementisfocused"></a><a name="isfocused"></a>CMFCRibbonBaseElement::IsFocused  
+##  <a name="isfocused"></a>CMFCRibbonBaseElement::IsFocused  
  Spécifie si l’élément de ruban a le focus.  
   
 ```  
@@ -989,7 +1103,7 @@ virtual BOOL IsFocused() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si l’élément de ruban a le focus ; dans le cas contraire `FALSE`.  
   
-##  <a name="a-nameisgalleryicona--cmfcribbonbaseelementisgalleryicon"></a><a name="isgalleryicon"></a>CMFCRibbonBaseElement::IsGalleryIcon  
+##  <a name="isgalleryicon"></a>CMFCRibbonBaseElement::IsGalleryIcon  
  Indique si l’élément de ruban est contenue dans une galerie de ruban.  
   
 ```  
@@ -1002,7 +1116,7 @@ virtual BOOL IsGalleryIcon() const;
 ### <a name="remarks"></a>Notes  
  Par défaut cette méthode retourne toujours `FALSE`. Substituez cette méthode dans une classe dérivée pour indiquer si l’élément de ruban est contenue dans une galerie de ruban.  
   
-##  <a name="a-nameishighlighteda--cmfcribbonbaseelementishighlighted"></a><a name="ishighlighted"></a>CMFCRibbonBaseElement::IsHighlighted  
+##  <a name="ishighlighted"></a>CMFCRibbonBaseElement::IsHighlighted  
  Spécifie si l’élément de ruban est mis en surbrillance.  
   
 ```  
@@ -1014,7 +1128,7 @@ virtual BOOL IsHighlighted() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameisintermediatemodea--cmfcribbonbaseelementisintermediatemode"></a><a name="isintermediatemode"></a>CMFCRibbonBaseElement::IsIntermediateMode  
+##  <a name="isintermediatemode"></a>CMFCRibbonBaseElement::IsIntermediateMode  
  Indique si l’image actuelle pour l’élément de ruban est de taille intermédiaire.  
   
 ```  
@@ -1027,7 +1141,7 @@ BOOL IsIntermediateMode() const;
 ### <a name="remarks"></a>Notes  
  Taille de l’image intermédiaire est 16 x 16 pixels.  
   
-##  <a name="a-nameislargemodea--cmfcribbonbaseelementislargemode"></a><a name="islargemode"></a>CMFCRibbonBaseElement::IsLargeMode  
+##  <a name="islargemode"></a>CMFCRibbonBaseElement::IsLargeMode  
  Indique si l’image actuelle pour l’élément de ruban est de grande taille.  
   
 ```  
@@ -1040,7 +1154,7 @@ BOOL IsLargeMode() const;
 ### <a name="remarks"></a>Remarques  
  Taille de l’image de grande taille est de 32 x 32 pixels.  
   
-##  <a name="a-nameismenumodea--cmfcribbonbaseelementismenumode"></a><a name="ismenumode"></a>CMFCRibbonBaseElement::IsMenuMode  
+##  <a name="ismenumode"></a>CMFCRibbonBaseElement::IsMenuMode  
  Indique si l’élément de ruban est contenue dans un menu.  
   
 ```  
@@ -1052,7 +1166,7 @@ BOOL IsMenuMode() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameispresseda--cmfcribbonbaseelementispressed"></a><a name="ispressed"></a>CMFCRibbonBaseElement::IsPressed  
+##  <a name="ispressed"></a>CMFCRibbonBaseElement::IsPressed  
  Indique si l’utilisateur a cliqué sur l’élément de ruban.  
   
 ```  
@@ -1062,7 +1176,7 @@ virtual BOOL IsPressed() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si l’utilisateur a cliqué sur l’élément de ruban ; dans le cas contraire `FALSE`.  
   
-##  <a name="a-nameisqatmodea--cmfcribbonbaseelementisqatmode"></a><a name="isqatmode"></a>CMFCRibbonBaseElement::IsQATMode  
+##  <a name="isqatmode"></a>CMFCRibbonBaseElement::IsQATMode  
  Indique si l’élément de ruban est contenue dans la barre d’outils Accès rapide.  
   
 ```  
@@ -1074,7 +1188,7 @@ BOOL IsQATMode() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameisseparatora--cmfcribbonbaseelementisseparator"></a><a name="isseparator"></a>CMFCRibbonBaseElement::IsSeparator  
+##  <a name="isseparator"></a>CMFCRibbonBaseElement::IsSeparator  
  Indique si l’élément de ruban est un séparateur d’affichage.  
   
 ```  
@@ -1086,7 +1200,7 @@ virtual BOOL IsSeparator() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameisshowgroupbordera--cmfcribbonbaseelementisshowgroupborder"></a><a name="isshowgroupborder"></a>CMFCRibbonBaseElement::IsShowGroupBorder  
+##  <a name="isshowgroupborder"></a>CMFCRibbonBaseElement::IsShowGroupBorder  
  Indique si l’élément de ruban est contenue dans un groupe qui affiche une frontière commune.  
   
 ```  
@@ -1098,7 +1212,7 @@ BOOL IsShowGroupBorder() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameisshowtooltiponbottoma--cmfcribbonbaseelementisshowtooltiponbottom"></a><a name="isshowtooltiponbottom"></a>CMFCRibbonBaseElement::IsShowTooltipOnBottom  
+##  <a name="isshowtooltiponbottom"></a>CMFCRibbonBaseElement::IsShowTooltipOnBottom  
  Indique si l’info-bulle est affichée sous l’élément de ruban.  
   
 ```  
@@ -1110,7 +1224,7 @@ virtual BOOL IsShowTooltipOnBottom() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameistabstopa--cmfcribbonbaseelementistabstop"></a><a name="istabstop"></a>CMFCRibbonBaseElement::IsTabStop  
+##  <a name="istabstop"></a>CMFCRibbonBaseElement::IsTabStop  
  Indique si l’élément de ruban peut être sélectionné à l’aide du clavier.  
   
 ```  
@@ -1123,7 +1237,7 @@ virtual BOOL IsTabStop() const;
 ### <a name="remarks"></a>Notes  
  Par défaut cette méthode retourne toujours `TRUE`. Substituez cette méthode pour indiquer si l’élément de ruban peut être sélectionné à l’aide du clavier.  
   
-##  <a name="a-nameistextalwaysonrighta--cmfcribbonbaseelementistextalwaysonright"></a><a name="istextalwaysonright"></a>CMFCRibbonBaseElement::IsTextAlwaysOnRight  
+##  <a name="istextalwaysonright"></a>CMFCRibbonBaseElement::IsTextAlwaysOnRight  
  Indique si le texte de l’élément de ruban est affiché sur la droite.  
   
 ```  
@@ -1135,7 +1249,7 @@ BOOL IsTextAlwaysOnRight() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameisvisiblea--cmfcribbonbaseelementisvisible"></a><a name="isvisible"></a>CMFCRibbonBaseElement::IsVisible  
+##  <a name="isvisible"></a>CMFCRibbonBaseElement::IsVisible  
  Indique si l’élément de ruban est actuellement affiché.  
   
 ```  
@@ -1147,7 +1261,7 @@ BOOL IsVisible() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameiswholerowheighta--cmfcribbonbaseelementiswholerowheight"></a><a name="iswholerowheight"></a>CMFCRibbonBaseElement::IsWholeRowHeight  
+##  <a name="iswholerowheight"></a>CMFCRibbonBaseElement::IsWholeRowHeight  
  Indique si la hauteur d’affichage de l’élément de ruban est identique à la hauteur d’affichage du Panneau de ruban qui le contient.  
   
 ```  
@@ -1160,7 +1274,7 @@ virtual BOOL IsWholeRowHeight() const;
 ### <a name="remarks"></a>Remarques  
  Par défaut cette méthode retourne toujours `FALSE`. Substituez cette méthode pour indiquer si la hauteur d’affichage de l’élément de ruban est identique à la hauteur d’affichage du Panneau de ruban qui le contient.  
   
-##  <a name="a-namenotifycommanda--cmfcribbonbaseelementnotifycommand"></a><a name="notifycommand"></a>CMFCRibbonBaseElement::NotifyCommand  
+##  <a name="notifycommand"></a>CMFCRibbonBaseElement::NotifyCommand  
  Envoie une notification de commande de la fenêtre parente de l’élément de ruban.  
   
 ```  
@@ -1176,7 +1290,7 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namenotifyhighlightlistitema--cmfcribbonbaseelementnotifyhighlightlistitem"></a><a name="notifyhighlightlistitem"></a>CMFCRibbonBaseElement::NotifyHighlightListItem  
+##  <a name="notifyhighlightlistitem"></a>CMFCRibbonBaseElement::NotifyHighlightListItem  
  Avertit la fenêtre parente de la barre Ruban lorsqu’un utilisateur met en surbrillance un élément de ruban qui se trouve dans une liste.  
   
 ```  
@@ -1189,7 +1303,7 @@ virtual void NotifyHighlightListItem(int nIndex);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonaddtoqatoolbara--cmfcribbonbaseelementonaddtoqatoolbar"></a><a name="onaddtoqatoolbar"></a>CMFCRibbonBaseElement::OnAddToQAToolbar  
+##  <a name="onaddtoqatoolbar"></a>CMFCRibbonBaseElement::OnAddToQAToolbar  
  Ajoute l’élément de ruban à la barre d’outils Accès rapide spécifié.  
   
 ```  
@@ -1205,7 +1319,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonafterchangerecta--cmfcribbonbaseelementonafterchangerect"></a><a name="onafterchangerect"></a>CMFCRibbonBaseElement::OnAfterChangeRect  
+##  <a name="onafterchangerect"></a>CMFCRibbonBaseElement::OnAfterChangeRect  
  Met à jour l’info-bulle pour l’élément de ruban.  
   
 ```  
@@ -1219,7 +1333,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ### <a name="remarks"></a>Notes  
  Par défaut cette méthode met à jour l’info-bulle pour l’élément de ruban. Substituez cette méthode pour mettre à jour l’élément de ruban après que son rectangle d’affichage a été modifié.  
   
-##  <a name="a-nameonautorepeata--cmfcribbonbaseelementonautorepeat"></a><a name="onautorepeat"></a>CMFCRibbonBaseElement::OnAutoRepeat  
+##  <a name="onautorepeat"></a>CMFCRibbonBaseElement::OnAutoRepeat  
  Met à jour l’élément de ruban en réponse à une entrée utilisateur soutenue.  
   
 ```  
@@ -1232,7 +1346,7 @@ virtual BOOL OnAutoRepeat();
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode retourne toujours `FALSE`. Substituez cette méthode pour traiter l’entrée d’utilisateur soutenue.  
   
-##  <a name="a-nameoncalctextsizea--cmfcribbonbaseelementoncalctextsize"></a><a name="oncalctextsize"></a>CMFCRibbonBaseElement::OnCalcTextSize  
+##  <a name="oncalctextsize"></a>CMFCRibbonBaseElement::OnCalcTextSize  
  Calcule la taille du texte de l’élément de ruban.  
   
 ```  
@@ -1246,7 +1360,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ### <a name="remarks"></a>Remarques  
  Par défaut, cette méthode ne fait rien. Substituez cette méthode pour calculer la taille du texte de l’élément de ruban.  
   
-##  <a name="a-nameonchangemenuhighlighta--cmfcribbonbaseelementonchangemenuhighlight"></a><a name="onchangemenuhighlight"></a>CMFCRibbonBaseElement::OnChangeMenuHighlight  
+##  <a name="onchangemenuhighlight"></a>CMFCRibbonBaseElement::OnChangeMenuHighlight  
  Appelé par l’infrastructure lorsque la sélection change pour un élément de ruban qui se trouve dans un menu.  
   
 ```  
@@ -1264,7 +1378,7 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode ne fait rien. Substituez cette méthode pour mettre à jour un élément de ruban qui se trouve dans un menu lorsque la sélection change.  
   
-##  <a name="a-nameondrawa--cmfcribbonbaseelementondraw"></a><a name="ondraw"></a>CMFCRibbonBaseElement::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonBaseElement::OnDraw  
  Appelé par l'infrastructure pour dessiner l'élément de ruban.  
   
 ```  
@@ -1278,7 +1392,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 ### <a name="remarks"></a>Remarques  
  Substituez cette méthode dans une classe dérivée si vous souhaitez personnaliser le dessin d’un élément de ruban spécifique.  
   
-##  <a name="a-nameondrawkeytipa--cmfcribbonbaseelementondrawkeytip"></a><a name="ondrawkeytip"></a>CMFCRibbonBaseElement::OnDrawKeyTip  
+##  <a name="ondrawkeytip"></a>CMFCRibbonBaseElement::OnDrawKeyTip  
  Appelé par l’infrastructure pour dessiner la touche d’accès de l’élément de ruban.  
   
 ```  
@@ -1300,7 +1414,7 @@ virtual void OnDrawKeyTip(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameondrawmenuimagea--cmfcribbonbaseelementondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMFCRibbonBaseElement::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>CMFCRibbonBaseElement::OnDrawMenuImage  
  Appelé par l’infrastructure lors du dessin de l’image de menu pour l’élément de ruban.  
   
 ```  
@@ -1321,7 +1435,7 @@ virtual BOOL OnDrawMenuImage(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameondrawonlista--cmfcribbonbaseelementondrawonlist"></a><a name="ondrawonlist"></a>CMFCRibbonBaseElement::OnDrawOnList  
+##  <a name="ondrawonlist"></a>CMFCRibbonBaseElement::OnDrawOnList  
  Appelé par l’infrastructure pour dessiner l’élément de ruban dans une zone de liste de commandes.  
   
 ```  
@@ -1356,7 +1470,7 @@ virtual void OnDrawOnList(
 ### <a name="remarks"></a>Notes  
  La zone de liste de commandes affiche les éléments de ruban pour permettre aux utilisateurs de personnaliser la barre d’outils Accès rapide.  
   
-##  <a name="a-nameonkeya--cmfcribbonbaseelementonkey"></a><a name="onkey"></a>CMFCRibbonBaseElement::OnKey  
+##  <a name="onkey"></a>CMFCRibbonBaseElement::OnKey  
  Appelé par l’infrastructure lorsque l’utilisateur appuie sur une touche d’accès et l’élément de ruban a le focus.  
   
 ```  
@@ -1372,7 +1486,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonmenukeya--cmfcribbonbaseelementonmenukey"></a><a name="onmenukey"></a>CMFCRibbonBaseElement::OnMenuKey  
+##  <a name="onmenukey"></a>CMFCRibbonBaseElement::OnMenuKey  
  Appelé par l’infrastructure lorsque l’utilisateur appuie sur une touche d’accès menu sur le panneau principal.  
   
 ```  
@@ -1389,7 +1503,7 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ### <a name="remarks"></a>Remarques  
  Par défaut cette méthode retourne toujours `FALSE`. Substituez cette méthode pour répondre lorsque l’utilisateur appuie sur une touche d’accès menu sur le panneau principal.  
   
-##  <a name="a-nameonprocesskeya--cmfcribbonbaseelementonprocesskey"></a><a name="onprocesskey"></a>CMFCRibbonBaseElement::OnProcessKey  
+##  <a name="onprocesskey"></a>CMFCRibbonBaseElement::OnProcessKey  
  Appelé par l’infrastructure lorsque l’utilisateur appuie sur une touche de raccourci.  
   
 ```  
@@ -1406,7 +1520,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode si vous souhaitez que l’élément de ruban pour traiter une touche de raccourci.  
   
-##  <a name="a-nameonrtlchangeda--cmfcribbonbaseelementonrtlchanged"></a><a name="onrtlchanged"></a>CMFCRibbonBaseElement::OnRTLChanged  
+##  <a name="onrtlchanged"></a>CMFCRibbonBaseElement::OnRTLChanged  
  Appelé par l’infrastructure lorsque la disposition change de direction.  
   
 ```  
@@ -1420,7 +1534,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode ne fait rien. Substituez cette méthode pour ajuster l’élément ribbon lorsque la disposition change de direction. Le sens de la disposition par défaut est de gauche à droite.  
   
-##  <a name="a-nameonsetfocusa--cmfcribbonbaseelementonsetfocus"></a><a name="onsetfocus"></a>CMFCRibbonBaseElement::OnSetFocus  
+##  <a name="onsetfocus"></a>CMFCRibbonBaseElement::OnSetFocus  
  Appelé par l’infrastructure lorsqu’un élément de ruban reçoit ou perd le focus d’entrée.  
   
 ```  
@@ -1430,7 +1544,7 @@ virtual void OnSetFocus(BOOL B);
 ### <a name="remarks"></a>Remarques  
  Substituez cette méthode dans une classe dérivée si vous souhaitez que votre application pour gérer une modification dans le focus d’un élément de ruban.  
   
-##  <a name="a-nameonshowa--cmfcribbonbaseelementonshow"></a><a name="onshow"></a>CMFCRibbonBaseElement::OnShow  
+##  <a name="onshow"></a>CMFCRibbonBaseElement::OnShow  
  Appelé par l’infrastructure pour afficher ou masquer l’élément de ruban.  
   
 ```  
@@ -1444,7 +1558,7 @@ virtual void OnShow(BOOL bShow);
 ### <a name="remarks"></a>Remarques  
  Par défaut, cette méthode ne fait rien. Substituez cette méthode pour afficher ou masquer l’élément de ruban.  
   
-##  <a name="a-nameonshowpopupmenua--cmfcribbonbaseelementonshowpopupmenu"></a><a name="onshowpopupmenu"></a>CMFCRibbonBaseElement::OnShowPopupMenu  
+##  <a name="onshowpopupmenu"></a>CMFCRibbonBaseElement::OnShowPopupMenu  
  Appelée par l’infrastructure avant que l’élément de ruban affiche un menu contextuel.  
   
 ```  
@@ -1454,7 +1568,7 @@ virtual void OnShowPopupMenu();
 ### <a name="remarks"></a>Notes  
  Cette méthode avertit la fenêtre parente de la barre Ruban que l’élément de ruban affiche un menu contextuel.  
   
-##  <a name="a-namepostmenucommanda--cmfcribbonbaseelementpostmenucommand"></a><a name="postmenucommand"></a>CMFCRibbonBaseElement::PostMenuCommand  
+##  <a name="postmenucommand"></a>CMFCRibbonBaseElement::PostMenuCommand  
  Ferme le menu contextuel pour l’élément de ruban et envoie un message de fermeture au menu parent.  
   
 ```  
@@ -1468,7 +1582,7 @@ void PostMenuCommand(UINT uiCmdId);
 ### <a name="remarks"></a>Notes  
  Le message de fermeture est envoyé uniquement si l’élément de ruban se trouve sur le menu contextuel.  
   
-##  <a name="a-nameredrawa--cmfcribbonbaseelementredraw"></a><a name="redraw"></a>CMFCRibbonBaseElement::Redraw  
+##  <a name="redraw"></a>CMFCRibbonBaseElement::Redraw  
  Met à jour l’affichage de l’élément de ruban.  
   
 ```  
@@ -1478,7 +1592,7 @@ virtual void Redraw();
 ### <a name="remarks"></a>Notes  
  Cette méthode redessine le rectangle d’affichage de l’élément de ruban en appelant [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) avec la `RDW_INVALIDATE`, `RDW_ERASE`, et `RDW_UPDATENOW` indicateurs définis.  
   
-##  <a name="a-namesetaccdataa--cmfcribbonbaseelementsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonBaseElement::SetACCData  
+##  <a name="setaccdata"></a>CMFCRibbonBaseElement::SetACCData  
  Définit les données d’accessibilité de l’élément ruban.  
   
 ```  
@@ -1500,7 +1614,7 @@ virtual BOOL SetACCData(
 ### <a name="remarks"></a>Remarques  
  Par défaut, cette méthode définit les données d’accessibilité de l’élément ruban et retourne toujours `TRUE`. Remplacez cette méthode pour définir l’accessibilité des données et retourner une valeur qui indique la réussite ou l’échec.  
   
-##  <a name="a-namesetcompactmodea--cmfcribbonbaseelementsetcompactmode"></a><a name="setcompactmode"></a>CMFCRibbonBaseElement::SetCompactMode  
+##  <a name="setcompactmode"></a>CMFCRibbonBaseElement::SetCompactMode  
  Définit la taille d’affichage de l’élément de ruban.  
   
 ```  
@@ -1521,7 +1635,7 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 |`TRUE`|Grande|Les intermédiaires si possible.|  
 |`FALSE`|Compact|Les intermédiaires si possible ; dans le cas contraire volumineux.|  
   
-##  <a name="a-namesetdataa--cmfcribbonbaseelementsetdata"></a><a name="setdata"></a>CMFCRibbonBaseElement::SetData  
+##  <a name="setdata"></a>CMFCRibbonBaseElement::SetData  
  Associe un élément de données à l’élément de ruban.  
   
 ```  
@@ -1532,7 +1646,7 @@ void SetData(DWORD_PTR dwData);
  [in] `dwData`  
  La valeur de données.  
   
-##  <a name="a-namesetdefaultmenulooka--cmfcribbonbaseelementsetdefaultmenulook"></a><a name="setdefaultmenulook"></a>CMFCRibbonBaseElement::SetDefaultMenuLook  
+##  <a name="setdefaultmenulook"></a>CMFCRibbonBaseElement::SetDefaultMenuLook  
  Définit l’élément de ruban apparaisse comme une commande contextuelle.  
   
 ```  
@@ -1545,7 +1659,7 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namesetdescriptiona--cmfcribbonbaseelementsetdescription"></a><a name="setdescription"></a>CMFCRibbonBaseElement::SetDescription  
+##  <a name="setdescription"></a>CMFCRibbonBaseElement::SetDescription  
  Définit la description de l'élément de ruban.  
   
 ```  
@@ -1559,7 +1673,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ### <a name="remarks"></a>Remarques  
  Le framework affiche la nouvelle description dans la barre d’état, ou dans l’info-bulle ou sous le bouton de menu.  
   
-##  <a name="a-namesetida--cmfcribbonbaseelementsetid"></a><a name="setid"></a>CMFCRibbonBaseElement::SetID  
+##  <a name="setid"></a>CMFCRibbonBaseElement::SetID  
  Définit l’ID de commande de l’élément de ruban.  
   
 ```  
@@ -1570,7 +1684,7 @@ virtual void SetID(UINT nID);
  [in] `nID`  
  ID de la commande.  
   
-##  <a name="a-namesetinitialmodea--cmfcribbonbaseelementsetinitialmode"></a><a name="setinitialmode"></a>CMFCRibbonBaseElement::SetInitialMode  
+##  <a name="setinitialmode"></a>CMFCRibbonBaseElement::SetInitialMode  
  Définit la taille d’affichage initial de l’élément de ruban.  
   
 ```  
@@ -1584,7 +1698,7 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ### <a name="remarks"></a>Notes  
  La taille d’affichage d’éléments de ruban peut être compact, intermédiaire ou de grande taille.  
   
-##  <a name="a-namesetkeysa--cmfcribbonbaseelementsetkeys"></a><a name="setkeys"></a>CMFCRibbonBaseElement::SetKeys  
+##  <a name="setkeys"></a>CMFCRibbonBaseElement::SetKeys  
  Définit l’info-bulle pour l’élément de ruban.  
   
 ```  
@@ -1600,7 +1714,7 @@ virtual void SetKeys(
  [in] `lpszMenuKeys`  
  La touche d’accès pour le menu contextuel de l’élément de ruban.  
   
-##  <a name="a-namesetoriginala--cmfcribbonbaseelementsetoriginal"></a><a name="setoriginal"></a>CMFCRibbonBaseElement::SetOriginal  
+##  <a name="setoriginal"></a>CMFCRibbonBaseElement::SetOriginal  
  Définit l’élément de ruban d’origine pour l’élément de ruban.  
   
 ```  
@@ -1614,7 +1728,7 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ### <a name="remarks"></a>Notes  
  Les éléments de ruban qui sont copiés vers un autre conteneur conservent un pointeur vers l’élément de ruban d’origine.  
   
-##  <a name="a-namesetparentcategorya--cmfcribbonbaseelementsetparentcategory"></a><a name="setparentcategory"></a>CMFCRibbonBaseElement::SetParentCategory  
+##  <a name="setparentcategory"></a>CMFCRibbonBaseElement::SetParentCategory  
  Définit la catégorie parente de l’élément de ruban.  
   
 ```  
@@ -1628,7 +1742,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ### <a name="remarks"></a>Notes  
  Les groupes d’onglets dans les contrôles de ruban sont appelés des catégories.  
   
-##  <a name="a-namesetparentmenua--cmfcribbonbaseelementsetparentmenu"></a><a name="setparentmenu"></a>CMFCRibbonBaseElement::SetParentMenu  
+##  <a name="setparentmenu"></a>CMFCRibbonBaseElement::SetParentMenu  
  Définit le parent conteneur du menu de l’élément de ruban.  
   
 ```  
@@ -1641,7 +1755,7 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namesetparentribbonbara--cmfcribbonbaseelementsetparentribbonbar"></a><a name="setparentribbonbar"></a>CMFCRibbonBaseElement::SetParentRibbonBar  
+##  <a name="setparentribbonbar"></a>CMFCRibbonBaseElement::SetParentRibbonBar  
  Définit la barre de ruban parent pour l’élément de ruban.  
   
 ```  
@@ -1654,7 +1768,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetrecta--cmfcribbonbaseelementsetrect"></a><a name="setrect"></a>CMFCRibbonBaseElement::SetRect  
+##  <a name="setrect"></a>CMFCRibbonBaseElement::SetRect  
  Définit les dimensions du rectangle d’affichage de l’élément de ruban.  
   
 ```  
@@ -1667,7 +1781,7 @@ void SetRect(CRect rect);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesettexta--cmfcribbonbaseelementsettext"></a><a name="settext"></a>CMFCRibbonBaseElement::SetText  
+##  <a name="settext"></a>CMFCRibbonBaseElement::SetText  
  Définit le texte et la touche d’accès de l’élément de ruban.  
   
 ```  
@@ -1692,7 +1806,7 @@ SetText(_T("Margins\nm"))
 SetText(_T("Line Numbers\nln"))  
 ```  
   
-##  <a name="a-namesettextalwaysonrighta--cmfcribbonbaseelementsettextalwaysonright"></a><a name="settextalwaysonright"></a>CMFCRibbonBaseElement::SetTextAlwaysOnRight  
+##  <a name="settextalwaysonright"></a>CMFCRibbonBaseElement::SetTextAlwaysOnRight  
  Définit le texte de l’élément de ruban à afficher sur la droite.  
   
 ```  
@@ -1705,7 +1819,7 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namesettooltiptexta--cmfcribbonbaseelementsettooltiptext"></a><a name="settooltiptext"></a>CMFCRibbonBaseElement::SetToolTipText  
+##  <a name="settooltiptext"></a>CMFCRibbonBaseElement::SetToolTipText  
  Définit le texte info-bulle pour l’élément de ruban.  
   
 ```  
@@ -1716,7 +1830,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
  [in] `lpszText`  
  Le texte info-bulle.  
   
-##  <a name="a-namesetvisiblea--cmfcribbonbaseelementsetvisible"></a><a name="setvisible"></a>CMFCRibbonBaseElement::SetVisible  
+##  <a name="setvisible"></a>CMFCRibbonBaseElement::SetVisible  
  Définit la visibilité de l’élément de ruban.  
   
 ```  
@@ -1729,7 +1843,7 @@ void SetVisible(BOOL bIsVisible);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namestretchhorizontallya--cmfcribbonbaseelementstretchhorizontally"></a><a name="stretchhorizontally"></a>CMFCRibbonBaseElement::StretchHorizontally  
+##  <a name="stretchhorizontally"></a>CMFCRibbonBaseElement::StretchHorizontally  
  Étend la largeur de l’élément de ruban.  
   
 ```  
@@ -1739,7 +1853,7 @@ virtual void StretchHorizontally();
 ### <a name="remarks"></a>Notes  
  Par défaut, cette méthode génère un échec d’assertion dans les versions debug et ne doit donc pas être appelée. Substituez cette méthode pour s’étendre à la largeur de l’élément de ruban.  
   
-##  <a name="a-namestretchtowholerowa--cmfcribbonbaseelementstretchtowholerow"></a><a name="stretchtowholerow"></a>CMFCRibbonBaseElement::StretchToWholeRow  
+##  <a name="stretchtowholerow"></a>CMFCRibbonBaseElement::StretchToWholeRow  
  Modifie la hauteur d’affichage de l’élément de ruban de la hauteur de ligne spécifiée.  
   
 ```  
@@ -1761,7 +1875,7 @@ virtual BOOL StretchToWholeRow(
 ### <a name="remarks"></a>Remarques  
  Substituez cette méthode pour modifier la hauteur d’affichage de l’élément de ruban de la hauteur de ligne spécifiée.  
   
-##  <a name="a-nameupdatetooltipinfoa--cmfcribbonbaseelementupdatetooltipinfo"></a><a name="updatetooltipinfo"></a>CMFCRibbonBaseElement::UpdateTooltipInfo  
+##  <a name="updatetooltipinfo"></a>CMFCRibbonBaseElement::UpdateTooltipInfo  
  Met à jour le texte d’info-bulle à l’aide de la ressource de commande pour l’élément de ruban.  
   
 ```  
@@ -1770,7 +1884,7 @@ virtual void UpdateTooltipInfo();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namehasfocusa--cmfcribbonbaseelementhasfocus"></a><a name="hasfocus"></a>CMFCRibbonBaseElement::HasFocus  
+##  <a name="hasfocus"></a>CMFCRibbonBaseElement::HasFocus  
  Indique si l’élément parent a le focus clavier.  
   
 ```  

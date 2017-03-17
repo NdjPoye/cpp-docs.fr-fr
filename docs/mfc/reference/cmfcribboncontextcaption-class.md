@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonContextCaption
+- AFXRIBBONBAR/CMFCRibbonContextCaption
+- AFXRIBBONBAR/CMFCRibbonContextCaption::GetColor
+- AFXRIBBONBAR/CMFCRibbonContextCaption::GetRightTabX
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,7 +79,7 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxRibbonBar.h  
   
-##  <a name="a-namegetcolora--cmfcribboncontextcaptiongetcolor"></a><a name="getcolor"></a>CMFCRibbonContextCaption::GetColor  
+##  <a name="getcolor"></a>CMFCRibbonContextCaption::GetColor  
  Retourne la couleur d’arrière-plan de la légende.  
   
 ```  
@@ -105,7 +108,7 @@ AFX_RibbonCategoryColor GetColor() const;
 ### <a name="remarks"></a>Remarques  
  La couleur de la légende peut être définie en appelant [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) ou [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).  
   
-##  <a name="a-namegetrighttabxa--cmfcribboncontextcaptiongetrighttabx"></a><a name="getrighttabx"></a>CMFCRibbonContextCaption::GetRightTabX  
+##  <a name="getrighttabx"></a>CMFCRibbonContextCaption::GetRightTabX  
  Récupère la position du bord droit de l’onglet de ruban de la catégorie.  
   
 ```  

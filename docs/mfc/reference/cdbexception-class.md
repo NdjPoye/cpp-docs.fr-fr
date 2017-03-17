@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDBException
+- AFXDB/CDBException
+- AFXDB/CDBException::m_nRetCode
+- AFXDB/CDBException::m_strError
+- AFXDB/CDBException::m_strStateNativeOrigin
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +88,7 @@ class CDBException : public CException
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdb.h  
   
-##  <a name="a-namemnretcodea--cdbexceptionmnretcode"></a><a name="m_nretcode"></a>CDBException::m_nRetCode  
+##  <a name="m_nretcode"></a>CDBException::m_nRetCode  
  Contient un code d’erreur de type ODBC **et RETCODE contient** retourné par une fonction d’API (interface) de programmation d’application ODBC.  
   
 ### <a name="remarks"></a>Notes  
@@ -134,13 +138,13 @@ class CDBException : public CException
   
  Les codes SQL avec le préfixe sont définis par ODBC. Les codes préfixée par sa AFX sont définies dans AFXDB. H, trouvé dans MFC\INCLUDE.  
   
-##  <a name="a-namemstrerrora--cdbexceptionmstrerror"></a><a name="m_strerror"></a>CDBException::m_strError  
+##  <a name="m_strerror"></a>CDBException::m_strError  
  Contient une chaîne décrivant l’erreur qui a provoqué l’exception.  
   
 ### <a name="remarks"></a>Remarques  
  La chaîne décrit l’erreur en termes alphanumérique. Pour plus d’informations, consultez **m_strStateNativeOrigin**.  
   
-##  <a name="a-namemstrstatenativeorigina--cdbexceptionmstrstatenativeorigin"></a><a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
+##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
  Contient une chaîne décrivant l’erreur qui a provoqué l’exception.  
   
 ### <a name="remarks"></a>Remarques  

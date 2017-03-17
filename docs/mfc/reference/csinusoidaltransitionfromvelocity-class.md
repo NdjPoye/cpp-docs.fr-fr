@@ -10,7 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSinusoidalTransitionFromVelocity
-- afxanimationcontroller/CSinusoidalTransitionFromVelocity
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::Create
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::m_duration
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::m_period
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +87,7 @@ class CSinusoidalTransitionFromVelocity : public CBaseTransition;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="a-namecreatea--csinusoidaltransitionfromvelocitycreate"></a><a name="create"></a>CSinusoidalTransitionFromVelocity::Create  
+##  <a name="create"></a>CSinusoidalTransitionFromVelocity::Create  
  Appelle la bibliothèque des transitions pour créer l’objet COM de transition encapsulé.  
   
 ```  
@@ -99,7 +103,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la transition est créée avec succès ; Sinon, FALSE.  
   
-##  <a name="a-namecsinusoidaltransitionfromvelocitya--csinusoidaltransitionfromvelocitycsinusoidaltransitionfromvelocity"></a><a name="csinusoidaltransitionfromvelocity"></a>CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity  
+##  <a name="csinusoidaltransitionfromvelocity"></a>CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity  
  Construit un objet de transition.  
   
 ```  
@@ -115,14 +119,14 @@ CSinusoidalTransitionFromVelocity(
  `period`  
  La période d’oscillation de l’onde sinusoïdale en secondes.  
   
-##  <a name="a-namemdurationa--csinusoidaltransitionfromvelocitymduration"></a><a name="m_duration"></a>CSinusoidalTransitionFromVelocity::m_duration  
+##  <a name="m_duration"></a>CSinusoidalTransitionFromVelocity::m_duration  
  La durée de la transition.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="a-namemperioda--csinusoidaltransitionfromvelocitymperiod"></a><a name="m_period"></a>CSinusoidalTransitionFromVelocity::m_period  
+##  <a name="m_period"></a>CSinusoidalTransitionFromVelocity::m_period  
  La période d’oscillation de l’onde sinusoïdale en secondes.  
   
 ```  

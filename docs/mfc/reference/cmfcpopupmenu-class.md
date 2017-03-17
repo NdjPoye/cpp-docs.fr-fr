@@ -10,6 +10,84 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPopupMenu
+- AFXPOPUPMENU/CMFCPopupMenu
+- AFXPOPUPMENU/CMFCPopupMenu::CMFCPopupMenu
+- AFXPOPUPMENU/CMFCPopupMenu::ActivatePopupMenu
+- AFXPOPUPMENU/CMFCPopupMenu::AlwaysShowEmptyToolsEntry
+- AFXPOPUPMENU/CMFCPopupMenu::AreAllCommandsShown
+- AFXPOPUPMENU/CMFCPopupMenu::CheckArea
+- AFXPOPUPMENU/CMFCPopupMenu::CloseMenu
+- AFXPOPUPMENU/CMFCPopupMenu::Create
+- AFXPOPUPMENU/CMFCPopupMenu::DefaultMouseClickOnClose
+- AFXPOPUPMENU/CMFCPopupMenu::EnableMenuLogo
+- AFXPOPUPMENU/CMFCPopupMenu::EnableMenuSound
+- AFXPOPUPMENU/CMFCPopupMenu::EnableResize
+- AFXPOPUPMENU/CMFCPopupMenu::EnableScrolling
+- AFXPOPUPMENU/CMFCPopupMenu::EnableVertResize
+- AFXPOPUPMENU/CMFCPopupMenu::FindSubItemByCommand
+- AFXPOPUPMENU/CMFCPopupMenu::GetActiveMenu
+- AFXPOPUPMENU/CMFCPopupMenu::GetAnimationSpeed
+- AFXPOPUPMENU/CMFCPopupMenu::GetAnimationType
+- AFXPOPUPMENU/CMFCPopupMenu::GetDropDirection
+- AFXPOPUPMENU/CMFCPopupMenu::GetForceMenuFocus
+- AFXPOPUPMENU/CMFCPopupMenu::GetForceShadow
+- AFXPOPUPMENU/CMFCPopupMenu::GetHMenu
+- AFXPOPUPMENU/CMFCPopupMenu::GetMenuBar
+- AFXPOPUPMENU/CMFCPopupMenu::GetMenuItem
+- AFXPOPUPMENU/CMFCPopupMenu::GetMenuItemCount
+- AFXPOPUPMENU/CMFCPopupMenu::GetMessageWnd
+- AFXPOPUPMENU/CMFCPopupMenu::GetParentArea
+- AFXPOPUPMENU/CMFCPopupMenu::GetParentButton
+- AFXPOPUPMENU/CMFCPopupMenu::GetParentPopupMenu
+- AFXPOPUPMENU/CMFCPopupMenu::GetParentRibbonElement
+- AFXPOPUPMENU/CMFCPopupMenu::GetParentToolBar
+- AFXPOPUPMENU/CMFCPopupMenu::GetQuickCustomizeType
+- AFXPOPUPMENU/CMFCPopupMenu::GetSelItem
+- AFXPOPUPMENU/CMFCPopupMenu::HasBeenResized
+- AFXPOPUPMENU/CMFCPopupMenu::HideRarelyUsedCommands
+- AFXPOPUPMENU/CMFCPopupMenu::InCommand
+- AFXPOPUPMENU/CMFCPopupMenu::InsertItem
+- AFXPOPUPMENU/CMFCPopupMenu::InsertSeparator
+- AFXPOPUPMENU/CMFCPopupMenu::IsAlwaysClose
+- AFXPOPUPMENU/CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry
+- AFXPOPUPMENU/CMFCPopupMenu::IsCustomizePane
+- AFXPOPUPMENU/CMFCPopupMenu::IsEscClose
+- AFXPOPUPMENU/CMFCPopupMenu::IsIdle
+- AFXPOPUPMENU/CMFCPopupMenu::IsMenuSound
+- AFXPOPUPMENU/CMFCPopupMenu::IsQuickCustomize
+- AFXPOPUPMENU/CMFCPopupMenu::IsResizeble
+- AFXPOPUPMENU/CMFCPopupMenu::IsRightAlign
+- AFXPOPUPMENU/CMFCPopupMenu::IsScrollable
+- AFXPOPUPMENU/CMFCPopupMenu::IsSendMenuSelectMsg
+- AFXPOPUPMENU/CMFCPopupMenu::IsShown
+- AFXPOPUPMENU/CMFCPopupMenu::MoveTo
+- AFXPOPUPMENU/CMFCPopupMenu::OnCmdMsg
+- AFXPOPUPMENU/CMFCPopupMenu::PostCommand
+- AFXPOPUPMENU/CMFCPopupMenu::PreTranslateMessage
+- AFXPOPUPMENU/CMFCPopupMenu::RecalcLayout
+- AFXPOPUPMENU/CMFCPopupMenu::RemoveAllItems
+- AFXPOPUPMENU/CMFCPopupMenu::RemoveItem
+- AFXPOPUPMENU/CMFCPopupMenu::SaveState
+- AFXPOPUPMENU/CMFCPopupMenu::SetAnimationSpeed
+- AFXPOPUPMENU/CMFCPopupMenu::SetAnimationType
+- AFXPOPUPMENU/CMFCPopupMenu::SetAutoDestroy
+- AFXPOPUPMENU/CMFCPopupMenu::SetDefaultItem
+- AFXPOPUPMENU/CMFCPopupMenu::SetForceMenuFocus
+- AFXPOPUPMENU/CMFCPopupMenu::SetForceShadow
+- AFXPOPUPMENU/CMFCPopupMenu::SetMaxWidth
+- AFXPOPUPMENU/CMFCPopupMenu::SetMessageWnd
+- AFXPOPUPMENU/CMFCPopupMenu::SetParentRibbonElement
+- AFXPOPUPMENU/CMFCPopupMenu::SetQuickCustomizeType
+- AFXPOPUPMENU/CMFCPopupMenu::SetQuickMode
+- AFXPOPUPMENU/CMFCPopupMenu::SetRightAlign
+- AFXPOPUPMENU/CMFCPopupMenu::SetSendMenuSelectMsg
+- AFXPOPUPMENU/CMFCPopupMenu::ShowAllCommands
+- AFXPOPUPMENU/CMFCPopupMenu::TriggerResize
+- AFXPOPUPMENU/CMFCPopupMenu::UpdateAllShadows
+- AFXPOPUPMENU/CMFCPopupMenu::UpdateShadow
+- AFXPOPUPMENU/CMFCPopupMenu::CreateTearOffBar
+- AFXPOPUPMENU/CMFCPopupMenu::OnChangeHot
+- AFXPOPUPMENU/CMFCPopupMenu::OnChooseItem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -166,7 +244,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxpopupmenu.h  
   
-##  <a name="a-nameactivatepopupmenua--cmfcpopupmenuactivatepopupmenu"></a><a name="activatepopupmenu"></a>CMFCPopupMenu::ActivatePopupMenu  
+##  <a name="activatepopupmenu"></a>CMFCPopupMenu::ActivatePopupMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -183,7 +261,7 @@ static BOOL __stdcall ActivatePopupMenu(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namealwaysshowemptytoolsentrya--cmfcpopupmenualwaysshowemptytoolsentry"></a><a name="alwaysshowemptytoolsentry"></a>CMFCPopupMenu::AlwaysShowEmptyToolsEntry  
+##  <a name="alwaysshowemptytoolsentry"></a>CMFCPopupMenu::AlwaysShowEmptyToolsEntry  
  Définit si un menu contextuel est activé pour afficher des entrées vides pour les outils définis par l’utilisateur.  
   
 ```  
@@ -194,7 +272,7 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
  [in] `bShow`  
  `TRUE`Si le menu contextuel peut afficher des entrées vides. `FALSE` dans le cas contraire.  
   
-##  <a name="a-nameareallcommandsshowna--cmfcpopupmenuareallcommandsshown"></a><a name="areallcommandsshown"></a>CMFCPopupMenu::AreAllCommandsShown  
+##  <a name="areallcommandsshown"></a>CMFCPopupMenu::AreAllCommandsShown  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -205,7 +283,7 @@ BOOL AreAllCommandsShown() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namecheckareaa--cmfcpopupmenucheckarea"></a><a name="checkarea"></a>CMFCPopupMenu::CheckArea  
+##  <a name="checkarea"></a>CMFCPopupMenu::CheckArea  
  Détermine l’emplacement d’un point par rapport à la liste déroulante.  
   
 ```  
@@ -234,7 +312,7 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
   
 -   MENU - `ptScreen` sur une commande.  
   
-##  <a name="a-nameclosemenua--cmfcpopupmenuclosemenu"></a><a name="closemenu"></a>CMFCPopupMenu::CloseMenu  
+##  <a name="closemenu"></a>CMFCPopupMenu::CloseMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -246,7 +324,7 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namecmfcpopupmenua--cmfcpopupmenucmfcpopupmenu"></a><a name="cmfcpopupmenu"></a>CMFCPopupMenu::CMFCPopupMenu  
+##  <a name="cmfcpopupmenu"></a>CMFCPopupMenu::CMFCPopupMenu  
  Construit un [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) objet.  
   
 ```  
@@ -265,7 +343,7 @@ CMFCPopupMenu(
 ### <a name="remarks"></a>Notes  
  Cette méthode alloue les ressources pour un `CMFCPopupMenu`. Pour créer l’élément de menu contextuel, appelez [CMFCPopupMenu::Create](#create).  
   
-##  <a name="a-namecreatea--cmfcpopupmenucreate"></a><a name="create"></a>CMFCPopupMenu::Create  
+##  <a name="create"></a>CMFCPopupMenu::Create  
  Crée un menu contextuel et l’attache à une [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) objet.  
   
 ```  
@@ -308,7 +386,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFC_CustomPages n °&1;](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]  
   
-##  <a name="a-namecreatetearoffbara--cmfcpopupmenucreatetearoffbar"></a><a name="createtearoffbar"></a>CMFCPopupMenu::CreateTearOffBar  
+##  <a name="createtearoffbar"></a>CMFCPopupMenu::CreateTearOffBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -327,7 +405,7 @@ virtual CPane* CreateTearOffBar(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namedefaultmouseclickonclosea--cmfcpopupmenudefaultmouseclickonclose"></a><a name="defaultmouseclickonclose"></a>CMFCPopupMenu::DefaultMouseClickOnClose  
+##  <a name="defaultmouseclickonclose"></a>CMFCPopupMenu::DefaultMouseClickOnClose  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -338,7 +416,7 @@ virtual BOOL DefaultMouseClickOnClose() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameenablemenulogoa--cmfcpopupmenuenablemenulogo"></a><a name="enablemenulogo"></a>CMFCPopupMenu::EnableMenuLogo  
+##  <a name="enablemenulogo"></a>CMFCPopupMenu::EnableMenuLogo  
  Initialise le logo d’un menu contextuel.  
   
 ```  
@@ -359,7 +437,7 @@ void EnableMenuLogo(
   
  Les valeurs possibles pour `nLogoLocation` sont MENU_LOGO_LEFT, MENU_LOGO_RIGHT, MENU_LOGO_TOP et MENU_LOGO_BOTTOM.  
   
-##  <a name="a-nameenablemenusounda--cmfcpopupmenuenablemenusound"></a><a name="enablemenusound"></a>CMFCPopupMenu::EnableMenuSound  
+##  <a name="enablemenusound"></a>CMFCPopupMenu::EnableMenuSound  
  Active les son menu.  
   
 ```  
@@ -373,7 +451,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Remarques  
  Si vous activez le son, le framework appelle la [PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426) méthode lorsqu’un utilisateur ouvre un menu contextuel ou sélectionne une commande de menu. Par défaut, cette fonctionnalité est activée.  
   
-##  <a name="a-nameenableresizea--cmfcpopupmenuenableresize"></a><a name="enableresize"></a>CMFCPopupMenu::EnableResize  
+##  <a name="enableresize"></a>CMFCPopupMenu::EnableResize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -385,7 +463,7 @@ void EnableResize(CSize sizeMinResize);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameenablescrollinga--cmfcpopupmenuenablescrolling"></a><a name="enablescrolling"></a>CMFCPopupMenu::EnableScrolling  
+##  <a name="enablescrolling"></a>CMFCPopupMenu::EnableScrolling  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -397,7 +475,7 @@ void EnableScrolling(BOOL = TRUE);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameenablevertresizea--cmfcpopupmenuenablevertresize"></a><a name="enablevertresize"></a>CMFCPopupMenu::EnableVertResize  
+##  <a name="enablevertresize"></a>CMFCPopupMenu::EnableVertResize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -409,7 +487,7 @@ void EnableVertResize(int nMinResize);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namefindsubitembycommanda--cmfcpopupmenufindsubitembycommand"></a><a name="findsubitembycommand"></a>CMFCPopupMenu::FindSubItemByCommand  
+##  <a name="findsubitembycommand"></a>CMFCPopupMenu::FindSubItemByCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -423,7 +501,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetactivemenua--cmfcpopupmenugetactivemenu"></a><a name="getactivemenu"></a>CMFCPopupMenu::GetActiveMenu  
+##  <a name="getactivemenu"></a>CMFCPopupMenu::GetActiveMenu  
  Retourne les menu actif.  
   
 ```  
@@ -436,7 +514,7 @@ static CMFCPopupMenu* GetActiveMenu();
 ### <a name="remarks"></a>Remarques  
  Chaque application peut avoir au plus un seul actif menu contextuel.  
   
-##  <a name="a-namegetanimationspeeda--cmfcpopupmenugetanimationspeed"></a><a name="getanimationspeed"></a>CMFCPopupMenu::GetAnimationSpeed  
+##  <a name="getanimationspeed"></a>CMFCPopupMenu::GetAnimationSpeed  
  Retourne la vitesse d’animation des menus contextuels.  
   
 ```  
@@ -449,7 +527,7 @@ static UINT GetAnimationSpeed();
 ### <a name="remarks"></a>Remarques  
  La vitesse d’animation est une valeur globale. Utilisez [CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed) pour modifier la vitesse d’animation des menus contextuels.  
   
-##  <a name="a-namegetanimationtypea--cmfcpopupmenugetanimationtype"></a><a name="getanimationtype"></a>CMFCPopupMenu::GetAnimationType  
+##  <a name="getanimationtype"></a>CMFCPopupMenu::GetAnimationType  
  Retourne le type en cours d’animation contextuelle.  
   
 ```  
@@ -480,7 +558,7 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
  FONDU  
  Le menu contextuel s’affiche d’abord transparent et solidification progressivement.  
   
-##  <a name="a-namegetdropdirectiona--cmfcpopupmenugetdropdirection"></a><a name="getdropdirection"></a>CMFCPopupMenu::GetDropDirection  
+##  <a name="getdropdirection"></a>CMFCPopupMenu::GetDropDirection  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -491,7 +569,7 @@ DROP_DIRECTION GetDropDirection() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetforcemenufocusa--cmfcpopupmenugetforcemenufocus"></a><a name="getforcemenufocus"></a>CMFCPopupMenu::GetForceMenuFocus  
+##  <a name="getforcemenufocus"></a>CMFCPopupMenu::GetForceMenuFocus  
  Indique si le focus est retourné dans le menu barre quand un menu contextuel s’affiche.  
   
 ```  
@@ -504,7 +582,7 @@ static BOOL GetForceMenuFocus();
 ### <a name="remarks"></a>Remarques  
  Par défaut, votre application ne retourne pas le focus à la barre de menus. Pour modifier ce paramètre, utilisez [CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus).  
   
-##  <a name="a-namegetforceshadowa--cmfcpopupmenugetforceshadow"></a><a name="getforceshadow"></a>CMFCPopupMenu::GetForceShadow  
+##  <a name="getforceshadow"></a>CMFCPopupMenu::GetForceShadow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -515,14 +593,14 @@ static BOOL __stdcall GetForceShadow();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namegethmenua--cmfcpopupmenugethmenu"></a><a name="gethmenu"></a>CMFCPopupMenu::GetHMenu  
+##  <a name="gethmenu"></a>CMFCPopupMenu::GetHMenu  
  Retourne un handle vers la ressource de menu attachée.  
   
 ```  
 HMENU GetHMenu();
 ```  
   
-##  <a name="a-namegetmenubara--cmfcpopupmenugetmenubar"></a><a name="getmenubar"></a>CMFCPopupMenu::GetMenuBar  
+##  <a name="getmenubar"></a>CMFCPopupMenu::GetMenuBar  
  Retourne le [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) incorporé dans le menu contextuel.  
   
 ```  
@@ -535,7 +613,7 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 ### <a name="remarks"></a>Notes  
  Le menu contextuel a incorporé `CMFCPopupMenuBar` objet. Vous devez substituer cette méthode dans une classe dérivée si vous utilisez une autre classe incorporée.  
   
-##  <a name="a-namegetmenuitema--cmfcpopupmenugetmenuitem"></a><a name="getmenuitem"></a>CMFCPopupMenu::GetMenuItem  
+##  <a name="getmenuitem"></a>CMFCPopupMenu::GetMenuItem  
  Retourne un pointeur vers l’élément de menu à l’index spécifié.  
   
 ```  
@@ -552,7 +630,7 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ### <a name="remarks"></a>Remarques  
  Éléments de menu sont représentés par le [CMFCToolBarMenuButton classe](../../mfc/reference/cmfctoolbarmenubutton-class.md). Lorsque vous appelez cette méthode, il retourne un pointeur vers le `CMFCToolBarMenuButton`.  
   
-##  <a name="a-namegetmenuitemcounta--cmfcpopupmenugetmenuitemcount"></a><a name="getmenuitemcount"></a>CMFCPopupMenu::GetMenuItemCount  
+##  <a name="getmenuitemcount"></a>CMFCPopupMenu::GetMenuItemCount  
  Retourne le nombre d’éléments dans un menu contextuel.  
   
 ```  
@@ -562,7 +640,7 @@ int GetMenuItemCount() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’éléments dans le menu.  
   
-##  <a name="a-namegetmessagewnda--cmfcpopupmenugetmessagewnd"></a><a name="getmessagewnd"></a>CMFCPopupMenu::GetMessageWnd  
+##  <a name="getmessagewnd"></a>CMFCPopupMenu::GetMessageWnd  
  Retourne un pointeur vers la fenêtre dans laquelle le framework achemine les messages de menu contextuel.  
   
 ```  
@@ -575,7 +653,7 @@ CWnd* GetMessageWnd() const;
 ### <a name="remarks"></a>Remarques  
  Lorsque vous utilisez la méthode [CMFCPopupMenu::Create](#create) pour créer un menu contextuel, vous spécifiez quelle fenêtre reçoit les messages de menu.  
   
-##  <a name="a-namegetparentareaa--cmfcpopupmenugetparentarea"></a><a name="getparentarea"></a>CMFCPopupMenu::GetParentArea  
+##  <a name="getparentarea"></a>CMFCPopupMenu::GetParentArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -589,7 +667,7 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetparentbuttona--cmfcpopupmenugetparentbutton"></a><a name="getparentbutton"></a>CMFCPopupMenu::GetParentButton  
+##  <a name="getparentbutton"></a>CMFCPopupMenu::GetParentButton  
  Retourne un pointeur vers le bouton de barre d’outils parent.  
   
 ```  
@@ -604,7 +682,7 @@ CMFCToolBarMenuButton* GetParentButton() const;
   
  Si le menu contextuel est un menu contextuel, il n’aura aucun bouton de barre d’outils parent.  
   
-##  <a name="a-namegetparentpopupmenua--cmfcpopupmenugetparentpopupmenu"></a><a name="getparentpopupmenu"></a>CMFCPopupMenu::GetParentPopupMenu  
+##  <a name="getparentpopupmenu"></a>CMFCPopupMenu::GetParentPopupMenu  
  Retourne un pointeur vers le menu contextuel du parent.  
   
 ```  
@@ -617,7 +695,7 @@ CMFCPopupMenu* GetParentPopupMenu() const;
 ### <a name="remarks"></a>Remarques  
  Un menu contextuel a un parent `CMFCPopupMenu` de l’objet uniquement s’il s’agit d’un sous-menu.  
   
-##  <a name="a-namegetparentribbonelementa--cmfcpopupmenugetparentribbonelement"></a><a name="getparentribbonelement"></a>CMFCPopupMenu::GetParentRibbonElement  
+##  <a name="getparentribbonelement"></a>CMFCPopupMenu::GetParentRibbonElement  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -628,7 +706,7 @@ CMFCRibbonBaseElement* GetParentRibbonElement() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetparenttoolbara--cmfcpopupmenugetparenttoolbar"></a><a name="getparenttoolbar"></a>CMFCPopupMenu::GetParentToolBar  
+##  <a name="getparenttoolbar"></a>CMFCPopupMenu::GetParentToolBar  
  Retourne un pointeur vers la barre d’outils parent.  
   
 ```  
@@ -641,7 +719,7 @@ CMFCToolBar* GetParentToolBar() const;
 ### <a name="remarks"></a>Notes  
  Si le `CMFCPopupMenu` est un menu contextuel, il n’a aucune barre d’outils parent.  
   
-##  <a name="a-namegetquickcustomizetypea--cmfcpopupmenugetquickcustomizetype"></a><a name="getquickcustomizetype"></a>CMFCPopupMenu::GetQuickCustomizeType  
+##  <a name="getquickcustomizetype"></a>CMFCPopupMenu::GetQuickCustomizeType  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -652,7 +730,7 @@ QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namegetselitema--cmfcpopupmenugetselitem"></a><a name="getselitem"></a>CMFCPopupMenu::GetSelItem  
+##  <a name="getselitem"></a>CMFCPopupMenu::GetSelItem  
  Retourne un pointeur vers la commande de menu actuellement sélectionné.  
   
 ```  
@@ -665,7 +743,7 @@ CMFCToolBarMenuButton* GetSelItem();
 ### <a name="remarks"></a>Remarques  
  Les commandes de menu dans un menu contextuel sont représentées par la [CMFCToolBarMenuButton classe](../../mfc/reference/cmfctoolbarmenubutton-class.md), ou une classe dérivée de `CMFCToolBarMenuButton`.  
   
-##  <a name="a-namehasbeenresizeda--cmfcpopupmenuhasbeenresized"></a><a name="hasbeenresized"></a>CMFCPopupMenu::HasBeenResized  
+##  <a name="hasbeenresized"></a>CMFCPopupMenu::HasBeenResized  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -676,7 +754,7 @@ BOOL HasBeenResized() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namehiderarelyusedcommandsa--cmfcpopupmenuhiderarelyusedcommands"></a><a name="hiderarelyusedcommands"></a>CMFCPopupMenu::HideRarelyUsedCommands  
+##  <a name="hiderarelyusedcommands"></a>CMFCPopupMenu::HideRarelyUsedCommands  
  Indique si le menu contextuel peut masquer les commandes rarement utilisés.  
   
 ```  
@@ -689,7 +767,7 @@ BOOL HideRarelyUsedCommands() const;
 ### <a name="remarks"></a>Remarques  
  Cette méthode spécifie que si un menu contextuel peut masquer rarement commandes les plus utilisées, pas si cette configuration est activée. Un menu contextuel peut masquer les commandes rarement utilisés s’il a un bouton parent et de la fenêtre parente est dérivée de la [CMFCMenuBar classe](../../mfc/reference/cmfcmenubar-class.md). Utilisez [CMFCMenuBar::SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus) pour activer cette fonctionnalité et [CMFCMenuBar::IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus) pour déterminer si cette fonctionnalité est actuellement activée. Vous devez appeler ces deux méthodes pour la fenêtre parente.  
   
-##  <a name="a-nameincommanda--cmfcpopupmenuincommand"></a><a name="incommand"></a>CMFCPopupMenu::InCommand  
+##  <a name="incommand"></a>CMFCPopupMenu::InCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -700,7 +778,7 @@ virtual BOOL InCommand();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameinsertitema--cmfcpopupmenuinsertitem"></a><a name="insertitem"></a>CMFCPopupMenu::InsertItem  
+##  <a name="insertitem"></a>CMFCPopupMenu::InsertItem  
  Insère un nouvel élément dans le menu contextuel à l’emplacement spécifié.  
   
 ```  
@@ -722,7 +800,7 @@ int InsertItem(
 ### <a name="remarks"></a>Notes  
  Cette méthode échoue si vous fournissez une valeur non valide pour `iInsertAt`, par exemple un entier supérieur au nombre d’éléments actuellement dans le menu contextuel.  
   
-##  <a name="a-nameinsertseparatora--cmfcpopupmenuinsertseparator"></a><a name="insertseparator"></a>CMFCPopupMenu::InsertSeparator  
+##  <a name="insertseparator"></a>CMFCPopupMenu::InsertSeparator  
  Insère un séparateur dans le menu contextuel à l’emplacement spécifié.  
   
 ```  
@@ -741,7 +819,7 @@ int InsertSeparator(int iInsertAt = -1);
   
  Cette méthode échoue si `iInsertAt` est une valeur non valide.  
   
-##  <a name="a-nameisalwaysclosea--cmfcpopupmenuisalwaysclose"></a><a name="isalwaysclose"></a>CMFCPopupMenu::IsAlwaysClose  
+##  <a name="isalwaysclose"></a>CMFCPopupMenu::IsAlwaysClose  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -752,7 +830,7 @@ virtual BOOL IsAlwaysClose() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameisalwaysshowemptytoolsentrya--cmfcpopupmenuisalwaysshowemptytoolsentry"></a><a name="isalwaysshowemptytoolsentry"></a>CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry  
+##  <a name="isalwaysshowemptytoolsentry"></a>CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -763,7 +841,7 @@ static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameiscustomizepanea--cmfcpopupmenuiscustomizepane"></a><a name="iscustomizepane"></a>CMFCPopupMenu::IsCustomizePane  
+##  <a name="iscustomizepane"></a>CMFCPopupMenu::IsCustomizePane  
  Indique si le menu contextuel fonctionne comme un **QuickCustomizePane**.  
   
 ```  
@@ -778,7 +856,7 @@ BOOL IsCustomizePane();
   
  Votre application doit appeler cette méthode au cours de [CMDIFrameWndEx::OnShowCustomizePane](../../mfc/reference/cmdiframewndex-class.md#onshowcustomizepane).  
   
-##  <a name="a-nameisescclosea--cmfcpopupmenuisescclose"></a><a name="isescclose"></a>CMFCPopupMenu::IsEscClose  
+##  <a name="isescclose"></a>CMFCPopupMenu::IsEscClose  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -789,7 +867,7 @@ BOOL IsEscClose();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameisidlea--cmfcpopupmenuisidle"></a><a name="isidle"></a>CMFCPopupMenu::IsIdle  
+##  <a name="isidle"></a>CMFCPopupMenu::IsIdle  
  Indique si un menu contextuel est actuellement inactif.  
   
 ```  
@@ -802,7 +880,7 @@ virtual BOOL IsIdle() const;
 ### <a name="remarks"></a>Remarques  
  Par défaut, un menu contextuel est en mode inactif si l’affichage de l’animation est terminée et que l’utilisateur fait défiler pas le menu contextuel.  
   
-##  <a name="a-nameismenusounda--cmfcpopupmenuismenusound"></a><a name="ismenusound"></a>CMFCPopupMenu::IsMenuSound  
+##  <a name="ismenusound"></a>CMFCPopupMenu::IsMenuSound  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -813,7 +891,7 @@ static UINT __stdcall IsMenuSound();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameisquickcustomizea--cmfcpopupmenuisquickcustomize"></a><a name="isquickcustomize"></a>CMFCPopupMenu::IsQuickCustomize  
+##  <a name="isquickcustomize"></a>CMFCPopupMenu::IsQuickCustomize  
  Détermine si le texte associé [CMFCToolBarMenuButton classe](../../mfc/reference/cmfctoolbarmenubutton-class.md) est en mode de QuickCustomize.  
   
 ```  
@@ -826,7 +904,7 @@ BOOL IsQuickCustomize();
 ### <a name="remarks"></a>Notes  
  En QuickCustomize mode, l’utilisateur sélectionne un bouton sur une barre d’outils pour personnaliser le bouton directement.  
   
-##  <a name="a-nameisresizeblea--cmfcpopupmenuisresizeble"></a><a name="isresizeble"></a>CMFCPopupMenu::IsResizeble  
+##  <a name="isresizeble"></a>CMFCPopupMenu::IsResizeble  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -837,7 +915,7 @@ BOOL IsResizeble() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameisrightaligna--cmfcpopupmenuisrightalign"></a><a name="isrightalign"></a>CMFCPopupMenu::IsRightAlign  
+##  <a name="isrightalign"></a>CMFCPopupMenu::IsRightAlign  
  Indique si le menu est aligné à droite ou aligné à gauche.  
   
 ```  
@@ -852,7 +930,7 @@ BOOL IsRightAlign() const;
   
  Alignement du menu n’est pas un paramètre global et peut varier entre les menus contextuels.  
   
-##  <a name="a-nameisscrollablea--cmfcpopupmenuisscrollable"></a><a name="isscrollable"></a>CMFCPopupMenu::IsScrollable  
+##  <a name="isscrollable"></a>CMFCPopupMenu::IsScrollable  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -863,7 +941,7 @@ BOOL IsScrollable() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameissendmenuselectmsga--cmfcpopupmenuissendmenuselectmsg"></a><a name="issendmenuselectmsg"></a>CMFCPopupMenu::IsSendMenuSelectMsg  
+##  <a name="issendmenuselectmsg"></a>CMFCPopupMenu::IsSendMenuSelectMsg  
  Indique si l’infrastructure notifie le frame parent lorsque l’utilisateur sélectionne une commande dans le menu contextuel.  
   
 ```  
@@ -876,7 +954,7 @@ static BOOL IsSendMenuSelectMsg();
 ### <a name="remarks"></a>Remarques  
  L’infrastructure notifie le frame parent en lui envoyant le `WM_MENUSELECT` de message quand un utilisé sélectionne une commande de menu.  
   
-##  <a name="a-nameisshowna--cmfcpopupmenuisshown"></a><a name="isshown"></a>CMFCPopupMenu::IsShown  
+##  <a name="isshown"></a>CMFCPopupMenu::IsShown  
  Indique si le menu contextuel est actuellement visible.  
   
 ```  
@@ -886,7 +964,7 @@ BOOL IsShown() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si un menu contextuel est visible ; dans le cas contraire `FALSE`.  
   
-##  <a name="a-namemovetoa--cmfcpopupmenumoveto"></a><a name="moveto"></a>CMFCPopupMenu::MoveTo  
+##  <a name="moveto"></a>CMFCPopupMenu::MoveTo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -898,7 +976,7 @@ void MoveTo(const CPoint& pt);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonchangehota--cmfcpopupmenuonchangehot"></a><a name="onchangehot"></a>CMFCPopupMenu::OnChangeHot  
+##  <a name="onchangehot"></a>CMFCPopupMenu::OnChangeHot  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -910,7 +988,7 @@ virtual void OnChangeHot(int nHot);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonchooseitema--cmfcpopupmenuonchooseitem"></a><a name="onchooseitem"></a>CMFCPopupMenu::OnChooseItem  
+##  <a name="onchooseitem"></a>CMFCPopupMenu::OnChooseItem  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -922,7 +1000,7 @@ virtual void OnChooseItem(UINT uidCmdID);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameoncmdmsga--cmfcpopupmenuoncmdmsg"></a><a name="oncmdmsg"></a>CMFCPopupMenu::OnCmdMsg  
+##  <a name="oncmdmsg"></a>CMFCPopupMenu::OnCmdMsg  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -943,7 +1021,7 @@ virtual BOOL OnCmdMsg(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namepostcommanda--cmfcpopupmenupostcommand"></a><a name="postcommand"></a>CMFCPopupMenu::PostCommand  
+##  <a name="postcommand"></a>CMFCPopupMenu::PostCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -957,7 +1035,7 @@ BOOL PostCommand(UINT uiCommandID);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namepretranslatemessagea--cmfcpopupmenupretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCPopupMenu::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CMFCPopupMenu::PreTranslateMessage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -971,7 +1049,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namerecalclayouta--cmfcpopupmenurecalclayout"></a><a name="recalclayout"></a>CMFCPopupMenu::RecalcLayout  
+##  <a name="recalclayout"></a>CMFCPopupMenu::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -983,14 +1061,14 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameremoveallitemsa--cmfcpopupmenuremoveallitems"></a><a name="removeallitems"></a>CMFCPopupMenu::RemoveAllItems  
+##  <a name="removeallitems"></a>CMFCPopupMenu::RemoveAllItems  
  Efface tous les éléments dans un menu déroulant.  
   
 ```  
 void RemoveAllItems();
 ```  
   
-##  <a name="a-nameremoveitema--cmfcpopupmenuremoveitem"></a><a name="removeitem"></a>CMFCPopupMenu::RemoveItem  
+##  <a name="removeitem"></a>CMFCPopupMenu::RemoveItem  
  Supprime l’élément spécifié dans le menu contextuel.  
   
 ```  
@@ -1007,7 +1085,7 @@ BOOL RemoveItem(int iIndex);
 ### <a name="remarks"></a>Remarques  
  Cette méthode réorganise automatiquement les séparateurs qui sont affectés par la suppression d’un élément. Pour plus d’informations sur la façon dont le framework réorganise les séparateurs, consultez [CMFCToolBar::RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton).  
   
-##  <a name="a-namesavestatea--cmfcpopupmenusavestate"></a><a name="savestate"></a>CMFCPopupMenu::SaveState  
+##  <a name="savestate"></a>CMFCPopupMenu::SaveState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1016,7 +1094,7 @@ virtual void SaveState();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namesetanimationspeeda--cmfcpopupmenusetanimationspeed"></a><a name="setanimationspeed"></a>CMFCPopupMenu::SetAnimationSpeed  
+##  <a name="setanimationspeed"></a>CMFCPopupMenu::SetAnimationSpeed  
  Définit la vitesse d’animation des menus contextuels.  
   
 ```  
@@ -1032,7 +1110,7 @@ static void SetAnimationSpeed(UINT nElapse);
   
  Par défaut, ce paramètre est défini sur 30 millisecondes. La plage des valeurs valides pour `nElapse` est comprise entre 0 et 200.  
   
-##  <a name="a-namesetanimationtypea--cmfcpopupmenusetanimationtype"></a><a name="setanimationtype"></a>CMFCPopupMenu::SetAnimationType  
+##  <a name="setanimationtype"></a>CMFCPopupMenu::SetAnimationType  
  Définit le type d’animation de ce menu contextuel.  
   
 ```  
@@ -1046,7 +1124,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ### <a name="remarks"></a>Remarques  
  Consultez la page [CMFCPopupMenu::GetAnimationType](#getanimationtype) pour obtenir la liste des valeurs valides pour `type`.  
   
-##  <a name="a-namesetautodestroya--cmfcpopupmenusetautodestroy"></a><a name="setautodestroy"></a>CMFCPopupMenu::SetAutoDestroy  
+##  <a name="setautodestroy"></a>CMFCPopupMenu::SetAutoDestroy  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1058,7 +1136,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namesetdefaultitema--cmfcpopupmenusetdefaultitem"></a><a name="setdefaultitem"></a>CMFCPopupMenu::SetDefaultItem  
+##  <a name="setdefaultitem"></a>CMFCPopupMenu::SetDefaultItem  
  Définit la commande par défaut pour le menu contextuel.  
   
 ```  
@@ -1072,7 +1150,7 @@ void SetDefaultItem(UINT uiCmd);
 ### <a name="remarks"></a>Remarques  
  Dans le menu contextuel, la commande par défaut est la commande qui est sélectionnée lorsque le menu contextuel s’affiche.  
   
-##  <a name="a-namesetforcemenufocusa--cmfcpopupmenusetforcemenufocus"></a><a name="setforcemenufocus"></a>CMFCPopupMenu::SetForceMenuFocus  
+##  <a name="setforcemenufocus"></a>CMFCPopupMenu::SetForceMenuFocus  
  Force le focus d’entrée pour revenir au menu de la barre quand un menu contextuel s’affiche.  
   
 ```  
@@ -1086,7 +1164,7 @@ static void SetForceMenuFocus(BOOL bValue);
 ### <a name="remarks"></a>Remarques  
  Cette méthode définit un indicateur qui s’applique à tous les menus contextuels dans l’application. Par défaut, cette fonctionnalité n’est pas activée.  
   
-##  <a name="a-namesetforceshadowa--cmfcpopupmenusetforceshadow"></a><a name="setforceshadow"></a>CMFCPopupMenu::SetForceShadow  
+##  <a name="setforceshadow"></a>CMFCPopupMenu::SetForceShadow  
  Force l’infrastructure pour dessiner les ombres menu contextuels s’affichent en dehors du cadre principal.  
   
 ```  
@@ -1100,7 +1178,7 @@ static void SetForceShadow(BOOL bValue);
 ### <a name="remarks"></a>Remarques  
  Lorsque vous appelez cette méthode, il définit un indicateur global dans votre application. Cet indicateur affecte tous les menus contextuels dans votre application.  
   
-##  <a name="a-namesetmaxwidtha--cmfcpopupmenusetmaxwidth"></a><a name="setmaxwidth"></a>CMFCPopupMenu::SetMaxWidth  
+##  <a name="setmaxwidth"></a>CMFCPopupMenu::SetMaxWidth  
  Définir la largeur maximale pour le menu contextuel.  
   
 ```  
@@ -1114,7 +1192,7 @@ void SetMaxWidth(int iMaxWidth);
 ### <a name="remarks"></a>Notes  
  Si le texte associé à une commande de menu ne tient pas dans la largeur maximale, il est tronqué et la partie qui n’est pas adapté est remplacée par trois points.  
   
-##  <a name="a-namesetmessagewnda--cmfcpopupmenusetmessagewnd"></a><a name="setmessagewnd"></a>CMFCPopupMenu::SetMessageWnd  
+##  <a name="setmessagewnd"></a>CMFCPopupMenu::SetMessageWnd  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1126,7 +1204,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetparentribbonelementa--cmfcpopupmenusetparentribbonelement"></a><a name="setparentribbonelement"></a>CMFCPopupMenu::SetParentRibbonElement  
+##  <a name="setparentribbonelement"></a>CMFCPopupMenu::SetParentRibbonElement  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1138,7 +1216,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetquickcustomizetypea--cmfcpopupmenusetquickcustomizetype"></a><a name="setquickcustomizetype"></a>CMFCPopupMenu::SetQuickCustomizeType  
+##  <a name="setquickcustomizetype"></a>CMFCPopupMenu::SetQuickCustomizeType  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1150,7 +1228,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetquickmodea--cmfcpopupmenusetquickmode"></a><a name="setquickmode"></a>CMFCPopupMenu::SetQuickMode  
+##  <a name="setquickmode"></a>CMFCPopupMenu::SetQuickMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1159,7 +1237,7 @@ void SetQuickMode();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetrightaligna--cmfcpopupmenusetrightalign"></a><a name="setrightalign"></a>CMFCPopupMenu::SetRightAlign  
+##  <a name="setrightalign"></a>CMFCPopupMenu::SetRightAlign  
  Définit l’alignement du menu des menus contextuels.  
   
 ```  
@@ -1173,7 +1251,7 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 ### <a name="remarks"></a>Notes  
  Par défaut, tous les menus contextuels sont alignés à gauche.  
   
-##  <a name="a-namesetsendmenuselectmsga--cmfcpopupmenusetsendmenuselectmsg"></a><a name="setsendmenuselectmsg"></a>CMFCPopupMenu::SetSendMenuSelectMsg  
+##  <a name="setsendmenuselectmsg"></a>CMFCPopupMenu::SetSendMenuSelectMsg  
  Définit un indicateur qui détermine si le menu contextuel notifie le frame parent lorsque l’utilisateur sélectionne une commande.  
   
 ```  
@@ -1187,7 +1265,7 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 ### <a name="remarks"></a>Notes  
  Il s’agit d’une option globale pour tous les menus contextuels dans une application. S’il est activé, les menus contextuels enverra un `WM_MENUSELECT` message vers le frame parent lorsque l’utilisateur sélectionne une commande.  
   
-##  <a name="a-nameshowallcommandsa--cmfcpopupmenushowallcommands"></a><a name="showallcommands"></a>CMFCPopupMenu::ShowAllCommands  
+##  <a name="showallcommands"></a>CMFCPopupMenu::ShowAllCommands  
  Force le menu contextuel pour afficher toutes les commandes.  
   
 ```  
@@ -1197,7 +1275,7 @@ void ShowAllCommands();
 ### <a name="remarks"></a>Remarques  
  Cela n’est pas un paramètre global et affecte uniquement le menu contextuel en cours.  
   
-##  <a name="a-nametriggerresizea--cmfcpopupmenutriggerresize"></a><a name="triggerresize"></a>CMFCPopupMenu::TriggerResize  
+##  <a name="triggerresize"></a>CMFCPopupMenu::TriggerResize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1206,7 +1284,7 @@ void TriggerResize();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameupdateallshadowsa--cmfcpopupmenuupdateallshadows"></a><a name="updateallshadows"></a>CMFCPopupMenu::UpdateAllShadows  
+##  <a name="updateallshadows"></a>CMFCPopupMenu::UpdateAllShadows  
  Met à jour les ombres pour tous les menus contextuels ouverts.  
   
 ```  
@@ -1220,7 +1298,7 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ### <a name="remarks"></a>Notes  
  Cette méthode est utile lorsque les menus contextuels sont affichés au-dessus de contrôles animés ou autres fenêtres qui ont un contenu dynamique.  
   
-##  <a name="a-nameupdateshadowa--cmfcpopupmenuupdateshadow"></a><a name="updateshadow"></a>CMFCPopupMenu::UpdateShadow  
+##  <a name="updateshadow"></a>CMFCPopupMenu::UpdateShadow  
  Met à jour de l’ombre de la liste déroulante.  
   
 ```  

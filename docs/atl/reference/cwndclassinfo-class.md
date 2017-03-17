@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWndClassInfo
+- ATLWIN/ATL::CWndClassInfo
+- ATLWIN/ATL::Register
+- ATLWIN/ATL::m_atom
+- ATLWIN/ATL::m_bSystemCursor
+- ATLWIN/ATL::m_lpszCursorID
+- ATLWIN/ATL::m_lpszOrigName
+- ATLWIN/ATL::m_szAutoName
+- ATLWIN/ATL::m_wc
+- ATLWIN/ATL::pWndProc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,14 +102,14 @@ class CWndClassInfo
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h  
   
-##  <a name="a-namematoma--cwndclassinfomatom"></a><a name="m_atom"></a>CWndClassInfo::m_atom  
+##  <a name="m_atom"></a>CWndClassInfo::m_atom  
  Contient l’identificateur unique de la classe de fenêtre inscrits.  
   
 ```
 ATOM m_atom;
 ```  
   
-##  <a name="a-namembsystemcursora--cwndclassinfombsystemcursor"></a><a name="m_bsystemcursor"></a>CWndClassInfo::m_bSystemCursor  
+##  <a name="m_bsystemcursor"></a>CWndClassInfo::m_bSystemCursor  
  Si **TRUE**, la ressource du système de curseur soit chargée lorsque la classe de fenêtre est enregistrée.  
   
 ```
@@ -112,7 +121,7 @@ BOOL m_bSystemCursor;
   
  `CWndClassInfo`utilise `m_bSystemCursor` uniquement lorsque le [DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971) (la valeur par défaut dans [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) ou [DECLARE_WND_CLASS_EX](http://msdn.microsoft.com/library/0672c144-f2aa-4f6a-ae16-566e3a1f5411) macro est spécifié. Dans ce cas, `m_bSystemCursor` est initialisée à **TRUE**. Pour plus d’informations, consultez la [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) vue d’ensemble.  
   
-##  <a name="a-namemlpszcursorida--cwndclassinfomlpszcursorid"></a><a name="m_lpszcursorid"></a>CWndClassInfo::m_lpszCursorID  
+##  <a name="m_lpszcursorid"></a>CWndClassInfo::m_lpszCursorID  
  Spécifie le nom de la ressource curseur ou l’identificateur de ressource dans le mot de poids faible et zéro dans le mot de poids fort.  
   
 ```
@@ -124,7 +133,7 @@ LPCTSTR m_lpszCursorID;
   
  `CWndClassInfo`utilise `m_lpszCursorID` uniquement lorsque le [DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971) (la valeur par défaut dans [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) ou [DECLARE_WND_CLASS_EX](http://msdn.microsoft.com/library/0672c144-f2aa-4f6a-ae16-566e3a1f5411) macro est spécifié. Dans ce cas, `m_lpszCursorID` est initialisée à **IDC_ARROW**. Pour plus d’informations, consultez la [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) vue d’ensemble.  
   
-##  <a name="a-namemlpszorignamea--cwndclassinfomlpszorigname"></a><a name="m_lpszorigname"></a>CWndClassInfo::m_lpszOrigName  
+##  <a name="m_lpszorigname"></a>CWndClassInfo::m_lpszOrigName  
  Contient le nom d’une classe de fenêtre existante.  
   
 ```
@@ -134,7 +143,7 @@ LPCTSTR m_lpszOrigName;
 ### <a name="remarks"></a>Notes  
  `CWndClassInfo`utilise `m_lpszOrigName` uniquement lorsque vous incluez le [DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd) macro dans votre définition de classe. Dans ce cas, `CWndClassInfo` registres une classe de fenêtre basée sur la classe nommée par `m_lpszOrigName`. Pour plus d’informations, consultez la [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) vue d’ensemble.  
   
-##  <a name="a-namemszautonamea--cwndclassinfomszautoname"></a><a name="m_szautoname"></a>CWndClassInfo::m_szAutoName  
+##  <a name="m_szautoname"></a>CWndClassInfo::m_szAutoName  
  Contient le nom de la classe de fenêtre.  
   
 ```
@@ -144,7 +153,7 @@ TCHAR m_szAutoName[13];
 ### <a name="remarks"></a>Notes  
  `CWndClassInfo`utilise `m_szAutoName` uniquement si **NULL** est transmis pour le `WndClassName` paramètre [DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971), le [DECLARE_WND_CLASS_EX](http://msdn.microsoft.com/library/0672c144-f2aa-4f6a-ae16-566e3a1f5411) ou [DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd). ATL construira un nom lors de la classe de fenêtre est enregistrée.  
   
-##  <a name="a-namemwca--cwndclassinfomwc"></a><a name="m_wc"></a>CWndClassInfo::m_wc  
+##  <a name="m_wc"></a>CWndClassInfo::m_wc  
  Conserve les informations de classe de fenêtre dans un [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577) structure.  
   
 ```
@@ -156,7 +165,7 @@ WNDCLASSEX m_wc;
   
  Si vous avez spécifié le [DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd) macro, `m_wc` contient des informations sur une superclasse, une classe de fenêtre qui est basée sur une classe existante mais utilise une autre procédure de fenêtre. [m_lpszOrigName](#m_lpszorigname) et [pWndProc](#pwndproc) enregistrer de nom de la classe de fenêtre existante et la procédure de fenêtre, respectivement.  
   
-##  <a name="a-namepwndproca--cwndclassinfopwndproc"></a><a name="pwndproc"></a>CWndClassInfo::pWndProc  
+##  <a name="pwndproc"></a>CWndClassInfo::pWndProc  
  Pointe vers la procédure de fenêtre d’une classe de fenêtre existante.  
   
 ```
@@ -166,7 +175,7 @@ WNDPROC pWndProc;
 ### <a name="remarks"></a>Notes  
  `CWndClassInfo`utilise `pWndProc` uniquement lorsque vous incluez le [DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd) macro dans votre définition de classe. Dans ce cas, `CWndClassInfo` enregistre une classe de fenêtre qui est basée sur une classe existante mais utilise une autre procédure de fenêtre. Procédure de fenêtre de la classe de fenêtre existante est enregistrée dans `pWndProc`. Pour plus d’informations, consultez la [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) vue d’ensemble.  
   
-##  <a name="a-nameregistera--cwndclassinforegister"></a><a name="register"></a>CWndClassInfo::Register  
+##  <a name="register"></a>CWndClassInfo::Register  
  Appelé par [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create) pour inscrire la classe de fenêtre si elle n’a pas encore été enregistré.  
   
 ```

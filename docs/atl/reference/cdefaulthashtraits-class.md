@@ -10,10 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDefaultHashTraits
-- ATL.CDefaultHashTraits<T>
-- ATL::CDefaultHashTraits<T>
-- ATL.CDefaultHashTraits
-- ATL::CDefaultHashTraits
+- ATLCOLL/ATL::CDefaultHashTraits
+- ATLCOLL/ATL::CDefaultHashTraits::Hash
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -73,7 +71,7 @@ class CDefaultHashTraits
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcoll.h  
   
-##  <a name="a-namehasha--cdefaulthashtraitshash"></a><a name="hash"></a>CDefaultHashTraits::Hash  
+##  <a name="hash"></a>CDefaultHashTraits::Hash  
  Appelez cette fonction pour calculer une valeur de hachage pour un élément donné.  
   
 ```

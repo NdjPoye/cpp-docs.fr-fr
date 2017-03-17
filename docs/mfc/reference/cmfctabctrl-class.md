@@ -10,6 +10,56 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTabCtrl
+- AFXTABCTRL/CMFCTabCtrl
+- AFXTABCTRL/CMFCTabCtrl::ActivateMDITab
+- AFXTABCTRL/CMFCTabCtrl::AllowDestroyEmptyTabbedPane
+- AFXTABCTRL/CMFCTabCtrl::AutoSizeWindow
+- AFXTABCTRL/CMFCTabCtrl::CalcRectEdit
+- AFXTABCTRL/CMFCTabCtrl::Create
+- AFXTABCTRL/CMFCTabCtrl::EnableActiveTabCloseButton
+- AFXTABCTRL/CMFCTabCtrl::EnableInPlaceEdit
+- AFXTABCTRL/CMFCTabCtrl::EnableTabDocumentsMenu
+- AFXTABCTRL/CMFCTabCtrl::EnsureVisible
+- AFXTABCTRL/CMFCTabCtrl::GetDocumentIcon
+- AFXTABCTRL/CMFCTabCtrl::GetFirstVisibleTabNum
+- AFXTABCTRL/CMFCTabCtrl::GetResizeMode
+- AFXTABCTRL/CMFCTabCtrl::GetScrollBar
+- AFXTABCTRL/CMFCTabCtrl::GetTabArea
+- AFXTABCTRL/CMFCTabCtrl::GetTabMaxWidth
+- AFXTABCTRL/CMFCTabCtrl::GetTabsHeight
+- AFXTABCTRL/CMFCTabCtrl::GetTabsRect
+- AFXTABCTRL/CMFCTabCtrl::GetWndArea
+- AFXTABCTRL/CMFCTabCtrl::HideActiveWindowHorzScrollBar
+- AFXTABCTRL/CMFCTabCtrl::HideInactiveWindow
+- AFXTABCTRL/CMFCTabCtrl::HideNoTabs
+- AFXTABCTRL/CMFCTabCtrl::HideSingleTab
+- AFXTABCTRL/CMFCTabCtrl::IsActiveInMDITabGroup
+- AFXTABCTRL/CMFCTabCtrl::IsActiveTabBoldFont
+- AFXTABCTRL/CMFCTabCtrl::IsActiveTabCloseButton
+- AFXTABCTRL/CMFCTabCtrl::IsDrawFrame
+- AFXTABCTRL/CMFCTabCtrl::IsFlatFrame
+- AFXTABCTRL/CMFCTabCtrl::IsFlatTab
+- AFXTABCTRL/CMFCTabCtrl::IsLeftRightRounded
+- AFXTABCTRL/CMFCTabCtrl::IsMDITabGroup
+- AFXTABCTRL/CMFCTabCtrl::IsOneNoteStyle
+- AFXTABCTRL/CMFCTabCtrl::IsSharedScroll
+- AFXTABCTRL/CMFCTabCtrl::IsTabDocumentsMenu
+- AFXTABCTRL/CMFCTabCtrl::IsVS2005Style
+- AFXTABCTRL/CMFCTabCtrl::ModifyTabStyle
+- AFXTABCTRL/CMFCTabCtrl::OnDragEnter
+- AFXTABCTRL/CMFCTabCtrl::OnDragOver
+- AFXTABCTRL/CMFCTabCtrl::OnShowTabDocumentsMenu
+- AFXTABCTRL/CMFCTabCtrl::SetActiveInMDITabGroup
+- AFXTABCTRL/CMFCTabCtrl::SetActiveTab
+- AFXTABCTRL/CMFCTabCtrl::SetActiveTabBoldFont
+- AFXTABCTRL/CMFCTabCtrl::SetDrawFrame
+- AFXTABCTRL/CMFCTabCtrl::SetFlatFrame
+- AFXTABCTRL/CMFCTabCtrl::SetImageList
+- AFXTABCTRL/CMFCTabCtrl::SetResizeMode
+- AFXTABCTRL/CMFCTabCtrl::SetTabMaxWidth
+- AFXTABCTRL/CMFCTabCtrl::StopResize
+- AFXTABCTRL/CMFCTabCtrl::SynchronizeScrollBar
+- AFXTABCTRL/CMFCTabCtrl::m_bEnableActivate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -182,7 +232,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxtabctrl.h  
   
-##  <a name="a-nameactivatemditaba--cmfctabctrlactivatemditab"></a><a name="activatemditab"></a>CMFCTabCtrl::ActivateMDITab  
+##  <a name="activatemditab"></a>CMFCTabCtrl::ActivateMDITab  
  Affiche l’onglet spécifié du contrôle d’onglet actuelle et définit le focus sur cet onglet.  
   
 ```  
@@ -193,7 +243,7 @@ void ActivateMDITab(int nTab = -1);
  [in] `nTab`  
  Index de base zéro d’un onglet à afficher, ou -1 pour indiquer l’onglet actif.  
   
-##  <a name="a-nameallowdestroyemptytabbedpanea--cmfctabctrlallowdestroyemptytabbedpane"></a><a name="allowdestroyemptytabbedpane"></a>CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
+##  <a name="allowdestroyemptytabbedpane"></a>CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -205,7 +255,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameautosizewindowa--cmfctabctrlautosizewindow"></a><a name="autosizewindow"></a>CMFCTabCtrl::AutoSizeWindow  
+##  <a name="autosizewindow"></a>CMFCTabCtrl::AutoSizeWindow  
  Spécifie si l’infrastructure consiste à redimensionner la zone cliente de toutes les fenêtres de contrôle onglet lorsqu’un élément d’interface utilisateur de la modification du contrôle onglet.  
   
 ```  
@@ -218,7 +268,7 @@ void AutoSizeWindow(BOOL bAutoSize = TRUE);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namecreatea--cmfctabctrlcreate"></a><a name="create"></a>CMFCTabCtrl::Create  
+##  <a name="create"></a>CMFCTabCtrl::Create  
  Crée le contrôle onglet et l’attache à le `CMFCTabCtrl` objet.  
   
 ```  
@@ -279,7 +329,7 @@ BOOL Create(
  [!code-cpp[NVC_MFC_StateCollection n °&1;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
 [!code-cpp[NVC_MFC_StateCollection n °&2;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]  
   
-##  <a name="a-namecalcrectedita--cmfctabctrlcalcrectedit"></a><a name="calcrectedit"></a>CMFCTabCtrl::CalcRectEdit  
+##  <a name="calcrectedit"></a>CMFCTabCtrl::CalcRectEdit  
  Réduit la forme la taille de la zone de l’onglet spécifié.  
   
 ```  
@@ -293,7 +343,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ### <a name="remarks"></a>Remarques  
  Cette méthode est appelée lorsque vous modifiez l’étiquette d’un onglet. Cette méthode réduit la forme les côtés gauche et droit du rectangle spécifié par la moitié de la hauteur onglet actuel et réduit la forme du haut et bas d’une unité.  
   
-##  <a name="a-nameenableactivetabclosebuttona--cmfctabctrlenableactivetabclosebutton"></a><a name="enableactivetabclosebutton"></a>CMFCTabCtrl::EnableActiveTabCloseButton  
+##  <a name="enableactivetabclosebutton"></a>CMFCTabCtrl::EnableActiveTabCloseButton  
  Affiche ou masque le bouton Fermer ( **X**) sur l’onglet actif.  
   
 ```  
@@ -304,7 +354,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
  [in] `bEnable`  
  `TRUE`Pour afficher le bouton Fermer sous l’onglet actif ; `FALSE` pour afficher le bouton Fermer dans le coin supérieur droit de la zone de l’onglet. La valeur par défaut est `TRUE`.  
   
-##  <a name="a-nameenableinplaceedita--cmfctabctrlenableinplaceedit"></a><a name="enableinplaceedit"></a>CMFCTabCtrl::EnableInPlaceEdit  
+##  <a name="enableinplaceedit"></a>CMFCTabCtrl::EnableInPlaceEdit  
  Active ou désactive les étiquettes de l’onglet modifiable.  
   
 ```  
@@ -317,7 +367,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameenabletabdocumentsmenua--cmfctabctrlenabletabdocumentsmenu"></a><a name="enabletabdocumentsmenu"></a>CMFCTabCtrl::EnableTabDocumentsMenu  
+##  <a name="enabletabdocumentsmenu"></a>CMFCTabCtrl::EnableTabDocumentsMenu  
  Bascule entre une interface utilisateur qui utilise les deux boutons pour faire défiler les onglets de la fenêtre et une interface qui affiche un menu contextuel des fenêtres à onglets.  
   
 ```  
@@ -331,7 +381,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ### <a name="remarks"></a>Notes  
  Lorsque l’utilisateur clique sur une étiquette de l’onglet, le framework affiche la fenêtre à onglets correspondante. Si l’étiquette de l’onglet est visible, la fenêtre à onglets s’ouvre sans modifier sa position. Si l’utilisateur sélectionne un document dans le menu contextuel et la fenêtre à onglets correspondante est hors écran, la fenêtre à onglets devient le premier onglet.  
   
-##  <a name="a-nameensurevisiblea--cmfctabctrlensurevisible"></a><a name="ensurevisible"></a>CMFCTabCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>CMFCTabCtrl::EnsureVisible  
  Garantit qu’un onglet est visible.  
   
 ```  
@@ -348,7 +398,7 @@ virtual BOOL EnsureVisible(int iTab);
 ### <a name="remarks"></a>Remarques  
  Utilisez cette méthode pour garantir que l’onglet spécifié est visible. Le contrôle onglet défilera si nécessaire.  
   
-##  <a name="a-namegetdocumenticona--cmfctabctrlgetdocumenticon"></a><a name="getdocumenticon"></a>CMFCTabCtrl::GetDocumentIcon  
+##  <a name="getdocumenticon"></a>CMFCTabCtrl::GetDocumentIcon  
  Extrait l’image qui est associé à un onglet dans un menu contextuel des fenêtres à onglets.  
   
 ```  
@@ -362,7 +412,7 @@ static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ### <a name="return-value"></a>Valeur de retour  
  Le handle d’une image bitmap.  
   
-##  <a name="a-namegetfirstvisibletabnuma--cmfctabctrlgetfirstvisibletabnum"></a><a name="getfirstvisibletabnum"></a>CMFCTabCtrl::GetFirstVisibleTabNum  
+##  <a name="getfirstvisibletabnum"></a>CMFCTabCtrl::GetFirstVisibleTabNum  
  Récupère l’index du premier onglet est visible dans le contrôle onglet en cours.  
   
 ```  
@@ -375,7 +425,7 @@ virtual int GetFirstVisibleTabNum() const;
 ### <a name="remarks"></a>Remarques  
  Utilisez cette méthode uniquement lorsque le contrôle d’onglet est affiché dans le style de Microsoft OneNote. Utilisez le [CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle) méthode pour déterminer le style.  
   
-##  <a name="a-namegetresizemodea--cmfctabctrlgetresizemode"></a><a name="getresizemode"></a>CMFCTabCtrl::GetResizeMode  
+##  <a name="getresizemode"></a>CMFCTabCtrl::GetResizeMode  
  Récupère une valeur qui spécifie comment le contrôle onglet en cours peut être redimensionné.  
   
 ```  
@@ -385,7 +435,7 @@ ResizeMode GetResizeMode() const;
 ### <a name="return-value"></a>Valeur de retour  
  Parmi les `CMFCTabCtrl::ResizeMode` des valeurs d’énumération qui spécifie comment le contrôle onglet peut être redimensionné. Pour obtenir la liste des valeurs possibles, consultez la section Notes de la [CMFCTabCtrl::SetResizeMode](#setresizemode) (méthode).  
   
-##  <a name="a-namegetscrollbara--cmfctabctrlgetscrollbar"></a><a name="getscrollbar"></a>CMFCTabCtrl::GetScrollBar  
+##  <a name="getscrollbar"></a>CMFCTabCtrl::GetScrollBar  
  Récupère un pointeur vers l’objet de barre de défilement qui est associé au contrôle onglet.  
   
 ```  
@@ -398,7 +448,7 @@ CScrollBar* GetScrollBar();
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour accéder à la barre de défilement incorporé du contrôle onglet. Un objet de barre de défilement est créé uniquement lorsque le contrôle onglet possède le `STYLE_FLAT_SHARED_HORZ_SCROLL` style.  
   
-##  <a name="a-namegettabareaa--cmfctabctrlgettabarea"></a><a name="gettabarea"></a>CMFCTabCtrl::GetTabArea  
+##  <a name="gettabarea"></a>CMFCTabCtrl::GetTabArea  
  Récupère le rectangle englobant de la zone d’étiquette onglet en haut ou en bas du contrôle d’onglet.  
   
 ```  
@@ -417,7 +467,7 @@ void GetTabArea(
 ### <a name="remarks"></a>Remarques  
  Utilisez cette méthode pour déterminer la taille et la position de la zone d’onglet dans la fenêtre à onglets.  
   
-##  <a name="a-namegettabmaxwidtha--cmfctabctrlgettabmaxwidth"></a><a name="gettabmaxwidth"></a>CMFCTabCtrl::GetTabMaxWidth  
+##  <a name="gettabmaxwidth"></a>CMFCTabCtrl::GetTabMaxWidth  
  Récupère la largeur maximale d’un onglet.  
   
 ```  
@@ -430,7 +480,7 @@ int GetTabMaxWidth() const;
 ### <a name="remarks"></a>Remarques  
  Utilisez le [CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth) pour définir la largeur de l’onglet maximale.  
   
-##  <a name="a-namegettabsheighta--cmfctabctrlgettabsheight"></a><a name="gettabsheight"></a>CMFCTabCtrl::GetTabsHeight  
+##  <a name="gettabsheight"></a>CMFCTabCtrl::GetTabsHeight  
  Récupère la hauteur de la zone des onglets du contrôle onglet actuel.  
   
 ```  
@@ -440,7 +490,7 @@ virtual int GetTabsHeight() const;
 ### <a name="return-value"></a>Valeur de retour  
  La hauteur de la zone de l’onglet si aucun onglet n’est visible, ou zéro si aucun onglet n’est visible.  
   
-##  <a name="a-namegettabsrecta--cmfctabctrlgettabsrect"></a><a name="gettabsrect"></a>CMFCTabCtrl::GetTabsRect  
+##  <a name="gettabsrect"></a>CMFCTabCtrl::GetTabsRect  
  Récupère un rectangle qui délimite la zone des onglets du contrôle onglet actuel.  
   
 ```  
@@ -451,7 +501,7 @@ virtual void GetTabsRect(CRect& rect) const;
  [out] `rect`  
  Lorsque cette méthode est retournée, la `rect` paramètre contient un rectangle qui délimite la zone de l’onglet.  
   
-##  <a name="a-namegetwndareaa--cmfctabctrlgetwndarea"></a><a name="getwndarea"></a>CMFCTabCtrl::GetWndArea  
+##  <a name="getwndarea"></a>CMFCTabCtrl::GetWndArea  
  Récupère les limites de la zone cliente du contrôle d’onglet actuel.  
   
 ```  
@@ -464,7 +514,7 @@ void GetWndArea(CRect& rect) const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namehideactivewindowhorzscrollbara--cmfctabctrlhideactivewindowhorzscrollbar"></a><a name="hideactivewindowhorzscrollbar"></a>CMFCTabCtrl::HideActiveWindowHorzScrollBar  
+##  <a name="hideactivewindowhorzscrollbar"></a>CMFCTabCtrl::HideActiveWindowHorzScrollBar  
  Masque la barre de défilement horizontale, éventuellement, dans la fenêtre active.  
   
 ```  
@@ -474,7 +524,7 @@ void HideActiveWindowHorzScrollBar();
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour empêcher le contrôle onglet clignote lorsque l’utilisateur bascule entre les onglets du contrôle.  
   
-##  <a name="a-namehideinactivewindowa--cmfctabctrlhideinactivewindow"></a><a name="hideinactivewindow"></a>CMFCTabCtrl::HideInactiveWindow  
+##  <a name="hideinactivewindow"></a>CMFCTabCtrl::HideInactiveWindow  
  Spécifie si le framework affiche les fenêtres de contrôle onglet inactif.  
   
 ```  
@@ -487,7 +537,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namehidenotabsa--cmfctabctrlhidenotabs"></a><a name="hidenotabs"></a>CMFCTabCtrl::HideNoTabs  
+##  <a name="hidenotabs"></a>CMFCTabCtrl::HideNoTabs  
  Active ou désactive le dessin de la zone de l’onglet si aucun onglet visible.  
   
 ```  
@@ -500,7 +550,7 @@ void HideNoTabs(BOOL bHide=TRUE);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namehidesingletaba--cmfctabctrlhidesingletab"></a><a name="hidesingletab"></a>CMFCTabCtrl::HideSingleTab  
+##  <a name="hidesingletab"></a>CMFCTabCtrl::HideSingleTab  
  Active ou désactive le dessin de l’onglet s’il existe une seule fenêtre à onglets.  
   
 ```  
@@ -513,7 +563,7 @@ virtual void HideSingleTab(BOOL bHide=TRUE);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameisactiveinmditabgroupa--cmfctabctrlisactiveinmditabgroup"></a><a name="isactiveinmditabgroup"></a>CMFCTabCtrl::IsActiveInMDITabGroup  
+##  <a name="isactiveinmditabgroup"></a>CMFCTabCtrl::IsActiveInMDITabGroup  
  Indique si l’onglet actif d’un contrôle onglet est l’onglet actif dans un groupe d’onglets interface plusieurs documents.  
   
 ```  
@@ -526,7 +576,7 @@ BOOL IsActiveInMDITabGroup() const;
 ### <a name="remarks"></a>Remarques  
  Vous pouvez organiser plusieurs fenêtres de document en deux groupes d’onglets verticaux ou horizontaux et transférer aisément des documents à partir du groupe d’un onglet à l’autre.  
   
-##  <a name="a-nameisactivetabboldfonta--cmfctabctrlisactivetabboldfont"></a><a name="isactivetabboldfont"></a>CMFCTabCtrl::IsActiveTabBoldFont  
+##  <a name="isactivetabboldfont"></a>CMFCTabCtrl::IsActiveTabBoldFont  
  Indique si le texte de l’onglet actif est affiché à l’aide d’une police en gras.  
   
 ```  
@@ -539,7 +589,7 @@ BOOL IsActiveTabBoldFont() const;
 ### <a name="remarks"></a>Notes  
  Utilisez le [CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont) méthode pour modifier la police de l’onglet actif.  
   
-##  <a name="a-nameisactivetabclosebuttona--cmfctabctrlisactivetabclosebutton"></a><a name="isactivetabclosebutton"></a>CMFCTabCtrl::IsActiveTabCloseButton  
+##  <a name="isactivetabclosebutton"></a>CMFCTabCtrl::IsActiveTabCloseButton  
  Indique si le bouton Fermer ( **X**) s’affiche sur l’onglet actif ou dans le coin supérieur droit de la zone de l’onglet.  
   
 ```  
@@ -551,7 +601,7 @@ virtual BOOL IsActiveTabCloseButton() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameisdrawframea--cmfctabctrlisdrawframe"></a><a name="isdrawframe"></a>CMFCTabCtrl::IsDrawFrame  
+##  <a name="isdrawframe"></a>CMFCTabCtrl::IsDrawFrame  
  Indique si la fenêtre à onglets Dessine un rectangle de cadre autour des volets incorporés.  
   
 ```  
@@ -564,7 +614,7 @@ BOOL IsDrawFrame() const;
 ### <a name="remarks"></a>Remarques  
  Utilisez le [CMFCTabCtrl::SetDrawFrame](#setdrawframe) méthode pour activer ou désactiver le dessin d’un rectangle de frame.  
   
-##  <a name="a-nameisflatframea--cmfctabctrlisflatframe"></a><a name="isflatframe"></a>CMFCTabCtrl::IsFlatFrame  
+##  <a name="isflatframe"></a>CMFCTabCtrl::IsFlatFrame  
  Indique si le frame autour de la zone de l’onglet 2D ou 3D.  
   
 ```  
@@ -577,7 +627,7 @@ BOOL IsFlatFrame() const;
 ### <a name="remarks"></a>Remarques  
  Utilisez le [CMFCTabCtrl::SetFlatFrame](#setflatframe) méthode pour modifier la façon dont le frame est dessiné.  
   
-##  <a name="a-nameisflattaba--cmfctabctrlisflattab"></a><a name="isflattab"></a>CMFCTabCtrl::IsFlatTab  
+##  <a name="isflattab"></a>CMFCTabCtrl::IsFlatTab  
  Indique si l’apparence des onglets dans le contrôle onglet en cours est plat ou non.  
   
 ```  
@@ -587,7 +637,7 @@ virtual BOOL IsFlatTab() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si l’apparence des onglets dans le contrôle onglet en cours est plat ; dans le cas contraire, `FALSE`.  
   
-##  <a name="a-nameisleftrightroundeda--cmfctabctrlisleftrightrounded"></a><a name="isleftrightrounded"></a>CMFCTabCtrl::IsLeftRightRounded  
+##  <a name="isleftrightrounded"></a>CMFCTabCtrl::IsLeftRightRounded  
  Indique si l’apparence de la gauche et droite d’un onglet dans le contrôle onglet en cours est arrondie.  
   
 ```  
@@ -597,7 +647,7 @@ virtual BOOL IsLeftRightRounded() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si les côtés de chaque onglet est arrondie ; dans le cas contraire, `FALSE`.  
   
-##  <a name="a-nameismditabgroupa--cmfctabctrlismditabgroup"></a><a name="ismditabgroup"></a>CMFCTabCtrl::IsMDITabGroup  
+##  <a name="ismditabgroup"></a>CMFCTabCtrl::IsMDITabGroup  
  Indique si le contrôle onglet en cours est contenu dans la zone cliente d’une fenêtre d’interface multidocument.  
   
 ```  
@@ -607,7 +657,7 @@ virtual BOOL IsMDITabGroup() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le contrôle onglet en cours se trouve dans une fenêtre de la zone cliente MDI ; dans le cas contraire, `FALSE`.  
   
-##  <a name="a-nameisonenotestylea--cmfctabctrlisonenotestyle"></a><a name="isonenotestyle"></a>CMFCTabCtrl::IsOneNoteStyle  
+##  <a name="isonenotestyle"></a>CMFCTabCtrl::IsOneNoteStyle  
  Indique si le contrôle onglet en cours est affiché dans le style de Microsoft OneNote.  
   
 ```  
@@ -617,7 +667,7 @@ virtual BOOL IsOneNoteStyle() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le contrôle d’onglet est affiché dans le style de Microsoft OneNote ; dans le cas contraire, `FALSE`.  
   
-##  <a name="a-nameissharedscrolla--cmfctabctrlissharedscroll"></a><a name="issharedscroll"></a>CMFCTabCtrl::IsSharedScroll  
+##  <a name="issharedscroll"></a>CMFCTabCtrl::IsSharedScroll  
  Indique si le contrôle onglet actuel possède une barre de défilement qui peut faire défiler ses onglets en tant que groupe.  
   
 ```  
@@ -630,7 +680,7 @@ BOOL IsSharedScroll() const;
 ### <a name="remarks"></a>Remarques  
  Cette méthode retourne `TRUE` si le `style` paramètre de la [CMFCTabCtrl::Create](#create) STYLE_FLAT_SHARED_HORZ_SCROLL, il suffit.  
   
-##  <a name="a-nameistabdocumentsmenua--cmfctabctrlistabdocumentsmenu"></a><a name="istabdocumentsmenu"></a>CMFCTabCtrl::IsTabDocumentsMenu  
+##  <a name="istabdocumentsmenu"></a>CMFCTabCtrl::IsTabDocumentsMenu  
  Indique si le contrôle onglet affiche les boutons de défilement ou un bouton qui affiche un menu de fenêtres à onglets.  
   
 ```  
@@ -643,7 +693,7 @@ BOOL IsTabDocumentsMenu() const;
 ### <a name="remarks"></a>Remarques  
  Utilisez le [CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu) méthode pour spécifier la méthode de défilement des fenêtres avec onglet.  
   
-##  <a name="a-nameisvs2005stylea--cmfctabctrlisvs2005style"></a><a name="isvs2005style"></a>CMFCTabCtrl::IsVS2005Style  
+##  <a name="isvs2005style"></a>CMFCTabCtrl::IsVS2005Style  
  Indique si les onglets sont dessinés à l’aide du style de Visual Studio 2005.  
   
 ```  
@@ -656,7 +706,7 @@ virtual BOOL IsVS2005Style() const;
 ### <a name="remarks"></a>Remarques  
  Utilisez le `style` paramètre de la [CMFCTabCtrl::Create](#create) méthode pour spécifier comment les onglets sont dessinés.  
   
-##  <a name="a-namembenableactivatea--cmfctabctrlmbenableactivate"></a><a name="m_benableactivate"></a>CMFCTabCtrl::m_bEnableActivate  
+##  <a name="m_benableactivate"></a>CMFCTabCtrl::m_bEnableActivate  
  Empêche la vue active de perdre le focus lorsqu’un nouvel onglet est inséré et activé.  
   
 ```  
@@ -666,7 +716,7 @@ static BOOL m_bEnableActivate;
 ### <a name="remarks"></a>Notes  
  Le focus est généralement effectuée par une nouvelle fenêtre à onglets lorsque l’onglet est inséré et devient actif. Définir le `CMFCTabCtrl::m_bEnableActivate` variable de membre pour `FALSE` pour conserver le focus d’origine. La valeur par défaut est `TRUE`.  
   
-##  <a name="a-namemodifytabstylea--cmfctabctrlmodifytabstyle"></a><a name="modifytabstyle"></a>CMFCTabCtrl::ModifyTabStyle  
+##  <a name="modifytabstyle"></a>CMFCTabCtrl::ModifyTabStyle  
  Spécifie l’apparence des onglets dans le contrôle onglet en cours.  
   
 ```  
@@ -694,7 +744,7 @@ BOOL ModifyTabStyle(Style style);
 |STYLE_FLAT|Affiche les onglets à deux dimensions qui ont incliné côtés gauche et droit.|  
 |STYLE_FLAT_SHARED_HORZ_SCROLL|Affiche les onglets à deux dimensions. S’il y a plus d’onglets peuvent être affichées en même temps, le framework affiche les flèches de défilement à la fin de la zone de l’onglet.|  
   
-##  <a name="a-nameondragentera--cmfctabctrlondragenter"></a><a name="ondragenter"></a>CMFCTabCtrl::OnDragEnter  
+##  <a name="ondragenter"></a>CMFCTabCtrl::OnDragEnter  
  Appelé par l’infrastructure lors d’une opération de glisser-déplacer lorsque le curseur entre d’abord dans la fenêtre du contrôle d’onglet actuel.  
   
 ```  
@@ -722,7 +772,7 @@ virtual DROPEFFECT OnDragEnter(
   
  Par défaut, cette méthode appelle uniquement `CMFCTabCtrl::OnDragOver`, qui retourne toujours `DROPEFFECT_NONE`.  
   
-##  <a name="a-nameondragovera--cmfctabctrlondragover"></a><a name="ondragover"></a>CMFCTabCtrl::OnDragOver  
+##  <a name="ondragover"></a>CMFCTabCtrl::OnDragOver  
  Appelé par l’infrastructure pendant une opération glisser lorsque la souris est placée sur la fenêtre cible de déplacement.  
   
 ```  
@@ -748,7 +798,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="remarks"></a>Remarques  
  Substituez cette méthode avec votre implémentation personnalisée. Pour plus d’informations, consultez la [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover) (méthode).  
   
-##  <a name="a-nameonshowtabdocumentsmenua--cmfctabctrlonshowtabdocumentsmenu"></a><a name="onshowtabdocumentsmenu"></a>CMFCTabCtrl::OnShowTabDocumentsMenu  
+##  <a name="onshowtabdocumentsmenu"></a>CMFCTabCtrl::OnShowTabDocumentsMenu  
  Affiche un menu contextuel des fenêtres à onglets, attend que l’utilisateur sélectionne un onglet et rend l’onglet sélectionné l’onglet actif.  
   
 ```  
@@ -761,7 +811,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetactiveinmditabgroupa--cmfctabctrlsetactiveinmditabgroup"></a><a name="setactiveinmditabgroup"></a>CMFCTabCtrl::SetActiveInMDITabGroup  
+##  <a name="setactiveinmditabgroup"></a>CMFCTabCtrl::SetActiveInMDITabGroup  
  Définit l’onglet actif d’un contrôle onglet en tant que l’onglet actif dans un groupe d’onglets interface plusieurs documents.  
   
 ```  
@@ -775,7 +825,7 @@ void SetActiveInMDITabGroup(BOOL bActive);
 ### <a name="remarks"></a>Remarques  
  Vous pouvez organiser plusieurs fenêtres de document en deux groupes d’onglets verticaux ou horizontaux et transférer aisément des documents à partir du groupe d’un onglet à l’autre.  
   
-##  <a name="a-namesetactivetaba--cmfctabctrlsetactivetab"></a><a name="setactivetab"></a>CMFCTabCtrl::SetActiveTab  
+##  <a name="setactivetab"></a>CMFCTabCtrl::SetActiveTab  
  Active un onglet.  
   
 ```  
@@ -794,7 +844,7 @@ virtual BOOL SetActiveTab(int iTab);
   
  Le `SetActiveTab` méthode appelle automatiquement la [CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar) méthode pour empêcher le clignotement de l’écran.  
   
-##  <a name="a-namesetactivetabboldfonta--cmfctabctrlsetactivetabboldfont"></a><a name="setactivetabboldfont"></a>CMFCTabCtrl::SetActiveTabBoldFont  
+##  <a name="setactivetabboldfont"></a>CMFCTabCtrl::SetActiveTabBoldFont  
  Active ou désactive l’utilisation d’une police en gras dans les onglets.  
   
 ```  
@@ -807,7 +857,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetdrawframea--cmfctabctrlsetdrawframe"></a><a name="setdrawframe"></a>CMFCTabCtrl::SetDrawFrame  
+##  <a name="setdrawframe"></a>CMFCTabCtrl::SetDrawFrame  
  Spécifie si un rectangle de frame est dessiné autour d’une barre incorporée.  
   
 ```  
@@ -820,7 +870,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetflatframea--cmfctabctrlsetflatframe"></a><a name="setflatframe"></a>CMFCTabCtrl::SetFlatFrame  
+##  <a name="setflatframe"></a>CMFCTabCtrl::SetFlatFrame  
  Spécifie s’il faut dessiner plat ou une image 3D autour de la zone de l’onglet.  
   
 ```  
@@ -838,7 +888,7 @@ void SetFlatFrame(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namesetimagelista--cmfctabctrlsetimagelist"></a><a name="setimagelist"></a>CMFCTabCtrl::SetImageList  
+##  <a name="setimagelist"></a>CMFCTabCtrl::SetImageList  
  Spécifie une liste d’images.  
   
 ```  
@@ -871,7 +921,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
   
  Utilisez le [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) méthode est héritée par le contrôle d’onglet pour spécifier l’index de l’image à afficher.  
   
-##  <a name="a-namesetresizemodea--cmfctabctrlsetresizemode"></a><a name="setresizemode"></a>CMFCTabCtrl::SetResizeMode  
+##  <a name="setresizemode"></a>CMFCTabCtrl::SetResizeMode  
  Spécifie comment le contrôle onglet en cours peut être redimensionné et réaffiche ensuite le contrôle.  
   
 ```  
@@ -891,7 +941,7 @@ void SetResizeMode(ResizeMode resizeMode);
 |RESIZE_VERT|Le contrôle onglet peut être redimensionné verticalement, mais non horizontalement.|  
 |RESIZE_HORIZ|Le contrôle onglet peut être redimensionné horizontalement, mais non verticalement.|  
   
-##  <a name="a-namesettabmaxwidtha--cmfctabctrlsettabmaxwidth"></a><a name="settabmaxwidth"></a>CMFCTabCtrl::SetTabMaxWidth  
+##  <a name="settabmaxwidth"></a>CMFCTabCtrl::SetTabMaxWidth  
  Spécifie la largeur de l’onglet maximale dans une fenêtre à onglets.  
   
 ```  
@@ -905,7 +955,7 @@ void SetTabMaxWidth(int nTabMaxWidth);
 ### <a name="remarks"></a>Notes  
  Cette méthode permet de limiter la largeur de chaque onglet dans une fenêtre à onglets. Cette méthode est utile si les onglets ont des étiquettes très longs. Le [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) constructeur de classe initialise la largeur maximale onglet 0, ce qui signifie réellement que la largeur n’est pas limitée.  
   
-##  <a name="a-namestopresizea--cmfctabctrlstopresize"></a><a name="stopresize"></a>CMFCTabCtrl::StopResize  
+##  <a name="stopresize"></a>CMFCTabCtrl::StopResize  
  Met fin à l’opération en cours de redimensionnement du contrôle onglet.  
   
 ```  
@@ -916,7 +966,7 @@ void StopResize(BOOL bCancel);
  [in] `bCancel`  
  `TRUE`pour abandonner l’opération de redimensionnement en cours ; `FALSE` pour effectuer les opération de redimensionnement en cours. Dans les deux cas, le framework s’arrête de dessiner le rectangle de redimensionnement.  
   
-##  <a name="a-namesynchronizescrollbara--cmfctabctrlsynchronizescrollbar"></a><a name="synchronizescrollbar"></a>CMFCTabCtrl::SynchronizeScrollBar  
+##  <a name="synchronizescrollbar"></a>CMFCTabCtrl::SynchronizeScrollBar  
  Dessine une barre de défilement horizontal d’un contrôle onglet qui affiche les onglets plats.  
   
 ```  

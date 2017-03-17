@@ -10,7 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPreviewCtrlImpl
-- afxwin/CMFCPreviewCtrlImpl
+- AFXWIN/CMFCPreviewCtrlImpl
+- AFXWIN/CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+- AFXWIN/CMFCPreviewCtrlImpl::Create
+- AFXWIN/CMFCPreviewCtrlImpl::Destroy
+- AFXWIN/CMFCPreviewCtrlImpl::Focus
+- AFXWIN/CMFCPreviewCtrlImpl::GetDocument
+- AFXWIN/CMFCPreviewCtrlImpl::Redraw
+- AFXWIN/CMFCPreviewCtrlImpl::SetDocument
+- AFXWIN/CMFCPreviewCtrlImpl::SetHost
+- AFXWIN/CMFCPreviewCtrlImpl::SetPreviewVisuals
+- AFXWIN/CMFCPreviewCtrlImpl::SetRect
+- AFXWIN/CMFCPreviewCtrlImpl::DoPaint
+- AFXWIN/CMFCPreviewCtrlImpl::m_clrBackColor
+- AFXWIN/CMFCPreviewCtrlImpl::m_clrTextColor
+- AFXWIN/CMFCPreviewCtrlImpl::m_font
+- AFXWIN/CMFCPreviewCtrlImpl::m_pDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,13 +114,13 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
  [CMFCPreviewCtrlImpl](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
 
-## <a name="a-namecmfcpreviewctrlimpla-cmfcpreviewctrlimplcmfcpreviewctrlimpl"></a><a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+## <a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
 Construit un objet de contrôle de version préliminaire.
 
 ### <a name="syntax"></a>Syntaxe
 CMFCPreviewCtrlImpl() ;  
 
-## <a name="a-namecreatea-cmfcpreviewctrlimplcreate"></a><a name="create"></a>CMFCPreviewCtrlImpl::Create
+## <a name="create"></a>CMFCPreviewCtrlImpl::Create
 Surchargé. Appelée par un gestionnaire d’aperçus de riches pour créer la fenêtre Windows.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -135,7 +150,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si la création a réussi ; dans le cas contraire `FALSE`.  
   
-## <a name="a-namedestroya-cmfcpreviewctrlimpldestroy"></a><a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
+## <a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
 Appelée par un gestionnaire d’aperçus de riches lorsqu’il a besoin détruire ce contrôle.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -144,7 +159,7 @@ Appelée par un gestionnaire d’aperçus de riches lorsqu’il a besoin détrui
 virtual void Destroy();  
 ```  
   
-## <a name="a-namedopainta-cmfcpreviewctrlimpldopaint"></a><a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint  
+## <a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint  
 Appelée par l’infrastructure pour afficher l’aperçu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -160,7 +175,7 @@ virtual void DoPaint(
  Pointeur vers un contexte de périphérique pour la peinture.  
 
 
-## <a name="a-namefocusa-cmfcpreviewctrlimplfocus"></a><a name="focus"></a>CMFCPreviewCtrlImpl::Focus  
+## <a name="focus"></a>CMFCPreviewCtrlImpl::Focus  
 Définit le focus à ce contrôle.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -168,7 +183,7 @@ Définit le focus à ce contrôle.
 ```  
 virtual void Focus();  
 ```  
-## <a name="a-namegetdocumenta-cmfcpreviewctrlimplgetdocument"></a><a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
+## <a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
 Retourne un document lié à ce contrôle de version préliminaire.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -180,7 +195,7 @@ ATL::IDocument* GetDocument();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers un document dont le contenu est affiché dans le contrôle.
 
-## <a name="a-namemclrbackcolora-cmfcpreviewctrlimplmclrbackcolor"></a><a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor  
+## <a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor  
 Couleur d’arrière-plan de la fenêtre d’aperçu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -189,7 +204,7 @@ Couleur d’arrière-plan de la fenêtre d’aperçu.
 COLORREF m_clrBackColor;  
 ```  
 
-## <a name="a-namemclrtextcolora-cmfcpreviewctrlimplmclrtextcolor"></a><a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
+## <a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
 Couleur du texte de la fenêtre d’aperçu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -197,14 +212,14 @@ Couleur du texte de la fenêtre d’aperçu.
 ```  
 COLORREF m_clrTextColor;  
 ```  
-## <a name="a-namemfonta-cmfcpreviewctrlimplmfont--font-used-to-display-text-in-the-preview-window"></a><a name="m_font"></a>CMFCPreviewCtrlImpl::m_font police utilisée pour afficher du texte dans la fenêtre d’aperçu.  
+## <a name="m_font"></a>CMFCPreviewCtrlImpl::m_font police utilisée pour afficher du texte dans la fenêtre d’aperçu.  
   
 ### <a name="syntax"></a>Syntaxe  
   
 ```  
 CFont m_font;  
 ```  
-## <a name="a-namempdocumenta-cmfcpreviewctrlimplmpdocument"></a><a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument  
+## <a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument  
 Pointeur vers un document dont le contenu est affiché dans le contrôle.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -213,7 +228,7 @@ Pointeur vers un document dont le contenu est affiché dans le contrôle.
 ATL::IDocument* m_pDocument;  
 ```  
 
-## <a name="a-nameredrawa-cmfcpreviewctrlimplredraw"></a><a name="redraw"></a>CMFCPreviewCtrlImpl::Redraw  
+## <a name="redraw"></a>CMFCPreviewCtrlImpl::Redraw  
 Indique à ce contrôle à redessiner.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -221,7 +236,7 @@ Indique à ce contrôle à redessiner.
 ```  
 virtual void Redraw();  
 ```  
-## <a name="a-namesetdocumenta-cmfcpreviewctrlimplsetdocument"></a><a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument 
+## <a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument 
 Appelée par le Gestionnaire d’aperçus pour créer une relation entre l’implémentation de document et le contrôle de version préliminaire.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -236,7 +251,7 @@ void SetDocument(
  `pDocument`  
  Pointeur vers l’implémentation d’un document.  
 
-## <a name="a-namesethosta-cmfcpreviewctrlimplsethost"></a><a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost  
+## <a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost  
 Définit un nouveau parent de ce contrôle.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -251,7 +266,7 @@ virtual void SetHost(
  `hWndParent`  
  Handle vers la nouvelle fenêtre parent.  
 
-## <a name="a-namesetpreviewvisualsa-cmfcpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewVisuals  
+## <a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewVisuals  
 Appelée par un gestionnaire d’aperçus de riches lorsqu’il a besoin définir les éléments visuels de l’aperçu riche contenu.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -274,7 +289,7 @@ virtual void SetPreviewVisuals(
  `plf`  
  Police utilisée pour afficher du texte dans la fenêtre d’aperçu. 
 
-##  <a name="a-namesetrecta-cmfcpreviewctrlimplsetrect"></a><a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect  
+##  <a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect  
 Définit un nouveau rectangle englobant pour ce contrôle.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -296,7 +311,7 @@ virtual void SetRect(
 ### <a name="remarks"></a>Remarques  
  Généralement, un rectangle englobant est défini lorsque le contrôle hôte est redimensionné.  
 
-## <a name="a-namedtora-cmfcpreviewctrlimplcmfcpreviewctrlimpl"></a><a name="dtor"></a>CMFCPreviewCtrlImpl :: ~ CMFCPreviewCtrlImpl  
+## <a name="dtor"></a>CMFCPreviewCtrlImpl :: ~ CMFCPreviewCtrlImpl  
 Destruction d’un objet de contrôle de version préliminaire.  
   
 ### <a name="syntax"></a>Syntaxe  

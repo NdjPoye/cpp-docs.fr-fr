@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPaneTask
+- AFXTASKSPANE/CMFCTasksPaneTask
+- AFXTASKSPANE/CMFCTasksPaneTask::CMFCTasksPaneTask
+- AFXTASKSPANE/CMFCTasksPaneTask::SetACCData
+- AFXTASKSPANE/CMFCTasksPaneTask::m_bAutoDestroyWindow
+- AFXTASKSPANE/CMFCTasksPaneTask::m_bIsBold
+- AFXTASKSPANE/CMFCTasksPaneTask::m_dwUserData
+- AFXTASKSPANE/CMFCTasksPaneTask::m_hwndTask
+- AFXTASKSPANE/CMFCTasksPaneTask::m_nIcon
+- AFXTASKSPANE/CMFCTasksPaneTask::m_nWindowHeight
+- AFXTASKSPANE/CMFCTasksPaneTask::m_pGroup
+- AFXTASKSPANE/CMFCTasksPaneTask::m_rect
+- AFXTASKSPANE/CMFCTasksPaneTask::m_strName
+- AFXTASKSPANE/CMFCTasksPaneTask::m_uiCommandID
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +107,7 @@ class CMFCTasksPaneTask : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxTasksPane.h  
   
-##  <a name="a-namecmfctaskspanetaska--cmfctaskspanetaskcmfctaskspanetask"></a><a name="cmfctaskspanetask"></a>CMFCTasksPaneTask::CMFCTasksPaneTask  
+##  <a name="cmfctaskspanetask"></a>CMFCTasksPaneTask::CMFCTasksPaneTask  
  Crée et initialise un `CMFCTasksPaneTask` objet.  
   
 ```  
@@ -136,7 +149,7 @@ CMFCTasksPaneTask(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namembautodestroywindowa--cmfctaskspanetaskmbautodestroywindow"></a><a name="m_bautodestroywindow"></a>CMFCTasksPaneTask::m_bAutoDestroyWindow  
+##  <a name="m_bautodestroywindow"></a>CMFCTasksPaneTask::m_bAutoDestroyWindow  
  Détermine si la fenêtre de la tâche est automatiquement détruite.  
   
 ```  
@@ -146,7 +159,7 @@ BOOL m_bAutoDestroyWindow;
 ### <a name="remarks"></a>Notes  
  La valeur `TRUE` pour spécifier que la fenêtre des tâches ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) doit être détruit automatiquement ; sinon, `FALSE`.  
   
-##  <a name="a-namembisbolda--cmfctaskspanetaskmbisbold"></a><a name="m_bisbold"></a>CMFCTasksPaneTask::m_bIsBold  
+##  <a name="m_bisbold"></a>CMFCTasksPaneTask::m_bIsBold  
  Détermine si une étiquette de tâche est dessinée dans le texte en gras.  
   
 ```  
@@ -156,7 +169,7 @@ BOOL m_bIsBold;
 ### <a name="remarks"></a>Remarques  
  Définissez ce membre sur `TRUE` pour afficher le texte en gras pour l’étiquette de la tâche.  
   
-##  <a name="a-namemdwuserdataa--cmfctaskspanetaskmdwuserdata"></a><a name="m_dwuserdata"></a>CMFCTasksPaneTask::m_dwUserData  
+##  <a name="m_dwuserdata"></a>CMFCTasksPaneTask::m_dwUserData  
  Contient des données définies par l’utilisateur qui sont associées à la tâche. La valeur zéro si aucune donnée n’est associée à la tâche.  
   
 ```  
@@ -165,7 +178,7 @@ DWORD m_dwUserData;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namemhwndtaska--cmfctaskspanetaskmhwndtask"></a><a name="m_hwndtask"></a>CMFCTasksPaneTask::m_hwndTask  
+##  <a name="m_hwndtask"></a>CMFCTasksPaneTask::m_hwndTask  
  Handle vers la fenêtre des tâches.  
   
 ```  
@@ -175,7 +188,7 @@ HWND m_hwndTask;
 ### <a name="remarks"></a>Notes  
  Pour ajouter une fenêtre de tâche, appelez [CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow).  
   
-##  <a name="a-namemnicona--cmfctaskspanetaskmnicon"></a><a name="m_nicon"></a>CMFCTasksPaneTask::m_nIcon  
+##  <a name="m_nicon"></a>CMFCTasksPaneTask::m_nIcon  
  Position d’index dans une liste d’images qui identifie une image qui s’affiche en regard de la tâche spécifiée.  
   
 ```  
@@ -187,7 +200,7 @@ int m_nIcon;
   
  Définissez `m_nIcon` -1 si vous souhaitez afficher la tâche sans image.  
   
-##  <a name="a-namemnwindowheighta--cmfctaskspanetaskmnwindowheight"></a><a name="m_nwindowheight"></a>CMFCTasksPaneTask::m_nWindowHeight  
+##  <a name="m_nwindowheight"></a>CMFCTasksPaneTask::m_nWindowHeight  
  La hauteur de la fenêtre des tâches. Si la tâche a aucune fenêtre de tâche, cette valeur est zéro.  
   
 ```  
@@ -196,7 +209,7 @@ int m_nWindowHeight;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namempgroupa--cmfctaskspanetaskmpgroup"></a><a name="m_pgroup"></a>CMFCTasksPaneTask::m_pGroup  
+##  <a name="m_pgroup"></a>CMFCTasksPaneTask::m_pGroup  
  Pointeur vers le [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) à laquelle appartient cette tâche.  
   
 ```  
@@ -206,7 +219,7 @@ CMFCTasksPaneTaskGroup* m_pGroup;
 ### <a name="remarks"></a>Remarques  
  Chaque tâche doit posséder un groupe parent. Vous ajoutez des groupes à un volet Office en appelant [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
-##  <a name="a-namemrecta--cmfctaskspanetaskmrect"></a><a name="m_rect"></a>CMFCTasksPaneTask::m_rect  
+##  <a name="m_rect"></a>CMFCTasksPaneTask::m_rect  
  Spécifie le rectangle englobant de la tâche.  
   
 ```  
@@ -216,7 +229,7 @@ CRect m_rect;
 ### <a name="remarks"></a>Remarques  
  Cette valeur est calculée par l’infrastructure lorsque la tâche est dessinée.  
   
-##  <a name="a-namemstrnamea--cmfctaskspanetaskmstrname"></a><a name="m_strname"></a>CMFCTasksPaneTask::m_strName  
+##  <a name="m_strname"></a>CMFCTasksPaneTask::m_strName  
  Le nom de la tâche.  
   
 ```  
@@ -225,7 +238,7 @@ CString m_strName;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namemuicommandida--cmfctaskspanetaskmuicommandid"></a><a name="m_uicommandid"></a>CMFCTasksPaneTask::m_uiCommandID  
+##  <a name="m_uicommandid"></a>CMFCTasksPaneTask::m_uiCommandID  
  Spécifie l’ID de commande de la commande est exécutée lorsque l’utilisateur clique sur la tâche. Si cette valeur n’est pas un ID de commande valide, la tâche est traitée comme une simple étiquette.  
   
 ```  
@@ -234,7 +247,7 @@ UINT m_uiCommandID;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetaccdataa--cmfctaskspanetasksetaccdata"></a><a name="setaccdata"></a>CMFCTasksPaneTask::SetACCData  
+##  <a name="setaccdata"></a>CMFCTasksPaneTask::SetACCData  
  Détermine les données d’accessibilité pour la tâche actuelle.  
   
 ```  

@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLabel
+- AFXRIBBONLABEL/CMFCRibbonLabel
+- AFXRIBBONLABEL/CMFCRibbonLabel::CMFCRibbonLabel
+- AFXRIBBONLABEL/CMFCRibbonLabel::SetACCData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxRibbonLabel.h  
   
-##  <a name="a-namecmfcribbonlabela--cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
  Construit et initialise un [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) objet qui affiche la chaîne de texte spécifiée.  
   
 ```  
@@ -98,7 +101,7 @@ CMFCRibbonLabel(
  [in] `bIsMultiLine`  
  `TRUE`Pour spécifier que l’étiquette est une étiquette multiligne ; dans le cas contraire, `FALSE`.  
   
-##  <a name="a-namesetaccdataa--cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
  Détermine les données d’accessibilité de l’élément label de ruban en cours.  
   
 ```  

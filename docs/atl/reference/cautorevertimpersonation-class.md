@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAutoRevertImpersonation
 - CAutoRevertImpersonation
+- ATLSECURITY/ATL::CAutoRevertImpersonation
+- ATLSECURITY/ATL::CAutoRevertImpersonation::CAutoRevertImpersonation
+- ATLSECURITY/ATL::CAutoRevertImpersonation::Attach
+- ATLSECURITY/ATL::CAutoRevertImpersonation::Detach
+- ATLSECURITY/ATL::CAutoRevertImpersonation::GetAccessToken
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,7 +80,7 @@ class CAutoRevertImpersonation
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlsecurity.h  
   
-##  <a name="a-nameattacha--cautorevertimpersonationattach"></a><a name="attach"></a>CAutoRevertImpersonation::Attach  
+##  <a name="attach"></a>CAutoRevertImpersonation::Attach  
  Automatise l’inversion de l’emprunt d’identité d’un jeton d’accès.  
   
 ```
@@ -90,7 +94,7 @@ void Attach(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>Remarques  
  Cette méthode doit être utilisée uniquement si la [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) objet a été créé avec une valeur NULL `CAccessToken` pointeur, ou si [détachement](#detach) a été appelé précédemment. Pour les cas simples, il n’est pas nécessaire d’utiliser cette méthode.  
   
-##  <a name="a-namecautorevertimpersonationa--cautorevertimpersonationcautorevertimpersonation"></a><a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation  
+##  <a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation  
  Construit un objet `CAutoRevertImpersonation`.  
   
 ```
@@ -104,7 +108,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>Remarques  
  L’emprunt d’identité réelle du jeton d’accès doit être effectuée séparément à partir d’et de préférence avant la création d’un `CAutoRevertImpersonation` objet. Cet emprunt d’identité est automatiquement restauré lorsque le `CAutoRevertImpersonation` objet devient hors de portée.  
   
-##  <a name="a-namedtora--cautorevertimpersonationcautorevertimpersonation"></a><a name="dtor"></a>CAutoRevertImpersonation :: ~ CAutoRevertImpersonation  
+##  <a name="dtor"></a>CAutoRevertImpersonation :: ~ CAutoRevertImpersonation  
  Détruit l’objet et rétablit le jeton d’emprunt d’identité de l’accès.  
   
 ```
@@ -114,7 +118,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>Remarques  
  Rétablit un emprunt d’identité actuellement en vigueur pour le [CAccessToken](../../atl/reference/caccesstoken-class.md) objet fourni à la construction ou via la [Attach](#attach) (méthode). Si aucune `CAccessToken` est associé, le destructeur n’a aucun effet.  
   
-##  <a name="a-namedetacha--cautorevertimpersonationdetach"></a><a name="detach"></a>CAutoRevertImpersonation::Detach  
+##  <a name="detach"></a>CAutoRevertImpersonation::Detach  
  Annule l’inversion de l’emprunt d’identité automatique.  
   
 ```
@@ -127,7 +131,7 @@ const CAccessToken* Detach() throw();
 ### <a name="remarks"></a>Remarques  
  Appel de **détachement** empêche le `CAutoRevertImpersonation` objet de rétrograder un emprunt d’identité actuellement en vigueur pour le [CAccessToken](../../atl/reference/caccesstoken-class.md) objet associé à cet objet. `CAutoRevertImpersonation`peuvent être détruits sans aucune incidence ou réassocié à la même ou un autre `CAccessToken` à l’aide de l’objet [Attach](#attach).  
   
-##  <a name="a-namegetaccesstokena--cautorevertimpersonationgetaccesstoken"></a><a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken  
+##  <a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken  
  Récupère l’actuel jeton accès associé à cet objet.  
   
 ```

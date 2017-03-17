@@ -9,9 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CWindowImpl
-- ATL.CWindowImpl
 - CWindowImpl
+- ATLWIN/ATL::CWindowImpl
+- ATLWIN/ATL::CWindowImpl::Create
+- ATLWIN/ATL::DefWindowProc
+- ATLWIN/ATL::GetCurrentMessage
+- ATLWIN/ATL::GetWindowProc
+- ATLWIN/ATL::OnFinalMessage
+- ATLWIN/ATL::SubclassWindow
+- ATLWIN/ATL::UnsubclassWindow
+- ATLWIN/ATL::GetWndClassInfo
+- ATLWIN/ATL::WindowProc
+- ATLWIN/ATL::m_pfnSuperWindowProc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -138,7 +147,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h  
   
-##  <a name="a-namecreatea--cwindowimplcreate"></a><a name="create"></a>CWindowImpl::Create  
+##  <a name="create"></a>CWindowImpl::Create  
  Crée une fenêtre basée sur une nouvelle classe de fenêtre.  
   
 ```
@@ -188,7 +197,7 @@ HWND Create(
 > [!NOTE]
 >  Si 0 est utilisée comme valeur pour le `MenuOrID` paramètre, il doit être spécifié en tant que 0 u (valeur par défaut) pour éviter une erreur du compilateur.  
   
-##  <a name="a-namedefwindowproca--cwindowimpldefwindowproc"></a><a name="defwindowproc"></a>CWindowImpl::DefWindowProc  
+##  <a name="defwindowproc"></a>CWindowImpl::DefWindowProc  
  Appelé par [WindowProc](#windowproc) pour traiter les messages non gérées par la table des messages.  
   
 ```
@@ -218,7 +227,7 @@ LRESULT DefWindowProc();
   
  La fonction sans paramètre récupère automatiquement les paramètres nécessaires à partir du message en cours.  
   
-##  <a name="a-namegetcurrentmessagea--cwindowimplgetcurrentmessage"></a><a name="getcurrentmessage"></a>CWindowImpl::GetCurrentMessage  
+##  <a name="getcurrentmessage"></a>CWindowImpl::GetCurrentMessage  
  Retourne le message actuel, empaqueté dans la `MSG` structure.  
   
 ```
@@ -228,7 +237,7 @@ const MSG* GetCurrentMessage();
 ### <a name="return-value"></a>Valeur de retour  
  Le message en cours.  
   
-##  <a name="a-namegetwindowproca--cwindowimplgetwindowproc"></a><a name="getwindowproc"></a>CWindowImpl::GetWindowProc  
+##  <a name="getwindowproc"></a>CWindowImpl::GetWindowProc  
  Retourne `WindowProc`, la procédure de fenêtre en cours.  
   
 ```
@@ -241,7 +250,7 @@ virtual WNDPROC GetWindowProc();
 ### <a name="remarks"></a>Remarques  
  Substituez cette méthode pour remplacer la procédure de fenêtre par les vôtres.  
   
-##  <a name="a-namegetwndclassinfoa--cwindowimplgetwndclassinfo"></a><a name="getwndclassinfo"></a>CWindowImpl::GetWndClassInfo  
+##  <a name="getwndclassinfo"></a>CWindowImpl::GetWndClassInfo  
  Appelé par [créer](#create) pour accéder aux informations de classe de fenêtre.  
   
 ```
@@ -258,7 +267,7 @@ static CWndClassInfo& GetWndClassInfo();
   
  Outre l’utilisation de la `DECLARE_WND_CLASS` et `DECLARE_WND_SUPERCLASS` macros, vous pouvez remplacer `GetWndClassInfo` par votre propre implémentation.  
   
-##  <a name="a-namempfnsuperwindowproca--cwindowimplmpfnsuperwindowproc"></a><a name="m_pfnsuperwindowproc"></a>CWindowImpl::m_pfnSuperWindowProc  
+##  <a name="m_pfnsuperwindowproc"></a>CWindowImpl::m_pfnSuperWindowProc  
  En fonction de la fenêtre, pointe vers une des procédures suivantes de fenêtre.  
   
 ```
@@ -275,7 +284,7 @@ WNDPROC m_pfnSuperWindowProc;
   
  [CWindowImpl::DefWindowProc](#defwindowproc) envoie un message d’informations à la procédure enregistrée dans `m_pfnSuperWindowProc`.  
   
-##  <a name="a-nameonfinalmessagea--cwindowimplonfinalmessage"></a><a name="onfinalmessage"></a>CWindowImpl::OnFinalMessage  
+##  <a name="onfinalmessage"></a>CWindowImpl::OnFinalMessage  
  Appelé après la réception du dernier message (généralement `WM_NCDESTROY`).  
   
 ```
@@ -289,7 +298,7 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="remarks"></a>Remarques  
  L’implémentation par défaut de `OnFinalMessage` ne fait rien, mais vous pouvez remplacer cette fonction pour traiter de nettoyage avant la destruction d’une fenêtre. Si vous souhaitez supprimer automatiquement votre objet lors de la destruction de la fenêtre, vous pouvez appeler `delete this;` dans cette fonction.  
   
-##  <a name="a-namesubclasswindowa--cwindowimplsubclasswindow"></a><a name="subclasswindow"></a>CWindowImpl::SubclassWindow  
+##  <a name="subclasswindow"></a>CWindowImpl::SubclassWindow  
  La fenêtre est identifiée par les sous-classes `hWnd` et l’attache à le `CWindowImpl` objet.  
   
 ```
@@ -309,7 +318,7 @@ BOOL SubclassWindow(HWND hWnd);
 > [!NOTE]
 >  N’appelez pas `SubclassWindow` si vous avez déjà appelé [créer](#create).  
   
-##  <a name="a-nameunsubclasswindowa--cwindowimplunsubclasswindow"></a><a name="unsubclasswindow"></a>CWindowImpl::UnsubclassWindow  
+##  <a name="unsubclasswindow"></a>CWindowImpl::UnsubclassWindow  
  Détache la fenêtre sous-classé à partir de la `CWindowImpl` de l’objet et restaure la procédure de fenêtre d’origine, enregistrée dans [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 ```
@@ -319,7 +328,7 @@ HWND UnsubclassWindow();
 ### <a name="return-value"></a>Valeur de retour  
  Handle de la fenêtre précédemment sous-classée.  
   
-##  <a name="a-namewindowproca--cwindowimplwindowproc"></a><a name="windowproc"></a>CWindowImpl::WindowProc  
+##  <a name="windowproc"></a>CWindowImpl::WindowProc  
  Cette fonction statique implémente la procédure de fenêtre.  
   
 ```

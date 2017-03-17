@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CPrivateObjectSecurityDesc
-- ATL::CPrivateObjectSecurityDesc
 - CPrivateObjectSecurityDesc
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::ConvertToAutoInherit
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Create
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Get
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Set
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +91,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlsecurity.h  
   
-##  <a name="a-nameconverttoautoinherita--cprivateobjectsecuritydescconverttoautoinherit"></a><a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
+##  <a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
  Appelez cette méthode pour convertir un descripteur de sécurité et ses listes de contrôle d’accès (ACL) dans un format qui prend en charge la propagation automatique des entrées de contrôle d’accès héritable (ACE).  
   
 ```
@@ -117,7 +121,7 @@ bool ConvertToAutoInherit(
 ### <a name="remarks"></a>Notes  
  Cette méthode tente de déterminer si les ACE dans le contrôle d’accès discrétionnaire (DACL) de liste et la liste de contrôle d’accès système (SACL) du descripteur de sécurité actuel ont été héritées à partir du descripteur de sécurité parent. Il appelle le [ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403) (fonction).  
   
-##  <a name="a-namecprivateobjectsecuritydesca--cprivateobjectsecuritydesccprivateobjectsecuritydesc"></a><a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
+##  <a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  Constructeur.  
   
 ```
@@ -127,7 +131,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>Remarques  
  Initialise le `CPrivateObjectSecurityDesc` objet.  
   
-##  <a name="a-namedtora--cprivateobjectsecuritydesccprivateobjectsecuritydesc"></a><a name="dtor"></a>CPrivateObjectSecurityDesc :: ~ CPrivateObjectSecurityDesc  
+##  <a name="dtor"></a>CPrivateObjectSecurityDesc :: ~ CPrivateObjectSecurityDesc  
  Destructeur.  
   
 ```
@@ -137,7 +141,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>Notes  
  Le destructeur libère toutes les ressources attribuées et supprime le descripteur de sécurité de l’objet privé.  
   
-##  <a name="a-namecreatea--cprivateobjectsecuritydesccreate"></a><a name="create"></a>CPrivateObjectSecurityDesc::Create  
+##  <a name="create"></a>CPrivateObjectSecurityDesc::Create  
  Appelez cette méthode pour allouer et initialiser un descripteur de sécurité auto-relatif pour l’objet privé créé en appelant le Gestionnaire des ressources.  
   
 ```
@@ -194,7 +198,7 @@ bool Create(
 > [!NOTE]
 >  Un descripteur de sécurité auto-relatif est un descripteur de sécurité qui stocke toutes ses informations de sécurité dans un bloc contigu de mémoire.  
   
-##  <a name="a-namegeta--cprivateobjectsecuritydescget"></a><a name="get"></a>CPrivateObjectSecurityDesc::Get  
+##  <a name="get"></a>CPrivateObjectSecurityDesc::Get  
  Appelez cette méthode pour récupérer les informations de descripteur de sécurité d’un objet privé.  
   
 ```
@@ -216,7 +220,7 @@ bool Get(
 ### <a name="remarks"></a>Remarques  
  Le descripteur de sécurité est une structure et les données associées qui contient les informations de sécurité pour un objet sécurisable.  
   
-##  <a name="a-nameoperatoreqa--cprivateobjectsecuritydescoperator-"></a><a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
+##  <a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
  Opérateur d'assignation.  
   
 ```
@@ -230,7 +234,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la mise à jour `CPrivateObjectSecurityDesc` objet.  
   
-##  <a name="a-nameseta--cprivateobjectsecuritydescset"></a><a name="set"></a>CPrivateObjectSecurityDesc::Set  
+##  <a name="set"></a>CPrivateObjectSecurityDesc::Set  
  Appelez cette méthode pour modifier le descripteur de sécurité d’un objet privé.  
   
 ```

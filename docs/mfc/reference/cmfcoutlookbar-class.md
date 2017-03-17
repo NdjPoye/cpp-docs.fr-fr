@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCOutlookBar
+- AFXOUTLOOKBAR/CMFCOutlookBar
+- AFXOUTLOOKBAR/CMFCOutlookBar::AllowDestroyEmptyTabbedPane
+- AFXOUTLOOKBAR/CMFCOutlookBar::CanAcceptPane
+- AFXOUTLOOKBAR/CMFCOutlookBar::CanSetCaptionTextToTabName
+- AFXOUTLOOKBAR/CMFCOutlookBar::Create
+- AFXOUTLOOKBAR/CMFCOutlookBar::CreateCustomPage
+- AFXOUTLOOKBAR/CMFCOutlookBar::DoesAllowDynInsertBefore
+- AFXOUTLOOKBAR/CMFCOutlookBar::FloatTab
+- AFXOUTLOOKBAR/CMFCOutlookBar::GetButtonsFont
+- AFXOUTLOOKBAR/CMFCOutlookBar::GetTabArea
+- AFXOUTLOOKBAR/CMFCOutlookBar::IsMode2003
+- AFXOUTLOOKBAR/CMFCOutlookBar::OnAfterAnimation
+- AFXOUTLOOKBAR/CMFCOutlookBar::OnBeforeAnimation
+- AFXOUTLOOKBAR/CMFCOutlookBar::OnScroll
+- AFXOUTLOOKBAR/CMFCOutlookBar::RemoveCustomPage
+- AFXOUTLOOKBAR/CMFCOutlookBar::SetButtonsFont
+- AFXOUTLOOKBAR/CMFCOutlookBar::SetMode2003
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -171,7 +188,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxoutlookbar.h  
   
-##  <a name="a-nameallowdestroyemptytabbedpanea--cmfcoutlookbarallowdestroyemptytabbedpane"></a><a name="allowdestroyemptytabbedpane"></a>CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
+##  <a name="allowdestroyemptytabbedpane"></a>CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
  Spécifie si un volet à onglets vide peut être détruit.  
   
 ```  
@@ -184,7 +201,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 ### <a name="remarks"></a>Remarques  
  Si un volet à onglets vide ne peut pas être détruit, le framework le masque à la place.  
   
-##  <a name="a-namecanacceptpanea--cmfcoutlookbarcanacceptpane"></a><a name="canacceptpane"></a>CMFCOutlookBar::CanAcceptPane  
+##  <a name="canacceptpane"></a>CMFCOutlookBar::CanAcceptPane  
  Détermine si un autre volet peut être ancré dans le volet de barre Outlook.  
   
 ```  
@@ -205,7 +222,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
  Sinon, cette méthode se comporte comme la méthode de base [CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane), sauf que même si la station d’accueil n’est pas activée, une barre Outlook permet toujours une autre barre Outlook être ancré sur celui-ci.  
   
-##  <a name="a-namecansetcaptiontexttotabnamea--cmfcoutlookbarcansetcaptiontexttotabname"></a><a name="cansetcaptiontexttotabname"></a>CMFCOutlookBar::CanSetCaptionTextToTabName  
+##  <a name="cansetcaptiontexttotabname"></a>CMFCOutlookBar::CanSetCaptionTextToTabName  
  Détermine si la légende pour le volet à onglets affiche le même texte que l’onglet actif.  
   
 ```  
@@ -220,7 +237,7 @@ virtual BOOL CanSetCaptionTextToTabName() const;
   
  En mode Outlook 2003, ce paramètre est toujours activé.  
   
-##  <a name="a-namecreatea--cmfcoutlookbarcreate"></a><a name="create"></a>CMFCOutlookBar::Create  
+##  <a name="create"></a>CMFCOutlookBar::Create  
  Crée le contrôle de barre Outlook.  
   
 ```  
@@ -270,7 +287,7 @@ virtual BOOL Create(
  [!code-cpp[NVC_MFC_OutlookMultiViews n °&1;](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]  
 [!code-cpp[NVC_MFC_OutlookMultiViews n °&2;](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]  
   
-##  <a name="a-namecreatecustompagea--cmfcoutlookbarcreatecustompage"></a><a name="createcustompage"></a>CMFCOutlookBar::CreateCustomPage  
+##  <a name="createcustompage"></a>CMFCOutlookBar::CreateCustomPage  
  Crée un onglet de barre Outlook personnalisé.  
   
 ```  
@@ -302,7 +319,7 @@ CMFCOutlookBarPane* CreateCustomPage(
   
  Utilisez [CMFCOutlookBar::RemoveCustomPage](#removecustompage) pour supprimer des pages personnalisées.  
   
-##  <a name="a-namedoesallowdyninsertbeforea--cmfcoutlookbardoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CMFCOutlookBar::DoesAllowDynInsertBefore  
+##  <a name="doesallowdyninsertbefore"></a>CMFCOutlookBar::DoesAllowDynInsertBefore  
  Spécifie si un utilisateur pouvez ancrer un volet sur le bord extérieur de la barre Outlook.  
   
 ```  
@@ -320,7 +337,7 @@ DECLARE_MESSAGE_MAP virtual BOOL DoesAllowDynInsertBefore() const;
 > [!NOTE]
 >  Étant donné que les volets dynamiques vérifier l’état ancré volets statique lors de l’ancrage, vous devez volets d’ancrage dynamiques après les volets statiques chaque fois que possible.  
   
-##  <a name="a-namefloattaba--cmfcoutlookbarfloattab"></a><a name="floattab"></a>CMFCOutlookBar::FloatTab  
+##  <a name="floattab"></a>CMFCOutlookBar::FloatTab  
  Flotte d’un volet.  
   
 ```  
@@ -350,7 +367,7 @@ virtual BOOL FloatTab(
 ### <a name="remarks"></a>Remarques  
  Cette méthode est similaire à [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab) , sauf qu’elle ne permet pas le dernier onglet restant sur un contrôle de barre Outlook pour float.  
   
-##  <a name="a-namegetbuttonsfonta--cmfcoutlookbargetbuttonsfont"></a><a name="getbuttonsfont"></a>CMFCOutlookBar::GetButtonsFont  
+##  <a name="getbuttonsfont"></a>CMFCOutlookBar::GetButtonsFont  
  Retourne la police du texte sur la page d’onglets du bouton de la barre Outlook.  
   
 ```  
@@ -363,7 +380,7 @@ CFont* GetButtonsFont() const;
 ### <a name="remarks"></a>Remarques  
  Utilisez cette fonction pour extraire la police utilisée pour afficher le texte sur les onglets bouton Outlook. Vous pouvez définir la police en appelant sur [CMFCOutlookBar::SetButtonsFont](#setbuttonsfont).  
   
-##  <a name="a-namegettabareaa--cmfcoutlookbargettabarea"></a><a name="gettabarea"></a>CMFCOutlookBar::GetTabArea  
+##  <a name="gettabarea"></a>CMFCOutlookBar::GetTabArea  
  Détermine la taille et la position des zones d’onglet dans la barre Outlook.  
   
 ```  
@@ -386,7 +403,7 @@ virtual void GetTabArea(
   
  Substituez cette méthode dans une classe dérivée de `CMFCOutlookBar` pour modifier ce comportement.  
   
-##  <a name="a-nameismode2003a--cmfcoutlookbarismode2003"></a><a name="ismode2003"></a>CMFCOutlookBar::IsMode2003  
+##  <a name="ismode2003"></a>CMFCOutlookBar::IsMode2003  
  Spécifie si le comportement de la barre Outlook reproduit celle de Microsoft Office Outlook 2003.  
   
 ```  
@@ -399,7 +416,7 @@ BOOL IsMode2003() const;
 ### <a name="remarks"></a>Remarques  
  Vous pouvez activer ce mode en utilisant [CMFCOutlookBar::SetMode2003](#setmode2003).  
   
-##  <a name="a-nameonafteranimationa--cmfcoutlookbaronafteranimation"></a><a name="onafteranimation"></a>CMFCOutlookBar::OnAfterAnimation  
+##  <a name="onafteranimation"></a>CMFCOutlookBar::OnAfterAnimation  
  Appelé par [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) une fois que l’onglet actif a été défini à l’aide de l’animation.  
   
 ```  
@@ -413,7 +430,7 @@ virtual void OnAfterAnimation(int nPage);
 ### <a name="remarks"></a>Remarques  
  L’effet visuel de la configuration de l’onglet actif dépend de si vous avez activé l’animation. Pour plus d’informations, consultez [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation).  
   
-##  <a name="a-nameonbeforeanimationa--cmfcoutlookbaronbeforeanimation"></a><a name="onbeforeanimation"></a>CMFCOutlookBar::OnBeforeAnimation  
+##  <a name="onbeforeanimation"></a>CMFCOutlookBar::OnBeforeAnimation  
  Appelé par [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) avant d’un onglet de page est définie sous l’onglet actif à l’aide de l’animation.  
   
 ```  
@@ -429,7 +446,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonscrolla--cmfcoutlookbaronscroll"></a><a name="onscroll"></a>CMFCOutlookBar::OnScroll  
+##  <a name="onscroll"></a>CMFCOutlookBar::OnScroll  
  Appelé par le framework si la barre Outlook fait défiler vers le haut ou vers le bas.  
   
 ```  
@@ -442,7 +459,7 @@ virtual void OnScroll(BOOL bDown);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameremovecustompagea--cmfcoutlookbarremovecustompage"></a><a name="removecustompage"></a>CMFCOutlookBar::RemoveCustomPage  
+##  <a name="removecustompage"></a>CMFCOutlookBar::RemoveCustomPage  
  Supprime une page d’onglet de barre Outlook personnalisée.  
   
 ```  
@@ -468,7 +485,7 @@ BOOL RemoveCustomPage(
   
  Utilisez [CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow) pour obtenir un pointeur vers la fenêtre Outlook.  
   
-##  <a name="a-namesetbuttonsfonta--cmfcoutlookbarsetbuttonsfont"></a><a name="setbuttonsfont"></a>CMFCOutlookBar::SetButtonsFont  
+##  <a name="setbuttonsfont"></a>CMFCOutlookBar::SetButtonsFont  
  Définit la police du texte sur les boutons de la barre Outlook.  
   
 ```  
@@ -487,7 +504,7 @@ void SetButtonsFont(
 ### <a name="remarks"></a>Remarques  
  Utilisez cette méthode pour définir une police pour le texte affiché sur les boutons de page d’onglet outlook.  
   
-##  <a name="a-namesetmode2003a--cmfcoutlookbarsetmode2003"></a><a name="setmode2003"></a>CMFCOutlookBar::SetMode2003  
+##  <a name="setmode2003"></a>CMFCOutlookBar::SetMode2003  
  Spécifie si le comportement de la barre Outlook imite celui d’Outlook 2003.  
   
 ```  

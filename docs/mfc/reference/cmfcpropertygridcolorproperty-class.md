@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridColorProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::EnableAutomaticButton
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::EnableOtherButton
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::GetColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::SetColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::SetColumnsNumber
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::SetOriginalValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +105,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxpropertygridctrl.h  
   
-##  <a name="a-namecmfcpropertygridcolorpropertya--cmfcpropertygridcolorpropertycmfcpropertygridcolorproperty"></a><a name="cmfcpropertygridcolorproperty"></a>CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
+##  <a name="cmfcpropertygridcolorproperty"></a>CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
  Construit un objet `CMFCPropertyGridColorProperty`.  
   
 ```  
@@ -125,7 +133,7 @@ CMFCPropertyGridColorProperty(
  [in] `dwData`  
  Données spécifiques à l’application, tel qu’un entier ou un pointeur à d’autres données qui sont associés à la propriété. La valeur par défaut est 0.  
   
-##  <a name="a-nameenableautomaticbuttona--cmfcpropertygridcolorpropertyenableautomaticbutton"></a><a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton  
  Permet la *automatique* bouton dans la boîte de dialogue de sélection de couleur. (Le bouton automatique standard est intitulé **automatique**.)  
   
 ```  
@@ -147,7 +155,7 @@ void EnableAutomaticButton(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameenableotherbuttona--cmfcpropertygridcolorpropertyenableotherbutton"></a><a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton  
+##  <a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton  
  Permet la *autres* bouton dans la boîte de dialogue de sélection de couleur. (La norme autre bouton est intitulé **couleurs supplémentaires... **.)  
   
 ```  
@@ -169,7 +177,7 @@ void EnableOtherButton(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namegetcolora--cmfcpropertygridcolorpropertygetcolor"></a><a name="getcolor"></a>CMFCPropertyGridColorProperty::GetColor  
+##  <a name="getcolor"></a>CMFCPropertyGridColorProperty::GetColor  
  Obtient la couleur actuelle de la propriété.  
   
 ```  
@@ -181,7 +189,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetcolora--cmfcpropertygridcolorpropertysetcolor"></a><a name="setcolor"></a>CMFCPropertyGridColorProperty::SetColor  
+##  <a name="setcolor"></a>CMFCPropertyGridColorProperty::SetColor  
  Définit une nouvelle couleur pour la propriété.  
   
 ```  
@@ -194,7 +202,7 @@ void SetColor(COLORREF color);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namesetcolumnsnumbera--cmfcpropertygridcolorpropertysetcolumnsnumber"></a><a name="setcolumnsnumber"></a>CMFCPropertyGridColorProperty::SetColumnsNumber  
+##  <a name="setcolumnsnumber"></a>CMFCPropertyGridColorProperty::SetColumnsNumber  
  Spécifie le nombre de colonnes de la grille de propriétés de couleur actuelle.  
   
 ```  
@@ -208,7 +216,7 @@ void SetColumnsNumber(int nColumnsNumber);
 ### <a name="remarks"></a>Remarques  
  Cette méthode définit la valeur de la `m_nColumnsNumber` protégé de membre de données.  
   
-##  <a name="a-namesetoriginalvaluea--cmfcpropertygridcolorpropertysetoriginalvalue"></a><a name="setoriginalvalue"></a>CMFCPropertyGridColorProperty::SetOriginalValue  
+##  <a name="setoriginalvalue"></a>CMFCPropertyGridColorProperty::SetOriginalValue  
  Définit la valeur d'origine d'une propriété modifiable.  
   
 ```  

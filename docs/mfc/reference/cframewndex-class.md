@@ -10,6 +10,93 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFrameWndEx
+- AFXFRAMEWNDEX/CFrameWndEx
+- AFXFRAMEWNDEX/CFrameWndEx::ActiveItemRecalcLayout
+- AFXFRAMEWNDEX/CFrameWndEx::AddPane
+- AFXFRAMEWNDEX/CFrameWndEx::AdjustDockingLayout
+- AFXFRAMEWNDEX/CFrameWndEx::DelayUpdateFrameMenu
+- AFXFRAMEWNDEX/CFrameWndEx::DockPane
+- AFXFRAMEWNDEX/CFrameWndEx::DockPaneLeftOf
+- AFXFRAMEWNDEX/CFrameWndEx::EnableAutoHidePanes
+- AFXFRAMEWNDEX/CFrameWndEx::EnableDocking
+- AFXFRAMEWNDEX/CFrameWndEx::EnableFullScreenMainMenu
+- AFXFRAMEWNDEX/CFrameWndEx::EnableFullScreenMode
+- AFXFRAMEWNDEX/CFrameWndEx::EnableLoadDockState
+- AFXFRAMEWNDEX/CFrameWndEx::EnablePaneMenu
+- AFXFRAMEWNDEX/CFrameWndEx::GetActivePopup
+- AFXFRAMEWNDEX/CFrameWndEx::GetDefaultResId
+- AFXFRAMEWNDEX/CFrameWndEx::GetDockingManager
+- AFXFRAMEWNDEX/CFrameWndEx::GetMenuBar
+- AFXFRAMEWNDEX/CFrameWndEx::GetPane
+- AFXFRAMEWNDEX/CFrameWndEx::GetRibbonBar
+- AFXFRAMEWNDEX/CFrameWndEx::GetTearOffBars
+- AFXFRAMEWNDEX/CFrameWndEx::GetToolbarButtonToolTipText
+- AFXFRAMEWNDEX/CFrameWndEx::InsertPane
+- AFXFRAMEWNDEX/CFrameWndEx::IsFullScreen
+- AFXFRAMEWNDEX/CFrameWndEx::IsMenuBarAvailable
+- AFXFRAMEWNDEX/CFrameWndEx::IsPointNearDockSite
+- AFXFRAMEWNDEX/CFrameWndEx::IsPrintPreview
+- AFXFRAMEWNDEX/CFrameWndEx::LoadFrame
+- AFXFRAMEWNDEX/CFrameWndEx::NegotiateBorderSpace
+- AFXFRAMEWNDEX/CFrameWndEx::OnActivate
+- AFXFRAMEWNDEX/CFrameWndEx::OnActivateApp
+- AFXFRAMEWNDEX/CFrameWndEx::OnChangeVisualManager
+- AFXFRAMEWNDEX/CFrameWndEx::OnClose
+- AFXFRAMEWNDEX/CFrameWndEx::OnCloseDockingPane
+- AFXFRAMEWNDEX/CFrameWndEx::OnCloseMiniFrame
+- AFXFRAMEWNDEX/CFrameWndEx::OnClosePopupMenu
+- AFXFRAMEWNDEX/CFrameWndEx::OnCmdMsg
+- AFXFRAMEWNDEX/CFrameWndEx::OnContextHelp
+- AFXFRAMEWNDEX/CFrameWndEx::OnCreate
+- AFXFRAMEWNDEX/CFrameWndEx::OnDestroy
+- AFXFRAMEWNDEX/CFrameWndEx::OnDrawMenuImage
+- AFXFRAMEWNDEX/CFrameWndEx::OnDrawMenuLogo
+- AFXFRAMEWNDEX/CFrameWndEx::OnDWMCompositionChanged
+- AFXFRAMEWNDEX/CFrameWndEx::OnExitSizeMove
+- AFXFRAMEWNDEX/CFrameWndEx::OnGetMinMaxInfo
+- AFXFRAMEWNDEX/CFrameWndEx::OnIdleUpdateCmdUI
+- AFXFRAMEWNDEX/CFrameWndEx::OnLButtonDown
+- AFXFRAMEWNDEX/CFrameWndEx::OnLButtonUp
+- AFXFRAMEWNDEX/CFrameWndEx::OnMenuButtonToolHitTest
+- AFXFRAMEWNDEX/CFrameWndEx::OnMenuChar
+- AFXFRAMEWNDEX/CFrameWndEx::OnMouseMove
+- AFXFRAMEWNDEX/CFrameWndEx::OnMoveMiniFrame
+- AFXFRAMEWNDEX/CFrameWndEx::OnNcActivate
+- AFXFRAMEWNDEX/CFrameWndEx::OnNcCalcSize
+- AFXFRAMEWNDEX/CFrameWndEx::OnNcHitTest
+- AFXFRAMEWNDEX/CFrameWndEx::OnNcMouseMove
+- AFXFRAMEWNDEX/CFrameWndEx::OnNcPaint
+- AFXFRAMEWNDEX/CFrameWndEx::OnPaneCheck
+- AFXFRAMEWNDEX/CFrameWndEx::OnPostPreviewFrame
+- AFXFRAMEWNDEX/CFrameWndEx::OnPowerBroadcast
+- AFXFRAMEWNDEX/CFrameWndEx::OnSetMenu
+- AFXFRAMEWNDEX/CFrameWndEx::OnSetPreviewMode
+- AFXFRAMEWNDEX/CFrameWndEx::OnSetText
+- AFXFRAMEWNDEX/CFrameWndEx::OnShowCustomizePane
+- AFXFRAMEWNDEX/CFrameWndEx::OnShowPanes
+- AFXFRAMEWNDEX/CFrameWndEx::OnShowPopupMenu
+- AFXFRAMEWNDEX/CFrameWndEx::OnSize
+- AFXFRAMEWNDEX/CFrameWndEx::OnSizing
+- AFXFRAMEWNDEX/CFrameWndEx::OnSysColorChange
+- AFXFRAMEWNDEX/CFrameWndEx::OnTearOffMenu
+- AFXFRAMEWNDEX/CFrameWndEx::OnToolbarContextMenu
+- AFXFRAMEWNDEX/CFrameWndEx::OnToolbarCreateNew
+- AFXFRAMEWNDEX/CFrameWndEx::OnToolbarDelete
+- AFXFRAMEWNDEX/CFrameWndEx::OnUpdateFrameMenu
+- AFXFRAMEWNDEX/CFrameWndEx::OnUpdateFrameTitle
+- AFXFRAMEWNDEX/CFrameWndEx::OnUpdatePaneMenu
+- AFXFRAMEWNDEX/CFrameWndEx::OnWindowPosChanged
+- AFXFRAMEWNDEX/CFrameWndEx::PaneFromPoint
+- AFXFRAMEWNDEX/CFrameWndEx::PreTranslateMessage
+- AFXFRAMEWNDEX/CFrameWndEx::RecalcLayout
+- AFXFRAMEWNDEX/CFrameWndEx::RemovePaneFromDockManager
+- AFXFRAMEWNDEX/CFrameWndEx::SetDockState
+- AFXFRAMEWNDEX/CFrameWndEx::SetPrintPreviewFrame
+- AFXFRAMEWNDEX/CFrameWndEx::SetupToolbarMenu
+- AFXFRAMEWNDEX/CFrameWndEx::ShowFullScreen
+- AFXFRAMEWNDEX/CFrameWndEx::ShowPane
+- AFXFRAMEWNDEX/CFrameWndEx::UpdateCaption
+- AFXFRAMEWNDEX/CFrameWndEx::WinHelp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -162,7 +249,7 @@ class CFrameWndEx : public CFrameWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxframewndex.h  
   
-##  <a name="a-nameactiveitemrecalclayouta--cframewndexactiveitemrecalclayout"></a><a name="activeitemrecalclayout"></a>CFrameWndEx::ActiveItemRecalcLayout  
+##  <a name="activeitemrecalclayout"></a>CFrameWndEx::ActiveItemRecalcLayout  
  Ajuste la disposition de l’élément client OLE et de la zone cliente de l’image.  
   
 ```  
@@ -171,7 +258,7 @@ void ActiveItemRecalcLayout();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameaddpanea--cframewndexaddpane"></a><a name="addpane"></a>CFrameWndEx::AddPane  
+##  <a name="addpane"></a>CFrameWndEx::AddPane  
  Enregistre une barre de contrôle avec le Gestionnaire d’ancrage.  
   
 ```  
@@ -190,7 +277,7 @@ BOOL AddPane(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si la barre de contrôle a été inscrit avec succès ; `FALSE` dans le cas contraire.  
   
-##  <a name="a-nameadjustdockinglayouta--cframewndexadjustdockinglayout"></a><a name="adjustdockinglayout"></a>CFrameWndEx::AdjustDockingLayout  
+##  <a name="adjustdockinglayout"></a>CFrameWndEx::AdjustDockingLayout  
  Recalcule la disposition de tous les volets qui sont ancrées à la fenêtre frame.  
   
 ```  
@@ -204,7 +291,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ### <a name="remarks"></a>Remarques  
  La structure hdwp est initialisée par le [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) (méthode).  
   
-##  <a name="a-namedelayupdateframemenua--cframewndexdelayupdateframemenu"></a><a name="delayupdateframemenu"></a>CFrameWndEx::DelayUpdateFrameMenu  
+##  <a name="delayupdateframemenu"></a>CFrameWndEx::DelayUpdateFrameMenu  
  Définit le menu de frame et puis le met à jour lorsque le traitement des commandes est inactif.  
   
 ```  
@@ -217,7 +304,7 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namedockpanea--cframewndexdockpane"></a><a name="dockpane"></a>CFrameWndEx::DockPane  
+##  <a name="dockpane"></a>CFrameWndEx::DockPane  
  Ancre le volet spécifié à la fenêtre frame.  
   
 ```  
@@ -248,7 +335,7 @@ void DockPane(
   
 -   AFX_IDW_DOCKBAR_RIGHT  
   
-##  <a name="a-namedockpaneleftofa--cframewndexdockpaneleftof"></a><a name="dockpaneleftof"></a>CFrameWndEx::DockPaneLeftOf  
+##  <a name="dockpaneleftof"></a>CFrameWndEx::DockPaneLeftOf  
  Ancre le volet spécifié à gauche d’un autre volet.  
   
 ```  
@@ -270,7 +357,7 @@ BOOL DockPaneLeftOf(
 ### <a name="remarks"></a>Remarques  
  La méthode accepte la barre d’outils spécifiée par le `pBar` paramètre et s’ancre sur le côté gauche de la barre d’outils spécifiée par `pLeftOf` paramètre.  
   
-##  <a name="a-nameenableautohidepanesa--cframewndexenableautohidepanes"></a><a name="enableautohidepanes"></a>CFrameWndEx::EnableAutoHidePanes  
+##  <a name="enableautohidepanes"></a>CFrameWndEx::EnableAutoHidePanes  
  Permet de masquer le mode du volet lorsqu’elle est ancrée sur le côté spécifié de la fenêtre frame principale.  
   
 ```  
@@ -295,7 +382,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
   
 -   CBRS_ALIGN_RIGHT : permet de la barre de contrôle pour être ancré à droite de la zone cliente d’une fenêtre frame.  
   
-##  <a name="a-nameenabledockinga--cframewndexenabledocking"></a><a name="enabledocking"></a>CFrameWndEx::EnableDocking  
+##  <a name="enabledocking"></a>CFrameWndEx::EnableDocking  
  Permet l’ancrage des volets de la fenêtre frame.  
   
 ```  
@@ -320,7 +407,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
   
 -   CBRS_ALIGN_RIGHT  
   
-##  <a name="a-nameenablefullscreenmainmenua--cframewndexenablefullscreenmainmenu"></a><a name="enablefullscreenmainmenu"></a>CFrameWndEx::EnableFullScreenMainMenu  
+##  <a name="enablefullscreenmainmenu"></a>CFrameWndEx::EnableFullScreenMainMenu  
  Affiche ou masque le menu principal en mode plein écran.  
   
 ```  
@@ -331,7 +418,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
  [in] `bEnableMenu`  
  `TRUE`Pour afficher le menu principal en mode plein écran, `FALSE` dans le cas contraire.  
   
-##  <a name="a-nameenablefullscreenmodea--cframewndexenablefullscreenmode"></a><a name="enablefullscreenmode"></a>CFrameWndEx::EnableFullScreenMode  
+##  <a name="enablefullscreenmode"></a>CFrameWndEx::EnableFullScreenMode  
  Active le mode plein écran pour la fenêtre frame.  
   
 ```  
@@ -349,7 +436,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
   
  Si vous souhaitez conserver le menu principal sur l’écran, appelez [CFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu).  
   
-##  <a name="a-nameenableloaddockstatea--cframewndexenableloaddockstate"></a><a name="enableloaddockstate"></a>CFrameWndEx::EnableLoadDockState  
+##  <a name="enableloaddockstate"></a>CFrameWndEx::EnableLoadDockState  
  Active ou désactive le chargement de l’état d’ancrage.  
   
 ```  
@@ -360,7 +447,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
  [in] `bEnable`  
  `TRUE`Pour activer le chargement de l’état d’ancrage, `FALSE` pour désactiver le chargement de l’état d’ancrage.  
   
-##  <a name="a-nameenablepanemenua--cframewndexenablepanemenu"></a><a name="enablepanemenu"></a>CFrameWndEx::EnablePaneMenu  
+##  <a name="enablepanemenu"></a>CFrameWndEx::EnablePaneMenu  
  Active ou désactive la gestion automatique de menu du volet.  
   
 ```  
@@ -392,7 +479,7 @@ void EnablePaneMenu(
  [in] `bViewMenuShowsToolbarsOnly`  
  Si `TRUE`, le menu barre de contrôle affiche la liste des barres d’outils uniquement. Si `FALSE`, le menu affiche la liste des barres d’outils et les barres d’ancrage.  
   
-##  <a name="a-namegetactivepopupa--cframewndexgetactivepopup"></a><a name="getactivepopup"></a>CFrameWndEx::GetActivePopup  
+##  <a name="getactivepopup"></a>CFrameWndEx::GetActivePopup  
  Retourne un pointeur vers la liste déroulante affichée.  
   
 ```  
@@ -402,7 +489,7 @@ CMFCPopupMenu* GetActivePopup() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers la liste déroulante affichée ; dans le cas contraire `NULL`.  
   
-##  <a name="a-namegetdefaultresida--cframewndexgetdefaultresid"></a><a name="getdefaultresid"></a>CFrameWndEx::GetDefaultResId  
+##  <a name="getdefaultresid"></a>CFrameWndEx::GetDefaultResId  
  Retourne l’ID de ressource que vous avez spécifié lors de l’infrastructure chargées de la fenêtre frame.  
   
 ```  
@@ -412,7 +499,7 @@ UINT GetDefaultResId() const;
 ### <a name="return-value"></a>Valeur de retour  
  La valeur d’ID de ressource que l’utilisateur spécifié lors du chargement de l’infrastructure de la fenêtre frame. Zéro si la fenêtre frame ne dispose pas d’une barre de menus.  
   
-##  <a name="a-namegetdockingmanagera--cframewndexgetdockingmanager"></a><a name="getdockingmanager"></a>CFrameWndEx::GetDockingManager  
+##  <a name="getdockingmanager"></a>CFrameWndEx::GetDockingManager  
  Récupère le [CDockingManager classe](../../mfc/reference/cdockingmanager-class.md) objet pour la fenêtre frame.  
   
 ```  
@@ -425,7 +512,7 @@ CDockingManager* GetDockingManager();
 ### <a name="remarks"></a>Remarques  
  La fenêtre frame crée et utilise un [CDockingManager classe](../../mfc/reference/cdockingmanager-class.md) objet pour gérer l’ancrage de fenêtre enfant.  
   
-##  <a name="a-namegetmenubara--cframewndexgetmenubar"></a><a name="getmenubar"></a>CFrameWndEx::GetMenuBar  
+##  <a name="getmenubar"></a>CFrameWndEx::GetMenuBar  
  Retourne un pointeur vers l’objet de barre de menu attaché à la fenêtre frame.  
   
 ```  
@@ -435,7 +522,7 @@ const CMFCMenuBar* GetMenuBar() const;
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers l’objet de barre de menu associé à la fenêtre frame.  
   
-##  <a name="a-namegetpanea--cframewndexgetpane"></a><a name="getpane"></a>CFrameWndEx::GetPane  
+##  <a name="getpane"></a>CFrameWndEx::GetPane  
  Retourne un pointeur vers le volet ayant l’ID spécifié.  
   
 ```  
@@ -449,7 +536,7 @@ CBasePane* GetPane(UINT nID);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers le volet ayant l’ID spécifié. `NULL`Si aucun volet telle n’existe.  
   
-##  <a name="a-namegetribbonbara--cframewndexgetribbonbar"></a><a name="getribbonbar"></a>CFrameWndEx::GetRibbonBar  
+##  <a name="getribbonbar"></a>CFrameWndEx::GetRibbonBar  
  Récupère le contrôle de barre de ruban de l’image.  
   
 ```  
@@ -461,7 +548,7 @@ CMFCRibbonBar* GetRibbonBar();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegettearoffbarsa--cframewndexgettearoffbars"></a><a name="gettearoffbars"></a>CFrameWndEx::GetTearOffBars  
+##  <a name="gettearoffbars"></a>CFrameWndEx::GetTearOffBars  
  Retourne une liste d’objets de volet qui sont dans un état détachable.  
   
 ```  
@@ -471,7 +558,7 @@ const CObList& GetTearOffBars() const;
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à `CObList` objet qui contient une collection de pointeurs vers les objets du volet qui se trouvent dans un état détachables.  
   
-##  <a name="a-namegettoolbarbuttontooltiptexta--cframewndexgettoolbarbuttontooltiptext"></a><a name="gettoolbarbuttontooltiptext"></a>CFrameWndEx::GetToolbarButtonToolTipText  
+##  <a name="gettoolbarbuttontooltiptext"></a>CFrameWndEx::GetToolbarButtonToolTipText  
  Appelé par l’infrastructure lorsque l’application affiche l’info-bulle pour un bouton de barre d’outils.  
   
 ```  
@@ -493,7 +580,7 @@ virtual BOOL GetToolbarButtonToolTipText(
 ### <a name="remarks"></a>Remarques  
  Par défaut, cette méthode ne fait rien. Substituez cette méthode si vous souhaitez afficher l’info-bulle pour le bouton de barre d’outils.  
   
-##  <a name="a-nameinsertpanea--cframewndexinsertpane"></a><a name="insertpane"></a>CFrameWndEx::InsertPane  
+##  <a name="insertpane"></a>CFrameWndEx::InsertPane  
  Insère un volet dans une liste de barres de contrôles et l’inscrit auprès du gestionnaire d’ancrage.  
   
 ```  
@@ -519,7 +606,7 @@ BOOL InsertPane(
 ### <a name="remarks"></a>Remarques  
  Vous devez enregistrer chaque barre de contrôle à l’aide de la [CDockingManager classe](../../mfc/reference/cdockingmanager-class.md) à prendre une part à la mise en page d’accueil.  
   
-##  <a name="a-nameisfullscreena--cframewndexisfullscreen"></a><a name="isfullscreen"></a>CFrameWndEx::IsFullScreen  
+##  <a name="isfullscreen"></a>CFrameWndEx::IsFullScreen  
  Détermine si la fenêtre frame est en mode plein écran.  
   
 ```  
@@ -532,7 +619,7 @@ BOOL IsFullScreen() const;
 ### <a name="remarks"></a>Remarques  
  Vous pouvez définir le mode plein écran en appelant le [CFrameWndEx::EnableFullScreenMode](#enablefullscreenmode) (méthode).  
   
-##  <a name="a-nameismenubaravailablea--cframewndexismenubaravailable"></a><a name="ismenubaravailable"></a>CFrameWndEx::IsMenuBarAvailable  
+##  <a name="ismenubaravailable"></a>CFrameWndEx::IsMenuBarAvailable  
  Détermine si le pointeur vers l’objet de barre de menu est valide.  
   
 ```  
@@ -542,7 +629,7 @@ BOOL IsMenuBarAvailable() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si la fenêtre frame possède une barre de menus ; dans le cas contraire `FALSE`.  
   
-##  <a name="a-nameispointneardocksitea--cframewndexispointneardocksite"></a><a name="ispointneardocksite"></a>CFrameWndEx::IsPointNearDockSite  
+##  <a name="ispointneardocksite"></a>CFrameWndEx::IsPointNearDockSite  
  Détermine si le point se trouve dans une zone d’alignement.  
   
 ```  
@@ -580,7 +667,7 @@ BOOL IsPointNearDockSite(
  `CBRS_ALIGN_LEFT`  
  Aligné à gauche.  
   
-##  <a name="a-nameisprintpreviewa--cframewndexisprintpreview"></a><a name="isprintpreview"></a>CFrameWndEx::IsPrintPreview  
+##  <a name="isprintpreview"></a>CFrameWndEx::IsPrintPreview  
  Détermine si la fenêtre frame est en mode Aperçu avant impression.  
   
 ```  
@@ -592,7 +679,7 @@ BOOL IsPrintPreview();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameloadframea--cframewndexloadframe"></a><a name="loadframe"></a>CFrameWndEx::LoadFrame  
+##  <a name="loadframe"></a>CFrameWndEx::LoadFrame  
  Cette méthode est appelée après la construction de créer la fenêtre frame et de charger ses ressources.  
   
 ```  
@@ -621,7 +708,7 @@ virtual BOOL LoadFrame(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namenegotiateborderspacea--cframewndexnegotiateborderspace"></a><a name="negotiateborderspace"></a>CFrameWndEx::NegotiateBorderSpace  
+##  <a name="negotiateborderspace"></a>CFrameWndEx::NegotiateBorderSpace  
  Négociation de bordure OLE client implémente.  
   
 ```  
@@ -652,7 +739,7 @@ virtual BOOL NegotiateBorderSpace(
  `borderSet`  
  Définir l’espace sur le client OLE.  
   
-##  <a name="a-nameonactivatea--cframewndexonactivate"></a><a name="onactivate"></a>CFrameWndEx::OnActivate  
+##  <a name="onactivate"></a>CFrameWndEx::OnActivate  
  L’infrastructure appelle cette méthode lors de l’entrée d’utilisateur est basculée vers ou à partir de l’image.  
   
 ```  
@@ -684,7 +771,7 @@ afx_msg void OnActivate(
  `WA_INACTIVE`  
  L’image n’est pas sélectionnée.  
   
-##  <a name="a-nameonactivateappa--cframewndexonactivateapp"></a><a name="onactivateapp"></a>CFrameWndEx::OnActivateApp  
+##  <a name="onactivateapp"></a>CFrameWndEx::OnActivateApp  
  Appelé par l’infrastructure lorsque l’application est activée ou désactivée.  
   
 ```  
@@ -702,7 +789,7 @@ afx_msg void OnActivateApp(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonchangevisualmanagera--cframewndexonchangevisualmanager"></a><a name="onchangevisualmanager"></a>CFrameWndEx::OnChangeVisualManager  
+##  <a name="onchangevisualmanager"></a>CFrameWndEx::OnChangeVisualManager  
  Appelé par l’infrastructure lorsqu’une modification apportée à l’image nécessite une modification vers le Gestionnaire visuel.  
   
 ```  
@@ -723,7 +810,7 @@ afx_msg LRESULT OnChangeVisualManager(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonclosea--cframewndexonclose"></a><a name="onclose"></a>CFrameWndEx::OnClose  
+##  <a name="onclose"></a>CFrameWndEx::OnClose  
  L’infrastructure appelle cette méthode pour fermer le frame.  
   
 ```  
@@ -733,7 +820,7 @@ afx_msg void OnClose();
 ### <a name="remarks"></a>Remarques  
  Si l’image est en mode Aperçu avant impression, il envoie un message pour fermer l’aperçu avant impression ; Sinon, si la trame héberge un client OLE, le client est désactivé.  
   
-##  <a name="a-nameonclosedockingpanea--cframewndexonclosedockingpane"></a><a name="onclosedockingpane"></a>CFrameWndEx::OnCloseDockingPane  
+##  <a name="onclosedockingpane"></a>CFrameWndEx::OnCloseDockingPane  
  Appelé par l’infrastructure lorsque l’utilisateur clique sur le **fermer** bouton dans un volet d’ancrage.  
   
 ```  
@@ -746,7 +833,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pPane);
 ### <a name="remarks"></a>Remarques  
  L’implémentation par défaut ne fait rien. Substituez cette méthode si vous souhaitez gérer le masquage de la barre d’ancrage.  
   
-##  <a name="a-nameoncloseminiframea--cframewndexoncloseminiframe"></a><a name="oncloseminiframe"></a>CFrameWndEx::OnCloseMiniFrame  
+##  <a name="oncloseminiframe"></a>CFrameWndEx::OnCloseMiniFrame  
  Appelé par l’infrastructure lorsque l’utilisateur clique sur le **fermer** bouton sur une fenêtre frame mini flottante.  
   
 ```  
@@ -759,7 +846,7 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd* pWnd);
 ### <a name="remarks"></a>Remarques  
  L'implémentation par défaut n'exécute aucune opération. Substituez cette méthode si vous souhaitez traiter le masquage d’une fenêtre frame mini flottante.  
   
-##  <a name="a-nameonclosepopupmenua--cframewndexonclosepopupmenu"></a><a name="onclosepopupmenu"></a>CFrameWndEx::OnClosePopupMenu  
+##  <a name="onclosepopupmenu"></a>CFrameWndEx::OnClosePopupMenu  
  Appelée par l’infrastructure quand un menu contextuel actif traite un message WM_DESTROY.  
   
 ```  
@@ -773,7 +860,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ### <a name="remarks"></a>Remarques  
  Le framework envoie un message WM_DESTROY lorsqu’il est prêt à fermer la fenêtre. Substituez cette méthode si vous souhaitez gérer les notifications de `CMFCPopupMenu` objets qui appartiennent à la fenêtre frame lorsqu’un `CMFCPopupMenu` objet traite un `WM_DESTROY` message envoyé par l’infrastructure lors de la fermeture de la fenêtre.  
   
-##  <a name="a-nameoncmdmsga--cframewndexoncmdmsg"></a><a name="oncmdmsg"></a>CFrameWndEx::OnCmdMsg  
+##  <a name="oncmdmsg"></a>CFrameWndEx::OnCmdMsg  
  Distribue les messages de commande.  
   
 ```  
@@ -802,7 +889,7 @@ virtual BOOL OnCmdMsg(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameoncontexthelpa--cframewndexoncontexthelp"></a><a name="oncontexthelp"></a>CFrameWndEx::OnContextHelp  
+##  <a name="oncontexthelp"></a>CFrameWndEx::OnContextHelp  
  Appelé par l’infrastructure pour afficher une aide au contexte.  
   
 ```  
@@ -811,7 +898,7 @@ afx_msg void OnContextHelp();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameoncreatea--cframewndexoncreate"></a><a name="oncreate"></a>CFrameWndEx::OnCreate  
+##  <a name="oncreate"></a>CFrameWndEx::OnCreate  
  Appelé par l’infrastructure après avoir créé le frame.  
   
 ```  
@@ -827,7 +914,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameondestroya--cframewndexondestroy"></a><a name="ondestroy"></a>CFrameWndEx::OnDestroy  
+##  <a name="ondestroy"></a>CFrameWndEx::OnDestroy  
  Appelé par l’infrastructure lorsque le frame est détruit.  
   
 ```  
@@ -837,7 +924,7 @@ afx_msg void OnDestroy();
 ### <a name="remarks"></a>Remarques  
  La table d’accélérateurs et toutes les fenêtres sont détruits.  
   
-##  <a name="a-nameondrawmenuimagea--cframewndexondrawmenuimage"></a><a name="ondrawmenuimage"></a>CFrameWndEx::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>CFrameWndEx::OnDrawMenuImage  
  Appelé par l’infrastructure lorsque l’application dessine l’image associée à un élément de menu.  
   
 ```  
@@ -863,7 +950,7 @@ virtual BOOL OnDrawMenuImage(
 ### <a name="remarks"></a>Remarques  
  Substituez cette méthode si vous souhaitez personnaliser le rendu de l’image pour les éléments de menu qui appartiennent à la barre de menus détenue par le `CFrameWndEx` objet dérivé.  
   
-##  <a name="a-nameondrawmenulogoa--cframewndexondrawmenulogo"></a><a name="ondrawmenulogo"></a>CFrameWndEx::OnDrawMenuLogo  
+##  <a name="ondrawmenulogo"></a>CFrameWndEx::OnDrawMenuLogo  
  Appelé par l’infrastructure lorsqu’un `CMFCPopupMenu` objet traite un message WM_PAINT.  
   
 ```  
@@ -886,7 +973,7 @@ virtual void OnDrawMenuLogo(
 ### <a name="remarks"></a>Notes  
  Remplacez cette fonction si vous souhaitez afficher un logo dans le menu contextuel qui appartient à la barre de menus détenue par le `CFrameWndEx` objet dérivé.  
   
-##  <a name="a-nameondwmcompositionchangeda--cframewndexondwmcompositionchanged"></a><a name="ondwmcompositionchanged"></a>CFrameWndEx::OnDWMCompositionChanged  
+##  <a name="ondwmcompositionchanged"></a>CFrameWndEx::OnDWMCompositionChanged  
  Appelé par l’infrastructure lors de la composition du Gestionnaire des fenêtres du bureau (DWM) a été activée ou désactivée.  
   
 ```  
@@ -907,7 +994,7 @@ afx_msg LRESULT OnDWMCompositionChanged(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonexitsizemovea--cframewndexonexitsizemove"></a><a name="onexitsizemove"></a>CFrameWndEx::OnExitSizeMove  
+##  <a name="onexitsizemove"></a>CFrameWndEx::OnExitSizeMove  
  Appelé par l’infrastructure lorsque l’image s’arrête, déplacez ou redimensionnez.  
   
 ```  
@@ -928,7 +1015,7 @@ LRESULT OnExitSizeMove(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameongetminmaxinfoa--cframewndexongetminmaxinfo"></a><a name="ongetminmaxinfo"></a>CFrameWndEx::OnGetMinMaxInfo  
+##  <a name="ongetminmaxinfo"></a>CFrameWndEx::OnGetMinMaxInfo  
  Appelé par l’infrastructure lorsque l’image est redimensionnée pour définir les limites de dimension de fenêtre.  
   
 ```  
@@ -941,7 +1028,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonidleupdatecmduia--cframewndexonidleupdatecmdui"></a><a name="onidleupdatecmdui"></a>CFrameWndEx::OnIdleUpdateCmdUI  
+##  <a name="onidleupdatecmdui"></a>CFrameWndEx::OnIdleUpdateCmdUI  
  Appelé par l’infrastructure pour mettre à jour l’affichage de l’image lorsque le traitement des commandes est inactif.  
   
 ```  
@@ -962,7 +1049,7 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonlbuttondowna--cframewndexonlbuttondown"></a><a name="onlbuttondown"></a>CFrameWndEx::OnLButtonDown  
+##  <a name="onlbuttondown"></a>CFrameWndEx::OnLButtonDown  
  L’infrastructure appelle cette méthode lorsque l’utilisateur appuie sur le bouton gauche de la souris.  
   
 ```  
@@ -980,7 +1067,7 @@ afx_msg void OnLButtonDown(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonlbuttonupa--cframewndexonlbuttonup"></a><a name="onlbuttonup"></a>CFrameWndEx::OnLButtonUp  
+##  <a name="onlbuttonup"></a>CFrameWndEx::OnLButtonUp  
  L’infrastructure appelle cette méthode lorsque l’utilisateur relâche le bouton gauche de la souris.  
   
 ```  
@@ -998,7 +1085,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonmenubuttontoolhittesta--cframewndexonmenubuttontoolhittest"></a><a name="onmenubuttontoolhittest"></a>CFrameWndEx::OnMenuButtonToolHitTest  
+##  <a name="onmenubuttontoolhittest"></a>CFrameWndEx::OnMenuButtonToolHitTest  
  Appelé par l’infrastructure lorsqu’un `CMFCToolBarButton` de l’objet processus une `WM_NCHITTEST` message.  
   
 ```  
@@ -1020,7 +1107,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 ### <a name="remarks"></a>Remarques  
  Substituez cette méthode si vous souhaitez fournir une info-bulle d’informations sur un élément de menu spécifique.  
   
-##  <a name="a-nameonmenuchara--cframewndexonmenuchar"></a><a name="onmenuchar"></a>CFrameWndEx::OnMenuChar  
+##  <a name="onmenuchar"></a>CFrameWndEx::OnMenuChar  
  Appelé par l’infrastructure lorsqu’un menu est affiché et l’utilisateur appuie sur une touche qui ne correspond pas à une commande.  
   
 ```  
@@ -1054,7 +1141,7 @@ afx_msg LRESULT OnMenuChar(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonmousemovea--cframewndexonmousemove"></a><a name="onmousemove"></a>CFrameWndEx::OnMouseMove  
+##  <a name="onmousemove"></a>CFrameWndEx::OnMouseMove  
  L’infrastructure appelle cette méthode lorsque le pointeur se déplace.  
   
 ```  
@@ -1072,7 +1159,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonmoveminiframea--cframewndexonmoveminiframe"></a><a name="onmoveminiframe"></a>CFrameWndEx::OnMoveMiniFrame  
+##  <a name="onmoveminiframe"></a>CFrameWndEx::OnMoveMiniFrame  
  Appelé par l’infrastructure lorsqu’une fenêtre se déplace.  
   
 ```  
@@ -1088,7 +1175,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonncactivatea--cframewndexonncactivate"></a><a name="onncactivate"></a>CFrameWndEx::OnNcActivate  
+##  <a name="onncactivate"></a>CFrameWndEx::OnNcActivate  
  Appelé par l’infrastructure lors de la zone non cliente du frame doit être redessinée pour indiquer un changement dans l’état actif.  
   
 ```  
@@ -1104,7 +1191,7 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonnccalcsizea--cframewndexonnccalcsize"></a><a name="onnccalcsize"></a>CFrameWndEx::OnNcCalcSize  
+##  <a name="onnccalcsize"></a>CFrameWndEx::OnNcCalcSize  
  Appelé par l’infrastructure lorsque la taille et la position de la zone cliente doivent être calculés.  
   
 ```  
@@ -1122,7 +1209,7 @@ afx_msg void OnNcCalcSize(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonnchittesta--cframewndexonnchittest"></a><a name="onnchittest"></a>CFrameWndEx::OnNcHitTest  
+##  <a name="onnchittest"></a>CFrameWndEx::OnNcHitTest  
  Appelé par l’infrastructure lorsque le pointeur se déplace ou lorsqu’un bouton de la souris est enfoncé ou relâché.  
   
 ```  
@@ -1138,7 +1225,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonncmousemovea--cframewndexonncmousemove"></a><a name="onncmousemove"></a>CFrameWndEx::OnNcMouseMove  
+##  <a name="onncmousemove"></a>CFrameWndEx::OnNcMouseMove  
  Appelé par l’infrastructure lorsque le pointeur se déplace dans une zone non cliente.  
   
 ```  
@@ -1156,7 +1243,7 @@ afx_msg void OnNcMouseMove(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonncpainta--cframewndexonncpaint"></a><a name="onncpaint"></a>CFrameWndEx::OnNcPaint  
+##  <a name="onncpaint"></a>CFrameWndEx::OnNcPaint  
  Appelé par l’infrastructure lors de la zone non cliente doit être peinte.  
   
 ```  
@@ -1165,7 +1252,7 @@ afx_msg void OnNcPaint();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonpanechecka--cframewndexonpanecheck"></a><a name="onpanecheck"></a>CFrameWndEx::OnPaneCheck  
+##  <a name="onpanecheck"></a>CFrameWndEx::OnPaneCheck  
  Appelé par l’infrastructure pour contrôler la visibilité d’un volet.  
   
 ```  
@@ -1181,7 +1268,7 @@ afx_msg BOOL OnPaneCheck(UINT nID);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonpostpreviewframea--cframewndexonpostpreviewframe"></a><a name="onpostpreviewframe"></a>CFrameWndEx::OnPostPreviewFrame  
+##  <a name="onpostpreviewframe"></a>CFrameWndEx::OnPostPreviewFrame  
  Appelé par l’infrastructure lorsque l’utilisateur modifie le mode Aperçu avant impression.  
   
 ```  
@@ -1202,7 +1289,7 @@ afx_msg LRESULT OnPostPreviewFrame(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonpowerbroadcasta--cframewndexonpowerbroadcast"></a><a name="onpowerbroadcast"></a>CFrameWndEx::OnPowerBroadcast  
+##  <a name="onpowerbroadcast"></a>CFrameWndEx::OnPowerBroadcast  
  Appelé par l’infrastructure lorsque survient un événement de gestion de l’alimentation.  
   
 ```  
@@ -1223,7 +1310,7 @@ afx_msg LRESULT OnPowerBroadcast(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonsetmenua--cframewndexonsetmenu"></a><a name="onsetmenu"></a>CFrameWndEx::OnSetMenu  
+##  <a name="onsetmenu"></a>CFrameWndEx::OnSetMenu  
  Appelé par l’infrastructure pour remplacer le menu de la fenêtre frame.  
   
 ```  
@@ -1251,7 +1338,7 @@ BOOL OnSetMenu(HMENU hmenu);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonsetpreviewmodea--cframewndexonsetpreviewmode"></a><a name="onsetpreviewmode"></a>CFrameWndEx::OnSetPreviewMode  
+##  <a name="onsetpreviewmode"></a>CFrameWndEx::OnSetPreviewMode  
  Appelé par l’infrastructure pour définir le mode Aperçu avant impression de l’image.  
   
 ```  
@@ -1269,7 +1356,7 @@ virtual void OnSetPreviewMode(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonsettexta--cframewndexonsettext"></a><a name="onsettext"></a>CFrameWndEx::OnSetText  
+##  <a name="onsettext"></a>CFrameWndEx::OnSetText  
  Appelé par l’infrastructure pour définir le texte d’une fenêtre.  
   
 ```  
@@ -1290,7 +1377,7 @@ afx_msg LRESULT OnSetText(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonshowcustomizepanea--cframewndexonshowcustomizepane"></a><a name="onshowcustomizepane"></a>CFrameWndEx::OnShowCustomizePane  
+##  <a name="onshowcustomizepane"></a>CFrameWndEx::OnShowCustomizePane  
  Appelé par l’infrastructure lorsqu’il affiche un `QuickCustomizePane`.  
   
 ```  
@@ -1312,7 +1399,7 @@ virtual BOOL OnShowCustomizePane(
 ### <a name="remarks"></a>Remarques  
  Personnalisation rapide menu est un menu contextuel qui s’affiche lorsque vous cliquez sur la barre d’outils Personnaliser le bouton  
   
-##  <a name="a-nameonshowpanesa--cframewndexonshowpanes"></a><a name="onshowpanes"></a>CFrameWndEx::OnShowPanes  
+##  <a name="onshowpanes"></a>CFrameWndEx::OnShowPanes  
  Appelé par l’infrastructure pour afficher ou masquer les volets.  
   
 ```  
@@ -1333,7 +1420,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
   
  Substituez cette méthode dans une classe dérivée pour exécuter du code personnalisé lors de l’infrastructure affiche ou masque les volets.  
   
-##  <a name="a-nameonshowpopupmenua--cframewndexonshowpopupmenu"></a><a name="onshowpopupmenu"></a>CFrameWndEx::OnShowPopupMenu  
+##  <a name="onshowpopupmenu"></a>CFrameWndEx::OnShowPopupMenu  
  Appelé par l’infrastructure lorsqu’il affiche un menu contextuel.  
   
 ```  
@@ -1350,7 +1437,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
 ### <a name="remarks"></a>Remarques  
  Substituez cette méthode dans une classe dérivée pour exécuter du code personnalisé lors de l’infrastructure affiche un menu contextuel. Par exemple, substituez cette méthode pour modifier la couleur d’arrière-plan des commandes dans un menu contextuel.  
   
-##  <a name="a-nameonsizea--cframewndexonsize"></a><a name="onsize"></a>CFrameWndEx::OnSize  
+##  <a name="onsize"></a>CFrameWndEx::OnSize  
  Appelé par l’infrastructure après des modifications de taille du bloc.  
   
 ```  
@@ -1372,7 +1459,7 @@ afx_msg void OnSize(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonsizinga--cframewndexonsizing"></a><a name="onsizing"></a>CFrameWndEx::OnSizing  
+##  <a name="onsizing"></a>CFrameWndEx::OnSizing  
  Appelé par l’infrastructure lorsque l’utilisateur redimensionne l’image.  
   
 ```  
@@ -1390,7 +1477,7 @@ afx_msg void OnSizing(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonsyscolorchangea--cframewndexonsyscolorchange"></a><a name="onsyscolorchange"></a>CFrameWndEx::OnSysColorChange  
+##  <a name="onsyscolorchange"></a>CFrameWndEx::OnSysColorChange  
  Appelé par l’infrastructure lorsque les couleurs système changent.  
   
 ```  
@@ -1399,7 +1486,7 @@ void OnSysColorChange();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameontearoffmenua--cframewndexontearoffmenu"></a><a name="ontearoffmenu"></a>CFrameWndEx::OnTearOffMenu  
+##  <a name="ontearoffmenu"></a>CFrameWndEx::OnTearOffMenu  
  Appelé par l’infrastructure lorsque l’application affiche un menu qui possède une barre détachables.  
   
 ```  
@@ -1423,7 +1510,7 @@ virtual BOOL OnTearOffMenu(
   
  L’implémentation par défaut ne fait rien et retourne `TRUE`.  
   
-##  <a name="a-nameontoolbarcontextmenua--cframewndexontoolbarcontextmenu"></a><a name="ontoolbarcontextmenu"></a>CFrameWndEx::OnToolbarContextMenu  
+##  <a name="ontoolbarcontextmenu"></a>CFrameWndEx::OnToolbarContextMenu  
  Appelée par l’infrastructure permettant de créer un menu contextuel de barre d’outils.  
   
 ```  
@@ -1444,7 +1531,7 @@ afx_msg LRESULT OnToolbarContextMenu(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameontoolbarcreatenewa--cframewndexontoolbarcreatenew"></a><a name="ontoolbarcreatenew"></a>CFrameWndEx::OnToolbarCreateNew  
+##  <a name="ontoolbarcreatenew"></a>CFrameWndEx::OnToolbarCreateNew  
  L’infrastructure appelle cette méthode pour créer une nouvelle barre d’outils.  
   
 ```  
@@ -1465,7 +1552,7 @@ afx_msg LRESULT OnToolbarCreateNew(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameontoolbardeletea--cframewndexontoolbardelete"></a><a name="ontoolbardelete"></a>CFrameWndEx::OnToolbarDelete  
+##  <a name="ontoolbardelete"></a>CFrameWndEx::OnToolbarDelete  
  Appelé par l’infrastructure lors de la suppression d’une barre d’outils.  
   
 ```  
@@ -1486,7 +1573,7 @@ afx_msg LRESULT OnToolbarDelete(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonupdateframemenua--cframewndexonupdateframemenu"></a><a name="onupdateframemenu"></a>CFrameWndEx::OnUpdateFrameMenu  
+##  <a name="onupdateframemenu"></a>CFrameWndEx::OnUpdateFrameMenu  
  Appelé par l’infrastructure pour définir le menu du frame.  
   
 ```  
@@ -1499,7 +1586,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonupdateframetitlea--cframewndexonupdateframetitle"></a><a name="onupdateframetitle"></a>CFrameWndEx::OnUpdateFrameTitle  
+##  <a name="onupdateframetitle"></a>CFrameWndEx::OnUpdateFrameTitle  
  L’infrastructure appelle cette méthode pour mettre à jour la barre de titre de la fenêtre frame.  
   
 ```  
@@ -1512,7 +1599,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonupdatepanemenua--cframewndexonupdatepanemenu"></a><a name="onupdatepanemenu"></a>CFrameWndEx::OnUpdatePaneMenu  
+##  <a name="onupdatepanemenu"></a>CFrameWndEx::OnUpdatePaneMenu  
  Appelé par l’infrastructure pour mettre à jour le menu du volet.  
   
 ```  
@@ -1525,7 +1612,7 @@ afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonwindowposchangeda--cframewndexonwindowposchanged"></a><a name="onwindowposchanged"></a>CFrameWndEx::OnWindowPosChanged  
+##  <a name="onwindowposchanged"></a>CFrameWndEx::OnWindowPosChanged  
  Appelé par l’infrastructure lorsque la taille de trame, position ou ordre de plan a été modifiée en raison d’un appel à une méthode de gestion de fenêtre.  
   
 ```  
@@ -1538,7 +1625,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namepanefrompointa--cframewndexpanefrompoint"></a><a name="panefrompoint"></a>CFrameWndEx::PaneFromPoint  
+##  <a name="panefrompoint"></a>CFrameWndEx::PaneFromPoint  
  Recherche dans chaque volet pour l’instant.  
   
 ```  
@@ -1579,7 +1666,7 @@ CBasePane* PaneFromPoint(
   
  Utilisez `nSensitivity` pour augmenter la taille de la zone de recherche. Utilisez `pRTCBarType` pour restreindre les types de barres de contrôle qui recherche la méthode.  
   
-##  <a name="a-namepretranslatemessagea--cframewndexpretranslatemessage"></a><a name="pretranslatemessage"></a>CFrameWndEx::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CFrameWndEx::PreTranslateMessage  
  Gère les messages de fenêtre spécifiques avant leur distribution.  
   
 ```  
@@ -1595,7 +1682,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namerecalclayouta--cframewndexrecalclayout"></a><a name="recalclayout"></a>CFrameWndEx::RecalcLayout  
+##  <a name="recalclayout"></a>CFrameWndEx::RecalcLayout  
  Ajuste la disposition de l’image et ses fenêtres enfants.  
   
 ```  
@@ -1609,7 +1696,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>Remarques  
  Cette méthode est appelée lorsque la taille de la fenêtre frame a été modifiée ou lorsque les barres de contrôle sont affichés ou masqués.  
   
-##  <a name="a-nameremovepanefromdockmanagera--cframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>CFrameWndEx::RemovePaneFromDockManager  
+##  <a name="removepanefromdockmanager"></a>CFrameWndEx::RemovePaneFromDockManager  
  Annule l’inscription d’un volet et elle supprime le Gestionnaire d’ancrage.  
   
 ```  
@@ -1642,7 +1729,7 @@ void RemovePaneFromDockManager(
   
  Le [CDockingManager classe](../../mfc/reference/cdockingmanager-class.md) gère la disposition des barres de contrôles. Vous devez enregistrer chaque barre de contrôle avec le Gestionnaire d’ancrage à l’aide de la [CFrameWndEx::AddPane](#addpane) méthode ou [CFrameWndEx::InsertPane](#insertpane) (méthode).  
   
-##  <a name="a-namesetdockstatea--cframewndexsetdockstate"></a><a name="setdockstate"></a>CFrameWndEx::SetDockState  
+##  <a name="setdockstate"></a>CFrameWndEx::SetDockState  
  Restaure la mise en page d’accueil dans l’état d’ancrage stockée dans le Registre.  
   
 ```  
@@ -1653,7 +1740,7 @@ void SetDockState(const CDockState& state);
  `state`  
  L’état d’ancrage. Ce paramètre est ignoré.  
   
-##  <a name="a-namesetprintpreviewframea--cframewndexsetprintpreviewframe"></a><a name="setprintpreviewframe"></a>CFrameWndEx::SetPrintPreviewFrame  
+##  <a name="setprintpreviewframe"></a>CFrameWndEx::SetPrintPreviewFrame  
  Définit la fenêtre frame de l’aperçu avant impression.  
   
 ```  
@@ -1666,7 +1753,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetuptoolbarmenua--cframewndexsetuptoolbarmenu"></a><a name="setuptoolbarmenu"></a>CFrameWndEx::SetupToolbarMenu  
+##  <a name="setuptoolbarmenu"></a>CFrameWndEx::SetupToolbarMenu  
  Insère les commandes définies par l’utilisateur dans un menu de la barre d’outils.  
   
 ```  
@@ -1689,14 +1776,14 @@ void SetupToolbarMenu(
 ### <a name="remarks"></a>Remarques  
  Le framework stocke les commandes définies par l’utilisateur dans une liste. Utilisez `uiViewUserToolbarCmdFirst` et `uiViewUserToolbarCmdList` pour spécifier les index des commandes à insérer.  
   
-##  <a name="a-nameshowfullscreena--cframewndexshowfullscreen"></a><a name="showfullscreen"></a>CFrameWndEx::ShowFullScreen  
+##  <a name="showfullscreen"></a>CFrameWndEx::ShowFullScreen  
  Bascule le frame principal entre le mode plein écran et en mode normal.  
   
 ```  
 void ShowFullScreen();
 ```  
   
-##  <a name="a-nameshowpanea--cframewndexshowpane"></a><a name="showpane"></a>CFrameWndEx::ShowPane  
+##  <a name="showpane"></a>CFrameWndEx::ShowPane  
  Affiche ou masque le volet spécifié.  
   
 ```  
@@ -1720,7 +1807,7 @@ void ShowPane(
  [in] `bActivate`  
  Si `TRUE`, activer la barre de contrôle. Sinon, affiche la barre de contrôle dans un état inactif.  
   
-##  <a name="a-nameupdatecaptiona--cframewndexupdatecaption"></a><a name="updatecaption"></a>CFrameWndEx::UpdateCaption  
+##  <a name="updatecaption"></a>CFrameWndEx::UpdateCaption  
  Appelé par l’infrastructure pour mettre à jour la légende de la fenêtre frame.  
   
 ```  
@@ -1729,7 +1816,7 @@ void UpdateCaption();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namewinhelpa--cframewndexwinhelp"></a><a name="winhelp"></a>CFrameWndEx::WinHelp  
+##  <a name="winhelp"></a>CFrameWndEx::WinHelp  
  Appelle le contexte ou application WinHelp liées aide.  
   
 ```  
