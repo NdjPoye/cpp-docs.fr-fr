@@ -9,11 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IPersistStreamInitImpl
-- ATL::IPersistStreamInitImpl<T>
-- ATL.IPersistStreamInitImpl<T>
 - IPersistStreamInitImpl
-- ATL.IPersistStreamInitImpl
+- ATLCOM/ATL::IPersistStreamInitImpl
+- ATLCOM/ATL::IPersistStreamInitImpl::GetClassID
+- ATLCOM/ATL::IPersistStreamInitImpl::GetSizeMax
+- ATLCOM/ATL::IPersistStreamInitImpl::InitNew
+- ATLCOM/ATL::IPersistStreamInitImpl::IsDirty
+- ATLCOM/ATL::IPersistStreamInitImpl::Load
+- ATLCOM/ATL::IPersistStreamInitImpl::Save
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +92,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="a-namegetclassida--ipersiststreaminitimplgetclassid"></a><a name="getclassid"></a>IPersistStreamInitImpl::GetClassID  
+##  <a name="getclassid"></a>IPersistStreamInitImpl::GetClassID  
  Récupère le CLSID de l’objet.  
   
 ```
@@ -99,7 +102,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>Notes  
  Consultez la page [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetsizemaxa--ipersiststreaminitimplgetsizemax"></a><a name="getsizemax"></a>IPersistStreamInitImpl::GetSizeMax  
+##  <a name="getsizemax"></a>IPersistStreamInitImpl::GetSizeMax  
  Récupère la taille du flux requis pour enregistrer les données de l’objet.  
   
 ```
@@ -112,7 +115,7 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 ### <a name="remarks"></a>Notes  
  Consultez la page [IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameinitnewa--ipersiststreaminitimplinitnew"></a><a name="initnew"></a>IPersistStreamInitImpl::InitNew  
+##  <a name="initnew"></a>IPersistStreamInitImpl::InitNew  
  Initialise un objet nouvellement créé.  
   
 ```
@@ -122,7 +125,7 @@ STDMETHOD(InitNew)();
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameisdirtya--ipersiststreaminitimplisdirty"></a><a name="isdirty"></a>IPersistStreamInitImpl::IsDirty  
+##  <a name="isdirty"></a>IPersistStreamInitImpl::IsDirty  
  Vérifie si les données de l’objet a changé depuis son dernier enregistrement.  
   
 ```
@@ -132,7 +135,7 @@ STDMETHOD(IsDirty)();
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IPersistStreamInit::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms680092) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameloada--ipersiststreaminitimplload"></a><a name="load"></a>IPersistStreamInitImpl::Load  
+##  <a name="load"></a>IPersistStreamInitImpl::Load  
  Charge les propriétés de l’objet à partir du flux spécifié.  
   
 ```
@@ -144,7 +147,7 @@ STDMETHOD(Load)(LPSTREAM pStm);
   
  Consultez la page [IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesavea--ipersiststreaminitimplsave"></a><a name="save"></a>IPersistStreamInitImpl::Save  
+##  <a name="save"></a>IPersistStreamInitImpl::Save  
  Enregistre les propriétés de l’objet dans le flux spécifié.  
   
 ```

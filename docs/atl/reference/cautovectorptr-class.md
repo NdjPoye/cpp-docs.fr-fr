@@ -9,11 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAutoVectorPtr
-- ATL.CAutoVectorPtr
-- ATL.CAutoVectorPtr<T>
 - CAutoVectorPtr
-- ATL::CAutoVectorPtr<T>
+- ATLBASE/ATL::CAutoVectorPtr
+- ATLBASE/ATL::CAutoVectorPtr::CAutoVectorPtr
+- ATLBASE/ATL::CAutoVectorPtr::Allocate
+- ATLBASE/ATL::CAutoVectorPtr::Attach
+- ATLBASE/ATL::CAutoVectorPtr::Detach
+- ATLBASE/ATL::CAutoVectorPtr::Free
+- ATLBASE/ATL::CAutoVectorPtr::m_p
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +103,7 @@ class CAutoVectorPtr
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
   
-##  <a name="a-nameallocatea--cautovectorptrallocate"></a><a name="allocate"></a>CAutoVectorPtr::Allocate  
+##  <a name="allocate"></a>CAutoVectorPtr::Allocate  
  Appelez cette méthode pour allouer la mémoire requise par le tableau d’objets pointés par `CAutoVectorPtr`.  
   
 ```
@@ -117,7 +120,7 @@ bool Allocate(size_t nElements) throw();
 ### <a name="remarks"></a>Remarques  
  Dans les versions debug, un échec d’assertion se produit si le [CAutoVectorPtr::m_p](#m_p) variable membre pointe actuellement à une valeur ; autrement dit, il n’est pas égal à NULL.  
   
-##  <a name="a-nameattacha--cautovectorptrattach"></a><a name="attach"></a>CAutoVectorPtr::Attach  
+##  <a name="attach"></a>CAutoVectorPtr::Attach  
  Appelez cette méthode pour prendre possession d’un pointeur existant.  
   
 ```
@@ -133,7 +136,7 @@ void Attach(T* p) throw();
   
  Dans les versions debug, un échec d’assertion se produit si le [CAutoVectorPtr::m_p](#m_p) variable membre pointe actuellement à une valeur ; autrement dit, il n’est pas égal à NULL.  
   
-##  <a name="a-namecautovectorptra--cautovectorptrcautovectorptr"></a><a name="cautovectorptr"></a>CAutoVectorPtr::CAutoVectorPtr  
+##  <a name="cautovectorptr"></a>CAutoVectorPtr::CAutoVectorPtr  
  Constructeur.  
   
 ```
@@ -149,7 +152,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>Remarques  
  Le `CAutoVectorPtr` objet peut être créé à l’aide d’un pointeur existant, auquel cas il transfère la propriété du pointeur.  
   
-##  <a name="a-namedtora--cautovectorptrcautovectorptr"></a><a name="dtor"></a>CAutoVectorPtr :: ~ CAutoVectorPtr  
+##  <a name="dtor"></a>CAutoVectorPtr :: ~ CAutoVectorPtr  
  Destructeur.  
   
 ```
@@ -159,7 +162,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>Remarques  
  Libère toutes les ressources allouées. Appels [CAutoVectorPtr::Free](#free).  
   
-##  <a name="a-namedetacha--cautovectorptrdetach"></a><a name="detach"></a>CAutoVectorPtr::Detach  
+##  <a name="detach"></a>CAutoVectorPtr::Detach  
  Appelez cette méthode pour libérer la possession d’un pointeur.  
   
 ```
@@ -172,7 +175,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>Notes  
  Libère la possession d’un pointeur, définit les [CAutoVectorPtr::m_p](#m_p) variable de membre avec la valeur NULL et retourne une copie du pointeur. Après avoir appelé **détachement**, il jusqu’au programmeur pour libérer les ressources est allouée sur laquelle le `CAutoVectorPtr` objet peut avoir précédemment la responsabilité.  
   
-##  <a name="a-namefreea--cautovectorptrfree"></a><a name="free"></a>CAutoVectorPtr::Free  
+##  <a name="free"></a>CAutoVectorPtr::Free  
  Appelez cette méthode pour supprimer un objet vers lequel pointé un `CAutoVectorPtr`.  
   
 ```
@@ -182,7 +185,7 @@ void Free() throw();
 ### <a name="remarks"></a>Notes  
  L’objet pointé par le `CAutoVectorPtr` est libéré et la [CAutoVectorPtr::m_p](#m_p) variable membre a la valeur NULL.  
   
-##  <a name="a-namempa--cautovectorptrmp"></a><a name="m_p"></a>CAutoVectorPtr::m_p  
+##  <a name="m_p"></a>CAutoVectorPtr::m_p  
  La variable de membre de données de pointeur.  
   
 ```
@@ -192,7 +195,7 @@ T* m_p;
 ### <a name="remarks"></a>Notes  
  Cette variable membre conserve les informations de pointeur.  
   
-##  <a name="a-nameoperatoreqa--cautovectorptroperator-"></a><a name="operator_eq"></a>CAutoVectorPtr::operator =  
+##  <a name="operator_eq"></a>CAutoVectorPtr::operator =  
  L’opérateur d’assignation.  
   
 ```
@@ -209,7 +212,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>Remarques  
  Détache de l’opérateur d’assignation de la `CAutoVectorPtr` objet à partir de n’importe quel pointeur actuel et attache le nouveau pointeur, `p`, à la place.  
   
-##  <a name="a-nameoperatortstara--cautovectorptroperator-t-"></a><a name="operator_t__star"></a>CAutoVectorPtr::operator T *  
+##  <a name="operator_t__star"></a>CAutoVectorPtr::operator T *  
  L’opérateur de cast.  
   
 ```  
