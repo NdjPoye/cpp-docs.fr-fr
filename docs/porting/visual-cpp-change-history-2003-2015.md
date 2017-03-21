@@ -33,8 +33,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 7ff37399842c7c8d41f8b7d15660c73b8a11f19f
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historique des modifications de Visual C++ entre 2003 et 2015
@@ -58,9 +59,9 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
 4.  [Modifications avec rupture du runtime d’accès concurrentiel](#BK_ConcRT)  
   
-## <a name="a-namevc2015a-visual-c-2015-conformance-changes"></a><a name="VC_2015"></a> Modifications de la mise en conformité de Visual C++ 2015  
+## <a name="VC_2015"></a> Modifications de la mise en conformité de Visual C++ 2015  
   
-###  <a name="a-namebkcrta-c-runtime-library-crt"></a><a name="BK_CRT"></a> Bibliothèque Runtime C (CRT)  
+###  <a name="BK_CRT"></a> Bibliothèque Runtime C (CRT)  
   
 #### <a name="general-changes"></a>Modifications générales  
   
@@ -180,7 +181,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
 -   **Précision de %A et %a** La précision par défaut des spécificateurs de format %A et %a était de 6 dans les versions antérieures de la bibliothèque. La précision par défaut est désormais de 13 pour être conforme à la norme du C.  
   
-     Il s'agit d'un changement de comportement d'exécution dans la sortie de n'importe quelle fonction qui utilise une chaîne de format avec %A ou %a. Selon l'ancien comportement, la sortie utilisant le spécificateur %A peut être «&1;,1A2B3Cp+111 ». À présent, la sortie pour la même valeur est «&1;,1A2B3C4D5E6F7p+111 ». Pour obtenir l'ancien comportement, vous pouvez spécifier la précision, par exemple, %.6A. Consultez [Spécifications de précision](../c-runtime-library/precision-specification.md).  
+     Il s'agit d'un changement de comportement d'exécution dans la sortie de n'importe quelle fonction qui utilise une chaîne de format avec %A ou %a. Selon l'ancien comportement, la sortie utilisant le spécificateur %A peut être «&1;,1A2B3Cp+111 ». À présent, la sortie pour la même valeur est «&1;,1A2B3C4D5E6F7p+111 ». Pour obtenir l'ancien comportement, vous pouvez spécifier la précision, par exemple, %.6A. Consultez [Spécifications de précision](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).  
   
 -   **Spécificateur %F** Le spécificateur de format/conversion %F est maintenant pris en charge. Il est fonctionnellement équivalent au spécificateur de format %f, si ce n'est que les valeurs infinies et NaN sont formatées au moyen de lettres majuscules.  
   
@@ -252,7 +253,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
 -   **CLOCKS_PER_SEC** La macro CLOCKS_PER_SEC s'étend désormais à un entier de type clock_t, comme cela est requis par le langage C.  
   
-####  <a name="a-namebkstla-c-standard-library"></a><a name="BK_STL"></a> Bibliothèque C++ standard  
+####  <a name="BK_STL"></a> Bibliothèque C++ standard  
  Pour activer les nouvelles optimisations et vérifications de débogage, l'implémentation Visual Studio de la bibliothèque C++ standard interrompt intentionnellement la compatibilité binaire d'une version à la suivante. Par conséquent, lorsque la bibliothèque C++ standard est utilisée, les fichiers objets et les bibliothèques statiques qui sont compilés à l'aide de différentes versions ne peuvent pas être combinés en un seul binaire (EXE ou DLL), et les objets de la bibliothèque C++ standard ne peuvent pas être transmis entre des binaires compilés à l'aide de différentes versions. Une telle combinaison entraîne des erreurs de l'éditeur de liens concernant des incompatibilités _MSC_VER. (_MSC_VER est la macro contenant la version majeure du compilateur. Par exemple, 1800 pour Visual Studio 2013.) Cette vérification ne peut pas détecter les combinaisons de DLL et ne peut pas détecter les combinaisons impliquant Visual C++ 2008 ou version antérieure.  
   
 -   **Fichiers Include de la bibliothèque C++ standard** Certaines modifications ont été apportées à la structure Include dans les en-têtes de la bibliothèque C++ standard. Les en-têtes de la bibliothèque C++ standard sont autorisés à s’inclure mutuellement de façons non spécifiées. En général, vous devez écrire votre code afin qu’il inclue soigneusement tous les en-têtes dont il a besoin conformément à la norme C++ et ne s’appuie pas sur quels en-têtes de la bibliothèque C++ standard incluent quels autres en-têtes de la bibliothèque C++ standard. Cela rend le code portable entre les versions et les plateformes. Au moins deux modifications d'en-tête dans [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] affectent le code utilisateur. Tout d’abord, \<string> n’inclut plus \<iterator>. Deuxièmement, \<tuple> déclare maintenant std::array sans inclure tous les \<array>, ce qui peut endommager le code via la combinaison suivante de constructions de code : votre code possède une variable nommée « array », vous avez une directive using « using namespace std; » et vous incluez un en-tête de la bibliothèque C++ standard (tel que \<functional>) qui inclut \<tuple>, qui déclare maintenant std::array.  
@@ -315,13 +316,13 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
 -   **stratégies launch::any et launch::sync** The nonstandard stratégies launch::any et launch::sync were removed. À la place, pour launch::any, utilisez launch:async &#124; launch:deferred. Pour launch::sync, utilisez launch::deferred. Consultez [launch, énumération](../standard-library/future-enums.md#launch_enumeration).  
   
-####  <a name="a-namebkmfca-mfc-and-atl"></a><a name="BK_MFC"></a> MFC et ATL  
+####  <a name="BK_MFC"></a> MFC et ATL  
   
 -   **Microsoft Foundation Classes (MFC)** n'est plus inclus dans une installation « Par défaut » de Visual Studio en raison de sa grande taille. Pour installer MFC, choisissez l'option d'installation Personnalisée dans le programme d'installation de Visual Studio 2015. Si Visual Studio 2015 est déjà installé, vous pouvez installer MFC en réexécutant le programme d'installation de Visual Studio, en choisissant l'option d'installation Personnalisée et en choisissant Microsoft Foundation Classes. Vous pouvez réexécuter le programme d'installation de Visual Studio à partir du Panneau de configuration, Programmes et fonctionnalités, ou à partir du support d'installation.  
   
      Le package redistribuable Visual C++ inclut toujours cette bibliothèque.  
   
-####  <a name="a-namebkconcrta-concurrency-runtime"></a><a name="BK_ConcRT"></a> Runtime d’accès concurrentiel  
+####  <a name="BK_ConcRT"></a> Runtime d’accès concurrentiel  
   
 -   **Macro Yield de Windows.h en conflit avec concurrency::Context::Yield** Le runtime d'accès concurrentiel utilisait précédemment #undef pour annuler la définition de la macro Yield pour éviter les conflits entre la macro Yield définie dans Windows.h et la fonction concurrency::Context::Yield. Ce #undef a été supprimé et un nouvel appel d’API équivalent non conflictuel [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution) a été ajouté. Pour contourner les conflits avec Yield, vous pouvez mettre à jour votre code pour appeler à la place la fonction YieldExecution ou mettre entre parenthèses le nom de la fonction Yield sur les sites d'appel, comme dans l'exemple suivant :  
   
@@ -346,7 +347,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
 -   [Améliorations de la conformité dans Update 3](#VS_Update3)  
   
-###  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a> Améliorations de la conformité dans Visual C++ 2015  
+###  <a name="VS_RTM"></a> Améliorations de la conformité dans Visual C++ 2015  
   
 -   /Zc:forScope-  
   
@@ -861,7 +862,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
      Dans [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] et [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)], le compilateur génère un constructeur de copie pour une classe si cette classe possède un constructeur de déplacement défini par l’utilisateur mais aucun constructeur de copie défini par l’utilisateur. Dans Dev14, ce constructeur de copie généré implicitement est également marqué « = delete ».  
   
-###  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> Améliorations de la conformité dans Update 1  
+###  <a name="VS_Update1"></a> Améliorations de la conformité dans Update 1  
   
 -   **Classes de base virtuelles privées et héritage indirect**  
   
@@ -1408,7 +1409,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
     ```  
   
-###  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> Améliorations de la conformité dans Update 2  
+###  <a name="VS_Update2"></a> Améliorations de la conformité dans Update 2  
   
 -   **Des erreurs et avertissements supplémentaires peuvent être générés en raison de la prise en charge partielle de l’expression SFINAE.**  
   
@@ -1693,7 +1694,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
      Pour corriger le code écrit de cette manière, vous devrez peut-être déplacer les définitions d’opérateur du fichier d’en-tête vers le fichier source correspondant.  
   
-###  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> Améliorations de la conformité dans Update 3  
+###  <a name="VS_Update3"></a> Améliorations de la conformité dans Update 3  
   
 -   **std::is_convertable détecte désormais l’auto-affectation** (bibliothèque standard)  
   
@@ -2793,8 +2794,3 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
 ## <a name="see-also"></a>Voir aussi  
 [Nouveautés de Visual C++ dans Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
