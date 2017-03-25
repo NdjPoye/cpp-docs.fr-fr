@@ -57,9 +57,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 1116be21d4f65b67ab967b7acedf4859df54a6e7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: de110d40d2885353db87813a530af33ba7d8bbd4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="uint2-class"></a>uint_2, classe
@@ -89,37 +89,37 @@ class uint_2;
   
 |Nom|Description|  
 |----------|-----------------|  
-|uint_2::get_X (méthode)||  
-|uint_2::get_xy (méthode)||  
-|uint_2::get_y (méthode)||  
-|uint_2::get_yx (méthode)||  
+|uint_2::get_X||  
+|uint_2::get_xy||  
+|uint_2::get_y||  
+|uint_2::get_yx||  
 |uint_2::ref_g_Method||  
 |uint_2::ref_r_Method||  
 |uint_2::ref_x_Method||  
 |uint_2::ref_y_Method||  
-|uint_2::set_X (méthode)||  
-|uint_2::set_xy (méthode)||  
-|uint_2::set_y (méthode)||  
-|uint_2::set_yx (méthode)||  
+|uint_2::set_X||  
+|uint_2::set_xy||  
+|uint_2::set_y||  
+|uint_2::set_yx||  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|uint_2::operator--(opérateur)||  
-|uint_2::operator % =, opérateur||  
-|uint_2::operator < =, opérateur||  
-|uint_2::operator * =, opérateur||  
-|uint_2::operator / =, opérateur||  
-|uint_2::operator ^ =, opérateur||  
-|uint_2::operator | =, opérateur||  
-|uint_2::operator ~ (opérateur)||  
-|uint_2::operator ++ (opérateur)||  
-|uint_2::operator +=, opérateur||  
-|uint_2::operator\<=, opérateur||  
-|uint_2::operator =, opérateur||  
-|uint_2::operator-= (opérateur)||  
-|uint_2::operator >> =, opérateur||  
+|uint_2::operator--||  
+|uint_2::operator % =||  
+|uint_2::operator < =||  
+|uint_2::operator * =||  
+|/ = uint_2::operator||  
+|uint_2::operator ^ =||  
+|uint_2::operator | =||  
+|uint_2::operator ~||  
+|uint_2::operator ++||  
+|uint_2::operator +=||  
+|uint_2::operator\<=||  
+|uint_2::operator =||  
+|uint_2::operator =||  
+|uint_2::operator >> =||  
   
 ### <a name="public-constants"></a>Constantes publiques  
   
@@ -131,14 +131,14 @@ class uint_2;
   
 |Nom|Description|  
 |----------|-----------------|  
-|Membre de données uint_2::g||  
-|Membre de données uint_2::GR||  
-|Membre de données uint_2::r||  
-|Membre de données uint_2::RG||  
-|Membre de données uint_2::x||  
-|Membre de données uint_2::XY||  
-|Membre de données uint_2::y||  
-|Membre de données uint_2::YX||  
+|uint_2::g||  
+|uint_2::GR||  
+|uint_2::r||  
+|uint_2::RG||  
+|uint_2::x||  
+|uint_2::XY||  
+|uint_2::y||  
+|uint_2::YX||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `uint_2`  
@@ -148,7 +148,7 @@ class uint_2;
   
  **Namespace :** Concurrency::graphics  
   
-##  <a name="a-namectora-uint2"></a><a name="ctor"></a>uint_2 
+##  <a name="ctor"></a>uint_2 
 
  Par défaut constructeur initialise tous les éléments à 0.  
   
@@ -211,12 +211,12 @@ explicit inline uint_2(
  `_Other`  
  Objet utilisé pour initialiser.  
   
-##  <a name="a-nameuint2sizea-size"></a><a name="uint_2__size"></a>taille 
+##  <a name="uint_2__size"></a>taille 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
 

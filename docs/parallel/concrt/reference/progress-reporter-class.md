@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::progress_reporter
+- progress_reporter
+- PPLTASKS/concurrency::progress_reporter
+- PPLTASKS/concurrency::progress_reporter::progress_reporter
+- PPLTASKS/concurrency::progress_reporter::report
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c6b4dfee5b5f9df98a36fcdac116182ced4cbe30
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 98856e26c82d01433e6f8eb0d76110aff1535936
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="progressreporter-class"></a>progress_reporter, classe
@@ -59,15 +62,15 @@ class progress_reporter;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[progress_reporter, constructeur](#ctor)||  
+|[progress_reporter](#ctor)||  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[rapport (méthode)](#report)|Envoie un rapport d'avancement à l'action asynchrone ou à l'opération à laquelle est lié cet indicateur de progression.|  
+|[rapport](#report)|Envoie un rapport d'avancement à l'action asynchrone ou à l'opération à laquelle est lié cet indicateur de progression.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Ce type est uniquement disponible pour les applications du Windows Store.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
@@ -78,13 +81,13 @@ class progress_reporter;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-namectora-progressreporter"></a><a name="ctor"></a>progress_reporter 
+##  <a name="ctor"></a>progress_reporter 
 
 ```
 progress_reporter();
 ```  
   
-##  <a name="a-namereporta-report"></a><a name="report"></a>rapport 
+##  <a name="report"></a>rapport 
 
  Envoie un rapport d'avancement à l'action asynchrone ou à l'opération à laquelle est lié cet indicateur de progression.  
   

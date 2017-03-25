@@ -6,44 +6,90 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp_math/Concurrency::fast_math::acos
+- amp_math/Concurrency::fast_math::asin
+- amp_math/Concurrency::fast_math::asinf
+- amp_math/Concurrency::fast_math::atan2
+- amp_math/Concurrency::fast_math::atan2f
+- amp_math/Concurrency::fast_math::ceil
+- amp_math/Concurrency::fast_math::ceilf
+- amp_math/Concurrency::fast_math::cosf
+- amp_math/Concurrency::fast_math::cosh
+- amp_math/Concurrency::fast_math::exp
+- amp_math/Concurrency::fast_math::exp2
+- amp_math/Concurrency::fast_math::expf
+- amp_math/Concurrency::fast_math::fabs
+- amp_math/Concurrency::fast_math::floor
+- amp_math/Concurrency::fast_math::floorf
+- amp_math/Concurrency::fast_math::fmaxf
+- amp_math/Concurrency::fast_math::fmin
+- amp_math/Concurrency::fast_math::fmod
+- amp_math/Concurrency::fast_math::fmodf
+- amp_math/Concurrency::fast_math::frexpf
+- amp_math/Concurrency::fast_math::isfinite
+- amp_math/Concurrency::fast_math::isnan
+- amp_math/Concurrency::fast_math::ldexp
+- amp_math/Concurrency::fast_math::log
+- amp_math/Concurrency::fast_math::log10
+- amp_math/Concurrency::fast_math::log2
+- amp_math/Concurrency::fast_math::log2f
+- amp_math/Concurrency::fast_math::modf
+- amp_math/Concurrency::fast_math::modff
+- amp_math/Concurrency::fast_math::powf
+- amp_math/Concurrency::fast_math::round
+- amp_math/Concurrency::fast_math::rsqrt
+- amp_math/Concurrency::fast_math::rsqrtf
+- amp_math/Concurrency::fast_math::signbitf
+- amp_math/Concurrency::fast_math::sin
+- amp_math/Concurrency::fast_math::sincosf
+- amp_math/Concurrency::fast_math::sinf
+- amp_math/Concurrency::fast_math::sinhf
+- amp_math/Concurrency::fast_math::sqrt
+- amp_math/Concurrency::fast_math::tan
+- amp_math/Concurrency::fast_math::tanf
+- amp_math/Concurrency::fast_math::tanhf
+- amp_math/Concurrency::fast_math::trunc
+dev_langs:
+- C++
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
 caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 4a01f48a7d087281ab1e9222d1077e92ab8b0d6c
-ms.openlocfilehash: 0545a57c492f5c1872c71c04c99b54f86b644102
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2ca8b085c7dcc226a216032060e628c7c7ce0a4a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Fonctions d’espace de noms Concurrency::fast_math
 ||||  
 |-|-|-|  
-|[ACOS (fonction)](#acos)|[acosf, fonction](#acosf)|[ASIN (fonction)](#asin)|  
-|[asinf, fonction](#asinf)|[ATAN (fonction)](#atan)|[ATAN2 (fonction)](#atan2)|  
-|[atan2f (fonction)](#atan2f)|[atanf, fonction](#atanf)|[ceil (fonction)](#ceil)|  
-|[ceilf, fonction](#ceilf)|[COS (fonction)](#cos)|[cosf, fonction](#cosf)|  
-|[COSH (fonction)](#cosh)|[coshf, fonction](#coshf)|[EXP (fonction)](#exp)|  
-|[exp2 (fonction)](#exp2)|[exp2f (fonction)](#exp2f)|[expf, fonction](#expf)|  
-|[fabs, fonction](#fabs)|[fabsf, fonction](#fabsf)|[Floor, fonction](#floor)|  
-|[floorf, fonction](#floorf)|[Fmax, fonction](#fmax)|[fmaxf, fonction](#fmaxf)|  
-|[fmin, fonction](#fmin)|[fminf, fonction](#fminf)|[fmod, fonction](#fmod)|  
-|[fmodf, fonction](#fmodf)|[frexp, fonction](#frexp)|[frexpf, fonction](#frexpf)|  
-|[isFinite, fonction](#isfinite)|[isinf, fonction](#isinf)|[isNaN (fonction)](#isnan)|  
-|[ldexp, fonction](#ldexp)|[ldexpf, fonction](#ldexpf)|[log, fonction](#log)|  
-|[LOG10 (fonction)](#log10)|[log10f (fonction)](#log10f)|[LOG2 (fonction)](#log2)|  
-|[log2f (fonction)](#log2f)|[logf, fonction](#logf)|[modf, fonction](#modf)|  
-|[modff, fonction](#modff)|[Fonction pow](#pow)|[powf, fonction](#powf)|  
-|[Round (fonction)](#round)|[roundf, fonction](#roundf)|[rsqrt, fonction](#rsqrt)|  
-|[rsqrtf, fonction](#rsqrtf)|[signbit, fonction](#signbit)|[signbitf, fonction](#signbitf)|  
-|[SIN (fonction)](#sin)|[sincos, fonction](#sincos)|[sincosf, fonction](#sincosf)|  
-|[Sinf, fonction](#sinf)|[sinh (fonction)](#sinh)|[sinhf, fonction](#sinhf)|  
-|[SQRT (fonction)](#sqrt)|[sqrtf, fonction](#sqrtf)|[tan (fonction)](#tan)|  
-|[tanf, fonction](#tanf)|[TANH, fonction](#tanh)|[tanhf, fonction](#tanhf)|  
-|[trunc, fonction](#trunc)|[truncf, fonction](#truncf)|  
+|[acos](#acos)|[acosf](#acosf)|[asin](#asin)|  
+|[asinf](#asinf)|[atan](#atan)|[atan2](#atan2)|  
+|[atan2f](#atan2f)|[atanf](#atanf)|[ceil](#ceil)|  
+|[ceilf](#ceilf)|[cos](#cos)|[cosf](#cosf)|  
+|[cosh](#cosh)|[coshf](#coshf)|[exp](#exp)|  
+|[exp2](#exp2)|[exp2f](#exp2f)|[expf](#expf)|  
+|[fabs](#fabs)|[fabsf](#fabsf)|[floor](#floor)|  
+|[floorf](#floorf)|[fmax](#fmax)|[fmaxf](#fmaxf)|  
+|[fmin](#fmin)|[fminf](#fminf)|[fmod](#fmod)|  
+|[fmodf](#fmodf)|[frexp](#frexp)|[frexpf](#frexpf)|  
+|[isFinite](#isfinite)|[isinf](#isinf)|[isnan](#isnan)|  
+|[ldexp](#ldexp)|[ldexpf](#ldexpf)|[log](#log)|  
+|[log10](#log10)|[log10f](#log10f)|[log2](#log2)|  
+|[log2f](#log2f)|[logf](#logf)|[modf](#modf)|  
+|[modff](#modff)|[pow](#pow)|[powf](#powf)|  
+|[round](#round)|[roundf](#roundf)|[rsqrt](#rsqrt)|  
+|[rsqrtf](#rsqrtf)|[signbit](#signbit)|[signbitf](#signbitf)|  
+|[sin](#sin)|[sincos](#sincos)|[sincosf](#sincosf)|  
+|[sinf](#sinf)|[sinh](#sinh)|[sinhf](#sinhf)|  
+|[sqrt](#sqrt)|[sqrtf](#sqrtf)|[tan](#tan)|  
+|[tanf](#tanf)|[tanh](#tanh)|[tanhf](#tanhf)|  
+|[trunc](#trunc)|[truncf](#truncf)|  
   
-##  <a name="a-nameacosa--acos-function"></a><a name="acos"></a>ACOS (fonction)  
+##  <a name="acos"></a>  acos  
  Calcule l’arc cosinus de l’argument  
   
 ```  
@@ -57,7 +103,7 @@ inline float acos(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur d’arc cosinus de l’argument  
   
-##  <a name="a-nameacosfa--acosf-function"></a><a name="acosf"></a>acosf, fonction  
+##  <a name="acosf"></a>acosf  
  Calcule l’arc cosinus de l’argument  
   
 ```  
@@ -71,7 +117,7 @@ inline float acosf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur d’arc cosinus de l’argument  
   
-##  <a name="a-nameasina--asin-function"></a><a name="asin"></a>ASIN (fonction)  
+##  <a name="asin"></a>  asin  
  Calcule l’arc sinus de l’argument  
   
 ```  
@@ -85,7 +131,7 @@ inline float asin(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’arc sinus de l’argument  
   
-##  <a name="a-nameasinfa--asinf-function"></a><a name="asinf"></a>asinf, fonction  
+##  <a name="asinf"></a>asinf  
  Calcule l’arc sinus de l’argument  
   
 ```  
@@ -99,7 +145,7 @@ inline float asinf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’arc sinus de l’argument  
   
-##  <a name="a-nameatana--atan-function"></a><a name="atan"></a>ATAN (fonction)  
+##  <a name="atan"></a>  atan  
  Calcule l’arc tangente de l’argument  
   
 ```  
@@ -113,7 +159,7 @@ inline float atan(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur d’arc tangent de l’argument  
   
-##  <a name="a-nameatan2a--atan2-function"></a><a name="atan2"></a>ATAN2 (fonction)  
+##  <a name="atan2"></a>  atan2  
  Calcule l’arc tangente de _Y/_X  
   
 ```  
@@ -132,7 +178,7 @@ inline float atan2(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur d’arc tangent de _Y/_X  
   
-##  <a name="a-nameatan2fa--atan2f-function"></a><a name="atan2f"></a>atan2f (fonction)  
+##  <a name="atan2f"></a>atan2f  
  Calcule l’arc tangente de _Y/_X  
   
 ```  
@@ -151,7 +197,7 @@ inline float atan2f(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur d’arc tangent de _Y/_X  
   
-##  <a name="a-nameatanfa--atanf-function"></a><a name="atanf"></a>atanf, fonction  
+##  <a name="atanf"></a>atanf  
  Calcule l’arc tangente de l’argument  
   
 ```  
@@ -165,7 +211,7 @@ inline float atanf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur d’arc tangent de l’argument  
   
-##  <a name="a-nameceila--ceil-function"></a><a name="ceil"></a>ceil (fonction)  
+##  <a name="ceil"></a>ceil  
  Calcule le plafond de l’argument  
   
 ```  
@@ -179,7 +225,7 @@ inline float ceil(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le plafond de l’argument  
   
-##  <a name="a-nameceilfa--ceilf-function"></a><a name="ceilf"></a>ceilf, fonction  
+##  <a name="ceilf"></a>ceilf  
  Calcule le plafond de l’argument  
   
 ```  
@@ -193,7 +239,7 @@ inline float ceilf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le plafond de l’argument  
   
-##  <a name="a-namecosfa--cosf-function"></a><a name="cosf"></a>cosf, fonction  
+##  <a name="cosf"></a>cosf  
  Calcule le cosinus de l’argument  
   
 ```  
@@ -207,7 +253,7 @@ inline float cosf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de cosinus de l’argument  
   
-##  <a name="a-namecoshfa--coshf-function"></a><a name="coshf"></a>coshf, fonction  
+##  <a name="coshf"></a>coshf  
  Calcule la valeur de cosinus hyperbolique de l’argument  
   
 ```  
@@ -221,7 +267,7 @@ inline float coshf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de cosinus hyperbolique de l’argument  
   
-##  <a name="a-namecosa--cos-function"></a><a name="cos"></a>COS (fonction)   
+##  <a name="cos"></a>  cos  
  Calcule le cosinus de l’argument  
   
 ```  
@@ -235,7 +281,7 @@ inline float cos(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de cosinus de l’argument  
   
-##  <a name="a-namecosha--cosh-function"></a><a name="cosh"></a>COSH (fonction)  
+##  <a name="cosh"></a>  cosh  
  Calcule la valeur de cosinus hyperbolique de l’argument  
   
 ```  
@@ -249,7 +295,7 @@ inline float cosh(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de cosinus hyperbolique de l’argument  
   
-##  <a name="a-nameexpa--exp-function"></a><a name="exp"></a>EXP (fonction)  
+##  <a name="exp"></a>  exp  
  Calcule la valeur exponentielle de l’argument de base e  
   
 ```  
@@ -263,7 +309,7 @@ inline float exp(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur exponentielle de l’argument de base e  
   
-##  <a name="a-nameexp2a--exp2-function"></a><a name="exp2"></a>exp2 (fonction)  
+##  <a name="exp2"></a>exp2  
  Calcule la valeur exponentielle de l’argument base-2  
   
 ```  
@@ -277,7 +323,7 @@ inline float exp2(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur exponentielle de l’argument base-2  
   
-##  <a name="a-nameexp2fa--exp2f-function"></a><a name="exp2f"></a>exp2f (fonction)  
+##  <a name="exp2f"></a>exp2f  
  Calcule la valeur exponentielle de l’argument base-2  
   
 ```  
@@ -291,7 +337,7 @@ inline float exp2f(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur exponentielle de l’argument base-2  
   
-##  <a name="a-nameexpfa--expf-function"></a><a name="expf"></a>expf, fonction  
+##  <a name="expf"></a>expf  
  Calcule la valeur exponentielle de l’argument de base e  
   
 ```  
@@ -305,7 +351,7 @@ inline float expf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur exponentielle de l’argument de base e  
   
-##  <a name="a-namefabsa--fabs-function"></a><a name="fabs"></a>fabs, fonction  
+##  <a name="fabs"></a>fabs  
  Retourne la valeur absolue de l’argument  
   
 ```  
@@ -319,7 +365,7 @@ inline float fabs(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur absolue de l’argument  
   
-##  <a name="a-namefabsfa--fabsf-function"></a><a name="fabsf"></a>fabsf, fonction  
+##  <a name="fabsf"></a>fabsf  
  Retourne la valeur absolue de l’argument  
   
 ```  
@@ -333,7 +379,7 @@ inline float fabsf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur absolue de l’argument  
   
-##  <a name="a-namefloora--floor-function"></a><a name="floor"></a>Floor, fonction  
+##  <a name="floor"></a>étage  
  Calcule le plancher de l’argument  
   
 ```  
@@ -347,7 +393,7 @@ inline float floor(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le plancher de l’argument  
   
-##  <a name="a-namefloorfa--floorf-function"></a><a name="floorf"></a>floorf, fonction  
+##  <a name="floorf"></a>floorf  
  Calcule le plancher de l’argument  
   
 ```  
@@ -361,7 +407,7 @@ inline float floorf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le plancher de l’argument  
   
-##  <a name="a-namefmaxa--fmax-function"></a><a name="fmax"></a>Fmax, fonction  
+##  <a name="fmax"></a>Fmax  
  Déterminer la valeur numérique maximale des arguments  
   
 ```  
@@ -380,7 +426,7 @@ inline float max(
 ### <a name="return-value"></a>Valeur de retour  
  Retourner la valeur numérique maximale des arguments  
   
-##  <a name="a-namefmaxfa--fmaxf-function"></a><a name="fmaxf"></a>fmaxf, fonction  
+##  <a name="fmaxf"></a>fmaxf  
  Déterminer la valeur numérique maximale des arguments  
   
 ```  
@@ -399,7 +445,7 @@ inline float fmaxf(
 ### <a name="return-value"></a>Valeur de retour  
  Retourner la valeur numérique maximale des arguments  
   
-##  <a name="a-namefmina--fmin-function"></a><a name="fmin"></a>fmin, fonction  
+##  <a name="fmin"></a>Fmax  
  Déterminer la valeur numérique minimale des arguments  
   
 ```  
@@ -418,7 +464,7 @@ inline float min(
 ### <a name="return-value"></a>Valeur de retour  
  Retourner la valeur numérique minimale des arguments  
   
-##  <a name="a-namefminfa--fminf-function"></a><a name="fminf"></a>fminf, fonction  
+##  <a name="fminf"></a>fminf  
  Déterminer la valeur numérique minimale des arguments  
   
 ```  
@@ -437,7 +483,7 @@ inline float fminf(
 ### <a name="return-value"></a>Valeur de retour  
  Retourner la valeur numérique minimale des arguments  
   
-##  <a name="a-namefmoda--fmod-function"></a><a name="fmod"></a>fmod, fonction  
+##  <a name="fmod"></a>fmod  
  Calcule le reste à virgule flottante de _X/_Y  
   
 ```  
@@ -456,7 +502,7 @@ inline float fmod(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le reste à virgule flottante de _X/_Y  
   
-##  <a name="a-namefmodfa--fmodf-function"></a><a name="fmodf"></a>fmodf, fonction  
+##  <a name="fmodf"></a>fmodf  
  Calcule le reste à virgule flottante de _X/_Y.  
   
 ```  
@@ -475,7 +521,7 @@ inline float fmodf(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le reste à virgule flottante de _X/_Y  
   
-##  <a name="a-namefrexpa--frexp-function"></a><a name="frexp"></a>frexp, fonction  
+##  <a name="frexp"></a>frexp  
  Obtient la mantisse et l’exposant de _X  
   
 ```  
@@ -494,7 +540,7 @@ inline float frexp(
 ### <a name="return-value"></a>Valeur de retour  
  Renvoie la mantisse _X  
   
-##  <a name="a-namefrexpfa--frexpf-function"></a><a name="frexpf"></a>frexpf, fonction  
+##  <a name="frexpf"></a>frexpf  
  Obtient la mantisse et l’exposant de _X  
   
 ```  
@@ -513,7 +559,7 @@ inline float frexpf(
 ### <a name="return-value"></a>Valeur de retour  
  Renvoie la mantisse _X  
   
-##  <a name="a-nameisfinitea--isfinite-function"></a><a name="isfinite"></a>isFinite, fonction  
+##  <a name="isfinite"></a>isFinite  
  Détermine si l’argument a une valeur finie  
   
 ```  
@@ -527,7 +573,7 @@ inline int isfinite(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une valeur différente de zéro si et seulement si l’argument a la valeur finie  
   
-##  <a name="a-nameisinfa--isinf-function"></a><a name="isinf"></a>isinf, fonction  
+##  <a name="isinf"></a>isinf  
  Détermine si l’argument est une infinité  
   
 ```  
@@ -541,7 +587,7 @@ inline int isinf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une valeur différente de zéro si et seulement si l’argument a une valeur infinie  
   
-##  <a name="a-nameisnana--isnan-function"></a><a name="isnan"></a>isNaN (fonction)  
+##  <a name="isnan"></a>isNaN  
  Détermine si l’argument est une valeur NaN  
   
 ```  
@@ -555,7 +601,7 @@ inline int isnan(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une valeur différente de zéro si et seulement si l’argument a une valeur NaN  
   
-##  <a name="a-nameldexpa--ldexp-function"></a><a name="ldexp"></a>ldexp, fonction  
+##  <a name="ldexp"></a>ldexp  
  Calcule le nombre réel de la mantisse et exposant  
   
 ```  
@@ -574,7 +620,7 @@ inline float ldexp(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne _X * 2 ^ _Exp  
   
-##  <a name="a-nameldexpfa--ldexpf-function"></a><a name="ldexpf"></a>ldexpf, fonction  
+##  <a name="ldexpf"></a>ldexpf  
  Calcule le nombre réel de la mantisse et exposant  
   
 ```  
@@ -593,7 +639,7 @@ inline float ldexpf(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne _X * 2 ^ _Exp  
   
-##  <a name="a-nameloga--log-function"></a><a name="log"></a>log, fonction  
+##  <a name="log"></a>  log  
  Calcule le logarithme de base e de l’argument  
   
 ```  
@@ -607,7 +653,7 @@ inline float log(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le logarithme de base e de l’argument  
   
-##  <a name="a-namelog10a--log10-function"></a><a name="log10"></a>LOG10 (fonction)  
+##  <a name="log10"></a>  log10  
  Calcule le logarithme en base&10; de l’argument  
   
 ```  
@@ -621,7 +667,7 @@ inline float log10(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le logarithme en base&10; de l’argument  
   
-##  <a name="a-namelog10fa--log10f-function"></a><a name="log10f"></a>log10f (fonction)  
+##  <a name="log10f"></a>log10f  
  Calcule le logarithme en base&10; de l’argument  
   
 ```  
@@ -635,7 +681,7 @@ inline float log10f(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le logarithme en base&10; de l’argument  
   
-##  <a name="a-namelog2a--log2-function"></a><a name="log2"></a>LOG2 (fonction)  
+##  <a name="log2"></a>LOG2  
  Calcule le logarithme base&2; de l’argument  
   
 ```  
@@ -649,7 +695,7 @@ inline float log2(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le logarithme base&2; de l’argument  
   
-##  <a name="a-namelog2fa--log2f-function"></a><a name="log2f"></a>log2f (fonction)  
+##  <a name="log2f"></a>log2f  
  Calcule le logarithme base&2; de l’argument  
   
 ```  
@@ -663,7 +709,7 @@ inline float log2f(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le logarithme en base&10; de l’argument  
   
-##  <a name="a-namelogfa--logf-function"></a><a name="logf"></a>logf, fonction  
+##  <a name="logf"></a>logf  
  Calcule le logarithme de base e de l’argument  
   
 ```  
@@ -677,7 +723,7 @@ inline float logf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le logarithme de base e de l’argument  
   
-##  <a name="a-namemodfa--modf-function"></a><a name="modf"></a>modf, fonction  
+##  <a name="modf"></a>modf  
  Fractionne _X en une fraction et un nombre entier.  
   
 ```  
@@ -695,7 +741,7 @@ inline float modf(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la fraction signée de _X  
   
-##  <a name="a-namemodffa--modff-function"></a><a name="modff"></a>modff, fonction  
+##  <a name="modff"></a>modff  
  Fractionne _X en une fraction et un nombre entier.  
   
 ```  
@@ -713,7 +759,7 @@ inline float modff(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la fraction signée de _X  
   
-##  <a name="a-namepowa--pow-function"></a><a name="pow"></a>Fonction pow  
+##  <a name="pow"></a>  pow  
  Calcule _X élevé à la puissance de _Y  
   
 ```  
@@ -732,7 +778,7 @@ inline float pow(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de _X élevé à la puissance de _Y  
   
-##  <a name="a-namepowfa--powf-function"></a><a name="powf"></a>powf, fonction  
+##  <a name="powf"></a>powf  
  Calcule _X élevé à la puissance de _Y  
   
 ```  
@@ -750,7 +796,7 @@ inline float powf(
   
 ### <a name="return-value"></a>Valeur de retour  
   
-##  <a name="a-namerounda--round-function"></a><a name="round"></a>Round (fonction)  
+##  <a name="round"></a>arrondir  
  Arrondit _X à l’entier le plus proche  
   
 ```  
@@ -764,7 +810,7 @@ inline float round(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’entier le plus proche de _X  
   
-##  <a name="a-nameroundfa--roundf-function"></a><a name="roundf"></a>roundf, fonction  
+##  <a name="roundf"></a>roundf  
  Arrondit _X à l’entier le plus proche  
   
 ```  
@@ -778,7 +824,7 @@ inline float roundf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’entier le plus proche de _X  
   
-##  <a name="a-namersqrta--rsqrt-function"></a><a name="rsqrt"></a>rsqrt, fonction  
+##  <a name="rsqrt"></a>rsqrt  
  Retourne l’inverse de la racine carrée de l’argument  
   
 ```  
@@ -792,7 +838,7 @@ inline float rsqrt(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’inverse de la racine carrée de l’argument  
   
-##  <a name="a-namersqrtfa--rsqrtf-function"></a><a name="rsqrtf"></a>rsqrtf, fonction  
+##  <a name="rsqrtf"></a>rsqrtf  
  Retourne l’inverse de la racine carrée de l’argument  
   
 ```  
@@ -806,7 +852,7 @@ inline float rsqrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’inverse de la racine carrée de l’argument  
   
-##  <a name="a-namesignbita--signbit-function"></a><a name="signbit"></a>signbit, fonction  
+##  <a name="signbit"></a>signbit  
  Détermine si le signe de _X est négatif  
   
 ```  
@@ -820,7 +866,7 @@ inline int signbit(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une valeur différente de zéro si et seulement si le signe _X est négatif  
   
-##  <a name="a-namesignbitfa--signbitf-function"></a><a name="signbitf"></a>signbitf, fonction  
+##  <a name="signbitf"></a>signbitf  
  Détermine si le signe de _X est négatif  
   
 ```  
@@ -834,7 +880,7 @@ inline int signbitf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une valeur différente de zéro si et seulement si le signe _X est négatif  
   
-##  <a name="a-namesina--sin-function"></a><a name="sin"></a>SIN (fonction)  
+##  <a name="sin"></a>  sin  
  Calcule la valeur du sinus de l’argument  
   
 ```  
@@ -848,7 +894,7 @@ inline float sin(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur du sinus de l’argument  
   
-##  <a name="a-namesinfa--sinf-function"></a><a name="sinf"></a>Sinf, fonction  
+##  <a name="sinf"></a>Sinf  
  Calcule la valeur du sinus de l’argument  
   
 ```  
@@ -862,7 +908,7 @@ inline float sinf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur du sinus de l’argument  
   
-##  <a name="a-namesincosa--sincos-function"></a><a name="sincos"></a>sincos, fonction  
+##  <a name="sincos"></a>sincos  
  Calcule le sinus et le cosinus valeur _X  
   
 ```  
@@ -882,7 +928,7 @@ inline void sincos(
  `_C`  
  Retourne la valeur de cosinus de _X  
   
-##  <a name="a-namesincosfa--sincosf-function"></a><a name="sincosf"></a>sincosf, fonction  
+##  <a name="sincosf"></a>sincosf  
  Calcule le sinus et le cosinus valeur _X  
   
 ```  
@@ -902,7 +948,7 @@ inline void sincosf(
  `_C`  
  Retourne la valeur de cosinus de _X  
   
-##  <a name="a-namesinha--sinh-function"></a><a name="sinh"></a>sinh (fonction)  
+##  <a name="sinh"></a>  sinh  
  Calcule la valeur du sinus hyperbolique de l’argument  
   
 ```  
@@ -916,7 +962,7 @@ inline float sinh(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur du sinus hyperbolique de l’argument  
   
-##  <a name="a-namesinhfa--sinhf-function"></a><a name="sinhf"></a>sinhf, fonction  
+##  <a name="sinhf"></a>sinhf  
  Calcule la valeur du sinus hyperbolique de l’argument  
   
 ```  
@@ -930,7 +976,7 @@ inline float sinhf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur du sinus hyperbolique de l’argument  
   
-##  <a name="a-namesqrta--sqrt-function"></a><a name="sqrt"></a>SQRT (fonction)  
+##  <a name="sqrt"></a>  sqrt  
  Calcule la racine squre de l’argument  
   
 ```  
@@ -944,7 +990,7 @@ inline float sqrt(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la racine squre de l’argument  
   
-##  <a name="a-namesqrtfa--sqrtf-function"></a><a name="sqrtf"></a>sqrtf, fonction  
+##  <a name="sqrtf"></a>sqrtf  
  Calcule la racine squre de l’argument  
   
 ```  
@@ -958,7 +1004,7 @@ inline float sqrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la racine squre de l’argument  
   
-##  <a name="a-nametana--tan-function"></a><a name="tan"></a>tan (fonction)  
+##  <a name="tan"></a>  tan  
  Calcule la valeur de l’argument de tangente  
   
 ```  
@@ -972,7 +1018,7 @@ inline float tan(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de l’argument de tangente  
   
-##  <a name="a-nametanfa--tanf-function"></a><a name="tanf"></a>tanf, fonction  
+##  <a name="tanf"></a>tanf  
  Calcule la valeur de l’argument de tangente  
   
 ```  
@@ -986,7 +1032,7 @@ inline float tanf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de l’argument de tangente  
   
-##  <a name="a-nametanha--tanh-function"></a><a name="tanh"></a>TANH, fonction  
+##  <a name="tanh"></a>  tanh  
  Calcule la valeur de la tangente hyperbolique de l’argument  
   
 ```  
@@ -1000,7 +1046,7 @@ inline float tanh(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de la tangente hyperbolique de l’argument  
   
-##  <a name="a-nametanhfa--tanhf-function"></a><a name="tanhf"></a>tanhf, fonction  
+##  <a name="tanhf"></a>tanhf  
  Calcule la valeur de la tangente hyperbolique de l’argument  
   
 ```  
@@ -1014,7 +1060,7 @@ inline float tanhf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de la tangente hyperbolique de l’argument  
   
-##  <a name="a-nametrunca--trunc-function"></a><a name="trunc"></a>trunc, fonction  
+##  <a name="trunc"></a>trunc  
  Tronque l’argument pour le composant entier  
   
 ```  
@@ -1028,7 +1074,7 @@ inline float trunc(float _X) restrict(amp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la partie entière de l’argument  
   
-##  <a name="a-nametruncfa--truncf-function"></a><a name="truncf"></a>truncf, fonction  
+##  <a name="truncf"></a>truncf  
  Tronque l’argument pour le composant entier  
   
 ```  
@@ -1041,7 +1087,10 @@ inline float truncf(float _X) restrict(amp);
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la partie entière de l’argument  
+
+## <a name="requirements"></a>Spécifications
+**En-tête :** amp_math.h **Namespace :** Concurrency::fast_math
   
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::fast_math Namespace](concurrency-fast-math-namespace.md)
+ [Concurrency::fast_math, espace de noms](concurrency-fast-math-namespace.md)
 

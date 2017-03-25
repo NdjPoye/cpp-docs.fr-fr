@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::ScheduleGroup
+- ScheduleGroup
+- CONCRT/concurrency::ScheduleGroup
+- CONCRT/concurrency::ScheduleGroup::Id
+- CONCRT/concurrency::ScheduleGroup::Reference
+- CONCRT/concurrency::ScheduleGroup::Release
+- CONCRT/concurrency::ScheduleGroup::ScheduleTask
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 424b2f53f39bce57c85e44f0df54928acdac399a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: dc7a78fd135d56e1243c43672172e433652e34e2
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup, classe
@@ -60,10 +65,10 @@ class ScheduleGroup;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[ID (méthode)](#id)|Retourne un identificateur pour le groupe de planification qui est unique dans le planificateur auquel le groupe appartient.|  
-|[Reference (méthode)](#reference)|Incrémente le décompte de références de groupe de planification.|  
-|[Release (méthode)](#release)|Décrémente le planificateur groupe décompte de références.|  
-|[ScheduleTask (méthode)](#scheduletask)|Planifie une tâche légère dans le groupe de planification.|  
+|[ID](#id)|Retourne un identificateur pour le groupe de planification qui est unique dans le planificateur auquel le groupe appartient.|  
+|[Référence](#reference)|Incrémente le décompte de références de groupe de planification.|  
+|[Version release](#release)|Décrémente le planificateur groupe décompte de références.|  
+|[ScheduleTask](#scheduletask)|Planifie une tâche légère dans le groupe de planification.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `ScheduleGroup`  
@@ -73,7 +78,7 @@ class ScheduleGroup;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>ID 
+##  <a name="id"></a>ID 
 
  Retourne un identificateur pour le groupe de planification qui est unique dans le planificateur auquel le groupe appartient.  
   
@@ -84,7 +89,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Identificateur du groupe de planification qui est unique dans le planificateur auquel le groupe appartient.  
   
-##  <a name="a-nameoperatordeletea-operator-delete"></a><a name="operator_delete"></a>opérateur delete 
+##  <a name="operator_delete"></a>opérateur delete 
 
  Un `ScheduleGroup` est détruit en interne par le runtime lorsque toutes les références externes sont disponibles. Il ne peut pas être supprimé explicitement.  
   
@@ -103,7 +108,7 @@ void operator delete(
  `_PObject`  
  Pointeur vers l’objet à supprimer.  
   
-##  <a name="a-namereferencea-reference"></a><a name="reference"></a>Référence 
+##  <a name="reference"></a>Référence 
 
  Incrémente le décompte de références de groupe de planification.  
   
@@ -114,10 +119,10 @@ virtual unsigned int Reference() = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Le décompte de références incrémenté récemment.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cela est généralement utilisé pour gérer la durée de vie du groupe de planification pour la composition. Lorsque le décompte de références d’un groupe de planification atteint zéro, le groupe de planification est supprimé par le runtime. Un groupe de planification créé à l’aide du [CurrentScheduler::CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) (méthode), ou le [Scheduler::CreateScheduleGroup](scheduler-class.md#createschedulegroup) méthode commence avec un décompte de références d’un.  
   
-##  <a name="a-namereleasea-release"></a><a name="release"></a>Version 
+##  <a name="release"></a>Version 
 
  Décrémente le planificateur groupe décompte de références.  
   
@@ -128,18 +133,18 @@ virtual unsigned int Release() = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Le décompte de références décrémenté récemment.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cela est généralement utilisé pour gérer la durée de vie du groupe de planification pour la composition. Lorsque le décompte de références d’un groupe de planification atteint zéro, le groupe de planification est supprimé par le runtime. Après avoir appelé la `Release` méthode le nombre spécifique de fois pour supprimer la création de référence count et toutes les références supplémentaires placées à l’aide de la `Reference` (méthode), vous ne pouvez pas utiliser le groupe de planification. Cela entraînerait un comportement non défini.  
   
  Un groupe de planification est associé à une instance de planificateur spécifique. Vous devez vous assurer que toutes les références au groupe de planification sont libérées avant toutes les références au planificateur, car ce dernier pourrait entraîner la destruction du planificateur. Cela entraîne un comportement dans le cas contraire.  
   
-##  <a name="a-namedtora-schedulegroup"></a><a name="dtor"></a>~ ScheduleGroup 
+##  <a name="dtor"></a>~ ScheduleGroup 
 
 ```
 virtual ~ScheduleGroup();
 ```  
   
-##  <a name="a-namescheduletaska-scheduletask"></a><a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a>ScheduleTask 
 
  Planifie une tâche légère dans le groupe de planification.  
   

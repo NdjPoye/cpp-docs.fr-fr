@@ -51,9 +51,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: cb8cd58e4e7cf0318b8826cf473739e26e730273
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: f9e63f47a8df69b52a6a12688e84602981d20dae
+ms.openlocfilehash: a5b104e4ad0a0b9ce1933e7d8057f4d0fae46b77
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo (classe)
@@ -83,8 +83,8 @@ class CCommandLineInfo : public CObject
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|Indique la ligne de commande **/Automation** option a été trouvée.|  
-|[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|Indique la ligne de commande **/Embedding** option a été trouvée.|  
+|[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|Indique la ligne de commande `/Automation` option a été trouvée.|  
+|[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|Indique la ligne de commande `/Embedding` option a été trouvée.|  
 |[CCommandLineInfo::m_bShowSplash](#m_bshowsplash)|Indique si un écran de démarrage doit être indiqué.|  
 |[CCommandLineInfo::m_nShellCommand](#m_nshellcommand)|Indique la commande shell à traiter.|  
 |[CCommandLineInfo::m_strDriverName](#m_strdrivername)|Indique le pilote de nom si la commande shell doit imprimer ; vide dans le cas contraire.|  
@@ -102,13 +102,13 @@ class CCommandLineInfo : public CObject
 |----------------------------|----------------------|  
 |*app*|Nouveau fichier.|  
 |*application* nom de fichier|Ouvrir le fichier.|  
-|*application* **/p** nom de fichier|Fichier d’impression à l’imprimante par défaut.|  
-|*application* **/pt** port de pilote d’imprimante nom de fichier|Fichier d’impression pour l’imprimante spécifiée.|  
-|*app* **/dde**|Démarrez et await commande DDE.|  
-|*application* **/Automation**|Démarrer comme serveur OLE automation.|  
-|*application* **/Embedding**|Démarrage à modifier un élément OLE incorporé.|  
-|*application*  ** /enregistrer**<br /><br /> *application* **/Regserver**|Informe l’application pour effectuer les tâches d’enregistrement.|  
-|*application* **/ annuler l’inscription**<br /><br /> *application* **/Unregserver**|Informe l’application pour exécuter des tâches de l’annulation de l’inscription.|  
+|*application* `/p` nom de fichier|Fichier d’impression à l’imprimante par défaut.|  
+|*application* `/pt` port de pilote d’imprimante nom de fichier|Fichier d’impression pour l’imprimante spécifiée.|  
+|*app*`/dde`|Démarrez et await commande DDE.|  
+|*app*`/Automation`|Démarrer comme serveur OLE automation.|  
+|*app*`/Embedding`|Démarrage à modifier un élément OLE incorporé.|  
+|*app*`/Register`<br /><br /> *app*`/Regserver`|Informe l’application pour effectuer les tâches d’enregistrement.|  
+|*app*`/Unregister`<br /><br /> *app*`/Unregserver`|Informe l’application pour exécuter des tâches de l’annulation de l’inscription.|  
   
  Dérivez une nouvelle classe à partir de `CCommandLineInfo` pour gérer les autres indicateurs et les valeurs de paramètre. Substituer [ParseParam](#parseparam) pour gérer les nouveaux indicateurs.  
   
@@ -128,7 +128,7 @@ CCommandLineInfo();
 ```  
   
 ### <a name="remarks"></a>Notes  
- La valeur par défaut consiste à afficher l’écran de démarrage ( `m_bShowSplash` **= TRUE**) et d’exécuter la commande Nouveau dans le menu fichier ( `m_nShellCommand` **= NewFile**).  
+ La valeur par défaut consiste à afficher l’écran de démarrage ( `m_bShowSplash=TRUE`) et d’exécuter la commande Nouveau dans le menu fichier ( `m_nShellCommand` **= NewFile**).  
   
  L’infrastructure d’application appelle [ParseParam](#parseparam) pour remplir les membres de données de cet objet.  
   
@@ -136,24 +136,24 @@ CCommandLineInfo();
  [!code-cpp[NVC_MFCDocView&#54;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
 ##  <a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
- Indique que le **/Automation** indicateur a été trouvé sur la ligne de commande.  
+ Indique que le `/Automation` indicateur a été trouvé sur la ligne de commande.  
   
 ```  
 BOOL m_bRunAutomated;  
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Si **TRUE**, cela signifie que de démarrer comme serveur OLE automation.  
+ Si `TRUE`, cela signifie que de démarrer comme serveur OLE automation.  
   
 ##  <a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
- Indique que le **/Embedding** indicateur a été trouvé sur la ligne de commande.  
+ Indique que le `/Embedding` indicateur a été trouvé sur la ligne de commande.  
   
 ```  
 BOOL m_bRunEmbedded;  
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Si **TRUE**, cela signifie que de démarrer pour la modification d’un élément OLE incorporé.  
+ Si `TRUE`, cela signifie que de démarrer pour la modification d’un élément OLE incorporé.  
   
 ##  <a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
  Indique que l’écran de démarrage doit être affiché.  
@@ -163,7 +163,7 @@ BOOL m_bShowSplash;
 ```  
   
 ### <a name="remarks"></a>Notes  
- Si **TRUE**, cela signifie que l’écran de démarrage pour cette application doit être affichée lors du démarrage. L’implémentation par défaut de [ParseParam](#parseparam) définit ce membre de données **TRUE** si [m_nShellCommand](#m_nshellcommand) est égal à **CCommandLineInfo::FileNew**.  
+ Si `TRUE`, cela signifie que l’écran de démarrage pour cette application doit être affichée lors du démarrage. L’implémentation par défaut de [ParseParam](#parseparam) définit ce membre de données `TRUE` si [m_nShellCommand](#m_nshellcommand) est égal à `CCommandLineInfo::FileNew`.  
   
 ##  <a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
  Indique la commande d’environnement pour cette instance de l’application.  
@@ -227,8 +227,8 @@ m_nShellCommand;
 CString m_strDriverName;  
 ```  
   
-### <a name="remarks"></a>Remarques  
- Ce paramètre est généralement le nom du pilote d’imprimante pour une commande shell à imprimer. L’implémentation par défaut de [ParseParam](#parseparam) définit ce membre de données uniquement si la **/pt** indicateur a été trouvé sur la ligne de commande.  
+### <a name="remarks"></a>Notes  
+ Ce paramètre est généralement le nom du pilote d’imprimante pour une commande shell à imprimer. L’implémentation par défaut de [ParseParam](#parseparam) définit ce membre de données uniquement si la `/pt` indicateur a été trouvé sur la ligne de commande.  
   
 ##  <a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
  Stocke la valeur du premier paramètre sans indicateur sur la ligne de commande.  
@@ -247,8 +247,8 @@ CString m_strFileName;
 CString m_strPortName;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Ce paramètre est généralement le nom du port imprimante pour une commande shell à imprimer. L’implémentation par défaut de [ParseParam](#parseparam) définit ce membre de données uniquement si la **/pt** indicateur a été trouvé sur la ligne de commande.  
+### <a name="remarks"></a>Remarques  
+ Ce paramètre est généralement le nom du port imprimante pour une commande shell à imprimer. L’implémentation par défaut de [ParseParam](#parseparam) définit ce membre de données uniquement si la `/pt` indicateur a été trouvé sur la ligne de commande.  
   
 ##  <a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
  Stocke la valeur du second paramètre sans indicateur sur la ligne de commande.  
@@ -258,7 +258,7 @@ CString m_strPrinterName;
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Ce paramètre est généralement le nom de l’imprimante pour une commande shell à imprimer. L’implémentation par défaut de [ParseParam](#parseparam) définit ce membre de données uniquement si la **/pt** indicateur a été trouvé sur la ligne de commande.  
+ Ce paramètre est généralement le nom de l’imprimante pour une commande shell à imprimer. L’implémentation par défaut de [ParseParam](#parseparam) définit ce membre de données uniquement si la `/pt` indicateur a été trouvé sur la ligne de commande.  
   
 ##  <a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
  L’unique redémarrer l’identificateur de la ligne de commande.  
@@ -299,27 +299,27 @@ virtual void ParseParam(
  Indique si c’est le dernier paramètre ou indicateur sur la ligne de commande.  
   
 ### <a name="remarks"></a>Remarques  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) appelle `ParseParam` une fois pour chaque paramètre ou un indicateur sur la ligne de commande, en passant l’argument de `pszParam`. Si le premier caractère du paramètre est un « ** - **'ou' ** / **», puis il est supprimé et *bFlag* est défini sur **TRUE**. Lors de l’analyse le dernier paramètre, `bLast` a **TRUE**.  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) appelle `ParseParam` une fois pour chaque paramètre ou un indicateur sur la ligne de commande, en passant l’argument de `pszParam`. Si le premier caractère du paramètre est un « **-**'ou' **/**», puis il est supprimé et *bFlag* est défini sur `TRUE`. Lors de l’analyse le dernier paramètre, `bLast` est défini sur `TRUE`.  
   
- L’implémentation par défaut de cette fonction reconnaît les indicateurs suivants : **/p**, **/pt**, **/dde**, **/Automation**, et **/Embedding**, comme indiqué dans le tableau suivant :  
+ L’implémentation par défaut de cette fonction reconnaît les indicateurs suivants : `/p`, `/pt`, `/dde`, `/Automation`, et `/Embedding`, comme indiqué dans le tableau suivant :  
   
 |Argument de ligne de commande|Commande exécutée|  
 |----------------------------|----------------------|  
 |*app*|Nouveau fichier.|  
 |*application* nom de fichier|Ouvrir le fichier.|  
-|*application* **/p** nom de fichier|Fichier d’impression à l’imprimante par défaut.|  
-|*application* **/pt** port de pilote d’imprimante nom de fichier|Fichier d’impression pour l’imprimante spécifiée.|  
-|*app* **/dde**|Démarrez et await commande DDE.|  
-|*application* **/Automation**|Démarrer comme serveur OLE automation.|  
-|*application* **/Embedding**|Démarrage à modifier un élément OLE incorporé.|  
-|*application*  ** /enregistrer**<br /><br /> *application* **/Regserver**|Informe l’application pour effectuer les tâches d’enregistrement.|  
-|*application* **/ annuler l’inscription**<br /><br /> *application* **/Unregserver**|Informe l’application pour exécuter des tâches de l’annulation de l’inscription.|  
+|*application* `/p` nom de fichier|Fichier d’impression à l’imprimante par défaut.|  
+|*application* `/pt` port de pilote d’imprimante nom de fichier|Fichier d’impression pour l’imprimante spécifiée.|  
+|*app*`/dde`|Démarrez et await commande DDE.|  
+|*app*`/Automation`|Démarrer comme serveur OLE automation.|  
+|*app*`/Embedding`|Démarrage à modifier un élément OLE incorporé.|  
+|*app*`/Register`<br /><br /> *app*`/Regserver`|Informe l’application pour effectuer les tâches d’enregistrement.|  
+|*app*`/Unregister`<br /><br /> *app*`/Unregserver`|Informe l’application pour exécuter des tâches de l’annulation de l’inscription.|  
   
- Ces informations sont stockées dans [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), et [m_nShellCommand](#m_nshellcommand). Les indicateurs sont marqués par soit une barre oblique « ** / **'ou un trait d’union' ** - **».  
+ Ces informations sont stockées dans [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), et [m_nShellCommand](#m_nshellcommand). Les indicateurs sont marqués par soit une barre oblique « **/**'ou un trait d’union' **-**».  
   
- L’implémentation par défaut place le premier paramètre sans indicateur dans [m_strFileName](#m_strfilename). Dans le cas de la **imprimé** indicateur, l’implémentation par défaut place les deuxième, troisième et quatrième paramètres sans indicateur en [m_strPrinterName](#m_strprintername), [m_strDriverName](#m_strdrivername), et [m_strPortName](#m_strportname), respectivement.  
+ L’implémentation par défaut place le premier paramètre sans indicateur dans [m_strFileName](#m_strfilename). Dans le cas de la `/pt` indicateur, l’implémentation par défaut place les deuxième, troisième et quatrième paramètres sans indicateur en [m_strPrinterName](#m_strprintername), [m_strDriverName](#m_strdrivername), et [m_strPortName](#m_strportname), respectivement.  
   
- L’implémentation par défaut définit également [m_bShowSplash](#m_bshowsplash) à **TRUE** uniquement dans le cas d’un nouveau fichier. Dans le cas d’un nouveau fichier, l’utilisateur a pris les mesures impliquant l’application elle-même. Dans tous les autres cas, y compris l’ouverture de fichiers existants à l’aide de l’interpréteur de commandes, l’action de l’utilisateur implique le fichier directement. Dans un point de vue centré sur les documents, l’écran de démarrage n’a pas besoin d’annoncer l’application de démarrage.  
+ L’implémentation par défaut définit également [m_bShowSplash](#m_bshowsplash) à `TRUE` uniquement dans le cas d’un nouveau fichier. Dans le cas d’un nouveau fichier, l’utilisateur a pris les mesures impliquant l’application elle-même. Dans tous les autres cas, y compris l’ouverture de fichiers existants à l’aide de l’interpréteur de commandes, l’action de l’utilisateur implique le fichier directement. Dans un point de vue centré sur les documents, l’écran de démarrage n’a pas besoin d’annoncer l’application de démarrage.  
   
  Remplacez cette fonction dans votre classe dérivée pour gérer les autres valeurs d’indicateur et des paramètres.  
   

@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::ISchedulerProxy
+- ISchedulerProxy
+- CONCRTRM/concurrency::ISchedulerProxy
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::BindContext
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::CreateOversubscriber
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::RequestInitialVirtualProcessors
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::Shutdown
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::SubscribeCurrentThread
+- CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::UnbindContext
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: a282e397186ee4ab3eda4f882b9c9fc89ff353f2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 3dd95150022ad94f50b456c84f7dacd2d3cef7c5
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy, structure
@@ -54,14 +61,14 @@ struct ISchedulerProxy;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[ISchedulerProxy::BindContext, méthode](#bindcontext)|Associe un contexte d’exécution à un proxy de thread, si elle ne l’est pas déjà.|  
-|[ISchedulerProxy::CreateOversubscriber, méthode](#createoversubscriber)|Crée une nouvelle racine de processeur virtuel sur le thread matériel associé à une ressource d’exécution existante.|  
-|[ISchedulerProxy::RequestInitialVirtualProcessors, méthode](#requestinitialvirtualprocessors)|Demande une allocation initiale de racines de processeur virtuel. Chaque racine de processeur virtuel représente la capacité à exécuter un thread qui peut exécuter un travail pour le planificateur.|  
-|[ISchedulerProxy::Shutdown, méthode](#shutdown)|Notifie le Gestionnaire de ressources que le planificateur s’arrête. Cela entraîne le Gestionnaire de ressources à récupérer immédiatement toutes les ressources accordées au planificateur.|  
-|[ISchedulerProxy::SubscribeCurrentThread, méthode](#subscribecurrentthread)|Inscrit le thread actuel avec le Gestionnaire de ressources, associant à ce planificateur.|  
-|[ISchedulerProxy::UnbindContext, méthode](#unbindcontext)|Dissocie un proxy de thread du contexte d’exécution spécifié par le `pContext` paramètre et le retourne au pool libre de la fabrique de proxys de thread. Cette méthode peut être appelée uniquement dans un contexte d’exécution qui a été lié via la [ISchedulerProxy::BindContext](#bindcontext) (méthode) et n’a pas encore été démarré en étant le `pContext` paramètre d’une [IThreadProxy::SwitchTo](ithreadproxy-structure.md#switchto) appel de méthode.|  
+|[ISchedulerProxy::BindContext](#bindcontext)|Associe un contexte d’exécution à un proxy de thread, si elle ne l’est pas déjà.|  
+|[ISchedulerProxy::CreateOversubscriber](#createoversubscriber)|Crée une nouvelle racine de processeur virtuel sur le thread matériel associé à une ressource d’exécution existante.|  
+|[ISchedulerProxy::RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|Demande une allocation initiale de racines de processeur virtuel. Chaque racine de processeur virtuel représente la capacité à exécuter un thread qui peut exécuter un travail pour le planificateur.|  
+|[ISchedulerProxy::Shutdown](#shutdown)|Notifie le Gestionnaire de ressources que le planificateur s’arrête. Cela entraîne le Gestionnaire de ressources à récupérer immédiatement toutes les ressources accordées au planificateur.|  
+|[ISchedulerProxy::SubscribeCurrentThread](#subscribecurrentthread)|Inscrit le thread actuel avec le Gestionnaire de ressources, associant à ce planificateur.|  
+|[ISchedulerProxy::UnbindContext](#unbindcontext)|Dissocie un proxy de thread du contexte d’exécution spécifié par le `pContext` paramètre et le retourne au pool libre de la fabrique de proxys de thread. Cette méthode peut être appelée uniquement dans un contexte d’exécution qui a été lié via la [ISchedulerProxy::BindContext](#bindcontext) (méthode) et n’a pas encore été démarré en étant le `pContext` paramètre d’une [IThreadProxy::SwitchTo](ithreadproxy-structure.md#switchto) appel de méthode.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le Gestionnaire des ressources donne une `ISchedulerProxy` interface à chaque planificateur qui s’enregistre à l’aide de la [IResourceManager::RegisterScheduler](iresourcemanager-structure.md#registerscheduler) méthode.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
@@ -72,7 +79,7 @@ struct ISchedulerProxy;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-namebindcontexta--ischedulerproxybindcontext-method"></a><a name="bindcontext"></a>ISchedulerProxy::BindContext, méthode  
+##  <a name="bindcontext"></a>ISchedulerProxy::BindContext, méthode  
  Associe un contexte d’exécution à un proxy de thread, si elle ne l’est pas déjà.  
   
 ```
@@ -88,7 +95,7 @@ virtual void BindContext(_Inout_ IExecutionContext* pContext) = 0;
   
  `invalid_argument`est levé si le paramètre `pContext` a la valeur `NULL`.  
   
-##  <a name="a-namecreateoversubscribera--ischedulerproxycreateoversubscriber-method"></a><a name="createoversubscriber"></a>ISchedulerProxy::CreateOversubscriber, méthode  
+##  <a name="createoversubscriber"></a>ISchedulerProxy::CreateOversubscriber, méthode  
  Crée une nouvelle racine de processeur virtuel sur le thread matériel associé à une ressource d’exécution existante.  
   
 ```
@@ -107,7 +114,7 @@ virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* 
   
  Vous pouvez même surabonner une racine de processeur virtuel existante, car le `IVirtualProcessorRoot` interface hérite de la `IExecutionResource` interface.  
   
-##  <a name="a-namerequestinitialvirtualprocessorsa--ischedulerproxyrequestinitialvirtualprocessors-method"></a><a name="requestinitialvirtualprocessors"></a>ISchedulerProxy::RequestInitialVirtualProcessors, méthode  
+##  <a name="requestinitialvirtualprocessors"></a>ISchedulerProxy::RequestInitialVirtualProcessors, méthode  
  Demande une allocation initiale de racines de processeur virtuel. Chaque racine de processeur virtuel représente la capacité à exécuter un thread qui peut exécuter un travail pour le planificateur.  
   
 ```
@@ -132,21 +139,21 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
   
  L’acte d’abonnement d’un thread est incrémenté du niveau d’abonnement du thread matériel sous-jacent. Le niveau d’abonnement est diminué d’une unité lorsque l’abonnement est terminé. Pour plus d’informations sur les niveaux d’abonnement, consultez [IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="a-nameshutdowna--ischedulerproxyshutdown-method"></a><a name="shutdown"></a>ISchedulerProxy::Shutdown, méthode  
+##  <a name="shutdown"></a>ISchedulerProxy::Shutdown, méthode  
  Notifie le Gestionnaire de ressources que le planificateur s’arrête. Cela entraîne le Gestionnaire de ressources à récupérer immédiatement toutes les ressources accordées au planificateur.  
   
 ```
 virtual void Shutdown() = 0;
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Tous les `IExecutionContext` le planificateur a reçues en souscrivant un thread externe à l’aide des méthodes des interfaces `ISchedulerProxy::RequestInitialVirtualProcessors` ou `ISchedulerProxy::SubscribeCurrentThread` doit être renvoyé au Gestionnaire de ressources à l’aide de `IExecutionResource::Remove` avant un planificateur s’arrête.  
   
  Si votre planificateur une désactivation des racines de processeur virtuel, vous devez les activer à l’aide de [IVirtualProcessorRoot::Activate](ivirtualprocessorroot-structure.md#activate)et les proxys de thread exécutant leur laisser le `Dispatch` méthode contextes d’exécution qu’ils sont la distribution avant d’appeler `Shutdown` sur un proxy de planificateur.  
   
  Il n’est pas nécessaire pour le Planificateur de retourner toutes les racines de processeur virtuel du Gestionnaire de ressources lui a accordées via des appels à la `Remove` méthode parce que toutes les racines de processeur virtuel seront retournés pour le Gestionnaire de ressources lors de l’arrêt.  
   
-##  <a name="a-namesubscribecurrentthreada--ischedulerproxysubscribecurrentthread-method"></a><a name="subscribecurrentthread"></a>ISchedulerProxy::SubscribeCurrentThread, méthode  
+##  <a name="subscribecurrentthread"></a>ISchedulerProxy::SubscribeCurrentThread, méthode  
  Inscrit le thread actuel avec le Gestionnaire de ressources, associant à ce planificateur.  
   
 ```
@@ -163,7 +170,7 @@ virtual IExecutionResource* SubscribeCurrentThread() = 0;
   
  L’acte d’abonnement d’un thread est incrémenté du niveau d’abonnement du thread matériel sous-jacent. Le niveau d’abonnement est diminué d’une unité lorsque l’abonnement est terminé. Pour plus d’informations sur les niveaux d’abonnement, consultez [IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="a-nameunbindcontexta--ischedulerproxyunbindcontext-method"></a><a name="unbindcontext"></a>ISchedulerProxy::UnbindContext, méthode  
+##  <a name="unbindcontext"></a>ISchedulerProxy::UnbindContext, méthode  
  Dissocie un proxy de thread du contexte d’exécution spécifié par le `pContext` paramètre et le retourne au pool libre de la fabrique de proxys de thread. Cette méthode peut être appelée uniquement dans un contexte d’exécution qui a été lié via la [ISchedulerProxy::BindContext](#bindcontext) (méthode) et n’a pas encore été démarré en étant le `pContext` paramètre d’une [IThreadProxy::SwitchTo](ithreadproxy-structure.md#switchto) appel de méthode.  
   
 ```
@@ -179,5 +186,5 @@ virtual void UnbindContext(_Inout_ IExecutionContext* pContext) = 0;
  [IScheduler (Structure)](ischeduler-structure.md)   
  [IThreadProxy (Structure)](ithreadproxy-structure.md)   
  [IVirtualProcessorRoot (Structure)](ivirtualprocessorroot-structure.md)   
- [IResourceManager (Structure)](iresourcemanager-structure.md)
+ [IResourceManager, structure](iresourcemanager-structure.md)
 

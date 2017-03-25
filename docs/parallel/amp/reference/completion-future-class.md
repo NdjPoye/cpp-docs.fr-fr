@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amprt/Concurrency::completion_future
+- completion_future
+- AMPRT/completion_future
+- AMPRT/Concurrency::completion_future::completion_future
+- AMPRT/Concurrency::completion_future::get
+- AMPRT/Concurrency::completion_future::then
+- AMPRT/Concurrency::completion_future::to_task
+- AMPRT/Concurrency::completion_future::valid
+- AMPRT/Concurrency::completion_future::wait
+- AMPRT/Concurrency::completion_future::wait_for
+- AMPRT/Concurrency::completion_future::wait_until
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
@@ -32,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: a9a77c3cf3c183021b70789b0e17a6b8ad8d786c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 1c6d8e880fbdb784b22b1e9c879473efa7bc9802
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="completionfuture-class"></a>completion_future, classe
@@ -59,20 +68,20 @@ class completion_future;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Get (méthode)](#get)|Attend que l’opération asynchrone terminée.|  
-|[Then (méthode)](#then)|Est lié à un objet de fonction de rappel à le `completion_future` objet à exécuter lorsque l’opération asynchrone associée termine son exécution.|  
-|[to_task (méthode)](#to_task)|Retourne un `task` objet correspondant à l’opération asynchrone associée.|  
-|[Méthode valide](#valid)|Obtient une valeur booléenne qui indique si l’objet est associé à une opération asynchrone.|  
-|[Wait (méthode)](#wait)|Bloque jusqu'à ce que l’opération asynchrone terminée.|  
-|[wait_for (méthode)](#wait_for)|Bloque jusqu'à ce que l’opération asynchrone terminée ou que la durée spécifiée par `_Rel_time` est écoulé.|  
-|[wait_until (méthode)](#wait_until)|Bloque jusqu'à ce que l’opération asynchrone terminée ou jusqu'à ce que l’heure actuelle dépasse la valeur spécifiée par `_Abs_time`.|  
+|[get](#get)|Attend que l’opération asynchrone terminée.|  
+|[puis](#then)|Est lié à un objet de fonction de rappel à le `completion_future` objet à exécuter lorsque l’opération asynchrone associée termine son exécution.|  
+|[to_task](#to_task)|Retourne un `task` objet correspondant à l’opération asynchrone associée.|  
+|[valide](#valid)|Obtient une valeur booléenne qui indique si l’objet est associé à une opération asynchrone.|  
+|[attente](#wait)|Bloque jusqu'à ce que l’opération asynchrone terminée.|  
+|[wait_for](#wait_for)|Bloque jusqu'à ce que l’opération asynchrone terminée ou que la durée spécifiée par `_Rel_time` est écoulé.|  
+|[wait_until](#wait_until)|Bloque jusqu'à ce que l’opération asynchrone terminée ou jusqu'à ce que l’heure actuelle dépasse la valeur spécifiée par `_Abs_time`.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[opérateur std::shared_future\<void > (opérateur)](#operator_shared_future)|Convertit implicitement la `completion_future` de l’objet à un `std::shared_future` objet.|  
-|[opérateur =, opérateur](#operator_eq)|Copie le contenu de l’objet `completion_future` objet dans celui-ci.|  
+|[opérateur std::shared_future\<void >](#operator_shared_future)|Convertit implicitement la `completion_future` de l’objet à un `std::shared_future` objet.|  
+|[operator=](#operator_eq)|Copie le contenu de l’objet `completion_future` objet dans celui-ci.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `completion_future`  
@@ -83,7 +92,7 @@ class completion_future;
  **Espace de noms :** concurrency  
 
 
-## <a name="a-namectora-completionfuture"></a><a name="ctor"></a>completion_future 
+## <a name="ctor"></a>completion_future 
 
 Initialise une nouvelle instance de la classe `completion_future`.  
   
@@ -111,7 +120,7 @@ completion_future(
 |`completion_future(const completion_future& _Other);`|Initialise une nouvelle instance de la `completion_future` classe par un constructeur de copie.|  
 |`completion_future(completion_future&& _Other);`|Initialise une nouvelle instance de la `completion_future` classe en déplaçant un constructeur.|  
   
-## <a name="a-namegeta-get"></a><a name="get"></a>Télécharger 
+## <a name="get"></a>Télécharger 
 
 Attend que l’opération asynchrone terminée. Lève l’exception stockée si une s’est produite lors de l’opération asynchrone.  
   
@@ -121,7 +130,7 @@ Attend que l’opération asynchrone terminée. Lève l’exception stockée si 
 void get() const;  
 ```  
   
-## <a name="a-nameoperatorsharedfuturea-operator-stdsharedfuturevoid"></a><a name="operator_shared_future"></a>opérateur std::shared_future<void> 
+## <a name="operator_shared_future"></a>opérateur std::shared_future<void> 
 
 Convertit implicitement la `completion_future` de l’objet à un `std::shared_future` objet.  
   
@@ -134,7 +143,7 @@ operator std::shared_future<void>() const;
 ### <a name="return-value"></a>Valeur de retour  
  Objet `std::shared_future`.  
   
-## <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>opérateur = 
+## <a name="operator_eq"></a>opérateur = 
 
 Copie le contenu de l’objet `completion_future` objet dans celui-ci.  
   
@@ -159,7 +168,7 @@ completion_future&  operator= (completion_future&& _Other );
 |`completion_future& operator=(const completion_future& _Other);`|Copie le contenu de l’objet `completion_future` objet dans celui-ci, à l’aide d’une copie complète.|  
 |`completion_future& operator=(completion_future&& _Other);`|Copie le contenu de l’objet `completion_future` objet dans celui-ci, à l’aide d’une assignation de déplacement.|  
   
-## <a name="a-namethena-then"></a><a name="then"></a>puis 
+## <a name="then"></a>puis 
 
 Est lié à un objet de fonction de rappel à le `completion_future` objet à exécuter lorsque l’opération asynchrone associée termine son exécution.  
   
@@ -177,7 +186,7 @@ void then(const _Functor & _Func ) const;
  `_Func`  
  L’objet de fonction de rappel.  
   
-## <a name="a-nametotaska-totask"></a><a name="to_task"></a>to_task 
+## <a name="to_task"></a>to_task 
 
 Retourne un `task` objet correspondant à l’opération asynchrone associée.  
   
@@ -190,7 +199,7 @@ concurrency::task<void> to_task() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un `task` objet correspondant à l’opération asynchrone associée.  
   
-## <a name="a-namevalida-valid"></a><a name="valid"></a>valide 
+## <a name="valid"></a>valide 
 
 Obtient une valeur booléenne qui indique si l’objet est associé à une opération asynchrone.  
   
@@ -203,7 +212,7 @@ bool valid() const;
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si l’objet est associé à une opération asynchrone ; dans le cas contraire, `false`.  
   
-## <a name="a-namewaita-wait"></a><a name="wait"></a>attente 
+## <a name="wait"></a>attente 
 
 Bloque jusqu'à ce que l’opération asynchrone terminée.  
   
@@ -213,7 +222,7 @@ Bloque jusqu'à ce que l’opération asynchrone terminée.
 void wait() const;  
 ```  
   
-## <a name="a-namewaitfora-waitfor"></a><a name="wait_for"></a>wait_for 
+## <a name="wait_for"></a>wait_for 
 
 Bloque jusqu'à ce que l’opération asynchrone terminée ou l’heure spécifiée par `_Rel_time` est écoulé.  
   
@@ -247,7 +256,7 @@ std::future_status::future_status wait_for(
   
 -   `std::future_status::timeout`Si le laps de temps spécifié a expiré.  
   
-## <a name="a-namewaituntila-waituntil"></a><a name="wait_until"></a>wait_until 
+## <a name="wait_until"></a>wait_until 
 
 Bloque jusqu'à ce que l’opération asynchrone terminée ou jusqu'à ce que l’heure actuelle dépasse la valeur spécifiée par `_Abs_time`.  
   
@@ -281,7 +290,7 @@ std::future_status::future_status wait_until(
   
 3.  `std::future_status::timeout`Si la période de temps spécifié a expiré.  
   
-## <a name="a-namedtora-completionfuture"></a><a name="dtor"></a>~ completion_future 
+## <a name="dtor"></a>~ completion_future 
 
 Détruit le `completion_future` objet.  
   
@@ -292,5 +301,5 @@ Détruit le `completion_future` objet.
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accès concurrentiel Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

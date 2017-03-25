@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- pplcancellation_token/concurrency::cancellation_token
+- cancellation_token
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::cancellation_token
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::deregister_callback
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_cancelable
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_canceled
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::none
+- PPLCANCELLATION_TOKEN/concurrency::cancellation_token::register_callback
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 93d5abe132203a53f3ffac8490fe32604e7e896e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d17505a117c0affd8106afad9004e6ec86602a26
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token, classe
@@ -54,26 +61,26 @@ class cancellation_token;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[cancellation_token, constructeur](#ctor)||  
+|[cancellation_token](#ctor)||  
 |[~ cancellation_token, destructeur](#dtor)||  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[deregister_callback (méthode)](#deregister_callback)|Supprime un rappel précédemment enregistré à l'aide de la méthode `register` basée sur l'objet `cancellation_token_registration` retourné au moment de l'enregistrement.|  
-|[is_cancelable (méthode)](#is_cancelable)|Indique si ce jeton peut être annulé ou non.|  
-|[is_canceled (méthode)](#is_canceled)|Retourne `true` si le jeton a été annulé.|  
-|[None (méthode)](#none)|Retourne un jeton d'annulation qui ne pourra jamais faire l'objet d'une annulation.|  
-|[register_callback (méthode)](#register_callback)|Enregistre une fonction de rappel avec le jeton. Le rappel est effectué si et lorsque le jeton est annulé. Notez que si le jeton est déjà annulé lorsque cette méthode est appelée, le rappel est effectué immédiatement et de manière synchrone.|  
+|[deregister_callback](#deregister_callback)|Supprime un rappel précédemment enregistré à l'aide de la méthode `register` basée sur l'objet `cancellation_token_registration` retourné au moment de l'enregistrement.|  
+|[is_cancelable](#is_cancelable)|Indique si ce jeton peut être annulé ou non.|  
+|[is_canceled](#is_canceled)|Retourne `true` si le jeton a été annulé.|  
+|[none](#none)|Retourne un jeton d'annulation qui ne pourra jamais faire l'objet d'une annulation.|  
+|[register_callback](#register_callback)|Enregistre une fonction de rappel avec le jeton. Le rappel est effectué si et lorsque le jeton est annulé. Notez que si le jeton est déjà annulé lorsque cette méthode est appelée, le rappel est effectué immédiatement et de manière synchrone.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[opérateur ! =, opérateur](#operator_neq)||  
-|[opérateur =, opérateur](#operator_eq)||  
-|[opérateur ==, opérateur](#operator_eq_eq)||  
+|[operator!=](#operator_neq)||  
+|[operator=](#operator_eq)||  
+|[operator==](#operator_eq_eq)||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `cancellation_token`  
@@ -83,13 +90,13 @@ class cancellation_token;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-namedtora-cancellationtoken"></a><a name="dtor"></a>~ cancellation_token 
+##  <a name="dtor"></a>~ cancellation_token 
 
 ```
 ~cancellation_token();
 ```  
   
-##  <a name="a-namectora-cancellationtoken"></a><a name="ctor"></a>cancellation_token 
+##  <a name="ctor"></a>cancellation_token 
 
 ```
 cancellation_token(const cancellation_token& _Src);
@@ -100,7 +107,7 @@ cancellation_token(cancellation_token&& _Src);
 ### <a name="parameters"></a>Paramètres  
  `_Src`  
   
-##  <a name="a-namederegistercallbacka-deregistercallback"></a><a name="deregister_callback"></a>deregister_callback 
+##  <a name="deregister_callback"></a>deregister_callback 
 
  Supprime un rappel précédemment enregistré à l'aide de la méthode `register` basée sur l'objet `cancellation_token_registration` retourné au moment de l'enregistrement.  
   
@@ -112,7 +119,7 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
  `_Registration`  
  Objet `cancellation_token_registration` correspondant au rappel dont l'enregistrement doit être annulé. Ce jeton doit avoir été précédemment retourné par un appel à la méthode `register`.  
   
-##  <a name="a-nameiscancelablea-iscancelable"></a><a name="is_cancelable"></a>is_cancelable 
+##  <a name="is_cancelable"></a>is_cancelable 
 
  Indique si ce jeton peut être annulé ou non.  
   
@@ -123,7 +130,7 @@ bool is_cancelable() const;
 ### <a name="return-value"></a>Valeur de retour  
  Indique si ce jeton peut être annulé ou non.  
   
-##  <a name="a-nameiscanceleda-iscanceled"></a><a name="is_canceled"></a>is_canceled 
+##  <a name="is_canceled"></a>is_canceled 
 
  Retourne `true` si le jeton a été annulé.  
   
@@ -134,7 +141,7 @@ bool is_canceled() const;
 ### <a name="return-value"></a>Valeur de retour  
  `true` si le jeton a été annulé ; sinon `false`.  
   
-##  <a name="a-namenonea-none"></a><a name="none"></a>Aucun 
+##  <a name="none"></a>Aucun 
 
  Retourne un jeton d'annulation qui ne pourra jamais faire l'objet d'une annulation.  
   
@@ -145,7 +152,7 @@ static cancellation_token none();
 ### <a name="return-value"></a>Valeur de retour  
  Jeton d'annulation qui ne peut pas être annulé.  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>opérateur ! = 
+##  <a name="operator_neq"></a>opérateur ! = 
 
 ```
 bool operator!= (const cancellation_token& _Src) const;
@@ -156,7 +163,7 @@ bool operator!= (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>opérateur = 
+##  <a name="operator_eq"></a>opérateur = 
 
 ```
 cancellation_token& operator= (const cancellation_token& _Src);
@@ -169,7 +176,7 @@ cancellation_token& operator= (cancellation_token&& _Src);
   
 ### <a name="return-value"></a>Valeur de retour  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>opérateur == 
+##  <a name="operator_eq_eq"></a>opérateur == 
 
 ```
 bool operator== (const cancellation_token& _Src) const;
@@ -180,7 +187,7 @@ bool operator== (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>Valeur de retour  
   
-##  <a name="a-nameregistercallbacka-registercallback"></a><a name="register_callback"></a>register_callback 
+##  <a name="register_callback"></a>register_callback 
 
  Enregistre une fonction de rappel avec le jeton. Le rappel est effectué si et lorsque le jeton est annulé. Notez que si le jeton est déjà annulé lorsque cette méthode est appelée, le rappel est effectué immédiatement et de manière synchrone.  
   

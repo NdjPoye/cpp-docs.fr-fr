@@ -100,9 +100,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 038b3cafdbdc628fdff0bcf70db6575acabb17e1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d9a9b8eed7fcf46dee258c55471e79420666e043
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="int3-class"></a>int_3, classe
@@ -132,62 +132,62 @@ class int_3;
   
 |Nom|Description|  
 |----------|-----------------|  
-|int_3::get_X (méthode)||  
-|int_3::get_xy (méthode)||  
-|int_3::get_xyz (méthode)||  
-|int_3::get_xz (méthode)||  
-|int_3::get_xzy (méthode)||  
-|int_3::get_y (méthode)||  
-|int_3::get_yx (méthode)||  
-|int_3::get_yxz (méthode)||  
-|int_3::get_yz (méthode)||  
-|int_3::get_yzx (méthode)||  
-|int_3::get_z (méthode)||  
-|int_3::get_zx (méthode)||  
-|int_3::get_zxy (méthode)||  
-|int_3::get_zy (méthode)||  
-|int_3::get_zyx (méthode)||  
-|int_3::ref_b (méthode)||  
-|int_3::ref_g (méthode)||  
-|int_3::ref_r (méthode)||  
-|int_3::ref_x (méthode)||  
-|int_3::ref_y (méthode)||  
-|int_3::ref_z (méthode)||  
-|int_3::set_X (méthode)||  
-|int_3::set_xy (méthode)||  
-|int_3::set_xyz (méthode)||  
-|int_3::set_xz (méthode)||  
-|int_3::set_xzy (méthode)||  
-|int_3::set_y (méthode)||  
-|int_3::set_yx (méthode)||  
-|int_3::set_yxz (méthode)||  
-|int_3::set_yz (méthode)||  
-|int_3::set_yzx (méthode)||  
-|int_3::set_z (méthode)||  
-|int_3::set_zx (méthode)||  
-|int_3::set_zxy (méthode)||  
-|int_3::set_zy (méthode)||  
-|int_3::set_zyx (méthode)||  
+|int_3::get_X||  
+|int_3::get_xy||  
+|int_3::get_xyz||  
+|int_3::get_xz||  
+|int_3::get_xzy||  
+|int_3::get_y||  
+|int_3::get_yx||  
+|int_3::get_yxz||  
+|int_3::get_yz||  
+|int_3::get_yzx||  
+|int_3::get_z||  
+|int_3::get_zx||  
+|int_3::get_zxy||  
+|int_3::get_zy||  
+|int_3::get_zyx||  
+|int_3::ref_b||  
+|int_3::ref_g||  
+|int_3::ref_r||  
+|int_3::ref_x||  
+|int_3::ref_y||  
+|int_3::ref_z||  
+|int_3::set_X||  
+|int_3::set_xy||  
+|int_3::set_xyz||  
+|int_3::set_xz||  
+|int_3::set_xzy||  
+|int_3::set_y||  
+|int_3::set_yx||  
+|int_3::set_yxz||  
+|int_3::set_yz||  
+|int_3::set_yzx||  
+|int_3::set_z||  
+|int_3::set_zx||  
+|int_3::set_zxy||  
+|int_3::set_zy||  
+|int_3::set_zyx||  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|int_3::operator-(opérateur)||  
-|int_3::operator--(opérateur)||  
-|int_3::operator % =, opérateur||  
-|int_3::operator < =, opérateur||  
-|int_3::operator * =, opérateur||  
-|int_3::operator / =, opérateur||  
-|int_3::operator ^ =, opérateur||  
-|int_3::operator | =, opérateur||  
-|int_3::operator ~ (opérateur)||  
-|int_3::operator ++ (opérateur)||  
-|int_3::operator +=, opérateur||  
-|int_3::operator\<=, opérateur||  
-|int_3::operator =, opérateur||  
-|int_3::operator-= (opérateur)||  
-|int_3::operator >> =, opérateur||  
+|int_3::operator-||  
+|int_3::operator--||  
+|int_3::operator % =||  
+|int_3::operator < =||  
+|int_3::operator * =||  
+|/ = int_3::operator||  
+|int_3::operator ^ =||  
+|int_3::operator | =||  
+|int_3::operator ~||  
+|int_3::operator ++||  
+|int_3::operator +=||  
+|int_3::operator\<=||  
+|int_3::operator =||  
+|int_3::operator =||  
+|int_3::operator >> =||  
   
 ### <a name="public-constants"></a>Constantes publiques  
   
@@ -199,36 +199,36 @@ class int_3;
   
 |Nom|Description|  
 |----------|-----------------|  
-|Membre de données int_3::b||  
-|Membre de données int_3::BG||  
-|Membre de données int_3::BGR||  
-|Membre de données int_3::br||  
-|Membre de données int_3::brg||  
-|Membre de données int_3::g||  
-|Membre de données int_3::GB||  
-|Membre de données int_3::GBR||  
-|Membre de données int_3::GR||  
-|Membre de données int_3::grb||  
-|Membre de données int_3::r||  
-|Membre de données int_3::RB||  
-|Membre de données int_3::rbg||  
-|Membre de données int_3::RG||  
-|Membre de données int_3::RGB||  
-|Membre de données int_3::x||  
-|Membre de données int_3::XY||  
-|Membre de données int_3::XYZ||  
-|Membre de données int_3::XZ||  
-|Membre de données int_3::xzy||  
-|Membre de données int_3::y||  
-|Membre de données int_3::YX||  
-|Membre de données int_3::yxz||  
-|Membre de données int_3::YZ||  
-|Membre de données int_3::yzx||  
-|Membre de données int_3::z||  
-|Membre de données int_3::ZX||  
-|Membre de données int_3::zxy||  
-|Membre de données int_3::ZY||  
-|Membre de données int_3::ZYX||  
+|int_3::b||  
+|int_3::BG||  
+|int_3::BGR||  
+|int_3::br||  
+|int_3::brg||  
+|int_3::g||  
+|int_3::GB||  
+|int_3::GBR||  
+|int_3::GR||  
+|int_3::grb||  
+|int_3::r||  
+|int_3::RB||  
+|int_3::rbg||  
+|int_3::RG||  
+|int_3::RGB||  
+|int_3::x||  
+|int_3::XY||  
+|int_3::XYZ||  
+|int_3::XZ||  
+|int_3::xzy||  
+|int_3::y||  
+|int_3::YX||  
+|int_3::yxz||  
+|int_3::YZ||  
+|int_3::yzx||  
+|int_3::z||  
+|int_3::ZX||  
+|int_3::zxy||  
+|int_3::ZY||  
+|int_3::ZYX||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `int_3`  
@@ -238,7 +238,7 @@ class int_3;
   
  **Namespace :** Concurrency::graphics  
 
-## <a name="a-namectora-int3"></a><a name="ctor"></a>int_3 
+## <a name="ctor"></a>int_3 
 
 Par défaut constructeur initialise tous les éléments à 0.  
   
@@ -290,7 +290,7 @@ explicit inline int_3(
  `_Other`  
  Objet utilisé pour initialiser.  
   
-## <a name="a-namesizea-size"></a><a name="size"></a>taille 
+## <a name="size"></a>taille 
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -299,5 +299,5 @@ static const int size = 3;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
 

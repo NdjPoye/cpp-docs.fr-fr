@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::context_unblock_unbalanced
+- context_unblock_unbalanced
+- CONCRT/concurrency::context_unblock_unbalanced
+- CONCRT/concurrency::context_unblock_unbalanced::context_unblock_unbalanced
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7341ff5d10b7f7752c49f18ea9b810824e347b1c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 21c26658e347fa35209677e15ddcb48bbe8d1235
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced, classe
@@ -54,7 +56,7 @@ class context_unblock_unbalanced : public std::exception;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[context_unblock_unbalanced, constructeur](#ctor)|Surchargé. Construit un objet `context_unblock_unbalanced`.|  
+|[context_unblock_unbalanced](#ctor)|Surchargé. Construit un objet `context_unblock_unbalanced`.|  
   
 ## <a name="remarks"></a>Remarques  
  Les appels à la `Block` et `Unblock` méthodes d’un `Context` objet doit toujours être associé correctement. Le Runtime d’accès concurrentiel permet les opérations de se produire dans n’importe quel ordre. Par exemple, un appel à `Block` peut être suivie par un appel à `Unblock`, ou vice versa. Cette exception serait levée si, par exemple, deux appels à la `Unblock` méthode ont été effectuées dans une ligne, sur un `Context` objet qui n’a pas été bloqué.  
@@ -69,7 +71,7 @@ class context_unblock_unbalanced : public std::exception;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-namectora-contextunblockunbalanced"></a><a name="ctor"></a>context_unblock_unbalanced 
+##  <a name="ctor"></a>context_unblock_unbalanced 
 
  Construit un objet `context_unblock_unbalanced`.  
   

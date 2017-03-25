@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::missing_wait
+- missing_wait
+- CONCRT/concurrency::missing_wait
+- CONCRT/concurrency::missing_wait::missing_wait
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7d29294f4ddce571451a72bf637526e5af283cff
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 70b1c77660992b33de2204fd4f4221ed6e957e21
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="missingwait-class"></a>missing_wait, classe
@@ -54,7 +56,7 @@ class missing_wait : public std::exception;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[missing_wait, constructeur](#ctor)|Surchargé. Construit un objet `missing_wait`.|  
+|[missing_wait](#ctor)|Surchargé. Construit un objet `missing_wait`.|  
   
 ## <a name="remarks"></a>Remarques  
  Absence de flux d’exception, vous êtes chargé de l’appel du `wait` ou `run_and_wait` méthode d’un `task_group` ou `structured_task_group` objet avant d’autoriser la destruction de cet objet. Le runtime lève cette exception pour indiquer que vous avez oublié d’appeler le `wait` ou `run_and_wait` (méthode).  
@@ -69,7 +71,7 @@ class missing_wait : public std::exception;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-namectora-missingwait"></a><a name="ctor"></a>missing_wait 
+##  <a name="ctor"></a>missing_wait 
 
  Construit un objet `missing_wait`.  
   
@@ -86,7 +88,7 @@ missing_wait() throw();
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
  [task_group, classe](task-group-class.md)   
- [Wait (méthode)](task-group-class.md)   
- [run_and_wait (méthode)](task-group-class.md)   
+ [attente](task-group-class.md)   
+ [run_and_wait](task-group-class.md)   
  [structured_task_group, classe](structured-task-group-class.md)
 

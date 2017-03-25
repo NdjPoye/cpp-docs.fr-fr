@@ -296,9 +296,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c51dcda1f6e6986c6830aa154742d3a6f85a5230
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: c0cd118a5ce9f5ebec30e5d1ca7a8437d14f55ab
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="uint4-class"></a>uint_4, classe
@@ -329,155 +329,155 @@ class uint_4;
   
 |Nom|Description|  
 |----------|-----------------|  
-|uint_4::get_w (méthode)||  
-|uint_4::get_wx (méthode)||  
-|uint_4::get_wxy (méthode)||  
-|uint_4::get_wxyz (méthode)||  
-|uint_4::get_wxz (méthode)||  
-|uint_4::get_wxzy (méthode)||  
-|uint_4::get_wy (méthode)||  
-|uint_4::get_wyx (méthode)||  
-|uint_4::get_wyxz (méthode)||  
-|uint_4::get_wyz (méthode)||  
-|uint_4::get_wyzx (méthode)||  
-|uint_4::get_wz (méthode)||  
-|uint_4::get_wzx (méthode)||  
-|uint_4::get_wzxy (méthode)||  
-|uint_4::get_wzy (méthode)||  
-|uint_4::get_wzyx (méthode)||  
-|uint_4::get_X (méthode)||  
-|uint_4::get_xw (méthode)||  
-|uint_4::get_xwy (méthode)||  
-|uint_4::get_xwyz (méthode)||  
-|uint_4::get_xwz (méthode)||  
-|uint_4::get_xwzy (méthode)||  
-|uint_4::get_xy (méthode)||  
-|uint_4::get_xyw (méthode)||  
-|uint_4::get_xywz (méthode)||  
-|uint_4::get_xyz (méthode)||  
-|uint_4::get_xyzw (méthode)||  
-|uint_4::get_xz (méthode)||  
-|uint_4::get_xzw (méthode)||  
-|uint_4::get_xzwy (méthode)||  
-|uint_4::get_xzy (méthode)||  
-|uint_4::get_xzyw (méthode)||  
-|uint_4::get_y (méthode)||  
-|uint_4::get_yw (méthode)||  
-|uint_4::get_ywx (méthode)||  
-|uint_4::get_ywxz (méthode)||  
-|uint_4::get_ywz (méthode)||  
-|uint_4::get_ywzx (méthode)||  
-|uint_4::get_yx (méthode)||  
-|uint_4::get_yxw (méthode)||  
-|uint_4::get_yxwz (méthode)||  
-|uint_4::get_yxz (méthode)||  
-|uint_4::get_yxzw (méthode)||  
-|uint_4::get_yz (méthode)||  
-|uint_4::get_yzw (méthode)||  
-|uint_4::get_yzwx (méthode)||  
-|uint_4::get_yzx (méthode)||  
-|uint_4::get_yzxw (méthode)||  
-|uint_4::get_z (méthode)||  
-|uint_4::get_zw (méthode)||  
-|uint_4::get_zwx (méthode)||  
-|uint_4::get_zwxy (méthode)||  
-|uint_4::get_zwy (méthode)||  
-|uint_4::get_zwyx (méthode)||  
-|uint_4::get_zx (méthode)||  
-|uint_4::get_zxw (méthode)||  
-|uint_4::get_zxwy (méthode)||  
-|uint_4::get_zxy (méthode)||  
-|uint_4::get_zxyw (méthode)||  
-|uint_4::get_zy (méthode)||  
-|uint_4::get_zyw (méthode)||  
-|uint_4::get_zywx (méthode)||  
-|uint_4::get_zyx (méthode)||  
-|uint_4::get_zyxw (méthode)||  
-|uint_4::ref_a (méthode)||  
-|uint_4::ref_b (méthode)||  
-|uint_4::ref_g (méthode)||  
-|uint_4::ref_r (méthode)||  
-|uint_4::ref_w (méthode)||  
-|uint_4::ref_x (méthode)||  
-|uint_4::ref_y (méthode)||  
-|uint_4::ref_z (méthode)||  
-|uint_4::set_w (méthode)||  
-|uint_4::set_wx (méthode)||  
-|uint_4::set_wxy (méthode)||  
-|uint_4::set_wxyz (méthode)||  
-|uint_4::set_wxz (méthode)||  
-|uint_4::set_wxzy (méthode)||  
-|uint_4::set_wy (méthode)||  
-|uint_4::set_wyx (méthode)||  
-|uint_4::set_wyxz (méthode)||  
-|uint_4::set_wyz (méthode)||  
-|uint_4::set_wyzx (méthode)||  
-|uint_4::set_wz (méthode)||  
-|uint_4::set_wzx (méthode)||  
-|uint_4::set_wzxy (méthode)||  
-|uint_4::set_wzy (méthode)||  
-|uint_4::set_wzyx (méthode)||  
-|uint_4::set_X (méthode)||  
-|uint_4::set_xw (méthode)||  
-|uint_4::set_xwy (méthode)||  
-|uint_4::set_xwyz (méthode)||  
-|uint_4::set_xwz (méthode)||  
-|uint_4::set_xwzy (méthode)||  
-|uint_4::set_xy (méthode)||  
-|uint_4::set_xyw (méthode)||  
-|uint_4::set_xywz (méthode)||  
-|uint_4::set_xyz (méthode)||  
-|uint_4::set_xyzw (méthode)||  
-|uint_4::set_xz (méthode)||  
-|uint_4::set_xzw (méthode)||  
-|uint_4::set_xzwy (méthode)||  
-|uint_4::set_xzy (méthode)||  
-|uint_4::set_xzyw (méthode)||  
-|uint_4::set_y (méthode)||  
-|uint_4::set_yw (méthode)||  
-|uint_4::set_ywx (méthode)||  
-|uint_4::set_ywxz (méthode)||  
-|uint_4::set_ywz (méthode)||  
-|uint_4::set_ywzx (méthode)||  
-|uint_4::set_yx (méthode)||  
-|uint_4::set_yxw (méthode)||  
-|uint_4::set_yxwz (méthode)||  
-|uint_4::set_yxz (méthode)||  
-|uint_4::set_yxzw (méthode)||  
-|uint_4::set_yz (méthode)||  
-|uint_4::set_yzw (méthode)||  
-|uint_4::set_yzwx (méthode)||  
-|uint_4::set_yzx (méthode)||  
-|uint_4::set_yzxw (méthode)||  
-|uint_4::set_z (méthode)||  
-|uint_4::set_zw (méthode)||  
-|uint_4::set_zwx (méthode)||  
-|uint_4::set_zwxy (méthode)||  
-|uint_4::set_zwy (méthode)||  
-|uint_4::set_zwyx (méthode)||  
-|uint_4::set_zx (méthode)||  
-|uint_4::set_zxw (méthode)||  
-|uint_4::set_zxwy (méthode)||  
-|uint_4::set_zxy (méthode)||  
-|uint_4::set_zxyw (méthode)||  
-|uint_4::set_zy (méthode)||  
-|uint_4::set_zyw (méthode)||  
-|uint_4::set_zywx (méthode)||  
-|uint_4::set_zyx (méthode)||  
-|uint_4::set_zyxw (méthode)||  
+|uint_4::get_w||  
+|uint_4::get_wx||  
+|uint_4::get_wxy||  
+|uint_4::get_wxyz||  
+|uint_4::get_wxz||  
+|uint_4::get_wxzy||  
+|uint_4::get_wy||  
+|uint_4::get_wyx||  
+|uint_4::get_wyxz||  
+|uint_4::get_wyz||  
+|uint_4::get_wyzx||  
+|uint_4::get_wz||  
+|uint_4::get_wzx||  
+|uint_4::get_wzxy||  
+|uint_4::get_wzy||  
+|uint_4::get_wzyx||  
+|uint_4::get_X||  
+|uint_4::get_xw||  
+|uint_4::get_xwy||  
+|uint_4::get_xwyz||  
+|uint_4::get_xwz||  
+|uint_4::get_xwzy||  
+|uint_4::get_xy||  
+|uint_4::get_xyw||  
+|uint_4::get_xywz||  
+|uint_4::get_xyz||  
+|uint_4::get_xyzw||  
+|uint_4::get_xz||  
+|uint_4::get_xzw||  
+|uint_4::get_xzwy||  
+|uint_4::get_xzy||  
+|uint_4::get_xzyw||  
+|uint_4::get_y||  
+|uint_4::get_yw||  
+|uint_4::get_ywx||  
+|uint_4::get_ywxz||  
+|uint_4::get_ywz||  
+|uint_4::get_ywzx||  
+|uint_4::get_yx||  
+|uint_4::get_yxw||  
+|uint_4::get_yxwz||  
+|uint_4::get_yxz||  
+|uint_4::get_yxzw||  
+|uint_4::get_yz||  
+|uint_4::get_yzw||  
+|uint_4::get_yzwx||  
+|uint_4::get_yzx||  
+|uint_4::get_yzxw||  
+|uint_4::get_z||  
+|uint_4::get_zw||  
+|uint_4::get_zwx||  
+|uint_4::get_zwxy||  
+|uint_4::get_zwy||  
+|uint_4::get_zwyx||  
+|uint_4::get_zx||  
+|uint_4::get_zxw||  
+|uint_4::get_zxwy||  
+|uint_4::get_zxy||  
+|uint_4::get_zxyw||  
+|uint_4::get_zy||  
+|uint_4::get_zyw||  
+|uint_4::get_zywx||  
+|uint_4::get_zyx||  
+|uint_4::get_zyxw||  
+|uint_4::ref_a||  
+|uint_4::ref_b||  
+|uint_4::ref_g||  
+|uint_4::ref_r||  
+|uint_4::ref_w||  
+|uint_4::ref_x||  
+|uint_4::ref_y||  
+|uint_4::ref_z||  
+|uint_4::set_w||  
+|uint_4::set_wx||  
+|uint_4::set_wxy||  
+|uint_4::set_wxyz||  
+|uint_4::set_wxz||  
+|uint_4::set_wxzy||  
+|uint_4::set_wy||  
+|uint_4::set_wyx||  
+|uint_4::set_wyxz||  
+|uint_4::set_wyz||  
+|uint_4::set_wyzx||  
+|uint_4::set_wz||  
+|uint_4::set_wzx||  
+|uint_4::set_wzxy||  
+|uint_4::set_wzy||  
+|uint_4::set_wzyx||  
+|uint_4::set_X||  
+|uint_4::set_xw||  
+|uint_4::set_xwy||  
+|uint_4::set_xwyz||  
+|uint_4::set_xwz||  
+|uint_4::set_xwzy||  
+|uint_4::set_xy||  
+|uint_4::set_xyw||  
+|uint_4::set_xywz||  
+|uint_4::set_xyz||  
+|uint_4::set_xyzw||  
+|uint_4::set_xz||  
+|uint_4::set_xzw||  
+|uint_4::set_xzwy||  
+|uint_4::set_xzy||  
+|uint_4::set_xzyw||  
+|uint_4::set_y||  
+|uint_4::set_yw||  
+|uint_4::set_ywx||  
+|uint_4::set_ywxz||  
+|uint_4::set_ywz||  
+|uint_4::set_ywzx||  
+|uint_4::set_yx||  
+|uint_4::set_yxw||  
+|uint_4::set_yxwz||  
+|uint_4::set_yxz||  
+|uint_4::set_yxzw||  
+|uint_4::set_yz||  
+|uint_4::set_yzw||  
+|uint_4::set_yzwx||  
+|uint_4::set_yzx||  
+|uint_4::set_yzxw||  
+|uint_4::set_z||  
+|uint_4::set_zw||  
+|uint_4::set_zwx||  
+|uint_4::set_zwxy||  
+|uint_4::set_zwy||  
+|uint_4::set_zwyx||  
+|uint_4::set_zx||  
+|uint_4::set_zxw||  
+|uint_4::set_zxwy||  
+|uint_4::set_zxy||  
+|uint_4::set_zxyw||  
+|uint_4::set_zy||  
+|uint_4::set_zyw||  
+|uint_4::set_zywx||  
+|uint_4::set_zyx||  
+|uint_4::set_zyxw||  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|uint_4::operator-(opérateur)||  
-|uint_4::operator--(opérateur)||  
-|uint_4::operator * =, opérateur||  
-|uint_4::operator / =, opérateur||  
-|uint_4::operator ++ (opérateur)||  
-|uint_4::operator +=, opérateur||  
-|uint_4::operator =, opérateur||  
-|uint_4::operator-= (opérateur)||  
+|uint_4::operator-||  
+|uint_4::operator--||  
+|uint_4::operator * =||  
+|/ = uint_4::operator||  
+|uint_4::operator ++||  
+|uint_4::operator +=||  
+|uint_4::operator =||  
+|uint_4::operator =||  
   
 ### <a name="public-constants"></a>Constantes publiques  
   
@@ -490,134 +490,134 @@ class uint_4;
   
 |Nom|Description|  
 |----------|-----------------|  
-|Membre de données uint_4::a||  
-|Membre de données uint_4::AB||  
-|Membre de données uint_4::abg||  
-|Membre de données uint_4::abgr||  
-|Membre de données uint_4::ABR||  
-|Membre de données uint_4::abrg||  
-|Membre de données uint_4::AG||  
-|Membre de données uint_4::agb||  
-|Membre de données uint_4::agbr||  
-|Membre de données uint_4::AGR||  
-|Membre de données uint_4::agrb||  
-|Membre de données uint_4::AR||  
-|Membre de données uint_4::ARB||  
-|Membre de données uint_4::arbg||  
-|Membre de données uint_4::arg||  
-|Membre de données uint_4::ARGB||  
-|Membre de données uint_4::b||  
-|Membre de données uint_4::BA||  
-|Membre de données uint_4::bag||  
-|Membre de données uint_4::bagr||  
-|Membre de données uint_4::bar||  
-|Membre de données uint_4::barg||  
-|Membre de données uint_4::BG||  
-|Membre de données uint_4::BGA||  
-|Membre de données uint_4::bgar||  
-|Membre de données uint_4::BGR||  
-|Membre de données uint_4::bgra||  
-|Membre de données uint_4::br||  
-|Membre de données uint_4::BRA||  
-|Membre de données uint_4::brag||  
-|Membre de données uint_4::brg||  
-|Membre de données uint_4::brga||  
-|Membre de données uint_4::g||  
-|Membre de données uint_4::GA||  
-|Membre de données uint_4::GAB||  
-|Membre de données uint_4::gabr||  
-|Membre de données uint_4::gar||  
-|Membre de données uint_4::garb||  
-|Membre de données uint_4::GB||  
-|Membre de données uint_4::GBA||  
-|Membre de données uint_4::gbar||  
-|Membre de données uint_4::GBR||  
-|Membre de données uint_4::GBRA||  
-|Membre de données uint_4::GR||  
-|Membre de données uint_4::gra||  
-|Membre de données uint_4::Grab||  
-|Membre de données uint_4::grb||  
-|Membre de données uint_4::grba||  
-|Membre de données uint_4::r||  
-|Membre de données uint_4::RA||  
-|Membre de données uint_4::RAB||  
-|Membre de données uint_4::rabg||  
-|Membre de données uint_4::RAG||  
-|Membre de données uint_4::ragb||  
-|Membre de données uint_4::RB||  
-|Membre de données uint_4::RBA||  
-|Membre de données uint_4::rbag||  
-|Membre de données uint_4::rbg||  
-|Membre de données uint_4::rbga||  
-|Membre de données uint_4::RG||  
-|Membre de données uint_4::RGA||  
-|Membre de données uint_4::rgab||  
-|Membre de données uint_4::RGB||  
-|Membre de données uint_4::RGBA||  
-|Membre de données uint_4::w||  
-|Membre de données uint_4::WX||  
-|Membre de données uint_4::WXY||  
-|Membre de données uint_4::wxyz||  
-|Membre de données uint_4::wxz||  
-|Membre de données uint_4::wxzy||  
-|Membre de données uint_4::wY||  
-|Membre de données uint_4::wyx||  
-|Membre de données uint_4::wyxz||  
-|Membre de données uint_4::WYZ||  
-|Membre de données uint_4::wyzx||  
-|Membre de données uint_4::wZ||  
-|Membre de données uint_4::wzx||  
-|Membre de données uint_4::wzxy||  
-|Membre de données uint_4::wzy||  
-|Membre de données uint_4::wzyx||  
-|Membre de données uint_4::x||  
-|Membre de données uint_4::XW||  
-|Membre de données uint_4::xwy||  
-|Membre de données uint_4::xwyz||  
-|Membre de données uint_4::xwz||  
-|Membre de données uint_4::xwzy||  
-|Membre de données uint_4::XY||  
-|Membre de données uint_4::xyw||  
-|Membre de données uint_4::xywz||  
-|Membre de données uint_4::XYZ||  
-|Membre de données uint_4::xyzw||  
-|Membre de données uint_4::XZ||  
-|Membre de données uint_4::xzw||  
-|Membre de données uint_4::xzwy||  
-|Membre de données uint_4::xzy||  
-|Membre de données uint_4::xzyw||  
-|Membre de données uint_4::y||  
-|Membre de données uint_4::yw||  
-|Membre de données uint_4::ywx||  
-|Membre de données uint_4::ywxz||  
-|Membre de données uint_4::ywz||  
-|Membre de données uint_4::ywzx||  
-|Membre de données uint_4::YX||  
-|Membre de données uint_4::yxw||  
-|Membre de données uint_4::yxwz||  
-|Membre de données uint_4::yxz||  
-|Membre de données uint_4::yxzw||  
-|Membre de données uint_4::YZ||  
-|Membre de données uint_4::yzw||  
-|Membre de données uint_4::yzwx||  
-|Membre de données uint_4::yzx||  
-|Membre de données uint_4::yzxw||  
-|Membre de données uint_4::z||  
-|Membre de données uint_4::zw||  
-|Membre de données uint_4::zwx||  
-|Membre de données uint_4::zwxy||  
-|Membre de données uint_4::zwy||  
-|Membre de données uint_4::zwyx||  
-|Membre de données uint_4::ZX||  
-|Membre de données uint_4::zxw||  
-|Membre de données uint_4::zxwy||  
-|Membre de données uint_4::zxy||  
-|Membre de données uint_4::zxyw||  
-|Membre de données uint_4::ZY||  
-|Membre de données uint_4::zyw||  
-|Membre de données uint_4::zywx||  
-|Membre de données uint_4::ZYX||  
-|Membre de données uint_4::zyxw||  
+|uint_4::a||  
+|uint_4::AB||  
+|uint_4::abg||  
+|uint_4::abgr||  
+|uint_4::ABR||  
+|uint_4::abrg||  
+|uint_4::AG||  
+|uint_4::agb||  
+|uint_4::agbr||  
+|uint_4::AGR||  
+|uint_4::agrb||  
+|uint_4::AR||  
+|uint_4::ARB||  
+|uint_4::arbg||  
+|uint_4::arg||  
+|uint_4::ARGB||  
+|uint_4::b||  
+|uint_4::BA||  
+|uint_4::bag||  
+|uint_4::bagr||  
+|uint_4::bar||  
+|uint_4::barg||  
+|uint_4::BG||  
+|uint_4::BGA||  
+|uint_4::bgar||  
+|uint_4::BGR||  
+|uint_4::bgra||  
+|uint_4::br||  
+|uint_4::BRA||  
+|uint_4::brag||  
+|uint_4::brg||  
+|uint_4::brga||  
+|uint_4::g||  
+|uint_4::GA||  
+|uint_4::GAB||  
+|uint_4::gabr||  
+|uint_4::gar||  
+|uint_4::garb||  
+|uint_4::GB||  
+|uint_4::GBA||  
+|uint_4::gbar||  
+|uint_4::GBR||  
+|uint_4::GBRA||  
+|uint_4::GR||  
+|uint_4::gra||  
+|uint_4::Grab||  
+|uint_4::grb||  
+|uint_4::grba||  
+|uint_4::r||  
+|uint_4::RA||  
+|uint_4::RAB||  
+|uint_4::rabg||  
+|uint_4::RAG||  
+|uint_4::ragb||  
+|uint_4::RB||  
+|uint_4::RBA||  
+|uint_4::rbag||  
+|uint_4::rbg||  
+|uint_4::rbga||  
+|uint_4::RG||  
+|uint_4::RGA||  
+|uint_4::rgab||  
+|uint_4::RGB||  
+|uint_4::RGBA||  
+|uint_4::w||  
+|uint_4::WX||  
+|uint_4::WXY||  
+|uint_4::wxyz||  
+|uint_4::wxz||  
+|uint_4::wxzy||  
+|uint_4::wY||  
+|uint_4::wyx||  
+|uint_4::wyxz||  
+|uint_4::WYZ||  
+|uint_4::wyzx||  
+|uint_4::wZ||  
+|uint_4::wzx||  
+|uint_4::wzxy||  
+|uint_4::wzy||  
+|uint_4::wzyx||  
+|uint_4::x||  
+|uint_4::XW||  
+|uint_4::xwy||  
+|uint_4::xwyz||  
+|uint_4::xwz||  
+|uint_4::xwzy||  
+|uint_4::XY||  
+|uint_4::xyw||  
+|uint_4::xywz||  
+|uint_4::XYZ||  
+|uint_4::xyzw||  
+|uint_4::XZ||  
+|uint_4::xzw||  
+|uint_4::xzwy||  
+|uint_4::xzy||  
+|uint_4::xzyw||  
+|uint_4::y||  
+|uint_4::yw||  
+|uint_4::ywx||  
+|uint_4::ywxz||  
+|uint_4::ywz||  
+|uint_4::ywzx||  
+|uint_4::YX||  
+|uint_4::yxw||  
+|uint_4::yxwz||  
+|uint_4::yxz||  
+|uint_4::yxzw||  
+|uint_4::YZ||  
+|uint_4::yzw||  
+|uint_4::yzwx||  
+|uint_4::yzx||  
+|uint_4::yzxw||  
+|uint_4::z||  
+|uint_4::zw||  
+|uint_4::zwx||  
+|uint_4::zwxy||  
+|uint_4::zwy||  
+|uint_4::zwyx||  
+|uint_4::ZX||  
+|uint_4::zxw||  
+|uint_4::zxwy||  
+|uint_4::zxy||  
+|uint_4::zxyw||  
+|uint_4::ZY||  
+|uint_4::zyw||  
+|uint_4::zywx||  
+|uint_4::ZYX||  
+|uint_4::zyxw||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `uint_4`  
@@ -627,7 +627,7 @@ class uint_4;
   
  **Namespace :** Concurrency::graphics  
   
-## <a name="a-nameuint4ctora-uint4"></a><a name="uint_4__ctor"></a>uint_4 
+## <a name="uint_4__ctor"></a>uint_4 
 
 Par défaut constructeur initialise tous les éléments à 0.
   
@@ -683,7 +683,7 @@ explicit inline uint_4(
  `_Other`  
  Objet utilisé pour initialiser.  
   
-## <a name="a-namea-size"></a><a name=""></a>taille 
+## <a name=""></a>taille 
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -692,5 +692,5 @@ static const int size = 4;
 ```  
 
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
 

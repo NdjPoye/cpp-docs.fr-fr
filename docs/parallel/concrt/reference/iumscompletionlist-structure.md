@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSCompletionList
+- IUMSCompletionList
+- CONCRTRM/concurrency::IUMSCompletionList
+- CONCRTRM/concurrency::IUMSCompletionList::IUMSCompletionList::GetUnblockNotifications
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 25023c27244669092e0f57fe59bdb190fd2f2afb
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 65655e4e03a7b187e0bbadbd576bc088bb57f7c8
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList, structure
@@ -54,7 +56,7 @@ struct IUMSCompletionList;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[IUMSCompletionList::GetUnblockNotifications, méthode](#getunblocknotifications)|Récupère une chaîne de `IUMSUnblockNotification` les interfaces qui représentent des contextes d’exécution dont le thread associé proxys se sont débloqués depuis le dernier appel de la méthode a été appelé.|  
+|[IUMSCompletionList::GetUnblockNotifications](#getunblocknotifications)|Récupère une chaîne de `IUMSUnblockNotification` les interfaces qui représentent des contextes d’exécution dont le thread associé proxys se sont débloqués depuis le dernier appel de la méthode a été appelé.|  
   
 ## <a name="remarks"></a>Notes  
  Un planificateur doit être extraordinairement prudent concernant les actions à effectuer après avoir utilisé cette interface pour la file d’attente des éléments de la liste de saisie semi-automatique. Les éléments doivent être placés sur la liste du Planificateur de contextes exécutables et être généralement accessible dès que possible. Il est tout à fait possible qu’un des éléments retirés de l’a reçu la propriété d’un verrou arbitraire. Le planificateur ne peut effectuer aucun appel de fonction arbitraires qui peuvent se bloquer entre l’appel à des éléments de la file d’attente et le positionnement de ces éléments dans une liste qui sont généralement accessibles à partir du planificateur.  
@@ -67,7 +69,7 @@ struct IUMSCompletionList;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-namegetunblocknotificationsa--iumscompletionlistgetunblocknotifications-method"></a><a name="getunblocknotifications"></a>IUMSCompletionList::GetUnblockNotifications, méthode  
+##  <a name="getunblocknotifications"></a>IUMSCompletionList::GetUnblockNotifications, méthode  
  Récupère une chaîne de `IUMSUnblockNotification` les interfaces qui représentent des contextes d’exécution dont le thread associé proxys se sont débloqués depuis le dernier appel de la méthode a été appelé.  
   
 ```
@@ -77,11 +79,11 @@ virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Une chaîne de `IUMSUnblockNotification` interfaces.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Les notifications retournées ne sont pas valides une fois que les contextes d’exécution sont replanifiées.  
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
  [IUMSScheduler (Structure)](iumsscheduler-structure.md)   
- [IUMSUnblockNotification (Structure)](iumsunblocknotification-structure.md)
+ [IUMSUnblockNotification, structure](iumsunblocknotification-structure.md)
 

@@ -100,9 +100,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ce64e15c062f04df6c9f7671bd820ee188af0111
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 14c85a46b8026878c3b5502931f937e2cf6196cd
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="unorm3-class"></a>unorm_3, classe
@@ -132,54 +132,54 @@ class unorm_3;
   
 |Nom|Description|  
 |----------|-----------------|  
-|unorm_3::get_X (méthode)||  
-|unorm_3::get_xy (méthode)||  
-|unorm_3::get_xyz (méthode)||  
-|unorm_3::get_xz (méthode)||  
-|unorm_3::get_xzy (méthode)||  
-|unorm_3::get_y (méthode)||  
-|unorm_3::get_yx (méthode)||  
-|unorm_3::get_yxz (méthode)||  
-|unorm_3::get_yz (méthode)||  
-|unorm_3::get_yzx (méthode)||  
-|unorm_3::get_z (méthode)||  
-|unorm_3::get_zx (méthode)||  
-|unorm_3::get_zxy (méthode)||  
-|unorm_3::get_zy (méthode)||  
-|unorm_3::get_zyx (méthode)||  
-|Unorm_3::ref_b (méthode)||  
-|Unorm_3::ref_g (méthode)||  
-|Unorm_3::ref_r (méthode)||  
-|Unorm_3::ref_x (méthode)||  
-|Unorm_3::ref_y (méthode)||  
-|Unorm_3::ref_z (méthode)||  
-|unorm_3::set_X (méthode)||  
-|unorm_3::set_xy (méthode)||  
-|unorm_3::set_xyz (méthode)||  
-|unorm_3::set_xz (méthode)||  
-|unorm_3::set_xzy (méthode)||  
-|unorm_3::set_y (méthode)||  
-|unorm_3::set_yx (méthode)||  
-|unorm_3::set_yxz (méthode)||  
-|unorm_3::set_yz (méthode)||  
-|unorm_3::set_yzx (méthode)||  
-|unorm_3::set_z (méthode)||  
-|unorm_3::set_zx (méthode)||  
-|unorm_3::set_zxy (méthode)||  
-|unorm_3::set_zy (méthode)||  
-|unorm_3::set_zyx (méthode)||  
+|unorm_3::get_X||  
+|unorm_3::get_xy||  
+|unorm_3::get_xyz||  
+|unorm_3::get_xz||  
+|unorm_3::get_xzy||  
+|unorm_3::get_y||  
+|unorm_3::get_yx||  
+|unorm_3::get_yxz||  
+|unorm_3::get_yz||  
+|unorm_3::get_yzx||  
+|unorm_3::get_z||  
+|unorm_3::get_zx||  
+|unorm_3::get_zxy||  
+|unorm_3::get_zy||  
+|unorm_3::get_zyx||  
+|Unorm_3::ref_b||  
+|Unorm_3::ref_g||  
+|Unorm_3::ref_r||  
+|Unorm_3::ref_x||  
+|Unorm_3::ref_y||  
+|Unorm_3::ref_z||  
+|unorm_3::set_X||  
+|unorm_3::set_xy||  
+|unorm_3::set_xyz||  
+|unorm_3::set_xz||  
+|unorm_3::set_xzy||  
+|unorm_3::set_y||  
+|unorm_3::set_yx||  
+|unorm_3::set_yxz||  
+|unorm_3::set_yz||  
+|unorm_3::set_yzx||  
+|unorm_3::set_z||  
+|unorm_3::set_zx||  
+|unorm_3::set_zxy||  
+|unorm_3::set_zy||  
+|unorm_3::set_zyx||  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|unorm_3::operator--(opérateur)||  
-|unorm_3::operator * =, opérateur||  
-|unorm_3::operator / =, opérateur||  
-|unorm_3::operator ++ (opérateur)||  
-|unorm_3::operator +=, opérateur||  
-|unorm_3::operator =, opérateur||  
-|unorm_3::operator-= (opérateur)||  
+|unorm_3::operator--||  
+|unorm_3::operator * =||  
+|/ = unorm_3::operator||  
+|unorm_3::operator ++||  
+|unorm_3::operator +=||  
+|unorm_3::operator =||  
+|unorm_3::operator =||  
   
 ### <a name="public-constants"></a>Constantes publiques  
   
@@ -191,36 +191,36 @@ class unorm_3;
   
 |Nom|Description|  
 |----------|-----------------|  
-|Membre de données unorm_3::b||  
-|Membre de données unorm_3::BG||  
-|Membre de données unorm_3::BGR||  
-|Membre de données unorm_3::br||  
-|Membre de données unorm_3::brg||  
-|Membre de données unorm_3::g||  
-|Membre de données unorm_3::GB||  
-|Membre de données unorm_3::GBR||  
-|Membre de données unorm_3::GR||  
-|Membre de données unorm_3::grb||  
-|Membre de données unorm_3::r||  
-|Membre de données unorm_3::RB||  
-|Membre de données unorm_3::rbg||  
-|Membre de données unorm_3::RG||  
-|Membre de données unorm_3::RGB||  
-|Membre de données unorm_3::x||  
-|Membre de données unorm_3::XY||  
-|Membre de données unorm_3::XYZ||  
-|Membre de données unorm_3::XZ||  
-|Membre de données unorm_3::xzy||  
-|Membre de données unorm_3::y||  
-|Membre de données unorm_3::YX||  
-|Membre de données unorm_3::yxz||  
-|Membre de données unorm_3::YZ||  
-|Membre de données unorm_3::yzx||  
-|Membre de données unorm_3::z||  
-|Membre de données unorm_3::ZX||  
-|Membre de données unorm_3::zxy||  
-|Membre de données unorm_3::ZY||  
-|Membre de données unorm_3::ZYX||  
+|unorm_3::b||  
+|unorm_3::BG||  
+|unorm_3::BGR||  
+|unorm_3::br||  
+|unorm_3::brg||  
+|unorm_3::g||  
+|unorm_3::GB||  
+|unorm_3::GBR||  
+|unorm_3::GR||  
+|unorm_3::grb||  
+|unorm_3::r||  
+|unorm_3::RB||  
+|unorm_3::rbg||  
+|unorm_3::RG||  
+|unorm_3::RGB||  
+|unorm_3::x||  
+|unorm_3::XY||  
+|unorm_3::XYZ||  
+|unorm_3::XZ||  
+|unorm_3::xzy||  
+|unorm_3::y||  
+|unorm_3::YX||  
+|unorm_3::yxz||  
+|unorm_3::YZ||  
+|unorm_3::yzx||  
+|unorm_3::z||  
+|unorm_3::ZX||  
+|unorm_3::zxy||  
+|unorm_3::ZY||  
+|unorm_3::ZYX||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `unorm_3`  
@@ -230,7 +230,7 @@ class unorm_3;
   
  **Namespace :** Concurrency::graphics  
   
-##  <a name="a-namectora-unorm3"></a><a name="ctor"></a>unorm_3 
+##  <a name="ctor"></a>unorm_3 
 
  Par défaut constructeur initialise tous les éléments à 0.  
   
@@ -309,12 +309,12 @@ explicit inline unorm_3(
  `_Other`  
  Objet utilisé pour initialiser.  
   
-##  <a name="a-nameunorm3sizea-size"></a><a name="unorm_3__size"></a>taille 
+##  <a name="unorm_3__size"></a>taille 
 
 ```  
 static const int size = 3;  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
 

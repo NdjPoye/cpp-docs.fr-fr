@@ -1,58 +1,72 @@
 ---
-title: "CMFCStandardColorsPropertyPage Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCStandardColorsPropertyPage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCStandardColorsPropertyPage class"
+title: Classe de CMFCStandardColorsPropertyPage | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCStandardColorsPropertyPage class
 ms.assetid: b84b7cfb-bb24-4c65-804a-5b642cb64400
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CMFCStandardColorsPropertyPage Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: fade2cc91d9681604fbd664419c693dde1527b84
+ms.lasthandoff: 03/17/2017
 
-Représente une page de propriétés que les utilisateurs utilisent pour sélectionner des couleurs standard dans une boîte de dialogue de couleur.  
+---
+# <a name="cmfcstandardcolorspropertypage-class"></a>CMFCStandardColorsPropertyPage (classe)
+Représente une page de propriétés utilisateurs permet de sélectionner des couleurs standards dans une boîte de dialogue couleur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 class CMFCStandardColorsPropertyPage : public CPropertyPage  
 ```  
   
-## Membres  
+## <a name="members"></a>Membres  
   
-### Constructeurs publics  
+### <a name="public-constructors"></a>Constructeurs publics  
   
 |||  
 |-|-|  
 |Nom|Description|  
 |`CMFCStandardColorsPropertyPage::CMFCStandardColorsPropertyPage`|Constructeur par défaut.|  
   
-### Méthodes publiques  
+### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |||  
 |-|-|  
 |Nom|Description|  
 |`CMFCStandardColorsPropertyPage::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|  
-|`CMFCStandardColorsPropertyPage::GetThisClass`|Utilisé par l'infrastructure pour obtenir un pointeur vers l'objet de [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associé à ce type de classe.|  
+|`CMFCStandardColorsPropertyPage::GetThisClass`|Utilisé par le framework d’obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet associé à ce type de classe.|  
   
-### Remarques  
- La classe d' `CMFCColorDialog` utilise cette classe pour afficher la page de propriétés standard de couleur.  Pour plus d'informations sur `CMFCColorDialog`, consultez [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md).  
+### <a name="remarks"></a>Remarques  
+ La `CMFCColorDialog` classe utilise cette classe pour afficher la page de propriété de couleur standard. Pour plus d’informations sur `CMFCColorDialog`, consultez [CMFCColorDialog classe](../../mfc/reference/cmfccolordialog-class.md).  
   
-## Hiérarchie d'héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -65,11 +79,12 @@ class CMFCStandardColorsPropertyPage : public CPropertyPage
   
  [CMFCStandardColorsPropertyPage](../../mfc/reference/cmfcstandardcolorspropertypage-class.md)  
   
-## Configuration requise  
- **en\-tête :** afxstandardcolorspropertypage.h  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** afxstandardcolorspropertypage.h  
   
-## Voir aussi  
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md)   
- [CMFCCustomColorsPropertyPage Class](../../mfc/reference/cmfccustomcolorspropertypage-class.md)
+ [CMFCColorDialog (classe)](../../mfc/reference/cmfccolordialog-class.md)   
+ [CMFCCustomColorsPropertyPage, classe](../../mfc/reference/cmfccustomcolorspropertypage-class.md)
+

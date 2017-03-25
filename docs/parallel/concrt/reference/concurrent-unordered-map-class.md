@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrent_unordered_map/concurrency::concurrent_unordered_map
+- concurrent_unordered_map
+- CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map
+- CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map::concurrent_unordered_map
+- CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map::at
+- CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map::hash_function
+- CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map::insert
+- CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map::key_eq
+- CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map::swap
+- CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map::unsafe_erase
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 19244e5527207f852256e646abd18ad298fb28cd
-ms.openlocfilehash: ec35d0e410efcc7861df0ab39ad561de04518d91
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: e5b8af640c48630c6c2c132a10b160bb85c39380
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map, classe
@@ -106,25 +114,25 @@ template <typename K,
   
 |Nom|Description|  
 |----------|-----------------|  
-|[concurrent_unordered_map, constructeur](#ctor)|Surchargé. Construit un objet Unordered simultanée.|  
+|[concurrent_unordered_map](#ctor)|Surchargé. Construit un objet Unordered simultanée.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[AT (méthode)](#at)|Surchargé. Recherche un élément dans un `concurrent_unordered_map` avec une valeur de clé spécifiée... Cette méthode est concurrentiel.|  
-|[hash_function (méthode)](#hash_function)|Obtient l'objet de fonction de hachage stocké.|  
-|[Insert (méthode)](#insert)|Surchargé. Ajoute des éléments à la `concurrent_unordered_map` objet.|  
-|[key_eq (méthode)](#key_eq)|Obtient l’objet de fonction de comparaison d’égalité stockée.|  
-|[swap (méthode)](#swap)|Échange le contenu de deux `concurrent_unordered_map` objets. Cette méthode n’est pas concurrentiel.|  
-|[unsafe_erase (méthode)](#unsafe_erase)|Surchargé. Supprime les éléments à partir de la `concurrent_unordered_map` positions spécifiées. Cette méthode n’est pas concurrentiel.|  
+|[at](#at)|Surchargé. Recherche un élément dans un `concurrent_unordered_map` avec une valeur de clé spécifiée... Cette méthode est concurrentiel.|  
+|[hash_function](#hash_function)|Obtient l'objet de fonction de hachage stocké.|  
+|[insert](#insert)|Surchargé. Ajoute des éléments à la `concurrent_unordered_map` objet.|  
+|[key_eq](#key_eq)|Obtient l’objet de fonction de comparaison d’égalité stockée.|  
+|[swap](#swap)|Échange le contenu de deux `concurrent_unordered_map` objets. Cette méthode n’est pas concurrentiel.|  
+|[unsafe_erase](#unsafe_erase)|Surchargé. Supprime les éléments à partir de la `concurrent_unordered_map` positions spécifiées. Cette méthode n’est pas concurrentiel.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[operator [] (opérateur)](#operator_at)|Surchargé. Recherche ou insère un élément avec la clé spécifiée. Cette méthode est concurrentiel.|  
-|[opérateur =, opérateur](#operator_eq)|Surchargé. Assigne le contenu d’un autre `concurrent_unordered_map` objet à celui-ci. Cette méthode n’est pas concurrentiel.|  
+|[operator]](#operator_at)|Surchargé. Recherche ou insère un élément avec la clé spécifiée. Cette méthode est concurrentiel.|  
+|[operator=](#operator_eq)|Surchargé. Assigne le contenu d’un autre `concurrent_unordered_map` objet à celui-ci. Cette méthode n’est pas concurrentiel.|  
   
 ## <a name="remarks"></a>Notes  
  Pour plus d’informations sur la `concurrent_unordered_map` de classe, consultez la page [conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -141,7 +149,7 @@ template <typename K,
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-nameata-at"></a><a name="at"></a>à 
+##  <a name="at"></a>à 
 
  Recherche un élément dans un `concurrent_unordered_map` avec une valeur de clé spécifiée... Cette méthode est concurrentiel.  
   
@@ -161,7 +169,7 @@ const mapped_type& at(const key_type& KVal) const;
 ### <a name="remarks"></a>Notes  
  Si la valeur de clé d’argument est introuvable, la fonction lève un objet de classe `out_of_range`.  
   
-##  <a name="a-namebegina-begin"></a><a name="begin"></a>commencer 
+##  <a name="begin"></a>commencer 
 
  Retourne un itérateur qui pointe vers le premier élément dans le conteneur simultané. Cette méthode est sécurisée l’accès concurrentiel.  
   
@@ -174,7 +182,7 @@ const_iterator begin() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur au premier élément dans le conteneur simultané.  
   
-##  <a name="a-namecbegina-cbegin"></a><a name="cbegin"></a>cbegin 
+##  <a name="cbegin"></a>cbegin 
 
  Retourne un itérateur const qui pointe vers le premier élément dans le conteneur simultané. Cette méthode est sécurisée l’accès concurrentiel.  
   
@@ -185,7 +193,7 @@ const_iterator cbegin() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur const sur le premier élément dans le conteneur simultané.  
   
-##  <a name="a-namecenda-cend"></a><a name="cend"></a>cend 
+##  <a name="cend"></a>cend 
 
  Retourne un itérateur const qui pointe vers l’emplacement suivant le dernier élément dans le conteneur simultané. Cette méthode est sécurisée l’accès concurrentiel.  
   
@@ -196,7 +204,7 @@ const_iterator cend() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur const à l’emplacement suivant le dernier élément dans le conteneur simultané.  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>Effacer 
+##  <a name="clear"></a>Effacer 
 
  Efface tous les éléments dans le conteneur simultané. Cette fonction n’est pas sécurisée l’accès concurrentiel.  
   
@@ -204,7 +212,7 @@ const_iterator cend() const;
 void clear();
 ```  
   
-##  <a name="a-namectora-concurrentunorderedmap"></a><a name="ctor"></a>concurrent_unordered_map 
+##  <a name="ctor"></a>concurrent_unordered_map 
 
  Construit un objet Unordered simultanée.  
   
@@ -275,7 +283,7 @@ concurrent_unordered_map(
   
  Le dernier constructeur spécifie une opération de déplacement de l’objet Unordered simultanée `_Umap`.  
   
-##  <a name="a-namecounta-count"></a><a name="count"></a>nombre 
+##  <a name="count"></a>nombre 
 
  Compte le nombre d’éléments qui correspondent à une clé spécifiée. Cette fonction est sécurisée l’accès concurrentiel.  
   
@@ -290,7 +298,7 @@ size_type count(const key_type& KVal) const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de tentatives le nombre de fois où que la clé s’affiche dans le conteneur.  
   
-##  <a name="a-nameemptya-empty"></a><a name="empty"></a>vide 
+##  <a name="empty"></a>vide 
 
  Vérifie l'absence d'éléments. Cette méthode est sécurisée l’accès concurrentiel.  
   
@@ -304,7 +312,7 @@ bool empty() const;
 ### <a name="remarks"></a>Remarques  
  En présence d’insertions simultanées, ou non le conteneur simultané est vide peut changer immédiatement après l’appel de cette fonction, avant même la lecture la valeur de retour.  
   
-##  <a name="a-nameenda-end"></a><a name="end"></a>fin 
+##  <a name="end"></a>fin 
 
  Retourne un itérateur qui pointe vers l’emplacement suivant le dernier élément dans le conteneur simultané. Cette méthode est sécurisée l’accès concurrentiel.  
   
@@ -317,7 +325,7 @@ const_iterator end() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur vers l’emplacement suivant le dernier élément dans le conteneur simultané.  
   
-##  <a name="a-nameequalrangea-equalrange"></a><a name="equal_range"></a>equal_range 
+##  <a name="equal_range"></a>equal_range 
 
  Recherche une plage qui correspond à une clé spécifiée. Cette fonction est sécurisée l’accès concurrentiel.  
   
@@ -341,7 +349,7 @@ std::pair<const_iterator,
 ### <a name="remarks"></a>Remarques  
  Il est possible pour les insertions simultanées provoquer des clés supplémentaires à insérer après l’itérateur begin et avant l’itérateur de fin.  
   
-##  <a name="a-namefinda-find"></a><a name="find"></a>Rechercher 
+##  <a name="find"></a>Rechercher 
 
  Recherche un élément qui correspond à une clé spécifiée. Cette fonction est sécurisée l’accès concurrentiel.  
   
@@ -358,7 +366,7 @@ const_iterator find(const key_type& KVal) const;
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur qui pointe vers l’emplacement du premier élément correspondant à la clé fournie, ou l’itérateur `end()` si aucun élément n’existe.  
   
-##  <a name="a-namegetallocatora-getallocator"></a><a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a>get_allocator 
 
  Retourne l’objet allocateur stocké pour ce conteneur simultané. Cette méthode est sécurisée l’accès concurrentiel.  
   
@@ -369,7 +377,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valeur de retour  
  L’objet allocateur stocké pour ce conteneur simultané.  
   
-##  <a name="a-namehashfunctiona-hashfunction"></a><a name="hash_function"></a>hash_function 
+##  <a name="hash_function"></a>hash_function 
 
  Obtient l'objet de fonction de hachage stocké.  
   
@@ -380,7 +388,7 @@ hasher hash_function() const;
 ### <a name="return-value"></a>Valeur de retour  
  L’objet de fonction de hachage stocké.  
   
-##  <a name="a-nameinserta-insert"></a><a name="insert"></a>Insérer 
+##  <a name="insert"></a>Insérer 
 
  Ajoute des éléments à la `concurrent_unordered_map` objet.  
   
@@ -441,7 +449,7 @@ typename std::enable_if<!std::is_same<const_iterator,
   
  Les deux dernières fonctions membres comportent comme les deux premières, à ceci près que `value` est utilisé pour construire la valeur insérée.  
   
-##  <a name="a-namekeyeqa-keyeq"></a><a name="key_eq"></a>key_eq 
+##  <a name="key_eq"></a>key_eq 
 
  Obtient l’objet de fonction de comparaison d’égalité stockée.  
   
@@ -452,7 +460,7 @@ key_equal key_eq() const;
 ### <a name="return-value"></a>Valeur de retour  
  L’objet de fonction de comparaison d’égalité stockée.  
   
-##  <a name="a-nameloadfactora-loadfactor"></a><a name="load_factor"></a>load_factor 
+##  <a name="load_factor"></a>load_factor 
 
  Calcule et retourne le facteur de charge actuel du conteneur. Le facteur de charge est le nombre d’éléments dans le conteneur divisé par le nombre de compartiments.  
   
@@ -463,7 +471,7 @@ float load_factor() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le facteur de charge pour le conteneur.  
   
-##  <a name="a-namemaxloadfactora-maxloadfactor"></a><a name="max_load_factor"></a>max_load_factor 
+##  <a name="max_load_factor"></a>max_load_factor 
 
  Obtient ou définit le facteur de charge maximale du conteneur. Le facteur de charge maximale est le plus grand nombre d’éléments que possible dans chaque compartiment avant le conteneur augmente sa table interne.  
   
@@ -479,7 +487,7 @@ void max_load_factor(float _Newmax);
 ### <a name="return-value"></a>Valeur de retour  
  La première fonction membre retourne le facteur de charge maximale stockée. La seconde fonction membre ne retourne pas de valeur, mais lève une [out_of_range](../../../standard-library/out-of-range-class.md) exception si le facteur de charge fourni n’est pas valide...  
   
-##  <a name="a-namemaxsizea-maxsize"></a><a name="max_size"></a>max_size 
+##  <a name="max_size"></a>max_size 
 
  Retourne la taille maximale du conteneur simultanée, déterminée par l’allocateur. Cette méthode est sécurisée l’accès concurrentiel.  
   
@@ -493,7 +501,7 @@ size_type max_size() const;
 ### <a name="remarks"></a>Remarques  
  Cette valeur limite supérieure peut être supérieure à ce que le conteneur peut réellement contenir.  
   
-##  <a name="a-nameoperatorata-operator"></a><a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a>operator] 
 
  Recherche ou insère un élément avec la clé spécifiée. Cette méthode est concurrentiel.  
   
@@ -519,7 +527,7 @@ mapped_type& operator[](key_type&& kval);
   
  Lorsque vous utilisez `operator[]` pour insérer des éléments, la référence retournée n'indique pas si l'insertion va modifier un élément existant ou en créer un nouveau. Les fonctions membres `find` et [insérer](#insert) peut être utilisée pour déterminer si un élément ayant la clé spécifiée est déjà présent avant l’insertion.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>opérateur = 
+##  <a name="operator_eq"></a>opérateur = 
 
  Assigne le contenu d’un autre `concurrent_unordered_map` objet à celui-ci. Cette méthode n’est pas concurrentiel.  
   
@@ -539,7 +547,7 @@ concurrent_unordered_map& operator= (concurrent_unordered_map&& _Umap);
 ### <a name="remarks"></a>Remarques  
  Après avoir supprimé les éléments existants à un vecteur simultané, `operator=` copie ou déplace le contenu de `_Umap` dans le vecteur simultané.  
   
-##  <a name="a-namerehasha-rehash"></a><a name="rehash"></a>rehash) 
+##  <a name="rehash"></a>rehash) 
 
  Régénère la table de hachage.  
   
@@ -556,7 +564,7 @@ void rehash(size_type _Buckets);
   
  Elle génère une [out_of_range](../../../standard-library/out-of-range-class.md) exception si le nombre de compartiments n’est pas valide (0 ou supérieur au nombre maximal de compartiments).  
   
-##  <a name="a-namesizea-size"></a><a name="size"></a>taille 
+##  <a name="size"></a>taille 
 
  Retourne le nombre d’éléments dans ce conteneur simultané. Cette méthode est sécurisée l’accès concurrentiel.  
   
@@ -567,10 +575,10 @@ size_type size() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’éléments dans le conteneur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En présence d’insertions simultanées, le nombre d’éléments dans le conteneur simultané peut changer immédiatement après l’appel de cette fonction, avant même la lecture la valeur de retour.  
   
-##  <a name="a-nameswapa-swap"></a><a name="swap"></a>échange 
+##  <a name="swap"></a>échange 
 
  Échange le contenu de deux `concurrent_unordered_map` objets. Cette méthode n’est pas concurrentiel.  
   
@@ -582,7 +590,7 @@ void swap(concurrent_unordered_map& _Umap);
  `_Umap`  
  Le `concurrent_unordered_map` objet pour le remplacement.  
   
-##  <a name="a-nameunsafebegina-unsafebegin"></a><a name="unsafe_begin"></a>unsafe_begin 
+##  <a name="unsafe_begin"></a>unsafe_begin 
 
  Retourne un itérateur au premier élément dans ce conteneur pour un compartiment spécifique.  
   
@@ -599,7 +607,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur qui pointe vers le début de la plage.  
   
-##  <a name="a-nameunsafebucketa-unsafebucket"></a><a name="unsafe_bucket"></a>unsafe_bucket 
+##  <a name="unsafe_bucket"></a>unsafe_bucket 
 
  Retourne l’index de compartiments correspondant à une clé spécifique dans ce conteneur.  
   
@@ -614,7 +622,7 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ### <a name="return-value"></a>Valeur de retour  
  L’index de compartiment pour la clé dans ce conteneur.  
   
-##  <a name="a-nameunsafebucketcounta-unsafebucketcount"></a><a name="unsafe_bucket_count"></a>unsafe_bucket_count 
+##  <a name="unsafe_bucket_count"></a>unsafe_bucket_count 
 
  Retourne le nombre actuel de compartiments dans ce conteneur.  
   
@@ -625,7 +633,7 @@ size_type unsafe_bucket_count() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de compartiments dans ce conteneur.  
   
-##  <a name="a-nameunsafebucketsizea-unsafebucketsize"></a><a name="unsafe_bucket_size"></a>unsafe_bucket_size 
+##  <a name="unsafe_bucket_size"></a>unsafe_bucket_size 
 
  Retourne le nombre d’éléments dans un compartiment spécifique de ce conteneur.  
   
@@ -640,7 +648,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de compartiments dans ce conteneur.  
   
-##  <a name="a-nameunsafecbegina-unsafecbegin"></a><a name="unsafe_cbegin"></a>unsafe_cbegin 
+##  <a name="unsafe_cbegin"></a>unsafe_cbegin 
 
  Retourne un itérateur au premier élément dans ce conteneur pour un compartiment spécifique.  
   
@@ -655,7 +663,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur qui pointe vers le début de la plage.  
   
-##  <a name="a-nameunsafecenda-unsafecend"></a><a name="unsafe_cend"></a>unsafe_cend 
+##  <a name="unsafe_cend"></a>unsafe_cend 
 
  Retourne un itérateur vers l’emplacement suivant le dernier élément dans un compartiment spécifique.  
   
@@ -670,7 +678,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur qui pointe vers le début de la plage.  
   
-##  <a name="a-nameunsafeenda-unsafeend"></a><a name="unsafe_end"></a>unsafe_end 
+##  <a name="unsafe_end"></a>unsafe_end 
 
  Retourne un itérateur au dernier élément dans ce conteneur pour un compartiment spécifique.  
   
@@ -687,7 +695,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur qui pointe vers la fin de la plage.  
   
-##  <a name="a-nameunsafeerasea-unsafeerase"></a><a name="unsafe_erase"></a>unsafe_erase 
+##  <a name="unsafe_erase"></a>unsafe_erase 
 
  Supprime les éléments à partir de la `concurrent_unordered_map` positions spécifiées. Cette méthode n’est pas concurrentiel.  
   
@@ -719,12 +727,12 @@ size_type unsafe_erase(
 ### <a name="return-value"></a>Valeur de retour  
  Les première deux fonctions membres retournent un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou `concurrent_unordered_map::end`() si cet élément n’existe. La troisième fonction membre retourne le nombre d’éléments à que supprimer.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La première fonction membre supprime l’élément de la séquence contrôlée vers lequel pointé `_Where`. La seconde fonction membre supprime les éléments de la plage [ `_Begin`, `_End`).  
   
  La troisième fonction membre supprime les éléments de la plage délimitée par `concurrent_unordered_map::equal_range`(KVal).  
   
-##  <a name="a-nameunsafemaxbucketcounta-unsafemaxbucketcount"></a><a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count 
+##  <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count 
 
  Retourne le nombre maximal de compartiments dans ce conteneur.  
   

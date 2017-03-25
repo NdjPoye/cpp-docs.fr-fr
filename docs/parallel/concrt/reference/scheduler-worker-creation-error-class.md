@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::scheduler_worker_creation_error
+- scheduler_worker_creation_error
+- CONCRT/concurrency::scheduler_worker_creation_error
+- CONCRT/concurrency::scheduler_worker_creation_error::scheduler_worker_creation_error
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c880ed65ef9e01c7eebdd2de45598a41763da57c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: aee9d72447aca692fa25d675bdc5f727fa5b5c15
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error, classe
@@ -54,7 +56,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
 |Nom|Description|  
 |----------|-----------------|  
-|[scheduler_worker_creation_error, constructeur](#ctor)|Surchargé. Construit un objet `scheduler_worker_creation_error`.|  
+|[scheduler_worker_creation_error](#ctor)|Surchargé. Construit un objet `scheduler_worker_creation_error`.|  
   
 ## <a name="remarks"></a>Remarques  
  Cette exception est généralement levée lorsqu’un appel au système d’exploitation pour créer des contextes d’exécution dans le Runtime d’accès concurrentiel échoue. Contextes d’exécution sont des threads qui exécutent des tâches dans le Runtime d’accès concurrentiel. Le code d’erreur qui devrait normalement être retourné à partir d’un appel à la méthode Win32 `GetLastError` est convertie en une valeur de type `HRESULT` et peut être récupéré à l’aide de la méthode de classe de base `get_error_code`.  
@@ -71,7 +73,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-namectora-schedulerworkercreationerror"></a><a name="ctor"></a>scheduler_worker_creation_error 
+##  <a name="ctor"></a>scheduler_worker_creation_error 
 
  Construit un objet `scheduler_worker_creation_error`.  
   

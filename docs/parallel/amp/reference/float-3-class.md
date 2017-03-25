@@ -102,9 +102,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 9e1225c724d2c89dd2a6c4158446b6a4df195f6c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2cd5e44d60ce02a1acf781812a0cc72e1e7657cf
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="float3-class"></a>float_3, classe
@@ -134,55 +134,55 @@ class float_3;
   
 |Nom|Description|  
 |----------|-----------------|  
-|float_3::get_X (méthode)||  
-|float_3::get_xy (méthode)||  
-|float_3::get_xyz (méthode)||  
-|float_3::get_xz (méthode)||  
-|float_3::get_xzy (méthode)||  
-|float_3::get_y (méthode)||  
-|float_3::get_yx (méthode)||  
-|float_3::get_yxz (méthode)||  
-|float_3::get_yz (méthode)||  
-|float_3::get_yzx (méthode)||  
-|float_3::get_z (méthode)||  
-|float_3::get_zx (méthode)||  
-|float_3::get_zxy (méthode)||  
-|float_3::get_zy (méthode)||  
-|float_3::get_zyx (méthode)||  
-|float_3::ref_b (méthode)||  
-|float_3::ref_g (méthode)||  
-|float_3::ref_r (méthode)||  
-|float_3::ref_x (méthode)||  
-|float_3::ref_y (méthode)||  
-|float_3::ref_z (méthode)||  
-|float_3::set_X (méthode)||  
-|float_3::set_xy (méthode)||  
-|float_3::set_xyz (méthode)||  
-|float_3::set_xz (méthode)||  
-|float_3::set_xzy (méthode)||  
-|float_3::set_y (méthode)||  
-|float_3::set_yx (méthode)||  
-|float_3::set_yxz (méthode)||  
-|float_3::set_yz (méthode)||  
-|float_3::set_yzx (méthode)||  
-|float_3::set_z (méthode)||  
-|float_3::set_zx (méthode)||  
-|float_3::set_zxy (méthode)||  
-|float_3::set_zy (méthode)||  
-|float_3::set_zyx (méthode)||  
+|float_3::get_X||  
+|float_3::get_xy||  
+|float_3::get_xyz||  
+|float_3::get_xz||  
+|float_3::get_xzy||  
+|float_3::get_y||  
+|float_3::get_yx||  
+|float_3::get_yxz||  
+|float_3::get_yz||  
+|float_3::get_yzx||  
+|float_3::get_z||  
+|float_3::get_zx||  
+|float_3::get_zxy||  
+|float_3::get_zy||  
+|float_3::get_zyx||  
+|float_3::ref_b||  
+|float_3::ref_g||  
+|float_3::ref_r||  
+|float_3::ref_x||  
+|float_3::ref_y||  
+|float_3::ref_z||  
+|float_3::set_X||  
+|float_3::set_xy||  
+|float_3::set_xyz||  
+|float_3::set_xz||  
+|float_3::set_xzy||  
+|float_3::set_y||  
+|float_3::set_yx||  
+|float_3::set_yxz||  
+|float_3::set_yz||  
+|float_3::set_yzx||  
+|float_3::set_z||  
+|float_3::set_zx||  
+|float_3::set_zxy||  
+|float_3::set_zy||  
+|float_3::set_zyx||  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|float_3::operator-(opérateur)||  
-|float_3::operator--(opérateur)||  
-|float_3::operator * =, opérateur||  
-|float_3::operator / =, opérateur||  
-|float_3::operator ++ (opérateur)||  
-|float_3::operator +=, opérateur||  
-|float_3::operator =, opérateur||  
-|float_3::operator-= (opérateur)||  
+|float_3::operator-||  
+|float_3::operator--||  
+|float_3::operator * =||  
+|/ = float_3::operator||  
+|float_3::operator ++||  
+|float_3::operator +=||  
+|float_3::operator =||  
+|float_3::operator =||  
   
 ### <a name="public-constants"></a>Constantes publiques  
   
@@ -194,36 +194,36 @@ class float_3;
   
 |Nom|Description|  
 |----------|-----------------|  
-|Membre de données float_3::b||  
-|Membre de données float_3::BG||  
-|Membre de données float_3::BGR||  
-|Membre de données float_3::br||  
-|Membre de données float_3::brg||  
-|Membre de données float_3::g||  
-|Membre de données float_3::GB||  
-|Membre de données float_3::GBR||  
-|Membre de données float_3::GR||  
-|Membre de données float_3::grb||  
-|Membre de données float_3::r||  
-|Membre de données float_3::RB||  
-|Membre de données float_3::rbg||  
-|Membre de données float_3::RG||  
-|Membre de données float_3::RGB||  
-|Membre de données float_3::x||  
-|Membre de données float_3::XY||  
-|Membre de données float_3::XYZ||  
-|Membre de données float_3::XZ||  
-|Membre de données float_3::xzy||  
-|Membre de données float_3::y||  
-|Membre de données float_3::YX||  
-|Membre de données float_3::yxz||  
-|Membre de données float_3::YZ||  
-|Membre de données float_3::yzx||  
-|Membre de données float_3::z||  
-|Membre de données float_3::ZX||  
-|Membre de données float_3::zxy||  
-|Membre de données float_3::ZY||  
-|Membre de données float_3::ZYX||  
+|float_3::b||  
+|float_3::BG||  
+|float_3::BGR||  
+|float_3::br||  
+|float_3::brg||  
+|float_3::g||  
+|float_3::GB||  
+|float_3::GBR||  
+|float_3::GR||  
+|float_3::grb||  
+|float_3::r||  
+|float_3::RB||  
+|float_3::rbg||  
+|float_3::RG||  
+|float_3::RGB||  
+|float_3::x||  
+|float_3::XY||  
+|float_3::XYZ||  
+|float_3::XZ||  
+|float_3::xzy||  
+|float_3::y||  
+|float_3::YX||  
+|float_3::yxz||  
+|float_3::YZ||  
+|float_3::yzx||  
+|float_3::z||  
+|float_3::ZX||  
+|float_3::zxy||  
+|float_3::ZY||  
+|float_3::ZYX||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `float_3`  
@@ -233,7 +233,7 @@ class float_3;
   
  **Namespace :** Concurrency::graphics  
   
-##  <a name="a-namectora-float3"></a><a name="ctor"></a>float_3 
+##  <a name="ctor"></a>float_3 
 
  Par défaut constructeur initialise tous les éléments à 0.  
   
@@ -300,12 +300,12 @@ explicit inline float_3(
  `_Other`  
  Objet utilisé pour initialiser.  
   
-##  <a name="a-namefloat3sizea-size"></a><a name="float_3__size"></a>taille 
+##  <a name="float_3__size"></a>taille 
 
 ```  
 static const int size = 3;  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
 

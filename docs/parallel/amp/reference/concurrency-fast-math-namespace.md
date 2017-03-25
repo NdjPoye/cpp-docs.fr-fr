@@ -32,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 293452bf0a01f7f83a8a41bcb511bc57c9d45f26
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d8a94b0911b772f4972416722757bec24a4826ed
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math, espace de noms
@@ -52,71 +52,71 @@ namespace fast_math;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[COS (fonction) (fast_math)](concurrency-fast-math-namespace-functions.md#cos)|Calcule l’arc cosinus de l’argument|  
-|[cosf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#cosf)|Calcule l’arc cosinus de l’argument|  
-|[ASIN, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#asin)|Calcule l’arc sinus de l’argument|  
-|[asinf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#asinf)|Calcule l’arc sinus de l’argument|  
-|[ATAN, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#atan)|Calcule l’arc tangente de l’argument|  
-|[ATAN2, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#atan2)|Calcule l’arc tangente de _Y/_X|  
-|[atan2f, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#atan2f)|Calcule l’arc tangente de _Y/_X|  
-|[atanf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#atanf)|Calcule l’arc tangente de l’argument|  
-|[ceil, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#ceil)|Calcule le plafond de l’argument|  
-|[ceilf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#ceilf)|Calcule le plafond de l’argument|  
-|[COS (fonction) (fast_math)](concurrency-fast-math-namespace-functions.md#cos)|Calcule le cosinus de l’argument|  
-|[cosf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#cosf)|Calcule le cosinus de l’argument|  
-|[COSH, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#cosh)|Calcule la valeur de cosinus hyperbolique de l’argument|  
-|[coshf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#coshf)|Calcule la valeur de cosinus hyperbolique de l’argument|  
-|[EXP, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#exp)|Calcule la valeur exponentielle de l’argument de base e|  
-|[exp2, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#exp2)|Calcule la valeur exponentielle de l’argument base-2|  
-|[exp2f, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#exp2f)|Calcule la valeur exponentielle de l’argument base-2|  
-|[expf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#expf)|Calcule la valeur exponentielle de l’argument de base e|  
-|[fabs, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#fabs)|Retourne la valeur absolue de l’argument|  
-|[fabsf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#fabsf)|Retourne la valeur absolue de l’argument|  
-|[Floor, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#floor)|Calcule le plancher de l’argument|  
-|[floorf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#floorf)|Calcule le plancher de l’argument|  
-|[Fmax, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#fmax)|Déterminer la valeur numérique maximale des arguments|  
-|[fmaxf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#fmaxf)|Déterminer la valeur numérique maximale des arguments|  
-|[fmin, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#fmin)|Déterminer la valeur numérique minimale des arguments|  
-|[fminf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#fminf)|Déterminer la valeur numérique minimale des arguments|  
-|[fmod, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#fmod)|Calcule le reste à virgule flottante de _X/_Y|  
-|[fmodf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#fmodf)|Calcule le reste à virgule flottante de _X/_Y|  
-|[frexp, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#frexp)|Obtient la mantisse et l’exposant de _X|  
-|[frexpf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#frexpf)|Obtient la mantisse et l’exposant de _X|  
-|[isFinite, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#isfinite)|Détermine si l’argument a une valeur finie|  
-|[isinf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#isinf)|Détermine si l’argument est une infinité|  
-|[isNaN, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#isnan)|Détermine si l’argument est une valeur NaN|  
-|[ldexp, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#ldexp)|Calcule le nombre réel de la mantisse et exposant|  
-|[ldexpf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#ldexpf)|Calcule le nombre réel de la mantisse et exposant|  
-|[log, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#log)|Calcule le logarithme de base e de l’argument|  
-|[LOG10, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#log10)|Calcule le logarithme en base&10; de l’argument|  
-|[log10f, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#log10f)|Calcule le logarithme en base&10; de l’argument|  
-|[LOG2, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#log2)|Calcule le logarithme base&2; de l’argument|  
-|[log2f, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#log2f)|Calcule le logarithme base&2; de l’argument|  
-|[logf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#logf)|Calcule le logarithme de base e de l’argument|  
-|[modf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#modf)|Fractionne _X en une fraction et un nombre entier.|  
-|[modff, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#modff)|Fractionne _X en une fraction et un nombre entier.|  
-|[pow (fonction) (fast_math)](concurrency-fast-math-namespace-functions.md#pow)|Calcule _X élevé à la puissance de _Y|  
-|[powf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#powf)|Calcule _X élevé à la puissance de _Y|  
-|[Round, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#round)|Arrondit _X à l’entier le plus proche|  
-|[roundf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#roundf)|Arrondit _X à l’entier le plus proche|  
-|[rsqrt, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#rsqrt)|Retourne l’inverse de la racine carrée de l’argument|  
-|[rsqrtf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#rsqrtf)|Retourne l’inverse de la racine carrée de l’argument|  
-|[signbit, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#signbit)|Retourne le signe de l’argument|  
-|[signbitf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#signbitf)|Retourne le signe de l’argument|  
-|[sin, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#sin)|Calcule la valeur du sinus de l’argument|  
-|[sincos, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#sincos)|Calcule le sinus et le cosinus valeur _X|  
-|[sincosf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#sincosf)|Calcule le sinus et le cosinus valeur _X|  
-|[Sinf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#sinf)|Calcule la valeur du sinus de l’argument|  
-|[SINH, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#sinh)|Calcule la valeur du sinus hyperbolique de l’argument|  
-|[sinhf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#sinhf)|Calcule la valeur du sinus hyperbolique de l’argument|  
-|[SQRT, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#sqrt)|Calcule la racine carrée de l’argument|  
-|[sqrtf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#sqrtf)|Calcule la racine carrée de l’argument|  
-|[tan, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#tan)|Calcule la valeur de l’argument de tangente|  
-|[tanf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#tanf)|Calcule la valeur de l’argument de tangente|  
-|[TANH, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#tanh)|Calcule la valeur de la tangente hyperbolique de l’argument|  
-|[tanhf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#tanhf)|Calcule la valeur de la tangente hyperbolique de l’argument|  
-|[trunc, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#trunc)|Tronque l’argument pour le composant entier|  
-|[truncf, fonction (fast_math)](concurrency-fast-math-namespace-functions.md#truncf)|Tronque l’argument pour le composant entier|  
+|[cos](concurrency-fast-math-namespace-functions.md#cos)|Calcule l’arc cosinus de l’argument|  
+|[cosf](concurrency-fast-math-namespace-functions.md#cosf)|Calcule l’arc cosinus de l’argument|  
+|[asin](concurrency-fast-math-namespace-functions.md#asin)|Calcule l’arc sinus de l’argument|  
+|[asinf](concurrency-fast-math-namespace-functions.md#asinf)|Calcule l’arc sinus de l’argument|  
+|[atan](concurrency-fast-math-namespace-functions.md#atan)|Calcule l’arc tangente de l’argument|  
+|[atan2](concurrency-fast-math-namespace-functions.md#atan2)|Calcule l’arc tangente de _Y/_X|  
+|[atan2f](concurrency-fast-math-namespace-functions.md#atan2f)|Calcule l’arc tangente de _Y/_X|  
+|[atanf](concurrency-fast-math-namespace-functions.md#atanf)|Calcule l’arc tangente de l’argument|  
+|[ceil](concurrency-fast-math-namespace-functions.md#ceil)|Calcule le plafond de l’argument|  
+|[ceilf](concurrency-fast-math-namespace-functions.md#ceilf)|Calcule le plafond de l’argument|  
+|[cos](concurrency-fast-math-namespace-functions.md#cos)|Calcule le cosinus de l’argument|  
+|[cosf](concurrency-fast-math-namespace-functions.md#cosf)|Calcule le cosinus de l’argument|  
+|[cosh](concurrency-fast-math-namespace-functions.md#cosh)|Calcule la valeur de cosinus hyperbolique de l’argument|  
+|[coshf](concurrency-fast-math-namespace-functions.md#coshf)|Calcule la valeur de cosinus hyperbolique de l’argument|  
+|[exp](concurrency-fast-math-namespace-functions.md#exp)|Calcule la valeur exponentielle de l’argument de base e|  
+|[exp2](concurrency-fast-math-namespace-functions.md#exp2)|Calcule la valeur exponentielle de l’argument base-2|  
+|[exp2f](concurrency-fast-math-namespace-functions.md#exp2f)|Calcule la valeur exponentielle de l’argument base-2|  
+|[expf](concurrency-fast-math-namespace-functions.md#expf)|Calcule la valeur exponentielle de l’argument de base e|  
+|[fabs](concurrency-fast-math-namespace-functions.md#fabs)|Retourne la valeur absolue de l’argument|  
+|[fabsf](concurrency-fast-math-namespace-functions.md#fabsf)|Retourne la valeur absolue de l’argument|  
+|[floor](concurrency-fast-math-namespace-functions.md#floor)|Calcule le plancher de l’argument|  
+|[floorf](concurrency-fast-math-namespace-functions.md#floorf)|Calcule le plancher de l’argument|  
+|[fmax](concurrency-fast-math-namespace-functions.md#fmax)|Déterminer la valeur numérique maximale des arguments|  
+|[fmaxf](concurrency-fast-math-namespace-functions.md#fmaxf)|Déterminer la valeur numérique maximale des arguments|  
+|[fmin](concurrency-fast-math-namespace-functions.md#fmin)|Déterminer la valeur numérique minimale des arguments|  
+|[fminf](concurrency-fast-math-namespace-functions.md#fminf)|Déterminer la valeur numérique minimale des arguments|  
+|[fmod](concurrency-fast-math-namespace-functions.md#fmod)|Calcule le reste à virgule flottante de _X/_Y|  
+|[fmodf](concurrency-fast-math-namespace-functions.md#fmodf)|Calcule le reste à virgule flottante de _X/_Y|  
+|[frexp](concurrency-fast-math-namespace-functions.md#frexp)|Obtient la mantisse et l’exposant de _X|  
+|[frexpf](concurrency-fast-math-namespace-functions.md#frexpf)|Obtient la mantisse et l’exposant de _X|  
+|[isFinite](concurrency-fast-math-namespace-functions.md#isfinite)|Détermine si l’argument a une valeur finie|  
+|[isinf](concurrency-fast-math-namespace-functions.md#isinf)|Détermine si l’argument est une infinité|  
+|[isnan](concurrency-fast-math-namespace-functions.md#isnan)|Détermine si l’argument est une valeur NaN|  
+|[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|Calcule le nombre réel de la mantisse et exposant|  
+|[ldexpf](concurrency-fast-math-namespace-functions.md#ldexpf)|Calcule le nombre réel de la mantisse et exposant|  
+|[log](concurrency-fast-math-namespace-functions.md#log)|Calcule le logarithme de base e de l’argument|  
+|[log10](concurrency-fast-math-namespace-functions.md#log10)|Calcule le logarithme en base&10; de l’argument|  
+|[log10f](concurrency-fast-math-namespace-functions.md#log10f)|Calcule le logarithme en base&10; de l’argument|  
+|[log2](concurrency-fast-math-namespace-functions.md#log2)|Calcule le logarithme base&2; de l’argument|  
+|[log2f](concurrency-fast-math-namespace-functions.md#log2f)|Calcule le logarithme base&2; de l’argument|  
+|[logf](concurrency-fast-math-namespace-functions.md#logf)|Calcule le logarithme de base e de l’argument|  
+|[modf](concurrency-fast-math-namespace-functions.md#modf)|Fractionne _X en une fraction et un nombre entier.|  
+|[modff](concurrency-fast-math-namespace-functions.md#modff)|Fractionne _X en une fraction et un nombre entier.|  
+|[pow](concurrency-fast-math-namespace-functions.md#pow)|Calcule _X élevé à la puissance de _Y|  
+|[powf](concurrency-fast-math-namespace-functions.md#powf)|Calcule _X élevé à la puissance de _Y|  
+|[round](concurrency-fast-math-namespace-functions.md#round)|Arrondit _X à l’entier le plus proche|  
+|[roundf](concurrency-fast-math-namespace-functions.md#roundf)|Arrondit _X à l’entier le plus proche|  
+|[rsqrt](concurrency-fast-math-namespace-functions.md#rsqrt)|Retourne l’inverse de la racine carrée de l’argument|  
+|[rsqrtf](concurrency-fast-math-namespace-functions.md#rsqrtf)|Retourne l’inverse de la racine carrée de l’argument|  
+|[signbit](concurrency-fast-math-namespace-functions.md#signbit)|Retourne le signe de l’argument|  
+|[signbitf](concurrency-fast-math-namespace-functions.md#signbitf)|Retourne le signe de l’argument|  
+|[sin](concurrency-fast-math-namespace-functions.md#sin)|Calcule la valeur du sinus de l’argument|  
+|[sincos](concurrency-fast-math-namespace-functions.md#sincos)|Calcule le sinus et le cosinus valeur _X|  
+|[sincosf](concurrency-fast-math-namespace-functions.md#sincosf)|Calcule le sinus et le cosinus valeur _X|  
+|[sinf](concurrency-fast-math-namespace-functions.md#sinf)|Calcule la valeur du sinus de l’argument|  
+|[sinh](concurrency-fast-math-namespace-functions.md#sinh)|Calcule la valeur du sinus hyperbolique de l’argument|  
+|[sinhf](concurrency-fast-math-namespace-functions.md#sinhf)|Calcule la valeur du sinus hyperbolique de l’argument|  
+|[sqrt](concurrency-fast-math-namespace-functions.md#sqrt)|Calcule la racine carrée de l’argument|  
+|[sqrtf](concurrency-fast-math-namespace-functions.md#sqrtf)|Calcule la racine carrée de l’argument|  
+|[tan](concurrency-fast-math-namespace-functions.md#tan)|Calcule la valeur de l’argument de tangente|  
+|[tanf](concurrency-fast-math-namespace-functions.md#tanf)|Calcule la valeur de l’argument de tangente|  
+|[tanh](concurrency-fast-math-namespace-functions.md#tanh)|Calcule la valeur de la tangente hyperbolique de l’argument|  
+|[tanhf](concurrency-fast-math-namespace-functions.md#tanhf)|Calcule la valeur de la tangente hyperbolique de l’argument|  
+|[trunc](concurrency-fast-math-namespace-functions.md#trunc)|Tronque l’argument pour le composant entier|  
+|[truncf](concurrency-fast-math-namespace-functions.md#truncf)|Tronque l’argument pour le composant entier|  
 
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_math.h  
@@ -124,5 +124,5 @@ namespace fast_math;
  **Namespace :** Concurrency::fast_math  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accès concurrentiel Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

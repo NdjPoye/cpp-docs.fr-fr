@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::combinable
+- combinable
+- PPL/concurrency::combinable
+- PPL/concurrency::combinable::combinable
+- PPL/concurrency::combinable::clear
+- PPL/concurrency::combinable::combine
+- PPL/concurrency::combinable::combine_each
+- PPL/concurrency::combinable::local
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 4ed3ce3d441566a0fb301d01123335846d86a8af
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a491f8eef59978808608917531a5237cceacdb21
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="combinable-class"></a>combinable, classe
@@ -59,25 +65,25 @@ class combinable;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Constructeur combinable](#ctor)|Surchargé. Construit un nouveau `combinable` objet.|  
+|[combinable](#ctor)|Surchargé. Construit un nouveau `combinable` objet.|  
 |[~ combinable, destructeur](#dtor)|Détruit un objet `combinable`.|  
   
 ### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Clear (méthode)](#clear)|Efface les résultats de calcul intermédiaires d’une utilisation précédente.|  
-|[Combine (méthode)](#combine)|Calcule une valeur finale du jeu de sous-calculs locaux de thread en appelant la fonction d’association fournie.|  
-|[combine_each (méthode)](#combine_each)|Calcule une valeur finale du jeu de sous-calculs locaux de thread en appelant la fonction d’association fournie une fois par sous-calcul de thread local. Le résultat final est accumulé par l’objet de fonction.|  
-|[local (méthode)](#local)|Surchargé. Retourne une référence au sous-calcul de thread privé.|  
+|[clear](#clear)|Efface les résultats de calcul intermédiaires d’une utilisation précédente.|  
+|[combine](#combine)|Calcule une valeur finale du jeu de sous-calculs locaux de thread en appelant la fonction d’association fournie.|  
+|[combine_each](#combine_each)|Calcule une valeur finale du jeu de sous-calculs locaux de thread en appelant la fonction d’association fournie une fois par sous-calcul de thread local. Le résultat final est accumulé par l’objet de fonction.|  
+|[local](#local)|Surchargé. Retourne une référence au sous-calcul de thread privé.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[opérateur =, opérateur](#operator_eq)|Attribue à un `combinable` objet à partir d’un autre `combinable` objet.|  
+|[operator=](#operator_eq)|Attribue à un `combinable` objet à partir d’un autre `combinable` objet.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
@@ -88,7 +94,7 @@ class combinable;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>Effacer 
+##  <a name="clear"></a>Effacer 
 
  Efface les résultats de calcul intermédiaires d’une utilisation précédente.  
   
@@ -96,7 +102,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="a-namectora-combinable"></a><a name="ctor"></a>combinable 
+##  <a name="ctor"></a>combinable 
 
  Construit un nouveau `combinable` objet.  
   
@@ -119,14 +125,14 @@ combinable(const combinable& _Copy);
  `_Copy`  
  Existant `combinable` objet à copier dans celui-ci.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le premier constructeur initialise de nouveaux éléments avec le constructeur par défaut pour le type `T`.  
   
  Le deuxième constructeur initialise de nouveaux éléments à l’aide du functor d’initialisation fourni comme le `_FnInitialize` paramètre.  
   
  Le troisième constructeur est le constructeur de copie.  
   
-##  <a name="a-namedtora-combinable"></a><a name="dtor"></a>~ combinable 
+##  <a name="dtor"></a>~ combinable 
 
  Détruit un objet `combinable`.  
   
@@ -134,7 +140,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="a-namecombinea-combine"></a><a name="combine"></a>combiner 
+##  <a name="combine"></a>combiner 
 
  Calcule une valeur finale du jeu de sous-calculs locaux de thread en appelant la fonction d’association fournie.  
   
@@ -153,7 +159,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>Valeur de retour  
  Le résultat final de la combinaison de tous les threads sous-calculs.  
   
-##  <a name="a-namecombineeacha-combineeach"></a><a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a>combine_each 
 
  Calcule une valeur finale du jeu de sous-calculs locaux de thread en appelant la fonction d’association fournie une fois par sous-calcul de thread local. Le résultat final est accumulé par l’objet de fonction.  
   
@@ -169,7 +175,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  Functor utilisé pour combiner un sous-calcul. Sa signature est `void (T)` ou `void (const T&)`et doit être associative et commutative.  
   
-##  <a name="a-namelocala-local"></a><a name="local"></a>local 
+##  <a name="local"></a>local 
 
  Retourne une référence au sous-calcul de thread privé.  
   
@@ -186,7 +192,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>Valeur de retour  
  Une référence au sous-calcul de thread privé.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>opérateur = 
+##  <a name="operator_eq"></a>opérateur = 
 
  Attribue à un `combinable` objet à partir d’un autre `combinable` objet.  
   

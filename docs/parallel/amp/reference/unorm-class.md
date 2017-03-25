@@ -9,8 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_short_vectors/Concurrency::graphics::unorm
-- amp/Concurrency::graphics::unorm
+- unorm
+- AMP_SHORT_VECTORS/unorm
+- AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 dev_langs:
 - C++
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
@@ -34,9 +35,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: aae5de80bed3b2d3d5c15285c2d12f2f6771a251
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 6817568b7dc111776033e935fd2ba3ad5dc4a69a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="unorm-class"></a>unorm, classe
@@ -60,14 +61,14 @@ class unorm;
   
 |Nom|Description|  
 |----------|-----------------|  
-|unorm::operator--(opérateur)||  
-|unorm::operator float (opérateur)|Opérateur de conversion. Convertissez le nombre d’unorm flottante la valeur de point.|  
-|unorm::operator * =, opérateur||  
-|unorm::operator / =, opérateur||  
-|unorm::operator ++ (opérateur)||  
-|unorm::operator +=, opérateur||  
-|unorm::operator =, opérateur||  
-|unorm::operator-= (opérateur)||  
+|unorm::operator--||  
+|unorm::operator float|Opérateur de conversion. Convertissez le nombre d’unorm flottante la valeur de point.|  
+|unorm::operator * =||  
+|/ = unorm::operator||  
+|unorm::operator ++||  
+|unorm::operator +=||  
+|unorm::operator =||  
+|unorm::operator =||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `unorm`  
@@ -77,7 +78,7 @@ class unorm;
   
  **Namespace :** Concurrency::graphics  
   
-##  <a name="a-namectora-unorm"></a><a name="ctor"></a>unorm 
+##  <a name="ctor"></a>unorm 
 
  Constructeur par défaut. Initialiser à 0.0f.  
   
@@ -125,5 +126,5 @@ inline explicit unorm(
  L’objet de la norme utilisée pour initialiser.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
 

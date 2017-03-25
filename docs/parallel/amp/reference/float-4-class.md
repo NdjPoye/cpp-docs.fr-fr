@@ -296,9 +296,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8294aa587c750a21de7d7ebda18e1927a1feccc1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: cfaf6e784779557fcdad630a6e6b339e5ea65614
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="float4-class"></a>float_4, classe
@@ -328,155 +328,155 @@ class float_4;
   
 |Nom|Description|  
 |----------|-----------------|  
-|float_4::get_w (méthode)||  
-|float_4::get_wx (méthode)||  
-|float_4::get_wxy (méthode)||  
-|float_4::get_wxyz (méthode)||  
-|float_4::get_wxz (méthode)||  
-|float_4::get_wxzy (méthode)||  
-|float_4::get_wy (méthode)||  
-|float_4::get_wyx (méthode)||  
-|float_4::get_wyxz (méthode)||  
-|float_4::get_wyz (méthode)||  
-|float_4::get_wyzx (méthode)||  
-|float_4::get_wz (méthode)||  
-|float_4::get_wzx (méthode)||  
-|float_4::get_wzxy (méthode)||  
-|float_4::get_wzy (méthode)||  
-|float_4::get_wzyx (méthode)||  
-|float_4::get_X (méthode)||  
-|float_4::get_xw (méthode)||  
-|float_4::get_xwy (méthode)||  
-|float_4::get_xwyz (méthode)||  
-|float_4::get_xwz (méthode)||  
-|float_4::get_xwzy (méthode)||  
-|float_4::get_xy (méthode)||  
-|float_4::get_xyw (méthode)||  
-|float_4::get_xywz (méthode)||  
-|float_4::get_xyz (méthode)||  
-|float_4::get_xyzw (méthode)||  
-|float_4::get_xz (méthode)||  
-|float_4::get_xzw (méthode)||  
-|float_4::get_xzwy (méthode)||  
-|float_4::get_xzy (méthode)||  
-|float_4::get_xzyw (méthode)||  
-|float_4::get_y (méthode)||  
-|float_4::get_yw (méthode)||  
-|float_4::get_ywx (méthode)||  
-|float_4::get_ywxz (méthode)||  
-|float_4::get_ywz (méthode)||  
-|float_4::get_ywzx (méthode)||  
-|float_4::get_yx (méthode)||  
-|float_4::get_yxw (méthode)||  
-|float_4::get_yxwz (méthode)||  
-|float_4::get_yxz (méthode)||  
-|float_4::get_yxzw (méthode)||  
-|float_4::get_yz (méthode)||  
-|float_4::get_yzw (méthode)||  
-|float_4::get_yzwx (méthode)||  
-|float_4::get_yzx (méthode)||  
-|float_4::get_yzxw (méthode)||  
-|float_4::get_z (méthode)||  
-|float_4::get_zw (méthode)||  
-|float_4::get_zwx (méthode)||  
-|float_4::get_zwxy (méthode)||  
-|float_4::get_zwy (méthode)||  
-|float_4::get_zwyx (méthode)||  
-|float_4::get_zx (méthode)||  
-|float_4::get_zxw (méthode)||  
-|float_4::get_zxwy (méthode)||  
-|float_4::get_zxy (méthode)||  
-|float_4::get_zxyw (méthode)||  
-|float_4::get_zy (méthode)||  
-|float_4::get_zyw (méthode)||  
-|float_4::get_zywx (méthode)||  
-|float_4::get_zyx (méthode)||  
-|float_4::get_zyxw (méthode)||  
-|float_4::ref_a (méthode)||  
-|float_4::ref_b (méthode)||  
-|float_4::ref_g (méthode)||  
-|float_4::ref_r (méthode)||  
-|float_4::ref_w (méthode)||  
-|float_4::ref_x (méthode)||  
-|float_4::ref_y (méthode)||  
-|float_4::ref_z (méthode)||  
-|float_4::set_w (méthode)||  
-|float_4::set_wx (méthode)||  
-|float_4::set_wxy (méthode)||  
-|float_4::set_wxyz (méthode)||  
-|float_4::set_wxz (méthode)||  
-|float_4::set_wxzy (méthode)||  
-|float_4::set_wy (méthode)||  
-|float_4::set_wyx (méthode)||  
-|float_4::set_wyxz (méthode)||  
-|float_4::set_wyz (méthode)||  
-|float_4::set_wyzx (méthode)||  
-|float_4::set_wz (méthode)||  
-|float_4::set_wzx (méthode)||  
-|float_4::set_wzxy (méthode)||  
-|float_4::set_wzy (méthode)||  
-|float_4::set_wzyx (méthode)||  
-|float_4::set_X (méthode)||  
-|float_4::set_xw (méthode)||  
-|float_4::set_xwy (méthode)||  
-|float_4::set_xwyz (méthode)||  
-|float_4::set_xwz (méthode)||  
-|float_4::set_xwzy (méthode)||  
-|float_4::set_xy (méthode)||  
-|float_4::set_xyw (méthode)||  
-|float_4::set_xywz (méthode)||  
-|float_4::set_xyz (méthode)||  
-|float_4::set_xyzw (méthode)||  
-|float_4::set_xz (méthode)||  
-|float_4::set_xzw (méthode)||  
-|float_4::set_xzwy (méthode)||  
-|float_4::set_xzy (méthode)||  
-|float_4::set_xzyw (méthode)||  
-|float_4::set_y (méthode)||  
-|float_4::set_yw (méthode)||  
-|float_4::set_ywx (méthode)||  
-|float_4::set_ywxz (méthode)||  
-|float_4::set_ywz (méthode)||  
-|float_4::set_ywzx (méthode)||  
-|float_4::set_yx (méthode)||  
-|float_4::set_yxw (méthode)||  
-|float_4::set_yxwz (méthode)||  
-|float_4::set_yxz (méthode)||  
-|float_4::set_yxzw (méthode)||  
-|float_4::set_yz (méthode)||  
-|float_4::set_yzw (méthode)||  
-|float_4::set_yzwx (méthode)||  
-|float_4::set_yzx (méthode)||  
-|float_4::set_yzxw (méthode)||  
-|float_4::set_z (méthode)||  
-|float_4::set_zw (méthode)||  
-|float_4::set_zwx (méthode)||  
-|float_4::set_zwxy (méthode)||  
-|float_4::set_zwy (méthode)||  
-|float_4::set_zwyx (méthode)||  
-|float_4::set_zx (méthode)||  
-|float_4::set_zxw (méthode)||  
-|float_4::set_zxwy (méthode)||  
-|float_4::set_zxy (méthode)||  
-|float_4::set_zxyw (méthode)||  
-|float_4::set_zy (méthode)||  
-|float_4::set_zyw (méthode)||  
-|float_4::set_zywx (méthode)||  
-|float_4::set_zyx (méthode)||  
-|float_4::set_zyxw (méthode)||  
+|float_4::get_w||  
+|float_4::get_wx||  
+|float_4::get_wxy||  
+|float_4::get_wxyz||  
+|float_4::get_wxz||  
+|float_4::get_wxzy||  
+|float_4::get_wy||  
+|float_4::get_wyx||  
+|float_4::get_wyxz||  
+|float_4::get_wyz||  
+|float_4::get_wyzx||  
+|float_4::get_wz||  
+|float_4::get_wzx||  
+|float_4::get_wzxy||  
+|float_4::get_wzy||  
+|float_4::get_wzyx||  
+|float_4::get_X||  
+|float_4::get_xw||  
+|float_4::get_xwy||  
+|float_4::get_xwyz||  
+|float_4::get_xwz||  
+|float_4::get_xwzy||  
+|float_4::get_xy||  
+|float_4::get_xyw||  
+|float_4::get_xywz||  
+|float_4::get_xyz||  
+|float_4::get_xyzw||  
+|float_4::get_xz||  
+|float_4::get_xzw||  
+|float_4::get_xzwy||  
+|float_4::get_xzy||  
+|float_4::get_xzyw||  
+|float_4::get_y||  
+|float_4::get_yw||  
+|float_4::get_ywx||  
+|float_4::get_ywxz||  
+|float_4::get_ywz||  
+|float_4::get_ywzx||  
+|float_4::get_yx||  
+|float_4::get_yxw||  
+|float_4::get_yxwz||  
+|float_4::get_yxz||  
+|float_4::get_yxzw||  
+|float_4::get_yz||  
+|float_4::get_yzw||  
+|float_4::get_yzwx||  
+|float_4::get_yzx||  
+|float_4::get_yzxw||  
+|float_4::get_z||  
+|float_4::get_zw||  
+|float_4::get_zwx||  
+|float_4::get_zwxy||  
+|float_4::get_zwy||  
+|float_4::get_zwyx||  
+|float_4::get_zx||  
+|float_4::get_zxw||  
+|float_4::get_zxwy||  
+|float_4::get_zxy||  
+|float_4::get_zxyw||  
+|float_4::get_zy||  
+|float_4::get_zyw||  
+|float_4::get_zywx||  
+|float_4::get_zyx||  
+|float_4::get_zyxw||  
+|float_4::ref_a||  
+|float_4::ref_b||  
+|float_4::ref_g||  
+|float_4::ref_r||  
+|float_4::ref_w||  
+|float_4::ref_x||  
+|float_4::ref_y||  
+|float_4::ref_z||  
+|float_4::set_w||  
+|float_4::set_wx||  
+|float_4::set_wxy||  
+|float_4::set_wxyz||  
+|float_4::set_wxz||  
+|float_4::set_wxzy||  
+|float_4::set_wy||  
+|float_4::set_wyx||  
+|float_4::set_wyxz||  
+|float_4::set_wyz||  
+|float_4::set_wyzx||  
+|float_4::set_wz||  
+|float_4::set_wzx||  
+|float_4::set_wzxy||  
+|float_4::set_wzy||  
+|float_4::set_wzyx||  
+|float_4::set_X||  
+|float_4::set_xw||  
+|float_4::set_xwy||  
+|float_4::set_xwyz||  
+|float_4::set_xwz||  
+|float_4::set_xwzy||  
+|float_4::set_xy||  
+|float_4::set_xyw||  
+|float_4::set_xywz||  
+|float_4::set_xyz||  
+|float_4::set_xyzw||  
+|float_4::set_xz||  
+|float_4::set_xzw||  
+|float_4::set_xzwy||  
+|float_4::set_xzy||  
+|float_4::set_xzyw||  
+|float_4::set_y||  
+|float_4::set_yw||  
+|float_4::set_ywx||  
+|float_4::set_ywxz||  
+|float_4::set_ywz||  
+|float_4::set_ywzx||  
+|float_4::set_yx||  
+|float_4::set_yxw||  
+|float_4::set_yxwz||  
+|float_4::set_yxz||  
+|float_4::set_yxzw||  
+|float_4::set_yz||  
+|float_4::set_yzw||  
+|float_4::set_yzwx||  
+|float_4::set_yzx||  
+|float_4::set_yzxw||  
+|float_4::set_z||  
+|float_4::set_zw||  
+|float_4::set_zwx||  
+|float_4::set_zwxy||  
+|float_4::set_zwy||  
+|float_4::set_zwyx||  
+|float_4::set_zx||  
+|float_4::set_zxw||  
+|float_4::set_zxwy||  
+|float_4::set_zxy||  
+|float_4::set_zxyw||  
+|float_4::set_zy||  
+|float_4::set_zyw||  
+|float_4::set_zywx||  
+|float_4::set_zyx||  
+|float_4::set_zyxw||  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|float_4::operator-(opérateur)||  
-|float_4::operator--(opérateur)||  
-|float_4::operator * =, opérateur||  
-|float_4::operator / =, opérateur||  
-|float_4::operator ++ (opérateur)||  
-|float_4::operator +=, opérateur||  
-|float_4::operator =, opérateur||  
-|float_4::operator-= (opérateur)||  
+|float_4::operator-||  
+|float_4::operator--||  
+|float_4::operator * =||  
+|/ = float_4::operator||  
+|float_4::operator ++||  
+|float_4::operator +=||  
+|float_4::operator =||  
+|float_4::operator =||  
   
 ### <a name="public-constants"></a>Constantes publiques  
   
@@ -488,134 +488,134 @@ class float_4;
   
 |Nom|Description|  
 |----------|-----------------|  
-|Membre de données float_4::a||  
-|Membre de données float_4::AB||  
-|Membre de données float_4::abg||  
-|Membre de données float_4::abgr||  
-|Membre de données float_4::ABR||  
-|Membre de données float_4::abrg||  
-|Membre de données float_4::AG||  
-|Membre de données float_4::agb||  
-|Membre de données float_4::agbr||  
-|Membre de données float_4::AGR||  
-|Membre de données float_4::agrb||  
-|Membre de données float_4::AR||  
-|Membre de données float_4::ARB||  
-|Membre de données float_4::arbg||  
-|Membre de données float_4::arg||  
-|Membre de données float_4::ARGB||  
-|Membre de données float_4::b||  
-|Membre de données float_4::BA||  
-|Membre de données float_4::bag||  
-|Membre de données float_4::bagr||  
-|Membre de données float_4::bar||  
-|Membre de données float_4::barg||  
-|Membre de données float_4::BG||  
-|Membre de données float_4::BGA||  
-|Membre de données float_4::bgar||  
-|Membre de données float_4::BGR||  
-|Membre de données float_4::bgra||  
-|Membre de données float_4::br||  
-|Membre de données float_4::BRA||  
-|Membre de données float_4::brag||  
-|Membre de données float_4::brg||  
-|Membre de données float_4::brga||  
-|Membre de données float_4::g||  
-|Membre de données float_4::GA||  
-|Membre de données float_4::GAB||  
-|Membre de données float_4::gabr||  
-|Membre de données float_4::gar||  
-|Membre de données float_4::garb||  
-|Membre de données float_4::GB||  
-|Membre de données float_4::GBA||  
-|Membre de données float_4::gbar||  
-|Membre de données float_4::GBR||  
-|Membre de données float_4::GBRA||  
-|Membre de données float_4::GR||  
-|Membre de données float_4::gra||  
-|Membre de données float_4::Grab||  
-|Membre de données float_4::grb||  
-|Membre de données float_4::grba||  
-|Membre de données float_4::r||  
-|Membre de données float_4::RA||  
-|Membre de données float_4::RAB||  
-|Membre de données float_4::rabg||  
-|Membre de données float_4::RAG||  
-|Membre de données float_4::ragb||  
-|Membre de données float_4::RB||  
-|Membre de données float_4::RBA||  
-|Membre de données float_4::rbag||  
-|Membre de données float_4::rbg||  
-|Membre de données float_4::rbga||  
-|Membre de données float_4::RG||  
-|Membre de données float_4::RGA||  
-|Membre de données float_4::rgab||  
-|Membre de données float_4::RGB||  
-|Membre de données float_4::RGBA||  
-|Membre de données float_4::w||  
-|Membre de données float_4::WX||  
-|Membre de données float_4::WXY||  
-|Membre de données float_4::wxyz||  
-|Membre de données float_4::wxz||  
-|Membre de données float_4::wxzy||  
-|Membre de données float_4::wY||  
-|Membre de données float_4::wyx||  
-|Membre de données float_4::wyxz||  
-|Membre de données float_4::WYZ||  
-|Membre de données float_4::wyzx||  
-|Membre de données float_4::wZ||  
-|Membre de données float_4::wzx||  
-|Membre de données float_4::wzxy||  
-|Membre de données float_4::wzy||  
-|Membre de données float_4::wzyx||  
-|Membre de données float_4::x||  
-|Membre de données float_4::XW||  
-|Membre de données float_4::xwy||  
-|Membre de données float_4::xwyz||  
-|Membre de données float_4::xwz||  
-|Membre de données float_4::xwzy||  
-|Membre de données float_4::XY||  
-|Membre de données float_4::xyw||  
-|Membre de données float_4::xywz||  
-|Membre de données float_4::XYZ||  
-|Membre de données float_4::xyzw||  
-|Membre de données float_4::XZ||  
-|Membre de données float_4::xzw||  
-|Membre de données float_4::xzwy||  
-|Membre de données float_4::xzy||  
-|Membre de données float_4::xzyw||  
-|Membre de données float_4::y||  
-|Membre de données float_4::yw||  
-|Membre de données float_4::ywx||  
-|Membre de données float_4::ywxz||  
-|Membre de données float_4::ywz||  
-|Membre de données float_4::ywzx||  
-|Membre de données float_4::YX||  
-|Membre de données float_4::yxw||  
-|Membre de données float_4::yxwz||  
-|Membre de données float_4::yxz||  
-|Membre de données float_4::yxzw||  
-|Membre de données float_4::YZ||  
-|Membre de données float_4::yzw||  
-|Membre de données float_4::yzwx||  
-|Membre de données float_4::yzx||  
-|Membre de données float_4::yzxw||  
-|Membre de données float_4::z||  
-|Membre de données float_4::zw||  
-|Membre de données float_4::zwx||  
-|Membre de données float_4::zwxy||  
-|Membre de données float_4::zwy||  
-|Membre de données float_4::zwyx||  
-|Membre de données float_4::ZX||  
-|Membre de données float_4::zxw||  
-|Membre de données float_4::zxwy||  
-|Membre de données float_4::zxy||  
-|Membre de données float_4::zxyw||  
-|Membre de données float_4::ZY||  
-|Membre de données float_4::zyw||  
-|Membre de données float_4::zywx||  
-|Membre de données float_4::ZYX||  
-|Membre de données float_4::zyxw||  
+|float_4::a||  
+|float_4::AB||  
+|float_4::abg||  
+|float_4::abgr||  
+|float_4::ABR||  
+|float_4::abrg||  
+|float_4::AG||  
+|float_4::agb||  
+|float_4::agbr||  
+|float_4::AGR||  
+|float_4::agrb||  
+|float_4::AR||  
+|float_4::ARB||  
+|float_4::arbg||  
+|float_4::arg||  
+|float_4::ARGB||  
+|float_4::b||  
+|float_4::BA||  
+|float_4::bag||  
+|float_4::bagr||  
+|float_4::bar||  
+|float_4::barg||  
+|float_4::BG||  
+|float_4::BGA||  
+|float_4::bgar||  
+|float_4::BGR||  
+|float_4::bgra||  
+|float_4::br||  
+|float_4::BRA||  
+|float_4::brag||  
+|float_4::brg||  
+|float_4::brga||  
+|float_4::g||  
+|float_4::GA||  
+|float_4::GAB||  
+|float_4::gabr||  
+|float_4::gar||  
+|float_4::garb||  
+|float_4::GB||  
+|float_4::GBA||  
+|float_4::gbar||  
+|float_4::GBR||  
+|float_4::GBRA||  
+|float_4::GR||  
+|float_4::gra||  
+|float_4::Grab||  
+|float_4::grb||  
+|float_4::grba||  
+|float_4::r||  
+|float_4::RA||  
+|float_4::RAB||  
+|float_4::rabg||  
+|float_4::RAG||  
+|float_4::ragb||  
+|float_4::RB||  
+|float_4::RBA||  
+|float_4::rbag||  
+|float_4::rbg||  
+|float_4::rbga||  
+|float_4::RG||  
+|float_4::RGA||  
+|float_4::rgab||  
+|float_4::RGB||  
+|float_4::RGBA||  
+|float_4::w||  
+|float_4::WX||  
+|float_4::WXY||  
+|float_4::wxyz||  
+|float_4::wxz||  
+|float_4::wxzy||  
+|float_4::wY||  
+|float_4::wyx||  
+|float_4::wyxz||  
+|float_4::WYZ||  
+|float_4::wyzx||  
+|float_4::wZ||  
+|float_4::wzx||  
+|float_4::wzxy||  
+|float_4::wzy||  
+|float_4::wzyx||  
+|float_4::x||  
+|float_4::XW||  
+|float_4::xwy||  
+|float_4::xwyz||  
+|float_4::xwz||  
+|float_4::xwzy||  
+|float_4::XY||  
+|float_4::xyw||  
+|float_4::xywz||  
+|float_4::XYZ||  
+|float_4::xyzw||  
+|float_4::XZ||  
+|float_4::xzw||  
+|float_4::xzwy||  
+|float_4::xzy||  
+|float_4::xzyw||  
+|float_4::y||  
+|float_4::yw||  
+|float_4::ywx||  
+|float_4::ywxz||  
+|float_4::ywz||  
+|float_4::ywzx||  
+|float_4::YX||  
+|float_4::yxw||  
+|float_4::yxwz||  
+|float_4::yxz||  
+|float_4::yxzw||  
+|float_4::YZ||  
+|float_4::yzw||  
+|float_4::yzwx||  
+|float_4::yzx||  
+|float_4::yzxw||  
+|float_4::z||  
+|float_4::zw||  
+|float_4::zwx||  
+|float_4::zwxy||  
+|float_4::zwy||  
+|float_4::zwyx||  
+|float_4::ZX||  
+|float_4::zxw||  
+|float_4::zxwy||  
+|float_4::zxy||  
+|float_4::zxyw||  
+|float_4::ZY||  
+|float_4::zyw||  
+|float_4::zywx||  
+|float_4::ZYX||  
+|float_4::zyxw||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `float_4`  
@@ -625,7 +625,7 @@ class float_4;
   
  **Namespace :** Concurrency::graphics  
   
-##  <a name="a-namectora-float4"></a><a name="ctor"></a>float_4 
+##  <a name="ctor"></a>float_4 
 
  Par défaut constructeur initialise tous les éléments à 0.  
   
@@ -696,12 +696,12 @@ explicit inline float_4(
  `_Other`  
  Objet utilisé pour initialiser.  
   
-##  <a name="a-namefloat4sizea-size"></a><a name="float_4__size"></a>taille 
+##  <a name="float_4__size"></a>taille 
 
 ```  
 static const int size = 4;  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
 

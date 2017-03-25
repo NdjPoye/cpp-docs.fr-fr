@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::message_processor
+- message_processor
+- AGENTS/concurrency::message_processor
+- AGENTS/concurrency::message_processor::async_send
+- AGENTS/concurrency::message_processor::sync_send
+- AGENTS/concurrency::message_processor::wait
+- AGENTS/concurrency::message_processor::process_incoming_message
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 98f1c1072916c4cf3670e40ce0c6ddd1a17f1b63
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: dff934584179cc58d884be65fdb96cb6c646a4ac
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="messageprocessor-class"></a>message_processor, classe
@@ -65,15 +70,15 @@ class message_processor;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[async_send (méthode)](#async_send)|En cas de substitution dans une classe dérivée, place les messages dans le bloc en mode asynchrone.|  
-|[sync_send (méthode)](#sync_send)|En cas de substitution dans une classe dérivée, place les messages dans le bloc synchrone.|  
-|[Wait (méthode)](#wait)|En cas de substitution dans une classe dérivée, attend que toutes les opérations asynchrones se termine.|  
+|[async_send](#async_send)|En cas de substitution dans une classe dérivée, place les messages dans le bloc en mode asynchrone.|  
+|[sync_send](#sync_send)|En cas de substitution dans une classe dérivée, place les messages dans le bloc synchrone.|  
+|[attente](#wait)|En cas de substitution dans une classe dérivée, attend que toutes les opérations asynchrones se termine.|  
   
 ### <a name="protected-methods"></a>Méthodes protégées  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[process_incoming_message (méthode)](#process_incoming_message)|En cas de substitution dans une classe dérivée, effectue le traitement de transfert des messages dans le bloc. Appelé à chaque fois qu’un nouveau message est ajouté et la file d’attente n’est pas vide.|  
+|[process_incoming_message](#process_incoming_message)|En cas de substitution dans une classe dérivée, effectue le traitement de transfert des messages dans le bloc. Appelé à chaque fois qu’un nouveau message est ajouté et la file d’attente n’est pas vide.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `message_processor`  
@@ -83,7 +88,7 @@ class message_processor;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-nameasyncsenda-asyncsend"></a><a name="async_send"></a>async_send 
+##  <a name="async_send"></a>async_send 
 
  En cas de substitution dans une classe dérivée, place les messages dans le bloc en mode asynchrone.  
   
@@ -98,7 +103,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Notes  
  Les implémentations de processeur doivent substituer cette méthode.  
   
-##  <a name="a-nameprocessincomingmessagea-processincomingmessage"></a><a name="process_incoming_message"></a>process_incoming_message 
+##  <a name="process_incoming_message"></a>process_incoming_message 
 
  En cas de substitution dans une classe dérivée, effectue le traitement de transfert des messages dans le bloc. Appelé à chaque fois qu’un nouveau message est ajouté et la file d’attente n’est pas vide.  
   
@@ -106,10 +111,10 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 virtual void process_incoming_message() = 0;
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Les implémentations de bloc de message doivent substituer cette méthode.  
   
-##  <a name="a-namesyncsenda-syncsend"></a><a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a>sync_send 
 
  En cas de substitution dans une classe dérivée, place les messages dans le bloc synchrone.  
   
@@ -124,7 +129,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Remarques  
  Les implémentations de processeur doivent substituer cette méthode.  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>attente 
+##  <a name="wait"></a>attente 
 
  En cas de substitution dans une classe dérivée, attend que toutes les opérations asynchrones se termine.  
   
@@ -132,7 +137,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 virtual void wait() = 0;
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les implémentations de processeur doivent substituer cette méthode.  
   
 ## <a name="see-also"></a>Voir aussi  

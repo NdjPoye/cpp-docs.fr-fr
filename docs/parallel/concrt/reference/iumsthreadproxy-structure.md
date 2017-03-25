@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSThreadProxy
+- IUMSThreadProxy
+- CONCRTRM/concurrency::IUMSThreadProxy
+- CONCRTRM/concurrency::IUMSThreadProxy::IUMSThreadProxy::EnterCriticalRegion
+- CONCRTRM/concurrency::IUMSThreadProxy::IUMSThreadProxy::EnterHyperCriticalRegion
+- CONCRTRM/concurrency::IUMSThreadProxy::IUMSThreadProxy::ExitCriticalRegion
+- CONCRTRM/concurrency::IUMSThreadProxy::IUMSThreadProxy::ExitHyperCriticalRegion
+- CONCRTRM/concurrency::IUMSThreadProxy::IUMSThreadProxy::GetCriticalRegionType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 55ed05f137775e819c81ce231cf8c8ad3a9974f3
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 46d486ddccce6f3c54627f3ea96f001e8e3bfcf7
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy, structure
@@ -54,11 +60,11 @@ struct IUMSThreadProxy : public IThreadProxy;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[IUMSThreadProxy::EnterCriticalRegion, méthode](#entercriticalregion)|Appelé pour accéder à une zone critique. À l’intérieur d’une zone critique, le planificateur ne sera pas équilibrée des opérations de blocage asynchrones qui peut se produisent au cours de la région. Cela signifie que le planificateur ne sera pas être réintroduite de défauts de page, arrêts de thread, les appels de procédure asynchrone du noyau (APC), etc., pour un thread UMS.|  
-|[IUMSThreadProxy::EnterHyperCriticalRegion, méthode](#enterhypercriticalregion)|Appelé pour accéder à une région hyper critique. Dans une région hyper-critique, le planificateur ne sera pas équilibrée des opérations de blocage qui se produisent lors de la région. Cela signifie que le planificateur ne sera pas réentré pour bloquer les appels de fonction, les tentatives d’acquisition de verrou qui se bloquent, défauts de page, thread suspensions, appels de procédure asynchrone de noyau (APC) et ainsi de suite, pour un UMS thread.|  
-|[IUMSThreadProxy::ExitCriticalRegion, méthode](#exitcriticalregion)|Appelé pour quitter une région critique.|  
-|[IUMSThreadProxy::ExitHyperCriticalRegion, méthode](#exithypercriticalregion)|Appelé pour quitter une région hyper critique.|  
-|[IUMSThreadProxy::GetCriticalRegionType, méthode](#getcriticalregiontype)|Retourne le type de région critique, le proxy de thread se trouve dans. Étant donné que Hyper-critiques sont un sur-ensemble de régions critiques, si le code a entré une région critique, puis une région hyper-critique, `InsideHyperCriticalRegion` sera retourné.|  
+|[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|Appelé pour accéder à une zone critique. À l’intérieur d’une zone critique, le planificateur ne sera pas équilibrée des opérations de blocage asynchrones qui peut se produisent au cours de la région. Cela signifie que le planificateur ne sera pas être réintroduite de défauts de page, arrêts de thread, les appels de procédure asynchrone du noyau (APC), etc., pour un thread UMS.|  
+|[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|Appelé pour accéder à une région hyper critique. Dans une région hyper-critique, le planificateur ne sera pas équilibrée des opérations de blocage qui se produisent lors de la région. Cela signifie que le planificateur ne sera pas réentré pour bloquer les appels de fonction, les tentatives d’acquisition de verrou qui se bloquent, défauts de page, thread suspensions, appels de procédure asynchrone de noyau (APC) et ainsi de suite, pour un UMS thread.|  
+|[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|Appelé pour quitter une région critique.|  
+|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|Appelé pour quitter une région hyper critique.|  
+|[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|Retourne le type de région critique, le proxy de thread se trouve dans. Étant donné que Hyper-critiques sont un sur-ensemble de régions critiques, si le code a entré une région critique, puis une région hyper-critique, `InsideHyperCriticalRegion` sera retourné.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [IThreadProxy](ithreadproxy-structure.md)  
@@ -70,7 +76,7 @@ struct IUMSThreadProxy : public IThreadProxy;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-nameentercriticalregiona--iumsthreadproxyentercriticalregion-method"></a><a name="entercriticalregion"></a>IUMSThreadProxy::EnterCriticalRegion, méthode  
+##  <a name="entercriticalregion"></a>IUMSThreadProxy::EnterCriticalRegion, méthode  
  Appelé pour accéder à une zone critique. À l’intérieur d’une zone critique, le planificateur ne sera pas équilibrée des opérations de blocage asynchrones qui peut se produisent au cours de la région. Cela signifie que le planificateur ne sera pas être réintroduite de défauts de page, arrêts de thread, les appels de procédure asynchrone du noyau (APC), etc., pour un thread UMS.  
   
 ```
@@ -80,7 +86,7 @@ virtual int EnterCriticalRegion() = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Nouvelle profondeur de la région critique. Les régions critiques sont réentrantes.  
   
-##  <a name="a-nameenterhypercriticalregiona--iumsthreadproxyenterhypercriticalregion-method"></a><a name="enterhypercriticalregion"></a>IUMSThreadProxy::EnterHyperCriticalRegion, méthode  
+##  <a name="enterhypercriticalregion"></a>IUMSThreadProxy::EnterHyperCriticalRegion, méthode  
  Appelé pour accéder à une région hyper critique. Dans une région hyper-critique, le planificateur ne sera pas équilibrée des opérations de blocage qui se produisent lors de la région. Cela signifie que le planificateur ne sera pas réentré pour bloquer les appels de fonction, les tentatives d’acquisition de verrou qui se bloquent, défauts de page, thread suspensions, appels de procédure asynchrone de noyau (APC) et ainsi de suite, pour un UMS thread.  
   
 ```
@@ -93,7 +99,7 @@ virtual int EnterHyperCriticalRegion() = 0;
 ### <a name="remarks"></a>Remarques  
  Le planificateur doit être extraordinairement prudent concernant ce que les méthodes il appelle et quels verrous il acquiert dans ces régions. Si le code dans une région de ce type se bloque sur un verrou est détenu par quelque chose sur que le planificateur est chargé de planifier, blocage peut-être survenir.  
   
-##  <a name="a-nameexitcriticalregiona--iumsthreadproxyexitcriticalregion-method"></a><a name="exitcriticalregion"></a>IUMSThreadProxy::ExitCriticalRegion, méthode  
+##  <a name="exitcriticalregion"></a>IUMSThreadProxy::ExitCriticalRegion, méthode  
  Appelé pour quitter une région critique.  
   
 ```
@@ -103,7 +109,7 @@ virtual int ExitCriticalRegion() = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Nouvelle profondeur de la région critique. Les régions critiques sont réentrantes.  
   
-##  <a name="a-nameexithypercriticalregiona--iumsthreadproxyexithypercriticalregion-method"></a><a name="exithypercriticalregion"></a>IUMSThreadProxy::ExitHyperCriticalRegion, méthode  
+##  <a name="exithypercriticalregion"></a>IUMSThreadProxy::ExitHyperCriticalRegion, méthode  
  Appelé pour quitter une région hyper critique.  
   
 ```
@@ -113,7 +119,7 @@ virtual int ExitHyperCriticalRegion() = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Nouvelle profondeur de la région hyper critique. Les régions Hyper critiques sont réentrantes.  
   
-##  <a name="a-namegetcriticalregiontypea--iumsthreadproxygetcriticalregiontype-method"></a><a name="getcriticalregiontype"></a>IUMSThreadProxy::GetCriticalRegionType, méthode  
+##  <a name="getcriticalregiontype"></a>IUMSThreadProxy::GetCriticalRegionType, méthode  
  Retourne le type de région critique, le proxy de thread se trouve dans. Étant donné que Hyper-critiques sont un sur-ensemble de régions critiques, si le code a entré une région critique, puis une région hyper-critique, `InsideHyperCriticalRegion` sera retourné.  
   
 ```
@@ -125,5 +131,5 @@ virtual CriticalRegionType GetCriticalRegionType() const = 0;
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
- [IUMSScheduler (Structure)](iumsscheduler-structure.md)
+ [IUMSScheduler, structure](iumsscheduler-structure.md)
 

@@ -296,9 +296,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 6b3f327e81ce83ac0ea50a63194a5da8af888e14
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 20e8a0ca1291b36ee8b2b3b3aa836eae67fe33fd
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="unorm4-class"></a>unorm_4, classe
@@ -328,155 +328,155 @@ class unorm_4;
   
 |Nom|Description|  
 |----------|-----------------|  
-|unorm_4::get_w (méthode)||  
-|unorm_4::get_wx (méthode)||  
-|unorm_4::get_wxy (méthode)||  
-|unorm_4::get_wxyz (méthode)||  
-|unorm_4::get_wxz (méthode)||  
-|unorm_4::get_wxzy (méthode)||  
-|unorm_4::get_wy (méthode)||  
-|unorm_4::get_wyx (méthode)||  
-|unorm_4::get_wyxz (méthode)||  
-|unorm_4::get_wyz (méthode)||  
-|unorm_4::get_wyzx (méthode)||  
-|unorm_4::get_wz (méthode)||  
-|unorm_4::get_wzx (méthode)||  
-|unorm_4::get_wzxy (méthode)||  
-|unorm_4::get_wzy (méthode)||  
-|unorm_4::get_wzyx (méthode)||  
-|unorm_4::get_X (méthode)||  
-|unorm_4::get_xw (méthode)||  
-|unorm_4::get_xwy (méthode)||  
-|unorm_4::get_xwyz (méthode)||  
-|unorm_4::get_xwz (méthode)||  
-|unorm_4::get_xwzy (méthode)||  
-|unorm_4::get_xy (méthode)||  
-|unorm_4::get_xyw (méthode)||  
-|unorm_4::get_xywz (méthode)||  
-|unorm_4::get_xyz (méthode)||  
-|unorm_4::get_xyzw (méthode)||  
-|unorm_4::get_xz (méthode)||  
-|unorm_4::get_xzw (méthode)||  
-|unorm_4::get_xzwy (méthode)||  
-|unorm_4::get_xzy (méthode)||  
-|unorm_4::get_xzyw (méthode)||  
-|unorm_4::get_y (méthode)||  
-|unorm_4::get_yw (méthode)||  
-|unorm_4::get_ywx (méthode)||  
-|unorm_4::get_ywxz (méthode)||  
-|unorm_4::get_ywz (méthode)||  
-|unorm_4::get_ywzx (méthode)||  
-|unorm_4::get_yx (méthode)||  
-|unorm_4::get_yxw (méthode)||  
-|unorm_4::get_yxwz (méthode)||  
-|unorm_4::get_yxz (méthode)||  
-|unorm_4::get_yxzw (méthode)||  
-|unorm_4::get_yz (méthode)||  
-|unorm_4::get_yzw (méthode)||  
-|unorm_4::get_yzwx (méthode)||  
-|unorm_4::get_yzx (méthode)||  
-|unorm_4::get_yzxw (méthode)||  
-|unorm_4::get_z (méthode)||  
-|unorm_4::get_zw (méthode)||  
-|unorm_4::get_zwx (méthode)||  
-|unorm_4::get_zwxy (méthode)||  
-|unorm_4::get_zwy (méthode)||  
-|unorm_4::get_zwyx (méthode)||  
-|unorm_4::get_zx (méthode)||  
-|unorm_4::get_zxw (méthode)||  
-|unorm_4::get_zxwy (méthode)||  
-|unorm_4::get_zxy (méthode)||  
-|unorm_4::get_zxyw (méthode)||  
-|unorm_4::get_zy (méthode)||  
-|unorm_4::get_zyw (méthode)||  
-|unorm_4::get_zywx (méthode)||  
-|unorm_4::get_zyx (méthode)||  
-|unorm_4::get_zyxw (méthode)||  
-|unorm_4::ref_a (méthode)||  
-|unorm_4::ref_b (méthode)||  
-|unorm_4::ref_g (méthode)||  
-|unorm_4::ref_r (méthode)||  
-|unorm_4::ref_w (méthode)||  
-|unorm_4::ref_x (méthode)||  
-|unorm_4::ref_y (méthode)||  
-|unorm_4::ref_z (méthode)||  
-|unorm_4::set_w (méthode)||  
-|unorm_4::set_wx (méthode)||  
-|unorm_4::set_wxy (méthode)||  
-|unorm_4::set_wxyz (méthode)||  
-|unorm_4::set_wxz (méthode)||  
-|unorm_4::set_wxzy (méthode)||  
-|unorm_4::set_wy (méthode)||  
-|unorm_4::set_wyx (méthode)||  
-|unorm_4::set_wyxz (méthode)||  
-|unorm_4::set_wyz (méthode)||  
-|unorm_4::set_wyzx (méthode)||  
-|unorm_4::set_wz (méthode)||  
-|unorm_4::set_wzx (méthode)||  
-|unorm_4::set_wzxy (méthode)||  
-|unorm_4::set_wzy (méthode)||  
-|unorm_4::set_wzyx (méthode)||  
-|unorm_4::set_X (méthode)||  
-|unorm_4::set_xw (méthode)||  
-|unorm_4::set_xwy (méthode)||  
-|unorm_4::set_xwyz (méthode)||  
-|unorm_4::set_xwz (méthode)||  
-|unorm_4::set_xwzy (méthode)||  
-|unorm_4::set_xy (méthode)||  
-|unorm_4::set_xyw (méthode)||  
-|unorm_4::set_xywz (méthode)||  
-|unorm_4::set_xyz (méthode)||  
-|unorm_4::set_xyzw (méthode)||  
-|unorm_4::set_xz (méthode)||  
-|unorm_4::set_xzw (méthode)||  
-|unorm_4::set_xzwy (méthode)||  
-|unorm_4::set_xzy (méthode)||  
-|unorm_4::set_xzyw (méthode)||  
-|unorm_4::set_y (méthode)||  
-|unorm_4::set_yw (méthode)||  
-|unorm_4::set_ywx (méthode)||  
-|unorm_4::set_ywxz (méthode)||  
-|unorm_4::set_ywz (méthode)||  
-|unorm_4::set_ywzx (méthode)||  
-|unorm_4::set_yx (méthode)||  
-|unorm_4::set_yxw (méthode)||  
-|unorm_4::set_yxwz (méthode)||  
-|unorm_4::set_yxz (méthode)||  
-|unorm_4::set_yxzw (méthode)||  
-|unorm_4::set_yz (méthode)||  
-|unorm_4::set_yzw (méthode)||  
-|unorm_4::set_yzwx (méthode)||  
-|unorm_4::set_yzx (méthode)||  
-|unorm_4::set_yzxw (méthode)||  
-|unorm_4::set_z (méthode)||  
-|unorm_4::set_zw (méthode)||  
-|unorm_4::set_zwx (méthode)||  
-|unorm_4::set_zwxy (méthode)||  
-|unorm_4::set_zwy (méthode)||  
-|unorm_4::set_zwyx (méthode)||  
-|unorm_4::set_zx (méthode)||  
-|unorm_4::set_zxw (méthode)||  
-|unorm_4::set_zxwy (méthode)||  
-|unorm_4::set_zxy (méthode)||  
-|unorm_4::set_zxyw (méthode)||  
-|unorm_4::set_zy (méthode)||  
-|unorm_4::set_zyw (méthode)||  
-|unorm_4::set_zywx (méthode)||  
-|unorm_4::set_zyx (méthode)||  
-|unorm_4::set_zyxw (méthode)||  
+|unorm_4::get_w||  
+|unorm_4::get_wx||  
+|unorm_4::get_wxy||  
+|unorm_4::get_wxyz||  
+|unorm_4::get_wxz||  
+|unorm_4::get_wxzy||  
+|unorm_4::get_wy||  
+|unorm_4::get_wyx||  
+|unorm_4::get_wyxz||  
+|unorm_4::get_wyz||  
+|unorm_4::get_wyzx||  
+|unorm_4::get_wz||  
+|unorm_4::get_wzx||  
+|unorm_4::get_wzxy||  
+|unorm_4::get_wzy||  
+|unorm_4::get_wzyx||  
+|unorm_4::get_X||  
+|unorm_4::get_xw||  
+|unorm_4::get_xwy||  
+|unorm_4::get_xwyz||  
+|unorm_4::get_xwz||  
+|unorm_4::get_xwzy||  
+|unorm_4::get_xy||  
+|unorm_4::get_xyw||  
+|unorm_4::get_xywz||  
+|unorm_4::get_xyz||  
+|unorm_4::get_xyzw||  
+|unorm_4::get_xz||  
+|unorm_4::get_xzw||  
+|unorm_4::get_xzwy||  
+|unorm_4::get_xzy||  
+|unorm_4::get_xzyw||  
+|unorm_4::get_y||  
+|unorm_4::get_yw||  
+|unorm_4::get_ywx||  
+|unorm_4::get_ywxz||  
+|unorm_4::get_ywz||  
+|unorm_4::get_ywzx||  
+|unorm_4::get_yx||  
+|unorm_4::get_yxw||  
+|unorm_4::get_yxwz||  
+|unorm_4::get_yxz||  
+|unorm_4::get_yxzw||  
+|unorm_4::get_yz||  
+|unorm_4::get_yzw||  
+|unorm_4::get_yzwx||  
+|unorm_4::get_yzx||  
+|unorm_4::get_yzxw||  
+|unorm_4::get_z||  
+|unorm_4::get_zw||  
+|unorm_4::get_zwx||  
+|unorm_4::get_zwxy||  
+|unorm_4::get_zwy||  
+|unorm_4::get_zwyx||  
+|unorm_4::get_zx||  
+|unorm_4::get_zxw||  
+|unorm_4::get_zxwy||  
+|unorm_4::get_zxy||  
+|unorm_4::get_zxyw||  
+|unorm_4::get_zy||  
+|unorm_4::get_zyw||  
+|unorm_4::get_zywx||  
+|unorm_4::get_zyx||  
+|unorm_4::get_zyxw||  
+|unorm_4::ref_a||  
+|unorm_4::ref_b||  
+|unorm_4::ref_g||  
+|unorm_4::ref_r||  
+|unorm_4::ref_w||  
+|unorm_4::ref_x||  
+|unorm_4::ref_y||  
+|unorm_4::ref_z||  
+|unorm_4::set_w||  
+|unorm_4::set_wx||  
+|unorm_4::set_wxy||  
+|unorm_4::set_wxyz||  
+|unorm_4::set_wxz||  
+|unorm_4::set_wxzy||  
+|unorm_4::set_wy||  
+|unorm_4::set_wyx||  
+|unorm_4::set_wyxz||  
+|unorm_4::set_wyz||  
+|unorm_4::set_wyzx||  
+|unorm_4::set_wz||  
+|unorm_4::set_wzx||  
+|unorm_4::set_wzxy||  
+|unorm_4::set_wzy||  
+|unorm_4::set_wzyx||  
+|unorm_4::set_X||  
+|unorm_4::set_xw||  
+|unorm_4::set_xwy||  
+|unorm_4::set_xwyz||  
+|unorm_4::set_xwz||  
+|unorm_4::set_xwzy||  
+|unorm_4::set_xy||  
+|unorm_4::set_xyw||  
+|unorm_4::set_xywz||  
+|unorm_4::set_xyz||  
+|unorm_4::set_xyzw||  
+|unorm_4::set_xz||  
+|unorm_4::set_xzw||  
+|unorm_4::set_xzwy||  
+|unorm_4::set_xzy||  
+|unorm_4::set_xzyw||  
+|unorm_4::set_y||  
+|unorm_4::set_yw||  
+|unorm_4::set_ywx||  
+|unorm_4::set_ywxz||  
+|unorm_4::set_ywz||  
+|unorm_4::set_ywzx||  
+|unorm_4::set_yx||  
+|unorm_4::set_yxw||  
+|unorm_4::set_yxwz||  
+|unorm_4::set_yxz||  
+|unorm_4::set_yxzw||  
+|unorm_4::set_yz||  
+|unorm_4::set_yzw||  
+|unorm_4::set_yzwx||  
+|unorm_4::set_yzx||  
+|unorm_4::set_yzxw||  
+|unorm_4::set_z||  
+|unorm_4::set_zw||  
+|unorm_4::set_zwx||  
+|unorm_4::set_zwxy||  
+|unorm_4::set_zwy||  
+|unorm_4::set_zwyx||  
+|unorm_4::set_zx||  
+|unorm_4::set_zxw||  
+|unorm_4::set_zxwy||  
+|unorm_4::set_zxy||  
+|unorm_4::set_zxyw||  
+|unorm_4::set_zy||  
+|unorm_4::set_zyw||  
+|unorm_4::set_zywx||  
+|unorm_4::set_zyx||  
+|unorm_4::set_zyxw||  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|unorm_4::operator-(opérateur)||  
-|unorm_4::operator--(opérateur)||  
-|unorm_4::operator * =, opérateur||  
-|unorm_4::operator / =, opérateur||  
-|unorm_4::operator ++ (opérateur)||  
-|unorm_4::operator +=, opérateur||  
-|unorm_4::operator =, opérateur||  
-|unorm_4::operator-= (opérateur)||  
+|unorm_4::operator-||  
+|unorm_4::operator--||  
+|unorm_4::operator * =||  
+|/ = unorm_4::operator||  
+|unorm_4::operator ++||  
+|unorm_4::operator +=||  
+|unorm_4::operator =||  
+|unorm_4::operator =||  
   
 ### <a name="public-constants"></a>Constantes publiques  
   
@@ -488,134 +488,134 @@ class unorm_4;
   
 |Nom|Description|  
 |----------|-----------------|  
-|Membre de données unorm_4::a||  
-|Membre de données unorm_4::AB||  
-|Membre de données unorm_4::abg||  
-|Membre de données unorm_4::abgr||  
-|Membre de données unorm_4::ABR||  
-|Membre de données unorm_4::abrg||  
-|Membre de données unorm_4::AG||  
-|Membre de données unorm_4::agb||  
-|Membre de données unorm_4::agbr||  
-|Membre de données unorm_4::AGR||  
-|Membre de données unorm_4::agrb||  
-|Membre de données unorm_4::AR||  
-|Membre de données unorm_4::ARB||  
-|Membre de données unorm_4::arbg||  
-|Membre de données unorm_4::arg||  
-|Membre de données unorm_4::ARGB||  
-|Membre de données unorm_4::b||  
-|Membre de données unorm_4::BA||  
-|Membre de données unorm_4::bag||  
-|Membre de données unorm_4::bagr||  
-|Membre de données unorm_4::bar||  
-|Membre de données unorm_4::barg||  
-|Membre de données unorm_4::BG||  
-|Membre de données unorm_4::BGA||  
-|Membre de données unorm_4::bgar||  
-|Membre de données unorm_4::BGR||  
-|Membre de données unorm_4::bgra||  
-|Membre de données unorm_4::br||  
-|Membre de données unorm_4::BRA||  
-|Membre de données unorm_4::brag||  
-|Membre de données unorm_4::brg||  
-|Membre de données unorm_4::brga||  
-|Membre de données unorm_4::g||  
-|Membre de données unorm_4::GA||  
-|Membre de données unorm_4::GAB||  
-|Membre de données unorm_4::gabr||  
-|Membre de données unorm_4::gar||  
-|Membre de données unorm_4::garb||  
-|Membre de données unorm_4::GB||  
-|Membre de données unorm_4::GBA||  
-|Membre de données unorm_4::gbar||  
-|Membre de données unorm_4::GBR||  
-|Membre de données unorm_4::GBRA||  
-|Membre de données unorm_4::GR||  
-|Membre de données unorm_4::gra||  
-|Membre de données unorm_4::Grab||  
-|Membre de données unorm_4::grb||  
-|Membre de données unorm_4::grba||  
-|Membre de données unorm_4::r||  
-|Membre de données unorm_4::RA||  
-|Membre de données unorm_4::RAB||  
-|Membre de données unorm_4::rabg||  
-|Membre de données unorm_4::RAG||  
-|Membre de données unorm_4::ragb||  
-|Membre de données unorm_4::RB||  
-|Membre de données unorm_4::RBA||  
-|Membre de données unorm_4::rbag||  
-|Membre de données unorm_4::rbg||  
-|Membre de données unorm_4::rbga||  
-|Membre de données unorm_4::RG||  
-|Membre de données unorm_4::RGA||  
-|Membre de données unorm_4::rgab||  
-|Membre de données unorm_4::RGB||  
-|Membre de données unorm_4::RGBA||  
-|Membre de données unorm_4::w||  
-|Membre de données unorm_4::WX||  
-|Membre de données unorm_4::WXY||  
-|Membre de données unorm_4::wxyz||  
-|Membre de données unorm_4::wxz||  
-|Membre de données unorm_4::wxzy||  
-|Membre de données unorm_4::wY||  
-|Membre de données unorm_4::wyx||  
-|Membre de données unorm_4::wyxz||  
-|Membre de données unorm_4::WYZ||  
-|Membre de données unorm_4::wyzx||  
-|Membre de données unorm_4::wZ||  
-|Membre de données unorm_4::wzx||  
-|Membre de données unorm_4::wzxy||  
-|Membre de données unorm_4::wzy||  
-|Membre de données unorm_4::wzyx||  
-|Membre de données unorm_4::x||  
-|Membre de données unorm_4::XW||  
-|Membre de données unorm_4::xwy||  
-|Membre de données unorm_4::xwyz||  
-|Membre de données unorm_4::xwz||  
-|Membre de données unorm_4::xwzy||  
-|Membre de données unorm_4::XY||  
-|Membre de données unorm_4::xyw||  
-|Membre de données unorm_4::xywz||  
-|Membre de données unorm_4::XYZ||  
-|Membre de données unorm_4::xyzw||  
-|Membre de données unorm_4::XZ||  
-|Membre de données unorm_4::xzw||  
-|Membre de données unorm_4::xzwy||  
-|Membre de données unorm_4::xzy||  
-|Membre de données unorm_4::xzyw||  
-|Membre de données unorm_4::y||  
-|Membre de données unorm_4::yw||  
-|Membre de données unorm_4::ywx||  
-|Membre de données unorm_4::ywxz||  
-|Membre de données unorm_4::ywz||  
-|Membre de données unorm_4::ywzx||  
-|Membre de données unorm_4::YX||  
-|Membre de données unorm_4::yxw||  
-|Membre de données unorm_4::yxwz||  
-|Membre de données unorm_4::yxz||  
-|Membre de données unorm_4::yxzw||  
-|Membre de données unorm_4::YZ||  
-|Membre de données unorm_4::yzw||  
-|Membre de données unorm_4::yzwx||  
-|Membre de données unorm_4::yzx||  
-|Membre de données unorm_4::yzxw||  
-|Membre de données unorm_4::z||  
-|Membre de données unorm_4::zw||  
-|Membre de données unorm_4::zwx||  
-|Membre de données unorm_4::zwxy||  
-|Membre de données unorm_4::zwy||  
-|Membre de données unorm_4::zwyx||  
-|Membre de données unorm_4::ZX||  
-|Membre de données unorm_4::zxw||  
-|Membre de données unorm_4::zxwy||  
-|Membre de données unorm_4::zxy||  
-|Membre de données unorm_4::zxyw||  
-|Membre de données unorm_4::ZY||  
-|Membre de données unorm_4::zyw||  
-|Membre de données unorm_4::zywx||  
-|Membre de données unorm_4::ZYX||  
-|Membre de données unorm_4::zyxw||  
+|unorm_4::a||  
+|unorm_4::AB||  
+|unorm_4::abg||  
+|unorm_4::abgr||  
+|unorm_4::ABR||  
+|unorm_4::abrg||  
+|unorm_4::AG||  
+|unorm_4::agb||  
+|unorm_4::agbr||  
+|unorm_4::AGR||  
+|unorm_4::agrb||  
+|unorm_4::AR||  
+|unorm_4::ARB||  
+|unorm_4::arbg||  
+|unorm_4::arg||  
+|unorm_4::ARGB||  
+|unorm_4::b||  
+|unorm_4::BA||  
+|unorm_4::bag||  
+|unorm_4::bagr||  
+|unorm_4::bar||  
+|unorm_4::barg||  
+|unorm_4::BG||  
+|unorm_4::BGA||  
+|unorm_4::bgar||  
+|unorm_4::BGR||  
+|unorm_4::bgra||  
+|unorm_4::br||  
+|unorm_4::BRA||  
+|unorm_4::brag||  
+|unorm_4::brg||  
+|unorm_4::brga||  
+|unorm_4::g||  
+|unorm_4::GA||  
+|unorm_4::GAB||  
+|unorm_4::gabr||  
+|unorm_4::gar||  
+|unorm_4::garb||  
+|unorm_4::GB||  
+|unorm_4::GBA||  
+|unorm_4::gbar||  
+|unorm_4::GBR||  
+|unorm_4::GBRA||  
+|unorm_4::GR||  
+|unorm_4::gra||  
+|unorm_4::Grab||  
+|unorm_4::grb||  
+|unorm_4::grba||  
+|unorm_4::r||  
+|unorm_4::RA||  
+|unorm_4::RAB||  
+|unorm_4::rabg||  
+|unorm_4::RAG||  
+|unorm_4::ragb||  
+|unorm_4::RB||  
+|unorm_4::RBA||  
+|unorm_4::rbag||  
+|unorm_4::rbg||  
+|unorm_4::rbga||  
+|unorm_4::RG||  
+|unorm_4::RGA||  
+|unorm_4::rgab||  
+|unorm_4::RGB||  
+|unorm_4::RGBA||  
+|unorm_4::w||  
+|unorm_4::WX||  
+|unorm_4::WXY||  
+|unorm_4::wxyz||  
+|unorm_4::wxz||  
+|unorm_4::wxzy||  
+|unorm_4::wY||  
+|unorm_4::wyx||  
+|unorm_4::wyxz||  
+|unorm_4::WYZ||  
+|unorm_4::wyzx||  
+|unorm_4::wZ||  
+|unorm_4::wzx||  
+|unorm_4::wzxy||  
+|unorm_4::wzy||  
+|unorm_4::wzyx||  
+|unorm_4::x||  
+|unorm_4::XW||  
+|unorm_4::xwy||  
+|unorm_4::xwyz||  
+|unorm_4::xwz||  
+|unorm_4::xwzy||  
+|unorm_4::XY||  
+|unorm_4::xyw||  
+|unorm_4::xywz||  
+|unorm_4::XYZ||  
+|unorm_4::xyzw||  
+|unorm_4::XZ||  
+|unorm_4::xzw||  
+|unorm_4::xzwy||  
+|unorm_4::xzy||  
+|unorm_4::xzyw||  
+|unorm_4::y||  
+|unorm_4::yw||  
+|unorm_4::ywx||  
+|unorm_4::ywxz||  
+|unorm_4::ywz||  
+|unorm_4::ywzx||  
+|unorm_4::YX||  
+|unorm_4::yxw||  
+|unorm_4::yxwz||  
+|unorm_4::yxz||  
+|unorm_4::yxzw||  
+|unorm_4::YZ||  
+|unorm_4::yzw||  
+|unorm_4::yzwx||  
+|unorm_4::yzx||  
+|unorm_4::yzxw||  
+|unorm_4::z||  
+|unorm_4::zw||  
+|unorm_4::zwx||  
+|unorm_4::zwxy||  
+|unorm_4::zwy||  
+|unorm_4::zwyx||  
+|unorm_4::ZX||  
+|unorm_4::zxw||  
+|unorm_4::zxwy||  
+|unorm_4::zxy||  
+|unorm_4::zxyw||  
+|unorm_4::ZY||  
+|unorm_4::zyw||  
+|unorm_4::zywx||  
+|unorm_4::ZYX||  
+|unorm_4::zyxw||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `unorm_4`  
@@ -625,7 +625,7 @@ class unorm_4;
   
  **Namespace :** Concurrency::graphics  
   
-##  <a name="a-namectora-unorm4"></a><a name="ctor"></a>unorm_4 
+##  <a name="ctor"></a>unorm_4 
 
  Par défaut constructeur initialise tous les éléments à 0.  
   
@@ -709,12 +709,12 @@ explicit inline unorm_4(
  `_Other`  
  Objet utilisé pour initialiser.  
   
-##  <a name="a-nameunorm4sizea-size"></a><a name="unorm_4__size"></a>taille 
+##  <a name="unorm_4__size"></a>taille 
 
 ```  
 static const int size = 4;  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
 
