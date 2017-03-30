@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e5ffb6d3321637b662790a32cce65e6908b4778d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: eb9db9ea42d50faa6e7a693c95795036e650a760
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="run-time-error-checking"></a>Vérifications des erreurs d’exécution
@@ -47,12 +47,12 @@ La bibliothèque Runtime C contient les fonctions qui prennent en charge les vé
   
 ### <a name="run-time-error-checking-functions"></a>Fonctions de vérification des erreurs d’exécution  
   
-|Fonction|Utilisation|Équivalent .NET Framework|  
-|--------------|---------|-------------------------------|  
-|[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|Retourne une brève description d’un type de vérification des erreurs d’exécution.||  
-|[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|Retourne le nombre total d’erreurs pouvant être détectées par les vérifications d’erreurs d’exécution.||  
-|[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|Désigne une fonction comme gestionnaire de rapport pour les vérifications d’erreurs d’exécution.||  
-|[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|Associe une erreur détectée par les vérifications d’erreurs d’exécution à un type.||  
+|Fonction|Utilisation|  
+|--------------|---------|  
+|[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|Retourne une brève description d’un type de vérification des erreurs d’exécution.|  
+|[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|Retourne le nombre total d’erreurs pouvant être détectées par les vérifications d’erreurs d’exécution.|  
+|[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|Désigne une fonction comme gestionnaire de rapport pour les vérifications d’erreurs d’exécution.|  
+|[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|Associe une erreur détectée par les vérifications d’erreurs d’exécution à un type.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Routines runtime par catégorie](../c-runtime-library/run-time-routines-by-category.md)   
