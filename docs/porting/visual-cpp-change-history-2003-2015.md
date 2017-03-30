@@ -949,7 +949,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
      De plus, bien que le compilateur ne donne pas de diagnostic spécifique, l’opérateur new inline est considéré comme incorrect.  
   
--   **Appel de 'operator *type*()' (conversion définie par l’utilisateur) sur des types autres que des types classe**  
+-   **Appel de 'operator*type*()' (conversion définie par l’utilisateur) sur des types autres que des types classe**  
   
      Les versions précédentes du compilateur autorisaient l’appel de ’operator *type*()’ sur des types autres que des types classe et ignoraient cet appel en silence. Cet ancien comportement créait un risque de génération de code incorrect en mode silencieux qui provoquait un comportement imprévisible au moment de l’exécution. Le compilateur n’accepte plus de code écrit de cette façon. Au lieu de cela, il émet l’erreur du compilateur C2228.  
   
@@ -1508,7 +1508,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
     ```  
   
--   Les variables membres `volatile` ** n’autorisent pas les constructeurs et les opérateurs d’assignation définis implicitement**  
+-   Les variables membres `volatile` **n’autorisent pas les constructeurs et les opérateurs d’assignation définis implicitement**  
   
      Dans les versions précédentes du compilateur, il était possible de générer automatiquement les constructeurs de copie/déplacement par défaut et les opérateurs d’assignation de copie/déplacement par défaut pour une classe contenant des variables membres `volatile`. Cet ancien comportement était incorrect et non conforme à la norme C++. À présent, le compilateur considère qu’une classe avec des variables de membre volatiles a des opérateurs de construction et d’assignation non triviaux, ce qui empêche la génération automatique des implémentations par défaut de ces opérateurs.  Quand une telle classe est membre d’une union (ou d’une union anonyme au sein d’une classe), les constructeurs de copie/déplacement et les opérateurs d’assignation de copie/déplacement de l’union (ou de la classe contenant l’union anonyme) sont implicitement définis comme étant supprimés. Toute tentative de construction ou de copie de l’union (ou de la classe contenant l’union anonyme) sans avoir défini explicitement les constructeurs ou opérateurs est considérée comme une erreur. Le compilateur génère alors l’erreur de compilateur C2280.  
   
