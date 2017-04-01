@@ -1388,11 +1388,10 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
     {  
         auto iter = std::find(v.begin(), v.end(), 5);  
     }  
-    catch (…)  
+    catch (...)  
     {  
         do_something();   // ok  
     }  
-  
     ```  
   
      Exemple (après)  
@@ -1402,11 +1401,10 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
     {  
         auto iter = std::find(v.begin(), v.end(), 5);  
     }  
-    catch (…)  
+    catch (...)  
     {  
         do_something();   // warning C4702: unreachable code  
     }  
-  
     ```  
   
 ###  <a name="VS_Update2"></a> Améliorations de la conformité dans Update 2  

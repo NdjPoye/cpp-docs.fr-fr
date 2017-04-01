@@ -1020,7 +1020,7 @@ Dans Visual C++ 2015 et versions ultérieures, les améliorations suivies de l
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // ok   
     }  
@@ -1033,7 +1033,7 @@ Dans Visual C++ 2015 et versions ultérieures, les améliorations suivies de l
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // warning C4702: unreachable code  
     }  
