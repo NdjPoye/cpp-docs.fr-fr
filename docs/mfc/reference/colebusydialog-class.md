@@ -173,17 +173,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>Remarques  
  Les valeurs de type de retour sont spécifiés par le **sélection** type énumération déclarée dans la `COleBusyDialog` classe.  
   
- `enum Selection`  
-  
- `{`  
-  
- `switchTo,`  
-  
- `retry,`  
-  
- `callUnblocked`  
-  
- `};`  
+```  
+enum Selection {
+    switchTo,
+    retry,
+    callUnblocked
+    };
+```  
   
  Suivent de brèves descriptions de ces valeurs :  
   

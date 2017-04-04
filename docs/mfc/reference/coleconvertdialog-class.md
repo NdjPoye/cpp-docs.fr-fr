@@ -245,17 +245,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>Notes  
  Les valeurs de type de retour sont spécifiés par le **sélection** type énumération déclarée dans la `COleConvertDialog` classe.  
   
- `enum Selection`  
-  
- `{`  
-  
- `noConversion,`  
-  
- `convertItem,`  
-  
- `activateAs`  
-  
- `};`  
+```  
+enum Selection {
+    noConversion,
+    convertItem,
+    activateAs
+    };  
+```  
   
  Suivent de brèves descriptions de ces valeurs :  
   

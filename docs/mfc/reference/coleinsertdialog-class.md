@@ -266,17 +266,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>Remarques  
  Les valeurs de type de retour sont spécifiés par le **sélection** type énumération déclarée dans la `COleInsertDialog` classe.  
   
- `enum Selection`  
-  
- `{`  
-  
- `createNewItem,`  
-  
- `insertFromFile,`  
-  
- `linkToFile`  
-  
- `};`  
+```  
+enum Selection {
+    createNewItem,
+    insertFromFile,
+    linkToFile
+    };  
+```  
   
  Suivent de brèves descriptions de ces valeurs :  
   

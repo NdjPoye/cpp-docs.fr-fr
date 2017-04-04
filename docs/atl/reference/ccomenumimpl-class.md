@@ -172,17 +172,14 @@ HRESULT Init(
   
  Le `flags` paramètre permet de spécifier comment l’énumérateur doit traiter les éléments du tableau passés. `flags`peut prendre l’une des valeurs de la **CComEnumFlags** énumération indiquée ci-dessous :  
   
- `enum CComEnumFlags`  
-  
- `{`  
-  
- `AtlFlagNoCopy = 0,`  
-  
- `AtlFlagTakeOwnership = 2, // BitOwn`  
-  
- `AtlFlagCopy = 3           // BitOwn | BitCopy`  
-  
- `};`  
+```  
+enum CComEnumFlags  
+   {  
+   AtlFlagNoCopy = 0,  
+   AtlFlagTakeOwnership = 2, // BitOwn  
+   AtlFlagCopy = 3           // BitOwn | BitCopy  
+   };  
+```  
   
  **AtlFlagNoCopy** signifie que la durée de vie du tableau n’est pas contrôlée par l’énumérateur. Dans ce cas, soit le tableau sera statique ou l’objet identifié par *pUnk* sera responsable de la libération du tableau lorsqu’il n’est plus nécessaire.  
   
