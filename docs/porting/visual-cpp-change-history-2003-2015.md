@@ -103,7 +103,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
 #### <a name="new-and-newh"></a>\<new> et \<new.h>  
   
--   **new et delete** In previous versions of the library, the implementation-defined operator new et delete functions were exported from the runtime library DLL (for example, msvcr120.dll). Ces fonctions opérateur sont à présent toujours liées statiquement dans vos fichiers binaires, même si vous utilisez les DLL de la bibliothèque runtime.  
+-   **new et delete** Dans les versions antérieures de la bibliothèque, les fonctions opérateur new et delete définies par l'implémentation étaient exportées à partir de la DLL de la bibliothèque runtime (par exemple, msvcr120.dll). Ces fonctions opérateur sont à présent toujours liées statiquement dans vos fichiers binaires, même si vous utilisez les DLL de la bibliothèque runtime.  
   
      Il ne s’agit pas d’une modification avec rupture pour du code natif ou mixte (/clr). Toutefois, pour du code compilé en tant que [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), cette modification peut entraîner l’échec de la compilation de votre code. Si vous compilez du code en tant que /clr:pure, vous devrez peut-être ajouter #include \<new> ou #include \<new.h> pour contourner les erreurs de génération en raison de cette modification. Notez que /clr:pure est déprécié dans [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] et sera peut-être supprimé dans les versions futures.  
   
@@ -181,7 +181,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
 -   **Précision de %A et %a** La précision par défaut des spécificateurs de format %A et %a était de 6 dans les versions antérieures de la bibliothèque. La précision par défaut est désormais de 13 pour être conforme à la norme du C.  
   
-     Il s'agit d'un changement de comportement d'exécution dans la sortie de n'importe quelle fonction qui utilise une chaîne de format avec %A ou %a. Selon l'ancien comportement, la sortie utilisant le spécificateur %A peut être «&1;,1A2B3Cp+111 ». À présent, la sortie pour la même valeur est «&1;,1A2B3C4D5E6F7p+111 ». Pour obtenir l'ancien comportement, vous pouvez spécifier la précision, par exemple, %.6A. Consultez [Spécifications de précision](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).  
+     Il s'agit d'un changement de comportement d'exécution dans la sortie de n'importe quelle fonction qui utilise une chaîne de format avec %A ou %a. Selon l'ancien comportement, la sortie utilisant le spécificateur %A peut être « 1,1A2B3Cp+111 ». À présent, la sortie pour la même valeur est « 1,1A2B3C4D5E6F7p+111 ». Pour obtenir l'ancien comportement, vous pouvez spécifier la précision, par exemple, %.6A. Consultez [Spécifications de précision](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).  
   
 -   **Spécificateur %F** Le spécificateur de format/conversion %F est maintenant pris en charge. Il est fonctionnellement équivalent au spécificateur de format %f, si ce n'est que les valeurs infinies et NaN sont formatées au moyen de lettres majuscules.  
   
