@@ -105,10 +105,10 @@ void swap (
  Allocateur  
  Paramètre de modèle pour l'objet allocateur stocké qui gère l'allocation et la libération de mémoire.  
   
- ` left`  
+ `left`  
  Premier vecteur (à gauche) dans une opération de comparaison.  
   
- ` right`  
+ `right`  
  Deuxième vecteur (à droite) dans une opération de comparaison.  
   
 ### <a name="operators"></a>Opérateurs  

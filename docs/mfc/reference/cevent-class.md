@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CEvent
+- AFXMT/CEvent
+- AFXMT/CEvent::CEvent
+- AFXMT/CEvent::PulseEvent
+- AFXMT/CEvent::ResetEvent
+- AFXMT/CEvent::SetEvent
+- AFXMT/CEvent::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +105,7 @@ class CEvent : public CSyncObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxmt.h  
   
-##  <a name="a-nameceventa--ceventcevent"></a><a name="cevent"></a>CEvent::CEvent  
+##  <a name="cevent"></a>CEvent::CEvent  
  Construit un nommées ou non `CEvent` objet.  
   
 ```  
@@ -131,7 +137,7 @@ CEvent(
 > [!IMPORTANT]
 >  Après avoir créé le `CEvent` de l’objet, utilisez [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pour vous assurer que le mutex n’existe pas déjà. Si le mutex n’existait inattendu, cela peut indiquer un processus non autorisés est occupation et peut être ayant l’intention d’utiliser l’exclusion mutuelle à des fins malveillantes. Dans ce cas, la procédure en termes de sécurité recommandée consiste à fermer le handle et poursuit comme si un problème est survenu lors de la création de l’objet.  
   
-##  <a name="a-namepulseeventa--ceventpulseevent"></a><a name="pulseevent"></a>CEvent::PulseEvent  
+##  <a name="pulseevent"></a>CEvent::PulseEvent  
  Définit l’état de l’événement signalé (disponible), libère tous les threads en attente et réinitialise à "non signalé" (non disponible) automatiquement.  
   
 ```  
@@ -148,7 +154,7 @@ BOOL PulseEvent();
   
  `PulseEvent`utilise Win32 sous-jacente `PulseEvent` fonction, qui peut être temporairement retirée de l’état d’attente un appel de procédure asynchrone en mode noyau. Par conséquent, `PulseEvent` n’est pas fiable et ne doit pas être utilisée par les nouvelles applications. Pour plus d’informations, consultez la [PulseEvent fonction](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
   
-##  <a name="a-namereseteventa--ceventresetevent"></a><a name="resetevent"></a>CEvent::ResetEvent  
+##  <a name="resetevent"></a>CEvent::ResetEvent  
  Définit l’état de l’événement à "non signalé" jusqu'à ce que le définir explicitement à signalé par le [SetEvent](#setevent) fonction membre.  
   
 ```  
@@ -163,7 +169,7 @@ BOOL ResetEvent();
   
  Cette fonction membre n’est pas utilisée par les événements automatiques.  
   
-##  <a name="a-nameseteventa--ceventsetevent"></a><a name="setevent"></a>CEvent::SetEvent  
+##  <a name="setevent"></a>CEvent::SetEvent  
  Définit l’état de l’événement signalé, libérer les threads en attente.  
   
 ```  
@@ -176,7 +182,7 @@ BOOL SetEvent();
 ### <a name="remarks"></a>Remarques  
  Si l’événement est manuel, l’événement reste signalé jusqu'à ce que [ResetEvent](#resetevent) est appelée. Plusieurs threads peuvent être lancées dans ce cas. Si l’événement est automatique, l’événement reste signalé jusqu'à ce qu’un seul thread est libéré. Le système sera ensuite défini l’état de l’événement "non signalé". Si aucun thread n’est en attente, l’état reste signalé jusqu'à ce qu’un thread est libéré.  
   
-##  <a name="a-nameunlocka--ceventunlock"></a><a name="unlock"></a>CEvent::Unlock  
+##  <a name="unlock"></a>CEvent::Unlock  
  Libère l’objet d’événement.  
   
 ```  

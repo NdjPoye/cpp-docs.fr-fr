@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CRBMap
 - CRBMap
-- ATL::CRBMap
+- ATLCOLL/ATL::CRBMap
+- ATLCOLL/ATL::CRBMap::CRBMap
+- ATLCOLL/ATL::CRBMap::Lookup
+- ATLCOLL/ATL::CRBMap::RemoveKey
+- ATLCOLL/ATL::CRBMap::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +108,7 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcoll.h  
   
-##  <a name="a-namecrbmapa--crbmapcrbmap"></a><a name="crbmap"></a>CRBMap::CRBMap  
+##  <a name="crbmap"></a>CRBMap::CRBMap  
  Constructeur.  
   
 ```
@@ -124,7 +127,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#81;](../../atl/codesnippet/cpp/crbmap-class_1.cpp)]  
   
-##  <a name="a-namedtora--crbmapcrbmap"></a><a name="dtor"></a>CRBMap :: ~ CRBMap  
+##  <a name="dtor"></a>CRBMap :: ~ CRBMap  
  Destructeur.  
   
 ```
@@ -136,7 +139,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
   
  Consultez la documentation de la classe de base [CRBTree](../../atl/reference/crbtree-class.md) pour plus d’informations sur les autres méthodes disponibles.  
   
-##  <a name="a-namelookupa--crbmaplookup"></a><a name="lookup"></a>CRBMap::Lookup  
+##  <a name="lookup"></a>CRBMap::Lookup  
  Appelez cette méthode pour rechercher des clés ou des valeurs dans le `CRBMap` objet.  
   
 ```
@@ -161,7 +164,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#82;](../../atl/codesnippet/cpp/crbmap-class_2.cpp)]  
   
-##  <a name="a-nameremovekeya--crbmapremovekey"></a><a name="removekey"></a>CRBMap::RemoveKey  
+##  <a name="removekey"></a>CRBMap::RemoveKey  
  Appelez cette méthode pour supprimer un élément de la `CRBMap` objet, en fonction de la clé.  
   
 ```
@@ -181,7 +184,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[83 NVC_ATL_Utilities](../../atl/codesnippet/cpp/crbmap-class_3.cpp)]  
   
-##  <a name="a-namesetata--crbmapsetat"></a><a name="setat"></a>CRBMap::SetAt  
+##  <a name="setat"></a>CRBMap::SetAt  
  Appelez cette méthode pour insérer une paire de l’élément dans le mappage.  
   
 ```

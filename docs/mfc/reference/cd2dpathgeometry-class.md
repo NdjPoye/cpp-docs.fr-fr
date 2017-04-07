@@ -9,8 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DPathGeometry
 - CD2DPathGeometry
+- AFXRENDERTARGET/CD2DPathGeometry
+- AFXRENDERTARGET/CD2DPathGeometry::CD2DPathGeometry
+- AFXRENDERTARGET/CD2DPathGeometry::Attach
+- AFXRENDERTARGET/CD2DPathGeometry::Create
+- AFXRENDERTARGET/CD2DPathGeometry::Destroy
+- AFXRENDERTARGET/CD2DPathGeometry::Detach
+- AFXRENDERTARGET/CD2DPathGeometry::GetFigureCount
+- AFXRENDERTARGET/CD2DPathGeometry::GetSegmentCount
+- AFXRENDERTARGET/CD2DPathGeometry::Open
+- AFXRENDERTARGET/CD2DPathGeometry::Stream
+- AFXRENDERTARGET/CD2DPathGeometry::m_pPathGeometry
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +98,7 @@ class CD2DPathGeometry : public CD2DGeometry;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxrendertarget.h  
   
-##  <a name="a-nameattacha--cd2dpathgeometryattach"></a><a name="attach"></a>CD2DPathGeometry::Attach  
+##  <a name="attach"></a>CD2DPathGeometry::Attach  
  Attache existant à l’objet interface de la ressource  
   
 ```  
@@ -99,7 +109,7 @@ void Attach(ID2D1PathGeometry* pResource);
  `pResource`  
  Interface de la ressource existante. Ne peut pas être NULL  
   
-##  <a name="a-namecd2dpathgeometrya--cd2dpathgeometrycd2dpathgeometry"></a><a name="cd2dpathgeometry"></a>CD2DPathGeometry::CD2DPathGeometry  
+##  <a name="cd2dpathgeometry"></a>CD2DPathGeometry::CD2DPathGeometry  
  Construit un objet CD2DPathGeometry.  
   
 ```  
@@ -115,7 +125,7 @@ CD2DPathGeometry(
  `bAutoDestroy`  
  Indique que l’objet sera détruit par le propriétaire (pParentTarget).  
   
-##  <a name="a-namecreatea--cd2dpathgeometrycreate"></a><a name="create"></a>CD2DPathGeometry::Create  
+##  <a name="create"></a>CD2DPathGeometry::Create  
  Crée un CD2DPathGeometry.  
   
 ```  
@@ -129,14 +139,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
   
-##  <a name="a-namedestroya--cd2dpathgeometrydestroy"></a><a name="destroy"></a>CD2DPathGeometry::Destroy  
+##  <a name="destroy"></a>CD2DPathGeometry::Destroy  
  Détruit un objet CD2DPathGeometry.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dpathgeometrydetach"></a><a name="detach"></a>CD2DPathGeometry::Detach  
+##  <a name="detach"></a>CD2DPathGeometry::Detach  
  Détache l’interface de la ressource à partir de l’objet  
   
 ```  
@@ -146,7 +156,7 @@ ID2D1PathGeometry* Detach();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers l’interface de la ressource détachée.  
   
-##  <a name="a-namegetfigurecounta--cd2dpathgeometrygetfigurecount"></a><a name="getfigurecount"></a>CD2DPathGeometry::GetFigureCount  
+##  <a name="getfigurecount"></a>CD2DPathGeometry::GetFigureCount  
  Récupère le nombre de chiffres dans la géométrie de tracé.  
   
 ```  
@@ -156,7 +166,7 @@ int GetFigureCount() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le nombre de chiffres dans la géométrie de tracé.  
   
-##  <a name="a-namegetsegmentcounta--cd2dpathgeometrygetsegmentcount"></a><a name="getsegmentcount"></a>CD2DPathGeometry::GetSegmentCount  
+##  <a name="getsegmentcount"></a>CD2DPathGeometry::GetSegmentCount  
  Récupère le nombre de segments dans la géométrie de tracé.  
   
 ```  
@@ -166,14 +176,14 @@ int GetSegmentCount() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le nombre de segments dans la géométrie de tracé.  
   
-##  <a name="a-namemppathgeometrya--cd2dpathgeometrymppathgeometry"></a><a name="m_ppathgeometry"></a>CD2DPathGeometry::m_pPathGeometry  
+##  <a name="m_ppathgeometry"></a>CD2DPathGeometry::m_pPathGeometry  
  Pointeur vers un ID2D1PathGeometry.  
   
 ```  
 ID2D1PathGeometry* m_pPathGeometry;  
 ```  
   
-##  <a name="a-nameopena--cd2dpathgeometryopen"></a><a name="open"></a>CD2DPathGeometry::Open  
+##  <a name="open"></a>CD2DPathGeometry::Open  
  Récupère le récepteur de la géométrie qui est utilisé pour remplir la géométrie de tracé avec les figures et les segments.  
   
 ```  
@@ -183,7 +193,7 @@ ID2D1GeometrySink* Open();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers le ID2D1GeometrySink qui est utilisé pour remplir la géométrie de tracé avec les figures et les segments.  
   
-##  <a name="a-namestreama--cd2dpathgeometrystream"></a><a name="stream"></a>CD2DPathGeometry::Stream  
+##  <a name="stream"></a>CD2DPathGeometry::Stream  
  Copie le contenu de la géométrie de tracé vers le ID2D1GeometrySink spécifié.  
   
 ```  

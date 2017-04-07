@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CKeyboardManager
+- AFXKEYBOARDMANAGER/CKeyboardManager
+- AFXKEYBOARDMANAGER/CKeyboardManager::CKeyboardManager
+- AFXKEYBOARDMANAGER/CKeyboardManager::CleanUp
+- AFXKEYBOARDMANAGER/CKeyboardManager::FindDefaultAccelerator
+- AFXKEYBOARDMANAGER/CKeyboardManager::IsKeyHandled
+- AFXKEYBOARDMANAGER/CKeyboardManager::IsKeyPrintable
+- AFXKEYBOARDMANAGER/CKeyboardManager::IsShowAllAccelerators
+- AFXKEYBOARDMANAGER/CKeyboardManager::LoadState
+- AFXKEYBOARDMANAGER/CKeyboardManager::ResetAll
+- AFXKEYBOARDMANAGER/CKeyboardManager::SaveState
+- AFXKEYBOARDMANAGER/CKeyboardManager::ShowAllAccelerators
+- AFXKEYBOARDMANAGER/CKeyboardManager::TranslateCharToUpper
+- AFXKEYBOARDMANAGER/CKeyboardManager::UpdateAccelTable
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +105,7 @@ class CKeyboardManager : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxkeyboardmanager.h  
   
-##  <a name="a-nameckeyboardmanagera--ckeyboardmanagerckeyboardmanager"></a><a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager  
+##  <a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager  
  Construit un objet `CKeyboardManager`.  
   
 ```  
@@ -102,7 +115,7 @@ CKeyboardManager();
 ### <a name="remarks"></a>Notes  
  Dans la plupart des cas, vous n’avez pas à créer un `CKeyboardManager` directement. Par défaut, l’infrastructure crée automatiquement pour vous. Pour obtenir un pointeur vers le `CKeyboardManager`, appelez [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Si vous créez une manuellement, vous devez l’initialiser avec la méthode [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).  
   
-##  <a name="a-namecleanupa--ckeyboardmanagercleanup"></a><a name="cleanup"></a>CKeyboardManager::CleanUp  
+##  <a name="cleanup"></a>CKeyboardManager::CleanUp  
  Libère le `CKeyboardManager` ressources et efface tous les mappages de clé contextuel.  
   
 ```  
@@ -114,7 +127,7 @@ static void CleanUp();
   
  Vous n’avez pas à appeler cette fonction lorsque votre application se termine parce que l’infrastructure appelle automatiquement au cours de la fermeture de l’application.  
   
-##  <a name="a-namefinddefaultacceleratora--ckeyboardmanagerfinddefaultaccelerator"></a><a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator  
+##  <a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator  
  Récupère la touche de raccourci par défaut pour la commande spécifiée et la fenêtre.  
   
 ```  
@@ -144,7 +157,7 @@ static BOOL FindDefaultAccelerator(
 ### <a name="remarks"></a>Notes  
  Cette méthode recherche la commande spécifiée par `uiCmd` et récupère la touche de raccourci par défaut. La méthode accepte la chaîne associée à cette touche de raccourci et écrit la valeur de le `str` paramètre.  
   
-##  <a name="a-nameiskeyhandleda--ckeyboardmanageriskeyhandled"></a><a name="iskeyhandled"></a>CKeyboardManager::IsKeyHandled  
+##  <a name="iskeyhandled"></a>CKeyboardManager::IsKeyHandled  
  Détermine si la clé spécifiée est gérée par le [CKeyboardManager classe](../../mfc/reference/ckeyboardmanager-class.md).  
   
 ```  
@@ -171,7 +184,7 @@ static BOOL __stdcall IsKeyHandled(
 ### <a name="remarks"></a>Remarques  
  Les paramètres d’entrée doivent correspondre à l’entrée dans la table d’accélérateurs à la fois pour `nKey` et `fVirt` pour déterminer si une touche de raccourci est gérée dans `pWndFrame`.  
   
-##  <a name="a-nameiskeyprintablea--ckeyboardmanageriskeyprintable"></a><a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable  
+##  <a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable  
  Indique si un caractère imprimable.  
   
 ```  
@@ -191,7 +204,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 ### <a name="remarks"></a>Remarques  
  Cette méthode échoue si un appel à [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) échoue.  
   
-##  <a name="a-nameisshowallacceleratorsa--ckeyboardmanagerisshowallaccelerators"></a><a name="isshowallaccelerators"></a>CKeyboardManager::IsShowAllAccelerators  
+##  <a name="isshowallaccelerators"></a>CKeyboardManager::IsShowAllAccelerators  
  Indique si les menus affichent toutes les touches de raccourci associées aux commandes de menu ou uniquement les touches de raccourci par défaut.  
   
 ```  
@@ -204,7 +217,7 @@ static BOOL IsShowAllAccelerators();
 ### <a name="remarks"></a>Remarques  
  L’application répertorie les touches de raccourci pour les commandes de menu dans la barre de menus. Utilisez la fonction [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) pour contrôler si l’application répertorie tous les raccourcis clavier ou simplement les touches de raccourci par défaut.  
   
-##  <a name="a-nameloadstatea--ckeyboardmanagerloadstate"></a><a name="loadstate"></a>CKeyboardManager::LoadState  
+##  <a name="loadstate"></a>CKeyboardManager::LoadState  
  Charge les tables de touches de raccourci à partir du Registre Windows.  
   
 ```  
@@ -228,7 +241,7 @@ BOOL LoadState(
   
  Si vous ne spécifiez pas une fenêtre par défaut, la fenêtre frame principale de votre application sera utilisée.  
   
-##  <a name="a-nameresetalla--ckeyboardmanagerresetall"></a><a name="resetall"></a>CKeyboardManager::ResetAll  
+##  <a name="resetall"></a>CKeyboardManager::ResetAll  
  Recharge les tables de touches de raccourci à partir de la ressource d’application.  
   
 ```  
@@ -238,7 +251,7 @@ void ResetAll();
 ### <a name="remarks"></a>Remarques  
  Cette fonction supprime les raccourcis stockés dans le `CKeyboardManager` instance. Elle se recharge ensuite l’état du Gestionnaire de clavier à partir de la ressource d’application.  
   
-##  <a name="a-namesavestatea--ckeyboardmanagersavestate"></a><a name="savestate"></a>CKeyboardManager::SaveState  
+##  <a name="savestate"></a>CKeyboardManager::SaveState  
  Enregistre le raccourci des tables de clés dans le Registre Windows.  
   
 ```  
@@ -262,7 +275,7 @@ BOOL SaveState(
   
  Si vous ne spécifiez pas une fenêtre par défaut, la fenêtre frame principale servira de la fenêtre par défaut.  
   
-##  <a name="a-nameshowallacceleratorsa--ckeyboardmanagershowallaccelerators"></a><a name="showallaccelerators"></a>CKeyboardManager::ShowAllAccelerators  
+##  <a name="showallaccelerators"></a>CKeyboardManager::ShowAllAccelerators  
  Affiche toutes les touches de raccourci associées aux commandes de menu.  
   
 ```  
@@ -283,7 +296,7 @@ static void ShowAllAccelerators(
   
  Les touches de raccourci apparaît en regard de la commande dans la barre de menus. Si les touches de raccourci sont affichées, la chaîne fournie par `lpszDelimiter` pour séparer les touches de raccourci individuels.  
   
-##  <a name="a-nametranslatechartouppera--ckeyboardmanagertranslatechartoupper"></a><a name="translatechartoupper"></a>CKeyboardManager::TranslateCharToUpper  
+##  <a name="translatechartoupper"></a>CKeyboardManager::TranslateCharToUpper  
  Convertit un caractère en son Registre supérieure.  
   
 ```  
@@ -297,7 +310,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ### <a name="return-value"></a>Valeur de retour  
  Le caractère qui représente le Registre supérieur du paramètre d’entrée.  
   
-##  <a name="a-nameupdateacceltablea--ckeyboardmanagerupdateacceltable"></a><a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable  
+##  <a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable  
  Met à jour une table de clés de raccourci avec une nouvelle table de clé contextuel.  
   
 ```  

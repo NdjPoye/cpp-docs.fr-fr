@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPropExchange
+- AFXCTL/CPropExchange
+- AFXCTL/CPropExchange::ExchangeBlobProp
+- AFXCTL/CPropExchange::ExchangeFontProp
+- AFXCTL/CPropExchange::ExchangePersistentProp
+- AFXCTL/CPropExchange::ExchangeProp
+- AFXCTL/CPropExchange::ExchangeVersion
+- AFXCTL/CPropExchange::GetVersion
+- AFXCTL/CPropExchange::IsAsynchronous
+- AFXCTL/CPropExchange::IsLoading
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +95,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxctl.h  
   
-##  <a name="a-nameexchangeblobpropa--cpropexchangeexchangeblobprop"></a><a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
+##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
  Sérialise une propriété qui stocke les données d’objet binaire volumineux (BLOB).  
   
 ```  
@@ -114,7 +123,7 @@ virtual BOOL ExchangeBlobProp(
   
  Les fonctions **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, et **CPropsetPropExchange::ExchangeBlobProp** remplacent cette fonction virtuelle pure.  
   
-##  <a name="a-nameexchangefontpropa--cpropexchangeexchangefontprop"></a><a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
+##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
  Échange d’une propriété de police entre un support de stockage et le contrôle.  
   
 ```  
@@ -146,7 +155,7 @@ virtual BOOL ExchangeFontProp(
   
  Les fonctions **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, et **CPropsetPropExchange::ExchangeFontProp** remplacent cette fonction virtuelle pure.  
   
-##  <a name="a-nameexchangepersistentpropa--cpropexchangeexchangepersistentprop"></a><a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
+##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
  Échange d’une propriété entre le contrôle et un fichier.  
   
 ```  
@@ -178,7 +187,7 @@ virtual BOOL ExchangePersistentProp(
   
  Les fonctions **CArchivePropExchange::ExchangePersistentProp**, **CResetPropExchange::ExchangePersistentProp**, et **CPropsetPropExchange::ExchangePersistentProp** remplacent cette fonction virtuelle pure.  
   
-##  <a name="a-nameexchangepropa--cpropexchangeexchangeprop"></a><a name="exchangeprop"></a>CPropExchange::ExchangeProp  
+##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
  Échange d’une propriété entre un support de stockage et le contrôle.  
   
 ```  
@@ -220,7 +229,7 @@ virtual BOOL ExchangeProp(
   
  Les fonctions **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, et **CPropsetPropExchange::ExchangeProp** remplacent cette fonction virtuelle pure.  
   
-##  <a name="a-nameexchangeversiona--cpropexchangeexchangeversion"></a><a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
+##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
  Appelé par l’infrastructure pour gérer la persistance d’un numéro de version.  
   
 ```  
@@ -243,7 +252,7 @@ virtual BOOL ExchangeVersion(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la fonction a réussi ; 0 dans le cas contraire.  
   
-##  <a name="a-namegetversiona--cpropexchangegetversion"></a><a name="getversion"></a>CPropExchange::GetVersion  
+##  <a name="getversion"></a>CPropExchange::GetVersion  
  Appelez cette fonction pour récupérer le numéro de version du contrôle.  
   
 ```  
@@ -253,7 +262,7 @@ DWORD GetVersion();
 ### <a name="return-value"></a>Valeur de retour  
  Le numéro de version du contrôle.  
   
-##  <a name="a-nameisasynchronousa--cpropexchangeisasynchronous"></a><a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
+##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
  Détermine si les échanges de propriété sont effectués de façon asynchrone.  
   
 ```  
@@ -263,7 +272,7 @@ BOOL IsAsynchronous();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne TRUE si les propriétés sont échangés de façon asynchrone, sinon FALSE.  
   
-##  <a name="a-nameisloadinga--cpropexchangeisloading"></a><a name="isloading"></a>CPropExchange::IsLoading  
+##  <a name="isloading"></a>CPropExchange::IsLoading  
  Appelez cette fonction pour déterminer si les propriétés soient chargées dans le contrôle ou enregistré à partir de celui-ci.  
   
 ```  

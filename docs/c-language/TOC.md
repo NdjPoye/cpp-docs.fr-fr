@@ -126,7 +126,7 @@
 #### [Opérateurs de multiplication C](c-multiplicative-operators.md)
 #### [Opérateurs additifs C](c-additive-operators.md)
 ##### [Addition (+)](addition-plus.md)
-##### [Soustraction (–)](subtraction-minus.md)
+##### [Soustraction (-)](subtraction-minus.md)
 ##### [Utilisation des opérateurs additifs](using-the-additive-operators.md)
 ##### [Arithmétique de pointeur](pointer-arithmetic.md)
 #### [Opérateurs de décalage de bits](bitwise-shift-operators.md)

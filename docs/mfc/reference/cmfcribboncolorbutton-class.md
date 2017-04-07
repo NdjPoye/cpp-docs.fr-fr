@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonColorButton
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::CMFCRibbonColorButton
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::AddColorsGroup
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::EnableAutomaticButton
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::EnableOtherButton
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::GetAutomaticColor
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::GetColor
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::GetColorBoxSize
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::GetColumns
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::GetHighlightedColor
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::RemoveAllColorGroups
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::SetColor
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::SetColorBoxSize
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::SetColorName
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::SetColumns
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::SetDocumentColors
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::SetPalette
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::UpdateColor
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +117,7 @@ class CMFCRibbonColorButton : public CMFCRibbonGallery
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxribboncolorbutton.h  
   
-##  <a name="a-nameaddcolorsgroupa--cmfcribboncolorbuttonaddcolorsgroup"></a><a name="addcolorsgroup"></a>CMFCRibbonColorButton::AddColorsGroup  
+##  <a name="addcolorsgroup"></a>CMFCRibbonColorButton::AddColorsGroup  
  Ajoute un groupe de couleurs dans la zone de couleur normale.  
   
 ```  
@@ -122,7 +140,7 @@ void AddColorsGroup(
 ### <a name="remarks"></a>Remarques  
  Utilisez cette fonction pour rendre la couleur contextuel Afficher plusieurs groupes de couleurs. Vous pouvez contrôler comment les couleurs sont affichées dans le groupe.  
   
-##  <a name="a-namecmfcribboncolorbuttona--cmfcribboncolorbuttoncmfcribboncolorbutton"></a><a name="cmfcribboncolorbutton"></a>CMFCRibbonColorButton::CMFCRibbonColorButton  
+##  <a name="cmfcribboncolorbutton"></a>CMFCRibbonColorButton::CMFCRibbonColorButton  
  Construit un objet `CMFCRibbonColorButton`.  
   
 ```  
@@ -168,7 +186,7 @@ CMFCRibbonColorButton(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameenableautomaticbuttona--cmfcribboncolorbuttonenableautomaticbutton"></a><a name="enableautomaticbutton"></a>CMFCRibbonColorButton::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>CMFCRibbonColorButton::EnableAutomaticButton  
  Spécifie si le bouton **Automatique** est activé.  
   
 ```  
@@ -200,7 +218,7 @@ void EnableAutomaticButton(
  [in] `bDrawBorder`  
  `TRUE`Si l’application dessine une bordure autour de la barre de couleurs sur le bouton de couleur du ruban. Barre de couleurs affiche la couleur actuellement sélectionnée. `FALSE`Si l’application ne consomme pas une bordure  
   
-##  <a name="a-nameenableotherbuttona--cmfcribboncolorbuttonenableotherbutton"></a><a name="enableotherbutton"></a>CMFCRibbonColorButton::EnableOtherButton  
+##  <a name="enableotherbutton"></a>CMFCRibbonColorButton::EnableOtherButton  
  Active le bouton **Autres** .  
   
 ```  
@@ -219,7 +237,7 @@ void EnableOtherButton(
 ### <a name="remarks"></a>Notes  
  Le **autres** du bouton qui s’affichent sous le groupe de couleurs. Lorsque l’utilisateur clique sur le **autres** bouton, il affiche une boîte de dialogue couleur.  
   
-##  <a name="a-namegetautomaticcolora--cmfcribboncolorbuttongetautomaticcolor"></a><a name="getautomaticcolor"></a>CMFCRibbonColorButton::GetAutomaticColor  
+##  <a name="getautomaticcolor"></a>CMFCRibbonColorButton::GetAutomaticColor  
  Récupère la couleur actuelle du bouton automatique.  
   
 ```  
@@ -232,7 +250,7 @@ COLORREF GetAutomaticColor() const;
 ### <a name="remarks"></a>Remarques  
  La couleur du bouton automatique est définie par le `colorAutomatic` paramètre transmis à la `CMFCRibbonColorButton::EnableAutomaticButton` (méthode).  
   
-##  <a name="a-namegetcolora--cmfcribboncolorbuttongetcolor"></a><a name="getcolor"></a>CMFCRibbonColorButton::GetColor  
+##  <a name="getcolor"></a>CMFCRibbonColorButton::GetColor  
  Retourne la couleur actuellement sélectionnée.  
   
 ```  
@@ -242,7 +260,7 @@ COLORREF GetColor() const;
 ### <a name="return-value"></a>Valeur de retour  
  La couleur sélectionnée en cliquant sur le bouton.  
   
-##  <a name="a-namegetcolorboxsizea--cmfcribboncolorbuttongetcolorboxsize"></a><a name="getcolorboxsize"></a>CMFCRibbonColorButton::GetColorBoxSize  
+##  <a name="getcolorboxsize"></a>CMFCRibbonColorButton::GetColorBoxSize  
  Retourne la taille des éléments de couleur qui apparaissent dans la barre de couleurs.  
   
 ```  
@@ -252,7 +270,7 @@ CSize GetColorBoxSize() const;
 ### <a name="return-value"></a>Valeur de retour  
  La taille des boutons de couleur dans la palette de couleurs de la liste déroulante.  
   
-##  <a name="a-namegetcolumnsa--cmfcribboncolorbuttongetcolumns"></a><a name="getcolumns"></a>CMFCRibbonColorButton::GetColumns  
+##  <a name="getcolumns"></a>CMFCRibbonColorButton::GetColumns  
  Obtient le nombre d’éléments dans une ligne d’affichage de la galerie du bouton couleur du ruban.  
   
 ```  
@@ -264,7 +282,7 @@ int GetColumns() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegethighlightedcolora--cmfcribboncolorbuttongethighlightedcolor"></a><a name="gethighlightedcolor"></a>CMFCRibbonColorButton::GetHighlightedColor  
+##  <a name="gethighlightedcolor"></a>CMFCRibbonColorButton::GetHighlightedColor  
  Retourne la couleur de l’élément actuellement sélectionné dans la palette de couleurs contextuel.  
   
 ```  
@@ -274,14 +292,14 @@ COLORREF GetHighlightedColor() const;
 ### <a name="return-value"></a>Valeur de retour  
  Couleur de l’élément actuellement sélectionné dans la palette de couleurs contextuel.  
   
-##  <a name="a-nameremoveallcolorgroupsa--cmfcribboncolorbuttonremoveallcolorgroups"></a><a name="removeallcolorgroups"></a>CMFCRibbonColorButton::RemoveAllColorGroups  
+##  <a name="removeallcolorgroups"></a>CMFCRibbonColorButton::RemoveAllColorGroups  
  Supprime tous les groupes de couleurs de la zone de couleur normale.  
   
 ```  
 void RemoveAllColorGroups();
 ```  
   
-##  <a name="a-namesetcolora--cmfcribboncolorbuttonsetcolor"></a><a name="setcolor"></a>CMFCRibbonColorButton::SetColor  
+##  <a name="setcolor"></a>CMFCRibbonColorButton::SetColor  
  Sélectionne une couleur dans la zone de couleur normale.  
   
 ```  
@@ -292,7 +310,7 @@ void SetColor(COLORREF color);
  [in] `color`  
  Une couleur à définir.  
   
-##  <a name="a-namesetcolorboxsizea--cmfcribboncolorbuttonsetcolorboxsize"></a><a name="setcolorboxsize"></a>CMFCRibbonColorButton::SetColorBoxSize  
+##  <a name="setcolorboxsize"></a>CMFCRibbonColorButton::SetColorBoxSize  
  Définit la taille de tous les éléments de couleur qui apparaissent dans la barre de couleurs.  
   
 ```  
@@ -303,7 +321,7 @@ void SetColorBoxSize(CSize sizeBox);
  [in] `sizeBox`  
  La nouvelle taille des boutons de couleur dans la palette de couleurs.  
   
-##  <a name="a-namesetcolornamea--cmfcribboncolorbuttonsetcolorname"></a><a name="setcolorname"></a>CMFCRibbonColorButton::SetColorName  
+##  <a name="setcolorname"></a>CMFCRibbonColorButton::SetColorName  
  Définit un nouveau nom d’une couleur spécifiée.  
   
 ```  
@@ -322,7 +340,7 @@ static void __stdcall SetColorName(
 ### <a name="remarks"></a>Notes  
  Étant donné qu’il appelle `CMFCColorBar::SetColorName`, cette méthode modifie le nom de la couleur spécifiée dans toutes les `CMFCColorBar` objets dans votre application.  
   
-##  <a name="a-namesetcolumnsa--cmfcribboncolorbuttonsetcolumns"></a><a name="setcolumns"></a>CMFCRibbonColorButton::SetColumns  
+##  <a name="setcolumns"></a>CMFCRibbonColorButton::SetColumns  
  Définit le nombre de colonnes affichées dans le tableau de couleurs qui est présenté à l’utilisateur pendant le processus de sélection de couleur de l’utilisateur.  
   
 ```  
@@ -335,7 +353,7 @@ void SetColumns(int nColumns);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetdocumentcolorsa--cmfcribboncolorbuttonsetdocumentcolors"></a><a name="setdocumentcolors"></a>CMFCRibbonColorButton::SetDocumentColors  
+##  <a name="setdocumentcolors"></a>CMFCRibbonColorButton::SetDocumentColors  
  Spécifie une liste de valeurs RVB à afficher dans la zone de couleur du document.  
   
 ```  
@@ -351,7 +369,7 @@ void SetDocumentColors(
  [in] `lstColors`  
  Une référence à une liste de valeurs RVB.  
   
-##  <a name="a-namesetpalettea--cmfcribboncolorbuttonsetpalette"></a><a name="setpalette"></a>CMFCRibbonColorButton::SetPalette  
+##  <a name="setpalette"></a>CMFCRibbonColorButton::SetPalette  
  Spécifie les couleurs standards à afficher dans la table des couleurs qui affiche le bouton de couleur.  
   
 ```  
@@ -364,7 +382,7 @@ void SetPalette(CPalette* pPalette);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameupdatecolora--cmfcribboncolorbuttonupdatecolor"></a><a name="updatecolor"></a>CMFCRibbonColorButton::UpdateColor  
+##  <a name="updatecolor"></a>CMFCRibbonColorButton::UpdateColor  
  Appelé par l’infrastructure lorsque l’utilisateur sélectionne une couleur à partir de la table des couleurs affichée lorsque l’utilisateur clique sur le bouton de couleur.  
   
 ```  

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::task_handle
+- task_handle
+- PPL/concurrency::task_handle
+- PPL/concurrency::task_handle::task_handle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: b113cf519f4326650dc1ed4d20dd2ed00921eda9
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 0fef1ef7b1c02287a0113eb80be413e4a17dc1a4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskhandle-class"></a>task_handle, classe
@@ -61,14 +63,14 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[task_handle, constructeur](#ctor)|Construit un nouveau `task_handle` objet. Le travail de la tâche est effectué en appelant la fonction spécifiée en tant que paramètre au constructeur.|  
+|[task_handle](#ctor)|Construit un nouveau `task_handle` objet. Le travail de la tâche est effectué en appelant la fonction spécifiée en tant que paramètre au constructeur.|  
 |[~ task_handle, destructeur](#dtor)|Détruit le `task_handle` objet.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[operator() (opérateur)](#task_handle__operator_call)|L’opérateur d’appel de fonction appelé par le runtime pour effectuer le travail du handle de tâche.|  
+|[operator()](#task_handle__operator_call)|L’opérateur d’appel de fonction appelé par le runtime pour effectuer le travail du handle de tâche.|  
   
 ## <a name="remarks"></a>Remarques  
  `task_handle`objets peuvent être utilisés conjointement avec un `structured_task_group` ou plus général `task_group` objet, pour décomposer le travail en tâches parallèles. Pour plus d’informations, consultez [le parallélisme des tâches](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
@@ -87,7 +89,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-nametaskhandleoperatorcalla-operator"></a><a name="task_handle__operator_call"></a>operator() 
+##  <a name="task_handle__operator_call"></a>operator() 
 
  L’opérateur d’appel de fonction appelé par le runtime pour effectuer le travail du handle de tâche.  
   
@@ -97,7 +99,7 @@ void operator()() const;
  
 ```  
   
-##  <a name="a-nametaskhandlectora-taskhandle"></a><a name="task_handle__ctor"></a>task_handle 
+##  <a name="task_handle__ctor"></a>task_handle 
 
  Construit un nouveau `task_handle` objet. Le travail de la tâche est effectué en appelant la fonction spécifiée en tant que paramètre au constructeur.  
   
@@ -112,7 +114,7 @@ task_handle(const _Function& _Func);
 ### <a name="remarks"></a>Remarques  
  Le runtime crée une copie de la fonction de travail que vous passez au constructeur. Par conséquent, toute modification d’état qui se produire dans une fonction de l’objet que vous passez à un `task_handle` objet n’apparaît pas dans votre copie de cet objet de fonction.  
   
-##  <a name="a-namedtora-taskhandle"></a><a name="dtor"></a>~ task_handle 
+##  <a name="dtor"></a>~ task_handle 
 
  Détruit le `task_handle` objet.  
   

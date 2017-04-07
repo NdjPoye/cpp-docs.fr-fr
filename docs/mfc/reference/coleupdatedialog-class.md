@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleUpdateDialog
+- AFXODLGS/COleUpdateDialog
+- AFXODLGS/COleUpdateDialog::COleUpdateDialog
+- AFXODLGS/COleUpdateDialog::DoModal
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +93,7 @@ class COleUpdateDialog : public COleLinksDialog
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxodlgs.h  
   
-##  <a name="a-namecoleupdatedialoga--coleupdatedialogcoleupdatedialog"></a><a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
+##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
  Construit un objet `COleUpdateDialog`.  
   
 ```  
@@ -117,7 +120,7 @@ explicit COleUpdateDialog(
 ### <a name="remarks"></a>Remarques  
  Cette fonction crée uniquement une `COleUpdateDialog` objet. Pour afficher la boîte de dialogue, appelez [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Cette classe doit être utilisée à la place de `COleLinksDialog` lorsque vous souhaitez mettre à jour uniquement les éléments liés ou incorporés.  
   
-##  <a name="a-namedomodala--coleupdatedialogdomodal"></a><a name="domodal"></a>COleUpdateDialog::DoModal  
+##  <a name="domodal"></a>COleUpdateDialog::DoModal  
  Affiche la boîte de dialogue Modifier les liaisons zone mises à jour en mode.  
   
 ```  

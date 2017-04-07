@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAutoPtrElementTraits
 - CAutoPtrElementTraits
-- ATL::CAutoPtrElementTraits<T>
-- ATL.CAutoPtrElementTraits<T>
-- ATL::CAutoPtrElementTraits
+- ATLCOLL/ATL::CAutoPtrElementTraits
+- ATLCOLL/ATL::CAutoPtrElementTraits::INARGTYPE
+- ATLCOLL/ATL::CAutoPtrElementTraits::OUTARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,14 +86,14 @@ class CAutoPtrElementTraits
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcoll.h  
   
-##  <a name="a-nameinargtypea--cautoptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CAutoPtrElementTraits::INARGTYPE  
  Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.  
   
 ```
 typedef CAutoPtr<T>& INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cautoptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoPtrElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>CAutoPtrElementTraits::OUTARGTYPE  
  Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.  
   
 ```

@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CReBar
+- AFXEXT/CReBar
+- AFXEXT/CReBar::AddBar
+- AFXEXT/CReBar::Create
+- AFXEXT/CReBar::GetReBarCtrl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +91,7 @@ class CReBar : public CControlBar
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxext.h  
   
-##  <a name="a-nameaddbara--crebaraddbar"></a><a name="addbar"></a>CReBar::AddBar  
+##  <a name="addbar"></a>CReBar::AddBar  
  Appelez cette fonction membre pour ajouter une bande rebar.  
   
 ```  
@@ -131,7 +135,7 @@ BOOL AddBar(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CReBarCtrl n °&1;](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]  
   
-##  <a name="a-namecreatea--crebarcreate"></a><a name="create"></a>CReBar::Create  
+##  <a name="create"></a>CReBar::Create  
  Appelez cette fonction membre pour créer un contrôle rebar.  
   
 ```  
@@ -161,7 +165,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CReBar::AddBar](#addbar).  
   
-##  <a name="a-namegetrebarctrla--crebargetrebarctrl"></a><a name="getrebarctrl"></a>CReBar::GetReBarCtrl  
+##  <a name="getrebarctrl"></a>CReBar::GetReBarCtrl  
  Cette fonction membre permet d’accéder directement au contrôle commun sous-jacent.  
   
 ```  

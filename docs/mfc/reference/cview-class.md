@@ -10,6 +10,30 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CView
+- AFXWIN/CView
+- AFXWIN/CView::CView
+- AFXWIN/CView::DoPreparePrinting
+- AFXWIN/CView::GetDocument
+- AFXWIN/CView::IsSelected
+- AFXWIN/CView::OnDragEnter
+- AFXWIN/CView::OnDragLeave
+- AFXWIN/CView::OnDragOver
+- AFXWIN/CView::OnDragScroll
+- AFXWIN/CView::OnDrop
+- AFXWIN/CView::OnDropEx
+- AFXWIN/CView::OnInitialUpdate
+- AFXWIN/CView::OnPrepareDC
+- AFXWIN/CView::OnScroll
+- AFXWIN/CView::OnScrollBy
+- AFXWIN/CView::OnActivateFrame
+- AFXWIN/CView::OnActivateView
+- AFXWIN/CView::OnBeginPrinting
+- AFXWIN/CView::OnDraw
+- AFXWIN/CView::OnEndPrinting
+- AFXWIN/CView::OnEndPrintPreview
+- AFXWIN/CView::OnPreparePrinting
+- AFXWIN/CView::OnPrint
+- AFXWIN/CView::OnUpdate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -149,7 +173,7 @@ class AFX_NOVTABLE CView : public CWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="a-namecviewa--cviewcview"></a><a name="cview"></a>CView::CView  
+##  <a name="cview"></a>CView::CView  
  Construit un objet `CView`.  
   
 ```  
@@ -159,7 +183,7 @@ CView();
 ### <a name="remarks"></a>Remarques  
  Le framework appelle le constructeur lors de la création d’une fenêtre frame ou une fenêtre est fractionnée. Remplacer la [OnInitialUpdate](#oninitialupdate) fonction membre pour initialiser la vue une fois que le document est lié.  
   
-##  <a name="a-namedoprepareprintinga--cviewdoprepareprinting"></a><a name="doprepareprinting"></a>CView::DoPreparePrinting  
+##  <a name="doprepareprinting"></a>CView::DoPreparePrinting  
  Appelez cette fonction à partir de la substitution de [OnPreparePrinting](#onprepareprinting) pour appeler la boîte de dialogue d’impression et de créer un contexte de périphérique.  
   
 ```  
@@ -178,7 +202,7 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
   
  Si un fichier est affiché en aperçu, cette fonction crée un contexte de périphérique en utilisant les paramètres d’imprimante en cours ; ce contexte de périphérique est utilisé pour simuler l’imprimante pendant l’aperçu.  
   
-##  <a name="a-namegetdocumenta--cviewgetdocument"></a><a name="getdocument"></a>CView::GetDocument  
+##  <a name="getdocument"></a>CView::GetDocument  
  Appelez cette fonction pour obtenir un pointeur vers le document de la vue.  
   
 ```  
@@ -191,7 +215,7 @@ CDocument* GetDocument() const;
 ### <a name="remarks"></a>Remarques  
  Cela vous permet d’appeler des fonctions de membre du document.  
   
-##  <a name="a-nameisselecteda--cviewisselected"></a><a name="isselected"></a>CView::IsSelected  
+##  <a name="isselected"></a>CView::IsSelected  
  Appelé par l’infrastructure pour vérifier si l’élément de document spécifié est sélectionné.  
   
 ```  
@@ -208,7 +232,7 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut de cette fonction retourne **FALSE**. Remplacez cette fonction si vous implémentez la sélection à l’aide [CDocItem](../../mfc/reference/cdocitem-class.md) objets. Vous devez substituer cette fonction si votre vue contient des éléments OLE.  
   
-##  <a name="a-nameonactivateframea--cviewonactivateframe"></a><a name="onactivateframe"></a>CView::OnActivateFrame  
+##  <a name="onactivateframe"></a>CView::OnActivateFrame  
  Appelé par l’infrastructure lorsque la fenêtre frame contenant la vue est activée ou désactivée.  
   
 ```  
@@ -233,7 +257,7 @@ virtual void OnActivateFrame(
 ### <a name="remarks"></a>Remarques  
  Remplacez cette fonction membre si vous souhaitez exécuter un traitement spécial lors de la fenêtre frame associée à la vue est activée ou désactivée. Par exemple, [CFormView](../../mfc/reference/cformview-class.md) effectue cette substitution lorsqu’il enregistre et restaure le contrôle qui a le focus.  
   
-##  <a name="a-nameonactivateviewa--cviewonactivateview"></a><a name="onactivateview"></a>CView::OnActivateView  
+##  <a name="onactivateview"></a>CView::OnActivateView  
  Appelé par l’infrastructure lorsqu’une vue est activée ou désactivée.  
   
 ```  
@@ -260,7 +284,7 @@ virtual void OnActivateView(
   
  Ces paramètres diffèrent lorsque [CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) est appelée avec une vue qui est différente de celui que [CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) retournerait. Cela se produit souvent avec les fenêtres fractionnées.  
   
-##  <a name="a-nameonbeginprintinga--cviewonbeginprinting"></a><a name="onbeginprinting"></a>CView::OnBeginPrinting  
+##  <a name="onbeginprinting"></a>CView::OnBeginPrinting  
  Appelé par l’infrastructure au début d’un travail d’impression ou d’aperçu avant impression, après que `OnPreparePrinting` a été appelé.  
   
 ```  
@@ -281,7 +305,7 @@ virtual void OnBeginPrinting(
   
  Vous pouvez aussi utiliser cette fonction pour exécuter des initialisations qui dépendent des propriétés du contexte de l’imprimante. Par exemple, le nombre de pages nécessaires à l’impression du document peut dépendre des paramètres que l’utilisateur a spécifiés dans la boîte de dialogue d’impression (comme la longueur de page). Dans ce cas, vous ne pouvez pas spécifier la longueur du document dans le [OnPreparePrinting](#onprepareprinting) fonction membre, où vous feriez normalement donc ; vous devez attendre que le contexte de l’imprimante a été créé selon les paramètres de la boîte de dialogue. [OnBeginPrinting](#onbeginprinting) est la première fonction substituable qui vous donne accès à la [CDC](../../mfc/reference/cdc-class.md) objet représentant le contexte de l’imprimante, donc vous pouvez définir la longueur du document à partir de cette fonction. Notez que si la longueur du document n’est pas spécifiée à ce stade, aucune barre de défilement ne s’affiche pendant l’aperçu avant impression.  
   
-##  <a name="a-nameondragentera--cviewondragenter"></a><a name="ondragenter"></a>CView::OnDragEnter  
+##  <a name="ondragenter"></a>CView::OnDragEnter  
  Appelé par l’infrastructure lorsque la souris pénètre dans la zone non déroulante de la fenêtre cible de dépôt.  
   
 ```  
@@ -319,7 +343,7 @@ virtual DROPEFFECT OnDragEnter(
   
  Remplacez cette fonction pour vous préparer à des appels ultérieurs à la [OnDragOver](#ondragover) fonction membre. Les données nécessaires à partir de l’objet de données doivent être récupérées pour l’instant pour une utilisation ultérieure dans le `OnDragOver` fonction membre. La vue doit également être mises à jour afin de donner la rétroaction visuelle. Pour plus d’informations, consultez l’article [glisser -déplacer : implémentation d’une cible de dépôt](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
-##  <a name="a-nameondragleavea--cviewondragleave"></a><a name="ondragleave"></a>CView::OnDragLeave  
+##  <a name="ondragleave"></a>CView::OnDragLeave  
  Appelé par l’infrastructure pendant une opération glisser lorsque la souris est déplacée hors de la zone de dépôt valide pour cette fenêtre.  
   
 ```  
@@ -329,7 +353,7 @@ virtual void OnDragLeave();
 ### <a name="remarks"></a>Notes  
  Remplacez cette fonction si l’affichage actuel doit nettoyer toutes les actions effectuées au cours de [OnDragEnter](#ondragenter) ou [OnDragOver](#ondragover) appelle, par exemple en supprimant les commentaires des utilisateurs de visual tandis que l’objet a été déplacé et déposé.  
   
-##  <a name="a-nameondragovera--cviewondragover"></a><a name="ondragover"></a>CView::OnDragOver  
+##  <a name="ondragover"></a>CView::OnDragOver  
  Appelé par l’infrastructure pendant une opération glisser lorsque la souris est placée sur la fenêtre cible de déplacement.  
   
 ```  
@@ -367,7 +391,7 @@ virtual DROPEFFECT OnDragOver(
   
  Remplacez cette fonction pour donner la rétroaction visuelle au cours de l’opération glisser. Étant donné que cette fonction est appelée en permanence, tout code qu’elle contient doit être optimisé autant que possible. Pour plus d’informations, consultez l’article [glisser -déplacer : implémentation d’une cible de dépôt](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
-##  <a name="a-nameondragscrolla--cviewondragscroll"></a><a name="ondragscroll"></a>CView::OnDragScroll  
+##  <a name="ondragscroll"></a>CView::OnDragScroll  
  Appelé par l’infrastructure avant d’appeler [OnDragEnter](#ondragenter) ou [OnDragOver](#ondragover) pour déterminer si le point est dans la zone de défilement.  
   
 ```  
@@ -401,7 +425,7 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="remarks"></a>Remarques  
  Remplacez cette fonction lorsque vous souhaitez fournir un comportement spécial pour cet événement. L’implémentation par défaut défile automatiquement windows lorsque le curseur est déplacé dans la zone de défilement par défaut à l’intérieur de la bordure de chaque fenêtre. Pour plus d’informations, consultez l’article [glisser -déplacer : implémentation d’une cible de dépôt](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
-##  <a name="a-nameondrawa--cviewondraw"></a><a name="ondraw"></a>CView::OnDraw  
+##  <a name="ondraw"></a>CView::OnDraw  
  Appelé par l’infrastructure d’afficher une image du document.  
   
 ```  
@@ -419,7 +443,7 @@ virtual void OnDraw(CDC* pDC) = 0;
   
  Pour optimiser le dessin, appelez le [RectVisible](../../mfc/reference/cdc-class.md#rectvisible) fonction membre du contexte de périphérique pour déterminer si un rectangle est dessiné. Si vous avez besoin de faire la distinction entre un écran normal et l’impression, appelez le [IsPrinting](../../mfc/reference/cdc-class.md#isprinting) fonction membre du contexte de périphérique.  
   
-##  <a name="a-nameondropa--cviewondrop"></a><a name="ondrop"></a>CView::OnDrop  
+##  <a name="ondrop"></a>CView::OnDrop  
  Appelé par l’infrastructure lorsque l’utilisateur relâche un objet de données sur une cible de déplacement valide.  
   
 ```  
@@ -456,7 +480,7 @@ virtual BOOL OnDrop(
 > [!NOTE]
 >  Le framework n’appelle pas cette fonction, s’il existe une substitution de [OnDropEx](#ondropex) de cette classe d’affichage.  
   
-##  <a name="a-nameondropexa--cviewondropex"></a><a name="ondropex"></a>CView::OnDropEx  
+##  <a name="ondropex"></a>CView::OnDropEx  
  Appelé par l’infrastructure lorsque l’utilisateur relâche un objet de données sur une cible de déplacement valide.  
   
 ```  
@@ -516,7 +540,7 @@ virtual DROPEFFECT OnDropEx(
   
  Pour plus d’informations sur la définition de la commande de menu par défaut, consultez la page [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] et [CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) dans ce volume.  
   
-##  <a name="a-nameonendprintinga--cviewonendprinting"></a><a name="onendprinting"></a>CView::OnEndPrinting  
+##  <a name="onendprinting"></a>CView::OnEndPrinting  
  Appelé par l’infrastructure après qu’un document a été imprimé ou affiché.  
   
 ```  
@@ -535,7 +559,7 @@ virtual void OnEndPrinting(
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut de cette fonction est sans effet. Remplacez cette fonction pour libérer les ressources GDI que vous avez alloué dans le [OnBeginPrinting](#onbeginprinting) fonction membre.  
   
-##  <a name="a-nameonendprintpreviewa--cviewonendprintpreview"></a><a name="onendprintpreview"></a>CView::OnEndPrintPreview  
+##  <a name="onendprintpreview"></a>CView::OnEndPrintPreview  
  Appelé par l’infrastructure lorsque l’utilisateur quitte le mode Aperçu avant impression.  
   
 ```  
@@ -564,7 +588,7 @@ virtual void OnEndPrintPreview(
   
  Appelez toujours la version de classe de base de `OnEndPrintPreview` à partir de votre remplacement, généralement à la fin de la fonction.  
   
-##  <a name="a-nameoninitialupdatea--cviewoninitialupdate"></a><a name="oninitialupdate"></a>CView::OnInitialUpdate  
+##  <a name="oninitialupdate"></a>CView::OnInitialUpdate  
  Appelée par l’infrastructure une fois que la vue est d’abord attachée au document, mais avant l’affichage initial.  
   
 ```  
@@ -574,7 +598,7 @@ virtual void OnInitialUpdate();
 ### <a name="remarks"></a>Remarques  
  L’implémentation par défaut de cette fonction appelle le [OnUpdate](#onupdate) fonction membre sans aucune information d’indicateur (autrement dit, en utilisant les valeurs par défaut de 0 pour le `lHint` paramètre et **NULL** pour la `pHint` paramètre). Remplacez cette fonction pour exécuter toute initialisation à usage unique qui requiert des informations sur le document. Par exemple, si votre application comporte des documents de taille fixe, vous pouvez utiliser cette fonction pour initialiser les limites de défilement de l’affichage en fonction de la taille du document. Si votre application prend en charge les documents de taille variable, utilisez [OnUpdate](#onupdate) pour mettre à jour le défilement limite chaque fois que le document est modifié.  
   
-##  <a name="a-nameonpreparedca--cviewonpreparedc"></a><a name="onpreparedc"></a>CView::OnPrepareDC  
+##  <a name="onpreparedc"></a>CView::OnPrepareDC  
  Appelé par l’infrastructure avant du [OnDraw](#ondraw) la fonction membre est appelée pour afficher l’écran et avant le [OnPrint](#onprint) fonction membre est appelée pour chaque page lors de l’impression ou Aperçu avant impression.  
   
 ```  
@@ -608,7 +632,7 @@ virtual void OnPrepareDC(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView&#183;](../../mfc/codesnippet/cpp/cview-class_1.cpp)]  
   
-##  <a name="a-nameonprepareprintinga--cviewonprepareprinting"></a><a name="onprepareprinting"></a>Comme CView::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>Comme CView::OnPreparePrinting  
  Appelé par l’infrastructure avant l’impression ou la prévisualisation d’un document.  
   
 ```  
@@ -642,7 +666,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
   
  [!code-cpp[NVC_MFCDocView&#185;](../../mfc/codesnippet/cpp/cview-class_3.cpp)]  
   
-##  <a name="a-nameonprinta--cviewonprint"></a><a name="onprint"></a>CView::OnPrint  
+##  <a name="onprint"></a>CView::OnPrint  
  Appelé par l’infrastructure pour imprimer ou afficher un aperçu d’une page du document.  
   
 ```  
@@ -682,7 +706,7 @@ virtual void OnPrint(
   
  Pour un autre exemple, consultez la page [CRichEditView::PrintInsideRect](../../mfc/reference/cricheditview-class.md#printinsiderect).  
   
-##  <a name="a-nameonscrolla--cviewonscroll"></a><a name="onscroll"></a>CView::OnScroll  
+##  <a name="onscroll"></a>CView::OnScroll  
  Appelé par l’infrastructure pour déterminer si le défilement est possible.  
   
 ```  
@@ -722,7 +746,7 @@ virtual BOOL OnScroll(
 ### <a name="remarks"></a>Remarques  
  Dans certains cas, cette fonction est appelée par l’infrastructure avec `bDoScroll` la valeur **TRUE** lorsque la vue reçoit un message de la barre de défilement. Dans ce cas, vous devez réellement faire défiler la vue. Dans les autres cas, cette fonction est appelée avec `bDoScroll` la valeur **FALSE** lorsqu’un élément OLE est initialement déplacé vers la zone de défilement automatique d’une cible de déplacement avant le défilement ne se produise réellement. Dans ce cas, vous ne devez pas réellement faire défiler la vue.  
   
-##  <a name="a-nameonscrollbya--cviewonscrollby"></a><a name="onscrollby"></a>CView::OnScrollBy  
+##  <a name="onscrollby"></a>CView::OnScrollBy  
  Appelé par l’infrastructure lorsque l’utilisateur affiche une zone au-delà de la vue actuelle du document, soit en faisant glisser un élément OLE sur les bordures de l’affichage actuel ou en manipulant les barres de défilement verticale ou horizontale.  
   
 ```  
@@ -748,7 +772,7 @@ virtual BOOL OnScrollBy(
   
  Si la largeur du document ou la hauteur est supérieure à 32767 pixels, arrivez 32767 échouera car `OnScrollBy` est appelée avec un non valide `sizeScroll` argument.  
   
-##  <a name="a-nameonupdatea--cviewonupdate"></a><a name="onupdate"></a>CView::OnUpdate  
+##  <a name="onupdate"></a>CView::OnUpdate  
  Appelé par l’infrastructure une fois le document de la vue a été modifié ; Cette fonction est appelée par [CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) et permet l’affichage pour mettre à jour son affichage afin de refléter ces modifications.  
   
 ```  

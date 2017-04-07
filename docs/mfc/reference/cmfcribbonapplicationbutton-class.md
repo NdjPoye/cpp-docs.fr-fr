@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonApplicationButton
+- AFXRIBBONBAR/CMFCRibbonApplicationButton
+- AFXRIBBONBAR/CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
+- AFXRIBBONBAR/CMFCRibbonApplicationButton::SetImage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxRibbonBar.h  
   
-##  <a name="a-namecmfcribbonapplicationbuttona--cmfcribbonapplicationbuttoncmfcribbonapplicationbutton"></a><a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
+##  <a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
  Construit et initialise un [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) objet.  
   
 ```  
@@ -101,7 +104,7 @@ CMFCRibbonApplicationButton(UINT uiBmpResID);
 ### <a name="remarks"></a>Notes  
  Le bouton application de ruban est un bouton spécial situé dans le coin supérieur gauche de la fenêtre d’application. Lorsqu’un utilisateur clique sur ce bouton, l’application ouvre un menu qui contient généralement commun **fichier** des commandes, telles que **Open**, **enregistrer**, et **Exit**.  
   
-##  <a name="a-namesetimagea--cmfcribbonapplicationbuttonsetimage"></a><a name="setimage"></a>CMFCRibbonApplicationButton::SetImage  
+##  <a name="setimage"></a>CMFCRibbonApplicationButton::SetImage  
  Assigne une image sur le bouton de l’application.  
   
 ```  

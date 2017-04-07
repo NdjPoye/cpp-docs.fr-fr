@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCAcceleratorKey
+- AFXACCELERATORKEY/CMFCAcceleratorKey
+- AFXACCELERATORKEY/CMFCAcceleratorKey::CMFCAcceleratorKey
+- AFXACCELERATORKEY/CMFCAcceleratorKey::Format
+- AFXACCELERATORKEY/CMFCAcceleratorKey::SetAccelerator
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +85,7 @@ class CMFCAcceleratorKey : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxacceleratorkey.h  
   
-##  <a name="a-namecmfcacceleratorkeya--cmfcacceleratorkeycmfcacceleratorkey"></a><a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey  
+##  <a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey  
  Construit un [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) objet.  
   
 ```  
@@ -96,7 +100,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ### <a name="remarks"></a>Notes  
  Si vous ne fournissez pas une touche de raccourci lorsque vous créez un `CMFCAccleratorKey`, utilisez la [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) pour associer une touche de raccourci avec votre `CMFCAcceleratorKey` objet.  
   
-##  <a name="a-nameformata--cmfcacceleratorkeyformat"></a><a name="format"></a>CMFCAcceleratorKey::Format  
+##  <a name="format"></a>CMFCAcceleratorKey::Format  
  Convertit la structure de touche d’accès rapide à sa valeur de chaîne associée.  
   
 ```  
@@ -110,7 +114,7 @@ void Format(CString& str) const;
 ### <a name="remarks"></a>Remarques  
  Cette méthode récupère le format de chaîne de la touche de raccourci. Vous pouvez définir le format de chaîne d’un [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) à l’aide de la méthode ou le constructeur de l’objet [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).  
   
-##  <a name="a-namesetacceleratora--cmfcacceleratorkeysetaccelerator"></a><a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator  
+##  <a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator  
  Définit la touche de raccourci pour le [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) objet.  
   
 ```  

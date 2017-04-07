@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCEditBrowseCtrl
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::EnableBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::EnableFileBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::EnableFolderBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::GetMode
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnAfterUpdate
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnBrowse
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnChangeLayout
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnDrawBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnIllegalFileName
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::SetBrowseButtonImage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -128,7 +139,7 @@ class CMFCEditBrowseCtrl : public CEdit
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxeditbrowsectrl.h  
   
-##  <a name="a-nameenablebrowsebuttona--cmfceditbrowsectrlenablebrowsebutton"></a><a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton  
+##  <a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton  
  Affiche ou n’affiche pas le bouton Parcourir sur le contrôle de navigation modifier actuel.  
   
 ```  
@@ -149,7 +160,7 @@ void EnableBrowseButton(
   
  Si le `bEnable` paramètre est `TRUE`, est le mode de navigation du contrôle `BrowseMode_Default`; sinon, le mode de navigation est `BrowseMode_None`. Pour plus d’informations sur les modes d’exploration, consultez le [GetMode](#getmode) méthode.  
   
-##  <a name="a-nameenablefilebrowsebuttona--cmfceditbrowsectrlenablefilebrowsebutton"></a><a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl::EnableFileBrowseButton  
+##  <a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl::EnableFileBrowseButton  
  Affiche le bouton Parcourir sur le contrôle de navigation modifier actuel et place le contrôle en *recherche* mode.  
   
 ```  
@@ -174,7 +185,7 @@ void EnableFileBrowseButton(
   
  Pour obtenir une liste complète des indicateurs disponibles, consultez la page [structure OPENFILENAME](https://msdn.microsoft.com/library/ms646839.aspx).  
   
-##  <a name="a-nameenablefolderbrowsebuttona--cmfceditbrowsectrlenablefolderbrowsebutton"></a><a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl::EnableFolderBrowseButton  
+##  <a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  Affiche le bouton Parcourir sur le contrôle de navigation modifier actuel et place le contrôle en *recherche de dossiers* mode.  
   
 ```  
@@ -184,7 +195,7 @@ void EnableFolderBrowseButton();
 ### <a name="remarks"></a>Remarques  
  Lorsque le contrôle edit est en mode de navigation de dossier et que l’utilisateur clique sur le bouton Parcourir, le contrôle affiche la boîte de dialogue de sélection du dossier standard.  
   
-##  <a name="a-namegetmodea--cmfceditbrowsectrlgetmode"></a><a name="getmode"></a>CMFCEditBrowseCtrl::GetMode  
+##  <a name="getmode"></a>CMFCEditBrowseCtrl::GetMode  
  Récupère le mode de navigation du contrôle edit Parcourir en cours.  
   
 ```  
@@ -206,7 +217,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 ### <a name="remarks"></a>Remarques  
  Par défaut, un `CMFCEditBrowseCtrl` objet est initialisé à `BrowseMode_None` mode. Modifier le mode de navigation avec le [CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton), [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton), et [CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton) méthodes.  
   
-##  <a name="a-nameonafterupdatea--cmfceditbrowsectrlonafterupdate"></a><a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate  
+##  <a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate  
  Appelé par l’infrastructure une fois que le contrôle edit est mis à jour avec le résultat d’une action de navigation.  
   
 ```  
@@ -216,7 +227,7 @@ virtual void OnAfterUpdate();
 ### <a name="remarks"></a>Remarques  
  Substituez cette méthode dans une classe dérivée pour implémenter une action personnalisée.  
   
-##  <a name="a-nameonbrowsea--cmfceditbrowsectrlonbrowse"></a><a name="onbrowse"></a>CMFCEditBrowseCtrl::OnBrowse  
+##  <a name="onbrowse"></a>CMFCEditBrowseCtrl::OnBrowse  
  Appelé par l’infrastructure une fois que l’utilisateur clique sur le bouton Parcourir le parcourir de contrôle d’édition.  
   
 ```  
@@ -226,7 +237,7 @@ virtual void OnBrowse();
 ### <a name="remarks"></a>Remarques  
  Utilisez cette méthode pour exécuter du code personnalisé lorsque l’utilisateur clique sur le bouton Parcourir le parcourir de contrôle d’édition. Dérivez votre propre classe de la `CMFCEditBrowseCtrl` classe et substituer sa `OnBrowse` méthode. Dans cette méthode, implémenter une action Parcourir personnalisée et éventuellement mettre à jour la zone de texte du contrôle d’édition Parcourir. Dans votre application, utilisez la [EnableBrowseButton](#enablebrowsebutton) méthode permettant de placer le contrôle edit *Parcourir personnalisée* mode.  
   
-##  <a name="a-nameonchangelayouta--cmfceditbrowsectrlonchangelayout"></a><a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout  
+##  <a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout  
  Redessine le contrôle de navigation modifier actuel.  
   
 ```  
@@ -236,7 +247,7 @@ virtual void OnChangeLayout();
 ### <a name="remarks"></a>Remarques  
  L’infrastructure appelle cette méthode lorsque le mode de navigation de la parcourir Edition contrôle change. Pour plus d’informations, consultez [CMFCEditBrowseCtrl::GetMode](#getmode).  
   
-##  <a name="a-nameondrawbrowsebuttona--cmfceditbrowsectrlondrawbrowsebutton"></a><a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton  
+##  <a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton  
  Appelé par l’infrastructure pour dessiner le bouton Parcourir sur le contrôle de modification.  
   
 ```  
@@ -263,7 +274,7 @@ virtual void OnDrawBrowseButton(
 ### <a name="remarks"></a>Remarques  
  Remplacez cette fonction dans une classe dérivée pour personnaliser l’apparence du bouton Parcourir.  
   
-##  <a name="a-namesetbrowsebuttonimagea--cmfceditbrowsectrlsetbrowsebuttonimage"></a><a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage  
+##  <a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage  
  Définit une image personnalisée sur le bouton Parcourir le parcourir de contrôle d’édition.  
   
 ```  
@@ -295,7 +306,7 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour appliquer une image personnalisée pour le bouton Parcourir. Par défaut, le framework Obtient une image standard lorsque le contrôle edit est dans *recherche* ou *recherche de dossiers* mode.  
   
-##  <a name="a-nameonillegalfilenamea--cmfceditbrowsectrlonillegalfilename"></a><a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName  
+##  <a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName  
  Appelé par l’infrastructure lorsqu’un nom de fichier non valide a été entré dans le contrôle d’édition.  
   
 ```  

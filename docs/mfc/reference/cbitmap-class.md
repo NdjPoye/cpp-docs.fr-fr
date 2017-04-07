@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBitmap
+- AFXWIN/CBitmap
+- AFXWIN/CBitmap::CBitmap
+- AFXWIN/CBitmap::CreateBitmap
+- AFXWIN/CBitmap::CreateBitmapIndirect
+- AFXWIN/CBitmap::CreateCompatibleBitmap
+- AFXWIN/CBitmap::CreateDiscardableBitmap
+- AFXWIN/CBitmap::FromHandle
+- AFXWIN/CBitmap::GetBitmap
+- AFXWIN/CBitmap::GetBitmapBits
+- AFXWIN/CBitmap::GetBitmapDimension
+- AFXWIN/CBitmap::LoadBitmap
+- AFXWIN/CBitmap::LoadMappedBitmap
+- AFXWIN/CBitmap::LoadOEMBitmap
+- AFXWIN/CBitmap::SetBitmapBits
+- AFXWIN/CBitmap::SetBitmapDimension
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +112,7 @@ class CBitmap : public CGdiObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="a-namecbitmapa--cbitmapcbitmap"></a><a name="cbitmap"></a>CBitmap::CBitmap  
+##  <a name="cbitmap"></a>CBitmap::CBitmap  
  Construit un objet `CBitmap`.  
   
 ```  
@@ -107,7 +122,7 @@ CBitmap();
 ### <a name="remarks"></a>Notes  
  L’objet qui en résulte doit être initialisé avec l’une des fonctions membres d’initialisation.  
   
-##  <a name="a-namecreatebitmapa--cbitmapcreatebitmap"></a><a name="createbitmap"></a>CBitmap::CreateBitmap  
+##  <a name="createbitmap"></a>CBitmap::CreateBitmap  
  Initialise une image bitmap de mémoire dépendante de l’appareil avec la largeur, la hauteur et le modèle binaire spécifiés.  
   
 ```  
@@ -147,7 +162,7 @@ BOOL CreateBitmap(
   
  Pour plus d’informations, consultez la description du champ **bmBits** de la structure **BITMAP** . Le [BITMAP](../../mfc/reference/bitmap-structure.md) structure est décrit sous le [CBitmap::CreateBitmapIndirect](#createbitmapindirect) fonction membre.  
   
-##  <a name="a-namecreatebitmapindirecta--cbitmapcreatebitmapindirect"></a><a name="createbitmapindirect"></a>CBitmap::CreateBitmapIndirect  
+##  <a name="createbitmapindirect"></a>CBitmap::CreateBitmapIndirect  
  Initialise un bitmap de la largeur, la hauteur et le modèle binaire (le cas échéant) figurant à la structure vers laquelle pointe `lpBitmap`.  
   
 ```  
@@ -168,7 +183,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
   
  Lorsque vous avez terminé avec le `CBitmap` objet créé avec `CreateBitmapIndirect` fonctionne, tout d’abord sélectionner l’image bitmap hors du contexte de périphérique, puis supprimez le `CBitmap` objet.  
   
-##  <a name="a-namecreatecompatiblebitmapa--cbitmapcreatecompatiblebitmap"></a><a name="createcompatiblebitmap"></a>CBitmap::CreateCompatibleBitmap  
+##  <a name="createcompatiblebitmap"></a>CBitmap::CreateCompatibleBitmap  
  Initialise une bitmap qui est compatible avec l’appareil spécifié par `pDC`.  
   
 ```  
@@ -202,7 +217,7 @@ BOOL CreateCompatibleBitmap(
   
  Lorsque vous avez terminé avec le `CBitmap` objet créé avec le `CreateCompatibleBitmap` fonctionne, tout d’abord sélectionner l’image bitmap hors du contexte de périphérique, puis supprimez le `CBitmap` objet.  
   
-##  <a name="a-namecreatediscardablebitmapa--cbitmapcreatediscardablebitmap"></a><a name="creatediscardablebitmap"></a>CBitmap::CreateDiscardableBitmap  
+##  <a name="creatediscardablebitmap"></a>CBitmap::CreateDiscardableBitmap  
  Initialise une bitmap pouvant être éliminée qui est compatible avec le contexte de périphérique identifié par `pDC`.  
   
 ```  
@@ -232,7 +247,7 @@ BOOL CreateDiscardableBitmap(
   
  Lorsque vous avez terminé avec le `CBitmap` objet créé avec le `CreateDiscardableBitmap` fonctionne, tout d’abord sélectionner l’image bitmap hors du contexte de périphérique, puis supprimez le `CBitmap` objet.  
   
-##  <a name="a-namefromhandlea--cbitmapfromhandle"></a><a name="fromhandle"></a>CBitmap::FromHandle  
+##  <a name="fromhandle"></a>CBitmap::FromHandle  
  Retourne un pointeur vers un `CBitmap` de l’objet en fonction d’un handle vers une bitmap GDI de Windows.  
   
 ```  
@@ -249,7 +264,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ### <a name="remarks"></a>Remarques  
  Si un `CBitmap` objet n’est pas déjà attaché au handle, temporaire `CBitmap` objet est créé et attaché. Ce fichier temporaire `CBitmap` objet est valide uniquement jusqu'à la prochaine fois que l’application dispose de temps d’inactivité dans sa boucle d’événements, alors graphique temporaire de tous les objets sont supprimés. Une autre façon de dire cela est que l’objet temporaire est uniquement valide pendant le traitement du message de fenêtre.  
   
-##  <a name="a-namegetbitmapa--cbitmapgetbitmap"></a><a name="getbitmap"></a>CBitmap::GetBitmap  
+##  <a name="getbitmap"></a>CBitmap::GetBitmap  
  Récupère les propriétés de l’image pour l’image bitmap attaché.  
   
 ```  
@@ -265,7 +280,7 @@ int GetBitmap(BITMAP* pBitMap);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetbitmapbitsa--cbitmapgetbitmapbits"></a><a name="getbitmapbits"></a>CBitmap::GetBitmapBits  
+##  <a name="getbitmapbits"></a>CBitmap::GetBitmapBits  
  Copie le modèle binaire de l’image bitmap attaché dans la mémoire tampon spécifiée.  
   
 ```  
@@ -287,7 +302,7 @@ DWORD GetBitmapBits(
 ### <a name="remarks"></a>Notes  
  Utilisez [CBitmap::GetBitmap](#getbitmap) pour déterminer la taille de la mémoire tampon requise.  
   
-##  <a name="a-namegetbitmapdimensiona--cbitmapgetbitmapdimension"></a><a name="getbitmapdimension"></a>CBitmap::GetBitmapDimension  
+##  <a name="getbitmapdimension"></a>CBitmap::GetBitmapDimension  
  Retourne la largeur et la hauteur de la bitmap.  
   
 ```  
@@ -300,7 +315,7 @@ CSize GetBitmapDimension() const;
 ### <a name="remarks"></a>Remarques  
  La hauteur et la largeur sont supposées avoir été définie précédemment à l’aide de la [SetBitmapDimension](#setbitmapdimension) fonction membre.  
   
-##  <a name="a-nameloadbitmapa--cbitmaploadbitmap"></a><a name="loadbitmap"></a>CBitmap::LoadBitmap  
+##  <a name="loadbitmap"></a>CBitmap::LoadBitmap  
  Charge la ressource de bitmap nommée par `lpszResourceName` ou identifiée par le numéro d’ID dans `nIDResource` à partir du fichier exécutable de l’application.  
   
 ```  
@@ -334,7 +349,7 @@ BOOL LoadBitmap(UINT nIDResource);
   
  Ces bitmaps ne figurent pas dans les pilotes de périphériques pour les versions de Windows 3.0 et versions antérieures. Pour obtenir une liste complète des images bitmap et un affichage de leur apparition, consultez le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameloadmappedbitmapa--cbitmaploadmappedbitmap"></a><a name="loadmappedbitmap"></a>CBitmap::LoadMappedBitmap  
+##  <a name="loadmappedbitmap"></a>CBitmap::LoadMappedBitmap  
  Appelez cette fonction membre pour charger une image bitmap et de mapper les couleurs pour les couleurs système en cours.  
   
 ```  
@@ -366,7 +381,7 @@ BOOL LoadMappedBitmap(
   
  Pour plus d’informations sur la création d’une image bitmap mappée, consultez la fonction Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/linkid=230562) et [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) de la structure dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameloadoembitmapa--cbitmaploadoembitmap"></a><a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
+##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
  Charge une bitmap prédéfinie utilisée par Windows.  
   
 ```  
@@ -405,7 +420,7 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
   
  Notez que la constante **OEMRESOURCE** doit être défini avant d’inclure WINDOWS. H pour pouvoir utiliser le **OBM_** constantes.  
   
-##  <a name="a-nameoperatorhbitmapa--cbitmapoperator-hbitmap"></a><a name="operator_hbitmap"></a>CBitmap::operator HBITMAP  
+##  <a name="operator_hbitmap"></a>CBitmap::operator HBITMAP  
  Utilisez cet opérateur pour obtenir le handle Windows GDI attaché de le `CBitmap` objet.  
   
 ```  
@@ -420,7 +435,7 @@ operator HBITMAP() const;
   
  Pour plus d’informations sur l’utilisation des objets graphiques, consultez [graphique objets](http://msdn.microsoft.com/library/windows/desktop/dd144962) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetbitmapbitsa--cbitmapsetbitmapbits"></a><a name="setbitmapbits"></a>CBitmap::SetBitmapBits  
+##  <a name="setbitmapbits"></a>CBitmap::SetBitmapBits  
  Définit les bits d’une image bitmap pour les valeurs de bits donnés par `lpBits`.  
   
 ```  
@@ -439,7 +454,7 @@ DWORD SetBitmapBits(
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’octets utilisés lors de la définition des bits de la bitmap ; 0 si la fonction échoue.  
   
-##  <a name="a-namesetbitmapdimensiona--cbitmapsetbitmapdimension"></a><a name="setbitmapdimension"></a>CBitmap::SetBitmapDimension  
+##  <a name="setbitmapdimension"></a>CBitmap::SetBitmapDimension  
  Assigne une largeur et une hauteur à une image bitmap en unités de 0,1 millimètres.  
   
 ```  

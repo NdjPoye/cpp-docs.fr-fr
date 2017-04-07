@@ -10,9 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCBaseVisualManager
-- CMFCBaseVisualManager.~CMFCBaseVisualManager
-- ~CMFCBaseVisualManager
-- CMFCBaseVisualManager::~CMFCBaseVisualManager
+- AFXVISUALMANAGER/CMFCBaseVisualManager
+- AFXVISUALMANAGER/CMFCBaseVisualManager::CMFCBaseVisualManager
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawCheckBox
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawComboBorder
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawComboDropButton
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawPushButton
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawRadioButton
+- AFXVISUALMANAGER/CMFCBaseVisualManager::DrawStatusBarProgress
+- AFXVISUALMANAGER/CMFCBaseVisualManager::FillReBarPane
+- AFXVISUALMANAGER/CMFCBaseVisualManager::GetStandardWindowsTheme
+- AFXVISUALMANAGER/CMFCBaseVisualManager::CleanUpThemes
+- AFXVISUALMANAGER/CMFCBaseVisualManager::UpdateSystemColors
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +111,7 @@ class CMFCBaseVisualManager: public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxvisualmanager.h  
   
-##  <a name="a-namecleanupthemesa--cmfcbasevisualmanagercleanupthemes"></a><a name="cleanupthemes"></a>CMFCBaseVisualManager::CleanUpThemes  
+##  <a name="cleanupthemes"></a>CMFCBaseVisualManager::CleanUpThemes  
  Appels `CloseThemeData` pour tous les handles obtenu dans `UpdateSystemColors`.  
   
 ```  
@@ -112,14 +121,14 @@ void CleanUpThemes();
 ### <a name="remarks"></a>Notes  
  Uniquement réservé à un usage interne.  
   
-##  <a name="a-namecmfcbasevisualmanagera--cmfcbasevisualmanagercmfcbasevisualmanager"></a><a name="cmfcbasevisualmanager"></a>CMFCBaseVisualManager::CMFCBaseVisualManager  
+##  <a name="cmfcbasevisualmanager"></a>CMFCBaseVisualManager::CMFCBaseVisualManager  
  Construit et initialise un objet `CMFCBaseVisualManager`.  
   
 ```  
 CMFCBaseVisualManager();
 ```  
   
-##  <a name="a-namedrawcheckboxa--cmfcbasevisualmanagerdrawcheckbox"></a><a name="drawcheckbox"></a>CMFCBaseVisualManager::DrawCheckBox  
+##  <a name="drawcheckbox"></a>CMFCBaseVisualManager::DrawCheckBox  
  Dessine un contrôle case à cocher à l’aide du thème actuel de Windows.  
   
 ```  
@@ -167,7 +176,7 @@ virtual BOOL DrawCheckBox(
 |1|CBS_CHECKEDNORMAL|  
 |2|CBS_MIXEDNORMAL|  
   
-##  <a name="a-namedrawcombobordera--cmfcbasevisualmanagerdrawcomboborder"></a><a name="drawcomboborder"></a>CMFCBaseVisualManager::DrawComboBorder  
+##  <a name="drawcomboborder"></a>CMFCBaseVisualManager::DrawComboBorder  
  Dessine la bordure de zone de liste déroulante à l’aide du thème actuel de Windows.  
   
 ```  
@@ -198,7 +207,7 @@ virtual BOOL DrawComboBorder(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le thème API est activée ; dans le cas contraire `FALSE`.  
   
-##  <a name="a-namedrawcombodropbuttona--cmfcbasevisualmanagerdrawcombodropbutton"></a><a name="drawcombodropbutton"></a>CMFCBaseVisualManager::DrawComboDropButton  
+##  <a name="drawcombodropbutton"></a>CMFCBaseVisualManager::DrawComboDropButton  
  Dessine un bouton de liste déroulante de zone de liste déroulante à l’aide du thème actuel de Windows.  
   
 ```  
@@ -223,7 +232,7 @@ virtual BOOL DrawComboDropButton(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le thème API est activée ; dans le cas contraire `FALSE`.  
   
-##  <a name="a-namedrawpushbuttona--cmfcbasevisualmanagerdrawpushbutton"></a><a name="drawpushbutton"></a>CMFCBaseVisualManager::DrawPushButton  
+##  <a name="drawpushbutton"></a>CMFCBaseVisualManager::DrawPushButton  
  Dessine un bouton de commande à l’aide du thème actuel de Windows.  
   
 ```  
@@ -250,7 +259,7 @@ virtual BOOL DrawPushButton(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le thème API est activée ; dans le cas contraire `FALSE`.  
   
-##  <a name="a-namedrawradiobuttona--cmfcbasevisualmanagerdrawradiobutton"></a><a name="drawradiobutton"></a>CMFCBaseVisualManager::DrawRadioButton  
+##  <a name="drawradiobutton"></a>CMFCBaseVisualManager::DrawRadioButton  
  Dessine un contrôle case d’option à l’aide du thème actuel de Windows.  
   
 ```  
@@ -285,7 +294,7 @@ virtual BOOL DrawRadioButton(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le thème API est activée ; dans le cas contraire `FALSE`.  
   
-##  <a name="a-namedrawstatusbarprogressa--cmfcbasevisualmanagerdrawstatusbarprogress"></a><a name="drawstatusbarprogress"></a>CMFCBaseVisualManager::DrawStatusBarProgress  
+##  <a name="drawstatusbarprogress"></a>CMFCBaseVisualManager::DrawStatusBarProgress  
  Barre de progression s’appuie sur le contrôle barre d’état ( [CMFCStatusBar classe](../../mfc/reference/cmfcstatusbar-class.md)) à l’aide du thème actuel de Windows.  
   
 ```  
@@ -332,7 +341,7 @@ virtual BOOL DrawStatusBarProgress(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le thème API est activée ; dans le cas contraire `FALSE`.  
   
-##  <a name="a-namefillrebarpanea--cmfcbasevisualmanagerfillrebarpane"></a><a name="fillrebarpane"></a>CMFCBaseVisualManager::FillReBarPane  
+##  <a name="fillrebarpane"></a>CMFCBaseVisualManager::FillReBarPane  
  Remplit l’arrière-plan du contrôle rebar en utilisant le thème Windows en cours.  
   
 ```  
@@ -355,7 +364,7 @@ virtual void FillReBarPane(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le thème API est activée ; dans le cas contraire `FALSE`.  
   
-##  <a name="a-namegetstandardwindowsthemea--cmfcbasevisualmanagergetstandardwindowstheme"></a><a name="getstandardwindowstheme"></a>CMFCBaseVisualManager::GetStandardWindowsTheme  
+##  <a name="getstandardwindowstheme"></a>CMFCBaseVisualManager::GetStandardWindowsTheme  
  Obtient le thème Windows en cours.  
   
 ```  
@@ -375,7 +384,7 @@ virtual WinXpTheme GetStandardWindowsTheme();
   
 - `WinXpTheme_Silver`-Thème argent.  
   
-##  <a name="a-nameupdatesystemcolorsa--cmfcbasevisualmanagerupdatesystemcolors"></a><a name="updatesystemcolors"></a>CMFCBaseVisualManager::UpdateSystemColors  
+##  <a name="updatesystemcolors"></a>CMFCBaseVisualManager::UpdateSystemColors  
  Appelle `OpenThemeData` pour obtenir des handles pour les différents contrôles de dessin : windows, barres d’outils, boutons et ainsi de suite.  
   
 ```  

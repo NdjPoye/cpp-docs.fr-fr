@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPaneDialog
+- AFXPANEDIALOG/CPaneDialog
+- AFXPANEDIALOG/CPaneDialog::Create
+- AFXPANEDIALOG/CPaneDialog::HandleInitDialog
+- AFXPANEDIALOG/CPaneDialog::SetOccDialogInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +104,7 @@ class CPaneDialog : public CDockablePane
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxpanedialog.h  
   
-##  <a name="a-namecreatea--cpanedialogcreate"></a><a name="create"></a>CPaneDialog::Create  
+##  <a name="create"></a>CPaneDialog::Create  
  Crée une boîte de dialogue d’ancrage et l’attache à une `CPaneDialog` objet.  
   
 ```  
@@ -177,7 +181,7 @@ BOOL Create(
  [!code-cpp[NVC_MFC_SetPaneSize n °&2;](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]  
 [!code-cpp[NVC_MFC_SetPaneSize n °&3;](../../mfc/reference/codesnippet/cpp/cpanedialog-class_2.cpp)]  
   
-##  <a name="a-namehandleinitdialoga--cpanedialoghandleinitdialog"></a><a name="handleinitdialog"></a>CPaneDialog::HandleInitDialog  
+##  <a name="handleinitdialog"></a>CPaneDialog::HandleInitDialog  
  Gère la [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) message.  
   
 ```  
@@ -199,7 +203,7 @@ afx_msg LRESULT HandleInitDialog(
 ### <a name="remarks"></a>Remarques  
  L’infrastructure utilise cette méthode pour initialiser les contrôles et l’apparence d’une boîte de dialogue. Le framework appelle cette méthode avant d’afficher la boîte de dialogue.  
   
-##  <a name="a-namesetoccdialoginfoa--cpanedialogsetoccdialoginfo"></a><a name="setoccdialoginfo"></a>CPaneDialog::SetOccDialogInfo  
+##  <a name="setoccdialoginfo"></a>CPaneDialog::SetOccDialogInfo  
  Spécifie le modèle de boîte de dialogue qui est un conteneur de contrôle OLE.  
   
 ```  

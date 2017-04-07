@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CEditView
+- AFXEXT/CEditView
+- AFXEXT/CEditView::CEditView
+- AFXEXT/CEditView::FindText
+- AFXEXT/CEditView::GetBufferLength
+- AFXEXT/CEditView::GetEditCtrl
+- AFXEXT/CEditView::GetPrinterFont
+- AFXEXT/CEditView::GetSelectedText
+- AFXEXT/CEditView::LockBuffer
+- AFXEXT/CEditView::PrintInsideRect
+- AFXEXT/CEditView::SerializeRaw
+- AFXEXT/CEditView::SetPrinterFont
+- AFXEXT/CEditView::SetTabStops
+- AFXEXT/CEditView::UnlockBuffer
+- AFXEXT/CEditView::OnFindNext
+- AFXEXT/CEditView::OnReplaceAll
+- AFXEXT/CEditView::OnReplaceSel
+- AFXEXT/CEditView::OnTextNotFound
+- AFXEXT/CEditView::dwStyleDefault
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -138,7 +156,7 @@ class CEditView : public CCtrlView
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxext.h  
   
-##  <a name="a-nameceditviewa--ceditviewceditview"></a><a name="ceditview"></a>CEditView::CEditView  
+##  <a name="ceditview"></a>CEditView::CEditView  
  Construit un objet de type `CEditView`.  
   
 ```  
@@ -148,7 +166,7 @@ CEditView();
 ### <a name="remarks"></a>Remarques  
  Après la construction de l’objet, vous devez appeler le [CWnd::Create](../../mfc/reference/cwnd-class.md#create) fonction avant que le contrôle d’édition est utilisé. Si vous dérivez une classe de `CEditView` et l’ajouter au modèle à l’aide de `CWinApp::AddDocTemplate`, le framework appelle deux ce constructeur et **créer** (fonction).  
   
-##  <a name="a-namedwstyledefaulta--ceditviewdwstyledefault"></a><a name="dwstyledefault"></a>CEditView::dwStyleDefault  
+##  <a name="dwstyledefault"></a>CEditView::dwStyleDefault  
  Contient le style par défaut de le `CEditView` objet.  
   
 ```  
@@ -158,7 +176,7 @@ static const DWORD dwStyleDefault;
 ### <a name="remarks"></a>Notes  
  Passer ce membre statique comme le `dwStyle` paramètre de la **créer** fonction pour obtenir le style par défaut pour le `CEditView` objet.  
   
-##  <a name="a-namefindtexta--ceditviewfindtext"></a><a name="findtext"></a>CEditView::FindText  
+##  <a name="findtext"></a>CEditView::FindText  
  Appelez le `FindText` fonction pour rechercher la `CEditView` mémoire tampon de texte de l’objet.  
   
 ```  
@@ -186,7 +204,7 @@ BOOL FindText(
   
  Normalement, vous n’avez pas besoin d’appeler le `FindText` fonction sauf si vous remplacez `OnFindNext`, qui appelle la méthode `FindText`.  
   
-##  <a name="a-namegetbufferlengtha--ceditviewgetbufferlength"></a><a name="getbufferlength"></a>CEditView::GetBufferLength  
+##  <a name="getbufferlength"></a>CEditView::GetBufferLength  
  Appelez cette fonction membre pour obtenir le nombre de caractères actuellement en mémoire tampon du contrôle d’édition, non compris le terminateur null.  
   
 ```  
@@ -196,7 +214,7 @@ UINT GetBufferLength() const;
 ### <a name="return-value"></a>Valeur de retour  
  La longueur de la chaîne dans la mémoire tampon.  
   
-##  <a name="a-namegeteditctrla--ceditviewgeteditctrl"></a><a name="geteditctrl"></a>CEditView::GetEditCtrl  
+##  <a name="geteditctrl"></a>CEditView::GetEditCtrl  
  Appelez `GetEditCtrl` pour obtenir une référence au contrôle d’édition utilisé par la vue edit.  
   
 ```  
@@ -215,7 +233,7 @@ CEdit& GetEditCtrl() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView&#66;](../../mfc/codesnippet/cpp/ceditview-class_2.cpp)]  
   
-##  <a name="a-namegetprinterfonta--ceditviewgetprinterfont"></a><a name="getprinterfont"></a>CEditView::GetPrinterFont  
+##  <a name="getprinterfont"></a>CEditView::GetPrinterFont  
  Appelez `GetPrinterFont` pour obtenir un pointeur vers un [CFont](../../mfc/reference/cfont-class.md) objet qui décrit la police d’imprimante en cours.  
   
 ```  
@@ -230,7 +248,7 @@ CFont* GetPrinterFont() const;
   
  Utilisez cette fonction pour déterminer la police d’imprimante en cours. Si elle n’est pas la police d’imprimante de votre choix, utilisez [CEditView::SetPrinterFont](#setprinterfont) pour le modifier.  
   
-##  <a name="a-namegetselectedtexta--ceditviewgetselectedtext"></a><a name="getselectedtext"></a>CEditView::GetSelectedText  
+##  <a name="getselectedtext"></a>CEditView::GetSelectedText  
  Appelez `GetSelectedText` pour copier le texte sélectionné dans un `CString` objet, jusqu'à la fin de la sélection ou le caractère qui précède le premier caractère de retour chariot dans la sélection.  
   
 ```  
@@ -241,7 +259,7 @@ void GetSelectedText(CString& strResult) const;
  `strResult`  
  Une référence à la `CString` objet qui doit recevoir le texte sélectionné.  
   
-##  <a name="a-namelockbuffera--ceditviewlockbuffer"></a><a name="lockbuffer"></a>CEditView::LockBuffer  
+##  <a name="lockbuffer"></a>CEditView::LockBuffer  
  Appelez cette fonction membre pour obtenir un pointeur vers la mémoire tampon. La mémoire tampon ne doit pas être modifiée.  
   
 ```  
@@ -251,7 +269,7 @@ LPCTSTR LockBuffer() const;
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers la mémoire tampon du contrôle d’édition.  
   
-##  <a name="a-nameonfindnexta--ceditviewonfindnext"></a><a name="onfindnext"></a>CEditView::OnFindNext  
+##  <a name="onfindnext"></a>CEditView::OnFindNext  
  Recherche le texte dans la mémoire tampon pour le texte spécifié par `lpszFind`, dans la direction spécifiée par `bNext`, avec respect de la casse spécifié par `bCase`.  
   
 ```  
@@ -276,7 +294,7 @@ virtual void OnFindNext(
   
  Substituer `OnFindNext` pour modifier la façon dont un `CEditView`-objet dérivé recherche du texte. `CEditView`appels `OnFindNext` quand l’utilisateur choisit le bouton suivant dans la boîte de dialogue de recherche standard.  
   
-##  <a name="a-nameonreplacealla--ceditviewonreplaceall"></a><a name="onreplaceall"></a>CEditView::OnReplaceAll  
+##  <a name="onreplaceall"></a>CEditView::OnReplaceAll  
  `CEditView`appels `OnReplaceAll` lorsque l’utilisateur sélectionne le bouton Remplacer tout dans la boîte de dialogue Remplacer standard.  
   
 ```  
@@ -303,7 +321,7 @@ virtual void OnReplaceAll(
   
  Substituer `OnReplaceAll` pour modifier la façon dont un `CEditView`-objet dérivé remplace du texte.  
   
-##  <a name="a-nameonreplacesela--ceditviewonreplacesel"></a><a name="onreplacesel"></a>CEditView::OnReplaceSel  
+##  <a name="onreplacesel"></a>CEditView::OnReplaceSel  
  `CEditView`appels `OnReplaceSel` lorsque l’utilisateur sélectionne le bouton Remplacer dans la boîte de dialogue Remplacer standard.  
   
 ```  
@@ -332,7 +350,7 @@ virtual void OnReplaceSel(
   
  Substituer `OnReplaceSel` pour modifier la façon dont un `CEditView`-objet dérivé remplace le texte sélectionné.  
   
-##  <a name="a-nameontextnotfounda--ceditviewontextnotfound"></a><a name="ontextnotfound"></a>CEditView::OnTextNotFound  
+##  <a name="ontextnotfound"></a>CEditView::OnTextNotFound  
  Remplacez cette fonction pour modifier l’implémentation par défaut qui appelle la fonction Windows **MessageBeep**.  
   
 ```  
@@ -343,7 +361,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
  `lpszFind`  
  Le texte à rechercher.  
   
-##  <a name="a-nameprintinsiderecta--ceditviewprintinsiderect"></a><a name="printinsiderect"></a>CEditView::PrintInsideRect  
+##  <a name="printinsiderect"></a>CEditView::PrintInsideRect  
  Appelez `PrintInsideRect` pour imprimer du texte dans le rectangle spécifié par *rectLayout*.  
   
 ```  
@@ -375,7 +393,7 @@ UINT PrintInsideRect(
   
  Le **rect.bottom** élément de la *rectLayout* objet est modifié afin que les dimensions du rectangle définissent la partie du rectangle qui est occupé par le texte d’origine.  
   
-##  <a name="a-nameserializerawa--ceditviewserializeraw"></a><a name="serializeraw"></a>CEditView::SerializeRaw  
+##  <a name="serializeraw"></a>CEditView::SerializeRaw  
  Appelez `SerializeRaw` d’avoir un `CArchive` objet lire ou écrire le texte le `CEditView` objet dans un fichier texte.  
   
 ```  
@@ -389,7 +407,7 @@ void SerializeRaw(CArchive& ar);
 ### <a name="remarks"></a>Remarques  
  `SerializeRaw`diffère de `CEditView`d’implémentation interne de `Serialize` dans la mesure où il lit et écrit uniquement le texte, sans faire précéder les données de la description de l’objet.  
   
-##  <a name="a-namesetprinterfonta--ceditviewsetprinterfont"></a><a name="setprinterfont"></a>CEditView::SetPrinterFont  
+##  <a name="setprinterfont"></a>CEditView::SetPrinterFont  
  Appelez `SetPrinterFont` pour définir la police d’imprimante pour la police spécifiée par `pFont`.  
   
 ```  
@@ -403,7 +421,7 @@ void SetPrinterFont(CFont* pFont);
 ### <a name="remarks"></a>Notes  
  Si vous souhaitez que votre vue toujours utiliser une police particulière pour l’impression, incluez un appel à `SetPrinterFont` dans votre classe `OnPreparePrinting` (fonction). Cette fonction virtuelle est appelée avant l’impression, donc la modification de la police a lieu avant que le contenu est imprimé.  
   
-##  <a name="a-namesettabstopsa--ceditviewsettabstops"></a><a name="settabstops"></a>CEditView::SetTabStops  
+##  <a name="settabstops"></a>CEditView::SetTabStops  
  Appelez cette fonction pour définir les taquets de tabulation utilisés pour l’affichage et l’impression.  
   
 ```  
@@ -424,7 +442,7 @@ void SetTabStops(int nTabStops);
   
  [!code-cpp[NVC_MFCDocView&#67;](../../mfc/codesnippet/cpp/ceditview-class_3.cpp)]  
   
-##  <a name="a-nameunlockbuffera--ceditviewunlockbuffer"></a><a name="unlockbuffer"></a>CEditView::UnlockBuffer  
+##  <a name="unlockbuffer"></a>CEditView::UnlockBuffer  
  Appelez cette fonction membre pour déverrouiller la mémoire tampon.  
   
 ```  

@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CDebugReportHook
 - CDebugReportHook
-- ATL::CDebugReportHook
+- ATLUTIL/ATL::CDebugReportHook
+- ATLUTIL/ATL::CDebugReportHook::CDebugReportHook
+- ATLUTIL/ATL::CDebugReportHook::CDebugReportHookProc
+- ATLUTIL/ATL::CDebugReportHook::RemoveHook
+- ATLUTIL/ATL::CDebugReportHook::SetHook
+- ATLUTIL/ATL::CDebugReportHook::SetPipeName
+- ATLUTIL/ATL::CDebugReportHook::SetTimeout
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,7 +84,7 @@ class CDebugReportHook
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlutil.h  
   
-##  <a name="a-namecdebugreporthooka--cdebugreporthookcdebugreporthook"></a><a name="cdebugreporthook"></a>CDebugReportHook::CDebugReportHook  
+##  <a name="cdebugreporthook"></a>CDebugReportHook::CDebugReportHook  
  Appels [SetPipeName](#setpipename), [SetTimeout](#settimeout), et [SetHook](#sethook).  
   
 ```
@@ -99,14 +104,14 @@ CDebugReportHook(
  `dwTimeout`  
  Durée en millisecondes d’attente de cette classe pour le canal nommé soit disponible.  
   
-##  <a name="a-namedtora--cdebugreporthookcdebugreporthook"></a><a name="dtor"></a>CDebugReportHook :: ~ CDebugReportHook  
+##  <a name="dtor"></a>CDebugReportHook :: ~ CDebugReportHook  
  Appels [CDebugReportHook::RemoveHook](#removehook).  
   
 ```
 ~CDebugReportHook() throw();
 ```  
   
-##  <a name="a-namecdebugreporthookproca--cdebugreporthookcdebugreporthookproc"></a><a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc  
+##  <a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc  
  La fonction personnalisée qui est liée à la durée d’exécution C déboguer le processus de création de rapports.  
   
 ```
@@ -134,7 +139,7 @@ static int __cdecl CDebugReportHookProc(
   
  Le code de cette fonction est exécuté dans le contexte de sécurité sous-jacente du thread appelant, c'est-à-dire que l’emprunt d’identité est désactivé pour la durée de cette fonction.  
   
-##  <a name="a-nameremovehooka--cdebugreporthookremovehook"></a><a name="removehook"></a>CDebugReportHook::RemoveHook  
+##  <a name="removehook"></a>CDebugReportHook::RemoveHook  
  Appelez cette méthode pour arrêter l’envoi de rapports de débogage pour le canal nommé et restaurer le raccordement de rapport précédente.  
   
 ```
@@ -144,7 +149,7 @@ void RemoveHook() throw();
 ### <a name="remarks"></a>Remarques  
  Appels [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) pour restaurer le raccordement de rapport précédente.  
   
-##  <a name="a-namesethooka--cdebugreporthooksethook"></a><a name="sethook"></a>CDebugReportHook::SetHook  
+##  <a name="sethook"></a>CDebugReportHook::SetHook  
  Appelez cette méthode pour commencer à envoyer des rapports de débogage pour le canal nommé.  
   
 ```
@@ -154,7 +159,7 @@ void SetHook() throw();
 ### <a name="remarks"></a>Remarques  
  Appels [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) des rapports de débogage routés via [CDebugReportHookProc](#cdebugreporthookproc) au canal nommé. Cette classe effectue le suivi du raccordement de rapport précédente afin qu’il puisse être restaurées si [RemoveHook](#removehook) est appelée.  
   
-##  <a name="a-namesetpipenamea--cdebugreporthooksetpipename"></a><a name="setpipename"></a>CDebugReportHook::SetPipeName  
+##  <a name="setpipename"></a>CDebugReportHook::SetPipeName  
  Appelez cette méthode pour définir l’ordinateur et le nom du canal auquel les rapports de débogage seront envoyés.  
   
 ```
@@ -173,7 +178,7 @@ BOOL SetPipeName(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.  
   
-##  <a name="a-namesettimeouta--cdebugreporthooksettimeout"></a><a name="settimeout"></a>CDebugReportHook::SetTimeout  
+##  <a name="settimeout"></a>CDebugReportHook::SetTimeout  
  Appelez cette méthode pour définir le délai en millisecondes d’attente de cette classe pour le canal nommé soit disponible.  
   
 ```

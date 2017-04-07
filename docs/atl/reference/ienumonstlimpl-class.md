@@ -10,8 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IEnumOnSTLImpl
-- ATL.IEnumOnSTLImpl
-- ATL::IEnumOnSTLImpl
+- ATLCOM/ATL::IEnumOnSTLImpl
+- ATLCOM/ATL::IEnumOnSTLImpl::Clone
+- ATLCOM/ATL::IEnumOnSTLImpl::Init
+- ATLCOM/ATL::IEnumOnSTLImpl::Next
+- ATLCOM/ATL::IEnumOnSTLImpl::Reset
+- ATLCOM/ATL::IEnumOnSTLImpl::Skip
+- ATLCOM/ATL::IEnumOnSTLImpl::m_iter
+- ATLCOM/ATL::IEnumOnSTLImpl::m_pcollection
+- ATLCOM/ATL::IEnumOnSTLImpl::m_spUnk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +113,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="a-nameinita--ienumonstlimplinit"></a><a name="init"></a>IEnumOnSTLImpl::Init  
+##  <a name="init"></a>IEnumOnSTLImpl::Init  
  Initialise l’énumérateur.  
   
 ```
@@ -130,7 +137,7 @@ HRESULT Init(
   
  Vous devez appeler cette méthode avant de passer un pointeur à l’interface de l’énumérateur sur tous les clients.  
   
-##  <a name="a-nameclonea--ienumonstlimplclone"></a><a name="clone"></a>IEnumOnSTLImpl::Clone  
+##  <a name="clone"></a>IEnumOnSTLImpl::Clone  
  Cette méthode fournit l’implémentation de la [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) méthode en créant un objet de type `CComEnumOnSTL`, l’initialiser avec la même collection et itérateur utilisé par l’objet actuel et le renvoi de l’interface sur l’objet nouvellement créé.  
   
 ```
@@ -144,7 +151,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="a-namemspunka--ienumonstlimplmspunk"></a><a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk  
+##  <a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk  
  Le **IUnknown** pointeur de l’objet en fournissant la collection.  
   
 ```
@@ -154,7 +161,7 @@ CComPtr<IUnknown> m_spUnk;
 ### <a name="remarks"></a>Notes  
  Ce pointeur intelligent conserve une référence de l’objet passé à [IEnumOnSTLImpl::Init](#init), s’assurer qu’il reste actif pendant la durée de vie de l’énumérateur.  
   
-##  <a name="a-namempcollectiona--ienumonstlimplmpcollection"></a><a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
+##  <a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
  Ce membre pointe vers la collection qui fournit les données de la mise en place de l’interface de l’énumérateur.  
   
 ```
@@ -164,14 +171,14 @@ CollType* m_pcollection;
 ### <a name="remarks"></a>Notes  
  Ce membre est initialisé par un appel à [IEnumOnSTLImpl::Init](#init).  
   
-##  <a name="a-namemitera--ienumonstlimplmiter"></a><a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
+##  <a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
  Ce membre contient l’itérateur utilisé pour marquer la position actuelle dans la collection et accéder aux éléments suivants.  
   
 ```
 CollType::iterator m_iter;
 ```  
   
-##  <a name="a-namenexta--ienumonstlimplnext"></a><a name="next"></a>IEnumOnSTLImpl::Next  
+##  <a name="next"></a>IEnumOnSTLImpl::Next  
  Cette méthode fournit l’implémentation de la [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) (méthode).  
   
 ```
@@ -194,7 +201,7 @@ STDMETHOD(Next)(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="a-namereseta--ienumonstlimplreset"></a><a name="reset"></a>IEnumOnSTLImpl::Reset  
+##  <a name="reset"></a>IEnumOnSTLImpl::Reset  
  Cette méthode fournit l’implémentation de la [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) (méthode).  
   
 ```
@@ -204,7 +211,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="a-nameskipa--ienumonstlimplskip"></a><a name="skip"></a>IEnumOnSTLImpl::Skip  
+##  <a name="skip"></a>IEnumOnSTLImpl::Skip  
  Cette méthode fournit l’implémentation de la [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) (méthode).  
   
 ```

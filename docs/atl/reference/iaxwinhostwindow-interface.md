@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindow
+- No header/ATL::IAxWinHostWindow
+- No header/ATL::AttachControl
+- No header/ATL::CreateControl
+- No header/ATL::CreateControlEx
+- No header/ATL::QueryControl
+- No header/ATL::SetExternalDispatch
+- No header/ATL::SetExternalUIHandler
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +82,7 @@ interface IAxWinHostWindow : IUnknown
 |IDL|ATLIFace.idl|  
 |C++|ATLIFace.h (également inclus dans ATLBase.h)|  
   
-##  <a name="a-nameattachcontrola--iaxwinhostwindowattachcontrol"></a><a name="attachcontrol"></a>IAxWinHostWindow::AttachControl  
+##  <a name="attachcontrol"></a>IAxWinHostWindow::AttachControl  
  Attache un contrôle existant (et précédemment initialisé) à l’objet ordinateur hôte à l’aide de la fenêtre identifiée par `hWnd`.  
   
 ```
@@ -92,7 +99,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="a-namecreatecontrola--iaxwinhostwindowcreatecontrol"></a><a name="createcontrol"></a>IAxWinHostWindow::CreateControl  
+##  <a name="createcontrol"></a>IAxWinHostWindow::CreateControl  
  Crée un contrôle, il initialise et héberge ce dernier dans la fenêtre identifiée par `hWnd`.  
   
 ```
@@ -122,7 +129,7 @@ STDMETHOD(CreateControl)(
   
  Pour créer un contrôle ActiveX sous licence, consultez [IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).  
   
-##  <a name="a-namecreatecontrolexa--iaxwinhostwindowcreatecontrolex"></a><a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx  
+##  <a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx  
  Crée un contrôle ActiveX, il initialise et héberge ce dernier dans la fenêtre spécifiée, comme [IAxWinHostWindow::CreateControl](#createcontrol).  
   
 ```
@@ -162,7 +169,7 @@ STDMETHOD(CreateControlEx)(
   
  Pour créer un contrôle ActiveX sous licence, consultez [IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).  
   
-##  <a name="a-namequerycontrola--iaxwinhostwindowquerycontrol"></a><a name="querycontrol"></a>IAxWinHostWindow::QueryControl  
+##  <a name="querycontrol"></a>IAxWinHostWindow::QueryControl  
  Retourne le pointeur d’interface spécifié fourni par le contrôle hébergé.  
   
 ```
@@ -181,7 +188,7 @@ STDMETHOD(QueryControl)(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="a-namesetexternaldispatcha--iaxwinhostwindowsetexternaldispatch"></a><a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch  
+##  <a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch  
  Définit la dispinterface externe, qui est disponible pour les contrôles contenus dans le [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) (méthode).  
   
 ```
@@ -195,7 +202,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="a-namesetexternaluihandlera--iaxwinhostwindowsetexternaluihandler"></a><a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler  
+##  <a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler  
  Appelez cette fonction pour définir externe [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) de l’interface pour le `CAxWindow` objet.  
   
 ```

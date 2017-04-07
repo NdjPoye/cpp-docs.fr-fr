@@ -296,9 +296,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 4232db7f9a4d58bbfc068c2b738bd07712b5ef7a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2a974f97837ff6e4d57aec3c3f2558077a65b3c9
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="int4-class"></a>int_4, classe
@@ -328,162 +328,162 @@ class int_4;
   
 |Nom|Description|  
 |----------|-----------------|  
-|int_4::get_w (méthode)||  
-|int_4::get_wx (méthode)||  
-|int_4::get_wxy (méthode)||  
-|int_4::get_wxyz (méthode)||  
-|int_4::get_wxz (méthode)||  
-|int_4::get_wxzy (méthode)||  
-|int_4::get_wy (méthode)||  
-|int_4::get_wyx (méthode)||  
-|int_4::get_wyxz (méthode)||  
-|int_4::get_wyz (méthode)||  
-|int_4::get_wyzx (méthode)||  
-|int_4::get_wz (méthode)||  
-|int_4::get_wzx (méthode)||  
-|int_4::get_wzxy (méthode)||  
-|int_4::get_wzy (méthode)||  
-|int_4::get_wzyx (méthode)||  
-|int_4::get_X (méthode)||  
-|int_4::get_xw (méthode)||  
-|int_4::get_xwy (méthode)||  
-|int_4::get_xwyz (méthode)||  
-|int_4::get_xwz (méthode)||  
-|int_4::get_xwzy (méthode)||  
-|int_4::get_xy (méthode)||  
-|int_4::get_xyw (méthode)||  
-|int_4::get_xywz (méthode)||  
-|int_4::get_xyz (méthode)||  
-|int_4::get_xyzw (méthode)||  
-|int_4::get_xz (méthode)||  
-|int_4::get_xzw (méthode)||  
-|int_4::get_xzwy (méthode)||  
-|int_4::get_xzy (méthode)||  
-|int_4::get_xzyw (méthode)||  
-|int_4::get_y (méthode)||  
-|int_4::get_yw (méthode)||  
-|int_4::get_ywx (méthode)||  
-|int_4::get_ywxz (méthode)||  
-|int_4::get_ywz (méthode)||  
-|int_4::get_ywzx (méthode)||  
-|int_4::get_yx (méthode)||  
-|int_4::get_yxw (méthode)||  
-|int_4::get_yxwz (méthode)||  
-|int_4::get_yxz (méthode)||  
-|int_4::get_yxzw (méthode)||  
-|int_4::get_yz (méthode)||  
-|int_4::get_yzw (méthode)||  
-|int_4::get_yzwx (méthode)||  
-|int_4::get_yzx (méthode)||  
-|int_4::get_yzxw (méthode)||  
-|int_4::get_z (méthode)||  
-|int_4::get_zw (méthode)||  
-|int_4::get_zwx (méthode)||  
-|int_4::get_zwxy (méthode)||  
-|int_4::get_zwy (méthode)||  
-|int_4::get_zwyx (méthode)||  
-|int_4::get_zx (méthode)||  
-|int_4::get_zxw (méthode)||  
-|int_4::get_zxwy (méthode)||  
-|int_4::get_zxy (méthode)||  
-|int_4::get_zxyw (méthode)||  
-|int_4::get_zy (méthode)||  
-|int_4::get_zyw (méthode)||  
-|int_4::get_zywx (méthode)||  
-|int_4::get_zyx (méthode)||  
-|int_4::get_zyxw (méthode)||  
-|int_4::ref_a (méthode)||  
-|int_4::ref_b (méthode)||  
-|int_4::ref_g (méthode)||  
-|int_4::ref_r (méthode)||  
-|int_4::ref_w (méthode)||  
-|int_4::ref_x (méthode)||  
-|int_4::ref_y (méthode)||  
-|int_4::ref_z (méthode)||  
-|int_4::set_w (méthode)||  
-|int_4::set_wx (méthode)||  
-|int_4::set_wxy (méthode)||  
-|int_4::set_wxyz (méthode)||  
-|int_4::set_wxz (méthode)||  
-|int_4::set_wxzy (méthode)||  
-|int_4::set_wy (méthode)||  
-|int_4::set_wyx (méthode)||  
-|int_4::set_wyxz (méthode)||  
-|int_4::set_wyz (méthode)||  
-|int_4::set_wyzx (méthode)||  
-|int_4::set_wz (méthode)||  
-|int_4::set_wzx (méthode)||  
-|int_4::set_wzxy (méthode)||  
-|int_4::set_wzy (méthode)||  
-|int_4::set_wzyx (méthode)||  
-|int_4::set_X (méthode)||  
-|int_4::set_xw (méthode)||  
-|int_4::set_xwy (méthode)||  
-|int_4::set_xwyz (méthode)||  
-|int_4::set_xwz (méthode)||  
-|int_4::set_xwzy (méthode)||  
-|int_4::set_xy (méthode)||  
-|int_4::set_xyw (méthode)||  
-|int_4::set_xywz (méthode)||  
-|int_4::set_xyz (méthode)||  
-|int_4::set_xyzw (méthode)||  
-|int_4::set_xz (méthode)||  
-|int_4::set_xzw (méthode)||  
-|int_4::set_xzwy (méthode)||  
-|int_4::set_xzy (méthode)||  
-|int_4::set_xzyw (méthode)||  
-|int_4::set_y (méthode)||  
-|int_4::set_yw (méthode)||  
-|int_4::set_ywx (méthode)||  
-|int_4::set_ywxz (méthode)||  
-|int_4::set_ywz (méthode)||  
-|int_4::set_ywzx (méthode)||  
-|int_4::set_yx (méthode)||  
-|int_4::set_yxw (méthode)||  
-|int_4::set_yxwz (méthode)||  
-|int_4::set_yxz (méthode)||  
-|int_4::set_yxzw (méthode)||  
-|int_4::set_yz (méthode)||  
-|int_4::set_yzw (méthode)||  
-|int_4::set_yzwx (méthode)||  
-|int_4::set_yzx (méthode)||  
-|int_4::set_yzxw (méthode)||  
-|int_4::set_z (méthode)||  
-|int_4::set_zw (méthode)||  
-|int_4::set_zwx (méthode)||  
-|int_4::set_zwxy (méthode)||  
-|int_4::set_zwy (méthode)||  
-|int_4::set_zwyx (méthode)||  
-|int_4::set_zx (méthode)||  
-|int_4::set_zxw (méthode)||  
-|int_4::set_zxwy (méthode)||  
-|int_4::set_zxy (méthode)||  
-|int_4::set_zxyw (méthode)||  
-|int_4::set_zy (méthode)||  
-|int_4::set_zyw (méthode)||  
-|int_4::set_zywx (méthode)||  
-|int_4::set_zyx (méthode)||  
-|int_4::set_zyxw (méthode)||  
+|int_4::get_w||  
+|int_4::get_wx||  
+|int_4::get_wxy||  
+|int_4::get_wxyz||  
+|int_4::get_wxz||  
+|int_4::get_wxzy||  
+|int_4::get_wy||  
+|int_4::get_wyx||  
+|int_4::get_wyxz||  
+|int_4::get_wyz||  
+|int_4::get_wyzx||  
+|int_4::get_wz||  
+|int_4::get_wzx||  
+|int_4::get_wzxy||  
+|int_4::get_wzy||  
+|int_4::get_wzyx||  
+|int_4::get_X||  
+|int_4::get_xw||  
+|int_4::get_xwy||  
+|int_4::get_xwyz||  
+|int_4::get_xwz||  
+|int_4::get_xwzy||  
+|int_4::get_xy||  
+|int_4::get_xyw||  
+|int_4::get_xywz||  
+|int_4::get_xyz||  
+|int_4::get_xyzw||  
+|int_4::get_xz||  
+|int_4::get_xzw||  
+|int_4::get_xzwy||  
+|int_4::get_xzy||  
+|int_4::get_xzyw||  
+|int_4::get_y||  
+|int_4::get_yw||  
+|int_4::get_ywx||  
+|int_4::get_ywxz||  
+|int_4::get_ywz||  
+|int_4::get_ywzx||  
+|int_4::get_yx||  
+|int_4::get_yxw||  
+|int_4::get_yxwz||  
+|int_4::get_yxz||  
+|int_4::get_yxzw||  
+|int_4::get_yz||  
+|int_4::get_yzw||  
+|int_4::get_yzwx||  
+|int_4::get_yzx||  
+|int_4::get_yzxw||  
+|int_4::get_z||  
+|int_4::get_zw||  
+|int_4::get_zwx||  
+|int_4::get_zwxy||  
+|int_4::get_zwy||  
+|int_4::get_zwyx||  
+|int_4::get_zx||  
+|int_4::get_zxw||  
+|int_4::get_zxwy||  
+|int_4::get_zxy||  
+|int_4::get_zxyw||  
+|int_4::get_zy||  
+|int_4::get_zyw||  
+|int_4::get_zywx||  
+|int_4::get_zyx||  
+|int_4::get_zyxw||  
+|int_4::ref_a||  
+|int_4::ref_b||  
+|int_4::ref_g||  
+|int_4::ref_r||  
+|int_4::ref_w||  
+|int_4::ref_x||  
+|int_4::ref_y||  
+|int_4::ref_z||  
+|int_4::set_w||  
+|int_4::set_wx||  
+|int_4::set_wxy||  
+|int_4::set_wxyz||  
+|int_4::set_wxz||  
+|int_4::set_wxzy||  
+|int_4::set_wy||  
+|int_4::set_wyx||  
+|int_4::set_wyxz||  
+|int_4::set_wyz||  
+|int_4::set_wyzx||  
+|int_4::set_wz||  
+|int_4::set_wzx||  
+|int_4::set_wzxy||  
+|int_4::set_wzy||  
+|int_4::set_wzyx||  
+|int_4::set_X||  
+|int_4::set_xw||  
+|int_4::set_xwy||  
+|int_4::set_xwyz||  
+|int_4::set_xwz||  
+|int_4::set_xwzy||  
+|int_4::set_xy||  
+|int_4::set_xyw||  
+|int_4::set_xywz||  
+|int_4::set_xyz||  
+|int_4::set_xyzw||  
+|int_4::set_xz||  
+|int_4::set_xzw||  
+|int_4::set_xzwy||  
+|int_4::set_xzy||  
+|int_4::set_xzyw||  
+|int_4::set_y||  
+|int_4::set_yw||  
+|int_4::set_ywx||  
+|int_4::set_ywxz||  
+|int_4::set_ywz||  
+|int_4::set_ywzx||  
+|int_4::set_yx||  
+|int_4::set_yxw||  
+|int_4::set_yxwz||  
+|int_4::set_yxz||  
+|int_4::set_yxzw||  
+|int_4::set_yz||  
+|int_4::set_yzw||  
+|int_4::set_yzwx||  
+|int_4::set_yzx||  
+|int_4::set_yzxw||  
+|int_4::set_z||  
+|int_4::set_zw||  
+|int_4::set_zwx||  
+|int_4::set_zwxy||  
+|int_4::set_zwy||  
+|int_4::set_zwyx||  
+|int_4::set_zx||  
+|int_4::set_zxw||  
+|int_4::set_zxwy||  
+|int_4::set_zxy||  
+|int_4::set_zxyw||  
+|int_4::set_zy||  
+|int_4::set_zyw||  
+|int_4::set_zywx||  
+|int_4::set_zyx||  
+|int_4::set_zyxw||  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|int_4::operator-(opérateur)||  
-|int_4::operator--(opérateur)||  
-|int_4::operator % =, opérateur||  
-|int_4::operator < =, opérateur||  
-|int_4::operator * =, opérateur||  
-|int_4::operator / =, opérateur||  
-|int_4::operator ^ =, opérateur||  
-|int_4::operator | =, opérateur||  
-|int_4::operator ~ (opérateur)||  
-|int_4::operator ++ (opérateur)||  
-|int_4::operator +=, opérateur||  
-|int_4::operator\<=, opérateur||  
-|int_4::operator =, opérateur||  
-|int_4::operator-= (opérateur)||  
-|int_4::operator >> =, opérateur||  
+|int_4::operator-||  
+|int_4::operator--||  
+|int_4::operator % =||  
+|int_4::operator < =||  
+|int_4::operator * =||  
+|/ = int_4::operator||  
+|int_4::operator ^ =||  
+|int_4::operator | =||  
+|int_4::operator ~||  
+|int_4::operator ++||  
+|int_4::operator +=||  
+|int_4::operator\<=||  
+|int_4::operator =||  
+|int_4::operator =||  
+|int_4::operator >> =||  
   
 ### <a name="public-constants"></a>Constantes publiques  
   
@@ -495,134 +495,134 @@ class int_4;
   
 |Nom|Description|  
 |----------|-----------------|  
-|Membre de données int_4::a||  
-|Membre de données int_4::AB||  
-|Membre de données int_4::abg||  
-|Membre de données int_4::abgr||  
-|Membre de données int_4::ABR||  
-|Membre de données int_4::abrg||  
-|Membre de données int_4::AG||  
-|Membre de données int_4::agb||  
-|Membre de données int_4::agbr||  
-|Membre de données int_4::AGR||  
-|Membre de données int_4::agrb||  
-|Membre de données int_4::AR||  
-|Membre de données int_4::ARB||  
-|Membre de données int_4::arbg||  
-|Membre de données int_4::arg||  
-|Membre de données int_4::ARGB||  
-|Membre de données int_4::b||  
-|Membre de données int_4::BA||  
-|Membre de données int_4::bag||  
-|Membre de données int_4::bagr||  
-|Membre de données int_4::bar||  
-|Membre de données int_4::barg||  
-|Membre de données int_4::BG||  
-|Membre de données int_4::BGA||  
-|Membre de données int_4::bgar||  
-|Membre de données int_4::BGR||  
-|Membre de données int_4::bgra||  
-|Membre de données int_4::br||  
-|Membre de données int_4::BRA||  
-|Membre de données int_4::brag||  
-|Membre de données int_4::brg||  
-|Membre de données int_4::brga||  
-|Membre de données int_4::g||  
-|Membre de données int_4::GA||  
-|Membre de données int_4::GAB||  
-|Membre de données int_4::gabr||  
-|Membre de données int_4::gar||  
-|Membre de données int_4::garb||  
-|Membre de données int_4::GB||  
-|Membre de données int_4::GBA||  
-|Membre de données int_4::gbar||  
-|Membre de données int_4::GBR||  
-|Membre de données int_4::GBRA||  
-|Membre de données int_4::GR||  
-|Membre de données int_4::gra||  
-|Membre de données int_4::Grab||  
-|Membre de données int_4::grb||  
-|Membre de données int_4::grba||  
-|Membre de données int_4::r||  
-|Membre de données int_4::RA||  
-|Membre de données int_4::RAB||  
-|Membre de données int_4::rabg||  
-|Membre de données int_4::RAG||  
-|Membre de données int_4::ragb||  
-|Membre de données int_4::RB||  
-|Membre de données int_4::RBA||  
-|Membre de données int_4::rbag||  
-|Membre de données int_4::rbg||  
-|Membre de données int_4::rbga||  
-|Membre de données int_4::RG||  
-|Membre de données int_4::RGA||  
-|Membre de données int_4::rgab||  
-|Membre de données int_4::RGB||  
-|Membre de données int_4::RGBA||  
-|Membre de données int_4::w||  
-|Membre de données int_4::WX||  
-|Membre de données int_4::WXY||  
-|Membre de données int_4::wxyz||  
-|Membre de données int_4::wxz||  
-|Membre de données int_4::wxzy||  
-|Membre de données int_4::wY||  
-|Membre de données int_4::wyx||  
-|Membre de données int_4::wyxz||  
-|Membre de données int_4::WYZ||  
-|Membre de données int_4::wyzx||  
-|Membre de données int_4::wZ||  
-|Membre de données int_4::wzx||  
-|Membre de données int_4::wzxy||  
-|Membre de données int_4::wzy||  
-|Membre de données int_4::wzyx||  
-|Membre de données int_4::x||  
-|Membre de données int_4::XW||  
-|Membre de données int_4::xwy||  
-|Membre de données int_4::xwyz||  
-|Membre de données int_4::xwz||  
-|Membre de données int_4::xwzy||  
-|Membre de données int_4::XY||  
-|Membre de données int_4::xyw||  
-|Membre de données int_4::xywz||  
-|Membre de données int_4::XYZ||  
-|Membre de données int_4::xyzw||  
-|Membre de données int_4::XZ||  
-|Membre de données int_4::xzw||  
-|Membre de données int_4::xzwy||  
-|Membre de données int_4::xzy||  
-|Membre de données int_4::xzyw||  
-|Membre de données int_4::y||  
-|Membre de données int_4::yw||  
-|Membre de données int_4::ywx||  
-|Membre de données int_4::ywxz||  
-|Membre de données int_4::ywz||  
-|Membre de données int_4::ywzx||  
-|Membre de données int_4::YX||  
-|Membre de données int_4::yxw||  
-|Membre de données int_4::yxwz||  
-|Membre de données int_4::yxz||  
-|Membre de données int_4::yxzw||  
-|Membre de données int_4::YZ||  
-|Membre de données int_4::yzw||  
-|Membre de données int_4::yzwx||  
-|Membre de données int_4::yzx||  
-|Membre de données int_4::yzxw||  
-|Membre de données int_4::z||  
-|Membre de données int_4::zw||  
-|Membre de données int_4::zwx||  
-|Membre de données int_4::zwxy||  
-|Membre de données int_4::zwy||  
-|Membre de données int_4::zwyx||  
-|Membre de données int_4::ZX||  
-|Membre de données int_4::zxw||  
-|Membre de données int_4::zxwy||  
-|Membre de données int_4::zxy||  
-|Membre de données int_4::zxyw||  
-|Membre de données int_4::ZY||  
-|Membre de données int_4::zyw||  
-|Membre de données int_4::zywx||  
-|Membre de données int_4::ZYX||  
-|Membre de données int_4::zyxw||  
+|int_4::a||  
+|int_4::AB||  
+|int_4::abg||  
+|int_4::abgr||  
+|int_4::ABR||  
+|int_4::abrg||  
+|int_4::AG||  
+|int_4::agb||  
+|int_4::agbr||  
+|int_4::AGR||  
+|int_4::agrb||  
+|int_4::AR||  
+|int_4::ARB||  
+|int_4::arbg||  
+|int_4::arg||  
+|int_4::ARGB||  
+|int_4::b||  
+|int_4::BA||  
+|int_4::bag||  
+|int_4::bagr||  
+|int_4::bar||  
+|int_4::barg||  
+|int_4::BG||  
+|int_4::BGA||  
+|int_4::bgar||  
+|int_4::BGR||  
+|int_4::bgra||  
+|int_4::br||  
+|int_4::BRA||  
+|int_4::brag||  
+|int_4::brg||  
+|int_4::brga||  
+|int_4::g||  
+|int_4::GA||  
+|int_4::GAB||  
+|int_4::gabr||  
+|int_4::gar||  
+|int_4::garb||  
+|int_4::GB||  
+|int_4::GBA||  
+|int_4::gbar||  
+|int_4::GBR||  
+|int_4::GBRA||  
+|int_4::GR||  
+|int_4::gra||  
+|int_4::Grab||  
+|int_4::grb||  
+|int_4::grba||  
+|int_4::r||  
+|int_4::RA||  
+|int_4::RAB||  
+|int_4::rabg||  
+|int_4::RAG||  
+|int_4::ragb||  
+|int_4::RB||  
+|int_4::RBA||  
+|int_4::rbag||  
+|int_4::rbg||  
+|int_4::rbga||  
+|int_4::RG||  
+|int_4::RGA||  
+|int_4::rgab||  
+|int_4::RGB||  
+|int_4::RGBA||  
+|int_4::w||  
+|int_4::WX||  
+|int_4::WXY||  
+|int_4::wxyz||  
+|int_4::wxz||  
+|int_4::wxzy||  
+|int_4::wY||  
+|int_4::wyx||  
+|int_4::wyxz||  
+|int_4::WYZ||  
+|int_4::wyzx||  
+|int_4::wZ||  
+|int_4::wzx||  
+|int_4::wzxy||  
+|int_4::wzy||  
+|int_4::wzyx||  
+|int_4::x||  
+|int_4::XW||  
+|int_4::xwy||  
+|int_4::xwyz||  
+|int_4::xwz||  
+|int_4::xwzy||  
+|int_4::XY||  
+|int_4::xyw||  
+|int_4::xywz||  
+|int_4::XYZ||  
+|int_4::xyzw||  
+|int_4::XZ||  
+|int_4::xzw||  
+|int_4::xzwy||  
+|int_4::xzy||  
+|int_4::xzyw||  
+|int_4::y||  
+|int_4::yw||  
+|int_4::ywx||  
+|int_4::ywxz||  
+|int_4::ywz||  
+|int_4::ywzx||  
+|int_4::YX||  
+|int_4::yxw||  
+|int_4::yxwz||  
+|int_4::yxz||  
+|int_4::yxzw||  
+|int_4::YZ||  
+|int_4::yzw||  
+|int_4::yzwx||  
+|int_4::yzx||  
+|int_4::yzxw||  
+|int_4::z||  
+|int_4::zw||  
+|int_4::zwx||  
+|int_4::zwxy||  
+|int_4::zwy||  
+|int_4::zwyx||  
+|int_4::ZX||  
+|int_4::zxw||  
+|int_4::zxwy||  
+|int_4::zxy||  
+|int_4::zxyw||  
+|int_4::ZY||  
+|int_4::zyw||  
+|int_4::zywx||  
+|int_4::ZYX||  
+|int_4::zyxw||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `int_4`  
@@ -632,7 +632,7 @@ class int_4;
   
  **Namespace :** Concurrency::graphics  
   
-##  <a name="a-namectora-int4"></a><a name="ctor"></a>int_4 
+##  <a name="ctor"></a>int_4 
 
  Par défaut constructeur initialise tous les éléments à 0.  
   
@@ -703,12 +703,12 @@ explicit inline int_4(
  `_Other`  
  Objet utilisé pour initialiser.  
   
-##  <a name="a-nameint4sizea-size"></a><a name="int_4__size"></a>taille 
+##  <a name="int_4__size"></a>taille 
 
 ```  
 static const int size = 4;  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
 

@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolTipCtrl
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::GetIconSize
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::GetParams
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnDrawBorder
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnDrawDescription
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnDrawIcon
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnDrawLabel
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnDrawSeparator
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::OnFillBackground
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetDescription
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetFixedWidth
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetHotRibbonButton
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetLocation
+- AFXTOOLTIPCTRL/CMFCToolTipCtrl::SetParams
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -149,7 +163,7 @@ theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxtooltipctrl.h  
   
-##  <a name="a-namecmfctooltipctrla--cmfctooltipctrlcmfctooltipctrl"></a><a name="cmfctooltipctrl"></a>CMFCToolTipCtrl::CMFCToolTipCtrl  
+##  <a name="cmfctooltipctrl"></a>CMFCToolTipCtrl::CMFCToolTipCtrl  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -161,7 +175,7 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namegeticonsizea--cmfctooltipctrlgeticonsize"></a><a name="geticonsize"></a>CMFCToolTipCtrl::GetIconSize  
+##  <a name="geticonsize"></a>CMFCToolTipCtrl::GetIconSize  
  Retourne la taille d'une icône dans une info-bulle.  
   
 ```  
@@ -171,7 +185,7 @@ virtual CSize GetIconSize();
 ### <a name="return-value"></a>Valeur de retour  
  La taille de l’icône, en pixels.  
   
-##  <a name="a-namegetparamsa--cmfctooltipctrlgetparams"></a><a name="getparams"></a>CMFCToolTipCtrl::GetParams  
+##  <a name="getparams"></a>CMFCToolTipCtrl::GetParams  
  Retourne les paramètres d'affichage d'une info-bulle.  
   
 ```  
@@ -181,7 +195,7 @@ const CMFCToolTipInfo& GetParams() const;
 ### <a name="return-value"></a>Valeur de retour  
  Les paramètres d’affichage actuels info-bulle, qui sont stockées dans un [CMFCToolTipInfo classe](../../mfc/reference/cmfctooltipinfo-class.md) objet.  
   
-##  <a name="a-nameondrawbordera--cmfctooltipctrlondrawborder"></a><a name="ondrawborder"></a>CMFCToolTipCtrl::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCToolTipCtrl::OnDrawBorder  
  Dessine la bordure d'une info-bulle.  
   
 ```  
@@ -204,7 +218,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>Remarques  
  Substituez cette méthode dans une classe dérivée pour personnaliser l’apparence de la bordure de l’info-bulle.  
   
-##  <a name="a-nameondrawdescriptiona--cmfctooltipctrlondrawdescription"></a><a name="ondrawdescription"></a>CMFCToolTipCtrl::OnDrawDescription  
+##  <a name="ondrawdescription"></a>CMFCToolTipCtrl::OnDrawDescription  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -223,7 +237,7 @@ virtual CSize OnDrawDescription(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameondrawicona--cmfctooltipctrlondrawicon"></a><a name="ondrawicon"></a>CMFCToolTipCtrl::OnDrawIcon  
+##  <a name="ondrawicon"></a>CMFCToolTipCtrl::OnDrawIcon  
  Affiche une icône dans une info-bulle.  
   
 ```  
@@ -245,7 +259,7 @@ virtual BOOL OnDrawIcon(
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée pour afficher une icône personnalisée. Vous devez également substituer [CMFCToolTipCtrl::GetIconSize](#geticonsize) pour activer l’info-bulle calculer la disposition du texte et la description.  
   
-##  <a name="a-nameondrawlabela--cmfctooltipctrlondrawlabel"></a><a name="ondrawlabel"></a>CMFCToolTipCtrl::OnDrawLabel  
+##  <a name="ondrawlabel"></a>CMFCToolTipCtrl::OnDrawLabel  
  Dessine l'étiquette d'une info-bulle ou calcule la taille de l'étiquette.  
   
 ```  
@@ -271,7 +285,7 @@ virtual CSize OnDrawLabel(
 ### <a name="remarks"></a>Remarques  
  Substituez cette méthode dans une classe dérivée si vous souhaitez personnaliser l’apparence de l’étiquette d’info-bulle.  
   
-##  <a name="a-nameondrawseparatora--cmfctooltipctrlondrawseparator"></a><a name="ondrawseparator"></a>CMFCToolTipCtrl::OnDrawSeparator  
+##  <a name="ondrawseparator"></a>CMFCToolTipCtrl::OnDrawSeparator  
  Dessine le séparateur entre l'étiquette et la description dans une info-bulle.  
   
 ```  
@@ -300,7 +314,7 @@ virtual void OnDrawSeparator(
   
  Substituez cette méthode dans une classe dérivée pour personnaliser l’apparence du séparateur.  
   
-##  <a name="a-nameonfillbackgrounda--cmfctooltipctrlonfillbackground"></a><a name="onfillbackground"></a>CMFCToolTipCtrl::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCToolTipCtrl::OnFillBackground  
  Remplit l'arrière-plan de l'info-bulle.  
   
 ```  
@@ -329,7 +343,7 @@ virtual void OnFillBackground(
   
  Substituez cette méthode dans une classe dérivée si vous souhaitez personnaliser l’apparence de l’info-bulle.  
   
-##  <a name="a-namesetdescriptiona--cmfctooltipctrlsetdescription"></a><a name="setdescription"></a>CMFCToolTipCtrl::SetDescription  
+##  <a name="setdescription"></a>CMFCToolTipCtrl::SetDescription  
  Définit la description affichée par l'info-bulle.  
   
 ```  
@@ -343,7 +357,7 @@ virtual void SetDescription(const CString strDesrciption);
 ### <a name="remarks"></a>Notes  
  Le texte de description s’affiche dans l’info-bulle sous le séparateur.  
   
-##  <a name="a-namesetfixedwidtha--cmfctooltipctrlsetfixedwidth"></a><a name="setfixedwidth"></a>CMFCToolTipCtrl::SetFixedWidth  
+##  <a name="setfixedwidth"></a>CMFCToolTipCtrl::SetFixedWidth  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -358,7 +372,7 @@ void SetFixedWidth(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesethotribbonbuttona--cmfctooltipctrlsethotribbonbutton"></a><a name="sethotribbonbutton"></a>CMFCToolTipCtrl::SetHotRibbonButton  
+##  <a name="sethotribbonbutton"></a>CMFCToolTipCtrl::SetHotRibbonButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -370,7 +384,7 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetlocationa--cmfctooltipctrlsetlocation"></a><a name="setlocation"></a>CMFCToolTipCtrl::SetLocation  
+##  <a name="setlocation"></a>CMFCToolTipCtrl::SetLocation  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -382,7 +396,7 @@ void SetLocation(CPoint pt);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namesetparamsa--cmfctooltipctrlsetparams"></a><a name="setparams"></a>CMFCToolTipCtrl::SetParams  
+##  <a name="setparams"></a>CMFCToolTipCtrl::SetParams  
  Spécifie l’apparence d’une info-bulle à l’aide un [CMFCToolTipInfo classe](../../mfc/reference/cmfctooltipinfo-class.md) objet.  
   
 ```  

@@ -8,6 +8,16 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sampler
+- AMP_GRAPHICS/sampler
+- AMP_GRAPHICS/concurrency::sampler::graphics::sampler
+- AMP_GRAPHICS/concurrency::sampler::graphics::get_address_mode
+- AMP_GRAPHICS/concurrency::sampler::graphics::get_border_color
+- AMP_GRAPHICS/concurrency::sampler::graphics::get_filter_mode
+- AMP_GRAPHICS/concurrency::sampler::graphics::address_mode
+- AMP_GRAPHICS/concurrency::sampler::graphics::border_color
+- AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
 dev_langs:
 - C++
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
@@ -30,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 090e05e294646b7571a3d06ca8ed23583a306756
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f81208e40cb2a211b714af1efe801e81cd567374
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="sampler-class"></a>sampler, classe
@@ -56,23 +66,23 @@ class sampler;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[get_address_mode (méthode)](#get_address_mode)|Retourne le `address_mode` qui est associé à l’objet de l’échantillon.|  
-|[get_border_color (méthode)](#get_border_color)|Retourne la couleur de bordure qui est associé à l’objet de l’échantillon.|  
-|[get_filter_mode (méthode)](#get_filter_mode)|Retourne le `filter_mode` qui est associé à l’objet de l’échantillon.|  
+|[get_address_mode](#get_address_mode)|Retourne le `address_mode` qui est associé à l’objet de l’échantillon.|  
+|[get_border_color](#get_border_color)|Retourne la couleur de bordure qui est associé à l’objet de l’échantillon.|  
+|[get_filter_mode](#get_filter_mode)|Retourne le `filter_mode` qui est associé à l’objet de l’échantillon.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[opérateur =, opérateur](#operator_eq)|Surchargé. Opérateur d'assignation.|  
+|[operator=](#operator_eq)|Surchargé. Opérateur d'assignation.|  
   
 ### <a name="public-data-members"></a>Membres de données publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[address_mode (donnée membre)](#address_mode)|Obtient le mode d’adresse de le `sampler` objet.|  
-|[border_color (donnée membre)](#border_color)|Obtient la couleur de bordure du `sampler` objet.|  
-|[filter_mode (donnée membre)](#filter_mode)|Obtient le mode de filtre de le `sampler` objet.|  
+|[address_mode](#address_mode)|Obtient le mode d’adresse de le `sampler` objet.|  
+|[border_color](#border_color)|Obtient la couleur de bordure du `sampler` objet.|  
+|[filter_mode](#filter_mode)|Obtient le mode de filtre de le `sampler` objet.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `sampler`  
@@ -82,7 +92,7 @@ class sampler;
   
  **Namespace :** concurrency::graphics  
   
-##  <a name="a-namectora-sampler"></a><a name="ctor"></a>échantillon 
+##  <a name="ctor"></a>échantillon 
 
  Construit une instance de la [sampler, classe](sampler-class.md).  
   
@@ -139,7 +149,7 @@ sampler(// [6] move constructor
  [6] constructeur de déplacement  
  Le `sampler` déplacer dans le nouvel objet `sampler` instance.  
   
-##  <a name="a-nameaddressmodea-addressmode"></a><a name="address_mode"></a>address_mode 
+##  <a name="address_mode"></a>address_mode 
 
  Obtient le mode d’adresse de le `sampler` objet.  
   
@@ -147,7 +157,7 @@ sampler(// [6] move constructor
 __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode address_mode;  
 ```  
   
-##  <a name="a-namebordercolora-bordercolor"></a><a name="border_color"></a>border_color 
+##  <a name="border_color"></a>border_color 
 
  Obtient la couleur de bordure du `sampler` objet.  
   
@@ -155,7 +165,7 @@ __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode 
 __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 border_color;  
 ```  
   
-##  <a name="a-namefiltermodea-filtermode"></a><a name="filter_mode"></a>filter_mode 
+##  <a name="filter_mode"></a>filter_mode 
 
  Obtient le mode de filtre de le `sampler` objet.  
   
@@ -163,7 +173,7 @@ __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 borde
 __declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode filter_mode;  
 ```  
   
-##  <a name="a-namegetaddressmodea-getaddressmode"></a><a name="get_address_mode"></a>get_address_mode 
+##  <a name="get_address_mode"></a>get_address_mode 
 
  Renvoie le mode de filtre qui est configuré pour ce `sampler`.  
   
@@ -174,7 +184,7 @@ Concurrency::graphics::address_mode get_address_mode() const __GPU;
 ### <a name="return-value"></a>Valeur de retour  
  Le mode d’adresse qui est configuré pour l’échantillonnage.  
   
-##  <a name="a-namegetbordercolora-getbordercolor"></a><a name="get_border_color"></a>get_border_color 
+##  <a name="get_border_color"></a>get_border_color 
 
  Retourne la couleur de bordure qui est configurée pour ce `sampler`.  
   
@@ -185,7 +195,7 @@ Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
 ### <a name="return-value"></a>Valeur de retour  
  Float_4 qui contient la couleur de bordure.  
   
-##  <a name="a-namegetfiltermodea-getfiltermode"></a><a name="get_filter_mode"></a>get_filter_mode 
+##  <a name="get_filter_mode"></a>get_filter_mode 
 
  Renvoie le mode de filtre qui est configuré pour ce `sampler`.  
   
@@ -196,7 +206,7 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 ### <a name="return-value"></a>Valeur de retour  
  Le mode de filtre qui est configuré pour l’échantillonnage.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>opérateur = 
+##  <a name="operator_eq"></a>opérateur = 
 
  Affecte la valeur d’un autre objet échantillonneur à un échantillon existant.  
   
@@ -221,5 +231,5 @@ sampler& operator= (// [2] move assingment operator sampler&& _Other) restrict(a
  Une référence à cette instance de l’échantillon.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
 

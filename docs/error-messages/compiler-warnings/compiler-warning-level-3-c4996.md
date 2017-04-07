@@ -1,5 +1,5 @@
 ---
-title: "Compilateur (niveau 3) d’avertissement C4996 | Documents Microsoft"
+title: Compilateur avertissement (niveau 3) C4996 | Documents Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,9 +35,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: bf7b4ccd6309f08098416f4bdb6777b8eafd2e7f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: aa9586bd0abed0b1fa1d24c777eea8c82c5cedc0
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Compilateur avertissement (niveau 3) C4996
@@ -45,21 +45,23 @@ Le compilateur a rencontré une déclaration déconseillée.
   
  Cet avertissement ou cette erreur a plusieurs significations possibles.  
   
- `C4996`se produit lorsque le compilateur rencontre une fonction ou une variable qui est marqué comme étant [déconseillée](../../cpp/deprecated-cpp.md). Plusieurs fonctions, des fonctions membres, des fonctions de modèle et des variables globales des bibliothèques de Visual Studio sont marquées comme déconseillées. Ces fonctions peuvent avoir un autre nom préféré, peuvent être risquées ou avoir une variante plus sécurisée, ou bien être obsolètes. Le message d’erreur peut inclure une suggestion de remplacement pour la fonction ou la variable globale déconseillée. Vous pouvez désactiver cet avertissement avec le [avertissement](../../preprocessor/warning.md) pragma ou **/wd4996** l’option de ligne de commande. Vous pouvez également utiliser des macros de préprocesseur pour désactiver certaines classes d’avertissements concernant les éléments déconseillés.  
+ `C4996`se produit lorsque le compilateur rencontre une fonction ou une variable qui est marqué comme étant [déconseillée](../../cpp/deprecated-cpp.md). Plusieurs fonctions, des fonctions membres, des fonctions de modèle et des variables globales des bibliothèques de Visual Studio sont marquées comme déconseillées. Ces fonctions peuvent avoir un autre nom préféré, peuvent être risquées ou avoir une variante plus sécurisée, ou bien être obsolètes. Le message d’erreur peut inclure une suggestion de remplacement pour la fonction ou la variable globale déconseillée. Vous pouvez désactiver cet avertissement avec le [avertissement](../../preprocessor/warning.md) pragma ou **/wd4996** l’option de ligne de commande. Vous pouvez également utiliser des macros de préprocesseur pour désactiver certaines classes d’avertissements concernant les éléments déconseillés. 
+
+Cet avertissement est également émis lorsque vous tentez d’accéder à une fonction, un membre de classe ou un typedef qui a C ++ 14 `[[deprecated]]` attribut. Pour plus d’informations, consultez [attributs Standard C++](../../cpp/attributes2.md). 
   
  **Le nom POSIX pour cet élément est déconseillé. Au lieu de cela, utilisez le nom conforme ISO C et C++ :** nouveau_nom**. Consultez l’aide en ligne pour plus d’informations.**  
   
  Certaines fonctions POSIX de la bibliothèque CRT ont été renommées pour les rendre conformes aux règles C99 et C++03 quant aux noms de fonctions globaux définis par l’implémentation. Dans la plupart des cas, un trait de soulignement de début a été ajouté au nom de fonction POSIX pour créer un nom conforme à la norme. Le compilateur émet un avertissement indiquant que les noms d’origine des fonctions sont déconseillés et suggère le nom préféré. Seuls les noms d’origine sont déconseillés, mais pas les fonctions elles-mêmes. Pour désactiver les avertissements déconseillant ces fonctions, définissez la macro de préprocesseur **_CRT_NONSTDC_NO_WARNINGS**. Vous pouvez la définir sur la ligne de commande en incluant l’option `/D_CRT_NONSTDC_NO_WARNINGS`. Pour définir cette macro dans Visual Studio, ouvrez la boîte de dialogue **Pages de propriétés** pour votre projet. Développez **Propriétés de configuration**, **C/C++**, **Préprocesseur**. Dans **Définitions de préprocesseur**, ajoutez `_CRT_NONSTDC_NO_WARNINGS`. Choisissez **OK** pour enregistrer, puis régénérez votre projet. Pour définir cette macro seulement dans des fichiers sources spécifiques, ajoutez la ligne `#define _CRT_NONSTDC_NO_WARNINGS` avant une ligne incluant un fichier d’en-tête.  
   
- **Cette fonction ou une variable peut être dangereux. Envisagez d’utiliser** safe_version **à la place. Pour désactiver le message déconseillant l’utilisation, utilisez _CRT_SECURE_NO_WARNINGS.  Consultez l’aide en ligne pour plus d’informations.**  
+ **Cette fonction ou une variable peut être dangereux. Envisagez d’utiliser** version_sécurisée **à la place. Pour désactiver le message déconseillant l’utilisation, utilisez _CRT_SECURE_NO_WARNINGS.  Consultez l’aide en ligne pour plus d’informations.**  
   
- Certaines fonctions CRT et la bibliothèque C++ Standard et les variables globales ont été déconseillées en faveur de nouvelles fonctions, plus sécurisées. Le compilateur émet un avertissement indiquant que ces fonctions sont déconseillées et suggère la fonction préférée. Pour désactiver les avertissements déconseillant ces fonctions dans la bibliothèque CRT, définissez **_CRT_SECURE_NO_WARNINGS**. Pour désactiver les avertissements relatifs à des variables globales déconseillées, définissez **_CRT_SECURE_NO_WARNINGS_GLOBALS**. Pour plus d’informations sur ces fonctions déconseillées et les variables globales, consultez [fonctionnalités de sécurité de la bibliothèque CRT](../../c-runtime-library/security-features-in-the-crt.md) et [bibliothèques sécurisées : bibliothèque Standard C++](../../standard-library/safe-libraries-cpp-standard-library.md).  
+ Certaines fonctions CRT et la bibliothèque C++ Standard et les variables globales ont été déconseillées en faveur de nouvelles fonctions, plus sécurisées. Le compilateur émet un avertissement indiquant que ces fonctions sont déconseillées et suggère la fonction préférée. Pour désactiver les avertissements déconseillant ces fonctions dans la bibliothèque CRT, définissez **_CRT_SECURE_NO_WARNINGS**. Pour désactiver les avertissements relatifs à des variables globales déconseillées, définissez **_CRT_SECURE_NO_WARNINGS_GLOBALS**. Pour plus d’informations sur ces fonctions déconseillées et les variables globales, consultez [les fonctionnalités de sécurité dans la bibliothèque CRT](../../c-runtime-library/security-features-in-the-crt.md) et [bibliothèques sécurisées : bibliothèque Standard C++](../../standard-library/safe-libraries-cpp-standard-library.md).  
   
- **Appel de fonction avec des paramètres qui peuvent être non sécurisés - cet appel s’appuie sur l’appelant pour vérifier que les valeurs passées sont corrects. Pour désactiver cet avertissement, utilisez -D_SCL_SECURE_NO_WARNINGS. Consultez la documentation sur l’utilisation des « Itérateurs vérifiés » Visual C++**  
+ **Appel de fonction avec des paramètres qui peuvent être non sécurisés : cet appel s’appuie sur l’appelant pour vérifier que les valeurs passées sont corrects. Pour désactiver cet avertissement, utilisez -D_SCL_SECURE_NO_WARNINGS. Consultez la documentation sur l’utilisation des « Itérateurs vérifiés » Visual C++**  
   
  Certaines fonctions de modèle de la bibliothèque C++ standard ne vérifient pas que les paramètres sont corrects. Cet avertissement vous permet d’identifier l’utilisation de ces fonctions. Pour désactiver les avertissements pour ces fonctions, définissez **_SCL_SECURE_NO_WARNINGS**. Pour plus d’informations, consultez [Itérateurs vérifiés](../../standard-library/checked-iterators.md).  
   
- **Cette fonction ou une variable a été remplacée par une fonctionnalité plus récente du système d’exploitation ou de la bibliothèque. Envisagez d’utiliser** new_item **à la place. Consultez l’aide en ligne pour plus d’informations.**  
+ **Cette fonction ou une variable a été remplacée par la fonctionnalité de bibliothèque ou un système d’exploitation plus récente. Envisagez d’utiliser** Nouvel_élément **à la place. Consultez l’aide en ligne pour plus d’informations.**  
   
  Certaines fonctions de la bibliothèque et certaines variables globales sont déconseillées, car elles sont obsolètes. Ces fonctions et variables sont susceptibles d’être supprimées dans une version future de la bibliothèque. Le compilateur émet un avertissement indiquant que ces éléments sont déconseillées et suggère l’alternative préférée. Pour désactiver les avertissements déconseillant ces éléments, définissez **_CRT_OBSOLETE_NO_WARNINGS**. Pour plus d’informations, consultez la documentation pour la fonction ou la variable déconseillée.  
   

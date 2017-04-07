@@ -10,7 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDiscreteTransition
-- afxanimationcontroller/CDiscreteTransition
+- AFXANIMATIONCONTROLLER/CDiscreteTransition
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::CDiscreteTransition
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::Create
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::m_delay
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::m_hold
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class CDiscreteTransition : public CBaseTransition;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="a-namecdiscretetransitiona--cdiscretetransitioncdiscretetransition"></a><a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition  
+##  <a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition  
  Construit un objet de transition discret et initialise ses paramètres.  
   
 ```  
@@ -104,7 +109,7 @@ CDiscreteTransition(
  `hold`  
  La quantité de temps permettant de contenir la variable à sa valeur finale.  
   
-##  <a name="a-namecreatea--cdiscretetransitioncreate"></a><a name="create"></a>CDiscreteTransition::Create  
+##  <a name="create"></a>CDiscreteTransition::Create  
  Appelle la bibliothèque des transitions pour créer l’objet COM de transition encapsulé.  
   
 ```  
@@ -120,21 +125,21 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la transition est créée avec succès ; Sinon, FALSE.  
   
-##  <a name="a-namemdblfinalvaluea--cdiscretetransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CDiscreteTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CDiscreteTransition::m_dblFinalValue  
  La valeur de la variable d’animation à la fin de la transition.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemdelaya--cdiscretetransitionmdelay"></a><a name="m_delay"></a>CDiscreteTransition::m_delay  
+##  <a name="m_delay"></a>CDiscreteTransition::m_delay  
  La quantité de temps en temps le commutateur instantané passe à la valeur finale.  
   
 ```  
 UI_ANIMATION_SECONDS m_delay;  
 ```  
   
-##  <a name="a-namemholda--cdiscretetransitionmhold"></a><a name="m_hold"></a>CDiscreteTransition::m_hold  
+##  <a name="m_hold"></a>CDiscreteTransition::m_hold  
  La quantité de temps permettant de contenir la variable à sa valeur finale.  
   
 ```  

@@ -1,4 +1,4 @@
-# [Erreurs de build C-C++](c-cpp-build-errors.md)
+# [Erreurs de build C/C++](c-cpp-build-errors.md)
 # [Erreurs irrécupérables du compilateur C999 à C1999](compiler-fatal-errors-c999-through-c1999.md)
 ## [Erreur irrécupérable C999](fatal-error-c999.md)
 ## [Erreur irrécupérable C1001](fatal-error-c1001.md)

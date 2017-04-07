@@ -47,9 +47,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: ab3c60c735fbca972ff544a31918698f4afffa0e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 57de8d43336f8fd5c82da17f42cf6f8292600148
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="crt-library-features"></a>Fonctionnalités de la bibliothèque CRT
@@ -58,7 +58,7 @@ Cette rubrique décrit les différents fichiers .lib qui composent les biblioth�
 ## <a name="c-run-time-libraries-crt"></a>Bibliothèques runtime C (CRT)  
  La bibliothèque runtime C (CRT) est la partie de la bibliothèque C++ standard qui incorpore la bibliothèque ISO C99 standard. Les bibliothèques Visual C++ qui implémentent le CRT prennent en charge le développement du code natif. En outre, elles prennent en charge à la fois le code natif et managé mixte, et le code managé pur pour le développement .NET. Toutes les versions du CRT prennent en charge le développement multithread. La plupart des bibliothèques prennent en charge la liaison statique, pour lier la bibliothèque directement à votre code, ou la liaison dynamique pour permettre à votre code d’utiliser les fichiers DLL communs.  
   
- Dans Visual Studio 2015, le CRT a été refactorisé dans de nouveaux binaires. La bibliothèque Universal CRT (UCRT) contient les fonctions et variables globales exportées par la bibliothèque CRT C99 standard. UCRT est désormais un composant Windows fourni avec Windows 10. La bibliothèque statique, la bibliothèque d’importation de DLL et les fichiers d’en-tête UCRT se trouvent désormais dans le SDK Windows 10. Quand vous installez Visual C++, le programme d’installation de Visual Studio installe le sous-ensemble du SDK Windows 10 nécessaire à l’utilisation de l’UCRT. Vous pouvez utiliser l’UCRT sur n’importe quelle version de Windows prise en charge par Visual Studio 2015. Vous pouvez la redistribuer à l’aide de vcredist pour les versions prises en charge de Windows distinctes de Windows 10. Pour plus d’informations, consultez [Redistribution des fichiers Visual C++](../ide/redistributing-visual-cpp-files.md).  
+ À compter de Visual Studio 2015, le CRT est refactorisé dans de nouveaux binaires. La bibliothèque Universal CRT (UCRT) contient les fonctions et variables globales exportées par la bibliothèque CRT C99 standard. UCRT est désormais un composant Windows fourni avec Windows 10. La bibliothèque statique, la bibliothèque d’importation de DLL et les fichiers d’en-tête UCRT se trouvent désormais dans le SDK Windows 10. Quand vous installez Visual C++, le programme d’installation de Visual Studio installe le sous-ensemble du SDK Windows 10 nécessaire à l’utilisation de l’UCRT. Vous pouvez utiliser l’UCRT sur n’importe quelle version de Windows prise en charge par Visual Studio 2015 et ultérieur. Vous pouvez la redistribuer à l’aide de vcredist pour les versions prises en charge de Windows distinctes de Windows 10. Pour plus d’informations, consultez [Redistribution des fichiers Visual C++](../ide/redistributing-visual-cpp-files.md).  
   
  Le tableau suivant répertorie les bibliothèques qui implémentent l’UCRT.  
   
@@ -103,7 +103,7 @@ Cette rubrique décrit les différents fichiers .lib qui composent les biblioth�
   
  Si vous utilisez le commutateur **/clr** du compilateur, votre code sera lié à une bibliothèque statique, msvcmrt.lib. La bibliothèque statique fournit un proxy entre votre code géré et la bibliothèque CRT native. Vous ne pouvez pas utiliser la bibliothèque CRT liée statiquement (les options **/MT** ou **/MTd** ) avec **/clr**. Utilisez à la place les bibliothèques liées dynamiquement (**/MD** ou **/MDd**).  
   
- Si vous utilisez le commutateur **/clr:pure** du compilateur, votre code sera lié à la bibliothèque statique msvcurt.lib. Comme avec **/clr**, vous ne pouvez pas lier votre code avec la bibliothèque liée statiquement. Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.  
+ Si vous utilisez le commutateur **/clr:pure** du compilateur, votre code sera lié à la bibliothèque statique msvcurt.lib. Comme avec **/clr**, vous ne pouvez pas lier votre code avec la bibliothèque liée statiquement. Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées à compter de Visual Studio 2015.  
   
  Pour plus d’informations sur l’utilisation de la bibliothèque CRT avec **/clr**, consultez [Assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md) ; pour **/clr:pure**, consultez [Code pur et vérifiable (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   

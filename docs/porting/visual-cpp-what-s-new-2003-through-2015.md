@@ -24,6 +24,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Nouveautés de Visual C++ entre 2003 et 2015
@@ -44,7 +45,7 @@ Dans Visual C++ 2015 et versions ultérieures, les améliorations suivies de l
   
 -   [Améliorations de la conformité dans Update 3](#VS_Update3)  
   
-##  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a> Améliorations de la conformité dans Visual C++ 2015  
+##  <a name="VS_RTM"></a> Améliorations de la conformité dans Visual C++ 2015  
   
 -   /Zc:forScope-  
   
@@ -527,7 +528,7 @@ Dans Visual C++ 2015 et versions ultérieures, les améliorations suivies de l
   
      Dans [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] et [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)], le compilateur génère un constructeur de copie pour une classe si cette classe possède un constructeur de déplacement défini par l’utilisateur mais aucun constructeur de copie défini par l’utilisateur. Dans Dev14, ce constructeur de copie généré implicitement est également marqué « = delete ».  
   
-##  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> Améliorations de la conformité dans Update 1  
+##  <a name="VS_Update1"></a> Améliorations de la conformité dans Update 1  
   
 -   **Classes de base virtuelles privées et héritage indirect**  
   
@@ -605,7 +606,7 @@ Dans Visual C++ 2015 et versions ultérieures, les améliorations suivies de l
   
      De plus, bien que le compilateur ne donne pas de diagnostic spécifique, l’opérateur new inline est considéré comme incorrect.  
   
--   **Appel de 'operator *type*()' (conversion définie par l’utilisateur) sur des types autres que des types classe**  
+-   **Appel de 'operator*type*()' (conversion définie par l’utilisateur) sur des types autres que des types classe**  
   
      Les versions précédentes du compilateur autorisaient l’appel de ’operator *type*()’ sur des types autres que des types classe et ignoraient cet appel en silence. Cet ancien comportement créait un risque de génération de code incorrect en mode silencieux qui provoquait un comportement imprévisible au moment de l’exécution. Le compilateur n’accepte plus de code écrit de cette façon. Au lieu de cela, il émet l’erreur du compilateur C2228.  
   
@@ -1019,7 +1020,7 @@ Dans Visual C++ 2015 et versions ultérieures, les améliorations suivies de l
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // ok   
     }  
@@ -1032,13 +1033,13 @@ Dans Visual C++ 2015 et versions ultérieures, les améliorations suivies de l
     {   
         auto iter = std::find(v.begin(), v.end(), 5);   
     }   
-    catch(…)   
+    catch(...)   
     {   
         do_something();  // warning C4702: unreachable code  
     }  
     ```  
   
-##  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> Améliorations de la conformité dans Update 2  
+##  <a name="VS_Update2"></a> Améliorations de la conformité dans Update 2  
   
 -   **Des erreurs et avertissements supplémentaires peuvent être générés en raison de la prise en charge partielle de l’expression SFINAE.**  
   
@@ -1129,7 +1130,7 @@ Dans Visual C++ 2015 et versions ultérieures, les améliorations suivies de l
     };  
     ```  
   
--   Les variables membres `volatile` ** n’autorisent pas les constructeurs et les opérateurs d’assignation définis implicitement**  
+-   Les variables membres `volatile` **n’autorisent pas les constructeurs et les opérateurs d’assignation définis implicitement**  
   
      Dans les versions précédentes du compilateur, il était possible de générer automatiquement les constructeurs de copie/déplacement par défaut et les opérateurs d’assignation de copie/déplacement par défaut pour une classe contenant des variables membres `volatile`. Cet ancien comportement était incorrect et non conforme à la norme C++. À présent, le compilateur considère qu’une classe avec des variables de membre volatiles a des opérateurs de construction et d’assignation non triviaux, ce qui empêche la génération automatique des implémentations par défaut de ces opérateurs.  Quand une telle classe est membre d’une union (ou d’une union anonyme au sein d’une classe), les constructeurs de copie/déplacement et les opérateurs d’assignation de copie/déplacement de l’union (ou de la classe contenant l’union anonyme) sont implicitement définis comme étant supprimés. Toute tentative de construction ou de copie de l’union (ou de la classe contenant l’union anonyme) sans avoir défini explicitement les constructeurs ou opérateurs est considérée comme une erreur. Le compilateur génère alors l’erreur de compilateur C2280.  
   
@@ -1303,7 +1304,7 @@ Dans Visual C++ 2015 et versions ultérieures, les améliorations suivies de l
   
      Pour corriger le code écrit de cette manière, vous devrez peut-être déplacer les définitions d’opérateur du fichier d’en-tête vers le fichier source correspondant.  
   
-##  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> Améliorations de la conformité dans Update 3  
+##  <a name="VS_Update3"></a> Améliorations de la conformité dans Update 3  
   
 -   **std::is_convertable détecte désormais l’auto-affectation** (bibliothèque standard)  
   
@@ -1542,8 +1543,3 @@ Dans Visual C++ 2015 et versions ultérieures, les améliorations suivies de l
     cl /c /Wall /Ycc.h -I.. X.cpp  
     cl /c /Wall /Yuc.h -I.. Z.cpp  
     ```
-
-
-<!--HONumber=Feb17_HO4-->
-
-

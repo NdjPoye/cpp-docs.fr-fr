@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COccManager
+- AFXOCC/COccManager
+- AFXOCC/COccManager::CreateContainer
+- AFXOCC/COccManager::CreateDlgControls
+- AFXOCC/COccManager::CreateSite
+- AFXOCC/COccManager::GetDefBtnCode
+- AFXOCC/COccManager::IsDialogMessage
+- AFXOCC/COccManager::IsLabelControl
+- AFXOCC/COccManager::IsMatchingMnemonic
+- AFXOCC/COccManager::OnEvent
+- AFXOCC/COccManager::PostCreateDialog
+- AFXOCC/COccManager::PreCreateDialog
+- AFXOCC/COccManager::SetDefaultButton
+- AFXOCC/COccManager::SplitDialogTemplate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +94,7 @@ class COccManager : public CNoTrackObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxocc.h  
   
-##  <a name="a-namecreatecontainera--coccmanagercreatecontainer"></a><a name="createcontainer"></a>COccManager::CreateContainer  
+##  <a name="createcontainer"></a>COccManager::CreateContainer  
  Appelé par le framework pour créer un conteneur de contrôle.  
   
 ```  
@@ -98,7 +111,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 ### <a name="remarks"></a>Remarques  
  Pour plus d’informations sur la création de sites personnalisés, consultez la page [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).  
   
-##  <a name="a-namecreatedlgcontrolsa--coccmanagercreatedlgcontrols"></a><a name="createdlgcontrols"></a>COccManager::CreateDlgControls  
+##  <a name="createdlgcontrols"></a>COccManager::CreateDlgControls  
  Appelez cette fonction pour créer des contrôles ActiveX spécifiés par le `pOccDialogInfo` paramètre.  
   
 ```  
@@ -130,7 +143,7 @@ virtual BOOL CreateDlgControls(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le contrôle a été créé avec succès ; Sinon, zéro.  
   
-##  <a name="a-namecreatesitea--coccmanagercreatesite"></a><a name="createsite"></a>COccManager::CreateSite  
+##  <a name="createsite"></a>COccManager::CreateSite  
  Appelé par le framework pour créer un site de contrôle hébergé par le conteneur vers lequel pointé `pCtrlCont`.  
   
 ```  
@@ -149,7 +162,7 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
   
  Chaque conteneur de contrôle peut héberger plusieurs sites. Créer des sites supplémentaires avec les appels multiples à `CreateSite`.  
   
-##  <a name="a-namegetdefbtncodea--coccmanagergetdefbtncode"></a><a name="getdefbtncode"></a>COccManager::GetDefBtnCode  
+##  <a name="getdefbtncode"></a>COccManager::GetDefBtnCode  
  Appelez cette fonction pour déterminer si le contrôle est un bouton de commande par défaut.  
   
 ```  
@@ -169,7 +182,7 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
   
 - **0** contrôle n’est pas un bouton.  
   
-##  <a name="a-nameisdialogmessagea--coccmanagerisdialogmessage"></a><a name="isdialogmessage"></a>COccManager::IsDialogMessage  
+##  <a name="isdialogmessage"></a>COccManager::IsDialogMessage  
  Appelé par l’infrastructure pour déterminer si un message est destiné à la boîte de dialogue spécifié et, s’il est, traite le message.  
   
 ```  
@@ -193,7 +206,7 @@ virtual BOOL IsDialogMessage(
   
  Remplacez cette fonction pour fournir un comportement personnalisé pour les messages envoyés à la boîte de dialogue spécifiée.  
   
-##  <a name="a-nameislabelcontrola--coccmanagerislabelcontrol"></a><a name="islabelcontrol"></a>COccManager::IsLabelControl  
+##  <a name="islabelcontrol"></a>COccManager::IsLabelControl  
  Appelez cette fonction pour déterminer si le contrôle spécifié est un contrôle label.  
   
 ```  
@@ -211,7 +224,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ### <a name="remarks"></a>Remarques  
  Un contrôle label est celui qui se comporte comme une étiquette pour le contrôle est le suivant dans l’ordre.  
   
-##  <a name="a-nameismatchingmnemonica--coccmanagerismatchingmnemonic"></a><a name="ismatchingmnemonic"></a>COccManager::IsMatchingMnemonic  
+##  <a name="ismatchingmnemonic"></a>COccManager::IsMatchingMnemonic  
  Appelez cette fonction pour déterminer si le mnémonique en cours à celle représentée par le contrôle.  
   
 ```  
@@ -237,7 +250,7 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameoneventa--coccmanageronevent"></a><a name="onevent"></a>COccManager::OnEvent  
+##  <a name="onevent"></a>COccManager::OnEvent  
  Appelée par l’infrastructure pour gérer l’événement spécifié.  
   
 ```  
@@ -267,7 +280,7 @@ virtual BOOL OnEvent(
 ### <a name="remarks"></a>Remarques  
  Remplacez cette fonction pour personnaliser le processus de gestion des événements par défaut.  
   
-##  <a name="a-nameprecreatedialoga--coccmanagerprecreatedialog"></a><a name="precreatedialog"></a>COccManager::PreCreateDialog  
+##  <a name="precreatedialog"></a>COccManager::PreCreateDialog  
  Appelé par l’infrastructure pour traiter un modèle de boîte de dialogue pour les contrôles ActiveX avant de créer la boîte de dialogue proprement dites.  
   
 ```  
@@ -291,7 +304,7 @@ virtual const DLGTEMPLATE* PreCreateDialog(
   
  Remplacez cette fonction pour personnaliser le processus de création d’une boîte de dialogue héberger des contrôles ActiveX.  
   
-##  <a name="a-namepostcreatedialoga--coccmanagerpostcreatedialog"></a><a name="postcreatedialog"></a>COccManager::PostCreateDialog  
+##  <a name="postcreatedialog"></a>COccManager::PostCreateDialog  
  Appelé par l’infrastructure pour libérer de la mémoire allouée pour le modèle de boîte de dialogue.  
   
 ```  
@@ -307,7 +320,7 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
   
  Remplacez cette fonction pour personnaliser le processus de nettoyage de toutes les ressources utilisées par l’objet de boîte de dialogue.  
   
-##  <a name="a-namesetdefaultbuttona--coccmanagersetdefaultbutton"></a><a name="setdefaultbutton"></a>COccManager::SetDefaultButton  
+##  <a name="setdefaultbutton"></a>COccManager::SetDefaultButton  
  Appelez cette fonction pour définir le contrôle comme le bouton par défaut.  
   
 ```  
@@ -331,7 +344,7 @@ static void AFX_CDECL SetDefaultButton(
 > [!NOTE]
 >  Le contrôle doit avoir la **OLEMISC_ACTSLIKEBUTTON** état bit défini. Pour plus d’informations sur **OLEMISC** indicateurs, consultez la [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) rubrique dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesplitdialogtemplatea--coccmanagersplitdialogtemplate"></a><a name="splitdialogtemplate"></a>COccManager::SplitDialogTemplate  
+##  <a name="splitdialogtemplate"></a>COccManager::SplitDialogTemplate  
  Appelé par l’infrastructure pour fractionner les contrôles ActiveX des contrôles de boîte de dialogue commune.  
   
 ```  

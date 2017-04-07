@@ -10,7 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DTextLayout
-- afxrendertarget/CD2DTextLayout
+- AFXRENDERTARGET/CD2DTextLayout
+- AFXRENDERTARGET/CD2DTextLayout::CD2DTextLayout
+- AFXRENDERTARGET/CD2DTextLayout::Create
+- AFXRENDERTARGET/CD2DTextLayout::Destroy
+- AFXRENDERTARGET/CD2DTextLayout::Get
+- AFXRENDERTARGET/CD2DTextLayout::GetFontFamilyName
+- AFXRENDERTARGET/CD2DTextLayout::GetLocaleName
+- AFXRENDERTARGET/CD2DTextLayout::IsValid
+- AFXRENDERTARGET/CD2DTextLayout::ReCreate
+- AFXRENDERTARGET/CD2DTextLayout::SetFontFamilyName
+- AFXRENDERTARGET/CD2DTextLayout::SetLocaleName
+- AFXRENDERTARGET/CD2DTextLayout::m_pTextLayout
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,14 +105,14 @@ class CD2DTextLayout : public CD2DResource;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dtextlayouta--cd2dtextlayoutcd2dtextlayout"></a><a name="_dtorcd2dtextlayout"></a>CD2DTextLayout :: ~ CD2DTextLayout  
+##  <a name="_dtorcd2dtextlayout"></a>CD2DTextLayout :: ~ CD2DTextLayout  
  Destructeur. Appelé lorsqu’un objet de mise en page de texte D2D est détruit.  
   
 ```  
 virtual ~CD2DTextLayout();
 ```  
   
-##  <a name="a-namecd2dtextlayouta--cd2dtextlayoutcd2dtextlayout"></a><a name="cd2dtextlayout"></a>CD2DTextLayout::CD2DTextLayout  
+##  <a name="cd2dtextlayout"></a>CD2DTextLayout::CD2DTextLayout  
  Construit un objet CD2DTextLayout.  
   
 ```  
@@ -129,7 +140,7 @@ CD2DTextLayout(
  `bAutoDestroy`  
  Indique que l’objet sera détruit par le propriétaire (pParentTarget).  
   
-##  <a name="a-namecreatea--cd2dtextlayoutcreate"></a><a name="create"></a>CD2DTextLayout::Create  
+##  <a name="create"></a>CD2DTextLayout::Create  
  Crée un CD2DTextLayout.  
   
 ```  
@@ -139,14 +150,14 @@ virtual HRESULT Create(CRenderTarget* */);
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
   
-##  <a name="a-namedestroya--cd2dtextlayoutdestroy"></a><a name="destroy"></a>CD2DTextLayout::Destroy  
+##  <a name="destroy"></a>CD2DTextLayout::Destroy  
  Détruit un objet CD2DTextLayout.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namegeta--cd2dtextlayoutget"></a><a name="get"></a>CD2DTextLayout::Get  
+##  <a name="get"></a>CD2DTextLayout::Get  
  Renvoie l’interface IDWriteTextLayout  
   
 ```  
@@ -156,7 +167,7 @@ IDWriteTextLayout* Get();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers une interface de IDWriteTextLayout ou NULL si l’objet n’est pas encore initialisé.  
   
-##  <a name="a-namegetfontfamilynamea--cd2dtextlayoutgetfontfamilyname"></a><a name="getfontfamilyname"></a>CD2DTextLayout::GetFontFamilyName  
+##  <a name="getfontfamilyname"></a>CD2DTextLayout::GetFontFamilyName  
  Copie le nom de famille de polices du texte à la position spécifiée.  
   
 ```  
@@ -175,7 +186,7 @@ CString GetFontFamilyName(
 ### <a name="return-value"></a>Valeur de retour  
  Objet CString qui contient le nom de famille de polices actuel.  
   
-##  <a name="a-namegetlocalenamea--cd2dtextlayoutgetlocalename"></a><a name="getlocalename"></a>CD2DTextLayout::GetLocaleName  
+##  <a name="getlocalename"></a>CD2DTextLayout::GetLocaleName  
  Obtient le nom des paramètres régionaux du texte à la position spécifiée.  
   
 ```  
@@ -194,7 +205,7 @@ CString GetLocaleName(
 ### <a name="return-value"></a>Valeur de retour  
  Objet CString qui contient le nom des paramètres régionaux en cours.  
   
-##  <a name="a-nameisvalida--cd2dtextlayoutisvalid"></a><a name="isvalid"></a>CD2DTextLayout::IsValid  
+##  <a name="isvalid"></a>CD2DTextLayout::IsValid  
  Vérifications de validité des ressources  
   
 ```  
@@ -204,14 +215,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>Valeur de retour  
  TRUE si la ressource est valide ; Sinon, FALSE.  
   
-##  <a name="a-namemptextlayouta--cd2dtextlayoutmptextlayout"></a><a name="m_ptextlayout"></a>CD2DTextLayout::m_pTextLayout  
+##  <a name="m_ptextlayout"></a>CD2DTextLayout::m_pTextLayout  
  Pointeur vers un IDWriteTextLayout.  
   
 ```  
 IDWriteTextLayout* m_pTextLayout;  
 ```  
   
-##  <a name="a-nameoperatoridwritetextlayoutstara--cd2dtextlayoutoperator-idwritetextlayout"></a><a name="operator_idwritetextlayout_star"></a>CD2DTextLayout::operator IDWriteTextLayout *  
+##  <a name="operator_idwritetextlayout_star"></a>CD2DTextLayout::operator IDWriteTextLayout *  
  Renvoie l’interface IDWriteTextLayout  
   
 ```  
@@ -221,7 +232,7 @@ operator IDWriteTextLayout*();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers une interface de IDWriteTextLayout ou NULL si l’objet n’est pas encore initialisé.  
   
-##  <a name="a-namerecreatea--cd2dtextlayoutrecreate"></a><a name="recreate"></a>CD2DTextLayout::ReCreate  
+##  <a name="recreate"></a>CD2DTextLayout::ReCreate  
  Crée de nouveau un CD2DTextLayout.  
   
 ```  
@@ -231,7 +242,7 @@ virtual HRESULT ReCreate(CRenderTarget* */);
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
   
-##  <a name="a-namesetfontfamilynamea--cd2dtextlayoutsetfontfamilyname"></a><a name="setfontfamilyname"></a>CD2DTextLayout::SetFontFamilyName  
+##  <a name="setfontfamilyname"></a>CD2DTextLayout::SetFontFamilyName  
  Nom de famille de polices se terminant par null de jeux pour le texte dans une plage de texte spécifiée  
   
 ```  
@@ -250,7 +261,7 @@ BOOL SetFontFamilyName(
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE  
   
-##  <a name="a-namesetlocalenamea--cd2dtextlayoutsetlocalename"></a><a name="setlocalename"></a>CD2DTextLayout::SetLocaleName  
+##  <a name="setlocalename"></a>CD2DTextLayout::SetLocaleName  
  Définit le nom des paramètres régionaux du texte dans une plage de texte spécifiée  
   
 ```  

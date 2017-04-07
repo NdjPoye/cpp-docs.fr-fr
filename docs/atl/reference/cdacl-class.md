@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CDacl
 - CDacl
-- ATL.CDacl
+- ATLSECURITY/ATL::CDacl
+- ATLSECURITY/ATL::CDacl::CDacl
+- ATLSECURITY/ATL::CDacl::AddAllowedAce
+- ATLSECURITY/ATL::CDacl::AddDeniedAce
+- ATLSECURITY/ATL::CDacl::GetAceCount
+- ATLSECURITY/ATL::CDacl::RemoveAce
+- ATLSECURITY/ATL::CDacl::RemoveAllAces
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CDacl : public CAcl
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlsecurity.h  
   
-##  <a name="a-nameaddallowedacea--cdacladdallowedace"></a><a name="addallowedace"></a>CDacl::AddAllowedAce  
+##  <a name="addallowedace"></a>CDacl::AddAllowedAce  
  Ajoute un ACE autorisé (entrée de contrôle d’accès) pour le `CDacl` objet.  
   
 ```
@@ -139,7 +144,7 @@ bool AddAllowedAce(
   
  Consultez la page [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) pour obtenir une description des différents indicateurs qui peuvent être définies dans le `AceFlags` paramètre.  
   
-##  <a name="a-nameadddeniedacea--cdacladddeniedace"></a><a name="adddeniedace"></a>CDacl::AddDeniedAce  
+##  <a name="adddeniedace"></a>CDacl::AddDeniedAce  
  Ajoute un ACE de refus (entrée de contrôle d’accès) pour le `CDacl` objet.  
   
 ```
@@ -183,7 +188,7 @@ bool AddDeniedAce(
   
  Consultez la page [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) pour obtenir une description des différents indicateurs qui peuvent être définies dans le `AceFlags` paramètre.  
   
-##  <a name="a-namecdacla--cdaclcdacl"></a><a name="cdacl"></a>CDacl::CDacl  
+##  <a name="cdacl"></a>CDacl::CDacl  
  Constructeur.  
   
 ```
@@ -198,7 +203,7 @@ CDacl () throw();
 ### <a name="remarks"></a>Notes  
  Le `CDacl` objet peut être éventuellement créé à l’aide d’un fichier **ACL** structure. Il est important de noter que seule une liste DACL (liste de contrôle d’accès discrétionnaire), et pas une liste SACL (liste de contrôle d’accès système), doit être passé en tant que ce paramètre. Dans les versions debug, en passant une liste SACL provoque une assertion. Dans les versions release, en passant une liste SACL provoque les ACE (entrées de contrôle d’accès) dans la liste ACL sont ignorées et aucune erreur ne se produira.  
   
-##  <a name="a-namedtora--cdaclcdacl"></a><a name="dtor"></a>CDacl :: ~ CDacl  
+##  <a name="dtor"></a>CDacl :: ~ CDacl  
  Destructeur.  
   
 ```
@@ -208,7 +213,7 @@ CDacl () throw();
 ### <a name="remarks"></a>Remarques  
  Le destructeur libère les ressources acquises par l’objet, y compris tous les ACE (entrées de contrôle d’accès) à l’aide de [CDacl::RemoveAllAces](#removeallaces).  
   
-##  <a name="a-namegetacecounta--cdaclgetacecount"></a><a name="getacecount"></a>CDacl::GetAceCount  
+##  <a name="getacecount"></a>CDacl::GetAceCount  
  Retourne le nombre d’entrées ACE (entrées de contrôle d’accès) dans le `CDacl` objet.  
   
 ```
@@ -218,7 +223,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le nombre d’entrées contenues dans le `CDacl` objet.  
   
-##  <a name="a-nameoperatoreqa--cdacloperator-"></a><a name="operator_eq"></a>CDacl::operator =  
+##  <a name="operator_eq"></a>CDacl::operator =  
  Opérateur d'assignation.  
   
 ```
@@ -235,7 +240,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Remarques  
  Vous devez vous assurer que vous passez une liste DACL (liste de contrôle d’accès discrétionnaire) uniquement à cette fonction. En passant une liste SACL (liste de contrôle d’accès système) à cette fonction provoque une assertion dans les versions debug, mais n’entraînera aucune erreur dans les versions release.  
   
-##  <a name="a-nameremoveacea--cdaclremoveace"></a><a name="removeace"></a>CDacl::RemoveAce  
+##  <a name="removeace"></a>CDacl::RemoveAce  
  Supprime un ACE spécifique (entrée de contrôle d’accès) de la `CDacl` objet.  
   
 ```
@@ -249,7 +254,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>Notes  
  Cette méthode est dérivée de [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
-##  <a name="a-nameremoveallacesa--cdaclremoveallaces"></a><a name="removeallaces"></a>CDacl::RemoveAllAces  
+##  <a name="removeallaces"></a>CDacl::RemoveAllAces  
  Supprime tous les ACE (entrées de contrôle d’accès) contenus dans le `CDacl` objet.  
   
 ```

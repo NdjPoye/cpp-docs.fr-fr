@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCAutoHideBar
+- AFXAUTOHIDEBAR/CMFCAutoHideBar
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::CMFCAutoHideBar
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::AddAutoHideWindow
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::AllowShowOnPaneMenu
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::CalcFixedLayout
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::Create
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::GetFirstAHWindow
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::GetVisibleCount
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::OnShowControlBarMenu
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::RemoveAutoHideWindow
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::SetActiveInGroup
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::SetRecentVisibleState
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::ShowAutoHideWindow
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::StretchPane
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::UnSetAutoHideMode
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::UpdateVisibleState
+- AFXAUTOHIDEBAR/CMFCAutoHideBar::m_nShowAHWndDelay
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +126,7 @@ class CMFCAutoHideBar : public CPane
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxautohidebar.h  
   
-##  <a name="a-nameaddautohidewindowa--cmfcautohidebaraddautohidewindow"></a><a name="addautohidewindow"></a>CMFCAutoHideBar::AddAutoHideWindow  
+##  <a name="addautohidewindow"></a>CMFCAutoHideBar::AddAutoHideWindow  
  Ajoute des fonctionnalités à une fenêtre `CDockablePane` , ce qui lui permet de se masquer automatiquement.  
   
 ```  
@@ -138,7 +155,7 @@ CMFCAutoHideButton* AddAutoHideWindow(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="a-nameallowshowonpanemenua--cmfcautohidebarallowshowonpanemenu"></a><a name="allowshowonpanemenu"></a>CMFCAutoHideBar::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>CMFCAutoHideBar::AllowShowOnPaneMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -149,7 +166,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namecalcfixedlayouta--cmfcautohidebarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CMFCAutoHideBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>CMFCAutoHideBar::CalcFixedLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -166,7 +183,7 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namecmfcautohidebara--cmfcautohidebarcmfcautohidebar"></a><a name="cmfcautohidebar"></a>CMFCAutoHideBar::CMFCAutoHideBar  
+##  <a name="cmfcautohidebar"></a>CMFCAutoHideBar::CMFCAutoHideBar  
  Construit un objet CMFCAutoHideBar.  
   
 ```  
@@ -175,7 +192,7 @@ CMFCAutoHideBar();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namecreatea--cmfcautohidebarcreate"></a><a name="create"></a>CMFCAutoHideBar::Create  
+##  <a name="create"></a>CMFCAutoHideBar::Create  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -202,7 +219,7 @@ virtual BOOL Create(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetfirstahwindowa--cmfcautohidebargetfirstahwindow"></a><a name="getfirstahwindow"></a>CMFCAutoHideBar::GetFirstAHWindow  
+##  <a name="getfirstahwindow"></a>CMFCAutoHideBar::GetFirstAHWindow  
  Retourne un pointeur vers la première fenêtre à masquage automatique de l’application.  
   
 ```  
@@ -214,7 +231,7 @@ CDockablePane* GetFirstAHWindow();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namegetvisiblecounta--cmfcautohidebargetvisiblecount"></a><a name="getvisiblecount"></a>CMFCAutoHideBar::GetVisibleCount  
+##  <a name="getvisiblecount"></a>CMFCAutoHideBar::GetVisibleCount  
  Obtient le nombre de boutons Masquer automatiquement visibles.  
   
 ```  
@@ -226,7 +243,7 @@ int GetVisibleCount();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namemnshowahwnddelaya--cmfcautohidebarmnshowahwnddelay"></a><a name="m_nshowahwnddelay"></a>CMFCAutoHideBar::m_nShowAHWndDelay  
+##  <a name="m_nshowahwnddelay"></a>CMFCAutoHideBar::m_nShowAHWndDelay  
  Le délai entre le moment lorsque l’utilisateur place le curseur de la souris sur un [CMFCAutoHideButton classe](../../mfc/reference/cmfcautohidebutton-class.md) et le moment lorsque le framework affiche la fenêtre associée.  
   
 ```  
@@ -236,7 +253,7 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
 ### <a name="remarks"></a>Remarques  
  Lorsque l’utilisateur place le curseur de la souris sur un `CMFCAutoHideButton`, il existe un léger délai avant que le framework affiche la fenêtre associée. Ce paramètre détermine la longueur de ce délai en millisecondes.  
   
-##  <a name="a-nameonshowcontrolbarmenua--cmfcautohidebaronshowcontrolbarmenu"></a><a name="onshowcontrolbarmenu"></a>CMFCAutoHideBar::OnShowControlBarMenu  
+##  <a name="onshowcontrolbarmenu"></a>CMFCAutoHideBar::OnShowControlBarMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -250,7 +267,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameremoveautohidewindowa--cmfcautohidebarremoveautohidewindow"></a><a name="removeautohidewindow"></a>CMFCAutoHideBar::RemoveAutoHideWindow  
+##  <a name="removeautohidewindow"></a>CMFCAutoHideBar::RemoveAutoHideWindow  
  Supprime et détruit la fenêtre à masquage automatique.  
   
 ```  
@@ -266,7 +283,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namesetactiveingroupa--cmfcautohidebarsetactiveingroup"></a><a name="setactiveingroup"></a>CMFCAutoHideBar::SetActiveInGroup  
+##  <a name="setactiveingroup"></a>CMFCAutoHideBar::SetActiveInGroup  
  Marque une barre à masquage automatique comme active.  
   
 ```  
@@ -280,7 +297,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 ### <a name="remarks"></a>Notes  
  Consultez la page [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
   
-##  <a name="a-namesetrecentvisiblestatea--cmfcautohidebarsetrecentvisiblestate"></a><a name="setrecentvisiblestate"></a>CMFCAutoHideBar::SetRecentVisibleState  
+##  <a name="setrecentvisiblestate"></a>CMFCAutoHideBar::SetRecentVisibleState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -292,7 +309,7 @@ void SetRecentVisibleState(BOOL bState);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameshowautohidewindowa--cmfcautohidebarshowautohidewindow"></a><a name="showautohidewindow"></a>CMFCAutoHideBar::ShowAutoHideWindow  
+##  <a name="showautohidewindow"></a>CMFCAutoHideBar::ShowAutoHideWindow  
  Affiche la fenêtre à masquage automatique.  
   
 ```  
@@ -315,7 +332,7 @@ BOOL ShowAutoHideWindow(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namestretchpanea--cmfcautohidebarstretchpane"></a><a name="stretchpane"></a>CMFCAutoHideBar::StretchPane  
+##  <a name="stretchpane"></a>CMFCAutoHideBar::StretchPane  
  Redimensionne la barre à masquage automatique à son état réduit pour faire tenir l’objet `CMFCAutoHideButton` .  
   
 ```  
@@ -337,7 +354,7 @@ virtual CSize StretchPane(
 ### <a name="remarks"></a>Remarques  
  Les classes dérivées peuvent substituer cette méthode pour personnaliser le comportement.  
   
-##  <a name="a-nameunsetautohidemodea--cmfcautohidebarunsetautohidemode"></a><a name="unsetautohidemode"></a>CMFCAutoHideBar::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>CMFCAutoHideBar::UnSetAutoHideMode  
  Désactive le mode de masquage automatique pour un groupe de barres avec masquage automatique.  
   
 ```  
@@ -350,7 +367,7 @@ void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameupdatevisiblestatea--cmfcautohidebarupdatevisiblestate"></a><a name="updatevisiblestate"></a>CMFCAutoHideBar::UpdateVisibleState  
+##  <a name="updatevisiblestate"></a>CMFCAutoHideBar::UpdateVisibleState  
  Appelé par l’infrastructure quand de la barre à masquage automatique doit être redessinée.  
   
 ```  

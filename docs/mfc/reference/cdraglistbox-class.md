@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDragListBox
+- AFXCMN/CDragListBox
+- AFXCMN/CDragListBox::CDragListBox
+- AFXCMN/CDragListBox::BeginDrag
+- AFXCMN/CDragListBox::CancelDrag
+- AFXCMN/CDragListBox::Dragging
+- AFXCMN/CDragListBox::DrawInsert
+- AFXCMN/CDragListBox::Dropped
+- AFXCMN/CDragListBox::ItemFromPt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +102,7 @@ class CDragListBox : public CListBox
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcmn.h  
   
-##  <a name="a-namebegindraga--cdraglistboxbegindrag"></a><a name="begindrag"></a>CDragListBox::BeginDrag  
+##  <a name="begindrag"></a>CDragListBox::BeginDrag  
  Appelée par l’infrastructure lorsque survient un événement qui pourrait commencer une opération glisser, telles que le bouton gauche de la souris.  
   
 ```  
@@ -111,7 +119,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ### <a name="remarks"></a>Remarques  
  Remplacez cette fonction si vous souhaitez contrôler ce qui se passe lorsqu’une opération glisser commence. L’implémentation par défaut capture la souris et reste en mode glisser jusqu'à ce que l’utilisateur clique sur le bouton gauche ou droit de la souris ou appuie sur la touche ÉCHAP, moment auquel l’opération glisser est annulée.  
   
-##  <a name="a-namecanceldraga--cdraglistboxcanceldrag"></a><a name="canceldrag"></a>CDragListBox::CancelDrag  
+##  <a name="canceldrag"></a>CDragListBox::CancelDrag  
  Appelé par l’infrastructure lorsqu’une opération glisser a été annulée.  
   
 ```  
@@ -125,14 +133,14 @@ virtual void CancelDrag(CPoint pt);
 ### <a name="remarks"></a>Remarques  
  Remplacez cette fonction pour traiter tout traitement spécial pour votre contrôle de zone de liste.  
   
-##  <a name="a-namecdraglistboxa--cdraglistboxcdraglistbox"></a><a name="cdraglistbox"></a>CDragListBox::CDragListBox  
+##  <a name="cdraglistbox"></a>CDragListBox::CDragListBox  
  Construit un objet `CDragListBox`.  
   
 ```  
 CDragListBox();
 ```  
   
-##  <a name="a-namedragginga--cdraglistboxdragging"></a><a name="dragging"></a>CDragListBox::Dragging  
+##  <a name="dragging"></a>CDragListBox::Dragging  
  Appelé par l’infrastructure lorsqu’un élément de zone de liste est glissé dans les `CDragListBox` objet.  
   
 ```  
@@ -155,7 +163,7 @@ virtual UINT Dragging(CPoint pt);
 ### <a name="remarks"></a>Remarques  
  Le comportement par défaut retourne `DL_MOVECURSOR`. Remplacez cette fonction si vous souhaitez fournir des fonctionnalités supplémentaires.  
   
-##  <a name="a-namedrawinserta--cdraglistboxdrawinsert"></a><a name="drawinsert"></a>CDragListBox::DrawInsert  
+##  <a name="drawinsert"></a>CDragListBox::DrawInsert  
  Appelé par l’infrastructure pour dessiner le guide d’insertion avant l’élément avec l’index spécifié.  
   
 ```  
@@ -169,7 +177,7 @@ virtual void DrawInsert(int nItem);
 ### <a name="remarks"></a>Remarques  
  Une valeur de - 1 efface le guide d’insertion. Remplacez cette fonction pour modifier l’apparence ou le comportement du guide d’insertion.  
   
-##  <a name="a-namedroppeda--cdraglistboxdropped"></a><a name="dropped"></a>CDragListBox::Dropped  
+##  <a name="dropped"></a>CDragListBox::Dropped  
  Appelé par l’infrastructure lorsqu’un élément est supprimé dans un `CDragListBox` objet.  
   
 ```  
@@ -188,7 +196,7 @@ virtual void Dropped(
 ### <a name="remarks"></a>Remarques  
  Le comportement par défaut copie l’élément de zone de liste et ses données vers le nouvel emplacement, puis supprime l’élément d’origine. Remplacez cette fonction pour personnaliser le comportement par défaut, telles que l’activation des copies des éléments de zone de liste à faire glisser vers d’autres emplacements au sein de la liste.  
   
-##  <a name="a-nameitemfrompta--cdraglistboxitemfrompt"></a><a name="itemfrompt"></a>CDragListBox::ItemFromPt  
+##  <a name="itemfrompt"></a>CDragListBox::ItemFromPt  
  Appel de cette fonction pour récupérer l’index de base zéro de l’élément de zone de liste située à `pt`.  
   
 ```  

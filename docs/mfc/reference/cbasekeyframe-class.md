@@ -10,7 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBaseKeyFrame
-- afxanimationcontroller/CBaseKeyFrame
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::CBaseKeyFrame
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::AddToStoryboard
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::GetAnimationKeyframe
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::IsAdded
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::IsKeyframeAtOffset
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::m_bAdded
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::m_bIsKeyframeAtOffset
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::m_keyframe
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +93,7 @@ class CBaseKeyFrame : public CObject;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtostoryboarda--cbasekeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CBaseKeyFrame::AddToStoryboard  
+##  <a name="addtostoryboard"></a>CBaseKeyFrame::AddToStoryboard  
  Ajoute une image clé au storyboard.  
   
 ```  
@@ -107,14 +115,14 @@ virtual BOOL AddToStoryboard(
 ### <a name="remarks"></a>Remarques  
  Cette méthode est appelée pour ajouter une image clé au storyboard.  
   
-##  <a name="a-namecbasekeyframea--cbasekeyframecbasekeyframe"></a><a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame  
+##  <a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame  
  Construit un objet d’image clé.  
   
 ```  
 CBaseKeyFrame();
 ```  
   
-##  <a name="a-namegetanimationkeyframea--cbasekeyframegetanimationkeyframe"></a><a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe  
+##  <a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe  
  Retourne la valeur d’image clé sous-jacente.  
   
 ```  
@@ -127,7 +135,7 @@ UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
 ### <a name="remarks"></a>Remarques  
  Il s’agit d’un accesseur à la valeur d’image clé sous-jacente.  
   
-##  <a name="a-nameisaddeda--cbasekeyframeisadded"></a><a name="isadded"></a>CBaseKeyFrame::IsAdded  
+##  <a name="isadded"></a>CBaseKeyFrame::IsAdded  
  Indique si une image clé a été ajoutée au storyboard.  
   
 ```  
@@ -140,7 +148,7 @@ BOOL IsAdded() const;
 ### <a name="remarks"></a>Remarques  
  Dans la classe de base IsAdded retourne toujours TRUE, mais elle est substituée dans les classes dérivées.  
   
-##  <a name="a-nameiskeyframeatoffseta--cbasekeyframeiskeyframeatoffset"></a><a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeAtOffset  
+##  <a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeAtOffset  
  Spécifie si l’image clé doit être ajoutée au storyboard à l’offset, ou après la transition.  
   
 ```  
@@ -153,21 +161,21 @@ BOOL IsKeyframeAtOffset() const;
 ### <a name="remarks"></a>Notes  
  Spécifie si l’image clé doit être ajoutée au storyboard à l’offset. Le décalage ou transition doit être spécifiée dans une classe dérivée.  
   
-##  <a name="a-namembaddeda--cbasekeyframembadded"></a><a name="m_badded"></a>CBaseKeyFrame::m_bAdded  
+##  <a name="m_badded"></a>CBaseKeyFrame::m_bAdded  
  Spécifie si cette image clé a été ajoutée à un storyboard.  
   
 ```  
 BOOL m_bAdded;  
 ```  
   
-##  <a name="a-namembiskeyframeatoffseta--cbasekeyframembiskeyframeatoffset"></a><a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset  
+##  <a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset  
  Spécifie si cette image clé doit être ajoutée au storyboard à un offset à partir d’une autre image clé existante, ou à la fin d’une transition.  
   
 ```  
 BOOL m_bIsKeyframeAtOffset;  
 ```  
   
-##  <a name="a-namemkeyframea--cbasekeyframemkeyframe"></a><a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe  
+##  <a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe  
  Représente une image clé de l’API d’Animation Windows. Lorsqu’une image clé n’est pas initialisée, il est défini à la valeur prédéfinie UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
   
 ```  

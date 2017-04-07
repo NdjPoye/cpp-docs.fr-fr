@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWaitCursor
+- AFXWIN/CWaitCursor
+- AFXWIN/CWaitCursor::CWaitCursor
+- AFXWIN/CWaitCursor::Restore
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +95,7 @@ class CWaitCursor
 ## <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCWindowing&#62;](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]  
   
-##  <a name="a-namecwaitcursora--cwaitcursorcwaitcursor"></a><a name="cwaitcursor"></a>CWaitCursor::CWaitCursor  
+##  <a name="cwaitcursor"></a>CWaitCursor::CWaitCursor  
  Pour afficher un curseur d’attente, déclarez un `CWaitCursor` objet avant le code qui effectue l’opération longue.  
   
 ```  
@@ -112,7 +115,7 @@ CWaitCursor();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCWindowing&#63;](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]  
   
-##  <a name="a-namerestorea--cwaitcursorrestore"></a><a name="restore"></a>CWaitCursor::Restore  
+##  <a name="restore"></a>CWaitCursor::Restore  
  Pour restaurer le curseur d’attente, appelez cette fonction après une opération, tel que l’affichage d’une boîte de message ou de la boîte de dialogue, ce qui peut modifier le curseur d’attente à un autre curseur.  
   
 ```  

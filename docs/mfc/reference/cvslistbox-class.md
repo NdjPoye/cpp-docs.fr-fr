@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CVSListBox
+- AFXVSLISTBOX/CVSListBox
+- AFXVSLISTBOX/CVSListBox::CVSListBox
+- AFXVSLISTBOX/CVSListBox::AddItem
+- AFXVSLISTBOX/CVSListBox::EditItem
+- AFXVSLISTBOX/CVSListBox::GetCount
+- AFXVSLISTBOX/CVSListBox::GetItemData
+- AFXVSLISTBOX/CVSListBox::GetItemText
+- AFXVSLISTBOX/CVSListBox::GetSelItem
+- AFXVSLISTBOX/CVSListBox::RemoveItem
+- AFXVSLISTBOX/CVSListBox::SelectItem
+- AFXVSLISTBOX/CVSListBox::SetItemData
+- AFXVSLISTBOX/CVSListBox::GetListHwnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +120,7 @@ class CVSListBox : public CVSListBoxBase
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxvslistbox.h  
   
-##  <a name="a-nameadditema--cvslistboxadditem"></a><a name="additem"></a>CVSListBox::AddItem  
+##  <a name="additem"></a>CVSListBox::AddItem  
  Ajoute une chaîne à un contrôle de liste.  
   
 ```  
@@ -134,7 +146,7 @@ virtual int AddItem(
 ### <a name="remarks"></a>Notes  
  Utilisez le [CVSListBox::GetItemData](#getitemdata) méthode pour récupérer la valeur spécifiée par la `dwData` paramètre. Cette valeur peut être un entier spécifiques à l’application ou un pointeur à d’autres données.  
   
-##  <a name="a-namecvslistboxa--cvslistboxcvslistbox"></a><a name="cvslistbox"></a>CVSListBox::CVSListBox  
+##  <a name="cvslistbox"></a>CVSListBox::CVSListBox  
  Construit un objet `CVSListBox`.  
   
 ```  
@@ -145,7 +157,7 @@ CVSListBox();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameedititema--cvslistboxedititem"></a><a name="edititem"></a>CVSListBox::EditItem  
+##  <a name="edititem"></a>CVSListBox::EditItem  
  Commence une opération de modification sur le texte d’un élément de contrôle de liste.  
   
 ```  
@@ -162,7 +174,7 @@ virtual BOOL EditItem(int iIndex);
 ### <a name="remarks"></a>Remarques  
  L’utilisateur commence une opération de modification en double-cliquant sur l’étiquette d’un élément, ou en appuyant sur la **F2** ou **espace** clé lorsqu’un élément a le focus.  
   
-##  <a name="a-namegetcounta--cvslistboxgetcount"></a><a name="getcount"></a>CVSListBox::GetCount  
+##  <a name="getcount"></a>CVSListBox::GetCount  
  Récupère le nombre de chaînes dans un contrôle de liste modifiable.  
   
 ```  
@@ -175,7 +187,7 @@ virtual int GetCount() const;
 ### <a name="remarks"></a>Remarques  
  Notez que le nombre est supérieur à la valeur d’index du dernier élément, car l’index est de base zéro.  
   
-##  <a name="a-namegetitemdataa--cvslistboxgetitemdata"></a><a name="getitemdata"></a>CVSListBox::GetItemData  
+##  <a name="getitemdata"></a>CVSListBox::GetItemData  
  Récupère une valeur spécifique à l’application 32 bits qui est associée à un élément de contrôle de liste modifiable.  
   
 ```  
@@ -192,7 +204,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ### <a name="remarks"></a>Remarques  
  Utilisez le [CVSListBox::SetItemData](#setitemdata) ou [CVSListBox::AddItem](#additem) méthode pour associer la valeur 32 bits à l’élément de contrôle de liste. Cette valeur peut être un entier spécifiques à l’application ou un pointeur à d’autres données.  
   
-##  <a name="a-namegetitemtexta--cvslistboxgetitemtext"></a><a name="getitemtext"></a>CVSListBox::GetItemText  
+##  <a name="getitemtext"></a>CVSListBox::GetItemText  
  Récupère le texte d’un élément de contrôle de liste modifiable.  
   
 ```  
@@ -208,7 +220,7 @@ virtual CString GetItemText(int iIndex) const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetlisthwnda--cvslistboxgetlisthwnd"></a><a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
+##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
  Retourne le handle pour le contrôle liste intégrée en cours.  
   
 ```  
@@ -221,7 +233,7 @@ virtual HWND GetListHwnd() const;
 ### <a name="remarks"></a>Remarques  
  Utilisez cette méthode pour récupérer un handle pour le contrôle liste intégrée qui prend en charge la `CVSListBox` classe.  
   
-##  <a name="a-namegetselitema--cvslistboxgetselitem"></a><a name="getselitem"></a>CVSListBox::GetSelItem  
+##  <a name="getselitem"></a>CVSListBox::GetSelItem  
  Récupère l’index de base zéro de l’élément actuellement sélectionné dans un contrôle de liste modifiable.  
   
 ```  
@@ -233,7 +245,7 @@ virtual int GetSelItem() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameremoveitema--cvslistboxremoveitem"></a><a name="removeitem"></a>CVSListBox::RemoveItem  
+##  <a name="removeitem"></a>CVSListBox::RemoveItem  
  Supprime un élément d’un contrôle de liste modifiable.  
   
 ```  
@@ -249,7 +261,7 @@ virtual BOOL RemoveItem(int iIndex);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameselectitema--cvslistboxselectitem"></a><a name="selectitem"></a>CVSListBox::SelectItem  
+##  <a name="selectitem"></a>CVSListBox::SelectItem  
  Sélectionne une chaîne de contrôle de liste modifiable.  
   
 ```  
@@ -266,7 +278,7 @@ virtual BOOL SelectItem(int iItem);
 ### <a name="remarks"></a>Remarques  
  Cette méthode sélectionne l’élément spécifié et si nécessaire, fait défiler l’élément dans la vue.  
   
-##  <a name="a-namesetitemdataa--cvslistboxsetitemdata"></a><a name="setitemdata"></a>CVSListBox::SetItemData  
+##  <a name="setitemdata"></a>CVSListBox::SetItemData  
  Associe une valeur de 32 bits spécifique à l’application à un élément de contrôle de liste modifiable.  
   
 ```  

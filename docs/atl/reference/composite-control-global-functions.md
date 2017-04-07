@@ -62,7 +62,7 @@ Ces fonctions fournissent la prise en charge pour la création de boîtes de dia
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlhost.h  
 
-##  <a name="a-nameatlaxdialogboxa--atlaxdialogbox"></a><a name="atlaxdialogbox"></a>AtlAxDialogBox  
+##  <a name="atlaxdialogbox"></a>AtlAxDialogBox  
  Crée une boîte de dialogue modale à partir d'un modèle de boîte de dialogue fourni par l'utilisateur.  
    
 ```
@@ -96,15 +96,16 @@ ATLAPI_(int) AtlAxDialogBox(
 ### <a name="remarks"></a>Notes  
  À utiliser **AtlAxDialogBox** avec un modèle de boîte de dialogue qui contient un contrôle ActiveX, spécifiez valide **CLSID**, **APPID** ou la chaîne d’URL en tant que la *texte* champ la **contrôle** section de la ressource de boîte de dialogue, ainsi que « AtlAxWin80 » en tant que la *nom de la classe* champ sous la même section. Les éléments suivants montrent les valide **contrôle** section peut ressembler à :  
   
- `CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,`  
-  
- `"AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100`  
+```  
+CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
+    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
+```  
   
  Pour plus d’informations sur la modification de scripts de ressources, consultez [Comment : ouvrir un fichier de Script de ressources au Format texte](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Pour plus d’informations sur les instructions de définition de la ressource de contrôle, consultez la page [les paramètres de contrôle communs](http://msdn.microsoft.com/library/windows/desktop/aa380902) sous [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *: outils SDK*.  
   
  Pour plus d’informations sur les boîtes de dialogue en général, reportez-vous à [DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452) et [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameatlaxcreatedialoga--atlaxcreatedialog"></a><a name="atlaxcreatedialog"></a>API AtlAxCreateDialog  
+##  <a name="atlaxcreatedialog"></a>API AtlAxCreateDialog  
  Crée une boîte de dialogue non modale à partir d'un modèle de boîte de dialogue fourni par l'utilisateur.  
   
 ```
@@ -140,7 +141,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
   
  Consultez la page [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) et [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameatlaxcreatecontrola--atlaxcreatecontrol"></a><a name="atlaxcreatecontrol"></a>AtlAxCreateControl  
+##  <a name="atlaxcreatecontrol"></a>AtlAxCreateControl  
  Crée un contrôle ActiveX, puis initialise et héberge ce dernier dans la fenêtre spécifiée.  
   
 
@@ -186,7 +187,7 @@ ATLAPI AtlAxCreateControl(
   
  Pour créer un contrôle ActiveX sous licence, consultez [AtlAxCreateControlLic](#atlaxcreatecontrollic).  
   
-##  <a name="a-nameatlaxcreatecontrolexa--atlaxcreatecontrolex"></a><a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx  
+##  <a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx  
  Crée un contrôle ActiveX, puis initialise et héberge ce dernier dans la fenêtre spécifiée. Un pointeur d'interface et un récepteur d'événements du nouveau contrôle peuvent également être créés.  
   
 ```
@@ -243,7 +244,7 @@ ATLAPI AtlAxCreateControlEx(
   
  Pour créer un contrôle ActiveX sous licence, consultez [AtlAxCreateControlLicEx](#atlaxcreatecontrollicex).  
   
-##  <a name="a-nameatlaxcreatecontrollica--atlaxcreatecontrollic"></a><a name="atlaxcreatecontrollic"></a>AtlAxCreateControlLic  
+##  <a name="atlaxcreatecontrollic"></a>AtlAxCreateControlLic  
  Crée un contrôle ActiveX sous licence, puis initialise et héberge ce dernier dans la fenêtre spécifiée.  
 
 ```
@@ -290,7 +291,7 @@ ATLAPI AtlAxCreateControlLic(
 ### <a name="example"></a>Exemple  
  Consultez la page [hébergement ActiveX des contrôles à l’aide de ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pour obtenir un exemple montrant comment utiliser `AtlAxCreateControlLic`.  
   
-##  <a name="a-nameatlaxcreatecontrollicexa--atlaxcreatecontrollicex"></a><a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx  
+##  <a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx  
  Crée un contrôle ActiveX sous licence, puis initialise et héberge ce dernier dans la fenêtre spécifiée. Un pointeur d'interface et un récepteur d'événements du nouveau contrôle peuvent également être créés.  
   
 ```
@@ -352,7 +353,7 @@ ATLAPI AtlAxCreateControlLicEx(
 ### <a name="example"></a>Exemple  
  Consultez la page [hébergement ActiveX des contrôles à l’aide de ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pour obtenir un exemple montrant comment utiliser `AtlAxCreateControlLicEx`.  
   
-##  <a name="a-nameatlaxattachcontrola--atlaxattachcontrol"></a><a name="atlaxattachcontrol"></a>AtlAxAttachControl  
+##  <a name="atlaxattachcontrol"></a>AtlAxAttachControl  
  Joint un contrôle précédemment créé à la fenêtre spécifiée.  
   
 ```
@@ -381,7 +382,7 @@ ATLAPI AtlAxAttachControl(
 > [!NOTE]
 >  L’objet de contrôle qui est attaché doit être correctement initialisée avant d’appeler `AtlAxAttachControl`.  
   
-##  <a name="a-nameatlaxgethosta--atlaxgethost"></a><a name="atlaxgethost"></a>AtlAxGetHost  
+##  <a name="atlaxgethost"></a>AtlAxGetHost  
  Obtient un pointeur d'interface direct vers le conteneur d'une fenêtre spécifique (le cas échéant), en fonction de son handle.  
   
 ```
@@ -398,7 +399,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>Valeur de retour  
  Une des valeurs HRESULT standards.  
   
-##  <a name="a-nameatlaxgetcontrola--atlaxgetcontrol"></a><a name="atlaxgetcontrol"></a>AtlAxGetControl  
+##  <a name="atlaxgetcontrol"></a>AtlAxGetControl  
  Obtient un pointeur d'interface direct vers le contrôle contenu dans une fenêtre spécifique en fonction de son handle.  
   
 ```
@@ -415,7 +416,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>Valeur de retour  
  Une des valeurs HRESULT standards.  
   
-##  <a name="a-nameatlsetchildsitea--atlsetchildsite"></a><a name="atlsetchildsite"></a>AtlSetChildSite  
+##  <a name="atlsetchildsite"></a>AtlSetChildSite  
  Appelez cette fonction pour définir le site de l’objet enfant à la **IUnknown** de l’objet parent.  
   
 ```
@@ -432,7 +433,7 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT standard.  
   
-##  <a name="a-nameatlaxwininita--atlaxwininit"></a><a name="atlaxwininit"></a>AtlAxWinInit  
+##  <a name="atlaxwininit"></a>AtlAxWinInit  
  Cette fonction initialise le contrôle d’ATL qui héberge le code en enregistrant le **« AtlAxWin80 »** et **« AtlAxWinLic80 »** classes de fenêtre ainsi que quelques messages de fenêtre personnalisés.  
   
 ```
@@ -445,7 +446,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 ### <a name="remarks"></a>Remarques  
  Cette fonction doit être appelée avant d’utiliser le contrôle ATL API d’hébergement. Après un appel à cette fonction, le **« AtlAxWin »** classe de fenêtre peut être utilisée dans les appels à [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) ou [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
 
-##  <a name="a-nameatlaxwinterma--atlaxwinterm"></a><a name="atlaxwinterm"></a>AtlAxWinTerm  
+##  <a name="atlaxwinterm"></a>AtlAxWinTerm  
  Cette fonction n’initialise pas le contrôle d’ATL qui héberge le code en annulant l’inscription du **« AtlAxWin80 »** et **« AtlAxWinLic80 »** classes de fenêtre.  
   
 ```
@@ -460,7 +461,7 @@ inline BOOL AtlAxWinTerm();
   
  Appelez cette fonction pour nettoyer une fois toutes les fenêtres hôtes existantes ont été détruits si vous avez appelé [AtlAxWinInit](#atlaxwininit) et vous n’avez plus besoin créer l’hôte windows. Si vous n’appelez pas cette fonction, la classe de fenêtre sera annulée automatiquement lorsque le processus se termine.  
   
-##  <a name="a-nameatlgetobjectsourceinterfacea--atlgetobjectsourceinterface"></a><a name="atlgetobjectsourceinterface"></a>AtlGetObjectSourceInterface  
+##  <a name="atlgetobjectsourceinterface"></a>AtlGetObjectSourceInterface  
  Appelez cette fonction pour récupérer des informations sur l'interface source par défaut d'un objet.  
   
 ```

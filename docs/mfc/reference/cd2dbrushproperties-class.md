@@ -10,7 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DBrushProperties
-- afxrendertarget/CD2DBrushProperties
+- AFXRENDERTARGET/CD2DBrushProperties
+- AFXRENDERTARGET/CD2DBrushProperties::CD2DBrushProperties
+- AFXRENDERTARGET/CD2DBrushProperties::CommonInit
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +73,7 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxrendertarget.h  
   
-##  <a name="a-namecd2dbrushpropertiesa--cd2dbrushpropertiescd2dbrushproperties"></a><a name="cd2dbrushproperties"></a>CD2DBrushProperties::CD2DBrushProperties  
+##  <a name="cd2dbrushproperties"></a>CD2DBrushProperties::CD2DBrushProperties  
  Crée une structure CD2D_BRUSH_PROPERTIES  
   
 ```  
@@ -91,7 +93,7 @@ CD2DBrushProperties(
  `_transform`  
  La transformation à appliquer au pinceau  
   
-##  <a name="a-namecommoninita--cd2dbrushpropertiescommoninit"></a><a name="commoninit"></a>CD2DBrushProperties::CommonInit  
+##  <a name="commoninit"></a>CD2DBrushProperties::CommonInit  
  Initialise l’objet  
   
 ```  

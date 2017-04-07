@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleVariant
+- AFXDISP/COleVariant
+- AFXDISP/COleVariant::COleVariant
+- AFXDISP/COleVariant::Attach
+- AFXDISP/COleVariant::ChangeType
+- AFXDISP/COleVariant::Clear
+- AFXDISP/COleVariant::Detach
+- AFXDISP/COleVariant::GetByteArrayFromVariantArray
+- AFXDISP/COleVariant::SetString
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +107,7 @@ class COleVariant : public tagVARIANT
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdisp.h  
   
-##  <a name="a-nameattacha--colevariantattach"></a><a name="attach"></a>COleVariant::Attach  
+##  <a name="attach"></a>COleVariant::Attach  
  Appelez cette fonction pour attacher la donnée [variante](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) objet actuel `COleVariant` objet.  
   
 ```  
@@ -115,7 +123,7 @@ void Attach(VARIANT& varSrc);
   
  Pour plus d’informations, consultez la [variante](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) et [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) entrées dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecolevarianta--colevariantcolevariant"></a><a name="colevariant"></a>COleVariant::COleVariant  
+##  <a name="colevariant"></a>COleVariant::COleVariant  
  Construit un objet `COleVariant`.  
   
 ```  
@@ -213,7 +221,7 @@ COleVariant(LPCITEMIDLIST pidl);
   
  Pour plus d’informations sur `SCODE`, consultez [Structure des Codes d’erreur COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namechangetypea--colevariantchangetype"></a><a name="changetype"></a>COleVariant::ChangeType  
+##  <a name="changetype"></a>COleVariant::ChangeType  
  Convertit le type de valeur de type variant dans ce `COleVariant` objet.  
   
 ```  
@@ -230,7 +238,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez la [variante](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), et [VariantChangeType](http://msdn.microsoft.com/en-us/48a51e32-95d7-4eeb-8106-f5043ffa2fd1) entrées dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecleara--colevariantclear"></a><a name="clear"></a>COleVariant::Clear  
+##  <a name="clear"></a>COleVariant::Clear  
  Efface les **variante**.  
   
 ```  
@@ -242,7 +250,7 @@ void Clear();
   
  Pour plus d’informations, consultez la `VARIANT`, `VARTYPE`, et `VariantClear` entrées dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedetacha--colevariantdetach"></a><a name="detach"></a>COleVariant::Detach  
+##  <a name="detach"></a>COleVariant::Detach  
  Détache sous-jacent [variante](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) objet à partir de ce `COleVariant` objet.  
   
 ```  
@@ -257,7 +265,7 @@ VARIANT Detach();
   
  Pour plus d’informations, consultez la [variante](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), et [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835) entrées dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetbytearrayfromvariantarraya--colevariantgetbytearrayfromvariantarray"></a><a name="getbytearrayfromvariantarray"></a>COleVariant::GetByteArrayFromVariantArray  
+##  <a name="getbytearrayfromvariantarray"></a>COleVariant::GetByteArrayFromVariantArray  
  Récupère un tableau d’octets d’un tableau de variant existant  
   
 ```  
@@ -268,7 +276,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
  `bytes`  
  Une référence à un fichier [CByteArray](../../mfc/reference/cbytearray-class.md) objet.  
   
-##  <a name="a-nameoperatorlpcvarianta--colevariantoperator-lpcvariant"></a><a name="operator_lpcvariant"></a>COleVariant::operator LPCVARIANT  
+##  <a name="operator_lpcvariant"></a>COleVariant::operator LPCVARIANT  
  Cet opérateur de conversion retourne un `VARIANT` structure dont la valeur est copiée à partir de ce `COleVariant` objet.  
   
 ```  
@@ -277,7 +285,7 @@ operator LPCVARIANT() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameoperatorlpvarianta--colevariantoperator-lpvariant"></a><a name="operator_lpvariant"></a>COleVariant::operator LPVARIANT  
+##  <a name="operator_lpvariant"></a>COleVariant::operator LPVARIANT  
  Appeler cet opérateur de conversion pour accéder à l’objet sous-jacent `VARIANT` structure pour ce `COleVariant` objet.  
   
 ```  
@@ -289,7 +297,7 @@ operator LPVARIANT();
 > [!CAUTION]
 >  Modification de la valeur dans la **variante** structure accédé par le pointeur retourné par cette fonction modifie la valeur de cette `COleVariant` objet.  
   
-##  <a name="a-nameoperatoreqa--colevariantoperator-"></a><a name="operator_eq"></a>COleVariant::operator =  
+##  <a name="operator_eq"></a>COleVariant::operator =  
  Ces opérateurs d’assignation surchargés copier la valeur source dans ce `COleVariant` objet.  
   
 ```  
@@ -338,7 +346,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
  Pour plus d’informations, consultez la [variante](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) et [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) entrées dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameoperatoreqeqa--colevariantoperator-"></a><a name="operator_eq_eq"></a>COleVariant::operator ==  
+##  <a name="operator_eq_eq"></a>COleVariant::operator ==  
  Cet opérateur compare deux valeurs de type variant et retourne zéro si elles sont égales ; sinon 0.  
   
 ```  
@@ -346,7 +354,7 @@ BOOL operator==(const VARIANT& varSrc) const;
 BOOL operator==(LPCVARIANT pSrc) const;
 ```  
   
-##  <a name="a-nameoperatorltltgtgta--colevariantoperator-ltlt-gtgt"></a><a name="operator_lt_lt__gt_gt"></a>COleVariant::operator &lt; &lt;,&gt;&gt;  
+##  <a name="operator_lt_lt__gt_gt"></a>COleVariant::operator &lt; &lt;,&gt;&gt;  
  Sorties un `COleVariant` valeur `CArchive` ou **CdumpContext** et les entrées une `COleVariant` à partir de l’objet `CArchive`.  
   
 ```  
@@ -366,7 +374,7 @@ friend CArchive& AFXAPI operator>>(
 ### <a name="remarks"></a>Remarques  
  Le `COleVariant` insertion ( ** < \< **) (opérateur) prend en charge le diagnostic vidage et le stockage dans une archive. L’extraction ( ** >> **) (opérateur) prend en charge le chargement à partir d’une archive.  
   
-##  <a name="a-namesetstringa--colevariantsetstring"></a><a name="setstring"></a>COleVariant::SetString  
+##  <a name="setstring"></a>COleVariant::SetString  
  Définit la chaîne d’un type particulier.  
   
 ```  

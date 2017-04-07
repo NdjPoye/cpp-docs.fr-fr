@@ -10,6 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCAutoHideButton
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::BringToTop
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::Create
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::GetAlignment
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::GetAutoHideWindow
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::GetParentToolBar
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::GetRect
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::GetSize
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::GetTextSize
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::HighlightButton
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::IsActive
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::IsHighlighted
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::IsHorizontal
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::IsTop
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::IsVisible
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::Move
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::OnDraw
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::OnDrawBorder
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::OnFillBackground
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::ReplacePane
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::ShowAttachedWindow
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::ShowButton
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::UnSetAutoHideMode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +118,7 @@ class CMFCAutoHideButton : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxautohidebutton.h  
   
-##  <a name="a-namebringtotopa--cmfcautohidebuttonbringtotop"></a><a name="bringtotop"></a>CMFCAutoHideButton::BringToTop  
+##  <a name="bringtotop"></a>CMFCAutoHideButton::BringToTop  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -104,7 +127,7 @@ void BringToTop();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namecreatea--cmfcautohidebuttoncreate"></a><a name="create"></a>CMFCAutoHideButton::Create  
+##  <a name="create"></a>CMFCAutoHideButton::Create  
  Crée et initialise un bouton Masquer automatiquement.  
   
 ```  
@@ -140,7 +163,7 @@ virtual BOOL Create(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="a-namegetalignmenta--cmfcautohidebuttongetalignment"></a><a name="getalignment"></a>CMFCAutoHideButton::GetAlignment  
+##  <a name="getalignment"></a>CMFCAutoHideButton::GetAlignment  
  Récupère l'alignement du bouton masquer automatiquement.  
   
 ```  
@@ -161,7 +184,7 @@ DWORD GetAlignment() const;
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="a-namegetautohidewindowa--cmfcautohidebuttongetautohidewindow"></a><a name="getautohidewindow"></a>CMFCAutoHideButton::GetAutoHideWindow  
+##  <a name="getautohidewindow"></a>CMFCAutoHideButton::GetAutoHideWindow  
  Retourne le [CDockablePane](../../mfc/reference/cdockablepane-class.md) objet associé avec le bouton Masquer automatiquement.  
   
 ```  
@@ -174,7 +197,7 @@ CDockablePane* GetAutoHideWindow() const;
 ### <a name="remarks"></a>Notes  
  Pour associer un bouton Masquer automatiquement avec un `CDockablePane`, passez le `CDockablePane` en tant que paramètre à la [CMFCAutoHideButton::Create](#create) (méthode).  
   
-##  <a name="a-namegetparenttoolbara--cmfcautohidebuttongetparenttoolbar"></a><a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar  
+##  <a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -185,7 +208,7 @@ CMFCAutoHideBar* GetParentToolBar();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetrecta--cmfcautohidebuttongetrect"></a><a name="getrect"></a>CMFCAutoHideButton::GetRect  
+##  <a name="getrect"></a>CMFCAutoHideButton::GetRect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -196,7 +219,7 @@ CRect GetRect() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetsizea--cmfcautohidebuttongetsize"></a><a name="getsize"></a>CMFCAutoHideButton::GetSize  
+##  <a name="getsize"></a>CMFCAutoHideButton::GetSize  
  Détermine la taille du bouton masquer automatiquement.  
   
 ```  
@@ -209,7 +232,7 @@ CSize GetSize() const;
 ### <a name="remarks"></a>Remarques  
  La taille calculée inclut la taille de la bordure du bouton Masquer automatiquement.  
   
-##  <a name="a-namegettextsizea--cmfcautohidebuttongettextsize"></a><a name="gettextsize"></a>CMFCAutoHideButton::GetTextSize  
+##  <a name="gettextsize"></a>CMFCAutoHideButton::GetTextSize  
  Retourne la taille de l'étiquette de texte du bouton masquer automatiquement.  
   
 ```  
@@ -219,7 +242,7 @@ virtual CSize GetTextSize() const;
 ### <a name="return-value"></a>Valeur de retour  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) objet qui contient la taille du texte pour le bouton Masquer automatiquement.  
   
-##  <a name="a-nameisactivea--cmfcautohidebuttonisactive"></a><a name="isactive"></a>CMFCAutoHideButton::IsActive  
+##  <a name="isactive"></a>CMFCAutoHideButton::IsActive  
  Indique si le bouton masquer automatiquement est actif.  
   
 ```  
@@ -232,7 +255,7 @@ BOOL IsActive() const;
 ### <a name="remarks"></a>Remarques  
  Un bouton Masquer automatiquement est activé lorsque associé [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) fenêtre est affichée.  
   
-##  <a name="a-nameishorizontala--cmfcautohidebuttonishorizontal"></a><a name="ishorizontal"></a>CMFCAutoHideButton::IsHorizontal  
+##  <a name="ishorizontal"></a>CMFCAutoHideButton::IsHorizontal  
  Détermine si le bouton masquer automatiquement est horizontal ou vertical.  
   
 ```  
@@ -245,7 +268,7 @@ BOOL IsHorizontal() const;
 ### <a name="remarks"></a>Remarques  
  L’infrastructure définit l’orientation d’un [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) de l’objet lors de sa création.  Vous pouvez contrôler l’orientation à l’aide de la `dwAlignment` paramètre dans le [CMFCAutoHideButton::Create](#create) (méthode).  
   
-##  <a name="a-nameistopa--cmfcautohidebuttonistop"></a><a name="istop"></a>CMFCAutoHideButton::IsTop  
+##  <a name="istop"></a>CMFCAutoHideButton::IsTop  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -256,7 +279,7 @@ BOOL IsTop() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameisvisiblea--cmfcautohidebuttonisvisible"></a><a name="isvisible"></a>CMFCAutoHideButton::IsVisible  
+##  <a name="isvisible"></a>CMFCAutoHideButton::IsVisible  
  Indique si le bouton Masquer automatiquement est visible.  
   
 ```  
@@ -266,7 +289,7 @@ virtual BOOL IsVisible() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le bouton est visible ; `FALSE` dans le cas contraire.  
   
-##  <a name="a-nameondrawa--cmfcautohidebuttonondraw"></a><a name="ondraw"></a>CMFCAutoHideButton::OnDraw  
+##  <a name="ondraw"></a>CMFCAutoHideButton::OnDraw  
  L'infrastructure appelle cette méthode au moment de dessiner le bouton masquer automatiquement.  
   
 ```  
@@ -280,7 +303,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>Notes  
  Si vous souhaitez personnaliser l’apparence de masquer les boutons dans votre application, créez une classe dérivée de `CMFCAutoHideButton`. Dans votre classe dérivée, substituez cette méthode.  
   
-##  <a name="a-nameondrawbordera--cmfcautohidebuttonondrawborder"></a><a name="ondrawborder"></a>CMFCAutoHideButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCAutoHideButton::OnDrawBorder  
  L'infrastructure appelle cette méthode au moment de dessiner la bordure d'un bouton masquer automatiquement.  
   
 ```  
@@ -303,7 +326,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>Remarques  
  Si vous souhaitez personnaliser la bordure de chaque bouton Masquer automatiquement dans votre application, créez une classe dérivée de la `CMFCAutoHideButton`. Dans votre classe dérivée, substituez cette méthode.  
   
-##  <a name="a-nameonfillbackgrounda--cmfcautohidebuttononfillbackground"></a><a name="onfillbackground"></a>CMFCAutoHideButton::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCAutoHideButton::OnFillBackground  
  L'infrastructure appelle cette méthode au moment de remplir l'arrière-plan d'un bouton masquer automatiquement.  
   
 ```  
@@ -322,7 +345,7 @@ virtual void OnFillBackground(
 ### <a name="remarks"></a>Notes  
  Si vous souhaitez le personnaliser pour masquer les boutons dans votre application, créez une classe dérivée de la `CMFCAutoHideButton`. Dans votre classe dérivée, substituez cette méthode.  
   
-##  <a name="a-nameshowattachedwindowa--cmfcautohidebuttonshowattachedwindow"></a><a name="showattachedwindow"></a>CMFCAutoHideButton::ShowAttachedWindow  
+##  <a name="showattachedwindow"></a>CMFCAutoHideButton::ShowAttachedWindow  
  Affiche ou masque associé [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
   
 ```  
@@ -333,7 +356,7 @@ void ShowAttachedWindow(BOOL bShow);
  [in] `bShow`  
  Valeur booléenne qui spécifie si cette méthode affiche le fichier `CDockablePane`.  
   
-##  <a name="a-nameshowbuttona--cmfcautohidebuttonshowbutton"></a><a name="showbutton"></a>CMFCAutoHideButton::ShowButton  
+##  <a name="showbutton"></a>CMFCAutoHideButton::ShowButton  
  Affiche ou masque le bouton masquer automatiquement.  
   
 ```  
@@ -344,7 +367,7 @@ virtual void ShowButton(BOOL bShow);
  [in] `bShow`  
  Valeur booléenne qui spécifie s’il faut afficher le bouton Masquer automatiquement.  
   
-##  <a name="a-namemovea--cmfcautohidebuttonmove"></a><a name="move"></a>CMFCAutoHideButton::Move  
+##  <a name="move"></a>CMFCAutoHideButton::Move  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -356,7 +379,7 @@ void Move(int nOffset);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namereplacepanea--cmfcautohidebuttonreplacepane"></a><a name="replacepane"></a>CMFCAutoHideButton::ReplacePane  
+##  <a name="replacepane"></a>CMFCAutoHideButton::ReplacePane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -368,7 +391,7 @@ void ReplacePane(CDockablePane* pNewBar);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameunsetautohidemodea--cmfcautohidebuttonunsetautohidemode"></a><a name="unsetautohidemode"></a>CMFCAutoHideButton::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>CMFCAutoHideButton::UnSetAutoHideMode  
  Désactivez le mode de masquage automatique.  
   
 ```  
@@ -381,7 +404,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namehighlightbuttona--cmfcautohidebuttonhighlightbutton"></a><a name="highlightbutton"></a>CMFCAutoHideButton::HighlightButton  
+##  <a name="highlightbutton"></a>CMFCAutoHideButton::HighlightButton  
  Met en surbrillance le bouton Masquer automatiquement.  
   
 ```  
@@ -394,7 +417,7 @@ virtual void HighlightButton(BOOL bHighlight);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameishighlighteda--cmfcautohidebuttonishighlighted"></a><a name="ishighlighted"></a>CMFCAutoHideButton::IsHighlighted  
+##  <a name="ishighlighted"></a>CMFCAutoHideButton::IsHighlighted  
  Retourne l’état de mise en surbrillance du bouton Masquer automatiquement.  
   
 ```  

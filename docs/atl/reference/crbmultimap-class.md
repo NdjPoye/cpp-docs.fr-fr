@@ -10,8 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRBMultiMap
-- ATL.CRBMultiMap
-- ATL::CRBMultiMap
+- ATLCOLL/ATL::CRBMultiMap
+- ATLCOLL/ATL::CRBMultiMap::CRBMultiMap
+- ATLCOLL/ATL::CRBMultiMap::FindFirstWithKey
+- ATLCOLL/ATL::CRBMultiMap::GetNextValueWithKey
+- ATLCOLL/ATL::CRBMultiMap::GetNextWithKey
+- ATLCOLL/ATL::CRBMultiMap::Insert
+- ATLCOLL/ATL::CRBMultiMap::RemoveKey
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -107,7 +112,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcoll.h  
   
-##  <a name="a-namecrbmultimapa--crbmultimapcrbmultimap"></a><a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap  
+##  <a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap  
  Constructeur.  
   
 ```
@@ -126,7 +131,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Utilities&#85;](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]  
   
-##  <a name="a-namedtora--crbmultimapcrbmultimap"></a><a name="dtor"></a>CRBMultiMap :: ~ CRBMultiMap  
+##  <a name="dtor"></a>CRBMultiMap :: ~ CRBMultiMap  
  Destructeur.  
   
 ```
@@ -138,7 +143,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
   
  Consultez la documentation de la classe de base [CRBTree](../../atl/reference/crbtree-class.md) pour plus d’informations sur les autres méthodes disponibles.  
   
-##  <a name="a-namefindfirstwithkeya--crbmultimapfindfirstwithkey"></a><a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey  
+##  <a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey  
  Appelez cette méthode pour trouver la position du premier élément avec une clé donnée.  
   
 ```
@@ -160,7 +165,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
-##  <a name="a-namegetnextvaluewithkeya--crbmultimapgetnextvaluewithkey"></a><a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
+##  <a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
  Appelez cette méthode pour obtenir la valeur associée à une clé donnée et mettre à jour la valeur de position.  
   
 ```
@@ -190,7 +195,7 @@ V& GetNextValueWithKey(
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
-##  <a name="a-namegetnextwithkeya--crbmultimapgetnextwithkey"></a><a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
+##  <a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
  Appelez cette méthode pour obtenir l’élément associé à une clé donnée et mettre à jour la valeur de position.  
   
 ```
@@ -217,7 +222,7 @@ CPair* GetNextWithKey(
   
  Consultez la documentation de la classe de base [CRBTree](../../atl/reference/crbtree-class.md) pour plus d’informations sur les autres méthodes disponibles.  
   
-##  <a name="a-nameinserta--crbmultimapinsert"></a><a name="insert"></a>CRBMultiMap::Insert  
+##  <a name="insert"></a>CRBMultiMap::Insert  
  Appelez cette méthode pour insérer une paire de l’élément dans le mappage.  
   
 ```
@@ -240,7 +245,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
-##  <a name="a-nameremovekeya--crbmultimapremovekey"></a><a name="removekey"></a>CRBMultiMap::RemoveKey  
+##  <a name="removekey"></a>CRBMultiMap::RemoveKey  
  Appelez cette méthode pour supprimer tous les éléments clé/valeur d’une clé spécifique.  
   
 ```

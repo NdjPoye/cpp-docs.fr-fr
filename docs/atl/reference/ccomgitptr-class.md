@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComGITPtr<T>
 - CComGITPtr
-- ATL.CComGITPtr
-- ATL.CComGITPtr<T>
-- ATL::CComGITPtr
+- ATLBASE/ATL::CComGITPtr
+- ATLBASE/ATL::CComGITPtr::CComGITPtr
+- ATLBASE/ATL::CComGITPtr::Attach
+- ATLBASE/ATL::CComGITPtr::CopyTo
+- ATLBASE/ATL::CComGITPtr::Detach
+- ATLBASE/ATL::CComGITPtr::GetCookie
+- ATLBASE/ATL::CComGITPtr::Revoke
+- ATLBASE/ATL::CComGITPtr::m_dwCookie
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +102,7 @@ class CComGITPtr
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
   
-##  <a name="a-nameattacha--ccomgitptrattach"></a><a name="attach"></a>CComGITPtr::Attach  
+##  <a name="attach"></a>CComGITPtr::Attach  
  Appelez cette méthode pour inscrire le pointeur d’interface dans la table d’interface globale (GIT).  
   
 ```
@@ -120,7 +124,7 @@ HRESULT Attach(DWORD dwCookie) throw();
 ### <a name="remarks"></a>Remarques  
  Dans les versions debug, une erreur d’assertion se produit si le GIT n’est pas valide ou si le cookie est égal à NULL.  
   
-##  <a name="a-nameccomgitptra--ccomgitptrccomgitptr"></a><a name="ccomgitptr"></a>CComGITPtr::CComGITPtr  
+##  <a name="ccomgitptr"></a>CComGITPtr::CComGITPtr  
  Constructeur.  
   
 ```
@@ -149,7 +153,7 @@ CComGITPtr(CComGITPtr&& rv);
   
  L’utilisation du constructeur `rv` est un constructeur de déplacement. Les données sont déplacées de la source, `rv`, puis `rv` est désactivée.  
   
-##  <a name="a-namedtora--ccomgitptrccomgitptr"></a><a name="dtor"></a>CComGITPtr :: ~ CComGITPtr  
+##  <a name="dtor"></a>CComGITPtr :: ~ CComGITPtr  
  Destructeur.  
   
 ```
@@ -159,7 +163,7 @@ CComGITPtr(CComGITPtr&& rv);
 ### <a name="remarks"></a>Remarques  
  Supprime l’interface à partir de la table d’interface globale (GIT), à l’aide de [CComGITPtr::Revoke](#revoke).  
   
-##  <a name="a-namecopytoa--ccomgitptrcopyto"></a><a name="copyto"></a>CComGITPtr::CopyTo  
+##  <a name="copyto"></a>CComGITPtr::CopyTo  
  Appelez cette méthode pour copier l’interface à partir de la table d’interface globale (GIT) sur le pointeur passé.  
   
 ```
@@ -176,7 +180,7 @@ HRESULT CopyTo(T** pp) const throw();
 ### <a name="remarks"></a>Notes  
  L’interface dans le GIT est copié vers le pointeur passé. Le pointeur doit être libéré par l’appelant lorsqu’elle n’est plus nécessaire.  
   
-##  <a name="a-namedetacha--ccomgitptrdetach"></a><a name="detach"></a>CComGITPtr::Detach  
+##  <a name="detach"></a>CComGITPtr::Detach  
  Appelez cette méthode pour dissocier l’interface à partir de la `CComGITPtr` objet.  
   
 ```
@@ -189,7 +193,7 @@ DWORD Detach() throw();
 ### <a name="remarks"></a>Remarques  
  Il incombe à l’appelant de supprimer l’interface dans le GIT, à l’aide de [CComGITPtr::Revoke](#revoke).  
   
-##  <a name="a-namegetcookiea--ccomgitptrgetcookie"></a><a name="getcookie"></a>CComGITPtr::GetCookie  
+##  <a name="getcookie"></a>CComGITPtr::GetCookie  
  Appelez cette méthode pour retourner le cookie à partir de la `CComGITPtr` objet.  
   
 ```
@@ -202,7 +206,7 @@ DWORD GetCookie() const;
 ### <a name="remarks"></a>Notes  
  Le cookie est une variable utilisée pour identifier une interface et son emplacement.  
   
-##  <a name="a-namemdwcookiea--ccomgitptrmdwcookie"></a><a name="m_dwcookie"></a>CComGITPtr::m_dwCookie  
+##  <a name="m_dwcookie"></a>CComGITPtr::m_dwCookie  
  Le cookie.  
   
 ```
@@ -212,7 +216,7 @@ DWORD m_dwCookie;
 ### <a name="remarks"></a>Notes  
  Le cookie est une variable de membre utilisée pour identifier une interface et son emplacement.  
   
-##  <a name="a-nameoperatoreqa--ccomgitptroperator-"></a><a name="operator_eq"></a>CComGITPtr::operator =  
+##  <a name="operator_eq"></a>CComGITPtr::operator =  
  L’opérateur d’assignation.  
   
 ```
@@ -241,7 +245,7 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ### <a name="remarks"></a>Remarques  
  Affecte une nouvelle valeur à un `CComGITPtr` objet, d’un objet existant ou d’une référence à un tableau global d’interface.  
   
-##  <a name="a-nameoperatordworda--ccomgitptroperator-dword"></a><a name="operator_dword"></a>CComGITPtr::operator DWORD  
+##  <a name="operator_dword"></a>CComGITPtr::operator DWORD  
  Retourne le cookie associé à le `CComGITPtr` objet.  
   
 ```  
@@ -251,7 +255,7 @@ operator DWORD() const;
 ### <a name="remarks"></a>Remarques  
  Le cookie est une variable utilisée pour identifier une interface et son emplacement.  
   
-##  <a name="a-namerevokea--ccomgitptrrevoke"></a><a name="revoke"></a>CComGITPtr::Revoke  
+##  <a name="revoke"></a>CComGITPtr::Revoke  
  Appelez cette méthode pour supprimer l’interface actuelle de la table d’interface globale (GIT).  
   
 ```

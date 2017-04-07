@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationVariableIntegerChangeHandler
 - CAnimationVariableIntegerChangeHandler
+- AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler
+- AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler
+- AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler::CreateInstance
+- AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged
+- AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler::SetAnimationController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,14 +84,14 @@ class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntege
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxanimationcontroller.h  
   
-##  <a name="a-namecanimationvariableintegerchangehandlera--canimationvariableintegerchangehandlercanimationvariableintegerchangehandler"></a><a name="canimationvariableintegerchangehandler"></a>CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler  
+##  <a name="canimationvariableintegerchangehandler"></a>CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler  
  Construit un objet CAnimationVariableIntegerChangeHandler.  
   
 ```  
 CAnimationVariableIntegerChangeHandler ();
 ```  
   
-##  <a name="a-namecreateinstancea--canimationvariableintegerchangehandlercreateinstance"></a><a name="createinstance"></a>CAnimationVariableIntegerChangeHandler::CreateInstance  
+##  <a name="createinstance"></a>CAnimationVariableIntegerChangeHandler::CreateInstance  
  Crée une instance de rappel CAnimationVariableIntegerChangeHandler.  
   
 ```  
@@ -105,7 +109,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
   
-##  <a name="a-nameonintegervaluechangeda--canimationvariableintegerchangehandleronintegervaluechanged"></a><a name="onintegervaluechanged"></a>CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged  
+##  <a name="onintegervaluechanged"></a>CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged  
  Appelé lorsqu’une valeur d’une variable d’animation a changé.  
   
 ```  
@@ -132,7 +136,7 @@ IFACEMETHOD(OnIntegerValueChanged) (
 ### <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; sinon E_FAIL.  
   
-##  <a name="a-namesetanimationcontrollera--canimationvariableintegerchangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationVariableIntegerChangeHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>CAnimationVariableIntegerChangeHandler::SetAnimationController  
  Stocke un pointeur vers le contrôleur de l’animation pour acheminer les événements.  
   
 ```  

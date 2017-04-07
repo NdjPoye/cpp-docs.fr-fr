@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMapStringToString
+- AFXCOLL/CMapStringToString
+- AFXCOLL/CMapStringToString::CPair
+- AFXCOLL/CMapStringToOb::CMapStringToOb
+- AFXCOLL/CMapStringToOb::GetCount
+- AFXCOLL/CMapStringToOb::GetHashTableSize
+- AFXCOLL/CMapStringToOb::GetNextAssoc
+- AFXCOLL/CMapStringToOb::GetSize
+- AFXCOLL/CMapStringToOb::GetStartPosition
+- AFXCOLL/CMapStringToOb::HashKey
+- AFXCOLL/CMapStringToOb::InitHashTable
+- AFXCOLL/CMapStringToOb::IsEmpty
+- AFXCOLL/CMapStringToOb::Lookup
+- AFXCOLL/CMapStringToOb::LookupKey
+- AFXCOLL/CMapStringToString::PGetFirstAssoc
+- AFXCOLL/CMapStringToString::PGetNextAssoc
+- AFXCOLL/CMapStringToString::PLookup
+- AFXCOLL/CMapStringToOb::RemoveAll
+- AFXCOLL/CMapStringToOb::RemoveKey
+- AFXCOLL/CMapStringToOb::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -116,7 +135,7 @@ class CMapStringToString : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcoll.h  
   
-##  <a name="a-namecpaira--cmapstringtostringcpair"></a><a name="cpair"></a>CMapStringToString::CPair  
+##  <a name="cpair"></a>CMapStringToString::CPair  
  Contient une valeur de clé et la valeur de l’objet de chaîne associée.  
   
 ### <a name="remarks"></a>Notes  
@@ -133,7 +152,7 @@ class CMapStringToString : public CObject
 ### <a name="example"></a>Exemple  
   Pour obtenir un exemple d’utilisation, consultez l’exemple de [CMapStringToString::PLookup](#plookup).  
   
-##  <a name="a-namepgetfirstassoca--cmapstringtostringpgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMapStringToString::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>CMapStringToString::PGetFirstAssoc  
  Retourne la première entrée de l’objet de mappage.  
   
 ```  
@@ -151,7 +170,7 @@ CPair* PGetFirstAssoc();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCCollections&#73;](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]  
   
-##  <a name="a-namepgetnextassoca--cmapstringtostringpgetnextassoc"></a><a name="pgetnextassoc"></a>CMapStringToString::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>CMapStringToString::PGetNextAssoc  
  Récupère l’élément de carte indiqué par `pAssocRec`.  
   
 ```  
@@ -173,7 +192,7 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CMapStringToString::PGetFirstAssoc](#pgetfirstassoc).  
   
-##  <a name="a-nameplookupa--cmapstringtostringplookup"></a><a name="plookup"></a>CMapStringToString::PLookup  
+##  <a name="plookup"></a>CMapStringToString::PLookup  
  Recherche la valeur mappée à une clé donnée.  
   
 ```  

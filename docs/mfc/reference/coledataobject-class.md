@@ -9,8 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- IDataObject
 - COleDataObject
+- AFXOLE/COleDataObject
+- AFXOLE/COleDataObject::COleDataObject
+- AFXOLE/COleDataObject::Attach
+- AFXOLE/COleDataObject::AttachClipboard
+- AFXOLE/COleDataObject::BeginEnumFormats
+- AFXOLE/COleDataObject::Detach
+- AFXOLE/COleDataObject::GetData
+- AFXOLE/COleDataObject::GetFileData
+- AFXOLE/COleDataObject::GetGlobalData
+- AFXOLE/COleDataObject::GetNextFormat
+- AFXOLE/COleDataObject::IsDataAvailable
+- AFXOLE/COleDataObject::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +111,7 @@ class COleDataObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxole.h  
   
-##  <a name="a-nameattacha--coledataobjectattach"></a><a name="attach"></a>COleDataObject::Attach  
+##  <a name="attach"></a>COleDataObject::Attach  
  Appelez cette fonction pour associer le `COleDataObject` objet avec un objet de données OLE.  
   
 ```  
@@ -119,7 +130,7 @@ void Attach(
 ### <a name="remarks"></a>Remarques  
  Pour plus d’informations, consultez [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameattachclipboarda--coledataobjectattachclipboard"></a><a name="attachclipboard"></a>COleDataObject::AttachClipboard  
+##  <a name="attachclipboard"></a>COleDataObject::AttachClipboard  
  Appelez cette fonction pour attacher l’objet de données qui est actuellement dans le Presse-papiers pour le `COleDataObject` objet.  
   
 ```  
@@ -134,7 +145,7 @@ BOOL AttachClipboard();
 > [!NOTE]
 >  Appeler cette fonction de verrouillage du Presse-papiers jusqu'à ce que cet objet de données. L’objet de données est libéré dans le destructeur de la `COleDataObject`. Pour plus d’informations, consultez [ouverture du Presse-papiers](http://msdn.microsoft.com/library/windows/desktop/ms649048) et [la fermeture du Presse-papiers](http://msdn.microsoft.com/library/windows/desktop/ms649035) dans la documentation de Win32.  
   
-##  <a name="a-namebeginenumformatsa--coledataobjectbeginenumformats"></a><a name="beginenumformats"></a>COleDataObject::BeginEnumFormats  
+##  <a name="beginenumformats"></a>COleDataObject::BeginEnumFormats  
  Appelez cette fonction pour préparer les appels ultérieurs à `GetNextFormat` pour récupérer une liste de formats de données à partir de l’élément.  
   
 ```  
@@ -148,7 +159,7 @@ void BeginEnumFormats();
   
  Pour plus d’informations, consultez [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecoledataobjecta--coledataobjectcoledataobject"></a><a name="coledataobject"></a>COleDataObject::COleDataObject  
+##  <a name="coledataobject"></a>COleDataObject::COleDataObject  
  Construit un objet `COleDataObject`.  
   
 ```  
@@ -161,7 +172,7 @@ COleDataObject();
 > [!NOTE]
 >  Étant donné qu’un des paramètres pour les gestionnaires de glisser-déplacer est un pointeur vers un `COleDataObject`, il n’est pas nécessaire d’appeler ce constructeur pour prendre en charge le glisser -déplacer.  
   
-##  <a name="a-namedetacha--coledataobjectdetach"></a><a name="detach"></a>COleDataObject::Detach  
+##  <a name="detach"></a>COleDataObject::Detach  
  Appelez cette fonction pour détacher le `COleDataObject` objet à partir de l’objet de données associé OLE sans libérer l’objet de données.  
   
 ```  
@@ -173,7 +184,7 @@ LPDATAOBJECT Detach();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namegetdataa--coledataobjectgetdata"></a><a name="getdata"></a>COleDataObject::GetData  
+##  <a name="getdata"></a>COleDataObject::GetData  
  Appelez cette fonction pour récupérer des données à partir de l’élément dans le format spécifié.  
   
 ```  
@@ -201,7 +212,7 @@ BOOL GetData(
   
  Pour plus d’informations, consultez [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetfiledataa--coledataobjectgetfiledata"></a><a name="getfiledata"></a>COleDataObject::GetFileData  
+##  <a name="getfiledata"></a>COleDataObject::GetFileData  
  Appelez cette fonction pour créer un `CFile` ou `CFile`-objet dérivé et récupérer les données au format spécifié dans un `CFile` pointeur.  
   
 ```  
@@ -230,7 +241,7 @@ CFile* GetFileData(
   
  Pour plus d’informations, consultez [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetglobaldataa--coledataobjectgetglobaldata"></a><a name="getglobaldata"></a>COleDataObject::GetGlobalData  
+##  <a name="getglobaldata"></a>COleDataObject::GetGlobalData  
  Appelez cette fonction pour allouer un bloc de mémoire globale et pour récupérer des données au format spécifié dans un `HGLOBAL`.  
   
 ```  
@@ -254,7 +265,7 @@ HGLOBAL GetGlobalData(
   
  Pour plus d’informations, consultez [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetnextformata--coledataobjectgetnextformat"></a><a name="getnextformat"></a>COleDataObject::GetNextFormat  
+##  <a name="getnextformat"></a>COleDataObject::GetNextFormat  
  Appelez cette fonction à plusieurs reprises pour obtenir tous les formats disponibles pour la récupération de données à partir de l’élément.  
   
 ```  
@@ -275,7 +286,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
   
  Pour plus d’informations, consultez [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameisdataavailablea--coledataobjectisdataavailable"></a><a name="isdataavailable"></a>COleDataObject::IsDataAvailable  
+##  <a name="isdataavailable"></a>COleDataObject::IsDataAvailable  
  Appelez cette fonction pour déterminer si un format particulier est disponible pour la récupération de données à partir de l’élément OLE.  
   
 ```  
@@ -304,7 +315,7 @@ BOOL IsDataAvailable(
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata).  
   
-##  <a name="a-namereleasea--coledataobjectrelease"></a><a name="release"></a>COleDataObject::Release  
+##  <a name="release"></a>COleDataObject::Release  
  Appelez cette fonction pour libérer la possession de la [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) objet qui a été associé précédemment à le `COleDataObject` objet.  
   
 ```  

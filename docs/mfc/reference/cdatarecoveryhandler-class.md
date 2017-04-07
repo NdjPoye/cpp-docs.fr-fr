@@ -10,6 +10,35 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDataRecoveryHandler
+- AFXDATARECOVERY/CDataRecoveryHandler
+- AFXDATARECOVERY/CDataRecoveryHandler::CDataRecoveryHandler
+- AFXDATARECOVERY/CDataRecoveryHandler::AutosaveAllDocumentInfo
+- AFXDATARECOVERY/CDataRecoveryHandler::AutosaveDocumentInfo
+- AFXDATARECOVERY/CDataRecoveryHandler::CreateDocumentInfo
+- AFXDATARECOVERY/CDataRecoveryHandler::DeleteAllAutosavedFiles
+- AFXDATARECOVERY/CDataRecoveryHandler::DeleteAutosavedFile
+- AFXDATARECOVERY/CDataRecoveryHandler::GenerateAutosaveFileName
+- AFXDATARECOVERY/CDataRecoveryHandler::GetAutosaveInterval
+- AFXDATARECOVERY/CDataRecoveryHandler::GetAutosavePath
+- AFXDATARECOVERY/CDataRecoveryHandler::GetDocumentListName
+- AFXDATARECOVERY/CDataRecoveryHandler::GetNormalDocumentTitle
+- AFXDATARECOVERY/CDataRecoveryHandler::GetRecoveredDocumentTitle
+- AFXDATARECOVERY/CDataRecoveryHandler::GetRestartIdentifier
+- AFXDATARECOVERY/CDataRecoveryHandler::GetSaveDocumentInfoOnIdle
+- AFXDATARECOVERY/CDataRecoveryHandler::GetShutdownByRestartManager
+- AFXDATARECOVERY/CDataRecoveryHandler::Initialize
+- AFXDATARECOVERY/CDataRecoveryHandler::QueryRestoreAutosavedDocuments
+- AFXDATARECOVERY/CDataRecoveryHandler::ReadOpenDocumentList
+- AFXDATARECOVERY/CDataRecoveryHandler::RemoveDocumentInfo
+- AFXDATARECOVERY/CDataRecoveryHandler::ReopenPreviousDocuments
+- AFXDATARECOVERY/CDataRecoveryHandler::RestoreAutosavedDocuments
+- AFXDATARECOVERY/CDataRecoveryHandler::SaveOpenDocumentList
+- AFXDATARECOVERY/CDataRecoveryHandler::SetAutosaveInterval
+- AFXDATARECOVERY/CDataRecoveryHandler::SetAutosavePath
+- AFXDATARECOVERY/CDataRecoveryHandler::SetRestartIdentifier
+- AFXDATARECOVERY/CDataRecoveryHandler::SetSaveDocumentInfoOnIdle
+- AFXDATARECOVERY/CDataRecoveryHandler::SetShutdownByRestartManager
+- AFXDATARECOVERY/CDataRecoveryHandler::UpdateDocumentInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -119,7 +148,7 @@ class CDataRecoveryHandler : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdatarecovery.h  
   
-##  <a name="a-nameautosavealldocumentinfoa--cdatarecoveryhandlerautosavealldocumentinfo"></a><a name="autosavealldocumentinfo"></a>CDataRecoveryHandler::AutosaveAllDocumentInfo  
+##  <a name="autosavealldocumentinfo"></a>CDataRecoveryHandler::AutosaveAllDocumentInfo  
  Enregistre automatiquement chaque fichier est enregistré avec la `CDataRecoveryHandler` classe.  
   
 ```  
@@ -134,7 +163,7 @@ virtual BOOL AutosaveAllDocumentInfo();
   
  Pour utiliser cette méthode, soit `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` ou `AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL` doit être défini `m_dwRestartManagerSupportFlags`. Consultez la page [m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags) pour plus d’informations.  
   
-##  <a name="a-nameautosavedocumentinfoa--cdatarecoveryhandlerautosavedocumentinfo"></a><a name="autosavedocumentinfo"></a>CDataRecoveryHandler::AutosaveDocumentInfo  
+##  <a name="autosavedocumentinfo"></a>CDataRecoveryHandler::AutosaveDocumentInfo  
  Enregistre automatiquement le document spécifié.  
   
 ```  
@@ -164,7 +193,7 @@ virtual BOOL AutosaveDocumentInfo(
   
  Pour utiliser cette méthode, soit `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` ou `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` doit être défini `m_dwRestartManagerSupportFlags`.   
   
-##  <a name="a-namecdatarecoveryhandlera--cdatarecoveryhandlercdatarecoveryhandler"></a><a name="cdatarecoveryhandler"></a>CDataRecoveryHandler::CDataRecoveryHandler  
+##  <a name="cdatarecoveryhandler"></a>CDataRecoveryHandler::CDataRecoveryHandler  
  Construit un objet `CDataRecoveryHandler`.  
   
 ```  
@@ -185,7 +214,7 @@ CDataRecoveryHandler(
  L’infrastructure MFC crée automatiquement un `CDataRecoveryHandler` objet pour votre application lorsque vous utilisez la **nouveau projet** Assistant. Sauf si vous personnalisez le comportement de récupération de données ou le Gestionnaire de redémarrage, vous ne devez pas créer un `CDataRecoveryHandler` objet.  
   
   
-##  <a name="a-namecreatedocumentinfoa--cdatarecoveryhandlercreatedocumentinfo"></a><a name="createdocumentinfo"></a>CDataRecoveryHandler::CreateDocumentInfo  
+##  <a name="createdocumentinfo"></a>CDataRecoveryHandler::CreateDocumentInfo  
  Ajoute un document à la liste des documents ouverts.  
   
 ```  
@@ -207,7 +236,7 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
   
  Pour utiliser cette méthode, soit `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` ou `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` doit être défini `m_dwRestartManagerSupportFlags`. 
   
-##  <a name="a-namedeleteallautosavedfilesa--cdatarecoveryhandlerdeleteallautosavedfiles"></a><a name="deleteallautosavedfiles"></a>CDataRecoveryHandler::DeleteAllAutosavedFiles  
+##  <a name="deleteallautosavedfiles"></a>CDataRecoveryHandler::DeleteAllAutosavedFiles  
  Supprime tous les fichiers enregistrée automatiquement en cours.  
   
 ```  
@@ -217,7 +246,7 @@ virtual BOOL DeleteAllAutosavedFiles();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne l’implémentation par défaut toujours `TRUE`.  
   
-##  <a name="a-namedeleteautosavedfilea--cdatarecoveryhandlerdeleteautosavedfile"></a><a name="deleteautosavedfile"></a>CDataRecoveryHandler::DeleteAutosavedFile  
+##  <a name="deleteautosavedfile"></a>CDataRecoveryHandler::DeleteAutosavedFile  
  Supprime le fichier enregistré spécifié automatiquement.  
   
 ```  
@@ -237,7 +266,7 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 ### <a name="remarks"></a>Notes  
  Si cette méthode ne peut pas supprimer le fichier enregistré automatiquement, il enregistre le nom du fichier dans une liste. Le destructeur de la `CDataRecoveryHandler` tente de supprimer chaque fichier enregistré automatiquement spécifié dans cette liste.  
   
-##  <a name="a-namegenerateautosavefilenamea--cdatarecoveryhandlergenerateautosavefilename"></a><a name="generateautosavefilename"></a>CDataRecoveryHandler::GenerateAutosaveFileName  
+##  <a name="generateautosavefilename"></a>CDataRecoveryHandler::GenerateAutosaveFileName  
  Génère le nom d’un fichier d’enregistrement automatique associé au nom de fichier du document fourni.  
   
 ```  
@@ -254,7 +283,7 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 ### <a name="remarks"></a>Remarques  
  Le nom de chaque document possède un mappage un à un avec un nom de fichier d’enregistrement automatique.  
   
-##  <a name="a-namegetautosaveintervala--cdatarecoveryhandlergetautosaveinterval"></a><a name="getautosaveinterval"></a>CDataRecoveryHandler::GetAutosaveInterval  
+##  <a name="getautosaveinterval"></a>CDataRecoveryHandler::GetAutosaveInterval  
  Retourne l’intervalle entre les tentatives d’enregistrement automatique.  
   
 ```  
@@ -264,7 +293,7 @@ virtual int GetAutosaveInterval() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de millisecondes entre l’enregistrement automatique tente.  
   
-##  <a name="a-namegetautosavepatha--cdatarecoveryhandlergetautosavepath"></a><a name="getautosavepath"></a>CDataRecoveryHandler::GetAutosavePath  
+##  <a name="getautosavepath"></a>CDataRecoveryHandler::GetAutosavePath  
  Retourne le chemin d’accès des fichiers enregistrée automatiquement.  
   
 ```  
@@ -274,7 +303,7 @@ virtual CString GetAutosavePath() const;
 ### <a name="return-value"></a>Valeur de retour  
  L’emplacement où sont stockés les documents enregistrée automatiquement.  
   
-##  <a name="a-namegetdocumentlistnamea--cdatarecoveryhandlergetdocumentlistname"></a><a name="getdocumentlistname"></a>CDataRecoveryHandler::GetDocumentListName  
+##  <a name="getdocumentlistname"></a>CDataRecoveryHandler::GetDocumentListName  
  Récupère le nom du document dans un `CDocument` objet.  
   
 ```  
@@ -294,7 +323,7 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 ### <a name="remarks"></a>Notes  
  Le `CDataRecoveryHandler` utilise le nom du document comme clé dans `m_mapDocNameToAutosaveName`, `m_mapDocNameToDocumentPtr`, et `m_mapDocNameToRestoreBool`. Ces paramètres activer le `CDataRecoveryHandler` pour analyser `CDocument` objets, le nom de fichier d’enregistrement automatique et les paramètres d’enregistrement automatique.  
   
-##  <a name="a-namegetnormaldocumenttitlea--cdatarecoveryhandlergetnormaldocumenttitle"></a><a name="getnormaldocumenttitle"></a>CDataRecoveryHandler::GetNormalDocumentTitle  
+##  <a name="getnormaldocumenttitle"></a>CDataRecoveryHandler::GetNormalDocumentTitle  
  Récupère le titre normal pour le document spécifié.  
   
 ```  
@@ -314,7 +343,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 ### <a name="remarks"></a>Remarques  
  Le titre d’un document normal est généralement le nom de fichier du document sans le chemin d’accès. Il s’agit du titre dans le **nom de fichier** champ la **Enregistrer sous** boîte de dialogue.  
   
-##  <a name="a-namegetrecovereddocumenttitlea--cdatarecoveryhandlergetrecovereddocumenttitle"></a><a name="getrecovereddocumenttitle"></a>CDataRecoveryHandler::GetRecoveredDocumentTitle  
+##  <a name="getrecovereddocumenttitle"></a>CDataRecoveryHandler::GetRecoveredDocumentTitle  
  Crée et retourne le titre du document récupéré.  
   
 ```  
@@ -331,7 +360,7 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 ### <a name="remarks"></a>Remarques  
  Par défaut, le titre d’un document récupéré est le titre normale avec **[Récupéré]** est ajoutée. Le titre récupéré est affiché à l’utilisateur lorsque le `CDataRecoveryHandler` interroge l’utilisateur pour restaurer les documents enregistrée automatiquement.  
   
-##  <a name="a-namegetrestartidentifiera--cdatarecoveryhandlergetrestartidentifier"></a><a name="getrestartidentifier"></a>CDataRecoveryHandler::GetRestartIdentifier  
+##  <a name="getrestartidentifier"></a>CDataRecoveryHandler::GetRestartIdentifier  
  Récupère l’identificateur unique de redémarrage de l’application.  
   
 ```  
@@ -346,7 +375,7 @@ virtual CString GetRestartIdentifier() const;
   
  La `CDataRecoveryHandler` stocke des informations dans le Registre sur les documents actuellement ouverts. Lorsque le Gestionnaire de redémarrage quitte une application et redémarre, il fournit l’identificateur de redémarrage à la `CDataRecoveryHandler`. Le `CDataRecoveryHandler` utilise l’identificateur de redémarrage pour récupérer la liste des documents précédemment ouverts. Cela permet le `CDataRecoveryHandler` pour essayer de trouver et restaurer les fichiers enregistrée automatiquement.  
   
-##  <a name="a-namegetsavedocumentinfoonidlea--cdatarecoveryhandlergetsavedocumentinfoonidle"></a><a name="getsavedocumentinfoonidle"></a>CDataRecoveryHandler::GetSaveDocumentInfoOnIdle  
+##  <a name="getsavedocumentinfoonidle"></a>CDataRecoveryHandler::GetSaveDocumentInfoOnIdle  
  Indique si le `CDataRecoveryHandler` effectue un enregistrement automatique sur la boucle inactive en cours.  
   
 ```  
@@ -356,7 +385,7 @@ virtual BOOL GetSaveDocumentInfoOnIdle() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Indique le `CDataRecoveryHandler` enregistre automatiquement sur la boucle inactive en cours ; `FALSE` indique qu’il n’est pas le cas.  
   
-##  <a name="a-namegetshutdownbyrestartmanagera--cdatarecoveryhandlergetshutdownbyrestartmanager"></a><a name="getshutdownbyrestartmanager"></a>CDataRecoveryHandler::GetShutdownByRestartManager  
+##  <a name="getshutdownbyrestartmanager"></a>CDataRecoveryHandler::GetShutdownByRestartManager  
  Indique si le Gestionnaire de redémarrage a entraîné la fermeture de l’application.  
   
 ```  
@@ -366,7 +395,7 @@ virtual BOOL GetShutdownByRestartManager() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`le Gestionnaire de redémarrage a généré l’application à s’arrêter ; `FALSE` indique qu’il n’a pas.  
   
-##  <a name="a-nameinitializea--cdatarecoveryhandlerinitialize"></a><a name="initialize"></a>CDataRecoveryHandler::Initialize  
+##  <a name="initialize"></a>CDataRecoveryHandler::Initialize  
  Initialise la `CDataRecoveryHandler`.  
   
 ```  
@@ -383,7 +412,7 @@ virtual BOOL Initialize();
   
  Le `Initialize` méthode déclenche également un minuteur lors de l’enregistrement automatique suivant se produit. Utilisez [CDataRecoveryHandler::SetAutosaveInterval](#setautosaveinterval) pour modifier l’intervalle d’enregistrement automatique une fois que votre application a initialisé le `CDataRecoveryHandler`.  
   
-##  <a name="a-namequeryrestoreautosaveddocumentsa--cdatarecoveryhandlerqueryrestoreautosaveddocuments"></a><a name="queryrestoreautosaveddocuments"></a>CDataRecoveryHandler::QueryRestoreAutosavedDocuments  
+##  <a name="queryrestoreautosaveddocuments"></a>CDataRecoveryHandler::QueryRestoreAutosavedDocuments  
  Affiche une boîte de dialogue à l’utilisateur pour chaque document que le `CDataRecoveryHandler` enregistrée automatiquement. La boîte de dialogue détermine si l’utilisateur souhaite restaurer le document enregistré automatiquement.  
   
 ```  
@@ -395,7 +424,7 @@ virtual void QueryRestoreAutosavedDocuments();
   
  Après avoir `QueryRestoreAutosavedDocuments` rassemble toutes les réponses de l’utilisateur, il stocke les informations dans la variable membre `m_mapDocNameToRestoreBool`. Cette méthode ne restaure pas les documents enregistrée automatiquement.  
   
-##  <a name="a-namereadopendocumentlista--cdatarecoveryhandlerreadopendocumentlist"></a><a name="readopendocumentlist"></a>CDataRecoveryHandler::ReadOpenDocumentList  
+##  <a name="readopendocumentlist"></a>CDataRecoveryHandler::ReadOpenDocumentList  
  Charge la liste des documents ouverts à partir du Registre.  
   
 ```  
@@ -410,7 +439,7 @@ virtual BOOL ReadOpenDocumentList();
   
  Après avoir `ReadOpenDocumentList` charge toutes les données, il supprime les informations du document à partir du Registre.  
   
-##  <a name="a-nameremovedocumentinfoa--cdatarecoveryhandlerremovedocumentinfo"></a><a name="removedocumentinfo"></a>CDataRecoveryHandler::RemoveDocumentInfo  
+##  <a name="removedocumentinfo"></a>CDataRecoveryHandler::RemoveDocumentInfo  
  Supprime le document fourni dans la liste des documents ouverts.  
   
 ```  
@@ -434,7 +463,7 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
   
  Pour utiliser cette méthode, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` doit être défini `m_dwRestartManagerSupportFlags`.   
   
-##  <a name="a-namereopenpreviousdocumentsa--cdatarecoveryhandlerreopenpreviousdocuments"></a><a name="reopenpreviousdocuments"></a>CDataRecoveryHandler::ReopenPreviousDocuments  
+##  <a name="reopenpreviousdocuments"></a>CDataRecoveryHandler::ReopenPreviousDocuments  
  Ouvre les documents précédemment ouverts.  
   
 ```  
@@ -451,7 +480,7 @@ virtual BOOL ReopenPreviousDocuments();
   
  Si aucun document stocké dans la liste des documents précédemment ouverts, `ReopenPreviousDocuments` ne fait rien et retourne `FALSE`.  
   
-##  <a name="a-namerestoreautosaveddocumentsa--cdatarecoveryhandlerrestoreautosaveddocuments"></a><a name="restoreautosaveddocuments"></a>CDataRecoveryHandler::RestoreAutosavedDocuments  
+##  <a name="restoreautosaveddocuments"></a>CDataRecoveryHandler::RestoreAutosavedDocuments  
  Restaure les documents enregistrée automatiquement en fonction de l’entrée d’utilisateur.  
   
 ```  
@@ -466,7 +495,7 @@ virtual BOOL RestoreAutosavedDocuments();
   
  Pour utiliser cette méthode, soit `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` ou `AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES` doit être défini `m_dwRestartManagerSupportFlags`.   
   
-##  <a name="a-namesaveopendocumentlista--cdatarecoveryhandlersaveopendocumentlist"></a><a name="saveopendocumentlist"></a>CDataRecoveryHandler::SaveOpenDocumentList  
+##  <a name="saveopendocumentlist"></a>CDataRecoveryHandler::SaveOpenDocumentList  
  Enregistre la liste actuelle des documents ouverts dans le Registre Windows.  
   
 ```  
@@ -481,7 +510,7 @@ virtual BOOL SaveOpenDocumentList();
   
  Cette méthode enregistre uniquement la liste des documents ouverts. La méthode [CDataRecoveryHandler::AutosaveDocumentInfo](#autosavedocumentinfo) est responsable de l’enregistrement de documents eux-mêmes.  
   
-##  <a name="a-namesetautosaveintervala--cdatarecoveryhandlersetautosaveinterval"></a><a name="setautosaveinterval"></a>CDataRecoveryHandler::SetAutosaveInterval  
+##  <a name="setautosaveinterval"></a>CDataRecoveryHandler::SetAutosaveInterval  
  Définit le délai entre les cycles d’enregistrement automatique en millisecondes.  
   
 ```  
@@ -492,7 +521,7 @@ Virtual void SetAutosaveInterval(int nAutosaveInterval);
  [in] `nAutosaveInterval`  
  Le nouvel intervalle d’enregistrement automatique en millisecondes.  
   
-##  <a name="a-namesetautosavepatha--cdatarecoveryhandlersetautosavepath"></a><a name="setautosavepath"></a>CDataRecoveryHandler::SetAutosavePath  
+##  <a name="setautosavepath"></a>CDataRecoveryHandler::SetAutosavePath  
  Définit le répertoire où sont stockés les fichiers enregistrée automatiquement.  
   
 ```  
@@ -509,7 +538,7 @@ virtual void SetAutosavePath(const CString& strAutosavePath);
 ### <a name="remarks"></a>Notes  
  La modification du répertoire d’enregistrement automatique ne déplace pas actuellement enregistrée automatiquement les fichiers.  
   
-##  <a name="a-namesetrestartidentifiera--cdatarecoveryhandlersetrestartidentifier"></a><a name="setrestartidentifier"></a>CDataRecoveryHandler::SetRestartIdentifier  
+##  <a name="setrestartidentifier"></a>CDataRecoveryHandler::SetRestartIdentifier  
  Définit l’identificateur unique de redémarrage pour cette instance de la `CDataRecoveryHandler`.  
   
 ```  
@@ -526,7 +555,7 @@ virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 ### <a name="remarks"></a>Remarques  
  Le Gestionnaire de redémarrage enregistre des informations sur les documents ouverts dans le Registre. Ces informations sont stockées avec l’identificateur de redémarrage unique comme clé. Étant donné que l’identificateur de redémarrage est unique pour chaque instance d’une application, plusieurs instances d’une application se ferme de façon inattendue et le Gestionnaire de redémarrage peut restaurer Chacun d’eux.  
   
-##  <a name="a-namesetsavedocumentinfoonidlea--cdatarecoveryhandlersetsavedocumentinfoonidle"></a><a name="setsavedocumentinfoonidle"></a>CDataRecoveryHandler::SetSaveDocumentInfoOnIdle  
+##  <a name="setsavedocumentinfoonidle"></a>CDataRecoveryHandler::SetSaveDocumentInfoOnIdle  
  Définit si le `CDataRecoveryHandler` enregistre les informations de document ouvert dans le Registre Windows au cours du cycle inactif en cours.  
   
 ```  
@@ -540,7 +569,7 @@ virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 |Paramètre|Description|  
 |[in] `bSaveOnIdle`|`TRUE`Pour enregistrer les informations de document au cours du cycle inactif en cours ; `FALSE to not perform a save`.|  
   
-##  <a name="a-namesetshutdownbyrestartmanagera--cdatarecoveryhandlersetshutdownbyrestartmanager"></a><a name="setshutdownbyrestartmanager"></a>CDataRecoveryHandler::SetShutdownByRestartManager  
+##  <a name="setshutdownbyrestartmanager"></a>CDataRecoveryHandler::SetShutdownByRestartManager  
  Définit si la sortie de l’application précédente a été provoquée par le Gestionnaire de redémarrage.  
   
 ```  
@@ -557,7 +586,7 @@ virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 ### <a name="remarks"></a>Remarques  
  L’infrastructure se comporte différemment selon que la sortie précédente est inattendue ou si elle a été initiée par le Gestionnaire de redémarrage.  
   
-##  <a name="a-nameupdatedocumentinfoa--cdatarecoveryhandlerupdatedocumentinfo"></a><a name="updatedocumentinfo"></a>CDataRecoveryHandler::UpdateDocumentInfo  
+##  <a name="updatedocumentinfo"></a>CDataRecoveryHandler::UpdateDocumentInfo  
  Met à jour les informations d’un document, car l’utilisateur enregistré.  
   
 ```  

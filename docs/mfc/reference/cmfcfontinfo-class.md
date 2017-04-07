@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCFontInfo
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::GetFullName
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_nCharSet
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_nPitchAndFamily
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_nType
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_strName
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_strScript
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +91,7 @@ class CMFCFontInfo : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxtoolbarfontcombobox.h  
   
-##  <a name="a-namecmfcfontinfoa--cmfcfontinfocmfcfontinfo"></a><a name="cmfcfontinfo"></a>CMFCFontInfo::CMFCFontInfo  
+##  <a name="cmfcfontinfo"></a>CMFCFontInfo::CMFCFontInfo  
  Construit un objet `CMFCFontInfo`.  
   
 ```  
@@ -122,7 +129,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="remarks"></a>Remarques  
  Cette documentation utilise les termes *jeu de caractères* et *script* indifféremment. A *script*, qui est également appelé un système d’écriture, est un ensemble de caractères et des règles pour l’écriture de ces caractères dans une ou plusieurs langues. La collection de caractères comprend l’alphabet et les signes de ponctuation utilisés dans ce script. Par exemple, script Latin est utilisé pour l’anglais comme il est intervenu aux États-Unis, et son alphabet inclut les caractères de A à Z. Le `lfCharSet` membre de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure spécifie un jeu de caractères. Par exemple, la valeur `ANSI_CHARSET` Spécifie le [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] jeu de caractères, y compris l’alphabet du script Latin.  
   
-##  <a name="a-namegetfullnamea--cmfcfontinfogetfullname"></a><a name="getfullname"></a>CMFCFontInfo::GetFullName  
+##  <a name="getfullname"></a>CMFCFontInfo::GetFullName  
  Récupère les noms concaténés d’une police et son caractère de jeu (script).  
   
 ```  
@@ -135,7 +142,7 @@ CString GetFullName() const;
 ### <a name="remarks"></a>Notes  
  Utilisez cette méthode pour obtenir le nom complet de la police. Par exemple, si le nom de police est est `Arial` et le script de police est `Cyrillic`, cette méthode retourne « Arial (cyrillique) ».  
   
-##  <a name="a-namemncharseta--cmfcfontinfomncharset"></a><a name="m_ncharset"></a>CMFCFontInfo::m_nCharSet  
+##  <a name="m_ncharset"></a>CMFCFontInfo::m_nCharSet  
  Une valeur qui spécifie le jeu de caractères (script) associé à la police.  
   
 ```  
@@ -145,7 +152,7 @@ const BYTE m_nCharSet;
 ### <a name="remarks"></a>Remarques  
  Pour plus d’informations, consultez la `nCharSet` paramètre de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructeur.  
   
-##  <a name="a-namemnpitchandfamilya--cmfcfontinfomnpitchandfamily"></a><a name="m_npitchandfamily"></a>CMFCFontInfo::m_nPitchAndFamily  
+##  <a name="m_npitchandfamily"></a>CMFCFontInfo::m_nPitchAndFamily  
  Une valeur qui spécifie la hauteur (taille) et la famille (par exemple, serif serif et à espacement fixe) de la police.  
   
 ```  
@@ -155,7 +162,7 @@ const BYTE m_nPitchAndFamily;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez la `nPitchAndFamily` paramètre de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructeur.  
   
-##  <a name="a-namemntypea--cmfcfontinfomntype"></a><a name="m_ntype"></a>CMFCFontInfo::m_nType  
+##  <a name="m_ntype"></a>CMFCFontInfo::m_nType  
  Une valeur qui spécifie le type de la police.  
   
 ```  
@@ -165,7 +172,7 @@ const int m_nType;
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez la `nType` paramètre de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructeur.  
   
-##  <a name="a-namemstrnamea--cmfcfontinfomstrname"></a><a name="m_strname"></a>CMFCFontInfo::m_strName  
+##  <a name="m_strname"></a>CMFCFontInfo::m_strName  
  Le nom de la police : par exemple, **Arial**.  
   
 ```  
@@ -175,7 +182,7 @@ const CString m_strName;
 ### <a name="remarks"></a>Remarques  
  Pour plus d’informations, consultez la `lpszName` paramètre de la [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructeur.  
   
-##  <a name="a-namemstrscripta--cmfcfontinfomstrscript"></a><a name="m_strscript"></a>CMFCFontInfo::m_strScript  
+##  <a name="m_strscript"></a>CMFCFontInfo::m_strScript  
  Le nom d’un jeu de caractères (script) associé à la police.  
   
 ```  

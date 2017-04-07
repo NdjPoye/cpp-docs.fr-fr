@@ -9,11 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CW2AEX<t_nBufferLength>
 - CW2AEX
-- ATL.CW2AEX<t_nBufferLength>
-- ATL::CW2AEX
-- ATL.CW2AEX
+- ATLCONV/ATL::CW2AEX
+- ATLCONV/ATL::CW2AEX::CW2AEX
+- ATLCONV/ATL::CW2AEX::m_psz
+- ATLCONV/ATL::CW2AEX::m_szBuffer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +113,7 @@ class CW2AEX
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlconv.h  
   
-##  <a name="a-namecw2aexa--cw2aexcw2aex"></a><a name="cw2aex"></a>CW2AEX::CW2AEX  
+##  <a name="cw2aex"></a>CW2AEX::CW2AEX  
  Constructeur.  
   
 ```
@@ -131,7 +131,7 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Remarques  
  Alloue de la mémoire tampon utilisée dans le processus de traduction.  
   
-##  <a name="a-namedtora--cw2aexcw2aex"></a><a name="dtor"></a>CW2AEX :: ~ CW2AEX  
+##  <a name="dtor"></a>CW2AEX :: ~ CW2AEX  
  Destructeur.  
   
 ```
@@ -141,21 +141,21 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Remarques  
  Libère la mémoire tampon allouée.  
   
-##  <a name="a-namempsza--cw2aexmpsz"></a><a name="m_psz"></a>CW2AEX::m_psz  
+##  <a name="m_psz"></a>CW2AEX::m_psz  
  Le membre de données qui stocke la chaîne source.  
   
 ```
 LPSTR m_psz;
 ```  
   
-##  <a name="a-namemszbuffera--cw2aexmszbuffer"></a><a name="m_szbuffer"></a>CW2AEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>CW2AEX::m_szBuffer  
  La mémoire tampon statique, utilisé pour stocker la chaîne convertie.  
   
 ```
 char m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="a-nameoperatorlpstra--cw2aexoperator-lpstr"></a><a name="operator_lpstr"></a>CW2AEX::operator LPSTR  
+##  <a name="operator_lpstr"></a>CW2AEX::operator LPSTR  
  Opérateur de conversion.  
   
 ```  

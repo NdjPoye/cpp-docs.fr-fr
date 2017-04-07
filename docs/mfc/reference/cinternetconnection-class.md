@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CInternetConnection
+- AFXINET/CInternetConnection
+- AFXINET/CInternetConnection::CInternetConnection
+- AFXINET/CInternetConnection::GetContext
+- AFXINET/CInternetConnection::GetServerName
+- AFXINET/CInternetConnection::GetSession
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +92,7 @@ class CInternetConnection : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxinet.h  
   
-##  <a name="a-namecinternetconnectiona--cinternetconnectioncinternetconnection"></a><a name="cinternetconnection"></a>CInternetConnection::CInternetConnection  
+##  <a name="cinternetconnection"></a>CInternetConnection::CInternetConnection  
  Cette fonction membre est appelée quand un `CInternetConnection` objet est créé.  
   
 ```  
@@ -122,7 +127,7 @@ CInternetConnection(
   
  La valeur par défaut `dwContext` est envoyé par MFC pour le `CInternetConnection`-objet dérivé le [CInternetSession](../../mfc/reference/cinternetsession-class.md) de l’objet qui a créé le **InternetConnection**-objet dérivé. La valeur par défaut est défini sur 1. Toutefois, vous pouvez affecter explicitement un identificateur de contexte spécifique dans le [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) constructeur pour la connexion. L’objet et tout travail qu’elle effectue est associées à cet ID de contexte. L’identificateur de contexte est renvoyé au [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état de l’objet avec lequel il est identifié. Consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.  
   
-##  <a name="a-namegetcontexta--cinternetconnectiongetcontext"></a><a name="getcontext"></a>CInternetConnection::GetContext  
+##  <a name="getcontext"></a>CInternetConnection::GetContext  
  Appelez cette fonction membre pour obtenir l’ID de contexte pour cette session.  
   
 ```  
@@ -137,7 +142,7 @@ DWORD_PTR GetContext() const;
   
  Pour plus d’informations sur la **GetContext** fonctionne avec d’autres classes WinInet pour donner les informations d’état utilisateur, consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.  
   
-##  <a name="a-namegetservernamea--cinternetconnectiongetservername"></a><a name="getservername"></a>CInternetConnection::GetServerName  
+##  <a name="getservername"></a>CInternetConnection::GetServerName  
  Appelez cette fonction membre pour obtenir le nom du serveur associé à cette connexion Internet.  
   
 ```  
@@ -147,7 +152,7 @@ CString GetServerName() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nom du serveur que cet objet de connexion fonctionne.  
   
-##  <a name="a-namegetsessiona--cinternetconnectiongetsession"></a><a name="getsession"></a>CInternetConnection::GetSession  
+##  <a name="getsession"></a>CInternetConnection::GetSession  
  Appelez cette fonction membre pour obtenir un pointeur vers le `CInternetSession` objet associé à cette connexion.  
   
 ```  
@@ -157,7 +162,7 @@ CInternetSession* GetSession() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un [CInternetSession](../../mfc/reference/cinternetsession-class.md) objet associé à cet objet de connexion Internet.  
   
-##  <a name="a-nameoperatorhinterneta--cinternetconnectionoperator-hinternet"></a><a name="operator_hinternet"></a>CInternetConnection::operator HINTERNET  
+##  <a name="operator_hinternet"></a>CInternetConnection::operator HINTERNET  
  Utilisez cet opérateur pour obtenir le handle de niveau API pour la session Internet.  
   
 ```  

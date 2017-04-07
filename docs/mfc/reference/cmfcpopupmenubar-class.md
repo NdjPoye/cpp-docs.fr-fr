@@ -10,6 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPopupMenuBar
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::AdjustSizeImmediate
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::BuildOrigItems
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::CloseDelayedSubMenu
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::ExportToMenu
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::FindDestintationToolBar
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::GetCurrentMenuImageSize
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::GetDefaultMenuId
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::GetLastCommandIndex
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::GetOffset
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::ImportFromMenu
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::IsDropDownListMode
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::IsPaletteMode
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::IsRibbonPanel
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::IsRibbonPanelInRegularMode
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::LoadFromHash
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::RestoreDelayedSubMenu
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::SetButtonStyle
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::SetOffset
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::StartPopupMenuTimer
+- AFXPOPUPMENUBAR/CMFCPopupMenuBar::m_bDisableSideBarInXPMode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +130,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxpopupmenubar.h  
   
-##  <a name="a-nameadjustsizeimmediatea--cmfcpopupmenubaradjustsizeimmediate"></a><a name="adjustsizeimmediate"></a>CMFCPopupMenuBar::AdjustSizeImmediate  
+##  <a name="adjustsizeimmediate"></a>CMFCPopupMenuBar::AdjustSizeImmediate  
  Recalcule immédiatement la disposition du volet de barre de menu contextuel. (Substitue [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).  
   
 ```  
@@ -122,7 +143,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namebuildorigitemsa--cmfcpopupmenubarbuildorigitems"></a><a name="buildorigitems"></a>CMFCPopupMenuBar::BuildOrigItems  
+##  <a name="buildorigitems"></a>CMFCPopupMenuBar::BuildOrigItems  
  Charge des éléments de menu contextuel à partir d’une ressource de menu spécifié.  
   
 ```  
@@ -138,7 +159,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameclosedelayedsubmenua--cmfcpopupmenubarclosedelayedsubmenu"></a><a name="closedelayedsubmenu"></a>CMFCPopupMenuBar::CloseDelayedSubMenu  
+##  <a name="closedelayedsubmenu"></a>CMFCPopupMenuBar::CloseDelayedSubMenu  
  Ferme un bouton de menu contextuel qui a été retardé.  
   
 ```  
@@ -147,7 +168,7 @@ virtual void CloseDelayedSubMenu();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameexporttomenua--cmfcpopupmenubarexporttomenu"></a><a name="exporttomenu"></a>CMFCPopupMenuBar::ExportToMenu  
+##  <a name="exporttomenu"></a>CMFCPopupMenuBar::ExportToMenu  
  Crée un menu à partir des boutons de menu contextuel.  
   
 ```  
@@ -159,7 +180,7 @@ virtual HMENU ExportToMenu() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namefinddestintationtoolbara--cmfcpopupmenubarfinddestintationtoolbar"></a><a name="finddestintationtoolbar"></a>CMFCPopupMenuBar::FindDestintationToolBar  
+##  <a name="finddestintationtoolbar"></a>CMFCPopupMenuBar::FindDestintationToolBar  
  Localise la barre d’outils dans laquelle se trouve un point spécifié.  
   
 ```  
@@ -175,7 +196,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namegetcurrentmenuimagesizea--cmfcpopupmenubargetcurrentmenuimagesize"></a><a name="getcurrentmenuimagesize"></a>CMFCPopupMenuBar::GetCurrentMenuImageSize  
+##  <a name="getcurrentmenuimagesize"></a>CMFCPopupMenuBar::GetCurrentMenuImageSize  
  Indique la taille des images de boutons de menu.  
   
 ```  
@@ -187,7 +208,7 @@ virtual CSize GetCurrentMenuImageSize() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetdefaultmenuida--cmfcpopupmenubargetdefaultmenuid"></a><a name="getdefaultmenuid"></a>CMFCPopupMenuBar::GetDefaultMenuId  
+##  <a name="getdefaultmenuid"></a>CMFCPopupMenuBar::GetDefaultMenuId  
  Retourne l’identificateur de l’élément de menu par défaut.  
   
 ```  
@@ -199,7 +220,7 @@ UINT GetDefaultMenuId() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namegetlastcommandindexa--cmfcpopupmenubargetlastcommandindex"></a><a name="getlastcommandindex"></a>CMFCPopupMenuBar::GetLastCommandIndex  
+##  <a name="getlastcommandindex"></a>CMFCPopupMenuBar::GetLastCommandIndex  
  Obtient l’index de la commande de menu dernier appelée.  
   
 ```  
@@ -211,7 +232,7 @@ static int __stdcall GetLastCommandIndex();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetoffseta--cmfcpopupmenubargetoffset"></a><a name="getoffset"></a>CMFCPopupMenuBar::GetOffset  
+##  <a name="getoffset"></a>CMFCPopupMenuBar::GetOffset  
  Obtient l’offset de ligne de la barre de menu contextuel.  
   
 ```  
@@ -224,7 +245,7 @@ int GetOffset() const;
 ### <a name="remarks"></a>Notes  
  Cette valeur est définie à l’aide de [CMFCPopupMenuBar::SetOffset](#setoffset).  
   
-##  <a name="a-nameimportfrommenua--cmfcpopupmenubarimportfrommenu"></a><a name="importfrommenu"></a>CMFCPopupMenuBar::ImportFromMenu  
+##  <a name="importfrommenu"></a>CMFCPopupMenuBar::ImportFromMenu  
  Importe des boutons de menu contextuel à partir d’un menu spécifié.  
   
 ```  
@@ -245,7 +266,7 @@ virtual BOOL ImportFromMenu(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameisdropdownlistmodea--cmfcpopupmenubarisdropdownlistmode"></a><a name="isdropdownlistmode"></a>CMFCPopupMenuBar::IsDropDownListMode  
+##  <a name="isdropdownlistmode"></a>CMFCPopupMenuBar::IsDropDownListMode  
  Indique si la barre de menu contextuel est en mode de liste déroulante vers le bas.  
   
 ```  
@@ -257,7 +278,7 @@ BOOL IsDropDownListMode() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameispalettemodea--cmfcpopupmenubarispalettemode"></a><a name="ispalettemode"></a>CMFCPopupMenuBar::IsPaletteMode  
+##  <a name="ispalettemode"></a>CMFCPopupMenuBar::IsPaletteMode  
  Indique si la barre de menu contextuel est en mode de palette.  
   
 ```  
@@ -270,7 +291,7 @@ BOOL IsPaletteMode() const;
 ### <a name="remarks"></a>Remarques  
  Lorsque la barre de menus est définie en mode de palette, éléments de menu apparaissent dans plusieurs colonnes et un nombre limité de lignes.  
   
-##  <a name="a-nameisribbonpanela--cmfcpopupmenubarisribbonpanel"></a><a name="isribbonpanel"></a>CMFCPopupMenuBar::IsRibbonPanel  
+##  <a name="isribbonpanel"></a>CMFCPopupMenuBar::IsRibbonPanel  
  Indique s’il s’agit d’un panneau de ruban ( `FALSE` par défaut).  
   
 ```  
@@ -282,7 +303,7 @@ virtual BOOL IsRibbonPanel() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameisribbonpanelinregularmodea--cmfcpopupmenubarisribbonpanelinregularmode"></a><a name="isribbonpanelinregularmode"></a>CMFCPopupMenuBar::IsRibbonPanelInRegularMode  
+##  <a name="isribbonpanelinregularmode"></a>CMFCPopupMenuBar::IsRibbonPanelInRegularMode  
  Indique s’il s’agit d’un panneau de ruban en mode normal ( `FALSE` par défaut).  
   
 ```  
@@ -294,7 +315,7 @@ virtual BOOL IsRibbonPanelInRegularMode() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameloadfromhasha--cmfcpopupmenubarloadfromhash"></a><a name="loadfromhash"></a>CMFCPopupMenuBar::LoadFromHash  
+##  <a name="loadfromhash"></a>CMFCPopupMenuBar::LoadFromHash  
  Charge un menu archivé.  
   
 ```  
@@ -310,7 +331,7 @@ BOOL LoadFromHash(HMENU hMenu);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namembdisablesidebarinxpmodea--cmfcpopupmenubarmbdisablesidebarinxpmode"></a><a name="m_bdisablesidebarinxpmode"></a>CMFCPopupMenuBar::m_bDisableSideBarInXPMode  
+##  <a name="m_bdisablesidebarinxpmode"></a>CMFCPopupMenuBar::m_bDisableSideBarInXPMode  
  Un paramètre booléen qui indique si votre application a une barre latérale grise lorsqu’il a une apparence Windows XP.  
   
 ```  
@@ -322,7 +343,7 @@ BOOL m_bDisableSideBarInXPMode;
   
  La valeur par défaut est `FALSE`.  
   
-##  <a name="a-namerestoredelayedsubmenua--cmfcpopupmenubarrestoredelayedsubmenu"></a><a name="restoredelayedsubmenu"></a>CMFCPopupMenuBar::RestoreDelayedSubMenu  
+##  <a name="restoredelayedsubmenu"></a>CMFCPopupMenuBar::RestoreDelayedSubMenu  
  Restaure un bouton de menu retardée pour la fermeture de la barre de menu contextuel.  
   
 ```  
@@ -331,7 +352,7 @@ virtual void RestoreDelayedSubMenu();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetbuttonstylea--cmfcpopupmenubarsetbuttonstyle"></a><a name="setbuttonstyle"></a>CMFCPopupMenuBar::SetButtonStyle  
+##  <a name="setbuttonstyle"></a>CMFCPopupMenuBar::SetButtonStyle  
  Définit le style de la barre d’outils à l’index donné. (Substitue [CMFCToolBar::SetButtonStyle](../../mfc/reference/cmfctoolbar-class.md#setbuttonstyle).)  
   
 ```  
@@ -349,7 +370,7 @@ virtual void SetButtonStyle(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namesetoffseta--cmfcpopupmenubarsetoffset"></a><a name="setoffset"></a>CMFCPopupMenuBar::SetOffset  
+##  <a name="setoffset"></a>CMFCPopupMenuBar::SetOffset  
  Définit le décalage de ligne de la barre de menu contextuel.  
   
 ```  
@@ -362,7 +383,7 @@ void SetOffset(int iOffset);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namestartpopupmenutimera--cmfcpopupmenubarstartpopupmenutimer"></a><a name="startpopupmenutimer"></a>CMFCPopupMenuBar::StartPopupMenuTimer  
+##  <a name="startpopupmenutimer"></a>CMFCPopupMenuBar::StartPopupMenuTimer  
  Démarre la minuterie d’un bouton de menu contextuel différé spécifié.  
   
 ```  

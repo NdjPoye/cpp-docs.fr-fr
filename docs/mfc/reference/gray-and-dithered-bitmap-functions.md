@@ -8,6 +8,11 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- AFXWIN/AfxDrawGrayBitmap
+- AFXWIN/AfxGetGrayBitmap
+- AFXWIN/AfxDrawDitheredBitmap
+- AFXWIN/AfxGetDitheredBitmap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -60,7 +65,7 @@ ms.lasthandoff: 02/24/2017
 |[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|Dessine une image bitmap avec un arrière-plan tramé.|  
 |[AfxGetDitheredBitmap](#afxgetditheredbitmap)|Copie une image bitmap avec un arrière-plan tramé.|  
   
-##  <a name="a-nameafxdrawgraybitmapa--afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a>AfxDrawGrayBitmap  
+##  <a name="afxdrawgraybitmap"></a>AfxDrawGrayBitmap  
  Dessine une version grise d’une image bitmap.  
   
 ```   
@@ -99,7 +104,7 @@ void AFXAPI AfxDrawGrayBitmap(
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
 
-##  <a name="a-nameafxgetgraybitmapa--afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a>AfxGetGrayBitmap  
+##  <a name="afxgetgraybitmap"></a>AfxGetGrayBitmap  
  Copie une version grise d’une image bitmap.  
   
 ```   
@@ -130,7 +135,7 @@ void AFXAPI AfxGetGrayBitmap(
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="a-nameafxdrawditheredbitmapa--afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap  
+##  <a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap  
  Dessine une bitmap, en remplaçant son arrière-plan avec un modèle de tramé (checker).  
   
 ```   
@@ -174,7 +179,7 @@ void AFXAPI AfxDrawDitheredBitmap(
  **En-tête :** afxwin.h  
 
 
-##  <a name="a-nameafxgetditheredbitmapa--afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap  
+##  <a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap  
  Copie une image bitmap, en remplaçant son arrière-plan avec un modèle de tramé (checker).  
   
 ```   

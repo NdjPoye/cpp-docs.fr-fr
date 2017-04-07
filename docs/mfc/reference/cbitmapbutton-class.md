@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBitmapButton
+- AFXEXT/CBitmapButton
+- AFXEXT/CBitmapButton::CBitmapButton
+- AFXEXT/CBitmapButton::AutoLoad
+- AFXEXT/CBitmapButton::LoadBitmaps
+- AFXEXT/CBitmapButton::SizeToContent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -128,7 +133,7 @@ class CBitmapButton : public CButton
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxext.h  
   
-##  <a name="a-nameautoloada--cbitmapbuttonautoload"></a><a name="autoload"></a>CBitmapButton::AutoLoad  
+##  <a name="autoload"></a>CBitmapButton::AutoLoad  
  Associe un bouton dans une boîte de dialogue avec un objet de la `CBitmapButton` (classe), charge le bitmap(s) par nom et tailles, le bouton pour s’ajuster à l’image bitmap.  
   
 ```  
@@ -153,7 +158,7 @@ BOOL AutoLoad(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCControlLadenDialog&#75;](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="a-namecbitmapbuttona--cbitmapbuttoncbitmapbutton"></a><a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
+##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
  Crée un objet `CBitmapButton`.  
   
 ```  
@@ -166,7 +171,7 @@ CBitmapButton();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCControlLadenDialog&#57;](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="a-nameloadbitmapsa--cbitmapbuttonloadbitmaps"></a><a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
+##  <a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
  Utilisez cette fonction lorsque vous voulez charger des images bitmap identifiés par leurs noms de ressources ou les numéros d’identification, ou lorsque vous ne pouvez pas utiliser le `AutoLoad` car, par exemple, vous créez un bouton bitmap qui ne fait pas partie d’une boîte de dialogue de la fonction.  
   
 ```  
@@ -215,7 +220,7 @@ BOOL LoadBitmaps(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCControlLadenDialog&#58;](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="a-namesizetocontenta--cbitmapbuttonsizetocontent"></a><a name="sizetocontent"></a>CBitmapButton::SizeToContent  
+##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
  Appelez cette fonction pour redimensionner un bouton bitmap à la taille de la bitmap.  
   
 ```  

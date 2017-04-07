@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDisableMenuAnimation
+- AFXPOPUPMENU/CMFCDisableMenuAnimation
+- AFXPOPUPMENU/CMFCDisableMenuAnimation::Restore
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +92,7 @@ class CMFCDisableMenuAnimation
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxpopupmenu.h  
   
-##  <a name="a-namerestorea--cmfcdisablemenuanimationrestore"></a><a name="restore"></a>CMFCDisableMenuAnimation::Restore  
+##  <a name="restore"></a>CMFCDisableMenuAnimation::Restore  
  Restaure l’animation précédente que l’infrastructure utilisée pour afficher un menu contextuel.  
   
 ```  

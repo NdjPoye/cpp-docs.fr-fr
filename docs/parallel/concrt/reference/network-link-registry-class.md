@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::network_link_registry
+- network_link_registry
+- AGENTS/concurrency::network_link_registry
+- AGENTS/concurrency::network_link_registry::add
+- AGENTS/concurrency::network_link_registry::begin
+- AGENTS/concurrency::network_link_registry::contains
+- AGENTS/concurrency::network_link_registry::count
+- AGENTS/concurrency::network_link_registry::remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8b39ab676db0072d279ee4058693769ef6f7eb3f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 28c13f1e2bf80624da3a7aba441944c051790d27
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry, classe
@@ -68,11 +74,11 @@ class network_link_registry;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Add, méthode](#add)|En cas de substitution dans une classe dérivée, ajoute un lien vers le `network_link_registry` objet.|  
-|[Begin (méthode)](#begin)|En cas de substitution dans une classe dérivée, retourne un itérateur au premier élément dans le `network_link_registry` objet.|  
-|[Contains (méthode)](#contains)|En cas de substitution dans une classe dérivée, recherche les `network_link_registry` objet un bloc spécifié.|  
-|[Count (méthode)](#count)|En cas de substitution dans une classe dérivée, retourne le nombre d’éléments dans le `network_link_registry` objet.|  
-|[Remove (méthode)](#remove)|En cas de substitution dans une classe dérivée, supprime un bloc spécifié de le `network_link_registry` objet.|  
+|[add](#add)|En cas de substitution dans une classe dérivée, ajoute un lien vers le `network_link_registry` objet.|  
+|[begin](#begin)|En cas de substitution dans une classe dérivée, retourne un itérateur au premier élément dans le `network_link_registry` objet.|  
+|[contient](#contains)|En cas de substitution dans une classe dérivée, recherche les `network_link_registry` objet un bloc spécifié.|  
+|[count](#count)|En cas de substitution dans une classe dérivée, retourne le nombre d’éléments dans le `network_link_registry` objet.|  
+|[remove](#remove)|En cas de substitution dans une classe dérivée, supprime un bloc spécifié de le `network_link_registry` objet.|  
   
 ## <a name="remarks"></a>Notes  
  Le `network link registry` n’est pas sécurisé pour l’accès simultané.  
@@ -85,7 +91,7 @@ class network_link_registry;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-nameadda-add"></a><a name="add"></a>ajouter 
+##  <a name="add"></a>ajouter 
 
  En cas de substitution dans une classe dérivée, ajoute un lien vers le `network_link_registry` objet.  
   
@@ -97,7 +103,7 @@ virtual void add(_EType _Link) = 0;
  `_Link`  
  Pointeur vers un bloc à ajouter.  
   
-##  <a name="a-namebegina-begin"></a><a name="begin"></a>commencer 
+##  <a name="begin"></a>commencer 
 
  En cas de substitution dans une classe dérivée, retourne un itérateur au premier élément dans le `network_link_registry` objet.  
   
@@ -108,10 +114,10 @@ virtual iterator begin() = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Un itérateur qui traite le premier élément de la `network_link_registry` objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’état de fin de l’itérateur est indiqué par une `NULL` lien.  
   
-##  <a name="a-namecontainsa-contains"></a><a name="contains"></a>contient 
+##  <a name="contains"></a>contient 
 
  En cas de substitution dans une classe dérivée, recherche les `network_link_registry` objet un bloc spécifié.  
   
@@ -126,7 +132,7 @@ virtual bool contains(_EType _Link) = 0;
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si le bloc a été trouvé, `false` dans le cas contraire.  
   
-##  <a name="a-namecounta-count"></a><a name="count"></a>nombre 
+##  <a name="count"></a>nombre 
 
  En cas de substitution dans une classe dérivée, retourne le nombre d’éléments dans le `network_link_registry` objet.  
   
@@ -137,7 +143,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’éléments dans le `network_link_registry` objet.  
   
-##  <a name="a-nameremovea-remove"></a><a name="remove"></a>supprimer 
+##  <a name="remove"></a>supprimer 
 
  En cas de substitution dans une classe dérivée, supprime un bloc spécifié de le `network_link_registry` objet.  
   

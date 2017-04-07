@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCtrlView
+- AFXWIN/CCtrlView
+- AFXWIN/CCtrlView::CCtrlView
+- AFXWIN/CCtrlView::OnDraw
+- AFXWIN/CCtrlView::PreCreateWindow
+- AFXWIN/CCtrlView::m_dwDefaultStyle
+- AFXWIN/CCtrlView::m_strClass
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +95,7 @@ class CCtrlView : public CView
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="a-namecctrlviewa--cctrlviewcctrlview"></a><a name="cctrlview"></a>CCtrlView::CCtrlView  
+##  <a name="cctrlview"></a>CCtrlView::CCtrlView  
  Construit un objet `CCtrlView`.  
   
 ```  
@@ -108,14 +114,14 @@ CCtrlView(
 ### <a name="remarks"></a>Notes  
  Le framework appelle le constructeur lors de la création d’une fenêtre frame ou une fenêtre est fractionnée. Substituer [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) pour initialiser la vue une fois que le document est lié. Appelez [CWnd::Create](../../mfc/reference/cwnd-class.md#create) ou [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) pour créer l’objet Windows.  
   
-##  <a name="a-namemstrclassa--cctrlviewmstrclass"></a><a name="m_strclass"></a>CCtrlView::m_strClass  
+##  <a name="m_strclass"></a>CCtrlView::m_strClass  
  Contient le nom de classe Windows pour la classe d’affichage.  
   
 ```  
 CString m_strClass;  
 ```  
   
-##  <a name="a-namemdwdefaultstylea--cctrlviewmdwdefaultstyle"></a><a name="m_dwdefaultstyle"></a>CCtrlView::m_dwDefaultStyle  
+##  <a name="m_dwdefaultstyle"></a>CCtrlView::m_dwDefaultStyle  
  Contient le style par défaut pour la classe d’affichage.  
   
 ```  
@@ -125,7 +131,7 @@ DWORD m_dwDefaultStyle;
 ### <a name="remarks"></a>Remarques  
  Ce style est appliqué lorsqu’une fenêtre est créée.  
   
-##  <a name="a-nameondrawa--cctrlviewondraw"></a><a name="ondraw"></a>CCtrlView::OnDraw  
+##  <a name="ondraw"></a>CCtrlView::OnDraw  
  Appelée par l’infrastructure pour dessiner le contenu de la `CCtrlView` de l’objet en utilisant le contexte de périphérique spécifié.  
   
 ```  
@@ -139,7 +145,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>Remarques  
  `OnDraw`est généralement appelée pour afficher l’écran, en passant un contexte de périphérique spécifié par `pDC`.  
   
-##  <a name="a-nameprecreatewindowa--cctrlviewprecreatewindow"></a><a name="precreatewindow"></a>CCtrlView::PreCreateWindow  
+##  <a name="precreatewindow"></a>CCtrlView::PreCreateWindow  
  Appelé avant la création de la fenêtre Windows attachée à cet objet `CWnd`.  
   
 ```  

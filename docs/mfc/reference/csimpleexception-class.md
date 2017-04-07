@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSimpleException
+- AFX/CSimpleException
+- AFX/CSimpleException::CSimpleException
+- AFX/CSimpleException::GetErrorMessage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +90,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afx.h  
   
-##  <a name="a-namecsimpleexceptiona--csimpleexceptioncsimpleexception"></a><a name="csimpleexception"></a>CSimpleException::CSimpleException  
+##  <a name="csimpleexception"></a>CSimpleException::CSimpleException  
  Constructeur.  
   
 ```  
@@ -102,7 +105,7 @@ explicit CSimpleException(BOOL bAutoDelete);
 ### <a name="remarks"></a>Notes  
  Vous devez normalement jamais d’appeler ce constructeur directement. Une fonction qui lève une exception doit créer une instance d’un `CException`-classe dérivée et appelle son constructeur, ou il doit utiliser l’une des MFC lever des fonctions, telles que [AfxThrowFileException](exception-processing.md#afxthrowfileexception), lever un type prédéfini.  
   
-##  <a name="a-namegeterrormessagea--csimpleexceptiongeterrormessage"></a><a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
+##  <a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
  Appelez cette fonction membre pour fournir le texte sur une erreur s’est produite.  
   
 ```  

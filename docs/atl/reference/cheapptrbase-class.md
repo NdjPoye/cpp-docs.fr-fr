@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CHeapPtrBase
-- ATL::CHeapPtrBase
 - CHeapPtrBase
+- ATLCORE/ATL::CHeapPtrBase
+- ATLCORE/ATL::CHeapPtrBase::AllocateBytes
+- ATLCORE/ATL::CHeapPtrBase::Attach
+- ATLCORE/ATL::CHeapPtrBase::Detach
+- ATLCORE/ATL::CHeapPtrBase::Free
+- ATLCORE/ATL::CHeapPtrBase::ReallocateBytes
+- ATLCORE/ATL::CHeapPtrBase::m_pData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +105,7 @@ class CHeapPtrBase
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcore.h  
   
-##  <a name="a-nameallocatebytesa--cheapptrbaseallocatebytes"></a><a name="allocatebytes"></a>CHeapPtrBase::AllocateBytes  
+##  <a name="allocatebytes"></a>CHeapPtrBase::AllocateBytes  
  Appelez cette méthode pour allouer de la mémoire.  
   
 ```
@@ -117,7 +122,7 @@ bool AllocateBytes(size_t nBytes) throw();
 ### <a name="remarks"></a>Remarques  
  Dans les versions debug, un échec d’assertion se produit si le [CHeapPtrBase::m_pData](#m_pdata) variable membre pointe actuellement à une valeur ; autrement dit, il n’est pas égal à NULL.  
   
-##  <a name="a-nameattacha--cheapptrbaseattach"></a><a name="attach"></a>CHeapPtrBase::Attach  
+##  <a name="attach"></a>CHeapPtrBase::Attach  
  Appelez cette méthode pour prendre possession d’un pointeur existant.  
   
 ```
@@ -133,7 +138,7 @@ void Attach(T* pData) throw();
   
  Dans les versions debug, un échec d’assertion se produit si le [CHeapPtrBase::m_pData](#m_pdata) variable membre pointe actuellement à une valeur ; autrement dit, il n’est pas égal à NULL.  
   
-##  <a name="a-namedtora--cheapptrbasecheapptrbase"></a><a name="dtor"></a>CHeapPtrBase :: ~ CHeapPtrBase  
+##  <a name="dtor"></a>CHeapPtrBase :: ~ CHeapPtrBase  
  Destructeur.  
   
 ```
@@ -143,7 +148,7 @@ void Attach(T* pData) throw();
 ### <a name="remarks"></a>Remarques  
  Libère toutes les ressources attribuées.  
   
-##  <a name="a-namedetacha--cheapptrbasedetach"></a><a name="detach"></a>CHeapPtrBase::Detach  
+##  <a name="detach"></a>CHeapPtrBase::Detach  
  Appelez cette méthode pour libérer la possession d’un pointeur.  
   
 ```
@@ -156,7 +161,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>Remarques  
  Libère la possession d’un pointeur, définit les [CHeapPtrBase::m_pData](#m_pdata) variable de membre avec la valeur NULL et retourne une copie du pointeur.  
   
-##  <a name="a-namefreea--cheapptrbasefree"></a><a name="free"></a>CHeapPtrBase::Free  
+##  <a name="free"></a>CHeapPtrBase::Free  
  Appelez cette méthode pour supprimer un objet vers lequel pointé un `CHeapPtrBase`.  
   
 ```
@@ -166,7 +171,7 @@ void Free() throw();
 ### <a name="remarks"></a>Notes  
  L’objet pointé par le `CHeapPtrBase` est libéré et la [CHeapPtrBase::m_pData](#m_pdata) variable membre a la valeur NULL.  
   
-##  <a name="a-namempdataa--cheapptrbasempdata"></a><a name="m_pdata"></a>CHeapPtrBase::m_pData  
+##  <a name="m_pdata"></a>CHeapPtrBase::m_pData  
  La variable de membre de données de pointeur.  
   
 ```
@@ -176,7 +181,7 @@ T* m_pData;
 ### <a name="remarks"></a>Remarques  
  Cette variable membre conserve les informations de pointeur.  
   
-##  <a name="a-nameoperatorampa--cheapptrbaseoperator-amp"></a><a name="operator_amp"></a>CHeapPtrBase::operator&amp;  
+##  <a name="operator_amp"></a>CHeapPtrBase::operator&amp;  
  Le s’opérateur.  
   
 ```
@@ -187,7 +192,7 @@ T** operator&() throw();
  Retourne l’adresse de l’objet vers lequel pointé le `CHeapPtrBase` objet.  
   
 
-##  <a name="a-nameoperatorptra--cheapptrbaseoperator--gt"></a><a name="operator_ptr"></a>CHeapPtrBase::operator-&gt;  
+##  <a name="operator_ptr"></a>CHeapPtrBase::operator-&gt;  
 
  Opérateur pointeur vers membre.  
   
@@ -201,7 +206,7 @@ T* operator->() const throw();
 ### <a name="remarks"></a>Notes  
  Utilisez cet opérateur pour appeler une méthode dans une classe vers laquelle pointée le `CHeapPtrBase` objet. Dans les versions debug, un échec d’assertion se produit si le `CHeapPtrBase` pointe sur la valeur NULL.  
   
-##  <a name="a-nameoperatortstara--cheapptrbaseoperator-t"></a><a name="operator_t_star"></a>CHeapPtrBase::operator T *  
+##  <a name="operator_t_star"></a>CHeapPtrBase::operator T *  
  L’opérateur de cast.  
   
 ```  
@@ -211,7 +216,7 @@ operator T*() const throw();
 ### <a name="remarks"></a>Remarques  
  Retourne [CHeapPtrBase::m_pData](#m_pdata).  
   
-##  <a name="a-namereallocatebytesa--cheapptrbasereallocatebytes"></a><a name="reallocatebytes"></a>CHeapPtrBase::ReallocateBytes  
+##  <a name="reallocatebytes"></a>CHeapPtrBase::ReallocateBytes  
  Appelez cette méthode pour réallouer de la mémoire.  
   
 ```

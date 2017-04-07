@@ -10,10 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CW2CWEX
-- ATL::CW2CWEX
-- ATL.CW2CWEX
-- ATL.CW2CWEX<t_nBufferLength>
-- ATL::CW2CWEX<t_nBufferLength>
+- ATLCONV/ATL::CW2CWEX
+- ATLCONV/ATL::CW2CWEX::CW2CWEX
+- ATLCONV/ATL::CW2CWEX::m_psz
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +103,7 @@ class CW2CWEX
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlconv.h  
   
-##  <a name="a-namecw2cwexa--cw2cwexcw2cwex"></a><a name="cw2cwex"></a>CW2CWEX::CW2CWEX  
+##  <a name="cw2cwex"></a>CW2CWEX::CW2CWEX  
  Constructeur.  
   
 ```
@@ -122,7 +121,7 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Notes  
  Alloue de la mémoire tampon utilisée dans le processus de traduction.  
   
-##  <a name="a-namedtora--cw2cwexcw2cwex"></a><a name="dtor"></a>CW2CWEX :: ~ CW2CWEX  
+##  <a name="dtor"></a>CW2CWEX :: ~ CW2CWEX  
  Destructeur.  
   
 ```
@@ -132,14 +131,14 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Remarques  
  Libère la mémoire tampon allouée.  
   
-##  <a name="a-namempsza--cw2cwexmpsz"></a><a name="m_psz"></a>CW2CWEX::m_psz  
+##  <a name="m_psz"></a>CW2CWEX::m_psz  
  Le membre de données qui stocke la chaîne source.  
   
 ```
 LPCWSTR m_psz;
 ```  
   
-##  <a name="a-nameoperatorlpcwstra--cw2cwexoperator-lpcwstr"></a><a name="operator_lpcwstr"></a>CW2CWEX::operator LPCWSTR  
+##  <a name="operator_lpcwstr"></a>CW2CWEX::operator LPCWSTR  
  Opérateur de conversion.  
   
 ```  

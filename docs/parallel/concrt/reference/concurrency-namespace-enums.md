@@ -6,27 +6,39 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- CONCRT/concurrency::Agents_EventType
+- CONCRT/concurrency::Concrt_TraceFlags
+- CONCRT/concurrency::CriticalRegionType
+- CONCRT/concurrency::PolicyElementKey
+- CONCRT/concurrency::SchedulerType
+- CONCRT/concurrency::SwitchingProxyState
+- CONCRT/concurrency::WinRTInitializationType
+- CONCRT/concurrency::join_type
+- CONCRT/concurrency::message_status Enumeration
+dev_langs:
+- C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 8f7488ff07c9789e2d5f35056de390a5bc464f56
-ms.openlocfilehash: ff187e827b2dd979466b746eee297235e6a6c0ca
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 7589f0054e9393f938bf69d4e1751202cbc02456
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrency-namespace-enums"></a>énumérations d’espace de noms d’accès concurrentiel
 ||||  
 |-|-|-|  
-|[Agents_eventtype, énumération](#agents_eventtype)|[ConcRT_EventType, énumération](#concrt_eventtype)|[Concrt_traceflags, énumération](#concrt_traceflags)|  
-|[CriticalRegionType, énumération](#criticalregiontype)|[DynamicProgressFeedbackType, énumération](#dynamicprogressfeedbacktype)|[PolicyElementKey, énumération](#policyelementkey)|  
-|[SchedulerType, énumération](#schedulertype)|[SchedulingProtocolType, énumération](#schedulingprotocoltype)|[SwitchingProxyState (énumération)](#switchingproxystate)|  
-|[Winrtinitializationtype, énumération](#winrtinitializationtype)|[agent_status, énumération](#agent_status)|[join_type, énumération](#join_type)|  
-|[message_status, énumération](#message_status)|[task_group_status, énumération](#task_group_status)|  
+|[Agents_EventType](#agents_eventtype)|[ConcRT_EventType](#concrt_eventtype)|[Concrt_TraceFlags](#concrt_traceflags)|  
+|[CriticalRegionType](#criticalregiontype)|[DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)|[PolicyElementKey](#policyelementkey)|  
+|[SchedulerType](#schedulertype)|[SchedulingProtocolType](#schedulingprotocoltype)|[SwitchingProxyState](#switchingproxystate)|  
+|[WinRTInitializationType](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|  
+|[message_status](#message_status)|[task_group_status](#task_group_status)|  
   
-##  <a name="a-nameagentstatusa--agentstatus-enumeration"></a><a name="agent_status"></a>agent_status, énumération  
+##  <a name="agent_status"></a>agent_status, énumération  
  États valides d'un `agent`.  
   
 ```
@@ -48,7 +60,7 @@ enum agent_status;
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** concrt.h
 
-##  <a name="a-nameagentseventtypea--agentseventtype-enumeration"></a><a name="agents_eventtype"></a>Agents_eventtype, énumération  
+##  <a name="agents_eventtype"></a>Agents_eventtype, énumération  
  Types d'événements qui peuvent être tracés à l'aide des fonctionnalités de traçage offertes par la bibliothèque d'agents.  
   
 ```
@@ -71,7 +83,7 @@ enum Agents_EventType;
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** concrt.h
 
-##  <a name="a-nameconcrteventtypea--concrteventtype-enumeration"></a><a name="concrt_eventtype"></a>ConcRT_EventType, énumération  
+##  <a name="concrt_eventtype"></a>ConcRT_EventType, énumération  
  Types d'événements qui peuvent être tracés à l'aide des fonctionnalités de traçage offertes par le runtime d'accès concurrentiel.  
   
 ```
@@ -92,9 +104,9 @@ enum ConcRT_EventType;
 |`CONCRT_EVENT_YIELD`|Type d’événement qui représente l’opération d’un contexte suspendu.|  
   
 ### <a name="requirements"></a>Spécifications  
- **En-tête :** concrt.h
+ **En-tête :** concrt.h  **Namespace :** l’accès concurrentiel
 
-##  <a name="a-nameconcrttraceflagsa--concrttraceflags-enumeration"></a><a name="concrt_traceflags"></a>Concrt_traceflags, énumération  
+##  <a name="concrt_traceflags"></a>Concrt_traceflags, énumération  
  Indicateurs de suivi des types d'événements.  
   
 ```
@@ -115,7 +127,7 @@ enum Concrt_TraceFlags;
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** concrt.h
 
-##  <a name="a-namecriticalregiontypea--criticalregiontype-enumeration"></a><a name="criticalregiontype"></a>CriticalRegionType, énumération  
+##  <a name="criticalregiontype"></a>CriticalRegionType, énumération  
  Type de région critique dans lequel se trouve un contexte.  
   
 ```
@@ -132,8 +144,8 @@ enum CriticalRegionType;
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** concrtrm.h 
 
-##  <a name="a-namedynamicprogressfeedbacktypea--dynamicprogressfeedbacktype-enumeration"></a><a name="dynamicprogressfeedbacktype"></a>DynamicProgressFeedbackType, énumération  
- Utilisé par la stratégie `DynamicProgressFeedback` pour décrire si les ressources du planificateur sont rééquilibrées d'après les informations statistiques collectées auprès du planificateur ou uniquement en fonction des processeurs virtuels qui entrent dans l'état d'inactivité et en sortent via des appels aux méthodes `Activate` et `Deactivate` sur l'interface `IVirtualProcessorRoot`. Pour plus d’informations sur les stratégies de planificateur disponibles, consultez la page [PolicyElementKey, énumération](concurrency-namespace-enums.md).  
+##  <a name="dynamicprogressfeedbacktype"></a>DynamicProgressFeedbackType, énumération  
+ Utilisé par la stratégie `DynamicProgressFeedback` pour décrire si les ressources du planificateur sont rééquilibrées d'après les informations statistiques collectées auprès du planificateur ou uniquement en fonction des processeurs virtuels qui entrent dans l'état d'inactivité et en sortent via des appels aux méthodes `Activate` et `Deactivate` sur l'interface `IVirtualProcessorRoot`. Pour plus d’informations sur les stratégies de planificateur disponibles, consultez la page [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
 enum DynamicProgressFeedbackType;
@@ -144,7 +156,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|  
 |`ProgressFeedbackDisabled`|Le planificateur ne rassemble pas d’informations sur la progression. Rééquilibrage est basé uniquement sur le niveau d’abonnement du thread matériel sous-jacent. Pour plus d’informations sur les niveaux d’abonnement, consultez [IExecutionResource::CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Cette valeur est réservée pour une utilisation par le runtime.|  
 |`ProgressFeedbackEnabled`|Le planificateur rassemble des informations de progression et le transmet au Gestionnaire de ressources. Le Gestionnaire de ressources utilisera ces informations statistiques pour rééquilibrer les ressources au nom du planificateur du niveau d’abonnement du thread matériel sous-jacent. Pour plus d’informations sur les niveaux d’abonnement, consultez [IExecutionResource::CurrentSubscriptionLevel](IExecutionResource-structure.md).|  
-##  <a name="a-namejointypea--jointype-enumeration"></a><a name="join_type"></a>join_type, énumération  
+##  <a name="join_type"></a>join_type, énumération  
  Type d'un bloc de messagerie `join`.  
   
 ```
@@ -160,7 +172,7 @@ enum join_type;
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
 
-##  <a name="a-namemessagestatusa--messagestatus-enumeration"></a><a name="message_status"></a>message_status, énumération  
+##  <a name="message_status"></a>message_status, énumération  
  Réponses valides à une offre d'objet `message` à un bloc.  
   
 ```
@@ -178,7 +190,7 @@ enum message_status;
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** agents.h  
 
-##  <a name="a-namepolicyelementkeya--policyelementkey-enumeration"></a><a name="policyelementkey"></a>PolicyElementKey, énumération  
+##  <a name="policyelementkey"></a>PolicyElementKey, énumération  
  Clés de stratégie qui décrivent certains aspects du comportement du planificateur. Chaque élément de stratégie est décrit par une paire clé-valeur. Pour plus d’informations sur les stratégies de planificateur et leur impact sur les planificateurs, consultez [le Planificateur de tâches](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
 ```
@@ -190,21 +202,21 @@ enum PolicyElementKey;
 |----------|-----------------|  
 |`ContextPriority`|La priorité de thread de système d’exploitation de chaque contexte dans le planificateur. Si cette clé est définie à la valeur `INHERIT_THREAD_PRIORITY` les contextes dans le planificateur hériteront de la priorité du thread qui a créé le planificateur.<br /><br /> Valeurs valides : les valeurs valides pour le Windows `SetThreadPriority` fonction et la valeur spéciale`INHERIT_THREAD_PRIORITY`<br /><br /> Valeur par défaut :`THREAD_PRIORITY_NORMAL`|  
 |`ContextStackSize`|La taille de pile réservée de chaque contexte dans le planificateur en kilo-octets.<br /><br /> Valeurs valides : entiers positifs<br /><br /> Valeur par défaut : `0`, indiquant que la valeur du processus par défaut pour la taille de la pile est utilisée.|  
-|`DynamicProgressFeedback`|Détermine si les ressources du planificateur seront rééquilibrées en fonction des informations statistiques recueillies auprès du planificateur ou uniquement selon le niveau d’abonnement des threads matériels sous-jacents. Pour plus d’informations, consultez [DynamicProgressFeedbackType, énumération](#dynamicprogressfeedbacktype).<br /><br /> Valeurs valides : un membre de la `DynamicProgressFeedbackType` énumération, `ProgressFeedbackEnabled` ou`ProgressFeedbackDisabled`<br /><br /> Valeur par défaut :`ProgressFeedbackEnabled`|  
+|`DynamicProgressFeedback`|Détermine si les ressources du planificateur seront rééquilibrées en fonction des informations statistiques recueillies auprès du planificateur ou uniquement selon le niveau d’abonnement des threads matériels sous-jacents. Pour plus d’informations, consultez [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> Valeurs valides : un membre de la `DynamicProgressFeedbackType` énumération, `ProgressFeedbackEnabled` ou`ProgressFeedbackDisabled`<br /><br /> Valeur par défaut :`ProgressFeedbackEnabled`|  
 |`LocalContextCacheSize`|Lors de la `SchedulingProtocol` clé de la stratégie est définie sur la valeur `EnhanceScheduleGroupLocality`, cela spécifie le nombre maximal de contextes exécutables pouvant être mis en cache par file d’attente locale de processeur virtuel. Ces contextes sont généralement exécutés dans last-in-first-out (LIFO) ordre sur le processeur virtuel qui les a soit exécutable. Notez que cette clé de stratégie n’a aucune signification lorsque la `SchedulingProtocol` clé est définie sur la valeur `EnhanceForwardProgress`.<br /><br /> Valeurs valides : entiers Non négatifs<br /><br /> Valeur par défaut :`8`|  
 |`MaxConcurrency`|La concurrence maximale au niveau désirée par le planificateur. Le Gestionnaire des ressources essaiera d’allouer initialement ces nombreux processeurs virtuels. La valeur spéciale [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indique que le niveau d’accès concurrentiel souhaité est identique au nombre de threads matériels sur l’ordinateur. Si la valeur spécifiée pour `MinConcurrency` est supérieur au nombre de threads matériels sur l’ordinateur et `MaxConcurrency` est spécifié en tant que `MaxExecutionResources`, la valeur de `MaxConcurrency` est déclenché pour correspondre à celle définie pour `MinConcurrency`.<br /><br /> Valeurs valides : entiers positifs et la valeur spéciale`MaxExecutionResources`<br /><br /> Valeur par défaut :`MaxExecutionResources`|  
 |`MaxPolicyElementKey`|Clé d’élément de stratégie maximale. Clé d’élément valide.|  
 |`MinConcurrency`|Le niveau d’accès concurrentiel minimal qui doit être fourni au planificateur par le Gestionnaire de ressources. Le nombre de processeurs virtuels assigné à un planificateur n’ira jamais inférieur au minimum. La valeur spéciale [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indique que le niveau d’accès concurrentiel minimal est identique au nombre de threads matériels sur l’ordinateur. Si la valeur spécifiée pour `MaxConcurrency` est inférieur au nombre de threads matériels sur l’ordinateur et `MinConcurrency` est spécifié en tant que `MaxExecutionResources`, la valeur de `MinConcurrency` est abaissée à correspondre à ce qui est défini pour la classe `MaxConcurrency`.<br /><br /> Valeurs valides : entiers Non négatifs et la valeur spéciale `MaxExecutionResources`. Notez que pour les stratégies de planificateur utilisés pour la construction de planificateurs de Runtime d’accès concurrentiel, la valeur `0` n’est pas valide.<br /><br /> Valeur par défaut :`1`|  
-|`SchedulerKind`|Le type des threads que le planificateur utilisera pour les contextes d’exécution sous-jacents. Pour plus d’informations, consultez [SchedulerType, énumération](#schedulertype).<br /><br /> Valeurs valides : un membre de la `SchedulerType` énumération, par exemple,`ThreadScheduler`<br /><br /> Valeur par défaut : `ThreadScheduler`. Cela se traduit en threads Win32 sur tous les systèmes d’exploitation.|  
-|`SchedulingProtocol`|Décrit l’algorithme de planification qui sera utilisé par le planificateur. Pour plus d’informations, consultez [SchedulingProtocolType, énumération](#schedulingprotocoltype).<br /><br /> Valeurs valides : un membre de la `SchedulingProtocolType` énumération, `EnhanceScheduleGroupLocality` ou`EnhanceForwardProgress`<br /><br /> Valeur par défaut :`EnhanceScheduleGroupLocality`|  
+|`SchedulerKind`|Le type des threads que le planificateur utilisera pour les contextes d’exécution sous-jacents. Pour plus d’informations, consultez [SchedulerType](#schedulertype).<br /><br /> Valeurs valides : un membre de la `SchedulerType` énumération, par exemple,`ThreadScheduler`<br /><br /> Valeur par défaut : `ThreadScheduler`. Cela se traduit en threads Win32 sur tous les systèmes d’exploitation.|  
+|`SchedulingProtocol`|Décrit l’algorithme de planification qui sera utilisé par le planificateur. Pour plus d’informations, consultez [SchedulingProtocolType](#schedulingprotocoltype).<br /><br /> Valeurs valides : un membre de la `SchedulingProtocolType` énumération, `EnhanceScheduleGroupLocality` ou`EnhanceForwardProgress`<br /><br /> Valeur par défaut :`EnhanceScheduleGroupLocality`|  
 |`TargetOversubscriptionFactor`|Nombre provisoire de processeurs virtuels par thread matériel. Le facteur de surabonnement cible peut être augmenté par le Gestionnaire de ressources, si nécessaire, pour satisfaire `MaxConcurrency` avec les threads matériels sur l’ordinateur.<br /><br /> Valeurs valides : entiers positifs<br /><br /> Valeur par défaut :`1`|  
 |`WinRTInitialization`||  
   
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** concrt.h  
 
-##  <a name="a-nameschedulertypea--schedulertype-enumeration"></a><a name="schedulertype"></a>SchedulerType, énumération  
- Utilisé par la stratégie `SchedulerKind` pour décrire le type des threads que le planificateur doit utiliser pour les contextes d'exécution sous-jacents. Pour plus d’informations sur les stratégies de planificateur disponibles, consultez la page [PolicyElementKey, énumération](concurrency-namespace-enums.md).  
+##  <a name="schedulertype"></a>SchedulerType, énumération  
+ Utilisé par la stratégie `SchedulerKind` pour décrire le type des threads que le planificateur doit utiliser pour les contextes d'exécution sous-jacents. Pour plus d’informations sur les stratégies de planificateur disponibles, consultez la page [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
 enum SchedulerType;
@@ -220,8 +232,8 @@ enum SchedulerType;
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** concrt.h  
   
-##  <a name="a-nameschedulingprotocoltypea--schedulingprotocoltype-enumeration"></a><a name="schedulingprotocoltype"></a>SchedulingProtocolType, énumération  
- Utilisé par la stratégie `SchedulingProtocol` pour décrire l'algorithme de planification utilisé pour le planificateur. Pour plus d’informations sur les stratégies de planificateur disponibles, consultez la page [PolicyElementKey, énumération](concurrency-namespace-enums.md).  
+##  <a name="schedulingprotocoltype"></a>SchedulingProtocolType, énumération  
+ Utilisé par la stratégie `SchedulingProtocol` pour décrire l'algorithme de planification utilisé pour le planificateur. Pour plus d’informations sur les stratégies de planificateur disponibles, consultez la page [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
 enum SchedulingProtocolType;
@@ -236,7 +248,7 @@ enum SchedulingProtocolType;
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** concrt.h  
  
-##  <a name="a-nameswitchingproxystatea--switchingproxystate-enumeration"></a><a name="switchingproxystate"></a>SwitchingProxyState (énumération)  
+##  <a name="switchingproxystate"></a>SwitchingProxyState (énumération)  
  Utilisé pour indiquer l'état d'un proxy de thread, quand il exécute un changement de contexte coopératif vers un proxy de thread différent.  
   
 ```
@@ -250,12 +262,12 @@ enum SwitchingProxyState;
 |`Idle`|Indique que le thread appelant n’est plus nécessaire par le planificateur et est retourné au Gestionnaire de ressources. Le contexte a été distribué n’est plus en mesure d’être utilisées par le Gestionnaire de ressources.|  
 |`Nesting`|Indique que le thread appelant est imbrication d’un planificateur enfant et qu’il est requis par l’appelant, pour pouvoir attacher à un autre planificateur.|  
 
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Un paramètre de type `SwitchingProxyState` est transmis à la méthode `IThreadProxy::SwitchTo` pour indiquer au Gestionnaire des ressources comment traiter le proxy de thread qui effectue l’appel.  
   
  Pour plus d’informations sur l’utilisation de ce type, consultez la page [IThreadProxy::SwitchTo](ithreadproxy-structure.md#switchto).  
   
-##  <a name="a-nametaskgroupstatusa--taskgroupstatus-enumeration"></a><a name="task_group_status"></a>task_group_status, énumération  
+##  <a name="task_group_status"></a>task_group_status, énumération  
  Décrit l'état d'exécution d'un objet `task_group` ou `structured_task_group`. Une valeur de ce type est retournée par de nombreuses méthodes qui attendent que les tâches planifiées pour un groupe de tâches se terminent.  
   
 ```
@@ -272,8 +284,8 @@ enum task_group_status;
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** pplinterface.h  
 
-##  <a name="a-namewinrtinitializationtypea--winrtinitializationtype-enumeration"></a><a name="winrtinitializationtype"></a>Winrtinitializationtype, énumération  
- Utilisé par la stratégie `WinRTInitialization` pour décrire si et comment le Windows Runtime est initialisé sur les threads de planificateur pour une application qui s'exécute sur des systèmes d'exploitation Windows 8 ou versions ultérieures. Pour plus d’informations sur les stratégies de planificateur disponibles, consultez la page [PolicyElementKey, énumération](concurrency-namespace-enums.md).  
+##  <a name="winrtinitializationtype"></a>Winrtinitializationtype, énumération  
+ Utilisé par la stratégie `WinRTInitialization` pour décrire si et comment le Windows Runtime est initialisé sur les threads de planificateur pour une application qui s'exécute sur des systèmes d'exploitation Windows 8 ou versions ultérieures. Pour plus d’informations sur les stratégies de planificateur disponibles, consultez la page [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
 enum WinRTInitializationType;

@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStatic
+- AFXWIN/CStatic
+- AFXWIN/CStatic::CStatic
+- AFXWIN/CStatic::Create
+- AFXWIN/CStatic::DrawItem
+- AFXWIN/CStatic::GetBitmap
+- AFXWIN/CStatic::GetCursor
+- AFXWIN/CStatic::GetEnhMetaFile
+- AFXWIN/CStatic::GetIcon
+- AFXWIN/CStatic::SetBitmap
+- AFXWIN/CStatic::SetCursor
+- AFXWIN/CStatic::SetEnhMetaFile
+- AFXWIN/CStatic::SetIcon
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +111,7 @@ class CStatic : public CWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="a-namecreatea--cstaticcreate"></a><a name="create"></a>CStatic::Create  
+##  <a name="create"></a>CStatic::Create  
  Crée le contrôle statique Windows et l’attache à le `CStatic` objet.  
   
 ```  
@@ -156,7 +168,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CStatic n °&1;](../../mfc/reference/codesnippet/cpp/cstatic-class_1.cpp)]  
   
-##  <a name="a-namecstatica--cstaticcstatic"></a><a name="cstatic"></a>CStatic::CStatic  
+##  <a name="cstatic"></a>CStatic::CStatic  
  Construit un objet `CStatic`.  
   
 ```  
@@ -166,7 +178,7 @@ CStatic();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CStatic n °&2;](../../mfc/reference/codesnippet/cpp/cstatic-class_2.cpp)]  
   
-##  <a name="a-namedrawitema--cstaticdrawitem"></a><a name="drawitem"></a>CStatic::DrawItem  
+##  <a name="drawitem"></a>CStatic::DrawItem  
  Appelé par l’infrastructure pour dessiner un contrôle statique owner-drawn.  
   
 ```  
@@ -180,7 +192,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="remarks"></a>Remarques  
  Remplacez cette fonction pour implémenter le dessin pour un owner-drawn **CStatic** objet (le contrôle a le style **SS_OWNERDRAW**).  
   
-##  <a name="a-namegetbitmapa--cstaticgetbitmap"></a><a name="getbitmap"></a>CStatic::GetBitmap  
+##  <a name="getbitmap"></a>CStatic::GetBitmap  
  Obtient le handle de l’image bitmap, précédemment défini avec [SetBitmap](#setbitmap), qui est associé à `CStatic`.  
   
 ```  
@@ -193,7 +205,7 @@ HBITMAP GetBitmap() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CStatic n °&3;](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
   
-##  <a name="a-namegetcursora--cstaticgetcursor"></a><a name="getcursor"></a>CStatic::GetCursor  
+##  <a name="getcursor"></a>CStatic::GetCursor  
  Obtient le handle du curseur, défini précédemment avec [SetCursor](#setcursor), qui est associé à `CStatic`.  
   
 ```  
@@ -206,7 +218,7 @@ HCURSOR GetCursor();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CStatic n °&4;](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
   
-##  <a name="a-namegetenhmetafilea--cstaticgetenhmetafile"></a><a name="getenhmetafile"></a>CStatic::GetEnhMetaFile  
+##  <a name="getenhmetafile"></a>CStatic::GetEnhMetaFile  
  Obtient le handle du métafichier amélioré, précédemment défini avec [SetEnhMetafile](#setenhmetafile), qui est associé à `CStatic`.  
   
 ```  
@@ -219,7 +231,7 @@ HENHMETAFILE GetEnhMetaFile() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CStatic n °&5;](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
   
-##  <a name="a-namegeticona--cstaticgeticon"></a><a name="geticon"></a>CStatic::GetIcon  
+##  <a name="geticon"></a>CStatic::GetIcon  
  Obtient le handle de l’icône, précédemment défini avec [SetIcon](#seticon), qui est associé à `CStatic`.  
   
 ```  
@@ -232,7 +244,7 @@ HICON GetIcon() const;
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CStatic n °&6;](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]  
   
-##  <a name="a-namesetbitmapa--cstaticsetbitmap"></a><a name="setbitmap"></a>CStatic::SetBitmap  
+##  <a name="setbitmap"></a>CStatic::SetBitmap  
  Associe une nouvelle image bitmap au contrôle statique.  
   
 ```  
@@ -269,7 +281,7 @@ L’exemple suivant crée deux `CStatic` objets sur le tas. Il charge ensuite un
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CStatic n °&3;](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
   
-##  <a name="a-namesetcursora--cstaticsetcursor"></a><a name="setcursor"></a>CStatic::SetCursor  
+##  <a name="setcursor"></a>CStatic::SetCursor  
  Associe une nouvelle image de curseur avec le contrôle statique.  
   
 ```  
@@ -295,7 +307,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CStatic n °&4;](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
   
-##  <a name="a-namesetenhmetafilea--cstaticsetenhmetafile"></a><a name="setenhmetafile"></a>CStatic::SetEnhMetaFile  
+##  <a name="setenhmetafile"></a>CStatic::SetEnhMetaFile  
  Associe une nouvelle image de métafichier amélioré avec le contrôle statique.  
   
 ```  
@@ -319,7 +331,7 @@ HENHMETAFILE SetEnhMetaFile(HENHMETAFILE hMetaFile);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CStatic n °&5;](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
   
-##  <a name="a-nameseticona--cstaticseticon"></a><a name="seticon"></a>CStatic::SetIcon  
+##  <a name="seticon"></a>CStatic::SetIcon  
  Associe une nouvelle image de l’icône du contrôle statique.  
   
 ```  

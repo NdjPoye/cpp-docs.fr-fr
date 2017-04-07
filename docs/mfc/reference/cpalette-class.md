@@ -10,7 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPalette
-- HPALETTE
+- AFXWIN/CPalette
+- AFXWIN/CPalette::CPalette
+- AFXWIN/CPalette::AnimatePalette
+- AFXWIN/CPalette::CreateHalftonePalette
+- AFXWIN/CPalette::CreatePalette
+- AFXWIN/CPalette::FromHandle
+- AFXWIN/CPalette::GetEntryCount
+- AFXWIN/CPalette::GetNearestPaletteIndex
+- AFXWIN/CPalette::GetPaletteEntries
+- AFXWIN/CPalette::ResizePalette
+- AFXWIN/CPalette::SetPaletteEntries
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +106,7 @@ class CPalette : public CGdiObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="a-nameanimatepalettea--cpaletteanimatepalette"></a><a name="animatepalette"></a>CPalette::AnimatePalette  
+##  <a name="animatepalette"></a>CPalette::AnimatePalette  
  Remplace les entrées dans la palette logique attaché à la `CPalette` objet.  
   
 ```  
@@ -121,7 +131,7 @@ void AnimatePalette(
   
  Le `AnimatePalette` fonction passera uniquement les entrées avec le **PC_RESERVED** l’indicateur est défini dans le **palPaletteEntry** membre de la [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) structure qui est attaché à la `CPalette` objet. Consultez la page **LOGPALETTE** dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] pour plus d’informations sur cette structure.  
   
-##  <a name="a-namecpalettea--cpalettecpalette"></a><a name="cpalette"></a>CPalette::CPalette  
+##  <a name="cpalette"></a>CPalette::CPalette  
  Construit un objet `CPalette`.  
   
 ```  
@@ -131,7 +141,7 @@ CPalette();
 ### <a name="remarks"></a>Notes  
  L’objet n’a aucune palette attaché jusqu'à ce que vous appeliez `CreatePalette` pour attacher un.  
   
-##  <a name="a-namecreatehalftonepalettea--cpalettecreatehalftonepalette"></a><a name="createhalftonepalette"></a>CPalette::CreateHalftonePalette  
+##  <a name="createhalftonepalette"></a>CPalette::CreateHalftonePalette  
  Crée une palette de demi-teintes pour le contexte de périphérique.  
   
 ```  
@@ -150,7 +160,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
   
  Consultez le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] pour plus d’informations sur `CreateHalftonePalette` et **StretchDIBits**.  
   
-##  <a name="a-namecreatepalettea--cpalettecreatepalette"></a><a name="createpalette"></a>CPalette::CreatePalette  
+##  <a name="createpalette"></a>CPalette::CreatePalette  
  Initialise un `CPalette` objet en créant une palette de couleurs logique de Windows et en attachant à la `CPalette` objet.  
   
 ```  
@@ -167,7 +177,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ### <a name="remarks"></a>Remarques  
  Consultez le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] pour plus d’informations sur la **LOGPALETTE** structure.  
   
-##  <a name="a-namefromhandlea--cpalettefromhandle"></a><a name="fromhandle"></a>CPalette::FromHandle  
+##  <a name="fromhandle"></a>CPalette::FromHandle  
  Retourne un pointeur vers un `CPalette` de l’objet en fonction d’un handle d’un objet de palette Windows.  
   
 ```  
@@ -184,7 +194,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ### <a name="remarks"></a>Notes  
  Si un `CPalette` objet n’est pas déjà attaché à la palette de Windows, un objet temporaire `CPalette` objet est créé et attaché. Ce fichier temporaire `CPalette` objet est valide uniquement jusqu'à la prochaine fois que l’application dispose de temps d’inactivité dans sa boucle d’événements, alors graphique temporaire de tous les objets sont supprimés. En d’autres termes, l’objet temporaire est valide uniquement pendant le traitement du message de fenêtre.  
   
-##  <a name="a-namegetentrycounta--cpalettegetentrycount"></a><a name="getentrycount"></a>CPalette::GetEntryCount  
+##  <a name="getentrycount"></a>CPalette::GetEntryCount  
  Appelez cette fonction membre pour récupérer le nombre d’entrées dans une palette logique donnée.  
   
 ```  
@@ -194,7 +204,7 @@ int GetEntryCount();
 ### <a name="return-value"></a>Valeur de retour  
  Nombre d’entrées dans une palette logique.  
   
-##  <a name="a-namegetnearestpaletteindexa--cpalettegetnearestpaletteindex"></a><a name="getnearestpaletteindex"></a>CPalette::GetNearestPaletteIndex  
+##  <a name="getnearestpaletteindex"></a>CPalette::GetNearestPaletteIndex  
  Retourne l’index de l’entrée de la palette logique qui correspond le mieux à la valeur de la couleur spécifiée.  
   
 ```  
@@ -208,7 +218,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 ### <a name="return-value"></a>Valeur de retour  
  L’index d’une entrée dans une palette logique. L’entrée contient la couleur presque correspondant à la couleur spécifiée.  
   
-##  <a name="a-namegetpaletteentriesa--cpalettegetpaletteentries"></a><a name="getpaletteentries"></a>CPalette::GetPaletteEntries  
+##  <a name="getpaletteentries"></a>CPalette::GetPaletteEntries  
  Récupère une plage d’entrées de palette dans une palette logique.  
   
 ```  
@@ -231,7 +241,7 @@ UINT GetPaletteEntries(
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’entrées récupérées à partir de la palette logique. 0 si la fonction a échoué.  
   
-##  <a name="a-nameoperatorhpalettea--cpaletteoperator-hpalette"></a><a name="operator_hpalette"></a>CPalette::operator HPALETTE  
+##  <a name="operator_hpalette"></a>CPalette::operator HPALETTE  
  Utilisez cet opérateur pour obtenir le handle Windows GDI attaché de le `CPalette` objet.  
   
 ```  
@@ -246,7 +256,7 @@ operator HPALETTE() const;
   
  Pour plus d’informations sur l’utilisation des objets graphiques, consultez l’article [graphique objets](http://msdn.microsoft.com/library/windows/desktop/dd144962) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameresizepalettea--cpaletteresizepalette"></a><a name="resizepalette"></a>CPalette::ResizePalette  
+##  <a name="resizepalette"></a>CPalette::ResizePalette  
  Modifie la taille de la palette logique attachée à la `CPalette` objet pour le nombre d’entrées spécifié par `nNumEntries`.  
   
 ```  
@@ -265,7 +275,7 @@ BOOL ResizePalette(UINT nNumEntries);
   
  Pour plus d’informations sur l’API Windows `ResizePalette`, consultez [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetpaletteentriesa--cpalettesetpaletteentries"></a><a name="setpaletteentries"></a>CPalette::SetPaletteEntries  
+##  <a name="setpaletteentries"></a>CPalette::SetPaletteEntries  
  Définit les indicateurs et les valeurs de couleur dans une plage d’entrées dans une palette logique.  
   
 ```  

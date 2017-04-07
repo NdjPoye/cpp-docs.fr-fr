@@ -10,8 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStringRefElementTraits
-- ATL.CStringRefElementTraits
-- ATL::CStringRefElementTraits
+- ATLCOLL/ATL::CStringRefElementTraits
+- ATLCOLL/ATL::CStringRefElementTraits::CompareElements
+- ATLCOLL/ATL::CStringRefElementTraits::CompareElementsOrdered
+- ATLCOLL/ATL::CStringRefElementTraits::Hash
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +80,7 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcoll.h  
   
-##  <a name="a-namecompareelementsa--cstringrefelementtraitscompareelements"></a><a name="compareelements"></a>CStringRefElementTraits::CompareElements  
+##  <a name="compareelements"></a>CStringRefElementTraits::CompareElements  
  Appelez cette fonction pour comparer deux éléments de chaîne d’égalité statique.  
   
 ```
@@ -95,7 +97,7 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si les éléments sont égaux.  
   
-##  <a name="a-namecompareelementsordereda--cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered  
  Appelez cette fonction pour comparer deux éléments de chaîne statique.  
   
 ```
@@ -112,7 +114,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Zéro si les chaînes sont identiques, < 0="" if=""> `str1` est inférieure à `str2`, ou 0 > si `str1` est supérieur à `str2`. Le [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) méthode est utilisée pour effectuer des comparaisons.  
   
-##  <a name="a-namehasha--cstringrefelementtraitshash"></a><a name="hash"></a>CStringRefElementTraits::Hash  
+##  <a name="hash"></a>CStringRefElementTraits::Hash  
  Appelez cette fonction statique pour calculer une valeur de hachage pour l’élément de la chaîne donnée.  
   
 ```

@@ -10,8 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFirePropNotifyEvent
-- ATL::CFirePropNotifyEvent
-- ATL.CFirePropNotifyEvent
+- ATLCTL/ATL::CFirePropNotifyEvent
+- ATLCTL/ATL::CFirePropNotifyEvent::FireOnChanged
+- ATLCTL/ATL::CFirePropNotifyEvent::FireOnRequestEdit
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +75,7 @@ class CFirePropNotifyEvent
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlctl.h  
   
-##  <a name="a-namefireonchangeda--cfirepropnotifyeventfireonchanged"></a><a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged  
+##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged  
  Avertit tous connectés [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) (sur chaque point de connexion de l’objet), les interfaces que la propriété de l’objet spécifié a changé.  
   
 ```
@@ -94,7 +95,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ### <a name="remarks"></a>Remarques  
  Cette fonction peut appeler, même si votre contrôle ne prend pas en charge les points de connexion.  
   
-##  <a name="a-namefireonrequestedita--cfirepropnotifyeventfireonrequestedit"></a><a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit  
+##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit  
  Avertit tous connectés [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) (sur chaque point de connexion de l’objet), les interfaces que la propriété de l’objet spécifié est sur le point de changer.  
   
 ```

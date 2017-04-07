@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CScrollBar
+- AFXWIN/CScrollBar
+- AFXWIN/CScrollBar::CScrollBar
+- AFXWIN/CScrollBar::Create
+- AFXWIN/CScrollBar::EnableScrollBar
+- AFXWIN/CScrollBar::GetScrollBarInfo
+- AFXWIN/CScrollBar::GetScrollInfo
+- AFXWIN/CScrollBar::GetScrollLimit
+- AFXWIN/CScrollBar::GetScrollPos
+- AFXWIN/CScrollBar::GetScrollRange
+- AFXWIN/CScrollBar::SetScrollInfo
+- AFXWIN/CScrollBar::SetScrollPos
+- AFXWIN/CScrollBar::SetScrollRange
+- AFXWIN/CScrollBar::ShowScrollBar
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +114,7 @@ class CScrollBar : public CWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="a-namecreatea--cscrollbarcreate"></a><a name="create"></a>CScrollBar::Create  
+##  <a name="create"></a>CScrollBar::Create  
  Crée la barre de défilement Windows et l’attache à le `CScrollBar` objet.  
   
 ```  
@@ -144,7 +157,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CScrollBar n °&1;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
   
-##  <a name="a-namecscrollbara--cscrollbarcscrollbar"></a><a name="cscrollbar"></a>CScrollBar::CScrollBar  
+##  <a name="cscrollbar"></a>CScrollBar::CScrollBar  
  Construit un objet `CScrollBar`.  
   
 ```  
@@ -157,7 +170,7 @@ CScrollBar();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CScrollBar n °&2;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
   
-##  <a name="a-nameenablescrollbara--cscrollbarenablescrollbar"></a><a name="enablescrollbar"></a>CScrollBar::EnableScrollBar  
+##  <a name="enablescrollbar"></a>CScrollBar::EnableScrollBar  
  Active ou désactive une flèche (ou les deux) d'une barre de défilement.  
   
 ```  
@@ -182,7 +195,7 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="a-namegetscrollbarinfoa--cscrollbargetscrollbarinfo"></a><a name="getscrollbarinfo"></a>CScrollBar::GetScrollBarInfo  
+##  <a name="getscrollbarinfo"></a>CScrollBar::GetScrollBarInfo  
  Récupère les informations qui le **SCROLLBARINFO** structure conserve sur une barre de défilement.  
   
 ```  
@@ -199,7 +212,7 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 ### <a name="remarks"></a>Notes  
  Cette fonction membre émule les fonctionnalités de la [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) d’un message, comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetscrollinfoa--cscrollbargetscrollinfo"></a><a name="getscrollinfo"></a>CScrollBar::GetScrollInfo  
+##  <a name="getscrollinfo"></a>CScrollBar::GetScrollInfo  
  Récupère les informations que la structure `SCROLLINFO` conserve à propos d'une barre de défilement.  
   
 ```  
@@ -228,7 +241,7 @@ BOOL GetScrollInfo(
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="a-namegetscrolllimita--cscrollbargetscrolllimit"></a><a name="getscrolllimit"></a>CScrollBar::GetScrollLimit  
+##  <a name="getscrolllimit"></a>CScrollBar::GetScrollLimit  
  Récupère la valeur maximale de la barre de défilement la position du défilement.  
   
 ```  
@@ -241,7 +254,7 @@ int GetScrollLimit();
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="a-namegetscrollposa--cscrollbargetscrollpos"></a><a name="getscrollpos"></a>CScrollBar::GetScrollPos  
+##  <a name="getscrollpos"></a>CScrollBar::GetScrollPos  
  Récupère la position actuelle d'une case de défilement.  
   
 ```  
@@ -257,7 +270,7 @@ int GetScrollPos() const;
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="a-namegetscrollrangea--cscrollbargetscrollrange"></a><a name="getscrollrange"></a>CScrollBar::GetScrollRange  
+##  <a name="getscrollrange"></a>CScrollBar::GetScrollRange  
  Copie la position actuelle de la barre de défilement minimal et maximal pour la barre de défilement donné dans les emplacements spécifiés par `lpMinPos` et `lpMaxPos`.  
   
 ```  
@@ -279,7 +292,7 @@ void GetScrollRange(
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="a-namesetscrollinfoa--cscrollbarsetscrollinfo"></a><a name="setscrollinfo"></a>CScrollBar::SetScrollInfo  
+##  <a name="setscrollinfo"></a>CScrollBar::SetScrollInfo  
  Définit les informations qui le `SCROLLINFO` structure conserve sur une barre de défilement.  
   
 ```  
@@ -306,7 +319,7 @@ BOOL SetScrollInfo(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CScrollBar n °&3;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
   
-##  <a name="a-namesetscrollposa--cscrollbarsetscrollpos"></a><a name="setscrollpos"></a>CScrollBar::SetScrollPos  
+##  <a name="setscrollpos"></a>CScrollBar::SetScrollPos  
  Définit la position actuelle d’une zone de défilement à celle spécifiée par `nPos` et, si spécifié, redessine la barre de défilement pour refléter la nouvelle position.  
   
 ```  
@@ -331,7 +344,7 @@ int SetScrollPos(
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="a-namesetscrollrangea--cscrollbarsetscrollrange"></a><a name="setscrollrange"></a>CScrollBar::SetScrollRange  
+##  <a name="setscrollrange"></a>CScrollBar::SetScrollRange  
  Définit les valeurs de position minimale et maximale de la barre de défilement donnée.  
   
 ```  
@@ -363,7 +376,7 @@ void SetScrollRange(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFC_CScrollBar n °&4;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
   
-##  <a name="a-nameshowscrollbara--cscrollbarshowscrollbar"></a><a name="showscrollbar"></a>CScrollBar::ShowScrollBar  
+##  <a name="showscrollbar"></a>CScrollBar::ShowScrollBar  
  Affiche ou masque une barre de défilement.  
   
 ```  

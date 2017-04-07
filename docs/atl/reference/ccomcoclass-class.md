@@ -10,8 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComCoClass
-- ATL.CComCoClass
-- ATL::CComCoClass
+- ATLCOM/ATL::CComCoClass
+- ATLCOM/ATL::CComCoClass::CreateInstance
+- ATLCOM/ATL::CComCoClass::Error
+- ATLCOM/ATL::CComCoClass::GetObjectCLSID
+- ATLCOM/ATL::CComCoClass::GetObjectDescription
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +89,7 @@ class CComCoClass
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomcoclasscreateinstance"></a><a name="createinstance"></a>CComCoClass::CreateInstance  
+##  <a name="createinstance"></a>CComCoClass::CreateInstance  
  Utilisez ces `CreateInstance` fonctions pour créer une instance d’une COM de l’objet et récupérer un pointeur d’interface sans utiliser l’API COM.  
   
 ```
@@ -124,7 +127,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
   
  [!code-cpp[NVC_ATL_COM&#11;](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   
-##  <a name="a-nameerrora--ccomcoclasserror"></a><a name="error"></a>CComCoClass::Error  
+##  <a name="error"></a>CComCoClass::Error  
  Cette fonction statique configure le `IErrorInfo` interface pour fournir des informations d’erreur au client.  
   
 ```
@@ -197,7 +200,7 @@ static HRESULT Error(
   
  Si le `hRes` paramètre est différent de zéro, puis `Error` retourne la valeur de `hRes`. Si `hRes` est zéro, les quatre premières versions de `Error` retourner `DISP_E_EXCEPTION`. Les deux dernières versions retournent le résultat de la macro **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**.  
   
-##  <a name="a-namegetobjectclsida--ccomcoclassgetobjectclsid"></a><a name="getobjectclsid"></a>CComCoClass::GetObjectCLSID  
+##  <a name="getobjectclsid"></a>CComCoClass::GetObjectCLSID  
  Fournit un moyen cohérent de récupération de CLSID de l’objet.  
   
 ```
@@ -207,7 +210,7 @@ static const CLSID& WINAPI GetObjectCLSID();
 ### <a name="return-value"></a>Valeur de retour  
  Identificateur de classe de l’objet.  
   
-##  <a name="a-namegetobjectdescriptiona--ccomcoclassgetobjectdescription"></a><a name="getobjectdescription"></a>CComCoClass::GetObjectDescription  
+##  <a name="getobjectdescription"></a>CComCoClass::GetObjectDescription  
  Cette fonction statique récupère la description de texte de votre objet de classe.  
   
 ```

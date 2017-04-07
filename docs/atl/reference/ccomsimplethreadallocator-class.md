@@ -10,8 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComSimpleThreadAllocator
-- ATL::CComSimpleThreadAllocator
-- ATL.CComSimpleThreadAllocator
+- ATLBASE/ATL::CComSimpleThreadAllocator
+- ATLBASE/ATL::CComSimpleThreadAllocator::GetThread
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -67,7 +67,7 @@ class CComSimpleThreadAllocator
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
   
-##  <a name="a-namegetthreada--ccomsimplethreadallocatorgetthread"></a><a name="getthread"></a>CComSimpleThreadAllocator::GetThread  
+##  <a name="getthread"></a>CComSimpleThreadAllocator::GetThread  
  Sélectionne un thread en spécifiant le thread suivant dans la séquence.  
   
 ```

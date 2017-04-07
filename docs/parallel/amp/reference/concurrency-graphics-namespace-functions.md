@@ -6,23 +6,28 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::fast_math::copy_async
+- amp_graphics/Concurrency::fast_math::copy
+dev_langs:
+- C++
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
 caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1c17becb6bc3fb9b243a65652bf019b7fad1b8cd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a9def518f951e6fbae788b69893cc7205053b411
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Fonctions d’espace de noms Concurrency::Graphics
 |||  
 |-|-|  
-|[Copy, fonction (Concurrency::graphics Namespace)](#copy)|[copy_async, fonction (Concurrency::graphics Namespace)](#copy_async)|  
+|[copy](#copy)|[copy_async](#copy_async)|  
   
-##  <a name="a-namecopya--copy-function-concurrencygraphics-namespace"></a><a name="copy"></a>Copy, fonction (Concurrency::graphics Namespace)  
+##  <a name="copy"></a>Copy, fonction (Concurrency::graphics Namespace)  
  Copie d’une texture source dans un mémoire tampon de destination, ou copie d’une mémoire tampon source dans un mémoire tampon de destination. La forme générale de cette fonction est `copy(src, dest)`.  
   
 ```  
@@ -168,7 +173,7 @@ void copy (
  `last`  
  Un itérateur de fin dans le conteneur source.  
   
-##  <a name="a-namecopyasynca--copyasync-function-concurrencygraphics-namespace"></a><a name="copy_async"></a>copy_async, fonction (Concurrency::graphics Namespace)  
+##  <a name="copy_async"></a>copy_async, fonction (Concurrency::graphics Namespace)  
  Copie de manière asynchrone une texture source dans une mémoire tampon de destination, ou copie d’une mémoire tampon source dans un mémoire tampon de destination et renvoie un [completion_future](completion-future-class.md) objet qui peut être attendu. Impossible de copier les données lorsque le code s’exécute sur un accélérateur. La forme générale de cette fonction est `copy(src, dest)`.  
   
 ```  
@@ -309,7 +314,12 @@ concurrency::completion_future copy_async(_Src_type& _Src,
   
  `last`  
  Un itérateur de fin dans le conteneur source.  
+
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** amp_graphics.h  
   
+ **Namespace :** Concurrency::graphics 
+
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
 

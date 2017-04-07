@@ -9,8 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_graphics/Concurrency::graphics
-- amp_short_vectors/Concurrency::graphics
+- AMP_GRAPHICS/Concurrency
 dev_langs:
 - C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
@@ -33,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: fd29b427307e336d560a2caf42e4fc5228e8071f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: e08a9bc52b7ce519508bb1682287e75070d341a1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics, espace de noms
@@ -53,7 +52,7 @@ namespace graphics;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Concurrency::Graphics::Direct3D Namespace](concurrency-graphics-direct3d-namespace.md)|Fournit des fonctions pour l’interopérabilité de Direct3D.|  
+|[Concurrency::graphics::direct3d, espace de noms](concurrency-graphics-direct3d-namespace.md)|Fournit des fonctions pour l’interopérabilité de Direct3D.|  
   
 ### <a name="typedefs"></a>Typedef  
   
@@ -92,17 +91,17 @@ namespace graphics;
 |[unorm_2, classe](unorm-2-class.md)|Représente un vecteur court de 2 `unorm` valeurs.|  
 |[unorm_3, classe](unorm-3-class.md)|Représente un vecteur court 3 `unorm` valeurs.|  
 |[unorm_4, classe](unorm-4-class.md)|Représente un vecteur court de 4 `unorm` valeurs.|  
-|[Sampler, classe](sampler-class.md)|Représente la configuration de l’échantillon utilisée pour l’échantillonnage de texture.|  
-|[Structure de short_vector](short-vector-structure.md)|Fournit une implémentation de base d’un vecteur court de valeurs.|  
-|[Structure de short_vector_traits](short-vector-traits-structure.md)|Offre pour la récupération de la longueur et le type d’un vecteur court.|  
+|[sampler, classe](sampler-class.md)|Représente la configuration de l’échantillon utilisée pour l’échantillonnage de texture.|  
+|[short_vector, structure](short-vector-structure.md)|Fournit une implémentation de base d’un vecteur court de valeurs.|  
+|[short_vector_traits, structure](short-vector-traits-structure.md)|Offre pour la récupération de la longueur et le type d’un vecteur court.|  
 |[texture_view, classe](texture-view-class.md)|Fournit l’accès en lecture et écriture à une texture.|  
   
 ### <a name="functions"></a>Fonctions  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Copy (fonction)](concurrency-graphics-namespace-functions.md#copy)|Surchargé. Copie le contenu de la texture source dans la mémoire tampon hôte de destination.|  
-|[copy_async, fonction](concurrency-graphics-namespace-functions.md#copy_async)|Surchargé. Copie le contenu de la texture de la source de façon asynchrone dans la mémoire tampon hôte de destination.|  
+|[copy](concurrency-graphics-namespace-functions.md#copy)|Surchargé. Copie le contenu de la texture source dans la mémoire tampon hôte de destination.|  
+|[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|Surchargé. Copie le contenu de la texture de la source de façon asynchrone dans la mémoire tampon hôte de destination.|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_graphics.h  
@@ -110,5 +109,5 @@ namespace graphics;
  **Espace de noms :** Concurrency  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accès concurrentiel Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

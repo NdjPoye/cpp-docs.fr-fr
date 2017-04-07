@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHotKeyCtrl
+- AFXCMN/CHotKeyCtrl
+- AFXCMN/CHotKeyCtrl::CHotKeyCtrl
+- AFXCMN/CHotKeyCtrl::Create
+- AFXCMN/CHotKeyCtrl::CreateEx
+- AFXCMN/CHotKeyCtrl::GetHotKey
+- AFXCMN/CHotKeyCtrl::GetHotKeyName
+- AFXCMN/CHotKeyCtrl::GetKeyName
+- AFXCMN/CHotKeyCtrl::SetHotKey
+- AFXCMN/CHotKeyCtrl::SetRules
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,14 +102,14 @@ class CHotKeyCtrl : public CWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxcmn.h  
   
-##  <a name="a-namechotkeyctrla--chotkeyctrlchotkeyctrl"></a><a name="chotkeyctrl"></a>CHotKeyCtrl::CHotKeyCtrl  
+##  <a name="chotkeyctrl"></a>CHotKeyCtrl::CHotKeyCtrl  
  Construit un objet `CHotKeyCtrl`.  
   
 ```  
 CHotKeyCtrl();
 ```  
   
-##  <a name="a-namecreatea--chotkeyctrlcreate"></a><a name="create"></a>CHotKeyCtrl::Create  
+##  <a name="create"></a>CHotKeyCtrl::Create  
  Crée un contrôle de touche d’accès rapide et l’attache à une `CHotKeyCtrl` objet.  
   
 ```  
@@ -132,7 +141,7 @@ virtual BOOL Create(
   
  Si vous souhaitez utiliser les styles étendus windows avec votre contrôle, appelez [CreateEx](#createex) au lieu de **créer**.  
   
-##  <a name="a-namecreateexa--chotkeyctrlcreateex"></a><a name="createex"></a>CHotKeyCtrl::CreateEx  
+##  <a name="createex"></a>CHotKeyCtrl::CreateEx  
  Appelez cette fonction pour créer un contrôle (une fenêtre enfant) et y associer le `CHotKeyCtrl` objet.  
   
 ```  
@@ -166,7 +175,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Remarques  
  Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus Windows, spécifiés par la préface de style étendu Windows **WS_EX_**.  
   
-##  <a name="a-namegethotkeya--chotkeyctrlgethotkey"></a><a name="gethotkey"></a>CHotKeyCtrl::GetHotKey  
+##  <a name="gethotkey"></a>CHotKeyCtrl::GetHotKey  
  Récupère les indicateurs clés virtuels code et le modificateur d’un raccourci clavier à partir d’un contrôle de touche d’accès rapide.  
   
 ```  
@@ -199,7 +208,7 @@ void GetHotKey(
 ### <a name="remarks"></a>Notes  
  Le code de touche virtuelle et les touches de modification ensemble définissent le raccourci clavier.  
   
-##  <a name="a-namegethotkeynamea--chotkeyctrlgethotkeyname"></a><a name="gethotkeyname"></a>CHotKeyCtrl::GetHotKeyName  
+##  <a name="gethotkeyname"></a>CHotKeyCtrl::GetHotKeyName  
  Appelez cette fonction membre pour obtenir le nom localisé de la touche d’accès rapide.  
   
 ```  
@@ -212,7 +221,7 @@ CString GetHotKeyName() const;
 ### <a name="remarks"></a>Remarques  
  Le nom de cette fonction membre retourne provient le pilote du clavier. Vous pouvez installer un pilote de clavier localisée dans une version localisée de Windows et vice versa.  
   
-##  <a name="a-namegetkeynamea--chotkeyctrlgetkeyname"></a><a name="getkeyname"></a>CHotKeyCtrl::GetKeyName  
+##  <a name="getkeyname"></a>CHotKeyCtrl::GetKeyName  
  Appelez cette fonction membre pour obtenir le nom localisé de la clé attribué à un code de touche virtuel spécifié.  
   
 ```  
@@ -237,7 +246,7 @@ static CString GetKeyName(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCControlLadenDialog&#69;](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
   
-##  <a name="a-namesethotkeya--chotkeyctrlsethotkey"></a><a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  
+##  <a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  
  Définit le raccourci clavier pour un contrôle de touche d’accès rapide.  
   
 ```  
@@ -265,7 +274,7 @@ void SetHotKey(
 ### <a name="remarks"></a>Remarques  
  Le code de touche virtuelle et les touches de modification ensemble définissent le raccourci clavier.  
   
-##  <a name="a-namesetrulesa--chotkeyctrlsetrules"></a><a name="setrules"></a>CHotKeyCtrl::SetRules  
+##  <a name="setrules"></a>CHotKeyCtrl::SetRules  
  Appelez cette fonction pour définir les combinaisons non valides et la combinaison de modificateur par défaut pour un contrôle de touche d’accès rapide.  
   
 ```  

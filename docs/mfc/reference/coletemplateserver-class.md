@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleTemplateServer
+- AFXDISP/COleTemplateServer
+- AFXDISP/COleTemplateServer::COleTemplateServer
+- AFXDISP/COleTemplateServer::ConnectTemplate
+- AFXDISP/COleTemplateServer::Unregister
+- AFXDISP/COleTemplateServer::UpdateRegistry
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +95,7 @@ class COleTemplateServer : public COleObjectFactory
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdisp.h  
   
-##  <a name="a-namecoletemplateservera--coletemplateservercoletemplateserver"></a><a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer  
+##  <a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer  
  Construit un objet `COleTemplateServer`.  
   
 ```  
@@ -100,7 +105,7 @@ COleTemplateServer();
 ### <a name="remarks"></a>Notes  
  Pour une brève description de l’utilisation de la `COleTemplateServer` de classe, consultez la [COleLinkingDoc plutôt](../../mfc/reference/colelinkingdoc-class.md) vue d’ensemble de la classe.  
   
-##  <a name="a-nameconnecttemplatea--coletemplateserverconnecttemplate"></a><a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate  
+##  <a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate  
  Connecte le modèle de document vers lequel pointé `pDocTemplate` sous-jacentes [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) objet.  
   
 ```  
@@ -123,7 +128,7 @@ void ConnectTemplate(
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [clé CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameunregistera--coletemplateserverunregister"></a><a name="unregister"></a>COleTemplateServer::Unregister  
+##  <a name="unregister"></a>COleTemplateServer::Unregister  
  Annule l’inscription du modèle de document associé.  
   
 ```  
@@ -136,7 +141,7 @@ BOOL Unregister();
 ### <a name="remarks"></a>Remarques  
  EnterRemarks  
   
-##  <a name="a-nameupdateregistrya--coletemplateserverupdateregistry"></a><a name="updateregistry"></a>COleTemplateServer::UpdateRegistry  
+##  <a name="updateregistry"></a>COleTemplateServer::UpdateRegistry  
  Charge les informations de type de fichier à partir de la chaîne de modèle de document et les place dans le Registre du système OLE.  
   
 ```  

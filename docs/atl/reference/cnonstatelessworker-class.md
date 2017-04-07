@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CNonStatelessWorker<Worker>
-- ATL::CNonStatelessWorker
-- ATL.CNonStatelessWorker
 - CNonStatelessWorker
-- ATL::CNonStatelessWorker<Worker>
+- ATLUTIL/ATL::CNonStatelessWorker
+- ATLUTIL/ATL::CNonStatelessWorker::RequestType
+- ATLUTIL/ATL::CNonStatelessWorker::Execute
+- ATLUTIL/ATL::CNonStatelessWorker::Initialize
+- ATLUTIL/ATL::CNonStatelessWorker::Terminate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +85,7 @@ class CNonStatelessWorker
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlutil.h  
   
-##  <a name="a-nameexecutea--cnonstatelessworkerexecute"></a><a name="execute"></a>CNonStatelessWorker::Execute  
+##  <a name="execute"></a>CNonStatelessWorker::Execute  
  Implémentation de [WorkerArchetype::Execute](worker-archetype.md#execute).  
 
   
@@ -99,7 +100,7 @@ void Execute(
  Cette méthode crée une instance de la *travail* classe sur la pile et les appels [initialiser](worker-archetype.md#initialize) sur cet objet. Si l’initialisation réussit, cette méthode appelle également [Execute](worker-archetype.md#execute) et [Terminate](worker-archetype.md#terminate) sur le même objet.  
 
   
-##  <a name="a-nameinitializea--cnonstatelessworkerinitialize"></a><a name="initialize"></a>CNonStatelessWorker::Initialize  
+##  <a name="initialize"></a>CNonStatelessWorker::Initialize  
  Implémentation de [WorkerArchetype::Initialize](worker-archetype.md#initialize).  
   
 ```
@@ -112,7 +113,7 @@ BOOL Initialize(void* /* pvParam */) throw();
 ### <a name="remarks"></a>Remarques  
  Cette classe ne toute initialisation `Initialize`.  
   
-##  <a name="a-namerequesttypea--cnonstatelessworkerrequesttype"></a><a name="requesttype"></a>CNonStatelessWorker::RequestType  
+##  <a name="requesttype"></a>CNonStatelessWorker::RequestType  
  Implémentation de [WorkerArchetype::RequestType](worker-archetype.md#requesttype).  
   
 ```
@@ -122,7 +123,7 @@ typedef Worker::RequestType RequestType;
 ### <a name="remarks"></a>Notes  
  Cette classe gère le même type d’élément de travail que la classe utilisée pour le *travail* paramètre de modèle. Consultez la page [CNonStatelessWorker présentation](../../atl/reference/cnonstatelessworker-class.md) pour plus d’informations.  
   
-##  <a name="a-nameterminatea--cnonstatelessworkerterminate"></a><a name="terminate"></a>CNonStatelessWorker::Terminate  
+##  <a name="terminate"></a>CNonStatelessWorker::Terminate  
  Implémentation de [WorkerArchetype::Terminate](worker-archetype.md#terminate).  
   
 ```

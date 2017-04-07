@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CHandle
-- ATL::CHandle
 - CHandle
+- ATLBASE/ATL::CHandle
+- ATLBASE/ATL::CHandle::CHandle
+- ATLBASE/ATL::CHandle::Attach
+- ATLBASE/ATL::CHandle::Close
+- ATLBASE/ATL::CHandle::Detach
+- ATLBASE/ATL::CHandle::m_h
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +93,7 @@ class CHandle
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
   
-##  <a name="a-nameattacha--chandleattach"></a><a name="attach"></a>CHandle::Attach  
+##  <a name="attach"></a>CHandle::Attach  
  Appelez cette méthode pour attacher le `CHandle` objet à un handle existant.  
   
 ```
@@ -103,7 +107,7 @@ void Attach(HANDLE h) throw();
 ### <a name="remarks"></a>Remarques  
  Affecte le `CHandle` de l’objet à le `h` gérer. Dans les versions débogue une ATLASSERT ; sera déclenchée si `h` a la valeur NULL. Aucune autre vérification sur la validité de la poignée est effectuée.  
   
-##  <a name="a-namechandlea--chandlechandle"></a><a name="chandle"></a>CHandle::CHandle  
+##  <a name="chandle"></a>CHandle::CHandle  
  Constructeur.  
   
 ```
@@ -119,7 +123,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>Notes  
  Crée un objet `CHandle` de l’objet, en utilisant éventuellement un handle existant ou `CHandle` objet.  
   
-##  <a name="a-namedtora--chandlechandle"></a><a name="dtor"></a>CHandle :: ~ CHandle  
+##  <a name="dtor"></a>CHandle :: ~ CHandle  
  Destructeur.  
   
 ```
@@ -129,7 +133,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>Notes  
  Libère le `CHandle` objet en appelant [CHandle::Close](#close).  
   
-##  <a name="a-nameclosea--chandleclose"></a><a name="close"></a>CHandle::Close  
+##  <a name="close"></a>CHandle::Close  
  Appelez cette méthode pour fermer une `CHandle` objet.  
   
 ```
@@ -139,7 +143,7 @@ void Close() throw();
 ### <a name="remarks"></a>Remarques  
  Ferme le handle d’objet ouvert. Si le handle est NULL, ce qui sera le cas si **fermer** a déjà été appelée, une ATLASSERT ; sera déclenchée dans les versions debug.  
   
-##  <a name="a-namedetacha--chandledetach"></a><a name="detach"></a>CHandle::Detach  
+##  <a name="detach"></a>CHandle::Detach  
  Appelez cette méthode pour détacher un handle d’un `CHandle` objet.  
   
 ```
@@ -152,14 +156,14 @@ HANDLE Detach() throw();
 ### <a name="remarks"></a>Remarques  
  Libère la possession du handle.  
   
-##  <a name="a-namemha--chandlemh"></a><a name="m_h"></a>CHandle::m_h  
+##  <a name="m_h"></a>CHandle::m_h  
  La variable de membre qui stocke le descripteur.  
   
 ```
 HANDLE m_h;
 ```  
   
-##  <a name="a-nameoperatoreqa--chandleoperator-"></a><a name="operator_eq"></a>CHandle::operator =  
+##  <a name="operator_eq"></a>CHandle::operator =  
  L’opérateur d’assignation.  
   
 ```
@@ -176,7 +180,7 @@ CHandle& operator=(CHandle& h) throw();
 ### <a name="remarks"></a>Remarques  
  Si le `CHandle` objet contient actuellement un handle, il va être fermée. Le `CHandle` de l’objet passé dans aura sa référence handle la valeur NULL. Cela garantit que deux `CHandle` objets ne contient jamais le même handle actif.  
   
-##  <a name="a-nameoperatorhandlea--chandleoperator-handle"></a><a name="operator_handle"></a>CHandle::operator descripteur  
+##  <a name="operator_handle"></a>CHandle::operator descripteur  
  Retourne la valeur du handle stockée.  
   
 ```  

@@ -181,7 +181,7 @@ array<int, 4> ai = { 1, 2, 3 };
   
  **Espace de noms :** std  
   
-##  <a name="a-namearrayarraya--arrayarray"></a><a name="array__array"></a>  array::array  
+##  <a name="array__array"></a>  array::array  
  Construit un objet tableau.  
   
 ```  
@@ -236,7 +236,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="a-namearrayassigna--arrayassign"></a><a name="array__assign"></a>  array::assign  
+##  <a name="array__assign"></a>  array::assign  
 Obsolète dans C++11, remplacé par [fill](#array__fill). Remplace tous les éléments.  
   
 ```  
@@ -288,7 +288,7 @@ int main()
 4 4 4 4  
 ```  
   
-##  <a name="a-namearrayata--arrayat"></a><a name="array__at"></a>  array::at  
+##  <a name="array__at"></a>  array::at  
  Accède à un élément à une position spécifiée.  
   
 ```  
@@ -333,7 +333,7 @@ int main()
   
 ```  
   
-##  <a name="a-namearraybacka--arrayback"></a><a name="array__back"></a>  array::back  
+##  <a name="array__back"></a>  array::back  
  Accède au dernier élément.  
   
 ```  
@@ -378,7 +378,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearraybegina--arraybegin"></a><a name="array__begin"></a>  array::begin  
+##  <a name="array__begin"></a>  array::begin  
  Désigne le début de la séquence contrôlée.  
   
 ```  
@@ -423,7 +423,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearraycbegina--arraycbegin"></a><a name="array__cbegin"></a>  array::cbegin  
+##  <a name="array__cbegin"></a>  array::cbegin  
  Retourne un itérateur `const` qui traite le premier élément d'une plage.  
   
 ```  
@@ -446,7 +446,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namearraycenda--arraycend"></a><a name="array__cend"></a>  array::cend  
+##  <a name="array__cend"></a>  array::cend  
  Retourne un itérateur `const` qui traite l'emplacement situé immédiatement après le dernier élément d'une plage.  
   
 ```  
@@ -471,7 +471,7 @@ auto i2 = Container.cend();
   
  La valeur retournée par `cend` ne doit pas être déréférencée.  
   
-##  <a name="a-namearrayconstiteratora--arrayconstiterator"></a><a name="array__const_iterator"></a>  array::const_iterator  
+##  <a name="array__const_iterator"></a>  array::const_iterator  
  Type d'un itérateur constant pour la séquence contrôlée.  
   
 ```  
@@ -522,7 +522,7 @@ it2: 0
   
 ```  
   
-##  <a name="a-namearrayconstpointera--arrayconstpointer"></a><a name="array__const_pointer"></a>  array::const_pointer  
+##  <a name="array__const_pointer"></a>  array::const_pointer  
  Type d'un pointeur constant vers un élément.  
   
 ```  
@@ -566,7 +566,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayconstreferencea--arrayconstreference"></a><a name="array__const_reference"></a>  array::const_reference  
+##  <a name="array__const_reference"></a>  array::const_reference  
  Type d'une référence constante à un élément.  
   
 ```  
@@ -610,7 +610,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayconstreverseiteratora--arrayconstreverseiterator"></a><a name="array__const_reverse_iterator"></a>  array::const_reverse_iterator  
+##  <a name="array__const_reverse_iterator"></a>  array::const_reverse_iterator  
  Type d'un itérateur inserve constant pour la séquence contrôlée.  
   
 ```  
@@ -654,7 +654,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearraycrbegina--arraycrbegin"></a><a name="array__crbegin"></a>  array::crbegin  
+##  <a name="array__crbegin"></a>  array::crbegin  
  Retourne un itérateur const qui traite le premier élément d'un tableau inversé.  
   
 ```  
@@ -697,7 +697,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.  
 ```  
   
-##  <a name="a-namearraycrenda--arraycrend"></a><a name="array__crend"></a>  array::crend  
+##  <a name="array__crend"></a>  array::crend  
  Retourne un itérateur const qui traite l'emplacement qui suit le dernier élément d'un tableau inversé.  
   
 ```  
@@ -740,7 +740,7 @@ int main( )
 1  
 ```  
   
-##  <a name="a-namearraydataa--arraydata"></a><a name="array__data"></a>  array::data  
+##  <a name="array__data"></a>  array::data  
  Obtient l'adresse du premier élément.  
   
 ```  
@@ -786,7 +786,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearraydifferencetypea--arraydifferencetype"></a><a name="array__difference_type"></a>  array::difference_type  
+##  <a name="array__difference_type"></a>  array::difference_type  
  Type d'une distance signée entre deux éléments.  
   
 ```  
@@ -830,7 +830,7 @@ int main()
 -4  
 ```  
   
-##  <a name="a-namearrayemptya--arrayempty"></a><a name="array__empty"></a>  array::empty  
+##  <a name="array__empty"></a>  array::empty  
  Vérifie l'absence d'éléments.  
   
 ```  
@@ -880,7 +880,7 @@ false
 true  
 ```  
   
-##  <a name="a-namearrayenda--arrayend"></a><a name="array__end"></a>  array::end  
+##  <a name="array__end"></a>  array::end  
  Désigne la fin de la séquence contrôlée.  
   
 ```  
@@ -926,7 +926,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearrayfilla--arrayfill"></a><a name="array__fill"></a>  array::fill  
+##  <a name="array__fill"></a>  array::fill  
  Efface un tableau et copie les éléments spécifiés dans le tableau vide.  
   
 ```  
@@ -938,7 +938,7 @@ void fill(const Type& val);
 |||  
 |-|-|  
 |Paramètre|Description|  
-|` val`|Valeur de l'élément inséré dans le tableau.|  
+|`val`|Valeur de l'élément inséré dans le tableau.|  
   
 ### <a name="remarks"></a>Notes  
  `fill` remplace chaque élément du tableau par la valeur spécifiée.  
@@ -970,7 +970,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namearrayfronta--arrayfront"></a><a name="array__front"></a>  array::front  
+##  <a name="array__front"></a>  array::front  
  Accède au premier élément.  
   
 ```  
@@ -1015,7 +1015,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayiteratora--arrayiterator"></a><a name="array__iterator"></a>  array::iterator  
+##  <a name="array__iterator"></a>  array::iterator  
  Type d'un itérateur pour la séquence contrôlée.  
   
 ```  
@@ -1066,7 +1066,7 @@ it2: 0
   
 ```  
   
-##  <a name="a-namearraymaxsizea--arraymaxsize"></a><a name="array__max_size"></a>  array::max_size  
+##  <a name="array__max_size"></a>  array::max_size  
  Compte le nombre d'éléments.  
   
 ```  
@@ -1109,7 +1109,7 @@ int main()
 4  
 ```  
   
-##  <a name="a-namearrayoperatorata--arrayoperator"></a><a name="array__operator_at"></a>  array::operator[]  
+##  <a name="array__operator_at"></a>  array::operator[]  
  Accède à un élément à une position spécifiée.  
   
 ```  
@@ -1161,7 +1161,7 @@ int main()
 1 3  
 ```  
   
-##  <a name="a-namearrayoperatoreqa--arrayoperator"></a><a name="array__operator_eq"></a>  array::operator=  
+##  <a name="array__operator_eq"></a>  array::operator=  
  Remplace la séquence contrôlée.  
   
 ```  
@@ -1213,7 +1213,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="a-namearraypointera--arraypointer"></a><a name="array__pointer"></a>  array::pointer  
+##  <a name="array__pointer"></a>  array::pointer  
  Type d'un pointeur vers un élément.  
   
 ```  
@@ -1257,7 +1257,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayrbegina--arrayrbegin"></a><a name="array__rbegin"></a>  array::rbegin  
+##  <a name="array__rbegin"></a>  array::rbegin  
  Désigne le début de la séquence contrôlée inverse.  
   
 ```  
@@ -1302,7 +1302,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearrayreferencea--arrayreference"></a><a name="array__reference"></a>  array::reference  
+##  <a name="array__reference"></a>  array::reference  
  Type d'une référence à un élément.  
   
 ```  
@@ -1346,7 +1346,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayrenda--arrayrend"></a><a name="array__rend"></a>  array::rend  
+##  <a name="array__rend"></a>  array::rend  
  Désigne la fin de la séquence contrôlée inverse.  
   
 ```  
@@ -1391,7 +1391,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayreverseiteratora--arrayreverseiterator"></a><a name="array__reverse_iterator"></a>  array::reverse_iterator  
+##  <a name="array__reverse_iterator"></a>  array::reverse_iterator  
  Type d'un itérateur inverse pour la séquence contrôlée.  
   
 ```  
@@ -1435,7 +1435,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearraysizea--arraysize"></a><a name="array__size"></a>  array::size  
+##  <a name="array__size"></a>  array::size  
  Compte le nombre d'éléments.  
   
 ```  
@@ -1478,7 +1478,7 @@ int main()
 4  
 ```  
   
-##  <a name="a-namearraysizetypea--arraysizetype"></a><a name="array__size_type"></a>  array::size_type  
+##  <a name="array__size_type"></a>  array::size_type  
  Type d’une distance non signée entre deux éléments.  
   
 ```  
@@ -1522,7 +1522,7 @@ int main()
 4  
 ```  
   
-##  <a name="a-namearrayswapa--arrayswap"></a><a name="array__swap"></a>  array::swap  
+##  <a name="array__swap"></a>  array::swap  
 Échange le contenu de ce tableau avec un autre tableau.  
   
 ```  
@@ -1585,7 +1585,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="a-namearrayvaluetypea--arrayvaluetype"></a><a name="array__value_type"></a>  array::value_type  
+##  <a name="array__value_type"></a>  array::value_type  
  Type d’un élément.  
   
 ```  

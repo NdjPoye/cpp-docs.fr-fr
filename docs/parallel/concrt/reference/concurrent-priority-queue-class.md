@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrent_priority_queue/concurrency::concurrent_priority_queue
+- concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::concurrent_priority_queue
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::clear
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::empty
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::get_allocator
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::push
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::size
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::swap
+- CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::try_pop
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +43,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 59bbd25f78294e1363b8acb49e45f364a9ae026e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 95b52911135513b0b1e4d84509c80ed3262c1765
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue, classe
@@ -78,25 +87,25 @@ template <typename T,
   
 |Nom|Description|  
 |----------|-----------------|  
-|[concurrent_priority_queue, constructeur](#ctor)|Surchargé. Construit une file d’attente de priorité simultanées.|  
+|[concurrent_priority_queue](#ctor)|Surchargé. Construit une file d’attente de priorité simultanées.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Clear (méthode)](#clear)|Efface tous les éléments dans l’ordre de priorité simultanée. Cette méthode n’est pas concurrentiel.|  
-|[Empty (méthode)](#empty)|Vérifie si la file d’attente de priorité simultanées est vide au moment où cette méthode est appelée. Cette méthode est concurrentiel.|  
-|[get_allocator (méthode)](#get_allocator)|Retourne une copie de l’allocateur utilisé pour construire la file d’attente de priorité simultanées. Cette méthode est concurrentiel.|  
-|[push (méthode)](#push)|Surchargé. Ajoute un élément à la file d’attente de priorité simultanées. Cette méthode est concurrentiel.|  
-|[taille (méthode)](#size)|Retourne le nombre d’éléments dans la file d’attente de priorité simultanées. Cette méthode est concurrentiel.|  
-|[swap (méthode)](#swap)|Échange le contenu de deux files d’attente simultanées. Cette méthode n’est pas concurrentiel.|  
-|[try_pop (méthode)](#try_pop)|Supprime et retourne l’élément de priorité la plus élevée de la file d’attente si la file d’attente est vide. Cette méthode est concurrentiel.|  
+|[clear](#clear)|Efface tous les éléments dans l’ordre de priorité simultanée. Cette méthode n’est pas concurrentiel.|  
+|[empty](#empty)|Vérifie si la file d’attente de priorité simultanées est vide au moment où cette méthode est appelée. Cette méthode est concurrentiel.|  
+|[get_allocator](#get_allocator)|Retourne une copie de l’allocateur utilisé pour construire la file d’attente de priorité simultanées. Cette méthode est concurrentiel.|  
+|[push](#push)|Surchargé. Ajoute un élément à la file d’attente de priorité simultanées. Cette méthode est concurrentiel.|  
+|[size](#size)|Retourne le nombre d’éléments dans la file d’attente de priorité simultanées. Cette méthode est concurrentiel.|  
+|[swap](#swap)|Échange le contenu de deux files d’attente simultanées. Cette méthode n’est pas concurrentiel.|  
+|[try_pop](#try_pop)|Supprime et retourne l’élément de priorité la plus élevée de la file d’attente si la file d’attente est vide. Cette méthode est concurrentiel.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[opérateur =, opérateur](#operator_eq)|Surchargé. Assigne le contenu d’un autre `concurrent_priority_queue` objet à celui-ci. Cette méthode n’est pas concurrentiel.|  
+|[operator=](#operator_eq)|Surchargé. Assigne le contenu d’un autre `concurrent_priority_queue` objet à celui-ci. Cette méthode n’est pas concurrentiel.|  
   
 ## <a name="remarks"></a>Remarques  
  Pour plus d’informations sur la `concurrent_priority_queue` de classe, consultez la page [conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md).  
@@ -109,7 +118,7 @@ template <typename T,
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>Effacer 
+##  <a name="clear"></a>Effacer 
 
  Efface tous les éléments dans l’ordre de priorité simultanée. Cette méthode n’est pas concurrentiel.  
   
@@ -120,7 +129,7 @@ void clear();
 ### <a name="remarks"></a>Remarques  
  `clear`n’est pas concurrentiel. Vous devez vous assurer qu’aucun autre thread n’est appel de méthodes sur la file d’attente de priorité simultanées lorsque vous appelez cette méthode. `clear`ne libère pas de mémoire.  
   
-##  <a name="a-namectora-concurrentpriorityqueue"></a><a name="ctor"></a>concurrent_priority_queue 
+##  <a name="ctor"></a>concurrent_priority_queue 
 
  Construit une file d’attente de priorité simultanées.  
   
@@ -171,7 +180,7 @@ concurrent_priority_queue(
  `_Src`  
  La source `concurrent_priority_queue` objet à copier ou déplacer des éléments à partir de.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Tous les constructeurs stockent un objet allocateur `_Al` et d’initialiser la file d’attente de priorité.  
   
  Le premier constructeur spécifie une file d’attente de priorité initiale vide et spécifie éventuellement un allocateur.  
@@ -184,7 +193,7 @@ concurrent_priority_queue(
   
  Les constructeurs sixième et septième spécifient un déplacement de la file d’attente de priorité `_Src`.  
   
-##  <a name="a-nameemptya-empty"></a><a name="empty"></a>vide 
+##  <a name="empty"></a>vide 
 
  Vérifie si la file d’attente de priorité simultanées est vide au moment où cette méthode est appelée. Cette méthode est concurrentiel.  
   
@@ -195,7 +204,7 @@ bool empty() const;
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si la file d’attente de priorité était vide au moment où la fonction a été appelée, `false` dans le cas contraire.  
   
-##  <a name="a-namegetallocatora-getallocator"></a><a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a>get_allocator 
 
  Retourne une copie de l’allocateur utilisé pour construire la file d’attente de priorité simultanées. Cette méthode est concurrentiel.  
   
@@ -206,7 +215,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valeur de retour  
  Une copie de l’allocateur utilisé pour construire le `concurrent_priority_queue` objet.  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>opérateur = 
+##  <a name="operator_eq"></a>opérateur = 
 
  Assigne le contenu d’un autre `concurrent_priority_queue` objet à celui-ci. Cette méthode n’est pas concurrentiel.  
   
@@ -223,7 +232,7 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à ce `concurrent_priority_queue` objet.  
   
-##  <a name="a-namepusha-push"></a><a name="push"></a>push 
+##  <a name="push"></a>push 
 
  Ajoute un élément à la file d’attente de priorité simultanées. Cette méthode est concurrentiel.  
   
@@ -237,7 +246,7 @@ void push(value_type&& _Elem);
  `_Elem`  
  L’élément à ajouter à la file d’attente de priorité simultanées.  
   
-##  <a name="a-namesizea-size"></a><a name="size"></a>taille 
+##  <a name="size"></a>taille 
 
  Retourne le nombre d’éléments dans la file d’attente de priorité simultanées. Cette méthode est concurrentiel.  
   
@@ -248,10 +257,10 @@ size_type size() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre d’éléments dans ce `concurrent_priority_queue` objet.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La taille retournée est garantie pour inclure tous les éléments ajoutés par les appels à la fonction `push`. Toutefois, il ne reflète pas les résultats d’opérations simultanées en attente.  
   
-##  <a name="a-nameswapa-swap"></a><a name="swap"></a>échange 
+##  <a name="swap"></a>échange 
 
  Échange le contenu de deux files d’attente simultanées. Cette méthode n’est pas concurrentiel.  
   
@@ -263,7 +272,7 @@ void swap(concurrent_priority_queue& _Queue);
  `_Queue`  
  Le `concurrent_priority_queue` objet échanger le contenu avec.  
   
-##  <a name="a-nametrypopa-trypop"></a><a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a>try_pop 
 
  Supprime et retourne l’élément de priorité la plus élevée de la file d’attente si la file d’attente est vide. Cette méthode est concurrentiel.  
   

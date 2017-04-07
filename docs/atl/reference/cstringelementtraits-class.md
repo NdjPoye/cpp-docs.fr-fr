@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CStringElementTraits<T>
-- ATL::CStringElementTraits<T>
 - CStringElementTraits
-- ATL.CStringElementTraits
-- ATL::CStringElementTraits
+- CSTRINGT/ATL::CStringElementTraits
+- CSTRINGT/ATL::CStringElementTraits::INARGTYPE
+- CSTRINGT/ATL::CStringElementTraits::OUTARGTYPE
+- CSTRINGT/ATL::CStringElementTraits::CompareElements
+- CSTRINGT/ATL::CStringElementTraits::CompareElementsOrdered
+- CSTRINGT/ATL::CStringElementTraits::CopyElements
+- CSTRINGT/ATL::CStringElementTraits::Hash
+- CSTRINGT/ATL::CStringElementTraits::RelocateElements
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +88,7 @@ class CStringElementTraits
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** cstringt.h  
   
-##  <a name="a-namecompareelementsa--cstringelementtraitscompareelements"></a><a name="compareelements"></a>CStringElementTraits::CompareElements  
+##  <a name="compareelements"></a>CStringElementTraits::CompareElements  
  Appelez cette fonction pour comparer deux éléments de chaîne d’égalité statique.  
   
 ```
@@ -101,7 +105,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si les éléments sont égaux.  
   
-##  <a name="a-namecompareelementsordereda--cstringelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringElementTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CStringElementTraits::CompareElementsOrdered  
  Appelez cette fonction pour comparer deux éléments de chaîne statique.  
   
 ```
@@ -119,7 +123,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
  Zéro si les chaînes sont identiques, < 0="" if=""> `str1` est inférieure à `str2`, ou 0 > si `str1` est supérieur à `str2`. Le [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) méthode est utilisée pour effectuer des comparaisons.  
 
   
-##  <a name="a-namecopyelementsa--cstringelementtraitscopyelements"></a><a name="copyelements"></a>CStringElementTraits::CopyElements  
+##  <a name="copyelements"></a>CStringElementTraits::CopyElements  
  Appelez cette fonction statique pour copier `CString` éléments stockés dans un objet de classe de collection.  
   
 ```
@@ -142,7 +146,7 @@ static void CopyElements(
 ### <a name="remarks"></a>Notes  
  Les éléments source et de destination ne doivent pas se chevaucher.  
   
-##  <a name="a-namehasha--cstringelementtraitshash"></a><a name="hash"></a>CStringElementTraits::Hash  
+##  <a name="hash"></a>CStringElementTraits::Hash  
  Appelez cette fonction statique pour calculer une valeur de hachage pour l’élément de la chaîne donnée.  
   
 ```
@@ -156,21 +160,21 @@ static ULONG Hash(INARGTYPE str);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une valeur de hachage calculée à l’aide du contenu de la chaîne.  
   
-##  <a name="a-nameinargtypea--cstringelementtraitsinargtype"></a><a name="inargtype"></a>CStringElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CStringElementTraits::INARGTYPE  
  Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cstringelementtraitsoutargtype"></a><a name="outargtype"></a>CStringElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>CStringElementTraits::OUTARGTYPE  
  Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
-##  <a name="a-namerelocateelementsa--cstringelementtraitsrelocateelements"></a><a name="relocateelements"></a>CStringElementTraits::RelocateElements  
+##  <a name="relocateelements"></a>CStringElementTraits::RelocateElements  
  Appelez cette fonction pour déplacer statique `CString` éléments stockés dans un objet de classe de collection.  
   
 ```

@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CException
+- AFX/CException
+- AFX/CException::CException
+- AFX/CException::Delete
+- AFX/CException::ReportError
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +117,7 @@ class AFX_NOVTABLE CException : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afx.h  
   
-##  <a name="a-namecexceptiona--cexceptioncexception"></a><a name="cexception"></a>CException::CException  
+##  <a name="cexception"></a>CException::CException  
  Cette fonction membre construit un `CException` objet.  
   
 ```  
@@ -127,7 +131,7 @@ explicit CException(BOOL bAutoDelete);
 ### <a name="remarks"></a>Remarques  
  Vous devez normalement jamais d’appeler ce constructeur directement. Une fonction qui lève une exception doit créer une instance d’un `CException`-classe dérivée et appelle son constructeur, ou il doit utiliser l’une des MFC lever des fonctions, telles que [AfxThrowFileException](exception-processing.md#afxthrowfileexception), lever un type prédéfini. Cette documentation est fournie uniquement par souci d’exhaustivité.  
   
-##  <a name="a-namedeletea--cexceptiondelete"></a><a name="delete"></a>CException::Delete  
+##  <a name="delete"></a>CException::Delete  
  Cette fonction vérifie si le **CException** objet a été créé sur le tas, et si tel est le cas, il appelle le **supprimer** (opérateur) sur l’objet.  
   
 ```  
@@ -191,7 +195,7 @@ if (pFile != NULL)
 }   
  ```
   
-##  <a name="a-namereporterrora--cexceptionreporterror"></a><a name="reporterror"></a>CException::ReportError  
+##  <a name="reporterror"></a>CException::ReportError  
  Appelez cette fonction membre pour le texte d’erreur de rapport dans un message à l’utilisateur.  
   
 ```  

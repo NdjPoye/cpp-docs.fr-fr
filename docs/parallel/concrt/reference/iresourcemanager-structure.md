@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IResourceManager
+- IResourceManager
+- CONCRTRM/concurrency::IResourceManager
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::OSVersion
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::CreateNodeTopology
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::GetAvailableNodeCount
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::GetFirstNode
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::Reference
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::RegisterScheduler
+- CONCRTRM/concurrency::IResourceManager::IResourceManager::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: fb523127f60c4e8cd45b2525749b536ad55849b0
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2d054bd632db90708d90fe8d791965b47f713493
+ms.lasthandoff: 03/20/2017
 
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager, structure
@@ -54,18 +62,18 @@ struct IResourceManager;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[IResourceManager::OSVersion, énumération](#osversion)|Type énuméré qui représente la version du système d'exploitation.|  
+|[IResourceManager::OSVersion](#osversion)|Type énuméré qui représente la version du système d'exploitation.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[IResourceManager::CreateNodeTopology, méthode](#createnodetopology)|Les versions de présent uniquement en mode de débogage du runtime, cette méthode est un crochet de test conçu pour faciliter le test du Gestionnaire de ressources sur divers topologies de matériel, sans matériel réel correspondant à la configuration. Avec les versions commerciales du runtime, cette méthode retournera sans exécuter d’action.|  
-|[IResourceManager::getavailablenodecount, méthode](#getavailablenodecount)|Retourne le nombre de nœuds disponibles pour le Gestionnaire de ressources.|  
-|[IResourceManager::getfirstnode, méthode](#getfirstnode)|Retourne le premier nœud dans l’ordre d’énumération comme défini par le Gestionnaire de ressources.|  
-|[IResourceManager::Reference, méthode](#reference)|Incrémente le décompte de références sur l’instance du Gestionnaire de ressources.|  
-|[IResourceManager::RegisterScheduler, méthode](#registerscheduler)|Inscrit un planificateur avec le Gestionnaire de ressources. Une fois le planificateur inscrit, il doit communiquer avec le Gestionnaire de ressources à l’aide du `ISchedulerProxy` interface retournée.|  
-|[IResourceManager::Release, méthode](#release)|Décrémente le décompte de références sur l’instance du Gestionnaire de ressources. Le Gestionnaire de ressources est détruit lorsque son décompte de références atteint `0`.|  
+|[IResourceManager::CreateNodeTopology](#createnodetopology)|Les versions de présent uniquement en mode de débogage du runtime, cette méthode est un crochet de test conçu pour faciliter le test du Gestionnaire de ressources sur divers topologies de matériel, sans matériel réel correspondant à la configuration. Avec les versions commerciales du runtime, cette méthode retournera sans exécuter d’action.|  
+|[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Retourne le nombre de nœuds disponibles pour le Gestionnaire de ressources.|  
+|[IResourceManager::GetFirstNode](#getfirstnode)|Retourne le premier nœud dans l’ordre d’énumération comme défini par le Gestionnaire de ressources.|  
+|[IResourceManager::Reference](#reference)|Incrémente le décompte de références sur l’instance du Gestionnaire de ressources.|  
+|[IResourceManager::RegisterScheduler](#registerscheduler)|Inscrit un planificateur avec le Gestionnaire de ressources. Une fois le planificateur inscrit, il doit communiquer avec le Gestionnaire de ressources à l’aide du `ISchedulerProxy` interface retournée.|  
+|[IResourceManager::Release](#release)|Décrémente le décompte de références sur l’instance du Gestionnaire de ressources. Le Gestionnaire de ressources est détruit lorsque son décompte de références atteint `0`.|  
   
 ## <a name="remarks"></a>Notes  
  Utilisez le [CreateResourceManager](concurrency-namespace-functions.md) fonction pour obtenir une interface pour l’instance du Gestionnaire de ressources du singleton. La méthode incrémente un décompte de références sur le Gestionnaire de ressources, et vous devez appeler le [IResourceManager::Release](#release) méthode pour libérer la référence lorsque vous avez terminé avec le Gestionnaire de ressources. En général, chaque planificateur que vous créez appellera cette méthode lors de la création et libère la référence au Gestionnaire des ressources après sa fermeture.  
@@ -78,7 +86,7 @@ struct IResourceManager;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-namecreatenodetopologya--iresourcemanagercreatenodetopology-method"></a><a name="createnodetopology"></a>IResourceManager::CreateNodeTopology, méthode  
+##  <a name="createnodetopology"></a>IResourceManager::CreateNodeTopology, méthode  
  Les versions de présent uniquement en mode de débogage du runtime, cette méthode est un crochet de test conçu pour faciliter le test du Gestionnaire de ressources sur divers topologies de matériel, sans matériel réel correspondant à la configuration. Avec les versions commerciales du runtime, cette méthode retournera sans exécuter d’action.  
   
 ```
@@ -102,12 +110,12 @@ virtual void CreateNodeTopology(
  `pProcessorGroups`  
  Tableau qui spécifie le groupe de processeurs auquel chaque nœud appartient.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  [invalid_argument](../../../standard-library/invalid-argument-class.md) est levée si le paramètre `nodeCount` a la valeur `0` a été passé, ou si le paramètre `pCoreCount` a la valeur `NULL`.  
   
  [invalid_operation](invalid-operation-class.md) est levée si cette méthode est appelée alors que les autres planificateurs existent dans le processus.  
   
-##  <a name="a-namegetavailablenodecounta--iresourcemanagergetavailablenodecount-method"></a><a name="getavailablenodecount"></a>IResourceManager::getavailablenodecount, méthode  
+##  <a name="getavailablenodecount"></a>IResourceManager::getavailablenodecount, méthode  
  Retourne le nombre de nœuds disponibles pour le Gestionnaire de ressources.  
   
 ```
@@ -117,7 +125,7 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de nœuds disponibles pour le Gestionnaire de ressources.  
   
-##  <a name="a-namegetfirstnodea--iresourcemanagergetfirstnode-method"></a><a name="getfirstnode"></a>IResourceManager::getfirstnode, méthode  
+##  <a name="getfirstnode"></a>IResourceManager::getfirstnode, méthode  
  Retourne le premier nœud dans l’ordre d’énumération comme défini par le Gestionnaire de ressources.  
   
 ```
@@ -127,14 +135,14 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Le premier nœud dans l’ordre d’énumération comme défini par le Gestionnaire de ressources.  
   
-##  <a name="a-nameiresourcemanagerosversiona--iresourcemanagerosversion-enumeration"></a><a name="iresourcemanager__osversion"></a>IResourceManager::OSVersion, énumération  
+##  <a name="iresourcemanager__osversion"></a>IResourceManager::OSVersion, énumération  
  Type énuméré qui représente la version du système d'exploitation.  
   
 ```
 enum OSVersion;
 ```  
   
-##  <a name="a-namereferencea--iresourcemanagerreference-method"></a><a name="reference"></a>IResourceManager::Reference, méthode  
+##  <a name="reference"></a>IResourceManager::Reference, méthode  
  Incrémente le décompte de références sur l’instance du Gestionnaire de ressources.  
   
 ```
@@ -144,7 +152,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Le décompte de références résultant.  
   
-##  <a name="a-nameregisterschedulera--iresourcemanagerregisterscheduler-method"></a><a name="registerscheduler"></a>IResourceManager::RegisterScheduler, méthode  
+##  <a name="registerscheduler"></a>IResourceManager::RegisterScheduler, méthode  
  Inscrit un planificateur avec le Gestionnaire de ressources. Une fois le planificateur inscrit, il doit communiquer avec le Gestionnaire de ressources à l’aide du `ISchedulerProxy` interface retournée.  
   
 ```
@@ -168,7 +176,7 @@ virtual ISchedulerProxy *RegisterScheduler(
   
  La méthode lève un `invalid_argument` exception si le paramètre `pScheduler` a la valeur `NULL` ou si le paramètre `version` n’est pas une version valide pour l’interface de communication.  
   
-##  <a name="a-namereleasea--iresourcemanagerrelease-method"></a><a name="release"></a>IResourceManager::Release, méthode  
+##  <a name="release"></a>IResourceManager::Release, méthode  
  Décrémente le décompte de références sur l’instance du Gestionnaire de ressources. Le Gestionnaire de ressources est détruit lorsque son décompte de références atteint `0`.  
   
 ```
@@ -181,5 +189,5 @@ virtual unsigned int Release() = 0;
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
  [ISchedulerProxy (Structure)](ischedulerproxy-structure.md)   
- [IScheduler (Structure)](ischeduler-structure.md)
+ [IScheduler, structure](ischeduler-structure.md)
 

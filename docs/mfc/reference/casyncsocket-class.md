@@ -10,6 +10,41 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAsyncSocket
+- AFXSOCK/CAsyncSocket
+- AFXSOCK/CAsyncSocket::CAsyncSocket
+- AFXSOCK/CAsyncSocket::Accept
+- AFXSOCK/CAsyncSocket::AsyncSelect
+- AFXSOCK/CAsyncSocket::Attach
+- AFXSOCK/CAsyncSocket::Bind
+- AFXSOCK/CAsyncSocket::Close
+- AFXSOCK/CAsyncSocket::Connect
+- AFXSOCK/CAsyncSocket::Create
+- AFXSOCK/CAsyncSocket::Detach
+- AFXSOCK/CAsyncSocket::FromHandle
+- AFXSOCK/CAsyncSocket::GetLastError
+- AFXSOCK/CAsyncSocket::GetPeerName
+- AFXSOCK/CAsyncSocket::GetPeerNameEx
+- AFXSOCK/CAsyncSocket::GetSockName
+- AFXSOCK/CAsyncSocket::GetSockNameEx
+- AFXSOCK/CAsyncSocket::GetSockOpt
+- AFXSOCK/CAsyncSocket::IOCtl
+- AFXSOCK/CAsyncSocket::Listen
+- AFXSOCK/CAsyncSocket::Receive
+- AFXSOCK/CAsyncSocket::ReceiveFrom
+- AFXSOCK/CAsyncSocket::ReceiveFromEx
+- AFXSOCK/CAsyncSocket::Send
+- AFXSOCK/CAsyncSocket::SendTo
+- AFXSOCK/CAsyncSocket::SendToEx
+- AFXSOCK/CAsyncSocket::SetSockOpt
+- AFXSOCK/CAsyncSocket::ShutDown
+- AFXSOCK/CASyncSocket::Socket
+- AFXSOCK/CAsyncSocket::OnAccept
+- AFXSOCK/CAsyncSocket::OnClose
+- AFXSOCK/CAsyncSocket::OnConnect
+- AFXSOCK/CAsyncSocket::OnOutOfBandData
+- AFXSOCK/CAsyncSocket::OnReceive
+- AFXSOCK/CAsyncSocket::OnSend
+- AFXSOCK/CAsyncSocket::m_hSocket
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -136,7 +171,7 @@ class CAsyncSocket : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxsock.h  
   
-##  <a name="a-nameaccepta--casyncsocketaccept"></a><a name="accept"></a>CAsyncSocket::Accept  
+##  <a name="accept"></a>CAsyncSocket::Accept  
  Appelez cette fonction membre pour accepter une connexion sur un socket.  
   
 ```  
@@ -184,7 +219,7 @@ virtual BOOL Accept(
   
  L’argument `lpSockAddr` est un paramètre de résultat qui est rempli avec l’adresse de connexion de socket, connues de la couche des communications. **Accepter** utilisé avec les types de sockets orientés connexion tels que **SOCK_STREAM**.  
   
-##  <a name="a-nameasyncselecta--casyncsocketasyncselect"></a><a name="asyncselect"></a>CAsyncSocket::AsyncSelect  
+##  <a name="asyncselect"></a>CAsyncSocket::AsyncSelect  
  Appelez cette fonction membre pour demander une notification d’événement pour un socket.  
   
 ```  
@@ -221,7 +256,7 @@ BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONN
 ### <a name="remarks"></a>Remarques  
  Cette fonction est utilisée pour spécifier les fonctions de notification de rappel MFC seront appelées pour le socket. `AsyncSelect`définit automatiquement ce socket en mode non bloquant. Pour plus d’informations, consultez l’article [Windows Sockets : Notifications de sockets](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="a-nameattacha--casyncsocketattach"></a><a name="attach"></a>CAsyncSocket::Attach  
+##  <a name="attach"></a>CAsyncSocket::Attach  
  Appelez cette fonction membre pour attacher le `hSocket` handle vers un `CAsyncSocket` objet.  
   
 ```  
@@ -254,7 +289,7 @@ BOOL Attach(
 ### <a name="remarks"></a>Remarques  
  Le **SOCKET** handle est stocké dans l’objet [m_hSocket](#m_hsocket) membre de données.  
   
-##  <a name="a-namebinda--casyncsocketbind"></a><a name="bind"></a>CAsyncSocket::Bind  
+##  <a name="bind"></a>CAsyncSocket::Bind  
  Appelez cette fonction membre pour associer une adresse locale du socket.  
   
 ```  
@@ -305,7 +340,7 @@ BOOL Bind (
 ### <a name="remarks"></a>Notes  
  Cette routine est utilisée sur un socket de flux de données, ou un datagramme non connecté avant ultérieures **connecter** ou `Listen` les appels. Avant d’accepter les demandes de connexion, un socket de serveur écoute doit sélectionner un numéro de port et faire connaître en Windows Sockets en appelant **lier**. **Lier** établit l’association locale (numéro de port/adresse d’hôte) du socket en attribuant un nom local à un socket sans nom.  
   
-##  <a name="a-namecasyncsocketa--casyncsocketcasyncsocket"></a><a name="casyncsocket"></a>CAsyncSocket::CAsyncSocket  
+##  <a name="casyncsocket"></a>CAsyncSocket::CAsyncSocket  
  Construit un objet socket vide.  
   
 ```  
@@ -315,7 +350,7 @@ CAsyncSocket();
 ### <a name="remarks"></a>Remarques  
  Après la construction de l’objet, vous devez appeler sa **créer** fonction membre pour créer le **SOCKET** de structure de données et lier son adresse. (Sur le côté serveur d’une communication de Windows Sockets, lorsque le socket d’écoute crée un socket à utiliser dans le **accepter** appel, vous n’appelez pas **créer** pour ce socket.)  
   
-##  <a name="a-nameclosea--casyncsocketclose"></a><a name="close"></a>CAsyncSocket::Close  
+##  <a name="close"></a>CAsyncSocket::Close  
  Ferme le socket.  
   
 ```  
@@ -327,7 +362,7 @@ virtual void Close();
   
  Pour `CAsyncSocket`, mais pas pour les `CSocket`, la sémantique de **fermer** sont affectées par les options de socket **SO_LINGER** et **SO_DONTLINGER**. Pour plus d’informations, consultez la fonction membre `GetSockOpt`.  
   
-##  <a name="a-nameconnecta--casyncsocketconnect"></a><a name="connect"></a>CAsyncSocket::Connect  
+##  <a name="connect"></a>CAsyncSocket::Connect  
  Appelez cette fonction membre pour établir une connexion à un flux non connecté ou un socket datagramme.  
   
 ```  
@@ -398,7 +433,7 @@ BOOL Connect(
   
  Pour un socket datagramme (type **SOCK_DGRAM**), une destination par défaut est définie, qui sera utilisée sur ultérieures **envoyer** et **réception** appels.  
   
-##  <a name="a-namecreatea--casyncsocketcreate"></a><a name="create"></a>CAsyncSocket::Create  
+##  <a name="create"></a>CAsyncSocket::Create  
  Appelez le **créer** fonction membre après avoir construit un objet socket pour créer le socket de Windows et l’attacher.  
   
 ```  
@@ -470,14 +505,14 @@ BOOL Create(
   
  Pour plus d’informations sur les sockets de flux de données et de datagramme, consultez les articles [Windows Sockets : arrière-plan](../../mfc/windows-sockets-background.md) et [Windows Sockets : Ports et adresses de Socket](../../mfc/windows-sockets-ports-and-socket-addresses.md) et [API Windows Sockets 2](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-##  <a name="a-namedetacha--casyncsocketdetach"></a><a name="detach"></a>CAsyncSocket::Detach  
+##  <a name="detach"></a>CAsyncSocket::Detach  
  Appelez cette fonction membre pour détacher le **SOCKET** gérer dans le `m_hSocket` membre de données à partir de la `CAsyncSocket` et définissez `m_hSocket` à **NULL**.  
   
 ```  
 SOCKET Detach();
 ```  
   
-##  <a name="a-namefromhandlea--casyncsocketfromhandle"></a><a name="fromhandle"></a>CAsyncSocket::FromHandle  
+##  <a name="fromhandle"></a>CAsyncSocket::FromHandle  
  Retourne un pointeur vers un `CAsyncSocket` objet.  
   
 ```  
@@ -494,7 +529,7 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 ### <a name="remarks"></a>Notes  
  En fonction d’un **SOCKET** gérer, si un `CAsyncSocket` objet n’est pas attaché au handle, la fonction membre retourne **NULL**.  
   
-##  <a name="a-namegetlasterrora--casyncsocketgetlasterror"></a><a name="getlasterror"></a>CAsyncSocket::GetLastError  
+##  <a name="getlasterror"></a>CAsyncSocket::GetLastError  
  Appelez cette fonction membre pour obtenir l’état d’erreur de la dernière opération qui a échoué.  
   
 ```  
@@ -509,7 +544,7 @@ static int PASCAL GetLastError();
   
  Pour plus d’informations sur les codes d’erreur, consultez la page [API Windows Sockets 2](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-##  <a name="a-namegetpeernamea--casyncsocketgetpeername"></a><a name="getpeername"></a>CAsyncSocket::GetPeerName  
+##  <a name="getpeername"></a>CAsyncSocket::GetPeerName  
  Appelez cette fonction membre pour obtenir l’adresse de socket homologue auquel le socket est connecté.  
   
 ```  
@@ -554,7 +589,7 @@ BOOL GetPeerName(
 ### <a name="remarks"></a>Remarques  
  Pour gérer les adresses IPv6, utilisez [CAsyncSocket::GetPeerNameEx](#getpeernameex).  
   
-##  <a name="a-namegetpeernameexa--casyncsocketgetpeernameex"></a><a name="getpeernameex"></a>CAsyncSocket::GetPeerNameEx  
+##  <a name="getpeernameex"></a>CAsyncSocket::GetPeerNameEx  
  Appelez cette fonction membre pour obtenir l’adresse de socket homologue auquel le socket est connecté (gère les adresses IPv6).  
   
 ```  
@@ -588,7 +623,7 @@ BOOL GetPeerNameEx(
 ### <a name="remarks"></a>Remarques  
  Cette fonction est identique à [CAsyncSocket::GetPeerName](#getpeername) , sauf qu’il gère IPv6 résout ainsi que les anciens protocoles.  
   
-##  <a name="a-namegetsocknamea--casyncsocketgetsockname"></a><a name="getsockname"></a>Fonction membre CAsyncSocket::GetSockName  
+##  <a name="getsockname"></a>Fonction membre CAsyncSocket::GetSockName  
  Appelez cette fonction membre pour récupérer le nom local d’un socket.  
   
 ```  
@@ -635,7 +670,7 @@ BOOL GetSockName(
   
  Pour gérer les adresses IPv6, utilisez [CAsyncSocket::GetSockNameEx](#getsocknameex)  
   
-##  <a name="a-namegetsocknameexa--casyncsocketgetsocknameex"></a><a name="getsocknameex"></a>CAsyncSocket::GetSockNameEx  
+##  <a name="getsocknameex"></a>CAsyncSocket::GetSockNameEx  
  Appelez cette fonction membre pour récupérer le nom local d’un socket (gère les adresses IPv6).  
   
 ```  
@@ -671,7 +706,7 @@ BOOL GetSockNameEx(
   
  Cet appel est particulièrement utile lorsque un **connecter** appel a été effectué sans effectuer une **lier** tout d’abord, cet appel fournit le seul moyen par lequel vous pouvez déterminer l’association locale qui a été définie par le système.  
   
-##  <a name="a-namegetsockopta--casyncsocketgetsockopt"></a><a name="getsockopt"></a>CAsyncSocket::GetSockOpt  
+##  <a name="getsockopt"></a>CAsyncSocket::GetSockOpt  
  Appelez cette fonction membre pour récupérer une option de socket.  
   
 ```  
@@ -745,7 +780,7 @@ BOOL GetSockOpt(
   
  Appel de `GetSockOpt` entraîne une option non prise en charge dans le code d’erreur **WSAENOPROTOOPT** retournés à partir de `GetLastError`.  
   
-##  <a name="a-nameioctla--casyncsocketioctl"></a><a name="ioctl"></a>CAsyncSocket::IOCtl  
+##  <a name="ioctl"></a>CAsyncSocket::IOCtl  
  Appelez cette fonction membre pour contrôler le mode d’un socket.  
   
 ```  
@@ -785,7 +820,7 @@ BOOL IOCtl(
   
  Cette fonction est un sous-ensemble de **ioctl()** servent de sockets Berkeley. En particulier, il n’existe aucune commande qui est équivalent à **FIOASYNC**, tandis que **SIOCATMARK** est la commande uniquement de niveau socket qui est pris en charge.  
   
-##  <a name="a-namelistena--casyncsocketlisten"></a><a name="listen"></a>CAsyncSocket::Listen  
+##  <a name="listen"></a>CAsyncSocket::Listen  
  Appelez cette fonction membre pour écouter les demandes de connexion entrantes.  
   
 ```  
@@ -826,14 +861,14 @@ BOOL Listen(int nConnectionBacklog = 5);
   
  `Listen`essaie de continuer à fonctionner rationnelle lorsqu’il n’y a aucuns ports disponibles (descripteurs). Il accepte les connexions jusqu'à ce que la file d’attente est vide. Si les ports sont disponibles, un appel ultérieur à `Listen` ou **accepter** sera rechargement de la file d’attente au actuel ou plus récent » backlog, » si possible et reprend l’écoute des connexions entrantes.  
   
-##  <a name="a-namemhsocketa--casyncsocketmhsocket"></a><a name="m_hsocket"></a>CAsyncSocket::m_hSocket  
+##  <a name="m_hsocket"></a>CAsyncSocket::m_hSocket  
  Contient le **SOCKET** handle pour le socket encapsulé par cet `CAsyncSocket` objet.  
   
 ```  
 SOCKET m_hSocket;  
 ```  
   
-##  <a name="a-nameonaccepta--casyncsocketonaccept"></a><a name="onaccept"></a>CAsyncSocket::OnAccept  
+##  <a name="onaccept"></a>CAsyncSocket::OnAccept  
  Appelée par l’infrastructure pour avertir un socket d’écoute qu’il peut accepter les demandes de connexion en attente en appelant le [accepter](#accept) fonction membre.  
   
 ```  
@@ -851,7 +886,7 @@ virtual void OnAccept(int nErrorCode);
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [Windows Sockets : Notifications de sockets](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="a-nameonclosea--casyncsocketonclose"></a><a name="onclose"></a>CAsyncSocket::OnClose  
+##  <a name="onclose"></a>CAsyncSocket::OnClose  
  Appelée par l’infrastructure pour avertir le socket que le socket connecté est fermé par son processus.  
   
 ```  
@@ -873,7 +908,7 @@ virtual void OnClose(int nErrorCode);
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [Windows Sockets : Notifications de sockets](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="a-nameonconnecta--casyncsocketonconnect"></a><a name="onconnect"></a>CAsyncSocket::OnConnect  
+##  <a name="onconnect"></a>CAsyncSocket::OnConnect  
  Appelé par l’infrastructure pour notifier au socket de connexion que sa tentative de connexion est terminée avec succès ou erreur.  
   
 ```  
@@ -924,7 +959,7 @@ virtual void OnConnect(int nErrorCode);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCAsyncSocket n °&1;](../../mfc/reference/codesnippet/cpp/casyncsocket-class_1.cpp)]  
   
-##  <a name="a-nameonoutofbanddataa--casyncsocketonoutofbanddata"></a><a name="onoutofbanddata"></a>CAsyncSocket::OnOutOfBandData  
+##  <a name="onoutofbanddata"></a>CAsyncSocket::OnOutOfBandData  
  Appelé par l’infrastructure pour notifier au socket récepteur que le socket émetteur est hors-bande les données à envoyer.  
   
 ```  
@@ -944,7 +979,7 @@ virtual void OnOutOfBandData(int nErrorCode);
   
  MFC prend en charge les données hors bande, mais les utilisateurs de la classe `CAsyncSocket` est déconseillé de l’utiliser. La plus simple consiste à créer un deuxième socket pour transmettre ces données. Pour plus d’informations sur les données hors bande, consultez la page [Windows Sockets : Notifications de sockets](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="a-nameonreceivea--casyncsocketonreceive"></a><a name="onreceive"></a>CAsyncSocket::OnReceive  
+##  <a name="onreceive"></a>CAsyncSocket::OnReceive  
  Appelée par l’infrastructure pour avertir le socket qu’il existe des données dans la mémoire tampon qui peut être récupérée en appelant le **réception** fonction membre.  
   
 ```  
@@ -965,7 +1000,7 @@ virtual void OnReceive(int nErrorCode);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCAsyncSocket n °&2;](../../mfc/reference/codesnippet/cpp/casyncsocket-class_2.cpp)]  
   
-##  <a name="a-nameonsenda--casyncsocketonsend"></a><a name="onsend"></a>CAsyncSocket::OnSend  
+##  <a name="onsend"></a>CAsyncSocket::OnSend  
  Appelée par l’infrastructure pour avertir le socket qu’il peut maintenant envoyer des données en appelant le **envoyer** fonction membre.  
   
 ```  
@@ -986,7 +1021,7 @@ virtual void OnSend(int nErrorCode);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCAsyncSocket n °&3;](../../mfc/reference/codesnippet/cpp/casyncsocket-class_3.cpp)]  
   
-##  <a name="a-nameoperatoreqa--casyncsocketoperator-"></a><a name="operator_eq"></a>CAsyncSocket::operator =  
+##  <a name="operator_eq"></a>CAsyncSocket::operator =  
  Affecte une nouvelle valeur à un `CAsyncSocket` objet.  
   
 ```  
@@ -1000,7 +1035,7 @@ void operator=(const CAsyncSocket& rSrc);
 ### <a name="remarks"></a>Remarques  
  Appelez cette fonction pour copier une existante `CAsyncSocket` objet vers un autre `CAsyncSocket` objet.  
   
-##  <a name="a-nameoperatorsocketa--casyncsocketoperator-socket"></a><a name="operator_socket"></a>CAsyncSocket::operator SOCKET  
+##  <a name="operator_socket"></a>CAsyncSocket::operator SOCKET  
  Utilisez cet opérateur pour récupérer le **SOCKET** gérer de la `CAsyncSocket` objet.  
   
 ```  
@@ -1013,7 +1048,7 @@ operator SOCKET() const;
 ### <a name="remarks"></a>Notes  
  Vous pouvez utiliser le handle pour appeler directement les API Windows.  
   
-##  <a name="a-namereceivea--casyncsocketreceive"></a><a name="receive"></a>CAsyncSocket::Receive  
+##  <a name="receive"></a>CAsyncSocket::Receive  
  Appelez cette fonction membre pour recevoir des données à partir d’un socket.  
   
 ```  
@@ -1078,7 +1113,7 @@ virtual int Receive(
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CAsyncSocket::OnReceive](#onreceive).  
   
-##  <a name="a-namereceivefroma--casyncsocketreceivefrom"></a><a name="receivefrom"></a>CAsyncSocket::ReceiveFrom  
+##  <a name="receivefrom"></a>CAsyncSocket::ReceiveFrom  
  Appelez cette fonction membre pour recevoir un datagramme et stocke l’adresse source dans le [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure ou dans `rSocketAddress`.  
   
 ```  
@@ -1166,7 +1201,7 @@ int ReceiveFrom(
   
  Si le socket est de type **SOCK_STREAM** et le côté distant a fermé la connexion en douceur, un `ReceiveFrom` se termine immédiatement avec 0 octets reçus.  
   
-##  <a name="a-namereceivefromexa--casyncsocketreceivefromex"></a><a name="receivefromex"></a>CAsyncSocket::ReceiveFromEx  
+##  <a name="receivefromex"></a>CAsyncSocket::ReceiveFromEx  
  Appelez cette fonction membre pour recevoir un datagramme et stocke l’adresse source dans le [SOCKADDR](../../mfc/reference/sockaddr-structure.md) structure ou dans `rSocketAddress` (prend en charge les adresses IPv6).  
   
 ```  
@@ -1240,7 +1275,7 @@ int ReceiveFromEx(
   
  Si le socket est de type **SOCK_STREAM** et le côté distant a fermé la connexion en douceur, un `ReceiveFromEx` se termine immédiatement avec 0 octets reçus.  
   
-##  <a name="a-namesenda--casyncsocketsend"></a><a name="send"></a>CAsyncSocket::Send  
+##  <a name="send"></a>CAsyncSocket::Send  
  Appelez cette fonction membre pour l’envoi de données sur un socket connecté.  
   
 ```  
@@ -1309,7 +1344,7 @@ virtual int Send(
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CAsyncSocket::OnSend](#onsend).  
   
-##  <a name="a-namesendtoa--casyncsocketsendto"></a><a name="sendto"></a>CAsyncSocket::SendTo  
+##  <a name="sendto"></a>CAsyncSocket::SendTo  
  Appelez cette fonction membre pour envoyer des données vers une destination spécifique.  
   
 ```  
@@ -1409,7 +1444,7 @@ int SendTo(
   
  Pour gérer les adresses IPv6, utilisez [CAsyncSocket::SendToEx](#sendtoex).  
   
-##  <a name="a-namesendtoexa--casyncsocketsendtoex"></a><a name="sendtoex"></a>CAsyncSocket::SendToEx  
+##  <a name="sendtoex"></a>CAsyncSocket::SendToEx  
  Appelez cette fonction membre pour envoyer des données vers une destination spécifique (gère les adresses IPv6).  
   
 ```  
@@ -1495,7 +1530,7 @@ int SendToEx(
   
  Pour envoyer une diffusion (sur un **SOCK_DGRAM** uniquement), l’adresse dans le `lpSockAddr` paramètre doit être construit à l’aide de l’adresse IP spéciale **INADDR_BROADCAST** (défini dans le fichier d’en-tête Windows Sockets WINSOCK. (H) avec le numéro de port souhaité. Ou, si le `lpszHostAddress` paramètre est **NULL**, le socket est configuré pour la diffusion. Il est généralement déconseillé pour un datagramme diffusé à dépasser la taille à laquelle la fragmentation peut se produire, ce qui implique que la partie données du datagramme (à l’exception des en-têtes) ne doit pas dépasser 512 octets.  
   
-##  <a name="a-namesetsockopta--casyncsocketsetsockopt"></a><a name="setsockopt"></a>CAsyncSocket::SetSockOpt  
+##  <a name="setsockopt"></a>CAsyncSocket::SetSockOpt  
  Appelez cette fonction membre pour définir une option de socket.  
   
 ```  
@@ -1586,7 +1621,7 @@ BOOL SetSockOpt(
 |**SO_TYPE**|`int`|Type de socket.|  
 |**IP_OPTIONS**||Définir le champ d’options dans l’en-tête IP.|  
   
-##  <a name="a-nameshutdowna--casyncsocketshutdown"></a><a name="shutdown"></a>CAsyncSocket::ShutDown  
+##  <a name="shutdown"></a>CAsyncSocket::ShutDown  
  Appel de cette fonction membre pour désactiver envoie, reçoit, ou les deux sur le socket.  
   
 ```  
@@ -1628,7 +1663,7 @@ BOOL ShutDown(int nHow = sends);
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CAsyncSocket::OnReceive](#onreceive).  
   
-##  <a name="a-namesocketa--casyncsocketsocket"></a><a name="socket"></a>CASyncSocket::Socket  
+##  <a name="socket"></a>CASyncSocket::Socket  
  Alloue un handle de socket.  
   
 ```  

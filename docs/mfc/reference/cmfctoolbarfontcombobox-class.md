@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::CMFCToolBarFontComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::GetFontDesc
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::SetFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +98,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxtoolbarfontcombobox.h  
   
-##  <a name="a-namecmfctoolbarfontcomboboxa--cmfctoolbarfontcomboboxcmfctoolbarfontcombobox"></a><a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
+##  <a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
  Construit un [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) objet.  
   
 ```  
@@ -158,7 +162,7 @@ CMFCToolBarFontComboBox();
   
  [!code-cpp[NVC_MFC_WordPad&#7;](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
   
-##  <a name="a-namegetfontdesca--cmfctoolbarfontcomboboxgetfontdesc"></a><a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
  Retourne un pointeur vers le `CMFCFontInfo` objet pour un index spécifié dans la zone de liste déroulante.  
   
 ```  
@@ -172,7 +176,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un `CMFCFontInfo` objet. Si `iIndex` ne spécifie pas un index valide, la valeur de retour est `NULL`.  
   
-##  <a name="a-namemnfontheighta--cmfctoolbarfontcomboboxmnfontheight"></a><a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
+##  <a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
  Spécifie la hauteur, en pixels, de caractères dans la zone de liste déroulante de police si la zone de liste déroulante est propriétaire du style de dessin.  
   
 ```  
@@ -182,7 +186,7 @@ static int m_nFontHeight
 ### <a name="remarks"></a>Remarques  
  Si la `m_nFontHeight` est égale à 0, la hauteur est calculée automatiquement en fonction de la police par défaut de la zone de liste déroulante. La hauteur inclut à la fois la hauteur des caractères au-dessus de la ligne de base et la profondeur des caractères en dessous de la ligne de base.  
   
-##  <a name="a-namesetfonta--cmfctoolbarfontcomboboxsetfont"></a><a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
+##  <a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
  Sélectionne que la police dans la zone de liste déroulante de police en fonction du nom de la police et le caractère définie qui est spécifiés dans les paramètres.  
   
 ```  

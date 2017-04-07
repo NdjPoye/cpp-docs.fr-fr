@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IDataObjectImpl
+- ATLCTL/ATL::IDataObjectImpl
+- ATLCTL/ATL::IDataObjectImpl::DAdvise
+- ATLCTL/ATL::IDataObjectImpl::DUnadvise
+- ATLCTL/ATL::IDataObjectImpl::EnumDAdvise
+- ATLCTL/ATL::IDataObjectImpl::EnumFormatEtc
+- ATLCTL/ATL::IDataObjectImpl::FireDataChange
+- ATLCTL/ATL::IDataObjectImpl::GetCanonicalFormatEtc
+- ATLCTL/ATL::IDataObjectImpl::GetData
+- ATLCTL/ATL::IDataObjectImpl::GetDataHere
+- ATLCTL/ATL::IDataObjectImpl::QueryGetData
+- ATLCTL/ATL::IDataObjectImpl::SetData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +104,7 @@ class IDataObjectImpl
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlctl.h  
   
-##  <a name="a-namedadvisea--idataobjectimpldadvise"></a><a name="dadvise"></a>IDataObjectImpl::DAdvise  
+##  <a name="dadvise"></a>IDataObjectImpl::DAdvise  
  Établit une connexion entre l’objet de données et un récepteur de notifications.  
   
 ```
@@ -111,7 +122,7 @@ HRESULT DAdvise(
   
  Consultez la page [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedunadvisea--idataobjectimpldunadvise"></a><a name="dunadvise"></a>IDataObjectImpl::DUnadvise  
+##  <a name="dunadvise"></a>IDataObjectImpl::DUnadvise  
  Met fin à une connexion précédemment établie par [DAdvise](#dadvise).  
   
 ```
@@ -121,7 +132,7 @@ HRESULT DUnadvise(DWORD dwConnection);
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameenumdadvisea--idataobjectimplenumdadvise"></a><a name="enumdadvise"></a>IDataObjectImpl::EnumDAdvise  
+##  <a name="enumdadvise"></a>IDataObjectImpl::EnumDAdvise  
  Crée un énumérateur pour itérer sur les connexions de notifications actuelles.  
   
 ```
@@ -135,7 +146,7 @@ HRESULT DAdvise(
 ### <a name="remarks"></a>Notes  
  Consultez la page [IDataObject::EnumDAdvise](http://msdn.microsoft.com/library/windows/desktop/ms680127) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameenumformatetca--idataobjectimplenumformatetc"></a><a name="enumformatetc"></a>IDataObjectImpl::EnumFormatEtc  
+##  <a name="enumformatetc"></a>IDataObjectImpl::EnumFormatEtc  
  Crée un énumérateur pour itérer au sein du **FORMATETC** structures pris en charge par l’objet de données.  
   
 ```
@@ -150,7 +161,7 @@ HRESULT EnumFormatEtc(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **E_NOTIMPL**.  
   
-##  <a name="a-namefiredatachangea--idataobjectimplfiredatachange"></a><a name="firedatachange"></a>IDataObjectImpl::FireDataChange  
+##  <a name="firedatachange"></a>IDataObjectImpl::FireDataChange  
  Envoie une notification de modification à chaque récepteur de notifications en cours de gestion.  
   
 ```
@@ -160,7 +171,7 @@ HRESULT FireDataChange();
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
   
-##  <a name="a-namegetcanonicalformatetca--idataobjectimplgetcanonicalformatetc"></a><a name="getcanonicalformatetc"></a>IDataObjectImpl::GetCanonicalFormatEtc  
+##  <a name="getcanonicalformatetc"></a>IDataObjectImpl::GetCanonicalFormatEtc  
  Récupère un logiquement équivalente **FORMATETC** structure à celui qui est plus complexe.  
   
 ```
@@ -173,7 +184,7 @@ HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut)
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IDataObject::GetCanonicalFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms680685) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdataa--idataobjectimplgetdata"></a><a name="getdata"></a>IDataObjectImpl::GetData  
+##  <a name="getdata"></a>IDataObjectImpl::GetData  
  Transfère des données à partir de l’objet de données au client.  
   
 ```
@@ -187,7 +198,7 @@ HRESULT GetData(
   
  Consultez la page [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetdataherea--idataobjectimplgetdatahere"></a><a name="getdatahere"></a>IDataObjectImpl::GetDataHere  
+##  <a name="getdatahere"></a>IDataObjectImpl::GetDataHere  
  Semblable à `GetData`, hormis le fait que le client doit allouer la **STGMEDIUM** structure.  
   
 ```
@@ -202,7 +213,7 @@ HRESULT GetDataHere(
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IDataObject::GetDataHere a](http://msdn.microsoft.com/library/windows/desktop/ms687266) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namequerygetdataa--idataobjectimplquerygetdata"></a><a name="querygetdata"></a>IDataObjectImpl::QueryGetData  
+##  <a name="querygetdata"></a>IDataObjectImpl::QueryGetData  
  Détermine si l’objet de données prend en charge un particulier **FORMATETC** structure de transfert de données.  
   
 ```
@@ -215,7 +226,7 @@ HRESULT QueryGetData(FORMATETC* pformatetc);
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namesetdataa--idataobjectimplsetdata"></a><a name="setdata"></a>IDataObjectImpl::SetData  
+##  <a name="setdata"></a>IDataObjectImpl::SetData  
  Transfère des données à partir du client à l’objet de données.  
   
 ```

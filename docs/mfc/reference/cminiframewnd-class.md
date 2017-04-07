@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMiniFrameWnd
+- AFXWIN/CMiniFrameWnd
+- AFXWIN/CMiniFrameWnd::CMiniFrameWnd
+- AFXWIN/CMiniFrameWnd::Create
+- AFXWIN/CMiniFrameWnd::CreateEx
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +90,7 @@ class CMiniFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="a-namecminiframewnda--cminiframewndcminiframewnd"></a><a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
+##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
  Construit un `CMiniFrameWnd` de l’objet, mais ne crée pas de la fenêtre.  
   
 ```  
@@ -96,7 +100,7 @@ CMiniFrameWnd();
 ### <a name="remarks"></a>Remarques  
  Pour créer la fenêtre, appelez [CMiniFrameWnd::Create](#create).  
   
-##  <a name="a-namecreatea--cminiframewndcreate"></a><a name="create"></a>CMiniFrameWnd::Create  
+##  <a name="create"></a>CMiniFrameWnd::Create  
  Crée la fenêtre mini-frame Windows et l’attache à le `CMiniFrameWnd` objet.  
   
 ```  
@@ -158,7 +162,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Notes  
  **Créer** initialise le nom de classe et le nom de la fenêtre de la fenêtre et enregistre les valeurs par défaut pour le style et le parent.  
   
-##  <a name="a-namecreateexa--cminiframewndcreateex"></a><a name="createex"></a>CMiniFrameWnd::CreateEx  
+##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
  Crée un objet `CMiniFrameWnd`.  
   
 ```  

@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComSafeArrayBound
-- ATL::CComSafeArrayBound
 - CComSafeArrayBound
+- ATLSAFE/ATL::CComSafeArrayBound
+- ATLSAFE/ATL::CComSafeArrayBound
+- ATLSAFE/ATL::GetCount
+- ATLSAFE/ATL::GetLowerBound
+- ATLSAFE/ATL::GetUpperBound
+- ATLSAFE/ATL::SetCount
+- ATLSAFE/ATL::SetLowerBound
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +82,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlsafe.h  
   
-##  <a name="a-nameccomsafearraybounda--ccomsafearrayboundccomsafearraybound"></a><a name="ccomsafearraybound"></a>CComSafeArrayBound::CComSafeArrayBound  
+##  <a name="ccomsafearraybound"></a>CComSafeArrayBound::CComSafeArrayBound  
  Constructeur.  
   
 ```
@@ -94,7 +99,7 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 ### <a name="remarks"></a>Remarques  
  Si le tableau est accessible à partir d’un programme Visual C++, il est recommandé que la limite inférieure est défini sur 0. Il peut être préférable d’utiliser une valeur de limite inférieure différente si le tableau doit être utilisé avec d’autres langages, tels que Visual Basic.  
   
-##  <a name="a-namegetcounta--ccomsafearrayboundgetcount"></a><a name="getcount"></a>CComSafeArrayBound::GetCount  
+##  <a name="getcount"></a>CComSafeArrayBound::GetCount  
  Appelez cette méthode pour retourner le nombre d’éléments.  
   
 ```
@@ -107,7 +112,7 @@ ULONG GetCount() const throw();
 ### <a name="remarks"></a>Remarques  
  Si le texte associé `CComSafeArray` objet représente un tableau multidimensionnel, cette méthode retourne uniquement le nombre total d’éléments dans la dimension la plus à droite. Utilisez [CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount) pour obtenir le nombre total d’éléments.  
   
-##  <a name="a-namegetlowerbounda--ccomsafearrayboundgetlowerbound"></a><a name="getlowerbound"></a>CComSafeArrayBound::GetLowerBound  
+##  <a name="getlowerbound"></a>CComSafeArrayBound::GetLowerBound  
  Appelez cette méthode pour retourner la limite inférieure.  
   
 ```
@@ -117,7 +122,7 @@ LONG GetLowerBound() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la limite inférieure de la `CComSafeArrayBound` objet.  
   
-##  <a name="a-namegetupperbounda--ccomsafearrayboundgetupperbound"></a><a name="getupperbound"></a>CComSafeArrayBound::GetUpperBound  
+##  <a name="getupperbound"></a>CComSafeArrayBound::GetUpperBound  
  Appelez cette méthode pour retourner la limite supérieure.  
   
 ```
@@ -130,7 +135,7 @@ LONG GetUpperBound() const throw();
 ### <a name="remarks"></a>Remarques  
  La limite supérieure varie selon le nombre d’éléments et la valeur de limite inférieure. Par exemple, si la limite inférieure est 0 et le nombre d’éléments est 10, la limite supérieure est automatiquement fixée à 9.  
   
-##  <a name="a-nameoperatoreqa--ccomsafearrayboundoperator-"></a><a name="operator_eq"></a>CComSafeArrayBound::operator =  
+##  <a name="operator_eq"></a>CComSafeArrayBound::operator =  
  Définit le `CComSafeArrayBound` une nouvelle valeur.  
   
 ```
@@ -151,7 +156,7 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
 ### <a name="remarks"></a>Remarques  
  Le `CComSafeArrayBound` objet peut être assigné à l’aide d’un fichier `CComSafeArrayBound`, ou en fournissant le nombre d’éléments, dans lequel les cas, la limite inférieure est définie sur 0 par défaut.  
   
-##  <a name="a-namesetcounta--ccomsafearrayboundsetcount"></a><a name="setcount"></a>CComSafeArrayBound::SetCount  
+##  <a name="setcount"></a>CComSafeArrayBound::SetCount  
  Appelez cette méthode pour définir le nombre d’éléments.  
   
 ```
@@ -165,7 +170,7 @@ ULONG SetCount(ULONG ulCount) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne le nombre d’éléments dans le `CComSafeArrayBound` objet.  
   
-##  <a name="a-namesetlowerbounda--ccomsafearrayboundsetlowerbound"></a><a name="setlowerbound"></a>CComSafeArrayBound::SetLowerBound  
+##  <a name="setlowerbound"></a>CComSafeArrayBound::SetLowerBound  
  Appelez cette méthode pour définir la limite inférieure.  
   
 ```

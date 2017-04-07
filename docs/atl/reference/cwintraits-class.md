@@ -10,11 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinTraits
-- CMDIChildWinTraits
-- ATL.CWinTraits
-- CFrameWinTraits
-- ATL::CWinTraits
-- CControlWinTraits
+- ATLWIN/ATL::CWinTraits
+- ATLWIN/ATL::CWinTraits::GetWndExStyle
+- ATLWIN/ATL::CWinTraits::GetWndStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +95,7 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h  
   
-##  <a name="a-namegetwndstylea--cwintraitsgetwndstyle"></a><a name="getwndstyle"></a>CWinTraits::GetWndStyle  
+##  <a name="getwndstyle"></a>CWinTraits::GetWndStyle  
  Appelez cette fonction pour récupérer les styles standards de le `CWinTraits` objet.  
   
 ```
@@ -111,7 +109,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="return-value"></a>Valeur de retour  
  Les styles de fenêtre standard de l’objet.  
   
-##  <a name="a-namegetwndexstylea--cwintraitsgetwndexstyle"></a><a name="getwndexstyle"></a>CWinTraits::GetWndExStyle  
+##  <a name="getwndexstyle"></a>CWinTraits::GetWndExStyle  
  Appelez cette fonction pour récupérer les styles étendus de la `CWinTraits` objet.  
   
 ```

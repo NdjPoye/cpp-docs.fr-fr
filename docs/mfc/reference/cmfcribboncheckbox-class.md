@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCheckBox
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::CMFCRibbonCheckBox
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::GetCompactSize
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::GetIntermediateSize
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::GetRegularSize
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::IsDrawTooltipImage
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::OnDraw
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::OnDrawMenuImage
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::OnDrawOnList
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::SetACCData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +101,7 @@ où `nID` correspond à l'ID de commande de case à cocher et `lpszText` représ
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxribboncheckbox.h  
   
-##  <a name="a-namecmfcribboncheckboxa--cmfcribboncheckboxcmfcribboncheckbox"></a><a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox  
+##  <a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox  
  Constructeur d’un objet de la case à cocher du ruban  
   
 ```  
@@ -115,7 +125,7 @@ CMFCRibbonCheckBox(
   
  [!code-cpp[NVC_MFC_RibbonApp&#17;](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]  
   
-##  <a name="a-namegetcompactsizea--cmfcribboncheckboxgetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonCheckBox::GetCompactSize  
+##  <a name="getcompactsize"></a>CMFCRibbonCheckBox::GetCompactSize  
  En cas de substitution, obtient la taille de la case à cocher compacte.  
   
 ```  
@@ -132,7 +142,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="remarks"></a>Remarques  
  Si ne pas substituée, retourne la taille de la case à cocher intermédiaire.  
   
-##  <a name="a-namegetintermediatesizea--cmfcribboncheckboxgetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonCheckBox::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>CMFCRibbonCheckBox::GetIntermediateSize  
  Obtient la taille de la case à cocher intermédiaire.  
   
 ```  
@@ -149,7 +159,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="remarks"></a>Remarques  
  Si ne pas substituée, calcule la taille intermédiaire comme la taille de la case à cocher par défaut ( `AFX_CHECK_BOX_DEFAULT_SIZE`) ainsi que la taille du texte, ainsi que les marges.  
   
-##  <a name="a-namegetregularsizea--cmfcribboncheckboxgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonCheckBox::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonCheckBox::GetRegularSize  
  Obtient la taille de la case à cocher standard.  
   
 ```  
@@ -166,7 +176,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>Remarques  
  Si ne pas substituée, retourne la taille de la case à cocher intermédiaire.  
   
-##  <a name="a-nameisdrawtooltipimagea--cmfcribboncheckboxisdrawtooltipimage"></a><a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawTooltipImage  
+##  <a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawTooltipImage  
  Indique s’il existe une image de l’info-bulle associée à la case à cocher.  
   
 ```  
@@ -178,7 +188,7 @@ virtual BOOL IsDrawTooltipImage() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameondrawa--cmfcribboncheckboxondraw"></a><a name="ondraw"></a>CMFCRibbonCheckBox::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonCheckBox::OnDraw  
  Appelé par l’infrastructure pour dessiner la case à cocher à l’aide d’un contexte de périphérique spécifié.  
   
 ```  
@@ -191,7 +201,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameondrawmenuimagea--cmfcribboncheckboxondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMFCRibbonCheckBox::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>CMFCRibbonCheckBox::OnDrawMenuImage  
  Appelé par l’infrastructure pour dessiner une image de menu pour la case à cocher.  
   
 ```  
@@ -211,7 +221,7 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ### <a name="remarks"></a>Notes  
  Retourne si ne pas substituée, `FALSE`.  
   
-##  <a name="a-nameondrawonlista--cmfcribboncheckboxondrawonlist"></a><a name="ondrawonlist"></a>CMFCRibbonCheckBox::OnDrawOnList  
+##  <a name="ondrawonlist"></a>CMFCRibbonCheckBox::OnDrawOnList  
  Appelé par l’infrastructure pour dessiner la case à cocher dans une zone de liste de commandes.  
   
 ```  
@@ -245,7 +255,7 @@ virtual void OnDrawOnList(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetaccdataa--cmfcribboncheckboxsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonCheckBox::SetACCData  
+##  <a name="setaccdata"></a>CMFCRibbonCheckBox::SetACCData  
  Définit les données d’accessibilité pour le contrôle checkbox.  
   
 ```  

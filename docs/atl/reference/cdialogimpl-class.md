@@ -10,8 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDialogImpl
-- ATL.CDialogImpl
-- ATL::CDialogImpl
+- ATLWIN/ATL::CDialogImpl
+- ATLWIN/ATL::Create
+- ATLWIN/ATL::DestroyWindow
+- ATLWIN/ATL::DoModal
+- ATLWIN/ATL::EndDialog
+- ATLWIN/ATL::GetDialogProc
+- ATLWIN/ATL::MapDialogRect
+- ATLWIN/ATL::OnFinalMessage
+- ATLWIN/ATL::DialogProc
+- ATLWIN/ATL::StartDialogProc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +123,7 @@ template <class T,
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h  
   
-##  <a name="a-namecreatea--cdialogimplcreate"></a><a name="create"></a>CDialogImpl::Create  
+##  <a name="create"></a>CDialogImpl::Create  
  Crée une boîte de dialogue non modale.  
   
 ```  
@@ -145,7 +153,7 @@ HWND Create(
 ### <a name="remarks"></a>Remarques  
  Cette boîte de dialogue est automatiquement joint à la `CDialogImpl` objet. Pour créer une boîte de dialogue modale, appelez [DoModal](#domodal). Le deuxième remplacement ci-dessus est utilisé uniquement avec [CComControl](../../atl/reference/ccomcontrol-class.md).  
   
-##  <a name="a-namedestroywindowa--cdialogimpldestroywindow"></a><a name="destroywindow"></a>CDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>CDialogImpl::DestroyWindow  
  Détruit une boîte de dialogue non modale.  
   
 ```  
@@ -161,7 +169,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>Remarques  
  Retourne **TRUE** si la boîte de dialogue a été détruite ; sinon **FALSE**.  
   
-##  <a name="a-namedialogproca--cdialogimpldialogproc"></a><a name="dialogproc"></a>CDialogImpl::DialogProc  
+##  <a name="dialogproc"></a>CDialogImpl::DialogProc  
  Cette fonction statique implémente la procédure de boîte de dialogue.  
   
 ```  
@@ -196,7 +204,7 @@ static LRESULT CALLBACK DialogProc(
   
  Vous pouvez substituer `DialogProc` pour fournir un autre mécanisme de gestion des messages.  
   
-##  <a name="a-namedomodala--cdialogimpldomodal"></a><a name="domodal"></a>CDialogImpl::DoModal  
+##  <a name="domodal"></a>CDialogImpl::DoModal  
  Crée une boîte de dialogue modale.  
   
 ```   
@@ -220,7 +228,7 @@ INT_PTR DoModal(
   
  Pour créer une boîte de dialogue non modale, appelez [créer](#create).  
   
-##  <a name="a-nameenddialoga--cdialogimplenddialog"></a><a name="enddialog"></a>CDialogImpl::EndDialog  
+##  <a name="enddialog"></a>CDialogImpl::EndDialog  
  Détruit une boîte de dialogue modale.  
   
 ```   
@@ -240,7 +248,7 @@ BOOL EndDialog(int nRetCode);
 > [!NOTE]
 >  N’appelez pas `EndDialog` pour détruire une boîte de dialogue non modale. Appelez [CWindow::DestroyWindow](../../atl/reference/cwindow-class.md#destroywindow) à la place.  
   
-##  <a name="a-namegetdialogproca--cdialogimplgetdialogproc"></a><a name="getdialogproc"></a>CDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>CDialogImpl::GetDialogProc  
  Retourne `DialogProc`, la procédure de boîte de dialogue actuelle.  
   
 ```   
@@ -253,7 +261,7 @@ virtual WNDPROC GetDialogProc();
 ### <a name="remarks"></a>Remarques  
  Substituez cette méthode pour remplacer la procédure de la boîte de dialogue par les vôtres.  
   
-##  <a name="a-namemapdialogrecta--cdialogimplmapdialogrect"></a><a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
+##  <a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
  Convertit des unités (maps), les unités de boîte de dialogue du rectangle spécifié à l’écran (pixels).  
   
 ```   
@@ -270,7 +278,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="remarks"></a>Remarques  
  La fonction remplace les coordonnées spécifié `RECT` structure avec les coordonnées converties, ce qui permet la structure à utiliser pour créer une boîte de dialogue ou la position d’un contrôle dans une boîte de dialogue.  
   
-##  <a name="a-nameonfinalmessagea--cdialogimplonfinalmessage"></a><a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
+##  <a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
  Appelé après la réception du dernier message (généralement `WM_NCDESTROY`).  
   
 ```   
@@ -284,7 +292,7 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="remarks"></a>Notes  
  Notez que si vous souhaitez supprimer automatiquement votre objet lors de la destruction de la fenêtre, vous pouvez appeler `delete this;` ici.  
   
-##  <a name="a-namestartdialogproca--cdialogimplstartdialogproc"></a><a name="startdialogproc"></a>CDialogImpl::StartDialogProc  
+##  <a name="startdialogproc"></a>CDialogImpl::StartDialogProc  
  Appelée une seule fois, lorsque le premier message est reçu, pour traiter les messages envoyés à la boîte de dialogue.  
   
 ```   

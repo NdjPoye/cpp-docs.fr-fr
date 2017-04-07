@@ -296,9 +296,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 0df76ac331827a865068de0488e75e6ec1bb9130
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 1889e0de5f1c7ac588822d8c1268e2775b186542
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="norm4-class"></a>norm_4, classe
@@ -328,155 +328,155 @@ class norm_4;
   
 |Nom|Description|  
 |----------|-----------------|  
-|norm_4::get_w (méthode)||  
-|norm_4::get_wx (méthode)||  
-|norm_4::get_wxy (méthode)||  
-|norm_4::get_wxyz (méthode)||  
-|norm_4::get_wxz (méthode)||  
-|norm_4::get_wxzy (méthode)||  
-|norm_4::get_wy (méthode)||  
-|norm_4::get_wyx (méthode)||  
-|norm_4::get_wyxz (méthode)||  
-|norm_4::get_wyz (méthode)||  
-|norm_4::get_wyzx (méthode)||  
-|norm_4::get_wz (méthode)||  
-|norm_4::get_wzx (méthode)||  
-|norm_4::get_wzxy (méthode)||  
-|norm_4::get_wzy (méthode)||  
-|norm_4::get_wzyx (méthode)||  
-|norm_4::get_X (méthode)||  
-|norm_4::get_xw (méthode)||  
-|norm_4::get_xwy (méthode)||  
-|norm_4::get_xwyz (méthode)||  
-|norm_4::get_xwz (méthode)||  
-|norm_4::get_xwzy (méthode)||  
-|norm_4::get_xy (méthode)||  
-|norm_4::get_xyw (méthode)||  
-|norm_4::get_xywz (méthode)||  
-|norm_4::get_xyz (méthode)||  
-|norm_4::get_xyzw (méthode)||  
-|norm_4::get_xz (méthode)||  
-|norm_4::get_xzw (méthode)||  
-|norm_4::get_xzwy (méthode)||  
-|norm_4::get_xzy (méthode)||  
-|norm_4::get_xzyw (méthode)||  
-|norm_4::get_y (méthode)||  
-|norm_4::get_yw (méthode)||  
-|norm_4::get_ywx (méthode)||  
-|norm_4::get_ywxz (méthode)||  
-|norm_4::get_ywz (méthode)||  
-|norm_4::get_ywzx (méthode)||  
-|norm_4::get_yx (méthode)||  
-|norm_4::get_yxw (méthode)||  
-|norm_4::get_yxwz (méthode)||  
-|norm_4::get_yxz (méthode)||  
-|norm_4::get_yxzw (méthode)||  
-|norm_4::get_yz (méthode)||  
-|norm_4::get_yzw (méthode)||  
-|norm_4::get_yzwx (méthode)||  
-|norm_4::get_yzx (méthode)||  
-|norm_4::get_yzxw (méthode)||  
-|norm_4::get_z (méthode)||  
-|norm_4::get_zw (méthode)||  
-|norm_4::get_zwx (méthode)||  
-|norm_4::get_zwxy (méthode)||  
-|norm_4::get_zwy (méthode)||  
-|norm_4::get_zwyx (méthode)||  
-|norm_4::get_zx (méthode)||  
-|norm_4::get_zxw (méthode)||  
-|norm_4::get_zxwy (méthode)||  
-|norm_4::get_zxy (méthode)||  
-|norm_4::get_zxyw (méthode)||  
-|norm_4::get_zy (méthode)||  
-|norm_4::get_zyw (méthode)||  
-|norm_4::get_zywx (méthode)||  
-|norm_4::get_zyx (méthode)||  
-|norm_4::get_zyxw (méthode)||  
-|norm_4::ref_a (méthode)||  
-|norm_4::ref_b (méthode)||  
-|norm_4::ref_g (méthode)||  
-|norm_4::ref_r (méthode)||  
-|norm_4::ref_w (méthode)||  
-|norm_4::ref_x (méthode)||  
-|norm_4::ref_y (méthode)||  
-|norm_4::ref_z (méthode)||  
-|norm_4::set_w (méthode)||  
-|norm_4::set_wx (méthode)||  
-|norm_4::set_wxy (méthode)||  
-|norm_4::set_wxyz (méthode)||  
-|norm_4::set_wxz (méthode)||  
-|norm_4::set_wxzy (méthode)||  
-|norm_4::set_wy (méthode)||  
-|norm_4::set_wyx (méthode)||  
-|norm_4::set_wyxz (méthode)||  
-|norm_4::set_wyz (méthode)||  
-|norm_4::set_wyzx (méthode)||  
-|norm_4::set_wz (méthode)||  
-|norm_4::set_wzx (méthode)||  
-|norm_4::set_wzxy (méthode)||  
-|norm_4::set_wzy (méthode)||  
-|norm_4::set_wzyx (méthode)||  
-|norm_4::set_X (méthode)||  
-|norm_4::set_xw (méthode)||  
-|norm_4::set_xwy (méthode)||  
-|norm_4::set_xwyz (méthode)||  
-|norm_4::set_xwz (méthode)||  
-|norm_4::set_xwzy (méthode)||  
-|norm_4::set_xy (méthode)||  
-|norm_4::set_xyw (méthode)||  
-|norm_4::set_xywz (méthode)||  
-|norm_4::set_xyz (méthode)||  
-|norm_4::set_xyzw (méthode)||  
-|norm_4::set_xz (méthode)||  
-|norm_4::set_xzw (méthode)||  
-|norm_4::set_xzwy (méthode)||  
-|norm_4::set_xzy (méthode)||  
-|norm_4::set_xzyw (méthode)||  
-|norm_4::set_y (méthode)||  
-|norm_4::set_yw (méthode)||  
-|norm_4::set_ywx (méthode)||  
-|norm_4::set_ywxz (méthode)||  
-|norm_4::set_ywz (méthode)||  
-|norm_4::set_ywzx (méthode)||  
-|norm_4::set_yx (méthode)||  
-|norm_4::set_yxw (méthode)||  
-|norm_4::set_yxwz (méthode)||  
-|norm_4::set_yxz (méthode)||  
-|norm_4::set_yxzw (méthode)||  
-|norm_4::set_yz (méthode)||  
-|norm_4::set_yzw (méthode)||  
-|norm_4::set_yzwx (méthode)||  
-|norm_4::set_yzx (méthode)||  
-|norm_4::set_yzxw (méthode)||  
-|norm_4::set_z (méthode)||  
-|norm_4::set_zw (méthode)||  
-|norm_4::set_zwx (méthode)||  
-|norm_4::set_zwxy (méthode)||  
-|norm_4::set_zwy (méthode)||  
-|norm_4::set_zwyx (méthode)||  
-|norm_4::set_zx (méthode)||  
-|norm_4::set_zxw (méthode)||  
-|norm_4::set_zxwy (méthode)||  
-|norm_4::set_zxy (méthode)||  
-|norm_4::set_zxyw (méthode)||  
-|norm_4::set_zy (méthode)||  
-|norm_4::set_zyw (méthode)||  
-|norm_4::set_zywx (méthode)||  
-|norm_4::set_zyx (méthode)||  
-|norm_4::set_zyxw (méthode)||  
+|norm_4::get_w||  
+|norm_4::get_wx||  
+|norm_4::get_wxy||  
+|norm_4::get_wxyz||  
+|norm_4::get_wxz||  
+|norm_4::get_wxzy||  
+|norm_4::get_wy||  
+|norm_4::get_wyx||  
+|norm_4::get_wyxz||  
+|norm_4::get_wyz||  
+|norm_4::get_wyzx||  
+|norm_4::get_wz||  
+|norm_4::get_wzx||  
+|norm_4::get_wzxy||  
+|norm_4::get_wzy||  
+|norm_4::get_wzyx||  
+|norm_4::get_X||  
+|norm_4::get_xw||  
+|norm_4::get_xwy||  
+|norm_4::get_xwyz||  
+|norm_4::get_xwz||  
+|norm_4::get_xwzy||  
+|norm_4::get_xy||  
+|norm_4::get_xyw||  
+|norm_4::get_xywz||  
+|norm_4::get_xyz||  
+|norm_4::get_xyzw||  
+|norm_4::get_xz||  
+|norm_4::get_xzw||  
+|norm_4::get_xzwy||  
+|norm_4::get_xzy||  
+|norm_4::get_xzyw||  
+|norm_4::get_y||  
+|norm_4::get_yw||  
+|norm_4::get_ywx||  
+|norm_4::get_ywxz||  
+|norm_4::get_ywz||  
+|norm_4::get_ywzx||  
+|norm_4::get_yx||  
+|norm_4::get_yxw||  
+|norm_4::get_yxwz||  
+|norm_4::get_yxz||  
+|norm_4::get_yxzw||  
+|norm_4::get_yz||  
+|norm_4::get_yzw||  
+|norm_4::get_yzwx||  
+|norm_4::get_yzx||  
+|norm_4::get_yzxw||  
+|norm_4::get_z||  
+|norm_4::get_zw||  
+|norm_4::get_zwx||  
+|norm_4::get_zwxy||  
+|norm_4::get_zwy||  
+|norm_4::get_zwyx||  
+|norm_4::get_zx||  
+|norm_4::get_zxw||  
+|norm_4::get_zxwy||  
+|norm_4::get_zxy||  
+|norm_4::get_zxyw||  
+|norm_4::get_zy||  
+|norm_4::get_zyw||  
+|norm_4::get_zywx||  
+|norm_4::get_zyx||  
+|norm_4::get_zyxw||  
+|norm_4::ref_a||  
+|norm_4::ref_b||  
+|norm_4::ref_g||  
+|norm_4::ref_r||  
+|norm_4::ref_w||  
+|norm_4::ref_x||  
+|norm_4::ref_y||  
+|norm_4::ref_z||  
+|norm_4::set_w||  
+|norm_4::set_wx||  
+|norm_4::set_wxy||  
+|norm_4::set_wxyz||  
+|norm_4::set_wxz||  
+|norm_4::set_wxzy||  
+|norm_4::set_wy||  
+|norm_4::set_wyx||  
+|norm_4::set_wyxz||  
+|norm_4::set_wyz||  
+|norm_4::set_wyzx||  
+|norm_4::set_wz||  
+|norm_4::set_wzx||  
+|norm_4::set_wzxy||  
+|norm_4::set_wzy||  
+|norm_4::set_wzyx||  
+|norm_4::set_X||  
+|norm_4::set_xw||  
+|norm_4::set_xwy||  
+|norm_4::set_xwyz||  
+|norm_4::set_xwz||  
+|norm_4::set_xwzy||  
+|norm_4::set_xy||  
+|norm_4::set_xyw||  
+|norm_4::set_xywz||  
+|norm_4::set_xyz||  
+|norm_4::set_xyzw||  
+|norm_4::set_xz||  
+|norm_4::set_xzw||  
+|norm_4::set_xzwy||  
+|norm_4::set_xzy||  
+|norm_4::set_xzyw||  
+|norm_4::set_y||  
+|norm_4::set_yw||  
+|norm_4::set_ywx||  
+|norm_4::set_ywxz||  
+|norm_4::set_ywz||  
+|norm_4::set_ywzx||  
+|norm_4::set_yx||  
+|norm_4::set_yxw||  
+|norm_4::set_yxwz||  
+|norm_4::set_yxz||  
+|norm_4::set_yxzw||  
+|norm_4::set_yz||  
+|norm_4::set_yzw||  
+|norm_4::set_yzwx||  
+|norm_4::set_yzx||  
+|norm_4::set_yzxw||  
+|norm_4::set_z||  
+|norm_4::set_zw||  
+|norm_4::set_zwx||  
+|norm_4::set_zwxy||  
+|norm_4::set_zwy||  
+|norm_4::set_zwyx||  
+|norm_4::set_zx||  
+|norm_4::set_zxw||  
+|norm_4::set_zxwy||  
+|norm_4::set_zxy||  
+|norm_4::set_zxyw||  
+|norm_4::set_zy||  
+|norm_4::set_zyw||  
+|norm_4::set_zywx||  
+|norm_4::set_zyx||  
+|norm_4::set_zyxw||  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|norm_4::operator-(opérateur)||  
-|norm_4::operator--(opérateur)||  
-|norm_4::operator * =, opérateur||  
-|norm_4::operator / =, opérateur||  
-|norm_4::operator ++ (opérateur)||  
-|norm_4::operator +=, opérateur||  
-|norm_4::operator =, opérateur||  
-|norm_4::operator-= (opérateur)||  
+|norm_4::operator-||  
+|norm_4::operator--||  
+|norm_4::operator * =||  
+|/ = norm_4::operator||  
+|norm_4::operator ++||  
+|norm_4::operator +=||  
+|norm_4::operator =||  
+|norm_4::operator =||  
   
 ### <a name="public-constants"></a>Constantes publiques  
   
@@ -488,134 +488,134 @@ class norm_4;
   
 |Nom|Description|  
 |----------|-----------------|  
-|Membre de données norm_4::a||  
-|Membre de données norm_4::AB||  
-|Membre de données norm_4::abg||  
-|Membre de données norm_4::abgr||  
-|Membre de données norm_4::ABR||  
-|Membre de données norm_4::abrg||  
-|Membre de données norm_4::AG||  
-|Membre de données norm_4::agb||  
-|Membre de données norm_4::agbr||  
-|Membre de données norm_4::AGR||  
-|Membre de données norm_4::agrb||  
-|Membre de données norm_4::AR||  
-|Membre de données norm_4::ARB||  
-|Membre de données norm_4::arbg||  
-|Membre de données norm_4::arg||  
-|Membre de données norm_4::ARGB||  
-|Membre de données norm_4::b||  
-|Membre de données norm_4::BA||  
-|Membre de données norm_4::bag||  
-|Membre de données norm_4::bagr||  
-|Membre de données norm_4::bar||  
-|Membre de données norm_4::barg||  
-|Membre de données norm_4::BG||  
-|Membre de données norm_4::BGA||  
-|Membre de données norm_4::bgar||  
-|Membre de données norm_4::BGR||  
-|Membre de données norm_4::bgra||  
-|Membre de données norm_4::br||  
-|Membre de données norm_4::BRA||  
-|Membre de données norm_4::brag||  
-|Membre de données norm_4::brg||  
-|Membre de données norm_4::brga||  
-|Membre de données norm_4::g||  
-|Membre de données norm_4::GA||  
-|Membre de données norm_4::GAB||  
-|Membre de données norm_4::gabr||  
-|Membre de données norm_4::gar||  
-|Membre de données norm_4::garb||  
-|Membre de données norm_4::GB||  
-|Membre de données norm_4::GBA||  
-|Membre de données norm_4::gbar||  
-|Membre de données norm_4::GBR||  
-|Membre de données norm_4::GBRA||  
-|Membre de données norm_4::GR||  
-|Membre de données norm_4::gra||  
-|Membre de données norm_4::Grab||  
-|Membre de données norm_4::grb||  
-|Membre de données norm_4::grba||  
-|Membre de données norm_4::r||  
-|Membre de données norm_4::RA||  
-|Membre de données norm_4::RAB||  
-|Membre de données norm_4::rabg||  
-|Membre de données norm_4::RAG||  
-|Membre de données norm_4::ragb||  
-|Membre de données norm_4::RB||  
-|Membre de données norm_4::RBA||  
-|Membre de données norm_4::rbag||  
-|Membre de données norm_4::rbg||  
-|Membre de données norm_4::rbga||  
-|Membre de données norm_4::RG||  
-|Membre de données norm_4::RGA||  
-|Membre de données norm_4::rgab||  
-|Membre de données norm_4::RGB||  
-|Membre de données norm_4::RGBA||  
-|Membre de données norm_4::w||  
-|Membre de données norm_4::WX||  
-|Membre de données norm_4::WXY||  
-|Membre de données norm_4::wxyz||  
-|Membre de données norm_4::wxz||  
-|Membre de données norm_4::wxzy||  
-|Membre de données norm_4::wY||  
-|Membre de données norm_4::wyx||  
-|Membre de données norm_4::wyxz||  
-|Membre de données norm_4::WYZ||  
-|Membre de données norm_4::wyzx||  
-|Membre de données norm_4::wZ||  
-|Membre de données norm_4::wzx||  
-|Membre de données norm_4::wzxy||  
-|Membre de données norm_4::wzy||  
-|Membre de données norm_4::wzyx||  
-|Membre de données norm_4::x||  
-|Membre de données norm_4::XW||  
-|Membre de données norm_4::xwy||  
-|Membre de données norm_4::xwyz||  
-|Membre de données norm_4::xwz||  
-|Membre de données norm_4::xwzy||  
-|Membre de données norm_4::XY||  
-|Membre de données norm_4::xyw||  
-|Membre de données norm_4::xywz||  
-|Membre de données norm_4::XYZ||  
-|Membre de données norm_4::xyzw||  
-|Membre de données norm_4::XZ||  
-|Membre de données norm_4::xzw||  
-|Membre de données norm_4::xzwy||  
-|Membre de données norm_4::xzy||  
-|Membre de données norm_4::xzyw||  
-|Membre de données norm_4::y||  
-|Membre de données norm_4::yw||  
-|Membre de données norm_4::ywx||  
-|Membre de données norm_4::ywxz||  
-|Membre de données norm_4::ywz||  
-|Membre de données norm_4::ywzx||  
-|Membre de données norm_4::YX||  
-|Membre de données norm_4::yxw||  
-|Membre de données norm_4::yxwz||  
-|Membre de données norm_4::yxz||  
-|Membre de données norm_4::yxzw||  
-|Membre de données norm_4::YZ||  
-|Membre de données norm_4::yzw||  
-|Membre de données norm_4::yzwx||  
-|Membre de données norm_4::yzx||  
-|Membre de données norm_4::yzxw||  
-|Membre de données norm_4::z||  
-|Membre de données norm_4::zw||  
-|Membre de données norm_4::zwx||  
-|Membre de données norm_4::zwxy||  
-|Membre de données norm_4::zwy||  
-|Membre de données norm_4::zwyx||  
-|Membre de données norm_4::ZX||  
-|Membre de données norm_4::zxw||  
-|Membre de données norm_4::zxwy||  
-|Membre de données norm_4::zxy||  
-|Membre de données norm_4::zxyw||  
-|Membre de données norm_4::ZY||  
-|Membre de données norm_4::zyw||  
-|Membre de données norm_4::zywx||  
-|Membre de données norm_4::ZYX||  
-|Membre de données norm_4::zyxw||  
+|norm_4::a||  
+|norm_4::AB||  
+|norm_4::abg||  
+|norm_4::abgr||  
+|norm_4::ABR||  
+|norm_4::abrg||  
+|norm_4::AG||  
+|norm_4::agb||  
+|norm_4::agbr||  
+|norm_4::AGR||  
+|norm_4::agrb||  
+|norm_4::AR||  
+|norm_4::ARB||  
+|norm_4::arbg||  
+|norm_4::arg||  
+|norm_4::ARGB||  
+|norm_4::b||  
+|norm_4::BA||  
+|norm_4::bag||  
+|norm_4::bagr||  
+|norm_4::bar||  
+|norm_4::barg||  
+|norm_4::BG||  
+|norm_4::BGA||  
+|norm_4::bgar||  
+|norm_4::BGR||  
+|norm_4::bgra||  
+|norm_4::br||  
+|norm_4::BRA||  
+|norm_4::brag||  
+|norm_4::brg||  
+|norm_4::brga||  
+|norm_4::g||  
+|norm_4::GA||  
+|norm_4::GAB||  
+|norm_4::gabr||  
+|norm_4::gar||  
+|norm_4::garb||  
+|norm_4::GB||  
+|norm_4::GBA||  
+|norm_4::gbar||  
+|norm_4::GBR||  
+|norm_4::GBRA||  
+|norm_4::GR||  
+|norm_4::gra||  
+|norm_4::Grab||  
+|norm_4::grb||  
+|norm_4::grba||  
+|norm_4::r||  
+|norm_4::RA||  
+|norm_4::RAB||  
+|norm_4::rabg||  
+|norm_4::RAG||  
+|norm_4::ragb||  
+|norm_4::RB||  
+|norm_4::RBA||  
+|norm_4::rbag||  
+|norm_4::rbg||  
+|norm_4::rbga||  
+|norm_4::RG||  
+|norm_4::RGA||  
+|norm_4::rgab||  
+|norm_4::RGB||  
+|norm_4::RGBA||  
+|norm_4::w||  
+|norm_4::WX||  
+|norm_4::WXY||  
+|norm_4::wxyz||  
+|norm_4::wxz||  
+|norm_4::wxzy||  
+|norm_4::wY||  
+|norm_4::wyx||  
+|norm_4::wyxz||  
+|norm_4::WYZ||  
+|norm_4::wyzx||  
+|norm_4::wZ||  
+|norm_4::wzx||  
+|norm_4::wzxy||  
+|norm_4::wzy||  
+|norm_4::wzyx||  
+|norm_4::x||  
+|norm_4::XW||  
+|norm_4::xwy||  
+|norm_4::xwyz||  
+|norm_4::xwz||  
+|norm_4::xwzy||  
+|norm_4::XY||  
+|norm_4::xyw||  
+|norm_4::xywz||  
+|norm_4::XYZ||  
+|norm_4::xyzw||  
+|norm_4::XZ||  
+|norm_4::xzw||  
+|norm_4::xzwy||  
+|norm_4::xzy||  
+|norm_4::xzyw||  
+|norm_4::y||  
+|norm_4::yw||  
+|norm_4::ywx||  
+|norm_4::ywxz||  
+|norm_4::ywz||  
+|norm_4::ywzx||  
+|norm_4::YX||  
+|norm_4::yxw||  
+|norm_4::yxwz||  
+|norm_4::yxz||  
+|norm_4::yxzw||  
+|norm_4::YZ||  
+|norm_4::yzw||  
+|norm_4::yzwx||  
+|norm_4::yzx||  
+|norm_4::yzxw||  
+|norm_4::z||  
+|norm_4::zw||  
+|norm_4::zwx||  
+|norm_4::zwxy||  
+|norm_4::zwy||  
+|norm_4::zwyx||  
+|norm_4::ZX||  
+|norm_4::zxw||  
+|norm_4::zxwy||  
+|norm_4::zxy||  
+|norm_4::zxyw||  
+|norm_4::ZY||  
+|norm_4::zyw||  
+|norm_4::zywx||  
+|norm_4::ZYX||  
+|norm_4::zyxw||  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `norm_4`  
@@ -625,7 +625,7 @@ class norm_4;
   
  **Namespace :** Concurrency::graphics  
   
-##  <a name="a-namectora-norm4"></a><a name="ctor"></a>norm_4 
+##  <a name="ctor"></a>norm_4 
 
  Par défaut constructeur initialise tous les éléments à 0.  
   
@@ -717,12 +717,12 @@ explicit inline norm_4(
  `_Other`  
  Objet utilisé pour initialiser.  
   
-##  <a name="a-namenorm4sizea-size"></a><a name="norm_4__size"></a>taille 
+##  <a name="norm_4__size"></a>taille 
 
 ```  
 static const int size = 4;  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
 

@@ -10,10 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComCompositeControl
-- ATL::CComCompositeControl
-- ATL.CComCompositeControl<T>
-- ATL.CComCompositeControl
-- ATL::CComCompositeControl<T>
+- ATLCTL/ATL::CComCompositeControl
+- ATLCTL/ATL::CComCompositeControl::CComCompositeControl
+- ATLCTL/ATL::CComCompositeControl::AdviseSinkMap
+- ATLCTL/ATL::CComCompositeControl::CalcExtent
+- ATLCTL/ATL::CComCompositeControl::Create
+- ATLCTL/ATL::CComCompositeControl::CreateControlWindow
+- ATLCTL/ATL::CComCompositeControl::SetBackgroundColorFromAmbient
+- ATLCTL/ATL::CComCompositeControl::m_hbrBackground
+- ATLCTL/ATL::CComCompositeControl::m_hWndFocus
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -117,7 +122,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlctl.h  
   
-##  <a name="a-nameadvisesinkmapa--ccomcompositecontroladvisesinkmap"></a><a name="advisesinkmap"></a>CComCompositeControl::AdviseSinkMap  
+##  <a name="advisesinkmap"></a>CComCompositeControl::AdviseSinkMap  
  Appelez cette méthode pour conseiller ou déconseiller tous les contrôles hébergés par le contrôle composite.  
   
 ```
@@ -150,7 +155,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="remarks"></a>Notes  
  L’implémentation de base de cette méthode recherche les entrées de table de récepteur de l’événement. Ensuite, il avertit ou avertit les points de connexion pour les objets COM décrits par les entrées de récepteurs de la table récepteur d’événements. Cette méthode de membre repose également sur le fait que la classe dérivée hérite d’une instance de `IDispEventImpl` pour chaque contrôle dans la table de récepteur doit être avisé ou cessent d’être averties.  
   
-##  <a name="a-namecalcextenta--ccomcompositecontrolcalcextent"></a><a name="calcextent"></a>CComCompositeControl::CalcExtent  
+##  <a name="calcextent"></a>CComCompositeControl::CalcExtent  
  Appelez cette méthode pour calculer la taille de **HIMETRIC** unités de la ressource de boîte de dialogue utilisée pour héberger le contrôle composite.  
   
 ```
@@ -167,7 +172,7 @@ BOOL CalcExtent(SIZE& size);
 ### <a name="remarks"></a>Remarques  
  La taille est retournée dans le `size` paramètre.  
   
-##  <a name="a-namecreatea--ccomcompositecontrolcreate"></a><a name="create"></a>CComCompositeControl::Create  
+##  <a name="create"></a>CComCompositeControl::Create  
  Cette méthode est appelée pour créer la fenêtre de contrôle pour le contrôle composite.  
   
 ```
@@ -193,7 +198,7 @@ HWND Create(
 ### <a name="remarks"></a>Remarques  
  Cette méthode est généralement appelée lors de l’activation sur place du contrôle.  
   
-##  <a name="a-nameccomcompositecontrola--ccomcompositecontrolccomcompositecontrol"></a><a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl  
+##  <a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl  
  Constructeur.  
   
 ```
@@ -203,7 +208,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>Notes  
  Initialise le [CComCompositeControl::m_hbrBackground](#m_hbrbackground) et [CComCompositeControl::m_hWndFocus](#m_hwndfocus) les membres de données avec la valeur NULL.  
   
-##  <a name="a-namedtora--ccomcompositecontrolccomcompositecontrol"></a><a name="dtor"></a>CComCompositeControl :: ~ CComCompositeControl  
+##  <a name="dtor"></a>CComCompositeControl :: ~ CComCompositeControl  
  Destructeur.  
   
 ```
@@ -213,7 +218,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>Notes  
  Supprime l’objet en arrière-plan, si elle existe.  
   
-##  <a name="a-namecreatecontrolwindowa--ccomcompositecontrolcreatecontrolwindow"></a><a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow  
  Appelez cette méthode pour créer la fenêtre de contrôle et d’informer tous les contrôles hébergés.  
   
 ```
@@ -235,21 +240,21 @@ virtual HWND CreateControlWindow(
 ### <a name="remarks"></a>Remarques  
  Cette méthode appelle [CComCompositeControl::Create](#create) et [CComCompositeControl::AdviseSinkMap](#advisesinkmap).  
   
-##  <a name="a-namemhbrbackgrounda--ccomcompositecontrolmhbrbackground"></a><a name="m_hbrbackground"></a>CComCompositeControl::m_hbrBackground  
+##  <a name="m_hbrbackground"></a>CComCompositeControl::m_hbrBackground  
  Le pinceau d’arrière-plan.  
   
 ```
 HBRUSH m_hbrBackground;
 ```  
   
-##  <a name="a-namemhwndfocusa--ccomcompositecontrolmhwndfocus"></a><a name="m_hwndfocus"></a>CComCompositeControl::m_hWndFocus  
+##  <a name="m_hwndfocus"></a>CComCompositeControl::m_hWndFocus  
  Le handle de la fenêtre qui a le focus.  
   
 ```
 HWND m_hWndFocus;
 ```  
   
-##  <a name="a-namesetbackgroundcolorfromambienta--ccomcompositecontrolsetbackgroundcolorfromambient"></a><a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient  
+##  <a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient  
  Appelez cette méthode pour définir la couleur d’arrière-plan du contrôle composite à l’aide de la couleur d’arrière-plan du conteneur.  
   
 ```

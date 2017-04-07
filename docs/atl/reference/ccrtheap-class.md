@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CCRTHeap
-- ATL.CCRTHeap
 - CCRTHeap
+- ATLMEM/ATL::CCRTHeap
+- ATLMEM/ATL::CCRTHeap::Allocate
+- ATLMEM/ATL::CCRTHeap::Free
+- ATLMEM/ATL::CCRTHeap::GetSize
+- ATLMEM/ATL::CCRTHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +78,7 @@ class CCRTHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlmem.h  
   
-##  <a name="a-nameallocatea--ccrtheapallocate"></a><a name="allocate"></a>CCRTHeap::Allocate  
+##  <a name="allocate"></a>CCRTHeap::Allocate  
  Appelez cette méthode pour allouer un bloc de mémoire.  
   
 ```
@@ -94,7 +97,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implémenté à l’aide de [malloc](../../c-runtime-library/reference/malloc.md).  
   
-##  <a name="a-namefreea--ccrtheapfree"></a><a name="free"></a>CCRTHeap::Free  
+##  <a name="free"></a>CCRTHeap::Free  
  Appelez cette méthode pour libérer un bloc de mémoire alloué par ce gestionnaire de mémoire.  
   
 ```
@@ -108,7 +111,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Remarques  
  Implémenté à l’aide de [libre](../../c-runtime-library/reference/free.md).  
   
-##  <a name="a-namegetsizea--ccrtheapgetsize"></a><a name="getsize"></a>CCRTHeap::GetSize  
+##  <a name="getsize"></a>CCRTHeap::GetSize  
  Appelez cette méthode pour obtenir la taille d’un bloc de mémoire alloué par ce gestionnaire de mémoire allouée.  
   
 ```
@@ -125,7 +128,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Remarques  
  Implémenté à l’aide de [_msize](../../c-runtime-library/reference/msize.md).  
   
-##  <a name="a-namereallocatea--ccrtheapreallocate"></a><a name="reallocate"></a>CCRTHeap::Reallocate  
+##  <a name="reallocate"></a>CCRTHeap::Reallocate  
  Appelez cette méthode pour réallouer la mémoire allouée par ce gestionnaire de mémoire.  
   
 ```

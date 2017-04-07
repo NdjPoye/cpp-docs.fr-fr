@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindowLic
+- No header/ATL::IAxWinHostWindowLic
+- No header/ATL::CreateControlLic
+- No header/ATL::CreateControlLicEx
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -70,7 +73,7 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 |IDL|ATLIFace.idl|  
 |C++|ATLIFace.h (également inclus dans ATLBase.h)|  
   
-##  <a name="a-namecreatecontrollica--iaxwinhostwindowliccreatecontrollic"></a><a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic  
+##  <a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic  
  Crée un contrôle sous licence, il initialise et héberge ce dernier dans la fenêtre identifiée par `hWnd`.  
   
 ```
@@ -93,7 +96,7 @@ STDMETHOD(CreateControlLic)(
 ### <a name="example"></a>Exemple  
  Consultez la page [hébergement ActiveX des contrôles à l’aide de ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pour obtenir un exemple qui utilise `IAxWinHostWindowLic::CreateControlLic`.  
   
-##  <a name="a-namecreatecontrollicexa--iaxwinhostwindowliccreatecontrollicex"></a><a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx  
+##  <a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx  
  Crée un contrôle ActiveX sous licence, il initialise et héberge ce dernier dans la fenêtre spécifiée, comme [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol).  
   
 ```

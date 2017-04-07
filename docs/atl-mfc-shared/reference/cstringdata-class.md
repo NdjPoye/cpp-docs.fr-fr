@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStringData
+- ATLSIMPSTR/ATL::CStringData
+- ATLSIMPSTR/ATL::AddRef
+- ATLSIMPSTR/ATL::data
+- ATLSIMPSTR/ATL::IsLocked
+- ATLSIMPSTR/ATL::IsShared
+- ATLSIMPSTR/ATL::Lock
+- ATLSIMPSTR/ATL::Release
+- ATLSIMPSTR/ATL::Unlock
+- ATLSIMPSTR/ATL::nAllocLength
+- ATLSIMPSTR/ATL::nDataLength
+- ATLSIMPSTR/ATL::nRefs
+- ATLSIMPSTR/ATL::pStringMgr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +110,7 @@ struct CStringData
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlsimpstr.h  
   
-##  <a name="a-nameaddrefa--cstringdataaddref"></a><a name="addref"></a>CStringData::AddRef  
+##  <a name="addref"></a>CStringData::AddRef  
  Incrémente le décompte de références de l’objet string.  
   
 ```
@@ -111,7 +123,7 @@ void AddRef() throw();
 > [!NOTE]
 >  N’appelez pas cette méthode sur une chaîne avec un nombre négatif de référence, dans la mesure où un nombre négatif indique que la mémoire tampon de chaîne est verrouillé.  
   
-##  <a name="a-namedataa--cstringdatadata"></a><a name="data"></a>CStringData::data  
+##  <a name="data"></a>CStringData::data  
  Retourne un pointeur vers la mémoire tampon de caractères d’un objet string.  
   
 ```
@@ -127,7 +139,7 @@ void* data() throw();
 > [!NOTE]
 >  Ce tampon n’est pas alloué par le `CStringData` objet mais par le Gestionnaire de chaînes lorsque nécessaire. Lors de l’allocation, la mémoire tampon est ajoutée à l’objet de données de chaîne.  
   
-##  <a name="a-nameislockeda--cstringdataislocked"></a><a name="islocked"></a>CStringData::IsLocked  
+##  <a name="islocked"></a>CStringData::IsLocked  
  Détermine si la mémoire tampon de caractères est verrouillé.  
   
 ```
@@ -140,7 +152,7 @@ bool IsLocked() const throw();
 ### <a name="remarks"></a>Remarques  
  Appelez cette fonction pour déterminer si la mémoire tampon de caractères d’un objet string est actuellement verrouillé.  
   
-##  <a name="a-nameisshareda--cstringdataisshared"></a><a name="isshared"></a>CStringData::IsShared  
+##  <a name="isshared"></a>CStringData::IsShared  
  Détermine si la mémoire tampon de caractères est partagé.  
   
 ```
@@ -153,7 +165,7 @@ bool IsShared() const throw();
 ### <a name="remarks"></a>Remarques  
  Appelez cette fonction pour déterminer si la mémoire tampon de caractères d’un objet de données string est partagé entre plusieurs objets de chaîne.  
   
-##  <a name="a-namelocka--cstringdatalock"></a><a name="lock"></a>CStringData::Lock  
+##  <a name="lock"></a>CStringData::Lock  
  Verrouille la mémoire tampon de caractères de l’objet de chaîne associée.  
   
 ```
@@ -166,7 +178,7 @@ void Lock() throw();
 > [!NOTE]
 >  Une mémoire tampon de caractères peut uniquement être verrouillé si la mémoire tampon n’est pas partagée entre les objets de chaîne supérieur.  
   
-##  <a name="a-namenalloclengtha--cstringdatanalloclength"></a><a name="nalloclength"></a>CStringData::nAllocLength  
+##  <a name="nalloclength"></a>CStringData::nAllocLength  
  Longueur de la mémoire tampon de caractères alloué.  
   
 ```
@@ -176,7 +188,7 @@ int nAllocLength;
 ### <a name="remarks"></a>Remarques  
  Stocke la longueur de la mémoire tampon de données allouées en `XCHAR`s (non compris le caractère null de fin).  
   
-##  <a name="a-namendatalengtha--cstringdatandatalength"></a><a name="ndatalength"></a>CStringData::nDataLength  
+##  <a name="ndatalength"></a>CStringData::nDataLength  
  Longueur actuelle de l’objet string.  
   
 ```
@@ -186,7 +198,7 @@ int nDataLength;
 ### <a name="remarks"></a>Notes  
  Stocke la longueur de données actuellement utilisées dans `XCHAR`s (non compris le caractère null de fin).  
   
-##  <a name="a-namenrefsa--cstringdatanrefs"></a><a name="nrefs"></a>CStringData::nRefs  
+##  <a name="nrefs"></a>CStringData::nRefs  
  Nombre de références de l’objet de données de chaîne.  
   
 ```
@@ -196,7 +208,7 @@ long nRefs;
 ### <a name="remarks"></a>Remarques  
  Stocke le nombre de références de l’objet de données de chaîne. Ce nombre indique le nombre d’objets chaîne supérieur qui sont associés à l’objet de données de chaîne. Une valeur négative indique que l’objet de données string est actuellement verrouillé.  
   
-##  <a name="a-namepstringmgra--cstringdatapstringmgr"></a><a name="pstringmgr"></a>CStringData::pStringMgr  
+##  <a name="pstringmgr"></a>CStringData::pStringMgr  
  Le Gestionnaire de mémoire de l’objet de chaîne associée.  
   
 ```
@@ -206,7 +218,7 @@ IAtlStringMgr* pStringMgr;
 ### <a name="remarks"></a>Notes  
  Stocke le Gestionnaire de mémoire pour l’objet de chaîne associée. Pour plus d’informations sur les chaînes et les gestionnaires de mémoire, consultez [gestion de la mémoire et CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="a-namereleasea--cstringdatarelease"></a><a name="release"></a>CStringData::Release  
+##  <a name="release"></a>CStringData::Release  
  Décrémente le décompte de références de l’objet de données de chaîne.  
   
 ```
@@ -220,7 +232,7 @@ void Release() throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities&#104;](../../atl-mfc-shared/codesnippet/cpp/cstringdata-class_1.cpp)]  
   
-##  <a name="a-nameunlocka--cstringdataunlock"></a><a name="unlock"></a>CStringData::Unlock  
+##  <a name="unlock"></a>CStringData::Unlock  
  Déverrouille la mémoire tampon de caractères de l’objet de chaîne associée.  
   
 ```

@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: a17faa4f0d6bcc29c9d249fd99dd3a5df3b29884
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f842080ce65d4c7a378a9c16ff91b24ae4f17a07
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Concurrency::graphics::direct3d, espace de noms
@@ -53,11 +53,11 @@ namespace direct3d;
   
 |Nom<br /><br /> Description|  
 |--------------------------|  
-|[get_sampler, fonction](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Obtenir l’interface d’état échantillonneur Direct3D sur l’accélérateur donné afficher qui représente l’objet de l’échantillonneur spécifié.|  
-|[get_texture, fonction](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Obtient l’interface de texture Direct3D sous-jacent spécifié [texture](texture-class.md) objet.|  
-|[make_sampler, fonction](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Créer un échantillon à partir d’un pointeur d’interface Direct3D échantillonneur état.|  
-|[make_texture, fonction](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Crée un [texture](texture-class.md) à l’aide de paramètres spécifiés.|  
-|[msad4, fonction](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Compare une valeur de référence de 4 octets et une valeur de 8 octets source et accumule un vecteur de 4 sommes.|  
+|[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Obtenir l’interface d’état échantillonneur Direct3D sur l’accélérateur donné afficher qui représente l’objet de l’échantillonneur spécifié.|  
+|[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Obtient l’interface de texture Direct3D sous-jacent spécifié [texture](texture-class.md) objet.|  
+|[make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> Créer un échantillon à partir d’un pointeur d’interface Direct3D échantillonneur état.|  
+|[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> Crée un [texture](texture-class.md) à l’aide de paramètres spécifiés.|  
+|[msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> Compare une valeur de référence de 4 octets et une valeur de 8 octets source et accumule un vecteur de 4 sommes.|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** amp_graphics.h  
@@ -65,5 +65,5 @@ namespace direct3d;
  **Namespace :** Concurrency::graphics  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concurrency::Graphics Namespace](concurrency-graphics-namespace.md)
+ [Concurrency::graphics, espace de noms](concurrency-graphics-namespace.md)
 

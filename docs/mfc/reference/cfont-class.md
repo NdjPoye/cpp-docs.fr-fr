@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFont
+- AFXWIN/CFont
+- AFXWIN/CFont::CFont
+- AFXWIN/CFont::CreateFont
+- AFXWIN/CFont::CreateFontIndirect
+- AFXWIN/CFont::CreatePointFont
+- AFXWIN/CFont::CreatePointFontIndirect
+- AFXWIN/CFont::FromHandle
+- AFXWIN/CFont::GetLogFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +100,7 @@ class CFont : public CGdiObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
   
-##  <a name="a-namecfonta--cfontcfont"></a><a name="cfont"></a>CFont::CFont  
+##  <a name="cfont"></a>CFont::CFont  
  Construit un objet `CFont`.  
   
 ```  
@@ -105,7 +113,7 @@ CFont();
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView&#70;](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]  
   
-##  <a name="a-namecreatefonta--cfontcreatefont"></a><a name="createfont"></a>CFont::CreateFont n'  
+##  <a name="createfont"></a>CFont::CreateFont n'  
  Initialise un `CFont` objet avec les caractéristiques spécifiées.  
   
 ```  
@@ -194,7 +202,7 @@ BOOL CreateFont(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView&#71;](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]  
   
-##  <a name="a-namecreatefontindirecta--cfontcreatefontindirect"></a><a name="createfontindirect"></a>CFont::CreateFontIndirect  
+##  <a name="createfontindirect"></a>CFont::CreateFontIndirect  
  Initialise un `CFont` objet avec les caractéristiques donné dans un [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)structure.  
   
 ```  
@@ -218,7 +226,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView&#72;](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]  
   
-##  <a name="a-namecreatepointfonta--cfontcreatepointfont"></a><a name="createpointfont"></a>CFont::CreatePointFont  
+##  <a name="createpointfont"></a>CFont::CreatePointFont  
  Cette fonction fournit un moyen simple de créer une police d’une police spécifiée et la taille en points.  
   
 ```  
@@ -249,7 +257,7 @@ BOOL CreatePointFont(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView&#73;](../../mfc/codesnippet/cpp/cfont-class_4.cpp)]  
   
-##  <a name="a-namecreatepointfontindirecta--cfontcreatepointfontindirect"></a><a name="createpointfontindirect"></a>CFont::CreatePointFontIndirect  
+##  <a name="createpointfontindirect"></a>CFont::CreatePointFontIndirect  
  Cette fonction est identique à [CreateFontIndirect](#createfontindirect) , sauf que la **lfHeight** membre de la `LOGFONT` est interprétée en dixièmes d’un point au lieu du périphérique unités.  
   
 ```  
@@ -276,7 +284,7 @@ BOOL CreatePointFontIndirect(
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView&#74;](../../mfc/codesnippet/cpp/cfont-class_5.cpp)]  
   
-##  <a name="a-namefromhandlea--cfontfromhandle"></a><a name="fromhandle"></a>CFont::FromHandle  
+##  <a name="fromhandle"></a>CFont::FromHandle  
  Retourne un pointeur vers un `CFont` de l’objet en fonction d’un **HFONT** handle vers un objet de police Windows GDI.  
   
 ```  
@@ -296,7 +304,7 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView&#75;](../../mfc/codesnippet/cpp/cfont-class_6.cpp)]  
   
-##  <a name="a-namegetlogfonta--cfontgetlogfont"></a><a name="getlogfont"></a>CFont::GetLogFont  
+##  <a name="getlogfont"></a>CFont::GetLogFont  
  Appelez cette fonction pour récupérer une copie de la `LOGFONT` la structure de `CFont`.  
   
 ```  
@@ -313,7 +321,7 @@ int GetLogFont(LOGFONT* pLogFont);
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_MFCDocView&#76;](../../mfc/codesnippet/cpp/cfont-class_7.cpp)]  
   
-##  <a name="a-nameoperatorhfonta--cfontoperator-hfont"></a><a name="operator_hfont"></a>CFont::operator HFONT  
+##  <a name="operator_hfont"></a>CFont::operator HFONT  
  Utilisez cet opérateur pour obtenir le handle Windows GDI de la police attaché à la `CFont` objet.  
   
 ```  

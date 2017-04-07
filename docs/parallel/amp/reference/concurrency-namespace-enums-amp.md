@@ -6,6 +6,11 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::access_type
+- amp/Concurrency::queuing_mode
+dev_langs:
+- C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
 caps.latest.revision: 8
 author: mikeblome
@@ -22,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[access_type, énumération](#access_type)|[Énumération queuing_mode](#queuing_mode)|  
   
-##  <a name="a-nameaccesstypea--accesstype-enumeration"></a><a name="access_type"></a>access_type, énumération  
+##  <a name="access_type"></a>access_type, énumération  
  Type d’énumération utilisé pour représenter les différents types d’accès aux données.  
   
 ```  
@@ -39,7 +44,7 @@ enum access_type;
 |`access_type_write`|Partagé. L’allocation est accessible sur l’accélérateur et est accessible en lecture et en écriture sur le processeur.|  
 
   
-##  <a name="a-namequeuingmodea--queuingmode-enumeration"></a><a name="queuing_mode"></a>Énumération queuing_mode  
+##  <a name="queuing_mode"></a>Énumération queuing_mode  
  Spécifie les modes de files d’attente qui sont pris en charge sur l’accélérateur.  
   
 ```  

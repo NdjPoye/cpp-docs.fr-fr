@@ -9,9 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComAllocator
-- ATL::CComAllocator
 - CComAllocator
+- ATLBASE/ATL::CComAllocator
+- ATLBASE/ATL::CComAllocator::Allocate
+- ATLBASE/ATL::CComAllocator::Free
+- ATLBASE/ATL::CComAllocator::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -66,7 +68,7 @@ class CComAllocator
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
   
-##  <a name="a-nameallocatea--ccomallocatorallocate"></a><a name="allocate"></a>CComAllocator::Allocate  
+##  <a name="allocate"></a>CComAllocator::Allocate  
  Appelez cette fonction statique pour allouer de la mémoire.  
   
 ```
@@ -83,7 +85,7 @@ static void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Remarques  
  Alloue de la mémoire. Consultez la page [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) pour plus de détails.  
   
-##  <a name="a-namefreea--ccomallocatorfree"></a><a name="free"></a>CComAllocator::Free  
+##  <a name="free"></a>CComAllocator::Free  
  Appelez cette fonction statique pour libérer de la mémoire allouée.  
   
 ```
@@ -97,7 +99,7 @@ static void Free(void* p) throw();
 ### <a name="remarks"></a>Notes  
  Libère la mémoire allouée. Consultez la page [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) pour plus de détails.  
   
-##  <a name="a-namereallocatea--ccomallocatorreallocate"></a><a name="reallocate"></a>CComAllocator::Reallocate  
+##  <a name="reallocate"></a>CComAllocator::Reallocate  
  Appelez cette fonction statique pour réallouer de la mémoire.  
   
 ```

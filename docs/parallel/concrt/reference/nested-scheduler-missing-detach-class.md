@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::nested_scheduler_missing_detach
+- nested_scheduler_missing_detach
+- CONCRT/concurrency::nested_scheduler_missing_detach
+- CONCRT/concurrency::nested_scheduler_missing_detach::nested_scheduler_missing_detach
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 0079fea0b157e194947931f88d1cb500167cb6e2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 7ab8dc3761c6f11529b70ec4d71bbaebdfea0493
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach, classe
@@ -54,9 +56,9 @@ class nested_scheduler_missing_detach : public std::exception;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[nested_scheduler_missing_detach, constructeur](#ctor)|Surchargé. Construit un objet `nested_scheduler_missing_detach`.|  
+|[nested_scheduler_missing_detach](#ctor)|Surchargé. Construit un objet `nested_scheduler_missing_detach`.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette exception est levée uniquement lorsque vous imbriquez un planificateur à l’intérieur d’un autre en appelant le `Attach` méthode d’un `Scheduler` l’objet dans un contexte appartenant ou attaché à un autre planificateur. Le Runtime d’accès concurrentiel lève cette exception de façon opportuniste lorsqu’il peut détecter le scénario comme une aide pour localiser le problème. Pas toutes les instances de négligeant l’appel à la `CurrentScheduler::Detach` méthode est garantie pour lever cette exception.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
@@ -69,7 +71,7 @@ class nested_scheduler_missing_detach : public std::exception;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-namectora-nestedschedulermissingdetach"></a><a name="ctor"></a>nested_scheduler_missing_detach 
+##  <a name="ctor"></a>nested_scheduler_missing_detach 
 
  Construit un objet `nested_scheduler_missing_detach`.  
   
@@ -85,5 +87,5 @@ nested_scheduler_missing_detach() throw();
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
- [Scheduler (classe)](scheduler-class.md)
+ [Scheduler, classe](scheduler-class.md)
 

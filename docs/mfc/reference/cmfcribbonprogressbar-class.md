@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonProgressBar
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::CMFCRibbonProgressBar
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetPos
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetRangeMax
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetRangeMin
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetRegularSize
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::IsInfiniteMode
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::OnDraw
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::SetInfiniteMode
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::SetPos
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::SetRange
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +99,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxRibbonProgressBar.h  
   
-##  <a name="a-namecmfcribbonprogressbara--cmfcribbonprogressbarcmfcribbonprogressbar"></a><a name="cmfcribbonprogressbar"></a>CMFCRibbonProgressBar::CMFCRibbonProgressBar  
+##  <a name="cmfcribbonprogressbar"></a>CMFCRibbonProgressBar::CMFCRibbonProgressBar  
  Construit et initialise un [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) objet.  
   
 ```  
@@ -111,7 +122,7 @@ CMFCRibbonProgressBar(
  [in] `nHeight`  
  Spécifie la hauteur, en pixels, de la barre de progression du ruban.  
   
-##  <a name="a-namegetposa--cmfcribbonprogressbargetpos"></a><a name="getpos"></a>CMFCRibbonProgressBar::GetPos  
+##  <a name="getpos"></a>CMFCRibbonProgressBar::GetPos  
  Retourne la position actuelle de la barre de progression.  
   
 ```  
@@ -124,7 +135,7 @@ int GetPos () const;
 ### <a name="remarks"></a>Remarques  
  La plage définie doit être dans la plage spécifiée par la [CMFCRibbonProgressBar::SetRange](#setrange) (méthode).  
   
-##  <a name="a-namegetrangemaxa--cmfcribbonprogressbargetrangemax"></a><a name="getrangemax"></a>CMFCRibbonProgressBar::GetRangeMax  
+##  <a name="getrangemax"></a>CMFCRibbonProgressBar::GetRangeMax  
  Retourne la barre de progression actuelle de valeur maximale.  
   
 ```  
@@ -136,7 +147,7 @@ int GetRangeMax() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetrangemina--cmfcribbonprogressbargetrangemin"></a><a name="getrangemin"></a>CMFCRibbonProgressBar::GetRangeMin  
+##  <a name="getrangemin"></a>CMFCRibbonProgressBar::GetRangeMin  
  Retourne la barre de progression actuelle de valeur de plage minimale.  
   
 ```  
@@ -146,7 +157,7 @@ int GetRangeMin() const;
 ### <a name="return-value"></a>Valeur de retour  
  La valeur minimale de la plage actuelle.  
   
-##  <a name="a-namegetregularsizea--cmfcribbonprogressbargetregularsize"></a><a name="getregularsize"></a>CMFCRibbonProgressBar::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonProgressBar::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -160,7 +171,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameisinfinitemodea--cmfcribbonprogressbarisinfinitemode"></a><a name="isinfinitemode"></a>CMFCRibbonProgressBar::IsInfiniteMode  
+##  <a name="isinfinitemode"></a>CMFCRibbonProgressBar::IsInfiniteMode  
  Spécifie si la barre de progression fonctionne en mode infini.  
   
 ```  
@@ -173,7 +184,7 @@ BOOL IsInfiniteMode() const;
 ### <a name="remarks"></a>Remarques  
  En mode infini, la barre de progression se remplit à plusieurs reprises à partir de la valeur minimale à la valeur maximale. Vous pouvez utiliser le mode infini pour indiquer qu’une opération est en cours, mais que l’heure de fin est inconnu.  
   
-##  <a name="a-nameondrawa--cmfcribbonprogressbarondraw"></a><a name="ondraw"></a>CMFCRibbonProgressBar::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonProgressBar::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -185,7 +196,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetinfinitemodea--cmfcribbonprogressbarsetinfinitemode"></a><a name="setinfinitemode"></a>CMFCRibbonProgressBar::SetInfiniteMode  
+##  <a name="setinfinitemode"></a>CMFCRibbonProgressBar::SetInfiniteMode  
  Définit la barre de progression pour fonctionner en mode infini.  
   
 ```  
@@ -199,7 +210,7 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ### <a name="remarks"></a>Remarques  
  En règle générale, si la barre de progression est en mode infini, il indique l’utilisateur qu’une opération est en cours, mais que l’heure de fin est inconnu. Par conséquent, la barre de progression se remplit à plusieurs reprises à partir de la valeur minimale à la valeur maximale.  
   
-##  <a name="a-namesetposa--cmfcribbonprogressbarsetpos"></a><a name="setpos"></a>CMFCRibbonProgressBar::SetPos  
+##  <a name="setpos"></a>CMFCRibbonProgressBar::SetPos  
  Définit la position actuelle de la barre de progression.  
   
 ```  
@@ -218,7 +229,7 @@ void SetPos(
 ### <a name="remarks"></a>Remarques  
  La plage définie doit être dans la plage spécifiée par la [CMFCRibbonProgressBar::SetRange](#setrange) (méthode).  
   
-##  <a name="a-namesetrangea--cmfcribbonprogressbarsetrange"></a><a name="setrange"></a>CMFCRibbonProgressBar::SetRange  
+##  <a name="setrange"></a>CMFCRibbonProgressBar::SetRange  
  Définit les valeurs minimales et maximales de la barre de progression.  
   
 ```  

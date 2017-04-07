@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocObjectServerItem
+- AFXDOCOB/CDocObjectServerItem
+- AFXDOCOB/CDocObjectServerItem::CDocObjectServerItem
+- AFXDOCOB/CDocObjectServerItem::GetDocument
+- AFXDOCOB/CDocObjectServerItem::OnHide
+- AFXDOCOB/CDocObjectServerItem::OnShow
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CDocObjectServerItem : public COleServerItem
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdocob.h  
   
-##  <a name="a-namecdocobjectserveritema--cdocobjectserveritemcdocobjectserveritem"></a><a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem  
+##  <a name="cdocobjectserveritem"></a>CDocObjectServerItem::CDocObjectServerItem  
  Construit un objet `CDocObjectServerItem`.  
   
 ```  
@@ -109,7 +114,7 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
  `bAutoDelete`  
  Indique si l’objet peut être supprimé lors de la publication d’un lien vers celle-ci. Attribuez à l’argument **FALSE** si le `CDocObjectServerItem` objet fait partie intégrante des données de votre document. Affectez-lui la valeur **TRUE** si l’objet est une structure secondaire utilisée pour identifier une plage de données de votre document qui peuvent être supprimées par l’infrastructure.  
   
-##  <a name="a-namegetdocumenta--cdocobjectserveritemgetdocument"></a><a name="getdocument"></a>CDocObjectServerItem::GetDocument  
+##  <a name="getdocument"></a>CDocObjectServerItem::GetDocument  
  Récupère un pointeur vers le document qui contient l’élément.  
   
 ```  
@@ -122,7 +127,7 @@ COleServerDoc* GetDocument() const;
 ### <a name="remarks"></a>Notes  
  Cela permet l’accès au document serveur que vous avez passé comme argument à la [CDocObjectServerItem](#cdocobjectserveritem) constructeur.  
   
-##  <a name="a-nameonhidea--cdocobjectserveritemonhide"></a><a name="onhide"></a>CDocObjectServerItem::OnHide  
+##  <a name="onhide"></a>CDocObjectServerItem::OnHide  
  Appelé par l’infrastructure pour masquer l’élément.  
   
 ```  
@@ -132,7 +137,7 @@ virtual void OnHide();
 ### <a name="remarks"></a>Notes  
  L’implémentation par défaut lève une exception si l’élément est un DocObject. Vous ne pouvez pas masquer un élément de DocObject actif parce qu’il prend toute la vue. Vous devez désactiver l’élément DocObject pour la faire disparaître. Si l’élément n’est pas un DocObject, l’implémentation par défaut appelle [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).  
   
-##  <a name="a-nameonshowa--cdocobjectserveritemonshow"></a><a name="onshow"></a>CDocObjectServerItem::OnShow  
+##  <a name="onshow"></a>CDocObjectServerItem::OnShow  
  Appelé par l’infrastructure pour demander à l’application serveur pour rendre le DocObject place élément actif.  
   
 ```  

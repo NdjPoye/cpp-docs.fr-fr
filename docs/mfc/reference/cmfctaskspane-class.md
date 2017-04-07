@@ -10,6 +10,101 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPane
+- AFXTASKSPANE/CMFCTasksPane
+- AFXTASKSPANE/CMFCTasksPane::CMFCTasksPane
+- AFXTASKSPANE/CMFCTasksPane::AddGroup
+- AFXTASKSPANE/CMFCTasksPane::AddLabel
+- AFXTASKSPANE/CMFCTasksPane::AddMRUFilesList
+- AFXTASKSPANE/CMFCTasksPane::AddPage
+- AFXTASKSPANE/CMFCTasksPane::AddSeparator
+- AFXTASKSPANE/CMFCTasksPane::AddTask
+- AFXTASKSPANE/CMFCTasksPane::AddWindow
+- AFXTASKSPANE/CMFCTasksPane::CollapseAllGroups
+- AFXTASKSPANE/CMFCTasksPane::CollapseGroup
+- AFXTASKSPANE/CMFCTasksPane::CreateDefaultMiniframe
+- AFXTASKSPANE/CMFCTasksPane::CreateMenu
+- AFXTASKSPANE/CMFCTasksPane::EnableAnimation
+- AFXTASKSPANE/CMFCTasksPane::EnableGroupCollapse
+- AFXTASKSPANE/CMFCTasksPane::EnableHistoryMenuButtons
+- AFXTASKSPANE/CMFCTasksPane::EnableNavigationToolbar
+- AFXTASKSPANE/CMFCTasksPane::EnableOffsetCustomControls
+- AFXTASKSPANE/CMFCTasksPane::EnableScrollButtons
+- AFXTASKSPANE/CMFCTasksPane::EnableWrapLabels
+- AFXTASKSPANE/CMFCTasksPane::EnableWrapTasks
+- AFXTASKSPANE/CMFCTasksPane::GetActivePage
+- AFXTASKSPANE/CMFCTasksPane::GetGroupCaptionHeight
+- AFXTASKSPANE/CMFCTasksPane::GetGroupCaptionHorzOffset
+- AFXTASKSPANE/CMFCTasksPane::GetGroupCaptionVertOffset
+- AFXTASKSPANE/CMFCTasksPane::GetGroupCount
+- AFXTASKSPANE/CMFCTasksPane::GetGroupLocation
+- AFXTASKSPANE/CMFCTasksPane::GetGroupVertOffset
+- AFXTASKSPANE/CMFCTasksPane::GetHorzMargin
+- AFXTASKSPANE/CMFCTasksPane::GetNextPages
+- AFXTASKSPANE/CMFCTasksPane::GetPageByGroup
+- AFXTASKSPANE/CMFCTasksPane::GetPagesCount
+- AFXTASKSPANE/CMFCTasksPane::GetPreviousPages
+- AFXTASKSPANE/CMFCTasksPane::GetScrollBarCtrl
+- AFXTASKSPANE/CMFCTasksPane::GetTask
+- AFXTASKSPANE/CMFCTasksPane::GetTaskCount
+- AFXTASKSPANE/CMFCTasksPane::GetTaskGroup
+- AFXTASKSPANE/CMFCTasksPane::GetTaskLocation
+- AFXTASKSPANE/CMFCTasksPane::GetTasksHorzOffset
+- AFXTASKSPANE/CMFCTasksPane::GetTasksIconHorzOffset
+- AFXTASKSPANE/CMFCTasksPane::GetTasksIconVertOffset
+- AFXTASKSPANE/CMFCTasksPane::GetVertMargin
+- AFXTASKSPANE/CMFCTasksPane::IsAccessibilityCompatible
+- AFXTASKSPANE/CMFCTasksPane::IsAnimationEnabled
+- AFXTASKSPANE/CMFCTasksPane::IsBackButtonEnabled
+- AFXTASKSPANE/CMFCTasksPane::IsForwardButtonEnabled
+- AFXTASKSPANE/CMFCTasksPane::IsGroupCollapseEnabled
+- AFXTASKSPANE/CMFCTasksPane::IsHistoryMenuButtonsEnabled
+- AFXTASKSPANE/CMFCTasksPane::IsNavigationToolbarEnabled
+- AFXTASKSPANE/CMFCTasksPane::IsToolBox
+- AFXTASKSPANE/CMFCTasksPane::IsWrapLabelsEnabled
+- AFXTASKSPANE/CMFCTasksPane::IsWrapTasksEnabled
+- AFXTASKSPANE/CMFCTasksPane::LoadState
+- AFXTASKSPANE/CMFCTasksPane::OnCancel
+- AFXTASKSPANE/CMFCTasksPane::OnClickTask
+- AFXTASKSPANE/CMFCTasksPane::OnOK
+- AFXTASKSPANE/CMFCTasksPane::OnPressBackButton
+- AFXTASKSPANE/CMFCTasksPane::OnPressForwardButton
+- AFXTASKSPANE/CMFCTasksPane::OnPressHomeButton
+- AFXTASKSPANE/CMFCTasksPane::OnPressOtherButton
+- AFXTASKSPANE/CMFCTasksPane::OnSetAccData
+- AFXTASKSPANE/CMFCTasksPane::OnUpdateCmdUI
+- AFXTASKSPANE/CMFCTasksPane::PreTranslateMessage
+- AFXTASKSPANE/CMFCTasksPane::RecalcLayout
+- AFXTASKSPANE/CMFCTasksPane::RemoveAllGroups
+- AFXTASKSPANE/CMFCTasksPane::RemoveAllPages
+- AFXTASKSPANE/CMFCTasksPane::RemoveAllTasks
+- AFXTASKSPANE/CMFCTasksPane::RemoveGroup
+- AFXTASKSPANE/CMFCTasksPane::RemovePage
+- AFXTASKSPANE/CMFCTasksPane::RemoveTask
+- AFXTASKSPANE/CMFCTasksPane::SaveState
+- AFXTASKSPANE/CMFCTasksPane::Serialize
+- AFXTASKSPANE/CMFCTasksPane::SetActivePage
+- AFXTASKSPANE/CMFCTasksPane::SetCaption
+- AFXTASKSPANE/CMFCTasksPane::SetGroupCaptionHeight
+- AFXTASKSPANE/CMFCTasksPane::SetGroupCaptionHorzOffset
+- AFXTASKSPANE/CMFCTasksPane::SetGroupCaptionVertOffset
+- AFXTASKSPANE/CMFCTasksPane::SetGroupName
+- AFXTASKSPANE/CMFCTasksPane::SetGroupTextColor
+- AFXTASKSPANE/CMFCTasksPane::SetGroupVertOffset
+- AFXTASKSPANE/CMFCTasksPane::SetHorzMargin
+- AFXTASKSPANE/CMFCTasksPane::SetIconsList
+- AFXTASKSPANE/CMFCTasksPane::SetPageCaption
+- AFXTASKSPANE/CMFCTasksPane::SetTaskName
+- AFXTASKSPANE/CMFCTasksPane::SetTasksIconHorzOffset
+- AFXTASKSPANE/CMFCTasksPane::SetTasksIconVertOffset
+- AFXTASKSPANE/CMFCTasksPane::SetTaskTextColor
+- AFXTASKSPANE/CMFCTasksPane::SetTasksHorzOffset
+- AFXTASKSPANE/CMFCTasksPane::SetVertMargin
+- AFXTASKSPANE/CMFCTasksPane::SetWindowHeight
+- AFXTASKSPANE/CMFCTasksPane::ShowCommandMessageString
+- AFXTASKSPANE/CMFCTasksPane::ShowTask
+- AFXTASKSPANE/CMFCTasksPane::ShowTaskByCmdId
+- AFXTASKSPANE/CMFCTasksPane::Update
+- AFXTASKSPANE/CMFCTasksPane::OnActivateTasksPanePage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -207,7 +302,7 @@ class CMFCTasksPane : public CDockablePane
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxTasksPane.h  
   
-##  <a name="a-nameaddgroupa--cmfctaskspaneaddgroup"></a><a name="addgroup"></a>CMFCTasksPane::AddGroup  
+##  <a name="addgroup"></a>CMFCTasksPane::AddGroup  
  Ajoute un nouveau groupe de tâches au contrôle de volet des tâches.  
   
 ```  
@@ -250,7 +345,7 @@ int AddGroup(
   
  Le framework affiche les groupes de tâches en haut du contrôle du volet de tâches ou en bas. L’infrastructure peut afficher qu’un seul groupe en bas. ce groupe doit être ajouté en dernier.  
   
-##  <a name="a-nameaddlabela--cmfctaskspaneaddlabel"></a><a name="addlabel"></a>CMFCTasksPane::AddLabel  
+##  <a name="addlabel"></a>CMFCTasksPane::AddLabel  
  Ajoute une étiquette au groupe de tâches spécifié.  
   
 ```  
@@ -280,7 +375,7 @@ int AddLabel(
 ### <a name="remarks"></a>Remarques  
  Le framework gère différemment les tâches et les étiquettes. Lorsqu’un utilisateur clique sur une tâche, l’infrastructure exécute une commande. Lorsqu’un utilisateur clique sur une étiquette, aucune commande n’est exécutée. Pour plus d’informations, consultez [CMFCTasksPane::AddTask](#addtask).  
   
-##  <a name="a-nameaddmrufileslista--cmfctaskspaneaddmrufileslist"></a><a name="addmrufileslist"></a>CMFCTasksPane::AddMRUFilesList  
+##  <a name="addmrufileslist"></a>CMFCTasksPane::AddMRUFilesList  
  Ajoute une tâche pour chaque fichier stocké dans une liste de fichiers la plus récemment utilisés (MRU) dans un groupe.  
   
 ```  
@@ -299,7 +394,7 @@ int AddMRUFilesList(
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro du groupe dans lequel la dernière liste de fichiers a été ajoutée, ou -1 si le groupe spécifié par `nGroup` n’existe pas.  
   
-##  <a name="a-nameaddpagea--cmfctaskspaneaddpage"></a><a name="addpage"></a>CMFCTasksPane::AddPage  
+##  <a name="addpage"></a>CMFCTasksPane::AddPage  
  Ajoute une page dans le volet Office.  
   
 ```  
@@ -313,7 +408,7 @@ int AddPage(LPCTSTR lpszPageLabel);
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de la nouvelle page.  
   
-##  <a name="a-nameaddseparatora--cmfctaskspaneaddseparator"></a><a name="addseparator"></a>CMFCTasksPane::AddSeparator  
+##  <a name="addseparator"></a>CMFCTasksPane::AddSeparator  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -327,7 +422,7 @@ int AddSeparator(int nGroup);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameaddtaska--cmfctaskspaneaddtask"></a><a name="addtask"></a>CMFCTasksPane::AddTask  
+##  <a name="addtask"></a>CMFCTasksPane::AddTask  
  Ajoute une tâche pour le groupe de tâches spécifié.  
   
 ```  
@@ -358,7 +453,7 @@ int AddTask(
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro du groupe dans lequel la tâche a été ajoutée, ou -1 si le groupe spécifié par `nGroup` n’existe pas.  
   
-##  <a name="a-nameaddwindowa--cmfctaskspaneaddwindow"></a><a name="addwindow"></a>CMFCTasksPane::AddWindow  
+##  <a name="addwindow"></a>CMFCTasksPane::AddWindow  
  Ajoute une fenêtre enfant au volet des tâches.  
   
 ```  
@@ -392,14 +487,14 @@ int AddWindow(
 ### <a name="remarks"></a>Notes  
  Appelez cette méthode pour ajouter un contrôle à un volet de tâches. Par exemple, vous pouvez ajouter un contrôle d’édition qui fonctionne comme une barre de recherche.  
   
-##  <a name="a-namecmfctaskspanea--cmfctaskspanecmfctaskspane"></a><a name="cmfctaskspane"></a>CMFCTasksPane::CMFCTasksPane  
+##  <a name="cmfctaskspane"></a>CMFCTasksPane::CMFCTasksPane  
  Construit un [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) objet.  
   
 ```  
 CMFCTasksPane();
 ```  
   
-##  <a name="a-namecollapseallgroupsa--cmfctaskspanecollapseallgroups"></a><a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups  
+##  <a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -417,7 +512,7 @@ void CollapseAllGroups(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namecollapsegroupa--cmfctaskspanecollapsegroup"></a><a name="collapsegroup"></a>CMFCTasksPane::CollapseGroup  
+##  <a name="collapsegroup"></a>CMFCTasksPane::CollapseGroup  
  Réduit ou développe un groupe.  
   
 ```  
@@ -447,7 +542,7 @@ BOOL CollapseGroup(
 ### <a name="remarks"></a>Notes  
  Un groupe réduit affiche uniquement la légende du groupe ; la liste des tâches est masquée.  
   
-##  <a name="a-namecreatedefaultminiframea--cmfctaskspanecreatedefaultminiframe"></a><a name="createdefaultminiframe"></a>CMFCTasksPane::CreateDefaultMiniframe  
+##  <a name="createdefaultminiframe"></a>CMFCTasksPane::CreateDefaultMiniframe  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -461,7 +556,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namecreatemenua--cmfctaskspanecreatemenu"></a><a name="createmenu"></a>CMFCTasksPane::CreateMenu  
+##  <a name="createmenu"></a>CMFCTasksPane::CreateMenu  
  Crée un menu qui s’affiche lorsqu’un utilisateur clique sur le **autres volets de tâches** bouton de menu.  
   
 ```  
@@ -476,7 +571,7 @@ HMENU CreateMenu() const;
   
  Le menu contextuel créé par cette méthode contient la liste des pages dans le volet Office. Le menu affiche une case à cocher en regard de la page active.  
   
-##  <a name="a-nameenableanimationa--cmfctaskspaneenableanimation"></a><a name="enableanimation"></a>CMFCTasksPane::EnableAnimation  
+##  <a name="enableanimation"></a>CMFCTasksPane::EnableAnimation  
  Active ou désactive l’animation qui se produit lorsqu’un groupe de tâches développé ou réduit.  
   
 ```  
@@ -490,7 +585,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Notes  
  Par défaut, l’animation qui se produit lorsqu’un groupe de tâches développé ou réduit est activée.  
   
-##  <a name="a-nameenablegroupcollapsea--cmfctaskspaneenablegroupcollapse"></a><a name="enablegroupcollapse"></a>CMFCTasksPane::EnableGroupCollapse  
+##  <a name="enablegroupcollapse"></a>CMFCTasksPane::EnableGroupCollapse  
  Spécifie si un utilisateur peut réduire les groupes de tâches.  
   
 ```  
@@ -504,7 +599,7 @@ void EnableGroupCollapse(BOOL bEnable);
 ### <a name="remarks"></a>Notes  
  Un groupe de tâches réduit affiche uniquement la légende du groupe ; la liste des tâches est masquée.  
   
-##  <a name="a-nameenablehistorymenubuttonsa--cmfctaskspaneenablehistorymenubuttons"></a><a name="enablehistorymenubuttons"></a>CMFCTasksPane::EnableHistoryMenuButtons  
+##  <a name="enablehistorymenubuttons"></a>CMFCTasksPane::EnableHistoryMenuButtons  
  Active les menus déroulants sur le **suivant** et **précédent** boutons de navigation.  
   
 ```  
@@ -520,7 +615,7 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
   
  Les menus contiennent l’historique de pages de tâches que l’utilisateur a utilisé.  
   
-##  <a name="a-nameenablenavigationtoolbara--cmfctaskspaneenablenavigationtoolbar"></a><a name="enablenavigationtoolbar"></a>CMFCTasksPane::EnableNavigationToolbar  
+##  <a name="enablenavigationtoolbar"></a>CMFCTasksPane::EnableNavigationToolbar  
  Active ou désactive la barre d'outils de navigation.  
   
 ```  
@@ -551,7 +646,7 @@ void EnableNavigationToolbar(
   
  Par défaut, le framework n’affiche pas la barre d’outils de navigation. Si la barre d’outils de navigation n’est pas affichée, les boutons de navigation sont situés sur la légende de la barre d’ancrage.  
   
-##  <a name="a-nameenableoffsetcustomcontrolsa--cmfctaskspaneenableoffsetcustomcontrols"></a><a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls  
+##  <a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -563,7 +658,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameenablescrollbuttonsa--cmfctaskspaneenablescrollbuttons"></a><a name="enablescrollbuttons"></a>CMFCTasksPane::EnableScrollButtons  
+##  <a name="enablescrollbuttons"></a>CMFCTasksPane::EnableScrollButtons  
  Permet de faire défiler des boutons au lieu d’une barre de défilement.  
   
 ```  
@@ -577,7 +672,7 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Notes  
  Par défaut, l’infrastructure affiche les boutons de défilement dans le volet Office.  
   
-##  <a name="a-nameenablewraplabelsa--cmfctaskspaneenablewraplabels"></a><a name="enablewraplabels"></a>CMFCTasksPane::EnableWrapLabels  
+##  <a name="enablewraplabels"></a>CMFCTasksPane::EnableWrapLabels  
  Active ou désactive le retour du texte dans les étiquettes.  
   
 ```  
@@ -591,7 +686,7 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Remarques  
  Par défaut, le framework n’encapsule pas le texte des étiquettes. Lorsque le retour est activé, le texte des étiquettes peut apparaître dans plusieurs lignes. L’étiquette peut inclure comme marqueurs de saut de ligne `\n` et la marque de soulignement `&`.  
   
-##  <a name="a-nameenablewraptasksa--cmfctaskspaneenablewraptasks"></a><a name="enablewraptasks"></a>CMFCTasksPane::EnableWrapTasks  
+##  <a name="enablewraptasks"></a>CMFCTasksPane::EnableWrapTasks  
  Active ou désactive le retour du texte dans les tâches.  
   
 ```  
@@ -605,7 +700,7 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Remarques  
  Par défaut, le renvoi des tâches est désactivé.  
   
-##  <a name="a-namegetactivepagea--cmfctaskspanegetactivepage"></a><a name="getactivepage"></a>CMFCTasksPane::GetActivePage  
+##  <a name="getactivepage"></a>CMFCTasksPane::GetActivePage  
  Retourne l'index de base zéro pour la page active.  
   
 ```  
@@ -615,7 +710,7 @@ int GetActivePage() const;
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro de la page active.  
   
-##  <a name="a-namegetgroupcaptionheighta--cmfctaskspanegetgroupcaptionheight"></a><a name="getgroupcaptionheight"></a>CMFCTasksPane::GetGroupCaptionHeight  
+##  <a name="getgroupcaptionheight"></a>CMFCTasksPane::GetGroupCaptionHeight  
  Retourne la hauteur de la légende du groupe.  
   
 ```  
@@ -625,7 +720,7 @@ int GetGroupCaptionHeight() const;
 ### <a name="return-value"></a>Valeur de retour  
  La hauteur de la légende du groupe, en pixels.  
   
-##  <a name="a-namegetgroupcaptionhorzoffseta--cmfctaskspanegetgroupcaptionhorzoffset"></a><a name="getgroupcaptionhorzoffset"></a>CMFCTasksPane::GetGroupCaptionHorzOffset  
+##  <a name="getgroupcaptionhorzoffset"></a>CMFCTasksPane::GetGroupCaptionHorzOffset  
  Retourne le décalage horizontal de la légende du groupe.  
   
 ```  
@@ -635,7 +730,7 @@ int GetGroupCaptionHorzOffset() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le décalage horizontal de la légende du groupe. Le décalage horizontal est la distance en pixels du bord gauche ou droit du volet Office.  
   
-##  <a name="a-namegetgroupcaptionvertoffseta--cmfctaskspanegetgroupcaptionvertoffset"></a><a name="getgroupcaptionvertoffset"></a>CMFCTasksPane::GetGroupCaptionVertOffset  
+##  <a name="getgroupcaptionvertoffset"></a>CMFCTasksPane::GetGroupCaptionVertOffset  
  Retourne le décalage vertical de la légende du groupe.  
   
 ```  
@@ -648,7 +743,7 @@ int GetGroupCaptionVertOffset() const;
 ### <a name="remarks"></a>Notes  
  La valeur par défaut pour le décalage vertical est 7 pixels.  
   
-##  <a name="a-namegetgroupcounta--cmfctaskspanegetgroupcount"></a><a name="getgroupcount"></a>CMFCTasksPane::GetGroupCount  
+##  <a name="getgroupcount"></a>CMFCTasksPane::GetGroupCount  
  Retourne le nombre total de groupes.  
   
 ```  
@@ -658,7 +753,7 @@ int GetGroupCount() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre total de groupes dans le volet Office.  
   
-##  <a name="a-namegetgrouplocationa--cmfctaskspanegetgrouplocation"></a><a name="getgrouplocation"></a>CMFCTasksPane::GetGroupLocation  
+##  <a name="getgrouplocation"></a>CMFCTasksPane::GetGroupLocation  
  Retourne l’index de groupe interne pour le groupe spécifié.  
   
 ```  
@@ -677,7 +772,7 @@ BOOL GetGroupLocation(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le groupe de tâches a été trouvé ; dans le cas contraire, `FALSE`.  
   
-##  <a name="a-namegetgroupvertoffseta--cmfctaskspanegetgroupvertoffset"></a><a name="getgroupvertoffset"></a>CMFCTasksPane::GetGroupVertOffset  
+##  <a name="getgroupvertoffset"></a>CMFCTasksPane::GetGroupVertOffset  
  Retourne le décalage vertical d'un groupe.  
   
 ```  
@@ -687,7 +782,7 @@ int GetGroupVertOffset() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le décalage vertical d’un groupe, en pixels.  
   
-##  <a name="a-namegethorzmargina--cmfctaskspanegethorzmargin"></a><a name="gethorzmargin"></a>CMFCTasksPane::GetHorzMargin  
+##  <a name="gethorzmargin"></a>CMFCTasksPane::GetHorzMargin  
  Retourne l’espacement horizontal entre un volet de tâches et le bord de la zone cliente.  
   
 ```  
@@ -700,7 +795,7 @@ int GetHorzMargin() const;
 ### <a name="remarks"></a>Remarques  
  L’espacement par défaut entre un volet de tâches et le bord de la zone cliente est de 12 pixels.  
   
-##  <a name="a-namegetnextpagesa--cmfctaskspanegetnextpages"></a><a name="getnextpages"></a>CMFCTasksPane::GetNextPages  
+##  <a name="getnextpages"></a>CMFCTasksPane::GetNextPages  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -712,7 +807,7 @@ void GetNextPages(CStringList& lstNextPages) const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetpagebygroupa--cmfctaskspanegetpagebygroup"></a><a name="getpagebygroup"></a>CMFCTasksPane::GetPageByGroup  
+##  <a name="getpagebygroup"></a>CMFCTasksPane::GetPageByGroup  
  Récupère l'index de page pour un groupe spécifié.  
   
 ```  
@@ -731,7 +826,7 @@ BOOL GetPageByGroup(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le groupe `nGroup` existe ; sinon, `FALSE`.  
   
-##  <a name="a-namegetpagescounta--cmfctaskspanegetpagescount"></a><a name="getpagescount"></a>CMFCTasksPane::GetPagesCount  
+##  <a name="getpagescount"></a>CMFCTasksPane::GetPagesCount  
  Retourne le nombre de pages.  
   
 ```  
@@ -741,7 +836,7 @@ int GetPagesCount() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de pages dans le volet Office.  
   
-##  <a name="a-namegetpreviouspagesa--cmfctaskspanegetpreviouspages"></a><a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages  
+##  <a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -753,7 +848,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetscrollbarctrla--cmfctaskspanegetscrollbarctrl"></a><a name="getscrollbarctrl"></a>CMFCTasksPane::GetScrollBarCtrl  
+##  <a name="getscrollbarctrl"></a>CMFCTasksPane::GetScrollBarCtrl  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -767,7 +862,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegettaska--cmfctaskspanegettask"></a><a name="gettask"></a>CMFCTasksPane::GetTask  
+##  <a name="gettask"></a>CMFCTasksPane::GetTask  
  Récupère une tâche.  
   
 ```  
@@ -786,7 +881,7 @@ CMFCTasksPaneTask* GetTask(
 ### <a name="return-value"></a>Valeur de retour  
  La tâche à l’index spécifié.  
   
-##  <a name="a-namegettaskcounta--cmfctaskspanegettaskcount"></a><a name="gettaskcount"></a>CMFCTasksPane::GetTaskCount  
+##  <a name="gettaskcount"></a>CMFCTasksPane::GetTaskCount  
  Retourne le nombre de tâches dans un groupe spécifié.  
   
 ```  
@@ -800,7 +895,7 @@ int GetTaskCount(int nGroup) const;
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de tâches dans le groupe spécifié, ou 0 si `nGroup` n’est pas valide.  
   
-##  <a name="a-namegettaskgroupa--cmfctaskspanegettaskgroup"></a><a name="gettaskgroup"></a>CMFCTasksPane::GetTaskGroup  
+##  <a name="gettaskgroup"></a>CMFCTasksPane::GetTaskGroup  
  Retourne un groupe de tâches pour un index de groupe spécifié.  
   
 ```  
@@ -814,7 +909,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ### <a name="return-value"></a>Valeur de retour  
  Le groupe de tâches à l’index spécifié.  
   
-##  <a name="a-namegettasklocationa--cmfctaskspanegettasklocation"></a><a name="gettasklocation"></a>CMFCTasksPane::GetTaskLocation  
+##  <a name="gettasklocation"></a>CMFCTasksPane::GetTaskLocation  
  Retourne le groupe et l’index d’une tâche spécifique.  
   
 ```  
@@ -856,7 +951,7 @@ BOOL GetTaskLocation(
 ### <a name="remarks"></a>Remarques  
  Cette méthode récupère l’index de groupe et d’un index de la tâche pour la tâche spécifiée. Si la méthode retourne `FALSE`, `nGroup` et `nTask` ont la valeur -1.  
   
-##  <a name="a-namegettaskshorzoffseta--cmfctaskspanegettaskshorzoffset"></a><a name="gettaskshorzoffset"></a>CMFCTasksPane::GetTasksHorzOffset  
+##  <a name="gettaskshorzoffset"></a>CMFCTasksPane::GetTasksHorzOffset  
  Retourne le décalage horizontal de tâches.  
   
 ```  
@@ -869,7 +964,7 @@ int GetTasksHorzOffset() const;
 ### <a name="remarks"></a>Remarques  
  Le décalage horizontal par défaut des tâches est de 12 pixels.  
   
-##  <a name="a-namegettasksiconhorzoffseta--cmfctaskspanegettasksiconhorzoffset"></a><a name="gettasksiconhorzoffset"></a>CMFCTasksPane::GetTasksIconHorzOffset  
+##  <a name="gettasksiconhorzoffset"></a>CMFCTasksPane::GetTasksIconHorzOffset  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -880,7 +975,7 @@ int GetTasksIconHorzOffset() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegettasksiconvertoffseta--cmfctaskspanegettasksiconvertoffset"></a><a name="gettasksiconvertoffset"></a>CMFCTasksPane::GetTasksIconVertOffset  
+##  <a name="gettasksiconvertoffset"></a>CMFCTasksPane::GetTasksIconVertOffset  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -891,7 +986,7 @@ int GetTasksIconVertOffset() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namegetvertmargina--cmfctaskspanegetvertmargin"></a><a name="getvertmargin"></a>CMFCTasksPane::GetVertMargin  
+##  <a name="getvertmargin"></a>CMFCTasksPane::GetVertMargin  
  Retourne la marge verticale entre un volet de tâches et les bords de la zone cliente.  
   
 ```  
@@ -904,7 +999,7 @@ int GetVertMargin() const;
 ### <a name="remarks"></a>Remarques  
  La marge verticale est l’espace entre un volet de tâches et les bords de la zone cliente. La valeur par défaut de la marge verticale est de 12 pixels.  
   
-##  <a name="a-nameisaccessibilitycompatiblea--cmfctaskspaneisaccessibilitycompatible"></a><a name="isaccessibilitycompatible"></a>CMFCTasksPane::IsAccessibilityCompatible  
+##  <a name="isaccessibilitycompatible"></a>CMFCTasksPane::IsAccessibilityCompatible  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -915,7 +1010,7 @@ virtual BOOL IsAccessibilityCompatible();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameisanimationenableda--cmfctaskspaneisanimationenabled"></a><a name="isanimationenabled"></a>CMFCTasksPane::IsAnimationEnabled  
+##  <a name="isanimationenabled"></a>CMFCTasksPane::IsAnimationEnabled  
  Indique si l'animation est activée.  
   
 ```  
@@ -928,7 +1023,7 @@ BOOL IsAnimationEnabled() const;
 ### <a name="remarks"></a>Notes  
  Appelez [CMFCTasksPane::EnableAnimation](#enableanimation) pour activer ou désactiver l’animation.  
   
-##  <a name="a-nameisbackbuttonenableda--cmfctaskspaneisbackbuttonenabled"></a><a name="isbackbuttonenabled"></a>CMFCTasksPane::IsBackButtonEnabled  
+##  <a name="isbackbuttonenabled"></a>CMFCTasksPane::IsBackButtonEnabled  
  Indique si le bouton Précédent est activé.  
   
 ```  
@@ -941,7 +1036,7 @@ BOOL IsBackButtonEnabled() const;
 ### <a name="remarks"></a>Notes  
  Lorsqu’un utilisateur clique sur le bouton précédent, le framework affiche la page précédente de la tâche.  
   
-##  <a name="a-nameisforwardbuttonenableda--cmfctaskspaneisforwardbuttonenabled"></a><a name="isforwardbuttonenabled"></a>CMFCTasksPane::IsForwardButtonEnabled  
+##  <a name="isforwardbuttonenabled"></a>CMFCTasksPane::IsForwardButtonEnabled  
  Indique si le bouton Suivant est activé.  
   
 ```  
@@ -954,7 +1049,7 @@ BOOL IsForwardButtonEnabled() const;
 ### <a name="remarks"></a>Remarques  
  Le bouton suivant permet la navigation vers l’avant dans l’historique de pages de tâches.  
   
-##  <a name="a-nameisgroupcollapseenableda--cmfctaskspaneisgroupcollapseenabled"></a><a name="isgroupcollapseenabled"></a>CMFCTasksPane::IsGroupCollapseEnabled  
+##  <a name="isgroupcollapseenabled"></a>CMFCTasksPane::IsGroupCollapseEnabled  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -965,7 +1060,7 @@ BOOL IsGroupCollapseEnabled() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameishistorymenubuttonsenableda--cmfctaskspaneishistorymenubuttonsenabled"></a><a name="ishistorymenubuttonsenabled"></a>CMFCTasksPane::IsHistoryMenuButtonsEnabled  
+##  <a name="ishistorymenubuttonsenabled"></a>CMFCTasksPane::IsHistoryMenuButtonsEnabled  
  Indique si le **suivant** et **précédent** boutons de navigation ont des menus déroulants.  
   
 ```  
@@ -975,7 +1070,7 @@ BOOL IsHistoryMenuButtonsEnabled() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le **suivant** et **précédent** des boutons de navigation ont les menus déroulants ; sinon, `FALSE`.  
   
-##  <a name="a-nameisnavigationtoolbarenableda--cmfctaskspaneisnavigationtoolbarenabled"></a><a name="isnavigationtoolbarenabled"></a>CMFCTasksPane::IsNavigationToolbarEnabled  
+##  <a name="isnavigationtoolbarenabled"></a>CMFCTasksPane::IsNavigationToolbarEnabled  
  Indique si la barre d'outils de navigation est activée.  
   
 ```  
@@ -985,7 +1080,7 @@ BOOL IsNavigationToolbarEnabled() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si la barre d’outils de navigation est activée ; dans le cas contraire, `FALSE`.  
   
-##  <a name="a-nameistoolboxa--cmfctaskspaneistoolbox"></a><a name="istoolbox"></a>CMFCTasksPane::IsToolBox  
+##  <a name="istoolbox"></a>CMFCTasksPane::IsToolBox  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -996,7 +1091,7 @@ virtual BOOL IsToolBox() const;
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameiswraplabelsenableda--cmfctaskspaneiswraplabelsenabled"></a><a name="iswraplabelsenabled"></a>CMFCTasksPane::IsWrapLabelsEnabled  
+##  <a name="iswraplabelsenabled"></a>CMFCTasksPane::IsWrapLabelsEnabled  
  Indique si le volet des tâches effectue un retour automatique à la ligne dans les étiquettes.  
   
 ```  
@@ -1006,7 +1101,7 @@ BOOL IsWrapLabelsEnabled() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si les mots dans les étiquettes sont encapsulées ; dans le cas contraire, `FALSE`.  
   
-##  <a name="a-nameiswraptasksenableda--cmfctaskspaneiswraptasksenabled"></a><a name="iswraptasksenabled"></a>CMFCTasksPane::IsWrapTasksEnabled  
+##  <a name="iswraptasksenabled"></a>CMFCTasksPane::IsWrapTasksEnabled  
  Spécifie si l’infrastructure encapsule la chaîne de la tâche.  
   
 ```  
@@ -1016,7 +1111,7 @@ BOOL IsWrapTasksEnabled() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si la chaîne de tâche est encapsulée ; dans le cas contraire, `FALSE`.  
   
-##  <a name="a-nameloadstatea--cmfctaskspaneloadstate"></a><a name="loadstate"></a>CMFCTasksPane::LoadState  
+##  <a name="loadstate"></a>CMFCTasksPane::LoadState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1035,7 +1130,7 @@ virtual BOOL LoadState(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonactivatetaskspanepagea--cmfctaskspaneonactivatetaskspanepage"></a><a name="onactivatetaskspanepage"></a>CMFCTasksPane::OnActivateTasksPanePage  
+##  <a name="onactivatetaskspanepage"></a>CMFCTasksPane::OnActivateTasksPanePage  
  Appelé par l’infrastructure lorsqu’il émet une page du volet tâche active.  
   
 ```  
@@ -1045,7 +1140,7 @@ virtual void OnActivateTasksPanePage();
 ### <a name="remarks"></a>Notes  
  Substituez cette méthode dans une classe dérivée pour personnaliser l’apparence de la page du volet Office.  
   
-##  <a name="a-nameoncancela--cmfctaskspaneoncancel"></a><a name="oncancel"></a>CMFCTasksPane::OnCancel  
+##  <a name="oncancel"></a>CMFCTasksPane::OnCancel  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1054,7 +1149,7 @@ virtual void OnCancel();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonclicktaska--cmfctaskspaneonclicktask"></a><a name="onclicktask"></a>CMFCTasksPane::OnClickTask  
+##  <a name="onclicktask"></a>CMFCTasksPane::OnClickTask  
  Appelé par l’infrastructure quand l’utilisateur clique sur un élément dans le volet des tâches.  
   
 ```  
@@ -1083,7 +1178,7 @@ virtual void OnClickTask(
   
  Substituez cette méthode dans une classe dérivée pour exécuter du code personnalisé lorsqu’un clic est effectué sur une tâche.  
   
-##  <a name="a-nameonoka--cmfctaskspaneonok"></a><a name="onok"></a>CMFCTasksPane::OnOK  
+##  <a name="onok"></a>CMFCTasksPane::OnOK  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1092,7 +1187,7 @@ virtual void OnOK();
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonpressbackbuttona--cmfctaskspaneonpressbackbutton"></a><a name="onpressbackbutton"></a>CMFCTasksPane::OnPressBackButton  
+##  <a name="onpressbackbutton"></a>CMFCTasksPane::OnPressBackButton  
  Appelé par l'infrastructure quand l'utilisateur clique sur le bouton Précédent.  
   
 ```  
@@ -1104,7 +1199,7 @@ virtual void OnPressBackButton();
   
  Substituez cette méthode dans une classe dérivée pour exécuter du code personnalisé lorsque l’utilisateur clique sur le bouton précédent.  
   
-##  <a name="a-nameonpressforwardbuttona--cmfctaskspaneonpressforwardbutton"></a><a name="onpressforwardbutton"></a>CMFCTasksPane::OnPressForwardButton  
+##  <a name="onpressforwardbutton"></a>CMFCTasksPane::OnPressForwardButton  
  Appelé par l'infrastructure quand l'utilisateur clique sur le bouton de navigation Suivant.  
   
 ```  
@@ -1116,7 +1211,7 @@ virtual void OnPressForwardButton();
   
  Substituez cette méthode dans une classe dérivée pour exécuter du code personnalisé lorsque l’utilisateur clique sur le bouton suivant.  
   
-##  <a name="a-nameonpresshomebuttona--cmfctaskspaneonpresshomebutton"></a><a name="onpresshomebutton"></a>CMFCTasksPane::OnPressHomeButton  
+##  <a name="onpresshomebutton"></a>CMFCTasksPane::OnPressHomeButton  
  Appelé par l’infrastructure lorsque l’utilisateur clique sur le bouton de navigation d’accueil.  
   
 ```  
@@ -1128,7 +1223,7 @@ virtual void OnPressHomeButton();
   
  Substituez cette méthode dans une classe dérivée pour exécuter du code personnalisé lorsque l’utilisateur clique sur le bouton de navigation d’accueil.  
   
-##  <a name="a-nameonpressotherbuttona--cmfctaskspaneonpressotherbutton"></a><a name="onpressotherbutton"></a>CMFCTasksPane::OnPressOtherButton  
+##  <a name="onpressotherbutton"></a>CMFCTasksPane::OnPressOtherButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1143,7 +1238,7 @@ virtual void OnPressOtherButton(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameonsetaccdataa--cmfctaskspaneonsetaccdata"></a><a name="onsetaccdata"></a>CMFCTasksPane::OnSetAccData  
+##  <a name="onsetaccdata"></a>CMFCTasksPane::OnSetAccData  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1157,7 +1252,7 @@ virtual BOOL OnSetAccData(long lVal);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameonupdatecmduia--cmfctaskspaneonupdatecmdui"></a><a name="onupdatecmdui"></a>CMFCTasksPane::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>CMFCTasksPane::OnUpdateCmdUI  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1172,7 +1267,7 @@ virtual void OnUpdateCmdUI(
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namepretranslatemessagea--cmfctaskspanepretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCTasksPane::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CMFCTasksPane::PreTranslateMessage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1186,7 +1281,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namerecalclayouta--cmfctaskspanerecalclayout"></a><a name="recalclayout"></a>CMFCTasksPane::RecalcLayout  
+##  <a name="recalclayout"></a>CMFCTasksPane::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1198,7 +1293,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameremoveallgroupsa--cmfctaskspaneremoveallgroups"></a><a name="removeallgroups"></a>CMFCTasksPane::RemoveAllGroups  
+##  <a name="removeallgroups"></a>CMFCTasksPane::RemoveAllGroups  
  Supprime tous les groupes sur la page spécifiée.  
   
 ```  
@@ -1212,14 +1307,14 @@ void RemoveAllGroups(int nPageIdx = 0);
 ### <a name="remarks"></a>Remarques  
  Supprime tous les groupes sur la page spécifiée par `nPageIdx`, ou tous les groupes s’il existe une page par défaut.  
   
-##  <a name="a-nameremoveallpagesa--cmfctaskspaneremoveallpages"></a><a name="removeallpages"></a>CMFCTasksPane::RemoveAllPages  
+##  <a name="removeallpages"></a>CMFCTasksPane::RemoveAllPages  
  Supprime toutes les pages du volet des tâches à l’exception de la (première) page par défaut.  
   
 ```  
 void RemoveAllPages();
 ```  
   
-##  <a name="a-nameremovealltasksa--cmfctaskspaneremovealltasks"></a><a name="removealltasks"></a>CMFCTasksPane::RemoveAllTasks  
+##  <a name="removealltasks"></a>CMFCTasksPane::RemoveAllTasks  
  Supprime toutes les tâches du groupe spécifié.  
   
 ```  
@@ -1230,7 +1325,7 @@ void RemoveAllTasks(int nGroup);
  [in] `nGroup`  
  Spécifie l’index de base zéro du groupe.  
   
-##  <a name="a-nameremovegroupa--cmfctaskspaneremovegroup"></a><a name="removegroup"></a>CMFCTasksPane::RemoveGroup  
+##  <a name="removegroup"></a>CMFCTasksPane::RemoveGroup  
  Supprime un groupe.  
   
 ```  
@@ -1246,7 +1341,7 @@ void RemoveGroup(int nGroup);
   
  Lorsque le framework supprime un groupe, les tâches utilisateur windows associés sont détruits.  
   
-##  <a name="a-nameremovepagea--cmfctaskspaneremovepage"></a><a name="removepage"></a>CMFCTasksPane::RemovePage  
+##  <a name="removepage"></a>CMFCTasksPane::RemovePage  
  Supprime une page spécifiée du volet des tâches.  
   
 ```  
@@ -1257,7 +1352,7 @@ void RemovePage(int nPageIdx);
  [in] `nPageIdx`  
  Spécifie l’index de base zéro de la page à supprimer.  
   
-##  <a name="a-nameremovetaska--cmfctaskspaneremovetask"></a><a name="removetask"></a>CMFCTasksPane::RemoveTask  
+##  <a name="removetask"></a>CMFCTasksPane::RemoveTask  
  Supprime une tâche d’un groupe de tâches.  
   
 ```  
@@ -1280,7 +1375,7 @@ BOOL RemoveTask(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si la fonction réussit ; `FALSE` si `nGroup` ou `nTask` n’est pas valide.  
   
-##  <a name="a-namesavestatea--cmfctaskspanesavestate"></a><a name="savestate"></a>CMFCTasksPane::SaveState  
+##  <a name="savestate"></a>CMFCTasksPane::SaveState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1299,7 +1394,7 @@ virtual BOOL SaveState(
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameserializea--cmfctaskspaneserialize"></a><a name="serialize"></a>CMFCTasksPane::Serialize  
+##  <a name="serialize"></a>CMFCTasksPane::Serialize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1311,7 +1406,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetactivepagea--cmfctaskspanesetactivepage"></a><a name="setactivepage"></a>CMFCTasksPane::SetActivePage  
+##  <a name="setactivepage"></a>CMFCTasksPane::SetActivePage  
  Rend la page spécifiée dans le volet actif.  
   
 ```  
@@ -1325,7 +1420,7 @@ void SetActivePage(int nPageIdx);
 ### <a name="remarks"></a>Remarques  
  Cette méthode déclare si le `nPageIdx` n’est pas valide.  
   
-##  <a name="a-namesetcaptiona--cmfctaskspanesetcaption"></a><a name="setcaption"></a>CMFCTasksPane::SetCaption  
+##  <a name="setcaption"></a>CMFCTasksPane::SetCaption  
  Définit le nom de légende d’un volet de tâches.  
   
 ```  
@@ -1339,7 +1434,7 @@ void SetCaption(LPCTSTR lpszName);
 ### <a name="remarks"></a>Remarques  
  Si un volet de tâches comporte plusieurs pages, la page par défaut est la légende qui a été définie à l’aide de cette fonction.  
   
-##  <a name="a-namesetgroupcaptionheighta--cmfctaskspanesetgroupcaptionheight"></a><a name="setgroupcaptionheight"></a>CMFCTasksPane::SetGroupCaptionHeight  
+##  <a name="setgroupcaptionheight"></a>CMFCTasksPane::SetGroupCaptionHeight  
  Définit la hauteur d'une légende de groupe.  
   
 ```  
@@ -1355,7 +1450,7 @@ void SetGroupCaptionHeight(int n = -1);
   
  Si `n` -1, le framework détermine la valeur de la marge à l’aide du Gestionnaire visuel ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`). Hauteur de la légende par défaut est 25 pixels.  
   
-##  <a name="a-namesetgroupcaptionhorzoffseta--cmfctaskspanesetgroupcaptionhorzoffset"></a><a name="setgroupcaptionhorzoffset"></a>CMFCTasksPane::SetGroupCaptionHorzOffset  
+##  <a name="setgroupcaptionhorzoffset"></a>CMFCTasksPane::SetGroupCaptionHorzOffset  
  Définit le décalage horizontal d'une légende de groupe.  
   
 ```  
@@ -1366,7 +1461,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
  [in] `n`  
  Spécifie le décalage horizontal de la légende du groupe.  
   
-##  <a name="a-namesetgroupcaptionvertoffseta--cmfctaskspanesetgroupcaptionvertoffset"></a><a name="setgroupcaptionvertoffset"></a>CMFCTasksPane::SetGroupCaptionVertOffset  
+##  <a name="setgroupcaptionvertoffset"></a>CMFCTasksPane::SetGroupCaptionVertOffset  
  Définit le décalage vertical d'une légende de groupe.  
   
 ```  
@@ -1377,7 +1472,7 @@ void SetGroupCaptionVertOffset(int n = -1);
  [in] `n`  
  Spécifie le décalage vertical, en pixels, de la légende du groupe.  
   
-##  <a name="a-namesetgroupnamea--cmfctaskspanesetgroupname"></a><a name="setgroupname"></a>CMFCTasksPane::SetGroupName  
+##  <a name="setgroupname"></a>CMFCTasksPane::SetGroupName  
  Définit un nom de groupe.  
   
 ```  
@@ -1396,7 +1491,7 @@ BOOL SetGroupName(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le nom de groupe a été correctement défini ; dans le cas contraire, `FALSE`.  
   
-##  <a name="a-namesetgrouptextcolora--cmfctaskspanesetgrouptextcolor"></a><a name="setgrouptextcolor"></a>CMFCTasksPane::SetGroupTextColor  
+##  <a name="setgrouptextcolor"></a>CMFCTasksPane::SetGroupTextColor  
  Définit la couleur du texte d'une légende de groupe.  
   
 ```  
@@ -1419,7 +1514,7 @@ BOOL SetGroupTextColor(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si la couleur de texte de groupe a été modifiée avec succès. dans le cas contraire, `FALSE`.  
   
-##  <a name="a-namesetgroupvertoffseta--cmfctaskspanesetgroupvertoffset"></a><a name="setgroupvertoffset"></a>CMFCTasksPane::SetGroupVertOffset  
+##  <a name="setgroupvertoffset"></a>CMFCTasksPane::SetGroupVertOffset  
  Définit le décalage vertical pour un groupe.  
   
 ```  
@@ -1435,7 +1530,7 @@ void SetGroupVertOffset(int n = -1);
   
  Appelez cette méthode pour personnaliser les marges d’éléments du volet des tâches. Si `n` -1, le framework détermine la valeur de la marge à l’aide du Gestionnaire visuel ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`). Le décalage par défaut est de 15 pixels.  
   
-##  <a name="a-namesethorzmargina--cmfctaskspanesethorzmargin"></a><a name="sethorzmargin"></a>CMFCTasksPane::SetHorzMargin  
+##  <a name="sethorzmargin"></a>CMFCTasksPane::SetHorzMargin  
  Définit la marge horizontale.  
   
 ```  
@@ -1451,7 +1546,7 @@ void SetHorzMargin(int n = -1);
   
  Si n est -1, et l’infrastructure détermine la valeur de la marge à l’aide du Gestionnaire visuel ( `CMFCVisualManager::GetTasksPaneHorzMargin`). La marge horizontale par défaut est de 12 pixels.  
   
-##  <a name="a-nameseticonslista--cmfctaskspaneseticonslist"></a><a name="seticonslist"></a>CMFCTasksPane::SetIconsList  
+##  <a name="seticonslist"></a>CMFCTasksPane::SetIconsList  
  Définit la liste d’images.  
   
 ```  
@@ -1481,7 +1576,7 @@ void SetIconsList(HIMAGELIST hIcons);
   
  Cette méthode associe une liste d’images avec le contrôle de volet Office. Pour définir l’icône d’une tâche lorsque vous appelez [CMFCTasksPane::AddTask](#addtask), définissez `nTaskIcon` à l’index de base zéro dans cette liste d’images appropriée.  
   
-##  <a name="a-namesetpagecaptiona--cmfctaskspanesetpagecaption"></a><a name="setpagecaption"></a>CMFCTasksPane::SetPageCaption  
+##  <a name="setpagecaption"></a>CMFCTasksPane::SetPageCaption  
  Définit le texte de légende d’une page de volet de tâches.  
   
 ```  
@@ -1500,7 +1595,7 @@ void SetPageCaption(
 ### <a name="remarks"></a>Remarques  
  Si un volet de tâches comporte plusieurs pages, la page par défaut est la légende qui a été définie à l’aide de cette méthode.  
   
-##  <a name="a-namesettasknamea--cmfctaskspanesettaskname"></a><a name="settaskname"></a>CMFCTasksPane::SetTaskName  
+##  <a name="settaskname"></a>CMFCTasksPane::SetTaskName  
  Définit le nom d’une tâche.  
   
 ```  
@@ -1523,7 +1618,7 @@ BOOL SetTaskName(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si le nom de la tâche a été correctement défini ; dans le cas contraire, `FALSE`.  
   
-##  <a name="a-namesettaskshorzoffseta--cmfctaskspanesettaskshorzoffset"></a><a name="settaskshorzoffset"></a>CMFCTasksPane::SetTasksHorzOffset  
+##  <a name="settaskshorzoffset"></a>CMFCTasksPane::SetTasksHorzOffset  
  Définit le décalage horizontal pour les tâches.  
   
 ```  
@@ -1541,7 +1636,7 @@ void SetTasksHorzOffset(int n = -1);
   
  Le décalage horizontal par défaut est de 12 pixels.  
   
-##  <a name="a-namesettasksiconhorzoffseta--cmfctaskspanesettasksiconhorzoffset"></a><a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset  
+##  <a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1553,7 +1648,7 @@ void SetTasksIconHorzOffset(int n = -1);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesettasksiconvertoffseta--cmfctaskspanesettasksiconvertoffset"></a><a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset  
+##  <a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1565,7 +1660,7 @@ void SetTasksIconVertOffset(int n = -1);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesettasktextcolora--cmfctaskspanesettasktextcolor"></a><a name="settasktextcolor"></a>CMFCTasksPane::SetTaskTextColor  
+##  <a name="settasktextcolor"></a>CMFCTasksPane::SetTaskTextColor  
  Définit la couleur du texte d’une tâche.  
   
 ```  
@@ -1592,7 +1687,7 @@ BOOL SetTaskTextColor(
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si la couleur du texte de la tâche a été correctement définie ; dans le cas contraire, `FALSE`.  
   
-##  <a name="a-namesetvertmargina--cmfctaskspanesetvertmargin"></a><a name="setvertmargin"></a>CMFCTasksPane::SetVertMargin  
+##  <a name="setvertmargin"></a>CMFCTasksPane::SetVertMargin  
  Définit la marge verticale.  
   
 ```  
@@ -1608,7 +1703,7 @@ void SetVertMargin(int n = -1);
   
  Si `n` -1, le framework détermine la valeur de la marge à l’aide du Gestionnaire visuel ( `CMFCVisualManager::GetTasksPaneVertMargin`). La marge par défaut est de 12 pixels.  
   
-##  <a name="a-namesetwindowheighta--cmfctaskspanesetwindowheight"></a><a name="setwindowheight"></a>CMFCTasksPane::SetWindowHeight  
+##  <a name="setwindowheight"></a>CMFCTasksPane::SetWindowHeight  
  Définit la hauteur d’un contrôle de fenêtre.  
   
 ```  
@@ -1639,7 +1734,7 @@ BOOL SetWindowHeight(
 ### <a name="remarks"></a>Notes  
  Appelez [CMFCTasksPane::AddWindow](#addwindow) pour ajouter des tâches avec des contrôles de fenêtre.  
   
-##  <a name="a-nameshowcommandmessagestringa--cmfctaskspaneshowcommandmessagestring"></a><a name="showcommandmessagestring"></a>CMFCTasksPane::ShowCommandMessageString  
+##  <a name="showcommandmessagestring"></a>CMFCTasksPane::ShowCommandMessageString  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1651,7 +1746,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-nameshowtaska--cmfctaskspaneshowtask"></a><a name="showtask"></a>CMFCTasksPane::ShowTask  
+##  <a name="showtask"></a>CMFCTasksPane::ShowTask  
  Affiche ou masque une tâche.  
   
 ```  
@@ -1681,7 +1776,7 @@ BOOL ShowTask(
 ### <a name="remarks"></a>Remarques  
  Utilisez [CMFCTasksPane::ShowTaskByCmdId](#showtaskbycmdid) pour afficher ou masquer une tâche en fonction de son ID de commande.  
   
-##  <a name="a-nameshowtaskbycmdida--cmfctaskspaneshowtaskbycmdid"></a><a name="showtaskbycmdid"></a>CMFCTasksPane::ShowTaskByCmdId  
+##  <a name="showtaskbycmdid"></a>CMFCTasksPane::ShowTaskByCmdId  
  Affiche ou masque une tâche en fonction de son ID de commande.  
   
 ```  
@@ -1707,7 +1802,7 @@ BOOL ShowTaskByCmdId(
 ### <a name="remarks"></a>Remarques  
  Utilisez [CMFCTasksPane::ShowTask](#showtask) pour afficher ou masquer une tâche en fonction de son ID de commande.  
   
-##  <a name="a-nameupdatea--cmfctaskspaneupdate"></a><a name="update"></a>CMFCTasksPane::Update  
+##  <a name="update"></a>CMFCTasksPane::Update  
  Actualise tous les contrôles dans un volet Office.  
   
 ```  

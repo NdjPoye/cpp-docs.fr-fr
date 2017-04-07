@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSettingsStoreSP
+- AFXSETTINGSSTORE/CSettingsStoreSP
+- AFXSETTINGSSTORE/CSettingsStoreSP::CSettingsStoreSP
+- AFXSETTINGSSTORE/CSettingsStoreSP::Create
+- AFXSETTINGSSTORE/CSettingsStoreSP::SetRuntimeClass
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +92,7 @@ class CSettingsStoreSP
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxsettingsstore.h  
   
-##  <a name="a-namecreatea--csettingsstorespcreate"></a><a name="create"></a>CSettingsStoreSP::Create  
+##  <a name="create"></a>CSettingsStoreSP::Create  
  Crée une instance d’un objet dérivé de la [CSettingsStore classe](../../mfc/reference/csettingsstore-class.md).  
   
 ```  
@@ -119,7 +123,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  [!code-cpp[NVC_MFC_RibbonApp&#33;](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
   
-##  <a name="a-namecsettingsstorespa--csettingsstorespcsettingsstoresp"></a><a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP  
+##  <a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP  
  Construit un [CSettingsStoreSP classe](../../mfc/reference/csettingsstoresp-class.md) objet.  
   
 ```  
@@ -133,7 +137,7 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ### <a name="remarks"></a>Remarques  
  Le `CSettingsStoreSP` objet stocke les données à partir de `dwUserData` dans la variable membre `m_dwUserData`.  
   
-##  <a name="a-namesetruntimeclassa--csettingsstorespsetruntimeclass"></a><a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass  
+##  <a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass  
  Définit la classe d’exécution. La méthode [CSettingsStoreSP::Create](#create) utilise la classe d’exécution pour déterminer le type d’objet à créer.  
   
 ```  

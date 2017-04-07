@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IExecutionResource
+- IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::CurrentSubscriptionLevel
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 530fd40409a08be6ae13ad604deb5b85989b2964
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: fa3c65780ac9e001e6f6b8a015dc7f70df47181f
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource, structure
@@ -54,10 +59,10 @@ struct IExecutionResource;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[IExecutionResource::CurrentSubscriptionLevel, méthode](#currentsubscriptionlevel)|Retourne le nombre de processeur virtuel activée racines et inscrit les threads externes actuellement associés au thread matériel sous-jacent que cette ressource d’exécution représente.|  
-|[IExecutionResource::GetExecutionResourceId, méthode](#getexecutionresourceid)|Retourne un identificateur unique pour le thread matériel que cette ressource d’exécution représente.|  
-|[IExecutionResource::GetNodeId, méthode](#getnodeid)|Retourne un identificateur unique pour le nœud processeur auquel appartient cette ressource d’exécution.|  
-|[IExecutionResource::Remove, méthode](#remove)|Retourne cette ressource d’exécution pour le Gestionnaire de ressources.|  
+|[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|Retourne le nombre de processeur virtuel activée racines et inscrit les threads externes actuellement associés au thread matériel sous-jacent que cette ressource d’exécution représente.|  
+|[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Retourne un identificateur unique pour le thread matériel que cette ressource d’exécution représente.|  
+|[IExecutionResource::GetNodeId](#getnodeid)|Retourne un identificateur unique pour le nœud processeur auquel appartient cette ressource d’exécution.|  
+|[IExecutionResource::Remove](#remove)|Retourne cette ressource d’exécution pour le Gestionnaire de ressources.|  
   
 ## <a name="remarks"></a>Notes  
  Ressources d’exécution peuvent être autonomes ou associées aux racines de processeur virtuel. Une ressource d’exécution autonome est créée lorsqu’un thread dans votre application crée un abonnement de thread. Les méthodes [ISchedulerProxy::SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) et [ISchedulerProxy::RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) créent des abonnements de thread et retournent un `IExecutionResource` interface qui représente l’abonnement. Création d’un abonnement de thread est un moyen d’informer le Gestionnaire de ressources qui participe à un thread donné le travail en file d’attente dans un planificateur, ainsi que les racines de processeur virtuel Resource Manager affecte au planificateur. Le Gestionnaire de ressources utilise les informations pour éviter le surabonnement des threads matériels lorsqu’il le peut.  
@@ -70,7 +75,7 @@ struct IExecutionResource;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-namecurrentsubscriptionlevela--iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a>IExecutionResource::CurrentSubscriptionLevel, méthode  
+##  <a name="currentsubscriptionlevel"></a>IExecutionResource::CurrentSubscriptionLevel, méthode  
  Retourne le nombre de processeur virtuel activée racines et inscrit les threads externes actuellement associés au thread matériel sous-jacent que cette ressource d’exécution représente.  
   
 ```
@@ -89,7 +94,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  Le Gestionnaire de ressources utilise les informations au niveau d’abonnement comme l’une des façons de déterminer quand déplacer des ressources entre les planificateurs.  
   
-##  <a name="a-namegetexecutionresourceida--iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a>IExecutionResource::GetExecutionResourceId, méthode  
+##  <a name="getexecutionresourceid"></a>IExecutionResource::GetExecutionResourceId, méthode  
  Retourne un identificateur unique pour le thread matériel que cette ressource d’exécution représente.  
   
 ```
@@ -99,10 +104,10 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ### <a name="return-value"></a>Valeur de retour  
  Identificateur unique du thread matériel sous-jacent de cette ressource d’exécution.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Chaque thread matériel est assigné un identificateur unique par le Runtime d’accès concurrentiel. Si plusieurs ressources d’exécution sont matériel associé thread, ils auront le même identificateur de ressource d’exécution.  
   
-##  <a name="a-namegetnodeida--iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a>IExecutionResource::GetNodeId, méthode  
+##  <a name="getnodeid"></a>IExecutionResource::GetNodeId, méthode  
  Retourne un identificateur unique pour le nœud processeur auquel appartient cette ressource d’exécution.  
   
 ```
@@ -117,7 +122,7 @@ virtual unsigned int GetNodeId() const = 0;
   
  Le nombre de nœuds peut être obtenu à partir de la fonction [GetProcessorNodeCount](concurrency-namespace-functions.md).  
   
-##  <a name="a-nameremovea--iexecutionresourceremove-method"></a><a name="remove"></a>IExecutionResource::Remove, méthode  
+##  <a name="remove"></a>IExecutionResource::Remove, méthode  
  Retourne cette ressource d’exécution pour le Gestionnaire de ressources.  
   
 ```
@@ -141,5 +146,5 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
   
 ## <a name="see-also"></a>Voir aussi  
  [accès concurrentiel Namespace](concurrency-namespace.md)   
- [IVirtualProcessorRoot (Structure)](ivirtualprocessorroot-structure.md)
+ [IVirtualProcessorRoot, structure](ivirtualprocessorroot-structure.md)
 

@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleStreamFile
+- AFXOLE/COleStreamFile
+- AFXOLE/COleStreamFile::COleStreamFile
+- AFXOLE/COleStreamFile::Attach
+- AFXOLE/COleStreamFile::CreateMemoryStream
+- AFXOLE/COleStreamFile::CreateStream
+- AFXOLE/COleStreamFile::Detach
+- AFXOLE/COleStreamFile::GetStream
+- AFXOLE/COleStreamFile::OpenStream
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +100,7 @@ class COleStreamFile : public CFile
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxole.h  
   
-##  <a name="a-nameattacha--colestreamfileattach"></a><a name="attach"></a>COleStreamFile::Attach  
+##  <a name="attach"></a>COleStreamFile::Attach  
  Associe le flux OLE fourni avec les `COleStreamFile` objet.  
   
 ```  
@@ -108,7 +116,7 @@ void Attach(LPSTREAM lpStream);
   
  Pour plus d’informations, consultez [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecolestreamfilea--colestreamfilecolestreamfile"></a><a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
+##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
  Crée un objet `COleStreamFile`.  
   
 ```  
@@ -124,7 +132,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
   
  Pour plus d’informations, consultez [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatememorystreama--colestreamfilecreatememorystream"></a><a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
+##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
  En toute sécurité crée un flux de données manque de mémoire globale, partagée où une défaillance est une condition normale, attendue.  
   
 ```  
@@ -143,7 +151,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
  Pour plus d’informations, consultez [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namecreatestreama--colestreamfilecreatestream"></a><a name="createstream"></a>COleStreamFile::CreateStream  
+##  <a name="createstream"></a>COleStreamFile::CreateStream  
  En toute sécurité crée un flux de données dans l’objet de stockage fourni où une défaillance est une condition normale, attendue.  
   
 ```  
@@ -175,7 +183,7 @@ BOOL CreateStream(
   
  Pour plus d’informations, consultez [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namedetacha--colestreamfiledetach"></a><a name="detach"></a>COleStreamFile::Detach  
+##  <a name="detach"></a>COleStreamFile::Detach  
  Dissocie le flux à partir de l’objet sans avoir à fermer le flux de données.  
   
 ```  
@@ -190,7 +198,7 @@ LPSTREAM Detach();
   
  Pour plus d’informations, consultez [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetstreama--colestreamfilegetstream"></a><a name="getstream"></a>COleStreamFile::GetStream  
+##  <a name="getstream"></a>COleStreamFile::GetStream  
  Appelez cette fonction pour retourner un pointeur vers le flux actuel.  
   
 ```  
@@ -200,7 +208,7 @@ IStream* GetStream() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers l’interface actuelle du flux de données ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
   
-##  <a name="a-nameopenstreama--colestreamfileopenstream"></a><a name="openstream"></a>COleStreamFile::OpenStream  
+##  <a name="openstream"></a>COleStreamFile::OpenStream  
  Ouvre un flux existant.  
   
 ```  

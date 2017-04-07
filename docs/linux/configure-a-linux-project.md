@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
-ms.openlocfilehash: b110994cab92d2151f63912d2b08af56059b82d7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1683c03c522b0b332ced9e93188c65e996ac633d
+ms.openlocfilehash: ec7ec2a7f5f0393f00efb6d662494e7be2a3f696
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -71,7 +71,7 @@ Une fois que les fichiers sont copiés, utilisez l’élément **Répertoires VC
 ## <a name="copy-sources"></a>Copier les sources
 Lors de la génération, les fichiers sources sur votre PC de développement sont copiés sur l’ordinateur Linux où ils sont compilés.  Par défaut, toutes les sources dans le projet Visual Studio sont copiées aux emplacements définis dans les paramètres ci-dessus.  Toutefois, des sources supplémentaires peuvent également être ajoutées à la liste, ou la copie des sources peut être entièrement désactivée, ce qui est le paramètre par défaut d’un projet Makefile.
 
-* L’option **Sources à copier** détermine quelles sources sont copiées sur l’ordinateur distant.  Par défaut, **@(SourcesToCopyRemotely)** correspond à tous les fichiers du projet.
+* L’option **Sources à copier** détermine quelles sources sont copiées sur l’ordinateur distant.  Par défaut, **@(SourcesToCopyRemotely)** est défini par défaut sur tous les fichiers de code source dans le projet, mais n’inclut pas les fichiers d’actifs/de ressources, comme les images.
 
 * L’option **Copier les sources** peut être activée et désactivée pour activer et désactiver la copie des fichiers sources sur l’ordinateur distant.
 

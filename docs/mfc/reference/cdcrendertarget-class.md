@@ -9,8 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CDCRenderTarget
 - CDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget::CDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget::Attach
+- AFXRENDERTARGET/CDCRenderTarget::BindDC
+- AFXRENDERTARGET/CDCRenderTarget::Create
+- AFXRENDERTARGET/CDCRenderTarget::Detach
+- AFXRENDERTARGET/CDCRenderTarget::GetDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget::m_pDCRenderTarget
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +96,7 @@ class CDCRenderTarget : public CRenderTarget;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxrendertarget.h  
   
-##  <a name="a-nameattacha--cdcrendertargetattach"></a><a name="attach"></a>CDCRenderTarget::Attach  
+##  <a name="attach"></a>CDCRenderTarget::Attach  
  Interface de cible à l’objet de rendu attache existant  
   
 ```  
@@ -100,7 +107,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
  `pTarget`  
  Interface de cible de rendu existante. Ne peut pas être NULL  
   
-##  <a name="a-namebinddca--cdcrendertargetbinddc"></a><a name="binddc"></a>CDCRenderTarget::BindDC  
+##  <a name="binddc"></a>CDCRenderTarget::BindDC  
  Lie la cible de rendu pour le contexte de périphérique auquel il envoie des commandes de dessin  
   
 ```  
@@ -119,14 +126,14 @@ BOOL BindDC(
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.  
   
-##  <a name="a-namecdcrendertargeta--cdcrendertargetcdcrendertarget"></a><a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget  
+##  <a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget  
  Construit un objet CDCRenderTarget.  
   
 ```  
 CDCRenderTarget();
 ```  
   
-##  <a name="a-namecreatea--cdcrendertargetcreate"></a><a name="create"></a>CDCRenderTarget::Create  
+##  <a name="create"></a>CDCRenderTarget::Create  
  Crée CDCRenderTarget.  
   
 ```  
@@ -140,7 +147,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.  
   
-##  <a name="a-namedetacha--cdcrendertargetdetach"></a><a name="detach"></a>CDCRenderTarget::Detach  
+##  <a name="detach"></a>CDCRenderTarget::Detach  
  Détache l’interface de cible de rendu de l’objet  
   
 ```  
@@ -150,7 +157,7 @@ ID2D1DCRenderTarget* Detach();
 ### <a name="return-value"></a>Valeur de retour  
  Interface de cible de rendu de pointeur à détacher.  
   
-##  <a name="a-namegetdcrendertargeta--cdcrendertargetgetdcrendertarget"></a><a name="getdcrendertarget"></a>CDCRenderTarget::GetDCRenderTarget  
+##  <a name="getdcrendertarget"></a>CDCRenderTarget::GetDCRenderTarget  
  Renvoie l’interface ID2D1DCRenderTarget  
   
 ```  
@@ -160,14 +167,14 @@ ID2D1DCRenderTarget* GetDCRenderTarget();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers une interface de ID2D1DCRenderTarget ou NULL si l’objet n’est pas encore initialisé.  
   
-##  <a name="a-namempdcrendertargeta--cdcrendertargetmpdcrendertarget"></a><a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget  
+##  <a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget  
  Pointeur vers un objet ID2D1DCRenderTarget.  
   
 ```  
 ID2D1DCRenderTarget* m_pDCRenderTarget;  
 ```  
   
-##  <a name="a-nameoperatorid2d1dcrendertargetstara--cdcrendertargetoperator-id2d1dcrendertarget"></a><a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget::operator ID2D1DCRenderTarget *  
+##  <a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget::operator ID2D1DCRenderTarget *  
  Renvoie l’interface ID2D1DCRenderTarget  
   
 ```  

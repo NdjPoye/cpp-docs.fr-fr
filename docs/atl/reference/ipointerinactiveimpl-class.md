@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IPointerInactiveImpl
+- ATLCTL/ATL::IPointerInactiveImpl
+- ATLCTL/ATL::IPointerInactiveImpl::GetActivationPolicy
+- ATLCTL/ATL::IPointerInactiveImpl::OnInactiveMouseMove
+- ATLCTL/ATL::IPointerInactiveImpl::OnInactiveSetCursor
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +89,7 @@ class IPointerInactiveImpl
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlctl.h  
   
-##  <a name="a-namegetactivationpolicya--ipointerinactiveimplgetactivationpolicy"></a><a name="getactivationpolicy"></a>IPointerInactiveImpl::GetActivationPolicy  
+##  <a name="getactivationpolicy"></a>IPointerInactiveImpl::GetActivationPolicy  
  Récupère la stratégie d’activation en cours de l’objet.  
   
 ```
@@ -98,7 +102,7 @@ HRESULT GetActivationPolicy(DWORD* pdwPolicy);
 ### <a name="remarks"></a>Remarques  
  Consultez la page [IPointerInactive::GetActivationPolicy](http://msdn.microsoft.com/library/windows/desktop/ms692470) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameoninactivemousemovea--ipointerinactiveimploninactivemousemove"></a><a name="oninactivemousemove"></a>IPointerInactiveImpl::OnInactiveMouseMove  
+##  <a name="oninactivemousemove"></a>IPointerInactiveImpl::OnInactiveMouseMove  
  Notifie l’objet que le pointeur de la souris a été déplacé, indiquant l’objet peut déclencher des événements de souris.  
   
 ```
@@ -115,7 +119,7 @@ HRESULT OnInactiveMouseMove(
 ### <a name="remarks"></a>Notes  
  Consultez la page [IPointerInactive::OnInactiveMouseMove](http://msdn.microsoft.com/library/windows/desktop/ms693374) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameoninactivesetcursora--ipointerinactiveimploninactivesetcursor"></a><a name="oninactivesetcursor"></a>IPointerInactiveImpl::OnInactiveSetCursor  
+##  <a name="oninactivesetcursor"></a>IPointerInactiveImpl::OnInactiveSetCursor  
  Définit le pointeur de la souris pour l’objet inactif.  
   
 ```

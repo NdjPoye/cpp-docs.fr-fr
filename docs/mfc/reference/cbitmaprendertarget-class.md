@@ -9,8 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CBitmapRenderTarget
 - CBitmapRenderTarget
+- AFXRENDERTARGET/CBitmapRenderTarget
+- AFXRENDERTARGET/CBitmapRenderTarget::CBitmapRenderTarget
+- AFXRENDERTARGET/CBitmapRenderTarget::Attach
+- AFXRENDERTARGET/CBitmapRenderTarget::Detach
+- AFXRENDERTARGET/CBitmapRenderTarget::GetBitmap
+- AFXRENDERTARGET/CBitmapRenderTarget::GetBitmapRenderTarget
+- AFXRENDERTARGET/CBitmapRenderTarget::m_pBitmapRenderTarget
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +94,7 @@ class CBitmapRenderTarget : public CRenderTarget;
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxrendertarget.h  
   
-##  <a name="a-nameattacha--cbitmaprendertargetattach"></a><a name="attach"></a>CBitmapRenderTarget::Attach  
+##  <a name="attach"></a>CBitmapRenderTarget::Attach  
  Interface de cible à l’objet de rendu attache existant  
   
 ```  
@@ -99,14 +105,14 @@ void Attach(ID2D1BitmapRenderTarget* pTarget);
  `pTarget`  
  Interface de cible de rendu existante. Ne peut pas être NULL  
   
-##  <a name="a-namecbitmaprendertargeta--cbitmaprendertargetcbitmaprendertarget"></a><a name="cbitmaprendertarget"></a>CBitmapRenderTarget::CBitmapRenderTarget  
+##  <a name="cbitmaprendertarget"></a>CBitmapRenderTarget::CBitmapRenderTarget  
  Construit un objet CBitmapRenderTarget.  
   
 ```  
 CBitmapRenderTarget();
 ```  
   
-##  <a name="a-namedetacha--cbitmaprendertargetdetach"></a><a name="detach"></a>CBitmapRenderTarget::Detach  
+##  <a name="detach"></a>CBitmapRenderTarget::Detach  
  Détache l’interface de cible de rendu de l’objet  
   
 ```  
@@ -116,7 +122,7 @@ ID2D1BitmapRenderTarget* Detach();
 ### <a name="return-value"></a>Valeur de retour  
  Interface de cible de rendu de pointeur à détacher.  
   
-##  <a name="a-namegetbitmapa--cbitmaprendertargetgetbitmap"></a><a name="getbitmap"></a>CBitmapRenderTarget::GetBitmap  
+##  <a name="getbitmap"></a>CBitmapRenderTarget::GetBitmap  
  Récupère l’image bitmap de cette cible de rendu. La bitmap retournée peut être utilisée pour les opérations de dessin.  
   
 ```  
@@ -130,7 +136,7 @@ BOOL GetBitmap(CD2DBitmap& bitmap);
 ### <a name="return-value"></a>Valeur de retour  
  Si la méthode réussit, elle retourne TRUE. Sinon, elle retourne FALSE.  
   
-##  <a name="a-namegetbitmaprendertargeta--cbitmaprendertargetgetbitmaprendertarget"></a><a name="getbitmaprendertarget"></a>CBitmapRenderTarget::GetBitmapRenderTarget  
+##  <a name="getbitmaprendertarget"></a>CBitmapRenderTarget::GetBitmapRenderTarget  
  Renvoie l’interface ID2D1BitmapRenderTarget  
   
 ```  
@@ -140,14 +146,14 @@ ID2D1BitmapRenderTarget* GetBitmapRenderTarget();
 ### <a name="return-value"></a>Valeur de retour  
  Pointeur vers une interface de ID2D1BitmapRenderTarget ou NULL si l’objet n’est pas encore initialisé.  
   
-##  <a name="a-namempbitmaprendertargeta--cbitmaprendertargetmpbitmaprendertarget"></a><a name="m_pbitmaprendertarget"></a>CBitmapRenderTarget::m_pBitmapRenderTarget  
+##  <a name="m_pbitmaprendertarget"></a>CBitmapRenderTarget::m_pBitmapRenderTarget  
  Pointeur vers un objet ID2D1BitmapRenderTarget.  
   
 ```  
 ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;  
 ```  
   
-##  <a name="a-nameoperatorid2d1bitmaprendertargetstara--cbitmaprendertargetoperator-id2d1bitmaprendertarget"></a><a name="operator_id2d1bitmaprendertarget_star"></a>CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *  
+##  <a name="operator_id2d1bitmaprendertarget_star"></a>CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *  
  Renvoie l’interface ID2D1BitmapRenderTarget  
   
 ```  

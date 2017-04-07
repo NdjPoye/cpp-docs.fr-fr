@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTypedPtrMap
+- AFXTEMPL/CTypedPtrMap
+- AFXTEMPL/CTypedPtrMap::GetNextAssoc
+- AFXTEMPL/CTypedPtrMap::Lookup
+- AFXTEMPL/CTypedPtrMap::RemoveKey
+- AFXTEMPL/CTypedPtrMap::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CTypedPtrMap : public BASE_CLASS
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxtempl.h  
   
-##  <a name="a-namegetnextassoca--ctypedptrmapgetnextassoc"></a><a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
  Récupère l’élément de la carte à `rNextPosition`, puis met à jour `rNextPosition` pour faire référence à l’élément suivant dans la carte.  
   
 ```  
@@ -128,7 +133,7 @@ void GetNextAssoc(
   
  Cette fonction inline s’appelle `BASE_CLASS` **:: GetNextAssoc**.  
   
-##  <a name="a-namelookupa--ctypedptrmaplookup"></a><a name="lookup"></a>CTypedPtrMap::Lookup  
+##  <a name="lookup"></a>CTypedPtrMap::Lookup  
  `Lookup`utilise un algorithme de hachage pour trouver rapidement l’élément de carte avec une clé correspondant exactement.  
   
 ```  
@@ -154,7 +159,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="remarks"></a>Notes  
  Cette fonction inline s’appelle `BASE_CLASS` **:: recherche**.  
   
-##  <a name="a-nameoperatorata--ctypedptrmapoperator--"></a><a name="operator_at"></a>[] CTypedPtrMap::operator  
+##  <a name="operator_at"></a>[] CTypedPtrMap::operator  
  Cet opérateur peut être utilisé uniquement sur le côté gauche d’une instruction d’assignation (une l-value).  
   
 ```  
@@ -174,7 +179,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 ### <a name="remarks"></a>Notes  
  S’il n’existe aucun élément de carte avec la clé spécifiée, un nouvel élément est créé. Aucune (valeur r) « droite » n’est équivalent à cet opérateur, car il est possible qu’une clé peut être introuvable dans la carte. Utilisez le `Lookup` fonction membre pour l’extraction de l’élément.  
   
-##  <a name="a-nameremovekeya--ctypedptrmapremovekey"></a><a name="removekey"></a>CTypedPtrMap::RemoveKey  
+##  <a name="removekey"></a>CTypedPtrMap::RemoveKey  
  Cette fonction membre appelle `BASE_CLASS` **:: RemoveKey**.  
   
 ```  
@@ -194,7 +199,7 @@ BOOL RemoveKey(KEY key);
 ### <a name="remarks"></a>Notes  
  Pour plus de notes, consultez [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).  
   
-##  <a name="a-namesetata--ctypedptrmapsetat"></a><a name="setat"></a>CTypedPtrMap::SetAt  
+##  <a name="setat"></a>CTypedPtrMap::SetAt  
  Cette fonction membre appelle `BASE_CLASS` **:: SetAt**.  
   
 ```  

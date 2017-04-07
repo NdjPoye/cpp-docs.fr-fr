@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTabView
+- AFXTABVIEW/CTabView
+- AFXTABVIEW/CTabView::AddView
+- AFXTABVIEW/CTabView::FindTab
+- AFXTABVIEW/CTabView::GetActiveView
+- AFXTABVIEW/CTabView::GetTabControl
+- AFXTABVIEW/CTabView::RemoveView
+- AFXTABVIEW/CTabView::SetActiveView
+- AFXTABVIEW/CTabView::IsScrollBar
+- AFXTABVIEW/CTabView::OnActivateView
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +92,7 @@ class CTabbedView : public CView
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxTabView.h  
   
-##  <a name="a-nameaddviewa--ctabviewaddview"></a><a name="addview"></a>CTabView::AddView  
+##  <a name="addview"></a>CTabView::AddView  
  Ajouter un affichage au contrôle onglet.  
   
 ```  
@@ -113,7 +122,7 @@ int AddView(
 ### <a name="remarks"></a>Remarques  
  Appelez cette fonction pour ajouter une vue pour le contrôle d’onglet est incorporé dans un frame.  
   
-##  <a name="a-namefindtaba--ctabviewfindtab"></a><a name="findtab"></a>CTabView::FindTab  
+##  <a name="findtab"></a>CTabView::FindTab  
  Retourne l’index de la vue spécifiée dans le contrôle onglet.  
   
 ```  
@@ -130,7 +139,7 @@ int FindTab(HWND hWndView) const;
 ### <a name="remarks"></a>Remarques  
  Appelez cette fonction pour récupérer l’index d’une vue qui a un handle spécifié.  
   
-##  <a name="a-namegetactiveviewa--ctabviewgetactiveview"></a><a name="getactiveview"></a>CTabView::GetActiveView  
+##  <a name="getactiveview"></a>CTabView::GetActiveView  
  Retourne un pointeur vers la vue actuellement active.  
   
 ```  
@@ -142,7 +151,7 @@ CView* GetActiveView() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namegettabcontrola--ctabviewgettabcontrol"></a><a name="gettabcontrol"></a>CTabView::GetTabControl  
+##  <a name="gettabcontrol"></a>CTabView::GetTabControl  
  Retourne une référence au contrôle onglet associé à la vue.  
   
 ```  
@@ -152,7 +161,7 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 ### <a name="return-value"></a>Valeur de retour  
  Une référence au contrôle onglet associé à la vue.  
   
-##  <a name="a-nameisscrollbara--ctabviewisscrollbar"></a><a name="isscrollbar"></a>CTabView::IsScrollBar  
+##  <a name="isscrollbar"></a>CTabView::IsScrollBar  
  Appelé par l’infrastructure lors de la création d’un affichage d’onglet pour déterminer si la vue de l’onglet a une barre de défilement horizontale partagé.  
   
 ```  
@@ -167,7 +176,7 @@ virtual BOOL IsScrollBar() const;
   
  Remplacer la `IsScrollBar` méthode dans un `CTabView`-classe et retour dérivés `TRUE` si vous souhaitez créer une vue contenant une barre de défilement horizontale partagé.  
   
-##  <a name="a-nameonactivateviewa--ctabviewonactivateview"></a><a name="onactivateview"></a>CTabView::OnActivateView  
+##  <a name="onactivateview"></a>CTabView::OnActivateView  
  Appelé par l’infrastructure lors de l’affichage de l’onglet est actif ou inactif.  
   
 ```  
@@ -181,7 +190,7 @@ virtual void OnActivateView(CView* view);
 ### <a name="remarks"></a>Remarques  
  L'implémentation par défaut n'exécute aucune opération. Substituez cette méthode dans un `CTabView`-classe permettant de traiter cette notification dérivée.  
   
-##  <a name="a-nameremoveviewa--ctabviewremoveview"></a><a name="removeview"></a>CTabView::RemoveView  
+##  <a name="removeview"></a>CTabView::RemoveView  
  Supprime l’affichage du contrôle onglet.  
   
 ```  
@@ -197,7 +206,7 @@ BOOL RemoveView(int iTabNum);
   
 ### <a name="remarks"></a>Remarques  
   
-##  <a name="a-namesetactiveviewa--ctabviewsetactiveview"></a><a name="setactiveview"></a>CTabView::SetActiveView  
+##  <a name="setactiveview"></a>CTabView::SetActiveView  
  Rend une vue active.  
   
 ```  

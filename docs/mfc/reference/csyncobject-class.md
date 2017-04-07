@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSyncObject
+- AFXMT/CSyncObject
+- AFXMT/CSyncObject::CSyncObject
+- AFXMT/CSyncObject::Lock
+- AFXMT/CSyncObject::Unlock
+- AFXMT/CSyncObject::m_hObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +94,7 @@ class CSyncObject : public CObject
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxmt.h  
   
-##  <a name="a-namecsyncobjecta--csyncobjectcsyncobject"></a><a name="csyncobject"></a>CSyncObject::CSyncObject  
+##  <a name="csyncobject"></a>CSyncObject::CSyncObject  
  Construit un objet de synchronisation avec le nom fourni.  
   
 ```  
@@ -101,7 +106,7 @@ virtual ~CSyncObject();
  `pstrName`  
  Nom de l'objet. Si **NULL**, *pstrName* est null.  
   
-##  <a name="a-namelocka--csyncobjectlock"></a><a name="lock"></a>CSyncObject::Lock  
+##  <a name="lock"></a>CSyncObject::Lock  
  Appelez cette fonction pour accéder à la ressource contrôlée par l’objet de synchronisation.  
   
 ```  
@@ -118,14 +123,14 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="remarks"></a>Remarques  
  Si l’objet de synchronisation est signalé, `Lock` renvoie correctement et que le thread possède maintenant l’objet. Si l’objet de synchronisation est "non signalé" (non disponible), `Lock` attend que l’objet de synchronisation soient signalés jusqu’au nombre de millisecondes spécifié dans le *dwTimeOut* paramètre. Si l’objet de synchronisation s’est pas signalé dans le laps de temps, `Lock` échoue.  
   
-##  <a name="a-namemhobjecta--csyncobjectmhobject"></a><a name="m_hobject"></a>CSyncObject::m_hObject  
+##  <a name="m_hobject"></a>CSyncObject::m_hObject  
  Handle de l’objet de synchronisation sous-jacent.  
   
 ```  
 HANDLE m_hObject;  
 ```  
   
-##  <a name="a-nameoperatorhandlea--csyncobjectoperator-handle"></a><a name="operator_handle"></a>CSyncObject::operator descripteur  
+##  <a name="operator_handle"></a>CSyncObject::operator descripteur  
  Utilisez cet opérateur pour obtenir le handle de la `CSyncObject` objet.  
   
 ```  
@@ -138,7 +143,7 @@ operator HANDLE() const;
 ### <a name="remarks"></a>Remarques  
  Vous pouvez utiliser le handle pour appeler directement les API Windows.  
   
-##  <a name="a-nameunlocka--csyncobjectunlock"></a><a name="unlock"></a>CSyncObject::Unlock  
+##  <a name="unlock"></a>CSyncObject::Unlock  
  La déclaration de `Unlock` sans paramètres est une fonction virtuelle pure et doit être substituée par toutes les classes dérivées de `CSyncObject`.  
   
 ```  

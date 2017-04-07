@@ -9,7 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::source_link_manager
+- source_link_manager
+- AGENTS/concurrency::source_link_manager
+- AGENTS/concurrency::source_link_manager::source_link_manager
+- AGENTS/concurrency::source_link_manager::add
+- AGENTS/concurrency::source_link_manager::begin
+- AGENTS/concurrency::source_link_manager::contains
+- AGENTS/concurrency::source_link_manager::count
+- AGENTS/concurrency::source_link_manager::reference
+- AGENTS/concurrency::source_link_manager::register_target_block
+- AGENTS/concurrency::source_link_manager::release
+- AGENTS/concurrency::source_link_manager::remove
+- AGENTS/concurrency::source_link_manager::set_bound
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +45,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: b9323da4d2ccefe09ba38df088e546828d41f2ee
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 8e875fdd02a42e1cb1c144b0b7da07a1f4e9a184
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager, classe
@@ -68,24 +79,24 @@ class source_link_manager;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[source_link_manager, constructeur](#ctor)|Construit un objet `source_link_manager`.|  
+|[source_link_manager](#ctor)|Construit un objet `source_link_manager`.|  
 |[~ source_link_manager, destructeur](#dtor)|Détruit le `source_link_manager` objet.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Add, méthode](#add)|Ajoute un lien source vers le `source_link_manager` objet.|  
-|[Begin (méthode)](#begin)|Retourne un itérateur au premier élément dans le `source_link_manager` objet.|  
-|[Contains (méthode)](#contains)|Recherche le `network_link_registry` dans cette `source_link_manager` objet un bloc spécifié.|  
-|[Count (méthode)](#count)|Compte le nombre de blocs liés dans le `source_link_manager` objet.|  
-|[référence (méthode)](#reference)|Acquiert une référence sur le `source_link_manager` objet.|  
-|[register_target_block (méthode)](#register_target_block)|Inscrit le bloc cible qui conserve ce `source_link_manager` objet.|  
-|[Release (méthode)](#release)|Libère la référence sur le `source_link_manager` objet.|  
-|[Remove (méthode)](#remove)|Supprime un lien à partir de la `source_link_manager` objet.|  
-|[set_bound (méthode)](#set_bound)|Définit le nombre maximal de liens source qui peuvent être ajoutés à ce `source_link_manager` objet.|  
+|[add](#add)|Ajoute un lien source vers le `source_link_manager` objet.|  
+|[begin](#begin)|Retourne un itérateur au premier élément dans le `source_link_manager` objet.|  
+|[contient](#contains)|Recherche le `network_link_registry` dans cette `source_link_manager` objet un bloc spécifié.|  
+|[count](#count)|Compte le nombre de blocs liés dans le `source_link_manager` objet.|  
+|[reference](#reference)|Acquiert une référence sur le `source_link_manager` objet.|  
+|[register_target_block](#register_target_block)|Inscrit le bloc cible qui conserve ce `source_link_manager` objet.|  
+|[release](#release)|Libère la référence sur le `source_link_manager` objet.|  
+|[remove](#remove)|Supprime un lien à partir de la `source_link_manager` objet.|  
+|[set_bound](#set_bound)|Définit le nombre maximal de liens source qui peuvent être ajoutés à ce `source_link_manager` objet.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Actuellement, les blocs de code source ont un décompte. C’est un wrapper sur un `network_link_registry` qui autorise l’accès simultané aux liens et fournit la capacité de référencer les liens via des rappels. Blocs de messages ( `target_block`s ou `propagator_block`s) doivent utiliser cette classe pour leurs liens source.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
@@ -96,7 +107,7 @@ class source_link_manager;
   
  **Espace de noms :** concurrency  
   
-##  <a name="a-nameadda-add"></a><a name="add"></a>ajouter 
+##  <a name="add"></a>ajouter 
 
  Ajoute un lien source vers le `source_link_manager` objet.  
   
@@ -108,7 +119,7 @@ void add(_EType _Link);
  `_Link`  
  Pointeur vers un bloc à ajouter.  
   
-##  <a name="a-namebegina-begin"></a><a name="begin"></a>commencer 
+##  <a name="begin"></a>commencer 
 
  Retourne un itérateur au premier élément dans le `source_link_manager` objet.  
   
@@ -122,7 +133,7 @@ iterator begin();
 ### <a name="remarks"></a>Notes  
  L’état de fin de l’itérateur est indiqué par une `NULL` lien.  
   
-##  <a name="a-namecontainsa-contains"></a><a name="contains"></a>contient 
+##  <a name="contains"></a>contient 
 
  Recherche le `network_link_registry` dans cette `source_link_manager` objet un bloc spécifié.  
   
@@ -137,7 +148,7 @@ bool contains(_EType _Link);
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si le bloc spécifié a été trouvé, `false` dans le cas contraire.  
   
-##  <a name="a-namecounta-count"></a><a name="count"></a>nombre 
+##  <a name="count"></a>nombre 
 
  Compte le nombre de blocs liés dans le `source_link_manager` objet.  
   
@@ -148,7 +159,7 @@ size_t count();
 ### <a name="return-value"></a>Valeur de retour  
  Le nombre de blocs liés dans le `source_link_manager` objet.  
   
-##  <a name="a-namereferencea-reference"></a><a name="reference"></a>référence 
+##  <a name="reference"></a>référence 
 
  Acquiert une référence sur le `source_link_manager` objet.  
   
@@ -156,7 +167,7 @@ size_t count();
 void reference();
 ```  
   
-##  <a name="a-nameregistertargetblocka-registertargetblock"></a><a name="register_target_block"></a>register_target_block 
+##  <a name="register_target_block"></a>register_target_block 
 
  Inscrit le bloc cible qui conserve ce `source_link_manager` objet.  
   
@@ -168,7 +179,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
  `_PTarget`  
  Le bloc cible contenant cet `source_link_manager` objet.  
   
-##  <a name="a-namereleasea-release"></a><a name="release"></a>version 
+##  <a name="release"></a>version 
 
  Libère la référence sur le `source_link_manager` objet.  
   
@@ -176,7 +187,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 void release();
 ```  
   
-##  <a name="a-nameremovea-remove"></a><a name="remove"></a>supprimer 
+##  <a name="remove"></a>supprimer 
 
  Supprime un lien à partir de la `source_link_manager` objet.  
   
@@ -191,7 +202,7 @@ bool remove(_EType _Link);
 ### <a name="return-value"></a>Valeur de retour  
  `true`Si le lien a été trouvé et supprimé, `false` dans le cas contraire.  
   
-##  <a name="a-namesetbounda-setbound"></a><a name="set_bound"></a>set_bound 
+##  <a name="set_bound"></a>set_bound 
 
  Définit le nombre maximal de liens source qui peuvent être ajoutés à ce `source_link_manager` objet.  
   
@@ -203,7 +214,7 @@ void set_bound(size_t _MaxLinks);
  `_MaxLinks`  
  Le nombre maximal de liens.  
   
-##  <a name="a-namectora-sourcelinkmanager"></a><a name="ctor"></a>source_link_manager 
+##  <a name="ctor"></a>source_link_manager 
 
  Construit un objet `source_link_manager`.  
   
@@ -211,7 +222,7 @@ void set_bound(size_t _MaxLinks);
 source_link_manager();
 ```  
   
-##  <a name="a-namedtora-sourcelinkmanager"></a><a name="dtor"></a>~ source_link_manager 
+##  <a name="dtor"></a>~ source_link_manager 
 
  Détruit le `source_link_manager` objet.  
   

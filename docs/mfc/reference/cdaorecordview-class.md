@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoRecordView
+- AFXDAO/CDaoRecordView
+- AFXDAO/CDaoRecordView::CDaoRecordView
+- AFXDAO/CDaoRecordView::IsOnFirstRecord
+- AFXDAO/CDaoRecordView::IsOnLastRecord
+- AFXDAO/CDaoRecordView::OnGetRecordset
+- AFXDAO/CDaoRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +112,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxdao.h  
   
-##  <a name="a-namecdaorecordviewa--cdaorecordviewcdaorecordview"></a><a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
+##  <a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
  Lorsque vous créez un objet d’un type dérivé de `CDaoRecordView`, appelez des deux formes de constructeur pour initialiser l’objet de vue et d’identifier la ressource de boîte de dialogue sur laquelle repose la vue.  
   
 ```  
@@ -134,7 +140,7 @@ explicit CDaoRecordView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDatabase&#35;](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
-##  <a name="a-nameisonfirstrecorda--cdaorecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
  Appelez cette fonction membre pour déterminer si l’enregistrement actif est le premier enregistrement de l’objet recordset associé à cette vue de l’enregistrement.  
   
 ```  
@@ -149,7 +155,7 @@ BOOL IsOnFirstRecord();
   
  Si l’utilisateur se déplace vers le premier enregistrement, le désactive framework des objets d’interface utilisateur (par exemple, les éléments de menu ou les boutons de barre d’outils) que vous avez pour passer à la première ou de l’enregistrement précédent.  
   
-##  <a name="a-nameisonlastrecorda--cdaorecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
  Appelez cette fonction membre pour déterminer si l’enregistrement actif est le dernier enregistrement de l’objet recordset associé à cette vue de l’enregistrement.  
   
 ```  
@@ -165,7 +171,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  Le résultat de cette fonction est fiable, à ceci près que la vue n’est peut-être pas en mesure de détecter la fin du jeu d’enregistrements jusqu'à ce que l’utilisateur ait dépassé. L’utilisateur peut avoir d’aller au-delà du dernier enregistrement avant l’affichage de l’enregistrement peut indiquer qu’il doit désactiver les objets d’interface utilisateur pour les déplacer vers l’enregistrement suivant ou le dernier. Si l’utilisateur déplace au-delà du dernier enregistrement, puis revient au dernier enregistrement (ou avant qu’elle), la vue de l’enregistrement peut effectuer le suivi de la position de l’utilisateur dans le jeu d’enregistrements et désactiver les objets d’interface utilisateur correctement.  
   
-##  <a name="a-nameongetrecordseta--cdaorecordviewongetrecordset"></a><a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
  Retourne un pointeur vers le `CDaoRecordset`-dérivés d’objet associé à la vue de l’enregistrement.  
   
 ```  
@@ -180,7 +186,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
   
  Pour plus d’informations et d’exemples, consultez l’article [vues des enregistrements : utilisation d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="a-nameonmovea--cdaorecordviewonmove"></a><a name="onmove"></a>CDaoRecordView::OnMove  
+##  <a name="onmove"></a>CDaoRecordView::OnMove  
  Appelez cette fonction membre pour déplacer vers un autre enregistrement dans le jeu d’enregistrements et afficher ses champs dans les contrôles de la vue de l’enregistrement.  
   
 ```  

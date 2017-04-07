@@ -9,16 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- GetThisClass
-- CMFCRibbonCustomizePropertyPage::CreateObject
 - CMFCRibbonCustomizePropertyPage
-- CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage
-- CMFCRibbonCustomizePropertyPage.GetThisClass
-- CMFCRibbonCustomizePropertyPage.CreateObject
-- ~CMFCRibbonCustomizePropertyPage
-- CreateObject
-- CMFCRibbonCustomizePropertyPage.~CMFCRibbonCustomizePropertyPage
-- CMFCRibbonCustomizePropertyPage::GetThisClass
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage::AddCustomCategory
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage::OnOK
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -107,7 +102,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** afxribboncustomizedialog.h  
   
-##  <a name="a-nameaddcustomcategorya--cmfcribboncustomizepropertypageaddcustomcategory"></a><a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory  
+##  <a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory  
  Ajoute une catégorie personnalisée de la **commandes** zone de liste déroulante.  
   
 ```  
@@ -127,7 +122,7 @@ void AddCustomCategory(
 ### <a name="remarks"></a>Notes  
  Cette méthode ajoute une catégorie nommée `lpszName` à la **commandes** zone de liste déroulante. Lorsque l’utilisateur sélectionne la catégorie, les commandes spécifiées dans `lstIDS` s’affichent dans la liste de commandes.  
   
-##  <a name="a-namecmfcribboncustomizepropertypagea--cmfcribboncustomizepropertypagecmfcribboncustomizepropertypage"></a><a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
+##  <a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  Construit un objet `CMFCRibbonCustomizePropertyPage`.  
   
 ```  
@@ -138,7 +133,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
  [in] `pRibbonBar`  
  Un pointeur vers un contrôle de ruban pour laquelle les options pour personnaliser.  
   
-##  <a name="a-nameonoka--cmfcribboncustomizepropertypageonok"></a><a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
+##  <a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
  Calleld par le système lorsqu’un utilisateur clique **OK** sur la **personnaliser** boîte de dialogue.  
   
 ```  
