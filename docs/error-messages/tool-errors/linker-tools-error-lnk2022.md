@@ -34,19 +34,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 91fb85679fd6c66bc97974912a2de688f494d5e9
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6f12c53d7dd1383ad8f994a713c7226ab038cb19
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="linker-tools-error-lnk2022"></a>Erreur des outils Éditeur de liens LNK2022
-Échec de l’opération de métadonnées (HRESULT) : error_message  
+Échec de l’opération de métadonnées (HRESULT) : Message_erreur  
   
- L’éditeur de liens a détecté une erreur lors de la fusion des métadonnées. Les métadonnées doivent être résolues pour lier correctement.  
+ L’éditeur de liens a détecté une erreur lors de la fusion des métadonnées. Les erreurs de métadonnées doivent être résolues pour lier correctement.  
   
- Une façon de diagnostiquer ce problème consiste à exécuter **ildasm – jetons** sur les fichiers objets pour rechercher les types dont les jetons sont répertoriés dans `error_message`et rechercher les différences.  Dans les métadonnées, deux types différents portant le même nom n’est pas valide, même si l’attribut LayoutType juste est différent.  
+ Une façon de diagnostiquer ce problème consiste à exécuter **ildasm-jetons** sur les fichiers objets pour rechercher les types dont les jetons sont répertoriés dans `error_message`et rechercher les différences.  Dans les métadonnées, deux types différents portant le même nom n’est pas valide, même si l’attribut LayoutType juste est différent.  
   
- Une raison de LNK2022 est qu’un type (par exemple, une structure) existe dans plusieurs modules (compilands) avec le même nom, mais avec des définitions, et lorsque vous compilez avec [/clr](../../build/reference/clr-common-language-runtime-compilation.md).  Dans ce cas, assurez-vous que le type a une définition identique dans tous les modules (compilands).  Le nom du type est répertorié dans `error_message`.  
+ Une raison de LNK2022 est qu’un type (par exemple, une structure) existe dans plusieurs modules (compilands) avec le même nom mais avec des définitions, et lorsque vous compilez avec [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  Dans ce cas, assurez-vous que le type a une définition identique dans tous les modules (compilands).  Le nom du type est répertorié dans `error_message`.  
   
  Erreur LNK2022 peut également se produire lorsque l’éditeur de liens détecte un fichier de métadonnées dans un emplacement différent de celui qui a été spécifié pour le compilateur (avec [#using](../../preprocessor/hash-using-directive-cpp.md) ). Assurez-vous que le fichier de métadonnées (.dll ou .netmodule) est dans le même emplacement que lorsqu’il est passé à l’éditeur de liens, telle qu’elle était lorsqu’elle a été passée au compilateur.  
   

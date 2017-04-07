@@ -1,34 +1,50 @@
 ---
-title: "Erreur du compilateur C3741 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3741"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3741"
+title: Erreur du compilateur C3741 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3741
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3741
 ms.assetid: ed311315-cc32-49c9-97fa-01b293d81526
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C3741
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e7744a62cce2fddf27026ea453643063da9d9757
+ms.lasthandoff: 04/04/2017
 
-'classe' : doit être une coclasse quand le paramètre 'layout\_dependent' de event\_receiver a la valeur true  
+---
+# <a name="compiler-error-c3741"></a>Erreur du compilateur C3741
+'classe' : doit être une coclasse quand le paramètre 'layout_dependent' d’event_receiver = true  
   
- Lorsque `layout_dependent=true`pour une classe [event\_receiver](../../windows/event-receiver.md), la classe doit alors également posséder l'attribut [coclass](../../windows/coclass.md).  
+ Lorsque `layout_dependent=true` pour un [event_receiver](../../windows/event-receiver.md) classe, puis la classe doit également avoir le [coclasse](../../windows/coclass.md) attribut.  
   
- L'exemple suivant génère l'avertissement C3741 :  
+ L’exemple suivant génère l’erreur C3741.  
   
 ```  
 // C3741.cpp  

@@ -1,94 +1,94 @@
 ---
-title: "SOCKADDR_IN, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SOCKADDR_IN"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SOCKADDR_IN (structure)"
+title: Sockaddr_in, Structure | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SOCKADDR_IN
+dev_langs:
+- C++
+helpviewer_keywords:
+- SOCKADDR_IN structure
 ms.assetid: e8cd7c34-78bd-4e28-a990-eb3ca070b7a6
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# SOCKADDR_IN, structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: a1283740c0abb0538e5912efa11500c46b45bb9f
+ms.lasthandoff: 04/04/2017
 
-Dans la famille d'adresses Internet, la structure `SOCKADDR_IN` est utilisée par Windows Sockets pour spécifier une adresse de point de terminaison locale ou distante à laquelle connecter un socket.  
+---
+# <a name="sockaddrin-structure"></a>SOCKADDR_IN, structure
+Dans la famille d’adresses Internet, le `SOCKADDR_IN` structure est utilisée par Windows Sockets pour spécifier une adresse de point de terminaison local ou distant auquel se connecter un socket.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      struct sockaddr_in{  
-   short sin_family;  
-   unsigned short sin_port;  
-   struct in_addr sin_addr;  
-   char sin_zero[8];  
+struct sockaddr_in{  
+    short sin_family;  
+    unsigned short sin_port;  
+struct in_addr sin_addr;  
+    char sin_zero[8];  
 };  
 ```  
   
-#### Paramètres  
- *sin\_family*  
- Famille d'adresses \(doit être **AF\_INET**\).  
+#### <a name="parameters"></a>Paramètres  
+ *sin_family*  
+ Famille d’adresses (doit être **AF_INET**).  
   
- *sin\_port*  
+ *sin_port*  
  Port IP.  
   
- *sin\_addr*  
+ *sin_addr*  
  Adresse IP.  
   
- *sin\_zero*  
- Remplissage pour donner à la structure la même taille que `SOCKADDR`.  
+ *Sin_zero*  
+ Remplissage afin que structure de la même taille que `SOCKADDR`.  
   
-## Notes  
- Forme de la structure `SOCKADDR` spécifique à la famille d'adresses Internet et un cast en `SOCKADDR` peut lui être appliqué.  
+## <a name="remarks"></a>Notes  
+ C’est la forme de la `SOCKADDR` structure spécifique pour la famille d’adresses Internet et peut être converti en `SOCKADDR`.  
   
- Le composant d'adresse IP de cette structure est du type **IN\_ADDR**.  La structure **IN\_ADDR** est définie dans le fichier d'en\-tête WINSOCK.H Windows Sockets, comme suit :  
+ Le composant d’adresse IP de cette structure est de type **IN_ADDR**. Le **IN_ADDR** structure est définie dans le fichier d’en-tête Windows Sockets WINSOCK. H comme suit :  
   
- `struct   in_addr {`  
+```  
+struct in_addr {
+    union {
+        struct {  
+            unsigned char s_b1, s_b2, s_b3, s_b4;  
+        } S_un_b;  
+        struct {  
+            unsigned short s_w1, s_w2;
+        } S_un_w;
+        unsigned long S_addr;
+    } S_un;  
+};  
+```  
   
- `union   {`  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** winsock2.h  
   
- `struct{`  
-  
- `unsigned  char   s_b1,`  
-  
- `s_b2,`  
-  
- `s_b3,`  
-  
- `s_b4;`  
-  
- `}  S_un_b;`  
-  
- `struct  {`  
-  
- `unsigned  short  s_w1,`  
-  
- `s_w2;`  
-  
- `}  S_un_w;`  
-  
- `unsigned long  S_addr;`  
-  
- `} S_un;`  
-  
- `};`  
-  
-## Configuration requise  
- **En\-tête :** winsock2.h  
-  
-## Voir aussi  
- [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [SOCKADDR, structure](../../mfc/reference/sockaddr-structure.md)
+

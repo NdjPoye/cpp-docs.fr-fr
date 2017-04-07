@@ -53,9 +53,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: c567d97c613ad517372b454456535165fadbd3ae
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24f2c70210db2d0179f3234f18c3fcbd3bf093f2
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cmap-class"></a>CMap (classe)
@@ -117,9 +117,9 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 |Nom|Description|  
 |----------|-----------------|  
-|[[] De CMap::operator](#operator_at)|Insère un élément dans la substitution d’opérateur \u2012 carte pour `SetAt`.|  
+|[[] De CMap::operator](#operator_at)|Insère un élément dans la classe map : substitution de l’opérateur pour `SetAt`.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une fois que vous avez inséré une paire clé-valeur (élément) dans le mappage, vous pouvez efficacement récupérer ou supprimer la paire à l’aide de la clé d’accès. Vous pouvez également itérer sur tous les éléments dans le mappage.  
   
  Une variable de type **POSITION** est utilisé pour un autre accès aux entrées. Vous pouvez utiliser un **POSITION** pour « se souviennent » une entrée et une itération au sein de la carte. Vous pouvez considérer que cette itération est séquentielle par valeur de clé ; Il n’est pas le cas. La séquence des éléments récupérés est indéterminée.  
@@ -153,7 +153,7 @@ CMap(INT_PTR nBlockSize = 10);
  `nBlockSize`  
  Spécifie la granularité d’allocation de mémoire pour l’extension de la carte.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  À mesure que la carte augmente, la mémoire est allouée en unités de `nBlockSize` entrées.  
   
 ### <a name="example"></a>Exemple  
@@ -262,7 +262,7 @@ POSITION GetStartPosition() const;
 ### <a name="return-value"></a>Valeur de retour  
  A **POSITION** valeur qui indique une position de départ pour une itération de la carte ; ou **NULL** si la carte est vide.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La séquence d’itération n’est pas prévisible ; Par conséquent, le « premier élément dans le mappage de » n’a aucune signification spéciale.  
   
 ### <a name="example"></a>Exemple  
@@ -324,7 +324,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’élément a été trouvé ; Sinon, 0.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  `Lookup`utilise un algorithme de hachage pour trouver rapidement l’élément de carte avec une clé correspondant exactement à la clé donnée.  
   
 ### <a name="example"></a>Exemple  
@@ -350,7 +350,7 @@ VALUE& operator[](arg_key key);
 ### <a name="remarks"></a>Notes  
  Par conséquent, il peut être utilisé uniquement sur le côté gauche d’une instruction d’assignation (une l-value). S’il n’existe aucun élément de carte avec la clé spécifiée, un nouvel élément est créé.  
   
- Aucun (r-value) « droite » n’est équivalent à cet opérateur, car il est possible qu’une clé peut être introuvable dans le mappage. Utilisez le `Lookup` fonction membre pour l’extraction d’un élément.  
+ Aucun (r-value) « droite » n’est équivalent à cet opérateur, car il n’est possible qu’une clé peut être introuvable dans le mappage. Utilisez le `Lookup` fonction membre pour l’extraction d’un élément.  
   
 ### <a name="example"></a>Exemple  
  Consultez l’exemple de [CMap::Lookup](#lookup).  
@@ -409,7 +409,7 @@ CPair* PLookup(ARG_KEY key);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers une structure de clés ; consultez [CMap::CPair](#cpair). Si aucune correspondance n’est trouvée, `CMap::PLookup` retourne `NULL`.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Appelez cette méthode pour rechercher un élément de carte avec une clé correspondant exactement à la clé donnée.  
   
 ### <a name="example"></a>Exemple  
@@ -422,7 +422,7 @@ CPair* PLookup(ARG_KEY key);
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La fonction fonctionne correctement si la carte est déjà vide.  
   
 ### <a name="example"></a>Exemple  
@@ -445,7 +445,7 @@ BOOL RemoveKey(ARG_KEY key);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’entrée a été trouvée et supprimée avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le **DestructElements** fonction d’assistance est utilisée pour supprimer l’entrée.  
   
 ### <a name="example"></a>Exemple  

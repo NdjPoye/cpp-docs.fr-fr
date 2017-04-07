@@ -62,9 +62,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: afcf1f37dbf0f55dc26c7258d130043bffc8c1a8
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e7b151d83f4229586ad8787a326e332abb9fc79d
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cdatabase-class"></a>CDatabase (classe)
@@ -88,7 +88,7 @@ class CDatabase : public CObject
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CDatabase::BeginTrans](#begintrans)|Démarre un \u2012 « transaction » une série d’appels réversibles pour la `AddNew`, **modifier**, **supprimer**, et **mise à jour** fonctions membres de classe `CRecordset` \u2012 sur la source de données connectée. La source de données doit prendre en charge des transactions pour **BeginTrans** en vigueur.|  
+|[CDatabase::BeginTrans](#begintrans)|Commence une transaction de « », une série d’appels réversibles pour la `AddNew`, **modifier**, **supprimer**, et **mise à jour** fonctions membres de classe `CRecordset` : sur la source de données connectée. La source de données doit prendre en charge des transactions pour **BeginTrans** en vigueur.|  
 |[CDatabase::BindParameters](#bindparameters)|Vous permet de lier les paramètres avant d’appeler `CDatabase::ExecuteSQL`.|  
 |[CDatabase::Cancel](#cancel)|Annule une opération asynchrone ou un processus à partir d’un deuxième thread.|  
 |[CDatabase::CanTransact](#cantransact)|Retourne zéro si la source de données prend en charge les transactions.|  
@@ -201,7 +201,7 @@ BOOL CanTransact() const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si les jeux d’enregistrements à l’aide de ce `CDatabase` objet autoriser des transactions ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur les transactions, consultez l’article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
 ##  <a name="canupdate"></a>CDatabase::CanUpdate  
@@ -214,7 +214,7 @@ BOOL CanUpdate() const;
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la `CDatabase` objet autorise les mises à jour ; sinon, 0, qui indique soit que vous avez passé **TRUE** dans `bReadOnly` lorsque vous avez ouvert la `CDatabase` objet ou que la source de données lui-même est en lecture seule. La source de données est en lecture seule si un appel à la fonction d’API ODBC **SQLGetInfo** pour **SQL_DATASOURCE_READ_ONLY** retourne « y ».  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Pas de tous les pilotes prennent en charge les mises à jour.  
   
 ##  <a name="cdatabase"></a>CDatabase::CDatabase  
@@ -300,7 +300,7 @@ DWORD GetBookmarkPersistence() const;
 ### <a name="return-value"></a>Valeur de retour  
  Un masque de bits qui identifie les opérations par lesquelles les signets persistent sur un objet recordset. Pour plus d'informations, consultez Notes.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Par exemple, si vous appelez `CRecordset::GetBookmark`, puis `CRecordset::Requery`, le signet obtenu à partir de `GetBookmark` risque de ne plus être valide. Vous devez appeler `GetBookmarkPersistence` avant d'appeler `CRecordset::SetBookmark`.  
   
  Le tableau suivant liste les valeurs de masque de bits qui peuvent être combinées pour la valeur de retour de `GetBookmarkPersistence`.  
@@ -327,7 +327,7 @@ const CString GetConnect() const;
 ### <a name="return-value"></a>Valeur de retour  
  A `const` [CString](../../atl-mfc-shared/reference/cstringt-class.md) contenant la chaîne de connexion si `OpenEx` ou `Open` a été appelé ; sinon, une chaîne vide.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Consultez [CDatabase::Open](#open) pour obtenir une description du mode de création de la chaîne de connexion.  
   
 ##  <a name="getcursorcommitbehavior"></a>CDatabase::GetCursorCommitBehavior  
@@ -340,7 +340,7 @@ int GetCursorCommitBehavior() const;
 ### <a name="return-value"></a>Valeur de retour  
  Une valeur qui indique l’effet des transactions sur des objets de l’objet recordset ouvert. Pour plus d'informations, consultez Notes.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le tableau suivant répertorie les valeurs de retournés possibles pour `GetCursorCommitBehavior` et ses effets sur le jeu d’enregistrements ouvert.  
   
 |Valeur de retour|Effet sur CRecordset (objets)|  
@@ -398,7 +398,7 @@ BOOL IsOpen() const;
  Différent de zéro si la `CDatabase` objet est actuellement connecté ; sinon, 0.  
   
 ##  <a name="m_hdbc"></a>CDatabase::m_hdbc  
- Contient un handle publique à une source ODBC données connexion \u2012 « handle de connexion ».  
+ Contient un handle publique à une connexion de source de données ODBC, un « handle de connexion ».  
   
 ### <a name="remarks"></a>Remarques  
  Normalement, vous n’aurez aucun besoin d’accéder directement à cette variable membre. Au lieu de cela, le framework alloue le handle lorsque vous appelez `OpenEx` ou **ouvrir**. Le framework libère le handle lorsque vous appelez le **supprimer** opérateur sur le `CDatabase` objet. Notez que la **fermer** fonction membre ne pas libérer le handle.  
@@ -419,7 +419,7 @@ virtual void OnSetOptions(HSTMT hstmt);
  `hstmt`  
  Le handle d’instruction ODBC pour laquelle des options sont définies.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `CRecordset::OnSetOptions`appelle également cette fonction membre.  
   
  `OnSetOptions`définit la valeur de délai d’attente de connexion. Si des modifications ont été appels précédents à la `SetQueryTimeout` et une fonction membre `OnSetOptions` reflète les valeurs en cours ; sinon, il définit les valeurs par défaut.  
@@ -445,7 +445,7 @@ virtual BOOL Open(
   
 ### <a name="parameters"></a>Paramètres  
  `lpszDSN`  
- Spécifie un données source nom \u2012 un nom inscrit avec ODBC via le programme Administrateur ODBC. Si une valeur de la source de données est spécifiée dans `lpszConnect` (sous la forme « DSN =\<source de données > »), il ne doit pas être spécifié dans `lpszDSN`. Dans ce cas, `lpszDSN` doit être **NULL**. Sinon, vous pouvez passer **NULL** si vous souhaitez présenter à l’utilisateur avec une boîte de dialogue Source de données dans laquelle l’utilisateur peut sélectionner une source de données. Pour plus d’informations, consultez la section Notes.  
+ Spécifie un nom de source de données, un nom inscrit avec ODBC via le programme Administrateur ODBC. Si une valeur de la source de données est spécifiée dans `lpszConnect` (sous la forme « DSN =\<source de données > »), il ne doit pas être spécifié dans `lpszDSN`. Dans ce cas, `lpszDSN` doit être **NULL**. Sinon, vous pouvez passer **NULL** si vous souhaitez présenter à l’utilisateur avec une boîte de dialogue Source de données dans laquelle l’utilisateur peut sélectionner une source de données. Pour plus d’informations, consultez la section Notes.  
   
  `bExclusive`  
  Non pris en charge dans cette version de la bibliothèque de classes. Actuellement, une assertion échoue si ce paramètre est **TRUE**. La source de données est toujours ouverte comme partagé (non exclusif).  
@@ -462,7 +462,7 @@ virtual BOOL Open(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la connexion est établie avec succès ; Sinon, 0 si l’utilisateur choisit Annuler lorsque affiche une boîte de dialogue vous demandant pour plus d’informations de connexion. Dans tous les autres cas, le framework lève une exception.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Votre objet de base de données doit être initialisé avant de pouvoir l’utiliser pour construire un objet recordset.  
   
 > [!NOTE]
@@ -543,7 +543,7 @@ BOOL Rollback();
   Consultez l’article [Transaction : exécution d’une Transaction dans un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
 ##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
- Appeler ce membre fonction \u2012 avant d’appeler `OpenEx` ou **ouvrir** \u2012 pour remplacer le nombre par défaut de secondes avant une tentatives données connexion à la source arrive à expiration.  
+ Appelez cette fonction membre — avant d’appeler `OpenEx` ou **ouvrir** — pour remplacer le nombre par défaut de secondes avant une tentatives données connexion à la source arrive à expiration.  
   
 ```  
 void SetLoginTimeout(DWORD dwSeconds);

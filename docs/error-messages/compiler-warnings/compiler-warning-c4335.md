@@ -1,39 +1,55 @@
 ---
-title: "Avertissement du compilateur C4335 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4335"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4335"
+title: Avertissement du compilateur C4335 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4335
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4335
 ms.assetid: e66467ad-a10b-4438-8c7c-e8e8d11d39bb
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Avertissement du compilateur C4335
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: dc8436664038d3f53f3a01d5006c41c3d0e4c8f0
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="compiler-warning-c4335"></a>Avertissement du compilateur C4335
 Format de fichier Mac détecté : convertissez le fichier source au format DOS ou UNIX  
   
- Le caractère d'arrêt de ligne de la première ligne d'un fichier source est de style Macintosh \('\\r'\), par opposition à UNIX \('\\n'\) ou à DOS \('\\r\\n'\).  
+ Le caractère de fin de ligne de la première ligne d’un fichier source est de style Macintosh ('\r') par opposition à UNIX ('\n') ou à DOS ('\r\n').  
   
- Cet avertissement est toujours émis en tant qu'erreur.  Consultez le pragma [warning](../../preprocessor/warning.md) pour plus d'informations sur la désactivation de cet avertissement.  Par ailleurs, cet avertissement n'est émis qu'une fois par module \(compiland\).  Par conséquent, s'il existe plusieurs directives `#include` spécifiant des fichiers au format Macintosh, l'erreur C4335 n'est générée qu'une seule fois.  
+ Cet avertissement est toujours émis en tant qu’erreur.  Consultez [avertissement](../../preprocessor/warning.md) pragma pour plus d’informations sur la manière de désactiver cet avertissement.  En outre, cet avertissement est émis uniquement une fois par compiland. Par conséquent, s’il existe plusieurs `#include` directives qui spécifient des fichiers au format Macintosh, C4335 est générée qu’une seule fois.  
   
- L'une des façons de générer des fichiers au format Macintosh consiste à utiliser les **Options d'enregistrement avancées** \(menu **Fichier**\) dans Visual Studio.  
+ Une façon de générer des fichiers au format Macintosh consiste à l’aide de la **Options d’enregistrement avancées** (sur le **fichier** menu) dans Visual Studio.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4335 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C4335.  
   
 ```  
 // C4335 expected  

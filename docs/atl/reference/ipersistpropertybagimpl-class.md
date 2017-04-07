@@ -39,13 +39,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 901a6a6bf4097b6aa78a898254766f122bb2f959
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: abef2ffa759cf74ee2316c7e0c9dd84f5c76b1d7
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl (classe)
-Cette classe implémente **IUnknown** et permet à un objet enregistrer ses propriétés dans un sac de propriétés fourni par le client.  
+# <a name="ipersistpropertybagimpl-class"></a>Classe de IPersistPropertyBagImpl
+Cette classe implémente **IUnknown** et permet à un objet enregistrer ses propriétés à un jeu de propriétés de fourni par le client.  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
@@ -68,14 +68,14 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 |Nom|Description|  
 |----------|-----------------|  
 |[IPersistPropertyBagImpl::GetClassID](#getclassid)|Récupère le CLSID de l’objet.|  
-|[IPersistPropertyBagImpl::InitNew](#initnew)|Initialise un objet nouvellement créé. Retourne l’implémentation ATL `S_OK`.|  
-|[IPersistPropertyBagImpl::Load](#load)|Charge les propriétés de l’objet à partir d’un jeu de propriétés fourni par le client.|  
-|[IPersistPropertyBagImpl::Save](#save)|Enregistre les propriétés de l’objet dans un jeu de propriétés fourni par le client.|  
+|[IPersistPropertyBagImpl::InitNew](#initnew)|Initialise un objet nouvellement créé. L’implémentation ATL retourne `S_OK`.|  
+|[IPersistPropertyBagImpl::Load](#load)|Charge les propriétés de l’objet à partir d’un jeu de propriétés de fourni par le client.|  
+|[IPersistPropertyBagImpl::Save](#save)|Enregistre les propriétés de l’objet dans un jeu de propriétés de fourni par le client.|  
   
-## <a name="remarks"></a>Notes  
- Le [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) interface permet à un objet enregistrer ses propriétés dans un sac de propriétés fourni par le client. Classe `IPersistPropertyBagImpl` fournit une implémentation par défaut de cette interface et implémente **IUnknown** en envoyant des informations de dump génère l’appareil en mode de débogage.  
+## <a name="remarks"></a>Remarques  
+ Le [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) interface permet à un objet enregistrer ses propriétés à un jeu de propriétés de fourni par le client. Classe `IPersistPropertyBagImpl` fournit une implémentation par défaut de cette interface et implémente **IUnknown** en envoyant des informations pour le vidage de builds périphérique en mode débogage.  
   
- **IPersistPropertyBag** fonctionne conjointement avec [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) et [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Ces deux interfaces de ce dernier doivent être implémentées par le client. Via `IPropertyBag`, le client enregistre et charge les propriétés individuelles de l’objet. Via **IErrorLog**, l’objet et le client peuvent signaler les erreurs rencontrées.  
+ **IPersistPropertyBag** fonctionne conjointement avec [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) et [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Ces deux interfaces ce dernier doivent être implémentées par le client. Via `IPropertyBag`, le client enregistre et charge les propriétés individuelles de l’objet. Via **IErrorLog**, l’objet et le client peuvent signaler les erreurs rencontrées.  
   
  **Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -95,7 +95,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Consultez la page [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consultez [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
  Initialise un objet nouvellement créé.  
@@ -108,22 +108,22 @@ STDMETHOD(InitNew)();
  Retourne `S_OK`.  
   
 ### <a name="remarks"></a>Remarques  
- Consultez la page [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consultez [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="load"></a>IPersistPropertyBagImpl::Load  
- Charge les propriétés de l’objet à partir d’un jeu de propriétés fourni par le client.  
+ Charge les propriétés de l’objet à partir d’un jeu de propriétés de fourni par le client.  
   
 ```
 STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  ATL utilise le mappage des propriétés de l’objet pour récupérer ces informations.  
   
- Consultez la page [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consultez [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="save"></a>IPersistPropertyBagImpl::Save  
- Enregistre les propriétés de l’objet dans un jeu de propriétés fourni par le client.  
+ Enregistre les propriétés de l’objet dans un jeu de propriétés de fourni par le client.  
   
 ```
 STDMETHOD(Save)(
@@ -132,12 +132,12 @@ STDMETHOD(Save)(
     BOOL fSaveAllProperties);
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  ATL utilise le mappage des propriétés de l’objet pour stocker ces informations. Par défaut, cette méthode enregistre toutes les propriétés, quelle que soit la valeur de *fSaveAllProperties*.  
   
- Consultez la page [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consultez [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [BEGIN_PROP_MAP](http://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427)   
+ [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
 

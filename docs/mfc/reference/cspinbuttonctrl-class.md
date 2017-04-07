@@ -52,9 +52,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 4cb2a10982ce42f94925b18f1b20ef72f3c3f83a
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 91be67ccbf1fb7fb863aa4072d55bb3f330aa44f
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (classe)
@@ -91,7 +91,7 @@ class CSpinButtonCtrl : public CWnd
 |[CSpinButtonCtrl::SetPos](#setpos)|Définit la position actuelle pour le contrôle.|  
 |[CSpinButtonCtrl::SetRange](#setrange)|Définit les limites supérieures et inférieures (plage) d’un contrôle de bouton toupie (spin).|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Un « contrôle de bouton de sélection numérique » (également appelé contrôle up-down) est une paire de boutons fléchés que l’utilisateur peut cliquer pour incrémenter ou décrémenter une valeur, telle qu’une position de défilement ou d’un nombre affiché dans un contrôle Compagnon. La valeur associée à un contrôle de bouton toupie (spin) est appelée à sa position actuelle. Un contrôle de bouton toupie (spin) est plus souvent utilisé avec un contrôle Compagnon, appelé « fenêtre associée ».  
   
  Ce contrôle (et par conséquent la `CSpinButtonCtrl` classe) est disponible uniquement pour les programmes s’exécutant sous Windows 95/98 et Windows NT version 3.51 et ultérieures.  
@@ -179,7 +179,7 @@ virtual BOOL CreateEx(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus Windows spécifiés par la préface style étendu de Windows **WS_EX_**.  
   
 ##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
@@ -244,7 +244,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
   
  La deuxième version retourne la position de 32 bits.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Lors du traitement de la valeur retournée, le contrôle met à jour sa position actuelle en fonction de la légende de la fenêtre associée. Le contrôle retourne une erreur s’il n’existe aucune fenêtre associée, ou si la légende spécifie une valeur non valide ou est hors limites.  
   
 ##  <a name="getrange"></a>CSpinButtonCtrl::GetRange  
@@ -308,7 +308,7 @@ int SetBase(int nBase);
 ### <a name="return-value"></a>Valeur de retour  
  La valeur de base précédente en cas de réussite, ou zéro si une base non valide est fournie.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La valeur de base détermine si la fenêtre associée affiche les nombres sous forme décimale ou hexadécimale. Nombres hexadécimaux sont toujours non signés ; nombres décimaux sont signés.  
   
 ##  <a name="setbuddy"></a>CSpinButtonCtrl::SetBuddy  
@@ -343,7 +343,7 @@ int SetPos32(int nPos);
 ### <a name="return-value"></a>Valeur de retour  
  La position précédente (précision 16 bits pour `SetPos`32 bits precision pour `SetPos32`).  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  `SetPos32`définit la position de 32 bits.  
   
 ##  <a name="setrange"></a>CSpinButtonCtrl::SetRange  
@@ -361,10 +361,10 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- `nLower`et`nUpper`  
+ `nLower` et `nUpper`  
  Limites supérieure et inférieure pour le contrôle. Pour `SetRange`, aucune limite peut être supérieur à **UD_MAXVAL** ou inférieur à **UD_MINVAL**; en outre, la différence entre les deux limites ne peut pas dépasser **UD_MAXVAL**. `SetRange32`n’impose aucune restriction sur les limites ; utiliser des entiers.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La fonction membre `SetRange32` définit la plage de 32 bits pour le contrôle de bouton toupie (spin).  
   
 > [!NOTE]

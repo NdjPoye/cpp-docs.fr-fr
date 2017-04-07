@@ -30,47 +30,47 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 89790d1a56f64e6479ae32d72c529142ba8df1de
-ms.openlocfilehash: 0dce243b0f7db087db908d603e6cd1cfc4b02db8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 634e33f4989046767f17fce15377fe6f4959bd8d
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="string-conversion-macros"></a>Macros de Conversion de chaînes
-Ces macros fournissent des fonctionnalités de conversion chaîne.  
+Ces macros fournissent des fonctionnalités de conversion de chaîne.  
   
 |||  
 |-|-|  
-|[Macros de Conversion de chaînes MFC et ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)|Ensemble de macros de conversion entre des types de chaîne.|  
-|[DEVMODE et Macros de Conversion de chaînes TEXTMETRIC](http://msdn.microsoft.com/library/85cebec0-2a18-48e5-9c1c-99d5b7f15425)|Ensemble de macros qui convertissent les chaînes dans `DEVMODE` et `TEXTMETRIC` des structures.|  
+|[Macros de Conversion de chaînes MFC et ATL](string-conversion-macros.md)|Ensemble de macros de conversion entre des types de chaîne.|  
+|[DEVMODE et Macros de Conversion de chaînes TEXTMETRIC](http://msdn.microsoft.com/library/85cebec0-2a18-48e5-9c1c-99d5b7f15425)|Ensemble de macros qui convertissent les chaînes dans `DEVMODE` et `TEXTMETRIC` structures.|  
   
-##  <a name="a-nameatlandmfcstringconversionmacrosa--atl-and-mfc-string-conversion-macros"></a><a name="atl_and_mfc_string_conversion_macros"></a>Macros de Conversion de chaînes MFC et ATL  
- Les macros de conversion de chaînes présentées ici sont valides à la fois pour ATL et pour MFC. Pour plus d’informations sur la conversion de chaînes MFC, consultez [TN059 : Using MFC MBCS/Unicode Conversion Macros](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) et [MFC Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md).  
+##  <a name="atl_and_mfc_string_conversion_macros"></a>Macros de Conversion de chaînes MFC et ATL  
+ Les macros de conversion de chaînes présentées ici sont valides à la fois pour ATL et pour MFC. Pour plus d’informations sur la conversion de chaînes MFC, consultez [TN059 : à l’aide de Macros de Conversion MBCS/Unicode MFC](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) et [MFC Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md).  
   
-##  <a name="a-namedevmodeandtextmetricstringconversionmacrosa--devmode-and-textmetric-string-conversion-macros"></a><a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE et Macros de Conversion de chaînes TEXTMETRIC  
- Ces macros créent une copie d’un [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) ou [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) de structure et de convertir les chaînes dans la structure d’un nouveau type de chaîne. Les macros allouer de mémoire sur la pile pour la nouvelle structure et retournent un pointeur vers la nouvelle structure.  
+##  <a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE et Macros de Conversion de chaînes TEXTMETRIC  
+ Ces macros créent une copie d’un [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) ou [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) structurer et convertir les chaînes dans la nouvelle structure en un nouveau type de chaîne. Les macros allocation de mémoire sur la pile pour la nouvelle structure et retournent un pointeur vers la nouvelle structure.  
   
 ```
 MACRONAME( address_of_structure )
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Exemple :  
   
- [!code-cpp[NVC_ATL_Utilities&#128;](../../atl/codesnippet/cpp/string-conversion-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities #128](../../atl/codesnippet/cpp/string-conversion-macros_1.cpp)]  
   
  et  
   
- [!code-cpp[NVC_ATL_Utilities&#129;](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities #129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]  
   
- Dans les noms de macro, le type de chaîne dans la structure de la source est sur la gauche (par exemple, **A**) et le type de chaîne dans la structure de destination se trouve à droite (par exemple, **W**). **A** stands for **LPSTR**, **OLE** stands for `LPOLESTR`, **T** stands for `LPTSTR`, and **W** stands for `LPWSTR`.  
+ Les noms de macro, le type de chaîne dans la structure source se trouve sur la gauche (par exemple, **A**) et le type de chaîne dans la structure de destination se trouve à droite (par exemple, **W**). **A** stands for **LPSTR**, **OLE** stands for `LPOLESTR`, **T** stands for `LPTSTR`, and **W** stands for `LPWSTR`.  
   
  Par conséquent, `DEVMODEA2W` copies un `DEVMODE` structure avec **LPSTR** des chaînes dans un `DEVMODE` structure avec `LPWSTR` chaînes, `TEXTMETRICOLE2T` copies un `TEXTMETRIC` structure avec `LPOLESTR` des chaînes dans un `TEXTMETRIC` avec la structure `LPTSTR` chaînes et ainsi de suite.  
   
- Les deux chaînes converties dans le `DEVMODE` structure sont le nom du périphérique ( **dmDeviceName**) et le nom du formulaire ( **dmFormName**). Le `DEVMODE` macros de conversion de chaînes de mettre à jour la taille de la structure ( **dmSize**).  
+ Les deux chaînes converties dans le `DEVMODE` structure sont le nom du périphérique ( **dmDeviceName**) et le nom du formulaire ( **dmFormName**). Le `DEVMODE` macros de conversion de chaînes également mettre à jour de la taille de la structure ( **dmSize**).  
   
  Les quatre chaînes converties dans le `TEXTMETRIC` structure sont le premier caractère ( **tmFirstChar**), le dernier caractère ( **tmLastChar**), le caractère par défaut ( **tmDefaultChar**) et le caractère de saut ( **tmBreakChar**).  
   
- Le comportement de la `DEVMODE` et `TEXTMETRIC` macros de conversion de chaînes dépend de la directive du compilateur appliquée, le cas échéant. Si les types source et de destination sont les mêmes, aucune conversion n'est effectuée. Directives du compilateur changent **T** et **OLE** comme suit :  
+ Le comportement de la `DEVMODE` et `TEXTMETRIC` macros de conversion de chaînes dépend de la directive de compilateur en vigueur, le cas échéant. Si les types source et de destination sont les mêmes, aucune conversion n'est effectuée. Modifier les directives de compilateur **T** et **OLE** comme suit :  
   
 |Directive du compilateur appliquée|T devient|OLE devient|  
 |----------------------------------|---------------|-----------------|  

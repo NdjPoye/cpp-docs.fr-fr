@@ -93,9 +93,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 3d2a811f850ca2779066f39fefd8312eb268f603
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 67fa0c6355443bcee478e9cd8d22b50813c0a4b0
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="afx-messages"></a>AFX, messages
@@ -108,7 +108,7 @@ Ces messages sont utilisés dans la bibliothèque MFC.
 |-|-|-|-|-|  
 |Message|Description|[in] `wParam`|`lParam`(Tous les paramètres sont [in], sauf indication contraire).|Valeur de retour|  
 |AFX_WM_ACCGETOBJECT|Non utilisé.|Non utilisé.|Non applicable.|Non applicable.|  
-|AFX_WM_ACCGETSTATE|Utilisé pour la prise en charge de l’accessibilité. Envoyer ce message à `CMFCPopupMenu` ou `CMFCRibbonPanelMenu` pour récupérer l’état de l’élément actuel.|Index de l’élément, ce qui peut être un bouton de menu ou un séparateur.|Non utilisé.|L’état de l’élément. Il est -1 si l’index n’est pas valide, 0 si le bouton de menu n’a aucun attribut spécial. Dans le cas contraire, il est une combinaison des indicateurs suivants :<br /><br /> TBBS_DISABLED \u2012 élément est désactivé<br /><br /> TBBS_CHECKED \u2012 élément est activé<br /><br /> TBBS_BUTTON \u2012 l’élément est un bouton de commande standard<br /><br /> TBBS_PRESSED \u2012 bouton est enfoncé<br /><br /> État de TBBS_INDETERMINATE \u2012 non défini<br /><br /> TBBS_SEPARATOR - plutôt qu’un bouton de menu, formulaires de cet élément une séparation entre les autres éléments de menu|  
+|AFX_WM_ACCGETSTATE|Utilisé pour la prise en charge de l’accessibilité. Envoyer ce message à `CMFCPopupMenu` ou `CMFCRibbonPanelMenu` pour récupérer l’état de l’élément actuel.|Index de l’élément, ce qui peut être un bouton de menu ou un séparateur.|Non utilisé.|L’état de l’élément. Il est -1 si l’index n’est pas valide, 0 si le bouton de menu n’a aucun attribut spécial. Dans le cas contraire, il est une combinaison des indicateurs suivants :<br /><br /> TBBS_DISABLED : l’élément est désactivé<br /><br /> TBBS_CHECKED : l’élément est activé<br /><br /> TBBS_BUTTON : l’élément est un bouton de commande standard<br /><br /> TBBS_PRESSED : bouton est enfoncé.<br /><br /> TBBS_INDETERMINATE : état indéfini<br /><br /> TBBS_SEPARATOR - plutôt qu’un bouton de menu, formulaires de cet élément une séparation entre les autres éléments de menu|  
 |AFX_WM_CHANGE_ACTIVE_TAB|Le framework envoie ce message pour le contrôle de barre de contrôle redimensionnable. Traiter ce message pour recevoir des notifications à partir de `CMFCTabCtrl` objets lorsqu’un utilisateur modifie un onglet actif.|L’index d’un onglet.|Non utilisé.|Différent de zéro.|  
 |AFX_WM_CHANGE_CURRENT_FOLDER|Le framework envoie ce message au parent de `CMFCShellListCtrl` lorsque l’utilisateur a modifié le dossier actif.|Non utilisé.|Non utilisé.|Non utilisé.|  
 |AFX_WM_CHANGEVISUALMANAGER|Le framework envoie ce message à toutes les fenêtres frame lorsque l’utilisateur modifie le gestionnaire en cours de Visual. En réponse à ce message, une fenêtre frame recalcule sa région et ajuste les autres paramètres en fonction des besoins. Si vous avez besoin être averti de cet événement, vous pouvez traiter le message AFX_WM_CHANGEVISUALMANAGER dans votre application. Vous devez appeler le Gestionnaire de classe de base (`OnChangeVisualManager`) pour vous assurer que l’infrastructure interne du traitement de cet événement a lieu.|Non utilisé.|Non utilisé.|Non utilisé.|  
@@ -128,7 +128,7 @@ Ces messages sont utilisés dans la bibliothèque MFC.
 |AFX_WM_ON_CLOSEPOPUPWINDOW|Le framework envoie ce message pour notifier le propriétaire de `CMFCDesktopAlertWnd` que la fenêtre est sur le point d’être fermé.|Non utilisé.|Un pointeur vers `CMFCDesktopAlertWnd` objet.|Non utilisé.|  
 |AFX_WM_ON_DRAGCOMPLETE|Uniquement réservé à un usage interne.|Non applicable.|Non applicable.|Non applicable.|  
 |AFX_WM_ON_GET_TAB_TOOLTIP|Envoyé à la fenêtre frame principale lorsqu’une fenêtre de l’onglet est sur le point d’afficher une info-bulle d’un onglet, si les info-bulles personnalisées sont activées.|Non utilisé.|Un pointeur vers un `CMFCTabToolTipInfo` structure.|Non utilisé.|  
-|AFX_WM_ON_HSCROLL|Envoyé pour le contrôle de barre de contrôle redimensionnable. Traiter ce message pour recevoir des notifications à partir de `CMFCTabCtrl` objets lorsqu’un événement de défilement se produit dans la barre de défilement horizontale widget à onglets.|Le mot de poids faible spécifie une valeur de barre de défilement qui indique l’utilisateur de faire défiler les demande.  Pour plus d'informations, consultez la table plus loin dans cette rubrique.|Non utilisé.|Différent de zéro.|  
+|AFX_WM_ON_HSCROLL|Envoyé pour le contrôle de barre de contrôle redimensionnable. Traiter ce message pour recevoir des notifications à partir de `CMFCTabCtrl` objets lorsqu’un événement de défilement se produit dans la barre de défilement horizontale du widget à onglets.|Le mot de poids faible spécifie une valeur de barre de défilement qui indique l’utilisateur de faire défiler les demande.  Pour plus d'informations, consultez la table plus loin dans cette rubrique.|Non utilisé.|Différent de zéro.|  
 |AFX_WM_ON_MOVE_TAB|Envoyés vers le parent d’une fenêtre à onglets lorsqu’un utilisateur fait glisser un onglet vers une nouvelle position.|Index de base zéro de l’onglet dans sa position d’origine.|[out] Index de base zéro de l’onglet dans son nouvel emplacement.|Zéro.|  
 |AFX_WM_ON_MOVETABCOMPLETE|Uniquement réservé à un usage interne.|Non applicable.|Non applicable.|Non applicable.|  
 |AFX_WM_ON_MOVETOTABGROUP|Envoyé à la fenêtre frame principale lorsqu’un utilisateur déplace une fenêtre enfant MDI à partir d’un groupe d’onglets à un autre.|Un handle de fenêtre à onglets (`CMFCTabCtrl`) à partir de laquelle la fenêtre MDI enfant a été supprimée.|[out] Un handle de fenêtre à onglets (`CMFCTabCtrl`) à laquelle la fenêtre MDI enfant a été insérée.|Ignoré.|  
@@ -174,7 +174,7 @@ Ces messages sont utilisés dans la bibliothèque MFC.
 |AFX_TOOLTIP_TYPE_DEFAULT|0 x 0001|  
 |AFX_TOOLTIP_TYPE_TOOLBAR|0 x 0002|  
 |AFX_TOOLTIP_TYPE_TAB|0 x 0004|  
-|AFX_TOOLTIP_TYPE_MINIFRAME|0 x 0008|  
+|AFX_TOOLTIP_TYPE_MINIFRAME|0x0008|  
 |AFX_TOOLTIP_TYPE_DOCKBAR|0x0010|  
 |AFX_TOOLTIP_TYPE_EDIT|0x0020|  
 |AFX_TOOLTIP_TYPE_BUTTON|0 x 0040|  

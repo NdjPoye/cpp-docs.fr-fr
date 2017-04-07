@@ -37,13 +37,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 69a59fe23b3ca787dee86b1bbdc6775a44903f91
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 1742929a31e244e853b426324894e5c8666ebf99
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl (classe)
-Cette classe fournit une implémentation par défaut de le `IServiceProvider` interface.  
+# <a name="iserviceproviderimpl-class"></a>Classe de IServiceProviderImpl
+Cette classe fournit une implémentation par défaut de la `IServiceProvider` interface.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,16 +62,16 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Méthode IServiceProviderImpl::QueryService](#queryservice)|Crée ou accède au service spécifié et retourne un pointeur d’interface pour l’interface spécifiée pour le service.|  
+|[Méthode IServiceProviderImpl::QueryService](#queryservice)|Crée ou accède au service spécifié et retourne un pointeur d’interface à l’interface spécifiée pour le service.|  
   
 ## <a name="remarks"></a>Remarques  
  Le `IServiceProvider` interface recherche un service spécifié par son GUID et retourne le pointeur d’interface pour l’interface demandée sur le service. Classe `IServiceProviderImpl` fournit une implémentation par défaut de cette interface.  
   
- **IServiceProviderImpl** spécifie une méthode : [QueryService](#queryservice), ce qui crée ou accède au service spécifié et retourne un pointeur d’interface pour l’interface spécifiée pour le service.  
+ **IServiceProviderImpl** spécifie une méthode : [QueryService](#queryservice), qui crée ou accède au service spécifié et retourne un pointeur d’interface à l’interface spécifiée pour le service.  
   
- `IServiceProviderImpl`utilise une carte de service, en commençant par [BEGIN_SERVICE_MAP](http://msdn.microsoft.com/library/3c6ae156-8776-4588-8227-2d234daec236) et se terminant par [END_SERVICE_MAP](http://msdn.microsoft.com/library/9a35d02a-014c-413a-bb0b-bcca11ab45a6).  
+ `IServiceProviderImpl`utilise une carte de service, en commençant par [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) et se terminant par [END_SERVICE_MAP](service-map-macros.md#end_service_map).  
   
- La carte de service contient deux entrées : [SERVICE_ENTRY](http://msdn.microsoft.com/library/e65ff9cc-15e8-41cf-b686-f99eb6686ca9), ce qui indique un id de service spécifié (SID) pris en charge par l’objet, et [SERVICE_ENTRY_CHAIN](http://msdn.microsoft.com/library/09be4ce4-3ccd-4ff2-a95e-a9d5275354c1), qui appelle la méthode `QueryService` à la chaîne à un autre objet.  
+ La carte de service contient deux entrées : [SERVICE_ENTRY](service-map-macros.md#service_entry), ce qui indique un id de service spécifié (SID) pris en charge par l’objet, et [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), qui appelle `QueryService` à chaîne à un autre objet.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `IServiceProvider`  
@@ -82,7 +82,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
  **En-tête :** atlcom.h  
   
 ##  <a name="queryservice"></a>Méthode IServiceProviderImpl::QueryService  
- Crée ou accède au service spécifié et retourne un pointeur d’interface pour l’interface spécifiée pour le service.  
+ Crée ou accède au service spécifié et retourne un pointeur d’interface à l’interface spécifiée pour le service.  
   
 ```
 STDMETHOD(QueryService)(
@@ -106,7 +106,7 @@ STDMETHOD(QueryService)(
   
 |Valeur de retour|Signification|  
 |------------------|-------------|  
-|S_OK|Le service a été correctement créé ou récupéré.|  
+|S_OK|Le service a été créé ou récupéré avec succès.|  
 |E_INVALIDARG|Un ou plusieurs arguments ne sont pas valides.|  
 |E_OUTOFMEMORY|Mémoire insuffisante créer le service.|  
 |E_UNEXPECTED|Une erreur inconnue s'est produite.|  
@@ -121,11 +121,11 @@ STDMETHOD(QueryService)(
   
 -   Il se peut que certaines de ces interfaces peuvent être facultatif. Pas toutes les interfaces définies dans la description de service sont nécessairement présents sur toutes les implémentations du service ou sur chaque objet retourné.  
   
--   Contrairement aux appels à `QueryInterface`, en passant un identificateur de service différent ne signifie pas nécessairement qu’un autre objet de modèle COM (Component Object) est retourné.  
+-   Contrairement aux appels à `QueryInterface`, en passant un identificateur de service différents ne signifie pas nécessairement qu’un autre objet du modèle COM (Component Object) est retourné.  
   
 -   L’objet retourné peut avoir des interfaces supplémentaires qui ne font pas partie de la définition du service.  
   
- Deux services différents, tels que SID_SMyService et SID_SYourService, peuvent tous deux spécifier l’utilisation de la même interface, même si l’implémentation de l’interface n’aient rien en commun entre les deux services. Cela fonctionne, car un appel à `QueryService` (SID_SMyService, IID_IDispatch) peut retourner un objet autre que `QueryService` (SID_SYourService, IID_IDispatch). Identité de l’objet n’est pas supposée lorsque vous spécifiez un identificateur de service différent.  
+ Deux des différents services, tels que SID_SMyService et SID_SYourService, peuvent tous deux spécifient l’utilisation de la même interface, même si l’implémentation de l’interface est rien en commun entre les deux services. Cela fonctionne, car un appel à `QueryService` (SID_SMyService, IID_IDispatch) peut retourner un objet autre que `QueryService` (SID_SYourService, IID_IDispatch). Identité de l’objet n’est pas supposé que lorsque vous spécifiez un identificateur de service différent.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

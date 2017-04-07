@@ -1,5 +1,5 @@
 ---
-title: "L’Assistant fournisseur OLE DB ATL | Documents Microsoft"
+title: Assistant fournisseur Oledb ATL | Documents Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,9 +35,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: aa6eb732c15fa2bc392296de1cc035cff1e0dcee
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: a28a47d9af89470c63903ccc338c680361b1cada
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Assistant Fournisseur OLEDB ATL
@@ -49,50 +49,50 @@ Cet Assistant crée les classes qui composent un fournisseur OLE DB.
  Le tableau suivant décrit les options de l’Assistant fournisseur OLE DB ATL :  
   
  **Nom court**  
- Tapez le nom court du fournisseur à créer. Les autres zones d’édition dans l’Assistant remplit automatiquement en fonction de ce que vous tapez ici. Vous pouvez modifier les autres zones de nom si vous le souhaitez.  
+ Tapez le nom court du fournisseur à créer. Les autres zones d’édition dans l’Assistant seront rempliront automatiquement en fonction de ce que vous tapez ici. Vous pouvez modifier les autres zones de nom si vous le souhaitez.  
   
  **Coclasse**  
- Le nom de la coclasse. Le nom ProgID changeront pour correspondre à ce nom.  
+ Le nom de la coclasse. Le nom du ProgID sera modifié pour correspondre à ce nom.  
   
- **Par attributs**  
- Cette option spécifie si l’Assistant va créer des classes de fournisseur à l’aide d’attributs ou déclarations de modèle. Lorsque vous sélectionnez cette option, l’Assistant utilise les attributs au lieu des déclarations de modèle (c’est l’option par défaut si vous avez créé un projet avec attributs). Lorsque vous désactivez cette option, l’Assistant utilise des déclarations de modèle plutôt que des attributs (c’est l’option par défaut si vous avez créé un projet sans attributs).  
+ **Attribué**  
+ Cette option spécifie si l’Assistant va créer des classes de fournisseur à l’aide des attributs ou des déclarations de modèle. Lorsque vous sélectionnez cette option, l’Assistant utilise les attributs à la place des déclarations de modèle (il s’agit de l’option par défaut si vous avez créé un projet avec attributs). Lorsque vous désactivez cette option, l’Assistant utilise des déclarations de modèle au lieu d’attributs (il s’agit de l’option par défaut si vous avez créé un projet sans attributs).  
   
  Si vous sélectionnez cette option lorsque vous avez créé un projet sans attributs, l’Assistant vous avertit que le projet sera converti en un projet avec attributs et vous demande s’il faut continuer ou non.  
   
  **ProgID**  
- Le ProgID, ou identificateur programmatique, est une chaîne de texte que votre application peut utiliser au lieu d’un GUID. Le nom ProgID a la forme *nom_projet*.* Coclassname*.  
+ Le ProgID, ou identificateur programmatique, est une chaîne de texte que votre application peut utiliser à la place d’un GUID. Le nom du ProgID présente sous la forme *NomProjet.NomCoclasse*.  
   
  **Version**  
  Le numéro de version de votre fournisseur. La valeur par défaut est 1.  
   
  **Classe de source de données**  
- Le nom de la classe de source de données, sous la forme C`Shortname`Source.  
+ Le nom de la classe de source de données, sous la forme C*Shortname*Source.  
   
  **Fichier .h de la source de données**  
- Le fichier d’en-tête pour la classe de source de données. Vous pouvez modifier le nom de ce fichier ou sélectionner un fichier d’en-tête existant.  
+ Le fichier d’en-tête pour la classe de source de données. Vous pouvez modifier le nom de ce fichier ou sélectionnez un fichier d’en-tête existant.  
   
  **Classe de session**  
- Le nom de la classe session, de la forme C`Shortname`Session.  
+ Le nom de la classe session, sous la forme C*Shortname*Session.  
   
  **Fichier .h de session**  
- Le fichier d’en-tête pour la classe de la session. Vous pouvez modifier le nom de ce fichier ou sélectionner un fichier d’en-tête existant.  
+ Le fichier d’en-tête pour la classe session. Vous pouvez modifier le nom de ce fichier ou sélectionnez un fichier d’en-tête existant.  
   
  **Classe de commande**  
- Le nom de la classe de commande, sous la forme C`Shortname`commande.  
+ Le nom de la classe de commande, sous la forme C*Shortname*commande.  
   
  **Fichier .h de commande**  
  Le fichier d’en-tête pour la classe de commande. Ce nom ne peut pas être modifié et dépend du nom de l’ensemble de lignes du fichier d’en-tête.  
   
  **Classe de l’ensemble de lignes**  
- Le nom de la classe rowset, au format : C`Shortname`ensemble de lignes.  
+ Le nom de la classe rowset, de la forme C*Shortname*ensemble de lignes.  
   
- **Fichier .h d’ensemble de lignes**  
- Le fichier d’en-tête pour la classe d’ensemble de lignes. Vous pouvez modifier le nom de ce fichier ou sélectionner un fichier d’en-tête existant.  
+ **Fichier .h ensemble de lignes**  
+ Le fichier d’en-tête pour la classe rowset. Vous pouvez modifier le nom de ce fichier ou sélectionnez un fichier d’en-tête existant.  
   
  **Fichier .cpp de jeu de lignes**  
- Fichier d’implémentation du fournisseur. Vous pouvez modifier le nom de ce fichier ou sélectionner un fichier d’implémentation.  
+ Fichier d’implémentation du fournisseur. Vous pouvez modifier le nom de ce fichier ou sélectionnez un fichier d’implémentation existant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fournisseur ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-provider.md)
+ [Fournisseur OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)
 
 

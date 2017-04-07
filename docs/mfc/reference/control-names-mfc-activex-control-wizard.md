@@ -1,86 +1,104 @@
 ---
-title: "Noms du contr&#244;le, Assistant Contr&#244;le ActiveX&#160;MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.ctl.names"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistant Contrôle ActiveX MFC, noms des contrôles"
+title: "Noms du contrôle, Assistant contrôle ActiveX MFC | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.ctl.names
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX Control Wizard, control names
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Noms du contr&#244;le, Assistant Contr&#244;le ActiveX&#160;MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 28ef331cb66ee184c4bc104fedddf69e9296367c
+ms.lasthandoff: 04/04/2017
 
-Spécifiez les noms de la classe du contrôle et de la classe de la page de propriétés, ainsi que les noms et les identificateurs de type pour votre contrôle.  À l'exception du champ **Nom court**, tous les autres champs peuvent être modifiés de manière indépendante.  Si vous changez le texte du champ **Nom court**, la modification est répercutée sur les noms de tous les autres champs de cette page.  Ce mode d'affectation des noms est destiné à faciliter l'identification de tous les noms lorsque vous développez votre contrôle.  
+---
+# <a name="control-names-mfc-activex-control-wizard"></a>Noms du contrôle, Assistant Contrôle ActiveX MFC
+Spécifier les noms de la classe de contrôle et de la classe de page de propriétés, les noms de type et les identificateurs de type pour votre contrôle. À l’exception de **nom court**, tous les autres champs peuvent être modifiés de manière indépendante. Si vous modifiez le texte de **nom court**, la modification est répercutée dans les noms de tous les autres champs de cette page. Ce comportement d’affectation de noms est conçu pour rendre tous les noms de facilement identifiables pour vous lorsque vous développez votre contrôle.  
   
  **Nom court**  
- Spécifiez une abréviation pour le nom du contrôle.  Par défaut, ce nom est défini sur la base du nom de projet que vous avez spécifié dans la boîte de dialogue **Nouveau projet**.  Le nom indiqué dans ce champ détermine les noms des classes, les noms des types et les identificateurs des types, à moins que vous ne modifiiez manuellement les champs correspondants.  
+ Fournissez un nom abrégé pour le contrôle. Par défaut, ce nom est basé sur le nom de projet fourni dans le **nouveau projet** boîte de dialogue. Le nom que vous fournissez détermine les noms de classe, les noms de types et les identificateurs de type, sauf si vous modifiez ces champs individuellement.  
   
- **Nom de la classe du contrôle**  
- Par défaut, le nom de la classe du contrôle est défini à partir du nom court, auquel sont ajoutés le préfixe `C` et le suffixe `Ctrl`.  Par exemple, si le nom court de votre contrôle est `Price`, le nom de la classe du contrôle est `CPriceCtrl`.  
+ **Nom de classe de contrôle**  
+ Par défaut, le nom de la classe du contrôle est basé sur le nom court, avec `C` en tant que préfixe et `Ctrl` comme suffixe. Par exemple, si votre contrôle court de nom est `Price`, le nom de classe du contrôle est `CPriceCtrl`.  
   
- **Fichier .h du contrôle**  
- Par défaut, le nom du fichier d'en\-tête est défini à partir du nom court, auquel sont ajoutés le suffixe `Ctrl` et l'extension de fichier `.h`.  Par exemple, si le nom court de votre contrôle est `Price`, le nom du fichier d'en\-tête est `PriceCtrl.h`.  Le nom indiqué dans ce champ doit correspondre au nom de la classe du contrôle.  
+ **Fichier .h de contrôle**  
+ Par défaut, le nom du fichier d’en-tête est basé sur le nom court, avec `Ctrl` comme suffixe et `.h` en tant que l’extension de fichier. Par exemple, si votre contrôle court de nom est `Price`, le nom de fichier d’en-tête est `PriceCtrl.h`. Le nom de ce champ doit correspondre au nom de classe de contrôle.  
   
  **Fichier .cpp du contrôle**  
- Par défaut, le nom du fichier d'en\-tête est défini à partir du nom court, auquel sont ajoutés le suffixe `Ctrl` et l'extension de fichier `.cpp`.  Par exemple, si le nom court de votre contrôle est `Price`, le nom du fichier d'en\-tête est `PriceCtrl.cpp`.  Le nom indiqué dans ce champ doit correspondre au nom de l'en\-tête.  
+ Par défaut, le nom du fichier d’en-tête est basé sur le nom court, avec `Ctrl` comme suffixe et `.cpp` en tant que l’extension de fichier. Par exemple, si votre contrôle court de nom est `Price`, le nom de fichier d’en-tête est `PriceCtrl.cpp`. Le nom de ce champ doit correspondre au nom de l’en-tête.  
   
- **Type du contrôle**  
- Par défaut, le nom du type du contrôle est défini à partir du nom court, suivi de `Control`.  Par exemple, si le nom court de votre contrôle est `Price`, le nom de la classe du contrôle est `Price Control`.  Si vous changez la valeur de ce champ, veillez à ce que le nom indique une relation d'héritage.  
+ **Nom de type de contrôle**  
+ Par défaut, le nom du type de contrôle est basé sur le nom court, suivi par `Control`. Par exemple, si votre contrôle court de nom est `Price`, le nom de type de classe de contrôle est `Price Control`. Si vous modifiez la valeur dans ce champ, assurez-vous que le nom indique un héritage.  
   
- **ID du type du contrôle**  
- Définit l'ID du type du contrôle pour la classe du contrôle.  Cette chaîne est consignée par le contrôle dans le Registre lors de son ajout au projet.  Elle est utilisée par les applications conteneurs pour créer une instance du contrôle.  
+ **ID de type de contrôle**  
+ Définit l’ID de type de contrôle de la classe du contrôle. Le contrôle, cette chaîne est consignée dans le Registre lorsqu’il est ajouté à un projet. Applications conteneur utilisent cette chaîne pour créer une instance du contrôle.  
   
- Par défaut, l'ID du type du contrôle est défini en fonction du nom de projet, que vous avez spécifié dans la boîte de dialogue **Nouveau projet**, et du nom court.  Ce nom doit correspondre au nom du type.  
+ Par défaut, l’ID de type de contrôle est basé sur le nom du projet, que vous avez spécifié dans le **nouveau projet** boîte de dialogue et le nom court. Ce nom doit correspondre au nom de type.  
   
- Par défaut, l'ID du type du contrôle est défini comme suit :  
+ Par défaut, l’ID de type de contrôle s’affiche comme suit :  
   
- *ProjectName*.*ShortName*Ctrl.1  
+ *ProjectName.ShortName*CTRL.1.  
   
- Si vous modifiez le nom court dans cette boîte de dialogue, l'ID du type du contrôle devient :  
+ Si vous modifiez le nom court dans cette boîte de dialogue, l’ID de type de contrôle s’affiche comme suit :  
   
- *ProjectName*.*NewShortName*Ctrl.1  
+ *ProjectName.NewShortName*CTRL.1.  
   
- **Nom de la classe de page de prop.**  
- Par défaut, le nom de la classe de la page de propriétés est défini à partir du nom court, auquel sont ajoutés le préfixe `C` et le suffixe `PropPage`.  Par exemple, si le nom court de votre contrôle est `Price`, le nom de la classe de la page de propriétés est `CPricePropPage`.  Ce nom doit correspondre au nom de la classe du contrôle, à l'exception du suffixe `PropPage`.  
+ **Nom de la classe PropPage**  
+ Par défaut, le nom de la classe de page de propriétés est basé sur le nom court, avec `C` en tant que préfixe et `PropPage` comme suffixe. Par exemple, si votre contrôle court de nom est `Price`, le nom de classe de page de propriétés est `CPricePropPage`. Ce nom doit correspondre au nom de la classe du contrôle, avec `PropPage`.  
   
- **Fichier .h de page de prop.**  
- Par défaut, le nom du fichier d'en\-tête pour la page de propriétés est défini à partir du nom court, auquel sont ajoutés le suffixe `PropPage` et l'extension de fichier `.h`.  Par exemple, si le nom court de votre contrôle est `Price`, le nom du fichier d'en\-tête pour la page de propriétés est `PricePropPage.h`.  Ce nom doit correspondre au nom de la classe.  
+ **Fichier .h PropPage**  
+ Par défaut, le nom du fichier d’en-tête de page propriété repose sur le nom court, avec comme un `PropPage` comme suffixe et `.h` en tant que l’extension de fichier. Par exemple, si votre contrôle court de nom est `Price`, nom de fichier en-tête de page de propriétés est `PricePropPage.h`. Ce nom doit correspondre au nom de la classe.  
   
- **Fichier .cpp de page de prop.**  
- Par défaut, le nom du fichier d'implémentation pour la page de propriétés est défini à partir du nom court, auquel sont ajoutés le suffixe `PropPage` et l'extension de fichier `.cpp`.  Par exemple, si le nom court de votre contrôle est `Price`, le nom du fichier d'en\-tête pour la page de propriétés est `PricePropPage.cpp`.  Ce nom doit correspondre au nom du fichier d'en\-tête.  
+ **Fichier .cpp de la page de Prop.**  
+ Par défaut, le nom du fichier de mise en œuvre de page de propriétés est basé sur le nom court, avec comme un `PropPage` comme suffixe et `.cpp` en tant que l’extension de fichier. Par exemple, si votre contrôle court de nom est `Price`, nom de fichier en-tête de page de propriétés est `PricePropPage.cpp`. Ce nom doit correspondre le nom de fichier d’en-tête.  
   
- **Type de classe pg. de prop.**  
- Par défaut, le nom du type de la page de propriétés est défini à partir du nom court, suivi de `Property Page`.  Par exemple, si le nom court de votre contrôle est `Price`, le nom du type de la page de propriétés est `Price Property Page`.  Si vous changez la valeur de ce champ, veillez à ce que le nom indique la classe du contrôle.  
+ **Nom du type de page de Prop.**  
+ Par défaut, le nom de type de page de propriétés est basé sur le nom court, suivi par `Property Page`. Par exemple, si votre contrôle court de nom est `Price`, le nom de type de page de propriétés est `Price Property Page`. Si vous modifiez la valeur dans ce champ, assurez-vous que le nom indique la classe du contrôle.  
   
- **ID du type de page de prop.**  
- Définit l'ID de la classe pour la page de propriétés.  Cette chaîne est consignée par le contrôle dans le Registre lors de son ajout au projet.  Elle est utilisée par les applications conteneurs pour créer une instance de la page de propriétés du contrôle.  
+ **ID du type de page de Prop.**  
+ Définit l’ID de la classe de page de propriétés. Le contrôle, cette chaîne est consignée dans le Registre lorsqu’il est appliqué à un projet. Une application conteneur utilise cette chaîne pour créer une instance de la page de propriétés du contrôle.  
   
- Par défaut, l'ID du type de la page de propriétés est défini en fonction du nom de projet, que vous avez spécifié dans la boîte de dialogue **Nouveau projet**, et du nom court.  Ce nom doit correspondre au nom du type.  
+ Par défaut, l’ID de type de page de propriétés est basé sur le nom du projet, que vous avez spécifié dans le **nouveau projet** boîte de dialogue et le nom court. Ce nom doit correspondre au nom de type.  
   
- Par défaut, l'ID du type de la page de propriétés est défini comme suit :  
+ Par défaut, l’ID de type de page de propriétés apparaît comme suit :  
   
- *ProjectName*.*ShortName*PropPage.1  
+ *ProjectName.ShortName*PropPage.1.  
   
- Si vous modifiez le nom court dans cette boîte de dialogue, l'ID du type de la page de propriétés devient :  
+ Si vous modifiez le nom court dans cette boîte de dialogue, l’ID de type de page de propriétés apparaît comme suit :  
   
- *ProjectName*.*NewShortName*PropPage.1  
+ *ProjectName.NewShortName*PropPage.1.  
   
-## Voir aussi  
- [Contrôle ActiveX MFC \(Assistant\)](../../mfc/reference/mfc-activex-control-wizard.md)   
- [Paramètres de l’application, Assistant Contrôle ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
- [Paramètres du contrôle, Assistant Contrôle ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)   
- [Types de fichiers créés pour les projets Visual C\+\+](../../ide/file-types-created-for-visual-cpp-projects.md)
+## <a name="see-also"></a>Voir aussi  
+ [Assistant contrôle ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)   
+ [Paramètres d’application, Assistant contrôle ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
+ [Paramètres du contrôle, Assistant contrôle ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)   
+ [Types de fichiers créés pour les projets Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)
+
+

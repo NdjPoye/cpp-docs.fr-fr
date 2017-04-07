@@ -41,111 +41,115 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d26b374e233326ac5acc97486edc8d38e6bf5d81
-ms.openlocfilehash: 75db28c7be1ab497ba9656136d22b114b488c4ae
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: 7dc1f904d1c3f76635a49db1747578e2ce0b0b3b
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mfc-macros-and-globals"></a>Macros et objet Globals MFC
-La bibliothèque Microsoft Foundation Class peut être divisée en deux sections principales : (1) les classes MFC et les macros (2) et les globals. Si une fonction ou une variable n’est pas un membre d’une classe, il est une fonction globale ou une variable.  
+La bibliothèque Microsoft Foundation Class peut être divisée en deux sections principales : (1) le classes MFC et les macros (2) et les variables globales. Si une fonction ou une variable n’est pas un membre d’une classe, il est une fonction globale ou une variable.  
   
- La bibliothèque MFC et la bibliothèque ATL (Active Template Library) partagent les macros de conversion de chaînes. Pour plus d’informations, consultez [Macros de Conversion de chaînes](../../atl/reference/string-conversion-macros.md) dans la documentation de ATL.  
+ La bibliothèque MFC et la bibliothèque ATL (Active Template) partagent des macros de conversion de chaînes. Pour plus d’informations, consultez [Macros de Conversion de chaînes](../../atl/reference/string-conversion-macros.md) dans la documentation ATL.  
   
- Les macros MFC et des variables globales offrent des fonctionnalités dans les catégories suivantes.  
+ Les macros MFC et objet globals offrent des fonctionnalités dans les catégories suivantes.  
   
-## <a name="general-mfc"></a>MFC générales  
+## <a name="general-mfc"></a>Général MFC  
   
--   [Types de données](../../mfc/reference/data-types-mfc.md)  
+-   [Types de données](data-types-mfc.md)  
   
--   [Conversion de type des objets de classe MFC](../../mfc/reference/type-casting-of-mfc-class-objects.md)  
+-   [Conversion de type des objets de classe MFC](type-casting-of-mfc-class-objects.md)  
   
--   [Services du modèle objet d’exécution](../../mfc/reference/run-time-object-model-services.md)  
+-   [Services du modèle objet d’exécution](run-time-object-model-services.md)  
   
--   [Services de diagnostic](../../mfc/reference/diagnostic-services.md)  
+-   [Services de diagnostic](diagnostic-services.md)  
   
--   [Traitement des exceptions](../../mfc/reference/exception-processing.md)  
+-   [Traitement des exceptions](exception-processing.md)  
   
--   [Mise en forme de CString et affichage de la boîte de message](../../mfc/reference/cstring-formatting-and-message-box-display.md)  
+-   [Mise en forme de CString et affichage de la boîte de message](cstring-formatting-and-message-box-display.md)  
   
--   [Tables des messages](../../mfc/reference/message-map-macros-mfc.md)  
+-   [Tables des messages](message-map-macros-mfc.md)  
+
+-   [Délégué et les tables d’Interface](delegate-and-interface-maps.md)
+
+-   [Modules et DLL](extension-dll-macros.md)
   
--   [Gestion des informations et des applications](../../mfc/reference/application-information-and-management.md)  
+-   [Gestion des informations et des applications](application-information-and-management.md)  
   
--   [ID de commande et de fenêtre standard](../../mfc/reference/standard-command-and-window-ids.md)  
+-   [ID de commande et de fenêtre standard](standard-command-and-window-ids.md)  
   
--   [Assistants de classe de collection](../../mfc/reference/collection-class-helpers.md)  
+-   [Assistants de classe de collection](collection-class-helpers.md)  
   
--   [Fonctions d’image bitmap tramée et grise](../../mfc/reference/gray-and-dithered-bitmap-functions.md)  
+-   [Fonctions d’image bitmap tramée et grise](gray-and-dithered-bitmap-functions.md)  
   
--   [Routines d’échange (DDX) de données de boîte de dialogue standard](../../mfc/reference/standard-dialog-data-exchange-routines.md)  
+-   [Routines d’échange (DDX) de données de boîte de dialogue standard](standard-dialog-data-exchange-routines.md)  
   
--   [Routines de validation (DDV) de données de boîte de dialogue standard](../../mfc/reference/standard-dialog-data-validation-routines.md)  
+-   [Routines de validation (DDV) de données de boîte de dialogue standard](standard-dialog-data-validation-routines.md)  
   
--   [AFX, Messages](../../mfc/reference/afx-messages.md)  
+-   [AFX, messages](afx-messages.md)  
   
--   [Styles de contrôle de barre d’outils](../../mfc/reference/toolbar-control-styles.md)  
+-   [Styles de contrôle ToolBar](toolbar-control-styles.md)  
   
--   [CMFCImagePaintArea::IMAGE_EDIT_MODE (énumération)](cmfcimagepaintarea-image-edit-mode-enumeration.md)  
+-   [CMFCImagePaintArea::IMAGE_EDIT_MODE, énumeration](cmfcimagepaintarea-image-edit-mode-enumeration.md)  
 
   
 ## <a name="database"></a>Base de données  
   
--   [Enregistrer les fonctions Field Exchange (RFX)](../../mfc/reference/record-field-exchange-functions.md) et [les fonctions RFX en bloc (bulk RFX)](../../mfc/reference/record-field-exchange-functions.md) pour les classes ODBC MFC  
+-   [Enregistrer les fonctions Field Exchange (RFX)](record-field-exchange-functions.md) et [les fonctions RFX en bloc (RFX en bloc)](record-field-exchange-functions.md) pour les classes ODBC MFC  
   
--   [Enregistrer les fonctions field exchange (DFX)](../../mfc/reference/record-field-exchange-functions.md) pour les classes DAO MFC  
+-   [Enregistrer les fonctions d’échange (DFX) champ](record-field-exchange-functions.md) pour les classes DAO MFC  
   
--   [Fonctions d’échange de données de boîtes de dialogue (DDX) pour CRecordView et CDaoRecordView](../../mfc/reference/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md) (classes DAO et ODBC MFC)  
+-   [Fonctions d’échange de données de boîtes de dialogue (DDX) pour CRecordView et CDaoRecordView](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md) (classes DAO et ODBC MFC)  
   
--   [Échange de données de la boîte de dialogue de fonctions (DDX) pour les contrôles OLE](../../mfc/reference/dialog-data-exchange-functions-for-ole-controls.md)  
+-   [Fonctions d’exchange (DDX) de données de boîtes de dialogue pour contrôles OLE](dialog-data-exchange-functions-for-ole-controls.md)  
   
--   [Macros et objet globals pour vous aider à appeler directement les fonctions de Open Database Connectivity (ODBC) API](../../mfc/reference/database-macros-and-globals.md)  
+-   [Macros et objet globals pour aider à l’appel direct de fonctions de base de données ODBC (Open Connectivity) API](database-macros-and-globals.md)  
   
--   [Arrêt et initialisation du moteur de base de données DAO](../../mfc/reference/dao-database-engine-initialization-and-termination.md)  
+-   [Arrêt et l’initialisation du moteur de base de données DAO](dao-database-engine-initialization-and-termination.md)  
   
 ## <a name="internet"></a>Internet  
   
--   [Objet globals d’analyse des URL Internet](../../mfc/reference/internet-url-parsing-globals.md)  
+-   [URL Internet objet globals d’analyse](internet-url-parsing-globals.md)  
   
-## <a name="dhtml--dhtml-event-maps"></a>DHTML / mappe événement DHTML  
+## <a name="dhtml--dhtml-event-maps"></a>DHTML / événement DHTML est mappé.  
   
--   [Les macros d’assistance (DDX) d’échange de données de boîte de dialogue DHTML](../../mfc/reference/ddx-dhtml-helper-macros.md)  
+-   [Les macros d’assistance (DDX) d’échange de données de boîte de dialogue DHTML](ddx-dhtml-helper-macros.md)  
   
--   [Tables d’événements DHTML](../../mfc/reference/dhtml-event-maps.md)  
+-   [DHTML, tables d’événements](dhtml-event-maps.md)  
   
 ## <a name="ole"></a>OLE  
   
--   [Initialisation d’OLE](../../mfc/reference/ole-initialization.md)  
+-   [Initialisation d’OLE](ole-initialization.md)  
   
--   [Contrôle d’application](../../mfc/reference/application-control.md)  
+-   [Contrôle d’application](application-control.md)  
   
--   [Tables de dispatch](../../mfc/reference/dispatch-maps.md)  
+-   [Tables de dispatch](dispatch-maps.md)  
   
- En outre, MFC fournit une fonction appelée [AfxEnableControlContainer](http://msdn.microsoft.com/library/7aa0b9d2-5329-4bc3-9d41-856e30fe2c2b) que permet de n’importe quel conteneur OLE développée avec MFC 4.0 prennent en charge incorporée de contrôles OLE.  
+ En outre, MFC fournit une fonction appelée [AfxEnableControlContainer](http://msdn.microsoft.com/library/7aa0b9d2-5329-4bc3-9d41-856e30fe2c2b) que permet de n’importe quel conteneur OLE développé avec MFC 4.0 pour prendre entièrement en charge incorporée des contrôles OLE.  
   
 ## <a name="ole-controls"></a>Contrôles OLE  
   
--   [Constantes de type paramètre Variant](../../mfc/reference/variant-parameter-type-constants.md)  
+-   [Constantes de type paramètre Variant](variant-parameter-type-constants.md)  
   
--   [Accès à la bibliothèque type](../../mfc/reference/type-library-access.md)  
+-   [Accès de bibliothèque de type](type-library-access.md)  
   
--   [Pages de propriétés](../../mfc/reference/property-pages-mfc.md)  
+-   [Pages de propriétés](property-pages-mfc.md)  
   
--   [Tables d’événements](../../mfc/reference/event-maps.md)  
+-   [Tables d’événements](event-maps.md)  
   
--   [Tables de récepteurs d’événements](../../mfc/reference/event-sink-maps.md)  
+-   [Tables de récepteurs d’événements](event-sink-maps.md)  
   
--   [Mappages de connexion](../../mfc/reference/connection-maps.md)  
+-   [Mappages de connexion](connection-maps.md)  
   
--   [Inscrire des contrôles OLE](../../mfc/reference/registering-ole-controls.md)  
+-   [Inscrire des contrôles OLE](registering-ole-controls.md)  
   
--   [Les fabriques de classes et les licences](../../mfc/reference/class-factories-and-licensing.md)  
+-   [Fabriques de classes et les licences](class-factories-and-licensing.md)  
   
--   [Persistance des contrôles OLE](../../mfc/reference/persistence-of-ole-controls.md)  
+-   [Persistance des contrôles OLE](persistence-of-ole-controls.md)  
   
- La première partie de cette section décrit chacune des catégories précédentes brièvement et répertorie les variables globales et les macros dans la catégorie, ainsi que de brèves descriptions de fonctionnalités. Ce sont des descriptions des fonctions globales, des variables globales et les macros dans la bibliothèque MFC.  
+ La première partie de cette section décrit chacune des catégories précédentes brièvement et répertorie les variables globales et les macros dans la catégorie, ainsi que de brèves descriptions de fonctionnalités. Ce sont des descriptions des fonctions globales, les variables globales et les macros dans la bibliothèque MFC.  
   
 > [!NOTE]
->  De nombreuses fonctions globales commencent par le préfixe « Afx », mais certains, par exemple, les fonctions d’échange de données boîte de dialogue et de nombreuses fonctions de la base de données, ne suivent pas cette convention. Toutes les variables globales commencent par « afx » comme préfixe. Les macros ne commencent pas par n’importe quel préfixe particulier, mais ils sont écrits en majuscules.  
+>  De nombreuses fonctions globales commencent par le préfixe « Afx », mais certaines, par exemple, les fonctions d’échange de données boîte de dialogue et la plupart des fonctions de la base de données, ne suivent pas cette convention. Toutes les variables globales commencent par « afx » comme préfixe. Les macros ne commencent pas par n’importe quel préfixe particulier, mais ils sont écrits en majuscules.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../mfc/class-library-overview.md)

@@ -38,13 +38,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: f0b40c73101463b934e3fcf299171bea142fe838
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 2726e73d35d01c942ac3d251579fe350be549800
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="cmessagemap-class"></a>CMessageMap (classe)
-Cette classe autorise que les messages d’un objet est mappé pour l’accès à un autre objet.  
+# <a name="cmessagemap-class"></a>Classe de CMessageMap
+Cette classe autorise que les messages d’un objet est mappé pour l’accès par un autre objet.  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
@@ -64,13 +64,13 @@ class ATL_NO_VTABLE CMessageMap
 |[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Accède à une table des messages dans la `CMessageMap`-classe dérivée.|  
   
 ## <a name="remarks"></a>Remarques  
- `CMessageMap`est une classe de base abstraite qui laisse les messages d’un objet est mappé pour être accessible par un autre objet. Dans l’ordre pour un objet d’exposer ses tables des messages, sa classe doit dériver de `CMessageMap`.  
+ `CMessageMap`est une classe de base abstraite qui permet les messages d’un objet est mappé pour être accessible par un autre objet. Dans l’ordre pour un objet d’exposer ses tables des messages, sa classe doit dériver de `CMessageMap`.  
   
- ATL utilise `CMessageMap` pour les contenus de support de windows et le chaînage de carte dynamique des messages. Par exemple, toute classe qui contient un [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) objet doit dériver de `CMessageMap`. Le code suivant provient de la [SUBEDIT](../../visual-cpp-samples.md) exemple. Via [CComControl](../../atl/reference/ccomcontrol-class.md), le `CAtlEdit` classe dérive automatiquement `CMessageMap`.  
+ ATL utilise `CMessageMap` à windows de prise en charge des contenus et chaînage de carte dynamique des messages. Par exemple, toute classe qui contient un [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) objet doit dériver de `CMessageMap`. Le code suivant provient de la [SUBEDIT](../../visual-cpp-samples.md) exemple. Via [CComControl](../../atl/reference/ccomcontrol-class.md), le `CAtlEdit` classe dérive automatiquement `CMessageMap`.  
   
- [!code-cpp[NVC_ATL_Windowing&#90;](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing #90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   
- Étant donné que la fenêtre de relation contenant-contenue, `m_EditCtrl`, utilise une table des messages dans la classe de conteneur, `CAtlEdit` dérive de `CMessageMap`.  
+ Étant donné que la fenêtre de relation contenant-contenue, `m_EditCtrl`, utilise une table des messages dans la classe de conteneur, `CAtlEdit` dérive `CMessageMap`.  
   
  Pour plus d’informations sur les tables des messages, consultez [tables des messages](../../atl/message-maps-atl.md) dans l’article « Classes de fenêtre ATL ».  
   
@@ -92,32 +92,32 @@ virtual BOOL ProcessWindowMessage(
   
 ### <a name="parameters"></a>Paramètres  
  `hWnd`  
- [in] Handle de la fenêtre de réception du message.  
+ [in] Descripteur de la fenêtre de réception du message.  
   
  `uMsg`  
  [in] Le message est envoyé à la fenêtre.  
   
  `wParam`  
- [in] Spécifique au message des informations supplémentaires.  
+ [in] Plus d’informations spécifique au message.  
   
  `lParam`  
- [in] Spécifique au message des informations supplémentaires.  
+ [in] Plus d’informations spécifique au message.  
   
  `lResult`  
  [out] Le résultat du traitement du message.  
   
  `dwMsgMapID`  
- [in] Identificateur de la table des messages qui traitera le message. La table des messages par défaut déclaré avec [BEGIN_MSG_MAP](http://msdn.microsoft.com/library/8bbb5af9-18b1-48c6-880e-166f599ee554), est identifiée par 0. Une table des messages secondaire, déclarée avec [ALT_MSG_MAP(msgMapID)](http://msdn.microsoft.com/library/2c8871bf-abc0-4d52-bcf7-6b2ab9eb5af8), est identifié par `msgMapID`.  
+ [in] Identificateur de la table des messages qui traitera le message. La table des messages par défaut déclarée avec [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), est identifié par 0. Une autre table des messages déclarée avec [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), est identifié par `msgMapID`.  
   
 ### <a name="return-value"></a>Valeur de retour  
- **TRUE** si le message est entièrement gérée ; sinon, **FALSE**.  
+ **TRUE** si le message est entièrement géré ; sinon, **FALSE**.  
   
 ### <a name="remarks"></a>Remarques  
- Appelée par la procédure de fenêtre un [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) de l’objet ou d’un objet qui est dynamiquement chaînage à la table des messages.  
+ Appelée par la procédure de fenêtre un [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) de l’objet ou d’un objet qui est dynamiquement chaînage des propriétés de la table des messages.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CDynamicChain (classe)](../../atl/reference/cdynamicchain-class.md)   
- [BEGIN_MSG_MAP](http://msdn.microsoft.com/library/8bbb5af9-18b1-48c6-880e-166f599ee554)   
- [ALT_MSG_MAP](http://msdn.microsoft.com/library/2c8871bf-abc0-4d52-bcf7-6b2ab9eb5af8)   
+ [Classe de CDynamicChain](../../atl/reference/cdynamicchain-class.md)   
+ [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
+ [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
 

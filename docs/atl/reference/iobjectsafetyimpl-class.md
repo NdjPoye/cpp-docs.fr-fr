@@ -41,13 +41,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: cff5995555cd069855f9d7becb9eb8367e80c920
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: cdcc008797e94988fb42fd6239603fa300a84233
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl (classe)
-Cette classe fournit une implémentation par défaut de le `IObjectSafety` interface pour permettre à un client récupérer et définir des niveaux de sécurité d’un objet.  
+# <a name="iobjectsafetyimpl-class"></a>Classe de IObjectSafetyImpl
+Cette classe fournit une implémentation par défaut de la `IObjectSafety` interface pour permettre à un client récupérer et définir des niveaux de sécurité d’un objet.  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
@@ -66,9 +66,9 @@ class IObjectSafetyImpl
  *dwSupportedSafety*  
  Spécifie les options de sécurité pris en charge pour le contrôle. Peut avoir l'une des valeurs suivantes :  
   
-- **INTERFACESAFE_FOR_UNTRUSTED_CALLER** l’interface identifié par le [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) paramètre `riid` convient sécurisé pour le script.  
+- **INTERFACESAFE_FOR_UNTRUSTED_CALLER** l’interface identifiée par le [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) paramètre `riid` doivent être apportées sécurisé pour le script.  
   
-- **INTERFACESAFE_FOR_UNTRUSTED_DATA** l’interface identifié par le `SetInterfaceSafetyOptions` paramètre `riid` convient sécurisés pour les données non fiables pendant l’initialisation.  
+- **INTERFACESAFE_FOR_UNTRUSTED_DATA** l’interface identifiée par le `SetInterfaceSafetyOptions` paramètre `riid` convient sécurisés pour les données non fiables lors de l’initialisation.  
   
 ## <a name="members"></a>Membres  
   
@@ -83,12 +83,12 @@ class IObjectSafetyImpl
   
 |Nom|Description|  
 |----------|-----------------|  
-|[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Stocke le niveau de sécurité actuel de l’objet.|  
+|[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Stocke le niveau de sécurité de l’objet actuel.|  
   
 ## <a name="remarks"></a>Remarques  
- Classe `IObjectSafetyImpl` fournit une implémentation par défaut de `IObjectSafety`. Le `IObjectSafety` interface permet à un client récupérer et définir des niveaux de sécurité d’un objet. Par exemple, un navigateur web peut appeler **IObjectSafety::SetInterfaceSafetyOptions** pour rendre un contrôle sécurisé pour l’initialisation ou sécurisé pour le script.  
+ Classe `IObjectSafetyImpl` fournit une implémentation par défaut de `IObjectSafety`. Le `IObjectSafety` interface permet à un client récupérer et définir des niveaux de sécurité d’un objet. Par exemple, un navigateur web peut appeler **IObjectSafety::SetInterfaceSafetyOptions** pour rendre un contrôle pour l’initialisation ou sécurisé pour le script.  
   
- Notez que l’utilisation du [IMPLEMENTED_CATEGORY](http://msdn.microsoft.com/library/d898ef34-5684-4709-beb9-7114ddd96674) macro avec le **CATID_SafeForScripting** et **CATID_SafeForInitializing** catégories de composants vous permet également de spécifier qu’un composant est sécurisé.  
+ Notez que l’utilisation du [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) macro avec le **CATID_SafeForScripting** et **CATID_SafeForInitializing** catégories de composants vous permet également de spécifier qu’un composant est sécurisé.  
   
  **Articles connexes** [didacticiel ATL](../../atl/active-template-library-atl-tutorial.md), [création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -114,12 +114,12 @@ HRESULT GetInterfaceSafetyOptions(
  L’implémentation retourne les valeurs appropriées pour n’importe quelle interface prise en charge par l’implémentation de l’objet de **IUnknown::QueryInterface**.  
   
 > [!IMPORTANT]
->  Tout objet qui prend en charge `IObjectSafety` est responsable de sa propre sécurité et de n’importe quel objet elle délègue. Le programmeur doit prendre en considération les questions découlant de l’exécution de code dans le contexte de l’utilisateur, scripts intersites et effectuer une vérification de la zone appropriée.  
+>  Tout objet qui prend en charge `IObjectSafety` est responsable de sa propre sécurité et de n’importe quel objet, elle délègue. Le programmeur doit prendre en considération les questions découlant de l’exécution de code dans le contexte de l’utilisateur, de scripts entre sites et effectuer une vérification de la zone appropriée.  
   
- Consultez la page [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consultez [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
- Stocke le niveau de sécurité actuel de l’objet.  
+ Stocke le niveau de sécurité de l’objet actuel.  
   
 ```
 DWORD m_dwCurrentSafety;
@@ -136,12 +136,12 @@ HRESULT SetInterfaceSafetyOptions(
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Retourne l’implémentation **E_NOINTERFACE** pour n’importe quelle interface ne pas pris en charge par l’implémentation de l’objet de **IUnknown::QueryInterface**.  
+ L’implémentation retourne **E_NOINTERFACE** pour toute interface ne pas pris en charge par l’implémentation de l’objet de **IUnknown::QueryInterface**.  
   
 > [!IMPORTANT]
->  Tout objet qui prend en charge `IObjectSafety` est responsable de sa propre sécurité et de n’importe quel objet elle délègue. Le programmeur doit prendre en considération les questions découlant de l’exécution de code dans le contexte de l’utilisateur, scripts intersites et effectuer une vérification de la zone appropriée.  
+>  Tout objet qui prend en charge `IObjectSafety` est responsable de sa propre sécurité et de n’importe quel objet, elle délègue. Le programmeur doit prendre en considération les questions découlant de l’exécution de code dans le contexte de l’utilisateur, de scripts entre sites et effectuer une vérification de la zone appropriée.  
   
- Consultez la page [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Consultez [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [Interface IObjectSafety](https://msdn.microsoft.com/library/aa768224.aspx)   

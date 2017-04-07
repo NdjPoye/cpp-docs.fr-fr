@@ -42,12 +42,12 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 60958f328d78205c3432f35ed4e3e3c4b652ebfe
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: ac817cedb4c7ed67e698969b14645f5659aab2ad
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="ccomcontainedobject-class"></a>CComContainedObject (classe)
+# <a name="ccomcontainedobject-class"></a>Classe de CComContainedObject
 Cette classe implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) par délégation à l’objet propriétaire **IUnknown**.  
   
 > [!IMPORTANT]
@@ -83,7 +83,7 @@ class CComContainedObject : public Base
 |[CComContainedObject::Release](#release)|Décrémente le décompte de références sur l’objet propriétaire.|  
   
 ## <a name="remarks"></a>Remarques  
- ATL utilise `CComContainedObject` dans les classes [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), et [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject`implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) par délégation à l’objet propriétaire **IUnknown**. (Le propriétaire est l’objet externe d’une agrégation, ou de l’objet pour lequel une interface détachable est créée.) `CComContainedObject` appelle `CComObjectRootEx`de `OuterQueryInterface`, `OuterAddRef`, et `OuterRelease`, hérités via `Base`.  
+ ATL utilise `CComContainedObject` dans les classes [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), et [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject`implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) par délégation à l’objet propriétaire **IUnknown**. (Le propriétaire est l’objet externe d’une agrégation ou de l’objet pour lequel une interface détachable est en cours de création.) `CComContainedObject` appelle `CComObjectRootEx`de `OuterQueryInterface`, `OuterAddRef`, et `OuterRelease`, hérités via `Base`.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `Base`  
@@ -115,7 +115,7 @@ CComContainedObject(void* pv);
  [in] L’objet propriétaire **IUnknown**.  
   
 ### <a name="remarks"></a>Remarques  
- Définit les `m_pOuterUnknown` pointeur de membre (héritées par le biais du `Base` classe) à `pv`.  
+ Définit le `m_pOuterUnknown` pointeur de membre (héritée par le biais du `Base` classe) à `pv`.  
   
 ##  <a name="dtor"></a>CComContainedObject :: ~ CComContainedObject  
  Destructeur.  
@@ -128,7 +128,7 @@ CComContainedObject(void* pv);
  Libère toutes les ressources attribuées.  
   
 ##  <a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown  
- Retourne le `m_pOuterUnknown` pointeur de membre (héritées par le biais du *Base* classe) qui contient l’objet propriétaire **IUnknown**.  
+ Retourne le `m_pOuterUnknown` pointeur de membre (héritée par le biais du *Base* classe) qui contient l’objet propriétaire **IUnknown**.  
   
 ```
 IUnknown* GetControllingUnknown();
@@ -138,7 +138,7 @@ IUnknown* GetControllingUnknown();
  L’objet propriétaire **IUnknown**.  
   
 ### <a name="remarks"></a>Notes  
- Cette méthode peut être virtuelle si `Base` a déclaré la [DECLARE_GET_CONTROLLING_UNKNOWN](http://msdn.microsoft.com/library/82b0199a-a9d5-4f95-a711-fa1ae18e1f77) (macro).  
+ Cette méthode peut être virtuelle si `Base` a déclaré le [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) (macro).  
   
 ##  <a name="queryinterface"></a>CComContainedObject::QueryInterface  
  Récupère un pointeur vers l’interface demandée sur l’objet propriétaire.  
@@ -151,13 +151,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
   
 ### <a name="parameters"></a>Paramètres  
  `iid`  
- [in] L’identificateur de l’interface demandée.  
+ [in] Identificateur de l’interface demandée.  
   
  `ppvObject`  
- [out] Un pointeur vers le pointeur d’interface identifié par `iid`. Si l’objet ne prend pas en charge cette interface, `ppvObject` a **NULL**.  
+ [out] Un pointeur vers le pointeur d’interface identifié par `iid`. Si l’objet ne prend pas en charge cette interface, `ppvObject` a la valeur **NULL**.  
   
  `pp`  
- [out] Un pointeur vers le pointeur d’interface identifié par le type `Q`. Si l’objet ne prend pas en charge cette interface, `pp` a **NULL**.  
+ [out] Un pointeur vers le pointeur d’interface identifié par le type `Q`. Si l’objet ne prend pas en charge cette interface, `pp` a la valeur **NULL**.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
@@ -170,7 +170,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Dans les versions debug, **version** retourne une valeur qui peut être utile pour les tests de diagnostic ou de test. Dans les versions non debug **version** retourne toujours 0.  
+ Dans les versions debug, **version** retourne une valeur qui peut être utile pour les tests de diagnostic ou de test. Dans les versions non debug, **version** retourne toujours 0.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
