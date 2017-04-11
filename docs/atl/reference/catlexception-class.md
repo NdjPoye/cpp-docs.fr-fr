@@ -37,12 +37,12 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 30c9235f16581c86ab5612522909dc366b1ce17e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 471ba42f25a4e237db03f2516288a7b33a0efd63
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="catlexception-class"></a>CAtlException (classe)
+# <a name="catlexception-class"></a>Classe de CAtlException
 Cette classe définit une exception ATL.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -63,7 +63,7 @@ class CAtlException
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CAtlException::operator HRESULT](#operator_hresult)|Convertit l’objet en cours à une valeur HRESULT.|  
+|[CAtlException::operator HRESULT](#operator_hresult)|Convertit l’objet actuel à une valeur HRESULT.|  
   
 ### <a name="public-data-members"></a>Membres de données publics  
   
@@ -71,8 +71,8 @@ class CAtlException
 |----------|-----------------|  
 |[CAtlException::m_hr](#m_hr)|La variable de type HRESULT créé par l’objet et permet de stocker la condition d’erreur.|  
   
-## <a name="remarks"></a>Remarques  
- Un `CAtlException` objet représente une condition d’exception associée à une opération de ATL. La `CAtlException` classe inclut une donnée membre publique qui stocke le code d’état indiquant la raison de l’exception et un opérateur de conversion qui vous permet de traiter l’exception comme s’il s’agissait d’une valeur HRESULT.  
+## <a name="remarks"></a>Notes  
+ A `CAtlException` objet représente une condition d’exception associée à une opération ATL. La `CAtlException` classe inclut une donnée membre publique qui stocke le code d’état indiquant la raison de l’exception et un opérateur de conversion qui vous permet de traiter l’exception comme s’il s’agissait d’une valeur HRESULT.  
   
  En général, vous appellerez `AtlThrow` au lieu de créer un `CAtlException` directement l’objet.  
   
@@ -92,7 +92,7 @@ CAtlException() throw();
  Le `HRESULT` code d’erreur.  
   
 ##  <a name="operator_hresult"></a>CAtlException::operator HRESULT 
- Convertit l’objet en cours à une valeur HRESULT.  
+ Convertit l’objet actuel à une valeur HRESULT.  
   
 ```  
 operator HRESULT() const throw ();
@@ -109,6 +109,6 @@ HRESULT m_hr;
  Le membre de données qui stocke la condition d’erreur. La valeur HRESULT est définie par le constructeur, [CAtlException::CAtlException](#catlexception).  
   
 ## <a name="see-also"></a>Voir aussi  
- [AtlThrow](http://msdn.microsoft.com/library/2bd111da-8170-488d-914a-c9bf6b6765f7)   
+ [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
 

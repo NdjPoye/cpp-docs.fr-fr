@@ -37,12 +37,12 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: f104a62144e7fd8ac802c27dfe940a7f96d0e79a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 9185bc18981898d699aa3f3eeb490c76bf5138fb
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="ca2caex-class"></a>CA2CAEX (classe)
+# <a name="ca2caex-class"></a>Classe de CA2CAEX
 Cette classe est utilisée par les macros de conversion de chaînes `CA2CTEX` et `CT2CAEX`et le typedef **CA2CA**.  
   
 > [!IMPORTANT]
@@ -83,7 +83,7 @@ class CA2CAEX
 ## <a name="remarks"></a>Remarques  
  À moins que des fonctionnalités supplémentaires sont requises, utilisez `CA2CTEX`, `CT2CAEX`, ou **CA2CA** dans votre propre code.  
   
- Cette classe est sûr à utiliser dans des boucles et ne sont pas un dépassement de la pile. Par défaut, les classes et macros de conversion ATL utilisent la page de codes ANSI du thread actif pour la conversion.  
+ Cette classe est plus sûr d’utiliser dans les boucles et ne sera pas dépassement de la pile. Par défaut, les classes et macros de conversion ATL utilisent la page de codes ANSI du thread actif pour la conversion.  
   
  Les macros suivantes sont basées sur cette classe :  
   
@@ -95,10 +95,10 @@ class CA2CAEX
   
 - **CA2CA**  
   
- Pour une description de ces macros de conversion de texte, consultez [Macros de Conversion de chaînes de MFC et ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
+ Pour en savoir plus sur ces macros de conversion de texte, consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md).  
   
 ## <a name="example"></a>Exemple  
- Consultez la page [ATL et MFC Macros de Conversion de chaînes](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.  
+ Consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlconv.h  
@@ -116,7 +116,7 @@ CA2CAEX(LPCSTR psz) throw(...);
  La chaîne de texte à convertir.  
   
  `nCodePage`  
- N’est pas utilisé dans cette classe.  
+ Inutilisé dans cette classe.  
   
 ### <a name="remarks"></a>Remarques  
  Crée la mémoire tampon requise pour la traduction.  
@@ -128,7 +128,7 @@ CA2CAEX(LPCSTR psz) throw(...);
 ~CA2CAEX() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Libère la mémoire tampon allouée.  
   
 ##  <a name="m_psz"></a>CA2CAEX::m_psz  
@@ -149,10 +149,10 @@ operator LPCSTR() const throw();
  Retourne la chaîne de texte en tant que type `LPCSTR`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CA2AEX (classe)](../../atl/reference/ca2aex-class.md)   
- [CA2WEX (classe)](../../atl/reference/ca2wex-class.md)   
- [CW2AEX (classe)](../../atl/reference/cw2aex-class.md)   
- [CW2CWEX (classe)](../../atl/reference/cw2cwex-class.md)   
- [CW2WEX (classe)](../../atl/reference/cw2wex-class.md)   
+ [Classe de CA2AEX](../../atl/reference/ca2aex-class.md)   
+ [Classe de CA2WEX](../../atl/reference/ca2wex-class.md)   
+ [Classe de CW2AEX](../../atl/reference/cw2aex-class.md)   
+ [Classe de CW2CWEX](../../atl/reference/cw2cwex-class.md)   
+ [Classe de CW2WEX](../../atl/reference/cw2wex-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
 

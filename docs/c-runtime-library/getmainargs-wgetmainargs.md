@@ -1,46 +1,63 @@
 ---
-title: "__getmainargs, __wgetmainargs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__wgetmainargs"
-  - "__getmainargs"
-apilocation: 
-  - "msvcr100.dll"
-  - "msvcrt.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr80.dll"
-  - "msvcr110.dll"
-  - "msvcr90.dll"
-  - "msvcr120.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__wgetmainargs"
-  - "__getmainargs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__wgetmainargs"
-  - "__getmainargs"
+title: __getmainargs, __wgetmainargs | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __wgetmainargs
+- __getmainargs
+apilocation:
+- msvcr100.dll
+- msvcrt.dll
+- msvcr110_clr0400.dll
+- msvcr80.dll
+- msvcr110.dll
+- msvcr90.dll
+- msvcr120.dll
+apitype: DLLExport
+f1_keywords:
+- __wgetmainargs
+- __getmainargs
+dev_langs:
+- C++
+helpviewer_keywords:
+- __wgetmainargs
+- __getmainargs
 ms.assetid: f72f54eb-9509-4bdf-8752-40fc49055439
 caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# __getmainargs, __wgetmainargs
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7580d75e24f9291a3cb6943785b387a5ae67254f
+ms.lasthandoff: 04/01/2017
 
-Appelle l'analyse de ligne de commande et copie les arguments dans `main()` à travers les pointeurs passés.  
+---
+# <a name="getmainargs-wgetmainargs"></a>__getmainargs, __wgetmainargs
+Appelle l’analyse de ligne de commande et recopie les arguments de `main()` dans les pointeurs transmis.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 int __getmainargs(  
@@ -59,31 +76,31 @@ _startupinfo * _StartInfo);
   
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `_Argc`  
- Unentier qui contient le nombre d'arguments qui suivent dans `argv`.  Le paramètre `argc` est toujours supérieur ou égal à 1.  
+ Entier qui contient le nombre d’arguments qui se suivent dans `argv`. Le paramètre `argc` est toujours supérieur ou égal à 1.  
   
  `_Argv`  
- Tableau de chaînes terminées par le caractère NULL qui représentent les arguments de ligne de commande entrés par l'utilisateur du programme.  Par convention, `argv[0]`est la commande avec laquelle le programme est appelé, argv\[1\] est le premier argument de ligne de commande, et ainsi de suite, jusqu'à argv\[argc\], qui est toujours NULL.  Le premier argument de ligne de commande est toujours `argv[1]` et le dernier est `argv[argc – 1]`.  
+ Tableau de chaînes terminées par le caractère NULL qui représentent les arguments de ligne de commande entrés par l’utilisateur du programme. Par convention, `argv[0]` est la commande avec laquelle le programme est appelé, argv[1] est le premier argument de ligne de commande, et ainsi de suite, jusqu’à argv[argc], qui est toujours NULL. Le premier argument de ligne de commande est toujours `argv[1]` et le dernier `argv[argc - 1]`.  
   
  `_Env`  
- Il s'agit d'un tableau de chaînes représentant les variables définies dans l'environnement de l'utilisateur.  Ce tableau se termine par une entrée NULL.  
+ Tableau de chaînes représentant les variables définies dans l’environnement de l’utilisateur. Ce tableau se termine par une entrée NULL.  
   
  `_DoWildCard`  
- Un entier qui si il est défini à la valeur 1 développe les caractères génériques dans les arguments de ligne de commande, ou si il est défini à la valeur 0 n'a aucun effet.  
+ Entier qui, avec la valeur 1, développe les caractères génériques dans les arguments de ligne de commande, ou qui, avec la valeur 0, n’a aucun effet.  
   
  `_StartInfo`  
- D'autres informations à transmettre à la dll CRT.  
+ Autres informations à transmettre à la DLL CRT.  
   
-## Valeur de retour  
- 0 en cas de réussite ; une valeur négative en cas d'échec.  
+## <a name="return-value"></a>Valeur de retour  
+ 0 en cas de réussite ; valeur négative en cas d’échec.  
   
-## Notes  
- Utilisez `__getmainargs` sur les plateformes de caractères non larges, et `__wgetmainargs` sur les plateformes de caractères larges \(Unicode\).  
+## <a name="remarks"></a>Notes  
+ Utilisez `__getmainargs` sur les plateformes à caractères non larges et `__wgetmainargs` sur les plateformes à caractères larges (Unicode).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|\_\_getmainargs|internal.h|  
-|\_\_wgetmainargs|internal.h|
+|__getmainargs|internal.h|  
+|__wgetmainargs|internal.h|

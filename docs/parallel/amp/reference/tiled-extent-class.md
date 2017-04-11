@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency::tiled_extent
+- tiled_extent
+- AMP/tiled_extent
+- AMP/Concurrency::tiled_extent::tiled_extent
+- AMP/Concurrency::tiled_extent::get_tile_extent
+- AMP/Concurrency::tiled_extent::pad
+- AMP/Concurrency::tiled_extent::truncate
+- AMP/Concurrency::tiled_extent::tile_dim0
+- AMP/Concurrency::tiled_extent::tile_dim1
+- AMP/Concurrency::tiled_extent::tile_dim2
+- AMP/Concurrency::tiled_extent::tile_extent
 dev_langs:
 - C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
@@ -32,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c2f7ebdb9c82ae24cf74064e710ddfb177670359
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: e295b56290435a1d87ac2f0dbc0951850600534d
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="tiledextent-class"></a>tiled_extent, classe
@@ -70,7 +79,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
  La longueur de la dimension importante suivant à la plupart des.  
   
  `_Dim2`  
- La longueur de la dimension moins significative.  
+ La longueur de la dimension de poids faible.  
   
 ## <a name="members"></a>Membres  
   
@@ -85,31 +94,31 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[get_tile_extent (méthode)](#tiled_extent__get_tile_extent)|Retourne un `extent` objet qui capture les valeurs de la `tiled_extent` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.|  
-|[Méthode de remplissage](#tiled_extent__pad)|Retourne un nouveau `tiled_extent` objet avec les extensions ajustée d’être divisible par les dimensions de la mosaïque.|  
-|[Méthode TRUNCATE](#tiled_extent__truncate)|Retourne un nouveau `tiled_extent` objet avec extensions ajustée vers le bas pour être divisible par les dimensions de la mosaïque.|  
+|[get_tile_extent](#get_tile_extent)|Retourne un `extent` objet qui capture les valeurs de la `tiled_extent` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.|  
+|[remplissage](#pad)|Retourne un nouveau `tiled_extent` objet avec les extensions modifiés des divisible par les dimensions de la mosaïque.|  
+|[tronquer](#truncate)|Retourne un nouveau `tiled_extent` objet avec les extensions ajustée vers le bas pour être divisible uniformément par les dimensions de la mosaïque.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[opérateur =, opérateur](#operator_eq)|Copie le contenu de l’objet `tiled_index` objet dans celui-ci.|  
+|[operator=](#operator_eq)|Copie le contenu de l’objet `tiled_index` objet dans celui-ci.|  
 
   
 ### <a name="public-constants"></a>Constantes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[tile_dim0 (constante)](#tiled_extent__tile_dim0)|Stocke la longueur de la dimension la plus importante.|  
-|[tile_dim1 (constante)](#tiled_extent__tile_dim1)|Stocke la longueur de la dimension importante suivant au plus.|  
-|[tile_dim2 (constante)](#tiled_extent__tile_dim2)|Stocke la longueur de la dimension moins significative.|  
+|[tile_dim0 (constante)](#tile_dim0)|Stocke la longueur de la dimension la plus importante.|  
+|[tile_dim1 (constante)](#tile_dim1)|Stocke la longueur de la dimension importante suivant au plus.|  
+|[tile_dim2 (constante)](#tile_dim2)|Stocke la longueur de la dimension de poids faible.|  
 
   
 ### <a name="public-data-members"></a>Membres de données publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[tile_extent (donnée membre)](#tiled_extent__tile_extent)|Obtient un `extent` objet qui capture les valeurs de la `tiled_extent` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.|  
+|[tile_extent](#tile_extent)|Obtient un `extent` objet qui capture les valeurs de la `tiled_extent` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.|  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  `extent`  
@@ -121,7 +130,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
  **Espace de noms :** Concurrency  
 
-## <a name="tiled_extent__ctor"></a> tiled_extent, constructeur  
+## <a name="ctor"></a> tiled_extent, constructeur  
 Initialise une nouvelle instance de la classe `tiled_extent`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -143,7 +152,7 @@ tiled_extent(
 
   
 
-## <a name="tiled_extent__get_tile_extent"></a> get_tile_extent   
+## <a name="get_tile_extent"></a> get_tile_extent   
 Retourne un `extent` objet qui capture les valeurs de la `tiled_extent` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -156,8 +165,8 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  Un `extent` objet qui capture les dimensions de ce `tiled_extent` instance.  
   
 
-## <a name="tiled_extent__pad"></a>  pad   
-Retourne un nouveau `tiled_extent` objet avec les extensions ajustée d’être divisible par les dimensions de la mosaïque.  
+## <a name="pad"></a>  pad   
+Retourne un nouveau `tiled_extent` objet avec les extensions modifiés des divisible par les dimensions de la mosaïque.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -167,8 +176,8 @@ tiled_extent pad() const;
   
 ### <a name="return-value"></a>Valeur de retour  
  La nouvelle `tiled_extent` objet par valeur. 
-## <a name="tiled_extent__truncate"></a> truncate   
-Retourne un nouveau `tiled_extent` objet avec extensions ajustée vers le bas pour être divisible par les dimensions de la mosaïque.  
+## <a name="truncate"></a> tronquer   
+Retourne un nouveau `tiled_extent` objet avec les extensions ajustée vers le bas pour être divisible uniformément par les dimensions de la mosaïque.  
   
 ### <a name="syntax"></a>Syntaxe  
   
@@ -177,9 +186,9 @@ tiled_extent truncate() const;
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne un nouveau `tiled_extent` objet avec extensions ajustée vers le bas pour être divisible par les dimensions de la mosaïque.  
+ Retourne un nouveau `tiled_extent` objet avec les extensions ajustée vers le bas pour être divisible uniformément par les dimensions de la mosaïque.  
 
-## <a name="tiled_extent__operator_eq"></a> opérateur =   
+## <a name="operator_eq"></a> opérateur =   
 Copie le contenu de l’objet `tiled_index` objet dans celui-ci.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -191,12 +200,12 @@ tiled_extent&  operator= (
   
 ### <a name="parameters"></a>Paramètres  
  `_Other`  
- Le `tiled_index` objet d’origine.  
+ Le `tiled_index` objet à copier à partir de.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Une référence à ce `tiled_index` instance.  
 
-## <a name="tiled_extent__tile_dim0"></a> tile_dim0   
+## <a name="tile_dim0"></a> tile_dim0   
 Stocke la longueur de la dimension la plus importante.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -205,7 +214,7 @@ Stocke la longueur de la dimension la plus importante.
 static const int tile_dim0 = _Dim0;  
 ```  
   
-## <a name="tiled_extent__tile_dim1"></a> tile_dim1   
+## <a name="tile_dim1"></a> tile_dim1   
 Stocke la longueur de la dimension importante suivant au plus.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -213,15 +222,15 @@ Stocke la longueur de la dimension importante suivant au plus.
 ```  
 static const int tile_dim1 = _Dim1;  
 ```  
-## <a name="tiled_extent__tile_dim2"></a> tile_dim2   
-Stocke la longueur de la dimension moins significative.  
+## <a name="tile_dim2"></a> tile_dim2   
+Stocke la longueur de la dimension de poids faible.  
   
 ### <a name="syntax"></a>Syntaxe  
   
 ```  
 static const int tile_dim2 = _Dim2;  
 ```  
-## <a name="tiled_extent__tile_extent"></a> tile_extent   
+## <a name="tile_extent"></a> tile_extent   
   Obtient un `extent` objet qui capture les valeurs de la `tiled_extent` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -232,5 +241,5 @@ __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Accès concurrentiel Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

@@ -34,17 +34,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: dbc2045eae70cacd42e13ddb7cc8ecb3d60b8596
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 53a3144fe8e87f36a1a5149d292130a9913b646a
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-error-c2435"></a>Erreur du compilateur C2435
 'var' : l’initialisation dynamique requiert un CRT managé, Impossible de compiler avec/clr : safe  
   
- Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015.  
+ Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.  
   
- L’initialisation de la variable globale de domaine par application exige la compilation du CRT avec `/clr:pure`, qui ne produit pas d’image vérifiable.  
+ L’initialisation de variable globale de domaine par application exige la compilation du CRT avec `/clr:pure`, qui ne produit pas d’image vérifiable.  
   
  Pour plus d’informations, consultez [appdomain](../../cpp/appdomain.md) et [processus](../../cpp/process.md).  
   

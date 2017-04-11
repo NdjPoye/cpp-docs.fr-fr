@@ -54,9 +54,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: a2358d31bd87b2cc540dd9a5ce182b9340764522
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7f394d6519bcf86a4de3966bb958923aab8dd0c6
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cstatusbar-class"></a>CStatusBar (classe)
@@ -95,7 +95,7 @@ class CStatusBar : public CControlBar
 |[CStatusBar::SetPaneStyle](#setpanestyle)|Définit le style d’indicateur d’un index donné.|  
 |[CStatusBar::SetPaneText](#setpanetext)|Définit le texte de l’indicateur d’un index donné.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les volets de sortie sont fréquemment utilisés en tant que lignes de message et comme indicateurs d’état. Exemples : les lignes de message à l’aide de menu qui expliquent brièvement la commande de menu sélectionné et les indicateurs qui indiquent l’état de l’arrêt défil, VERR. NUM et défil.  
   
  [CStatusBar::GetStatusBarCtrl](#getstatusbarctrl), une fonction membre new 4.0 de MFC, vous permet de tirer parti de la prise en charge du contrôle commun Windows pour des fonctionnalités supplémentaires et de personnalisation de la barre d’état. `CStatusBar`fonctions membres vous donnent la plupart des fonctionnalités des contrôles communs Windows ; Toutefois, lorsque vous appelez `GetStatusBarCtrl`, vous pouvez donner à vos barres d’état davantage les caractéristiques d’une barre d’état Windows 95/98. Lorsque vous appelez `GetStatusBarCtrl`, il retourne une référence à un `CStatusBarCtrl` objet. Consultez [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) pour plus d’informations sur la conception des barres d’outils à l’aide de contrôles communs Windows. Pour plus d’informations sur les contrôles communs, consultez [contrôles communs](http://msdn.microsoft.com/library/windows/desktop/bb775493) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
@@ -184,7 +184,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Également définit la police initiale et définit l’état de la hauteur de la barre à la valeur par défaut.  
   
 ##  <a name="createex"></a>CStatusBar::CreateEx  
@@ -244,7 +244,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
  Un pointeur vers un [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) structure qui contient des informations sur le type de dessin nécessaire.  
   
 ### <a name="remarks"></a>Remarques  
- Le **itemAction** membre de la `DRAWITEMSTRUCT` structure définit l’action de dessin qui doit être effectuée. Remplacez cette fonction membre pour implémenter le dessin pour un mode owner-draw `CStatusBar` objet. L’application doit restaurer tous les objets interface GDI (interface) périphérique graphique sélectionnés pour le contexte d’affichage fournie dans `lpDrawItemStruct` avant l’arrêt de cette fonction membre.  
+ Le **itemAction** membre de la `DRAWITEMSTRUCT` structure définit l’action de dessin qui doit être effectuée. Remplacez cette fonction membre pour implémenter le dessin pour un mode owner-draw `CStatusBar` objet. L’application doit restaurer tous les objets interface GDI périphérique graphique sélectionnés pour le contexte d’affichage fournie dans `lpDrawItemStruct` avant l’arrêt de cette fonction membre.  
   
 ##  <a name="getitemid"></a>CStatusBar::GetItemID  
  Retourne l’ID de l’indicateur spécifié par `nIndex`.  
@@ -317,7 +317,7 @@ UINT GetPaneStyle(int nIndex) const;
 ### <a name="return-value"></a>Valeur de retour  
  Le style du volet de barre d’état spécifié par `nIndex`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Les style d’un volet détermine comment le volet s’affiche.  
   
  Pour obtenir la liste des styles disponibles pour les barres d’état, consultez [créer](#create).  
@@ -429,7 +429,7 @@ void SetPaneStyle(
  `nStyle`  
  Style du volet dont le style doit être défini.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Les style d’un volet détermine comment le volet s’affiche.  
   
  Pour obtenir la liste des styles disponibles pour les barres d’état, consultez [SetPaneInfo](#setpaneinfo).  

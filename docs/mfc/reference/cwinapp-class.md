@@ -131,9 +131,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: ec5969edb26f4dbc2c249f16a8c39498bd01ca44
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 099e027e778090d14dd7dbe24d6732f7eb06b9d9
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cwinapp-class"></a>CWinApp (classe)
@@ -192,7 +192,7 @@ class CWinApp : public CWinThread
 |[CWinApp::LoadOEMIcon](#loadoemicon)|Charge une icône prédéfinie OEM de Windows qui le **OIC_** constantes spécifient dans WINDOWS. H.|  
 |[CWinApp::LoadStandardCursor](#loadstandardcursor)|Charge un Windows prédéfinis de curseur qui le **IDC_** constantes spécifient dans WINDOWS. H.|  
 |[CWinApp::LoadStandardIcon](#loadstandardicon)|Charge une icône prédéfinie Windows qui le **IDI_** constantes spécifient dans WINDOWS. H.|  
-|[CWinApp::OnDDECommand](#onddecommand)|Appelé par l’infrastructure en réponse à une dynamique des données (DDE) exchange exécuter la commande.|  
+|[CWinApp::OnDDECommand](#onddecommand)|Appelé par l’infrastructure en réponse à un dynamic data exchange (DDE) exécuter la commande.|  
 |[CWinApp::OnIdle](#onidle)|Substituez pour effectuer le traitement des temps d’inactivité spécifique à l’application.|  
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|Appelé par le framework pour ouvrir un document à partir d’un fichier.|  
 |[CWinApp::ParseCommandLine](#parsecommandline)|Analyse des paramètres individuels et des indicateurs dans la ligne de commande.|  
@@ -317,7 +317,7 @@ void AddDocTemplate(CDocTemplate* pTemplate);
  `pTemplate`  
  Un pointeur vers le `CDocTemplate` à ajouter.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez ajouter tous les modèles à une application de document avant d’appeler [RegisterShellFileTypes](#registershellfiletypes).  
   
 ### <a name="example"></a>Exemple  
@@ -334,7 +334,7 @@ virtual void AddToRecentFileList(LPCTSTR lpszPathName);
  `lpszPathName`  
  Chemin d’accès au fichier.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Vous devez appeler la [LoadStdProfileSettings](#loadstdprofilesettings) fonction membre pour charger la liste des fichiers en cours des derniers fichiers utilisés avant d’utiliser cette fonction membre.  
   
  L’infrastructure appelle cette fonction membre lorsqu’il ouvre un fichier ou exécute la commande Enregistrer sous pour enregistrer un fichier avec un nouveau nom.  
@@ -356,7 +356,7 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 ### <a name="return-value"></a>Valeur de retour  
  0 si cette méthode a réussi ; différent de zéro si une erreur se produit.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Si votre application prend en charge le Gestionnaire de redémarrage, l’infrastructure appelle cette fonction lorsque votre application se ferme de façon inattendue.  
   
  L’implémentation par défaut de `ApplicationRecoveryCallback` utilise le `CDataRecoveryHandler` pour enregistrer la liste des documents actuellement ouverts dans le Registre. Cette méthode n’effectue pas automatiquement tous les fichiers.  
@@ -374,7 +374,7 @@ void CloseAllDocuments(BOOL bEndSession);
  `bEndSession`  
  Spécifie si la session Windows en cours terminée. Il s’agit de **TRUE** si la session est terminée ; sinon **FALSE**.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Appelez [HideApplication](#hideapplication) avant d’appeler `CloseAllDocuments`.  
   
 ##  <a name="createprinterdc"></a>CWinApp::CreatePrinterDC  
@@ -478,9 +478,9 @@ virtual void DoWaitCursor(int nCode);
   
 ### <a name="parameters"></a>Paramètres  
  `nCode`  
- Si ce paramètre est 1, un curseur d’attente s’affiche. Si 0, le curseur d’attente est restauré sans incrémenter le décompte de références. Si la valeur-1, le curseur d’attente se termine.  
+ Si ce paramètre est 1, un curseur d’attente s’affiche. Si 0, le curseur d’attente est restauré sans incrémenter le décompte de références. Si-1, le curseur d’attente se termine.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La valeur par défaut implémente un sablier. `DoWaitCursor`un décompte de références. Lorsqu’il est positif, le curseur sablier s’affiche.  
   
  Pendant que vous n’appelez pas normalement `DoWaitCursor` directement, vous pouvez substituer cette fonction membre pour modifier le curseur d’attente ou pour effectuer un traitement supplémentaire lorsque le curseur d’attente s’affiche.  
@@ -578,7 +578,7 @@ virtual LPVOID GetApplicationRecoveryParameter();
 ### <a name="return-value"></a>Valeur de retour  
  Le paramètre d’entrée par défaut pour la méthode de récupération d’application.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le comportement par défaut de cette fonction retourne `NULL`.  
   
  Pour plus d’informations, consultez [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).  
@@ -608,7 +608,7 @@ virtual DWORD GetApplicationRestartFlags();
 ### <a name="return-value"></a>Valeur de retour  
  Indicateurs pour le Gestionnaire de redémarrage. L’implémentation par défaut retourne 0.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Les indicateurs du Gestionnaire de redémarrage ont aucun effet avec l’implémentation par défaut. Elles sont fournies à un usage ultérieur.  
   
  Vous définissez les indicateurs lorsque vous inscrivez l’application avec le Gestionnaire de redémarrage à l’aide de [CWinApp::RegisterWithRestartManager](#registerwithrestartmanager).  
@@ -637,7 +637,7 @@ HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 ### <a name="return-value"></a>Valeur de retour  
  Clé d’application si la fonction réussit ; dans le cas contraire `NULL`.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
   
 ##  <a name="getdatarecoveryhandler"></a>CWinApp::GetDataRecoveryHandler  
  Obtient le Gestionnaire de récupération de données pour cette instance de l’application.  
@@ -666,7 +666,7 @@ POSITION GetFirstDocTemplatePosition() const;
 ### <a name="return-value"></a>Valeur de retour  
  A **POSITION** valeur qui peut être utilisée pour l’itération ou l’extraction de pointeur d’objet ; **NULL** si la liste est vide.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Utilisez le **POSITION** valeur retournée dans un appel à [GetNextDocTemplate](#getnextdoctemplate) pour obtenir le premier [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) objet.  
   
 ##  <a name="gethelpmode"></a>CWinApp::GetHelpMode  
@@ -693,7 +693,7 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) objet.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Vous pouvez utiliser `GetNextDocTemplate` dans une boucle itération vers l’avant, si vous établissez la position initiale avec un appel à `GetFirstDocTemplatePosition`.  
   
  Vous devez vous assurer que votre **POSITION** valeur n’est valide. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
@@ -786,7 +786,7 @@ UINT GetProfileInt(
   
  Cette fonction membre prend en charge la notation hexadécimale pour la valeur dans le. Fichier INI. Lorsque vous récupérez un entier signé, vous devez effectuer un cast de la valeur dans un `int`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre n’est pas en respectant la casse, par conséquent, les chaînes dans le `lpszSection` et `lpszEntry` paramètres peuvent différer dans les cas.  
   
 > [!IMPORTANT]
@@ -889,7 +889,7 @@ virtual BOOL InitInstance();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’initialisation a réussi ; Sinon, 0.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Initialisation de l’application est sur le plan conceptuel divisée en deux sections : l’initialisation des applications à usage unique qui est effectuée la première fois que le programme s’exécute, et l’initialisation d’instance qui s’exécute chaque heure une copie de l’exécution du programme, y compris la première fois. Implémentation de l’infrastructure de `WinMain` appelle cette fonction.  
   
  Substituer `InitInstance` pour initialiser chaque nouvelle instance de votre application s’exécutant sous Windows. En règle générale, vous substituez `InitInstance` pour construire votre objet fenêtre principale et de définir la `CWinThread::m_pMainWnd` membre de données pour qu’il pointe vers cette fenêtre. Pour plus d’informations sur la substitution de cette fonction membre, consultez [CWinApp : la classe d’Application](../../mfc/cwinapp-the-application-class.md).  
@@ -930,7 +930,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 ### <a name="return-value"></a>Valeur de retour  
  Un handle à un curseur en cas de réussite ; dans le cas contraire **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `LoadCursor`charge le curseur dans la mémoire uniquement s’il n'a pas été précédemment chargé ; dans le cas contraire, il récupère un handle de la ressource existante.  
   
  Utilisez le [LoadStandardCursor](#loadstandardcursor) ou [LoadOEMCursor](#loadoemcursor) fonction membre pour accéder aux curseurs Windows prédéfinis.  
@@ -977,7 +977,7 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 ### <a name="return-value"></a>Valeur de retour  
  Un handle à un curseur en cas de réussite ; dans le cas contraire **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez le `LoadOEMCursor` ou [LoadStandardCursor](#loadstandardcursor) fonction membre pour accéder aux curseurs Windows prédéfinis.  
   
 ### <a name="example"></a>Exemple  
@@ -999,7 +999,7 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 ### <a name="return-value"></a>Valeur de retour  
  Un handle d’une icône, en cas de réussite ; dans le cas contraire **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez le `LoadOEMIcon` ou [LoadStandardIcon](#loadstandardicon) fonction membre pour accéder aux icônes Windows prédéfinis.  
   
 ##  <a name="loadstandardcursor"></a>CWinApp::LoadStandardCursor  
@@ -1029,7 +1029,7 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
   
 - **IDC_ICON** obsolète et non pris en charge. Utilisez **IDC_ARROW**.  
   
-- **IDC_SIZENWSE** à deux pointes de flèche avec se termine à la partie supérieure gauche et inférieure droite  
+- **IDC_SIZENWSE** à deux pointes de flèche avec se termine à l’angle supérieur gauche et inférieure droite  
   
 - **IDC_SIZENESW** à deux pointes de flèche avec se termine à l’angle supérieur gauche à droite et inférieure  
   
@@ -1084,7 +1084,7 @@ void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 BOOL m_bHelpMode;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  En mode de contexte d’aide, le curseur se transforme en un point d’interrogation et l’utilisateur peut le déplacer sur l’écran. Examinez cet indicateur si vous souhaitez implémenter un traitement spécial dans le mode d’aide. `m_bHelpMode`est une variable publique de type **BOOL**.  
   
 ##  <a name="m_dwrestartmanagersupportflags"></a>CWinApp::m_dwRestartManagerSupportFlags  
@@ -1121,15 +1121,12 @@ AFX_HELP_TYPE m_eHelpType;
 ### <a name="remarks"></a>Remarques  
  Le **AFX_HELP_TYPE** énumération est définie comme suit :  
   
- `enum AFX_HELP_TYPE`  
-  
- `{`  
-  
- `afxWinHelp = 0,`  
-  
- `afxHTMLHelp = 1`  
-  
- `};`  
+```  
+enum AFX_HELP_TYPE {  
+    afxWinHelp = 0,
+    afxHTMLHelp = 1
+    };  
+```  
   
 -   Pour définir l’aide de l’application à l’aide HTML, appelez [SetHelpMode](#sethelpmode) et spécifiez **afxHTMLHelp**.  
   
@@ -1168,7 +1165,7 @@ LPTSTR m_lpCmdLine;
 int m_nAutosaveInterval;  
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Vous pouvez configurer le Gestionnaire de redémarrage pour l’enregistrement automatique des documents ouverts à des intervalles définis. Si votre application ne pas les fichiers d’enregistrement automatique, ce paramètre n’a aucun effet.  
   
 ##  <a name="m_ncmdshow"></a>CWinApp::m_nCmdShow  
@@ -1178,7 +1175,7 @@ int m_nAutosaveInterval;
 int m_nCmdShow;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez passer `m_nCmdShow` en tant qu’argument lorsque vous appelez [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) pour la fenêtre principale de votre application. `m_nCmdShow`est une variable publique de type `int`.  
   
 ### <a name="example"></a>Exemple  
@@ -1187,7 +1184,7 @@ int m_nCmdShow;
 ##  <a name="m_pactivewnd"></a>CWinApp::m_pActiveWnd  
  Utilisez ce membre de données pour stocker un pointeur vers la fenêtre principale de l’application de conteneur OLE qui a votre OLE serveur application activé sur place.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Si ce membre de données est **NULL**, l’application n’est pas actif en place.  
   
  Le framework affecte à cette variable de membre lors de la fenêtre frame est activé par une application conteneur OLE sur place.  
@@ -1199,7 +1196,7 @@ int m_nCmdShow;
 CDataRecoveryHandler* m_pDataRecoveryHandler;  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Le Gestionnaire de récupération de données d’une application surveille les documents ouverts et enregistre automatiquement les. L’infrastructure utilise le Gestionnaire de récupération de données à restaurer les fichiers d’enregistrée automatiquement lorsqu’une application redémarre après sa sortie de façon inattendue. Pour plus d’informations, consultez [CDataRecoveryHandler classe](../../mfc/reference/cdatarecoveryhandler-class.md).  
   
 ##  <a name="m_pszappname"></a>CWinApp::m_pszAppName  
@@ -1209,7 +1206,7 @@ CDataRecoveryHandler* m_pDataRecoveryHandler;
 LPCTSTR m_pszAppName;  
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le nom de l’application peut provenir du paramètre transmis à la [CWinApp](#cwinapp) constructeur, ou, si non spécifié, à la chaîne de ressource avec l’ID de **AFX_IDS_APP_TITLE**. Si le nom de l’application est introuvable dans la ressource, il est fourni à partir du programme. Nom de fichier EXE.  
   
  Retourné par la fonction globale [AfxGetAppName](application-information-and-management.md#afxgetappname). `m_pszAppName`est une variable publique de type **const char\***.  
@@ -1229,7 +1226,7 @@ LPCTSTR m_pszAppName;
 LPCTSTR m_pszExeName;  
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Contrairement aux [m_pszAppName](#m_pszappname), ce nom ne peut pas contenir d’espaces. `m_pszExeName`est une variable publique de type **const char\***.  
   
 > [!NOTE]
@@ -1259,7 +1256,7 @@ LPCTSTR m_pszHelpFilePath;
 LPCTSTR m_pszProfileName;  
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  `m_pszProfileName`est une variable publique de type **const char\***.  
   
 > [!NOTE]
@@ -1348,7 +1345,7 @@ afx_msg void OnFileNew();
 afx_msg void OnFileOpen();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez ajouter une `ON_COMMAND( ID_FILE_OPEN, OnFileOpen )` instruction à votre `CWinApp` table des messages pour activer cette fonction membre de classe. S’il est activé, cette fonction gère l’exécution de la commande fichier ouvrir.  
   
  Pour plus d’informations sur le comportement par défaut et des conseils sur la façon de remplacer cette fonction membre, consultez [Note technique 22](../../mfc/tn022-standard-commands-implementation.md).  
@@ -1408,7 +1405,7 @@ afx_msg void OnHelpFinder();
 afx_msg void OnHelpIndex();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez ajouter une `ON_COMMAND( ID_HELP_INDEX, OnHelpIndex )` instruction à votre `CWinApp` table des messages pour activer cette fonction membre de classe. S’il est activé, l’infrastructure appelle cette fonction de gestionnaire de messages lorsque l’utilisateur de votre application sélectionne la commande de l’Index de l’aide à appeler `WinHelp` avec la norme **HELP_INDEX** rubrique.  
   
 ##  <a name="onhelpusing"></a>CWinApp::OnHelpUsing  
@@ -1418,7 +1415,7 @@ afx_msg void OnHelpIndex();
 afx_msg void OnHelpUsing();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Vous devez ajouter une `ON_COMMAND( ID_HELP_USING, OnHelpUsing )` instruction à votre `CWinApp` table des messages pour activer cette fonction membre de classe. L’infrastructure appelle cette fonction de gestionnaire de messages lorsque l’utilisateur de votre application sélectionne la commande à appeler l’aide en utilisant le `WinHelp` application avec la norme **HELP_HELPONHELP** rubrique.  
   
 ##  <a name="onidle"></a>CWinApp::OnIdle  
@@ -1481,7 +1478,7 @@ BOOL bAddToMRU = TRUE);
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un `CDocument` cas de réussite ; `NULL`.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Si un document portant ce nom est déjà ouvert, la première fenêtre frame contenant ce document obtenez le focus. Si une application prend en charge plusieurs modèles de document, le framework utilise l’extension de nom de fichier pour trouver le modèle de document approprié pour essayer de charger le document. En cas de réussite, le modèle de document crée ensuite une fenêtre frame et la vue du document.  
   
 ### <a name="example"></a>Exemple  
@@ -1498,7 +1495,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
  `rCmdInfo`  
  Une référence à un [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque vous démarrez un nouveau projet MFC à l’aide de l’Assistant Application, l’Assistant Application créera une instance locale de `CCommandLineInfo`, puis appelez `ProcessShellCommand` et `ParseCommandLine` dans les [InitInstance](#initinstance) fonction membre. Une ligne de commande suivante à l’itinéraire décrite ci-dessous :  
   
 1.  Après avoir été créés dans `InitInstance`, le `CCommandLineInfo` objet est passé à `ParseCommandLine`.  
@@ -1578,19 +1575,15 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
   
  Les membres de données de la `CCommandLineInfo` objet, identifié par [CCommandLineInfo::m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand), sont du type énuméré suivant, qui est défini dans la `CCommandLineInfo` classe.  
   
- `enum {`  
-  
- `FileNew,`  
-  
- `FileOpen,`  
-  
- `FilePrint,`  
-  
- `FilePrintTo,`  
-  
- `FileDDE,`  
-  
- `};`  
+```  
+enum {
+    FileNew,
+    FileOpen,
+    FilePrint,
+    FilePrintTo,
+    FileDDE
+    };  
+```
   
  Pour obtenir une brève description de chacune de ces valeurs, consultez `CCommandLineInfo::m_nShellCommand`.  
   
@@ -1644,7 +1637,7 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
  [in] `bCompat`  
  `TRUE`Ajoute des entrées d’inscription pour les commandes de l’interpréteur de commandes d’impression et imprimer vers, permettant à un utilisateur d’imprimer des fichiers directement à partir de l’interpréteur de commandes, ou en faisant glisser le fichier vers une imprimante. Il ajoute également une clé DefaultIcon. Par défaut, ce paramètre est `FALSE` pour la compatibilité descendante.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cela permet à l’utilisateur d’ouvrir un fichier de données créé par votre application en double-cliquant dessus dans le Gestionnaire de fichiers. Appelez `RegisterShellFileTypes` après avoir appelé [AddDocTemplate](#adddoctemplate) pour chacun des modèles de document dans votre application. Appeler également la [EnableShellOpen](#enableshellopen) fonction membre lorsque vous appelez `RegisterShellFileTypes`.  
   
  `RegisterShellFileTypes`effectue une itération au sein de la liste de [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) objets que l’application gère et, pour chaque modèle de document, ajoute des entrées à la base de données d’inscription gérée par Windows pour les associations de fichiers. Le Gestionnaire de fichiers utilise ces entrées pour ouvrir un fichier de données lorsque l’utilisateur double-clique dessus. Cela élimine la nécessité d’envoyer un. Fichier REG avec votre application.  
@@ -1759,7 +1752,7 @@ virtual int Run();
  **Exécutez** est rarement substituée, mais vous pouvez remplacer pour fournir un comportement particulier.  
   
 ##  <a name="runautomated"></a>CWinApp::RunAutomated  
- Appelez cette fonction pour déterminer si le « **/Automation**« ou » **-Automation**« option est présente, ce qui indique si l’application serveur a été lancée par une application cliente.  
+ Appelez cette fonction pour déterminer si le « **/Automation.**« ou » **-Automation**« option est présente, ce qui indique si l’application serveur a été lancée par une application cliente.  
   
 ```  
 BOOL RunAutomated();
@@ -1768,7 +1761,7 @@ BOOL RunAutomated();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’option a été trouvée ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  S’il est présent, l’option est supprimée à partir de la ligne de commande. Pour plus d’informations sur OLE Automation, consultez l’article [serveurs Automation](../../mfc/automation-servers.md).  
   
 ##  <a name="runembedded"></a>CWinApp::RunEmbedded  
@@ -1831,7 +1824,7 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
  `eHelpType`  
  Spécifie le type d’aide à utiliser. Consultez [CWinApp::m_eHelpType](#m_ehelptype) pour plus d’informations.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Définit le type d’aide de l’application.  
   
  Pour la valeur de type de votre application HTMLHelp, vous pouvez appeler [EnableHTMLHelp](#enablehtmlhelp). Une fois que vous appelez `EnableHTMLHelp`, votre application doit utiliser HTMLHelp en tant que son application d’aide. Si vous souhaitez modifier pour utiliser WinHelp, vous pouvez appeler `SetHelpMode` et `eHelpType` à **afxWinHelp**.  

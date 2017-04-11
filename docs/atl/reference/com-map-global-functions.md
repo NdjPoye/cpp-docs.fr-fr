@@ -32,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: c37f722267107ad06fb51dc78bd682603161a476
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: d6f23de1a5fd13d61d376acded35f9217d0a898d
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="com-map-global-functions"></a>Fonctions globales de mappage COM
@@ -42,14 +42,14 @@ Ces fonctions fournissent la prise en charge pour le mappage COM **IUnknown** im
   
 |||  
 |-|-|  
-|[AtlInternalQueryInterface](#atlinternalqueryinterface)|Délègue à la **IUnknown** d’un objet non regroupées en agrégats.|  
+|[AtlInternalQueryInterface](#atlinternalqueryinterface)|Délègue à la **IUnknown** d’un objet brutes et non agrégée.|  
 |[InlineIsEqualIUnknown](#inlineisequaliunknown)|Génère un code efficace pour comparer des interfaces à **IUnknown**.|  
 
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
 
-##  <a name="a-nameatlinternalqueryinterfacea--atlinternalqueryinterface"></a><a name="atlinternalqueryinterface"></a>AtlInternalQueryInterface  
+##  <a name="atlinternalqueryinterface"></a>AtlInternalQueryInterface  
  Récupère un pointeur vers l'interface demandée.  
   
 ```
@@ -62,10 +62,10 @@ HRESULT AtlInternalQueryInterface(
   
 ### <a name="parameters"></a>Paramètres  
  `pThis`  
- [in] Un pointeur vers l’objet qui contient le mappage des interfaces exposées à COM `QueryInterface`.  
+ [in] Un pointeur vers l’objet qui contient le mappage COM des interfaces exposées à `QueryInterface`.  
   
  `pEntries`  
- [in] Un tableau de **_ATL_INTMAP_ENTRY** des structures qui accèdent à une carte des interfaces disponibles.  
+ [in] Un tableau de **_ATL_INTMAP_ENTRY** structures qui accèdent à un mappage des interfaces disponibles.  
   
  `iid`  
  [in] Le GUID de l’interface demandée.  
@@ -77,12 +77,12 @@ HRESULT AtlInternalQueryInterface(
  Une des valeurs HRESULT standards.  
   
 ### <a name="remarks"></a>Remarques  
- `AtlInternalQueryInterface` gère seulement des interfaces dans le tableau de mappage COM. Si votre objet est agrégée, `AtlInternalQueryInterface` ne délègue pas vers l’inconnu extérieur. Vous pouvez entrer des interfaces dans la table de mappage COM avec la macro [COM_INTERFACE_ENTRY](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00) ou l’une de ses variantes.  
+ `AtlInternalQueryInterface` gère seulement des interfaces dans le tableau de mappage COM. Si votre objet est agrégée, `AtlInternalQueryInterface` ne délègue pas à inconnu externe. Vous pouvez entrer des interfaces dans la table de mappage COM avec la macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) ou une de ses variantes.  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_ATL_Windowing&#94;](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing #94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
   
-##  <a name="a-nameinlineisequaliunknowna--inlineisequaliunknown"></a><a name="inlineisequaliunknown"></a>InlineIsEqualIUnknown  
+##  <a name="inlineisequaliunknown"></a>InlineIsEqualIUnknown  
  Appelez cette fonction, dans le cas particulier du test de **IUnknown**.  
   
 ```

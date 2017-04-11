@@ -48,12 +48,12 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 0c07766bca6bbc546f877e10255d80bd388d30d7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 1a53c1e65504049e35fdec8065de279ca41fe342
+ms.lasthandoff: 04/01/2017
 
 ---
-# <a name="colepropertiesdialog-class"></a>COlePropertiesDialog (classe)
+# <a name="colepropertiesdialog-class"></a>Classe de COlePropertiesDialog
 Encapsule la boîte de dialogue Propriétés d'objet OLE courante Windows.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -74,7 +74,7 @@ class COlePropertiesDialog : public COleDialog
   
 |Nom|Description|  
 |----------|-----------------|  
-|[COlePropertiesDialog::DoModal](#domodal)|Affiche la boîte de dialogue et permet à l’utilisateur d’effectuer une sélection.|  
+|[COlePropertiesDialog::DoModal](#domodal)|Affiche la boîte de dialogue et permet à l’utilisateur à effectuer une sélection.|  
 |[COlePropertiesDialog::OnApplyScale](#onapplyscale)|Appelé par l’infrastructure lors de la mise à l’échelle de l’élément de document a changé.|  
   
 ### <a name="public-data-members"></a>Membres de données publics  
@@ -82,19 +82,19 @@ class COlePropertiesDialog : public COleDialog
 |Nom|Description|  
 |----------|-----------------|  
 |[COlePropertiesDialog::m_gp](#m_gp)|Une structure utilisée pour initialiser la page « Générale » d’un `COlePropertiesDialog` objet.|  
-|[COlePropertiesDialog::m_lp](#m_lp)|Une structure utilisée pour initialiser la page « Lien » d’un `COlePropertiesDialog` objet.|  
+|[COlePropertiesDialog::m_lp](#m_lp)|Une structure utilisée pour initialiser la page « Liaison » d’un `COlePropertiesDialog` objet.|  
 |[COlePropertiesDialog::m_op](#m_op)|Une structure utilisée pour initialiser le `COlePropertiesDialog` objet.|  
-|[COlePropertiesDialog::m_psh](#m_psh)|Une structure utilisée pour ajouter des pages de propriétés personnalisées supplémentaires.|  
-|[COlePropertiesDialog::m_vp](#m_vp)|Une structure permettant de personnaliser la page « Vue » d’un `COlePropertiesDialog` objet.|  
+|[COlePropertiesDialog::m_psh](#m_psh)|Structure utilisée pour ajouter des pages de propriétés personnalisées supplémentaires.|  
+|[COlePropertiesDialog::m_vp](#m_vp)|Une structure utilisée pour personnaliser la page « Vue » d’un `COlePropertiesDialog` objet.|  
   
 ## <a name="remarks"></a>Remarques  
- Les boîtes de dialogue Propriétés de l’objet OLE communes fournissent un moyen simple pour afficher et modifier les propriétés d’un élément de document OLE d’une manière compatible avec les normes de Windows. Ces propriétés incluent, entre autres, des informations sur le fichier représenté par l’élément de document, options d’affichage de l’icône et mise à l’échelle de l’image et des informations sur le lien de l’article (si l’élément est lié).  
+ Les boîtes de dialogue Propriétés de l’objet OLE communes fournissent un moyen simple pour afficher et modifier les propriétés d’un élément de document OLE de manière cohérente avec les normes de Windows. Ces propriétés comprennent, entre autres, des informations sur le fichier représenté par l’élément de document, options d’affichage de l’icône et la mise à l’échelle de l’image et les informations sur le lien de l’élément (si l’élément est lié).  
   
- Pour utiliser un `COlePropertiesDialog` d’objet, commencez par créer l’objet en utilisant la `COlePropertiesDialog` constructeur. Une fois la boîte de dialogue a été construite, appelez le `DoModal` fonction membre pour afficher la boîte de dialogue et permettent aux utilisateurs de modifier les propriétés de l’élément. `DoModal`Retourne si l’utilisateur a sélectionné le OK ( **IDOK**) ou l’annulation ( **IDCANCEL**) bouton. Outre les boutons OK et Annuler, il existe un bouton Appliquer. Lorsque l’utilisateur sélectionne l’appliquer, les modifications apportées aux propriétés de l’élément de document sont appliquées à l’élément et son image est automatiquement mis à jour, mais il reste actif.  
+ Pour utiliser un `COlePropertiesDialog` d’objet, commencez par créer l’objet en utilisant la `COlePropertiesDialog` constructeur. Une fois que la boîte de dialogue a été construite, appelez le `DoModal` fonction membre pour afficher la boîte de dialogue et autoriser l’utilisateur à modifier les propriétés de l’élément. `DoModal`Retourne si l’utilisateur a sélectionné le OK ( **IDOK**) ou l’annulation ( **IDCANCEL**) bouton. Outre les boutons OK et Annuler, il est un bouton Appliquer. Lorsque l’utilisateur sélectionne l’appliquer, toutes les modifications apportées aux propriétés de l’élément de document sont appliquées à l’élément et son image est automatiquement mis à jour, mais reste active.  
   
- Le [m_psh](#m_psh) membre de données est un pointeur vers un **PROPSHEETHEADER** structure et dans la plupart des cas, vous ne devez pas y accéder explicitement. Une exception est lorsque vous avez besoin de pages de propriétés supplémentaires au-delà des pages Général, vue et lien par défaut. Dans ce cas, vous pouvez modifier le `m_psh` membre de données pour inclure des pages personnalisées avant d’appeler le `DoModal` fonction membre.  
+ Le [m_psh](#m_psh) membre de données est un pointeur vers un **PROPSHEETHEADER** structure et dans la plupart des cas, vous ne devrez pas accéder de manière explicite. Une exception est lorsque vous avez besoin de pages de propriétés supplémentaires au-delà de pages Général, de vue et de lien par défaut. Dans ce cas, vous pouvez modifier le `m_psh` membre de données à inclure vos pages personnalisées avant d’appeler le `DoModal` fonction membre.  
   
- Pour plus d’informations sur les boîtes de dialogue OLE, consultez l’article [des boîtes de dialogue OLE](../../mfc/dialog-boxes-in-ole.md).  
+ Pour plus d’informations sur les boîtes de dialogue OLE, consultez l’article [boîtes de dialogue OLE](../../mfc/dialog-boxes-in-ole.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -127,16 +127,16 @@ COlePropertiesDialog(
   
 ### <a name="parameters"></a>Paramètres  
  `pItem`  
- Pointeur vers l’élément de document dont les propriétés sont ouverts.  
+ Pointeur vers l’élément de document dont les propriétés sont en cours d’accès.  
   
  *nScaleMin*  
- Valeur minimale de la mise à l’échelle de pourcentage pour l’image d’élément de document.  
+ Au minimum de la mise à l’échelle de pourcentage de l’image d’élément de document.  
   
  *nScaleMax*  
- Nombre maximal de mise à l’échelle de pourcentage pour l’image d’élément de document.  
+ Maximum de pourcentage de l’image d’élément de document de mise à l’échelle.  
   
  `pParentWnd`  
- Pointeur vers la boîte de dialogue parente ou propriétaire.  
+ Pointeur vers le parent ou le propriétaire de la boîte de dialogue.  
   
 ### <a name="remarks"></a>Remarques  
  Dérivez votre classe de boîte de dialogue Propriétés de l’objet OLE courants de `COlePropertiesDialog` pour implémenter la mise à l’échelle des éléments de votre document. Les boîtes de dialogue implémentées par une instance de cette classe ne prendra pas en charge mise à l’échelle de l’élément de document.  
@@ -149,59 +149,59 @@ COlePropertiesDialog(
   
 -   Afficher  
   
-     Cette page contient les options d’affichage de l’élément, modification de l’icône et la modification de la mise à l’échelle de l’image.  
+     Cette page contient des options pour afficher l’élément et modifiant l’icône de modification de la mise à l’échelle de l’image.  
   
 -   Link  
   
-     Cette page contient les options de modification de l’emplacement de l’élément lié et de mise à jour de l’élément lié. À partir de cette page, l’utilisateur peut rompre la liaison de l’élément sélectionné.  
+     Cette page contient des options pour modifier l’emplacement de l’élément lié et de mise à jour de l’élément lié. À partir de cette page, l’utilisateur peut endommager le lien de l’élément sélectionné.  
   
  Pour ajouter des pages au-delà de celles fournies par défaut, modifiez le [m_psh](#m_psh) variable membre avant de quitter le constructeur de votre `COlePropertiesDialog`-classe dérivée. Il s’agit d’une implémentation avancée de la `COlePropertiesDialog` constructeur.  
   
 ##  <a name="domodal"></a>COlePropertiesDialog::DoModal  
- Appelez cette fonction membre pour afficher la boîte de dialogue Propriétés de l’objet OLE Windows courants et autoriser l’utilisateur à afficher ou modifier les diverses propriétés de l’élément de document.  
+ Appelez cette fonction membre pour afficher la boîte de dialogue Propriétés de l’objet OLE Windows courants et d’autoriser l’utilisateur à afficher ou modifier les diverses propriétés de l’élément de document.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- **IDOK** ou **IDCANCEL** cas de réussite ; sinon, 0. **IDOK** et **IDCANCEL** sont des constantes qui indiquent si l’utilisateur a sélectionné le bouton OK ou annuler.  
+ **IDOK** ou **IDCANCEL** cas de réussite ; sinon, 0. **IDOK** et **IDCANCEL** sont des constantes qui indiquent si l’utilisateur a sélectionné le bouton OK ou sur Annuler.  
   
  Si **IDCANCEL** est retourné, vous pouvez appeler les fenêtres [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) fonction pour déterminer si une erreur s’est produite.  
   
 ##  <a name="m_gp"></a>COlePropertiesDialog::m_gp  
- Une structure de type [OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297), utilisé pour initialiser la page Général de la boîte de dialogue Propriétés de l’objet OLE.  
+ Une structure de type [OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297), utilisée pour initialiser la page Général de la boîte de dialogue Propriétés de l’objet OLE.  
   
 ```  
 OLEUIGNRLPROPS m_gp;  
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Cette page affiche le type et la taille d’une incorporation et permet à l’utilisateur l’accès à cette boîte de dialogue. Cette page affiche également la destination du lien si l’objet est un lien.  
+ Cette page affiche le type et la taille d’une incorporation et autorise l’accès utilisateur à la boîte de dialogue de conversion. Cette page affiche également la destination du lien si l’objet est un lien.  
   
  Pour plus d’informations sur la **OLEUIGNRLPROPS** de la structure, consultez la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="m_lp"></a>COlePropertiesDialog::m_lp  
- Une structure de type [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735), utilisé pour initialiser la page de lien de la boîte de dialogue Propriétés de l’objet OLE.  
+ Une structure de type [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735), utilisée pour initialiser la page de lien de la boîte de dialogue Propriétés de l’objet OLE.  
   
 ```  
 OLEUILINKPROPS m_lp;  
 ```  
   
-### <a name="remarks"></a>Remarques  
- Cette page indique l’emplacement de l’élément lié et lui permet de mettre à jour ou l’arrêter, le lien vers l’élément.  
+### <a name="remarks"></a>Notes  
+ Cette page indique l’emplacement de l’élément lié et permet à l’utilisateur à mettre à jour, ou interrompre, le lien vers l’élément.  
   
  Pour plus d’informations sur la **OLEUILINKPROPS** de la structure, consultez la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="m_op"></a>COlePropertiesDialog::m_op  
- Une structure de type [OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199), utilisé pour initialiser la boîte de dialogue Propriétés de l’objet OLE.  
+ Une structure de type [OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199), utilisée pour initialiser la boîte de dialogue Propriétés de l’objet OLE.  
   
 ```  
 OLEUIOBJECTPROPS m_op;  
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Cette structure contient les membres utilisés pour initialiser les pages Général, lier et afficher.  
+ Cette structure contient les membres utilisés pour initialiser les pages de vue général et lien.  
   
  Pour plus d’informations, consultez la **OLEUIOBJECTPROPS** et [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) structures dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
@@ -215,24 +215,24 @@ PROPSHEETHEADER m_psh;
 ### <a name="remarks"></a>Notes  
  Après avoir construit un `COlePropertiesDialog` de l’objet, vous pouvez utiliser `m_psh` pour définir les divers aspects de la boîte de dialogue avant d’appeler le `DoModal` fonction membre.  
   
- Si vous modifiez le `m_psh` membre de données directement, vous devez remplacer un comportement par défaut.  
+ Si vous modifiez le `m_psh` membre de données directement, remplace un comportement par défaut.  
   
  Pour plus d’informations sur la **PROPSHEETHEADER** de la structure, consultez la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="m_vp"></a>COlePropertiesDialog::m_vp  
- Une structure de type [OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751), utilisé pour initialiser la page Affichage de la boîte de dialogue Propriétés de l’objet OLE.  
+ Une structure de type [OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751), utilisée pour initialiser la page de vue de la boîte de dialogue Propriétés de l’objet OLE.  
   
 ```  
 OLEUIVIEWPROPS m_vp;  
 ```  
   
 ### <a name="remarks"></a>Remarques  
- Cette page permet à l’utilisateur de basculer entre « content » et « icônes » vues de l’objet et modifier sa mise à l’échelle dans le conteneur. Il permet également l’accès utilisateur à la boîte de dialogue Changer d’icône lorsque l’objet est affiché sous la forme d’une icône.  
+ Cette page permet à l’utilisateur de basculer entre le « contenu » et « sous forme d’icône » vues de l’objet et modifier sa mise à l’échelle dans le conteneur. Il permet également l’accès utilisateur à la boîte de dialogue Changer d’icône lorsque l’objet est affiché sous forme d’icône.  
   
  Pour plus d’informations sur la **OLEUIVIEWPROPS** de la structure, consultez la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="onapplyscale"></a>COlePropertiesDialog::OnApplyScale  
- Appelé par l’infrastructure lors de la modification de la valeur mise à l’échelle et OK ou appliquer a été sélectionné.  
+ Appelé par le framework lorsque la valeur de mise à l’échelle et OK ou appliquer a été sélectionné.  
   
 ```  
 virtual BOOL OnApplyScale(
@@ -243,7 +243,7 @@ virtual BOOL OnApplyScale(
   
 ### <a name="parameters"></a>Paramètres  
  `pItem`  
- Pointeur vers l’élément de document dont les propriétés sont ouverts.  
+ Pointeur vers l’élément de document dont les propriétés sont en cours d’accès.  
   
  `nCurrentScale`  
  Valeur numérique de l’échelle de la boîte de dialogue.  
@@ -252,18 +252,18 @@ virtual BOOL OnApplyScale(
  Indique si l’échelle s’applique à la taille d’origine de l’élément de document.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si géré ; sinon 0.  
+ Différent de zéro si gérée ; Sinon, 0.  
   
 ### <a name="remarks"></a>Remarques  
  L'implémentation par défaut n'exécute aucune opération. Vous devez substituer cette fonction pour activer les contrôles de mise à l’échelle.  
   
 > [!NOTE]
->  Avant l’affichage de la boîte de dialogue Propriétés de l’objet OLE, le framework appelle cette fonction avec un **NULL** de `pItem` et -1 pour `nCurrentScale`. Cela vise à déterminer si les contrôles de mise à l’échelle doivent être activés.  
+>  Avant l’affichage de la boîte de dialogue Propriétés de l’objet OLE, l’infrastructure appelle cette fonction avec un **NULL** pour `pItem` et - 1 pour `nCurrentScale`. Cela est effectuée pour déterminer si les contrôles de mise à l’échelle doivent être activés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple MFC CERC](../../visual-cpp-samples.md)   
- [COleDialog (classe)](../../mfc/reference/coledialog-class.md)   
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [COleDialog (classe)](../../mfc/reference/coledialog-class.md)   
- [CPropertyPage (classe)](../../mfc/reference/cpropertypage-class.md)
+ [Exemple MFC CIRC](../../visual-cpp-samples.md)   
+ [Classe de COleDialog](../../mfc/reference/coledialog-class.md)   
+ [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
+ [Classe de COleDialog](../../mfc/reference/coledialog-class.md)   
+ [CPropertyPage, classe](../../mfc/reference/cpropertypage-class.md)
 

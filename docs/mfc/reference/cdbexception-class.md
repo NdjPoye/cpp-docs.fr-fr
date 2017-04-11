@@ -42,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 66b5e6cbfaadd4b57d301de74fc2e0b815956952
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 4a82f66f0b6f6535de8e9707c2d68b94b7eb69c5
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdbexception-class"></a>Classe de CDBException
@@ -62,11 +62,11 @@ class CDBException : public CException
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CDBException::m_nRetCode](#m_nretcode)|Contient un code de retour de base de données ODBC (Open Connectivity), de type **et RETCODE contient**.|  
+|[CDBException::m_nRetCode](#m_nretcode)|Contient un code de retour de connectivité de base de données ouverte (ODBC), de type **et RETCODE contient**.|  
 |[CDBException::m_strError](#m_strerror)|Contient une chaîne qui décrit l’erreur en termes d’alphanumériques.|  
 |[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|Contient une chaîne décrivant l’erreur en termes des codes d’erreur retourné par ODBC.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La classe inclut deux membres de données publics que vous pouvez utiliser pour déterminer la cause de l’exception ou pour afficher un message décrivant l’exception. `CDBException`objets sont créés et levées par les fonctions membres des classes de base de données.  
   
 > [!NOTE]
@@ -98,11 +98,11 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_CONNECT_FAIL** Échec de la connexion à la source de données. Vous passé un **NULL** `CDatabase` pointeur vers votre constructeur de jeu d’enregistrements et de la tentative suivante pour créer une connexion basée sur `GetDefaultConnect` a échoué.  
   
-- **AFX_SQL_ERROR_DATA_TRUNCATED** vous a demandé plus de données que vous avez fourni le stockage. Pour plus d’informations sur le stockage des données fournies pour l’augmentation `CString` ou `CByteArray` des types de données, consultez la `nMaxLength` argument pour [RFX_Text](http://msdn.microsoft.com/library/de3c7581-d26c-40cb-81f3-c492ef4809f6) et [RFX_Binary](http://msdn.microsoft.com/library/908ff945-3ad0-43a1-9932-cdcdc8b14915) sous « Macros and Globals. »  
+- **AFX_SQL_ERROR_DATA_TRUNCATED** vous a demandé plus de données que vous avez fourni le stockage. Pour plus d’informations sur le stockage des données fournies pour l’augmentation `CString` ou `CByteArray` des types de données, consultez la `nMaxLength` argument pour [RFX_Text](record-field-exchange-functions.md#rfx_text) et [RFX_Binary](record-field-exchange-functions.md#rfx_binary) sous « Macros and Globals. »  
   
 - **AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED** un appel à `CRecordset::Open` Échec de la demande d’une feuille de réponse dynamique. Feuilles de réponse dynamiques ne sont pas pris en charge par le pilote.  
   
-- **AFX_SQL_ERROR_EMPTY_COLUMN_LIST** vous avez tenté d’ouvrir une table (ou vous avez donné n’a pas été identifié comme un appel de procédure ou **sélectionnez** instruction), mais aucune colonne identifiée dans les appels de fonction exchange (RFX) champs d’enregistrements dans votre `DoFieldExchange` remplacer.  
+- **AFX_SQL_ERROR_EMPTY_COLUMN_LIST** vous avez tenté d’ouvrir une table (ou vous avez donné n’a pas été identifié comme un appel de procédure ou **sélectionnez** instruction), mais aucune colonne identifiée dans les appels de fonction de champs d’enregistrements exchange (RFX) dans votre `DoFieldExchange` remplacer.  
   
 - **AFX_SQL_ERROR_FIELD_SCHEMA_MISMATCH** le type d’une fonction RFX dans votre `DoFieldExchange` remplacement n’est pas compatible avec le type de données de colonne dans le jeu d’enregistrements.  
   

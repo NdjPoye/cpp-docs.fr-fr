@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 8269a71e9528da5c3468b5eb37f5dce3a16b14fd
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6129ad49f58cecb099927fe3d422fe215d143b67
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView (classe)
@@ -76,7 +76,7 @@ class COleDBRecordView : public CFormView
 > [!NOTE]
 >  Si vous travaillez avec les classes d’objets d’accès aux données (DAO) plutôt que les classes de modèles du consommateur OLE DB, utilisez la classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) à la place. Pour plus d’informations, consultez l’article [vue d’ensemble : programmation de base de données](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView`conserve le suivi de la position de l’utilisateur dans l’ensemble de lignes afin que la vue de l’enregistrement peut mettre à jour l’interface utilisateur. Lorsque l’utilisateur passe à des extrémités de l’ensemble de lignes, la vue d’enregistrement désactive utilisateur interface objets \u2012 tels que des éléments de menu ou la barre d’outils boutons \u2012 pour déplacer d’autres dans la même direction.  
+ `COleDBRecordView`conserve le suivi de la position de l’utilisateur dans l’ensemble de lignes afin que la vue de l’enregistrement peut mettre à jour l’interface utilisateur. Quand l’utilisateur passe à des extrémités de l’ensemble de lignes, la vue d’enregistrement désactive les objets d’interface utilisateur, tels que les éléments de menu ou des boutons de barre d’outils, pour déplacer ultérieurement dans la même direction.  
   
  Pour plus d’informations sur les classes de l’ensemble de lignes, consultez le [à l’aide de OLE DB modèles du consommateur](../../data/oledb/ole-db-consumer-templates-cpp.md) l’article.  
   
@@ -113,7 +113,7 @@ COleDBRecordView(UINT nIDTemplate);
  `nIDTemplate`  
  Contient le numéro d’ID d’une ressource de modèle de boîte de dialogue.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lorsque vous créez un objet d’un type dérivé de `COleDBRecordView`, appelez un des constructeurs pour créer l’objet de vue et identifier la ressource de boîte de dialogue sur lequel est basée la vue. Vous pouvez identifier la ressource par son nom (passez une chaîne comme argument au constructeur) ou par son ID (passer un entier non signé en tant que l’argument).  
   
 > [!NOTE]
@@ -152,18 +152,18 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Une des valeurs d’ID de commande standard suivantes :  
   
-- `ID_RECORD_FIRST`\u2012 déplacer vers le premier enregistrement dans le jeu d’enregistrements.  
+- `ID_RECORD_FIRST`: Permet de déplacer vers le premier enregistrement dans le jeu d’enregistrements.  
   
-- `ID_RECORD_LAST`\u2012 déplacer au dernier enregistrement dans le jeu d’enregistrements.  
+- `ID_RECORD_LAST`: Déplace le dernier enregistrement dans le jeu d’enregistrements.  
   
-- `ID_RECORD_NEXT`\u2012 déplacer vers l’enregistrement suivant dans le jeu d’enregistrements.  
+- `ID_RECORD_NEXT`Migrez vers l’enregistrement suivant dans le jeu d’enregistrements.  
   
-- `ID_RECORD_PREV`\u2012 déplacer vers l’enregistrement précédent dans le jeu d’enregistrements.  
+- `ID_RECORD_PREV`Migrez vers l’enregistrement précédent dans le jeu d’enregistrements.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le déplacement a réussi ; 0 dans le cas contraire, si la demande de déplacement a été refusée.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  L’implémentation par défaut appelle approprié **déplacer** fonction membre de la `CRowset` objet associé à la vue de l’enregistrement.  
   
  Par défaut, `OnMove` met à jour l’enregistrement en cours sur la source de données si l’utilisateur a été modifié dans la vue de l’enregistrement.  

@@ -43,13 +43,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ab1c92c1b7442025f91007ef971d81d087351212
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 25d102e7e47898ee2f93326756b3d50e8bb3bbff
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cworkerthread-class"></a>Classe CWorkerThread
-Cette classe crée un thread de travail ou utilise un attend sur un ou plusieurs handles d’objet noyau et exécute une fonction de client spécifié lors d’une des poignées est signalée.  
+Cette classe crée un thread de travail ou utilise un existant, attend sur un ou plusieurs handles d’objet noyau et exécute une fonction de client spécifié lors d’une des poignées est signalée.  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
@@ -63,7 +63,7 @@ class CWorkerThread
   
 #### <a name="parameters"></a>Paramètres  
  `ThreadTraits`  
- La classe fournissant la fonction de création de thread, tel que [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) ou [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).  
+ La classe de fournir la fonction de création de thread, tel que [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) ou [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).  
   
 ## <a name="members"></a>Membres  
   
@@ -84,29 +84,29 @@ class CWorkerThread
   
 |Nom|Description|  
 |----------|-----------------|  
-|[CWorkerThread::AddHandle](#addhandle)|Appelez cette méthode pour ajouter le handle d’un objet pouvant être attendu à la liste maintenue par le thread de travail.|  
-|[CWorkerThread::AddTimer](#addtimer)|Appelez cette méthode pour ajouter une minuterie périodique pouvant être attendue à la liste maintenue par le thread de travail.|  
+|[CWorkerThread::AddHandle](#addhandle)|Appelez cette méthode pour ajouter le handle d’un objet qui peuvent être attendus à la liste gérée par le thread de travail.|  
+|[CWorkerThread::AddTimer](#addtimer)|Appelez cette méthode pour ajouter une minuterie qui peuvent être attendue périodique à la liste gérée par le thread de travail.|  
 |[CWorkerThread::GetThreadHandle](#getthreadhandle)|Appelez cette méthode pour obtenir le handle du thread du thread de travail.|  
 |[CWorkerThread::GetThreadId](#getthreadid)|Appelez cette méthode pour obtenir l’ID de thread du thread de travail.|  
 |[CWorkerThread::Initialize](#initialize)|Appelez cette méthode pour initialiser le thread de travail.|  
 |[CWorkerThread::RemoveHandle](#removehandle)|Appelez cette méthode pour supprimer un handle de la liste des objets.|  
 |[CWorkerThread::Shutdown](#shutdown)|Appelez cette méthode pour arrêter le thread de travail.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ### <a name="to-use-cworkerthread"></a>Pour utiliser CWorkerThread  
   
-1.  Créez une instance de cette classe.  
+1.  Créer une instance de cette classe.  
   
 2.  Appelez [CWorkerThread::Initialize](#initialize).  
   
 3.  Appelez [CWorkerThread::AddHandle](#addhandle) avec le handle d’un objet de noyau et un pointeur vers une implémentation de [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).  
   
-     – ou –  
+     - ou  
   
      Appelez [CWorkerThread::AddTimer](#addtimer) avec un pointeur vers une implémentation de [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md).  
   
-4.  Implémentez [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) à prendre des mesures lorsque le descripteur ou un minuteur est signalé.  
+4.  Implémentez [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) pour intervenir lors de la poignée ou la minuterie est signalé.  
   
 5.  Pour supprimer un objet dans la liste des objets, appelez [CWorkerThread::RemoveHandle](#removehandle).  
   
@@ -116,7 +116,7 @@ class CWorkerThread
  **En-tête :** atlutil.h  
   
 ##  <a name="addhandle"></a>CWorkerThread::AddHandle  
- Appelez cette méthode pour ajouter le handle d’un objet pouvant être attendu à la liste maintenue par le thread de travail.  
+ Appelez cette méthode pour ajouter le handle d’un objet qui peuvent être attendus à la liste gérée par le thread de travail.  
   
 ```
 HRESULT AddHandle(
@@ -127,7 +127,7 @@ HRESULT AddHandle(
   
 ### <a name="parameters"></a>Paramètres  
  `hObject`  
- Le handle d’un objet pouvant être attendu.  
+ Le handle d’un objet qui peuvent être attendu.  
   
  `pClient`  
  Le pointeur vers le [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) interface sur l’objet à appeler lorsque le handle est signalé.  
@@ -138,11 +138,11 @@ HRESULT AddHandle(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Remarques  
- [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) sera appelé par `pClient` quand le handle, `hObject`, est signalé.  
+### <a name="remarks"></a>Notes  
+ [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) sera appelé par le biais `pClient` lorsque le handle, `hObject`, est signalé.  
   
 ##  <a name="addtimer"></a>CWorkerThread::AddTimer  
- Appelez cette méthode pour ajouter une minuterie périodique pouvant être attendue à la liste maintenue par le thread de travail.  
+ Appelez cette méthode pour ajouter une minuterie qui peuvent être attendue périodique à la liste gérée par le thread de travail.  
   
 ```
 HRESULT AddTimer(
@@ -154,7 +154,7 @@ HRESULT AddTimer(
   
 ### <a name="parameters"></a>Paramètres  
  *dwInterval*  
- Spécifie la durée de la minuterie en millisecondes.  
+ Spécifie le délai du minuteur en millisecondes.  
   
  `pClient`  
  Le pointeur vers le [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) interface sur l’objet à appeler lorsque le handle est signalé.  
@@ -163,13 +163,13 @@ HRESULT AddTimer(
  Le paramètre doit être passé à [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) lorsque le handle est signalé.  
   
  `phTimer`  
- [out] Adresse de la variable de HANDLE qui, en cas de réussite, reçoit le handle lié à la minuterie nouvellement créé.  
+ [out] Adresse de la variable HANDLE qui, en cas de réussite, reçoit le handle à la minuterie nouvellement créé.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
 ### <a name="remarks"></a>Notes  
- [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) sera appelé par `pClient` lorsque la minuterie est signalée.  
+ [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) sera appelé par le biais `pClient` lorsque la minuterie est signalée.  
   
  Passez le handle du minuteur de `phTimer` à [CWorkerThread::RemoveHandle](#removehandle) pour fermer le minuteur.  
   
@@ -187,7 +187,7 @@ CWorkerThread() throw();
 ~CWorkerThread() throw();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Appels [CWorkerThread::Shutdown](#shutdown).  
   
 ##  <a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle  
@@ -229,9 +229,9 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 ### <a name="remarks"></a>Remarques  
  Cette méthode doit être appelée pour initialiser l’objet après la création ou après un appel à [CWorkerThread::Shutdown](#shutdown).  
   
- Deux ou plusieurs `CWorkerThread` objets utilisent le même thread de travail, un d’eux sans passer d’arguments puis passez un pointeur vers cet objet pour initialiser le `Initialize` méthodes des autres. Les objets sont initialisés à l’aide du pointeur doivent être fermés avant que l’objet utilisé pour les initialiser.  
+ Deux ou plusieurs `CWorkerThread` objets utilisent le même thread de travail, un d’eux sans passer d’arguments puis passez un pointeur vers cet objet pour initialiser le `Initialize` méthodes de toutes les autres. Les objets sont initialisés à l’aide du pointeur doivent être arrêtés avant de l’objet utilisé pour les initialiser.  
   
- Consultez la page [CWorkerThread::Shutdown](#shutdown) pour plus d’informations sur les modifications de comportement de cette méthode lorsque initialisé à l’aide d’un pointeur vers un objet existant.  
+ Consultez [CWorkerThread::Shutdown](#shutdown) pour plus d’informations sur les modifications de comportement de cette méthode lors de l’initialisation à l’aide d’un pointeur vers un objet existant.  
   
 ##  <a name="removehandle"></a>CWorkerThread::RemoveHandle  
  Appelez cette méthode pour supprimer un handle de la liste des objets.  
@@ -247,8 +247,8 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Notes  
- Lorsque le handle est supprimé [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) seront appelées sur l’objet associé a été passé à [AddHandle](#addhandle). Si cet appel échoue, `CWorkerThread` appellera Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) fonction sur le handle.  
+### <a name="remarks"></a>Remarques  
+ Lorsque le handle est supprimé [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) sera appelée sur l’objet associé a été passé à [AddHandle](#addhandle). Si cet appel échoue, `CWorkerThread` appellera Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) fonction sur le handle.  
   
 ##  <a name="shutdown"></a>CWorkerThread::Shutdown  
  Appelez cette méthode pour arrêter le thread de travail.  
@@ -259,13 +259,13 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
   
 ### <a name="parameters"></a>Paramètres  
  `dwWait`  
- Durée en millisecondes d’attente pour le thread de travail pour l’arrêter.  
+ La durée en millisecondes d’attente pour le thread de travail pour l’arrêter. ATL_WORKER_THREAD_WAIT par défaut est 10 secondes. Si nécessaire, vous pouvez définir votre propre valeur pour ce symbole avant d’inclure atlutil.h. 
   
 ### <a name="return-value"></a>Valeur de retour  
- Renvoie la valeur S_OK réussite, ou une erreur HRESULT en cas d’échec, par exemple si la valeur de délai d’attente, `dwWait`, est dépassée.  
+ Retourne S_OK en cas de réussite ou une erreur HRESULT d’échec, par exemple si la valeur de délai d’attente, `dwWait`, est dépassée.  
   
 ### <a name="remarks"></a>Remarques  
- Pour réutiliser l’objet, appelez [CWorkerThread::Initialize](#initialize) après l’appel de cette méthode.  
+ Pour réutiliser l’objet, appelez [CWorkerThread::Initialize](#initialize) après avoir appelé cette méthode.  
   
  Notez que l’appel **arrêt** sur un objet initialisé avec un pointeur vers un autre `CWorkerThread` objet n’a aucun effet et renvoie toujours S_OK.  
   
@@ -273,5 +273,5 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
  [Classes](../../atl/reference/atl-classes.md)   
  [Multithreading : Création de Threads de travail](../../parallel/multithreading-creating-worker-threads.md)   
- [Interface de IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)
+ [IWorkerThreadClient, interface](../../atl/reference/iworkerthreadclient-interface.md)
 

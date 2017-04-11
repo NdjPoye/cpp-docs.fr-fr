@@ -38,12 +38,12 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 6db3ae9e610605524683e984f2aba602b1daf0d4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: f2d5e28f39159b097c4e00e11518295b2872a84b
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="catlwinmodule-class"></a>CAtlWinModule (classe)
+# <a name="catlwinmodule-class"></a>Classe de CAtlWinModule
 Cette classe prend en charge pour les composants de fenêtrage ATL.  
   
 > [!IMPORTANT]
@@ -69,10 +69,10 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 |Nom|Description|  
 |----------|-----------------|  
 |[CAtlWinModule::AddCreateWndData](#addcreatewnddata)|Ajoute un objet de données.|  
-|[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|Retourne un pointeur vers l’objet de données de fenêtre module.|  
+|[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|Retourne un pointeur vers l’objet de données de module de fenêtre.|  
   
 ## <a name="remarks"></a>Remarques  
- Cette classe prend en charge toutes les classes ATL qui ont besoin de fonctionnalités de fenêtrage.  
+ Cette classe prend en charge toutes les classes ATL qui nécessitent les fonctionnalités de fenêtrage.  
   
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)  
@@ -83,7 +83,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
  **En-tête :** atlbase.h  
   
 ##  <a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
- Cette méthode initialise et ajoute une `_AtlCreateWndData` structure.  
+ Cette méthode initialise et ajoute un `_AtlCreateWndData` structure.  
   
 ```
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
@@ -91,13 +91,13 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
   
 ### <a name="parameters"></a>Paramètres  
  `pData`  
- Pointeur vers le `_AtlCreateWndData` structure à être initialisés et ajoutés au module actuel.  
+ Pointeur vers le `_AtlCreateWndData` structure devant être initialisé et ajoutées au module actuel.  
   
  `pObject`  
  Pointeur vers un objet **cela** pointeur.  
   
 ### <a name="remarks"></a>Remarques  
- Cette méthode appelle [AtlWinModuleAddCreateWndData](http://msdn.microsoft.com/library/8463a6ed-07ea-4aad-92ec-ded681601b32) qui initialise un [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) structure. Cette structure stockera la **cela** pointeur, utilisé pour obtenir l’instance de classe dans les procédures de fenêtre.  
+ Cette méthode appelle [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) qui initialise un [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) structure. Cette structure stockera la **cela** pointeur, permet d’obtenir l’instance de classe dans les procédures de fenêtre.  
   
 ##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
  Constructeur.  

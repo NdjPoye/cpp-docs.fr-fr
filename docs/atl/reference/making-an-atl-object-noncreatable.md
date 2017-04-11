@@ -35,19 +35,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: b812c2d4bfeb0663d62051c05829f25dc7139faf
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 9ee276d86478bb4a7b6c9839378183bfd49533d6
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Rendre un objet ATL comme Noncreatable
-Vous pouvez modifier les attributs d’un objet COM fondés sur ATL afin qu’un client ne peut pas créer directement l’objet. Dans ce cas, l’objet est retourné via un appel de méthode sur un autre objet plutôt que créée directement.  
+Vous pouvez modifier les attributs d’un objet COM fondés sur ATL afin qu’un client ne peut pas créer directement l’objet. Dans ce cas, l’objet serait être retournée via un appel de méthode sur un autre objet au lieu créé directement.  
   
 ### <a name="to-make-an-object-noncreatable"></a>Pour rendre un objet comme noncreatable  
   
-1.  Supprimer le [OBJECT_ENTRY_AUTO](http://msdn.microsoft.com/library/5a0f4fa5-0905-43d2-b337-e22f979c9e4c) pour l’objet. Si vous souhaitez que l’objet comme noncreatable mais le contrôle, remplacez OBJECT_ENTRY_AUTO avec [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](http://msdn.microsoft.com/library/abdc093c-6502-42de-8419-b7ebf45299d1).  
+1.  Supprimer le [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) pour l’objet. Si vous souhaitez que l’objet comme noncreatable mais le contrôle à inscrire, remplacez OBJECT_ENTRY_AUTO avec [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto).  
   
-2.  Ajouter la [noncreatable](../../windows/noncreatable.md) attribut la coclasse dans le fichier .idl. Exemple :  
+2.  Ajouter le [noncreatable](../../windows/noncreatable.md) d’attribut à la coclasse dans le fichier .idl. Exemple :  
   
  ```  
  [  
@@ -62,10 +62,10 @@ Vous pouvez modifier les attributs d’un objet COM fondés sur ATL afin qu’un
   
 ## <a name="see-also"></a>Voir aussi  
  [Assistant Projet ATL](../../atl/reference/atl-project-wizard.md)   
- [Types de projets Visual C++](../../ide/visual-cpp-project-types.md)   
- [Création de projets de bureau à l’aide des Assistants Application](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Programmation avec ATL et le Code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [Principes de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
- [Configurations des projets ATL par défaut](../../atl/reference/default-atl-project-configurations.md)
+ [Types de projet Visual C++](../../ide/visual-cpp-project-types.md)   
+ [Création des projets du Bureau à l’aide des Assistants Application](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Programmation avec ATL et le Code d’exécution C](../../atl/programming-with-atl-and-c-run-time-code.md)   
+ [Notions de base des objets ATL COM](../../atl/fundamentals-of-atl-com-objects.md)   
+ [Configurations de projet ATL par défaut](../../atl/reference/default-atl-project-configurations.md)
 
 

@@ -36,12 +36,12 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: aae76ec5df3fc8d7541cf967cb4a9bb9cd3484a1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 3b6f4264a65a824a57b6cffa201424a1a61cf5e6
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="catldebuginterfacesmodule-class"></a>CAtlDebugInterfacesModule (classe)
+# <a name="catldebuginterfacesmodule-class"></a>Classe de CAtlDebugInterfacesModule
 Cette classe prend en charge pour les interfaces de débogage.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -50,8 +50,8 @@ Cette classe prend en charge pour les interfaces de débogage.
 class CAtlDebugInterfacesModule
 ```  
   
-## <a name="remarks"></a>Remarques  
- `CAtlDebugInterfacesModule`Fournit la prise en charge requis pour les interfaces de débogage. Il est inclus dans tout projet qui définit le symbole [_ATL_DEBUG_QI](http://msdn.microsoft.com/library/4f1feddf-1469-42ad-a2f7-5a816d1c0bc5).  
+## <a name="remarks"></a>Notes  
+ `CAtlDebugInterfacesModule`Fournit la prise en charge requis pour les interfaces de débogage. Il est inclus dans tous les projets qui définit le symbole [_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi).  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  

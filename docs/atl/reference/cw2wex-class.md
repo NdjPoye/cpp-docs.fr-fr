@@ -38,12 +38,12 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 9382f8404c1469b3f847500f35ab26499b6579bc
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 16b9cb286f71fa01da4b763188ff120f31ad9de7
+ms.lasthandoff: 03/31/2017
 
 ---
-# <a name="cw2wex-class"></a>CW2WEX (classe)
+# <a name="cw2wex-class"></a>Classe de CW2WEX
 Cette classe est utilisée par les macros de conversion de chaînes `CW2TEX` et `CT2WEX`et le typedef `CW2W`.  
   
 > [!IMPORTANT]
@@ -82,14 +82,14 @@ class CW2WEX
 |[CW2WEX::m_psz](#m_psz)|Le membre de données qui stocke la chaîne source.|  
 |[CW2WEX::m_szBuffer](#m_szbuffer)|La mémoire tampon statique, utilisé pour stocker la chaîne convertie.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  À moins que des fonctionnalités supplémentaires sont requises, utilisez `CW2TEX`, `CT2WEX`, ou `CW2W` dans votre code.  
   
- Cette classe contient une mémoire tampon de taille fixe statique qui est utilisé pour stocker le résultat de la conversion. Si le résultat est trop grand pour tenir dans la mémoire tampon statique, la classe alloue de la mémoire avec `malloc` et libère la mémoire quand l'objet passe en dehors de l'étendue. Cela garantit que, contrairement au texte de macros de conversion disponibles dans les versions précédentes d’ATL, cette classe est sûr à utiliser dans des boucles et qu’il ne dépassement de la pile.  
+ Cette classe contient une mémoire tampon de taille fixe statique qui est utilisé pour stocker le résultat de la conversion. Si le résultat est trop grand pour tenir dans la mémoire tampon statique, la classe alloue de la mémoire avec `malloc` et libère la mémoire quand l'objet passe en dehors de l'étendue. Cela garantit que, contrairement au texte des macros de conversion disponibles dans les versions précédentes d’ATL, cette classe est plus sûr d’utiliser dans les boucles et qu’il ne sera pas dépassement de la pile.  
   
- Si la classe tente d’allouer de la mémoire sur le tas et échoue, il appellera `AtlThrow` avec un argument de **E_OUTOFMEMORY**.  
+ Si la classe tente d’allouer de la mémoire sur le tas et qu’il échoue, il appellera `AtlThrow` avec un argument de **E_OUTOFMEMORY**.  
   
- Par défaut, les classes de conversion ATL et les macros utilisent la page de codes ANSI du thread actuel pour la conversion.  
+ Par défaut, les macros et les classes de conversion ATL utilisent page de codes ANSI du thread actuel pour la conversion.  
   
  Les macros suivantes sont basées sur cette classe :  
   
@@ -101,10 +101,10 @@ class CW2WEX
   
 - `CW2W`  
   
- Pour une description de ces macros de conversion de texte, consultez [Macros de Conversion de chaînes de MFC et ATL](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863).  
+ Pour en savoir plus sur ces macros de conversion de texte, consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md).  
   
 ## <a name="example"></a>Exemple  
- Consultez la page [ATL et MFC Macros de Conversion de chaînes](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.  
+ Consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlconv.h  
@@ -152,7 +152,7 @@ wchar_t m_szBuffer[t_nBufferLength];
 ```  
   
 ##  <a name="operator_lpwstr"></a>CW2WEX::operator LPWSTR  
- Opérateur de cast.  
+ Opérateur de conversion.  
   
 ```  
 operator LPWSTR() const throw();
@@ -162,10 +162,10 @@ operator LPWSTR() const throw();
  Retourne la chaîne de texte en tant que type `LPWSTR`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CA2AEX (classe)](../../atl/reference/ca2aex-class.md)   
- [CA2CAEX (classe)](../../atl/reference/ca2caex-class.md)   
- [CA2WEX (classe)](../../atl/reference/ca2wex-class.md)   
- [CW2AEX (classe)](../../atl/reference/cw2aex-class.md)   
- [CW2CWEX (classe)](../../atl/reference/cw2cwex-class.md)   
+ [Classe de CA2AEX](../../atl/reference/ca2aex-class.md)   
+ [Classe de CA2CAEX](../../atl/reference/ca2caex-class.md)   
+ [Classe de CA2WEX](../../atl/reference/ca2wex-class.md)   
+ [Classe de CW2AEX](../../atl/reference/cw2aex-class.md)   
+ [Classe de CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
 

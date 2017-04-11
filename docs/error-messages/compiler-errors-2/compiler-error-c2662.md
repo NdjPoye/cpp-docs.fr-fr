@@ -1,40 +1,56 @@
 ---
-title: "Erreur du compilateur C2662 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2662"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2662"
+title: Erreur du compilateur C2662 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2662
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Erreur du compilateur C2662
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: aa2c22d7fbe8b017617fcad41327feef7f8fd19a
+ms.lasthandoff: 04/04/2017
 
-'fonction' : impossible de convertir un pointeur 'this' de 'type1' en 'type2'  
+---
+# <a name="compiler-error-c2662"></a>Erreur du compilateur C2662
+'fonction' : Impossible de convertir un pointeur 'this' de 'type1' en 'type2'  
   
- Le compilateur n'a pas pu convertir le pointeur `this` de `type1`en `type2`.  
+ Le compilateur n’a pas pu convertir le `this` pointeur à partir de `type1` à `type2`.  
   
- Cette erreur peut être provoquée en appelant une fonction membre non `const` sur un objet `const`.  Résolutions possibles :  
+ Cette erreur peut être provoquée en appelant un non -`const` fonction membre sur une `const` objet.  Solutions possibles :  
   
--   Supprimez `const` de la déclaration de l'objet.  
+-   Supprimer le `const` à partir de la déclaration d’objet.  
   
--   Ajoutez `const` à la fonction membre.  
+-   Ajouter `const` à la fonction membre.  
   
- L'exemple suivant génère l'erreur C2662 :  
+ L’exemple suivant génère l’erreur C2662 :  
   
 ```  
 // C2662.cpp  
@@ -50,7 +66,7 @@ int main() {
 }  
 ```  
   
- Lors de la compilation avec **\/clr**, vous ne pouvez pas appeler une fonction sur un type managé qualifié `const` ou `volatile`.  Vous ne pouvez pas déclarer une fonction membre const d'une classe managée ; il est donc impossible d'appeler des méthodes sur des objets managés const.  
+ Lors de la compilation avec **/CLR**, vous ne pouvez pas appeler une fonction sur un `const` ou `volatile` qualifié du type managé. Vous ne pouvez pas déclarer une fonction membre const d’une classe managée, donc vous ne pouvez pas appeler des méthodes sur des objets gérés const.  
   
 ```  
 // C2662_b.cpp  
@@ -76,7 +92,7 @@ ref struct N {
 };  
 ```  
   
- L'exemple suivant génère l'erreur C2662 :  
+ L’exemple suivant génère l’erreur C2662 :  
   
 ```  
 // C2662_c.cpp  
