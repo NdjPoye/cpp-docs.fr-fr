@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 73def19ecc0577d35054a7384d57c88fd2760499
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: ca7c5b1e5042ab134ad72a80986435448f5bec20
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="message-map-macros-mfc"></a>Macros de table des messages (MFC)
@@ -55,6 +55,7 @@ Pour prendre en charge les tables des messages, la bibliothèque MFC fournit les
 |-|-|  
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|Déclare qu’une table des messages servira dans une classe pour mapper les messages à des fonctions (doit être utilisé dans la déclaration de classe).|  
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|Commence la définition d’une table des messages (doit être utilisé dans l’implémentation de classe).|  
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|Commence la définition d’une table des messages sur un type de classe qui contient un argument de modèle unique. |
 |[END_MESSAGE_MAP](#end_message_map)|Termine la définition d’une table des messages (doit être utilisé dans l’implémentation de classe).|  
   
 ### <a name="message-mapping-macros"></a>Macros de mappage des messages  
@@ -81,34 +82,6 @@ Pour prendre en charge les tables des messages, la bibliothèque MFC fournit les
   
  Pour plus d’informations sur les tables des messages, la déclaration de la table des messages et des macros de délimitation et les macros de mappage des messages, consultez [tables des messages](../../mfc/reference/message-maps-mfc.md) et [gestion des messages et des rubriques de mappage](../../mfc/message-handling-and-mapping.md). Pour plus d’informations sur les plages de la table des messages, consultez [gestionnaires pour les plages de la table des messages](../../mfc/handlers-for-message-map-ranges.md).  
 
-## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
- Déclare que la classe définit une table des messages. Chaque `CCmdTarget`-classe dérivée dans votre programme doit fournir une table des messages pour traiter les messages.  
-  
-### <a name="syntax"></a>Syntaxe  
-  
-```    
-DECLARE_MESSAGE_MAP( )  
-```  
-  
-### <a name="remarks"></a>Remarques  
- Utilisez le `DECLARE_MESSAGE_MAP` (macro) à la fin de votre déclaration de classe. Ensuite, dans le fichier .cpp qui définit les fonctions membres de la classe, utilisez le `BEGIN_MESSAGE_MAP` (macro), les entrées de la macro pour chacun de vos fonctions de gestionnaire de messages et le `END_MESSAGE_MAP` (macro).  
-  
-> [!NOTE]
->  Si vous déclarez un membre après `DECLARE_MESSAGE_MAP`, vous devez spécifier un nouveau type d’accès (**public**, `private`, ou `protected`) pour eux.  
-  
- Pour plus d’informations sur le message est mappé et le `DECLARE_MESSAGE_MAP` (macro), consultez [gestion des messages et mappage des](../../mfc/message-handling-and-mapping.md).  
-  
-### <a name="example"></a>Exemple  
-```cpp  
-class CMainFrame : public CMDIFrameWnd
-{
-   DECLARE_MESSAGE_MAP()
-
-   // Remainder of class declaration omitted.
-``` 
-  
-### <a name="requirements"></a>Spécifications  
- **En-tête :** afxwin.h  
 
 ## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
 Commence la définition de votre table des messages.  
@@ -141,6 +114,61 @@ END_MESSAGE_MAP()
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h 
 
+##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+Commence la définition d’une table des messages sur un type de classe qui contient un argument de modèle unique.  
+   
+### <a name="syntax"></a>Syntaxe  
+  ```
+BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )  
+```
+### <a name="parameters"></a>Paramètres  
+ `theClass`  
+ Spécifie le nom de la classe dont le message mapper.    
+ `type_name`  
+ Le nom du paramètre de modèle spécifié pour la classe.    
+ `baseClass`  
+ Spécifie le nom de la classe de base `theClass`.  
+   
+### <a name="remarks"></a>Remarques  
+ Cette macro est semblable à la [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map) macro ; Toutefois, cette macro est conçue pour les classes contenant un argument de modèle unique.  
+  
+ Dans la section d’implémentation de méthode de votre classe, démarrez la table des messages avec le **BEGIN_TEMPLATE_MESSAGE_MAP** macro ; puis ajoutez les entrées de macro pour chacune de vos méthodes de gestionnaire de messages, comme vous le feriez pour une table des messages standard. Comme avec la **BEGIN_MESSAGE_MAP** (macro), effectuer un mappage de message de modèle avec le [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) (macro).  
+  
+ Pour plus d’informations sur l’implémentation des tables des messages pour les classes de modèle, consultez [Comment : créer une table des messages pour une classe de modèle](../how-to-create-a-message-map-for-a-template-class.md).  
+   
+### <a name="requirements"></a>Spécifications  
+ **En-tête :** afxwin.h  
+ 
+## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
+ Déclare que la classe définit une table des messages. Chaque `CCmdTarget`-classe dérivée dans votre programme doit fournir une table des messages pour traiter les messages.  
+  
+### <a name="syntax"></a>Syntaxe  
+  
+```    
+DECLARE_MESSAGE_MAP( )  
+```  
+  
+### <a name="remarks"></a>Remarques  
+ Utilisez le `DECLARE_MESSAGE_MAP` (macro) à la fin de votre déclaration de classe. Ensuite, dans le fichier .cpp qui définit les fonctions membres de la classe, utilisez le `BEGIN_MESSAGE_MAP` (macro), les entrées de la macro pour chacun de vos fonctions de gestionnaire de messages et le `END_MESSAGE_MAP` (macro).  
+  
+> [!NOTE]
+>  Si vous déclarez un membre après `DECLARE_MESSAGE_MAP`, vous devez spécifier un nouveau type d’accès (**public**, `private`, ou `protected`) pour eux.  
+  
+ Pour plus d’informations sur le message est mappé et le `DECLARE_MESSAGE_MAP` (macro), consultez [gestion des messages et mappage des](../../mfc/message-handling-and-mapping.md).  
+  
+### <a name="example"></a>Exemple  
+```cpp  
+class CMainFrame : public CMDIFrameWnd
+{
+   DECLARE_MESSAGE_MAP()
+
+   // Remainder of class declaration omitted.
+``` 
+  
+### <a name="requirements"></a>Spécifications  
+ **En-tête :** afxwin.h  
+
+
 ## <a name="end_message_map"></a>END_MESSAGE_MAP
 Met fin à la définition de votre table des messages.  
   
@@ -150,7 +178,7 @@ Met fin à la définition de votre table des messages.
 END_MESSAGE_MAP( )  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pour plus d’informations sur le message est mappé et le `END_MESSAGE_MAP` (macro), consultez [gestion des messages et mappage des](../../mfc/message-handling-and-mapping.md).  
   
 ### <a name="requirements"></a>Spécifications  
@@ -203,7 +231,7 @@ ON_COMMAND_EX(id, memberFxn);
  `memberFxn`  
  Le nom de la fonction de gestionnaire de messages à laquelle la commande est mappée.  
    
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Remarques 
 Une forme étendue de gestionnaires de messages de commande est disponible pour des utilisations avancées. Le `ON_COMMAND_EX` macro est utilisée pour ces gestionnaires de messages, et il fournit un sur-ensemble de la fonctionnalité [ON_COMMAND] (#on_command).  Fonctions membres de gestionnaire de commandes étendue prennent un seul paramètre, un **UINT** contenant l’ID de commande et retourner un **BOOL**. La valeur de retour doit être TRUE pour 
 
 Cette macro est mappé à un message de commande à une fonction membre étendu de gestionnaire de commandes.  
@@ -250,7 +278,7 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
  `memberFxn`  
  Le nom de la fonction de gestionnaire de messages à laquelle la commande est mappée.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Les messages de notification de contrôle sont ceux envoyés à partir d’un contrôle à sa fenêtre parente.  
   
  Il doit y avoir un seul `ON_CONTROL` instruction macro dans votre table des messages pour chaque message de notification de contrôle qui doit être mappée à une fonction de gestionnaire de messages.  
@@ -459,7 +487,7 @@ ON_REGISTERED_MESSAGE( nMessageVariable, memberFxn )
  `memberFxn`  
  Le nom de la fonction de gestionnaire de messages à laquelle le message est mappé.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette macro indique quelle est la fonction gère le message enregistré.  
   
  Pour plus d’informations et d’exemples, consultez [gestion des messages et mappage des](../../mfc/message-handling-and-mapping.md).  
@@ -519,7 +547,7 @@ ON_THREAD_MESSAGE( message, memberFxn )
  `memberFxn`  
  Le nom de la `CWinThread`-message-fonction de gestionnaire à laquelle le message est mappé.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  `ON_THREAD_MESSAGE`doit être utilisé à la place de `ON_MESSAGE` lorsque vous avez un `CWinThread` classe. Les messages définis par l’utilisateur sont des messages qui ne sont pas standard Windows **WM_MESSAGE** messages. Il doit y avoir un seul `ON_THREAD_MESSAGE` instruction macro dans votre table des messages pour tous les messages définis par l’utilisateur qui doivent être mappé à une fonction de gestionnaire de messages.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -571,7 +599,7 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
  `memberFxn`  
  Le nom de la fonction de gestionnaire de messages à laquelle les commandes sont mappées.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La plage des identificateurs commence par `id1` et se termine par `id2`.  
   
  Utilisez `ON_COMMAND_RANGE` pour mapper une plage d’ID de commande de la fonction d’un seul membre. Utilisez [ON_COMMAND](#on_command) pour mapper une seule commande à une fonction membre. Une seule entrée de table des messages peut correspondre à un ID de commande donné. Autrement dit, vous ne peut pas mapper une commande à plusieurs gestionnaires. Pour plus d’informations sur les plages de mappage des messages, consultez [gestionnaires pour les plages de la table des messages](../../mfc/handlers-for-message-map-ranges.md).  

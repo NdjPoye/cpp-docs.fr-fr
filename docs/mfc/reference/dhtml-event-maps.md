@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 59d41497bafd9782c0849a03e0354e338b7f8467
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 6d58bdd55887962bac4644df0ab93f8f5dfe9835
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="dhtml-event-maps"></a>DHTML, tables d'événements
@@ -116,7 +116,7 @@ BEGIN_DHTML_EVENT_MAP(className)
  `className`  
  Le nom de la classe contenant la table d’événements DHTML. Cette classe doit dériver directement ou indirectement [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) et inclure le [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) macro dans sa définition de classe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ajouter une table d’événements DHTML à votre classe pour fournir des informations à **CDHtmlDialog** qui peut être utilisé pour acheminer les événements déclenchés par les éléments HTML ou des contrôles ActiveX dans une page web aux fonctions de gestionnaire dans votre classe.  
   
  Place le `BEGIN_DHTML_EVENT_MAP` suivie de macro dans le fichier d’implémentation (.cpp) de la classe `DHTML_EVENT` macros pour les événements de la classe est de gérer (par exemple, `DHTML_EVENT_ONMOUSEOVER` pour les événements de souris). Utilisez le [END_DHTML_EVENT_MAP](#end_dhtml_event_map) macro pour marquer la fin de la table d’événements. Ces macros implémentent la fonction suivante :  
@@ -137,10 +137,10 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
  `className`  
  Le nom de la classe contenant la table d’événements DHTML. Cette classe doit dériver directement ou indirectement [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) et inclure le [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) macro dans sa définition de classe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ajouter une table d’événements DHTML à votre classe pour fournir des informations à **CDHtmlDialog** qui peut être utilisé pour acheminer les événements déclenchés par les éléments HTML ou des contrôles ActiveX dans une page web aux fonctions de gestionnaire dans votre classe.  
   
- Place le `BEGIN_DHTML_EVENT_MAP` suivie de macro dans le fichier de définition (.h) de la classe `DHTML_EVENT` macros pour les événements de la classe est de gérer (par exemple, `DHTML_EVENT_ONMOUSEOVER` pour les événements de souris). Utilisez le [END_DHTML_EVENT_MAP_INLINE](http://msdn.microsoft.com/library/0cfec092-20ee-49f3-bc38-56d6a5572db2) macro pour marquer la fin de la table d’événements. Ces macros implémentent la fonction suivante :  
+ Place le `BEGIN_DHTML_EVENT_MAP` suivie de macro dans le fichier de définition (.h) de la classe `DHTML_EVENT` macros pour les événements de la classe est de gérer (par exemple, `DHTML_EVENT_ONMOUSEOVER` pour les événements de souris). Utilisez le [END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline) macro pour marquer la fin de la table d’événements. Ces macros implémentent la fonction suivante :  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
@@ -155,7 +155,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 DECLARE_DHTML_EVENT_MAP()   
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette macro doit être utilisée dans la définition de [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)-classes dérivées.  
   
  Utilisez [BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map) ou [BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline) pour implémenter le mappage.  
@@ -184,7 +184,7 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -207,7 +207,7 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -277,7 +277,7 @@ DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -297,7 +297,7 @@ DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -337,7 +337,7 @@ DHTML_EVENT_ONCHANGE(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -357,7 +357,7 @@ DHTML_EVENT_ONCLICK(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -397,7 +397,7 @@ DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -458,7 +458,7 @@ DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -479,7 +479,7 @@ DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -501,7 +501,7 @@ DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -523,7 +523,7 @@ DHTML_EVENT_ONFOCUS(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -545,7 +545,7 @@ DHTML_EVENT_ONHELP(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -589,7 +589,7 @@ DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -611,7 +611,7 @@ DHTML_EVENT_ONKEYUP(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -633,7 +633,7 @@ DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -677,7 +677,7 @@ DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -699,7 +699,7 @@ DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -743,7 +743,7 @@ DHTML_EVENT_ONRESIZE(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -765,7 +765,7 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -809,7 +809,7 @@ DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
  `memberFxn`  
  La fonction de gestionnaire pour l’événement.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette macro permet d’ajouter une entrée à la [table d’événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.  
   
 ### <a name="requirements"></a>Spécifications  
@@ -859,7 +859,7 @@ BEGIN_DHTML_URL_EVENT_MAP()
  
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Put `BEGIN_DHTML_URL_EVENT_MAP` dans le fichier d’implémentation de votre [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-classe dérivée. Utilisez-le avec [incorporé DHTML, tables d’événements](#begin_embed_dhtml_event_map) et [entrées d’URL](#begin_url_entries), puis fermez-le avec [END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map). Inclure le [DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map) macro au sein de la définition de classe.  
   
 ### <a name="example"></a>Exemple  
@@ -908,7 +908,7 @@ BEGIN_URL_ENTRIES(className)
  `className`  
  Le nom de la classe contenant la table d’entrée d’événement URL. Cette classe doit dériver directement ou indirectement [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Table d’entrée d’événement l’URL doit être à l’intérieur d’un [table d’événements DHTML et URL](#begin_dhtml_url_event_map)).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Car une boîte de dialogue DHTML multipage se compose de plusieurs pages HTML, les entrées d’URL d’événements sont utilisées pour mapper des URL ou HTML ressources correspondant [incorporé DHTML, tables d’événements](#begin_embed_dhtml_event_map). Put `URL_EVENT_ENTRY` macros entre `BEGIN_URL_ENTRIES` et [END_URL_ENTRIES](#end_url_entries) macros.  
   
 ### <a name="example"></a>Exemple  
