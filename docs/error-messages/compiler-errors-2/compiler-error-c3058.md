@@ -1,41 +1,76 @@
 ---
-title: "Erreur du compilateur C3058 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C3058"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3058"
+title: Erreur du compilateur C3058 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C3058
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3058
 ms.assetid: 669d08c8-0b58-4351-88aa-c6e6e1af481c
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Erreur du compilateur C3058
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 59af9d4586607cc532e2dd8e206fa30cee95b755
+ms.lasthandoff: 04/12/2017
 
-'symbol' : symbole non déclaré en tant que 'threadprivate' avant d’être utilisé dans la clause 'copyin'  
+---
+# <a name="compiler-error-c3058"></a>Erreur du compilateur C3058
+'symbol' : symbole non déclaré en tant que 'threadprivate' avant d’être utilisé dans la clause 'copyin'  
   
- Un symbole doit d’abord être déclaré en tant que [threadprivate](../../parallel/openmp/reference/threadprivate.md) avant de pouvoir être utilisé dans une clause [copyin](../../parallel/openmp/reference/copyin.md).  
+ Un symbole doit d’abord être déclaré [threadprivate](../../parallel/openmp/reference/threadprivate.md) avant de pouvoir être utilisé dans un [copyin](../../parallel/openmp/reference/copyin.md) clause.  
   
- L’exemple suivant génère l’erreur C3058 :  
-  
-```  
-// C3058.cpp // compile with: /openmp int x, y, z; #pragma omp threadprivate(x, z) void test() { #pragma omp parallel copyin(x, y)   // C3058 { } }  
-```  
-  
- Résolution possible :  
+ L’exemple suivant génère l’erreur C3058 :  
   
 ```  
-// C3058b.cpp // compile with: /openmp /LD int x, y, z; #pragma omp threadprivate(x, y) void test() { #pragma omp parallel copyin(x, y) { } }  
+// C3058.cpp  
+// compile with: /openmp  
+int x, y, z;  
+#pragma omp threadprivate(x, z)  
+  
+void test() {  
+   #pragma omp parallel copyin(x, y)   // C3058  
+   {  
+   }  
+}  
+```  
+  
+ Résolution possible :  
+  
+```  
+// C3058b.cpp  
+// compile with: /openmp /LD  
+int x, y, z;  
+#pragma omp threadprivate(x, y)  
+  
+void test() {  
+   #pragma omp parallel copyin(x, y)  
+   {  
+   }  
+}  
 ```

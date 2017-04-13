@@ -1,5 +1,5 @@
 ---
-title: Classe de la classe CInternetException | Documents Microsoft
+title: Classe de CInternetException | Documents Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -40,12 +40,12 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: a128095cfc443f0ea8de4cb4028b903929a83f47
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 1831f868b7388cbc6382e26fca92280c3b880276
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="cinternetexception-class"></a>Classe de la classe CInternetException
+# <a name="cinternetexception-class"></a>Classe de CInternetException
 Représente une condition d'exception liée à une opération Internet.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -96,17 +96,17 @@ CInternetException(DWORD dwError);
  L’erreur qui a provoqué l’exception.  
   
 ### <a name="remarks"></a>Notes  
- Pour lever une classe CInternetException, appelez la fonction globale MFC [AfxThrowInternetException](http://msdn.microsoft.com/library/c9645b10-9541-48b2-8b0c-94ca33fed3cb).  
+ Pour lever une CInternetException, appelez la fonction globale MFC [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).  
   
 ##  <a name="m_dwcontext"></a>CInternetException::m_dwContext  
- La valeur de contexte associée à l’opération Internet connexe.  
+ La valeur de contexte associée à l’opération Internet associée.  
   
 ```  
 DWORD_PTR m_dwContext;  
 ```  
   
-### <a name="remarks"></a>Notes  
- L’identificateur de contexte est spécifié à l’origine dans [CInternetSession](../../mfc/reference/cinternetsession-class.md) et passées par MFC [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- et [CInternetFile](../../mfc/reference/cinternetfile-class.md)-classes dérivées. Vous pouvez remplacer cette valeur par défaut et affecter l’un `dwContext` paramètre une valeur de votre choix. `dwContext`est associé à une opération de l’objet donné. `dwContext`identifie les informations d’état de l’opération retournées par [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
+### <a name="remarks"></a>Remarques  
+ L’identificateur de contexte est spécifiée à l’origine dans [CInternetSession](../../mfc/reference/cinternetsession-class.md) et passées par MFC pour [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- et [CInternetFile](../../mfc/reference/cinternetfile-class.md)-classes dérivées. Vous pouvez remplacer cette valeur par défaut et affecter l’un `dwContext` paramètre une valeur de votre choix. `dwContext`est associé à une opération de l’objet donné. `dwContext`identifie les informations d’état de l’opération retournées par [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
   
 ##  <a name="m_dwerror"></a>CInternetException::m_dwError  
  L’erreur qui a provoqué l’exception.  
@@ -122,6 +122,6 @@ DWORD m_dwError;
   
 ## <a name="see-also"></a>Voir aussi  
  [CException (classe)](../../mfc/reference/cexception-class.md)   
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [CException (classe)](../../mfc/reference/cexception-class.md)
+ [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
+ [CException, classe](../../mfc/reference/cexception-class.md)
 

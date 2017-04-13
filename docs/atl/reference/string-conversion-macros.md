@@ -30,19 +30,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 634e33f4989046767f17fce15377fe6f4959bd8d
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: e322c3af297c288ec6c9ccdb1c04e58d0a5759ff
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="string-conversion-macros"></a>Macros de Conversion de chaînes
 Ces macros fournissent des fonctionnalités de conversion de chaîne.  
   
-|||  
-|-|-|  
-|[Macros de Conversion de chaînes MFC et ATL](string-conversion-macros.md)|Ensemble de macros de conversion entre des types de chaîne.|  
-|[DEVMODE et Macros de Conversion de chaînes TEXTMETRIC](http://msdn.microsoft.com/library/85cebec0-2a18-48e5-9c1c-99d5b7f15425)|Ensemble de macros qui convertissent les chaînes dans `DEVMODE` et `TEXTMETRIC` structures.|  
-  
+ 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>Macros de Conversion de chaînes MFC et ATL  
  Les macros de conversion de chaînes présentées ici sont valides à la fois pour ATL et pour MFC. Pour plus d’informations sur la conversion de chaînes MFC, consultez [TN059 : à l’aide de Macros de Conversion MBCS/Unicode MFC](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) et [MFC Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md).  
   
@@ -80,8 +76,6 @@ MACRONAME( address_of_structure )
 |**_UNICODE** et **OLE2ANSI**|**W**|**A**|  
   
  Le tableau suivant répertorie les `DEVMODE` et `TEXTMETRIC` macros de conversion de chaîne.  
-  
-### <a name="devmode-and-textmetric-string-conversion-macros"></a>DEVMODE et Macros de Conversion de chaînes TEXTMETRIC  
   
 |||  
 |-|-|  

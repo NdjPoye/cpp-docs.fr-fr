@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 6cc89e4278c03f0dc24c4358cf6a53ec25f3b327
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: bbc5e1f78ca1ea15e65fdd76b7ecd2ea0e195b00
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="fatal-error-c1083"></a>Erreur irrécupérable C1083
@@ -58,7 +58,7 @@ Impossible d'ouvrir le fichier 'TypeFichier' : 'fichier' : message
   
  `#include <sys\types.h>`  
   
- **Le fichier n’est pas inclus dans le chemin de recherche du compilateur**  
+ **Le fichier n’est pas inclus dans le chemin d’accès de la recherche du compilateur**  
   
  Le compilateur ne parvient pas à trouver le fichier à l'aide des règles de recherche indiquées par une directive `include` ou `import`. Par exemple, un nom de fichier d'en-tête placé entre guillemets  
   
@@ -68,15 +68,15 @@ Impossible d'ouvrir le fichier 'TypeFichier' : 'fichier' : message
   
  `#include <stdio.h>`  
   
- le compilateur suit un chemin de recherche défini par l’environnement de génération, le **/I** option du compilateur, la **/X** option du compilateur et le **INCLUDE** variable d’environnement. Pour plus d’informations, y compris des détails spécifiques sur l’ordre de recherche utilisé pour rechercher un fichier, consultez [#include, Directive (C/C++)](../../preprocessor/hash-include-directive-c-cpp.md) et [Directive #import](../../preprocessor/hash-import-directive-cpp.md).  
+ le compilateur suit un chemin de recherche défini par l’environnement de génération, le **/I** option du compilateur, le **/X** option du compilateur et le **INCLUDE** variable d’environnement. Pour plus d’informations, y compris des détails spécifiques sur l’ordre de recherche utilisé pour rechercher un fichier, consultez [#include, Directive (C/C++)](../../preprocessor/hash-include-directive-c-cpp.md) et [Directive #import](../../preprocessor/hash-import-directive-cpp.md).  
   
- Même lorsque les fichiers d’en-tête sont listés dans **l’Explorateur de solutions** dans le cadre d’un projet, les fichiers sont trouvés uniquement par le compilateur lorsqu’ils sont référencés par une `include` ou `import` la directive et sont situés sur un chemin de recherche de répertoire. Différents genres de builds peuvent utiliser différents chemins d’accès de recherche. Le **/X** option du compilateur peut être utilisée pour exclure les répertoires du chemin de recherche de fichiers include. Cela permet à des builds distinctes d'utiliser des fichiers Include distincts qui portent le même nom, mais qui sont conservés dans des dossiers différents. Il s'agit d'une alternative à la compilation conditionnelle à l'aide de commandes de préprocesseur. Pour plus d’informations sur la **/X** option du compilateur, consultez [/X (ignorer Standard chemins d’accès Include)](../../build/reference/x-ignore-standard-include-paths.md).  
+ Même lorsque les fichiers d’en-tête sont listés dans **l’Explorateur de solutions** dans le cadre d’un projet, les fichiers sont trouvés uniquement par le compilateur lorsqu’ils sont référencés par une `include` ou `import` directive et sont situés sur un chemin de recherche de répertoire. Différents genres de builds peuvent utiliser différents chemins d’accès de recherche. Le **/X** option du compilateur peut être utilisée pour exclure des répertoires du chemin de recherche du fichier include. Cela permet à des builds distinctes d'utiliser des fichiers Include distincts qui portent le même nom, mais qui sont conservés dans des dossiers différents. Il s'agit d'une alternative à la compilation conditionnelle à l'aide de commandes de préprocesseur. Pour plus d’informations sur la **/X** option du compilateur, consultez [/X (ignorer Standard chemins d’accès Include)](../../build/reference/x-ignore-standard-include-paths.md).  
   
- Lorsque le compilateur est appelé sur la ligne de commande, les variables d’environnement sont souvent utilisées pour spécifier des chemins de recherche. Si le chemin de recherche décrit par le **INCLUDE** variable d’environnement n’est pas définie correctement, une erreur C1083 est générée. Pour plus d’informations sur l’utilisation de variables d’environnement, consultez [Comment : utiliser les Variables d’environnement dans une Build](http://msdn.microsoft.com/Library/7f9e4469-8865-4b59-aab3-3ff26bd36e77).  
+ Lorsque le compilateur est appelé sur la ligne de commande, les variables d’environnement sont souvent utilisées pour spécifier des chemins de recherche. Si le chemin de recherche décrit par le **INCLUDE** variable d’environnement n’est pas définie correctement, une erreur C1083 est générée. Pour plus d’informations sur l’utilisation des variables d’environnement, consultez [Comment : utiliser les Variables d’environnement dans une Build](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).  
   
- Pour résoudre ce problème, corrigez le chemin d’accès utilisé par le compilateur pour rechercher le fichier inclus ou importé. Un nouveau projet utilise les chemins d'accès de recherche par défaut. Vous devrez peut-être modifier le chemin d’accès pour pouvoir ajouter un dossier à votre projet. Si vous compilez sur la ligne de commande, définissez la **INCLUDE** variable d’environnement ou le **/I** option du compilateur pour spécifier le chemin d’accès du fichier. Pour définir le chemin du répertoire include dans Visual Studio, ouvrez le projet **Pages de propriétés** boîte de dialogue, développez **propriétés de Configuration** et **répertoires VC ++**, puis modifiez le **répertoires Include** valeur. Pour plus d’informations sur les répertoires par utilisateur et par projet recherché par le compilateur dans Visual Studio, consultez [Page de propriétés répertoires VC ++](../../ide/vcpp-directories-property-page.md). Pour plus d’informations sur la **/I** option du compilateur, consultez [/I (autres répertoires Include)](../../build/reference/i-additional-include-directories.md).  
+ Pour résoudre ce problème, corrigez le chemin d’accès utilisé par le compilateur pour rechercher le fichier inclus ou importé. Un nouveau projet utilise les chemins d'accès de recherche par défaut. Vous devrez peut-être modifier le chemin d’accès pour pouvoir ajouter un dossier à votre projet. Si vous compilez sur la ligne de commande, définissez la **INCLUDE** variable d’environnement ou le **/I** option du compilateur pour spécifier le chemin d’accès du fichier. Pour définir le chemin d’accès du répertoire include dans Visual Studio, ouvrez le projet **Pages de propriétés** boîte de dialogue, développez **propriétés de Configuration** et **répertoires VC ++**, puis modifiez le **répertoires Include** valeur. Pour plus d’informations sur les répertoires par utilisateur et par projet recherché par le compilateur dans Visual Studio, consultez [Page de propriétés répertoires VC ++](../../ide/vcpp-directories-property-page.md). Pour plus d’informations sur la **/I** option du compilateur, consultez [/I (autres répertoires Include)](../../build/reference/i-additional-include-directories.md).  
   
- **La version incorrecte d’un nom de fichier est incluse**  
+ **Une version incorrecte d’un nom de fichier est incluse**  
   
  Une erreur C1083 peut également indiquer que la version incorrecte d'un fichier a été incluse. Par exemple, une build peut inclure la mauvaise version d'un fichier qui possède une directive `include` pour un fichier d'en-tête non destiné à cette build. Lorsque le fichier d'en-tête est introuvable, le compilateur génère une erreur C1083. Pour résoudre ce problème, utilisez le fichier approprié. N'ajoutez pas le fichier d'en-tête ou le répertoire à la build.  
   
@@ -86,7 +86,7 @@ Impossible d'ouvrir le fichier 'TypeFichier' : 'fichier' : message
   
  **Causes supplémentaires**  
   
--   Le fichier utilise du code managé, mais l’option de compilateur **/clr** n’est pas spécifié. Pour plus d’informations, consultez l’article [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
+-   Le fichier utilise du code managé, mais l’option de compilateur **/CLR** n’est pas spécifié. Pour plus d’informations, consultez l’article [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
 -   Le fichier est compilé à l’aide d’un autre **/ analyze** paramètre de l’option du compilateur que celui utilisé pour la précompilation des en-têtes. (Lorsque les en-têtes d’un projet sont précompilés, tous doivent utiliser le même **/ analyze** paramètres.) Pour plus d’informations, consultez l’article [/analyze (analyse de code)](../../build/reference/analyze-code-analysis.md).  
   

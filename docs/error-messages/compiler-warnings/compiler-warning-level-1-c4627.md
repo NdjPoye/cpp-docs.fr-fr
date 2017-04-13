@@ -1,32 +1,49 @@
 ---
-title: "Avertissement du compilateur (niveau&#160;1) C4627 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C4627"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4627"
+title: Compilateur avertissement (niveau 1) C4627 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C4627
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4627
 ms.assetid: 8840f3e6-b496-423a-8635-eb55d5f854a2
 caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# Avertissement du compilateur (niveau&#160;1) C4627
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: a435eef7397eb98ca500be1c99e92efcb55c8be6
+ms.lasthandoff: 04/12/2017
 
-'\<identificateur\>' : ignoré lors de la recherche d’une utilisation d’un en\-tête précompilé  
+---
+# <a name="compiler-warning-level-1-c4627"></a>Avertissement du compilateur (niveau 1) C4627
+'\<identificateur >': ignoré lors de la recherche une utilisation d’en-tête précompilé  
   
- Lors de la recherche de l’emplacement d’utilisation d’un en\-tête précompilé, le compilateur a rencontré une directive `#include` pour le fichier Include *\<identificateur\>* . Le compilateur ignore la directive `#include`, mais il émet l’avertissement **C4627** si l’en\-tête précompilé ne contient pas le fichier Include *\<identificateur\>*.  
+ Lors de la recherche de l’emplacement où un en-tête précompilé est utilisé, le compilateur a rencontré un `#include` directive pour le *\<identificateur >* fichier include. Le compilateur ignore le `#include` directive, mais il émet l’avertissement **C4627** si l’en-tête précompilé ne contient pas déjà le *\<identificateur >* inclure le fichier.  
   
-## Voir aussi  
- [Création de fichiers d'en\-tête précompilés](../../build/reference/creating-precompiled-header-files.md)
+## <a name="see-also"></a>Voir aussi  
+ [Création de fichiers d’en-tête précompilé](../../build/reference/creating-precompiled-header-files.md)

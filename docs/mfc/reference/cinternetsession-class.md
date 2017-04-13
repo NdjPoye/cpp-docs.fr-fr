@@ -49,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 0d9ff419c0275d9ab426b4e60102918794aa5221
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 1bc8f21cd68741a4b0560ea3e1cb678be50dcf89
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="cinternetsession-class"></a>CInternetSession (classe)
@@ -171,7 +171,7 @@ CInternetSession(
 ### <a name="remarks"></a>Remarques  
  **CInternetSession** est la première fonction Internet appelée par une application. Il initialise les structures de données internes et les prépare pour les appels ultérieurs à partir de l’application.  
   
- Si aucune connexion Internet ne peut être ouverts, `CInternetSession` lève une [AfxThrowInternetException](http://msdn.microsoft.com/library/c9645b10-9541-48b2-8b0c-94ca33fed3cb).  
+ Si aucune connexion Internet ne peut être ouverts, `CInternetSession` lève une [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).  
   
 ### <a name="example"></a>Exemple  
   Consultez l’exemple de [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).  
@@ -200,7 +200,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0. Si l’appel échoue, déterminer la cause du problème en examinant la levée [CInternetException](../../mfc/reference/cinternetexception-class.md) objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Lors du traitement de rappel d’état, vous pouvez fournir l’état sur la progression de l’opération (par exemple, la résolution de nom, la connexion au serveur et ainsi de suite) dans la barre d’état de l’application. Affichage de l’état de l’opération est particulièrement appropriée lors d’une opération à long terme.  
   
  Étant donné que les rappels se produisent pendant le traitement de la demande, l’application doit consacrer moins de temps que possible dans le rappel pour empêcher une dégradation du débit de données sur le réseau. Par exemple, la mise en place d’une boîte de dialogue dans un rappel peut être une opération longue que le serveur met fin à la demande.  
@@ -219,7 +219,7 @@ DWORD_PTR GetContext() const;
 ### <a name="return-value"></a>Valeur de retour  
  Le contexte défini par l’application identificateur.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  [OnStatusCallback](#onstatuscallback) utilise l’ID de contexte retournée par **GetContext** pour signaler l’état d’une application particulière. Par exemple, lorsqu’un utilisateur lance une demande Internet qui implique le retour d’informations d’état, le rappel d’état utilise l’ID de contexte pour signaler l’état sur cette requête particulière. Si l’utilisateur Active deux que les deux impliquent retournant des informations d’état, les demandes Internet `OnStatusCallback` utilise les identificateurs de contexte pour retourner l’état concernant leurs demandes correspondants. Par conséquent, l’identificateur de contexte est utilisé pour toutes les opérations de rappel d’état, et il est associé à la session jusqu'à ce que la session est terminée.  
   
  Pour plus d’informations sur les opérations asynchrones, consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md).  
@@ -261,7 +261,7 @@ static BOOL GetCookie(
   
 - **ERROR_INSUFFICIENT_BUFFER** la valeur transmise dans `dwBufLen` est insuffisant pour copier toutes les données de cookie. La valeur retournée dans `dwBufLen` est la taille de la mémoire tampon nécessaire pour obtenir toutes les données.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Dans la seconde surcharge, MFC récupère les données de cookie dans fourni `CString` objet.  
   
 ##  <a name="getcookielength"></a>CInternetSession::GetCookieLength  
@@ -283,7 +283,7 @@ static DWORD GetCookieLength(
 ### <a name="return-value"></a>Valeur de retour  
  A `DWORD` valeur indiquant la longueur du cookie, stockée dans la mémoire tampon. Zéro si aucun cookie portant le nom indiqué par `pstrCookieName` existe.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette valeur est utilisée par [GetCookie](#getcookie).  
   
 ##  <a name="getftpconnection"></a>CInternetSession::GetFtpConnection  
@@ -357,7 +357,7 @@ CGopherConnection* GetGopherConnection(
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un [objet CGopherConnection](../../mfc/reference/cgopherconnection-class.md) objet. Si l’appel échoue, déterminer la cause du problème en examinant la levée [CInternetException](../../mfc/reference/cinternetexception-class.md) objet.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `GetGopherConnection`se connecte à un serveur gopher, crée et retourne un pointeur vers un `CGopherConnection` objet. Il n’effectue pas une opération spécifique sur le serveur. Par exemple, si vous souhaitez lire ou écrire des données, vous devez effectuer ces opérations en tant qu’étapes distinctes. Consultez les classes [objet CGopherConnection](../../mfc/reference/cgopherconnection-class.md), [CGopherFile](../../mfc/reference/cgopherfile-class.md), et [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) pour plus d’informations sur la recherche de fichiers, ouvrir des fichiers et lire ou écrire dans des fichiers. Pour plus d’informations sur la navigation d’un site FTP, consultez la fonction membre [OpenURL](#openurl). Consultez l’article [de programmation Internet avec WinInet](../../mfc/win32-internet-extensions-wininet.md) pour les étapes de l’exécution des tâches courantes de connexion gopher.  
   
 ##  <a name="gethttpconnection"></a>CInternetSession::GetHttpConnection  
@@ -393,7 +393,7 @@ CHttpConnection* GetHttpConnection(
  Un pointeur vers une chaîne contenant le mot de passe.  
   
  *dwFlags*  
- N’importe quelle combinaison de la **INTERNET_ FLAG_\*** indicateurs. Consultez le tableau dans le **remarques** section de [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) pour obtenir une description de `dwFlags` valeurs.  
+ N’importe quelle combinaison de le **INTERNET_ FLAG_\*** indicateurs. Consultez le tableau dans le **remarques** section de [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) pour obtenir une description de `dwFlags` valeurs.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Un pointeur vers un [objet CHttpConnection](../../mfc/reference/chttpconnection-class.md) objet. Si l’appel échoue, déterminer la cause du problème en examinant la levée [CInternetException](../../mfc/reference/cinternetexception-class.md) objet.  
@@ -508,7 +508,7 @@ CStdioFile* OpenURL(
 |Gopher://|**CGopherFile\***|  
 |FTP : / /|**CInternetFile\***|  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le paramètre `dwFlags` doit inclure **INTERNET_FLAG_TRANSFER_ASCII** ou **INTERNET_FLAG_TRANSFER_BINARY**, mais pas les deux. Les indicateurs restants peuvent être combinées avec l’opérateur de bits `OR` (opérateur) ( **|**).  
   
  `OpenURL`, qui encapsule la fonction Win32 **InternetOpenURL**, permet le téléchargement uniquement, la récupération et la lecture des données à partir d’un serveur Internet. `OpenURL`ne permet d’aucune manipulation de fichier sur un emplacement distant, afin qu’il ne nécessite aucune [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) objet.  
@@ -545,7 +545,7 @@ static BOOL SetCookie(
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, ou **FALSE** dans le cas contraire. Pour obtenir le code d’erreur spécifique, appelez **GetLastError.**  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Cette fonction membre implémente le comportement du message Win32 [InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
 ##  <a name="setoption"></a>CInternetSession::SetOption  
