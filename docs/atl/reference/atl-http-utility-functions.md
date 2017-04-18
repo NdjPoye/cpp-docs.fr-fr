@@ -11,9 +11,9 @@ caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 0f55ad2529ac32647d72336b426e0790f5617561
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 3d32c24173e803e95fb57938f4a3ab62d43b65e0
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="atl-http-utility-functions"></a>Fonctions utilitaires de HTTP ATL
@@ -101,12 +101,12 @@ inline BOOL AtlCombineUrl(
  Pointeur vers une variable qui contient la longueur en caractères de `szBuffer`. Si la fonction réussit, la variable reçoit le nombre de caractères écrits dans la mémoire tampon non compris le caractère null de fin. Si la fonction échoue, la variable reçoit la longueur en octets de la mémoire tampon y compris un espace pour le caractère null de fin.  
   
  `dwFlags`  
- Indicateurs de contrôler le comportement de cette fonction. Consultez [ATL_URL indicateurs](http://msdn.microsoft.com/library/76e8cc5c-4e17-4eb1-ac29-a94d5256c4a7).  
+ Indicateurs de contrôler le comportement de cette fonction. Consultez [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Se comporte comme la version actuelle de [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) mais ne nécessite ne pas de WinInet ou Internet Explorer soit installé.  
   
 ## <a name="atlescapeurl"></a>AtlEscapeUrl
@@ -175,7 +175,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **TRUE** si le caractère d’entrée est unsafe, **FALSE** dans le cas contraire.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Les caractères qui ne doivent pas être utilisées dans les URL peut être testés à l’aide de cette fonction et converti à l’aide [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
 ## <a name="atlunescapeurl"></a>AtlUnescapeUrl

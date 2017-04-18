@@ -1,29 +1,46 @@
 ---
-title: "Avertissement du compilateur (niveau&#160;1) C4187 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C4187"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4187"
+title: Compilateur avertissement (niveau 1) C4187 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C4187
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4187
 ms.assetid: 2443d948-ab7b-472c-af43-5d81e09af677
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Avertissement du compilateur (niveau&#160;1) C4187
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 57e60d442b32904eed344b8de83ff51c5439ff91
+ms.lasthandoff: 04/12/2017
 
-\#import Les attributs 'attribut1' et 'attribut2' sont incompatibles ; tous deux seront ignorés  
+---
+# <a name="compiler-warning-level-1-c4187"></a>Avertissement du compilateur (niveau 1) C4187
+\#importer les attributs 'attribut1' et 'attribut2' sont incompatibles ; tous deux seront ignorés  
   
- Une instruction [\#import](../../preprocessor/hash-import-directive-cpp.md) spécifie les attributs `no_implementation` et `implementation_only`. Tous deux sont ignorés.
+ A [#import](../../preprocessor/hash-import-directive-cpp.md) instruction spécifiée `no_implementation` et `implementation_only` attributs. Tous deux sont ignorés.

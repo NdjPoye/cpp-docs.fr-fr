@@ -49,9 +49,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 0e83114e2e6f062b9cb2164cf71bb25792304de0
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: ceaf02cbe0eedec6e8bd4980d87c025d6aa23615
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="diagnostic-services"></a>Services de diagnostic
@@ -226,9 +226,9 @@ ASSERT_VALID(pObject)
   
 ### <a name="parameters"></a>Paramètres  
  `pObject`  
- Spécifie un objet d’une classe dérivée de `CObject` qui a une version de substitution de la `AssertValid` fonction membre.  
+ Spécifie un objet d’une classe dérivée de `CObject` qui a une version de remplacement de le `AssertValid` fonction membre.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  `ASSERT_VALID`appelle le `AssertValid` fonction membre de l’objet passé comme argument.  
   
  Dans la version Release de MFC, `ASSERT_VALID` n’exécute aucune opération. Dans la version Debug, il valide le pointeur, vérifie par rapport à **NULL**et appelle l’objet propre `AssertValid` fonctions membres. Si une de ces tests échoue, un message d’alerte s’affiche dans la même manière que [ASSERT](#assert).  
@@ -239,7 +239,7 @@ ASSERT_VALID(pObject)
  Pour plus d’informations et d’exemples, consultez [débogage des Applications MFC](/visualstudio/debugger/mfc-debugging-techniques).  
   
 ### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCCObjectSample #19](../../mfc/codesnippet/cpp/diagnostic-services_5.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample ° 19](../../mfc/codesnippet/cpp/diagnostic-services_5.cpp)]  
 
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** afx.h
@@ -251,7 +251,7 @@ ASSERT_VALID(pObject)
 #define  new DEBUG_NEW   
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Vous pouvez utiliser `DEBUG_NEW` partout dans votre programme que vous utiliseriez normalement le **nouveau** opérateur pour allouer le stockage de segment de mémoire.  
   
  En mode débogage (lorsque le **_DEBUG** symbole est défini), `DEBUG_NEW` effectue le suivi du nom de fichier et numéro de ligne pour chaque objet alloué. Ensuite, lorsque vous utilisez la [CMemoryState::DumpAllObjectsSince](cmemorystate-structure.md#dumpallobjectssince) fonction membre, chaque objet alloué avec `DEBUG_NEW` s’affiche avec le nom de fichier et numéro de ligne où il a été alloué.  
@@ -298,14 +298,14 @@ ENSURE_VALID( booleanExpression  )
  `booleanExpression`  
  Spécifie une expression booléenne à tester.  
    
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ces macros vise à améliorer la validation des paramètres. Les macros empêchent le traitement des paramètres incorrects dans votre code. Contrairement à la **ASSERT** macros, le **Vérifiez** macros lèvent une exception en plus de générer une assertion.  
   
  Les macros se comportent de deux façons, selon la configuration de projet. L’appel de macros **ASSERT** et puis lève une exception si l’assertion échoue. Par conséquent, dans les configurations de débogage (autrement dit, où **_DEBUG** est défini) les macros de produisent une assertion et une exception tandis que dans les configurations Release, les macros de générer uniquement l’exception (**ASSERT** n’évalue l’expression dans les configurations Release).  
   
  La macro **ENSURE_ARG** agit comme le **Vérifiez** (macro).  
   
- **ENSURE_VALID** appelle la `ASSERT_VALID` macro (qui a un effet uniquement dans les versions Debug). En outre, **ENSURE_VALID** lève une exception si le pointeur est NULL. Le test de la valeur NULL est effectué dans les configurations Debug et Release.  
+ **ENSURE_VALID** appelle le `ASSERT_VALID` macro (qui a un effet uniquement dans les versions Debug). En outre, **ENSURE_VALID** lève une exception si le pointeur est NULL. Le test de la valeur NULL est effectué dans les configurations Debug et Release.  
   
  Si une de ces tests échoue, un message d’alerte s’affiche dans la même manière que **ASSERT**. La macro lève une exception d’argument non valide si nécessaire.  
 ### <a name="requirements"></a>Spécifications  
@@ -324,7 +324,7 @@ Développe le nom du fichier qui est compilé.
 THIS_FILE    
 ```  
    
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Les informations sont utilisées par le **ASSERT** et **Vérifiez** macros. Les Assistants code et Assistant Application placer la macro dans les fichiers de code source qu’ils créent.  
    
 ### <a name="example"></a>Exemple  
@@ -356,7 +356,7 @@ TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 ```  
   
 ### <a name="remarks"></a>Notes  
- Consultez [ATLTRACE2](http://msdn.microsoft.com/library/467ff555-e7a5-4f94-bdd9-50ee27ab9986) pour obtenir une description de **TRACE**. **TRACE** et `ATLTRACE2` ont le même comportement.  
+ Consultez [ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2) pour obtenir une description de **TRACE**. **TRACE** et `ATLTRACE2` ont le même comportement.  
   
  Dans la version debug des MFC, cette macro envoie la chaîne spécifiée dans le débogueur de l’application actuelle. Dans une version Release, cette macro est compilé en nothing (aucun code n’est effectivement générée).  
   
@@ -376,7 +376,7 @@ VERIFY(booleanExpression)
  `booleanExpression`  
  Spécifie une expression (y compris les valeurs de pointeur) qui prend la valeur zéro ou 0.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Si le résultat est 0, la macro imprime un message de diagnostic et interrompt le programme. Si la condition est différente de zéro, elle ne fait rien.  
   
  Le message de diagnostic se présente sous la forme  
@@ -445,7 +445,7 @@ void AfxDump(const CObject* pOb);
 int  afxMemDF;  
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  `afxMemDF`peut avoir les valeurs suivantes comme spécifié par l’énumération `afxMemDF`:  
   
 - **allocMemDF** Active allocateur de débogage (paramètre par défaut dans la bibliothèque de débogage).  
@@ -469,7 +469,7 @@ throw CMemoryException*
 throw COleException*  
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  S’il s’agit d’une erreur, la fonction lève une exception. Si passé `SCODE` est **E_OUTOFMEMORY**, la fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) en appelant [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). Sinon, la fonction lève un [COleException](../../mfc/reference/coleexception-class.md) en appelant [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
   
  Cette fonction peut être utilisée pour vérifier les valeurs de retour d’appels de fonctions OLE dans votre application. En testant la valeur de retour avec cette fonction dans votre application, vous pouvez correctement réagir aux conditions d’erreur avec un minimum de code.  
@@ -493,7 +493,7 @@ BOOL  AfxCheckMemory();
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si aucune erreur de mémoire ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Si la fonction ne détecte aucune altération de la mémoire, il imprime rien.  
   
  Tous les blocs de mémoire actuellement allouées sur le tas sont vérifiées, y compris celles allouée par **nouveau** mais pas ceux allouée par des appels directs à des allocateurs de mémoire sous-jacente, telles que la `malloc` (fonction) ou le **GlobalAlloc** fonction Windows. Si un bloc est endommagé, un message est écrit dans la sortie du débogueur.  
@@ -526,7 +526,7 @@ void AfxDump(const CObject* pOb);
  `pOb`  
  Un pointeur vers un objet d’une classe dérivée de `CObject`.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  **AfxDump** appelle un objet `Dump` fonction membre et envoie les informations à l’emplacement spécifiées par le `afxDump` variable. **AfxDump** est disponible uniquement dans la version Debug des MFC.  
   
  Code de votre programme ne doit pas appeler **AfxDump**, mais vous devez appeler à la place la `Dump` fonction membre de l’objet approprié.  
@@ -560,7 +560,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
 - **AFX_STACK_DUMP_TARGET_ODS** envoie la sortie directement dans le débogueur au moyen de la fonction Win32 **OutputDebugString()**. Cette option génère la sortie du débogueur dans les versions debug et versions release lorsqu’un débogueur est attaché au processus. **AFX_STACK_DUMP_TARGET_ODS** atteint toujours le débogueur (s’il est attaché) et ne peut pas être redirigé.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  L’exemple ci-dessous indique une ligne unique de la sortie générée par l’appel `AfxDumpStack` à partir d’un gestionnaire de bouton dans une application de la boîte de dialogue MFC :  
   
  `=== begin AfxDumpStack output ===`  
@@ -667,7 +667,7 @@ BOOL AfxEnableMemoryTracking(BOOL bTrack);
 ### <a name="return-value"></a>Valeur de retour  
  Le paramètre précédent de l’indicateur de suivi-enable.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette fonction permet de désactiver le suivi des modifications sur les sections de votre code que vous connaissez sont allouer les blocs correctement.  
   
  Pour plus d’informations sur `AfxEnableMemoryTracking`, consultez [débogage des Applications MFC](/visualstudio/debugger/mfc-debugging-techniques).  
@@ -704,7 +704,7 @@ BOOL AfxIsMemoryBlock(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si le bloc de mémoire est alloué actuellement et la longueur est correcte. Sinon, 0.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Il vérifie également la taille spécifiée par rapport à la taille allouée d’origine. Si la fonction retourne différente de zéro, le numéro de séquence d’allocation est retourné dans `plRequestNumber`. Ce nombre représente l’ordre dans lequel le bloc a été alloué par rapport à tous les autres **nouveau** allocations.  
   
 ### <a name="example"></a>Exemple  
@@ -738,7 +738,7 @@ BOOL AfxIsValidAddress(
   
  Dans les versions non debug, différent de zéro si `lp` n’est pas NULL ; sinon, 0.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  L’adresse n’est pas limitée aux blocs alloués par **nouveau**.  
   
 ### <a name="example"></a>Exemple  
@@ -788,7 +788,7 @@ AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si vous souhaitez autoriser l’allocation ; Sinon, 0.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’allocateur de mémoire de débogage Microsoft Foundation Class Library peut appeler une fonction de raccordement définie par l’utilisateur pour permettre à l’utilisateur pour surveiller une allocation de mémoire et de contrôler si l’allocation est autorisée. Fonctions de raccordement d’allocation sont prototypées comme suit :  
   
  **BOOL AFXAPI AllocHook( size_t** `nSize`**, BOOL** `bObject`**, LONG** `lRequestNumber` **);**  
@@ -824,7 +824,7 @@ AFXAPI AfxDoForAllClasses(
  `pContext`  
  Points de données facultatif qui peut fournir l’appelant à la fonction de l’itération. Ce pointeur peut être **NULL**.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Sérialisable `CObject`-classes dérivées sont des classes dérivées à l’aide de la `DECLARE_SERIAL` (macro). Le pointeur passé à `AfxDoForAllClasses` dans `pContext` est passée à la fonction de l’itération spécifiée chaque fois qu’elle est appelée.  
   
 > [!NOTE]
@@ -854,7 +854,7 @@ void AfxDoForAllObjects(
  `pContext`  
  Points de données facultatif qui peut fournir l’appelant à la fonction de l’itération. Ce pointeur peut être **NULL**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Pile, global, ou des objets incorporés ne sont pas énumérées. Le pointeur passé à `AfxDoForAllObjects` dans `pContext` est passée à la fonction de l’itération spécifiée chaque fois qu’elle est appelée.  
   
 > [!NOTE]

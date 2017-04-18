@@ -34,21 +34,21 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: d7ce6fbec9278893fd4f3f6b75c74ef91718646b
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 5f6719ade94bdbca9659405995fe09bfade57230
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-error-c3917"></a>Erreur du compilateur C3917
-'propriété' : style de déclaration de construction obsolète  
+'*propriété*' : style de déclaration de construction obsolète  
   
-Une définition de propriété ou d’événement utilisait une syntaxe d’une version précédente.  
+Une définition de propriété ou d’événement utilisait une syntaxe d’une version antérieure de Visual Studio 2005.  
   
 Pour plus d’informations, consultez [propriété](../../windows/property-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // C3917.cpp  
 // compile with: /clr /c  
 public ref class  C {  

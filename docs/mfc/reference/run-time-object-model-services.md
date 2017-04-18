@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: c11d9a2d56f17d814873d36868b8fb6cf3deac43
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 2ac30fa747b13c469846c51e9826242fdf54f8c1
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="run-time-object-model-services"></a>Services du modèle objet au moment de l'exécution
@@ -102,7 +102,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
  `proc`  
  Pointeur vers une chaîne terminée par le caractère null qui contient le nom de fonction, ou spécifie la valeur ordinale de la fonction. Si ce paramètre est une valeur ordinale, il doit être dans le mot de poids faible ; le mot de poids fort doit être égal à zéro. Ce paramètre doit être au format Unicode.  
    
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs la fonction spécifiée par `proc` (au lieu d’appeler [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212).  
    
 ### <a name="requirements"></a>Spécifications  
@@ -146,12 +146,12 @@ DECLARE_DYNAMIC(class_name)
  *CLASS_NAME*  
  Le nom réel de la classe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  Ajouter le `DECLARE_DYNAMIC` macro pour le module d’en-tête (.h) pour la classe, puis inclure ce module dans tous les modules .cpp qui ont besoin d’accéder aux objets de cette classe.  
   
  Si vous utilisez la **DECLARE**_ **dynamique** et `IMPLEMENT_DYNAMIC` macros comme décrit, vous pouvez ensuite utiliser le `RUNTIME_CLASS` (macro) et le `CObject::IsKindOf` afin de déterminer la classe de vos objets au moment de l’exécution.  
   
- Si `DECLARE_DYNAMIC` figure dans la déclaration de classe, puis `IMPLEMENT_DYNAMIC` doit être inclus dans l’implémentation de classe.  
+ Si `DECLARE_DYNAMIC` est inclus dans la déclaration de classe, puis `IMPLEMENT_DYNAMIC` doit être inclus dans l’implémentation de classe.  
   
  Pour plus d’informations sur la `DECLARE_DYNAMIC` (macro), consultez [rubriques de la classe CObject](../../mfc/using-cobject.md).  
   
@@ -172,12 +172,12 @@ DECLARE_DYNCREATE(class_name)
  *CLASS_NAME*  
  Le nom réel de la classe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure utilise cette possibilité de créer des objets de manière dynamique. Par exemple, le nouvel affichage créé lorsque vous ouvrez un nouveau document. Document, vue et classes de frame doivent prendre en charge la création dynamique, car l’infrastructure doit créer dynamiquement.  
   
  Ajouter le `DECLARE_DYNCREATE` macro dans un module .h pour la classe, puis inclure ce module dans tous les modules .cpp qui ont besoin d’accéder aux objets de cette classe.  
   
- Si `DECLARE_DYNCREATE` figure dans la déclaration de classe, puis `IMPLEMENT_DYNCREATE` doit être inclus dans l’implémentation de classe.  
+ Si `DECLARE_DYNCREATE` est inclus dans la déclaration de classe, puis `IMPLEMENT_DYNCREATE` doit être inclus dans l’implémentation de classe.  
   
  Pour plus d’informations sur la `DECLARE_DYNCREATE` (macro), consultez [rubriques de la classe CObject](../../mfc/using-cobject.md).  
   
@@ -246,12 +246,12 @@ DECLARE_SERIAL(class_name)
  *CLASS_NAME*  
  Le nom réel de la classe.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  La sérialisation est le processus d’écriture ou de la lecture du contenu d’un objet vers et à partir d’un fichier.  
   
  Utilisez le `DECLARE_SERIAL` macro dans un module .h, puis inclure ce module dans tous les modules .cpp qui ont besoin d’accéder aux objets de cette classe.  
   
- Si `DECLARE_SERIAL` figure dans la déclaration de classe, puis `IMPLEMENT_SERIAL` doit être inclus dans l’implémentation de classe.  
+ Si `DECLARE_SERIAL` est inclus dans la déclaration de classe, puis `IMPLEMENT_SERIAL` doit être inclus dans l’implémentation de classe.  
   
  Le `DECLARE_SERIAL` macro inclut toutes les fonctionnalités de `DECLARE_DYNAMIC` et `DECLARE_DYNCREATE`.  
   
@@ -281,8 +281,8 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
  `base_class_name`  
  Le nom de la classe de base.  
   
-### <a name="remarks"></a>Remarques  
- Utilisez le `IMPLEMENT_DYNAMIC` macro dans un module de .cpp, puis liez l’objet résultant de code qu’une seule fois.  
+### <a name="remarks"></a>Notes  
+ Utilisez le `IMPLEMENT_DYNAMIC` macro dans un module de .cpp, puis liez code de l’objet qui en résulte qu’une seule fois.  
   
  Pour plus d’informations, consultez [rubriques de la classe CObject](../../mfc/using-cobject.md).  
   
@@ -308,12 +308,12 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
  `base_class_name`  
  Le nom réel de la classe de base.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  L’infrastructure utilise cette possibilité de créer des objets de manière dynamique, par exemple, lorsqu’il lit un objet à partir du disque pendant la sérialisation. Ajouter le `IMPLEMENT_DYNCREATE` macro dans le fichier d’implémentation de classe. Pour plus d’informations, consultez [rubriques de la classe CObject](../../mfc/using-cobject.md).  
   
  Si vous utilisez la `DECLARE_DYNCREATE` et `IMPLEMENT_DYNCREATE` macros, vous pouvez ensuite utiliser le `RUNTIME_CLASS` macro et `CObject::IsKindOf` fonction membre pour déterminer la classe de vos objets au moment de l’exécution.  
   
- Si `DECLARE_DYNCREATE` figure dans la déclaration de classe, puis `IMPLEMENT_DYNCREATE` doit être inclus dans l’implémentation de classe.  
+ Si `DECLARE_DYNCREATE` est inclus dans la déclaration de classe, puis `IMPLEMENT_DYNCREATE` doit être inclus dans l’implémentation de classe.  
   
  Notez que cette définition de macro va appeler le constructeur par défaut pour votre classe. Si un constructeur non trivial est explicitement implémenté par la classe, elle doit implémenter explicitement également le constructeur par défaut. Le constructeur par défaut peut être ajouté à la classe **privé** ou **protégé** sections de membre pour l’empêcher de qui est appelée depuis l’extérieur de l’implémentation de classe.  
   
@@ -352,7 +352,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
  Composants de la classe **CLSID**.  
    
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
   
 > [!NOTE]
 >  Si vous utilisez `IMPLEMENT_OLECREATE_FLAGS`, vous pouvez spécifier le modèle de thread votre objet prend en charge à l’aide de le `nFlags` paramètre. Si vous souhaitez prendre en charge le modèle la marche périlleuse unique, utilisez `IMPLEMENT_OLECREATE`.  
@@ -387,7 +387,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
  *dwOleMisc*  
  Énumération qui contient un ou plusieurs indicateurs. Pour plus d’informations sur cette énumération, consultez [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) dans le Kit de développement logiciel Windows.  
    
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  En plus de `IMPLEMENT_OLECTLTYPE`, vous devez ajouter le **DECLARE_OLECTLTYPE** macro pour que votre déclaration de classe du contrôle.  
   
  Le **GetUserTypeNameID** fonction membre retourne la chaîne de ressource qui identifie la classe du contrôle. `GetMiscStatus`Retourne le **OLEMISC** bits pour votre contrôle. Cette énumération spécifie une collection de paramètres qui décrivent les diverses caractéristiques de votre contrôle. Pour obtenir une description complète de la **OLEMISC** paramètres, voir [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) dans le Kit de développement logiciel Windows.  
@@ -419,7 +419,7 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
  *wSchema*  
  A **UINT** « numéro de version » qui doit être encodé dans l’archive pour activer un programme de la désérialisation identifier et gérer les données créées par programme plus tôt les versions. Le numéro de schéma de classe ne doit pas être -1.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Utilisez le `IMPLEMENT_SERIAL` macro dans un module .cpp ; puis lier le code d’objet qui en résulte qu’une seule fois.  
   
  Vous pouvez utiliser la **AFX_API** macro pour exporter automatiquement la `CArchive` opérateur d’extraction pour les classes qui utilisent la `DECLARE_SERIAL` et `IMPLEMENT_SERIAL` macros. Crochet les déclarations de classe (situées dans le fichier .h) avec le code suivant :  
@@ -445,7 +445,7 @@ RUNTIME_CLASS(class_name)
  *CLASS_NAME*  
  Le nom réel de la classe (ne pas entourée guillemets).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Notes  
  `RUNTIME_CLASS`Retourne un pointeur vers un [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) structure pour la classe spécifiée par *class_name*. Uniquement `CObject`-déclarés avec des classes dérivées `DECLARE_DYNAMIC`, `DECLARE_DYNCREATE`, ou `DECLARE_SERIAL` retourne des pointeurs vers un `CRuntimeClass` structure.  
   
  Pour plus d’informations, consultez [rubriques de la classe CObject](../../mfc/using-cobject.md).  
@@ -472,13 +472,13 @@ DECLARE_OLECREATE(class_name)
   
  Ajouter le `DECLARE_OLECREATE` macro dans un module pour la classe, .h, puis inclure ce module dans tous les modules .cpp qui ont besoin d’accéder aux objets de cette classe.  
   
- Si `DECLARE_OLECREATE` figure dans la déclaration de classe, puis `IMPLEMENT_OLECREATE` doit être inclus dans l’implémentation de classe. Une déclaration de classe à l’aide de `DECLARE_OLECREATE` doit également utiliser `DECLARE_DYNCREATE` ou `DECLARE_SERIAL`.  
+ Si `DECLARE_OLECREATE` est inclus dans la déclaration de classe, puis `IMPLEMENT_OLECREATE` doit être inclus dans l’implémentation de classe. Une déclaration de classe à l’aide de `DECLARE_OLECREATE` doit également utiliser `DECLARE_DYNCREATE` ou `DECLARE_SERIAL`.  
 
 ### <a name="requirements"></a>Spécifications  
  **En-tête**: afxdisp.h  
 
 ##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
- Soit cette macro ou [IMPLEMENT_OLECREATE_FLAGS](http://msdn.microsoft.com/library/d1589f6a-5a69-4742-b07c-4c621cfd040d) doit apparaître dans le fichier d’implémentation pour toute classe qui utilise `DECLARE_OLECREATE`.  
+ Soit cette macro ou [IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags) doit apparaître dans le fichier d’implémentation pour toute classe qui utilise `DECLARE_OLECREATE`.  
   
 ```
 IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)  
