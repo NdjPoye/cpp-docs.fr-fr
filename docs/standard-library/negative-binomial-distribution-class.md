@@ -108,8 +108,8 @@ The template class describes a distribution that produces values of a user-speci
   
 ||||  
 |-|-|-|  
-|[negative_binomial_distribution::negative_binomial_distribution](#negative_binomial_distribution__negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|  
-|`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[negative_binomial_distribution::param_type](#negative_binomial_distribution__param_type)|  
+|[negative_binomial_distribution](#negative_binomial_distribution__negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|  
+|`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#negative_binomial_distribution__param_type)|  
   
 The property members `k()` and `p()` return the currently stored distribution parameter values *k* and *p* respectively.  
   
@@ -249,7 +249,7 @@ Histogram for 100 samples:
   
 **Espace de noms :** std  
   
-##  <a name="a-namenegativebinomialdistributionnegativebinomialdistributiona--negativebinomialdistributionnegativebinomialdistribution"></a><a name="negative_binomial_distribution__negative_binomial_distribution"></a>  negative_binomial_distribution::negative_binomial_distribution  
+##  <a name="negative_binomial_distribution__negative_binomial_distribution"></a>  negative_binomial_distribution::negative_binomial_distribution  
 Construit la distribution.  
   
 ```  
@@ -274,7 +274,7 @@ Le premier constructeur construit un objet dont la valeur `p` stockée contient 
   
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.  
   
-##  <a name="a-namenegativebinomialdistributionparamtypea--negativebinomialdistributionparamtype"></a><a name="negative_binomial_distribution__param_type"></a>  negative_binomial_distribution::param_type  
+##  <a name="negative_binomial_distribution__param_type"></a>  negative_binomial_distribution::param_type  
 Stocke les paramètres de la distribution.  
   
 struct param_type {  
