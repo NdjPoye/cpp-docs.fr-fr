@@ -6,6 +6,13 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- ios/std::ios
+- ios/std::streamoff
+- ios/std::streampos
+- ios/std::streamsize
+- ios/std::wios
+- ios/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
 caps.latest.revision: 13
 manager: ghogen
@@ -21,7 +28,7 @@ ms.lasthandoff: 02/24/2017
 |[ios](#ios)|[streamoff](#streamoff)|[streampos](#streampos)|  
 |[streamsize](#streamsize)|[wios](#wios)|[wstreampos](#wstreampos)|  
   
-##  <a name="a-nameiosa--ios"></a><a name="ios"></a>  ios  
+##  <a name="ios"></a>  ios  
  Prend en charge la classe ios de l'ancienne bibliothèque iostream.  
   
 ```  
@@ -31,7 +38,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 ### <a name="remarks"></a>Notes  
  Le type est un synonyme de la classe de modèle [basic_ios](../standard-library/basic-ios-class.md), spécialisée pour les éléments de type `char` ayant les caractéristiques par défaut.  
   
-##  <a name="a-namestreamoffa--streamoff"></a><a name="streamoff"></a>  streamoff  
+##  <a name="streamoff"></a>  streamoff  
  Prend en charge les opérations internes.  
   
 ```  
@@ -45,7 +52,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 ### <a name="remarks"></a>Notes  
  Le type est un entier signé qui décrit un objet capable de stocker un décalage d’octet impliqué dans différentes opérations de positionnement de flux. Sa représentation a au moins 32 bits de valeur. Elle n’est pas nécessairement assez grande pour représenter une position d’octet arbitraire dans un flux. La valeur **streamoff(-1)** indique généralement un décalage erroné.  
   
-##  <a name="a-namestreamposa--streampos"></a><a name="streampos"></a>  streampos  
+##  <a name="streampos"></a>  streampos  
  Contient la position actuelle du pointeur de mémoire tampon ou du pointeur de fichier.  
   
 ```  
@@ -78,7 +85,7 @@ int main( )
 7  
 ```  
   
-##  <a name="a-namestreamsizea--streamsize"></a><a name="streamsize"></a>  streamsize  
+##  <a name="streamsize"></a>  streamsize  
  Indique la taille du flux.  
   
 ```  
@@ -111,7 +118,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namewiosa--wios"></a><a name="wios"></a>  wios  
+##  <a name="wios"></a>  wios  
  Prend en charge la classe wios de l'ancienne bibliothèque iostream.  
   
 ```  
@@ -121,7 +128,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ### <a name="remarks"></a>Notes  
  Le type est un synonyme de la classe de modèle [basic_ios](../standard-library/basic-ios-class.md), spécialisée pour les éléments de type `wchar_t` ayant les caractéristiques par défaut.  
   
-##  <a name="a-namewstreamposa--wstreampos"></a><a name="wstreampos"></a>  wstreampos  
+##  <a name="wstreampos"></a>  wstreampos  
  Contient la position actuelle du pointeur de mémoire tampon ou du pointeur de fichier.  
   
 ```  

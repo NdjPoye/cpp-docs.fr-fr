@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
 caps.latest.revision: 11
 manager: ghogen
@@ -20,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|-|  
 |[operator!=](#operator_neq)|[operator&lt;](#operator_lt_)|[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  Teste si l’objet situé à gauche de l’opérateur est égal à l’objet situé à droite.  
   
 ```
@@ -44,7 +45,7 @@ bool operator==(const error_condition& left,
 ### <a name="remarks"></a>Notes  
  Cette fonction retourne `left.category() == right.category() && left.value() == right.value()`.  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  Teste si l’objet situé à gauche de l’opérateur n’est pas égal à l’objet situé à droite.  
   
 ```
@@ -68,7 +69,7 @@ bool operator!=(const error_condition& left,
 ### <a name="remarks"></a>Notes  
  Cette fonction retourne `!(left == right)`.  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="operator_lt_"></a>  operator&lt;  
  Vérifie si un objet est inférieur à l'objet passé en vue de leur comparaison.  
   
 ```

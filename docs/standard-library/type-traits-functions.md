@@ -6,6 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- type_traits/std::is_assignable
+- type_traits/std::is_copy_assignable
+- type_traits/std::is_copy_constructible
+- type_traits/std::is_default_constructible
+- type_traits/std::is_move_assignable
+- type_traits/std::is_move_constructible
+- type_traits/std::is_nothrow_move_assignable
+- type_traits/std::is_trivially_copy_assignable
+- type_traits/std::is_trivially_move_assignable
+- type_traits/std::is_trivially_move_constructible
 ms.assetid: dce4492f-f3e4-4d5e-bdb4-5875321254ec
 caps.latest.revision: 13
 manager: ghogen
@@ -23,7 +34,7 @@ ms.lasthandoff: 02/24/2017
 |[is_nothrow_move_assignable](#is_nothrow_move_assignable)|[is_trivially_copy_assignable](#is_trivially_copy_assignable)|[is_trivially_move_assignable](#is_trivially_move_assignable)|  
 |[is_trivially_move_constructible](#is_trivially_move_constructible)|  
   
-##  <a name="a-nameisassignablea--isassignable"></a><a name="is_assignable"></a>  is_assignable  
+##  <a name="is_assignable"></a>  is_assignable  
  Teste si une valeur de type `From` peut être assignée à un type `To`.  
   
 ```  
@@ -41,7 +52,7 @@ struct is_assignable;
 ### <a name="remarks"></a>Notes  
  L’expression non évaluée `declval<To>() = declval<From>()` doit être bien formée. `From` et `To` doivent tous deux être des types complets, `void` ou des tableaux de limite inconnue.  
   
-##  <a name="a-nameiscopyassignablea--iscopyassignable"></a><a name="is_copy_assignable"></a>  is_copy_assignable  
+##  <a name="is_copy_assignable"></a>  is_copy_assignable  
  Teste si le type peut être copié lors de l'assignation.  
   
 ```  
@@ -56,7 +67,7 @@ struct is_copy_assignable;
 ### <a name="remarks"></a>Notes  
  Une instance du prédicat de type a la valeur true si le type `Ty` est une classe qui a un opérateur d'assignation de copie. Sinon, sa valeur est false. Équivaut à is_assignable\<Ty&, const Ty&>.  
   
-##  <a name="a-nameiscopyconstructiblea--iscopyconstructible"></a><a name="is_copy_constructible"></a>  is_copy_constructible  
+##  <a name="is_copy_constructible"></a>  is_copy_constructible  
  Teste si le type a un constructeur de copie.  
   
 ```  
@@ -106,7 +117,7 @@ is_copy_constructible<Copyable> == true
 is_copy_constructible<NotCopyable > == false  
 ```  
   
-##  <a name="a-nameisdefaultconstructiblea--isdefaultconstructible"></a><a name="is_default_constructible"></a>  is_default_constructible  
+##  <a name="is_default_constructible"></a>  is_default_constructible  
  Teste si un type a un constructeur par défaut.  
   
 ```  
@@ -156,7 +167,7 @@ is_default_constructible<Simple> == true
 is_default_constructible<Simple2> == false  
 ```  
   
-##  <a name="a-nameismoveassignablea--ismoveassignable"></a><a name="is_move_assignable"></a>  is_move_assignable  
+##  <a name="is_move_assignable"></a>  is_move_assignable  
  Teste si le type peut être assigné par déplacement.  
   
 ```  
@@ -171,7 +182,7 @@ struct is_move_assignable;
 ### <a name="remarks"></a>Notes  
  Un type est assignable par déplacement si une référence rvalue au type peut être assignée à une référence au type. Le prédicat de type équivaut à `is_assignable<T&, T&&>`. Les types assignables par déplacement incluent les types scalaires référençables et les types de classe qui ont des opérateurs d’assignation par déplacement générés par le compilateur ou définis par l’utilisateur.  
   
-##  <a name="a-nameismoveconstructiblea--ismoveconstructible"></a><a name="is_move_constructible"></a>  is_move_constructible  
+##  <a name="is_move_constructible"></a>  is_move_constructible  
  Teste si le type a un constructeur de déplacement.  
   
 ```  
@@ -186,7 +197,7 @@ struct is_move_constructible;
 ### <a name="remarks"></a>Notes  
  Prédicat de type qui a la valeur true si le type `T` est constructible par une opération de déplacement. Ce prédicat équivaut à `is_constructible<T, T&&>`.  
   
-##  <a name="a-nameisnothrowmoveassignablea--isnothrowmoveassignable"></a><a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable  
+##  <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable  
  Teste si le type a un opérateur d’assignation par déplacement **nothrow**.  
   
 ```  
@@ -201,7 +212,7 @@ struct is_nothrow_move_assignable;
 ### <a name="remarks"></a>Notes  
  Une instance du prédicat de type a la valeur true si le type `Ty` a un opérateur d'assignation de déplacement nothrow. Sinon, sa valeur est false.  
   
-##  <a name="a-nameistriviallycopyassignablea--istriviallycopyassignable"></a><a name="is_trivially_copy_assignable"></a>  is_trivially_copy_assignable  
+##  <a name="is_trivially_copy_assignable"></a>  is_trivially_copy_assignable  
  Teste si le type a un opérateur d'assignation de copie trivial.  
   
 ```  
@@ -218,7 +229,7 @@ struct is_trivially_copy_assignable;
   
  Un constructeur d’assignation d’une classe `T` est trivial s’il est fourni implicitement, si la classe `T` n’a aucune fonction virtuelle, si la classe `T` n’a aucune base virtuelle, si les classes de toutes les données membres non statiques de type classe ont des opérateurs d’assignation triviaux et si les classes de toutes les données membres non statiques de type tableau de classe ont des opérateurs d’assignation triviaux.  
   
-##  <a name="a-nameistriviallymoveassignablea--istriviallymoveassignable"></a><a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable  
+##  <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable  
  Teste si le type a un opérateur d'assignation de déplacement trivial.  
   
 ```  
@@ -245,7 +256,7 @@ struct is_trivially_move_assignable;
   
  les classes de tous les membres de données non statiques de type tableau de classe possèdent des opérateurs d'assignation de déplacement triviaux.  
   
-##  <a name="a-nameistriviallymoveconstructiblea--istriviallymoveconstructible"></a><a name="is_trivially_move_constructible"></a>  is_trivially_move_constructible  
+##  <a name="is_trivially_move_constructible"></a>  is_trivially_move_constructible  
  Teste si le type a un constructeur de déplacement trivial.  
   
 ```  
