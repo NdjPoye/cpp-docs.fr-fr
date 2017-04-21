@@ -12,8 +12,9 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Human Translation
-ms.sourcegitcommit: fb1f9f25be6d32f15324c8d3a7bd5069ca869a35
-ms.openlocfilehash: 6951129578e28251cef8eb54abb4ef790eb7f944
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24ae58e6d8948572248a1595c59714bdf2c6f3f5
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
@@ -66,13 +67,13 @@ Au fil des années, le compilateur Visual C++ a subi de nombreuses modifications
 ### <a name="lnk2019-unresolved-external"></a>LNK2019 : Symbole externe non résolu  
  Pour les symboles non résolus, vous devez peut-être corriger les paramètres de votre projet.  
   
--   •   Si le fichier source figure à un emplacement non défini par défaut, avez-vous ajouté le chemin d’accès aux répertoires Include du projet ?  
+-   Si le fichier source figure à un emplacement non défini par défaut, avez-vous ajouté le chemin d’accès aux répertoires Include du projet ?  
   
--   •   Si le symbole externe est défini dans un fichier .lib, avez-vous spécifié le chemin d’accès au fichier .lib dans les propriétés du projet et est-ce que la version correcte du fichier .lib s’y trouve réellement ?  
+-   Si le symbole externe est défini dans un fichier .lib, avez-vous spécifié le chemin d’accès au fichier .lib dans les propriétés du projet et est-ce que la version correcte du fichier .lib s’y trouve réellement ?  
   
--   •   Tentez-vous d’établir une liaison à un fichier .lib qui a été compilé avec une autre version de Visual Studio ? Dans ce cas, consultez la section précédente sur les dépendances de bibliothèque et d’ensemble d’outils.  
+-   Tentez-vous d’établir une liaison à un fichier .lib qui a été compilé avec une autre version de Visual Studio ? Dans ce cas, consultez la section précédente sur les dépendances de bibliothèque et d’ensemble d’outils.  
   
--   •   Est-ce que les types des arguments du site d’appel correspondent réellement à une surcharge existante de la fonction ? Vérifiez que les types sous-jacents de tous les typedefs dans la signature de la fonction et dans le code qui appelle la fonction répondent à vos attentes.  
+-   Est-ce que les types des arguments du site d’appel correspondent réellement à une surcharge existante de la fonction ? Vérifiez que les types sous-jacents de tous les typedefs dans la signature de la fonction et dans le code qui appelle la fonction répondent à vos attentes.  
   
  Pour résoudre les erreurs de symboles non résolus, vous pouvez essayer d’utiliser dumpbin.exe pour examiner les symboles définis dans un fichier binaire. Essayez d’utiliser la ligne de commande ci-dessous pour afficher les symboles définis dans une bibliothèque :  
   
@@ -107,16 +108,16 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
   
  Un argument non const passé à un paramètre const est un exemple d’erreur de compilateur courante que vous pouvez rencontrer lors de la mise à niveau. Les versions antérieures de Visual C++ ne signalaient pas toujours cela comme une erreur. Pour plus d’informations, consultez [Conversions plus strictes du compilateur](porting-guide-spy-increment.md#stricter_conversions).  
   
- Pour plus d’informations sur des améliorations spécifiques en matière de conformité, consultez [Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md) et [Améliorations de la conformité de C++ dans Visual Studio 2017](../cpp-conformance-improvements-2017.md).  
+ Pour plus d’informations sur les améliorations apportées à la conformité, consultez [Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md) et [Améliorations de la conformité de C++ dans Visual Studio 2017](../cpp-conformance-improvements-2017.md).  
   
 ## <a name="errors-involving-stdinth-integral-types"></a>Erreurs impliquant les types intégraux \<stdint.h>  
  L’en-tête \<stdint.h> définit les typedefs et macros qui, contrairement aux types intégraux intégrés, ont forcément une longueur spécifiée sur toutes les plateformes. Parmi les exemples, citons uint32_t et int64_t. Visual C++ a ajouté \<stdint.h> dans Visual Studio 2010. Le code qui a été écrit avant 2010 peut avoir fourni des définitions privées pour ces types et ces définitions ne sont peut-être pas toujours cohérentes avec les définitions \<stdint.h>.  
   
  S’il s’agit de l’erreur C2371 et qu’un type stdint est impliqué, cela signifie probablement que le type est défini dans un en-tête dans votre code ou dans un fichier lib tiers.  Lors de la mise à niveau, vous devez supprimer toutes les définitions personnalisées des types \<stdint.h>, tout en les comparant d’abord aux définitions standard actuelles pour vous assurer de ne pas introduire de nouveaux problèmes.  
   
- Vous pouvez appuyer sur F12 « Atteindre la définition » pour voir où le type en question est défini.  
+ Vous pouvez appuyer sur F12 **Atteindre la définition** pour voir où le type en question est défini.  
   
- L’option de compilateur [/showIncludes](../build/reference/showincludes-list-include-files.md) peut être utile ici. Dans la boîte de dialogue Pages de propriétés de votre projet, ouvrez la page **C/C++**, **Avancé** et affectez la valeur « Oui » à **Affichage des fichiers Include**. Régénérez ensuite votre projet et affichez la liste des directives #include dans la fenêtre Sortie.  Chaque en-tête est mis en retrait sous l’en-tête qui l’inclut.  
+ L’option de compilateur [/showIncludes](../build/reference/showincludes-list-include-files.md) peut être utile ici. Dans la boîte de dialogue Pages de propriétés de votre projet, ouvrez la page **C/C++**, **Avancé** et affectez la valeur **Oui** à **Affichage des fichiers Include**. Régénérez ensuite votre projet et affichez la liste des directives #include dans la fenêtre Sortie.  Chaque en-tête est mis en retrait sous l’en-tête qui l’inclut.  
   
 ## <a name="errors-involving-crt-functions"></a>Erreurs impliquant des fonctions CRT  
  De nombreuses modifications ont été apportées au Runtime C au fil des années. De nombreuses versions sécurisées de fonctions ont été ajoutées et certaines ont été supprimées. En outre, comme décrit précédemment dans cet article, l’implémentation Microsoft de la bibliothèque CRT a été refactorisée dans Visual Studio 2015 en nouveaux fichiers binaires et fichiers .lib associés.  
@@ -167,9 +168,4 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 ## <a name="see-also"></a>Voir aussi  
  [Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)
  [Améliorations de la conformité de C++ dans Visual Studio 2017](../cpp-conformance-improvements-2017.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
