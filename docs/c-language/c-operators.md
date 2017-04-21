@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1e4b047307bb1153c136b0485b0d141086907525
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6eab29bde1fe9b08e0883960ed7a160101d56d1a
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-operators"></a>Opérateurs C
@@ -51,18 +51,18 @@ Les opérateurs C sont un sous-ensemble des [opérateurs C++ intégrés](../cpp/
   
 |Symbole|Nom|  
 |------------|----------|  
-|**– ~ !**|Opérateurs de négation et de complément|  
+|**- ~ !**|Opérateurs de négation et de complément|  
 |**\* &**|Opérateurs d'indirection et d'adresse|  
 |`sizeof`|Opérateur de taille|  
 |**+**|Opérateur plus unaire|  
-|**++ ––**|Opérateurs d'incrémentation et de décrémentation unaires|  
+|**++ --**|Opérateurs d'incrémentation et de décrémentation unaires|  
   
  Les opérateurs binaires s'associent de gauche à droite. C propose les opérateurs binaires suivants :  
   
 |Symbole|Nom|  
 |------------|----------|  
 |**\* / %**|Opérateurs multiplicatifs|  
-|**+ –**|Opérateurs additifs|  
+|**+ -**|Opérateurs additifs|  
 |**<\< >>**|Opérateurs de décalage|  
 |**\<   >   \<=   >=   ==   !=**|Opérateurs relationnels|  
 |**&   &#124; ^**|Opérateurs de bits|  
@@ -73,7 +73,7 @@ Les opérateurs C sont un sous-ensemble des [opérateurs C++ intégrés](../cpp/
   
  L'opérateur d'expression conditionnelle a une priorité inférieure à celle des expressions binaires et diffère de ces dernières en étant associatif à droite.  
   
- Les expressions avec des opérateurs incluent également des expressions d'assignation, qui utilisent des opérateurs d'assignation unaires ou binaires. Les opérateurs d’assignation unaires sont les opérateurs d’incrémentation (`++`) et de décrémentation (**––**) ; les opérateurs d’assignation binaires sont l’opérateur d’assignation simple (**=**) et les opérateurs d’assignation composés. Chaque opérateur d'assignation composé est une combinaison d'un autre opérateur binaire avec l'opérateur d'assignation simple.  
+ Les expressions avec des opérateurs incluent également des expressions d'assignation, qui utilisent des opérateurs d'assignation unaires ou binaires. Les opérateurs d’assignation unaires sont les opérateurs d’incrémentation (`++`) et de décrémentation (**--**) ; les opérateurs d’assignation binaires sont l’opérateur d’assignation simple (**=**) et les opérateurs d’assignation composés. Chaque opérateur d'assignation composé est une combinaison d'un autre opérateur binaire avec l'opérateur d'assignation simple.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions et assignations](../c-language/expressions-and-assignments.md)

@@ -1,40 +1,57 @@
 ---
-title: "E/S de flux Unicode en modes texte et binaire | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.io"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "E/S (CRT), flux unicode"
-  - "routines E/S de flux"
-  - "flux unicode E/S"
-  - "Unicode, routines E/S de flux"
+title: E/S de flux Unicode en modes texte et binaire | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.io
+dev_langs:
+- C++
+helpviewer_keywords:
+- stream I/O routines
+- I/O [CRT], unicode stream
+- Unicode, stream I/O routines
+- Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# E/S de flux Unicode en modes texte et binaire
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6a4658396f5045df17fbf75daac5bbf8263ed60c
+ms.lasthandoff: 04/01/2017
 
-Lorsqu'une routine d'E\/S de flux de données Unicode \(par exemple `fwprintf`, `fwscanf`, `fgetwc`, `fputwc`, `fgetws`, ou `fputws`\) traite un fichier ouvert en mode texte \(valeur par défaut\), deux types de conversions de caractères ont lieu :  
+---
+# <a name="unicode-stream-io-in-text-and-binary-modes"></a>E/S de flux Unicode en modes texte et binaire
+Quand une routine d’E/S de flux Unicode (comme `fwprintf`, `fwscanf`, `fgetwc`, `fputwc`, `fgetws` ou `fputws`) fonctionne sur un fichier ouvert en mode texte (valeur par défaut), deux types de conversions de caractères se produisent :  
   
--   Conversion Unicode\- à \- MBCS ou MBCS\-à\- Unicode.  Lorsqu'une fonction d'E\/S de flux Unicode s'exécute en mode texte, on suppose que le flux source ou de destination est une séquence de caractères multioctets.  Par conséquent, les fonctions d'entrée de flux Unicode convertissent les caractères multioctets en caractères larges \(comme suite à un appel à la fonction `mbtowc`\).  Pour la même raison, les fonctions de flux de sortie Unicode convertissent les caractères larges en caractères multioctets \(comme suite à un appel à la fonction `wctomb`\).  
+-   Conversion Unicode vers MBCS ou MBCS vers Unicode. Quand une fonction d’E/S de flux Unicode s’exécute en mode texte, le flux source ou de destination est supposé être une séquence de caractères multi-octets. Par conséquent, les fonctions d'entrée de flux Unicode convertissent les caractères multioctets en caractères larges (comme suite à un appel à la fonction `mbtowc`). Pour la même raison, les fonctions de flux de sortie Unicode convertissent les caractères larges en caractères multioctets (comme suite à un appel à la fonction `wctomb` ).  
   
--   Traduction saut de ligne – retour de chariot \(CR\-LF\) .  Cette traduction se produit avant le MBCS – conversion Unicode \(pour les fonctions d'entrée de flux de données Unicode\) et après conversion Unicode et MBCS \(pour les fonctions de flux de données Unicode\).  Lors de l'entrée, chaque combinaison CR\-LF est convertie en un unique caractère de saut de ligne.  Lors de la sortie, chaque caractère de saut de ligne est converti en une combinaison CR\-LF.  
+-   Traduction Retour chariot - Saut de ligne (CR-LF). Cette traduction se produit avant la conversion MBCS - Unicode (pour les fonctions d’entrée de flux Unicode) et après la conversion Unicode - MBCS (pour les fonctions de sortie de flux Unicode). Au cours de l’entrée, chaque combinaison Retour chariot - Saut de ligne est traduite en caractère de saut de ligne unique. Au cours de la sortie, chaque caractère de saut de ligne est traduit en combinaison Retour chariot - Saut de ligne.  
   
- Toutefois, lorsqu'une fonction E\/S de flux Unicode s'exécute en mode binaire, on suppose que le fichier est au format Unicode, et aucune conversion de traduction en caractère ou en CR\-LF ne se produit lors de l'entrée ou la sortie.  Utilisez l'instruction \_setmode \(\_fileno\( stdin \), \_O\_BINARY\) ; afin d'utiliser correctement le wcin dans un fichier texte UNICODE.  
+ Toutefois, quand une fonction d’E/S de flux Unicode s’exécute en mode binaire, le fichier est supposé être Unicode et aucune traduction CR-LF ou conversion de caractère ne se produisent au cours de l’entrée ou de la sortie. Utilisez l’instruction _setmode(_fileno( stdin ), _O_BINARY ); pour utiliser correctement wcin dans un fichier texte UNICODE.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Routines runtime par catégorie](../c-runtime-library/run-time-routines-by-category.md)   
- [Entrées et sorties](../c-runtime-library/input-and-output.md)
+ [Entrée et sortie](../c-runtime-library/input-and-output.md)

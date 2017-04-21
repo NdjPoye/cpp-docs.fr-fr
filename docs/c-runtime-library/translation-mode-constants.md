@@ -1,41 +1,57 @@
 ---
-title: "Constantes de mode de translation | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_O_BINARY"
-  - "_O_TEXT"
-  - "_O_RAW"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_O_BINARY (constante)"
-  - "_O_RAW (constante)"
-  - "_O_TEXT (constante)"
-  - "O_BINARY (constante)"
-  - "O_RAW (constante)"
-  - "O_TEXT (constante)"
-  - "constantes de translation"
-  - "modes de translation (E/S de fichier)"
-  - "translation, constantes"
-  - "translation, modes"
+title: Constantes de mode de traduction | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _O_BINARY
+- _O_TEXT
+- _O_RAW
+dev_langs:
+- C++
+helpviewer_keywords:
+- O_BINARY constant
+- O_TEXT constant
+- O_RAW constant
+- _O_TEXT constant
+- _O_RAW constant
+- translation constants
+- _O_BINARY constant
+- translation, constants
+- translation, modes
+- translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Constantes de mode de translation
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2522ccf3c35a52141d3164bd2a35535a4068893e
+ms.lasthandoff: 04/01/2017
 
-## Syntaxe  
+---
+# <a name="translation-mode-constants"></a>Constantes de mode de traduction
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -43,25 +59,25 @@ caps.handback.revision: 6
   
 ```  
   
-## Notes  
- Les constantes manifestes `_O_BINARY` et `_O_TEXT` déterminent le mode de traduction pour les fichiers \(`_open` et `_sopen`\) ou le mode de traduction pour les flux de données \(`_setmode`\).  
+## <a name="remarks"></a>Notes  
+ Les constantes manifestes `_O_BINARY` et `_O_TEXT` déterminent le mode de traduction des fichiers (`_open` et `_sopen`) ou le mode de traduction des flux (`_setmode`).  
   
  Les valeurs autorisées sont :  
   
  `_O_TEXT`  
- Ouvre un fichier en mode texte \(traduit\).  Les combinaisons sauts de ligne\-retour de chariot \(CR\-LF\) sont traduites en un unique caractère de saut de ligne en entrée.  Les caractères de saut de ligne sont convertis en combinaisons CR\-LF en sortie.  En outre, CTRL\+Z est interprété comme caractère de fin de fichier sur l'entrée.  Dans les fichiers ouverts en lecture et en lecture\/écriture, `fopen` vérifie la présence de Ctrl\+Z à la fin du fichier et le supprime, si possible.  Cette opération est effectuée car l'utilisation des fonctions `fseek` et `ftell` pour se déplacer dans un fichier qui se termine par Ctrl\+Z peut provoquer un comportement incorrect de `fseek` près de la fin du fichier.  
+ Ouvre un fichier en mode texte (traduit). Les combinaisons retour chariot/saut de ligne sont traduites en un seul saut de ligne en entrée. Les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. De même, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts en lecture ou en lecture/écriture, `fopen` recherche un Ctrl+Z à la fin du fichier et le supprime, si possible. En effet, l’utilisation des fonctions `fseek` et `ftell` pour se déplacer dans un fichier qui se termine par un Ctrl+Z peut provoquer un comportement incorrect de `fseek` vers la fin du fichier.  
   
  `_O_BINARY`  
- Ouvre le fichier en mode \(non traduit\) binaire.  Les traductions ci\-dessus sont supprimées.  
+ Ouvre un fichier en mode binaire (non traduit). Les traductions ci-dessus sont supprimées.  
   
  `_O_RAW`  
- Identique à `_O_BINARY`.  Pris en charge pour la compatibilité C 2,0.  
+ Comme pour `_O_BINARY`. Prise en charge pour la compatibilité C 2.0.  
   
- Pour plus d'informations, consultez [E\/S de fichier en mode texte et binaire](../c-runtime-library/text-and-binary-mode-file-i-o.md) et [File Translation](../c-runtime-library/file-translation-constants.md).  
+ Pour plus d’informations, consultez [E/S de fichier en mode texte et binaire](../c-runtime-library/text-and-binary-mode-file-i-o.md) et [Traduction des fichiers](../c-runtime-library/file-translation-constants.md).  
   
-## Voir aussi  
- [\_open, \_wopen](../c-runtime-library/reference/open-wopen.md)   
- [\_pipe](../c-runtime-library/reference/pipe.md)   
- [\_sopen, \_wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
- [\_setmode](../c-runtime-library/reference/setmode.md)   
+## <a name="see-also"></a>Voir aussi  
+ [_open, _wopen](../c-runtime-library/reference/open-wopen.md)   
+ [_pipe](../c-runtime-library/reference/pipe.md)   
+ [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
+ [_setmode](../c-runtime-library/reference/setmode.md)   
  [Constantes globales](../c-runtime-library/global-constants.md)
