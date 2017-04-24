@@ -9,7 +9,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency::tiled_index
+- tiled_index
+- AMP/tiled_index
+- AMP/Concurrency::tiled_index::tiled_index
+- AMP/Concurrency::tiled_index::get_tile_extent
+- AMP/Concurrency::tiled_index::barrier
+- AMP/Concurrency::tiled_index::global
+- AMP/Concurrency::tiled_index::local
+- AMP/Concurrency::tiled_index::rank
+- AMP/Concurrency::tiled_index::tile
+- AMP/Concurrency::tiled_index::tile_dim0
+- AMP/Concurrency::tiled_index::tile_dim1
+- AMP/Concurrency::tiled_index::tile_dim2
+- AMP/Concurrency::tiled_index::tile_origin
+- AMP/Concurrency::tiled_index::tile_extent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,13 +47,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 2c10721f40bd1c90a196ba82655482f35a8e10d8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3a436635b456bd196a863ac5e9e8a5c10b679644
+ms.openlocfilehash: ed5c024e47eb8a822115822ae83e0e02fd8cf111
+ms.lasthandoff: 04/21/2017
 
 ---
 # <a name="tiledindex-class"></a>tiled_index, classe
-Fournit un index dans une [tiled_extent](tiled-extent-class.md) objet. Cette classe possède des propriétés pour accéder aux éléments par rapport à l’origine de la vignette local et par rapport à l’origine global. Pour plus d’informations sur les espaces en mosaïque, consultez [à l’aide de vignettes](../../../parallel/amp/using-tiles.md).  
+Fournit un index dans une [tiled_extent](tiled-extent-class.md) objet. Cette classe possède des propriétés pour accéder aux éléments par rapport à l’origine de la vignette local et par rapport à l’origine global. Pour plus d’informations sur les espaces en mosaïque, consultez [à l’aide de mosaïques](../../../parallel/amp/using-tiles.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -72,7 +85,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
  La longueur de la dimension importante suivant à la plupart des.  
   
  `_Dim2`  
- La longueur de la dimension moins significative.  
+ La longueur de la dimension de poids faible.  
   
 ## <a name="members"></a>Membres  
   
@@ -87,7 +100,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[get_tile_extent (méthode)](#tiled_index__get_tile_extent)|Retourne un [étendue](extent-class.md) objet qui a les valeurs de la `tiled_index` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.|  
+|[get_tile_extent](#tiled_index__get_tile_extent)|Retourne un [étendue](extent-class.md) objet qui a les valeurs de la `tiled_index` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.|  
 
 
   
@@ -95,26 +108,26 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[Barrier (constante)](#tiled_index__barrier)|Stocke un [tile_barrier](tile-barrier-class.md) objet qui représente un obstacle dans la mosaïque de threads en cours.|  
+|[cloisonnement (constante)](#tiled_index__barrier)|Stocke un [tile_barrier](tile-barrier-class.md) objet qui représente un objet barrier dans la vignette actuel de threads.|  
 |||  
 |[global (constante)](#tiled_index__global)|Stocke un [index](index-class.md) objet d’index de rang 1, 2 ou 3 qui représente l’élément global dans un [grille](http://msdn.microsoft.com/en-us/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) objet.|  
-|[Constante locale](#tiled_index__local)|Stocke un `index` objet d’index de rang 1, 2 ou 3 qui représente le rapport de la mosaïque active d’un [tiled_extent](tiled-extent-class.md) objet.|  
-|[RANK (constante)](#tiled_index__rank)|Stocke le rang de la `tiled_index` objet.|  
+|[Constante locale](#tiled_index__local)|Stocke un `index` objet d’index de rang 1, 2 ou 3 qui représente le rapport dans la mosaïque actuelle d’un [tiled_extent](tiled-extent-class.md) objet.|  
+|[RANK (constante)](#tiled_index__rank)|Stocke le rang de le `tiled_index` objet.|  
 |[Tile (constante)](#tiled_index__tile)|Stocke un `index` objet de rang 1, 2 ou 3 qui représente les coordonnées de la mosaïque actuelle d’un `tiled_extent` objet.|  
 |[tile_dim0 (constante)](#tiled_index__tile_dim0)|Stocke la longueur de la dimension la plus importante.|  
 |[tile_dim1 (constante)](#tiled_index__tile_dim1)|Stocke la longueur de la dimension importante suivant au plus.|  
-|[tile_dim2 (constante)](#tiled_index__tile_dim2)|Stocke la longueur de la dimension moins significative.|  
-|[tile_origin (constante)](#tiled_index__tile_origin)|Stocke un `index` objet de coordonnées de rang 1, 2 ou 3 qui représente les paramètres globaux de l’origine de la mosaïque active dans un `tiled_extent` objet.|  
+|[tile_dim2 (constante)](#tiled_index__tile_dim2)|Stocke la longueur de la dimension de poids faible.|  
+|[tile_origin (constante)](#tiled_index__tile_origin)|Stocke un `index` objet de coordonnées de rang 1, 2 ou 3 qui représente les paramètres globaux de l’origine de la mosaïque actuelle en un `tiled_extent` objet.|  
 
   
 ### <a name="public-data-members"></a>Membres de données publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[tile_extent (donnée membre)](#tile_extent)|Obtient un [étendue](extent-class.md) objet qui a les valeurs de la `tiled_index` arguments template `tiled_index` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.|  
+|[tile_extent](#tile_extent)|Obtient un [étendue](extent-class.md) objet qui a les valeurs de la `tiled_index` arguments template `tiled_index` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.|  
 
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `_Tiled_index_base`  
   
  `tiled_index`  
@@ -125,7 +138,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
  **Espace de noms :** Concurrency  
 
 
-## <a name="a-nametiledindexctora--tiledindex-constructor"></a><a name="tiled_index__ctor"></a>tiled_index, constructeur  
+## <a name="tiled_index__ctor"></a>tiled_index, constructeur  
 Initialise une nouvelle instance de la classe `tiled_index`.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -170,7 +183,7 @@ tiled_index(
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Initialise une nouvelle instance de la `tile_index` classe en copiant spécifié `tiled_index` objet.|  
 
 
-## <a name="a-nametiledindexgettileextenta--gettileextent"></a><a name="tiled_index__get_tile_extent"></a>get_tile_extent
+## <a name="tiled_index__get_tile_extent"></a>get_tile_extent
 Retourne un [étendue](extent-class.md) objet qui a les valeurs de la `tiled_index` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -182,8 +195,8 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 ## <a name="return-value"></a>Valeur de retour  
  Un `extent` objet qui a les valeurs de la `tiled_index` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.  
 
-## <a name="a-nametiledindexbarriera--barrier"></a><a name="tiled_index__barrier"></a>BARRIÈRE   
-Stocke un [tile_barrier](tile-barrier-class.md) objet qui représente un obstacle dans la mosaïque de threads en cours.  
+## <a name="tiled_index__barrier"></a>cloisonnement   
+Stocke un [tile_barrier](tile-barrier-class.md) objet qui représente un objet barrier dans la vignette actuel de threads.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -191,8 +204,8 @@ Stocke un [tile_barrier](tile-barrier-class.md) objet qui représente un obstacl
 const tile_barrier barrier;  
 ```  
 
-## <a name="a-nametiledindexglobala--global"></a><a name="tiled_index__global"></a>global   
-Stocke un [index](index-class.md) objet de rang 1, 2 ou 3 qui représente l’index d’un objet global.  
+## <a name="tiled_index__global"></a>global   
+Stocke un [index](index-class.md) objet de rang 1, 2 ou 3 qui représente l’index global d’un objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -200,8 +213,8 @@ Stocke un [index](index-class.md) objet de rang 1, 2 ou 3 qui représente l’in
 const index<rank> global;  
 ```  
   
-## <a name="a-nametiledindexlocala--local"></a><a name="tiled_index__local"></a>local   
-Stocke un [index](index-class.md) objet d’index de rang 1, 2 ou 3 qui représente le rapport de la mosaïque active d’un [tiled_extent](tiled-extent-class.md) objet.  
+## <a name="tiled_index__local"></a>local   
+Stocke un [index](index-class.md) objet d’index de rang 1, 2 ou 3 qui représente le rapport dans la mosaïque actuelle d’un [tiled_extent](tiled-extent-class.md) objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -209,8 +222,8 @@ Stocke un [index](index-class.md) objet d’index de rang 1, 2 ou 3 qui représe
 const index<rank> local;  
 ```  
   
-## <a name="a-nametiledindexranka--rank"></a><a name="tiled_index__rank"></a>rang   
-Stocke le rang de la `tiled_index` objet.  
+## <a name="tiled_index__rank"></a>rang   
+Stocke le rang de le `tiled_index` objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -218,7 +231,7 @@ Stocke le rang de la `tiled_index` objet.
 static const int rank = _Rank;  
 ```  
 
-## <a name="a-nametiledindextilea--tile"></a><a name="tiled_index__tile"></a>Mosaïque   
+## <a name="tiled_index__tile"></a>Mosaïque   
 Stocke un [index](index-class.md) objet de rang 1, 2 ou 3 qui représente les coordonnées de la mosaïque actuelle d’un [tiled_extent](tiled-extent-class.md) objet.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -227,7 +240,7 @@ Stocke un [index](index-class.md) objet de rang 1, 2 ou 3 qui représente les co
 const index<rank> tile;  
 ```  
   
-## <a name="a-nametiledindextiledim0a--tiledim0"></a><a name="tiled_index__tile_dim0"></a>tile_dim0  
+## <a name="tiled_index__tile_dim0"></a>tile_dim0  
 Stocke la longueur de la dimension la plus importante.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -236,7 +249,7 @@ Stocke la longueur de la dimension la plus importante.
 static const int tile_dim0 = _Dim0;  
 ```  
    
-## <a name="a-nametiledindextiledim1a--tiledim1"></a><a name="tiled_index__tile_dim1"></a>tile_dim1   
+## <a name="tiled_index__tile_dim1"></a>tile_dim1   
 Stocke la longueur de la dimension importante suivant au plus.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -244,23 +257,23 @@ Stocke la longueur de la dimension importante suivant au plus.
 ```  
 static const int tile_dim1 = _Dim1;  
 ```  
-## <a name="a-nametiledindextiledim2a--tiledim2"></a><a name="tiled_index__tile_dim2"></a>tile_dim2   
-Stocke la longueur de la dimension moins significative.  
+## <a name="tiled_index__tile_dim2"></a>tile_dim2   
+Stocke la longueur de la dimension de poids faible.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
 static const int tile_dim2 = _Dim2;  
 ```  
-## <a name="a-nametiledindextileorigina--tileorigin"></a><a name="tiled_index__tile_origin"></a>tile_origin   
-Stocke un [index](index-class.md) objet de coordonnées rang 1, 2 ou 3 qui représente les paramètres globaux de l’origine de la mosaïque active dans un [tiled_extent](tiled-extent-class.md) objet.  
+## <a name="tiled_index__tile_origin"></a>tile_origin   
+Stocke un [index](index-class.md) objet de coordonnées de rang 1, 2 ou 3 qui représente les paramètres globaux de l’origine de la mosaïque actuelle dans un [tiled_extent](tiled-extent-class.md) objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
 const index<rank> tile_origin  
 ```  
-## <a name="a-nametileextenta--tileextent"></a><a name="tile_extent"></a>tile_extent
+## <a name="tile_extent"></a>tile_extent
   Obtient un [étendue](extent-class.md) objet qui a les valeurs de la `tiled_index` arguments template `tiled_index` arguments template `_Dim0`, `_Dim1`, et `_Dim2`.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -270,5 +283,5 @@ __declspec(property(get= get_tile_extent)) extent<rank> tile_extent;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accès concurrentiel Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
+ [Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
 
