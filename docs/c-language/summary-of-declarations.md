@@ -198,7 +198,7 @@ ms.lasthandoff: 04/04/2017
  *struct-declarator* :  
  *declarator*  
   
- *type-specifier declarator*<sub>opt</sub>**:** *constant-expression*  
+ *type-specifier declarator*<sub>opt</sub> **:** *constant-expression*  
   
  *parameter-declaration* :  
  *declaration-specifiers declarator* /* Déclarateur nommé \*/  
