@@ -869,7 +869,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
 -   **Classes de base virtuelles privées et héritage indirect**  
   
-     Les versions précédentes du compilateur autorisaient une classe dérivée à appeler des fonctions membres de ses classes de base **`private virtual` . Cet ancien comportement était incorrect et non conforme à la norme C++. Le compilateur n’accepte plus de code écrit de cette façon. Il émet dans ce cas l’erreur du compilateur C2280.  
+     Les versions précédentes du compilateur autorisaient une classe dérivée à appeler des fonctions membres de ses classes de base *dérivées indirectement*`private virtual` . Cet ancien comportement était incorrect et non conforme à la norme C++. Le compilateur n’accepte plus de code écrit de cette façon. Il émet dans ce cas l’erreur du compilateur C2280.  
   
     ```Output  
   
