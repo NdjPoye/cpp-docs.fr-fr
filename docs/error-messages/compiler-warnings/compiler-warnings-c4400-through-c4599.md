@@ -1,5 +1,5 @@
 ---
-title: "C4400 d’avertissements du compilateur via C4599 | Documents Microsoft"
+title: Compiler Warnings C4400 Through C4599 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -84,171 +84,176 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: f6991adb0413221ddb101d07af41f83d1bbcabe2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 59f50ea77dee36b982bf5d78e86a2a6a4d37ec54
+ms.lasthandoff: 04/24/2017
 
 ---
-# <a name="compiler-warnings-c4400-through-c4599"></a>C4400 d’avertissements du compilateur via C4599
-Les articles de cette partie de la documentation contiennent des informations sur un sous-ensemble des avertissements du compilateur Visual C++. Vous pouvez accéder à ces informations ici ou, dans le **sortie** fenêtre dans Visual Studio, vous pouvez sélectionner un numéro d’avertissement et appuyez sur la touche F1.  
+# <a name="compiler-warnings-c4400-through-c4599"></a>Compiler Warnings C4400 Through C4599
+The articles in this part of the documentation contain information about a subset of the Visual C++ compiler warnings. You can access the information here or, in the **Output** window in Visual Studio, you can select a warning number and then choose the F1 key.  
   
-## <a name="in-this-section"></a>Dans cette section  
+> [!NOTE]
+>  Not every [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] error or warning is documented in MSDN. In many cases, the diagnostic message provides all of the information that's available. If you think an error message needs additional explanation, you can let us know. You can use the feedback form on this page, or go to the menu bar in Visual Studio and choose **Help**, **Report a Bug**, or you can submit a suggestion or bug report on [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
-|Avertissement|Message|  
+You may find additional assistance for errors and warnings on the MSDN public forums. The [Visual C++ Language](http://go.microsoft.com/fwlink/?LinkId=158195) forum is for questions and discussions about the [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] language syntax and compiler. The [Visual C++ General](http://go.microsoft.com/fwlink/?LinkId=158194) forum is for questions about [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] that are not discussed in other forums. You may also find help about errors and warnings on [Stack Overflow](http://stackoverflow.com/).  
+  
+## <a name="in-this-section"></a>In This Section  
+  
+|Warning|Message|  
 |-------------|-------------|  
-|[Compilateur avertissement (niveau 1) C4600](../../error-messages/compiler-warnings/compiler-warning-level-1-c4600.md)|#pragma 'nom macro' : chaîne valide non vide attendue|  
-|[Compilateur avertissement (niveau 4) C4400](../../error-messages/compiler-warnings/compiler-warning-level-4-c4400.md)|'type' : les qualificateurs const/volatile pour ce type ne sont pas pris en charge.|  
-|[Compilateur avertissement (niveau 1) C4401](../../error-messages/compiler-warnings/compiler-warning-level-1-c4401.md)|'champ' : membre est le champ de bits|  
-|[Compilateur avertissement (niveau 1) C4402](../../error-messages/compiler-warnings/compiler-warning-level-1-c4402.md)|doit utiliser l'opérateur PTR|  
-|[Compilateur avertissement (niveau 1) C4403](../../error-messages/compiler-warnings/compiler-warning-level-1-c4403.md)|opérateur PTR non conforme|  
-|[Compilateur avertissement (niveau 3) C4404](../../error-messages/compiler-warnings/compiler-warning-level-3-c4404.md)|point dans la directive ignoré|  
-|[Compilateur avertissement (niveau 1) C4405](../../error-messages/compiler-warnings/compiler-warning-level-1-c4405.md)|'identificateur' : identificateur est un mot réservé|  
-|[Compilateur avertissement (niveau 1) C4406](../../error-messages/compiler-warnings/compiler-warning-level-1-c4406.md)|opérande sur directive ignoré|  
-|[Compilateur avertissement (niveau 1) C4407](../../error-messages/compiler-warnings/compiler-warning-level-1-c4407.md)|cast entre différentes représentations du pointeur en membre, le compilateur peut générer du code incorrect|  
-|[Compilateur avertissement (niveau 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|anonyme ' struct | union' n’a pas déclaré de membres de données|  
-|[Compilateur avertissement (niveau 1) C4409](../../error-messages/compiler-warnings/compiler-warning-level-1-c4409.md)|taille d'instruction non conforme|  
-|[Compilateur avertissement (niveau 1) C4410](../../error-messages/compiler-warnings/compiler-warning-level-1-c4410.md)|taille d'opérande non conforme|  
-|[Compilateur avertissement (niveau 1) C4411](../../error-messages/compiler-warnings/compiler-warning-level-1-c4411.md)|'identificateur' : symbole se résout en registre de déplacement|  
-|[Compilateur avertissement (niveau 2) C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|'fonction' : signature de fonction contient le type 'type' ; Objets C++ sont unsafe à passer entre le code pure et mixte ou natif.|  
-|Avertissement C4413 du compilateur|'classname::member' : membre de référence est initialisé en temporaire qui ne persiste pas après l’arrêt du constructeur|  
-|[Compilateur avertissement (niveau 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|'fonction' : saut de type short vers la fonction converti en near|  
-|Avertissement du compilateur (niveau 1) C4415|__declspec(code_seg('%$I')) dupliqué|  
-|Avertissement du compilateur (niveau 1) C4416|__declspec(code_seg(...)) contient une chaîne vide : ignoré|  
-|Avertissement du compilateur (niveau 1) C4417|une instanciation explicite du modèle ne peut pas avoir __declspec(code_seg(...)) : ignoré|  
-|Avertissement du compilateur (niveau 1) C4418|__declspec(code_seg(...)) ignoré sur un enum|  
-|Avertissement du compilateur (niveau 3) C4419|'%$I' n'a pas d'effet lorsqu'il est appliqué à la classe ref '%$S' privée.|  
-|[Compilateur avertissement (niveau 1) C4420](../../error-messages/compiler-warnings/compiler-warning-level-1-c4420.md)|'checked_operator' : opérateur non disponible, à l’aide de 'opérateur' à la place. vérification de l’exécution peut être compromise.|  
-|Avertissement du compilateur (niveau 3) C4421|'%$I' : un paramètre de référence sur une fonction pouvant être reprise est potentiellement dangereux|  
-|Avertissement du compilateur (niveau 3) C4423|'std::bad_alloc' : sera intercepté par la classe ('%$T') à la ligne %d|  
-|Avertissement du compilateur (niveau 3) C4424|interception de '%$T' précédée par '%$T' à la ligne %d ; il peut en résulter un comportement imprévisible si l'exception 'std::bad_alloc' est levée|  
-|Avertissement du compilateur (niveau 1) C4425|Une annotation SAL ne peut pas être appliquée à '…'|  
-|Avertissement C4426 du compilateur|indicateurs d’optimisation modifiés après l’inclusion de l’en-tête, peut être dû au #pragma optimize()|  
-|Avertissement du compilateur (niveau 1) C4427|'%$L' : dépassement en division constante, comportement indéfini|  
-|[Compilateur avertissement (niveau 4) C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)|nom de caractère universel éventuellement incomplet ou incorrectement formé|  
-|[Avertissement du compilateur C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut|  
-|[Compilateur avertissement (niveau 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|spécificateur de type manquant - int est pris en compte par défaut. Remarque : C ne prend plus en charge int par défaut|  
-|[Compilateur avertissement (niveau 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|un constructeur static doit avoir un accès privé ; établissement d'un accès privé|  
-|[Compilateur avertissement (niveau 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|'derived_class' : la disposition des objets sous/vd2 change en raison de la base virtuelle « base_class »|  
-|[Compilateur avertissement (niveau 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dynamic_cast de la base virtuelle 'base_class' en 'derived_class' dans le constructeur ou un destructeur peut échouer avec un objet partiellement construit|  
-|[Compilateur avertissement (niveau 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dynamic_cast de la base virtuelle 'base_class' en 'derived_class' risque d’échouer dans certains contextes|  
-|Avertissement C4438 du compilateur|'%$S' : ne peut pas être appelée en toute sécurité / await : mode de clrcompat. Si le CLR appelle « %$S », cela peut entraîner une altération de la tête de CLR|  
-|[Avertissement du compilateur C4439](../../error-messages/compiler-warnings/compiler-warning-c4439.md)|'fonction' : définition de fonction avec un type managé dans la signature doit avoir une convention d’appel __clrcall|  
-|[Compilateur avertissement (niveau 1) C4440](../../error-messages/compiler-warnings/compiler-warning-level-1-c4440.md)|appel de redéfinition de la convention de 'convention_appel1' à 'calling_convenction2' ignoré|  
-|[Compilateur avertissement (niveau 1) C4441](../../error-messages/compiler-warnings/compiler-warning-level-1-c4441.md)|convention d’appel de 'convention_appel1' ignoré ; utilisé à la place de 'convention_appel2'|  
-|Avertissement du compilateur (niveau 1) C4442|terminateur null incorporé dans un argument __annotation.  Valeur sera tronquée.|  
-|Avertissement du compilateur (niveau 1) C4443|le paramètre pragma attendu doit être '0', '1' ou '2'|  
-|Avertissement du compilateur (niveau 3) C4444|'identificateur' : '__unaligned' de niveau supérieur n’est pas implémenté dans ce contexte|  
-|[Compilateur avertissement (niveau 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|'fonction' : dans un « WinRT | gérés ' type d’une méthode virtuelle ne peut pas être privée|  
-|Avertissement du compilateur (niveau 1) C4446|'%$S' : Impossible de mapper le membre ' % $I ' dans ce type, en raison de conflits avec le nom de type. La méthode a été renommée en ' % $I '|  
-|Avertissement du compilateur (niveau 1) C4447|signature 'principale' trouvée sans le modèle de thread. Utilisez ' int main (Platform::Array\<Platform::String ^ > ^ args) ».|  
-|Avertissement C4448 du compilateur|'%$S' n’a pas d’interface par défaut spécifiée dans les métadonnées. Prélèvement : '%$S, ce qui risque d’échouer lors de l’exécution.|  
-|Avertissement C4449 du compilateur|'%$S un type doit être marqué comme '[WebHostHidden]'|  
-|Avertissement C4450 du compilateur|'%$S' doit être marqué comme '[WebHostHidden]', car il dérive de '%$S'|  
-|Avertissement du compilateur (niveau 4) C4451|'classname1::member' : utilisation de la classe ref 'classname2::member' dans ce contexte peut entraîner de marshaling non valide d’objet entre les contextes|  
-|Avertissement du compilateur (niveau 1) C4452|'identificateur' : type public ne peut pas être portée globale. Il doit être dans un espace de noms qui est un enfant du nom du fichier de sortie .winmd.|  
-|Avertissement du compilateur (niveau 1) C4453|'%$S' : un type « [WebHostHidden] » ne doit pas être utilisé sur la surface d’un type public qui n’est pas publiée '[WebHostHidden]'|  
-|Avertissement du compilateur (niveau 1) C4454|'%$S' est surchargée par le nombre de paramètres d’entrée sans avoir [DefaultOverload] spécifié. Enlèvement '%$D' en tant que la surcharge par défaut|  
-|Avertissement du compilateur (niveau 1) C4455|'operator %$I' : les identificateurs de suffixe littéral ne commençant pas par un trait de soulignement sont réservés|  
-|Avertissement du compilateur (niveau 3) C4456|déclaration de 'identificateur' masque une déclaration locale précédente|  
-|Avertissement du compilateur (niveau 3) C4457|déclaration de 'identificateur' masque le paramètre de fonction|  
-|Avertissement du compilateur (niveau 3) C4458|déclaration de 'identificateur' masque le membre de classe|  
-|Avertissement du compilateur (niveau 3) C4459|déclaration de 'identificateur' masque une déclaration globale|  
-|[Compilateur avertissement (niveau 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|« WinRT | gérés ' opérateur 'opérateur', a des paramètres passés par référence. « WinRT | gérés ' opérateur 'opérateur' a une sémantique différente de l’opérateur C++ 'cpp_operator', souhaitez-vous effectuer un passage par valeur ?|  
-|[Compilateur avertissement (niveau 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'classname' : cette classe a un finaliseur ' ! finaliseur ' mais pas de destructeur ' ~ destructeur »|  
-|[Compilateur avertissement (niveau 1) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'type' : Impossible de déterminer le GUID du type. Le programme risque d'échouer au moment de l'exécution.|  
-|Avertissement C4463 du compilateur|dépassement de capacité ; affectation 'value' pour le champ de bits qui ne peut contenir que des valeurs comprises entre 'mi_valuen' et « max_value »|  
-|Avertissement C4464 du compilateur|rapport inclut le chemin d’accès contient '..'|  
-|[Compilateur avertissement (niveau 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|pragmas de contrôle à virgule flottante ignorés sous /clr|  
-|Avertissement du compilateur (niveau 4) C4471|'énumération' : une déclaration anticipée d’une énumération non délimitée doit avoir un type sous-jacent (int pris par défaut)|  
-|Avertissement du compilateur (niveau 1) C4472|'identificateur' est un enum natif : ajoutez un spécificateur d’accès (public/privé) pour déclarer un ' WinRT | managé ' enum|  
-|Avertissement C4480 du compilateur|extension non standard utilisée : spécification du type sous-jacent de l’enum 'énumération'|  
-|[Compilateur avertissement (niveau 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|extension non standard utilisée : 'mot clé' de spécificateur de substitution|  
-|Avertissement C4482 du compilateur|extension non standard utilisée : enum 'énumération' utilisée dans le nom qualifié|  
-|Avertissement du compilateur (niveau 1) C4483|erreur de syntaxe : mot clé C++ attendu|  
-|[Avertissement du compilateur C4484](../../error-messages/compiler-warnings/compiler-warning-c4484.md)|'fonction_substitution' : correspond à la méthode de classe ref de base 'fonction_classe_base', mais n’est pas marquée 'virtual', 'new' ou 'override' ; 'new' (et non 'virtual') sont supposé.|  
-|[Avertissement du compilateur C4485](../../error-messages/compiler-warnings/compiler-warning-c4485.md)|'fonction_substitution' : correspond à la méthode de classe ref de base 'fonction_classe_base', mais n’est pas marqué comme 'new' ou 'override' ; 'new' (et 'virtual') sont supposés.|  
-|[Compilateur avertissement (niveau 1) C4486](../../error-messages/compiler-warnings/compiler-warning-level-1-c4486.md)|'fonction' : une méthode virtuelle privée d’une classe ref ou d’une classe value doit être marquée comme 'sealed'|  
-|[Compilateur avertissement (niveau 4) C4487](../../error-messages/compiler-warnings/compiler-warning-level-4-c4487.md)|'fonction_classe_dérivée' : correspond à la méthode non virtuelle héritée 'fonction_classe_base' mais n’est pas explicitement marqué comme 'new'|  
-|[Compilateur avertissement (niveau 1) C4488](../../error-messages/compiler-warnings/compiler-warning-level-1-c4488.md)|'fonction' : requiert le mot clé 'mot clé' pour implémenter la méthode d’interface 'méthode_interface'|  
-|[Compilateur avertissement (niveau 1) C4489](../../error-messages/compiler-warnings/compiler-warning-level-1-c4489.md)|'spécificateur' : non autorisé sur la méthode d’interface 'méthode' ; remplacer spécificateurs sont autorisées uniquement sur les méthodes de classe de classe et la valeur ref|  
-|[Compilateur avertissement (niveau 1) C4490](../../error-messages/compiler-warnings/compiler-warning-level-1-c4490.md)|'override' : utilisation incorrecte du spécificateur de substitution ; 'fonction' ne correspond pas à une méthode de classe ref de base|  
-|Avertissement du compilateur (niveau 1) C4491|'%s' : format de version IDL non conforme|  
-|Avertissement du compilateur (niveau 1) C4492|'%$S' : correspond à la méthode de classe ref '%$S', mais n'est pas marqué comme 'override'|  
-|Avertissement du compilateur (niveau 3) C4493|expression de suppression n’a aucun effet car le destructeur de 'type' n’a pas d’accessibilité 'publique'|  
-|Avertissement du compilateur (niveau 1) C4494|'%$S' : ignore __declspec(allocateur) car le type de retour de la fonction n'est pas un pointeur ni une référence|  
-|[Compilateur avertissement (niveau 1) C4502](../../error-messages/compiler-warnings/compiler-warning-level-1-c4502.md)|'linkage specification' nécessite l'utilisation du mot clé 'extern' et doit précéder tous les autres spécificateurs|  
-|[Erreur C4503 de compilateur avertissement (niveau 1)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4503.md)|'identificateur' : longueur du nom dépassée, décoré nom a été tronqué.|  
-|[Compilateur avertissement (niveau 4) C4505](../../error-messages/compiler-warnings/compiler-warning-level-4-c4505.md)|'fonction' : fonction locale non référencée a été supprimée.|  
-|[Compilateur avertissement (niveau 1) C4506](../../error-messages/compiler-warnings/compiler-warning-level-1-c4506.md)|aucune définition de fonction inline 'fonction'|  
-|[Compilateur avertissement (niveau 1) C4508](../../error-messages/compiler-warnings/compiler-warning-level-1-c4508.md)|'fonction' : fonction doit retourner une valeur ; type supposé de retour 'void'|  
-|Avertissement C4509 du compilateur|extension non standard utilisée : 'fonction' utilise SEH et 'objet' a un destructeur|  
-|[Compilateur avertissement (niveau 4) C4510](../../error-messages/compiler-warnings/compiler-warning-level-4-c4510.md)|'classe' : constructeur par défaut a été défini de manière implicite comme étant supprimé|  
-|[Compilateur avertissement (niveau 3) C4511](../../error-messages/compiler-warnings/compiler-warning-level-3-c4511.md)|'classe' : le constructeur de copie a été défini de manière implicite comme étant supprimé|  
-|[Compilateur (niveau 4) d’avertissement C4512](../../error-messages/compiler-warnings/compiler-warning-level-4-c4512.md)|'classe' : l’opérateur d’assignation a été défini de manière implicite comme étant supprimé|  
-|[Compilateur avertissement (niveau 4) C4513](../../error-messages/compiler-warnings/compiler-warning-level-4-c4513.md)|'classe' : destructeur a été défini de manière implicite comme étant supprimé|  
-|[Compilateur avertissement (niveau 4) C4514](../../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md)|'fonction' : la fonction inline non référencée a été supprimée|  
-|[Compilateur avertissement (niveau 4) C4515](../../error-messages/compiler-warnings/compiler-warning-level-4-c4515.md)|'namespace' : espace de noms s’utilise lui-même|  
-|[Compilateur avertissement (niveau 4) C4516](../../error-messages/compiler-warnings/compiler-warning-level-4-c4516.md)|'class::symbol' : les déclarations access sont déconseillées ; les déclarations à l’aide de membre constituent une meilleure alternative|  
-|[Compilateur avertissement (niveau 4) C4517](../../error-messages/compiler-warnings/compiler-warning-level-4-c4517.md)|les déclarations d'accès sont déconseillées ; les déclarations using de membres constituent un meilleur choix|  
-|[Compilateur avertissement (niveau 1) C4518](../../error-messages/compiler-warnings/compiler-warning-level-1-c4518.md)|'spécificateur' : classe de stockage ou de type inattendu ; ignoré|  
-|Avertissement C4519 du compilateur|arguments template par défaut autorisés uniquement sur un modèle de classe|  
-|[Compilateur avertissement (niveau 3) C4521](../../error-messages/compiler-warnings/compiler-warning-level-3-c4521.md)|'classe' : plusieurs constructeurs de copie spécifiés|  
-|[Compilateur avertissement (niveau 3) C4522](../../error-messages/compiler-warnings/compiler-warning-level-3-c4522.md)|'classe' : plusieurs opérateurs d’assignation spécifiés|  
-|[Compilateur avertissement (niveau 3) C4523](../../error-messages/compiler-warnings/compiler-warning-level-3-c4523.md)|'classe' : plusieurs destructeurs spécifiés|  
-|[Compilateur avertissement (niveau 1) C4526](../../error-messages/compiler-warnings/compiler-warning-level-1-c4526.md)|'fonction' : fonction membre static ne peuvent pas remplacer la fonction virtuelle 'fonction_virtuelle' \n substitution ignorée, la fonction virtual sera masquée|  
-|[Compilateur avertissement (niveau 1) C4530](../../error-messages/compiler-warnings/compiler-warning-level-1-c4530.md)|Gestionnaire d’exceptions C++ utilisé, mais les sémantiques de déroulement ne sont pas activées. Spécifiez /EHsc|  
-|Avertissement du compilateur (niveau 1) C4531|Gestion des exceptions C++ non disponible sous Windows CE. Utilisez la gestion structurée des exceptions|  
-|[Compilateur avertissement (niveau 1) C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|'continue' : sortie bloc ' __finally/finally' a un comportement indéfini lors de la gestion de l’arrêt|  
-|[Compilateur avertissement (niveau 1) C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|l’initialisation de 'variable' est ignorée par 'étiquette goto'|  
-|[Compilateur avertissement (niveau 3) C4534](../../error-messages/compiler-warnings/compiler-warning-level-3-c4534.md)|'constructeur' ne sera pas un constructeur par défaut pour ' classe | struct' 'identificateur' en raison de l’argument par défaut|  
-|[Compilateur avertissement (niveau 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|appel de _set_se_translator() requiert /EHa|  
-|[Compilateur avertissement (niveau 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|'NomType' : nom de type dépasse la limite métadonnées de 'character_limit' caractères|  
-|[Compilateur avertissement (niveau 1) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)|'objet' : '.' appliqué à un type non UDT|  
-|[Compilateur avertissement (niveau 3) C4538](../../error-messages/compiler-warnings/compiler-warning-level-3-c4538.md)|'type' : les qualificateurs const/volatile pour ce type ne sont pas pris en charge.|  
-|[Compilateur avertissement (niveau 1) C4540](../../error-messages/compiler-warnings/compiler-warning-level-1-c4540.md)|utilisé de dynamic_cast pour convertir en base ambiguë ou inaccessible ; test d’exécution échouera ('type1' en 'type2')|  
-|[Compilateur avertissement (niveau 1) C4541](../../error-messages/compiler-warnings/compiler-warning-level-1-c4541.md)|'identificateur' utilisé sur un type polymorphe 'type' avec/GR ; un comportement imprévisible|  
-|Avertissement du compilateur (niveau 1) C4542|Génération ignorée du fichier texte injecté fusionné, impossible d'écrire le fichier %$M : '%s' : %$e|  
-|[Compilateur avertissement (niveau 3) C4543](../../error-messages/compiler-warnings/compiler-warning-level-3-c4543.md)|Texte injecté supprimé par l'attribut 'no_injected_text'|  
-|[Compilateur avertissement (niveau 1) C4544](../../error-messages/compiler-warnings/compiler-warning-level-1-c4544.md)|'déclaration' : argument de modèle ignoré sur cette déclaration de modèle par défaut|  
-|[Compilateur avertissement (niveau 1) C4545](../../error-messages/compiler-warnings/compiler-warning-level-1-c4545.md)|l’expression avant la virgule correspond à une fonction qui n’a pas de liste d’arguments|  
-|[Compilateur avertissement (niveau 1) C4546](../../error-messages/compiler-warnings/compiler-warning-level-1-c4546.md)|l’appel de fonction avant la virgule n’a pas de liste d’arguments|  
-|[Compilateur avertissement (niveau 1) C4547](../../error-messages/compiler-warnings/compiler-warning-level-1-c4547.md)|'opérateur' : l'opérateur avant la virgule n'a pas d'effet ; opérateur avec effet secondaire attendu|  
-|[Compilateur avertissement (niveau 1) C4548](../../error-messages/compiler-warnings/compiler-warning-level-1-c4548.md)|l'expression avant la virgule n'a pas d'effet ; expression avec effet secondaire attendu|  
-|[Compilateur avertissement (niveau 1) C4549](../../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md)|'opérateur' : l'opérateur avant la virgule n'a pas d'effet ; souhaitez-vous utiliser 'opérateur' ?|  
-|[Compilateur avertissement (niveau 1) C4550](../../error-messages/compiler-warnings/compiler-warning-level-1-c4550.md)|l'expression évalue une fonction dans laquelle manque une liste d'arguments|  
-|[Compilateur avertissement (niveau 1) C4551](../../error-messages/compiler-warnings/compiler-warning-level-1-c4551.md)|liste d'arguments manquante dans l'appel de fonction|  
-|[Compilateur avertissement (niveau 1) C4552](../../error-messages/compiler-warnings/compiler-warning-level-1-c4552.md)|'opérateur' : opérateur n’a aucun effet ; opérateur avec effet secondaire attendu|  
-|[Compilateur avertissement (niveau 1) C4553](../../error-messages/compiler-warnings/compiler-warning-level-1-c4553.md)|'opérateur' : opérateur n’a aucun effet ; souhaitez-vous utiliser ' opérateur ?|  
-|[Compilateur avertissement (niveau 3) C4554](../../error-messages/compiler-warnings/compiler-warning-level-3-c4554.md) C4554|'opérateur' : Vérifiez la priorité des opérateurs d’erreur possibles ; Utilisez des parenthèses pour clarifier la priorité|  
-|[Compilateur avertissement (niveau 1) C4555](../../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md)|l'expression n'a pas d'effet ; attendue expression avec effets secondaires|  
-|[Compilateur avertissement (niveau 1) C4556](../../error-messages/compiler-warnings/compiler-warning-level-1-c4556.md)|valeur d’argument immédiat intrinsèque 'valeur' est hors limites » lower_bound - upper_bound »|  
-|[Compilateur avertissement (niveau 3) C4557](../../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md)|'__assume' contient l'effet 'effet'|  
-|[Compilateur avertissement (niveau 1) C4558](../../error-messages/compiler-warnings/compiler-warning-level-1-c4558.md)|valeur d’opérande 'valeur' est hors limites » lower_bound - upper_bound »|  
-|[Compilateur avertissement (niveau 4) C4559](../../error-messages/compiler-warnings/compiler-warning-level-4-c4559.md)|'fonction' : redéfinition ; la fonction gagne __declspec (modifier)|  
-|[Compilateur avertissement (niveau 1) C4561](../../error-messages/compiler-warnings/compiler-warning-level-1-c4561.md)|'__fastcall' incompatible avec le « / clr' option : conversion en '\__stdcall »|  
-|Avertissement du compilateur (niveau 4) C4562|les fonctions entièrement prototypées sont requises avec l'option '/clr' : conversion de '()' en '(void)'|  
-|[Compilateur avertissement (niveau 4) C4564](../../error-messages/compiler-warnings/compiler-warning-level-4-c4564.md)|la méthode 'méthode' de 'classe' 'classname' définit un paramètre non pris en charge par défaut 'paramètre'|  
-|[Compilateur avertissement (niveau 4) C4565](../../error-messages/compiler-warnings/compiler-warning-level-4-c4565.md)|'fonction' : redéfinition ; le symbole était déclaré précédemment avec __declspec (modifier)|  
-|[Compilateur avertissement (niveau 1) C4566](../../error-messages/compiler-warnings/compiler-warning-level-1-c4566.md)|caractère représenté par le nom de caractère universel 'char' ne peut pas être représenté dans la page de codes actuelle (%d)|  
-|Avertissement du compilateur (niveau 1) C4568|'%$S' : aucun membre ne correspond à la signature de la substitution explicite|  
-|Avertissement du compilateur (niveau 3) C4569|'%$S' : aucun membre ne correspond à la signature de la substitution explicite|  
-|[Compilateur avertissement (niveau 3) C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)|'type' : n’est pas explicitement déclaré comme abstract mais comporte des fonctions abstract|  
-|[Compilateur avertissement (niveau 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|Informations : la sémantique catch(...) a changé depuis Visual C++ 7.1 ; les exceptions structurées (SEH) ne sont plus interceptées|  
-|[Compilateur avertissement (niveau 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|L’attribut [ParamArray] est déconseillé sous/CLR, utilisez '...' à la place|  
-|Avertissement du compilateur (niveau 1) C4573|l'utilisation de '%$S' exige que le compilateur capture 'this', ce qui n'est pas autorisé par le mode de capture par défaut actuel|  
-|Avertissement du compilateur (niveau 4) C4574|'Identificateur' est défini comme étant '0' : voulez-vous utiliser 'identifier #if' ?|  
-|Avertissement du compilateur (niveau 1) C4575|'__vectorcall' incompatible avec le « / clr' option : conversion en '\__stdcall »|  
-|[Compilateur avertissement (niveau 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] est déconseillé ; spécifiez System::Attribute ou Platform::Metadata comme classe de base à la place|  
-|[Compilateur avertissement (niveau 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|comportement désapprouvé : '« string »' remplacé par 'chaîne' pour traiter l’attribut|  
-|Avertissement du compilateur (niveau 4) C4582|'%$S' : le constructeur n'est pas appelé de manière implicite|  
-|Avertissement du compilateur (niveau 4) C4583|'%$S' : le destructeur n'est pas appelé de manière implicite|  
-|[Compilateur avertissement (niveau 1) C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)|'classe1' : classe de base 'classe2' est déjà une classe de base de « % class3 »|  
-|Avertissement du compilateur (niveau 1) C4585|'classe' : un WinRT 'classe ref publique' doit être scellée ou dérive d’existant non scellés (classe)|  
-|Avertissement du compilateur (niveau 1) C4586|'%$S' : un type public ne peut pas être déclaré dans un espace de noms de niveau supérieur appelé 'Windows'|  
-|Avertissement du compilateur (niveau 1) C4587|'anonymous_structure' : changement de comportement : n’est plus implicitement appelé|  
-|Avertissement du compilateur (niveau 1) C4588|'anonymous_structure' : changement de comportement : destructeur est appelé n’est plus implicitement.|  
-|Avertissement du compilateur (niveau 1) C4591|limites de dépassé la profondeur des appels 'constexpr' (/ constexpr:depth\<nombre >)|  
-|Avertissement du compilateur (niveau 3) C4592|'fonction' : 'constexpr' appeler d’évaluation a échoué ; fonction est appelée au moment de l’exécution|  
-|Avertissement du compilateur (niveau 1) C4593|'fonction' : limite d’étape d’évaluation d’appels 'constexpr' de 'limite' dépassé ; Utilisez /constexpr:steps\<nombre > pour augmenter la limite|  
-|Avertissement du compilateur (niveau 3) C4594|'%$S' : le destructeur ne sera pas appelé de manière implicite si une exception est levée|  
-|Avertissement du compilateur (niveau 1) C4595|'%$S' : changement de comportement : le destructeur ne sera plus appelé de manière implicite si une exception est levée|
+|[Compiler Warning (level 1) C4600](../../error-messages/compiler-warnings/compiler-warning-level-1-c4600.md)|#pragma 'macro name': expected a valid non-empty string|  
+|[Compiler Warning (level 4) C4400](../../error-messages/compiler-warnings/compiler-warning-level-4-c4400.md)|'type': const/volatile qualifiers on this type are not supported|  
+|[Compiler Warning (level 1) C4401](../../error-messages/compiler-warnings/compiler-warning-level-1-c4401.md)|'bitfield': member is bit field|  
+|[Compiler Warning (level 1) C4402](../../error-messages/compiler-warnings/compiler-warning-level-1-c4402.md)|must use PTR operator|  
+|[Compiler Warning (level 1) C4403](../../error-messages/compiler-warnings/compiler-warning-level-1-c4403.md)|illegal PTR operator|  
+|[Compiler Warning (level 3) C4404](../../error-messages/compiler-warnings/compiler-warning-level-3-c4404.md)|period on directive ignored|  
+|[Compiler Warning (level 1) C4405](../../error-messages/compiler-warnings/compiler-warning-level-1-c4405.md)|'identifier': identifier is reserved word|  
+|[Compiler Warning (level 1) C4406](../../error-messages/compiler-warnings/compiler-warning-level-1-c4406.md)|operand on directive ignored|  
+|[Compiler Warning (level 1) C4407](../../error-messages/compiler-warnings/compiler-warning-level-1-c4407.md)|cast between different pointer to member representations, compiler may generate incorrect code|  
+|[Compiler Warning (level 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|anonymous 'struct&#124;union' did not declare any data members|  
+|[Compiler Warning (level 1) C4409](../../error-messages/compiler-warnings/compiler-warning-level-1-c4409.md)|illegal instruction size|  
+|[Compiler Warning (level 1) C4410](../../error-messages/compiler-warnings/compiler-warning-level-1-c4410.md)|illegal size for operand|  
+|[Compiler Warning (level 1) C4411](../../error-messages/compiler-warnings/compiler-warning-level-1-c4411.md)|'identifier': symbol resolves to displacement register|  
+|[Compiler Warning (level 2) C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|'function': function signature contains type 'type'; C++ objects are unsafe to pass between pure code and mixed or native.|  
+|Compiler warning C4413|'classname::member': reference member is initialized to a temporary that doesn't persist after the constructor exits|  
+|[Compiler Warning (level 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|'function': short jump to function converted to near|  
+|Compiler warning (level 1) C4415|duplicate __declspec(code_seg('%$I'))|  
+|Compiler warning (level 1) C4416|__declspec(code_seg(...)) contains empty string: ignored|  
+|Compiler warning (level 1) C4417|an explicit template instantiation cannot have __declspec(code_seg(...)): ignored|  
+|Compiler warning (level 1) C4418|__declspec(code_seg(...)) ignored on an enum|  
+|Compiler warning (level 3) C4419|'%$I' has no effect when applied to private ref class '%$S'.|  
+|[Compiler Warning (level 1) C4420](../../error-messages/compiler-warnings/compiler-warning-level-1-c4420.md)|'checked_operator': operator not available, using 'operator' instead; run-time checking may be compromised|  
+|Compiler warning (level 3) C4421|'%$I': a reference parameter on a resumable function is potentially unsafe|  
+|Compiler warning (level 3) C4423|'std::bad_alloc': will be caught by class ('%$T') on line %d|  
+|Compiler warning (level 3) C4424|catch for '%$T' preceded by '%$T' on line %d; unpredictable behavior may result if 'std::bad_alloc' is thrown|  
+|Compiler warning (level 1) C4425|A SAL annotation cannot be applied to '...'|  
+|Compiler warning C4426|optimization flags changed after including header, may be due to #pragma optimize()|  
+|Compiler warning (level 1) C4427|'%$L': overflow in constant division, undefined behavior|  
+|[Compiler Warning (level 4) C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)|possible incomplete or improperly formed universal-character-name|  
+|[Compiler Warning C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|missing type specifier - int assumed. Note: C++ does not support default-int|  
+|[Compiler Warning (level 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|missing type specifier - int assumed. Note: C no longer supports default-int|  
+|[Compiler Warning (level 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|a static constructor must have private accessibility; changing to private access|  
+|[Compiler Warning (level 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|'derived_class': Object layout under /vd2 will change due to virtual base 'base_class'|  
+|[Compiler Warning (level 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dynamic_cast from virtual base 'base_class' to 'derived_class' in constructor or destructor could fail with partially-constructed object|  
+|[Compiler Warning (level 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dynamic_cast from virtual base 'base_class' to 'derived_class' could fail in some contexts|  
+|Compiler warning C4438|'%$S': cannot be called safely in /await:clrcompat mode. If '%$S' calls into the CLR it may result in CLR head corruption|  
+|[Compiler Warning C4439](../../error-messages/compiler-warnings/compiler-warning-c4439.md)|'function': function definition with a managed type in the signature must have a __clrcall calling convention|  
+|[Compiler Warning (level 1) C4440](../../error-messages/compiler-warnings/compiler-warning-level-1-c4440.md)|calling convention redefinition from 'calling_convention1' to 'calling_convenction2' ignored|  
+|[Compiler Warning (level 1) C4441](../../error-messages/compiler-warnings/compiler-warning-level-1-c4441.md)|calling convention of 'calling_convention1' ignored; 'calling_convention2' used instead|  
+|Compiler warning (level 1) C4442|embedded null terminator in __annotation argument.  Value will be truncated.|  
+|Compiler warning (level 1) C4443|expected pragma parameter to be '0', '1', or '2'|  
+|Compiler warning (level 3) C4444|'identifier': top level '__unaligned' is not implemented in this context|  
+|[Compiler Warning (level 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|'function': in a 'WinRT&#124;managed' type a virtual method cannot be private|  
+|Compiler warning (level 1) C4446|'%$S': cannot map member '%$I' into this type, due to conflict with the type name. The method was renamed to '%$I'|  
+|Compiler warning (level 1) C4447|'main' signature found without threading model. Consider using 'int main(Platform::Array\<Platform::String^>^ args)'.|  
+|Compiler warning C4448|'%$S' does not have a default interface specified in metadata. Picking: '%$S', which may fail at runtime.|  
+|Compiler warning C4449|'%$S' an unsealed type should be marked as '[WebHostHidden]'|  
+|Compiler warning C4450|'%$S' should be marked as '[WebHostHidden]' because it derives from '%$S'|  
+|Compiler warning (level 4) C4451|'classname1::member': Usage of ref class 'classname2::member' inside this context can lead to invalid marshaling of object across contexts|  
+|Compiler warning (level 1) C4452|'identifier': public type cannot be at global scope. It must be in a namespace that is a child of the name of the output .winmd file.|  
+|Compiler warning (level 1) C4453|'%$S': A '[WebHostHidden]' type should not be used on the published surface of a public type that is not '[WebHostHidden]'|  
+|Compiler warning (level 1) C4454|'%$S' is overloaded by more than the number of input parameters without having [DefaultOverload] specified. Picking '%$D' as the default overload|  
+|Compiler warning (level 1) C4455|'operator %$I': literal suffix identifiers that do not start with an underscore are reserved|  
+|Compiler warning (level 3) C4456|declaration of 'identifier' hides previous local declaration|  
+|Compiler warning (level 3) C4457|declaration of 'identifier' hides function parameter|  
+|Compiler warning (level 3) C4458|declaration of 'identifier' hides class member|  
+|Compiler warning (level 3) C4459|declaration of 'identifier' hides global declaration|  
+|[Compiler Warning (level 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|'WinRT&#124;managed' operator 'operator', has parameter passed by reference. 'WinRT&#124;managed' operator 'operator' has different semantics from C++ operator 'cpp_operator', did you intend to pass by value?|  
+|[Compiler Warning (level 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'classname': this class has a finalizer '!finalizer' but no destructor '~dtor'|  
+|[Compiler Warning (level 1) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'type' : cannot determine the GUID of the type. Program may fail at runtime.|  
+|Compiler warning C4463|overflow; assigning 'value' to bit-field that can only hold values from 'mi_valuen' to 'max_value'|  
+|Compiler warning C4464|relative include path contains '..'|  
+|[Compiler Warning (level 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|floating-point control pragmas ignored under /clr|  
+|Compiler warning (level 4) C4471|'enumeration': a forward declaration of an unscoped enumeration must have an underlying type (int assumed)|  
+|Compiler warning (level 1) C4472|'identifier' is a native enum: add an access specifier (private/public) to declare a 'WinRT&#124;managed' enum|  
+|Compiler warning C4480|nonstandard extension used: specifying underlying type for enum 'enumeration'|  
+|[Compiler Warning (level 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|nonstandard extension used: override specifier 'keyword'|  
+|Compiler warning C4482|nonstandard extension used: enum 'enumeration' used in qualified name|  
+|Compiler warning (level 1) C4483|syntax error: expected C++ keyword|  
+|[Compiler Warning C4484](../../error-messages/compiler-warnings/compiler-warning-c4484.md)|'override_function': matches base ref class method 'base_class_function', but is not marked 'virtual', 'new' or 'override'; 'new' (and not 'virtual') is assumed|  
+|[Compiler Warning C4485](../../error-messages/compiler-warnings/compiler-warning-c4485.md)|'override_function': matches base ref class method 'base_class_function', but is not marked 'new' or 'override'; 'new' (and 'virtual') is assumed|  
+|[Compiler Warning (level 1) C4486](../../error-messages/compiler-warnings/compiler-warning-level-1-c4486.md)|'function': a private virtual method of a ref class or value class should be marked 'sealed'|  
+|[Compiler Warning (level 4) C4487](../../error-messages/compiler-warnings/compiler-warning-level-4-c4487.md)|'derived_class_function': matches inherited non-virtual method 'base_class_function' but is not explicitly marked 'new'|  
+|[Compiler Warning (level 1) C4488](../../error-messages/compiler-warnings/compiler-warning-level-1-c4488.md)|'function': requires 'keyword' keyword to implement the interface method 'interface_method'|  
+|[Compiler Warning (level 1) C4489](../../error-messages/compiler-warnings/compiler-warning-level-1-c4489.md)|'specifier': not allowed on interface method 'method'; override specifiers are only allowed on ref class and value class methods|  
+|[Compiler Warning (level 1) C4490](../../error-messages/compiler-warnings/compiler-warning-level-1-c4490.md)|'override': incorrect use of override specifier; 'function' does not match a base ref class method|  
+|Compiler warning (level 1) C4491|'%s': has an illegal IDL version format|  
+|Compiler warning (level 1) C4492|'%$S': matches base ref class method '%$S', but is not marked 'override'|  
+|Compiler warning (level 3) C4493|delete expression has no effect as the destructor of 'type' does not have 'public' accessibility|  
+|Compiler warning (level 1) C4494|'%$S' : Ignoring __declspec(allocator) because the function return type is not a pointer or reference|  
+|[Compiler Warning (level 1) C4502](../../error-messages/compiler-warnings/compiler-warning-level-1-c4502.md)|'linkage specification' requires use of keyword 'extern' and must precede all other specifiers|  
+|[Compiler Warning (level 1) C4503](../../error-messages/compiler-warnings/compiler-warning-level-1-c4503.md)|'identifier': decorated name length exceeded, name was truncated|  
+|[Compiler Warning (level 4) C4505](../../error-messages/compiler-warnings/compiler-warning-level-4-c4505.md)|'function': unreferenced local function has been removed|  
+|[Compiler Warning (level 1) C4506](../../error-messages/compiler-warnings/compiler-warning-level-1-c4506.md)|no definition for inline function 'function'|  
+|[Compiler Warning (level 1) C4508](../../error-messages/compiler-warnings/compiler-warning-level-1-c4508.md)|'function': function should return a value; 'void' return type assumed|  
+|Compiler warning C4509|nonstandard extension used: 'function' uses SEH and 'object' has destructor|  
+|[Compiler Warning (level 4) C4510](../../error-messages/compiler-warnings/compiler-warning-level-4-c4510.md)|'class': default constructor was implicitly defined as deleted|  
+|[Compiler Warning (level 3) C4511](../../error-messages/compiler-warnings/compiler-warning-level-3-c4511.md)|'class': copy constructor was implicitly defined as deleted|  
+|[Compiler Warning (level 4) C4512](../../error-messages/compiler-warnings/compiler-warning-level-4-c4512.md)|'class': assignment operator was implicitly defined as deleted|  
+|[Compiler Warning (level 4) C4513](../../error-messages/compiler-warnings/compiler-warning-level-4-c4513.md)|'class': destructor was implicitly defined as deleted|  
+|[Compiler Warning (level 4) C4514](../../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md)|'function': unreferenced inline function has been removed|  
+|[Compiler Warning (level 4) C4515](../../error-messages/compiler-warnings/compiler-warning-level-4-c4515.md)|'namespace': namespace uses itself|  
+|[Compiler Warning (level 4) C4516](../../error-messages/compiler-warnings/compiler-warning-level-4-c4516.md)|'class::symbol': access-declarations are deprecated; member using-declarations provide a better alternative|  
+|[Compiler Warning (level 4) C4517](../../error-messages/compiler-warnings/compiler-warning-level-4-c4517.md)|access-declarations are deprecated; member using-declarations provide a better alternative|  
+|[Compiler Warning (level 1) C4518](../../error-messages/compiler-warnings/compiler-warning-level-1-c4518.md)|'specifier': storage-class or type specifier(s) unexpected here; ignored|  
+|Compiler warning C4519|default template arguments are only allowed on a class template|  
+|[Compiler Warning (level 3) C4521](../../error-messages/compiler-warnings/compiler-warning-level-3-c4521.md)|'class': multiple copy constructors specified|  
+|[Compiler Warning (level 3) C4522](../../error-messages/compiler-warnings/compiler-warning-level-3-c4522.md)|'class': multiple assignment operators specified|  
+|[Compiler Warning (level 3) C4523](../../error-messages/compiler-warnings/compiler-warning-level-3-c4523.md)|'class': multiple destructors specified|  
+|[Compiler Warning (level 1) C4526](../../error-messages/compiler-warnings/compiler-warning-level-1-c4526.md)|'function': static member function cannot override virtual function 'virtual function'\n override ignored, virtual function will be hidden|  
+|[Compiler Warning (level 1) C4530](../../error-messages/compiler-warnings/compiler-warning-level-1-c4530.md)|C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc|  
+|Compiler warning (level 1) C4531|C++ exception handling not available on Windows CE. Use Structured Exception Handling|  
+|[Compiler Warning (level 1) C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|'continue': jump out of '__finally/finally' block has undefined behavior during termination handling|  
+|[Compiler Warning (level 1) C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|initialization of 'variable' is skipped by 'goto label'|  
+|[Compiler Warning (level 3) C4534](../../error-messages/compiler-warnings/compiler-warning-level-3-c4534.md)|'constructor' will not be a default constructor for 'class&#124;struct' 'identifier' due to the default argument|  
+|[Compiler Warning (level 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|calling _set_se_translator() requires /EHa|  
+|[Compiler Warning (level 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|'typename': type-name exceeds meta-data limit of 'character_limit' characters|  
+|[Compiler Warning (level 1) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)|'object': '.' applied to non-UDT type|  
+|[Compiler Warning (level 3) C4538](../../error-messages/compiler-warnings/compiler-warning-level-3-c4538.md)|'type': const/volatile qualifiers on this type are not supported|  
+|[Compiler Warning (level 1) C4540](../../error-messages/compiler-warnings/compiler-warning-level-1-c4540.md)|dynamic_cast used to convert to inaccessible or ambiguous base; run-time test will fail ('type1' to 'type2')|  
+|[Compiler Warning (level 1) C4541](../../error-messages/compiler-warnings/compiler-warning-level-1-c4541.md)|'identifier' used on polymorphic type 'type' with /GR-; unpredictable behavior may result|  
+|Compiler warning (level 1) C4542|Skipping generation of merged injected text file, cannot write %$M file: '%s': %$e|  
+|[Compiler Warning (level 3) C4543](../../error-messages/compiler-warnings/compiler-warning-level-3-c4543.md)|Injected text suppressed by attribute 'no_injected_text'|  
+|[Compiler Warning (level 1) C4544](../../error-messages/compiler-warnings/compiler-warning-level-1-c4544.md)|'declaration': default template argument ignored on this template declaration|  
+|[Compiler Warning (level 1) C4545](../../error-messages/compiler-warnings/compiler-warning-level-1-c4545.md)|expression before comma evaluates to a function which is missing an argument list|  
+|[Compiler Warning (level 1) C4546](../../error-messages/compiler-warnings/compiler-warning-level-1-c4546.md)|function call before comma missing argument list|  
+|[Compiler Warning (level 1) C4547](../../error-messages/compiler-warnings/compiler-warning-level-1-c4547.md)|'operator': operator before comma has no effect; expected operator with side-effect|  
+|[Compiler Warning (level 1) C4548](../../error-messages/compiler-warnings/compiler-warning-level-1-c4548.md)|expression before comma has no effect; expected expression with side-effect|  
+|[Compiler Warning (level 1) C4549](../../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md)|'operator': operator before comma has no effect; did you intend 'operator'?|  
+|[Compiler Warning (level 1) C4550](../../error-messages/compiler-warnings/compiler-warning-level-1-c4550.md)|expression evaluates to a function which is missing an argument list|  
+|[Compiler Warning (level 1) C4551](../../error-messages/compiler-warnings/compiler-warning-level-1-c4551.md)|function call missing argument list|  
+|[Compiler Warning (level 1) C4552](../../error-messages/compiler-warnings/compiler-warning-level-1-c4552.md)|'operator': operator has no effect; expected operator with side-effect|  
+|[Compiler Warning (level 1) C4553](../../error-messages/compiler-warnings/compiler-warning-level-1-c4553.md)|'operator': operator has no effect; did you intend 'operator?|  
+|[Compiler Warning (level 3) C4554](../../error-messages/compiler-warnings/compiler-warning-level-3-c4554.md) C4554|'operator': check operator precedence for possible error; use parentheses to clarify precedence|  
+|[Compiler Warning (level 1) C4555](../../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md)|expression has no effect; expected expression with side-effect|  
+|[Compiler Warning (level 1) C4556](../../error-messages/compiler-warnings/compiler-warning-level-1-c4556.md)|value of intrinsic immediate argument 'value' is out of range 'lower_bound - upper_bound'|  
+|[Compiler Warning (level 3) C4557](../../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md)|'__assume' contains effect 'effect'|  
+|[Compiler Warning (level 1) C4558](../../error-messages/compiler-warnings/compiler-warning-level-1-c4558.md)|value of operand 'value' is out of range 'lower_bound - upper_bound'|  
+|[Compiler Warning (level 4) C4559](../../error-messages/compiler-warnings/compiler-warning-level-4-c4559.md)|'function': redefinition; the function gains __declspec(modifier)|  
+|[Compiler Warning (level 1) C4561](../../error-messages/compiler-warnings/compiler-warning-level-1-c4561.md)|'__fastcall' incompatible with the '/clr' option: converting to '\__stdcall'|  
+|Compiler warning (level 4) C4562|fully prototyped functions are required with the '/clr' option: converting '()' to '(void)'|  
+|[Compiler Warning (level 4) C4564](../../error-messages/compiler-warnings/compiler-warning-level-4-c4564.md)|method 'method' of 'class' 'classname' defines unsupported default parameter 'parameter'|  
+|[Compiler Warning (level 4) C4565](../../error-messages/compiler-warnings/compiler-warning-level-4-c4565.md)|'function': redefinition; the symbol was previously declared with __declspec(modifier)|  
+|[Compiler Warning (level 1) C4566](../../error-messages/compiler-warnings/compiler-warning-level-1-c4566.md)|character represented by universal-character-name 'char' cannot be represented in the current code page (%d)|  
+|Compiler warning (level 1) C4568|'%$S': no members match the signature of the explicit override|  
+|Compiler warning (level 3) C4569|'%$S': no members match the signature of the explicit override|  
+|[Compiler Warning (level 3) C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)|'type': is not explicitly declared as abstract but has abstract functions|  
+|[Compiler Warning (level 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|Informational: catch(...) semantics changed since Visual C++ 7.1; structured exceptions (SEH) are no longer caught|  
+|[Compiler Warning (level 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|[ParamArray] attribute is deprecated under /clr, use '...' instead|  
+|Compiler warning (level 1) C4573|the usage of '%$S' requires the compiler to capture 'this' but the current default capture mode does not allow it|  
+|Compiler warning (level 4) C4574|'Identifier' is defined to be '0': did you mean to use '#if identifier'?|  
+|Compiler warning (level 1) C4575|'__vectorcall' incompatible with the '/clr' option: converting to '\__stdcall'|  
+|[Compiler Warning (level 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] is deprecated; instead specify System::Attribute or Platform::Metadata as a base class|  
+|[Compiler Warning (level 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|deprecated behavior: '"string"' replaced with 'string' to process attribute|  
+|Compiler warning (level 4) C4582|'%$S': constructor is not implicitly called|  
+|Compiler warning (level 4) C4583|'%$S': destructor is not implicitly called|  
+|[Compiler Warning (level 1) C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)|'class1': base-class 'class2' is already a base-class of '%class3'|  
+|Compiler warning (level 1) C4585|'class': A WinRT 'public ref class' must either be sealed or derive from an existing unsealed class|  
+|Compiler warning (level 1) C4586|'%$S': A public type cannot be declared in a top-level namespace called 'Windows'|  
+|Compiler warning (level 1) C4587|'anonymous_structure': behavior change: constructor is no longer implicitly called|  
+|Compiler warning (level 1) C4588|'anonymous_structure': behavior change: destructor is no longer implicitly called|  
+|Compiler warning (level 1) C4591|'constexpr' call-depth limit of %d exceeded (/constexpr:depth\<NUMBER>)|  
+|Compiler warning (level 3) C4592|'function': 'constexpr' call evaluation failed; function will be called at run-time|  
+|Compiler warning (level 1) C4593|'function': 'constexpr' call evaluation step limit of 'limit' exceeded; use /constexpr:steps\<NUMBER> to increase the limit|  
+|Compiler warning (level 3) C4594|'%$S': destructor will not be implicitly called if an exception is thrown|  
+|Compiler warning (level 1) C4595|'%$S': behavior change: destructor will no longer be implicitly called if an exception is thrown|

@@ -1,5 +1,5 @@
 ---
-title: "Erreurs du compilateur C2900 à C3499 | Documents Microsoft"
+title: Erreurs du compilateur C2900 via C2999 | Documents Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,6 +8,76 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: error-reference
+f1_keywords:
+- C2900
+- C2901
+- C2905
+- C2907
+- C2915
+- C2916
+- C2922
+- C2924
+- C2925
+- C2926
+- C2938
+- C2949
+- C2950
+- C2954
+- C2956
+- C2960
+- C2961
+- C2963
+- C2964
+- C2965
+- C2966
+- C2967
+- C2968
+- C2972
+- C2980
+- C2981
+- C2982
+- C2983
+- C2984
+- C2985
+- C2986
+- C2987
+- C2997
+- C2999
+helpviewer_keywords:
+- C2900
+- C2901
+- C2905
+- C2907
+- C2915
+- C2916
+- C2922
+- C2924
+- C2925
+- C2926
+- C2938
+- C2949
+- C2950
+- C2954
+- C2956
+- C2960
+- C2961
+- C2963
+- C2964
+- C2965
+- C2966
+- C2967
+- C2968
+- C2972
+- C2980
+- C2981
+- C2982
+- C2983
+- C2984
+- C2985
+- C2986
+- C2987
+- C2997
+- C2999
 dev_langs:
 - C++
 ms.assetid: e3440738-e11b-4878-9ae3-6bc6c53ba461
@@ -30,204 +100,119 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: a5521f4d0bc1c4bb4458ed532af067132b3f6047
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 6ef55aa655692e6ecbd1550bb1ace2eca01bdbad
+ms.lasthandoff: 04/24/2017
 
 ---
-# <a name="compiler-errors-c2900-through-c3499"></a>Erreurs du compilateur C2900 à C3499
-Les articles de cette partie de la documentation contiennent des informations sur une sous-section des erreurs du compilateur Visual C++. Vous pouvez accéder aux informations ici, ou dans la fenêtre **Sortie** de Visual Studio, vous pouvez sélectionner un numéro d’erreur, puis appuyer sur F1.  
-  
- [Erreur du compilateur C2906](../../error-messages/compiler-errors-2/compiler-error-c2906.md)  
-  
- [Erreur du compilateur C2908](../../error-messages/compiler-errors-2/compiler-error-c2908.md)  
-  
- [Erreur du compilateur C2910](../../error-messages/compiler-errors-2/compiler-error-c2910.md)  
-  
- [Erreur du compilateur C2912](../../error-messages/compiler-errors-2/compiler-error-c2912.md)  
-  
- [Erreur du compilateur C2913](../../error-messages/compiler-errors-2/compiler-error-c2913.md)  
-  
- [Erreur du compilateur C2914](../../error-messages/compiler-errors-2/compiler-error-c2914.md)  
-  
- [Erreur du compilateur C2918](../../error-messages/compiler-errors-2/compiler-error-c2918.md)  
-  
- [Erreur du compilateur C2919](../../error-messages/compiler-errors-2/compiler-error-c2919.md)  
-  
- [Erreur du compilateur C2920](../../error-messages/compiler-errors-2/compiler-error-c2920.md)  
-  
- [Erreur du compilateur C2921](../../error-messages/compiler-errors-2/compiler-error-c2921.md)  
-  
- [Erreur du compilateur C2947](../../error-messages/compiler-errors-2/compiler-error-c2947.md)  
-  
- [Erreur du compilateur C2948](../../error-messages/compiler-errors-2/compiler-error-c2948.md)  
-  
- [Erreur du compilateur C2951](../../error-messages/compiler-errors-2/compiler-error-c2951.md)  
-  
- [Erreur du compilateur C2955](../../error-messages/compiler-errors-2/compiler-error-c2955.md)  
-  
- [Erreur du compilateur C2958](../../error-messages/compiler-errors-2/compiler-error-c2958.md)  
-  
- [Erreur du compilateur C2959](../../error-messages/compiler-errors-2/compiler-error-c2959.md)  
-  
- [Erreur du compilateur C2962](../../error-messages/compiler-errors-2/compiler-error-c2962.md)  
-  
- [Erreur du compilateur C2970](../../error-messages/compiler-errors-2/compiler-error-c2970.md)  
-  
- [Erreur du compilateur C2971](../../error-messages/compiler-errors-2/compiler-error-c2971.md)  
-  
- [Erreur du compilateur C2974](../../error-messages/compiler-errors-2/compiler-error-c2974.md)  
-  
- [Erreur du compilateur C2975](../../error-messages/compiler-errors-2/compiler-error-c2975.md)  
-  
- [Erreur du compilateur C2976](../../error-messages/compiler-errors-2/compiler-error-c2976.md)  
-  
- [Erreur du compilateur C2988](../../error-messages/compiler-errors-2/compiler-error-c2988.md)  
-  
- [Erreur du compilateur C2989](../../error-messages/compiler-errors-2/compiler-error-c2989.md)  
-  
- [Erreur du compilateur C2990](../../error-messages/compiler-errors-2/compiler-error-c2990.md)  
-  
- [Erreur du compilateur C2993](../../error-messages/compiler-errors-2/compiler-error-c2993.md)  
-  
- [Erreur du compilateur C3019](../../error-messages/compiler-errors-2/compiler-error-c3019.md)  
-  
- [Erreur du compilateur C3020](../../error-messages/compiler-errors-2/compiler-error-c3020.md)  
-  
- [Erreur du compilateur C3062](../../error-messages/compiler-errors-2/compiler-error-c3062.md)  
-  
- [Erreur du compilateur C3063](../../error-messages/compiler-errors-2/compiler-error-c3063.md)  
-  
- [Erreur du compilateur C3066](../../error-messages/compiler-errors-2/compiler-error-c3066.md)  
-  
- [Erreur du compilateur C3068](../../error-messages/compiler-errors-2/compiler-error-c3068.md)  
-  
- [Erreur du compilateur C3071](../../error-messages/compiler-errors-2/compiler-error-c3071.md)  
-  
- [Erreur du compilateur C3072](../../error-messages/compiler-errors-2/compiler-error-c3072.md)  
-  
- [Erreur du compilateur C3073](../../error-messages/compiler-errors-2/compiler-error-c3073.md)  
-  
- [Erreur du compilateur C3076](../../error-messages/compiler-errors-2/compiler-error-c3076.md)  
-  
- [Erreur du compilateur C3083](../../error-messages/compiler-errors-2/compiler-error-c3083.md)  
-  
- [Erreur du compilateur C3099](../../error-messages/compiler-errors-2/compiler-error-c3099.md)  
-  
- [Erreur du compilateur C3101](../../error-messages/compiler-errors-2/compiler-error-c3101.md)  
-  
- [Erreur du compilateur C3104](../../error-messages/compiler-errors-2/compiler-error-c3104.md)  
-  
- [Erreur du compilateur C3115](../../error-messages/compiler-errors-2/compiler-error-c3115.md)  
-  
- [Erreur du compilateur C3116](../../error-messages/compiler-errors-2/compiler-error-c3116.md)  
-  
- [Erreur du compilateur C3121](../../error-messages/compiler-errors-2/compiler-error-c3121.md)  
-  
- [Erreur du compilateur C3141](../../error-messages/compiler-errors-2/compiler-error-c3141.md)  
-  
- [Erreur du compilateur C3145](../../error-messages/compiler-errors-2/compiler-error-c3145.md)  
-  
- [Erreur du compilateur C3149](../../error-messages/compiler-errors-2/compiler-error-c3149.md)  
-  
- [Erreur du compilateur C3153](../../error-messages/compiler-errors-2/compiler-error-c3153.md)  
-  
- [Erreur du compilateur C3160](../../error-messages/compiler-errors-2/compiler-error-c3160.md)  
-  
- [Erreur du compilateur C3162](../../error-messages/compiler-errors-2/compiler-error-c3162.md)  
-  
- [Erreur du compilateur C3163](../../error-messages/compiler-errors-2/compiler-error-c3163.md)  
-  
- [Erreur du compilateur C3174](../../error-messages/compiler-errors-2/compiler-error-c3174.md)  
-  
- [Erreur du compilateur C3187](../../error-messages/compiler-errors-2/compiler-error-c3187.md)  
-  
- [Erreur du compilateur C3200](../../error-messages/compiler-errors-2/compiler-error-c3200.md)  
-  
- [Erreur du compilateur C3201](../../error-messages/compiler-errors-2/compiler-error-c3201.md)  
-  
- [Erreur du compilateur C3203](../../error-messages/compiler-errors-2/compiler-error-c3203.md)  
-  
- [Erreur du compilateur C3209](../../error-messages/compiler-errors-2/compiler-error-c3209.md)  
-  
- [Erreur du compilateur C3210](../../error-messages/compiler-errors-2/compiler-error-c3210.md)  
-  
- [Erreur du compilateur C3218](../../error-messages/compiler-errors-2/compiler-error-c3218.md)  
-  
- [Erreur du compilateur C3222](../../error-messages/compiler-errors-2/compiler-error-c3222.md)  
-  
- [Erreur du compilateur C3225](../../error-messages/compiler-errors-2/compiler-error-c3225.md)  
-  
- [Erreur du compilateur C3227](../../error-messages/compiler-errors-2/compiler-error-c3227.md)  
-  
- [Erreur du compilateur C3231](../../error-messages/compiler-errors-2/compiler-error-c3231.md)  
-  
- [Erreur du compilateur C3240](../../error-messages/compiler-errors-2/compiler-error-c3240.md)  
-  
- [Erreur du compilateur C3241](../../error-messages/compiler-errors-2/compiler-error-c3241.md)  
-  
- [Erreur du compilateur C3252](../../error-messages/compiler-errors-2/compiler-error-c3252.md)  
-  
- [Erreur du compilateur C3253](../../error-messages/compiler-errors-2/compiler-error-c3253.md)  
-  
- [Erreur du compilateur C3254](../../error-messages/compiler-errors-2/compiler-error-c3254.md)  
-  
- [Erreur du compilateur C3255](../../error-messages/compiler-errors-2/compiler-error-c3255.md)  
-  
- [Erreur du compilateur C3265](../../error-messages/compiler-errors-2/compiler-error-c3265.md)  
-  
- [Erreur du compilateur C3269](../../error-messages/compiler-errors-2/compiler-error-c3269.md)  
-  
- [Erreur du compilateur C3276](../../error-messages/compiler-errors-2/compiler-error-c3276.md)  
-  
- [Erreur du compilateur C3277](../../error-messages/compiler-errors-2/compiler-error-c3277.md)  
-  
- [Erreur du compilateur C3278](../../error-messages/compiler-errors-2/compiler-error-c3278.md)  
-  
- [Erreur du compilateur C3282](../../error-messages/compiler-errors-2/compiler-error-c3282.md)  
-  
- [Erreur du compilateur C3288](../../error-messages/compiler-errors-2/compiler-error-c3288.md)  
-  
- [Erreur du compilateur C3352](../../error-messages/compiler-errors-2/compiler-error-c3352.md)  
-  
- [Erreur du compilateur C3353](../../error-messages/compiler-errors-2/compiler-error-c3353.md)  
-  
- [Erreur du compilateur C3364](../../error-messages/compiler-errors-2/compiler-error-c3364.md)  
-  
- [Erreur du compilateur C3366](../../error-messages/compiler-errors-2/compiler-error-c3366.md)  
-  
- [Erreur du compilateur C3374](../../error-messages/compiler-errors-2/compiler-error-c3374.md)  
-  
- [Erreur du compilateur C3379](../../error-messages/compiler-errors-2/compiler-error-c3379.md)  
-  
- [Erreur du compilateur C3381](../../error-messages/compiler-errors-2/compiler-error-c3381.md)  
-  
- [Erreur du compilateur C3386](../../error-messages/compiler-errors-2/compiler-error-c3386.md)  
-  
- [Erreur du compilateur C3387](../../error-messages/compiler-errors-2/compiler-error-c3387.md)  
-  
- [Erreur du compilateur C3389](../../error-messages/compiler-errors-2/compiler-error-c3389.md)  
-  
- [Erreur du compilateur C3395](../../error-messages/compiler-errors-2/compiler-error-c3395.md)  
-  
- [Erreur du compilateur C3409](../../error-messages/compiler-errors-2/compiler-error-c3409.md)  
-  
- [Erreur du compilateur C3412](../../error-messages/compiler-errors-2/compiler-error-c3412.md)  
-  
- [Erreur du compilateur C3414](../../error-messages/compiler-errors-2/compiler-error-c3414.md)  
-  
- [Erreur du compilateur C3417](../../error-messages/compiler-errors-2/compiler-error-c3417.md)  
-  
- [C3445 d’erreur du compilateur](../../error-messages/compiler-errors-2/compiler-error-c3445.md)  
-  
- [Erreur du compilateur C3450](../../error-messages/compiler-errors-2/compiler-error-c3450.md)  
-  
- [Erreur du compilateur C3451](../../error-messages/compiler-errors-2/compiler-error-c3451.md)  
-  
- [Erreur du compilateur C3456](../../error-messages/compiler-errors-2/compiler-error-c3456.md)  
-  
- [Erreur du compilateur C3466](../../error-messages/compiler-errors-2/compiler-error-c3466.md)  
-  
- [Erreur du compilateur C3487](../../error-messages/compiler-errors-2/compiler-error-c3487.md)  
-  
- [Erreur du compilateur C3498](../../error-messages/compiler-errors-2/compiler-error-c3498.md)
+# <a name="compiler-errors-c2900-through-c2999"></a>Erreurs du compilateur C2900 via C2999
+Les articles de cette partie de la documentation contiennent des informations sur une sous-section des erreurs du compilateur Visual C++. Vous pouvez accéder aux informations ici, ou dans la fenêtre **Sortie** de Visual Studio, vous pouvez sélectionner un numéro d'erreur, puis appuyer sur F1.  
+  
+> [!NOTE]
+>  Pas chaque [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erreur est documentée dans MSDN. Dans de nombreux cas, le message de diagnostic fournit toutes les informations qui est disponibles. Si vous pensez qu'un message d'erreur nécessite une explication supplémentaire, faites-nous part de vos suggestions. Vous pouvez utiliser le formulaire de commentaires sur cette page, ou accédez à la barre de menus dans Visual Studio et choisissez **aide**, **signaler un bogue**, ou vous pouvez envoyer un rapport de suggestion ou un bogue sur [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+  
+ Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ générales](http://go.microsoft.com/fwlink/?LinkId=158194) forum concerne les questions de [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
+  
+|Erreur|Message|  
+|-----------|-------------|  
+|C2900 d’erreur du compilateur|'*déclarateur*' : les modèles de fonction membre dans les classes WinRT doivent être 'private', 'internal' ou 'protected private'|  
+|C2901 d’erreur du compilateur|'*identificateur*' : une interface générique ou un délégué ne peut pas être public|  
+|[Erreur du compilateur C2902](compiler-error-c2902.md)|'*jeton*' : inattendu jeton suivant 'modèle/générique', identificateur attendu|  
+|[Erreur du compilateur C2903](compiler-error-c2903.md)|'*identificateur*' : symbole n’est ni un modèle/générique de classe ni un fonction modèle/générique|  
+|[Erreur du compilateur C2904](compiler-error-c2904.md)|'*identificateur*' : nom déjà utilisé pour un modèle dans la portée actuelle|  
+|C2905 d’erreur du compilateur|Obsolète.|  
+|[Erreur du compilateur C2906](compiler-error-c2906.md)|'*modèle*' : une spécialisation explicite requiert '<> de modèle'|  
+|C2907 d’erreur du compilateur|l’argument du Registre '*nombre*' ne spécifie pas le numéro du Registre valide|  
+|[Erreur du compilateur C2908](compiler-error-c2908.md)|spécialisation explicite ; '*modèle*' a déjà été instancié|  
+|[Erreur du compilateur C2909](compiler-error-c2909.md)|'*identificateur*' : instanciation explicite du modèle de fonction exige un type de retour|  
+|[Erreur du compilateur C2910](compiler-error-c2910.md)|'*fonction*' : ne peut pas être explicitement spécialisé|  
+|[Erreur du compilateur C2911](compiler-error-c2911.md)|'*membre*' : ne peut pas être déclaré ou défini dans la portée actuelle|  
+|[Erreur du compilateur C2912](compiler-error-c2912.md)|spécialisation explicite '*déclaration*' n’est pas une spécialisation d’un modèle de fonction|  
+|[Erreur du compilateur C2913](compiler-error-c2913.md)|spécialisation explicite ; '*déclaration*' n’est pas une spécialisation d’un modèle de classe|  
+|[Erreur du compilateur C2914](compiler-error-c2914.md)|'*identificateur*' : Impossible de déduire l’argument de modèle/générique comme argument de fonction est ambigu|  
+|C2915 d’erreur du compilateur|'*identificateur*' : '*type*' ne peut pas être utilisé directement sur la surface publiée d’un type WinRT. Utilisez ' Platform::Object ^' à la place pour passer ce type|  
+|C2916 d’erreur du compilateur|'*identificateur*' : [FlagsAttribute] (uniquement) doit être spécifié que sur un enum public avec un 'unsigned int' type sous-jacent|  
+|[Erreur du compilateur C2917](compiler-error-c2917.md)|'*identificateur*' : paramètre de modèle non valide|  
+|[Erreur du compilateur C2918](compiler-error-c2918.md)|'*identificateur*' : les propriétés indexées ne peut pas être utilisées sur la surface publiée d’un type WinRT|  
+|[Erreur du compilateur C2919](compiler-error-c2919.md)|'*type*' : les opérateurs ne peut pas être utilisés sur la surface publiée d’un type WinRT|  
+|[Erreur du compilateur C2920](compiler-error-c2920.md)|redéfinition : '*type*' : classe de modèle/générique a déjà été déclaré comme*déclaration*'|  
+|[Erreur du compilateur C2921](compiler-error-c2921.md)|redéfinition : '*type*' : classe de modèle/générique est en cours de redéclaration comme*déclaration*'|  
+|C2922 d’erreur du compilateur|'*interface*' : une interface WinRT ne peut pas contenir de membres statiques|  
+|[Erreur du compilateur C2923](compiler-error-c2923.md)|'*type*' : '*identificateur*'n’est pas un argument de type modèle/générique valide pour le paramètre'*paramètre*'|  
+|C2924 d’erreur du compilateur|argument de routine __declspec(interrupt) absent dans R2|  
+|C2925 d’erreur du compilateur|la routine __declspec(interrupt) ne peut pas utiliser de virgule flottante|  
+|Erreur du compilateur C2926|'*identificateur*' : un initialiseur de membre par défaut n’est pas autorisé pour un membre d’un struct anonyme au sein d’une union|  
+|[Erreur du compilateur C2927](compiler-error-c2927.md)|'*identificateur*' : un modèle de fonction doit être appelé avec au moins un argument|  
+|[Erreur du compilateur C2928](compiler-error-c2928.md)|instanciation explicite ; '*identificateur*'n’est pas une fonction ou une donnée membre static de la classe de modèle'*classe*'|  
+|[Erreur du compilateur C2929](compiler-error-c2929.md)|'*déclarateur*' : instanciation explicite ; ne peut pas forcer ou de supprimer explicitement l’instanciation d’un membre de classe de modèle|  
+|[Erreur du compilateur C2930](compiler-error-c2930.md)|'*classe*' : modèle-id/générique-id redéfini comme énumérateur de ' enum *identificateur*'|  
+|[Erreur du compilateur C2931](compiler-error-c2931.md)|'*class1*' : modèle-id/générique-id redéfini comme fonction membre de '*classe2*'|  
+|[Erreur du compilateur C2932](compiler-error-c2932.md)|'*type*' : modèle-id/générique-id redéfini comme donnée membre de '*identificateur*'|  
+|[Erreur du compilateur C2933](compiler-error-c2933.md)|'*type*' : modèle-id/générique-id redéfini comme membre typedef de '*identificateur*'|  
+|[Erreur du compilateur C2934](compiler-error-c2934.md)|'*type*' : modèle-id/générique-id redéfini comme imbriquée '*élément*'de'*identificateur*'|  
+|[Erreur du compilateur C2935](compiler-error-c2935.md)|'*type*' : modèle-id/générique-id redéfini comme fonction globale|  
+|[Erreur du compilateur C2936](compiler-error-c2936.md)|'*type*' : modèle-id/générique-id redéfini comme variable globale de données|  
+|[Erreur du compilateur C2937](compiler-error-c2937.md)|'*type*' : modèle-id/générique-id redéfini comme typedef global|  
+|C2938 d’erreur du compilateur|'*identificateur*' : la spécialisation du modèle d’alias|  
+|[Erreur du compilateur C2939](compiler-error-c2939.md)|'*type*' : modèle-id/générique-id redéfini comme variable locale de données|  
+|[Erreur du compilateur C2940](compiler-error-c2940.md)|'*type*' : modèle-id/générique-id redéfini comme typedef local|  
+|[Erreur du compilateur C2941](compiler-error-c2941.md)|'*type*' : modèle-id/générique-id redéfini comme local '*élément*'|  
+|[Erreur du compilateur C2942](compiler-error-c2942.md)|'*type*' : modèle-id/générique-id redéfini comme argument formel d’une fonction|  
+|[Erreur du compilateur C2943](compiler-error-c2943.md)|'*type*' : modèle-id/générique-id redéfini comme argument de type d’un modèle|  
+|[Erreur du compilateur C2944](compiler-error-c2944.md)|'*type*' : modèle-id/générique-id redéfini comme argument de valeur d’un modèle|  
+|[Erreur du compilateur C2945](compiler-error-c2945.md)|l'instanciation explicite ne fait pas référence à une spécialisation de classe de modèle|  
+|[Erreur du compilateur C2946](compiler-error-c2946.md)|instanciation explicite ; '*type*' n’est pas une spécialisation de classe de modèle|  
+|[Erreur du compilateur C2947](compiler-error-c2947.md)|attendu ' >' pour terminer les arguments template, trouvé '*jeton*'|  
+|[Erreur du compilateur C2948](compiler-error-c2948.md)|instanciation explicite ; spécificateur de classe de stockage '*spécificateur*' non autorisé sur une spécialisation|  
+|C2949 d’erreur du compilateur|thread_local n'est pas pris en charge avec /kernel|  
+|Erreur du compilateur C2950|Obsolète.|  
+|[Erreur du compilateur C2951](compiler-error-c2951.md)|les déclarations de modèle/générique sont uniquement autorisées au niveau de l’espace de noms global, ou portée de classe|  
+|[Erreur du compilateur C2952](compiler-error-c2952.md)|'*déclaration*' : déclaration de modèle/générique pas de liste de paramètre de modèle/générique|  
+|[Erreur du compilateur C2953](compiler-error-c2953.md)|'*type*' : modèle de classe a déjà été défini|  
+|Erreur du compilateur C2954|argument word de l'instruction hors limites|  
+|[Erreur du compilateur C2955](compiler-error-c2955.md)|'*type*' : liste d’arguments de modèle/générique requiert l’utilisation de la classe de modèle/générique|  
+|C2956 d’erreur du compilateur|désallocation dimensionnée fonction 'operator delete (void *, size_t)' est choisie comme fonction de désallocation de positionnement.|  
+|[Erreur du compilateur C2957](compiler-error-c2957.md)|'*jeton*' : délimiteur gauche non valide : attendu ' <'|  
+|[Erreur du compilateur C2958](compiler-error-c2958.md)|gauche *délimiteur* trouvée à '*fichier*(*line_number*)' n’a pas été équilibré correctement|  
+|[Erreur du compilateur C2959](compiler-error-c2959.md)|une classe ou fonction générique ne peut pas être membre d'un modèle|  
+|C2960 d’erreur du compilateur|Obsolète.|  
+|C2961 d’erreur du compilateur|'*fonction*' : instanciations explicites incohérentes, une instanciation explicite précédente ne spécifiait pas '*argument*'|  
+|[Erreur du compilateur C2962](compiler-error-c2962.md)|Erreur de syntaxe : '*jeton*' : attendu de définition de fonction membre de classe de modèle se terminer par '}'|  
+|Erreur du compilateur C2963|Obsolète.|  
+|Erreur du compilateur C2964|Obsolète.|  
+|C2965 d’erreur du compilateur|__declspec (*spécificateur*) n’est pas pris en charge avec /kernel|  
+|C2966 d’erreur du compilateur|'*identificateur1*' : doit avoir le même __declspec(code_seg(...)) comme sa classe de base*identificateur2*'|  
+|C2967 d’erreur du compilateur|'*identificateur*' : une fonction virtuelle de substitution doit avoir le même __declspec(code_seg(...)) comme une fonction virtuelle substituée|  
+|C2968 d’erreur du compilateur|'*identificateur*' : déclaration d’alias récurrente|  
+|[Erreur du compilateur C2969](compiler-error-c2969.md)|Erreur de syntaxe : '*jeton*' : attendu de définition de la fonction membre doit se terminer par '}'|  
+|[Erreur du compilateur C2970](compiler-error-c2970.md)|'*type*' : paramètre de modèle '*paramètre*' : '*argument*' : une expression utilisant des objets avec une liaison interne ne peut pas être utilisée comme argument sans type|  
+|[Erreur du compilateur C2971](compiler-error-c2971.md)|'*type*' : paramètre de modèle '*paramètre*' : '*argument*' : une variable avec une durée de stockage non statique ne peut pas être utilisée comme argument sans type|  
+|C2972 d’erreur du compilateur|'*type*' : paramètre de modèle '*paramètre*' : le type d’argument sans type n’est pas valide|  
+|[Erreur du compilateur C2973](compiler-error-c2973.md)|'*modèle*' : argument template non valide '*nombre*'|  
+|[Erreur du compilateur C2974](compiler-error-c2974.md)|'*type*' : argument de modèle/générique non valide pour '*paramètre*', type attendu|  
+|[Erreur du compilateur C2975](compiler-error-c2975.md)|'*type*' : argument template non valide pour '*paramètre*', expression constante de compilation attendue|  
+|[Erreur du compilateur C2976](compiler-error-c2976.md)|'*type*' : trop peu d’arguments modèle/générique|  
+|[Erreur du compilateur C2977](compiler-error-c2977.md)|'*type*' : trop d’arguments de modèle/générique|  
+|[Erreur du compilateur C2978](compiler-error-c2978.md)|Erreur de syntaxe : attendu '*mot_clé1*'ou'*mot Clé2*'; type trouvé'*type*' ; type de non paramètres ne sont pas pris en charge dans les génériques|  
+|[Erreur du compilateur C2979](compiler-error-c2979.md)|les spécialisations explicites ne sont pas prises en charge dans les génériques|  
+|C2980 d’erreur du compilateur|la gestion des exceptions C++ n'est pas prise en charge avec /kernel|  
+|C2981 d’erreur du compilateur|la forme dynamique de '*mot clé*' n’est pas pris en charge avec /kernel|  
+|C2982 d’erreur du compilateur|'*déclaration*' : différents __declspec(code_seg(...)) utilisé : était '*identificateur1*« maintenant »*identificateur2*'|  
+|C2983 d’erreur du compilateur|'*déclaration*' : toutes les déclarations doivent avoir un __declspec(code_seg(...)) identiques|  
+|C2984 d’erreur du compilateur|Obsolète.|  
+|C2985 d’erreur du compilateur|'*argument*' : l’argument de __declspec(code_seg(...)) doit être une section de texte|  
+|C2986 d’erreur du compilateur|'*identificateur*' : __declspec(code_seg(...)) peut uniquement être appliqué à une classe ou une fonction|  
+|C2987 d’erreur du compilateur|une déclaration ne peut pas comporter simultanément __declspec (code_seg ('*identificateur*')) et __declspec (code_seg ('*valeur*'))|  
+|[Erreur du compilateur C2988](compiler-error-c2988.md)|impossible de reconnaître la définition/déclaration de modèle|  
+|[Erreur du compilateur C2989](compiler-error-c2989.md)|'*classe*' : classe de modèle/générique a déjà été déclaré en tant que modèle/générique sans classe|  
+|[Erreur du compilateur C2990](compiler-error-c2990.md)|'*classe*' : classe modèle/générique a déjà été déclaré en tant que classe modèle/générique|  
+|[Erreur du compilateur C2991](compiler-error-c2991.md)|redéfinition du paramètre de modèle/générique '*paramètre*'|  
+|[Erreur du compilateur C2992](compiler-error-c2992.md)|'*classe*' : liste de paramètres modèle/générique non valide ou manquant|  
+|[Erreur du compilateur C2993](compiler-error-c2993.md)|'*type*' : type non conforme pour le paramètre de modèle sans type '*identificateur*'|  
+|[Erreur du compilateur C2994](compiler-error-c2994.md)|classe sans nom dans une liste de paramètres de modèle|  
+|[Erreur du compilateur C2995](compiler-error-c2995.md)|'*déclaration*' : modèle de fonction déjà défini.|  
+|[Erreur du compilateur C2996](compiler-error-c2996.md)|'*fonction*' : définition de modèle de fonction récurrente|  
+|C2997 d’erreur du compilateur|'*fonction*' : limite de tableau ne peut pas être déduit à partir d’un initialiseur de membre par défaut|  
+|[Erreur du compilateur C2998](compiler-error-c2998.md)|'*déclarateur*' : ne peut pas être une définition de modèle|  
+|Erreur du compilateur C2999|Erreur inconnue choisissez la commande Support technique dans le menu aide de Visual C++ ou ouvrez le fichier d’aide le Support technique pour plus d’informations|  
+
