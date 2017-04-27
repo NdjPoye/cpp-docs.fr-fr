@@ -6,6 +6,10 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- exception/std::exception_ptr
+- exception/std::terminate_handler
+- exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
 caps.latest.revision: 7
 manager: ghogen
@@ -20,7 +24,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|-|  
 |[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|  
   
-##  <a name="a-nameexceptionptra--exceptionptr"></a><a name="exception_ptr"></a>  exception_ptr  
+##  <a name="exception_ptr"></a>  exception_ptr  
  Type qui décrit un pointeur vers une exception.  
   
 ```cpp  
@@ -42,7 +46,7 @@ typedef unspecified exception_ptr;
   
  Vous pouvez utiliser les opérateurs Égal à (`==`) et Non égal à (`!=`) pour comparer deux objets `exception_ptr`. Les opérateurs ne comparent pas la valeur binaire (modèle binaire) des structures `EXCEPTION_RECORD` qui représentent les exceptions. À la place, les opérateurs comparent les adresses dans le domaine de référence d'exception des objets `exception_ptr`. Par conséquent, une exception `exception_ptr` null et la valeur NULL sont considérées comme égales.  
   
-##  <a name="a-nameterminatehandlera--terminatehandler"></a><a name="terminate_handler"></a>  terminate_handler  
+##  <a name="terminate_handler"></a>  terminate_handler  
  Type qui décrit un pointeur vers une fonction appropriée pour une utilisation en tant que `terminate_handler`.  
   
 ```
@@ -55,7 +59,7 @@ typedef void (*terminate_handler)();
 ### <a name="example"></a>Exemple  
   Consultez [set_terminate](../standard-library/exception-functions.md#set_terminate) pour obtenir un exemple d’utilisation de `terminate_handler`.  
   
-##  <a name="a-nameunexpectedhandlera--unexpectedhandler"></a><a name="unexpected_handler"></a>  unexpected_handler  
+##  <a name="unexpected_handler"></a>  unexpected_handler  
  Le type décrit un pointeur vers une fonction pouvant être utilisée comme `unexpected_handler`.  
   
 ```

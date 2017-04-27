@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c4c0e4de99d0d700f04f235a4bd5f7afd83937fb
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 904069e809876beefbc05c7dc0ddb83bee8e5c94
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-floating-point-constants"></a>Constantes à virgule flottante C
@@ -59,7 +59,7 @@ Une « constante à virgule flottante » est un nombre décimal qui représent
  &nbsp;&nbsp; **E**  *sign*<sub>opt</sub> *digit-sequence*  
   
  *sign* : un des éléments suivants  
- &nbsp;&nbsp; **+ –**  
+ &nbsp;&nbsp; **+ -**  
   
  *digit-sequence* :  
  &nbsp;&nbsp; *digit*  
@@ -80,7 +80,7 @@ Une « constante à virgule flottante » est un nombre décimal qui représent
 25E-4     /* =  0.0025 */  
 ```  
   
- Les constantes à virgule flottante sont positives, à moins d’être précédées du signe moins (**–**). Dans ce cas, le signe moins est considéré comme un opérateur de négation arithmétique unaire. Les constantes à virgule flottante sont de type `float`, `double` ou `long double`.  
+ Les constantes à virgule flottante sont positives, à moins d’être précédées du signe moins (**-**). Dans ce cas, le signe moins est considéré comme un opérateur de négation arithmétique unaire. Les constantes à virgule flottante sont de type `float`, `double` ou `long double`.  
   
  Une constante à virgule flottante sans suffixe **f**, **F**, **l** ou **L** est de type `double`. Si la lettre **f** ou **F** est le suffixe, la constante est de type `float`. Si elle est suivie de la lettre **l** ou **L**, elle est de type `long double`. Exemple :  
   

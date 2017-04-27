@@ -50,9 +50,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c1a72c382d0df6d667ca97a45c6783c928f6ae98
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8e5b9c8871d77e4c677c2ad88a8616d0cd9b3eac
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="heapadd"></a>_heapadd
@@ -78,7 +78,7 @@ int _heapadd(
  Taille de la mémoire à ajouter, en octets.  
   
 ## <a name="return-value"></a>Valeur de retour  
- En cas de réussite, `_heapadd` retourne 0 ; sinon, la fonction retourne -1 et définit `errno` sur `ENOSYS`.  
+ En cas de réussite, `_heapadd` retourne 0 ; sinon, la fonction retourne -1 et définit `errno` sur `ENOSYS`.  
   
  Pour plus d’informations sur ce code de retour et sur les autres codes, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   

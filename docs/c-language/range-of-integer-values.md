@@ -1,35 +1,51 @@
 ---
-title: "Plage de valeurs enti&#232;res | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Plage de valeurs entières | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 0e9c6161-8f3f-4bfb-9fcc-a6c8dc97d702
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Plage de valeurs enti&#232;res
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ac6e1783714c0aef62acecad24d345225a65e67e
+ms.lasthandoff: 04/01/2017
 
-**ANSI 3.1.2.5** Représentations et jeux de valeurs des différents types d'entiers  
+---
+# <a name="range-of-integer-values"></a>Plage des valeurs entières
+**ANSI 3.1.2.5** Représentations et jeux de valeurs des différents types d’entiers  
   
- Les entiers contiennent 32 bits \(quatre octets\).  Les entiers signés sont représentés sous la forme d'un complément à deux.  Le bit le plus significatif indique le signe : 1 pour les nombres négatifs, 0 pour les nombres positifs et zéro.  Les valeurs sont répertoriées ci\-dessous :  
+ Les entiers contiennent 32 bits (quatre octets). Les entiers signés sont représentés sous la forme d'un complément à deux. Le bit le plus significatif indique le signe : 1 pour les nombres négatifs, 0 pour les nombres positifs et zéro. Les valeurs sont répertoriées ci-dessous :  
   
 |Type|Minimum et maximum|  
-|----------|------------------------|  
+|----------|-------------------------|  
 |**unsigned short**|de 0 à 65535|  
-|`signed short`|de –32768 à 32767|  
-|`unsigned long`|0 à 4294967295|  
-|**signed long**|de –2147483648 à 2147483647|  
+|`signed short`|de -32768 à 32767|  
+|`unsigned long`|de 0 à 4294967295|  
+|**signed long**|de -2147483648 à 2147483647|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Entiers](../c-language/integers.md)

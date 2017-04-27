@@ -1,74 +1,91 @@
 ---
-title: "Champs de sp&#233;cification de format&#160;: fonctions scanf et wscanf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr80.dll"
-  - "msvcr110.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wscanf"
-  - "scanf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "largeur, spécifications dans fonction scanf"
-  - "spécification de format scanf"
-  - "spécification de largeur scanf"
-  - "caractères du champ de type scanf"
-  - "champs de type, fonction scanf"
-  - "champs de spécification de formation pour la fonction scanf"
-  - "champs de type"
+title: "Champs de spécification de format : fonctions scanf et wscanf | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr80.dll
+- msvcr110.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+apitype: DLLExport
+f1_keywords:
+- wscanf
+- scanf
+dev_langs:
+- C++
+helpviewer_keywords:
+- width, specifications in scanf function
+- scanf format specifications
+- scanf width specifications
+- scanf type field characters
+- type fields, scanf function
+- format specification fields for scanf function
+- type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Champs de sp&#233;cification de format&#160;: fonctions scanf et wscanf
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 77ef83eccc158cb9fff1a9161b5694a4caf62777
+ms.lasthandoff: 04/01/2017
 
-Les informations ici appliquent à toute la famille `scanf` de fonctions, y compris les versions sécurisées et décrivent les symboles utilisés pour dire aux fonctions `scanf` comment analyser le flux d'entrée, tel que le flux d'entrée `stdin` pour `scanf`, dans les valeurs insérées dans des variables de programme.  
+---
+# <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Champs de spécification de format : fonctions scanf et wscanf
+Les informations ici s'appliquent à l'ensemble de la famille de fonctions `scanf`, y compris les versions sécurisées, et décrivent les symboles utilisés pour indiquer aux fonctions `scanf` comment analyser le flux d'entrée, tel que le flux d'entrée `stdin` pour `scanf`, en valeurs insérées dans les variables de programme.  
   
- Une spécification de format se présente au format suivant.  
+ Une spécification de format se présente sous la forme suivante :  
   
- `%`\[`*`\] \[[largeur](../c-runtime-library/scanf-width-specification.md)\] \[{[h &#124; l &#124; ll &#124; I64 &#124; L](../c-runtime-library/scanf-width-specification.md)}\][type](../c-runtime-library/scanf-type-field-characters.md)  
+ `%`[`*`] [[largeur](../c-runtime-library/scanf-width-specification.md)] [{[h &#124; l &#124; ll &#124; I64 &#124; L](../c-runtime-library/scanf-width-specification.md)}][type](../c-runtime-library/scanf-type-field-characters.md)  
   
- L'argument `format` spécifie la traduction de l'entrée et peut contenir un ou plusieurs des éléments suivants :  
+ L'argument `format` spécifie l'interprétation de l'entrée et peut contenir un ou plusieurs des éléments suivants :  
   
--   Espaces blancs : espace \(' '\) ; tabulation \('\\t'\) ; ou saut de ligne \('\\n'\).  Un espace blanc engendre que `scanf` lit, mais sans stocker, tous les espaces blancs consécutifs dans l'entrée jusqu'au caractère suivant qui n'est pas un espace blanc.  Un espace blanc au format correspond à tout nombre \(y compris 0\) et toute combinaison d'espaces blancs dans l'entrée.  
+-   Espaces blancs : espace (' '), tabulation ('\t') ou saut de ligne ('\n'). Un espace blanc oblige `scanf` à lire, mais pas à stocker, tous les espaces blancs consécutifs dans l’entrée jusqu’au caractère suivant autre qu’un espace blanc. Un espace blanc au format correspond à tout nombre (y compris 0) et à toute combinaison d'espaces blancs dans l'entrée.  
   
--   Les caractères qui ne sont pas des espaces blancs, sauf le signe de pourcentage \(`%`\).  Un caractère qui n'est pas un espace blanc engendre que `scanf` lit, mais sans stocker, le caractère correspondant qui n'est pas un espace blanc .  Si le caractère suivant dans le flux d'entrée ne correspond pas, `scanf` se termine.  
+-   Caractères autres que des espaces blancs, sauf le symbole de pourcentage (`%`). Un caractère autre qu’un espace blanc oblige `scanf` à lire, mais pas à stocker, un caractère correspondant autre qu’un espace blanc. Si le caractère suivant dans le flux d'entrée ne correspond pas, `scanf` se termine.  
   
--   Spécifications de format, introduites par le symbole de pourcentage \(`%`\).  Une spécification de format fait que `scanf` lit et convertit des caractères de l'entrée dans les valeurs d'un type spécifié.  La valeur est affectée à un argument dans la liste d'arguments.  
+-   Spécifications de format, introduites par le symbole de pourcentage (`%`). Une spécification de format oblige `scanf` à lire et à convertir les caractères de l'entrée en valeurs d'un type spécifié. La valeur est affectée à un argument dans la liste d'arguments.  
   
- Le format est lu de gauche à droite.  Il est prévu que les caractères en dehors des spécifications de format correspondent à la séquence de caractères dans le flux d'entrée ; les caractères correspondants dans le flux d'entrée sont analysés mais pas stockés.  Si un caractère du flux d'entrée est en conflit avec la spécification de format, `scanf` se termine, et le caractère doit être conservé dans le flux d'entrée comme s'il n'a pas été lu.  
+ Le format est lu de gauche à droite. Les caractères en dehors des spécifications de format doivent correspondre à la séquence de caractères dans le flux d'entrée ; les caractères correspondants dans le flux d'entrée sont analysés mais pas stockés. Si un caractère du flux d'entrée est en conflit avec la spécification de format, `scanf` se termine, et le caractère est conservé dans le flux d'entrée comme s'il n'avait pas été lu.  
   
- Lorsque la première spécification de format est produite, la valeur du premier champ d'entrée est convertie selon cette condition et stockée dans l'emplacement spécifié par le premier `argument`.  La deuxième spécification du format fait que le deuxième champ d'entrée est converti et stocké dans le deuxième `argument`, et ainsi de suite jusqu'à la fin de la chaîne de format.  
+ Lorsque la première spécification de format est détectée, la valeur du premier champ d'entrée est convertie en fonction de cette spécification et stockée dans l'emplacement spécifié par le premier `argument`. La deuxième spécification de format entraîne la conversion et le stockage du deuxième champ d'entrée dans le deuxième `argument`, et ainsi de suite jusqu'à la fin de la chaîne de format.  
   
- Un champ d'entrée est défini comme tous les caractères jusqu'au premier espace blanc \(espace, tabulation, ou saut de ligne\), ou jusqu'au premier caractère qui ne peut pas être converti en fonction de la spécification de format, ou jusqu'à ce que la largeur du champ \(le cas échéant\) soit atteinte.  S'il y a trop d'arguments pour les caractéristiques données, des arguments supplémentaires sont évalués mais ignorés.  Les résultats sont imprévisibles s'il n'y a pas assez d'arguments pour la spécification de format.  
+ Un champ d'entrée est défini comme étant tous les caractères jusqu'au premier espace blanc (espace, tabulation ou saut de ligne) ou jusqu'au premier caractère qui ne peut pas être converti en fonction de la spécification de format, ou jusqu'à ce que la largeur du champ (si spécifiée) soit atteinte. S'il y a trop d'arguments pour les spécifications données, les arguments supplémentaires sont évalués mais ignorés. Les résultats sont imprévisibles si le nombre d'arguments est insuffisant pour la spécification de format.  
   
- Chaque champ de la spécification de format est un caractère unique ou un nombre signifiant une option de mise en forme spécifique.  Le caractère `type`, qui apparaît après le dernier champ facultatif de format, détermine si le champ d'entrée est interprété comme un caractère, une chaînes, ou un nombre.  
+ Chaque champ de la spécification de format est un caractère unique ou un nombre indiquant une option de mise en forme spécifique. Le caractère `type`, qui apparaît après le dernier champ de format facultatif, détermine si le champ d'entrée est interprété comme un caractère, une chaîne ou un nombre.  
   
- La spécification de format la plus simple contient uniquement le signe de pourcentage et un caractère `type` \(par exemple, `%s`\).  Si un pourcentage \(`%`\) est suivi par un caractère qui n'a aucune signification en tant que caractère de format\- contrôle, ce caractère et les caractères suivants \(jusqu'au pourcentage ci\-dessous\) sont traités comme séquence ordinaire de caractères, c. \- à\-d., une séquence de caractères qui doivent correspondre à l'entrée.  Par exemple, pour spécifier qu'un caractère de pourcentage doit être inséré, utilisez `%%`.  
+ La spécification de format la plus simple contient uniquement le symbole de pourcentage et un caractère `type` (par exemple, `%s`). Si un symbole de pourcentage (`%`) est suivi d'un caractère qui n'a aucune signification en tant que caractère de contrôle de format, ce caractère et les caractères suivants (jusqu'au symbole de pourcentage suivant) sont traités comme une séquence ordinaire de caractères, c'est-à-dire, une séquence de caractères qui doivent correspondre à l'entrée. Par exemple, pour spécifier qu'un symbole de pourcentage doit être inséré, utilisez `%%`.  
   
- Un astérisque \(`*`\) suivant un pourcentage supprime l'attribution du champ d'entrée suivant, qui est interprété comme un champ du type spécifié.  Le champ est analysé mais pas stocké.  
+ Un astérisque (`*`) suivant du symbole de pourcentage supprime l'attribution du champ d'entrée suivant, qui est interprété comme un champ du type spécifié. Le champ est analysé mais pas stocké.  
   
- Les versions sécurisées \(celles avec le suffixe `_s` \) de la famille `scanf` de fonctions requièrent qu'un paramètre de taille de mémoire tampon soit transmis juste après chaque paramètre de type `c`, `C`, `s`, `S` ou `[`.  Pour plus d'informations sur les versions sécurisées de la famille `scanf` de fonctions, consultez [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).  
+ Les versions sécurisées (celles avec le suffixe `_s`) de la famille de fonctions `scanf` requièrent qu'un paramètre de taille de mémoire tampon soit passé immédiatement après chaque paramètre de type `c`, `C`, `s`, `S` ou `[`. Pour plus d’informations sur les versions sécurisées de la famille `scanf` de fonctions, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Spécification de largeur scanf](../c-runtime-library/scanf-width-specification.md)   
  [Caractères du champ de type scanf](../c-runtime-library/scanf-type-field-characters.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)
+ [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)

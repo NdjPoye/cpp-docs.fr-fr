@@ -1,162 +1,178 @@
 ---
-title: "Types de donn&#233;es constantes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FLT_MIN"
-  - "SHRT_MAX"
-  - "CHAR_MIN"
-  - "MB_LEN_MAX"
-  - "DBL_EPSILON"
-  - "SHRT_MIN"
-  - "_FLT_RADIX"
-  - "FLT_DIG"
-  - "FLT_MAX_10_EXP"
-  - "FLT_MANT_DIG"
-  - "DBL_MAX_EXP"
-  - "SCHAR_MIN"
-  - "SCHAR_MAX"
-  - "DBL_MIN"
-  - "FLT_MIN_10_EXP"
-  - "_DBL_ROUNDS"
-  - "USHRT_MAX"
-  - "FLT_MAX_EXP"
-  - "LONG_MAX"
-  - "DBL_MAX"
-  - "DBL_DIG"
-  - "FLT_MIN_EXP"
-  - "INT_MIN"
-  - "DBL_MIN_10_EXP"
-  - "CHAR_BIT"
-  - "INT_MAX"
-  - "ULONG_MAX"
-  - "DBL_MIN_EXP"
-  - "LONG_MIN"
-  - "_FLT_ROUNDS"
-  - "DBL_MANT_DIG"
-  - "_DBL_RADIX"
-  - "CHAR_MAX"
-  - "FLT_MAX"
-  - "DBL_MAX_10_EXP"
-  - "UCHAR_MAX"
-  - "FLT_EPSILON"
-  - "UINT_MAX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_DBL_RADIX (constante)"
-  - "_DBL_ROUNDS (constante)"
-  - "_FLT_RADIX (constante)"
-  - "_FLT_ROUNDS (constante)"
-  - "CHAR_BIT (constante)"
-  - "CHAR_MAX (constante)"
-  - "CHAR_MIN (constante)"
-  - "constantes (C++), type de données"
-  - "constantes de types de données (C++)"
-  - "DBL_DIG (constante)"
-  - "DBL_EPSILON (constante)"
-  - "DBL_MANT_DIG (constante)"
-  - "DBL_MAX (constante)"
-  - "DBL_MAX_10_EXP (constante)"
-  - "DBL_MAX_EXP (constante)"
-  - "DBL_MIN (constante)"
-  - "DBL_MIN_10_EXP (constante)"
-  - "DBL_MIN_EXP (constante)"
-  - "DBL_RADIX (constante)"
-  - "DBL_ROUNDS (constante)"
-  - "FLT_DIG (constante)"
-  - "FLT_EPSILON (constante)"
-  - "FLT_MANT_DIG (constante)"
-  - "FLT_MAX (constante)"
-  - "FLT_MAX_10_EXP (constante)"
-  - "FLT_MAX_EXP (constante)"
-  - "FLT_MIN (constante)"
-  - "FLT_MIN_10_EXP (constante)"
-  - "FLT_MIN_EXP (constante)"
-  - "FLT_RADIX (constante)"
-  - "FLT_ROUNDS (constante)"
-  - "INT_MAX (constante)"
-  - "INT_MIN (constante)"
-  - "LONG_MAX (constante)"
-  - "LONG_MIN (constante)"
-  - "MB_LEN_MAX (constante)"
-  - "SCHAR_MAX (constante)"
-  - "SCHAR_MIN (constante)"
-  - "SHRT_MAX (constante)"
-  - "SHRT_MIN (constante)"
-  - "UCHAR_MAX (constante)"
-  - "UINT_MAX (constante)"
-  - "ULONG_MAX (constante)"
-  - "USHRT_MAX (constante)"
+title: "Constantes de type de données | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- FLT_MIN
+- SHRT_MAX
+- CHAR_MIN
+- MB_LEN_MAX
+- DBL_EPSILON
+- SHRT_MIN
+- _FLT_RADIX
+- FLT_DIG
+- FLT_MAX_10_EXP
+- FLT_MANT_DIG
+- DBL_MAX_EXP
+- SCHAR_MIN
+- SCHAR_MAX
+- DBL_MIN
+- FLT_MIN_10_EXP
+- _DBL_ROUNDS
+- USHRT_MAX
+- FLT_MAX_EXP
+- LONG_MAX
+- DBL_MAX
+- DBL_DIG
+- FLT_MIN_EXP
+- INT_MIN
+- DBL_MIN_10_EXP
+- CHAR_BIT
+- INT_MAX
+- ULONG_MAX
+- DBL_MIN_EXP
+- LONG_MIN
+- _FLT_ROUNDS
+- DBL_MANT_DIG
+- _DBL_RADIX
+- CHAR_MAX
+- FLT_MAX
+- DBL_MAX_10_EXP
+- UCHAR_MAX
+- FLT_EPSILON
+- UINT_MAX
+dev_langs:
+- C++
+helpviewer_keywords:
+- DBL_MAX_EXP constant
+- _DBL_RADIX constant
+- FLT_MIN_EXP constant
+- DBL_EPSILON constant
+- INT_MIN constant
+- FLT_EPSILON constant
+- DBL_MANT_DIG constant
+- _FLT_RADIX constant
+- DBL_MIN constant
+- USHRT_MAX constant
+- FLT_MAX_10_EXP constant
+- _FLT_ROUNDS constant
+- data type constants [C++]
+- _DBL_ROUNDS constant
+- CHAR_MAX constant
+- FLT_MAX_EXP constant
+- FLT_MIN constant
+- CHAR_MIN constant
+- FLT_MIN_10_EXP constant
+- DBL_MIN_EXP constant
+- SCHAR_MAX constant
+- FLT_RADIX constant
+- CHAR_BIT constant
+- UCHAR_MAX constant
+- DBL_RADIX constant
+- FLT_ROUNDS constant
+- LONG_MIN constant
+- SHRT_MAX constant
+- LONG_MAX constant
+- DBL_MAX_10_EXP constant
+- DBL_MIN_10_EXP constant
+- INT_MAX constant
+- constants [C++], data type
+- ULONG_MAX constant
+- FLT_DIG constant
+- MB_LEN_MAX constant
+- DBL_DIG constant
+- SHRT_MIN constant
+- DBL_MAX constant
+- DBL_ROUNDS constant
+- FLT_MAX constant
+- UINT_MAX constant
+- FLT_MANT_DIG constant
+- SCHAR_MIN constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Types de donn&#233;es constantes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: a33c5071549695c11ba4820679d5d7059b7f5a5c
+ms.lasthandoff: 04/01/2017
 
-Les constantes de type sont les plages de valeurs dépendantes de l'implémentation autorisées pour les types de données intégraux.  Les constantes énumérées ci\-après donnent les plages pour les types de données intégraux et sont définies dans LIMITS.H.  
+---
+# <a name="data-type-constants"></a>Constantes de type de données
+Les constantes de type de données sont des plages de valeurs dépendant de l’implémentation qui sont autorisées pour les types de données intégraux. Les constantes répertoriées ci-dessous donnent les plages des types de données intégraux, et sont définies dans LIMITS.H.  
   
 > [!NOTE]
->  L'option \/J du compilateur modifie le paramètre par défaut en remplaçant le type `char`par `unsigned`.  
+>  L’option /J du compilateur remplace le type par défaut `char` par `unsigned`.  
   
 |Constante|Valeur|Signification|  
-|---------------|------------|-------------------|  
-|**SCHAR\_MAX**|127|Valeur signée maximale `char`|  
-|**SCHAR\_MIN**|–128|Valeur minimale signée `char`|  
-|**UCHAR\_MAX**|255 \(0xff\)|Valeur maximale `unsigned char`|  
-|**CHAR\_BIT**|8|Nombre de bits dans un `char`|  
-|**USHRT\_MAX**|65535 \(0xffff\)|Valeur maximale **unsigned short**|  
-|**SHRT\_MAX**|32767|Valeur signée maximale **short**|  
-|**SHRT\_MIN**|–32768|Valeur signée maximale **short**|  
-|**UINT\_MAX**|4294967295 \(0xffffffff\)|Valeur maximale `unsigned int`|  
-|**ULONG\_MAX**|4294967295 \(0xffffffff\)|Valeur maximale `unsigned long`|  
-|**INT\_MAX**|2147483647|Valeur signée maximale `int`|  
-|**INT\_MIN**|–2147483647–1|Valeur minimale signée `int`|  
-|**LONG\_MAX**|2147483647|Valeur maximale \(signée\) **long**|  
-|**LONG\_MIN**|–2147483647–1|Valeur maximale \(signée\) **long**|  
-|**CHAR\_MAX**|127 ; 255 si l'option \/J est utilisée|Valeur maximale `char`|  
-|**CHAR\_MIN**|–128 ; 0 si l'option \/J est utilisée|Valeur minimale  `char`|  
-|**MB\_LEN\_MAX**|2|Nombre maximal d'octets dans le`char`multioctets|  
-|**\_I64\_MAX**|9223372036854775807|Valeur \(signé\) maximale **int64**|  
-|**\_I64\_MIN**|\-9223372036854775807\-1|Valeur \(signé\) maximale **int64**|  
-|**\_UI64\_MAX**|\(0xffffffffffffffff\)|Valeur \(non signé\) maximale **int64**|  
+|--------------|-----------|-------------|  
+|**SCHAR_MAX**|127|Valeur `char` signée maximale|  
+|**SCHAR_MIN**|-128|Valeur `char` signée minimale|  
+|**UCHAR_MAX**|255 (0xff)|Valeur `unsigned char` maximale|  
+|**CHAR_BIT**|8|Nombre de bits dans un `char`|  
+|**USHRT_MAX**|65535 (0xffff)|Valeur **unsigned short** maximale|  
+|**SHRT_MAX**|32767|Valeur **short** (signée) maximale|  
+|**SHRT_MIN**|-32768|Valeur **short** (signée) minimale|  
+|**UINT_MAX**|4294967295 (0xffffffff)|Valeur `unsigned int` maximale|  
+|**ULONG_MAX**|4294967295 (0xffffffff)|Valeur `unsigned long` maximale|  
+|**INT_MAX**|2147483647|Valeur `int` (signée) maximale|  
+|**INT_MIN**|-2147483647-1|Valeur `int` (signée) minimale|  
+|**LONG_MAX**|2147483647|Valeur **long** (signée) maximale|  
+|**LONG_MIN**|-2147483647-1|Valeur **long** (signée) minimale|  
+|**CHAR_MAX**|127 (255 si l’option /J est utilisée)|Valeur `char` maximale|  
+|**CHAR_MIN**|-128 (0 si l’option /J est utilisée)|Valeur `char` minimale|  
+|**MB_LEN_MAX**|2|Nombre maximal d’octets dans un `char` multioctet|  
+|**_I64_MAX**|9223372036854775807|Valeur __**int64** (signée) maximale|  
+|**_I64_MIN**|-9223372036854775807-1|Valeur __**int64** (signée) minimale|  
+|**_UI64_MAX**|0xffffffffffffffff|Valeur __**int64** (non signée) maximale|  
   
- Les constantes suivantes indiquent la plage et d'autres caractéristiques des types de données  **double** et **float** , et sont définies dans FLOAT.H :  
+ Les constantes suivantes donnent la plage et les autres caractéristiques des types de données **double** et **float**, et sont définies dans FLOAT.H :  
   
 |Constante|Valeur|Description|  
-|---------------|------------|-----------------|  
-|**DBL\_DIG**|15|\# des chiffres décimaux de précision|  
-|**DBL\_EPSILON**|2.2204460492503131e\-016|Les plus petits tels que 1.0\+**DBL\_EPSILON** \! \=1.0|  
-|**DBL\_MANT\_DIG**|53|\# de bits de la mantisse|  
-|**DBL\_MAX**|1.7976931348623158e\+308|Valeur maximale|  
-|**DBL\_MAX\_10\_EXP**|308|Exposant décimale maximal|  
-|**DBL\_MAX\_EXP**|1024|Exposant binaire maximal|  
-|**DBL\_MIN**|2.2250738585072014e\-308|Valeur positive minimale.|  
-|**DBL\_MIN\_10\_EXP**|\(\-307\)|Exposant décimale minimal|  
-|**DBL\_MIN\_EXP**|\(–1021\)|Exposant binaire minimal|  
-|**\_DBL\_RADIX**|2|Base d'exposant|  
-|**\_DBL\_ROUNDS**|1|Ajout d'arrondi : près de|  
-|**FLT\_DIG**|6|Nombre de chiffres décimaux de la précision|  
-|**FLT\_EPSILON**|1.192092896e\-07F|Les plus petits tels que 1.0\+**FLT\_EPSILON** \! \=1.0|  
-|**FLT\_MANT\_DIG**|24|Nombre de bits de la mantisse|  
-|**FLT\_MAX**|3.402823466e\+38F|Valeur maximale|  
-|**FLT\_MAX\_10\_EXP**|38|Exposant décimale maximal|  
-|**FLT\_MAX\_EXP**|128|Exposant binaire maximal|  
-|**FLT\_MIN**|1.175494351e\-38F|Valeur positive minimale.|  
-|**FLT\_MIN\_10\_EXP**|\(–37\)|Exposant décimale minimal|  
-|**FLT\_MIN\_EXP**|\(–125\)|Exposant binaire minimal|  
-|**FLT\_RADIX**|2|Base d'exposant|  
-|**FLT\_ROUNDS**|1|Ajout d'arrondi : près de|  
+|--------------|-----------|-----------------|  
+|**DBL_DIG**|15|# de chiffres décimaux de précision|  
+|**DBL_EPSILON**|2,2204460492503131e-016|Le plus petit de sorte que 1.0+**DBL_EPSILON** !=1.0|  
+|**DBL_MANT_DIG**|53|# de bits dans la mantisse|  
+|**DBL_MAX**|1,7976931348623158e+308|Valeur maximale|  
+|**DBL_MAX_10_EXP**|308|Exposant décimal maximal|  
+|**DBL_MAX_EXP**|1024|Exposant binaire maximal|  
+|**DBL_MIN**|2,2250738585072014E-308|Valeur positive minimale|  
+|**DBL_MIN_10_EXP**|(-307)|Exposant décimal minimal|  
+|**DBL_MIN_EXP**|(-1021)|Exposant binaire minimal|  
+|**_DBL_RADIX**|2|Radical d’exposant|  
+|**_DBL_ROUNDS**|1|Arrondi d’addition : au plus proche|  
+|**FLT_DIG**|6|Nombre de chiffres décimaux de précision|  
+|**FLT_EPSILON**|1,192092896e-07F|Le plus petit de sorte que 1.0+**FLT_EPSILON** !=1.0|  
+|**FLT_MANT_DIG**|24|Nombre de bits dans la mantisse|  
+|**FLT_MAX**|3,402823466e+38F|Valeur maximale|  
+|**FLT_MAX_10_EXP**|38|Exposant décimal maximal|  
+|**FLT_MAX_EXP**|128|Exposant binaire maximal|  
+|**FLT_MIN**|1,175494351e-38F|Valeur positive minimale|  
+|**FLT_MIN_10_EXP**|(-37)|Exposant décimal minimal|  
+|**FLT_MIN_EXP**|(-125)|Exposant binaire minimal|  
+|**FLT_RADIX**|2|Radical d’exposant|  
+|**FLT_ROUNDS**|1|Arrondi d’addition : au plus proche|  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Constantes globales](../c-runtime-library/global-constants.md)

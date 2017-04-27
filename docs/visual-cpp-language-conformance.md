@@ -30,15 +30,18 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
-ms.openlocfilehash: a13be4d4d32ab0f0bc3cc7b5972e90c4493d06ff
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
+ms.openlocfilehash: 8e21a77e42a90571c73ff0f207f5d799ff722bd3
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-language-conformance"></a>Conformité du langage Visual C++ 
 Cette rubrique récapitule la conformité aux normes de langage ISO C++03, C++11, C++14 et C++17 (ébauche) des fonctionnalités du compilateur et des fonctionnalités de la bibliothèque standard (STL) pour Visual C++ dans Visual Studio 2017 et versions antérieures. À chaque nom de fonctionnalité du compilateur et de la bibliothèque STL correspond un lien vers le document de proposition de norme ISO C++ qui décrit la fonctionnalité en question (sous réserve de disponibilité de ce document au moment de la publication). La colonne Prise en charge indique la première version de Visual Studio à prendre en charge la fonctionnalité.  
   
 Pour plus d’informations sur les améliorations de la conformité et les autres changements dans Visual Studio 2017, consultez [Améliorations de la conformité de C++ dans Visual Studio 2017](cpp-conformance-improvements-2017.md) et [Nouveautés de Visual C++ dans Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Pour passer en revue les changements de conformité dans les versions antérieures, consultez [Historique des modifications de Visual C++](porting/visual-cpp-change-history-2003-2015.md) et [Nouveautés de Visual C++ entre 2003 et 2015](porting/visual-cpp-what-s-new-2003-through-2015.md). Pour connaître l’actualité de l’équipe C++, visitez le [blog de l’équipe Visual C++](http://blogs.msdn.microsoft.com/vcblog/).  
+
+ > [!NOTE]
+ > Aucune modification importante n’a été apportée au niveau des binaires entre Visual Studio 2015 et Visual Studio 2017.
   
 ## <a name="compiler-features"></a>Fonctionnalités du compilateur  
   
@@ -231,7 +234,7 @@ Pour plus d’informations sur les améliorations de la conformité et les autre
 Un groupe de documents répertoriés ensemble indique qu’une fonctionnalité a été approuvée dans la norme, puis qu’un ou plusieurs documents visant à améliorer ou à développer cette fonctionnalité ont aussi été approuvés. Ces fonctionnalités sont implémentées ensemble.  
   
 ### <a name="supported-values"></a>Valeurs prises en charge  
-__Non __ signifie que la fonctionnalité n’est pas encore implémentée.  
+__Non__ signifie que la fonctionnalité n’est pas encore implémentée.  
 __Partielle__ signifie que l’implémentation dans Visual Studio 2017 est incomplète. Pour plus d’informations, consultez la section Notes.  
 __N/A__ signifie que les documents de proposition ne décrivent pas de fonctionnalités. Ces documents ont modifié le langage de la norme, mais n’ont entraîné aucun travail pour les implémenteurs. Ils sont répertoriés ici par souci d’exhaustivité.  
 __VS 2010__ indique des fonctionnalités prises en charge dans Visual Studio 2010.  

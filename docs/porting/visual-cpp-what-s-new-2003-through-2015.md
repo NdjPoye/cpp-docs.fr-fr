@@ -532,7 +532,7 @@ Dans Visual C++ 2015 et versions ultérieures, les améliorations suivies de l
   
 -   **Classes de base virtuelles privées et héritage indirect**  
   
-     Les versions précédentes du compilateur autorisaient une classe dérivée à appeler des fonctions membres de ses classes de base **`private virtual` . Cet ancien comportement était incorrect et non conforme à la norme C++. Le compilateur n’accepte plus de code écrit de cette façon. Il émet dans ce cas l’erreur du compilateur C2280.  
+     Les versions précédentes du compilateur autorisaient une classe dérivée à appeler des fonctions membres de ses classes de base *dérivées indirectement*`private virtual` . Cet ancien comportement était incorrect et non conforme à la norme C++. Le compilateur n’accepte plus de code écrit de cette façon. Il émet dans ce cas l’erreur du compilateur C2280.  
   
     ```Output  
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function  

@@ -14,6 +14,8 @@ f1_keywords:
 - regex/std::operator<=
 - regex/std::operator==
 - regex/std::operator<<
+dev_langs:
+- C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
 caps.latest.revision: 12
 manager: ghogen
@@ -30,7 +32,7 @@ ms.lasthandoff: 02/24/2017
 |[operator&lt;](#operator_lt_)|[operator&lt;&lt;](#operator_lt__lt_)|[operator&lt;=](#operator_lt__eq)|  
 |[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  Comparaison « n’est pas égal à » entre plusieurs objets.  
   
 ```  
@@ -147,7 +149,7 @@ sub != "aab" == true
 sub != 'a' == true  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="operator_lt_"></a>  operator&lt;  
  Comparaison « inférieur à » entre plusieurs objets.  
   
 ```  
@@ -255,7 +257,7 @@ sub < "aab" == true
 sub < 'a' == false  
 ```  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="operator_lt__lt_"></a>  operator&lt;&lt;  
  Insère un sub_match dans un flux.  
   
 ```  
@@ -313,7 +315,7 @@ int main()
 whole match: caaa  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="operator_lt__eq"></a>  operator&lt;=  
  Comparaison « inférieur ou égal à » entre plusieurs objets.  
   
 ```  
@@ -421,7 +423,7 @@ sub <= "aab" == true
 sub <= 'a' == false  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  Comparaison « est égal à » entre plusieurs objets.  
   
 ```  
@@ -546,7 +548,7 @@ sub == "aab" == false
 sub == 'a' == false  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="operator_gt_"></a>  operator&gt;  
  Comparaison « supérieur à » entre plusieurs objets.  
   
 ```  
@@ -654,7 +656,7 @@ sub > "aab" == false
 sub > 'a' == true  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="operator_gt__eq"></a>  operator&gt;=  
  Comparaison « supérieur ou égal à » entre plusieurs objets.  
   
 ```  

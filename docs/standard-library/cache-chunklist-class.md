@@ -10,9 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - allocators/stdext::cache_chunklist
-- stdext.cache_chunklist
 - stdext::cache_chunklist
 - cache_chunklist
+- allocators/stdext::cache_chunklist::allocate
+- allocators/stdext::cache_chunklist::deallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class cache_chunklist
   
  **Espace de noms :** stdext  
   
-##  <a name="a-namecachechunklistallocatea--cachechunklistallocate"></a><a name="cache_chunklist__allocate"></a>  cache_chunklist::allocate  
+##  <a name="cache_chunklist__allocate"></a>  cache_chunklist::allocate  
  Alloue un bloc de mémoire.  
   
 ```
@@ -99,7 +100,7 @@ void *allocate(std::size_t count);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namecachechunklistcachechunklista--cachechunklistcachechunklist"></a><a name="cache_chunklist__cache_chunklist"></a>  cache_chunklist::cache_chunklist  
+##  <a name="cache_chunklist__cache_chunklist"></a>  cache_chunklist::cache_chunklist  
  Construit un objet de type `cache_chunklist`.  
   
 ```
@@ -108,7 +109,7 @@ cache_chunklist();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-namecachechunklistdeallocatea--cachechunklistdeallocate"></a><a name="cache_chunklist__deallocate"></a>  cache_chunklist::deallocate  
+##  <a name="cache_chunklist__deallocate"></a>  cache_chunklist::deallocate  
  Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.  
   
 ```

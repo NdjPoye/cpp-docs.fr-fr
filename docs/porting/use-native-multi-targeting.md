@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
-ms.openlocfilehash: 1088f17c1d758589fba146f82b2544ae17090a22
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ba1dd940e6dfe9bb749de1473850a245fa8073a9
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets  
@@ -54,7 +54,7 @@ Vous pouvez également cibler des projets Visual Studio 2008, mais vous ne pouv
   
 Les dernières versions de Visual Studio prennent en charge le multiciblage natif et les allers-retours des projets. Grâce au multiciblage natif, la dernière version de l’IDE peut effectuer une génération à l’aide des ensembles d’outils installés par les versions antérieures de Visual Studio. Grâce à la procédure d’aller-retour, la dernière version de l’IDE peut charger les projets créés par une version précédente de l’IDE sans y apporter de modifications. Si vous installez la dernière version de Visual Studio côte à côte avec votre version existante, vous pouvez utiliser la nouvelle version de l’IDE avec le compilateur et les outils de la version existante pour générer vos projets. Les autres membres de votre équipe peuvent continuer à utiliser les projets dans la version antérieure de Visual Studio.  
   
-Quand vous utilisez un ensemble d’outils plus ancien, vous pouvez tirer parti de nombreuses fonctionnalités du dernier IDE, mais pas des dernières avancées des outils de génération, des bibliothèques et du compilateur C++. Par exemple, vous ne pouvez pas utiliser les nouvelles améliorations de la conformité au langage, les nouvelles fonctionnalités de débogage et d’analyse du code ou profiter du débit de génération plus rapide qu’offre le dernier ensemble d’outils. En outre, certaines fonctionnalités de l’IDE ne sont pas compatibles avec les ensembles d’outils plus anciens. Par exemple, les informations de type peuvent être manquantes dans le profileur de mémoire, et l’opération de refactorisation « Convertir en littéral de chaîne brute » génère du code conforme à C++11 qui n’est pas compilé si vous utilisez les ensembles d’outils Visual Studio 2012 ou plus anciens.
+Quand vous utilisez un ensemble d’outils plus ancien, vous pouvez tirer parti de nombreuses fonctionnalités du dernier IDE, mais pas des dernières avancées des outils de génération, des bibliothèques et du compilateur C++. Par exemple, vous ne pouvez pas utiliser les nouvelles améliorations de la conformité au langage, les nouvelles fonctionnalités de débogage et d’analyse du code ou profiter du débit de génération plus rapide qu’offre le dernier ensemble d’outils. En outre, certaines fonctionnalités de l’IDE ne sont pas compatibles avec les ensembles d’outils plus anciens. Par exemple, les informations de type peuvent être manquantes dans le profileur de mémoire et l’opération de refactorisation **Convertir en littéral de chaîne brute** génère du code conforme à C++11 qui n’est pas compilé si vous utilisez les ensembles d’outils Visual Studio 2012 ou antérieurs.
 
 ## <a name="how-to-use-native-multi-targeting-in-visual-studio"></a>Comment utiliser le multiciblage natif dans Visual Studio
 Une fois que vous avez installé Visual Studio côte à côte avec l’ancienne version, ouvrez votre projet existant dans la nouvelle version de Visual Studio. Quand le projet est chargé, Visual Studio vous demande si vous souhaitez le mettre à niveau pour utiliser les derniers compilateur et bibliothèques C++. Étant donné que vous souhaitez que le projet conserve les anciens compilateur et bibliothèques, choisissez le bouton **Annuler**.  

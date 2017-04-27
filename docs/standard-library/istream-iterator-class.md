@@ -10,9 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - iterator/std::istream_iterator
-- std.istream_iterator
-- std::istream_iterator
 - istream_iterator
+- iterator/std::istream_iterator::char_type
+- iterator/std::istream_iterator::istream_type
+- iterator/std::istream_iterator::traits_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +99,7 @@ class istream_iterator
   
  **Espace de noms :** std  
   
-##  <a name="a-nameistreamiteratorchartypea--istreamiteratorchartype"></a><a name="istream_iterator__char_type"></a>  istream_iterator::char_type  
+##  <a name="istream_iterator__char_type"></a>  istream_iterator::char_type  
  Type qui fournit le type de caractère de `istream_iterator`.  
   
 ```
@@ -144,7 +145,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreamiteratoristreamiteratora--istreamiteratoristreamiterator"></a><a name="istream_iterator__istream_iterator"></a>  istream_iterator::istream_iterator  
+##  <a name="istream_iterator__istream_iterator"></a>  istream_iterator::istream_iterator  
  Construit un itérateur de fin de flux comme `istream_iterator` par défaut ou un `istream_iterator` initialisé sur le type de flux de l'itérateur à partir duquel il lit.  
   
 ```
@@ -196,7 +197,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreamiteratoristreamtypea--istreamiteratoristreamtype"></a><a name="istream_iterator__istream_type"></a>  istream_iterator::istream_type  
+##  <a name="istream_iterator__istream_type"></a>  istream_iterator::istream_type  
  Type qui fournit le type de flux de `istream_iterator`.  
   
 ```
@@ -209,7 +210,7 @@ typedef basic_istream<CharType, Traits> istream_type;
 ### <a name="example"></a>Exemple  
   Pour découvrir comment déclarer et utiliser `istream_type`, consultez l’exemple relatif à [istream_iterator](#istream_iterator__istream_iterator).  
   
-##  <a name="a-nameistreamiteratoroperatorstara--istreamiteratoroperator"></a><a name="istream_iterator__operator_star"></a>  istream_iterator::operator*  
+##  <a name="istream_iterator__operator_star"></a>  istream_iterator::operator*  
  L’opérateur de déréférencement retourne l’objet stocké de type **Type** traité par `istream_iterator`.  
   
 ```
@@ -251,7 +252,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreamiteratoroperator-gta--istreamiteratoroperator-gt"></a><a name="istream_iterator__operator-_gt_"></a>  istream_iterator::operator-&gt;  
+##  <a name="istream_iterator__operator-_gt_"></a>  istream_iterator::operator-&gt;  
  Retourne la valeur d'un membre, le cas échéant.  
   
 ```
@@ -298,7 +299,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreamiteratoroperatoraddadda--istreamiteratoroperator"></a><a name="istream_iterator__operator_add_add"></a>  istream_iterator::operator++  
+##  <a name="istream_iterator__operator_add_add"></a>  istream_iterator::operator++  
  Extrait un objet incrémenté du flux d'entrée ou copie l'objet avant de l'incrémenter et retourne la copie.  
   
 ```
@@ -342,7 +343,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameistreamiteratortraitstypea--istreamiteratortraitstype"></a><a name="istream_iterator__traits_type"></a>  istream_iterator::traits_type  
+##  <a name="istream_iterator__traits_type"></a>  istream_iterator::traits_type  
  Type qui fournit le type de caractéristique de `istream_iterator`.  
   
 ```
