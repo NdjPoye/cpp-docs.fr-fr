@@ -1,30 +1,53 @@
 ---
-title: "Erreurs et avertissements des outils &#201;diteur de liens | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erreurs (C++)"
-  - "erreurs (C++), éditeur de liens"
-  - "éditeur de liens (C++), erreurs et avertissements"
+title: "Erreurs et avertissements des outils Éditeur de liens | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- errors [C++]
+- linker [C++], errors and warnings
+- errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Erreurs et avertissements des outils &#201;diteur de liens
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 55a178e48f6189a0159943c36a26c5179456343f
+ms.lasthandoff: 04/24/2017
 
-LINK, LIB, DUMPBIN et EDITBIN génèrent ces erreurs et avertissements.  Pour obtenir de l'aide sur un message d'erreur particulier, vous pouvez cliquer sur un numéro d'erreur dans la fenêtre Sortie et appuyer sur F1, taper le numéro d'erreur dans la zone **Rechercher** de l'index ou cliquer sur un lien ci\-dessous.  
+---
+# <a name="linker-tools-errors-and-warnings"></a>Erreurs et avertissements des outils Éditeur de liens
+LIEN, LIB, DUMPBIN et EDITBIN génèrent ces erreurs et avertissements. Pour obtenir de l’aide sur un message d’erreur particulier, cliquez sur la souris sur un numéro d’erreur dans la fenêtre Sortie et appuyez sur F1, tapez le numéro d’erreur dans le **recherchez** zone dans l’Index, ou cliquez sur un lien ci-dessous.  
+  
+> [!NOTE]
+>  Pas chaque [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erreur ou un avertissement est documentée dans MSDN. Dans de nombreux cas, le message de diagnostic fournit toutes les informations qui est disponibles. Si vous pensez qu'un message d'erreur nécessite une explication supplémentaire, faites-nous part de vos suggestions. Vous pouvez utiliser le formulaire de commentaires sur cette page, ou accédez à la barre de menus dans Visual Studio et choisissez **aide**, **signaler un bogue**, ou vous pouvez envoyer un rapport de suggestion ou un bogue sur [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+  
+Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) forum est de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ général](http://go.microsoft.com/fwlink/?LinkId=158194) est de forum de questions sur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
+  
+## <a name="in-this-section"></a>Dans cette section
   
  [Erreur des outils Éditeur de liens LNK1000](../../error-messages/tool-errors/linker-tools-error-lnk1000.md)  
   

@@ -88,6 +88,86 @@ f1_keywords:
 - C1901
 - C1903
 - C1904
+helpviewer_keywords:
+- C1012
+- C1013
+- C1014
+- C1016
+- C1018
+- C1019
+- C1020
+- C1021
+- C1022
+- C1023
+- C1034
+- C1035
+- C1036
+- C1037
+- C1038
+- C1041
+- C1045
+- C1047
+- C1048
+- C1049
+- C1053
+- C1063
+- C1068
+- C1069
+- C1070
+- C1074
+- C1077
+- C1082
+- C1086
+- C1087
+- C1088
+- C1089
+- C1090
+- C1091
+- C1098
+- C1099
+- C1100
+- C1101
+- C1102
+- C1103
+- C1104
+- C1105
+- C1108
+- C1109
+- C1110
+- C1111
+- C1112
+- C1114
+- C1190
+- C1193
+- C1195
+- C1196
+- C1201
+- C1202
+- C1205
+- C1206
+- C1207
+- C1208
+- C1209
+- C1210
+- C1211
+- C1300
+- C1301
+- C1302
+- C1306
+- C1310
+- C1312
+- C1352
+- C1353
+- C1383
+- C1384
+- C1451
+- C1505
+- C1508
+- C1510
+- C1852
+- C1901
+- C1903
+- C1904
 dev_langs:
 - C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
@@ -111,13 +191,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: e8d1696e325ac6a005636aa1d874d30b9c296e91
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 7cd9b98172f30248c40d2b0b8410b19f4a0cafec
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Erreurs irrécupérables du compilateur C999 à C1999
 Les articles de cette partie de la documentation contiennent des informations sur une sous-section des erreurs du compilateur Visual C++. Vous pouvez accéder aux informations ici, ou dans la fenêtre **Sortie** de Visual Studio, vous pouvez sélectionner un numéro d'erreur, puis appuyer sur F1.  
+  
+> [!NOTE]
+>  Pas chaque [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erreur est documentée dans MSDN. Dans de nombreux cas, le message de diagnostic fournit toutes les informations qui est disponibles. Si vous pensez qu'un message d'erreur nécessite une explication supplémentaire, faites-nous part de vos suggestions. Vous pouvez utiliser le formulaire de commentaires sur cette page, ou accédez à la barre de menus dans Visual Studio et choisissez **aide**, **signaler un bogue**, ou vous pouvez envoyer un rapport de suggestion ou un bogue sur [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
+  
+ Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ général](http://go.microsoft.com/fwlink/?LinkId=158194) est de forum de questions sur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
   
 |Erreur|Message|  
 |-----------|-------------|  
@@ -130,7 +215,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur irrécupérable C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|indicateur non reconnu '*chaîne*'in'*option*'|  
 |[Erreur irrécupérable C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|aucun fichier d'entrée spécifié|  
 |[Erreur irrécupérable C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|limite du compilateur : macros imbriquées trop profondément|  
-|[Erreur irrécupérable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fin de fichier inattendue lors de la recherche d'un en-tête précompilé. Vous avez oublié d’ajouter ' #include *fichier*>' à votre source ?|  
+|[Erreur irrécupérable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fin de fichier inattendue lors de la recherche d'un en-tête précompilé. Vous avez oublié d’ajouter ' #include <*fichier*>' à votre source ?|  
 |Erreur irrécupérable C1012|parenthèses non équilibrées : manquant '*caractère*»|  
 |Erreur irrécupérable C1013|limite du compilateur : parenthèses ouvertes trop nombreuses|  
 |Erreur irrécupérable C1014|fichiers include trop nombreux : profondeur = *nombre*|  
@@ -187,7 +272,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |Erreur irrécupérable C1088|Impossible de vider *type* fichier : '*fichier*' : *message*|  
 |Erreur irrécupérable C1089|Impossible de tronquer *type* fichier : '*fichier*' : *message*|  
 |Erreur irrécupérable C1090|Échec de l’appel de l’API PDB, code d’erreur '*code*' : '*message*'|  
-|Erreur irrécupérable C1091|limite du compilateur : la chaîne dépasse *nombre* octets de longueur|  
+|Erreur irrécupérable C1091|limite du compilateur : la chaîne dépasse *numéro* octets de longueur|  
 |[Erreur irrécupérable C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md)|Modifier & Continuer ne prend pas en charge les modifications sur les types de données ; génération requise|  
 |[Erreur irrécupérable C1093](../../error-messages/compiler-errors-1/fatal-error-c1093.md)|Appel d’API «*fonction*'échec'*HRESULT*' : '*description*'|  
 |[Erreur irrécupérable C1094](../../error-messages/compiler-errors-1/fatal-error-c1094.md)|'-Zm*nombre*' : option de ligne de commande non cohérente avec la valeur utilisée pour générer l’en-tête précompilé ('-Zm*nombre*')|  
@@ -196,8 +281,8 @@ Les articles de cette partie de la documentation contiennent des informations su
 |Erreur irrécupérable C1100|Impossible d’initialiser OLE : *erreur*|  
 |Erreur irrécupérable C1101|Impossible de créer le gestionnaire pour l’attribut '*identificateur*'|  
 |Erreur irrécupérable C1102|Impossible d’initialiser : *erreur*|  
-|Erreur irrécupérable C1103|Erreur irrécupérable importation de progid : '*message*'|  
-|Erreur irrécupérable C1104|Erreur irrécupérable, l’importation de libid : '*message*'|  
+|Erreur irrécupérable C1103|Erreur irrécupérable l’importation de progid : '*message*'|  
+|Erreur irrécupérable C1104|Erreur irrécupérable l’importation de libid : '*message*'|  
 |Erreur irrécupérable C1105|*message*: *erreur*|  
 |[Erreur irrécupérable C1107](../../error-messages/compiler-errors-1/fatal-error-c1107.md)|assembly introuvable '*assembly*' : spécifiez le chemin de recherche en utilisant /AI ou en définissant la variable d’environnement LIBPATH|  
 |Erreur irrécupérable C1108|Impossible de trouver la DLL : '*fichier*'|  
@@ -239,7 +324,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |Erreur irrécupérable C1310|les optimisations guidées par profil ne sont pas disponibles avec OpenMP|  
 |[Erreur irrécupérable C1311](../../error-messages/compiler-errors-1/fatal-error-c1311.md)|Le format COFF ne peut pas initialiser de manière statique '*symbole*' avec *nombre* octet (s) d’une adresse|  
 |Erreur irrécupérable C1312|Trop de branches conditionnelles dans la fonction.  Simplifiez ou refactorisez le code source.|  
-|[Erreur irrécupérable C1313](../../error-messages/compiler-errors-1/fatal-error-c1313.md)|limite du compilateur : *type* blocs ne peuvent pas être imbriqués au-delà *nombre* niveaux|  
+|[Erreur irrécupérable C1313](../../error-messages/compiler-errors-1/fatal-error-c1313.md)|limite du compilateur : *type* blocs ne peuvent pas être imbriqués au-delà de *numéro* niveaux|  
 |[Erreur irrécupérable C1350](../../error-messages/compiler-errors-1/fatal-error-c1350.md)|Erreur lors du chargement de la dll '*fichier*' : dll introuvable|  
 |[Erreur irrécupérable C1351](../../error-messages/compiler-errors-1/fatal-error-c1351.md)|Erreur lors du chargement de la dll '*fichier*' : version non compatible|  
 |Erreur irrécupérable C1352|MSIL non valide ou endommagé dans la fonction '*fonction*'du module'*module*'|  
@@ -255,7 +340,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur irrécupérable C1510](../../error-messages/compiler-errors-1/fatal-error-c1510.md)|Impossible d'ouvrir la ressource de langage clui.dll|  
 |[Erreur irrécupérable C1601](../../error-messages/compiler-errors-1/fatal-error-c1601.md)|opcode d'assembly inline non pris en charge|  
 |[Erreur irrécupérable C1602](../../error-messages/compiler-errors-1/fatal-error-c1602.md)|intrinsèque non pris en charge|  
-|[Erreur irrécupérable C1603](../../error-messages/compiler-errors-1/fatal-error-c1603.md)|cible de branche assembly inline dépasse de *nombre* octets|  
+|[Erreur irrécupérable C1603](../../error-messages/compiler-errors-1/fatal-error-c1603.md)|cible de branche assembly inline dépasse de *numéro* octets|  
 |Erreur irrécupérable C1852|'*fichier*' n’est pas un fichier d’en-tête précompilé valide|  
 |[Erreur irrécupérable C1853](../../error-messages/compiler-errors-1/fatal-error-c1853.md)|'*fichier*' fichier d’en-tête précompilé est d’une version antérieure du compilateur, ou l’en-tête précompilé est en C++ et vous l’utilisez en C (ou inversement)|  
 |[Erreur irrécupérable C1854](../../error-messages/compiler-errors-1/fatal-error-c1854.md)|ne peut pas remplacer les informations obtenues lors de la création de l’en-tête précompilé du fichier objet : '*fichier*'|  
