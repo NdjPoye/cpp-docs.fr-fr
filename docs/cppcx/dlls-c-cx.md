@@ -21,7 +21,7 @@ Vous pouvez utiliser Visual Studio pour créer une DLL Win32 standard ou une DLL
 ## DLL de composants [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]  
  Dans la plupart des cas, si vous souhaitez créer une DLL à utiliser dans une application [!INCLUDE[win8_appname_long](../cppcx/includes/win8-appname-long-md.md)], créez\-la en tant que composant [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] à l'aide du modèle de projet du même nom. Vous pouvez créer un projet de composant [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] pour les DLL qui ont des types [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] publics ou privés. Les composants [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] sont accessibles à partir des applications écrites dans n'importe quel langage compatible [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]. Par défaut, les paramètres du compilateur d'un projet de composant [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] utilisent le commutateur **\/ZW**. Un fichier .winmd doit avoir le même nom que l'espace de noms racine. Par exemple, une classe nommée A.B.C.MyClass peut être instanciée uniquement si elle est définie dans un fichier de métadonnées nommé A.winmd, A.B.winmd ou A.B.C.winmd. Il n'est pas requis que le nom de la DLL corresponde au nom du fichier .winmd.  
   
- Pour plus d'informations, consultez [Création de composants Windows Runtime en C\+\+](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md).  
+ Pour plus d'informations, consultez [Création de composants Windows Runtime en C\+\+](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf).  
   
 #### Référencement d'un fichier binaire de composant [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] tiers dans votre projet  
   

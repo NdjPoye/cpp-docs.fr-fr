@@ -106,7 +106,7 @@ UnorderedMap();
  Objet de fonction qui génère une valeur de hachage pour les clés. La valeur par défaut de ce paramètre est [hash, classe](../Topic/hash%20Class%201.md) pour les types de clé que cette classe prend en charge.  
   
  `m`  
- Référence ou [Lvalues et Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) d'un [std::unordered\_map](../standard-library/unordered-map-class.md) utilisé pour initialiser le UnorderedMap actif.  
+ Référence ou [Lvalues et Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md) d'un [std::unordered\_map](../standard-library/unordered-map-class.md) utilisé pour initialiser le UnorderedMap actif.  
   
  il  
  [std::initializer\_list](../standard-library/initializer-list-class.md) des objets [std::pair](../standard-library/pair-structure.md)qui seront utilisés pour initialiser le mappage.  

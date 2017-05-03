@@ -33,7 +33,7 @@ const throw();
 ## Valeur de retour  
  Handle vers l’objet représenté par l’objet Agile actif.  
   
- Cet opérateur retourne un type interne non divulgué. Un moyen pratique de contenir la valeur de retour consiste à l’assigner à une variable déclarée avec le mot clé de déduction de type [auto](../Topic/auto%20\(C++\).md).  
+ Cet opérateur retourne un type interne non divulgué. Un moyen pratique de contenir la valeur de retour consiste à l’assigner à une variable déclarée avec le mot clé de déduction de type [auto](~/cpp/auto-cpp.md).  
   
 ## Configuration requise  
  **Client minimum pris en charge :** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

@@ -100,7 +100,7 @@ UnorderedMapView(
  Type qui fournit un objet de fonction qui peut comparer deux clés pour déterminer leur égalité. Correspond par défaut à [std::equal\_to\<K\>](../standard-library/equal-to-struct.md).  
   
  `m`  
- Une référence ou [Lvalues et Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) à [](../standard-library/unordered-map-class.md) utilisée pour initialiser le UnorderedMapView.  
+ Une référence ou [Lvalues et Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md) à [](../standard-library/unordered-map-class.md) utilisée pour initialiser le UnorderedMapView.  
   
  `first`  
  Itérateur d'entrée du premier élément d'une plage d'éléments utilisée pour initialiser le UnorderedMapView.  

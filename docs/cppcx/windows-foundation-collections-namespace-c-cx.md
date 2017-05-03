@@ -50,4 +50,4 @@ namespace Windows {
  **Espace de noms :** Windows::Foundation::Collections  
   
 ## Voir aussi  
- [Windows::Foundation, espace de noms](../Topic/Windows::Foundation%20Namespace.md)
+ [Windows::Foundation, espace de noms](~/windows/windows-foundation-namespace.md)

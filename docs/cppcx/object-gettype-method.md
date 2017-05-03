@@ -36,7 +36,7 @@ Object::GetType()
   
  La classe [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) est utilisée dans les API Windows comme une méthode indépendante du langage pour passer des informations de type entre les composants et les applications Windows. La [Platform::Type \(classe\)](../cppcx/platform-type-class.md) a des opérateurs de conversion entre `Type` et `TypeName`.  
   
- Utilisez l'opérateur [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md) pour retourner un objet `Platform::Type` pour un nom de classe, par exemple en naviguant entre les pages XAML :  
+ Utilisez l'opérateur [typeid](~/windows/typeid-cpp-component-extensions.md) pour retourner un objet `Platform::Type` pour un nom de classe, par exemple en naviguant entre les pages XAML :  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  

@@ -19,9 +19,9 @@ caps.handback.revision: 14
 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] prend en charge le mot clé `public enum class`, qui est analogue à un `scoped  enum` C\+\+ standard. Lorsque vous utilisez un énumérateur qui est déclaré à l'aide du mot clé `public enum class`, vous devez utiliser l'identificateur d'énumération pour limiter chaque valeur de l'énumérateur.  
   
 ## Notes  
- Un `public enum class` qui n'a pas de spécificateur d'accès, tel que `public`, est traité comme un [scoped enum](../Topic/Enumerations%20\(C++\).md) C\+\+ standard.  
+ Un `public enum class` qui n'a pas de spécificateur d'accès, tel que `public`, est traité comme un [scoped enum](~/cpp/enumerations-cpp.md) C\+\+ standard.  
   
- Une déclaration `public enum class` ou `public enum struct` peut avoir un type sous\-jacent de n'importe quel type intégral bien que [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] lui\-même requiert que le type soit int32 ou uint32 pour un enum de bits. La syntaxe suivante décrit les éléments d'un `public enum class` ou d'un `public enum struct`. Pour plus d'informations, consultez [enum, classe](../Topic/enum%20class%20%20\(C++%20Component%20Extensions\).md).  
+ Une déclaration `public enum class` ou `public enum struct` peut avoir un type sous\-jacent de n'importe quel type intégral bien que [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] lui\-même requiert que le type soit int32 ou uint32 pour un enum de bits. La syntaxe suivante décrit les éléments d'un `public enum class` ou d'un `public enum struct`. Pour plus d'informations, consultez [enum, classe](~/windows/enum-class-cpp-component-extensions.md).  
   
  Cet exemple montre comment définir une classe d'énumération publique :  
   

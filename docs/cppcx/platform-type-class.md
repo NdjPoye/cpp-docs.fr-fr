@@ -22,7 +22,7 @@ manager: "ghogen"
 caps.handback.revision: 7
 ---
 # Platform::Type (classe)
-Contient des informations d'exécution sur un type, en particulier un nom de chaîne et un code de type. Obtenu en appelant [Object::GetType Method](../cppcx/object-gettype-method.md) sur un objet ou en utilisant l'opérateur [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md) sur un nom de classe ou de construction.  
+Contient des informations d'exécution sur un type, en particulier un nom de chaîne et un code de type. Obtenu en appelant [Object::GetType Method](../cppcx/object-gettype-method.md) sur un objet ou en utilisant l'opérateur [typeid](~/windows/typeid-cpp-component-extensions.md) sur un nom de classe ou de construction.  
   
 ## Syntaxe  
   

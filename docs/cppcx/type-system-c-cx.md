@@ -136,7 +136,7 @@ Avec l'architecture [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)], [!INCLUDE[cppw
  Pour plus d'informations, consultez [Délégués](../cppcx/delegates-c-cx.md).  
   
 ### Exceptions  
- Dans C\+\+\/CX, vous pouvez intercepter les types d'exceptions personnalisés, les types [std::exception](../Topic/exception%20Class1.md) et les types [Platform::Exception](../cppcx/platform-exception-class.md).  
+ Dans C\+\+\/CX, vous pouvez intercepter les types d'exceptions personnalisés, les types [std::exception](~/standard-library/exception-class.md) et les types [Platform::Exception](../cppcx/platform-exception-class.md).  
   
  Pour plus d'informations, consultez [Exceptions](../cppcx/exceptions-c-cx.md).  
   
@@ -146,7 +146,7 @@ Avec l'architecture [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)], [!INCLUDE[cppw
  Pour plus d'informations, consultez [Événements](../cppcx/events-c-cx.md).  
   
 ### Cast  
- C\+\+\/CX prend en charge les opérateurs de cast C\+\+ standard [static\_cast](../cpp/static-cast-operator.md), [dynamic\_cast](../cpp/dynamic-cast-operator.md) et [reinterpret\_cast](../cpp/reinterpret-cast-operator.md), ainsi que l'opérateur [safe\_cast](../Topic/safe_cast%20\(C++%20Component%20Extensions\).md) propre à C\+\+\/CX.  
+ C\+\+\/CX prend en charge les opérateurs de cast C\+\+ standard [static\_cast](../cpp/static-cast-operator.md), [dynamic\_cast](../cpp/dynamic-cast-operator.md) et [reinterpret\_cast](../cpp/reinterpret-cast-operator.md), ainsi que l'opérateur [safe\_cast](~/windows/safe-cast-cpp-component-extensions.md) propre à C\+\+\/CX.  
   
  Pour plus d'informations, consultez [Effectuer un cast](../cppcx/casting-c-cx.md).  
   

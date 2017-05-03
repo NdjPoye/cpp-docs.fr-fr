@@ -32,7 +32,7 @@ public ref class AccessDeniedException : COMException,    IException,    IPrinta
 ```  
   
 ## Notes  
- Si vous rencontrez cette exception, vérifiez que vous avez demandé la fonctionnalité appropriée et que avez effectué les déclarations requises dans le manifeste de package de votre application. Pour plus d'informations, consultez [Configurer un package d'application Windows 8.1 à l'aide du concepteur de manifeste](../Topic/Configure%20a%20Windows%208.1%20app%20package%20by%20using%20the%20manifest%20designer.md) et la classe [COMException](../cppcx/platform-comexception-class.md).  
+ Si vous rencontrez cette exception, vérifiez que vous avez demandé la fonctionnalité appropriée et que avez effectué les déclarations requises dans le manifeste de package de votre application. Pour plus d'informations, consultez [Configurer un package d'application Windows 8.1 à l'aide du concepteur de manifeste](http://msdn.microsoft.com/library/24c58b7f-9c6d-41c3-b385-c1e8497d5b2d) et la classe [COMException](../cppcx/platform-comexception-class.md).  
   
 ## Configuration requise  
  **Client minimum pris en charge :** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

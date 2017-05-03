@@ -94,7 +94,7 @@ Vector(
  Valeur utilisée pour initialiser chaque élément de l'objet Vector actuel.  
   
  `v`  
- [Lvalues et Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) à un [std::vector](../Topic/vector%20Class%201.md) utilisé pour initialiser l'objet Vector actuel.  
+ [Lvalues et Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md) à un [std::vector](../Topic/vector%20Class%201.md) utilisé pour initialiser l'objet Vector actuel.  
   
  `ptr`  
  Pointeur vers un `std::vector` utilisé pour initialiser l'objet Vector actuel.  
@@ -106,10 +106,10 @@ Vector(
  Objet [std::array](../Topic/vector%20Class%201.md) utilisé pour initialiser l'objet Vector actuel.  
   
  `first`  
- Premier élément d'une séquence d'objets utilisée pour initialiser l'objet Vector actuel. Le type `first` est passé au moyen du *transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence Rvalue : &&](../Topic/Rvalue%20Reference%20Declarator:%20&&.md).  
+ Premier élément d'une séquence d'objets utilisée pour initialiser l'objet Vector actuel. Le type `first` est passé au moyen du *transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence Rvalue : &&](~/cpp/rvalue-reference-declarator-amp-amp.md).  
   
  `last`  
- Dernier élément d'une séquence d'objets utilisée pour initialiser l'objet Vector actuel. Le type `last` est passé au moyen du *transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence Rvalue : &&](../Topic/Rvalue%20Reference%20Declarator:%20&&.md).  
+ Dernier élément d'une séquence d'objets utilisée pour initialiser l'objet Vector actuel. Le type `last` est passé au moyen du *transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence Rvalue : &&](~/cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ## Configuration requise  
  **En\-tête :** collection.h  

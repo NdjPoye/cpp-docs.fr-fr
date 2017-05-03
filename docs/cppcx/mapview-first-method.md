@@ -35,7 +35,7 @@ First();
  Itérateur qui spécifie le premier élément de la vue cartographique.  
   
 ## Notes  
- Un moyen pratique de contenir l'itérateur retourné par First\(\) est d'assigner la valeur de retour à une variable déclarée avec le mot clé de déduction de type [auto](../Topic/auto%20\(C++\).md). Par exemple, `auto x = myMapView->First();`.  
+ Un moyen pratique de contenir l'itérateur retourné par First\(\) est d'assigner la valeur de retour à une variable déclarée avec le mot clé de déduction de type [auto](~/cpp/auto-cpp.md). Par exemple, `auto x = myMapView->First();`.  
   
 ## Configuration requise  
  **En\-tête :** collection.h  

@@ -34,7 +34,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
  Itérateur qui spécifie le premier élément de la carte.  
   
 ## Notes  
- Un moyen pratique de contenir l'itérateur retourné par First\(\) est d'assigner la valeur de retour à une variable déclarée avec le mot clé de déduction de type [auto](../Topic/auto%20\(C++\).md). Par exemple, `auto x = myMap->First();`.  
+ Un moyen pratique de contenir l'itérateur retourné par First\(\) est d'assigner la valeur de retour à une variable déclarée avec le mot clé de déduction de type [auto](~/cpp/auto-cpp.md). Par exemple, `auto x = myMap->First();`.  
   
 ## Configuration requise  
  **En\-tête :** collection.h  

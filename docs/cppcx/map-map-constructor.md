@@ -52,7 +52,7 @@ Map(
  Type qui fournit un objet de fonction qui peut comparer deux valeurs d'élément comme des clés de tri pour déterminer leur ordre relatif dans le Map.  
   
  `m`  
- Une référence ou [Lvalues et Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) à [map, classe](../standard-library/map-class.md) utilisée pour initialiser l'objet Map actuel.  
+ Une référence ou [Lvalues et Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md) à [map, classe](../standard-library/map-class.md) utilisée pour initialiser l'objet Map actuel.  
   
  `first`  
  Itérateur d'entrée du premier élément d'une plage d'éléments utilisée pour initialiser le Map actuel.  

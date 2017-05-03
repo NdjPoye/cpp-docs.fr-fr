@@ -34,7 +34,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^
  Itérateur qui pointe vers le premier élément du Vector.  
   
 ## Notes  
- Un moyen pratique de contenir l'itérateur retourné par First\(\) est d'assigner la valeur de retour à une variable déclarée avec le mot clé de déduction de type [auto](../Topic/auto%20\(C++\).md). Par exemple, `auto x = myVector->First();`. Cet itérateur connaît la longueur de la collection.  
+ Un moyen pratique de contenir l'itérateur retourné par First\(\) est d'assigner la valeur de retour à une variable déclarée avec le mot clé de déduction de type [auto](~/cpp/auto-cpp.md). Par exemple, `auto x = myVector->First();`. Cet itérateur connaît la longueur de la collection.  
   
  Quand vous avez besoin d'une paire d'itérateurs à passer à une fonction STL, utilisez les fonctions libres [Windows::Foundation::Collections::begin](../cppcx/begin-function.md) et [Windows::Foundation::Collections::end](../cppcx/end-function.md)  
   
