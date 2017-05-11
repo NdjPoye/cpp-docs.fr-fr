@@ -54,14 +54,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 0fbce9639718ca7316494b1f573a817d8ab0e6f1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0ebd79ed048bad988ca8a31f0f2f8d5427b84675
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1, expm1f, expm1l
-Calcule l’exponentielle de base e d’une valeur, moins&1;.  
+Calcule l’exponentielle de base e d’une valeur, moins 1.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -88,7 +89,7 @@ long double expm1l(
  Valeur exponentielle à virgule flottante.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Les fonctions `expm1` retournent une valeur à virgule flottante qui représente e<sup>x</sup> – 1, en cas de réussite. En cas de dépassement, `expm1` retourne `HUGE_VAL`, `expm1f` retourne `HUGE_VALF`, `expm1l` retourne `HUGE_VALL`, et `errno` est défini sur `ERANGE`. Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Le `expm1` fonctions retournent une valeur à virgule flottante qui représente e<sup>x</sup> - 1, en cas de réussite. En cas de dépassement, `expm1` retourne `HUGE_VAL`, `expm1f` retourne `HUGE_VALF`, `expm1l` retourne `HUGE_VALL`, et `errno` est défini sur `ERANGE`. Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
  C++ autorisant la surcharge, vous pouvez appeler des surcharges de `expm1` qui acceptent et retournent des valeurs `float` et `long double`. Dans un programme C, `expm1` accepte et retourne toujours un `double`.  
@@ -99,10 +100,7 @@ long double expm1l(
 |-------------|---------------------|  
 |`expm1`, `expm1f`, `expm1l`|\<math.h>|  
   
- Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   

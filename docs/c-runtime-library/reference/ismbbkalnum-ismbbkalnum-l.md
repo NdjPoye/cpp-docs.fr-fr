@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c5cfa13a8ee46df3344145fb8fe790746d8b63de
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0c3e3333fd5cfc0445a4ee95a2cd16f8913b25e1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
@@ -84,7 +85,7 @@ int _ismbbkalnum_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `_ismbbkalnum` retourne une valeur différente de zéro si l'entier `c` correspond à un symbole de texte autre qu'un signe de ponctuation ou 0 dans le cas contraire. `_ismbbkalnum` utilise les paramètres régionaux actifs pour les informations sur les caractères dépendants des paramètres régionaux. `_ismbbkalnum_l` est identique à `_ismbbkalnum`, à ceci près qu'elle prend les paramètres régionaux en tant que paramètre. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ `_ismbbkalnum` retourne une valeur différente de zéro si l'entier `c` correspond à un symbole de texte autre qu'un signe de ponctuation ou 0 dans le cas contraire. `_ismbbkalnum` utilise les paramètres régionaux actifs pour les informations sur les caractères dépendants des paramètres régionaux. `_ismbbkalnum_l` est identique à `_ismbbkalnum` , à ceci près qu’elle prend les paramètres régionaux en tant que paramètre. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -94,9 +95,6 @@ int _ismbbkalnum_l(
 |`_ismbbkalnum_l`|\<mbctype.h>|  
   
  Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classification d’octet](../../c-runtime-library/byte-classification.md)   

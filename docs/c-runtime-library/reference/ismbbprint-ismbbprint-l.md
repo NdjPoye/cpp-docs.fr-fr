@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 64d619e9826e896633aaa35d64d0148bede7879b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 09187e54126553331a6100fa11c98a730434db12
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="ismbbprint-ismbbprintl"></a>_ismbbprint, _ismbbprint_l
@@ -90,7 +91,7 @@ int _ismbbprint_l(
 isprint || _ismbbkprint  
 ```  
   
- est différent de zéro pour `c`, ou 0 dans le cas contraire. `_ismbbprint` utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. `_ismbbprint_l` est identique, excepté qu’il utilise à la place les paramètres régionaux passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ est différente de zéro pour `c`, ou 0 dans le cas contraire. `_ismbbprint` utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. `_ismbbprint_l` est identique, excepté qu’il utilise à la place les paramètres régionaux. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -100,9 +101,6 @@ isprint || _ismbbkprint
 |`_ismbbprint_l`|\<mbctype.h>|  
   
  Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classification d’octet](../../c-runtime-library/byte-classification.md)   

@@ -10,19 +10,19 @@ f1_keywords: []
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
 caps.latest.revision: 13
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6960d7dfc3a6f36f803ae765ad4cbeb77038401c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7d47da5bcdb614e5eaf43fbabbe836226e3f907b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lthashmapgt-operators"></a>&lt;hash_map&gt;, opérateurs
-||||  
-|-|-|-|  
-|[operator!=](#operator_neq)|[operator!= (hash_map)](#operator_neq__hash_map_)|[operator==](#operator_eq_eq)|  
-|[operator== (hash_map)](#operator_eq_eq__hash_map_)|  
+|||  
+|-|-|  
+|[operator!=](#op_neq)|[operator!=](#op_neq)|
   
-##  <a name="operator_neq__hash_map_"></a>  operator!= (hash_map)  
+##  <a name="op_neq"></a>  operator!=  
   
 > [!NOTE]
 >  Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).  
@@ -46,7 +46,7 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 ### <a name="remarks"></a>Notes  
  La comparaison entre les objets hash_map est basée sur une comparaison par paire de leurs éléments. Deux hash_map sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ Membres de la [< hash_map >](../standard-library/hash-map.md) et [< hash_set >](../standard-library/hash-set.md) fichiers d’en-tête dans le [ stdext Namespace](../standard-library/stdext-namespace.md).  
   
 ### <a name="example"></a>Exemple  
   
@@ -88,7 +88,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.  
 ```  
   
-##  <a name="operator_eq_eq__hash_map_"></a>  operator== (hash_map)  
+##  <a name="op_eq_eq"></a>  operator== 
   
 > [!NOTE]
 >  Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).  
@@ -111,9 +111,7 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
   
 ### <a name="remarks"></a>Notes  
  La comparaison entre les objets hash_map est basée sur une comparaison par paire de leurs éléments. Deux hash_map sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.  
-  
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
-  
+    
 ### <a name="example"></a>Exemple  
   
 ```cpp  
@@ -154,7 +152,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.  
 ```  
   
-##  <a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
   
 > [!NOTE]
 >  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
@@ -177,9 +175,7 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
   
 ### <a name="remarks"></a>Notes  
  La comparaison entre les objets hash_multimap est basée sur une comparaison par paire de leurs éléments. Deux hash_multimaps sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.  
-  
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
-  
+   
 ### <a name="example"></a>Exemple  
   
 ```cpp  
@@ -220,7 +216,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.  
 ```  
   
-##  <a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
   
 > [!NOTE]
 >  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
@@ -243,8 +239,6 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
   
 ### <a name="remarks"></a>Notes  
  La comparaison entre les objets hash_multimap est basée sur une comparaison par paire de leurs éléments. Deux hash_multimaps sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.  
-  
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
   
 ### <a name="example"></a>Exemple  
   

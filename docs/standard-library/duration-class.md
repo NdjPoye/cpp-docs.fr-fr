@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - chrono/std::chrono::duration
+- chrono/std::chrono::duration::duration
+- chrono/std::chrono::duration::count
+- chrono/std::chrono::duration::max
+- chrono/std::chrono::duration::min
+- chrono/std::chrono::duration::zero
 dev_langs:
 - C++
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
@@ -31,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 843e4954b3a5b20d504dd5c8bf582dc56d4cbcbd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f3376d8c03608fde5a2a614bf0a3058fd8692800
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="duration-class"></a>duration, classe
@@ -67,37 +73,37 @@ class duration <duration<Rep, Period1>, Period2>;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[duration::duration, constructeur](#duration__duration_constructor)|Construit un objet `duration`.|  
+|[durée](#duration)|Construit un objet `duration`.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[duration::count](#duration__count_method)|Retourne le nombre de battements d’horloge dans l’intervalle de temps.|  
-|[duration::max](#duration__max_method)|Static. Retourne la valeur maximale autorisée du paramètre de modèle `Ref`.|  
-|[duration::min](#duration__min_method)|Static. Retourne la valeur minimale autorisée du paramètre de modèle `Ref`.|  
-|[duration::zero](#duration__zero_method)|Static. Retourne `Rep`(0).|  
+|[count](#count)|Retourne le nombre de battements d’horloge dans l’intervalle de temps.|  
+|[max](#max)|Static. Retourne la valeur maximale autorisée du paramètre de modèle `Ref`.|  
+|[min](#min)|Static. Retourne la valeur minimale autorisée du paramètre de modèle `Ref`.|  
+|[zéro](#zero)|Static. Retourne `Rep`(0).|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[duration::operator-](#duration__operator-)|Retourne une copie de l’objet `duration` avec un nombre de battements négatifs.|  
-|[duration::operator--](#duration__operator--)|Décrémente le nombre de battements stocké.|  
-|[duration::operator=](#duration__operator_eq)|Réduit le nombre de battements stocké modulo une valeur spécifiée.|  
-|[duration::operator*=](#duration__operator_star_eq)|Multiplie le nombre de battements stocké par une valeur spécifiée.|  
-|[duration::operator/=](#duration__operator__eq)|Divise le nombre de battements stocké par le nombre de battements d’un objet `duration` spécifié.|  
-|[duration::operator+](#duration__operator_add)|Retourne `*this`.|  
-|[duration::operator++](#duration__operator_add_add)|Incrémente le nombre de battements stocké.|  
-|[duration::operator+=](#duration__operator_add_eq)|Ajoute le nombre de battements d’un objet `duration` spécifié au nombre de battements stocké.|  
-|[duration::operator-=](#duration__operator-_eq)|Soustrait le nombre de battements d’un objet `duration` spécifié du nombre de battements stocké.|  
+|[duration::operator-](#operator-)|Retourne une copie de l’objet `duration` avec un nombre de battements négatifs.|  
+|[duration::operator--](#operator--)|Décrémente le nombre de battements stocké.|  
+|[duration::operator=](#op_eq)|Réduit le nombre de battements stocké modulo une valeur spécifiée.|  
+|[duration::operator*=](#op_star_eq)|Multiplie le nombre de battements stocké par une valeur spécifiée.|  
+|[duration::operator/=](#op_div_eq)|Divise le nombre de battements stocké par le nombre de battements d’un objet `duration` spécifié.|  
+|[duration::operator+](#op_add)|Retourne `*this`.|  
+|[duration::operator++](#op_add_add)|Incrémente le nombre de battements stocké.|  
+|[duration::operator+=](#op_add_eq)|Ajoute le nombre de battements d’un objet `duration` spécifié au nombre de battements stocké.|  
+|[duration::operator-=](#operator-_eq)|Soustrait le nombre de battements d’un objet `duration` spécifié du nombre de battements stocké.|  
   
 ## <a name="requirements"></a>Spécifications  
- **En-tête :** chrono  
+ **En-tête :** \<chrono >  
   
  **Espace de noms :** std::chrono  
   
-##  <a name="a-namedurationcountmethoda--durationcount"></a><a name="duration__count_method"></a>  duration::count  
+##  <a name="count"></a>  duration::count  
  Récupère le nombre de battements d'horloge dans l'intervalle de temps.  
   
 ```  
@@ -107,7 +113,7 @@ constexpr Rep count() const;
 ### <a name="return-value"></a>Valeur de retour  
  Nombre de battements d'horloge dans l'intervalle de temps.  
   
-##  <a name="a-namedurationdurationconstructora--durationduration-constructor"></a><a name="duration__duration_constructor"></a>  duration::duration, constructeur  
+##  <a name="duration"></a>  duration::duration, constructeur  
  Construit un objet `duration`.  
   
 ```  
@@ -147,7 +153,7 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
   
  À moins qu’aucun dépassement ne soit induit dans la conversion et que `treat_as_floating_point<rep>`*contienne la valeur true*, ou que `ratio_divide<Period2, period>::den` soit égal à 1 et que `treat_as_floating_point<Rep2>`*contienne la valeur false*, le troisième constructeur ne participe pas à la résolution de surcharge. Pour plus d’informations, consultez [<type_traits>](../standard-library/type-traits.md).  
   
-##  <a name="a-namedurationmaxmethoda--durationmax"></a><a name="duration__max_method"></a>  duration::max  
+##  <a name="max"></a>  duration::max  
  Méthode statique qui retourne la limite supérieure des valeurs du type de paramètre de modèle `Ref`.  
   
 ```  
@@ -157,7 +163,7 @@ static constexpr duration max();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `duration(duration_values<rep>::max())`.  
   
-##  <a name="a-namedurationminmethoda--durationmin"></a><a name="duration__min_method"></a>  duration::min  
+##  <a name="min"></a>  duration::min  
  Méthode statique qui retourne la limite inférieure des valeurs du type de paramètre de modèle `Ref`.  
   
 ```  
@@ -167,14 +173,14 @@ static constexpr duration min();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `duration(duration_values<rep>::min())`.  
   
-##  <a name="a-namedurationoperator-a--durationoperator-"></a><a name="duration__operator-"></a>  duration::operator-  
+##  <a name="duration__operator-"></a>  duration::operator-  
  Retourne une copie de l’objet `duration` avec un nombre de battements négatifs.  
   
 ```  
 constexpr duration operator-() const;
 ```  
   
-##  <a name="a-namedurationoperator--a--durationoperator--"></a><a name="duration__operator--"></a>  duration::operator--  
+##  <a name="duration__operator--"></a>  duration::operator--  
  Décrémente le nombre de battements stocké.  
   
 ```  
@@ -188,7 +194,7 @@ duration operator--(int);
   
  La deuxième méthode retourne une copie de `*this` effectuée avant la décrémentation.  
   
-##  <a name="a-namedurationoperatoreqa--durationoperator"></a><a name="duration__operator_eq"></a>  duration::operator=  
+##  <a name="op_eq"></a>  duration::operator=  
  Réduit le nombre de battements stocké modulo une valeur spécifiée.  
   
 ```  
@@ -204,7 +210,7 @@ duration& operator%=(const duration& Div);
 ### <a name="return-value"></a>Valeur de retour  
  Objet `duration` une fois l’opération modulo effectuée.  
   
-##  <a name="a-namedurationoperatorstareqa--durationoperator"></a><a name="duration__operator_star_eq"></a>  duration::operator*=  
+##  <a name="op_star_eq"></a>  duration::operator*=  
  Multiplie le nombre de battements stocké par une valeur spécifiée.  
   
 ```  
@@ -218,7 +224,7 @@ duration& operator*=(const rep& Mult);
 ### <a name="return-value"></a>Valeur de retour  
  Objet `duration` une fois la multiplication effectuée.  
   
-##  <a name="a-namedurationoperatoreqa--durationoperator"></a><a name="duration__operator__eq"></a>  duration::operator/=  
+##  <a name="op_div_eq"></a>  duration::operator/=  
  Divise le nombre de battements stocké par une valeur spécifiée.  
   
 ```  
@@ -232,14 +238,14 @@ duration& operator/=(const rep& Div);
 ### <a name="return-value"></a>Valeur de retour  
  Objet `duration` une fois la division effectuée.  
   
-##  <a name="a-namedurationoperatoradda--durationoperator"></a><a name="duration__operator_add"></a>  duration::operator+  
+##  <a name="op_add"></a>  duration::operator+  
  Retourne `*this`.  
   
 ```  
 constexpr duration operator+() const;
 ```  
   
-##  <a name="a-namedurationoperatoraddadda--durationoperator"></a><a name="duration__operator_add_add"></a>  duration::operator++  
+##  <a name="op_add_add"></a>  duration::operator++  
  Incrémente le nombre de battements stocké.  
   
 ```  
@@ -253,7 +259,7 @@ duration operator++(int);
   
  La deuxième méthode retourne une copie de `*this` effectuée avant l’incrémentation.  
   
-##  <a name="a-namedurationoperatoraddeqa--durationoperator"></a><a name="duration__operator_add_eq"></a>  duration::operator+=  
+##  <a name="op_add_eq"></a>  duration::operator+=  
  Ajoute le nombre de battements d’un objet `duration` spécifié au nombre de battements stocké.  
   
 ```  
@@ -267,7 +273,7 @@ duration& operator+=(const duration& Dur);
 ### <a name="return-value"></a>Valeur de retour  
  Objet `duration` une fois l’addition effectuée.  
   
-##  <a name="a-namedurationoperator-eqa--durationoperator-"></a><a name="duration__operator-_eq"></a>  duration::operator-=  
+##  <a name="duration__operator-_eq"></a>  duration::operator-=  
  Soustrait le nombre de battements d’un objet `duration` spécifié du nombre de battements stocké.  
   
 ```  
@@ -281,14 +287,14 @@ duration& operator-=(const duration& Dur);
 ### <a name="return-value"></a>Valeur de retour  
  Objet `duration` une fois la soustraction effectuée.  
   
-##  <a name="a-namedurationzeromethoda--durationzero"></a><a name="duration__zero_method"></a>  duration::zero  
+##  <a name="zero"></a>  duration::zero  
  Retourne `duration(duration_values<rep>::zero())`.  
   
 ```  
 static constexpr duration zero();
 ```  
   
-##  <a name="a-namedurationoperatormodeqa--durationoperator-mod"></a><a name="duration__operator_mod_eq"></a>  duration::operator mod=  
+##  <a name="op_mod_eq"></a>  duration::operator mod=  
  Réduit le nombre de cycles stocké modulo Div ou Div.count().  
   
 ```  

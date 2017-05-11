@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 739cc3d0a4b95555e0acb5e02aaa3935734b95fb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 4f4a10f432c663be33fe751bcde862c4d8e57c49
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="getss-getwss"></a>gets_s, _getws_s
@@ -99,7 +100,7 @@ wchar_t *_getws_s(
  Retourne `buffer` en cas de réussite. Un pointeur `NULL` indique une condition d’erreur ou de fin de fichier. Utilisez [ferror](../../c-runtime-library/reference/ferror.md) ou [feof](../../c-runtime-library/reference/feof.md) pour déterminer laquelle des deux s’est produite.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `gets_s` lit une ligne dans le flux d’entrée standard `stdin` et la stocke dans `buffer`. La ligne se compose de tous les caractères jusqu’à et y compris le premier caractère de saut de ligne (« \n »). `gets_s` remplace ensuite le caractère de saut de ligne par un caractère Null (« \0 ») avant de retourner la ligne. En revanche, la fonction `fgets_s` conserve le caractère de saut de ligne.  
+ La fonction `gets_s` lit une ligne dans le flux d’entrée standard `stdin` et la stocke dans `buffer`. La ligne se compose de tous les caractères jusqu’à et y compris le premier caractère de saut de ligne (« \n »). `gets_s` remplace ensuite le caractère de saut de ligne par un caractère Null (« \0 ») avant de retourner la ligne. En revanche, la fonction `fgets_s` conserve le caractère de saut de ligne.  
   
  Si le premier caractère lu est le caractère de fin de fichier, un caractère Null est stocké au début de `buffer` et `NULL` est retourné.  
   
@@ -145,9 +146,6 @@ int main( void )
   
 Hello there!The line entered was: Hello there!  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [E/S de flux](../../c-runtime-library/stream-i-o.md)   

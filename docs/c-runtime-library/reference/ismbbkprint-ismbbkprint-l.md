@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 407711898b7c08dcf9b65ae81bc8f556969034bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 17b20969e6164dd4457343f3bd9b17598fc7d705
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint, _ismbbkprint_l
@@ -84,7 +85,7 @@ int _ismbbkprint_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `_ismbbkprint` retourne une valeur différente de zéro si l’entier `c` est un texte non-ASCII ou un symbole de ponctuation non-ASCII, ou 0 dans le cas contraire. Par exemple, dans la page de codes 932 uniquement, `_ismbbkprint` teste s’il s’agit de katakanas alphanumériques ou de ponctuation katakana (plage : 0xA1 – 0xDF). `_ismbbkprint` utilise les paramètres régionaux actuels pour les valeurs des caractères dépendant des paramètres régionaux. `_ismbbkprint_l` est identique, excepté qu’il utilise les paramètres régionaux passés en entrée. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ `_ismbbkprint` retourne une valeur différente de zéro si l’entier `c` est un texte non-ASCII ou un symbole de ponctuation non-ASCII, ou 0 dans le cas contraire. Par exemple, dans la page de codes 932 uniquement, `_ismbbkprint` teste s’il s’agit de katakanas alphanumériques ou de ponctuation katakana (plage : 0xA1 - 0xDF). `_ismbbkprint` utilise les paramètres régionaux actifs pour les valeurs des caractères dépendant des paramètres régionaux. `_ismbbkprint_l` est identique, excepté qu’il utilise les paramètres régionaux passés en entrée. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -94,9 +95,6 @@ int _ismbbkprint_l(
 |`_ismbbkprint_l`|\<mbctype.h>|  
   
  Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classification d’octet](../../c-runtime-library/byte-classification.md)   

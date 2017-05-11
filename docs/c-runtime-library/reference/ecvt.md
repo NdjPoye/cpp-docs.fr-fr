@@ -1,50 +1,67 @@
 ---
-title: "_ecvt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ecvt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ecvt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ecvt (fonction)"
-  - "convertir des nombres doubles"
-  - "ecvt (fonction)"
-  - "nombres, convertir"
+title: _ecvt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ecvt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ecvt
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ecvt function
+- numbers, converting
+- converting double numbers
+- ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _ecvt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c3992066b5b305a7b9de6ef47c6ba42e15da2518
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
-Convertit un nombre `double` en une chaine.  Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [\_ecvt\_s](../../c-runtime-library/reference/ecvt-s.md).  
+---
+# <a name="ecvt"></a>_ecvt
+Convertit un nombre `double` en chaîne. Une version plus sécurisée de cette fonction est disponible. Consultez [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 char *_ecvt(   
@@ -55,9 +72,9 @@ char *_ecvt(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `value`  
- Nombre devant être converti.  
+ Nombre à convertir.  
   
  `count`  
  Nombre de chiffres stockés.  
@@ -68,31 +85,31 @@ char *_ecvt(
  `sign`  
  Signe du nombre converti.  
   
-## Valeur de retour  
- `_ecvt` retourne un pointeur vers la chaîne de chiffres ; NULL si une erreur se produit.  
+## <a name="return-value"></a>Valeur de retour  
+ `_ecvt` retourne un pointeur désignant la chaîne de chiffres, ou NULL si une erreur s’est produite.  
   
-## Notes  
- La fonction `_ecvt` convertit un nombre à virgule flottante en une chaîne de caractères.  Le paramètre `value` est le nombre à virgule flottante à convertir.  Cette fonction garde jusqu'à `count` chiffres de `value` en tant que chaîne et ajoute un caractère NULL \("\\0 "\).  Si le nombre de chiffres dans `value` dépasse `count`, le chiffre d'ordre le plus bas est arrondi.  S'il y a moins de chiffres que `count`, la chaîne est complétées avec des zéros.  
+## <a name="remarks"></a>Notes  
+ La fonction `_ecvt` convertit un nombre à virgule flottante en une chaîne de caractères. Le paramètre `value` est le nombre à virgule flottante à convertir. Cette fonction stocke jusqu’à `count` chiffres de `value` sous forme de chaîne et ajoute un caractère null (« \0 »). Si le nombre de chiffres dans `value` dépasse `count`, le chiffre de poids faible est arrondi. S’il y a moins de `count` chiffres, la chaîne est remplie de zéros.  
   
- Le nombre total de chiffres retournés par `_ecvt` n'excédera pas `_CVTBUFSIZE`.  
+ Le nombre total de chiffres retournés par `_ecvt` ne dépasse pas `_CVTBUFSIZE`.  
   
- Seules les chiffres sont stockés dans la chaîne.  La position de la virgule décimale et le signe de `value` peuvent être obtenus à partir de `dec` et de `sign` après l'appel.  Le paramètre `dec` pointe sur une valeur entière donnant la position de la virgule décimale par rapport au début de la chaine.  Un entier nul ou négatif indique que la virgule décimale se trouve à gauche du premier chiffre.  Le paramètre `sign` pointe sur un entier qui indique le signe du nombre converti.  Si la valeur entière est 0, le nombre est positif.  Sinon, le nombre est négatif.  
+ Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de `value` peuvent être obtenus à partir de `dec` et `sign` après l’appel. Le paramètre `dec` pointe vers une valeur entière indiquant la position de la virgule décimale par rapport au début de la chaîne. Une valeur entière ou 0 indique que la virgule décimale est située à gauche du premier chiffre. Le paramètre `sign` pointe vers un entier qui indique le signe du nombre converti. Si la valeur entière est 0, le nombre est positif. Sinon, le nombre est négatif.  
   
- La différence entre `_ecvt` et `_fcvt` réside dans la traduction du paramètre d' `count`.  `_ecvt` interprète `count` comme le nombre total de chiffres dans la chaîne de sortie, alors que `_fcvt` interprète `count` comme le nombre de chiffres après la virgule.  
+ La différence entre `_ecvt` et `_fcvt` réside dans l’interprétation du paramètre `count`. `_ecvt` interprète `count` comme le nombre total de chiffres dans la chaîne de sortie, tandis que `_fcvt` interprète `count` en tant que nombre de chiffres après la virgule décimale.  
   
- `_ecvt` et `_fcvt` utilisent une seule mémoire tampon statiquement allouée pour la conversion.  Chaque appel à une de ces routines détruit le résultat de l'appel précédent.  
+ `_ecvt` et `_fcvt` utilisent une seule mémoire tampon allouée de manière statique pour la conversion. Chaque appel à une de ces routines détruit le résultat de l’appel précédent.  
   
- Cette fonction valide ses paramètres.  Si `dec` ou `sign` a la valeur NULL, ou si `count` ivaut 0, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, `errno` est défini à la valeur `EINVAL` et NULL est retourné.  
+ Cette fonction valide ses paramètres. Si `dec` ou `sign` est NULL ou que `count` vaut 0, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` prend la valeur `EINVAL` et NULL est retourné.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Fonction|En\-tête requis|  
+|Fonction|En-tête requis|  
 |--------------|---------------------|  
-|`_ecvt`|\<stdlib.h\>|  
+|`_ecvt`|\<stdlib.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_ecvt.c  
@@ -117,13 +134,13 @@ int main( void )
 }  
 ```  
   
-  **source: 3.1415926535   mémoire tampon: '3141592654' decimal: 1 signe: 0**   
-## Équivalent .NET Framework  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
+```Output  
+source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0  
+```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)

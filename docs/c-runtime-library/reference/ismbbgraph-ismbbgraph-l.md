@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 828ca38d754d40729f8d09cb22526fb872605024
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 99ab02233eed70ab92e1aabcf567d9cfc244c101
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph, _ismbbgraph_l
@@ -90,7 +91,7 @@ int _ismbbgraph_l (
 ( _PUNCT | _UPPER | _LOWER | _DIGIT ) || _ismbbkprint  
 ```  
   
- est différent de zéro pour `c`, ou 0 dans le cas contraire. `_ismbbgraph` utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. `_ismbbgraph_l` est identique, excepté qu’il utilise à la place les paramètres régionaux passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ est différent de zéro pour `c`, ou 0 dans le cas contraire. `_ismbbgraph` utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. `_ismbbgraph_l` est identique, à ceci près qu’il utilise à la place les paramètres régionaux passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -103,9 +104,6 @@ int _ismbbgraph_l (
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classification d’octet](../../c-runtime-library/byte-classification.md)   

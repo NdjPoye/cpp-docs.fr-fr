@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e03e1a12b27eb5401a31f7096ae46d8a779d4a70
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2283d258a15fb131367d5d24a921c0a84a31e91d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
@@ -66,12 +67,11 @@ int fesetexceptflag(
      const fexcept_t *pstatus,  
      int excepts  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
  `pstatus`  
- Pointeur désignant un objet `fexcept_t` qui contient les valeurs sur lesquelles définir des indicateurs d’état d’exception. L’objet peut être défini par un appel précédent à [fegetexceptflag](http://msdn.microsoft.com/Library/5031bc1a-9834-4573-9113-160a55eb9654).  
+ Pointeur désignant un objet `fexcept_t` qui contient les valeurs sur lesquelles définir des indicateurs d’état d’exception. L’objet peut être défini par un appel précédent à [fegetexceptflag](fegetexceptflag2.md).  
   
  `excepts`  
  Indicateurs d’état d’exception de virgule flottante à définir.  
@@ -79,7 +79,7 @@ int fesetexceptflag(
 ## <a name="return-value"></a>Valeur de retour  
  Si tous les indicateurs d’état d’exception spécifiés sont définis correctement, retourne 0. Sinon, retourne une valeur différente de zéro.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction `fesetexceptflag` définit l’état des indicateurs d’état d’exception de virgule flottante spécifiés par `excepts` sur les valeurs correspondantes définies dans l’objet `fexcept_t` désigné par `pstatus`.  Elle ne déclenche pas les exceptions. Le pointeur `pstatus` doit désigner un objet `fexcept_t` valide ; sinon, le comportement suivant n’est pas défini. La fonction `fesetexceptflag` prend en charge les valeurs de macros d’exception suivantes dans `excepts`, définies dans \<fenv.h> :  
   
 |Macros d’exception|Description|  

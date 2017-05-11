@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9e1389e2d8623e7e96ef3ad6af8772ee7026ec76
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e1e92656713a31d3057dfe180bd1cb4e819ceb5b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="div"></a>div
@@ -89,9 +90,9 @@ lldiv_t div(
  Quand la fonction `div` est appelée à l’aide d’arguments de type `int`, elle retourne une structure de type `div_t`, qui comprend le quotient et le reste. La valeur de retour de la surcharge avec des arguments de type `long` est `ldiv_t`. `div_t` et `ldiv_t` sont définis dans STDLIB.H.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `div` divise `numer` par `denom`, calculant ainsi le quotient et le reste. La structure [div_t](../../c-runtime-library/standard-types.md) contient le quotient, `int``quot`, et le reste, `int``rem`. Le signe du quotient est identique à celui du quotient mathématique. Sa valeur absolue est le plus grand entier qui est inférieur à la valeur absolue du quotient mathématique. Si le dénominateur est 0, le programme se termine par un message d’erreur.  
+ La fonction `div` divise `numer` par `denom`, calculant ainsi le quotient et le reste. La structure [div_t](../../c-runtime-library/standard-types.md) contient le quotient, `int quot`, et le reste, `int rem`. Le signe du quotient est identique à celui du quotient mathématique. Sa valeur absolue est le plus grand entier qui est inférieur à la valeur absolue du quotient mathématique. Si le dénominateur est 0, le programme se termine par un message d’erreur.  
   
- Les surcharges qui acceptent des arguments de type `long` ou `long long` sont uniquement disponibles pour du code C++. Le type de retour [ldiv_t](../../c-runtime-library/standard-types.md) contient les membres `long``quot` et `long``rem`, tandis que le type de retour [lldiv_t](../../c-runtime-library/standard-types.md) contient les membres `long long quot` et `long long rem`, qui ont la même signification que les membres de `div_t`.  
+ Les surcharges qui acceptent des arguments de type `long` ou `long long` sont uniquement disponibles pour du code C++. Le type de retour [ldiv_t](../../c-runtime-library/standard-types.md) contient les membres `long quot` et `long rem`, tandis que le type de retour [lldiv_t](../../c-runtime-library/standard-types.md) contient les membres `long long quot` et `long long rem`, qui ont la même signification que les membres de `div_t`.  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -138,9 +139,6 @@ int main( int argc, char *argv[] )
 x is 876, y is 13  
 The quotient is 67, and the remainder is 5  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
