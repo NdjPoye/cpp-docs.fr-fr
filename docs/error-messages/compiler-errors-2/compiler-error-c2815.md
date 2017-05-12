@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 129ad6a0359fbee402b39c5e7ff498602e97479d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7cd85d29ee14376b46d05ac5cfa95496fffdc9e5
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2815"></a>Erreur du compilateur C2815
-'opérateur delete' : le premier paramètre formel doit être ' void *', mais 'param' a été utilisé.  
+'operator delete' : le premier paramètre formel doit être ' void *', mais 'param' a été utilisé.  
   
- Un est défini par l’utilisateur [de l’opérateur delete](../../standard-library/new-operators.md#operator_delete) fonction doit prendre un premier paramètre formel de type `void *`.  
+ Une est définie par l’utilisateur [de l’opérateur delete](../../standard-library/new-operators.md#op_delete) fonction doit prendre un premier paramètre formel de type `void *`.  
   
  L’exemple suivant génère l’erreur C2815 :  
   

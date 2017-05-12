@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bbfbad7106e7e5b6fb7a311a8ca1ac4b44c7a1fc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5795c71864a9670334c03cb6722b932a66747047
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha, _ismbbalpha_l
@@ -89,7 +90,7 @@ int _ismbbalpha_l(
 isalpha || _ismbbkalnum  
 ```  
   
- est différent de zéro pour `c`, ou 0 dans le cas contraire. `_ismbbalpha` utilise les paramètres régionaux actifs pour les paramètres de caractères dépendants des paramètres régionaux. `_ismbbalpha_l` est identique, excepté qu’il utilise les paramètres régionaux passés en entrée.  
+ est différent de zéro pour `c`, ou 0 dans le cas contraire. `_ismbbalpha` utilise les paramètres régionaux actuels pour les valeurs des caractères dépendant des paramètres régionaux. `_ismbbalpha_l` est identique, excepté qu’il utilise les paramètres régionaux passés en entrée.  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -102,9 +103,6 @@ isalpha || _ismbbkalnum
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classification d’octet](../../c-runtime-library/byte-classification.md)   

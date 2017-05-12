@@ -1,5 +1,5 @@
 ---
-title: fesetenv1 | Microsoft Docs
+title: fesetenv | Documents Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40e20a2c6a3f3c22b9206ce078146b44bb841f68
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 96453fb182aa3c14bec8a296899cfcd15d39222c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="fesetenv"></a>fesetenv
@@ -65,15 +66,14 @@ Définit l’environnement à virgule flottante actuel.
 int fesetenv(  
    const fenv_t *penv  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
  `penv`  
- Pointeur désignant un objet `fenv_t` qui contient un environnement à virgule flottante tel que défini par un appel à [fegetenv](http://msdn.microsoft.com/Library/61df848d-6ba8-4c6e-be35-216436fe7736) ou [feholdexcept](http://msdn.microsoft.com/Library/c286ace3-ec39-482a-be8b-f998d31003d9). Vous pouvez également spécifier l’environnement à virgule flottante de démarrage par défaut à l’aide de la macro FE_DFL_ENV.  
+ Pointeur désignant un objet `fenv_t` qui contient un environnement à virgule flottante tel que défini par un appel à [fegetenv](fegetenv1.md) ou [feholdexcept](feholdexcept2.md). Vous pouvez également spécifier l’environnement à virgule flottante de démarrage par défaut à l’aide de la macro FE_DFL_ENV.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne 0 si l’environnement a été correctement défini.        Sinon, retourne une valeur différente de zéro.  
+ Retourne 0 si l’environnement a été correctement défini. Sinon, retourne une valeur différente de zéro.  
   
 ## <a name="remarks"></a>Notes  
  La fonction `fesetenv` définit l’environnement à virgule flottante actuel à partir de la valeur stockée dans l’objet `fenv_t` désigné par `penv`. L’environnement à virgule flottante rassemble les indicateurs d’état et les modes de contrôle qui affectent les calculs à virgule flottante. Cela inclut le mode d’arrondi et les indicateurs d’état pour les exceptions de virgule flottante.  Si `penv` n’est pas FE_DFL_ENV ou ne désigne pas un objet `fenv_t` valide, le comportement suivant n’est pas défini.  

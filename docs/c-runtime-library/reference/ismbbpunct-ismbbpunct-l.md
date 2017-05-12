@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0cbcd2138d73a437afeafd61b13316a4739e0921
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 91887834f7bfc9dc078cd3af4248f84ce0bf7753
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="ismbbpunct-ismbbpunctl"></a>_ismbbpunct, _ismbbpunct_l
@@ -84,7 +85,7 @@ int _ismbbpunct_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `_ismbbpunct` retourne une valeur différente de zéro si l'entier `c` est un symbole de ponctuation non ASCII. `_ismbbpunct` utilise les paramètres régionaux actifs pour les paramètres de caractères dépendants des paramètres régionaux. `_ismbbpunct_l` est identique, à ceci près qu'il utilise les paramètres régionaux qui sont transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ `_ismbbpunct` retourne une valeur différente de zéro si l'entier `c` est un symbole de ponctuation non ASCII. `_ismbbpunct` utilise les paramètres régionaux actifs pour les paramètres de caractères dépendants des paramètres régionaux. `_ismbbpunct_l` est identique, à ceci près qu’il utilise les paramètres régionaux qui sont transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -94,9 +95,6 @@ int _ismbbpunct_l(
 |`_ismbbpunct_l`|\<mbctype.h>|  
   
  Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classification d’octet](../../c-runtime-library/byte-classification.md)   

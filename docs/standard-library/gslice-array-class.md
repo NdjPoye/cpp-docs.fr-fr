@@ -1,123 +1,141 @@
 ---
-title: "gslice_array, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::gslice_array"
-  - "gslice_array"
-  - "valarray/std::gslice_array"
-  - "std.gslice_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gslice_array (classe)"
+title: gslice_array, classe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- gslice_array
+- valarray/std::gslice_array
+dev_langs:
+- C++
+helpviewer_keywords:
+- gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# gslice_array, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: bebbeb68503c4a3838aeab48d530d899fef2b699
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
-Une classe de modèle interne et connexe qui prend en charge la coupe général objets en fournissant des opérations entre les tables de sous\-ensemble défini par la coupe générales d'un valarray.  
+---
+# <a name="gslicearray-class"></a>gslice_array, classe
+Classe de modèle interne auxiliaire qui prend en charge les objets de secteurs généraux en fournissant des opérations entre des tableaux de sous-ensembles définis par le secteur général d'un valarray.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-template<class Type>  
-   class gslice_array : public gsplice {  
+template <class Type>  
+class gslice_array : public gsplice {  
 public:  
-   typedef Type value_type;  
-   void operator=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator=(  
-      const Type& x  
-   ) const;  
-  
-   void operator*=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator/=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator%=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator+=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator-=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator^=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator&=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator|=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator<<=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator>>=(  
-      const valarray<Type>& x  
-   ) const;  
-  
+    typedef Type value_type;  
+    void operator=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator=(const Type& x) const;
+
+ 
+ 
+    void operator*=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator/=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator%=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator+=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator-=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator^=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator&=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator|=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator<<=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator>>=(const valarray<Type>& x) const;
+
+ 
+ 
 // The rest is private or implementation defined  
 }  
 ```  
   
-## Notes  
- La classe décrit un objet qui contient une référence à un objet **va** de la classe [valarray](../standard-library/valarray-class.md)**\<Type\>**, avec un objet **gs** de la classe [gslice](../standard-library/gslice-class.md) qui décrit la séquence d'éléments pour sélectionner l'objet de **valarray\<Type\>**.  
+## <a name="remarks"></a>Notes  
+ La classe décrit un objet qui stocke une référence à un objet **va** de la classe [valarray](../standard-library/valarray-class.md)**\<Type>**, ainsi qu’un objet **gs** de la classe [gslice](../standard-library/gslice-class.md), qui décrit la séquence d’éléments à sélectionner à partir de l’objet **valarray\<Type>**.  
   
- Vous construisez un objet de **gslice\_array\<Type\>** uniquement en entrant une expression de format [devient &#91;gs&#93;](../Topic/valarray::operator.md).  Les fonctions membres de la classe gslice\_array se comportent ensuite comme les signatures de la fonction correspondantes définies pour **valarray\<Type\>**, mais que seule la séquence d'éléments sélectionnés est affectée.  
+ Vous construisez un objet **gslice_array\<Type>** uniquement en écrivant une expression sous la forme [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at). Les fonctions membres de la classe gslice_array se comportent ensuite comme les signatures de fonction correspondantes définies pour **valarray\<Type>**, sauf que seule la séquence d’éléments sélectionnés est affectée.  
   
- La classe de modèle est créée indirectement par certaines opérations de valarray et ne peut pas être utilisée directement dans le programme.  Une classe de modèle connexe interne à la place est utilisée par l'opérateur souscrit de procédez comme suit :  
+ La classe de modèle est créée indirectement par certaines opérations valarray et ne peut pas être utilisée directement dans le programme. Une classe de modèle interne auxiliaire est utilisée à la place par l’opérateur d’indice slice :  
   
- ::\<`operator[]` \> \(\<**const**\>**gslice&**\) d'`gslice_array`**Type** `valarray`**Type**.  
+ `gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&**).  
   
- Vous construisez un objet de **gslice\_array\<Type\>** uniquement en entrant une expression de format **va\[gsl\]**, pour un **gsl** de valarray **va**.  Les fonctions membres de la classe gslice\_array se comportent ensuite comme les signatures de la fonction correspondantes définies pour **valarray\<Type\>**, mais que seule la séquence d'éléments sélectionnés est affectée.  La séquence contrôlée par le gslice\_array est définie par les trois paramètres dans le constructeur de secteur, de l'index du premier élément de la première tranche, le nombre d'éléments dans chaque secteur, et la distance entre les éléments dans chaque secteur.  
+ Vous construisez un objet **gslice_array\<Type>** uniquement en écrivant une expression sous la forme **va[gsl]**, pour une section **gsl** de valarray **va**. Les fonctions membres de la classe gslice_array se comportent ensuite comme les signatures de fonction correspondantes définies pour **valarray\<Type>**, sauf que seule la séquence d’éléments sélectionnés est affectée. La séquence contrôlée par le gslice_array est définie par les trois paramètres du constructeur slice, l’index du premier élément de la première section, le nombre d’éléments dans chaque section et la distance entre les éléments de chaque section.  
   
- Dans l'exemple ci\-dessous :  
+ Dans l’exemple suivant :  
   
 ```  
 const size_t lv[] = {2, 3};  
 const size_t dv[] = {7, 2};  
-const valarray<size_t> len(lv, 2), str(dv, 2);  
+const valarray<size_t> len(lv, 2), str(dv, 2);
+
 // va[gslice(3, len, str)] selects elements with  
 //   indices 3, 5, 7, 10, 12, 14  
 ```  
   
- Les index doivent être valides pour que la procédure est pas valide.  
+ Les index doivent être valides pour que la procédure soit valide.  
   
-## Exemple  
- Consultez l'exemple de [gslice::gslice](../Topic/gslice::gslice.md) pour obtenir un exemple de la façon dont déclarer et utiliser un slice\_array.  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple relatif à [gslice::gslice](../standard-library/gslice-class.md#gslice) pour savoir comment déclarer et utiliser un slice_array.  
   
-## Configuration requise  
- **Header:**\<valarray\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<valarray>  
   
- **Espace de noms :** std  
+ **Espace de noms :** std  
   
-## Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

@@ -1,64 +1,82 @@
 ---
-title: "isdigit, iswdigit, _isdigit_l, _iswdigit_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_isdigit_l"
-  - "iswdigit"
-  - "_iswdigit_l"
-  - "isdigit"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_iswdigit_l"
-  - "_isdigit_l"
-  - "iswdigit"
-  - "isdigit"
-  - "_istdigit"
-  - "_istdigit_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iswdigit (fonction)"
-  - "iswdigit_l (fonction)"
-  - "_iswdigit_l (fonction)"
-  - "_istdigit_l (fonction)"
-  - "_istdigit (fonction)"
-  - "istdigit (fonction)"
-  - "isdigit (fonction)"
-  - "isdigit_l (fonction)"
-  - "_ismbcdigit_l (fonction)"
-  - "_isdigit_l (fonction)"
+title: isdigit, iswdigit, _isdigit_l, _iswdigit_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _isdigit_l
+- iswdigit
+- _iswdigit_l
+- isdigit
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _iswdigit_l
+- _isdigit_l
+- iswdigit
+- isdigit
+- _istdigit
+- _istdigit_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- iswdigit function
+- iswdigit_l function
+- _iswdigit_l function
+- _istdigit_l function
+- _istdigit function
+- istdigit function
+- isdigit function
+- isdigit_l function
+- _ismbcdigit_l function
+- _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# isdigit, iswdigit, _isdigit_l, _iswdigit_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 86afddd96c0d20e6c6f29cf64668a8fa26613da7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
-Détermine si un entier représente un chiffre décimal.  
+---
+# <a name="isdigit-iswdigit-isdigitl-iswdigitl"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
+Détermine si un entier représente un caractère numérique décimal.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int isdigit(   
@@ -77,42 +95,39 @@ int _iswdigit_l(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `c`  
  Entier à tester.  
   
  `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
- Chacune de ces routines retourne une valeur différente de zéro si `c` est une représentation particulière d'un caractère de chiffre décimal.  `isdigit` retourne une valeur différente de zéro si `c` est un chiffre décimal \(0 à 9\).  `iswdigit` retourne une valeur différente de zéro si `c` est un caractère élargi correspondant au caractère d'un chiffre décimal.  Chacune de ces routines retourne 0 si `c` ne remplit pas la condition de test.  
+## <a name="return-value"></a>Valeur de retour  
+ Chacune de ces routines retourne une valeur différente de zéro si `c` est une représentation particulière d’un caractère numérique décimal. `isdigit`Retourne une valeur différente de zéro si `c` est un chiffre décimal (0 - 9). `iswdigit` retourne une valeur différente de zéro si `c` est un caractère large qui correspond à un caractère numérique décimal. Chacune de ces routines retourne 0 si `c` ne répond pas à la condition de test.  
   
- Les versions de ces fonctions qui ont le suffixe `_l` utilisent les paramètres régionaux passés plutôt que les paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux.  Pour plus d'informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ Pour leur comportement dépendant des paramètres régionaux, les versions de ces fonctions avec le suffixe `_l` utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
- Le comportement d'`isdigit` et d'`_isdigit_l` n'est pas défini si `c` n'a pas la valeur EOF ni n'est compris entre 0 et 0xFF, inclus.  Lorsqu'une bibliothèque CRT de débogage est utilisée et que `c` ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.  
+ Le comportement de `isdigit` et `_isdigit_l` n’est pas défini si `c` n’est pas EOF ou n’appartient pas à la plage 0 à 0xFF, inclus. Quand une bibliothèque CRT de débogage est utilisée et que `c` ne fait pas partie de ces valeurs, les fonctions déclenchent une assertion.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
-|`_istdigit`|`isdigit`|[\_ismbcdigit](../../c-runtime-library/reference/ismbcalnum-functions.md)|`iswdigit`|  
-|`_istdigit_l`|`_isdigit_l`|[\_ismbcdigit\_l](../../c-runtime-library/reference/ismbcalnum-functions.md)|`_iswdigit_l`|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
+|`_istdigit`|`isdigit`|[_ismbcdigit](../../c-runtime-library/reference/ismbcalnum-functions.md)|`iswdigit`|  
+|`_istdigit_l`|`_isdigit_l`|[_ismbcdigit_l](../../c-runtime-library/reference/ismbcalnum-functions.md)|`_iswdigit_l`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`isdigit`|\<ctype.h\>|  
-|`iswdigit`|\<ctype.h\> ou \<wchar.h\>|  
-|`_isdigit_l`|\<ctype.h\>|  
-|`_iswdigit_l`|\<ctype.h\> ou \<wchar.h\>|  
+|`isdigit`|\<ctype.h>|  
+|`iswdigit`|\<ctype.h> ou \<wchar.h>|  
+|`_isdigit_l`|\<ctype.h>|  
+|`_iswdigit_l`|\<ctype.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Équivalent .NET Framework  
- [System::Char::IsDigit](https://msdn.microsoft.com/en-us/library/system.char.isdigit.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Classifications des caractères](../../c-runtime-library/character-classification.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
  [is, isw, routines](../../c-runtime-library/is-isw-routines.md)

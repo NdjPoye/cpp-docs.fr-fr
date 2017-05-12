@@ -28,7 +28,6 @@ f1_keywords:
 - C2265
 - C2269
 - C2278
-- C2280
 - C2281
 - C2282
 - C2288
@@ -54,7 +53,6 @@ helpviewer_keywords:
 - C2265
 - C2269
 - C2278
-- C2280
 - C2281
 - C2282
 - C2288
@@ -82,9 +80,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 8e3f009def24f09cbc8b373a81ea63ed6bd922ed
-ms.lasthandoff: 04/24/2017
+ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
+ms.openlocfilehash: f47a6fe23a8a0bf18f9c5c4399162d836667cab6
+ms.lasthandoff: 04/28/2017
 
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>Erreurs du compilateur C2200 à C2299
@@ -177,7 +175,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2277](compiler-error-c2277.md)|'*fonction*' : ne peut pas prendre l’adresse de cette fonction membre|  
 |C2278 d’erreur du compilateur|Obsolète.|  
 |[Erreur du compilateur C2279](compiler-error-c2279.md)|la spécification de l'exception ne peut pas s'afficher dans une déclaration typedef|  
-|C2280 d’erreur du compilateur|'*classe*::*fonction*' : tentative de référencement d’une fonction supprimée|  
+|[C2280 d’erreur du compilateur](compiler-error-c2280.md)|'*classe*::*fonction*' : tentative de référencement d’une fonction supprimée|  
 |C2281 d’erreur du compilateur|'*classe*::*fonction*' : une fonction peut uniquement être supprimée sur la première déclaration|  
 |C2282 d’erreur du compilateur|'*fonction1*'ne peut pas substituer'*fonction2*'|  
 |[Erreur du compilateur C2283](compiler-error-c2283.md)|'*identificateur*' : spécificateur pure ou substitution abstrait spécificateur non autorisé sur la classe/struct sans nom|  

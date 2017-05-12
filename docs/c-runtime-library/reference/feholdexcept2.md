@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40c56f3ebd01ac809b48c48dcda85ef8a3217be4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 210a0a2b353d691916c8f091205518bb67e375df
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="feholdexcept"></a>feholdexcept
@@ -65,7 +66,6 @@ Enregistre l’environnement à virgule flottante actuel dans l’objet spécifi
 int feholdexcept(  
    fenv_t *penv  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -73,10 +73,10 @@ int feholdexcept(
  Pointeur désignant un objet `fenv_t` destiné à contenir une copie de l’environnement à virgule flottante.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne zéro si et seulement si la fonction peut correctement activer la gestion des exceptions de virgule flottante en mode sans interruption.  
+ Retourne zéro si et seulement si la fonction est correctement activer la gestion des exceptions de virgule flottante sans interruption.  
   
-## <a name="remarks"></a>Notes  
- La fonction `feholdexcept` est utilisée pour stocker l’état de l’environnement à virgule flottante actuel dans l’objet `fenv_t` désigné par `penv` et pour définir l’environnement de façon à ce qu’il n’interrompe pas l’exécution sur les exceptions de virgule flottante. Il s’agit du mode sans interruption.  Ce mode reste actif jusqu’à ce que l’environnement soit restauré à l’aide de [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183) ou [feupdateenv](../../c-runtime-library/reference/feupdateenv.md).  
+## <a name="remarks"></a>Remarques  
+ La fonction `feholdexcept` est utilisée pour stocker l’état de l’environnement à virgule flottante actuel dans l’objet `fenv_t` désigné par `penv` et pour définir l’environnement de façon à ce qu’il n’interrompe pas l’exécution sur les exceptions de virgule flottante. Il s’agit du mode sans interruption.  Ce mode reste actif jusqu’à ce que l’environnement soit restauré à l’aide de [fesetenv](fesetenv1.md) ou [feupdateenv](../../c-runtime-library/reference/feupdateenv.md).  
   
  Vous pouvez utiliser cette fonction au début d’une sous-routine qui a besoin de masquer une ou plusieurs exceptions de virgule flottante à l’appelant. Pour signaler une exception, vous pouvez simplement désactiver les exceptions indésirables à l’aide de [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md), puis mettre fin au mode sans interruption avec un appel à `feupdateenv`.  
   
@@ -93,5 +93,5 @@ int feholdexcept(
 ## <a name="see-also"></a>Voir aussi  
  [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
- [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183)   
+ [fesetenv](fesetenv1.md)   
  [feupdateenv](../../c-runtime-library/reference/feupdateenv.md)

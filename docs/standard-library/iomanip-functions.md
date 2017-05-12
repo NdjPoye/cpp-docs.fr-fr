@@ -21,10 +21,11 @@ f1_keywords:
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d54e1d5071414f1e8f6ae96391aa1659397bbcb3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: cc990171c1196a35f0fe90d99ee1cbdbca337c9a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt;, fonctions
@@ -289,7 +290,7 @@ T1 resetiosflags(ios_base::fmtflags Mask);
  Indicateurs à effacer.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le manipulateur retourne un objet qui, quand il est extrait ou inséré dans le flux **str**, appelle **str**. [setf](../standard-library/ios-base-class.md#ios_base__setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags), _ *Mask*), puis retourne **str**.  
+ Le manipulateur retourne un objet qui, quand il est extrait ou inséré dans le flux **str**, appelle **str**. [setf](../standard-library/ios-base-class.md#setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*), puis retourne **str**.  
   
 ### <a name="example"></a>Exemple  
   Pour obtenir un exemple d’utilisation de `resetiosflags`, consultez [setw](../standard-library/iomanip-functions.md#setw).  
@@ -306,7 +307,7 @@ T3 setbase(int _Base);
  Base numérique.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le manipulateur retourne un objet qui, quand il est extrait ou inséré dans le flux **str**, appelle **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#ios_base__fmtflags)), puis retourne **str**. Ici, **mask** est déterminé comme suit :  
+ Le manipulateur retourne un objet qui, quand il est extrait ou inséré dans le flux **str**, appelle **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#fmtflags)), puis retourne **str**. Ici, **mask** est déterminé comme suit :  
   
 -   Si _ *Base* est 8, **mask** est `ios_base::`[oct](../standard-library/ios-functions.md#oct).  
   
@@ -314,7 +315,7 @@ T3 setbase(int _Base);
   
 -   Si _ *Base* est 16, **mask** est `ios_base::`[hex](../standard-library/ios-functions.md#hex).  
   
--   Si _ *Base* est une autre valeur, mask est `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags)(0).  
+-   Si _ *Base* est une autre valeur, mask est `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0).  
   
 ### <a name="example"></a>Exemple  
   Pour obtenir un exemple d’utilisation de `setbase`, consultez [setw](../standard-library/iomanip-functions.md#setw).  
@@ -332,7 +333,7 @@ T4 setfill(Elem Ch);
  Caractère qui sera utilisé pour remplir les espaces dans un affichage aligné à droite.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le manipulateur de modèle retourne un objet qui, quand il est extrait ou inséré dans le flux **str**, appelle **str**. [fill](../standard-library/basic-ios-class.md#basic_ios__fill)( `Ch`), puis retourne **str**. Le type **Elem** doit être identique au type d’élément pour le flux **str**.  
+ Le manipulateur de modèle retourne un objet qui, quand il est extrait ou inséré dans le flux **str**, appelle **str**. [fill](../standard-library/basic-ios-class.md#fill)( `Ch`), puis retourne **str**. Le type **Elem** doit être identique au type d’élément pour le flux **str**.  
   
 ### <a name="example"></a>Exemple  
   Pour obtenir un exemple d’utilisation de `setfill`, consultez [setw](../standard-library/iomanip-functions.md#setw).  
@@ -349,7 +350,7 @@ T2 setiosflags(ios_base::fmtflags Mask);
  Indicateurs à définir.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le manipulateur retourne un objet qui, quand il est extrait ou inséré dans le flux **str**, appelle **str**. [setf](../standard-library/ios-base-class.md#ios_base__setf)(_ *Mask*), puis retourne **str**.  
+ Le manipulateur retourne un objet qui, quand il est extrait ou inséré dans le flux **str**, appelle **str**. [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*), puis retourne **str**.  
   
 ### <a name="example"></a>Exemple  
   Pour obtenir un exemple d’utilisation de `setiosflags`, consultez [setw](../standard-library/iomanip-functions.md#setw).  
@@ -366,7 +367,7 @@ T5 setprecision(streamsize Prec);
  Précision des valeurs à virgule flottante.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le manipulateur retourne un objet qui, quand il est extrait ou inséré dans le flux **str**, appelle **str**. [precision](../standard-library/ios-base-class.md#ios_base__precision)( `Prec`), puis retourne **str**.  
+ Le manipulateur retourne un objet qui, quand il est extrait ou inséré dans le flux **str**, appelle **str**. [precision](../standard-library/ios-base-class.md#precision)( `Prec`), puis retourne **str**.  
   
 ### <a name="example"></a>Exemple  
   Pour obtenir un exemple d’utilisation de `setprecision`, consultez [setw](../standard-library/iomanip-functions.md#setw).  
@@ -383,7 +384,7 @@ T6 setw(streamsize Wide);
  Largeur de la zone d’affichage.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Le manipulateur retourne un objet qui, quand il est extrait ou inséré dans le flux **str**, appelle **str**. [width](../standard-library/ios-base-class.md#ios_base__width)(_ *Wide*), puis retourne **str**.  
+ Le manipulateur retourne un objet qui, quand il est extrait ou inséré dans le flux **str**, appelle **str**. [width](../standard-library/ios-base-class.md#width)(_ *Wide*), puis retourne **str**.  
   
 ### <a name="remarks"></a>Notes  
  setw définit la largeur uniquement pour l’élément suivant dans le flux et doit être inséré avant chaque élément dont vous souhaitez spécifier la largeur.  

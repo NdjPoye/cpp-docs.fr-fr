@@ -34,13 +34,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: c7547d0df457e9f96676b99fdf4f7808945e206c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1cbaa14c04aac55a09f646bfbe669a475e527add
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2830"></a>Erreur du compilateur C2830
 seuls les paramètres de positionnement de 'operator new' peuvent avoir des valeurs par défaut  
   
-Les paramètres formels standards de [nouveau opérateur](../../standard-library/new-operators.md#operator_new) ne peut pas avoir de valeurs par défaut. Seuls les paramètres de positionnement définis par l’utilisateur peuvent spécifier les paramètres par défaut.
+Les paramètres formels standards de [new, opérateur](../../standard-library/new-operators.md#op_new) ne peut pas avoir de valeurs par défaut. Seuls les paramètres définis par l’utilisateur de la sélection élective peuvent spécifier les paramètres par défaut.
 
