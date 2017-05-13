@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a9db88e2797e5828a007c21fd7f7fdde135ff4bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 51b82c6a60eb8024c267e07e1327c8afd7928eea
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
@@ -104,9 +105,9 @@ unsigned char *_mbsnbset_l(
  `_mbsnbset` retourne un pointeur désignant la chaîne modifiée.  
   
 ## <a name="remarks"></a>Notes  
- Les fonctions `_mbsnbset` et `_mbsnbset_l` attribuent, au plus, aux `count` premiers octets de `str` la valeur `c`. Si la valeur `count` est supérieure à la longueur de `str`, la longueur de `str` est utilisée à la place de `count`. Si `c` est un caractère multioctet et ne peut pas être défini entièrement dans le dernier octet spécifié par `count`, le dernier octet est rempli avec un caractère vide. `_mbsnbset` et `_mbsnbset_l` ne placent pas de caractère Null de fin à la fin de `str`.  
+ Les fonctions `_mbsnbset` et `_mbsnbset_l` attribuent, au plus, aux `count` premiers octets de `str` la valeur `c`. Si la valeur `count` est supérieure à la longueur de `str`, la longueur de `str` est utilisée à la place de `count`. Si `c` est un caractère multioctet et ne peut pas être défini entièrement dans le dernier octet spécifié par `count`, le dernier octet est rempli avec un caractère vide. `_mbsnbset`et `_mbsnbset_l` ne place pas une de fin null à la fin de `str`.  
   
- `_mbsnbset`et `_mbsnbset_l` sont similaires à `_mbsnset`, à ceci près qu’elles définissent `count` octets au lieu de `count` caractères de `c`.  
+ `_mbsnbset`et `_mbsnbset_l` est similaire à `_mbsnset`, sauf qu’il définit `count` octets plutôt que `count` caractères de `c`.  
   
  Si `str` a la valeur `NULL` ou que `count` est égal à zéro, cette fonction génère une exception de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, `errno` a la valeur `EINVAL` et la fonction retourne une valeur `NULL`. De même, si `c` n'est pas un caractère multioctet valide, `errno` a la valeur `EINVAL` et un espace est utilisé à la place.  
   
@@ -155,9 +156,6 @@ int main( void )
 Before: This is a test  
 After:  **** is a test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   

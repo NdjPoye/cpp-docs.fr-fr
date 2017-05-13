@@ -8,253 +8,171 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - algorithm/std::adjacent_find
-- std::adjacent_find
 - adjacent_find
 - algorithm/std::all_of
-- std::all_of
 - all_of
 - algorithm/std::any_of
-- std::any_of
 - any_of
 - algorithm/std::binary_search
-- std::binary_search
 - binary_search
 - algorithm/std::copy
-- std::copy
 - copy
 - algorithm/std::copy_backward
-- std::copy_backward
 - copy_backward
 - algorithm/std::copy_if
-- std::copy_if
 - copy_if
 - algorithm/std::copy_n
-- std::copy_n
 - copy_n
 - algorithm/std::equal
-- std::equal
 - equal
 - algorithm/std::equal_range
-- std::equal_range
 - equal_range
 - algorithm/std::fill
-- std::fill
 - fill
 - algorithm/std::fill_n
-- std::fill_n
 - fill_n
 - algorithm/std::find
-- std::find
 - find
 - algorithm/std::find_end
-- std::find_end
 - find_end
 - algorithm/std::find_first_of
-- std::find_first_of
 - find_first_of
 - algorithm/std::find_if
-- std::find_if
 - find_if
 - algorithm/std::find_if_not
-- std::find_if_not
 - find_if_not
 - algorithm/std::for_each
-- std::for_each
 - for_each
 - algorithm/std::generate
-- std::generate
 - generate
 - algorithm/std::generate_n
-- std::generate_n
 - generate_n
 - algorithm/std::includes
-- std::includes
 - includes
 - algorithm/std::inplace_merge
-- std::inplace_merge
 - inplace_merge
 - algorithm/std::is_heap
-- std::is_heap
 - is_heap
 - algorithm/std::is_heap_until
-- std::is_heap_until
 - is_heap_until
 - algorithm/std::is_partitioned
-- std::is_partitioned
 - is_partitioned
 - algorithm/std::is_permutation
-- std::is_permutation
 - is_permutation
 - algorithm/std::is_sorted
-- std::is_sorted
 - is_sorted
 - algorithm/std::is_sorted_until
-- std::is_sorted_until
 - is_sorted_until
 - algorithm/std::iter_swap
-- std::iter_swap
 - iter_swap
 - algorithm/std::lexicographical_compare
-- std::lexicographical_compare
 - lexicographical_compare
 - algorithm/std::lower_bound
-- std::lower_bound
 - lower_bound
 - algorithm/std::make_heap
-- std::make_heap
 - make_heap
 - algorithm/std::max
-- std::max
 - max
 - algorithm/std::max_element
-- std::max_element
 - max_element
 - algorithm/std::merge
-- std::merge
 - merge
 - algorithm/std::min
-- std::min
 - min
 - algorithm/std::minmax
-- std::minmax
 - minmax
 - algorithm/std::minmax_element
-- std::minmax_element
 - minmax_element
 - algorithm/std::min_element
-- std::min_element
 - min_element
 - algorithm/std::mismatch
-- std::mismatch
 - mismatch
 - algorithm/std::move
-- std::move
 - move
 - algorithm/std::move_backward
-- std::move_backward
 - move_backward
 - algorithm/std::next_permutation
-- std::next_permutation
 - next_permutation
 - algorithm/std::none_of
-- std::none_of
 - none_of
 - algorithm/std::nth_element
-- std::nth_element
 - nth_element
 - algorithm/std::partial_sort
-- std::partial_sort
 - partial_sort
 - algorithm/std::partial_sort_copy
-- std::partial_sort_copy
 - partial_sort_copy
 - algorithm/std::partition
-- std::partition
 - partition
 - algorithm/std::partition_point
-- std::partition_point
 - partition_point
 - algorithm/std::pop_heap
-- std::pop_heap
 - pop_heap
 - algorithm/std::prev_permutation
-- std::prev_permutation
 - prev_permutation
 - algorithm/std::push_heap
-- std::push_heap
 - push_heap
 - algorithm/std::random_shuffle
-- std::random_shuffle
 - random_shuffle
 - algorithm/std::remove
-- std::remove
 - remove
 - algorithm/std::remove_copy
-- std::remove_copy
 - remove_copy
 - algorithm/std::remove_copy_if
-- std::remove_copy_if
 - remove_copy_if
 - algorithm/std::remove_if
-- std::remove_if
 - remove_if
 - algorithm/std::replace
-- std::replace
 - replace
 - algorithm/std::replace_copy
-- std::replace_copy
 - replace_copy
 - algorithm/std::replace_copy_if
-- std::replace_copy_if
 - replace_copy_if
 - algorithm/std::replace_if
-- std::replace_if
 - replace_if
 - algorithm/std::reverse
-- std::reverse
 - reverse
 - algorithm/std::reverse_copy
-- std::reverse_copy
 - reverse_copy
 - algorithm/std::rotate
-- std::rotate
 - rotate
 - algorithm/std::rotate_copy
-- std::rotate_copy
 - rotate_copy
 - algorithm/std::search
-- std::search
 - search
 - algorithm/std::search_n
-- std::search_n
 - search_n
 - algorithm/std::set_difference
-- std::set_difference
 - set_difference
 - algorithm/std::set_intersection
-- std::set_intersection
 - set_intersection
 - algorithm/std::set_symmetric_difference
-- std::set_symmetric_difference
 - set_symmetric_difference
 - algorithm/std::set_union
-- std::set_union
 - set_union
 - algorithm/std::shuffle
-- std::shuffle
 - shuffle
 - algorithm/std::sort
-- std::sort
 - sort
 - algorithm/std::sort_heap
-- std::sort_heap
 - sort_heap
 - algorithm/std::stable_partition
-- std::stable_partition
 - stable_partition
 - algorithm/std::stable_sort
-- std::stable_sort
 - stable_sort
 - algorithm/std::swap_ranges
-- std::swap_ranges
 - swap_ranges
 - algorithm/std::transform
-- std::transform
 - transform
 - algorithm/std::unique
-- std::unique
 - unique
 - algorithm/std::unique_copy
-- std::unique_copy
 - unique_copy
 - algorithm/std::upper_bound
-- std::upper_bound
 - upper_bound
 - xutility/std::copy
 - xutility/std::copy_backward
 - xutility/std::copy_n
 - xutility/std::count
-- std::count
 - count
 - xutility/std::equal
 - xutility/std::fill
@@ -266,15 +184,21 @@ f1_keywords:
 - xutility/std::move_backward
 - xutility/std::reverse
 - xutility/std::rotate
+- algorithm/std::count_if
+- algorithm/std::partition_copy
+- algorithm/std::swap
+dev_langs:
+- C++
 ms.assetid: c10b0c65-410c-4c83-abf8-8b7f61bba8d0
 caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 9916f5be3319b430104201387d6ab5b9b476e1c8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 6b3c288921fd86c4c02a8e2ffa09a060fe5fd3a1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt;, fonctions
@@ -306,11 +230,11 @@ ms.lasthandoff: 02/24/2017
 |[search_n](#search_n)|[set_difference](#set_difference)|[set_intersection](#set_intersection)|  
 |[set_symmetric_difference](#set_symmetric_difference)|[set_union](#set_union)|[sort](#sort)|  
 |[sort_heap](#sort_heap)|[stable_partition](#stable_partition)|[stable_sort](#stable_sort)|  
-|[std::shuffle](#std__shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|  
+|[shuffle](#shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|  
 |[transform](#transform)|[unique](#unique)|[unique_copy](#unique_copy)|  
 |[upper_bound](#upper_bound)|  
   
-##  <a name="a-nameadjacentfinda--adjacentfind"></a><a name="adjacent_find"></a>  adjacent_find  
+##  <a name="adjacent_find"></a>  adjacent_find  
  Recherche deux éléments adjacents qui ont la même valeur ou qui répondent à une condition spécifiée.  
   
 ```  
@@ -406,7 +330,7 @@ There are two adjacent elements where the second is twice the first.
  They have values of 10 & 20.  
 ```  
   
-##  <a name="a-nameallofa--allof"></a><a name="all_of"></a>  all_of  
+##  <a name="all_of"></a>  all_of  
  Retourne `true` lorsqu'une condition est remplie pour chaque élément de la plage spécifiée.  
   
 ```  
@@ -433,7 +357,7 @@ template<class InputIterator, class Predicate>
 ### <a name="remarks"></a>Notes  
  La fonction de modèle retourne `true` uniquement si, pour chaque `N` de la plage `[0,Last - first)`, le prédicat `comp(*(_First + N))` est `true`.  
   
-##  <a name="a-nameanyofa--anyof"></a><a name="any_of"></a>  any_of  
+##  <a name="any_of"></a>  any_of  
  Retourne `true` lorsqu'une condition est remplie au moins une fois dans la plage d'éléments spécifiée.  
   
 ```  
@@ -460,9 +384,9 @@ template<class InputIterator, class UnaryPredicate>
 ### <a name="remarks"></a>Notes  
  La fonction de modèle retourne `true` uniquement si, pour certains `N` de la plage  
   
- `[0,`  `last`  `-`   `first` `)`, le prédicat `comp``(*(` `first` `+ N))` est true.  
+ `[0, last - first)`, le prédicat `comp(*(first + N))` a la valeur true.  
   
-##  <a name="a-namebinarysearcha--binarysearch"></a><a name="binary_search"></a>  binary_search  
+##  <a name="binary_search"></a>  binary_search  
  Teste si un élément d’une plage triée est égal à une valeur spécifiée ou équivalent, selon une condition spécifiée par un prédicat binaire.  
   
 ```  
@@ -506,7 +430,7 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
   
  Les types valeur des itérateurs vers l’avant doivent être comparables en termes d’infériorité pour être triés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. De cette façon, les éléments non équivalents sont ordonnés  
   
- La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec un nombre d’étapes proportionnel à (`last` – `first`).  
+ La complexité de l’algorithme est logarithmique pour les itérateurs à accès aléatoire et linéaire dans le cas contraire, avec le nombre d’étapes proportionnels au ( `last`  -  `first`).  
   
 ### <a name="example"></a>Exemple  
   
@@ -590,7 +514,7 @@ int main( )
 }   
 ```  
   
-##  <a name="a-namecopya--copy"></a><a name="copy"></a>  copy  
+##  <a name="copy"></a>  copy  
  Assigne les valeurs des éléments d'une plage source à une plage de destination, en procédant à une itération via la séquence source d'éléments et en leur assignant de nouvelles positions, du haut vers le bas.  
   
 ```  
@@ -612,9 +536,9 @@ template<class InputIterator, class OutputIterator>
  Itérateur de sortie qui traite la position du premier élément dans la plage de destination.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie ciblant la position juste après le dernier élément de la plage de destination. Autrement dit, l’itérateur cible `result` + (`last` – `first`).  
+ Un itérateur de sortie ciblant la position située immédiatement après le dernier élément de la plage de destination, autrement dit, l’itérateur `result` + ( `last`  -   `first` ).  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La plage source doit être valide et il doit y avoir suffisamment d'espace au niveau de la destination pour contenir tous les éléments qui sont copiés.  
   
  Comme l’algorithme copie les éléments sources dans l’ordre en commençant par le premier élément, la plage de destination peut chevaucher la plage source, à condition que la position `last` de la plage source ne soit pas contenue dans la plage de destination. **copy** peut être utilisé pour décaler des éléments vers la gauche mais pas vers la droite, à moins qu’il n’y ait aucun chevauchement entre les plages source et de destination. Pour décaler vers la droite d’un nombre quelconque de positions, utilisez l’algorithme [copy_backward](../standard-library/algorithm-functions.md#copy_backward).  
@@ -679,7 +603,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )  
 ```  
   
-##  <a name="a-namecopybackwarda--copybackward"></a><a name="copy_backward"></a>  copy_backward  
+##  <a name="copy_backward"></a>  copy_backward  
  Assigne les valeurs des éléments d'une plage source à une plage de destination, en procédant à une itération via la séquence source d'éléments et en leur assignant de nouvelles positions vers le haut.  
   
 ```  
@@ -701,9 +625,9 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
  Itérateur bidirectionnel se rapportant à la position située immédiatement après l'élément final dans la plage de destination.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie ciblant la position juste après le dernier élément de la plage de destination. Autrement dit, l’itérateur cible `destEnd` – (`last` – `first`).  
+ Un itérateur de sortie ciblant la position située immédiatement après le dernier élément de la plage de destination, autrement dit, l’itérateur `destEnd` -( `last`  -   `first` ).  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La plage source doit être valide et il doit y avoir suffisamment d'espace au niveau de la destination pour contenir tous les éléments qui sont copiés.  
   
  L'algorithme `copy_backward` impose des exigences plus strictes que celles de l'algorithme de copie. Ses itérateurs d'entrée et de sortie doivent être bidirectionnels.  
@@ -765,7 +689,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namecopyifa--copyif"></a><a name="copy_if"></a>  copy_if  
+##  <a name="copy_if"></a>  copy_if  
  Dans une plage d’éléments, copie les éléments qui sont `true` pour la condition spécifiée.  
   
 ```  
@@ -800,7 +724,7 @@ template<class InputIterator, class OutputIterator, class BinaryPredicate>
   
  une fois pour chaque `N` de la plage `[0, last - first)`, pour les valeurs strictement croissantes de `N` en commençant par la valeur la plus petite. Si `dest` et `first` désignent des régions de stockage, `dest` ne doit pas se trouver dans la plage `[` `first``,` `last``)`.  
   
-##  <a name="a-namecopyna--copyn"></a><a name="copy_n"></a>  copy_n  
+##  <a name="copy_n"></a>  copy_n  
  Copie un nombre spécifié d'éléments.  
   
 ```  
@@ -824,10 +748,10 @@ template<class InputIterator, class Size, class OutputIterator>
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un itérateur de sortie indiquant où les éléments ont été copiés. Il est identique à la valeur retournée du troisième paramètre, `dest`.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle évalue `*(dest + N) = *(first + N))` une fois pour chaque `N` de la plage `[0,` `count``)`, pour les valeurs strictement croissantes de `N` en commençant par la valeur la plus petite. Elle retourne ensuite `dest` `+ N`. Si `dest` et `first` désignent des régions de stockage, `dest` ne doit pas se trouver dans la plage `[``first``,` `Last``)`.  
+### <a name="remarks"></a>Remarques  
+ La fonction de modèle évalue `*(dest + N) = *(first + N))` une fois pour chaque `N` dans la plage `[0, count)`, pour les valeurs strictement croissantes de `N` commençant par la valeur la plus faible. Elle retourne ensuite `dest + N`. Si `dest` et `first` désignent des régions de stockage, `dest` ne doit pas être dans la plage `[first, last)`.  
   
-##  <a name="a-namecounta--count"></a><a name="count"></a>  count  
+##  <a name="count"></a>  count  
  Retourne le nombre d'éléments d'une plage dont les valeurs correspondent à une valeur spécifiée.  
   
 ```  
@@ -893,7 +817,7 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.  
 ```  
   
-##  <a name="a-namecountifa--countif"></a><a name="count_if"></a>  count_if  
+##  <a name="count_if"></a>  count_if  
  Retourne le nombre d’éléments d’une plage dont les valeurs satisfont une condition spécifiée.  
   
 ```  
@@ -963,7 +887,7 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.  
 ```  
   
-##  <a name="a-nameequala--equal"></a><a name="equal"></a>  equal  
+##  <a name="equal"></a>  equal  
  Compare deux plages, élément par élément, à la recherche d’une égalité ou d’une équivalence, selon une condition spécifiée par un prédicat binaire.  
   
  Utilisez `std::equal` quand vous comparez des éléments de différents types de conteneurs (par exemple `vector` et `list`) ou différents types d’éléments, ou quand vous devez comparer des sous-plages de conteneurs. Sinon, quand vous comparez des éléments du même type dans le même type de conteneur, utilisez l’`operator==` de non-membre fourni pour chaque conteneur.  
@@ -1060,7 +984,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameequalrangea--equalrange"></a><a name="equal_range"></a>  equal_range  
+##  <a name="equal_range"></a>  equal_range  
  Dans une plage ordonnée définie, recherche la sous-plage dans laquelle tous les éléments sont équivalents à une valeur donnée.  
   
 ```  
@@ -1103,7 +1027,7 @@ pair<ForwardIterator, ForwardIterator> equal_range(
   
  Les éléments de la sous-plage éventuellement vide définie par la paire d’itérateurs retournés par `equal_range` sont équivalents à `val` selon la logique définie par le prédicat utilisé.  
   
- La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec un nombre d’étapes proportionnel à (`last` – `first`).  
+ La complexité de l’algorithme est logarithmique pour les itérateurs à accès aléatoire et linéaire dans le cas contraire, avec le nombre d’étapes proportionnels au ( `last`  -  `first`).  
   
 ### <a name="example"></a>Exemple  
   
@@ -1223,7 +1147,7 @@ int main()
   
 ```  
   
-##  <a name="a-namefilla--fill"></a><a name="fill"></a>  fill  
+##  <a name="fill"></a>  fill  
  Affecte la même nouvelle valeur à chaque élément d'une plage spécifiée.  
   
 ```  
@@ -1288,7 +1212,7 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )  
 ```  
   
-##  <a name="a-namefillna--filln"></a><a name="fill_n"></a>  fill_n  
+##  <a name="fill_n"></a>  fill_n  
  Attribue une nouvelle valeur à un nombre spécifié d’éléments d’une plage commençant par un élément particulier.  
   
 ```  
@@ -1364,7 +1288,7 @@ int main()
   
 ```  
   
-##  <a name="a-namefinda--find"></a><a name="find"></a>  find  
+##  <a name="find"></a>  find  
  Recherche la position de la première occurrence d'un élément d'une plage ayant une valeur spécifiée.  
   
 ```  
@@ -1393,7 +1317,7 @@ InputIterator find(
   
  Pour obtenir un exemple de code avec `find()`, consultez [find_if](../standard-library/algorithm-functions.md#find_if).  
   
-##  <a name="a-namefindenda--findend"></a><a name="find_end"></a>  find_end  
+##  <a name="find_end"></a>  find_end  
  Recherche dans une plage la dernière sous-séquence qui est identique à une séquence spécifiée ou qui est équivalente, selon une condition spécifiée par un prédicat binaire.  
   
 ```  
@@ -1533,7 +1457,7 @@ There is a sequence of elements in v1 that are equivalent to those
  in v2 under the binary predicate twice and that begins at position 8.  
 ```  
   
-##  <a name="a-namefindfirstofa--findfirstof"></a><a name="find_first_of"></a>  find_first_of  
+##  <a name="find_first_of"></a>  find_first_of  
  Recherche la première occurrence parmi plusieurs valeurs d’une plage cible, ou la première occurrence parmi plusieurs éléments qui sont équivalents, selon une condition spécifiée par un prédicat binaire, à un ensemble d’éléments spécifiés.  
   
 ```  
@@ -1676,7 +1600,7 @@ There is a sequence of elements in v1 that are equivalent
  and the first one begins at position 2.  
 ```  
   
-##  <a name="a-namefindifa--findif"></a><a name="find_if"></a>  find_if  
+##  <a name="find_if"></a>  find_if  
  Recherche la position de la première occurrence d'un élément d'une plage qui répond à une condition spécifiée.  
   
 ```  
@@ -1789,7 +1713,7 @@ int main()
   
 ```  
   
-##  <a name="a-namefindifnota--findifnot"></a><a name="find_if_not"></a>  find_if_not  
+##  <a name="find_if_not"></a>  find_if_not  
  Retourne le premier élément d'une plage spécifiée qui ne répond pas à une condition.  
   
 ```  
@@ -1818,7 +1742,7 @@ InputIterator find_if_not(
   
  Pour obtenir un exemple de code facilement adaptable à `find_if_not()`, consultez [find_if](../standard-library/algorithm-functions.md#find_if).  
   
-##  <a name="a-nameforeacha--foreach"></a><a name="for_each"></a>  for_each  
+##  <a name="for_each"></a>  for_each  
  Applique un objet de fonction spécifié à chaque élément d'une plage, du haut vers le bas, et retourne l'objet de la fonction.  
   
 ```  
@@ -1847,7 +1771,7 @@ Function for_each(
   
  La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position doit être accessible depuis la première au moyen d'une incrémentation.  
   
- La complexité est linéaire avec au maximum (`last` – `first`) comparaisons.  
+ La complexité est linéaire au maximum ( `last`  -   `first`) les comparaisons.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1962,7 +1886,7 @@ The average of the elements of v1 is:
  Average ( v1mod2 ) = 10.  
 ```  
   
-##  <a name="a-namegeneratea--generate"></a><a name="generate"></a>  generate  
+##  <a name="generate"></a>  generate  
  Assigne les valeurs générées par un objet de fonction à chaque élément d'une plage.  
   
 ```  
@@ -1988,7 +1912,7 @@ void generate(
   
  La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position doit être accessible depuis la première au moyen d'une incrémentation.  
   
- La complexité est linéaire, avec exactement (`last` – `first`) appels au générateur demandé.  
+ La complexité est linéaire avec exactement ( `last`  -   `first`) les appels au générateur requis.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2033,7 +1957,7 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).  
 ```  
   
-##  <a name="a-namegeneratena--generaten"></a><a name="generate_n"></a>  generate_n  
+##  <a name="generate_n"></a>  generate_n  
  Assigne les valeurs générées par un objet de fonction à un nombre spécifié d'éléments d'une plage et retourne à la position située juste après la dernière valeur assignée.  
   
 ```  
@@ -2105,7 +2029,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameincludesa--includes"></a><a name="includes"></a>  includes  
+##  <a name="includes"></a>  includes  
  Teste si une plage triée contient tous les éléments d’une autre plage triée. Le critère de tri ou d’équivalence entre les éléments peut être spécifié par un prédicat binaire.  
   
 ```  
@@ -2155,7 +2079,7 @@ bool includes(
   
  Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Plus précisément, l’algorithme vérifie si tous les éléments de la première plage triée sous un prédicat binaire spécifié sont ordonnés de la même façon que ceux de la deuxième plage triée.  
   
- La complexité de l’algorithme est linéaire avec au maximum 2 \* ( (*last1 – first1*) – (*last2 – first2*) ) – 1 comparaisons pour des plages sources non vides.  
+ La complexité de l’algorithme est linéaire avec au maximum 2 \* (( *last1 - first1*)-(* nom2 - first2 *)) - 1 comparaisons pour des plages sources non vides.  
   
 ### <a name="example"></a>Exemple  
   
@@ -2306,7 +2230,7 @@ At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.  
 ```  
   
-##  <a name="a-nameinplacemergea--inplacemerge"></a><a name="inplace_merge"></a>  inplace_merge  
+##  <a name="inplace_merge"></a>  inplace_merge  
  Regroupe les éléments de deux plages triées consécutives au sein d’une même plage triée. Le critère de tri peut être spécifié par un prédicat binaire.  
   
 ```  
@@ -2342,7 +2266,7 @@ void inplace_merge(
   
  Les plages triées consécutives doivent chacune être organisées comme une condition préalable à l’application de l’algorithme `inplace_merge` selon le même ordre que celui utilisé par l’algorithme pour trier les plages regroupées. L’opération est stable, car l’ordre relatif des éléments de chaque plage est préservé. Quand il existe des éléments équivalents dans les deux plages sources, l’élément de la première plage précède celui de la deuxième dans la plage regroupée.  
   
- La complexité dépend de la mémoire disponible, car l’algorithme alloue de la mémoire à une mémoire tampon temporaire. S’il y a suffisamment de mémoire disponible, dans le meilleur des cas la complexité est linéaire avec (*last – first*) – 1 comparaisons ; si aucune mémoire auxiliaire n’est disponible, dans le pire des cas la complexité est *N* log *(N)*, où *N* = (*last – first*).  
+ La complexité dépend de la mémoire disponible, car l’algorithme alloue de la mémoire à une mémoire tampon temporaire. Si la mémoire disponible est suffisante, le meilleur cas est linéaire avec (* dernière - tout d’abord*) - 1 comparaisons ; si aucune mémoire auxiliaire n’est disponible, le pire des cas sont *N* journal *(N)*, où *N* = (* dernière - tout d’abord*).  
   
 ### <a name="example"></a>Exemple  
   
@@ -2455,7 +2379,7 @@ Merged inplace with binary predicate mod_lesser specified,
  vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )  
 ```  
   
-##  <a name="a-nameisheapa--isheap"></a><a name="is_heap"></a>  is_heap  
+##  <a name="is_heap"></a>  is_heap  
  Retourne `true` si les éléments d'une plage spécifiée forment un tas.  
   
 ```  
@@ -2491,7 +2415,7 @@ bool is_heap(
   
  `is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`.  
   
-##  <a name="a-nameisheapuntila--isheapuntil"></a><a name="is_heap_until"></a>  is_heap_until  
+##  <a name="is_heap_until"></a>  is_heap_until  
  Retourne un itérateur pointant sur le premier élément de la plage [`begin`, `end`) qui ne satisfait pas la condition de tri du tas, ou `end` si la plage forme un tas.  
   
 ```  
@@ -2525,7 +2449,7 @@ RandomAccessIterator is_heap_until(
   
  La deuxième fonction de modèle se comporte comme la première, sauf qu'elle utilise le prédicat `compare` à la place du prédicat `std::less<>` comme condition d'ordonnancement du tas.  
   
-##  <a name="a-nameispartitioneda--ispartitioned"></a><a name="is_partitioned"></a>  is_partitioned  
+##  <a name="is_partitioned"></a>  is_partitioned  
  Retourne `true` si tous les éléments d'une plage qui testent `true` pour une condition donnée, se trouvent avant les éléments qui testent `false`.  
   
 ```  
@@ -2552,7 +2476,7 @@ bool is_partitioned(
 ### <a name="remarks"></a>Notes  
  La fonction de modèle retourne `true` uniquement si tous les éléments de `[` `first``,` `last``)` sont partitionnés par `comp` ; autrement dit, tous les éléments `X` de `[` `first``,` `last``)` pour lesquels `comp``(X)` est true se produisent avant tous les éléments `Y` pour lesquels `comp``(Y)` est `false`.  
   
-##  <a name="a-nameispermutationa--ispermutation"></a><a name="is_permutation"></a>  is_permutation  
+##  <a name="is_permutation"></a>  is_permutation  
  Retourne la valeur true si les deux plages contiennent les mêmes éléments, même s'ils ne sont pas dans le même ordre. Utilisez les surcharges à double portée dans le code C++14, car les surcharges qui ne prennent qu'un seul itérateur pour la deuxième plage ne détecteront pas les différences si la deuxième plage est plus longue que la première et provoqueront un comportement non défini si la deuxième plage est plus courte que la première.  
   
 ```  
@@ -2668,7 +2592,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameissorteda--issorted"></a><a name="is_sorted"></a>  is_sorted  
+##  <a name="is_sorted"></a>  is_sorted  
  Retourne `true` si les éléments de la plage spécifiée sont triés.  
   
 ```  
@@ -2699,7 +2623,7 @@ bool is_sorted(
   
  La deuxième fonction de modèle retourne `is_sorted_until``(` `first``,` `last``,` `comp``) ==` `last`. La fonction de prédicat `comp` compare l’ordre.  
   
-##  <a name="a-nameissorteduntila--issorteduntil"></a><a name="is_sorted_until"></a>  is_sorted_until  
+##  <a name="is_sorted_until"></a>  is_sorted_until  
  Retourne un `ForwardIterator` défini sur le dernier élément qui se trouve dans l’ordre trié d’une plage spécifiée.  
   
  La deuxième version vous permet de fournir une fonction `BinaryPredicate` qui retourne `true` quand deux éléments donnés sont triés, et `false` dans le cas contraire.  
@@ -2736,7 +2660,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  La deuxième fonction de modèle se comporte de la même façon, sauf qu’elle remplace `operator<(X, Y)` par `comp``(X, Y)`.  
   
-##  <a name="a-nameiterswapa--iterswap"></a><a name="iter_swap"></a>  iter_swap  
+##  <a name="iter_swap"></a>  iter_swap  
  Échange deux valeurs référencées par une paire d'itérateurs spécifiés.  
   
 ```  
@@ -2890,7 +2814,7 @@ After exchanging first elements,
  & deque deq2 is: deq2 = ( 0 5 ).  
 ```  
   
-##  <a name="a-namelexicographicalcomparea--lexicographicalcompare"></a><a name="lexicographical_compare"></a>  lexicographical_compare  
+##  <a name="lexicographical_compare"></a>  lexicographical_compare  
  Compare deux séquences, élément par élément, pour déterminer lequel est inférieur à l'autre.  
   
 ```  
@@ -3034,7 +2958,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.  
 ```  
   
-##  <a name="a-namelowerbounda--lowerbound"></a><a name="lower_bound"></a>  lower_bound  
+##  <a name="lower_bound"></a>  lower_bound  
  Recherche la position du premier élément d’une plage triée dont la valeur est supérieure ou équivalente à une valeur spécifiée. Le critère de tri peut être spécifié par un prédicat binaire.  
   
 ```  
@@ -3078,7 +3002,7 @@ ForwardIterator lower_bound(
   
  Les types valeur des itérateurs vers l’avant doivent être comparables en termes d’infériorité pour être ordonnés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. De cette façon, les éléments non équivalents sont ordonnés  
   
- La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec un nombre d’étapes proportionnel à (`last – first`).  
+ La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec un nombre d’étapes proportionnel à (`last - first`).  
   
 ### <a name="example"></a>Exemple  
   
@@ -3171,7 +3095,7 @@ int main( )
   
 ```  
   
-##  <a name="a-namemakeheapa--makeheap"></a><a name="make_heap"></a>  make_heap  
+##  <a name="make_heap"></a>  make_heap  
  Convertit les éléments d’une plage spécifiée en un tas, dans lequel le premier élément est le plus grand, et pour lequel un critère de tri peut être spécifié à l’aide d’un prédicat binaire.  
   
 ```  
@@ -3207,7 +3131,7 @@ void make_heap(
   
  Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires et sont utilisés dans l’implémentation de la [classe priority_queue](../standard-library/priority-queue-class.md) de l’adaptateur de conteneur de bibliothèque C++ Standard.  
   
- La complexité est linéaire et nécessite 3 \* (*last – first*) comparaisons.  
+ La complexité est linéaire, nécessitant 3 \* (* nom - prénom *) les comparaisons.  
   
 ### <a name="example"></a>Exemple  
   
@@ -3251,7 +3175,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namemaxa--max"></a><a name="max"></a>  max  
+##  <a name="max"></a>  max  
  Compare deux objets et retourne le plus grand des deux. Un critère de tri peut être spécifié à l’aide d’un prédicat binaire.  
   
 ```  
@@ -3464,7 +3388,7 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).  
 ```  
   
-##  <a name="a-namemaxelementa--maxelement"></a><a name="max_element"></a>  max_element  
+##  <a name="max_element"></a>  max_element  
  Recherche la première occurrence du plus grand élément dans une plage spécifiée. Un critère de tri peut être spécifié par un prédicat binaire.  
   
 ```  
@@ -3492,7 +3416,7 @@ ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryP
 ### <a name="remarks"></a>Notes  
  La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position est accessible à partir de la première par incrémentation.  
   
- La complexité est linéaire : (`last` – `first`) – 1 comparaisons sont nécessaires pour une plage non vide.  
+ La complexité est linéaire : ( `last`  -   `first`) - 1 comparaisons sont requises pour une plage non vide.  
   
 ### <a name="example"></a>Exemple  
   
@@ -3594,7 +3518,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namemergea--merge"></a><a name="merge"></a>  merge  
+##  <a name="merge"></a>  merge  
  Regroupe tous les éléments de deux plages sources triées au sein d’une même plage de destination triée. Le critère de tri peut être spécifié par un prédicat binaire.  
   
 ```  
@@ -3650,7 +3574,7 @@ OutputIterator merge(
   
  Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination.  
   
- La complexité de l’algorithme est linéaire avec au maximum (* last1 – first1*) – (*last2 – first2*) – 1 comparaisons.  
+ La complexité de l’algorithme est linéaire au maximum (* last1 - first1*)-(* last2 - first2*) - 1 comparaisons.  
   
  La [classe list](../standard-library/list-class.md) fournit une fonction membre « merge » pour fusionner les éléments de deux listes.  
   
@@ -3764,7 +3688,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namemina--min"></a><a name="min"></a>  min  
+##  <a name="min"></a>  min  
  Compare deux objets et retourne le plus petit des deux. Un critère de tri peut être spécifié à l’aide d’un prédicat binaire.  
   
 ```  
@@ -3975,7 +3899,7 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).  
 ```  
   
-##  <a name="a-nameminelementa--minelement"></a><a name="min_element"></a>  min_element  
+##  <a name="min_element"></a>  min_element  
  Recherche la première occurrence du plus petit élément dans une plage spécifiée. Un critère de tri peut être spécifié par un prédicat binaire.  
   
 ```  
@@ -4003,7 +3927,7 @@ ForwardIterator min_element(ForwardIterator first, ForwardIterator last, BinaryP
 ### <a name="remarks"></a>Notes  
  La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position est accessible à partir de la première par incrémentation.  
   
- La complexité est linéaire : (`last` – `first`) – 1 comparaisons sont nécessaires pour une plage non vide.  
+ La complexité est linéaire : ( `last`  -  `first`) - 1 comparaisons sont requises pour une plage non vide.  
   
 ### <a name="example"></a>Exemple  
   
@@ -4115,7 +4039,7 @@ The smallest element in v1 under the mod_lesser
  binary predicate is: 0  
 ```  
   
-##  <a name="a-nameminmaxelementa--minmaxelement"></a><a name="minmax_element"></a>  minmax_element  
+##  <a name="minmax_element"></a>  minmax_element  
  Exécute le travail effectué par `min_element` et `max_element` au sein d’un même appel.  
   
 ```  
@@ -4162,7 +4086,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  Si la séquence n’est pas vide, la fonction effectue au maximum `3 * (``last` `-` `first` `- 1) / 2` comparaisons.  
   
-##  <a name="a-nameminmaxa--minmax"></a><a name="minmax"></a>  minmax  
+##  <a name="minmax"></a>  minmax  
  Compare deux paramètres d’entrée et les retourne sous forme de paire, du plus petit au plus grand.  
   
 ```  
@@ -4212,7 +4136,7 @@ template<class Type, class BinaryPredicate>
   
  La fonction effectue exactement une comparaison.  
   
-##  <a name="a-namemismatcha--mismatch"></a><a name="mismatch"></a>  mismatch  
+##  <a name="mismatch"></a>  mismatch  
  Compare deux plages, élément par élément, et recherche la première position où il y a une différence.  
   
  Utilisez les surcharges à double portée dans le code C++14, car les surcharges qui ne prennent qu'un seul itérateur pour la deuxième plage ne détecteront pas les différences si la deuxième plage est plus longue que la première et provoqueront un comportement non défini si la deuxième plage est plus courte que la première.  
@@ -4372,7 +4296,7 @@ Press a key
   
 ```  
   
-##  <a name="a-namealgmovea--ltalggt-move"></a><a name="alg_move"></a>  &lt;alg&gt; move  
+##  <a name="alg_move"></a>  &lt;alg&gt; move  
  Déplace les éléments associés à une plage spécifiée.  
   
 ```  
@@ -4394,10 +4318,10 @@ template<class InputIterator, class OutputIterator>
  `dest`  
  Itérateur de sortie qui doit contenir les éléments déplacés.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle évalue `*(``dest` `+ N) =` move `(*(` `first` `+ N)))` une fois pour chaque `N` de la plage `[0,` `last` `-` `first``)`, pour les valeurs strictement croissantes de `N` en commençant par la valeur la plus petite. Elle retourne ensuite `dest` `+ N`. Si `dest` et `first` désignent des régions de stockage, `dest` ne doit pas se trouver dans la plage `[` `first``,` `last``)`.  
+### <a name="remarks"></a>Remarques  
+ La fonction de modèle évalue `*(dest + N) = move(*(first + N))` une fois pour chaque `N` dans la plage `[0, last - first)`, pour les valeurs strictement croissantes de `N` commençant par la valeur la plus faible. Elle retourne ensuite `dest + N`. Si `dest` et `first` désignent des régions de stockage, `dest` ne doit pas être dans la plage `[first, last)`.  
   
-##  <a name="a-namemovebackwarda--movebackward"></a><a name="move_backward"></a>  move_backward  
+##  <a name="move_backward"></a>  move_backward  
  Déplace les éléments d'un itérateur vers un autre. Le déplacement commence par le dernier élément d'une plage spécifiée, et se termine par le premier élément de cette plage.  
   
 ```  
@@ -4419,12 +4343,12 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
  `destEnd`  
  Itérateur bidirectionnel se rapportant à la position située immédiatement après l'élément final dans la plage de destination.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle évalue `*(``destEnd` `- N - 1) =` `move``(*(``last` `- N - 1)))` une fois pour chaque `N` de la plage `[0,` `last` `-` `first``)`, pour les valeurs strictement croissantes de `N` en commençant par la valeur la plus petite. Elle retourne ensuite `destEnd` `- (``last` `-` `first``)`. Si `destEnd` et `first` désignent des régions de stockage, `destEnd` ne doit pas se trouver dans la plage `[` `first``,` `last``)`.  
+### <a name="remarks"></a>Remarques  
+ La fonction de modèle évalue `*(destEnd - N - 1) = move(*(last - N - 1))` une fois pour chaque `N` dans la plage `[0, last - first)`, pour les valeurs strictement croissantes de `N` commençant par la valeur la plus faible. Elle retourne ensuite `destEnd - (last - first)`. Si `destEnd` et `first` désignent des régions de stockage, `destEnd` ne doit pas être dans la plage `[first, last)`.  
   
  `move` et `move_backward` reviennent fonctionnellement à utiliser `copy` et `copy_backward` avec un itérateur move.  
   
-##  <a name="a-namenextpermutationa--nextpermutation"></a><a name="next_permutation"></a>  next_permutation  
+##  <a name="next_permutation"></a>  next_permutation  
  Réorganise les éléments d’une plage, de sorte que le tri d’origine soit remplacé par la prochaine permutation plus élevée d’un point de vue lexicographique (s’il en existe une). La notion de "prochaine" peut être définie à l’aide d’un prédicat binaire.  
   
 ```  
@@ -4454,7 +4378,7 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
   
  Le prédicat binaire par défaut est Inférieur à et les éléments de la plage doivent être comparables en termes d’infériorité pour s’assurer que la prochaine permutation est bien définie.  
   
- La complexité est linéaire avec au maximum (*last – first*)/2 échanges.  
+ La complexité est linéaire au maximum (* nom - prénom *) / 2 échange.  
   
 ### <a name="example"></a>Exemple  
   
@@ -4595,7 +4519,7 @@ After another next_permutation of vector v1,
  v1 =   ( -3 -2 -1 1 0 2 3 ).  
 ```  
   
-##  <a name="a-namenthelementa--nthelement"></a><a name="nth_element"></a>  nth_element  
+##  <a name="nth_element"></a>  nth_element  
  Partitionne une plage d’éléments, en recherchant le *n*-ième élément de la séquence dans la plage, de sorte que tous les éléments qui le précèdent sont inférieurs ou égaux et que tous les éléments qui le suivent sont supérieurs ou égaux.  
   
 ```  
@@ -4627,7 +4551,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
   
  Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’est inférieur à l’autre.  
   
- La moyenne d’une complexité de tri est linéaire par rapport à *last – first*.  
+ La moyenne d’une complexité de tri est linéaire par rapport à * nom - prénom *.  
   
 ### <a name="example"></a>Exemple  
   
@@ -4695,7 +4619,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namenoneofa--noneof"></a><a name="none_of"></a>  none_of  
+##  <a name="none_of"></a>  none_of  
  Retourne `true` lorsqu'une condition n'est remplie par aucun des éléments d'une plage spécifiée.  
   
 ```  
@@ -4716,10 +4640,10 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
 ### <a name="return-value"></a>Valeur de retour  
  Retourne `true` si la condition n’est pas détectée au moins une fois dans la plage spécifiée, `false` si la condition est détectée.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle retourne `true` uniquement si, pour certains `N` de la plage `[0,` `last` `-` `first``)`, le prédicat `comp``(*(` `first` `+ N))` est toujours `false`.  
+### <a name="remarks"></a>Remarques  
+ La fonction de modèle retourne `true` uniquement si, pour certaines `N` dans la plage `[0, last - first)`, le prédicat `comp(*(first + N))` est toujours `false`.  
   
-##  <a name="a-namepartialsorta--partialsort"></a><a name="partial_sort"></a>  partial_sort  
+##  <a name="partial_sort"></a>  partial_sort  
  Réorganise un nombre spécifié d’éléments plus petits au sein d’une plage, dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire.  
   
 ```  
@@ -4831,7 +4755,7 @@ Partially resorted (UDgreater) vector:
  v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )  
 ```  
   
-##  <a name="a-namepartialsortcopya--partialsortcopy"></a><a name="partial_sort_copy"></a>  partial_sort_copy  
+##  <a name="partial_sort_copy"></a>  partial_sort_copy  
  Copie les éléments d’une plage source dans une plage de destination. Les éléments sources sont triés par ordre croissant ou selon un autre prédicat binaire spécifié.  
   
 ```  
@@ -4952,7 +4876,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namepartitiona--partition"></a><a name="partition"></a>  partition  
+##  <a name="partition"></a>  partition  
  Répartit les éléments d’une plage en deux ensembles disjoints. Les éléments qui répondent à un prédicat unaire doivent précéder ceux qui n’y répondent pas.  
   
 ```  
@@ -4982,7 +4906,7 @@ template<class BidirectionalIterator, class Predicate>
   
  Les éléments *a* et *b* sont équivalents, mais pas nécessairement égaux si *Pr* (*a*, *b*) est false et *Pr* (*b*, *a*) est false, où *Pr* est le prédicat du paramètre spécifié. L’algorithme **partition** n’est pas stable et ne garantit pas que l’ordre relatif des éléments équivalents est conservé. L’algorithme **stable_partition** conserve cet ordre d’origine.  
   
- La complexité est linéaire et il existe (`last` – `first`) applications de `comp` et au maximum (`last` – `first`)/2 échanges.  
+ La complexité est linéaire : il existe ( `last`  -   `first`) les applications de `comp` et au maximum ( `last`  -   `first`) / 2 échange.  
   
 ### <a name="example"></a>Exemple  
   
@@ -5023,7 +4947,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namepartitioncopya--partitioncopy"></a><a name="partition_copy"></a>  partition_copy  
+##  <a name="partition_copy"></a>  partition_copy  
  Copie les éléments qui renvoient la valeur `true` dans une destination pour une condition donnée, et qui renvoient la valeur `false` dans une autre destination. Les éléments doivent provenir d'une plage spécifiée.  
   
 ```  
@@ -5054,10 +4978,10 @@ template<class InputIterator, class OutputIterator1, class OutputIterator2, clas
  `_Pred`  
  Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à vérifier. Un prédicat accepte un seul argument et retourne `true` ou `false`.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle copie chaque élément `X` de `[` `first``,` `last``)` dans `*``dest1``++` si `_Pred``(X)` a la valeur true, ou dans `*``dest2``++ if not`. Retourne `pair<OutputIterator1, OutputIterator2>(``dest1``,` `dest2``)`.  
+### <a name="remarks"></a>Remarques  
+ La fonction de modèle copie chaque élément `X` dans `[first,last)` à `*dest1++` si `_Pred(X)` a la valeur true, ou à `*dest2++` si ce n’est pas le cas. Il retourne `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.  
   
-##  <a name="a-namepartitionpointa--partitionpoint"></a><a name="partition_point"></a>  partition_point  
+##  <a name="partition_point"></a>  partition_point  
  Retourne le premier élément d'une plage donnée qui ne répond pas à une condition. Les éléments sont triés de sorte que ceux qui répondent à la condition précèdent ceux qui n'y répondent pas.  
   
 ```  
@@ -5082,10 +5006,10 @@ template<class ForwardIterator, class Predicate>
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un `ForwardIterator` qui référence le premier élément qui ne remplit pas la condition vérifiée par `comp`, ou retourne `last` aucun élément n’est trouvé.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle recherche le premier itérateur `it` de `[` `first``,``last``)` pour lequel `comp(*it)` est `false`. La séquence doit être ordonnée par `comp`.  
+### <a name="remarks"></a>Remarques  
+ La fonction de modèle recherche le premier itérateur `it` dans `[first, last)` pour lequel `comp(*it)` est `false`. La séquence doit être ordonnée par `comp`.  
   
-##  <a name="a-namepopheapa--popheap"></a><a name="pop_heap"></a>  pop_heap  
+##  <a name="pop_heap"></a>  pop_heap  
  Retire le plus grand élément du début du tas et le place à l'avant-dernière position de la plage, puis forme un nouveau tas à partir des éléments restants.  
   
 ```  
@@ -5122,7 +5046,7 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
   
  La plage qui exclut l’élément qui vient d’être ajouté à la fin doit être un tas.  
   
- La complexité est logarithmique et nécessite au maximum log (*last – first*) comparaisons.  
+ La complexité est logarithmique, nécessiter de journal au maximum (* nom - prénom *) les comparaisons.  
   
 ### <a name="example"></a>Exemple  
   
@@ -5186,7 +5110,7 @@ int main( )  {
 }  
 ```  
   
-##  <a name="a-nameprevpermutationa--prevpermutation"></a><a name="prev_permutation"></a>  prev_permutation  
+##  <a name="prev_permutation"></a>  prev_permutation  
  Réorganise les éléments d’une plage, de sorte que l’ordre d’origine est remplacé par la permutation précédente la plus élevée d’un point de vue lexicographique (s’il en existe une). Le sens de « précédente » peut être défini à l’aide d’un prédicat binaire.  
   
 ```  
@@ -5221,7 +5145,7 @@ template<class BidirectionalIterator, class BinaryPredicate>
   
  Le prédicat binaire par défaut est Inférieur à et les éléments de la plage doivent être comparables en termes d’infériorité pour s’assurer que la permutation précédente est bien définie.  
   
- La complexité est linéaire avec au maximum (`last` – `first`)/2 échanges.  
+ La complexité est linéaire avec au maximum ( `last`  -   `first`) / 2 échange.  
   
 ### <a name="example"></a>Exemple  
   
@@ -5357,7 +5281,7 @@ After another prev_permutation of vector v1,
  v1 =   ( -3 -2 0 2 -1 1 3 ).  
 ```  
   
-##  <a name="a-namepushheapa--pushheap"></a><a name="push_heap"></a>  push_heap  
+##  <a name="push_heap"></a>  push_heap  
  Ajoute un élément qui se trouve à la fin d'une plage à un tas existant, constitué des éléments précédents de la plage.  
   
 ```  
@@ -5394,7 +5318,7 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
   
  La plage qui exclut l’élément qui vient d’être ajouté à la fin doit être un tas.  
   
- La complexité est logarithmique et nécessite au maximum log (*last – first*) comparaisons.  
+ La complexité est logarithmique, nécessiter de journal au maximum ( *nom - prénom*) les comparaisons.  
   
 ### <a name="example"></a>Exemple  
   
@@ -5463,10 +5387,10 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namerandomshufflea--randomshuffle"></a><a name="random_shuffle"></a>  random_shuffle  
- La fonction std::random_shuffle() est déconseillée et remplacée par [std::shuffle()](../standard-library/algorithm-functions.md#std__shuffle). Pour plus d’informations et obtenir un exemple de code, consultez [\<random>](../standard-library/random.md) et la publication du site stackoverflow [Why are std::random_shuffle methods being deprecated in C++14?](http://go.microsoft.com/fwlink/?LinkId=397954) (Pourquoi les méthodes std::random_shuffle sont-elles déconseillées dans C++14 ?).  
+##  <a name="random_shuffle"></a>  random_shuffle  
+ La fonction std ::random_shuffle() est déconseillée et remplacée par [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Pour un exemple de code et plus d’informations, consultez [ \<aléatoire >](../standard-library/random.md) et la validation Stackoverflow [pourquoi sont les méthodes std::random_shuffle déconseillés dans C ++ 14 ?](http://go.microsoft.com/fwlink/?LinkId=397954).  
   
-##  <a name="a-nameremovea--remove"></a><a name="remove"></a>  remove  
+##  <a name="remove"></a>  remove  
  Élimine une valeur spécifiée d'une plage donnée sans modifier l'ordre des éléments restants, et retourne la fin d'une nouvelle plage exempte de la valeur spécifiée.  
   
 ```  
@@ -5495,7 +5419,7 @@ template<class ForwardIterator, class Type>
   
  L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
   
- La complexité est linéaire et il existe (`last` – `first`) comparaisons d’égalité.  
+ La complexité est linéaire ; Il existe ( `last`  -   `first`) les comparaisons d’égalité.  
   
  La [classe list](../standard-library/list-class.md) a une version de fonction membre **remove** plus efficace qui rétablit également les liens des pointeurs.  
   
@@ -5545,7 +5469,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-nameremovecopya--removecopy"></a><a name="remove_copy"></a>  remove_copy  
+##  <a name="remove_copy"></a>  remove_copy  
  Copie les éléments d'une plage source vers une plage de destination. Les éléments ayant une valeur spécifiée ne sont pas copiés. L'ordre des éléments restants n'est pas modifié et la fin d'une nouvelle plage de destination est retournée.  
   
 ```  
@@ -5579,7 +5503,7 @@ template<class InputIterator, class OutputIterator, class Type>
   
  L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
   
- La complexité est linéaire et il y a (`last` – `first`) comparaisons d’égalité et au maximum (`last` – `first`) attributions.  
+ La complexité est linéaire ; Il existe ( `last`  -   `first`) comparaisons d’égalité et au maximum ( `last`  -   `first`) affectations.  
   
 ### <a name="example"></a>Exemple  
   
@@ -5624,7 +5548,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameremovecopyifa--removecopyif"></a><a name="remove_copy_if"></a>  remove_copy_if  
+##  <a name="remove_copy_if"></a>  remove_copy_if  
  Copie les éléments d'une plage source vers une plage de destination. Les éléments répondant à un prédicat ne sont pas copiés. L'ordre des éléments restants n'est pas modifié et la fin d'une nouvelle plage de destination est retournée.  
   
 ```  
@@ -5658,7 +5582,7 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
   
  L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
   
- La complexité est linéaire et il y a (`last` – `first`) comparaisons d’égalité et au maximum (`last` – `first`) attributions.  
+ La complexité est linéaire : il existe ( `last`  -   `first`) comparaisons d’égalité et au maximum ( `last`  -   `first`) affectations.  
   
  Pour plus d’informations sur le comportement de ces fonctions, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md).  
   
@@ -5712,7 +5636,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameremoveifa--removeif"></a><a name="remove_if"></a>  remove_if  
+##  <a name="remove_if"></a>  remove_if  
  Élimine d’une plage donnée les éléments qui répondent à un prédicat, sans modifier l’ordre des éléments restants et en retournant la fin d’une nouvelle plage exempte de la valeur spécifiée.  
   
 ```  
@@ -5741,7 +5665,7 @@ template<class ForwardIterator, class Predicate>
   
  L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
   
- La complexité est linéaire, il existe (`last` – `first`) comparaisons d’égalité.  
+ La complexité est linéaire : il existe ( `last`  -   `first`) les comparaisons d’égalité.  
   
  La classe list a une version de fonction membre remove plus efficace qui rétablit les liens des pointeurs.  
   
@@ -5795,7 +5719,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplacea--replace"></a><a name="replace"></a>  replace  
+##  <a name="replace"></a>  replace  
  Examine tous les éléments d'une plage et les remplace s'ils correspondent à une valeur spécifiée.  
   
 ```  
@@ -5823,7 +5747,7 @@ void replace(ForwardIterator first, ForwardIterator last, const Type& _OldVal, c
   
  L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
   
- La complexité est linéaire, il y a (`last` – `first`) comparaisons d’égalité et au maximum (`last` – `first`) attributions de nouvelles valeurs.  
+ La complexité est linéaire ; Il existe ( `last`  -   `first`) comparaisons d’égalité et au maximum ( `last`  -   `first`) affectations de nouvelles valeurs.  
   
 ### <a name="example"></a>Exemple  
   
@@ -5863,7 +5787,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplacecopya--replacecopy"></a><a name="replace_copy"></a>  replace_copy  
+##  <a name="replace_copy"></a>  replace_copy  
  Examine tous les éléments d'une plage source et les remplace s'ils correspondent à une valeur spécifiée, tout en copiant le résultat dans une nouvelle plage de destination.  
   
 ```  
@@ -5903,7 +5827,7 @@ int main( ) {
   
  L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
   
- La complexité est linéaire, il y a (`last` – `first`) comparaisons d’égalité et au maximum (`last` – `first`) attributions de nouvelles valeurs.  
+ La complexité est linéaire : il existe ( `last`  -   `first`) comparaisons d’égalité et au maximum ( `last`  -   `first`) affectations de nouvelles valeurs.  
   
 ### <a name="example"></a>Exemple  
   
@@ -5962,7 +5886,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplacecopyifa--replacecopyif"></a><a name="replace_copy_if"></a>  replace_copy_if  
+##  <a name="replace_copy_if"></a>  replace_copy_if  
  Examine tous les éléments d'une plage source et les remplace s'ils répondent à un prédicat, tout en copiant le résultat dans une nouvelle plage de destination.  
   
 ```  
@@ -6002,7 +5926,7 @@ OutputIterator replace_copy_if(
   
  L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
   
- La complexité est linéaire, il y a (`last` – `first`) comparaisons d’égalité et au maximum (`last` – `first`) attributions de nouvelles valeurs.  
+ La complexité est linéaire ; Il existe ( `last`  -   `first`) comparaisons d’égalité et au maximum ( `last`  -   `first`) affectations de nouvelles valeurs.  
   
 ### <a name="example"></a>Exemple  
   
@@ -6068,7 +5992,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplaceifa--replaceif"></a><a name="replace_if"></a>  replace_if  
+##  <a name="replace_if"></a>  replace_if  
  Examine tous les éléments d’une plage et les remplace s’ils répondent à un prédicat spécifié.  
   
 ```  
@@ -6099,7 +6023,7 @@ void replace_if(ForwardIterator first, ForwardIterator last, Predicate pred, con
   
  L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
   
- La complexité est linéaire, il y a (`last` – `first`) comparaisons d’égalité et au maximum (`last` – `first`) attributions de nouvelles valeurs.  
+ La complexité est linéaire : il existe ( `last`  -   `first`) comparaisons d’égalité et au maximum ( `last`  -   `first`) affectations de nouvelles valeurs.  
   
 ### <a name="example"></a>Exemple  
   
@@ -6145,7 +6069,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereversea--reverse"></a><a name="reverse"></a>  reverse  
+##  <a name="reverse"></a>  reverse  
  Inverse l'ordre des éléments d'une plage.  
   
 ```  
@@ -6206,7 +6130,7 @@ The modified vector v1 with values reversed is:
  ( 9 8 7 6 5 4 3 2 1 0 ).  
 ```  
   
-##  <a name="a-namereversecopya--reversecopy"></a><a name="reverse_copy"></a>  reverse_copy  
+##  <a name="reverse_copy"></a>  reverse_copy  
  Inverse l'ordre des éléments d'une plage source, tout en les copiant dans une plage de destination.  
   
 ```  
@@ -6274,7 +6198,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namerotatea--rotate"></a><a name="rotate"></a>  rotate  
+##  <a name="rotate"></a>  rotate  
  Échange les éléments de deux plages adjacentes.  
   
 ```  
@@ -6296,7 +6220,7 @@ template<class ForwardIterator>
 ### <a name="remarks"></a>Notes  
  Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible à partir de la première par incrémentation.  
   
- La complexité est linéaire avec au maximum (`last` – `first`) échanges.  
+ La complexité est linéaire au maximum ( `last`  -   `first`) échange.  
   
 ### <a name="example"></a>Exemple  
   
@@ -6373,7 +6297,7 @@ After the rotation of a single deque element to the back,
  d1 is   ( 0 1 2 3 4 5 ).  
 ```  
   
-##  <a name="a-namerotatecopya--rotatecopy"></a><a name="rotate_copy"></a>  rotate_copy  
+##  <a name="rotate_copy"></a>  rotate_copy  
  Échange les éléments de deux plages adjacentes au sein d'une plage source et copie le résultat dans une plage de destination.  
   
 ```  
@@ -6405,7 +6329,7 @@ OutputIterator rotate_copy(
 ### <a name="remarks"></a>Notes  
  Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible à partir de la première par incrémentation.  
   
- La complexité est linéaire avec au maximum (`last` – `first`) échanges.  
+ La complexité est linéaire au maximum ( `last`  -   `first`) échange.  
   
 ### <a name="example"></a>Exemple  
   
@@ -6466,7 +6390,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namesearcha--search"></a><a name="search"></a>  search  
+##  <a name="search"></a>  search  
  Recherche la première occurrence d’une séquence au sein d’une plage cible dont les éléments sont égaux à ceux d’une séquence d’éléments donnée ou dont les éléments sont équivalents à ceux d’une séquence donnée, selon un prédicat binaire spécifié.  
   
 ```  
@@ -6611,7 +6535,7 @@ There is a sequence of elements in v1 that are equivalent
  and the first one begins at position 2.  
 ```  
   
-##  <a name="a-namesearchna--searchn"></a><a name="search_n"></a>  search_n  
+##  <a name="search_n"></a>  search_n  
  Recherche la première sous-séquence d’une plage dont un nombre spécifié d’éléments ont une valeur particulière ou une relation à cette valeur, selon un prédicat binaire spécifié.  
   
 ```  
@@ -6741,7 +6665,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
  predicate one_half in v1 and the first one begins at position 15.  
 ```  
   
-##  <a name="a-namesetdifferencea--setdifference"></a><a name="set_difference"></a>  set_difference  
+##  <a name="set_difference"></a>  set_difference  
  Regroupe tous les éléments qui appartiennent à une plage source triée, mais pas à une autre plage source triée, en une même plage de destination triée. Un critère de tri peut être spécifié par un prédicat binaire.  
   
 ```  
@@ -6797,7 +6721,7 @@ OutputIterator set_difference(
   
  Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double (de telle sorte qu’il y a plus d’éléments dans la première plage source que dans la seconde), la plage de destination contient le nombre d’occurrences supplémentaires de ces éléments que contient la première plage source par rapport à la deuxième.  
   
- La complexité de l’algorithme est linéaire avec au maximum 2 \* ( (*last1 – first1*) – (*last2 – first2*) ) – 1 comparaisons pour des plages sources non vides.  
+ La complexité de l’algorithme est linéaire avec au maximum 2 \* (( *last1 - first1*)-( *last2 - first2*)) - 1 comparaisons pour des plages sources non vides.  
   
 ### <a name="example"></a>Exemple  
   
@@ -6918,7 +6842,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namesetintersectiona--setintersection"></a><a name="set_intersection"></a>  set_intersection  
+##  <a name="set_intersection"></a>  set_intersection  
  Regroupe tous les éléments de deux plages sources triées au sein d'une même plage de destination triée. Le critère de tri peut être spécifié par un prédicat binaire.  
   
 ```  
@@ -6974,7 +6898,7 @@ OutputIterator set_intersection(
   
  Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient le nombre maximal de ces éléments qui figurent dans les deux plages sources.  
   
- La complexité de l’algorithme est linéaire avec au maximum 2 \* ( (*last1 – first1*) + (*last2 – first2*) ) – 1 comparaisons pour des plages sources non vides.  
+ La complexité de l’algorithme est linéaire avec au maximum 2 \* (( *last1 - first1*) + ( *last2 - first2*)) - 1 comparaisons pour des plages sources non vides.  
   
 ### <a name="example"></a>Exemple  
   
@@ -7089,7 +7013,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namesetsymmetricdifferencea--setsymmetricdifference"></a><a name="set_symmetric_difference"></a>  set_symmetric_difference  
+##  <a name="set_symmetric_difference"></a>  set_symmetric_difference  
  Regroupe tous les éléments qui appartiennent à l'une de deux plages sources triées (mais pas aux deux) au sein d'une même plage de destination triée. Le critère de tri peut être spécifié par un prédicat binaire.  
   
 ```  
@@ -7145,7 +7069,7 @@ OutputIterator set_symmetric_difference(
   
  Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient la valeur absolue du nombre d’occurrences supplémentaires de ces éléments que contient l’une des plages sources par rapport à la deuxième.  
   
- La complexité de l’algorithme est linéaire avec au maximum 2 \* ( (*last1 – first1*) – (*last2 – first2*) ) – 1 comparaisons pour des plages sources non vides.  
+ La complexité de l’algorithme est linéaire avec au maximum 2 \* ((*last1 - first1*)-(*last2 - first2*)) - 1 comparaisons pour des plages sources non vides.  
   
 ### <a name="example"></a>Exemple  
   
@@ -7266,7 +7190,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namesetuniona--setunion"></a><a name="set_union"></a>  set_union  
+##  <a name="set_union"></a>  set_union  
  Regroupe tous les éléments qui appartiennent au moins à l'une de deux plages sources triées au sein d'une même plage de destination triée. Le critère de tri peut être spécifié par un prédicat binaire.  
   
 ```  
@@ -7321,7 +7245,7 @@ OutputIterator set_union(
   
  Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient le nombre maximal de ces éléments qui figurent dans les deux plages sources.  
   
- La complexité de l’algorithme est linéaire avec au maximum 2 \* ( (*last1 – first1*) – (*last2 – first2*) ) – 1 comparaisons.  
+ La complexité de l’algorithme est linéaire avec au maximum 2 \* (( *last1 - first1*)-( *last2 - first2*)) - 1 comparaisons.  
   
 ### <a name="example"></a>Exemple  
   
@@ -7442,7 +7366,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namestdshufflea--stdshuffle"></a><a name="std__shuffle"></a>  std::shuffle  
+##  <a name="shuffle"></a>  std::shuffle  
  Lit de façon aléatoire (réorganise) les éléments pour une plage donnée à l'aide d'un générateur de nombres aléatoires.  
   
 ```  
@@ -7465,7 +7389,7 @@ void shuffle(RandomAccessIterator first,
 ### <a name="remarks"></a>Notes  
  Pour plus d’informations et pour obtenir un exemple de code qui utilise `shuffle()`, consultez [\<random>](../standard-library/random.md).  
   
-##  <a name="a-namesorta--sort"></a><a name="sort"></a>  sort  
+##  <a name="sort"></a>  sort  
  Réorganise les éléments d’une plage spécifiée, dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire.  
   
 ```  
@@ -7497,7 +7421,7 @@ template<class RandomAccessIterator, class Predicate>
   
  Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’est inférieur à l’autre. L’algorithme `sort` n’est pas stable et ne garantit pas que l’ordre relatif des éléments équivalents est conservé. L’algorithme `stable_sort` conserve cet ordre d’origine.  
   
- La moyenne d’une complexité de tri est *O*(*N* log *N*), où *N* =  *last – first*.  
+ La moyenne d’une complexité de tri est *O*( *N* journal *N*), où *N* =  *nom - prénom*.  
   
 ### <a name="example"></a>Exemple  
   
@@ -7567,7 +7491,7 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )  
 ```  
   
-##  <a name="a-namesortheapa--sortheap"></a><a name="sort_heap"></a>  sort_heap  
+##  <a name="sort_heap"></a>  sort_heap  
  Convertit un tas en une plage triée.  
   
 ```  
@@ -7608,7 +7532,7 @@ template<class RandomAccessIterator, class Predicate>
   
  La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
   
- La complexité est au maximum *N* log *N*, où *N* = (*last – first*).  
+ La complexité est au plus *N* journal *N*, où *N* = ( *nom - prénom*).  
   
 ### <a name="example"></a>Exemple  
   
@@ -7660,7 +7584,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namestablepartitiona--stablepartition"></a><a name="stable_partition"></a>  stable_partition  
+##  <a name="stable_partition"></a>  stable_partition  
  Classe les éléments d’une plage en deux ensembles disjoints. Les éléments qui répondent à un prédicat unaire doivent précéder ceux qui n’y répondent pas, et l’ordre relatif des éléments équivalents doit être conservé.  
   
 ```  
@@ -7735,7 +7659,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namestablesorta--stablesort"></a><a name="stable_sort"></a>  stable_sort  
+##  <a name="stable_sort"></a>  stable_sort  
  Classe les éléments d’une plage spécifiée dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire, et conserve l’ordre relatif des éléments équivalents.  
   
 ```  
@@ -7765,7 +7689,7 @@ void stable_sort(
   
  Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’est inférieur à l’autre. L’algorithme **sort** est stable et garantit que l’ordre relatif des éléments équivalents est conservé.  
   
- La complexité d’exécution de `stable_sort` dépend de la quantité de mémoire disponible, mais dans le meilleur des cas (si la mémoire est suffisante) la complexité est *O*(*N* log *N*) et dans le pire des cas, elle est *O*(*N* (log *N*)&2;), où *N* =  *last – first.* En règle générale, l’algorithme **sort** est beaucoup plus rapide que `stable_sort`.  
+ La complexité de l’exécution de `stable_sort` dépend de la quantité de mémoire disponible, mais le meilleur cas (Si suffisamment de mémoire) est *O*( *N* journal *N*) et le pire des cas est *O*( *N* (journal *N* ) 2), où *N* =  *nom - prénom.* En règle générale, l’algorithme **sort** est beaucoup plus rapide que `stable_sort`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -7834,7 +7758,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )  
 ```  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  Le premier remplacement échange les valeurs de deux objets. Le deuxième remplacement échange les valeurs de deux tableaux d’objets.  
   
 ```  
@@ -7915,7 +7839,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).  
 ```  
   
-##  <a name="a-nameswaprangesa--swapranges"></a><a name="swap_ranges"></a>  swap_ranges  
+##  <a name="swap_ranges"></a>  swap_ranges  
  Échange les éléments d'une plage avec ceux d'une autre plage de taille égale.  
   
 ```  
@@ -7943,7 +7867,7 @@ ForwardIterator2 swap_ranges(
 ### <a name="remarks"></a>Notes  
  Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position est accessible à partir de la première par incrémentation. La deuxième plage doit être aussi grande que la première.  
   
- La complexité est linéaire avec `last1` – `first1` échanges. Si les éléments des conteneurs du même type sont échangés, la fonction membre `swap` de ce conteneur doit être utilisée, car la fonction membre a généralement une complexité constante.  
+ La complexité est linéaire avec `last1`  -   `first1` les permutations. Si les éléments des conteneurs du même type sont échangés, la fonction membre `swap` de ce conteneur doit être utilisée, car la fonction membre a généralement une complexité constante.  
   
 ### <a name="example"></a>Exemple  
   
@@ -8006,7 +7930,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).  
 ```  
   
-##  <a name="a-nametransforma--transform"></a><a name="transform"></a>  transform  
+##  <a name="transform"></a>  transform  
  Applique un objet de fonction spécifié à chaque élément d'une plage source ou à une paire d'éléments de deux plages sources, et copie les valeurs de retour de l'objet de fonction dans une plage de destination.  
   
 ```  
@@ -8049,9 +7973,9 @@ OutputIterator transform(
 ### <a name="remarks"></a>Notes  
  Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position doit être accessible à partir de la première par incrémentation. La plage de destination doit être suffisamment grande pour contenir la plage source transformée.  
   
- Si `result` est égal à `first1` dans la première version de l’algorithme *,*, les plages source et de destination doivent être identiques et la séquence est modifiée sur place. Toutefois, le `result` peut ne pas cibler une position de la plage [`first1` +1, `last1`).  
+ Si `result` a la valeur `first1` dans la première version de l’algorithme, puis les plages source et de destination doit être le même et la séquence sera modifiée en place. Mais le `result` ne peut pas adresser une position dans la plage [`first1` + 1, `last1`).  
   
- La complexité est linéaire avec au maximum (`last1` – `first1`) comparaisons.  
+ La complexité est linéaire au maximum (`last1` -  `first1`) les comparaisons.  
   
 ### <a name="example"></a>Exemple  
   
@@ -8140,7 +8064,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
  v3 = ( 320 180 80 20 0 20 80 ).  
 ```  
   
-##  <a name="a-nameuniquea--unique"></a><a name="unique"></a>  unique  
+##  <a name="unique"></a>  unique  
  Supprime les éléments en double adjacents dans une plage spécifiée.  
   
 ```  
@@ -8177,7 +8101,7 @@ template<class ForwardIterator, class Predicate>
   
  La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation. Le nombre d’éléments de la séquence n’est pas modifié par l’algorithme **unique** et les éléments situés après la fin de la séquence modifiée peuvent être déréférencés, mais ne sont pas spécifiés.  
   
- La complexité est linéaire et nécessite (`last` – `first`) – 1 comparaisons.  
+ La complexité est linéaire, nécessitant ( `last`  -   `first`) - 1 comparaisons.  
   
  La classe list fournit une fonction membre « unique » plus efficace qui peut donner de meilleurs résultats.  
   
@@ -8270,7 +8194,7 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).  
 ```  
   
-##  <a name="a-nameuniquecopya--uniquecopy"></a><a name="unique_copy"></a>  unique_copy  
+##  <a name="unique_copy"></a>  unique_copy  
  Copie les éléments d'une plage source dans une plage de destination, à l'exception des éléments en double adjacents.  
   
 ```  
@@ -8310,7 +8234,7 @@ OutputIterator unique_copy( InputIterator first,
   
  Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans une séquence, la dernière position est accessible depuis la première au moyen d’une incrémentation.  
   
- La complexité est linéaire et nécessite (`last` – `first`) comparaisons.  
+ La complexité est linéaire, nécessitant ( `last`  -   `first`) les comparaisons.  
   
 ### <a name="example"></a>Exemple  
   
@@ -8384,7 +8308,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameupperbounda--upperbound"></a><a name="upper_bound"></a>  upper_bound  
+##  <a name="upper_bound"></a>  upper_bound  
  Recherche la position du premier élément d’une plage triée dont la valeur est supérieure à une valeur spécifiée. Le critère de tri peut être spécifié par un prédicat binaire.  
   
 ```  

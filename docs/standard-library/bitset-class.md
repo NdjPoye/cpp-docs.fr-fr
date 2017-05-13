@@ -48,10 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 441f493d8ada3ef232f60d917dc3f95812ba9114
-ms.openlocfilehash: 2e78e22c04bac149694a4c4f860074296c7b37fc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8e3518fb40cdd3e8bdd14b5ed64f4cc6dbcb1058
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="bitset-class"></a>bitset, classe
@@ -77,59 +78,59 @@ class bitset
   
 |||  
 |-|-|  
-|[bitset](#bitset__bitset)|Construit un objet de la classe `bitset\<N>` et initialise les bits à zéro, à une valeur spécifiée ou à des valeurs obtenues auprès des caractères d'une chaîne.|  
+|[bitset](#bitset)|Construit un objet de la classe `bitset\<N>` et initialise les bits à zéro, à une valeur spécifiée ou à des valeurs obtenues auprès des caractères d'une chaîne.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[element_type](#bitset__element_type)|Type qui est un synonyme du type de données `bool` et qui peut être utilisé pour référencer les bits des éléments d'un `bitset`.|  
+|[element_type](#element_type)|Type qui est un synonyme du type de données `bool` et qui peut être utilisé pour référencer les bits des éléments d'un `bitset`.|  
   
 ### <a name="member-functions"></a>Fonctions membres  
   
 |||  
 |-|-|  
-|[all](#bitset__all)|Teste tous les bits de ce `bitset` pour déterminer s'ils sont tous définis sur `true`.|  
-|[any](#bitset__any)|La fonction membre teste si des bits de la séquence sont définis sur 1.|  
-|[count](#bitset__count)|La fonction membre retourne le nombre de bits définis dans la séquence de bits.|  
-|[flip](#bitset__flip)|Inverse la valeur de tous les bits d’un `bitset` ou inverse un seul bit à une position spécifiée.|  
-|[none](#bitset__none)|Teste si aucun bit n'a été défini sur 1 dans un objet `bitset`.|  
-|[reset](#bitset__reset)|Réinitialise tous les bits d'un `bitset` à 0 ou réinitialise à 0 un bit à une position spécifiée.|  
-|[set](#bitset__set)|Définit tous les bits d'un `bitset` sur 1 ou définit sur 1 un bit à une position spécifiée.|  
-|[size](#bitset__size)|Retourne le nombre de bits d'un objet `bitset`.|  
-|[test](#bitset__test)|Teste si le bit à une position spécifiée d'un `bitset` est défini sur 1.|  
-|[to_string](#bitset__to_string)|Convertit un objet `bitset` en une représentation sous forme de chaîne.|  
-|[to_ullong](#bitset__to_ullong)|Retourne la somme des valeurs des bits d'un `bitset` sous forme de `unsigned long long`.|  
-|[to_ulong](#bitset__to_ulong)|Convertit un objet `bitset` en un `unsigned long` qui générerait la séquence de bits contenue s'il était utilisé pour initialiser le `bitset`.|  
+|[all](#all)|Teste tous les bits de ce `bitset` pour déterminer s'ils sont tous définis sur `true`.|  
+|[any](#any)|La fonction membre teste si des bits de la séquence sont définis sur 1.|  
+|[count](#count)|La fonction membre retourne le nombre de bits définis dans la séquence de bits.|  
+|[flip](#flip)|Inverse la valeur de tous les bits d’un `bitset` ou inverse un seul bit à une position spécifiée.|  
+|[none](#none)|Teste si aucun bit n'a été défini sur 1 dans un objet `bitset`.|  
+|[reset](#reset)|Réinitialise tous les bits d'un `bitset` à 0 ou réinitialise à 0 un bit à une position spécifiée.|  
+|[set](#set)|Définit tous les bits d'un `bitset` sur 1 ou définit sur 1 un bit à une position spécifiée.|  
+|[size](#size)|Retourne le nombre de bits d'un objet `bitset`.|  
+|[test](#test)|Teste si le bit à une position spécifiée d'un `bitset` est défini sur 1.|  
+|[to_string](#to_string)|Convertit un objet `bitset` en une représentation sous forme de chaîne.|  
+|[to_ullong](#to_ullong)|Retourne la somme des valeurs des bits d'un `bitset` sous forme de `unsigned long long`.|  
+|[to_ulong](#to_ulong)|Convertit un objet `bitset` en un `unsigned long` qui générerait la séquence de bits contenue s'il était utilisé pour initialiser le `bitset`.|  
   
 ### <a name="member-classes"></a>Classes membres  
   
 |||  
 |-|-|  
-|[reference](#bitset__reference)|Classe proxy qui fournit des références aux bits contenus dans un `bitset` et qui est utilisée pour accéder aux bits individuels et pour s'en servir comme une classe d'assistance pour l'opérateur `operator[]` de la classe `bitset`.|  
+|[reference](#reference)|Classe proxy qui fournit des références aux bits contenus dans un `bitset` et qui est utilisée pour accéder aux bits individuels et pour s'en servir comme une classe d'assistance pour l'opérateur `operator[]` de la classe `bitset`.|  
   
 ### <a name="operators"></a>Opérateurs  
   
 |||  
 |-|-|  
-|[operator!=](#bitset__operator_neq)|Teste l'inégalité d'un `bitset` cible avec un `bitset` spécifié.|  
-|[operator&=](#bitset__operator_and_eq)|Effectue une combinaison au niveau du bit de bitsets avec l'opération `AND` logique.|  
-|[operator<<](#bitset__operator_lshift)|Décale les bits d'un `bitset` vers la gauche d'un nombre spécifié de positions et retourne le résultat dans un nouveau `bitset`.|  
-|[operator<<=](#bitset__operator_lshift_eq)|Décale les bits d'un `bitset` vers la gauche d'un nombre spécifié de positions et retourne le résultat dans le `bitset` ciblé.|  
-|[operator==](#bitset__operator_eq_eq)|Teste l'égalité d'un `bitset` cible avec un `bitset` spécifié.|  
-|[operator>>](#bitset__operator_rshift)|Décale les bits d'un `bitset` vers la droite d'un nombre spécifié de positions et retourne le résultat dans un nouveau `bitset`.|  
-|[operator>>=](#bitset__operator_rshift_eq)|Décale les bits d'un `bitset` vers la droite d'un nombre spécifié de positions et retourne le résultat dans le `bitset` ciblé.|  
-|[operator&#91;&#93;](#bitset__operator_at)|Retourne une référence à un bit à une position spécifiée d'un `bitset` si le `bitset` est modifiable ; sinon, retourne la valeur du bit à cette position.|  
-|[operator^=](#bitset__operator_xor_eq)|Effectue une combinaison au niveau du bit de bitsets avec l'opération `OR` exclusive.|  
-|[operator&#124;=](#bitset__operator_or_eq')|Effectue une combinaison au niveau du bit de bitsets avec l'opération `OR` inclusive.|  
-|[operator~](#bitset__operator_dtor)|Inverse tous les bits d’un `bitset` cible et retourne le résultat.|  
+|[operator!=](#op_neq)|Teste l'inégalité d'un `bitset` cible avec un `bitset` spécifié.|  
+|[operator&=](#op_and_eq)|Effectue une combinaison au niveau du bit de bitsets avec l'opération `AND` logique.|  
+|[operator<<](#op_lshift)|Décale les bits d'un `bitset` vers la gauche d'un nombre spécifié de positions et retourne le résultat dans un nouveau `bitset`.|  
+|[operator<<=](#op_lshift_eq)|Décale les bits d'un `bitset` vers la gauche d'un nombre spécifié de positions et retourne le résultat dans le `bitset` ciblé.|  
+|[operator==](#op_eq_eq)|Teste l'égalité d'un `bitset` cible avec un `bitset` spécifié.|  
+|[operator>>](#op_rshift)|Décale les bits d'un `bitset` vers la droite d'un nombre spécifié de positions et retourne le résultat dans un nouveau `bitset`.|  
+|[operator>>=](#op_rshift_eq)|Décale les bits d'un `bitset` vers la droite d'un nombre spécifié de positions et retourne le résultat dans le `bitset` ciblé.|  
+|[operator&#91;&#93;](#op_at)|Retourne une référence à un bit à une position spécifiée d'un `bitset` si le `bitset` est modifiable ; sinon, retourne la valeur du bit à cette position.|  
+|[operator^=](#op_xor_eq)|Effectue une combinaison au niveau du bit de bitsets avec l'opération `OR` exclusive.|  
+|[operator&#124;=](#op_or_eq')|Effectue une combinaison au niveau du bit de bitsets avec l'opération `OR` inclusive.|  
+|[operator~](#op_dtor)|Inverse tous les bits d’un `bitset` cible et retourne le résultat.|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** \<bitset>  
   
  **Espace de noms :** std  
   
-##  <a name="bitset__all"></a>  bitset::all  
+##  <a name="all"></a>  bitset::all  
  Teste tous les bits de ce bitset pour déterminer s'ils ont la valeur true.  
   
 ```  
@@ -139,7 +140,7 @@ bool all() const;
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si tous les bits de ce bitset ont la valeur true. Retourne **false** si un ou plusieurs bits ont la valeur false.  
   
-##  <a name="bitset__any"></a>  bitset::any  
+##  <a name="any"></a>  bitset::any  
  Vérifie si des bits de la séquence sont définis sur 1.  
   
 ```  
@@ -200,7 +201,7 @@ The reset bitset is: ( 00000 )
 None of the bits in bitset b1 are set to 1.  
 ```  
   
-##  <a name="bitset__bitset"></a>  bitset::bitset  
+##  <a name="bitset"></a>  bitset::bitset  
  Construit un objet de la classe `bitset\<N>` et initialise les bits avec la valeur zéro, une valeur spécifiée ou des valeurs obtenues à partir des caractères d’une chaîne.  
   
 ```  
@@ -342,7 +343,7 @@ The set of bits in bitset<11> b6( bitval5, 3, 5 ) is ( 00000010011 ).
 The set of bits in bitset<9> b7( bitval, 2 ) is ( 110011011 ).  
 ```  
   
-##  <a name="bitset__count"></a>  bitset::count  
+##  <a name="count"></a>  bitset::count  
  Retourne le nombre de bits définis dans la séquence de bits.  
   
 ```  
@@ -397,7 +398,7 @@ The collection of flipped bits in the modified bitset is: ( 11011 )
 The number of bits in the bitset set to 1 is: 4.  
 ```  
   
-##  <a name="bitset__element_type"></a>  bitset::element_type  
+##  <a name="element_type"></a>  bitset::element_type  
  Type qui est un synonyme du type de données `bool` et qui peut être utilisé pour référencer les bits des éléments d’un bitset.  
   
 ```  
@@ -452,7 +453,7 @@ Bitset b1 modified by b1[2] = 1 is: ( 110 )
 The bit at position 2 of bitset b1has a value of 1.  
 ```  
   
-##  <a name="bitset__flip"></a>  bitset::flip  
+##  <a name="flip"></a>  bitset::flip  
  Inverse la valeur de tous les bits d’un bitset ou inverse un seul bit à une position spécifiée.  
   
 ```  
@@ -521,7 +522,7 @@ After flipping the fourth bit, the bitset becomes: ( 10001 )
 11111  The bit flipped is in position 4.  
 ```  
   
-##  <a name="bitset__none"></a>  bitset::none  
+##  <a name="none"></a>  bitset::none  
  Vérifie si aucun bit n’a été défini sur 1 dans un objet bitset.  
   
 ```  
@@ -576,7 +577,7 @@ At least one of the bits in bitset b1 is set to 1.
 None of the bits in bitset b1 are set to 1.  
 ```  
   
-##  <a name="bitset__operator_neq"></a>  bitset::operator!=  
+##  <a name="op_neq"></a>  bitset::operator!=  
  Vérifie si un bitset cible n’est pas égal à un bitset spécifié.  
   
 ```  
@@ -634,7 +635,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.  
 ```  
   
-##  <a name="bitset__operator_and_eq"></a>  bitset::operator&amp;=  
+##  <a name="op_and_eq"></a>  bitset::operator&amp;=  
  Effectue une combinaison au niveau du bit de bitsets avec l’opération **AND** logique.  
   
 ```  
@@ -697,7 +698,7 @@ After bitwise AND combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
 
-##  <a name="bitset__operator_lshift"></a> bitset::operator\<\<    
+##  <a name="op_lshift"></a> bitset::operator\<\<    
   
 Décale les bits d’un bitset vers la gauche d’un nombre spécifié de positions et retourne le résultat dans un nouveau bitset.  
   
@@ -713,7 +714,7 @@ bitset\<N> operator<<(size_t _Pos) const;
  Bitset modifié avec les bits décalés vers la gauche du nombre nécessaire de positions.  
   
 ### <a name="remarks"></a>Notes  
- La fonction d’opérateur membre retourne **bitset**( **\*this**) **<<= pos,** où [<<=](#bitset__operator_lshift_eq) décale les bits d’un bitset vers la gauche d’un nombre spécifié de positions et retourne le résultat dans le bitset ciblé.  
+ La fonction d’opérateur membre retourne **bitset**( **\*this**) **<<= pos,** où [<<=](#op_lshift_eq) décale les bits d’un bitset vers la gauche d’un nombre spécifié de positions et retourne le résultat dans le bitset ciblé.  
   
 ### <a name="example"></a>Exemple  
   
@@ -746,7 +747,7 @@ int main( )
 }  
 ```  
   
-##  <a name="bitset__operator_lshift_eq"></a>  bitset::operator&lt;&lt;=  
+##  <a name="op_lshift_eq"></a>  bitset::operator&lt;&lt;=  
  Décale les bits d’un bitset vers la gauche d’un nombre spécifié de positions et retourne le résultat dans le bitset ciblé.  
   
 ```  
@@ -789,7 +790,7 @@ After shifting the bits 2 positions to the left,
  the target bitset b1 becomes: ( 11100 ).  
 ```  
   
-##  <a name="bitset__operator_eq_eq"></a>  bitset::operator==  
+##  <a name="op_eq_eq"></a>  bitset::operator==  
  Vérifie si un bitset cible est égal à un bitset spécifié.  
   
 ```  
@@ -846,7 +847,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.  
 ```  
   
-##  <a name="bitset__operator_rshift"></a>  bitset::operator&gt;&gt;  
+##  <a name="op_rshift"></a>  bitset::operator&gt;&gt;  
  Décale les bits d’un bitset vers la droite d’un nombre spécifié de positions et retourne le résultat dans un nouveau bitset.  
   
 ```  
@@ -896,7 +897,7 @@ After shifting the bits 1 position to the right,
  the bitset b3 is: ( 01110 ).  
 ```  
   
-##  <a name="bitset__operator_rshift_eq"></a>  bitset::operator&gt;&gt;=  
+##  <a name="op_rshift_eq"></a>  bitset::operator&gt;&gt;=  
  Décale les bits d’un bitset vers la droite d’un nombre spécifié de positions et retourne le résultat dans le bitset ciblé.  
   
 ```  
@@ -940,7 +941,7 @@ After shifting the bits 2 positions to the right,
  the target bitset b1 becomes: ( 00111 ).  
 ```  
   
-##  <a name="bitset__operator_at"></a>  bitset::operator[]  
+##  <a name="op_at"></a>  bitset::operator[]  
  Retourne une référence à un bit à une position spécifiée d’un bitset si le bitset est modifiable ; sinon, retourne la valeur du bit à cette position.  
   
 ```  
@@ -981,7 +982,7 @@ int main( )
 }  
 ```  
   
-##  <a name="bitset__operator_xor_eq"></a>  bitset::operator^=  
+##  <a name="op_xor_eq"></a>  bitset::operator^=  
  Effectue une combinaison au niveau du bit de bitsets avec l'opération `OR` exclusive.  
   
 ```  
@@ -1043,7 +1044,7 @@ After bitwise exclusive OR combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
   
-##  <a name="bitset__operator_or_eq"></a>  bitset::operator&#124;=  
+##  <a name="op_or_eq"></a>  bitset::operator&#124;=  
  Effectue une combinaison au niveau du bit de bitsets avec l'opération `OR` inclusive.  
   
 ```  
@@ -1106,7 +1107,7 @@ After bitwise inclusive OR combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
   
-##  <a name="bitset__operator_dtor"></a>  bitset::operator~  
+##  <a name="op_dtor"></a>  bitset::operator~  
  Inverse tous les bits d’un bitset cible et retourne le résultat.  
   
 ```  
@@ -1149,7 +1150,7 @@ Bitset b2 = ~b1 is: ( 11000 ).
 Bitset b3 = b1.flip( ) is: ( 11000 ).  
 ```  
   
-##  <a name="bitset__reference"></a>  bitset::reference  
+##  <a name="reference"></a>  bitset::reference  
  Classe proxy qui fournit des références aux bits contenus dans un bitset et est utilisée pour accéder aux bits individuels et pour s’en servir comme classe d’assistance pour `operator[]` de la classe bitset.  
   
 ```  
@@ -1267,7 +1268,7 @@ After flipping the value of the bit at position 4 in bitset b2,
 After a second flip, the value of the position 4 bit in b2 is now: 1.  
 ```  
   
-##  <a name="bitset__reset"></a>  bitset::reset  
+##  <a name="reset"></a>  bitset::reset  
  Redéfinit tous les bits d’un bitset sur 0 ou redéfinit sur 0 un bit à une position spécifiée.  
   
 ```  
@@ -1323,7 +1324,7 @@ The collecion of bits obtained from resetting all
  the elements of the bitset b1 is: ( 00000 )  
 ```  
   
-##  <a name="bitset__set"></a>  bitset::set  
+##  <a name="set"></a>  bitset::set  
  Définit tous les bits d’un bitset sur 1 ou définit sur 1 un bit à une position spécifiée.  
   
 ```   
@@ -1385,7 +1386,7 @@ The collecion of bits obtained from setting all the
  elements of the bitset b1 is: ( 11111 )  
 ```  
   
-##  <a name="bitset__size"></a>  bitset::size  
+##  <a name="size"></a>  bitset::size  
  Retourne le nombre de bits dans un objet bitset.  
   
 ```  
@@ -1426,7 +1427,7 @@ The set of bits in bitset<5> b1( 6 ) is: ( 00110 )
 The number of bits in bitset b1 is: 5.  
 ```  
   
-##  <a name="bitset__test"></a>  bitset::test  
+##  <a name="test"></a>  bitset::test  
  Vérifie si le bit à une position spécifiée d’un bitset est défini sur 1.  
   
 ```  

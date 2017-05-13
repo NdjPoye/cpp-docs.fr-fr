@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 649c3d34e1ebcfc7af2fa3ef0b500dc1f630a967
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 930ef18229737fee03d03308c45f5ffb3615cdcd
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="cabs"></a>_cabs
@@ -80,7 +81,7 @@ double _cabs(
  `_cabs` retourne la valeur absolue de son argument en cas de réussite. En cas de dépassement, `_cabs` retourne `HUGE_VAL` et définit `errno` sur `ERANGE`. Vous pouvez modifier la gestion des erreurs avec [_matherr](../../c-runtime-library/reference/matherr.md).  
   
 ## <a name="remarks"></a>Notes  
- La fonction `_cabs` calcule la valeur absolue d’un nombre complexe, qui doit être une structure de type [_complex](../../c-runtime-library/standard-types.md). La structure `z` se compose d’un composant réel `x` et d’un composant imaginaire `y`. Un appel à `_cabs` génère une valeur équivalente à celle de l’expression `sqrt`(`z.x``*``z.x``+``z.y` * `z.y`).  
+ La fonction `_cabs` calcule la valeur absolue d’un nombre complexe, qui doit être une structure de type [_complex](../../c-runtime-library/standard-types.md). La structure `z` se compose d’un composant réel `x` et d’un composant imaginaire `y`. Un appel à `_cabs` génère une valeur équivalente à celle de l’expression `sqrt( z.x * z.x + z.y * z.y )`.  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -114,9 +115,6 @@ int main( void )
 ```Output  
 The absolute value of 3.000000 + 4.000000i is 5.000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   

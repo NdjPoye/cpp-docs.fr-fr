@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 565c3deaa98b4a01d02e5e63767de2beecd5a1bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3458390f8e6dcaee229346c66d569a5486ae74c4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
@@ -60,19 +61,19 @@ Définit la classe de modèle de conteneur `array` et plusieurs modèles de pris
   
 |||  
 |-|-|  
-|[operator==](../standard-library/array-operators.md#operator_eq_eq)|comparaison de tableaux, égal à|  
-|[operator!=](../standard-library/array-operators.md#operator_neq)|comparaison de tableaux, non égal à|  
-|[operator\<](../standard-library/array-operators.md#operator_lt_)|comparaison de tableaux, inférieur à|  
-|[operator>=](../standard-library/array-operators.md#operator_gt__eq)|comparaison de tableaux, supérieur ou égal à|  
-|[operator>](../standard-library/array-operators.md#operator_gt_)|comparaison de tableaux, supérieur à|  
-|[operator<=](../standard-library/array-operators.md#operator_lt__eq)|comparaison de tableaux, inférieur ou égal à|  
+|[operator==](../standard-library/array-operators.md#op_eq_eq)|comparaison de tableaux, égal à|  
+|[operator!=](../standard-library/array-operators.md#op_neq)|comparaison de tableaux, non égal à|  
+|[operator\<](../standard-library/array-operators.md#op_lt)|comparaison de tableaux, inférieur à|  
+|[operator>=](../standard-library/array-operators.md#op_gt_eq)|comparaison de tableaux, supérieur ou égal à|  
+|[operator>](../standard-library/array-operators.md#op_gt)|comparaison de tableaux, supérieur à|  
+|[operator<=](../standard-library/array-operators.md#op_lt_eq)|comparaison de tableaux, inférieur ou égal à|  
   
 ### <a name="functions"></a>Fonctions  
   
 |||  
 |-|-|  
-|[get](../standard-library/array-functions.md#get_function)|Obtenir l’élément de tableau spécifié.|  
-|[swap](../standard-library/array-functions.md#swap_function)|Échange le contenu d’un tableau avec celui d’un autre tableau.|  
+|[get](../standard-library/array-functions.md#get)|Obtenir l’élément de tableau spécifié.|  
+|[swap](../standard-library/array-functions.md#swap)|Échange le contenu d’un tableau avec celui d’un autre tableau.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [\<tuple>](../standard-library/tuple.md)   

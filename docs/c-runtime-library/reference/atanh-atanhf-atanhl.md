@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8cda9bb597a24cc3e7988ba8ef4c4f8103861ea3
-ms.openlocfilehash: 3b559db7a8d8f8fbc0672d8d8a644579fd9e1ca8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4648fb28d20951b045abde39d0238de81a133f0c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
@@ -88,7 +89,7 @@ long double atanhl(
  Valeur à virgule flottante.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Les fonctions `atanh` retournent la tangente hyperbolique inverse (arc tangente hyperbolique) de `x`. Si `x` est supérieur à 1, ou inférieur à –1, `errno` a la valeur `EDOM` et le résultat est une valeur NaN silencieuse. Si `x` est égal à 1 ou -1, un infini positif ou négatif est retourné, respectivement, et `errno` a la valeur `ERANGE`.  
+ Les fonctions `atanh` retournent la tangente hyperbolique inverse (arc tangente hyperbolique) de `x`. Si `x` est supérieur à 1 ou inférieure à -1, `errno` a la valeur `EDOM` et le résultat est une valeur NaN silencieuse. Si `x` est égal à 1 ou -1, un infini positif ou négatif est retourné, respectivement, et `errno` a la valeur `ERANGE`.  
   
 |Entrée|Exception SEH|Exception `Matherr`|  
 |-----------|-------------------|-------------------------|  
@@ -133,9 +134,6 @@ int main( void )
 tanh( 0.785398 ) = 0.655794  
 atanh( 0.655794 ) = 0.785398  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   

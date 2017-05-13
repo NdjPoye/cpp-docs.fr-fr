@@ -51,10 +51,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 29b1ec185542bdec1fdb70c4c11842367e7ebf50
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c2586cdd836795a31e457edcba42292a6901ec6f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="alignedoffsetrecalloc"></a>_aligned_offset_recalloc
@@ -105,9 +106,6 @@ void * _aligned_offset_recalloc(
 |Routine|En-tête requis|  
 |-------------|---------------------|  
 |`_aligned_offset_recalloc`|\<malloc.h>|  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Alignement des données](../../c-runtime-library/data-alignment.md)   

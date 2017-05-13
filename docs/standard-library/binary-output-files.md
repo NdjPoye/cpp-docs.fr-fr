@@ -33,14 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: f566da8ea00f0a52db3539c81bb3d19d6fc9da99
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8968a47f9d957aa0873b5db78909a6b4ad66ea75
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="binary-output-files"></a>Fichiers de sortie binaires
-Les flux ont été conçus à l’origine pour le texte, par conséquent, le mode de sortie par défaut est le mode texte. En mode texte, le caractère de saut de ligne (hexadécimal 10) s’étend sur un retour chariot (16 bits uniquement). L’extension peut entraîner des problèmes, comme le montre ce qui suit :  
+Les flux ont été conçus à l’origine pour le texte, par conséquent, le mode de sortie par défaut est le mode texte. En mode texte, le caractère de saut de ligne (10 hexadécimal) se développe en un retour chariot (16 bits uniquement). L’extension peut entraîner des problèmes, comme le montre ce qui suit :  
   
 ```  
 // binary_output_files.cpp  
@@ -55,7 +56,7 @@ int main( )
 }  
 ```  
   
- Vous pouvez vous attendre à ce que ce programme génère la séquence d’octets {99, 0, 10, 0} ; au lieu de cela, il génère {99, 0, 13, 10, 0}, ce qui entraîne des problèmes pour un programme qui attend une entrée binaire. Si vous avez besoin d’une véritable sortie binaire, dans laquelle les caractères sont écrits sans traduction, vous pouvez spécifier une sortie binaire à l’aide de l’argument openmode du constructeur [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream__basic_ofstream) :  
+ Vous pouvez vous attendre à ce que ce programme génère la séquence d’octets {99, 0, 10, 0} ; au lieu de cela, il génère {99, 0, 13, 10, 0}, ce qui entraîne des problèmes pour un programme qui attend une entrée binaire. Si vous avez besoin d’une véritable sortie binaire, dans laquelle les caractères sont écrits sans traduction, vous pouvez spécifier une sortie binaire à l’aide de l’argument openmode du constructeur [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream) :  
   
 ```  
 // binary_output_files2.cpp  

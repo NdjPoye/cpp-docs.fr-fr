@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 399ee327dffdd3c223718e9fb2d36bbff0a74f81
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 5d3ff49236c53f484098cdc075a1d0d5379acb5f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
@@ -55,12 +56,12 @@ Définit la classe de modèle de conteneur deque et plusieurs modèles de prise 
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/deque-operators.md#operator_neq)|Teste si l'objet deque situé à gauche de l'opérateur n'est pas égal à l'objet deque situé à droite.|  
-|[operator<](../standard-library/deque-operators.md#operator_lt_)|Teste si l'objet deque situé à gauche de l'opérateur est inférieur à l'objet deque situé à droite.|  
-|[operator\<=](../standard-library/deque-operators.md#operator_lt__eq)|Teste si l'objet deque situé à gauche de l'opérateur est inférieur ou égal à l'objet deque situé à droite.|  
-|[operator==](../standard-library/deque-operators.md#operator_eq_eq)|Teste si l'objet deque situé à gauche de l'opérateur est égal à l'objet deque situé à droite.|  
-|[operator>](../standard-library/deque-operators.md#operator_gt_)|Teste si l'objet deque situé à gauche de l'opérateur est supérieur à l'objet deque situé à droite.|  
-|[operator>=](../standard-library/deque-operators.md#operator_gt__eq)|Teste si l'objet deque situé à gauche de l'opérateur est supérieur ou égal à l'objet deque situé à droite.|  
+|[operator!=](../standard-library/deque-operators.md#op_neq)|Teste si l'objet deque situé à gauche de l'opérateur n'est pas égal à l'objet deque situé à droite.|  
+|[operator<](../standard-library/deque-operators.md#op_lt)|Teste si l'objet deque situé à gauche de l'opérateur est inférieur à l'objet deque situé à droite.|  
+|[operator\<=](../standard-library/deque-operators.md#op_gt_eq)|Teste si l'objet deque situé à gauche de l'opérateur est inférieur ou égal à l'objet deque situé à droite.|  
+|[operator==](../standard-library/deque-operators.md#op_eq_eq)|Teste si l'objet deque situé à gauche de l'opérateur est égal à l'objet deque situé à droite.|  
+|[operator>](../standard-library/deque-operators.md#op_gt)|Teste si l'objet deque situé à gauche de l'opérateur est supérieur à l'objet deque situé à droite.|  
+|[operator>=](../standard-library/deque-operators.md#op_gt_eq)|Teste si l'objet deque situé à gauche de l'opérateur est supérieur ou égal à l'objet deque situé à droite.|  
   
 ### <a name="functions"></a>Fonctions  
   

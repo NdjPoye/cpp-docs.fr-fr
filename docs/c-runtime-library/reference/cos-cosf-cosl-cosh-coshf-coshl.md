@@ -68,10 +68,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7b0107b94853080f1c6adfa114a7a207dde7b36f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f1fb949ba33299a8d18c41341b5fd76a776ee387
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cos-cosf-cosl-cosh-coshf-coshl"></a>cos, cosf, cosl, cosh, coshf, coshl
@@ -117,11 +118,11 @@ long double coshl(
  Angle en radians.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Cosinus ou cosinus hyperbolique de `x`. Si `x` est supérieur ou égal à 263 ou inférieur ou égal à −263, le résultat d’un appel à `cos`, `cosf` ou `cosl` perd du sens.  
+ Cosinus ou cosinus hyperbolique de `x`. Si `x` est supérieur ou égal à 263, ou inférieur ou égal à -263, une perte de crédibilité du résultat d’un appel à `cos`, `cosf`, ou `cosl` se produit.  
   
  Par défaut, si le résultat est trop grand dans un appel `cosh`, `coshf` ou `coshl`, la fonction retourne `HUGE_VAL` et définit `errno` sur `ERANGE`.  
   
-|Entrée|Exception SEH|Exception Matherr|  
+|Entrée|Exception SEH|Exception{b> <b}Matherr|  
 |-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|aucun|`_DOMAIN`|  
 |± ∞ (`cosf`, `cos`, `cosl`)|`INVALID`|`_DOMAIN`|  
@@ -140,12 +141,6 @@ long double coshl(
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple dans [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
-  
--   [System::Math::Cos](https://msdn.microsoft.com/en-us/library/system.math.cos.aspx)  
-  
--   [System::Math::Cosh](https://msdn.microsoft.com/en-us/library/system.math.cosh.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   

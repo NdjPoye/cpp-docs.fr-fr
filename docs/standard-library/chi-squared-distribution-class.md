@@ -10,28 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - chi_squared_distribution
-- std::chi_squared_distribution
 - random/std::chi_squared_distribution
-- std::chi_squared_distribution::reset
 - random/std::chi_squared_distribution::reset
-- std::chi_squared_distribution::n
 - random/std::chi_squared_distribution::n
-- std::chi_squared_distribution::param
 - random/std::chi_squared_distribution::param
-- std::chi_squared_distribution::min
 - random/std::chi_squared_distribution::min
-- std::chi_squared_distribution::max
 - random/std::chi_squared_distribution::max
-- std::chi_squared_distribution::operator()
 - random/std::chi_squared_distribution::operator()
-- std::chi_squared_distribution::param_type
 - random/std::chi_squared_distribution::param_type
-- std::chi_squared_distribution::param_type::n
 - random/std::chi_squared_distribution::param_type::n
-- std::chi_squared_distribution::param_type::operator==
 - random/std::chi_squared_distribution::param_type::operator==
-- std::chi_squared_distribution::param_type::operator!=
 - random/std::chi_squared_distribution::param_type::operator!=
+- random/std::chi_squared_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -55,10 +45,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: 5e60b73c22a7704f63f70ae2e6498fc6e47dde1e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e02680da3c44f31d9a81e1dc83b18822b9583e1b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="chisquareddistribution-class"></a>chi_squared_distribution, classe
@@ -104,8 +95,8 @@ La classe de modèle décrit une distribution qui produit des valeurs d’un typ
   
 ||||  
 |-|-|-|  
-|[chi_squared_distribution::chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|`chi_squared_distribution::n`|`chi_squared_distribution::param`|  
-|`chi_squared_distribution::operator()`||[chi_squared_distribution::param_type](#chi_squared_distribution__param_type)|  
+|[chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|`chi_squared_distribution::n`|`chi_squared_distribution::param`|  
+|`chi_squared_distribution::operator()`||[param_type](#param_type)|  
   
 La fonction de propriété `n()` retourne la valeur du paramètre de distribution stocké `n`.  
   
@@ -249,7 +240,7 @@ Distribution for 10 samples:
   
 **Espace de noms :** std  
   
-##  <a name="a-namechisquareddistributionchisquareddistributiona--chisquareddistributionchisquareddistribution"></a><a name="chi_squared_distribution__chi_squared_distribution"></a>  chi_squared_distribution::chi_squared_distribution  
+##  <a name="chi_squared_distribution"></a>  chi_squared_distribution::chi_squared_distribution  
 Construit la distribution.  
   
 ```  
@@ -271,7 +262,7 @@ Le premier constructeur construit un objet dont la valeur `n` stockée contient 
   
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.  
   
-##  <a name="a-namechisquareddistributionparamtypea--chisquareddistributionparamtype"></a><a name="chi_squared_distribution__param_type"></a>  chi_squared_distribution::param_type  
+##  <a name="param_type"></a>  chi_squared_distribution::param_type  
 Stocke les paramètres de la distribution.  
   
 ```cpp    

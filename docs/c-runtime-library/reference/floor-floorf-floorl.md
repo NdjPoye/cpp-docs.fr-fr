@@ -1,55 +1,72 @@
 ---
-title: "floor, floorf, floorl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "floorf"
-  - "floorl"
-  - "floor"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "floor"
-  - "floorl"
-  - "_floorl"
-  - "floorf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "calculer des planchers de valeurs"
-  - "floor (fonction)"
-  - "floorf (fonction)"
-  - "floorl (fonction)"
+title: floor, floorf, floorl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- floorf
+- floorl
+- floor
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- floor
+- floorl
+- _floorl
+- floorf
+dev_langs:
+- C++
+helpviewer_keywords:
+- floor function
+- floorf function
+- calculating floors of values
+- floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# floor, floorf, floorl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: ac3b84ab134b4b67dc7bd6ed5086d2f295b10156
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
-Calcule la partie entière d'une valeur.  
+---
+# <a name="floor-floorf-floorl"></a>floor, floorf, floorl
+Calcule le plancher d’une valeur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 double floor(  
@@ -69,31 +86,31 @@ long double floorl(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `x`  
  Valeur à virgule flottante.  
   
-## Valeur de retour  
- Les fonctions `floor` retournent une valeur à virgule flottante qui représente le plus grand entier inférieur ou égal à `x`.  Aucun retour d'erreur.  
+## <a name="return-value"></a>Valeur de retour  
+ Les fonctions `floor` retournent une valeur à virgule flottante qui représente le plus grand entier inférieur ou égal à `x`. Aucun retour d'erreur.  
   
-|Entrée|Exception SEH|Exception Matherr|  
-|------------|-------------------|-----------------------|  
-|± QNAN,IND|aucun|\_DOMAIN|  
+|Entrée|Exception SEH|Exception{b> <b}Matherr|  
+|-----------|-------------------|-----------------------|  
+|± QNAN,IND|aucun|_DOMAIN|  
   
- `floor` a une implémentation qui utilise les extensions Streaming SIMD 2 \(SSE2\).  Pour plus d'informations et de restrictions sur l'utilisation de l'implémentation SSE2, consultez [\_set\_SSE2\_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
+ `floor` présente une implémentation qui utilise SSE2 (Streaming SIMD Extensions 2). Pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   
-## Notes  
- C\+\+ permet la surcharge, donc il vous est possible d'appeler les surcharges de `floor` qui acceptent et retournent les valeurs `float` et `long double`.  Dans un programme C, `floor` prend et retourne toujours `double`.  
+## <a name="remarks"></a>Notes  
+ C++ autorisant la surcharge, vous pouvez appeler des surcharges de `floor` qui acceptent et retournent des valeurs `float` et `long double`. Dans un programme C, `floor` accepte et retourne toujours un `double`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Fonction|En\-tête requis|  
+|Fonction|En-tête requis|  
 |--------------|---------------------|  
-|`floor`, `floorf`, `floorl`|\<math.h\>|  
+|`floor`, `floorf`, `floorl`|\<math.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_floor.c  
@@ -121,14 +138,14 @@ int main( void )
 }  
 ```  
   
-  **La partie entière de 2.8 est 2.000000**  
-**La partie entière de \-2.8 est \-3.000000**  
-**L'entier suivant la partie entière de 2,8 est 3,000000**  
-**L'entier suivant la partie entière de \-2,8 est \-2,000000**   
-## Équivalent .NET Framework  
- [System::Math::Floor](https://msdn.microsoft.com/en-us/library/system.math.floor.aspx)  
+```Output  
+The floor of 2.8 is 2.000000  
+The floor of -2.8 is -3.000000  
+The ceil of 2.8 is 3.000000  
+The ceil of -2.8 is -2.000000  
+```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
  [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
  [round, roundf, roundl](../../c-runtime-library/reference/round-roundf-roundl.md)   

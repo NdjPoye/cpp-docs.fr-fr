@@ -53,10 +53,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0e45008d3f55c11cfa7da2aa4db9ca1277a6f77f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 23bcf7a96dfbfa7719b20f2a035ddcbc93c835ee
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="pipe"></a>_pipe
@@ -68,11 +69,10 @@ Crée un canal pour la lecture et l’écriture.
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      int _pipe(  
-int *pfds,  
-unsigned int psize,  
-int textmode   
+int _pipe(  
+   int *pfds,  
+   unsigned int psize,  
+   int textmode   
 );  
 ```  
   
@@ -131,9 +131,8 @@ int textmode
   
 ## <a name="example-1"></a>Exemple 1  
   
-```  
-  
-      // crt_pipe.c  
+```C  
+// crt_pipe.c  
 /* This program uses the _pipe function to pass streams of  
  * text to spawned processes.  
  */  
@@ -216,9 +215,7 @@ int main( int argc, char *argv[] )
 }  
 ```  
   
-## <a name="sample-output"></a>Résultat de l'exemple  
-  
-```  
+```Output  
 Son, what is the square root of 1000?  
 Son, what is the square root of 2000?  
 Son, what iDad, the square root of 1000 is 31.62.  
@@ -240,7 +237,7 @@ Dad, the square root of 8000 is 89.44.
 ## <a name="example-2"></a>Exemple 2  
  Cet exemple porte sur une application de filtre rudimentaire. Il génère l’application crt_pipe_beeper après avoir créé un canal qui dirige la sortie stdout de l’application générée vers le filtre. Le filtre supprime les caractères ASCII 7 (beep).  
   
-```  
+```C  
 // crt_pipe_beeper.c  
   
 #include <stdio.h>  
@@ -259,7 +256,7 @@ int main()
   
  Voici l’application de filtre effective :  
   
-```  
+```C  
 // crt_pipe_BeepFilter.C  
 // arguments: crt_pipe_beeper.exe  
   
@@ -352,9 +349,7 @@ int main(int argc, char** argv)
 }  
 ```  
   
-## <a name="output"></a>Sortie  
-  
-```  
+```Output  
 This is speaker beep number 1...  
 This is speaker beep number 2...  
 This is speaker beep number 3...  
@@ -366,9 +361,6 @@ This is speaker beep number 8...
 This is speaker beep number 9...  
 This is speaker beep number 10...  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)   

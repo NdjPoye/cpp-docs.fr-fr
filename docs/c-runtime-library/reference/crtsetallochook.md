@@ -50,10 +50,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 00e878414b2aaa71a8cbfc78997e934225f4e6fc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: fa03fb135907d9f516544f5f4b202c9f4e779fc3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="crtsetallochook"></a>_CrtSetAllocHook
@@ -98,7 +99,7 @@ lineNumber);
  Pour plus d’informations sur la façon dont `_CrtSetAllocHook` peut être utilisé avec d’autres fonctions de gestion de mémoire ou sur la façon d’écrire vos propres fonctions de raccordement définies par le client, consultez [Écriture de fonctions de raccordement de débogage](/visualstudio/debugger/debug-hook-function-writing).  
   
 > [!NOTE]
->  `_CrtSetAllocHook` n’est pas pris en charge sous `/clr:pure`. Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015.  
+>  `_CrtSetAllocHook` n’est pas pris en charge sous `/clr:pure`. Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -113,9 +114,6 @@ lineNumber);
   
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de `_CrtSetAllocHook`, consultez [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Routines de débogage](../../c-runtime-library/debug-routines.md)   

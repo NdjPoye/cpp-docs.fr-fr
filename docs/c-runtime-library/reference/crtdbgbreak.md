@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 105b86a3c06c17bd9d24ff6cedb213abf06dadcd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: fd68d614e0c676d63bc8b5227eab95c3eae76258
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="crtdbgbreak"></a>_CrtDbgBreak
@@ -71,9 +72,6 @@ void _CrtDbgBreak( void );
  La fonction `_CrtDbgBreak` définit un point d’arrêt de débogage sur la ligne de code dans laquelle la fonction réside. Cette fonction est utilisée en mode de débogage uniquement et suppose que `_DEBUG` a déjà été défini.  
   
  Pour plus d’informations sur l’utilisation d’autres fonctions d’exécution compatibles avec le raccordement et sur l’écriture de vos propres fonctions de raccordement définies par le client, consultez [Écriture de vos propres fonctions de raccordement de débogage](/visualstudio/debugger/debug-hook-function-writing).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="requirements"></a>Spécifications  
   

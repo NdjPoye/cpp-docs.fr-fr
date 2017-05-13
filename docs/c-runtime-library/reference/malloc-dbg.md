@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2bdbd0b6bc0a9af533aa41b5d29a171bb56ac382
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 7c1d34b3e426149f1e3fc895469ac5ed16a1d2f8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
@@ -110,9 +111,6 @@ void *_malloc_dbg(
   
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de `_malloc_dbg`, consultez [crt_dbg1](http://msdn.microsoft.com/en-us/17b4b20c-e849-48f5-8eb5-dca6509cbaf9).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Routines de débogage](../../c-runtime-library/debug-routines.md)   

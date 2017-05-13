@@ -62,10 +62,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d6fc4a71132483e4eb8646fe5394994a0af7fbd6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6ca073e8021d10b81245327d04b358b8c410ef0f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
@@ -77,24 +78,24 @@ Envoient les données mises en forme vers un flux. Ces versions de [fprintf, _fp
 int fprintf_s(   
    FILE *stream,  
    const char *format [,  
-   argument ]...  
+   argument_list ]  
 );  
 int _fprintf_s_l(   
    FILE *stream,  
    const char *format,  
    locale_t locale [,  
-   argument ]...  
+   argument_list ]  
 );  
 int fwprintf_s(   
    FILE *stream,  
    const wchar_t *format [,  
-   argument ]...  
+   argument_list ]  
 );  
 int _fwprintf_s_l(   
    FILE *stream,  
    const wchar_t *format,  
    locale_t locale [,  
-   argument ]…  
+   argument_list ]  
 );  
 ```  
   
@@ -105,8 +106,8 @@ int _fwprintf_s_l(
  `format`  
  Chaîne de contrôle de format.  
   
- `argument`  
- Arguments facultatifs.  
+ `argument_list`  
+ Arguments facultatifs pour la chaîne de format.  
   
  `locale`  
  Paramètres régionaux à utiliser.  
@@ -114,8 +115,8 @@ int _fwprintf_s_l(
 ## <a name="return-value"></a>Valeur de retour  
  `fprintf_s` retourne le nombre d’octets écrits. `fwprintf_s` retourne le nombre de caractères larges écrits. Chacune de ces fonctions retourne une valeur négative à la place en cas d’erreur de sortie.  
   
-## <a name="remarks"></a>Notes  
- `fprintf_s` met en forme et envoie une série de caractères et de valeurs vers la sortie `stream`*.* Chaque fonction `argument` (le cas échéant) est convertie et sortie selon la spécification de format correspondante dans `format`*.* Pour `fprintf_s`, l’argument `format` a les mêmes syntaxe et utilisation que dans `printf_s`.  
+## <a name="remarks"></a>Remarques  
+ `fprintf_s` met en forme et envoie une série de caractères et de valeurs vers la sortie `stream`. Chaque argument dans `argument_list` (le cas échéant) est converti et sorti selon la spécification de format correspondante dans `format`. Le `format` argument utilise le [syntaxe de spécification pour les fonctions printf et wprintf format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
  `fwprintf_s` est une version à caractères larges de `fprintf_s` ; dans `fwprintf_s`, `format` est une chaîne à caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. `fprintf_s` ne prend actuellement pas en charge la sortie vers un flux UNICODE.  
   
@@ -124,7 +125,7 @@ int _fwprintf_s_l(
 > [!IMPORTANT]
 >  Assurez-vous que `format` n'est pas une chaîne définie par l'utilisateur.  
   
- Comme les versions non sécurisées (voir [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)), ces fonctions valident leurs paramètres et appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md), si `stream` ou `format` est un pointeur null. Ces fonctions diffèrent des versions non sécurisées en ce sens que la chaîne de format elle-même est également validée. S’il existe des spécificateurs de mise en forme inconnus ou incorrects, ces fonctions génèrent l’exception de paramètre non valide. Dans tous les cas, si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et définissent `errno` avec la valeur `EINVAL`. Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.  
+ Comme les versions non sécurisées (voir [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)), ces fonctions valident leurs paramètres et appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md), si `stream` ou `format` est un pointeur null. La chaîne de format est également validée. S’il existe des spécificateurs de mise en forme inconnus ou incorrects, ces fonctions génèrent l’exception de paramètre non valide. Dans tous les cas, si l’exécution est autorisée à se poursuivre, les fonctions retournent -1 et définissent `errno` avec la valeur `EINVAL`. Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
@@ -146,7 +147,7 @@ int _fwprintf_s_l(
   
 ## <a name="example"></a>Exemple  
   
-```  
+```C  
 // crt_fprintf_s.c  
 // This program uses fprintf_s to format various  
 // data and print it to the file named FPRINTF_S.OUT. It  
@@ -179,9 +180,6 @@ this is a string
 10  
 1.500000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [E/S de flux](../../c-runtime-library/stream-i-o.md)   

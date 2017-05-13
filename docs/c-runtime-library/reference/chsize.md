@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bde424088fad3661105e92b0a7aa035137bed249
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2d75597dceaedb3e43be5a530be4a7decdd1defc
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="chsize"></a>_chsize
@@ -78,9 +79,9 @@ int _chsize(
  Nouvelle longueur, en octets, du fichier.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `_chsize` retourne la valeur 0 si la taille du fichier a été correctement modifiée. Une valeur de retour égale à −1 indique une erreur : `errno` est défini sur `EACCES` si le fichier spécifié est verrouillé contre tout accès, sur `EBADF` si le fichier spécifié est en lecture seule ou si le descripteur n’est pas valide, sur `ENOSPC` en l’absence d’espace disponible sur le périphérique ou sur `EINVAL` si `size` est inférieur à zéro.  
+ `_chsize` retourne la valeur 0 si la taille du fichier a été correctement modifiée. Une valeur de retour de -1 indique une erreur : `errno` a la valeur `EACCES` si le fichier spécifié est verrouillé contre tout accès, de `EBADF` si le fichier spécifié est en lecture seule ou si le descripteur n’est pas valide, `ENOSPC` si aucun espace n’est pas sur l’appareil, ou `EINVAL` si `size` est inférieur à zéro.  
   
- Pour plus d’informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
  La fonction `_chsize` étend ou tronque le fichier associé à `fd` à la longueur spécifiée par `size`. Le fichier doit être ouvert dans un mode qui permet l’écriture. Des caractères Null (« \0 ») sont ajoutés si le fichier est étendu. Si le fichier est tronqué, toutes les données depuis la fin du fichier raccourci jusqu’à la longueur d’origine du fichier sont perdues.  
@@ -134,12 +135,6 @@ File length before: 0
 Size successfully changed  
 File length after:  329678  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
-  
--   [System::IO::Stream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.stream.setlength.aspx)  
-  
--   [System::IO::FileStream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.filestream.setlength.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion de fichiers](../../c-runtime-library/file-handling.md)   

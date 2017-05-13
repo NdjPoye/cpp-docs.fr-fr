@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 7c7659bb52594678538ea2701174c070ace41d70
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 4d7a7b05896bac9e1b3f4ac29ee24a6ad7d61a82
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="clear87-clearfp"></a>_clear87, _clearfp
@@ -78,7 +79,7 @@ unsigned int _clearfp( void );
 ## <a name="remarks"></a>Notes  
  La fonction `_clear87` efface les indicateurs d'exception dans le mot d'état à virgule flottante, définit le bit occupé à 0 et retourne le mot d'état. Le mot d'état à virgule flottante est une combinaison du mot d'état 8087/80287 et d'autres conditions détectées par le gestionnaire d'exceptions 8087/80287, telles que le dépassement de capacité positif et négatif de pile à virgule flottante.  
   
- `_clearfp` est une version portable indépendante de la plateforme de le routine `_clear87`. Elle est identique à `_clear87` sur les plateformes Intel (x&86;) et est aussi prise en charge par les plateformes x64 et ARM. Pour assurer la portabilité de votre code à virgule flottante vers x64 et ARM, utilisez `_clearfp`. Si vous ciblez uniquement les plateformes x86, vous pouvez utiliser `_clear87` ou `_clearfp`.  
+ `_clearfp` est une version portable indépendante de la plateforme de le routine `_clear87`. Elle est identique à `_clear87` sur les plateformes Intel (x 86) et est aussi prise en charge par les plateformes x64 et ARM. Pour assurer la portabilité de votre code à virgule flottante vers x64 et ARM, utilisez `_clearfp`. Si vous ciblez uniquement les plateformes x86, vous pouvez utiliser `_clear87` ou `_clearfp`.  
   
  Ces fonctions sont déconseillées lors de la compilation avec [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , car le common language runtime prend uniquement en charge la précision en virgule flottante par défaut.  
   
@@ -129,9 +130,6 @@ Status: 0000 - clear
 Status: 0003 - inexact, underflow  
 Status: 80000 - denormal  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   

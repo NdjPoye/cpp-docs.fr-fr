@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::pointer_to_binary_function
-- xfunctional/std::pointer_to_binary_function
-- pointer_to_binary_function
-- std.pointer_to_binary_function
+- xfunctional/std::pointer_to_binary
+- pointer_to_binary
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 9a806934810286e22fdea70c2af982de10f48ee5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: a510056f33bce7720896e56c7ea7798729dd831a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function, classe
@@ -77,7 +76,7 @@ public:
  Un pointeur de fonction binaire est un objet de fonction. Il peut être passé à n’importe quel algorithme de la bibliothèque standard C++ qui attend une fonction binaire comme paramètre, mais il n’est pas adaptable. Pour utiliser ce pointeur avec un adaptateur, en le liant à une valeur ou en l’utilisant avec une négation, vous devez également fournir les types imbriqués **first_argument_type**, **second_argument_type** et **result_type** pour rendre l’adaptation possible. Grâce à la conversion par `pointer_to_binary_function`, les pointeurs de fonction binaire peuvent utiliser les adaptateurs de fonction.  
   
 ## <a name="example"></a>Exemple  
- Le constructeur de `pointer_to_binary_function` est rarement utilisé directement. Consultez la fonction d’assistance [ptr_fun](../standard-library/functional-functions.md#ptr_fun_function) pour obtenir un exemple montrant comment déclarer et utiliser le prédicat de l’adaptateur `pointer_to_binary_function`.  
+ Le constructeur de `pointer_to_binary_function` est rarement utilisé directement. Consultez la fonction d’assistance [ptr_fun](../standard-library/functional-functions.md#ptr_fun) pour obtenir un exemple montrant comment déclarer et utiliser le prédicat de l’adaptateur `pointer_to_binary_function`.  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** \<functional>  

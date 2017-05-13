@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3d95aae18858582f732459e136c998c15d70189e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 3d199cba90dd2440a7a467c95d32e2a5a75f8cbf
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
@@ -86,9 +87,9 @@ int _wctomb_l(
  Caractère large.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Si `wctomb` convertit le caractère large en caractère multioctet, il retourne le nombre d’octets (qui n’est jamais supérieure à `MB_CUR_MAX`) dans le caractère large. Si `wchar` correspond au caractère Null à caractère large (L'\0'), `wctomb` retourne 1. Si le pointeur cible `mbchar` a la valeur NULL, `wctomb` retourne 0. Si la conversion n’est pas possible dans les paramètres régionaux actifs, `wctomb` retourne -1 et `errno` prend la valeur `EILSEQ`.  
+ Si `wctomb` convertit le caractère large en caractère multioctet, il retourne le nombre d’octets (qui n’est jamais supérieure à `MB_CUR_MAX`) dans le caractère large. Si `wchar` correspond au caractère Null à caractère large (L'\0'), `wctomb` retourne 1. Si le pointeur cible `mbchar` a la valeur NULL, `wctomb` retourne 0. Si la conversion n’est pas possible dans les paramètres régionaux, `wctomb` retourne -1 et `errno` a la valeur `EILSEQ`.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction `wctomb` convertit son argument `wchar` en caractère multioctet correspondant et stocke le résultat au niveau de `mbchar`. Vous pouvez appeler la fonction de n’importe quel endroit dans n’importe quel programme. La fonction `wctomb` utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; la fonction `_wctomb_l` est identique à `wctomb` sauf qu'elle utilise les paramètres régionaux passés à la place. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
  `wctomb` valide ses paramètres. Si `mbchar` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` est défini sur `EINVAL` et la fonction retourne -1.  
@@ -129,9 +130,6 @@ Convert a wide character:
    Characters converted: 1  
    Multibyte character: a  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   

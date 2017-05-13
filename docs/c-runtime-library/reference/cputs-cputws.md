@@ -1,103 +1,120 @@
 ---
-title: "_cputs, _cputws | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_cputws"
-  - "_cputs"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-conio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cputws"
-  - "_cputs"
-  - "_cputws"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_cputs (fonction)"
-  - "_cputws (fonction)"
-  - "console, envoyer des chaînes à"
-  - "cputs (fonction)"
-  - "cputws (fonction)"
-  - "mettre des chaînes dans la console"
-  - "chaînes (C++), écrire"
+title: _cputs, _cputws | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _cputws
+- _cputs
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- cputws
+- _cputs
+- _cputws
+dev_langs:
+- C++
+helpviewer_keywords:
+- strings [C++], writing
+- _cputs function
+- _cputws function
+- putting strings to the console
+- cputs function
+- console, sending strings to
+- cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _cputs, _cputws
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: b773a7b9ae2ad6a7af7aa178fa277be2362c2c11
+ms.contentlocale: fr-fr
+ms.lasthandoff: 02/28/2017
 
+---
+# <a name="cputs-cputws"></a>_cputs, _cputws
 Place une chaîne dans la console.  
   
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Pour plus d'informations, voir [Fonctions CRT non prises en charge avec \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-        int _cputs(   
-const char *str   
+int _cputs(   
+   const char *str   
 );  
 int _cputws(  
-const wchar_t *str   
+   const wchar_t *str   
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `str`  
  Chaîne de sortie.  
   
-## Valeur de retour  
- En cas de réussite, `_cputs` retourne 0.  Si la fonction échoue, elle retourne une valeur différente de zéro.  
+## <a name="return-value"></a>Valeur de retour  
+ En cas de réussite, `_cputs` retourne 0. Si la fonction échoue, elle retourne une valeur différente de zéro.  
   
-## Notes  
- La fonction `_cputs` écrit la chaîne se terminant par null que `str` indique directement à la console.  Une combinaison de retour chariot\-saut de ligne n'est pas ajoutée automatiquement à la chaîne.  
+## <a name="remarks"></a>Notes  
+ La fonction `_cputs` écrit la chaîne se terminant par null que `str` indique directement à la console. Une combinaison de retour chariot-saut de ligne n'est pas ajoutée automatiquement à la chaîne.  
   
- Cette fonction valide son paramètre.  Si `str` a la valeur **NULL**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, `errno` prend la valeur `EINVAL` et \-1 est retourné.  
+ Cette fonction valide son paramètre. Si `str` a la valeur **NULL**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, `errno` prend la valeur `EINVAL` et -1 est retourné.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine Tchar.h|\_UNICODE et \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|-------------------------------------|-------------------|----------------------|  
-|**\_cputts**|`_cputs`|`_cputs`|`_cputws`|  
+|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
+|**_cputts**|`_cputs`|`_cputs`|`_cputws`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|En\-tête facultatif|  
-|-------------|---------------------|-------------------------|  
-|`_cputs`|\<conio.h\>|\<errno.h\>|  
-|`_cputws`|\<conio.h\>|\<errno.h\>|  
+|Routine|En-tête requis|En-tête facultatif|  
+|-------------|---------------------|---------------------|  
+|`_cputs`|\<conio.h>|\<errno.h>|  
+|`_cputws`|\<conio.h>|\<errno.h>|  
   
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Bibliothèques  
+## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
+```C  
 // crt_cputs.c  
 // compile with: /c  
 // This program first displays a string to the console.  
@@ -147,13 +164,11 @@ int main()
 }  
 ```  
   
-## Sortie  
-  
-```  
+```Output  
 Hello world (courtesy of _cputs)!  
 Hello world (courtesy of _cputws)!  
 ```  
   
-## Voir aussi  
- [Console et port E\/S](../../c-runtime-library/console-and-port-i-o.md)   
- [\_putch, \_putwch](../../c-runtime-library/reference/putch-putwch.md)
+## <a name="see-also"></a>Voir aussi  
+ [E/S de console et de port](../../c-runtime-library/console-and-port-i-o.md)   
+ [_putch, _putwch](../../c-runtime-library/reference/putch-putwch.md)

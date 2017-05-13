@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 0a28e1ff0def707926a67e1fea77f40e9927c0c4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: aeb81554bdc50db44e9e8d4ee66369149eceb875
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="container-classerase"></a>Conteneur Class::erase
@@ -55,8 +56,8 @@ iterator erase(
     iterator last);
 ```  
   
-## <a name="remarks"></a>Notes  
- La première fonction membre supprime l’élément de la séquence contrôlée indiquée par _*Where***.** La deuxième fonction membre supprime l’élément de la séquence contrôlée dans la plage [` first`, ` last`). Les deux fonctions retournent un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou [end](../standard-library/container-class-end.md) si aucun élément de ce genre n’existe.  
+## <a name="remarks"></a>Remarques  
+ La première fonction membre supprime l’élément de la séquence contrôlée vers lequel pointé *_Where*. La deuxième fonction membre supprime l’élément de la séquence contrôlée dans la plage [`first`, `last`). Les deux fonctions retournent un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou [end](../standard-library/container-class-end.md) si aucun élément de ce genre n’existe.  
   
  Les fonctions membres lèvent une exception uniquement si une opération de copie lève une exception.  
   

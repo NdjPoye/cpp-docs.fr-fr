@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f119e7680f53f37a75b5e2e54263094e1b48a402
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: bb04c82492a241c8a1089e2414358a11b54fff70
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getpgmptr"></a>_get_pgmptr
@@ -76,8 +77,8 @@ errno_t _get_pgmptr(
 ## <a name="return-value"></a>Valeur de retour  
  Retourne zéro si l'opération a réussi et un code d'erreur en cas d'échec. Si `pValue` a la valeur `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction affecte la valeur `errno` à `EINVAL` et retourne `EINVAL`.  
   
-## <a name="remarks"></a>Notes  
- La variable globale `_pgmptr` contient le chemin complet du fichier exécutable associé au processus. Pour plus d’informations, consultez [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).  
+## <a name="remarks"></a>Remarques  
+ Le `_pgmptr` (variable globale) contient le chemin d’accès complet au fichier exécutable associé au processus. Pour plus d’informations, consultez [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -86,9 +87,6 @@ errno_t _get_pgmptr(
 |`_get_pgmptr`|\<stdlib.h>|  
   
  Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [_get_wpgmptr](../../c-runtime-library/reference/get-wpgmptr.md)

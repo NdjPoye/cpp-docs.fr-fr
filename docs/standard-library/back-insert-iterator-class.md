@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: b50819686ca10a5676c75fb47375572d39974a1f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3ef742cc4715c419b113e9235bbcc257ba8f1944
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator, classe
@@ -63,29 +64,29 @@ class back_insert_iterator;
   
 |||  
 |-|-|  
-|[back_insert_iterator](#back_insert_iterator__back_insert_iterator)|Construit `back_insert_iterator` qui insère des éléments après le dernier élément d'un conteneur.|  
+|[back_insert_iterator](#back_insert_iterator)|Construit `back_insert_iterator` qui insère des éléments après le dernier élément d'un conteneur.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#back_insert_iterator__container_type)|Type qui fournit un conteneur pour le `back_insert_iterator`.|  
-|[reference](#back_insert_iterator__reference)|Type qui fournit une référence pour le `back_insert_iterator`.|  
+|[container_type](#container_type)|Type qui fournit un conteneur pour le `back_insert_iterator`.|  
+|[reference](#reference)|Type qui fournit une référence pour le `back_insert_iterator`.|  
   
 ### <a name="operators"></a>Opérateurs  
   
 |||  
 |-|-|  
-|[operator*](#back_insert_iterator__operator_star)|Opérateur de suppression de référence utilisé pour implémenter l’expression d’itérateur de sortie * `i` = `x` pour une insertion de fin.|  
-|[operator++](#back_insert_iterator__operator_add_add)|Incrémente le `back_insert_iterator` à l'emplacement suivant où une valeur peut être stockée.|  
-|[operator=](#back_insert_iterator__operator_eq)|Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de sortie * `i` = `x` pour une insertion de fin.|  
+|[operator*](#op_star)|Opérateur de suppression de référence utilisé pour implémenter l’expression d’itérateur de sortie * `i` = `x` pour une insertion de fin.|  
+|[operator++](#op_add_add)|Incrémente le `back_insert_iterator` à l'emplacement suivant où une valeur peut être stockée.|  
+|[operator=](#op_eq)|Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de sortie * `i` = `x` pour une insertion de fin.|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête** : \<iterator>  
   
  **Espace de noms :** std  
   
-##  <a name="back_insert_iterator__back_insert_iterator"></a>  back_insert_iterator::back_insert_iterator  
+##  <a name="back_insert_iterator"></a>  back_insert_iterator::back_insert_iterator  
  Construit `back_insert_iterator` qui insère des éléments après le dernier élément d'un conteneur.  
   
 ```   
@@ -147,7 +148,7 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).  
 ```  
   
-##  <a name="back_insert_iterator__container_type"></a>  back_insert_iterator::container_type  
+##  <a name="container_type"></a>  back_insert_iterator::container_type  
  Type qui fournit un conteneur pour le `back_insert_iterator`.  
   
 ```   
@@ -199,7 +200,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).  
 ```  
   
-##  <a name="back_insert_iterator__operator_star"></a>  back_insert_iterator::operator*  
+##  <a name="op_star"></a>  back_insert_iterator::operator*  
  Opérateur de suppression de référence utilisé pour implémenter l’expression d’itérateur de sortie \* *i* = *x*.  
   
 ```  
@@ -256,7 +257,7 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).  
 ```  
   
-##  <a name="back_insert_iterator__operator_add_add"></a>  back_insert_iterator::operator++  
+##  <a name="op_add_add"></a>  back_insert_iterator::operator++  
  Incrémente le `back_insert_iterator` à l'emplacement suivant où une valeur peut être stockée.  
   
 ```  
@@ -314,7 +315,7 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).  
 ```  
   
-##  <a name="back_insert_iterator__operator_eq"></a>  back_insert_iterator::operator=  
+##  <a name="op_eq"></a>  back_insert_iterator::operator=  
  Ajoute ou pousse une valeur à la fin d’un conteneur.  
   
 ```  
@@ -377,7 +378,7 @@ int main( )
 }  
 ```  
   
-##  <a name="back_insert_iterator__reference"></a>  back_insert_iterator::reference  
+##  <a name="reference"></a>  back_insert_iterator::reference  
  Type qui fournit une référence pour le `back_insert_iterator`.  
   
 ```  
