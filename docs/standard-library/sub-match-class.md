@@ -10,21 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sub_match
-- std::sub_match
 - regex/std::sub_match
-- std::sub_match::matched
 - regex/std::sub_match::matched
-- std::sub_match::compare
 - regex/std::sub_match::compare
-- std::sub_match::length
 - regex/std::sub_match::length
-- std::sub_match::str
 - regex/std::sub_match::str
-- std::sub_match::difference_type
 - regex/std::sub_match::difference_type
-- std::sub_match::iterator
 - regex/std::sub_match::iterator
-- std::sub_match::value_type
 - regex/std::sub_match::value_type
 dev_langs:
 - C++
@@ -49,10 +41,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: 1a2b0c43fd5942e6f4b9ddd54c50db8bc8e8218f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 12d12497fa96d7cf4185ad3664908a56be1078c9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="submatch-class"></a>sub_match, classe
@@ -84,8 +77,8 @@ public:
  `BidIt`  
  Type d'itérateur pour les sous-correspondances.  
   
-## <a name="remarks"></a>Notes  
- La classe de modèle décrit un objet qui désigne une séquence de caractères correspondant à un groupe de capture dans un appel à la [fonction regex_match](../standard-library/regex-functions.md#regex_match_function) ou à la [fonction regex_search](../standard-library/regex-functions.md#regex_search_function). Les objets de type de [classe match_results](../standard-library/match-results-class.md) contiennent un tableau de ces objets, un pour chaque groupe de capture de l’expression régulière utilisée dans la recherche.  
+## <a name="remarks"></a>Remarques  
+ La classe de modèle décrit un objet qui désigne une séquence de caractères correspondant à un groupe de capture dans un appel à [regex_match](../standard-library/regex-functions.md#regex_match) ou [regex_search](../standard-library/regex-functions.md#regex_search). Les objets de type de [classe match_results](../standard-library/match-results-class.md) contiennent un tableau de ces objets, un pour chaque groupe de capture de l’expression régulière utilisée dans la recherche.  
   
  Si le groupe de capture n’a aucune correspondance, le membre de données `matched` de l’objet a la valeur false, et les deux itérateurs `first` et `second` (hérités du `std::pair`de base) sont égaux. Si le groupe de capture a une correspondance, `matched` a la valeur true et l’itérateur `first` pointe vers le premier caractère de la séquence cible correspondant au groupe de capture. En outre, l’itérateur `second` pointe vers la position située après le dernier caractère de la séquence cible correspondant au groupe de capture. Notez que pour une correspondance de longueur nulle, le membre `matched` a la valeur true. Par ailleurs, les deux itérateurs sont égaux et pointent vers la position de la correspondance.  
   
@@ -100,7 +93,7 @@ public:
   
  **Espace de noms :** std  
   
-##  <a name="a-namesubmatchcomparea--submatchcompare"></a><a name="sub_match__compare"></a>  sub_match::compare  
+##  <a name="compare"></a>  sub_match::compare  
  Comparer une sous-correspondance à une séquence.  
   
 ```  
@@ -183,7 +176,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchdifferencetypea--submatchdifferencetype"></a><a name="sub_match__difference_type"></a>  sub_match::difference_type  
+##  <a name="difference_type"></a>  sub_match::difference_type  
  Type d’une différence d’itérateur.  
   
 ```  
@@ -246,7 +239,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchiteratora--submatchiterator"></a><a name="sub_match__iterator"></a>  sub_match::iterator  
+##  <a name="iterator"></a>  sub_match::iterator  
  Type d'un itérateur.  
   
 ```  
@@ -309,7 +302,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchlengtha--submatchlength"></a><a name="sub_match__length"></a>  sub_match::length  
+##  <a name="length"></a>  sub_match::length  
  Retourne la longueur d'une sous-correspondance.  
   
 ```  
@@ -372,7 +365,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchmatcheda--submatchmatched"></a><a name="sub_match__matched"></a>  sub_match::matched  
+##  <a name="matched"></a>  sub_match::matched  
  Indique si la correspondance a réussi.  
   
 ```  
@@ -435,7 +428,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchoperatorbasicstringltvaluetypegta--submatchoperator-basicstringltvaluetypegt"></a><a name="sub_match__operator_basic_string_lt_value_type_gt_"></a>  sub_match::operator basic_string&lt;value_type&gt;  
+##  <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;  
  Effectue un cast de la sous-correspondance en chaîne.  
   
 ```  
@@ -498,7 +491,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchstra--submatchstr"></a><a name="sub_match__str"></a>  sub_match::str  
+##  <a name="str"></a>  sub_match::str  
  Convertit la sous-correspondance en chaîne.  
   
 ```  
@@ -561,7 +554,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchvaluetypea--submatchvaluetype"></a><a name="sub_match__value_type"></a>  sub_match::value_type  
+##  <a name="value_type"></a>  sub_match::value_type  
  Type d’un élément.  
   
 ```  

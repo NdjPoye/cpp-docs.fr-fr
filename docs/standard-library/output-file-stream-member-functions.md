@@ -12,6 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - output streams, member functions
+f1_keywords: []
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
 author: corob-msft
@@ -31,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 62d10faef9b1958f0ad5cee7b8ff2b4e491c617a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: baa226c95d396232ea8ac545c839352c5df4c22f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="output-file-stream-member-functions"></a>Fonctions membres de flux de fichiers de sortie
@@ -43,7 +45,7 @@ Les fonctions membres de flux de sortie ont trois types : celles qui sont équi
 ## <a name="the-open-function-for-output-streams"></a>Fonction open pour les flux de sortie  
  Pour utiliser un flux de fichier de sortie ([ofstream](../standard-library/basic-ofstream-class.md)), vous devez associer ce flux à un fichier sur disque spécifique dans le constructeur ou la fonction **open**. Si vous utilisez la fonction **open**, vous pouvez réutiliser le même objet de flux avec une série de fichiers. Dans les deux cas, les arguments décrivant le fichier sont identiques.  
   
- Quand vous ouvrez le fichier associé à un flux de sortie, vous spécifiez généralement un indicateur **open_mode**. Vous pouvez combiner ces indicateurs, définis comme énumérateurs dans la classe `ios`, avec l’opérateur OR ( &#124; ) au niveau du bit. Consultez [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode) pour obtenir la liste des énumérateurs.  
+ Quand vous ouvrez le fichier associé à un flux de sortie, vous spécifiez généralement un indicateur **open_mode**. Vous pouvez combiner ces indicateurs, définis comme énumérateurs dans la classe `ios`, avec l’opérateur OR ( &#124; ) au niveau du bit. Consultez [ios_base::openmode](../standard-library/ios-base-class.md#openmode) pour obtenir la liste des énumérateurs.  
   
  Trois situations de flux de sortie courantes impliquent des options de mode :  
   
@@ -81,7 +83,7 @@ ofile.open("FILE1",
 // FILE2 closed  // When ofile goes out of scope it is destroyed.  
 ```  
   
-## <a name="the-put-function"></a>Fonction put  
+## <a name="the-put"></a>Le put
  La fonction **put** écrit un caractère dans le flux de sortie. Les deux instructions suivantes sont identiques par défaut, mais la deuxième est affectée par les arguments de format du flux :  
   
 ```  
@@ -91,7 +93,7 @@ cout.put('A');
 cout <<'A'; // Format arguments 'width' and 'fill' apply   
 ```  
   
-## <a name="the-write-function"></a>Fonction write  
+## <a name="the-write"></a>L’écriture
  La fonction **write** écrit un bloc de mémoire dans un flux de fichier de sortie. L’argument de longueur spécifie le nombre d’octets écrits. Cet exemple crée un flux de fichier de sortie et y écrit la valeur binaire de la structure `Date` :  
   
 ```  
@@ -123,7 +125,7 @@ int main( )
   
  Le destructeur de flux de sortie ferme automatiquement le fichier d’un flux uniquement si le constructeur ou la fonction membre **open** a ouvert le fichier. Si vous passez au constructeur le descripteur d’un fichier déjà ouvert ou si vous utilisez la fonction membre **attach**, vous devez fermer le fichier explicitement.  
   
-##  <a name="a-namevclrferrorprocessingfunctionsanchor10a-error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a> Fonctions de traitement des erreurs  
+##  <a name="vclrferrorprocessingfunctionsanchor10"></a> Fonctions de traitement des erreurs  
  Utilisez les fonctions membres ci-après pour tester les erreurs lors de l'écriture dans un flux :  
   
 |Fonction|Valeur de retour|  

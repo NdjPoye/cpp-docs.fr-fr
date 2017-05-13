@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: ad237fd3f28e7adfd380e6c2adf0510bfcf5248d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e804f35db459c7fe50bb36fa8eeaf795d04cc621
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
@@ -76,10 +77,10 @@ Définit plusieurs types et fonctions qui contrôlent l'allocation et la libéra
   
 |||  
 |-|-|  
-|[operator delete](../standard-library/new-operators.md#operator_delete)|Fonction appelée par une expression delete pour libérer le stockage pour des objets distincts.|  
-|[operator delete&#91;&#93;](../standard-library/new-operators.md#operator_delete_arr)|Fonction appelée par une expression delete pour libérer le stockage pour un tableau d'objets.|  
-|[operator new](../standard-library/new-operators.md#operator_new)|Fonction appelée par une expression new pour allouer le stockage pour des objets distincts.|  
-|[operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr)|Fonction appelée par une expression new pour allouer le stockage pour un tableau d'objets.|  
+|[operator delete](../standard-library/new-operators.md#op_delete)|Fonction appelée par une expression delete pour libérer le stockage pour des objets distincts.|  
+|[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|Fonction appelée par une expression delete pour libérer le stockage pour un tableau d'objets.|  
+|[operator new](../standard-library/new-operators.md#op_new)|Fonction appelée par une expression new pour allouer le stockage pour des objets distincts.|  
+|[operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|Fonction appelée par une expression new pour allouer le stockage pour un tableau d'objets.|  
   
 ### <a name="classes"></a>Classes  
   

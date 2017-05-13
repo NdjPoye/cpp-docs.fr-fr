@@ -86,10 +86,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 33fbfa70740b7a179aaf817ad61579d752d351ba
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9db9c684f27f2cae103cf3071332a5d7fa90e8d9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strset-strsetl-wcsset-wcssetl-mbsset-mbssetl"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
@@ -146,7 +147,7 @@ unsigned char *_mbsset_l(
 ## <a name="remarks"></a>Notes  
  La fonction `_strset` remplace tous les caractères (à l’exclusion du caractère Null de fin) de `str` par `c`, converti en `char`. `_wcsset` et `_mbsset_l` sont des versions à caractères larges et à caractères multioctets de `_strset`, et les types de données des arguments et des valeurs de retour varient en conséquence. Ces fonctions se comportent sinon de façon identique.  
   
- `_mbsset` valide ses paramètres. Si `str` est un pointeur Null, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `_mbsset` retourne `NULL` et affecte à `errno` la valeur `EINVAL`. `_strset` et `_wcsset` ne vérifient pas leurs paramètres.  
+ `_mbsset` valide ses paramètres. Si `str` est un pointeur Null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à continuer, `_mbsset` retourne `NULL` et définit `errno` à `EINVAL`. `_strset` et `_wcsset` ne vérifient pas leurs paramètres.  
   
  La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sont identiques, sauf que celles qui n'ont pas le suffixe `_l` utilisent les paramètres régionaux actuels et celles qui ont le suffixe `_l` utilisent à la place les paramètres régionaux qui ont été passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
@@ -195,9 +196,6 @@ int main( void )
 Before: Fill the string with something.  
 After:  *******************************  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   

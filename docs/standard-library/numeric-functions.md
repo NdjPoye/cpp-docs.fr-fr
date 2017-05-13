@@ -6,13 +6,20 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- numeric/std::accumulate
+- numeric/std::adjacent_difference
+- numeric/std::inner_product
+- numeric/std::iota
+- numeric/std::partial_sum
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
 caps.latest.revision: 13
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 88c311b28caa80d4c4292888be501feae797ce27
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: d194bebeb13d9a5e4648a7c74192047fe093576d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt;, fonctions
@@ -21,7 +28,7 @@ ms.lasthandoff: 02/24/2017
 |[accumulate](#accumulate)|[adjacent_difference](#adjacent_difference)|[inner_product](#inner_product)|  
 |[iota](#iota)|[partial_sum](#partial_sum)|  
   
-##  <a name="a-nameaccumulatea--accumulate"></a><a name="accumulate"></a>  accumulate  
+##  <a name="accumulate"></a>  accumulate  
  Calcule la somme de tous les éléments d’une plage spécifiée incluant une valeur initiale en calculant des sommes partielles successives, ou calcule le résultat des résultats partiels successifs obtenus de la même façon en utilisant une opération binaire spécifiée autre que la somme.  
   
 ```  
@@ -37,23 +44,23 @@ Type accumulate(
 ```  
   
 ### <a name="parameters"></a>Paramètres   
- ` first`  
+ `first`  
  Itérateur d’entrée qui traite le premier élément de la plage qui doit être additionné ou combiné, selon l’opération binaire spécifiée.  
   
- ` last`  
+ `last`  
  Itérateur d’entrée qui traite le dernier élément d’une plage qui doit être additionné ou combiné selon une opération binaire spécifiée et dont la position se trouve immédiatement après le dernier élément inclus dans l’accumulation itérée.  
   
- ` val`  
+ `val`  
  Valeur initiale à laquelle chaque élément est à son tour ajouté ou combiné selon une opération binaire spécifiée.  
   
  `binary_op`  
  Opération binaire qui doit être appliquée à chaque élément dans la plage spécifiée et le résultat de ses applications précédentes.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Somme de ` val` et de tous les éléments de la plage spécifiée pour la première fonction de modèle ou, pour la deuxième fonction de modèle, résultat de l’application de l’opération binaire spécifiée, au lieu de l’opération de somme, à ( *PartialResult, \*Iter*), où *PartialResult* est le résultat des applications précédentes de l’opération et `Iter` est un itérateur pointant vers un élément de la plage.  
+ Somme de `val` et de tous les éléments de la plage spécifiée pour la première fonction de modèle ou, pour la deuxième fonction de modèle, résultat de l’application de l’opération binaire spécifiée, au lieu de l’opération de somme, à ( *PartialResult, \*Iter*), où *PartialResult* est le résultat des applications précédentes de l’opération et `Iter` est un itérateur pointant vers un élément de la plage.  
   
 ### <a name="remarks"></a>Notes  
- La valeur initiale garantit l’obtention d’un résultat bien défini quand la plage est vide, auquel cas ` val` est retourné. L’opération binaire n’est pas tenue d’être associative ou commutative. Le résultat est initialisé à la valeur initiale ` val`, puis *result* = `binary_op` ( *result*, **\***`Iter`) est calculé de manière itérative dans la plage, où `Iter` est un itérateur qui pointe vers l’élément suivant dans la plage. La plage doit être valide et la complexité est linéaire par rapport à la taille de la plage. Le type de retour de l’opérateur binaire doit être convertible en **Type** pour assurer la fermeture pendant l’itération.  
+ La valeur initiale garantit l’obtention d’un résultat bien défini quand la plage est vide, auquel cas `val` est retourné. L’opération binaire n’est pas tenue d’être associative ou commutative. Le résultat est initialisé à la valeur initiale `val`, puis *result* = `binary_op` ( *result*, **\***`Iter`) est calculé de manière itérative dans la plage, où `Iter` est un itérateur qui pointe vers l’élément suivant dans la plage. La plage doit être valide et la complexité est linéaire par rapport à la taille de la plage. Le type de retour de l’opérateur binaire doit être convertible en **Type** pour assurer la fermeture pendant l’itération.  
   
 ### <a name="example"></a>Exemple  
   
@@ -154,7 +161,7 @@ The vector of partial products is:
  ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).  
 ```  
   
-##  <a name="a-nameadjacentdifferencea--adjacentdifference"></a><a name="adjacent_difference"></a>  adjacent_difference  
+##  <a name="adjacent_difference"></a>  adjacent_difference  
  Détermine les différences successives entre chaque élément et son prédécesseur au sein d'une plage d'entrée, puis génère les résultats dans une plage de destination ou calcule le résultat d'une procédure généralisée dans laquelle l'opération de différence est remplacée par une autre opération binaire spécifiée.  
   
 ```  
@@ -173,10 +180,10 @@ OutputIterator adjacent_difference(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` first`  
+ `first`  
  Itérateur d'entrée qui traite le premier élément d'une plage d'entrée dont les éléments doivent être différenciés de leurs prédécesseurs respectifs, ou bien, dont la paire de valeurs doit être utilisée dans le cadre d'une opération par une opération binaire spécifiée.  
   
- ` last`  
+ `last`  
  Itérateur d'entrée qui traite le dernier élément d'une plage d'entrée dont les éléments doivent être différenciés de leurs prédécesseurs respectifs, ou bien, dont la paire de valeurs doit être utilisée dans le cadre d'une opération par une opération binaire spécifiée.  
   
  `result`  
@@ -186,12 +193,12 @@ OutputIterator adjacent_difference(
  Opération binaire qui doit être appliquée dans l'opération généralisée par le remplacement de l'opération de soustraction de la procédure de différenciation.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie qui traite la fin de la plage de destination : `result` + ( ` last` - ` first`).  
+ Itérateur de sortie qui traite la fin de la plage de destination : `result` + ( `last` - `first`).  
   
-### <a name="remarks"></a>Notes  
- L’itérateur de sortie _ *result* peut être le même que l’itérateur d’entrée * first*. Les valeurs `adjacent_difference` peuvent ainsi être calculées sur place.  
+### <a name="remarks"></a>Remarques  
+ La _ d’itérateur de sortie *résultat* ne peut être le même que l’itérateur d’entrée * tout d’abord, * afin que `adjacent_difference`s peuvent être calculées sur place.  
   
- Pour une séquence de valeurs *a*1, *a*2, *a*3 dans une plage d’entrée, la première fonction de modèle stocke les valeurs successives **partial_difference** *a*1, *a*2 - *a*1, a3 – *a*2 dans la plage de destination.  
+ Pour une séquence de valeurs *un*1, *un*2, *un*3, dans une plage d’entrée, la première fonction de modèle stocke une successives **partial_difference**s *un*1, *un*2 - *un*1, a3 - *un*2, dans la plage de destination.  
   
  Pour une séquence de valeurs *a*1, *a*2, *a*3 dans une plage d’entrée, la deuxième fonction de modèle stocke les valeurs successives **partial_difference** *a*1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2 dans la plage de destination.  
   
@@ -258,7 +265,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameinnerproducta--innerproduct"></a><a name="inner_product"></a>  inner_product  
+##  <a name="inner_product"></a>  inner_product  
  Calcule la somme du produit d’éléments de deux plages et l’ajoute à une valeur initiale spécifiée, ou calcule le résultat d’une procédure généralisée dans laquelle les opérations binaires de somme et de produit sont remplacées par d’autres opérations binaires spécifiées.  
   
 ```  
@@ -280,16 +287,16 @@ Type inner_product(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` first1`  
+ `first1`  
  Itérateur d’entrée qui traite le premier élément de la première plage dont le produit interne ou le produit interne généralisé avec la deuxième plage est à calculer.  
   
- ` last1`  
+ `last1`  
  Itérateur d’entrée qui traite le dernier élément de la première plage dont le produit interne ou le produit interne généralisé avec la deuxième plage est à calculer.  
   
- ` first2`  
+ `first2`  
  Itérateur d’entrée qui traite le premier élément de la deuxième plage dont le produit interne ou le produit interne généralisé avec la première plage est à calculer.  
   
- ` val`  
+ `val`  
  Valeur initiale à laquelle ajouter le produit interne ou le produit interne généralisé entre les plages.  
   
  *binary_op1*  
@@ -301,18 +308,18 @@ Type inner_product(
 ### <a name="return-value"></a>Valeur de retour  
  La première fonction membre retourne la somme des produits d’éléments et y ajoute la valeur initiale spécifiée. Pour les plages de valeurs *a*i et *b*i, elle retourne :  
   
- ` val` + ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) +  
+ `val`+ ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n ) 
   
- en remplaçant de manière itérative ` val` par ` val` + (\* *a*i \* \* *b*i ).  
+ en remplaçant de manière itérative `val` avec `val` + ( *un*i \* *b*i).  
   
  La deuxième fonction membre retourne :  
   
- ` val` _ *Binary_op1* ( *a*1 \_ *Binary_op2* *b*1 ) \_ *Binary_op1* ( *a*2 \_ *Binary_op2* *b*2 ) \_ *Binary_op1*  
+ `val`*binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ... *binary_op1* ( *a*n *binary_op2* *b*n )  
   
- en remplaçant de manière itérative ` val` par ` val` _ *Binary_op1* (\* *a*i \_ *Binary_op2* \* *b*i ).  
+ en remplaçant de manière itérative `val` avec `val` *binary_op1* ( *un*i *binary_op2* *b*i).  
   
-### <a name="remarks"></a>Notes  
- La valeur initiale garantit l’obtention d’un résultat bien défini quand la plage est vide, auquel cas ` val` est retourné. Les opérations binaires ne sont pas tenues d’être associatives ou commutatives. La plage doit être valide et la complexité est linéaire par rapport à la taille de la plage. Le type de retour de l’opérateur binaire doit être convertible en **Type** pour assurer la fermeture pendant l’itération.  
+### <a name="remarks"></a>Remarques  
+ La valeur initiale garantit l’obtention d’un résultat bien défini quand la plage est vide, auquel cas `val` est retourné. Les opérations binaires ne sont pas tenues d’être associatives ou commutatives. La plage doit être valide et la complexité est linéaire par rapport à la taille de la plage. Le type de retour de l’opérateur binaire doit être convertible en **Type** pour assurer la fermeture pendant l’itération.  
   
 ### <a name="example"></a>Exemple  
   
@@ -404,7 +411,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-nameiotaa--iota"></a><a name="iota"></a>  iota  
+##  <a name="iota"></a>  iota  
  Stocke une valeur de départ, en commençant par le premier élément et en remplissant la plage avec des incréments successifs de cette valeur ( ` value++`) dans chaque élément de l’intervalle `[ first,  last)`.  
   
 ```  
@@ -413,13 +420,13 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` first`  
+ `first`  
  Itérateur d’entrée qui traite le premier élément de la plage à remplir.  
   
- ` last`  
+ `last`  
  Itérateur d’entrée qui traite le dernier élément de la plage à remplir.  
   
- ` value`  
+ `value`  
  Valeur de départ à stocker dans le premier élément et à incrémenter successivement dans les éléments suivants.  
   
 ### <a name="remarks"></a>Notes  
@@ -465,7 +472,7 @@ int main(void)
 }  
 ```  
   
-##  <a name="a-namepartialsuma--partialsum"></a><a name="partial_sum"></a>  partial_sum  
+##  <a name="partial_sum"></a>  partial_sum  
  Calcule une série de sommes dans une plage d’entrée à partir du premier élément jusqu’à l’élément numéro *i*, puis stocke le résultat de chaque somme dans l’élément numéro *i* d’une plage de destination, ou calcule le résultat d’une procédure généralisée où l’opération de somme est remplacée par une autre opération binaire spécifiée.  
   
 ```  
@@ -484,10 +491,10 @@ OutputIterator partial_sum(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` first`  
+ `first`  
  Itérateur d'entrée qui traite le premier élément de la plage qui doit être partiellement additionné ou combiné, selon l'opération binaire spécifiée.  
   
- ` last`  
+ `last`  
  Itérateur d'entrée qui traite le dernier élément d'une plage qui doit être partiellement additionné ou combiné selon une opération binaire spécifiée, et dont la position se trouve immédiatement après le dernier élément inclus dans l'accumulation itérée.  
   
  `result`  
@@ -497,14 +504,14 @@ OutputIterator partial_sum(
  Opération binaire qui doit être appliquée dans l'opération généralisée par le remplacement de l'opération de somme de la procédure de somme partielle.    
   
 ### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie qui traite la fin de la plage de destination : `result` + ( ` last` - ` first`),  
+ Itérateur de sortie qui traite la fin de la plage de destination : `result` + ( `last` - `first`),  
   
 ### <a name="remarks"></a>Notes  
- L'itérateur de sortie `result` peut être le même que l'itérateur d'entrée ` first`, afin que les sommes partielles puissent être calculées sur place.  
+ L'itérateur de sortie `result` peut être le même que l'itérateur d'entrée `first`, afin que les sommes partielles puissent être calculées sur place.  
   
  Pour une séquence de valeurs *a*1, *a*2, *a*3, dans une plage d’entrée, la première fonction de modèle stocke les sommes partielles successives dans la plage de destination, où l’élément numéro *i* est fourni par (  ( ( *a*1 + *a*2) + *a*3) *a*i).  
   
- Pour une séquence de valeurs *a*1, *a*2, *a*3, dans une plage d’entrée, la deuxième fonction de modèle stocke les sommes partielles successives dans la plage de destination, où l’élément numéro i est fourni par (  ( ( *a*1`binary_op` *a*2 ) `binary_op` *a*3 ) *a*i).  
+ Pour une séquence de valeurs *un*1, *un*2, *un*3, dans une plage d’entrée, la deuxième fonction de modèle stocke des sommes partielles successives dans la plage de destination, où l’élément ith est indiqué par ((( *un*1 `binary_op` *un*2) `binary_op` *un*3) *un*i).  
   
  Il n'est pas nécessaire que l'opération binaire `binary_op` soit associative ou commutative, car l'ordre des opérations appliqué est entièrement spécifié.  
   
