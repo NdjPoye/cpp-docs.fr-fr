@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40fe628e045d8aa8930560ba8ab88a9e203022e3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 78ec6b782a5dd0c78e3e2724fd06258d17fdbe67
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
@@ -91,9 +92,9 @@ int _mbtowc_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Si **mbchar** n’est pas **NULL** et que l’objet désigné par `mbchar` forme un caractère multioctet valide, `mbtowc` retourne la longueur en octets du caractère multioctet. Si `mbchar` est **NULL** ou que l’objet qu’il désigne est un caractère Null large (L'\0'), la fonction retourne 0. Si l’objet désigné par `mbchar` ne forme pas un caractère multioctet valide dans les *count* premiers caractères, elle retourne −1.  
+ Si **mbchar** n’est pas **NULL** et que l’objet désigné par `mbchar` forme un caractère multioctet valide, `mbtowc` retourne la longueur en octets du caractère multioctet. Si `mbchar` est **NULL** ou que l’objet qu’il désigne est un caractère Null large (L'\0'), la fonction retourne 0. Si l’objet qui `mbchar` pointe vers ne forment pas un caractère multioctet valide dans le premier *nombre* caractères, elle retourne -1.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction `mbtowc` convertit au plus *count* octets désignés par `mbchar`, si `mbchar` n’est pas **NULL**, en un caractère large correspondant. `mbtowc` stocke le caractère large résultant dans *wchar*, si *wchar* n’est pas **NULL**. `mbtowc` n’examine pas plus de `MB_CUR_MAX` octets. La fonction `mbtowc` utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux ; la fonction `_mbtowc_l` est identique, à ceci près qu’elle utilise à la place les paramètres régionaux qui ont été passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Spécifications  
@@ -166,9 +167,6 @@ Attempt to convert when target is NULL
 Attempt to convert a NULL pointer to a wide character:  
   Bytes converted: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   

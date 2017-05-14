@@ -1,68 +1,85 @@
 ---
-title: "strcat, wcscat, _mbscat | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbscat"
-  - "wcscat"
-  - "strcat"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbscat"
-  - "_ftcscat"
-  - "_tcscat"
-  - "strcat"
-  - "wcscat"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftcscat (fonction)"
-  - "_mbscat (fonction)"
-  - "_tcscat (fonction)"
-  - "ajouter des chaînes"
-  - "concaténer des chaînes"
-  - "ftcscat (fonction)"
-  - "mbscat (fonction)"
-  - "strcat (fonction)"
-  - "chaînes (C++), ajouter"
-  - "chaînes (C++), concaténer"
-  - "tcscat (fonction)"
-  - "wcscat (fonction)"
+title: strcat, wcscat, _mbscat | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbscat
+- wcscat
+- strcat
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbscat
+- _ftcscat
+- _tcscat
+- strcat
+- wcscat
+dev_langs:
+- C++
+helpviewer_keywords:
+- concatenating strings
+- mbscat function
+- _ftcscat function
+- _tcscat function
+- ftcscat function
+- strcat function
+- strings [C++], appending
+- _mbscat function
+- tcscat function
+- strings [C++], concatenating
+- appending strings
+- wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# strcat, wcscat, _mbscat
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 92bed9443eba34dc0298d28c53d34543ee52d935
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
-Attache une chaîne.  Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [strcat\_s, wcscat\_s, \_mbscat\_s](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md).  
+---
+# <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
+Ajoute une chaîne. Il existe des versions plus sécurisées de ces fonctions. Consultez [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md).  
   
 > [!IMPORTANT]
->  `_mbscat_s` ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime.  Pour plus d'informations, consultez [Fonctions CRT non prises en charge avec \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+> La fonction  `_mbscat_s` ne peut pas être utilisée dans les applications qui s’exécutent dans Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 char *strcat(  
@@ -94,53 +111,50 @@ unsigned char *_mbscat(
 ); // C++ only  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `strDestination`  
- Chaîne cible finissant par Null.  
+ Chaîne de destination se terminant par un caractère Null.  
   
  `strSource`  
  Chaîne source se terminant par null.  
   
-## Valeur de retour  
- Chacune de ces fonctions retourne la chaîne de destination \(`strDestination`\).  Aucune valeur de retour n'est réservée pour indiquer une erreur.  
+## <a name="return-value"></a>Valeur de retour  
+ Chacune de ces fonctions retourne la chaîne de destination (`strDestination`). Aucune valeur de retour n'est réservée pour indiquer une erreur.  
   
-## Notes  
- La fonction `strcat` ajoute `strSource` à `strDestination` et arrête la chaîne résultante avec un caractère Null.  Le caractère initial de `strSource` remplace le caractère null de fin de `strDestination`.  Le comportement de `strcat` est non défini si les chaînes source et de destination se superposent.  
+## <a name="remarks"></a>Notes  
+ La fonction `strcat` ajoute `strSource` à `strDestination` et termine la chaîne obtenue par un caractère Null. Le caractère initial de `strSource` remplace le caractère Null de fin de `strDestination`. Le comportement de `strcat` n'est pas défini si les chaînes source et de destination se chevauchent.  
   
 > [!IMPORTANT]
->  Comme `strcat` ne vérifie pas l'espace suffisant dans `strDestination` avant de copier `strSource`, c'est une cause potentielle de dépassements de mémoire tampon.  Si possible, utilisez [strncat](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) à la place.  
+>  Comme `strcat` ne vérifie pas si `strDestination` contient suffisamment d’espace avant d’ajouter `strSource`, il s’agit d’une cause potentielle de dépassements de mémoire tampon. Envisagez d’utiliser plutôt [strncat](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).  
   
- `wcscat` et `_mbscat` sont des versions à caractères élargis et à caractères multi\-octets de `strcat`.  Les arguments et la valeur de retour de `wcscat` sont des chaînes à caractères larges ; ceux de `_mbscat` sont des chaînes de caractères multioctets.  Ces trois fonctions se comportent sinon de façon identique.  
+ `wcscat` et `_mbscat` sont des versions à caractères larges et à caractères multioctets de `strcat`. Les arguments et la valeur de retour de `wcscat` sont des chaînes de caractères larges ; ceux de `_mbscat` sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.  
   
- En C\+\+, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions.  Pour plus d'informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcscat`|`strcat`|`_mbscat`|`wcscat`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`strcat`|\<string.h\>|  
-|`wcscat`|\<string.h\> ou \<wchar.h\>|  
-|`_mbscat`|\<mbstring.h\>|  
+|`strcat`|\<string.h>|  
+|`wcscat`|\<string.h> ou \<wchar.h>|  
+|`_mbscat`|\<mbstring.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
- Consultez l'exemple de [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md).  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple relatif à [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md).  
   
-## Équivalent .NET Framework  
- [System::String::Concat](https://msdn.microsoft.com/en-us/library/system.string.concat.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   
- [strncat, \_strncat\_l, wcsncat, \_wcsncat\_l, \_mbsncat, \_mbsncat\_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, \_strncpy\_l, wcsncpy, \_wcsncpy\_l, \_mbsncpy, \_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, \_mbsrchr, \_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn, wcsspn, \_mbsspn, \_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

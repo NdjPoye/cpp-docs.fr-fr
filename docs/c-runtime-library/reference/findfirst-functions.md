@@ -118,10 +118,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f7d0417e6533124cc49e909687d7bc232523c302
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: baf853db4fe1a23ee726423a052604a0db8764c9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
@@ -188,7 +189,7 @@ intptr_t _wfindfirst64i32(
  Mémoire tampon des informations du fichier.  
   
 ## <a name="return-value"></a>Valeur de retour  
- En cas de réussite, `_findfirst` retourne un handle de recherche unique identifiant le fichier ou le groupe de fichiers qui correspondent à la spécification `filespec`, qui peut être utilisé dans un appel ultérieur à [_findnext](../../c-runtime-library/reference/findnext-functions.md) ou à `_findclose`. Dans le cas contraire, `_findfirst` retourne –1 et définit `errno` sur une des valeurs suivantes.  
+ En cas de réussite, `_findfirst` retourne un handle de recherche unique identifiant le fichier ou le groupe de fichiers qui correspondent à la spécification `filespec`, qui peut être utilisé dans un appel ultérieur à [_findnext](../../c-runtime-library/reference/findnext-functions.md) ou à `_findclose`. Dans le cas contraire, `_findfirst` retourne -1 et définit `errno` à une des valeurs suivantes.  
   
  `EINVAL`  
  Paramètre non valide : `filespec` ou `fileinfo` était `NULL`. Ou bien, le système d’exploitation a retourné une erreur inattendue.  
@@ -223,13 +224,13 @@ intptr_t _wfindfirst64i32(
   
 |Fonctions|`_USE_32BIT_TIME_T` défini ?|Type d’heure|Type de longueur de fichier|  
 |---------------|----------------------------------|---------------|----------------------|  
-|`_findfirst`, `_wfindfirst`|Non défini|64 bits|32 bits|  
-|`_findfirst`, `_wfindfirst`|Défini|32 bits|32 bits|  
-|`_findfirst32`, `_wfindfirst32`|Non affecté par la définition de macro|32 bits|32 bits|  
-|`_findfirst64`, `_wfindfirst64`|Non affecté par la définition de macro|64 bits|64 bits|  
-|`_findfirsti64`, `_wfindfirsti64`|Non défini|64 bits|64 bits|  
-|`_findfirsti64`, `_wfindfirsti64`|Défini|32 bits|64 bits|  
-|`_findfirst32i64`, `_wfindfirst32i64`|Non affecté par la définition de macro|32 bits|64 bits|  
+|`_findfirst`, `_wfindfirst`|Non défini|64 bits|32 bits|  
+|`_findfirst`, `_wfindfirst`|Défini|32 bits|32 bits|  
+|`_findfirst32`, `_wfindfirst32`|Non affecté par la définition de macro|32 bits|32 bits|  
+|`_findfirst64`, `_wfindfirst64`|Non affecté par la définition de macro|64 bits|64 bits|  
+|`_findfirsti64`, `_wfindfirsti64`|Non défini|64 bits|64 bits|  
+|`_findfirsti64`, `_wfindfirsti64`|Défini|32 bits|64 bits|  
+|`_findfirst32i64`, `_wfindfirst32i64`|Non affecté par la définition de macro|32 bits|64 bits|  
 |`_findfirst64i32`, `_wfindfirst64i32`|Non affecté par la définition de macro|64 bits|32 bits|  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
@@ -261,9 +262,6 @@ intptr_t _wfindfirst64i32(
 |`_wfindfirst64i32`|\<io.h> ou \<wchar.h>|  
   
  Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- [System::IO::DirectoryInfo::GetFiles](https://msdn.microsoft.com/en-us/library/system.io.directoryinfo.getfiles.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Appels système](../../c-runtime-library/system-calls.md)   

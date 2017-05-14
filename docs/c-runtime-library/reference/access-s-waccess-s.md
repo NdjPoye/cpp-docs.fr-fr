@@ -1,56 +1,73 @@
 ---
-title: "_access_s, _waccess_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_access_s"
-  - "_waccess_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "waccess_s"
-  - "access_s"
-  - "_waccess_s"
-  - "_access_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_access_s (fonction)"
-  - "_taccess_s (fonction)"
-  - "_waccess_s (fonction)"
-  - "access_s (fonction)"
-  - "taccess_s (fonction)"
-  - "waccess_s (fonction)"
+title: _access_s, _waccess_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _access_s
+- _waccess_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- waccess_s
+- access_s
+- _waccess_s
+- _access_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- access_s function
+- taccess_s function
+- _taccess_s function
+- waccess_s function
+- _access_s function
+- _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
 caps.latest.revision: 28
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# _access_s, _waccess_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 051c2e6a6b0315e2ca4ab3192f28a370d969ec5b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
-Détermine les autorisations de lecture\/écriture du fichier.  Il s'agit de versions de [\_access, \_waccess](../../c-runtime-library/reference/access-waccess.md) avec des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="accesss-waccesss"></a>_access_s, _waccess_s
+Détermine les autorisations de lecture/écriture de fichier. Il s’agit d’une version de [_access, _waccess](../../c-runtime-library/reference/access-waccess.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 errno_t _access_s(   
@@ -63,58 +80,58 @@ errno_t _waccess_s(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `path`  
- Fichier ou chemin d'accès au répertoire.  
+ Chemin du répertoire ou du fichier.  
   
  `mode`  
- Définition des autorisations  
+ Paramètre d'autorisation.  
   
-## Valeur de retour  
- Chaque fonction retourne 0 si le fichier est le mode donné.  La fonction retourne un code d'erreur si le fichier nommé n'existe pas ou n'est pas disponible dans le mode donné.  Dans ce cas, la fonction retourne un code d'erreur de l'ensemble de la façon suivante et définit également `errno`à la même valeur.  
+## <a name="return-value"></a>Valeur de retour  
+ Chaque fonction retourne 0 si le fichier a le mode donné. La fonction retourne un code d’erreur si le fichier nommé n’existe pas ou qu’il est inaccessible dans le mode donné. Dans ce cas, la fonction retourne un code d’erreur de l’ensemble suivant et définit également `errno` sur la même valeur.  
   
  `EACCES`  
- Accès refusé.  Le paramètre d'autorisation du fichier n'autorise pas l'accès spécifié.  
+ Accès refusé. Le paramètre d’autorisation du fichier n’autorise pas l’accès spécifié.  
   
  `ENOENT`  
- Fichier ou chemin d'accès introuvable.  
+ Chemin ou nom de fichier introuvable.  
   
  `EINVAL`  
  Paramètre non valide.  
   
- Pour plus d'informations, consultez [errno, \_doserrno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- Lorsqu'elle est utilisée avec les fichiers, la fonction `_access_s` détermine si le fichier spécifié existe et est accessible comme spécifié par la valeur de`mode`.  Lorsqu'ils sont utilisés avec des répertoires, `_access_s` détermine seulement si le repertoire spécifié existe.  Dans [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] et dans les systèmes d'exploitation ultérieurs, tous les répertoires ont un accès en lecture et en écriture.  
+## <a name="remarks"></a>Notes  
+ Quand elle est utilisée avec des fichiers, la fonction `_access_s` détermine si le fichier spécifié existe et est accessible conformément à la valeur de `mode`. Quand elle est utilisée avec des répertoires, `_access_s` détermine uniquement si le répertoire spécifié existe. Dans [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] et les systèmes d’exploitation ultérieurs, tous les répertoires sont accessibles en lecture et écriture.  
   
-|valeur du mode|Les contrôles de fichier|  
-|--------------------|------------------------------|  
+|Valeur du mode|Test réalisé sur le fichier|  
+|----------------|---------------------|  
 |00|Existence uniquement.|  
-|02|Autorisation d'écriture.|  
+|02|Autorisation d’écriture.|  
 |04|Autorisation de lecture.|  
-|06|Autorisation de lecture et d'écriture.|  
+|06|Autorisations de lecture et d’écriture.|  
   
- L'autorisation de lire ou écrire le fichier n'est pas suffisante pour garantir la possibilité d'ouvrir un fichier.  Par exemple, si un fichier est verrouillé par un autre processus, elle peut ne pas être accessibles même si  `_access_s`retourne 0.  
+ L’autorisation de lecture ou d’écriture dans le fichier n’est pas suffisante pour assurer la possibilité d’ouvrir un fichier. Par exemple, si un fichier est verrouillé par un autre processus, il peut être inaccessible même si `_access_s` retourne la valeur 0.  
   
- `_waccess_s` est une version à caractères larges de `_access_s`; dans laquelle l'argument `path` vers `_waccess_s` est une chaîne à caractères larges.  Sinon, `_waccess_s` et `_access_s` se comportent de la même façon.  
+ `_waccess_s` est une version à caractères larges de `_access_s`, où l’argument `path` de `_waccess_s` est une chaîne à caractères larges. Sinon, `_waccess_s` et `_access_s` se comportent de la même façon.  
   
- Ces fonctions valident leurs paramètres.  Si `path` est `NULL` ou que `mode` ne spécifie aucun mode valide, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno` à la valeur `EINVAL` et retournent `EINVAL`.  
+ Ces fonctions valident leurs paramètres. Si `path` est `NULL` ou que `mode` ne spécifie pas de mode valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions attribuent à `errno` la valeur `EINVAL` et retournent `EINVAL`.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine Tchar.h|\_UNICODE et \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|-------------------------------------|-------------------|----------------------|  
+|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_taccess_s`|`_access_s`|`_access_s`|`_waccess_s`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|En\-tête facultatif|  
-|-------------|---------------------|-------------------------|  
-|`_access_s`|\<io.h,\>|\<errno.h\>|  
-|`_waccess_s`|\<stdio.h\> ou \<wchar.h\>|\<errno.h\>|  
+|Routine|En-tête requis|En-tête facultatif|  
+|-------------|---------------------|---------------------|  
+|`_access_s`|\<io.h>|\<errno.h>|  
+|`_waccess_s`|\<wchar.h> ou \<io.h>|\<errno.h>|  
   
-## Exemple  
- L'exemple suivant utilise `_access_s`pour vérifier si le fichier nommé crt\_ACCESS.C existe et si l'écriture est autorisée.  
+## <a name="example"></a>Exemple  
+ Cet exemple utilise `_access_s` pour vérifier si le fichier nommé crt_access_s.c existe et si l’écriture est autorisée.  
   
 ```  
 // crt_access_s.c  
@@ -151,15 +168,15 @@ int main( void )
 }  
 ```  
   
-  **Le fichier crt\_access\_s.c existe.**  
-**Le fichier crt\_access\_s.c n'a pas l'autorisation d'écriture.**   
-## Équivalent .NET Framework  
- <xref:System.IO.FileAccess?displayProperty=fullName>  
+```Output  
+File crt_access_s.c exists.  
+File crt_access_s.c does not have write permission.  
+```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion de fichiers](../../c-runtime-library/file-handling.md)   
- [\_access, \_waccess](../../c-runtime-library/reference/access-waccess.md)   
- [\_chmod, \_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [\_fstat, \_fstat32, \_fstat64, \_fstati64, \_fstat32i64, \_fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_stat, \_wstat, fonctions](../../c-runtime-library/reference/stat-functions.md)
+ [_access, _waccess](../../c-runtime-library/reference/access-waccess.md)   
+ [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_stat, _wstat, fonctions](../../c-runtime-library/reference/stat-functions.md)

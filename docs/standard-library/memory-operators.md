@@ -14,25 +14,28 @@ f1_keywords:
 - memory/std::operator<=
 - memory/std::operator<<
 - memory/std::operator==
+dev_langs:
+- C++
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
 caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 50cfd9e09a7534ea7c615ebf6b0c781806013965
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6416c01a3538961af9f1c6f2e8bca3c91ffd4bde
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt;, opérateurs
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;&lt;](#operator_lt__lt_)|[operator&lt;=](#operator_lt__eq)|  
-|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
+|[operator==](#op_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  Teste l'inégalité entre des objets.  
   
 ```  
@@ -53,10 +56,10 @@ bool operator!=(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` left`  
+ `left`  
  L'un des objets dont l'inégalité doit être testée.  
   
- ` right`  
+ `right`  
  L'un des objets dont l'inégalité doit être testée.  
   
  `Ty1`  
@@ -69,9 +72,9 @@ bool operator!=(
  **true** si les objets ne sont pas égaux, **false** si les objets sont égaux.  
   
 ### <a name="remarks"></a>Remarques  
- Le premier opérateur de modèle retourne false. (Tous les allocateurs par défaut sont égaux.)  
+ Le premier opérateur de modèle retourne false. (Tous les allocateurs par défaut sont égaux).  
   
- Les deuxième et troisième opérateurs de modèle retournent `!(`` left` `==` ` right``)`.  
+ Les deuxième et troisième opérateurs de modèle retournent `!(left == right)`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -130,7 +133,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  Teste l'égalité entre des objets.  
   
 ```  
@@ -151,10 +154,10 @@ bool operator==(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` left`  
+ `left`  
  L'un des objets dont l'égalité doit être testée.  
   
- ` right`  
+ `right`  
  L'un des objets dont l'égalité doit être testée.  
   
  `Ty1`  
@@ -239,7 +242,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  Teste si un objet est supérieur ou égal à un second objet.  
   
 ```  
@@ -255,10 +258,10 @@ bool operator>=(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` left`  
+ `left`  
  L'un des objets à comparer.  
   
- ` right`  
+ `right`  
  L'un des objets à comparer.  
   
  `Ty1`  
@@ -268,9 +271,9 @@ bool operator>=(
  Type contrôlé par le pointeur partagé de droite.  
   
 ### <a name="remarks"></a>Remarques  
- Les opérateurs de modèle retournent ` left``.get() >=` ` right``.get()`.  
+ Les opérateurs de modèle retournent `left.get() >= right.get()`.  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="op_lt"></a>  operator&lt;  
  Teste si un objet est inférieur à un second objet.  
   
 ```  
@@ -286,10 +289,10 @@ bool operator<(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` left`  
+ `left`  
  L'un des objets à comparer.  
   
- ` right`  
+ `right`  
  L'un des objets à comparer.  
   
  `Ty1`  
@@ -298,7 +301,7 @@ bool operator<(
  `Ty2`  
  Type contrôlé par le pointeur de droite.  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  Teste si un objet est inférieur ou égal à un second objet.  
   
 ```  
@@ -314,10 +317,10 @@ bool operator<=(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` left`  
+ `left`  
  L'un des objets à comparer.  
   
- ` right`  
+ `right`  
  L'un des objets à comparer.  
   
  `Ty1`  
@@ -327,9 +330,9 @@ bool operator<=(
  Type contrôlé par le pointeur partagé de droite.  
   
 ### <a name="remarks"></a>Remarques  
- Les opérateurs de modèle retournent ` left``.get() <=` ` right``.get()`.  
+ Les opérateurs de modèle de retour`left.get() <= right.get()`  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="op_gt"></a>  operator&gt;  
  Teste si un objet est supérieur à un second objet.  
   
 ```  
@@ -345,10 +348,10 @@ bool operator>(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` left`  
+ `left`  
  L'un des objets à comparer.  
   
- ` right`  
+ `right`  
  L'un des objets à comparer.  
   
  `Ty1`  
@@ -357,7 +360,7 @@ bool operator>(
  `Ty2`  
  Type contrôlé par le pointeur partagé de droite.  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
 Écrit le pointeur partagé dans le flux.  
   
 ```  

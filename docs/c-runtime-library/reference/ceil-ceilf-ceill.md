@@ -1,56 +1,71 @@
 ---
-title: "ceil, ceilf, ceill | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "ceilf"
-  - "ceil"
-  - "ceill"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ceil"
-  - "ceilf"
-  - "ceill"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "calculer les plafonds des valeurs"
-  - "ceil (fonction)"
-  - "ceilf (fonction)"
-  - "ceill (fonction)"
+title: ceil, ceilf, ceill | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- ceilf
+- ceil
+- ceill
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- ceil
+- ceilf
+- ceill
+dev_langs:
+- C++
+helpviewer_keywords:
+- calculating value ceilings
+- ceill function
+- ceil function
+- ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# ceil, ceilf, ceill
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 1fd4b888c8fc332c07aed62af03b340864dfe3bf
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
-Calcule l'entier suivant la partie entière d'une valeur.  
+---
+# <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
+Calcule le plafond d’une valeur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 double ceil(   
@@ -70,37 +85,34 @@ long double ceill(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `x`  
  Valeur à virgule flottante.  
   
-## Valeur de retour  
- Les fonctions `ceil` retournent une valeur à virgule flottante qui représente le plus petit entier supérieur ou égal à `x`.  Aucun retour d'erreur.  
+## <a name="return-value"></a>Valeur de retour  
+ Les fonctions `ceil` retournent une valeur à virgule flottante qui représente le plus petit entier supérieur ou égal à `x`. Aucun retour d'erreur.  
   
-|Entrée|Exception SEH|Exception Matherr|  
-|------------|-------------------|-----------------------|  
+|Entrée|Exception SEH|Exception{b> <b}Matherr|  
+|-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|aucun|`_DOMAIN`|  
   
- `ceil` a une implémentation qui utilise les extensions Streaming SIMD 2 \(SSE2\).  Pour plus d'informations et de restrictions sur l'utilisation de l'implémentation SSE2, consultez [\_set\_SSE2\_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
+ `ceil` présente une implémentation qui utilise SSE2 (Streaming SIMD Extensions 2). Pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   
-## Notes  
- Comme C\+\+ permet une surcharge, vous pouvez appeler des surcharges de `ceil`.  Dans un programme C, `ceil` prend et retourne toujours un double .  
+## <a name="remarks"></a>Notes  
+ C++ autorisant la surcharge, vous pouvez appeler des surcharges de `ceil`. Dans un programme C, `ceil` accepte et retourne toujours un double.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`ceil`, `ceilf`, `ceill`|\<math.h\>|  
+|`ceil`, `ceilf`, `ceill`|\<math.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
- Consultez l'exemple de [floor](../../c-runtime-library/reference/floor-floorf-floorl.md).  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple relatif à [floor](../../c-runtime-library/reference/floor-floorf-floorl.md).  
   
-## Équivalent .NET Framework  
- [System::Math::Ceiling](https://msdn.microsoft.com/en-us/library/system.math.ceiling.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
  [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
  [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   

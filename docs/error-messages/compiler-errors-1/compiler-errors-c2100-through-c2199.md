@@ -17,7 +17,6 @@ f1_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 helpviewer_keywords:
@@ -29,7 +28,6 @@ helpviewer_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 dev_langs:
@@ -53,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 3716dbf66c2cf1c35c26df6dfd95fb1c0946e68d
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c724fd7907f7ec3f0ce8f096faf88d4ec66ae970
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>Erreur du compilateurs C2100 through C2199
@@ -65,7 +64,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 > [!NOTE]
 >  Pas chaque [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erreur est documentée dans MSDN. Dans de nombreux cas, le message de diagnostic fournit toutes les informations qui est disponibles. Si vous pensez qu'un message d'erreur nécessite une explication supplémentaire, faites-nous part de vos suggestions. Vous pouvez utiliser le formulaire de commentaires sur cette page, ou accédez à la barre de menus dans Visual Studio et choisissez **aide**, **signaler un bogue**, ou vous pouvez envoyer un rapport de suggestion ou un bogue sur [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
- Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ générales](http://go.microsoft.com/fwlink/?LinkId=158194) forum concerne les questions de [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
+ Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ général](http://go.microsoft.com/fwlink/?LinkId=158194) est de forum de questions sur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
   
 |Erreur|Message|  
 |-----------|-------------|  
@@ -99,7 +98,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |C2127 d’erreur du compilateur|'*identificateur*' : initialisation illégale de l’entité 'constexpr' avec une expression non constante|  
 |[Erreur du compilateur C2128](compiler-error-c2128.md)|'*fonction*' : alloc_text/same_seg applicable qu’aux fonctions avec liaison C|  
 |[Erreur du compilateur C2129](compiler-error-c2129.md)|fonction static '*identificateur*' déclaré mais ne pas défini|  
-|[Erreur du compilateur C2130](compiler-error-c2130.md)|#ligne attendait une chaîne contenant le nom de fichier, trouvé '*jeton*'|  
+|[Erreur du compilateur C2130](compiler-error-c2130.md)|#line attendait une chaîne contenant le nom de fichier, trouvé '*jeton*'|  
 |C2131 d’erreur du compilateur|l'expression n'a pas été évaluée en constante|  
 |[Erreur du compilateur C2132](compiler-error-c2132.md)|erreur de syntaxe : identificateur inattendu|  
 |[Erreur du compilateur C2133](compiler-error-c2133.md)|'*identificateur*' : taille inconnue|  
@@ -141,13 +140,13 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2169](compiler-error-c2169.md)|'*fonction*' : fonction intrinsèque, ne peut pas être définie.|  
 |[Erreur du compilateur C2170](compiler-error-c2170.md)|'*identificateur*' : non déclaré comme fonction, ne peut pas être intrinsèque|  
 |[Erreur du compilateur C2171](compiler-error-c2171.md)|'*opérateur*' : non conforme sur les opérandes de type '*type*'|  
-|[Erreur du compilateur C2172](compiler-error-c2172.md)|'*fonction*' : le paramètre réel n’est pas un pointeur : paramètre *numéro*|  
-|[Erreur du compilateur C2173](compiler-error-c2173.md)|'*fonction*' : le paramètre réel n’est pas un pointeur : paramètre *numéro*, liste de paramètres *numéro*|  
+|[Erreur du compilateur C2172](compiler-error-c2172.md)|'*fonction*' : le paramètre réel n’est pas un pointeur : paramètre *nombre*|  
+|[Erreur du compilateur C2173](compiler-error-c2173.md)|'*fonction*' : le paramètre réel n’est pas un pointeur : paramètre *nombre*, liste de paramètres *nombre*|  
 |[Erreur du compilateur C2174](compiler-error-c2174.md)|'*fonction*' : le paramètre réel a 'void 'comme type : paramètre *nombre*, liste de paramètres *nombre*|  
 |[Erreur du compilateur C2175](compiler-error-c2175.md)|'*paramètres régionaux*' : variable locale non valide|  
 |C2176 d’erreur du compilateur|une instruction return ne peut pas apparaître dans le gestionnaire d'un bloc try de fonction associé à un constructeur|  
 |[Erreur du compilateur C2177](compiler-error-c2177.md)|constante trop grande|  
-|C2178 d’erreur du compilateur|'*identificateur*'ne peut pas être déclarée avec'*spécificateur*' spécificateur|  
+|[C2178 d’erreur du compilateur](compiler-error-c2178.md)|'*identificateur*'ne peut pas être déclarée avec'*spécificateur*' spécificateur|  
 |[Erreur du compilateur C2179](compiler-error-c2179.md)|'*type*' : un argument d’attribut ne peut pas utiliser les paramètres de type|  
 |[Erreur du compilateur C2180](compiler-error-c2180.md)|expression de contrôle a le type '*type*'|  
 |[Erreur du compilateur C2181](compiler-error-c2181.md)|instruction else sans if correspondant non conforme|  

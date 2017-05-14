@@ -35,13 +35,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1427efddf9271d273e94c4f62d6d104e7f1c2b48
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c490b3d744aa691331500f491444435dfe583d13
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/10/2017
 
 ---
-# <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA, structure
+# <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (structure)
 La structure `AFX_GLOBAL_DATA` contient des champs et des méthodes qui permettent de gérer l’infrastructure ou de personnaliser l’apparence et le comportement de votre application.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -59,7 +60,7 @@ struct AFX_GLOBAL_DATA
 |`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`|Construit une structure `AFX_GLOBAL_DATA` .|  
 |`AFX_GLOBAL_DATA::~AFX_GLOBAL_DATA`|Destructeur.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Méthodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
@@ -123,7 +124,7 @@ struct AFX_GLOBAL_DATA
 ### <a name="remarks"></a>Remarques  
  La plupart des données dans la structure `AFX_GLOBAL_DATA` sont initialisées au démarrage de votre application.  
   
-### <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+### <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `AFX_GLOBAL_DATA`   
   
 ### <a name="requirements"></a>Spécifications  
@@ -278,13 +279,13 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
  `TRUE`Pour activer la prise en charge de l’accessibilité ; `FALSE` pour désactiver la prise en charge de l’accessibilité. La valeur par défaut est `TRUE`.  
   
 ### <a name="remarks"></a>Remarques  
- Active Accessibility est une technologie COM qui améliore les façon dont les programmes et le système d’exploitation de Windows fonctionne avec les produits de technologie d’assistance. Il fournit des méthodes fiables pour exposer des informations sur les éléments d’interface utilisateur. Cependant, un modèle d’accessibilité plus récente appelé Microsoft UI Automation est désormais disponible. Pour obtenir une comparaison des deux technologies, consultez [UI Automation et Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321).  
+ Active Accessibility est une technologie COM qui améliore les façon dont les programmes et le système d’exploitation de Windows fonctionne avec les produits de technologie d’assistance. Il fournit des méthodes fiables pour exposer des informations sur les éléments d’interface utilisateur. Cependant, un modèle d’accessibilité plus récente appelé Microsoft UI Automation est désormais disponible. Pour obtenir une comparaison des deux technologies, consultez [UI Automation et Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).  
   
  Utilisez le [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) méthode pour déterminer si la prise en charge Microsoft Active Accessibility est activée.  
   
  
 ### <a name="see-also"></a>Voir aussi  
- [UI Automation et Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)   
+ [UI Automation et Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)   
  [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
 ## <a name="excludetag"></a>AFX_GLOBAL_DATA::ExcludeTag
@@ -419,7 +420,7 @@ IWICImagingFactory* GetWICFactory();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Pointeur vers l’interface IWICImagingFactory si la création d’une fabrique réussit, ou NULL si la création échoue ou de système d’exploitation actuel ne prend pas en charge WIC.  
+ Pointeur à interface IWICImagingFactory si la création d’une fabrique réussit, ou NULL si la création échoue ou système d’exploitation actuel ne prend pas en charge WIC.  
   
 ## <a name="getwritefactory"></a>AFX_GLOBAL_DATA::GetWriteFactory
 Retourne un pointeur vers l’interface IDWriteFactory qui est stocké dans les données globales. Si l’interface n’est pas initialisée, elle est créée avec les paramètres par défaut.  
@@ -465,7 +466,7 @@ BOOL Is32BitIcons() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si les icônes de 32 bits prédéfinies sont prises en charge ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette méthode retourne `TRUE` si le framework prend en charge les icônes intégrés 32 bits et si le système d’exploitation prend en charge 16 bits par pixel ou plus, et si les images ne sont pas affichées avec un contraste élevé.  
   
 ## <a name="isaccessibilitysupport"></a>AFX_GLOBAL_DATA::IsAccessibilitySupport
@@ -479,14 +480,14 @@ BOOL IsAccessibilitySupport() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si la prise en charge de l’accessibilité est activée ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Microsoft Active Accessibility était la solution précédemment utilisée pour rendre les applications accessibles. Microsoft UI Automation est le nouveau modèle d’accessibilité pour Microsoft Windows et est destinée à répondre aux besoins des produits de technologie d’assistance et outils de test automatisés.   
   
  Utilisez le [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport) méthode pour activer ou désactiver la prise en charge de Active Accessibility.  
   
 
 ### <a name="see-also"></a>Voir aussi  
- [UI Automation et Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)
+ [UI Automation et Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
 
 ## <a name="isd2dinitialized"></a>AFX_GLOBAL_DATA::IsD2DInitialized
  Détermine si le D2D a été initialisé.  
@@ -523,7 +524,7 @@ BOOL IsHighContrastMode() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si les images sont affichées actuellement en mode de contraste élevé d’ou de blocage ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  En mode de contraste élevé noir, bords en face de la lumière sont blanches et l’arrière-plan est noir. En mode de contraste élevé blanc, bords en face de la lumière sont noirs et l’arrière-plan est blanc.  
   
 ## <a name="iswindowslayersupportavailable"></a>AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable
@@ -537,7 +538,7 @@ BOOL IsWindowsLayerSupportAvailable() const;
 ### <a name="return-value"></a>Valeur de retour  
  `TRUE`Si les fenêtres superposées sont pris en charge ; dans le cas contraire, `FALSE`.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Si les fenêtres superposées sont pris en charge, *ancrage actifs* utilisent des marqueurs de fenêtres superposées.  
   
 ## <a name="m_busebuiltin32biticons"></a>AFX_GLOBAL_DATA::m_bUseBuiltIn32BitIcons
@@ -628,7 +629,7 @@ Spécifie l’épaisseur du cadre glisser qui est utilisé pour indiquer l’ét
 int  m_nDragFrameThicknessDock;  
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre de 3 pixels.  
   
 ## <a name="m_ndragframethicknessfloat"></a>AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat
@@ -639,7 +640,7 @@ Spécifie l’épaisseur du cadre glisser qui est utilisé pour indiquer l’ét
 int  m_nDragFrameThicknessFloat;  
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre de 4 pixels.  
   
 ## <a name="onsettingchange"></a>AFX_GLOBAL_DATA::OnSettingChange

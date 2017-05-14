@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: c9537755f2147d0ded67ecd887414f317952418d
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 4f5e485611b1a8f38375c9a95a959ddf48e3663c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="cstringt-class"></a>CStringT (classe)
@@ -105,19 +106,19 @@ public CSimpleStringT<BaseType,
  `StringTraits`  
  Détermine si la classe string a besoin de prise en charge de la bibliothèque Runtime C (CRT) et où se trouvent les ressources de type chaîne. Il peut s'agir d'une des valeurs suivantes :  
   
-- **StrTraitATL<> </>** | `char` | **TCHAR, ChTraitsCRT<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      La classe nécessite la prise en charge CRT et recherche les chaînes de ressources dans le module spécifié par `m_hInstResource` (il s’agit d’un membre de classe de module de l’application).  
   
-- **StrTraitATL<> </>** | `char` | **TCHAR, ChTraitsOS<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      La classe ne nécessite pas de prise en charge CRT et recherche les chaînes de ressources dans le module spécifié par `m_hInstResource` (il s’agit d’un membre de classe de module de l’application).  
   
-- **StrTraitMFC<> </>** | `char` | **TCHAR, ChTraitsCRT<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      La classe nécessite la prise en charge CRT et recherche les chaînes de ressources à l’aide de l’algorithme de recherche MFC standard.  
   
-- **StrTraitMFC<> </>** | `char` | **TCHAR, ChTraitsOS<> </> ** | `char` | **TCHAR > >**  
+- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**  
   
      Prise en charge CRT et recherche les chaînes de ressources à l’aide de l’algorithme de recherche standard MFC, la classe n’est pas nécessaire.  
   
@@ -201,7 +202,7 @@ public CSimpleStringT<BaseType,
  `CString`, `CStringA`, et `CStringW` sont exportés à partir de la DLL MFC (MFC90. (DLL), jamais à partir de la DLL d’utilisateur. Cela permet d’éviter `CStringT` d’être défini plusieurs fois.  
   
 > [!NOTE]
->  Si vous avez rencontré des erreurs de l’éditeur de liens lors de l’exportation un `CString`-classe dérivée à partir d’une extension MFC DLL dans Visual C++ .NET 2002 et avez appliqué la solution de contournement comme décrit dans l’article de la Base de connaissances, « Liaison erreurs lorsque vous Import CString-Derived Classes » (Q309801), vous devez supprimer le code de la solution de contournement, car il a été résolu dans Visual C++ .NET 2003. Vous trouverez les articles de la Base de connaissances sur le CD-ROM MSDN Library ou à [http://support.microsoft.com/support](http://support.microsoft.com/support).  
+>  Si vous avez rencontré des erreurs de l’éditeur de liens lors de l’exportation un `CString`-classe dérivée à partir d’une extension MFC DLL dans Visual C++ .NET 2002 et avez appliqué la solution de contournement comme décrit dans l’article de la Base de connaissances, « Liaison erreurs lorsque vous Import CString-Derived Classes » (Q309801), vous devez supprimer le code de la solution de contournement, car il a été résolu dans Visual C++ .NET 2003. Vous pouvez trouver des articles de la Base de connaissances à [http://support.microsoft.com/support](http://support.microsoft.com/support).  
   
  Les types de chaîne suivants sont disponibles dans des applications MFC :  
   
@@ -211,7 +212,7 @@ public CSimpleStringT<BaseType,
 |`CStringW`|Un caractère Unicode de type chaîne avec la prise en charge CRT.|  
 |`CString`|Types de caractères ANSI et Unicode avec prise en charge de CRT.|  
   
- La chaîne suivante types sont disponibles dans les projets où **ATL_CSTRING_NO_CRT** défini :  
+ La chaîne suivante types sont disponibles dans les projets où **ATL_CSTRING_NO_CRT** est défini :  
   
 |Type de CStringT|Déclaration|  
 |-------------------|-----------------|  
@@ -252,7 +253,7 @@ public CSimpleStringT<BaseType,
 > [!NOTE]
 >  Code qui utilisait précédemment des méthodes non documentées de `CString` (tel que **AssignCopy**) doit être remplacé par le code qui utilise les méthodes suivantes documentées de `CStringT` (tel que `GetBuffer` ou `ReleaseBuffer`). Ces méthodes sont héritées de `CSimpleStringT`.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)  
   
  `CStringT`  
@@ -335,9 +336,9 @@ int Collate(PCXSTR psz) const throw();
  La chaîne utilisée pour la comparaison.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Zéro si les chaînes sont identiques, < 0="" if="" this=""> `CStringT` objet est inférieur à `psz`, ou > 0 si ce `CStringT` objet est supérieur à `psz`.  
+ Zéro si les chaînes sont identiques, < 0 si ce `CStringT` objet est inférieur à `psz`, ou > 0 si ce `CStringT` objet est supérieur à `psz`.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La fonction de texte générique `_tcscoll`, qui est défini dans TCHAR. H, correspond à une `strcoll`, `wcscoll`, ou `_mbscoll`, selon le jeu de caractères qui est défini au moment de la compilation. Chaque fonction effectue une comparaison respectant la casse des chaînes en fonction de la page de codes actuellement en cours d’utilisation. Pour plus d’informations, consultez [strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).  
   
 ##  <a name="collatenocase"></a>CStringT::CollateNoCase  
@@ -352,7 +353,7 @@ int CollateNoCase(PCXSTR psz) const throw();
  La chaîne utilisée pour la comparaison.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Zéro si les chaînes sont identiques (ignorer la casse), < 0="" if="" this=""> `CStringT` objet est inférieur à `psz` (ignorer la casse), ou > 0 si ce `CStringT` objet est supérieur à `psz` (ignorer la casse).  
+ Zéro si les chaînes sont identiques (ignorer la casse), < 0 si ce `CStringT` objet est inférieur à `psz` (ignorer la casse), ou > 0 si ce `CStringT` objet est supérieur à `psz` (ignorer la casse).  
   
 ### <a name="remarks"></a>Remarques  
  La fonction de texte générique `_tcscoll`, qui est défini dans TCHAR. H, correspond à une `stricoll`, `wcsicoll`, ou `_mbsicoll`, selon le jeu de caractères qui est défini au moment de la compilation. Chaque fonction effectue une comparaison respectant la casse des chaînes, en fonction de la page de codes en cours d’utilisation. Pour plus d’informations, consultez [strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).  
@@ -372,9 +373,9 @@ int Compare(PCXSTR psz) const;
  La chaîne utilisée pour la comparaison.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Zéro si les chaînes sont identiques, < 0="" if="" this=""> `CStringT` objet est inférieur à `psz`, ou > 0 si ce `CStringT` objet est supérieur à `psz`.  
+ Zéro si les chaînes sont identiques, < 0 si ce `CStringT` objet est inférieur à `psz`, ou > 0 si ce `CStringT` objet est supérieur à `psz`.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La fonction de texte générique `_tcscmp`, qui est défini dans TCHAR. H, correspond à une `strcmp`, `wcscmp`, ou `_mbscmp`, selon le jeu de caractères qui est défini au moment de la compilation. Chaque fonction effectue une comparaison respectant la casse des chaînes et n’est pas affectée par les paramètres régionaux. Pour plus d’informations, consultez [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md).  
   
  Si la chaîne contient des valeurs null incorporées, à des fins de comparaison, la chaîne est considérée être tronquées au premier caractère null incorporé.  
@@ -396,9 +397,9 @@ int CompareNoCase(PCXSTR psz) const throw();
  La chaîne utilisée pour la comparaison.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Zéro si les chaînes sont identiques (ignorer la casse), <0 if="" this=""></0> `CStringT` objet est inférieur à `psz` (ignorer la casse), ou > 0 si ce `CStringT` objet est supérieur à `psz` (ignorer la casse).  
+ Zéro si les chaînes sont identiques (ignorer la casse), < 0 si ce `CStringT` objet est inférieur à `psz` (ignorer la casse), ou > 0 si ce `CStringT` objet est supérieur à `psz` (ignorer la casse).  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La fonction de texte générique `_tcsicmp`, qui est défini dans TCHAR. H, correspond à une `_stricmp`, `_wcsicmp` ou `_mbsicmp`, selon le jeu de caractères qui est défini au moment de la compilation. Chaque fonction effectue une comparaison respectant la casse des chaînes. La comparaison dépend de la `LC_CTYPE` aspect des paramètres régionaux, mais pas `LC_COLLATE`. Pour plus d’informations, consultez [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md).  
   
 ### <a name="example"></a>Exemple  
@@ -569,7 +570,7 @@ int Delete(int iIndex, int nCount = 1);
 ### <a name="return-value"></a>Valeur de retour  
  La longueur de la chaîne modifiée.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Si `nCount` est plus long que la chaîne, le reste de la chaîne sera supprimée.  
   
 ### <a name="example"></a>Exemple  
@@ -603,7 +604,7 @@ int Find(XCHAR ch, int iStart=0) const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Index de base zéro du premier caractère dans ce `CStringT` objet qui correspond à la sous-chaîne demandée ou les caractères ; -1 si la sous-chaîne ou un caractère est introuvable.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  La fonction est surchargée pour accepter les caractères uniques (similaire à la fonction runtime `strchr`) et les chaînes (semblable à `strstr`).  
   
 ### <a name="example"></a>Exemple  
@@ -724,7 +725,7 @@ void FormatV(PCXSTR pszFormat, va_list args);
  `args`  
  Pointeur vers une liste d’arguments.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Écrit une chaîne mise en forme et une liste variable d’arguments à une `CStringT` chaîne de la même façon que `vsprintf_s` des formats de données dans un tableau de caractères de style C.  
   
 ### <a name="example"></a>Exemple  
@@ -746,7 +747,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 ### <a name="return-value"></a>Valeur de retour  
  Valeur différente de zéro cas de réussite ; sinon, 0.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Récupère la valeur de la variable spécifiée à partir du bloc d’environnement du processus appelant. La valeur est sous la forme de chaîne de caractères se terminant par null.  
   
 ### <a name="example"></a>Exemple  
@@ -793,7 +794,7 @@ CStringT Left(int nCount) const;
 ### <a name="return-value"></a>Valeur de retour  
  Objet `CStringT` qui contient une copie de la plage spécifiée des caractères. L'objet retourné par `CStringT` peut être vide.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Si `nCount` dépasse la longueur de la chaîne, la chaîne entière est extraite. `Left` est similaire à la fonction de base `Left`.  
   
  Pour les jeux de caractères multioctets (MBCS), `nCount` traite chaque séquence de 8 bits en tant que caractère, afin que `nCount` retourne le nombre de caractères multioctets multiplié par deux.  
@@ -823,7 +824,7 @@ BOOL LoadString(UINT nID);
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la charge de ressources a réussi ; Sinon, 0.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Charge la ressource de chaîne ( `nID`) à partir du module spécifié ( `hInstance`) à l’aide de la langue spécifiée ( `wLanguage`).  
   
 ### <a name="example"></a>Exemple  
@@ -1072,7 +1073,7 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
  `psz2`  
  Un pointeur vers une chaîne se terminant par null pour la comparaison.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Teste si une chaîne ou le caractère situé à gauche n’est pas égal à une chaîne ou le caractère situé à droite.  
   
 ### <a name="example"></a>Exemple  
@@ -1134,7 +1135,7 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
  `psz2`  
  Un pointeur vers une chaîne se terminant par null pour la comparaison.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Une comparaison lexicographique entre des chaînes, caractère par caractère jusqu'à ce que :  
   
 -   Elle trouve deux caractères correspondants inégaux et le résultat de leur comparaison est considéré comme étant le résultat de la comparaison entre les chaînes.  
@@ -1320,7 +1321,7 @@ CStringT Right(int nCount) const;
  [!code-cpp[NVC_ATLMFC_Utilities #131](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_35.cpp)]  
   
 ##  <a name="setsysstring"></a>CStringT::SetSysString  
- Réalloue le `BSTR` vers lequel pointe `pbstr` et copie le contenu de la `CStringT` objet, y compris les `NULL` caractères.  
+ Réalloue le `BSTR` pointé par `pbstr` et copie le contenu de la `CStringT` objet, y compris les `NULL` caractères.  
   
 ```  
 BSTR SetSysString(BSTR* pbstr) const; 
@@ -1434,7 +1435,7 @@ CStringT& Trim();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la chaîne découpée.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Supprime toutes les occurrences de début et de fin de l’une des opérations suivantes :  
   
 -   Le caractère spécifié par`chTarget.`  
@@ -1472,7 +1473,7 @@ CStringT& TrimLeft();
 ### <a name="return-value"></a>Valeur de retour  
  Chaîne découpée résultante.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Supprime toutes les occurrences de début et de fin de l’une des opérations suivantes :  
   
 -   Le caractère spécifié par`chTarget.`  

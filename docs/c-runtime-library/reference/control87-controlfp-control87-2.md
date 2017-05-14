@@ -65,10 +65,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: a6a25c035a55ca247f0d81f5c206207463672881
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 25dfd357f0b3385f1e9bdcc4249ad3cf4399e0b6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
@@ -172,14 +173,12 @@ _controlfp(_DN_FLUSH, _MCW_DN);
   
 ## <a name="example"></a>Exemple  
   
-```  
-  
-      // crt_cntrl87.c  
+```C  
+// crt_cntrl87.c  
 // processor: x86  
 // This program uses __control87_2 to output the x87 control   
 // word, set the precision to 24 bits, and reset the status to   
 // the default.  
-//  
   
 #include <stdio.h>  
 #include <float.h>  
@@ -210,9 +209,7 @@ int main( void )
 }  
 ```  
   
-## <a name="output"></a>Sortie  
-  
-```  
+```Output  
 Original: 0x0001  
 0.1 * 0.1 = 1.000000000000000e-002  
 24-bit:   0x0001  
@@ -220,9 +217,6 @@ Original: 0x0001
 Default:  0x0001  
 0.1 * 0.1 = 1.000000000000000e-002  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   

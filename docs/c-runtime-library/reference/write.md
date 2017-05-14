@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d035a6b0941e7fa916e9306e5ef4f420d4e066d5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9e6e654e043a71cbb6eb75c53077b14400b82d72
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="write"></a>_write
@@ -79,11 +80,11 @@ int _write(
  Nombre d'octets.  
   
 ## <a name="return-value"></a>Valeur de retour  
- S'il aboutit, `_write` retourne le nombre d'octets réellement écrits. Si l'espace effectif restant sur le disque est inférieur à la taille de la mémoire tampon que la fonction essaie d'écrire sur le disque, `_write` échoue et le contenu de la mémoire tampon n'est pas vidé sur le disque. Une valeur de retour égale à –1 indique une erreur. Si des paramètres non valides sont passés, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, la fonction retourne -1 et `errno` prend l'une des trois valeurs suivantes : `EBADF`, qui signifie que le descripteur de fichier n'est pas valide ou que le fichier n'est pas ouvert en écriture ; `ENOSPC`, qui signifie que l'espace restant sur l'appareil est insuffisant pour l'opération ; ou `EINVAL`, qui signifie que `buffer` était un pointeur null ou qu'un nombre impair `count` d'octets a été passé pour écriture dans un fichier en mode Unicode.  
+ S'il aboutit, `_write` retourne le nombre d'octets réellement écrits. Si l'espace effectif restant sur le disque est inférieur à la taille de la mémoire tampon que la fonction essaie d'écrire sur le disque, `_write` échoue et le contenu de la mémoire tampon n'est pas vidé sur le disque. Une valeur de retour de -1 indique une erreur. Si des paramètres non valides sont passés, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, la fonction retourne -1 et `errno` prend l'une des trois valeurs suivantes : `EBADF`, qui signifie que le descripteur de fichier n'est pas valide ou que le fichier n'est pas ouvert en écriture ; `ENOSPC`, qui signifie que l'espace restant sur l'appareil est insuffisant pour l'opération ; ou `EINVAL`, qui signifie que `buffer` était un pointeur null ou qu'un nombre impair `count` d'octets a été passé pour écriture dans un fichier en mode Unicode.  
   
  Pour plus d’informations sur ces codes de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Si le fichier est ouvert en mode texte, chaque saut de ligne est remplacé par une paire retour chariot-saut de ligne dans la sortie. Le remplacement n'a pas de conséquence sur la valeur de retour.  
+ Si le fichier est ouvert en mode texte, chaque caractère de saut de ligne est remplacé par un retour chariot - paire de saut de ligne dans la sortie. Le remplacement n'a pas de conséquence sur la valeur de retour.  
   
  Quand le fichier est ouvert en mode de traduction Unicode (par exemple si `fd` est ouvert en utilisant `_open` ou `_sopen` et un paramètre de mode qui inclut `_O_WTEXT`, `_O_U16TEXT` ou `_O_U8TEXT`, ou s’il est ouvert en utilisant `fopen` et un paramètre de mode qui inclut `ccs=UNICODE`, `ccs=UTF-16LE` ou `ccs=UTF-8`, ou si le mode est remplacé par un mode de traduction Unicode en utilisant `_setmode`), `buffer` est interprété comme un pointeur désignant un tableau de `wchar_t` qui contient des données **UTF-16**. Toute tentative d’écriture d’une quantité impaire d’octets dans ce mode provoque une erreur de validation de paramètre.  
   

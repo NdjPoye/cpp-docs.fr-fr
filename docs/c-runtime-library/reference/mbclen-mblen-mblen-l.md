@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c0a3a001234439314f682984b01496aff960b366
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f8e2a1bf9282298d3d41183c0d335e49e89f1b42
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
@@ -106,9 +107,9 @@ int _mblen_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `_mbclen` retourne 1 ou 2, selon que la longueur du caractère multioctet `c` est de 1 ou 2 octets. Aucune erreur n’est retournée pour `_mbclen`. Si `mbstr` n’a pas la valeur `NULL`, `mblen` retourne la longueur, en octets, du caractère multioctet. Si `mbstr` a la valeur `NULL` ou désigne le caractère Null large, `mblen` retourne 0. Si l’objet désigné par `mbstr` ne forme pas un caractère multioctet valide dans les `count` premiers caractères, `mblen` retourne −1.  
+ `_mbclen` retourne 1 ou 2, selon que la longueur du caractère multioctet `c` est de 1 ou 2 octets. Aucune erreur n’est retournée pour `_mbclen`. Si `mbstr` n’a pas la valeur `NULL`, `mblen` retourne la longueur, en octets, du caractère multioctet. Si `mbstr` a la valeur `NULL` ou désigne le caractère Null large, `mblen` retourne 0. Si l’objet qui `mbstr` pointe vers ne forment pas un caractère multioctet valide dans le premier `count` caractères, `mblen` retourne -1.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction `_mbclen` retourne la longueur, en octets, du caractère multioctet `c`. Si `c` ne pointe pas vers l’octet de tête d’un caractère multioctet comme déterminé par un appel implicite à `_ismbblead`, le résultat de `_mbclen` est imprévisible.  
   
  `mblen` retourne la longueur en octets de `mbstr` s’il s’agit d’un caractère multioctet valide et détermine la validité des caractères multioctets associée à la page de codes. `mblen` examine `count` octets (ou moins) contenus dans `mbstr`, mais pas plus de `MB_CUR_MAX`.  
@@ -171,9 +172,6 @@ Convert wide character to multibyte character:
 Length in bytes of multibyte character 61: 1  
 Length in bytes of NULL multibyte character 0: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classifications des caractères](../../c-runtime-library/character-classification.md)   

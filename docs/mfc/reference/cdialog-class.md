@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d06d072dd62eed102c3073cd1cd7a0c112e674bb
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 9ae60a13db0f975aca84c74caed43327e5bd1267
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="cdialog-class"></a>CDialog (classe)
@@ -141,7 +142,7 @@ class CDialog : public CWnd
   
 -   L’article de la Base de connaissances Q262954 : comment faire : créer une boîte de dialogue redimensionnables avec barres de défilement  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -262,14 +263,14 @@ virtual BOOL CreateIndirect(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si la boîte de dialogue a été créée et initialisée avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Le `CreateIndirect` fonction membre retourne immédiatement après avoir créé la boîte de dialogue.  
   
  Utilisez le **WS_VISIBLE** de style dans le modèle de boîte de dialogue si la boîte de dialogue doit apparaître lors de la création de la fenêtre parente. Sinon, vous devez appeler `ShowWindow` pour qu’elle apparaisse. Pour plus d’informations sur la façon dont vous pouvez spécifier des autres styles de boîte de dialogue dans le modèle, consultez la [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) de la structure dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
  Utilisez le `CWnd::DestroyWindow` fonction pour détruire une boîte de dialogue créée par le `CreateIndirect` (fonction).  
   
- Boîtes de dialogue qui contiennent des contrôles ActiveX nécessitent des informations supplémentaires fournies dans un **DLGINIT** ressource. Pour plus d’informations, consultez l’article de la Base de connaissances Q231591, « comment faire : utiliser un modèle de boîte de dialogue pour créer une boîte de dialogue MFC avec un contrôle ActiveX. » Articles de la Base de connaissances sont disponibles dans la documentation de Visual Studio de MSDN Library ou à [http://support.microsoft.com](http://support.microsoft.com/).  
+ Boîtes de dialogue qui contiennent des contrôles ActiveX nécessitent des informations supplémentaires fournies dans un **DLGINIT** ressource. Pour plus d’informations, consultez l’article de la Base de connaissances Q231591, « comment faire : utiliser un modèle de boîte de dialogue pour créer une boîte de dialogue MFC avec un contrôle ActiveX. » Articles de la Base de connaissances sont disponibles dans [http://support.microsoft.com](http://support.microsoft.com/).  
   
 ##  <a name="domodal"></a>CDialog::DoModal  
  Appelez cette fonction membre pour appeler la boîte de dialogue modale et retourner le résultat de la boîte de dialogue lorsque vous avez terminé.  
@@ -281,7 +282,7 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>Valeur de retour  
  Un `int` valeur qui spécifie la valeur de la `nResult` paramètre qui a été transmis à la [CDialog::EndDialog](#enddialog) fonction membre, qui est utilisée pour fermer la boîte de dialogue. La valeur de retour est -1 si la fonction n’a pas pu créer la boîte de dialogue ou **IDABORT** si une autre erreur s’est produite, auquel cas la fenêtre sortie contient des informations d’erreur à partir de [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette fonction membre gère toutes les interactions avec l’utilisateur pendant que la boîte de dialogue est active. C’est ce qui rend la boîte de dialogue modale ; Autrement dit, l’utilisateur ne peut pas interagir avec d’autres fenêtres jusqu'à ce que la boîte de dialogue est fermée.  
   
  Si l’utilisateur clique sur un des boutons des commande dans la boîte de dialogue, telles que OK ou sur Annuler, une fonction membre de gestionnaire de messages, tels que [OnOK](#onok) ou [OnCancel](#oncancel), est appelé pour tenter de fermer la boîte de dialogue. La valeur par défaut `OnOK` fonction membre valider et mettre à jour les données de la boîte de dialogue et fermer la boîte de dialogue avec un résultat **IDOK**et la valeur par défaut `OnCancel` fonction membre ferme la boîte de dialogue avec un résultat **IDCANCEL** sans validation ou de mise à jour les données de la boîte de dialogue. Vous pouvez remplacer ces fonctions de gestionnaire de messages pour modifier leur comportement.  
@@ -376,10 +377,10 @@ BOOL InitModalIndirect(
 ### <a name="return-value"></a>Valeur de retour  
  Différent de zéro si l’objet de la boîte de dialogue a été créé et initialisé avec succès ; Sinon, 0.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Pour créer une boîte de dialogue modale indirectement, tout d’abord allouer un bloc global de mémoire et le remplir avec le modèle de boîte de dialogue. Appelez ensuite la vide `CDialog` constructeur pour construire l’objet de la boîte de dialogue. Ensuite, appelez `InitModalIndirect` pour stocker votre handle pour le modèle de boîte de dialogue en mémoire. La boîte de dialogue Windows est créée et affichée par la suite, quand le [DoModal](#domodal) fonction membre est appelée.  
   
- Boîtes de dialogue qui contiennent des contrôles ActiveX nécessitent des informations supplémentaires fournies dans un **DLGINIT** ressource. Pour plus d’informations, consultez l’article de la Base de connaissances Q231591, « comment faire : utiliser un modèle de boîte de dialogue pour créer une boîte de dialogue MFC avec un contrôle ActiveX. » Articles de la Base de connaissances sont disponibles dans la documentation de Visual Studio de MSDN Library ou à [http://support.microsoft.com](http://support.microsoft.com/).  
+ Boîtes de dialogue qui contiennent des contrôles ActiveX nécessitent des informations supplémentaires fournies dans un **DLGINIT** ressource. Pour plus d’informations, consultez l’article de la Base de connaissances Q231591, « comment faire : utiliser un modèle de boîte de dialogue pour créer une boîte de dialogue MFC avec un contrôle ActiveX. » Articles de la Base de connaissances sont disponibles dans [http://support.microsoft.com](http://support.microsoft.com/).  
   
 ##  <a name="mapdialogrect"></a>CDialog::MapDialogRect  
  L’appel à convertir les unités de boîte de dialogue d’un rectangle en unités de l’écran.  

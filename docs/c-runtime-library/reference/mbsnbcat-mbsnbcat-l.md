@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 412e739b9a336cf98dcf08cba9a477625613cbfc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ad5d71827a69eaf46f5aef05e2c880e4e4eef71f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
@@ -117,7 +118,7 @@ unsigned char *_mbsnbcat_l(
  `_mbsnbcat` retourne un pointeur désignant la chaîne de destination. Aucune valeur de retour n'est réservée pour indiquer une erreur.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `_mbsnbcat` ajoute, au plus, les `count` premiers octets de `src` à `dest`. Si l’octet qui précède immédiatement le caractère Null dans `dest` est un octet de tête, l’octet initial de `src` remplace cet octet de tête. Dans le cas contraire, l'octet initial de `src` remplace le caractère null de fin de `dest`. Si un octet Null apparaît dans `src` avant l’ajout de `count` octets, _`mbsnbcat` ajoute tous les octets de `src`, jusqu’au caractère Null. Si la valeur `count` est supérieure à la longueur de `src`, la longueur de `src` est utilisée à la place de `count`. La chaîne obtenue se termine par un caractère Null. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.  
+ La fonction `_mbsnbcat` ajoute, au plus, les `count` premiers octets de `src` à `dest`. Si l’octet qui précède immédiatement le caractère Null dans `dest` est un octet de tête, l’octet initial de `src` remplace cet octet de tête. Dans le cas contraire, l'octet initial de `src` remplace le caractère null de fin de `dest`. Si un octet null apparaît dans `src` avant l'ajout de `count` octets, `_mbsnbcat` ajoute tous les octets de `src`, jusqu'au caractère null. Si la valeur `count` est supérieure à la longueur de `src`, la longueur de `src` est utilisée à la place de `count`. La chaîne obtenue se termine par un caractère Null. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.  
   
  La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La version `_mbsnbcat` de la fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version `_mbsnbcat_l` est identique, à ceci près qu’elle utilise à la place les paramètres régionaux passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
@@ -142,9 +143,6 @@ unsigned char *_mbsnbcat_l(
 |`_mbsnbcat_l`|\<mbstring.h>|  
   
  Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   

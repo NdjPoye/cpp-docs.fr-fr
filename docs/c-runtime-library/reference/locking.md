@@ -1,51 +1,68 @@
 ---
-title: "_locking | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_locking"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_locking"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_locking (fonction)"
-  - "octets (C++), verrouiller un fichier"
-  - "fichiers (C++), verrouiller"
-  - "fichiers (C++), verrouiller des octets"
-  - "locking (fonction)"
+title: _locking | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _locking
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _locking
+dev_langs:
+- C++
+helpviewer_keywords:
+- locking function
+- bytes [C++], locking file
+- files [C++], locking bytes
+- files [C++], locking
+- _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _locking
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7789a1634f5ee87d54d6b9f2aadbc720819f31ef
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
-Locks or unlocks bytes of a file.  
+---
+# <a name="locking"></a>_locking
+Verrouille ou déverrouille les octets d’un fichier.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -56,67 +73,67 @@ Locks or unlocks bytes of a file.
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `fd`  
- File descriptor.  
+ Descripteur de fichier.  
   
  *mode*  
- Locking action to perform.  
+ Action de verrouillage à exécuter.  
   
  *nbytes*  
- Number of bytes to lock.  
+ Nombre d’octets à verrouiller.  
   
-## Valeur de retour  
- `_locking` returns 0 if successful.  A return value of –1 indicates failure, in which case [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) is set to one of the following values.  
+## <a name="return-value"></a>Valeur de retour  
+ `_locking` retourne 0 en cas de réussite. Une valeur de retour de -1 indique un échec, auquel cas [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) est définie à une des valeurs suivantes.  
   
  `EACCES`  
- Locking violation \(file already locked or unlocked\).  
+ Violation de verrouillage (fichier déjà verrouillé ou déverrouillé).  
   
  `EBADF`  
- Invalid file descriptor.  
+ Descripteur de fichier non valide.  
   
  `EDEADLOCK`  
- Locking violation.  Returned when the `_LK_LOCK` or `_LK_RLCK` flag is specified and the file cannot be locked after 10 attempts.  
+ Violation de verrouillage. Retourné quand l’indicateur `_LK_LOCK` ou `_LK_RLCK` est spécifié et que le fichier ne peut pas être verrouillé après 10 tentatives.  
   
  `EINVAL`  
- An invalid argument was given to `_locking`.  
+ Un argument non valide a été donné à `_locking`.  
   
- If the failure is due to a bad parameter, such as an invalid file descriptor, the invalid parameter handler is invoked, as described in [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  
+ Si l’échec est dû à un paramètre incorrect, tel qu’un descripteur de fichier non valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  
   
-## Notes  
- The `_locking` function locks or unlocks *nbytes* bytes of the file specified by `fd`.  Locking bytes in a file prevents access to those bytes by other processes.  All locking or unlocking begins at the current position of the file pointer and proceeds for the next *nbytes* bytes.  It is possible to lock bytes past end of file.  
+## <a name="remarks"></a>Notes  
+ La fonction `_locking` verrouille ou déverrouille *nbytes* octets du fichier spécifié par `fd`. Le verrouillage d’octets dans un fichier empêche l’accès à ces octets par d’autres processus. Tout verrouillage ou déverrouillage commence à la position actuelle du pointeur de fichier et se poursuit sur les *nbytes* octets suivants. Il est possible de verrouiller des octets au-delà de la fin du fichier.  
   
- *mode* must be one of the following manifest constants, which are defined in Locking.h.  
+ *mode* doit être une des constantes manifestes suivantes, qui sont définies dans Locking.h.  
   
  `_LK_LOCK`  
- Locks the specified bytes.  If the bytes cannot be locked, the program immediately tries again after 1 second.  If, after 10 attempts, the bytes cannot be locked, the constant returns an error.  
+ Verrouille les octets spécifiés. Si les octets ne peuvent pas être verrouillés, le programme réessaie après 1 seconde. Si, après 10 tentatives, les octets ne peuvent pas être verrouillés, la constante retourne une erreur.  
   
  `_LK_NBLCK`  
- Locks the specified bytes.  If the bytes cannot be locked, the constant returns an error.  
+ Verrouille les octets spécifiés. Si les octets ne peuvent pas être verrouillés, la constante retourne une erreur.  
   
  `_LK_NBRLCK`  
- Identique à `_LK_NBLCK`.  
+ Comme pour `_LK_NBLCK`.  
   
  `_LK_RLCK`  
- Identique à `_LK_LOCK`.  
+ Comme pour `_LK_LOCK`.  
   
  `_LK_UNLCK`  
- Unlocks the specified bytes, which must have been previously locked.  
+ Déverrouille les octets spécifiés, qui doivent avoir été verrouillés auparavant.  
   
- Multiple regions of a file that do not overlap can be locked.  A region being unlocked must have been previously locked.  `_locking` does not merge adjacent regions; if two locked regions are adjacent, each region must be unlocked separately.  Regions should be locked only briefly and should be unlocked before closing a file or exiting the program.  
+ Vous ne pouvez pas verrouiller plusieurs zones d’un fichier qui ne se chevauchent pas. Une zone ne peut être déverrouillée que si elle a été verrouillée. `_locking` ne fusionne pas les zones adjacentes ; si deux zones verrouillées sont adjacentes, chacune d’elles doit être déverrouillée séparément. Le verrouillage des zones doit être de courte durée et celles-ci doivent être déverrouillées avant de fermer un fichier ou de quitter le programme.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|En\-tête facultatif|  
-|-------------|---------------------|-------------------------|  
-|`_locking`|\<io.h\> and \<sys\/locking.h\>|\<errno.h\>|  
+|Routine|En-tête requis|En-tête facultatif|  
+|-------------|---------------------|---------------------|  
+|`_locking`|\<io.h> et \<sys/locking.h>|\<errno.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Bibliothèques  
+## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_locking.c  
@@ -167,13 +184,13 @@ int main( void )
 }  
 ```  
   
-## Input: crt\_locking.txt  
+## <a name="input-crtlockingtxt"></a>Entrée : crt_locking.txt  
   
 ```  
 The first thirty bytes of this file will be locked.  
 ```  
   
-## Résultat de l'exemple  
+## <a name="sample-output"></a>Résultat de l'exemple  
   
 ```  
 No one can change these bytes while I'm reading them  
@@ -181,10 +198,7 @@ No one can change these bytes while I'm reading them
 Now I'm done. Do what you will with them  
 ```  
   
-## Équivalent .NET Framework  
- [System::IO::FileStream::Lock](https://msdn.microsoft.com/en-us/library/system.io.filestream.lock.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion de fichiers](../../c-runtime-library/file-handling.md)   
- [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

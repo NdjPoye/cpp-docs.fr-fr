@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 441f493d8ada3ef232f60d917dc3f95812ba9114
-ms.openlocfilehash: eb90255295534d42cb4400d2db2c43467b633187
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 72fae545c992eb8b9bcaf7145702b7f92a7307d1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="checked-iterators"></a>Checked Iterators
@@ -56,7 +57,7 @@ Vous pouvez utiliser la macro de préprocesseur [\_ITERATOR\_DEBUG\_LEVEL](../st
   
 Quand `_ITERATOR_DEBUG_LEVEL` est défini sur 1 ou 2, ces vérifications d’itérateur sont effectuées :  
   
--   Tous les itérateurs standard (par exemple, [vector::iterator](../standard-library/vector-class.md#vector__iterator)) sont vérifiés.  
+-   Tous les itérateurs standard (par exemple, [vector::iterator](../standard-library/vector-class.md#iterator)) sont vérifiés.  
   
 -   Si un itérateur de sortie est un itérateur vérifié, les appels aux fonctions de bibliothèque standard comme [std::copy](../standard-library/algorithm-functions.md#copy) obtiennent un comportement vérifié.  
   
@@ -66,9 +67,9 @@ Quand `_ITERATOR_DEBUG_LEVEL` est défini sur 1 ou 2, ces vérifications d’i
   
 |||||  
 |-|-|-|-|  
-|[basic_string::operator\[\]](../standard-library/basic-string-class.md#basic_string__operator_at)|[bitset::operator\[\]](../standard-library/bitset-class.md#bitset__operator_at)|[deque::back](../standard-library/deque-class.md#deque__back)|[deque::front](../standard-library/deque-class.md#deque__front)|  
-|[deque::operator\[\]](../standard-library/deque-class.md#deque__operator_at)|[list::back](../standard-library/list-class.md#list__back)|[list::front](../standard-library/list-class.md#list__front)|[queue::back](../standard-library/queue-class.md#queue__back)|  
-|[queue::front](../standard-library/queue-class.md#queue__front)|[vector::operator\[\]](../standard-library/vector-class.md#vector__operator_at)|[vector::back](../standard-library/vector-class.md#vector__back)|[vector::front](../standard-library/vector-class.md#vector__front)|  
+|[basic_string::operator\[\]](../standard-library/basic-string-class.md#op_at)|[bitset::operator\[\]](../standard-library/bitset-class.md#op_at)|[back](../standard-library/deque-class.md#back)|[front](../standard-library/deque-class.md#front)|  
+|[deque::operator\[\]](../standard-library/deque-class.md#op_at)|[back](../standard-library/list-class.md#back)|[front](../standard-library/list-class.md#front)|[back](../standard-library/queue-class.md#back)|  
+|[front](../standard-library/queue-class.md#front)|[vector::operator\[\]](../standard-library/vector-class.md#op_at)|[back](../standard-library/vector-class.md#back)|[front](../standard-library/vector-class.md#front)|  
   
 Quand `_ITERATOR_DEBUG_LEVEL` a pour valeur 0 :  
   

@@ -1,50 +1,67 @@
 ---
-title: "fread | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fread"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fread"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "données (C++), lire à partir d'un flux d'entrée"
-  - "fread (fonction)"
-  - "lire des données (C++), à partir de flux d'entrée"
-  - "flux (C++), lire des données à partir de"
+title: fread | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fread
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fread
+dev_langs:
+- C++
+helpviewer_keywords:
+- reading data [C++], from input streams
+- fread function
+- data [C++], reading from input stream
+- streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# fread
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 1075fc8aad54dfdcada7fe2f4dd8e99706de7d99
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
-Lit les données à partir d'un flux.  
+---
+# <a name="fread"></a>fread
+Lit les données d’un flux.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 size_t fread(   
@@ -55,38 +72,38 @@ size_t fread(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `buffer`  
- Emplacement de stockage pour les données.  
+ Emplacement de stockage des données.  
   
  `size`  
- Taille d'élément en octets.  
+ Taille de l’élément en octets.  
   
  `count`  
- Nombre maximal d'éléments à lire.  
+ Nombre maximal d’éléments à lire.  
   
  `stream`  
- Pointeur vers la structure `FILE`.  
+ Pointeur vers la structure `FILE` .  
   
-## Valeur de retour  
- `fread` retourne le nombre d'éléments complets lus réellement, qui peuvent être moins que `count` si une erreur se produit ou si la fin du fichier est rencontrée avant d'atteindre `count`d*.* Utilisez la fonction `feof` ou `ferror` pour distinguer une erreur de lecture d'une condition de fin du fichier.  Si `size` ou `count` est 0, `fread` retourne 0 et le contenu de la mémoire tampon reste inchangé.  Si `stream` ou `buffer` est un pointeur null, `fread` appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, cette fonction définit `errno` à la valeur `EINVAL` et retourne 0.  
+## <a name="return-value"></a>Valeur de retour  
+ `fread`Retourne le nombre d’éléments complets réellement lu, ce qui peut être inférieur à `count` si une erreur se produit ou si la fin du fichier se trouve avant d’atteindre `count`. Utilisez la fonction `feof` ou `ferror` pour distinguer une erreur de lecture d’une condition de fin de fichier. Si `size` ou `count` a la valeur 0, `fread` retourne 0 et le contenu de la mémoire tampon n’est pas modifié. Si `stream` ou `buffer` est un pointeur null, `fread` appelle le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction affecte à `errno` la valeur `EINVAL` et retourne 0.  
   
- Consultez [\_doserrno, errno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d'informations sur ces éléments et autres codes d'erreur.  
+ Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.  
   
-## Notes  
- La fonction `fread` lit jusqu'à `count` les éléments des octets `size` de l'entrée `stream` et les stocke dans `buffer`*.* Le pointeur de fichier associé à `stream` \(s'il y en a un\) est augmenté par le nombre d'octets réellement lus.  Si le flux de données spécifié est ouvert en mode texte, les paires saut de ligne\-retour chariot sont remplacées par des caractères de saut de ligne.  Le remplacement n'a aucun effet sur le pointeur de fichier ou la valeur de retour.  La position du pointeur de fichier est indéterminée si une erreur se produit.  La valeur d'un élément partiellement lu ne peut pas être déterminée.  
+## <a name="remarks"></a>Remarques  
+ La fonction `fread` lit jusqu’à `count` éléments de `size` octets à partir de l’entrée `stream` et les stocke dans `buffer`. Le pointeur de fichier associé à `stream` (le cas échéant) est augmenté du nombre d’octets réellement lus. Si le flux donné est ouvert en mode texte, paires de sauts de ligne de chariot sont remplacées par les caractères de saut de ligne unique. Le remplacement n’a aucun effet sur le pointeur de fichier ou la valeur de retour. La position du pointeur de fichier est indéterminée si une erreur se produit. La valeur d’un élément partiellement lu ne peut pas être déterminée.  
   
- Cette fonction verrouille d'autres threads.  Si vous avez besoin d'une version non verrouillante, utilisez `_fread_nolock`.  
+ Cette fonction verrouille les autres threads. Si vous avez besoin d’une version sans verrouillage, utilisez `_fread_nolock`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Fonction|En\-tête requis|  
+|Fonction|En-tête requis|  
 |--------------|---------------------|  
-|`fread`|\<stdio.h\>|  
+|`fread`|\<stdio.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_fread.c  
@@ -130,13 +147,13 @@ int main( void )
 }  
 ```  
   
-  **A écrit 25 éléments**  
-**Nombre d'éléments lus \= 25**  
-**Contenu de la mémoire tampon \= zyxwvutsrqponmlkjihgfedcb**   
-## Équivalent .NET Framework  
- [System::IO::FileStream::Read](https://msdn.microsoft.com/en-us/library/system.io.filestream.read.aspx)  
+```Output  
+Wrote 25 items  
+Number of items read = 25  
+Contents of buffer = zyxwvutsrqponmlkjihgfedcb  
+```  
   
-## Voir aussi  
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Voir aussi  
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
  [fwrite](../../c-runtime-library/reference/fwrite.md)   
- [\_read](../../c-runtime-library/reference/read.md)
+ [_read](../../c-runtime-library/reference/read.md)

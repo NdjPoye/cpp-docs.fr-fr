@@ -1,58 +1,76 @@
 ---
-title: "_creat, _wcreat | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_creat"
-  - "_wcreat"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcreat"
-  - "_wcreat"
-  - "_creat"
-  - "tcreat"
-  - "_tcreat"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "wcreat, fonction"
-  - "_wcreat, fonction"
-  - "fichiers [C++], créer"
-  - "_creat, fonction"
-  - "tcreat, fonction"
-  - "creat, fonction"
-  - "_tcreat, fonction"
+title: _creat, _wcreat | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _creat
+- _wcreat
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcreat
+- _wcreat
+- _creat
+- tcreat
+- _tcreat
+dev_langs:
+- C++
+helpviewer_keywords:
+- wcreat function
+- _wcreat function
+- files [C++], creating
+- _creat function
+- tcreat function
+- creat function
+- _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _creat, _wcreat
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f034e2b80cc1bd3e7b5fc4578a6f5e77a060593c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
-Crée un fichier.  `_creat` et `_wcreat` ont été déconseillés ; utilisez [\_sopen\_s, \_wsopen\_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md) à la place.  
+---
+# <a name="creat-wcreat"></a>_creat, _wcreat
+Crée un fichier. `_creat` et `_wcreat` ont été déconseillées ; utilisez [_sopen_s, _wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md) à la place.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int _creat(   
@@ -65,57 +83,57 @@ int _wcreat(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `filename`  
  Nom du nouveau fichier.  
   
  `pmode`  
- Définition des autorisations  
+ Paramètre d'autorisation.  
   
-## Valeur de retour  
- Ces fonctions, si exécutées avec succès, retournent un descripteur de fichier du fichier créé.  Sinon, les fonctions retournent – 1 et définissent `errno` comme indiqué dans le tableau suivant.  
+## <a name="return-value"></a>Valeur de retour  
+ Ces fonctions, en cas de réussite, retournent un descripteur de fichier pour le fichier créé. Dans le cas contraire, les fonctions retournent -1 et la valeur `errno` comme indiqué dans le tableau suivant.  
   
-|Paramètre `errno`|Description|  
-|-----------------------|-----------------|  
-|`EACCES`|`filename` spécifie un fichier en lecture seule existant ou spécifie un répertoire au lieu d'un fichier.|  
-|`EMFILE`|Plus aucun fichier de descripteurs de fichiers ne sont disponibles.|  
+|Paramètre `errno` |Description|  
+|---------------------|-----------------|  
+|`EACCES`|`filename` spécifie un fichier en lecture seule existant ou un répertoire au lieu d’un fichier.|  
+|`EMFILE`|Aucun autre descripteur de fichier n'est disponible.|  
 |`ENOENT`|Le fichier spécifié est introuvable.|  
   
- Si `filename` est NULL, ces fonctions appellent le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno` avec la valeur `EINVAL` et retournent \-1.  
+ Si `filename` a la valeur NULL ou est une chaîne vide, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno` avec la valeur `EINVAL` et retournent -1.  
   
- Pour plus d'informations sur ces codes de retour et autres, consultez [\_doserrno, errno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d’informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- La fonction `_creat` crée un nouveau fichier ou ouvre et en tronque un existant.  `_wcreat` est une version à caractères larges de `_creat`; l'argument `filename` vers `_wcreat` est une chaîne à caractères larges.  `_wcreat` et `_creat` se comportent sinon de manière identique.  
+## <a name="remarks"></a>Notes  
+ La fonction `_creat` crée un fichier ou ouvre et tronque un fichier existant. `_wcreat` est une version à caractères larges de `_creat` ; l'argument `filename` de `_wcreat` est une chaîne à caractères larges. Sinon, `_wcreat` et `_creat` se comportent de la même façon.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine Tchar.h|\_UNICODE et \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|-------------------------------------|-------------------|----------------------|  
+|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcreat`|`_creat`|`_creat`|`_wcreat`|  
   
- Si le fichier spécifié par `filename` n'existe pas, un nouveau fichier est créé avec le paramètre d'autorisation spécifique et est ouvert pour l'écriture.  Si le fichier existe déjà et que son paramètre d'autorisation autorise l'écriture, `_creat` tronque le fichier à la longueur 0, détruisant le contenu précédent, puis l'ouvre en écriture.  Le paramètre d'autorisation, `pmode`, s'applique aux fichiers récemment créé uniquement.  Le fichier obtient le paramètre d'autorisations spécifié après qu'il a été fermé pour la première fois.  L'expression entière `pmode` contient une des deux ou les deux constantes manifestes suivantes `_S_IWRITE` and `_S_IREAD`, définies dans SYS\\Stat.h :  Lorsque les deux constantes sont fournies, elles sont jointes à l'opérateur de bits `OR` \(  **&#124;**\).  Le paramètre `pmode` est fixé à l'une des valeurs suivantes.  
+ Si le fichier spécifié par `filename` n’existe pas, un fichier est créé avec le paramètre d’autorisation donné et est ouvert pour écriture. Si le fichier existe déjà et que son paramètre d’autorisation autorise l’écriture, `_creat` tronque le fichier à la longueur 0, détruisant le contenu précédent, et l’ouvre pour écriture. Le paramètre d’autorisation, `pmode`, s’applique uniquement aux fichiers qui viennent d’être créés. Le nouveau fichier reçoit le paramètre d’autorisation spécifié après sa première fermeture. L’expression entière `pmode` contient l’une des constantes de manifeste `_S_IWRITE` et `_S_IREAD` (ou les deux), définies dans SYS\Stat.h. Quand les deux constantes sont données, elles sont jointes avec l’opérateur `OR` au niveau du bit ( **&#124;**). Le paramètre `pmode` a l’une des valeurs suivantes.  
   
 |Valeur|Définition|  
-|------------|----------------|  
+|-----------|----------------|  
 |`_S_IWRITE`|Écriture autorisée.|  
 |`_S_IREAD`|Lecture autorisée.|  
 |`_S_IREAD &#124; _S_IWRITE`|Lecture et écriture autorisées.|  
   
- Si l'autorisation d'écriture n'est pas donnée, le fichier est en lecture seule.  Tous les fichiers peuvent toujours être lus ; il est impossible de donner une autorisation pour l'écriture seule.  Les modes `_S_IWRITE` et `_S_IREAD``| _S_IWRITE` sont donc équivalents.  Les fichiers ouverts en utilisant `_creat` sont toujouts ouverts dans le mode de compatibilité \(voir [\_sopen](../../c-runtime-library/reference/sopen-wsopen.md)\) avec `_SH_DENYNO`.  
+ Si l'autorisation d'écriture n'est pas accordée, le fichier est en lecture seule. Tous les fichiers sont toujours accessibles en lecture ; il est impossible d’accorder l’autorisation en écriture seule. Ainsi, les modes `_S_IWRITE` et `_S_IREAD | _S_IWRITE` sont équivalents. Les fichiers ouverts à l’aide de `_creat` sont toujours ouverts en mode de compatibilité (voir [_sopen](../../c-runtime-library/reference/sopen-wsopen.md)) avec `_SH_DENYNO`.  
   
- `_creat` applique le masque d'autorisation de fichier actuel à `pmode` avant de définir les autorisations \(voir [\_umask](../../c-runtime-library/reference/umask.md)\).  `_creat` est principalement fournis à des fins de compatibilité avec les bibliothèques précédentes.  Un appel à `_open` avec `_O_CREAT` et `_O_TRUNC` dans le paramètre `oflag` équivaut à `_creat` et est préférable pour un nouveau code.  
+ `_creat` applique le masque d’autorisation de fichier actuel à `pmode` avant de définir les autorisations (voir [_umask](../../c-runtime-library/reference/umask.md)). `_creat` est fourni principalement pour assurer la compatibilité avec les bibliothèques précédentes. Un appel à `_open` avec `_O_CREAT` et `_O_TRUNC` dans le paramètre `oflag` équivaut à `_creat` et est préférable pour le nouveau code.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|En\-tête facultatif|  
-|-------------|---------------------|-------------------------|  
-|`_creat`|\<io.h,\>|\<sys\/types.h\>, \<sys\/stat.h\>, \<errno.h\>|  
-|`_wcreat`|\<io.h\> ou \<wchar.h\>|\<sys\/types.h\>, \<sys\/stat.h\>, \<errno.h\>|  
+|Routine|En-tête requis|En-tête facultatif|  
+|-------------|---------------------|---------------------|  
+|`_creat`|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
+|`_wcreat`|\<io.h> ou \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_creat.c  
@@ -146,13 +164,16 @@ int main( void )
 }  
 ```  
   
-  **Fichier de données créé.**   
-## Voir aussi  
- [E\/S niveau bas](../../c-runtime-library/low-level-i-o.md)   
- [\_chmod, \_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [\_chsize](../../c-runtime-library/reference/chsize.md)   
- [\_close](../../c-runtime-library/reference/close.md)   
- [\_dup, \_dup2](../../c-runtime-library/reference/dup-dup2.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_sopen, \_wsopen](../../c-runtime-library/reference/sopen-wsopen.md)   
- [\_umask](../../c-runtime-library/reference/umask.md)
+```Output  
+Created data file.  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [E/S de bas niveau](../../c-runtime-library/low-level-i-o.md)   
+ [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_chsize](../../c-runtime-library/reference/chsize.md)   
+ [_close](../../c-runtime-library/reference/close.md)   
+ [_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_sopen, _wsopen](../../c-runtime-library/reference/sopen-wsopen.md)   
+ [_umask](../../c-runtime-library/reference/umask.md)

@@ -1,87 +1,330 @@
 ---
-title: "allocator_base, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "allocators.allocator_base"
-  - "stdext.allocators.allocator_base"
-  - "allocator_base"
-  - "allocators/stdext::allocator_base"
-  - "stdext::allocator_base"
-  - "stdext::allocators::allocator_base"
-  - "allocators/stdext::allocators::allocator_base"
-  - "allocators::allocator_base"
-  - "stdext.allocator_base"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "allocator_base (classe)"
+title: allocator_base, classe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- allocator_base
+- allocators/stdext::allocator_base
+- stdext::allocator_base
+- stdext::allocators::allocator_base
+- allocators/stdext::allocators::allocator_base
+- allocators::allocator_base
+- allocators/stdext::allocator_base::const_pointer
+- allocators/stdext::allocator_base::const_reference
+- allocators/stdext::allocator_base::difference_type
+- allocators/stdext::allocator_base::pointer
+- allocators/stdext::allocator_base::reference
+- allocators/stdext::allocator_base::size_type
+- allocators/stdext::allocator_base::value_type
+- allocators/stdext::allocator_base::_Charalloc
+- allocators/stdext::allocator_base::_Chardealloc
+- allocators/stdext::allocator_base::address
+- allocators/stdext::allocator_base::allocate
+- allocators/stdext::allocator_base::construct
+- allocators/stdext::allocator_base::deallocate
+- allocators/stdext::allocator_base::destroy
+- allocators/stdext::allocator_base::max_size
+dev_langs:
+- C++
+helpviewer_keywords:
+- allocator_base class
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# allocator_base, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 11e6300d0d625f419e47d5f60f1db175419e3420
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
-Définit la classe de base et les fonctions communes nécessaires à la création d'un allocateur défini par l'utilisateur à partir d'un filtre de synchronisation.  
+---
+# <a name="allocatorbase-class"></a>allocator_base, classe
+Définit la classe de base et les fonctions communes nécessaires à la création d’un allocateur défini par l’utilisateur à partir d’un filtre de synchronisation.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+template <class Type, class Sync>  
+class allocator_base
 ```  
-template <class Type, class Sync> class allocator_base  
-```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
 |`Type`|Type des éléments alloués par l'allocateur.|  
-|`Sync`|Stratégie de synchronisation de l'allocateur, qui est [sync\_none, classe](../standard-library/sync-none-class.md), [sync\_per\_container, classe](../standard-library/sync-per-container-class.md), [sync\_per\_thread, classe](../standard-library/sync-per-thread-class.md) ou [sync\_shared, classe](../standard-library/sync-shared-class.md).|  
+|`Sync`|Stratégie de synchronisation de l’allocateur, qui est la classe [sync_none](../standard-library/sync-none-class.md), [sync_per_container](../standard-library/sync-per-container-class.md), [sync_per_thread](../standard-library/sync-per-thread-class.md) ou [sync_shared](../standard-library/sync-shared-class.md).|  
   
-### Constructeurs  
-  
-|||  
-|-|-|  
-|[allocator\_base](../Topic/allocator_base::allocator_base.md)|Construit un objet de type `allocator_base`.|  
-  
-### TypeDefs  
+### <a name="constructors"></a>Constructeurs  
   
 |||  
 |-|-|  
-|[const\_pointer](../Topic/allocator_base::const_pointer.md)|Type qui fournit un pointeur constant vers le type d'objet géré par l'allocateur.|  
-|[const\_reference](../Topic/allocator_base::const_reference.md)|Type qui fournit une référence constante au type d'objet géré par l'allocateur.|  
-|[difference\_type](../Topic/allocator_base::difference_type.md)|Type intégral signé qui peut représenter la différence entre des valeurs de pointeurs vers le type d'objet géré par l'allocateur.|  
-|[pointer](../Topic/allocator_base::pointer.md)|Type qui fournit un pointeur vers le type d'objet géré par l'allocateur.|  
-|[référence](../Topic/allocator_base::reference.md)|Type qui fournit une référence au type d'objet géré par l'allocateur.|  
-|[type\_taille](../Topic/allocator_base::size_type.md)|Type intégral non signé qui peut représenter la longueur d'une séquence qu'un objet de classe de modèle `allocator_base` peut allouer.|  
-|[value\_type](../Topic/allocator_base::value_type.md)|Type géré par l'allocateur.|  
+|[allocator_base](#allocator_base)|Construit un objet de type `allocator_base`.|  
   
-### Fonctions membres  
+### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[\_Charalloc](../Topic/allocator_base::_Charalloc.md)|Alloue du stockage pour un tableau de type `char`.|  
-|[\_Chardealloc](../Topic/allocator_base::_Chardealloc.md)|Libère du stockage pour le tableau contenant des éléments de type `char`.|  
-|[adresse](../Topic/allocator_base::address.md)|Recherche l'adresse d'un objet dont la valeur est spécifiée.|  
-|[allocate](../Topic/allocator_base::allocate.md)|Alloue un bloc de mémoire suffisamment grand pour stocker au moins un nombre spécifié d'éléments.|  
-|[construct](../Topic/allocator_base::construct.md)|Construit un type d'objet spécifique à une adresse spécifiée qui est initialisée avec une valeur spécifiée.|  
-|[deallocate](../Topic/allocator_base::deallocate.md)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|  
-|[destroy](../Topic/allocator_base::destroy.md)|Appelle un destructeur d'objets sans libérer la mémoire où l'objet était stocké.|  
-|[max\_size](../Topic/allocator_base::max_size.md)|Retourne le nombre d'éléments de type `Type` qui pourraient être alloués par un objet d'allocateur de classe avant que la mémoire libre soit complètement utilisée.|  
+|[const_pointer](#const_pointer)|Type qui fournit un pointeur constant vers le type d'objet géré par l'allocateur.|  
+|[const_reference](#const_reference)|Type qui fournit une référence constante au type d'objet géré par l'allocateur.|  
+|[difference_type](#difference_type)|Type intégral signé qui peut représenter la différence entre des valeurs de pointeurs vers le type d'objet géré par l'allocateur.|  
+|[pointer](#pointer)|Type qui fournit un pointeur vers le type d'objet géré par l'allocateur.|  
+|[reference](#reference)|Type qui fournit une référence au type d'objet géré par l'allocateur.|  
+|[size_type](#size_type)|Type intégral non signé qui peut représenter la longueur d'une séquence qu'un objet de classe de modèle `allocator_base` peut allouer.|  
+|[value_type](#value_type)|Type géré par l'allocateur.|  
   
-## Configuration requise  
- **En\-tête :** \<allocators\>  
+### <a name="member-functions"></a>Fonctions membres  
   
- **Espace de noms :** stdext  
+|||  
+|-|-|  
+|[_Charalloc](#charalloc)|Alloue du stockage pour un tableau de type `char`.|  
+|[_Chardealloc](#chardealloc)|Libère du stockage pour le tableau contenant des éléments de type `char`.|  
+|[address](#address)|Recherche l'adresse d'un objet dont la valeur est spécifiée.|  
+|[allocate](#allocate)|Alloue un bloc de mémoire suffisamment grand pour stocker au moins un nombre spécifié d'éléments.|  
+|[construct](#construct)|Construit un type d'objet spécifique à une adresse spécifiée qui est initialisée avec une valeur spécifiée.|  
+|[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|  
+|[destroy](#destroy)|Appelle un destructeur d'objets sans libérer la mémoire où l'objet était stocké.|  
+|[max_size](#max_size)|Retourne le nombre d'éléments de type `Type` qui pourraient être alloués par un objet d'allocateur de classe avant que la mémoire libre soit complètement utilisée.|  
   
-## Voir aussi  
- [\<allocators\>](../standard-library/allocators-header.md)
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<allocators>  
+  
+ **Espace de noms :** stdext  
+  
+##  <a name="charalloc"></a>  allocator_base::_Charalloc  
+ Alloue du stockage pour un tableau de type `char`.  
+  
+```
+char *_Charalloc(size_type count);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+  
+|Paramètre|Description|  
+|---------------|-----------------|  
+|`count`|Nombre d’éléments du tableau à allouer.|  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Un pointeur vers l’objet alloué.  
+  
+### <a name="remarks"></a>Notes  
+ Cette fonction membre est utilisée par les conteneurs quand la compilation s’effectue avec un compilateur qui ne peut pas compiler rebind. Il implémente `_Charalloc` pour l’allocateur défini par l’utilisateur en retournant le résultat d’un appel à la fonction `allocate` du filtre de synchronisation.  
+  
+##  <a name="chardealloc"></a>  allocator_base::_Chardealloc  
+ Libère du stockage pour le tableau contenant des éléments de type `char`.  
+  
+```
+void _Chardealloc(void* ptr, size_type count);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+  
+|Paramètre|Description|  
+|---------------|-----------------|  
+|`ptr`|Pointeur vers le premier objet à désallouer dans le stockage.|  
+|`count`|Nombre d’objets à désallouer dans le stockage.|  
+  
+### <a name="remarks"></a>Notes  
+ Cette fonction membre est utilisée par les conteneurs quand la compilation s’effectue avec un compilateur qui ne peut pas compiler rebind. Il implémente `_Chardealloc` pour l’allocateur défini par l’utilisateur en appelant la fonction `deallocate` du filtre de synchronisation. Le pointeur ptr doit avoir été retourné précédemment par un appel à `_Charalloc` pour un objet allocateur dont la valeur est égale à `*this`, en allouant un objet tableau de même taille et de même type. `_Chardealloc` ne lève jamais d’exception.  
+  
+##  <a name="address"></a>  allocator_base::address  
+ Recherche l'adresse d'un objet dont la valeur est spécifiée.  
+  
+```
+pointer address(reference val);
+
+const_pointer address(const_reference val);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+ `val`  
+ Valeur const ou nonconst de l’objet dont l’adresse est recherchée.  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Pointeur const ou nonconst vers l’objet trouvé d’une valeur const ou nonconst, respectivement.  
+  
+### <a name="remarks"></a>Notes  
+ Cette fonction membre est implémentée pour l’allocateur défini par l’utilisateur en retournant `&val`.  
+  
+##  <a name="allocate"></a>  allocator_base::allocate  
+ Alloue un bloc de mémoire suffisamment grand pour stocker au moins un nombre spécifié d'éléments.  
+  
+```
+template <class Other>  
+pointer allocate(size_type _Nx, const Other* _Hint = 0);
+
+pointer allocate(size_type _Nx);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+  
+|Paramètre|Description|  
+|---------------|-----------------|  
+|`_Nx`|Nombre d’éléments du tableau à allouer.|  
+|`_Hint`|Ce paramètre est ignoré.|  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Un pointeur vers l’objet alloué.  
+  
+### <a name="remarks"></a>Notes  
+ La fonction membre implémente l’allocation de mémoire pour l’allocateur défini par l’utilisateur en retournant le résultat d’un appel à la fonction `allocate` du filtre de synchronisation de type Type `*` si `_Nx == 1`, sinon en retournant le résultat d’un appel au cast de `operator new(_Nx * sizeof(Type))` en type Type `*`.  
+  
+##  <a name="allocator_base"></a>  allocator_base::allocator_base  
+ Construit un objet de type `allocator_base`.  
+  
+```
+allocator_base();
+
+template <class Other>  
+allocator_base(const allocator_base<Other, Sync>& right);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+  
+|Paramètre|Description|  
+|---------------|-----------------|  
+|`right`|Objet allocateur à copier.|  
+  
+### <a name="remarks"></a>Notes  
+ Le premier constructeur construit une instance [allocator_base](../standard-library/allocator-base-class.md). Le deuxième constructeur construit une instance `allocator_base` telle que pour toute instance `allocator_base<Type, _Sync>` `a`, `allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a`.  
+  
+##  <a name="const_pointer"></a>  allocator_base::const_pointer  
+ Type qui fournit un pointeur constant vers le type d'objet géré par l'allocateur.  
+  
+```
+typedef const Type *const_pointer;
+```  
+  
+##  <a name="const_reference"></a>  allocator_base::const_reference  
+ Type qui fournit une référence constante au type d'objet géré par l'allocateur.  
+  
+```
+typedef const Type& const_reference;
+```  
+  
+##  <a name="construct"></a>  allocator_base::construct  
+ Construit un type d'objet spécifique à une adresse spécifiée qui est initialisée avec une valeur spécifiée.  
+  
+```
+void construct(pointer ptr, const Type& val);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+  
+|Paramètre|Description|  
+|---------------|-----------------|  
+|`ptr`|Pointeur vers l’emplacement où l’objet doit être construit.|  
+|`val`|Valeur avec laquelle l’objet en cours de construction doit être initialisé.|  
+  
+### <a name="remarks"></a>Notes  
+ Cette fonction membre est implémentée pour l’allocateur défini par l’utilisateur en appelant `new((void*)ptr Type(val)`.  
+  
+##  <a name="deallocate"></a>  allocator_base::deallocate  
+ Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.  
+  
+```
+void deallocate(pointer ptr, size_type _Nx);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+  
+|Paramètre|Description|  
+|---------------|-----------------|  
+|`ptr`|Pointeur vers le premier objet à désallouer dans le stockage.|  
+|`_Nx`|Nombre d’objets à désallouer dans le stockage.|  
+  
+### <a name="remarks"></a>Notes  
+ Cette fonction membre est implémentée pour l’allocateur défini par l’utilisateur en appelant `deallocate(ptr)` sur le filtre de synchronisation `Sync` si `_Nx == 1`, sinon en appelant `operator delete(_Nx * ptr)`.  
+  
+##  <a name="destroy"></a>  allocator_base::destroy  
+ Appelle un destructeur d'objets sans libérer la mémoire où l'objet était stocké.  
+  
+```
+void destroy(pointer ptr);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+  
+|Paramètre|Description|  
+|---------------|-----------------|  
+|`ptr`|Pointeur désignant l’adresse de l’objet à détruire.|  
+  
+### <a name="remarks"></a>Notes  
+ Cette fonction membre est implémentée pour l’allocateur défini par l’utilisateur en appelant `ptr->~Type()`.  
+  
+##  <a name="difference_type"></a>  allocator_base::difference_type  
+ Type intégral signé qui peut représenter la différence entre des valeurs de pointeurs vers le type d'objet géré par l'allocateur.  
+  
+```
+typedef std::ptrdiff_t difference_type;
+```  
+  
+##  <a name="max_size"></a>  allocator_base::max_size  
+ Retourne le nombre d'éléments de type `Type` qui pourraient être alloués par un objet d'allocateur de classe avant que la mémoire libre soit complètement utilisée.  
+  
+```
+size_type max_size() const;
+```  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Nombre d’éléments pouvant être alloués.  
+  
+### <a name="remarks"></a>Notes  
+ Cette fonction membre est implémentée pour l’allocateur défini par l’utilisateur en retournant `(size_t)-1 / sizeof(Type)` si `0 < (size_t)-1 / sizeof(Type)`, sinon `1`.  
+  
+##  <a name="pointer"></a>  allocator_base::pointer  
+ Type qui fournit un pointeur vers le type d'objet géré par l'allocateur.  
+  
+```
+typedef Type *pointer;
+```  
+  
+##  <a name="reference"></a>  allocator_base::reference  
+ Type qui fournit une référence au type d'objet géré par l'allocateur.  
+  
+```
+typedef Type& reference;
+```  
+  
+##  <a name="size_type"></a>  allocator_base::size_type  
+ Type intégral non signé qui peut représenter la longueur d'une séquence qu'un objet de classe de modèle `allocator_base` peut allouer.  
+  
+```
+typedef std::size_t size_type;
+```  
+  
+##  <a name="value_type"></a>  allocator_base::value_type  
+ Type géré par l'allocateur.  
+  
+```
+typedef Type value_type;
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [\<allocators>](../standard-library/allocators-header.md)
+
+
+
+
