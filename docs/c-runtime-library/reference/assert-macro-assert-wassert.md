@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ad3410852975757c34220e2de19f696ba3b7c718
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 97bdb002953c07aba3bf7951a6f94a058c977f9d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="assert-macro-assert-wassert"></a>assert (macro), _assert, _wassert
@@ -106,7 +107,7 @@ void _wassert(
   
  Lorsque l'application est liée à une version debug des bibliothèques Runtime, `assert` crée un message avec trois boutons : **Abandonner**, **Réessayer**et **Ignorer**. Si l'utilisateur clique sur **Abandonner**, le programme s'interrompt immédiatement. Si l'utilisateur clique sur **Réessayer**, le débogueur est appelé et l'utilisateur peut déboguer le programme si le débogage juste-à-temps (JIT) est activé. Si l'utilisateur clique sur **Ignorer**, `assert` poursuit son exécution normale en créant la boîte de message avec le bouton **OK** . Notez que lorsque vous cliquez sur **Ignorer** alors qu'une condition d'erreur existe, un comportement non défini peut se produire.  
   
- Pour plus d’informations sur le débogage CRT, consultez [Techniques de débogage CRT](/visualstudio/debugger/crt-debugging-techniques).  
+ Pour plus d'informations sur le débogage CRT, consultez [Techniques de débogage CRT](/visualstudio/debugger/crt-debugging-techniques).  
   
  Les fonctions `_assert` et `_wassert` sont des fonctions CRT internes. Elles aident à réduire la quantité de code nécessaire dans vos fichiers objet pour prendre en charge les assertions. Nous vous déconseillons d’appeler ces fonctions directement.  
   
@@ -162,16 +163,13 @@ Analyzing string '(null)'
 Assertion failed: string != NULL, file crt_assert.c, line 25  
 ```  
   
- Après l’échec d’assertion, en fonction de la version du système d’exploitation et de la bibliothèque Runtime, vous pouvez voir une boîte de message contenant du texte semblable à celui-ci :  
+ Après l’échec d’assertion, en fonction de la version du système d’exploitation et de la bibliothèque Runtime, vous pouvez voir une boîte de message contenant du texte semblable à celui-ci :  
   
 ```Output  
 A problem caused the program to stop working correctly. Windows will close the program and notify you if a solution is available.  
 ```  
   
  Si un débogueur est installé, sélectionnez le bouton **Déboguer** pour démarrer le débogueur, ou **Fermer le programme** pour quitter.  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- [System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des erreurs](../../c-runtime-library/error-handling-crt.md)   
