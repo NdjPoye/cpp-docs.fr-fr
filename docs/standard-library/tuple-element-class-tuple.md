@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 54bfdd8a1f095478282af39354a6e9a91ba32891
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: b5568eb951738b1c0c53321d7430c84db6bac9ec
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="tupleelement-class"></a>tuple_element, classe
@@ -108,7 +109,7 @@ La spécialisation de classe de modèle pour les tableaux fournit une interface 
   
 Les spécialisations de modèle pour les types `pair` fournissent chacune un typedef de membre unique, `type`, qui est un synonyme du type de l’élément à la position spécifiée dans la paire, avec des qualifications const et/ou volatiles conservées. Le typedef `tuple_element_t` est un alias pratique pour `tuple_element<N, pair<T1, T2>>::type`.  
   
-Utilisez la [fonction get &lt;utility&gt;](../standard-library/utility-functions.md#get) pour retourner l’élément à une position spécifiée ou (dans C++14 / Visual Studio 2015) d’un type spécifié. 
+Utilisez le [get, fonction &lt;utilitaire&gt; ](../standard-library/utility-functions.md#get) pour retourner l’élément à la position spécifiée, ou d’un type spécifié. 
   
 ## <a name="example"></a>Exemple  
   

@@ -84,10 +84,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f7cba068af7ec6f14970d174d2b3e9b4121d7c40
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9a0a0e0f9b020b635b6de27a1ae111378152291b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
@@ -157,7 +158,7 @@ size_t _mbstrnlen_l(
   
  Chacune de ces fonctions retourne le nombre de caractères dans `str`, sans le caractère Null de fin. Toutefois, `strnlen` et `strnlen_s` interprètent la chaîne comme une chaîne de caractères composée d'un unique octet et la valeur de retour est donc toujours égale au nombre d'octets, même si la chaîne contient des caractères multioctets. `wcsnlen` et `wcsnlen_s` sont des versions à caractères larges de `strnlen` et `strnlen_s` respectivement ; les arguments pour `wcsnlen` et `wcsnlen_s` sont des chaînes à caractères larges et le nombre de caractères est établi en unités à caractères larges. Sinon, `wcsnlen` et `strnlen` se comportent de la même façon, comme `strnlen_s` et `wcsnlen_s`.  
   
- `strnlen`, `wcsnlen,` et `_mbsnlen` ne valident pas leurs paramètres. Si `str` a la valeur `NULL`, une violation d'accès se produit.  
+ `strnlen`, `wcsnlen`, et `_mbsnlen` ne vérifient pas leurs paramètres. Si `str` a la valeur `NULL`, une violation d'accès se produit.  
   
  `strnlen_s` et `wcsnlen_s` valident leurs paramètres. Si `str` a la valeur `NULL`, les fonctions retournent 0.  
   
@@ -188,9 +189,8 @@ size_t _mbstrnlen_l(
   
 ## <a name="example"></a>Exemple  
   
-```  
-  
-      // crt_strnlen.c  
+```C  
+// crt_strnlen.c  
   
 #include <string.h>  
   
@@ -224,9 +224,6 @@ than the maximum size specified, the maximum size is
 returned rather than the actual size of the string.  
  Length: 100   
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- [System::String::Length](https://msdn.microsoft.com/en-us/library/system.string.length.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   

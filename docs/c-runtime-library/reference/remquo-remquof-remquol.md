@@ -1,53 +1,71 @@
 ---
-title: "remquo, remquof, remquol | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "remquof"
-  - "remquo"
-  - "remquol"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "remquof"
-  - "remquol"
-  - "remquo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remquol (fonction)"
-  - "remquof (fonction)"
-  - "remquo (fonction)"
+title: remquo, remquof, remquol | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- remquof
+- remquo
+- remquol
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- remquof
+- remquol
+- remquo
+dev_langs:
+- C++
+helpviewer_keywords:
+- remquol function
+- remquof function
+- remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# remquo, remquof, remquol
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: fb7cbf4fe2450d574a4418e62c43dca699cde9b8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
-Calcule le reste de deux valeurs entières, et stocke une valeur entière avec le signe et l'ampleur approximative du quotient dans un emplacement spécifié dans un paramètre.  
+---
+# <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
+Calcule le reste de deux valeurs entières et stocke une valeur entière avec le signe et la grandeur approximative du quotient à un emplacement spécifié dans un paramètre.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 double remquo(   
@@ -78,35 +96,35 @@ long double remquol(
   
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `numer`  
- Le numérateur.  
+ Numérateur.  
   
  `denom`  
- Le dénominateur.  
+ Dénominateur.  
   
  `quo`  
- Pointeur vers un entier pour stocker une valeur qui possède le signe et l'ampleur approximative du quotient.  
+ Pointeur désignant un entier pour stocker une valeur qui a le signe et la grandeur approximative du quotient.  
   
-## Valeur de retour  
- `remquo` retourne le reste à virgule flottante de `x` \/ `y`.  Si `y` a la valeur 0.0, `remquo` retourne un quiet NaN.  Pour plus d'informations sur la représentation d'un quiet NaN par la famille `printf`, consultez [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+## <a name="return-value"></a>Valeur de retour  
+ `remquo` retourne le reste à virgule flottante de `x` / `y`. Si la valeur de `y` est égale à 0,0, `remquo` retourne un NaN silencieux. Pour plus d’informations sur la représentation d’un NaN silencieux par la famille `printf`, consultez [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
   
-## Notes  
- La fonction `remquo` calcule le reste à virgule flottante `f` de `x` \/ `y` comme `x` \= `i` `*` `y` \+ `f`, où `i` est un entier, `f` a le même signe que `x`, et la valeur absolue `f` est inférieure à la valeur absolue `y`.  
+## <a name="remarks"></a>Notes  
+ La fonction `remquo` calcule le reste à virgule flottante `f` de `x` / `y` selon la formule `x` = `i` `*` `y` + `f`, où `i` est un entier, `f` a le même signe que `x`, et la valeur absolue de `f` est inférieure à celle de `y`.  
   
- C\+\+ permet la surcharge, donc vous pouvez appeler les surcharges de `remquo` qui acceptent et retournent les valeurs `float` ou `long double`.  Dans un programme C, `remquo` prend deux doubles et retourne toujours un double.  
+ Sachant que C++ autorise la surcharge, vous pouvez appeler des surcharges de `remquo` qui acceptent et retournent des valeurs `float` ou `long double`. Dans un programme C, `remquo` accepte toujours deux doubles et retourne un double.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Fonction|En\-tête requis|  
+|Fonction|En-tête requis|  
 |--------------|---------------------|  
-|`remquo`, `remquof`, `remquol`|\<math.h\>|  
+|`remquo`, `remquof`, `remquol`|\<math.h>|  
   
- Pour des informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```c  
+```C  
 // crt_remquo.c  
 // This program displays a floating-point remainder.  
   
@@ -124,12 +142,12 @@ int main( void )
 }  
 ```  
   
-  **Le reste de \-10,00\/3,00 est \-1,000000**  
-**Le quotient signé approximatif est \-3**   
-## Équivalent .NET Framework  
- [System::Math::IEEERemainder](https://msdn.microsoft.com/en-us/library/system.math.ieeeremainder.aspx)  
+```Output  
+The remainder of -10.00 / 3.00 is -1.000000  
+Approximate signed quotient is -3  
+```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
  [ldiv, lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)   
  [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)   

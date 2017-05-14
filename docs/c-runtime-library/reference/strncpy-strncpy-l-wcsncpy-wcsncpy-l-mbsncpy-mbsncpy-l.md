@@ -89,10 +89,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ef1eac9e7e9accc4d46cef80ec9719e645b0f294
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: da3d85085d7b9dbe914acd4515252b8b4637a6dc
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
@@ -295,9 +296,6 @@ Buffer overrun: s = 'ars.' (should be 'test')
 ```  
   
  La structure des variables automatiques et le niveau de détection d'erreurs et de protection du code peuvent varier en modifiant les paramètres du compilateur. Cet exemple peut donner des résultats différents quand il est généré dans d'autres environnements de compilation ou avec d'autres options de compilateur.  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- [System::String::Copy](https://msdn.microsoft.com/en-us/library/system.string.copy.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   

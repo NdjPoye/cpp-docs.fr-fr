@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 23b9a848acb3e1dcd5003fb9369de2c1daf55ce9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 16d166f205f026977673e39bd539b377496bdc0c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
@@ -119,7 +120,7 @@ int _resetstkoflw ( void );
   
  Dans certaines situations, la fonction **_resetstkoflw** peut échouer même si elle est utilisée dans un emplacement approprié, comme dans un bloc **__except**. Si, même après avoir déroulé la pile, il ne reste pas assez d’espace de pile pour exécuter **_resetstkoflw** sans écrire dans la dernière page de la pile, **_resetstkoflw** ne peut pas réinitialiser la dernière page de la pile en tant que page de garde et retourne 0, ce qui indique un échec. Par conséquent, l'utilisation sécurisée de cette fonction doit inclure la vérification de la valeur de retour au lieu de supposer que l'utilisation de la pile ne présente aucun risque.  
   
- Gestion structurée des exceptions n’intercepte pas une `STATUS_STACK_OVERFLOW` exception lorsque l’application est compilée avec `/clr` (voir [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)).  
+ Gestion structurée des exceptions n’intercepte pas un `STATUS_STACK_OVERFLOW` exception lors de l’application est compilée avec `/clr` (consultez [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)).  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -327,9 +328,6 @@ int main ( )
 Stack overflow!  
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [_alloca](../../c-runtime-library/reference/alloca.md)

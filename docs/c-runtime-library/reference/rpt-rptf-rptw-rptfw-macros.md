@@ -114,10 +114,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d8611402652268e0a85170a36355619e5c7335ac
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ca0ae546af28c342db2e452bec432ced0437738a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW, macros
@@ -161,8 +162,8 @@ _RPTFWn(
  `args`  
  Arguments de substitution utilisés par `format`.  
   
-## <a name="remarks"></a>Notes  
- Toutes ces macros acceptent les paramètres `reportType` et `format`. De plus, il peuvent aussi accepter jusqu’à quatre arguments supplémentaires, ce qui est indiqué par le nombre ajouté au nom de la macro. Par exemple, `_RPT0` et `_RPTF0` n’acceptent aucun argument supplémentaire, tandis que `_RPT1` et `_RPTF1` prennent `arg1`, `_RPT2` et `_RPTF2` prend `arg1` et `arg2`, et ainsi de suite.  
+## <a name="remarks"></a>Remarques  
+ Toutes ces macros prennent le `reportType` et `format` paramètres. De plus, il peuvent aussi accepter jusqu’à quatre arguments supplémentaires, ce qui est indiqué par le nombre ajouté au nom de la macro. Par exemple, `_RPT0` et `_RPTF0` n’acceptent aucun argument supplémentaire, tandis que `_RPT1` et `_RPTF1` prennent `arg1`, `_RPT2` et `_RPTF2` prend `arg1` et `arg2`, et ainsi de suite.  
   
  Les macros `_RPT` et `_RPTF` sont comparables à la fonction [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) dans le sens où elles permettent de suivre la progression d’une application pendant le processus de débogage. Cependant, ces macros sont plus flexibles que `printf`, car elles n’ont pas besoin d’être incluses dans des instructions `#ifdef` pour éviter qu’elles soient appelées dans la version commerciale d’une application. Cette souplesse est à mettre à l’actif de la macro [_DEBUG](../../c-runtime-library/debug.md) ; les macros `_RPT` et `_RPTF` sont disponibles uniquement quand l’indicateur `_DEBUG` est défini. Quand `_DEBUG` n’est pas définie, les appels à ces macros sont supprimés lors du prétraitement.  
   
@@ -202,9 +203,6 @@ _RPTFWn(
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple présenté dans la rubrique [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Routines de débogage](../../c-runtime-library/debug-routines.md)

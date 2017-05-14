@@ -33,17 +33,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 8159bf4e5ebde026fe0d92b7d9d3c73ce1a7b7b9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: ac4dc70360682aff3a28eabeed0e4f05e4c509a8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="regular-expressions-c"></a>Expressions régulières (C++)
-Cette rubrique aborde les grammaires des différents moteurs d'expressions régulières.  
+La bibliothèque standard C++ prend en charge plusieurs grammaires d’expressions régulières. Cette rubrique décrit les variations de grammaire disponibles lors de l’utilisation d’expressions régulières.  
   
-##  <a name="a-nameregexgrammara-regular-expression-grammar"></a><a name="regexgrammar"></a> Grammaire des expressions régulières  
+##  <a name="regexgrammar"></a> Grammaire des expressions régulières  
+La grammaire d’expression régulière à utiliser est spécifiée à l’aide de l’un par le `std::regex_constants::syntax_option_type` valeurs d’énumération. Les grammaires d’expressions régulières sont définies dans std::regex_constants :
+
+-   `ECMAScript`: Il s’agit le plus proche de la grammaire utilisée par JavaScript et les langages .NET.
+-   `basic`: Les expressions régulières base POSIX les BRE.
+-   `extended`: La POSIX étendue des expressions régulières ou ERE.
+-   `awk`: Il s’agit de `extended`, mais il implique d’autres séquences d’échappement pour les caractères non imprimables.
+-   `grep`: Il s’agit de `basic`, mais il permet également un saut de ligne ('\n') caractères comme séparateur d’alternatives.
+-   `egrep`: Il s’agit de `extended`, mais elle permet également de caractères de saut de ligne séparer les alternatios.
+
+Par défaut, si aucune grammaire n’est spécifiée, `ECMAScript` est supposé. Grammaire qu’une seule peut être spécifiée.  
   
+En plus de la grammaire, plusieurs indicateurs peuvent être appliquées :  
+-   `icase`: Ignorer la casse lors de la correspondance.  
+-   `nosubs`: Ignorer les correspondances marquées (autrement dit, des expressions entre parenthèses) ; aucune substitution n’est stockées.  
+-   `optimize`: Assurez-vous de correspondance plus rapidement, aux dépens du moment de la construction.  
+-   `collate`: Utilisez des séquences de classement de dépendent des paramètres régionaux (par exemple, les plages au format « [a-z] »).  
+  
+Zéro ou plusieurs indicateurs peuvent être combinées avec la grammaire pour spécifier le comportement du moteur des expressions régulières. Si seuls les indicateurs sont spécifiés, `ECMAScript` est considéré comme étant la grammaire.
+
 ### <a name="element"></a>Élément  
  Un élément peut être ce qui suit :  
   
@@ -67,7 +86,7 @@ Cette rubrique aborde les grammaires des différents moteurs d'expressions régu
   
 -   Une *ancre*. L'ancre '^' correspond au début de la séquence cible ; l'ancre '$' correspond à la fin de la séquence cible.  
   
- Un *groupe de capture* au format "( *sous-expression* )", ou "\\( *sous-expression* \\)" dans `BRE` et `grep`, qui correspond à la séquence de caractères dans la séquence cible correspondant au modèle situé entre les délimiteurs.  
+ Un *groupe de capture* au format "( *sous-expression* )", ou "\\( *sous-expression* \\)" dans `basic` et `grep`, qui correspond à la séquence de caractères dans la séquence cible correspondant au modèle situé entre les délimiteurs.  
   
 -   Un *échappement d’identité* au format "\\`k`", qui correspond au caractère `k` dans la séquence cible.  
   
@@ -83,7 +102,7 @@ Cette rubrique aborde les grammaires des différents moteurs d'expressions régu
   
 -   "(a)" correspond à la séquence cible "a" et associe le groupe de capture 1 à la sous-séquence "a", mais il ne correspond pas aux séquences cibles "B", "b" ou "c".  
   
- Dans `ECMAScript`, `BRE` et `grep`, un élément peut également être une *référence arrière* au format "\\`dd`", où `dd` représente une valeur décimale N qui correspond à une séquence de caractères dans la séquence cible qui est identique à la séquence de caractères correspondant au Nième *groupe de capture*. Par exemple, "(a)\1" correspond à la séquence cible "aa", car le premier (et unique) groupe de capture correspond à la séquence initiale "a", et \1 correspond à la séquence finale "a".  
+ Dans `ECMAScript`, `basic` et `grep`, un élément peut également être une *référence arrière* au format "\\`dd`", où `dd` représente une valeur décimale N qui correspond à une séquence de caractères dans la séquence cible qui est identique à la séquence de caractères correspondant au Nième *groupe de capture*. Par exemple, "(a)\1" correspond à la séquence cible "aa", car le premier (et unique) groupe de capture correspond à la séquence initiale "a", et \1 correspond à la séquence finale "a".  
   
  Dans `ECMAScript`, un élément peut également être ce qui suit :  
   
@@ -126,13 +145,13 @@ Cette rubrique aborde les grammaires des différents moteurs d'expressions régu
 -   Une *séquence d’échappement octale* au format "\\`ooo`". Correspond à un caractère de la séquence cible qui est représenté par la valeur `ooo` d'un, deux ou trois chiffres octaux.  
   
 ### <a name="repetition"></a>Répétition  
- Tous les éléments autres qu’une *assertion positive*, une *assertion négative* ou une *ancre* peuvent être suivis par un nombre de répétitions. Le type le plus général de nombre de répétitions apparaît au format "{`min`,`max`}", ou "\\{`min`,`max`\\}" dans `BRE` et `grep`. Un élément qui est suivi par ce format de nombre de répétitions correspond au moins à `min` occurrences successives, et au maximum à `max` occurrences successives d'une séquence qui correspond à l'élément. Par exemple, "a{2,3}" correspond à la séquence cible "aa" et à la séquence cible "aaa", mais pas aux séquences cibles "a" ou "aaaa".  
+ Tous les éléments autres qu’une *assertion positive*, une *assertion négative* ou une *ancre* peuvent être suivis par un nombre de répétitions. Le type le plus général de nombre de répétitions apparaît au format "{`min`,`max`}", ou "\\{`min`,`max`\\}" dans `basic` et `grep`. Un élément qui est suivi par ce format de nombre de répétitions correspond au moins à `min` occurrences successives, et au maximum à `max` occurrences successives d'une séquence qui correspond à l'élément. Par exemple, "a{2,3}" correspond à la séquence cible "aa" et à la séquence cible "aaa", mais pas aux séquences cibles "a" ou "aaaa".  
   
  Un nombre de répétitions peut également prendre l'une des formes suivantes :  
   
--   "{`min`}", ou "\\{`min`\\}" dans `BRE` et `grep`. Équivalent à "{`min`,`min`}".  
+-   "{`min`}", ou "\\{`min`\\}" dans `basic` et `grep`. Équivalent à "{`min`,`min`}".  
   
--   "{`min`,}", ou "\\{`min`,\\}" dans `BRE` et `grep`. Équivalent à "{`min`, unbounded}".  
+-   "{`min`,}", ou "\\{`min`,\\}" dans `basic` et `grep`. Équivalent à "{`min`, unbounded}".  
   
 -   "*". Équivalent à "{0,unbounded}".  
   
@@ -144,7 +163,7 @@ Cette rubrique aborde les grammaires des différents moteurs d'expressions régu
   
 -   "a*" correspond aux séquences cibles "", "a", "aa", et ainsi de suite.  
   
- Pour toutes les grammaires, sauf `BRE` et `grep`, un nombre de répétitions peut également prendre l'une des formes suivantes :  
+ Pour toutes les grammaires, sauf `basic` et `grep`, un nombre de répétitions peut également prendre l'une des formes suivantes :  
   
 -   "". Équivalent à "{0,1}".  
   
@@ -162,19 +181,19 @@ Cette rubrique aborde les grammaires des différents moteurs d'expressions régu
  Les éléments d’expression régulière, avec ou sans *nombre de répétitions*, peuvent être concaténés pour former de plus longues expressions régulières. L'expression résultante correspond à une séquence cible qui est une concaténation des séquences auxquelles correspondent les éléments. Par exemple, "a{2,3}b" correspond à la séquence cible "aab" et à la séquence cible "aaab", mais ne correspond pas aux séquences cibles "ab" et "aaaab".  
   
 ### <a name="alternation"></a>Alternative  
- Dans toutes les grammaires d’expressions régulières, à l’exception de `BRE` et `grep`, une expression régulière concaténée peut être suivie par le caractère "&#124;" et par une autre expression régulière concaténée. Le nombre d'expressions régulières concaténées pouvant être combinées de cette manière est illimité. L'expression résultante correspond à n'importe quelle séquence cible qui correspond à une ou plusieurs expressions régulières concaténées.  
+ Dans toutes les grammaires d’expressions régulières, à l’exception de `basic` et `grep`, une expression régulière concaténée peut être suivie par le caractère "&#124;" et par une autre expression régulière concaténée. Le nombre d'expressions régulières concaténées pouvant être combinées de cette manière est illimité. L'expression résultante correspond à n'importe quelle séquence cible qui correspond à une ou plusieurs expressions régulières concaténées.  
   
  Si plusieurs expressions régulières concaténées correspondent à la séquence cible, `ECMAScript` choisit la première des expressions régulières concaténées qui correspond à la séquence (*première correspondance*). Les autres grammaires d’expressions régulières choisissent celle qui correspond à la *correspondance la plus longue*. Par exemple, "ab&#124;cd" correspond à la séquence cible "ab" et à la séquence cible "cd", mais ne correspond pas aux séquences cibles "abd" et "acd".  
   
  Dans `grep` et `egrep`, un caractère de saut de ligne ('\n') peut être utilisé comme séparateur d'alternatives.  
   
 ### <a name="subexpression"></a>Sous-expression  
- Dans `BRE` et `grep`, une sous-expression est une concaténation. Dans les autres grammaires d'expressions régulières, une sous-expression est une alternative.  
+ Dans `basic` et `grep`, une sous-expression est une concaténation. Dans les autres grammaires d'expressions régulières, une sous-expression est une alternative.  
   
-##  <a name="a-namegrammarsummarya-grammar-summary"></a><a name="grammarsummary"></a> Résumé des grammaires  
+##  <a name="grammarsummary"></a> Résumé des grammaires  
  Le tableau suivant résume les fonctionnalités disponibles dans les différentes grammaires d’expressions régulières :  
   
-|Élément|BRE|ERE|ECMA|grep|egrep|awk|  
+|Élément|de base|étendues|ECMAScript|grep|egrep|awk|  
 |-------------|---------|---------|----------|----------|-----------|---------|  
 |alternative utilisant '&#124;'||+|+||+|+|  
 |alternative utilisant '\n'||||+|+||  
@@ -203,13 +222,13 @@ Cette rubrique aborde les grammaires des différents moteurs d'expressions régu
 |caractère générique|+|+|+|+|+|+|  
 |assertion de limite de mot|||+||||  
   
-##  <a name="a-namesemanticdetailsa-semantic-details"></a><a name="semanticdetails"></a> Détails sémantiques  
+##  <a name="semanticdetails"></a> Détails sémantiques  
   
 ### <a name="anchor"></a>Ancre  
  Une ancre correspond à une position dans la chaîne cible, et non à un caractère. Un '^' correspond au début de la chaîne cible, et un '$' correspond à la fin de la chaîne cible.  
   
 ### <a name="back-reference"></a>Référence arrière  
- Une référence arrière est une barre oblique inverse suivie par une valeur décimale N. Elle correspond au contenu du Nième *groupe de capture*. La valeur N ne doit pas dépasser le nombre de groupes de capture qui précèdent la référence arrière. Dans `BRE` et `grep`, la valeur N est déterminée par le chiffre décimal qui suit la barre oblique inverse. Dans `ECMAScript`, la valeur N est déterminée par le nombre total de chiffres décimaux qui suivent immédiatement la barre oblique inverse. Par conséquent, dans `BRE` et `grep`, la valeur N n'est jamais supérieure à 9, même si l'expression régulière contient plus de neuf groupes de capture. Dans `ECMAScript`, la valeur N est illimitée.  
+ Une référence arrière est une barre oblique inverse suivie par une valeur décimale N. Elle correspond au contenu du Nième *groupe de capture*. La valeur N ne doit pas dépasser le nombre de groupes de capture qui précèdent la référence arrière. Dans `basic` et `grep`, la valeur N est déterminée par le chiffre décimal qui suit la barre oblique inverse. Dans `ECMAScript`, la valeur N est déterminée par le nombre total de chiffres décimaux qui suivent immédiatement la barre oblique inverse. Par conséquent, dans `basic` et `grep`, la valeur N n'est jamais supérieure à 9, même si l'expression régulière contient plus de neuf groupes de capture. Dans `ECMAScript`, la valeur N est illimitée.  
   
  Exemples :  
   
@@ -217,7 +236,7 @@ Cette rubrique aborde les grammaires des différents moteurs d'expressions régu
   
 -   "(a)\2" n'est pas valide.  
   
--   "(b(((((((((a))))))))))\10" possède plusieurs significations dans `BRE` et `ECMAScript`. Dans `BRE`, la référence arrière est "\1". La référence arrière correspond au contenu du premier groupe de capture (autrement dit, celui qui commence par "(b", qui se termine par le ")" final, et qui précède la référence arrière). Le '0' final correspond au caractère ordinaire '0'. Dans `ECMAScript`, la référence arrière est "\10". Elle correspond au dixième groupe de capture, c'est-à-dire, le plus profond.  
+-   "(b(((((((((a))))))))))\10" possède plusieurs significations dans `basic` et `ECMAScript`. Dans `basic`, la référence arrière est "\1". La référence arrière correspond au contenu du premier groupe de capture (autrement dit, celui qui commence par "(b", qui se termine par le ")" final, et qui précède la référence arrière). Le '0' final correspond au caractère ordinaire '0'. Dans `ECMAScript`, la référence arrière est "\10". Elle correspond au dixième groupe de capture, c'est-à-dire, le plus profond.  
   
 ### <a name="bracket-expression"></a>Expression entre crochets  
  Une expression entre crochets définit un jeu de caractères et des *éléments de classement*. Lorsque l'expression entre crochets commence par le caractère '^', la correspondance aboutit si aucun élément du jeu ne correspond au caractère actuel de la séquence cible. Sinon, la correspondance aboutit si l'un des éléments du jeu correspond au caractère actuel de la séquence cible.  
@@ -318,9 +337,9 @@ Cette rubrique aborde les grammaires des différents moteurs d'expressions régu
   
 |Grammaire|Caractères autorisés d'échappement d'identité|  
 |-------------|----------------------------------------|  
-|`BRE`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '*', '^', '$' }|  
-|`ERE`, `egre`|{ '(', ')', '{', '.', '[', '\\', '*', '^', '$', '+', '', '&#124;' }|  
-|`awk`|`ERE` plus { '"', '/' }|  
+|`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '*', '^', '$' }|  
+|`extended`, `egrep`|{ '(', ')', '{', '.', '[', '\\', '*', '^', '$', '+', '', '&#124;' }|  
+|`awk`|`extended` plus { '"', '/' }|  
 |`ECMAScript`|Tous les caractères à l'exception de ceux pouvant faire partie d'un identificateur. En général, cela comprend les lettres, les chiffres, les caractères '$' et '_', ainsi que les séquences d'échappement unicode. Pour plus d'informations, consultez la spécification du langage ECMAScript.|  
   
 ### <a name="individual-character"></a>Caractère individuel  
@@ -374,11 +393,11 @@ Cette rubrique aborde les grammaires des différents moteurs d'expressions régu
   
 -   ^  $  \  .  *  +    (  )  [  ]  {  }  &#124;  
   
- Dans `BRE` et `grep`, les caractères suivants ont une signification particulière :  
+ Dans `basic` et `grep`, les caractères suivants ont une signification particulière :  
   
 -   .   [   \  
   
- Dans `BRE` et `grep`, les caractères suivants ont une signification particulière lorsqu'ils sont utilisés dans un contexte spécifique :  
+ Dans `basic` et `grep`, les caractères suivants ont une signification particulière lorsqu'ils sont utilisés dans un contexte spécifique :  
   
 -   '*' possède une signification spéciale dans tous les cas, sauf lorsqu'il est le premier caractère d'une expression régulière ou le premier caractère qui suit le premier '^' dans une expression régulière, ou lorsqu'il s'agit du premier caractère d'un groupe de capture ou du premier caractère qui suit le premier '^' dans un groupe de capture.  
   
@@ -386,11 +405,11 @@ Cette rubrique aborde les grammaires des différents moteurs d'expressions régu
   
 -   '$' possède une signification particulière lorsqu'il s'agit du dernier caractère d'une expression régulière.  
   
- Dans `ERE`, `egrep` et `awk`, les caractères suivants ont une signification particulière :  
+ Dans `extended`, `egrep` et `awk`, les caractères suivants ont une signification particulière :  
   
 -   .   [   \   (   *   +      {   &#124;  
   
- Dans `ERE`, `egrep` et `awk`, les caractères suivants ont une signification particulière lorsqu'ils sont utilisés dans un contexte spécifique.  
+ Dans `extended`, `egrep` et `awk`, les caractères suivants ont une signification particulière lorsqu'ils sont utilisés dans un contexte spécifique.  
   
 -   ')' possède une signification particulière lorsqu'il correspond à un '(' qui le précède.  
   
@@ -431,7 +450,7 @@ Cette rubrique aborde les grammaires des différents moteurs d'expressions régu
 ### <a name="word-boundary-assert"></a>Assertion de limite de mot  
  Une assertion de limite de mot aboutit si la position actuelle dans la chaîne cible est située immédiatement après une *limite de mot*.  
   
-##  <a name="a-namematchingandsearchinga-matching-and-searching"></a><a name="matchingandsearching"></a> Correspondance et recherche  
+##  <a name="matchingandsearching"></a> Correspondance et recherche  
  Pour qu'une expression régulière corresponde à une séquence cible, l'expression régulière dans son intégralité doit correspondre à la séquence cible dans son intégralité. Par exemple, l'expression régulière "bcd" correspond à la séquence cible "bcd", mais ne correspond pas aux séquences cibles "abcd" ou "bcde".  
   
  Pour qu'une recherche d'expression régulière aboutisse, la séquence cible doit contenir une sous-séquence qui corresponde à l'expression régulière. En général, la recherche trouve la sous-séquence correspondante située la plus à gauche.  
@@ -446,7 +465,7 @@ Cette rubrique aborde les grammaires des différents moteurs d'expressions régu
   
  Une correspondance partielle aboutit si la correspondance atteint la fin de la séquence cible sans échouer, même si elle n'a pas atteint la fin de l'expression régulière. Par conséquent, après la réussite d'une correspondance partielle, l'ajout de caractères à la séquence cible peut entraîner l'échec de la prochaine correspondance partielle. Toutefois, après l'échec d'une correspondance partielle, l'ajout de caractères à la séquence cible ne peut pas permettre la réussite de la prochaine correspondance partielle. Par exemple, avec une correspondance partielle, "ab" correspond à la séquence cible "a", mais pas à "ac".  
   
-##  <a name="a-nameformatflagsa-format-flags"></a><a name="formatflags"></a> Indicateurs de format  
+##  <a name="formatflags"></a> Indicateurs de format  
   
 |Règles de format ECMAScript|Règles de format sed|Texte de remplacement|  
 |-----------------------------|----------------------|----------------------|  
@@ -455,9 +474,9 @@ Cette rubrique aborde les grammaires des différents moteurs d'expressions régu
 ||"\\&"|"&"|  
 |"$`" (signe dollar suivi d'un guillemet inversé)||Séquence de caractères qui précède la sous-séquence correspondant à l'expression régulière (`[match.prefix().first, match.prefix().second)`)|  
 |"$'" (signe dollar suivi d'un guillemet)||Séquence de caractères qui suit la sous-séquence correspondant à l'expression régulière (`[match.suffix().first, match.suffix().second)`)|  
-|"$n"|"\n"|Séquence de caractères qui correspond au groupe de capture à la position `n`, où `n` est un nombre compris entre 0 et 9 (`[match[n].first, match[n].second)`|  
+|"$n"|"\n"|La séquence de caractères qui correspond au groupe de capture à la position `n`, où `n` est un nombre compris entre 0 et 9 (`[match[n].first, match[n].second)`)|  
 ||"\\\n"|"\n"|  
-|"$nn"||Séquence de caractères qui correspond au groupe de capture à la position `nn`, où `nn` est un nombre compris entre 10 et 99 (`[match[nn].first, match[nn].second)`|  
+|"$nn"||La séquence de caractères qui correspond au groupe de capture à la position `nn`, où `nn` est un nombre compris entre 10 et 99 (`[match[nn].first, match[nn].second)`)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)

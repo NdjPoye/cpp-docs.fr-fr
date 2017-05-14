@@ -1,53 +1,70 @@
 ---
-title: "_umask_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_umask_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "unmask_s"
-  - "_umask_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_umask_s (fonction)"
-  - "autorisations fichier (C++)"
-  - "fichiers (C++), paramètres des autorisations pour"
-  - "masques"
-  - "masques, paramètre des autorisations fichier"
-  - "umask_s (fonction)"
+title: _umask_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _umask_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- unmask_s
+- _umask_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- masks, file-permission-setting
+- _umask_s function
+- masks
+- file permissions [C++]
+- umask_s function
+- files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _umask_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 5c8efcdf5d3f44a6cd3bbcc39f2a98e3659c95ab
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
-Définit le masque d'accès de fichier par défaut.  Une version de [\_umask](../../c-runtime-library/reference/umask.md) avec des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="umasks"></a>_umask_s
+Définit le masque d’autorisation de fichier par défaut. Version de [_umask](../../c-runtime-library/reference/umask.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 errno_t _umask_s(  
@@ -56,29 +73,29 @@ errno_t _umask_s(
 );  
 ```  
   
-#### Paramètres  
- \[in\] `mode`  
- Paramètre d'autorisation par défaut.  
+#### <a name="parameters"></a>Paramètres  
+ [in] `mode`  
+ Paramètre d’autorisation par défaut.  
   
- \[out\] `oldMode`  
- La valeur précédente du paramètre d'autorisation.  
+ [out] `oldMode`  
+ Valeur précédente du paramètre d’autorisation.  
   
-## Valeur de retour  
- Retourne un code d'erreur si `Mode` ne spécifie aucun mode valide ou le pointeur `pOldMode` est `NULL`.  
+## <a name="return-value"></a>Valeur de retour  
+ Retourne un code d’erreur si `Mode` ne spécifie pas de mode valide ou si le pointeur `pOldMode` a la valeur `NULL`.  
   
-### Conditions d'erreur  
+### <a name="error-conditions"></a>Conditions d’erreur  
   
 |`mode`|`pOldMode`|**Valeur de retour**|**Contenu de**  `oldMode`|  
-|------------|----------------|--------------------------|-------------------------------|  
-|any|`NULL`|`EINVAL`|non modifié|  
-|Mode non valide :|any|`EINVAL`|non modifié|  
+|------------|----------------|----------------------|--------------------------------|  
+|indifférent|`NULL`|`EINVAL`|non modifié|  
+|mode non valide|indifférent|`EINVAL`|non modifié|  
   
- Si l'une de ces conditions d'erreur ci\-dessus se produit, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, `_umask_s` renvoie `EINVAL` et attribue à `errno` la valeur `EINVAL`.  
+ Si l’une des conditions ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à continuer, `_umask_s` retourne `EINVAL` et définit `errno` à `EINVAL`.  
   
-## Notes  
- La fonction `_umask_s` définit le masque d'autorisation du processus actuel comme le mode spécifié par `mode`*.* Le masque des autorisations de fichiers modifie le paramètre d'autorisation des nouveaux fichiers créés par `_creat`, `_open`, ou `_sopen`.  Si un bit dans le masque est 1, le bit correspondant dans la valeur requise d'autorisation du fichier est défini à 0 \(pas autorisé\).  Si un bit dans le masque est 0, le bit correspondant est inchangé.  Le paramètre d'autorisation pour un nouveau fichier n'est pas défini tant que le fichier n'a pas été fermé pour la première fois.  
+## <a name="remarks"></a>Remarques  
+ Le `_umask_s` fonction définit le masque d’autorisation de fichier du processus en cours pour le mode spécifié par `mode`. Le masque d’autorisation de fichier modifie le paramètre d’autorisation des nouveaux fichiers créés par `_creat`, `_open` ou `_sopen`. Si un bit a la valeur 1 dans le masque, le bit correspondant dans la valeur d’autorisation demandée du fichier prend la valeur 0 (non autorisé). Si un bit a la valeur 0 dans le masque, le bit correspondant est inchangé. Le paramètre d’autorisation d’un nouveau fichier n’est pas défini tant qu’il n’est pas fermé pour la première fois.  
   
- L'expression entière `pmode` contient une des deux ou les deux constantes manifestes suivantes, défini dans SYS\\STAT.H :  
+ L’expression d’entier `pmode` contient l’une des constantes manifestes suivantes (ou les deux), définies dans SYS\STAT.H :  
   
  `_S_IWRITE`  
  Écriture autorisée.  
@@ -89,19 +106,19 @@ errno_t _umask_s(
  `_S_IREAD | _S_IWRITE`  
  Lecture et écriture autorisées.  
   
- Lorsque les deux constantes sont fournies, elles sont jointes à l'opérateur de bits OR \(          `|`  \).  Si l'argument `mode` est `_S_IREAD`, la lecture n'est pas autorisée \(le fichier est en écriture seule.  Si l'argument `mode` est `_S_IWRITE`, l'écriture n'est pas autorisée \(le fichier est en lecture seule\).  Par exemple, si le bit d'écriture est défini dans le masque, tous les nouveaux fichiers sont en lecture seule.  Notez que avec MS\-DOS et des systèmes d'exploitation Windows, tous les fichiers sont lisibles ; il est impossible de donner l'autorisation en écriture seule.  Par conséquent, définir le bit de lecture avec `_umask_s` n'a aucun effet sur les modes du fichier.  
+ Quand les deux constantes sont transmises, elles sont jointes avec l’opérateur OR au niveau du bit ( `|` ). Si l’argument `mode` a la valeur `_S_IREAD`, la lecture n’est pas autorisée (le fichier est en écriture seule). Si l’argument `mode` a la valeur `_S_IWRITE`, l’écriture n’est pas autorisée (le fichier est en lecture seule). Par exemple, si le bit d’écriture est défini dans le masque, les nouveaux fichiers sont en lecture seule. Notez qu’avec les systèmes d’exploitation MS-DOS et Windows, tous les fichiers sont lisibles ; il est impossible d’accorder une autorisation en écriture seule. Par conséquent, le fait définir le bit de lecture avec `_umask_s` n’a aucun effet sur les modes du fichier.  
   
- Si `pmode` n'est pas une combinaison de l'une des constantes manifestes ou n'incorpore pas un jeu de remplacement de constantes, la fonction ignore simplement celles\-ci.  
+ Si `pmode` n’est pas une combinaison de l’une des constantes manifestes ou incorpore un autre ensemble de constantes, la fonction les ignore simplement.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_umask_s`|\<io.h\> et \<sys\/stat.h\> et \<sys\/types.h\>|  
+|`_umask_s`|\<io.h>, \<sys/stat.h> et \<sys/types.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_umask_s.c  
@@ -131,15 +148,15 @@ int main( void )
 }  
 ```  
   
-  **Oldmask \= 0x0000**   
-## Équivalent .NET Framework  
- [System::IO::File::SetAttributes](https://msdn.microsoft.com/en-us/library/system.io.file.setattributes.aspx)  
+```Output  
+Oldmask = 0x0000  
+```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion de fichiers](../../c-runtime-library/file-handling.md)   
- [E\/S niveau bas](../../c-runtime-library/low-level-i-o.md)   
- [\_chmod, \_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [\_creat, \_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_mkdir, \_wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [\_open, \_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_umask](../../c-runtime-library/reference/umask.md)
+ [E/S de bas niveau](../../c-runtime-library/low-level-i-o.md)   
+ [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
+ [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_umask](../../c-runtime-library/reference/umask.md)

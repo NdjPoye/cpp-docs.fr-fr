@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: bfab56fe6847015adff4013d075893e982d5d2f4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 96d388b7ddfdf561e016b4e74ffeb9ca072c7cb2
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Utilisation des opérateurs d'insertion et contrôle du format
@@ -50,7 +51,7 @@ Cette rubrique montre comment contrôler le format et comment créer des opérat
   
 - [Base](#vclrfradixanchor6)  
   
-##  <a name="a-namevclrfoutputwidthanchor3a-output-width"></a><a name="vclrfoutputwidthanchor3"></a> Largeur de sortie  
+##  <a name="vclrfoutputwidthanchor3"></a> Largeur de sortie  
  Pour aligner la sortie, vous spécifiez la largeur de sortie pour chaque élément en plaçant le manipulateur `setw` dans le flux ou en appelant la fonction membre **width**. Cet exemple aligne à droite les valeurs dans une colonne d'au moins 10 caractères de large :  
   
 ```  
@@ -134,7 +135,7 @@ Jimmy     35.36
   
  Ni `setw` ni **width** ne tronquent les valeurs. Si la sortie mise en forme dépasse la largeur, la valeur entière est imprimée, conformément au paramètre de précision du flux. `setw` et **width** affectent tous deux uniquement le champ suivant. La largeur de champ reprend son comportement par défaut (la largeur nécessaire) une fois qu'un champ a été imprimé. Toutefois, les autres options de format de flux restent en vigueur jusqu'à ce qu'elles soient modifiées.  
   
-##  <a name="a-namevclrfalignmentanchor4a-alignment"></a><a name="vclrfalignmentanchor4"></a> Alignement  
+##  <a name="vclrfalignmentanchor4"></a> Alignement  
  Les flux de sortie sont par défaut alignés à droite. Pour aligner à gauche les noms dans l’exemple précédent et aligner à droite les nombres, remplacez la boucle **for** comme suit :  
   
 ```  
@@ -156,7 +157,7 @@ Stan     4358.24
   
  L’indicateur d’alignement à gauche est défini à l’aide du manipulateur [setiosflags](../standard-library/iomanip-functions.md#setiosflags) avec l’énumérateur `left`. Cet énumérateur est défini dans la classe [ios](../standard-library/basic-ios-class.md). Sa référence doit donc inclure le préfixe **ios::**. Le manipulateur [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) désactive l’indicateur d’alignement à gauche. Contrairement à **width** et `setw`, l’effet de `setiosflags` et `resetiosflags` est permanent.  
   
-##  <a name="a-namevclrfprecisionanchor5a-precision"></a><a name="vclrfprecisionanchor5"></a> Précision  
+##  <a name="vclrfprecisionanchor5"></a> Précision  
  La valeur par défaut pour la précision de virgule flottante est six. Par exemple, le nombre 3466,9768 est imprimé comme 3466,98. Pour modifier comment cette valeur est imprimée, utilisez le manipulateur [setprecision](../standard-library/iomanip-functions.md#setprecision). Le manipulateur a deux indicateurs : [fixed](../standard-library/ios-functions.md#fixed) et [scientific](../standard-library/ios-functions.md#scientific). Si [fixed](../standard-library/ios-functions.md#fixed) est défini, le nombre imprimé est 3466,976800. Si **scientific** est défini, le nombre imprimé est 3,4669773+003.  
   
  Pour afficher les nombres à virgule flottante illustrés dans [Alignement](#vclrfalignmentanchor4) avec un chiffre significatif, remplacez la boucle **for** comme suit :  
@@ -208,7 +209,7 @@ Stan    4.4e+003
   
  Là encore, le programme imprime un chiffre après la virgule décimale. Si **ios::fixed** ou **ios::scientific** est défini, la valeur de précision détermine le nombre de chiffres après la virgule décimale. Si ni l'un ni l'autre n'est défini, la valeur de précision détermine le nombre total de chiffres significatifs. Le manipulateur `resetiosflags` efface ces indicateurs.  
   
-##  <a name="a-namevclrfradixanchor6a-radix"></a><a name="vclrfradixanchor6"></a> Base  
+##  <a name="vclrfradixanchor6"></a> Base  
  Les manipulateurs **dec**, **oct** et **hex** définissent la base par défaut pour l’entrée et la sortie. Par exemple, si vous insérez le manipulateur **hex** dans le flux de sortie, l’objet traduit correctement la représentation de données internes des entiers dans un format de sortie hexadécimal. Les nombres sont affichés avec les chiffres a à f en minuscules si l’indicateur [uppercase](../standard-library/ios-functions.md#uppercase) est clear (par défaut) ; sinon, ils sont affichés en majuscules. La base par défaut est **dec** (décimal).  
   
 ## <a name="quoted-strings-c14"></a>Chaînes entre guillemets (C++14)  
@@ -229,7 +230,7 @@ std::cout <<extracted;   //   This
   
  Ce problème peut être contourné manuellement, mais pour rendre l'aller-retour de chaîne plus pratique, C++14 ajoute le manipulateur de flux `std::quoted` dans `<iomanip>`. Lors de l'insertion, `quoted()` entoure la chaîne avec un séparateur (guillemet double " par défaut) et lors de l'extraction il manipule le flux pour extraire tous les caractères jusqu'au séparateur final. Les guillemets incorporés sont précédés d’un caractère d’échappement (\\\\ par défaut).  
   
- Les délimiteurs sont présents uniquement dans l’objet de flux. Ils ne sont pas présents dans la chaîne extraite, mais ils le sont dans la chaîne retournée par [basic_stringstream::str](../standard-library/basic-stringstream-class.md#basic_stringstream__str)().  
+ Les délimiteurs sont présents uniquement dans l’objet de flux. Ils ne sont pas présents dans la chaîne extraite, mais ils le sont dans la chaîne retournée par [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str)().  
   
  Le comportement d'espace blanc des opérations d'insertion et d'extraction est indépendant de la façon dont la chaîne est représentée dans le code. L'opérateur quoted est donc utile que la chaîne d'entrée soit un littéral de chaîne brut ou une chaîne standard. La chaîne d'entrée, quel que soit son format, peut avoir des guillemets incorporés, des sauts de ligne, des tabulations, et ainsi de suite, qui seront tous conservés par le manipulateur quoted().  
   

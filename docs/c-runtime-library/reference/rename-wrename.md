@@ -1,60 +1,77 @@
 ---
-title: "rename, _wrename | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "rename"
-  - "_wrename"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wrename"
-  - "_trename"
-  - "Rename"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_trename (fonction)"
-  - "_wrename (fonction)"
-  - "répertoires (C++), renommer"
-  - "fichiers (C++), renommer"
-  - "noms (C++), changer de répertoire"
-  - "noms (C++), changer de fichier"
-  - "fonction de changement de nom"
-  - "renommer les répertoires"
-  - "renommer des fichiers"
-  - "trename (fonction)"
-  - "wrename (fonction)"
+title: rename, _wrename | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- rename
+- _wrename
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wrename
+- _trename
+- Rename
+dev_langs:
+- C++
+helpviewer_keywords:
+- trename function
+- directories [C++], renaming
+- renaming directories
+- names [C++], changing file
+- _trename function
+- rename function
+- wrename function
+- files [C++], renaming
+- _wrename function
+- names [C++], changing directory
+- renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# rename, _wrename
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5aeb9d9ceac7eabac061f211f48835d07f2ec38e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
-Renommer un fichier ou un répertoire.  
+---
+# <a name="rename-wrename"></a>rename, _wrename
+Suppriment un fichier ou un répertoire.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -68,51 +85,51 @@ int _wrename(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *oldname*  
- Pointeur vers l'ancien nom.  
+ Pointeur désignant l’ancien nom.  
   
  *newname*  
- Pointeur vers le nouveau nom.  
+ Pointeur désignant le nouveau nom.  
   
-## Valeur de retour  
- Chacune de ces fonctions retourne 0 en cas de succès.  Sur une erreur, la fonction retourne une valeur différente de zéro et définit `errno` à l'une des valeurs suivantes :  
+## <a name="return-value"></a>Valeur de retour  
+ Chacune de ces fonctions retourne 0 en cas de réussite. En cas d’erreur, la fonction retourne une valeur différente de zéro et affecte à `errno` l’une des valeurs suivantes :  
   
  `EACCES`  
- Le fichier ou le répertoire spécifié par *newname* existe déjà ou n'a pas pu être créé \(chemin d'accès non valide\) ; ou *oldname* est un répertoire et le *newname* spécifie un chemin différent.  
+ Le fichier ou le répertoire spécifié par *newname* existe déjà ou n’a pas pu être créé (chemin non valide) ; ou *oldname* est un répertoire et *newname* spécifie un autre chemin.  
   
  `ENOENT`  
- Fichier ou chemin d'accès spécifié par *oldname* introuvable.  
+ Le fichier ou le chemin spécifié par *oldname* est introuvable.  
   
  `EINVAL`  
- Nom contient des caractères non valides.  
+ Le nom contient des caractères non valides.  
   
- Pour d'autres valeurs de retour possibles, consultez [\_doserrno, \_errno, syserrlist, et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour connaître les autres valeurs de retour possibles, consultez [_doserrno, _errno, syserrlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- La fonction **renommer** renomme le fichier ou le répertoire spécifié par *oldname* avec le nom fourni par *newname*.  L'ancien nom doit correspondre au chemin d'accès d'un fichier existant ou d'un répertoire.  Le nouveau nom ne doit pas être le nom d'un fichier existant ou d'un répertoire.  Vous pouvez utiliser **renommer** pour déplacer un fichier à partir d'un répertoire ou d'un périphérique à l'autre en donnant un chemin différent dans l'argument *de newname*.  Toutefois, vous ne pouvez pas utiliser **renommer** pour déplacer un répertoire.  Les répertoires peuvent être renommés, mais pas être déplacés.  
+## <a name="remarks"></a>Notes  
+ La fonction **rename** renomme le fichier ou le répertoire spécifié par *oldname* avec le nom fourni par *newname*. L’ancien nom doit être le chemin d’un fichier ou répertoire existant. Le nouveau nom doit être le nom d’un fichier ou répertoire existant. Vous pouvez utiliser **rename** pour déplacer un fichier d’un répertoire ou appareil vers un autre en indiquant un autre chemin dans l’argument *newname*. Cependant, vous ne pouvez pas utiliser **rename** pour déplacer un répertoire. Les répertoires peuvent être renommés, mais pas déplacés.  
   
- `_wrename` est une version à caractères larges de **\_rename**; les arguments de `_wrename` sont des chaînes à caractères larges.  Sinon, `_wrename` et **\_rename** se comportent de la même façon.  
+ `_wrename` est une version à caractères larges de **rename** ; les arguments de `_wrename` sont des chaînes de caractères larges. `_wrename` et **_rename** se comportent sinon de la même façon.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
-|`_trename`|**renommer**|**renommer**|`_wrename`|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
+|`_trename`|**rename**|**rename**|`_wrename`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|**renommer**|\<io.h\> or \<stdio.h\>|  
-|`_wrename`|\<stdio.h\> ou \<wchar.h\>|  
+|**rename**|\<io.h> ou \<stdio.h>|  
+|`_wrename`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Bibliothèques  
+## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_renamer.c  
@@ -138,14 +155,11 @@ int main( void )
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'  
 ```  
   
-## Équivalent .NET Framework  
- [System.IO.File::Move](https://msdn.microsoft.com/en-us/library/system.io.file.move.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion de fichiers](../../c-runtime-library/file-handling.md)

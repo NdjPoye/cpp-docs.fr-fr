@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: 4a90e1c2db038980309e98aed5fb0802dcb5a594
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 662bbde9b4fc43321bd1435d17d6b7110e7ac31c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
@@ -59,12 +60,12 @@ Définit les classes de modèle de conteneur [unordered_map](../standard-library
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/unordered-map-operators.md#operator_neq)|Teste si l’objet unordered_map situé à gauche de l’opérateur n’est pas égal à l’objet unordered_map situé à droite.|  
-|[operator==](../standard-library/unordered-map-operators.md#operator_eq_eq)|Teste si l’objet unordered_map situé à gauche de l’opérateur est égal à l’objet unordered_map situé à droite.|  
-|[Fonction swap (unordered_map)](../standard-library/unordered-map-functions.md#swap_function)|Échange deux objets map.|  
-|[operator!=](../standard-library/unordered-map-operators.md#operator_neq)|Teste si l’objet unordered_multimap situé à gauche de l’opérateur n’est pas égal à l’objet unordered_multimap situé à droite.|  
-|[operator==](../standard-library/unordered-map-operators.md#operator_eq_eq)|Teste si l’objet unordered_multimap situé à gauche de l’opérateur est égal à l’objet unordered_multimap situé à droite.|  
-|[Fonction swap (unordered_map)](../standard-library/unordered-map-functions.md#swap_function)|Échange deux objets multimap.|  
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Teste si l’objet unordered_map situé à gauche de l’opérateur n’est pas égal à l’objet unordered_map situé à droite.|  
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Teste si l’objet unordered_map situé à gauche de l’opérateur est égal à l’objet unordered_map situé à droite.|  
+|[Fonction swap (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Échange deux objets map.|  
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Teste si l’objet unordered_multimap situé à gauche de l’opérateur n’est pas égal à l’objet unordered_multimap situé à droite.|  
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Teste si l’objet unordered_multimap situé à gauche de l’opérateur est égal à l’objet unordered_multimap situé à droite.|  
+|[Fonction swap (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Échange deux objets multimap.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [unordered_multiset, classe](../standard-library/unordered-multiset-class.md)   
