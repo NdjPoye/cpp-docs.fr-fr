@@ -1,65 +1,82 @@
 ---
-title: "_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_printf_p"
-  - "_wprintf_p"
-  - "_printf_p_l"
-  - "_wprintf_p_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wprintf_p"
-  - "_wprintf_p"
-  - "printf_p_l"
-  - "_printf_p"
-  - "printf_p"
-  - "_wprintf_p_l"
-  - "_printf_p_l"
-  - "wprintf_p_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_printf_p (fonction)"
-  - "_printf_p_l (fonction)"
-  - "_tprintf_p_l (fonction)"
-  - "_wprintf_p (fonction)"
-  - "_wprintf_p_l (fonction)"
-  - "printf_p (fonction)"
-  - "printf_p_l (fonction)"
-  - "tprintf_p_l (fonction)"
-  - "wprintf_p (fonction)"
-  - "wprintf_p_l (fonction)"
+title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _printf_p
+- _wprintf_p
+- _printf_p_l
+- _wprintf_p_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- wprintf_p
+- _wprintf_p
+- printf_p_l
+- _printf_p
+- printf_p
+- _wprintf_p_l
+- _printf_p_l
+- wprintf_p_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- printf_p function
+- printf_p_l function
+- wprintf_p function
+- wprintf_p_l function
+- _tprintf_p_l function
+- _wprintf_p function
+- _wprintf_p_l function
+- _printf_p function
+- tprintf_p_l function
+- _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 49407a3607983b64b80311219c2a7f6fd72514ad
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
-Imprime la sortie mise en forme dans le flux de sortie standard, ainsi que la spécification de l'ordre dans lequel les paramètres sont utilisés dans la chaîne de format.  
+---
+# <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
+Imprime la sortie mise en forme dans le flux de sortie standard et active la spécification de l’ordre dans lequel les paramètres sont utilisés dans la chaîne de format.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int _printf_p(  
@@ -82,7 +99,7 @@ int _wprintf_p_l(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `format`  
  Contrôle de format.  
   
@@ -92,40 +109,40 @@ int _wprintf_p_l(
  `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  Retourne le nombre de caractères imprimés ou une valeur négative si une erreur se produit.  
   
-## Notes  
- La fonction `_printf_p`  met en forme une série de caractères et de valeurs et l'affiche dans le flux de sortie standard, `stdout`.  Si les arguments suivent la chaîne `format`, la chaîne `format` doit contenir des spécifications qui déterminent le format de sortie des arguments \(voir [Paramètres positionnels printf\_p](../../c-runtime-library/printf-p-positional-parameters.md)\)..  
+## <a name="remarks"></a>Notes  
+ La fonction `_printf_p` met en forme et imprime une série de caractères et de valeurs dans le flux de sortie standard, `stdout`. Si des arguments suivent la chaîne `format`, la chaîne `format` doit contenir des spécifications qui déterminent le format de sortie des arguments (consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md)).  
   
- La différence entre `_printf_p` et `printf_s` est que `_printf_p` prend en charge les paramètres positionnels, qui permettent de spécifier l'ordre dans lequel les arguments sont utilisés dans la chaîne de format.  Pour plus d'informations, consultez [Paramètres positionnels printf\_p](../../c-runtime-library/printf-p-positional-parameters.md).  
+ La différence entre `_printf_p` et `printf_s` vient du fait que `_printf_p` prend en charge les paramètres positionnels, ce qui vous permet de spécifier l'ordre dans lequel les arguments sont utilisés dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).  
   
- `_wprintf_p` est la version à caractères élargis de `_printf_p`; ils se comportent de la même manière si le flux est ouvert en mode ANSI.  `_printf_p` ne prend pas en charge actuellement la sortie dans un flux UNICODE.  
+ `_wprintf_p` est la version à caractères larges de `_printf_p` ; ces fonctions se comportent de la même manière si le flux est ouvert en mode ANSI. `_printf_p` ne prend actuellement pas en charge la sortie vers un flux UNICODE.  
   
  Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.  
   
 > [!IMPORTANT]
->  Assurez\-vous que `format` n'est pas une chaîne définie par l'utilisateur.  
+>  Assurez-vous que `format` n'est pas une chaîne définie par l'utilisateur.  
   
- Si `format` ou `argument` sont `NULL`, ou si la chaîne de format contient des caractères de mise en forme invalides, les fonctions `_printf_p` et `_wprintf_p` appellent un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, la fonction retourne \-1 et définit `errno` avec la valeur `EINVAL`.  
+ Si `format` ou `argument` a la valeur `NULL` ou si la chaîne de format contient des caractères de mise en forme non valides, les fonctions `_printf_p` et `_wprintf_p` appellent un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, la fonction retourne -1 et définit `errno` avec la valeur `EINVAL`.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine Tchar.h|\_UNICODE et \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|-------------------------------------|-------------------|----------------------|  
+|Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tprintf_p`|`_printf_p`|`_printf_p`|`_wprintf_p`|  
 |`_tprintf_p_l`|`_printf_p_l`|`_printf_p_l`|`_wprintf_p_l`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_printf_p`, `_printf_p_l`|\<stdio.h\>|  
-|`_wprintf_p`, `_wprintf_p_l`|\<stdio.h\> ou \<wchar.h\>|  
+|`_printf_p`, `_printf_p_l`|\<stdio.h>|  
+|`_wprintf_p`, `_wprintf_p_l`|\<stdio.h> ou \<wchar.h>|  
   
- La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] .  Les handles de flux standard associés à la console, `stdin`, `stdout` et `stderr` doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] .  Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Les handles de flux standard associés à la console (`stdin`, `stdout` et `stderr`) doivent être redirigés pour que les fonctions Runtime C puissent les utiliser dans les applications du [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_printf_p.c  
@@ -149,26 +166,23 @@ int main( void )
 }  
 ```  
   
-  **Spécification d'un ordre : Je suis un petit pot de thé.**  
-**Réutilisation d'arguments : 10 10 10 10**  
-**Spécificateurs de largeur :     Hello**   
-## Équivalent .NET Framework  
+```Output  
+Specifying the order: I'm a little tea pot.  
+Reusing arguments: 10 10 10 10  
+Width specifiers:     Hello  
+```  
   
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
-  
--   [System::Console::WriteLine](https://msdn.microsoft.com/en-us/library/system.console.writeline.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [\_fprintf\_p, \_fprintf\_p\_l, \_fwprintf\_p, \_fwprintf\_p\_l](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [fprintf\_s, \_fprintf\_s\_l, fwprintf\_s, \_fwprintf\_s\_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
- [\_sprintf\_p, \_sprintf\_p\_l, \_swprintf\_p, \_swprintf\_p\_l](../../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [sprintf\_s, \_sprintf\_s\_l, swprintf\_s, \_swprintf\_s\_l](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)   
- [Fonctions vprintf](../../c-runtime-library/vprintf-functions.md)
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
+ [_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](../../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)   
+ [vprintf, fonctions](../../c-runtime-library/vprintf-functions.md)

@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3c74f2265aa3112e7fdc3c1d644c4a63a8009ba6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 71c5c3e7d3dd747926a02940c5ef95f9d1ef243f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
@@ -112,12 +113,12 @@ size_t _mbsspn_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne une valeur entière spécifiant la longueur de la sous-chaîne de `str` qui se compose entièrement de caractères de `strCharSet`*.* Si `str` commence par un caractère qui ne figure pas dans `strCharSet`*,* la fonction retourne 0.  
+ Retourne une valeur entière spécifiant la longueur de la sous-chaîne dans `str` qui se compose uniquement de caractères dans `strCharSet`. Si `str` commence par un caractère ne figurant pas dans `strCharSet`, la fonction retourne 0.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction `strspn` retourne l’index du premier caractère de `str` qui n’appartient pas au jeu de caractères de `strCharSet`. La recherche n’inclut pas les caractères Null de fin.  
   
- `wcsspn` et `_mbsspn` sont des versions à caractères larges et à caractères multioctets de `strspn`**.** Les arguments de `wcsspn` sont des chaînes de caractères larges ; ceux de `_mbsspn` sont des chaînes de caractères multioctets. `_mbsspn` valide ses paramètres. Si `str` ou `strCharSet` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `_mbspn` affecte à `errno` la valeur `EINVAL` et retourne 0. `strspn` et `wcsspn` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.  
+ `wcsspn` et `_mbsspn` sont des versions à caractères larges et à caractères multioctets de `strspn`. Les arguments de `wcsspn` sont des chaînes de caractères larges ; ceux de `_mbsspn` sont des chaînes de caractères multioctets. `_mbsspn` valide ses paramètres. Si `str` ou `strCharSet` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `_mbspn` affecte à `errno` la valeur `EINVAL` et retourne 0. `strspn` et `wcsspn` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.  
   
  La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
@@ -164,9 +165,6 @@ int main( void )
 ```Output  
 The portion of 'cabbage' containing only a, b, or c is 5 bytes long  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- [System::String::Substring](https://msdn.microsoft.com/en-us/library/system.string.substring.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   

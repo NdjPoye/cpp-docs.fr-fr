@@ -1,68 +1,85 @@
 ---
-title: "scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wscanf_s"
-  - "_wscanf_s_l"
-  - "scanf_s"
-  - "_scanf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wscanf_s"
-  - "_tscanf_s_l"
-  - "_wscanf_s_l"
-  - "scanf_s"
-  - "_tscanf_s"
-  - "_scanf_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lecture de données (C++), à partir de flux d’entrée"
-  - "mémoires tampons [C++], dépassements de mémoire tampon"
-  - "_scanf_s_l (fonction)"
-  - "_wscanf_s_l (fonction)"
-  - "tscanf_s_l (fonction)"
-  - "tscanf_s (fonction)"
-  - "scanf_s (fonction)"
-  - "lecture du flux d’entrée de données (C++),"
-  - "wscanf_s (fonction)"
-  - "_tscanf_s_l (fonction)"
-  - "_tscanf_s (fonction)"
-  - "scanf_s_l (fonction)"
-  - "données mises en forme (C++), à partir de flux d’entrée"
-  - "wscanf_s_l (fonction)"
-  - "mémoires tampons [C++], éviter les dépassements"
+title: scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wscanf_s
+- _wscanf_s_l
+- scanf_s
+- _scanf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- wscanf_s
+- _tscanf_s_l
+- _wscanf_s_l
+- scanf_s
+- _tscanf_s
+- _scanf_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- reading data [C++], from input streams
+- buffers [C++], buffer overruns
+- _scanf_s_l function
+- _wscanf_s_l function
+- tscanf_s_l function
+- tscanf_s function
+- scanf_s function
+- data [C++], reading from input stream
+- wscanf_s function
+- _tscanf_s_l function
+- _tscanf_s function
+- scanf_s_l function
+- formatted data [C++], from input streams
+- wscanf_s_l function
+- buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
 caps.latest.revision: 33
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 33
----
-# scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f0fe562e732764eff13741450abadb7ae6d52932
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
-Lit les données mises en forme du flux d'entrée standard. Ces versions de [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) ont des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="scanfs-scanfsl-wscanfs-wscanfsl"></a>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
+Lit les données mises en forme du flux d'entrée standard. Ces versions de [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int scanf_s(  
@@ -85,7 +102,7 @@ int _wscanf_s_l(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `format`  
  Format de la chaîne de contrôle.  
   
@@ -95,15 +112,15 @@ int _wscanf_s_l(
  `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
- Retourne le nombre de champs correctement convertis et assignés. La valeur de retour n'inclut pas les champs qui ont été lus mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. La valeur de retour est `EOF` si une erreur est détectée, ou si le caractère de fin de fichier ou le caractère de fin de chaîne est rencontré durant la première tentative de lecture d'un caractère. Si `format` est un `NULL` du pointeur, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à continuer, `scanf_s` et `wscanf_s` retournent `EOF` et définissent `errno` à `EINVAL`.  
+## <a name="return-value"></a>Valeur de retour  
+ Retourne le nombre de champs correctement convertis et assignés. La valeur de retour n'inclut pas les champs qui ont été lus mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. La valeur de retour est `EOF` si une erreur est détectée, ou si le caractère de fin de fichier ou le caractère de fin de chaîne est rencontré durant la première tentative de lecture d'un caractère. Si `format` est un pointeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à continuer, `scanf_s` et `wscanf_s` retournent `EOF` et définissent `errno` à `EINVAL`.  
   
- Pour plus d’informations sur ces codes et d’autres codes d’erreur, consultez [errno, \_doserrno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  La fonction `scanf_s` lit les données du flux d'entrée standard `stdin` et les écrit dans l'emplacement indiqué par `argument`. Chaque `argument` doit être un pointeur vers une variable d'un type qui correspond à un spécificateur de type dans `format`. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.  
   
- `wscanf_s` est une version à caractères larges de `scanf_s` ; l'argument `format` de `wscanf_s` est une chaîne à caractères larges.`wscanf_s` et `scanf_s` se comportent de la même façon si le flux est ouvert en mode ANSI.`scanf_s` ne prend pas en charge actuellement les entrées à partir d'un flux UNICODE.  
+ `wscanf_s` est une version à caractères larges de `scanf_s` ; l'argument `format` de `wscanf_s` est une chaîne à caractères larges. `wscanf_s` et `scanf_s` se comportent de la même façon si le flux est ouvert en mode ANSI. `scanf_s` ne prend pas en charge actuellement les entrées à partir d'un flux UNICODE.  
   
  Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.  
   
@@ -116,7 +133,7 @@ int _wscanf_s_l(
  La taille de la mémoire tampon inclut le caractère Null de fin. Vous pouvez utiliser un champ de spécification de largeur pour vous assurer que le jeton lu sera contenu sans problème en mémoire tampon. Si aucun champ de spécification de largeur n'est utilisé, et si le jeton lu est trop grand pour la mémoire tampon, aucune valeur n'est écrite dans cette mémoire tampon.  
   
 > [!NOTE]
->  Le paramètre relatif à la taille est de type `unsigned`, et non `size_t`. Utilisez un cast statique pour convertir un `size_t` valeur `unsigned` 64 bits des configurations de build.  
+>  Le paramètre relatif à la taille est de type `unsigned`, et non `size_t`. Utilisez un cast statique pour convertir une valeur `size_t` en `unsigned` pour les configurations de build 64 bits.  
   
  L'exemple suivant montre que le paramètre relatif à la taille de la mémoire tampon décrit le nombre maximal de caractères, et non d'octets. Dans l'appel à `wscanf_s`, la largeur des caractères indiquée par le type de mémoire tampon ne correspond pas à la largeur des caractères indiquée par le spécificateur de format.  
   
@@ -139,27 +156,27 @@ wscanf_s(L"%9S", ws, (unsigned)_countof(ws));
   
  `scanf_s("%4c", &c, (unsigned)_countof(c)); // not null terminated`  
   
- Pour plus d'informations, consultez [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).  
+ Pour plus d’informations, consultez [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE et \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|-------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tscanf_s`|`scanf_s`|`scanf_s`|`wscanf_s`|  
 |`_tscanf_s_l`|`_scanf_s_l`|`_scanf_s_l`|`_wscanf_s_l`|  
   
- Pour plus d'informations, consultez [Champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
+ Pour plus d’informations, consultez [Champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`scanf_s`, `_scanf_s_l`|\<stdio.h\>|  
-|`wscanf_s`, `_wscanf_s_l`|\<stdio.h\> ou \<wchar.h\>|  
+|`scanf_s`, `_scanf_s_l`|\<stdio.h>|  
+|`wscanf_s`, `_wscanf_s_l`|\<stdio.h> ou \<wchar.h>|  
   
- La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Les handles de flux standard associés à la console \(`stdin`, `stdout` et `stderr`\) doivent être redirigés pour que les fonctions Runtime C puissent les utiliser dans les applications du [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ La console n'est pas prise en charge dans les applications [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Les handles de flux standard associés à la console (`stdin`, `stdout` et `stderr`) doivent être redirigés pour que les fonctions Runtime C puissent les utiliser dans les applications du [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_scanf_s.c  
@@ -199,22 +216,17 @@ int main( void )
  `36 92.3 y n Wide characters`  
   
 ```Output  
-Le nombre de champs entrée est 6, le contenu est : 71 z h 98.599998 octets de caractères le nombre de champs d’entrée est le contenu est de 6 : 36 92.300003 y de n caractères larges  
+The number of fields input is 6  
+The contents are: 71 98.599998 h z Byte characters  
+The number of fields input is 6  
+The contents are: 36 92.300003 y n Wide characters  
 ```  
   
-## Équivalent .NET Framework  
-  
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
-  
--   [System::console::ReadLine](https://msdn.microsoft.com/en-us/library/system.console.readline.aspx)  
-  
--   Voir aussi `Parse` méthodes, telles que [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx).  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
- [fscanf, \_fscanf\_l, fwscanf, \_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)

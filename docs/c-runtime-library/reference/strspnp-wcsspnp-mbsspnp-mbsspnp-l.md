@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0943a0b30643a6dff3d47508f9a514e3e0d441ff
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f7bf32d7fa725e1f012b2a793a8091674e1c2e9f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
@@ -115,7 +116,7 @@ unsigned char *_mbsspnp_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `_strspnp`, `_wcsspnp` et `_mbsspnp` retournent un pointeur désignant le premier caractère dans `str` qui n’appartient pas au jeu de caractères de `charset`*.* Chacune de ces fonctions retourne `NULL` si `str` est constitué intégralement de caractères de `charset`*.* Pour chacune de ces routines, aucune valeur de retour n’est réservée pour indiquer une erreur.  
+ `_strspnp`, `_wcsspnp`, et `_mbsspnp` retournent un pointeur vers le premier caractère dans `str` qui n’appartient pas au jeu de caractères dans `charset`. Chacune de ces fonctions retourne `NULL` si `str` se compose uniquement de caractères à partir de `charset`. Pour chacune de ces routines, aucune valeur de retour n’est réservée pour indiquer une erreur.  
   
 ## <a name="remarks"></a>Notes  
  La fonction `_mbsspnp` retourne un pointeur désignant le caractère multioctet qui correspond au premier caractère dans `str` qui n’appartient pas au jeu de caractères de `charset`. `_mbsspnp` reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation. La recherche n’inclut pas les caractères Null de fin.  
@@ -163,9 +164,6 @@ int main( void ) {
 ```  
 abbage  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   

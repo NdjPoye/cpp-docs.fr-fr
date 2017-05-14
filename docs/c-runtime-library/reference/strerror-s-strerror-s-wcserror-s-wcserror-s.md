@@ -1,65 +1,82 @@
 ---
-title: "strerror_s, _strerror_s, _wcserror_s, __wcserror_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__wcserror_s"
-  - "_strerror_s"
-  - "_wcserror_s"
-  - "strerror_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcserror_s"
-  - "__wcserror_s"
-  - "_tcserror_s"
-  - "_wcserror_s"
-  - "tcserror_s"
-  - "strerror_s"
-  - "_strerror_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__wcserror_s (fonction)"
-  - "_strerror_s (fonction)"
-  - "_tcserror_s (fonction)"
-  - "_wcserror_s (fonction)"
-  - "messages d'erreur, obtenir"
-  - "messages d'erreur, imprimer"
-  - "messages d'erreur d'impression"
-  - "strerror_s (fonction)"
-  - "tcserror_s (fonction)"
-  - "wcserror_s (fonction)"
+title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __wcserror_s
+- _strerror_s
+- _wcserror_s
+- strerror_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcserror_s
+- __wcserror_s
+- _tcserror_s
+- _wcserror_s
+- tcserror_s
+- strerror_s
+- _strerror_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- __wcserror_s function
+- error messages, printing
+- tcserror_s function
+- printing error messages
+- strerror_s function
+- _wcserror_s function
+- _tcserror_s function
+- _strerror_s function
+- wcserror_s function
+- error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# strerror_s, _strerror_s, _wcserror_s, __wcserror_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 70875568a8f77f9e4039e69dadbe9daf3c1c5e01
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
-Recevez un message d'erreur système \(`strerror_s`, `_wcserror_s`\) ou imprimez un message d'erreur défini par l'utilisateur \(`_strerror_s`, `__wcserror_s`\).  Il s'agit de versions de [strerror, \_strerror, \_wcserror, \_\_wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) avec des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
+Obtiennent un message d’erreur système (`strerror_s`, `_wcserror_s`) ou impriment un message d’erreur fourni par l’utilisateur (`_strerror_s`, `__wcserror_s`). Ces versions de [strerror, _strerror, _wcserror, \__wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 errno_t strerror_s(  
@@ -104,31 +121,31 @@ errno_t __wcserror_s(
 ); // C++ only  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `buffer`  
- Mémoire tampon pour contenir la chaîne d'erreur.  
+ Mémoire tampon devant contenir la chaîne d’erreur.  
   
  `numberOfElements`  
- Taille des mémoires tampons.  
+ Taille de la mémoire tampon.  
   
  `errnum`  
- Numéro de l'erreur.  
+ Numéro d'erreur.  
   
  `strErrMsg`  
- messages fournis par l'utilisateur.  
+ Message fourni par l'utilisateur.  
   
-## Valeur de retour  
- Zéro si l'opération a réussi, code d'erreur en cas de échec.  
+## <a name="return-value"></a>Valeur de retour  
+ Zéro si l'opération a réussi, un code d'erreur en cas d'échec.  
   
-### Conditions d'erreur  
+### <a name="error-condtions"></a>Conditions d’erreur  
   
-|`buffer`|`numberOfElements`|`strErrMsg`|Contenu de `buffer`.|  
+|`buffer`|`numberOfElements`|`strErrMsg`|Contenu de `buffer`|  
 |--------------|------------------------|-----------------|--------------------------|  
-|`NULL`|any|any|N\/A|  
+|`NULL`|any|any|N/A|  
 |any|0|any|non modifié|  
   
-## Notes  
- La fonction `strerror_s` mappe `errnum` à une chaîne de message d'erreur, en retournant la chaîne dans `buffer`.  `_strerror_s` ne prend pas le numéro d'erreur ; il utilise la valeur `errno` pour déterminer le message approprié.  Ni `strerror_s` ni `_strerror_s` n'impriment réellement le message: Pour cela, vous devez appeler une fonction de sortie comme [fprintf](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md):  
+## <a name="remarks"></a>Notes  
+ La fonction `strerror_s` mappe `errnum` à une chaîne de message d’erreur, retournant la chaîne contenue dans `buffer`. `_strerror_s` ne prend pas le numéro d’erreur ; elle utilise la valeur actuelle de `errno` pour déterminer le message approprié. Ni `strerror_s` ni `_strerror_s` n’imprime réellement le message : pour cela, vous devez appeler une fonction de sortie telle que [fprintf](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md) :  
   
 ```  
 if (( _access( "datafile",2 )) == -1 )  
@@ -138,45 +155,42 @@ if (( _access( "datafile",2 )) == -1 )
 }  
 ```  
   
- Si `strErrMsg` est `NULL`, `_strerror_s` retourne une chaîne dans `buffer` contenant le message d'erreur système pour le dernier appel de bibliothèque qui a produit une erreur.  La chaîne de message d'erreur est terminée par le caractère de saut de ligne \("\\ n "\).  Si `strErrMsg` n'est pas égal à `NULL`, `_strerror_s` retourne une chaîne dans `buffer` contenant \(dans l'ordre\) votre message de chaîne, deux\-points, un espace, le message d'erreur système pour le dernier appel de bibliothèque pour produire une erreur, et un caractère de saut de ligne.  Votre message de chaîne peut être, au plus, de 94 caractères.  
+ Si `strErrMsg` a la valeur `NULL`, `_strerror_s` retourne une chaîne de `buffer` contenant le message d’erreur système pour le dernière appel de bibliothèque qui a généré l’erreur. La chaîne de message d'erreur se termine par le caractère de saut de ligne ('\n'). Si `strErrMsg` n’a pas la valeur `NULL`, `_strerror_s` retourne une chaîne de `buffer` contenant (dans l’ordre) votre message de type chaîne, deux-points, un espace, le message d’erreur système pour le dernier appel de bibliothèque ayant généré une erreur, puis un caractère de saut de ligne. La longueur maximale de votre message de type chaîne est de 94 caractères.  
   
- Ces fonctions tronquent le message d'erreur si sa longueur dépasse `numberOfElements` \-1.  Chaîne résultante dans `buffer` se termine toujours par null.  
+ Ces fonctions tronquent le message d’erreur si sa longueur dépasse `numberOfElements` -1. La chaîne obtenue dans `buffer` se termine toujours par un caractère null.  
   
- Le vrai numéro d'erreur pour `_strerror_s` apparaît dans la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  Les messages d'erreur système sont accessibles via le variable [\_sys\_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), qui est un tableau du nombre par erreur classé par messages.  `_strerror_s` accède au message d'erreur adapté en utilisant la valeur `errno` comme index à la variable `_sys_errlist`.  La valeur de la variable [\_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) est définie comme nombre maximal d'éléments du tableau `_sys_errlist`.  Pour produire des résultats exacts, appelez `_strerror_s` immédiatement après une routine de bibliothèque retourne avec une erreur.  Sinon, les appels suivants à `strerror_s` ou `_strerror_s` peuvent remplacer la valeur `errno`.  
+ Le numéro d’erreur effectif pour `_strerror_s` est stocké dans la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Les messages d’erreur système sont accessibles via la variable [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), qui est un tableau de messages classés par numéro d’erreur. `_strerror_s` accède au message d’erreur approprié en utilisant la valeur `errno` comme index de la variable `_sys_errlist`. La valeur de la variable [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) est définie comme étant le nombre maximal d’éléments contenus dans le tableau `_sys_errlist`. Pour générer des résultats précis, appelez `_strerror_s` de suite après le retour avec erreur d'une routine de bibliothèque. Sinon, les appels suivants à `strerror_s` ou `_strerror_s` peuvent remplacer la valeur `errno`.  
   
- `_wcserror_s` et `__wcserror_s`, sont des versions à caractères larges de `strerror_s`, et `_strerror_s`, respectivement.  
+ `_wcserror_s` et `__wcserror_s` sont, respectivement, des versions à caractères larges de `strerror_s` et `_strerror_s`.  
   
- Ces fonctions valident leurs paramètres.  Si la mémoire tampon est `NULL` ou si le paramètre est de taille 0, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, les fonctions retournent \-1 `EINVAL` et attribuent à `errno` la valeur `EINVAL`.  
+ Ces fonctions valident leurs paramètres. Si la mémoire tampon a la valeur `NULL` ou si le paramètre de taille est égal à 0, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à continuer, les fonctions retournent `EINVAL` et définissent `errno` sur `EINVAL`.  
   
- `_strerror_s, _wcserror_s,` et `__wcserror_s` ne sont pas parties de la définition ANSI mais sont plutôt des extensions Microsoft de celui\-ci.  Ne les utilisez pas où la portabilité est souhaitée ; pour compatibilité ANSI, utilisez plutôt `strerror_s` .  
+ `_strerror_s`, `_wcserror_s`, et `__wcserror_s` ne font pas partie de la définition ANSI mais sont plutôt des extensions de Microsoft. Ne les utilisez pas si vous avez besoin d’une portabilité ; pour bénéficier d’une compatibilité ANSI, utilisez plutôt `strerror_s`.  
   
- En C\+\+, l'utilisation de ces fonctions est simplifiée par des surcharges de modèle ; les surcharges peuvent également déduire la longueur de la mémoire tampon automatiquement, en éliminant le besoin de spécifier un argument de taille.  Pour plus d'informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
   
- Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD.  Pour désactiver ce comportement, utilisez [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcserror_s`|`strerror_s`|`strerror_s`|`_wcserror_s`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`strerror_s`, `_strerror_s`|\<string.h\>|  
-|`_wcserror_s`, `__wcserror_s`|\<string.h\> ou \<wchar.h\>|  
+|`strerror_s`, `_strerror_s`|\<string.h>|  
+|`_wcserror_s`, `__wcserror_s`|\<string.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
- Consultez l'exemple de [perror](../../c-runtime-library/reference/perror-wperror.md).  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple relatif à [perror](../../c-runtime-library/reference/perror-wperror.md).  
   
-## Équivalent .NET Framework  
- [System::Exception::Message](https://msdn.microsoft.com/en-us/library/system.exception.message.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   
  [clearerr](../../c-runtime-library/reference/clearerr.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   
- [perror, \_wperror](../../c-runtime-library/reference/perror-wperror.md)
+ [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)

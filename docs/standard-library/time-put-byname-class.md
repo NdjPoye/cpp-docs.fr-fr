@@ -34,10 +34,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3572e73b569abfff0a32fe2cd7ea0f4f5c265582
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a21c91fba99623ae7c97ef1455278617746fc310
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="timeputbyname-class"></a>time_put_byname, classe
@@ -72,7 +73,7 @@ protected:
  Nombre initial de références.  
   
 ## <a name="remarks"></a>Notes  
- Son comportement est déterminé par les paramètres régionaux [nommés](../standard-library/locale-class.md#locale__name) `_Locname`. Chaque constructeur initialise son objet de base avec [time_put](../standard-library/time-put-class.md#time_put__time_put)\<CharType, OutputIterator>( `_Refs`).  
+ Son comportement est déterminé par les paramètres régionaux [nommés](../standard-library/locale-class.md#name) `_Locname`. Chaque constructeur initialise son objet de base avec [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`).  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** \<locale>  
