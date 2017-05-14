@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a156bcbefa4d3636a2a4b1978378a815a8d0fed9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 528634e98da7f57ee915124d38f20277495efcdb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="istrstream-class"></a>istrstream, classe
@@ -60,21 +61,21 @@ class istrstream : public istream
   
 |||  
 |-|-|  
-|[istrstream](#istrstream__istrstream)|Construit un objet de type `istrstream`.|  
+|[istrstream](#istrstream)|Construit un objet de type `istrstream`.|  
   
 ### <a name="member-functions"></a>Fonctions membres  
   
 |||  
 |-|-|  
-|[rdbuf](#istrstream__rdbuf)|Retourne un pointeur vers l'objet `strstreambuf` associé au flux.|  
-|[str](#istrstream__str)|Appelle [freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze), puis retourne un pointeur vers le début de la séquence contrôlée.|  
+|[rdbuf](#rdbuf)|Retourne un pointeur vers l'objet `strstreambuf` associé au flux.|  
+|[str](#str)|Appelle [freeze](../standard-library/strstreambuf-class.md#freeze), puis retourne un pointeur vers le début de la séquence contrôlée.|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** \<strstream>  
   
  **Espace de noms :** std  
   
-##  <a name="istrstream__istrstream"></a>  istrstream::istrstream  
+##  <a name="istrstream"></a>  istrstream::istrstream  
  Construit un objet de type `istrstream`.  
   
 ```
@@ -103,7 +104,7 @@ istrstream(
 ### <a name="remarks"></a>Notes  
  Tous les constructeurs initialisent la classe de base en appelant [istream](../standard-library/istream-typedefs.md#istream)( **sb**), où **sb** est l’objet stocké de classe [strstreambuf](../standard-library/strstreambuf-class.md). Les deux premiers constructeurs initialisent également **sb** en appelant `strstreambuf`( ( **const**`char` \*) `ptr`, 0 ). Les deux autres constructeurs appellent plutôt `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).  
   
-##  <a name="istrstream__rdbuf"></a>  istrstream::rdbuf  
+##  <a name="rdbuf"></a>  istrstream::rdbuf  
  Retourne un pointeur vers l’objet strstreambuf associé au flux.  
   
 ```
@@ -117,10 +118,10 @@ strstreambuf *rdbuf() const
  La fonction membre retourne l’adresse de la mémoire tampon de flux stockée de type pointeur vers [strstreambuf](../standard-library/strstreambuf-class.md).  
   
 ### <a name="example"></a>Exemple  
-  Pour obtenir un exemple qui utilise `rdbuf`, consultez [strstreambuf::pcount](../standard-library/strstreambuf-class.md#strstreambuf__pcount).  
+  Pour obtenir un exemple qui utilise `rdbuf`, consultez [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount).  
   
-##  <a name="istrstream__str"></a>  istrstream::str  
- Appelle [freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze), puis retourne un pointeur vers le début de la séquence contrôlée.  
+##  <a name="str"></a>  istrstream::str  
+ Appelle [freeze](../standard-library/strstreambuf-class.md#freeze), puis retourne un pointeur vers le début de la séquence contrôlée.  
   
 ```
 char *str();
@@ -130,10 +131,10 @@ char *str();
  Pointeur vers le début de la séquence contrôlée.  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre retourne [rdbuf](#istrstream__rdbuf) -> [str](../standard-library/strstreambuf-class.md#strstreambuf__str).  
+ La fonction membre retourne [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).  
   
 ### <a name="example"></a>Exemple  
-  Pour obtenir un exemple qui utilise **str**, consultez [strstream::str](../standard-library/strstreambuf-class.md#strstreambuf__str).  
+  Pour obtenir un exemple qui utilise **str**, consultez [strstream::str](../standard-library/strstreambuf-class.md#str).  
   
 ## <a name="see-also"></a>Voir aussi  
  [istream](../standard-library/istream-typedefs.md#istream)   

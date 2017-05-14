@@ -6,13 +6,29 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- iterator/std::advance
+- iterator/std::back_inserter
+- iterator/std::begin
+- iterator/std::cbegin
+- iterator/std::cend
+- iterator/std::distance
+- iterator/std::end
+- iterator/std::front_inserter
+- iterator/std::inserter
+- iterator/std::make_checked_array_iterator
+- iterator/std::make_move_iterator
+- iterator/std::make_unchecked_array_iterator
+- iterator/std::next
+- iterator/std::prev
 ms.assetid: 4a57c9a3-7e36-411f-8655-e0be2eec88e7
 caps.latest.revision: 16
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1fb4f0f27496db45c7bbb7b609e0f945eb007154
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 171fd87608b0afed1ebb0c2ae82d6118adff727f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt;, fonctions
@@ -24,7 +40,7 @@ ms.lasthandoff: 02/24/2017
 |[make_checked_array_iterator](#make_checked_array_iterator)|[make_move_iterator](#make_move_iterator)|[make_unchecked_array_iterator](#make_unchecked_array_iterator)|  
 |[next](#next)|[prev](#prev)|  
   
-##  <a name="a-nameadvancea--advance"></a><a name="advance"></a>  advance  
+##  <a name="advance"></a>  advance  
  Incrémente un itérateur d'un nombre spécifié de positions.  
   
 ```  
@@ -95,7 +111,7 @@ LPOS is advanced 4 steps forward to point to the fifth element: 5.
 LPOS is moved 3 steps back to point to the 2nd element: 2.  
 ```  
   
-##  <a name="a-namebackinsertera--backinserter"></a><a name="back_inserter"></a>  back_inserter  
+##  <a name="back_inserter"></a>  back_inserter  
  Crée un itérateur qui peut insérer des éléments à la fin d'un conteneur spécifié.  
   
 ```  
@@ -162,7 +178,7 @@ The initial vector vec is: ( 0 1 2 ).
 After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).  
 ```  
   
-##  <a name="a-namebegina--begin"></a><a name="begin"></a>  begin  
+##  <a name="begin"></a>  begin  
  Récupère un itérateur sur le premier élément d'un conteneur spécifié.  
   
 ```  
@@ -262,7 +278,7 @@ void reverse_sort(C& c) {
 error C2228: left of '.begin' must have class/struct/union  
 ```  
   
-##  <a name="a-namecbegina--cbegin"></a><a name="cbegin"></a>  cbegin  
+##  <a name="cbegin"></a>  cbegin  
  Récupère un itérateur const sur le premier élément d'un conteneur spécifié.  
   
 ```  
@@ -291,7 +307,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namecenda--cend"></a><a name="cend"></a>  cend  
+##  <a name="cend"></a>  cend  
  Récupère un itérateur const sur l'élément qui suit le dernier élément dans le conteneur spécifié.  
   
 ```  
@@ -320,7 +336,7 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namedistancea--distance"></a><a name="distance"></a>  distance  
+##  <a name="distance"></a>  distance  
  Détermine le nombre d'incréments entre les positions traitées par deux itérateurs.  
   
 ```  
@@ -329,14 +345,14 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` first`  
+ `first`  
  Premier itérateur dont la distance à partir du deuxième doit être déterminée.  
   
- ` last`  
+ `last`  
  Deuxième itérateur dont la distance à partir du premier doit être déterminée.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Nombre de fois que ` first` doit être incrémenté jusqu’à ce qu’il soit égal à ` last`.  
+ Nombre de fois que `first` doit être incrémenté jusqu’à ce qu’il soit égal à `last`.  
   
 ### <a name="remarks"></a>Notes  
  La fonction distance a une complexité constante quand **InputIterator** est conforme aux exigences d’un itérateur d’accès aléatoire ; dans le cas contraire, elle a une complexité linéaire et s’avère donc potentiellement coûteuse.  
@@ -389,7 +405,7 @@ LPOS is advanced 7 steps forward to point  to the eighth element: 12.
 The distance from L.begin( ) to LPOS is: 7.  
 ```  
   
-##  <a name="a-nameenda--end"></a><a name="end"></a>  end  
+##  <a name="end"></a>  end  
  Récupère un itérateur de l'élément qui suit le dernier élément dans le conteneur spécifié.  
   
 ```  
@@ -420,7 +436,7 @@ Ty *end(Ty (& array)[Size]);
 ### <a name="remarks"></a>Notes  
  Pour obtenir un exemple de code, consultez [begin](../standard-library/iterator-functions.md#begin).  
   
-##  <a name="a-namefrontinsertera--frontinserter"></a><a name="front_inserter"></a>  front_inserter  
+##  <a name="front_inserter"></a>  front_inserter  
  Crée un itérateur qui peut insérer des éléments à l'avant d'un conteneur spécifié.  
   
 ```  
@@ -436,7 +452,7 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
  `front_insert_iterator` associé à l’objet conteneur `_Cont`.  
   
 ### <a name="remarks"></a>Notes  
- Vous pouvez aussi utiliser la fonction membre [front_insert_iterator](../standard-library/front-insert-iterator-class.md#front_insert_iterator__front_insert_iterator) de la classe front_insert_iterator.  
+ Vous pouvez aussi utiliser la fonction membre [front_insert_iterator](../standard-library/front-insert-iterator-class.md#front_insert_iterator) de la classe front_insert_iterator.  
   
  Dans la bibliothèque standard C++, l’argument doit faire référence à l’un des deux conteneurs de séquence ayant la fonction membre `push_back` : [classe deque](../standard-library/deque-class.md) ou « classe list ».  
   
@@ -487,8 +503,8 @@ After the front insertions, the list L is:
  ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).  
 ```  
   
-##  <a name="a-nameinsertera--inserter"></a><a name="inserter"></a>  inserter  
- Fonction de modèle d’assistance qui vous permet d’utiliser `inserter(``_Cont``,``_Where``)` au lieu de `insert_iterator<Container>(``_Cont`, `_Where``)`.  
+##  <a name="inserter"></a>  inserter  
+ Une fonction de modèle d’assistance qui vous permet d’utiliser `inserter(_Cont, _Where)` au lieu de `insert_iterator<Container>(_Cont, _Where)`.  
   
 ```  
 template <class Container>  
@@ -505,8 +521,8 @@ inserter(
  `_Where`  
  Itérateur localisant le point d’insertion.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle retourne [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator__insert_iterator)`<Container>(``_Cont``,` `_Where``)`.  
+### <a name="remarks"></a>Remarques  
+ La fonction de modèle retourne [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -555,7 +571,7 @@ After the insertions, the list L is:
  ( 1 20 30 40 500 ).  
 ```  
   
-##  <a name="a-namemakecheckedarrayiteratora--makecheckedarrayiterator"></a><a name="make_checked_array_iterator"></a>  make_checked_array_iterator  
+##  <a name="make_checked_array_iterator"></a>  make_checked_array_iterator  
  Crée un [checked_array_iterator](../standard-library/checked-array-iterator-class.md) qui peut être utilisé par d’autres algorithmes.  
   
 > [!NOTE]
@@ -645,7 +661,7 @@ int main()
   
 ```  
   
-##  <a name="a-namemakemoveiteratora--makemoveiterator"></a><a name="make_move_iterator"></a>  make_move_iterator  
+##  <a name="make_move_iterator"></a>  make_move_iterator  
  Crée un `move iterator` qui contient l’itérateur fourni en tant qu’itérateur `stored`.  
   
 ```  
@@ -661,7 +677,7 @@ make_move_iterator(const Iterator& _It);
 ### <a name="remarks"></a>Notes  
  La fonction de modèle retourne `move_iterator``<Iterator>(``_It``)`.  
   
-##  <a name="a-namemakeuncheckedarrayiteratora--makeuncheckedarrayiterator"></a><a name="make_unchecked_array_iterator"></a>  make_unchecked_array_iterator  
+##  <a name="make_unchecked_array_iterator"></a>  make_unchecked_array_iterator  
  Crée un [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) qui peut être utilisé par d’autres algorithmes.  
   
 > [!NOTE]
@@ -736,7 +752,7 @@ int main()
   
 ```  
   
-##  <a name="a-namenexta--next"></a><a name="next"></a>  next  
+##  <a name="next"></a>  next  
  Itère un nombre de fois donné et retourne la nouvelle position de l'itérateur.  
   
 ```  
@@ -747,7 +763,7 @@ InputIterator next(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` first`  
+ `first`  
  Position actuelle.  
   
  `_Off`  
@@ -759,7 +775,7 @@ InputIterator next(
 ### <a name="remarks"></a>Notes  
  La fonction de modèle retourne `next` incrémenté `_Off` fois.  
   
-##  <a name="a-namepreva--prev"></a><a name="prev"></a>  prev  
+##  <a name="prev"></a>  prev  
  Itère en sens inverse un nombre de fois donné et retourne la nouvelle position de l'itérateur.  
   
 ```  
@@ -770,7 +786,7 @@ BidirectionalIterator prev(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` first`  
+ `first`  
  Position actuelle.  
   
  `_Off`  

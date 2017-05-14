@@ -1,50 +1,67 @@
 ---
-title: "_fwrite_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fwrite_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fwrite_nolock"
-  - "fwrite_nolock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fwrite_nolock (fonction)"
-  - "fwrite_nolock (fonction)"
-  - "flux, écrire des données dans"
+title: _fwrite_nolock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fwrite_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fwrite_nolock
+- fwrite_nolock
+dev_langs:
+- C++
+helpviewer_keywords:
+- fwrite_nolock function
+- streams, writing data to
+- _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# _fwrite_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 6782571e3c3f5d0edb252d87bf6e7ba1e0144f46
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
-Écrit des données dans un flux de données, sans verrouiller le thread.  
+---
+# <a name="fwritenolock"></a>_fwrite_nolock
+Écrit des données dans un flux, sans verrouiller le thread.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 size_t _fwrite_nolock(  
@@ -55,40 +72,37 @@ size_t _fwrite_nolock(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `buffer`  
- Pointeur vers les donées à écrire.  
+ Pointeur désignant les données à écrire.  
   
  `size`  
- Taille d'élément en octets.  
+ Taille de l’élément en octets.  
   
  `count`  
  Nombre maximal d'éléments à écrire.  
   
  `stream`  
- Pointeur vers la structure `FILE`.  
+ Pointeur désignant la structure `FILE`.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  Identique à [fwrite](../../c-runtime-library/reference/fwrite.md).  
   
-## Notes  
- Cette fonction est une version non verrouillée de`fwrite`.  Il est identique à `fwrite` à la différence qu'il n'est pas protégé d'une interférence de la part de les autres threads.  Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads.  Utilisez ces fonctions uniquement dans les contextes thread\-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.  
+## <a name="remarks"></a>Notes  
+ Cette fonction est une version sans verrouillage de `fwrite`. Elle est identique à `fwrite` , sauf qu’elle n’est pas protégée contre les interférences par d’autres threads. Elle peut être plus rapide, car elle n’entraîne pas la charge liée au verrouillage des autres threads. Utilisez cette fonction uniquement dans les contextes thread-safe, par exemple avec les applications monothread ou lorsque la portée appelante gère déjà l’isolation des threads.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Fonction|En\-tête requis|  
+|Fonction|En-tête requis|  
 |--------------|---------------------|  
-|`_fwrite_nolock`|\<stdio.h\>|  
+|`_fwrite_nolock`|\<stdio.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
- Consultez l'exemple de [fread](../../c-runtime-library/reference/fread.md).  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple relatif à [fread](../../c-runtime-library/reference/fread.md).  
   
-## Équivalent .NET Framework  
- [System::IO::FileStream::Write](https://msdn.microsoft.com/en-us/library/system.io.filestream.write.aspx)  
-  
-## Voir aussi  
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>Voir aussi  
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
  [fread](../../c-runtime-library/reference/fread.md)   
- [\_write](../../c-runtime-library/reference/write.md)
+ [_write](../../c-runtime-library/reference/write.md)

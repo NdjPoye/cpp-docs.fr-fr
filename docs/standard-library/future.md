@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 4c83adc4b7365518275d5d54ac927012abc29657
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e2ebbb8eb6e6f250376b0ef2b43dae261a642d69
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
@@ -52,7 +53,7 @@ Incluez l’en-tête standard \<future> pour définir des classes de modèle et 
 ## <a name="remarks"></a>Remarques  
   
 > [!NOTE]
->  Dans le code compilé à l’aide de **/clr**, cet en-tête est bloqué.  
+>  Dans le code est compilé à l’aide de **/CLR**, cet en-tête est bloqué.  
   
  Un *fournisseur asynchrone* stocke le résultat d’un appel de fonction. Un *objet de retour asynchrone* est utilisé pour récupérer le résultat d’un appel de fonction. Un *état asynchrone associé* permet la communication entre un fournisseur asynchrone et un ou plusieurs objets de retour asynchrones.  
   
@@ -91,19 +92,19 @@ Incluez l’en-tête standard \<future> pour définir des classes de modèle et 
   
 |Nom|Description|  
 |----------|-----------------|  
-|[async, fonction](../standard-library/future-functions.md#async_function)|Représente un fournisseur asynchrone.|  
-|[future_category, fonction](../standard-library/future-functions.md#future_category_function)|Retourne une référence à l’objet `error_category` qui caractérise les erreurs associées aux objets `future`.|  
-|[make_error_code, fonction](../standard-library/future-functions.md#make_error_code_function)|Crée un `error_code` dont l’objet `error_category` caractérise les erreurs de `future`.|  
-|[make_error_condition, fonction](../standard-library/future-functions.md#make_error_condition_function)|Crée un `error_condition` dont l’objet `error_category` caractérise les erreurs de `future`.|  
-|[swap, fonction](../standard-library/future-functions.md#swap_function)|Échange l’état asynchrone associé d’un objet `promise` avec celui d’un autre.|  
+|[async](../standard-library/future-functions.md#async)|Représente un fournisseur asynchrone.|  
+|[future_category](../standard-library/future-functions.md#future_category)|Retourne une référence à l’objet `error_category` qui caractérise les erreurs associées aux objets `future`.|  
+|[make_error_code](../standard-library/future-functions.md#make_error_code)|Crée un `error_code` dont l’objet `error_category` caractérise les erreurs de `future`.|  
+|[make_error_condition](../standard-library/future-functions.md#make_error_condition)|Crée un `error_condition` dont l’objet `error_category` caractérise les erreurs de `future`.|  
+|[swap](../standard-library/future-functions.md#swap)|Échange l’état asynchrone associé d’un objet `promise` avec celui d’un autre.|  
   
 ### <a name="enumerations"></a>Énumérations  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[future_errc, énumération](../standard-library/future-enums.md#future_errc_enumeration)|Fournit des noms symboliques pour toutes les erreurs signalées par la classe `future_error`.|  
-|[future_status, énumération](../standard-library/future-enums.md#future_status_enumeration)|Fournit les noms symboliques pour les raisons qu’une fonction d’attente chronométrée peut retourner.|  
-|[launch, énumération](../standard-library/future-enums.md#launch_enumeration)|Représente un type de masque de bits qui décrit les modes possibles pour la fonction de modèle `async`.|  
+|[future_errc](../standard-library/future-enums.md#future_errc)|Fournit des noms symboliques pour toutes les erreurs signalées par la classe `future_error`.|  
+|[état_futur](../standard-library/future-enums.md#future_status)|Fournit les noms symboliques pour les raisons qu’une fonction d’attente chronométrée peut retourner.|  
+|[lancement](../standard-library/future-enums.md#launch)|Représente un type de masque de bits qui décrit les modes possibles pour la fonction de modèle `async`.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)

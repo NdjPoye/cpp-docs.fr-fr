@@ -10,28 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - geometric_distribution
-- std::geometric_distribution
 - random/std::geometric_distribution
-- std::geometric_distribution::reset
 - random/std::geometric_distribution::reset
-- std::geometric_distribution::p
 - random/std::geometric_distribution::p
-- std::geometric_distribution::param
 - random/std::geometric_distribution::param
-- std::geometric_distribution::min
 - random/std::geometric_distribution::min
-- std::geometric_distribution::max
 - random/std::geometric_distribution::max
-- std::geometric_distribution::operator()
 - random/std::geometric_distribution::operator()
-- std::geometric_distribution::param_type
 - random/std::geometric_distribution::param_type
-- std::geometric_distribution::param_type::p
 - random/std::geometric_distribution::param_type::p
-- std::geometric_distribution::param_type::operator==
 - random/std::geometric_distribution::param_type::operator==
-- std::geometric_distribution::param_type::operator!=
 - random/std::geometric_distribution::param_type::operator!=
+- random/std::geometric_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -56,10 +46,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
-ms.openlocfilehash: 51952b8649f73120b6a017ae9b64e3e01f42f70e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 210d7e859c3022e7f70f953fdbe2da3ad60c5f0a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution, classe
@@ -105,8 +96,8 @@ La classe de modèle décrit une distribution qui produit des valeurs d'un type 
   
 ||||  
 |-|-|-|  
-|[geometric_distribution::geometric_distribution](#geometric_distribution__geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|  
-|`geometric_distribution::operator()`||[geometric_distribution::param_type](#geometric_distribution__param_type)|  
+|[geometric_distribution](#geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|  
+|`geometric_distribution::operator()`||[param_type](#param_type)|  
   
 La fonction de propriété `p()` retourne la valeur du paramètre de distribution stocké `p`.  
   
@@ -235,7 +226,7 @@ Distribution for 100 samples:
   
 **Espace de noms :** std  
   
-##  <a name="a-namegeometricdistributiongeometricdistributiona--geometricdistributiongeometricdistribution"></a><a name="geometric_distribution__geometric_distribution"></a>  geometric_distribution::geometric_distribution  
+##  <a name="geometric_distribution"></a>  geometric_distribution::geometric_distribution  
 Construit la distribution.  
   
 ```  
@@ -257,7 +248,7 @@ Le premier constructeur construit un objet dont la valeur `p` stockée contient 
   
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.  
   
-##  <a name="a-namegeometricdistributionparamtypea--geometricdistributionparamtype"></a><a name="geometric_distribution__param_type"></a>  geometric_distribution::param_type  
+##  <a name="param_type"></a>  geometric_distribution::param_type  
 Stocke les paramètres de la distribution.  
   
 ```  

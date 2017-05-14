@@ -1,53 +1,70 @@
 ---
-title: "fseek, _fseeki64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fseeki64"
-  - "fseek"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fseek"
-  - "_fseeki64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fseeki64 (fonction)"
-  - "pointeurs de fichier (C++)"
-  - "pointeurs de fichier (C++), déplacer"
-  - "fseek (fonction)"
-  - "fseeki64 (fonction)"
-  - "rechercher des pointeurs de fichier"
+title: fseek, _fseeki64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fseeki64
+- fseek
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- fseek
+- _fseeki64
+dev_langs:
+- C++
+helpviewer_keywords:
+- _fseeki64 function
+- fseeki64 function
+- fseek function
+- file pointers [C++], moving
+- file pointers [C++]
+- seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# fseek, _fseeki64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0d0c0bf620f1b89b9decceed3db9434dae4f9437
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
+---
+# <a name="fseek-fseeki64"></a>fseek, _fseeki64
 Déplace le pointeur de fichier vers un emplacement spécifié.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int fseek(   
@@ -62,21 +79,21 @@ int _fseeki64(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `stream`  
- Pointeur vers la structure `FILE`.  
+ Pointeur vers la structure `FILE` .  
   
  `offset`  
- Nombre d'octets de `origin`.  
+ Nombre d’octets à partir de `origin`.  
   
  `origin`  
  Position initiale.  
   
-## Valeur de retour  
- En cas de succès `fseek` et `_fseeki64` retourne 0.  Sinon, il retourne une valeur différente de zéro.  Sur des périphériques incapables d'effectuer des recherches, la valeur de retour n'est pas définie.  Si `stream` est un pointeur null, ou si `origin` n'est pas l'une des valeurs autorisées décrites ci\-dessous, `fseek` et `_fseeki64` appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno` avec la valeur `EINVAL` et retournent \-1.  
+## <a name="return-value"></a>Valeur de retour  
+ En cas de réussite, `fseek` et `_fseeki64` retournent 0. Sinon, elles retournent une valeur différente de zéro. Sur les appareils incapables de rechercher, la valeur de retour n’est pas définie. Si `stream` est un pointeur Null ou que `origin` n’est pas une des valeurs autorisées décrites ci-dessous, `fseek` et `_fseeki64` appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno` avec la valeur `EINVAL` et retournent -1.  
   
-## Notes  
- Les fonctions`fseek` et `_fseeki64` déplacent le pointeur de fichier \(s'il existe\) associé à `stream` vers un nouvel emplacement qui est décalé de`offset` octets par rapport à l'`origin`*.* L'opération suivante dans le flux de donnée prend place dans le nouvel emplacement.  Dans un flux ouvert pour la mise à jour, l'opération suivante peut être soit une lecture soit ou une écriture.  L'origine de l'argument doit etre l'une des constantes suivantes, définies dans STDIO.H :  
+## <a name="remarks"></a>Remarques  
+ Le `fseek` et `_fseeki64` déplace le pointeur de fichier (le cas échéant) associé à des fonctions `stream` vers un nouvel emplacement est `offset` octets à partir de `origin`. L’opération suivante sur le flux a lieu au nouvel emplacement. Sur un flux ouvert pour la mise à jour, l’opération suivante peut être une lecture ou une écriture. L’argument origin doit être une des constantes suivantes, définies dans STDIO.H :  
   
  `SEEK_CUR`  
  Position actuelle du pointeur de fichier.  
@@ -87,32 +104,32 @@ int _fseeki64(
  `SEEK_SET`  
  Début du fichier.  
   
- Vous pouvez utiliser `fseek` et `_fseeki64` pour repositionner le pointeur n'importe ou dans un fichier.  Le pointeur peut également être placé au delà de la fin du fichier.  `fseek` et `_fseeki64`nettoie l'indicateur de fin de fichier et inverse le résultat de tous les appels antérieurs `ungetc` sur `stream`.  
+ Vous pouvez utiliser `fseek` et `_fseeki64` pour repositionner le pointeur n’importe où dans un fichier. Le pointeur peut également être positionné au-delà de la fin du fichier. `fseek`et `_fseeki64` efface l’indicateur de fin de fichier et annule l’effet du tout avant `ungetc` les appels de fonction `stream`.  
   
- Lorsqu'un fichier est ouvert pour ajouter des données, la position actuelle du fichier est déterminée par la dernière opération d'E\/S, et non par lorsque l'écriture suivante se produirait.  Si aucune opération d'E\/S ne s'est produite dans un fichier ouvert pour l'ajout, la position de fichier correspond au début du fichier.  
+ Quand un fichier est ouvert pour un ajout de données, la position de fichier actuelle est déterminée par la dernière opération d’E/S, pas par l’emplacement auquel l’écriture suivante se produirait. Si aucune opération d’E/S ne s’est produite sur un fichier ouvert pour un ajout, la position de fichier correspond au début du fichier.  
   
- Pour les flux de données ouverts en mode texte, `fseek` et `_fseeki64`ont une utilisation limitée, car les traductions de saut de ligne\-retour de chariot peuvent faire que`fseek` et `_fseeki64`produisent des résultats inattendus.  Les seules opérations`fseek` et `_fseeki64`, qui sont assurées d'utiliser des flux de données ouverts en mode texte sont :  
+ Pour les flux ouverts en mode texte, `fseek` et `_fseeki64` est limitée utilisation, comme des traductions chariot / sauts de ligne peuvent entraîner `fseek` et `_fseeki64` pour produire des résultats inattendus. La seule `fseek` et `_fseeki64` sont des opérations fonctionnent sur les flux ouverts en mode texte :  
   
--   Recherchant un décalage de 0 par rapport à n'importe laquelle des valeurs d'origine.  
+-   Recherche avec un décalage de 0 par rapport à toute valeur d’origine.  
   
--   Recherchant du début du fichier avec une valeur de décalage retournée par un appel à `ftell` en utilisant `fseek`ou `_ftelli64`en utilisant`_fseeki64`.  
+-   La recherche à partir du début du fichier avec une valeur de décalage retourné par un appel à `ftell` lors de l’utilisation `fseek` ou `_ftelli64` lors de l’utilisation `_fseeki64`.  
   
- Dans le mode texte, CTRL\+Z est interprété comme un caractère de fin de fichier en entrée.  Dans les fichiers ouverts pour lecture\/écriture  `fopen`et toutes les autres routines vérifient la présence de Ctrl\+Z à la fin du fichier et le supprime si possible.  Cette opération est effectuée car l'utilisation de la combinaison de `fseek` et de `ftell`ou`_fseeki64` et `_ftelli64`, pour se déplacer à l'intérieur d'un fichier , qui se termine par un CTRL\+Z peut agir sur`fseek` ou`_fseeki64`et provoquer leur comportement de manière inappropriée près de la fin du fichier.  
+ Également en mode texte, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts en lecture/écriture, `fopen` et toutes les routines connexes recherchent un Ctrl+Z à la fin du fichier et le suppriment, si possible. En effet, l’utilisation de la combinaison des fonctions `fseek` et `ftell` ou `_fseeki64` et `_ftelli64` pour se déplacer dans un fichier qui se termine par un Ctrl+Z peut provoquer un comportement incorrect de `fseek` ou `_fseeki64` vers la fin du fichier.  
   
- Lorsque le CRT ouvre un fichier qui commence par une marque d'ordre d'octet \(BOM\), dle pointeur du fichier est positionné après le BOM \(qui est, au commencement du vrai contenu d'un fichier\)  Si vous devez `fseek` au début du fichier, utilisez `ftell` pour obtenir la position initiale et `fseek`le plutôt que pour la position 0.  
+ Quand la bibliothèque CRT ouvre un fichier qui commence par une marque d’ordre d’octet, le pointeur de fichier est positionné après la marque (autrement dit, au début du contenu réel du fichier). Si vous devez effectuer une opération `fseek` vers le début du fichier, utilisez `ftell` pour obtenir la position initiale, puis effectuez une opération `fseek` vers cette position plutôt que vers la position 0.  
   
- Cette fonction verrouille d'autres threads pendant l'exécution et est par conséquent thread\-safe.  Pour une version non verrouillante, consultez [\_fseek\_nolock, \_fseeki64\_nolock](../../c-runtime-library/reference/fseek-nolock-fseeki64-nolock.md).  
+ Cette fonction verrouille les autres threads pendant l’exécution et est donc thread-safe. Pour une version sans verrouillage, consultez [_fseek_nolock, _fseeki64_nolock](../../c-runtime-library/reference/fseek-nolock-fseeki64-nolock.md).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Fonction|En\-tête requis|  
+|Fonction|En-tête requis|  
 |--------------|---------------------|  
-|`fseek`|\<stdio.h\>|  
-|`_fseeki64`|\<stdio.h\>|  
+|`fseek`|\<stdio.h>|  
+|`_fseeki64`|\<stdio.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_fseek.c  
@@ -147,17 +164,14 @@ int main( void )
 }  
 ```  
   
-  **Le pointeur de fichier est défini au milieu de la première ligne.**  
-**Il s'agit du fichier « fseek.out ».**   
-## Équivalent .NET Framework  
+```Output  
+File pointer is set to middle of first line.  
+This is the file 'fseek.out'.  
+```  
   
--   [System::IO::FileStream::FileStream](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
-  
--   [System::IO::FileStream::FileStream](https://msdn.microsoft.com/en-us/library/system.io.filestream.seek.aspx)  
-  
-## Voir aussi  
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
- [fopen, \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [ftell, \_ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)   
- [\_lseek, \_lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)   
+## <a name="see-also"></a>Voir aussi  
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
+ [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [ftell, _ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)   
+ [_lseek, _lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)   
  [rewind](../../c-runtime-library/reference/rewind.md)

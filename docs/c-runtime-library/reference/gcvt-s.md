@@ -1,55 +1,72 @@
 ---
-title: "_gcvt_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_gcvt_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_gcvt_s"
-  - "gcvt_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CVTBUFSIZE"
-  - "_gcvt_s (fonction)"
-  - "conversions, de virgule flottante en chaînes"
-  - "CVTBUFSIZE"
-  - "fonctions en virgule flottante, convertir un nombre en chaîne"
-  - "gcvt_s (fonction)"
-  - "nombres, convertir en chaînes"
-  - "chaînes (C++), convertir à partir de valeurs à virgule flottante"
+title: _gcvt_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _gcvt_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _gcvt_s
+- gcvt_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _gcvt_s function
+- _CVTBUFSIZE
+- floating-point functions, converting number to string
+- gcvt_s function
+- numbers, converting to strings
+- conversions, floating point to strings
+- strings [C++], converting from floating point
+- CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# _gcvt_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: cc1f34eae067f0d2cc0781c9001af550b291006f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
-Convertit une valeur à virgule flottante en une chaîne.  Il s'agit de versions de [\_gcvt](../../c-runtime-library/reference/gcvt.md) avec des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="gcvts"></a>_gcvt_s
+Convertit une valeur à virgule flottante en chaîne. Il s’agit d’une version de [_gcvt](../../c-runtime-library/reference/gcvt.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 errno_t _gcvt_s(   
@@ -66,50 +83,50 @@ errno_t _gcvt_s(
 ); // C++ only  
 ```  
   
-#### Paramètres  
- \[out\] `buffer`  
- Mémoire tampon pour stocker les résultats de la conversion.  
+#### <a name="parameters"></a>Paramètres  
+ [out] `buffer`  
+ Mémoire tampon pour stocker le résultat de la conversion.  
   
- \[in\] `sizeInBytes`  
+ [in] `sizeInBytes`  
  Taille de la mémoire tampon.  
   
- \[in\] `value`  
+ [in] `value`  
  Valeur à convertir.  
   
- \[in\] `digits`  
+ [in] `digits`  
  Nombre de chiffres significatifs stockés.  
   
-## Valeur de retour  
- Zéro en cas de réussite.  Si une défaillance se produit en raison d'un paramètre non valide \(voir le tableau suivant pour les valeurs valides\), le gestionnaire de paramètre non valide est appelée comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée de continuer, le code d'erreur est retourné.  Les codes d'erreur sont définis dans ERRNO.H.  Pour obtenir la liste de ces erreurs, consultez [errno, \_doserrno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+## <a name="return-value"></a>Valeur de retour  
+ Zéro si l’opération réussit. En cas d’échec en raison d’un paramètre non valide (voir le tableau ci-après pour découvrir les valeurs non valides), le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, un code d’erreur est retourné. Les codes d’erreur sont définis dans Errno.h. Pour obtenir la liste de ces erreurs, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-### Conditions d'erreur  
+### <a name="error-conditions"></a>Conditions d’erreur  
   
-|`buffer`|`sizeInBytes`|`value`|`digits`|Return|Valeur dans `buffer`|  
-|--------------|-------------------|-------------|--------------|------------|--------------------------|  
-|`NULL`|any|any|any|`EINVAL`|Non modifié|  
-|Non  `NULL` \(pointe vers la mémoire valide\)|zéro|any|any|`EINVAL`|Non modifié|  
-|Non  `NULL` \(pointe vers la mémoire valide\)|any|any|\>\= `sizeInBytes`|`EINVAL`|Non modifié|  
+|`buffer`|`sizeInBytes`|`value`|`digits`|Retourner|Valeur dans `buffer`|  
+|--------------|-------------------|-------------|--------------|------------|-----------------------|  
+|`NULL`|any|any|any|`EINVAL`|Non modifiée.|  
+|Pas `NULL` (pointe vers une mémoire valide)|zéro|any|any|`EINVAL`|Non modifiée.|  
+|Pas `NULL` (pointe vers une mémoire valide)|any|any|>= `sizeInBytes`|`EINVAL`|Non modifiée.|  
   
  **Problèmes de sécurité**  
   
- `_gcvt_s` peut générer une violation d'accès si `buffer` ne pointe pas vers de la mémoire valide et n'est pas `NULL`.  
+ `_gcvt_s` peut générer une violation d’accès si `buffer` ne désigne pas une mémoire valide et n’est pas `NULL`.  
   
-## Notes  
- La fonction `_gcvt_s` convertit un `value` à virgule flottante en une chaîne de caractères \(incluant une virgule et éventuellement un octet de signe\) et enregistre la chaîne dans `buffer`.  `buffer` doit être suffisamment grande pour contenir la valeur convertie et un caractère NULL de fin, qui est ajouté automatiquement.  Une mémoire tampon de longueur `_CVTBUFSIZE` est suffisante pour toute valeur à virgule flottante.  Si une taille de mémoire tampon d'`digits` \+ 1 est utilisée, la fonction ne remplace pas la fin de la mémoire tampon, veillez à fournir un tampon suffisante pour cette opération.  `_gcvt_s` tente de générer des chiffres `digits` au format décimal.  S'il est impossible, il génère des chiffres `digits` au format exponentiel.  Les zéros à droite peuvent être supprimés de la conversion.  
+## <a name="remarks"></a>Notes  
+ La fonction `_gcvt_s` convertit une `value` à virgule flottante en une chaîne de caractères (qui inclut une virgule décimale et, éventuellement, un octet de signe) et stocke la chaîne dans `buffer`. `buffer` doit être assez grand pour contenir la valeur convertie, plus un caractère Null de fin, qui est ajouté automatiquement. Une mémoire tampon de longueur `_CVTBUFSIZE` est suffisante pour n’importe quelle valeur à virgule flottante. Si la taille de mémoire tampon utilisée est `digits` + 1, la fonction ne remplace pas la fin de la mémoire tampon ; veillez donc à fournir une mémoire tampon suffisante pour cette opération. `_gcvt_s` tente de produire `digits` chiffres au format décimal. Si elle n’y parvient pas, elle génère `digits` chiffres au format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.  
   
- En C\+\+, l'utilisation de ces fonctions est simplifiée par des surcharges de modèle ; les surcharges peuvent également déduire la longueur de la mémoire tampon automatiquement, en éliminant le besoin de spécifier un argument de taille.  Pour plus d'informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, l’utilisation de cette fonction est simplifiée par une surcharge de modèle ; la surcharge peut déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
   
- Les versions de déboggage de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD.  Pour désactiver ce comportement, utilisez [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ La version de débogage de cette fonction remplit d’abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|En\-tête facultatif|  
-|-------------|---------------------|-------------------------|  
-|`_gcvt_s`|\<stdlib.h\>|\<error.h\>|  
+|Routine|En-tête requis|En-tête facultatif|  
+|-------------|---------------------|---------------------|  
+|`_gcvt_s`|\<stdlib.h>|\<error.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_gcvt_s.c  
@@ -137,14 +154,14 @@ int main()
 }  
 ```  
   
-  **Valeur convertie. 1.2**   
-## Équivalent .NET Framework  
- <xref:System.Convert.ToString%2A>  
+```Output  
+Converted value: 1.2  
+```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_ecvt\_s](../../c-runtime-library/reference/ecvt-s.md)   
- [\_fcvt\_s](../../c-runtime-library/reference/fcvt-s.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)   
+ [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)
