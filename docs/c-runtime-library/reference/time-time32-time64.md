@@ -60,10 +60,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 377ebdd79e201a2b7a017eb3ce34c6ced0062702
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: bb000bddd8f376587aa7614d135f39e09771ccb7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
@@ -91,9 +92,9 @@ __time64_t _time64(
  Retourner le temps en secondes écoulées depuis le 1er janvier 1970 à minuit ou -1 en cas d’erreur.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `time` retourne le nombre de secondes écoulées depuis minuit (00:00:00), le 1er janvier 1970, temps universel coordonné (UTC), d’après l’horloge système. La valeur de retour est stockée à l’emplacement indiqué par `timer`. Ce paramètre peut avoir la valeur `NULL`, auquel cas la valeur de retour n’est pas stockée.  
+ La fonction `time` retourne le nombre de secondes écoulées depuis minuit (00:00:00), le 1er janvier 1970, temps universel coordonné (UTC), d’après l’horloge système. La valeur de retour est stockée dans l’emplacement donné par `timer`. Ce paramètre peut être `NULL`, auquel cas la valeur de retour n’est pas stockée.  
   
- `time` est un wrapper pour `_time64` et `time_t` est, par défaut, équivalent à `__time64_t`. Si vous devez forcer le compilateur à interpréter `time_t` comme l’ancien `time_t` 32 bits, vous pouvez définir `_USE_32BIT_TIME_T`. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 ; l’utilisation de cette macro n’est pas autorisée sur les plateformes 64 bits.  
+ `time` est un wrapper pour `_time64` et `time_t` est, par défaut, équivalent à `__time64_t`. Si vous devez forcer le compilateur à interpréter `time_t` comme ancien `time_t`32 bits, vous pouvez définir `_USE_32BIT_TIME_T`. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 ; l’utilisation de cette macro n’est pas autorisée sur les plateformes 64 bits.  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -254,9 +255,6 @@ Christmas            Sat Dec 25 12:00:00 1993
   
 Today is Friday, day 25 of April in the year 2003.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion du temps](../../c-runtime-library/time-management.md)   
