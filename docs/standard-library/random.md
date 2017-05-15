@@ -33,10 +33,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: a817bc264a762d6043b80a68d966a9e8420c72b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 89cbb528d14117feac1f04863f0f4082969f22d9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
@@ -64,7 +65,7 @@ Définit des fonctions pour la génération de nombres aléatoires, ce qui perme
 ### <a name="quick-tips"></a>Conseils rapides  
  Voici quelques conseils à garder à l'esprit lors de l'utilisation de `<random>` :  
   
--   Dans la plupart des cas, les générateurs URNG produisent des bits bruts qui doivent être mis en forme par les distributions. ([std::shuffle()](../standard-library/algorithm-functions.md#std__shuffle) est une exception notable, car il utilise directement un générateur URNG.)  
+-   Dans la plupart des cas, les générateurs URNG produisent des bits bruts qui doivent être mis en forme par les distributions. ([std::shuffle()](../standard-library/algorithm-functions.md#shuffle) est une exception notable, car il utilise directement un générateur URNG.)  
   
 -   Une seule instanciation d'un générateur URNG ou d'une distribution ne peut pas être appelée en toute sécurité simultanément, car l'exécution d'un générateur URNG ou d'une distribution est une opération de modification. Pour plus d’informations, consultez [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md).  
   
@@ -74,7 +75,7 @@ Définit des fonctions pour la génération de nombres aléatoires, ce qui perme
   
  Vous avez le choix entre de nombreuses options dans l'en-tête `<random>` et n'importe laquelle d'entre elles est préférable à la fonction C Runtime obsolète `rand()`. Pour plus d’informations sur les inconvénients présentés par `rand()` et la façon dont `<random>` les traite, regardez [cette vidéo](http://go.microsoft.com/fwlink/LinkId=397615).  
   
-##  <a name="a-namecodea-examples"></a><a name="code"></a> Exemples  
+##  <a name="code"></a> Exemples  
  L'exemple de code suivant montre comment générer des nombres aléatoires. Dans le cas présent, cinq d'entre eux utilisent un générateur créé avec une valeur initiale non déterministe.  
   
 ```cpp  
@@ -228,9 +229,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
 Ce code illustre deux randomisations différentes (rendre aléatoire un vecteur d'entiers et lire de façon aléatoire un tableau de données indexées) avec une fonction avec modèle de test. Le premier appel à la fonction de test utilise le générateur URNG sécurisé par chiffrement, non déterministe, sans valeur initiale et non renouvelable `random_device`. La deuxième série de tests utilise `mersenne_twister_engine` comme générateur URNG, avec une valeur initiale constante 32 bits déterministe, ce qui signifie que les résultats sont renouvelables. La troisième série de tests amorce `mersenne_twister_engine` avec un résultat non déterministe 32 bits de `random_device`. La quatrième série de tests poursuit ce développement en utilisant une [séquence de valeurs initiales](../standard-library/seed-seq-class.md) remplie avec des résultats `random_device`, qui présente de manière effective un caractère aléatoire non déterministe de plus de 32 bits (mais toujours pas sécurisé par chiffrement). Pour plus d'informations, lisez la suite.  
   
-##  <a name="a-namelistinga-categorized-listing"></a><a name="listing"></a> Liste par catégorie  
+##  <a name="listing"></a> Liste par catégorie  
   
-###  <a name="a-nameurngsa-uniform-random-number-generators"></a><a name="urngs"></a> Générateurs de nombres aléatoires uniformes  
+###  <a name="urngs"></a> Générateurs de nombres aléatoires uniformes  
  Les générateurs URNG sont souvent décrits sous l'angle des propriétés suivantes :  
   
 1. **Longueur de période** : nombre d’itérations nécessaires pour répéter la séquence des nombres générés. Plus la période est longue, mieux c'est.  
@@ -241,13 +242,13 @@ Ce code illustre deux randomisations différentes (rendre aléatoire un vecteur 
   
  Les sections suivantes répertorient les générateurs URNG fournis dans l'en-tête `<random>`.  
   
-####  <a name="a-namerda-non-deterministic-generator"></a><a name="rd"></a> Générateur non déterministe  
+####  <a name="rd"></a> Générateur non déterministe  
   
 |||  
 |-|-|  
 |[random_device, classe](../standard-library/random-device-class.md)|Génère une séquence aléatoire non déterministe, sécurisée par chiffrement à l'aide d'un appareil externe. Généralement utilisé pour amorcer un moteur. Performances faibles, très haute qualité. Pour plus d’informations, consultez [Notes](#comments).|  
   
-####  <a name="a-nametypedefsa-engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a> Typedefs de moteur avec paramètres prédéfinis  
+####  <a name="typedefs"></a> Typedefs de moteur avec paramètres prédéfinis  
  Pour l'instanciation des moteurs et adaptateurs de moteurs. Pour plus d’informations, consultez [Moteurs et distributions](#engdist).  
   
 - `default_random_engine` : moteur par défaut.   
@@ -280,7 +281,7 @@ Ce code illustre deux randomisations différentes (rendre aléatoire un vecteur 
 - `ranlux48_base` : utilisé comme base pour `ranlux48`.   
  `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
-####  <a name="a-nameenga-engine-templates"></a><a name="eng"></a> Modèles de moteurs  
+####  <a name="eng"></a> Modèles de moteurs  
  Les modèles de moteurs sont utilisés comme générateurs URNG autonomes ou comme moteurs de base passés aux [adaptateurs de moteurs](#engadapt). En général, ils sont instanciés avec un [typedef de moteur prédéfini](#typedefs) et passés à une [distribution](#distributions). Pour plus d’informations, consultez la section [Moteurs et distributions](#engdist).  
   
 |||  
@@ -289,7 +290,7 @@ Ce code illustre deux randomisations différentes (rendre aléatoire un vecteur 
 |[mersenne_twister_engine, classe](../standard-library/mersenne-twister-engine-class.md)|Génère une séquence aléatoire en utilisant l'algorithme twister de Mersenne. Moteur le plus complexe avec la qualité la plus élevée, à l'exception de la classe random_device. Performances très élevées.|  
 |[subtract_with_carry_engine, classe](../standard-library/subtract-with-carry-engine-class.md)|Génère une séquence aléatoire en utilisant l'algorithme SWC (Substract With Carry). Version améliorée de `linear_congruential_engine`, mais avec des performances et une qualité beaucoup plus faibles que `mersenne_twister_engine`.|  
   
-####  <a name="a-nameengadapta-engine-adaptor-templates"></a><a name="engadapt"></a> Modèles d’adaptateurs de moteurs  
+####  <a name="engadapt"></a> Modèles d’adaptateurs de moteurs  
  Les adaptateurs de moteurs sont des modèles qui adaptent d'autres moteurs (de base). En général, ils sont instanciés avec un [typedef de moteur prédéfini](#typedefs) et passés à une [distribution](#distributions). Pour plus d’informations, consultez la section [Moteurs et distributions](#engdist).  
   
 |||  
@@ -300,7 +301,7 @@ Ce code illustre deux randomisations différentes (rendre aléatoire un vecteur 
   
  [[Modèles de moteurs](#eng)]  
   
-###  <a name="a-namedistributionsa-random-number-distributions"></a><a name="distributions"></a> Distributions de nombres aléatoires  
+###  <a name="distributions"></a> Distributions de nombres aléatoires  
  Les sections suivantes répertorient les distributions fournies dans l'en-tête `<random>`. Les distributions sont un mécanisme de post-traitement qui utilise généralement la sortie de générateur URNG comme entrée et distribue la sortie selon une fonction de densité de probabilité statistique définie. Pour plus d’informations, consultez la section [Moteurs et distributions](#engdist).  
   
 #### <a name="uniform-distributions"></a>Distributions uniformes  
@@ -330,7 +331,7 @@ Ce code illustre deux randomisations différentes (rendre aléatoire un vecteur 
 |-|-|  
 |[cauchy_distribution, classe](../standard-library/cauchy-distribution-class.md)|Produit une distribution suivant une loi de Cauchy de valeurs (à virgule flottante) réelles.|  
 |[chi_squared_distribution, classe](../standard-library/chi-squared-distribution-class.md)|Produit une distribution suivant la loi unilatérale du Khi-deux de valeurs (à virgule flottante) réelles.|  
-|[fisher_f_distribution, classe](../standard-library/fisher-f-distribution-class.md)|Produit une distribution selon la loi de Fisher (également appelée loi F de Snedecor ou loi de Fisher-Snedecor) de valeurs (à virgule flottante) réelles.|  
+|[fisher_f_distribution, classe](../standard-library/fisher-f-distribution-class.md)|Produit une distribution F (également appelée distribution de F de Snedecor ou la distribution de Fisher-Snedecor) de valeurs réelles (à virgule flottante).|  
 |[lognormal_distribution, classe](../standard-library/lognormal-distribution-class.md)|Produit une distribution suivant une loi log-normale de valeurs (à virgule flottante) réelles.|  
 |[normal_distribution, classe](../standard-library/normal-distribution-class.md)|Produit une distribution normale (loi gaussienne) de valeurs (à virgule flottante) réelles.|  
 |[student_t_distribution, classe](../standard-library/student-t-distribution-class.md)|Produit une distribution de valeurs à virgule flottante réelles suivant une loi *T* de Student.|  
@@ -376,7 +377,7 @@ Ce code illustre deux randomisations différentes (rendre aléatoire un vecteur 
 |`operator<<`|Écrit des informations d'état dans un flux.|  
 |`operator>>`|Extrait des informations d'état d'un flux.|  
   
-##  <a name="a-nameengdista-engines-and-distributions"></a><a name="engdist"></a> Moteurs et distributions  
+##  <a name="engdist"></a> Moteurs et distributions  
  Reportez-vous aux sections suivantes pour plus d'informations sur chacune des catégories de classes de modèles définies dans `<random>`. Ces deux catégories de classes de modèles acceptent un type comme argument et utilisent des noms de paramètres de modèles partagés pour décrire les propriétés du type qui sont autorisées en tant que type d'argument réel, comme suit :  
   
 - `IntType` indique un `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long` ou `unsigned long long`.  
@@ -459,7 +460,7 @@ Ce code illustre deux randomisations différentes (rendre aléatoire un vecteur 
   
  Pour plus d'informations, consultez les sous-rubriques de référence sous celle-ci, liées précédemment dans cet article.  
   
-##  <a name="a-namecommentsa-remarks"></a><a name="comments"></a> Notes  
+##  <a name="comments"></a> Notes  
  Il existe deux générateurs URNG très utiles dans Visual Studio, `mt19937` et `random_device`, comme illustré dans cette table de comparaison :  
   
 |Générateur URNG|Rapide|Sécurisé par chiffrement|Avec valeur initiale|Déterministe|  

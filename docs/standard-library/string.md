@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: f352a9efb06dc0267abcf1d4174c48dcbaae78a2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6cc4af94f5eae06cde244da58c4aa03e561821a7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
@@ -73,15 +74,15 @@ Définit la classe de modèle de conteneur `basic_string` et divers modèles de 
   
 |||  
 |-|-|  
-|[operator+](../standard-library/string-operators.md#operator_add)|Concatène deux objets string.|  
-|[operator!=](../standard-library/string-operators.md#operator_neq)|Teste si l'objet string situé à gauche de l'opérateur n'est pas égal à l'objet string situé à droite.|  
-|[operator==](../standard-library/string-operators.md#operator_eq_eq)|Teste si l'objet string situé à gauche de l'opérateur est égal à l'objet string situé à droite.|  
-|[operator<](../standard-library/string-operators.md#operator_lt_)|Teste si l'objet string situé à gauche de l'opérateur est inférieur à l'objet string situé à droite.|  
-|[operator<=](../standard-library/string-operators.md#operator_lt__eq)|Teste si l'objet string situé à gauche de l'opérateur est inférieur ou égal à l'objet string situé à droite.|  
-|[operator<\<](../standard-library/string-operators.md#operator_lt__lt_)|Fonction de modèle qui insère une chaîne dans le flux de sortie.|  
-|[operator>](../standard-library/string-operators.md#operator_gt_)|Teste si l'objet string situé à gauche de l'opérateur est supérieur à l'objet string situé à droite.|  
-|[operator>=](../standard-library/string-operators.md#operator_gt__eq)|Teste si l'objet string situé à gauche de l'opérateur est supérieur ou égal à l'objet string situé à droite.|  
-|[operator>>](../standard-library/string-operators.md#operator_gt__gt_)|Fonction de modèle qui extrait une chaîne du flux d'entrée.|  
+|[operator+](../standard-library/string-operators.md#op_add)|Concatène deux objets string.|  
+|[operator!=](../standard-library/string-operators.md#op_neq)|Teste si l'objet string situé à gauche de l'opérateur n'est pas égal à l'objet string situé à droite.|  
+|[operator==](../standard-library/string-operators.md#op_eq_eq)|Teste si l'objet string situé à gauche de l'opérateur est égal à l'objet string situé à droite.|  
+|[operator<](../standard-library/string-operators.md#op_lt)|Teste si l'objet string situé à gauche de l'opérateur est inférieur à l'objet string situé à droite.|  
+|[operator<=](../standard-library/string-operators.md#op_lt_eq)|Teste si l'objet string situé à gauche de l'opérateur est inférieur ou égal à l'objet string situé à droite.|  
+|[operator<\<](../standard-library/string-operators.md#op_lt_lt)|Fonction de modèle qui insère une chaîne dans le flux de sortie.|  
+|[operator>](../standard-library/string-operators.md#op_gt)|Teste si l'objet string situé à gauche de l'opérateur est supérieur à l'objet string situé à droite.|  
+|[operator>=](../standard-library/string-operators.md#op_gt_eq)|Teste si l'objet string situé à gauche de l'opérateur est supérieur ou égal à l'objet string situé à droite.|  
+|[operator>>](../standard-library/string-operators.md#op_gt_gt)|Fonction de modèle qui extrait une chaîne du flux d'entrée.|  
   
 ### <a name="specialized-template-functions"></a>Fonctions avec modèle spécialisé  
   
@@ -102,7 +103,7 @@ Définit la classe de modèle de conteneur `basic_string` et divers modèles de 
   
 |||  
 |-|-|  
-|[getline, fonction de modèle](../standard-library/string-functions.md#getline)|Extrait des chaînes du flux d'entrée, ligne par ligne.|  
+|[GetLine modèle](../standard-library/string-functions.md#getline)|Extrait des chaînes du flux d'entrée, ligne par ligne.|  
   
 ### <a name="classes"></a>Classes  
   

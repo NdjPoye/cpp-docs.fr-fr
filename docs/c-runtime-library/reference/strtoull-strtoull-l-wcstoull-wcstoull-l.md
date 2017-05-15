@@ -1,60 +1,77 @@
 ---
-title: "strtoull, _strtoull_l, wcstoull, _wcstoull_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_strtoull_l"
-  - "_wcstoull_l"
-  - "strtoull"
-  - "wcstoull"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wcstoull_l"
-  - "_tcstoull"
-  - "_tcstoull_l"
-  - "wcstoull"
-  - "_strtoull_l"
-  - "strtoull"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_strtoull_l (fonction)"
-  - "_tcstoull (fonction)"
-  - "_tcstoull_l (fonction)"
-  - "_wcstoull_l (fonction)"
-  - "strtoull (fonction)"
-  - "wcstoull (fonction)"
+title: strtoull, _strtoull_l, wcstoull, _wcstoull_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _strtoull_l
+- _wcstoull_l
+- strtoull
+- wcstoull
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wcstoull_l
+- _tcstoull
+- _tcstoull_l
+- wcstoull
+- _strtoull_l
+- strtoull
+dev_langs:
+- C++
+helpviewer_keywords:
+- strtoull function
+- _tcstoull_l function
+- _tcstoull function
+- _wcstoull_l function
+- _strtoull_l function
+- wcstoull function
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# strtoull, _strtoull_l, wcstoull, _wcstoull_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7ab47ad852aa8b389b20767f5aa3b969368af012
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
-Convertit des chaînes en une longue valeur entière non signée.  
+---
+# <a name="strtoull-strtoulll-wcstoull-wcstoulll"></a>strtoull, _strtoull_l, wcstoull, _wcstoull_l
+Convertit les chaînes en valeur entière de type long long non signée.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 unsigned long long strtoull(  
@@ -81,12 +98,12 @@ unsigned long long _wcstoull_l(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `nptr`  
- Chaîne terminée par Null à convertir.  
+ Chaîne se terminant par un caractère Null à convertir.  
   
  `endptr`  
- Pointeur vers le caractère qui arrête l'analyse.  
+ Pointeur désignant le caractère qui arrête l’analyse.  
   
  `base`  
  Base numérique à utiliser.  
@@ -94,58 +111,55 @@ unsigned long long _wcstoull_l(
  `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
- `strtoull` retourne la valeur convertie, le cas échéant, ou `ULLONG_MAX` en cas de dépassement de capacité.  `strtoull` retourne 0 si aucune conversion ne peut être exécutée.  `wcstoull` retourne les valeurs de façon analogue à `strtoull`.  Pour les deux fonctions, `errno` a la valeur `ERANGE` en cas de surcapacité ou de sous\-capacité.  
+## <a name="return-value"></a>Valeur de retour  
+ `strtoull` retourne la valeur convertie, le cas échéant, ou `ULLONG_MAX` en cas de dépassement de capacité positif. `strtoull` retourne 0 si aucune conversion ne peut être effectuée. `wcstoull` retourne des valeurs de façon analogue à `strtoull`. Pour les deux fonctions, `errno` prend la valeur `ERANGE` si un dépassement de capacité positif ou négatif se produit.  
   
- Pour plus d'informations sur les codes de retour, consultez [errno, \_doserrno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Notes  
- Chacune de ces fonctions convertit la chaîne d'entrée `nptr` à une valeur entière `unsigned long long`.  
+## <a name="remarks"></a>Notes  
+ Chacune de ces fonctions convertit la chaîne d’entrée `nptr` en valeur entière `unsigned long long`.  
   
- La fonction `strtoull` arrête de lire la chaîne `nptr` au premier caractère qu'elle ne peut pas reconnaître comme faisant partie d'un nombre.  Il peut s'agir du caractère null de fin, ou il peut s'agir du premier caractère numérique supérieur ou égal à `base`.  Le paramètre de la catégorie `LC_NUMERIC` des paramètres régionaux détermine la reconnaissance des caractères de base dans `nptr`. Pour plus d'informations, consultez [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  `strtoull` et `wcstoull` utilisent les paramètres régionaux ; `_strtoull_l` et `_wcstoull_l` à la place utilisent les paramètres régionaux dans lesquels est passé mais sont identiques autrement.  Pour plus d'informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La fonction `strtoull` arrête de lire la chaîne `nptr` au premier caractère qu’elle ne peut pas identifier comme faisant partie intégrante d’un nombre. Il peut s’agir du caractère Null de fin ou bien du premier caractère numérique supérieur ou égal à `base`. Le paramètre de la catégorie `LC_NUMERIC` des paramètres régionaux détermine la reconnaissance du caractère de base dans `nptr`. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoull` et `wcstoull` utilisent les paramètres régionaux actifs ; `_strtoull_l` et `_wcstoull_l` utilisent à la place les paramètres régionaux transmis, mais sont sinon identiques. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
- Si `endptr` n'a pas la valeur `NULL`, un pointeur vers le caractère qui a arrêté l'analyse est enregistré à l'emplacement désigné par `endptr`.  Si aucune conversion ne peut être effectuée \(aucun chiffre valide n'a été trouvé ou une base non valide a été spécifiée\), la valeur de `nptr` est enregistrée à l'emplacement désigné par `endptr`.  
+ Si `endptr` n’a pas la valeur `NULL`, un pointeur désignant le caractère qui a arrêté l’analyse est stocké à l’emplacement désigné par `endptr`. Si aucune conversion ne peut être effectuée (aucun chiffre valide n’a été trouvé ou la base spécifiée n’est pas valide), la valeur de `nptr` est stockée à l’emplacement désigné par `endptr`.  
   
- `wcstoull` est une version à caractères larges de `strtoull` et son argument `nptr` est une chaîne à caractères larges.  Sinon, ces fonctions se comportent sinon de façon identique.  
+ `wcstoull` est une version à caractères larges de `strtoull` et son argument `nptr` est une chaîne de caractères larges. Sinon, ces fonctions se comportent de façon identique.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcstoull`|`strtoull`|`strtoull`|`wcstoull`|  
 |`_tcstoull_l`|`strtoull_l`|`_strtoull_l`|`_wcstoull_l`|  
   
- `strtoull` attend `nptr` pour pointer vers une chaîne au format suivant :  
+ `strtoull` s’attend à ce que `nptr` pointe vers une chaîne au format suivant :  
   
- \[`whitespace`\] \[{`+` &#124; `–`}\] \[`0` \[{ `x` &#124; `X` }\]\] \[`digits` &#124; \[`letters`\]\]  
+ [`whitespace`] [{`+` &#124; `-`}] [`0` [{ `x` &#124; `X` }]] [`digits` &#124; [`letters`]]  
   
- Un `whitespace` peut se composer d'espaces et de caractères de tabulation, qui sont ignorés ; les `digits` se composent d'un ou plusieurs chiffres décimaux ; les `letters` se composent d'une ou plusieurs lettres entre « a » et « z » \(ou de « A » à « Z »\).  Le premier caractère qui ne correspond pas à ce formulaire arrête l'analyse.  Si `base` est compris entre 2 et 36, il est utilisé comme base du nombre.  Si `base` est 0, les caractères initiaux de la chaîne qui est désignée par `nptr` sont utilisés pour déterminer la base.  Si le premier caractère est « 0 » et le deuxième caractère n'est pas « x » ou « X », la chaîne est interprétée comme un entier octal.  Si le premier caractère est « 0 » et le deuxième caractère est « x » ou « X », la chaîne est interprétée comme un entier hexadécimal.  Si le premier caractère est compris entre « 1 » et « 9 », la chaîne est interprétée comme un entier décimal.  Les valeurs 10 à 35 sont assignées aux lettres « à » à « z » \(ou « À » à « Z »\) ; seules les lettres dont les valeurs assignées sont inférieures à `base` sont autorisées.  Le premier caractère en dehors de la plage de la base arrête l'analyse.  Par exemple, si `base` correspond à 0 et le premier caractère analysé est « 0 », un entier octal est supposé et un caractère « 8 » ou « 9 » arrête l'analyse.  `strtoull` autorise un préfixe de signe plus \(`+`\) ou de signe moins \(`–`\) ; un signe moins indique que la valeur de retour est négative.  
+ `whitespace` peut être constitué d’espaces et de tabulations, qui sont ignorés ; `digits` se compose d’un ou plusieurs chiffres décimaux ; `letters` comprend une ou plusieurs lettres, de « a » à « z » (ou de « A » à « Z »). Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse. Si `base` a une valeur comprise entre 2 et 36, elle est utilisée comme base numérique. Si `base` a la valeur 0, les premiers caractères de la chaîne désignée par `nptr` servent à déterminer la base. Si le premier caractère est « 0 » et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à `base`. Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, si `base` est égal à 0 et que le premier caractère analysé est « 0 », il est supposé qu’il s’agit d’un entier octal et un caractère « 8 » ou « 9 » a pour effet de stopper l’analyse. `strtoull` autorise la présence d’un signe plus (`+`) ou moins (`-`) en guise de préfixe ; la présence d’un signe moins de début indique que le signe de la valeur de retour est inversé.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`strtoull`|\<stdlib.h\>|  
-|`wcstoull`|\<stdlib.h\> ou \<wchar.h\>|  
-|`_strtoull_l`|\<stdlib.h\>|  
-|`_wcstoull_l`|\<stdlib.h\> ou \<wchar.h\>|  
+|`strtoull`|\<stdlib.h>|  
+|`wcstoull`|\<stdlib.h> ou \<wchar.h>|  
+|`_strtoull_l`|\<stdlib.h>|  
+|`_wcstoull_l`|\<stdlib.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
- Consultez l'exemple de [strtod](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple relatif à [strtod](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  
   
-## Équivalent .NET Framework  
- [System::Convert::ToUInt64](https://msdn.microsoft.com/en-us/library/system.convert.touint32.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [Fonctions de valeur chaîne en valeur numérique](../../c-runtime-library/string-to-numeric-value-functions.md)   
- [strtod, \_strtod\_l, wcstod, \_wcstod\_l](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
- [strtol, wcstol, \_strtol\_l, \_wcstol\_l](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
- [strtoul, \_strtoul\_l, wcstoul, \_wcstoul\_l](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
- [strtoll, \_strtoll\_l, wcstoll, \_wcstoll\_l](../../c-runtime-library/reference/strtoll-strtoll-l-wcstoll-wcstoll-l.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
+ [strtod, _strtod_l, wcstod, _wcstod_l](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
+ [strtol, wcstol, _strtol_l, _wcstol_l](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   
+ [strtoul, _strtoul_l, wcstoul, _wcstoul_l](../../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)   
+ [strtoll, _strtoll_l, wcstoll, _wcstoll_l](../../c-runtime-library/reference/strtoll-strtoll-l-wcstoll-wcstoll-l.md)   
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

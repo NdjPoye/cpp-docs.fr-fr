@@ -6,24 +6,26 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 84fe6a13-6f6e-4cdc-bf8f-6f65ab1134d4
 caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2a1f1c21cdcd42e7e8d33eb6405297fc88635d87
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 99e42dab27a7ee03c42e9b1b5a35e94cc7ed050b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt;, opérateurs
 ||||  
 |-|-|-|  
-|[operator&amp;](#operator_amp_)|[operator&gt;&gt;](#operator_gt__gt_)|[operator&lt;&lt;](#operator_lt__lt_)|  
-|[operator_xor](#operator_xor)|[operator_or](#operator_or)|  
+|[operator&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
+|[operator^](#op_xor)|[operator|](#op_or)|  
   
-##  <a name="a-nameoperatorampa--operatoramp"></a><a name="operator_amp_"></a>  operator&amp;  
+##  <a name="op_amp"></a>  operator&amp;  
  Exécute une opération `AND` au niveau du bit entre deux bitsets.  
   
 ```  
@@ -35,14 +37,14 @@ operator&(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` left`  
+ `left`  
  Le premier des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `AND` au niveau du bit.  
   
- ` right`  
+ `right`  
  Le deuxième des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `AND` au niveau du bit.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Bitset dont les éléments sont le résultat de l’exécution de l’opération `AND` sur les éléments correspondants de ` left` et ` right`.  
+ Bitset dont les éléments sont le résultat de l’exécution de l’opération `AND` sur les éléments correspondants de `left` et `right`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -72,7 +74,7 @@ bitset 2: 0011
 bitset 3: 0001  
 ```  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  Insère une représentation textuelle de la séquence de bits dans le flux de sortie.  
   
 ```  
@@ -80,12 +82,11 @@ bitset 3: 0001
 template <class CharType, class Traits, size_t N>  
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,  
-    const bitset<N>& 
-    right);
+    const bitset<N>& right);
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` right`  
+ `right`  
  Objet de type **bitset\<N>** qui doit être inséré dans le flux de sortie sous forme de chaîne.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -127,7 +128,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatorgtgta--operatorgtgt"></a><a name="operator_gt__gt_"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
  Lit une chaîne de bits dans un bitset.  
   
 ```  
@@ -144,7 +145,7 @@ _Istr,
  `_Istr`  
  Chaîne entrée dans le flux d’entrée à insérer dans le bitset.  
   
- ` right`  
+ `right`  
  Bitset qui reçoit les bits du flux d’entrée.  
   
 ### <a name="return-value"></a>Valeur de retour  
@@ -210,7 +211,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-nameoperatorxora--operatorxor"></a><a name="operator_xor"></a>  operator_xor  
+##  <a name="op_xor"></a>  operator^  
  Exécute une opération `EXCLUSIVE-OR` au niveau du bit entre deux bitsets.  
   
 ```  
@@ -222,14 +223,14 @@ operator^(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` left`  
+ `left`  
  Le premier des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `EXCLUSIVE-OR` au niveau du bit.  
   
- ` right`  
+ `right`  
  Le deuxième des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `EXCLUSIVE-OR` au niveau du bit.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Bitset dont les éléments sont le résultat de l’exécution de l’opération `EXCLUSIVE-OR` sur les éléments correspondants de ` left` et ` right`.  
+ Bitset dont les éléments sont le résultat de l’exécution de l’opération `EXCLUSIVE-OR` sur les éléments correspondants de `left` et `right`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -259,7 +260,7 @@ bitset 2: 0011
 bitset 3: 0110  
 ```  
   
-##  <a name="a-nameoperatorora--operatoror"></a><a name="operator_or"></a>  operator_or  
+##  <a name="op_or"></a>opérateur |  
  Exécute une opération `OR` au niveau du bit entre deux bitsets.  
   
 ```  
@@ -271,14 +272,14 @@ operator|(
 ```  
   
 ### <a name="parameters"></a>Paramètres  
- ` left`  
+ `left`  
  Le premier des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `OR` au niveau du bit.  
   
- ` right`  
+ `right`  
  Le deuxième des deux bitsets dont les éléments respectifs doivent être combinés avec l’opérateur `OR` au niveau du bit.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Bitset dont les éléments sont le résultat de l’exécution de l’opération `OR` sur les éléments correspondants de ` left` et ` right`.  
+ Bitset dont les éléments sont le résultat de l’exécution de l’opération `OR` sur les éléments correspondants de `left` et `right`.  
   
 ### <a name="example"></a>Exemple  
   

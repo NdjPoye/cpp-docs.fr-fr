@@ -1,89 +1,106 @@
 ---
-title: "_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_strupr_s"
-  - "_strupr_s_l"
-  - "_mbsupr_s"
-  - "_wcsupr_s_l"
-  - "_mbsupr_s_l"
-  - "_wcsupr_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "strupr_s"
-  - "mbsupr_s"
-  - "wcsupr_s"
-  - "_mbsupr_s_l"
-  - "mbsupr_s_l"
-  - "wcsupr_s_l"
-  - "_wcsupr_s"
-  - "_tcsupr_s_l"
-  - "_mbsupr_s"
-  - "_tcsupr_s"
-  - "strupr_s_l"
-  - "_wcsupr_s_l"
-  - "_strupr_s"
-  - "_strupr_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsupr_s (fonction)"
-  - "_mbsupr_s_l (fonction)"
-  - "_strupr_s (fonction)"
-  - "_strupr_s_l (fonction)"
-  - "_tcsupr_s (fonction)"
-  - "_tcsupr_s_l (fonction)"
-  - "_wcsupr_s (fonction)"
-  - "_wcsupr_s_l (fonction)"
-  - "convertir la casse, CRT (fonctions)"
-  - "mbsupr_s (fonction)"
-  - "mbsupr_s_l (fonction)"
-  - "conversion de chaînes (C++), casse"
-  - "chaînes (C++), casse"
-  - "chaînes (C++), convertir la casse"
-  - "strupr_s (fonction)"
-  - "strupr_s_l (fonction)"
-  - "tcsupr_s (fonction)"
-  - "tcsupr_s_l (fonction)"
-  - "majuscules, convertir les chaînes en"
-  - "wcsupr_s (fonction)"
-  - "wcsupr_s_l (fonction)"
+title: _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _strupr_s
+- _strupr_s_l
+- _mbsupr_s
+- _wcsupr_s_l
+- _mbsupr_s_l
+- _wcsupr_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- strupr_s
+- mbsupr_s
+- wcsupr_s
+- _mbsupr_s_l
+- mbsupr_s_l
+- wcsupr_s_l
+- _wcsupr_s
+- _tcsupr_s_l
+- _mbsupr_s
+- _tcsupr_s
+- strupr_s_l
+- _wcsupr_s_l
+- _strupr_s
+- _strupr_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbsupr_s_l function
+- strupr_s_l function
+- _wcsupr_s_l function
+- _tcsupr_s_l function
+- mbsupr_s function
+- _wcsupr_s function
+- uppercase, converting strings to
+- tcsupr_s function
+- string conversion [C++], case
+- strupr_s function
+- wcsupr_s_l function
+- _mbsupr_s function
+- _mbsupr_s_l function
+- _strupr_s_l function
+- tcsupr_s_l function
+- strings [C++], case
+- converting case, CRT functions
+- _tcsupr_s function
+- strings [C++], converting case
+- _strupr_s function
+- wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: da1300ca4ec32d1d771b8a00e0b1cfdf207a58a8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
-Convertit une chaîne en majuscules, avec les paramètres régionaux actuels ou des paramètres régionaux spécifiés qui sont passés.  Ces versions [\_strupr, \_strupr\_l, \_mbsupr, \_mbsupr\_l, \_wcsupr\_l, \_wcsupr](../../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) présentent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="struprs-struprsl-mbsuprs-mbsuprsl-wcsuprs-wcsuprsl"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
+Convertit une chaîne en majuscules en utilisant les paramètres régionaux actifs ou des paramètres régionaux spécifiés qui ont été transmis. Ces versions de [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](../../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbsupr_s` et `_mbsupr_s_l` ne peuvent pas être utilisées dans les applications qui s'exécutent dans le Windows Runtime.  Pour plus d'informations, consultez [Fonctions CRT non prises en charge avec \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsupr_s` et `_mbsupr_s_l` ne peuvent pas être utilisées dans les applications qui s'exécutent dans Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 errno_t _strupr_s(  
@@ -142,7 +159,7 @@ errno_t _mbsupr_s_l(
 ); // C++ only  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `str`  
  Chaîne à mettre en majuscules.  
   
@@ -152,44 +169,41 @@ errno_t _mbsupr_s_l(
  `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
- Zéro si l'opération a réussi ; code d'erreur non nul en cas d'échec.  
+## <a name="return-value"></a>Valeur de retour  
+ Zéro en cas de réussite ; code d’erreur différent de zéro en cas d’échec.  
   
- Ces fonctions valident leurs paramètres.  Si `str` est un pointeur `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, les fonctions retournent \-1 `EINVAL` et attribuent à `errno` la valeur `EINVAL`.  Si `numberOfElements` est inférieur à la longueur de la chaîne de caractère, les fonctions retournent également `ERANGE` et attribuent à `errno` la valeur `ERANGE`.  
+ Ces fonctions valident leurs paramètres. Si `str` est un pointeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent `EINVAL` et affectent à `errno` la valeur `EINVAL`. Si la valeur de `numberOfElements` est inférieure à la longueur de la chaîne, ces fonctions retournent `ERANGE` et affectent à `errno` la valeur `ERANGE`.  
   
-## Notes  
- La fonction `_strupr_s` convertit, sur place, toutes les lettres minuscules dans `str` en majuscules.  `_wcsupr_s` est la version à caractère élargi de `_strupr_s`.  `_mbsupr_s` est la version à caractères multioctet de `_strupr_s`.  
+## <a name="remarks"></a>Notes  
+ La fonction `_strupr_s` convertit sur place chaque lettre minuscule contenue dans `str` en majuscule. `_wcsupr_s` est la version à caractères larges de `_strupr_s`. `_mbsupr_s` est la version à caractères multioctets de `_strupr_s`.  
   
- La conversion est déterminée par le paramètre de catégorie `LC_CTYPE` des paramètres régionaux.  Les autres caractères ne sont pas affectés.  Pour plus d'informations sur `LC_CTYPE`, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux actuels; les versions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux passés.  Pour plus d'informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ La conversion est déterminée par le paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Les autres caractères ne sont pas concernés. Pour plus d’informations sur `LC_CTYPE`, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans suffixe `_l` utilisent les paramètres régionaux actifs ; les versions avec suffixe `_l` sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
- En C\+\+, l'utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement \(ce qui évite d'avoir à spécifier un argument taille\) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées.  Pour plus d'informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
   
- Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD.  Pour désactiver ce comportement, utilisez [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
+ Les versions debug de ces fonctions remplissent d'abord la mémoire tampon avec 0xFD. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsupr_s`|`_strupr_s`|`_mbsupr_s`|`_wcsupr_s`|  
 |`_tcsupr_s_l`|`_strupr_s_l`|`_mbsupr_s_l`|`_wcsupr_s_l`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_strupr_s`, `_strupr_s_l`|\<string.h\>|  
-|`_wcsupr_s`, `_wcsupr_s_l`, `_mbsupr_s`, `_mbsupr_s_l`|\<string.h\> ou \<wchar.h\>|  
+|`_strupr_s`, `_strupr_s_l`|\<string.h>|  
+|`_wcsupr_s`, `_wcsupr_s_l`, `_mbsupr_s`, `_mbsupr_s_l`|\<string.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
- Consultez l'exemple pour [\_strlwr\_s, \_strlwr\_s\_l, \_mbslwr\_s, \_mbslwr\_s\_l, \_wcslwr\_s, \_wcslwr\_s\_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple relatif à [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).  
   
-## Équivalent .NET Framework  
- [System::String::ToUpper](https://msdn.microsoft.com/en-us/library/system.string.toupper.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
  [Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   
- [\_strlwr\_s, \_strlwr\_s\_l, \_mbslwr\_s, \_mbslwr\_s\_l, \_wcslwr\_s, \_wcslwr\_s\_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)
+ [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)

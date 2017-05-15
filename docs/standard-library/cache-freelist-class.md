@@ -1,69 +1,135 @@
 ---
-title: "cache_freelist, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdext.cache_freelist"
-  - "allocators/stdext::cache_freelist"
-  - "stdext::cache_freelist"
-  - "cache_freelist"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cache_freelist (classe)"
+title: cache_freelist, classe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- allocators/stdext::cache_freelist
+- stdext::cache_freelist
+- cache_freelist
+- allocators/stdext::cache_freelist::allocate
+- allocators/stdext::cache_freelist::deallocate
+dev_langs:
+- C++
+helpviewer_keywords:
+- cache_freelist class
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# cache_freelist, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7d15c40a0116e8d6de2346a7da74045c2a7ee795
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
-Définit un [Bloquer allocateur](../standard-library/allocators-header.md) qui alloue et libère de blocs de mémoire d’une taille unique.  
+---
+# <a name="cachefreelist-class"></a>cache_freelist, classe
+Définit un [allocateur de blocs](../standard-library/allocators-header.md) qui alloue et désalloue des blocs de mémoire de taille unique.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+template <std::size_t Sz, class Max>  
+class cache_freelist
 ```  
-template <std::size_t Sz, class Max> class cache_freelist  
-```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|`Sz`|Le nombre d’éléments dans le tableau à allouer.|  
-|`Max`|La classe max représentant la taille maximale de la liste libre. Cela peut être [max\_fixed\_size](../standard-library/max-fixed-size-class.md), [max\_none](../standard-library/max-none-class.md), [max\_unbounded](../standard-library/max-unbounded-class.md), ou [max\_variable\_size](../standard-library/max-variable-size-class.md).|  
+|`Sz`|Nombre d’éléments du tableau à allouer.|  
+|`Max`|Classe max représentant la taille maximale de la liste de libération. Cette taille peut être [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) ou [max_variable_size](../standard-library/max-variable-size-class.md).|  
   
-## Notes  
- La classe de modèle cache\_freelist conserve une liste libre de blocs de mémoire de taille `Sz`. Lorsque la liste libre est plein, il utilise `operator delete` pour libérer la mémoire bloque. Lorsque la liste libre est vide, il utilise `operator new` pour allouer de nouveaux blocs de mémoire. La taille maximale de la liste libre est déterminée par la classe classe max passée dans le `Max` paramètre.  
+## <a name="remarks"></a>Notes  
+ La classe de modèle cache_freelist conserve une liste de libération des blocs de mémoire de taille `Sz`. Quand la liste de libération est pleine, elle utilise `operator delete` pour désallouer des blocs de mémoire. Quand la liste de libération est vide, elle utilise `operator new` pour allouer de nouveaux blocs de mémoire. La taille maximale de la liste de libération est déterminée par la classe max passée dans le paramètre `Max`.  
   
- Chaque bloc de mémoire conserve `Sz` octets de mémoire utilisable et les données qui `operator new` et `operator delete` requièrent.  
+ Chaque bloc de mémoire contient `Sz` octets de mémoire utilisable et les données dont `operator new` et `operator delete` ont besoin.  
   
-### Constructeurs  
-  
-|||  
-|-|-|  
-|[cache\_freelist](../Topic/cache_freelist::cache_freelist.md)|Construit un objet de type `cache_freelist`.|  
-  
-### Fonctions membres  
+### <a name="constructors"></a>Constructeurs  
   
 |||  
 |-|-|  
-|[allocate](../Topic/cache_freelist::allocate.md)|Alloue un bloc de mémoire.|  
-|[deallocate](../Topic/cache_freelist::deallocate.md)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|  
+|[cache_freelist](#cache_freelist)|Construit un objet de type `cache_freelist`.|  
   
-## Configuration requise  
- **En\-tête :** \<allocators\>  
+### <a name="member-functions"></a>Fonctions membres  
   
- **Espace de noms :** stdext  
+|||  
+|-|-|  
+|[allocate](#allocate)|Alloue un bloc de mémoire.|  
+|[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|  
   
-## Voir aussi  
- [\<allocators\>](../standard-library/allocators-header.md)
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<allocators>  
+  
+ **Espace de noms :** stdext  
+  
+##  <a name="allocate"></a>  cache_freelist::allocate  
+ Alloue un bloc de mémoire.  
+  
+```
+void *allocate(std::size_t count);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+  
+|Paramètre|Description|  
+|---------------|-----------------|  
+|`count`|Nombre d’éléments du tableau à allouer.|  
+  
+### <a name="return-value"></a>Valeur de retour  
+ Un pointeur vers l’objet alloué.  
+  
+### <a name="remarks"></a>Notes  
+  
+##  <a name="cache_freelist"></a>  cache_freelist::cache_freelist  
+ Construit un objet de type `cache_freelist`.  
+  
+```
+cache_freelist();
+```  
+  
+### <a name="remarks"></a>Notes  
+  
+##  <a name="deallocate"></a>  cache_freelist::deallocate  
+ Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.  
+  
+```
+void deallocate(void* ptr, std::size_t count);
+```  
+  
+### <a name="parameters"></a>Paramètres  
+  
+|Paramètre|Description|  
+|---------------|-----------------|  
+|`ptr`|Pointeur vers le premier objet à désallouer dans le stockage.|  
+|`count`|Nombre d’objets à désallouer dans le stockage.|  
+  
+### <a name="remarks"></a>Notes  
+  
+## <a name="see-also"></a>Voir aussi  
+ [\<allocators>](../standard-library/allocators-header.md)
+
+
+
+

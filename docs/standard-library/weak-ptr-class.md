@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: 9e36da6c4f7dde6df281d8ad229373d861ee045a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f7e4ff26f4d98dc677483f8526c17474aecc81dc
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="weakptr-class"></a>weak_ptr, classe
@@ -89,7 +90,7 @@ public:
 ## <a name="remarks"></a>Notes  
  La classe de modèle décrit un objet qui pointe vers une ressource gérée par un ou plusieurs objets [shared_ptr (classe)](../standard-library/shared-ptr-class.md). Les objets `weak_ptr` qui pointent vers une ressource n'affectent pas le décompte de références de la ressource. Ainsi, quand le dernier objet `shared_ptr` qui gère cette ressource est détruit, la ressource est libérée, même s'il existe des objets `weak_ptr` pointant vers cette ressource. Ceci est essentiel pour éviter les cycles de structures de données.  
   
- Un objet `weak_ptr` pointe vers une ressource s’il a été construit à partir d’un objet `shared_ptr` qui détient cette ressource, s’il a été construit à partir d’un objet `weak_ptr` qui pointe vers cette ressource ou si cette ressource lui a été assignée à l’aide d’[operator=](#weak_ptr__operator_eq). Un objet `weak_ptr` ne fournit pas un accès direct à la ressource vers laquelle il pointe. Le code qui a besoin d’utiliser la ressource le fait via un objet `shared_ptr` qui détient cette ressource, créé en appelant la fonction membre [lock](#weak_ptr__lock). Un objet `weak_ptr` a expiré quand la ressource vers laquelle il pointe a été libérée car tous les objets `shared_ptr` détenant la ressource ont été détruits. L'appel de `lock` sur un objet `weak_ptr` qui a expiré crée un objet shared_ptr vide.  
+ Un objet `weak_ptr` pointe vers une ressource s’il a été construit à partir d’un objet `shared_ptr` qui détient cette ressource, s’il a été construit à partir d’un objet `weak_ptr` qui pointe vers cette ressource ou si cette ressource lui a été assignée à l’aide d’[operator=](#op_eq). Un objet `weak_ptr` ne fournit pas un accès direct à la ressource vers laquelle il pointe. Le code qui a besoin d’utiliser la ressource le fait via un objet `shared_ptr` qui détient cette ressource, créé en appelant la fonction membre [lock](#lock). Un objet `weak_ptr` a expiré quand la ressource vers laquelle il pointe a été libérée car tous les objets `shared_ptr` détenant la ressource ont été détruits. L'appel de `lock` sur un objet `weak_ptr` qui a expiré crée un objet shared_ptr vide.  
   
  Un objet weak_ptr vide ne pointe vers aucune ressource et n'a aucun bloc de contrôle. Sa fonction membre `lock` retourne un objet shared_ptr vide.  
   
@@ -101,32 +102,32 @@ public:
   
 |||  
 |-|-|  
-|[weak_ptr](#weak_ptr__weak_ptr)|Construit un objet `weak_ptr`.|  
+|[weak_ptr](#weak_ptr)|Construit un objet `weak_ptr`.|  
   
 ### <a name="methods"></a>Méthodes  
   
 |||  
 |-|-|  
-|[element_type](#weak_ptr__element_type)|Type de l'élément.|  
-|[expired](#weak_ptr__expired)|Teste si la propriété a expiré.|  
-|[lock](#weak_ptr__lock)|Obtient la propriété exclusive d'une ressource.|  
-|[owner_before](#weak_ptr__owner_before)|Retourne `true` si ce `weak_ptr` est classé avant le pointeur fourni (ou est inférieur à celui-ci).|  
-|[reset](#weak_ptr__reset)|Libère la ressource détenue.|  
-|[swap](#weak_ptr__swap)|Échange deux objets `weak_ptr`.|  
-|[use_count](#weak_ptr__use_count)|Compte le nombres d'objets `shared_ptr` désignés.|  
+|[element_type](#element_type)|Type de l'élément.|  
+|[expired](#expired)|Teste si la propriété a expiré.|  
+|[lock](#lock)|Obtient la propriété exclusive d'une ressource.|  
+|[owner_before](#owner_before)|Retourne `true` si ce `weak_ptr` est classé avant le pointeur fourni (ou est inférieur à celui-ci).|  
+|[reset](#reset)|Libère la ressource détenue.|  
+|[swap](#swap)|Échange deux objets `weak_ptr`.|  
+|[use_count](#use_count)|Compte le nombres d'objets `shared_ptr` désignés.|  
   
 ### <a name="operators"></a>Opérateurs  
   
 |||  
 |-|-|  
-|[operator=](#weak_ptr__operator_eq)|Remplace la ressource détenue.|  
+|[operator=](#op_eq)|Remplace la ressource détenue.|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** \<memory>  
   
  **Espace de noms :** std  
   
-##  <a name="weak_ptr__element_type"></a>  element_type  
+##  <a name="element_type"></a>  element_type  
  Type de l'élément.  
   
 ```  
@@ -161,7 +162,7 @@ int main()
 *wp0.lock() == 5  
 ```  
   
-##  <a name="weak_ptr__expired"></a>  expired  
+##  <a name="expired"></a>  expired  
  Teste si la propriété a expiré.  
   
 ```  
@@ -217,7 +218,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="weak_ptr__lock"></a>  lock  
+##  <a name="lock"></a>  lock  
  Obtient la propriété exclusive d'une ressource.  
   
 ```  
@@ -273,7 +274,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="weak_ptr__operator_eq"></a>  operator=  
+##  <a name="op_eq"></a>  operator=  
  Remplace la ressource détenue.  
   
 ```  
@@ -332,7 +333,7 @@ int main()
 *wp1.lock() == 10  
 ```  
   
-##  <a name="weak_ptr__owner_before"></a>  owner_before  
+##  <a name="owner_before"></a>  owner_before  
  Retourne `true` si ce `weak_ptr` est classé avant le pointeur fourni (ou est inférieur à celui-ci).  
   
 ```  
@@ -350,7 +351,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>Notes  
  La fonction membre de modèle retourne `true` si `*this` est `ordered before``ptr`.  
   
-##  <a name="weak_ptr__reset"></a>  reset  
+##  <a name="reset"></a>  reset  
  Libère la ressource détenue.  
   
 ```  
@@ -391,7 +392,7 @@ wp.expired() == false
 wp.expired() == true  
 ```  
   
-##  <a name="weak_ptr__swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  Échange deux objets `weak_ptr`.  
   
 ```  
@@ -459,7 +460,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="weak_ptr__use_count"></a>  use_count  
+##  <a name="use_count"></a>  use_count  
  Compte le nombres d'objets `shared_ptr` désignés.  
   
 ```  
@@ -498,7 +499,7 @@ wp.use_count() == 1
 wp.use_count() == 2  
 ```  
   
-##  <a name="weak_ptr__weak_ptr"></a>  weak_ptr  
+##  <a name="weak_ptr"></a>  weak_ptr  
  Construit un objet `weak_ptr`.  
   
 ```  

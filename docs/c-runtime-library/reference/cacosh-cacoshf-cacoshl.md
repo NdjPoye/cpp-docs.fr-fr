@@ -1,59 +1,74 @@
 ---
-title: "cacosh, cacoshf, cacoshl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "cacosh"
-  - "cacoshf"
-  - "cacoshl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cacosh"
-  - "cacoshf"
-  - "cacoshl"
-  - "complex/cacosh"
-  - "complex/cacoshf"
-  - "complex/cacoshl"
-dev_langs: 
-  - "C"
-  - "C++"
-helpviewer_keywords: 
-  - "cacosh (fonction)"
-  - "cacoshf (fonction)"
-  - "cacoshl (fonction)"
+title: cacosh, cacoshf, cacoshl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- cacosh
+- cacoshf
+- cacoshl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- cacosh
+- cacoshf
+- cacoshl
+- complex/cacosh
+- complex/cacoshf
+- complex/cacoshl
+dev_langs:
+- C++
+helpviewer_keywords:
+- cacosh function
+- cacoshf function
+- cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# cacosh, cacoshf, cacoshl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 240b5f0806072e608667cedeb20525367e3847fa
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
-Récupère le cosinus hyperbolique inverse d’un nombre complexe avec une branche coupe à des valeurs inférieures à 1 sur l’axe réel. .  
+---
+# <a name="cacosh-cacoshf-cacoshl"></a>cacosh, cacoshf, cacoshl
+Récupère le cosinus hyperbolique inverse d’un nombre complexe avec une coupure à des valeurs inférieures à 1 sur l’axe des réels. .  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 _Dcomplex cacosh(   
@@ -73,25 +88,25 @@ _Lcomplex cacoshl(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `z`  
- Un nombre complexe qui représente l’angle, en radians.  
+ Nombre complexe qui représente un angle, en radians.  
   
-## Valeur de retour  
- Le cosinus hyperbolique inverse de `z`, en radians. Le résultat est illimitée et négatif sur l’axe réel, ainsi que dans l’intervalle \[−iπ \+ iπ\] sur l’axe imaginaire.  
+## <a name="return-value"></a>Valeur de retour  
+ Cosinus hyperbolique inverse de `z`, en radians. Le résultat est non liée et non négatif sur l’axe réel, ainsi que dans l’intervalle [-iπ, + iπ] sur l’axe imaginaire.  
   
-## Notes  
- C\+\+ autorisant la surcharge, vous pouvez appeler des surcharges de `cacosh` qui acceptent et retournent des valeurs `_Fcomplex` et `_Lcomplex`. Dans un programme C, `cacosh` accepte et retourne toujours un `_Dcomplex` valeur.  
+## <a name="remarks"></a>Remarques  
+ C++ autorisant la surcharge, vous pouvez appeler des surcharges de `cacosh` qui acceptent et retournent des valeurs `_Fcomplex` et `_Lcomplex`. Dans un programme C, `cacosh` accepte et retourne toujours une valeur `_Dcomplex` .  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête C|En\-tête C\+\+|  
-|-------------|----------------|--------------------|  
-|`cacosh`, `cacoshf`, `cacoshl`|\<complex.h\>|\< ccomplex \>|  
+|Routine|En-tête C|En-tête C++|  
+|-------------|--------------|------------------|  
+|`cacosh`,               `cacoshf`, `cacoshl`|\<complex.h>|\<ccomplex>|  
   
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence alphabétique des fonctions](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   

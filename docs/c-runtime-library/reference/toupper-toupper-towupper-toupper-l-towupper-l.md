@@ -1,67 +1,84 @@
 ---
-title: "toupper, _toupper, towupper, _toupper_l, _towupper_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_toupper_l"
-  - "towupper"
-  - "toupper"
-  - "_towupper_l"
-  - "_toupper"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "towupper"
-  - "_toupper"
-  - "_totupper"
-  - "toupper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_totupper (fonction)"
-  - "_toupper (fonction)"
-  - "_toupper_l (fonction)"
-  - "_towupper_l (fonction)"
-  - "casse, convertir"
-  - "caractères, convertir"
-  - "conversion de chaînes, casse"
-  - "conversion de chaînes, en caractères différents"
-  - "totupper (fonction)"
-  - "toupper (fonction)"
-  - "toupper_l (fonction)"
-  - "towupper (fonction)"
-  - "towupper_l (fonction)"
-  - "majuscules, convertir les chaînes en"
+title: toupper, _toupper, towupper, _toupper_l, _towupper_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _toupper_l
+- towupper
+- toupper
+- _towupper_l
+- _toupper
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- towupper
+- _toupper
+- _totupper
+- toupper
+dev_langs:
+- C++
+helpviewer_keywords:
+- _toupper function
+- towupper function
+- uppercase, converting strings to
+- totupper function
+- string conversion, to different characters
+- towupper_l function
+- toupper_l function
+- string conversion, case
+- _toupper_l function
+- _towupper_l function
+- _totupper function
+- case, converting
+- characters, converting
+- toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# toupper, _toupper, towupper, _toupper_l, _towupper_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e782f6168d48ecc1d24b90f2030909de32c9ee26
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
-Convertie des caractères en majuscules.  
+---
+# <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
+Convertit le caractère en majuscule.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int toupper(  
@@ -83,56 +100,53 @@ int _towupper_l(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `c`  
  Caractère à convertir.  
   
  `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
- Chacune de ces routines convertit une copie de`c`, si possible, puis retourne le résultat.  
+## <a name="return-value"></a>Valeur de retour  
+ Chacune de ces routines convertit une copie de `c`, si possible, et retourne le résultat.  
   
- Si `c` est un caractère large pour lequel `iswlower` est différente de zéro et qu'il y a un caractère large correspondant pour lequel `iswupper` est différente de zéro, `towupper` retourne le caractère large correspondant ; sinon, `towupper` retourne`c` inchangé.  
+ Si `c` est un caractère large pour lequel `iswlower` a une valeur différente de zéro et s’il existe un caractère large correspondant pour lequel `iswupper` a une valeur différente de zéro, `towupper` retourne le caractère large correspondant ; sinon, `towupper` retourne `c` inchangé.  
   
- Aucune valeur de retour n'est réservée pour indiquer une erreur.  
+ Il n’existe aucune valeur de retour réservée pour indiquer une erreur.  
   
- Pour que `toupper` montre les résultats attendus, [\_\_isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) et [islower](../../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md) doivent tous les deux retourner une valeur non nulle.  
+ Pour que `toupper` donne les résultats attendus, [__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) et [islower](../../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md) doivent retourner une valeur différente de zéro.  
   
-## Notes  
- Chacune de ces routines convertit une lettre minuscule donnée en un caractère majuscule lorsque cela est possible et approprié.  La conversion en majuscules ou minuscules de`towupper` est spécifique aux paramètres locaux.  Seuls les caractères concernant les paramètres locaux actuels sont modifiés en cas de.  Les fonctions sans le suffixe `_l` utilisent les paramètres locaux actuellement définis.  Les versions de ces fonctions avec le suffixe `_l`  sont identiques, sauf qu'elles utilisent les paramètres locaux passés au lieu des paramètres locaux actuels.  Pour plus d'informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+## <a name="remarks"></a>Notes  
+ Chacune de ces routines convertit une lettre minuscule donnée en lettre majuscule si cela est possible et approprié. La conversion de la casse de `towupper` est spécifique aux paramètres régionaux. Seuls les caractères relevant des paramètres régionaux actifs changent de casse. Les fonctions sans suffixe `_l` utilisent les paramètres régionaux actuellement définis. Les versions de ces fonctions avec suffixe `_l` prennent les paramètres régionaux comme paramètre et les utilisent à la place des paramètres régionaux actuellement définis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
- Pour que `toupper` montre les résultats attendus, [\_\_isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) et [islower](../../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md) doivent tous les deux retourner une valeur non nulle.  
+ Pour que `toupper` donne les résultats attendus, [__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) et [isupper](../../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md) doivent retourner une valeur différente de zéro.  
   
- [routines de conversion de données](../../c-runtime-library/data-conversion.md)  
+ [Routines de conversion de données](../../c-runtime-library/data-conversion.md)  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_totupper`|`toupper`|`_mbctoupper`|`towupper`|  
 |`_totupper_l`|`_toupper_l`|`_mbctoupper_l`|`_towupper_l`|  
   
 > [!NOTE]
->  `_toupper_l` et `_towupper_l` n'ont aucune dépendance de paramètres régionaux et ne sont pas censés être appelés directement.  Ils sont fournis pour un usage interne par `_totupper_l`.  
+> Les routines  `_toupper_l` et `_towupper_l` ne dépendent pas des paramètres régionaux et ne sont pas destinées à être appelées directement. Elles sont fournies pour une utilisation en interne par `_totupper_l`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`toupper`|\<ctype.h\>|  
-|`_toupper`|\<ctype.h\>|  
-|`towupper`|\<ctype.h\> ou \<wchar.h\>|  
+|`toupper`|\<ctype.h>|  
+|`_toupper`|\<ctype.h>|  
+|`towupper`|\<ctype.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
- Consultez l'exemple dans [des fonctions](../../c-runtime-library/to-functions.md).  
+## <a name="example"></a>Exemple  
+ Consultez l’exemple dans [to, fonctions](../../c-runtime-library/to-functions.md).  
   
-## Équivalent .NET Framework  
- [System::Char::ToUpper](https://msdn.microsoft.com/en-us/library/system.char.toupper.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [is, isw, routines](../../c-runtime-library/is-isw-routines.md)   
  [to, fonctions](../../c-runtime-library/to-functions.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   

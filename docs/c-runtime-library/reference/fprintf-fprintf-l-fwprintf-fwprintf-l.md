@@ -1,61 +1,79 @@
 ---
-title: "fprintf, _fprintf_l, fwprintf, _fwprintf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fwprintf"
-  - "fprintf"
-  - "_fprintf_l"
-  - "_fwprintf_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fprintf"
-  - "fwprintf"
-  - "_ftprintf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fwprintf_l (fonction)"
-  - "fprintf (fonction)"
-  - "fprintf_l (fonction)"
-  - "_fprintf_l (fonction)"
-  - "_ftprintf (fonction)"
-  - "fwprintf (fonction)"
-  - "ftprintf_l (fonction)"
-  - "ftprintf (fonction)"
-  - "_ftprintf_l (fonction)"
-  - "imprimer des données mises en forme dans les flux"
-  - "fwprintf_l (fonction)"
+title: fprintf, _fprintf_l, fwprintf, _fwprintf_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fwprintf
+- fprintf
+- _fprintf_l
+- _fwprintf_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- fprintf
+- fwprintf
+- _ftprintf
+dev_langs:
+- C++
+helpviewer_keywords:
+- _fwprintf_l function
+- fprintf function
+- fprintf_l function
+- _fprintf_l function
+- _ftprintf function
+- fwprintf function
+- ftprintf_l function
+- ftprintf function
+- _ftprintf_l function
+- print formatted data to streams
+- fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# fprintf, _fprintf_l, fwprintf, _fwprintf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d0f921aa46915220bb92f8ed1834f4c0e28ed57d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
-imprimer des données mises en forme dans les flux  Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [fprintf\_s, \_fprintf\_s\_l, fwprintf\_s, \_fwprintf\_s\_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
+---
+# <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
+Envoient les données mises en forme vers un flux. Il existe des versions plus sécurisées de ces fonctions. Consultez [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int fprintf(   
@@ -82,9 +100,9 @@ int _fwprintf_l(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `stream`  
- Pointeur vers la structure `FILE`.  
+ Pointeur vers la structure `FILE` .  
   
  `format`  
  Chaîne de contrôle de format.  
@@ -95,40 +113,40 @@ int _fwprintf_l(
  `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
- `fprintf`retourne le nombre d'octets écrit.  `fwprintf` retourne le nombre de caractères larges entrés.  Chacune de ces fonctions retourne une valeur négative à la place lorsqu'une erreur de sortie se produit.  Si `stream` ou `format` est `NULL`, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans `NULL`.  Si l'exécution est autorisée à se poursuivre, cette fonction renvoient \-1 et définie `errno` avec la valeur `EINVAL`.  La chaîne de format n'est pas vérifiée pour les caractères de mise en forme valides tels qu'on le rencontre en utilisant `fprintf_s` ou `fwprintf_s`.  
+## <a name="return-value"></a>Valeur de retour  
+ `fprintf` retourne le nombre d’octets écrits. `fwprintf` retourne le nombre de caractères larges écrits. Chacune de ces fonctions retourne une valeur négative à la place en cas d’erreur de sortie. Si `stream` ou `format` a la valeur `NULL`, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions retournent -1 et définissent `errno` avec la valeur `EINVAL`. La chaîne de format ne fait pas l’objet d’une vérification des caractères de mise en forme, comme c’est le cas avec `fprintf_s` ou `fwprintf_s`.  
   
- Consultez [\_doserrno, errno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d'informations sur ces éléments et autres codes d'erreur.  
+ Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.  
   
-## Notes  
- La fonction `fprintf` met en forme et retourne une série de caractères et de valeurs en sortue \<parameterReference\>3stream4\<\/parameterReference\>3\<legacyItalic\>5.\<\/legacyItalic\> Chaque fonction `argument` \(le cas échéant\) est convertie et sortie selon la spécification de format correspondante dans \<parameterReference\>format\<\/parameterReference\>\<legacyItalic\>.\<\/legacyItalic\> Pour `fprintf`, l'argument `format` a la même syntaxe et utilisation que dans `printf`.  
+## <a name="remarks"></a>Remarques  
+ `fprintf` met en forme et envoie une série de caractères et de valeurs vers la sortie `stream`. Chaque fonction `argument` (le cas échéant) est convertie et sortie selon la spécification de format correspondante dans `format`. Pour `fprintf`, l’argument `format` a les mêmes syntaxe et utilisation que dans `printf`.  
   
- `fwprintf` est une version à caractères larges de `fprintf` ; dans `fwprintf`, `format` est une chaîne à caractères larges.  Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI.  `fprintf` ne prend pas en charge actuellement la sortie dans un flux UNICODE.  
+ `fwprintf` est une version à caractères larges de `fprintf` ; dans `fwprintf`, `format` est une chaîne à caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. `fprintf` ne prend actuellement pas en charge la sortie vers un flux UNICODE.  
   
  Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.  
   
 > [!IMPORTANT]
->  Assurez\-vous que `format` n'est pas une chaîne définie par l'utilisateur.  
+>  Assurez-vous que `format` n'est pas une chaîne définie par l'utilisateur.  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ftprintf`|`fprintf`|`fprintf`|`fwprintf`|  
 |`_ftprintf_l`|`_fprintf_l`|`_fprintf_l`|`_fwprintf_l`|  
   
- Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Fonction|En\-tête requis|  
+|Fonction|En-tête requis|  
 |--------------|---------------------|  
-|`fprintf`, `_fprintf_l`|\<stdio.h\>|  
-|`fwprintf`, `_fwprintf_l`|\<stdio.h\> ou \<wchar.h\>|  
+|`fprintf`, `_fprintf_l`|\<stdio.h>|  
+|`fwprintf`, `_fwprintf_l`|\<stdio.h> ou \<wchar.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_fprintf.c  
@@ -159,15 +177,15 @@ int main( void )
 }  
 ```  
   
-  **Il s'agit d'une chaîne.**  
-**10**  
-**1.500000**   
-## Équivalent .NET Framework  
- [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
+```Output  
+this is a string  
+10  
+1.500000  
+```  
   
-## Voir aussi  
- [E\/S de flux](../../c-runtime-library/stream-i-o.md)   
- [\_cprintf, \_cprintf\_l, \_cwprintf, \_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf, \_fscanf\_l, fwscanf, \_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [sprintf, \_sprintf\_l, swprintf, \_swprintf\_l, \_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+## <a name="see-also"></a>Voir aussi  
+ [E/S de flux](../../c-runtime-library/stream-i-o.md)   
+ [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [Syntaxe de spécification de format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)

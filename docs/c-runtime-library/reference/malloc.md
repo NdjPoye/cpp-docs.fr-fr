@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f259e869535e00bf0dd4f18e6a4d8d02e4054685
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 3c024862e1bf993c4e602846d4da125599f3fe7f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="malloc"></a>malloc
@@ -93,7 +94,7 @@ void *malloc(
 |[fputs](../../c-runtime-library/reference/fputs-fputws.md)|[_getdcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)|[scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)||  
 |[fread](../../c-runtime-library/reference/fread.md)|[gets](../../c-runtime-library/gets-getws.md)|[_searchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)||  
   
- La fonction C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) définit le nouveau mode de gestionnaire pour `malloc`. Le nouveau mode de gestionnaire indique si, en cas d’échec, `malloc` doit appeler la nouvelle routine de gestionnaire, telle qu’elle est définie par [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Par défaut, `malloc` n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, quand _`malloc` ne parvient pas à allouer de la mémoire, `malloc` appelle la routine de nouveau gestionnaire de la même façon que l’opérateur `new` quand il échoue pour la même raison. Pour substituer la valeur par défaut, appelez `_set_new_mode(1)` tôt dans votre programme, ou lien avec NEWMODE. OBJ (voir [Options Link](../../c-runtime-library/link-options.md)).  
+ La fonction C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) définit le nouveau mode de gestionnaire pour `malloc`. Le nouveau mode de gestionnaire indique si, en cas d’échec, `malloc` doit appeler la nouvelle routine de gestionnaire, telle qu’elle est définie par [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Par défaut, `malloc` n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, quand _`malloc` ne parvient pas à allouer de la mémoire, `malloc` appelle la routine de nouveau gestionnaire de la même façon que l’opérateur `new` quand il échoue pour la même raison. Pour substituer la valeur par défaut, appelez `_set_new_mode(1)` anticipée dans votre programme, ou votre lien avec NEWMODE. OBJ (consultez [Options Link](../../c-runtime-library/link-options.md)).  
   
  Quand l’application est liée à une version de débogage des bibliothèques Runtime C, `malloc` se résout en [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Détails du tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
@@ -146,9 +147,6 @@ int main( void )
 Memory space allocated for path name  
 Memory freed  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)   

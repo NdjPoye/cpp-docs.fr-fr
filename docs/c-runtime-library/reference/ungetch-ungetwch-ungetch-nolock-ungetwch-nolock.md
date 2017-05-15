@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 71e7784eefcfa69d12de2229b360845d1fd99a30
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4c36da30cfc69140a47e779025acb579bb687df2
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
@@ -105,10 +106,10 @@ wint_t _ungetwch_nolock(
  Caractère à renvoyer (transmission push).  
   
 ## <a name="return-value"></a>Valeur de retour  
- Ces deux fonctions retournent le caractère `c` en cas de réussite. En cas d’erreur, `_ungetch` retourne la valeur `EOF` et `_ungetwch` la valeur `WEOF`.  
+ Ces deux fonctions retournent le caractère `c` en cas de réussite. S’il existe une erreur, `_ungetch` retourne une valeur de `EOF` et `_ungetwch` retourne `WEOF`.  
   
-## <a name="remarks"></a>Notes  
- Ces fonctions renvoient le caractère `c` à la console via une transmission push , ce qui fait de `c` le prochain caractère à être lu par `_getch` ou `_getche` (ou `_getwch` ou `_getwche`). Les fonctions `_ungetch` et `_ungetwch` échouent si elles sont appelées plusieurs fois avant la prochaine opération de lecture. L’argument `c` ne peut pas être différent de `EOF` (ou `WEOF`).  
+## <a name="remarks"></a>Remarques  
+ Ces fonctions push le caractère `c` à la console, à l’origine `c` pour être le caractère suivant lu par `_getch` ou `_getche` (ou `_getwch` ou `_getwche`). Les fonctions `_ungetch` et `_ungetwch` échouent si elles sont appelées plusieurs fois avant la prochaine opération de lecture. L’argument `c` ne peut pas être différent de `EOF` (ou `WEOF`).  
   
  Les versions avec suffixe `_nolock` sont identiques, sauf qu’elles ne sont pas protégées contre les interférences avec les autres threads. Elles peuvent être plus rapides, car elles n’entraînent pas la surcharge liée au verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.  
   

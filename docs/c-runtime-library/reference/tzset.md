@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d52530de55147945f12f664d882ce0cda18f8e17
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 669b7d41234c21c3fb4e9a1a28f6b8d1a33c036b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tzset"></a>_tzset
@@ -71,7 +72,7 @@ void _tzset( void );
 ## <a name="remarks"></a>Notes  
  La fonction `_tzset` utilise le paramètre actuel de la variable d’environnement `TZ` pour affecter des valeurs à trois variables globales : `_daylight`, `_timezone`et `_tzname`. Ces variables sont utilisées par les fonctions [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) et [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) pour apporter des corrections à l’heure locale à partir du temps universel coordonné (UTC) et par la fonction `time` pour calculer l’heure UTC à partir de l’heure système. Utilisez la syntaxe suivante pour définir la variable d’environnement `TZ` :  
   
- `set` `TZ`=`tzn`[+ &#124; –]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
+ `set` `TZ`=`tzn`[+ &#124; -]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
   
  `tzn`  
  Nom du fuseau horaire en trois lettres, comme PST. Vous devez spécifier le décalage correct de l’heure locale à l’heure UTC.  
@@ -99,14 +100,14 @@ set TZ=GST-1GDT
   
  Cette commande utilise GST pour indiquer l’heure standard allemande, suppose que l’heure UTC est en retard d’une heure sur l’Allemagne (ou autrement dit, que l’Allemagne est en avance d’une heure sur l’heure UTC) et suppose qu’Allemagne observe l’heure d’été.  
   
- Si la valeur de `TZ` n’est pas définie, _`tzset` tente d’utiliser les informations de fuseau horaire spécifiées par le système d’exploitation. Dans le système d’exploitation Windows, ces informations sont spécifiées dans l’application Date et heure du Panneau de configuration. Si `_tzset` ne peut pas obtenir ces informations, elle utilise PST8PDT par défaut, ce qui signifie le fuseau horaire Pacifique.  
+ Si le `TZ` valeur n’est pas définie, `_tzset` tente d’utiliser les informations de fuseau horaire spécifiées par le système d’exploitation. Dans le système d’exploitation Windows, ces informations sont spécifiées dans l’application Date et heure du Panneau de configuration. Si `_tzset` ne peut pas obtenir ces informations, elle utilise PST8PDT par défaut, ce qui signifie le fuseau horaire Pacifique.  
   
  Selon la valeur de la variable d’environnement `TZ` , les valeurs suivantes sont affectées aux variables globales `_daylight`, `_timezone`et `_tzname` quand `_tzset` est appelée :  
   
 |Variable globale|Description|Valeur par défaut|  
 |---------------------|-----------------|-------------------|  
 |`_daylight`|Une valeur différente de zéro si le fuseau horaire de l’heure d’été est spécifié dans le paramètre `TZ` ; sinon, 0.|1|  
-|`_timezone`|Différence en secondes entre l’heure locale et l’heure UTC.|28 800 (28 800 secondes est égal à 8 heures)|  
+|`_timezone`|Différence en secondes entre l’heure locale et l’heure UTC.|28 800 (28 800 secondes est égal à 8 heures)|  
 |`_tzname`[0]|Valeur de chaîne du nom du fuseau horaire provenant de la variable d’environnement `TZ` ; vide si `TZ` n’a pas été définie.|PST|  
 |`_tzname`[1]|Valeur de chaîne du fuseau horaire de l’heure d’été ; vide si le fuseau horaire de l’heure d’été est omis dans la variable d’environnement `TZ` .|PDT|  
   
@@ -154,9 +155,6 @@ _daylight = 1
 _timezone = 28800  
 _tzname[0] = Pacific Standard Time  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion du temps](../../c-runtime-library/time-management.md)   

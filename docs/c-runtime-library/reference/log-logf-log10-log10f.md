@@ -1,60 +1,78 @@
 ---
-title: "log, logf, log10, log10f | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "log10f"
-  - "logf"
-  - "log10"
-  - "log"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "logf"
-  - "_log10l"
-  - "log"
-  - "_logl"
-  - "log10f"
-  - "log10"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "calculer des logarithmes"
-  - "log10f (fonction)"
-  - "log10 (fonction)"
-  - "log (fonction)"
-  - "logf (fonction)"
-  - "logarithmes"
+title: log, logf, log10, log10f | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- log10f
+- logf
+- log10
+- log
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- logf
+- _log10l
+- log
+- _logl
+- log10f
+- log10
+dev_langs:
+- C++
+helpviewer_keywords:
+- calculating logarithms
+- log10f function
+- log10 function
+- log function
+- logf function
+- logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# log, logf, log10, log10f
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 22c41d6b2712954f05249192c3a5e386b8102554
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
-Calcule des logarithmes.  
+---
+# <a name="log-logf-log10-log10f"></a>log, logf, log10, log10f
+Calcule le logarithme.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -84,36 +102,36 @@ float log10f (
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *x*  
- Valeur dont le logarithme doit être trouvé.  
+ Valeur dont le logarithme doit être recherché.  
   
-## Valeur de retour  
- Les fonctions **log** retournent le logarithme népérien \(base e\) de *x* en cas de réussite.  Les fonctions log10 retournent le logarithme de base 10.  Si *x* est négatif, ces fonctions retournent un indéfini, par défaut.  Si *x* est 0, elles retournent INF \(infini\).  
+## <a name="return-value"></a>Valeur de retour  
+ Les fonctions **log** retournent le logarithme népérien (base e) de *x* en cas de réussite. Les fonctions log10 retournent un logarithme en base 10. Si *x* est négatif, ces fonctions retournent un indéfini, par défaut. Si *x* est égal à 0, elles retournent INF (infini).  
   
-|Entrée|Exception SEH|Exception Matherr|  
-|------------|-------------------|-----------------------|  
-|± QNAN,IND|aucun|\_DOMAIN|  
-|± 0|ZERODIVIDE|\_SING|  
-|x \< 0|NON VALIDE|\_DOMAIN|  
+|Entrée|Exception SEH|Exception{b> <b}Matherr|  
+|-----------|-------------------|-----------------------|  
+|± QNAN,IND|aucun|_DOMAIN|  
+|± 0|ZERODIVIDE|_SING|  
+|x < 0|INVALID|_DOMAIN|  
   
- **log** et `log10` a une implémentation qui utilise les extensions Streaming SIMD 2 \(SSE2\).  Voir le [\_set\_SSE2\_enable](../../c-runtime-library/reference/set-sse2-enable.md) pour des informations ainsi que connaitre l'état des restrictions sur l'usage de l'implémentation SSE2.  
+ **log** et `log10` présentent une implémentation qui utilise SSE2 (Streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.  
   
-## Notes  
- Comme C\+\+ permet une surcharge, vous pouvez appeler des surcharges de **log** et `log10`.  Dans un programme C, **log** et `log10` prennent et retournent toujours un double .  
+## <a name="remarks"></a>Notes  
+ C++ autorisant la surcharge, vous pouvez appeler des surcharges de **log** et `log10`. Dans un programme C, **log** et `log10` acceptent et retournent toujours un double.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|**log**, `logf`, `log10`, `log10f`|\<math.h\>|  
+|**log**, `logf`, `log10`, `log10f`|\<math.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Bibliothèques  
+## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_log.c  
@@ -137,14 +155,14 @@ int main( void )
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 log( 9000.00 ) = 9.104980  
 log10( 9000.00 ) = 3.954243  
 ```  
   
- Pour générer des logarithmes d'autres bases, utilisez la relation mathématique : log base b de a \=\= log naturel \(a\) \/ log naturel \(b\).  
+ Pour générer le logarithme pour d’autres bases, utilisez la relation mathématique : log base b de a == logarithme népérien (a) / logarithme népérien (b).  
   
 ```  
 // logbase.cpp  
@@ -166,22 +184,16 @@ int main()
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 Log base 2 of 65536.000000 is 16.000000  
 ```  
   
-## Équivalent .NET Framework  
-  
--   [System::Math::Log](https://msdn.microsoft.com/en-us/library/system.math.log.aspx)  
-  
--   [System::Math::Log10](https://msdn.microsoft.com/en-us/library/system.math.log10.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [exp, expf](../../c-runtime-library/reference/exp-expf.md)   
- [\_matherr](../../c-runtime-library/reference/matherr.md)   
+ [EXP, expf, expl](../../c-runtime-library/reference/exp-expf.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)   
  [pow, powf, powl](../../c-runtime-library/reference/pow-powf-powl.md)   
- [\_CIlog](../../c-runtime-library/cilog.md)   
- [\_CIlog10](../../c-runtime-library/cilog10.md)
+ [_CIlog](../../c-runtime-library/cilog.md)   
+ [_CIlog10](../../c-runtime-library/cilog10.md)

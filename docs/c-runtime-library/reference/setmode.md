@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e1037e5dcdf75ffae6197a32d4be0c2d17c57d78
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: f6d84d5f40b49edaf4e79059a6661a51ca6c209a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="setmode"></a>_setmode
@@ -81,14 +82,14 @@ int _setmode (
 ## <a name="return-value"></a>Valeur de retour  
  En cas de réussite, retourne le mode de traduction précédent.  
   
- Si des paramètres non valides sont passés à cette fonction, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, cette fonction retourne –1 et affecte à `errno` la valeur `EBADF`, qui indique un descripteur de fichier non valide, ou la valeur `EINVAL`, qui indique un argument `mode` non valide.  
+ Si des paramètres non valides sont passés à cette fonction, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne -1 et affecte `errno` soit `EBADF`, ce qui indique un descripteur de fichier non valide, ou `EINVAL`, ce qui indique un non valide `mode` argument.  
   
- Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Pour plus d'informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
- La fonction `_setmode` affecte la valeur `mode` au mode de traduction du fichier donné par `fd`. Le passage de la valeur `_O_TEXT` comme `mode` définit le mode texte (autrement dit, traduit). Les combinaisons retour chariot/saut de ligne sont traduites en un seul caractère de saut de ligne en entrée. Les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. Le passage de la valeur `_O_BINARY` définit le mode binaire (non traduit), dans lequel ces traductions sont supprimées.  
+ La fonction `_setmode` affecte la valeur `mode` au mode de traduction du fichier donné par `fd`. Le passage de la valeur `_O_TEXT` comme `mode` définit le mode texte (autrement dit, traduit). Combinaisons chariot retour-ligne (CRLF) sont traduites en une seule ligne dans l’entrée de flux de caractères. Les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. Le passage de la valeur `_O_BINARY` définit le mode binaire (non traduit), dans lequel ces traductions sont supprimées.  
   
- Vous pouvez également passer les valeurs `_O_U16TEXT`, `_O_U8TEXT` ou _`O_WTEXT` pour activer le mode Unicode, comme illustré dans le second exemple plus loin dans ce document. `_setmode` est généralement utilisé pour modifier le mode de traduction par défaut de `stdin` et `stdout`, mais vous pouvez l'utiliser sur n'importe quel fichier. Si vous appliquez `_setmode` au descripteur de fichier pour un flux, appelez `_setmode` avant d'effectuer toute opération d'entrée ou de sortie sur le flux.  
+ Vous pouvez également passer `_O_U16TEXT`, `_O_U8TEXT`, ou `_O_WTEXT` pour activer le mode Unicode, comme illustré dans le deuxième exemple plus loin dans ce document. `_setmode` est généralement utilisé pour modifier le mode de traduction par défaut de `stdin` et `stdout`, mais vous pouvez l'utiliser sur n'importe quel fichier. Si vous appliquez `_setmode` au descripteur de fichier pour un flux, appelez `_setmode` avant d'effectuer toute opération d'entrée ou de sortie sur le flux.  
   
 > [!CAUTION]
 >  Si vous écrivez des données dans un flux de fichiers, videz le code de façon explicite à l’aide de [fflush](../../c-runtime-library/reference/fflush.md) avant d’utiliser `_setmode` pour changer de mode. Si vous ne videz pas le code, un comportement inattendu peut se produire. Si vous n'avez pas écrit de données dans le flux, vous n'avez pas à vider le code.  
@@ -148,12 +149,6 @@ int main(void) {
     return 0;  
 }  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
-  
--   [System::IO::BinaryReader Class](https://msdn.microsoft.com/en-us/library/system.io.binaryreader.aspx)  
-  
--   [System::IO::TextReader Class](https://msdn.microsoft.com/en-us/library/system.io.textreader.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion de fichiers](../../c-runtime-library/file-handling.md)   

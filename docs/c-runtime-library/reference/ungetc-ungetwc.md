@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9f33416614f18a5a1cd7a61ccf4acfb9276de8e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3bab0bd81a8a17fd32c244bab0dd30658564d257
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
@@ -85,12 +86,12 @@ wint_t ungetwc(
  Pointeur vers la structure `FILE` .  
   
 ## <a name="return-value"></a>Valeur de retour  
- En cas de réussite, chacune de ces fonctions retourne l’argument de caractère `c`*.* Si `c` ne peut pas être renvoyé via une transmission de type push ou si aucun caractère n’a été lu, le flux d’entrée est inchangé et `ungetc` retourne `EOF` ; `ungetwc` retourne `WEOF`. Si `stream` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `EOF` ou `WEOF` est retourné et `errno` prend la valeur `EINVAL`.  
+ Si réussite, chacune de ces fonctions retourne l’argument de caractère `c`. Si `c` ne peut pas être renvoyé via une transmission de type push ou si aucun caractère n’a été lu, le flux d’entrée est inchangé et `ungetc` retourne `EOF` ; `ungetwc` retourne `WEOF`. Si `stream` a la valeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `EOF` ou `WEOF` est retourné et `errno` prend la valeur `EINVAL`.  
   
  Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Notes  
- La fonction `ungetc` renvoie le caractère `c` à `stream` via une transmission de type push et efface l’indicateur de fin de fichier. Le flux doit être ouvert pour lecture. Une opération de lecture ultérieure démarre au niveau de `stream` avec `c`*.* Une tentative de transmission de type push de `EOF` vers le flux à l’aide de `ungetc` est ignorée.  
+ La fonction `ungetc` renvoie le caractère `c` à `stream` via une transmission de type push et efface l’indicateur de fin de fichier. Le flux doit être ouvert pour lecture. Opération de lecture suivante sur `stream` commence par `c`. Une tentative de transmission de type push de `EOF` vers le flux à l’aide de `ungetc` est ignorée.  
   
  Les caractères positionnés dans le flux par `ungetc` peuvent être effacés si la fonction `fflush`, `fseek`, `fsetpos` ou `rewind` est appelée avant que le caractère soit lu dans le flux. L’indicateur de position de fichier prend alors la valeur qui était la sienne avant que les caractères soient renvoyés via la transmission push. Le stockage externe correspondant au flux est inchangé. Si l’appel de la fonction `ungetc` pour un flux de texte aboutit, l’indicateur de position de fichier n’est pas spécifié tant que tous les caractères renvoyés via une transmission push ne sont pas lus ou ignorés. À chaque appel réussi de la fonction `ungetc` sur un flux binaire, l’indicateur de position de fichier est décrémenté ; si sa valeur était égale à 0 avant un appel, la valeur est indéfinie après l’appel.  
   
@@ -148,9 +149,6 @@ int main( void )
       521aNumber = 521  
 Next character in stream = 'a'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [E/S de flux](../../c-runtime-library/stream-i-o.md)   

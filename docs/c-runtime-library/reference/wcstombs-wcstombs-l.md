@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dead533ee11db7c40faa7d3611b30c6a6159ee50
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 200337a53155b27b76a944d025c8fb013c29c4e6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
@@ -108,16 +109,16 @@ size_t _wcstombs_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Si la fonction `wcstombs` convertit correctement la chaîne multioctet, elle retourne le nombre d’octets écrits dans la chaîne de sortie multioctet, à l’exclusion du caractère `NULL` de fin (le cas échéant). Si l’argument `mbstr` a la valeur `NULL`, `wcstombs` retourne la taille requise en octets de la chaîne de destination. Si la fonction `wcstombs` rencontre un caractère large qu’elle ne peut pas convertir en caractère multioctet, elle retourne la valeur -1 castée en type `size_t` et affecte à `errno` la valeur `EILSEQ`.  
+ Si la fonction `wcstombs` convertit correctement la chaîne multioctet, elle retourne le nombre d’octets écrits dans la chaîne de sortie multioctet, à l’exclusion du caractère `NULL` de fin (le cas échéant). Si l’argument `mbstr` a la valeur `NULL`, `wcstombs` retourne la taille requise de la chaîne de destination en octets. Si `wcstombs` rencontre un caractère large, elle ne peut pas convertir en un caractère multioctet, elle retourne -1 castée en type `size_t` et définit `errno` à `EILSEQ`.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction `wcstombs` convertit la chaîne de caractères larges vers laquelle pointe `wcstr` en caractères multioctets correspondants et stocke les résultats dans le tableau `mbstr`. Le paramètre `count` indique le nombre maximal d’octets qui peuvent être stockés dans la chaîne de sortie multioctet (c’est-à-dire, la taille de `mbstr`). En général, le nombre d’octets exigé au moment de la conversion d’une chaîne de caractères larges n’est pas connu. Certains caractères larges peuvent en exiger un seul dans la chaîne de sortie, alors que d’autres peuvent en exiger deux. Si la chaîne de sortie multioctet contient deux octets pour chaque caractère large présent dans la chaîne d’entrée (en incluant le caractère large `NULL`), le résultat est assuré de s’intégrer.  
   
  Si la fonction `wcstombs` rencontre le caractère null à caractère large (L'\0') avant ou quand `count` est atteint, elle le convertit en 0 de 8 bits et s’arrête. Par conséquent, la chaîne de caractères multioctets au niveau de `mbstr` se termine par un caractère null seulement si `wcstombs` rencontre un caractère null de caractère large pendant la conversion. Si les séquences pointées par `wcstr` et `mbstr` se chevauchent, le comportement de `wcstombs` n'est pas défini.  
   
  Si l’argument `mbstr` a la valeur `NULL`, `wcstombs` retourne la taille requise en octets de la chaîne de destination.  
   
- `wcstombs` valide ses paramètres. Si `wcstr` a la valeur `NULL` ou si `count` est supérieur à `INT_MAX`, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction affecte à `errno` la valeur `EINVAL` et retourne -1.  
+ `wcstombs` valide ses paramètres. Si `wcstr` est `NULL`, ou si `count` est supérieur à `INT_MAX`, cette fonction appelle le Gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, la fonction définit `errno` avec la valeur `EINVAL` et retourne -1.  
   
  La fonction `wcstombs` utilise les paramètres régionaux actifs pour tout comportement dépendant des paramètres régionaux ; la fonction `_wcstombs_l` est identique sauf qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
@@ -172,9 +173,6 @@ Convert wide-character string:
    Characters converted: 13  
     Multibyte character: Hello, world.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   

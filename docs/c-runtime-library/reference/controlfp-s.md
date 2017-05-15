@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 022dd9188a043ccb5a17a3e9040e0c8969acf7ba
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 4345539f7ecd836280bed94c4bb2b125dfa08107
+ms.contentlocale: fr-fr
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="controlfps"></a>_controlfp_s
@@ -99,7 +100,7 @@ errno_t _controlfp_s(
   
  La différence entre `_control87` et `_controlfp_s` réside dans la manière dont elles traitent les valeurs `DENORMAL`. Pour les plateformes ARM, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] et Intel (x86), `_control87` peut définir et effacer le masque d’exception DENORMAL OPERAND. `_controlfp_s` ne modifie pas le masque d’exception DENORMAL OPERAND. Cet exemple illustre la différence :  
   
-```  
+```C  
 _control87( _EM_INVALID, _MCW_EM );   
 // DENORMAL is unmasked by this call.  
 unsigned int current_word = 0;  
@@ -111,7 +112,7 @@ _controlfp_s( &current_word, _EM_INVALID, _MCW_EM );
   
  Les plateformes dérivées d’Intel (x86) prennent en charge les valeurs d’entrée et de sortie DENORMAL dans le matériel. Le comportement x86 consiste à conserver les valeurs DENORMAL. Sur la plateforme ARM et les plateformes [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] qui prennent en charge SSE2, les opérandes et résultats DENORMAL peuvent être vidés ou définis sur zéro. Les fonctions `_controlfp_s`, `_controlfp` et `_control87` fournissent un masque pour modifier ce comportement. L’exemple suivant illustre l’utilisation de ce masque :  
   
-```  
+```C  
 unsigned int current_word = 0;  
 _controlfp_s(&current_word, _DN_SAVE, _MCW_DN);     
 // Denormal values preserved on ARM platforms and on x64 processors with  
@@ -129,7 +130,7 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
   
  Cette fonction est ignorée lorsque vous utilisez [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) de compilation parce que le common language runtime (CLR) prend uniquement en charge la précision en virgule flottante par défaut.  
   
- **Valeurs hexadécimales**  
+### <a name="mask-constants-and-values"></a>Masque les constantes et valeurs  
   
  Concernant le masque `_MCW_EM`, désactiver ce dernier définit l’exception, ce qui permet l’exception matérielle, tandis que le définir masque l’exception. Si un `_EM_UNDERFLOW` ou `_EM_OVERFLOW` se produit, aucune exception de matériel n’est levée tant que l’instruction à virgule flottante suivante n’est pas exécutée. Pour générer une exception matérielle immédiatement après `_EM_UNDERFLOW` ou `_EM_OVERFLOW`, appelez l’instruction MASM FWAIT.  
   
@@ -151,14 +152,12 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
   
 ## <a name="example"></a>Exemple  
   
-```  
-  
-      // crt_contrlfp_s.c  
+```C  
+// crt_contrlfp_s.c  
 // processor: x86  
 // This program uses _controlfp_s to output the FP control   
 // word, set the precision to 24 bits, and reset the status to   
 // the default.  
-//  
   
 #include <stdio.h>  
 #include <float.h>  
@@ -193,9 +192,7 @@ int main( void )
 }  
 ```  
   
-## <a name="output"></a>Sortie  
-  
-```  
+```Output  
 Original: 0x9001f  
 0.1 * 0.1 = 1.000000000000000e-002  
 24-bit:   0xa001f  
@@ -203,9 +200,6 @@ Original: 0x9001f
 Default:  0x9001f  
 0.1 * 0.1 = 1.000000000000000e-002  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   

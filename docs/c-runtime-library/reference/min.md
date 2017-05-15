@@ -1,51 +1,68 @@
 ---
-title: "__min | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__min"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__min"
-  - "min"
-  - "_min"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__min (macro)"
-  - "_min (macro)"
-  - "min (macro)"
-  - "minimum (macro)"
+title: __min | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __min
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- __min
+- min
+- _min
+dev_langs:
+- C++
+helpviewer_keywords:
+- __min macro
+- min macro
+- minimum macro
+- _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# __min
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 171ca8b2136e2311a814328989b4dd121416918a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
-Retourne la plus petite des deux valeurs .  
+---
+# <a name="min"></a>__min
+Retourne la plus petite de deux valeurs.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 type __min(  
@@ -54,26 +71,26 @@ type __min(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `type`  
- Tous les types de données numériques  
+ Tout type de données numérique.  
   
  `a, b`  
  Valeurs de tout type numérique à comparer.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  Le plus petit des deux arguments.  
   
-## Notes  
- La macro `__min` compare deux valeurs et retourne la valeur la plus petite.  Les arguments peuvent être de n'importe quel type de données numérique, signé ou non signé.  Les arguments et la valeur de retour doivent être du même type.  
+## <a name="remarks"></a>Notes  
+ La macro `__min` compare deux valeurs et retourne la valeur la plus petite. Les arguments peuvent être de n’importe quel type de données numérique, signé ou non signé. Les deux arguments et la valeur de retour doivent être du même type de données.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`__min`|\<stdlib.h\>|  
+|`__min`|\<stdlib.h>|  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_minmax.c  
@@ -91,11 +108,11 @@ int main( void )
 }  
 ```  
   
-  **Le plus grand parmis 10 et 21 est 21**  
-**Le plus petit parmis 10 et 21 est 10**   
-## Équivalent .NET Framework  
- [System::Math::Min](https://msdn.microsoft.com/en-us/library/system.math.min.aspx)  
+```Output  
+The larger of 10 and 21 is 21  
+The smaller of 10 and 21 is 10  
+```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [\_\_max](../../c-runtime-library/reference/max.md)
+ [__max](../../c-runtime-library/reference/max.md)

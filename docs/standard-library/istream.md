@@ -1,72 +1,92 @@
 ---
-title: "&lt; istream &gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "istream/std::<istream>"
-  - "std.<istream>"
-  - "<istream>"
-  - "std::<istream>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "istream (en-tête)"
+title: '&lt;istream&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- istream/std::<istream>
+- std.<istream>
+- <istream>
+- std::<istream>
+dev_langs:
+- C++
+helpviewer_keywords:
+- istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# &lt; istream &gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a329d340709ca5d74f6a52c6ee6c8070ef2faa7f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
-Définit la classe de modèle basic\_istream, qui sert d'intermédiaire pour l'extraction des iostreams, et la classe de modèle basic\_iostream, qui sert d'intermédiaire pour les insertions et les extractions. L'en\-tête définit également un manipulateur associé. Ce fichier d'en\-tête est généralement inclus pour vous par un autre en\-tête iostreams ; vous devez rarement l'inclure directement.  
+---
+# <a name="ltistreamgt"></a>&lt;istream&gt;
+Définit la classe de modèle basic_istream, qui sert d'intermédiaire pour l'extraction des iostreams, et la classe de modèle basic_iostream, qui sert d'intermédiaire pour les insertions et les extractions. L'en-tête définit également un manipulateur associé. Ce fichier d'en-tête est généralement inclus pour vous par un autre en-tête iostreams ; vous devez rarement l'inclure directement.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 #include <istream>  
   
 ```  
   
-### Typedefs  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[iostream](../Topic/iostream.md)|Type `basic_iostream` spécialisé sur `char`.|  
-|[istream](../Topic/istream.md)|Type `basic_istream` spécialisé sur `char`.|  
-|[wiostream](../Topic/wiostream.md)|Type `basic_iostream` spécialisé sur **wchar**.|  
-|[wistream](../Topic/wistream.md)|Type `basic_istream` spécialisé sur **wchar**.|  
+|[iostream](../standard-library/istream-typedefs.md#iostream)|Type `basic_iostream` spécialisé sur `char`.|  
+|[istream](../standard-library/istream-typedefs.md#istream)|Type `basic_istream` spécialisé sur `char`.|  
+|[wiostream](../standard-library/istream-typedefs.md#wiostream)|Type `basic_iostream` spécialisé sur **wchar**.|  
+|[wistream](../standard-library/istream-typedefs.md#wistream)|Type `basic_istream` spécialisé sur **wchar**.|  
   
-### Manipulateurs  
-  
-|||  
-|-|-|  
-|[ws](../Topic/ws.md)|Ignore l'espace blanc dans le flux.|  
-|[swap](../Topic/%3Cistream%3E%20swap.md)|Échange deux objets de flux.|  
-  
-### Opérateurs  
+### <a name="manipulators"></a>Manipulateurs  
   
 |||  
 |-|-|  
-|[\>\>, opérateur](../Topic/operator%3E%3E%20\(%3Cistream%3E\).md)|Extrait des chaînes et des caractères à partir du flux.|  
+|[ws](../standard-library/istream-functions.md#ws)|Ignore l'espace blanc dans le flux.|  
+|[swap](../standard-library/istream-functions.md#istream_swap)|Échange deux objets de flux.|  
   
-### Classes  
+### <a name="operators"></a>Opérateurs  
   
 |||  
 |-|-|  
-|[basic\_iostream](../standard-library/basic-iostream-class.md)|Classe de flux qui peut effectuer à la fois l'entrée et la sortie.|  
-|[basic\_istream](../standard-library/basic-istream-class.md)|La classe de modèle décrit un objet qui contrôle l'extraction d'éléments et d'objets encodés à partir d'une mémoire tampon de flux avec des éléments de type **Elem**, également appelé [char\_type](../Topic/basic_ios::char_type.md), dont les caractéristiques sont déterminées par la classe **Tr**, également appelée [traits\_type](../Topic/basic_ios::traits_type.md).|  
+|[operator>>](../standard-library/istream-operators.md#op_gt_gt)|Extrait des chaînes et des caractères à partir du flux.|  
   
-## Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[basic_iostream](../standard-library/basic-iostream-class.md)|Classe de flux qui peut effectuer à la fois l'entrée et la sortie.|  
+|[basic_istream](../standard-library/basic-istream-class.md)|La classe de modèle décrit un objet qui contrôle l’extraction d’éléments et d’objets encodés à partir d’une mémoire tampon de flux avec des éléments de type **Elem**, également appelé [char_type](../standard-library/basic-ios-class.md#char_type), dont les caractéristiques sont déterminées par la classe **Tr**, également appelée [traits_type](../standard-library/basic-ios-class.md#traits_type).|  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream, programmation](../standard-library/iostream-programming.md)   
  [iostreams, conventions](../standard-library/iostreams-conventions.md)
+
+
+
+

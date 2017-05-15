@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 484ecd12490eab00c02fb4184edcaa55f346c3a8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 436e581907e3b651716e819a9c82a24eed2e4b8e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
@@ -103,13 +104,13 @@ size_t _mbstowcs_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Si `mbstowcs` convertit correctement la chaîne source, elle retourne le nombre de caractères multioctets convertis. Si l’argument `wcstr` a la valeur `NULL`, la fonction retourne la taille exigée, en caractères larges, de la chaîne de destination. Si `mbstowcs` rencontre un caractère multioctet non valide, elle retourne −1. Si la valeur de retour est `count`, la chaîne de caractères larges ne se termine pas par un caractère Null.  
+ Si `mbstowcs` convertit correctement la chaîne source, elle retourne le nombre de caractères multioctets convertis. Si l’argument `wcstr` a la valeur `NULL`, la fonction retourne la taille exigée, en caractères larges, de la chaîne de destination. Si `mbstowcs` rencontre un caractère multioctet non valide, elle retourne -1. Si la valeur de retour est `count`, la chaîne de caractères larges ne se termine pas par un caractère Null.  
   
 > [!IMPORTANT]
 >  Vérifiez que `wcstr` et `mbstr` ne se chevauchent pas, et que `count` reflète correctement le nombre de caractères multioctets à convertir.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `mbstowcs` convertit un nombre maximal de `count` caractères multioctets désignés par `mbstr` en une chaîne de caractères larges correspondants qui sont déterminés par les paramètres régionaux actuels. Elle stocke la chaîne de caractères larges obtenue à l’adresse représentée par `wcstr`*.* Le résultat est similaire à une série d’appels à `mbtowc`. Si `mbstowcs` rencontre le caractère Null codé sur un octet ('\0') quand `count` se produit ou avant, elle convertit le caractère Null en un caractère Null large (L'\0') et s’arrête. Ainsi, la chaîne de caractères larges dans `wcstr` n’est terminée par un caractère Null que si un caractère Null est rencontré pendant la conversion. Si les séquences pointées par `wcstr` et `mbstr` se chevauchent, le comportement n’est pas défini.  
+ La fonction `mbstowcs` convertit un nombre maximal de `count` caractères multioctets désignés par `mbstr` en une chaîne de caractères larges correspondants qui sont déterminés par les paramètres régionaux actuels. Il stocke la chaîne de caractères larges obtenue à l’adresse représentée par `wcstr`. Le résultat est similaire à une série d’appels à `mbtowc`. Si `mbstowcs` rencontre le caractère Null codé sur un octet ('\0') quand `count` se produit ou avant, elle convertit le caractère Null en un caractère Null large (L'\0') et s’arrête. Ainsi, la chaîne de caractères larges dans `wcstr` n’est terminée par un caractère Null que si un caractère Null est rencontré pendant la conversion. Si les séquences pointées par `wcstr` et `mbstr` se chevauchent, le comportement n’est pas défini.  
   
  Si l’argument `wcstr` a la valeur `NULL`, `mbstowcs` retourne le nombre de caractères larges qui résulterait de la conversion, sans inclure une marque de fin Null. La chaîne source doit se terminer par un caractère Null pour que la valeur correcte soit retournée. S’il est nécessaire que la chaîne de caractères larges résultante se termine par un caractère Null, ajoutez un à la valeur retournée.  
   
@@ -222,9 +223,6 @@ Convert back to wide-character string:
   Characters converted: 2  
   Hex value of first 2 wide characters: 0x3042 0x3043  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   

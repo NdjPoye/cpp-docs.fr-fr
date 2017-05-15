@@ -1,66 +1,84 @@
 ---
-title: "atoi, _atoi_l, _wtoi, _wtoi_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wtoi"
-  - "_wtoi_l"
-  - "atoi"
-  - "_atoi_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tstoi"
-  - "_wtoi"
-  - "_ttoi"
-  - "atoi"
-  - "_atoi_l"
-  - "_wtoi_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_atoi_l (fonction)"
-  - "ttoi (fonction)"
-  - "atoi_l (fonction)"
-  - "conversion de chaînes, en entiers"
-  - "_wtoi (fonction)"
-  - "wtoi_l (fonction)"
-  - "tstoi (fonction)"
-  - "_ttoi (fonction)"
-  - "_tstoi (fonction)"
-  - "_wtoi_l (fonction)"
-  - "atoi (fonction)"
-  - "wtoi (fonction)"
+title: atoi, _atoi_l, _wtoi, _wtoi_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wtoi
+- _wtoi_l
+- atoi
+- _atoi_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tstoi
+- _wtoi
+- _ttoi
+- atoi
+- _atoi_l
+- _wtoi_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _atoi_l function
+- ttoi function
+- atoi_l function
+- string conversion, to integers
+- _wtoi function
+- wtoi_l function
+- tstoi function
+- _ttoi function
+- _tstoi function
+- _wtoi_l function
+- atoi function
+- wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# atoi, _atoi_l, _wtoi, _wtoi_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 5ed38a5d4c5a9ff6d976302cc52cc14672a4d60b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
-Convertit une chaîne en entier.  
+---
+# <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
+Convertissent une chaîne en entier.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int atoi(  
@@ -79,45 +97,45 @@ int _wtoi_l(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `str`  
  Chaîne à convertir.  
   
  `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
- Chaque fonction retourne la valeur `int` qui est produite lors de l'interprétation des caractères d'entrée comme des nombres.  La valeur de retour est 0 pour `atoi` et `_wtoi`, si l'entrée ne peut pas être convertie en une valeur de ce type.  
+## <a name="return-value"></a>Valeur de retour  
+ Chaque fonction retourne la valeur `int` produite en interprétant les caractères d’entrée en tant que nombre. La valeur de retour est 0 pour `atoi` et `_wtoi` si l’entrée ne peut pas être convertie en valeur de ce type.  
   
- Dans le cas d'un dépassement de capacité avec de grandes valeurs intégrales négatives, `LONG_MIN` est retourné.  `atoi` et `_wtoi` retournent `INT_MAX` et `INT_MIN` dans ces conditions.  Dans tous les cas hors limites, `errno` a la valeur `ERANGE`.  Si le paramètre qui est passé est `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno` avec la valeur `EINVAL` et retournent 0.  
+ En cas de dépassement de capacité avec de grandes valeurs intégrales négatives, `LONG_MIN` est retourné. `atoi` et `_wtoi` retournent `INT_MAX` et `INT_MIN` dans ces conditions. Dans tous les cas hors limites, `errno` est défini sur `ERANGE`. Si le paramètre passé est `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent `errno` avec la valeur `EINVAL` et retournent 0.  
   
-## Notes  
- Ces fonctions convertissent une chaîne de caractères en une valeur entière \(`atoi` et `_wtoi`\).  La chaîne d'entrée est une séquence de caractères qui peuvent être interprétés comme une valeur numérique du type spécifié.  La fonction cesse de lire la chaîne au premier caractère qu'elle ne peut pas reconnaître comme faisant partie d'un nombre.  Ce caractère peut être le caractère null \('\\0' ou L'\\0'\) qui termine la chaîne.  
+## <a name="remarks"></a>Notes  
+ Ces fonctions convertissent une chaîne de caractères en une valeur entière (`atoi` et `_wtoi`). La chaîne d’entrée est une séquence de caractères qui peut être interprétée comme une valeur numérique du type spécifié. La fonction arrête de lire la chaîne d’entrée au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Ce caractère peut être le caractère Null ('\0' ou L'\0') terminant la chaîne.  
   
- L'argument `str` de `atoi` `` et `_wtoi` a la forme suivante:  
+ L’argument `str` de `atoi` et `_wtoi` prend la forme suivante :  
   
- \[`whitespace`\] \[`sign`\] \[`digits`\]\]  
+ [`whitespace`] [`sign`] [`digits`]]  
   
- Un `whitespace` se compose d'espaces ou de caractères de tabulation, qui sont ignorés ; un `sign` est soit plus \(\+\) soit moins \(–\) ; et les `digits` se composent d'un ou de plusieurs chiffres.  
+ A `whitespace` se compose de caractères espace ou tabulation, qui sont ignorés ; `sign` est plus (+) ou moins (-) ; et `digits` sont un ou plusieurs chiffres.  
   
- Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.  Pour plus d'informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+ Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tstoi`|`atoi`|`atoi`|`_wtoi`|  
 |`_ttoi`|`atoi`|`atoi`|`_wtoi`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routines|En\-tête requis|  
+|Routines|En-tête requis|  
 |--------------|---------------------|  
-|`atoi`|\<stdlib.h\>|  
-|`_atoi_l`, `_wtoi`, `_wtoi_l`|\<stdlib.h\> ou \<wchar.h\>|  
+|`atoi`|\<stdlib.h>|  
+|`_atoi_l`, `_wtoi`, `_wtoi_l`|\<stdlib.h> ou \<wchar.h>|  
   
-## Exemple  
- Ce programme montre comment les nombres stockés sous la forme de chaines peuvent etre convertis en des valeurs numériques en utilisant les fonctions `atoi`.  
+## <a name="example"></a>Exemple  
+ Ce programme montre comment les nombres stockés sous forme de chaînes peuvent être convertis en valeurs numériques à l’aide des fonctions `atoi`.  
   
 ```  
 // crt_atoi.c  
@@ -156,22 +174,19 @@ int main( void )
 }  
 ```  
   
-  **Fonction: atoi\( " \-2309 " \) \= \-2309**  
-**Fonction: atoi\( "31412764" \) \= 31412764**  
-**Fonction: atoi\( "3336402735171707160320" \) \= 2147483647**  
-**Un cas de dépassement de capacité s'est produit.**   
-## Équivalent .NET Framework  
+```Output  
+Function: atoi( "  -2309 " ) = -2309  
+Function: atoi( "31412764" ) = 31412764  
+Function: atoi( "3336402735171707160320" ) = 2147483647  
+Overflow condition occurred.  
+```  
   
--   [System::Convert::ToInt32](https://msdn.microsoft.com/en-us/library/system.convert.toint32.aspx)  
-  
--   [System::Convert::ToUInt32](https://msdn.microsoft.com/en-us/library/system.convert.touint32.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
- [\_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [\_atodbl, \_atodbl\_l, \_atoldbl, \_atoldbl\_l, \_atoflt, \_atoflt\_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
+ [_ecvt](../../c-runtime-library/reference/ecvt.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)

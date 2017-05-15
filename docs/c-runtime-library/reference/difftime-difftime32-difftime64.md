@@ -1,58 +1,75 @@
 ---
-title: "difftime, _difftime32, _difftime64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_difftime32"
-  - "difftime"
-  - "_difftime64"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_difftime64"
-  - "difftime"
-  - "difftime64"
-  - "_difftime32"
-  - "difftime32"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_difftime32, fonction"
-  - "difftime, fonction"
-  - "time, rechercher la différence"
-  - "difftime64, fonction"
-  - "_difftime64, fonction"
-  - "difftime32, fonction"
+title: difftime, _difftime32, _difftime64 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _difftime32
+- difftime
+- _difftime64
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _difftime64
+- difftime
+- difftime64
+- _difftime32
+- difftime32
+dev_langs:
+- C++
+helpviewer_keywords:
+- _difftime32 function
+- difftime function
+- time, finding the difference
+- difftime64 function
+- _difftime64 function
+- difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# difftime, _difftime32, _difftime64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f6ab058a86a5635aa341c964644a291f61ba170b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
+---
+# <a name="difftime-difftime32-difftime64"></a>difftime, _difftime32, _difftime64
 Recherche la différence entre deux heures.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 double difftime(   
@@ -69,36 +86,36 @@ double _difftime64(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `timer1`  
- Heure de fin.  
+ Heure de fin  
   
  `timer0`  
- Heure de début.  
+ Heure de début  
   
-## Valeur de retour  
- `difftime` Renvoie le temps écoulé en secondes, à partir de `timer0` à `timer1`. La valeur retournée est un nombre à virgule flottante double précision. La valeur de retour peut être 0, indiquant une erreur.  
+## <a name="return-value"></a>Valeur de retour  
+ `difftime` retourne le temps écoulé en secondes, entre `timer0` et `timer1`. La valeur retournée est un nombre à virgule flottante double précision. Cette valeur peut être 0, indiquant alors une erreur.  
   
-## Notes  
- Le `difftime` fonction calcule la différence entre les deux valeurs d’heure fournie `timer0` et `timer1`.  
+## <a name="remarks"></a>Notes  
+ La fonction `difftime` calcule la différence entre les deux valeurs de temps `timer0` et `timer1` fournies.  
   
- La valeur d’heure fournie doit tenir dans la plage de `time_t`.`time_t` est une valeur 64 bits. Par conséquent, la fin de la plage a été étendue à partir de 23:59:59 18 janvier 2038, UTC à 23:59:59 le 31 décembre 3000. La plage inférieure de `time_t` est toujours le 1er janvier 1970 à minuit.  
+ La valeur de temps fournie doit appartenir à la plage `time_t`. `time_t` est une valeur 64 bits. Ainsi, la fin de la plage a été repoussée du 18 janvier 2038 à 23:59:59, heure UTC au 31 décembre 3000 à 23:59:59. Le début de la plage de `time_t` est toujours le 1er janvier 1970 à minuit.  
   
- `difftime` est une fonction inline qui prend la valeur soit `_difftime32` ou `_difftime64` selon que `_USE_32BIT_TIME_T` est défini. \_difftime32 et \_difftime64 peuvent être utilisés directement pour forcer l’utilisation d’une taille particulière de type au moment de la.  
+ `difftime` est une fonction inline qui prend la valeur `_difftime32` ou `_difftime64` selon que `_USE_32BIT_TIME_T` est défini. _difftime32 et _difftime64 peuvent être utilisés directement pour forcer l’utilisation d’une taille particulière du type d’heure.  
   
- Ces fonctions valident leurs paramètres. Si des paramètres est égal à zéro ou négative, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent 0 et `errno` à `EINVAL`.  
+ Ces fonctions valident leurs paramètres. Si l’un des paramètres est zéro ou négatif, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent 0 et définissent `errno` avec la valeur `EINVAL`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`difftime`|\<time.h\>|  
-|`_difftime32`|\<time.h\>|  
-|`_difftime64`|\<time.h\>|  
+|`difftime`|\<time.h>|  
+|`_difftime32`|\<time.h>|  
+|`_difftime64`|\<time.h>|  
   
- Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```cpp  
 // crt_difftime.c  
@@ -150,13 +167,12 @@ int main( void )
 ```  
   
 ```Output  
-À l’aide de la virgule flottante aléatoire de nombres 1.04749e + 038 2.01482e + 038 1.72737e + 038Multiplying 2 à virgule flottante numéros 100 millions de fois... Programme prend 3 secondes. Nombres à virgule flottante de 2 multipliant 500 millions de fois... Programme prend 5 secondes.  
+Using random floating point numbers 1.04749e+038 2.01482e+038 1.72737e+038Multiplying 2 floating point numbers 100 million times...Program takes      3 seconds.Multiplying 2 floating point numbers 500 million times...  
+  
+Program takes      5 seconds.  
 ```  
   
-## Équivalent .NET Framework  
- [System::DateTime::Subtract](https://msdn.microsoft.com/en-us/library/system.datetime.subtract.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
  [Gestion du temps](../../c-runtime-library/time-management.md)   
- [time, \_time32, \_time64](../../c-runtime-library/reference/time-time32-time64.md)
+ [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)

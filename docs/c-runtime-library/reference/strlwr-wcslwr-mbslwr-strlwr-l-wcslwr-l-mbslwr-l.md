@@ -1,84 +1,101 @@
 ---
-title: "_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_strlwr_l"
-  - "_strlwr"
-  - "_wcslwr_l"
-  - "_mbslwr_l"
-  - "_wcslwr"
-  - "_mbslwr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_strlwr"
-  - "wcslwr_l"
-  - "_ftcslwr"
-  - "mbslwr_l"
-  - "_mbslwr"
-  - "_wcslwr"
-  - "strlwr_l"
-  - "_tcslwr"
-  - "mbslwr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftcslwr (fonction)"
-  - "_mbslwr (fonction)"
-  - "_mbslwr_l (fonction)"
-  - "_strlwr (fonction)"
-  - "_strlwr_l (fonction)"
-  - "_tcslwr (fonction)"
-  - "_tcslwr_l (fonction)"
-  - "_wcslwr (fonction)"
-  - "_wcslwr_l (fonction)"
-  - "casse, convertir"
-  - "convertir la casse"
-  - "convertir la casse, CRT (fonctions)"
-  - "ftcslwr (fonction)"
-  - "mbslwr (fonction)"
-  - "mbslwr_l (fonction)"
-  - "conversion de chaînes (C++), casse"
-  - "chaînes (C++), casse"
-  - "chaînes (C++), convertir la casse"
-  - "strlwr_l (fonction)"
-  - "tcslwr (fonction)"
-  - "tcslwr_l (fonction)"
-  - "wcslwr_l (fonction)"
+title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _strlwr_l
+- _strlwr
+- _wcslwr_l
+- _mbslwr_l
+- _wcslwr
+- _mbslwr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _strlwr
+- wcslwr_l
+- _ftcslwr
+- mbslwr_l
+- _mbslwr
+- _wcslwr
+- strlwr_l
+- _tcslwr
+- mbslwr
+dev_langs:
+- C++
+helpviewer_keywords:
+- tcslwr function
+- _strlwr function
+- converting case
+- string conversion [C++], case
+- mbslwr function
+- _strlwr_l function
+- strlwr_l function
+- _wcslwr function
+- ftcslwr function
+- strings [C++], case
+- _tcslwr_l function
+- _wcslwr_l function
+- wcslwr_l function
+- mbslwr_l function
+- tcslwr_l function
+- _tcslwr function
+- converting case, CRT functions
+- _ftcslwr function
+- _mbslwr function
+- case, converting
+- strings [C++], converting case
+- _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
 caps.latest.revision: 36
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 36
----
-# _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4955b5741413458b4a24a1b359343174ad484f2a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
-Convertit une chaîne en minuscules.  Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [\_strlwr\_s, \_strlwr\_s\_l, \_mbslwr\_s, \_mbslwr\_s\_l, \_wcslwr\_s, \_wcslwr\_s\_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).  
+---
+# <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
+Convertit une chaîne en minuscules. Il existe des versions plus sécurisées de ces fonctions. Consultez [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).  
   
 > [!IMPORTANT]
->  `_mbslwr` et `_mbslwr_l` ne peuvent pas être utilisées dans les applications qui s'exécutent dans le Windows Runtime.  Pour plus d'informations, consultez [Fonctions CRT non prises en charge avec \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbslwr` et `_mbslwr_l` ne peuvent pas être utilisées dans les applications qui s'exécutent dans Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 char *_strlwr(  
@@ -131,43 +148,43 @@ unsigned char *_mbslwr_l(
 ); // C++ only  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `str`  
- Chaîne de caractères terminée par le caractère NULL à convertir en minuscules.  
+ Chaîne se terminant par un caractère Null à convertir en minuscules.  
   
  `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
- Chacune de ces fonctions retourne un pointeur vers la chaîne convertie.  La modification étant effectuée en place, le pointeur retourné est identique au pointeur passé comme argument d'entrée.  Aucune valeur de retour n'est réservée pour indiquer une erreur.  
+## <a name="return-value"></a>Valeur de retour  
+ Chacune de ces fonctions retourne un pointeur désignant la chaîne convertie. Sachant que la modification est effectuée sur place, le pointeur retourné est le même que celui passé comme argument d’entrée. Aucune valeur de retour n'est réservée pour indiquer une erreur.  
   
-## Notes  
- La fonction `_strlwr` convertit toutes les lettres majuscules dans `str` en minuscules comme spécifié par le paramètre de catégorie `LC_CTYPE` des paramètres régionaux.  Les autres caractères ne sont pas affectés.  Pour plus d'informations sur `LC_CTYPE`, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md).  Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux pour leur comportement dépendant des paramètres régionaux ; les versions avec le suffixe `_l`  sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux passés.  Pour plus d'informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+## <a name="remarks"></a>Notes  
+ La fonction `_strlwr` convertit les lettres majuscules présentes dans `str` en minuscules comme le détermine le paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Les autres caractères ne sont pas concernés. Pour plus d’informations sur `LC_CTYPE`, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le `_l` suffixe utilisent les paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux ; les versions avec le `_l` suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
- Les fonctions `_wcslwr` et `_mbslwr` sont à caractère larges et à caractères multi\-octets de `_strlwr`.  L'argument et la valeur de retour de `_wcslwr` sont des chaînes à caractères larges ; ceux de `_mbslwr` sont des chaînes de caractères multi\-octets.  Ces trois fonctions se comportent sinon de façon identique.  
+ Les fonctions `_wcslwr` et `_mbslwr` sont des versions à caractères larges et à caractères multioctets de `_strlwr`. L’argument et la valeur de retour de `_wcslwr` sont des chaînes de caractères larges ; ceux de `_mbslwr` sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.  
   
- Si `str` est un pointeur `NULL`, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, ces fonctions retournent la chaine originale et donnent à `errno` la valeur `EINVAL`.  
+ Si `str` est un pointeur `NULL`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent la chaîne d’origine et affectent à `errno` la valeur `EINVAL`.  
   
- En C\+\+, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions.  Pour plus d'informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcslwr`|`_strlwr`|`_mbslwr`|`_wcslwr`|  
 |`_tcslwr_l`|`_strlwr_l`|`_mbslwr_l`|`_wcslwr_l`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_strlwr`, `_strlwr_l`|\<string.h\>|  
-|`_wcslwr`, `_wcslwr_l`|\<string.h\> ou \<wchar.h\>|  
-|`_mbslwr`, `_mbslwr_l`|\<mbstring.h\>|  
+|`_strlwr`, `_strlwr_l`|\<string.h>|  
+|`_wcslwr`, `_wcslwr_l`|\<string.h> ou \<wchar.h>|  
+|`_mbslwr`, `_mbslwr_l`|\<mbstring.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_strlwr.c  
@@ -197,13 +214,13 @@ int main( void )
 }  
 ```  
   
-  **Mixte : La Chaîne Pour Terminer Toutes Les Chaînes \!**  
-**Minuscules : la chaîne pour terminer toutes les chaînes \!**  
-**Majuscule : LA CHAÎNE POUR TERMINER TOUTES LES CHAÎNES \!**   
-## Équivalent .NET Framework  
- [System::String::ToLower](https://msdn.microsoft.com/en-us/library/system.string.tolower.aspx)  
+```Output  
+Mixed: The String to End All Strings!  
+Lower: the string to end all strings!  
+Upper: THE STRING TO END ALL STRINGS!  
+```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
- [\_strupr, \_strupr\_l, \_mbsupr, \_mbsupr\_l, \_wcsupr\_l, \_wcsupr](../../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)
+ [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](../../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)

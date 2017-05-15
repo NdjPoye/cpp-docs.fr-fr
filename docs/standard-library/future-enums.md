@@ -6,26 +6,31 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- future/std::future_errc
+- future/std::future_status
+- future/std::launch
 ms.assetid: 8c675645-db47-4cab-bc0e-7b87f8a302df
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b1f8c56de97789bea4f0923cd87e8144382e1ed0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 786d999dc03692c11e2c511023f1feb2c84573f8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltfuturegt-enums"></a>&lt;future&gt;, énumérations
 ||||  
 |-|-|-|  
-|[future_errc, énumération](#future_errc_enumeration)|[future_status, énumération](#future_status_enumeration)|[launch, énumération](#launch_enumeration)|  
+|[future_errc](#future_errc)|[état_futur](#future_status)|[lancement](#launch)|  
   
-##  <a name="a-namefutureerrcenumerationa--futureerrc-enumeration"></a><a name="future_errc_enumeration"></a>  future_errc, énumération  
+##  <a name="future_errc"></a>  future_errc, énumération  
  Fournit des noms symboliques pour toutes les erreurs signalées par la classe [future_error](../standard-library/future-error-class.md).  
   
 class future_errc { broken_promise, future_already_retrieved, promise_already_satisfied, no_state };  
   
-##  <a name="a-namefuturestatusenumerationa--futurestatus-enumeration"></a><a name="future_status_enumeration"></a>  future_status, énumération  
+##  <a name="future_status"></a>  future_status, énumération  
  Fournit les noms symboliques pour les raisons qu’une fonction d’attente chronométrée peut retourner.  
   
 ```
@@ -34,8 +39,8 @@ enum future_status{    ready,
  deferred};
 ```  
   
-##  <a name="a-namelaunchenumerationa--launch-enumeration"></a><a name="launch_enumeration"></a>  launch, énumération  
- Représente un type de masque de bits qui décrit les modes possibles pour la fonction de modèle [async](../standard-library/future-functions.md#async_function).  
+##  <a name="launch"></a>  launch, énumération  
+ Représente un type de masque de bits qui décrit les modes possibles pour la fonction de modèle [async](../standard-library/future-functions.md#async).  
   
 class launch{ async, deferred };  
   

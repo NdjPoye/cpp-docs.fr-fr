@@ -39,7 +39,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -101,7 +100,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -144,10 +142,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: 123fea75676708aa557a4b4bb5aced1712ca86e4
-ms.lasthandoff: 04/28/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: ed1f641e226f85aefcebf5ecf127c1345dc0b1b2
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 des avertissements du compilateur via C4599
@@ -171,7 +170,7 @@ Vous trouverez une assistance supplémentaire pour les erreurs et avertissements
 |[Avertissement du compilateur (niveau 1) C4405](../../error-messages/compiler-warnings/compiler-warning-level-1-c4405.md)|'*identificateur*' : identificateur est un mot réservé|  
 |[Avertissement du compilateur (niveau 1) C4406](../../error-messages/compiler-warnings/compiler-warning-level-1-c4406.md)|opérande sur directive ignoré|  
 |[Avertissement du compilateur (niveau 1) C4407](../../error-messages/compiler-warnings/compiler-warning-level-1-c4407.md)|cast entre différentes représentations du pointeur en membre, le compilateur peut générer du code incorrect|  
-|[Avertissement du compilateur (niveau 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|anonyme 'struct & #124 ; union' n’a déclaré aucune donnée membre|  
+|[Avertissement du compilateur (niveau 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|anonyme 'struct &#124; union' n’a déclaré aucune donnée membre|  
 |[Avertissement du compilateur (niveau 1) C4409](../../error-messages/compiler-warnings/compiler-warning-level-1-c4409.md)|taille d'instruction non conforme|  
 |[Avertissement du compilateur (niveau 1) C4410](../../error-messages/compiler-warnings/compiler-warning-level-1-c4410.md)|taille d'opérande non conforme|  
 |[Avertissement du compilateur (niveau 1) C4411](../../error-messages/compiler-warnings/compiler-warning-level-1-c4411.md)|'*identificateur*' : symbole se résout en registre de déplacement|  
@@ -204,7 +203,7 @@ Vous trouverez une assistance supplémentaire pour les erreurs et avertissements
 |Avertissement du compilateur (niveau 1) C4442|un argument __annotation, incorporé marque de fin null.  Valeur sera tronquée.|  
 |Avertissement du compilateur (niveau 1) C4443|le paramètre pragma attendu doit être '0', '1' ou '2'|  
 |Avertissement du compilateur (niveau 3) C4444|'*identificateur*' : '__unaligned' de niveau supérieur n’est pas implémenté dans ce contexte|  
-|[Avertissement du compilateur (niveau 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|'*fonction*' : dans un ' WinRT & #124 ; gérés ' type une méthode virtuelle ne peut pas être privée|  
+|[Avertissement du compilateur (niveau 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|'*fonction*' : dans un ' WinRT &#124; gérés ' type une méthode virtuelle ne peut pas être privée|  
 |Avertissement du compilateur (niveau 1) C4446|'*type*' : Impossible de mapper le membre '*nom1*' dans ce type, en raison de conflits avec le nom de type. La méthode a été renommée en «*name2*'|  
 |Avertissement du compilateur (niveau 1) C4447|signature 'main' trouvée sans modèle de thread. Envisagez d’utiliser ' int main (Platform::Array\<Platform::String ^ > ^ args)'.|  
 |Avertissement C4448 du compilateur|'*type*1' n’a pas d’interface par défaut spécifiée dans les métadonnées. Prélèvement : '*type2*», qui peut échouer au moment de l’exécution.|  
@@ -215,18 +214,18 @@ Vous trouverez une assistance supplémentaire pour les erreurs et avertissements
 |Avertissement du compilateur (niveau 1) C4453|'*type*' : un type de '[WebHostHidden]' ne doit pas être utilisé sur la surface publiée d’un type public qui n’est pas '[WebHostHidden]'|  
 |Avertissement du compilateur (niveau 1) C4454|'*fonction*' est surchargé par plus que le nombre de paramètres d’entrée sans avoir [defaultoverload pour] spécifié. Prélèvement '*déclaration*' en tant que la surcharge par défaut|  
 |Avertissement du compilateur (niveau 1) C4455|' opérateur *opérateur*' : les identificateurs de suffixe littéral qui ne commencent pas par un trait de soulignement sont réservés.|  
-|Avertissement du compilateur (niveau 3) C4456|déclaration de '*identificateur*' masque la déclaration locale précédente|  
-|Avertissement du compilateur (niveau 3) C4457|déclaration de '*identificateur*' paramètre de fonction de masque|  
-|Avertissement du compilateur (niveau 3) C4458|déclaration de '*identificateur*' masque le membre de classe|  
-|Avertissement du compilateur (niveau 3) C4459|déclaration de '*identificateur*' masque la déclaration globale|  
-|[Avertissement du compilateur (niveau 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT & #124 ; gérés ' opérateur '*opérateur*', a paramètre passé par référence. ' WinRT & #124 ; gérés ' opérateur '*opérateur*'a une sémantique différente de l’opérateur C++'*cpp_operator*», souhaitiez-vous passage par valeur ?|  
+|[Avertissement du compilateur (niveau 4) C4456](compiler-warning-level-4-c4456.md)|déclaration de '*identificateur*' masque la déclaration locale précédente|  
+|[Avertissement du compilateur (niveau 4) C4457](compiler-warning-level-4-c4457.md)|déclaration de '*identificateur*' paramètre de fonction de masque|  
+|[Avertissement du compilateur (niveau 4) C4458](compiler-warning-level-4-c4458.md)|déclaration de '*identificateur*' masque le membre de classe|  
+|[Avertissement du compilateur (niveau 4) C4459](compiler-warning-level-4-c4459.md)|déclaration de '*identificateur*' masque la déclaration globale|  
+|[Avertissement du compilateur (niveau 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT &#124; gérés ' opérateur '*opérateur*', a paramètre passé par référence. ' WinRT &#124; gérés ' opérateur '*opérateur*'a une sémantique différente de l’opérateur C++'*cpp_operator*», souhaitiez-vous passage par valeur ?|  
 |[Avertissement du compilateur (niveau 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*' : cette classe a un finaliseur ' ! *finaliseur*' mais pas de destructeur ' ~*dtor*'|  
 |[Avertissement du compilateur (niveau 1) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*type*' : ne peut pas déterminer le GUID du type. Le programme risque d'échouer au moment de l'exécution.|  
-|Avertissement C4463 du compilateur|dépassement de capacité ; affectation '*valeur*'pour le champ de bits qui peut contenir uniquement des valeurs à partir de'*min_value*'à'*max_value*'|  
+|[Avertissement du compilateur (niveau 4) C4463](compiler-warning-level-4-c4463.md)|dépassement de capacité ; affectation '*valeur*'pour le champ de bits qui peut contenir uniquement des valeurs à partir de'*min_value*'à'*max_value*'|  
 |Avertissement C4464 du compilateur|chemin include relatif contient '..'|  
 |[Avertissement du compilateur (niveau 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|pragmas de contrôle à virgule flottante ignorés sous /clr|  
 |[Avertissement du compilateur (niveau 4) C4471](compiler-warning-level-4-c4471.md)|'*énumération*' : une déclaration anticipée d’une énumération non délimitée doit avoir un type sous-jacent (int pris par défaut)|  
-|Avertissement du compilateur (niveau 1) C4472|'*identificateur*' est un enum natif : ajoutez un spécificateur d’accès (private/public) pour déclarer un ' WinRT & #124 ; gérés ' enum|  
+|Avertissement du compilateur (niveau 1) C4472|'*identificateur*' est un enum natif : ajoutez un spécificateur d’accès (private/public) pour déclarer un ' WinRT &#124; gérés ' enum|  
 |Avertissement C4480 du compilateur|extension non standard utilisée : spécification du type sous-jacent pour enum '*énumération*'|  
 |[Avertissement du compilateur (niveau 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|extension non standard utilisée : spécificateur de substitution '*mot clé*'|  
 |Avertissement C4482 du compilateur|extension non standard utilisée : enum '*énumération*' utilisé dans le nom qualifié|  

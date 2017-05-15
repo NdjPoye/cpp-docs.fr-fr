@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3b4b1a35e2abcbeb128a36443eb4c5e5aa2a15e9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c4c6803731deba188a4f4dba118b04f626f58564
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
@@ -159,7 +160,7 @@ errno_t _wsplitpath_s(
  Si la taille de l’une des mémoires tampons ne suffit pas à contenir le résultat, ces fonctions remplacent le contenu de toutes les mémoires tampons par des chaînes vides, affectent à `errno` la valeur `ERANGE` et retournent `ERANGE`.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `_splitpath_s` divise un chemin en quatre composants. `_splitpath_s` gère automatiquement les arguments de chaîne de caractères multioctets si nécessaire, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d’utilisation. `_wsplitpath_s` est une version à caractères larges de `_splitpath_s` ; les arguments de `_``wsplitpath_s` sont des chaînes de caractères larges. Sinon, ces fonctions se comportent de façon identique.  
+ La fonction `_splitpath_s` divise un chemin en quatre composants. `_splitpath_s` gère automatiquement les arguments de chaîne de caractères multioctets si nécessaire, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d’utilisation. `_wsplitpath_s` est une version à caractères larges de `_splitpath_s` ; les arguments de `_``wsplitpath_s` sont des chaînes à caractères larges. Sinon, ces fonctions se comportent de façon identique.  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
@@ -195,9 +196,6 @@ errno_t _wsplitpath_s(
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [_makepath_s, _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion de fichiers](../../c-runtime-library/file-handling.md)   

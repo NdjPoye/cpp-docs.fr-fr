@@ -51,10 +51,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b8310730b9b1c700402cc8d6d35eea3abc893dfe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: bd53960a97cc6647008b683e354df664941428e9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="freea"></a>_freea
@@ -78,7 +79,7 @@ void _freea(
 ## <a name="remarks"></a>Notes  
  La fonction `_freea` libère un bloc de mémoire (`memblock`) alloué par un appel à [_malloca](../../c-runtime-library/reference/malloca.md). `_freea` vérifie si la mémoire a été allouée sur le tas ou la pile. Si elle a été allouée sur la pile, `_freea` n’exécute aucune opération. Si elle a été allouée sur le tas, le nombre d’octets libérés est équivalent au nombre d’octets demandés quand le bloc a été alloué. Si `memblock` a la valeur `NULL`, le pointeur est ignoré et `_freea` retourne le contrôle immédiatement. Tenter de libérer un pointeur non valide (un pointeur désignant un bloc de mémoire qui n’était pas alloué par `_malloca`) peut affecter les demandes d’allocation ultérieures et provoquer des erreurs.  
   
- _`freea` appelle `free` en interne si elle détecte que la mémoire est allouée sur le tas. Un marqueur placé en mémoire à l’adresse qui précède immédiatement la mémoire allouée détermine si celle-ci est sur le tas ou la pile.  
+ `_freea`appels `free` en interne si elle détecte que la mémoire est allouée sur le tas. Un marqueur placé en mémoire à l’adresse qui précède immédiatement la mémoire allouée détermine si celle-ci est sur le tas ou la pile.  
   
  Si une erreur se produit pendant la libération de la mémoire, `errno` est défini avec les informations du système d'exploitation sur la nature de la défaillance. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -98,9 +99,6 @@ void _freea(
   
 ## <a name="example"></a>Exemple  
  Consultez l’exemple relatif à [_malloca](../../c-runtime-library/reference/malloca.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)   

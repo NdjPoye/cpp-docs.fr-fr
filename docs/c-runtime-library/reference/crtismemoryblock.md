@@ -50,10 +50,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e884526e45e4bb8fbf1070fca8fd740d692dc285
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e24601f4161244c2a941a89648060e06ff226736
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
@@ -117,9 +118,6 @@ _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
   
 ## <a name="example"></a>Exemple  
  Voir l’exemple pour la rubrique [_CrtIsValidHeapPointer](../../c-runtime-library/reference/crtisvalidheappointer.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Routines de débogage](../../c-runtime-library/debug-routines.md)

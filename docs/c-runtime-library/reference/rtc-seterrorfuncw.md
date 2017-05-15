@@ -52,10 +52,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d71962eca033e5d3994c82e666102f44c62e82be
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 9c340310feb94ac181049c01d3ab1efaee2002c3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
@@ -78,15 +79,15 @@ Désigne une fonction comme gestionnaire pour signaler les vérifications d’er
  Fonction d’erreur définie précédemment ou `NULL` en l’absence de fonction définie précédemment.  
   
 ## <a name="remarks"></a>Notes  
- Dans du nouveau code, utilisez seulement `_RTC_SetErrorFuncW`. `_RTC_SetErrorFunc` n’est inclus dans la bibliothèque que pour assurer une compatibilité descendante.  
+ Dans du nouveau code, utilisez seulement `_RTC_SetErrorFuncW`. `_RTC_SetErrorFunc` est inclus dans la bibliothèque seulement pour assurer la compatibilité descendante.  
   
  Le rappel `_RTC_SetErrorFuncW` s’applique uniquement au composant auquel il était lié, mais pas globalement.  
   
- Vérifiez que l’adresse que vous transmettez à `_RTC_SetErrorFuncW` est celle d’une fonction de gestion des erreurs valide.  
+ Assurez-vous que l’adresse que vous passez à `_RTC_SetErrorFuncW` est celle d’une fonction de gestion des erreurs valide.  
   
- Si un type -1 a été affecté à une erreur à l’aide de [_RTC_SetErrorType](../../c-runtime-library/reference/rtc-seterrortype.md), la fonction de gestion des erreurs n’est pas appelée.  
+ Si une erreur a été affectée un type de -1 à l’aide de [_RTC_SetErrorType](../../c-runtime-library/reference/rtc-seterrortype.md), la fonction de gestion d’erreur n’est pas appelée.  
   
- Avant d’appeler cette fonction, vous devez d’abord appeler une des fonctions d’initialisation de vérification d’erreurs au moment de l’exécution. Pour plus d’informations, consultez [Utilisation de contrôles à l’exécution sans la bibliothèque Runtime C](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).  
+ Avant d’appeler cette fonction, vous devez d’abord appeler une des fonctions d’initialisation de vérification d’erreurs au moment de l’exécution. Pour plus d'informations, consultez [Using Run-Time Checks Without the C Run-Time Library](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).  
   
  **_RTC_error_fnW** est défini comme suit :  
   
@@ -101,13 +102,13 @@ Désigne une fonction comme gestionnaire pour signaler les vérifications d’er
  Le fichier source où la défaillance s’est produite, ou null si aucune information de débogage n’est disponible.  
   
  *linenumber*  
- La ligne dans *filename* où la défaillance s’est produite ou 0 si aucune information de débogage n’est disponible.  
+ La ligne de *filename* où la défaillance s’est produite, ou 0 si aucune information de débogage n’est disponible.  
   
  `moduleName`  
  Le fichier DLL ou le nom du fichier exécutable où la défaillance s’est produite.  
   
  *format*  
- Chaîne de style printf pour afficher un message d’erreur, en utilisant les paramètres restants. Le premier argument de VA_ARGLIST est le numéro de l’erreur RTC qui s’est produite.  
+ chaîne de style printf pour afficher un message d’erreur, en utilisant les paramètres restants. Le premier argument de VA_ARGLIST est le numéro de l’erreur RTC qui s’est produite.  
   
  Pour obtenir un exemple qui montre comment utiliser **_RTC_error_fnW**, consultez [Personnalisation des contrôles natifs à l’exécution](/visualstudio/debugger/native-run-time-checks-customization).  
   
@@ -121,9 +122,6 @@ Désigne une fonction comme gestionnaire pour signaler les vérifications d’er
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [_CrtDbgReport, _CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)   

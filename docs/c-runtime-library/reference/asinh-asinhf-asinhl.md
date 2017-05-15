@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 35e456abc1682624b73f75b32ea4ec2fedee1a37
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 459b1a8c80f4131c0e23f7ab92e304e7353290d8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
@@ -90,7 +91,7 @@ long double asinhl(
 ## <a name="return-value"></a>Valeur de retour  
  Les fonctions `asinh` retournent le sinus hyperbolique inverse (arc sinus hyperbolique) de `x`. Cette fonction est valide sur le domaine à virgule flottante. Si `x` est une valeur NaN silencieuse, est indéfini ou infini, la même valeur est retournée.  
   
-|Entrée|Exception SEH|Exception `_matherr`|  
+|Entrée|Exception SEH|`_matherr` |  
 |-----------|-------------------|--------------------------|  
 |± QNAN, IND, INF|aucun|aucun|  
   
@@ -132,9 +133,6 @@ int main( void )
 sinh( 0.785398 ) = 0.868671  
 asinh( 0.868671 ) = 0.785398  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   

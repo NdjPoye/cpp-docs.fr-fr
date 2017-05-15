@@ -34,10 +34,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 76f96a1e0b88e7b43a2d4efa55cc57e84efdb3b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ec13a255f456254f89ca84488d12fbf5ce0440b4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
@@ -52,7 +53,7 @@ Définit des modèles offrant des constantes de compilation qui fournissent des 
 ## <a name="remarks"></a>Notes  
  Les classes et les modèles dans `<type_traits>` sont utilisés pour prendre en charge l’inférence de type, la classification et la transformation au moment de la compilation, pour détecter les erreurs liées au type et pour vous aider à optimiser votre code générique. Ces classes et ces modèles incluent les caractéristiques de type qui décrivent une propriété d’un type, les caractéristiques de type binaire qui décrivent une relation entre des types et les caractéristiques de transformation qui modifient une propriété d’un type.  
   
- Pour prendre en charge les caractéristiques de type, une classe d’assistance, `integral_constant`, est définie. Elle a des spécialisations de modèle `true_type` et `false_type` qui forment les classes de base des prédicats de type. Un *prédicat de type* est un modèle qui accepte un ou plusieurs arguments de type. Quand un prédicat de type *a la valeur true*, il est publiquement dérivé, directement ou indirectement, de [true_type](../standard-library/type-traits-typedefs.md#true_type_typedef). Quand un prédicat de type *a la valeur false*, il est publiquement dérivé, directement ou indirectement, de [false_type](../standard-library/type-traits-typedefs.md#false_type_typedef).  
+ Pour prendre en charge les caractéristiques de type, une classe d’assistance, `integral_constant`, est définie. Elle a des spécialisations de modèle `true_type` et `false_type` qui forment les classes de base des prédicats de type. Un *prédicat de type* est un modèle qui accepte un ou plusieurs arguments de type. Quand un prédicat de type *a la valeur true*, il est publiquement dérivé, directement ou indirectement, de [true_type](../standard-library/type-traits-typedefs.md#true_type). Quand un prédicat de type *a la valeur false*, il est publiquement dérivé, directement ou indirectement, de [false_type](../standard-library/type-traits-typedefs.md#false_type).  
   
  Un *modificateur de type* ou une *caractéristique de transformation* est un modèle qui accepte un ou plusieurs arguments de modèle et possède un seul membre `type`, qui est un synonyme du type modifié.  
   
@@ -79,8 +80,8 @@ using add_const_t = typename add_const<T>::type;
 |||  
 |-|-|  
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|Crée une constante intégrale à partir d’un type et d’une valeur.|  
-|[true_type](../standard-library/type-traits-typedefs.md#true_type_typedef)|Contient une constante intégrale avec la valeur true.|  
-|[false_type](../standard-library/type-traits-typedefs.md#false_type_typedef)|Contient une constante intégrale avec la valeur false.|  
+|[true_type](../standard-library/type-traits-typedefs.md#true_type)|Contient une constante intégrale avec la valeur true.|  
+|[false_type](../standard-library/type-traits-typedefs.md#false_type)|Contient une constante intégrale avec la valeur false.|  
   
  Catégories de type principal  
   

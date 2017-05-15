@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 16b937177f092dda215d0149ab5a6b798822fade
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: d0b9f494cec6212616813f9d622b97ff9d54bd3e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
@@ -57,11 +58,11 @@ Définit la classe de modèle bitset et deux fonctions de modèle de prise en ch
   
 |||  
 |-|-|  
-|[operator&](../standard-library/bitset-operators.md#operator_amp_)|Exécute une opération AND au niveau du bit entre deux bitsets.|  
-|[operator<\<](../standard-library/bitset-operators.md#operator_lt__lt_)|Insère une représentation textuelle de la séquence de bits dans le flux de sortie standard.|  
-|[operator>>](../standard-library/bitset-operators.md#operator_gt__gt_)|Insère une représentation textuelle de la séquence de bits dans le flux d'entrée standard.|  
-|[operator^](../standard-library/bitset-operators.md#operator_xor)|Exécute une opération EXCLUSIVE-OR au niveau du bit entre deux bitsets.|  
-|[operator&#124;](../standard-library/bitset-operators.md#operator_or)|Exécute une opération OR au niveau du bit entre deux bitsets.|  
+|[operator&](../standard-library/bitset-operators.md#op_amp)|Exécute une opération AND au niveau du bit entre deux bitsets.|  
+|[operator<\<](../standard-library/bitset-operators.md#op_lt_lt)|Insère une représentation textuelle de la séquence de bits dans le flux de sortie standard.|  
+|[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|Insère une représentation textuelle de la séquence de bits dans le flux d'entrée standard.|  
+|[operator^](../standard-library/bitset-operators.md#op_xor)|Exécute une opération EXCLUSIVE-OR au niveau du bit entre deux bitsets.|  
+|[operator&#124;](../standard-library/bitset-operators.md#op_or)|Exécute une opération OR au niveau du bit entre deux bitsets.|  
   
 ### <a name="classes"></a>Classes  
   

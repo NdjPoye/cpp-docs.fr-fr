@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d761621d23ab97d951199e7790e71f224394f92c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c96743fc777a53f2fe849d5f88f3fd7299054d02
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
@@ -88,22 +89,18 @@ Met en forme et affiche les informations dans la console. Des versions plus séc
   
 ```  
 int _cprintf(   
-   const char * format [,   
-   argument] ...   
+   const char * format [, argument_list]  
 );  
-int _cprintf_l(   
+int _cprintf_l(  
    const char * format,  
-   locale_t locale [,  
-   argument] …   
+   locale_t locale [, argument_list]  
 );  
 int _cwprintf(  
-   const wchar * format [,   
-   argument] …  
+   const wchar * format [, argument_list]  
 );  
 int _cwprintf_l(  
    const wchar * format,  
-   locale_t locale [,   
-   argument] …  
+   locale_t locale [, argument_list]  
 );  
 ```  
   
@@ -111,8 +108,8 @@ int _cwprintf_l(
  `format`  
  Chaîne de contrôle de format.  
   
- `argument`  
- Paramètres facultatifs.  
+ `argument_list`  
+ Paramètres facultatifs pour la chaîne de format.  
   
  `locale`  
  Paramètres régionaux à utiliser.  
@@ -121,9 +118,9 @@ int _cwprintf_l(
  Nombre de caractères affichés.  
   
 ## <a name="remarks"></a>Notes  
- Ces fonctions mettent en forme et affichent toute une série de caractères et de valeurs directement dans la console, en se servant de la fonction `_putch` (`_putwch` pour `_cwprintf`) pour effectuer la sortie des caractères. Chaque `argument` (le cas échéant) est converti et sorti selon la spécification de format correspondante dans `format`. Le format a la même forme et la même fonction que le paramètre `format` pour la fonction [printf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Contrairement aux fonctions `fprintf`, `printf` et `sprintf`, les fonctions `_cprintf` et `_cwprintf` ne traduisent pas les caractères de saut de ligne en combinaisons retour chariot-saut de ligne à leur sortie.  
+ Ces fonctions mettent en forme et affichent toute une série de caractères et de valeurs directement dans la console, en se servant de la fonction `_putch` (`_putwch` pour `_cwprintf`) pour effectuer la sortie des caractères. Chaque argument dans `argument_list` (le cas échéant) est converti et sorti selon la spécification de format correspondante dans `format`. Le `format` argument utilise le [syntaxe de spécification pour les fonctions printf et wprintf format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Contrairement à la `fprintf`, `printf`, et `sprintf` des fonctions, ni `_cprintf` ni `_cwprintf` convertit les caractères de saut de ligne en combinaisons de flux de retour de ligne (CRLF) chariot sortie.  
   
- Il existe une différence importante : `_cwprintf` affiche les caractères Unicode dans Windows NT. Contrairement à `_cprintf`, `_cwprintf` utilise les paramètres régionaux de la console active.  
+ La différence est que `_cwprintf` affiche les caractères Unicode utilisés dans Windows. Contrairement à `_cprintf`, `_cwprintf` utilise les paramètres régionaux de la console active.  
   
  Les versions de ces fonctions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.  
   
@@ -175,9 +172,6 @@ int main( void )
 ```Output  
 -16  001d  62511  A Test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [E/S de console et de port](../../c-runtime-library/console-and-port-i-o.md)   

@@ -65,10 +65,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9c22c290b97e8306961198870083bbf18cf770dd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 1a08c836ed0048e27957662371d352b3316e6975
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof, _strtof_l, wcstof, _wcstof_l
@@ -108,7 +109,7 @@ float wcstof_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `strtof` retourne la valeur du nombre à virgule flottante, sauf dans le cas où la représentation entraînerait un dépassement de capacité positif, auquel cas la fonction retourne +/-`HUGE_VALF`. Le signe de `HUGE_VALF` correspond au signe de la valeur qui ne peut pas être représentée. `strtof` retourne 0 si aucune conversion ne peut être effectuée ou en cas de dépassement de capacité négatif.  
+ `strtof`Retourne la valeur du nombre à virgule flottante, sauf lorsque la représentation sous forme de provoquerait un dépassement de capacité, dans ce cas, la fonction renvoie + et-`HUGE_VALF`. Le signe de `HUGE_VALF` correspond au signe de la valeur qui ne peut pas être représentée. `strtof` retourne 0 si aucune conversion ne peut être effectuée ou en cas de dépassement de capacité négatif.  
   
  `wcstof` retourne des valeurs de façon analogue à `strtof`. Pour les deux fonctions, `errno` prend la valeur `ERANGE` si un dépassement de capacité positif ou négatif se produit et le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  
   
@@ -132,7 +133,7 @@ float wcstof_l(
   
  [`whitespace`] [`sign`] [`digits`] [`.digits`] [ {`e` &#124; `E`}[`sign`]`digits`]  
   
- Un `whitespace` peut se composer d’espaces et de tabulations, qui sont ignorés ; `sign` est un signe plus (`+`) ou moins (`–`) ; et `digits` représente un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (`e` ou `E`) et éventuellement d’un entier signé. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.  
+ Un `whitespace` peut se composer d’espaces et de tabulations, qui sont ignorés ; `sign` est un signe plus (`+`) ou moins (`-`) ; et `digits` représente un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (`e` ou `E`) et éventuellement d’un entier signé. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.  
  
  Les versions UCRT de ces fonctions ne prennent pas en charge la conversion de lettres d’exposants (`d` ou `D`) de style Fortran. Cette extension non standard était prise en charge par les versions antérieures de la bibliothèque CRT et peut être une modification avec rupture pour votre code.
   

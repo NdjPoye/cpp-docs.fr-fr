@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d1831c28a8aab99478fb362d46db352674a360df
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c659b24b2d8364af4303c0667841224560914cd6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
@@ -87,14 +88,14 @@ unsigned int _mbctombb_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- En cas de réussite, `_mbctombb` et `_mbctombb_l` retournent le caractère sur un octet qui correspond à `c` ; sinon, elles retournent `c`.  
+ En cas de réussite, `_mbctombb` et `_mbctombb_l` retourne le caractère sur un octet qui correspond à `c`; sinon, elle retourne `c`.  
   
-## <a name="remarks"></a>Notes  
- Les fonctions `_mbctombb` et `_mbctombb_l` convertissent un caractère multioctet donné en caractère multioctet codé sur un octet correspondant. Pour être convertis, les caractères doivent correspondre à des caractères codés sur un octet compris dans la plage 0x20 – 0x7E ou 0xA1 – 0xDF.  
+## <a name="remarks"></a>Remarques  
+ Le `_mbctombb` et `_mbctombb_l` fonctions convertissent un caractère multioctet fourni pour un caractère multioctet sur un octet correspondant. Caractères doivent correspondre à des caractères codés sur un octet dans la plage 0 x 20 – 0x7E ou 0xA1 - 0xDF à convertir.  
   
  La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La version de cette fonction dépourvue du suffixe `_l` utilise les paramètres régionaux actifs pour ce comportement dépendant des paramètres régionaux ; la version assortie du suffixe `_l` est identique, à ceci près qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
- Dans les versions précédentes, `_mbctombb` s’appelait `zentohan`. Utilisez plutôt _`mbctombb`.  
+ Dans les versions précédentes, `_mbctombb` s’appelait `zentohan`. Utilisez plutôt `_mbctombb` .  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -104,9 +105,6 @@ unsigned int _mbctombb_l(
 |`_mbctombb_l`|\<mbstring.h>|  
   
  Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   

@@ -66,10 +66,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: a42b5d8811e108b727671921322423d186d73afd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 69a19aaa457ffc52c431a9ca1c3597a475a10994
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
@@ -96,7 +97,7 @@ void _statusfp2(unsigned int *px86, unsigned int *pSSE2)
 ## <a name="remarks"></a>Notes  
  La fonction `_statusfp` obtient le mot d’état de virgule flottante. Le mot d’état est une combinaison de l’état du processeur de virgule flottante et d’autres conditions détectées par le gestionnaire d’exceptions de virgule flottante, par exemple le dépassement de capacité positif et négatif de pile en virgule flottante. Les exceptions démasquées sont vérifiées avant que le contenu du mot d’état soit retourné. Cela signifie que l’appelant est informé des exceptions en attente. Sur les plateformes X86, `_statusfp` retourne une combinaison de l’état de virgule flottante x87 et SSE2. Sur les plateformes X64, l’état retourné repose sur l’état MXCSR de SSE. Sur les plateformes ARM, `_statusfp` retourne l’état du registre FPSCR.  
   
- `_statusfp` est une version portable indépendante de la plateforme de `_status87`. Elle est identique à `_status87` sur les plateformes Intel (x&86;) et est aussi prise en charge par les plateformes x64 et ARM. Pour assurer la portabilité de votre code en virgule flottante vers toutes les architectures, utilisez `_statusfp`. Si vous ciblez uniquement les plateformes x86, vous pouvez utiliser `_status87` ou `_statusfp`.  
+ `_statusfp` est une version portable indépendante de la plateforme de `_status87`. Elle est identique à `_status87` sur les plateformes Intel (x 86) et est aussi prise en charge par les plateformes x64 et ARM. Pour assurer la portabilité de votre code en virgule flottante vers toutes les architectures, utilisez `_statusfp`. Si vous ciblez uniquement les plateformes x86, vous pouvez utiliser `_status87` ou `_statusfp`.  
   
  Nous vous recommandons `_statusfp2` pour les puces (telles que Pentium IV) qui sont équipées de processeurs en virgule flottante x87 et SSE2. Pour `_statusfp2`, les adresses sont complétées avec le mot d’état de virgule flottante pour le processeur en virgule flottante x87 ou SSE2. Pour une puce qui prend en charge les processeurs en virgule flottante x87 et SSE2, l’indicateur EM_AMBIGUOUS prend la valeur 1 si `_statusfp` ou `_controlfp` est utilisé et que l’action était ambiguë, car il pourrait faire référence au mot d’état de virgule flottante x87 ou SSE2. La fonction `_statusfp2` n’est prise en charge que sur les plateformes x86.  
   
@@ -155,9 +156,6 @@ Status = 0x00000000 - clear
 Status = 0x00000003 - inexact, underflow  
 Status = 0x00080003 - inexact, underflow, denormal  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   

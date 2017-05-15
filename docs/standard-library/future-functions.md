@@ -6,22 +6,29 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- future/std::async
+- future/std::future_category
+- future/std::make_error_code
+- future/std::make_error_condition
+- future/std::swap
 ms.assetid: 1e3acc1e-736a-42dc-ade2-b2fe69aa96bc
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 57a9e0ba45c363d126ef44dc80eeb13d72b3733d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: c542e696e0e5ddef350d40b45fe16f4c3a77882d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt;, fonctions
 ||||  
 |-|-|-|  
-|[async](#async_function)|[future_category](#future_category_function)|[make_error_code](#make_error_code_function)|  
-|[make_error_condition](#make_error_condition_function)|[swap](#swap_function)|  
+|[async](#async)|[future_category](#future_category)|[make_error_code](#make_error_code)|  
+|[make_error_condition](#make_error_condition)|[swap](#swap)|  
   
-##  <a name="a-nameasyncfunctiona--async"></a><a name="async_function"></a>  async  
+##  <a name="async"></a>  async  
  Représente un *fournisseur asynchrone*.  
   
 ```
@@ -36,7 +43,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
   
 ### <a name="parameters"></a>Paramètres  
  `policy`  
- Valeur [launch](../standard-library/future-enums.md#launch_enumeration).  
+ Valeur [launch](../standard-library/future-enums.md#launch).  
   
 ### <a name="remarks"></a>Notes  
  Définitions des abréviations :  
@@ -44,10 +51,10 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 |||  
 |-|-|  
 |*dfn*|Résultat de l’appel de `decay_copy(forward<Fn>(fn))`.|  
-|*dargs*|Résultats des appels `decay_copy(forward<ArgsTypes>(args…))`.|  
-|*Ty*|Le type `result_of<Fn(ArgTypes…)>::type`.|  
+|*dargs*|Résultats des appels `decay_copy(forward<ArgsTypes>(args...))`.|  
+|*Ty*|Le type `result_of<Fn(ArgTypes...)>::type`.|  
   
- La première fonction de modèle retourne `async(launch::any, fn, args…)`.  
+ La première fonction de modèle retourne `async(launch::any, fn, args...)`.  
   
  La deuxième fonction retourne un objet `future<Ty>` dont l’*état asynchrone associé* contient un résultat en plus des valeurs de *dfn* et *dargs* et d’un objet de thread pour gérer un thread d’exécution séparé.  
   
@@ -59,21 +66,21 @@ future<typename result_of<Fn(ArgTypes...)>::type>
   
  Si `policy` est `launch::deferred`, la fonction marque son état asynchrone associé comme contenant une *fonction différée* et retourne une valeur. Le premier appel à toute fonction non chronométrée qui attend que l’état asynchrone associé soit prêt appelle la fonction différée en évaluant `INVOKE(dfn, dargs..., Ty)`.  
   
- Dans tous les cas, l’état asynchrone associé de l’objet `future` n’est pas défini sur *prêt* avant la fin de l’évaluation de `INVOKE(dfn, dargs…, Ty)`, en levant une exception ou en retournant normalement une valeur. Le résultat de l’état asynchrone associé est une exception, s’il en a été levée une, ou toute valeur retournée par l’évaluation.  
+ Dans tous les cas, l’état asynchrone associé de l’objet `future` n’est pas défini sur *prêt* avant la fin de l’évaluation de `INVOKE(dfn, dargs..., Ty)`, en levant une exception ou en retournant normalement une valeur. Le résultat de l’état asynchrone associé est une exception, s’il en a été levée une, ou toute valeur retournée par l’évaluation.  
   
 > [!NOTE]
 >  Pour un `future` (ou le dernier [shared_future](../standard-library/shared-future-class.md)) attaché à une tâche démarrée avec `std::async`, le destructeur se bloque si la tâche n’est pas terminée ; autrement dit, il se bloque si ce thread n’a pas encore appelé `.get()` ou `.wait()` et que la tâche est encore en cours d’exécution. Si un `future` obtenu à partir de `std::async` est déplacé en dehors de la portée locale, un autre code qui l’utilise doit être conscient que son destructeur peut empêcher l’état partagé d’être prêt.  
   
  La pseudo-fonction `INVOKE` est définie dans [\<functional>](../standard-library/functional.md).  
   
-##  <a name="a-namefuturecategoryfunctiona--futurecategory"></a><a name="future_category_function"></a>  future_category  
+##  <a name="future_category"></a>  future_category  
  Retourne une référence à l’objet [error_category](../standard-library/error-category-class.md) qui caractérise les erreurs associées aux objets `future`.  
   
 ```
 const error_category& future_category() noexcept;
 ```  
   
-##  <a name="a-namemakeerrorcodefunctiona--makeerrorcode"></a><a name="make_error_code_function"></a>  make_error_code  
+##  <a name="make_error_code"></a>  make_error_code  
  Crée un [error_code](../standard-library/error-code-class.md) avec l’objet [error_category](../standard-library/error-category-class.md) qui caractérise les erreurs de [future](../standard-library/future-class.md).  
   
 ```
@@ -82,12 +89,12 @@ inline error_code make_error_code(future_errc Errno) noexcept;
   
 ### <a name="parameters"></a>Paramètres  
  `Errno`  
- Valeur [future_errc](../standard-library/future-enums.md#future_errc_enumeration) qui identifie l’erreur signalée.  
+ Valeur [future_errc](../standard-library/future-enums.md#future_errc) qui identifie l’erreur signalée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `error_code(static_cast<int>(Errno), future_category());`  
   
-##  <a name="a-namemakeerrorconditionfunctiona--makeerrorcondition"></a><a name="make_error_condition_function"></a>  make_error_condition  
+##  <a name="make_error_condition"></a>  make_error_condition  
  Crée un [error_condition](../standard-library/error-condition-class.md) avec l’objet [error_category](../standard-library/error-category-class.md) qui caractérise les erreurs de [future](../standard-library/future-class.md).  
   
 ```
@@ -96,12 +103,12 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
   
 ### <a name="parameters"></a>Paramètres  
  `Errno`  
- Valeur [future_errc](../standard-library/future-enums.md#future_errc_enumeration) qui identifie l’erreur signalée.  
+ Valeur [future_errc](../standard-library/future-enums.md#future_errc) qui identifie l’erreur signalée.  
   
 ### <a name="return-value"></a>Valeur de retour  
  `error_condition(static_cast<int>(Errno), future_category());`  
   
-##  <a name="a-nameswapfunctiona--swap"></a><a name="swap_function"></a>  swap  
+##  <a name="swap"></a>  swap  
  Échange l’*état asynchrone associé* d’un objet `promise` avec celui d’un autre.  
   
 ```

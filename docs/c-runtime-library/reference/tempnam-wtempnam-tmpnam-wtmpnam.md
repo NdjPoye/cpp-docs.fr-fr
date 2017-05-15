@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e4f0eff8758694e97bfb310f9cfa650cb28cefa4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0600d44b2b87ed3bb56e7d1c64fffd762e77aff2
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
@@ -106,7 +107,7 @@ wchar_t *_wtmpnam(
  Pointeur destiné à contenir le nom généré et qui sera identique à celui retourné par la fonction. Il s’agit d’un moyen pratique d’enregistrer le nom généré.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Chacune de ces fonctions retourne un pointeur désignant le nom généré ou `NULL` en cas de défaillance. Un échec peut se produire si vous tentez plus de `TMP_MAX` (voir STDIO.H) appels avec `tmpnam` ou si vous utilisez `_tempnam` et qu’un nom de répertoire non valide a été spécifié dans la variable d’environnement TMP et dans le paramètre `dir`.  
+ Chacune de ces fonctions retourne un pointeur désignant le nom généré ou `NULL` en cas de défaillance. Échec peut se produire si vous essayez de plus de `TMP_MAX` (voir STDIO. H) appels avec `tmpnam` ou si vous utilisez `_tempnam` et il est un nom de répertoire non valide spécifié dans la variable d’environnement TMP et dans le `dir` paramètre.  
   
 > [!NOTE]
 >  Les pointeurs retournés par `tmpnam` et `_wtmpnam` pointent vers des mémoires tampons internes statiques. [free](../../c-runtime-library/reference/free.md) ne doit pas être appelé pour libérer ces pointeurs. `free` doit être appelé pour les pointeurs alloués par `_tempnam` et `_wtempnam`.  
@@ -192,9 +193,6 @@ int main( void )
 \s1gk. is safe to use as a temporary file.  
 C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [E/S de flux](../../c-runtime-library/stream-i-o.md)   

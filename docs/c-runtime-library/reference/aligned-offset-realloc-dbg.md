@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 01fb7ae608b710fca96b073e7b3ea0dcf07dbc53
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0e3e8a35d2b33417e952155313307aa55f181eb4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
@@ -94,7 +95,7 @@ void * _aligned_offset_realloc_dbg(
  `_aligned_offset_realloc_dbg` retourne un pointeur void vers le bloc de mémoire réalloué (et éventuellement déplacé). La valeur de retour est `NULL` si la taille est égale à zéro et l'argument de mémoire tampon n'est pas `NULL`, ou si la mémoire disponible est insuffisante pour étendre le bloc à la taille donnée. Dans le premier cas, le bloc d'origine est libéré. Dans le second cas, le bloc d'origine est inchangé. La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur vers un type autre que void, utilisez un cast de type sur la valeur de retour.  
   
 ## <a name="remarks"></a>Notes  
- `_aligned_offset_realloc_dbg` est une version de débogage de la fonction [_aligned_offset_realloc](../../c-runtime-library/reference/aligned-offset-realloc.md). Quand [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à `_aligned_offset_realloc_dbg` est réduit à un appel à_`aligned_offset_realloc`. \_`aligned_offset_realloc` et `_aligned_offset_realloc_dbg` réallouent toutes deux un bloc de mémoire dans le tas de base, mais `_aligned_offset_realloc_dbg` gère plusieurs fonctionnalités de débogage : des mémoires tampons de chaque côté de la partie utilisateur du bloc pour vérifier la présence de fuites, un paramètre de type de bloc pour effectuer le suivi de types d’allocation spécifiques et des informations `filename`/`linenumber` pour déterminer l’origine des demandes d’allocation.  
+ `_aligned_offset_realloc_dbg` est une version de débogage de la fonction [_aligned_offset_realloc](../../c-runtime-library/reference/aligned-offset-realloc.md). Quand [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à `_aligned_offset_realloc_dbg` est réduit à un appel à `_aligned_offset_realloc`. `_aligned_offset_realloc` et `_aligned_offset_realloc_dbg` réallouent toutes deux un bloc de mémoire dans le tas de base, mais `_aligned_offset_realloc_dbg` gère plusieurs fonctionnalités de débogage : des mémoires tampons de chaque côté de la partie utilisateur du bloc pour vérifier la présence de fuites, un paramètre de type de bloc pour effectuer le suivi de types d’allocation spécifiques et des informations `filename`/`linenumber` pour déterminer l’origine des demandes d’allocation.  
   
  Comme [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md), `_aligned_offset_realloc_dbg` autorise une structure à être alignée au niveau d’un décalage au sein de la structure.  
   
@@ -114,9 +115,6 @@ void * _aligned_offset_realloc_dbg(
   
 ## <a name="libraries"></a>Bibliothèques  
  Uniquement les versions de débogage des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Routines de débogage](../../c-runtime-library/debug-routines.md)

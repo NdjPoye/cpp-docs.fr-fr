@@ -1,71 +1,87 @@
 ---
-title: "complex&lt;long double&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::complex<long double>"
-  - "complex<long double>"
-  - "std.complex<long double>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "complex<long double> (fonction)"
+title: complex&lt;long double&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::complex<long double>
+- complex<long double>
+- std.complex<long double>
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# complex&lt;long double&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 75e4e8bc79cb972c19e200a4d8fc1340535cd297
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
+---
+# <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 Décrit un objet qui stocke une paire ordonnée d'objets de type `long double`, le premier représentant la partie réelle d'un nombre complexe et le deuxième représentant la partie imaginaire.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
-```  
-template<>  
-   class complex<long double> {  
-public:  
-   constexpr complex(  
-      long double _RealVal = 0,   
-      long double _ImagVal = 0  
-   );  
-complex(  
-      constexpr complex<long double>& _ComplexNum  
-   );  
-   // rest same as template class complex  
-};  
+```
+template <>
+class complex<long double> {
+public:
+    constexpr complex(
+    long double _RealVal = 0,
+    long double _ImagVal = 0);
+
+complex(
+    constexpr complex<long double>& complexNum);
+// rest same as template class complex
+};
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `_RealVal`  
- Valeur de type **long double** pour la partie réelle du nombre complexe qui est construit.  
+ Valeur de type **long double** pour la partie réelle du nombre complexe en cours de construction.  
   
  `_ImagVal`  
  Valeur de type `long double` pour la partie imaginaire du nombre complexe qui est construit.  
   
- `_ComplexNum`  
+ `complexNum`  
  Nombre complexe de type **double** ou **float** dont les parties réelle et imaginaire sont utilisées pour initialiser un nombre complexe de type `long double` en cours de construction.  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  Nombre complexe de type `long double`.  
   
-## Notes  
- La spécialisation explicite de la classe de modèle complex en une classe complexe de type `long double` diffère de la classe de modèle uniquement dans les constructeurs qu'elle définit.  La conversion de `long double` en **float** peut être implicite, mais la conversion de **double** en `long double` doit être de type **explicit**.  L'utilisation de **explicit** exclut l'initialisation avec la conversion de type en utilisant une syntaxe d'affectation.  
+## <a name="remarks"></a>Notes  
+ La spécialisation explicite de la classe de modèle complex en une classe complexe de type `long double` diffère de la classe de modèle uniquement dans les constructeurs qu'elle définit. La conversion de `long double` en **float** peut être implicite, mais la conversion de **double** en `long double` doit être de type **explicit**. L’utilisation d’**explicit** exclut l’initialisation avec la conversion de type à l’aide de la syntaxe d’assignation.  
   
- Pour plus d'informations sur la classe de modèle `complex`, consultez [complexe, classe](../standard-library/complex-class.md).  Pour obtenir la liste des membres de la classe de modèle `complex`, consultez .  
+ Pour plus d’informations sur la classe de modèle `complex`, consultez [complex, classe](../standard-library/complex-class.md). Pour obtenir la liste des membres de la classe de modèle `complex`, consultez .  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
+```cpp  
 // complex_comp_ld.cpp  
 // compile with: /EHsc  
 #include <complex>  
@@ -105,22 +121,28 @@ int main( )
         << argc3 << " radians, which is " << argc3 * 180 / pi  
         << " degrees." << endl;  
 }  
+\* Output:   
+Specifying initial real & imaginary parts,  
+ as type float gives c1 = (4,5)  
+Implicit conversion from type float to type long double,  
+ gives c2longdouble = (1,3)  
+Implicit conversion from type long double to type float,  
+ gives c3longdouble = (3,4)  
+The modulus of c3 is recovered from c3 using: abs ( c3 ) = 5  
+Argument of c3 is recovered from c3 using:  
+ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.  
+*\  
 ```  
   
-  **La spécification des parties initiales réelle et imaginaire,**  
- **comme type float donne c1 \= \(4,5\)**  
-**La conversion implicite du type float en type long double,**  
- **donne c2longdouble \= \(1,3\)**  
-**La conversion implicite du type long double en type float,**  
- **donne c3longdouble \= \(3,4\)**  
-**Le module de c3 est récupéré auprès de c3 en utilisant : abs \( c3 \) \= 5**  
-**L'argument de c3 est récupéré auprès de c3 en utilisant :**  
- **arg \( c3 \) \= 0,927295 radians, c'est\-à\-dire 53,1301 degrés.**   
-## Configuration requise  
- **En\-tête :** \<complex\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête** : \<complex>  
   
- **Espace de noms :** std  
+ **Espace de noms :** std  
   
-## Voir aussi  
- [complexe, classe](../standard-library/complex-class.md)   
- [Sécurité des threads dans la bibliothèque standard C\+\+](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>Voir aussi  
+ [complex, classe](../standard-library/complex-class.md)   
+ [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

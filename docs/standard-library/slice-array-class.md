@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a56db37d5684438bac79bbc2d0273fcfbc53a2c1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 97770a32fe661daf972753384d69b47badbcb7aa
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="slicearray-class"></a>slice_array, classe
@@ -97,10 +98,10 @@ public:
   
  `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`).  
   
- Vous construisez un objet **slice_array\<Type>** uniquement en écrivant une expression sous la forme [va&#91;sl&#93;](../standard-library/valarray-class.md#valarray__operator_at), pour une section **sl** du valarray **va**. Les fonctions membres de la classe slice_array se comportent ensuite comme les signatures de fonctions correspondantes définies pour **valarray\<Type>**, sauf que seule la séquence d’éléments sélectionnée est affectée. La séquence contrôlée par le slice_array est définie par les trois paramètres du constructeur slice, l’index du premier élément dans la section (slice), le nombre d’éléments et la distance entre les éléments. Un slice_array coupé du valarray **va** déclaré par **va**[ `slice`(2, 5, 3)] sélectionne les éléments ayant les index 2, 5, 8, 11 et 14 dans **va**. Les index doivent être valides pour que la procédure soit valide.  
+ Vous construisez un objet **slice_array\<Type>** uniquement en écrivant une expression sous la forme [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at), pour une section **sl** du valarray **va**. Les fonctions membres de la classe slice_array se comportent ensuite comme les signatures de fonctions correspondantes définies pour **valarray\<Type>**, sauf que seule la séquence d’éléments sélectionnée est affectée. La séquence contrôlée par le slice_array est définie par les trois paramètres du constructeur slice, l’index du premier élément dans la section (slice), le nombre d’éléments et la distance entre les éléments. Un slice_array coupé du valarray **va** déclaré par **va**[ `slice`(2, 5, 3)] sélectionne les éléments ayant les index 2, 5, 8, 11 et 14 dans **va**. Les index doivent être valides pour que la procédure soit valide.  
   
 ## <a name="example"></a>Exemple  
- Consultez l’exemple [slice::slice](../standard-library/slice-class.md#slice__slice) pour savoir comment déclarer et utiliser un slice_array.  
+ Consultez l’exemple [slice::slice](../standard-library/slice-class.md#slice) pour savoir comment déclarer et utiliser un slice_array.  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** \<valarray>  

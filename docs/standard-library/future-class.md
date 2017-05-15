@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - future/std::future
+- future/std::future::future
+- future/std::future::get
+- future/std::future::share
+- future/std::future::valid
+- future/std::future::wait
+- future/std::future::wait_for
+- future/std::future::wait_until
 dev_langs:
 - C++
 ms.assetid: 495e82c3-5341-4e37-87dd-b40107fbdfb6
@@ -32,10 +39,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6de4fecd3f5f65ac48cbb49f2ed4f874f4283487
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2a062caf9b28a48f2195f96b3a22f95a15c7149e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="future-class"></a>future, classe
@@ -57,31 +65,31 @@ class future;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[future::future, constructeur](#future__future_constructor)|Construit un objet `future`.|  
+|[future](#future)|Construit un objet `future`.|  
   
 ### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[future::get](#future__get_method)|Récupère le résultat stocké dans l’état asynchrone associé.|  
-|[future::share](#future__share_method)|Convertit l’objet en `shared_future`.|  
-|[future::valid](#future__valid_method)|Spécifie si l’objet n’est pas vide.|  
-|[future::wait](#future__wait_method)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.|  
-|[future::wait_for](#future__wait_for_method)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou que le délai spécifié soit écoulé.|  
-|[future::wait_until](#future__wait_until_method)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou jusqu’à un point spécifié dans le temps.|  
+|[get](#get)|Récupère le résultat stocké dans l’état asynchrone associé.|  
+|[Partager](#share)|Convertit l’objet en `shared_future`.|  
+|[valide](#valid)|Spécifie si l’objet n’est pas vide.|  
+|[attente](#wait)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.|  
+|[wait_for](#wait_for)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou que le délai spécifié soit écoulé.|  
+|[wait_until](#wait_until)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou jusqu’à un point spécifié dans le temps.|  
   
 ### <a name="public-operators"></a>Op&#233;rateurs publics  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[future::operator=](#future__operator_eq)|Transfère l’état asynchrone associé d’un objet spécifié.|  
+|[future::operator=](#op_eq)|Transfère l’état asynchrone associé d’un objet spécifié.|  
   
 ## <a name="requirements"></a>Spécifications  
- **En-tête :** future  
+ **En-tête :** \<future >  
   
  **Espace de noms :** std  
   
-##  <a name="a-namefuturefutureconstructora--futurefuture-constructor"></a><a name="future__future_constructor"></a>  future::future, constructeur  
+##  <a name="future"></a>  future::future, constructeur  
  Construit un objet `future`.  
   
 ```
@@ -98,7 +106,7 @@ future(future&& Other) noexcept;
   
  Le deuxième constructeur construit un objet `future` et transfère l’état asynchrone associé de `Other`. `Other` n’a plus d’état asynchrone associé.  
   
-##  <a name="a-namefuturegetmethoda--futureget"></a><a name="future__get_method"></a>  future::get  
+##  <a name="get"></a>  future::get  
  Récupère le résultat stocké dans l’état asynchrone associé.  
   
 ```
@@ -117,7 +125,7 @@ Ty get();
   
  Dans d’autres spécialisations, la méthode déplace sa valeur de retour à partir de la valeur stockée. Par conséquent, n’appelez cette méthode qu’une seule fois.  
   
-##  <a name="a-namefutureoperatoreqa--futureoperator"></a><a name="future__operator_eq"></a>  future::operator=  
+##  <a name="op_eq"></a>  future::operator=  
  Transfère un état asynchrone associé d’un objet spécifié.  
   
 ```
@@ -134,7 +142,7 @@ future& operator=(future&& Right) noexcept;
 ### <a name="remarks"></a>Notes  
  Après le transfert, `Right` n’a plus d’état asynchrone associé.  
   
-##  <a name="a-namefuturesharemethoda--futureshare"></a><a name="future__share_method"></a>  future::share  
+##  <a name="share"></a>  future::share  
  Convertit l’objet en un objet [shared_future](../standard-library/shared-future-class.md).  
   
 ```
@@ -144,7 +152,7 @@ shared_future<Ty> share();
 ### <a name="return-value"></a>Valeur de retour  
  `shared_future(move(*this))`  
   
-##  <a name="a-namefuturevalidmethoda--futurevalid"></a><a name="future__valid_method"></a>  future::valid  
+##  <a name="valid"></a>  future::valid  
  Spécifie si l’objet a un état asynchrone associé.  
   
 ```
@@ -154,7 +162,7 @@ bool valid() noexcept;
 ### <a name="return-value"></a>Valeur de retour  
  `true` si l'objet possède un état asynchrone associé ; sinon, `false`.  
   
-##  <a name="a-namefuturewaitmethoda--futurewait"></a><a name="future__wait_method"></a>  future::wait  
+##  <a name="wait"></a>  future::wait  
  Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit *prêt*.  
   
 ```cpp  
@@ -164,7 +172,7 @@ void wait() const;
 ### <a name="remarks"></a>Notes  
  Un état asynchrone associé est *prêt* uniquement si son fournisseur asynchrone a stocké une valeur de retour ou une exception.  
   
-##  <a name="a-namefuturewaitformethoda--futurewaitfor"></a><a name="future__wait_for_method"></a>  future::wait_for  
+##  <a name="wait_for"></a>  future::wait_for  
  Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit *prêt* ou que l’intervalle de temps spécifié soit écoulé.  
   
 ```
@@ -177,12 +185,12 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
  Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie un intervalle de temps maximal pour le blocage du thread.  
   
 ### <a name="return-value"></a>Valeur de retour  
- [future_status](../standard-library/future-enums.md#future_status_enumeration) qui indique la raison du retour.  
+ [future_status](../standard-library/future-enums.md#future_status) qui indique la raison du retour.  
   
 ### <a name="remarks"></a>Notes  
  Un état asynchrone associé est prêt uniquement si son fournisseur asynchrone a stocké une valeur de retour ou une exception.  
   
-##  <a name="a-namefuturewaituntilmethoda--futurewaituntil"></a><a name="future__wait_until_method"></a>  future::wait_until  
+##  <a name="wait_until"></a>  future::wait_until  
  Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit *prêt* ou jusqu’à un point spécifié dans le temps.  
   
 ```cpp  
@@ -195,7 +203,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
  Objet [chrono::time_point](../standard-library/time-point-class.md) qui spécifie un point dans le temps après lequel le thread peut être débloqué.  
   
 ### <a name="return-value"></a>Valeur de retour  
- [future_status](../standard-library/future-enums.md#future_status_enumeration) qui indique la raison du retour.  
+ [future_status](../standard-library/future-enums.md#future_status) qui indique la raison du retour.  
   
 ### <a name="remarks"></a>Notes  
  Un état asynchrone associé est *prêt* uniquement si son fournisseur asynchrone a stocké une valeur de retour ou une exception.  

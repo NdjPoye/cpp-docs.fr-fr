@@ -57,14 +57,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e1e2211a34a7cc146d1ce3b791927ffc206edaef
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e329acaad53c8990f335394bbcb8f0401d71c463
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
-Termine un thread ; `_endthread` termine un thread créé par `_beginthread` et  `_endthreadex` termine un thread créé par`_beginthreadex`.  
+Termine un thread ; `_endthread` termine un thread créé par `_beginthread` et  `_endthreadex` termine un thread créé par `_beginthreadex`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -87,7 +88,7 @@ void _endthreadex(
   
  `_endthread` ferme automatiquement le handle du thread. (Ce comportement diffère de l'API Win32 `ExitThread`.) Ainsi, quand vous utilisez `_beginthread` et `_endthread`, ne fermez pas explicitement le handle du thread en appelant l’API [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) Win32.  
   
- Comme l’API Win32 `ExitThread` , `_endthreadex` ne ferme pas le handle du thread. Ainsi, quand vous utilisez `_beginthreadex` et `_endthreadex`, vous devez fermer le handle du thread en appelant l'API Win32 `CloseHandle`.  
+ Comme l’API Win32 `ExitThread` , `_endthreadex` ne ferme pas le handle du thread. Ainsi, quand vous utilisez `_beginthreadex` et `_endthreadex`, vous devez fermer le handle du thread en appelant l'API Win32 `CloseHandle` .  
   
 > [!NOTE]
 >  `_endthread` et `_endthreadex` empêchent l'appel des destructeurs C++ en attente dans le thread.  
@@ -105,10 +106,7 @@ void _endthreadex(
  Uniquement les versions multithread des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Exemple  
- Voir l’exemple pour [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
+ Voir l'exemple pour [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)   

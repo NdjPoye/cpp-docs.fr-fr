@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: a7fcb706317f7185d260daab15ae14f478176768
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ae857750efe2d1f80e703e0c44f9646f7bfd3733
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
@@ -59,12 +60,12 @@ Définit les classes de modèle de conteneur [unordered_multiset](../standard-li
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/unordered-set-operators.md#operator_neq)|Teste si l’objet unordered_multiset situé à gauche de l’opérateur n’est pas égal à l’objet unordered_multiset situé à droite.|  
-|[operator==](../standard-library/unordered-set-operators.md#operator_eq_eq)|Teste si l’objet unordered_multiset situé à gauche de l’opérateur est égal à l’objet unordered_multiset situé à droite.|  
-|[Fonction swap](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Échange deux objets multiset.|  
-|[operator!=](../standard-library/unordered-set-operators.md#operator_neq)|Teste si l’objet unordered_set situé à gauche de l’opérateur n’est pas égal à l’objet unordered_set situé à droite.|  
-|[operator==](../standard-library/unordered-set-operators.md#operator_eq_eq)|Teste si l’objet unordered_set situé à gauche de l’opérateur est égal à l’objet unordered_set situé à droite.|  
-|[Fonction swap](../standard-library/unordered-set-functions.md#swap)|Échange deux objets set.|  
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Teste si l’objet unordered_multiset situé à gauche de l’opérateur n’est pas égal à l’objet unordered_multiset situé à droite.|  
+|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Teste si l’objet unordered_multiset situé à gauche de l’opérateur est égal à l’objet unordered_multiset situé à droite.|  
+|[swap](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Échange deux objets multiset.|  
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Teste si l’objet unordered_set situé à gauche de l’opérateur n’est pas égal à l’objet unordered_set situé à droite.|  
+|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Teste si l’objet unordered_set situé à gauche de l’opérateur est égal à l’objet unordered_set situé à droite.|  
+|[swap](../standard-library/unordered-set-functions.md#swap)|Échange deux objets set.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [unordered_map, classe](../standard-library/unordered-map-class.md)   

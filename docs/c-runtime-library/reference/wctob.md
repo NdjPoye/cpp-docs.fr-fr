@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6c72cc32c5bd48bc6b7fc9c9187797f056ec7712
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8eee02245359e71f32944f1a1f5c7180223553e3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="wctob"></a>wctob
@@ -72,9 +73,9 @@ int wctob(
  Valeur à traduire.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Si la fonction `wctob` convertit correctement un caractère large, elle retourne sa représentation de caractère multioctet, uniquement si la longueur du caractère multioctet est d’un octet exactement. Si la fonction `wctob` rencontre un caractère large qu’elle ne peut pas convertir en caractère multioctet ou si le caractère multioctet ne fait pas exactement un octet de long, elle retourne -1.  
+ Si la fonction `wctob` convertit correctement un caractère large, elle retourne sa représentation de caractère multioctet, uniquement si la longueur du caractère multioctet est d’un octet exactement. Si `wctob` rencontre un caractère large, elle ne peut pas convertir en un caractère multioctet ou le caractère multioctet est pas exactement un seul octet long, il retourne une valeur -1.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction `wctob` convertit un caractère large contenu dans `wchar` en caractère multioctet correspondant qui est passé par la valeur de retour `int`, dans la mesure où la longueur du caractère multioctet est d’un octet exactement.  
   
  Si `wctob` a échoué et qu’aucun caractère multioctet correspondant n’a été trouvé, la fonction affecte à `errno` la valeur `EILSEQ` et retourne -1.  
@@ -120,9 +121,6 @@ int main( void )
 ```Output  
 Determined the corresponding multibyte character to be "A".  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   

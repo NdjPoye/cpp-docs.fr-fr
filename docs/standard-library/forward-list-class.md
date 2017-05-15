@@ -9,10 +9,45 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::forward_list
 - forward_list
 - forward_list/std::forward_list
-- std.forward_list
+- forward_list/std::forward_list::allocator_type
+- forward_list/std::forward_list::const_iterator
+- forward_list/std::forward_list::const_pointer
+- forward_list/std::forward_list::const_reference
+- forward_list/std::forward_list::difference_type
+- forward_list/std::forward_list::iterator
+- forward_list/std::forward_list::pointer
+- forward_list/std::forward_list::reference
+- forward_list/std::forward_list::size_type
+- forward_list/std::forward_list::value_type
+- forward_list/std::forward_list::assign
+- forward_list/std::forward_list::before_begin
+- forward_list/std::forward_list::begin
+- forward_list/std::forward_list::cbefore_begin
+- forward_list/std::forward_list::cbegin
+- forward_list/std::forward_list::cend
+- forward_list/std::forward_list::clear
+- forward_list/std::forward_list::emplace_after
+- forward_list/std::forward_list::emplace_front
+- forward_list/std::forward_list::empty
+- forward_list/std::forward_list::end
+- forward_list/std::forward_list::erase_after
+- forward_list/std::forward_list::front
+- forward_list/std::forward_list::get_allocator
+- forward_list/std::forward_list::insert_after
+- forward_list/std::forward_list::max_size
+- forward_list/std::forward_list::merge
+- forward_list/std::forward_list::pop_front
+- forward_list/std::forward_list::push_front
+- forward_list/std::forward_list::remove
+- forward_list/std::forward_list::remove_if
+- forward_list/std::forward_list::resize
+- forward_list/std::forward_list::reverse
+- forward_list/std::forward_list::sort
+- forward_list/std::forward_list::splice_after
+- forward_list/std::forward_list::swap
+- forward_list/std::forward_list::unique
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 198522429f7337a4ee3e5d5cb29ab408950618d5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: cde111871667e754f629fd69562a6aa4aeb07b94
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="forwardlist-class"></a>forward_list, classe
@@ -68,73 +104,73 @@ class forward_list
   
  Les itérateurs, pointeurs et références peuvent devenir non valides quand des éléments de leur séquence contrôlée sont effacés via `forward_list`. Les insertions et jointures effectuées sur la séquence contrôlée via `forward_list` n'invalident pas les itérateurs.  
   
- Des ajouts à la séquence contrôlée peuvent être effectués par des appels à [forward_list::insert_after](#forward_list__insert_after), qui est la seule fonction membre qui appelle le constructeur `Type(const  T&)`. `forward_list` peut également appeler des constructeurs de déplacement. Si une telle expression lève une exception, l'objet conteneur n'insère aucun nouvel élément et relève l'exception. Ainsi, un objet de classe de modèle `forward_list` est laissé dans un état connu quand ces exceptions se produisent.  
+ Des ajouts à la séquence contrôlée peuvent être effectués par des appels à [forward_list::insert_after](#insert_after), qui est la seule fonction membre qui appelle le constructeur `Type(const  T&)`. `forward_list` peut également appeler des constructeurs de déplacement. Si une telle expression lève une exception, l'objet conteneur n'insère aucun nouvel élément et relève l'exception. Ainsi, un objet de classe de modèle `forward_list` est laissé dans un état connu quand ces exceptions se produisent.  
   
 ### <a name="constructors"></a>Constructeurs  
   
 |||  
 |-|-|  
-|[forward_list](#forward_list__forward_list)|Construit un objet de type `forward_list`.|  
+|[forward_list](#forward_list)|Construit un objet de type `forward_list`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#forward_list__allocator_type)|Type qui représente la classe d'allocateur pour un forward_list.|  
-|[const_iterator](#forward_list__const_iterator)|Type qui fournit un itérateur constant pour le forward_list.|  
-|[const_pointer](#forward_list__const_pointer)|Type qui fournit un pointeur vers un élément `const` dans un forward_list.|  
-|[const_reference](#forward_list__const_reference)|Type qui fournit une référence constante à un élément dans le forward_list.|  
-|[difference_type](#forward_list__difference_type)|Type entier signé qui peut être utilisé pour représenter le nombre d'éléments d'un forward_list au sein d'une plage, parmi les éléments vers lesquels pointent les itérateurs.|  
-|[iterator](#forward_list__iterator)|Type qui fournit un itérateur pour le forward_list.|  
-|[pointer](#forward_list__pointer)|Type qui fournit un pointeur vers un élément du forward_list.|  
-|[reference](#forward_list__reference)|Type qui fournit une référence à un élément du forward_list.|  
-|[size_type](#forward_list__size_type)|Type qui représente la distance non signée entre deux éléments.|  
-|[value_type](#forward_list__value_type)|Type qui représente le type d'élément stocké dans un forward_list.|  
+|[allocator_type](#allocator_type)|Type qui représente la classe d'allocateur pour un forward_list.|  
+|[const_iterator](#const_iterator)|Type qui fournit un itérateur constant pour le forward_list.|  
+|[const_pointer](#const_pointer)|Type qui fournit un pointeur vers un élément `const` dans un forward_list.|  
+|[const_reference](#const_reference)|Type qui fournit une référence constante à un élément dans le forward_list.|  
+|[difference_type](#difference_type)|Type entier signé qui peut être utilisé pour représenter le nombre d'éléments d'un forward_list au sein d'une plage, parmi les éléments vers lesquels pointent les itérateurs.|  
+|[iterator](#iterator)|Type qui fournit un itérateur pour le forward_list.|  
+|[pointer](#pointer)|Type qui fournit un pointeur vers un élément du forward_list.|  
+|[reference](#reference)|Type qui fournit une référence à un élément du forward_list.|  
+|[size_type](#size_type)|Type qui représente la distance non signée entre deux éléments.|  
+|[value_type](#value_type)|Type qui représente le type d'élément stocké dans un forward_list.|  
   
 ### <a name="member-functions"></a>Fonctions membres  
   
 |||  
 |-|-|  
-|[assign](#forward_list__assign)|Efface les éléments d'un forward_list et copie un nouvel ensemble d'éléments dans un forward_list cible.|  
-|[before_begin](#forward_list__before_begin)|Retourne un itérateur qui traite la position avant le premier élément dans un forward_list.|  
-|[begin](#forward_list__begin)|Retourne un itérateur qui traite le premier élément d'un forward_list.|  
-|[cbefore_begin](#forward_list__cbefore_begin)|Retourne un itérateur const qui traite la position avant le premier élément dans un forward_list.|  
-|[cbegin](#forward_list__cbegin)|Retourne un itérateur const qui traite le premier élément d'un forward_list.|  
-|[cend](#forward_list__cend)|Retourne un itérateur const qui traite l'emplacement suivant le dernier élément d'un forward_list.|  
-|[clear](#forward_list__clear)|Efface tous les éléments d'un forward_list.|  
-|[emplace_after](#forward_list__emplace_after)|Construit par déplacement un nouvel élément après la position spécifiée.|  
-|[emplace_front](#forward_list__emplace_front)|Ajoute un élément construit sur place au début de la liste.|  
-|[empty](#forward_list__empty)|Teste si un forward_list est vide.|  
-|[end](#forward_list__end)|Retourne un itérateur qui traite l'emplacement suivant le dernier élément d'un forward_list.|  
-|[erase_after](#forward_list__erase_after)|Supprime les éléments du forward_list après une position spécifiée.|  
-|[front](#forward_list__front)|Retourne une référence au premier élément d'un forward_list.|  
-|[get_allocator](#forward_list__get_allocator)|Retourne une copie de l'objet allocateur utilisé pour construire un forward_list.|  
-|[insert_after](#forward_list__insert_after)|Ajoute des éléments au forward_list après une position spécifiée.|  
-|[max_size](#forward_list__max_size)|Retourne la longueur maximale d'un forward_list.|  
-|[merge](#forward_list__merge)|Supprime les éléments de la liste d'arguments, les insère dans le forward_list cible, puis classe le nouvel ensemble combiné d'éléments dans l'ordre croissant ou dans un autre ordre spécifique.|  
-|[pop_front](#forward_list__pop_front)|Supprime l'élément au début d'un forward_list.|  
-|[push_front](#forward_list__push_front)|Ajoute un élément au début d'un forward_list.|  
-|[remove](#forward_list__remove)|Efface les éléments dans un forward_list qui correspond à une valeur spécifiée.|  
-|[remove_if](#forward_list__remove_if)|Efface les éléments d’un forward_list pour lequel un prédicat spécifié est satisfait.|  
-|[resize](#forward_list__resize)|Spécifie une nouvelle taille pour un forward_list.|  
-|[reverse](#forward_list__reverse)|Inverse l'ordre dans lequel les éléments apparaissent dans un forward_list.|  
-|[sort](#forward_list__sort)|Réorganise les éléments dans l’ordre croissant ou dans un ordre spécifié par un prédicat.|  
-|[splice_after](#forward_list__splice_after)|Réassocie les liens entre les nœuds.|  
-|[swap](#forward_list__swap)|Échange les éléments de deux forward_list.|  
-|[unique](#forward_list__unique)|Supprime des éléments adjacents qui réussissent un test spécifié.|  
+|[assign](#assign)|Efface les éléments d'un forward_list et copie un nouvel ensemble d'éléments dans un forward_list cible.|  
+|[before_begin](#before_begin)|Retourne un itérateur qui traite la position avant le premier élément dans un forward_list.|  
+|[begin](#begin)|Retourne un itérateur qui traite le premier élément d'un forward_list.|  
+|[cbefore_begin](#cbefore_begin)|Retourne un itérateur const qui traite la position avant le premier élément dans un forward_list.|  
+|[cbegin](#cbegin)|Retourne un itérateur const qui traite le premier élément d'un forward_list.|  
+|[cend](#cend)|Retourne un itérateur const qui traite l'emplacement suivant le dernier élément d'un forward_list.|  
+|[clear](#clear)|Efface tous les éléments d'un forward_list.|  
+|[emplace_after](#emplace_after)|Construit par déplacement un nouvel élément après la position spécifiée.|  
+|[emplace_front](#emplace_front)|Ajoute un élément construit sur place au début de la liste.|  
+|[empty](#empty)|Teste si un forward_list est vide.|  
+|[end](#end)|Retourne un itérateur qui traite l'emplacement suivant le dernier élément d'un forward_list.|  
+|[erase_after](#erase_after)|Supprime les éléments du forward_list après une position spécifiée.|  
+|[front](#front)|Retourne une référence au premier élément d'un forward_list.|  
+|[get_allocator](#get_allocator)|Retourne une copie de l'objet allocateur utilisé pour construire un forward_list.|  
+|[insert_after](#insert_after)|Ajoute des éléments au forward_list après une position spécifiée.|  
+|[max_size](#max_size)|Retourne la longueur maximale d'un forward_list.|  
+|[merge](#merge)|Supprime les éléments de la liste d'arguments, les insère dans le forward_list cible, puis classe le nouvel ensemble combiné d'éléments dans l'ordre croissant ou dans un autre ordre spécifique.|  
+|[pop_front](#pop_front)|Supprime l'élément au début d'un forward_list.|  
+|[push_front](#push_front)|Ajoute un élément au début d'un forward_list.|  
+|[remove](#remove)|Efface les éléments dans un forward_list qui correspond à une valeur spécifiée.|  
+|[remove_if](#remove_if)|Efface les éléments d’un forward_list pour lequel un prédicat spécifié est satisfait.|  
+|[resize](#resize)|Spécifie une nouvelle taille pour un forward_list.|  
+|[reverse](#reverse)|Inverse l'ordre dans lequel les éléments apparaissent dans un forward_list.|  
+|[sort](#sort)|Réorganise les éléments dans l’ordre croissant ou dans un ordre spécifié par un prédicat.|  
+|[splice_after](#splice_after)|Réassocie les liens entre les nœuds.|  
+|[swap](#swap)|Échange les éléments de deux forward_list.|  
+|[unique](#unique)|Supprime des éléments adjacents qui réussissent un test spécifié.|  
   
 ### <a name="operators"></a>Opérateurs  
   
 |||  
 |-|-|  
-|[operator=](#forward_list__operator_eq)|Remplace les éléments du forward_list par une copie d'un autre forward_list.|  
+|[operator=](#op_eq)|Remplace les éléments du forward_list par une copie d'un autre forward_list.|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** \<forward_list>  
   
  **Espace de noms :** std  
   
-##  <a name="a-nameforwardlistallocatortypea--forwardlistallocatortype"></a><a name="forward_list__allocator_type"></a>  forward_list::allocator_type  
+##  <a name="allocator_type"></a>  forward_list::allocator_type  
  Type qui représente la classe d'allocateur pour un forward_list.  
   
 ```  
@@ -144,16 +180,17 @@ typedef Allocator allocator_type;
 ### <a name="remarks"></a>Notes  
  `allocator_type` est un synonyme du paramètre de modèle Allocator.  
   
-##  <a name="a-nameforwardlistassigna--forwardlistassign"></a><a name="forward_list__assign"></a>  forward_list::assign  
+##  <a name="assign"></a>  forward_list::assign  
  Efface les éléments d'un forward_list et copie un nouvel ensemble d'éléments dans un forward_list cible.  
   
 ```  
- 
 void assign(
     size_type Count,   
     const Type& Val);
+
 void assign(
     initializer_list<Type> IList);
+
 template <class InputIterator>  
 void assign(InputIterator First, InputIterator Last);
 ```  
@@ -162,10 +199,10 @@ void assign(InputIterator First, InputIterator Last);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|` first`|Début de la plage de remplacement.|  
-|` last`|Fin de la plage de remplacement.|  
-|` count`|Nombre d’éléments à assigner.|  
-|` val`|Valeur à assigner à chaque élément.|  
+|`first`|Début de la plage de remplacement.|  
+|`last`|Fin de la plage de remplacement.|  
+|`count`|Nombre d’éléments à assigner.|  
+|`val`|Valeur à assigner à chaque élément.|  
 |`Type`|Type de la valeur.|  
 |`IList`|Initializer_list à copier.|  
   
@@ -176,7 +213,7 @@ void assign(InputIterator First, InputIterator Last);
   
  La troisième fonction membre copie les éléments d’initializer_list dans forward_list.  
   
-##  <a name="a-nameforwardlistbeforebegina--forwardlistbeforebegin"></a><a name="forward_list__before_begin"></a>  forward_list::before_begin  
+##  <a name="before_begin"></a>  forward_list::before_begin  
  Retourne un itérateur qui traite la position avant le premier élément dans un forward_list.  
   
 ```  
@@ -189,7 +226,7 @@ iterator before_begin();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameforwardlistbegina--forwardlistbegin"></a><a name="forward_list__begin"></a>  forward_list::begin  
+##  <a name="begin"></a>  forward_list::begin  
  Retourne un itérateur qui traite le premier élément d'un forward_list.  
   
 ```  
@@ -202,7 +239,7 @@ iterator begin();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameforwardlistcbeforebegina--forwardlistcbeforebegin"></a><a name="forward_list__cbefore_begin"></a>  forward_list::cbefore_begin  
+##  <a name="cbefore_begin"></a>  forward_list::cbefore_begin  
  Retourne un itérateur const qui traite la position avant le premier élément dans un forward_list.  
   
 ```  
@@ -214,7 +251,7 @@ const_iterator cbefore_begin() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameforwardlistcbegina--forwardlistcbegin"></a><a name="forward_list__cbegin"></a>  forward_list::cbegin  
+##  <a name="cbegin"></a>  forward_list::cbegin  
  Retourne un itérateur `const` qui traite le premier élément d'une plage.  
   
 ```  
@@ -227,7 +264,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>Notes  
  Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.  
   
- Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement au mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, il est supposé que `Container` est un conteneur modifiable (non-`const`) de tout type, prenant en charge `begin()` et `cbegin()`.  
+ Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, il est supposé que `Container` est un conteneur modifiable (non-`const`) de tout type, prenant en charge `begin()` et `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -236,7 +273,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-nameforwardlistcenda--forwardlistcend"></a><a name="forward_list__cend"></a>  forward_list::cend  
+##  <a name="cend"></a>  forward_list::cend  
  Retourne un itérateur `const` qui traite l'emplacement situé immédiatement après le dernier élément d'une plage.  
   
 ```  
@@ -249,7 +286,7 @@ const_iterator cend() const;
 ### <a name="remarks"></a>Notes  
  `cend` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.  
   
- Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement au mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, il est supposé que `Container` est un conteneur modifiable (autre que `const`) de tout type prenant en charge `end()` et `cend()`.  
+ Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, `Container` est supposé être un conteneur modifiable (autre que `const`) de type indéfini prenant en charge `end()` et `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -261,7 +298,7 @@ auto i2 = Container.cend();
   
  La valeur retournée par `cend` ne doit pas être déréférencée.  
   
-##  <a name="a-nameforwardlistcleara--forwardlistclear"></a><a name="forward_list__clear"></a>  forward_list::clear  
+##  <a name="clear"></a>  forward_list::clear  
  Efface tous les éléments d'un forward_list.  
   
 ```  
@@ -271,7 +308,7 @@ void clear();
 ### <a name="remarks"></a>Notes  
  Cette fonction membre appelle `erase_after(before_begin(), end()).`  
   
-##  <a name="a-nameforwardlistconstiteratora--forwardlistconstiterator"></a><a name="forward_list__const_iterator"></a>  forward_list::const_iterator  
+##  <a name="const_iterator"></a>  forward_list::const_iterator  
  Type qui fournit un itérateur constant pour le forward_list.  
   
 ```  
@@ -281,7 +318,7 @@ typedef implementation-defined const_iterator;
 ### <a name="remarks"></a>Notes  
  `const_iterator` décrit un objet pouvant servir d’itérateur vers l’avant constant pour la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l’implémentation.  
   
-##  <a name="a-nameforwardlistconstpointera--forwardlistconstpointer"></a><a name="forward_list__const_pointer"></a>  forward_list::const_pointer  
+##  <a name="const_pointer"></a>  forward_list::const_pointer  
  Type qui fournit un pointeur vers un élément `const` dans un forward_list.  
   
 ```  
@@ -291,7 +328,7 @@ typedef typename Allocator::const_pointer
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameforwardlistconstreferencea--forwardlistconstreference"></a><a name="forward_list__const_reference"></a>  forward_list::const_reference  
+##  <a name="const_reference"></a>  forward_list::const_reference  
  Type qui fournit une référence constante à un élément dans le forward_list.  
   
 ```  
@@ -300,7 +337,7 @@ typedef typename Allocator::const_reference const_reference;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameforwardlistdifferencetypea--forwardlistdifferencetype"></a><a name="forward_list__difference_type"></a>  forward_list::difference_type  
+##  <a name="difference_type"></a>  forward_list::difference_type  
  Type entier signé qui peut être utilisé pour représenter le nombre d'éléments d'un forward_list au sein d'une plage, parmi les éléments vers lesquels pointent les itérateurs.  
   
 ```  
@@ -310,7 +347,7 @@ typedef typename Allocator::difference_type difference_type;
 ### <a name="remarks"></a>Notes  
  `difference_type` décrit un objet pouvant représenter la différence entre les adresses de deux éléments de la séquence contrôlée.  
   
-##  <a name="a-nameforwardlistemplaceaftera--forwardlistemplaceafter"></a><a name="forward_list__emplace_after"></a>  forward_list::emplace_after  
+##  <a name="emplace_after"></a>  forward_list::emplace_after  
  Construit par déplacement un nouvel élément après la position spécifiée.  
   
 ```  
@@ -323,15 +360,15 @@ iterator emplace_after(const_iterator Where, Type&& val);
 |Paramètre|Description|  
 |---------------|-----------------|  
 |`Where`|Position dans la liste forward_list cible où le nouvel élément est construit.|  
-|` val`|Argument du constructeur.|  
+|`val`|Argument du constructeur.|  
   
 ### <a name="return-value"></a>Valeur de retour  
  Itérateur désignant le nouvel élément inséré.  
   
 ### <a name="remarks"></a>Notes  
- Cette fonction membre insère un élément avec les arguments de constructeur ` val` juste après l’élément désigné par `Where` dans la séquence contrôlée. Sinon, son comportement est identique à celui de [forward_list::insert_after](#forward_list__insert_after).  
+ Cette fonction membre insère un élément avec les arguments de constructeur `val` juste après l’élément désigné par `Where` dans la séquence contrôlée. Sinon, son comportement est identique à celui de [forward_list::insert_after](#insert_after).  
   
-##  <a name="a-nameforwardlistemplacefronta--forwardlistemplacefront"></a><a name="forward_list__emplace_front"></a>  forward_list::emplace_front  
+##  <a name="emplace_front"></a>  forward_list::emplace_front  
  Ajoute un élément construit sur place au début de la liste.  
   
 ```  
@@ -343,14 +380,14 @@ void emplace_front(Type&& val);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|` val`|Élément ajouté au début de la liste forward_list.|  
+|`val`|Élément ajouté au début de la liste forward_list.|  
   
 ### <a name="remarks"></a>Notes  
  Cette fonction membre insère un élément avec les arguments de constructeur `_ val` à la fin de la séquence contrôlée.  
   
  Si une exception est levée, le conteneur n’est pas modifié et l’exception est levée de nouveau.  
   
-##  <a name="a-nameforwardlistemptya--forwardlistempty"></a><a name="forward_list__empty"></a>  forward_list::empty  
+##  <a name="empty"></a>  forward_list::empty  
  Teste si un forward_list est vide.  
   
 ```  
@@ -360,7 +397,7 @@ bool empty() const;
 ### <a name="return-value"></a>Valeur de retour  
  `true` si la liste forward_list est vide ; sinon, `false`.  
   
-##  <a name="a-nameforwardlistenda--forwardlistend"></a><a name="forward_list__end"></a>  forward_list::end  
+##  <a name="end"></a>  forward_list::end  
  Retourne un itérateur qui traite l'emplacement suivant le dernier élément d'un forward_list.  
   
 ```  
@@ -371,7 +408,7 @@ iterator end();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne un itérateur vers l’avant qui pointe juste après la fin de la séquence.  
   
-##  <a name="a-nameforwardlisteraseaftera--forwardlisteraseafter"></a><a name="forward_list__erase_after"></a>  forward_list::erase_after  
+##  <a name="erase_after"></a>  forward_list::erase_after  
  Supprime les éléments du forward_list après une position spécifiée.  
   
 ```  
@@ -384,11 +421,11 @@ iterator erase_after(const_iterator first, const_iterator last);
 |Paramètre|Description|  
 |---------------|-----------------|  
 |`Where`|Position dans la liste forward_list cible où le nouvel élément est effacé.|  
-|` first`|Début de la plage à effacer.|  
-|` last`|Fin de la plage à effacer.|  
+|`first`|Début de la plage à effacer.|  
+|`last`|Fin de la plage à effacer.|  
   
 ### <a name="return-value"></a>Valeur de retour  
- Itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou [forward_list::end](#forward_list__end) si aucun élément de ce genre n’existe.  
+ Itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou [forward_list::end](#end) si aucun élément de ce genre n’existe.  
   
 ### <a name="remarks"></a>Notes  
  La première fonction membre supprime l’élément de séquence contrôlée juste après `Where`.  
@@ -399,7 +436,7 @@ iterator erase_after(const_iterator first, const_iterator last);
   
  Les fonctions membres ne lèvent jamais d'exception.  
   
-##  <a name="a-nameforwardlistforwardlista--forwardlistforwardlist"></a><a name="forward_list__forward_list"></a>  forward_list::forward_list  
+##  <a name="forward_list"></a>  forward_list::forward_list  
  Construit un objet de type `forward_list`.  
   
 ```  
@@ -446,7 +483,7 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
   
  Le dernier constructeur spécifie la séquence contrôlée initiale avec un objet de classe `initializer_list<Type>`.  
   
-##  <a name="a-nameforwardlistfronta--forwardlistfront"></a><a name="forward_list__front"></a>  forward_list::front  
+##  <a name="front"></a>  forward_list::front  
  Retourne une référence au premier élément d'un forward_list.  
   
 ```  
@@ -457,7 +494,7 @@ const_reference front() const;
 ### <a name="return-value"></a>Valeur de retour  
  Référence au premier élément de la séquence contrôlée, qui ne doit pas être vide.  
   
-##  <a name="a-nameforwardlistgetallocatora--forwardlistgetallocator"></a><a name="forward_list__get_allocator"></a>  forward_list::get_allocator  
+##  <a name="get_allocator"></a>  forward_list::get_allocator  
  Retourne une copie de l'objet allocateur utilisé pour construire un forward_list.  
   
 ```  
@@ -467,7 +504,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valeur de retour  
  Objet [allocateur](../standard-library/allocator-class.md) stocké.  
   
-##  <a name="a-nameforwardlistinsertaftera--forwardlistinsertafter"></a><a name="forward_list__insert_after"></a>  forward_list::insert_after  
+##  <a name="insert_after"></a>  forward_list::insert_after  
  Ajoute des éléments au forward_list après une position spécifiée.  
   
 ```  
@@ -510,7 +547,7 @@ void insert_after(const_iterator Where, InputIterator First, InputIterator Last)
   
  Si une exception est levée pendant l’insertion d’un ou plusieurs éléments, le conteneur n’est pas modifié et l’exception est levée de nouveau.  
   
-##  <a name="a-nameforwardlistiteratora--forwardlistiterator"></a><a name="forward_list__iterator"></a>  forward_list::iterator  
+##  <a name="iterator"></a>  forward_list::iterator  
  Type qui fournit un itérateur pour le forward_list.  
   
 ```  
@@ -520,7 +557,7 @@ typedef implementation-defined iterator;
 ### <a name="remarks"></a>Notes  
  `iterator` décrit un objet pouvant servir d’itérateur vers l’avant pour la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l’implémentation.  
   
-##  <a name="a-nameforwardlistmaxsizea--forwardlistmaxsize"></a><a name="forward_list__max_size"></a>  forward_list::max_size  
+##  <a name="max_size"></a>  forward_list::max_size  
  Retourne la longueur maximale d'un forward_list.  
   
 ```  
@@ -532,7 +569,7 @@ size_type max_size() const;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameforwardlistmergea--forwardlistmerge"></a><a name="forward_list__merge"></a>  forward_list::merge  
+##  <a name="merge"></a>  forward_list::merge  
  Combine les deux séquences triées en une seule séquence triée en temps linéaire. Supprime les éléments de la liste d’arguments et les insère dans ce `forward_list`. Les deux listes doivent être triées par le même objet de fonction de comparaison avant l’appel à `merge`. La liste combinée est triée par l’objet de fonction de comparaison.  
   
 ```  
@@ -545,19 +582,19 @@ void merge(forward_list& right, Predicate comp);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|` right`|Liste forward_list à partir de laquelle effectuer la fusion.|  
-|` comp`|Objet de fonction de comparaison utilisé pour trier les éléments.|  
+|`right`|Liste forward_list à partir de laquelle effectuer la fusion.|  
+|`comp`|Objet de fonction de comparaison utilisé pour trier les éléments.|  
   
 ### <a name="remarks"></a>Notes  
- `forward_list::merge` supprime les éléments de `forward_list`` right``,` et les insère dans ce `forward_list`. Les deux séquences doivent être triées par le même prédicat, décrit ci-dessous. La séquence combinée est également ordonnée par cet objet de fonction de comparaison.  
+ `forward_list::merge` supprime les éléments de `forward_list``right``,` et les insère dans ce `forward_list`. Les deux séquences doivent être triées par le même prédicat, décrit ci-dessous. La séquence combinée est également ordonnée par cet objet de fonction de comparaison.  
   
  Pour les itérateurs `Pi` et `Pj` désignant des éléments aux positions `i` et `j`, la première fonction membre impose l’ordre `!(*Pj < *Pi)` chaque fois que `i < j`. (Les éléments sont triés dans l’ordre `ascending`.) La deuxième fonction membre impose l’ordre `! comp(*Pj, *Pi)` chaque fois que `i < j`.  
   
- Aucune paire d’éléments dans la séquence contrôlée d’origine n’est inversée dans la séquence contrôlée obtenue. Si deux éléments de la séquence contrôlée obtenue sont égaux ( `!(*Pi < *Pj) && !(*Pj < *Pi)`), un élément de la séquence contrôlée d’origine apparaît avant un élément de la séquence contrôlée par ` right`.  
+ Aucune paire d’éléments dans la séquence contrôlée d’origine n’est inversée dans la séquence contrôlée obtenue. Si deux éléments de la séquence contrôlée obtenue sont égaux ( `!(*Pi < *Pj) && !(*Pj < *Pi)`), un élément de la séquence contrôlée d’origine apparaît avant un élément de la séquence contrôlée par `right`.  
   
- Une exception se produit uniquement si ` comp` lève une exception. Dans ce cas, la séquence contrôlée conserve un ordre non spécifié et l’exception est levée de nouveau.  
+ Une exception se produit uniquement si `comp` lève une exception. Dans ce cas, la séquence contrôlée conserve un ordre non spécifié et l’exception est levée de nouveau.  
   
-##  <a name="a-nameforwardlistoperatoreqa--forwardlistoperator"></a><a name="forward_list__operator_eq"></a>  forward_list::operator=  
+##  <a name="op_eq"></a>  forward_list::operator=  
  Remplace les éléments du forward_list par une copie d'un autre forward_list.  
   
 ```  
@@ -570,17 +607,17 @@ forward_list& operator=(forward_list&& right);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|` right`|Liste forward_list copiée dans la liste forward_list.|  
+|`right`|Liste forward_list copiée dans la liste forward_list.|  
 |`IList`|Liste d’initialiseurs entre accolades, qui se comporte comme une séquence d’éléments de type `Type`.|  
   
 ### <a name="remarks"></a>Notes  
- Le premier opérateur membre remplace la séquence contrôlée par une copie de la séquence contrôlée par ` right`.  
+ Le premier opérateur membre remplace la séquence contrôlée par une copie de la séquence contrôlée par `right`.  
   
  Le deuxième opérateur membre remplace la séquence contrôlée à partir d’un objet de classe `initializer_list<Type>`.  
   
  Le troisième opérateur membre est le même que le premier, mais avec une référence [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-##  <a name="a-nameforwardlistpointera--forwardlistpointer"></a><a name="forward_list__pointer"></a>  forward_list::pointer  
+##  <a name="pointer"></a>  forward_list::pointer  
  Type qui fournit un pointeur vers un élément du forward_list.  
   
 ```  
@@ -589,7 +626,7 @@ typedef typename Allocator::pointer pointer;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameforwardlistpopfronta--forwardlistpopfront"></a><a name="forward_list__pop_front"></a>  forward_list::pop_front  
+##  <a name="pop_front"></a>  forward_list::pop_front  
  Supprime l'élément au début d'un forward_list.  
   
 ```  
@@ -601,7 +638,7 @@ void pop_front();
   
  La fonction membre ne lève jamais d’exception.  
   
-##  <a name="a-nameforwardlistpushfronta--forwardlistpushfront"></a><a name="forward_list__push_front"></a>  forward_list::push_front  
+##  <a name="push_front"></a>  forward_list::push_front  
  Ajoute un élément au début d'un forward_list.  
   
 ```  
@@ -613,12 +650,12 @@ void push_front(Type&& val);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|` val`|Élément ajouté au début de la liste forward_list.|  
+|`val`|Élément ajouté au début de la liste forward_list.|  
   
 ### <a name="remarks"></a>Notes  
  Si une exception est levée, le conteneur n’est pas modifié et l’exception est levée de nouveau.  
   
-##  <a name="a-nameforwardlistreferencea--forwardlistreference"></a><a name="forward_list__reference"></a>  forward_list::reference  
+##  <a name="reference"></a>  forward_list::reference  
  Type qui fournit une référence à un élément du forward_list.  
   
 ```  
@@ -627,7 +664,7 @@ typedef typename Allocator::reference reference;
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameforwardlistremovea--forwardlistremove"></a><a name="forward_list__remove"></a>  forward_list::remove  
+##  <a name="remove"></a>  forward_list::remove  
  Efface les éléments dans un forward_list qui correspond à une valeur spécifiée.  
   
 ```  
@@ -638,14 +675,14 @@ void remove(const Type& val);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|` val`|Valeur qui, si elle est contenue dans un élément, entraîne la suppression de cet élément de la liste.|  
+|`val`|Valeur qui, si elle est contenue dans un élément, entraîne la suppression de cet élément de la liste.|  
   
 ### <a name="remarks"></a>Notes  
  La fonction membre supprime de la séquence contrôlée tous les éléments désignés par l’itérateur `P` pour lesquels `*P ==  val`.  
   
  La fonction membre ne lève jamais d’exception.  
   
-##  <a name="a-nameforwardlistremoveifa--forwardlistremoveif"></a><a name="forward_list__remove_if"></a>  forward_list::remove_if  
+##  <a name="remove_if"></a>  forward_list::remove_if  
  Efface les éléments d’un forward_list pour lequel un prédicat spécifié est satisfait.  
   
 ```  
@@ -657,14 +694,14 @@ void remove_if(Predicate pred);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|` pred`|Prédicat unaire qui, s’il est satisfait par un élément, entraîne la suppression de cet élément de la liste.|  
+|`pred`|Prédicat unaire qui, s’il est satisfait par un élément, entraîne la suppression de cet élément de la liste.|  
   
 ### <a name="remarks"></a>Notes  
  La fonction membre supprime de la séquence contrôlée tous les éléments désignés par l’itérateur `P` pour lesquels ` pred(*P)` est true.  
   
- Une exception se produit uniquement si ` pred` lève une exception. Dans ce cas, la séquence contrôlée conserve un état non spécifié et l’exception est levée de nouveau.  
+ Une exception se produit uniquement si `pred` lève une exception. Dans ce cas, la séquence contrôlée conserve un état non spécifié et l’exception est levée de nouveau.  
   
-##  <a name="a-nameforwardlistresizea--forwardlistresize"></a><a name="forward_list__resize"></a>  forward_list::resize  
+##  <a name="resize"></a>  forward_list::resize  
  Spécifie une nouvelle taille pour un forward_list.  
   
 ```  
@@ -677,12 +714,12 @@ void resize(size_type _Newsize, const Type& val);
 |Paramètre|Description|  
 |---------------|-----------------|  
 |`_Newsize`|Nombre d’éléments dans la liste forward_list redimensionnée.|  
-|` val`|Valeur à utiliser pour le remplissage.|  
+|`val`|Valeur à utiliser pour le remplissage.|  
   
 ### <a name="remarks"></a>Notes  
- Les deux fonctions membres garantissent que le nombre d’éléments dans la liste est désormais `_Newsize`. Si elle doit rallonger la séquence contrôlée, la première fonction membre ajoute des éléments avec la valeur `Type()`, tandis que la deuxième fonction membre ajoute des éléments avec la valeur ` val`. Pour raccourcir la séquence contrôlée, les deux fonctions membres appellent `erase_after(begin() + _Newsize - 1, end())`.  
+ Les deux fonctions membres garantissent que le nombre d’éléments dans la liste est désormais `_Newsize`. Si elle doit rallonger la séquence contrôlée, la première fonction membre ajoute des éléments avec la valeur `Type()`, tandis que la deuxième fonction membre ajoute des éléments avec la valeur `val`. Pour raccourcir la séquence contrôlée, les deux fonctions membres appellent `erase_after(begin() + _Newsize - 1, end())`.  
   
-##  <a name="a-nameforwardlistreversea--forwardlistreverse"></a><a name="forward_list__reverse"></a>  forward_list::reverse  
+##  <a name="reverse"></a>  forward_list::reverse  
  Inverse l'ordre dans lequel les éléments apparaissent dans un forward_list.  
   
 ```  
@@ -691,7 +728,7 @@ void reverse();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="a-nameforwardlistsizetypea--forwardlistsizetype"></a><a name="forward_list__size_type"></a>  forward_list::size_type  
+##  <a name="size_type"></a>  forward_list::size_type  
  Type qui représente la distance non signée entre deux éléments.  
   
 ```  
@@ -701,7 +738,7 @@ typedef typename Allocator::size_type size_type;
 ### <a name="remarks"></a>Notes  
  Le type d'entier non signé décrit un objet qui peut représenter la longueur de n'importe quelle séquence contrôlée.  
   
-##  <a name="a-nameforwardlistsorta--forwardlistsort"></a><a name="forward_list__sort"></a>  forward_list::sort  
+##  <a name="sort"></a>  forward_list::sort  
  Réorganise les éléments dans l’ordre croissant ou dans un ordre spécifié par un prédicat.  
   
 ```  
@@ -714,16 +751,16 @@ void sort(Predicate pred);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|` pred`|Prédicat de tri.|  
+|`pred`|Prédicat de tri.|  
   
 ### <a name="remarks"></a>Notes  
  Les deux fonctions membres ordonnent les éléments dans la séquence contrôlée selon un prédicat, décrit ci-dessous.  
   
  Pour les itérateurs `Pi` et `Pj` désignant des éléments aux positions `i` et `j`, la première fonction membre impose l’ordre `!(*Pj < *Pi)` chaque fois que `i < j`. (Les éléments sont triés dans l’ordre `ascending`.) La fonction membre de modèle impose l’ordre `! pred(*Pj, *Pi)` chaque fois que `i < j`. Aucune paire d’éléments ordonnée dans la séquence contrôlée d’origine n’est inversée dans la séquence contrôlée obtenue. (Le tri est stable.)  
   
- Une exception se produit uniquement si ` pred` lève une exception. Dans ce cas, la séquence contrôlée conserve un ordre non spécifié et l’exception est levée de nouveau.  
+ Une exception se produit uniquement si `pred` lève une exception. Dans ce cas, la séquence contrôlée conserve un ordre non spécifié et l’exception est levée de nouveau.  
   
-##  <a name="a-nameforwardlistspliceaftera--forwardlistspliceafter"></a><a name="forward_list__splice_after"></a>  forward_list::splice_after  
+##  <a name="splice_after"></a>  forward_list::splice_after  
  Supprime des éléments d'une liste forward_list source et les insère dans une liste forward_list de destination.  
   
 ```  
@@ -772,7 +809,7 @@ void splice_after(
   
  La troisième paire de fonctions membres (méthode splice à plage) insère la sous-plage désignée par `(First, Last)` à partir de la séquence contrôlée par `Source` juste après l'élément dans la séquence contrôlée vers lequel `Where` pointe. Elle supprime également la sous-plage d'origine de la séquence contrôlée par `Source`. (Si `&Source == this`, la plage `(First, Last)` ne doit pas inclure l'élément vers lequel `Where` pointe.)  
   
- Si la méthode splice à plage insère `N` éléments et que `&Source != this`, un objet de classe [iterator](#forward_list__iterator) est incrémenté `N` fois.  
+ Si la méthode splice à plage insère `N` éléments et que `&Source != this`, un objet de classe [iterator](#iterator) est incrémenté `N` fois.  
   
  Aucun itérateur, pointeur ou référence qui désigne des éléments ajoutés n'est invalidé.  
   
@@ -850,7 +887,7 @@ int main()
 Beginning state of lists:c1 = (10) (11)c2 = (20) (21) (22)c3 = (30) (31)c4 = (40) (41) (42) (43)After splicing c1 into c2:c1 =c2 = (20) (21) (10) (11) (22)After splicing the first element of c3 into c2:c3 = (30)c2 = (20) (21) (31) (10) (11) (22)After splicing a range of c4 into c2:c4 = (40) (41)c2 = (20) (21) (42) (43) (31) (10) (11) (22)  
 ```  
   
-##  <a name="a-nameforwardlistswapa--forwardlistswap"></a><a name="forward_list__swap"></a>  forward_list::swap  
+##  <a name="swap"></a>  forward_list::swap  
  Échange les éléments de deux forward_list.  
   
 ```  
@@ -861,12 +898,12 @@ void swap(forward_list& right);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|` right`|Liste forward_list qui fournit les éléments à échanger.|  
+|`right`|Liste forward_list qui fournit les éléments à échanger.|  
   
 ### <a name="remarks"></a>Notes  
- La fonction membre échange les séquences contrôlées entre `*this` et ` right`. Si `get_allocator() ==  right.get_allocator()`, elle le fait en temps constant, ne lève aucune exception et n’invalide aucune référence, pointeur ou itérateur qui désigne des éléments dans les deux séquences contrôlées. Sinon, elle effectue un nombre d’affectations d’éléments et d’appels de constructeurs proportionnel au nombre d’éléments dans les deux séquences contrôlées.  
+ La fonction membre échange les séquences contrôlées entre `*this` et `right`. Si `get_allocator() ==  right.get_allocator()`, elle le fait en temps constant, ne lève aucune exception et n’invalide aucune référence, pointeur ou itérateur qui désigne des éléments dans les deux séquences contrôlées. Sinon, elle effectue un nombre d’affectations d’éléments et d’appels de constructeurs proportionnel au nombre d’éléments dans les deux séquences contrôlées.  
   
-##  <a name="a-nameforwardlistuniquea--forwardlistunique"></a><a name="forward_list__unique"></a>  forward_list::unique  
+##  <a name="unique"></a>  forward_list::unique  
  Élimine tous les éléments sauf le premier de chaque groupe consécutif d’éléments égaux.  
   
 ```  
@@ -879,7 +916,7 @@ void unique(BinaryPredicate comp);
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|` comp`|Prédicat binaire utilisé pour comparer des éléments consécutifs.|  
+|`comp`|Prédicat binaire utilisé pour comparer des éléments consécutifs.|  
   
 ### <a name="remarks"></a>Notes  
  Conserve le premier de chaque élément unique et supprime le reste. Les éléments doivent être triés pour que les éléments de valeur égale soient adjacents dans la liste.  
@@ -888,9 +925,9 @@ void unique(BinaryPredicate comp);
   
  Pour une séquence contrôlée de longueur `N` (> 0), le prédicat ` comp(*Pi, *Pj)` est évalué `N - 1` fois.  
   
- Une exception se produit uniquement si ` comp` lève une exception. Dans ce cas, la séquence contrôlée conserve un état non spécifié et l’exception est levée de nouveau.  
+ Une exception se produit uniquement si `comp` lève une exception. Dans ce cas, la séquence contrôlée conserve un état non spécifié et l’exception est levée de nouveau.  
   
-##  <a name="a-nameforwardlistvaluetypea--forwardlistvaluetype"></a><a name="forward_list__value_type"></a>  forward_list::value_type  
+##  <a name="value_type"></a>  forward_list::value_type  
  Type qui représente le type d'élément stocké dans un forward_list.  
   
 ```  

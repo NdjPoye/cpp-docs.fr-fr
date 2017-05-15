@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: aea0adf064d61e0104bc15f9cc3825dd9f7e186f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4cf69d6876ffb96bfd7939eebb4c564f66e98037
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
@@ -90,7 +91,7 @@ unsigned int _mbbtombc_l(
  Si la fonction `_mbbtombc` convertit correctement `c`, elle retourne un caractère multioctet ; sinon, elle retourne `c`.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `_mbbtombc` convertit un certain caractère multioctet codé sur un octet en caractère multioctet codé sur deux octets correspondant. Les caractères doivent être compris dans la plage 0x20 – 0x7E ou 0xA1 – 0xDF à convertir.  
+ La fonction `_mbbtombc` convertit un certain caractère multioctet codé sur un octet en caractère multioctet codé sur deux octets correspondant. Les caractères doivent être dans la plage 0 x 20 – 0x7E ou 0xA1 - 0xDF à convertir.  
   
  La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de cette fonction sont identiques, à ceci près que `_mbbtombc` utilise les paramètres régionaux actifs pour ce comportement dépendant des paramètres régionaux et `_mbbtombc_l` utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
@@ -104,9 +105,6 @@ unsigned int _mbbtombc_l(
 |`_mbbtombc_l`|\<mbstring.h>|  
   
  Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   

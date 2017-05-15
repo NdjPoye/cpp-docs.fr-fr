@@ -1,75 +1,88 @@
 ---
-title: "mersenne_twister_engine, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "random/std::tr1::mersenne_twister_engine"
-  - "tr1.mersenne_twister_engine"
-  - "std.tr1.mersenne_twister_engine"
-  - "std::tr1::mersenne_twister_engine"
-  - "tr1::mersenne_twister_engine"
-  - "mersenne_twister_engine"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mersenne_twister_engine (classe)"
+title: mersenne_twister_engine, classe | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mersenne_twister_engine
+- random/std::mersenne_twister_engine
+dev_langs:
+- C++
+helpviewer_keywords:
+- mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# mersenne_twister_engine, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: bc94cb819bbf71893503f91bb3469a5be771f5cd
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/19/2017
 
+---
+# <a name="mersennetwisterengine-class"></a>mersenne_twister_engine, classe
 Génère une séquence aléatoire d'entiers de haute qualité selon l'algorithme twister de Mersenne.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-template<class UIntType,   
+template <class UIntType,   
     size_t W, size_t N, size_t M, size_t R,  
     UIntType A, size_t U, UIntType D, size_t S,  
     UIntType B, size_t T, UIntType C, size_t L, UIntType F>  
 class mersenne_twister_engine;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `UIntType`  
- Type des résultats entiers non signés. Pour les types possibles, consultez la page [\<random\>](../standard-library/random.md).  
+ Type des résultats entiers non signés. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).  
   
  `W`  
- **Taille de mot**. Taille de chaque mot, en bits, de la séquence d'état.**Condition préalable** : `2u < W ≤ numeric_limits<UIntType>::digits`  
+ **Taille de mot**. Taille de chaque mot, en bits, de la séquence d'état. **Condition préalable** : `2u < W ≤ numeric_limits<UIntType>::digits`  
   
  `N`  
- **Taille de l'état**. Nombre d'éléments \(valeurs\) dans la séquence d'état.  
+ **Taille de l’état**. Nombre d'éléments (valeurs) dans la séquence d'état.  
   
  `M`  
- **Taille de décalage**. Nombre d'éléments à ignorer pendant chaque torsion.**Condition préalable** : `0 < M ≤ N`  
+ **Taille de décalage**. Nombre d'éléments à ignorer pendant chaque torsion. **Condition préalable** : `0 < M ≤ N`  
   
  `R`  
- **Bits du masque**.**Condition préalable** : `R ≤ W`  
+ **Bits du masque**. **Condition préalable** : `R ≤ W`  
   
  `A`  
- **Masque XOR**.**Condition préalable** : `A ≤ (1u<<W) - 1u`  
+ **Masque XOR**. **Condition préalable** : `A ≤ (1u<<W) - 1u`  
   
  `U`, `S`, `T`, `L`  
- **Paramètres de décalage d'altération**. Utilisés comme valeurs de décalage pendant le brouillage \(altération\). Condition préalable :`U,S,T,L ≤ W`  
+ **Paramètres de décalage d’altération**. Utilisés comme valeurs de décalage pendant le brouillage (altération). Condition préalable :`U,S,T,L ≤ W`  
   
  `D`, `B`, `C`  
- **Paramètres de masque de bits d'altération**. Utilisés comme valeurs de masque de bits pendant le brouillage \(altération\). Condition préalable :`D,B,C ≤ (1u<<W) - 1u`  
+ **Paramètres de masque de bits d’altération**. Utilisés comme valeurs de masque de bits pendant le brouillage (altération). Condition préalable :`D,B,C ≤ (1u<<W) - 1u`  
   
  `F`  
- **Multiplicateur d'initialisation**. Aide à l'initialisation de la séquence. Condition préalable :`F ≤ (1u<<W) - 1u`  
+ **Multiplicateur d’initialisation**. Aide à l'initialisation de la séquence. Condition préalable :`F ≤ (1u<<W) - 1u`  
   
-## Membres  
+## <a name="members"></a>Membres  
   
 ||||  
 |-|-|-|  
@@ -78,18 +91,18 @@ class mersenne_twister_engine;
   
  `default_seed` est une constante membre, définie comme `5489u`, utilisée comme valeur de paramètre par défaut pour `mersenne_twister_engine::seed` et le constructeur de valeur unique.  
   
- Pour plus d’informations sur les membres moteurs, consultez [\<random\>](../standard-library/random.md).  
+ Pour plus d’informations sur les membres moteurs, consultez [\<random>](../standard-library/random.md).  
   
-## Notes  
- Cette classe de modèle décrit un moteur de nombres aléatoires, qui retournent des valeurs dans l’intervalle fermé \[`0`, `2`<sup>W</sup> \- `1`\]. Il contient une valeur intégrale élevée avec `W * (N - 1) + R` bits. Il extrait `W` bits à la fois de cette valeur élevée et, quand il a utilisé tous les bits, il déforme la valeur élevée en décalant et en combinant les bits pour avoir un nouvel ensemble de bits dans lequel procéder à l'extraction. L’état du moteur est le dernier `N``W`\-bits utilisées si `operator()` a été appelé au moins `N` fois, sinon le `M``W`\-bit des valeurs qui ont été utilisées et le dernier `N - M` les valeurs de la valeur initiale.  
+## <a name="remarks"></a>Remarques  
+ Cette classe de modèle décrit un moteur de nombres aléatoires, avec retour de valeurs sur l’intervalle fermé [ `0`, `2`<sup>W</sup> - `1`]. Il contient une valeur intégrale élevée avec `W * (N - 1) + R` bits. Il extrait `W` bits à la fois de cette valeur élevée et, quand il a utilisé tous les bits, il déforme la valeur élevée en décalant et en combinant les bits pour avoir un nouvel ensemble de bits dans lequel procéder à l'extraction. L’état du moteur est représenté par les dernières valeurs de `N``W` bits utilisées si `operator()` a été appelé au moins `N` fois, sinon les valeurs de `M``W` bits utilisées et les `N - M` dernières valeurs de la valeur initiale.  
   
- Le générateur déforme la valeur élevée qu'il contient en utilisant un registre à décalage de commentaires généralisés déformés défini par les valeurs de décalage `N` et `M`, une valeur de torsion `R` et un masque XOR conditionnel `A`. En outre, les bits du registre à décalage brut sont brouillés \(altérés\) selon une matrice de brouillage des bits définie par les valeurs `U`, `D`, `S`, `B`, `T`, `C` et `L`.  
+ Le générateur déforme la valeur élevée qu'il contient en utilisant un registre à décalage de commentaires généralisés déformés défini par les valeurs de décalage `N` et `M`, une valeur de torsion `R` et un masque XOR conditionnel `A`. En outre, les bits du registre à décalage brut sont brouillés (altérés) selon une matrice de brouillage des bits définie par les valeurs `U`, `D`, `S`, `B`, `T`, `C` et `L`.  
   
- L’argument template `UIntType` doit être suffisamment grande pour contenir des valeurs jusqu'à `2`<sup>W</sup> \- `1`. Les valeurs des autres arguments de modèle doivent être conformes aux spécifications suivantes : `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.  
+ L’argument de modèle `UIntType` doit être assez volumineux pour contenir des valeurs jusqu’à `2`<sup>W</sup> - `1`. Les valeurs des autres arguments de modèle doivent être conformes aux spécifications suivantes : `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.  
   
- Bien que vous puissiez construire un générateur à partir de ce moteur directement, il est recommandé de qu'utiliser une de ces typedefs prédéfinis :  
+ Bien que vous puissiez construire un générateur directement à partir de ce moteur, nous vous conseillons d’utiliser l’un des typedefs prédéfinis suivants :  
   
- `mt19937`: moteur de twister Mersenne 32 bits \(Matsumoto et Nishimura, 1998\).  
+ `mt19937` : moteur twister Mersenne 32 bits (Matsumoto et Nishimura, 1998).  
   
 ```  
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,   
@@ -100,7 +113,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;  
 ```  
   
- `mt19937_64`: moteur de twister Mersenne 64 bits \(Matsumoto et Nishimura, 2000\).  
+ `mt19937_64` : moteur twister Mersenne 64 bits (Matsumoto et Nishimura, 2000).  
   
 ```  
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,   
@@ -111,15 +124,17 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
     43, 6364136223846793005ULL> mt19937_64;  
 ```  
   
- Pour plus d’informations sur l’algorithme twister de Mersenne, voir l’article de Wikipedia [Mersenne twister](http://go.microsoft.com/fwlink/?LinkId=402356).  
+ Pour plus d’informations sur l’algorithme twister de Mersenne, consultez l’article de Wikipedia [Mersenne twister](http://go.microsoft.com/fwlink/LinkId=402356).  
   
-## Exemple  
- Pour obtenir un exemple de code, consultez [\<random\>](../standard-library/random.md).  
+## <a name="example"></a>Exemple  
+ Pour obtenir un exemple de code, consultez [\<random>](../standard-library/random.md).  
   
-## Configuration requise  
- **En\-tête :** \<random\>  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<random>  
   
- **Espace de noms :** std  
+ **Espace de noms :** std  
   
-## Voir aussi  
- [\<random\>](../standard-library/random.md)
+## <a name="see-also"></a>Voir aussi  
+ [\<random>](../standard-library/random.md)
+
+

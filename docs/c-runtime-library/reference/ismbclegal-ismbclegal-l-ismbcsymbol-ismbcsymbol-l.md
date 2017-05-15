@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 561e0e677200e075b94fce0e354691bcdbce1505
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8a7075b9a86aceda75b4934a74b405fc9e27a908
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
@@ -117,7 +118,7 @@ int _ismbcsymbol_l(
   
 |Routine|Condition de test|Exemple de page de codes 932|  
 |-------------|--------------------|---------------------------|  
-|`_ismbclegal`|Multioctet valide|Retourne une valeur différente de zéro si et seulement si le premier octet de `c` appartient à la plage 0x81-0x9F ou 0xE0-0xFC et que le deuxième octet appartient à la plage 0x40-0x7E ou 0x80-FC.|  
+|`_ismbclegal`|Multioctet valide|Retourne une valeur différente de zéro si, et seulement si, le premier octet de `c` appartient à la plage 0x81-0x9F ou 0xE0-0xFC et que le deuxième octet appartient à la plage 0x40-0x7E ou 0x80-FC.|  
 |`_ismbcsymbol`|Symbole multioctet|Retourne une valeur différente de zéro si et seulement si 0x8141<=`c`<=0x81AC.|  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
@@ -135,9 +136,6 @@ int _ismbcsymbol_l(
 |`_ismbcsymbol,_ismbcsymbol_l`|\<mbstring.h>|  
   
  Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Classifications des caractères](../../c-runtime-library/character-classification.md)   

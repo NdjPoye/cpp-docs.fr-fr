@@ -66,10 +66,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4c58b23be2c5aae5969471370e52af1c5416d32e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 87b1be7f31a8f28425dc80f16ed60528f811ad32
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="numericlimits-class"></a>numeric_limits, classe
@@ -87,7 +88,7 @@ class numeric_limits
  Type de données fondamental des éléments dont les propriétés sont testées, interrogées ou définies.  
   
 ## <a name="remarks"></a>Notes  
- L'en-tête définit des spécialisations explicites pour les types `wchar_t`, `bool`, `char`, `signed char`, `unsigned char`, `short`, `unsigned short`, `int`, `unsigned int`, `long`, `unsigned long`, `float`, `double`, `long double`**,** `long long`, `unsigned long long`, `char16_t`et `char32_t`. Pour ces spécialisations explicites, le membre [numeric_limits::is_specialized](#numeric_limits__is_specialized) est `true`, et tous les membres concernés ont des valeurs significatives. Le programme peut fournir des spécialisations explicites supplémentaires. La plupart des fonctions membres de la classe décrivent ou testent les implémentations possibles de `float`.  
+ L'en-tête définit des spécialisations explicites pour les types `wchar_t`, `bool`, `char`, `signed char`, `unsigned char`, `short`, `unsigned short`, `int`, `unsigned int`, `long`, `unsigned long`, `float`, `double`, `long double`**,** `long long`, `unsigned long long`, `char16_t`et `char32_t`. Pour ces spécialisations explicites, le membre [numeric_limits::is_specialized](#is_specialized) est `true`, et tous les membres concernés ont des valeurs significatives. Le programme peut fournir des spécialisations explicites supplémentaires. La plupart des fonctions membres de la classe décrivent ou testent les implémentations possibles de `float`.  
   
  Pour une spécialisation arbitraire, aucun membre n'a de valeur significative. Un objet membre qui n'a pas de valeur significative stocke zéro (ou `false`), tandis qu'une fonction membre qui ne retourne pas de valeur significative retourne `Type(0)`.  
   
@@ -95,45 +96,45 @@ class numeric_limits
   
 |||  
 |-|-|  
-|[denorm_min](#numeric_limits__denorm_min)|Retourne la plus petite valeur dénormalisée différente de zéro.|  
-|[digits](#numeric_limits__digits)|Retourne le nombre de chiffres de base que le type peut représenter sans perte de précision.|  
-|[digits10](#numeric_limits__digits10)|Retourne le nombre de chiffres décimaux que le type peut représenter sans perte de précision.|  
-|[epsilon](#numeric_limits__epsilon)|Retourne la différence entre 1 et la plus petite valeur supérieure à 1 que le type de données peut représenter.|  
-|[has_denorm](#numeric_limits__has_denorm)|Teste si un type autorise les valeurs dénormalisées.|  
-|[has_denorm_loss](#numeric_limits__has_denorm_loss)|Teste si une perte de précision est détectée comme une perte de dénormalisation et non pas comme un résultat inexact.|  
-|[has_infinity](#numeric_limits__has_infinity)|Teste si un type a une représentation pour l'infini positif.|  
-|[has_quiet_NaN](#numeric_limits__has_quiet_nan)|Teste si un type a une représentation pour un NaN (n'est pas un nombre) silencieux, qui ne fait pas de signalement.|  
-|[has_signaling_NaN](#numeric_limits__has_signaling_nan)|Teste si un type a une représentation pour signaler un NaN (n'est pas un nombre).|  
-|[infinity](#numeric_limits__infinity)|Représentation de l'infini positif pour un type, si elle est disponible.|  
-|[is_bounded](#numeric_limits__is_bounded)|Teste si l'ensemble des valeurs qu'un type peut représenter est fini.|  
-|[is_exact](#numeric_limits__is_exact)|Teste si les calculs effectués sur un type ne comportent pas d'erreurs d'arrondi.|  
-|[is_iec559](#numeric_limits__is_iec559)|Teste si un type est conforme aux normes IEC 559.|  
-|[is_integer](#numeric_limits__is_integer)|Teste si un type a une représentation des entiers.|  
-|[is_modulo](#numeric_limits__is_modulo)|Teste si un type a une représentation du modulo.|  
-|[is_signed](#numeric_limits__is_signed)|Teste si un type a une représentation signée.|  
-|[is_specialized](#numeric_limits__is_specialized)|Teste si un type a une spécialisation explicite définie dans la classe de modèle `numeric_limits`.|  
-|[lowest](#numeric_limits__lowest)|Retourne la plus grande valeur finie négative.|  
-|[max](#numeric_limits__max)|Retourne la valeur finie maximale pour un type.|  
-|[max_digits10](#numeric_limits__max_digits10)|Retourne le nombre de chiffres décimaux requis pour garantir que deux valeurs distinctes du type ont des représentations décimales distinctes.|  
-|[max_exponent](#numeric_limits__max_exponent)|Retourne l'exposant entier positif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand un nombre exprimé dans une base de base (radix) est élevé à cette puissance.|  
-|[max_exponent10](#numeric_limits__max_exponent10)|Retourne l'exposant entier positif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand une base&10; est élevée à cette puissance.|  
-|[min](#numeric_limits__min)|Retourne la valeur normalisée minimale pour un type.|  
-|[min_exponent](#numeric_limits__min_exponent)|Retourne l'exposant entier négatif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand un nombre exprimé dans une base de base (radix) est élevé à cette puissance.|  
-|[min_exponent10](#numeric_limits__min_exponent10)|Retourne l'exposant entier négatif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand une base&10; est élevée à cette puissance.|  
-|[quiet_NaN](#numeric_limits__quiet_nan)|Retourne la représentation d'un NaN (n'est pas un nombre) silencieux pour le type.|  
-|[radix](#numeric_limits__radix)|Retourne la base entière, appelée base (radix), utilisée pour la représentation d'un type.|  
-|[round_error](#numeric_limits__round_error)|Retourne l'erreur d'arrondi maximale pour le type.|  
-|[round_style](#numeric_limits__round_style)|Retourne une valeur qui décrit les différentes méthodes qu'une implémentation peut choisir pour arrondir une valeur à virgule flottante en valeur entière.|  
-|[signaling_NaN](#numeric_limits__signaling_nan)|Retourne la représentation d'un NaN (n'est pas un nombre) avec signalement pour le type.|  
-|[tinyness_before](#numeric_limits__tinyness_before)|Teste si un type peut déterminer qu'une valeur est trop petite pour être représentée sous la forme d'une valeur normalisée avant d'être arrondie.|  
-|[traps](#numeric_limits__traps)|Teste si les interceptions qui signalent des exceptions arithmétiques sont implémentées pour un type.|  
+|[denorm_min](#denorm_min)|Retourne la plus petite valeur dénormalisée différente de zéro.|  
+|[digits](#digits)|Retourne le nombre de chiffres de base que le type peut représenter sans perte de précision.|  
+|[digits10](#digits10)|Retourne le nombre de chiffres décimaux que le type peut représenter sans perte de précision.|  
+|[epsilon](#epsilon)|Retourne la différence entre 1 et la plus petite valeur supérieure à 1 que le type de données peut représenter.|  
+|[has_denorm](#has_denorm)|Teste si un type autorise les valeurs dénormalisées.|  
+|[has_denorm_loss](#has_denorm_loss)|Teste si une perte de précision est détectée comme une perte de dénormalisation et non pas comme un résultat inexact.|  
+|[has_infinity](#has_infinity)|Teste si un type a une représentation pour l'infini positif.|  
+|[has_quiet_NaN](#has_quiet_nan)|Teste si un type a une représentation pour un NaN (n'est pas un nombre) silencieux, qui ne fait pas de signalement.|  
+|[has_signaling_NaN](#has_signaling_nan)|Teste si un type a une représentation pour signaler un NaN (n'est pas un nombre).|  
+|[infinity](#infinity)|Représentation de l'infini positif pour un type, si elle est disponible.|  
+|[is_bounded](#is_bounded)|Teste si l'ensemble des valeurs qu'un type peut représenter est fini.|  
+|[is_exact](#is_exact)|Teste si les calculs effectués sur un type ne comportent pas d'erreurs d'arrondi.|  
+|[is_iec559](#is_iec559)|Teste si un type est conforme aux normes IEC 559.|  
+|[is_integer](#is_integer)|Teste si un type a une représentation des entiers.|  
+|[is_modulo](#is_modulo)|Teste si un type a une représentation du modulo.|  
+|[is_signed](#is_signed)|Teste si un type a une représentation signée.|  
+|[is_specialized](#is_specialized)|Teste si un type a une spécialisation explicite définie dans la classe de modèle `numeric_limits`.|  
+|[lowest](#lowest)|Retourne la plus grande valeur finie négative.|  
+|[max](#max)|Retourne la valeur finie maximale pour un type.|  
+|[max_digits10](#max_digits10)|Retourne le nombre de chiffres décimaux requis pour garantir que deux valeurs distinctes du type ont des représentations décimales distinctes.|  
+|[max_exponent](#max_exponent)|Retourne l'exposant entier positif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand un nombre exprimé dans une base de base (radix) est élevé à cette puissance.|  
+|[max_exponent10](#max_exponent10)|Retourne l'exposant entier positif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand une base 10 est élevée à cette puissance.|  
+|[min](#min)|Retourne la valeur normalisée minimale pour un type.|  
+|[min_exponent](#min_exponent)|Retourne l'exposant entier négatif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand un nombre exprimé dans une base de base (radix) est élevé à cette puissance.|  
+|[min_exponent10](#min_exponent10)|Retourne l'exposant entier négatif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand une base 10 est élevée à cette puissance.|  
+|[quiet_NaN](#quiet_nan)|Retourne la représentation d'un NaN (n'est pas un nombre) silencieux pour le type.|  
+|[radix](#radix)|Retourne la base entière, appelée base (radix), utilisée pour la représentation d'un type.|  
+|[round_error](#round_error)|Retourne l'erreur d'arrondi maximale pour le type.|  
+|[round_style](#round_style)|Retourne une valeur qui décrit les différentes méthodes qu'une implémentation peut choisir pour arrondir une valeur à virgule flottante en valeur entière.|  
+|[signaling_NaN](#signaling_nan)|Retourne la représentation d'un NaN (n'est pas un nombre) avec signalement pour le type.|  
+|[tinyness_before](#tinyness_before)|Teste si un type peut déterminer qu'une valeur est trop petite pour être représentée sous la forme d'une valeur normalisée avant d'être arrondie.|  
+|[traps](#traps)|Teste si les interceptions qui signalent des exceptions arithmétiques sont implémentées pour un type.|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** \<limits>  
   
  **Espace de noms :** std  
   
-##  <a name="numeric_limits__denorm_min"></a>  numeric_limits::denorm_min  
+##  <a name="denorm_min"></a>  numeric_limits::denorm_min  
  Retourne la plus petite valeur dénormalisée différente de zéro.  
   
 ```  
@@ -146,7 +147,7 @@ static Type denorm_min() throw();
 ### <a name="remarks"></a>Notes  
  `long double` est similaire à **double** pour le compilateur C++.  
   
- La fonction retourne la valeur minimale pour le type, qui correspond à [min](#numeric_limits__min) si [has_denorm](#numeric_limits__has_denorm) n’est pas égal à **denorm_present**.  
+ La fonction retourne la valeur minimale pour le type, qui correspond à [min](#min) si [has_denorm](#has_denorm) n’est pas égal à **denorm_present**.  
   
 ### <a name="example"></a>Exemple  
   
@@ -189,7 +190,7 @@ The smallest nonzero denormalized value
 0  
 ```  
   
-##  <a name="numeric_limits__digits"></a>  numeric_limits::digits  
+##  <a name="digits"></a>  numeric_limits::digits  
  Retourne le nombre de chiffres de base que le type peut représenter sans perte de précision.  
   
 ```  
@@ -230,7 +231,7 @@ int main( )
 63  
 ```  
   
-##  <a name="numeric_limits__digits10"></a>  numeric_limits::digits10  
+##  <a name="digits10"></a>  numeric_limits::digits10  
  Retourne le nombre de chiffres décimaux que le type peut représenter sans perte de précision.  
   
 ```  
@@ -272,7 +273,7 @@ int main( )
 The float is; 100000000  
 ```  
   
-##  <a name="numeric_limits__epsilon"></a>  numeric_limits::epsilon  
+##  <a name="epsilon"></a>  numeric_limits::epsilon  
  La fonction retourne la différence entre 1 et la plus petite valeur supérieure à 1 qui peut être représentée pour le type de données.  
   
 ```  
@@ -321,7 +322,7 @@ The difference between 1 and the smallest value greater than 1
  for long double objects is: 2.22045e-016  
 ```  
   
-##  <a name="numeric_limits__has_denorm"></a>  numeric_limits::has_denorm  
+##  <a name="has_denorm"></a>  numeric_limits::has_denorm  
  Teste si un type autorise les valeurs dénormalisées.  
   
 ```  
@@ -364,7 +365,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0  
 ```  
   
-##  <a name="numeric_limits__has_denorm_loss"></a>  numeric_limits::has_denorm_loss  
+##  <a name="has_denorm_loss"></a>  numeric_limits::has_denorm_loss  
  Teste si une perte de précision est détectée comme une perte de dénormalisation et non pas comme un résultat inexact.  
   
 ```  
@@ -407,7 +408,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0  
 ```  
   
-##  <a name="numeric_limits__has_infinity"></a>  numeric_limits::has_infinity  
+##  <a name="has_infinity"></a>  numeric_limits::has_infinity  
  Teste si un type a une représentation pour l'infini positif.  
   
 ```  
@@ -418,7 +419,7 @@ static const bool has_infinity = false;
  **true** si le type a une représentation de l’infini positif. **false** dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Le membre retourne **true** si [is_iec559](#numeric_limits__is_iec559) est **true**.  
+ Le membre retourne **true** si [is_iec559](#is_iec559) est **true**.  
   
 ### <a name="example"></a>Exemple  
   
@@ -450,7 +451,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0  
 ```  
   
-##  <a name="numeric_limits__has_quiet_nan"></a>  numeric_limits::has_quiet_NaN  
+##  <a name="has_quiet_nan"></a>  numeric_limits::has_quiet_NaN  
  Teste si un type a une représentation pour un NaN (n'est pas un nombre) silencieux, qui ne fait pas de signalement.  
   
 ```  
@@ -461,7 +462,7 @@ static const bool has_quiet_NaN = false;
  **true** si le **type** a une représentation pour un NAN silencieux. **false** dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Un NAN silencieux représente une valeur qui n’est pas un nombre et qui ne signale pas sa présence dans une expression. La valeur de retour est **true** si [is_iec559](#numeric_limits__is_iec559) est true.  
+ Un NAN silencieux représente une valeur qui n’est pas un nombre et qui ne signale pas sa présence dans une expression. La valeur de retour est **true** si [is_iec559](#is_iec559) est true.  
   
 ### <a name="example"></a>Exemple  
   
@@ -493,7 +494,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0  
 ```  
   
-##  <a name="numeric_limits__has_signaling_nan"></a>  numeric_limits::has_signaling_NaN  
+##  <a name="has_signaling_nan"></a>  numeric_limits::has_signaling_NaN  
  Teste si un type a une représentation pour signaler un NaN (n'est pas un nombre).  
   
 ```  
@@ -504,7 +505,7 @@ static const bool has_signaling_NaN = false;
  **true** si le type a une représentation pour signaler un NaN. **false** dans le cas contraire.  
   
 ### <a name="remarks"></a>Notes  
- Un NAN de signalisation représente une valeur qui n’est pas un nombre et qui signale sa présence dans une expression. La valeur de retour est **true** si [is_iec559](#numeric_limits__is_iec559) est true.  
+ Un NAN de signalisation représente une valeur qui n’est pas un nombre et qui signale sa présence dans une expression. La valeur de retour est **true** si [is_iec559](#is_iec559) est true.  
   
 ### <a name="example"></a>Exemple  
   
@@ -536,7 +537,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0  
 ```  
   
-##  <a name="numeric_limits__infinity"></a>  numeric_limits::infinity  
+##  <a name="infinity"></a>  numeric_limits::infinity  
  Représentation de l’infini positif pour un type, si elle est disponible.  
   
 ```  
@@ -547,7 +548,7 @@ static Type infinity() throw();
  Représentation de l’infini positif pour un type, si elle est disponible.  
   
 ### <a name="remarks"></a>Notes  
- La valeur de retour est significative uniquement si [has_infinity](#numeric_limits__has_infinity) est **true**.  
+ La valeur de retour est significative uniquement si [has_infinity](#has_infinity) est **true**.  
   
 ### <a name="example"></a>Exemple  
   
@@ -587,7 +588,7 @@ The representation of infinity for type double is: 1.#INF
 The representation of infinity for type long double is: 1.#INF  
 ```  
   
-##  <a name="numeric_limits__is_bounded"></a>  numeric_limits::is_bounded  
+##  <a name="is_bounded"></a>  numeric_limits::is_bounded  
  Teste si l'ensemble des valeurs qu'un type peut représenter est fini.  
   
 ```  
@@ -638,7 +639,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1  
 ```  
   
-##  <a name="numeric_limits__is_exact"></a>  numeric_limits::is_exact  
+##  <a name="is_exact"></a>  numeric_limits::is_exact  
  Teste si les calculs effectués sur un type ne comportent pas d'erreurs d'arrondi.  
   
 ```  
@@ -689,7 +690,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1  
 ```  
   
-##  <a name="numeric_limits__is_iec559"></a>  numeric_limits::is_iec559  
+##  <a name="is_iec559"></a>  numeric_limits::is_iec559  
  Teste si un type est conforme aux normes IEC 559.  
   
 ```  
@@ -736,7 +737,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0  
 ```  
   
-##  <a name="numeric_limits__is_integer"></a>  numeric_limits::is_integer  
+##  <a name="is_integer"></a>  numeric_limits::is_integer  
  Teste si un type a une représentation des entiers.  
   
 ```  
@@ -783,7 +784,7 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1  
 ```  
   
-##  <a name="numeric_limits__is_modulo"></a>  numeric_limits::is_modulo  
+##  <a name="is_modulo"></a>  numeric_limits::is_modulo  
  Teste si un **type** a une représentation du modulo.  
   
 ```  
@@ -830,7 +831,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1  
 ```  
   
-##  <a name="numeric_limits__is_signed"></a>  numeric_limits::is_signed  
+##  <a name="is_signed"></a>  numeric_limits::is_signed  
  Teste si un type a une représentation signée.  
   
 ```  
@@ -877,7 +878,7 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0  
 ```  
   
-##  <a name="numeric_limits__is_specialized"></a>  numeric_limits::is_specialized  
+##  <a name="is_specialized"></a>  numeric_limits::is_specialized  
  Teste si un type a une spécialisation explicite définie dans la classe de modèle `numeric_limits`.  
   
 ```  
@@ -928,7 +929,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0  
 ```  
   
-##  <a name="numeric_limits__lowest"></a>  numeric_limits::lowest  
+##  <a name="lowest"></a>  numeric_limits::lowest  
  Retourne la plus grande valeur finie négative.  
   
 ```  
@@ -941,7 +942,7 @@ static Type lowest() throw();
 ### <a name="remarks"></a>Notes  
  Retourne la plus grande valeur finie négative pour le type (en général, `min` `()` pour les types entiers et `-``max` `()` pour les types à virgule flottante). La valeur de retour est significative si `is_bounded` a pour valeur `true`.  
   
-##  <a name="numeric_limits__max"></a>  numeric_limits::max  
+##  <a name="max"></a>  numeric_limits::max  
  Retourne la valeur finie maximale pour un type.  
   
 ```  
@@ -952,7 +953,7 @@ static Type max() throw();
  Valeur finie maximale pour un type.  
   
 ### <a name="remarks"></a>Notes  
- La valeur finie maximale est INT_MAX pour le type `int` et FLT_MAX pour le type **float**. La valeur de retour est significative si [is_bounded](#numeric_limits__is_bounded) est **true**.  
+ La valeur finie maximale est INT_MAX pour le type `int` et FLT_MAX pour le type **float**. La valeur de retour est significative si [is_bounded](#is_bounded) est **true**.  
   
 ### <a name="example"></a>Exemple  
   
@@ -980,7 +981,7 @@ int main() {
 }  
 ```  
   
-##  <a name="numeric_limits__max_digits10"></a>  numeric_limits::max_digits10  
+##  <a name="max_digits10"></a>  numeric_limits::max_digits10  
  Retourne le nombre de chiffres décimaux nécessaires pour s'assurer que deux valeurs distinctes du type ont des représentations décimales distinctes.  
   
 ```  
@@ -993,7 +994,7 @@ static int max_digits10 = 0;
 ### <a name="remarks"></a>Notes  
  Le membre stocke retourne le nombre de chiffres décimaux nécessaires pour s'assurer que deux valeurs distinctes du type ont des représentations décimales distinctes.  
   
-##  <a name="numeric_limits__max_exponent"></a>  numeric_limits::max_exponent  
+##  <a name="max_exponent"></a>  numeric_limits::max_exponent  
  Retourne l'exposant entier positif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand un nombre exprimé dans une base de base (radix) est élevé à cette puissance.  
   
 ```  
@@ -1036,8 +1037,8 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024  
 ```  
   
-##  <a name="numeric_limits__max_exponent10"></a>  numeric_limits::max_exponent10  
- Retourne l'exposant entier positif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand une base&10; est élevée à cette puissance.  
+##  <a name="max_exponent10"></a>  numeric_limits::max_exponent10  
+ Retourne l'exposant entier positif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand une base 10 est élevée à cette puissance.  
   
 ```  
 static const int max_exponent10 = 0;  
@@ -1079,7 +1080,7 @@ The maximum base 10 exponent for type double is:  308
 The maximum base 10 exponent for type long double is:  308  
 ```  
   
-##  <a name="numeric_limits__min"></a>  numeric_limits::min  
+##  <a name="min"></a>  numeric_limits::min  
  Retourne la valeur normalisée minimale pour un type.  
   
 ```  
@@ -1090,7 +1091,7 @@ static Type min() throw();
  Valeur normalisée minimale pour le type.  
   
 ### <a name="remarks"></a>Notes  
- La valeur normalisée minimale est INT_MIN pour le type `int` et FLT_MIN pour le type `float`. La valeur de retour est significative si [is_bounded](#numeric_limits__is_bounded) est `true` ou si [is_signed](#numeric_limits__is_signed) est `false`.  
+ La valeur normalisée minimale est INT_MIN pour le type `int` et FLT_MIN pour le type `float`. La valeur de retour est significative si [is_bounded](#is_bounded) est `true` ou si [is_signed](#is_signed) est `false`.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1126,7 +1127,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768  
 ```  
   
-##  <a name="numeric_limits__min_exponent"></a>  numeric_limits::min_exponent  
+##  <a name="min_exponent"></a>  numeric_limits::min_exponent  
  Retourne l'exposant entier négatif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand un nombre exprimé dans une base de base (radix) est élevé à cette puissance.  
   
 ```  
@@ -1169,8 +1170,8 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021  
 ```  
   
-##  <a name="numeric_limits__min_exponent10"></a>  numeric_limits::min_exponent10  
- Retourne l'exposant entier négatif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand une base&10; est élevée à cette puissance.  
+##  <a name="min_exponent10"></a>  numeric_limits::min_exponent10  
+ Retourne l'exposant entier négatif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand une base 10 est élevée à cette puissance.  
   
 ```  
 static const int min_exponent10 = 0;  
@@ -1212,7 +1213,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307  
 ```  
   
-##  <a name="numeric_limits__quiet_nan"></a>  numeric_limits::quiet_NaN  
+##  <a name="quiet_nan"></a>  numeric_limits::quiet_NaN  
  Retourne la représentation d'un NaN (n'est pas un nombre) silencieux pour le type.  
   
 ```  
@@ -1223,7 +1224,7 @@ static Type quiet_NaN() throw();
  Représentation d’un NaN silencieux pour le type.  
   
 ### <a name="remarks"></a>Notes  
- La valeur de retour est significative uniquement si [has_quiet_NaN](#numeric_limits__has_quiet_nan) est **true**.  
+ La valeur de retour est significative uniquement si [has_quiet_NaN](#has_quiet_nan) est **true**.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1255,7 +1256,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN  
 ```  
   
-##  <a name="numeric_limits__radix"></a>  numeric_limits::radix  
+##  <a name="radix"></a>  numeric_limits::radix  
  Retourne la base entière, appelée base (radix), utilisée pour la représentation d'un type.  
   
 ```  
@@ -1298,7 +1299,7 @@ The base for type int is:  2
 The base for type long double is:  2  
 ```  
   
-##  <a name="numeric_limits__round_error"></a>  numeric_limits::round_error  
+##  <a name="round_error"></a>  numeric_limits::round_error  
  Retourne l'erreur d'arrondi maximale pour le type.  
   
 ```  
@@ -1338,7 +1339,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5  
 ```  
   
-##  <a name="numeric_limits__round_style"></a>  numeric_limits::round_style  
+##  <a name="round_style"></a>  numeric_limits::round_style  
  Retourne une valeur qui décrit les différentes méthodes qu'une implémentation peut choisir pour arrondir une valeur à virgule flottante en valeur entière.  
   
 ```  
@@ -1382,7 +1383,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0  
 ```  
   
-##  <a name="numeric_limits__signaling_nan"></a>  numeric_limits::signaling_NaN  
+##  <a name="signaling_nan"></a>  numeric_limits::signaling_NaN  
  Retourne la représentation d'un NaN (n'est pas un nombre) avec signalement pour le type.  
   
 ```  
@@ -1393,7 +1394,7 @@ static Type signaling_NaN() throw();
  Représentation d’un NaN avec signalement pour le type.  
   
 ### <a name="remarks"></a>Notes  
- La valeur de retour est significative uniquement si [has_signaling_NaN](#numeric_limits__has_signaling_nan) est **true**.  
+ La valeur de retour est significative uniquement si [has_signaling_NaN](#has_signaling_nan) est **true**.  
   
 ### <a name="example"></a>Exemple  
   
@@ -1419,7 +1420,7 @@ int main( )
 }  
 ```  
   
-##  <a name="numeric_limits__tinyness_before"></a>  numeric_limits::tinyness_before  
+##  <a name="tinyness_before"></a>  numeric_limits::tinyness_before  
  Teste si un type peut déterminer qu'une valeur est trop petite pour être représentée sous la forme d'une valeur normalisée avant d'être arrondie.  
   
 ```  
@@ -1466,7 +1467,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0  
 ```  
   
-##  <a name="numeric_limits__traps"></a>  numeric_limits::traps  
+##  <a name="traps"></a>  numeric_limits::traps  
  Teste si les interceptions qui signalent des exceptions arithmétiques sont implémentées pour un type.  
   
 ```  

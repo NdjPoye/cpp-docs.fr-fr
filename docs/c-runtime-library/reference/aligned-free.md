@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8cd24f11b79ef4148c1a56521ef85593cf766e2e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 8ddc662a1d497a419ebbaf0a93bfbf0ec17b664a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="alignedfree"></a>_aligned_free
@@ -84,9 +85,6 @@ void _aligned_free (
   
 ## <a name="example"></a>Exemple  
  Pour plus d’informations, consultez [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Alignement des données](../../c-runtime-library/data-alignment.md)

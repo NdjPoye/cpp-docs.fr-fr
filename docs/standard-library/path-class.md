@@ -31,10 +31,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: b6f1fb2eacdc12857978d03ccbd98ee5da3047e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: d1739ef33378358a9d195b79c1ba7ace7bf54acf
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="path-class"></a>path, classe
@@ -174,7 +175,7 @@ template <class Elem,
 string generic_string() const;
 ```  
   
- Retourne `this->string<Elem, Traits, Alloc>(al)` avec (sur Windows) les barres obliques inverses converties en barres obliques.  
+ Retourne `this->string<Elem, Traits, Alloc>(al)` avec (sous Windows) les barres obliques inverses converties en barres obliques.  
   
 ## <a name="pathgenericu16string"></a>path::generic_u16string  
   
@@ -612,7 +613,7 @@ wstring wstring() const;
  Convertit la séquence stockée dans mypath dans l’encodage privilégié par le système hôte pour une séquence wchar_t et la retourne stockée dans un objet de type wstring.  
   
 ## <a name="requirements"></a>Spécifications  
- **En-tête :** filesystem  
+ **En-tête :** \<filesystem >  
   
  **Espace de noms :** std::experimental::filesystem
   

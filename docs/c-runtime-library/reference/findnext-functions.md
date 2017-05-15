@@ -120,10 +120,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e1a79f5859d35b324b4469918bf1107da32f651c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 58132a9c16f23d7885432b05a459cc348c0bf915
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
@@ -190,7 +191,7 @@ int _wfindnext64i32(
  Mémoire tampon des informations du fichier.  
   
 ## <a name="return-value"></a>Valeur de retour  
- En cas de réussite, retourne 0. Sinon, retourne −1 et définit `errno` sur une valeur qui indique la nature de l’échec. Les codes d’erreur possibles sont présentés dans le tableau suivant.  
+ En cas de réussite, retourne 0. Sinon, retourne -1 et définit `errno` une valeur qui indique la nature de l’échec. Les codes d’erreur possibles sont présentés dans le tableau suivant.  
   
  `EINVAL`  
  Paramètre non valide : `fileinfo` était `NULL`. Ou bien, le système d’exploitation a retourné une erreur inattendue.  
@@ -216,13 +217,13 @@ int _wfindnext64i32(
   
 |Fonctions|`_USE_32BIT_TIME_T` défini ?|Type d’heure|Type de longueur de fichier|  
 |---------------|----------------------------------|---------------|----------------------|  
-|`_findnext`, `_wfindnext`|Non défini|64 bits|32 bits|  
-|`_findnext`, `_wfindnext`|Défini|32 bits|32 bits|  
-|`_findnext32`, `_wfindnext32`|Non affecté par la définition de macro|32 bits|32 bits|  
-|`_findnext64`, `_wfindnext64`|Non affecté par la définition de macro|64 bits|64 bits|  
-|`_findnexti64`, `_wfindnexti64`|Non défini|64 bits|64 bits|  
-|`_findnexti64`, `_wfindnexti64`|Défini|32 bits|64 bits|  
-|`_findnext32i64`, `_wfindnext32i64`|Non affecté par la définition de macro|32 bits|64 bits|  
+|`_findnext`, `_wfindnext`|Non défini|64 bits|32 bits|  
+|`_findnext`, `_wfindnext`|Défini|32 bits|32 bits|  
+|`_findnext32`, `_wfindnext32`|Non affecté par la définition de macro|32 bits|32 bits|  
+|`_findnext64`, `_wfindnext64`|Non affecté par la définition de macro|64 bits|64 bits|  
+|`_findnexti64`, `_wfindnexti64`|Non défini|64 bits|64 bits|  
+|`_findnexti64`, `_wfindnexti64`|Défini|32 bits|64 bits|  
+|`_findnext32i64`, `_wfindnext32i64`|Non affecté par la définition de macro|32 bits|64 bits|  
 |`_findnext64i32`, `_wfindnext64i32`|Non affecté par la définition de macro|64 bits|32 bits|  
   
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
@@ -257,9 +258,6 @@ int _wfindnext64i32(
   
 ## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Appels système](../../c-runtime-library/system-calls.md)   

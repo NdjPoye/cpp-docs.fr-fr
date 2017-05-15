@@ -21,6 +21,8 @@
 ### [Fichiers d’aide (Aide HTML)](help-files-html-help.md)
 ### [Fichiers d’aide (WinHelp)](help-files-winhelp.md)
 ### [Fichiers hint](hint-files.md)
+### [Fichiers XML de la page de propriétés](property-page-xml-files.md)
+### [Structure des fichiers .vcxproj et .props](vcxproj-file-structure.md)
 ## [Création de projets de bureau à l’aide des Assistants Application](creating-desktop-projects-by-using-application-wizards.md)
 ### [Prise en charge d’autres langues par l’Assistant](wizard-support-for-other-languages.md)
 ### [Création d’un Assistant personnalisé](creating-a-custom-wizard.md)

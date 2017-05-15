@@ -56,10 +56,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6bfbae9b083563f0f9a6b0c30e02fb79f413d52d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f197e4f6341508f05e566f45566f26a18be43bed
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
@@ -106,9 +107,9 @@ int _CrtDbgReportW(
  Arguments de substitution facultatifs utilisés par `format`.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Pour toutes les destinations du rapport, `_CrtDbgReport` et `_CrtDbgReportW` retournent –1 si une erreur se produit et 0 si aucune erreur n'est rencontrée. Cependant, quand la destination du rapport est une fenêtre de message de débogage et que l’utilisateur clique sur le bouton **Réessayer**, ces fonctions retournent 1. Si l’utilisateur clique sur le bouton **Abandonner** dans la fenêtre Message de débogage, ces fonctions sont immédiatement abandonnées et ne retournent aucune valeur.  
+ Pour toutes les destinations du rapport, `_CrtDbgReport` et `_CrtDbgReportW` retournent -1 si une erreur se produit et la valeur 0 si aucune erreur. Cependant, quand la destination du rapport est une fenêtre de message de débogage et que l’utilisateur clique sur le bouton **Réessayer**, ces fonctions retournent 1. Si l’utilisateur clique sur le bouton **Abandonner** dans la fenêtre Message de débogage, ces fonctions sont immédiatement abandonnées et ne retournent aucune valeur.  
   
- Les macros de débogage [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) appellent `_CrtDbgReport` pour générer leurs rapports de débogage. Les versions à caractères larges de ces macros, ainsi que [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW``n` et `_RPTFW``n`, utilisent `_CrtDbgReportW` pour générer leurs rapports de débogage. Quand `_CrtDbgReport` ou `_CrtDbgReportW` retourne 1, ces macros démarrent le débogueur, à condition que le débogage juste-à-temps (JIT) soit activé.  
+ Les macros de débogage [_RPT, _RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) appellent `_CrtDbgReport` pour générer leurs rapports de débogage. Les versions à caractères larges de ces macros, ainsi que [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), `_RPTW n` et `_RPTFW n`, utilisent `_CrtDbgReportW` pour générer leurs rapports de débogage. Quand `_CrtDbgReport` ou `_CrtDbgReportW` retourne 1, ces macros démarrent le débogueur, à condition que le débogage juste-à-temps (JIT) soit activé.  
   
 ## <a name="remarks"></a>Notes  
  `_CrtDbgReport` et `_CrtDbgReportW` peuvent envoyer le rapport de débogage vers trois destinations différentes : un fichier de rapport de débogage, un moniteur de débogage (le débogueur [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]) ou une fenêtre de message de débogage. Deux fonctions de configuration, [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) et [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md), sont utilisées pour spécifier la ou les destinations de chaque type de rapport. Ces fonctions permettent de contrôler séparément la ou les destinations de chaque type de rapport. Par exemple, il est possible de spécifier qu'un `reportType` de type `_CRT_WARN` sera envoyé uniquement au moniteur de débogage, alors que le `reportType` de type `_CRT_ASSERT` sera envoyé à une fenêtre de message de débogage et à un fichier de rapport défini par l'utilisateur.  
@@ -157,16 +158,6 @@ int main(int argc, char *argv[]) {
 ```  
   
  Consultez [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167) pour obtenir un exemple de la façon de modifier la fonction de rapport.  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
-  
--   [System::Diagnostics::Debug::Write](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.write.aspx)  
-  
--   [System::Diagnostics::Debug::Writeline](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)  
-  
--   [System::Diagnostics::Debug::WriteIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeif.aspx)  
-  
--   [System::Diagnostics::Debug::WriteLineIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writelineif.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Routines de débogage](../../c-runtime-library/debug-routines.md)   

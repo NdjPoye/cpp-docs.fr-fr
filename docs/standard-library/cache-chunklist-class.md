@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6e25dd5424ad471bade7289db4ea0684fab1f689
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 283186349d84225fdf9d1d52ec04817a12f3d27f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="cachechunklist-class"></a>cache_chunklist, classe
@@ -68,21 +69,21 @@ class cache_chunklist
   
 |||  
 |-|-|  
-|[cache_chunklist](#cache_chunklist__cache_chunklist)|Construit un objet de type `cache_chunklist`.|  
+|[cache_chunklist](#cache_chunklist)|Construit un objet de type `cache_chunklist`.|  
   
 ### <a name="member-functions"></a>Fonctions membres  
   
 |||  
 |-|-|  
-|[allocate](#cache_chunklist__allocate)|Alloue un bloc de mémoire.|  
-|[deallocate](#cache_chunklist__deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|  
+|[allocate](#allocate)|Alloue un bloc de mémoire.|  
+|[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** \<allocators>  
   
  **Espace de noms :** stdext  
   
-##  <a name="cache_chunklist__allocate"></a>  cache_chunklist::allocate  
+##  <a name="allocate"></a>  cache_chunklist::allocate  
  Alloue un bloc de mémoire.  
   
 ```
@@ -100,7 +101,7 @@ void *allocate(std::size_t count);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="cache_chunklist__cache_chunklist"></a>  cache_chunklist::cache_chunklist  
+##  <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist  
  Construit un objet de type `cache_chunklist`.  
   
 ```
@@ -109,7 +110,7 @@ cache_chunklist();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="cache_chunklist__deallocate"></a>  cache_chunklist::deallocate  
+##  <a name="deallocate"></a>  cache_chunklist::deallocate  
  Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.  
   
 ```

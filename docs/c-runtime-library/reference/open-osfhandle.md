@@ -1,50 +1,68 @@
 ---
-title: "_open_osfhandle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_open_osfhandle"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_open_osfhandle"
-  - "open_osfhandle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "open_osfhandle, fonction"
-  - "descripteurs de fichiers [C++], associer"
-  - "_open_osfhandle, fonction"
+title: _open_osfhandle | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _open_osfhandle
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _open_osfhandle
+- open_osfhandle
+dev_langs:
+- C++
+helpviewer_keywords:
+- open_osfhandle function
+- file handles [C++], associating
+- _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# _open_osfhandle
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0a201fa08f48198069df26c5c61944c99db73edf
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
-Associer un descripteur de fichier run time C au fichier existant de manipulation du système d'exploitation.  
+---
+# <a name="openosfhandle"></a>_open_osfhandle
+Associe un descripteur de fichier Runtime C à un descripteur de fichier de système d’exploitation existant.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -54,48 +72,45 @@ Associer un descripteur de fichier run time C au fichier existant de manipulatio
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `osfhandle`  
- Fichier de système d'exploitation géré.  
+ Descripteur de fichier de système d’exploitation.  
   
  `flags`  
- Types d'opérations autorisées.  
+ Types d’opération autorisés.  
   
-## Valeur de retour  
- En cas de réussite, `_open_osfhandle` retourne le descripteur d'exécution en cours c.  Sinon, il retourne \-1.  
+## <a name="return-value"></a>Valeur de retour  
+ En cas de réussite, `_open_osfhandle` retourne un descripteur de fichier Runtime C. Sinon, elle retourne -1.  
   
-## Notes  
- La fonction `_open_osfhandle` alloue un descripteur d'exécution en cours en C et l'associe au descripteur de fichier du système d'exploitation spécifié par `osfhandle`.  L'argument `flags` est une expression entière formée d'au moins l'une des constantes explicites définies dans Fcntl.h.  Lorsque plus de deux constantes manifestes sont utilisées pour former l'argument `flags`, les constantes sont combinées avec l'opérateur de bits OR \(  **&#124;** \).  
+## <a name="remarks"></a>Remarques  
+ La fonction `_open_osfhandle` alloue un descripteur de fichier Runtime C et l’associe au descripteur de fichier de système d’exploitation spécifié par `osfhandle`. L’argument `flags` est une expression d’entier formée à partir d’une ou plusieurs des constantes manifestes définies dans Fcntl.h. Quand plusieurs constantes manifestes sont utilisées pour former l’argument `flags`, les constantes sont combinées avec l’opérateur OR au niveau du bit ( **&#124;** ).  
   
  Fcntl.h définit les constantes manifestes suivantes.  
   
- **\_O\_APPEND**  
- Place un pointeur de fichier à la fin du fichier avant chaque opération d'écriture.  
+ **_O_APPEND**  
+ Positionne un pointeur de fichier à la fin du fichier avant chaque opération d’écriture.  
   
- **\_O\_RDONLY**  
- Ouvre le fichier en lecture seule.  
+ **_O_RDONLY**  
+ Ouvre le fichier pour un accès en lecture uniquement.  
   
- **\_O\_TEXT**  
- Ouvre le fichier en mode texte \(traduit\).  
+ **_O_TEXT**  
+ Ouvre le fichier en mode texte (traduit).  
   
- **\_O\_WTEXT**  
- Ouvre le fichier en mode Unicode \(traduit UTF\-16\).  
+ **_O_WTEXT**  
+ Ouvre le fichier en mode Unicode (UTF-16 traduit).  
   
- Pour fermer un fichier ouvert avec `_open_osfhandle`, appelez `_close`.  Le descripteur sous\-jacent est également fermée par un appel à `_close`, il n'est pas nécessaire d'appeler la fonction Win32 `CloseHandle` sur le descripteur d'origine.  
+ Pour fermer un fichier ouvert avec `_open_osfhandle`, appelez `_close`. Le descripteur sous-jacent étant aussi fermé par un appel à `_close`, il n’est pas nécessaire d’appeler la fonction Win32 `CloseHandle` au niveau du descripteur d’origine.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_open_osfhandle`|\<io.h,\>|  
+|`_open_osfhandle`|\<io.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
-## Bibliothèques  
+## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Équivalent .NET Framework  
- [System::IO::FileStream::Handle](https://msdn.microsoft.com/en-us/library/system.io.filestream.handle.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion de fichiers](../../c-runtime-library/file-handling.md)

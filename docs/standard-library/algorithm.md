@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 5d460e3f135015a3eb29f4f3a27a5f4cba615179
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 8deaefffa7afe676a7c8634c4c6c40e784aed982
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
@@ -147,7 +148,7 @@ Définit les fonctions de modèle du conteneur de bibliothèque C++ Standard qui
 |[set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)|Regroupe tous les éléments qui appartiennent à l'une de deux plages sources triées (mais pas aux deux) au sein d'une même plage de destination triée. Le critère de tri peut être spécifié par un prédicat binaire.|  
 |[set_union](../standard-library/algorithm-functions.md#set_union)|Regroupe tous les éléments qui appartiennent au moins à l'une de deux plages sources triées au sein d'une même plage de destination triée. Le critère de tri peut être spécifié par un prédicat binaire.|  
 |[sort](../standard-library/algorithm-functions.md#sort)|Réorganise les éléments d’une plage spécifiée, dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire.|  
-|[shuffle](../standard-library/algorithm-functions.md#std__shuffle)|Lit de façon aléatoire (réorganise) les éléments pour une plage donnée à l'aide d'un générateur de nombres aléatoires.|  
+|[shuffle](../standard-library/algorithm-functions.md#shuffle)|Lit de façon aléatoire (réorganise) les éléments pour une plage donnée à l'aide d'un générateur de nombres aléatoires.|  
 |[sort_heap](../standard-library/algorithm-functions.md#sort_heap)|Convertit un tas en une plage triée.|  
 |[stable_partition](../standard-library/algorithm-functions.md#stable_partition)|Classe les éléments d’une plage en deux ensembles disjoints. Les éléments qui répondent à un prédicat unaire doivent précéder ceux qui n’y répondent pas, et l’ordre relatif des éléments équivalents doit être conservé.|  
 |[stable_sort](../standard-library/algorithm-functions.md#stable_sort)|Classe les éléments d’une plage spécifiée dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire, et conserve l’ordre relatif des éléments équivalents.|  

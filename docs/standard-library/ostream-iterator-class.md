@@ -10,9 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - ostream_iterator
-- std.ostream_iterator
-- std::ostream_iterator
 - iterator/std::ostream_iterator
+- iterator/std::ostream_iterator::char_type
+- iterator/std::ostream_iterator::ostream_type
+- iterator/std::ostream_iterator::traits_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 3542d4a47abc3616c00360f9885761d08de5e884
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 390bde9ea36b7a05cf7f248b83e70b5de3337f19
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator, classe
@@ -57,7 +59,7 @@ class ostream_iterator
  Type d'objet à insérer dans le flux de sortie.  
   
  `CharType`  
- Type qui représente le type de caractère de `ostream_iterator`. Cet argument est facultatif et sa valeur par défaut est `char`*.*  
+ Type qui représente le type de caractère de `ostream_iterator`. Cet argument est facultatif et sa valeur par défaut est `char`.  
   
  `Traits`  
  Type qui représente le type de caractère de `ostream_iterator`. Cet argument est facultatif et sa valeur par défaut est `char_traits`\< *CharType>.*  
@@ -68,30 +70,30 @@ class ostream_iterator
   
 |||  
 |-|-|  
-|[ostream_iterator](#ostream_iterator__ostream_iterator)|Construit un `ostream_iterator` qui est initialisé et délimité en vue de son enregistrement dans le flux de sortie.|  
+|[ostream_iterator](#ostream_iterator)|Construit un `ostream_iterator` qui est initialisé et délimité en vue de son enregistrement dans le flux de sortie.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#ostream_iterator__char_type)|Type qui fournit le type de caractère de `ostream_iterator`.|  
-|[ostream_type](#ostream_iterator__ostream_type)|Type qui fournit le type de flux de `ostream_iterator`.|  
-|[traits_type](#ostream_iterator__traits_type)|Type qui fournit le type de caractéristique de `ostream_iterator`.|  
+|[char_type](#char_type)|Type qui fournit le type de caractère de `ostream_iterator`.|  
+|[ostream_type](#ostream_type)|Type qui fournit le type de flux de `ostream_iterator`.|  
+|[traits_type](#traits_type)|Type qui fournit le type de caractéristique de `ostream_iterator`.|  
   
 ### <a name="operators"></a>Opérateurs  
   
 |||  
 |-|-|  
-|[operator*](#ostream_iterator__operator_star)|Opérateur de suppression de référence utilisé pour implémenter l’expression d’itérateur de sortie * `i` = `x`.|  
-|[operator++](#ostream_iterator__operator_add_add)|Opérateur d'incrément non fonctionnel qui retourne un `ostream_iterator` au même objet qu'il a traité avant que l'opération n'ait été appelée.|  
-|[operator=](#ostream_iterator__operator_eq)|Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de sortie * `i` = `x` en vue de l’écriture dans un flux de sortie.|  
+|[operator*](#op_star)|Opérateur de suppression de référence utilisé pour implémenter l’expression d’itérateur de sortie * `i` = `x`.|  
+|[operator++](#op_add_add)|Opérateur d'incrément non fonctionnel qui retourne un `ostream_iterator` au même objet qu'il a traité avant que l'opération n'ait été appelée.|  
+|[operator=](#op_eq)|Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de sortie * `i` = `x` en vue de l’écriture dans un flux de sortie.|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** \<iterator>  
   
  **Espace de noms :** std  
   
-##  <a name="a-nameostreamiteratorchartypea--ostreamiteratorchartype"></a><a name="ostream_iterator__char_type"></a>  ostream_iterator::char_type  
+##  <a name="char_type"></a>  ostream_iterator::char_type  
  Type qui fournit le type de caractère de l’itérateur.  
   
 ```
@@ -138,7 +140,7 @@ by intOut are:
 *\  
 ```  
   
-##  <a name="a-nameostreamiteratoroperatorstara--ostreamiteratoroperator"></a><a name="ostream_iterator__operator_star"></a>  ostream_iterator::operator*  
+##  <a name="op_star"></a>  ostream_iterator::operator*  
  Opérateur de suppression de référence utilisé pour implémenter l’expression d’itérateur de sortie \* *ii* = *x*.  
   
 ```
@@ -184,7 +186,7 @@ Elements written to output stream:
 *\  
 ```  
   
-##  <a name="a-nameostreamiteratoroperatoraddadda--ostreamiteratoroperator"></a><a name="ostream_iterator__operator_add_add"></a>  ostream_iterator::operator++  
+##  <a name="op_add_add"></a>  ostream_iterator::operator++  
  Opérateur d'incrément non fonctionnel qui retourne un `ostream_iterator` au même objet qu'il a traité avant que l'opération n'ait été appelée.  
   
 ```
@@ -231,7 +233,7 @@ Elements written to output stream:
 *\  
 ```  
   
-##  <a name="a-nameostreamiteratoroperatoreqa--ostreamiteratoroperator"></a><a name="ostream_iterator__operator_eq"></a>  ostream_iterator::operator=  
+##  <a name="op_eq"></a>  ostream_iterator::operator=  
  Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de sortie * `i` = `x` en vue de l’écriture dans un flux de sortie.  
   
 ```
@@ -243,7 +245,7 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
  Valeur de l’objet de type `Type` à insérer dans le flux de sortie.  
   
 ### <a name="return-value"></a>Valeur de retour  
- L’opérateur insère `val` dans le flux de sortie associé à l’objet, suivi du délimiteur éventuellement spécifié dans le [constructeur ostream_iterator](#ostream_iterator__ostream_iterator), puis retourne une référence à `ostream_iterator`.  
+ L’opérateur insère `val` dans le flux de sortie associé à l’objet, suivi du délimiteur éventuellement spécifié dans le [constructeur ostream_iterator](#ostream_iterator), puis retourne une référence à `ostream_iterator`.  
   
 ### <a name="remarks"></a>Notes  
  La seule condition que doit remplir l’itérateur de sortie `ostream_iterator` est que l’expression * `ii` = `t` soit valide. Il n’y a pas de condition spécifiée pour operator ou operator= proprement dit. Cet opérateur membre retourne `*this`.  
@@ -281,7 +283,7 @@ Elements written to output stream:
 *\  
 ```  
   
-##  <a name="a-nameostreamiteratorostreamiteratora--ostreamiteratorostreamiterator"></a><a name="ostream_iterator__ostream_iterator"></a>  ostream_iterator::ostream_iterator  
+##  <a name="ostream_iterator"></a>  ostream_iterator::ostream_iterator  
  Construit un `ostream_iterator` qui est initialisé et délimité en vue de son enregistrement dans le flux de sortie.  
   
 ```
@@ -295,7 +297,7 @@ ostream_iterator(
   
 ### <a name="parameters"></a>Paramètres  
  `_Ostr`  
- Flux de sortie de type [ostream_iterator::ostream_type](#ostream_iterator__ostream_type) devant être itéré.  
+ Flux de sortie de type [ostream_iterator::ostream_type](#ostream_type) devant être itéré.  
   
  `_Delimiter`  
  Délimiteur qui est inséré dans le flux de sortie entre les valeurs.  
@@ -352,7 +354,7 @@ Elements output with delimiter: 1 : 2 : 3 : 4 : 5 : 6 :
 *\  
 ```  
   
-##  <a name="a-nameostreamiteratorostreamtypea--ostreamiteratorostreamtype"></a><a name="ostream_iterator__ostream_type"></a>  ostream_iterator::ostream_type  
+##  <a name="ostream_type"></a>  ostream_iterator::ostream_type  
  Type qui fournit le type de flux de l’itérateur.  
   
 ```
@@ -363,9 +365,9 @@ typedef basic_ostream<CharType, Traits> ostream_type;
  Le type est un synonyme de [basic_ostream](../standard-library/basic-ostream-class.md)< `CharType`, `Traits`>, une classe stream de la hiérarchie iostream qui définit les objets pouvant être utilisés pour l’écriture.  
   
 ### <a name="example"></a>Exemple  
-  Pour savoir comment déclarer et utiliser `ostream_type`, consultez l’exemple [ostream_iterator](#ostream_iterator__ostream_iterator).  
+  Pour savoir comment déclarer et utiliser `ostream_type`, consultez l’exemple [ostream_iterator](#ostream_iterator).  
   
-##  <a name="a-nameostreamiteratortraitstypea--ostreamiteratortraitstype"></a><a name="ostream_iterator__traits_type"></a>  ostream_iterator::traits_type  
+##  <a name="traits_type"></a>  ostream_iterator::traits_type  
  Type qui fournit le type des caractéristiques de caractère de l’itérateur.  
   
 ```

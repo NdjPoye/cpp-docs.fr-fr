@@ -50,14 +50,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c7bf8e09b7af4153bae3bfa0f80c002149ff3ee9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5875a26dc5758674665fba2fde5b51c2ff53420e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="alloca"></a>_alloca
-Alloue de la mémoire sur la pile. Cette fonction est déconseillée, car une version plus sécurisée est disponible ; consultez la page [_malloca](../../c-runtime-library/reference/malloca.md).  
+Alloue de la mémoire sur la pile. Cette fonction est déconseillée, car une version plus sécurisée est disponible ; consultez [_malloca](../../c-runtime-library/reference/malloca.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -77,7 +78,7 @@ void *_alloca(
  Une exception de dépassement de capacité de pile est générée si l’espace ne peut pas être alloué. L’exception de dépassement de capacité de pile n’est pas une exception C++ ; il s’agit d’une exception structurée. Au lieu d’utiliser la gestion des exceptions C++, vous devez utiliser la [gestion des exceptions structurée](../../cpp/structured-exception-handling-c-cpp.md) (SEH).  
   
 ## <a name="remarks"></a>Remarques  
- `_alloca`alloue `size` octets à partir de la pile du programme. L’espace alloué est automatiquement libérée lorsque la fonction d’appel s’arrête (pas quand l’allocation n’est hors de portée). Par conséquent, ne passez pas de la valeur de pointeur retournée par `_alloca` en tant qu’argument à [libre](../../c-runtime-library/reference/free.md).  
+ `_alloca`alloue `size` octets à partir de la pile du programme. L’espace alloué est automatiquement libérée lorsque la fonction d’appel s’arrête (pas lors de l’allocation n’est hors de portée). Par conséquent, ne passez pas de la valeur du pointeur retournée par `_alloca` en tant qu’argument à [libre](../../c-runtime-library/reference/free.md).  
   
  Des restrictions s’appliquent à l’appel explicite de `_alloca` dans un gestionnaire d’exceptions (EH). Les routines EH qui s’exécutent sur des processeurs de classe x86 opèrent dans le cadre de leur propre mémoire : elles effectuent leurs tâches dans un espace mémoire qui n’est pas basé sur l’emplacement actuel du pointeur de pile de la fonction englobante. Les implémentations les plus courantes incluent les expressions de gestion des exceptions structurées Windows NT (SEH) et les expressions de clause catch C++. Ainsi, appeler explicitement `_alloca` dans l’un des scénarios suivants entraîne l’échec du programme pendant le retour à la routine EH appelante :  
   
@@ -92,7 +93,7 @@ void *_alloca(
 > [!IMPORTANT]
 >  Dans Windows XP, si `_alloca` est appelée à l’intérieur d’un bloc try/catch, vous devez appeler [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md) dans le bloc catch.  
   
- Outre les restrictions ci-dessus, lorsque vous utilisez la[/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) option, `_alloca` ne peut pas être utilisée dans `__except` blocs. Pour plus d’informations, consultez [Restrictions de /clr](../../build/reference/clr-restrictions.md).  
+ Outre les restrictions ci-dessus, lorsque vous utilisez la[/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) option, `_alloca` ne peut pas être utilisé dans `__except` blocs. Pour plus d'informations, consultez [/clr Restrictions](../../build/reference/clr-restrictions.md).  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -157,9 +158,6 @@ int main()
 ```Output  
 Allocated 1000 bytes of stack at 0x0012FB50  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)   

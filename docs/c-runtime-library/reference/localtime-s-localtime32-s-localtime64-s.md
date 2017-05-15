@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bde781215787a1d39a58c69b344eb8d41f7b3c52
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e068c6711630976a2d8b3baea01010bc5e34ed6e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
@@ -120,28 +121,28 @@ errno_t _localtime64_s(
  Les champs du type de structure [tm](../../c-runtime-library/standard-types.md) stockent les valeurs suivantes, chacune d’elles étant un `int`.  
   
  `tm_sec`  
- Secondes après la minute (0 – 59).  
+ Secondes après la minute (0 - 59).  
   
  `tm_min`  
- Minutes après l’heure (0 – 59).  
+ Minutes après l’heure (0 - 59).  
   
  `tm_hour`  
  Heures après minuit (0 - 23).  
   
  `tm_mday`  
- Jour du mois (1 – 31).  
+ Jour du mois (1 à 31).  
   
  `tm_mon`  
- Mois (0 – 11 ; janvier = 0).  
+ Mois (0 - 11 ; Janvier = 0).  
   
  `tm_year`  
  Année (année en cours moins 1900).  
   
  `tm_wday`  
- Jour de la semaine (0 – 6 ; dimanche = 0).  
+ Jour de la semaine (0 - 6 ; Dimanche = 0).  
   
  `tm_yday`  
- Jour de l’année (0 – 365 ; 1er janvier = 0).  
+ Jour de l’année (0 - 365 ; Le 1er janvier = 0).  
   
  `tm_isdst`  
  Valeur positive si l’heure d’été est en vigueur ; 0 si l’heure d’été n’est pas appliquée ; valeur négative si l’état de l’heure d’été est inconnu. Si la variable d’environnement `TZ` est définie, la bibliothèque runtime C suppose que les règles de calcul de l’heure d’été appropriées sont celles des États-Unis.  
@@ -211,9 +212,6 @@ int main( void )
 ```  
 Fri Apr 25 01:19:27 PM  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- [System::DateTime::ToLocalTime](https://msdn.microsoft.com/en-us/library/system.datetime.tolocaltime.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion du temps](../../c-runtime-library/time-management.md)   

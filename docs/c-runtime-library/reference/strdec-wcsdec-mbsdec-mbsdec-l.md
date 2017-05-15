@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c372d65ca9d3c49aee32cb51fea67859dc11a7fb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 08ab806a3f2852109dda05d40e7264dbd8571298
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
@@ -103,16 +104,16 @@ unsigned char *_mbsdec_l(
   
 #### <a name="parameters"></a>Paramètres  
  `start`  
- Pointeur désignant un caractère (ou pour `_mbsdec` et _`mbsdec_l`, premier octet d’un caractère multioctet) de la chaîne source ; `start` doit précéder `current` dans la chaîne source.  
+ Pointeur vers n’importe quel caractère (ou pour `_mbsdec` et `_mbsdec_l`, le premier octet d’un caractère multioctet) dans la chaîne source ; `start` doit précéder `current` dans la chaîne source.  
   
  `current`  
- Pointeur désignant un caractère (ou pour `_mbsdec` et _`mbsdec_l`, premier octet d’un caractère multioctet) de la chaîne source ; `current` doit suivre `start` dans la chaîne source.  
+ Pointeur vers n’importe quel caractère (ou pour `_mbsdec` et `_mbsdec_l`, le premier octet d’un caractère multioctet) dans la chaîne source ; `current` doit suivre `start` dans la chaîne source.  
   
  `locale`  
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Les fonctions `_mbsdec`, _`mbsdec_l`, `_strdec` et `_wcsdec` retournent chacune un pointeur désignant le caractère qui précède immédiatement `current` ; `_mbsdec` retourne `NULL` si la valeur de `start` est supérieure ou égale à celle de `current`. `_tcsdec` se mappe à l’une de ces fonctions et sa valeur de retour dépend du mappage.  
+ `_mbsdec`, `_mbsdec_l`, `_strdec`, et `_wcsdec` chacun retournent un pointeur vers le caractère qui précède immédiatement `current`; `_mbsdec` retourne `NULL` si la valeur de `start` est supérieure ou égale à celle de `current`. `_tcsdec` se mappe à l’une de ces fonctions et sa valeur de retour dépend du mappage.  
   
 ## <a name="remarks"></a>Notes  
  Les fonctions `_mbsdec` et `_mbsdec_l` retournent un pointeur désignant le premier octet du caractère multioctet qui précède immédiatement `current` dans la chaîne qui contient `start`.  
@@ -197,9 +198,6 @@ int main()
 }  
   
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   

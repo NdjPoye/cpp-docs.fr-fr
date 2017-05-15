@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 40a42d694d6f0101573cb9b29e5a7571c4863bb0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3522cd33098484194fec8158b26577b9e01dfe62
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
@@ -71,7 +72,7 @@ void _aligned_free_dbg(
  Pointeur vers le bloc de mémoire qui a été retourné à la fonction `_aligned_malloc` ou `_aligned_offset_malloc`.  
   
 ## <a name="remarks"></a>Notes  
- La fonction `_aligned_free_dbg` est une version de débogage de la fonction [_aligned_free](../../c-runtime-library/reference/aligned-free.md). Quand [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à `_aligned_free_dbg` est réduit à un appel à _`aligned_free`. \_`aligned_free` et `_aligned_free_dbg` libèrent toutes deux un bloc de mémoire dans le tas de base, mais `_aligned_free_dbg` gère une fonctionnalité de débogage : la capacité à conserver les blocs libérés dans la liste liée du tas pour simuler des conditions de mémoire insuffisante.  
+ La fonction `_aligned_free_dbg` est une version de débogage de la fonction [_aligned_free](../../c-runtime-library/reference/aligned-free.md). Quand [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, chaque appel à `_aligned_free_dbg` est réduit à un appel à `_aligned_free`. Les deux `_aligned_free` et `_aligned_free_dbg` libérer un bloc de mémoire dans le tas de base, mais `_aligned_free_dbg` prend en charge une fonctionnalité de débogage : la capacité à conserver libérés blocs dans la liste de liée du tas pour simuler des conditions de mémoire insuffisante.  
   
  `_aligned_free_dbg` effectue une vérification de validité sur tous les fichiers et emplacements de blocs spécifiés avant de procéder à la libération. Il n'est pas prévu que l'application fournisse ces informations. Quand un bloc de mémoire est libéré, le gestionnaire de tas de débogage vérifie automatiquement l'intégrité des mémoires tampons de chaque côté de la partie utilisateur et émet un rapport d'erreurs si un remplacement a eu lieu. Si le champ de bits `_CRTDBG_DELAY_FREE_MEM_DF` de l’indicateur [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) est défini, le bloc libéré est renseigné avec la valeur 0xDD, le type de bloc `_FREE_BLOCK` lui est affecté et il est conservé dans la liste liée du tas des blocs de mémoire.  
   
@@ -86,9 +87,6 @@ void _aligned_free_dbg(
 |`_aligned_free_dbg`|\<crtdbg.h>|  
   
  Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Routines de débogage](../../c-runtime-library/debug-routines.md)

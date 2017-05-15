@@ -1,51 +1,69 @@
 ---
-title: "qsort | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "qsort"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntdll.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "qsort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "qsort, fonction"
-  - "quick-sort, algorithme"
-  - "tri de tableaux"
-  - "tableaux [CRT], trier"
+title: qsort | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- qsort
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- qsort
+dev_langs:
+- C++
+helpviewer_keywords:
+- qsort function
+- quick-sort algorithm
+- sorting arrays
+- arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# qsort
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: b71bdc6b2b2bff50645a7ce8ae1ef88ad4d6dd91
+ms.contentlocale: fr-fr
+ms.lasthandoff: 03/29/2017
 
-Effectue un tri rapide.  Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [qsort\_s](../../c-runtime-library/reference/qsort-s.md).  
+---
+# <a name="qsort"></a>qsort
+Effectue un tri rapide. Il existe une version plus sécurisée de cette fonction. Consultez [qsort_s](../../c-runtime-library/reference/qsort-s.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void qsort(  
@@ -56,49 +74,49 @@ void qsort(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `base`  
  Début du tableau cible.  
   
  `num`  
- Taille du tableau en éléments.  
+ Taille du tableau dans les éléments.  
   
  `width`  
- Taille des éléments en octets.  
+ Taille d’élément en octets.  
   
  `compare`  
- Pointeur vers une routine fournie à l'utilisateur qui compare deux éléments du tableau et retourne une valeur qui indique leur relation.  
+ Pointeur désignant une routine fournie par l’utilisateur qui compare deux éléments de tableau et retourne une valeur qui spécifie leur relation.  
   
-## Notes  
- La fonction `qsort` implémente un algorithme de tri rapide qui range un tableau de `num`éléments, chacun de`width`octets.  L'argument `base` est un pointeur vers la base du tableau à trier.  `qsort` reécrit sur ce tableau en utilisant les éléments rangés.  
+## <a name="remarks"></a>Notes  
+ La fonction `qsort` implémente un algorithme de tri rapide pour trier un tableau d’éléments `num`, chacun de `width` octets. L’argument `base` est un pointeur désignant la base du tableau à trier. `qsort` remplace ce tableau en utilisant les éléments triés.  
   
- `qsort` appelle la routine `compare` une ou plusieurs fois lors du tri, et passe les pointeurs vers deux éléments de tableau à chaque appel.  
+ `qsort` appelle la routine `compare` une ou plusieurs fois pendant le tri, et transmet les pointeurs à deux éléments de tableau à chaque appel.  
   
 ```  
-compare( (void *) & elem1, (void *) & elem2 );  
+compare( (void *) & elem1, (void *) & elem2 );  
 ```  
   
- La routine compare les éléments et retourne l'une des valeurs suivantes.  
+ La routine compare les éléments et retourner l’une des valeurs suivantes.  
   
-|La fonction compare retourne une valeur|Description|  
-|---------------------------------------------|-----------------|  
-|\< 0|`elem1` inférieure à `elem2`|  
-|0|`elem1` est équivalent à `elem2`|  
-|\> 0|`elem1` supérieur à `elem2`|  
+|Valeur de retour de la fonction compare|Description|  
+|-----------------------------------|-----------------|  
+|< 0|`elem1` inférieure à `elem2`|  
+|0|`elem1` équivalent à `elem2`|  
+|> 0|`elem1` supérieur à `elem2`|  
   
- La table est trié en ordre croissant, comme défini par la fonction de comparaison.  Pour trier une table par ordre décroissant, inverser le sens « supérieur à » et « inférieur à » de la fonction de comparaison.  
+ Le tableau est trié par ordre croissant, comme défini par la fonction de comparaison. Pour trier un tableau par ordre décroissant, changez le sens de « supérieur à » et « inférieur à » dans la fonction de comparaison.  
   
- Cette fonction valide ses paramètres.  Si `compare` ou `num` est `NULL`, ou si `base` est `NULL` et \*`num` est différent de zéro, ou si `width` est inférieure à zéro, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, la fonction retourne \-1 et définit `errno` avec la valeur `EINVAL`.  
+ Cette fonction valide ses paramètres. Si `compare` ou `num` a la valeur `NULL` ou si `base` a la valeur `NULL` et que *`num` est différent de zéro, ou si `width` est inférieur à zéro, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne une valeur et `errno` prend la valeur `EINVAL`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`qsort`|\<stdlib.h\> et \<malloc.h\>|  
+|`qsort`|\<stdlib.h> et \<search.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_qsort.c  
@@ -138,11 +156,11 @@ int compare( const void *arg1, const void *arg2 )
 }  
 ```  
   
-  **le garçon mérite chaque privilège**   
-## Équivalent .NET Framework  
- [System::Collections::ArrayList::Sort](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx)  
+```Output  
+boy deserves every favor good  
+```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Recherche et tri](../../c-runtime-library/searching-and-sorting.md)   
  [bsearch](../../c-runtime-library/reference/bsearch.md)   
- [\_lsearch](../../c-runtime-library/reference/lsearch.md)
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)

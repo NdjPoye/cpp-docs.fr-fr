@@ -12,10 +12,11 @@ f1_keywords:
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: e32c8f5892764d2efc955bbf2d7930e0c8d3f3f0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 53a31f533ee777dbbcc486283034094481ab0c31
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt;, fonctions
@@ -34,7 +35,7 @@ extern const std::nothrow_t nothrow;
  L’objet est utilisé comme argument de fonction pour correspondre au type de paramètre [std::nothrow_t](../standard-library/nothrow-t-structure.md).  
   
 ### <a name="example"></a>Exemple  
-  Pour obtenir des exemples d’utilisation de `std::nothrow_t` comme paramètre de fonction, consultez [new, opérateur](../standard-library/new-operators.md#operator_new) et [new &#91;&#93;, opérateur](../standard-library/new-operators.md#operator_new_arr).  
+  Pour obtenir des exemples d’utilisation de `std::nothrow_t` comme paramètre de fonction, consultez [new, opérateur](../standard-library/new-operators.md#op_new) et [new &#91;&#93;, opérateur](../standard-library/new-operators.md#op_new_arr).  
   
 ##  <a name="set_new_handler"></a>  set_new_handler  
  Installe une fonction utilisateur à appeler quand `operator new` échoue dans sa tentative d’allocation de mémoire.  
@@ -51,7 +52,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
  0 lors du premier appel et `new_handler` précédent lors des appels ultérieurs.  
   
 ### <a name="remarks"></a>Remarques  
- La fonction stocke `Pnew` dans un pointeur de [gestionnaire new](../standard-library/new-typedefs.md#new_handler) statique qu’elle tient à jour, puis retourne la valeur précédemment stockée dans le pointeur. Le gestionnaire new est utilisé par [operator new](../standard-library/new-operators.md#operator_new)( **size_t**).  
+ La fonction stocke `Pnew` dans un pointeur de [gestionnaire new](../standard-library/new-typedefs.md#new_handler) statique qu’elle tient à jour, puis retourne la valeur précédemment stockée dans le pointeur. Le gestionnaire new est utilisé par [operator new](../standard-library/new-operators.md#op_new)( **size_t**).  
   
 ### <a name="example"></a>Exemple  
   

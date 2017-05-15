@@ -9,10 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.scoped_allocator_adaptor
 - scoped_allocator_adaptor
 - scoped_allocator/std::scoped_allocator_adaptor
-- std::scoped_allocator_adaptor
+- scoped_allocator/std::scoped_allocator_adaptor::rebind Struct
+- scoped_allocator/std::scoped_allocator_adaptor::allocate
+- scoped_allocator/std::scoped_allocator_adaptor::construct
+- scoped_allocator/std::scoped_allocator_adaptor::deallocate
+- scoped_allocator/std::scoped_allocator_adaptor::destroy
+- scoped_allocator/std::scoped_allocator_adaptor::inner_allocator
+- scoped_allocator/std::scoped_allocator_adaptor::max_size
+- scoped_allocator/std::scoped_allocator_adaptor::outer_allocator
+- scoped_allocator/std::scoped_allocator_adaptor::select_on_container_copy_construction
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +43,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: f4c343592c2c767d52a66091ecca5b1bd4ae9e88
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3fa8c1304da253183c7f201811238f14d0da3193
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor::construct, classe
@@ -77,7 +85,7 @@ class scoped_allocator_adaptor;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[scoped_allocator_adaptor::scoped_allocator_adaptor, constructeur](#scoped_allocator_adaptor__scoped_allocator_adaptor_constructor)|Construit un objet `scoped_allocator_adaptor`.|  
+|[scoped_allocator_adaptor](#scoped_allocator_adaptor)|Construit un objet `scoped_allocator_adaptor`.|  
   
 ### <a name="typedefs"></a>Typedef  
   
@@ -100,27 +108,27 @@ class scoped_allocator_adaptor;
   
 |Nom|Description|  
 |----------|-----------------|  
-|[scoped_allocator_adaptor::rebind, struct](#scoped_allocator_adaptor__rebind_struct)|Définit le type `Outer::rebind\<Other>::other` comme synonyme de `scoped_allocator_adaptor\<Other, Inner...>`.|  
+|[scoped_allocator_adaptor::rebind, struct](#rebind_struct)|Définit le type `Outer::rebind\<Other>::other` comme synonyme de `scoped_allocator_adaptor\<Other, Inner...>`.|  
   
 ### <a name="methods"></a>Méthodes  
   
 |Nom|Description|  
 |----------|-----------------|  
-|[scoped_allocator_adaptor::allocate, méthode](#scoped_allocator_adaptor__allocate_method)|Alloue de la mémoire à l’aide de l’allocateur `Outer`.|  
-|[scoped_allocator_adaptor::construct, méthode](#scoped_allocator_adaptor__construct_method)|Construit un objet.|  
-|[scoped_allocator_adaptor::deallocate, méthode](#scoped_allocator_adaptor__deallocate_method)|Libère des objets à l’aide de l’allocateur externe.|  
-|[scoped_allocator_adaptor::destroy, méthode](#scoped_allocator_adaptor__destroy_method)|Détruit un objet spécifié.|  
-|[scoped_allocator_adaptor::inner_allocator, méthode](#scoped_allocator_adaptor__inner_allocator_method)|Récupère une référence à l’objet stocké de type `inner_allocator_type`.|  
-|[scoped_allocator_adaptor::max_size, méthode](#scoped_allocator_adaptor__max_size_method)|Détermine le nombre maximal d’objets pouvant être alloués par l’allocateur externe.|  
-|[scoped_allocator_adaptor::outer_allocator, méthode](#scoped_allocator_adaptor__outer_allocator_method)|Récupère une référence à l’objet stocké de type `outer_allocator_type`.|  
-|[scoped_allocator_adaptor::select_on_container_copy_construction, méthode](#scoped_allocator_adaptor__select_on_container_copy_construction_method)|Crée un objet `scoped_allocator_adaptor` où chaque objet allocateur stocké est initialisé en appelant `select_on_container_copy_construction` pour chaque allocateur correspondant.|  
+|[allocate](#allocate)|Alloue de la mémoire à l’aide de l’allocateur `Outer`.|  
+|[construct](#construct)|Construit un objet.|  
+|[deallocate](#deallocate)|Libère des objets à l’aide de l’allocateur externe.|  
+|[destroy](#destroy)|Détruit un objet spécifié.|  
+|[inner_allocator](#inner_allocator)|Récupère une référence à l’objet stocké de type `inner_allocator_type`.|  
+|[max_size](#max_size)|Détermine le nombre maximal d’objets pouvant être alloués par l’allocateur externe.|  
+|[outer_allocator](#outer_allocator)|Récupère une référence à l’objet stocké de type `outer_allocator_type`.|  
+|[select_on_container_copy_construction](#select_on_container_copy_construction)|Crée un objet `scoped_allocator_adaptor` où chaque objet allocateur stocké est initialisé en appelant `select_on_container_copy_construction` pour chaque allocateur correspondant.|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** \<scoped_allocator>  
   
  **Espace de noms :** std  
   
-##  <a name="a-namescopedallocatoradaptorallocatemethoda--scopedallocatoradaptorallocate-method"></a><a name="scoped_allocator_adaptor__allocate_method"></a>  scoped_allocator_adaptor::allocate, méthode  
+##  <a name="allocate"></a>scoped_allocator_adaptor::Allocate
  Alloue de la mémoire à l’aide de l’allocateur `Outer`.  
   
 ```cpp  
@@ -137,7 +145,7 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 ### <a name="return-value"></a>Valeur de retour  
  La première fonction membre retourne `Outer_traits::allocate(outer_allocator(), count)`. La deuxième fonction membre retourne `Outer_traits::allocate(outer_allocator(), count, hint)`.  
   
-##  <a name="a-namescopedallocatoradaptorconstructmethoda--scopedallocatoradaptorconstruct-method"></a><a name="scoped_allocator_adaptor__construct_method"></a>  scoped_allocator_adaptor::construct, méthode  
+##  <a name="construct"></a>scoped_allocator_adaptor::Construct
  Construit un objet.  
   
 ```cpp  
@@ -198,7 +206,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
   
  La sixième méthode se comporte comme `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))`.  
   
-##  <a name="a-namescopedallocatoradaptordeallocatemethoda--scopedallocatoradaptordeallocate-method"></a><a name="scoped_allocator_adaptor__deallocate_method"></a>  scoped_allocator_adaptor::deallocate, méthode  
+##  <a name="deallocate"></a>scoped_allocator_adaptor::DEALLOCATE
  Libère des objets à l’aide de l’allocateur externe.  
   
 ```cpp  
@@ -210,9 +218,9 @@ void deallocate(pointer ptr, size_type count);
  Pointeur vers l’emplacement de départ des objets à libérer.  
   
  `count`  
- Nombre d’objets à libérer.  
+ Nombre d’objets à désallouer.  
   
-##  <a name="a-namescopedallocatoradaptordestroymethoda--scopedallocatoradaptordestroy-method"></a><a name="scoped_allocator_adaptor__destroy_method"></a>  scoped_allocator_adaptor::destroy, méthode  
+##  <a name="destroy"></a>scoped_allocator_adaptor::Destroy
  Détruit un objet spécifié.  
   
 ```cpp  
@@ -227,7 +235,7 @@ void destroy(Ty* ptr)
 ### <a name="return-value"></a>Valeur de retour  
  `Outermost_traits::destroy(OUTERMOST(*this), ptr)`  
   
-##  <a name="a-namescopedallocatoradaptorinnerallocatormethoda--scopedallocatoradaptorinnerallocator-method"></a><a name="scoped_allocator_adaptor__inner_allocator_method"></a>  scoped_allocator_adaptor::inner_allocator, méthode  
+##  <a name="inner_allocator"></a>scoped_allocator_adaptor::inner_allocator
  Récupère une référence à l’objet stocké de type `inner_allocator_type`.  
   
 ```cpp  
@@ -238,7 +246,7 @@ const inner_allocator_type& inner_allocator() const noexcept;
 ### <a name="return-value"></a>Valeur de retour  
  Référence à l’objet stocké de type `inner_allocator_type`.  
   
-##  <a name="a-namescopedallocatoradaptormaxsizemethoda--scopedallocatoradaptormaxsize-method"></a><a name="scoped_allocator_adaptor__max_size_method"></a>  scoped_allocator_adaptor::max_size, méthode  
+##  <a name="max_size"></a>scoped_allocator_adaptor::max_size
  Détermine le nombre maximal d’objets pouvant être alloués par l’allocateur externe.  
   
 ```cpp  
@@ -248,7 +256,7 @@ size_type max_size();
 ### <a name="return-value"></a>Valeur de retour  
  `Outer_traits::max_size(outer_allocator())`  
   
-##  <a name="a-namescopedallocatoradaptorouterallocatormethoda--scopedallocatoradaptorouterallocator-method"></a><a name="scoped_allocator_adaptor__outer_allocator_method"></a>  scoped_allocator_adaptor::outer_allocator, méthode  
+##  <a name="outer_allocator"></a>scoped_allocator_adaptor::outer_allocator
  Récupère une référence à l’objet stocké de type `outer_allocator_type`.  
   
 ```cpp  
@@ -259,7 +267,7 @@ const outer_allocator_type& outer_allocator() const noexcept;
 ### <a name="return-value"></a>Valeur de retour  
  Référence à l’objet stocké de type `outer_allocator_type`.  
   
-##  <a name="a-namescopedallocatoradaptorrebindstructa--scopedallocatoradaptorrebind-struct"></a><a name="scoped_allocator_adaptor__rebind_struct"></a>  scoped_allocator_adaptor::rebind, struct  
+##  <a name="rebind_struct"></a>  scoped_allocator_adaptor::rebind, struct  
  Définit le type `Outer::rebind\<Other>::other` comme synonyme de `scoped_allocator_adaptor\<Other, Inner...>`.  
   
 struct rebind{  
@@ -268,7 +276,7 @@ struct rebind{
    typedef scoped_allocator_adaptor\<Other_alloc, Inner...> other;  
    };  
   
-##  <a name="a-namescopedallocatoradaptorscopedallocatoradaptorconstructora--scopedallocatoradaptorscopedallocatoradaptor-constructor"></a><a name="scoped_allocator_adaptor__scoped_allocator_adaptor_constructor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor, constructeur  
+##  <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor, constructeur  
  Construit un objet `scoped_allocator_adaptor`.  
   
 ```cpp  
@@ -299,7 +307,7 @@ scoped_allocator_adaptor(Outer2&& al,
 ### <a name="remarks"></a>Notes  
  Le premier constructeur construit par défaut ses objets allocateur stockés. Chacun des trois constructeurs suivants construit ses objets allocateur stockés à partir des objets correspondants dans `right`. Le dernier constructeur construit ses objets allocateur stockés à partir des arguments correspondants dans la liste d’arguments.  
   
-##  <a name="a-namescopedallocatoradaptorselectoncontainercopyconstructionmethoda--scopedallocatoradaptorselectoncontainercopyconstruction-method"></a><a name="scoped_allocator_adaptor__select_on_container_copy_construction_method"></a>  scoped_allocator_adaptor::select_on_container_copy_construction, méthode  
+##  <a name="select_on_container_copy_construction"></a>scoped_allocator_adaptor::select_on_container_copy_construction
  Crée un objet `scoped_allocator_adaptor` où chaque objet allocateur stocké est initialisé en appelant `select_on_container_copy_construction` pour chaque allocateur correspondant.  
   
 ```cpp  

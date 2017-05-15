@@ -190,10 +190,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 7cd9b98172f30248c40d2b0b8410b19f4a0cafec
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 42bd88a29dbefe48c59742ab8fc982355262f66e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Erreurs irrécupérables du compilateur C999 à C1999
@@ -219,7 +220,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |Erreur irrécupérable C1012|parenthèses non équilibrées : manquant '*caractère*»|  
 |Erreur irrécupérable C1013|limite du compilateur : parenthèses ouvertes trop nombreuses|  
 |Erreur irrécupérable C1014|fichiers include trop nombreux : profondeur = *nombre*|  
-|Erreur irrécupérable C1016|#ifdef / #ifndef identificateur attendu|  
+|Erreur irrécupérable C1016|#ifdef/#ifndef identificateur attendu|  
 |[Erreur irrécupérable C1017](../../error-messages/compiler-errors-1/fatal-error-c1017.md)|expression constante entière non valide|  
 |Erreur irrécupérable C1018|#elif inattendu|  
 |Erreur irrécupérable C1019|#else inattendu|  
@@ -241,6 +242,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |Erreur irrécupérable C1048|option inconnue '*chaîne*'in'*option*'|  
 |Erreur irrécupérable C1049|argument numérique non valide '*valeur*'|  
 |[Erreur irrécupérable C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|fichier de base de données de programme, «*fichier*', a un format obsolète, supprimez-le et recompilez-le|  
+|[Erreur irrécupérable C1052](fatal-error-c1052.md)|fichier de base de données de programme, «*nom de fichier*', a été généré par l’éditeur de liens avec/Debug : Fastlink ; compilateur ne peut pas mettre à jour ces fichiers PDB ; supprimez-le ou utilisez /Fd pour spécifier un autre nom de fichier PDB|  
 |Erreur irrécupérable C1053|'*fonction*' : fonction trop grande|  
 |[Erreur irrécupérable C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|limite du compilateur : initialiseurs imbriqués trop profondément|  
 |[Erreur irrécupérable C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|limite du compilateur : clés insuffisantes|  
@@ -272,7 +274,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |Erreur irrécupérable C1088|Impossible de vider *type* fichier : '*fichier*' : *message*|  
 |Erreur irrécupérable C1089|Impossible de tronquer *type* fichier : '*fichier*' : *message*|  
 |Erreur irrécupérable C1090|Échec de l’appel de l’API PDB, code d’erreur '*code*' : '*message*'|  
-|Erreur irrécupérable C1091|limite du compilateur : la chaîne dépasse *numéro* octets de longueur|  
+|Erreur irrécupérable C1091|limite du compilateur : la chaîne dépasse *nombre* octets de longueur|  
 |[Erreur irrécupérable C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md)|Modifier & Continuer ne prend pas en charge les modifications sur les types de données ; génération requise|  
 |[Erreur irrécupérable C1093](../../error-messages/compiler-errors-1/fatal-error-c1093.md)|Appel d’API «*fonction*'échec'*HRESULT*' : '*description*'|  
 |[Erreur irrécupérable C1094](../../error-messages/compiler-errors-1/fatal-error-c1094.md)|'-Zm*nombre*' : option de ligne de commande non cohérente avec la valeur utilisée pour générer l’en-tête précompilé ('-Zm*nombre*')|  
@@ -290,16 +292,16 @@ Les articles de cette partie de la documentation contiennent des informations su
 |Erreur irrécupérable C1110|définitions modèle/générique imbriquées trop nombreuses|  
 |Erreur irrécupérable C1111|paramètres modèle/générique trop nombreux|  
 |Erreur irrécupérable C1112|limite du compilateur : `'number`' trop d’arguments de macro, uniquement *nombre* autorisé|  
-|[Erreur irrécupérable C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#Échec de '*fichier*'|  
+|[Erreur irrécupérable C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using a échoué sur «*fichier*'|  
 |Erreur irrécupérable C1114|'*fichier*' : WinRT ne prend pas en charge #using d’un assembly managé|  
 |[Erreur irrécupérable C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|l’appel à GetProcAddress a échoué pour '*fonction*'|  
 |[Erreur irrécupérable C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|échec de l'appel à CryptoAPI|  
 |[Erreur irrécupérable C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|l’allocation automatique dépasse *taille*|  
 |[Erreur irrécupérable C1128](../../error-messages/compiler-errors-1/fatal-error-c1128.md)|le nombre de sections a dépassé la limite du format de fichier objet : compilez avec /bigobj|  
-|[Erreur irrécupérable C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#Erreur : *message*|  
+|[Erreur irrécupérable C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#error : *message*|  
 |Erreur irrécupérable C1190|le code ciblé managé requiert une option '/clr'|  
 |[Erreur irrécupérable C1191](../../error-messages/compiler-errors-1/fatal-error-c1191.md)|'*fichier*' ne peut être importé dans une portée globale|  
-|[Erreur irrécupérable C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#Échec de '*fichier*'|  
+|[Erreur irrécupérable C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#using a échoué sur «*fichier*'|  
 |Erreur irrécupérable C1193|une erreur attendue dans *fichier*(*ligne*) non atteinte|  
 |Erreur irrécupérable C1195|utilisation de /Yu et /Yc sur la même ligne de commande est incompatible avec l'option /clr|  
 |Erreur irrécupérable C1196|'*identificateur*' : identificateur trouvé dans la bibliothèque de types '*typelib*' n’est pas un identificateur C++ valide|  
@@ -324,7 +326,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |Erreur irrécupérable C1310|les optimisations guidées par profil ne sont pas disponibles avec OpenMP|  
 |[Erreur irrécupérable C1311](../../error-messages/compiler-errors-1/fatal-error-c1311.md)|Le format COFF ne peut pas initialiser de manière statique '*symbole*' avec *nombre* octet (s) d’une adresse|  
 |Erreur irrécupérable C1312|Trop de branches conditionnelles dans la fonction.  Simplifiez ou refactorisez le code source.|  
-|[Erreur irrécupérable C1313](../../error-messages/compiler-errors-1/fatal-error-c1313.md)|limite du compilateur : *type* blocs ne peuvent pas être imbriqués au-delà de *numéro* niveaux|  
+|[Erreur irrécupérable C1313](../../error-messages/compiler-errors-1/fatal-error-c1313.md)|limite du compilateur : *type* blocs ne peuvent pas être imbriqués au-delà *nombre* niveaux|  
 |[Erreur irrécupérable C1350](../../error-messages/compiler-errors-1/fatal-error-c1350.md)|Erreur lors du chargement de la dll '*fichier*' : dll introuvable|  
 |[Erreur irrécupérable C1351](../../error-messages/compiler-errors-1/fatal-error-c1351.md)|Erreur lors du chargement de la dll '*fichier*' : version non compatible|  
 |Erreur irrécupérable C1352|MSIL non valide ou endommagé dans la fonction '*fonction*'du module'*module*'|  
@@ -340,7 +342,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur irrécupérable C1510](../../error-messages/compiler-errors-1/fatal-error-c1510.md)|Impossible d'ouvrir la ressource de langage clui.dll|  
 |[Erreur irrécupérable C1601](../../error-messages/compiler-errors-1/fatal-error-c1601.md)|opcode d'assembly inline non pris en charge|  
 |[Erreur irrécupérable C1602](../../error-messages/compiler-errors-1/fatal-error-c1602.md)|intrinsèque non pris en charge|  
-|[Erreur irrécupérable C1603](../../error-messages/compiler-errors-1/fatal-error-c1603.md)|cible de branche assembly inline dépasse de *numéro* octets|  
+|[Erreur irrécupérable C1603](../../error-messages/compiler-errors-1/fatal-error-c1603.md)|cible de branche assembly inline dépasse de *nombre* octets|  
 |Erreur irrécupérable C1852|'*fichier*' n’est pas un fichier d’en-tête précompilé valide|  
 |[Erreur irrécupérable C1853](../../error-messages/compiler-errors-1/fatal-error-c1853.md)|'*fichier*' fichier d’en-tête précompilé est d’une version antérieure du compilateur, ou l’en-tête précompilé est en C++ et vous l’utilisez en C (ou inversement)|  
 |[Erreur irrécupérable C1854](../../error-messages/compiler-errors-1/fatal-error-c1854.md)|ne peut pas remplacer les informations obtenues lors de la création de l’en-tête précompilé du fichier objet : '*fichier*'|  

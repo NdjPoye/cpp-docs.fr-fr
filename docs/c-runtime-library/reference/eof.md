@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 454e4870f63d5a66c67f493e065c328bdb72837e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 79e55c9b1496ef7a6050e5f0ed5a5c05b1616b73
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="eof"></a>_eof
@@ -75,7 +76,7 @@ int _eof(
  Descripteur de fichier qui fait référence au fichier ouvert.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `_eof` retourne 1 si la position actuelle est la fin du fichier, sinon 0. Si la valeur de retour est −1, une erreur s’est produite ; dans ce cas, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` est défini sur `EBADF`, indiquant ainsi un descripteur de fichier non valide.  
+ `_eof` retourne 1 si la position actuelle est la fin du fichier, sinon 0. Une valeur de retour de -1 indique une erreur ; Dans ce cas, le Gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` est défini sur `EBADF`, indiquant ainsi un descripteur de fichier non valide.  
   
 ## <a name="remarks"></a>Notes  
  La fonction `_eof` détermine si la fin du fichier associé à `fd` a été atteinte.  
@@ -139,9 +140,6 @@ This file contains some text.
 ```  
 Number of bytes read = 29  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des erreurs](../../c-runtime-library/error-handling-crt.md)   

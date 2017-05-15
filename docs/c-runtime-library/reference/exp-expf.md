@@ -1,5 +1,5 @@
 ---
-title: exp, expf | Microsoft Docs
+title: EXP, expf, expl | Documents Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,6 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 apiname:
 - expf
+- expl
 - exp
 apilocation:
 - msvcrt.dll
@@ -27,12 +28,14 @@ apitype: DLLExport
 f1_keywords:
 - _expl
 - expf
+- expl
 - exp
 dev_langs:
 - C++
 helpviewer_keywords:
 - exponential calculations
 - expf function
+- expl function
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
@@ -55,13 +58,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4f6fb2d2dc585633915587ff7b6e5cfbd69c4deb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: bce9249134b9d0e3716d8b79a0bc0642c64fc5e6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
-# <a name="exp-expf"></a>exp, expf
+# <a name="exp-expf-expl"></a>EXP, expf, expl
 Calcule la valeur exponentielle.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -79,32 +83,35 @@ long double exp(
 float expf(   
    float x  
 );  
+long double expl(  
+   long double x  
+);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  `x`  
- Valeur à virgule flottante.  
+ La virgule flottante valeur Elever à la puissance la base du logarithme népérien *e* par.  
   
 ## <a name="return-value"></a>Valeur de retour  
- La fonction `exp` retourne la valeur exponentielle du paramètre à virgule flottante, `x`, en cas de réussite. Autrement dit, le résultat est e à la puissance `x`, où e est la base du logarithme népérien. En cas de dépassement, la fonction retourne INF (infini), tandis qu’en cas de soupassement, `exp` retourne la valeur 0.  
+ Le `exp` fonctions retournent la valeur exponentielle du paramètre à virgule flottante, *x*, en cas de réussite. Autrement dit, le résultat est *e*<sup>*x*</sup>, où *e* est la base du logarithme népérien. De dépassement de capacité, la fonction retourne INF (infini) et de dépassement de capacité négatif, `exp` retourne 0.  
   
 |Entrée|Exception SEH|Exception{b> <b}Matherr|  
 |-----------|-------------------|-----------------------|  
-|± QNAN,IND|None|_DOMAIN|  
-|± ∞|INVALID|_DOMAIN|  
+|± Valeur NaN silencieuse, indéterminé|Aucune|_DOMAIN|  
+|Nombre infini de ±|INVALID|_DOMAIN|  
 |x ≥ 7,097827e+002|INEXACT+OVERFLOW|OVERFLOW|  
 |X ≤ -7,083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|  
   
- `exp` présente une implémentation qui utilise SSE2 (Streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.  
+ Le `exp` possède une implémentation qui utilise des Extensions Streaming SIMD 2 (SSE2). Consultez [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.  
   
-## <a name="remarks"></a>Notes  
- C++ autorisant la surcharge, vous pouvez appeler des surcharges de `exp`. Dans un programme C, `exp` accepte et retourne toujours un double.  
+## <a name="remarks"></a>Remarques  
+ C++ autorise la surcharge, vous pouvez appeler des surcharges de `exp` qui prennent un **float** ou **long double** argument. Dans un programme C, `exp` accepte et retourne toujours un **double**.  
   
 ## <a name="requirements"></a>Spécifications  
   
-|Fonction|En-tête requis|  
-|--------------|---------------------|  
-|`exp`, `expf`|\<math.h>|  
+|Fonction|En-tête C requis|En-tête C++ requis|  
+|--------------|---------------------|---|  
+|`exp`, `expf`|\<math.h>|\<cmath> ou \<math.h>|  
   
  Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
@@ -128,9 +135,6 @@ int main( void )
 ```Output  
 exp( 2.302585 ) = 10.000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- [System::Math::Exp](https://msdn.microsoft.com/en-us/library/system.math.exp.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   

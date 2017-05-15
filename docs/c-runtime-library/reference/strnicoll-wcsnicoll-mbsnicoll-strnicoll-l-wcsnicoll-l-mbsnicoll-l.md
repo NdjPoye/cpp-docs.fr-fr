@@ -1,89 +1,106 @@
 ---
-title: "_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsnicoll_l"
-  - "_mbsnicoll"
-  - "_wcsnicoll_l"
-  - "_strnicoll"
-  - "_strnicoll_l"
-  - "_wcsnicoll"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcshicoll_l"
-  - "_ftcsncicoll"
-  - "strnicoll_l"
-  - "_wcsnicoll"
-  - "mbsnicoll_l"
-  - "_strnicoll"
-  - "mbsnicoll"
-  - "_ftcsnicoll"
-  - "wcsnicoll"
-  - "_tcsnicoll"
-  - "_mbsnicoll"
-  - "strinicoll"
-  - "_tcsncicoll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftcsncicoll (fonction)"
-  - "_ftcsnicoll (fonction)"
-  - "_mbsnicoll (fonction)"
-  - "_mbsnicoll_l (fonction)"
-  - "_strnicoll (fonction)"
-  - "_strnicoll_l (fonction)"
-  - "_tcsncicoll (fonction)"
-  - "_tcsnicoll (fonction)"
-  - "_wcsnicoll (fonction)"
-  - "_wcsnicoll_l (fonction)"
-  - "pages de codes, utiliser pour les comparaisons de chaînes"
-  - "ftcsncicoll (fonction)"
-  - "ftcsnicoll (fonction)"
-  - "mbsnicoll (fonction)"
-  - "mbsnicoll_l (fonction)"
-  - "chaînes (C++), comparer par page de code"
-  - "strnicoll (fonction)"
-  - "strnicoll_l (fonction)"
-  - "tcsncicoll (fonction)"
-  - "tcsnicoll (fonction)"
-  - "wcsnicoll (fonction)"
-  - "wcsnicoll_l (fonction)"
+title: _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsnicoll_l
+- _mbsnicoll
+- _wcsnicoll_l
+- _strnicoll
+- _strnicoll_l
+- _wcsnicoll
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcshicoll_l
+- _ftcsncicoll
+- strnicoll_l
+- _wcsnicoll
+- mbsnicoll_l
+- _strnicoll
+- mbsnicoll
+- _ftcsnicoll
+- wcsnicoll
+- _tcsnicoll
+- _mbsnicoll
+- strinicoll
+- _tcsncicoll
+dev_langs:
+- C++
+helpviewer_keywords:
+- code pages, using for string comparisons
+- ftcsncicoll function
+- mbsnicoll_l function
+- _ftcsnicoll function
+- mbsnicoll function
+- _tcsnicoll function
+- _wcsnicoll_l function
+- _mbsnicoll function
+- tcsncicoll function
+- strnicoll function
+- _ftcsncicoll function
+- wcsnicoll_l function
+- _mbsnicoll_l function
+- _tcsncicoll function
+- strnicoll_l function
+- wcsnicoll function
+- _strnicoll_l function
+- _wcsnicoll function
+- ftcsnicoll function
+- strings [C++], comparing by code page
+- tcsnicoll function
+- _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7ec663519e02eebc92809be336f285a5629190b0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
-Compare les chaînes à l'aide d'informations spécifiques aux paramètres régionaux.  
+---
+# <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
+Compare les chaînes à partir des informations propres aux paramètres régionaux.  
   
 > [!IMPORTANT]
->  `_mbsnicoll` et `_mbsnicoll_l` ne peuvent pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime.  Pour plus d'informations, consultez [Fonctions CRT non prises en charge avec \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsnicoll` et `_mbsnicoll_l` ne peuvent pas être utilisées dans les applications qui s'exécutent dans Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge avec /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 int _strnicoll(  
@@ -121,9 +138,9 @@ int _mbsnicoll_l(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `string1, string2`  
- Chaînes terminées par Null à comparer.  
+ Chaînes se terminant par un caractères Null à comparer.  
   
  `count`  
  Nombre de caractères à comparer.  
@@ -131,52 +148,49 @@ int _mbsnicoll_l(
  `locale`  
  Paramètres régionaux à utiliser.  
   
-## Valeur de retour  
- Chacune de ces fonctions retourne une valeur indiquant la relation des sous\-chaînes de `string1` et `string2`*,* comme suit.  
+## <a name="return-value"></a>Valeur de retour  
+ Chacune de ces fonctions retourne une valeur qui indique la relation entre les sous-chaînes de `string1` et `string2`, comme suit.  
   
 |Valeur de retour|Relation de chaîne1 à chaîne2|  
-|----------------------|-----------------------------------|  
-|\< 0|`string1` inférieure à `string2`|  
+|------------------|----------------------------------------|  
+|< 0|`string1` inférieure à `string2`|  
 |0|`string1` identique à `string2`|  
-|\> 0|`string1` supérieur à `string2`|  
+|> 0|`string1` supérieur à `string2`|  
   
- Chacune de ces fonctions retourne `_NLSCMPERROR`.  Pour utiliser `_NLSCMPERROR`, incluez STRING.H ou MBSTRING.H.  `_wcsnicoll` peut échouer si `string1` ou `string2` contiennent des codes de caractères larges en dehors du domaine de la séquence de classement.  Lorsqu'une erreur se produit, `_wcsnicoll` peut affecter `errno` à `EINVAL`.  Pour vérifier une erreur lors d'un appel à `_wcsnicoll`, affectez `errno` à 0 puis vérifiez `errno` après l'appel de `_wcsnicoll`**.**  
+ Chacune de ces fonctions retourne `_NLSCMPERROR`. Pour utiliser `_NLSCMPERROR`, incluez STRING.H ou MBSTRING.H. `_wcsnicoll` peut échouer si `string1` ou `string2` contient des codes à caractères larges qui se trouvent en dehors du domaine de l’ordre de tri. Quand une erreur se produit, `_wcsnicoll` peut attribuer à `errno` la valeur `EINVAL`. Pour rechercher la présence d’une erreur dans un appel à `_wcsnicoll`, attribuez à `errno` la valeur 0, puis vérifiez `errno` après avoir appelé `_wcsnicoll`**.**  
   
-## Notes  
- Chacune de ces fonctions exécute une comparaison des premiers caractères `count` dans `string1` et `string2` selon la page de codes, sans tenir compte des majuscules ou des minuscules.  Ces fonctions doivent être utilisées uniquement lorsqu'il existe une différence entre l'ordre du jeu de caractères et l'ordre des caractères lexicographiques dans la page de codes et que cette différence est intéressante pour la comparaison de chaînes.  Les versions de ces fonctions sans suffixe `_l` utilisent les paramètres régionaux et la page de codes actuelle.  Les versions avec le suffixe`_l` sont identiques mais elles utilisent les paramètres régionaux passés à la place.  Pour plus d'informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
+## <a name="remarks"></a>Notes  
+ Chacune de ces fonctions effectue une comparaison sensible à la casse des `count` premiers caractères de `string1` et `string2`, en fonction de la page de codes. Ces fonctions ne doivent être utilisées que s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes, et si cette différence présente un intérêt pour la comparaison de chaînes. Les versions de ces fonctions sans suffixe `_l` utilisent les paramètres régionaux actifs et la page de codes. Les versions avec le `_l` suffixe sont identiques, sauf qu’elles utilisent les paramètres régionaux passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).  
   
- Toutes ces fonctions valident leurs paramètres.  Si `string1` ou `string2` est un pointeur null, ou si le compte est supérieur à `INT_MAX`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, ces fonctions retournent `_NLSCMPERROR` et définissent `errno` avec la valeur `EINVAL`**.**  
+ Toutes ces fonctions valident leurs paramètres. Si `string1` ou `string2` est un pointeur Null ou si la valeur de count est supérieur à celle de `INT_MAX`, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent `_NLSCMPERROR` et affectent à `errno` la valeur `EINVAL`**.**  
   
-### Mappages de routines de texte générique  
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non définis|\_MBCS défini|\_UNICODE défini|  
-|---------------------|------------------------------------|-------------------|----------------------|  
+|Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsncicoll`|`_strnicoll`|`_mbsnbicoll`|`_wcsnicoll`|  
-|`_tcsnicoll`|`_strnicoll`|[\_mbsnbicoll](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|`_wcsnicoll`|  
+|`_tcsnicoll`|`_strnicoll`|[_mbsnbicoll](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|`_wcsnicoll`|  
 |`_tcsnicoll_l`|`_strnicoll_l`|`_mbsnbicoll_l`|`_wcsnicoll_l`|  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`_strnicoll`, `_strnicoll_l`|\<string.h\>|  
-|`_wcsnicoll`, `_wcsnicoll_l`|\<string.h\> ou \<wchar.h\>|  
-|`_mbsnicoll`, `_mbsnicoll_l`|\<mbstring.h\>|  
+|`_strnicoll`, `_strnicoll_l`|\<string.h>|  
+|`_wcsnicoll`, `_wcsnicoll_l`|\<wchar.h> ou \<string.h>|  
+|`_mbsnicoll`, `_mbsnicoll_l`|\<mbstring.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Équivalent .NET Framework  
- [System::String::Compare](https://msdn.microsoft.com/en-us/library/system.string.compare.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Paramètres régionaux](../../c-runtime-library/locale.md)   
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   
  [strcoll, fonctions](../../c-runtime-library/strcoll-functions.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [\_mbsnbcoll, \_mbsnbcoll\_l, \_mbsnbicoll, \_mbsnbicoll\_l](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [strcmp, wcscmp, \_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [\_stricmp, \_wcsicmp, \_mbsicmp, \_stricmp\_l, \_wcsicmp\_l, \_mbsicmp\_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strxfrm, wcsxfrm, \_strxfrm\_l, \_wcsxfrm\_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+ [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

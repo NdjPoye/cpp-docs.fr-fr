@@ -1,59 +1,76 @@
 ---
-title: "pow, powf, powl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "powl"
-  - "pow"
-  - "powf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "powl"
-  - "pow"
-  - "_powl"
-  - "powf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_powl (fonction)"
-  - "calculer les exponentiels"
-  - "calculs exponentiels"
-  - "élévation à la puissance"
-  - "pow (fonction)"
-  - "puissance, calculer"
-  - "powf (fonction)"
-  - "powl (fonction)"
+title: pow, powf, powl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- powl
+- pow
+- powf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- powl
+- pow
+- _powl
+- powf
+dev_langs:
+- C++
+helpviewer_keywords:
+- exponential calculations
+- powl function
+- _powl function
+- exponentiation
+- powers, calculating
+- calculating exponentials
+- powf function
+- pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# pow, powf, powl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4400582a792644b928c02db346bc7eae1087dc85
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="pow-powf-powl"></a>pow, powf, powl
 Calcule `x` élevé à la puissance de `y`.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 double pow(  
@@ -90,43 +107,43 @@ long double powl(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `x`  
  Base.  
   
  `y`  
  Exposant.  
   
-## Valeur de retour  
- Retourne la valeur de `x`<sup>y</sup>.  Aucun message d'erreur n'est imprimé sur le dépassement de capacité inférieur ou supérieur.  
+## <a name="return-value"></a>Valeur de retour  
+ Retourne la valeur de `x`<sup>y</sup>. Aucun message d’erreur n’est imprimé en cas de dépassement de capacité positif ou négatif.  
   
-|Valeurs de X et Y|Valeur de retour de pow|  
-|-----------------------|-----------------------------|  
-|`x` \< \> 0 et `y` \= 0.0|1|  
-|`x` \= 0.0 et `y` \= 0.0|1|  
-|`x` \= 0.0 et `y` \< 0|INF|  
+|Valeurs de x et y|Valeur de retour de pow|  
+|-----------------------|-------------------------|  
+|`x` \< > 0 et `y` = 0,0|1|  
+|`x` = 0,0 et `y` = 0,0|1|  
+|`x` = 0,0 et `y` < 0|INF|  
   
-## Notes  
- `pow` ne reconnaît pas les valeurs à virgule flottante intégrales supérieures à 2<sup>64</sup> \(par exemple, `1.0E100`\).  
+## <a name="remarks"></a>Notes  
+ `pow` ne reconnaît pas les valeurs à virgule flottante intégrales supérieures à 2<sup>64</sup> (par exemple, `1.0E100`).  
   
- `pow` a une implémentation qui utilise les extensions Streaming SIMD 2 \(SSE2\).  Pour plus d'informations et de restrictions sur l'utilisation de l'implémentation SSE2, consultez [\_set\_SSE2\_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
+ `pow` propose une implémentation qui utilise SSE2 (Streaming SIMD Extensions 2). Pour obtenir des informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   
- Comme C\+\+ permet la surcharge, il vous est possible d'appeler différentes surcharges de`pow`.  Dans un programme C, `pow` prend toujours deux valeurs doubles et retourne une valeur double.  
+ Sachant que C++ autorise la surcharge, vous pouvez appeler l’une des diverses surcharges de `pow`. Dans un programme C, `pow` prend toujours deux valeurs doubles et en une.  
   
- La surcharge de `pow(int, int)` n'est plus disponible.  Si vous utilisez cette surcharge, le compilateur peut émettre C2668.  Pour éviter ce problème, effectuez un cast du premier paramètre à `double`, `float`, ou `long double`.  
+ La surcharge `pow(int, int)` n’est plus disponible. Si vous utilisez cette surcharge, le compilateur peut émettre C2668. Pour éviter ce problème, effectuez un cast du premier paramètre en `double`, `float` ou `long double`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`pow`, `powf`, `powl`|\<math.h\>|  
+|`pow`, `powf`, `powl`|\<math.h>|  
   
- Pour plus d'informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).  
   
-## Bibliothèques  
+## <a name="libraries"></a>Bibliothèques  
  Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_pow.c  
@@ -143,18 +160,15 @@ int main( void )
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 2.0 to the power of 3.0 is 8.0  
 ```  
   
-## Équivalent .NET Framework  
- [System::Math::Pow](https://msdn.microsoft.com/en-us/library/system.math.pow.aspx)  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   
- [exp, expf](../../c-runtime-library/reference/exp-expf.md)   
+ [EXP, expf, expl](../../c-runtime-library/reference/exp-expf.md)   
  [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)   
  [sqrt, sqrtf, sqrtl](../../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)   
- [\_CIpow](../../c-runtime-library/cipow.md)
+ [_CIpow](../../c-runtime-library/cipow.md)

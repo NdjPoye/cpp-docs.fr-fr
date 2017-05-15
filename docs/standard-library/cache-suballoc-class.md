@@ -37,10 +37,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 537930868e47fd1e947a99ff808d870532c38c58
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: fa98856bc7e55ca78effb64c806a95cab60a68a5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc, classe
@@ -68,21 +69,21 @@ class cache_suballoc
   
 |||  
 |-|-|  
-|[cache_suballoc](#cache_suballoc__cache_suballoc)|Construit un objet de type `cache_suballoc`.|  
+|[cache_suballoc](#cache_suballoc)|Construit un objet de type `cache_suballoc`.|  
   
 ### <a name="member-functions"></a>Fonctions membres  
   
 |||  
 |-|-|  
-|[allocate](#cache_suballoc__allocate)|Alloue un bloc de mémoire.|  
-|[deallocate](#cache_suballoc__deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|  
+|[allocate](#allocate)|Alloue un bloc de mémoire.|  
+|[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** \<allocators>  
   
  **Espace de noms :** stdext  
   
-##  <a name="cache_suballoc__allocate"></a>  cache_suballoc::allocate  
+##  <a name="allocate"></a>  cache_suballoc::allocate  
  Alloue un bloc de mémoire.  
   
 ```
@@ -100,7 +101,7 @@ void *allocate(std::size_t count);
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="cache_suballoc__cache_suballoc"></a>  cache_suballoc::cache_suballoc  
+##  <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc  
  Construit un objet de type `cache_suballoc`.  
   
 ```
@@ -109,7 +110,7 @@ cache_suballoc();
   
 ### <a name="remarks"></a>Notes  
   
-##  <a name="cache_suballoc__deallocate"></a>  cache_suballoc::deallocate  
+##  <a name="deallocate"></a>  cache_suballoc::deallocate  
  Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.  
   
 ```

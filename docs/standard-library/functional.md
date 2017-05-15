@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: dcac506c06aac3c29ba2251af4281a713eec7491
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e4c3cbb6d11758ff15909c6062b7430f6679f6de
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
@@ -126,22 +127,22 @@ Définit les fonctions de bibliothèque C++ Standard qui aident à construire de
   
 |||  
 |-|-|  
-|[bind](../standard-library/functional-functions.md#bind_function)|Lie des arguments à un objet pouvant être appelé.|  
-|[bind1st](../standard-library/functional-functions.md#bind1st_function)|Classe de modèle d’assistance qui crée un adaptateur pour convertir un objet de fonction binaire en objet de fonction unaire en liant le premier argument de la fonction binaire à une valeur spécifiée.|  
-|[bind2nd](../standard-library/functional-functions.md#bind2nd_function)|Classe de modèle d’assistance qui crée un adaptateur pour convertir un objet de fonction binaire en objet de fonction unaire en liant le second argument de la fonction binaire à une valeur spécifiée.|  
-|[bit_and](../standard-library/functional-functions.md#bit_and_function)|Retourne le résultat de l'opération AND logique au niveau du bit (opérateur binaire &) des deux paramètres.|  
-|[bit_not](../standard-library/functional-functions.md#bit_not_function)|Retourne le complément logique au niveau du bit (opérateur ~) du paramètre.|  
-|[bit_or](../standard-library/functional-functions.md#bit_or_function)|Retourne le résultat de l’opération OR logique au niveau du bit (opérateur &#124;) des deux paramètres.|  
-|[bit_xor](../standard-library/functional-functions.md#bit_xor_function)|Retourne le résultat de l'opération XOR logique au niveau du bit (opérateur ^) des deux paramètres.|  
-|[cref](../standard-library/functional-functions.md#cref_function)|Construit un `reference_wrapper` const à partir d'un argument.|  
-|[mem_fn](../standard-library/functional-functions.md#mem_fn_function)|Génère un wrapper d'appel simple.|  
-|[mem_fun](../standard-library/functional-functions.md#mem_fun_function)|Fonctions de modèle d’assistance utilisées pour construire des adaptateurs d’objets de fonction pour des fonctions membres en cas d’initialisation avec des arguments de pointeur.|  
-|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function)|Fonction de modèle d’assistance utilisée pour construire des adaptateurs d’objets de fonction pour des fonctions membres en cas d’initialisation avec des arguments de référence.|  
-|[not1](../standard-library/functional-functions.md#not1_function)|Retourne le complément d’un prédicat unaire.|  
-|[not2](../standard-library/functional-functions.md#not2_function)|Retourne le complément d’un prédicat binaire.|  
-|[ptr_fun](../standard-library/functional-functions.md#ptr_fun_function)|Fonction de modèle d'assistance utilisée pour convertir des pointeurs de fonction unaires et binaires, respectivement dans des fonctions adaptables unaires et binaires.|  
-|[ref](../standard-library/functional-functions.md#ref_function)|Construit un `reference_wrapper` à partir d'un argument.|  
-|[swap](../standard-library/functional-functions.md#swap_function)|Échange deux objets `function`.|  
+|[bind](../standard-library/functional-functions.md#bind)|Lie des arguments à un objet pouvant être appelé.|  
+|[bind1st](../standard-library/functional-functions.md#bind1st)|Classe de modèle d’assistance qui crée un adaptateur pour convertir un objet de fonction binaire en objet de fonction unaire en liant le premier argument de la fonction binaire à une valeur spécifiée.|  
+|[bind2nd](../standard-library/functional-functions.md#bind2nd)|Classe de modèle d’assistance qui crée un adaptateur pour convertir un objet de fonction binaire en objet de fonction unaire en liant le second argument de la fonction binaire à une valeur spécifiée.|  
+|[bit_and](../standard-library/functional-functions.md#bit_and)|Retourne le résultat de l'opération AND logique au niveau du bit (opérateur binaire &) des deux paramètres.|  
+|[bit_not](../standard-library/functional-functions.md#bit_not)|Retourne le complément logique au niveau du bit (opérateur ~) du paramètre.|  
+|[bit_or](../standard-library/functional-functions.md#bit_or)|Retourne le résultat de l’opération OR logique au niveau du bit (opérateur &#124;) des deux paramètres.|  
+|[bit_xor](../standard-library/functional-functions.md#bit_xor)|Retourne le résultat de l'opération XOR logique au niveau du bit (opérateur ^) des deux paramètres.|  
+|[cref](../standard-library/functional-functions.md#cref)|Construit un `reference_wrapper` const à partir d'un argument.|  
+|[mem_fn](../standard-library/functional-functions.md#mem_fn)|Génère un wrapper d'appel simple.|  
+|[mem_fun](../standard-library/functional-functions.md#mem_fun)|Fonctions de modèle d’assistance utilisées pour construire des adaptateurs d’objets de fonction pour des fonctions membres en cas d’initialisation avec des arguments de pointeur.|  
+|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Fonction de modèle d’assistance utilisée pour construire des adaptateurs d’objets de fonction pour des fonctions membres en cas d’initialisation avec des arguments de référence.|  
+|[not1](../standard-library/functional-functions.md#not1)|Retourne le complément d’un prédicat unaire.|  
+|[not2](../standard-library/functional-functions.md#not2)|Retourne le complément d’un prédicat binaire.|  
+|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|Fonction de modèle d'assistance utilisée pour convertir des pointeurs de fonction unaires et binaires, respectivement dans des fonctions adaptables unaires et binaires.|  
+|[ref](../standard-library/functional-functions.md#ref)|Construit un `reference_wrapper` à partir d'un argument.|  
+|[swap](../standard-library/functional-functions.md#swap)|Échange deux objets `function`.|  
   
 ### <a name="structs"></a>Structures  
   
@@ -175,8 +176,8 @@ Définit les fonctions de bibliothèque C++ Standard qui aident à construire de
   
 |||  
 |-|-|  
-|[operator==](../standard-library/functional-operators.md#operator_eq_eq)|N'autorise pas la comparaison d'égalité d'objets pouvant être appelés.|  
-|[operator!=](../standard-library/functional-operators.md#operator_neq)|N'autorise pas la comparaison d'inégalité d'objets pouvant être appelés.|  
+|[operator==](../standard-library/functional-operators.md#op_eq_eq)|N'autorise pas la comparaison d'égalité d'objets pouvant être appelés.|  
+|[operator!=](../standard-library/functional-operators.md#op_neq)|N'autorise pas la comparaison d'inégalité d'objets pouvant être appelés.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   

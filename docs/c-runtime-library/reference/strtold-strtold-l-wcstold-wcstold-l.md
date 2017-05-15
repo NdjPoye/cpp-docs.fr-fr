@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 60c3b2c8c897558d45dc644cfef5c99b336cf06f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f23b0e3105532357ba9d31634a999c98df366552
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
@@ -97,7 +98,7 @@ long double wcstold_l(
  Paramètres régionaux à utiliser.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `strtold` retourne la valeur du nombre à virgule flottante sous forme de `long double`, sauf dans le cas où la représentation entraînerait un dépassement de capacité positif (dans ce cas, la fonction retourne +/-`HUGE_VALL`. Le signe de `HUGE_VALL` correspond au signe de la valeur qui ne peut pas être représentée. `strtold` retourne 0 si aucune conversion ne peut être effectuée ou en cas de dépassement de capacité négatif.  
+ `strtold`Retourne la valeur du nombre à virgule flottante en tant qu’un `long double`, sauf lorsque la représentation sous forme de provoquerait un dépassement de capacité, dans ce cas, la fonction retourne`HUGE_VALL`. Le signe de `HUGE_VALL` correspond au signe de la valeur qui ne peut pas être représentée. `strtold` retourne 0 si aucune conversion ne peut être effectuée ou en cas de dépassement de capacité négatif.  
   
  `wcstold` retourne des valeurs de façon analogue à `strtold`. Pour les deux fonctions, `errno` prend la valeur `ERANGE` si un dépassement de capacité positif ou négatif se produit et le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  
   
@@ -121,7 +122,7 @@ long double wcstold_l(
   
  [`whitespace`] [`sign`] [`digits`] [`.digits`] [ {`d` &#124; `D` &#124; `e` &#124; `E`}[`sign`]`digits`]  
   
- Un `whitespace` peut se composer d’espaces et de tabulations, qui sont ignorés ; `sign` est un signe plus (`+`) ou moins (`–`) ; et `digits` représente un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (`d`, `D`, `e` ou `E`) et éventuellement d’un entier signé. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.  
+ Un `whitespace` peut se composer d’espaces et de tabulations, qui sont ignorés ; `sign` est un signe plus (`+`) ou moins (`-`) ; et `digits` représente un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (`d`, `D`, `e` ou `E`) et éventuellement d’un entier signé. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.  
   
 ## <a name="requirements"></a>Spécifications  
   
@@ -163,9 +164,6 @@ string = 3.1415926535898This stopped it
    Stopped scan at: This stopped it  
   
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- [System::Convert::ToDouble](https://msdn.microsoft.com/en-us/library/system.convert.todouble.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conversion de données](../../c-runtime-library/data-conversion.md)   

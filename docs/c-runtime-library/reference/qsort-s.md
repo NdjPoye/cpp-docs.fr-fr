@@ -1,50 +1,67 @@
 ---
-title: "qsort_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "qsort_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "qsort_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tableaux (C++), trier"
-  - "qsort_s (fonction)"
-  - "quick-sort (algorithme)"
-  - "tri de tableaux"
+title: qsort_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- qsort_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- qsort_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [C++], sorting
+- quick-sort algorithm
+- qsort_s function
+- sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# qsort_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e4ba4fcb5acc8c914cf240e5b858a945bd55cc86
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
-Effectue un tri rapide.  Il s'agit de versions de [qsort](../../c-runtime-library/reference/qsort.md) avec des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
+---
+# <a name="qsorts"></a>qsort_s
+Effectue un tri rapide. Version de [qsort](../../c-runtime-library/reference/qsort.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 void qsort_s(  
@@ -56,64 +73,64 @@ void qsort_s(
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `base`  
  Début du tableau cible.  
   
  `num`  
- Taille du tableau en éléments.  
+ Taille du tableau dans les éléments.  
   
  `width`  
- Taille des éléments en octets.  
+ Taille d’élément en octets.  
   
  `compare`  
- Fonction de comparaison.  Le premier argument est le pointeur `context`.  Le deuxième argument est un pointeur vers `key` pour la recherche.  Le troisième argument est un pointeur sur l'élément de tableau à comparer à `key`.  
+ Fonction de comparaison. Le premier argument est le pointeur `context` . Le deuxième argument est un pointeur vers le `key` pour la recherche. Le troisième argument est un pointeur vers l’élément de tableau à comparer à `key`.  
   
  `context`  
- Un pointeur vers un contexte, qui peut être tout objet auquel la routine `compare` doit accéder.  
+ Pointeur désignant un contexte, qui peut être n’importe quel objet auquel la routine `compare` doit accéder.  
   
-## Notes  
- La fonction `qsort_s` implémente un algorithme de tri rapide qui range un tableau de `num` éléments, chacun de `width` octets.  L'argument `base` est un pointeur vers la base du tableau à trier.  `qsort_s` remplace ce tableau avec les éléments triés.  L'argument `compare` est un pointeur vers une routine fournie à l'utilisateur, qui compare deux éléments de tableau et retourne une valeur qui spécifie leur relation.  `qsort_s` appelle la routine `compare` une ou plusieurs fois lors du tri, passant les pointeurs vers deux éléments de tableau à chaque appel:  
+## <a name="remarks"></a>Notes  
+ La fonction `qsort_s` implémente un algorithme de tri rapide pour trier un tableau d’éléments `num`, chacun de `width` octets. L’argument `base` est un pointeur désignant la base du tableau à trier. `qsort_s` remplace ce tableau par les éléments triés. L’argument `compare` est un pointeur désignant une routine fournie par l’utilisateur qui compare deux éléments de tableau et retourne une valeur spécifiant leur relation. `qsort_s` appelle la routine `compare` une ou plusieurs fois pendant le tri, passant des pointeurs vers deux éléments de tableau à chaque appel :  
   
 ```  
 compare( context, (void *) & elem1, (void *) & elem2 );  
 ```  
   
- La routine doit comparer les éléments puis retourner l'une des valeurs suivantes :  
+ La routine doit comparer les éléments et retourner l’une des valeurs suivantes :  
   
 |Valeur de retour|Description|  
-|----------------------|-----------------|  
-|\< 0|`elem1` inférieure à `elem2`|  
-|0|`elem1` est équivalent à `elem2`|  
-|\> 0|`elem1` supérieur à `elem2`|  
+|------------------|-----------------|  
+|< 0|`elem1` inférieure à `elem2`|  
+|0|`elem1` équivalent à `elem2`|  
+|> 0|`elem1` supérieur à `elem2`|  
   
- La table est trié en ordre croissant, comme défini par la fonction de comparaison.  Pour trier une table par ordre décroissant, inverser le sens « supérieur à » et « inférieur à » de la fonction de comparaison.  
+ Le tableau est trié par ordre croissant, comme défini par la fonction de comparaison. Pour trier un tableau par ordre décroissant, changez le sens de « supérieur à » et « inférieur à » dans la fonction de comparaison.  
   
- Si des paramètres non valides sont transmis à la fonction, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).  Si l'exécution est autorisée à se poursuivre, alors la fonction retourne et `errno` est affecté à la valeur `EINVAL`.  Pour plus d'informations, consultez [errno, \_doserrno, \_sys\_errlist et \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Si des paramètres non valides sont passés à la fonction, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne une valeur et `errno` prend la valeur `EINVAL`. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-### Conditions d'erreur  
+### <a name="error-conditions"></a>Conditions d’erreur  
   
-|key|base|compare|num|largeur|errno|  
-|---------|----------|-------------|---------|-------------|-----------|  
+|clé|de base|compare|num|width|errno|  
+|---------|----------|-------------|---------|-----------|-----------|  
 |`NULL`|any|any|any|any|`EINVAL`|  
-|any|`NULL`|any|\!\= 0|any|`EINVAL`|  
-|any|any|any|any|\<\= 0|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|<= 0|`EINVAL`|  
 |any|any|`NULL`|any|any|`EINVAL`|  
   
- `qsort_s` a le même comportement que `qsort` mais a le paramètre `context` et définit `errno`.  En passant un paramètre `context`, les fonctions de comparaison peuvent utiliser un pointeur d'objet pour accéder aux fonctionnalités de l'objet ou à d'autres informations inaccessibles via un pointeur d'élément.  L'ajout du paramètre `context` permet de rendre `qsort_s`plus sécurisé car `context` peut être utilisé pour éviter les bogues de réentrance introduits par l'utilisation de variables statiques pour rendre les informations partagées disponibles pour la fonction `compare`.  
+ La fonction `qsort_s` affiche le même comportement que `qsort`, mais elle possède le paramètre `context` et définit `errno`. En passant un paramètre `context`, les fonctions de comparaison peuvent utiliser un pointeur d’objet pour accéder à la fonctionnalité d’objet ou à d’autres informations non accessibles via un pointeur d’élément. L’ajout de la `context` paramètre rend `qsort_s` plus sûre car `context` peut être utilisé pour éviter les bogues de réentrance introduites à l’aide de variables statiques pour rendre les informations partagées disponibles pour le `compare` (fonction).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|`qsort_s`|\<stdlib.h\> et \<malloc.h\>|  
+|`qsort_s`|\<stdlib.h> et \<search.h>|  
   
- Pour plus d'information de compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l'introduction.  
+ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
   
- **Bibliothèques :** toutes les versions [Fonctions de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).  
+ **Bibliothèques :** toutes les versions des [Fonctionnalités de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).  
   
-## Exemple  
- L'exemple suivant montre comment utiliser le paramètre `context` dans la fonction `qsort_s` `` .  Le paramètre `context` facilite la réalisation de tri thread\-safe.  Au lieu d'utiliser des variables statiques qui doivent être synchronisées pour vérifier la sécurité des threads, passez un paramètre différent `context` dans chaque tri.  Dans cet exemple, un objet de paramètres régionaux est utilisé comme paramètre de `context`.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre comment utiliser le `context` paramètre dans le `qsort_s` (fonction). Le paramètre `context` permet d’effectuer des tris thread-safe avec plus de facilité. Au lieu d’utiliser des variables statiques qui doivent être synchronisées pour garantir la sécurité des threads, passez un paramètre `context` différent à chaque tri. Dans cet exemple, un objet « locale » (paramètres régionaux) est utilisé comme paramètre `context`.  
   
 ```  
 // crt_qsort_s.cpp  
@@ -254,7 +271,7 @@ int main( )
 }  
 ```  
   
-## Résultat de l'exemple  
+## <a name="sample-output"></a>Résultat de l'exemple  
   
 ```  
 Unsorted input:  
@@ -267,11 +284,8 @@ España Español espantado
 table tablet tableux  
 ```  
   
-## Équivalent .NET Framework  
- <xref:System.Collections.ArrayList.Sort%2A>  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Recherche et tri](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch\_s](../../c-runtime-library/reference/bsearch-s.md)   
- [\_lsearch\_s](../../c-runtime-library/reference/lsearch-s.md)   
+ [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
+ [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)   
  [qsort](../../c-runtime-library/reference/qsort.md)

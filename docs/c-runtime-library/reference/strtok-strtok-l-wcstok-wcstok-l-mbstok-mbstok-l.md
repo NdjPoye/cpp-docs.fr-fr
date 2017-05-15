@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d203033a5cb07ca4e6888cca7cbf4bba1b1da9da
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 07948b7fc08bbc41e2e899e190842be98746aeab
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
@@ -125,7 +126,7 @@ unsigned char *_mbstok(
 > [!IMPORTANT]
 >  Ces fonctions sont exposées à une menace potentielle liée à un problème de dépassement de mémoire tampon. Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- Au premier appel de `strtok`, la fonction ignore les délimiteurs de début et retourne un pointeur désignant le premier jeton dans `strToken`, faisant terminer le jeton par un caractère Null. D’autres jetons peuvent être tirés du reste de `strToken` par une série d’appels à `strtok`. Chaque appel à `strtok` modifie `strToken` en insérant un caractère Null après le `token` retourné par cet appel. Pour lire le prochain jeton à partir de `strToken`, appelez `strtok` en spécifiant une valeur `NULL` pour l’argument `strToken`. L’argument `strToken` `NULL` contraint `strtok` à rechercher le prochain jeton dans le `strToken` modifié. L’argument `strDelimit` peut prendre n’importe quelle valeur d’un appel à l’autre, si bien que le jeu de délimiteurs peut varier.  
+ Au premier appel de `strtok`, la fonction ignore les délimiteurs de début et retourne un pointeur désignant le premier jeton dans `strToken`, faisant terminer le jeton par un caractère Null. D’autres jetons peuvent être tirés du reste de `strToken` par une série d’appels à `strtok`. Chaque appel à `strtok` modifie `strToken` en insérant un caractère null après le `token` retourné par cet appel. Pour lire le prochain jeton à partir de `strToken`, appelez `strtok` en spécifiant une valeur `NULL` pour l’argument `strToken`. L’argument `strToken` `NULL` contraint `strtok` à rechercher le prochain jeton dans le `strToken` modifié. L’argument `strDelimit` peut prendre n’importe quelle valeur d’un appel à l’autre, si bien que le jeu de délimiteurs peut varier.  
   
  La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_CTYPE` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe `_l` utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe `_l` sont identiques, sauf qu'elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Paramètres régionaux](../../c-runtime-library/locale.md).  
   
@@ -194,9 +195,6 @@ Tokens:
  more  
  tokens  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- Non applicable. Pour appeler la fonction C standard, utilisez `PInvoke`. Pour plus d’informations, consultez [Exemples d’appel de plateforme](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)   

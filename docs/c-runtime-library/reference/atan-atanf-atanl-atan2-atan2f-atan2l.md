@@ -65,10 +65,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9478bce81c89d642fbcad296ffc53e1312a177c2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 53291ede13fdd83a531052743ae22ef8bb146b0f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
@@ -119,11 +120,11 @@ long double atan2l(
  N’importe quels nombres.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `atan` retourne l’arc tangente de `x` dans la plage de radians – π/2 à π/2. `atan2` retourne l’arc tangente de `y/x` dans la plage de radians –π à π. Si `x` est 0, `atan` retourne la valeur 0. Si les deux paramètres de `atan2` sont 0, la fonction retourne 0. Tous les résultats sont en radians.  
+ `atan`Retourne l’arc tangente de `x` dans la plage - π/2 et π/2 radians. `atan2`Retourne l’arc tangente de `y/x` dans la plage - π en radians la mesure π. Si `x` est 0, `atan` retourne la valeur 0. Si les deux paramètres de `atan2` sont 0, la fonction retourne 0. Tous les résultats sont en radians.  
   
  `atan2` utilise les signes des deux paramètres pour déterminer le quadrant de la valeur de retour.  
   
-|Entrée|Exception SEH|Exception Matherr|  
+|Entrée|Exception SEH|Exception{b> <b}Matherr|  
 |-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|aucun|`_DOMAIN`|  
   
@@ -170,12 +171,6 @@ int main( int ac, char* av[] )
 Arctangent of 5.000000: 1.373401  
 Arctangent of 0.500000 / 5.000000: 0.099669  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
-  
--   [System::Math::Atan](https://msdn.microsoft.com/en-us/library/system.math.atan.aspx)  
-  
--   [System::Math::Atan2](https://msdn.microsoft.com/en-us/library/system.math.atan2.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   

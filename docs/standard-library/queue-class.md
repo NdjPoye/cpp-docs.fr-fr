@@ -42,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 441f493d8ada3ef232f60d917dc3f95812ba9114
-ms.openlocfilehash: 0db56597dd5d5ce8b68a45a5b53ce1af370134ee
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3daf7a48855ef4db50f7ed105cf5785619149a7f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="queue-class"></a>queue, classe
@@ -66,7 +67,7 @@ class queue
  Type du conteneur sous-jacent utilisé pour implémenter la classe queue.  
   
 ## <a name="remarks"></a>Notes  
- Les éléments de la classe **Type** stipulés dans le premier paramètre de modèle d’un objet queue sont synonymes de [value_type](#queue__value_type) et doivent correspondre au type d’élément de la classe de conteneur sous-jacent **Container** stipulé par le deuxième paramètre de modèle. La classe **Type** doit pouvoir faire l’objet d’une assignation, pour qu’il soit possible de copier des objets de ce type et d’assigner des valeurs aux variables de ce type.  
+ Les éléments de la classe **Type** stipulés dans le premier paramètre de modèle d’un objet queue sont synonymes de [value_type](#value_type) et doivent correspondre au type d’élément de la classe de conteneur sous-jacent **Container** stipulé par le deuxième paramètre de modèle. La classe **Type** doit pouvoir faire l’objet d’une assignation, pour qu’il soit possible de copier des objets de ce type et d’assigner des valeurs aux variables de ce type.  
   
  Les classes de conteneur sous-jacent appropriées pour la classe queue incluent [deque](../standard-library/deque-class.md) et [list](../standard-library/list-class.md) ou tout autre conteneur de séquence qui prend en charge les opérations `front`, **back**, `push_back` et `pop_front`. La classe de conteneur sous-jacent est encapsulée dans l'adaptateur de conteneur, qui expose seulement l'ensemble limité de fonctions membres du conteneur de séquence comme une interface publique.  
   
@@ -84,33 +85,33 @@ class queue
   
 |||  
 |-|-|  
-|[queue](#queue__queue)|Construit un objet `queue` qui est vide ou qui est une copie de l'objet conteneur de base.|  
+|[queue](#queue)|Construit un objet `queue` qui est vide ou qui est une copie de l'objet conteneur de base.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#queue__container_type)|Type qui fournit le conteneur de base à adapter par l’objet `queue`.|  
-|[size_type](#queue__size_type)|Type entier non signé qui peut représenter le nombre d'éléments dans un `queue`.|  
-|[value_type](#queue__value_type)|Type qui représente le type d'objet stocké en tant qu'élément dans un objet `queue`.|  
+|[container_type](#container_type)|Type qui fournit le conteneur de base à adapter par l’objet `queue`.|  
+|[size_type](#size_type)|Type entier non signé qui peut représenter le nombre d'éléments dans un `queue`.|  
+|[value_type](#value_type)|Type qui représente le type d'objet stocké en tant qu'élément dans un objet `queue`.|  
   
 ### <a name="member-functions"></a>Fonctions membres  
   
 |||  
 |-|-|  
-|[back](#queue__back)|Retourne une référence au dernier élément (ajouté le plus récemment) à l’arrière de l’objet `queue`.|  
-|[empty](#queue__empty)|Vérifie si l'objet `queue` est vide.|  
-|[front](#queue__front)|Retourne une référence au premier élément à l’avant de l’objet `queue`.|  
-|[pop](#queue__pop)|Supprime un élément à l’avant de l’objet `queue`.|  
-|[push](#queue__push)|Ajoute un élément à l’arrière de l’objet `queue`.|  
-|[size](#queue__size)|Retourne le nombre d'éléments d'un `queue`.|  
+|[back](#back)|Retourne une référence au dernier élément (ajouté le plus récemment) à l’arrière de l’objet `queue`.|  
+|[empty](#empty)|Vérifie si l'objet `queue` est vide.|  
+|[front](#front)|Retourne une référence au premier élément à l’avant de l’objet `queue`.|  
+|[pop](#pop)|Supprime un élément à l’avant de l’objet `queue`.|  
+|[push](#push)|Ajoute un élément à l’arrière de l’objet `queue`.|  
+|[size](#size)|Retourne le nombre d'éléments d'un `queue`.|  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** \<queue>  
   
  **Espace de noms :** std  
   
-##  <a name="queue__back"></a>  queue::back  
+##  <a name="back"></a>  queue::back  
  Retourne une référence au dernier élément (ajouté le plus récemment) à l’arrière de l’objet queue.  
   
 ```  
@@ -153,7 +154,7 @@ int main( )
 }  
 ```  
   
-##  <a name="queue__container_type"></a>  queue::container_type  
+##  <a name="container_type"></a>  queue::container_type  
  Type qui fournit le conteneur de base à adapter.  
   
 ```  
@@ -166,9 +167,9 @@ typedef Container container_type;
  Pour plus d’informations sur `Container`, consultez la section Notes de la rubrique [queue, classe](../standard-library/queue-class.md).  
   
 ### <a name="example"></a>Exemple  
-  Pour savoir comment déclarer et utiliser `container_type`, consultez l’exemple [queue](#queue__queue).  
+  Pour savoir comment déclarer et utiliser `container_type`, consultez l’exemple [queue](#queue).  
   
-##  <a name="queue__empty"></a>  queue::empty  
+##  <a name="empty"></a>  queue::empty  
  Teste si un objet queue est vide.  
   
 ```  
@@ -212,7 +213,7 @@ The queue q1 is not empty.
 The queue q2 is empty.  
 ```  
   
-##  <a name="queue__front"></a>  queue::front  
+##  <a name="front"></a>  queue::front  
  Retourne une référence au premier élément à l’avant de l’objet queue.  
   
 ```  
@@ -261,7 +262,7 @@ int main() {
 }  
 ```  
   
-##  <a name="queue__pop"></a>  queue::pop  
+##  <a name="pop"></a>  queue::pop  
  Supprime un élément à l’avant de l’objet queue.  
   
 ```  
@@ -315,7 +316,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.  
 ```  
   
-##  <a name="queue__push"></a>  queue::push  
+##  <a name="push"></a>  queue::push  
  Ajoute un élément à l’arrière de l’objet queue.  
   
 ```  
@@ -361,7 +362,7 @@ The queue length is 3.
 The element at the front of the queue is 10.  
 ```  
   
-##  <a name="queue__queue"></a>  queue::queue  
+##  <a name="queue"></a>  queue::queue  
  Construit un objet queue qui est vide ou qui est une copie d’un objet conteneur de base.  
   
 ```  
@@ -425,7 +426,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.  
 ```  
   
-##  <a name="queue__size"></a>  queue::size  
+##  <a name="size"></a>  queue::size  
  Retourne le nombre d’éléments figurant dans l’objet queue.  
   
 ```  
@@ -464,7 +465,7 @@ The queue length is 1.
 The queue length is now 2.  
 ```  
   
-##  <a name="queue__size_type"></a>  queue::size_type  
+##  <a name="size_type"></a>  queue::size_type  
  Type entier non signé qui peut représenter le nombre d’éléments dans un objet queue.  
   
 ```  
@@ -475,9 +476,9 @@ typedef typename Container::size_type size_type;
  Le type est un synonyme du `size_type` pour le conteneur de base adapté par la classe queue.  
   
 ### <a name="example"></a>Exemple  
-  Pour savoir comment déclarer et utiliser `size_type`, consultez l’exemple [queue::front](#queue__front).  
+  Pour savoir comment déclarer et utiliser `size_type`, consultez l’exemple [queue::front](#front).  
   
-##  <a name="queue__value_type"></a>  queue::value_type  
+##  <a name="value_type"></a>  queue::value_type  
  Type qui représente le type d’objet stocké comme élément dans une classe queue.  
   
 ```  

@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 70b71755436db29f60b1f8a4da8f2da216dcaf31
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5b5b2e5bca54f65a6fa54d43f92f60a704135110
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
@@ -89,12 +90,12 @@ long double acosl(
   
 #### <a name="parameters"></a>Paramètres  
  `x`  
- Valeur comprise entre −1 et 1, pour laquelle calculer l’arc cosinus (cosinus inverse).  
+ Valeur comprise entre -1 et 1, pour lesquelles calculer l’arc cosinus (le cosinus inverse).  
   
 ## <a name="return-value"></a>Valeur de retour  
  La fonction `acos` retourne l’arc cosinus de `x` dans la plage 0 à π radians.  
   
- Par défaut, si `x` est inférieur à −1 ou supérieur à 1, `acos` retourne un indéfini.  
+ Par défaut, si `x` est inférieur à -1 ou supérieur à 1, `acos` renvoie un indéterminée.  
   
 |Entrée|Exception SEH|Exception{b> <b}Matherr|  
 |-----------|-------------------|-----------------------|  
@@ -159,9 +160,6 @@ int main( int ac, char* av[] )
 Arcsine of 0.000000 = 0.000000  
 Arccosine of 0.000000 = 1.570796  
 ```  
-  
-## <a name="net-framework-equivalent"></a>Équivalent .NET Framework  
- [System::Math::Acos](https://msdn.microsoft.com/en-us/library/system.math.acos.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)   

@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: e90ee470e3cf990240f3c586c23fe8fd3d487f3d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ce86a87e5f22b27c5b1d7eeeeb4edcbcac8e15c7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="1-object"></a>_1, objet
@@ -53,8 +54,8 @@ namespace placeholders {
  } // namespace placeholders (within std)  
 ```  
   
-## <a name="remarks"></a>Notes  
- Les objets `_1, _2, ... _M` sont des espaces réservés désignant le premier, le deuxième,..., le M-ième argument respectivement dans un appel de fonction à un objet retourné par la [fonction bind](../standard-library/functional-functions.md#bind_function). Vous utilisez `_N` pour spécifier l’emplacement où le N-ième argument doit être inséré quand la liaison est évaluée.  
+## <a name="remarks"></a>Remarques  
+ Les objets `_1, _2, ... _M` sont des espaces réservés désignant la première, deuxième,..., argument de mois, respectivement, dans un appel de fonction à un objet retourné par [lier](../standard-library/functional-functions.md#bind). Vous utilisez `_N` pour spécifier l’emplacement où le N-ième argument doit être inséré quand la liaison est évaluée.  
   
  Dans cette implémentation, la valeur de `M` est 20.  
   
@@ -116,6 +117,6 @@ int main()
  **Espace de noms :** std  
   
 ## <a name="see-also"></a>Voir aussi  
- [bind, fonction](../standard-library/functional-functions.md#bind_function)   
+ [lier](../standard-library/functional-functions.md#bind)   
  [is_placeholder, classe](../standard-library/is-placeholder-class.md)
 

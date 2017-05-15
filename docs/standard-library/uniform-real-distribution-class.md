@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - uniform_real_distribution
-- std::uniform_real_distribution
 - random/std::uniform_real_distribution
-- std::uniform_real_distribution::reset
 - random/std::uniform_real_distribution::reset
-- std::uniform_real_distribution::a
 - random/std::uniform_real_distribution::a
-- std::uniform_real_distribution::b
 - random/std::uniform_real_distribution::b
-- std::uniform_real_distribution::param
 - random/std::uniform_real_distribution::param
-- std::uniform_real_distribution::min
 - random/std::uniform_real_distribution::min
-- std::uniform_real_distribution::max
 - random/std::uniform_real_distribution::max
-- std::uniform_real_distribution::operator()
 - random/std::uniform_real_distribution::operator()
-- std::uniform_real_distribution::param_type
 - random/std::uniform_real_distribution::param_type
-- std::uniform_real_distribution::param_type::a
 - random/std::uniform_real_distribution::param_type::a
-- std::uniform_real_distribution::param_type::b
 - random/std::uniform_real_distribution::param_type::b
-- std::uniform_real_distribution::param_type::operator==
 - random/std::uniform_real_distribution::param_type::operator==
-- std::uniform_real_distribution::param_type::operator!=
 - random/std::uniform_real_distribution::param_type::operator!=
+- random/std::uniform_real_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 491992306060125ab91d64560113f7f8a3b740b1
-ms.openlocfilehash: a7de3cf77ff7a70b13f57a1f06e015aa806c2a11
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 34c8090f40b4653f4c8798ffac404dc1652f7b52
+ms.contentlocale: fr-fr
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution, classe
@@ -107,8 +96,8 @@ La classe de modèle décrit une distribution inclusive-exclusive qui produit de
   
 ||||  
 |-|-|-|  
-|[uniform_real_distribution::uniform_real_distribution](#uniform_real_distribution__uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|  
-|`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[uniform_real_distribution::param_type](#uniform_real_distribution__param_type)|  
+|[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|  
+|`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|  
   
 Le membre de propriété `a()` retourne la limite minimale de la distribution stockée actuellement, tandis que `b()` retourne la limite maximale stockée actuellement. Pour cette classe de distribution, ces valeurs minimales et maximales sont les mêmes que celles retournées par les fonctions de propriété courantes `min()` et `max()` décrites dans la rubrique [\<random>](../standard-library/random.md).  
   
@@ -205,7 +194,7 @@ Distribution for 10 samples:
   
  **Espace de noms :** std  
   
-##  <a name="a-nameuniformrealdistributionuniformrealdistributiona--uniformrealdistributionuniformrealdistribution"></a><a name="uniform_real_distribution__uniform_real_distribution"></a>  uniform_real_distribution::uniform_real_distribution  
+##  <a name="uniform_real_distribution"></a>  uniform_real_distribution::uniform_real_distribution  
 Construit la distribution.  
   
 ```  
@@ -230,7 +219,7 @@ Le premier constructeur construit un objet dont la valeur `a` stockée contient 
   
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.  
   
-##  <a name="a-nameuniformrealdistributionparamtypea--uniformrealdistributionparamtype"></a><a name="uniform_real_distribution__param_type"></a>  uniform_real_distribution::param_type  
+##  <a name="param_type"></a>  uniform_real_distribution::param_type  
  Stocke tous les paramètres de la distribution.  
   
 ```  
