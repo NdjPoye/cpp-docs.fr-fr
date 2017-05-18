@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
 ms.openlocfilehash: 76a4bae07fd93a393084b6f108fead3ec32988f1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portage vers la plateforme Windows universelle (C++)
@@ -48,7 +50,7 @@ Dans cette rubrique, vous trouverez des informations sur la façon de porter du 
   
  Si vous avez une DLL Win32 de bureau classique et que vous souhaitez l’appeler à partir d’une application UWP, c’est également possible. Ces procédures vous permettent de créer une couche d’interface utilisateur UWP pour une application C++ de bureau Windows classique existante ou votre code C++ standard multiplateforme. Consultez [Guide pratique pour utiliser le code C++ existant dans une application de plateforme universelle Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).  
   
-##  <a name="a-namebk81storeappa-porting-a-windows-81-store-app-to-the-uwp"></a><a name="BK_81StoreApp"></a> Portage d’une application du Windows Store Windows 8.1 vers UWP  
+##  <a name="BK_81StoreApp"></a> Portage d’une application du Windows Store Windows 8.1 vers UWP  
  Si vous avez une application du Windows Store Windows 8.1, vous pouvez appliquer cette procédure pour qu'elle fonctionne sur la plateforme UWP et sur tout appareil qui exécute Windows 10.  Il est préférable de créer d’abord le projet avec Visual Studio 2017 comme projet Windows 8.1, pour éliminer les problèmes résultant des modifications apportées au compilateur et aux bibliothèques. Une fois cette opération terminée, il existe deux façons de convertir un projet UWP Windows 10. Le moyen le plus simple (comme expliqué dans la procédure suivante) consiste à créer un projet Windows universel et à y copier votre code existant. Si vous utilisiez un projet universel pour la version de bureau de Windows 8.1 et pour Windows Phone 8.1, votre projet commencera avec deux dispositions différentes en XAML, mais finira avec une disposition dynamique unique qui s'adapte à la taille d'affichage.  
   
 #### <a name="to-port-a-windows-81-store-app-to-the-uwp"></a>Pour porter une application du Windows Store Windows 8.1 vers UWP  
@@ -92,7 +94,7 @@ Dans cette rubrique, vous trouverez des informations sur la façon de porter du 
   
 11. Exécutez et déboguez l’application sur un émulateur ou un appareil physique pour chaque type d’appareil pris en charge par votre application. Pour exécuter un émulateur, vous devez exécuter Visual Studio sur un ordinateur physique, et non sur un ordinateur virtuel.  
   
-##  <a name="a-namebk81componenta-porting-a-windows-81-runtime-component-to-the-uwp"></a><a name="BK_81Component"></a> Portage d’un composant d’exécution Windows 8.1 vers UWP  
+##  <a name="BK_81Component"></a> Portage d’un composant d’exécution Windows 8.1 vers UWP  
  Si vous avez une DLL ou un composant Windows Runtime qui fonctionne déjà avec les applications du Windows Store Windows 8.1, vous pouvez appliquer cette procédure pour faire en sorte que le composant ou la DLL fonctionne avec la plateforme UWP et Windows 10. La procédure de base consiste à créer un projet et à y copier votre code.  
   
 #### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>Pour porter un composant d'exécution Windows 8.1 vers UWP  
@@ -131,9 +133,4 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 ## <a name="see-also"></a>Voir aussi  
  [Guide du portage de Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)   
  [Développer des applications pour la plateforme universelle Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

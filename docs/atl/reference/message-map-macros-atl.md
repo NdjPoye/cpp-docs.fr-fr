@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 8097982d6574af2ce1ba592dbead8abf6f6433df
+ms.contentlocale: fr-fr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -78,7 +79,7 @@ Ces macros définissent les tables des messages et des entrées.
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h  
 
-##  <a name="a-namealtmsgmapa--altmsgmap"></a><a name="alt_msg_map"></a>ALT_MSG_MAP  
+##  <a name="alt_msg_map"></a>ALT_MSG_MAP  
  Marque le début d’une autre table des messages.  
   
 ```
@@ -112,7 +113,7 @@ ALT_MSG_MAP(msgMapID)
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
 
-##  <a name="a-namebeginmsgmapa--beginmsgmap"></a><a name="begin_msg_map"></a>BEGIN_MSG_MAP  
+##  <a name="begin_msg_map"></a>BEGIN_MSG_MAP  
  Marque le début de la table des messages par défaut.  
   
 ```
@@ -187,7 +188,7 @@ BEGIN_MSG_MAP(theClass)
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namechainmsgmapalta--chainmsgmapalt"></a><a name="chain_msg_map_alt"></a>CHAIN_MSG_MAP_ALT  
+##  <a name="chain_msg_map_alt"></a>CHAIN_MSG_MAP_ALT  
  Définit une entrée dans une table des messages.  
   
 ```
@@ -212,7 +213,7 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namechainmsgmapaltmembera--chainmsgmapaltmember"></a><a name="chain_msg_map_alt_member"></a>CHAIN_MSG_MAP_ALT_MEMBER  
+##  <a name="chain_msg_map_alt_member"></a>CHAIN_MSG_MAP_ALT_MEMBER  
  Définit une entrée dans une table des messages.  
   
 ```
@@ -237,7 +238,7 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namechainmsgmapa--chainmsgmap"></a><a name="chain_msg_map"></a>CHAIN_MSG_MAP  
+##  <a name="chain_msg_map"></a>CHAIN_MSG_MAP  
  Définit une entrée dans une table des messages.  
   
 ```
@@ -270,7 +271,7 @@ CHAIN_MSG_MAP(theChainClass)
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namechainmsgmapdynamica--chainmsgmapdynamic"></a><a name="chain_msg_map_dynamic"></a>MACRO CHAIN_MSG_MAP_DYNAMIC  
+##  <a name="chain_msg_map_dynamic"></a>MACRO CHAIN_MSG_MAP_DYNAMIC  
  Définit une entrée dans une table des messages.  
   
 ```
@@ -293,7 +294,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namechainmsgmapmembera--chainmsgmapmember"></a><a name="chain_msg_map_member"></a>CHAIN_MSG_MAP_MEMBER  
+##  <a name="chain_msg_map_member"></a>CHAIN_MSG_MAP_MEMBER  
  Définit une entrée dans une table des messages.  
   
 ```
@@ -326,7 +327,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namecommandcodehandlera--commandcodehandler"></a><a name="command_code_handler"></a>COMMAND_CODE_HANDLER  
+##  <a name="command_code_handler"></a>COMMAND_CODE_HANDLER  
  Semblable à [COMMAND_HANDLER](#command_handler), mais mappe un [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message basé uniquement sur le code de notification.  
   
 ```
@@ -343,7 +344,7 @@ COMMAND_CODE_HANDLER(code, func)
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namecommandhandlera--commandhandler"></a><a name="command_handler"></a>COMMAND_HANDLER  
+##  <a name="command_handler"></a>COMMAND_HANDLER  
  Définit une entrée dans une table des messages.  
   
 ```
@@ -381,7 +382,7 @@ COMMAND_HANDLER(id, code, func)
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namecommandidhandlera--commandidhandler"></a><a name="command_id_handler"></a>COMMAND_ID_HANDLER  
+##  <a name="command_id_handler"></a>COMMAND_ID_HANDLER  
  Semblable à [COMMAND_HANDLER](#command_handler), mais mappe un [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) basé sur des messages uniquement sur l’identificateur de l’élément de menu, le contrôle ou l’accélérateur.  
   
 ```
@@ -398,7 +399,7 @@ COMMAND_ID_HANDLER(id, func)
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namecommandrangecodehandlera--commandrangecodehandler"></a><a name="command_range_code_handler"></a>COMMAND_RANGE_CODE_HANDLER  
+##  <a name="command_range_code_handler"></a>COMMAND_RANGE_CODE_HANDLER  
  Semblable à [COMMAND_RANGE_HANDLER](#command_range_handler), mais mappe [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) messages avec un code de notification spécifique dans une plage de contrôles à une seule fonction gestionnaire.  
   
 ```
@@ -424,7 +425,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namecommandrangehandlera--commandrangehandler"></a><a name="command_range_handler"></a>COMMAND_RANGE_HANDLER  
+##  <a name="command_range_handler"></a>COMMAND_RANGE_HANDLER  
  Semblable à [COMMAND_HANDLER](#command_handler), mais mappe [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) messages à partir d’une plage de contrôles à une seule fonction gestionnaire.  
   
 ```
@@ -447,7 +448,7 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namedeclareemptymsgmapa--declareemptymsgmap"></a><a name="declare_empty_msg_map"></a>DECLARE_EMPTY_MSG_MAP  
+##  <a name="declare_empty_msg_map"></a>DECLARE_EMPTY_MSG_MAP  
  Déclare une table des messages vide.  
   
 ```
@@ -459,7 +460,7 @@ DECLARE_EMPTY_MSG_MAP()
   
  [!code-cpp[NVC_ATL_Windowing&#122;](../../atl/codesnippet/cpp/message-map-macros-atl_7.h)]  
   
-##  <a name="a-namedefaultreflectionhandlera--defaultreflectionhandler"></a><a name="default_reflection_handler"></a>DEFAULT_REFLECTION_HANDLER  
+##  <a name="default_reflection_handler"></a>DEFAULT_REFLECTION_HANDLER  
  Fournit un gestionnaire par défaut pour la fenêtre enfant (contrôle) qui recevra les messages, réfléchis le gestionnaire passe correctement des messages non gérées à `DefWindowProc`.  
   
 ```
@@ -469,7 +470,7 @@ DEFAULT_REFLECTION_HANDLER()
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-nameendmsgmapa--endmsgmap"></a><a name="end_msg_map"></a>END_MSG_MAP  
+##  <a name="end_msg_map"></a>END_MSG_MAP  
  Marque la fin d’une table des messages.  
   
 ```
@@ -495,7 +496,7 @@ END_MSG_MAP()
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-nameforwardnotificationsa--forwardnotifications"></a><a name="forward_notifications"></a>FORWARD_NOTIFICATIONS  
+##  <a name="forward_notifications"></a>FORWARD_NOTIFICATIONS  
  Envoie des messages de notification de la fenêtre parente.  
   
 ```
@@ -508,7 +509,7 @@ FORWARD_NOTIFICATIONS()
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namemessagehandlera--messagehandler"></a><a name="message_handler"></a>MESSAGE_HANDLER  
+##  <a name="message_handler"></a>MESSAGE_HANDLER  
  Définit une entrée dans une table des messages.  
   
 ```
@@ -544,7 +545,7 @@ MESSAGE_HANDLER( msg, func )
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namemessagerangehandlera--messagerangehandler"></a><a name="message_range_handler"></a>MESSAGE_RANGE_HANDLER  
+##  <a name="message_range_handler"></a>MESSAGE_RANGE_HANDLER  
  Semblable à [MESSAGE_HANDLER](#message_handler), mais correspond à une plage de Windows des messages à une seule fonction gestionnaire.  
   
 ```
@@ -564,7 +565,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namenotifycodehandlera--notifycodehandler"></a><a name="notify_code_handler"></a>NOTIFY_CODE_HANDLER  
+##  <a name="notify_code_handler"></a>NOTIFY_CODE_HANDLER  
  Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe un [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) message basé uniquement sur le code de notification.  
   
 ```
@@ -581,7 +582,7 @@ NOTIFY_CODE_HANDLER(cd, func)
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namenotifyhandlera--notifyhandler"></a><a name="notify_handler"></a>NOTIFY_HANDLER  
+##  <a name="notify_handler"></a>NOTIFY_HANDLER  
  Définit une entrée dans une table des messages.  
   
 ```
@@ -620,7 +621,7 @@ NOTIFY_HANDLER( id, cd, func )
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namenotifyidhandlera--notifyidhandler"></a><a name="notify_id_handler"></a>NOTIFY_ID_HANDLER  
+##  <a name="notify_id_handler"></a>NOTIFY_ID_HANDLER  
  Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe un [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) basé sur des messages uniquement sur l’identificateur du contrôle.  
   
 ```
@@ -637,7 +638,7 @@ NOTIFY_ID_HANDLER( id, func )
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namenotifyrangecodehandlera--notifyrangecodehandler"></a><a name="notify_range_code_handler"></a>NOTIFY_RANGE_CODE_HANDLER  
+##  <a name="notify_range_code_handler"></a>NOTIFY_RANGE_CODE_HANDLER  
  Semblable à [NOTIFY_RANGE_HANDLER](#notify_range_handler), mais mappe [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) messages avec un code de notification spécifique dans une plage de contrôles à une seule fonction gestionnaire.  
   
 ```
@@ -663,7 +664,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namenotifyrangehandlera--notifyrangehandler"></a><a name="notify_range_handler"></a>NOTIFY_RANGE_HANDLER  
+##  <a name="notify_range_handler"></a>NOTIFY_RANGE_HANDLER  
  Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) messages à partir d’une plage de contrôles à une seule fonction gestionnaire.  
   
 ```
@@ -686,7 +687,7 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namereflectnotificationsa--reflectnotifications"></a><a name="reflect_notifications"></a>REFLECT_NOTIFICATIONS  
+##  <a name="reflect_notifications"></a>REFLECT_NOTIFICATIONS  
  Reflète les messages de notification à la fenêtre enfant (contrôle) qui les a envoyés.  
   
 ```
@@ -699,7 +700,7 @@ REFLECT_NOTIFICATIONS()
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namereflectedcommandcodehandlera--reflectedcommandcodehandler"></a><a name="reflected_command_code_handler"></a>REFLECTED_COMMAND_CODE_HANDLER  
+##  <a name="reflected_command_code_handler"></a>REFLECTED_COMMAND_CODE_HANDLER  
  Semblable à [COMMAND_CODE_HANDLER](#command_code_handler), mais mappe des commandes réfléchies à partir de la fenêtre parente.  
   
 ```
@@ -716,7 +717,7 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h  
    
-##  <a name="a-namereflectedcommandhandlera--reflectedcommandhandler"></a><a name="reflected_command_handler"></a>REFLECTED_COMMAND_HANDLER  
+##  <a name="reflected_command_handler"></a>REFLECTED_COMMAND_HANDLER  
  Semblable à [COMMAND_HANDLER](#command_handler), mais mappe des commandes réfléchies à partir de la fenêtre parente.  
   
 ```
@@ -736,7 +737,7 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h  
 
-##  <a name="a-namereflectedcommandidhandlera--reflectedcommandidhandler"></a><a name="reflected_command_id_handler"></a>REFLECTED_COMMAND_ID_HANDLER  
+##  <a name="reflected_command_id_handler"></a>REFLECTED_COMMAND_ID_HANDLER  
  Semblable à [COMMAND_ID_HANDLER](#command_id_handler), mais mappe des commandes réfléchies à partir de la fenêtre parente.  
   
 ```
@@ -753,7 +754,7 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h  
 
-##  <a name="a-namereflectedcommandrangecodehandlera--reflectedcommandrangecodehandler"></a><a name="reflected_command_range_code_handler"></a>REFLECTED_COMMAND_RANGE_CODE_HANDLER  
+##  <a name="reflected_command_range_code_handler"></a>REFLECTED_COMMAND_RANGE_CODE_HANDLER  
  Semblable à [COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler), mais mappe des commandes réfléchies à partir de la fenêtre parente.  
   
 ```
@@ -776,7 +777,7 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h  
 
-##  <a name="a-namereflectedcommandrangehandlera--reflectedcommandrangehandler"></a><a name="reflected_command_range_handler"></a>REFLECTED_COMMAND_RANGE_HANDLER  
+##  <a name="reflected_command_range_handler"></a>REFLECTED_COMMAND_RANGE_HANDLER  
  Semblable à [COMMAND_RANGE_HANDLER](#command_range_handler), mais mappe des commandes réfléchies à partir de la fenêtre parente.  
   
 ```
@@ -796,7 +797,7 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h  
 
-##  <a name="a-namereflectednotifycodehandlera--reflectednotifycodehandler"></a><a name="reflected_notify_code_handler"></a>REFLECTED_NOTIFY_CODE_HANDLER  
+##  <a name="reflected_notify_code_handler"></a>REFLECTED_NOTIFY_CODE_HANDLER  
  Semblable à [NOTIFY_CODE_HANDLER](#notify_code_handler), mais mappe des notifications réfléchies à partir de la fenêtre parente.  
   
 ```
@@ -813,7 +814,7 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h  
 
-##  <a name="a-namereflectednotifyhandlera--reflectednotifyhandler"></a><a name="reflected_notify_handler"></a>REFLECTED_NOTIFY_HANDLER  
+##  <a name="reflected_notify_handler"></a>REFLECTED_NOTIFY_HANDLER  
  Semblable à [NOTIFY_HANDLER](#notify_handler), mais mappe des notifications réfléchies à partir de la fenêtre parente.  
   
 ```
@@ -833,7 +834,7 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h  
 
-##  <a name="a-namereflectednotifyidhandlera--reflectednotifyidhandler"></a><a name="reflected_notify_id_handler"></a>REFLECTED_NOTIFY_ID_HANDLER  
+##  <a name="reflected_notify_id_handler"></a>REFLECTED_NOTIFY_ID_HANDLER  
  Semblable à [NOTIFY_ID_HANDLER](#notify_id_handler), mais mappe des notifications réfléchies à partir de la fenêtre parente.  
   
 ```
@@ -850,7 +851,7 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h  
 
-##  <a name="a-namereflectednotifyrangecodehandlera--reflectednotifyrangecodehandler"></a><a name="reflected_notify_range_code_handler"></a>REFLECTED_NOTIFY_RANGE_CODE_HANDLER  
+##  <a name="reflected_notify_range_code_handler"></a>REFLECTED_NOTIFY_RANGE_CODE_HANDLER  
  Semblable à [NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler), mais mappe des notifications réfléchies à partir de la fenêtre parente.  
   
 ```
@@ -873,7 +874,7 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlwin.h   
   
-##  <a name="a-namereflectednotifyrangehandlera--reflectednotifyrangehandler"></a><a name="reflected_notify_range_handler"></a>REFLECTED_NOTIFY_RANGE_HANDLER  
+##  <a name="reflected_notify_range_handler"></a>REFLECTED_NOTIFY_RANGE_HANDLER  
  Semblable à [NOTIFY_RANGE_HANDLER](#notify_range_handler), mais mappe des notifications réfléchies à partir de la fenêtre parente.  
   
 ```

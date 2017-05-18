@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: 046160644cca3bd23e4293a3c52692d2b4c94cd5
+ms.contentlocale: fr-fr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -78,7 +79,7 @@ Les classes qui se conforment à la *travail* archétype fournissent le code pou
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** atlutil.h  
   
-## <a name="a-nameexecuteaworkerarchetypeexecute"></a><a name="execute"></a>WorkerArchetype::Execute
+## <a name="execute"></a>WorkerArchetype::Execute
 Appelée pour traiter un élément de travail.  
   
   
@@ -100,7 +101,7 @@ void Execute(
  `pOverlapped`  
  Un pointeur vers le [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) structure utilisée pour créer la file d’attente à laquelle les éléments ont été en file d’attente.  
   
-## <a name="a-nameinitializea-workerarchetypeinitialize"></a><a name="initialize"></a>WorkerArchetype::Initialize
+## <a name="initialize"></a>WorkerArchetype::Initialize
 Appelée pour initialiser l’objet de travail avant que toutes les demandes sont transmises à `WorkerArchetype::Execute`.  
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -113,7 +114,7 @@ BOOL Initialize(void* pvParam) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourner **TRUE** en cas de réussite, **FALSE** en cas d’échec.  
   
-## <a name="a-namerequesttypea-workerarchetyperequesttype"></a><a name="requesttype"></a>WorkerArchetype::RequestType
+## <a name="requesttype"></a>WorkerArchetype::RequestType
 Typedef pour le type d’élément de travail qui peut être traité par la classe de travail.  
   
 ```  
@@ -123,7 +124,7 @@ typedef MyRequestType RequestType;
 ### <a name="remarks"></a>Remarques  
  Ce type doit être utilisé comme premier paramètre de `WorkerArchetype::Execute` et doit pouvoir être casté vers et depuis un ULONG_PTR entière.  
   
-## <a name="a-nameterminatea-workerarchetypeterminate"></a><a name="terminate"></a>WorkerArchetype::Terminate
+## <a name="terminate"></a>WorkerArchetype::Terminate
 Appelé pour annuler l’initialisation de l’objet de travail une fois que toutes les demandes qui ont été transmis au `WorkerArchetype::Execute`).  
     
 ``` 

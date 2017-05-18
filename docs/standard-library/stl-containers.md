@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
 ms.openlocfilehash: dc71a6958a352ebf1c46406114c32d77b7fb8887
+ms.contentlocale: fr-fr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -45,7 +46,7 @@ La Bibliothèque standard fournit divers conteneurs de type sécurisé pour stoc
   
  Les conteneurs peuvent être divisés en trois catégories : les conteneurs de séquence, les conteneurs associatifs et les adaptateurs de conteneur.  
   
-##  <a name="a-namesequencecontainersa-sequence-containers"></a><a name="sequence_containers"></a> Conteneurs de séquence  
+##  <a name="sequence_containers"></a> Conteneurs de séquence  
  Les conteneurs de séquence conservent l'ordonnancement des éléments insérés que vous spécifiez.  
   
  Un conteneur `vector` se comporte comme un tableau, mais il peut croître automatiquement selon les besoins. Il est en accès aléatoire et à stockage contigu, et sa longueur est hautement flexible. Pour ces raisons, entre autres, `vector` est le conteneur de séquence par défaut pour la plupart des applications. En cas de doute sur le type de conteneur de séquence à utiliser, commencez par utiliser un vecteur. Pour plus d’informations, consultez [vector, classe](../standard-library/vector-class.md).  

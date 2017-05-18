@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
 ms.openlocfilehash: 87aadf7aacc31ded165a8e1380823cb20e614fb1
+ms.contentlocale: fr-fr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -51,7 +52,7 @@ Cette section contient les rubriques de référence pour les opérateurs globaux
   
  Ces opérateurs sont définis dans le fichier atlsecurity.h.  
   
-##  <a name="a-nameoperatoreqeqa--operator-"></a><a name="operator_eq_eq"></a>opérateur ==  
+##  <a name="operator_eq_eq"></a>opérateur ==  
  Compare `CSid` objets ou `SID` l’égalité des structures (identificateur de sécurité).  
   
 ```   
@@ -68,7 +69,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si les objets sont égaux, **false** si elles ne sont pas égales.  
   
-##  <a name="a-nameoperatorneqa--operator-"></a><a name="operator_neq"></a>opérateur ! =  
+##  <a name="operator_neq"></a>opérateur ! =  
  Compare `CSid` objets ou `SID` inégalité des structures (identificateur de sécurité).  
   
 ```   
@@ -85,7 +86,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne **true** si les objets ne sont pas égaux, **false** s’ils sont égaux.  
   
-##  <a name="a-nameoperatorlta--operator-"></a><a name="operator_lt"></a>(opérateur)  
+##  <a name="operator_lt"></a>(opérateur)  
  Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est inférieur à la `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).  
   
 ```   
@@ -105,7 +106,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Remarques  
  Cet opérateur agit sur l’adresse de la `CSid` objet ou `SID` de la structure et est implémenté pour assurer la compatibilité avec les classes de collection de bibliothèque C++ Standard.  
   
-##  <a name="a-nameoperatorgta--operator-"></a><a name="operator_gt"></a>opérateur >  
+##  <a name="operator_gt"></a>opérateur >  
  Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est supérieure à la `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).  
   
 ```   
@@ -125,7 +126,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Remarques  
  Cet opérateur agit sur l’adresse de la `CSid` objet ou `SID` de la structure et est implémenté pour assurer la compatibilité avec les classes de collection de bibliothèque C++ Standard.  
   
-##  <a name="a-nameoperatorlteqa--operator-"></a><a name="operator_lt__eq"></a>(opérateur)<=></=>  
+##  <a name="operator_lt__eq"></a>(opérateur)<=></=>  
  Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est inférieur ou égal à la `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).  
   
 ```   
@@ -145,7 +146,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>Remarques  
  Cet opérateur agit sur l’adresse de la `CSid` objet ou `SID` de la structure et est implémenté pour assurer la compatibilité avec les classes de collection de bibliothèque C++ Standard.  
   
-##  <a name="a-nameoperatorgteqa--operator-"></a><a name="operator_gt__eq"></a>opérateur > =  
+##  <a name="operator_gt__eq"></a>opérateur > =  
  Teste si le `CSid` objet ou `SID` structure sur le côté gauche de l’opérateur est supérieur ou égal à la `CSid` objet ou `SID` structure sur le côté droit (pour la compatibilité de la bibliothèque C++ Standard).  
   
 ```   

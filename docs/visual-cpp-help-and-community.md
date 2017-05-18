@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: 4d67a376c8a000b48984f8a290b0d042c33a0f7c
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: f09027c947478aa07cbefe13114edde8932c4a2d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="visual-c-help-and-community"></a>Aide et communauté Visual C++
@@ -52,7 +54,7 @@ Voici comment obtenir des informations sur l’écriture de code C++ et l’util
 |[Centre de développement Windows](http://go.microsoft.com/fwlink/p/?LinkId=256534)|Contient des informations sur l’utilisation de C++ et d’autres langages pour développer des applications [!INCLUDE[win8](build/reference/includes/win8_md.md)]. Fait partie du Centre de développement Windows. Le contenu C++ se trouve sous le nœud Documentation > Référence du langage.|  
   
 ### <a name="online-and-offline-documentation"></a>Documentation en ligne et hors connexion  
- Vous pouvez afficher le contenu de MSDN Library et du Centre de développement Windows en ligne. Ce contenu est souvent mis à jour.  
+ Vous pouvez afficher le contenu de développement Microsoft en ligne. Ce contenu est mis à jour régulièrement. 
   
  Vous pouvez également télécharger et afficher le contenu localement dans la Visionneuse de l’aide hors connexion. La documentation hors connexion est organisée par ouvrages de contenu associé, lesquels sont également mis à jour périodiquement. Vous pouvez télécharger les ouvrages qui vous intéressent, une fois qu’ils sont disponibles. Pour plus d’informations, consultez [Visionneuse d’aide Microsoft](/visualstudio/ide/microsoft-help-viewer).  
   
@@ -60,12 +62,7 @@ Voici comment obtenir des informations sur l’écriture de code C++ et l’util
   
 |Titre|Description|  
 |-----------|-----------------|  
-|[Blog de l’équipe Visual C++](http://go.microsoft.com/fwlink/p/?LinkId=256537)|Contient des billets sur divers sujets, rédigés par les experts de l’équipe produit Visual C++.|  
-|[Channel 9](http://go.microsoft.com/fwlink/p/?LinkId=251694)|Contient des vidéos d’interviews et de cours. Utilisez la zone de recherche dans la page d’accueil de Channel 9 pour rechercher du contenu C++.|  
+|[Blog de l'équipe Visual C++](http://go.microsoft.com/fwlink/p/?LinkId=256537)|Contient des billets sur divers sujets, rédigés par les experts de l’équipe produit Visual C++.|  
+|[Channel 9](http://go.microsoft.com/fwlink/p/?LinkId=251694)|Contient des vidéos d’interviews et de cours. Utilisez la zone de recherche dans la page d’accueil de Channel 9 pour rechercher du contenu C++.|  
 |[Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=256535)|Contient des articles et des informations sur Visual Studio et les outils de développement associés.|  
 |[Forums MSDN](http://go.microsoft.com/fwlink/p/?LinkId=256538)|Forums Microsoft officiels où vous pouvez publier des questions, et obtenir des réponses de la part de Microsoft et des experts de la communauté. Utilisez la zone de recherche dans la page d’accueil des forums pour trouver ceux qui sont spécifiques au C++.|
-
-
-<!--HONumber=Feb17_HO4-->
-
-

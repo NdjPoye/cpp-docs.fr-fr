@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 33bf66d18b499787a34b2da501bb3e8ead255459
+ms.contentlocale: fr-fr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -56,7 +57,7 @@ Lorsqu’un contrôle OLE incorporé déclenche un événement, le conteneur du 
 |[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|Définit un gestionnaire pour traiter les notifications de propriété à partir d’un ensemble de contrôles OLE.|  
 |[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|Reçoit des notifications de propriété envoyées par le contrôle avant qu’ils sont gérés par le conteneur du contrôle.|  
   
-##  <a name="a-namebegineventsinkmapa--begineventsinkmap"></a><a name="begin_eventsink_map"></a>BEGIN_EVENTSINK_MAP  
+##  <a name="begin_eventsink_map"></a>BEGIN_EVENTSINK_MAP  
  Démarre la définition de votre table de récepteur d’événements.  
   
 ```   
@@ -78,7 +79,7 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="a-namedeclareeventsinkmapa--declareeventsinkmap"></a><a name="declare_eventsink_map"></a>DECLARE_EVENTSINK_MAP  
+##  <a name="declare_eventsink_map"></a>DECLARE_EVENTSINK_MAP  
  Un conteneur OLE peut fournir une table de récepteur d’événements pour spécifier les événements de que notification de votre conteneur.  
   
 ```   
@@ -93,7 +94,7 @@ DECLARE_EVENTSINK_MAP()
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxwin.h  
   
-##  <a name="a-nameendeventsinkmapa--endeventsinkmap"></a><a name="end_eventsink_map"></a>END_EVENTSINK_MAP  
+##  <a name="end_eventsink_map"></a>END_EVENTSINK_MAP  
  Met fin à la définition de votre table de récepteur d’événements.  
   
 ```   
@@ -103,7 +104,7 @@ END_EVENTSINK_MAP()
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="a-nameoneventa--onevent"></a><a name="on_event"></a>ON_EVENT  
+##  <a name="on_event"></a>ON_EVENT  
  Utilisez le `ON_EVENT` macro pour définir une fonction de gestionnaire d’événements pour un événement déclenché par un contrôle OLE.  
   
 ```   
@@ -138,7 +139,7 @@ ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="a-nameoneventrangea--oneventrange"></a><a name="on_event_range"></a>ON_EVENT_RANGE  
+##  <a name="on_event_range"></a>ON_EVENT_RANGE  
  Utilisez le `ON_EVENT_RANGE` macro pour définir une fonction de gestionnaire d’événements pour un événement déclenché par n’importe quel contrôle OLE ayant un ID de contrôle dans une plage contiguë de codes.  
   
 ```   
@@ -185,7 +186,7 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="a-nameoneventreflecta--oneventreflect"></a><a name="on_event_reflect"></a>ON_EVENT_REFLECT  
+##  <a name="on_event_reflect"></a>ON_EVENT_REFLECT  
  Le `ON_EVENT_REFLECT` macro, lorsqu’il est utilisé dans l’événement de table de récepteur de classe de wrapper de contrôle OLE, reçoit les événements déclenchés par le contrôle avant qu’ils sont gérés par le conteneur du contrôle.  
   
 ```   
@@ -219,7 +220,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="a-nameonpropnotifya--onpropnotify"></a><a name="on_propnotify"></a>ON_PROPNOTIFY  
+##  <a name="on_propnotify"></a>ON_PROPNOTIFY  
  Utilisez le `ON_PROPNOTIFY` macro pour définir une entrée de mappage de récepteur événements pour gérer les notifications de propriété à partir d’un contrôle OLE.  
   
 ```   
@@ -252,7 +253,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
   
  Pour obtenir la liste de la **VTS_** constantes, voir [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-##  <a name="a-nameonpropnotifyrangea--onpropnotifyrange"></a><a name="on_propnotify_range"></a>ON_PROPNOTIFY_RANGE  
+##  <a name="on_propnotify_range"></a>ON_PROPNOTIFY_RANGE  
  Utilisez le `ON_PROPNOTIFY_RANGE` macro pour définir une entrée de mappage de récepteur événements pour gérer les notifications de propriété à partir de n’importe quel contrôle OLE ayant un ID de contrôle dans une plage contiguë de codes.  
   
 ```  
@@ -283,7 +284,7 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="a-nameonpropnotifyreflecta--onpropnotifyreflect"></a><a name="on_propnotify_reflect"></a>ON_PROPNOTIFY_REFLECT  
+##  <a name="on_propnotify_reflect"></a>ON_PROPNOTIFY_REFLECT  
  Le `ON_PROPNOTIFY_REFLECT` macro, lorsqu’il est utilisé dans l’événement de table de récepteur de classe de wrapper de contrôle OLE, reçoit des notifications de propriété envoyées par le contrôle avant qu’ils sont gérés par le conteneur du contrôle.  
   
 ```  

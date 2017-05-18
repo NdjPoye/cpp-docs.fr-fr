@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: b8bbf72a1ea16b37dabf88c5d41a34b1a03ba0d1
+ms.contentlocale: fr-fr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -66,7 +67,7 @@ Une fonctionnalité des contrôles OLE soit la propriété persistance (sériali
   
  En outre, les `AfxOleTypeMatchGuid` fonction globale est fournie pour rechercher une correspondance entre un `TYPEDESC` et un GUID donné.  
   
-##  <a name="a-namepxbloba--pxblob"></a><a name="px_blob"></a>PX_Blob  
+##  <a name="px_blob"></a>PX_Blob  
  Appelez cette fonction au sein de votre contrôle `DoPropExchange` fonction membre à sérialiser ou à initialiser une propriété qui stocke les données d’objet binaire volumineux (BLOB).  
   
 ```  
@@ -111,7 +112,7 @@ hBlobDefault
   
  Notez que `PX_Blob` alloue la mémoire, à l’aide de Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API, lors du chargement des propriétés de type BLOB. Vous êtes chargé de libérer cette mémoire. Par conséquent, le destructeur de votre contrôle doit appeler [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) sur n’importe quelle propriété de type BLOB poignées pour libérer jusqu'à toute mémoire allouée à votre contrôle.  
   
-##  <a name="a-namepxboola--pxbool"></a><a name="px_bool"></a>PX_Bool  
+##  <a name="px_bool"></a>PX_Bool  
  Appelez cette fonction au sein de votre contrôle `DoPropExchange` fonction membre à sérialiser ou à initialiser une propriété de type **BOOL**.  
   
 ```  
@@ -154,7 +155,7 @@ bValue  ,
 ### <a name="remarks"></a>Notes  
  La valeur de propriété est lues ou écrite dans la variable référencée par `bValue`, le cas échéant. Si `bDefault` est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation d' un contrôle échoue.  
   
-##  <a name="a-namepxcolora--pxcolor"></a><a name="px_color"></a>PX_Color  
+##  <a name="px_color"></a>PX_Color  
  Appelez cette fonction au sein de votre contrôle `DoPropExchange` fonction membre à sérialiser ou à initialiser une propriété de type **OLE_COLOR**.  
   
 ```  
@@ -196,7 +197,7 @@ clrDefault);
 ### <a name="remarks"></a>Remarques  
  La valeur de propriété est lues ou écrite dans la variable référencée par `clrValue`, le cas échéant. Si `clrDefault` est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation d' un contrôle échoue.  
   
-##  <a name="a-namepxcurrencya--pxcurrency"></a><a name="px_currency"></a>PX_Currency  
+##  <a name="px_currency"></a>PX_Currency  
  Appelez cette fonction au sein de votre contrôle `DoPropExchange` fonction membre à sérialiser ou à initialiser une propriété de type **devise**.  
   
 ```  
@@ -239,7 +240,7 @@ cyValue  ,
 ### <a name="remarks"></a>Remarques  
  La valeur de propriété est lues ou écrite dans la variable référencée par `cyValue`, le cas échéant. Si `cyDefault` est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation d' un contrôle échoue.  
   
-##  <a name="a-namepxdatapatha--pxdatapath"></a><a name="px_datapath"></a>PX_DataPath  
+##  <a name="px_datapath"></a>PX_DataPath  
  Appelez cette fonction au sein de votre contrôle `DoPropExchange` fonction membre à sérialiser ou à initialiser une propriété de chemin d’accès de données de type [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).  
   
 ```  
@@ -275,7 +276,7 @@ pPX,
 ### <a name="remarks"></a>Remarques  
  Propriétés de chemin d’accès de données implémentent des propriétés de contrôle asynchrones. La valeur de propriété est lues ou écrite dans la variable référencée par `dataPathProperty`, le cas échéant.  
   
-##  <a name="a-namepxdoublea--pxdouble"></a><a name="px_double"></a>PX_Double  
+##  <a name="px_double"></a>PX_Double  
  Appelez cette fonction au sein de votre contrôle `DoPropExchange` fonction membre à sérialiser ou à initialiser une propriété de type **double**.  
   
 ```  
@@ -318,7 +319,7 @@ doubleValue  ,
 ### <a name="remarks"></a>Remarques  
  La valeur de propriété est lu ou écrite à la variable référencée par `doubleValue`, le cas échéant. Si `doubleDefault` est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation d' un contrôle échoue.  
   
-##  <a name="a-namepxfonta--pxfont"></a><a name="px_font"></a>PX_Font  
+##  <a name="px_font"></a>PX_Font  
  Appelez cette fonction au sein de votre contrôle `DoPropExchange` fonction membre à sérialiser ou à initialiser une propriété de police de type.  
   
 ```  
@@ -364,7 +365,7 @@ pFontDispAmbient
 ### <a name="remarks"></a>Remarques  
  La valeur de propriété est lu ou écrite vers `font`, un `CFontHolder` de référence, le cas échéant. Si `pFontDesc` et `pFontDispAmbient` sont spécifiés, ils sont utilisés pour initialiser la valeur de propriété par défaut, si nécessaire. Ces valeurs sont utilisées si, pour une raison quelconque, le processus de sérialisation d' un contrôle échoue. En règle générale, vous transmettez **NULL** de `pFontDesc` et la valeur ambiante retourné par `COleControl::AmbientFont` pour `pFontDispAmbient`. Notez que l’objet de police est retourné par `COleControl::AmbientFont` doivent être libérées par un appel à la **IFontDisp::Release** fonction membre.  
   
-##  <a name="a-namepxfloata--pxfloat"></a><a name="px_float"></a>PX_Float  
+##  <a name="px_float"></a>PX_Float  
  Appelez cette fonction au sein de votre contrôle `DoPropExchange` fonction membre à sérialiser ou à initialiser une propriété de type **float**.  
   
 ```  
@@ -407,7 +408,7 @@ floatValue  ,
 ### <a name="remarks"></a>Remarques  
  La valeur de propriété est lu ou écrite à la variable référencée par `floatValue`, le cas échéant. Si `floatDefault` est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation d' un contrôle échoue.  
   
-##  <a name="a-namepxiunknowna--pxiunknown"></a><a name="px_iunknown"></a>PX_IUnknown  
+##  <a name="px_iunknown"></a>PX_IUnknown  
  Appelez cette fonction au sein de votre contrôle `DoPropExchange` fonction membre à sérialiser ou à initialiser une propriété représentée par un objet ayant une **IUnknown**-interface dérivée.  
   
 ```  
@@ -449,7 +450,7 @@ pUnkDefault
 ### <a name="remarks"></a>Notes  
  La valeur de propriété est lu ou écrite à la variable référencée par *pUnk*, le cas échéant. Si `pUnkDefault` est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation d' un contrôle échoue.  
   
-##  <a name="a-namepxlonga--pxlong"></a><a name="px_long"></a>PX_Long  
+##  <a name="px_long"></a>PX_Long  
  Appelez cette fonction au sein de votre contrôle `DoPropExchange` fonction membre à sérialiser ou à initialiser une propriété de type **long**.  
   
 ```  
@@ -492,7 +493,7 @@ lValue  ,
 ### <a name="remarks"></a>Remarques  
  La valeur de propriété est lu ou écrite à la variable référencée par `lValue`, le cas échéant. Si `lDefault` est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation d' un contrôle échoue.  
   
-##  <a name="a-namepxpicturea--pxpicture"></a><a name="px_picture"></a>PX_Picture  
+##  <a name="px_picture"></a>PX_Picture  
  Appelez cette fonction au sein de votre contrôle `DoPropExchange` fonction membre à sérialiser ou à initialiser une propriété d’image de votre contrôle.  
   
 ```  
@@ -535,7 +536,7 @@ pict  ,
 ### <a name="remarks"></a>Notes  
  La valeur de propriété est lu ou écrite à la variable référencée par `pict`, le cas échéant. Si `pictDefault` est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation d' un contrôle échoue.  
   
-##  <a name="a-namepxshorta--pxshort"></a><a name="px_short"></a>PX_Short  
+##  <a name="px_short"></a>PX_Short  
  Appelez cette fonction au sein de votre contrôle `DoPropExchange` fonction membre à sérialiser ou à initialiser une propriété de type **court**.  
   
 ```  
@@ -578,7 +579,7 @@ sValue  ,
 ### <a name="remarks"></a>Notes  
  La valeur de propriété est lu ou écrite à la variable référencée par `sValue`, le cas échéant. Si `sDefault` est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation d' un contrôle échoue.  
   
-##  <a name="a-namepxulonga--pxulong"></a><a name="px_ulong"></a>PX_ULong  
+##  <a name="px_ulong"></a>PX_ULong  
  Appelez cette fonction au sein de votre contrôle `DoPropExchange` fonction membre à sérialiser ou à initialiser une propriété de type **ULONG**.  
   
 ```  
@@ -621,7 +622,7 @@ ulValue  ,
 ### <a name="remarks"></a>Notes  
  La valeur de propriété est lu ou écrite à la variable référencée par `ulValue`, le cas échéant. Si `ulDefault` est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation d' un contrôle échoue.  
   
-##  <a name="a-namepxushorta--pxushort"></a><a name="px_ushort"></a>PX_UShort  
+##  <a name="px_ushort"></a>PX_UShort  
  Appelez cette fonction au sein de votre contrôle `DoPropExchange` fonction membre à sérialiser ou à initialiser une propriété de type `unsigned` **court**.  
   
 ```  
@@ -664,7 +665,7 @@ usValue  ,
 ### <a name="remarks"></a>Notes  
  La valeur de propriété est lu ou écrite à la variable référencée par *usValue*, le cas échéant. Si *usDefault* est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation d' un contrôle échoue.  
   
-##  <a name="a-namepxstringa--pxstring"></a><a name="px_string"></a>PXstring  
+##  <a name="px_string"></a>PXstring  
  Appelez cette fonction au sein de votre contrôle **DoPropExchange** fonction membre à sérialiser ou à initialiser une propriété de chaîne de caractères.  
   
 ```  
@@ -707,7 +708,7 @@ strValue  ,
 ### <a name="remarks"></a>Remarques  
  La valeur de propriété est lu ou écrite à la variable référencée par `strValue`, le cas échéant. Si `strDefault` est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation d' un contrôle échoue.  
   
-##  <a name="a-namepxvbxfontconverta--pxvbxfontconvert"></a><a name="px_vbxfontconvert"></a>PX_VBXFontConvert  
+##  <a name="px_vbxfontconvert"></a>PX_VBXFontConvert  
  Appelez cette fonction au sein de votre contrôle `DoPropExchange` fonction membre pour initialiser une propriété de police en convertissant les propriétés de police d’un contrôle VBX.  
   
 ```  
