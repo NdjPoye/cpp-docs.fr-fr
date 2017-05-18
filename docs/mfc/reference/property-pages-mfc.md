@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 50888697fe01d3a84d9aa4c6f5f92926e4681535
+ms.contentlocale: fr-fr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -72,7 +73,7 @@ Pages de propriétés affichent les valeurs actuelles des propriétés de contr�
 |[END_PROPPAGEIDS](#end_proppageids)|Met fin à la liste des ID de page de propriété.|  
 |[PROPPAGEID](#proppageid)|Déclare une page de propriétés de la classe de contrôle.|  
   
-##  <a name="a-nameddpcbindexa--ddpcbindex"></a><a name="ddp_cbindex"></a>DDP_CBIndex  
+##  <a name="ddp_cbindex"></a>DDP_CBIndex  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction) pour synchroniser la valeur d’une propriété d’entier avec l’index de la sélection actuelle dans une zone de liste déroulante sur la page de propriétés.  
   
 ```   
@@ -102,7 +103,7 @@ void AFXAPI DDP_CBIndex(
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameddpcbstringa--ddpcbstring"></a><a name="ddp_cbstring"></a>DDP_CBString  
+##  <a name="ddp_cbstring"></a>DDP_CBString  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction) pour synchroniser la valeur de propriété de type chaîne avec la sélection actuelle dans une zone de liste déroulante sur la page de propriétés.  
   
 ```  
@@ -132,7 +133,7 @@ void AFXAPI DDP_CBString(
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameddpcbstringexacta--ddpcbstringexact"></a><a name="ddp_cbstringexact"></a>DDP_CBStringExact  
+##  <a name="ddp_cbstringexact"></a>DDP_CBStringExact  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction) pour synchroniser la valeur d’une propriété de chaîne qui correspond exactement à la sélection actuelle dans une zone de liste déroulante sur la page de propriétés.  
   
 ```  
@@ -162,7 +163,7 @@ void AFXAPI DDP_CBStringExact(
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameddpchecka--ddpcheck"></a><a name="ddp_check"></a>DDP_Check  
+##  <a name="ddp_check"></a>DDP_Check  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction) pour synchroniser la valeur de la propriété avec le contrôle de case à cocher de page de propriété associée.  
   
 ```   
@@ -192,7 +193,7 @@ void AFXAPI DDP_Check(
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameddplbindexa--ddplbindex"></a><a name="ddp_lbindex"></a>DDP_LBIndex  
+##  <a name="ddp_lbindex"></a>DDP_LBIndex  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction) pour synchroniser la valeur d’une propriété d’entier avec l’index de la sélection actuelle dans une zone de liste sur la page de propriétés.  
   
 ```   
@@ -222,7 +223,7 @@ void AFXAPI DDP_LBIndex(
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameddplbstringa--ddplbstring"></a><a name="ddp_lbstring"></a>DDP_LBString  
+##  <a name="ddp_lbstring"></a>DDP_LBString  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction) pour synchroniser la valeur de propriété de type chaîne avec la sélection actuelle dans une zone de liste sur la page de propriétés.  
   
 ```   
@@ -252,7 +253,7 @@ void AFXAPI DDP_LBString(
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameddplbstringexacta--ddplbstringexact"></a><a name="ddp_lbstringexact"></a>DDP_LBStringExact  
+##  <a name="ddp_lbstringexact"></a>DDP_LBStringExact  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction) pour synchroniser la valeur d’une propriété de chaîne qui correspond exactement à la sélection actuelle dans une zone de liste sur la page de propriétés.  
   
 ```   
@@ -282,7 +283,7 @@ void AFXAPI DDP_LBStringExact(
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameddppostprocessinga--ddppostprocessing"></a><a name="ddp_postprocessing"></a>DDP_PostProcessing  
+##  <a name="ddp_postprocessing"></a>DDP_PostProcessing  
  Appelez cette fonction dans votre page de propriétés `DoDataExchange` (fonction), pour terminer le transfert des valeurs de propriété à partir de la page de propriétés à votre contrôle lorsque les valeurs de propriété sont enregistrés.  
   
 ```   
@@ -301,7 +302,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameddpradioa--ddpradio"></a><a name="ddp_radio"></a>DDP_Radio  
+##  <a name="ddp_radio"></a>DDP_Radio  
  Appelez cette fonction dans votre contrôle `DoPropExchange` fonction pour synchroniser la valeur de la propriété du contrôle de bouton de case d’option page propriété associée.  
   
 ```   
@@ -331,7 +332,7 @@ void AFXAPI DDP_Radio(
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameddptexta--ddptext"></a><a name="ddp_text"></a>DDP_TEXT  
+##  <a name="ddp_text"></a>DDP_TEXT  
  Appelez cette fonction dans votre contrôle `DoDataExchange` fonction pour synchroniser la valeur de la propriété avec le contrôle de page de propriété associée.  
   
 ```   
@@ -403,7 +404,7 @@ void AFXAPI DDP_Text(
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-namebeginproppageidsa--beginproppageids"></a><a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS  
+##  <a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS  
  Démarre la définition de liste du contrôle de l’ID de page de propriété.  
   
 ```   
@@ -425,7 +426,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameendproppageidsa--endproppageids"></a><a name="end_proppageids"></a>END_PROPPAGEIDS  
+##  <a name="end_proppageids"></a>END_PROPPAGEIDS  
  Met fin à la définition de votre liste de ID de page de propriétés.  
   
 ```   
@@ -439,7 +440,7 @@ END_PROPPAGEIDS(class_name)
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameproppageida--proppageid"></a><a name="proppageid"></a>PROPPAGEID  
+##  <a name="proppageid"></a>PROPPAGEID  
  Ajoute une page de propriétés pour une utilisation par votre contrôle OLE.  
   
 ```   

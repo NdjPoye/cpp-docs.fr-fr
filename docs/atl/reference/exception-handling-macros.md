@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 9d99551d8dbe116c9f4fafeb9602e471839003a7
+ms.contentlocale: fr-fr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -47,7 +48,7 @@ Ces macros prennent en charge la gestion des exceptions.
 |[_ATLCATCHALL](#_atlcatchall)|Instructions permettant de gérer les erreurs qui se produisent dans le type `_ATLTRY`.|  
 |[_ATLTRY](#_atltry)|Marque une section de code protégée où une erreur peut éventuellement se produire.|  
   
-##  <a name="a-nameatlcatcha--atlcatch"></a><a name="_atlcatch"></a>_ATLCATCH  
+##  <a name="_atlcatch"></a>_ATLCATCH  
  Instructions permettant de gérer les erreurs qui se produisent dans le type `_ATLTRY`.  
   
 ```
@@ -61,7 +62,7 @@ _ATLCATCH(e)
 ### <a name="remarks"></a>Notes  
  Utilisé conjointement avec `_ATLTRY`. Est résolu en C++ [catch (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md) pour gérer un type donné des exceptions C++.  
   
-##  <a name="a-nameatlcatchalla--atlcatchall"></a><a name="_atlcatchall"></a>_ATLCATCHALL  
+##  <a name="_atlcatchall"></a>_ATLCATCHALL  
  Instructions permettant de gérer les erreurs qui se produisent dans le type `_ATLTRY`.  
   
 ```
@@ -71,7 +72,7 @@ _ATLCATCHALL
 ### <a name="remarks"></a>Notes  
  Utilisé conjointement avec `_ATLTRY`. Est résolu en C++ [catch (...) ](../../cpp/try-throw-and-catch-statements-cpp.md) pour la gestion de tous les types d’exceptions C++.  
   
-##  <a name="a-nameatltrya--atltry"></a><a name="_atltry"></a>_ATLTRY  
+##  <a name="_atltry"></a>_ATLTRY  
  Marque une section de code protégée où une erreur peut éventuellement se produire.  
   
 ```

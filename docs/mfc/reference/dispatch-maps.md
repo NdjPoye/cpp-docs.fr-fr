@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -35,9 +35,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 48e5d1fe207089733caa5ed9e8ca30c2de21f95f
+ms.contentlocale: fr-fr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -58,7 +59,7 @@ OLE Automation fournit des méthodes pour appeler les méthodes et accéder aux 
 |[DISP_PROPERTY_PARAM](#disp_property_param)|Définit une propriété automation OLE qui prend des paramètres et des noms de fonctions Get et Set.|  
 |[DISP_DEFVALUE](#disp_defvalue)|Rend une propriété existante de la valeur par défaut d’un objet.|  
   
-##  <a name="a-namedeclaredispatchmapa--declaredispatchmap"></a><a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
+##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
  Si un `CCmdTarget`-classe dérivée dans votre programme prend en charge OLE Automation que classe doit fournir une table de dispatch pour exposer ses méthodes et propriétés.  
   
 ```   
@@ -79,7 +80,7 @@ DECLARE_DISPATCH_MAP()
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** afxwin.h  
 
-##  <a name="a-namebegindispatchmapa--begindispatchmap"></a><a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
+##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
  Déclare la définition de votre table de dispatch.  
   
 ```  
@@ -99,7 +100,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdisp.h  
 
-##  <a name="a-nameenddispatchmapa--enddispatchmap"></a><a name="end_dispatch_map"></a>END_DISPATCH_MAP  
+##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP  
  Met fin à la définition de votre table de dispatch.  
   
 ```   
@@ -112,7 +113,7 @@ END_DISPATCH_MAP()
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdisp.h  
 
-##  <a name="a-namedispfunctiona--dispfunction"></a><a name="disp_function"></a>DISP_FUNCTION  
+##  <a name="disp_function"></a>DISP_FUNCTION  
  Définit une fonction d’automatisation OLE dans une table de dispatch.  
   
 ```   
@@ -198,7 +199,7 @@ DISP_FUNCTION(
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdisp.h 
 
-##  <a name="a-namedisppropertya--dispproperty"></a><a name="disp_property"></a>DISP_PROPERTY  
+##  <a name="disp_property"></a>DISP_PROPERTY  
  Définit une propriété d’automation OLE dans une table de dispatch.  
   
 ```   
@@ -245,7 +246,7 @@ DISP_PROPERTY(
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdisp.h 
 
-##  <a name="a-namedisppropertyexa--disppropertyex"></a><a name="disp_property_ex"></a>DISP_PROPERTY_EX  
+##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX  
  Définit une propriété d’automation OLE et le nom les fonctions utilisées pour obtenir et définir la valeur de propriété dans une table de dispatch.  
   
 ```   
@@ -281,7 +282,7 @@ DISP_PROPERTY_EX(
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdisp.h 
 
-##  <a name="a-namedisppropertynotifya--disppropertynotify"></a><a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
+##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
  Définit une propriété d’automation OLE avec notification dans une table de dispatch.  
   
 ```   
@@ -332,7 +333,7 @@ DISP_PROPERTY_NOTIFY(
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdisp.h 
 
-##  <a name="a-namedisppropertyparama--disppropertyparam"></a><a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
+##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
  Définit une propriété accédée avec distinct **obtenir** et `Set` les fonctions membres.  
   
 ```   
@@ -387,7 +388,7 @@ DISP_PROPERTY_PARAM(
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** afxdisp.h 
 
-##  <a name="a-namedispdefvaluea--dispdefvalue"></a><a name="disp_defvalue"></a>DISP_DEFVALUE  
+##  <a name="disp_defvalue"></a>DISP_DEFVALUE  
  Rend une propriété existante de la valeur par défaut d’un objet.  
   
 ```   

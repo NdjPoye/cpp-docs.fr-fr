@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 4c4777496ce609d7c2fa20da726f211264095b6e
+ms.contentlocale: fr-fr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -74,7 +75,7 @@ Chaque fois qu'un contrôle souhaite indiquer à son conteneur qu'une action (d�
 |[ON_OLEVERB](#on_oleverb)|Désigne un verbe personnalisé géré par le contrôle OLE.|  
 |[ON_STDOLEVERB](#on_stdoleverb)|Remplace un mappage de verbe standard du contrôle OLE.|  
   
-##  <a name="a-namedeclareeventmapa--declareeventmap"></a><a name="declare_event_map"></a>DECLARE_EVENT_MAP  
+##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP  
  Chaque `COleControl`-classe dérivée dans votre programme peut fournir une table d’événements pour spécifier les événements que votre contrôle se déclenche.  
   
 ```   
@@ -89,7 +90,7 @@ DECLARE_EVENT_MAP()
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-namebegineventmapa--begineventmap"></a><a name="begin_event_map"></a>BEGIN_EVENT_MAP  
+##  <a name="begin_event_map"></a>BEGIN_EVENT_MAP  
  Démarre la définition de votre table d’événements.  
   
 ```   
@@ -111,7 +112,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameendeventmapa--endeventmap"></a><a name="end_event_map"></a>END_EVENT_MAP  
+##  <a name="end_event_map"></a>END_EVENT_MAP  
  Utilisez le `END_EVENT_MAP` macro pour terminer la définition de votre table d’événements.  
   
 ```   
@@ -121,7 +122,7 @@ END_EVENT_MAP()
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameeventcustoma--eventcustom"></a><a name="event_custom"></a>EVENT_CUSTOM  
+##  <a name="event_custom"></a>EVENT_CUSTOM  
  Définit une entrée de table d’événements pour un événement personnalisé.  
   
 ```   
@@ -183,7 +184,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameeventcustomida--eventcustomid"></a><a name="event_custom_id"></a>EVENT_CUSTOM_ID  
+##  <a name="event_custom_id"></a>EVENT_CUSTOM_ID  
  Définit un fonction d’un événement personnalisé appartenant à l’ID de dispatch spécifié par l’événement `dispid`.  
   
 ```   
@@ -220,7 +221,7 @@ EVENT_CUSTOM_ID(
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameonoleverba--onoleverb"></a><a name="on_oleverb"></a>ON_OLEVERB  
+##  <a name="on_oleverb"></a>ON_OLEVERB  
  Cette macro définit une entrée de mappage de message qui mappe un verbe personnalisé à une fonction membre spécifique de votre contrôle.  
   
 ```   
@@ -249,7 +250,7 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxole.h  
   
-##  <a name="a-nameonstdoleverba--onstdoleverb"></a><a name="on_stdoleverb"></a>ON_STDOLEVERB  
+##  <a name="on_stdoleverb"></a>ON_STDOLEVERB  
  Utilisez cette macro pour substituer le comportement par défaut d’un verbe standard.  
   
 ```   

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: f03ca61c6ab3c550c316b380d34eb5fa4f3b61de
+ms.contentlocale: fr-fr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -47,7 +48,7 @@ Ces macros définissent les mappages d’objet et les entrées.
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlcom.h  
    
-##  <a name="a-namedeclareobjectdescriptiona--declareobjectdescription"></a><a name="declare_object_description"></a>DECLARE_OBJECT_DESCRIPTION  
+##  <a name="declare_object_description"></a>DECLARE_OBJECT_DESCRIPTION  
  Permet de spécifier une description pour votre objet de classe.  
   
 ```
@@ -71,7 +72,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 ### <a name="example"></a>Exemple  
  [!code-cpp[NVC_ATL_Windowing&#123;](../../atl/codesnippet/cpp/object-map-macros_1.h)]  
   
-##  <a name="a-nameobjectentryautoa--objectentryauto"></a><a name="object_entry_auto"></a>OBJECT_ENTRY_AUTO  
+##  <a name="object_entry_auto"></a>OBJECT_ENTRY_AUTO  
  Insère un objet ATL dans la table des objets, met à jour le Registre et crée une instance de l’objet.  
   
 ```
@@ -102,7 +103,7 @@ OBJECT_ENTRY_AUTO( clsid, class )
 |Nettoyage et l’initialisation de niveau classe|[ObjectMain](ccomobjectrootex-class.md#objectmain)|  
 
   
-##  <a name="a-nameobjectentrynoncreateableexautoa--objectentrynoncreateableexauto"></a><a name="object_entry_non_createable_ex_auto"></a>OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO  
+##  <a name="object_entry_non_createable_ex_auto"></a>OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO  
  Vous pouvez spécifier que l'objet doit être enregistré et initialisé, mais il ne doit pas pouvoir être créé en externe via `CoCreateInstance`.  
   
 ```

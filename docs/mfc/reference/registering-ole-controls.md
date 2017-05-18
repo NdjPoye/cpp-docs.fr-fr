@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 9c54fb7dc3802e78c8dc68df02ff55ef4732a36b
+ms.contentlocale: fr-fr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -57,7 +58,7 @@ Contrôles OLE, comme les autres objets de serveur OLE, sont accessibles par d�
   
  `AfxOleRegisterTypeLib`est généralement appelée dans l’implémentation d’une DLL de contrôle de `DllRegisterServer`. De même, `AfxOleUnregisterTypeLib` est appelée par `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, et `AfxOleUnregisterClass` sont généralement appelées par le `UpdateRegistry` fonction membre de la page de fabrique ou une propriété de classe d’un contrôle.  
   
-##  <a name="a-nameafxoleregistercontrolclassa--afxoleregistercontrolclass"></a><a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass  
+##  <a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass  
  Enregistre la classe de contrôle avec la base de registres de Windows.  
   
 ```   
@@ -172,7 +173,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameafxoleregisterpropertypageclassa--afxoleregisterpropertypageclass"></a><a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass  
+##  <a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass  
  Enregistre la classe de page de propriétés avec la base de registres de Windows.  
   
 ```  
@@ -210,7 +211,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameafxoleregistertypeliba--afxoleregistertypelib"></a><a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib  
+##  <a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib  
  Inscrit la bibliothèque de types avec la base de données d’inscription de Windows et permet à la bibliothèque de types à utiliser par les autres conteneurs OLE-contrôle prenant en charge.  
   
 ```   
@@ -248,7 +249,7 @@ BOOL AfxOleRegisterTypeLib(
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="a-nameafxoleunregisterclassa--afxoleunregisterclass"></a><a name="afxoleunregisterclass"></a>AfxOleUnregisterClass  
+##  <a name="afxoleunregisterclass"></a>AfxOleUnregisterClass  
  Supprime l’entrée de classe de page de contrôle ou la propriété à partir de la base de registres de Windows.  
   
 ```   
@@ -268,7 +269,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxctl.h  
   
-##  <a name="a-nameafxoleunregistertypeliba--afxoleunregistertypelib"></a><a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib  
+##  <a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib  
  Appelez cette fonction pour supprimer l’entrée de bibliothèque de type de la base de registres de Windows.  
   
 ```   

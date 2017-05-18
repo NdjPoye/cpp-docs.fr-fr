@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: ee3c1d639ee4a6c6bd6cf26a8c59bb1a37a4fa02
+ms.contentlocale: fr-fr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ Ces macros effectuent des opérations d’échange de données de Registre.
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlplus.h  
    
-##  <a name="a-namebeginrdxmapa--beginrdxmap"></a><a name="begin_rdx_map"></a>BEGIN_RDX_MAP  
+##  <a name="begin_rdx_map"></a>BEGIN_RDX_MAP  
  Marque le début de la carte de l’échange de données de Registre.  
   
 ```
@@ -71,14 +72,14 @@ BEGIN_RDX_MAP
   
  La fonction globale [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), ou la fonction membre du même nom créé par le `BEGIN_RDX_MAP` et `END_RDX_MAP` macros, doit être utilisé chaque fois que votre code a besoin d’échanger des données entre le Registre système et les variables spécifiées dans le mappage RDX.  
   
-##  <a name="a-nameendrdxmapa--endrdxmap"></a><a name="end_rdx_map"></a>END_RDX_MAP  
+##  <a name="end_rdx_map"></a>END_RDX_MAP  
  Marque la fin de la carte de l’échange de données de Registre.  
   
 ```
 END_RDX_MAP
 ```  
   
-##  <a name="a-namerdxbinarya--rdxbinary"></a><a name="rdx_binary"></a>RDX_BINARY  
+##  <a name="rdx_binary"></a>RDX_BINARY  
  Associe l’entrée de Registre spécifiée à une variable de membre spécifié de type BYTE.  
   
 ```
@@ -109,7 +110,7 @@ RDX_BINARY(
 ### <a name="remarks"></a>Remarques  
  Cette macro est utilisée conjointement avec la `BEGIN_RDX_MAP` et `END_RDX_MAP` macros pour associer une variable membre à une entrée de Registre donné. La fonction globale [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), ou la fonction membre du même nom créé par le `BEGIN_RDX_MAP` et `END_RDX_MAP` macros, doit servir à effectuer l’échange de données entre le Registre système et les variables de membre dans la carte RDX.  
   
-##  <a name="a-namerdxcstringtexta--rdxcstringtext"></a><a name="rdx_cstring_text"></a>RDX_CSTRING_TEXT  
+##  <a name="rdx_cstring_text"></a>RDX_CSTRING_TEXT  
  Associe l’entrée de Registre spécifiée à une variable de membre spécifié du type CString.  
   
 ```
@@ -140,7 +141,7 @@ RDX_CSTRING_TEXT(
 ### <a name="remarks"></a>Notes  
  Cette macro est utilisée conjointement avec la `BEGIN_RDX_MAP` et `END_RDX_MAP` macros pour associer une variable membre à une entrée de Registre donné. La fonction globale [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), ou la fonction membre du même nom créé par le `BEGIN_RDX_MAP` et `END_RDX_MAP` macros, doit servir à effectuer l’échange de données entre le Registre système et les variables de membre dans la carte RDX.  
   
-##  <a name="a-namerdxdworda--rdxdword"></a><a name="rdx_dword"></a>RDX_DWORD  
+##  <a name="rdx_dword"></a>RDX_DWORD  
  Associe l’entrée de Registre spécifiée à une variable de membre spécifié de type DWORD.  
   
 ```
@@ -171,7 +172,7 @@ RDX_DWORD(
 ### <a name="remarks"></a>Remarques  
  Cette macro est utilisée conjointement avec la `BEGIN_RDX_MAP` et `END_RDX_MAP` macros pour associer une variable membre à une entrée de Registre donné. La fonction globale [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), ou la fonction membre du même nom créé par le `BEGIN_RDX_MAP` et `END_RDX_MAP` macros, doit servir à effectuer l’échange de données entre le Registre système et les variables de membre dans la carte RDX.  
   
-##  <a name="a-namerdxtexta--rdxtext"></a><a name="rdx_text"></a>RDX_TEXT  
+##  <a name="rdx_text"></a>RDX_TEXT  
  Associe l’entrée de Registre spécifiée à une variable de membre spécifié de type TCHAR.  
   
 ```

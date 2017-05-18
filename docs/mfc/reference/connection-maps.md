@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 8947930d20cc65075abe442b233e4c086f10f76e
+ms.contentlocale: fr-fr
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -67,7 +68,7 @@ Contrôles OLE peuvent exposer des interfaces à d’autres applications. Ces in
 |[AfxConnectionAdvise](#afxconnectionadvise)|Établit une connexion entre une source et un récepteur.|  
 |[AfxConnectionUnadvise](#afxconnectionunadvise)|Interrompt une connexion entre une source et un récepteur.|  
   
-##  <a name="a-namebeginconnectionparta--beginconnectionpart"></a><a name="begin_connection_part"></a>BEGIN_CONNECTION_PART  
+##  <a name="begin_connection_part"></a>BEGIN_CONNECTION_PART  
  Utilisez le `BEGIN_CONNECTION_PART` macro pour commencer la définition de points de connexion supplémentaires au-delà des points de connexion de notifications événement et une propriété.  
   
 ```   
@@ -87,7 +88,7 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="a-nameendconnectionparta--endconnectionpart"></a><a name="end_connection_part"></a>END_CONNECTION_PART  
+##  <a name="end_connection_part"></a>END_CONNECTION_PART  
  Met fin à la déclaration du point de connexion.  
   
 ```   
@@ -101,7 +102,7 @@ END_CONNECTION_PART(localClass)
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="a-nameconnectioniida--connectioniid"></a><a name="connection_iid"></a>CONNECTION_IID  
+##  <a name="connection_iid"></a>CONNECTION_IID  
  Utilisez entre les `BEGIN_CONNECTION_PART` et `END_CONNECTION_PART` macros pour définir un ID d’interface pour un point de connexion pris en charge par votre contrôle OLE.  
   
 ```   
@@ -122,7 +123,7 @@ CONNECTION_IID(iid)
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="a-namedeclareconnectionmapa--declareconnectionmap"></a><a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP  
+##  <a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP  
  Chaque `COleControl`-classe dérivée dans votre programme peut fournir un mappage de connexions pour spécifier les points de connexion supplémentaires qui prend en charge de votre contrôle.  
   
 ```   
@@ -135,7 +136,7 @@ DECLARE_CONNECTION_MAP()
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="a-namebeginconnectionmapa--beginconnectionmap"></a><a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP  
+##  <a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP  
  Chaque `COleControl`-classe dérivée dans votre programme peut fournir un mappage de connexions pour spécifier les points de connexion qui prend en charge votre contrôle.  
   
 ```   
@@ -155,7 +156,7 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="a-nameendconnectionmapa--endconnectionmap"></a><a name="end_connection_map"></a>END_CONNECTION_MAP  
+##  <a name="end_connection_map"></a>END_CONNECTION_MAP  
  Met fin à la définition de votre plan de connexion.  
   
 ```   
@@ -165,7 +166,7 @@ END_CONNECTION_MAP()
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="a-nameconnectionparta--connectionpart"></a><a name="connection_part"></a>CONNECTION_PART  
+##  <a name="connection_part"></a>CONNECTION_PART  
  Mappe un point de connexion pour votre contrôle OLE à un ID d’interface spécifique.  
   
 ```   
@@ -192,7 +193,7 @@ CONNECTION_PART(theClass, iid, localClass)
 ### <a name="requirements"></a>Spécifications  
   **En-tête** afxdisp.h  
   
-##  <a name="a-nameafxconnectionadvisea--afxconnectionadvise"></a><a name="afxconnectionadvise"></a>AfxConnectionAdvise  
+##  <a name="afxconnectionadvise"></a>AfxConnectionAdvise  
  Appelez cette fonction pour établir une connexion entre une source spécifiée par `pUnkSrc`et un récepteur spécifié par `pUnkSink`.  
   
 ```   
@@ -229,7 +230,7 @@ BOOL AFXAPI AfxConnectionAdvise(
 ### <a name="requirements"></a>Spécifications  
  **En-tête :** afxctl.h 
 
-##  <a name="a-nameafxconnectionunadvisea--afxconnectionunadvise"></a><a name="afxconnectionunadvise"></a>AfxConnectionUnadvise  
+##  <a name="afxconnectionunadvise"></a>AfxConnectionUnadvise  
  Appelez cette fonction pour déconnecter une connexion entre une source spécifiée par `pUnkSrc`et un récepteur spécifié par `pUnkSink`.  
   
 ```   
