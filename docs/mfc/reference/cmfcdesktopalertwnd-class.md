@@ -62,7 +62,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 La `CMFCDesktopAlertWnd` classe implémente les fonctionnalités d’une boîte de dialogue non modale qui apparaît à l’écran pour informer l’utilisateur d’un événement.  
-  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
@@ -288,7 +289,7 @@ BOOL HasSmallCaption() const;
  Utilisez cette méthode pour déterminer si la fenêtre possède une barre de titre réduite ou une légende de taille standard. Par défaut, la barre de titre réduite est 7 pixels de haut. Vous pouvez obtenir la hauteur de la légende de taille standard en appelant la fonction API Windows `GetSystemMetrics(SM_CYCAPTION)`.  
   
 ##  <a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnBeforeShow(CPoint&);
@@ -319,7 +320,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
  Substituez cette méthode dans une classe dérivée si vous souhaitez être averti lorsqu’un utilisateur clique sur le lien dans la fenêtre d’alerte.  
   
 ##  <a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnCommand(
@@ -336,7 +337,7 @@ virtual BOOL OnCommand(
 ### <a name="remarks"></a>Remarques  
   
 ##  <a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDraw(CDC* pDC);
@@ -348,7 +349,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>Remarques  
   
 ##  <a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL ProcessCommand(HWND hwnd);
@@ -442,7 +443,7 @@ void SetTransparency(BYTE nTransparency);
  Appelez cette fonction pour définir le niveau de transparence de la fenêtre contextuelle.  
   
 ##  <a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetDialogSize();

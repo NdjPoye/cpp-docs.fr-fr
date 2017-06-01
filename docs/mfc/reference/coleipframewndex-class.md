@@ -87,7 +87,8 @@ ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx (classe)
-La classe `COleIPFrameWndEx` implémente un conteneur OLE qui prend en charge MFC. Vous devez dériver la classe de fenêtre frame en place pour votre application à partir de la `COleIPFrameWndEx` (classe), au lieu de dériver de la [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)classe.  
+La classe `COleIPFrameWndEx` implémente un conteneur OLE qui prend en charge MFC. Vous devez dériver la classe de fenêtre frame en place pour votre application à partir de la `COleIPFrameWndEx` (classe), au lieu de dériver de la [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)classe. 
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -173,7 +174,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
  **En-tête :** afxoleipframewndex.h  
   
 ##  <a name="adddocksite"></a>COleIPFrameWndEx::AddDockSite  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void AddDockSite();
@@ -182,7 +183,7 @@ void AddDockSite();
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="addpane"></a>COleIPFrameWndEx::AddPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL AddPane(
@@ -199,7 +200,7 @@ BOOL AddPane(
 ### <a name="remarks"></a>Remarques  
   
 ##  <a name="adjustdockinglayout"></a>COleIPFrameWndEx::AdjustDockingLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
@@ -211,7 +212,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ### <a name="remarks"></a>Remarques  
   
 ##  <a name="dockpane"></a>COleIPFrameWndEx::DockPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void DockPane(
@@ -250,7 +251,7 @@ BOOL DockPaneLeftOf(
  Appelez cette méthode pour ancrer plusieurs objets du volet dans un ordre prédéfini. Cette méthode est ancré le volet spécifié par `pBar` à gauche du volet spécifié par `pLeftOf`.  
   
 ##  <a name="enableautohidepanes"></a>COleIPFrameWndEx::EnableAutoHidePanes  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
@@ -264,7 +265,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ### <a name="remarks"></a>Remarques  
   
 ##  <a name="enabledocking"></a>COleIPFrameWndEx::EnableDocking  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL EnableDocking(DWORD dwDockStyle);
@@ -278,7 +279,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ### <a name="remarks"></a>Remarques  
   
 ##  <a name="enablepanemenu"></a>COleIPFrameWndEx::EnablePaneMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnablePaneMenu(
@@ -314,7 +315,7 @@ CMFCPopupMenu* GetActivePopup() const;
  Utilisez cette méthode pour obtenir un pointeur vers le [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md) objet actuellement affiché.  
   
 ##  <a name="getcontainerframewindow"></a>COleIPFrameWndEx::GetContainerFrameWindow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 COleCntrFrameWndEx* GetContainerFrameWindow();
@@ -338,7 +339,7 @@ UINT GetDefaultResId() const;
  Appel de cette fonction pour récupérer l’ID de ressource qui a été spécifié lorsque la fenêtre frame chargé la ressource de menu en appelant `COleIPFrameWndEx::LoadFrame`.  
   
 ##  <a name="getdockframe"></a>COleIPFrameWndEx::GetDockFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CFrameWnd* GetDockFrame();
@@ -349,7 +350,7 @@ CFrameWnd* GetDockFrame();
 ### <a name="remarks"></a>Remarques  
   
 ##  <a name="getdockingmanager"></a>COleIPFrameWndEx::GetDockingManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CDockingManager* GetDockingManager();
@@ -360,7 +361,7 @@ CDockingManager* GetDockingManager();
 ### <a name="remarks"></a>Remarques  
   
 ##  <a name="getmainframe"></a>COleIPFrameWndEx::GetMainFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CFrameWnd* GetMainFrame();
@@ -384,7 +385,7 @@ const CMFCMenuBar* GetMenuBar() const;
  Cette fonction permet de récupérer un pointeur vers l’objet de barre de menus auquel appartient le `COleIPFrameWndEx` objet.  
   
 ##  <a name="getpane"></a>COleIPFrameWndEx::GetPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CBasePane* GetPane(UINT nID);
@@ -456,7 +457,7 @@ void InitUserToolbars(
  Utilisez cette fonction pour initialiser une plage d’ID de contrôle pour l’attribution aux barres d’outils que les utilisateurs définir dynamiquement. Les paramètres `uiUserToolbarFirst` et `uiUserToolbarLast` définissent une plage d’ID de contrôle de barre d’outils autorisées. Pour désactiver la création de barres d’outils de défini par l’utilisateur, définissez `uiUserToolbarFirst` ou `uiUserToolbarLast` -1.  
   
 ##  <a name="insertpane"></a>COleIPFrameWndEx::InsertPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL InsertPane(
@@ -488,7 +489,7 @@ BOOL IsMenuBarAvailable() const;
  Appelez cette méthode pour déterminer si la fenêtre frame gère non `NULL` pointeur à son objet de barre de menus.  
   
 ##  <a name="ispointneardocksite"></a>COleIPFrameWndEx::IsPointNearDockSite  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsPointNearDockSite(
@@ -507,7 +508,7 @@ BOOL IsPointNearDockSite(
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="loadframe"></a>COleIPFrameWndEx::LoadFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL LoadFrame(
@@ -528,7 +529,7 @@ virtual BOOL LoadFrame(
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="onclosedockingpane"></a>COleIPFrameWndEx::OnCloseDockingPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnCloseDockingPane(CDockablePane*);
@@ -542,7 +543,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 ### <a name="remarks"></a>Remarques  
   
 ##  <a name="oncloseminiframe"></a>COleIPFrameWndEx::OnCloseMiniFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
@@ -570,7 +571,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
  Substituez cette méthode pour recevoir des notifications à partir de `CMFCPopupMenu` lorsqu’ils traitent les objets `WM_DESTROY` messages.  
   
 ##  <a name="oncmdmsg"></a>COleIPFrameWndEx::OnCmdMsg  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnCmdMsg(
@@ -662,7 +663,7 @@ virtual BOOL OnMenuButtonToolHitTest(
  Substituez cette méthode pour fournir des informations d’info-bulle sur un élément de menu spécifique.  
   
 ##  <a name="onmoveminiframe"></a>COleIPFrameWndEx::OnMoveMiniFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
@@ -676,7 +677,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ### <a name="remarks"></a>Remarques  
   
 ##  <a name="onsetpreviewmode"></a>COleIPFrameWndEx::OnSetPreviewMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnSetPreviewMode(
@@ -691,7 +692,7 @@ virtual void OnSetPreviewMode(
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="onshowcustomizepane"></a>COleIPFrameWndEx::OnShowCustomizePane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnShowCustomizePane(
@@ -708,7 +709,7 @@ virtual BOOL OnShowCustomizePane(
 ### <a name="remarks"></a>Notes  
   
 ##  <a name="onshowpanes"></a>COleIPFrameWndEx::OnShowPanes  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnShowPanes(BOOL bShow);
@@ -761,7 +762,7 @@ virtual BOOL OnTearOffMenu(
  Remplacez cette fonction si vous souhaitez personnaliser l’installation de la barre à détacher.  
   
 ##  <a name="panefrompoint"></a>COleIPFrameWndEx::PaneFromPoint  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CBasePane* PaneFromPoint(
@@ -789,7 +790,7 @@ CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>Remarques  
   
 ##  <a name="pretranslatemessage"></a>COleIPFrameWndEx::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -803,7 +804,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="remarks"></a>Remarques  
   
 ##  <a name="recalclayout"></a>COleIPFrameWndEx::RecalcLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -815,7 +816,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>Remarques  
   
 ##  <a name="removepanefromdockmanager"></a>COleIPFrameWndEx::RemovePaneFromDockManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void RemovePaneFromDockManager(
@@ -872,7 +873,7 @@ void SetupToolbarMenu(
 ### <a name="remarks"></a>Remarques  
   
 ##  <a name="showpane"></a>COleIPFrameWndEx::ShowPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void ShowPane(
