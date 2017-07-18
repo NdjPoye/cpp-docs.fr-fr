@@ -66,7 +66,7 @@ Les chaînes de pays et de région peuvent être combinés avec une chaîne de l
 |south-africa|ZAF|af-ZA|  
 |south-korea|KOR|ko-KR|  
 |trinidad & tobago|TTO|en-TT|  
-|uk|GBR|en-GB|  
+|R.-U.|GBR|en-GB|  
 |united-kingdom|GBR|en-GB|  
 |united-states|USA|fr-FR|  
 |us|USA|fr-FR|  
