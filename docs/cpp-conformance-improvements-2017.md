@@ -1,7 +1,7 @@
 ---
 title: "Améliorations de la conformité du compilateur C++ | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 06/05/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -9,8 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: BrianPeek
-ms.author: brpeek
+author: mikeblome
+ms.author: mblome
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -27,10 +27,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ee7e4f3e09f5b1512182d17fda9033a45ad4aa5b
-ms.openlocfilehash: c4bfe76d3b57962fe10df1d55f6ec5b58f70a38a
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: d00951204a358ec064f69035b7dd6ac5adc08ed9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 06/08/2017
 
 ---
    
@@ -143,7 +143,7 @@ int main()
 ```
 
 ### <a name="constexpr"></a>constexpr
-Visual Studio 2017 génère correctement une erreur quand l’opérande de gauche d’une opération à évaluation conditionnelle n’est pas valide dans un contexte constexpr. Le code suivant se compile dans Visual Studio 2015, mais pas dans Visual Studio 2017 :
+Visual Studio 2017 génère correctement une erreur quand l’opérande de gauche d’une opération à évaluation conditionnelle n’est pas valide dans un contexte constexpr. Le code suivant compile dans Visual Studio 2015, mais pas dans Visual Studio 2017 (C3615, la fonction constexpr 'f' ne peut pas produire une expression constante) :
 
 ```cpp  
 template<int N>
@@ -154,7 +154,7 @@ struct array
 
 constexpr bool f(const array<1> &arr)
 {
-       return arr.size() == 10 || arr.size() == 11; // error starting in Visual Studio 2017
+       return arr.size() == 10 || arr.size() == 11; // C3615    
 }
 ```
 Pour corriger cette erreur, déclarez la fonction array::size() en tant que constexpr ou supprimez le qualificateur constexpr de f. 
@@ -355,12 +355,12 @@ Dans les versions précédentes de Visual Studio, le compilateur ne parvenait pa
 ```cpp
 template<typename T> 
 struct S { 
-template<typename U> static int f() = delete; 
+   template<typename U> static int f() = delete; 
 }; 
  
 void g() 
 { 
-decltype(S<int>::f<int>()) i; // this should fail 
+   decltype(S<int>::f<int>()) i; // this should fail 
 }
 ```
 Pour corriger cette erreur, déclarez i comme `int`.
@@ -372,8 +372,8 @@ La version de mise à jour 15.3 de Visual Studio 2017 améliore les vérificat
 struct S; 
 enum E; 
  
-static_assert(!__is_assignable(S, S), "fail"); // this is allowed in VS2017 RTM, but should fail 
-static_assert(__is_convertible_to(E, E), "fail"); // this is allowed in VS2017 RTM, but should fail
+static_assert(!__is_assignable(S, S), "fail"); // C2139 in 15.3
+static_assert(__is_convertible_to(E, E), "fail"); // C2139 in 15.3
 ```
 
 ### <a name="new-compiler-warning-and-runtime-checks-on-native-to-managed-marshaling"></a>Nouvel avertissement du compilateur et nouvelles vérifications à l’exécution sur du marshaling de fonctions natives à managées
@@ -384,16 +384,16 @@ Désormais, le compilateur émet un avertissement s’il peut savoir au moment d
 class A 
 { 
 public: 
-A() : p_(new int) {} 
-~A() { delete p_; } 
+   A() : p_(new int) {} 
+   ~A() { delete p_; } 
  
-A(A const &) = delete; 
-A(A &&rhs) { 
-p_ = rhs.p_; 
+   A(A const &) = delete; 
+   A(A &&rhs) { 
+   p_ = rhs.p_; 
 } 
  
 private: 
-int *p_; 
+   int *p_; 
 }; 
  
 #pragma unmanaged 
@@ -415,7 +415,7 @@ Pour corriger cette erreur, supprimez la directive `#pragma managed` pour marque
 Les API WinRT publiées pour l’expérimentation et les commentaires sont décorées avec `Windows.Foundation.Metadata.ExperimentalAttribute`. Dans la version de mise à jour 15.3, le compilateur génère l’avertissement C4698 quand il rencontre l’attribut. Certaines API dans les versions précédentes du SDK Windows ont déjà été décorées avec l’attribut et les appels à ces API déclenchent cet avertissement du compilateur. L’attribut est supprimé de tous les types fournis dans les SDK Windows plus récents mais, si vous utilisez un SDK plus ancien, vous devez supprimer ces avertissements pour tous les appels aux types fournis.
 Le code suivant génère l’avertissement C4698 : « 'Windows::Storage::IApplicationDataStatics2::GetForUserAsync' est utilisé à des fins d’évaluation uniquement. Il sera peut-être changé ou supprimé au cours des prochaines mises à jour. » :
 ```cpp
-Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
+Windows::Storage::IApplicationDataStatics2::GetForUserAsync() //C4698
 ```
 
 Pour désactiver l’avertissement, ajoutez un #pragma :
@@ -435,7 +435,7 @@ La version de mise à jour 15.3 génère une erreur quand elle rencontre une d�
 struct S {}; 
  
 template <typename T> 
-void S::f(T t) {}
+void S::f(T t) {} //C2039: 'f': is not a member of 'S'
 ```
 
 Pour corriger cette erreur, ajoutez une déclaration à la classe :
@@ -460,7 +460,7 @@ La version de mise à jour 15.3 génère une erreur quand vous essayez de conve
 #include <memory> 
  
 class B { }; 
-class D : B { }; // should be public B { }; 
+class D : B { }; // C2243. should be public B { }; 
  
 void f() 
 { 
@@ -477,7 +477,7 @@ struct A {
 }; 
  
 template <typename T> 
-T A<T>::f(T t, bool b = false) 
+T A<T>::f(T t, bool b = false) // C5034
 { 
 ... 
 }
@@ -527,7 +527,7 @@ Dans la version de mise à jour 15.3, le compilateur n’ignore plus les attrib
 
 ```cpp
  
-__declspec(noinline) extern "C" HRESULT __stdcall
+__declspec(noinline) extern "C" HRESULT __stdcall //C4768
 ```
 
 Pour corriger l’avertissement, placez 'C' externe en premier :
@@ -535,6 +535,7 @@ Pour corriger l’avertissement, placez 'C' externe en premier :
 ```cpp
 extern "C" __declspec(noinline) HRESULT __stdcall
 ```
+Cet avertissement est désactivé par défaut et impacte uniquement le code compilé avec `/Wall /WX`.
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype et appels à des destructeurs supprimés
 Dans les versions précédentes de Visual Studio, le compilateur ne détectait pas quand un appel à un destructeur supprimé se produisait dans le contexte de l’expression associée à « decltype ». Dans la version de mise à jour 15.3, le code suivant génère « erreur C2280 : 'A<T>::~A(void)' : tentative de référencement d’une fonction supprimée » :
@@ -557,11 +558,11 @@ void h()
    g(42); 
 }
 ```
-### <a name="unitialized-const-variables"></a>Variables const non initialisées
+### <a name="uninitialized-const-variables"></a>Variables const non initialisées
 La version Visual Studio 2017 RTW avait une régression dans laquelle le compilateur C++ n’émettait pas de diagnostic si une variable 'const' n’était pas initialisée. Cette régression a été corrigée dans Visual Studio 2017 Update 1. Le code suivant génère désormais « avertissement C4132 : 'Value' : un objet const doit être initialisé » :
 
 ```cpp
-const int Value;
+const int Value; //C4132
 ```
 Pour corriger cette erreur, attribuez une valeur à `Value`.
 
@@ -583,6 +584,108 @@ Pour supprimer les avertissements, il vous suffit de commenter ou de supprimer l
  
 L’avertissement est exclu sous /Wv:18 et est activé par défaut sous le niveau d’avertissement W2.
 
+
+### <a name="stdisconvertible-for-array-types"></a>std::is_convertible pour les types tableau
+Les versions précédentes du compilateur ont donné des résultats incorrects avec [std::is_convertible](standard-library/is-convertible-class.md) pour les types tableau. Cela obligeait les auteurs de bibliothèques à particulariser le compilateur Visual C++ lors de l’utilisation du trait de type `std::is_convertable<…>`. Dans l’exemple suivant, les assertions statiques passent dans les versions antérieures de Visual Studio, mais échouent dans Visual Studio 2017 Update version 15.3 :
+
+```cpp
+#include <type_traits>
+ 
+using Array = char[1];
+ 
+static_assert(std::is_convertible<Array, Array>::value);
+static_assert((std::is_convertible<const Array, const Array>::value), "");
+static_assert((std::is_convertible<Array&, Array>::value), "");
+static_assert((std::is_convertible<Array, Array&>::value), "");
+```
+
+Le calcul de **std::is_convertible<From, To>** s’effectue en vérifiant si une définition de fonction imaginaire est correcte :
+```cpp 
+   To test() { return std::declval<From>(); }
+``` 
+
+### <a name="private-destructors-and-stdisconstructible"></a>Les destructeurs privés et std::is_constructible
+Les versions précédentes du compilateur ignorent si un destructeur est privé lors de la détermination du résultat de [std::is_constructible](standard-library/is-constructible-class.md). Il en tient compte désormais. Dans l’exemple suivant, les assertions statiques passent dans les versions antérieures de Visual Studio, mais échouent dans Visual Studio 2017 Update version 15.3 :
+
+```cpp
+#include <type_traits>
+ 
+class PrivateDtor {
+   PrivateDtor(int) { }
+private:
+   ~PrivateDtor() { }
+};
+ 
+// This assertion used to succeed. It now correctly fails.
+static_assert(std::is_constructible<PrivateDtor, int>::value);
+```  
+
+Les destructeurs privés entraînent la non-constructibilité d’un type. Le calcul de **std::is_constructible<T, Args...>** est effectué comme si la déclaration suivante était écrite :
+```cpp 
+   T obj(std::declval<Args>()…)
+``` 
+Cet appel implique un appel de destructeur.
+
+### <a name="c2668-ambiguous-overload-resolution"></a>C2668 : Résolution de surcharge ambiguë
+Parfois, les versions précédentes du compilateur ne parvenaient pas à détecter une ambiguïté lors de la découverte de plusieurs candidats par le biais simultanément des déclarations et des recherches dépendantes d’arguments. Cela pouvait conduire à choisir une surcharge incorrecte et entraîner un comportement inattendu au moment de l’exécution. Dans l’exemple suivant, Visual Studio 2017 Update version 15.3 déclenche correctement C2668, 'f' : appel ambigu à une fonction surchargée :
+
+```cpp
+namespace N {
+   template<class T>
+   void f(T&, T&);
+ 
+   template<class T>
+   void f();
+}
+ 
+template<class T>
+void f(T&, T&);
+ 
+struct S {};
+void f()
+{
+   using N::f; 
+ 
+   S s1, s2;
+   f(s1, s2); // C2668
+}
+```
+Pour corriger le code, supprimez l’instruction using N::f si vous souhaitez appeler :: f().
+
+### <a name="c2660-local-function-declarations-and-argument-dependent-lookup"></a>C2660 : Déclarations de fonction locale et recherche dépendante d’argument
+Les déclarations de fonction locale masquent la déclaration de fonction dans la portée englobante et désactivent la recherche dépendante d’argument.
+Pourtant, les versions précédentes du compilateur Visual C++ effectuaient une recherche dépendante d’argument dans ce cas, conduisant éventuellement à choisir une surcharge incorrecte et entraînant un comportement inattendu au moment de l’exécution. En règle générale, l’erreur est due à une signature incorrecte de la déclaration de fonction locale. Dans l’exemple suivant, Visual Studio 2017 Update version 15.3 déclenche correctement C2660, 'f' : la fonction n’accepte pas 2 arguments :
+
+```cpp
+struct S {}; 
+void f(S, int);
+ 
+void g()
+{
+   void f(S); // C2660 'f': function does not take 2 arguments:
+   // or void f(S, int);
+   S s;
+   f(s, 0);
+}
+```
+
+Pour résoudre le problème, changez la signature **f(S)** ou supprimez-la.
+
+### <a name="c5038-order-of-initialization-in-initializer-lists"></a>C5038 : Ordre d’initialisation dans les listes d’initialiseurs
+Les membres de classe sont initialisés dans l’ordre suivant lequel ils sont déclarés, et non selon celui de leur apparition dans les listes d’initialiseurs. Les versions précédentes du compilateur n’avertissaient pas lorsque l’ordre de la liste d’initialiseurs était différent de celui des déclarations. Cela pouvait aboutir à un comportement d’exécution non défini si l’initialisation d’un membre dépendait d’un autre membre dans la liste déjà en cours d’initialisation. Dans l’exemple suivant, Visual Studio 2017 Update version 15.3 (avec /Wall ou/WX) génère l’avertissement C5038 : le membre de données 'A::y' sera initialisé après le membre de données 'A::x' :
+
+```cpp
+struct A
+{
+    A(int a) : y(a), x(y) {} // Initialized in reverse, y reused
+    int x;
+    int y;
+};
+
+```
+Pour résoudre le problème, réorganisez la liste d’initialiseurs afin d’avoir le même ordre que dans les déclarations. Un avertissement similaire est déclenché lorsqu’un ou les deux initialiseurs se réfèrent aux membres de classe de base.
+
+Notez que l’avertissement est désactivé par défaut et affecte uniquement le code compilé avec /Wall ou /WX.
 
 ## <a name="see-also"></a>Voir aussi  
 [Conformité du langage Visual C++](visual-cpp-language-conformance.md)  
