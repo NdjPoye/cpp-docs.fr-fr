@@ -1,4 +1,4 @@
-## <a name="microsoft-open-source-code-of-conduct"></a>Code de conduite open source de Microsoft
+ ## <a name="microsoft-open-source-code-of-conduct"></a>Code de conduite open source de Microsoft
 
 Ce projet a adopté le [Code de conduite open source de Microsoft](https://opensource.microsoft.com/codeofconduct/).
 Pour plus d’informations, consultez la [FAQ sur le code de conduite](https://opensource.microsoft.com/codeofconduct/faq/) ou envoyez vos questions ou commentaires à [opencode@microsoft.com](mailto:opencode@microsoft.com).
@@ -7,7 +7,9 @@ Pour plus d’informations, consultez la [FAQ sur le code de conduite](https://o
 
 Bienvenue ! Ce dépôt contient des fichiers sources associés à la documentation technique de Visual C++ en cours d’élaboration. Les rubriques sont publiées sur le [site de la documentation de Visual C++](https://docs.microsoft.com/cpp).
 
-La documentation de Visual Basic et Visual C# se trouve dans un dépôt distinct situé à l’adresse [http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs) et la documentation de Visual Studio se trouve dans le dépôt situé à l’adresse [http://github.com/Microsoft/visualstudio-docs](http://github.com/Microsoft/visualstudio-docs).
+Ce dépôt a été déplacé de Microsoft/vcppdocs vers MicrosoftDocs/cpp-docs-pr le 23 juin 2017.
+
+La documentation de Visual Basic et Visual C# se trouve dans un dépôt distinct situé à l’adresse [http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs), tandis que celle de Visual Studio 2017 se trouve dans le dépôt situé à l’adresse [http://github.com/Microsoft/visualstudio-docs](http://github.com/Microsoft/visualstudio-docs).
 
 ## <a name="contributing-to-the-documentation"></a>Contribution à la documentation
 

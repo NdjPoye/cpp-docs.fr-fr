@@ -30,17 +30,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: b118e825ef61d826049a1452ee4275951c0ca440
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="porting-guide-spy"></a>Guide du portage : Spy++
 Cette étude de cas de portage vise à vous donner une idée de ce qu'est un projet de portage classique et des types de problèmes que vous êtes susceptible de rencontrer. Elle fournit également quelques conseils et astuces généraux qui vous aideront à résoudre certains problèmes liés au portage. Elle n'est pas destinée à être un guide du portage exhaustif, car le déroulement du portage d'un projet dépend beaucoup des spécificités du code.  
   
 ## <a name="spy"></a>Spy++  
- Spy++ est un outil de diagnostic GUI couramment utilisé qui fournit diverses informations sur les éléments d'interface utilisateur du Bureau Windows. Il montre la structure hiérarchique complète des fenêtres, et permet d'accéder aux métadonnées de chaque fenêtre et contrôle. Cette application utile est fournie avec Visual Studio depuis de nombreuses années. Nous avons trouvé une ancienne version de cette application qui avait été compilée dans Visual C++ 6.0 et portée vers [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]. L’expérience pour Visual Studio 2017 doit être presque identique.
+ Spy++ est un outil de diagnostic GUI couramment utilisé qui fournit diverses informations sur les éléments d'interface utilisateur du Bureau Windows. Il montre la structure hiérarchique complète des fenêtres, et permet d'accéder aux métadonnées de chaque fenêtre et contrôle. Cette application utile est fournie avec Visual Studio depuis de nombreuses années. Nous avons trouvé une ancienne version de cette application qui avait été compilée dans Visual C++ 6.0 et portée vers Visual Studio 2015. L’expérience pour Visual Studio 2017 doit être presque identique.
   
  Cette étude de cas nous semble représentative des scénarios de portage des applications de bureau Windows qui utilisent MFC et l’API Win32, en particulier pour les anciens projets qui n’ont pas été mis à jour avec chaque mise en production de Visual C++ depuis Visual C++ 6.0.  
   
@@ -84,7 +84,7 @@ warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not m
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h(40): fatal error C1189: #error:  MFC does not support WINVER less than 0x0501.  Please change the definition of WINVER in your project properties or precompiled header.  
 ```  
   
- Microsoft n'assure plus le support de Windows XP. Le ciblage de cette version est autorisé dans [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)], mais nous vous recommandons d'abandonner progressivement la prise en charge de cette version cible dans vos applications et d'inciter les utilisateurs à installer les nouvelles versions de Windows.  
+ Microsoft n’assure plus le support de Windows XP. Le ciblage de cette version est autorisé dans Visual Studio 2015, mais nous vous recommandons d’abandonner progressivement la prise en charge de cette version cible dans vos applications, et d’inciter les utilisateurs à installer les nouvelles versions de Windows.  
   
  Pour résoudre cette erreur, définissez WINVER en mettant à jour le paramètre **Propriétés du projet** vers la plus ancienne version de Windows que vous voulez cibler. Pour obtenir un tableau des valeurs correspondant aux différentes versions de Windows, cliquez [ici](http://msdn.microsoft.com/library/windows/desktop/aa383745.aspx).  
   
@@ -317,7 +317,7 @@ afx_msg UINT OnNcHitTest(CPoint point);
 afx_msg LRESULT OnNcHitTest(CPoint point);  
 ```  
   
- Étant donné qu’il y a environ&10; occurrences de cette fonction dans les différentes classes dérivées de CWnd, le plus rapide est d’utiliser les commandes **Atteindre la définition** (raccourci clavier : F12) et **Atteindre la déclaration** (raccourci clavier : Ctrl+F12) quand le curseur est placé sur la fonction dans l’éditeur. Cela permet de localiser ces occurrences et d’y accéder à partir de la fenêtre Outil **Rechercher un symbole**. La commande **Atteindre la définition** est généralement la plus pratique des deux. La commande **Atteindre la déclaration** permet de trouver les déclarations autres que la déclaration de la classe de définition, par exemple les déclarations de classe Friend ou les références anticipées.  
+ Étant donné qu’il y a environ 10 occurrences de cette fonction dans les différentes classes dérivées de CWnd, le plus rapide est d’utiliser les commandes **Atteindre la définition** (raccourci clavier : F12) et **Atteindre la déclaration** (raccourci clavier : Ctrl+F12) quand le curseur est placé sur la fonction dans l’éditeur. Cela permet de localiser ces occurrences et d’y accéder à partir de la fenêtre Outil **Rechercher un symbole**. La commande **Atteindre la définition** est généralement la plus pratique des deux. La commande **Atteindre la déclaration** permet de trouver les déclarations autres que la déclaration de la classe de définition, par exemple les déclarations de classe Friend ou les références anticipées.  
   
 ##  <a name="mfc_changes"></a> Étape 9. Modifications MFC  
  L'erreur suivante est également liée à un type de déclaration qui a changé et se produit aussi dans une macro.  
