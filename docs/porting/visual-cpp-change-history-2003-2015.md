@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ef479e2818cb9226830cc34f3fe9f8e59202e89
-ms.openlocfilehash: bb69ad913af2fd4777c5b4e64bde0758beb73822
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 482b404293cc1eea9879b09de52fb277cc1bd2a0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/28/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historique des modifications de Visual C++ entre 2003 et 2015
@@ -109,7 +109,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
 -   **new et delete** Dans les versions antérieures de la bibliothèque, les fonctions opérateur new et delete définies par l'implémentation étaient exportées à partir de la DLL de la bibliothèque runtime (par exemple, msvcr120.dll). Ces fonctions opérateur sont à présent toujours liées statiquement dans vos fichiers binaires, même si vous utilisez les DLL de la bibliothèque runtime.  
   
-     Il ne s’agit pas d’une modification avec rupture pour du code natif ou mixte (/clr). Toutefois, pour du code compilé en tant que [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), cette modification peut entraîner l’échec de la compilation de votre code. Si vous compilez du code en tant que /clr:pure, vous devrez peut-être ajouter #include \<new> ou #include \<new.h> pour contourner les erreurs de génération en raison de cette modification. Notez que /clr:pure est déprécié dans [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] et sera peut-être supprimé dans les versions futures.  
+     Il ne s’agit pas d’une modification avec rupture pour du code natif ou mixte (/clr). Toutefois, pour du code compilé en tant que [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), cette modification peut entraîner l’échec de la compilation de votre code. Si vous compilez du code en tant que /clr:pure, vous devrez peut-être ajouter #include \<new> ou #include \<new.h> pour contourner les erreurs de génération en raison de cette modification. Notez que /clr:pure est déprécié dans Visual Studio 2015 et qu’il sera peut-être supprimé dans les versions futures.  
   
 #### <a name="processh"></a>\<process.h>  
   
@@ -260,7 +260,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
 ####  <a name="BK_STL"></a> Bibliothèque C++ standard  
  Pour activer les nouvelles optimisations et vérifications de débogage, l'implémentation Visual Studio de la bibliothèque C++ standard interrompt intentionnellement la compatibilité binaire d'une version à la suivante. Par conséquent, lorsque la bibliothèque C++ standard est utilisée, les fichiers objets et les bibliothèques statiques qui sont compilés à l'aide de différentes versions ne peuvent pas être combinés en un seul binaire (EXE ou DLL), et les objets de la bibliothèque C++ standard ne peuvent pas être transmis entre des binaires compilés à l'aide de différentes versions. Une telle combinaison entraîne des erreurs de l'éditeur de liens concernant des incompatibilités _MSC_VER. (_MSC_VER est la macro contenant la version majeure du compilateur. Par exemple, 1800 pour Visual Studio 2013.) Cette vérification ne peut pas détecter les combinaisons de DLL et ne peut pas détecter les combinaisons impliquant Visual C++ 2008 ou version antérieure.  
   
--   **Fichiers Include de la bibliothèque C++ standard** Certaines modifications ont été apportées à la structure Include dans les en-têtes de la bibliothèque C++ standard. Les en-têtes de la bibliothèque C++ standard sont autorisés à s’inclure mutuellement de façons non spécifiées. En général, vous devez écrire votre code afin qu’il inclue soigneusement tous les en-têtes dont il a besoin conformément à la norme C++ et ne s’appuie pas sur quels en-têtes de la bibliothèque C++ standard incluent quels autres en-têtes de la bibliothèque C++ standard. Cela rend le code portable entre les versions et les plateformes. Au moins deux modifications d'en-tête dans [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] affectent le code utilisateur. Tout d’abord, \<string> n’inclut plus \<iterator>. Deuxièmement, \<tuple> déclare maintenant std::array sans inclure tous les \<array>, ce qui peut endommager le code via la combinaison suivante de constructions de code : votre code possède une variable nommée « array », vous avez une directive using « using namespace std; » et vous incluez un en-tête de la bibliothèque C++ standard (tel que \<functional>) qui inclut \<tuple>, qui déclare maintenant std::array.  
+-   **Fichiers Include de la bibliothèque C++ standard** Certaines modifications ont été apportées à la structure Include dans les en-têtes de la bibliothèque C++ standard. Les en-têtes de la bibliothèque C++ standard sont autorisés à s’inclure mutuellement de façons non spécifiées. En général, vous devez écrire votre code afin qu’il inclue soigneusement tous les en-têtes dont il a besoin conformément à la norme C++ et ne s’appuie pas sur quels en-têtes de la bibliothèque C++ standard incluent quels autres en-têtes de la bibliothèque C++ standard. Cela rend le code portable entre les versions et les plateformes. Au moins deux changements d’en-tête dans Visual Studio 2015 affectent le code utilisateur. Tout d’abord, \<string> n’inclut plus \<iterator>. Deuxièmement, \<tuple> déclare maintenant std::array sans inclure tous les \<array>, ce qui peut endommager le code via la combinaison suivante de constructions de code : votre code possède une variable nommée « array », vous avez une directive using « using namespace std; » et vous incluez un en-tête de la bibliothèque C++ standard (tel que \<functional>) qui inclut \<tuple>, qui déclare maintenant std::array.  
   
 -   **steady_clock** L’implémentation \<chrono> de [steady_clock](../standard-library/steady-clock-struct.md) a changé pour satisfaire les exigences de la norme C++ en matière de stabilité et d’unitonicité. steady_clock est désormais basé sur [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) , et high_resolution_clock est désormais un typedef pour steady_clock. Par conséquent, dans Visual C++, steady_clock::time_point est désormais un typedef pour chrono::time_point<steady_clock>. Toutefois, cela n'est pas nécessairement le cas pour d'autres implémentations.  
   
@@ -280,7 +280,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
 -   **std::allocator::deallocate** Dans Visual C++ 2013 et les versions antérieures, std::allocator::deallocate(p, n) ignorait l'argument passé pour n.  La norme C++ a toujours nécessité que n soit égal à la valeur passée comme premier argument à l'appel d'allocate qui retournait p. Toutefois, dans la version actuelle, la valeur de n est inspectée. Un code qui transmet des arguments pour n qui diffèrent de ce que la norme requiert peut se bloquer lors de l'exécution.  
   
--   **hash_map et hash_set** Les fichiers d’en-tête non standard hash_map et hash_set sont dépréciés dans [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] et seront supprimés dans une mise en production ultérieure. Utilisez unordered_map et unordered_set à la place.  
+-   **hash_map et hash_set** Les fichiers d’en-tête non standard hash_map et hash_set sont dépréciés dans Visual Studio 2015 et seront supprimés dans une version ultérieure. Utilisez unordered_map et unordered_set à la place.  
   
 -   **comparateurs et operator()** Les conteneurs associatifs (famille \<map>) exigent que leurs comparateurs possèdent des opérateurs d’appel de fonction pouvant être appelée par const. À présent, la compilation du code suivant dans une déclaration de classe de comparateur échoue :  
   
@@ -294,7 +294,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
     bool operator()(const X& a, const X& b) const  
     ```  
   
--   **caractéristiques de type** The old names for caractéristiques de type from an earlier version of the C++ draft standard have been removed. Ils ont été modifiés dans C++11 et ont été mis à jour pour donner les valeurs C++11 dans [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]. Le tableau ci-dessous répertorie les anciens noms et les nouveaux.  
+-   **caractéristiques de type** Les anciens noms de caractéristiques de type d’une version précédente du projet de norme C++ ont été supprimés. Ils ont été modifiés dans C++11 et ont été mis à jour selon les valeurs C++11 dans Visual Studio 2015. Le tableau ci-dessous répertorie les anciens noms et les nouveaux.  
   
     |Ancien nom|Nouveau nom|  
     |--------------|--------------|  
@@ -318,7 +318,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
     |has_trivial_move_assign|is_trivially_move_assignable|  
     |has_trivial_destructor|is_trivially_destructible|  
   
--   **stratégies launch::any et launch::sync** The nonstandard stratégies launch::any et launch::sync were removed. À la place, pour launch::any, utilisez launch:async &#124; launch:deferred. Pour launch::sync, utilisez launch::deferred. Consultez [launch, énumération](../standard-library/future-enums.md#launch).  
+-   **stratégies launch::any et launch::sync** Les stratégies non standard launch::any et launch::sync ont été supprimées. À la place, pour launch::any, utilisez launch:async &#124; launch:deferred. Pour launch::sync, utilisez launch::deferred. Consultez [launch, énumération](../standard-library/future-enums.md#launch).  
   
 ####  <a name="BK_MFC"></a> MFC et ATL  
   
@@ -864,7 +864,7 @@ Lorsque vous effectuez une mise à niveau vers une nouvelle version du compilate
   
 -   **Constructeurs de copie**  
   
-     Dans [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] et [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)], le compilateur génère un constructeur de copie pour une classe si cette classe possède un constructeur de déplacement défini par l’utilisateur mais aucun constructeur de copie défini par l’utilisateur. Dans Dev14, ce constructeur de copie généré implicitement est également marqué « = delete ».  
+     Dans [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] et Visual Studio 2015, le compilateur génère un constructeur de copie pour une classe si celle-ci a un constructeur de déplacement défini par l’utilisateur, mais aucun constructeur de copie personnalisé. Dans Dev14, ce constructeur de copie généré implicitement est également marqué « = delete ».  
 
 <!--From here to VS_Update1 added 04/21/2017-->
 
