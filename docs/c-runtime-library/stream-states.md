@@ -1,54 +1,71 @@
 ---
-title: "&#201;tats de flux | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "flux, états"
+title: "États des flux | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# &#201;tats de flux
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: f2d1b9a6f4a25423f5e3f418604a8f05e83e1b31
+ms.contentlocale: fr-fr
+ms.lasthandoff: 07/14/2017
 
-Les états valides, et les transitions d'état, pour un flux de données sont affichés dans l'illustration suivante.  
+---
+# <a name="stream-states"></a>États de flux
+Les états valides et les transitions d’état d’un flux de données sont indiqués dans l’illustration suivante.  
   
- ![Flux de données](../c-runtime-library/media/stream.png "stream")  
+ ![Flux](../c-runtime-library/media/stream.gif "flux")  
   
- Chacun des cercles indique un état stable.  Chaque ligne indique une transition qui peut se produire suite à un appel de fonction qui traite le flux de données.  Cinq groupes de fonctions peuvent provoquer des transitions d'état.  
+ Chaque cercle indique un état stable. Chacune des lignes dénote une transition qui peut se produire à la suite d’un appel de fonction opérant sur le flux de données. Cinq groupes de fonctions peuvent entraîner des transitions d’état.  
   
- Les fonctions dans les trois premiers groupes sont déclarées dans \<stdio.h :\>  
+ Les fonctions des trois premiers groupes sont déclarées dans \<stdio.h> :  
   
--   Les fonctions de lecture d'octet — [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md), [fgets](../c-runtime-library/reference/fgets-fgetws.md), [fread](../c-runtime-library/reference/fread.md), [fscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md), [getc](../c-runtime-library/reference/getc-getwc.md), [getchar](../c-runtime-library/reference/getc-getwc.md), [obtient](../c-runtime-library/gets-getws.md), [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md), et [ungetc](../c-runtime-library/reference/ungetc-ungetwc.md)  
+-   Fonctions de lecture d’octets : [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md), [fgets](../c-runtime-library/reference/fgets-fgetws.md), [fread](../c-runtime-library/reference/fread.md), [fscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md), [getc](../c-runtime-library/reference/getc-getwc.md), [getchar](../c-runtime-library/reference/getc-getwc.md), [gets](../c-runtime-library/gets-getws.md), [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md), et [ungetc](../c-runtime-library/reference/ungetc-ungetwc.md)  
   
--   Les fonctions d'écriture d'octet — [fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md), [fputc](../c-runtime-library/reference/fputc-fputwc.md), [fputs](../c-runtime-library/reference/fputs-fputws.md), [fwrite](../c-runtime-library/reference/fwrite.md), [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md), [putc](../c-runtime-library/reference/putc-putwc.md), [putchar](../c-runtime-library/reference/putc-putwc.md), [met](../c-runtime-library/reference/puts-putws.md), [vfprintf](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md), et [vprintf](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md)  
+-   Fonctions d’écriture d’octets : [fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md), [fputc](../c-runtime-library/reference/fputc-fputwc.md), [fputs](../c-runtime-library/reference/fputs-fputws.md), [fwrite](../c-runtime-library/reference/fwrite.md), [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md), [putc](../c-runtime-library/reference/putc-putwc.md), [putchar](../c-runtime-library/reference/putc-putwc.md), [puts](../c-runtime-library/reference/puts-putws.md), [vfprintf](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md) et [vprintf](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md)  
   
--   Les fonctions de position — [fflush](../c-runtime-library/reference/fflush.md), [fseek](../c-runtime-library/reference/fseek-fseeki64.md), [fsetpos](../c-runtime-library/reference/fsetpos.md), et [rembobinage](../c-runtime-library/reference/rewind.md)  
+-   Fonctions de position : [fflush](../c-runtime-library/reference/fflush.md), [fseek](../c-runtime-library/reference/fseek-fseeki64.md), [fsetpos](../c-runtime-library/reference/fsetpos.md) et [rewind](../c-runtime-library/reference/rewind.md)  
   
- Les fonctions des deux groupes restants sont déclarées dans \<wchar.h :\>  
+ Les fonctions des deux autres groupes sont déclarées dans \<wchar.h> :  
   
--   Les fonctions de lecture large — [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md), [fgetws](../c-runtime-library/reference/fgets-fgetws.md), [fwscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md), [getwc](../c-runtime-library/reference/getc-getwc.md), [getwchar](../c-runtime-library/reference/getc-getwc.md), [ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md), et, [wscanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)  
+-   Fonctions de lecture larges : [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md), [fgetws](../c-runtime-library/reference/fgets-fgetws.md), [fwscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md), [getwc](../c-runtime-library/reference/getc-getwc.md), [getwchar](../c-runtime-library/reference/getc-getwc.md), [ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md), et [wscanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),  
   
--   Les fonctions d'écriture large — [fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md), [fputwc](../c-runtime-library/reference/fputc-fputwc.md), [fputws](../c-runtime-library/reference/fputs-fputws.md), [putwc](../c-runtime-library/reference/putc-putwc.md), [putwchar](../c-runtime-library/reference/fputc-fputwc.md), [vfwprintf](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md), [vwprintf](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md), et, [wprintf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
+-   Fonctions d’écriture larges : [fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md), [fputwc](../c-runtime-library/reference/fputc-fputwc.md), [fputws](../c-runtime-library/reference/fputs-fputws.md), [putwc](../c-runtime-library/reference/putc-putwc.md), [putwchar](../c-runtime-library/reference/fputc-fputwc.md), [vfwprintf](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md), [vwprintf](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md) et [wprintf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),  
   
- Le diagramme d'état indique que vous devez appeler l'une des fonctions de position entre la plupart des opérations de lecture et d'écriture :  
+ Le diagramme d’état indique que vous devez appeler l’une des fonctions de position entre la plupart des opérations d’écriture et de lecture :  
   
--   Vous ne pouvez pas appeler une fonction de lecture si la dernière opération sur le flux est une écriture.  
+-   Vous ne pouvez pas appeler une fonction de lecture si la dernière opération du flux est une opération d’écriture.  
   
--   Vous ne pouvez pas appeler une fonction d'écriture si la dernière opération sur le flux est une lecture, sauf si cette opération de lecture définit l'indicateur de fin de fichier.  
+-   Vous ne pouvez pas appeler une fonction d’écriture si la dernière opération du flux est une opération de lecture, sauf si l’opération de lecture a défini l’indicateur de fin de fichier.  
   
- Enfin, le diagramme d'état indique qu'une opération de position ne diminue jamais le nombre d'appels de fonction valides qui peuvent suivre.  
+ Enfin, le diagramme d’état indique qu’une opération de position ne diminue jamais le nombre d’appels de fonctions valides qui peuvent suivre.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fichiers et flux](../c-runtime-library/files-and-streams.md)
