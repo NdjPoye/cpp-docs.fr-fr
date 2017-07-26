@@ -1,36 +1,52 @@
 ---
-title: "Programme de texte g&#233;n&#233;rique, exemple | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_TCHAR (type)"
-  - "mappages, types de données TCHAR.H"
-  - "exemple de texte générique (CRT)"
-  - "TCHAR (type)"
-  - "TCHAR.H, mappage de types de données"
+title: "Exemple de programme de texte générique | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TCHAR type
+- mappings, TCHAR.H data types
+- generic-text example [CRT]
+- TCHAR type
+- TCHAR.H data types, mapping
 ms.assetid: a03de0db-8118-4bd9-a03f-640e8dfc5ed3
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Programme de texte g&#233;n&#233;rique, exemple
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 0cdc18215fe80c4165ffa03a5d789af0ebc95b40
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-**Section spécifique à Microsoft**  
+---
+# <a name="a-sample-generic-text-program"></a>Programme de texte générique, exemple
+**Section spécifique de Microsoft**  
   
- Le programme suivant, GENTEXT.C, présente une illustartion plus détaillée de l'utilisation des mappages de texte générique définis dans TCHAR.H :  
+ Le programme suivant, GENTEXT.C, fournit une illustration plus détaillée de l’utilisation des mappages de texte générique définis dans TCHAR.H :  
   
 ```  
 // GENTEXT.C  
@@ -71,7 +87,7 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
   
 ```  
   
- Si `_MBCS` a été défini, GENTEXT.C mappe vers le programme MBCS suivant :  
+ Si `_MBCS` a été défini, GENTEXT.C est mappé au programme MBCS suivant :  
   
 ```  
 // crt_mbcsgtxt.c  
@@ -109,7 +125,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }  
 ```  
   
- Si `_UNICODE` a été défini, GENTEXT.C mappe vers la prochaine version Unicode du programme.  Pour plus d'informations sur l'utilisation de  `wmain` dans des programme au format Unicode en remplacement de `main`, consultez [Utilisation du wmain](../c-language/using-wmain.md) dans *la référence du langage C*.  
+ Si `_UNICODE` a été défini, GENTEXT.C est mappé à la version Unicode suivante du programme. Pour plus d’informations sur l’utilisation de `wmain` dans les programmes Unicode en remplacement de `main`, consultez [Utilisation de wmain](../c-language/using-wmain.md) dans *Référence du langage C*.  
   
 ```  
 // crt_unicgtxt.c  
@@ -147,7 +163,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 }  
 ```  
   
- Si ni `_MBCS` ni `_UNICODE` n'est défini, GENTEXT.C mappe vers un code ASCII codé sur un octet, comme suit :  
+ Si ni `_MBCS` ni `_UNICODE` n’ont été définis, GENTEXT.C est mappé au code ASCII sur un seul octet, comme suit :  
   
 ```  
 // crt_sbcsgtxt.c  
@@ -184,11 +200,11 @@ int __cdecl main(int argc, char **argv, char **envp)
 }  
 ```  
   
- **FIN de la section spécifique à Microsoft**  
+ **Fin de la section spécifique de Microsoft**  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mappages de texte générique](../c-runtime-library/generic-text-mappings.md)   
  [Mappages de types de données](../c-runtime-library/data-type-mappings.md)   
- [Mappage des constantes et des variables globales](../c-runtime-library/constant-and-global-variable-mappings.md)   
+ [Mappages de constantes et de variables globales](../c-runtime-library/constant-and-global-variable-mappings.md)   
  [Mappages de routine](../c-runtime-library/routine-mappings.md)   
- [Utilisation des mappages de texte générique](../c-runtime-library/using-generic-text-mappings.md)
+ [Utilisation de mappages de texte générique](../c-runtime-library/using-generic-text-mappings.md)

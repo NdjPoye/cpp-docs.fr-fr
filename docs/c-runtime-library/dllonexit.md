@@ -1,78 +1,95 @@
 ---
-title: "__dllonexit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__dllonexit"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr100.dll"
-  - "msvcr80.dll"
-  - "msvcr120.dll"
-  - "msvcr90.dll"
-  - "msvcr120_clr0400.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__dllonexit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__dllonexit"
+title: __dllonexit | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __dllonexit
+apilocation:
+- msvcrt.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr100.dll
+- msvcr80.dll
+- msvcr120.dll
+- msvcr90.dll
+- msvcr120_clr0400.dll
+apitype: DLLExport
+f1_keywords:
+- __dllonexit
+dev_langs:
+- C++
+helpviewer_keywords:
+- __dllonexit
 ms.assetid: 708f2ceb-f95c-46b0-a58d-d68b3fa36f12
 caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# __dllonexit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 147458732658b5e08efa880fc9e7e76ebcd7da63
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="dllonexit"></a>__dllonexit
 Enregistre une routine à appeler au moment de la sortie.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-_onexit_t __dllonexit(  
-   _onexit_t func,  
+_onexit_t __dllonexit(   _onexit_t func,  
    _PVFV **  pbegin,   
    _PVFV **  pend   
    )  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `func`  
- Pointeur vers une fonction à exécuter lors de la sortie.  
+ Pointeur vers une fonction à exécuter à la sortie.  
   
  `pbegin`  
- Pointeur vers une variable qui indique le début d'une liste de fonctions pour exécuter en détaché.  
+ Pointeur vers une variable qui pointe vers le début d’une liste de fonctions à exécuter au moment du détachement.  
   
  `pend`  
- Pointeur vers une variable qui indique la fin d'une liste de fonctions pour exécuter en détaché.  
+ Pointeur vers une variable qui pointe vers la fin d’une liste de fonctions à exécuter au moment du détachement.  
   
-## Valeur de retour  
- En cas de réussite, un pointeur vers la fonction de l'utilisateur.  Sinon, un pointeur null.  
+## <a name="return-value"></a>Valeur de retour  
+ Si l’opération réussit, pointeur vers la fonction de l’utilisateur. Dans le cas contraire, pointeur NULL.  
   
-## Notes  
- La fonction `__dllonexit` est analogue à la fonction [\_onexit](../c-runtime-library/reference/onexit-onexit-m.md) mais les variables globales utilisées par cette fonction ne sont pas visibles pour cette routine.  À la place des variables globales, cette fonction utilise les paramètres `pbegin` et `pend`.  
+## <a name="remarks"></a>Notes  
+ La fonction `__dllonexit` est analogue à la fonction [_onexit](../c-runtime-library/reference/onexit-onexit-m.md) sauf que les variables globales utilisées par cette fonction ne sont pas visibles pour cette routine. Au lieu de variables globales, cette fonction utilise les paramètres `pbegin` et `pend`.  
   
- Les fonctions `_onexit` et `atexit` dans une DLL liée à MSVCRT.LIB doivent conserver leur propre liste d'atexit\/\_onexit.  Cette routine est le processus qui est appelé par de telles DLL.  
+ Les fonctions `_onexit` et `atexit` dans une DLL liée à MSVCRT.LIB doivent conserver leur propre liste atexit/_onexit. Cette routine est le processus de travail appelé par de telles DLL.  
   
- Le type `_PVFV` n'est pas défini comme `typedef void (__cdecl *_PVFV)(void)`.  
+ Le type `_PVFV` est défini en tant que `typedef void (__cdecl *_PVFV)(void)`.  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |Routine|Fichier obligatoire|  
-|-------------|-------------------------|  
-|\_\_dllonexit|onexit.c|  
+|-------------|-------------------|  
+|__dllonexit|onexit.c|  
   
-## Voir aussi  
- [\_onexit, \_onexit\_m](../c-runtime-library/reference/onexit-onexit-m.md)
+## <a name="see-also"></a>Voir aussi  
+ [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)

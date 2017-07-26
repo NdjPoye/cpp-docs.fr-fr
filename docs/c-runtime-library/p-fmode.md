@@ -1,59 +1,77 @@
 ---
-title: "__p__fmode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__p__fmode"
-apilocation: 
-  - "msvcr80.dll"
-  - "msvcr120.dll"
-  - "msvcr90.dll"
-  - "msvcrt.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr100.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__p__fmode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__p__fmode"
+title: __p__fmode | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __p__fmode
+apilocation:
+- msvcr80.dll
+- msvcr120.dll
+- msvcr90.dll
+- msvcrt.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr100.dll
+apitype: DLLExport
+f1_keywords:
+- __p__fmode
+dev_langs:
+- C++
+helpviewer_keywords:
+- __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
 caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# __p__fmode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 56f18d9d1912465161cb62b9d95e1c3a477a739d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-Points à la variable globale `_fmode`, qui spécifie *le mode de traduction* de fichiers par défaut pour les opérations d'E\/S de fichier.  
+---
+# <a name="pfmode"></a>__p__fmode
+Pointe vers la variable globale `_fmode`, qui spécifie le *mode de traduction de fichiers* par défaut pour les opérations d’E/S de fichier.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 int* __p__fmode(  
    );  
 ```  
   
-## Valeur de retour  
+## <a name="return-value"></a>Valeur de retour  
  Pointeur vers la variable globale `_fmode`.  
   
-## Notes  
- La fonction `__p__fmode`est pour un usage interne uniquement, et ne doit pas être appelée à partir du code utilisateur.  
+## <a name="remarks"></a>Notes  
+ La fonction `__p__fmode` est réservé exclusivement à un usage interne et ne doit pas être appelée à partir du code utilisateur.  
   
- Le fichier en mode de traduction spécifie `binary` ou de la traduction d'`text` pour [\_open](../c-runtime-library/reference/open-wopen.md) et les opérations d'E\/S de [\_pipe](../c-runtime-library/reference/pipe.md).  Pour plus d'informations, consultez [\_fmode](../c-runtime-library/fmode.md).  
+ Le mode de traduction de fichiers spécifie une traduction `binary` ou `text` pour les opérations d’E/S [_open](../c-runtime-library/reference/open-wopen.md) et [_pipe](../c-runtime-library/reference/pipe.md). Pour plus d’informations, consultez [_fmode](../c-runtime-library/fmode.md).  
   
-## Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-|Routine|En\-tête requis|  
+|Routine|En-tête requis|  
 |-------------|---------------------|  
-|\_\_p\_\_fmode|stdlib.h|
+|__p\__fmode|stdlib.h|
