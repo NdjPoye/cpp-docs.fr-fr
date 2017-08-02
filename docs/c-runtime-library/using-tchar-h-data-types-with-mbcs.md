@@ -1,82 +1,97 @@
 ---
-title: "Utilisation de types de donn&#233;es TCHAR.H avec _MBCS | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mbcs"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_MBCS (type de données)"
-  - "MBCS (type de données)"
-  - "types de données TCHAR.H"
+title: "Utilisation de types de données TCHAR.H avec _MBCS | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
+helpviewer_keywords:
+- TCHAR.H data types
+- MBCS data type
+- _MBCS data type
 ms.assetid: 48f471e7-9d2b-4a39-b841-16a0e15c0a18
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Utilisation de types de donn&#233;es TCHAR.H avec _MBCS
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: ec4f2b6245e024541a0247ebafbabc534ba9ded4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="using-tcharh-data-types-with-mbcs"></a>Utilisation de types de données TCHAR.H avec _MBCS
 **Section spécifique à Microsoft**  
   
- Comme la table de mappages de routines de texte générique le montre \(voir l'[Generic\-Text Mappings](../c-runtime-library/generic-text-mappings.md)\), lorsqu'une constante manifeste `_MBCS` est définie, une routine de textes génériques déterminé map vers une des routines de ce genre:  
+ Comme indiqué dans la table de mappages de routines de texte générique (consultez [Mappages de texte générique](../c-runtime-library/generic-text-mappings.md)), lorsque la constante manifeste `_MBCS` est définie, une routine de texte générique donnée correspond à un des types suivants de routines :  
   
--   Une routine SBCS qui gère les octets, les caractères et les chaînes multioctets comme il convient.  Dans ce cas, les arguments de chaîne doivent être de type `char*`.  Par exemple, `_tprintf` correspond à `printf`; les arguments de chaîne de `printf` sont de types `char*`.  Si vous utilisez le type de données de texte générique `_TCHAR` pour vos types chaînes, les types de paramètres formels et actuels pour `printf` correspondent car `_TCHAR*` maps vers `char*`.  
+-   Une routine SBCS qui gère correctement les chaînes, caractères et caractères multioctets. Dans ce cas, les arguments de chaîne doivent être de type `char*`. Par exemple, `_tprintf` est mappé sur `printf` ; les arguments de chaîne dans `printf` sont de type `char*`. Si vous utilisez le type de données de texte générique `_TCHAR` pour vos types de chaîne, les types de paramètre formels et réels pour `printf` correspondent car `_TCHAR*` est mappé sur `char*`.  
   
--   Une routine spécifique à MBCS.  Dans ce cas, les arguments de chaîne doivent être de type `unsigned char*`.  Par exemple, `_tcsrev`  correspond à `_mbsrev`, qui attend et retourne une chaîne de type `unsigned char*`.  Encore une fois, si vous utilisez le type de données de texte générique  `_TCHAR`  pour vos types de chaînes, il peut se produire un conflit de type car `_TCHAR`  maps vers le type `char`.  
+-   Une routine spécifique à MBCS. Dans ce cas, les arguments de chaîne doivent être de type `unsigned char*`. Par exemple, `_tcsrev` est mappé sur `_mbsrev`, qui attend et retourne une chaîne de type `unsigned char*`. Là encore, si vous utilisez le type de données de texte générique `_TCHAR` pour vos types de chaîne, il y a un conflit de type potentiel, car `_TCHAR` correspond au type `char`.  
   
- Vous trouverez ci\-dessous trois solutions pour empêcher ce conflit de type \(et les avertissements du compilateur C ou les erreurs du compilateur C\+\+ qui peuvent en résulter\).  
+ Voici les trois solutions pour empêcher ce conflit de types (et les avertissements du compilateur C ou erreurs du compilateur C++ qui en découleraient) :  
   
--   Utilisez le comportement par défaut.  Tchar.h fournit des prototypes de routine de texte générique pour les routines dans les bibliothèques runtime, comme indiqué dans l'exemple suivant.  
+-   Utiliser le comportement par défaut. TCHAR.H fournit des prototypes de routine de texte générique pour les routines dans les bibliothèques Runtime, comme dans l’exemple suivant.  
   
     ```  
     char *_tcsrev(char *);  
     ```  
   
-     Par défaut, le prototype pour `_tcsrev` mappe vers `_mbsrev` via une conversion de code dans LIBC.LIB.  Cette opération remplace les types des paramètres entrants `_mbsrev` et de valeur de retour `_TCHAR *` \(par exemple , `char *`\) vers `unsigned char *`.  Cette méthode permet la mise en correspondance des types lorsque vous utilisez `_TCHAR`, mais est lente en raison du temps de gestion nécessaire à l'appel de fonction.  
+     Dans le cas par défaut, le prototype pour `_tcsrev` est mappé sur `_mbsrev` via un thunk dans LIBC.LIB. Cela transforme les types des paramètres entrants `_mbsrev` et la valeur sortante de `_TCHAR *` (comme `char *`) en `unsigned char *`. Cette méthode garantit la correspondance de types lorsque vous utilisez `_TCHAR`, mais elle est relativement lente en raison de la surcharge d’appels de fonction.  
   
--   Utilisez la fonction inline en incorporant l'instruction du préprocesseur suivante dans votre code.  
+-   Utilisez la fonction inline en incorporant l’instruction du préprocesseur suivante dans votre code.  
   
     ```  
     #define _USE_INLINING  
     ```  
   
-     Cette méthode effectue une conversion de code de fonction inline, par Tchar.h, permettant de mapper directement la routine du texte générique à la routine MBCS appropriée.  L'extrait de code suivant de Tchar.h fournit un exemple de cette méthode.  
+     Avec cette méthode, un thunk de fonction inline, fournit par TCHAR.H, mappe la routine de texte générique directement sur la routine MBCS appropriée. L’extrait de code suivant de TCHAR.H fournit un exemple de cette procédure.  
   
     ```  
     __inline char *_tcsrev(char *_s1)  
     {return (char *)_mbsrev((unsigned char *)_s1);}  
     ```  
   
-     La meilleure solution est d'utiliser une fonction inline, car elle garantit la mise en correspondance des types sans coût horaire supplémentaire.  
+     Si vous pouvez utiliser l’incorporation, il s’agit de la meilleure solution, car elle garantit une correspondance de types et ne présente aucun coût supplémentaire en termes de temps.  
   
--   Utilisez le "direct mapping" en incorporant l'instruction du préprocesseur suivant dans votre code.  
+-   Utilisez le mappage direct en incorporant l’instruction du préprocesseur suivante dans votre code.  
   
     ```  
     #define _MB_MAP_DIRECT  
     ```  
   
-     Cette solution est appréciable si vous ne souhaitez pas utiliser le comportement par défaut ou ne pouvez pas utiliser la fonction inline.  Cette solution permet le mappage de la routine de texte générique par une macro directement en version MBCS de la routine, comme dans l'exemple suivant de Tchar.h.  
+     Cette approche constitue une alternative rapide si vous ne souhaitez pas utiliser le comportement par défaut ou que vous ne pouvez pas utiliser l’incorporation. La routine de texte générique est alors mappée par une macro directement sur la version MBCS de la routine, comme dans l’exemple suivant de TCHAR.H.  
   
     ```  
     #define _tcschr _mbschr  
     ```  
   
- Lorsque vous utilisez cette solution, vous devez vous assurer que des types de données appropriés sont utilisés pour les arguments de chaîne et les valeurs de chaîne de retour.  Vous pouvez utiliser le transtypage forcé pour assurer une correspondance de type correcte ou vous pouvez utiliser le type de données de texte générique `_TXCHAR` .  `_TXCHAR` correspond au type `char` dans le code SBCS mais correspond au type `unsigned char` dans le code MBCS.  Pour plus d'informations sur les macros de texte générique consultez [Generic\-Text Mappings](../c-runtime-library/generic-text-mappings.md).  
+ Lorsque vous adoptez cette approche, vous devez veiller à vous assurer que les types de données appropriés sont utilisés pour les arguments de chaîne et les valeurs de retour de chaîne. Vous pouvez utiliser la conversion de type pour assurer la bonne correspondance des types, ou vous pouvez utiliser le type de données de texte générique `_TXCHAR`. `_TXCHAR` correspond au type `char` dans le code SBCS, mais est mappé sur le type `unsigned char` dans le code MBCS. Pour plus d’informations sur les macros de texte générique, consultez [Mappages de texte générique](../c-runtime-library/generic-text-mappings.md).  
   
  **FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Internationalisation](../c-runtime-library/internationalization.md)   
  [Routines runtime par catégorie](../c-runtime-library/run-time-routines-by-category.md)

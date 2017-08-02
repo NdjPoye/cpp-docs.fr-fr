@@ -1,33 +1,50 @@
 ---
-title: "Consid&#233;rations relatives &#224; l&#39;&#233;criture du code de prologue/&#233;pilogue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__LOCAL_SIZE (constante)"
-  - "dispositions, frame de pile"
-  - "disposition de la frame de pile"
-  - "pile, disposition de la frame de pile"
+title: "Considérations relatives à l&quot;écriture du code de prologue/épilogue | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- layouts, stack frame
+- stack frame layout
+- __LOCAL_SIZE constant
+- stack, stack frame layout
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Consid&#233;rations relatives &#224; l&#39;&#233;criture du code de prologue/&#233;pilogue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 871772eb8eef75f2a72c3da518b187884d69b980
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="considerations-when-writing-prologepilog-code"></a>Considérations relatives à l'écriture du code de prologue/épilogue
 **Section spécifique à Microsoft**  
   
- Avant d'écrire vos propres séquences de code de prologue et d'épilogue, il importe de comprendre comment le frame de pile est disposé.  Il est également utile de savoir utiliser la constante prédéfinie **\_\_LOCAL\_SIZE**.  
+ Avant d'écrire vos propres séquences de code de prologue et d'épilogue, il importe de comprendre comment le frame de pile est disposé. Il est également utile de savoir utiliser la constante prédéfinie **__LOCAL_SIZE**.  
   
 ##  <a name="_clang_c_stack_frame_layout"></a> Disposition du frame de pile C  
  Cet exemple montre le code de prologue standard qui peut apparaître dans une fonction 32 bits :  
@@ -39,7 +56,7 @@ sub      esp, localbytes     ; Allocate space for locals
 push     <registers>         ; Save registers  
 ```  
   
- La variable `localbytes` représente le nombre d'octets nécessaires sur la pile pour les variables locales. La variable `registers` est un espace réservé qui représente la liste de registres à enregistrer sur la pile.  Après avoir effectué un push des registres, vous pouvez placer toutes les autres données pertinentes sur la pile.  Voici le code d'épilogue correspondant :  
+ La variable `localbytes` représente le nombre d'octets nécessaires sur la pile pour les variables locales. La variable `registers` est un espace réservé qui représente la liste de registres à enregistrer sur la pile. Après avoir effectué un push des registres, vous pouvez placer toutes les autres données pertinentes sur la pile. Voici le code d'épilogue correspondant :  
   
 ```  
 pop      <registers>         ; Restore registers  
@@ -48,19 +65,19 @@ pop      ebp                 ; Restore ebp
 ret                          ; Return from function  
 ```  
   
- La pile se réduit toujours \(des adresses de mémoire supérieures aux adresses de mémoire inférieures\).  Le pointeur de base \(`ebp`\) pointe vers la valeur de `ebp` qui fait l'objet d'un push.  La zone de variables locales commence à `ebp-2`.  Pour accéder aux variables locales, calculez un décalage à partir de `ebp` en soustrayant la valeur appropriée de `ebp`.  
+ La pile se réduit toujours (des adresses de mémoire supérieures aux adresses de mémoire inférieures). Le pointeur de base (`ebp`) pointe vers la valeur de `ebp` qui fait l'objet d'un push. La zone de variables locales commence à `ebp-2`. Pour accéder aux variables locales, calculez un décalage à partir de `ebp` en soustrayant la valeur appropriée de `ebp`.  
   
-##  <a name="_clang_the___local_size_constant"></a> La constante \_\_LOCAL\_SIZE  
- Le compilateur fournit une constante, **\_\_LOCAL\_SIZE**, à utiliser dans le bloc assembleur inline de code de prologue de fonction.  Cette constante est utilisée pour allouer de l'espace pour les variables locales sur le frame de pile dans le code de prologue personnalisé.  
+##  <a name="_clang_the___local_size_constant"></a>La constante __LOCAL_SIZE  
+ Le compilateur fournit une constante, **__LOCAL_SIZE**, à utiliser dans le bloc assembleur inline de code de prologue de fonction. Cette constante est utilisée pour allouer de l'espace pour les variables locales sur le frame de pile dans le code de prologue personnalisé.  
   
- Le compilateur détermine la valeur de **\_\_LOCAL\_SIZE**.  Cette valeur est le nombre total d'octets de toutes les variables locales définies par l'utilisateur et des variables temporaires générées par le compilateur.  La constante **\_\_LOCAL\_SIZE** peut être utilisée uniquement comme opérande immédiat. Elle ne peut pas être utilisée dans une expression.  Vous ne devez pas modifier ou redéfinir la valeur de cette constante.  Par exemple :  
+ Le compilateur détermine la valeur de **__LOCAL_SIZE**. Cette valeur est le nombre total d'octets de toutes les variables locales définies par l'utilisateur et des variables temporaires générées par le compilateur. La constante **__LOCAL_SIZE** peut être utilisée uniquement comme opérande immédiat. Elle ne peut pas être utilisée dans une expression. Vous ne devez pas modifier ou redéfinir la valeur de cette constante. Exemple :  
   
 ```  
 mov      eax, __LOCAL_SIZE           ;Immediate operand--Okay  
 mov      eax, [ebp - __LOCAL_SIZE]   ;Error  
 ```  
   
- L'exemple suivant d'une fonction naked contenant des séquences de prologue et d'épilogue personnalisées utilise **\_\_LOCAL\_SIZE** dans la séquence de prologue :  
+ L'exemple suivant d'une fonction naked contenant des séquences de prologue et d'épilogue personnalisées utilise **__LOCAL_SIZE** dans la séquence de prologue :  
   
 ```  
 __declspec ( naked ) func()  
@@ -88,5 +105,5 @@ __declspec ( naked ) func()
   
  **FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [Naked, fonctions](../c-language/naked-functions.md)
+## <a name="see-also"></a>Voir aussi  
+ [Fonctions naked](../c-language/naked-functions.md)

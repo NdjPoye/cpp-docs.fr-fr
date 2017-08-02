@@ -1,67 +1,84 @@
 ---
-title: "strcoll, fonctions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcr120.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr90.dll"
-  - "msvcr80.dll"
-  - "msvcr100.dll"
-  - "msvcr110.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "strcoll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pages de codes, utiliser pour les comparaisons de chaînes"
-  - "strcoll (fonctions)"
-  - "comparaison de chaînes (C++), spécifiques à la culture"
-  - "chaînes (C++), comparer par page de code"
+title: Fonctions strcoll | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcr120.dll
+- msvcr110_clr0400.dll
+- msvcr90.dll
+- msvcr80.dll
+- msvcr100.dll
+- msvcr110.dll
+apitype: DLLExport
+f1_keywords:
+- strcoll
+dev_langs:
+- C++
+helpviewer_keywords:
+- code pages, using for string comparisons
+- string comparison [C++], culture-specific
+- strcoll functions
+- strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# strcoll, fonctions
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 2d0073470eade62584b107d38cafed0184c0383e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-Chacune des fonctions `strcoll` et `wcscoll` compare deux chaînes selon le paramètre de catégorie `LC_COLLATE` de la page de codes locale actuellement utilisée.  Chacune des fonctions `_mbscoll` compare deux chaînes en fonction de la page de codes multioctets actuellement utilisée.  Ces fonctions `coll` doivent être utilisées pour la comparison de chaines uniquement lorsqu'il existe une différence entre l'ordre du jeu de caractères et l'ordre lexicographiques dans la page de codes actuelle et que cette différence est intéressante pour la comparaison de chaînes.  Utilisez les fonctions correspondantes `cmp` uniquement pour déterminer si les deux chaines sont les memes.  
+---
+# <a name="strcoll-functions"></a>strcoll, fonctions
+Chacune des fonctions `strcoll` et `wcscoll` compare deux chaînes en fonction du paramètre de catégorie `LC_COLLATE` de la page de codes des paramètres régionaux en cours d’utilisation. Chacune des fonctions `_mbscoll` compare deux chaînes en fonction de la page de codes multioctets en cours d’utilisation. Utilisez les fonctions `coll` pour les comparaisons de chaînes s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison. Utilisez les fonctions `cmp` correspondantes pour tester uniquement pour l’égalité des chaînes.  
   
-### strcoll, fonctions  
+### <a name="strcoll-functions"></a>strcoll, fonctions  
   
 |SBCS|Unicode|MBCS|Description|  
 |----------|-------------|----------|-----------------|  
-|[strcoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[\_mbscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|Assemble deux chaînes|  
-|[\_stricoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[\_wcsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[\_mbsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|Assemble deux chaînes \(ne respecte pas la casse\)|  
-|[\_strncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[\_wcsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[\_mbsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|Compare les premiers caractères `count` de deux chaînes|  
-|[\_strnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[\_wcsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[\_mbsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|Compare les premiers caractères `count` de deux chaînes \(ne respecte pas la casse\)|  
+|[strcoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[_mbscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|Assembler deux chaînes|  
+|[_stricoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_wcsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_mbsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|Assembler deux chaînes (sensible à la casse)|  
+|[_strncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_wcsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_mbsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|Assembler les premiers caractères `count` de deux chaînes|  
+|[_strnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_wcsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_mbsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|Assembler les premiers caractères `count` de deux chaînes (qui ne respectent pas la casse)|  
   
-## Notes  
- Les versions avec caractère codé sur un octet de ces fonctions \(fonctions SBCS\)\(`strcoll`, `stricoll`, `_strncoll`, et `_strnicoll`\) et `string1` et `string2` selon les paramètre de catégorie locaux `LC_COLLATE` .  Ces fonctions diffèrent des fonctions correspondantes `strcmp` car les fonctions `strcoll` utilisent les informations de page de codes locaux, qui fournissent des tables de classement.  Pour les comparaisons de chaînes dans les environnements locaux dans lesquel l'ordre du jeu de caractères et l'ordre lexicographique des caractères diffèrent, les fonctions `strcoll` doivent être utilisé au lieu des fonctions correspondantes `strcmp`.  Pour plus d'informations sur `LC_COLLATE`, consultez [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).  
+## <a name="remarks"></a>Remarques  
+ Les versions jeu de caractères codés sur un octet (SBCS) de ces fonctions (`strcoll`, `stricoll`, `_strncoll` et `_strnicoll`) comparent `string1` et `string2` conformément au paramètre de catégorie `LC_COLLATE` des paramètres régionaux actuels. Ces fonctions diffèrent des fonctions `strcmp` correspondantes en cela que les fonctions `strcoll` utilisent les informations de page de code de paramètres régionaux qui fournissent des séquences de classement. Pour les comparaisons de chaînes dans les paramètres régionaux dans lesquelles l’ordre du jeu de caractères et celui de l’ordre lexicographique des caractères diffèrent, les fonctions `strcoll` doivent être utilisées à la place des fonctions `strcmp` correspondantes. Pour plus d’informations sur `LC_COLLATE`, consultez [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).  
   
- Pour certaines pages de codes ainsi que pour les jeux de caractères correspondants, l'ordre des caractères dans le jeu de caractères peut différer de l'ordre lexicographique des caractères.  Dans les paramètres régionaux « C », ce n'est pas le cas : l'ordre des caractères dans le jeu de caractères ASCII est le même que l'ordre lexicographique des caractères.  Toutefois, dans certaines pages de codes européennes, par exemple, le caractère « a » \(valeur 0x61\) précède le caractère « ä » \(valeur 0xE4\) dans le jeu de caractères, mais le caractère « ä » précède le caractère « a » lexicographiquement.  Pour réaliser une comparaison dans l'ordre lexicographique dans une telle instance, utilisez `strcoll` plutôt que `strcmp`.  Ou bien, vous pouvez utiliser `strxfrm` sur les chaînes d'origine, et ensuite `strcmp` sur les chaînes résultantes.  
+ Pour certaines pages de codes et les jeux de caractères correspondants, l’ordre des caractères dans le jeu de caractères peut différer de l’ordre lexicographique des caractères. Dans les paramètres régionaux « C », ce n’est pas le cas : l’ordre des caractères dans le jeu de caractères ASCII est le même que l’ordre lexicographique des caractères. Toutefois, dans certaines pages de codes européennes, par exemple, le caractère « a » (valeur 0x61) précède le caractère « ä » (valeur 0xE4) dans le jeu de caractères, mais le caractère « ä » précède le caractère « a » sur le plan lexicographique. Pour effectuer une comparaison lexicographique dans un cas comme celui-ci, utilisez `strcoll` plutôt que `strcmp`. Vous pouvez aussi utiliser `strxfrm` sur les chaînes d'origine, puis utiliser `strcmp` sur les chaînes résultantes.  
   
- `strcoll`, `stricoll`, `_strncoll`, et `_strnicoll` gèrent automatiquement des chaînes de caractères multi\-octets selon la page de codes des paramètres locaux en cours de utilisation, de même que les leurs équivalents en caractères étendus \(Unicode\).  Les versions de caractères multi\-octets de \(MBCS\) de ces fonctions, toutefois, assemblent des chaînes dans une base de caractère selon la page de codes multioctets actuellement utilisée.  
+ `strcoll`, `stricoll`, `_strncoll` et `_strnicoll` gèrent automatiquement les chaînes de caractères multioctets en fonction de la page de codes des paramètres régionaux en cours d’utilisation, comme le font leurs équivalents à caractères larges (Unicode). Les versions de jeu de caractères multioctets (MBCS) de ces fonctions cependant, assemblent les chaînes caractère par caractère en fonction de la page de codes multioctets en cours d’utilisation.  
   
- Les fonctions `coll` assemblent les chaînes lexicographiquement pour la comparaison, tandis que les fonctions `cmp` testent simplement l'égalité de chaîne, ainsi les fonctions `coll` sont beaucoup plus lentes que les versions correspondantes `cmp`.  Par conséquent, les fonctions `coll` doivent être utilisées uniquement lorsqu'il existe une différence entre l'ordre du jeu de caractères et l'ordre des caractères lexicographiques dans la page de codes actuelle et que cette différence est intéressante pour la comparaison de chaînes.  
+ Étant donné que les fonctions `coll` assemblent des chaînes de façon lexicographique en vue des comparer, alors que les fonctions `cmp` testent simplement l’égalité des chaînes, les fonctions `coll` sont beaucoup plus lentes que les versions `cmp` correspondantes. Ainsi, les fonctions `coll` ne doivent être utilisées que s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison de chaînes.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Paramètres régionaux](../c-runtime-library/locale.md)   
  [Manipulation de chaînes](../c-runtime-library/string-manipulation-crt.md)   
  [localeconv](../c-runtime-library/reference/localeconv.md)   
- [\_mbsnbcoll, \_mbsnbcoll\_l, \_mbsnbicoll, \_mbsnbicoll\_l](../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
- [setlocale, \_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [strcmp, wcscmp, \_mbscmp](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strxfrm, wcsxfrm, \_strxfrm\_l, \_wcsxfrm\_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+ [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
+ [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [strcmp, wcscmp, _mbscmp](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

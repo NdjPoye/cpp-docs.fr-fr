@@ -1,34 +1,51 @@
 ---
-title: "Balise de direction | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.flags"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "balise de direction"
+title: Balise de direction | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.flags
+dev_langs:
+- C++
+helpviewer_keywords:
+- direction flag
 ms.assetid: 0836b4af-dbbb-4ab8-a4b2-156f2e2099e2
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Balise de direction
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 8c1595b20e9f601bb5a86c68e63d9176e86e7b96
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-L'indicateur de direction est un ensemble de balises UC sur les processeurs Intel 80x86.  Elle s'applique à toutes les instructions assemblys qui utilisent le préfixe de REPRÉSENTANT \(répétition\), tel que MOVS, MOVSD, MOVSW, entre autres.  Les adresses fournies à l'instruction applicables sont augmenté si l'indicateur de direction est désactivée.  
+---
+# <a name="direction-flag"></a>Balise de direction
+L’indicateur de direction est un indicateur de processeur spécifique pour les processeurs Intel 80x86. Il s’applique à toutes les instructions d’assembly qui utilisent le préfixe REP (répétition) REP, comme AVI, MOVSD, MOVSW et d’autres. Les adresses fournies aux instructions applicables sont augmentées si l’indicateur de direction est désactivé.  
   
- Les routines de runtime C supposent que l'indicateur de direction est désactivée.  Si vous utilisez d'autres fonctions avec les fonctions runtime C, vous devez vous assurer que les autres fonctions permettent l'indicateur de direction seule ou la restauration à son état initial.  En prévoyant que l'indicateur de direction est claire sur l'entrée de code à l'exécution plus rapide et plus efficace.  
+ Les routines d’exécution C partent du principe que l’indicateur de direction est désactivé. Si vous utilisez d’autres fonctions avec les fonctions runtime C, vous devez vous assurer que les autres fonctions ne touchent pas à l’indicateur de direction ou qu’elles le restaurent à son état d’origine. Supposer que l’indicateur de direction est désactivé lors de l’entrée rend le code d’exécution plus rapide et plus efficace.  
   
- Les fonctions de la bibliothèque runtime C, telles que la suivante par manipulation et les routines de mémoire tampon\-\), attendez\-vous à ce que l'indicateur de direction à effacer.  
+ Les fonctions de bibliothèque Runtime C, comme les routines de manipulation de chaînes et de manipulation de la mémoire tampon s’attendent à ce que l’indicateur de direction soit désactivé.  
   
-## Voir aussi  
- [Fonctions de bibliothèque CRT](../c-runtime-library/crt-library-features.md)
+## <a name="see-also"></a>Voir aussi  
+ [Fonctionnalités de bibliothèque CRT](../c-runtime-library/crt-library-features.md)

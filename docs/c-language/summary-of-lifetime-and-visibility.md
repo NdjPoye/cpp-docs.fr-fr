@@ -1,34 +1,51 @@
 ---
-title: "R&#233;sum&#233; de la dur&#233;e de vie et de la visibilit&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "durée de vie, et visibilité"
-  - "visibilité, identificateurs"
+title: "Résumé de la durée de vie et de la visibilité | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- lifetime, and visibility
+- visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# R&#233;sum&#233; de la dur&#233;e de vie et de la visibilit&#233;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 05bf4ad0f6c0e14ed8a93a661e71ebced5172511
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-Le tableau suivant récapitule les caractéristiques de durée de vie et de visibilité pour la plupart des identificateurs.  Les trois premières colonnes indiquent les attributs qui définissent la durée de vie et la visibilité.  Un identificateur avec les attributs indiqués par les trois premières colonnes a la durée de vie et la visibilité affichées dans les quatrième et cinquième colonnes.  Toutefois, le tableau ne traite pas tous les cas possibles.  Pour plus d'informations, consultez [Classes de stockage](../c-language/c-storage-classes.md).  
+---
+# <a name="summary-of-lifetime-and-visibility"></a>Résumé de la durée de vie et de la visibilité
+Le tableau suivant récapitule les caractéristiques de durée de vie et de visibilité pour la plupart des identificateurs. Les trois premières colonnes indiquent les attributs qui définissent la durée de vie et la visibilité. Un identificateur avec les attributs indiqués par les trois premières colonnes a la durée de vie et la visibilité affichées dans les quatrième et cinquième colonnes. Toutefois, le tableau ne traite pas tous les cas possibles. Pour plus d'informations, consultez [Classes de stockage](../c-language/c-storage-classes.md).  
   
-### Résumé de la durée de vie et de la visibilité  
+### <a name="summary-of-lifetime-and-visibility"></a>Résumé de la durée de vie et de la visibilité  
   
-|Attributs :<br /><br /> Niveau|Élément|Classe de stockage<br /><br /> Spécificateur|Résultat :<br /><br /> Durée de vie|Visibilité|  
-|----------------------------|-------------|------------------------------------------|---------------------------------|----------------|  
+|Attributs :<br /><br /> Niveau|Élément|Classe de stockage<br /><br /> Spécificateur|Résultat : <br /><br /> Durée de vie|Visibilité|  
+|---------------------------|----------|----------------------------------|--------------------------|----------------|  
 |Portée du fichier|Définition de variable|**static**|Global|Reste du fichier source dans lequel elle se produit|  
 ||Déclaration de variable|`extern`|Global|Reste du fichier source dans lequel elle se produit|  
 ||Définition ou prototype de fonction|**static**|Global|Fichier source unique|  
@@ -37,12 +54,12 @@ Le tableau suivant récapitule les caractéristiques de durée de vie et de visi
 ||Définition de variable|**static**|Global|Bloc|  
 ||Définition de variable|**auto** ou **register**|Local|Bloc|  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Description  
+### <a name="description"></a>Description  
  L'exemple suivant illustre les blocs, l'imbrication et la visibilité des variables :  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // Lifetime_and_Visibility.c  
@@ -70,8 +87,8 @@ int main()  // main function defined at external level
 }   
 ```  
   
-### Commentaires  
- Dans cet exemple, il existe quatre niveaux de visibilité : le niveau externe et trois niveaux de bloc.  Les valeurs sont imprimées à l'écran comme indiqué dans les commentaires suivant chaque instruction.  
+### <a name="comments"></a>Commentaires  
+ Dans cet exemple, il existe quatre niveaux de visibilité : le niveau externe et trois niveaux de bloc. Les valeurs sont imprimées à l'écran comme indiqué dans les commentaires suivant chaque instruction.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Durée de vie, portée, visibilité et liaison](../c-language/lifetime-scope-visibility-and-linkage.md)

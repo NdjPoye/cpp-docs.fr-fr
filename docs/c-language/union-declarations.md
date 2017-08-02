@@ -1,72 +1,89 @@
 ---
-title: "D&#233;clarations d&#39;union | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "union (mot clé) (C), déclarations"
-  - "unions"
-  - "enregistrements de variante"
+title: "Déclarations d’union | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- unions
+- union keyword [C], declarations
+- variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# D&#233;clarations d&#39;union
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: b68a195bc148dc56f3e5c53cffd91f4d4417ace2
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-Une « déclaration d'union » spécifie un ensemble de valeurs variables et, éventuellement, une balise d'attribution de nom à l'union.  Les valeurs variables sont appelées « membres » de l'union et peuvent avoir différents types.  Les unions sont similaires aux « enregistrements de variants » dans d'autres langages.  
+---
+# <a name="union-declarations"></a>Déclarations d'union
+Une « déclaration d’union » spécifie un ensemble de valeurs variables et, éventuellement, une étiquette d’attribution de nom à l’union. Les valeurs variables sont appelées « membres » de l'union et peuvent avoir différents types. Les unions sont similaires aux « enregistrements de variants » dans d'autres langages.  
   
-## Syntaxe  
- *struct\-or\-union\-specifier* :  
- *struct\-or\-union identifier*  opt **{** *struct\-declaration\-list* **}**  
+## <a name="syntax"></a>Syntaxe  
+ *struct-or-union-specifier* :  
+ *struct-or-union identifier* opt**{** *struct-declaration-list* **}**  
   
- *struct\-or\-union identifier*  
+ *struct-or-union identifier*  
   
- *struct\-or\-union* :  
+ *struct-or-union* :  
  **struct**  
   
  **union**  
   
- *struct\-declaration\-list* :  
- *struct\-declaration*  
+ *struct-declaration-list* :  
+ *struct-declaration*  
   
- *struct\-declaration\-list struct\-declaration*  
+ *struct-declaration-list struct-declaration*  
   
  Le contenu d'union est défini comme  
   
- *struct\-declaration* :  
- *specifier\-qualifier\-list struct\-declarator\-list*  **;**  
+ *struct-declaration* :  
+ *specifier-qualifier-list struct-declarator-list* **;**  
   
- *specifier\-qualifier\-list* :  
- *type\-specifier specifier\-qualifier\-list*  opt  
+ *specifier-qualifier-list* :  
+ *type-specifier specifier-qualifier-list* opt  
   
- *type\-qualifier specifier\-qualifier\-list*  opt  
+ *type-qualifier specifier-qualifier-list* opt  
   
- *struct\-declarator\-list* :  
- *struct\-declarator*  
+ *struct-declarator-list* :  
+ *struct-declarator*  
   
- *struct\-declarator\-list*  **,**  *struct\-declarator*  
+ *struct-declarator-list* **,** *struct-declarator*  
   
- Une variable du type **union** stocke l'une des valeurs définies par ce type.  Les mêmes règles gouvernent les déclarations de structure et d'union.  Les unions peuvent également avoir des champs de bits.  
+ Une variable du type **union** stocke l'une des valeurs définies par ce type. Les mêmes règles gouvernent les déclarations de structure et d'union. Les unions peuvent également avoir des champs de bits.  
   
- Les membres des unions ne peuvent pas avoir de type incomplet, de type `void`, ou de type de fonction.  Par conséquent les membres ne peuvent pas être une instance de l'union mais peuvent être des pointeurs vers le type d'union déclaré.  
+ Les membres des unions ne peuvent pas avoir de type incomplet, de type `void`, ou de type de fonction. Par conséquent les membres ne peuvent pas être une instance de l'union mais peuvent être des pointeurs vers le type d'union déclaré.  
   
- Une déclaration de type union est un modèle uniquement.  La mémoire n'est pas réservée jusqu'à ce que la variable soit déclarée.  
+ Une déclaration de type union est un modèle uniquement. La mémoire n'est pas réservée jusqu'à ce que la variable soit déclarée.  
   
 > [!NOTE]
->  Si une union de deux types est déclarée et qu'une valeur est enregistrée, mais que l'union est accessible par l'autre type, les résultats ne sont pas fiables.  Par exemple, une union de type **float** et `int` est déclarée.  Une valeur de type **float** est stockée, mais le programme y accède ultérieurement en tant que `int`.  Dans ce cas, la valeur dépend du stockage interne des valeurs **float**.  La valeur entière n'est pas fiable.  
+>  Si une union de deux types est déclarée et qu'une valeur est enregistrée, mais que l'union est accessible par l'autre type, les résultats ne sont pas fiables. Par exemple, une union de type **float** et `int` est déclarée. Une valeur de type **float** est stockée, mais le programme y accède ultérieurement en tant que `int`. Dans ce cas, la valeur dépend du stockage interne des valeurs **float**. La valeur entière n'est pas fiable.  
   
-## Exemples  
+## <a name="examples"></a>Exemples  
  Voici des exemples d'unions :  
   
 ```  
@@ -77,7 +94,7 @@ union sign   /* A definition and a declaration */
 } number;  
 ```  
   
- Cet exemple définit une variable d'union avec le type `sign` et déclare une variable nommée `number` qui possède deux membres : `svar`, un entier signé, et `uvar`, un entier non signé.  Cette déclaration permet d'enregistrer la valeur `number` comme valeur signée ou non signée.  La balise associée à ce type d'union est `sign`.  
+ Cet exemple définit une variable d'union avec le type `sign` et déclare une variable nommée `number` qui possède deux membres : `svar`, un entier signé, et `uvar`, un entier non signé. Cette déclaration permet d'enregistrer la valeur `number` comme valeur signée ou non signée. La balise associée à ce type d'union est `sign`.  
   
 ```  
 union               /* Defines a two-dimensional */  
@@ -91,11 +108,11 @@ union               /* Defines a two-dimensional */
 } screen[25][80];  
 ```  
   
- Le tableau `screen` contient 2 000 éléments.  Chaque élément du tableau est une union individuelle avec deux membres : `window1` et `screenval`.  Le membre `window1` est une structure avec deux membres de champ de bits `icon` et `color`.  Le membre `screenval` est `int`.  À un moment donné, chaque élément union contient soit `int` représenté par `screenval` soit la structure représentée par `window1`.  
+ Le tableau `screen` contient 2 000 éléments. Chaque élément du tableau est une union individuelle avec deux membres : `window1` et `screenval`. Le membre `window1` est une structure avec deux membres de champ de bits `icon` et `color`. Le membre `screenval` est `int`. À un moment donné, chaque élément union contient soit `int` représenté par `screenval` soit la structure représentée par `window1`.  
   
  **Section spécifique à Microsoft**  
   
- Les unions imbriquées peuvent être déclarées de façon anonyme lorsqu'elles sont membres d'une structure ou d'une union.  Voici un exemple d'une union sans nom.  
+ Les unions imbriquées peuvent être déclarées de façon anonyme lorsqu'elles sont membres d'une structure ou d'une union. Voici un exemple d'une union sans nom.  
   
 ```  
 struct str  
@@ -115,7 +132,7 @@ struct str
 my_str.l == 0L;  /* A reference to a field in the my_str union */  
 ```  
   
- Les unions sont souvent imbriquées dans une structure qui inclut un champ donnant le type de données contenu dans une union à un moment donné.  Voici un exemple d'une déclaration pour ce type d'union :  
+ Les unions sont souvent imbriquées dans une structure qui inclut un champ donnant le type de données contenu dans une union à un moment donné. Voici un exemple d'une déclaration pour ce type d'union :  
   
 ```  
 struct x  
@@ -133,5 +150,5 @@ struct x
   
  **FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Déclarateurs et déclarations de variable](../c-language/declarators-and-variable-declarations.md)

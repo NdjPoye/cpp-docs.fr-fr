@@ -1,45 +1,62 @@
 ---
-title: "Appels de fonction | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "appels de fonction"
-  - "appels de fonction, à propos des appels de fonction"
-  - "appels de fonction, fonctions C"
-  - "fonctions (C), appeler"
+title: Appels de fonction | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- function calls, C functions
+- functions [C], calling
+- function calls, about function calls
+- function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Appels de fonction
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 5398dad560399a8eba6071f75ca4e9f70ce0e2cc
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-Un *appel de fonction* est une expression qui passe le contrôle et des arguments \(le cas échéant\) à une fonction et qui se présente sous la forme :  
+---
+# <a name="function-calls"></a>Appels de fonction
+Un *appel de fonction* est une expression qui passe le contrôle et des arguments (le cas échéant) à une fonction et qui se présente sous la forme :  
   
- *expression* \(*expression\-list* facultatif\)  
+ *expression* (*expression-list*opt)  
   
- où *expression* est un nom de fonction ou correspond à une adresse de fonction et où *expression\-list* est une liste d'expressions \(séparées par des virgules\).  Les valeurs de ces dernières expressions sont les arguments passés à la fonction.  Si la fonction ne retourne pas de valeur, vous la déclarez comme une fonction qui retourne `void`.  
+ où *expression* est un nom de fonction ou correspond à une adresse de fonction et où *expression-list* est une liste d'expressions (séparées par des virgules). Les valeurs de ces dernières expressions sont les arguments passés à la fonction. Si la fonction ne retourne pas de valeur, vous la déclarez comme une fonction qui retourne `void`.  
   
  Si une déclaration existe avant l'appel de fonction, mais qu'aucune information n'est donnée concernant les paramètres, tous les arguments non déclarés subissent simplement les conversions arithmétiques habituelles.  
   
 > [!NOTE]
->  Les expressions figurant dans la liste d'arguments de la fonction peuvent être évaluées dans un ordre quelconque, de sorte que les arguments dont les valeurs peuvent être modifiées par les effets secondaires d'un autre argument ont des valeurs non définies.  Le point de séquence défini par l'opérateur d'appel de fonction garantit uniquement que tous les effets secondaires dans la liste d'arguments sont évalués avant que le contrôle passe à la fonction appelée. \(Notez que l'ordre dans lequel les arguments font l'objet d'un push dans la pile est une question distincte.\) Consultez [Points de séquence](../c-language/c-sequence-points.md) pour plus d'informations.  
+>  Les expressions figurant dans la liste d'arguments de la fonction peuvent être évaluées dans un ordre quelconque, de sorte que les arguments dont les valeurs peuvent être modifiées par les effets secondaires d'un autre argument ont des valeurs non définies. Le point de séquence défini par l'opérateur d'appel de fonction garantit uniquement que tous les effets secondaires dans la liste d'arguments sont évalués avant que le contrôle passe à la fonction appelée. (Notez que l’ordre dans lequel les arguments font l’objet d’un push dans la pile est une question distincte.) Pour plus d'informations, consultez [Points de séquence](../c-language/c-sequence-points.md).  
   
- La seule condition à respecter dans un appel de fonction est que l'expression avant les parenthèses doit correspondre à une adresse de fonction.  Cela signifie qu'une fonction peut être appelée via toute expression de pointeur fonction.  
+ La seule exigence à respecter dans un appel de fonction est que l’expression avant les parenthèses doit correspondre à une adresse de fonction. Cela signifie qu'une fonction peut être appelée via toute expression de pointeur fonction.  
   
-## Exemple  
- L'exemple ci\-dessous illustre des appels de fonction à partir d'une instruction `switch` :  
+## <a name="example"></a>Exemple  
+ L'exemple ci-dessous illustre des appels de fonction à partir d'une instruction `switch` :  
   
 ```  
 int main()  
@@ -87,9 +104,9 @@ void work( int number, long (*function)(int i) )
 work( count, lift );  
 ```  
   
- passe une variable entière, `count`, et l'adresse de la fonction `lift` à la fonction `work`.  Notez que l'adresse de fonction est passée simplement en fournissant l'identificateur de fonction, étant donné qu'un identificateur de fonction correspond à une expression de pointeur.  Pour utiliser un identificateur de fonction de cette façon, la fonction doit être déclarée ou définie avant que l'identificateur soit utilisé ; sinon, l'identificateur n'est pas reconnu.  Dans ce cas, un prototype pour `work` est fourni au début de la fonction `main`.  
+ passe une variable entière, `count`, et l'adresse de la fonction `lift` à la fonction `work`. Notez que l'adresse de fonction est passée simplement en fournissant l'identificateur de fonction, étant donné qu'un identificateur de fonction correspond à une expression de pointeur. Pour utiliser un identificateur de fonction de cette façon, la fonction doit être déclarée ou définie avant que l'identificateur soit utilisé ; sinon, l'identificateur n'est pas reconnu. Dans ce cas, un prototype pour `work` est fourni au début de la fonction `main`.  
   
- Le paramètre `function` figurant dans `work` est déclaré comme étant un pointeur désignant une fonction qui accepte un seul argument `int` et retourne une valeur **long**.  Les parenthèses autour du nom du paramètre sont requises. Sans elles, la déclaration spécifierait une fonction retournant un pointeur vers une valeur **long**.  
+ Le paramètre `function` figurant dans `work` est déclaré comme étant un pointeur désignant une fonction qui accepte un seul argument `int` et retourne une valeur **long**. Les parenthèses autour du nom du paramètre sont requises. Sans elles, la déclaration spécifierait une fonction retournant un pointeur vers une valeur **long**.  
   
  La fonction `work` appelle la fonction sélectionnée à partir de la boucle **for** à l'aide de l'appel de fonction suivant :  
   
@@ -99,5 +116,5 @@ work( count, lift );
   
  Un argument, `i`, est passé à la fonction appelée.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions](../c-language/functions-c.md)

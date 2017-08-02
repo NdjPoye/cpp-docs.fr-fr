@@ -1,34 +1,51 @@
 ---
-title: "Types incomplets | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tableaux (C), types incomplets"
-  - "types incomplets"
-  - "structures, incomplet"
-  - "types (C), incomplet"
-  - "unions, incomplet"
-  - "void (mot clé) (C)"
-  - "void (mot clé) (C), incomplet"
+title: Types incomplets | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- void keyword [C], incomplete
+- types [C], incomplete
+- incomplete types
+- unions, incomplete
+- arrays [C], incomplete types
+- void keyword [C]
+- structures, incomplete
 ms.assetid: 01bc0cf6-9fa7-458c-9371-ecbe54ea6aee
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Types incomplets
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: ebc73813c28f5ccd25b28cadf283412a204b57d3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-Un type incomplet est un type qui décrit un identificateur, mais qui ne présente pas les informations nécessaires pour permettre d'en déterminer la taille.  Un « type incomplet » peut être :  
+---
+# <a name="incomplete-types"></a>Types incomplets
+Un type incomplet est un type qui décrit un identificateur, mais qui ne présente pas les informations nécessaires pour permettre d'en déterminer la taille. Un « type incomplet » peut être :  
   
 -   un type de structure dont vous n'avez pas encore spécifié les membres ;  
   
@@ -36,9 +53,9 @@ Un type incomplet est un type qui décrit un identificateur, mais qui ne présen
   
 -   un type de tableau dont vous n'avez pas encore spécifié la dimension.  
   
- Le type void est un type incomplet qui ne peut pas être complété.  Pour compléter un type incomplet, spécifiez les informations manquantes.  Les exemples ci\-dessous montrent comment créer et compléter des types incomplets.  
+ Le type void est un type incomplet qui ne peut pas être complété. Pour compléter un type incomplet, spécifiez les informations manquantes. Les exemples ci-dessous montrent comment créer et compléter des types incomplets.  
   
--   Pour créer un type de structure incomplet, déclarez un type de structure sans spécifier ses membres.  Dans l'exemple ci\-dessous, le pointeur `ps` pointe vers un type de structure incomplet nommé `student`.  
+-   Pour créer un type de structure incomplet, déclarez un type de structure sans spécifier ses membres. Dans l'exemple ci-dessous, le pointeur `ps` pointe vers un type de structure incomplet nommé `student`.  
   
     ```  
     struct student *ps;  
@@ -53,7 +70,7 @@ Un type incomplet est un type qui décrit un identificateur, mais qui ne présen
     }                   /* student structure now completed */  
     ```  
   
--   Pour créer un type de tableau incomplet, déclarez un type de tableau sans spécifier son nombre de répétitions.  Par exemple :  
+-   Pour créer un type de tableau incomplet, déclarez un type de tableau sans spécifier son nombre de répétitions. Exemple :  
   
     ```  
     char a[];  /* a has incomplete type */  
@@ -65,5 +82,5 @@ Un type incomplet est un type qui décrit un identificateur, mais qui ne présen
     char a[25]; /* a now has complete type */  
     ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Déclarations et types](../c-language/declarations-and-types.md)

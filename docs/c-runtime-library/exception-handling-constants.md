@@ -1,37 +1,54 @@
 ---
-title: "Constantes de gestion des exceptions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "EXCEPTION_CONTINUE_SEARCH"
-  - "c.constants"
-  - "EXCEPTION_CONTINUE_EXECUTION"
-  - "EXCEPTION_EXECUTE_HANDLER"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EH (constantes)"
-  - "gestion des exceptions, constantes"
-  - "EXCEPTION_CONTINUE_EXECUTION (constante)"
-  - "EXCEPTION_CONTINUE_SEARCH (constante)"
-  - "EXCEPTION_EXECUTE_HANDLER (constante)"
+title: Constantes de gestion des exceptions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- EXCEPTION_CONTINUE_SEARCH
+- c.constants
+- EXCEPTION_CONTINUE_EXECUTION
+- EXCEPTION_EXECUTE_HANDLER
+dev_langs:
+- C++
+helpviewer_keywords:
+- exception handling, constants
+- EXCEPTION_CONTINUE_SEARCH constant
+- EXCEPTION_EXECUTE_HANDLER constant
+- EXCEPTION_CONTINUE_EXECUTION constant
+- EH constants
 ms.assetid: e1870f41-be9e-46a3-a2ea-830dfbaa18fb
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Constantes de gestion des exceptions
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 2965f0046d51595ec397b55ac2aa4d891f139fe9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-`EXCEPTION_CONTINUE_SEARCH`fixe, `EXCEPTION_CONTINUE_EXECUTION`, ou `EXCEPTION_EXECUTE_HANDLER` est retourné lorsqu'une exception se produit pendant l'exécution de la section protégée d'une instruction **try\-except**.  La valeur de retour détermine comment l'exception est gérée.  Pour plus d'informations, consultez [Gestion des exceptions](../cpp/try-except-statement.md) dans le *Guide de référence du langage C\+\+*.  
+---
+# <a name="exception-handling-constants"></a>Constantes de gestion des exceptions
+La constante `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION`, ou `EXCEPTION_EXECUTE_HANDLER` est retournée lorsqu’une exception se produit pendant l’exécution de la section protégée d’une instruction **try-except**. La valeur de retour détermine la façon dont l’exception est gérée. Pour plus d’informations, consultez [Instruction try-except](../cpp/try-except-statement.md) dans le *Guide de référence du langage C++*.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Constantes globales](../c-runtime-library/global-constants.md)

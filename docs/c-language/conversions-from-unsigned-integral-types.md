@@ -1,34 +1,51 @@
 ---
-title: "Conversions &#224; partir des types entier non sign&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conversion de type de données (C++), entiers signés et non signés"
-  - "entiers, convertir"
-  - "conversions de types intégraux, de non signé"
-  - "casts de type, impliquant des entiers"
-  - "conversion de type (C++), entiers signés et non signés"
+title: "Conversions depuis les types intégraux non signés | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- integers, converting
+- type casts, involving integers
+- data type conversion [C++], signed and unsigned integers
+- type conversion [C++], signed and unsigned integers
+- integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Conversions &#224; partir des types entier non sign&#233;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 937d6cdeacda2abe2dd241e5a8e9463549567444
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-Un entier non signé est converti en entier non signé ou signé plus court en tronquant les bits de poids fort, ou en entier non signé ou signé plus long par extension zéro \(consultez le tableau [Conversions de types intégraux non signés](#_clang_table_4..3)\).  
+---
+# <a name="conversions-from-unsigned-integral-types"></a>Conversions depuis les types intégraux non signés
+Un entier non signé est converti en entier non signé ou signé plus court en tronquant les bits de poids fort, ou en entier non signé ou signé plus long par extension zéro (consultez le tableau [Conversions de types intégraux non signés](#_clang_table_4..3)).  
   
- Lorsque la valeur ayant le type intégral est rétrogradée en entier signé plus petit, ou qu'un entier non signé est converti en son entier signé correspondant, la valeur est inchangée si elle peut être représentée dans le nouveau type.  Toutefois, la valeur change si le bit de signe est défini, comme dans l'exemple suivant.  
+ Lorsque la valeur ayant le type intégral est rétrogradée en entier signé plus petit, ou qu'un entier non signé est converti en son entier signé correspondant, la valeur est inchangée si elle peut être représentée dans le nouveau type. Toutefois, la valeur change si le bit de signe est défini, comme dans l'exemple suivant.  
   
 ```  
 int j;  
@@ -38,16 +55,16 @@ j = k;
 printf_s( "%hd\n", j );   // Prints -3  
 ```  
   
- Si elle ne peut pas être représentée, le résultat est défini par l'implémentation.  Consultez [Conversions de cast de type](../c-language/type-cast-conversions.md) pour obtenir plus d'informations sur la façon dont le compilateur Microsoft C gère la rétrogradation des entiers.  La conversion en entier ou la conversion de type de l'entier provoque le même comportement.  
+ Si elle ne peut pas être représentée, le résultat est défini par l'implémentation. Consultez [Conversions de cast de type](../c-language/type-cast-conversions.md) pour obtenir plus d'informations sur la façon dont le compilateur Microsoft C gère la rétrogradation des entiers. La conversion en entier ou la conversion de type de l'entier provoque le même comportement.  
   
- Les valeurs non signées sont converties de manière à conserver leur valeur et ne sont pas représentables directement en C.  La seule exception est une conversion de `unsigned long` en **float** qui, au maximum, perd les bits de poids faible.  Sinon, la valeur est conservée, signée ou non signée.  Lorsqu'une valeur de type intégral est convertie en valeur flottante et que la valeur est en dehors de la plage qui peut être représentée, le résultat n'est pas défini. \(Consultez [Stockage des types de base](../c-language/storage-of-basic-types.md) pour plus d'informations sur la plage des types intégraux et à virgule flottante.\)  
+ Les valeurs non signées sont converties de manière à conserver leur valeur et ne sont pas représentables directement en C. La seule exception est une conversion de `unsigned long` en **float** qui, au maximum, perd les bits de poids faible. Sinon, la valeur est conservée, signée ou non signée. Lorsqu'une valeur de type intégral est convertie en valeur flottante et que la valeur est en dehors de la plage qui peut être représentée, le résultat n'est pas défini. (Consultez [Stockage des types de base](../c-language/storage-of-basic-types.md) pour plus d'informations sur la plage des types intégraux et à virgule flottante.)  
   
  Le tableau suivant répertorie les conversions de types intégraux non signés.  
   
-### Conversions depuis les types intégraux non signés  
+### <a name="conversions-from-unsigned-integral-types"></a>Conversions depuis les types intégraux non signés  
   
-|From|Pour|Méthode|  
-|----------|----------|-------------|  
+|De|Pour|Méthode|  
+|----------|--------|------------|  
 |`unsigned char`|`char`|Conserver le modèle binaire. Le bit de poids fort devient un bit de signe|  
 |`unsigned char`|**short**|Extension zéro|  
 |`unsigned char`|**long**|Extension zéro|  
@@ -75,9 +92,9 @@ printf_s( "%hd\n", j );   // Prints -3
   
  **Section spécifique à Microsoft**  
   
- Pour le compilateur Microsoft 32 bits C, le type `unsigned int` équivaut au type `unsigned long`.  La conversion d'une valeur `unsigned int` s'effectue de la même façon que la conversion de `unsigned long`.  Les conversions de valeurs `unsigned long` en **float** ne sont pas exactes si la valeur convertie est supérieure à la valeur **long** signée positive maximale.  
+ Pour le compilateur Microsoft 32 bits C, le type `unsigned int` équivaut au type `unsigned long`. La conversion d'une valeur `unsigned int` s'effectue de la même façon que la conversion de `unsigned long`. Les conversions de valeurs `unsigned long` en **float** ne sont pas exactes si la valeur convertie est supérieure à la valeur **long** signée positive maximale.  
   
  **FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [Conversions d'assignation](../c-language/assignment-conversions.md)
+## <a name="see-also"></a>Voir aussi  
+ [Conversions d’assignation](../c-language/assignment-conversions.md)

@@ -1,45 +1,62 @@
 ---
-title: "Description des arguments | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "argc (argument)"
-  - "arguments (C++), pour fonction main"
-  - "argv (argument)"
-  - "envp (argument)"
-  - "main (fonction), syntaxe"
+title: Description des arguments | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- envp argument
+- main function, syntax
+- arguments [C++], for main function
+- argv argument
+- argc argument
 ms.assetid: 91c2cbe3-9aca-4277-afa1-6137eb8fb704
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Description des arguments
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 588d052380286498181b1062f616618408e5fe99
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-Le paramètre `argc` dans les fonctions **main** et **wmain** est un entier spécifiant le nombre d'arguments passés au programme depuis la ligne de commande.  Le nom du programme étant considéré comme un argument, la valeur `argc` est d'au moins un.  
+---
+# <a name="argument-description"></a>Description des arguments
+Le paramètre `argc` dans les fonctions **main** et **wmain** est un entier spécifiant le nombre d’arguments passés au programme depuis la ligne de commande. Le nom du programme étant considéré comme un argument, la valeur `argc` est d'au moins un.  
   
-## Remarques  
- Le paramètre `argv` est un tableau de pointeurs vers des chaînes terminées par le caractère NULL qui représente les arguments de programme.  Chaque élément du tableau pointe vers une représentation sous forme de chaîne d'un argument passé à **main** \(ou **wmain**\). \(Pour plus d'informations sur les tableaux, consultez [Déclarations de tableau](../c-language/array-declarations.md).\) Le paramètre `argv` peut être déclaré soit comme tableau de pointeurs en type `char` \(`char *argv[]`\) soit comme pointeur vers des pointeurs en type `char` \(`char **argv`\).  Pour **wmain**, le paramètre `argv` peut être déclaré soit comme tableau de pointeurs en type `wchar_t` \(`wchar_t *argv[]`\) soit comme pointeur vers des pointeurs en type `wchar_t` \(`wchar_t **argv`\).  
+## <a name="remarks"></a>Notes  
+ Le paramètre `argv` est un tableau de pointeurs vers des chaînes terminées par le caractère NULL qui représente les arguments de programme. Chaque élément du tableau pointe vers une représentation sous forme de chaîne d’un argument passé à **main** (ou **wmain**). (Pour plus d'informations sur les tableaux, consultez [Déclarations de tableau](../c-language/array-declarations.md).) Le paramètre `argv` peut être déclaré soit comme tableau de pointeurs en type `char` (`char *argv[]`) soit comme pointeur vers des pointeurs en type `char` (`char **argv`). Pour **wmain**, le paramètre `argv` peut être déclaré soit comme tableau de pointeurs en type `wchar_t` (`wchar_t *argv[]`) soit comme pointeur vers des pointeurs en type `wchar_t` (`wchar_t **argv`).  
   
- Par convention, `argv`**\[0\]** est la commande avec laquelle le programme est appelé.  Toutefois, il est possible de générer un processus utilisant [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425) et si vous utilisez à la fois le premier et le deuxième argument \(`lpApplicationName` et `lpCommandLine`\), `argv`**\[0\]** peut ne pas être le nom exécutable. Utilisez [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) pour récupérer le nom exécutable.  
+ Par convention, `argv`**[0]** est la commande avec laquelle le programme est appelé.  Toutefois, il est possible de générer un processus utilisant [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425) et si vous utilisez à la fois le premier et le deuxième argument (`lpApplicationName` et `lpCommandLine`), `argv`**[0]** peut ne pas être le nom exécutable. Utilisez [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) pour récupérer le nom exécutable.  
   
- Le dernier pointeur \(`argv[argc]`\) est **NULL**. \(Consultez [getenv](../c-runtime-library/reference/getenv-wgetenv.md) dans la *Référence de la bibliothèque runtime* pour une connaître autre méthode pour obtenir des informations de variable d'environnement.\)  
+ Le dernier pointeur (`argv[argc]`) est **NULL**. (Consultez [getenv](../c-runtime-library/reference/getenv-wgetenv.md) dans la *Référence de la bibliothèque runtime* pour une connaître autre méthode pour obtenir des informations de variable d'environnement.)  
   
  **Section spécifique à Microsoft**  
   
- Le paramètre `envp` est un pointeur vers un tableau de chaînes terminées par le caractère NULL qui représentent les valeurs définies dans les variables d'environnement de l'utilisateur.  Le paramètre `envp` peut être déclaré comme tableau de pointeurs en type `char` \(`char *envp[]`\) ou comme pointeur vers des pointeurs en type `char` \(`char **envp`\).  Dans une fonction **wmain**, le paramètre `envp` peut être déclaré comme tableau de pointeurs vers `wchar_t` \(`wchar_t *envp[]`\) ou comme pointeur vers des pointeurs en `wchar_t` \(`wchar_t **envp`\).  La fin du tableau est affichée par un pointeur **NULL** \*.  Notez que le bloc environnement passé à **main** ou **wmain** est une copie « figée » de l'environnement actuel.  Si vous modifiez ultérieurement l'environnement via un appel à \_**putenv** ou `_wputenv`, l'environnement actuel \(tel que retourné par `getenv`\/`_wgetenv` et les variables `_environ` ou `_wenviron`\) est modifié, mais pas le bloc dirigé vers `envp`.  Le paramètre `envp` est compatible ANSI en C, mais pas en C\+\+.  
+ Le paramètre `envp` est un pointeur vers un tableau de chaînes terminées par le caractère NULL qui représentent les valeurs définies dans les variables d'environnement de l'utilisateur. Le paramètre `envp` peut être déclaré comme tableau de pointeurs en type `char` (`char *envp[]`) ou comme pointeur vers des pointeurs en type `char` (`char **envp`). Dans une fonction **wmain**, le paramètre `envp` peut être déclaré comme tableau de pointeurs vers `wchar_t` (`wchar_t *envp[]`) ou comme pointeur vers des pointeurs en `wchar_t` (`wchar_t **envp`). La fin du tableau est affichée par un pointeur **NULL** \*. Notez que le bloc environnement passé à **main** ou **wmain** est une copie « figée » de l'environnement actuel. Si vous modifiez ultérieurement l'environnement via un appel à _**putenv** ou `_wputenv`, l'environnement actuel (tel que retourné par `getenv`/`_wgetenv` et les variables `_environ` ou `_wenviron`) est modifié, mais pas le bloc dirigé vers `envp`. Le paramètre `envp` est compatible ANSI en C, mais pas en C++.  
   
  **FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonction main et exécution du programme](../c-language/main-function-and-program-execution.md)

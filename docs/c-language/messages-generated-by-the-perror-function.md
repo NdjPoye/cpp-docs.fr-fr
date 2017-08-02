@@ -1,26 +1,43 @@
 ---
-title: "Messages g&#233;n&#233;r&#233;es par la fonction perror | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Messages générées par la fonction perror | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: ec560a55-adf2-4959-9ebf-9ac4e58ab3b5
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Messages g&#233;n&#233;r&#233;es par la fonction perror
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: b8c4371cdb1c5d359e68f3a692c1501546f52fa3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-**ANSI 4.9.10.4** Messages générés par la fonction `perror`  
+---
+# <a name="messages-generated-by-the-perror-function"></a>Messages générés par la fonction perror
+**ANSI 4.9.10.4** Messages générés par la fonction `perror`  
   
  La fonction `perror` génère les messages suivants :  
   
@@ -64,5 +81,5 @@ caps.handback.revision: 7
 36 Resource deadlock would occur  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions des bibliothèques](../c-language/library-functions.md)
