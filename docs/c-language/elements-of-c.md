@@ -1,33 +1,50 @@
 ---
-title: "&#201;l&#233;ments de C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conventions, lexicales"
-  - "conventions lexicales"
+title: "Éléments de C | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- lexical conventions
+- conventions, lexical
 ms.assetid: 20668a49-cab7-4153-a6d9-7439aac3ff3b
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# &#201;l&#233;ments de C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: d9dcf001dc048ed129b36b200fadef3917420d56
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-Cette section décrit les éléments du langage de programmation C, notamment les noms, les nombres, et les caractères utilisés pour construire un programme C.  La syntaxe de C ANSI étiquette ces jetons de composants.  
+---
+# <a name="elements-of-c"></a>Éléments de C
+Cette section décrit les éléments du langage de programmation C, y compris les noms, chiffres et caractères utilisés pour construire un programme C. La syntaxe ANSI C étiquette ces jetons de composant.  
   
- Cette section explique comment définir des jetons et comment le compilateur les évalue.  
+ Cette section explique comment définir les jetons et comment le compilateur les évalue.  
   
- Les sujets abordés sont les suivants :  
+ Les rubriques suivantes sont présentées :  
   
 -   [Jetons](../c-language/c-tokens.md)  
   
@@ -41,11 +58,11 @@ Cette section décrit les éléments du langage de programmation C, notamment le
   
 -   [Littéraux de chaîne](../c-language/c-string-literals.md)  
   
--   [Ponctuation et caractères spéciaux](../c-language/punctuation-and-special-characters.md)  
+-   [Caractères de ponctuation et spéciaux](../c-language/punctuation-and-special-characters.md)  
   
- La section inclut également des tables de référence pour [Trigraphes](../c-language/trigraphs.md), [Limites des constantes à virgule flottante](../c-language/limits-on-floating-point-constants.md), [Limites d'entier C\+\+](../c-language/cpp-integer-limits.md), et [Séquences d'échappement](../c-language/escape-sequences.md).  
+ Cette section contient également des tables de référence pour les [trigraphes](../c-language/trigraphs.md), [limites des constantes à virgule flottante](../c-language/limits-on-floating-point-constants.md), [limites d’entier C++](../c-language/cpp-integer-limits.md), et [séquences d’échappement](../c-language/escape-sequences.md).  
   
- Les opérateurs sont des symboles \(les caractères uniques et des combinaisons de caractères\) qui spécifient comment les valeurs doivent être manipulées.  Chaque symbole est interprété comme une seule unité, appelée un jeton.  Pour plus d'informations, consultez [Opérateurs](../c-language/c-operators.md).  
+ Les opérateurs sont des symboles (caractères uniques et combinaisons de caractères) qui spécifient comment les valeurs doivent être manipulées. Chaque symbole est interprété comme une unité unique, appelée un jeton. Pour plus d’informations, consultez [Opérateurs](../c-language/c-operators.md).  
   
-## Voir aussi  
- [Référence du langage C](../c-language/c-language-reference.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de référence sur le langage C](../c-language/c-language-reference.md)

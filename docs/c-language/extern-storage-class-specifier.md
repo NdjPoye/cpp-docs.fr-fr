@@ -1,34 +1,51 @@
 ---
-title: "Sp&#233;cificateur extern de classe de stockage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "extern (mot clé) (C)"
-  - "extern (mot clé) (C), spécificateur de classe de stockage"
-  - "liaison externe, extern (modificateur)"
-  - "liaison externe, spécificateurs de classe de stockage"
-  - "spécificateurs de classe de stockage, extern"
+title: "Spécificateur extern de classe de stockage │ Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- extern keyword [C]
+- storage class specifiers, extern
+- extern keyword [C], storage class specifier
+- external linkage, storage-class specifiers
+- external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Sp&#233;cificateur extern de classe de stockage
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: be8f7e83ef2157157c2cea241eefe49453e0060f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-Une variable déclarée avec le spécificateur de classe de stockage `extern` est une référence à une variable du même nom définie au niveau externe dans n'importe quel fichier source du programme.  La déclaration interne `extern` est utilisée pour rendre la définition de variable au niveau externe visible dans le bloc.  Sauf déclaration contraire au niveau externe, une variable déclarée avec le mot clé `extern` est visible uniquement dans le bloc dans lequel elle est déclarée.  
+---
+# <a name="extern-storage-class-specifier"></a>Spécificateur extern de classe de stockage
+Une variable déclarée avec le spécificateur de classe de stockage `extern` est une référence à une variable du même nom définie au niveau externe dans n'importe quel fichier source du programme. La déclaration interne `extern` est utilisée pour rendre la définition de variable au niveau externe visible dans le bloc. Sauf déclaration contraire au niveau externe, une variable déclarée avec le mot clé `extern` est visible uniquement dans le bloc dans lequel elle est déclarée.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  Cet exemple montre les déclarations aux niveaux interne et externe :  
   
 ```  
@@ -76,11 +93,11 @@ void other( void )
 }  
 ```  
   
- Dans cet exemple, la variable `i` est définie au niveau externe avec la valeur initiale 1.  Une déclaration `extern` dans la fonction `main` permet de déclarer une référence à `i` au niveau externe.  La variable **static** `a` est initialisé à 0 par défaut, car l'initialiseur est omis.  L'appel à `printf` imprime les valeurs 1, 0, 0 et 0.  
+ Dans cet exemple, la variable `i` est définie au niveau externe avec la valeur initiale 1. Une déclaration `extern` dans la fonction `main` permet de déclarer une référence à `i` au niveau externe. La variable **static** `a` est initialisée à 0 par défaut, car l'initialiseur est omis. L'appel à `printf` imprime les valeurs 1, 0, 0 et 0.  
   
- Dans la fonction `other`, l'adresse de la variable globale `i` est utilisée pour initialiser la variable pointeur **static** `external_i`.  Cela fonctionne, car la variable globale possède une durée de vie **static**, ce qui signifie que son adresse ne change pas pendant l'exécution du programme.  Ensuite, la variable `i` est redéfinie comme variable locale avec la valeur initiale 16.  Cette redéfinition n'affecte pas la valeur de `i` au niveau externe, qui est masqué par l'utilisation de son nom pour la variable locale.  La valeur de `i` global est désormais accessible uniquement indirectement dans ce bloc, via le pointeur `external_i`.  La tentative d'assigner l'adresse de la variable **auto** `i` à un pointeur échoue, car elle peut être différente à chaque entrée dans le bloc.  La variable `a` est déclarée comme variable **static** et initialisé à 2.  Ce `a` n'est pas en conflit avec le `a` dans `main`, car les variables **static** au niveau interne sont visibles uniquement dans le bloc dans lequel elles sont déclarées.  
+ Dans la fonction `other`, l'adresse de la variable globale `i` est utilisée pour initialiser la variable pointeur **static** `external_i`. Cela fonctionne, car la variable globale possède une durée de vie **static**, ce qui signifie que son adresse ne change pas pendant l'exécution du programme. Ensuite, la variable `i` est redéfinie comme variable locale avec la valeur initiale 16. Cette redéfinition n'affecte pas la valeur de `i` au niveau externe, qui est masqué par l'utilisation de son nom pour la variable locale. La valeur de `i` global est désormais accessible uniquement indirectement dans ce bloc, via le pointeur `external_i`. La tentative d'assigner l'adresse de la variable **auto** `i` à un pointeur échoue, car elle peut être différente à chaque entrée dans le bloc. La variable `a` est déclarée comme variable **static** et initialisé à 2. Ce `a` n'est pas en conflit avec le `a` dans `main`, car les variables **static** au niveau interne sont visibles uniquement dans le bloc dans lequel elles sont déclarées.  
   
- La variable `a` augmente de 2. Le résultat est donc 4.  Si la fonction `other` était de nouveau appelée dans le même programme, la valeur initiale de `a` serait 4.  Les variables **static** internes conservent leurs valeurs lorsque le programme s'arrête, puis entrent à nouveau dans le bloc dans lequel elles sont déclarées.  
+ La variable `a` augmente de 2. Le résultat est donc 4. Si la fonction `other` était de nouveau appelée dans le même programme, la valeur initiale de `a` serait 4. Les variables **static** internes conservent leurs valeurs lorsque le programme s'arrête, puis entrent à nouveau dans le bloc dans lequel elles sont déclarées.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Spécificateurs de classe de stockage pour les déclarations de niveau interne](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

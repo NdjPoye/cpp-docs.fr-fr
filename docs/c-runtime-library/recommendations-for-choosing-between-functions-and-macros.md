@@ -1,33 +1,50 @@
 ---
-title: "Recommandations relatives au choix entre une fonction et une macro | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.functions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fonctions (CRT), différences par rapport aux macros"
-  - "macros, différences par rapport aux fonctions"
+title: Recommandations relatives au choix entre une fonction et une macro | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.functions
+dev_langs:
+- C++
+helpviewer_keywords:
+- functions [CRT], vs. macros
+- macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Recommandations relatives au choix entre une fonction et une macro
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 30b5a2c779e12dc16c37222f00ec45f296825498
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-La plupart des paramètres de la bibliothèque Runtime Microsoft sont compilées ou des fonctions assemblys, mais certaines routines sont implémentées en tant que macros.  Lorsqu'un fichier d'en\-tête indique une fonction et une macro version d'une routine, la définition de la macro est prioritaire, car il continue d'apparaître après la déclaration de fonction.  Lorsque vous appelez une routine qui est implémentée comme fonction et macro, vous pouvez forcer le compilateur pour utiliser la version de la fonction des deux manières suivantes :  
+---
+# <a name="recommendations-for-choosing-between-functions-and-macros"></a>Recommandations relatives au choix entre une fonction et une macro
+La plupart des routines de bibliothèque du Runtime Microsoft sont des fonctions compilées ou assemblées, mais certaines routines sont implémentées sous forme de macros. Lorsqu’un fichier d’en-tête déclare une fonction et une version macro d’une routine, la définition de macro est prioritaire, car elle apparaît toujours après la déclaration de fonction. Lorsque vous appelez une routine qui est implémentée à la fois comme une fonction et comme une macro, vous pouvez forcer le compilateur à utiliser la version de la fonction de deux manières :  
   
--   Placez le nom entre parenthèses actuel.  
+-   Mettre entre parenthèses le nom de la routine.  
   
     ```  
     #include <ctype.h>  
@@ -36,20 +53,20 @@ La plupart des paramètres de la bibliothèque Runtime Microsoft sont compilées
                         // function version of toupper.  
     ```  
   
--   « Éliminer » la définition de macro avec la directive d'`#undef` :  
+-   « Annuler la définition » de la définition de macro avec la directive `#undef` :  
   
     ```  
     #include <ctype.h>  
     #undef _toupper  
     ```  
   
- Si vous devez choisir entre une fonction et une macro implémentation d'une routine de bibliothèque, considérez les avantages et inconvénients suivants :  
+ Si vous devez choisir entre une implémentation de fonction et de macro d’une routine de bibliothèque, considérez les compromis suivants :  
   
--   **Speed versus size** le principal avantage de l'utilisation de macros est une durée d'exécution plus rapide.  Pendant le prétraitement, une macro est \(remplacée par sa définition\) incluse développé chaque fois qu'elle est utilisée.  Une définition de la fonction intervient seulement une fois que le nombre de fois elle est appelée.  Les macros peuvent augmenter le nombre d'instructions mais n'ont pas la surcharge associée aux appels de fonction.  
+-   **Vitesse et taille** Le principal avantage de l’utilisation des macros est la durée d’exécution plus rapide. Lors du prétraitement, une macro est développée (remplacée par sa définition) en ligne chaque fois qu’elle est utilisée. Une définition de fonction se produit une seule fois, quel que soit le nombre d’appels dont elle fait l’objet. Les macros peuvent augmenter la taille du code, mais n’ont pas la surcharge associée aux appels de fonction.  
   
--   La fonction de**Function evaluation** A pour résultat une adresse ; une macro contraire.  Vous ne pouvez pas utiliser le nom d'une macro dans les contextes qui requièrent un pointeur.  Par exemple, vous pouvez déclarer un pointeur à une fonction, mais pas un pointeur vers une macro.  
+-   **Évaluation de la fonction** Une fonction correspond à une adresse ; ce n’est pas le cas d’une macro. Par conséquent, vous ne pouvez pas utiliser un nom de macro dans des contextes nécessitant un pointeur. Par exemple, vous pouvez déclarer un pointeur vers une fonction, mais pas un pointeur vers une macro.  
   
--   **Type\-checking** lorsque vous déclarez une fonction, le compilateur peut activer les types d'arguments.  Étant donné que vous ne pouvez pas déclarer une macro, le compilateur ne peut pas activer de macro types d'argument ; bien qu'il peut vérifier le nombre d'arguments pour passer à une macro.  
+-   **Vérification de type** Lorsque vous déclarez une fonction, le compilateur peut vérifier les types d’arguments. Étant donné que vous ne pouvez pas déclarer une macro, le compilateur ne peut pas vérifier les types d’arguments d’une macro ; il peut cependant vérifier le nombre d’arguments que vous passez à une macro.  
   
-## Voir aussi  
- [Fonctions de bibliothèque CRT](../c-runtime-library/crt-library-features.md)
+## <a name="see-also"></a>Voir aussi  
+ [Fonctionnalités de bibliothèque CRT](../c-runtime-library/crt-library-features.md)

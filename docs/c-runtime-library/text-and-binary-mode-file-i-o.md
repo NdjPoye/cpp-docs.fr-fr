@@ -1,48 +1,65 @@
 ---
-title: "E/S de fichier en mode texte et binaire | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.io"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "accès binaire"
-  - "accès binaire, E/S de fichier en mode binaire"
-  - "fichiers (C++), open (fonctions)"
-  - "fonctions (CRT), accès au fichier"
-  - "E/S (CRT), binaire"
-  - "E/S (CRT), fichiers texte"
-  - "E/S (CRT), modes de translation"
-  - "fichiers texte, E/S"
-  - "modes de translation (E/S de fichier)"
-  - "translation, modes"
+title: E/S de fichier en mode texte et binaire | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.io
+dev_langs:
+- C++
+helpviewer_keywords:
+- files [C++], open functions
+- I/O [CRT], text files
+- functions [CRT], file access
+- binary access, binary mode file I/O
+- translation, modes
+- I/O [CRT], binary
+- text files, I/O
+- I/O [CRT], translation modes
+- translation modes (file I/O)
+- binary access
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# E/S de fichier en mode texte et binaire
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: a788242344c7cb3b89765e7476fdd23dbf68982d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-Les opérations d'E\/S sont lieu dans l'un des deux modes de traduction, texte ou binaire, selon le mode dans lequel le fichier est ouvert.  Les fichiers de données sont généralement traités en mode texte.  Pour contrôler le fichier en mode de traduction, on peut :  
+---
+# <a name="text-and-binary-mode-file-io"></a>E/S de fichier en mode texte et binaire
+Les opérations d’E/S sur les fichiers ont lieu dans un des deux modes de translation de deux, texte ou binaire, selon le mode dans lequel le fichier est ouvert. Les fichiers de données sont généralement traités en mode texte. Pour contrôler le mode de translation de fichier, vous pouvez :  
   
--   Conserver le paramètre par défaut actuel et spécifier l'autre mode uniquement lorsque vous ouvrez des fichiers sélectionnés.  
+-   Conserver le paramètre de valeur par défaut actuel et spécifier le mode alternatif uniquement lorsque vous ouvrez les fichiers sélectionnés.  
   
--   Utilisez la fonction [\_set\_fmode](../c-runtime-library/reference/set-fmode.md) pour modifier le mode par défaut des fichiers ouverts récemment.  Utilisez [\_get\_fmode](../c-runtime-library/reference/get-fmode.md) pour rechercher le mode par défaut actuel.  Le paramètre par défaut initial est mode texte \(`_O_TEXT`\).  
+-   Utiliser la fonction [_set_fmode](../c-runtime-library/reference/set-fmode.md) pour modifier le mode par défaut pour les nouveaux fichiers ouverts. Utiliser [_get_fmode](../c-runtime-library/reference/get-fmode.md) pour rechercher le mode par défaut en cours. Le paramètre par défaut est le mode texte (`_O_TEXT`).  
   
--   Modifiez le type de mode de traduction par défaut directement en définissant la variable globale [\_fmode](../c-runtime-library/fmode.md) dans votre programme.  La fonction `_set_fmode` définit la valeur de cette variable, mais elle peut également être définie directement.  
+-   Modifiez le mode de traduction par défaut directement en définissant la variable globale [_fmode](../c-runtime-library/fmode.md) dans votre programme. La fonction `_set_fmode` définit la valeur de cette variable, mais elle peut également être définie directement.  
   
- Lorsque vous appelez une fonction de type FILE\- OPEN par exemple [\_open](../c-runtime-library/reference/open-wopen.md), [fopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen\_s](../c-runtime-library/reference/fopen-s-wfopen-s.md), [freopen](../c-runtime-library/reference/freopen-wfreopen.md), [freopen\_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md), [\_fsopen](../c-runtime-library/reference/fsopen-wfsopen.md) ou [\_sopen\_s](../c-runtime-library/reference/sopen-s-wsopen-s.md), vous pouvez remplacer la valeur par défaut actuelle de `_fmode` en spécifiant l'argument approprié pour la fonction [\_set\_fmode](../c-runtime-library/reference/set-fmode.md).  `stdin`, `stdout`, et les flux `stderr` s'ouvrent toujours en mode texte par défaut ; vous pouvez également remplacer cette valeur par défaut lors de l'ouverture de l'un de ces fichiers.  Utilisez [\_setmode](../c-runtime-library/reference/setmode.md) pour modifier le type de mode de traduction dans le descripteur de fichier lorsque le fichier est ouvert.  
+ Lorsque vous appelez une fonction d’ouverture de fichier telle que [_open](../c-runtime-library/reference/open-wopen.md), [fopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md), [freopen](../c-runtime-library/reference/freopen-wfreopen.md), [freopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md), [_fsopen](../c-runtime-library/reference/fsopen-wfsopen.md) ou [_sopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md), vous pouvez remplacer le paramètre par défaut actuel de `_fmode` en spécifiant l’argument approprié pour la fonction [_set_fmode](../c-runtime-library/reference/set-fmode.md). Les flux `stdin`, `stdout` et `stderr` s’ouvrent toujours en mode texte par défaut ; vous pouvez également remplacer cette valeur par défaut lors de l’ouverture de ces fichiers. Utilisez [_setmode](../c-runtime-library/reference/setmode.md) pour modifier le mode de translation en utilisant le descripteur de fichier une fois que le fichier est ouvert.  
   
-## Voir aussi  
- [Entrées et sorties](../c-runtime-library/input-and-output.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Entrée et sortie](../c-runtime-library/input-and-output.md)   
  [Routines runtime par catégorie](../c-runtime-library/run-time-routines-by-category.md)

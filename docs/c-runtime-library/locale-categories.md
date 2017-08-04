@@ -1,45 +1,62 @@
 ---
-title: "Cat&#233;gories de param&#232;tres r&#233;gionaux | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LC_MAX"
-  - "LC_MIN"
-  - "LC_MONETARY"
-  - "LC_TIME"
-  - "LC_NUMERIC"
-  - "LC_COLLATE"
-  - "LC_CTYPE"
-  - "LC_ALL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LC_ALL (constante)"
-  - "LC_COLLATE (constante)"
-  - "LC_CTYPE (constante)"
-  - "LC_MAX (constante)"
-  - "LC_MIN (constante)"
-  - "LC_MONETARY (constante)"
-  - "LC_NUMERIC (constante)"
-  - "LC_TIME (constante)"
-  - "constantes de paramètres régionaux"
+title: "Catégories de paramètres régionaux | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LC_MAX
+- LC_MIN
+- LC_MONETARY
+- LC_TIME
+- LC_NUMERIC
+- LC_COLLATE
+- LC_CTYPE
+- LC_ALL
+dev_langs:
+- C++
+helpviewer_keywords:
+- LC_MIN constant
+- LC_MONETARY constant
+- LC_CTYPE constant
+- locale constants
+- LC_MAX constant
+- LC_ALL constant
+- LC_TIME constant
+- LC_NUMERIC constant
+- LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Cat&#233;gories de param&#232;tres r&#233;gionaux
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: dcb4fe96d79ed7b66814c33ecda5d2f68481a4fa
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-## Syntaxe  
+---
+# <a name="locale-categories"></a>Catégories de paramètres régionaux
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -47,26 +64,26 @@ caps.handback.revision: 7
   
 ```  
   
-## Notes  
- Les catégories de paramètres régionaux sont des constantes manifestes utilisées par les routines de localisation pour spécifier quelle partie des informations de paramètres régionaux d'un programme sera utilisée.  Les paramètres régionaux font référence à la localité \(ou le pays ou la région\) pour lesquels certains aspects de votre programme peuvent être personnalisés.  Les zones dépendant des paramètres régionaux incluent par exemple la mise en forme des dates ou le format d'affichage des valeurs monétaires.  
+## <a name="remarks"></a>Remarques  
+ Les catégories de paramètres régionaux sont des constantes manifestes utilisées par les routines de localisation pour spécifier dans quelle portion des informations de paramètres régionaux d’un programme les informations seront utilisées. Les paramètres régionaux font référence à la localité (ou au pays/à la région) pour laquelle certains aspects de votre programme peuvent être personnalisés. Les zones dépendant des paramètres régionaux comprennent par exemple la mise en forme des dates et le format d'affichage des valeurs monétaires.  
   
 |Catégorie de paramètres régionaux|Parties de programme affectées|  
-|---------------------------------------|------------------------------------|  
-|`LC_ALL`|Le comportement spécifique aux paramètres régionaux \(toutes les catégories\)|  
+|---------------------|-------------------------------|  
+|`LC_ALL`|Tous les comportements spécifiques aux paramètres régionaux (toutes les catégories)|  
 |`LC_COLLATE`|Comportement des fonctions `strcoll` et `strxfrm`|  
-|`LC_CTYPE`|Le comportement des fonctions gérant les caractères \(à l'exception de **isdigit**, `isxdigit`, `mbstowcs`, et `mbtowc`, qui ne sont pas concernés\)|  
-|`LC_MAX`|Identique à `LC_TIME`.|  
-|`LC_MIN`|Identique à `LC_ALL`.|  
-|`LC_MONETARY`|Les informations de mise en forme monétaire retournées par la fonction `localeconv`.|  
-|`LC_NUMERIC`|Le caractère de virgule décimale pour les routines de sortie mises en forme \(par exemple `printf`\), les routines de conversion de données, et les informations de mise en forme non monétaires retournées par `localeconv`.|  
+|`LC_CTYPE`|Les fonctions de gestion de caractères (sauf **isdigit**, `isxdigit`, `mbstowcs` et `mbtowc`, qui ne sont pas affectés)|  
+|`LC_MAX`|Identique à `LC_TIME`|  
+|`LC_MIN`|Identique à `LC_ALL`|  
+|`LC_MONETARY`|Les informations de mise en forme monétaire retournées par la fonction `localeconv`|  
+|`LC_NUMERIC`|Le caractère de virgule décimale pour les routines de sortie mise en forme (comme `printf`), pour les routines de conversion de données, et pour les informations de mise en forme non monétaire retournées par `localeconv`|  
 |`LC_TIME`|Comportement de la fonction `strftime`|  
   
- Pour obtenir un exemple, consultez [setlocale, \_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).  
+ Consultez [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) pour obtenir un exemple.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [localeconv](../c-runtime-library/reference/localeconv.md)   
- [setlocale, \_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [strcoll, fonctions](../c-runtime-library/strcoll-functions.md)   
- [strftime, wcsftime, \_strftime\_l, \_wcsftime\_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
- [strxfrm, wcsxfrm, \_strxfrm\_l, \_wcsxfrm\_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)   
+ [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)   
+ [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)   
  [Constantes globales](../c-runtime-library/global-constants.md)

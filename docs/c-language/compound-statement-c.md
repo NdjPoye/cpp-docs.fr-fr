@@ -1,51 +1,68 @@
 ---
-title: "Instruction composite (C) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "instructions composées"
-  - "instructions, composée"
+title: Instruction composite (C) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- compound statements
+- statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Instruction composite (C)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 5c576ea616bce80f86f599501370e7d88797901e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-Une instruction composée \(également appelée « bloc »\) correspond généralement au corps d'une autre instruction, telle que l'instruction **if**.  L'article [Déclarations et types](../c-language/declarations-and-types.md) décrit la forme et la signification des déclarations qui peuvent figurer en tête d'une instruction composée.  
+---
+# <a name="compound-statement-c"></a>Instruction composite (C)
+Une instruction composée (également appelée « bloc ») correspond généralement au corps d'une autre instruction, telle que l'instruction **if**. L'article [Déclarations et types](../c-language/declarations-and-types.md) décrit la forme et la signification des déclarations qui peuvent figurer en tête d'une instruction composée.  
   
-## Syntaxe  
- *compound\-statement*:  
- **{**  *declaration\-list*  opt *statement\-list* opt **}**  
+## <a name="syntax"></a>Syntaxe  
+ *compound-statement*:  
+ **{**  *declaration-list* opt*statement-list*opt**}**  
   
- *declaration\-list*:  
- *declaration*  
+ *declaration-list* :  
+ *déclaration*  
   
- *declaration\-list declaration*  
+ *declaration-list declaration*  
   
- *statement\-list*:  
- s*tatement*  
+ *statement-list*:  
+ *instruction*  
   
- *statement\-list statement*  
+ *statement-list statement*  
   
- S'il existe des déclarations, elles doivent précéder toutes les instructions.  La portée de chaque identificateur déclaré au début d'une instruction composée s'étend de son point de déclaration jusqu'à la fin du bloc.  Elle est visible dans l'ensemble du bloc à moins qu'une déclaration du même identificateur existe dans un bloc interne.  
+ S'il existe des déclarations, elles doivent précéder toutes les instructions. La portée de chaque identificateur déclaré au début d'une instruction composée s'étend de son point de déclaration jusqu'à la fin du bloc. Elle est visible dans l'ensemble du bloc à moins qu'une déclaration du même identificateur existe dans un bloc interne.  
   
- Les identificateurs figurant dans une instruction composée sont supposés **auto** à moins qu'ils soient explicitement déclarés autrement à l'aide de **register**, **static** ou `extern`, à l'exception des fonctions, qui peuvent être `extern` uniquement.  Vous pouvez omettre le spécificateur `extern` dans les déclarations de fonction et la fonction sera néanmoins `extern`.  
+ Les identificateurs figurant dans une instruction composée sont supposés **auto** à moins qu'ils soient explicitement déclarés autrement à l'aide de **register**, **static** ou `extern`, à l'exception des fonctions, qui peuvent être `extern` uniquement. Vous pouvez omettre le spécificateur `extern` dans les déclarations de fonction et la fonction sera néanmoins `extern`.  
   
- Le stockage n'est pas alloué et l'initialisation n'est pas autorisée si une variable ou une fonction est déclarée dans une instruction composée au moyen de la classe de stockage `extern`.  La déclaration fait référence à une variable ou fonction externe définie ailleurs.  
+ Le stockage n'est pas alloué et l'initialisation n'est pas autorisée si une variable ou une fonction est déclarée dans une instruction composée au moyen de la classe de stockage `extern`. La déclaration fait référence à une variable ou fonction externe définie ailleurs.  
   
- Les variables déclarées dans un bloc avec le mot clé **auto** ou **register** sont réaffectées et, si nécessaire, initialisées chaque fois que l'instruction composée est écrite.  Ces variables ne sont pas définies une fois que vous quittez l'instruction composée.  Si une variable déclarée dans un bloc possède l'attribut **static**, elle est initialisée au début de l'exécution du programme et conserve sa valeur tout au long du programme.  Consultez [Classes de stockage](../c-language/c-storage-classes.md) pour plus d'informations sur l'attribut **static**.  
+ Les variables déclarées dans un bloc avec le mot clé **auto** ou **register** sont réaffectées et, si nécessaire, initialisées chaque fois que l'instruction composée est écrite. Ces variables ne sont pas définies une fois que vous quittez l'instruction composée. Si une variable déclarée dans un bloc possède l'attribut **static**, elle est initialisée au début de l'exécution du programme et conserve sa valeur tout au long du programme. Consultez [Classes de stockage](../c-language/c-storage-classes.md) pour plus d'informations sur l'attribut **static**.  
   
  L'exemple suivant illustre une instruction composée :  
   
@@ -60,5 +77,5 @@ if ( i > 0 )
   
  Dans cet exemple, si `i` est supérieur à 0, toutes les instructions figurant dans l'instruction composée sont exécutées dans l'ordre.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instructions](../c-language/statements-c.md)

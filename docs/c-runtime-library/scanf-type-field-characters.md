@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -42,10 +42,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 93dafafddd271eb7e068a0e822be6dd8535fc721
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 82ace58042dd9c7f9cceb0ef0781968532ae7b29
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="scanf-type-field-characters"></a>Caractères du champ de type scanf
@@ -63,12 +64,12 @@ Les informations suivantes s'appliquent à la famille de fonctions `scanf` , y c
 |`i`|Entier. Hexadécimal, si la chaîne d'entrée commence par "0x" ou "0X", octal si la chaîne commence par "0", sinon décimal.|Pointeur vers `int`.|Non.|  
 |`o`|Entier octal.|Pointeur vers `int`.|Non.|  
 |`p`|Adresse du pointeur en notation hexadécimale. Le nombre maximal de chiffres lus dépend de la taille d’un pointeur (32 ou 64 bits), lequel varie selon l’architecture de la machine. "0x" ou "0X" sont acceptés en tant que préfixes.|Pointeur vers `void*`.|Non.|  
-|`u`|Entier décimal non signé.|Pointeur vers `unsigned``int`.|Non.|  
+|`u`|Entier décimal non signé.|Pointeur vers `unsigned int`.|Non.|  
 |`x`|Entier hexadécimal.|Pointeur vers `int`.|Non.|  
 |`e`, `E`, `f`, `F`, `g`, `G`|Valeur à virgule flottante composée d’un signe facultatif (+ ou -), d’une série d’un ou de plusieurs chiffres décimaux contenant la virgule décimale et d’un exposant facultatif ("e" ou "E") suivi d’une valeur entière éventuellement signée.|Pointeur vers `float`.|Non.|  
 |`a`, `A`|Valeur à virgule flottante composée d’une série d’un ou plusieurs chiffres hexadécimaux contenant une virgule décimale facultative et un exposant ("p" ou "P"), suivie d’une valeur décimale.|Pointeur vers `float`.|Non.|  
 |`n`|Aucune entrée lue à partir du flux ou de la mémoire tampon.|Pointeur vers `int`, où sont stockés un certain nombre de caractères correctement lus à partir du flux ou de la mémoire tampon jusqu'à ce stade dans l'appel des fonctions `scanf` ou `wscanf` .|Non.|  
-|`s`|Chaîne, jusqu'au premier espace blanc (espace, tabulation ou nouvelle ligne). Pour lire des chaînes non délimitées par des espaces, utilisez des crochets (`[ ]`), comme indiqué dans [Spécification de largeur scanf](../c-runtime-library/scanf-width-specification.md).|Quand il est utilisé avec les fonctions `scanf` , signifie un tableau de caractères codés sur un octet. Quand il est utilisé avec les fonctions `wscanf` , signifie un tableau de caractères larges. Dans les deux cas, le tableau de caractères doit être suffisamment grand pour le champ d'entrée, ainsi que le caractère Null de fin, qui est automatiquement ajouté.|Requis. La taille inclut un espace pour un terminateur Null.|  
+|`s`|Chaîne, jusqu'au premier espace blanc (espace, tabulation ou nouvelle ligne). Pour lire des chaînes non délimitées par des espaces, utilisez des crochets (`[ ]`), comme indiqué dans [scanf Width Specification](../c-runtime-library/scanf-width-specification.md).|Quand il est utilisé avec les fonctions `scanf` , signifie un tableau de caractères codés sur un octet. Quand il est utilisé avec les fonctions `wscanf` , signifie un tableau de caractères larges. Dans les deux cas, le tableau de caractères doit être suffisamment grand pour le champ d'entrée, ainsi que le caractère Null de fin, qui est automatiquement ajouté.|Requis. La taille inclut un espace pour un terminateur Null.|  
 |`S`|Chaîne de caractères de taille inverse, jusqu'au premier espace blanc (espace, tabulation ou nouvelle ligne). Pour lire des chaînes non délimitées par des espaces, utilisez des crochets (`[ ]`), comme indiqué dans [Spécification de largeur scanf](../c-runtime-library/scanf-width-specification.md).|Quand il est utilisé avec les fonctions `scanf`, signifie un tableau de caractères codés sur un octet. Quand il est utilisé avec les fonctions `wscanf`, signifie un tableau de caractères larges. Dans les deux cas, le tableau de caractères doit être suffisamment grand pour le champ d'entrée, ainsi que le caractère Null de fin, qui est automatiquement ajouté.|Requis. La taille inclut un espace pour un terminateur Null.|  
   
   
@@ -85,10 +86,10 @@ scanf_s("%10s %8s", string1, 11, string2, 9);
   
 |Pour lire un caractère|Utilisez cette fonction|Avec ces spécificateurs de format|  
 |--------------------------|-----------------------|----------------------------------|  
-|octet unique|fonctions `scanf`|`c`, `hc` ou `hC`|  
-|octet unique|fonctions `wscanf`|`C`, `hc` ou `hC`|  
-|larges|fonctions `wscanf`|`c`, `lc` ou `lC`|  
-|larges|fonctions `scanf`|`C`, `lc` ou `lC`|  
+|octet unique|fonctions`scanf` |`c`, `hc`ou `hC`|  
+|octet unique|fonctions`wscanf` |`C`, `hc`ou `hC`|  
+|larges|fonctions`wscanf` |`c`, `lc`ou `lC`|  
+|larges|fonctions`scanf` |`C`, `lc`ou `lC`|  
   
  Pour analyser des chaînes avec les fonctions `scanf` et `wscanf` , utilisez le tableau ci-dessus en vous servant des spécificateurs de type de format `s` et `S` à la place de `c` et `C`.  
   

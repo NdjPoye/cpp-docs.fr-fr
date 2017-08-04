@@ -1,36 +1,53 @@
 ---
-title: "_WAIT_CHILD, _WAIT_GRANDCHILD | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_WAIT_GRANDCHILD"
-  - "WAIT_CHILD"
-  - "WAIT_GRANDCHILD"
-  - "_WAIT_CHILD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_WAIT_CHILD (constante)"
-  - "_WAIT_GRANDCHILD (constante)"
-  - "WAIT_CHILD (constante)"
-  - "WAIT_GRANDCHILD (constante)"
+title: _WAIT_CHILD, _WAIT_GRANDCHILD | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _WAIT_GRANDCHILD
+- WAIT_CHILD
+- WAIT_GRANDCHILD
+- _WAIT_CHILD
+dev_langs:
+- C++
+helpviewer_keywords:
+- WAIT_CHILD constant
+- WAIT_GRANDCHILD constant
+- _WAIT_CHILD constant
+- _WAIT_GRANDCHILD constant
 ms.assetid: 7acd96fa-d118-4339-bb00-e5afaf286945
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _WAIT_CHILD, _WAIT_GRANDCHILD
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 842d2121ae1bc1f90f50f7fe3feb2a109af5c813
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-## Syntaxe  
+---
+# <a name="waitchild-waitgrandchild"></a>_WAIT_CHILD, _WAIT_GRANDCHILD
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -38,14 +55,14 @@ caps.handback.revision: 6
   
 ```  
   
-## Notes  
- La fonction `_cwait` peut être utilisée par tout processus pour attendre tout autre processus \(si l'ID de processus est connu\).  L'argument d'action peut être l'une des valeurs suivantes :  
+## <a name="remarks"></a>Remarques  
+ La fonction `_cwait` peut être utilisée par n’importe quel processus pour attendre un autre processus (si l’ID du processus est connu). L’argument action peut être une des valeurs suivantes :  
   
 |Constante|Signification|  
-|---------------|-------------------|  
-|`_WAIT_CHILD`|Le processus appelant attend jusqu'à ce que le nouveau processus spécifié se termine.|  
-|`_WAIT_GRANDCHILD`|Le processus appelant attend jusqu'à ce que le nouveau processus spécifié, et tous les processus créés par ce nouveau processus, se terminent.|  
+|--------------|-------------|  
+|`_WAIT_CHILD`|Le processus appelant attend jusqu'à l’arrêt du nouveau processus spécifié.|  
+|`_WAIT_GRANDCHILD`|Le processus appelant attend jusqu'à l’arrêt du nouveau processus spécifié et de tous les processus qu’il crée.|  
   
-## Voir aussi  
- [\_cwait](../c-runtime-library/reference/cwait.md)   
+## <a name="see-also"></a>Voir aussi  
+ [_cwait](../c-runtime-library/reference/cwait.md)   
  [Constantes globales](../c-runtime-library/global-constants.md)

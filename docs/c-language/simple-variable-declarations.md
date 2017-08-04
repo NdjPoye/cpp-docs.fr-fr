@@ -1,60 +1,75 @@
 ---
-title: "D&#233;clarations de variables simples | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "déclarer des variables, simples"
-  - "variables non typées"
+title: "Déclarations de variables simples | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- untyped variables
+- declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# D&#233;clarations de variables simples
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 03d3939ef04a6a1a8bc5e3cd3ec5bfe56236ca0f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 05/18/2017
 
-La déclaration d'une variable simple, la forme la plus simple d'un déclarateur direct, spécifie le nom et le type de la variable.  Elle spécifie également la classe de stockage et le type de données de la variable.  
+---
+# <a name="simple-variable-declarations"></a>Déclarations de variables simples
+La déclaration d'une variable simple, la forme la plus simple d'un déclarateur direct, spécifie le nom et le type de la variable. Elle spécifie également la classe de stockage et le type de données de la variable.  
   
- Les classes de stockage ou les types \(ou les deux\) sont requis sur les déclarations de variables.  Les variables non typées \(telles que `var;`\) génèrent des avertissements.  
+ Les classes de stockage ou les types (ou les deux) sont requis sur les déclarations de variables. Les variables non typées (telles que `var;`) génèrent des avertissements.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
  `declarator`:  
- *pointer*  opt  
+ *pointer* opt  
   
- *direct\-declarator*  
+ *direct-declarator*  
   
- *direct\-declarator* :  
+ *direct-declarator* :  
  *identifier*  
   
- *identifier* :  
+ *identificateur* :  
  *nondigit*  
   
  *identifier nondigit*  
   
  *identifier digit*  
   
- Pour les types arithmétiques, de structure, d'union, d'énumération et void, ainsi que pour les types représentés par des noms `typedef`, des déclarateurs simples peuvent être utilisés dans une déclaration car le spécificateur de type fournit toutes les informations de saisie.  Les types de pointeur, de tableau et de fonction nécessitent des déclarateurs plus complexes.  
+ Pour les types arithmétiques, de structure, d'union, d'énumération et void, ainsi que pour les types représentés par des noms `typedef`, des déclarateurs simples peuvent être utilisés dans une déclaration car le spécificateur de type fournit toutes les informations de saisie. Les types de pointeur, de tableau et de fonction nécessitent des déclarateurs plus complexes.  
   
- Vous pouvez utiliser une liste d'identificateurs séparés par une virgule \(**,**\) pour spécifier plusieurs variables dans la même déclaration.  Toutes les variables définies dans la déclaration ont le même type de base.  Par exemple :  
+ Vous pouvez utiliser une liste d'identificateurs séparés par une virgule (**,**) pour spécifier plusieurs variables dans la même déclaration. Toutes les variables définies dans la déclaration ont le même type de base. Exemple :  
   
 ```  
 int x, y;        /* Declares two simple variables of type int */  
 int const z = 1; /* Declares a constant value of type int */  
 ```  
   
- Les variables `x` et `y` peuvent contenir n'importe quelle valeur de l'ensemble définie par le type `int` pour une implémentation particulière.  L'objet simple `z` est initialisé à 1 et n'est pas modifiable.  
+ Les variables `x` et `y` peuvent contenir n'importe quelle valeur de l'ensemble définie par le type `int` pour une implémentation particulière. L'objet simple `z` est initialisé à 1 et n'est pas modifiable.  
   
  Si la déclaration de `z` concernait une variable statique non initialisée ou était dans la portée du fichier, elle recevrait la valeur initiale 0, et cette valeur ne serait pas modifiable.  
   
@@ -65,5 +80,5 @@ unsigned long reply, flag; /* Declares two variables
   
  Dans cet exemple, les deux variables `reply` et `flag` ont le type `unsigned long` et contiennent des valeurs intégrales non signées.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Déclarateurs et déclarations de variable](../c-language/declarators-and-variable-declarations.md)
