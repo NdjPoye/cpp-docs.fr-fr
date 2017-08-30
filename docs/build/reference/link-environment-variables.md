@@ -1,43 +1,63 @@
 ---
-title: "Variables d&#39;environnement de LINK | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "link"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "variables d'environnement (C++), LINK"
-  - "LIB (variable d'environnement)"
-  - "LINK (outil C++), variables d'environnement"
-  - "variables, environnement"
+title: LINK Environment Variables | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- link
+dev_langs:
+- C++
+helpviewer_keywords:
+- variables, environment
+- LINK tool [C++], environment variables
+- LIB environment variable
+- environment variables [C++], LINK
 ms.assetid: 9a3d3291-0cc4-4a7d-9d50-80e351b90708
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Variables d&#39;environnement de LINK
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: f9e816f2f6309af33ed7517616033abf8cd3b82e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/30/2017
 
-L'outil LINK utilise les variables d'environnement suivantes :  
+---
+# <a name="link-environment-variables"></a>LINK Environment Variables
+
+The LINK tool uses the following environment variables:  
   
--   LINK et \_LINK\_, si elles sont définies.  L'outil LINK ajoute les options et les arguments définis dans la variable d'environnement LINK, puis il ajoute les options et les arguments définis dans la variable d'environnement \_LINK\_ aux arguments de ligne de commande, avant le traitement.  
+-   LINK and _LINK\_, if defined. The LINK tool prepends the options and arguments defined in the LINK environment variable and appends the options and arguments defined in the _LINK\_ environment variable to the command line arguments before processing.  
   
--   LIB, si elle est définie.  L'outil LINK utilise le chemin d'accès LIB quand vous recherchez un objet, une bibliothèque ou un autre fichier spécifié sur la ligne de commande ou par l'option [\/BASE](../../build/reference/base-base-address.md).  Il utilise également le chemin d'accès LIB pour rechercher un fichier .pdb nommé dans un objet.  La variable LIB peut contenir une ou plusieurs spécifications de chemin d'accès, séparées par des points\-virgules.  Un chemin d'accès doit pointer vers le sous\-répertoire \\lib de votre installation Visual C\+\+.  
+-   LIB, if defined. The LINK tools uses the LIB path when searching for an object, library, or other file specified on the command line or by the [/BASE](../../build/reference/base-base-address.md) option. It also uses the LIB path to find a .pdb file named in an object. The LIB variable can contain one or more path specifications, separated by semicolons. One path must point to the \lib subdirectory of your Visual C++ installation.  
   
--   PATH, si l'outil doit exécuter CVTRES et ne peut pas trouver le fichier dans le même répertoire que LINK.  \(LINK requiert CVTRES pour lier un fichier .res.\) PATH doit pointer vers le sous\-répertoire \\bin de votre installation Visual C\+\+.  
+-   PATH, if the tool needs to run CVTRES and cannot find the file in the same directory as LINK itself. (LINK requires CVTRES to link a .res file.) PATH must point to the \bin subdirectory of your Visual C++ installation.  
   
--   TMP, pour spécifier un répertoire lors de la liaison de fichiers OMF ou .res.  
+-   TMP, to specify a directory when linking OMF or .res files.  
   
-## Voir aussi  
- [Définition des options de l'Éditeur de liens](../../build/reference/setting-linker-options.md)   
- [Options de l'Éditeur de liens](../../build/reference/linker-options.md)   
- [Définition du chemin d'accès et des variables d'environnement pour la génération à partir de la ligne de commande](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
+## <a name="see-also"></a>See Also  
+
+[Setting Linker Options](../../build/reference/setting-linker-options.md)   
+[Linker Options](../../build/reference/linker-options.md)   
+[Build C/C++ code on the command line](../../build/building-on-the-command-line.md)  
+[Set the Path and Environment Variables for Command-Line Builds](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)

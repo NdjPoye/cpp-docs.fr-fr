@@ -1,116 +1,72 @@
 ---
-title: "D&#233;finition du chemin d&#39;acc&#232;s et des variables d&#39;environnement pour la g&#233;n&#233;ration &#224; partir de la ligne de commande | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "include"
-  - "Lib"
-  - "Path"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe (compilateur C++), variables d'environnement"
-  - "compiler le code source (C++), à partir de la ligne de commande"
-  - "variables d'environnement (C++)"
-  - "variables d'environnement (C++), CL (compilateur)"
-  - "INCLUDE (mot réservé)"
-  - "LIB (variable d'environnement)"
-  - "LINK (outil C++), variables d'environnement"
-  - "LINK (outil C++), chemin"
-  - "PATH (mot réservé)"
-  - "fichier VCVARS32.bat"
+title: Set the Path and Environment Variables for Command-Line Builds | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords:
+- include
+- Lib
+- Path
+dev_langs:
+- C++
+helpviewer_keywords:
+- environment variables [C++]
+- VCVARS32.bat file
+- cl.exe compiler [C++], environment variables
+- LINK tool [C++], environment variables
+- PATH reserved word
+- INCLUDE reserved word
+- LINK tool [C++], path
+- LIB environment variable
+- compiling source code [C++], from command line
+- environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# D&#233;finition du chemin d&#39;acc&#232;s et des variables d&#39;environnement pour la g&#233;n&#233;ration &#224; partir de la ligne de commande
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: e43003163d29eb3b731e374d0e56b2e9284aea26
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/30/2017
 
-Les outils de génération en ligne de commande [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] requièrent plusieurs variables d'environnement personnalisées pour votre installation.  Quand [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] est installé, il crée des fichiers de commandes qui définissent les variables d'environnement requises, puis il crée des raccourcis permettant d'ouvrir une fenêtre d'invite de commandes dans laquelle ces variables sont déjà définies.  Pour utiliser ces outils en ligne de commande, vous pouvez exécuter l'un de ces raccourcis ou ouvrir une fenêtre d'invite de commandes traditionnelle puis exécuter le fichier de commandes vcvarsall.bat.  
+---
+# <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Set the Path and Environment Variables for Command-Line Builds
+
+The Visual C++ command-line build tools require several environment variables that are customized for your installation and build configuration. When a C++ workload is installed by the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] installer, it creates customized command files, or batch files, that set the required environment variables. The installer then uses these command files to create shortcuts for the Windows Start menu to open a developer command prompt window. These shortcuts set up the environment variables for a specific build configuration. When you want to use the command-line tools, you can run one of these shortcuts, or you can open a plain command prompt window and then run one of the custom command files to set the build configuration environment yourself. For more information, see [Build C/C++ Code on the Command Line](building-on-the-command-line.md).  
   
- Les outils en ligne de commande [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] utilisent les variables d'environnement PATH, TMP, INCLUDE, LIB et LIBPATH, et peuvent également utiliser des variables d'environnement spécifiques aux outils.  Comme les valeurs de ces variables d'environnement sont spécifiques à votre installation et sont susceptibles d'être modifiées par des mises à niveau ou des mises à jour du produite, nous vous recommandons d'utiliser vcvarsall.bat ou un raccourci vers la fenêtre d'invite de commandes développeur au lieu de les définir vous\-même.  Pour obtenir des informations sur les variables d'environnement spécifiques utilisées par le compilateur et l'éditeur de liens, consultez [Variables d'environnement CL](../build/reference/cl-environment-variables.md) et [Variables d'environnement de LINK](../build/reference/link-environment-variables.md).  
+The Visual C++ command-line tools use the PATH, TMP, INCLUDE, LIB, and LIBPATH environment variables, and also use other environment variables specific to your installed tools, platforms, and SDKs. Even a simple [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] installation may set twenty or more environment variables. Because the values of these environment variables are specific to your installation and your choice of build configuration, and can be changed by product updates or upgrades, we strongly recommend that you use a developer command prompt shortcut or one of the customized command files to set them, instead of setting them in the Windows environment yourself. 
+
+To see which environment variables are set by a developer command prompt shortcut, you can use the SET command. Open a plain command prompt window and capture the output of the SET command for a baseline. Open a developer command prompt window and capture the output of the SET command for comparison. A diff tool such as the one built into the Visual Studio IDE can be useful to compare the environment variables and see what is set by the developer command prompt. For information about the specific environment variables used by the compiler and linker, see [CL Environment Variables](../build/reference/cl-environment-variables.md) and [LINK Environment Variables](../build/reference/link-environment-variables.md).  
   
 > [!NOTE]
->  Plusieurs outils en ligne de commande et options d'outils exigent des autorisations d'administrateur.  Pour pouvoir les utiliser, nous vous recommandons d'ouvrir une fenêtre d'invite de commandes en utilisant l'option **Exécuter en tant qu'administrateur** \(dans le menu contextuel de la fenêtre d'invite de commandes que vous souhaitez ouvrir\).  
+>  Several command-line tools or tool options may require Administrator permission. If you have permission issues when you use them, we recommend that you open the developer command prompt window by using the **Run as Administrator** option. On Windows 10, right-click to open the shortcut menu for the command prompt window, then choose **More**, **Run as administrator**.  
   
-## Utilisation des raccourcis d'invite de commandes  
- Le raccourci d'invite de commandes développeur qui est inclus dans chaque édition de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] ouvre une fenêtre d'invite de commandes et définit l'environnement afin d'utiliser l'ensemble d'outils 32 bits natif x86 pour cibler les processeurs x86.  Des fenêtres d'invite de commandes pour compilateurs croisés 32 bits qui ciblent les plateformes x64 et ARM sont également disponibles.  Selon votre système et l'édition de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] installée, un raccourci d'invite de commandes pour un ensemble d'outils 64 bits natif x64 qui cible les processeurs x64, et un autre pour un compilateur croisé 64 bits qui cible les processeurs x86, peuvent également être disponibles.  Ces versions de l'ensemble d'outils en ligne de commande sont disponibles dans toutes les éditions de Visual Studio :  
-  
- x86 sur x86  
- Utilisez cet ensemble d'outils pour créer des fichiers de sortie pour les ordinateurs x86.  Il s'exécute en tant que processus 32 bits natif sur un ordinateur x86 et sous WOW64 sur un système d'exploitation Windows 64 bits.  
-  
- [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] sur les ordinateurs x86 \(compilateur croisé [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]\)  
- Utilisez cet ensemble d'outils pour créer des fichiers de sortie pour [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  Il s'exécute en tant que processus 32 bits natif sur un ordinateur x86 et sous WOW64 sur un système d'exploitation Windows 64 bits.  
-  
- ARM sur les ordinateurs x86 \(compilateur croisé ARM\)  
- Utilisez cet ensemble d'outils pour créer des fichiers de sortie pour les ordinateurs ARM.  Il s'exécute en tant que processus 32 bits natif sur un ordinateur x86 et sous WOW64 sur un système d'exploitation Windows 64 bits.  
-  
- Ces versions de l'ensemble d'outils en ligne de commandes sont disponibles sur les plateformes 64 bits :  
-  
- x86 sur [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]  
- Utilisez cet ensemble d'outils pour créer des fichiers de sortie pour les ordinateurs x86.  Il s'exécute en tant que processus natif sur un système d'exploitation Windows 64 bits.  
-  
- [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] sur [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]  
- Utilisez cet ensemble d'outils pour créer des fichiers de sortie pour les ordinateurs [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  Il s'exécute en tant que processus natif sur un système d'exploitation Windows 64 bits.  
-  
- ARM sur les ordinateurs x64 \(compilateur croisé ARM\)  
- Utilisez cet ensemble d'outils pour créer des fichiers de sortie pour les ordinateurs ARM.  Il s'exécute en tant que processus 64 bits natif sur un système d'exploitation Windows 64 bits.  
-  
-#### Pour ouvrir une fenêtre d'invite de commandes développeur  
-  
-1.  Quand l'écran d'accueil de Windows 8 est affiché, tapez Visual Studio Tools.  Notez que les résultats de la recherche changent à mesure que vous tapez ; lorsque **Visual Studio Tools** apparaît, choisissez cette option.  
-  
-     Dans les versions antérieures de Windows, choisissez **Démarrer** et tapez Visual Studio Tools dans la zone de recherche.  Lorsque **Visual Studio Tools** apparaît dans les résultats de la recherche, choisissez cette option.  
-  
-2.  Dans le dossier **Visual Studio Tools**, ouvrez **Invite de commandes développeur** pour votre version de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  \(Pour l'exécuter en tant qu'administrateur, ouvrez le menu contextuel de l'invite de commandes développeur et choisissez **Exécuter en tant qu'administrateur**.\)  
-  
- L'invite de commandes développeur définit l'environnement afin d'utiliser l'ensemble d'outils 32 bits natif pour cibler les processeurs x86.  Choisissez l'**invite de commandes des outils croisés x64** afin d'utiliser l'ensemble d'outils 32 bits natif pour cibler les processeurs x64.  Choisissez l'**invite de commandes des outils croisés ARM** afin d'utiliser l'ensemble d'outils 32 bits natif pour cibler les processeurs ARM.  Choisissez l'**invite de commandes des outils natifs x64** afin d'utiliser l'ensemble d'outils 64 bits natif pour cibler les processeurs x64.  
-  
-## Utilisation de vcvarsall.bat dans une fenêtre d'invite de commandes  
- L'exécution de vcvarsall.bat dans une fenêtre d'invite de commandes traditionnelle vous permet de définir les variables d'environnement pour configurer la ligne de commande pour une compilation 32 bits ou 64 bits native, ou pour une compilation croisée sur des processeurs x86, x64 ou ARM.  Si aucun argument n'est fourni, vcvarsall.bat configure les variables d'environnement pour utiliser le compilateur 32 bits natif pour des cibles x86.  Vous pouvez toutefois l'utiliser pour configurer les compilateurs.  Si vous spécifiez une configuration de compilateur qui n'est pas installée ou n'est pas disponible sur l'architecture de votre ordinateur de build, un message s'affiche.  Le tableau suivant montre les arguments pris en charge.  
-  
-|Argument Vcvarsall.bat|Compilateur|Architecture de l'ordinateur de build|Architecture de sortie de génération|  
-|----------------------------|-----------------|-------------------------------------------|------------------------------------------|  
-|x86|natif 32 bits x86|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|x86|  
-|x86\_amd64|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] sur x86 croisé|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|x86\_arm|ARM sur x86 croisé|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|ARM|  
-|amd64|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 64 bits natif|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|amd64\_x86|x86 sur [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] croisé|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|x86|  
-|amd64\_arm|ARM sur [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] croisé|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|ARM|  
-  
- La procédure suivante illustre la configuration d'une invite de commandes dans le but d'utiliser l'ensemble d'outils 32 bits natif pour cibler les plateformes x86.  
-  
-#### Pour exécuter vcvarsall.bat  
-  
-1.  À l'invite de commandes, accédez au répertoire d'installation de [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)].  \(Cet emplacement dépend du système et de l'installation de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], mais un emplacement standard est C:\\Program Files \(x86\)\\Microsoft Visual Studio *version*\\VC\\.\) Par exemple, entrez :  
-  
-     cd "\\Program Files \(x86\)\\Microsoft Visual Studio 12.0\\VC"  
-  
-2.  Pour configurer cette fenêtre d'invite de commandes pour des générations en ligne de commande x86 32 bits, à l'invite de commandes, entrez :  
-  
-     `vcvarsall x86`  
-  
- [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] fournit également vcvars32.bat pour configurer un environnement de ligne de commande.  Le fichier vcvars32.bat est limité à la définition des variables d'environnement appropriées pour permettre des générations en ligne de commande x86 32 bits.  Il est équivalent à la commande `vcvarsall x86`.  
-  
- Si vous utilisez [DEVENV](../Topic/Devenv%20Command%20Line%20Switches.md) pour des générations en ligne de commande, l'environnement défini par vcvarsall.bat ou vcvars32.bat n'affecte pas vos builds, à moins que vous spécifiiez également l'option **\/useenv**.  
-  
-> [!CAUTION]
->  Le fichier vcvarsall.bat peut varier d'un ordinateur à l'autre.  Ne remplacez pas un fichier vcvarsall.bat manquant ou endommagé en utilisant un fichier provenant d'un autre ordinateur.  Réexécutez le programme d'installation de [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] pour remplacer le fichier manquant.  
->   
->  Le fichier vcvarsall.bat varie également d'une version à l'autre.  Si la version actuelle de [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] est installée sur un ordinateur qui possède également une version antérieure de [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)], n'exécutez pas vcvarsall.bat et vcvars32.bat issus des différentes versions dans la même fenêtre d'invite de commandes.  
-  
-## Voir aussi  
- [Génération à partir de la ligne de commande](../build/building-on-the-command-line.md)   
- [Liaison](../build/reference/linking.md)   
- [Options de l'Éditeur de liens](../build/reference/linker-options.md)   
- [Compilation d'un programme C\/C\+\+](../build/reference/compiling-a-c-cpp-program.md)   
- [Options du compilateur](../build/reference/compiler-options.md)
+## <a name="see-also"></a>See Also  
+
+[Build C/C++ code on the command line](../build/building-on-the-command-line.md)   
+[Linking](../build/reference/linking.md)   
+[Linker Options](../build/reference/linker-options.md)   
+[Compiling a C/C++ Program](../build/reference/compiling-a-c-cpp-program.md)   
+[Compiler Options](../build/reference/compiler-options.md)
