@@ -1,5 +1,5 @@
 ---
-title: "Introduction à Visual C++ pour les utilisateurs UNIX | Microsoft Docs"
+title: Introduction to Visual C++ for UNIX Users | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,56 +31,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
-ms.openlocfilehash: 524be35ec1e1db511b7fd4c2ab2b87d83c54325c
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 6eaba7ea947bc6a9c79c67745876bc0d67e73314
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="introduction-to-visual-c-for-unix-users"></a>Introduction à Visual C++ pour les utilisateurs UNIX
-Cette rubrique fournit des informations aux utilisateurs UNIX qui débutent avec Visual C++ et souhaitent être plus productifs.  
+# <a name="introduction-to-visual-c-for-unix-users"></a>Introduction to Visual C++ for UNIX Users
+
+This topic provides information for UNIX users who are new to Visual C++ and want to become productive with Visual C++ and the Visual Studio Integrated Development Environment (IDE).  
   
-## <a name="getting-started-on-the-command-line"></a>Débuter sur la ligne de commande  
- Vous pouvez utiliser Visual C++ à partir de la ligne de commande, comme vous le feriez dans un environnement de ligne de commande UNIX. Vous compilez à partir de l'invite de commandes, à l'aide du compilateur de ligne de commande C et C++ (CL.EXE), et d'outils tels que NMAKE.EXE, la version Microsoft de l'utilitaire UNIX.  
+## <a name="getting-started-on-the-command-line"></a>Getting Started on the Command Line  
+
+You can use Visual C++ from the command line in a similar way that you would use a UNIX command-line environment. You compile from the command prompt by using the command-line C and C++ compiler (CL.EXE), linker (LINK.EXE), and other tools, including NMAKE.EXE, the Microsoft version of the UNIX make utility.  
   
- Sous UNIX, les commandes sont installées dans un dossier commun, tel que /usr/bin. Dans Visual C++, les outils en ligne de commande sont installés dans votre répertoire d’installation dans VC\bin (et pour une installation par défaut, dans Program Files\Microsoft Visual Studio 8\VC\bin). Pour utiliser les outils en ligne de commande, exécutez vsvars32.bat, qui se trouve dans votre répertoire d'installation dans Common7\Tools. Cela ajoute le répertoire bin à votre chemin d’accès et définit les autres chemins d’accès nécessaires pour compiler les programmes Visual C++ à partir de la ligne de commande. Pour plus d’informations, consultez [Génération à partir de la ligne de commande](../build/building-on-the-command-line.md) et [Procédure pas à pas : compilation d’un programme C++ natif sur la ligne de commande](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
+In UNIX, commands are installed in a common folder, such as /usr/bin. In Visual C++, the command-line tools are installed in your Visual Studio installation directory in the VC\bin subdirectory and its subdirectories. Unlike UNIX, these tools are not available in a plain command prompt window. To use the command-line tools, use a developer command prompt shortcut, or run a developer command file such as vcvarsall.bat. This sets up the path and other environment variables that are necessary to compile Visual C++ programs from the command line. For more information, see [Build C/C++ code on the command line](../build/building-on-the-command-line.md) and [Walkthrough: Compiling a Native C++ Program on the Command Line](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
   
-> [!NOTE]
->  Si vous ouvrez une invite de commandes avec l’**invite de ligne de commandes Visual Studio** à partir du menu **Démarrer**, vsvars32.bat s’exécute.  
+To open a developer command prompt shortcut, enter *developer command prompt* in the desktop search control and choose the **Developer Command Prompt** result for your version of Visual Studio. To choose a developer command prompt that is preconfigured for a particular host and target architecture, open the **Start** menu (the Windows icon in the corner of the desktop) and then scroll to the folder for your version of Visual Studio, such as **Visual Studio 2017**. Open the folder and choose the command prompt shortcut for your preferred host and target architecture.
   
- Pour profiter de fonctionnalités plus puissantes, telles que le débogueur Visual Studio, la saisie semi-automatique des instructions, etc., vous devez utiliser l’environnement de développement.  
+To take advantage of more powerful features, such as the Visual Studio debugger, IntelliSense code look-up and statement completion, visual designers, project management, and so on, you need to use the Visual Studio IDE.  
   
-## <a name="debugging-your-code"></a>Débogage de votre code  
- Si vous utilisez la ligne de commande et exécutez vos applications sur votre station de travail de développement, vous verrez qu'une boîte de dialogue permettant d'exécuter le débogueur [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] s'affiche quand votre code rencontre une violation d'accès mémoire, une exception non gérée ou d'autres erreurs irrécupérables. Si vous cliquez sur **OK**, l’environnement de développement Visual Studio se lance et le débogueur s’ouvre au point de défaillance. Il est possible de déboguer vos applications de cette façon et, dans ce cas, votre code source ne sera disponible que si vous avez effectué la compilation avec le commutateur [/Z7, /Zi, /ZI (format des informations de débogage)](../build/reference/z7-zi-zi-debug-information-format.md). Pour plus d’informations, consultez [Débogage du code natif](/visualstudio/debugger/debugging-native-code) et [Utilisation de l’IDE de Visual Studio pour le développement de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+## <a name="debugging-your-code"></a>Debugging Your Code  
+
+If you use the command line and run your applications on your development workstation, you will see that a dialog box to run the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] debugger is displayed when your code encounters a memory access violation, unhandled exception, or other unrecoverable errors. If you click **OK**, then the Visual Studio development environment is started, and the debugger will open to the point of failure. It is possible to debug your applications this way, and, in this case, your source code would only be available if you compiled with the [/Z7, /Zi, /ZI (Debug Information Format)](../build/reference/z7-zi-zi-debug-information-format.md) switch. For more information, see [Debugging Native Code](/visualstudio/debugger/debugging-native-code) and [Using the Visual Studio IDE for C++ Desktop Development](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-## <a name="using-the-development-environment"></a>Utilisation de l'environnement de développement  
- Il est plus facile d’utiliser l’environnement de développement pour modifier et générer votre code source dans un *projet*. Un projet est une collection de fichiers sources et de fichiers connexes qui seront compilés en une seule unité, telle qu’une bibliothèque ou un fichier exécutable. Un projet contient également des informations sur la façon dont les fichiers doivent être générés. Les informations sur les projets sont stockées dans un fichier projet avec l’extension .prj.  
+## <a name="using-the-development-environment"></a>Using the Development Environment  
+
+It is easier to use the development environment to edit and build your source code in a *project*. A project is a collection of source and related files that will be compiled into a single unit, such as a library or executable. A project also contains information on how the files are to be built. Information about projects is stored in a project file with the extension .prj.  
   
- Les applications composées de plusieurs bibliothèques et fichiers exécutables (chacun ayant pu être généré avec un jeu différent d’options du compilateur ou même dans un langage différent) sont stockées dans plusieurs projets qui font partie d’une seule et même *solution*. Une solution est une abstraction pour un conteneur qui regroupe plusieurs projets. Les informations sur les solutions sont stockées dans un fichier solution avec l’extension .sln. Pour plus d’informations, consultez [Solutions et projets dans Visual Studio](/visualstudio/ide/solutions-and-projects-in-visual-studio) et [Utilisation de l’IDE de Visual Studio pour le développement de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+An application that consists of multiple libraries and executables, each potentially built with a different set of compiler options or even in a different language, are stored in multiple projects that are part of a single *solution*. A solution is an abstraction for a container to group multiple projects together. Information about solutions is stored in a solution file with the extension .sln. For more information, see [Solutions and Projects in Visual Studio](/visualstudio/ide/solutions-and-projects-in-visual-studio) and [Using the Visual Studio IDE for C++ Desktop Development](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-## <a name="importing-your-existing-code"></a>Importation de votre code existant  
- Dans Visual C++, vous pouvez utiliser du code existant qui est configuré pour être compilé avec ou sans makefile, et le placer dans un projet [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Pour plus d’informations, consultez **Assistant Créer un projet à partir de fichiers de code existants**. Pour plus d’informations, consultez [Guide pratique pour créer un projet C++ à partir d’un code existant](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
+## <a name="importing-your-existing-code"></a>Importing Your Existing Code 
+ 
+You can use Visual C++ to build existing code that is set up to compile with or without a makefile and put it into a [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] project. For more information, see [How to: Create a C++ Project from Existing Code](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   
-## <a name="creating-a-new-project"></a>Création d'un projet  
- Vous pouvez créer des projets dans l'environnement de développement. Visual C++ propose de nombreux modèles qui fournissent du code standard pour différents projets courants. Vous pouvez utiliser les Assistants Application pour générer des projets à l'aide de schémas de code visant divers types d'application.  
+## <a name="creating-a-new-project"></a>Creating a New Project  
+
+You can create new projects in the development environment. Visual C++ provides numerous templates that provide standard code for various common projects. You can use application wizards to generate projects with code outlines for various application types.  
   
- Vous pouvez démarrer avec un projet vide dans l’**Assistant Application Console (Win32)**. Cochez la case **Projet vide**. Vous pourrez par la suite ajouter au projet de nouveaux fichiers et des fichiers existants.  
+You can start with an empty project by using the **Console Application (Win32) Wizard**. Select the **Empty Project** check box. You can then add new and existing files to the project later.  
   
- Quand vous créez un projet, vous devez lui attribuer un nom. Par défaut, le nom du projet est celui de la bibliothèque de liens dynamiques (DLL) ou du fichier exécutable généré par le projet. Pour plus d’informations, consultez [Création de solutions et de projets](/visualstudio/ide/creating-solutions-and-projects).  
+When you create a project, you must name the project. By default, the project name equals the name of the dynamic-link library (DLL) or executable that is build from the project. For more information, see [Creating Solutions and Projects](/visualstudio/ide/creating-solutions-and-projects).  
   
-## <a name="microsoft-specific-modifiers"></a>Modificateurs Microsoft spécifiques  
- Visual C++ contient plusieurs extensions au langage de programmation C++ standard. Ces extensions servent à spécifier des attributs de classe de stockage, des conventions d'appel de fonction et des fonctions d'adressage, entre autres choses. Pour obtenir une liste complète de toutes les extensions Visual C++, consultez [Modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).  
+## <a name="microsoft-specific-modifiers"></a>Microsoft-Specific Modifiers  
+
+Visual C++ contains several extensions to the standard C++ programming language to support programming for Windows operating systems. These extensions are used to specify storage class attributes, function calling conventions, and based addressing, among other things. For a complete list of all Visual C++ extensions, see [Microsoft-Specific Modifiers](../cpp/microsoft-specific-modifiers.md).  
   
- Vous pouvez désactiver toutes les extensions spécifiques Microsoft pour C++ à l’aide de l’option **/Za** du compilateur. Cette option est recommandée si vous souhaitez écrire du code devant s'exécuter sur plusieurs plateformes. Pour plus d’informations sur l’option **/Za** du compilateur, consultez [/Za, /Ze (désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md). Pour plus d’informations sur la conformité de Visual C++, consultez [Comportement non standard](../cpp/nonstandard-behavior.md).  
+You can disable all Microsoft-specific extensions to C++ by using the **/Za** compiler option. This option is recommended if you want to write code to run on multiple platforms. For more information on the **/Za** compiler option, see [/Za, /Ze (Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md). For more information on Visual C++ conformance, see [Nonstandard Behavior](../cpp/nonstandard-behavior.md).  
   
-## <a name="precompiled-headers"></a>En-têtes précompilés  
- Les compilateurs Microsoft C et C++ offrent des options pour la précompilation du code en C ou C++, y compris du code incorporé. Grâce à cela, vous pouvez compiler un corps de code stable, stocker l'état compilé du code dans un fichier et, lors des compilations suivantes, combiner le code précompilé avec du code qui est toujours en cours de développement. Les compilations ultérieures sont plus rapides, car le code stable n'a pas besoin d'être recompilé.  
+## <a name="precompiled-headers"></a>Precompiled Headers  
+
+The Microsoft C and C++ compilers provide options for precompiling any C or C++ code, including inline code. Using this performance feature, you can compile a stable body of code, store the compiled state of the code in a file, and, during subsequent compilations, combine the precompiled code with code that is still under development. Each subsequent compilation is faster because the stable code does not need to be recompiled.  
   
- Par défaut, tout code précompilé est spécifié dans les fichiers **stdafx.h** et **stdafx.cpp**. L’Assistant **Nouveau projet** créera automatiquement ces fichiers, sauf si vous désélectionnez l’option **En-tête précompilé**. Pour plus d’informations, consultez [Création de fichiers d’en-têtes précompilés](../build/reference/creating-precompiled-header-files.md).  
+By default, all precompiled code is specified in the files **stdafx.h** and **stdafx.cpp**. The **New Project** wizard will automatically create these files for you unless you deselect the **Precompiled header** option. For more information on precompiled headers, see [Creating Precompiled Header Files](../build/reference/creating-precompiled-header-files.md).  
   
-## <a name="related-sections"></a>Rubriques connexes  
- Pour plus d’informations, consultez [Portage d’UNIX vers Win32](../porting/porting-from-unix-to-win32.md).  
+## <a name="related-sections"></a>Related Sections  
+
+For more information, see [Porting from UNIX to Win32](../porting/porting-from-unix-to-win32.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Génération de programmes C/C++](../build/building-c-cpp-programs.md)
+## <a name="see-also"></a>See Also  
+
+[Building C/C++ Programs](../build/building-c-cpp-programs.md)

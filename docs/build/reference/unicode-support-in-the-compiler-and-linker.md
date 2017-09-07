@@ -1,58 +1,75 @@
 ---
-title: "Prise en charge Unicode dans le compilateur et l&#39;&#233;diteur de liens | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.UseUnicodeResponseFiles"
-  - "VC.Project.VCLibrarianTool.UseUnicodeResponseFiles"
-  - "VC.Project.VCCLCompilerTool.UseUnicodeResponseFiles"
-  - "VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unicode, Visual C++"
+title: Unicode Support in the Compiler and Linker | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.UseUnicodeResponseFiles
+- VC.Project.VCLibrarianTool.UseUnicodeResponseFiles
+- VC.Project.VCCLCompilerTool.UseUnicodeResponseFiles
+- VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
+dev_langs:
+- C++
+helpviewer_keywords:
+- Unicode, Visual C++
 ms.assetid: acc1d322-56b9-4696-a30e-2af891a4e288
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Prise en charge Unicode dans le compilateur et l&#39;&#233;diteur de liens
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 650d8fd430ff0825f0e2fb08d279c509dc62c5a6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/30/2017
 
-Cette rubrique décrit la prise en charge Unicode dans les outils de génération Visual C\+\+.  
+---
+# <a name="unicode-support-in-the-compiler-and-linker"></a>Unicode Support in the Compiler and Linker
+This topic describes Unicode support in the Visual C++ build tools.  
   
- Noms de fichiers  
- Les noms de fichiers spécifiés sur la ligne de commande ou dans les directives du compilateur \(telles que \#include\), peuvent désormais contenir des caractères Unicode.  
+ Filenames  
+ Filenames specified on the command line or in compiler directives (such as #include) may now contain Unicode characters.  
   
- Fichiers de code source  
- Les caractères Unicode sont désormais pris en charge dans les identificateurs, les macros, les littéraux de chaîne et de caractère, ainsi que dans les commentaires.  Les noms de caractères universels sont également pris en charge.  
+ Source code files  
+ Unicode characters are now supported in identifiers, macros, string and character literals, and in comments.  Universal character names are also now supported.  
   
- Des caractères Unicode peuvent être entrés dans un fichier de code source en respectant les encodages suivants :  
+ Unicode can be input into a source code file in the following encodings:  
   
--   UTF\-16 little endian avec ou sans marque d'ordre d'octet \(BOM, Byte Order Mark\)  
+-   UTF-16 little endian with or without byte order mark (BOM)  
   
--   UTF\-16 big endian avec ou sans BOM  
+-   UTF-16 big endian with or without BOM  
   
--   UTF\-8 avec BOM  
+-   UTF-8 with BOM  
   
- Sortie  
- Pendant la compilation, le compilateur génère des diagnostics sur la console au format UTF\-16.  Les caractères qui peuvent être affichés sur votre console dépendent des propriétés de la fenêtre de console.  La sortie de compilateur redirigée vers un fichier se trouve dans la page de codes de la console ANSI actuelle.  
+ Output  
+ During compilation, compiler outputs diagnostics to the console in UTF-16.  The characters that can be displayed at your console depend on the console window properties.  Compiler output redirected to a file is in the current ANSI console codepage.  
   
- Fichiers réponse et fichiers .DEF de l'éditeur de liens  
- Les fichiers réponse et les fichiers DEF peuvent être au format UTF\-16 avec une marque d'ordre d'octet \(Byte Order Mark, BOM\) ou au format ANSI.  Précédemment, seul le format ANSI était pris en charge.  
+ Linker response files and .DEF files  
+ Response files and DEF files can be either UTF-16 with a Byte Order Mark or ANSI.  Previously only ANSI was supported.  
   
- dumps .asm et .cod  
- Les dumps .asm et .cod sont par défaut au format ANSI à des fins de compatibilité avec MASM.  Utilisez \/FAu pour produire du code UTF\-8.  Notez que si vous spécifiez \/Fa, la source mélangée sera directement affichée et pourra sembler altérée, par exemple si le code source est au format UTF\-8 et que vous n'avez pas spécifié \/FAsu.  
+ .asm and .cod dumps  
+ .asm and .cod dumps are in ANSI by default for compatibility with MASM.  Use /FAu to output UTF-8.  Note that if you specify /FAs, the intermingled source will just be directly printed and may look garbled, for example if source code is UTF-8 and you didn't specify /FAsu.  
   
- Vous pouvez activer les noms de fichiers Unicode dans l'environnement de développement \(consultez [Comment : ouvrir les pages de propriétés d'un projet](../../misc/how-to-open-project-property-pages.md)\) en sélectionnant l'outil approprié et en sélectionnant la propriété **Utilisation de fichiers réponse UNICODE** qui est activée par défaut.  Vous pouvez décider de modifier cette valeur par défaut pour certaines raisons, notamment si vous modifiez votre environnement de développement pour utiliser un compilateur qui n'offre pas la prise en charge d'Unicode.  
+ You can enable Unicode file names in the development environment (see  [Working with Project Properties](../../ide/working-with-project-properties.md)) by selecting the appropriate tool and by selecting the **Enable Unicode Response Files** property, which is enabled by default. One reason you might change this default is if you modify your development environment to use a compiler that does not have Unicode support.  
   
-## Voir aussi  
- [Génération à partir de la ligne de commande](../../build/building-on-the-command-line.md)
+## <a name="see-also"></a>See Also  
+ [Build C/C++ code on the command line](../../build/building-on-the-command-line.md)

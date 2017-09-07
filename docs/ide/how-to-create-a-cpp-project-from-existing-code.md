@@ -1,44 +1,66 @@
 ---
-title: "Comment&#160;: cr&#233;er un projet C++ &#224; partir d&#39;un code existant | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++, créer des projets à partir de code existant"
+title: 'How to: Create a C++ Project from Existing Code | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++, creating projects from existing code
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Comment&#160;: cr&#233;er un projet C++ &#224; partir d&#39;un code existant
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: b0d8cf66dd95d2eeab454c01cae85d4f625fe5d9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/30/2017
 
-Dans [!INCLUDE[vsPro](../ide/includes/vspro_md.md)] et [!INCLUDE[vsUltShort](../ide/includes/vsultshort_md.md)], vous pouvez déplacer vos fichiers de code existants dans un projet Visual C\+\+ à l'aide de l'Assistant **Créer un projet à partir de fichiers de code existants**.  Cet Assistant n'est pas disponible dans les versions Express.  
+---
+# <a name="how-to-create-a-c-project-from-existing-code"></a>How to: Create a C++ Project from Existing Code
+
+In Visual Studio, you can port your existing code files into a Visual C++ project by using the **Create New Project From Existing Code Files** wizard. This wizard is not available in older Express editions of Visual Studio. This wizard creates a new solution and project that uses the MSBuild system to manage your source files and build configuration.  
   
- Le portage de vos fichiers de code existants dans un projet Visual C\+\+ vous permet d'utiliser des fonctionnalités IDE, telles qu'[IntelliSense](../Topic/Using%20IntelliSense.md), l'**Explorateur d'appels** et le [Gestionnaire de propriétés](../misc/property-manager.md).  
+Porting your existing code files into a Visual C++ project enables you to use all of the native MSBuild project management features built into the IDE. If you prefer to use your existing build system, such as nmake makefiles, CMake, or alternatives, you can use the Open Folder option instead. For more information, see [Open Folder projects in Visual C++](../ide/non-msbuild-projects.md). Both options let you use IDE features such as [IntelliSense](/visualstudio/ide/using-intellisense) and [Project Properties](../ide/working-with-project-properties.md).  
   
-### Pour créer un projet C\+\+ à partir de code existant  
+### <a name="to-create-a-c-project-from-existing-code"></a>To create a C++ project from existing code  
   
-1.  Dans le menu **Fichier**, pointez sur **Nouveau**, puis cliquez sur **Projet à partir du code existant**.  
+1.  On the **File** menu, point to **New**, and then click **Project From Existing Code**.  
   
-2.  Dans la première page de l'Assistant **Créer un projet à partir de fichiers de code existants**, sélectionnez **Visual C\+\+** dans la liste **Quel type de projet souhaitez\-vous créer ?**.  
+1.  On the first page of the **Create New Project from Existing Code Files** wizard, select **Visual C++** in the **What type of project would you like to create** list. Choose **Next** to continue. 
   
-3.  Dans les pages suivantes de l'Assistant, spécifiez les paramètres du projet que vous souhaitez créer.  
+1.  Specify your project location and the directory for your source files. For details on this page, see [Specify Project Location and Source Files, Create New Project From Existing Code Files Wizard](../ide/specify-project-location-and-source-files.md). Choose **Next** to continue.  
   
-4.  Cliquez sur **Terminer** pour générer le nouveau projet.  
+1.  Specify the project settings to use. For details on this page, see [Specify Project Settings, Create New Project From Existing Code Files Wizard](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md). Choose **Next** to continue.  
+
+1.  Specify the Debug configuration settings to use. For details on this page, see [Specify Debug Configuration Settings, Create New Project From Existing Code Files Wizard](../ide/specify-debug-configuration-settings.md). Choose **Next** to continue.  
+
+1.  Specify the Release configuration settings to use. For details on this page, see [Specify Release Configuration Settings, Create New Project From Existing Code Files Wizard](../ide/specify-release-configuration.md). Choose **Finish** to generate the new project.  
   
-## Voir aussi  
- [Spécifier l'emplacement du projet et les fichiers sources, Assistant Créer un projet à partir de fichiers de code existants](../ide/specify-project-location-and-source-files.md)   
- [Spécifier les paramètres du projet, Assistant Créer un projet à partir de fichiers de code existants](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md)   
- [Spécifier les paramètres de configuration Debug, Assistant Créer un projet à partir de fichiers de code existants](../ide/specify-debug-configuration-settings.md)   
- [Spécifier les paramètres de configuration Release, Assistant Créer un projet à partir de fichiers de code existants](../ide/specify-release-configuration.md)
+## <a name="see-also"></a>See Also  
+
+[Specify Project Location and Source Files, Create New Project From Existing Code Files Wizard](../ide/specify-project-location-and-source-files.md)   
+[Specify Project Settings, Create New Project From Existing Code Files Wizard](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md)   
+[Specify Debug Configuration Settings, Create New Project From Existing Code Files Wizard](../ide/specify-debug-configuration-settings.md)   
+[Specify Release Configuration Settings, Create New Project From Existing Code Files Wizard](../ide/specify-release-configuration.md)
