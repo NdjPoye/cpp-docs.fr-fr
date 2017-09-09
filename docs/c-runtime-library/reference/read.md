@@ -53,65 +53,69 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 6387edb05977f90fe9fb2419a1eccb47ac0b7b43
+ms.translationtype: MT
+ms.sourcegitcommit: 0286098cb87ecfea244269a8e5756829759b82f7
+ms.openlocfilehash: d4c7de72212754553ccd97127e02bbea4280e98f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="read"></a>_read
-Lit les données d’un fichier.  
+
+Reads data from a file.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      int _read(  
+int _read(  
    int fd,  
    void *buffer,  
    unsigned int count   
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- `fd`  
- Descripteur de fichier faisant référence au fichier ouvert.  
+### <a name="parameters"></a>Parameters  
+
+*fd*  
+File descriptor referring to the open file.  
   
- *buffer*  
- Emplacement de stockage des données.  
+*buffer*  
+Storage location for data.  
   
- *count*  
- Nombre maximal d’octets.  
+*count*  
+Maximum number of bytes.  
   
-## <a name="return-value"></a>Valeur de retour  
- _**lire** retourne le nombre d’octets lus, qui peut être inférieur à *nombre* s’il y a moins de *nombre* octets restant dans le fichier, ou si le fichier a été ouvert en mode texte, auquel cas chaque retour chariot-ligne flux paire (CR LF) est remplacé par un caractère de saut de ligne unique. Seul le caractère de saut de ligne unique est comptabilisé dans la valeur de retour. Le remplacement n’a pas de conséquence sur le pointeur de fichier.  
+## <a name="return-value"></a>Return Value  
+
+`_read` returns the number of bytes read, which might be less than *count* if there are fewer than *count* bytes left in the file or if the file was opened in text mode, in which case each carriage return-line feed pair `\r\n` is replaced with a single linefeed character `\n`. Only the single linefeed character is counted in the return value. The replacement does not affect the file pointer.  
   
- Si la fonction tente de lire à la fin du fichier, elle retourne 0. Si `fd` n’est pas valide, le fichier n’est pas ouvert pour lecture, ou le fichier est verrouillé, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, la fonction retourne -1 et définit `errno` avec la valeur `EBADF`.  
+If the function tries to read at end of file, it returns 0. If *fd* is not valid, the file is not open for reading, or the file is locked, the invalid parameter handler is invoked, as described in [Parameter Validation](../../c-runtime-library/parameter-validation.md). If execution is allowed to continue, the function returns -1 and sets `errno` to `EBADF`.  
   
- Si *buffer* a la valeur **NULL**, le gestionnaire de paramètre non valide est appelé. Si l’exécution est autorisée à se poursuivre, la fonction retourne -1 et `errno` prend la valeur `EINVAL`.  
+If *buffer* is **NULL**, the invalid parameter handler is invoked. If execution is allowed to continue, the function returns -1 and `errno` is set to `EINVAL`.  
   
- Pour plus d’informations sur ce code de retour et les autres codes, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+For more information about this and other return codes, see [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## <a name="remarks"></a>Notes  
- La fonction `_read` lit un maximum de *count* octets dans *buffer* à partir du fichier associé à `fd`. L’opération de lecture commence à la position actuelle du pointeur de fichier associé au fichier donné. À la fin de la l’opération de lecture, le pointeur de fichier pointe vers le caractère non lu suivant.  
+## <a name="remarks"></a>Remarks  
+
+The `_read` function reads a maximum of *count* bytes into *buffer* from the file associated with *fd*. The read operation begins at the current position of the file pointer associated with the given file. After the read operation, the file pointer points to the next unread character.  
   
- Si le fichier a été ouvert en mode texte, la lecture se termine quand `_read` rencontre un caractère CTRL+Z, qui est considéré comme un indicateur de fin de fichier. Utilisez [_lseek](../../c-runtime-library/reference/lseek-lseeki64.md) pour effacer l’indicateur de fin de fichier.  
+If the file was opened in text mode, the read terminates when `_read` encounters a CTRL+Z character, which is treated as an end-of-file indicator. Use [_lseek](../../c-runtime-library/reference/lseek-lseeki64.md) to clear the end-of-file indicator.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Requirements  
   
-|Routine|En-tête requis|  
+|Routine|Required header|  
 |-------------|---------------------|  
 |`_read`|\<io.h>|  
   
- Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md) dans l’introduction.  
+For more compatibility information, see [Compatibility](../../c-runtime-library/compatibility.md).  
   
-## <a name="libraries"></a>Bibliothèques  
- Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).  
+## <a name="libraries"></a>Libraries  
+
+All versions of the [C run-time libraries](../../c-runtime-library/crt-library-features.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a>Example  
   
-```  
+```C  
 // crt_read.c  
 /* This program opens a file named crt_read.txt  
  * and tries to read 60,000 bytes from  
@@ -149,22 +153,24 @@ int main( void )
 }  
 ```  
   
-## <a name="input-crtreadtxt"></a>Entrée : crt_read.txt  
+### <a name="input-crtreadtxt"></a>Input: crt_read.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-## <a name="output"></a>Sortie  
+### <a name="output"></a>Output  
   
 ```  
 Read 19 bytes from file  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [E/S de bas niveau](../../c-runtime-library/low-level-i-o.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [fread](../../c-runtime-library/reference/fread.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_write](../../c-runtime-library/reference/write.md)
+## <a name="see-also"></a>See Also  
+
+[Low-Level I/O](../../c-runtime-library/low-level-i-o.md)   
+[_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+[fread](../../c-runtime-library/reference/fread.md)   
+[_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
+[_write](../../c-runtime-library/reference/write.md)
+
