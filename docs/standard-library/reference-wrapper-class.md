@@ -1,5 +1,5 @@
 ---
-title: reference_wrapper, classe | Microsoft Docs
+title: reference_wrapper Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- reference_wrapper
 - functional/std::reference_wrapper
 - type_traits/std::reference_wrapper
 - xrefwrap/std::reference_wrapper
@@ -22,8 +21,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- reference_wrapper class
-- reference_wrapper
+- std::reference_wrapper [C++]
+- std::reference_wrapper [C++]
+- std::reference_wrapper [C++], result_type
+- std::reference_wrapper [C++], type
+- std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
 caps.latest.revision: 21
 author: corob-msft
@@ -43,17 +45,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 57485779c1813a0537829a940047d688907a82a7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4e6acb873221133edb3000eeb82bd72ac9185744
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="referencewrapper-class"></a>reference_wrapper, classe
-Encapsule une référence.  
+# <a name="referencewrapper-class"></a>reference_wrapper Class
+Wraps a reference.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
@@ -75,54 +77,54 @@ private:
 };  
 ```  
   
-## <a name="remarks"></a>Notes  
-Un `reference_wrapper<Ty>` est un wrapper constructible par copie et assignable par copie autour d’une référence à un objet ou une fonction de type `Ty`. Il contient un pointeur vers un objet de ce type. Un `reference_wrapper` peut être utilisé pour stocker des références dans des conteneurs standard et passer des objets par référence à `std::bind`.  
+## <a name="remarks"></a>Remarks  
+A `reference_wrapper<Ty>` is a copy constructible and copy assignable wrapper around a reference to an object or a function of type `Ty`, and holds a pointer that points to an object of that type. A `reference_wrapper` can be used to store references in standard containers, and to pass objects by reference to `std::bind`.  
   
-Le type `Ty` doit être un type d’objet ou un type de fonction. Sinon, une assertion statique échoue au moment de la compilation.  
+The type `Ty` must be an object type or a function type, or a static assert fails at compile time.  
   
-Les fonctions d’assistance [std::ref](functional-functions.md#ref) et [std::cref](functional-functions.md#cref) peuvent être utilisées pour créer des objets `reference_wrapper`.  
+The helper functions [std::ref](functional-functions.md#ref) and [std::cref](functional-functions.md#cref) can be used to create `reference_wrapper` objects.  
   
-### <a name="constructors"></a>Constructeurs  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[reference_wrapper](#reference_wrapper)|Construit un objet `reference_wrapper`.|  
+|[reference_wrapper](#reference_wrapper)|Constructs a `reference_wrapper`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[RESULT_TYPE](#result_type)|Type de résultat faible de la référence encapsulée.|  
-|[type](#type)|Type de la référence encapsulée.|  
+|[result_type](#result_type)|The weak result type of the wrapped reference.|  
+|[type](#type)|The type of the wrapped reference.|  
   
-### <a name="member-functions"></a>Fonctions membres  
-  
-|||  
-|-|-|  
-|[get](#get)|Obtient la référence encapsulée.|  
-  
-### <a name="operators"></a>Opérateurs  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Obtient un pointeur vers la référence encapsulée.|  
-|[reference_wrapper::operator()](#op_call)|Appelle la référence encapsulée.|  
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<functional>  
+|[get](#get)|Obtains the wrapped reference.|  
   
- **Espace de noms :** std  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Gets a pointer to the wrapped reference.|  
+|[reference_wrapper::operator()](#op_call)|Calls the wrapped reference.|  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
+  
+ **Namespace:** std  
   
 ##  <a name="get"></a>  reference_wrapper::get  
- Obtient la référence encapsulée.  
+ Obtains the wrapped reference.  
   
 ```  
 Ty& get() const noexcept;
 ```  
   
-### <a name="remarks"></a>Notes  
-La fonction membre retourne la référence incluse dans un wrapper.  
+### <a name="remarks"></a>Remarks  
+The member function returns the wrapped reference.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_get.cpp   
@@ -150,16 +152,16 @@ i = -1
 ```  
   
 ##  <a name="op_ty_amp"></a>  reference_wrapper::operator Ty&amp;  
- Obtient la référence incluse dans un wrapper.  
+ Gets the wrapped reference.  
   
 ```  
 operator Ty&() const noexcept;
 ```  
   
-### <a name="remarks"></a>Notes  
- L’opérateur membre retourne `*ptr`.  
+### <a name="remarks"></a>Remarks  
+ The member operator returns `*ptr`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_operator_cast.cpp   
@@ -184,24 +186,24 @@ i = 1
 ```  
   
 ##  <a name="op_call"></a>  reference_wrapper::operator()  
- Appelle la référence encapsulée.  
+ Calls the wrapped reference.  
   
 ```  
 template <class... Types>  
 auto operator()(Types&&... args);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Types`  
- Types de la liste d’arguments.  
+ The argument list types.  
   
  `args`  
- Liste d’arguments.  
+ The argument list.  
   
-### <a name="remarks"></a>Notes  
- Le membre de modèle `operator()` retourne `std::invoke(get(), std::forward<Types>(args)...)`.  
+### <a name="remarks"></a>Remarks  
+ The template member `operator()` returns `std::invoke(get(), std::forward<Types>(args)...)`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_operator_call.cpp   
@@ -227,23 +229,23 @@ rwi(3) = -3
 ```  
   
 ##  <a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper  
- Construit un objet `reference_wrapper`.  
+ Constructs a `reference_wrapper`.  
   
 ```  
 reference_wrapper(Ty& val) noexcept;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Type à inclure dans un wrapper.  
+ The type to wrap.  
   
  `val`  
- Valeur à inclure dans un wrapper.  
+ The value to wrap.  
   
-### <a name="remarks"></a>Notes  
- Le constructeur définit la valeur stockée `ptr` à `&val`.  
+### <a name="remarks"></a>Remarks  
+ The constructor sets the stored value `ptr` to `&val`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_reference_wrapper.cpp   
@@ -275,16 +277,16 @@ i = -1
 ```  
   
 ##  <a name="result_type"></a>  reference_wrapper::result_type  
- Type de résultat faible de la référence encapsulée.  
+ The weak result type of the wrapped reference.  
   
 ```  
 typedef R result_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le typedef `result_type` est un synonyme pour le type de résultat faible d’une fonction incluse dans un wrapper. Ce typedef est significatif uniquement pour les types de fonction.  
+### <a name="remarks"></a>Remarks  
+ The `result_type` typedef is a synonym for the weak result type of a wrapped function. This typedef is only meaningful for function types.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_result_type.cpp   
@@ -312,16 +314,16 @@ val = -3
 ```  
   
 ##  <a name="type"></a>  reference_wrapper::type  
- Type de la référence encapsulée.  
+ The type of the wrapped reference.  
   
 ```  
 typedef Ty type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le typedef est un synonyme de l'argument de modèle `Ty`.  
+### <a name="remarks"></a>Remarks  
+ The typedef is a synonym for the template argument `Ty`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_type.cpp   
@@ -351,7 +353,7 @@ i = 1
 rwi = 1  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [cref](../standard-library/functional-functions.md#cref)   
  [ref](../standard-library/functional-functions.md#ref)
 

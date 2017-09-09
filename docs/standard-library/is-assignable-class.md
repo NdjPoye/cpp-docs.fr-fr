@@ -1,5 +1,5 @@
 ---
-title: is_assignable, classe | Microsoft Docs
+title: is_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_assignable
 - type_traits/std::is_assignable
 dev_langs:
 - C++
@@ -34,39 +33,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 208853a8e173797a37da60a824d06341e279ea34
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c0e6d35e76a7bfddc1fbbc7eb7fa634fe7ed07c4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isassignable-class"></a>is_assignable, classe
-Teste si une valeur de type `From` peut être affectée à un type `To`.  
+# <a name="isassignable-class"></a>is_assignable Class
+Tests whether a value of `From` type can be assigned to a `To` type.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class To, class From>  
 struct is_assignable;
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- Pour  
- Type de l'objet qui reçoit l'assignation.  
+#### <a name="parameters"></a>Parameters  
+ To  
+ The type of the object that receives the assignment.  
   
  From  
- Type de l'objet qui fournit la valeur.  
+ The type of the object that provides the value.  
   
-## <a name="remarks"></a>Notes  
- L’expression non évaluée `declval<To>() = declval<From>()` doit être bien formée. `From` et `To` doivent tous deux être des types complets, `void`, ou des tableaux de limite inconnue.  
+## <a name="remarks"></a>Remarks  
+ The unevaluated expression `declval<To>() = declval<From>()` must be well-formed. Both `From` and `To` must be complete types, `void`, or arrays of unknown bound.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<system_error>
-- std::<system_error>
-- <system_error>
-- system_error
+- std::<system_error>", "<system_error>", "system_error
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,74 +33,74 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8f3441306b21ca1111cf2fd2d377a1b233e7ad86
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c2c7c690a05fc47dc2e3a40457a5361a1c0b3278
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
-Incluez l’en-tête `<system_error>` pour définir la classe d’exception `system_error` et les modèles associés pour le traitement des erreurs système de bas niveau.  
+Include the header `<system_error>` to define the exception class `system_error` and related templates for processing low-level system errors.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <system_error>  
 ```  
   
-### <a name="objects"></a>Objets  
+### <a name="objects"></a>Objects  
   
 |||  
 |-|-|  
-|[generic_category](../standard-library/system-error-functions.md#generic_category)|Représente la catégorie des erreurs génériques.|  
-|[system_category](../standard-library/system-error-functions.md#system_category)|Représente la catégorie des erreurs provoquées par des dépassements de capacité du système de bas niveau.|  
+|[generic_category](../standard-library/system-error-functions.md#generic_category)|Represents the category for generic errors.|  
+|[system_category](../standard-library/system-error-functions.md#system_category)|Represents the category for errors caused by low-level system overflows.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[generic_errno](../standard-library/system-error-typedefs.md#generic_errno)|Type qui représente l’énumération qui fournit les noms symboliques de toutes les macros de code d’erreur définies par Posix dans `<errno.h>`.|  
+|[generic_errno](../standard-library/system-error-typedefs.md#generic_errno)|A type that represents the enumeration that provides the symbolic names for all the error-code macros defined by Posix in `<errno.h>`.|  
   
-### <a name="functions"></a>Fonctions  
-  
-|||  
-|-|-|  
-|[make_error_code](../standard-library/system-error-functions.md#make_error_code)|Elle crée un objet `error_code`.|  
-|[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|Elle crée un objet `error_condition`.|  
-  
-### <a name="operators"></a>Opérateurs  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[operator==](../standard-library/system-error-operators.md#op_eq_eq)|Teste si l’objet situé à gauche de l’opérateur est égal à l’objet situé à droite.|  
-|[operator!=](../standard-library/system-error-operators.md#op_neq)|Teste si l’objet situé à gauche de l’opérateur n’est pas égal à l’objet situé à droite.|  
-|[operator<](../standard-library/system-error-operators.md#op_lt)|Vérifie si un objet est inférieur à l'objet passé en vue de leur comparaison.|  
+|[make_error_code](../standard-library/system-error-functions.md#make_error_code)|Creates an `error_code` object.|  
+|[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|Creates an `error_condition` object.|  
   
-### <a name="enumerations"></a>Énumérations  
-  
-|||  
-|-|-|  
-|[errc](../standard-library/system-error-enums.md#errc)|Fournit des noms symboliques pour toutes les macros de code d'erreur définies par Posix dans `<errno.h>`.|  
-  
-### <a name="classes-and-structs"></a>Classes et structs  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[error_category](../standard-library/error-category-class.md)|Représente la base commune abstraite d’objets qui décrit une catégorie des codes d’erreur.|  
-|[error_code](../standard-library/error-code-class.md)|Représente les erreurs système de bas niveau spécifiques de l’implémentation.|  
-|[error_condition](../standard-library/error-condition-class.md)|Représente les codes d’erreur définis par l’utilisateur.|  
-|[is_error_code_enum](../standard-library/is-error-code-enum-class.md)|Représente un prédicat de type qui teste la présence de l’énumération de [classe error_code](../standard-library/error-code-class.md).|  
-|[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|Représente un prédicat de type qui teste la présence de l’énumération de [classe error_condition](../standard-library/error-condition-class.md).|  
-|[system_error](../standard-library/system-error-class.md)|Représente la classe de base pour toutes les exceptions levées pour signaler un dépassement de capacité du système de bas niveau.|  
+|[operator==](../standard-library/system-error-operators.md#op_eq_eq)|Tests if the object on the left side of the operator is equal to the object on the right side.|  
+|[operator!=](../standard-library/system-error-operators.md#op_neq)|Tests if the object on the left side of the operator is not equal to the object on the right side.|  
+|[operator<](../standard-library/system-error-operators.md#op_lt)|Tests if an object is less than the object passed in for comparison.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<system_error>  
+### <a name="enumerations"></a>Enumerations  
   
- **Espace de noms :** std  
+|||  
+|-|-|  
+|[errc](../standard-library/system-error-enums.md#errc)|Provides symbolic names for all the error-code macros defined by Posix in `<errno.h>`.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)
+### <a name="classes-and-structs"></a>Classes and Structs  
+  
+|||  
+|-|-|  
+|[error_category](../standard-library/error-category-class.md)|Represents the abstract, common base for objects that describes a category of error codes.|  
+|[error_code](../standard-library/error-code-class.md)|Represents low-level system errors that are implementation-specific.|  
+|[error_condition](../standard-library/error-condition-class.md)|Represents user-defined error codes.|  
+|[is_error_code_enum](../standard-library/is-error-code-enum-class.md)|Represents a type predicate that tests for the [error_code Class](../standard-library/error-code-class.md) enumeration.|  
+|[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|Represents a type predicate that tests for the [error_condition Class](../standard-library/error-condition-class.md) enumeration.|  
+|[system_error](../standard-library/system-error-class.md)|Represents the base class for all exceptions thrown to report a low-level system overflow.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<system_error>  
+  
+ **Namespace:** std  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

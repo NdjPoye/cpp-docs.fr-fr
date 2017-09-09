@@ -1,5 +1,5 @@
 ---
-title: wstring_convert, classe | Microsoft Docs
+title: wstring_convert Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- wstring_convert
-- stdext::cvt::wstring_convert
-- cvt::wstring_convert
 - wstring/stdext::cvt::wstring_convert
 - locale/std::wstring_convert::byte_string
 - locale/std::wstring_convert::wide_string
@@ -24,7 +21,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- wstring_convert class
+- stdext::cvt [C++], wstring_convert
+- std::wstring_convert [C++], byte_string
+- std::wstring_convert [C++], wide_string
+- std::wstring_convert [C++], state_type
+- std::wstring_convert [C++], int_type
+- std::wstring_convert [C++], from_bytes
+- std::wstring_convert [C++], to_bytes
+- std::wstring_convert [C++], converted
+- std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
 caps.latest.revision: 25
 author: corob-msft
@@ -44,99 +49,99 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 9545a1c559574bd5dc86e8924a65db9bea8cf9ae
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5478dc495a093d40297d23f1ba6d988049670d0c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="wstringconvert-class"></a>wstring_convert, classe
-La classe de modèle `wstring_convert` effectue des conversions entre une chaîne étendue et une chaîne d'octets.  
+# <a name="wstringconvert-class"></a>wstring_convert Class
+The template class `wstring_convert` performs conversions between a wide string and a byte string.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Codecvt, class Elem = wchar_t>
 class wstring_convert
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  Codecvt  
- La facette [locale](../standard-library/locale-class.md) qui représente l’objet de conversion.  
+ The [locale](../standard-library/locale-class.md) facet that represents the conversion object.  
   
  Elem  
- Type d'élément à caractères larges.  
+ The wide-character element type.  
   
-## <a name="remarks"></a>Notes  
- La classe de modèle décrit un objet qui contrôle les conversions entre des objets de chaîne étendue de la classe `std::basic_string<Elem>` et des objets de chaîne d'octets de la classe `std::basic_string<char>` (également appelée `std::string`). La classe de modèle définit les types `wide_string` et `byte_string` comme synonymes de ces deux types. La conversion entre une séquence de valeurs `Elem` (stockée dans un objet `wide_string`) et des séquences multioctets (stockées dans un objet `byte_string`) est effectuée par un objet de classe `Codecvt<Elem, char, std::mbstate_t>`, qui répond aux exigences de la facette de conversion de code standard `std::codecvt<Elem, char, std::mbstate_t>`.  
+## <a name="remarks"></a>Remarks  
+ The template class describes an object that controls conversions between wide string objects of class `std::basic_string<Elem>` and byte string objects of class `std::basic_string<char>` (also known as `std::string`). The template class defines the types `wide_string` and `byte_string` as synonyms for these two types. Conversion between a sequence of `Elem` values (stored in a `wide_string` object) and multibyte sequences (stored in a `byte_string` object) is performed by an object of class `Codecvt<Elem, char, std::mbstate_t>`, which meets the requirements of the standard code-conversion facet `std::codecvt<Elem, char, std::mbstate_t>`.  
   
- Un objet de cette classe de modèle stocke :  
+ An object of this template class stores:  
   
--   une chaîne d'octets à afficher en cas d'erreur ;  
+-   A byte string to display on errors  
   
--   une chaîne étendue à afficher en cas d'erreur ;  
+-   A wide string to display on errors  
   
--   un pointeur vers l’objet de conversion alloué (qui est libéré quand l’objet wbuffer_convert est détruit) ;  
+-   A pointer to the allocated conversion object (which is freed when the wbuffer_convert object is destroyed)  
   
--   un objet d’état de conversion de type [state_type](#state_type) ;  
+-   A conversion state object of type [state_type](#state_type)  
   
--   un décompte des conversions.  
+-   A conversion count  
   
-### <a name="constructors"></a>Constructeurs  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[wstring_convert](#wstring_convert)|Construit un objet de type `wstring_convert`.|  
+|[wstring_convert](#wstring_convert)|Constructs an object of type `wstring_convert`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[byte_string](#byte_string)|Type qui représente une chaîne d'octets.|  
-|[wide_string](#wide_string)|Type qui représente une chaîne étendue.|  
-|[state_type](#state_type)|Type qui représente l'état de conversion.|  
-|[int_type](#int_type)|Type qui représente un entier.|  
+|[byte_string](#byte_string)|A type that represents a byte string.|  
+|[wide_string](#wide_string)|A type that represents a wide string.|  
+|[state_type](#state_type)|A type that represents the conversion state.|  
+|[int_type](#int_type)|A type that represents an integer.|  
   
-### <a name="member-functions"></a>Fonctions membres  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[from_bytes](#from_bytes)|Convertit une chaîne d'octets en chaîne étendue.|  
-|[to_bytes](#to_bytes)|Convertit une chaîne étendue en chaîne d'octets.|  
-|[converted](#converted)|Retourne le nombre de conversions réussies.|  
-|[state](#state)|Retourne un objet représentant l'état de la conversion.|  
+|[from_bytes](#from_bytes)|Converts a byte string to a wide string.|  
+|[to_bytes](#to_bytes)|Converts a wide string to a byte string.|  
+|[converted](#converted)|Returns the number of successful conversions.|  
+|[state](#state)|Returns an object representing the state of the conversion.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
 ##  <a name="byte_string"></a>  wstring_convert::byte_string  
- Type qui représente une chaîne d'octets.  
+ A type that represents a byte string.  
   
 ```
 typedef std::basic_string<char> byte_string;
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme de `std::basic_string<char>`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `std::basic_string<char>`.  
   
 ##  <a name="converted"></a>  wstring_convert::converted  
- Retourne le nombre de conversions réussies.  
+ Returns the number of successful conversions.  
   
 ```
 size_t converted() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre de conversions ayant réussi.  
+### <a name="return-value"></a>Return Value  
+ The number of successful conversions.  
   
-### <a name="remarks"></a>Notes  
- Le nombre de conversions ayant réussi est stocké dans l'objet de compteur de conversions.  
+### <a name="remarks"></a>Remarks  
+ The number of successful conversions is stored in the conversion count object.  
   
 ##  <a name="from_bytes"></a>  wstring_convert::from_bytes  
- Convertit une chaîne d'octets en chaîne étendue.  
+ Converts a byte string to a wide string.  
   
 ```
 wide_string from_bytes(char Byte);
@@ -145,58 +150,58 @@ wide_string from_bytes(const byte_string& Bstr);
 wide_string from_bytes(const char* first, const char* last);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Byte`|Séquence d'octets à élément unique à convertir.|  
-|`ptr`|Séquence de caractères de style C et se terminant par null à convertir.|  
-|`Bstr`|[byte_string](#byte_string) à convertir.|  
-|`first`|Premier caractère d'une plage de caractères à convertir.|  
-|`last`|Dernier caractère d'une plage de caractères à convertir.|  
+|`Byte`|The single-element byte sequence to be converted.|  
+|`ptr`|The C-style, null-terminated sequence of characters to be converted.|  
+|`Bstr`|The [byte_string](#byte_string) to be converted.|  
+|`first`|The first character in a range of characters to be converted.|  
+|`last`|The last character in a range of characters to be converted.|  
   
-### <a name="return-value"></a>Valeur de retour  
- Objet de chaîne étendue résultant de la conversion.  
+### <a name="return-value"></a>Return Value  
+ A wide string object resulting from the conversion.  
   
-### <a name="remarks"></a>Notes  
- Si l’objet d’[état de conversion](../standard-library/wstring-convert-class.md) n’a pas été (`not`) construit avec une valeur explicite, il est défini à sa valeur par défaut (l’état de conversion initial) avant le début de la conversion. Dans le cas contraire, il reste inchangé.  
+### <a name="remarks"></a>Remarks  
+ If the [conversion state](../standard-library/wstring-convert-class.md) object was `not` constructed with an explicit value, it is set to its default value (the initial conversion state) before the conversion begins. Otherwise it is left unchanged.  
   
- Le nombre d'éléments d'entrée convertis correctement est stocké dans l'objet de compteur de conversions. Si aucune erreur de conversion ne se produit, la fonction membre retourne la chaîne étendue convertie. Sinon, si l'objet a été construit avec un initialiseur pour le message d'erreur de chaîne étendue, la fonction membre retourne l'objet de message d'erreur de chaîne étendue. Sinon, la fonction membre lève un objet de classe [range_error](../standard-library/range-error-class.md).  
+ The number of input elements successfully converted is stored in the conversion count object. If no conversion error occurs, the member function returns the converted wide string. Otherwise, if the object was constructed with an initializer for the wide-string error message, the member function returns the wide-string error message object. Otherwise, the member function throws an object of class [range_error](../standard-library/range-error-class.md).  
   
 ##  <a name="int_type"></a>  wstring_convert::int_type  
- Type qui représente un entier.  
+ A type that represents an integer.  
   
 ```
 typedef typename wide_string::traits_type::int_type int_type;
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme de `wide_string::traits_type::int_type`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `wide_string::traits_type::int_type`.  
   
 ##  <a name="state"></a>  wstring_convert::state  
- Retourne un objet représentant l'état de la conversion.  
+ Returns an object representing the state of the conversion.  
   
 ```
 state_type state() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- L’objet d’[état de conversion](../standard-library/wstring-convert-class.md) qui représente l’état de la conversion.  
+### <a name="return-value"></a>Return Value  
+ The [conversion state](../standard-library/wstring-convert-class.md) object that represents the state of the conversion.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="state_type"></a>  wstring_convert::state_type  
- Type qui représente l'état de conversion.  
+ A type that represents the conversion state.  
   
 ```
 typedef typename Codecvt::state_type state_type;
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type décrit un objet qui peut représenter un état de conversion. Le type est un synonyme de `Codecvt::state_type`.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can represent a conversion state. The type is a synonym for `Codecvt::state_type`.  
   
 ##  <a name="to_bytes"></a>  wstring_convert::to_bytes  
- Convertit une chaîne étendue en chaîne d'octets.  
+ Converts a wide string to a byte string.  
   
 ```
 byte_string to_bytes(Elem Char);
@@ -205,33 +210,33 @@ byte_string to_bytes(const wide_string& Wstr);
 byte_string to_bytes(const Elem* first, const Elem* last);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Char`|Caractère large à convertir.|  
-|`Wptr`|Séquence de style C, se terminant par null et commençant à `wptr`, à convertir.|  
-|`Wstr`|[wide_string](#wide_string) à convertir.|  
-|`first`|Premier élément dans une plage d'éléments à convertir.|  
-|`last`|Dernier élément dans une plage d'éléments à convertir.|  
+|`Char`|The wide character to be converted.|  
+|`Wptr`|The C-style, null-terminated sequence, beginning at `wptr`, to be converted.|  
+|`Wstr`|The [wide_string](#wide_string) to be converted.|  
+|`first`|The first element in a range of elements to be converted.|  
+|`last`|The last element in a range of elements to be converted.|  
   
-### <a name="remarks"></a>Notes  
- Si l’objet d’[état de conversion](../standard-library/wstring-convert-class.md) n’a pas été (`not`) construit avec une valeur explicite, il est défini à sa valeur par défaut (l’état de conversion initial) avant le début de la conversion. Dans le cas contraire, il reste inchangé.  
+### <a name="remarks"></a>Remarks  
+ If the [conversion state](../standard-library/wstring-convert-class.md) object was `not` constructed with an explicit value, it is set to its default value (the initial conversion state) before the conversion begins. Otherwise it is left unchanged.  
   
- Le nombre d'éléments d'entrée convertis correctement est stocké dans l'objet de compteur de conversions. Si aucune erreur de conversion ne se produit, la fonction membre retourne la chaîne d'octets convertie. Sinon, si l'objet a été construit avec un initialiseur pour le message d'erreur de chaîne d'octets, la fonction membre retourne l'objet de message d'erreur de chaîne d'octets. Sinon, la fonction membre lève un objet de classe [range_error](../standard-library/range-error-class.md).  
+ The number of input elements successfully converted is stored in the conversion count object. If no conversion error occurs, the member function returns the converted byte string. Otherwise, if the object was constructed with an initializer for the byte-string error message, the member function returns the byte-string error message object. Otherwise, the member function throws an object of class [range_error](../standard-library/range-error-class.md).  
   
 ##  <a name="wide_string"></a>  wstring_convert::wide_string  
- Type qui représente une chaîne étendue.  
+ A type that represents a wide string.  
   
 ```
 typedef std::basic_string<Elem> wide_string;
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme de `std::basic_string<Elem>`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `std::basic_string<Elem>`.  
   
 ##  <a name="wstring_convert"></a>  wstring_convert::wstring_convert  
- Construit un objet de type `wstring_convert`.  
+ Constructs an object of type `wstring_convert`.  
   
 ```
 wstring_convert(Codecvt *Pcvt = new Codecvt);
@@ -239,15 +244,15 @@ wstring_convert(Codecvt *Pcvt, state_type _State);
 wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string());
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`*Pcvt`|Objet de type `Codecvt` pour effectuer la conversion.|  
-|`_State`|Objet de type [state_type](#state_type) représentant l’état de la conversion.|  
-|`_Berr`|[byte_string](#byte_string) à afficher en cas d’erreur.|  
-|`Werr`|[wide_string](#wide_string) à afficher en cas d’erreur.|  
+|`*Pcvt`|The object of type `Codecvt` to perform the conversion.|  
+|`_State`|The object of type [state_type](#state_type) representing the conversion state.|  
+|`_Berr`|The [byte_string](#byte_string) to display on errors.|  
+|`Werr`|The [wide_string](#wide_string) to display on errors.|  
   
-### <a name="remarks"></a>Notes  
- Le premier constructeur stocke *Pcvt_arg* dans l’[objet de conversion](../standard-library/wstring-convert-class.md)
+### <a name="remarks"></a>Remarks  
+ The first constructor stores *Pcvt_arg* in the [conversion object](../standard-library/wstring-convert-class.md)
 

@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- operatorbool
-- vector<bool>::reference::operatorbool
-- bool
-- std::vector<bool>::reference::operatorbool
+- operatorbool", "vector<bool>::reference::operatorbool", "bool", "std::vector<bool>::reference::operatorbool
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,35 +34,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: f79b54237aa3a3b53000aaa47ef6a8e198ed6725
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c5f7955f2c3c5d71fad532d9e8c5b409c4026984
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="vectorltboolgtreferenceoperator-bool"></a>vector&lt;bool&gt;::reference::operator bool
-Fournit une conversion implicite de `vector<bool>::reference` en `bool`.  
+Provides an implicit conversion from `vector<bool>::reference` to `bool`.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 operator bool() const;
 ```  
   
-## <a name="return-value"></a>Valeur de retour  
- La valeur booléenne de l’élément de l’objet [vector\<bool>](../standard-library/vector-bool-class.md).  
+## <a name="return-value"></a>Return Value  
+ The Boolean value of the element of the [vector\<bool>](../standard-library/vector-bool-class.md) object.  
   
-## <a name="remarks"></a>Notes  
- L'objet `vector<bool>` ne peut pas être modifié par cet opérateur.  
+## <a name="remarks"></a>Remarks  
+ The `vector<bool>` object cannot be modified by this operator.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<vector>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<vector>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
- [vector\<bool>::reference, classe](../standard-library/vector-bool-reference-class.md)   
- [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [vector\<bool>::reference Class](../standard-library/vector-bool-reference-class.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

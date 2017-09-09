@@ -1,5 +1,5 @@
 ---
-title: future, classe | Microsoft Docs
+title: future Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -39,177 +39,186 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2a062caf9b28a48f2195f96b3a22f95a15c7149e
+helpviewer_keywords:
+- std::future [C++]
+- std::future [C++], future
+- std::future [C++], get
+- std::future [C++], share
+- std::future [C++], valid
+- std::future [C++], wait
+- std::future [C++], wait_for
+- std::future [C++], wait_until
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 70ecd59354ed064d91eaeb000b5331bbeca43923
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="future-class"></a>future, classe
-Décrit un *objet de retour asynchrone*.  
+# <a name="future-class"></a>future Class
+Describes an *asynchronous return object*.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 class future;
 ```  
   
-## <a name="remarks"></a>Notes  
- Chaque *fournisseur asynchrone* standard retourne un objet dont le type est une instanciation de ce modèle. Un objet `future` fournit le seul accès au fournisseur asynchrone qui lui est associé. Si vous avez besoin de plusieurs objets de retour asynchrones associés au même fournisseur asynchrone, copiez l’objet `future` dans un objet [shared_future](../standard-library/shared-future-class.md).  
+## <a name="remarks"></a>Remarks  
+ Each standard *asynchronous provider* returns an object whose type is an instantiation of this template. A `future` object provides the only access to the asynchronous provider that it is associated with. If you need multiple asynchronous return objects that are associated with the same asynchronous provider, copy the `future` object to a [shared_future](../standard-library/shared-future-class.md) object.  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[future](#future)|Construit un objet `future`.|  
+|[future](#future)|Constructs a `future` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[get](#get)|Récupère le résultat stocké dans l’état asynchrone associé.|  
-|[Partager](#share)|Convertit l’objet en `shared_future`.|  
-|[valide](#valid)|Spécifie si l’objet n’est pas vide.|  
-|[attente](#wait)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.|  
-|[wait_for](#wait_for)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou que le délai spécifié soit écoulé.|  
-|[wait_until](#wait_until)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou jusqu’à un point spécifié dans le temps.|  
+|[get](#get)|Retrieves the result that is stored in the associated asynchronous state.|  
+|[share](#share)|Converts the object to a `shared_future`.|  
+|[valid](#valid)|Specifies whether the object is not empty.|  
+|[wait](#wait)|Blocks the current thread until the associated asynchronous state is ready.|  
+|[wait_for](#wait_for)|Blocks until the associated asynchronous state is ready or until the specified time has elapsed.|  
+|[wait_until](#wait_until)|Blocks until the associated asynchronous state is ready or until a specified point in time.|  
   
-### <a name="public-operators"></a>Op&#233;rateurs publics  
+### <a name="public-operators"></a>Public Operators  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[future::operator=](#op_eq)|Transfère l’état asynchrone associé d’un objet spécifié.|  
+|[future::operator=](#op_eq)|Transfers the associated asynchronous state from a specified object.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<future >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<future>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-##  <a name="future"></a>  future::future, constructeur  
- Construit un objet `future`.  
+##  <a name="future"></a>  future::future Constructor  
+ Constructs a `future` object.  
   
 ```
 future() noexcept;
 future(future&& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Other`  
- Objet `future`.  
+ A `future` object.  
   
-### <a name="remarks"></a>Notes  
- Le premier constructeur construit un objet `future` sans état asynchrone associé.  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs a `future` object that has no associated asynchronous state.  
   
- Le deuxième constructeur construit un objet `future` et transfère l’état asynchrone associé de `Other`. `Other` n’a plus d’état asynchrone associé.  
+ The second constructor constructs a `future` object and transfers the associated asynchronous state from `Other`. `Other` no longer has an associated asynchronous state.  
   
 ##  <a name="get"></a>  future::get  
- Récupère le résultat stocké dans l’état asynchrone associé.  
+ Retrieves the result that is stored in the associated asynchronous state.  
   
 ```
 Ty get();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Si le résultat est une exception, la méthode la lève de nouveau. Sinon, le résultat est retourné.  
+### <a name="return-value"></a>Return Value  
+ If the result is an exception, the method rethrows it. Otherwise, the result is returned.  
   
-### <a name="remarks"></a>Notes  
- Avant de récupérer le résultat, cette méthode bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.  
+### <a name="remarks"></a>Remarks  
+ Before it retrieves the result, this method blocks the current thread until the associated asynchronous state is ready.  
   
- Pour la spécialisation partielle `future<Ty&>`, la valeur stockée est une référence à l’objet qui a été passé au fournisseur asynchrone comme valeur de retour.  
+ For the partial specialization `future<Ty&>`, the stored value is effectively a reference to the object that was passed to the asynchronous provider as the return value.  
   
- Comme il n’y a pas de valeur stockée pour la spécialisation `future<void>`, la méthode retourne `void`.  
+ Because no stored value exists for the specialization `future<void>`, the method returns `void`.  
   
- Dans d’autres spécialisations, la méthode déplace sa valeur de retour à partir de la valeur stockée. Par conséquent, n’appelez cette méthode qu’une seule fois.  
+ In other specializations, the method moves its return value from the stored value. Therefore, call this method only once.  
   
 ##  <a name="op_eq"></a>  future::operator=  
- Transfère un état asynchrone associé d’un objet spécifié.  
+ Transfers an associated asynchronous state from a specified object.  
   
 ```
 future& operator=(future&& Right) noexcept;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Right`  
- Objet `future`.  
+ A `future` object.  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
  `*this`  
   
-### <a name="remarks"></a>Notes  
- Après le transfert, `Right` n’a plus d’état asynchrone associé.  
+### <a name="remarks"></a>Remarks  
+ After the transfer, `Right` no longer has an associated asynchronous state.  
   
 ##  <a name="share"></a>  future::share  
- Convertit l’objet en un objet [shared_future](../standard-library/shared-future-class.md).  
+ Converts the object to a [shared_future](../standard-library/shared-future-class.md) object.  
   
 ```
 shared_future<Ty> share();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
  `shared_future(move(*this))`  
   
 ##  <a name="valid"></a>  future::valid  
- Spécifie si l’objet a un état asynchrone associé.  
+ Specifies whether the object has an associated asynchronous state.  
   
 ```
 bool valid() noexcept;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `true` si l'objet possède un état asynchrone associé ; sinon, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the object has an associated asynchronous state; otherwise, `false`.  
   
 ##  <a name="wait"></a>  future::wait  
- Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit *prêt*.  
+ Blocks the current thread until the associated asynchronous state is *ready*.  
   
 ```cpp  
 void wait() const;
 ```  
   
-### <a name="remarks"></a>Notes  
- Un état asynchrone associé est *prêt* uniquement si son fournisseur asynchrone a stocké une valeur de retour ou une exception.  
+### <a name="remarks"></a>Remarks  
+ An associated asynchronous state is *ready* only if its asynchronous provider has stored a return value or stored an exception.  
   
 ##  <a name="wait_for"></a>  future::wait_for  
- Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit *prêt* ou que l’intervalle de temps spécifié soit écoulé.  
+ Blocks the current thread until the associated asynchronous state is *ready* or until a specified time interval has elapsed.  
   
 ```
 template <class Rep, class Period>
 future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Rel_time`  
- Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie un intervalle de temps maximal pour le blocage du thread.  
+ A [chrono::duration](../standard-library/duration-class.md) object that specifies a maximum time interval that the thread blocks.  
   
-### <a name="return-value"></a>Valeur de retour  
- [future_status](../standard-library/future-enums.md#future_status) qui indique la raison du retour.  
+### <a name="return-value"></a>Return Value  
+ A [future_status](../standard-library/future-enums.md#future_status) that indicates the reason for returning.  
   
-### <a name="remarks"></a>Notes  
- Un état asynchrone associé est prêt uniquement si son fournisseur asynchrone a stocké une valeur de retour ou une exception.  
+### <a name="remarks"></a>Remarks  
+ An associated asynchronous state is ready only if its asynchronous provider has stored a return value or stored an exception.  
   
 ##  <a name="wait_until"></a>  future::wait_until  
- Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit *prêt* ou jusqu’à un point spécifié dans le temps.  
+ Blocks the current thread until the associated asynchronous state is *ready* or until after a specified time point.  
   
 ```cpp  
 template <class Clock, class Duration>
 future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Abs_time`  
- Objet [chrono::time_point](../standard-library/time-point-class.md) qui spécifie un point dans le temps après lequel le thread peut être débloqué.  
+ A [chrono::time_point](../standard-library/time-point-class.md) object that specifies a time after which the thread can unblock.  
   
-### <a name="return-value"></a>Valeur de retour  
- [future_status](../standard-library/future-enums.md#future_status) qui indique la raison du retour.  
+### <a name="return-value"></a>Return Value  
+ A [future_status](../standard-library/future-enums.md#future_status) that indicates the reason for returning.  
   
-### <a name="remarks"></a>Notes  
- Un état asynchrone associé est *prêt* uniquement si son fournisseur asynchrone a stocké une valeur de retour ou une exception.  
+### <a name="remarks"></a>Remarks  
+ An associated asynchronous state is *ready* only if its asynchronous provider has stored a return value or stored an exception.  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<future>](../standard-library/future.md)
 
 

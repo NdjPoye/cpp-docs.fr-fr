@@ -1,5 +1,5 @@
 ---
-title: is_trivially_move_assignable, classe | Microsoft Docs
+title: is_trivially_move_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_trivially_move_assignable
 - type_traits/std::is_trivially_move_assignable
 dev_langs:
 - C++
@@ -34,48 +33,48 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: b9d94304c6fbbd925ac3b670dc7665402b521dfd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 781412d18bb786a1c7b03f855f38dfbfc8b34e3f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallymoveassignable-class"></a>is_trivially_move_assignable, classe
-Teste si le type a un opérateur d'assignation de déplacement trivial.  
+# <a name="istriviallymoveassignable-class"></a>is_trivially_move_assignable Class
+Tests whether the type has a trivial move assignment operator.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct is_trivially_move_assignable;
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Type à interroger.  
+ The type to query.  
   
-## <a name="remarks"></a>Notes  
- Une instance du prédicat de type a la valeur true si le type `Ty` est une classe qui a un opérateur d'assignation de déplacement trivial. Sinon, sa valeur est false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a class that has a trivial move assignment operator, otherwise it holds false.  
   
- Un opérateur d'assignation de déplacement pour une classe `Ty` est trivial si :  
+ A move assignment operator for a class `Ty` is trivial if:  
   
- il est fourni implicitement ;  
+ it is implicitly provided  
   
- la classe `Ty` n'a aucune fonction virtuelle ;  
+ the class `Ty` has no virtual functions  
   
- la classe `Ty` n'a aucune base virtuelle ;  
+ the class `Ty` has no virtual bases  
   
- les classes de tous les membres de données non statiques de type classe possèdent des opérateurs d'assignation de déplacement triviaux ;  
+ the classes of all the non-static data members of class type have trivial move assignment operators  
   
- les classes de tous les membres de données non statiques de type tableau de classe possèdent des opérateurs d'assignation de déplacement triviaux.  
+ the classes of all the non-static data members of type array of class have trivial move assignment operators  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

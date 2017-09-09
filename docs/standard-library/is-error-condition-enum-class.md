@@ -1,5 +1,5 @@
 ---
-title: is_error_condition_enum, classe | Microsoft Docs
+title: is_error_condition_enum Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_error_condition_enum
 - system_error/std::is_error_condition_enum
 dev_langs:
 - C++
@@ -34,34 +33,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 316e375554d80bfa58dfba537e5c36a881028a20
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 203a85a9fbd4759cff2b81a01eb4a1d071f22579
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="iserrorconditionenum-class"></a>is_error_condition_enum, classe
-Représente un prédicat de type qui teste l’énumération [error_condition](../standard-library/error-condition-class.md).  
+# <a name="iserrorconditionenum-class"></a>is_error_condition_enum Class
+Represents a type predicate that tests for the [error_condition](../standard-library/error-condition-class.md) enumeration.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <_Enum>
 class is_error_condition_enum;
 ```  
   
-## <a name="remarks"></a>Notes  
- Une instance de ce [prédicat de type](../standard-library/type-traits.md) contient la valeur true si le type `_Enum` est une valeur d’énumération adaptée au stockage dans un objet de type `error_condition`.  
+## <a name="remarks"></a>Remarks  
+ An instance of this [type predicate](../standard-library/type-traits.md) holds true if the type `_Enum` is an enumeration value suitable for storing in an object of type `error_condition`.  
   
- Il est permis d’ajouter des spécialisations à ce type pour les types définis par l’utilisateur.  
+ It is permissible to add specializations to this type for user-defined types.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<system_error>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<system_error>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
  [<system_error>](../standard-library/system-error.md)
 

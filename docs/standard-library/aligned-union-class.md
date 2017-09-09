@@ -1,5 +1,5 @@
 ---
-title: aligned_union, classe | Microsoft Docs
+title: aligned_union Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- aligned_union
 - type_traits/std::aligned_union
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: d6ecefd7d6877bc65bbf6f5542ae6b7f318a9d27
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9d8ce527325e68acbb31260910a8baa6fb18d32c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="alignedunion-class"></a>aligned_union, classe
-Fournit un type POD suffisamment grand et convenablement aligné pour stocker un type union et la taille nécessaire.  
+# <a name="alignedunion-class"></a>aligned_union Class
+Provides a POD type large enough and suitably aligned to store a union type, and the size required.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <std::size_t Len, class... Types>  
@@ -54,18 +53,18 @@ template <std::size_t Len, class... Types>
 using aligned_union_t = typename aligned_union<Len, Types...>::type;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Len`  
- Valeur d'alignement pour le plus grand type dans l'union.  
+ The alignment value for the largest type in the union.  
   
  `Types`  
- Types distincts dans l'union sous-jacente.  
+ The distinct types in the underlying union.  
   
-## <a name="remarks"></a>Notes  
- Utilisez la classe de modèle pour obtenir l’alignement et la taille nécessaires pour stocker une union dans un stockage non initialisé. Le typedef de membre `type` nomme un type POD adapté au stockage de tout type répertorié dans `Types`. La taille minimale est `Len`. Le membre statique `alignment_value` de type `std::size_t` contient l’alignement le plus strict nécessaire de tous les types répertoriés dans `Types`.  
+## <a name="remarks"></a>Remarks  
+ Use the template class to get the alignment and size needed to store a union in uninitialized storage. The member typedef `type` names a POD type suitable for storage of any type listed in `Types`; the minimum size is `Len`. The static member `alignment_value` of type `std::size_t` contains the strictest alignment required of all the types listed in `Types`.  
   
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser `aligned_union` pour allouer une mémoire tampon de pile alignée afin de placer une union.  
+## <a name="example"></a>Example  
+ The following example shows how to use `aligned_union` to allocate an aligned stack buffer to place a union.  
   
 ```  
 // std__type_traits__aligned_union.cpp  
@@ -101,12 +100,12 @@ int main()
 value of u->i is 1065353216  
 ```  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [alignment_of, classe](../standard-library/alignment-of-class.md)
+ [alignment_of Class](../standard-library/alignment-of-class.md)
 

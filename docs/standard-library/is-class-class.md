@@ -1,5 +1,5 @@
 ---
-title: is_class, classe | Microsoft Docs
+title: is_class Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_class
 - type_traits/std::is_class
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: af9a1513e7fac1dbcf36273f02ca26c0f9a7df6a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 354bfac206cbfc39005ef850870f0e2fac1e2f57
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isclass-class"></a>is_class, classe
-Teste si le type est une classe.  
+# <a name="isclass-class"></a>is_class Class
+Tests if type is a class.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_class;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Type à interroger.  
+ The type to query.  
   
-## <a name="remarks"></a>Notes  
- Une instance du prédicat de type a la valeur true si le type `Ty` est un type défini comme `class` ou `struct`, ou comme une forme `cv-qualified` de l'un d'eux. Sinon, sa valeur est false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a type defined as a `class` or a `struct`, or a `cv-qualified` form of one of them, otherwise it holds false.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_class.cpp   
@@ -89,13 +88,13 @@ is_class<trivial> == true
 is_class<int> == false  
 ```  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_compound, classe](../standard-library/is-compound-class.md)   
- [is_union, classe](../standard-library/is-union-class.md)
+ [is_compound Class](../standard-library/is-compound-class.md)   
+ [is_union Class](../standard-library/is-union-class.md)
 

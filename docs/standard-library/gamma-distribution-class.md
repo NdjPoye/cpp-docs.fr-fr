@@ -1,5 +1,5 @@
 ---
-title: gamma_distribution, classe | Microsoft Docs
+title: gamma_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- gamma_distribution
 - random/std::gamma_distribution
 - random/std::gamma_distribution::reset
 - random/std::gamma_distribution::alpha
@@ -27,8 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- gamma_distribution
-- gamma_distribution class
+- std::gamma_distribution [C++]
+- std::gamma_distribution [C++], reset
+- std::gamma_distribution [C++], alpha
+- std::gamma_distribution [C++], beta
+- std::gamma_distribution [C++], param
+- std::gamma_distribution [C++], min
+- std::gamma_distribution [C++], max
+- std::gamma_distribution [C++], param_type
+- std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
 caps.latest.revision: 18
 author: corob-msft
@@ -48,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4dc6623f129a73bde85ab350777f948bce09c091
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 40c0f316e5179f2450e8966138dfd630e94cc328
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="gammadistribution-class"></a>gamma_distribution, classe
-Génère une distribution Gamma.  
+# <a name="gammadistribution-class"></a>gamma_distribution Class
+Generates a gamma distribution.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class RealType = double>
 class gamma_distribution {
@@ -87,35 +93,35 @@ public:
     result_type max() const;
 };
 ```    
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
 *RealType*  
-Le type des résultats à virgule flottante est `double` par défaut. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-*URNG* Le moteur de génération de nombres aléatoires uniformes. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).  
+*URNG* The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Notes  
-La classe de modèle décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou du type `double` si aucun n’est fourni, distribuées selon la loi Gamma. Le tableau suivant contient des liens vers des articles sur différents membres.  
+## <a name="remarks"></a>Remarks  
+The template class describes a distribution that produces values of a user-specified floating-point type, or type `double` if none is provided, distributed according to the Gamma Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|  
 |`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|  
   
-Les fonctions de propriété `alpha()` et `beta()` retournent leurs valeurs respectives pour les paramètres de distribution stockés *alpha* et *beta*.  
+The property functions `alpha()` and `beta()` return their respective values for stored distribution parameters *alpha* and *beta*.  
   
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-La fonction membre `reset()` ignore toutes les valeurs mises en cache. Ainsi, le résultat de l’appel suivant à `operator()` ne dépend d’aucune valeur obtenue à partir du moteur avant l’appel.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-Les fonctions membres `operator()` retournent la valeur générée suivante d’après le moteur URNG, à partir du package de paramètres actuel ou spécifié.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-Pour plus d’informations sur la loi de Gamma, consultez l’article de Wolfram MathWorld [Gamma Distribution](http://go.microsoft.com/fwlink/LinkId=401111).  
+For detailed information about the gamma distribution, see the Wolfram MathWorld article [Gamma Distribution](http://go.microsoft.com/fwlink/LinkId=401111).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -198,38 +204,38 @@ Distribution for 10 samples:
     10: 2.1201210996  
 ```  
   
-## <a name="requirements"></a>Spécifications  
-**En-tête :** \<random>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<random>  
   
-**Espace de noms :** std  
+**Namespace:** std  
   
 ##  <a name="gamma_distribution"></a>  gamma_distribution::gamma_distribution  
-Construit la distribution.  
+Constructs the distribution.  
   
 ```  
 explicit gamma_distribution(result_type alpha = 1.0, result_type beta = 1.0);
 explicit gamma_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
 *alpha*  
-Paramètre de distribution `alpha`.  
+The `alpha` distribution parameter.  
   
 *beta*  
-Paramètre de distribution `beta`.  
+The `beta` distribution parameter.  
   
 *parm*  
-Structure de paramètre utilisée pour construire la distribution.  
+The parameter structure used to construct the distribution.  
   
-### <a name="remarks"></a>Notes  
-**Condition préalable :** `0.0 < alpha` et `0.0 < beta`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < alpha` and `0.0 < beta`  
   
-Le premier constructeur construit un objet dont la valeur `alpha` stockée contient la valeur *alpha* et dont la valeur `beta` stockée contient la valeur *beta*.  
+The first constructor constructs an object whose stored `alpha` value holds the value *alpha* and whose stored `beta` value holds the value *beta*.  
   
-Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  gamma_distribution::param_type  
-Stocke les paramètres de la distribution.  
+Stores the parameters of the distribution.  
   
 ```cpp   
 struct param_type {  
@@ -242,22 +248,22 @@ struct param_type {
    bool operator!=(const param_type& right) const;
    };  
 ```  
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
 *alpha*  
-Paramètre de distribution `alpha`.  
+The `alpha` distribution parameter.  
   
 *beta*  
-Paramètre de distribution `beta`.  
+The `beta` distribution parameter.  
   
 *right*  
-Instance `param_type` à comparer.  
+The `param_type` instance to compare this to.  
   
-### <a name="remarks"></a>Notes  
-**Condition préalable :** `0.0 < alpha` et `0.0 < beta`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < alpha` and `0.0 < beta`  
   
-Cette structure peut être passée au constructeur de classe de la distribution au moment de l'instanciation, à la fonction membre `param()` pour définir les paramètres stockés d'une distribution existante et à `operator()` pour une utilisation à la place des paramètres stockés.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
 [\<random>](../standard-library/random.md)
 
 

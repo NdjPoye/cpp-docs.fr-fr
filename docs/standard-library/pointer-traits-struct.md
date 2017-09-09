@@ -1,5 +1,5 @@
 ---
-title: pointer_traits, struct | Microsoft Docs
+title: pointer_traits Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,25 +41,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: dbb9a0a8ecd59b76a84ce05b3c239de42be647cb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6dd1d04071429da08fca79bc900757f2adc74c98
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="pointertraits-struct"></a>pointer_traits, struct
-Fournit les informations requises par un objet de la classe de modèle `allocator_traits` pour décrire un allocateur avec le type pointeur `Ptr`.  
+# <a name="pointertraits-struct"></a>pointer_traits Struct
+Supplies information that is needed by an object of template class `allocator_traits` to describe an allocator with pointer type `Ptr`.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 template <class Ptr>
 struct pointer_traits;
 ```  
   
-## <a name="remarks"></a>Notes  
- Le pointeur Ptr peut être un pointeur brut du type `Ty *` ou une classe ayant les propriétés suivantes.  
+## <a name="remarks"></a>Remarks  
+ Ptr can be a raw pointer of type `Ty *` or a class with the following properties.  
 ```  
 struct Ptr
    { // describes a pointer type usable by allocators
@@ -74,38 +74,38 @@ struct Ptr
 ```
 ### <a name="typedefs"></a>Typedefs  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|`typedef T2 difference_type`|Le type `T2` est `Ptr::difference_type` si ce type existe. Sinon, le type est `ptrdiff_t`. Si `Ptr` est un pointeur brut, le type est `ptrdiff_t`.|  
-|`typedef T1 element_type`|Le type `T1` est `Ptr::element_type` si ce type existe. Sinon, le type est `Ty`. Si `Ptr` est un pointeur brut, le type est `Ty`.|  
-|`typedef Ptr pointer`|Le type est `Ptr`.|  
+|`typedef T2 difference_type`|The type `T2` is `Ptr::difference_type` if that type exists, otherwise `ptrdiff_t`. If `Ptr` is a raw pointer, the type is `ptrdiff_t`.|  
+|`typedef T1 element_type`|The type `T1` is `Ptr::element_type` if that type exists, otherwise `Ty`. If `Ptr` is a raw pointer, the type is `Ty`.|  
+|`typedef Ptr pointer`|The type is `Ptr`.|  
   
-### <a name="structs"></a>Structures  
+### <a name="structs"></a>Structs  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|`pointer_traits::rebind`|Tente de convertir le type de pointeur sous-jacent en un type spécifié.|  
+|`pointer_traits::rebind`|Attempts to convert the underlying pointer type to a specified type.|  
   
-### <a name="methods"></a>Méthodes  
+### <a name="methods"></a>Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[pointer_to](#pointer_to)|Convertit une référence arbitraire à un objet de la classe `Ptr`.|  
+|[pointer_to](#pointer_to)|Converts an arbitrary reference to an object of class `Ptr`.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
 ##  <a name="pointer_to"></a>  pointer_to  
- Méthode statique qui retourne `Ptr::pointer_to(obj)`, si cette fonction existe. Sinon, il n’est pas possible de convertir une référence arbitraire à un objet de la classe `Ptr`. Si `Ptr` est un pointeur brut, cette méthode retourne `addressof(obj)`.  
+ Static method that returns `Ptr::pointer_to(obj)`, if that function exists. Otherwise, it is not possible to convert an arbitrary reference to an object of class `Ptr`. If `Ptr` is a raw pointer, this method returns `addressof(obj)`.  
   
 ```cpp  
 static pointer pointer_to(element_type& obj);
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<memory>](../standard-library/memory.md)   
- [allocator_traits, classe](../standard-library/allocator-traits-class.md)
+ [allocator_traits Class](../standard-library/allocator-traits-class.md)
 
 

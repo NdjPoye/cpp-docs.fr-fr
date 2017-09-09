@@ -1,5 +1,5 @@
 ---
-title: complex, classe | Microsoft Docs
+title: complex Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,15 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- complex
 - complex/std::complex::value_type
 - complex/std::complex::imag
 - complex/std::complex::real
 dev_langs:
 - C++
 helpviewer_keywords:
-- complex numbers
-- complex class
+- std::complex [C++], value_type
+- std::complex [C++], imag
+- std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
 caps.latest.revision: 18
 author: corob-msft
@@ -37,17 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8f5f401e61aab91d24679ffdc8d796fb9138ee61
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0018aa0e4d4a7aea33a8893db28f18478ed1010b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="complex-class"></a>complexe, classe
-La classe de modèle décrit un objet qui stocke deux objets de type **Type**, un qui représente la partie réelle d’un nombre complexe et un qui représente la partie imaginaire.  
+# <a name="complex-class"></a>complex Class
+The template class describes an object that stores two objects of type **Type**, one that represents the real part of a complex number and one that represents the imaginary part.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
  
@@ -56,55 +56,55 @@ Type>
 class complex  
 ```  
   
-## <a name="remarks"></a>Notes  
- Un objet de la classe **Type** :  
+## <a name="remarks"></a>Remarks  
+ An object of class **Type**:  
   
--   A un constructeur public par défaut, un destructeur, un constructeur de copie et un opérateur d’assignation avec un comportement conventionnel.  
+-   Has a public default constructor, destructor, copy constructor, and assignment operator with conventional behavior.  
   
--   Peut recevoir des valeurs entières ou des valeurs à virgule flottante, ou effectuer un cast de type vers ces valeurs avec un comportement conventionnel.  
+-   Can be assigned integer or floating-point values, or type cast to such values with conventional behavior.  
   
--   Définit les opérateurs arithmétiques et les fonctions mathématiques, selon les besoins, qui sont définis pour les types à virgule flottante avec un comportement conventionnel.  
+-   Defines the arithmetic operators and math functions, as needed, that are defined for the floating-point types with conventional behavior.  
   
- En particulier, aucune différence même minime ne peut exister entre la construction de copie et la construction par défaut suivie de l'affectation. Aucune des opérations sur les objets de la classe **Type** ne peut lever d’exception.  
+ In particular, no subtle differences may exist between copy construction and default construction followed by assignment. None of the operations on objects of class **Type** may throw exceptions.  
   
- Des spécialisations explicites de la classe de modèle complex existent pour les trois types à virgule flottante. Dans cette implémentation, une valeur d’un autre type **Type** est convertie en **double** pour les calculs réels, avec le résultat **double** réassigné à l’objet stocké de type **Type**`.`  
+ Explicit specializations of template class complex exist for the three floating-point types. In this implementation, a value of any other type **Type** is typecast to **double** for actual calculations, with the **double** result assigned back to the stored object of type **Type**`.`  
   
-### <a name="constructors"></a>Constructeurs  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[complex](#complex)|Construit un nombre complexe à l'aide de la partie réelle et de la partie imaginaire spécifiées ou en tant que copie d'un autre nombre complexe.|  
+|[complex](#complex)|Constructs a complex number with specified real and imaginary parts or as a copy of some other complex number.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[value_type](#value_type)|Type qui représente le type de données utilisé pour représenter les parties imaginaire et réelle d’un nombre complexe.|  
+|[value_type](#value_type)|A type that represents the data type used to represent the real and imaginary parts of a complex number.|  
   
-### <a name="member-functions"></a>Fonctions membres  
-  
-|||  
-|-|-|  
-|[imag](#imag)|Extrait le composant imaginaire d'un nombre complexe.|  
-|[real](#real)|Extrait le composant réel d'un nombre complexe.|  
-  
-### <a name="operators"></a>Opérateurs  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator*=](#op_star_eq)|Multiplie un nombre complexe cible par un facteur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.|  
-|[operator+=](#op_add_eq)|Ajoute un nombre à un nombre complexe cible, où le nombre ajouté peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est ajouté.|  
-|[operator-=](#operator-_eq)|Soustrait un nombre d’un nombre complexe cible, où le nombre soustrait peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est ajouté.|  
-|[operator/=](#op_div_eq)|Divise un nombre complexe cible par un diviseur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.|  
-|[operator=](#op_eq)|Assigne un nombre à un nombre complexe cible, où le nombre assigné peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est assigné.|  
+|[imag](#imag)|Extracts the imaginary component of a complex number.|  
+|[real](#real)|Extracts the real component of a complex number.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête** : \<complex>  
+### <a name="operators"></a>Operators  
   
- **Espace de noms :** std  
+|||  
+|-|-|  
+|[operator*=](#op_star_eq)|Multiplies a target complex number by a factor, which may be complex or be the same type as are the real and imaginary parts of the complex number.|  
+|[operator+=](#op_add_eq)|Adds a number to a target complex number, where the number added may be complex or of the same type as are the real and imaginary parts of the complex number to which it is added.|  
+|[operator-=](#operator-_eq)|Subtracts a number from a target complex number, where the number subtracted may be complex or of the same type as are the real and imaginary parts of the complex number to which it is added.|  
+|[operator/=](#op_div_eq)|Divides a target complex number by a divisor, which may be complex or be the same type as are the real and imaginary parts of the complex number.|  
+|[operator=](#op_eq)|Assigns a number to a target complex number, where the number assigned may be complex or of the same type as are the real and imaginary parts of the complex number to which it is being assigned.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<complex>  
+  
+ **Namespace:** std  
   
 ##  <a name="complex"></a>  complex::complex  
- Construit un nombre complexe à l'aide de la partie réelle et de la partie imaginaire spécifiées ou en tant que copie d'un autre nombre complexe.  
+ Constructs a complex number with specified real and imaginary parts or as a copy of some other complex number.  
   
 ```  
 constexpr complex(
@@ -119,36 +119,36 @@ constexpr complex(
     complexNum);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_RealVal`  
- Valeur de la partie réelle utilisée pour initialiser le nombre complexe qui est construit.  
+ The value of the real part used to initialize the complex number being constructed.  
   
  `_ImagVal`  
- Valeur de la partie imaginaire utilisée pour initialiser le nombre complexe qui est construit.  
+ The value of the imaginary part used to initialize the complex number being constructed.  
   
  `complexNum`  
- Nombre complexe dont la partie réelle et la partie imaginaire sont utilisées pour initialiser le nombre complexe qui est construit.  
+ The complex number whose real and imaginary parts are used to initialize the complex number being constructed.  
   
-### <a name="remarks"></a>Notes  
- Le premier constructeur initialise la partie réelle stockée sur _ *RealVal* et la partie imaginaire stockée sur \_ *Imagval*. Le deuxième constructeur initialise la partie réelle stockée sur `complexNum`**.real**() et la partie imaginaire stockée sur `complexNum`**.imag**().  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the stored real part to _ *RealVal* and the stored imaginary part to \_ *Imagval*. The second constructor initializes the stored real part to `complexNum`**.real**() and the stored imaginary part to `complexNum`**.imag**().  
   
- Dans cette implémentation, si un convertisseur ne prend pas en charge les fonctions de modèle membres, le modèle :  
+ In this implementation, if a translator does not support member template functions, the template:  
   
 ```  
 template <class Other>  
 complex(const complex<Other>& right);
 ```  
   
- est remplacé par :  
+ is replaced with:  
   
 ```  
  
 complex(const complex& right);
 ```  
   
- qui est le constructeur de copie.  
+ which is the copy constructor.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_complex.cpp  
@@ -189,7 +189,7 @@ int main( )
 ```  
   
 ##  <a name="imag"></a>  complex::imag  
- Extrait le composant imaginaire d'un nombre complexe.  
+ Extracts the imaginary component of a complex number.  
   
 ```  
 T imag() const;
@@ -198,17 +198,17 @@ T imag() const;
 T imag(const T& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Nombre complexe dont la valeur imaginaire doit être extraite.  
+ A complex number whose imaginary value is to be extracted.  
   
-### <a name="return-value"></a>Valeur de retour  
- Partie imaginaire du nombre complexe.  
+### <a name="return-value"></a>Return Value  
+ The imaginary part of the complex number.  
   
-### <a name="remarks"></a>Notes  
- Pour un nombre complexe *a + bi*, la partie ou le composant imaginaire est *Im(a + bi) = b.*  
+### <a name="remarks"></a>Remarks  
+ For a complex number *a + bi*, the imaginary part or component is *Im(a + bi) = b.*  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_imag.cpp  
@@ -240,7 +240,7 @@ The imaginary part of c1 is c1.imag ( ) = 3.
 ```  
   
 ##  <a name="op_star_eq"></a>  complex::operator*=  
- Multiplie un nombre complexe cible par un facteur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.  
+ Multiplies a target complex number by a factor, which may be complex or be the same type as are the real and imaginary parts of the complex number.  
   
 ```  
 template <class Other>  
@@ -251,17 +251,17 @@ complex<Type>& operator*=(const Type& right);
 complex<Type>& operator*=(const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Nombre complexe ou nombre du même type que celui du paramètre du nombre complexe cible.  
+ A complex number or a number that is of the same type as the parameter of the target complex number.  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre complexe qui a été multiplié par le nombre spécifié comme paramètre.  
+### <a name="return-value"></a>Return Value  
+ A complex number that has been multiplied by the number specified as a parameter.  
   
-### <a name="remarks"></a>Notes  
- L’opération est surchargée pour permettre l’exécution d’opérations d’arithmétique simples sans convertir les données dans un format particulier.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_me.cpp  
@@ -320,7 +320,7 @@ int main() {
 ```  
   
 ##  <a name="op_add_eq"></a>  complex::operator+=  
- Ajoute un nombre à un nombre complexe cible, où le nombre ajouté peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est ajouté.  
+ Adds a number to a target complex number, where the number added may be complex or of the same type as are the real and imaginary parts of the complex number to which it is added.  
   
 ```  
 template <class Other>  
@@ -331,17 +331,17 @@ complex<Type>& operator+=(const Type& right);
 complex<Type>& operator+=(const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Nombre complexe ou nombre du même type que celui du paramètre du nombre complexe cible.  
+ A complex number or a number that is of the same type as the parameter of the target complex number.  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre complexe auquel le nombre spécifié comme paramètre est ajouté.  
+### <a name="return-value"></a>Return Value  
+ A complex number that has had the number specified as a parameter added.  
   
-### <a name="remarks"></a>Notes  
- L’opération est surchargée pour permettre l’exécution d’opérations d’arithmétique simples sans convertir les données dans un format particulier.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_pe.cpp  
@@ -419,7 +419,7 @@ The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```  
   
 ##  <a name="complex__operator-_eq"></a>  complex::operator-=  
- Soustrait un nombre d’un nombre complexe cible, où le nombre soustrait peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est ajouté.  
+ Subtracts a number from a target complex number, where the number subtracted may be complex or of the same type as are the real and imaginary parts of the complex number to which it is added.  
   
 ```  
 template <class Other>  
@@ -430,20 +430,20 @@ complex<Type>& operator-=(const Type& _RealPart);
 complex<Type>& operator-=(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- Nombre complexe à soustraire du nombre complexe cible.  
+ A complex number to be subtracted from the target complex number.  
   
  `_RealPart`  
- Nombre réel à soustraire du nombre complexe cible.  
+ A real number to be subtracted from the target complex number.  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre complexe duquel le nombre spécifié comme paramètre est soustrait.  
+### <a name="return-value"></a>Return Value  
+ A complex number that has had the number specified as a parameter subtracted from it.  
   
-### <a name="remarks"></a>Notes  
- L’opération est surchargée pour permettre l’exécution d’opérations d’arithmétique simples sans convertir les données dans un format particulier.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_se.cpp  
@@ -523,7 +523,7 @@ The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```  
   
 ##  <a name="op_div_eq"></a>  complex::operator/=  
- Divise un nombre complexe cible par un diviseur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.  
+ Divides a target complex number by a divisor, which may be complex or be the same type as are the real and imaginary parts of the complex number.  
   
 ```  
 template <class Other>  
@@ -534,20 +534,20 @@ complex<Type>& operator/=(const Type& _RealPart);
 complex<Type>& operator/=(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- Nombre complexe à soustraire du nombre complexe cible.  
+ A complex number to be subtracted from the target complex number.  
   
  `_RealPart`  
- Nombre réel à soustraire du nombre complexe cible.  
+ A real number to be subtracted from the target complex number.  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre complexe qui a été divisé par le nombre spécifié comme paramètre.  
+### <a name="return-value"></a>Return Value  
+ A complex number that has been divided by the number specified as a parameter.  
   
-### <a name="remarks"></a>Notes  
- L’opération est surchargée pour permettre l’exécution d’opérations d’arithmétique simples sans convertir les données dans un format particulier.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_de.cpp  
@@ -623,7 +623,7 @@ The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```  
   
 ##  <a name="op_eq"></a>  complex::operator=  
- Assigne un nombre à un nombre complexe cible, où le nombre assigné peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est assigné.  
+ Assigns a number to a target complex number, where the number assigned may be complex or of the same type as are the real and imaginary parts of the complex number to which it is being assigned.  
   
 ```  
 template <class Other>  
@@ -632,17 +632,17 @@ complex<Type>& operator=(const complex<Other>& right);
 complex<Type>& operator=(const Type& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Nombre complexe ou nombre du même type que celui du paramètre du nombre complexe cible.  
+ A complex number or a number that is of the same type as the parameter of the target complex number.  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre complexe auquel le nombre spécifié comme paramètre a été assigné.  
+### <a name="return-value"></a>Return Value  
+ A complex number that has been assigned the number specified as a parameter.  
   
-### <a name="remarks"></a>Notes  
- L’opération est surchargée pour permettre l’exécution d’opérations d’arithmétique simples sans convertir les données dans un format particulier.  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_as.cpp  
@@ -697,7 +697,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 ```  
   
 ##  <a name="real"></a>  complex::real  
- Extrait ou définit le composant réel d'un nombre complexe.  
+ Gets or sets the real component of a complex number.  
   
 ```  
 constexpr T real() const;
@@ -706,17 +706,17 @@ constexpr T real() const;
 T real(const T& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Nombre complexe dont la valeur réelle doit être extraite.  
+ A complex number whose real value is to be extracted.  
   
-### <a name="return-value"></a>Valeur de retour  
- Partie réelle du nombre complexe.  
+### <a name="return-value"></a>Return Value  
+ The real part of the complex number.  
   
-### <a name="remarks"></a>Notes  
- Pour un nombre complexe *a + bi*, la partie ou le composant réel est *Re(a + bi) = a.*  
+### <a name="remarks"></a>Remarks  
+ For a complex number *a + bi*, the real part or component is *Re(a + bi) = a.*  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_class_real.cpp  
@@ -748,17 +748,17 @@ The imaginary part of c1 is c1.imag ( ) = 3.
 ```  
   
 ##  <a name="value_type"></a>  complex::value_type  
- Type qui représente le type de données utilisé pour représenter les parties imaginaire et réelle d’un nombre complexe.  
+ A type that represents the data type used to represent the real and imaginary parts of a complex number.  
   
 ```  
  
 typedef Type value_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- `value_type` est un synonyme du paramètre de modèle **Type** complexe de la classe.  
+### <a name="remarks"></a>Remarks  
+ `value_type` is a synonym for the class complex **Type** template parameter.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_valuetype.cpp  
@@ -783,8 +783,8 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [complex, membres](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)   
- [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [complex Members](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

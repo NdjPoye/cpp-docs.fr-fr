@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<ostream>
-- <ostream>
-- ostream/std::<ostream>
-- std::<ostream>
+- <ostream>", "ostream/std::<ostream>", "std::<ostream>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4b8e9c4f86ac9bab261824c10a8e6d8c3506bc1a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 53af26cc0abcca122e8b1ba17d0346e477d6f82b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
-Définit la classe de modèle [basic_ostream](../standard-library/basic-ostream-class.md), qui sert d’intermédiaire pour les insertions des iostreams. L'en-tête définit également plusieurs manipulateurs associés. Cet en-tête est généralement inclus pour vous par l’un des autres en-têtes iostream. Vous devez rarement l'inclure directement.)  
+Defines the template class [basic_ostream](../standard-library/basic-ostream-class.md), which mediates insertions for the iostreams. The header also defines several related manipulators. (This header is typically included for you by another of the iostreams headers. You rarely need to include it directly.)  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <ostream>  
@@ -57,35 +54,35 @@ Définit la classe de modèle [basic_ostream](../standard-library/basic-ostream-
   
 |||  
 |-|-|  
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|Crée un type à partir de `basic_ostream` qui est spécialisé sur `char` et `char_traits` spécialisé sur `char`.|  
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|Crée un type à partir de `basic_ostream` qui est spécialisé sur `wchar_t` et `char_traits` spécialisé sur `wchar_t`.|  
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|Creates a type from `basic_ostream` that is specialized on `char` and `char_traits` specialized on `char`.|  
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|Creates a type from `basic_ostream` that is specialized on `wchar_t` and `char_traits` specialized on `wchar_t`.|  
   
-### <a name="manipulators"></a>Manipulateurs  
-  
-|||  
-|-|-|  
-|[endl](../standard-library/ostream-functions.md#endl)|Met fin à une ligne et vide la mémoire tampon.|  
-|[ends](../standard-library/ostream-functions.md#ends)|Met fin à une chaîne.|  
-|[flush](../standard-library/ostream-functions.md#flush)|Vide la mémoire tampon.|  
-|[swap](../standard-library/ostream-functions.md#swap)|Échange les valeurs du paramètre d'objet `basic_ostream` de gauche avec celles du paramètre d'objet `basic_ostream` de droite.|  
-  
-### <a name="operators"></a>Opérateurs  
+### <a name="manipulators"></a>Manipulators  
   
 |||  
 |-|-|  
-|[operator<<](../standard-library/ostream-operators.md#op_lt_lt)|Écrit différents types dans le flux.|  
+|[endl](../standard-library/ostream-functions.md#endl)|Terminates a line and flushes the buffer.|  
+|[ends](../standard-library/ostream-functions.md#ends)|Terminates a string.|  
+|[flush](../standard-library/ostream-functions.md#flush)|Flushes the buffer.|  
+|[swap](../standard-library/ostream-functions.md#swap)|Exchanges the values of the left `basic_ostream` object parameter for those of the right `basic_ostream` object parameter.|  
+  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[operator<<](../standard-library/ostream-operators.md#op_lt_lt)|Writes various types to the stream.|  
   
 ### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[basic_ostream](../standard-library/basic-ostream-class.md)|La classe de modèle décrit un objet qui contrôle l'insertion d'éléments et d'objets encodés dans une mémoire tampon de flux.|  
+|[basic_ostream](../standard-library/basic-ostream-class.md)|The template class describes an object that controls insertion of elements and encoded objects into a stream buffer.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream, programmation](../standard-library/iostream-programming.md)   
- [iostreams, conventions](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
 

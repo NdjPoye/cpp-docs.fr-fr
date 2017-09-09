@@ -1,5 +1,5 @@
 ---
-title: char_traits&lt;wchar_t&gt;, struct | Microsoft Docs
+title: char_traits&lt;wchar_t&gt; Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,34 +34,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 8816f9cadccdb1c8b52733c079668f1b07ea54da
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6d8e35828caa6de04cf61539ceb829dd239d7e18
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt;, struct
-Classe qui est une spécialisation du struct de modèle **char_traits\<CharType>** sur un élément de type `wchar_t`.  
+# <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt; Struct
+A class that is a specialization of the template struct **char_traits\<CharType>** to an element of type `wchar_t`.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <>  
 struct char_traits<wchar_t>;
 ```  
   
-## <a name="remarks"></a>Notes  
- La spécialisation permet au struct de tirer parti des fonctions de bibliothèque qui manipulent les objets du type `wchar_t`.  
+## <a name="remarks"></a>Remarks  
+ Specialization allows the struct to take advantage of library functions that manipulate objects of this type `wchar_t`.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<string>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<string>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
- [char_traits, struct](../standard-library/char-traits-struct.md)   
- [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [char_traits Struct](../standard-library/char-traits-struct.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

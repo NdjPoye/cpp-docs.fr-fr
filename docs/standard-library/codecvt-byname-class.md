@@ -1,5 +1,5 @@
 ---
-title: codecvt_byname, classe | Microsoft Docs
+title: codecvt_byname Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- codecvt_byname
 - xlocale/std::codecvt_byname
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: cdf0ca3993103dc8070337b98bcacdb3e8c8b9d1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7393eb9bd4ccaa163276ce7df602cddf2b42025e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="codecvtbyname-class"></a>codecvt_byname, classe
-Classe de modèle dérivée qui décrit un objet susceptible de servir de facette d'assemblage de paramètres régionaux donnés, permettant ainsi la récupération d'informations spécifiques à une zone culturelle concernant les conversions.  
+# <a name="codecvtbyname-class"></a>codecvt_byname Class
+A derived template class that describes an object that can serve as a collate facet of a given locale, enabling the retrieval of information specific to a cultural area concerning conversions.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType, class Byte, class StateType>
@@ -68,25 +67,25 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `_Locname`  
- Paramètres régionaux nommés.  
+ A named locale.  
   
  `_Refs`  
- Nombre initial de références.  
+ An initial reference count.  
   
-## <a name="remarks"></a>Notes  
- Les facettes byname sont créées automatiquement pendant la construction de paramètres régionaux nommés.  
+## <a name="remarks"></a>Remarks  
+ Byname facets are automatically created when a named locale is constructed.  
   
- Leur comportement est déterminé par les paramètres régionaux nommés `_Locname`. Chaque constructeur initialise son objet de base avec [odecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`).  
+ Its behavior is determined by the named locale `_Locname`. Each constructor initializes its base object with [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`).  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

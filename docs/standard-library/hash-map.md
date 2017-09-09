@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<hash_map>
-- <hash_map>
-- std::<hash_map>
+- <hash_map>", "std::<hash_map>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,59 +34,59 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a1c256df1182c00c1b6045923ba9975f02c9bfa2
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c3807ad83dc756ce62acd3e4f3fb5168e6d2d624
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 > [!NOTE]
->  Cet en-tête est obsolète. L’alternative est [<unordered_map>](../standard-library/unordered-map.md).  
+>  This header is obsolete. The alternative is [<unordered_map>](../standard-library/unordered-map.md).  
   
- Définit les classes de modèle de conteneur hash_map et hash_multimap et leurs modèles de prise en charge.  
+ Defines the container template classes hash_map and hash_multimap and their supporting templates.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête <hash_map> et <hash_set> ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [The stdext Namespace (L’espace de noms stdext)](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the <hash_map> and <hash_set> header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <hash_map>  
   
 ```  
   
-### <a name="operators"></a>Opérateurs  
+### <a name="operators"></a>Operators  
   
-|Version de hash_map|Version de hash_multimap|Description|  
+|Hash_map version|Hash_multimap version|Description|  
 |-----------------------|----------------------------|-----------------|  
-|[operator!= (hash_map)](../standard-library/hash-map-operators.md#op_neq)|`operator!= (hash_multimap)`|Teste si l’objet hash_map ou hash_multimap situé à gauche de l’opérateur n’est pas égal à l’objet hash_map ou hash_multimap situé à droite.|  
-|[operator== (hash_map)](../standard-library/hash-map-operators.md#op_eq_eq)|`operator== (hash_multimap)`|Teste si l’objet hash_map ou hash_multimap situé à gauche de l’opérateur est égal à l’objet hash_map ou hash_multimap situé à droite.|  
+|[operator!= (hash_map)](../standard-library/hash-map-operators.md#op_neq)|`operator!= (hash_multimap)`|Tests if the hash_map or hash_multimap object on the left side of the operator is not equal to the hash_map or hash_multimap object on the right side.|  
+|[operator== (hash_map)](../standard-library/hash-map-operators.md#op_eq_eq)|`operator== (hash_multimap)`|Tests if the hash_map or hash_multimap object on the left side of the operator is equal to the hash_map or hash_multimap object on the right side.|  
   
-### <a name="specialized-template-functions"></a>Fonctions avec modèle spécialisé  
+### <a name="specialized-template-functions"></a>Specialized Template Functions  
   
-|Version de hash_map|Version de hash_multimap|Description|  
+|Hash_map version|Hash_multimap version|Description|  
 |-----------------------|----------------------------|-----------------|  
-|[swap (hash_map)](../standard-library/hash-map-class.md#swap)|[swap (hash_multimap)](../standard-library/hash-multimap-class.md#swap)|Échange les éléments de deux objets hash_maps ou hash_multimaps.|  
+|[swap (hash_map)](../standard-library/hash-map-class.md#swap)|[swap (hash_multimap)](../standard-library/hash-multimap-class.md#swap)|Exchanges the elements of two hash_maps or hash_multimaps.|  
   
 ### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[hash_compare, classe](../standard-library/hash-compare-class.md)|Décrit un objet qui peut être utilisé par les conteneurs associatifs de hachage, hash_map, hash_multimap, hash_set ou hash_multiset, comme objet de paramètre **Traits** par défaut pour ordonner et hacher les éléments qu’ils contiennent.|  
-|[value_compare, classe](../standard-library/value-compare-class.md)|Fournit un objet de fonction qui peut comparer les éléments d’un hash_map en comparant les valeurs de leurs clés pour déterminer leur ordre relatif dans le hash_map.|  
-|[hash_map, classe](../standard-library/hash-map-class.md)|Sert au stockage et à la récupération rapide des données d’une collection dans laquelle chaque élément est une paire qui a une clé de tri dont la valeur est unique et une valeur de données associée.|  
-|[hash_multimap, classe](../standard-library/hash-multimap-class.md)|Sert au stockage et à la récupération rapide des données d’une collection dans laquelle chaque élément est une paire qui a une clé de tri dont la valeur ne doit pas nécessairement être unique et une valeur de données associée.|  
+|[hash_compare Class](../standard-library/hash-compare-class.md)|Describes an object that can be used by any of the hash associative containers — hash_map, hash_multimap, hash_set, or hash_multiset — as a default **Traits** parameter object to order and hash the elements they contain.|  
+|[value_compare Class](../standard-library/value-compare-class.md)|Provides a function object that can compare the elements of a hash_map by comparing the values of their keys to determine their relative order in the hash_map.|  
+|[hash_map Class](../standard-library/hash-map-class.md)|Used for the storage and fast retrieval of data from a collection in which each element is a pair that has a sort key whose value is unique and an associated data value.|  
+|[hash_multimap Class](../standard-library/hash-multimap-class.md)|Used for the storage and fast retrieval of data from a collection in which each element is a pair that has a sort key whose value need not be unique and an associated data value.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<hash_map>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<hash_map>  
   
- **Espace de noms :** stdext  
+ **Namespace:** stdext  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   
- [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

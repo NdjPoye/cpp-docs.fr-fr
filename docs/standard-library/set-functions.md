@@ -1,5 +1,5 @@
 ---
-title: '&lt;set&gt;, fonctions | Microsoft Docs'
+title: '&lt;set&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,69 +12,69 @@ f1_keywords:
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
 caps.latest.revision: 7
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6c26128064b2f20a55ab1b9d1c013829e72523e0
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2590e6add10e367b708c295ceedd6570ef611b59
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltsetgt-functions"></a>&lt;set&gt;, fonctions
+# <a name="ltsetgt-functions"></a>&lt;set&gt; functions
 |||  
 |-|-|  
 |[swap (map)](#swap)|[swap (multiset)](#swap_multiset)|  
   
 ##  <a name="swap"></a>  swap  (map)
- Échange les éléments de deux classes set.  
+ Exchanges the elements of two sets.  
   
 ```
 template <class Key, class Traits, class Allocator>  
 void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- set qui fournit les éléments à échanger ou set dont les éléments doivent être échangés avec ceux du set `left`.  
+ The set providing the elements to be swapped, or the set whose elements are to be exchanged with those of the set `left`.  
   
  `left`  
- set dont les éléments doivent être échangés avec ceux du set `right`.  
+ The set whose elements are to be exchanged with those of the set `right`.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle est un algorithme spécialisé sur la classe de conteneur set pour exécuter la fonction membre `left``.`[swap](../standard-library/set-class.md#swap)( `right`). Il s’agit d’une instance du classement partiel des modèles de fonction par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle  
+### <a name="remarks"></a>Remarks  
+ The template function is an algorithm specialized on the container class set to execute the member function `left.`[swap](../standard-library/set-class.md#swap)( `right`). This is an instance of the partial ordering of function templates by the compiler. When template functions are overloaded in such a way that the match of the template with the function call is not unique, then the compiler will select the most specialized version of the template function. The general version of the template function  
   
  `template` \< **classT**> **void swap**( **T&**, **T&**)  
   
- dans la classe d’algorithme fonctionne par assignation. C’est une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide, car elle peut fonctionner avec la représentation interne de la classe conteneur.  
+ in the algorithm class works by assignment and is a slow operation. The specialized version in each container is much faster as it can work with the internal representation of the container class.  
   
-### <a name="example"></a>Exemple  
-  Pour obtenir un exemple d’utilisation de la version de modèle de `swap`, consultez l’exemple de code pour la classe membre [set::swap](../standard-library/set-class.md#swap).  
+### <a name="example"></a>Example  
+  See the code example for the member class [set::swap](../standard-library/set-class.md#swap) for an example of the use of the template version of `swap`.  
   
 ##  <a name="swap_multiset"></a>  swap  (multiset)
- Échange les éléments de deux classes multiset.  
+ Exchanges the elements of two multisets.  
   
 ```
 template <class Key, class Traits, class Allocator>  
 void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- multiset qui fournit les éléments à échanger ou multiset dont les éléments doivent être échangés avec ceux du multiset `left`.  
+ The multiset providing the elements to be swapped, or the multiset whose elements are to be exchanged with those of the multiset `left`.  
   
  `left`  
- multiset dont les éléments doivent être échangés avec ceux du multiset `right`.  
+ The multiset whose elements are to be exchanged with those of the multiset `right`.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle est un algorithme spécialisé sur la classe de conteneur multiset pour exécuter la fonction membre `left``.`[swap](../standard-library/multiset-class.md#swap)( `right`). Il s’agit d’une instance du classement partiel des modèles de fonction par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle  
+### <a name="remarks"></a>Remarks  
+ The template function is an algorithm specialized on the container class multiset to execute the member function `left.`[swap](../standard-library/multiset-class.md#swap)( `right`). This is an instance of the partial ordering of function templates by the compiler. When template functions are overloaded in such a way that the match of the template with the function call is not unique, then the compiler will select the most specialized version of the template function. The general version of the template function  
   
  `template` \< **classT**> **void swap**( **T&**, **T&**)  
   
- dans la classe d’algorithme fonctionne par assignation. C’est une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide, car elle peut fonctionner avec la représentation interne de la classe conteneur.  
+ in the algorithm class works by assignment and is a slow operation. The specialized version in each container is much faster as it can work with the internal representation of the container class.  
   
-### <a name="example"></a>Exemple  
-  Pour obtenir un exemple d’utilisation de la version de modèle de `swap`, consultez l’exemple de code pour la classe membre [multiset::swap](../standard-library/multiset-class.md#swap).  
+### <a name="example"></a>Example  
+  See the code example for the member class [multiset::swap](../standard-library/multiset-class.md#swap)for an example of the use of the template version of `swap`.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<set>](../standard-library/set.md)
 
 

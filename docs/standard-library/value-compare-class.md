@@ -1,5 +1,5 @@
 ---
-title: value_compare, classe | Microsoft Docs
+title: value_compare Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 646d30d5e85c985896ee0380cac9c1630cb2ffbf
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 75c9d03e976a73cef2fac4fe6bfeb47f5180e4a2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="valuecompare-class"></a>value_compare, classe
-Fournit un objet de fonction qui peut comparer les éléments d’un hash_map en comparant les valeurs de leurs clés pour déterminer leur ordre relatif dans le hash_map.  
+# <a name="valuecompare-class"></a>value_compare Class
+Provides a function object that can compare the elements of a hash_map by comparing the values of their keys to determine their relative order in the hash_map.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 class value_compare
@@ -63,25 +63,25 @@ protected:
 };
 ```  
   
-## <a name="remarks"></a>Notes  
- Le critère de comparaison fourni par value_compare entre des **value_types** d’éléments entiers contenus par un objet hash_map est induit à partir d’une comparaison entre les clés des éléments respectifs par la construction de classe auxiliaire. L’opérateur de fonction membre utilise l’objet **comp** de type `key_compare` stocké dans l’objet de fonction fourni par value_compare pour comparer les composants de clé de tri de deux éléments.  
+## <a name="remarks"></a>Remarks  
+ The comparison criteria provided by value_compare between **value_types** of whole elements contained by a hash_map is induced from a comparison between the keys of the respective elements by the auxiliary class construction. The member function operator uses the object **comp** of type `key_compare` stored in the function object provided by value_compare to compare the sort-key components of two elements.  
   
- Pour les objets hash_set et hash_multiset, qui sont des conteneurs simples dans lesquels les valeurs de clé sont identiques aux valeurs d’élément, value_compare équivaut à `key_compare` ; pour les objets hash_map et hash_multimap, ce n’est pas le cas, car la valeur des éléments `pair` de type n’est pas identique à la valeur de la clé de l’élément.  
+ For hash_sets and hash_multisets, which are simple containers where the key values are identical to the element values, value_compare is equivalent to `key_compare`; for hash_maps and hash_multimaps they are not, because the value of the type `pair` elements is not identical to the value of the element's key.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-## <a name="example"></a>Exemple  
- Consultez l’exemple [hash_map::value_comp](../standard-library/hash-map-class.md#value_comp) qui illustre comment déclarer et utiliser value_compare.  
+## <a name="example"></a>Example  
+ See the example for [hash_map::value_comp](../standard-library/hash-map-class.md#value_comp) for an example of how to declare and use value_compare.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<hash_map>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<hash_map>  
   
- **Espace de noms :** stdext  
+ **Namespace:** stdext  
   
-## <a name="see-also"></a>Voir aussi  
- [binary_function, struct](../standard-library/binary-function-struct.md)   
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [binary_function Struct](../standard-library/binary-function-struct.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

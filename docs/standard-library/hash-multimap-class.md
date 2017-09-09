@@ -1,17 +1,15 @@
 ---
-title: hash_multimap, classe | Microsoft Docs
+title: hash_multimap Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext::hash_multimap
 - hash_map/stdext::hash_multimap
-- hash_multimap
 - hash_map/stdext::hash_multimap::allocator_type
 - hash_map/stdext::hash_multimap::const_iterator
 - hash_map/stdext::hash_multimap::const_pointer
@@ -55,7 +53,47 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- hash_multimap class
+- stdext::hash_multimap
+- stdext::hash_multimap::allocator_type
+- stdext::hash_multimap::const_iterator
+- stdext::hash_multimap::const_pointer
+- stdext::hash_multimap::const_reference
+- stdext::hash_multimap::const_reverse_iterator
+- stdext::hash_multimap::difference_type
+- stdext::hash_multimap::iterator
+- stdext::hash_multimap::key_compare
+- stdext::hash_multimap::key_type
+- stdext::hash_multimap::mapped_type
+- stdext::hash_multimap::pointer
+- stdext::hash_multimap::reference
+- stdext::hash_multimap::reverse_iterator
+- stdext::hash_multimap::size_type
+- stdext::hash_multimap::value_type
+- stdext::hash_multimap::begin
+- stdext::hash_multimap::cbegin
+- stdext::hash_multimap::cend
+- stdext::hash_multimap::clear
+- stdext::hash_multimap::count
+- stdext::hash_multimap::crbegin
+- stdext::hash_multimap::crend
+- stdext::hash_multimap::emplace
+- stdext::hash_multimap::emplace_hint
+- stdext::hash_multimap::empty
+- stdext::hash_multimap::end
+- stdext::hash_multimap::equal_range
+- stdext::hash_multimap::erase
+- stdext::hash_multimap::find
+- stdext::hash_multimap::get_allocator
+- stdext::hash_multimap::insert
+- stdext::hash_multimap::key_comp
+- stdext::hash_multimap::lower_bound
+- stdext::hash_multimap::max_size
+- stdext::hash_multimap::rbegin
+- stdext::hash_multimap::rend
+- stdext::hash_multimap::size
+- stdext::hash_multimap::swap
+- stdext::hash_multimap::upper_bound
+- stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
 caps.latest.revision: 24
 author: corob-msft
@@ -75,20 +113,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 50239067b11ef3fc8ac5c7d3c4d155dab0dc3822
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5c9ba143e375499962688195228350d479df5a89
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="hashmultimap-class"></a>hash_multimap, classe
+# <a name="hashmultimap-class"></a>hash_multimap Class
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- La classe conteneur hash_multimap est une extension de la bibliothèque standard C++, et elle est utilisée pour le stockage et la récupération rapide des données d’une collection dans laquelle chaque élément est une paire qui a une clé de tri dont la valeur ne doit pas être unique et une valeur de données associée.  
+ The container class hash_multimap is an extension of the C++ Standard Library and is used for the storage and fast retrieval of data from a collection in which each element is a pair that has a sort key whose value need not be unique and an associated data value.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Key,   
@@ -98,144 +136,144 @@ template <class Key,
 class hash_multimap  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Key`  
- Type de données de la clé à stocker dans l'objet hash_multimap.  
+ The key data type to be stored in the hash_multimap.  
   
  `Type`  
- Type de données de l'élément à stocker dans l'objet hash_multimap.  
+ The element data type to be stored in the hash_multimap.  
   
  `Traits`  
- Type qui inclut les deux objets de fonction, une de la classe `Traits` capable de comparer deux valeurs d’éléments comme clés de tri pour déterminer leur ordre relatif, et une fonction de hachage qui est un prédicat unaire qui mappe les valeurs de clé des éléments à des entiers non signés de type **size_t**. Cet argument est facultatif et sa valeur par défaut est `hash_compare``<Key, less<Key> >`.  
+ The type that includes two function objects, one of class `Traits` that is able to compare two element values as sort keys to determine their relative order and a hash function that is a unary predicate mapping key values of the elements to unsigned integers of type **size_t**. This argument is optional, and the `hash_compare<Key, less<Key> >` is the default value.  
   
  `Allocator`  
- Type qui représente l'objet allocateur stocké qui encapsule des informations détaillées sur l'allocation et la désallocation de mémoire de la classe hash_multimap. Cet argument est facultatif et sa valeur par défaut est `allocator<pair <const Key, Type> >`.  
+ The type that represents the stored allocator object that encapsulates details about the hash_multimap's allocation and deallocation of memory. This argument is optional, and the default value is `allocator<pair <const Key, Type> >`.  
   
-## <a name="remarks"></a>Notes  
- L'objet hash_multimap est :  
+## <a name="remarks"></a>Remarks  
+ The hash_multimap is:  
   
--   Un conteneur associatif de taille variable qui prend en charge la récupération efficace des valeurs d'éléments selon une valeur de clé associée.  
+-   An associative container, which a variable size container that supports the efficient retrieval of element values based on an associated key value.  
   
--   Réversible, car elle fournit un itérateur bidirectionnel pour accéder à ses éléments  
+-   Reversible, because it provides a bidirectional iterator to access its elements.  
   
--   Haché, car ses éléments sont regroupés dans des compartiments selon la valeur d'une fonction de hachage appliquée aux valeurs de clé des éléments.  
+-   Hashed, because its elements are grouped into buckets based on the value of a hash function applied to the key values of the elements.  
   
--   Multiple, car il n'est pas nécessaire que ses éléments possèdent des clés uniques, ce qui permet à une valeur de clé d'être associée à plusieurs valeurs de données d'éléments.  
+-   Multiple, because its elements do not need to have a unique keys, so that one key value may have many element data values associated with it.  
   
--   Un conteneur associatif de paires, car ses valeurs d'éléments sont distinctes de ses valeurs de clés.  
+-   A pair associative container, because its element values are distinct from its key values.  
   
--   Une classe de modèle, car la fonctionnalité qu'elle fournit est générique et donc indépendante du type de données contenues comme éléments ou comme clés. Les types de données utilisés pour les éléments et les clés sont eux spécifiés comme paramètres dans la classe de modèle avec la fonction de comparaison et l'allocateur.  
+-   A template class, because the functionality it provides is generic and so independent of the specific type of data contained as elements or keys. The data types to be used for elements and keys are, instead, specified as parameters in the class template along with the comparison function and allocator.  
   
- Le principal avantage du hachage sur le tri est une meilleure efficacité : un hachage réussi effectue des insertions, des suppressions et trouve ce qui est recherché dans un délai moyen constant, alors que pour les techniques de tri, ce délai est proportionnel au logarithme du nombre d'éléments du conteneur. La valeur d'un élément d'une classe hash_multimap peut être modifiée directement, mais pas la valeur de clé qui y est associée. Les valeurs de clés associées aux anciens éléments doivent être supprimées, et de nouvelles valeurs de clés doivent être associées aux nouveaux éléments insérés.  
+ The main advantage of hashing over sorting is greater efficiency; a successful hashing performs insertions, deletions, and finds in constant average time as compared with a time proportional to the logarithm of the number of elements in the container for sorting techniques. The value of an element in a hash_multimap, but not its associated key value, may be changed directly. Instead, key values associated with old elements must be deleted and new key values associated with new elements inserted.  
   
- Le choix du type de conteneur doit être basé en général sur le type de la recherche et de l'insertion requis par l'application. Les conteneurs associatifs hachés sont optimisés pour les opérations de recherche, d'insertion et de suppression. Les fonctions membres qui prennent en charge explicitement ces opérations sont efficaces quand elles sont utilisées avec une fonction de hachage bien conçue, car elles les exécutent dans un délai qui est en moyenne constant et ne dépend pas du nombre d'éléments dans le conteneur. Une fonction de hachage bien conçue produit une distribution uniforme des valeurs de hachage et réduit le nombre de collisions, qui se produisent quand des valeurs de clés distinctes sont mappées dans la même valeur de hachage. Dans le pire des cas, avec la pire des fonctions de hachage possible, le nombre d'opérations est proportionnel au nombre d'éléments de la séquence (délai linéaire).  
+ The choice of container type should be based in general on the type of searching and inserting required by the application. Hashed associative containers are optimized for the operations of lookup, insertion and removal. The member functions that explicitly support these operations are efficient when used with a well-designed hash function, performing them in a time that is on average constant and not dependent on the number of elements in the container. A well-designed hash function produces a uniform distribution of hashed values and minimizes the number of collisions, where a collision is said to occur when distinct key values are mapped into the same hashed value. In the worst case, with the worst possible hash function, the number of operations is proportional to the number of elements in the sequence (linear time).  
   
- La classe hash_multimap doit être sélectionnée comme conteneur associatif quand les conditions associant les valeurs à leurs clés sont remplies par l'application. Pour ce type de structure, il peut s'agir d'une liste triée de mots clés avec des valeurs de chaîne associées fournissant par exemple des définitions, où les mots n'ont pas toujours été définis de manière unique. Si en revanche, les mots clés ont été définis de façon unique de sorte que les clés sont uniques, il convient d'utiliser un objet hash_map comme conteneur. Si en revanche seule la liste des mots doit être stockée, un objet hash_set est le conteneur correct. Si plusieurs occurrences d'un mot sont autorisées, un objet hash_multiset est la structure de conteneur appropriée.  
+ The hash_multimap should be the associative container of choice when the conditions associating the values with their keys are satisfied by the application. A model for this type of structure is an ordered list of key words with associated string values providing, say, definitions, where the words were not always uniquely defined. If, instead, the keywords were uniquely defined so that keys were unique, then a hash_map would be the container of choice. If, on the other hand, just the list of words were being stored, then a hash_set would be the correct container. If multiple occurrences of the words were allowed, then a hash_multiset would be the appropriate container structure.  
   
- L’objet hash_multimap ordonne la séquence qu’il contrôle en appelant un objet `Traits` de hachage stocké de type [value_compare](../standard-library/value-compare-class.md). Cet objet stocké est accessible en appelant la fonction membre [key_comp](../standard-library/hash-map-class.md#key_comp). Cet objet de fonction doit se comporter comme un objet de la classe [hash_compare](../standard-library/hash-compare-class.md)`<Key,  less<Key> >`. En particulier, pour toutes les valeurs `Key` de type `Key`, l'appel `Traits (Key)` génère une distribution des valeurs de type `size_t`.  
+ The hash_multimap orders the sequence it controls by calling a stored hash `Traits` object of type [value_compare](../standard-library/value-compare-class.md). This stored object may be accessed by calling the member function [key_comp](../standard-library/hash-map-class.md#key_comp). Such a function object must behave the same as an object of class [hash_compare](../standard-library/hash-compare-class.md)`<Key,  less<Key> >`. Specifically, for all values `Key` of type `Key`, the call `Traits (Key)` yields a distribution of values of type `size_t`.  
   
- En général, les éléments ne doivent pas être tout à fait comparables, afin que, à l'aide de deux événements quelconques donnés, il soit possible de déterminer, soit qu'ils soient équivalents (dans le sens où l'un n'est pas inférieur à l'autre), soit que l'un est inférieur à l'autre. Ceci entraîne un ordonnancement entre les éléments non équivalents. D'un point de vue plus technique, la fonction de comparaison est un prédicat binaire qui induit un ordre faible strict au sens mathématique du terme. Un prédicat binaire f(x,y) est un objet de fonction qui a deux objets d'argument `x` et `y`, et une valeur de retour `true` ou `false`. Un tri appliqué à un objet hash_multimap est un ordre faible strict si le prédicat binaire est irréflexif, antisymétrique et transitif, et si l'équivalence est transitive, où deux objets `x` et `y` sont définis comme équivalents quand f(x, y) et f(y, x) ont la valeur `false`. Si la plus élevée des conditions d'égalité entre les clés remplace celle de l'équivalence, alors le tri devient total (dans le sens où tous les éléments sont classés les uns par rapport aux autres), et les clés correspondantes seront alors impossibles à différencier les unes des autres.  
+ In general, the elements need be merely less than comparable to establish this order: so that, given any two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the non-equivalent elements. On a more technical note, the comparison function is a binary predicate that induces a strict weak ordering in the standard mathematical sense. A binary predicate f(x, y) is a function object that has two argument objects `x` and `y` and a return value of `true` or `false`. An ordering imposed on a hash_multimap is a strict weak ordering if the binary predicate is irreflexive, antisymmetric, and transitive and if equivalence is transitive, where two objects `x` and `y` are defined to be equivalent when both f(x, y) and f(y, x) are `false`. If the stronger condition of equality between keys replaces that of equivalence, then the ordering becomes total (in the sense that all the elements are ordered with respect to each other) and the keys matched will be indiscernible from each other.  
   
- L'ordre réel des éléments de la séquence contrôlée dépend de la fonction de hachage, de la fonction d'ordonnancement et de la taille actuelle de la table de hachage stockée dans l'objet conteneur. Vous ne pouvez pas déterminer la taille actuelle de la table de hachage, et vous ne pouvez donc généralement pas prédire l'ordre des éléments dans la séquence contrôlée. L'insertion d'éléments ne rend aucun itérateur non valide. La suppression d'éléments rend uniquement non valides les itérateurs qui pointaient spécifiquement vers les éléments supprimés.  
+ The actual order of elements in the controlled sequence depends on the hash function, the ordering function, and the current size of the hash table stored in the container object. You cannot determine the current size of the hash table, so you cannot in general predict the order of elements in the controlled sequence. Inserting elements invalidates no iterators, and removing elements invalidates only those iterators that had specifically pointed at the removed elements.  
   
- L’itérateur fourni par la classe hash_multimap est un itérateur bidirectionnel. Toutefois, les fonctions membres de classe [insert](#insert) et [hash_multimap](#hash_multimap) ont des versions qui prennent comme paramètres de modèle un itérateur d’entrée plus faible, dont les exigences des fonctionnalités sont inférieures à celles garanties par la classe des itérateurs bidirectionnels. Les différents concepts d'itérateurs forment une famille liée par les améliorations de leurs fonctionnalités. Chaque concept d'itérateur a son propre hash_multimap de spécifications, et les algorithmes qui fonctionnent avec eux doivent limiter leurs hypothèses aux spécifications fournies par ce type d'itérateur. On peut considérer qu'un itérateur d'entrée peut être déréférencé pour faire référence à un objet et qu'il peut être incrémenté à l'itérateur suivant dans la séquence. Il s'agit d'un hash_multimap minimal de fonctionnalités, mais il est suffisant pour pouvoir parler de plage d'itérateurs `[First, Last)` dans le contexte des fonctions membres.  
+ The iterator provided by the hash_multimap class is a bidirectional iterator, but the class member functions [insert](#insert) and [hash_multimap](#hash_multimap) have versions that take as template parameters a weaker input iterator, whose functionality requirements are more minimal than those guaranteed by the class of bidirectional iterators. The different iterator concepts form a family related by refinements in their functionality. Each iterator concept has its own hash_multimap of requirements, and the algorithms that work with them must limit their assumptions to the requirements provided by that type of iterator. It may be assumed that an input iterator may be dereferenced to refer to some object and that it may be incremented to the next iterator in the sequence. This is a minimal hash_multimap of functionality, but it is enough to be able to talk meaningfully about a range of iterators `[First, Last)` in the context of the member functions.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [The stdext Namespace (L’espace de noms stdext)](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="constructors"></a>Constructeurs  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[hash_multimap](#hash_multimap)|Construit une liste d'une taille spécifique ou avec des éléments d'une valeur spécifique ou avec un `allocator` spécifique, ou comme copie d'un autre objet `hash_multimap`.|  
+|[hash_multimap](#hash_multimap)|Constructs a list of a specific size or with elements of a specific value or with a specific `allocator` or as a copy of some other `hash_multimap`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|Type qui représente la classe `allocator` pour l'objet `hash_multimap`.|  
-|[const_iterator](#const_iterator)|Type qui fournit un itérateur bidirectionnel capable de lire un élément `const` dans le `hash_multimap`.|  
-|[const_pointer](#const_pointer)|Type qui fournit un pointeur vers un élément `const` dans un `hash_multimap`.|  
-|[const_reference](#const_reference)|Type qui fournit une référence à un élément `const` stocké dans un `hash_multimap` pour la lecture et l'exécution des opérations `const`.|  
-|[const_reverse_iterator](#const_reverse_iterator)|Type qui fournit un itérateur bidirectionnel capable de lire n'importe quel élément `const` dans le `hash_multimap`.|  
-|[difference_type](#difference_type)|Type entier signé qui peut être utilisé pour représenter le nombre d'éléments d'un `hash_multimap` au sein d'une plage, parmi les éléments pointés par les itérateurs.|  
-|[iterator](#iterator)|Type qui fournit un itérateur bidirectionnel, qui peut lire ou modifier tout élément d'un objet `hash_multimap`.|  
-|[key_compare](#key_compare)|Type qui fournit un objet de fonction pouvant comparer deux clés de tri pour déterminer l'ordre relatif de deux éléments au sein d'un `hash_multimap`.|  
-|[key_type](#key_type)|Type qui décrit l'objet de clé de tri qui constitue chaque élément du `hash_multimap`.|  
-|[mapped_type](#mapped_type)|Type qui représente le type de données stocké dans un `hash_multimap`.|  
-|[pointer](#pointer)|Type qui fournit un pointeur vers un élément d'un objet `hash_multimap`.|  
-|[reference](#reference)|Type qui fournit une référence à un élément stocké dans un `hash_multimap`.|  
-|[reverse_iterator](#reverse_iterator)|Type qui fournit un itérateur bidirectionnel capable de lire ou de modifier tout élément d'un `hash_multimap` inversé.|  
-|[size_type](#size_type)|Type entier non signé qui peut représenter le nombre d'éléments dans un `hash_multimap`.|  
-|[value_type](#value_type)|Type qui fournit un objet de fonction pouvant comparer deux éléments comme clés de tri pour déterminer leur ordre relatif dans le `hash_multimap`.|  
+|[allocator_type](#allocator_type)|A type that represents the `allocator` class for the `hash_multimap` object.|  
+|[const_iterator](#const_iterator)|A type that provides a bidirectional iterator that can read a `const` element in the `hash_multimap`.|  
+|[const_pointer](#const_pointer)|A type that provides a pointer to a `const` element in a `hash_multimap`.|  
+|[const_reference](#const_reference)|A type that provides a reference to a `const` element stored in a `hash_multimap` for reading and performing `const` operations.|  
+|[const_reverse_iterator](#const_reverse_iterator)|A type that provides a bidirectional iterator that can read any `const` element in the `hash_multimap`.|  
+|[difference_type](#difference_type)|A signed integer type that can be used to represent the number of elements of a `hash_multimap` in a range between elements pointed to by iterators.|  
+|[iterator](#iterator)|A type that provides a bidirectional iterator that can read or modify any element in a `hash_multimap`.|  
+|[key_compare](#key_compare)|A type that provides a function object that can compare two sort keys to determine the relative order of two elements in the `hash_multimap`.|  
+|[key_type](#key_type)|A type that describes the sort key object that constitutes each element of the `hash_multimap`.|  
+|[mapped_type](#mapped_type)|A type that represents the data type stored in a `hash_multimap`.|  
+|[pointer](#pointer)|A type that provides a pointer to an element in a `hash_multimap`.|  
+|[reference](#reference)|A type that provides a reference to an element stored in a `hash_multimap`.|  
+|[reverse_iterator](#reverse_iterator)|A type that provides a bidirectional iterator that can read or modify an element in a reversed `hash_multimap`.|  
+|[size_type](#size_type)|An unsigned integer type that can represent the number of elements in a `hash_multimap`.|  
+|[value_type](#value_type)|A type that provides a function object that can compare two elements as sort keys to determine their relative order in the `hash_multimap`.|  
   
-### <a name="member-functions"></a>Fonctions membres  
-  
-|||  
-|-|-|  
-|[begin](#begin)|Retourne un itérateur traitant le premier élément d'un `hash_multimap`.|  
-|[cbegin](#cbegin)|Retourne un itérateur const qui traite le premier élément d'un `hash_multimap`.|  
-|[cend](#cend)|Retourne un itérateur const qui traite l'emplacement situé après le dernier élément d'un `hash_multimap`.|  
-|[clear](#clear)|Efface tous les éléments d'un `hash_multimap`.|  
-|[count](#count)|Retourne le nombre d'éléments d'un `hash_multimap` dont la clé correspond à une clé spécifiée par un paramètre.|  
-|[crbegin](#crbegin)|Retourne un itérateur const qui traite le premier élément d'un `hash_multimap` inversé.|  
-|[crend](#crend)|Retourne un itérateur const qui traite l'emplacement qui suit le dernier élément d'un `hash_multimap` inversé.|  
-|[emplace](#emplace)|Insère un élément construit sur place dans un `hash_multimap`.|  
-|[emplace_hint](#emplace_hint)|Insère un élément construit sur place dans un `hash_multimap`, avec un indicateur de positionnement.|  
-|[empty](#empty)|Vérifie si un `hash_multimap` est vide.|  
-|[end](#end)|Retourne un itérateur qui traite l'emplacement suivant le dernier élément d'un `hash_multimap`.|  
-|[equal_range](#equal_range)|Retourne un itérateur qui traite l'emplacement suivant le dernier élément d'un `hash_multimap`.|  
-|[erase](#erase)|Supprime un élément ou une plage d'éléments aux positions spécifiées d'un objet `hash_multimap`.|  
-|[find](#find)|Retourne un itérateur qui référence l'emplacement d'un élément d'un objet `hash_multimap` qui a une clé équivalente à une clé spécifiée.|  
-|[get_allocator](#get_allocator)|Retourne une copie de l'objet `allocator` utilisé pour construire le `hash_multimap`.|  
-|[insert](#insert)|Insère un élément ou une plage d'éléments dans l'objet `hash_multimap` à un emplacement spécifié.|  
-|[key_comp](#key_comp)|Récupère une copie de l'objet de comparaison utilisé pour trier les clés au sein d'un `hash_multimap`.|  
-|[lower_bound](#lower_bound)|Retourne un itérateur pointant vers le premier élément d'un objet `hash_multimap` qui a une valeur de clé supérieure ou égale à celle d'une clé spécifiée.|  
-|[max_size](#max_size)|Retourne la longueur maximale du `hash_multimap`.|  
-|[rbegin](#rbegin)|Retourne un itérateur qui traite le premier élément d'un `hash_multimap` inversé.|  
-|[rend](#rend)|Retourne un itérateur qui traite l'emplacement suivant le dernier élément d'un `hash_multimap` inversé.|  
-|[size](#size)|Spécifie une nouvelle taille pour un objet `hash_multimap`.|  
-|[swap](#swap)|Échange les éléments de deux `hash_multimap`.|  
-|[upper_bound](#upper_bound)|Retourne un itérateur pointant vers le premier élément d'un objet `hash_multimap` qui a une valeur de clé supérieure à celle d'une clé spécifiée.|  
-|[value_comp](#value_comp)|Récupère une copie de l'objet de comparaison utilisé pour ordonner les valeurs des éléments d'un objet `hash_multimap`.|  
-  
-### <a name="operators"></a>Opérateurs  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[hash_multimap::operator=](#op_eq)|Remplace les éléments d'un `hash_multimap` par une copie d'un autre `hash_multimap`.|  
+|[begin](#begin)|Returns an iterator addressing the first element in the `hash_multimap`.|  
+|[cbegin](#cbegin)|Returns a const iterator addressing the first element in the `hash_multimap`.|  
+|[cend](#cend)|Returns a const iterator that addresses the location succeeding the last element in a `hash_multimap`.|  
+|[clear](#clear)|Erases all the elements of a `hash_multimap`.|  
+|[count](#count)|Returns the number of elements in a `hash_multimap` whose key matches a parameter-specified key.|  
+|[crbegin](#crbegin)|Returns a const iterator addressing the first element in a reversed `hash_multimap`.|  
+|[crend](#crend)|Returns a const iterator that addresses the location succeeding the last element in a reversed `hash_multimap`.|  
+|[emplace](#emplace)|Inserts an element constructed in place into a `hash_multimap`.|  
+|[emplace_hint](#emplace_hint)|Inserts an element constructed in place into a `hash_multimap`, with a placement hint.|  
+|[empty](#empty)|Tests if a `hash_multimap` is empty.|  
+|[end](#end)|Returns an iterator that addresses the location succeeding the last element in a `hash_multimap`.|  
+|[equal_range](#equal_range)|Returns an iterator that addresses the location succeeding the last element in a `hash_multimap`.|  
+|[erase](#erase)|Removes an element or a range of elements in a `hash_multimap` from specified positions|  
+|[find](#find)|Returns an iterator addressing the location of an element in a `hash_multimap` that has a key equivalent to a specified key.|  
+|[get_allocator](#get_allocator)|Returns a copy of the `allocator` object used to construct the `hash_multimap`.|  
+|[insert](#insert)|Inserts an element or a range of elements into the `hash_multimap` at a specified position.|  
+|[key_comp](#key_comp)|Retrieves a copy of the comparison object used to order keys in a `hash_multimap`.|  
+|[lower_bound](#lower_bound)|Returns an iterator to the first element in a `hash_multimap` that with a key value that is equal to or greater than that of a specified key.|  
+|[max_size](#max_size)|Returns the maximum length of the `hash_multimap`.|  
+|[rbegin](#rbegin)|Returns an iterator addressing the first element in a reversed `hash_multimap`.|  
+|[rend](#rend)|Returns an iterator that addresses the location succeeding the last element in a reversed `hash_multimap`.|  
+|[size](#size)|Specifies a new size for a `hash_multimap`.|  
+|[swap](#swap)|Exchanges the elements of two `hash_multimap`s.|  
+|[upper_bound](#upper_bound)|Returns an iterator to the first element in a `hash_multimap` that with a key value that is greater than that of a specified key.|  
+|[value_comp](#value_comp)|Retrieves a copy of the comparison object used to order element values in a `hash_multimap`.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<hash_map>  
+### <a name="operators"></a>Operators  
   
- **Espace de noms :** stdext  
+|||  
+|-|-|  
+|[hash_multimap::operator=](#op_eq)|Replaces the elements of a `hash_multimap` with a copy of another `hash_multimap`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<hash_map>  
+  
+ **Namespace:** stdext  
   
 ##  <a name="allocator_type"></a>  hash_multimap::allocator_type  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Type représentant la classe allocator pour l’objet hash_multimap.  
+ A type that represents the allocator class for the hash_multimap object.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::allocator_type allocator_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- `allocator_type` est un synonyme du paramètre de modèle `Allocator`.  
+### <a name="remarks"></a>Remarks  
+ `allocator_type` is a synonym for the template parameter `Allocator`.  
   
- Pour plus d’informations sur `Allocator`, consultez la section Notes de la rubrique [hash_multimap, classe](../standard-library/hash-multimap-class.md).  
+ For more information on `Allocator`, see the Remarks section of the [hash_multimap Class](../standard-library/hash-multimap-class.md) topic.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [get_allocator](#get_allocator) pour obtenir un exemple qui utilise `allocator_type`.  
+### <a name="example"></a>Example  
+  See the example for [get_allocator](#get_allocator) for an example using `allocator_type`.  
   
 ##  <a name="begin"></a>  hash_multimap::begin  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne un itérateur qui traite le premier élément du hash_multimap.  
+ Returns an iterator addressing the first element in the hash_multimap.  
   
 ```  
 const_iterator begin() const;
@@ -243,15 +281,15 @@ const_iterator begin() const;
 iterator begin();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur bidirectionnel qui traite le premier élément du hash_multimap ou l’emplacement qui suit un hash_multimap vide.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the first element in the hash_multimap or the location succeeding an empty hash_multimap.  
   
-### <a name="remarks"></a>Notes  
- Si la valeur de retour de **begin** est affectée à un `const_iterator`, les éléments de l’objet hash_multimap ne peuvent pas être changés. Si la valeur de retour de **begin** est affectée à un **iterator**, les éléments de l’objet hash_multimap peuvent être changés.  
+### <a name="remarks"></a>Remarks  
+ If the return value of **begin** is assigned to a `const_iterator`, the elements in the hash_multimap object cannot be modified. If the return value of **begin** is assigned to an **iterator**, the elements in the hash_multimap object can be modified.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_begin.cpp  
@@ -298,18 +336,18 @@ The first element of hm1 is now 1.
 ##  <a name="cbegin"></a>  hash_multimap::cbegin  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne un itérateur const qui traite le premier élément du hash_multimap.  
+ Returns a const iterator addressing the first element in the hash_multimap.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur bidirectionnel const qui traite le premier élément du [hash_multimap](../standard-library/hash-multimap-class.md) ou l’emplacement qui suit un `hash_multimap` vide.  
+### <a name="return-value"></a>Return Value  
+ A const bidirectional iterator addressing the first element in the [hash_multimap](../standard-library/hash-multimap-class.md) or the location succeeding an empty `hash_multimap`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_cbegin.cpp  
@@ -341,25 +379,25 @@ The first element of hm1 is 2.
 ##  <a name="cend"></a>  hash_multimap::cend  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne un itérateur const qui traite l’emplacement situé après le dernier élément d’un hash_multimap.  
+ Returns a const iterator that addresses the location succeeding the last element in a hash_multimap.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur bidirectionnel const qui traite l’emplacement suivant le dernier élément d’un [hash_multimap](../standard-library/hash-multimap-class.md). Si le `hash_multimap` est vide, `hash_multimap::cend == hash_multimap::begin`.  
+### <a name="return-value"></a>Return Value  
+ A const bidirectional iterator that addresses the location succeeding the last element in a [hash_multimap](../standard-library/hash-multimap-class.md). If the `hash_multimap` is empty, then `hash_multimap::cend == hash_multimap::begin`.  
   
-### <a name="remarks"></a>Notes  
- `cend` est utilisé pour déterminer si un itérateur a atteint la fin de son hash_multimap.  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has reached the end of its hash_multimap.  
   
- La valeur retournée par `cend` ne doit pas être déréférencée.  
+ The value returned by `cend` should not be dereferenced.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_cend.cpp  
@@ -392,19 +430,19 @@ The value of last element of hm1 is 30.
 ##  <a name="clear"></a>  hash_multimap::clear  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Efface tous les éléments d'un hash_multimap.  
+ Erases all the elements of a hash_multimap.  
   
 ```  
 void clear();
 ```  
   
-### <a name="remarks"></a>Notes  
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
-  L'exemple suivant illustre l'utilisation de la fonction membre hash_multimap::clear.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the hash_multimap::clear member function.  
   
 ```  
 // hash_multimap_clear.cpp  
@@ -442,61 +480,61 @@ The size of the hash_multimap after clearing is 0.
 ##  <a name="const_iterator"></a>  hash_multimap::const_iterator  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Type qui fournit un itérateur bidirectionnel capable de lire un élément **const** dans le hash_multimap.  
+ A type that provides a bidirectional iterator that can read a **const** element in the hash_multimap.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Un type `const_iterator` ne peut pas être utilisé pour changer la valeur d'un élément.  
+### <a name="remarks"></a>Remarks  
+ A type `const_iterator` cannot be used to modify the value of an element.  
   
- Le `const_iterator` défini par hash_multimap pointe vers des objets de [value_type](#value_type), qui sont de type `pair`*\<***constKey, Type***>*. La valeur de la clé est disponible par l’intermédiaire du premier membre de la paire, et la valeur de l’élément mappé est disponible par l’intermédiaire du deuxième membre de la paire.  
+ The `const_iterator` defined by hash_multimap points to objects of [value_type](#value_type), which are of type `pair`*\<***constKey, Type***>*. The value of the key is available through the first member pair, and the value of the mapped element is available through the second member of the pair.  
   
- Pour déréférencer un `const_iterator``cIter` pointant sur un élément dans un hash_multimap, utilisez l’opérateur **->**.  
+ To dereference a `const_iterator` `cIter` pointing to an element in a hash_multimap, use the **->** operator.  
   
- Pour accéder à la valeur de la clé de l’élément, utilisez `cIter` -> **first**, ce qui équivaut à (\* `cIter`). **first**. Pour accéder à la valeur de la référence mappée de l’élément, utilisez `cIter` -> **second**, ce qui équivaut à (\* `cIter`). **first**.  
+ To access the value of the key for the element, use `cIter` -> **first**, which is equivalent to (\* `cIter`). **first**. To access the value of the mapped datum for the element, use `cIter` -> **second**, which is equivalent to (\* `cIter`). **first**.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [begin](#begin) pour obtenir un exemple qui utilise `const_iterator`.  
+### <a name="example"></a>Example  
+  See the example for [begin](#begin) for an example using `const_iterator`.  
   
 ##  <a name="const_pointer"></a>  hash_multimap::const_pointer  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Type qui fournit un pointeur vers un élément **const** dans un hash_multimap.  
+ A type that provides a pointer to a **const** element in a hash_multimap.  
   
 ```  
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Un type `const_pointer` ne peut pas être utilisé pour changer la valeur d'un élément.  
+### <a name="remarks"></a>Remarks  
+ A type `const_pointer` cannot be used to modify the value of an element.  
   
- Dans la plupart des cas, vous devez utiliser un [iterator](#iterator) pour accéder aux éléments dans un objet hash_multimap.  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a hash_multimap object.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [The stdext Namespace (L’espace de noms stdext)](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
 ##  <a name="const_reference"></a>  hash_multimap::const_reference  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Type qui fournit une référence à un élément **const** stocké dans un hash_multimap pour la lecture et l’exécution d’opérations **const**.  
+ A type that provides a reference to a **const** element stored in a hash_multimap for reading and performing **const** operations.  
   
 ```  
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_reference const_reference;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_const_ref.cpp  
@@ -542,57 +580,57 @@ The data value of 1st element in the hash_multimap is 10.
 ##  <a name="const_reverse_iterator"></a>  hash_multimap::const_reverse_iterator  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Type qui fournit un itérateur bidirectionnel capable de lire tout élément **const** dans le hash_multimap.  
+ A type that provides a bidirectional iterator that can read any **const** element in the hash_multimap.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse_iterator const_reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Un type `const_reverse_iterator` ne peut pas changer la valeur d’un élément. Il sert à itérer le hash_multimap dans l’ordre inverse.  
+### <a name="remarks"></a>Remarks  
+ A type `const_reverse_iterator` cannot modify the value of an element and is use to iterate through the hash_multimap in reverse.  
   
- Le `const_reverse_iterator` défini par hash_multimap pointe vers des éléments qui sont des objets de [value_type](#value_type), qui sont de type `pair`*\<***const Key, Type>**, dont le premier membre est la clé de l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.  
+ The `const_reverse_iterator` defined by hash_multimap points to objects of [value_type](#value_type), which are of type `pair`*\<***const Key, Type>**, whose first member is the key to the element and whose second member is the mapped datum held by the element.  
   
- Pour déréférencer un `const_reverse_iterator``crIter` pointant sur un élément dans un hash_multimap, utilisez l’opérateur **->**.  
+ To dereference a `const_reverse_iterator` `crIter` pointing to an element in a hash_multimap, use the **->** operator.  
   
- Pour accéder à la valeur de la clé de l’élément, utilisez `crIter` -> **first**, ce qui équivaut à (\* `crIter`). **first**. Pour accéder à la valeur de la référence mappée de l’élément, utilisez `crIter` -> **second**, ce qui équivaut à (\* `crIter`). **first**.  
+ To access the value of the key for the element, use `crIter` -> **first**, which is equivalent to (\* `crIter`). **first**. To access the value of the mapped datum for the element, use `crIter` -> **second**, which is equivalent to (\* `crIter`). **first**.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple relatif à [rend](#rend) pour découvrir comment déclarer et utiliser le `const_reverse_iterator`.  
+### <a name="example"></a>Example  
+  See the example for [rend](#rend) for an example of how to declare and use the `const_reverse_iterator`.  
   
 ##  <a name="count"></a>  hash_multimap::count  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne le nombre d'éléments d'un hash_multimap dont la clé correspond à une clé spécifiée par un paramètre.  
+ Returns the number of elements in a hash_multimap whose key matches a parameter-specified key.  
   
 ```  
 size_type count(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `key`  
- Clé des éléments à mettre en correspondance à partir du hash_multimap.  
+ The key of the elements to be matched from the hash_multimap.  
   
-### <a name="return-value"></a>Valeur de retour  
- 1 si le hash_multimap contient un élément dont la clé de tri correspond à la clé du paramètre ; 0 si le hash_multimap ne contient pas d'élément avec une clé correspondante.  
+### <a name="return-value"></a>Return Value  
+ 1 if the hash_multimap contains an element whose sort key matches the parameter key; 0 if the hash_multimap doesn't contain an element with a matching key.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne le nombre d'éléments dans la plage  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of elements in the range  
   
  **[lower_bound (** `key` **), upper_bound (** `key` **) )**  
   
- qui ont une valeur de clé `key`.  
+ which have a key value `key`.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
-  L'exemple suivant illustre l'utilisation de la fonction membre hash_multimap::count.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the hash_multimap::count member function.  
   
 ```  
 // hash_multimap_count.cpp  
@@ -638,27 +676,27 @@ The number of elements in hm1 with a sort key of 3 is: 0.
 ##  <a name="crbegin"></a>  hash_multimap::crbegin  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne un itérateur const qui traite le premier élément d’un hash_multimap inversé.  
+ Returns a const iterator addressing the first element in a reversed hash_multimap.  
   
 ```  
 const_reverse_iterator crbegin() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur bidirectionnel inversé const qui traite le premier élément d’un [hash_multimap](../standard-library/hash-multimap-class.md) inversé ou qui traite ce qui était le dernier élément de l’objet `hash_multimap` non inversé.  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator addressing the first element in a reversed [hash_multimap](../standard-library/hash-multimap-class.md) or addressing what had been the last element in the unreversed `hash_multimap`.  
   
-### <a name="remarks"></a>Notes  
- `crbegin` est utilisé avec un hash_multimap inversé comme [hash_multimap::begin](#begin) est utilisé avec un `hash_multimap`.  
+### <a name="remarks"></a>Remarks  
+ `crbegin` is used with a reversed hash_multimap just as [hash_multimap::begin](#begin) is used with a `hash_multimap`.  
   
- Avec la valeur de retour `crbegin`, l'objet `hash_multimap` ne peut pas être changé.  
+ With the return value of `crbegin`, the `hash_multimap` object cannot be modified.  
   
- `crbegin` peut servir à itérer un `hash_multimap` vers l’arrière.  
+ `crbegin` can be used to iterate through a `hash_multimap` backwards.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_crbegin.cpp  
@@ -690,29 +728,29 @@ The first element of the reversed hash_multimap hm1 is 3.
 ##  <a name="crend"></a>  hash_multimap::crend  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne un itérateur const qui traite l’emplacement qui suit le dernier élément d’un hash_multimap inversé.  
+ Returns a const iterator that addresses the location succeeding the last element in a reversed hash_multimap.  
   
 ```  
 const_reverse_iterator crend() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur bidirectionnel inversé const qui traite l’emplacement qui suit le dernier élément d’un [hash_multimap](../standard-library/hash-multimap-class.md) inversé (emplacement qui précédait celui du premier élément du `hash_multimap` non inversé).  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator that addresses the location succeeding the last element in a reversed [hash_multimap](../standard-library/hash-multimap-class.md) (the location that had preceded the first element in the unreversed `hash_multimap`).  
   
-### <a name="remarks"></a>Notes  
- `crend` est utilisé avec un hash_multimap inversé comme [hash_multimap::end](#end) est utilisé avec un hash_multimap.  
+### <a name="remarks"></a>Remarks  
+ `crend` is used with a reversed hash_multimap just as [hash_multimap::end](#end) is used with a hash_multimap.  
   
- Avec la valeur de retour `crend`, l'objet `hash_multimap` ne peut pas être changé.  
+ With the return value of `crend`, the `hash_multimap` object cannot be modified.  
   
- Vous pouvez utiliser `crend` pour déterminer si un itérateur inversé a atteint la fin de son hash_multimap.  
+ `crend` can be used to test to whether a reverse iterator has reached the end of its hash_multimap.  
   
- La valeur retournée par `crend` ne doit pas être déréférencée.  
+ The value returned by `crend` should not be dereferenced.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_crend.cpp  
@@ -745,22 +783,22 @@ The last element of the reversed hash_multimap hm1 is 3.
 ##  <a name="difference_type"></a>  hash_multimap::difference_type  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Type entier signé qui peut être utilisé pour représenter le nombre d’éléments d’un hash_multimap au sein d’une plage, parmi les éléments pointés par les itérateurs.  
+ A signed integer type that can be used to represent the number of elements of a hash_multimap in a range between elements pointed to by iterators.  
   
 ```  
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::difference_type difference_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- `difference_type` est le type retourné durant la soustraction ou l'incrémentation via les itérateurs du conteneur. `difference_type` est généralement utilisé pour représenter le nombre d’éléments de la plage *[ first,  last)* entre les itérateurs `first` et `last`. Il inclut l’élément sur lequel pointe `first` et la plage d’éléments allant jusqu’à l’élément (mais sans l’inclure) sur lequel pointe `last`.  
+### <a name="remarks"></a>Remarks  
+ The `difference_type` is the type returned when subtracting or incrementing through iterators of the container. The `difference_type` is typically used to represent the number of elements in the range *[ first,  last)* between the iterators `first` and `last`, includes the element pointed to by `first` and the range of elements up to, but not including, the element pointed to by `last`.  
   
- Notez que même si `difference_type` est disponible pour tous les itérateurs qui répondent aux exigences d’un itérateur d’entrée, ce qui inclut la classe des itérateurs bidirectionnels prise en charge par les conteneurs réversibles tels que set, la soustraction entre les itérateurs n’est prise en charge que par les itérateurs à accès aléatoire fournis par un conteneur à accès aléatoire, par exemple vector.  
+ Note that although `difference_type` is available for all iterators that satisfy the requirements of an input iterator, which includes the class of bidirectional iterators supported by reversible containers such as set, subtraction between iterators is only supported by random-access iterators provided by a random-access container such as vector.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_difference_type.cpp  
@@ -823,31 +861,31 @@ The values of the mapped elements are: 10 20 30 20.
 ##  <a name="emplace"></a>  hash_multimap::emplace  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Insère un élément construit sur place dans un hash_multimap.  
+ Inserts an element constructed in place into a hash_multimap.  
   
 ```  
 template <class ValTy>  
 iterator emplace(ValTy&& val);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Paramètre|Description|  
-|`val`|Valeur utilisée pour construire un élément à insérer dans le [hash_multimap](../standard-library/hash-multimap-class.md).|  
+|Parameter|Description|  
+|`val`|The value used to move construct an element to be inserted into the [hash_multimap](../standard-library/hash-multimap-class.md).|  
   
-### <a name="return-value"></a>Valeur de retour  
- La fonction membre `emplace` retourne un itérateur qui pointe vers la position où le nouvel élément a été inséré.  
+### <a name="return-value"></a>Return Value  
+ The `emplace` member function returns an iterator that points to the position where the new element was inserted.  
   
-### <a name="remarks"></a>Notes  
- Le [hash_multimap::value_type](#value_type) d’un élément est une paire, si bien que la valeur d’un élément est une paire ordonnée dont le premier composant est égal à la valeur de clé et le deuxième à la valeur de données de l’élément.  
+### <a name="remarks"></a>Remarks  
+ The [hash_multimap::value_type](#value_type) of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.  
   
- À compter de Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [The stdext Namespace (L’espace de noms stdext)](../standard-library/stdext-namespace.md).  
+ Beginning with Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_emplace.cpp  
@@ -879,9 +917,9 @@ After the emplace insertion, hm1 contains:
 ##  <a name="emplace_hint"></a>  hash_multimap::emplace_hint  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Insère un élément construit sur place dans un hash_multimap, avec un indicateur de positionnement.  
+ Inserts an element constructed in place into a hash_multimap, with a placement hint.  
   
 ```  
 template <class ValTy>  
@@ -890,25 +928,25 @@ iterator emplace_hint(
     ValTy&& val);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Paramètre|Description|  
-|`val`|Valeur utilisée pour déplacer un élément à insérer dans le [hash_multimap](../standard-library/hash-multimap-class.md), sauf si le `hash_multimap` contient déjà cet élément (ou, plus généralement, s’il contient déjà un élément dont la clé est ordonnée de façon équivalente).|  
-|`_Where`|Indicateur concernant l’emplacement où commencer à rechercher le point d’insertion correct.|  
+|Parameter|Description|  
+|`val`|The value used to move construct an element to be inserted into the [hash_multimap](../standard-library/hash-multimap-class.md) unless the `hash_multimap` already contains that element (or, more generally, an element whose key is equivalently ordered).|  
+|`_Where`|A hint regarding the place to start searching for the correct point of insertion.|  
   
-### <a name="return-value"></a>Valeur de retour  
- La fonction membre [hash_multimap::emplace](#emplace) retourne un itérateur qui pointe vers la position où le nouvel élément a été inséré dans le `hash_multimap`.  
+### <a name="return-value"></a>Return Value  
+ The [hash_multimap::emplace](#emplace) member function returns an iterator that points to the position where the new element was inserted into the `hash_multimap`.  
   
-### <a name="remarks"></a>Notes  
- Le [hash_multimap::value_type](#value_type) d’un élément est une paire, si bien que la valeur d’un élément est une paire ordonnée dont le premier composant est égal à la valeur de clé et le deuxième à la valeur de données de l’élément.  
+### <a name="remarks"></a>Remarks  
+ The [hash_multimap::value_type](#value_type) of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.  
   
- L’insertion peut se produire dans le temps fixe amorti, plutôt que dans le temps logarithmique, si le point d’insertion suit immédiatement `_Where`.  
+ Insertion can occur in amortized constant time, instead of logarithmic time, if the insertion point immediately follows `_Where`.  
   
- À compter de Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [The stdext Namespace (L’espace de noms stdext)](../standard-library/stdext-namespace.md).  
+ Beginning with Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_emplace_hint.cpp  
@@ -940,21 +978,21 @@ After the emplace insertion, hm1 contains:
 ##  <a name="empty"></a>  hash_multimap::empty  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Teste si un hash_multimap est vide.  
+ Tests if a hash_multimap is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si le hash_multimap est vide. **false** si le hash_multimap n’est pas vide.  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_multimap is empty; **false** if the hash_multimap is nonempty.  
   
-### <a name="remarks"></a>Notes  
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_empty.cpp  
@@ -991,9 +1029,9 @@ The hash_multimap hm2 is empty.
 ##  <a name="end"></a>  hash_multimap::end  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne un itérateur qui traite l’emplacement suivant le dernier élément du hash_multimap.  
+ Returns an iterator that addresses the location succeeding the last element in a hash_multimap.  
   
 ```  
 const_iterator end() const;
@@ -1001,17 +1039,17 @@ const_iterator end() const;
 iterator end();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur bidirectionnel qui traite l’emplacement suivant le dernier élément d’un hash_multimap. Si le hash_multimap est vide, hash_multimap::end == hash_multimap::begin.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator that addresses the location succeeding the last element in a hash_multimap. If the hash_multimap is empty, then hash_multimap::end == hash_multimap::begin.  
   
-### <a name="remarks"></a>Notes  
- **end** est utilisé pour déterminer si un itérateur a atteint la fin de son hash_multimap.  
+### <a name="remarks"></a>Remarks  
+ **end** is used to test whether an iterator has reached the end of its hash_multimap.  
   
- La valeur retournée par **end** ne doit pas être déréférencée.  
+ The value returned by **end** should not be dereferenced.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_end.cpp  
@@ -1062,9 +1100,9 @@ The value of last element of hm1 is now 20.
 ##  <a name="equal_range"></a>  hash_multimap::equal_range  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne une paire d’itérateurs, respectivement au premier élément d’un hash_multimap ayant une clé supérieure à celle spécifiée et au premier élément d’un hash_multimap ayant une clé supérieure ou égale à la clé spécifiée.  
+ Returns a pair of iterators respectively to the first element in a hash_multimap with a key that is greater than a specified key and to the first element in the hash_multimap with a key that is equal to or greater than the key.  
   
 ```  
 pair <const_iterator, const_iterator> equal_range (const Key& key) const;
@@ -1072,19 +1110,19 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `key`  
- Clé d’argument à comparer à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.  
+ The argument key to be compared with the sort key of an element from the hash_multimap being searched.  
   
-### <a name="return-value"></a>Valeur de retour  
- Paire d’itérateurs telle que le premier est la [lower_bound](#lower_bound) de la clé et le second est la [upper_bound](#upper_bound) de la clé.  
+### <a name="return-value"></a>Return Value  
+ A pair of iterators such that the first is the [lower_bound](#lower_bound) of the key and the second is the [upper_bound](#upper_bound) of the key.  
   
- Pour accéder au premier itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **first**, et pour déréférencer l’itérateur de la limite inférieure, utilisez \*( `pr`. **first**). Pour accéder au deuxième itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **second**, et pour déréférencer l’itérateur de la limite supérieure, utilisez \*( `pr`. **second**).  
+ To access the first iterator of a pair `pr` returned by the member function, use `pr`. **first** and to dereference the lower bound iterator, use \*( `pr`. **first**). To access the second iterator of a pair `pr` returned by the member function, use `pr`. **second** and to dereference the upper bound iterator, use \*( `pr`. **second**).  
   
-### <a name="remarks"></a>Notes  
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_equal_range.cpp  
@@ -1150,9 +1188,9 @@ The hash_multimap hm1 doesn't have an element with a key less than 4.
 ##  <a name="erase"></a>  hash_multimap::erase  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Supprime d'un emplacement spécifié un élément ou une plage d'éléments compris dans un hash_multimap ou supprime les éléments qui correspondent à une clé spécifiée.  
+ Removes an element or a range of elements in a hash_multimap from specified positions or removes elements that match a specified key.  
   
 ```  
 iterator erase(iterator _Where);
@@ -1162,31 +1200,31 @@ iterator erase(iterator first, iterator last);
 size_type erase(const key_type& key);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Where`  
- Position de l'élément à supprimer du hash_multimap.  
+ Position of the element to be removed from the hash_multimap.  
   
  `first`  
- Position du premier élément supprimé du hash_multimap.  
+ Position of the first element removed from the hash_multimap.  
   
  `last`  
- Position juste après le dernier élément supprimé du hash_multimap.  
+ Position just beyond the last element removed from the hash_multimap.  
   
  `key`  
- Clé des éléments à supprimer du hash_multimap.  
+ The key of the elements to be removed from the hash_multimap.  
   
-### <a name="return-value"></a>Valeur de retour  
- Pour les deux premières fonctions membres, il s'agit d'un itérateur bidirectionnel qui désigne le premier élément restant après tous les éléments supprimés, ou un pointeur vers la fin du hash_multimap si aucun élément de ce genre n'existe.  
+### <a name="return-value"></a>Return Value  
+ For the first two member functions, a bidirectional iterator that designates the first element remaining beyond any elements removed, or a pointer to the end of the hash_multimap if no such element exists.  
   
- Pour la troisième fonction membre, il s'agit du nombre d'éléments qui ont été supprimés du hash_multimap.  
+ For the third member function, returns the number of elements that have been removed from the hash_multimap.  
   
-### <a name="remarks"></a>Notes  
- Les fonctions membres ne lèvent jamais d'exception.  
+### <a name="remarks"></a>Remarks  
+ The member functions never throw an exception.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
-  L'exemple suivant illustre l'utilisation de la fonction membre hash_multimap::erase.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the hash_multimap::erase member function.  
   
 ```  
 // hash_multimap_erase.cpp  
@@ -1274,9 +1312,9 @@ After another element with a key equal to that of the
 ##  <a name="find"></a>  hash_multimap::find  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne un itérateur qui traite le premier emplacement d’un élément dans un hash_multimap ayant une clé équivalente à une clé spécifiée.  
+ Returns an iterator addressing the first location of an element in a hash_multimap that has a key equivalent to a specified key.  
   
 ```  
 iterator find(const Key& key);
@@ -1284,21 +1322,21 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `key`  
- Clé qui doit correspondre à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.  
+ The key to be matched by the sort key of an element from the hash_multimap being searched.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur qui traite le premier emplacement d’un élément ayant la clé spécifiée, ou l’emplacement qui suit le dernier élément du hash_multimap, si aucune correspondance n’est trouvée pour la clé.  
+### <a name="return-value"></a>Return Value  
+ An iterator that addresses the first location of an element with a specified key, or the location succeeding the last element in the hash_multimap if no match is found for the key.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne un itérateur qui traite un élément du hash_multimap dont la clé de tri est **équivalente** à la clé d’argument sous un prédicat binaire qui induit un ordonnancement basé sur une relation d’infériorité.  
+### <a name="remarks"></a>Remarks  
+ The member function returns an iterator that addresses an element in the hash_multimap whose sort key is **equivalent** to the argument key under a binary predicate that induces an ordering based on a less than comparability relation.  
   
- Si la valeur de retour de **find** est affectée à un `const_iterator`, l’objet hash_multimap ne peut pas être changé. Si la valeur de retour de **find** est affectée à un **iterator**, l’objet hash_multimap peut être changé.  
+ If the return value of **find** is assigned to a `const_iterator`, the hash_multimap object cannot be modified. If the return value of **find** is assigned to an **iterator**, the hash_multimap object can be modified.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_find.cpp  
@@ -1369,23 +1407,23 @@ This is not the last element of hash_multimap hm1.
 ##  <a name="get_allocator"></a>  hash_multimap::get_allocator  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne une copie de l’objet allocateur utilisé pour construire le hash_multimap.  
+ Returns a copy of the allocator object used to construct the hash_multimap.  
   
 ```  
 Allocator get_allocator() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Allocateur utilisé par le hash_multimap.  
+### <a name="return-value"></a>Return Value  
+ The allocator used by the hash_multimap.  
   
-### <a name="remarks"></a>Notes  
- Les allocateurs de la classe hash_multimap spécifient la façon dont la classe gère le stockage. Les allocateurs par défaut fournis avec les classes de conteneur de la bibliothèque standard C++ sont suffisants pour la plupart des besoins en programmation. L'écriture et l'utilisation de votre propre classe d'allocateur font l'objet d'une rubrique avancée du langage C++.  
+### <a name="remarks"></a>Remarks  
+ Allocators for the hash_multimap class specify how the class manages storage. The default allocators supplied with C++ Standard Library container classes are sufficient for most programming needs. Writing and using your own allocator class is an advanced C++ topic.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_get_allocator.cpp  
@@ -1445,9 +1483,9 @@ int main( )
 ##  <a name="hash_multimap"></a>  hash_multimap::hash_multimap  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Construit un hash_multimap vide ou une copie de l’ensemble ou d’une partie d’un autre hash_multimap.  
+ Constructs a hash_multimap that is empty or is a copy of all or part of some other hash_multimap.  
   
 ```  
 hash_multimap();
@@ -1497,41 +1535,41 @@ hash_multimap(
     const Allocator& Al);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Paramètre|Description|  
-|`Al`|Classe d’allocateur de stockage à utiliser pour cet objet hash_multimap, qui est par défaut `Allocator`.|  
-|`Comp`|Fonction de comparaison de type `const``Traits` utilisée pour ordonner les éléments dans le mappage (par défaut, `Traits`).|  
-|`Right`|Mappage dont l’ensemble construit doit être une copie.|  
-|`First`|Position du premier élément de la plage d'éléments à copier.|  
-|`Last`|Position du premier élément au-delà de la plage d'éléments à copier.|  
-|`IList`|Initializer_list à partir duquel copier.|  
+|Parameter|Description|  
+|`Al`|The storage allocator class to be used for this hash_multimap object, which defaults to `Allocator`.|  
+|`Comp`|The comparison function of type `const Traits` used to order the elements in the map, which defaults to `Traits`.|  
+|`Right`|The map of which the constructed set is to be a copy.|  
+|`First`|The position of the first element in the range of elements to be copied.|  
+|`Last`|The position of the first element beyond the range of elements to be copied.|  
+|`IList`|The initializer_list to copy from.|  
   
-### <a name="remarks"></a>Notes  
- Tous les constructeurs stockent un type d’objet allocateur qui gère le stockage de mémoire du hash_multimap et peut être retourné ultérieurement en appelant [get_allocator](#get_allocator). Le paramètre d’allocateur est souvent omis dans les déclarations de classe et des macros de prétraitement sont utilisées pour substituer des allocateurs de remplacement.  
+### <a name="remarks"></a>Remarks  
+ All constructors store a type of allocator object that manages memory storage for the hash_multimap and that can later be returned by calling [get_allocator](#get_allocator). The allocator parameter is often omitted in the class declarations and preprocessing macros are used to substitute alternative allocators.  
   
- Tous les constructeurs initialisent leur hash_multimap.  
+ All constructors initialize their hash_multimap.  
   
- Tous les constructeurs stockent un objet de fonction de type `Traits`, qui est utilisé pour établir un ordre parmi les clés du hash_multimap et qui peut être retourné ultérieurement en appelant [key_comp](#key_comp).  
+ All constructors store a function object of type `Traits` that is used to establish an order among the keys of the hash_multimap and can later be returned by calling [key_comp](#key_comp).  
   
- Les trois premiers constructeurs spécifient un hash_multimap initial vide. Le deuxième spécifie le type de fonction de comparaison ( `Comp`) à utiliser pour établir l’ordre des éléments et le troisième spécifie explicitement le type d’allocateur ( `_Al`) à utiliser. Le mot clé `explicit` supprime certains genres de conversions de type automatiques.  
+ The first three constructors specify an empty initial hash_multimap; the second specifies the type of comparison function ( `Comp`) to be used in establishing the order of the elements and the third explicitly specifies the allocator type ( `_Al`) to be used. The keyword `explicit` suppresses certain kinds of automatic type conversion.  
   
- Le quatrième constructeur spécifie une copie du hash_multimap `Right`.  
+ The fourth constructor specifies a copy of the hash_multimap `Right`.  
   
- Les trois constructeurs suivants copient la plage `First, Last)` d’une classe map avec un caractère explicite croissant en ce qui concerne la spécification du type de fonction de comparaison de la classe **Traits** et de l’allocateur.  
+ The next three constructors copy the range `First, Last)` of a map with increasing explicitness in specifying the type of comparison function of class **Traits** and allocator.  
   
- Le huitième constructeur déplace le hash_multimap `Right`.  
+ The eighth constructor moves the hash_multimap `Right`.  
   
- Les trois derniers constructeurs utilisent un initializer_list.  
+ The final three constructors use an initializer_list.  
   
 ##  <a name="insert"></a>  hash_multimap::insert  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Insère un élément ou une plage d’éléments dans une classe hash_multimap.  
+ Inserts an element or a range of elements into a hash_multimap.  
   
 ```  
 iterator insert(
@@ -1557,79 +1595,79 @@ iterator insert(
     ValTy&& Val);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Paramètre|Description|  
-|`Val`|Valeur d’un élément à insérer dans la classe hash_multimap sauf si elle contient déjà cet élément ou, plus généralement, si elle contient déjà un élément dont la clé est classée de façon équivalente.|  
-|`Where`|Indication de l’emplacement de départ de la recherche du point d’insertion correct.|  
-|`First`|Position du premier élément à copier à partir d’une carte.|  
-|`Last`|Position juste au-delà du dernier élément à copier à partir d’une carte.|  
+|Parameter|Description|  
+|`Val`|The value of an element to be inserted into the hash_multimap unless it already contains that element, or more generally, unless it already contains an element whose key is equivalently ordered.|  
+|`Where`|A hint about where to start searching for the correct point of insertion.|  
+|`First`|The position of the first element to be copied from a map.|  
+|`Last`|The position just beyond the last element to be copied from a map.|  
   
-### <a name="return-value"></a>Valeur de retour  
- Les deux premières fonctions membres `insert` retournent un itérateur qui pointe vers l’emplacement d’insertion du nouvel élément.  
+### <a name="return-value"></a>Return Value  
+ The first two `insert` member functions return an iterator that points to the position where the new element was inserted.  
   
- La troisième fonction membre utilise un initializer_list pour les éléments à insérer.  
+ The third member function uses an initializer_list for the elements to be inserted.  
   
- La quatrième fonction membre insère la séquence de valeurs d’éléments dans une carte qui correspond à chaque élément traité par un itérateur dans la plage `[First, Last)` d’un jeu spécifié.  
+ The fourth member function inserts the sequence of element values into a map that corresponds to each element addressed by an iterator in the range `[First, Last)` of a specified set.  
   
- Les deux dernières fonctions membres `insert` ont le même comportement que les deux premières, sauf qu’elles déplacent/construisent la valeur insérée.  
+ The last two `insert` member functions behave the same as the first two, except that they move-construct the inserted value.  
   
-### <a name="remarks"></a>Notes  
- Le [value-type](#value_type) d’un élément est une paire, si bien que la valeur d’un élément est une paire ordonnée dont le premier composant est égal à la valeur de clé et le deuxième à la valeur de données de l’élément.  
+### <a name="remarks"></a>Remarks  
+ The [value_type](#value_type) of an element is a pair, so that the value of an element will be an ordered pair in which the first component is equal to the key value and the second component is equal to the data value of the element.  
   
- L’insertion peut se produire dans le temps fixe amorti pour la version indicative de `insert`, plutôt que dans le temps logarithmique, si le point d’insertion suit immédiatement `Where`.  
+ Insertion can occur in amortized constant time for the hint version of `insert`, instead of logarithmic time, if the insertion point immediately follows `Where`.  
   
 ##  <a name="iterator"></a>  hash_multimap::iterator  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Type qui fournit un itérateur bidirectionnel capable de lire ou de modifier tout élément d’un hash_multimap.  
+ A type that provides a bidirectional iterator that can read or modify any element in a hash_multimap.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::iterator iterator;  
 ```  
   
-### <a name="remarks"></a>Notes  
- L’**iterator** défini par hash_multimap pointe vers des éléments qui sont des objets de [value_type](#value_type), qui sont de type `pair`\< **const Key, Type**>, dont le premier membre est la clé de l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.  
+### <a name="remarks"></a>Remarks  
+ The **iterator** defined by hash_multimap points to objects of [value_type](#value_type), which are of type `pair`\< **const Key, Type**>, whose first member is the key to the element and whose second member is the mapped datum held by the element.  
   
- Pour déréférencer un **iterator**`Iter` pointant sur un élément dans un hash_multimap, utilisez l’opérateur **->**.  
+ To dereference an **iterator**`Iter` pointing to an element in a hash_multimap, use the **->** operator.  
   
- Pour accéder à la valeur de la clé de l’élément, utilisez `Iter` -> **first**, ce qui équivaut à (\* `Iter`). **first**. Pour accéder à la valeur de la référence mappée de l’élément, utilisez `Iter` -> **second**, ce qui équivaut à (\* `Iter`). **first**.  
+ To access the value of the key for the element, use `Iter` -> **first**, which is equivalent to (\* `Iter`). **first**. To access the value of the mapped datum for the element, use `Iter` -> **second**, which is equivalent to (\* `Iter`). **first**.  
   
- Vous pouvez utiliser un type **iterator** pour changer la valeur d’un élément.  
+ A type **iterator** can be used to modify the value of an element.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple relatif à [begin](#begin) pour découvrir comment déclarer et utiliser **iterator**.  
+### <a name="example"></a>Example  
+  See the example for [begin](#begin) for an example of how to declare and use **iterator**.  
   
 ##  <a name="key_comp"></a>  hash_multimap::key_comp  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Récupère une copie de l’objet de comparaison utilisé pour trier les clés dans un hash_multimap.  
+ Retrieves a copy of the comparison object used to order keys in a hash_multimap.  
   
 ```  
 key_compare key_comp() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne l’objet de fonction utilisé par un hash_multimap pour ordonner ses éléments.  
+### <a name="return-value"></a>Return Value  
+ Returns the function object that a hash_multimap uses to order its elements.  
   
-### <a name="remarks"></a>Notes  
- L’objet stocké définit la fonction membre  
+### <a name="remarks"></a>Remarks  
+ The stored object defines the member function  
   
  **bool operator(const Key&** `left` **, const Key&** `right` **);**  
   
- qui retourne **true** si `left` précède et n’est pas égal à `right` dans l’ordre de tri.  
+ which returns **true** if `left` precedes and is not equal to `right` in the sort order.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_key_comp.cpp  
@@ -1681,51 +1719,51 @@ int main( )
 ##  <a name="key_compare"></a>  hash_multimap::key_compare  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Type qui fournit un objet de fonction pouvant comparer deux clés de tri pour déterminer l’ordre relatif de deux éléments dans le hash_multimap.  
+ A type that provides a function object that can compare two sort keys to determine the relative order of two elements in the hash_multimap.  
   
 ```  
 typedef Traits key_compare;  
 ```  
   
-### <a name="remarks"></a>Notes  
- **key_compare** est un synonyme du paramètre de modèle `Traits`.  
+### <a name="remarks"></a>Remarks  
+ **key_compare** is a synonym for the template parameter `Traits`.  
   
- Pour plus d’informations sur `Traits`, consultez la rubrique [hash_multimap, classe](../standard-library/hash-multimap-class.md).  
+ For more information on `Traits` see the [hash_multimap Class](../standard-library/hash-multimap-class.md) topic.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
-  Pour découvrir comment déclarer et utiliser `key_compare`, consultez l’exemple relatif à [key_comp](#key_comp).  
+### <a name="example"></a>Example  
+  See the example for [key_comp](#key_comp) for an example of how to declare and use `key_compare`.  
   
 ##  <a name="key_type"></a>  hash_multimap::key_type  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Type qui décrit l’objet de clé de tri qui constitue chaque élément du hash_multimap.  
+ A type that describes the sort key object that constitutes each element of the hash_multimap.  
   
 ```  
 typedef Key key_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- `key_type` est un synonyme du paramètre de modèle `Key`.  
+### <a name="remarks"></a>Remarks  
+ `key_type` is a synonym for the template parameter `Key`.  
   
- Pour plus d’informations sur `Key`, consultez la section Notes de la rubrique [hash_multimap, classe](../standard-library/hash-multimap-class.md).  
+ For more information on `Key`, see the Remarks section of the [hash_multimap Class](../standard-library/hash-multimap-class.md) topic.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
-  Pour découvrir comment déclarer et utiliser `key_compare`, consultez l’exemple relatif à [value_type](#value_type).  
+### <a name="example"></a>Example  
+  See the example for [value_type](#value_type) for an example of how to declare and use `key_compare`.  
   
 ##  <a name="lower_bound"></a>  hash_multimap::lower_bound  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne un itérateur au premier élément d’un hash_multimap avec une valeur de clé supérieure ou égale à celle de la clé spécifiée.  
+ Returns an iterator to the first element in a hash_multimap with a key that is equal to or greater than a specified key.  
   
 ```  
 iterator lower_bound(const Key& key);
@@ -1733,19 +1771,19 @@ iterator lower_bound(const Key& key);
 const_iterator lower_bound(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `key`  
- Clé d’argument à comparer à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.  
+ The argument key to be compared with the sort key of an element from the hash_multimap being searched.  
   
-### <a name="return-value"></a>Valeur de retour  
- [iterator](#iterator) ou [const_iterator](#const_iterator) qui traite l’emplacement d’un élément dans un hash_multimap ayant une clé supérieure ou égale à la clé d’argument, ou qui traite l’emplacement suivant le dernier élément dans le hash_multimap si aucune correspondance n’est trouvée pour la clé.  
+### <a name="return-value"></a>Return Value  
+ An [iterator](#iterator) or [const_iterator](#const_iterator) that addresses the location of an element in a hash_multimap with a key that is equal to or greater than the argument key, or that addresses the location succeeding the last element in the hash_multimap if no match is found for the key.  
   
- Si la valeur de retour de `lower_bound` est affectée à un `const_iterator`, l’objet hash_multimap ne peut pas être changé. Si la valeur de retour de `lower_bound` est affectée à un **iterator**, l’objet hash_multimap peut être changé.  
+ If the return value of `lower_bound` is assigned to a `const_iterator`, the hash_multimap object cannot be modified. If the return value of `lower_bound` is assigned to an **iterator**, the hash_multimap object can be modified.  
   
-### <a name="remarks"></a>Notes  
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_lower_bound.cpp  
@@ -1817,42 +1855,42 @@ This is not the last element of hash_multimap hm1.
 ##  <a name="mapped_type"></a>  hash_multimap::mapped_type  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Type qui représente le type de données stockées dans un hash_multimap.  
+ A type that represents the data type stored in a hash_multimap.  
   
 ```  
 typedef Type mapped_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- `mapped_type` est un synonyme du paramètre de modèle `Type`.  
+### <a name="remarks"></a>Remarks  
+ `mapped_type` is a synonym for the template parameter `Type`.  
   
- Pour plus d’informations sur `Type`, consultez la rubrique [hash_multimap, classe](../standard-library/hash-multimap-class.md).  
+ For more information on `Type` see the [hash_multimap Class](../standard-library/hash-multimap-class.md) topic.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
-  Pour découvrir comment déclarer et utiliser `key_type`, consultez l’exemple relatif à [value_type](#value_type).  
+### <a name="example"></a>Example  
+  See the example for [value_type](#value_type) for an example of how to declare and use `key_type`.  
   
 ##  <a name="max_size"></a>  hash_multimap::max_size  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne la longueur maximale du hash_multimap.  
+ Returns the maximum length of the hash_multimap.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Longueur maximale autorisée du hash_multimap.  
+### <a name="return-value"></a>Return Value  
+ The maximum possible length of the hash_multimap.  
   
-### <a name="remarks"></a>Notes  
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_max_size.cpp  
@@ -1876,9 +1914,9 @@ int main( )
 ##  <a name="op_eq"></a>  hash_multimap::operator=  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Remplace les éléments du hash_multimap par une copie d’un autre hash_multimap.  
+ Replaces the elements of the hash_multimap with a copy of another hash_multimap.  
   
 ```  
 hash_multimap& operator=(const hash_multimap& right);
@@ -1886,17 +1924,17 @@ hash_multimap& operator=(const hash_multimap& right);
 hash_multimap& operator=(hash_multimap&& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Paramètre|Description|  
-|`right`|[hash_multimap](../standard-library/hash-multimap-class.md) copié dans le `hash_multimap`.|  
+|Parameter|Description|  
+|`right`|The [hash_multimap](../standard-library/hash-multimap-class.md) being copied into the `hash_multimap`.|  
   
-### <a name="remarks"></a>Notes  
- Après avoir supprimé les éléments existants dans un objet `hash_multimap`, `operator=` copie ou déplace le contenu de `right` dans `hash_multimap`.  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in a `hash_multimap`, `operator=` either copies or moves the contents of `right` into the `hash_multimap`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_operator_as.cpp  
@@ -1937,27 +1975,27 @@ int main( )
 ##  <a name="pointer"></a>  hash_multimap::pointer  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Type qui fournit un pointeur vers un élément d’un hash_multimap.  
+ A type that provides a pointer to an element in a hash_multimap.  
   
 ```  
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Un type **pointer** peut être utilisé pour modifier la valeur d’un élément.  
+### <a name="remarks"></a>Remarks  
+ A type **pointer** can be used to modify the value of an element.  
   
- Dans la plupart des cas, vous devez utiliser un [iterator](#iterator) pour accéder aux éléments dans un objet hash_multimap.  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a hash_multimap object.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [The stdext Namespace (L’espace de noms stdext)](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
 ##  <a name="rbegin"></a>  hash_multimap::rbegin  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne un itérateur traitant le premier élément d’un hash_multimap inversé.  
+ Returns an iterator addressing the first element in a reversed hash_multimap.  
   
 ```  
 const_reverse_iterator rbegin() const;
@@ -1965,19 +2003,19 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur bidirectionnel inversé traitant le premier élément d’un hash_multimap inversé ou traitant ce qui était le dernier élément du hash_multimap non inversé.  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator addressing the first element in a reversed hash_multimap or addressing what had been the last element in the unreversed hash_multimap.  
   
-### <a name="remarks"></a>Notes  
- `rbegin` est utilisé avec un hash_multimap inversé comme [begin](#begin) est utilisé avec un hash_multimap.  
+### <a name="remarks"></a>Remarks  
+ `rbegin` is used with a reversed hash_multimap just as [begin](#begin) is used with a hash_multimap.  
   
- Si la valeur de retour de `rbegin` est assignée à un `const_reverse_iterator`, l’objet hash_multimap ne peut pas être changé. Si la valeur de retour de `rbegin` est assignée à un `reverse_iterator`, l’objet hash_multimap peut être changé.  
+ If the return value of `rbegin` is assigned to a `const_reverse_iterator`, then the hash_multimap object cannot be modified. If the return value of `rbegin` is assigned to a `reverse_iterator`, then the hash_multimap object can be modified.  
   
- Vous pouvez utiliser `rbegin` pour itérer un hash_multimap vers l’arrière.  
+ `rbegin` can be used to iterate through a hash_multimap backwards.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_rbegin.cpp  
@@ -2040,18 +2078,18 @@ After the erasure, the first element
 ##  <a name="reference"></a>  hash_multimap::reference  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Type qui fournit une référence à un élément stocké dans un hash_multimap.  
+ A type that provides a reference to an element stored in a hash_multimap.  
   
 ```  
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::reference reference;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_reference.cpp  
@@ -2104,9 +2142,9 @@ The modified data value of first element is 15.
 ##  <a name="rend"></a>  hash_multimap::rend  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne un itérateur qui traite l’emplacement suivant le dernier élément d’un hash_multimap inversé.  
+ Returns an iterator that addresses the location succeeding the last element in a reversed hash_multimap.  
   
 ```  
 const_reverse_iterator rend() const;
@@ -2114,21 +2152,21 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur bidirectionnel inversé qui traite l’emplacement qui suit le dernier élément d’un hash_multimap inversé (emplacement qui précédait celui du premier élément du hash_multimap non inversé).  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator that addresses the location succeeding the last element in a reversed hash_multimap (the location that had preceded the first element in the unreversed hash_multimap).  
   
-### <a name="remarks"></a>Notes  
- `rend` est utilisé avec un hash_multimap inversé comme [end](#end) est utilisé avec un hash_multimap.  
+### <a name="remarks"></a>Remarks  
+ `rend` is used with a reversed hash_multimap just as [end](#end) is used with a hash_multimap.  
   
- Si la valeur de retour de `rend` est affectée à un [const_reverse_iterator](#const_reverse_iterator), l’objet hash_multimap ne peut pas être changé. Si la valeur de retour de `rend` est affectée à un [reverse_iterator](#reverse_iterator), l’objet hash_multimap peut être changé.  
+ If the return value of `rend` is assigned to a [const_reverse_iterator](#const_reverse_iterator), then the hash_multimap object cannot be modified. If the return value of `rend` is assigned to a [reverse_iterator](#reverse_iterator), then the hash_multimap object can be modified.  
   
- Vous pouvez utiliser `rend` pour déterminer si un itérateur inversé a atteint la fin de son hash_multimap.  
+ `rend` can be used to test to whether a reverse iterator has reached the end of its hash_multimap.  
   
- La valeur retournée par `rend` ne doit pas être déréférencée.  
+ The value returned by `rend` should not be dereferenced.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_rend.cpp  
@@ -2192,43 +2230,43 @@ After the erasure, the last element in the reversed hash_multimap is 2.
 ##  <a name="reverse_iterator"></a>  hash_multimap::reverse_iterator  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Type qui fournit un itérateur bidirectionnel capable de lire ou de modifier tout élément d’un hash_multimap inversé.  
+ A type that provides a bidirectional iterator that can read or modify an element in a reversed hash_multimap.  
   
 ```  
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reverse_iterator reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Un type `reverse_iterator` est utilisé pour itérer le hash_multimap dans l’ordre inverse.  
+### <a name="remarks"></a>Remarks  
+ A type `reverse_iterator` is used to iterate through the hash_multimap in reverse.  
   
- Le `reverse_iterator` défini par le hash_multimap pointe vers des objets de [value_type](#value_type), qui sont de type `pair`\< **const Key, Type**>. La valeur de la clé est disponible par l’intermédiaire du premier membre de la paire, et la valeur de l’élément mappé est disponible par l’intermédiaire du deuxième membre de la paire.  
+ The `reverse_iterator` defined by hash_multimap points to objects of [value_type](#value_type), which are of type `pair`\< **const Key, Type**>. The value of the key is available through the first member pair and the value of the mapped element is available through the second member of the pair.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
-  Pour découvrir comment déclarer et utiliser `reverse_iterator`, consultez l’exemple relatif à [rbegin](#rbegin).  
+### <a name="example"></a>Example  
+  See the example for [rbegin](#rbegin) for an example of how to declare and use `reverse_iterator`.  
   
 ##  <a name="size"></a>  hash_multimap::size  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne le nombre d'éléments figurant dans le hash_multimap.  
+ Returns the number of elements in the hash_multimap.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Longueur actuelle du hash_multimap.  
+### <a name="return-value"></a>Return Value  
+ The current length of the hash_multimap.  
   
-### <a name="remarks"></a>Notes  
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
-  L'exemple suivant illustre l'utilisation de la fonction membre hash_multimap::size.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the hash_multimap::size member function.  
   
 ```  
 // hash_multimap_size.cpp  
@@ -2262,41 +2300,41 @@ The hash_multimap length is now 2.
 ##  <a name="size_type"></a>  hash_multimap::size_type  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Type entier non signé qui compte le nombre d’éléments d’un hash_multimap.  
+ An unsigned integer type that counts the number of elements in a hash_multimap.  
   
 ```  
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::size_type size_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
-  Pour découvrir comment déclarer et utiliser `size_type`, consultez l’exemple relatif à [size](#size).  
+### <a name="example"></a>Example  
+  See the example for [size](#size) for an example of how to declare and use `size_type`  
   
 ##  <a name="swap"></a>  hash_multimap::swap  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Échange les éléments de deux hash_multimaps.  
+ Exchanges the elements of two hash_multimaps.  
   
 ```  
 void swap(hash_multimap& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- hash_multimap qui fournit les éléments à échanger ou hash_multimap dont les éléments doivent être échangés avec ceux du hash_multimap.  
+ The hash_multimap providing the elements to be swapped or the hash_multimap whose elements are to be exchanged with those of the hash_multimap.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre n’invalide aucun pointeur, itérateur ou référence qui désigne des éléments dans les deux hash_multimaps dont les éléments sont échangés.  
+### <a name="remarks"></a>Remarks  
+ The member function invalidates no references, pointers, or iterators that designate elements in the two hash_multimaps whose elements are being exchanged.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_swap.cpp  
@@ -2351,9 +2389,9 @@ After swapping with hm3, hash_multimap hm1 is: 300.
 ##  <a name="upper_bound"></a>  hash_multimap::upper_bound  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Retourne un itérateur au premier élément d’un hash_multimap avec une valeur de clé supérieure à celle de la clé spécifiée.  
+ Returns an iterator to the first element in a hash_multimap with a key that is greater than a specified key.  
   
 ```  
 iterator upper_bound(const Key& key);
@@ -2361,19 +2399,19 @@ iterator upper_bound(const Key& key);
 const_iterator upper_bound(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `key`  
- Clé d’argument à comparer à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.  
+ The argument key to be compared with the sort key of an element from the hash_multimap being searched.  
   
-### <a name="return-value"></a>Valeur de retour  
- [iterator](#iterator) ou [const_iterator](#const_iterator) qui traite l’emplacement d’un élément dans un hash_multimap ayant une clé supérieure à la clé d’argument, ou qui traite l’emplacement suivant le dernier élément dans le hash_multimap si aucune correspondance n’est trouvée pour la clé.  
+### <a name="return-value"></a>Return Value  
+ An [iterator](#iterator) or [const_iterator](#const_iterator) that addresses the location of an element in a hash_multimap with a key that is greater than the argument key, or that addresses the location succeeding the last element in the hash_multimap if no match is found for the key.  
   
- Si la valeur de retour de `upper_bound` est affectée à un `const_iterator`, l’objet hash_multimap ne peut pas être changé. Si la valeur de retour de `upper_bound` est affectée à un **iterator**, l’objet hash_multimap peut être changé.  
+ If the return value of `upper_bound` is assigned to a `const_iterator`, the hash_multimap object cannot be modified. If the return value of `upper_bound` is assigned to a **iterator**, the hash_multimap object can be modified.  
   
-### <a name="remarks"></a>Notes  
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+### <a name="remarks"></a>Remarks  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_upper_bound.cpp  
@@ -2436,27 +2474,27 @@ The first element of hm1 with a key greater than
 ##  <a name="value_comp"></a>  hash_multimap::value_comp  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- La fonction membre retourne un objet de fonction qui détermine l’ordre des éléments d’un hash_multimap en comparant leurs valeurs de clés.  
+ The member function returns a function object that determines the order of elements in a hash_multimap by comparing their key values.  
   
 ```  
 value_compare value_comp() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne l’objet de fonction de comparaison utilisé par un hash_multimap pour ordonner ses éléments.  
+### <a name="return-value"></a>Return Value  
+ Returns the comparison function object that a hash_multimap uses to order its elements.  
   
-### <a name="remarks"></a>Notes  
- Pour un hash_multimap *m*, si deux éléments *e*1( *k*1 *, d*1) and *e*2( *k*2 *, d*2) sont des objets de type [value_type](#value_type), où *k*1 et *k*2 ont des clés de type [key_type](#key_type) et `d`1 et `d`2 ont des données de type [mapped_type](#mapped_type), alors *m.*`value_comp`( )( *e*1 *, e*2) équivaut à *m.*`key_comp`( ) ( *k*1 *, k*2). Un objet stocké définit la fonction membre  
+### <a name="remarks"></a>Remarks  
+ For a hash_multimap *m*, if two elements *e*1( *k*1 *, d*1) and *e*2( *k*2 *, d*2) are objects of type [value_type](#value_type), where *k*1 and *k*2 are their keys of type [key_type](#key_type) and `d`1 and `d`2 are their data of type [mapped_type](#mapped_type), then *m.*`value_comp`( )( *e*1 *, e*2) is equivalent to *m.*`key_comp`( ) ( *k*1 *, k*2). A stored object defines the member function  
   
  **bool operator**( **value_type&**`left`, **value_type&** `right`);  
   
- qui retourne **true** si la valeur de clé de `left` précède et n’est pas égale à la valeur clé de `right` dans l’ordre de tri.  
+ which returns **true** if the key value of `left` precedes and is not equal to the key value of `right` in the sort order.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_value_comp.cpp  
@@ -2506,20 +2544,20 @@ int main( )
 ##  <a name="value_type"></a>  hash_multimap::value_type  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Type qui représente le type d’objet stocké dans un hash_multimap.  
+ A type that represents the type of object stored in a hash_multimap.  
   
 ```  
 typedef pair<const Key, Type> value_type;  
 ```  
   
-### <a name="remarks"></a>Remarques  
- `value_type`est déclaré comme étant paire\<const [key_type](#key_type), [mapped_type](#mapped_type)> et ne Couplez pas\<key_type, mapped_type >, car les clés d’un conteneur associatif ne peuvent pas être modifiées à l’aide d’un itérateur non constante ou une référence.  
+### <a name="remarks"></a>Remarks  
+ `value_type` is declared to be pair\<const [key_type](#key_type), [mapped_type](#mapped_type)> and not pair\<key_type, mapped_type> because the keys of an associative container may not be changed using a nonconstant iterator or reference.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_value_type.cpp  
@@ -2578,8 +2616,8 @@ The keys of the mapped elements are: 1 2.
 The values of the mapped elements are: 10 20.  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: is_trivially_move_constructible, classe | Microsoft Docs
+title: is_trivially_move_constructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_trivially_move_constructible
 - type_traits/std::is_trivially_move_constructible
 dev_langs:
 - C++
@@ -34,54 +33,54 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: bfcd131b706f68b6cea38880c3c7fcd49527bba4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0e5210adea5cd18381d57993b58479deead5cb6b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible, classe
-Teste si le type a un constructeur de déplacement trivial.  
+# <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible Class
+Tests if type has trivial move constructor.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct is_trivially_move_constructible;
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Type à interroger.  
+ The type to query.  
   
-## <a name="remarks"></a>Notes  
- Une instance du prédicat de type a la valeur true si le type `Ty` est une classe qui a un constructeur de déplacement trivial. Sinon, sa valeur est false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a class that has a trivial move constructor, otherwise it holds false.  
   
- Un constructeur de déplacement pour une classe `Ty` est trivial si :  
+ A move constructor for a class `Ty` is trivial if:  
   
- il est déclaré implicitement ;  
+ it is implicitly declared  
   
- ses types de paramètres sont équivalents à ceux d'une déclaration implicite ;  
+ its parameter types are equivalent to those of an implicit declaration  
   
- la classe `Ty` n'a aucune fonction virtuelle ;  
+ the class `Ty` has no virtual functions  
   
- la classe `Ty` n'a aucune base virtuelle ;  
+ the class `Ty` has no virtual bases  
   
- la classe n'a aucun membre de données non statique volatile ;  
+ the class has no volatile non-static data members  
   
- toutes les bases directes de la classe `Ty` ont des constructeurs de déplacement triviaux ;  
+ all the direct bases of the class `Ty` have trivial move constructors  
   
- les classes de tous les membres de données non statiques de type de classe ont des constructeurs de déplacement triviaux ;  
+ the classes of all the non-static data members of class type have trivial move constructors  
   
- les classes de tous les membres de données non statiques de type tableau de classe ont des constructeurs de déplacement triviaux.  
+ the classes of all the non-static data members of type array of class have trivial move constructors  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

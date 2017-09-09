@@ -1,16 +1,15 @@
 ---
-title: basic_filebuf, classe | Microsoft Docs
+title: basic_filebuf Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - fstream/std::basic_filebuf
-- basic_filebuf
 - fstream/std::basic_filebuf::char_type
 - fstream/std::basic_filebuf::int_type
 - fstream/std::basic_filebuf::off_type
@@ -31,7 +30,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_filebuf class
+- std::basic_filebuf [C++]
+- std::basic_filebuf [C++], char_type
+- std::basic_filebuf [C++], int_type
+- std::basic_filebuf [C++], off_type
+- std::basic_filebuf [C++], pos_type
+- std::basic_filebuf [C++], traits_type
+- std::basic_filebuf [C++], close
+- std::basic_filebuf [C++], is_open
+- std::basic_filebuf [C++], open
+- std::basic_filebuf [C++], overflow
+- std::basic_filebuf [C++], pbackfail
+- std::basic_filebuf [C++], seekoff
+- std::basic_filebuf [C++], seekpos
+- std::basic_filebuf [C++], setbuf
+- std::basic_filebuf [C++], Swap
+- std::basic_filebuf [C++], sync
+- std::basic_filebuf [C++], uflow
+- std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
 caps.latest.revision: 24
 author: corob-msft
@@ -51,40 +67,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 87fb5398d931436e4e08c1e62d6bf9b1e8d2aa7b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b38c38e2332da84bdc995a2ac379ce19516b64a0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicfilebuf-class"></a>basic_filebuf, classe
-Décrit une mémoire tampon de flux qui contrôle la transmission d'éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`, vers et à partir d'une séquence d'éléments stockés dans un fichier externe.  
+# <a name="basicfilebuf-class"></a>basic_filebuf Class
+Describes a stream buffer that controls the transmission of elements of type `Elem`, whose character traits are determined by the class `Tr`, to and from a sequence of elements stored in an external file.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Elem, class Tr = char_traits<Elem>>  
 class basic_filebuf : public basic_streambuf<Elem, Tr>  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Elem`  
- Élément de base de la mémoire tampon de fichier.  
+ The basic element of the file buffer.  
   
  `Tr`  
- Caractéristiques de l’élément de base de la mémoire tampon de fichier (généralement `char_traits`< `Elem`>).  
+ The traits of the basic element of the file buffer (usually `char_traits`< `Elem`>).  
   
-## <a name="remarks"></a>Notes  
- La classe de modèle décrit une mémoire tampon de flux qui contrôle la transmission d'éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`, vers et à partir d'une séquence d'éléments stockés dans un fichier externe.  
+## <a name="remarks"></a>Remarks  
+ The template class describes a stream buffer that controls the transmission of elements of type `Elem`, whose character traits are determined by the class `Tr`, to and from a sequence of elements stored in an external file.  
   
 > [!NOTE]
->  Les objets de type `basic_filebuf` sont créés avec une mémoire tampon interne de type `char *` quel que soit le `char_type` spécifié par le paramètre de type `Elem`. Cela signifie qu'une chaîne Unicode (contenant des caractères `wchar_t`) sera convertie en chaîne ANSI (contenant des caractères `char`) avant d'être écrite dans la mémoire tampon interne. Pour stocker des chaînes Unicode dans la mémoire tampon, créez une mémoire tampon de type `wchar_t` et définissez-la à l’aide de la méthode [basic_streambuf::pubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf)`()`. Pour obtenir un exemple qui illustre ce comportement, voir ci-dessous.  
+>  Objects of type `basic_filebuf` are created with an internal buffer of type `char *` regardless of the `char_type` specified by the type parameter `Elem`. This means that a Unicode string (containing `wchar_t` characters) will be converted to an ANSI string (containing `char` characters) before it is written to the internal buffer. To store Unicode strings in the buffer, create a new buffer of type `wchar_t` and set it using the [basic_streambuf::pubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf)`()` method. To see an example that demonstrates this behavior, see below.  
   
- Un objet de classe `basic_filebuf`< `Elem`, `Tr`> stocke un pointeur de fichier qui désigne l’objet `FILE` qui contrôle le flux associé à un fichier ouvert. Il stocke également des pointeurs vers deux facettes de conversion de fichier utilisables par les fonctions membres protégées [overflow](#overflow) et [underflow](#underflow). Pour plus d’informations, consultez [basic_filebuf::open](#open).  
+ An object of class `basic_filebuf`< `Elem`, `Tr`> stores a file pointer, which designates the `FILE` object that controls the stream associated with an open file. It also stores pointers to two file conversion facets for use by the protected member functions [overflow](#overflow) and [underflow](#underflow). For more information, see [basic_filebuf::open](#open).  
   
-## <a name="example"></a>Exemple  
- L'exemple suivant montre comment forcer un objet de type `basic_filebuf<wchar_t>` à stocker des caractères Unicode dans sa mémoire tampon interne en appelant la méthode `pubsetbuf()`.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to force an object of type `basic_filebuf<wchar_t>` to store Unicode characters in its internal buffer by calling the `pubsetbuf()` method.  
   
 ```  
 // unicode_basic_filebuf.cpp  
@@ -201,46 +217,46 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 72 00 6c 00 64 00 00 00 00 00 00 00 00 00 00 00   r.l.d...........  
 ```  
   
-### <a name="constructors"></a>Constructeurs  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[basic_filebuf](#basic_filebuf)|Construit un objet de type `basic_filebuf`.|  
+|[basic_filebuf](#basic_filebuf)|Constructs an object of type `basic_filebuf`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|Associe un nom de type au paramètre de modèle `Elem`.|  
-|[int_type](#int_type)|Rend ce type dans la portée de `basic_filebuf` équivalent au type du même nom dans la portée de `Tr`.|  
-|[off_type](#off_type)|Rend ce type dans la portée de `basic_filebuf` équivalent au type du même nom dans la portée de `Tr`.|  
-|[pos_type](#pos_type)|Rend ce type dans la portée de `basic_filebuf` équivalent au type du même nom dans la portée de `Tr`.|  
-|[traits_type](#traits_type)|Associe un nom de type au paramètre de modèle `Tr`.|  
+|[char_type](#char_type)|Associates a type name with the `Elem` template parameter.|  
+|[int_type](#int_type)|Makes this type within `basic_filebuf`'s scope equivalent to the type of the same name in the `Tr` scope.|  
+|[off_type](#off_type)|Makes this type within `basic_filebuf`'s scope equivalent to the type of the same name in the `Tr` scope.|  
+|[pos_type](#pos_type)|Makes this type within `basic_filebuf`'s scope equivalent to the type of the same name in the `Tr` scope.|  
+|[traits_type](#traits_type)|Associates a type name with the `Tr` template parameter.|  
   
-### <a name="member-functions"></a>Fonctions membres  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[close](#close)|Ferme un fichier.|  
-|[is_open](#is_open)|Indique si un fichier est ouvert.|  
-|[open](#open)|Ouvre un fichier.|  
-|[overflow](#overflow)|Fonction virtuelle protégée qui peut être appelée quand un nouveau caractère est inséré dans une mémoire tampon saturée.|  
-|[pbackfail](#pbackfail)|La fonction membre virtuelle protégée tente de remettre un élément dans le flux d'entrée, puis d'en faire l'élément actif (vers lequel pointe le pointeur suivant).|  
-|[seekoff](#seekoff)|La fonction membre virtuelle protégée tente de modifier les positions actuelles des flux contrôlés.|  
-|[seekpos](#seekpos)|La fonction membre virtuelle protégée tente de modifier les positions actuelles des flux contrôlés.|  
-|[setbuf](#setbuf)|La fonction membre virtuelle protégée effectue une opération spécifique à chaque mémoire tampon de flux dérivée.|  
-|[Swap](#swap)|Échange le contenu de ce `basic_filebuf` avec le contenu du paramètre `basic_filebuf` fourni.|  
-|[sync](#sync)|La fonction virtuelle protégée tente de synchroniser les flux contrôlés avec n’importe quel flux externe associé.|  
-|[uflow](../standard-library/basic-streambuf-class.md#uflow)|Fonction virtuelle protégée pour extraire l'élément actif du flux d'entrée.|  
-|[underflow](#underflow)|Fonction virtuelle protégée pour extraire l'élément actif du flux d'entrée.|  
+|[close](#close)|Closes a file.|  
+|[is_open](#is_open)|Indicates whether a file is open.|  
+|[open](#open)|Opens a file.|  
+|[overflow](#overflow)|A protected virtual function that can be called when a new character is inserted into a full buffer.|  
+|[pbackfail](#pbackfail)|The protected virtual member function tries to put back an element into the input stream, then make it the current element (pointed to by the next pointer).|  
+|[seekoff](#seekoff)|The protected virtual member function tries to alter the current positions for the controlled streams.|  
+|[seekpos](#seekpos)|The protected virtual member function tries to alter the current positions for the controlled streams.|  
+|[setbuf](#setbuf)|The protected virtual member function performs an operation particular to each derived stream buffer.|  
+|[Swap](#swap)|Exchanges the content of this `basic_filebuf` for the content of the provided `basic_filebuf` parameter.|  
+|[sync](#sync)|Protected, virtual function tries to synchronize the controlled streams with any associated external streams.|  
+|[uflow](../standard-library/basic-streambuf-class.md#uflow)|Protected, virtual function to extract the current element from the input stream.|  
+|[underflow](#underflow)|Protected, virtual function to extract the current element from the input stream.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<fstream>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<fstream>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
 ##  <a name="basic_filebuf"></a>  basic_filebuf::basic_filebuf  
- Construit un objet de type `basic_filebuf`.  
+ Constructs an object of type `basic_filebuf`.  
   
 ```  
 basic_filebuf();
@@ -248,35 +264,35 @@ basic_filebuf();
 basic_filebuf(basic_filebuf&& right);
 ```  
   
-### <a name="remarks"></a>Notes  
- Le premier constructeur stocke un pointeur null dans tous les pointeurs contrôlant la mémoire tampon d’entrée et la mémoire tampon de sortie. Il stocke également un pointeur null dans le pointeur de fichier.  
+### <a name="remarks"></a>Remarks  
+ The first constructor stores a null pointer in all the pointers controlling the input buffer and the output buffer. It also stores a null pointer in the file pointer.  
   
- Le deuxième constructeur initialise l’objet avec le contenu de `right`, traité comme une référence rvalue.  
+ The second constructor initializes the object with the contents of `right`, treated as an rvalue reference.  
   
 ##  <a name="char_type"></a>  basic_filebuf::char_type  
- Associe un nom de type au paramètre de modèle **Elem**.  
+ Associates a type name with the **Elem** template parameter.  
   
 ```  
 typedef Elem char_type;  
 ```  
   
 ##  <a name="close"></a>  basic_filebuf::close  
- Ferme un fichier.  
+ Closes a file.  
   
 ```  
 basic_filebuf<Elem, Tr> *close();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- La fonction membre retourne un pointeur null si le pointeur de fichier est un pointeur null.  
+### <a name="return-value"></a>Return Value  
+ The member function returns a null pointer if the file pointer is a null pointer.  
   
-### <a name="remarks"></a>Notes  
- **close** appelle `fclose`(**fp**). Si cette fonction retourne une valeur différente de zéro, la fonction retourne un pointeur null. Sinon, elle retourne **this** pour indiquer que le fichier a été fermé.  
+### <a name="remarks"></a>Remarks  
+ **close** calls `fclose`( **fp**). If that function returns a nonzero value, the function returns a null pointer. Otherwise, it returns **this** to indicate that the file was successfully closed.  
   
- Pour un flux large, si des insertions se sont produites depuis l’ouverture du flux ou depuis le dernier appel à `streampos`, la fonction appelle [overflow](#overflow). Elle insère également toute séquence nécessaire pour restaurer l’état initial de la conversion à l’aide de la facette de conversion de fichier **fac** pour appeler **fac.unshift** en fonction des besoins. Chaque élément **byte** de type `char` obtenu est écrit dans le flux associé désigné par le pointeur de fichier **fp** par des appels successifs de la forme `fputc`(**byte**, **fp**). En cas d’échec de l’appel à **fac.unshift** ou d’une écriture, la fonction échoue.  
+ For a wide stream, if any insertions have occurred since the stream was opened, or since the last call to `streampos`, the function calls [overflow](#overflow). It also inserts any sequence needed to restore the initial conversion state, by using the file conversion facet **fac** to call **fac.unshift** as needed. Each element **byte** of type `char` thus produced is written to the associated stream designated by the file pointer **fp** as if by successive calls of the form `fputc`( **byte**, **fp**). If the call to **fac.unshift** or any write fails, the function does not succeed.  
   
-### <a name="example"></a>Exemple  
-  L’exemple suivant suppose deux fichiers dans le répertoire actif : basic_filebuf_close.txt (le contenu est « testing ») et iotest.txt (le contenu est « ssss »).  
+### <a name="example"></a>Example  
+  The following sample assumes two files in the current directory: basic_filebuf_close.txt (contents is "testing") and iotest.txt (contents is "ssss").  
   
 ```  
 // basic_filebuf_close.cpp  
@@ -324,23 +340,23 @@ s
 ```  
   
 ##  <a name="int_type"></a>  basic_filebuf::int_type  
- Rend équivalent ce type dans la portée de basic_filebuf au type du même nom dans la portée de **Tr**.  
+ Makes this type within basic_filebuf's scope equivalent to the type of the same name in the **Tr** scope.  
   
 ```  
 typedef typename traits_type::int_type int_type;  
 ```  
   
 ##  <a name="is_open"></a>  basic_filebuf::is_open  
- Indique si un fichier est ouvert.  
+ Indicates whether a file is open.  
   
 ```  
 bool is_open() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si le pointeur de fichier n’est pas un pointeur null.  
+### <a name="return-value"></a>Return Value  
+ **true** if the file pointer is not a null pointer.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_filebuf_is_open.cpp  
@@ -365,14 +381,14 @@ true
 ```  
   
 ##  <a name="off_type"></a>  basic_filebuf::off_type  
- Rend équivalent ce type dans la portée de basic_filebuf au type du même nom dans la portée de **Tr**.  
+ Makes this type within basic_filebuf's scope equivalent to the type of the same name in the **Tr** scope.  
   
 ```  
 typedef typename traits_type::off_type off_type;  
 ```  
   
 ##  <a name="open"></a>  basic_filebuf::open  
- Ouvre un fichier.  
+ Opens a file.  
   
 ```  
 basic_filebuf<Elem, Tr> *open(
@@ -394,115 +410,115 @@ basic_filebuf<Elem, Tr> *open(
     ios_base::openmode _Mode);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Filename`  
- Nom du fichier à ouvrir.  
+ The name of the file to open.  
   
  `_Mode`  
- Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
+ One of the enumerations in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
  `_Prot`  
- Protection d’ouverture de fichier par défaut, équivalente au paramètre `shflag` dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).  
+ The default file opening protection, equivalent to the `shflag` parameter in [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).  
   
-### <a name="return-value"></a>Valeur de retour  
- Si le pointeur de fichier est un pointeur null, la fonction membre retourne un pointeur null. Sinon, elle retourne **this**.  
+### <a name="return-value"></a>Return Value  
+ If the file pointer is a null pointer, the function returns a null pointer. Otherwise, it returns **this**.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre ouvre le fichier dont le nom est *filename* en appelant [fopen](../c-runtime-library/reference/fopen-wfopen.md)(*filename*, **strmode**). **strmode** est déterminé à partir de **mode &**~( [ate](../standard-library/ios-base-class.md#openmode) & &#124; [binary](../standard-library/ios-base-class.md#openmode)) :  
+### <a name="remarks"></a>Remarks  
+ The member function opens the file with filename *filename*, by calling [fopen](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**). **strmode** is determined from **mode &**~( [ate](../standard-library/ios-base-class.md#openmode) & &#124; [binary](../standard-library/ios-base-class.md#openmode)):  
   
-- **ios_base::in** devient **"r"** (ouvrir le fichier existant pour lecture).  
+- **ios_base::in** becomes **"r"** (open existing file for reading).  
   
-- [ios_base::out](../standard-library/ios-base-class.md#fmtflags) ou **ios_base::out &#124; ios_base::trunc** devient **"w"** (tronquer le fichier existant ou créer un fichier pour écriture).  
+- [ios_base::out](../standard-library/ios-base-class.md#fmtflags) or **ios_base::out &#124; ios_base::trunc** becomes **"w"** (truncate existing file or create for writing).  
   
-- **ios_base::out &#124; app** devient **"a"** (ouvrir le fichier existant pour ajouter toutes les écritures).  
+- **ios_base::out &#124; app** becomes **"a"** (open existing file for appending all writes).  
   
-- **ios_base::in &#124; ios_base::out** devient **"r+"** (ouvrir le fichier existant pour lecture et écriture).  
+- **ios_base::in &#124; ios_base::out** becomes **"r+"** (open existing file for reading and writing).  
   
-- **ios_base::in &#124; ios_base::out &#124; ios_base::trunc** devient **"w+"** (tronquer le fichier existant ou créer un fichier pour lecture et écriture).  
+- **ios_base::in &#124; ios_base::out &#124; ios_base::trunc** becomes **"w+"** (truncate existing file or create for reading and writing).  
   
-- **ios_base::in &#124; ios_base::out &#124; ios_base::app** devient **"a+"** (ouvrir le fichier existant pour lecture et pour ajouter toutes les écritures).  
+- **ios_base::in &#124; ios_base::out &#124; ios_base::app** becomes **"a+"** (open existing file for reading and for appending all writes).  
   
- Si **mode & ios_base::binary** est différent de zéro, la fonction ajoute **b** à **strmode** pour ouvrir un flux binaire au lieu d’un flux de texte. Elle stocke ensuite la valeur retournée par `fopen` dans le pointeur de fichier **fp**. Si **mode & ios_base::ate** est différent de zéro et que le pointeur de fichier n’est pas null, la fonction appelle `fseek`(**fp**, 0, `SEEK_END`) pour positionner le flux à la fin du fichier. Si cette opération de positionnement échoue, la fonction appelle [close](#close)(**fp**) et stocke un pointeur null dans le pointeur de fichier.  
+ If **mode & ios_base::binary** is nonzero, the function appends **b** to **strmode** to open a binary stream instead of a text stream. It then stores the value returned by `fopen` in the file pointer **fp**. If **mode & ios_base::ate** is nonzero and the file pointer is not a null pointer, the function calls `fseek`( **fp**, 0, `SEEK_END`) to position the stream at end of file. If that positioning operation fails, the function calls [close](#close)( **fp**) and stores a null pointer in the file pointer.  
   
- Si le pointeur de fichier n’est pas null, la fonction détermine la facette de conversion de fichier : `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc)), pour une utilisation par [underflow](#underflow) et [overflow](#overflow).  
+ If the file pointer is not a null pointer, the function determines the file conversion facet: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc)), for use by [underflow](#underflow) and [overflow](#overflow).  
   
- Si le pointeur de fichier est un pointeur null, la fonction membre retourne un pointeur null. Sinon, elle retourne **this**.  
+ If the file pointer is a null pointer, the function returns a null pointer. Otherwise, it returns **this**.  
   
-### <a name="example"></a>Exemple  
-  Consultez [basic_filebuf::close](#close) pour obtenir un exemple qui utilise **open**.  
+### <a name="example"></a>Example  
+  See [basic_filebuf::close](#close) for an example that uses **open**.  
   
 ##  <a name="op_eq"></a>  basic_filebuf::operator=  
- Affecter le contenu de cet objet de mémoire tampon de flux. Il s'agit d'une assignation de déplacement qui implique une rvalue qui ne laisse pas de copie.  
+ Assign the content of this stream buffer object. This is a move assignment involving an rvalue that does not leave a copy behind.  
   
 ```  
 basic_filebuf& operator=(basic_filebuf&& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Référence rvalue à un objet [basic_filebuf](../standard-library/basic-filebuf-class.md).  
+ An rvalue reference to a [basic_filebuf](../standard-library/basic-filebuf-class.md) object.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne *this.  
+### <a name="return-value"></a>Return Value  
+ Returns *this.  
   
-### <a name="remarks"></a>Notes  
- L'opérateur membre remplace le contenu de l'objet à l'aide du contenu de `right`, traité comme une référence rvalue. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+### <a name="remarks"></a>Remarks  
+ The member operator replaces the contents of the object by using the contents of `right`, treated as an rvalue reference. For more information, see [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ##  <a name="overflow"></a>  basic_filebuf::overflow  
- Appelé quand un nouveau caractère est inséré dans une mémoire tampon saturée.  
+ Called when a new character is inserted into a full buffer.  
   
 ```  
 virtual int_type overflow(int_type _Meta = traits_type::eof);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Meta`  
- Caractère à insérer dans la mémoire tampon ou **traits_type::eof**.  
+ The character to insert into the buffer or **traits_type::eof**.  
   
-### <a name="return-value"></a>Valeur de retour  
- Si la fonction ne peut pas réussir, elle retourne **traits_type::eof**. Sinon, elle retourne **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns **traits_type::eof**. Otherwise, it returns **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
   
-### <a name="remarks"></a>Notes  
- Si _ *Meta***!= traits_type::**[eof](../standard-library/char-traits-struct.md#eof), la fonction membre virtuelle protégée s’efforce d’insérer l’élément **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) dans la mémoire tampon de sortie. Elle peut le faire de différentes manières :  
+### <a name="remarks"></a>Remarks  
+ If _ *Meta***!= traits_type::**[eof](../standard-library/char-traits-struct.md#eof), the protected virtual member function endeavors to insert the element **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) into the output buffer. It can do so in various ways:  
   
--   Si une position d’écriture est disponible, elle peut stocker l’élément dans la position d’écriture et incrémenter le pointeur suivant pour la mémoire tampon de sortie.  
+-   If a write position is available, it can store the element into the write position and increment the next pointer for the output buffer.  
   
--   Elle peut rendre disponible une position d’écriture en allouant du stockage nouveau ou supplémentaire à la mémoire tampon de sortie.  
+-   It can make a write position available by allocating new or additional storage for the output buffer.  
   
--   Elle peut convertir toute sortie en attente dans la mémoire tampon de sortie, suivie de **ch** en utilisant la facette de conversion de fichier **fac** pour appeler **fac.out** en fonction des besoins. Chaque élément `ch` de type *char* obtenu est écrit dans le flux associé désigné par le pointeur de fichier **fp** par des appels successifs de la forme `fputc`( **ch**, **fp**). Si une conversion ou écriture échoue, la fonction échoue.  
+-   It can convert any pending output in the output buffer, followed by **ch**, by using the file conversion facet **fac** to call **fac.out** as needed. Each element `ch` of type *char* thus produced is written to the associated stream designated by the file pointer **fp** as if by successive calls of the form `fputc`( **ch**, **fp**). If any conversion or write fails, the function does not succeed.  
   
 ##  <a name="pbackfail"></a>  basic_filebuf::pbackfail  
- Tente de remettre un élément dans le flux d’entrée, puis d’en faire l’élément actuel (désigné par le pointeur suivant).  
+ Tries to put back an element into the input stream, then make it the current element (pointed to by the next pointer).  
   
 ```  
 virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Meta`  
- Caractère à insérer dans la mémoire tampon ou **traits_type::eof**.  
+ The character to insert into the buffer, or **traits_type::eof**.  
   
-### <a name="return-value"></a>Valeur de retour  
- Si la fonction ne peut pas réussir, elle retourne **traits_type::eof**. Sinon, elle retourne **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns **traits_type::eof**. Otherwise, it returns **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
   
-### <a name="remarks"></a>Notes  
- La fonction membre virtuelle protégée remet un élément dans la mémoire tampon d’entrée, puis en fait l’élément actuel (désigné par le pointeur suivant). Si _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), l’élément à remettre est celui qui se trouve déjà dans le flux avant l’élément actuel. Sinon, cet élément est remplacé par **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). La fonction peut remettre un élément de différentes manières :  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function puts back an element into the input buffer and then makes it the current element (pointed to by the next pointer). If _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), the element to push back is effectively the one already in the stream before the current element. Otherwise, that element is replaced by **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). The function can put back an element in various ways:  
   
--   Si une position de remise est disponible et que la valeur de l’élément stocké est égale à **ch**, elle peut décrémenter le pointeur suivant pour la mémoire tampon d’entrée.  
+-   If a putback position is available, and the element stored there compares equal to **ch**, it can decrement the next pointer for the input buffer.  
   
--   Si la fonction peut rendre disponible une position `putback`, elle définit le pointeur suivant vers cette position et stocke **ch** dans cette position.  
+-   If the function can make a `putback` position available, it can do so, set the next pointer to point at that position, and store **ch** in that position.  
   
--   Si la fonction peut remettre un élément dans le flux d’entrée, il peut faire, par exemple en appelant `ungetc` pour un élément de type `char`.  
+-   If the function can push back an element onto the input stream, it can do so, such as by calling `ungetc` for an element of type `char`.  
   
 ##  <a name="pos_type"></a>  basic_filebuf::pos_type  
- Rend équivalent ce type dans la portée de basic_filebuf au type du même nom dans la portée de **Tr**.  
+ Makes this type within basic_filebuf's scope equivalent to the type of the same name in the **Tr** scope.  
   
 ```  
 typedef typename traits_type::pos_type pos_type;  
 ```  
   
 ##  <a name="seekoff"></a>  basic_filebuf::seekoff  
- Tente de modifier les positions actuelles des flux contrôlés.  
+ Tries to alter the current positions for the controlled streams.  
   
 ```  
 virtual pos_type seekoff(off_type _Off,
@@ -510,52 +526,52 @@ virtual pos_type seekoff(off_type _Off,
     ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- Position à rechercher par rapport à `_Way`.  
+ The position to seek for relative to `_Way`.  
   
  `_Way`  
- Point de départ des opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.  
+ The starting point for offset operations. See [seekdir](../standard-library/ios-base-class.md#seekdir) for possible values.  
   
  `_Which`  
- Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne la nouvelle position ou une position de flux non valide.  
+### <a name="return-value"></a>Return Value  
+ Returns the new position or an invalid stream position.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre virtuelle protégée s’efforce de modifier les positions actuelles des flux contrôlés. Pour un objet de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, une position de flux peut être représentée par un objet de type `fpos_t` qui stocke un décalage et toutes les informations d’état nécessaires pour analyser un flux large. Le décalage zéro désigne le premier élément du flux. (Un objet de type [pos_type](../standard-library/basic-streambuf-class.md#pos_type) stocke au moins un objet `fpos_t`.)  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function endeavors to alter the current positions for the controlled streams. For an object of class [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, a stream position can be represented by an object of type `fpos_t`, which stores an offset and any state information needed to parse a wide stream. Offset zero designates the first element of the stream. (An object of type [pos_type](../standard-library/basic-streambuf-class.md#pos_type) stores at least an `fpos_t` object.)  
   
- Dans le cas d’un fichier ouvert pour lecture et écriture, les flux d’entrée et de sortie sont positionnés en tandem. Pour basculer entre l’insertion et l’extraction, vous devez appeler [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) ou [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos). Les appels à `pubseekoff` (et donc à `seekoff`) ont plusieurs limites pour les [flux de texte](../c-runtime-library/text-and-binary-streams.md), les [flux binaires](../c-runtime-library/text-and-binary-streams.md) et les [flux larges](../c-runtime-library/byte-and-wide-streams.md).  
+ For a file opened for both reading and writing, both the input and output streams are positioned in tandem. To switch between inserting and extracting, you must call either [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) or [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos). Calls to `pubseekoff` (and hence to `seekoff`) have various limitations for [text streams](../c-runtime-library/text-and-binary-streams.md), [binary streams](../c-runtime-library/text-and-binary-streams.md), and [wide streams](../c-runtime-library/byte-and-wide-streams.md).  
   
- Si le pointeur de fichier **fp** est un pointeur null, la fonction échoue. Sinon, elle s’efforce de modifier la position du flux en appelant `fseek`( **fp**, `_Off`, `_Way`). Si cette fonction réussit et que la position résultante **fposn** peut être déterminée en appelant `fgetpos`( **fp**, **&fposn**), la fonction réussit. Si la fonction réussit, elle retourne une valeur de type **pos_type** contenant **fposn**. Sinon, elle retourne une position de flux non valide.  
+ If the file pointer **fp** is a null pointer, the function fails. Otherwise, it endeavors to alter the stream position by calling `fseek`( **fp**, `_Off`, `_Way`). If that function succeeds and the resulting position **fposn** can be determined by calling `fgetpos`( **fp**, **&fposn**), the function succeeds. If the function succeeds, it returns a value of type **pos_type** containing **fposn**. Otherwise, it returns an invalid stream position.  
   
 ##  <a name="seekpos"></a>  basic_filebuf::seekpos  
- Tente de modifier les positions actuelles des flux contrôlés.  
+ Tries to alter the current positions for the controlled streams.  
   
 ```  
 virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Sp`  
- Position à rechercher.  
+ The position to seek for.  
   
  `_Which`  
- Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.  
   
-### <a name="return-value"></a>Valeur de retour  
- Si le pointeur de fichier **fp** est un pointeur null, la fonction échoue. Sinon, elle s’efforce de modifier la position du flux en appelant `fsetpos`( **fp**, **&fposn**), où **fposn** est l’objet `fpos_t` stocké dans `pos`. Si la fonction réussit, elle retourne `pos`. Sinon, elle retourne une position de flux non valide. Pour déterminer si la position du flux n’est pas valide, comparez la valeur de retour à `pos_type(off_type(-1))`.  
+### <a name="return-value"></a>Return Value  
+ If the file pointer **fp** is a null pointer, the function fails. Otherwise, it endeavors to alter the stream position by calling `fsetpos`( **fp**, **&fposn**), where **fposn** is the `fpos_t` object stored in `pos`. If that function succeeds, the function returns `pos`. Otherwise, it returns an invalid stream position. To determine if the stream position is invalid, compare the return value with `pos_type(off_type(-1))`.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre virtuelle protégée s’efforce de modifier les positions actuelles des flux contrôlés. Pour un objet de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, une position de flux peut être représentée par un objet de type `fpos_t` qui stocke un décalage et toutes les informations d’état nécessaires pour analyser un flux large. Le décalage zéro désigne le premier élément du flux. (Un objet de type `pos_type` stocke au moins un objet `fpos_t`.)  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function endeavors to alter the current positions for the controlled streams. For an object of class [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**>, a stream position can be represented by an object of type `fpos_t`, which stores an offset and any state information needed to parse a wide stream. Offset zero designates the first element of the stream. (An object of type `pos_type` stores at least an `fpos_t` object.)  
   
- Dans le cas d’un fichier ouvert pour lecture et écriture, les flux d’entrée et de sortie sont positionnés en tandem. Pour basculer entre l’insertion et l’extraction, vous devez appeler [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) ou [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos). Les appels à `pubseekoff` (et donc à `seekoff`) ont plusieurs limites pour les flux de texte, les flux binaires et les flux larges.  
+ For a file opened for both reading and writing, both the input and output streams are positioned in tandem. To switch between inserting and extracting, you must call either [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) or [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos). Calls to `pubseekoff` (and hence to `seekoff`) have various limitations for text streams, binary streams, and wide streams.  
   
- Pour un flux large, si des insertions se sont produites depuis l’ouverture du flux ou depuis le dernier appel à `streampos`, la fonction appelle [overflow](#overflow). Elle insère également toute séquence nécessaire pour restaurer l’état initial de la conversion à l’aide de la facette de conversion de fichier **fac** pour appeler **fac**`.``unshift` en fonction des besoins. Chaque élément **byte** de type `char` obtenu est écrit dans le flux associé désigné par le pointeur de fichier **fp** par des appels successifs de la forme `fputc`(**byte**, **fp**). En cas d’échec de l’appel à **fac.unshift** ou d’une écriture, la fonction échoue.  
+ For a wide stream, if any insertions have occurred since the stream was opened, or since the last call to `streampos`, the function calls [overflow](#overflow). It also inserts any sequence needed to restore the initial conversion state, by using the file conversion facet **fac** to call **fac**`.unshift` as needed. Each element **byte** of type `char` thus produced is written to the associated stream designated by the file pointer **fp** as if by successive calls of the form `fputc`( **byte**, **fp**). If the call to **fac.unshift** or any write fails, the function does not succeed.  
   
 ##  <a name="setbuf"></a>  basic_filebuf::setbuf  
- Effectue une opération spécifique pour chaque mémoire tampon de flux dérivée.  
+ Performs an operation particular to each derived stream buffer.  
   
 ```  
 virtual basic_streambuf<Elem, Tr> *setbuf(
@@ -563,68 +579,68 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Buffer`  
- Pointeur vers une mémoire tampon.  
+ Pointer to a buffer.  
   
  `count`  
- Taille de la mémoire tampon.  
+ Size of the buffer.  
   
-### <a name="return-value"></a>Valeur de retour  
- La fonction membre protégée retourne un zéro si le pointeur de fichier `fp` est un pointeur null.  
+### <a name="return-value"></a>Return Value  
+ The protected member function returns zero if the file pointer `fp` is a null pointer.  
   
-### <a name="remarks"></a>Notes  
- `setbuf` appelle `setvbuf`( **fp**, ( `char` \*) `_Buffer`, `_IOFBF`, `count` \* `sizeof` ( **Elem**) ) pour présenter le tableau d’éléments `count` commençant par _ *Buffer* comme mémoire tampon pour le flux. Si cette fonction retourne une valeur différente de zéro, la fonction retourne un pointeur null. Sinon, elle retourne **this** pour signaler la réussite.  
+### <a name="remarks"></a>Remarks  
+ `setbuf` calls `setvbuf`( **fp**, ( `char` \*) `_Buffer`, `_IOFBF`, `count` \* `sizeof` ( **Elem**) ) to offer the array of `count` elements beginning at _ *Buffer* as a buffer for the stream. If that function returns a nonzero value, the function returns a null pointer. Otherwise, it returns **this** to signal success.  
   
 ##  <a name="swap"></a>  basic_filebuf::swap  
- Échange le contenu de ce `basic_filebuf` avec le contenu du `basic_filebuf` fourni.  
+ Exchanges the contents of this `basic_filebuf` for the contents of the provided `basic_filebuf`.  
   
 ```  
 void swap(basic_filebuf& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Référence `lvalue` à un autre `basic_filebuf`.  
+ An `lvalue` reference to another `basic_filebuf`.  
   
 ##  <a name="sync"></a>  basic_filebuf::sync  
- Tente de synchroniser les flux contrôlés avec n’importe quel flux externe associé.  
+ Tries to synchronize the controlled streams with any associated external streams.  
   
 ```  
 virtual int sync();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne zéro si le pointeur de fichier **fp** est un pointeur null. Sinon, elle retourne zéro uniquement si les appels à [overflow](#overflow) et `fflush`( **fp**) parviennent à vider toute sortie en attente dans le flux.  
+### <a name="return-value"></a>Return Value  
+ Returns zero if the file pointer **fp** is a null pointer. Otherwise, it returns zero only if calls to both [overflow](#overflow) and `fflush`( **fp**) succeed in flushing any pending output to the stream.  
   
 ##  <a name="traits_type"></a>  basic_filebuf::traits_type  
- Associe un nom de type au paramètre de modèle **Tr**.  
+ Associates a type name with the **Tr** template parameter.  
   
 ```  
 typedef Tr traits_type;  
 ```  
   
 ##  <a name="underflow"></a>  basic_filebuf::underflow  
- Extrait l’élément actuel du flux d’entrée.  
+ Extracts the current element from the input stream.  
   
 ```  
 virtual int_type underflow();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Si la fonction ne peut pas réussir, elle retourne **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). Sinon, elle retourne **ch** converti comme décrit dans la section Notes.  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). Otherwise, it returns **ch**, converted as described in the Remarks section.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre virtuelle protégée s’efforce d’extraire l’élément actuel **ch** du flux d’entrée et retourne l’élément sous la forme **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**). Elle peut le faire de différentes manières :  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function endeavors to extract the current element **ch** from the input stream, and return the element as **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**). It can do so in various ways:  
   
--   Si une position de lecture est disponible, elle accepte **ch** comme élément stocké dans la position de lecture et avance le pointeur suivant pour la mémoire tampon d’entrée.  
+-   If a read position is available, it takes **ch** as the element stored in the read position and advances the next pointer for the input buffer.  
   
--   Il peut lire un ou plusieurs éléments de type `char`, comme lors d’appels successifs sous la forme `fgetc`(**fp**) et les convertir en un élément **ch** de type **Elem** en utilisant le fac de facette de conversion de fichier pour appeler **fac.in** en fonction des besoins. En cas d’échec d’une conversion ou d’une lecture, la fonction échoue.  
+-   It can read one or more elements of type `char`, as if by successive calls of the form `fgetc`(**fp**), and convert them to an element **ch** of type **Elem** by using the file conversion facet fac to call **fac.in** as needed. If any read or conversion fails, the function does not succeed.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<fstream>](../standard-library/fstream.md)   
- [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream, programmation](../standard-library/iostream-programming.md)   
- [iostreams, conventions](../standard-library/iostreams-conventions.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

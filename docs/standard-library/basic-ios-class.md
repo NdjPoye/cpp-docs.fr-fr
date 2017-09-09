@@ -1,16 +1,15 @@
 ---
-title: basic_ios, classe | Microsoft Docs
+title: basic_ios Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ios/std::basic_ios
-- basic_ios
 - ios/std::basic_ios::char_type
 - ios/std::basic_ios::int_type
 - ios/std::basic_ios::off_type
@@ -39,7 +38,31 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_ios class
+- std::basic_ios [C++]
+- std::basic_ios [C++], char_type
+- std::basic_ios [C++], int_type
+- std::basic_ios [C++], off_type
+- std::basic_ios [C++], pos_type
+- std::basic_ios [C++], traits_type
+- std::basic_ios [C++], bad
+- std::basic_ios [C++], clear
+- std::basic_ios [C++], copyfmt
+- std::basic_ios [C++], eof
+- std::basic_ios [C++], exceptions
+- std::basic_ios [C++], fail
+- std::basic_ios [C++], fill
+- std::basic_ios [C++], good
+- std::basic_ios [C++], imbue
+- std::basic_ios [C++], init
+- std::basic_ios [C++], move
+- std::basic_ios [C++], narrow
+- std::basic_ios [C++], rdbuf
+- std::basic_ios [C++], rdstate
+- std::basic_ios [C++], set_rdbuf
+- std::basic_ios [C++], setstate
+- std::basic_ios [C++], swap
+- std::basic_ios [C++], tie
+- std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
 caps.latest.revision: 24
 author: corob-msft
@@ -59,17 +82,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: df32e4cf1cfddd4e5634880ba6bffc63ddcd90af
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ea20a0c433ca12ceafc7bdcfe088d994ca65555e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicios-class"></a>basic_ios, classe
-La classe de modèle décrit les fonctions membres et de stockage communes aux flux d’entrée (de classe de modèle [basic_istream](../standard-library/basic-istream-class.md)) et de sortie (de classe de modèle [basic_ostream](../standard-library/basic-ostream-class.md)) qui dépendent des paramètres de modèle. (La classe [ios_base](../standard-library/ios-base-class.md) décrit ce qui est commun et non dépendant des paramètres de modèle.) Un objet de classe **basic_ios\<class Elem, class Traits>** permet de contrôler un flux avec des éléments de type **Elem** dont les caractéristiques sont déterminées par la classe **Traits**.  
+# <a name="basicios-class"></a>basic_ios Class
+The template class describes the storage and member functions common to both input streams (of template class [basic_istream](../standard-library/basic-istream-class.md)) and output streams (of template class [basic_ostream](../standard-library/basic-ostream-class.md)) that depend on the template parameters. (The class [ios_base](../standard-library/ios-base-class.md) describes what is common and not dependent on template parameters.) An object of class **basic_ios\<class Elem, class Traits>** helps control a stream with elements of type **Elem**, whose character traits are determined by the class **Traits**.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
  
@@ -77,92 +100,92 @@ template <class Elem, class Traits>
 class basic_ios : public ios_base  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Elem`  
- Type.  
+ A type.  
   
  `Traits`  
- Variable de type `char_traits`.  
+ A variable of type `char_traits`.  
   
-## <a name="remarks"></a>Notes  
- Un objet de classe **basic_ios\<class Elem, class Traits>** stocke :  
+## <a name="remarks"></a>Remarks  
+ An object of class **basic_ios\<class Elem, class Traits>** stores:  
   
--   Un pointeur de lien vers un objet de type [basic_istream](../standard-library/basic-istream-class.md)**\<Elem, Traits>**.  
+-   A tie pointer to an object of type [basic_istream](../standard-library/basic-istream-class.md)**\<Elem, Traits>**.  
   
--   Un pointeur de mémoire tampon de flux vers un objet de type [basic_streambuf](../standard-library/basic-streambuf-class.md)**\<Elem, Traits>**.  
+-   A stream buffer pointer to an object of type [basic_streambuf](../standard-library/basic-streambuf-class.md)**\<Elem, Traits >**.  
   
-- Des [informations sur la mise en forme](../standard-library/ios-base-class.md).  
+- [Formatting information](../standard-library/ios-base-class.md).  
   
-- Des [informations sur l’état du flux](../standard-library/ios-base-class.md) dans un objet de base de type [ios_base](../standard-library/ios-base-class.md).  
+- [Stream state information](../standard-library/ios-base-class.md) in a base object of type [ios_base](../standard-library/ios-base-class.md).  
   
--   Un caractère de remplissage dans un objet de type `char_type`.  
+-   A fill character in an object of type `char_type`.  
   
-### <a name="constructors"></a>Constructeurs  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[basic_ios](#basic_ios)|Construit la classe `basic_ios`.|  
+|[basic_ios](#basic_ios)|Constructs the `basic_ios` class.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|Synonyme pour le paramètre du modèle `Elem`.|  
-|[int_type](#int_type)|Synonyme de `Traits::int_type`.|  
-|[off_type](#off_type)|Synonyme de `Traits::off_type`.|  
-|[pos_type](#pos_type)|Synonyme de `Traits::pos_type`.|  
-|[traits_type](#traits_type)|Synonyme pour le paramètre du modèle `Traits`.|  
+|[char_type](#char_type)|A synonym for the template parameter `Elem`.|  
+|[int_type](#int_type)|A synonym for `Traits::int_type`.|  
+|[off_type](#off_type)|A synonym for `Traits::off_type`.|  
+|[pos_type](#pos_type)|A synonym for `Traits::pos_type`.|  
+|[traits_type](#traits_type)|A synonym for the template parameter `Traits`.|  
   
-### <a name="member-functions"></a>Fonctions membres  
-  
-|||  
-|-|-|  
-|[bad](#bad)|Indique une perte d'intégrité de la mémoire tampon du flux.|  
-|[clear](#clear)|Efface tous les indicateurs d'erreur.|  
-|[copyfmt](#copyfmt)|Copie les indicateurs d'un flux vers un autre.|  
-|[eof](#eof)|Indique si la fin d'un flux a été atteinte.|  
-|[exceptions](#exceptions)|Indique les exceptions qui seront levées par le flux.|  
-|[fail](#fail)|Indique l'échec de l'extraction d'un champ valide dans un flux.|  
-|[fill](#fill)|Spécifie ou retourne le caractère qui est utilisé quand le texte n'est pas aussi large que le flux.|  
-|[good](#good)|Indique que le flux est en bon état.|  
-|[imbue](#imbue)|Change les paramètres régionaux.|  
-|[init](#init)|Appelé par les constructeurs `basic_ios`.|  
-|[move](#move)|Déplace toutes les valeurs, sauf le pointeur vers la mémoire tampon du flux, du paramètre vers l'objet actuel.|  
-|[narrow](#narrow)|Trouve le caractère équivalent à un type `char_type` donné.|  
-|[rdbuf](#rdbuf)|Dirige le flux vers la mémoire tampon spécifiée.|  
-|[rdstate](#rdstate)|Lit l'état des bits pour les indicateurs.|  
-|[set_rdbuf](#set_rdbuf)|Affecte une mémoire tampon de flux comme mémoire tampon de lecture pour cet objet de flux.|  
-|[setstate](#setstate)|Définit des indicateurs supplémentaires.|  
-|[swap](#swap)|Échange les valeurs de cet objet `basic_ios` avec celles d'un autre objet `basic_ios`. Les pointeurs vers les mémoires tampons de flux ne sont pas échangés.|  
-|[tie](#tie)|Garantit qu'un flux est traité avant un autre flux.|  
-|[widen](#widen)|Trouve le type `char_type` équivalent à un caractère donné.|  
-  
-### <a name="operators"></a>Opérateurs  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[opérateur explicite bool](#op_bool)|Permet l'utilisation d'un objet `basic_ios` comme `bool`. La conversion de type automatique est désactivée pour éviter des effets secondaires involontaires courants.|  
-|[opérateur void *](#op_void_star)|Indique si le flux est toujours en bon état.|  
-|[operator!](#op_not)|Indique si le flux n'est pas en mauvais état.|  
+|[bad](#bad)|Indicates a loss of integrity of the stream buffer.|  
+|[clear](#clear)|Clears all error flags.|  
+|[copyfmt](#copyfmt)|Copies flags from one stream to another.|  
+|[eof](#eof)|Indicates if the end of a stream has been reached.|  
+|[exceptions](#exceptions)|Indicates which exceptions will be thrown by the stream.|  
+|[fail](#fail)|Indicates failure to extract a valid field from a stream.|  
+|[fill](#fill)|Specifies or returns the character that will be used when the text is not as wide as the stream.|  
+|[good](#good)|Indicates the stream is in good condition.|  
+|[imbue](#imbue)|Changes the locale.|  
+|[init](#init)|Called by `basic_ios` constructors.|  
+|[move](#move)|Moves all values, except the pointer to the stream buffer, from the parameter to the current object.|  
+|[narrow](#narrow)|Finds the equivalent char to a given `char_type`.|  
+|[rdbuf](#rdbuf)|Routes stream to specified buffer.|  
+|[rdstate](#rdstate)|Reads the state of bits for flags.|  
+|[set_rdbuf](#set_rdbuf)|Assigns a stream buffer to be the read buffer for this stream object.|  
+|[setstate](#setstate)|Sets additional flags.|  
+|[swap](#swap)|Exchanges the values in this `basic_ios` object for those of another `basic_ios` object. The pointers to the stream buffers are not swapped.|  
+|[tie](#tie)|Ensures that one stream is processed before another stream.|  
+|[widen](#widen)|Finds the equivalent `char_type` to a given char.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<ios>  
+### <a name="operators"></a>Operators  
   
- **Espace de noms :** std  
+|||  
+|-|-|  
+|[explicit operator bool](#op_bool)|Allows use of a `basic_ios` object as a `bool`. Automatic type conversion is disabled to prevent common, unintended side effects.|  
+|[operator void *](#op_void_star)|Indicates if the stream is still good.|  
+|[operator!](#op_not)|Indicates if the stream is not bad.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<ios>  
+  
+ **Namespace:** std  
   
 ##  <a name="bad"></a>  basic_ios::bad  
- Indique une perte d’intégrité de la mémoire tampon de flux  
+ Indicates a loss of integrity of the stream buffer  
   
 ```  
 bool bad() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `true` si `rdstate & badbit` est différent de zéro ; sinon, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if `rdstate & badbit` is nonzero; otherwise `false`.  
   
- Pour plus d’informations sur `badbit`, consultez [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
+ For more information on `badbit`, see [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_bad.cpp  
@@ -183,73 +206,73 @@ int main( void )
 ```  
   
 ##  <a name="basic_ios"></a>  basic_ios::basic_ios  
- Construit la classe basic_ios.  
+ Constructs the basic_ios class.  
   
 ```   
 explicit basic_ios(basic_streambuf<Elem,  Traits>* sb);
 basic_ios();
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `sb`  
- Mémoire tampon standard pour stocker les éléments d’entrée ou de sortie.  
+ Standard buffer to store input or output elements.  
   
-### <a name="remarks"></a>Notes  
- Le premier constructeur initialise ses objets membres en appelant [init](#init)(_ *Sb*). Le deuxième constructeur (protégé) laisse ses objets membres non initialisés. Un appel ultérieur à **init** doit initialiser l’objet avant qu’il puisse être détruit en toute sécurité.  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes its member objects by calling [init](#init)(_ *Sb*). The second (protected) constructor leaves its member objects uninitialized. A later call to **init** must initialize the object before it can be safely destroyed.  
   
 ##  <a name="char_type"></a>  basic_ios::char_type  
- Synonyme pour le paramètre de modèle **Elem**.  
+ A synonym for the template parameter **Elem**.  
   
 ```   
 typedef Elem char_type;  
 ```  
   
 ##  <a name="clear"></a>  basic_ios::clear  
- Efface tous les indicateurs d'erreur.  
+ Clears all error flags.  
   
 ```   
 void clear(iostate state = goodbit, bool reraise = false); 
 void clear(io_state state);
 ```  
   
-### <a name="parameters"></a>Paramètres  
- `state`(facultatif)  
- Indicateurs à définir après l'effacement de tous les indicateurs. La valeur par défaut est `goodbit`.  
+### <a name="parameters"></a>Parameters  
+ `state` (optional)  
+ The flags you want to set after clearing all flags. Defaults to `goodbit`.  
   
- `reraise`(facultatif)  
- Spécifie si l'exception doit être levée de nouveau. La valeur par défaut est `false` (l'exception n'est pas levée de nouveau).  
+ `reraise` (optional)  
+ Specifies whether the exception should be re-raised. Defaults to `false` (will not re-raise the exception).  
   
-### <a name="remarks"></a>Notes  
- Les indicateurs sont **goodbit**, **failbit**, **eofbit** et **badbit**. Testez ces indicateurs avec [good](#good), [bad](#bad), [eof](#eof) et [fail](#fail)  
+### <a name="remarks"></a>Remarks  
+ The flags are **goodbit**, **failbit**, **eofbit**, and **badbit**. Test for these flags with [good](#good), [bad](#bad), [eof](#eof), and [fail](#fail)  
   
- La fonction membre remplace les informations d'état de flux stockées par :  
+ The member function replaces the stored stream state information with:  
   
  `state` &#124; `(`[rdbuf](#rdbuf) != 0 **goodbit** : **badbit**)  
   
- Si `state`**&**[exceptions](#exceptions) est différent de zéro, un objet de la classe [failure](../standard-library/ios-base-class.md#failure) est levé.  
+ If `state`**&**[exceptions](#exceptions) is nonzero, it then throws an object of class [failure](../standard-library/ios-base-class.md#failure).  
   
-### <a name="example"></a>Exemple  
-  Consultez [rdstate](#rdstate) et [getline](../standard-library/string-functions.md#getline) pour obtenir des exemples d’utilisation de **clear**.  
+### <a name="example"></a>Example  
+  See [rdstate](#rdstate) and [getline](../standard-library/string-functions.md#getline) for examples using **clear**.  
   
 ##  <a name="copyfmt"></a>  basic_ios::copyfmt  
- Copie les indicateurs d'un flux vers un autre.  
+ Copies flags from one stream to another.  
   
 ```   
 basic_ios<Elem, Traits>& copyfmt(
 const basic_ios<Elem, Traits>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Flux dont vous voulez copier les indicateurs.  
+ The stream whose flags you want to copy.  
   
-### <a name="return-value"></a>Valeur de retour  
- Objet **this** pour le flux dans lequel vous copiez les indicateurs.  
+### <a name="return-value"></a>Return Value  
+ The **this** object for the stream to which you are copying the flags.  
   
-### <a name="remarks"></a>Remarques  
- La fonction membre signale l’événement de rappel **effacer\_événement**. Elle copie ensuite `right` dans **\*this**, le caractère de remplissage, le pointeur de lien et les informations de mise en forme. Avant de modifier le masque d’exception, il signale l’événement de rappel **copyfmt_event**. Si, une fois que la copie est terminée, **state &**[exceptions](#exceptions) est différent de zéro, la fonction appelle [clear](#clear) avec l’argument [rdstate](#rdstate). Elle retourne ensuite **\*this**.  
+### <a name="remarks"></a>Remarks  
+ The member function reports the callback event **erase\_event**. It then copies from `right` into **\*this** the fill character, the tie pointer, and the formatting information. Before altering the exception mask, it reports the callback event **copyfmt_event**. If, after the copy is complete, **state &**[exceptions](#exceptions) is nonzero, the function effectively calls [clear](#clear) with the argument [rdstate](#rdstate). It returns **\*this**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp    
 // basic_ios_copyfmt.cpp  
@@ -272,19 +295,19 @@ int main( )
 ```  
   
 ##  <a name="eof"></a>  basic_ios::eof  
- Indique si la fin d'un flux a été atteinte.  
+ Indicates if the end of a stream has been reached.  
   
 ```  
 bool eof() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `true` si la fin du flux a été atteinte, `false` dans le cas contraire.  
+### <a name="return-value"></a>Return Value  
+ `true` if the end of the stream has been reached, `false` otherwise.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne `true` si [rdstate](#rdstate) `& eofbit` est différent de zéro. Pour plus d’informations sur `eofbit`, consultez [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
+### <a name="remarks"></a>Remarks  
+ The member function returns `true` if [rdstate](#rdstate) `& eofbit` is nonzero. For more information on `eofbit`, see [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp    
 // basic_ios_eof.cpp  
@@ -308,7 +331,7 @@ int main( int argc, char* argv[] )
 ```  
   
 ##  <a name="exceptions"></a>  basic_ios::exceptions  
- Indique les exceptions qui seront levées par le flux.  
+ Indicates which exceptions will be thrown by the stream.  
   
 ```   
 iostate exceptions() const; 
@@ -316,17 +339,17 @@ void exceptions(iostate Newexcept);
 void exceptions(io_state Newexcept);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *Newexcept*  
- Indicateurs pour lesquels vous voulez lever une exception.  
+ The flags that you want to throw an exception.  
   
-### <a name="return-value"></a>Valeur de retour  
- Les indicateurs sont actuellement spécifiés pour lever une exception pour le flux.  
+### <a name="return-value"></a>Return Value  
+ The flags that are currently specified to thrown an exception for the stream.  
   
-### <a name="remarks"></a>Notes  
- La première fonction membre retourne le masque d’exception stocké. La deuxième fonction membre stocke *_Except* dans le masque d’exception et retourne sa précédente valeur stockée. Notez que le stockage d’un nouveau masque d’exception peut lever une exception, tout comme l’appel [clear](#clear)( [rdstate](#rdstate) ).  
+### <a name="remarks"></a>Remarks  
+ The first member function returns the stored exception mask. The second member function stores *_Except* in the exception mask and returns its previous stored value. Note that storing a new exception mask can throw an exception just like the call [clear](#clear)( [rdstate](#rdstate) ).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_exceptions.cpp  
@@ -365,18 +388,18 @@ Exception description: ios_base::eofbit set
 ```  
   
 ##  <a name="fail"></a>  basic_ios::fail  
- Indique l'échec de l'extraction d'un champ valide dans un flux.  
+ Indicates failure to extract a valid field from a stream.  
   
 ```  
 bool fail() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `true` si [rdstate](#rdstate) `& (badbit|failbit)` est différent de zéro, sinon `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if [rdstate](#rdstate) `& (badbit|failbit)` is nonzero, otherwise `false`.  
   
- Pour plus d’informations sur `failbit`, consultez [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
+ For more information on `failbit`, see [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_fail.cpp  
@@ -394,24 +417,24 @@ int main( void )
 ```  
   
 ##  <a name="fill"></a>  basic_ios::fill  
- Spécifie ou retourne le caractère qui est utilisé quand le texte n'est pas aussi large que le flux.  
+ Specifies or returns the character that will be used when the text is not as wide as the stream.  
   
 ```   
 char_type fill() const; 
 char_type fill(char_type Char);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Char`  
- Caractère souhaité comme caractère de remplissage.  
+ The character you want as the fill character.  
   
-### <a name="return-value"></a>Valeur de retour  
- Caractère de remplissage actuel.  
+### <a name="return-value"></a>Return Value  
+ The current fill character.  
   
-### <a name="remarks"></a>Notes  
- La première fonction membre retourne le caractère de remplissage stocké. La deuxième fonction membre stocke `Char` dans le caractère de remplissage et retourne sa précédente valeur stockée.  
+### <a name="remarks"></a>Remarks  
+ The first member function returns the stored fill character. The second member function stores `Char` in the fill character and returns its previous stored value.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_fill.cpp  
@@ -439,42 +462,42 @@ x
 ```  
   
 ##  <a name="good"></a>  basic_ios::good  
- Indique que le flux est en bon état.  
+ Indicates the stream is in good condition.  
   
 ```  
 bool good() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `true` si [rdstate](#rdstate) `== goodbit` (aucun indicateur d’état n’est défini), sinon, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if [rdstate](#rdstate) `== goodbit` (no state flags are set), otherwise, `false`.  
   
- Pour plus d’informations sur `goodbit`, consultez [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
+ For more information on `goodbit`, see [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
   
-### <a name="example"></a>Exemple  
-  Consultez [basic_ios::bad](#bad) pour obtenir un exemple d’utilisation de `good`.  
+### <a name="example"></a>Example  
+  See [basic_ios::bad](#bad) for an example of using `good`.  
   
 ##  <a name="imbue"></a>  basic_ios::imbue  
- Change les paramètres régionaux.  
+ Changes the locale.  
   
 ```   
 locale imbue(const locale& Loc);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Loc`  
- Chaîne de paramètres régionaux.  
+ A locale string.  
   
-### <a name="return-value"></a>Valeur de retour  
- Paramètres régionaux précédents.  
+### <a name="return-value"></a>Return Value  
+ The previous locale.  
   
-### <a name="remarks"></a>Notes  
- Si [rdbuf](#rdbuf) n’est pas un pointeur null, la fonction membre appelle  
+### <a name="remarks"></a>Remarks  
+ If [rdbuf](#rdbuf) is not a null pointer, the member function calls  
   
  `rdbuf`-> [pubimbue](../standard-library/basic-streambuf-class.md#pubimbue)(_ *Loc*)  
   
- Dans tous les cas, elle retourne [ios_base::imbue](../standard-library/ios-base-class.md#imbue)(_ *Loc*).  
+ In any case, it returns [ios_base::imbue](../standard-library/ios-base-class.md#imbue)(_ *Loc*).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_imbue.cpp  
@@ -494,85 +517,85 @@ int main( )
 ```  
   
 ##  <a name="init"></a>  basic_ios::init  
- Appelé par les constructeurs de basic_ios.  
+ Called by basic_ios constructors.  
   
 ```  
  
 void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Sb`  
- Mémoire tampon standard pour stocker les éléments d’entrée ou de sortie.  
+ Standard buffer to store input or output elements.  
   
  `_Isstd`  
- Spécifie s’il s’agit d’un flux standard.  
+ Specifies whether this is a standard stream.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre stocke les valeurs de tous les objets membres, afin que :  
+### <a name="remarks"></a>Remarks  
+ The member function stores values in all member objects, so that:  
   
-- [rdbuf](#rdbuf) retourne *_Sb.*  
+- [rdbuf](#rdbuf) returns *_Sb.*  
   
-- [tie](#tie) retourne un pointeur null.  
+- [tie](#tie) returns a null pointer.  
   
-- [rdstate](#rdstate) retourne [goodbit](../standard-library/ios-base-class.md#iostate) si `_Sb` est différent de zéro ; sinon, retourne [badbit](../standard-library/ios-base-class.md#iostate).  
+- [rdstate](#rdstate) returns [goodbit](../standard-library/ios-base-class.md#iostate) if `_Sb` is nonzero; otherwise, it returns [badbit](../standard-library/ios-base-class.md#iostate).  
   
-- [exceptions](#exceptions) retourne **goodbit**.  
+- [exceptions](#exceptions) returns **goodbit**.  
   
-- [flags](../standard-library/ios-base-class.md#flags) retourne [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [dec](../standard-library/ios-base-class.md#fmtflags).  
+- [flags](../standard-library/ios-base-class.md#flags) returns [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [dec](../standard-library/ios-base-class.md#fmtflags).  
   
-- [width](../standard-library/ios-base-class.md#width) retourne 0.  
+- [width](../standard-library/ios-base-class.md#width) returns 0.  
   
-- [precision](../standard-library/ios-base-class.md#precision) retourne 6.  
+- [precision](../standard-library/ios-base-class.md#precision) returns 6.  
   
-- [fill](#fill) retourne l’espace.  
+- [fill](#fill) returns the space character.  
   
-- [getloc](../standard-library/ios-base-class.md#getloc) retourne `locale::classic`.  
+- [getloc](../standard-library/ios-base-class.md#getloc) returns `locale::classic`.  
   
-- [iword](../standard-library/ios-base-class.md#iword) retourne zéro et [pword](../standard-library/ios-base-class.md#pword) retourne un pointeur Null pour toutes les valeurs d’argument.  
+- [iword](../standard-library/ios-base-class.md#iword) returns zero, and [pword](../standard-library/ios-base-class.md#pword) returns a null pointer for all argument values.  
   
 ##  <a name="int_type"></a>  basic_ios::int_type  
- Synonyme de **traits_type::int_type**.  
+ A synonym for **traits_type::int_type**.  
   
 ```  
 typedef typename traits_type::int_type int_type;  
 ```  
   
 ##  <a name="move"></a>  basic_ios::move  
- Déplace toutes les valeurs, sauf le pointeur vers la mémoire tampon du flux, du paramètre vers l'objet actuel.  
+ Moves all values, except the pointer to the stream buffer, from the parameter to the current object.  
   
 ```   
 void move(basic_ios&& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Objet `ios_base` à partir duquel déplacer les valeurs.  
+ The `ios_base` object to move values from.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre protégée déplace toutes les valeurs stockées dans `right` vers `*this` sauf le `stream buffer pointer` stocké, qui n’est pas modifié dans `right` et défini sur un pointeur null dans `*this`. Le `tie pointer` stocké est défini sur un pointeur null dans `right`.  
+### <a name="remarks"></a>Remarks  
+ The protected member function moves all the values stored in `right` to `*this` except the stored `stream buffer pointer`, which is unchanged in `right` and set to a null pointer in `*this`. The stored `tie pointer` is set to a null pointer in `right`.  
   
 ##  <a name="narrow"></a>  basic_ios::narrow  
- Trouve le caractère équivalent à un type `char_type` donné.  
+ Finds the equivalent char to a given `char_type`.  
   
 ```  
 char narrow(char_type Char, char Default = '\0') const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Char`  
- `char` à convertir.  
+ The `char` to convert.  
   
  `Default`  
- `char` à retourné si aucun équivalent n’est trouvé.  
+ The `char` that you want returned if no equivalent is found.  
   
-### <a name="return-value"></a>Valeur de retour  
- `char` équivalent à un `char_type` donné.  
+### <a name="return-value"></a>Return Value  
+ The equivalent `char` to a given `char_type`.  
   
-### <a name="remarks"></a>Remarques  
- La fonction membre retourne [use_facet](../standard-library/basic-filebuf-class.md#open)\<ctype\<E >> ( [getloc](../standard-library/ios-base-class.md#getloc)()).`narrow` ( `Char`, `Default`).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [use_facet](../standard-library/basic-filebuf-class.md#open)\<ctype\<E> >( [getloc](../standard-library/ios-base-class.md#getloc)( ) ).`narrow`( `Char`, `Default`).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_narrow.cpp  
@@ -594,23 +617,23 @@ int main( )
 ```  
   
 ##  <a name="off_type"></a>  basic_ios::off_type  
- Synonyme de **traits_type::off_type**.  
+ A synonym for **traits_type::off_type**.  
   
 ```  
 typedef typename traits_type::off_type off_type;  
 ```  
   
 ##  <a name="op_void_star"></a>  basic_ios::operator void *  
- Indique si le flux est toujours en bon état.  
+ Indicates if the stream is still good.  
   
 ```  
  operator void *() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- L’opérateur retourne un pointeur null uniquement si [fail](#fail).  
+### <a name="return-value"></a>Return Value  
+ The operator returns a null pointer only if [fail](#fail).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_opgood.cpp  
@@ -630,16 +653,16 @@ int main( )
 ```  
   
 ##  <a name="op_not"></a>  basic_ios::operator!  
- Indique si le flux n'est pas en mauvais état.  
+ Indicates if the stream is not bad.  
   
 ```   
 bool operator!() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne [fail](#fail).  
+### <a name="return-value"></a>Return Value  
+ Returns [fail](#fail).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_opbad.cpp  
@@ -659,24 +682,24 @@ int main( )
 ```  
   
 ##  <a name="op_bool"></a>  basic_ios::operator bool  
- Permet l'utilisation d'un objet `basic_ios` comme `bool`. La conversion de type automatique est désactivée pour éviter des effets secondaires involontaires courants.  
+ Allows use of a `basic_ios` object as a `bool`. Automatic type conversion is disabled to prevent common, unintended side effects.  
   
 ```  
 explicit operator bool() const;
 ```  
   
-### <a name="remarks"></a>Notes  
- L’opérateur retourne une valeur convertible en `false` uniquement si `fail``()`. Le type de retour est convertible uniquement en `bool` et non en `void *` ou un autre type scalaire connu.  
+### <a name="remarks"></a>Remarks  
+ The operator returns a value convertible to `false` only if `fail()`. The return type is convertible only to `bool`, not to `void *` or other known scalar type.  
   
 ##  <a name="pos_type"></a>  basic_ios::pos_type  
- Synonyme de **traits_type::pos_type**.  
+ A synonym for **traits_type::pos_type**.  
   
 ```  
 typedef typename traits_type::pos_type pos_type;  
 ```  
   
 ##  <a name="rdbuf"></a>  basic_ios::rdbuf  
- Dirige le flux vers la mémoire tampon spécifiée.  
+ Routes stream to specified buffer.  
   
 ```   
 basic_streambuf<Elem, Traits> *rdbuf() const; 
@@ -684,16 +707,16 @@ basic_streambuf<Elem, Traits> *rdbuf(
 basic_streambuf<Elem, Traits>* _Sb);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Sb`  
- Un flux.  
+ A stream.  
   
-### <a name="remarks"></a>Notes  
- La première fonction membre retourne le pointeur de mémoire tampon de flux stocké.  
+### <a name="remarks"></a>Remarks  
+ The first member function returns the stored stream buffer pointer.  
   
- La deuxième fonction membre stocke `_Sb` dans le pointeur de mémoire tampon de flux stocké et retourne la valeur précédemment stockée.  
+ The second member function stores `_Sb` in the stored stream buffer pointer and returns the previously stored value.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_rdbuf.cpp  
@@ -719,17 +742,17 @@ test2
 ```  
   
 ##  <a name="rdstate"></a>  basic_ios::rdstate  
- Lit l'état des bits pour les indicateurs.  
+ Reads the state of bits for flags.  
   
 ```  
  
 iostate rdstate() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Informations de l’état de flux stocké.  
+### <a name="return-value"></a>Return Value  
+ The stored stream state information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_rdstate.cpp  
@@ -769,20 +792,20 @@ int main( )
 ```  
   
 ##  <a name="setstate"></a>  basic_ios::setstate  
- Définit des indicateurs supplémentaires.  
+ Sets additional flags.  
   
 ```   
 void setstate(iostate _State);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_State`  
- Indicateurs supplémentaires à définir.  
+ Additional flags to set.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre appelle [clear](#clear)(_ *State* &#124; [rdstate](#rdstate)).  
+### <a name="remarks"></a>Remarks  
+ The member function effectively calls [clear](#clear)(_ *State* &#124; [rdstate](#rdstate)).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp    
 // basic_ios_setstate.cpp  
@@ -817,22 +840,22 @@ int main( )
 ```  
   
 ##  <a name="set_rdbuf"></a>  basic_ios::set_rdbuf  
- Affecte une mémoire tampon de flux comme mémoire tampon de lecture pour cet objet de flux.  
+ Assigns a stream buffer to be the read buffer for this stream object.  
   
 ```   
 void set_rdbuf(
 basic_streambuf<Elem, Tr>* strbuf)  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `strbuf`  
- Mémoire tampon de flux qui doit devenir la mémoire tampon de lecture.  
+ The stream buffer to become the read buffer.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre protégée stocke `strbuf` dans `stream buffer pointer`. Elle n’appelle pas `clear`.  
+### <a name="remarks"></a>Remarks  
+ The protected member function stores `strbuf` in the `stream buffer pointer`.It does not call `clear`.  
   
 ##  <a name="tie"></a>  basic_ios::tie  
- Garantit qu'un flux est traité avant un autre flux.  
+ Ensures that one stream is processed before another stream.  
   
 ```  
  
@@ -841,18 +864,18 @@ basic_ostream<Elem, Traits> *tie(
 basic_ostream<Elem, Traits>* str);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `str`  
- Un flux.  
+ A stream.  
   
-### <a name="return-value"></a>Valeur de retour  
- La première fonction membre retourne le pointeur de lien stocké. La deuxième fonction membre stocke `str` dans le pointeur de lien et retourne sa précédente valeur stockée.  
+### <a name="return-value"></a>Return Value  
+ The first member function returns the stored tie pointer. The second member function stores `str` in the tie pointer and returns its previous stored value.  
   
-### <a name="remarks"></a>Notes  
- `tie` entraîne la synchronisation de deux flux, de sorte que les opérations sur un flux se produisent après la fin des opérations sur l’autre flux.  
+### <a name="remarks"></a>Remarks  
+ `tie` causes two streams to be synchronized, such that, operations on one stream occur after operations on the other stream are complete.  
   
-### <a name="example"></a>Exemple  
-  Dans cet exemple, en liant cin à cout, vous garantissez que la chaîne « Entrer un nombre : » est transmise à la console avant que le nombre soit extrait de cin. De cette façon, vous évitez que la chaîne « Entrer un nombre : » reste dans la mémoire tampon pendant la lecture du nombre et vous êtes sûr que l’utilisateur est invité à répondre à des invites. Par défaut, cin et cout sont liés.  
+### <a name="example"></a>Example  
+  In this example, by tying cin to cout, it is guaranteed that the "Enter a number:" string will go to the console before the number itself is extracted from cin. This eliminates the possibility that the "Enter a number:" string is still sitting in the buffer when the number is read, so that we are certain that the user actually has some prompt to respond to. By default, cin and cout are tied.  
   
 ```  
   
@@ -871,30 +894,30 @@ int main( )
 ```  
   
 ##  <a name="traits_type"></a>  basic_ios::traits_type  
- Synonyme du paramètre de modèle **Traits**.  
+ A synonym for the template parameter **Traits**.  
   
 ```   
 typedef Traits traits_type;  
 ```  
   
 ##  <a name="widen"></a>  basic_ios::widen  
- Trouve le `char_type` équivalent à un `char` donné.  
+ Finds the equivalent `char_type` to a given `char`.  
   
 ```   
 char_type widen(char Char) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Char`  
- Caractère à convertir.  
+ The character to convert.  
   
-### <a name="return-value"></a>Valeur de retour  
- Trouve le `char_type` équivalent à un `char` donné.  
+### <a name="return-value"></a>Return Value  
+ Finds the equivalent `char_type` to a given `char`.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **E**> >( [getloc](../standard-library/ios-base-class.md#getloc)). `widen`( `Char`).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **E**> >( [getloc](../standard-library/ios-base-class.md#getloc)). `widen`( `Char`).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp    
 // basic_ios_widen.cpp  
@@ -916,22 +939,22 @@ int main( )
 ```  
   
 ##  <a name="swap"></a>  basic_ios::swap  
- Échange les valeurs de cet objet `basic_ios` avec celles d'un autre objet `basic_ios`. Toutefois, les pointeurs vers les mémoires tampons de flux ne sont pas échangés.  
+ Exchanges the values in this `basic_ios` object for those of another `basic_ios` object. However, the pointers to the stream buffers are not swapped.  
   
 ```   
 void swap(basic_ios&& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Objet `basic_ios` utilisé pour échanger des valeurs.  
+ The `basic_ios` object that is used to exchange values.  
   
-### <a name="remarks"></a>Notes  
- La fonction de membre protégée échange toutes les valeurs stockées dans `right` avec `*this`, sauf le `stream buffer pointer` stocké.  
+### <a name="remarks"></a>Remarks  
+ The protected member function exchanges all the values stored in `right` with `*this` except the stored `stream buffer pointer`.  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream, programmation](../standard-library/iostream-programming.md)   
- [iostreams, conventions](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

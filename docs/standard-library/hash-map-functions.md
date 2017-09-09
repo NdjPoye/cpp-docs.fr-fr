@@ -1,5 +1,5 @@
 ---
-title: '&lt;hash_map&gt;, fonctions | Microsoft Docs'
+title: '&lt;hash_map&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
 caps.latest.revision: 9
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 394a9ffe15c256a43cdf16ffd164f2e907ab0535
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ec849090b13c7d978d3686eb9ed4d68409ecf4e7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lthashmapgt-functions"></a>&lt;hash_map&gt;, fonctions
+# <a name="lthashmapgt-functions"></a>&lt;hash_map&gt; functions
 |||  
 |-|-|  
 |[swap](#swap)|[swap (hash_map)](#swap_hash_map)|  
@@ -27,9 +27,9 @@ ms.lasthandoff: 04/29/2017
 ##  <a name="swap_hash_map"></a>  swap (hash_map)  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).  
+>  This API is obsolete. The alternative is [unordered_map Class](../standard-library/unordered-map-class.md).  
   
- Échange les éléments de deux hash_maps.  
+ Exchanges the elements of two hash_maps.  
   
 ```
 void swap(
@@ -37,24 +37,24 @@ void swap(
     hash_map <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- hash_map dont les éléments doivent être échangés avec ceux du mappage `left`.  
+ The hash_map whose elements are to be exchanged with those of the map `left`.  
   
  `left`  
- hash_map dont les éléments doivent être échangés avec ceux du mappage `right`.  
+ The hash_map whose elements are to be exchanged with those of the map `right`.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle est un algorithme spécialisé sur la classe de conteneur hash_map pour exécuter la fonction membre `left.`[swap](../standard-library/basic-ios-class.md#swap)*(right*). Il s’agit d’une instance de l’ordonnancement partiel des modèles de fonctions par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle, **template \<class T> void swap(T&, T&)**, dans le fichier d’en-tête d’algorithme fonctionne par assignation et est une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide car elle peut fonctionner avec la représentation interne de la classe conteneur.  
+### <a name="remarks"></a>Remarks  
+ The template function is an algorithm specialized on the container class hash_map to execute the member function `left.`[swap](../standard-library/basic-ios-class.md#swap)*(right*). This is an instance of the partial ordering of function templates by the compiler. When template functions are overloaded in such a way that the match of the template with the function call is not unique, then the compiler will select the most specialized version of the template function. The general version of the template function, **template \<class T> void swap(T&, T&)**, in the algorithm header file works by assignment and is a slow operation. The specialized version in each container is much faster as it can work with the internal representation of the container class.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [The stdext Namespace (L’espace de noms stdext)](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
 ##  <a name="swap"></a>  swap  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_multimap, classe](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Échange les éléments de deux hash_multimaps.  
+ Exchanges the elements of two hash_multimaps.  
   
 ```
 void swap(
@@ -62,19 +62,19 @@ void swap(
     hash_multimap <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- hash_multimap dont les éléments doivent être échangés avec ceux du mappage `left`.  
+ The hash_multimap whose elements are to be exchanged with those of the map `left`.  
   
  `left`  
- hash_multimap dont les éléments doivent être échangés avec ceux du mappage `right`.  
+ The hash_multimap whose elements are to be exchanged with those of the map `right`.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle est un algorithme spécialisé sur la classe de conteneur hash_multimap pour exécuter la fonction membre `left.`[swap](../standard-library/hash-multimap-class.md#swap)*(right*`)`. Il s’agit d’une instance de l’ordonnancement partiel des modèles de fonctions par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle, **template \<class T> void swap(T&, T&)**, dans le fichier d’en-tête d’algorithme fonctionne par assignation et est une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide car elle peut fonctionner avec la représentation interne de la classe conteneur.  
+### <a name="remarks"></a>Remarks  
+ The template function is an algorithm specialized on the container class hash_multimap to execute the member function `left.`[swap](../standard-library/hash-multimap-class.md#swap)*(right*`)`. This is an instance of the partial ordering of function templates by the compiler. When template functions are overloaded in such a way that the match of the template with the function call is not unique, then the compiler will select the most specialized version of the template function. The general version of the template function, **template \<class T> void swap(T&, T&)**, in the algorithm header file works by assignment and is a slow operation. The specialized version in each container is much faster as it can work with the internal representation of the container class.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [The stdext Namespace (L’espace de noms stdext)](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<hash_map>](../standard-library/hash-map.md)
 
 

@@ -1,49 +1,64 @@
 ---
-title: "&lt;deque&gt;, opérateurs | Microsoft Docs"
+title: '&lt;deque&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- deque/std::operator!=
+- deque/std::operator&gt;
+- deque/std::operator&gt;=
+- deque/std::operator&lt;
+- deque/std::operator&lt;=
+- deque/std::operator==
+dev_langs:
+- C++
 ms.assetid: 482d7c92-54c7-493b-99e6-2a73617481a5
 caps.latest.revision: 7
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 9d7f8ff1d198e8608cb5aa96852dc5b263277e02
+helpviewer_keywords:
+- std::operator!= (deque)
+- std::operator&gt; (deque)
+- std::operator&gt;= (deque)
+- std::operator&lt; (deque)
+- std::operator&lt;= (deque)
+- std::operator== (deque)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ab28c65e454f536e40a3a3c78d3d8dfbf4af3a2f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltdequegt-operators"></a>&lt;deque&gt;, opérateurs
+# <a name="ltdequegt-operators"></a>&lt;deque&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- Teste si l'objet deque situé à gauche de l'opérateur n'est pas égal à l'objet deque situé à droite.  
+ Tests if the deque object on the left side of the operator is not equal to the deque object on the right side.  
   
 ```
 bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `left`  
- Objet de type `deque`.  
+ An object of type `deque`.  
   
  `right`  
- Objet de type `deque`.  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si les objets de file d’attente à deux extrémités ne sont pas égaux ; **false** s’ils sont égaux.  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque objects are not equal; **false** if the deque objects are equal.  
   
-### <a name="remarks"></a>Notes  
- La comparaison entre les objets de file d’attente à deux extrémités est basée sur une comparaison par paire de leurs éléments. Deux file d’attente à deux extrémités sont égales si elles ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. Two deque objects are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_ne.cpp  
@@ -70,26 +85,26 @@ The deques are not equal.
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- Teste si l'objet deque situé à gauche de l'opérateur est inférieur à l'objet deque situé à droite.  
+ Tests if the deque object on the left side of the operator is less than the deque object on the right side.  
   
 ```
 bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `left`  
- Objet de type `deque`.  
+ An object of type `deque`.  
   
  `right`  
- Objet de type `deque`.  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si la file d’attente à deux extrémités à gauche de l’opérateur est inférieure et non égale à la file d’attente à deux extrémités à droite de l’opérateur ; sinon, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque on the left side of the operator is less than and not equal to the deque on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Notes  
- La comparaison entre les objets de file d’attente à deux extrémités est basée sur une comparaison par paire de leurs éléments. La relation d'infériorité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. The less-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_lt.cpp  
@@ -120,26 +135,26 @@ Deque c1 is less than deque c2.
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- Teste si l'objet deque situé à gauche de l'opérateur est inférieur ou égal à l'objet deque situé à droite.  
+ Tests if the deque object on the left side of the operator is less than or equal to the deque object on the right side.  
   
 ```
 bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `left`  
- Objet de type `deque`.  
+ An object of type `deque`.  
   
  `right`  
- Objet de type `deque`.  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si la file d’attente à deux extrémités à gauche de l’opérateur est inférieure ou égale à la file d’attente à deux extrémités à droite de l’opérateur ; sinon, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque on the left side of the operator is less than or equal to the deque on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Notes  
- La comparaison entre les objets de file d’attente à deux extrémités est basée sur une comparaison par paire de leurs éléments. La relation d'infériorité ou d'égalité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. The less than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_le.cpp  
@@ -171,26 +186,26 @@ Deque c1 is less than or equal to deque c2.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Teste si l'objet deque situé à gauche de l'opérateur est égal à l'objet deque situé à droite.  
+ Tests if the deque object on the left side of the operator is equal to the deque object on the right side.  
   
 ```
 bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `left`  
- Objet de type `deque`.  
+ An object of type `deque`.  
   
  `right`  
- Objet de type `deque`.  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si la file d’attente à deux extrémités à gauche de l’opérateur est égale à la file d’attente à deux extrémités à droite de l’opérateur ; sinon, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque on the left side of the operator is equal to the deque on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Notes  
- La comparaison entre les objets de file d’attente à deux extrémités est basée sur une comparaison par paire de leurs éléments. Deux file d’attente à deux extrémités sont égales si elles ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. Two deques are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_eq.cpp  
@@ -225,26 +240,26 @@ The deques are not equal.
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- Teste si l'objet deque situé à gauche de l'opérateur est supérieur à l'objet deque situé à droite.  
+ Tests if the deque object on the left side of the operator is greater than the deque object on the right side.  
   
 ```
 bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `left`  
- Objet de type `deque`.  
+ An object of type `deque`.  
   
  `right`  
- Objet de type `deque`.  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si la file d’attente à deux extrémités à gauche de l’opérateur est supérieure à la file d’attente à deux extrémités à droite de l’opérateur ; sinon, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque on the left side of the operator is greater than the deque on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Notes  
- La comparaison entre les objets de file d’attente à deux extrémités est basée sur une comparaison par paire de leurs éléments. La relation de supériorité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. The greater-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_gt.cpp  
@@ -277,26 +292,26 @@ Deque c1 is greater than deque c2.
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- Teste si l'objet deque situé à gauche de l'opérateur est supérieur ou égal à l'objet deque situé à droite.  
+ Tests if the deque object on the left side of the operator is greater than or equal to the deque object on the right side.  
   
 ```
 bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `left`  
- Objet de type `deque`.  
+ An object of type `deque`.  
   
  `right`  
- Objet de type `deque`.  
+ An object of type `deque`.  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si la file d’attente à deux extrémités à gauche de l’opérateur est supérieure ou égale à la file d’attente à deux extrémités à droite de l’opérateur ; sinon, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the deque on the left side of the operator is greater than or equal to the deque on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Notes  
- La comparaison entre les objets de file d’attente à deux extrémités est basée sur une comparaison par paire de leurs éléments. La relation de supériorité ou d'égalité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.  
+### <a name="remarks"></a>Remarks  
+ The comparison between deque objects is based on a pairwise comparison of their elements. The greater than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // deque_op_ge.cpp  
@@ -327,7 +342,7 @@ Deque c1 is greater than or equal to deque c2.
 *\  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<deque>](../standard-library/deque.md)
 
 

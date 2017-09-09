@@ -1,5 +1,5 @@
 ---
-title: sync_per_thread, classe | Microsoft Docs
+title: sync_per_thread Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,8 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext::sync_per_thread
-- sync_per_thread
 - allocators/stdext::sync_per_thread
 - allocators/stdext::sync_per_thread::allocate
 - allocators/stdext::sync_per_thread::deallocate
@@ -18,7 +16,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- sync_per_thread class
+- stdext::sync_per_thread
+- stdext::sync_per_thread [C++], allocate
+- stdext::sync_per_thread [C++], deallocate
+- stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
 caps.latest.revision: 19
 author: corob-msft
@@ -38,98 +39,98 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 71d2dd481c2c14303c71ec461ddcb5c041859531
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8d0f0ca6f449e1b220f553f8f1ba378abf43069a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="syncperthread-class"></a>sync_per_thread, classe
-Décrit un [filtre de synchronisation](../standard-library/allocators-header.md) qui fournit un objet cache distinct pour chaque thread.  
+# <a name="syncperthread-class"></a>sync_per_thread Class
+Describes a [synchronization filter](../standard-library/allocators-header.md) that provides a separate cache object for each thread.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Cache>  
 class sync_per_thread
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Cache`|Type de cache associé au filtre de synchronisation. Il peut s’agir de [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
+|`Cache`|The type of cache associated with the synchronization filter. This can be [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), or [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
   
-## <a name="remarks"></a>Notes  
- Les allocateurs qui utilisent `sync_per_thread` peuvent être considérés comme égaux même si des blocs alloués dans un thread ne peuvent pas être désalloués à partir d’un autre thread. Quand un de ces allocateurs est utilisé, les blocs de mémoire alloués dans un thread ne doivent pas être visibles pour d’autres threads. Dans la pratique, cela signifie qu’un conteneur qui utilise un de ces allocateurs doit uniquement être accessible par un seul thread.  
+## <a name="remarks"></a>Remarks  
+ Allocators that use `sync_per_thread` can compare equal even though blocks allocated in one thread cannot be deallocated from another thread. When using one of these allocators memory blocks allocated in one thread should not be made visible to other threads. In practice this means that a container that uses one of these allocators should only be accessed by a single thread.  
   
-### <a name="member-functions"></a>Fonctions membres  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[allocate](#allocate)|Alloue un bloc de mémoire.|  
-|[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|  
-|[equals](#equals)|Compare l'égalité de deux caches.|  
+|[allocate](#allocate)|Allocates a block of memory.|  
+|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+|[equals](#equals)|Compares two caches for equality.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<allocators>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
   
- **Espace de noms :** stdext  
+ **Namespace:** stdext  
   
 ##  <a name="allocate"></a>  sync_per_thread::allocate  
- Alloue un bloc de mémoire.  
+ Allocates a block of memory.  
   
 ```
 void *allocate(std::size_t count);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`count`|Nombre d’éléments du tableau à allouer.|  
+|`count`|The number of elements in the array to be allocated.|  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne le résultat d’un appel à `cache::allocate(count)` sur l’objet cache appartenant au thread actuel. Si aucun objet cache n’a été alloué pour le thread actuel, elle commence par en allouer un.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the result of a call to `cache::allocate(count)` on the cache object belonging to the current thread. If no cache object has been allocated for the current thread, it first allocates one.  
   
 ##  <a name="deallocate"></a>  sync_per_thread::deallocate  
- Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.  
+ Frees a specified number of objects from storage beginning at a specified position.  
   
 ```
 void deallocate(void* ptr, std::size_t count);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|Pointeur vers le premier objet à désallouer dans le stockage.|  
-|`count`|Nombre d’objets à désallouer dans le stockage.|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`count`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>Notes  
- La fonction membre appelle `deallocate` sur l’objet cache appartenant au thread actuel. Si aucun objet cache n’a été alloué pour le thread actuel, elle commence par en allouer un.  
+### <a name="remarks"></a>Remarks  
+ The member function calls `deallocate` on the cache object belonging to the current thread. If no cache object has been allocated for the current thread, it first allocates one.  
   
 ##  <a name="equals"></a>  sync_per_thread::equals  
- Compare l'égalité de deux caches.  
+ Compares two caches for equality.  
   
 ```
 bool equals(const sync<Cache>& Other) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Cache`|L’objet cache du filtre de synchronisation.|  
-|`Other`|Objet cache dont l’égalité est à comparer.|  
+|`Cache`|The cache object of the synchronization filter.|  
+|`Other`|The cache object to compare for equality.|  
   
-### <a name="return-value"></a>Valeur de retour  
- `false` si aucun objet cache n’a été alloué pour cet objet ou pour `Other` dans le thread actuel. Sinon, elle retourne le résultat de l’application de `operator==` aux deux objets caches.  
+### <a name="return-value"></a>Return Value  
+ `false` if no cache object has been allocated for this object or for `Other` in the current thread. Otherwise it returns the result of applying `operator==` to the two cache objects.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

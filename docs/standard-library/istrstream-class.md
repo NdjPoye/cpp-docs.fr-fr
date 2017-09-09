@@ -1,5 +1,5 @@
 ---
-title: istrstream, classe | Microsoft Docs
+title: istrstream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- istrstream
 - strstream/std::istrstream::rdbuf
 - strstream/std::istrstream::str
 dev_langs:
@@ -35,48 +34,48 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 528634e98da7f57ee915124d38f20277495efcdb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 79a3e8b3d0aca0f711d1d49e8c73da8a11592b69
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istrstream-class"></a>istrstream, classe
-Décrit un objet qui contrôle l’extraction d’éléments et d’objets encodés à partir d’une mémoire tampon de flux de classe [strstreambuf](../standard-library/strstreambuf-class.md).  
+# <a name="istrstream-class"></a>istrstream Class
+Describes an object that controls extraction of elements and encoded objects from a stream buffer of class [strstreambuf](../standard-library/strstreambuf-class.md).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 class istrstream : public istream
 ```  
   
-## <a name="remarks"></a>Notes  
- L'objet stocke un objet de classe `strstreambuf`.  
+## <a name="remarks"></a>Remarks  
+ The object stores an object of class `strstreambuf`.  
   
 > [!NOTE]
->  Cette classe est dépréciée. Utilisez plutôt [istringstream](../standard-library/sstream-typedefs.md#istringstream) ou [wistringstream](../standard-library/sstream-typedefs.md#wistringstream).  
+>  This class is deprecated. Consider using [istringstream](../standard-library/sstream-typedefs.md#istringstream) or [wistringstream](../standard-library/sstream-typedefs.md#wistringstream) instead.  
   
-### <a name="constructors"></a>Constructeurs  
-  
-|||  
-|-|-|  
-|[istrstream](#istrstream)|Construit un objet de type `istrstream`.|  
-  
-### <a name="member-functions"></a>Fonctions membres  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[rdbuf](#rdbuf)|Retourne un pointeur vers l'objet `strstreambuf` associé au flux.|  
-|[str](#str)|Appelle [freeze](../standard-library/strstreambuf-class.md#freeze), puis retourne un pointeur vers le début de la séquence contrôlée.|  
+|[istrstream](#istrstream)|Constructs an object of type `istrstream`.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<strstream>  
+### <a name="member-functions"></a>Member Functions  
   
- **Espace de noms :** std  
+|||  
+|-|-|  
+|[rdbuf](#rdbuf)|Returns a pointer to the stream's associated `strstreambuf` object.|  
+|[str](#str)|Calls [freeze](../standard-library/strstreambuf-class.md#freeze), and then returns a pointer to the beginning of the controlled sequence.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<strstream>  
+  
+ **Namespace:** std  
   
 ##  <a name="istrstream"></a>  istrstream::istrstream  
- Construit un objet de type `istrstream`.  
+ Constructs an object of type `istrstream`.  
   
 ```
 explicit istrstream(
@@ -94,53 +93,53 @@ istrstream(
     int count);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `count`  
- Longueur de la mémoire tampon ( `ptr`).  
+ The length of the buffer ( `ptr`).  
   
  `ptr`  
- Contenu avec lequel la mémoire tampon est initialisée.  
+ The contents with which the buffer is initialized.  
   
-### <a name="remarks"></a>Notes  
- Tous les constructeurs initialisent la classe de base en appelant [istream](../standard-library/istream-typedefs.md#istream)( **sb**), où **sb** est l’objet stocké de classe [strstreambuf](../standard-library/strstreambuf-class.md). Les deux premiers constructeurs initialisent également **sb** en appelant `strstreambuf`( ( **const**`char` \*) `ptr`, 0 ). Les deux autres constructeurs appellent plutôt `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).  
+### <a name="remarks"></a>Remarks  
+ All the constructors initialize the base class by calling [istream](../standard-library/istream-typedefs.md#istream)( **sb**), where **sb** is the stored object of class [strstreambuf](../standard-library/strstreambuf-class.md). The first two constructors also initialize **sb** by calling `strstreambuf`( ( **const**`char` \*) `ptr`, 0 ). The remaining two constructors instead call `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).  
   
 ##  <a name="rdbuf"></a>  istrstream::rdbuf  
- Retourne un pointeur vers l’objet strstreambuf associé au flux.  
+ Returns a pointer to the stream's associated strstreambuf object.  
   
 ```
 strstreambuf *rdbuf() const
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers l’objet strstreambuf associé au flux.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the stream's associated strstreambuf object.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne l’adresse de la mémoire tampon de flux stockée de type pointeur vers [strstreambuf](../standard-library/strstreambuf-class.md).  
+### <a name="remarks"></a>Remarks  
+ The member function returns the address of the stored stream buffer, of type pointer to [strstreambuf](../standard-library/strstreambuf-class.md).  
   
-### <a name="example"></a>Exemple  
-  Pour obtenir un exemple qui utilise `rdbuf`, consultez [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount).  
+### <a name="example"></a>Example  
+  See [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) for a sample that uses `rdbuf`.  
   
 ##  <a name="str"></a>  istrstream::str  
- Appelle [freeze](../standard-library/strstreambuf-class.md#freeze), puis retourne un pointeur vers le début de la séquence contrôlée.  
+ Calls [freeze](../standard-library/strstreambuf-class.md#freeze), and then returns a pointer to the beginning of the controlled sequence.  
   
 ```
 char *str();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Pointeur vers le début de la séquence contrôlée.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the beginning of the controlled sequence.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).  
   
-### <a name="example"></a>Exemple  
-  Pour obtenir un exemple qui utilise **str**, consultez [strstream::str](../standard-library/strstreambuf-class.md#str).  
+### <a name="example"></a>Example  
+  See [strstream::str](../standard-library/strstreambuf-class.md#str) for a sample that uses **str**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [istream](../standard-library/istream-typedefs.md#istream)   
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream, programmation](../standard-library/iostream-programming.md)   
- [iostreams, conventions](../standard-library/iostreams-conventions.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: is_move_constructible, classe | Microsoft Docs
+title: is_move_constructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_move_constructible
 - type_traits/std::is_move_constructible
 dev_langs:
 - C++
@@ -34,36 +33,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 91f451ef7ec496791d6a1a8d28965dbb5b684584
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 03d3e28e97ffc1eafffbec9a85c29b2e7efc0f14
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ismoveconstructible-class"></a>is_move_constructible, classe
-Teste si le type a un constructeur de déplacement.  
+# <a name="ismoveconstructible-class"></a>is_move_constructible Class
+Tests whether the type has a move constructor.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>  
 struct is_move_constructible;
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  T  
- Type à évaluer  
+ The type to be evaluated  
   
-## <a name="remarks"></a>Notes  
- Prédicat de type qui a la valeur true si le type `T` est constructible par une opération de déplacement. Ce prédicat équivaut à `is_constructible<T, T&&>`.  
+## <a name="remarks"></a>Remarks  
+ A type predicate that evaluates to true if the type `T` can be constructed by using a move operation. This predicate is equivalent to `is_constructible<T, T&&>`.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

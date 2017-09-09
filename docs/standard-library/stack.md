@@ -1,5 +1,5 @@
 ---
-title: '&lt;pile&gt; | Documents Microsoft'
+title: '&lt;stack&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<stack>
-- std::<stack>
-- <stack>
+- std::<stack>", "<stack>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,43 +34,43 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a769d1f945c6a79c0941a505e3291ae0f5529bbd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4f63ff66c50d830feb3fe34b2102bd9ed47e6eb2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
-Définit la pile de classe de modèle et les deux modèles de prise en charge.  
+Defines the template class stack and two supporting templates.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <stack>  
   
 ```  
   
-### <a name="operators"></a>Opérateurs  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/stack-operators.md#op_neq)|Teste si l'objet de pile situé à gauche de l'opérateur n'est pas égal à l'objet de pile situé à droite.|  
-|[operator<](../standard-library/stack-operators.md#op_lt)|Teste si l'objet de pile situé à gauche de l'opérateur est inférieur à l'objet de pile situé à droite.|  
-|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Teste si l'objet de pile situé à gauche de l'opérateur est inférieur ou égal à l'objet de pile situé à droite.|  
-|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Teste si l'objet de pile situé à gauche de l'opérateur est égal à l'objet de pile situé à droite.|  
-|[operator>](../standard-library/stack-operators.md#op_gt)|Teste si l'objet de pile situé à gauche de l'opérateur est supérieur à l'objet de pile situé à droite.|  
-|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Teste si l'objet de pile situé à gauche de l'opérateur est supérieur ou égal à l'objet de pile situé à droite.|  
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Tests if the stack object on the left side of the operator is not equal to the stack object on the right side.|  
+|[operator<](../standard-library/stack-operators.md#op_lt)|Tests if the stack object on the left side of the operator is less than the stack object on the right side.|  
+|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Tests if the stack object on the left side of the operator is less than or equal to the stack object on the right side.|  
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Tests if the stack object on the left side of the operator is equal to the stack object on the right side.|  
+|[operator>](../standard-library/stack-operators.md#op_gt)|Tests if the stack object on the left side of the operator is greater than the stack object on the right side.|  
+|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Tests if the stack object on the left side of the operator is greater than or equal to the stack object on the right side.|  
   
 ### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[stack, classe](../standard-library/stack-class.md)|Classe d'adaptateur de conteneur modèle qui fournit une restriction des fonctionnalités limitant l'accès à l'élément ajouté le plus récemment pour un type de conteneur sous-jacent.|  
+|[stack Class](../standard-library/stack-class.md)|A template container adaptor class that provides a restriction of functionality limiting access to the element most recently added to some underlying container type.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   
- [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

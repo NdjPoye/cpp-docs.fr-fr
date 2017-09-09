@@ -1,5 +1,5 @@
 ---
-title: remove_const, classe | Microsoft Docs
+title: remove_const Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- remove_const
 - type_traits/std::remove_const
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 39a88c886636c7c79c50771b5d4a91b26be954b4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5cb08215b0b99f7fa9f462749d79a8d1831cebad
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="removeconst-class"></a>remove_const, classe
-Crée un type non const à partir d'un type.  
+# <a name="removeconst-class"></a>remove_const Class
+Makes a non const type from type.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -57,14 +56,14 @@ template <class T>
 using remove_const_t = typename remove_const<T>::type;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Type à modifier.  
+ The type to modify.  
   
-## <a name="remarks"></a>Notes  
- Une instance de `remove_const<T>` contient un type modifié qui est `T1` quand `T` est de la forme `const T1`, ou `T` dans le cas contraire.  
+## <a name="remarks"></a>Remarks  
+ An instance of `remove_const<T>` holds a modified-type that is `T1` when `T` is of the form `const T1`, otherwise `T`.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -86,13 +85,13 @@ int main()
 remove_const_t<const int> == int  
 ```  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [add_const, classe](../standard-library/add-const-class.md)   
- [remove_cv, classe](../standard-library/remove-cv-class.md)
+ [add_const Class](../standard-library/add-const-class.md)   
+ [remove_cv Class](../standard-library/remove-cv-class.md)
 

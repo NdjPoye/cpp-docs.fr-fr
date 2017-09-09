@@ -1,5 +1,5 @@
 ---
-title: is_trivially_copy_constructible, classe | Microsoft Docs
+title: is_trivially_copy_constructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_trivially_copy_constructible
 - type_traits/std::is_trivially_copy_constructible
 dev_langs:
 - C++
@@ -34,38 +33,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: a9f40518942be5632f13dee3865b603f04cbca84
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 60536c7d9503cde1dcad7b2716a3e316b2ec2421
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible, classe
-Teste si le type a un constructeur de copie trivial.  
+# <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible Class
+Tests if the type has a trivial copy constructor.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>
 struct is_trivially_copy_constructible;
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Type à interroger.  
+ The type to query.  
   
-## <a name="remarks"></a>Notes  
- Une instance du prédicat de type a la valeur true si le type `T` est une classe qui a un constructeur de copie trivial. Sinon, sa valeur est false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `T` is a class that has a trivial copy constructor, otherwise it holds false.  
   
- Un constructeur de copie d’une classe `T` est trivial s’il est déclaré implicitement, si la classe `T` n’a aucune ou aucune base virtuelle, si toutes les bases directes de la classe `T` ont des constructeurs de copie triviaux, si les classes de toutes les données membres non statiques de type classe ont des constructeurs de copie triviaux, et si les classes de toutes les données membres non statiques de type tableau de classe ont des constructeurs de copie triviaux.  
+ A copy constructor for a class `T` is trivial if it is implicitly declared, the class `T` has no virtual functions or virtual bases, all the direct bases of class `T` have trivial copy constructors, the classes of all the non-static data members of class type have trivial copy constructors, and the classes of all the non-static data members of type array of class have trivial copy constructors.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

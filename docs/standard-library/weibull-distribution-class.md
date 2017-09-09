@@ -1,5 +1,5 @@
 ---
-title: weibull_distribution, classe | Microsoft Docs
+title: weibull_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- weibull_distribution
 - random/std::weibull_distribution
 - random/std::weibull_distribution::reset
 - random/std::weibull_distribution::a
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- weibull_distribution class
+- std::weibull_distribution [C++]
+- std::weibull_distribution [C++], reset
+- std::weibull_distribution [C++], a
+- std::weibull_distribution [C++], b
+- std::weibull_distribution [C++], param
+- std::weibull_distribution [C++], min
+- std::weibull_distribution [C++], max
+- std::weibull_distribution [C++], param_type
+- std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
 caps.latest.revision: 15
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a16199c03f0865d3c425b843ccbcd5cc5690c7f0
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c0938a5e91a742fdead0f62fc9f0e380331166b9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="weibulldistribution-class"></a>weibull_distribution, classe
-Génère une distribution de Weibull.  
+# <a name="weibulldistribution-class"></a>weibull_distribution Class
+Generates a Weibull distribution.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
 ```  
 class weibull_distribution  
    {  
@@ -86,33 +93,33 @@ class weibull_distribution
    result_type max() const;
    };  
 ```   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
 *RealType*  
-Le type des résultats à virgule flottante est `double` par défaut. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Notes  
-La classe de modèle décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou du type `double` si aucun type n’est fourni, distribuées selon la loi de distribution de Weibull. Le tableau suivant contient des liens vers des articles sur différents membres.  
+## <a name="remarks"></a>Remarks  
+The template class describes a distribution that produces values of a user-specified floating point type, or type `double` if none is provided, distributed according to the Weibull Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[weibull_distribution](#weibull_distribution)|`weibull_distribution::a`|`weibull_distribution::param`|  
 |`weibull_distribution::operator()`|`weibull_distribution::b`|[param_type](#param_type)|  
   
-Les fonctions de propriété `a()` et `b()` retournent leurs valeurs respectives pour les paramètres de distribution stockés *a* et *b*.  
+The property functions `a()` and `b()` return their respective values for stored distribution parameters *a* and *b*.  
   
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-La fonction membre `reset()` ignore toutes les valeurs mises en cache. Ainsi, le résultat de l’appel suivant à `operator()` ne dépend d’aucune valeur obtenue à partir du moteur avant l’appel.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-Les fonctions membres `operator()` retournent la valeur générée suivante d’après le moteur URNG, à partir du package de paramètres actuel ou spécifié.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-Pour plus d’informations sur la distribution de Weibull, consultez l’article de Wolfram MathWorld [Distribution de Weibull](http://go.microsoft.com/fwlink/LinkId=401115).  
+For detailed information about the Weibull distribution, see the Wolfram MathWorld article [Weibull Distribution](http://go.microsoft.com/fwlink/LinkId=401115).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -172,8 +179,8 @@ int main()
   
 ```  
   
-## <a name="output"></a>Sortie  
- Première exécution :  
+## <a name="output"></a>Output  
+ First run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -198,7 +205,7 @@ Distribution for 10 samples:
     10: 2.1201210996  
 ```  
   
- Deuxième exécution :  
+ Second run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -223,10 +230,10 @@ Distribution for 10 samples:
     10: 24.7220241239  
 ```  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
 ##  <a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution  
   
@@ -235,25 +242,25 @@ explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
 explicit weibull_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
 *a*  
-Paramètre de distribution `a`.  
+The `a` distribution parameter.  
   
 *b*  
-Paramètre de distribution `b`.  
+The `b` distribution parameter.  
   
 *parm*  
-Structure `param_type` utilisée pour construire la distribution.  
+The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>Notes  
- **Condition préalable :** `0.0 < a` et `0.0 < b`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < a` and `0.0 < b`  
   
- Le premier constructeur construit un objet dont la valeur `a` stockée contient la valeur *a* et dont la valeur `b` stockée contient la valeur *b*.  
+ The first constructor constructs an object whose stored `a` value holds the value *a* and whose stored `b` value holds the value *b*.  
   
- Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.  
+ The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  weibull_distribution::param_type  
- Stocke les paramètres de la distribution.  
+ Stores the parameters of the distribution.  
 ```  
 struct param_type {  
    typedef weibull_distribution<result_type> distribution_type;  
@@ -265,22 +272,22 @@ struct param_type {
    bool operator!=(const param_type& right) const;
    };  
 ```
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
 *a*  
-Paramètre de distribution `a`.  
+The `a` distribution parameter.  
   
 *b*  
-Paramètre de distribution `b`.  
+The `b` distribution parameter.  
   
 *right*  
-Objet `param_type` à comparer à this.  
+The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>Notes  
-**Condition préalable :** `0.0 < a` et `0.0 < b`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < a` and `0.0 < b`  
   
-Cette structure peut être passée au constructeur de classe de la distribution au moment de l'instanciation, à la fonction membre `param()` pour définir les paramètres stockés d'une distribution existante et à `operator()` pour une utilisation à la place des paramètres stockés.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

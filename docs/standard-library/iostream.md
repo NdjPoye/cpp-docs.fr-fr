@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<iostream>
-- std::<iostream>
-- <iostream>
+- std::<iostream>", "<iostream>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,63 +33,63 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 55f88be1849809e7e569160aa3848d59120c7082
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 63b4e34b8fb6d503dd53fc4f2f5cc64f56d16b28
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
-Déclare des objets qui contrôlent la lecture et l'écriture des flux standard. Il s'agit souvent du seul en-tête que vous devez inclure pour effectuer l'entrée et la sortie à partir d'un programme C++.  
+Declares objects that control reading from and writing to the standard streams. This is often the only header you need to include to perform input and output from a C++ program.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <iostream>  
   
 ```  
   
-## <a name="remarks"></a>Notes  
- Les objets se répartissent en deux groupes :  
+## <a name="remarks"></a>Remarks  
+ The objects fall into two groups:  
   
-- [cin](#cin), [cout](#cout), [cerr](#cerr) et [clog](#clog) sont orientés octets et effectuent des transferts conventionnels de type « un octet à la fois ».  
+- [cin](#cin), [cout](#cout), [cerr](#cerr), and [clog](#clog) are byte oriented, performing conventional byte-at-a-time transfers.  
   
-- [wcin](#wcin), [wcout](#wcout), [wcerr](#wcerr) et [wclog](#wclog) sont orientés largeur et traduisent vers et à partir des caractères larges que le programme manipule en interne.  
+- [wcin](#wcin), [wcout](#wcout), [wcerr](#wcerr), and [wclog](#wclog) are wide oriented, translating to and from the wide characters that the program manipulates internally.  
   
- Une fois que vous avez effectué certaines opérations sur un flux, telles que l'entrée standard, vous ne pouvez plus effectuer d'opérations d'une orientation différente sur le même flux. Ainsi, un programme ne peut pas opérer indifféremment à la fois sur [cin](#cin) et sur [wcin](#wcin), par exemple.  
+ Once you perform certain operations on a stream, such as the standard input, you cannot perform operations of a different orientation on the same stream. Therefore, a program cannot operate interchangeably on both [cin](#cin) and [wcin](#wcin), for example.  
   
- Tous les objets déclarés dans cet en-tête partagent une propriété particulière : vous pouvez partir du principe qu’ils sont construits avant tout objet statique que vous définissez, dans une unité de traduction qui inclut \<iostream>. De même, vous pouvez partir du principe que ces objets ne sont pas détruits avant les destructeurs pour tout objet statique de ce genre que vous définissez. (Les flux de sortie, cependant, sont vidés durant l'arrêt du programme.) Par conséquent, vous pouvez sans risque lire ou écrire dans les flux standard avant le démarrage et après l'arrêt du programme.  
+ All the objects declared in this header share a peculiar property — you can assume they are constructed before any static objects you define, in a translation unit that includes \<iostream>. Equally, you can assume that these objects are not destroyed before the destructors for any such static objects you define. (The output streams are, however, flushed during program termination.) Therefore, you can safely read from or write to the standard streams before program startup and after program termination.  
   
- Cette garantie n'est cependant pas universelle. Un constructeur statique peut appeler une fonction dans une autre unité de traduction. La fonction appelée ne peut pas partir du principe que les objets déclarés dans cet en-tête ont été construits, étant donné l'ordre incertain dans lequel les unités de traduction participent à la construction statique. Pour utiliser ces objets dans ce contexte, vous devez d’abord construire un objet de classe [ios_base::Init](../standard-library/ios-base-class.md#init).  
+ This guarantee is not universal, however. A static constructor may call a function in another translation unit. The called function cannot assume that the objects declared in this header have been constructed, given the uncertain order in which translation units participate in static construction. To use these objects in such a context, you must first construct an object of class [ios_base::Init](../standard-library/ios-base-class.md#init).  
   
-### <a name="global-stream-objects"></a>Objets de flux global  
+### <a name="global-stream-objects"></a>Global Stream Objects  
   
 |||  
 |-|-|  
-|[cerr](#cerr)|Spécifie le flux global `cerr`.|  
-|[cin](#cin)|Spécifie le flux global `cin`.|  
-|[clog](#clog)|Spécifie le flux global `clog`.|  
-|[cout](#cout)|Spécifie le flux global `cout`.|  
-|[wcerr](#wcerr)|Spécifie le flux global `wcerr`.|  
-|[wcin](#wcin)|Spécifie le flux global `wcin`.|  
-|[wclog](#wclog)|Spécifie le flux global `wclog`.|  
-|[wcout](#wcout)|Spécifie le flux global `wcout`.|  
+|[cerr](#cerr)|Specifies the `cerr` global stream.|  
+|[cin](#cin)|Specifies the `cin` global stream.|  
+|[clog](#clog)|Specifies the `clog` global stream.|  
+|[cout](#cout)|Specifies the `cout` global stream.|  
+|[wcerr](#wcerr)|Specifies the `wcerr` global stream.|  
+|[wcin](#wcin)|Specifies the `wcin` global stream.|  
+|[wclog](#wclog)|Specifies the `wclog` global stream.|  
+|[wcout](#wcout)|Specifies the `wcout` global stream.|  
   
 ###  <a name="cerr"></a>  cerr  
- L’objet `cerr` contrôle la sortie vers une mémoire tampon de flux associée à l’objet `stderr`, déclaré dans \<cstdio>.  
+ The object `cerr` controls output to a stream buffer associated with the object `stderr`, declared in \<cstdio>.  
   
 ```  
 extern ostream cerr;  
 ```  
   
-#### <a name="return-value"></a>Valeur de retour  
- Objet [ostream](../standard-library/ostream-typedefs.md#ostream).  
+#### <a name="return-value"></a>Return Value  
+ An [ostream](../standard-library/ostream-typedefs.md#ostream) object.  
   
-#### <a name="remarks"></a>Notes  
- L’objet contrôle les insertions non mises en mémoire tampon dans la sortie d’erreur standard sous forme de flux d’octets. Une fois l’objet construit, l’expression `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) est différente de zéro, et `cerr.tie() == &cout`.  
+#### <a name="remarks"></a>Remarks  
+ The object controls unbuffered insertions to the standard error output as a byte stream. Once the object is constructed, the expression `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) is nonzero, and `cerr.tie() == &cout`.  
   
-#### <a name="example"></a>Exemple  
+#### <a name="example"></a>Example  
   
 ```cpp  
 // iostream_cerr.cpp  
@@ -122,20 +120,20 @@ int main( )
 ```  
   
 ###  <a name="cin"></a>  cin  
- Spécifie le flux global `cin`.  
+ Specifies the `cin` global stream.  
   
 ```  
 extern istream cin;  
 ```  
   
-#### <a name="return-value"></a>Valeur de retour  
- Objet [istream](../standard-library/istream-typedefs.md#istream).  
+#### <a name="return-value"></a>Return Value  
+ An [istream](../standard-library/istream-typedefs.md#istream) object.  
   
-#### <a name="remarks"></a>Notes  
- L’objet contrôle les extractions à partir de l’entrée standard en tant que flux d’octets. Une fois l’objet construit, l’appel `cin.`[tie](../standard-library/basic-ios-class.md#tie) retourne `&`[cout](#cout).  
+#### <a name="remarks"></a>Remarks  
+ The object controls extractions from the standard input as a byte stream. Once the object is constructed, the call `cin.`[tie](../standard-library/basic-ios-class.md#tie) returns `&`[cout](#cout).  
   
-#### <a name="example"></a>Exemple  
-  Dans cet exemple, `cin` définit le bit d’échec sur le flux quand il rencontre des caractères non numériques. Le programme efface le bit d’échec et supprime le caractère non valide du flux pour continuer.  
+#### <a name="example"></a>Example  
+  In this example, `cin` sets the fail bit on the stream when it encounters non-numeric characters. The program clears the fail bit and strips the invalid character from the stream to proceed.  
   
 ```  
 // iostream_cin.cpp  
@@ -171,102 +169,102 @@ int main()
 ```  
   
 ###  <a name="clog"></a>  clog  
- Spécifie le flux global `clog`.  
+ Specifies the `clog` global stream.  
   
 ```  
 extern ostream clog;  
 ```  
   
-#### <a name="return-value"></a>Valeur de retour  
- Objet [ostream](../standard-library/ostream-typedefs.md#ostream).  
+#### <a name="return-value"></a>Return Value  
+ An [ostream](../standard-library/ostream-typedefs.md#ostream) object.  
   
-#### <a name="remarks"></a>Notes  
- L’objet contrôle les insertions mises en mémoire tampon dans la sortie d’erreur standard sous forme de flux d’octets.  
+#### <a name="remarks"></a>Remarks  
+ The object controls buffered insertions to the standard error output as a byte stream.  
   
-#### <a name="example"></a>Exemple  
-  Pour obtenir un exemple d’utilisation de `clog`, consultez [cerr](#cerr).  
+#### <a name="example"></a>Example  
+  See [cerr](#cerr) for an example of using `clog`.  
   
 ###  <a name="cout"></a>  cout  
- Spécifie le flux global `cout`.  
+ Specifies the `cout` global stream.  
   
 ```  
 extern ostream cout;  
 ```  
   
-#### <a name="return-value"></a>Valeur de retour  
- Objet [ostream](../standard-library/ostream-typedefs.md#ostream).  
+#### <a name="return-value"></a>Return Value  
+ An [ostream](../standard-library/ostream-typedefs.md#ostream) object.  
   
-#### <a name="remarks"></a>Notes  
- L’objet contrôle les insertions dans la sortie standard sous forme de flux d’octets.  
+#### <a name="remarks"></a>Remarks  
+ The object controls insertions to the standard output as a byte stream.  
   
-#### <a name="example"></a>Exemple  
-  Pour obtenir un exemple d’utilisation de `cout`, consultez [cerr](#cerr).  
+#### <a name="example"></a>Example  
+  See [cerr](#cerr) for an example of using `cout`.  
   
 ###  <a name="wcerr"></a>  wcerr  
- Spécifie le flux global `wcerr`.  
+ Specifies the `wcerr` global stream.  
   
 ```  
 extern wostream wcerr;  
 ```  
   
-#### <a name="return-value"></a>Valeur de retour  
- Objet [wostream](../standard-library/ostream-typedefs.md#wostream).  
+#### <a name="return-value"></a>Return Value  
+ A [wostream](../standard-library/ostream-typedefs.md#wostream) object.  
   
-#### <a name="remarks"></a>Notes  
- L’objet contrôle les insertions non mises en mémoire tampon dans la sortie d’erreur standard sous forme de flux large. Une fois l’objet construit, l’expression `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) est différente de zéro.  
+#### <a name="remarks"></a>Remarks  
+ The object controls unbuffered insertions to the standard error output as a wide stream. Once the object is constructed, the expression `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) is nonzero.  
   
-#### <a name="example"></a>Exemple  
-  Pour obtenir un exemple d’utilisation de `wcerr`, consultez [cerr](#cerr).  
+#### <a name="example"></a>Example  
+  See [cerr](#cerr) for an example of using `wcerr`.  
   
 ###  <a name="wcin"></a>  wcin  
- Spécifie le flux global `wcin`.  
+ Specifies the `wcin` global stream.  
   
 ```  
 extern wistream wcin;  
 ```  
   
-#### <a name="return-value"></a>Valeur de retour  
- Objet [wistream](../standard-library/istream-typedefs.md#wistream).  
+#### <a name="return-value"></a>Return Value  
+ A [wistream](../standard-library/istream-typedefs.md#wistream) object.  
   
-#### <a name="remarks"></a>Notes  
- L’objet contrôle les extractions à partir de l’entrée standard en tant que flux large. Une fois l’objet construit, l’appel `wcin.`[tie](../standard-library/basic-ios-class.md#tie) retourne `&`[wcout](#wcout).  
+#### <a name="remarks"></a>Remarks  
+ The object controls extractions from the standard input as a wide stream. Once the object is constructed, the call `wcin.`[tie](../standard-library/basic-ios-class.md#tie) returns `&`[wcout](#wcout).  
   
-#### <a name="example"></a>Exemple  
-  Pour obtenir un exemple d’utilisation de `wcin`, consultez [cerr](#cerr).  
+#### <a name="example"></a>Example  
+  See [cerr](#cerr) for an example of using `wcin`.  
   
 ###  <a name="wclog"></a>  wclog  
- Spécifie le flux global `wclog`.  
+ Specifies the `wclog` global stream.  
   
 ```  
 extern wostream wclog;  
 ```  
   
-#### <a name="return-value"></a>Valeur de retour  
- Objet [wostream](../standard-library/ostream-typedefs.md#wostream).  
+#### <a name="return-value"></a>Return Value  
+ A [wostream](../standard-library/ostream-typedefs.md#wostream) object.  
   
-#### <a name="remarks"></a>Notes  
- L’objet contrôle les insertions mises en mémoire tampon dans la sortie d’erreur standard sous forme de flux large.  
+#### <a name="remarks"></a>Remarks  
+ The object controls buffered insertions to the standard error output as a wide stream.  
   
-#### <a name="example"></a>Exemple  
-  Pour obtenir un exemple d’utilisation de `wclog`, consultez [cerr](#cerr).  
+#### <a name="example"></a>Example  
+  See [cerr](#cerr) for an example of using `wclog`.  
   
 ###  <a name="wcout"></a>  wcout  
- Spécifie le flux global `wcout`.  
+ Specifies the `wcout` global stream.  
   
 ```  
 extern wostream wcout;  
 ```  
   
-#### <a name="return-value"></a>Valeur de retour  
- Objet [wostream](../standard-library/ostream-typedefs.md#wostream).  
+#### <a name="return-value"></a>Return Value  
+ A [wostream](../standard-library/ostream-typedefs.md#wostream) object.  
   
-#### <a name="remarks"></a>Notes  
- L'objet contrôle les insertions dans la sortie standard sous forme de flux large.  
+#### <a name="remarks"></a>Remarks  
+ The object controls insertions to the standard output as a wide stream.  
   
-#### <a name="example"></a>Exemple  
-  Pour obtenir un exemple d’utilisation de `wcout`, consultez [cerr](#cerr).  
+#### <a name="example"></a>Example  
+  See [cerr](#cerr) for an example of using `wcout`.  
   
- Les instances de `CString` dans une instruction `wcout` doivent être converties en `const wchar_t*`, comme illustré dans l'exemple suivant.  
+ `CString` instances in a `wcout` statement must be cast to `const wchar_t*`, as shown in the following example.  
   
 ```  
  
@@ -275,12 +273,12 @@ extern wostream wcout;
     wcout <<(const wchar_t*) cs <<endl;  
 ```  
   
- Pour plus d’informations, consultez [Opérations CString de base](../atl-mfc-shared/basic-cstring-operations.md).  
+ For more information, see [Basic CString Operations](../atl-mfc-shared/basic-cstring-operations.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream, programmation](../standard-library/iostream-programming.md)   
- [iostreams, conventions](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

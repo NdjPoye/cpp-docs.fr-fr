@@ -1,20 +1,19 @@
 ---
-title: basic_istream, classe | Microsoft Docs
+title: basic_istream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- basic_istream
 - istream/std::basic_istream
 - istream/std::basic_istream::gcount
 - istream/std::basic_istream::get
 - istream/std::basic_istream::getline
-- istream/std::basic_istream::ignore
+- istream/std::basic_istream::OVERWRITE
 - istream/std::basic_istream::peek
 - istream/std::basic_istream::putback
 - istream/std::basic_istream::read
@@ -28,7 +27,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_istream class
+- std::basic_istream [C++]
+- std::basic_istream [C++], gcount
+- std::basic_istream [C++], get
+- std::basic_istream [C++], getline
+- std::basic_istream [C++], OVERWRITE
+- std::basic_istream [C++], peek
+- std::basic_istream [C++], putback
+- std::basic_istream [C++], read
+- std::basic_istream [C++], readsome
+- std::basic_istream [C++], seekg
+- std::basic_istream [C++], sentry
+- std::basic_istream [C++], swap
+- std::basic_istream [C++], sync
+- std::basic_istream [C++], tellg
+- std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
 caps.latest.revision: 21
 author: corob-msft
@@ -48,25 +61,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: e8609e71bb233f3daeaaf9b5620f4bd7a59408f6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b564cbf771fdce6e292fbbc40458825d91a8fdce
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicistream-class"></a>basic_istream, classe
-Décrit un objet qui contrôle l’extraction d’éléments et d’objets codés à partir d’une mémoire tampon de flux avec des éléments de type `Elem`, également appelé [char_type](../standard-library/basic-ios-class.md#char_type), dont les caractéristiques sont déterminées par la classe *Tr*, également appelée [traits_type](../standard-library/basic-ios-class.md#traits_type).  
+# <a name="basicistream-class"></a>basic_istream Class
+Describes an object that controls extraction of elements and encoded objects from a stream buffer with elements of type `Elem`, also known as [char_type](../standard-library/basic-ios-class.md#char_type), whose character traits are determined by the class *Tr*, also known as [traits_type](../standard-library/basic-ios-class.md#traits_type).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Elem, class Tr = char_traits<Elem>>  
 class basic_istream : virtual public basic_ios<Elem, Tr>  
 ```  
   
-## <a name="remarks"></a>Notes  
- La plupart des fonctions membres qui surchargent [operator>>](#op_gt_gt) sont des fonctions d’entrée mises en forme. Elles suivent le modèle :  
+## <a name="remarks"></a>Remarks  
+ Most of the member functions that overload [operator>>](#op_gt_gt) are formatted input functions. They follow the pattern:  
   
 ```cpp  
 iostate state = goodbit;
@@ -99,7 +112,7 @@ setstate(state);
 return (*this);
 ```  
   
- De nombreuses autres fonctions membres sont des fonctions d'entrée non mise en forme. Elles suivent le modèle :  
+ Many other member functions are unformatted input functions. They follow the pattern:  
   
 ```cpp  
 iostate state = goodbit;
@@ -131,56 +144,56 @@ if (ok)
 setstate(state);
 ```  
   
- Les deux groupes de fonctions appellent [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) s’ils rencontrent la fin du fichier lors de l’extraction d’éléments.  
+ Both groups of functions call [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) if they encounter end of file while extracting elements.  
   
- Un objet de la classe `basic_istream`< `Elem`, *Tr*> stocke :  
+ An object of class `basic_istream`< `Elem`, *Tr*> stores:  
   
--   Un objet de base public virtuel de la classe [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, *Tr*> `.`  
+-   A virtual public base object of class [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, *Tr*> `.`  
   
--   Nombre d’extractions pour la dernière opération d’entrée non mise en forme (appelé **count** dans le code précédent).  
+-   An extraction count for the last unformatted input operation (called **count** in the previous code).  
   
-## <a name="example"></a>Exemple  
- Consultez l’exemple de [basic_ifstream, classe](../standard-library/basic-ifstream-class.md) pour en savoir plus sur les flux d’entrée.  
+## <a name="example"></a>Example  
+ See the example for [basic_ifstream Class](../standard-library/basic-ifstream-class.md) to learn more about input streams.  
   
-### <a name="constructors"></a>Constructeurs  
-  
-|||  
-|-|-|  
-|[basic_istream](#basic_istream)|Construit un objet de type `basic_istream`.|  
-  
-### <a name="member-functions"></a>Fonctions membres  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[gcount](#gcount)|Retourne le nombre de caractères lus au cours de la dernière entrée non mise en forme.|  
-|[get](#get)|Lit un ou plusieurs caractères dans le flux d'entrée.|  
-|[getline](#getline)|Lit une ligne dans le flux d'entrée.|  
-|[ignore](#ignore)|Ignore un certain nombre d'éléments à partir de la position de lecture actuelle.|  
-|[peek](#peek)|Retourne le caractère suivant à lire.|  
-|[putback](#putback)|Place un caractère spécifié dans le flux.|  
-|[read](#read)|Lit un nombre spécifié de caractères dans le flux et les stocke dans un tableau.|  
-|[readsome](#readsome)|Lire seulement dans la mémoire tampon.|  
-|[seekg](#seekg)|Déplace la position de lecture dans un flux.|  
-|[sentry](#sentry)|La classe imbriquée décrit un objet dont la déclaration structure les fonctions d'entrée mise en forme et les fonctions d'entrée non mise en forme.|  
-|[swap](#swap)|Échange cet objet `basic_istream` pour le paramètre d'objet `basic_istream` fourni.|  
-|[sync](#sync)|Synchronise le périphérique d’entrée associé au flux avec la mémoire tampon du flux.|  
-|[tellg](#tellg)|Indique la position de lecture actuelle dans le flux.|  
-|[unget](#unget)|Replace le dernier caractère lu dans le flux.|  
+|[basic_istream](#basic_istream)|Constructs an object of type `basic_istream`.|  
   
-### <a name="operators"></a>Opérateurs  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator>>](#op_gt_gt)|Appelle une fonction sur le flux d'entrée ou lit les données mises en forme dans le flux d'entrée.|  
-|[operator=](#op_eq)|Affecte le `basic_istream` du côté droit de l'opérateur à cet objet. Il s'agit d'une assignation de déplacement qui implique une référence `rvalue` qui ne laisse pas de copie.|  
+|[gcount](#gcount)|Returns the number of characters read during the last unformatted input.|  
+|[get](#get)|Reads one or more characters from the input stream.|  
+|[getline](#getline)|Reads a line from the input stream.|  
+|[ignore](#ignore)|Causes a number of elements to be skipped from the current read position.|  
+|[peek](#peek)|Returns the next character to be read.|  
+|[putback](#putback)|Puts a specified character into the stream.|  
+|[read](#read)|Reads a specified number of characters from the stream and stores them in an array.|  
+|[readsome](#readsome)|Read from buffer only.|  
+|[seekg](#seekg)|Moves the read position in a stream.|  
+|[sentry](#sentry)|The nested class describes an object whose declaration structures the formatted input functions and the unformatted input functions.|  
+|[swap](#swap)|Exchanges this `basic_istream` object for the provided `basic_istream` object parameter.|  
+|[sync](#sync)|Synchronizes the input device associated with the stream with the stream's buffer.|  
+|[tellg](#tellg)|Reports the current read position in the stream.|  
+|[unget](#unget)|Puts the most recently read character back into the stream.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<istream>  
+### <a name="operators"></a>Operators  
   
- **Espace de noms :** std  
+|||  
+|-|-|  
+|[operator>>](#op_gt_gt)|Calls a function on the input stream or reads formatted data from the input stream.|  
+|[operator=](#op_eq)|Assigns the `basic_istream` on the right side of the operator to this object. This is a move assignment involving an `rvalue` reference that does not leave a copy behind.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<istream>  
+  
+ **Namespace:** std  
   
 ##  <a name="basic_istream"></a>  basic_istream::basic_istream  
- Construit un objet de type `basic_istream`.  
+ Constructs an object of type `basic_istream`.  
   
 ```  
 explicit basic_istream(
@@ -190,38 +203,38 @@ explicit basic_istream(
 basic_istream(basic_istream&& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `strbuf`  
- Objet de type [basic_streambuf](../standard-library/basic-streambuf-class.md).  
+ An object of type [basic_streambuf](../standard-library/basic-streambuf-class.md).  
   
  `_Isstd`  
- `true` s’il s’agit d’un flux standard ; sinon, `false`.  
+ `true` if this is a standard stream; otherwise, `false`.  
   
  `right`  
- Objet `basic_istream` à copier.  
+ A `basic_istream` object to copy.  
   
-### <a name="remarks"></a>Notes  
- Le premier constructeur initialise la classe de base en appelant [init](../standard-library/basic-ios-class.md#init)(_S`trbuf`). Il stocke également zéro dans le nombre d’extractions. Pour plus d’informations sur ce nombre d’extractions, consultez la section Notes de la rubrique de présentation [basic_istream, classe](../standard-library/basic-istream-class.md).  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the base class by calling [init](../standard-library/basic-ios-class.md#init)(_S `trbuf`). It also stores zero in the extraction count. For more information about this extraction count, see the Remarks section of the [basic_istream Class](../standard-library/basic-istream-class.md) overview topic.  
   
- Le deuxième constructeur initialise la classe de base en appelant `move``( right)`. Il stocke également _R `ight.gcount()` dans le nombre d’extractions et stocke zéro dans le nombre d’extractions pour _R `ight`.  
+ The second constructor initializes the base class by calling `move( right)`. It also stores _R `ight.gcount()` in the extraction count and stores zero in the extraction count for _R `ight`.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [basic_ifstream::basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream) pour en savoir plus sur les flux d’entrée.  
+### <a name="example"></a>Example  
+  See the example for [basic_ifstream::basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream) to learn more about input streams.  
   
 ##  <a name="gcount"></a>  basic_istream::gcount  
- Retourne le nombre de caractères lus au cours de la dernière entrée non mise en forme.  
+ Returns the number of characters read during the last unformatted input.  
   
 ```  
 streamsize gcount() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre d’extractions.  
+### <a name="return-value"></a>Return Value  
+ The extraction count.  
   
-### <a name="remarks"></a>Notes  
- Utilisez [basic_istream::get](#get) pour lire les caractères sans mise en forme.  
+### <a name="remarks"></a>Remarks  
+ Use [basic_istream::get](#get) to read unformatted characters.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_gcount.cpp  
@@ -257,7 +270,7 @@ a
 ```  
   
 ##  <a name="get"></a>  basic_istream::get  
- Lit un ou plusieurs caractères dans le flux d'entrée.  
+ Reads one or more characters from the input stream.  
   
 ```  
 int_type get();
@@ -270,47 +283,47 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf);
 basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `count`  
- Nombre de caractères à lire à partir de `strbuf`.  
+ The number of characters to read from `strbuf`.  
   
  `Delim`  
- Caractère qui doit arrêter la lecture s’il se trouve avant `count`.  
+ The character that should terminate the read if it is encountered before `count`.  
   
  `str`  
- Chaîne dans laquelle écrire.  
+ A string in which to write.  
   
  `Ch`  
- Caractère à obtenir.  
+ A character to get.  
   
  `strbuf`  
- Mémoire tampon dans laquelle écrire.  
+ A buffer in which to write.  
   
-### <a name="return-value"></a>Valeur de retour  
- La forme sans paramètre de get retourne l’élément lu comme un entier ou la fin du fichier. Les autres formes retournent le flux (* `this`).  
+### <a name="return-value"></a>Return Value  
+ The parameterless form of get returns the element read as an integer or end of file. The remaining forms return the stream (* `this`).  
   
-### <a name="remarks"></a>Notes  
- La première de ces fonctions d’entrée sans mise en forme extrait un élément, si possible, en retournant `rdbuf`-> `sbumpc`. Sinon, elle retourne **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). Si la fonction n’extrait aucun élément, elle appelle [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).  
+### <a name="remarks"></a>Remarks  
+ The first of these unformatted input functions extracts an element, if possible, as if by returning `rdbuf`-> `sbumpc`. Otherwise, it returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). If the function extracts no element, it calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).  
   
- La deuxième fonction extrait l’élément [int_type](../standard-library/basic-ios-class.md#int_type) `meta` de la même manière. Si la valeur de `meta` est égale à **traits_type::eof**, la fonction appelle `setstate`( **failbit**). Sinon, elle stocke **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)( `meta`) dans `Ch`. La fonction retourne **\*this**.  
+ The second function extracts the [int_type](../standard-library/basic-ios-class.md#int_type) element `meta` the same way. If `meta` compares equal to **traits_type::eof**, the function calls `setstate`( **failbit**). Otherwise, it stores **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)( `meta`) in `Ch`. The function returns **\*this**.  
   
- La troisième fonction retourne **get**(_ *Str*, `count`, `widen`(’\ **n**’)).  
+ The third function returns **get**(_ *Str*, `count`, `widen`('\ **n**')).  
   
- La quatrième fonction extrait jusqu’à `count` - 1 éléments et les stocke dans le tableau en commençant par _ *Str*. Elle stocke toujours `char_type` après les éléments extraits qu’elle stocke. Pour les besoins du test, l’extraction s’arrête :  
+ The fourth function extracts up to `count` - 1 elements and stores them in the array beginning at _ *Str*. It always stores `char_type` after any extracted elements it stores. In order of testing, extraction stops:  
   
--   À la fin du fichier.  
+-   At end of file.  
   
--   Une fois que la fonction a extrait un élément dont la valeur est égale à `Delim`. Dans ce cas, l’élément est remis dans la séquence contrôlée.  
+-   After the function extracts an element that compares equal to `Delim`, in which case the element is put back to the controlled sequence.  
   
--   Une fois que la fonction a extrait `count` - 1 éléments.  
+-   After the function extracts `count` - 1 elements.  
   
- Si la fonction n’extrait aucun élément, elle appelle `setstate`( **failbit**). Dans tous les cas, elle retourne **\*this**.  
+ If the function extracts no elements, it calls `setstate`( **failbit**). In any case, it returns **\*this**.  
   
- La cinquième fonction retourne **get**( **strbuf**, `widen`(’\ **n**’)).  
+ The fifth function returns **get**( **strbuf**, `widen`('\ **n**')).  
   
- La sixième fonction extrait des éléments et les insère dans **strbuf**. L’extraction s’arrête à la fin du fichier ou sur un élément dont la valeur est égale à _ *Delim,* qui n’est pas extrait. Elle s’arrête également, sans extraire l’élément en question, si une insertion échoue ou lève une exception (qui est interceptée, mais n’est pas levée à nouveau). Si la fonction n’extrait aucun élément, elle appelle `setstate`( **failbit**). Dans tous les cas, la fonction retourne **\*this**.  
+ The sixth function extracts elements and inserts them in **strbuf**. Extraction stops on end-of-file or on an element that compares equal to _ *Delim,* which is not extracted. It also stops, without extracting the element in question, if an insertion fails or throws an exception (which is caught but not rethrown). If the function extracts no elements, it calls `setstate`( **failbit**). In any case, the function returns **\*this**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_get.cpp  
@@ -337,7 +350,7 @@ int main( )
 ```  
   
 ##  <a name="getline"></a>  basic_istream::getline  
- Obtient une ligne du flux d’entrée.  
+ Gets a line from the input stream.  
   
 ```  
 basic_istream<Elem, Tr>& getline(
@@ -350,33 +363,33 @@ basic_istream<Elem, Tr>& getline(
     char_type Delim);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `count`  
- Nombre de caractères à lire à partir de **strbuf**.  
+ The number of characters to read from **strbuf**.  
   
  `Delim`  
- Caractère qui doit arrêter la lecture s’il se trouve avant `count`.  
+ The character that should terminate the read if it is encountered before `count`.  
   
  `str`  
- Chaîne dans laquelle écrire.  
+ A string in which to write.  
   
-### <a name="return-value"></a>Valeur de retour  
- Le flux ( **\*this**).  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>Notes  
- La première de ces fonctions d’entrée sans mise en forme retourne **getline**(_ *Str*, `count`, `widen`(’ `\`**n**’)).  
+### <a name="remarks"></a>Remarks  
+ The first of these unformatted input functions returns **getline**(_ *Str*, `count`, `widen`(' `\`**n**')).  
   
- La deuxième fonction extrait jusqu’à `count` - 1 éléments et les stocke dans le tableau en commençant par _ *Str*. Elle stocke toujours le caractère de fin de chaîne après tous les éléments extraits qu’elle stocke. Pour les besoins du test, l’extraction s’arrête :  
+ The second function extracts up to `count` - 1 elements and stores them in the array beginning at _ *Str*. It always stores the string termination character after any extracted elements it stores. In order of testing, extraction stops:  
   
--   À la fin du fichier.  
+-   At end of file.  
   
--   Une fois que la fonction a extrait un élément dont la valeur est égale à `Delim`. Dans ce cas, l’élément n’est ni remis à sa place, ni ajouté à la séquence contrôlée.  
+-   After the function extracts an element that compares equal to `Delim`, in which case the element is neither put back nor appended to the controlled sequence.  
   
--   Une fois que la fonction a extrait `count` - 1 éléments.  
+-   After the function extracts `count` - 1 elements.  
   
- Si la fonction n’extrait aucun élément ou extrait `count` - 1 éléments, elle appelle [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). Dans tous les cas, elle retourne **\*this**.  
+ If the function extracts no elements or `count` - 1 elements, it calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, it returns **\*this**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_getline.cpp  
@@ -399,7 +412,7 @@ int main( )
 ```  
   
 ##  <a name="ignore"></a>  basic_istream::ignore  
- Ignore un certain nombre d'éléments à partir de la position de lecture actuelle.  
+ Causes a number of elements to be skipped from the current read position.  
   
 ```  
 basic_istream<Elem, Tr>& ignore(
@@ -407,20 +420,20 @@ basic_istream<Elem, Tr>& ignore(
     int_type Delim = traits_type::eof());
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `count`  
- Nombre d’éléments à ignorer à partir de la position de lecture actuelle.  
+ The number of elements to skip from the current read position.  
   
  `Delim`  
- Élément qui, si rencontré avant count, oblige **ignore** à retourner et autoriser tous les éléments après `Delim` à lire.  
+ The element that, if encountered before count, causes **ignore** to return and allowing all elements after `Delim` to be read.  
   
-### <a name="return-value"></a>Valeur de retour  
- Le flux ( **\*this**).  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>Notes  
- La fonction d’entrée sans mise en forme extrait jusqu’à `count` éléments et les ignore. Si `count` est égal à **numeric_limits\<int>:: max**, toutefois, il est considéré comme arbitrairement grand. L’extraction s’arrête au début de la fin du fichier ou sur un élément `Ch` telles que **traits_type ::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `Ch`) compare égal à *Delim* (qui est également extrait). La fonction retourne **\*this**.  
+### <a name="remarks"></a>Remarks  
+ The unformatted input function extracts up to `count` elements and discards them. If `count` equals **numeric_limits\<int>::max**, however, it is taken as arbitrarily large. Extraction stops early on end of file or on an element `Ch` such that **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `Ch`) compares equal to *Delim* (which is also extracted). The function returns **\*this**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_ignore.cpp  
@@ -442,9 +455,9 @@ Type 'abcdef': abcdef
 def  
 ```  
   
-##  <a name="op_gt_gt"></a>base\_istream::operator >>
+##  <a name="op_gt_gt"></a>  basic\_istream::operator>>
   
-Appelle une fonction sur le flux d'entrée ou lit les données mises en forme dans le flux d'entrée.  
+Calls a function on the input stream or reads formatted data from the input stream.  
   
 ```  
 basic_istream& operator>>(basic_istream& (* Pfn)(basic_istream&));
@@ -466,42 +479,42 @@ basic_istream& operator>>(double& val);
 basic_istream& operator>>(long double& val);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Pfn`  
- Pointeur de fonction.  
+ A function pointer.  
   
  `strbuf`  
- Objet de type **stream_buf**.  
+ An object of type **stream_buf**.  
   
  `val`  
- Valeur à lire à partir du flux.  
+ The value to read from the stream.  
   
-### <a name="return-value"></a>Valeur de retour  
- Le flux ( **\*this**).  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>Notes  
- L’en-tête `<istream>` définit également plusieurs opérateurs d’extraction globaux. Pour plus d’informations, consultez [operator>> (\<istream>)](../standard-library/istream-operators.md#op_gt_gt).  
+### <a name="remarks"></a>Remarks  
+ The `<istream>` header also defines several global extraction operators. For more information, see [operator>> (\<istream>)](../standard-library/istream-operators.md#op_gt_gt).  
   
- La première fonction membre garantit qu’une expression de la forme **istr** >> `ws` appelle [ws](../standard-library/istream-functions.md#ws)( **istr**), puis retourne **\*this**. Les deuxième et troisième fonctions garantissent que d’autres manipulateurs, comme [hex](../standard-library/ios-functions.md#hex), se comportent de la même façon. Les fonctions restantes constituent les fonctions d’entrée mises en forme.  
+ The first member function ensures that an expression of the form **istr** >> `ws` calls [ws](../standard-library/istream-functions.md#ws)( **istr**), and then returns **\*this**. The second and third functions ensure that other manipulators, such as [hex](../standard-library/ios-functions.md#hex), behave similarly. The remaining functions constitute the formatted input functions.  
   
- La fonction :  
+ The function:  
   
 ```  
 basic_istream& operator>>(
     basic_streambuf<Elem, Tr>* strbuf);
 ```  
   
- extrait des éléments, si _ *Strbuf* n’est pas un pointeur null, et les insère dans `strbuf`. L’extraction s’arrête à la fin du fichier. Elle s’arrête également, sans extraire l’élément en question, si une insertion échoue ou lève une exception (qui est interceptée, mais n’est pas levée à nouveau). Si la fonction n’extrait aucun élément, elle appelle [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). Dans tous les cas, la fonction retourne **\*this**.  
+ extracts elements, if _ *Strbuf* is not a null pointer, and inserts them in `strbuf`. Extraction stops on end of file. It also stops without extracting the element in question, if an insertion fails or throws an exception (which is caught but not rethrown). If the function extracts no elements, it calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, the function returns **\*this**.  
   
- La fonction :  
+ The function:  
   
 ```  
 basic_istream& operator>>(bool& val);
 ```  
   
- extrait un champ et le convertit en valeur booléenne en appelant [use_facet](../standard-library/basic-filebuf-class.md#open) < `num_get`\< **Elem**, **InIt**>( [getloc](../standard-library/ios-base-class.md#getloc)). [get](../standard-library/ios-base-class.md#getloc)( **InIt**( [rdbuf](../standard-library/basic-ios-class.md#rdbuf)), `Init`(0), **\*this**, `getloc`, `val`). Ici, **InIt** est défini comme [istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)\< **Elem**, **Tr**>. La fonction retourne **\*this**.  
+ extracts a field and converts it to a Boolean value by calling [use_facet](../standard-library/basic-filebuf-class.md#open) < `num_get`\< **Elem**, **InIt**>( [getloc](../standard-library/ios-base-class.md#getloc)). [get](../standard-library/ios-base-class.md#getloc)( **InIt**( [rdbuf](../standard-library/basic-ios-class.md#rdbuf)), `Init`(0), **\*this**, `getloc`, `val`). Here, **InIt** is defined as [istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)\< **Elem**, **Tr**>. The function returns **\*this**.  
   
- Les fonctions :  
+ The functions:  
   
 ```  
 basic_istream& operator>>(short& val);
@@ -515,11 +528,11 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```  
   
- extraient chacune un champ et le convertissent en valeur numérique en appelant `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Here, **InIt** is defined as `istreambuf_iterator`\< **Elem**, **Tr**>, and `val` has type **long**,`unsigned long`, or **void \*** as needed.  
+ each extract a field and convert it to a numeric value by calling `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Here, **InIt** is defined as `istreambuf_iterator`\< **Elem**, **Tr**>, and `val` has type **long**,`unsigned long`, or **void \*** as needed.  
   
- Si la valeur convertie ne peut pas être représentée comme le type de `val`, la fonction appelle [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). Dans tous les cas, la fonction retourne **\*this**.  
+ If the converted value cannot be represented as the type of `val`, the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, the function returns **\*this**.  
   
- Les fonctions :  
+ The functions:  
   
 ```  
 basic_istream& operator>>(float& val);
@@ -527,11 +540,11 @@ basic_istream& operator>>(double& val);
 basic_istream& operator>>(long double& val);
 ```  
   
- extraient chacune un champ et le convertissent en valeur numérique en appelant `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). **get**( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Ici, **InIt** est défini comme `istreambuf_iterator`\< **Elem**, **Tr**> et `val` a le type **double** ou `long double` selon les besoins.  
+ each extract a field and convert it to a numeric value by calling `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). **get**( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Here, **InIt** is defined as `istreambuf_iterator`\< **Elem**, **Tr**>, and `val` has type **double** or `long double` as needed.  
   
- Si la valeur convertie ne peut pas être représentée comme le type de `val`, la fonction appelle `setstate`( **failbit**). Dans tous les cas, elle retourne **\*this**.  
+ If the converted value cannot be represented as the type of `val`, the function calls `setstate`( **failbit**). In any case, it returns **\*this**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istream_basic_istream_op_is.cpp  
@@ -569,36 +582,36 @@ int main( )
 ```  
   
 ##  <a name="op_eq"></a>  basic_istream::operator=  
- Affecte le `basic_istream` du côté droit de l'opérateur à cet objet. Il s'agit d'une assignation de déplacement qui implique une référence `rvalue` qui ne laisse pas de copie.  
+ Assigns the `basic_istream` on the right side of the operator to this object. This is a move assignment involving an `rvalue` reference that does not leave a copy behind.  
   
 ```  
 basic_istream& operator=(basic_istream&& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Référence `rvalue` à un objet `basic_ifstream`.  
+ An `rvalue` reference to a `basic_ifstream` object.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne *this.  
+### <a name="return-value"></a>Return Value  
+ Returns *this.  
   
-### <a name="remarks"></a>Notes  
- L’opérateur membre appelle swap `( right)`.  
+### <a name="remarks"></a>Remarks  
+ The member operator calls swap `( right)`.  
   
 ##  <a name="peek"></a>  basic_istream::peek  
- Retourne le caractère suivant à lire.  
+ Returns the next character to be read.  
   
 ```  
 int_type peek();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Caractère suivant à lire.  
+### <a name="return-value"></a>Return Value  
+ The next character that will be read.  
   
-### <a name="remarks"></a>Notes  
- La fonction d’entrée sans mise en forme extrait un élément, si possible, en retournant `rdbuf` -> [sgetc](../standard-library/basic-streambuf-class.md#sgetc). Sinon, elle retourne **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).  
+### <a name="remarks"></a>Remarks  
+ The unformatted input function extracts an element, if possible, as if by returning `rdbuf` -> [sgetc](../standard-library/basic-streambuf-class.md#sgetc). Otherwise, it returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_peek.cpp  
@@ -631,24 +644,24 @@ a abcde
 ```  
   
 ##  <a name="putback"></a>  basic_istream::putback  
- Place un caractère spécifié dans le flux.  
+ Puts a specified character into the stream.  
   
 ```  
 basic_istream<Elem, Tr>& putback(
     char_type Ch);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- Caractère à remettre dans le flux.  
+ A character to put back into the stream.  
   
-### <a name="return-value"></a>Valeur de retour  
- Le flux ( **\*this**).  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>Notes  
- La [fonction d’entrée sans mise en forme](../standard-library/basic-istream-class.md) remet `Ch`, si possible, en appelant [rdbuf](../standard-library/basic-ios-class.md#rdbuf)`->`[sputbackc](../standard-library/basic-streambuf-class.md#sputbackc). Si rdbuf est un pointeur null ou si l’appel à `sputbackc` retourne **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), la fonction appelle [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**). Dans tous les cas, elle retourne **\*this**.  
+### <a name="remarks"></a>Remarks  
+ The [unformatted input function](../standard-library/basic-istream-class.md) puts back `Ch`, if possible, as if by calling [rdbuf](../standard-library/basic-ios-class.md#rdbuf)`->`[sputbackc](../standard-library/basic-streambuf-class.md#sputbackc). If rdbuf is a null pointer, or if the call to `sputbackc` returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**). In any case, it returns **\*this**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_putback.cpp  
@@ -674,9 +687,9 @@ qwq
 ```  
   
 ##  <a name="read"></a>  basic_istream::read  
- Lit un nombre spécifié de caractères dans le flux et les stocke dans un tableau.  
+ Reads a specified number of characters from the stream and stores them in an array.  
   
- Cette méthode est potentiellement dangereuse, car elle suppose que l’appelant vérifie que les valeurs passées sont correctes.  
+ This method is potentially unsafe, as it relies on the caller to check that the passed values are correct.  
   
 ```  
 basic_istream<Elem, Tr>& read(
@@ -684,20 +697,20 @@ basic_istream<Elem, Tr>& read(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `str`  
- Tableau dans lequel lire les caractères.  
+ The array in which to read the characters.  
   
  `count`  
- Nombre de caractères à lire.  
+ The number of characters to read.  
   
-### <a name="return-value"></a>Valeur de retour  
- Le flux ( `*this`).  
+### <a name="return-value"></a>Return Value  
+ The stream ( `*this`).  
   
-### <a name="remarks"></a>Notes  
- La deuxième fonction d’entrée sans mise en forme extrait jusqu’à `count` éléments et les stocke dans le tableau en commençant par _ `Str`. L’extraction s’arrête dès le début de la fin du fichier, auquel cas la fonction appelle [setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`). Dans tous les cas, elle retourne `*this`.  
+### <a name="remarks"></a>Remarks  
+ The unformatted input function extracts up to `count` elements and stores them in the array beginning at _ `Str`. Extraction stops early on end of file, in which case the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`). In any case, it returns `*this`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_read.cpp  
@@ -734,9 +747,9 @@ abcde
 ```  
   
 ##  <a name="readsome"></a>  basic_istream::readsome  
- Lit le nombre spécifié de valeurs de caractère.  
+ Reads the specified number of character values.  
   
- Cette méthode est potentiellement dangereuse, car elle suppose que l’appelant vérifie que les valeurs passées sont correctes.  
+ This method is potentially unsafe, as it relies on the caller to check that the passed values are correct.  
   
 ```  
 streamsize readsome(
@@ -744,22 +757,22 @@ streamsize readsome(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `str`  
- Tableau dans lequel `readsome` stocke les caractères qu’il lit.  
+ The array in which `readsome` stores the characters it reads.  
   
  `count`  
- Nombre de caractères à lire.  
+ The number of characters to read.  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre de caractères véritablement lus, [gcount](#gcount).  
+### <a name="return-value"></a>Return Value  
+ The number of characters actually read, [gcount](#gcount).  
   
-### <a name="remarks"></a>Notes  
- Cette fonction d’entrée sans mise en forme extrait jusqu’à `count` éléments du flux d’entrée et les stocke dans le tableau `str`.  
+### <a name="remarks"></a>Remarks  
+ This unformatted input function extracts up to `count` elements from the input stream and stores them in the array `str`.  
   
- Cette fonction n’attend pas d’entrée. Elle lit toutes les données disponibles.  
+ This function does not wait for input. It reads whatever data is available.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_readsome.cpp  
@@ -789,7 +802,7 @@ int main( )
 ```  
   
 ##  <a name="seekg"></a>  basic_istream::seekg  
- Déplace la position de lecture dans un flux.  
+ Moves the read position in a stream.  
   
 ```  
 basic_istream<Elem, Tr>& seekg(pos_type pos);
@@ -797,30 +810,30 @@ basic_istream<Elem, Tr>& seekg(pos_type pos);
 basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pos`  
- Position absolue à laquelle déplacer le pointeur de lecture.  
+ The absolute position in which to move the read pointer.  
   
  `off`  
- Décalage pour déplacer le pointeur de lecture par rapport à `way`.  
+ An offset to move the read pointer relative to `way`.  
   
  `way`  
- Une des énumérations [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).  
+ One of the [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) enumerations.  
   
-### <a name="return-value"></a>Valeur de retour  
- Le flux ( **\*this**).  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>Notes  
- La première fonction membre effectue une recherche absolue, la deuxième fonction membre effectue une recherche relative.  
+### <a name="remarks"></a>Remarks  
+ The first member function performs an absolute seek, the second member function performs a relative seek.  
   
 > [!NOTE]
->  N’utilisez pas la deuxième fonction membre avec des fichiers texte, car la norme C++ ne prend pas en charge les recherches relative dans des fichiers texte.  
+>  Do not use the second member function with text files, because Standard C++ does not support relative seeks in text files.  
   
- Si [fail](../standard-library/basic-ios-class.md#fail) a la valeur false, la première fonction membre appelle **newpos** = [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( `pos`), pour certains objets temporaires **pos_type** **newpos**. Si **fail** a la valeur false, la deuxième fonction appelle **newpos** = **rdbuf** -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( `off`, `way`). Dans les deux cas, si ( `off_type`) **newpos** == ( `off_type`)(-1) (l’opération de positionnement échoue), la fonction appelle **istr**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). Les deux fonctions retournent **\*this**.  
+ If [fail](../standard-library/basic-ios-class.md#fail) is false, the first member function calls **newpos** = [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( `pos`), for some **pos_type** temporary object **newpos**. If **fail** is false, the second function calls **newpos** = **rdbuf** -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( `off`, `way`). In either case, if ( `off_type`) **newpos** == ( `off_type`)(-1) (the positioning operation fails), the function calls **istr**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). Both functions return **\*this**.  
   
- Si [fail](../standard-library/basic-ios-class.md#fail) a la valeur true, les fonctions membres n’effectuent aucune action.  
+ If [fail](../standard-library/basic-ios-class.md#fail) is true, the member functions do nothing.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_seekg.cpp  
@@ -842,60 +855,60 @@ int main ( )
 ```  
   
 ##  <a name="sentry"></a>  basic_istream::sentry  
- La classe imbriquée décrit un objet dont la déclaration structure les fonctions d’entrée avec et sans mise en forme.  
+ The nested class describes an object whose declaration structures the formatted and unformatted input functions.  
   
-classe sentry {  
-   publique :  
+class sentry {  
+   public:  
    explicit sentry( basic_istream\<Elem, Tr>& _Istr,  
    bool _Noskip = false); operator bool() const; };  
   
-### <a name="remarks"></a>Notes  
- Si `_Istr``.`[good](../standard-library/basic-ios-class.md#good) a la valeur true, le constructeur :  
+### <a name="remarks"></a>Remarks  
+ If `_Istr.`[good](../standard-library/basic-ios-class.md#good) is true, the constructor:  
   
--   Appelle `_Istr`. [tie](../standard-library/basic-ios-class.md#tie) -> [flush](../standard-library/basic-ostream-class.md#flush) si `_Istr`. `tie` n’est pas un pointeur null  
+-   Calls `_Istr`. [tie](../standard-library/basic-ios-class.md#tie) -> [flush](../standard-library/basic-ostream-class.md#flush) if `_Istr`. `tie` is not a null pointer  
   
--   Appelle [ws](../standard-library/istream-functions.md#ws)( `_Istr`) si `_Istr`. [flags](../standard-library/ios-base-class.md#flags)**&**[skipws](../standard-library/ios-functions.md#skipws) est différent de zéro  
+-   Effectively calls [ws](../standard-library/istream-functions.md#ws)( `_Istr`) if `_Istr`. [flags](../standard-library/ios-base-class.md#flags)**&**[skipws](../standard-library/ios-functions.md#skipws) is nonzero  
   
- Si, après toute cette préparation, `_Istr`. **good** a la valeur false, le constructeur appelle `_Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). Dans tous les cas, le constructeur stocke la valeur retournée par `_Istr`. **good** dans **status**. Un appel ultérieur à **operator bool** fournit cette valeur stockée.  
+ If, after any such preparation, `_Istr`. **good** is false, the constructor calls `_Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, the constructor stores the value returned by `_Istr`. **good** in **status**. A later call to **operator bool** delivers this stored value.  
   
 ##  <a name="swap"></a>  basic_istream::swap  
- Échange le contenu de deux objets `basic_istream`.  
+ Exchanges the contents of two `basic_istream` objects.  
   
 ```  
 void swap(basic_istream& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Référence lvalue à un objet `basic_istream`.  
+ An lvalue reference to a `basic_istream` object.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre appelle [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(``right``)`. Elle échange également le nombre d'extractions avec le nombre d'extractions pour `right`.  
+### <a name="remarks"></a>Remarks  
+ The member function calls [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(right)`. It also exchanges the extraction count with the extraction count for `right`.  
   
 ##  <a name="sync"></a>  basic_istream::sync  
- Synchronise le périphérique d’entrée associé au flux avec la mémoire tampon du flux.  
+ Synchronizes the input device associated with the stream with the stream's buffer.  
   
 ```  
 int sync();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Si [rdbuf](../standard-library/basic-ios-class.md#rdbuf) est un pointeur null, la fonction retourne -1. Sinon, elle appelle `rdbuf` ->  [pubsync](../standard-library/basic-streambuf-class.md#pubsync). Si le résultat est -1, la fonction appelle [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**) et retourne -1. Sinon, la fonction retourne zéro.  
+### <a name="return-value"></a>Return Value  
+ If [rdbuf](../standard-library/basic-ios-class.md#rdbuf) is a null pointer, the function returns -1. Otherwise, it calls `rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync). If that returns -1, the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**) and returns -1. Otherwise, the function returns zero.  
   
 ##  <a name="tellg"></a>  basic_istream::tellg  
- Indique la position de lecture actuelle dans le flux.  
+ Reports the current read position in the stream.  
   
 ```  
 pos_type tellg();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Position actuelle dans le flux.  
+### <a name="return-value"></a>Return Value  
+ The current position in the stream.  
   
-### <a name="remarks"></a>Notes  
- Si [fail](../standard-library/basic-ios-class.md#fail) a la valeur false, la fonction membre retourne [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**). Sinon, elle retourne `pos_type`(-1).  
+### <a name="remarks"></a>Remarks  
+ If [fail](../standard-library/basic-ios-class.md#fail) is false, the member function returns [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**). Otherwise, it returns `pos_type`(-1).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_tellg.cpp  
@@ -922,21 +935,21 @@ int main()
 ```  
   
 ##  <a name="unget"></a>  basic_istream::unget  
- Replace le dernier caractère lu dans le flux.  
+ Puts the most recently read character back into the stream.  
   
 ```  
 basic_istream<Elem, Tr>& unget();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Le flux ( **\*this**).  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>Notes  
- La [fonction d’entrée sans mise en forme](../standard-library/basic-istream-class.md) remet l’élément précédent dans le flux, si possible, en appelant `rdbuf` -> [sungetc](../standard-library/basic-streambuf-class.md#sungetc). Si [rdbuf](../standard-library/basic-ios-class.md#rdbuf) est un pointeur null ou si l’appel à `sungetc` retourne **traits_type::**[eof](../standard-library/basic-ios-class.md#eof), la fonction appelle [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**). Dans tous les cas, elle retourne **\*this**.  
+### <a name="remarks"></a>Remarks  
+ The [unformatted input function](../standard-library/basic-istream-class.md) puts back the previous element in the stream, if possible, as if by calling `rdbuf` -> [sungetc](../standard-library/basic-streambuf-class.md#sungetc). If [rdbuf](../standard-library/basic-ios-class.md#rdbuf) is a null pointer, or if the call to `sungetc` returns **traits_type::**[eof](../standard-library/basic-ios-class.md#eof), the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**). In any case, it returns **\*this**.  
   
- Pour plus d’informations sur l’échec possible de `unget`, consultez [basic_streambuf::sungetc](../standard-library/basic-streambuf-class.md#sungetc).  
+ For information on how `unget` might fail, see [basic_streambuf::sungetc](../standard-library/basic-streambuf-class.md#sungetc).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_unget.cpp  
@@ -968,9 +981,9 @@ abc
 abc  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream, programmation](../standard-library/iostream-programming.md)   
- [iostreams, conventions](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

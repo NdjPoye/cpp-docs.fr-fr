@@ -1,5 +1,5 @@
 ---
-title: raw_storage_iterator, classe | Microsoft Docs
+title: raw_storage_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,14 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- raw_storage_iterator
 - memory/std::raw_storage_iterator
 - memory/std::raw_storage_iterator::element_type
 - memory/std::raw_storage_iterator::iter_type
 dev_langs:
 - C++
 helpviewer_keywords:
-- raw_storage_iterator class
+- std::raw_storage_iterator [C++]
+- std::raw_storage_iterator [C++], element_type
+- std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
 caps.latest.revision: 17
 author: corob-msft
@@ -36,97 +37,97 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 46bfc6bc42e09348d0760f7d03d70c816fde31ed
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5a513b9b27c72c36f831eba839538910914d4057
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="rawstorageiterator-class"></a>raw_storage_iterator, classe
-Classe d'adaptateur fournie pour permettre aux algorithmes de stocker leurs résultats dans la mémoire non initialisée.  
+# <a name="rawstorageiterator-class"></a>raw_storage_iterator Class
+An adaptor class that is provided to enable algorithms to store their results into uninitialized memory.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class OutputIterator, class Type>  
 class raw_storage_iterator
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `OutputIterator`  
- Spécifie l'itérateur de sortie de l'objet stocké.  
+ Specifies the output iterator for the object being stored.  
   
  *Type*  
- Type d'objet pour lequel le stockage est alloué.  
+ The type of object for which storage is being allocated.  
   
-## <a name="remarks"></a>Notes  
- Cette classe décrit un itérateur de sortie qui construit des objets de type **Type** dans la séquence qu’il génère. Un objet de la classe `raw_storage_iterator`\< **ForwardIterator**, **Type**> accède au stockage via un objet itérateur vers l’avant, de la classe **ForwardIterator**, que vous spécifiez quand vous construisez l’objet. Pour un objet first de la classe **ForwardIterator**, l’expression **&\*first** doit désigner le stockage non construit pour l’objet suivant (de type **Type**) dans la séquence générée.  
+## <a name="remarks"></a>Remarks  
+ The class describes an output iterator that constructs objects of type **Type** in the sequence it generates. An object of class `raw_storage_iterator`\< **ForwardIterator**, **Type**> accesses storage through a forward iterator object, of class **ForwardIterator**, that you specify when you construct the object. For an object first of class **ForwardIterator**, the expression **&\*first** must designate unconstructed storage for the next object (of type **Type**) in the generated sequence.  
   
- Cette classe d'adaptateur est utilisée quand il est nécessaire de séparer l'allocation de mémoire de la construction d'objet. Le `raw_storage_iterator` peut être utilisé pour copier des objets dans le stockage non initialisé, comme la mémoire allouée à l'aide de la fonction `malloc`.  
+ This adaptor class is used when it is necessary to separate memory allocation and object construction. The `raw_storage_iterator` can be used to copy objects into uninitialized storage, such as memory allocated using the `malloc` function.  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>Constructeurs  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[raw_storage_iterator](#raw_storage_iterator)|Construit un itérateur de stockage brut avec un itérateur de sortie sous-jacent spécifié.|  
+|[raw_storage_iterator](#raw_storage_iterator)|Constructs a raw storage iterator with a specified underlying output iterator.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[element_type](#element_type)|Fournit un type qui décrit un élément à stocker dans un itérateur de stockage brut.|  
-|[iter_type](#iter_type)|Fournit un type qui décrit un itérateur sous-jacent à un itérateur de stockage brut.|  
+|[element_type](#element_type)|Provides a type that describes an element to be stored a raw storage iterator.|  
+|[iter_type](#iter_type)|Provides a type that describes an iterator that underlies a raw storage iterator.|  
   
-### <a name="operators"></a>Opérateurs  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator*](#op_star)|Opérateur de suppression de référence utilisé pour implémenter l’expression d’itérateur de sortie * `ii` = `x`.|  
-|[operator=](#op_eq)|Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de stockage brut * `i` = `x` pour le stockage en mémoire.|  
-|[operator++](#op_add_add)|Opérateurs de préincrémentation et de postincrémentation pour les itérateurs de stockage brut.|  
+|[operator*](#op_star)|A dereferencing operator used to implement the output iterator expression * `ii` = `x`.|  
+|[operator=](#op_eq)|An assignment operator used to implement the raw storage iterator expression * `i` = `x` for storing in memory.|  
+|[operator++](#op_add_add)|Preincrement and postincrement operators for raw storage iterators.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
 ##  <a name="element_type"></a>  raw_storage_iterator::element_type  
- Fournit un type qui décrit un élément à stocker dans un itérateur de stockage brut.  
+ Provides a type that describes an element to be stored a raw storage iterator.  
   
 ```
 typedef Type element_type;
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme du paramètre de modèle de classe raw_storage_iterator **Type**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the raw_storage_iterator class template parameter **Type**.  
   
 ##  <a name="iter_type"></a>  raw_storage_iterator::iter_type  
- Fournit un type qui décrit un itérateur sous-jacent à un itérateur de stockage brut.  
+ Provides a type that describes an iterator that underlies a raw storage iterator.  
   
 ```
 typedef ForwardIterator iter_type;
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme du paramètre de modèle **ForwardIterator**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **ForwardIterator**.  
   
 ##  <a name="op_star"></a>  raw_storage_iterator::operator*  
- Opérateur de suppression de référence utilisé pour implémenter l’expression d’itérateur de stockage brut \* *ii* = *x*.  
+ A dereferencing operator used to implement the raw storage iterator expression \* *ii* = *x*.  
   
 ```
 raw_storage_iterator<ForwardIterator, Type>& operator*();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Référence à l’itérateur de stockage brut  
+### <a name="return-value"></a>Return Value  
+ A reference to the raw storage iterator  
   
-### <a name="remarks"></a>Notes  
- Les seules conditions que doit remplir l’itérateur de stockage brut pour un **ForwardIterator** sont les suivantes : l’expression \* *ii* = *t* doit être valide et rien ne doit être spécifié sur **operator** ou `operator=`. Les opérateurs membres dans cette implémentation retournent **\*this**, ce qui permet à [operator=](#op_eq)( **constType**&) d’effectuer le stockage réel dans une expression, telle que \* *ptr* = `val`.  
+### <a name="remarks"></a>Remarks  
+ The requirements for a **ForwardIterator** are that the raw storage iterator must satisfy require only the expression \* *ii* = *t* be valid and that it says nothing about the **operator** or the `operator=` on their own. The member operators in this implementation returns **\*this**, so that [operator=](#op_eq)( **constType**&) can perform the actual store in an expression, such as \* *ptr* = `val`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_op_deref.cpp  
@@ -178,26 +179,26 @@ Constructing 5
 ```  
   
 ##  <a name="op_eq"></a>  raw_storage_iterator::operator=  
- Opérateur d’assignation utilisé pour implémenter l'expression d'itérateur de stockage brut \* *i* = *x* pour le stockage en mémoire.  
+ Assignment operator used to implement the raw storage iterator expression \* *i* = *x* for storing in memory.  
   
 ```
 raw_storage_iterator<ForwardIterator, Type>& operator=(
     const Type& val);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `val`  
- Valeur de l’objet de type **Type** à stocker dans la mémoire.  
+ The value of the object of type **Type** to be inserted into memory.  
   
-### <a name="return-value"></a>Valeur de retour  
- L’opérateur stocke `val` dans la mémoire, puis retourne une référence à l’itérateur de stockage brut.  
+### <a name="return-value"></a>Return Value  
+ The operator inserts `val` into memory, and then returns a reference to the raw storage iterator.  
   
-### <a name="remarks"></a>Notes  
- Les seules conditions que doit remplir l’itérateur de stockage brut pour un **ForwardIterator** sont les suivantes  l’expression \* *ii* = *t* doit être valide et rien ne doit être spécifié sur **operator** ou `operator=`. Ces opérateurs membres retournent **\*this**.  
+### <a name="remarks"></a>Remarks  
+ The requirements for a **ForwardIterator** state that the raw storage iterator must satisfy require only the expression \* *ii* = *t* be valid, and that it says nothing about the **operator** or the `operator=` on their own. These member operators return **\*this**.  
   
- L’opérateur d’assignation construit l’objet suivant dans la séquence de sortie à l’aide de la valeur d’itérateur stocké first, en évaluant l’expression new de positionnement **new** ( ( `void` \*)&\* **first**) **Type**( `val`).  
+ The assignment operator constructs the next object in the output sequence using the stored iterator value first, by evaluating the placement new expression **new** ( ( `void` \*)&\* **first**) **Type**( `val`).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_op_assign.cpp  
@@ -247,7 +248,7 @@ Constructing 5
 ```  
   
 ##  <a name="op_add_add"></a>  raw_storage_iterator::operator++  
- Opérateurs de préincrémentation et de postincrémentation pour les itérateurs de stockage brut.  
+ Preincrement and postincrement operators for raw storage iterators.  
   
 ```
 raw_storage_iterator<ForwardIterator, Type>& operator++();
@@ -255,19 +256,19 @@ raw_storage_iterator<ForwardIterator, Type>& operator++();
 raw_storage_iterator<ForwardIterator, Type> operator++(int);
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de stockage brut ou référence à un itérateur de stockage brut.  
+### <a name="return-value"></a>Return Value  
+ An raw storage iterator or a reference to an raw storage iterator.  
   
-### <a name="remarks"></a>Notes  
- Le premier opérateur tente finalement d’extraire et de stocker un objet de type **CharType** à partir du flux d’entrée associé. Le deuxième opérateur effectue une copie de l’objet, incrémente l’objet, puis retourne la copie.  
+### <a name="remarks"></a>Remarks  
+ The first operator eventually attempts to extract and store an object of type **CharType** from the associated input stream. The second operator makes a copy of the object, increments the object, and then returns the copy.  
   
- Le premier opérateur de préincrémentation incrémente l’objet itérateur de sortie stocké, puis retourne **\*this**.  
+ The first preincrement operator increments the stored output iterator object, and then returns **\*this**.  
   
- Le deuxième opérateur de postincrémentation effectue une copie de **\*this**, incrémente l’objet itérateur de sortie stocké et retourne la copie.  
+ The second postincrement operator makes a copy of **\*this**, increments the stored output iterator object, and then returns the copy.  
   
- Le constructeur stocke **first** comme objet itérateur de sortie.  
+ The constructor stores **first** as the output iterator object.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_op_incr.cpp  
@@ -300,17 +301,17 @@ array 4 = 8
 ```  
   
 ##  <a name="raw_storage_iterator"></a>  raw_storage_iterator::raw_storage_iterator  
- Construit un itérateur de stockage brut avec un itérateur de sortie sous-jacent spécifié.  
+ Constructs a raw storage iterator with a specified underlying output iterator.  
   
 ```
 explicit raw_storage_iterator(ForwardIterator first);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `first`  
- Itérateur vers l’avant devant être sous-jacent à l’objet `raw_storage_iterator` construit.  
+ The forward iterator that is to underlie the `raw_storage_iterator` object being constructed.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_ctor.cpp  
@@ -390,8 +391,8 @@ array 3 = 4
 *\  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: locale, classe | Microsoft Docs
+title: locale Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xlocale/std::locale
-- locale
 - locale/std::locale::category
 - locale/std::locale::combine
 - locale/std::locale::name
@@ -22,7 +21,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- locale class
+- std::locale [C++]
+- std::locale [C++], category
+- std::locale [C++], combine
+- std::locale [C++], name
+- std::locale [C++], classic
+- std::locale [C++], global
+- std::locale [C++], facet
+- std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 caps.latest.revision: 28
 author: corob-msft
@@ -42,41 +48,41 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6e33e125d2689d37443bec58c5b01f5b7e72ccfd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 43a9308d5dea59e8cff6165237ccf1f7778a3548
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="locale-class"></a>locale, classe
-Classe qui décrit un objet de paramètres régionaux encapsulant des informations spécifiques à la culture sous la forme d'un ensemble de facettes qui définissent collectivement un environnement localisé spécifique.  
+# <a name="locale-class"></a>locale Class
+The class that describes a locale object that encapsulates culture-specific information as a set of facets that collectively define a specific localized environment.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class locale;  
 ```  
   
-## <a name="remarks"></a>Remarques  
- Une facette est un pointeur vers un objet d’une classe dérivée de la classe [facet](#facet_class) qui contient un objet public au format suivant :  
+## <a name="remarks"></a>Remarks  
+ A facet is a pointer to an object of a class derived from class [facet](#facet_class) that has a public object of the form:  
   
 ```  
 static locale::id id;  
 ```  
   
- Vous pouvez définir un ensemble ouvert de ces facettes. Vous pouvez également créer un objet de paramètres régionaux qui désigne un nombre arbitraire de facettes.  
+ You can define an open-ended set of these facets. You can also construct a locale object that designates an arbitrary number of facets.  
   
- Les groupes prédéfinis de ces facettes correspondent aux [catégories de paramètres régionaux](#category) traditionnellement gérées dans la bibliothèque C standard par la fonction `setlocale`.  
+ Predefined groups of these facets represent the [locale categories](#category) traditionally managed in the Standard C Library by the function `setlocale`.  
   
- La catégorie collate (LC_COLLATE) comprend les facettes suivantes :  
+ Category collate (LC_COLLATE) includes the facets:  
   
 ```  
 collate<char>  
 collate<wchar_t>  
 ```  
   
- La catégorie ctype (LC_CTYPE) comprend les facettes suivantes :  
+ Category ctype (LC_CTYPE) includes the facets:  
   
 ```  
 ctype<char>  
@@ -87,7 +93,7 @@ codecvt<char16_t, char, mbstate_t>
 codecvt<char32_t, char, mbstate_t>  
 ```  
   
- La catégorie monetary (LC_MONETARY) comprend les facettes suivantes :  
+ Category monetary (LC_MONETARY) includes the facets:  
   
 ```  
 moneypunct<char, false>  
@@ -100,7 +106,7 @@ money_put<char, ostreambuf_iterator<char>>
 money_put<wchar_t, ostreambuf_iterator<wchar_t>>  
 ```  
   
- La catégorie numeric (LC_NUMERIC) comprend les facettes suivantes :  
+ Category numeric (LC_NUMERIC) includes the facets:  
   
 ```  
 num_get<char, istreambuf_iterator<char>>  
@@ -111,7 +117,7 @@ numpunct<char>
 numpunct<wchar_t>  
 ```  
   
- La catégorie time (LC_TIME) comprend les facettes suivantes :  
+ Category time (LC_TIME) includes the facets:  
   
 ```  
 time_get<char, istreambuf_iterator<char>>  
@@ -120,32 +126,32 @@ time_put<char, ostreambuf_iterator<char>>
 time_put<wchar_t, ostreambuf_iterator<wchar_t>>  
 ```  
   
- La catégorie messages (LC_MESSAGES) comprend les facettes suivantes :  
+ Category messages (LC_MESSAGES) includes the facets:  
   
 ```  
 messages<char>  
 messages<wchar_t>  
 ```  
   
- La dernière catégorie est requise par Posix, mais pas par le C standard.  
+ (The last category is required by Posix, but not the C Standard.)  
   
- Certaines de ces facettes prédéfinies sont utilisées par les classes iostreams pour contrôler la conversion des valeurs numériques en séquences de texte, et inversement.  
+ Some of these predefined facets are used by the iostreams classes, to control the conversion of numeric values to and from text sequences.  
   
- Un objet de classe locale stocke également un nom de paramètres régionaux en tant qu’objet de classe [string](../standard-library/string-typedefs.md#string). L’utilisation d’un nom de paramètres régionaux non valide pour construire une facette de paramètres régionaux ou un objet de paramètres régionaux entraîne la levée d’un objet de la classe [runtime_error](../standard-library/runtime-error-class.md). Le nom de paramètres régionaux stocké est `"*"` si l'objet de paramètres régionaux ne peut pas avoir la garantie que les paramètres régionaux de style C correspondent exactement à ceux représentés par l'objet. Sinon, vous pouvez créer des paramètres régionaux correspondants dans la bibliothèque C standard pour l’objet de paramètres régionaux `Loc`, en appelant `setlocale`(LC_ALL `,` `Loc`. [name](#name)`().c_str()`).  
+ An object of class locale also stores a locale name as an object of class [string](../standard-library/string-typedefs.md#string). Using an invalid locale name to construct a locale facet or a locale object throws an object of class [runtime_error](../standard-library/runtime-error-class.md). The stored locale name is `"*"` if the locale object cannot be certain that a C-style locale corresponds exactly to that represented by the object. Otherwise, you can establish a matching locale within the Standard C Library, for the locale object `Loc`, by calling `setlocale`(LC_ALL `,` `Loc`. [name](#name)`().c_str()`).  
   
- Dans cette implémentation, vous pouvez également appeler la fonction membre statique :  
+ In this implementation, you can also call the static member function:  
   
 ```  
 static locale empty();
 ```  
   
- pour construire un objet de paramètres régionaux sans facette. Il s’agit également de paramètres régionaux transparents. Si les fonctions de modèle [has_facet](../standard-library/locale-functions.md#has_facet) et [use_facet](../standard-library/locale-functions.md#use_facet) ne trouvent pas la facette demandée dans les paramètres régionaux transparents, elles consultent d’abord les paramètres régionaux globaux puis, s’ils sont transparents, les paramètres régionaux classiques. Par conséquent, vous pouvez écrire :  
+ to construct a locale object that has no facets. It is also a transparent locale; if the template functions [has_facet](../standard-library/locale-functions.md#has_facet) and [use_facet](../standard-library/locale-functions.md#use_facet) cannot find the requested facet in a transparent locale, they consult first the global locale and then, if that is transparent, the classic locale. Thus, you can write:  
   
 ```  
 cout.imbue(locale::empty());
 ```  
   
-Les insertions ultérieures dans [cout](../standard-library/iostream.md#cout) sont atténuées par l’état actuel des paramètres régionaux globaux. Vous pouvez même écrire :  
+Subsequent insertions to [cout](../standard-library/iostream.md#cout) are mediated by the current state of the global locale. You can even write:  
   
 ```  
 locale loc(locale::empty(),
@@ -155,56 +161,56 @@ locale loc(locale::empty(),
 cout.imbue(loc);
 ```   
   
- Les règles de mise en forme numérique pour les insertions suivantes dans `cout` restent les mêmes que dans les paramètres régionaux du langage C, même lorsque les paramètres régionaux globaux fournissent des règles différentes d'insertion de dates et de valeurs monétaires.  
+ Numeric formatting rules for subsequent insertions to `cout` remain the same as in the C locale, even as the global locale supplies changing rules for inserting dates and monetary amounts.  
   
-### <a name="constructors"></a>Constructeurs  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[locale](#locale)|Crée des paramètres régionaux, une copie de paramètres régionaux ou une copie de paramètres régionaux où une facette ou une catégorie a été remplacée par une facette, ou une catégorie provenant d'autres paramètres régionaux.|  
+|[locale](#locale)|Creates a locale, or a copy of a locale, or a copy of locale where a facet or a category has been replaced by a facet or category from another locale.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[category](#category)|Type entier qui fournit des valeurs de masque de bits pour indiquer des familles de facettes standard.|  
+|[category](#category)|An integer type that provides bitmask values to denote standard facet families.|  
   
-### <a name="member-functions"></a>Fonctions membres  
-  
-|||  
-|-|-|  
-|[combine](#combine)|Insère une facette à partir des paramètres régionaux spécifiés dans les paramètres régionaux cibles.|  
-|[name](#name)|Retourne le nom des paramètres régionaux stocké.|  
-  
-### <a name="static-functions"></a>Fonctions statiques  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[classic](#classic)|La fonction membre statique retourne un objet de paramètres régionaux qui représente les paramètres régionaux classiques du langage C.|  
-|[global](#global)|Réinitialise les paramètres régionaux par défaut du programme.|  
+|[combine](#combine)|Inserts a facet from a specified locale into a target locale.|  
+|[name](#name)|Returns the stored locale name.|  
   
-### <a name="operators"></a>Opérateurs  
+### <a name="static-functions"></a>Static Functions  
   
 |||  
 |-|-|  
-|[operator!=](#op_neq)|Vérifie l'inégalité de deux ensembles de paramètres régionaux.|  
-|[operator( )](#op_call)|Compare deux objets `basic_string`.|  
-|[operator==](#op_eq_eq)|Vérifie l'égalité de deux ensembles de paramètres régionaux.|  
+|[classic](#classic)|The static member function returns a locale object that represents the classic C locale.|  
+|[global](#global)|Resets the default local for the program.|  
+  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[operator!=](#op_neq)|Tests two locales for inequality.|  
+|[operator( )](#op_call)|Compares two `basic_string` objects.|  
+|[operator==](#op_eq_eq)|Tests two locales for equality.|  
   
 ### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[facet](#facet_class)|Classe qui sert de classe de base pour toutes les facettes de paramètres régionaux.|  
-|[id](#id_class)|La classe membre fournit un ID unique de facette utilisé comme index pour rechercher les facettes de paramètres régionaux.|  
+|[facet](#facet_class)|A class that serves as the base class for all locale facets.|  
+|[id](#id_class)|The member class provides a unique facet identification used as an index for looking up facets in a locale.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
 ##  <a name="category"></a>  locale::category  
- Type entier qui fournit des valeurs de masque de bits pour indiquer des familles de facettes standard.  
+ An integer type that provides bitmask values to denote standard facet families.  
   
 ```  
 typedef int category;  
@@ -218,43 +224,43 @@ static const int all = LC_ALL;
 static const int none = 0;  
 ```  
   
-### <a name="remarks"></a>Remarques  
- Le type est un synonyme d’un type `int` qui peut représenter un groupe d’éléments distincts d’un type de masque de bits local à la classe locale ou qui peut être utilisé pour représenter n’importe laquelle des catégories de paramètres régionaux C correspondantes. Les éléments sont :  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for an `int` type that can represent a group of distinct elements of a bitmask type local to class locale or can be used to represent any of the corresponding C locale categories. The elements are:  
   
-- **collate**, qui correspond à la catégorie C LC_COLLATE  
+- **collate**, corresponding to the C category LC_COLLATE  
   
-- **ctype**, qui correspond à la catégorie C LC_CTYPE  
+- **ctype**, corresponding to the C category LC_CTYPE  
   
-- **monetary**, qui correspond à la catégorie C LC_MONETARY  
+- **monetary**, corresponding to the C category LC_MONETARY  
   
-- **numeric**, qui correspond à la catégorie C LC_NUMERIC  
+- **numeric**, corresponding to the C category LC_NUMERIC  
   
-- **time**, qui correspond à la catégorie C LC_TIME  
+- **time**, corresponding to the C category LC_TIME  
   
-- **messages**, qui correspond à la catégorie Posix LC_MESSAGES  
+- **messages**, corresponding to the Posix category LC_MESSAGES  
   
- En outre, les deux valeurs suivantes sont utiles :  
+ In addition, two useful values are:  
   
-- **none**, qui correspond à aucune des catégories C  
+- **none**, corresponding to none of the C categories  
   
-- **all**, qui correspond à l’union C de toutes les catégories LC_ALL  
+- **all**, corresponding to the C union of all categories LC_ALL  
   
- Vous pouvez représenter un groupe arbitraire de catégories en utilisant `OR` avec ces constantes, comme dans **monetary** &#124; **time**.  
+ You can represent an arbitrary group of categories by using `OR` with these constants, as in **monetary** &#124; **time**.  
   
 ##  <a name="classic"></a>  locale::classic  
- La fonction membre statique retourne un objet de paramètres régionaux qui représente les paramètres régionaux classiques du langage C.  
+ The static member function returns a locale object that represents the classic C locale.  
   
 ```  
 static const locale& classic();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Référence aux paramètres régionaux C.  
+### <a name="return-value"></a>Return Value  
+ A reference to the C locale.  
   
-### <a name="remarks"></a>Remarques  
- Les paramètres régionaux C classiques sont les paramètres régionaux ASCII États-Unis Anglais dans la bibliothèque C standard qui sont implicitement utilisés dans les programmes qui ne sont pas internationalisés.  
+### <a name="remarks"></a>Remarks  
+ The classic C locale is the U.S. English ASCII locale within the Standard C Library that is implicitly used in programs that are not internationalized.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_classic.cpp  
@@ -294,21 +300,21 @@ The current locale is not classic.
 ```  
   
 ##  <a name="combine"></a>  locale::combine  
- Insère une facette à partir des paramètres régionaux spécifiés dans les paramètres régionaux cibles.  
+ Inserts a facet from a specified locale into a target locale.  
   
 ```  
 template <class Facet>  
 locale combine(const locale& Loc) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Loc`  
- Paramètres régionaux contenant la facette à insérer dans les paramètres régionaux cibles.  
+ The locale containing the facet to be inserted into the target locale.  
   
-### <a name="return-value"></a>Valeur de retour  
- La fonction membre retourne un objet de paramètres régionaux qui remplace ou ajoute à **\*this** la facette `Facet` répertoriée dans `Loc`.  
+### <a name="return-value"></a>Return Value  
+ The member function returns a locale object that replaces in or adds to **\*this** the facet `Facet` listed in `Loc`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_combine.cpp  
@@ -338,8 +344,8 @@ int main() {
 }  
 ```  
   
-##  <a name="facet_class"></a> facet, classe  
- Classe qui sert de classe de base pour toutes les facettes de paramètres régionaux.  
+##  <a name="facet_class"></a>  facet Class  
+ A class that serves as the base class for all locale facets.  
 
 ```    
 class facet { 
@@ -352,29 +358,29 @@ private:
      // not defined    
 };  
 ```  
-### <a name="remarks"></a>Remarques  
- Notez que vous ne pouvez pas copier ou assigner un objet de la classe facette. Vous pouvez construire et détruire des objets dérivés de la classe `locale::facet`, mais pas des objets de la classe de base proprement dite. En règle générale, vous construisez un objet `_Myfac` dérivé de facet quand vous construisez des paramètres régionaux, comme dans **localeloc**( `locale::classic`( ), **new**`_Myfac`);  
+### <a name="remarks"></a>Remarks  
+ Note that you cannot copy or assign an object of class facet. You can construct and destroy objects derived from class `locale::facet` but not objects of the base class proper. Typically, you construct an object `_Myfac` derived from facet when you construct a locale, as in **localeloc**( `locale::classic`( ), **new**`_Myfac`);  
   
- Dans ces cas-là, le constructeur de la classe de base facet doit avoir un argument `_Refs` égal à zéro. Quand l’objet n’est plus nécessaire, il est supprimé. Ainsi, vous fournissez un argument _ *Refs* différent de zéro uniquement dans les rares cas où vous prenez la responsabilité de la durée de vie de l’objet.  
+ In such cases, the constructor for the base class facet should have a zero `_Refs` argument. When the object is no longer needed, it is deleted. Thus, you supply a nonzero _ *Refs* argument only in those rare cases where you take responsibility for the lifetime of the object.  
   
 ##  <a name="global"></a>  locale::global  
- Réinitialise les paramètres régionaux par défaut du programme. Cela affecte les paramètres régionaux globaux pour C et C++.  
+ Resets the default locale for the program. This affects the global locale for both C and C++.  
   
 ```  
 static locale global(const locale& Loc);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Loc`  
- Paramètres régionaux à utiliser comme paramètres régionaux par défaut par le programme.  
+ The locale to be used as the default locale by the program.  
   
-### <a name="return-value"></a>Valeur de retour  
- Paramètres régionaux en vigueur avant la réinitialisation des paramètres régionaux par défaut.  
+### <a name="return-value"></a>Return Value  
+ The previous locale before the default locale was reset.  
   
-### <a name="remarks"></a>Remarques  
- Au démarrage du programme, les paramètres régionaux globaux sont les mêmes que les paramètres régionaux classiques. La fonction `global()` appelle `setlocale( LC_ALL, loc.name. c_str())` pour déterminer les paramètres régionaux correspondants dans la bibliothèque C standard.  
+### <a name="remarks"></a>Remarks  
+ At program startup, the global locale is the same as the classic locale. The `global()` function calls `setlocale( LC_ALL, loc.name. c_str())` to establish a matching locale in the Standard C library.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_global.cpp  
@@ -402,16 +408,16 @@ The current locale is: German_Germany.1252
 The previous locale was: C  
 ```  
   
-##  <a name="id_class"></a>  id, classe  
- La classe membre fournit un ID unique de facette utilisé comme index pour rechercher les facettes de paramètres régionaux.  
+##  <a name="id_class"></a>  id Class  
+ The member class provides a unique facet identification used as an index for looking up facets in a locale.  
   
 class id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };  
   
-### <a name="remarks"></a>Remarques  
- La classe membre décrit l’objet membre statique exigé par chaque facette de paramètres régionaux unique. Notez que vous ne pouvez pas copier ou assigner un objet de la classe **id**.  
+### <a name="remarks"></a>Remarks  
+ The member class describes the static member object required by each unique locale facet. Note that you cannot copy or assign an object of class **id**.  
   
 ##  <a name="locale"></a>  locale::locale  
- Crée des paramètres régionaux, une copie de paramètres régionaux ou une copie de paramètres régionaux où une facette ou une catégorie a été remplacée par une facette, ou une catégorie provenant d'autres paramètres régionaux.  
+ Creates a locale, or a copy of a locale, or a copy of locale where a facet or a category has been replaced by a facet or category from another locale.  
   
 ```  
 locale();
@@ -426,42 +432,42 @@ template <class Facet>
 locale(const locale& Loc, const Facet* Fac);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Locname`  
- Nom de paramètres régionaux.  
+ Name of a locale.  
   
  `Loc`  
- Paramètres régionaux qui doivent être copiés lors de la construction des nouveaux paramètres régionaux.  
+ A locale that is to be copied in constructing the new locale.  
   
  `Other`  
- Paramètres régionaux à partir desquels sélectionner une catégorie.  
+ A locale from which to select a category.  
   
  `Cat`  
- Catégorie à substituer dans les paramètres régionaux construits.  
+ The category to be substituted into the constructed locale.  
   
  `Fac`  
- Facette à substituer dans les paramètres régionaux construits.  
+ The facet to be substituted into the constructed locale.  
   
-### <a name="remarks"></a>Remarques  
- Le premier constructeur initialise l’objet pour qu’il corresponde aux paramètres régionaux globaux. Les deuxième et troisièmes constructeurs initialisent toutes les catégories de paramètres régionaux pour avoir un comportement cohérent avec le nom de paramètres régionaux `Locname`. Les autres constructeurs copient `Loc`, avec les exceptions suivantes :  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the object to match the global locale. The second and third constructors initialize all the locale categories to have behavior consistent with the locale name `Locname`. The remaining constructors copy `Loc`, with the exceptions noted:  
   
  `locale(const locale& Loc, const locale& Other, category Cat);`  
   
- remplace dans `Other` les facettes correspondant à une catégorie C pour lesquelles C et `Cat` sont différents de zéro.  
+ replaces from `Other` those facets corresponding to a category C for which C & `Cat` is nonzero.  
   
  `locale(const locale& Loc, const char* Locname, category Cat);`  
   
  `locale(const locale& Loc, const string& Locname, category Cat);`  
   
- remplace dans `locale(Locname, _All)` les facettes correspondant à une catégorie C pour lesquelles C et `Cat` sont différents de zéro.  
+ replaces from `locale(Locname, _All)` those facets corresponding to a category C for which C & `Cat` is nonzero.  
   
  `template<class Facet> locale(const locale& Loc, Facet* Fac);`  
   
- remplace dans (ou ajoute à) `Loc` la facette `Fac`, si `Fac` n’est pas un pointeur Null.  
+ replaces in (or adds to) `Loc` the facet `Fac`, if `Fac` is not a null pointer.  
   
- Si un nom de paramètres régionaux `Locname` est un pointeur Null ou s’il n’est pas valide, la fonction lève [runtime_error](../standard-library/runtime-error-class.md).  
+ If a locale name `Locname` is a null pointer or otherwise invalid, the function throws [runtime_error](../standard-library/runtime-error-class.md).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_locale.cpp  
@@ -502,16 +508,16 @@ int main( ) {
 ```  
   
 ##  <a name="name"></a>  locale::name  
- Retourne le nom des paramètres régionaux stocké.  
+ Returns the stored locale name.  
   
 ```  
 string name() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Chaîne indiquant le nom des paramètres régionaux.  
+### <a name="return-value"></a>Return Value  
+ A string giving the name of the locale.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_name.cpp  
@@ -539,23 +545,23 @@ The name of the current locale is: German_Germany.1252.
 ```  
   
 ##  <a name="op_neq"></a>  locale::operator!=  
- Vérifie l'inégalité de deux ensembles de paramètres régionaux.  
+ Tests two locales for inequality.  
   
 ```  
 bool operator!=(const locale& right) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- L’un des paramètres régionaux dont l’inégalité doit être testée.  
+ One of the locales to be tested for inequality.  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur booléenne qui est **true** si les paramètres régionaux ne sont pas des copies des mêmes paramètres régionaux ; **false** si les paramètres régionaux sont des copies des mêmes paramètres régionaux.  
+### <a name="return-value"></a>Return Value  
+ A Boolean value that is **true** if the locales are not copies of the same locale; **false** if the locales are copies of the same locale.  
   
-### <a name="remarks"></a>Remarques  
- Deux paramètres régionaux sont égaux s’ils s’agit des mêmes paramètres régionaux, si l’un est une copie de l’autre, ou s’ils ont des noms identiques.  
+### <a name="remarks"></a>Remarks  
+ Two locales are equal if they are the same locale, if one is a copy of the other, or if they have identical names.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_op_ne.cpp  
@@ -596,7 +602,7 @@ locales loc1 (German_Germany.1252) and
 ```  
   
 ##  <a name="op_call"></a>  locale::operator()  
- Compare deux objets `basic_string`.  
+ Compares two `basic_string` objects.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -605,24 +611,24 @@ bool operator()(
     const basic_string<CharType, Traits, Allocator>& right) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `left`  
- Chaîne de gauche.  
+ The left string.  
   
  `right`  
- Chaîne de droite.  
+ The right string.  
   
-### <a name="return-value"></a>Valeur de retour  
- La fonction membre retourne :  
+### <a name="return-value"></a>Return Value  
+ The member function returns:  
   
--   -1 si la première séquence est inférieure à la deuxième séquence.  
+-   -1 if the first sequence compares less than the second sequence.  
   
--   +1 si la deuxième séquence est inférieure à la première séquence.  
+-   +1 if the second sequence compares less than the first sequence.  
   
--   0 si les séquences sont équivalentes.  
+-   0 if the sequences are equivalent.  
   
-### <a name="remarks"></a>Remarques  
- La fonction de modèle exécute :  
+### <a name="remarks"></a>Remarks  
+ The member function effectively executes:  
   
 ```  
 const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
@@ -630,9 +636,9 @@ const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
 return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 ```  
   
- Ainsi, vous pouvez utiliser un objet de paramètres régionaux comme objet de fonction.  
+ Thus, you can use a locale object as a function object.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_op_compare.cpp  
@@ -664,23 +670,23 @@ int main( )
 ```  
   
 ##  <a name="op_eq_eq"></a>  locale::operator==  
- Vérifie l'égalité de deux ensembles de paramètres régionaux.  
+ Tests two locales for equality.  
   
 ```  
 bool operator==(const locale& right) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- L’un des paramètres régionaux dont l’égalité doit être testée.  
+ One of the locales to be tested for equality.  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur booléenne qui est **true** si les paramètres régionaux sont des copies des mêmes paramètres régionaux ; **false** si les paramètres régionaux ne sont pas des copies des mêmes paramètres régionaux.  
+### <a name="return-value"></a>Return Value  
+ A Boolean value that is **true** if the locales are copies of the same locale; **false** if the locales are not copies of the same locale.  
   
-### <a name="remarks"></a>Remarques  
- Deux paramètres régionaux sont égaux s’ils s’agit des mêmes paramètres régionaux, si l’un est une copie de l’autre, ou s’ils ont des noms identiques.  
+### <a name="remarks"></a>Remarks  
+ Two locales are equal if they are the same locale, if one is a copy of the other, or if they have identical names.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_op_eq.cpp  
@@ -724,10 +730,10 @@ locales loc1 (German_Germany.1252)
  and loc3 (English_United States.1252) are not equal.  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<locale>](../standard-library/locale.md)   
- [Pages de codes](../c-runtime-library/code-pages.md)   
- [Chaînes relatives aux noms, aux langues, au pays et à la région des paramètres régionaux](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Code Pages](../c-runtime-library/code-pages.md)   
+ [Locale Names, Languages, and Country/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: basic_iostream, classe | Microsoft Docs
+title: basic_iostream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - istream/std::basic_iostream
-- basic_iostream
 - istream/std::basic_iostream::swap
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3a71df6cc23c0c8f4e6faeb39474c363ed1bd412
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4dfef84872abb7bc821b87e3eb442b76ebbb6e50
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basiciostream-class"></a>basic_iostream, classe
-Classe de flux qui peut effectuer à la fois l'entrée et la sortie.  
+# <a name="basiciostream-class"></a>basic_iostream Class
+A stream class that can do both input and output.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Elem, class Tr = char_traits<Elem>>  
@@ -60,34 +59,34 @@ public:
 };  
 ```  
   
-## <a name="remarks"></a>Notes  
- La classe de modèle décrit un objet qui contrôle les insertions, par le biais de sa classe de base [basic_ostream](../standard-library/basic-ostream-class.md)< `Elem`, `Tr`>, et les extractions, par le biais de sa classe de base [basic_istream](../standard-library/basic-istream-class.md)< `Elem`, `Tr`>. Les deux objets partagent une classe de base virtuelle commune [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>. Ils gèrent également une mémoire tampon de flux commune, avec des éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`. Le constructeur initialise ses classes de base avec `basic_istream`( **strbuf**) et `basic_ostream`( **strbuf**).  
+## <a name="remarks"></a>Remarks  
+ The template class describes an object that controls insertions, through its base class [basic_ostream](../standard-library/basic-ostream-class.md)< `Elem`, `Tr`>, and extractions, through its base class [basic_istream](../standard-library/basic-istream-class.md)< `Elem`, `Tr`>. The two objects share a common virtual base class [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>. They also manage a common stream buffer, with elements of type `Elem`, whose character traits are determined by the class `Tr`. The constructor initializes its base classes through `basic_istream`( **strbuf**) and `basic_ostream`( **strbuf**).  
   
-### <a name="constructors"></a>Constructeurs  
-  
-|||  
-|-|-|  
-|[basic_iostream](#basic_iostream)|Créez un objet `basic_iostream`.|  
-  
-### <a name="member-functions"></a>Fonctions membres  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[swap](#swap)|Échange le contenu de l'objet `basic_iostream` fourni avec le contenu de cet objet.|  
+|[basic_iostream](#basic_iostream)|Create a `basic_iostream` object.|  
   
-### <a name="operators"></a>Opérateurs  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator=](#op_eq)|Assigne la valeur d'un objet `basic_iostream` spécifié à cet objet. Il s'agit d'une assignation de déplacement impliquant une `rvalue` qui ne laisse pas de copie.|  
+|[swap](#swap)|Exchanges the contents of the provided `basic_iostream` object for the contents of this object.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<istream>  
+### <a name="operators"></a>Operators  
   
- **Espace de noms :** std  
+|||  
+|-|-|  
+|[operator=](#op_eq)|Assigns the value of a specified `basic_iostream` object to this object. This is a move assignment involving an `rvalue` that does not leave a copy behind.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<istream>  
+  
+ **Namespace:** std  
   
 ##  <a name="basic_iostream"></a>  basic_iostream::basic_iostream  
- Créez un objet `basic_iostream`.  
+ Create a `basic_iostream` object.  
   
 ```  
 explicit basic_iostream(basic_streambuf<Elem, Tr>* strbuf);
@@ -97,49 +96,49 @@ basic_iostream(basic_iostream&& right);
 basic_iostream();
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `strbuf`  
- Objet `basic_streambuf` existant.  
+ An existing `basic_streambuf` object.  
   
  `right`  
- Objet `basic_iostream` existant utilisé pour construire un nouveau `basic_iostream`.  
+ An existing `basic_iostream` object that is used to construct a new `basic_iostream`.  
   
-### <a name="remarks"></a>Notes  
- Le premier constructeur initialise les objets de base par l’intermédiaire de `basic_istream(strbuf)` et `basic_ostream(strbuf)`.  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the base objects by way of `basic_istream(strbuf)` and `basic_ostream(strbuf)`.  
   
- Le deuxième constructeur initialise les objets de base en appelant `move(right)`.  
+ The second constructor initializes the base objects by calling `move(right)`.  
   
 ##  <a name="op_eq"></a>  basic_iostream::operator=  
- Assigne la valeur d'un objet `basic_iostream` spécifié à cet objet. Il s'agit d'une assignation de déplacement qui implique une rvalue qui ne laisse pas de copie.  
+ Assign the value of a specified `basic_iostream` object to this object. This is a move assignment involving an rvalue that does not leave a copy behind.  
   
 ```  
 basic_iostream& operator=(basic_iostream&& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Référence `rvalue` à un objet `basic_iostream` à partir duquel effectuer l'assignation.  
+ An `rvalue` reference to a `basic_iostream` object to assign from.  
   
-### <a name="remarks"></a>Remarques  
- L’opérateur membre appelle `swap(right)`.  
+### <a name="remarks"></a>Remarks  
+ The member operator calls `swap(right)`.  
   
 ##  <a name="swap"></a>  basic_iostream::swap  
- Échange le contenu de l'objet `basic_iostream` fourni avec le contenu de cet objet.  
+ Exchanges the contents of the provided `basic_iostream` object for the contents of this object.  
   
 ```  
 void swap(basic_iostream& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Objet `basic_iostream` à échanger.  
+ The `basic_iostream` object to swap.  
   
-### <a name="remarks"></a>Remarques  
- La fonction membre appelle `swap(right)`.  
+### <a name="remarks"></a>Remarks  
+ The member function calls `swap(right)`.  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream, programmation](../standard-library/iostream-programming.md)   
- [iostreams, conventions](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
