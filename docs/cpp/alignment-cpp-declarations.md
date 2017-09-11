@@ -1,40 +1,56 @@
 ---
-title: "Alignement (d&#233;clarations&#160;C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Alignment (C++ Declarations) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Alignement (d&#233;clarations&#160;C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: ed5f2b959eb6f437b7ed9a9432df22f87e455e42
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/11/2017
 
-Une des fonctionnalités de bas niveau de C\+\+ est la possibilité de spécifier avec précision l'alignement des objets en mémoire afin d'exploiter au mieux les capacités d'une architecture matérielle spécifique.  Par défaut, le compilateur aligne les membres de classe et de structure par rapport à leur taille : les objets bool et char sont alignés sur des limites d'un octet, les objets short sur deux octets, les objets int sur quatre octets, et les objets long, double et long double sur huit octets.  Dans la plupart des scénarios, vous n'avez pas à vous préoccuper de l'alignement, car l'alignement par défaut est déjà optimal.  Dans certains cas toutefois, vous pouvez améliorer nettement les performances ou consommer beaucoup moins de mémoire en spécifiant un alignement personnalisé pour vos structures de données.  Avant Visual Studio 2015, vous pouviez utiliser les mots clés Microsoft spécifiques \_\_alignof et declspec\(alignas\) pour spécifier un alignement supérieur à la valeur par défaut.  Depuis Visual Studio 2015, vous devez utiliser les mots clés standard C\+\+11 [alignof et alignas](../cpp/alignof-and-alignas-cpp.md) pour garantir une portabilité maximale du code.  Les nouveaux mots clés se comportant intrinsèquement de la même façon que les extensions Microsoft, la documentation de ces extensions s'applique également aux nouveaux mots clés.  Pour plus d'informations, voir [\_\_alignof, opérateur](../cpp/alignof-operator.md) et [align](../cpp/align-cpp.md).  La norme C\+\+ ne spécifie pas de comportement de compression pour l'alignement sur des limites inférieures à celles du compilateur par défaut sur la plateforme cible. Dans ce cas, vous devez donc encore utiliser le \#pragma [pack](../preprocessor/pack.md) de Microsoft.  
+---
+# <a name="alignment-c-declarations"></a>Alignment (C++ Declarations)
+One of the low-level features of C++ is the ability to specify the precise alignment of objects in memory to take maximum advantage of a specific hardware architecture. By default, the compiler aligns class and struct members on their size value: bool and char are aligned one one byte boundaries, short on two byte, int on four bytes, long long, double and long double on eight bytes. In most scenarios you never have to be concerned with alignment because the default alignment is already optimal. In some cases however, you can achieve significant performance improvements, or memory savings, by specifying a custom alignment for your data structures. Prior to Visual Studio 2015 you could use the Microsoft-specific keywords __alignof and declspec(alignas) to specify an alignment greater than the default. Starting in Visual Studio 2015 you should use the C++11 standard keywords [alignof and alignas](../cpp/alignof-and-alignas-cpp.md) for maximum code portability. The new keywords behave in the same way under the hood as the Microsoft-specific extensions, and the documentation for those extensions also applies to the new keywords. See [__alignof Operator](../cpp/alignof-operator.md) and [align](../cpp/align-cpp.md) for more information. The C++ standard does not specify packing behavior for aligning on boundaries smaller than the compiler default for the target platform, so you still need to use the Microsoft #pragma [pack](../preprocessor/pack.md) in that case.  
   
- La bibliothèque standard C\+\+ fournit la [aligned\_storage, classe](../standard-library/aligned-storage-class.md) pour allouer de la mémoire aux structures de données présentant des alignements personnalisés. Elle fournit aussi la [aligned\_union, classe](../standard-library/aligned-union-class.md) qui permet de spécifier l'alignement pour les unions contenant des constructeurs ou des destructeurs non triviaux.  
+ The C++ standard library provides the [aligned_storage Class](../standard-library/aligned-storage-class.md) for allocating memory for data structures with custom alignments, and the [aligned_union Class](../standard-library/aligned-union-class.md) for specifying alignment for unions with non-trivial constructors or destructors.  
   
-## Présentation de l'alignement  
- L'alignement est une propriété d'une adresse mémoire, exprimée sous la forme de l'adresse numérique modulo une puissance de 2.  Par exemple, l'adresse 0x0001103F modulo 4 est 3. Cette adresse est considérée comme étant alignée sur 4n\+3, où 4 indique la puissance de 2 choisie.  L'alignement d'une adresse dépend de la puissance de 2 choisie.  La même adresse modulo 8 est 7.  Une adresse est considérée comme étant alignée sur X si son alignement est Xn\+0.  
+## <a name="about-alignment"></a>About Alignment  
+ Alignment is a property of a memory address, expressed as the numeric address modulo a power of 2. For example, the address 0x0001103F modulo 4 is 3; that address is said to be aligned to 4n+3, where 4 indicates the chosen power of 2. The alignment of an address depends on the chosen power of two. The same address modulo 8 is 7. An address is said to be aligned to X if its alignment is Xn+0.  
   
- Les processeurs exécutent des instructions qui opèrent sur des données stockées en mémoire, ces données étant identifiées par leur adresse en mémoire.  Chaque donnée a une adresse distincte, mais également une taille spécifique.  Une donnée est naturellement considérée comme alignée si son adresse est alignée sur sa taille. Sinon, elle est considérée comme non alignée.  Par exemple, une donnée à virgule flottante de 8 octets est naturellement alignée si l'adresse utilisée pour l'identifier est alignée sur 8.  
+ CPUs execute instructions that operate on data stored in memory, and the data are identified by their addresses in memory. In addition to its address, a single datum also has a size. A datum is called naturally aligned if its address is aligned to its size, and misaligned otherwise. For example, an 8-byte floating-point datum is naturally aligned if the address used to identify it is aligned to 8.  
   
- Les compilateurs matériels gèrent l'alignement des données en essayant d'allouer les données d'une manière qui empêche tout mauvais alignement.  
+ Compiler handling of data alignmentDevice compilers attempt to allocate data in a way that prevents data misalignment.  
   
- Pour les types de données simples, le compilateur assigne des adresses qui sont des multiples de la taille en octets du type de données.  Par conséquent, le compilateur assigne des adresses aux variables de type long qui sont des multiples de quatre, en définissant les deux derniers octets des adresses à zéro.  
+ For simple data types, the compiler assigns addresses that are multiples of the size in bytes of the data type. Thus, the compiler assigns addresses to variables of type long that are multiples of four, setting the bottom two bits of the address to zero.  
   
- De plus, le compilateur remplit les structures de façon à aligner naturellement chaque élément des structures.  Examinons la structure struct x\_ dans l'exemple de code suivant :  
+ In addition, the compiler pads structures in a way that naturally aligns each element of the structure. Consider the structure struct x_ in the following code example:  
   
 ```  
 struct x_  
@@ -47,9 +63,9 @@ struct x_
   
 ```  
   
- Le compilateur remplit cette structure pour appliquer naturellement l'alignement.  
+ The compiler pads this structure to enforce alignment naturally.  
   
- L'exemple de code suivant montre comment le compilateur place la structure remplie dans memory:Copy  
+ The following code example shows how the compiler places the padded structure in memory:Copy  
   
 ```  
 // Shows the actual memory layout  
@@ -65,17 +81,17 @@ struct x_
   
 ```  
   
-1.  Les deux déclarations retournent une valeur sizeof\(struct x\_\) de 12 octets.  
+1.  Both declarations return sizeof(struct x_) as 12 bytes.  
   
-2.  La deuxième déclaration inclut deux éléments de remplissage :  
+2.  The second declaration includes two padding elements:  
   
-3.  char \_pad0\[3\] pour aligner le membre int b sur une limite de 4 octets  
+3.  char _pad0[3] to align the int b member on a four-byte boundary  
   
-4.  char \_pad1\[1\] pour aligner les éléments tableau de la structure struct \_x bar\[3\];  
+4.  char _pad1[1] to align the array elements of the structure struct _x bar[3];  
   
-5.  Le remplissage aligne les éléments de bar\[3\] pour permettre un accès naturel.  
+5.  The padding aligns the elements of bar[3] in a way that allows natural access.  
   
- L'exemple de code suivant illustre la disposition de tableau bar\[3\] :  
+ The following code example shows the bar[3] array layout:  
   
 ```  
 adr offset   element  
@@ -103,5 +119,5 @@ adr offset   element
   
 ```  
   
-## Voir aussi  
- [Alignement des structures de données](http://en.wikipedia.org/wiki/Data_structure_alignment)
+## <a name="see-also"></a>See Also  
+ [Data Structure Alignment](http://en.wikipedia.org/wiki/Data_structure_alignment)

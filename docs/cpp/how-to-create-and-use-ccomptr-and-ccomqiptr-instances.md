@@ -1,45 +1,63 @@
 ---
-title: "Comment&#160;: cr&#233;er et utiliser des instances CComPtr et CComQIPtr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'How to: Create and Use CComPtr and CComQIPtr Instances | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Comment&#160;: cr&#233;er et utiliser des instances CComPtr et CComQIPtr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 27d3ae9fe9f740cec799218ab12897a7dd842d15
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/11/2017
 
-En programmation Windows classique, les bibliothèques sont souvent implémentées en tant qu'objets COM \(Component Object Model\), ou plus précisément, en tant que serveurs COM. De nombreux composants du système d'exploitation Windows sont implémentés en tant que serveurs COM, et de nombreux collaborateurs fournissent des bibliothèques sous cette forme. Pour plus d’informations sur les bases du modèle COM, consultez [Component Object Model \(COM\)](http://msdn.microsoft.com/fr-fr/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
+---
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>How to: Create and Use CComPtr and CComQIPtr Instances
+In classic Windows programming, libraries are often implemented as COM objects (or more precisely, as COM servers). Many Windows operating system components are implemented as COM servers, and many contributors provide libraries in this form. For information about the basics of COM, see [Component Object Model (COM)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
   
- Lorsque vous instanciez un objet COM, enregistrez le pointeur d'interface dans un pointeur intelligent COM, qui effectue un décompte de références en utilisant des appels à `AddRef` et `Release` dans le destructeur. Si vous utilisez la bibliothèque ATL \(Active Template Library\) ou la bibliothèque MFC \(Microsoft Foundation Class\), utilisez le pointeur intelligent `CComPtr`. Si vous n'utilisez pas la bibliothèque ATL ou MFC, utilisez `_com_ptr_t`. Étant donné qu'aucun COM n'équivaut à `std::unique_ptr`, utilisez les pointeurs intelligents à la fois pour les scénarios à un seul propriétaire et ceux à plusieurs propriétaires.`CComPtr` et `ComQIPtr` prennent tous deux en charge les opérations de déplacement qui ont des références rvalue.  
+ When you instantiate a Component Object Model (COM) object, store the interface pointer in a COM smart pointer, which performs the reference counting by using calls to `AddRef` and `Release` in the destructor. If you are using the Active Template Library (ATL) or the Microsoft Foundation Class Library (MFC), then use the `CComPtr` smart pointer. If you are not using ATL or MFC, then use `_com_ptr_t`. Because there is no COM equivalent to `std::unique_ptr`, use these smart pointers for both single-owner and multiple-owner scenarios. Both `CComPtr` and `ComQIPtr` support move operations that have rvalue references.  
   
-## Exemple  
- L'exemple suivant montre comment utiliser `CComPtr` pour instancier un objet COM et obtenir des pointeurs sur ses interfaces. Notez que la fonction membre `CComPtr::CoCreateInstance` est utilisée pour créer l'objet COM, au lieu de la fonction Win32 qui porte le même nom.  
+## <a name="example"></a>Example  
+ The following example shows how to use `CComPtr` to instantiate a COM object and obtain pointers to its interfaces. Notice that the `CComPtr::CoCreateInstance` member function is used to create the COM object, instead of the Win32 function that has the same name.  
   
  [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]  
   
- `CComPtr` et ses parents font partie de la bibliothèque ATL et sont définis dans atlcomcli.h.`_com_ptr_t` est déclaré dans comip.h. Le compilateur crée des spécialisations de `_com_ptr_t` lorsqu'il génère des classes wrapper pour les bibliothèques de types.  
+ `CComPtr` and its relatives are part of the ATL and are defined in atlcomcli.h. `_com_ptr_t` is declared in comip.h. The compiler creates specializations of `_com_ptr_t` when it generates wrapper classes for type libraries.  
   
-## Exemple  
- La bibliothèque ATL fournit également `CComQIPtr`, qui a une syntaxe plus simple pour interroger un objet COM en vue de récupérer une interface supplémentaire. Toutefois, nous vous recommandons `CComPtr` car il fait tout ce que `CComQIPtr` peut faire et est sémantiquement plus cohérent avec les pointeurs d'interface COM bruts. Si vous utilisez `CComPtr` pour effectuer une requête à une interface, le nouveau pointeur d'interface est placé dans un paramètre de sortie. Si l'appel échoue, un HRESULT est retourné, qui est le modèle COM standard. Avec `CComQIPtr`, la valeur retournée est le pointeur lui\-même, et si l'appel échoue, la valeur de retour HRESULT interne est inaccessible. Les deux lignes suivantes indiquent comment les mécanismes de gestion des erreurs dans `CComPtr` et `CComQIPtr` diffèrent.  
+## <a name="example"></a>Example  
+ ATL also provides `CComQIPtr`, which has a simpler syntax for querying a COM object to retrieve an additional interface. However, we recommend `CComPtr` because it does everything that `CComQIPtr` can do and is semantically more consistent with raw COM interface pointers. If you use a `CComPtr` to query for an interface, the new interface pointer is placed in an out parameter. If the call fails, an HRESULT is returned, which is the typical COM pattern. With `CComQIPtr`, the return value is the pointer itself, and if the call fails, the internal HRESULT return value cannot be accessed. The following two lines show how the error handling mechanisms in `CComPtr` and `CComQIPtr` differ.  
   
  [!code-cpp[COM_smart_pointers#02](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_2.cpp)]  
   
-## Exemple  
- `CComPtr` fournit une spécialisation pour IDispatch qui lui permet de stocker les pointeurs vers les composants d'automation COM et d'appeler des méthodes sur l'interface à l'aide de la liaison tardive.`CComDispatchDriver` est un typedef pour `CComQIPtr<IDispatch, &IIDIDispatch>`, qui peut être converti implicitement en `CComPtr<IDispatch>`. Par conséquent, lorsque l'un de ces trois noms apparaît dans le code, il correspond à `CComPtr<IDispatch>`. L'exemple suivant montre comment obtenir un pointeur vers le modèle objet Microsoft Word en utilisant `CComPtr<IDispatch>`.  
+## <a name="example"></a>Example  
+ `CComPtr` provides a specialization for IDispatch that enables it to store pointers to COM automation components and invoke the methods on the interface by using late binding. `CComDispatchDriver` is a typedef for `CComQIPtr<IDispatch, &IIDIDispatch>`, which is implicitly convertible to `CComPtr<IDispatch>`. Therefore, when any of these three names appears in code, it is equivalent to `CComPtr<IDispatch>`. The following example shows how to obtain a pointer to the Microsoft Word object model by using a `CComPtr<IDispatch>`.  
   
  [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]  
   
-## Voir aussi  
- [Pointeurs intelligents](../cpp/smart-pointers-modern-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Smart Pointers](../cpp/smart-pointers-modern-cpp.md)

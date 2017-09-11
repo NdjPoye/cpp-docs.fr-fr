@@ -1,92 +1,101 @@
 ---
-title: "Algorithmes (Modern C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Algorithms (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Algorithmes (Modern C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 13b5b6c097bd8a68b0c91e6ede508559344a89ad
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/11/2017
 
-Pour la programmation C\+\+ moderne, nous vous recommandons d'utiliser les algorithmes de la [bibliothèque de modèles standard](../standard-library/cpp-standard-library-reference.md) \(STL\).  En voici quelques exemples importants :  
+---
+# <a name="algorithms-modern-c"></a>Algorithms (Modern C++)
+For modern C++ programming, we recommend that you use the algorithms in the [C++ Standard Library](../standard-library/cpp-standard-library-reference.md). Here are some important examples:  
   
--   `for_each`, qui est l'algorithme de traversée par défaut. \(Également `transform` pour les éléments sémantiques qui ne sont pas à leur place.\)  
+-   `for_each`, which is the default traversal algorithm. (Also `transform` for not-in-place semantics.)  
   
--   `find_if`, qui est l'algorithme de recherche par défaut.  
+-   `find_if`, which is the default search algorithm.  
   
--   `sort`, `lower_bound` et les autres algorithmes de tri et de recherche par défaut.  
+-   `sort`, `lower_bound`, and the other default sorting and searching algorithms.  
   
- Pour écrire un comparateur, utilisez `<` strict et utilisez des *expressions lambda nommés* lorsque vous le pouvez.  
+ To write a comparator, use strict `<` and use  *named lambdas* when you can.  
   
 ```cpp  
-  
 auto comp = [](const widget& w1, const widget& w2)  
       { return w1.weight() < w2.weight(); }  
   
 sort( v.begin(), v.end(), comp );  
   
 auto i = lower_bound( v.begin(), v.end(), comp );  
-  
 ```  
   
-## Boucles  
- Si possible, utilisez des appels d'algorithme ou des boucles `for` basés sur une plage , ou les deux, au lieu de boucles écrites à la main.  `copy`, `transform`, `count_if`, `remove_if` et d'autres du même type sont préférables aux boucles manuscrites car leur intention est évident et ils facilitent l'écriture de code exempt d'erreurs.  En outre, plusieurs algorithmes STL ont des optimisations d'implémentation qui les rendent plus efficaces.  
+## <a name="loops"></a>Loops  
+ When possible, use range-based `for` loops or algorithm calls, or both, instead of hand-written loops.`copy`, `transform`, `count_if`, `remove_if`, and others like them are much better than handwritten loops because their intent is obvious and they make it easier to write bug-free code. Also, many C++ Standard Library algorithms have implementation optimizations that make them more efficient.  
   
- Au lieu de l'ancien C\+\+ suivant :  
+ Instead of old C++ like this:  
   
 ```cpp  
-  
-for( auto i = strings.begin(); i != strings.end(); ++i ) {  
-  :::  
-  :::  
+for ( auto i = strings.begin(); i != strings.end(); ++i ) {  
+   /* ... */  
 }  
   
 auto i = v.begin();  
   
-for( ; i != v.end(); ++i ) {  
+for ( ; i != v.end(); ++i ) {  
   if (*i > x && *i < y) break;  
 }  
-  
 ```  
   
- Utilisez le C\+\+ moderne comme suit :  
+ Use modern C++ like this:  
   
 ```cpp  
-  
 for_each( begin(strings), end(strings), [](string& s) {  
-  :::  
-  :::  
+   // ...  
 } );  
-auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; }  );  
   
+auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );  
 ```  
   
-### basée sur une plage pour les boucles  
- La boucle basée sur une plage `for` est une fonctionnalité de langage C\/C\+\+ \+\+11, pas un algorithme STL.  Mais il mérite d'être mentionné dans cette discussion sur les boucles.  Les boucles `for` basées sur une plage sont une extension du mot clé `for` et fournissent un moyen pratique et efficace d'écrire des boucles qui itèrent au sein d'une plage de valeurs.  Les conteneurs, chaînes et tableaux STL sont prêts à l'emploi pour les boucles `for` basées sur une plage.  Pour activer cette nouvelle syntaxe d'itération pour votre type défini par l'utilisateur, ajoutez la prise en charge suivante :  
+### <a name="range-based-for-loops"></a>Range-based for loops  
+ The range-based `for` loop is a C++11 language feature, not a C++ Standard Library algorithm. But it deserves mention in this discussion about loops. Range-based `for` loops are an extension of the `for` keyword and provide a convenient and efficient way to write loops that iterate over a range of values. C++ Standard Library containers, strings, and arrays are ready-made for range-based `for` loops. To enable this new iteration syntax for your user-defined type, add the following support:  
   
--   Une méthode `begin` qui retourne un itérateur au début de la structure et une méthode `end` qui retourne un itérateur à la fin de la structure.  
+-   A `begin` method that returns an iterator to the beginning of the structure and an `end` method that returns an iterator to the end of the structure.  
   
--   Prise en charge dans l'itérateur des méthodes suivantes : `operator*`, `operator!=` et `operator++` \(version préfixée\).  
+-   Support in the iterator for these methods: `operator*`, `operator!=`, and `operator++` (prefix version).  
   
- Ces méthodes peuvent être des membres ou des fonctions autonomes.  
+ These methods can be either members or stand-alone functions.  
   
-## Nombres aléatoires  
- Nul n'ignore que l'ancienne fonction CRT `rand()` présente de nombreux défauts, qui ont été abordés en détail dans la communauté C\+\+.  En C\+\+ moderne, vous n'avez pas besoin de gérer ces problèmes, ni d'inventer votre propre générateur de nombres aléatoires distribués de manière uniforme, car les outils permettant de les créer rapidement et facilement sont disponibles dans la bibliothèque STL, comme indiqué dans [\<random\>](../standard-library/random.md).  
+## <a name="random-numbers"></a>Random Numbers  
+ It's no secret that the old CRT `rand()` function has many flaws, which have been discussed at length in the C++ community. In modern C++, you don't have to deal with those shortcomings—nor do you have to invent your own uniformly distributed random number generator—because the tools for quickly and easily creating them are available in the C++ Standard Library, as shown in [\<random>](../standard-library/random.md).  
   
-## Voir aussi  
- [Bienvenue dans C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Référence du langage C\+\+](../cpp/cpp-language-reference.md)   
- [Bibliothèque standard C\+\+](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)

@@ -1,44 +1,58 @@
 ---
-title: "char, wchar_t, char16_t, char32_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "char_cpp"
-  - "char16_t_cpp"
-  - "whchar_t_cpp"
-  - "char32_t_cpp"
-dev_langs: 
-  - "C++"
+title: char, wchar_t, char16_t, char32_t | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- char_cpp
+- char16_t_cpp
+- whchar_t_cpp
+- char32_t_cpp
+dev_langs:
+- C++
 ms.assetid: 6b33e9f5-455b-4e49-8f12-a150cbfe2e5b
 caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
----
-# char, wchar_t, char16_t, char32_t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: ed34959adc927aefd97299704285994897f4e6ef
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/11/2017
 
-Les types char, wchar\_t, char16\_t et char32\_t sont des types intégrés qui représentent des caractères alphanumériques, ainsi que des glyphes non alphanumériques et des caractères non imprimables.  char a une taille de huit bits, wchar\_t et char16\_t ont une taille de 16 bits et char32\_t a une taille de 32 bits.  
+---
+# <a name="char-wchart-char16t-char32t"></a>char, wchar_t, char16_t, char32_t
+The types char, wchar_t, char16_t and char32_t are built in types that represent alphanumeric characters as well as non-alphanumeric glyphs and non-printing characters. char is eight bits in size, wchar_t and char16_t are 16 bits in size, and char32_t is 32 bits.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntax  
   
-```vb  
-char     ch1{ 'a' };  
-wchar_t  ch2{ 'a' }; // or {L'a'}  
-char16_t ch3{ L'a' };// or {L'a'}  
-char32_t ch4{ L'a' };// or {L'a'}  
+```cpp  
+char     ch1{ 'a' };    wchar_t  ch2{ 'a' }; // or {L'a'}    char16_t ch3{ L'a' };// or {L'a'}    char32_t ch4{ L'a' };// or {L'a'}  
 ```  
   
-## Notes  
- Le type `char` était le type de caractère d'origine en C et C\+\+.  Il peut être utilisé pour stocker des caractères du jeu de caractères ASCII, de l'un des jeux de caractères ISO\-8859 ou du jeu de caractères UTF\-8.  Le type `unsigned char` est souvent utilisé pour représenter un *octet* qui n'est pas un type intégré en C\+\+.  Le type char n'est pas adapté au texte dans de nombreuses langues.  En général, les programmes modernes doivent utiliser l'un des types à caractères larges pour représenter du texte.  Unicode est le  
+## <a name="remarks"></a>Remarks  
+ The `char` type was the original character type in C and C++. It can be used to store characters from the ASCII character set or any of the ISO-8859 character sets, or the UTF-8 character set. The type `unsigned char` is often used to represent a *byte* which is not a built-in type in C++. The char type is not suitable for text in many languages. In general, modern programs should use one of the wide character types to represent text. Unicode is the  
   
- Dans la bibliothèque standard C\+\+, le type basic\_string est spécialisé pour les chaînes étroites et étendues.  Utilisez std::string quand les caractères sont de type char et std::wstring quand les caractères sont de type wchar\_t.  D'autres types qui représentent du texte, y compris std::stringstream et std::cout ont des spécialisations pour les chaînes étroites et étendues.  
+ In the C++ standard library, the basic_string type is specialized for both narrow and wide strings. Use std::string when the characters are of type char, and std::wstring when the characters are of type wchar_t. Other types that represent text, including std::stringstream and std::cout have specializations for narrow and wide strings.  
   
-## Configuration requise
+## <a name="requirements"></a>Requirements
