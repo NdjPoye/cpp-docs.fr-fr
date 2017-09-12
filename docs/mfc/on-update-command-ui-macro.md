@@ -1,39 +1,58 @@
 ---
-title: "ON_UPDATE_COMMAND_UI, macro | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ON_UPDATE_COMMAND_UI"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestionnaire de commandes (macros)"
-  - "ON_UPDATE_COMMAND_UI (macro)"
-  - "gestionnaires de mise à jour"
-  - "mettre à jour des objets d'interface utilisateur"
+title: ON_UPDATE_COMMAND_UI Macro | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ON_UPDATE_COMMAND_UI
+dev_langs:
+- C++
+helpviewer_keywords:
+- ON_UPDATE_COMMAND_UI macro [MFC]
+- update handlers [MFC]
+- command-handler macros
+- updating user-interface objects [MFC]
 ms.assetid: 3e72b50f-4119-4c82-81cf-6e09b132de05
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# ON_UPDATE_COMMAND_UI, macro
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 62e6ca4f2d3ca1b389e94a61d585fcdb08083f53
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Utilisez la fenêtre **Propriétés** pour connecter un objet d'interface utilisateur à un gestionnaire de mise à jour de commande dans un objet de cible de commande.  Il connecte automatiquement l'ID de l'objet interface utilisateur à la macro `ON_UPDATE_COMMAND_UI` et crée un gestionnaire dans l'objet qui gère la mise à jour.  Pour plus d'informations, consultez [Mappage de messages à des fonctions](../mfc/reference/mapping-messages-to-functions.md).  
+---
+# <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI Macro
+Use the **Properties** window to connect a user-interface object to a command-update handler in a command-target object. It will automatically connect the user-interface object's ID to the `ON_UPDATE_COMMAND_UI` macro and create a handler in the object that will handle the update. See [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md) for more information.  
   
- Par exemple, pour mettre à jour une commande Clear All dans le menu Edition de votre programme, utilisez la fenêtre **Propriétés** pour ajouter une entrée de la table des messages dans la classe, une déclaration de fonction d'un gestionnaire de mise à jour de commande appelé `OnUpdateEditClearAll` dans la déclaration de classe, ainsi qu'un modèle de fonction vide du fichier d'implémentation de la classe.  Le prototype de la fonction ressemble à ceci :  
+ For example, to update a Clear All command in your program's Edit menu, use the **Properties** window to add a message-map entry in the chosen class, a function declaration for a command-update handler called `OnUpdateEditClearAll` in the class declaration, and an empty function template in the class's implementation file. The function prototype looks like this:  
   
- [!code-cpp[NVC_MFCDocView#2](../mfc/codesnippet/CPP/on-update-command-ui-macro_1.h)]  
+ [!code-cpp[NVC_MFCDocView#2](../mfc/codesnippet/cpp/on-update-command-ui-macro_1.h)]  
   
- Comme tous les gestionnaires, la fonction indique le mot clé **afx\_msg**.  Comme tous les gestionnaires de mise à jour, elle prend un argument, un pointeur vers un objet `CCmdUI`.  
+ Like all handlers, the function shows the **afx_msg** keyword. Like all update handlers, it takes one argument, a pointer to a `CCmdUI` object.  
   
-## Voir aussi  
- [Comment : mettre à jour des objets d'interface utilisateur](../mfc/how-to-update-user-interface-objects.md)
+## <a name="see-also"></a>See Also  
+ [How to: Update User-Interface Objects](../mfc/how-to-update-user-interface-objects.md)
+
+

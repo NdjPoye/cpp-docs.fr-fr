@@ -1,65 +1,84 @@
 ---
-title: "Utilisation de CListCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CListCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl (classe), utilisation"
+title: Using CListCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CListCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListCtrl class [MFC], using
 ms.assetid: 20d6a5d6-8f07-4ddf-975f-ea2dfebcc835
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Utilisation de CListCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e46bdfaa76ea2d2cae77d127dd4fbafe4351cd3e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Utilisez un contrôle de liste pour afficher n'importe quelle disposition d'icônes avec des étiquettes, comme dans l'Explorateur de fichiers, ou des listes de texte en colonnes, avec ou sans icônes.  Pour obtenir une description des quatre " vues " possibles \(à ne pas confondre avec les vues de MFC\) que vous pouvez avoir dans un contrôle de liste \(vue d'icône, de petite icône, de liste, de rapport\) consultez Vues dans la vue d'ensemble de la classe [CListCtrl](../mfc/reference/clistctrl-class.md).  
+---
+# <a name="using-clistctrl"></a>Using CListCtrl
+Use a list control to display any arrangement of icons with labels, as in File Explorer, or columnar lists of text, with or without icons. For a description of the four possible "views" (not to be confused with MFC views) you can have in a list control — icon view, small icon view, list view, and report view — see Views in the [CListCtrl](../mfc/reference/clistctrl-class.md) class overview.  
   
- Dans certaines vues, les utilisateurs peuvent faire glisser des icônes dans différentes positions ou modifier les étiquettes d'icône.  Par exemple, consultez le volet droit sur dans l'Explorateur de fichiers, qui utilise un contrôle de liste dans une fenêtre sans boîte de dialogue.  Vous pouvez essayer les vues disponibles dans le menu Affichage de l'explorateur.  
+ In some views, users can drag icons to different positions or edit icon labels. For example, see the right-hand pane in File Explorer, which uses a list control in a nondialog window. You can experiment with the available views in Explorer's View menu.  
   
- Pour plus d'informations, consultez [À propos de les contrôles list VIEW](http://msdn.microsoft.com/library/windows/desktop/bb774735) dans [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For related information, see [About List-View Controls](http://msdn.microsoft.com/library/windows/desktop/bb774735) in the Windows SDK.  
   
 > [!NOTE]
->  [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] fait référence aux contrôles de liste comme « contrôles de vue de liste » Cette utilisation de « vue » ne fait pas référence aux classes d'affichage MFC, en particulier `CListView`.  Pour plus d'informations, consultez [Contrôle de liste et vue Liste](../mfc/list-control-and-list-view.md).  
+>  The Windows SDK refers to list controls as "list view controls." This usage of "view" does not refer to MFC view classes, particularly `CListView`. For more information, see [List Control and List View](../mfc/list-control-and-list-view.md).  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Contrôle de liste et vue Liste](../mfc/list-control-and-list-view.md)  
+-   [List Control and List View](../mfc/list-control-and-list-view.md)  
   
--   [Éléments de liste et listes d'images](../mfc/list-items-and-image-lists.md)  
+-   [List Items and Image Lists](../mfc/list-items-and-image-lists.md)  
   
--   [Éléments de rappel et masque de rappel](../mfc/callback-items-and-the-callback-mask.md)  
+-   [Callback Items and the Callback Mask](../mfc/callback-items-and-the-callback-mask.md)  
   
--   [Création du contrôle de liste](../mfc/creating-the-list-control.md)  
+-   [Creating the List Control](../mfc/creating-the-list-control.md)  
   
--   [Création des listes d'images](../mfc/creating-the-image-lists.md)  
+-   [Creating the Image Lists](../mfc/creating-the-image-lists.md)  
   
--   [Ajout de colonnes au contrôle \(vue Rapport\)](../mfc/adding-columns-to-the-control-report-view.md)  
+-   [Adding Columns to the Control (Report View)](../mfc/adding-columns-to-the-control-report-view.md)  
   
--   [Ajout d'éléments au contrôle](../mfc/adding-items-to-the-control.md)  
+-   [Adding Items to the Control](../mfc/adding-items-to-the-control.md)  
   
--   [Défilement, organisation, tri et recherche dans les contrôles de liste](../mfc/scrolling-arranging-sorting-and-finding-in-list-controls.md)  
+-   [Scrolling, Arranging, Sorting, and Finding in List Controls](../mfc/scrolling-arranging-sorting-and-finding-in-list-controls.md)  
   
--   [Implémentation d'espaces de travail dans des contrôles de liste](../mfc/implementing-working-areas-in-list-controls.md)  
+-   [Implementing Working Areas in List Controls](../mfc/implementing-working-areas-in-list-controls.md)  
   
--   [Traitement des messages de notification dans les contrôles de liste](../mfc/processing-notification-messages-in-list-controls.md)  
+-   [Processing Notification Messages in List Controls](../mfc/processing-notification-messages-in-list-controls.md)  
   
--   [Modification des styles de contrôle de liste](../mfc/changing-list-control-styles.md)  
+-   [Changing List Control Styles](../mfc/changing-list-control-styles.md)  
   
--   [Contrôles de liste virtuels](../mfc/virtual-list-controls.md)  
+-   [Virtual List Controls](../mfc/virtual-list-controls.md)  
   
--   [Destruction du contrôle de liste](../mfc/destroying-the-list-control.md)  
+-   [Destroying the List Control](../mfc/destroying-the-list-control.md)  
   
-## Voir aussi  
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

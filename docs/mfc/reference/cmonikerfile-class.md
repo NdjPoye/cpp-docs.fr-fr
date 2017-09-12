@@ -1,5 +1,5 @@
 ---
-title: Classe de CMonikerFile | Documents Microsoft
+title: CMonikerFile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,10 +20,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMonikerFile class
-- monikers, MFC
-- IMoniker interface, binding
-- IMoniker interface
+- CMonikerFile [MFC], CMonikerFile
+- CMonikerFile [MFC], Close
+- CMonikerFile [MFC], Detach
+- CMonikerFile [MFC], GetMoniker
+- CMonikerFile [MFC], Open
+- CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
 caps.latest.revision: 22
 author: mikeblome
@@ -43,55 +45,55 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0f348328a4be4b934e00acdb43ba47fa919bac75
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9f66bde77b25725172933852e8f404876fe0fe20
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmonikerfile-class"></a>Classe de CMonikerFile
-Représente un flux de données ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) nommé par une [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
+# <a name="cmonikerfile-class"></a>CMonikerFile Class
+Represents a stream of data ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) named by an [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMonikerFile : public COleStreamFile  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMonikerFile::CMonikerFile](#cmonikerfile)|Construit un objet `CMonikerFile`.|  
+|[CMonikerFile::CMonikerFile](#cmonikerfile)|Constructs a `CMonikerFile` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMonikerFile::Close](#close)|Détache et libère le flux et libère le moniker.|  
-|[CMonikerFile::Detach](#detach)|Détache le `IMoniker` à partir de ce `CMonikerFile` objet.|  
-|[CMonikerFile::GetMoniker](#getmoniker)|Retourne le moniker actuel.|  
-|[CMonikerFile::Open](#open)|Ouvre le fichier spécifié pour obtenir un flux de données.|  
+|[CMonikerFile::Close](#close)|Detaches and releases the stream and releases the moniker.|  
+|[CMonikerFile::Detach](#detach)|Detaches the `IMoniker` from this `CMonikerFile` object.|  
+|[CMonikerFile::GetMoniker](#getmoniker)|Returns the current moniker.|  
+|[CMonikerFile::Open](#open)|Opens the specified file to obtain a stream.|  
   
-### <a name="protected-methods"></a>Méthodes protégées  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMonikerFile::CreateBindContext](#createbindcontext)|Obtient le contexte de liaison, ou crée un contexte de liaison initialisés par défaut.|  
+|[CMonikerFile::CreateBindContext](#createbindcontext)|Obtains the bind context or creates a default initialized bind context.|  
   
-## <a name="remarks"></a>Remarques  
- Un moniker contient des informations comme un chemin d’accès vers un fichier. Si vous avez un pointeur vers un objet de moniker `IMoniker` interface, vous pouvez obtenir l’accès au fichier identifié sans avoir toute autre information spécifique sur l’emplacement du fichier réellement.  
+## <a name="remarks"></a>Remarks  
+ A moniker contains information much like a pathname to a file. If you have a pointer to a moniker object's `IMoniker` interface, you can get access to the identified file without having any other specific information about where the file is actually located.  
   
- Dérivée de `COleStreamFile`, `CMonikerFile` prend un moniker ou une représentation de chaîne pouvant être transformé en moniker et lie au flux pour lequel le moniker est un nom. Vous pouvez ensuite lire et écrire dans ce flux de données. L’objectif réel de `CMonikerFile` est de fournir un accès simple aux `IStream`s nommé par `IMoniker`s afin que vous n’avez pas à lier à un flux de données vous-même, encore aient `CFile` fonctionnalité dans le flux.  
+ Derived from `COleStreamFile`, `CMonikerFile` takes a moniker or a string representation it can make into a moniker and binds to the stream for which the moniker is a name. You can then read and write to that stream. The real purpose of `CMonikerFile` is to provide simple access to `IStream`s named by `IMoniker`s so that you do not have to bind to a stream yourself, yet have `CFile` functionality to the stream.  
   
- `CMonikerFile`ne peut pas être utilisé pour lier à autre chose qu’un flux de données. Si vous souhaitez lier à un objet ou un stockage, vous devez utiliser le `IMoniker` interface directement.  
+ `CMonikerFile` cannot be used to bind to anything other than a stream. If you want to bind to storage or an object, you must use the `IMoniker` interface directly.  
   
- Pour plus d’informations sur les flux et les monikers, consultez [COleStreamFile](../../mfc/reference/colestreamfile-class.md) dans les *référence MFC* et [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) et [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information on streams and monikers, see [COleStreamFile](../../mfc/reference/colestreamfile-class.md) in the *MFC Reference* and [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) and [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) in the Windows SDK.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
@@ -100,72 +102,72 @@ class CMonikerFile : public COleStreamFile
   
  `CMonikerFile`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="close"></a>CMonikerFile::Close  
- Appelez cette fonction pour détacher et de libérer le flux de données et pour libérer le moniker.  
+##  <a name="close"></a>  CMonikerFile::Close  
+ Call this function to detach and release the stream and to release the moniker.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Peut être appelé sur un flux fermés ou déjà fermés.  
+### <a name="remarks"></a>Remarks  
+ Can be called on unopened or already closed streams.  
   
-##  <a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
- Construit un objet `CMonikerFile`.  
+##  <a name="cmonikerfile"></a>  CMonikerFile::CMonikerFile  
+ Constructs a `CMonikerFile` object.  
   
 ```  
 CMonikerFile();
 ```  
   
-##  <a name="createbindcontext"></a>CMonikerFile::CreateBindContext  
- Appelez cette fonction pour créer un contexte de liaison initialisés par défaut.  
+##  <a name="createbindcontext"></a>  CMonikerFile::CreateBindContext  
+ Call this function to create a default initialized bind context.  
   
 ```  
 IBindCtx* CreateBindContext(CFileException* pError);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pError`  
- Un pointeur vers une exception de fichier. En cas d’erreur, elle est définie à la cause.  
+ A pointer to a file exception. In the event of an error, it will be set to the cause.  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le contexte de liaison [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) pour lier avec le cas de réussite ; **NULL**. Si l’instance a été ouvert avec un `IBindHost` interface, le contexte de liaison est extraite la `IBindHost`. S’il existe aucune `IBindHost` interface ou l’interface ne peut pas retourner un contexte de liaison, un contexte de liaison est créé. Pour obtenir une description de la [IBindHost](http://msdn.microsoft.com/library/ie/ms775076) l’interface, consultez la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ A pointer to the bind context [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) to bind with if successful; otherwise **NULL**. If the instance was opened with an `IBindHost` interface, the bind context is retrieved from the `IBindHost`. If there is no `IBindHost` interface or the interface fails to return a bind context, a bind context is created. For a description of the [IBindHost](http://msdn.microsoft.com/library/ie/ms775076) interface, see the Windows SDK.  
   
-### <a name="remarks"></a>Notes  
- Un contexte de liaison est un objet qui stocke des informations sur une opération de liaison de moniker particulier. Vous pouvez substituer cette fonction pour fournir un contexte de liaison personnalisé.  
+### <a name="remarks"></a>Remarks  
+ A bind context is an object that stores information about a particular moniker binding operation. You can override this function to provide a custom bind context.  
   
-##  <a name="detach"></a>CMonikerFile::Detach  
- Appelez cette fonction pour fermer le flux.  
+##  <a name="detach"></a>  CMonikerFile::Detach  
+ Call this function to close the stream.  
   
 ```  
 BOOL Detach(CFileException* pError = NULL);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pError`  
- Un pointeur vers une exception de fichier. En cas d’erreur, elle est définie à la cause.  
+ A pointer to a file exception. In the event of an error, it will be set to the cause.  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="getmoniker"></a>CMonikerFile::GetMoniker  
- Appelez cette fonction pour récupérer un pointeur vers le moniker actuel.  
+##  <a name="getmoniker"></a>  CMonikerFile::GetMoniker  
+ Call this function to retrieve a pointer to the current moniker.  
   
 ```  
 IMoniker* GetMoniker() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers l’interface de moniker actuel ( [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)).  
+### <a name="return-value"></a>Return Value  
+ A pointer to the current moniker interface ( [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)).  
   
-### <a name="remarks"></a>Notes  
- Étant donné que `CMonikerFile` n’est pas une interface, le pointeur retourné n’incrémente pas le décompte de références (via [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), et le moniker est libéré lorsque la `CMonikerFile` objet est libéré. Si vous souhaitez conserver le moniker ou libérer vous-même, vous devez `AddRef` il.  
+### <a name="remarks"></a>Remarks  
+ Since `CMonikerFile` is not an interface, the pointer returned does not increment the reference count (through [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), and the moniker is released when the `CMonikerFile` object is released. If you want to hold onto the moniker or release it yourself, you must `AddRef` it.  
   
-##  <a name="open"></a>CMonikerFile::Open  
- Appelez cette fonction membre pour ouvrir un objet fichier ou le moniker.  
+##  <a name="open"></a>  CMonikerFile::Open  
+ Call this member function to open a file or moniker object.  
   
 ```  
 virtual BOOL Open(
@@ -178,32 +180,32 @@ virtual BOOL Open(
     CFileException* pError = NULL);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpszURL`  
- Une URL ou le nom du fichier à ouvrir.  
+ A URL or filename of the file to be opened.  
   
  `pError`  
- Un pointeur vers une exception de fichier. En cas d’erreur, elle est définie à la cause.  
+ A pointer to a file exception. In the event of an error, it will be set to the cause.  
   
  `pMoniker`  
- Un pointeur vers l’interface de moniker `IMoniker` à utiliser pour obtenir un flux de données.  
+ A pointer to the moniker interface `IMoniker` to be used to obtain a stream.  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Le `lpszURL` paramètre ne peut pas être utilisé sur un ordinateur Macintosh. Uniquement les `pMoniker` formulaire de **ouvrir** peut être utilisé sur un ordinateur Macintosh.  
+### <a name="remarks"></a>Remarks  
+ The `lpszURL` parameter cannot be used on a Macintosh. Only the `pMoniker` form of **Open** can be used on a Macintosh.  
   
- Vous pouvez utiliser une URL ou un nom de fichier pour le `lpszURL` paramètre. Exemple :  
+ You can use a URL or a filename for the `lpszURL` parameter. For example:  
   
- [!code-cpp[NVC_MFCWinInet n° 6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
+ [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
   
- - ou  
+ - or -  
   
- [!code-cpp[NVC_MFCWinInet #7](../../mfc/codesnippet/cpp/cmonikerfile-class_2.cpp)]  
+ [!code-cpp[NVC_MFCWinInet#7](../../mfc/codesnippet/cpp/cmonikerfile-class_2.cpp)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Classe de COleStreamFile](../../mfc/reference/colestreamfile-class.md)   
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
- [CAsyncMonikerFile, classe](../../mfc/reference/casyncmonikerfile-class.md)
+## <a name="see-also"></a>See Also  
+ [COleStreamFile Class](../../mfc/reference/colestreamfile-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CAsyncMonikerFile Class](../../mfc/reference/casyncmonikerfile-class.md)
 

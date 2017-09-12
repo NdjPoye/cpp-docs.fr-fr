@@ -1,31 +1,50 @@
 ---
-title: "Cat&#233;gories du graphique hi&#233;rarchique | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, hiérarchie"
+title: Hierarchy Chart Categories | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, hierarchy
 ms.assetid: 1f109428-4b84-4f7c-90a9-e71fe071311e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Cat&#233;gories du graphique hi&#233;rarchique
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 09a83ffe5a144e335ef02bd692a8c799a5578503
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-![Catégories du graphique hiérarchique MFC](../mfc/media/vc369r1.png "vc369R1")  
+---
+# <a name="hierarchy-chart-categories"></a>Hierarchy Chart Categories
+![MFC hierarchy chart categories](../mfc/media/vc369r1.png "vc369r1")  
   
-## Voir aussi  
- [Graphique hiérarchique](../mfc/hierarchy-chart.md)   
- [MFC, applications de bureau](../mfc/mfc-desktop-applications.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../mfc/hierarchy-chart.md)   
+ [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)
+
+

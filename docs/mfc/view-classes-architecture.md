@@ -1,80 +1,98 @@
 ---
-title: "Classes d&#39;affichage (Architecture) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.view"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vues de contrôle"
-  - "vues d'enregistrements et de formulaires"
-  - "classes vues"
-  - "classes vues, architecture"
+title: View Classes (Architecture) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.view
+dev_langs:
+- C++
+helpviewer_keywords:
+- form and record views [MFC]
+- view classes [MFC]
+- control views [MFC]
+- view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classes d&#39;affichage (Architecture)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7534d6cccebca8186a3e7d8b11f425fb4375d136
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-`CView` et ses classes dérivées sont des fenêtres enfants qui représentent la zone client d'une fenêtre cadre.  Les vues affichent des données et acceptent des entrées pour un document.  
+---
+# <a name="view-classes-architecture"></a>View Classes (Architecture)
+`CView` and its derived classes are child windows that represent the client area of a frame window. Views show data and accept input for a document.  
   
- Une classe d'affichage est associée à une classe de document et une classe cadre de fenêtre en utilisant un objet modèle de document.  
+ A view class is associated with a document class and a frame window class using a document-template object.  
   
  [CView](../mfc/reference/cview-class.md)  
- La classe de base pour les vues spécifiques à l'application des données d'un document.  Les vues affichent des données et acceptent des entrées utilisateur pour modifier ou sélectionner des données.  Dériver votre \(vos\) classe\(s\) de vue de `CView`.  
+ The base class for application-specific views of a document's data. Views display data and accept user input to edit or select the data. Derive your view class(es) from `CView`.  
   
  [CScrollView](../mfc/reference/cscrollview-class.md)  
- La classe de base pour les vues avec des capacités de défilement.  Dériver votre classe de vue de `CScrollView` pour le défilement automatique.  
+ The base class for views with scrolling capabilities. Derive your view class from `CScrollView` for automatic scrolling.  
   
-## Vues d'enregistrements et de formulaires  
- Les vues de formulaire sont aussi des vues de défilement.  Elles sont basées sur un modèle de boîte de dialogue.  
+## <a name="form-and-record-views"></a>Form and Record Views  
+ Form views are also scrolling views. They are based on a dialog box template.  
   
- Les vues d'enregistrements sont dérivées des vues de formulaire.  Outre le modèle de boîte de dialogue, elles possèdent également une connection à une base de données.  
+ Record views are derived from form views. In addition to the dialog box template, they also have a connection to a database.  
   
  [CFormView](../mfc/reference/cformview-class.md)  
- Une zone de défilement dont la structure est définie dans un modèle de boîte de dialogue.  Dérivez une classe de `CFormView` pour implémenter une interface utilisateur basée sur un modèle de la boîte de dialogue.  
+ A scroll view whose layout is defined in a dialog box template. Derive a class from `CFormView` to implement a user interface based on a dialog box template.  
   
  [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- Fournit un mode formulaire directement connecté à un objet recordset d'accès aux données \(DAO\).  Comme tous les modes formulaire, un `CDaoRecordView` est basé sur le modèle de la boîte de dialogue.  
+ Provides a form view directly connected to a Data Access Object (DAO) recordset object. Like all form views, a `CDaoRecordView` is based on a dialog box template.  
   
  [CHtmlView](../mfc/reference/chtmlview-class.md)  
- Prend en charge un contrôle de navigation web dans une application.  Le contrôle prend en charge le DHTML de MFC.  
+ Supports a control for Web browsing within an application. The control supports dynamic HTML in MFC.  
   
- [COlEDBRecordView](../mfc/reference/coledbrecordview-class.md)  
- Prend en charge des bases de données croisées OLE MFC pour des vues de formulaire.  
+ [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md)  
+ Provides MFC OLE DB support for form views.  
   
  [CRecordView](../mfc/reference/crecordview-class.md)  
- Fournit une vue formulaire directement connectée à un objet recordset ODBC \(Open Database Connectivity\).  Comme toutes les vues de formulaire, un `CRecordView` est basé sur le modèle de la boîte de dialogue.  
+ Provides a form view directly connected to an Open Database Connectivity (ODBC) recordset object. Like all form views, a `CRecordView` is based on a dialog box template.  
   
-## Vues de contrôle  
- Les affichages de contrôle affichent un contrôle en tant que vue.  
+## <a name="control-views"></a>Control Views  
+ Control views display a control as their view.  
   
  [CCtrlView](../mfc/reference/cctrlview-class.md)  
- La classe de base pour toutes les vues associées aux contrôles Windows.  Les vues basées sur des contrôles sont décrites ci\-dessous.  
+ The base class for all views associated with Windows controls. The views based on controls are described below.  
   
  [CEditView](../mfc/reference/ceditview-class.md)  
- Une vue qui contient un contrôle d'édition Windows standard \(consultez [CEdit](../mfc/reference/cedit-class.md)\).  Les contrôles d'édition prennent en charge des capacités pour l'édition, la recherche, le remplacement, et le défilement de texte.  
+ A view that contains a Windows standard edit control (see [CEdit](../mfc/reference/cedit-class.md)). Edit controls support text editing, searching, replacing, and scrolling capabilities.  
   
  [CRichEditView](../mfc/reference/cricheditview-class.md)  
- Une vue qui contient un contrôle RichEdit Windows \(consultez [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\).  Outre les fonctions d'un contrôle d'édition, les contrôles RichEdits prennent en charge les polices, les couleurs, la mise en forme de paragraphe, et les objets OLE incorporés.  
+ A view that contains a Windows rich edit control (see [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). In addition to the capabilities of an edit control, rich edit controls support fonts, colors, paragraph formatting, and embedded OLE objects.  
   
  [CListView](../mfc/reference/clistview-class.md)  
- Une vue qui contient un contrôle de liste Windows \(consultez [CListCtrl](../mfc/reference/clistctrl-class.md)\).  Un contrôle de liste affiche les icônes et les chaînes d'une manière semblable au volet droit de l'Explorateur de fichiers.  
+ A view that contains a Windows list control (see [CListCtrl](../mfc/reference/clistctrl-class.md)). A list control displays icons and strings in a manner similar to the right pane of File Explorer.  
   
  [CTreeView](../mfc/reference/ctreeview-class.md)  
- Une vue qui contient un contrôle d'arborescence Windows \(consultez [CTreeCtrl](../mfc/reference/ctreectrl-class.md)\).  Icônes et chaînes d'affichage d'un contrôle d'arborescence ordonnés de façon hiérarchique d'une manière semblable au volet gauche de l'Explorateur de fichiers.  
+ A view that contains a Windows tree control (see [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). A tree control displays icons and strings arranged in a hierarchy in a manner similar to the left pane of File Explorer.  
   
-## Voir aussi  
- [Vue d'ensemble des classes](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

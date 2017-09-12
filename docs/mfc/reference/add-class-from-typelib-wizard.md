@@ -1,71 +1,90 @@
 ---
-title: "Assistant Ajout de classes d&#39;une Typelib | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.class.typelib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Ajout de classes d'une TypeLib (Assistant C++)"
-  - "interfaces COM, ajouter des classes"
+title: Add Class from Typelib Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.class.typelib
+dev_langs:
+- C++
+helpviewer_keywords:
+- Add Class from TypeLib Wizard [MFC]
+- COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Assistant Ajout de classes d&#39;une Typelib
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9622a818e6334caad172f31f717eddc7e1230965
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Utilisez cet Assistant pour ajouter une classe MFC à partir d'une bibliothèque de types disponible.  L'Assistant crée une classe pour chaque interface que vous avez ajoutée à partir de la bibliothèque de types sélectionnée.  
+---
+# <a name="add-class-from-typelib-wizard"></a>Add Class from Typelib Wizard
+Use this wizard to add an MFC class from an available type library. The wizard creates a class for each interface you add from the selected type library.  
   
- **Ajouter une classe à partir de**  
- Spécifie l'emplacement de la bibliothèque de types à partir de laquelle la classe est créée.  
+ **Add class from**  
+ Specifies the location of the type library, from which the class is created.  
   
 |Option|Description|  
 |------------|-----------------|  
-|**Registre**|La bibliothèque de types est inscrite dans le système.  Les bibliothèques de types inscrites sont énumérées dans l'option **Bibliothèques de types disponibles**.|  
-|**Fichier**|La bibliothèque de types n'est pas nécessairement inscrite dans le système, mais est contenue dans un fichier.  Vous devez indiquer l'emplacement du fichier dans l'option **Emplacement**.|  
+|**Registry**|The type library is registered in the system. Registered type libraries are listed in **Available type libraries**.|  
+|**File**|The type library is not necessarily registered in the system but is contained in a file. You must provide the file location in **Location**.|  
   
- **Bibliothèques de types disponibles**  
- Énumère les bibliothèques de types actuellement inscrites sur le système.  Sélectionnez une bibliothèque de types dans cette liste pour afficher ses interfaces dans la liste **Interfaces**.  
+ **Available type libraries**  
+ Lists the type libraries currently registered in the system. Select a type library from this list to display its interfaces in the **Interfaces** list.  
   
- Pour plus d'informations sur l'inscription de bibliothèques de types, consultez « Inside Distributed COM: Type Libraries and Language Integration » dans MSDN Library.  
+ See "Inside Distributed COM: Type Libraries and Language Integration" in the MSDN library for more information about registering type libraries.  
   
- **Emplacement**  
- Spécifie l'emplacement de la bibliothèque de types.  Si vous cliquez sur **Fichier** sous **Ajouter une classe à partir de**, vous pouvez indiquer l'emplacement du fichier contenant la bibliothèque de types.  Pour accéder à l'emplacement du fichier, cliquez sur le bouton de sélection.  
+ **Location**  
+ Specifies the location of the type library. If you click **File** under **Add Class From**, you can provide the location of the file containing the type library. To browse to the location of the file, click the ellipsis button.  
   
  **Interfaces**  
- Énumère les interfaces contenues dans la bibliothèque de types actuellement sélectionnée dans la liste **Bibliothèques de types disponibles**.  
+ Lists the interfaces in the type library currently selected in the **Available type libraries** list.  
   
-|Bouton de transfert|Description|  
-|-------------------------|-----------------|  
-|**\>**|Ajoute l'interface actuellement sélectionnée dans la liste **Interfaces**.  Estompé si aucune interface n'est sélectionnée.|  
-|**\>\>**|Ajoute toutes les interfaces contenues dans la bibliothèque de types actuellement sélectionnée dans la liste **Bibliothèques de types disponibles**.|  
-|**\<**|Supprime la classe actuellement sélectionnée dans la liste **Classes générées**.  Estompé si aucune classe n'est actuellement sélectionnée dans la liste **Classes générées**.|  
-|**\<\<**|Supprime toutes les classes de la liste **Classes générées**.  Estompé si la liste **Classes générées** est vide.|  
+|Transfer button|Description|  
+|---------------------|-----------------|  
+|**>**|Adds the interface currently selected in the **Interfaces** list. Dimmed if no interface is selected.|  
+|**>>**|Adds all the interfaces in the type library currently selected in the **Available type libraries** list.|  
+|**<**|Removes the class currently selected in the **Generated classes** list. Dimmed if no class is currently selected in the **Generated classes** list.|  
+|**<\<**|Removes all the classes in the **Generated classes** list. Dimmed if the **Generated classes** list is empty.|  
   
- **Classes générées**  
- Spécifie les noms de classe qui seront générés à partir des interfaces ajoutées à l'aide du bouton **\>\>** ou du bouton **\>\>** .  Vous pouvez cliquer sur cette zone pour sélectionner une classe, puis utiliser les touches Haut ou Bas pour faire défiler la liste, afin d'afficher chaque nom de classe dans la zone `Class` et chaque nom de fichier dans la zone **Fichier** que l'Assistant doit générer lorsque vous cliquez sur **Terminer**.  Vous ne pouvez sélectionner qu'une seule classe à la fois dans cette zone.  
+ **Generated classes**  
+ Specifies the class names to be generated from the interfaces added using the **>** or **>>** button. You can click this box to select a class, and then use the up or down keys to scroll through the list, viewing each class name in the `Class` box and file name in the **File** box that the wizard generates when you click **Finish**. You can select only one class at a time in this box.  
   
- Pour supprimer une classe, sélectionnez\-la dans la liste et cliquez sur **\<\<**.  Vous n'avez pas besoin de sélectionner une classe dans la section classes générées pour supprimer toutes les classes; en cliquant sur : **\<\<**, vous supprimez toutes les classes dans la zone **Classes générées** .  
+ You can remove a class by selecting it in this list and clicking **<**. You do not need to select a class in the Generated classes box to remove all classes; by clicking **<<**, you remove all classes in the **Generated classes** box.  
   
  `Class`  
- Spécifie le nom de la classe sélectionnée dans la zone **Classes générées** que l'Assistant doit ajouter lorsque vous cliquez sur **Terminer**.  Vous pouvez modifier ce nom dans la zone `Class`.  
+ Specifies the name of the class selected in the **Generated classes** box that the wizard adds when you click **Finish**. You can edit the name in the `Class` box.  
   
- **Fichier**  
- Définit le nom du fichier d'en\-tête de la nouvelle classe.  Par défaut, ce nom est fondé sur le nom que vous avez entré dans la zone **Classes générées**.  Cliquez sur le bouton de sélection pour enregistrer le nom de fichier à l'emplacement de votre choix ou pour ajouter la déclaration de classe à un fichier existant.  Si vous sélectionnez un fichier existant, l'Assistant ne l'enregistrera pas à l'emplacement choisi tant que vous n'aurez pas cliqué sur **Terminer** dans l'Assistant.  
+ **File**  
+ Sets the name of the header file for the new class. By default, this name is based on the name you provide in **Generated classes**. Click the ellipsis button to save the file name to the location of your choice, or to append the class declaration to an existing file. If you choose an existing file, the wizard will not save it to the selected location until you click **Finish** in the wizard.  
   
- L'Assistant n'écrase pas un fichier.  Si vous sélectionnez le nom d'un fichier existant et cliquez sur **Terminer**, l'Assistant vous demande d'indiquer si la déclaration de classe doit être ajoutée au contenu du fichier.  Cliquez sur **Oui** pour ajouter le fichier ; cliquez sur **Non** pour revenir à l'Assistant et spécifier un autre nom de fichier.  
+ The wizard does not overwrite a file. If you select the name of an existing file, when you click **Finish**, the wizard prompts you to indicate whether the class declaration should be appended to the contents of the file. Click **Yes** to append the file; click **No** to return to the wizard and specify another file name.  
   
-## Voir aussi  
- [Classe MFC à partir d'une bibliothèque de types](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)   
- [Clients Automation : utilisation des bibliothèques de types](../../mfc/automation-clients-using-type-libraries.md)
+## <a name="see-also"></a>See Also  
+ [MFC Class from a Type Library](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)   
+ [Automation Clients: Using Type Libraries](../../mfc/automation-clients-using-type-libraries.md)
+
+

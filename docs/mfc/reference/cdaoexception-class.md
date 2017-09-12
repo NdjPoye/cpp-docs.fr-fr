@@ -1,5 +1,5 @@
 ---
-title: Classe de CDaoException | Documents Microsoft
+title: CDaoException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,12 +20,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- errors [C++], DAO
-- CDaoException class
-- DAO (Data Access Objects), exceptions
-- exceptions, in MFC DAO classes
-- Errors collection, DAO
-- collections, DAO errors
+- CDaoException [MFC], CDaoException
+- CDaoException [MFC], GetErrorCount
+- CDaoException [MFC], GetErrorInfo
+- CDaoException [MFC], m_nAfxDaoError
+- CDaoException [MFC], m_pErrorInfo
+- CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
 caps.latest.revision: 24
 author: mikeblome
@@ -45,183 +45,183 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: d1cb1c6dbe50d383981af03cc97d1977be12a5f6
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c8dd9bbacbcc030f85fe5d4a084e18ad530d8228
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaoexception-class"></a>CDaoException (classe)
-Représente une condition d'exception résultant des classes de base de données MFC basées sur des objets d'accès aux données (DAO).  
+# <a name="cdaoexception-class"></a>CDaoException Class
+Represents an exception condition arising from the MFC database classes based on data access objects (DAO).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDaoException : public CException  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoException::CDaoException](#cdaoexception)|Construit un objet `CDaoException`.|  
+|[CDaoException::CDaoException](#cdaoexception)|Constructs a `CDaoException` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoException::GetErrorCount](#geterrorcount)|Retourne le nombre d’erreurs dans la collection d’erreurs du moteur de base de données.|  
-|[CDaoException::GetErrorInfo](#geterrorinfo)|Retourne des informations sur un objet d’erreur particulier dans la collection d’erreurs.|  
+|[CDaoException::GetErrorCount](#geterrorcount)|Returns the number of errors in the database engine's Errors collection.|  
+|[CDaoException::GetErrorInfo](#geterrorinfo)|Returns error information about a particular error object in the Errors collection.|  
   
-### <a name="public-data-members"></a>Membres de données publics  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoException::m_nAfxDaoError](#m_nafxdaoerror)|Contient un code d’erreur étendu pour les erreurs dans les classes DAO MFC.|  
-|[CDaoException::m_pErrorInfo](#m_perrorinfo)|Un pointeur vers un [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) objet qui contient des informations sur un objet d’erreur DAO.|  
-|[CDaoException::m_scode](#m_scode)|Le [SCODE](#m_scode) valeur associée à l’erreur.|  
+|[CDaoException::m_nAfxDaoError](#m_nafxdaoerror)|Contains an extended error code for any error in the MFC DAO classes.|  
+|[CDaoException::m_pErrorInfo](#m_perrorinfo)|A pointer to a [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) object that contains information about one DAO error object.|  
+|[CDaoException::m_scode](#m_scode)|The [SCODE](#m_scode) value associated with the error.|  
   
-## <a name="remarks"></a>Remarques  
- La classe inclut les membres de données publics que vous pouvez utiliser pour déterminer la cause de l’exception. `CDaoException`les objets sont construits et levées par les fonctions membres des classes de base de données DAO.  
+## <a name="remarks"></a>Remarks  
+ The class includes public data members you can use to determine the cause of the exception. `CDaoException` objects are constructed and thrown by member functions of the DAO database classes.  
   
 > [!NOTE]
->  Les classes de base de données DAO sont distinctes des classes de base de données MFC basées sur Open Database Connectivity (ODBC). Tous les noms de classe de base de données DAO ont le préfixe « CDao ». Vous pouvez toujours accès aux sources de données ODBC avec les classes DAO. En général, les classes MFC basées sur DAO sont plus efficaces que les classes MFC basées sur ODBC ; les classes basées sur DAO peuvent accéder aux données, y compris via les pilotes ODBC, via son propre moteur de base de données. Les classes basées sur DAO prennent également en charge les opérations de langage de définition de données (DDL), telles que l’ajout de tables via les classes, sans avoir à appeler DAO directement. Pour plus d’informations sur les exceptions levées par les classes ODBC, consultez [CDBException](../../mfc/reference/cdbexception-class.md).  
+>  The DAO database classes are distinct from the MFC database classes based on Open Database Connectivity (ODBC). All DAO database class names have the "CDao" prefix. You can still access ODBC data sources with the DAO classes. In general, the MFC classes based on DAO are more capable than the MFC classes based on ODBC; the DAO-based classes can access data, including through ODBC drivers, via their own database engine. The DAO-based classes also support Data Definition Language (DDL) operations, such as adding tables via the classes, without having to call DAO directly. For information on exceptions thrown by the ODBC classes, see [CDBException](../../mfc/reference/cdbexception-class.md).  
   
- Vous pouvez accéder à des objets d’exception dans l’étendue d’un [CATCH](../../mfc/reference/exception-processing.md#catch) expression. Vous pouvez aussi lever `CDaoException` objets à partir de votre propre code à la [AfxThrowDaoException](../../mfc/reference/exception-processing.md#afxthrowdaoexception) fonction globale.  
+ You can access exception objects within the scope of a [CATCH](../../mfc/reference/exception-processing.md#catch) expression. You can also throw `CDaoException` objects from your own code with the [AfxThrowDaoException](../../mfc/reference/exception-processing.md#afxthrowdaoexception) global function.  
   
- Dans MFC, toutes les erreurs DAO sont exprimées en tant qu’exceptions, de type `CDaoException`. Lorsque vous interceptez une exception de ce type, vous pouvez utiliser `CDaoException` des fonctions membres pour extraire les informations de tous les objets d’erreur DAO stockées dans la collection d’erreurs du moteur de base de données. Lorsqu’une erreur survient, un ou plusieurs objets error sont placés dans la collection d’erreurs. (Normalement la collection contient un seul objet erreur ; si vous utilisez une source de données ODBC, vous êtes susceptible d’obtenir plusieurs objets d’erreur). Lorsqu’une autre opération DAO génère une erreur, la collection d’erreurs est désactivée, et l’objet d’erreur est placé dans la collection d’erreurs. Les opérations DAO qui ne génèrent pas d’erreur n’ont aucun effet sur la collection d’erreurs.  
+ In MFC, all DAO errors are expressed as exceptions, of type `CDaoException`. When you catch an exception of this type, you can use `CDaoException` member functions to retrieve information from any DAO error objects stored in the database engine's Errors collection. As each error occurs, one or more error objects are placed in the Errors collection. (Normally the collection contains only one error object; if you are using an ODBC data source, you are more likely to get multiple error objects.) When another DAO operation generates an error, the Errors collection is cleared, and the new error object is placed in the Errors collection. DAO operations that do not generate an error have no effect on the Errors collection.  
   
- Pour les codes d’erreur DAO, consultez le fichier DAOERR. H. Pour plus d’informations, consultez la rubrique « Erreurs d’accès aux données récupérable » dans l’aide de DAO.  
+ For DAO error codes, see the file DAOERR.H. For related information, see the topic "Trappable Data Access Errors" in DAO Help.  
   
- Pour plus d’informations sur la gestion des exceptions en général, ou sur `CDaoException` , consultez les articles [la gestion des exceptions (MFC)](../../mfc/exception-handling-in-mfc.md) et [Exceptions : Exceptions de base de données](../../mfc/exceptions-database-exceptions.md). Le deuxième article contient un exemple de code qui illustre la gestion des exceptions dans DAO.  
+ For more information about exception handling in general, or about `CDaoException` objects, see the articles [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md) and [Exceptions: Database Exceptions](../../mfc/exceptions-database-exceptions.md). The second article contains example code that illustrates exception handling in DAO.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
  `CDaoException`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-##  <a name="cdaoexception"></a>CDaoException::CDaoException  
- Construit un objet `CDaoException`.  
+##  <a name="cdaoexception"></a>  CDaoException::CDaoException  
+ Constructs a `CDaoException` object.  
   
 ```  
 CDaoException();
 ```  
   
-### <a name="remarks"></a>Notes  
- En règle générale, l’infrastructure crée les objets d’exception lors de son code lève une exception. Vous devez construire un objet d’exception explicitement rarement. Si vous souhaitez lever une `CDaoException` à partir de votre propre code, appelez la fonction globale [AfxThrowDaoException](../../mfc/reference/exception-processing.md#afxthrowdaoexception).  
+### <a name="remarks"></a>Remarks  
+ Ordinarily, the framework creates exception objects when its code throws an exception. You seldom need to construct an exception object explicitly. If you want to throw a `CDaoException` from your own code, call the global function [AfxThrowDaoException](../../mfc/reference/exception-processing.md#afxthrowdaoexception).  
   
- Vous pouvez néanmoins créer explicitement un objet d’exception si vous effectuez des appels directs à DAO via les pointeurs d’interface DAO qui encapsulent les classes MFC. Dans ce cas, vous devrez peut-être extraire des informations d’erreur DAO. Supposons qu’une erreur se produit dans DAO lorsque vous appelez une méthode DAO via l’interface DAODatabases à la collection de bases de données d’un espace de travail.  
+ However, you might want to explicitly create an exception object if you are making direct calls to DAO via the DAO interface pointers that MFC classes encapsulate. In that case, you might need to retrieve error information from DAO. Suppose an error occurs in DAO when you call a DAO method via the DAODatabases interface to a workspace's Databases collection.  
   
-##### <a name="to-retrieve-the-dao-error-information"></a>Pour récupérer les informations d’erreur DAO  
+##### <a name="to-retrieve-the-dao-error-information"></a>To retrieve the DAO error information  
   
-1.  Construire un `CDaoException` objet.  
+1.  Construct a `CDaoException` object.  
   
-2.  Appelez l’objet d’exception [GetErrorCount](#geterrorcount) fonction membre pour déterminer le nombre d’objets erreur dans la collection d’erreurs du moteur de base de données. (Normalement une seule, sauf si vous utilisez une source de données ODBC.)  
+2.  Call the exception object's [GetErrorCount](#geterrorcount) member function to determine how many error objects are in the database engine's Errors collection. (Normally only one, unless you are using an ODBC data source.)  
   
-3.  Appelez l’objet d’exception [GetErrorInfo](#geterrorinfo) fonction membre pour récupérer un objet d’erreur spécifique à la fois, par l’index dans la collection, via l’objet exception. Considérez l’objet exception en tant que proxy pour un objet d’erreur DAO.  
+3.  Call the exception object's [GetErrorInfo](#geterrorinfo) member function to retrieve one specific error object at a time, by index in the collection, via the exception object. Think of the exception object as a proxy for one DAO error object.  
   
-4.  Examinez actuel [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) structure `GetErrorInfo` retourne dans le [m_pErrorInfo](#m_perrorinfo) membre de données. Ses membres fournissent des informations sur l’erreur DAO.  
+4.  Examine the current [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) structure that `GetErrorInfo` returns in the [m_pErrorInfo](#m_perrorinfo) data member. Its members provide information on the DAO error.  
   
-5.  Dans le cas d’une source de données ODBC, répétez les étapes 3 et 4 si nécessaire, pour plusieurs objets d’erreur.  
+5.  In the case of an ODBC data source, repeat steps 3 and 4 as needed, for more error objects.  
   
-6.  Si vous avez construit l’objet exception sur le tas, le supprimer avec la **supprimer** opérateur lorsque vous avez terminé.  
+6.  If you constructed the exception object on the heap, delete it with the **delete** operator when you finish.  
   
- Pour plus d’informations sur la gestion des erreurs dans les classes DAO MFC, consultez l’article [Exceptions : Exceptions de base de données](../../mfc/exceptions-database-exceptions.md).  
+ For more information about handling errors in the MFC DAO classes, see the article [Exceptions: Database Exceptions](../../mfc/exceptions-database-exceptions.md).  
   
-##  <a name="geterrorcount"></a>CDaoException::GetErrorCount  
- Appelez cette fonction membre pour récupérer le nombre d’objets d’erreur DAO dans la collection d’erreurs du moteur de base de données.  
+##  <a name="geterrorcount"></a>  CDaoException::GetErrorCount  
+ Call this member function to retrieve the number of DAO error objects in the database engine's Errors collection.  
   
 ```  
 short GetErrorCount();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Le nombre d’objets d’erreur DAO dans la collection d’erreurs du moteur de base de données.  
+### <a name="return-value"></a>Return Value  
+ The number of DAO error objects in the database engine's Errors collection.  
   
-### <a name="remarks"></a>Remarques  
- Ces informations sont utiles pour une boucle dans la collection d’erreurs pour récupérer de chacun des objets d’erreur DAO un ou plusieurs dans la collection. Pour récupérer un objet d’erreur par index ou par numéro d’erreur DAO, appelez le [GetErrorInfo](#geterrorinfo) fonction membre.  
+### <a name="remarks"></a>Remarks  
+ This information is useful for looping through the Errors collection to retrieve each of the one or more DAO error objects in the collection. To retrieve an error object by index or by DAO error number, call the [GetErrorInfo](#geterrorinfo) member function.  
   
 > [!NOTE]
->  Normalement, il existe un seul objet d’erreur dans la collection d’erreurs. Si vous travaillez avec une source de données ODBC, toutefois, il peut exister plusieurs fois.  
+>  Normally there is only one error object in the Errors collection. If you are working with an ODBC data source, however, there could be more than one.  
   
-##  <a name="geterrorinfo"></a>CDaoException::GetErrorInfo  
- Retourne des informations sur un objet d’erreur particulier dans la collection d’erreurs.  
+##  <a name="geterrorinfo"></a>  CDaoException::GetErrorInfo  
+ Returns error information about a particular error object in the Errors collection.  
   
 ```  
 void GetErrorInfo(int nIndex);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Index des informations d’erreur dans la collection d’erreurs du moteur de base de données, pour effectuer des recherches par index.  
+ The index of the error information in the database engine's Errors collection, for lookup by index.  
   
-### <a name="remarks"></a>Remarques  
- Appelez cette fonction membre pour obtenir les types suivants d’informations sur l’exception :  
+### <a name="remarks"></a>Remarks  
+ Call this member function to obtain the following kinds of information about the exception:  
   
--   Code d'erreur  
+-   Error code  
   
 -   Source  
   
 -   Description  
   
--   Fichier d'aide  
+-   Help file  
   
--   Contexte d’aide  
+-   Help context  
   
- `GetErrorInfo`stocke les informations de l’objet exception `m_pErrorInfo` membre de données. Pour obtenir une brève description des informations renvoyées, consultez [m_pErrorInfo](#m_perrorinfo). Si vous interceptez une exception de type `CDaoException` levée par MFC, la `m_pErrorInfo` membre est déjà renseigné. Si vous choisissez d’appeler DAO directement, vous devez appeler l’objet exception `GetErrorInfo` fonction membre vous-même à remplir `m_pErrorInfo`. Pour une description plus détaillée, consultez la [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) structure.  
+ `GetErrorInfo` stores the information in the exception object's `m_pErrorInfo` data member. For a brief description of the information returned, see [m_pErrorInfo](#m_perrorinfo). If you catch an exception of type `CDaoException` thrown by MFC, the `m_pErrorInfo` member will already be filled in. If you choose to call DAO directly, you must call the exception object's `GetErrorInfo` member function yourself to fill `m_pErrorInfo`. For a more detailed description, see the [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) structure.  
   
- Pour plus d’informations sur les exceptions DAO et exemple de code, consultez l’article [Exceptions : Exceptions de base de données](../../mfc/exceptions-database-exceptions.md).  
+ For information about DAO exceptions, and example code, see the article [Exceptions: Database Exceptions](../../mfc/exceptions-database-exceptions.md).  
   
-##  <a name="m_nafxdaoerror"></a>CDaoException::m_nAfxDaoError  
- Contient une code d’erreur étendu de MFC.  
+##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError  
+ Contains an MFC extended error code.  
   
-### <a name="remarks"></a>Remarques  
- Ce code est fourni dans les cas où un composant spécifique des classes DAO MFC a visés.  
+### <a name="remarks"></a>Remarks  
+ This code is supplied in cases where a specific component of the MFC DAO classes has erred.  
   
- Les valeurs possibles sont :  
+ Possible values are:  
   
-- **NO_AFX_DAO_ERROR** la dernière opération n’a pas abouti à une erreur étendue de MFC. Toutefois, l’opération peut avoir produits autres erreurs DAO ou OLE, donc vous devez vérifier [m_pErrorInfo](#m_perrorinfo) et éventuellement [m_scode](#m_scode).  
+- **NO_AFX_DAO_ERROR** The most recent operation did not result in an MFC extended error. However, the operation could have produced other errors from DAO or OLE, so you should check [m_pErrorInfo](#m_perrorinfo) and possibly [m_scode](#m_scode).  
   
-- **AFX_DAO_ERROR_ENGINE_INITIALIZATION** MFC n’a pas pu initialiser le moteur de base de données Microsoft Jet. OLE peut avoir échoué à initialiser, ou peut avoir été impossible de créer une instance de l’objet de moteur de base de données DAO. Généralement, ces problèmes suggèrent une installation incorrecte de DAO ou OLE.  
+- **AFX_DAO_ERROR_ENGINE_INITIALIZATION** MFC could not initialize the Microsoft Jet database engine. OLE might have failed to initialize, or it might have been impossible to create an instance of the DAO database engine object. These problems usually suggest a bad installation of either DAO or OLE.  
   
-- **AFX_DAO_ERROR_DFX_BIND** une adresse utilisée dans un appel de fonction exchange (DFX) champs d’enregistrements DAO n’existe pas ou n’est pas valide (l’adresse n'a pas été utilisé pour lier des données). Vous avez transmis une adresse incorrecte dans un appel DFX, ou l’adresse peut devenir non valide entre les opérations DFX.  
+- **AFX_DAO_ERROR_DFX_BIND** An address used in a DAO record field exchange (DFX) function call does not exist or is invalid (the address was not used to bind data). You might have passed a bad address in a DFX call, or the address might have become invalid between DFX operations.  
   
-- **AFX_DAO_ERROR_OBJECT_NOT_OPEN** vous avez tenté d’ouvrir un jeu d’enregistrements basé sur un objet querydef ou un objet tabledef qui n’était pas dans un état ouvert.  
+- **AFX_DAO_ERROR_OBJECT_NOT_OPEN** You attempted to open a recordset based on a querydef or a tabledef object that was not in an open state.  
   
-##  <a name="m_perrorinfo"></a>CDaoException::m_pErrorInfo  
- Contient un pointeur vers un `CDaoErrorInfo` structure qui fournit des informations sur l’objet d’erreur DAO dernière récupérées en appelant [GetErrorInfo](#geterrorinfo).  
+##  <a name="m_perrorinfo"></a>  CDaoException::m_pErrorInfo  
+ Contains a pointer to a `CDaoErrorInfo` structure that provides information on the DAO error object that you last retrieved by calling [GetErrorInfo](#geterrorinfo).  
   
-### <a name="remarks"></a>Notes  
- Cet objet contient les informations suivantes :  
+### <a name="remarks"></a>Remarks  
+ This object contains the following information:  
   
-|CDaoErrorInfo membre|Information|Signification|  
+|CDaoErrorInfo member|Information|Meaning|  
 |--------------------------|-----------------|-------------|  
-|**m_lErrorCode**|Code d'erreur|Le code d’erreur DAO|  
-|`m_strSource`|Source|Le nom de l’objet ou l’application qui a généré l’erreur|  
-|`m_strDescription`|Description|Une chaîne descriptive associée à l’erreur|  
-|`m_strHelpFile`|Fichier d’aide|Un chemin d’accès à un fichier d’aide Windows dans lequel l’utilisateur peut obtenir des informations sur le problème|  
-|**m_lHelpContext**|Contexte d’aide|L’ID de contexte pour une rubrique dans le fichier d’aide de DAO|  
+|**m_lErrorCode**|Error Code|The DAO error code|  
+|`m_strSource`|Source|The name of the object or application that originally generated the error|  
+|`m_strDescription`|Description|A descriptive string associated with the error|  
+|`m_strHelpFile`|Help File|A path to a Windows Help file in which the user can get information about the problem|  
+|**m_lHelpContext**|Help Context|The context ID for a topic in the DAO Help file|  
   
- Pour plus de détails sur les informations contenues dans le `CDaoErrorInfo` , consultez la [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) structure.  
+ For full details about the information contained in the `CDaoErrorInfo` object, see the [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) structure.  
   
-##  <a name="m_scode"></a>CDaoException::m_scode  
- Contient une valeur de type `SCODE` qui décrit l’erreur.  
+##  <a name="m_scode"></a>  CDaoException::m_scode  
+ Contains a value of type `SCODE` that describes the error.  
   
-### <a name="remarks"></a>Remarques  
- Il s’agit d’un code d’OLE. Vous devez utiliser cette valeur car, dans presque tous les cas, les informations d’erreur plus spécifiques MFC ou DAO sont disponibles dans l’autre rarement `CDaoException` membres de données.  
+### <a name="remarks"></a>Remarks  
+ This is an OLE code. You will seldom need to use this value because, in almost all cases, more specific MFC or DAO error information is available in the other `CDaoException` data members.  
   
- Pour plus d’informations sur les `SCODE`, consultez la rubrique [Structure de OLE Codes d’erreur](http://msdn.microsoft.com/library/windows/desktop/ms690088) dans les [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Le `SCODE` type de données correspond à la `HRESULT` type de données.  
+ For information about `SCODE`, see the topic [Structure of OLE Error Codes](http://msdn.microsoft.com/library/windows/desktop/ms690088) in the Windows SDK. The `SCODE` data type maps to the `HRESULT` data type.  
   
-## <a name="see-also"></a>Voir aussi  
- [CException (classe)](../../mfc/reference/cexception-class.md)   
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [CException (classe)](../../mfc/reference/cexception-class.md)
+## <a name="see-also"></a>See Also  
+ [CException Class](../../mfc/reference/cexception-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CException Class](../../mfc/reference/cexception-class.md)
 

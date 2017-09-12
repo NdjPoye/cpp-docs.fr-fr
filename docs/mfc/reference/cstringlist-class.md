@@ -1,5 +1,5 @@
 ---
-title: Classe de CStringList | Documents Microsoft
+title: CStringList Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,10 +36,28 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- strings [C++], lists
-- lists, string
-- CStringList class
-- strings [C++], collections
+- CObList [MFC], CObList
+- CObList [MFC], AddHead
+- CObList [MFC], AddTail
+- CObList [MFC], Find
+- CObList [MFC], FindIndex
+- CObList [MFC], GetAt
+- CObList [MFC], GetCount
+- CObList [MFC], GetHead
+- CObList [MFC], GetHeadPosition
+- CObList [MFC], GetNext
+- CObList [MFC], GetPrev
+- CObList [MFC], GetSize
+- CObList [MFC], GetTail
+- CObList [MFC], GetTailPosition
+- CObList [MFC], InsertAfter
+- CObList [MFC], InsertBefore
+- CObList [MFC], IsEmpty
+- CObList [MFC], RemoveAll
+- CObList [MFC], RemoveAt
+- CObList [MFC], RemoveHead
+- CObList [MFC], RemoveTail
+- CObList [MFC], SetAt
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
 caps.latest.revision: 25
 author: mikeblome
@@ -59,92 +77,92 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 0b67104e330890ffe8f67bac0dd3b129c7742a29
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e92526991a7f7554f868a36d655766cf7f1304f4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cstringlist-class"></a>CStringList (classe)
-Prend en charge des listes d'objets `CString` .  
+# <a name="cstringlist-class"></a>CStringList Class
+Supports lists of `CString` objects.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CStringList : public CObject  
 ```  
   
-## <a name="members"></a>Membres  
- Les fonctions membres de `CStringList` sont similaires aux fonctions membres de classe [CObList](../../mfc/reference/coblist-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObList` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un `CObject` pointeur en tant que valeur de retour, remplacez un `CString` (pas un `CString` pointeur). Chaque fois que vous voyez un `CObject` pointeur en tant que paramètre de fonction, remplacez un `LPCTSTR`.  
+## <a name="members"></a>Members  
+ The member functions of `CStringList` are similar to the member functions of class [CObList](../../mfc/reference/coblist-class.md). Because of this similarity, you can use the `CObList` reference documentation for member function specifics. Wherever you see a `CObject` pointer as a return value, substitute a `CString` (not a `CString` pointer). Wherever you see a `CObject` pointer as a function parameter, substitute an `LPCTSTR`.  
   
  `CObject*& CObList::GetHead() const;`  
   
- par exemple, se traduit par  
+ for example, translates to  
   
  `CString& CStringList::GetHead() const;`  
   
- et  
+ and  
   
  `POSITION AddHead( CObject* <newElement> );`  
   
- se traduit par  
+ translates to  
   
  `POSITION AddHead( LPCTSTR <newElement> );`  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|Construit une liste vide.|  
+|[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|Constructs an empty list.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|Ajoute un élément (ou tous les éléments dans une autre liste) au début de la liste (fait une nouvelle tête).|  
-|[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|Ajoute un élément (ou tous les éléments dans une autre liste) à la fin de la liste (fait une nouvelle fin).|  
-|[CObList::Find](../../mfc/reference/coblist-class.md#find)|Obtient la position d’un élément spécifié par la valeur du pointeur.|  
-|[CObList::FindIndex](../../mfc/reference/coblist-class.md#findindex)|Obtient la position d’un élément spécifié par un index de base zéro.|  
-|[CObList::GetAt](../../mfc/reference/coblist-class.md#getat)|Obtient l’élément à une position donnée.|  
-|[CObList::GetCount](../../mfc/reference/coblist-class.md#getcount)|Renvoie le nombre d’éléments dans cette liste.|  
-|[CObList::GetHead](../../mfc/reference/coblist-class.md#gethead)|Retourne l’élément head de la liste (ne peut pas être vide).|  
-|[CObList::GetHeadPosition](../../mfc/reference/coblist-class.md#getheadposition)|Retourne la position de l’élément head de la liste.|  
-|[CObList::GetNext](../../mfc/reference/coblist-class.md#getnext)|Obtient l’élément suivant pour l’itération.|  
-|[CObList::GetPrev](../../mfc/reference/coblist-class.md#getprev)|Obtient l’élément précédent pour l’itération.|  
-|[CObList::GetSize](../../mfc/reference/coblist-class.md#getsize)|Renvoie le nombre d’éléments dans cette liste.|  
-|[CObList::GetTail](../../mfc/reference/coblist-class.md#gettail)|Retourne l’élément de fin de la liste (ne peut pas être vide).|  
-|[CObList::GetTailPosition](../../mfc/reference/coblist-class.md#gettailposition)|Retourne la position de l’élément de fin de la liste.|  
-|[CObList::InsertAfter](../../mfc/reference/coblist-class.md#insertafter)|Insère un nouvel élément après une position donnée.|  
-|[CObList::InsertBefore](../../mfc/reference/coblist-class.md#insertbefore)|Insère un élément avant une position donnée.|  
-|[CObList::IsEmpty](../../mfc/reference/coblist-class.md#isempty)|Vérifie si la condition de la liste vide (aucun élément).|  
-|[CObList::RemoveAll](../../mfc/reference/coblist-class.md#removeall)|Supprime tous les éléments de cette liste.|  
-|[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)|Supprime un élément de cette liste, spécifiée par position.|  
-|[CObList::RemoveHead](../../mfc/reference/coblist-class.md#removehead)|Supprime l’élément au début de la liste.|  
-|[CObList::RemoveTail](../../mfc/reference/coblist-class.md#removetail)|Supprime l’élément de la fin de la liste.|  
-|[CObList::SetAt](../../mfc/reference/coblist-class.md#setat)|Définit l’élément à une position donnée.|  
+|[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|Adds an element (or all the elements in another list) to the head of the list (makes a new head).|  
+|[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|Adds an element (or all the elements in another list) to the tail of the list (makes a new tail).|  
+|[CObList::Find](../../mfc/reference/coblist-class.md#find)|Gets the position of an element specified by pointer value.|  
+|[CObList::FindIndex](../../mfc/reference/coblist-class.md#findindex)|Gets the position of an element specified by a zero-based index.|  
+|[CObList::GetAt](../../mfc/reference/coblist-class.md#getat)|Gets the element at a given position.|  
+|[CObList::GetCount](../../mfc/reference/coblist-class.md#getcount)|Returns the number of elements in this list.|  
+|[CObList::GetHead](../../mfc/reference/coblist-class.md#gethead)|Returns the head element of the list (cannot be empty).|  
+|[CObList::GetHeadPosition](../../mfc/reference/coblist-class.md#getheadposition)|Returns the position of the head element of the list.|  
+|[CObList::GetNext](../../mfc/reference/coblist-class.md#getnext)|Gets the next element for iterating.|  
+|[CObList::GetPrev](../../mfc/reference/coblist-class.md#getprev)|Gets the previous element for iterating.|  
+|[CObList::GetSize](../../mfc/reference/coblist-class.md#getsize)|Returns the number of elements in this list.|  
+|[CObList::GetTail](../../mfc/reference/coblist-class.md#gettail)|Returns the tail element of the list (cannot be empty).|  
+|[CObList::GetTailPosition](../../mfc/reference/coblist-class.md#gettailposition)|Returns the position of the tail element of the list.|  
+|[CObList::InsertAfter](../../mfc/reference/coblist-class.md#insertafter)|Inserts a new element after a given position.|  
+|[CObList::InsertBefore](../../mfc/reference/coblist-class.md#insertbefore)|Inserts a new element before a given position.|  
+|[CObList::IsEmpty](../../mfc/reference/coblist-class.md#isempty)|Tests for the empty list condition (no elements).|  
+|[CObList::RemoveAll](../../mfc/reference/coblist-class.md#removeall)|Removes all the elements from this list.|  
+|[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)|Removes an element from this list, specified by position.|  
+|[CObList::RemoveHead](../../mfc/reference/coblist-class.md#removehead)|Removes the element from the head of the list.|  
+|[CObList::RemoveTail](../../mfc/reference/coblist-class.md#removetail)|Removes the element from the tail of the list.|  
+|[CObList::SetAt](../../mfc/reference/coblist-class.md#setat)|Sets the element at a given position.|  
   
-## <a name="remarks"></a>Remarques  
- Toutes les comparaisons sont effectuées par valeur, ce qui signifie que les caractères de la chaîne sont comparés au lieu des adresses des chaînes.  
+## <a name="remarks"></a>Remarks  
+ All comparisons are done by value, meaning that the characters in the string are compared instead of the addresses of the strings.  
   
- `CStringList` incorpore la macro `IMPLEMENT_SERIAL` pour prendre en charge la sérialisation et le vidage de ses éléments. Si une liste de `CString` objets est stocké dans une archive, avec un opérateur d’insertion surchargés ou les `Serialize` fonction membre, chaque `CString` élément est sérialisé à son tour.  
+ `CStringList` incorporates the `IMPLEMENT_SERIAL` macro to support serialization and dumping of its elements. If a list of `CString` objects is stored to an archive, either with an overloaded insertion operator or with the `Serialize` member function, each `CString` element is serialized in turn.  
   
- Si vous avez besoin d’une image de chaque `CString` éléments, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.  
+ If you need a dump of individual `CString` elements, you must set the depth of the dump context to 1 or greater.  
   
- Pour plus d’informations sur l’utilisation de `CStringList`, consultez l’article [Collections](../../mfc/collections.md).  
+ For more information on using `CStringList`, see the article [Collections](../../mfc/collections.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CStringList`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxcoll.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcoll.h  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemple MFC COLLECT](../../visual-cpp-samples.md)   
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample COLLECT](../../visual-cpp-samples.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

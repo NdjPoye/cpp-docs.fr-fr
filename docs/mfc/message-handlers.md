@@ -1,39 +1,58 @@
 ---
-title: "Gestionnaires de messages | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestion des commandes, gestionnaires de messages"
-  - "gestionnaires"
-  - "gestionnaires, commande"
-  - "gestionnaires, message"
-  - "gestionnaires de messages"
-  - "gestion des messages, gestionnaire de messages (fonctions)"
+title: Message Handlers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers [MFC]
+- command handling [MFC], message handlers
+- handlers [MFC]
+- message handling [MFC], message handler functions
+- handlers [MFC], command
+- handlers [MFC], message
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Gestionnaires de messages
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4c645aba2c37f403121b311f12863334277e5612
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Dans MFC, une *fonction gestionnaire* dédiée traite chaque message indépendant.  Les fonctions gestionnaires de messages sont des méthodes d'une classe.  Cette documentation utilise les termes *méthode gestionnaire de messages*, *fonction gestionnaire des messages*, *gestionnaire de messages*, et *gestionnaire* de façon interchangeable.  Certains types de gestionnaires de messages sont également appelés « gestionnaires de commandes. »  
+---
+# <a name="message-handlers"></a>Message Handlers
+In MFC, a dedicated *handler* function processes each separate message. Message-handler functions are member functions of a class. This documentation uses the terms *message-handler member function*, *message-handler function*, *message handler*, and *handler* interchangeably. Some kinds of message handlers are also called "command handlers."  
   
- Écrire des gestionnaires de messages représente une grande proportion de votre travail dans l'écrit d'une application framework.  La famille d'article explique comment le mécanisme de traitement des messages s'exécute.  
+ Writing message handlers accounts for a large proportion of your work in writing a framework application. This article family describes how the message-processing mechanism works.  
   
- Que fait le gestionnaire d'un message ?  Il effectue ce que vous souhaitez fait en réponse à ce message.  Vous pouvez créer des gestionnaires à l'aide de la fenêtre Propriétés de la classe, puis exécutez le code du gestionnaire à l'aide de l'éditeur de code source.  
+ What does the handler for a message do It does whatever you want done in response to that message. You can create the handlers by using the Properties window of the class, and then fill in the handler's code using the source code editor.  
   
- Vous pouvez utiliser les fonctionnalités de Microsoft Visual C\+\+ et de MFC pour écrire les gestionnaires.  Pour obtenir la liste de toutes les classes, consultez [Présentation de la bibliothèque de classes](../mfc/class-library-overview.md) dans *le guide de MFC*.  
+ You can use all of the facilities of Microsoft Visual C++ and MFC to write your handlers. For a list of all classes, see [Class Library Overview](../mfc/class-library-overview.md) in the *MFC Reference*.  
   
-## Voir aussi  
- [Messages et commandes dans le Framework](../mfc/messages-and-commands-in-the-framework.md)
+## <a name="see-also"></a>See Also  
+ [Messages and Commands in the Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+

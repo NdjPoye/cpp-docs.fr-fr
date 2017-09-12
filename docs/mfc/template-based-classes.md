@@ -1,119 +1,138 @@
 ---
-title: "Classes bas&#233;es sur un mod&#232;le | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tableaux (C++), classes"
-  - "tableaux (C++), pointeurs"
-  - "tableaux (C++), basées sur un modèle"
-  - "CArray (classe), classes basées sur un modèle"
-  - "CList (classe), classes basées sur un modèle"
-  - "classes de collection, basées sur des modèles"
-  - "collections, pointeur typé"
-  - "CTypedPtrArray (classe), classes basées sur un modèle"
-  - "CTypedPtrList (classe), classes basées sur un modèle"
-  - "CTypedPtrMap (classe), classes basées sur un modèle"
-  - "classes de collection MFC, basées sur un modèle"
-  - "pointeurs, typés (collections)"
-  - "classes de collection de tableaux simples"
-  - "classes de collection de listes simples"
-  - "collections basées sur un modèle simple"
-  - "collections de classes basées sur un modèle"
-  - "pointeurs typés"
-  - "pointeurs typés, collections de"
-  - "collections de type sécurisé"
+title: Template-Based Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- type-safe collections
+- CTypedPtrList class [MFC], template-based classes
+- arrays [MFC], classes
+- arrays [MFC], pointers
+- typed pointers, collections of
+- arrays [MFC], template-based
+- CArray class [MFC], template-based classes
+- simple template-based collections
+- simple array collection classes [MFC]
+- typed pointers
+- collections, typed-pointer
+- CList class [MFC], template-based classes
+- collection classes [MFC], template-based
+- CTypedPtrMap class [MFC], template-based classes
+- pointers, collections of typed
+- CTypedPtrArray class [MFC], template-based classes
+- MFC collection classes [MFC], template-based
+- template-based collection classes [MFC]
+- simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Classes bas&#233;es sur un mod&#232;le
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a9a87b4c234b3a695dfbd86bf51f5e8284438d7b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cet article explique les classes de collection modèle de type sécurisé dans la version 3,0 de MFC et versions ultérieures.  Utiliser ces modèles pour créer des collections de type sécurisé est plus pratique et permet de fournir la cohérence des types de manière plus efficace que d'utiliser les classes de collection non basées sur des modèles.  
+---
+# <a name="template-based-classes"></a>Template-Based Classes
+This article explains the type-safe template-based collection classes in MFC version 3.0 and later. Using these templates to create type-safe collections is more convenient and helps provide type safety more effectively than using the collection classes not based on templates.  
   
- MFC prédéfinit deux catégories de collections modèles :  
+ MFC predefines two categories of template-based collections:  
   
--   [Classes tableau, liste et map](#_core_using_simple_array.2c_.list.2c_.and_map_templates)  
+-   [Simple array, list, and map classes](#_core_using_simple_array.2c_.list.2c_.and_map_templates)  
   
      `CArray`, `CList`, `CMap`  
   
--   [Tables, listes, et map des pointeurs typés](#_core_using_typed.2d.pointer_collection_templates)  
+-   [Arrays, lists, and maps of typed pointers](#_core_using_typed.2d.pointer_collection_templates)  
   
      `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`  
   
- Toutes les classes de collection simples sont dérivées de la classe `CObject`, afin qu'elles héritent de la sérialisation, la création dynamique, et d'autres propriétés de `CObject`.  Les classes de collection de type de pointeur exigent que vous spécifiiez la classe que vous dérivez de — qui doit être l'une des collections basées sur les modèles de pointeur prédéfinies par MFC, tel que `CPtrList` ou `CPtrArray`.  La nouvelle classe de collection hérite de la classe de base spécifiée, et les fonctions membres de la nouvelle classe utilisent des appels encapsulés aux membres de la classe de base pour garantir la cohérence des types.  
+ The simple collection classes are all derived from class `CObject`, so they inherit the serialization, dynamic creation, and other properties of `CObject`. The typed pointer collection classes require you to specify the class you derive from — which must be one of the nontemplate pointer collections predefined by MFC, such as `CPtrList` or `CPtrArray`. Your new collection class inherits from the specified base class, and the new class's member functions use encapsulated calls to the base class members to enforce type safety.  
   
- Pour plus d'informations sur les modèles C\+\+, consultez [Modèles](../cpp/templates-cpp.md) dans le *Guide de référence du langage C\+\+*.  
+ For more information about C++ templates, see [Templates](../cpp/templates-cpp.md) in the *C++ Language Reference*.  
   
-##  <a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a> Utilisation du tableau, de liste, et des modèles du tableau  
- Pour utiliser les modèles simples de collection, vous devez connaître le type des données pouvant être stockées dans les collections et les paramètres à utiliser dans les déclarations de la collection.  
+##  <a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a> Using Simple Array, List, and Map Templates  
+ To use the simple collection templates, you need to know what kind of data you can store in these collections and what parameters to use in your collection declarations.  
   
-###  <a name="_core_simple_array_and_list_usage"></a> Utilisation de tableau simple et de liste  
- Les classes de tableau simple et de liste, [CArray](../mfc/reference/carray-class.md) et [CList](../mfc/reference/clist-class.md), prend deux paramètres : *TYPE* et `ARG_TYPE`.  Ces classes peuvent enregistrer tout type de données, que vous spécifiez dans le paramètre *type*:  
+###  <a name="_core_simple_array_and_list_usage"></a> Simple Array and List Usage  
+ The simple array and list classes, [CArray](../mfc/reference/carray-class.md) and [CList](../mfc/reference/clist-class.md), take two parameters: *TYPE* and `ARG_TYPE`. These classes can store any data type, which you specify in the *TYPE* parameter:  
   
--   Types de données critiques C\+\+, tels que `int`, `char`, et **float**  
+-   Fundamental C++ data types, such as `int`, `char`, and **float**  
   
--   Structures et classes C\+\+  
+-   C++ structures and classes  
   
--   D'autres types que vous définissez  
+-   Other types that you define  
   
- Par souci de commodité et d'efficacité, vous pouvez utiliser le paramètre `ARG_TYPE` pour spécifier le type des arguments de fonction.  En général, vous spécifiez `ARG_TYPE` comme référence au type que vous avez spécifié dans le paramètre *type*.  Par exemple :  
+ For convenience and efficiency, you can use the `ARG_TYPE` parameter to specify the type of function arguments. Typically, you specify `ARG_TYPE` as a reference to the type you named in the *TYPE* parameter. For example:  
   
- [!code-cpp[NVC_MFCCollections#1](../mfc/codesnippet/CPP/template-based-classes_1.cpp)]  
+ [!code-cpp[NVC_MFCCollections#1](../mfc/codesnippet/cpp/template-based-classes_1.cpp)]  
   
- Le premier exemple déclare une collection de tables, `myArray`, qui contient `int`S.  Le deuxième exemple déclare une collection de listes, `myList`, qui stocke `CPerson` les objets.  Certaines fonctions membres des classes de collection prennent les arguments dont le type est spécifié par le paramètre de modèle `ARG_TYPE`.  Par exemple, la fonction membre **Ajouter** de la classe `CArray` accepte un argument `ARG_TYPE`:  
+ The first example declares an array collection, `myArray`, that contains `int`s. The second example declares a list collection, `myList`, that stores `CPerson` objects. Certain member functions of the collection classes take arguments whose type is specified by the `ARG_TYPE` template parameter. For example, the **Add** member function of class `CArray` takes an `ARG_TYPE` argument:  
   
- [!code-cpp[NVC_MFCCollections#2](../mfc/codesnippet/CPP/template-based-classes_2.cpp)]  
+ [!code-cpp[NVC_MFCCollections#2](../mfc/codesnippet/cpp/template-based-classes_2.cpp)]  
   
-###  <a name="_core_simple_map_usage"></a> Utilisation de tableau associatif simple  
- La classe de tableau associatif simple, [CMap](../mfc/reference/cmap-class.md), prend quatre paramètres : *KEY*, `ARG_KEY`, *VALUE*, et `ARG_VALUE`.  Comme les classes de tableau et de liste, les classes de tableau associatif peuvent enregistrer tout type de données.  Contrairement aux tables et listes, qui classent et ordonnent les données qu'ils enregistrent, les tableaux associatifs associent les clés et les valeurs : Vous accédez à une valeur stockée dans une table en spécifiant la clé associée à la valeur.  Le paramètre *KEY* spécifie le type de données des clés utilisées pour accéder aux données stockées dans le tableau associatif.  Si le type de *KEY* est une structure ou une classe, le paramètre `ARG_KEY` est généralement une référence au type spécifié dans *KEY*.  Le paramètre *valeur* spécifie le type des éléments stockés dans le tableau associatif.  Si le type `ARG_VALUE` est une structure ou une classe, le paramètre `ARG_VALUE` est généralement une référence au type spécifié dans *VALUE*.  Par exemple :  
+###  <a name="_core_simple_map_usage"></a> Simple Map Usage  
+ The simple map class, [CMap](../mfc/reference/cmap-class.md), takes four parameters: *KEY*, `ARG_KEY`, *VALUE*, and `ARG_VALUE`. Like the array and list classes, the map classes can store any data type. Unlike arrays and lists, which index and order the data they store, maps associate keys and values: You access a value stored in a map by specifying the value's associated key. The *KEY* parameter specifies the data type of the keys used to access data stored in the map. If the type of *KEY* is a structure or class, the `ARG_KEY` parameter is typically a reference to the type specified in *KEY*. The *VALUE* parameter specifies the type of the items stored in the map. If the type of `ARG_VALUE` is a structure or class, the `ARG_VALUE` parameter is typically a reference to the type specified in *VALUE*. For example:  
   
- [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/CPP/template-based-classes_3.cpp)]  
+ [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/cpp/template-based-classes_3.cpp)]  
   
- Le premier exemple stocke des valeurs `MY_STRUCT`, y accède par des clés `int`, et retourne les éléments accédés à partir des objets `MY_STRUCT` par référence.  Le deuxième exemple stocke des valeurs `CPerson`, y accède par des clés `CString`, et retourne les références aux objets accédés.  Cet exemple peut représenter un simple livre d'adresses, dans lequel vous recherchez les utilisateurs par leur nom.  
+ The first example stores `MY_STRUCT` values, accesses them by `int` keys, and returns accessed `MY_STRUCT` items by reference. The second example stores `CPerson` values, accesses them by `CString` keys, and returns references to accessed items. This example might represent a simple address book, in which you look up persons by last name.  
   
- Parce que le paramètre *KEY* est de type `CString` et le paramètre *de KEY\_TYPE* est de type `LPCSTR`, les clés sont stockées dans le tableau associatif en tant qu'éléments de type `CString` mais sont référencées dans comme fonctions telles que `SetAt` à travers les pointeurs de type `LPCSTR`.  Par exemple :  
+ Because the *KEY* parameter is of type `CString` and the *KEY_TYPE* parameter is of type `LPCSTR`, the keys are stored in the map as items of type `CString` but are referenced in functions such as `SetAt` through pointers of type `LPCSTR`. For example:  
   
- [!code-cpp[NVC_MFCCollections#4](../mfc/codesnippet/CPP/template-based-classes_4.cpp)]  
+ [!code-cpp[NVC_MFCCollections#4](../mfc/codesnippet/cpp/template-based-classes_4.cpp)]  
   
-##  <a name="_core_using_typed.2d.pointer_collection_templates"></a> Utilisation de modèles de pointeur de type  
- Pour utiliser les modèles simples de pointeurs de types, vous devez connaître le type des données pouvant être stockées dans les collections et les paramètres à utiliser dans les déclarations de la collection.  
+##  <a name="_core_using_typed.2d.pointer_collection_templates"></a> Using Typed-Pointer Collection Templates  
+ To use the typed-pointer collection templates, you need to know what kinds of data you can store in these collections and what parameters to use in your collection declarations.  
   
-###  <a name="_core_typed.2d.pointer_array_and_list_usage"></a> Tableau de pointeurs de type et utilisation de liste  
- Les classes de tableau de pointeurs de types et de liste, [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md) et [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md), prennent deux paramètres : `BASE_CLASS` et *TYPE*.  Ces classes peuvent enregistrer tout type de données, que vous spécifiez dans le paramètre *type*:  Elles sont dérivées de l'une des classes de collection basées sur les modèles qui stocke des pointeurs ; vous spécifiez cette classe de base dans `BASE_CLASS`.  Pour les tables, utilisez `CObArray` ou `CPtrArray`.  Pour les listes, utilisez `CObList` ou `CPtrList`.  
+###  <a name="_core_typed.2d.pointer_array_and_list_usage"></a> Typed-Pointer Array and List Usage  
+ The typed-pointer array and list classes, [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md) and [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md), take two parameters: `BASE_CLASS` and *TYPE*. These classes can store any data type, which you specify in the *TYPE* parameter. They are derived from one of the nontemplate collection classes that stores pointers; you specify this base class in `BASE_CLASS`. For arrays, use either `CObArray` or `CPtrArray`. For lists, use either `CObList` or `CPtrList`.  
   
- En effet, lorsque vous déclarez une collection selon, supposons `CObList`, la nouvelle classe hérite non seulement des membres de sa classe de base, mais indique également plusieurs fonctions de membre de type sécurisé et d'opérateurs qui aident à fournir des types sécurisés en encapsulant des appels aux membres de la classe de base.  Ces encapsulations gèrent toutes les conversions de types nécessaires.  Par exemple :  
+ In effect, when you declare a collection based on, say `CObList`, the new class not only inherits the members of its base class, but it also declares a number of additional type-safe member functions and operators that help provide type safety by encapsulating calls to the base class members. These encapsulations manage all necessary type conversion. For example:  
   
- [!code-cpp[NVC_MFCCollections#5](../mfc/codesnippet/CPP/template-based-classes_5.cpp)]  
+ [!code-cpp[NVC_MFCCollections#5](../mfc/codesnippet/cpp/template-based-classes_5.cpp)]  
   
- Le premier exemple déclare un tableau de pointeurs de type, `myArray`, dérivé de `CObArray`.  La table stocke et retourne des pointeurs sur les objets `CPerson` \(où `CPerson` est une classe dérivée de `CObject`\).  Vous pouvez appeler une fonction membre `CObArray`, ou vous pouvez appeler de nouvelles fonctions de type sécurisé `GetAt` et `ElementAt` ou utiliser l'opérateur de type sécurisé **\[ \]**.  
+ The first example declares a typed-pointer array, `myArray`, derived from `CObArray`. The array stores and returns pointers to `CPerson` objects (where `CPerson` is a class derived from `CObject`). You can call any `CObArray` member function, or you can call the new type-safe `GetAt` and `ElementAt` functions or use the type-safe **[ ]** operator.  
   
- Le deuxième exemple déclare une liste de pointeur de type, `myList`, dérivé de `CPtrList`.  La liste enregistre et retourne des pointeurs aux objets `MY_STRUCT`.  Une classe basée sur `CPtrList` est utilisée pour stocker les pointeurs sur les objets non dérivés de `CObject`.  `CTypedPtrList` a plusieurs fonctions membres de type sécurisé : `GetHead`, `GetTail`, `RemoveHead`, `RemoveTail`, `GetNext`, `GetPrev`, et `GetAt`.  
+ The second example declares a typed-pointer list, `myList`, derived from `CPtrList`. The list stores and returns pointers to `MY_STRUCT` objects. A class based on `CPtrList` is used for storing pointers to objects not derived from `CObject`. `CTypedPtrList` has a number of type-safe member functions: `GetHead`, `GetTail`, `RemoveHead`, `RemoveTail`, `GetNext`, `GetPrev`, and `GetAt`.  
   
-###  <a name="_core_typed.2d.pointer_map_usage"></a> Utilisation de tableau associatif de pointeur de type  
- La classe de tableau associatif de pointeur de type, [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), accepte trois paramètres : `BASE_CLASS`, *KEY*, et *valeurs*.  Le paramètre `BASE_CLASS` spécifie la classe à partir de laquelle dérive la nouvelle classe : `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`, et ainsi de suite.  *KEY* est analogue *KEY* dans `CMap`: Il spécifie le type de la clé utilisée pour les recherches.  *Valeur* est analogue *Valeur* dans `CMap`: Il spécifie le type d'objet stocké dans la carte.  Par exemple :  
+###  <a name="_core_typed.2d.pointer_map_usage"></a> Typed-Pointer Map Usage  
+ The typed-pointer map class, [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), takes three parameters: `BASE_CLASS`, *KEY*, and *VALUE*. The `BASE_CLASS` parameter specifies the class from which to derive the new class: `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`, and so on. *KEY* is analogous to *KEY* in `CMap`: It specifies the type of the key used for lookups. *VALUE* is analogous to *VALUE* in `CMap`: It specifies the type of object stored in the map. For example:  
   
- [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/CPP/template-based-classes_6.cpp)]  
+ [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/cpp/template-based-classes_6.cpp)]  
   
- Le premier exemple est un tableau associatif basé sur **CMapPtrToPt**r — il utilise des clés `CString` mappées aux pointeurs vers `MY_STRUCT`.  Vous pouvez rechercher un pointeur stocké en appelant une fonction membre de type sécurisé `Lookup`.  Vous pouvez utiliser l'opérateur **\[ \]** pour rechercher un pointeur stockée et l'ajouter si introuvable.  Et vous pouvez parcourir le tableau associatif à l'aide de la fonction de type sécurisé `GetNextAssoc`.  Vous pouvez également appeler d'autres fonctions membres de la classe `CMapPtrToPtr`.  
+ The first example is a map based on **CMapPtrToPt**r — it uses `CString` keys mapped to pointers to `MY_STRUCT`. You can look up a stored pointer by calling a type-safe `Lookup` member function. You can use the **[ ]** operator to look up a stored pointer and add it if not found. And you can iterate the map using the type-safe `GetNextAssoc` function. You can also call other member functions of class `CMapPtrToPtr`.  
   
- Le deuxième exemple est un tableau associatif basé sur **CMapStringToO**b — il utilise des clés de chaîne mappées aux pointeurs stockés aux objets `CMyObject`.  Vous pouvez utiliser les mêmes membres de type sécurisé décrits dans le paragraphe précédent, ou vous pouvez appeler des membres de la classe `CMapStringToOb`.  
+ The second example is a map based on **CMapStringToO**b — it uses string keys mapped to stored pointers to `CMyObject` objects. You can use the same type-safe members described in the previous paragraph, or you can call members of class `CMapStringToOb`.  
   
 > [!NOTE]
->  Si vous spécifiez une **classe** ou un type `struct` pour le paramètre *valeur*, plutôt qu'un pointeur ou une référence au type, la classe ou la structure doit avoir un constructeur de copie.  
+>  If you specify a **class** or `struct` type for the *VALUE* parameter, rather than a pointer or reference to the type, the class or structure must have a copy constructor.  
   
- Pour plus d'informations, consultez [Comment faire une collection de type sécurisé](../mfc/how-to-make-a-type-safe-collection.md).  
+ For more information, see [How to Make a Type-Safe Collection](../mfc/how-to-make-a-type-safe-collection.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>See Also  
  [Collections](../mfc/collections.md)
+
+

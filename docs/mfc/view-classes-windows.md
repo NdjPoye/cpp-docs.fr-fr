@@ -1,93 +1,112 @@
 ---
-title: "Classes d&#39;affichage (Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.view"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vues d'enregistrements et de formulaires"
-  - "classes de fenêtres fractionnées"
-  - "classes vues, Windows"
+title: View Classes (Windows) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.view
+dev_langs:
+- C++
+helpviewer_keywords:
+- form and record views [MFC]
+- splitter window classes [MFC]
+- view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Classes d&#39;affichage (Windows)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ff65a4a581035536bee8077f2736e273e36ce68d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-`CView` et ses classes dérivées sont des fenêtres enfants qui représentent la zone client d'une fenêtre cadre.  Les vues affichent des données et acceptent des entrées pour un document.  
+---
+# <a name="view-classes-windows"></a>View Classes (Windows)
+`CView` and its derived classes are child windows that represent the client area of a frame window. Views show data and accept input for a document.  
   
- Une classe d'affichage est associée à une classe de document et une classe cadre de fenêtre en utilisant un objet modèle de document.  
+ A view class is associated with a document class and a frame window class using a document-template object.  
   
  [CView](../mfc/reference/cview-class.md)  
- La classe de base pour les vues spécifiques à l'application des données d'un document.  Les vues affichent des données et acceptent des entrées utilisateur pour modifier ou sélectionner des données.  Dériver la classe d'affichage ou des classes de `CView`.  
+ The base class for application-specific views of a document's data. Views display data and accept user input to edit or select the data. Derive your view class or classes from `CView`.  
   
  [CScrollView](../mfc/reference/cscrollview-class.md)  
- La classe de base pour les vues avec des capacités de défilement.  Dériver la classe de `CScrollView` pour le défilement automatique.  
+ The base class for views with scrolling capabilities. Derive your view class from `CScrollView` for automatic scrolling.  
   
-## vues d'enregistrements et de formulaires  
- Les vues formulaire sont aussi des vues de défilement.  Elles sont basées sur un modèle de boîte de dialogue.  
+## <a name="form-and-record-views"></a>Form and Record Views  
+ Form views are also scrolling views. They are based on a dialog box template.  
   
- Les vues d'enregistrements sont dérivées des vues formulaire.  Outre le modèle de boîte de dialogue, elles possèdent également une connexion à une base de données.  
+ Record views are derived from form views. In addition to the dialog box template, they also have a connection to a database.  
   
  [CFormView](../mfc/reference/cformview-class.md)  
- Une zone de défilement dont la structure est définie dans un modèle de boîte de dialogue.  Dérivez une classe de `CFormView` pour implémenter une interface utilisateur basée sur un modèle de la boîte de dialogue.  
+ A scroll view whose layout is defined in a dialog box template. Derive a class from `CFormView` to implement a user interface based on a dialog box template.  
   
  [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- Fournit un mode formulaire directement connectée à un objet recordset d'accès aux données \(DAO\).  Comme tous les modes formulaire, un `CDaoRecordView` est basé sur le modèle de la boîte de dialogue.  
+ Provides a form view directly connected to a Data Access Object (DAO) recordset object. Like all form views, a `CDaoRecordView` is based on a dialog box template.  
   
  [CRecordView](../mfc/reference/crecordview-class.md)  
- Fournit un mode formulaire directement connectée à un objet recordset ODBC \(Open Database Connectivity\).  Comme tous les modes formulaire, un `CRecordView` est basé sur le modèle de la boîte de dialogue.  
+ Provides a form view directly connected to an Open Database Connectivity (ODBC) recordset object. Like all form views, a `CRecordView` is based on a dialog box template.  
   
  [CHtmlEditView](../mfc/reference/chtmleditview-class.md)  
- Une vue formulaire qui fournit des fonctionnalités de la plateforme d'édition HTML WebBrowser.  
+ A form view that provides the functionality of the WebBrowser HTML editing platform.  
   
-## vues de contrôle  
- Les affichages de contrôle affichent un contrôle en tant que vue.  
+## <a name="control-views"></a>Control Views  
+ Control views display a control as their view.  
   
  [CCtrlView](../mfc/reference/cctrlview-class.md)  
- La classe de base pour toutes les vues associées aux contrôles Windows.  Les vues basées sur des contrôles sont décrites ci\-dessous.  
+ The base class for all views associated with Windows controls. The views based on controls are described below.  
   
  [CEditView](../mfc/reference/ceditview-class.md)  
- Une vue qui contient un contrôle d'édition Windows standard \(consultez [CEdit](../mfc/reference/cedit-class.md)\).  Les contrôles d'édition prennent en charge des capcités pour l'édition, la recherche, le remplacement, et le défilement de texte.  
+ A view that contains a Windows standard edit control (see [CEdit](../mfc/reference/cedit-class.md)). Edit controls support text editing, searching, replacing, and scrolling capabilities.  
   
  [CRichEditView](../mfc/reference/cricheditview-class.md)  
- Une vue qui contient un contrôle RichEdit Windows \(consultez [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\).  Outre les fonctions d'un contrôle d'édition, les contrôles RichEdits prennent en charge les polices, des couleurs, la mise en forme de paragraphe, et les objets OLE incorporés.  
+ A view that contains a Windows rich edit control (see [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). In addition to the capabilities of an edit control, rich edit controls support fonts, colors, paragraph formatting, and embedded OLE objects.  
   
  [CListView](../mfc/reference/clistview-class.md)  
- Une vue qui contient un contrôle de liste Windows \(consultez [CListCtrl](../mfc/reference/clistctrl-class.md)\).  Un contrôle de liste affiche une collection d'éléments, chacune comprenant une icône et un nom, d'une manière semblable au volet droit de l'Explorateur de fichiers.  
+ A view that contains a Windows list control (see [CListCtrl](../mfc/reference/clistctrl-class.md)). A list control displays a collection of items, each consisting of an icon and a label, in a manner similar to the right pane of File Explorer.  
   
  [CTreeView](../mfc/reference/ctreeview-class.md)  
- Une vue qui contient un contrôle d'arborescence Windows \(consultez [CTreeCtrl](../mfc/reference/ctreectrl-class.md)\).  Un contrôle d'arborescence affiche une liste hiérarchique d'icônes arrangée de manière similaire au volet gauche de l'Explorateur de fichiers.  
+ A view that contains a Windows tree control (see [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). A tree control displays a hierarchical list of icons and labels arranged in a manner similar to the left pane of File Explorer.  
   
-## Classes liées  
- `CSplitterWnd` vous permet d'avoir plusieurs perspectives dans une fenêtre cadre.  `CPrintDialog` et `CPrintInfo` prennent en charge la fonctionnalité d'impression et d'aperçu avant impression des vues.  `CRichEditDoc` et `CRichEditCntrItem` sont utilisés avec `CRichEditView` pour implémenter les capacités de conteneur OLE.  
+## <a name="related-classes"></a>Related Classes  
+ `CSplitterWnd` allows you to have multiple views within a single frame window. `CPrintDialog` and `CPrintInfo` support the print and print preview ability of views. `CRichEditDoc` and `CRichEditCntrItem` are used with `CRichEditView` to implement OLE container capabilities.  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
- Une fenêtre que l'utilisateur peut se diviser en plusieurs volets.  Ces volets peuvent être redimensionnables par l'utilisateur ou de taille fixe.  
+ A window that the user can split into multiple panes. These panes can be resizable by the user or fixed size.  
   
  [CPrintDialog](../mfc/reference/cprintdialog-class.md)  
- Affiche une boîte de dialogue standard pour imprimer un fichier.  
+ Provides a standard dialog box for printing a file.  
   
  [CPrintInfo](../mfc/reference/cprintinfo-structure.md)  
- Une structure qui contient des informations sur un travail d'impression ou un aperçu avant impression.  Utilisé par l'architecture d'impression de `CView`.  
+ A structure containing information about a print or print preview job. Used by `CView`'s printing architecture.  
   
  [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)  
- Maintient la liste d'éléments client OLE qui sont dans un `CRichEditView`.  
+ Maintains the list of OLE client items that are in a `CRichEditView`.  
   
  [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)  
- Fournit l'accès côté client OLE à un élément stocké dans `CRichEditView`.  
+ Provides client-side access to an OLE item stored in a `CRichEditView`.  
   
-## Voir aussi  
- [Vue d'ensemble des classes](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

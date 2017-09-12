@@ -1,67 +1,86 @@
 ---
-title: "Mise &#224; disposition de l&#39;activation sans fen&#234;tre | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "activation (C++), contrôles ActiveX MFC"
-  - "activation (C++), sans fenêtre"
-  - "contrôles ActiveX MFC (C++), options d'activation"
-  - "activation sans fenêtre des contrôles ActiveX MFC"
+title: Providing Windowless Activation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- windowless activation of MFC ActiveX controls
+- activation [MFC], MFC ActiveX controls
+- MFC ActiveX controls [MFC], activate options
+- activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Mise &#224; disposition de l&#39;activation sans fen&#234;tre
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 882240d66205fba2ebcfa348f6cc3edc110d0b57
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Le code de conception de la fenêtre \(autrement dit, tout ce qui se produit lorsque vous appelez **CreateWindow**\) est coûteux à exécuter.  Un contrôle qui gère une fenêtre affichée à l'écran doit gérer les messages de la fenêtre.  Les contrôles sans fenêtre sont donc plus rapides que les contrôles avec fenêtre.  
+---
+# <a name="providing-windowless-activation"></a>Providing Windowless Activation
+Window creation code (that is, everything that happens when you call **CreateWindow**) is costly to execute. A control that maintains an on-screen window has to manage messages for the window. Windowless controls are therefore faster than controls with windows.  
   
- Un autre avantage des contrôles sans fenêtre est que, contrairement aux contrôles fenêtrés, les contrôles sans fenêtre prennent en charge la peinture transparente et les régions d'affichage non\-rectangulaires.  Un exemple classique d'un contrôle transparent est un contrôle de texte avec un arrière\-plan transparent.  Les contrôles peignent le texte mais pas l'arrière\-plan, ainsi tout ce qui est sous le texte transparaît.  De nouvelles formes utilisent souvent des contrôles non\-rectangulaires, tels que les flèches et les boutons arrondis.  
+ A further advantage of windowless controls is that, unlike windowed controls, windowless controls support transparent painting and nonrectangular screen regions. A common example of a transparent control is a text control with a transparent background. The controls paints the text but not the background, so whatever is under the text shows through. Newer forms often make use of nonrectangular controls, such as arrows and round buttons.  
   
- Souvent, un contrôle n'a pas besoin d'avoir sa propre fenêtre et, en revanche, peut utiliser les services de fenêtre de son conteneur, à condition que le conteneur ait été écrit pour prendre en charge les objets sans fenêtre.  Les contrôles sans fenêtre sont à compatibilité descendante avec les conteneurs plus anciens.  Dans les conteneurs anciens et non écrits pour prendre en charge les contrôles sans fenêtre, les contrôles sans fenêtre crée une fenêtre lorsqu'ils sont actifs.  
+ Often, a control does not need a window of its own and, instead, can use the window services of its container, provided that the container has been written to support windowless objects. Windowless controls are backward compatible with older containers. In older containers not written to support windowless controls, the windowless controls create a window when active.  
   
- Les contrôles sans fenêtre n'ont pas leurs propres fenêtres, le conteneur \(qui lui possède une fenêtre\) est chargé de fournir des services qui auraient sinon été fournis par la propre fenêtre du contrôle.  Par exemple, si votre contrôle a besoin d'interroger le focus clavier, d'intercepter la souris, ou d'obtenir le contexte de périphérique, ces opérations sont gérées par le conteneur.  Le conteneur achemine les messages d'entrée utilisateur envoyés dans la fenêtre au contrôle sans fenêtre approprié, à l'aide de l'interface `IOleInPlaceObjectWindowless`. \(Voir *ActiveX Kit de développement logiciel* \(SDK\) pour une description de cette interface.\) Des fonctions membres de `COleControl` appelent ces services du conteneur.  
+ Because windowless controls do not have their own windows, the container (which does have a window) is responsible for providing services that would otherwise have been provided by the control's own window. For example, if your control needs to query the keyboard focus, capture the mouse, or obtain a device context, these operations are managed by the container. The container routes user input messages sent to its window to the appropriate windowless control, using the `IOleInPlaceObjectWindowless` interface. (See the *ActiveX SDK* for a description of this interface.) `COleControl` member functions invoke these services from the container.  
   
- Pour faire en sorte que votre contrôle utilise l'activation sans fenêtre, incluez l'indicateur de **windowlessActivate** dans l'ensemble des balises retournées par [COleControl::GetControlFlags](../Topic/COleControl::GetControlFlags.md).  Par exemple :  
+ To make your control use windowless activation, include the **windowlessActivate** flag in the set of flags returned by [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). For example:  
   
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/CPP/providing-windowless-activation_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#6](../mfc/codesnippet/CPP/providing-windowless-activation_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/CPP/providing-windowless-activation_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-windowless-activation_1.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#6](../mfc/codesnippet/cpp/providing-windowless-activation_2.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-windowless-activation_3.cpp)]  
   
- Le code pour inclure cet indicateur est automatiquement généré si vous sélectionnez l'option de **Activation sans fenêtre** dans la page d' [Paramètres du contrôle](../mfc/reference/control-settings-mfc-activex-control-wizard.md) de l'Assistant Contrôle ActiveX MFC.  
+ The code to include this flag is automatically generated if you select the **Windowless activation** option on the [Control Settings](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page of the MFC ActiveX Control Wizard.  
   
- Lorsque l'activation sans fenêtre est activée, le conteneur délèguera les messages d'entrée à l'interface `IOleInPlaceObjectWindowless` du contrôle.  l'implémentation de `COleControl`de cette interface répartit les messages via la table des messages de votre contrôle, après avoir analysé les coordonnées de la souris correctement.  Vous pouvez traiter les messages comme des messages ordinaires de fenêtre, en ajoutant des entrées correspondantes dans la table des messages.  Dans les gestionnaires de ces messages, évitez d'utiliser la variable membre `m_hWnd` \(ou une fonction membre qui utilise\) sans vérifier d'abord que la valeur n'est pas **NULL**.  
+ When windowless activation is enabled, the container will delegate input messages to the control's `IOleInPlaceObjectWindowless` interface. `COleControl`'s implementation of this interface dispatches the messages through your control's message map, after adjusting the mouse coordinates appropriately. You can process the messages like ordinary window messages, by adding the corresponding entries to the message map. In your handlers for these messages, avoid using the `m_hWnd` member variable (or any member function that uses it) without first checking that its value is not **NULL**.  
   
- `COleControl` fournit les fonctions membres qui appellent la capture de la souris, le focus clavier, le défilement, et d'autres services de la fenêtre du conteneur selon le cas, notamment :  
+ `COleControl` provides member functions that invoke mouse capture, keyboard focus, scrolling, and other window services from the container as appropriate, including:  
   
--   [GetFocus](../Topic/COleControl::GetFocus.md), [SetFocus](../Topic/COleControl::SetFocus.md)  
+-   [GetFocus](../mfc/reference/colecontrol-class.md#getfocus), [SetFocus](../mfc/reference/colecontrol-class.md#setfocus)  
   
--   [GetCapture](../Topic/COleControl::GetCapture.md), [SetCapture](../Topic/COleControl::SetCapture.md), [ReleaseCapture](../Topic/COleControl::ReleaseCapture.md)  
+-   [GetCapture](../mfc/reference/colecontrol-class.md#getcapture), [SetCapture](../mfc/reference/colecontrol-class.md#setcapture), [ReleaseCapture](../mfc/reference/colecontrol-class.md#releasecapture)  
   
--   [GetDC](../Topic/COleControl::GetDC.md), [ReleaseDC](../Topic/COleControl::ReleaseDC.md)  
+-   [GetDC](../mfc/reference/colecontrol-class.md#getdc), [ReleaseDC](../mfc/reference/colecontrol-class.md#releasedc)  
   
--   [InvalidateRgn](../Topic/COleControl::InvalidateRgn.md)  
+-   [InvalidateRgn](../mfc/reference/colecontrol-class.md#invalidatergn)  
   
--   [ScrollWindow](../Topic/COleControl::ScrollWindow.md)  
+-   [ScrollWindow](../mfc/reference/colecontrol-class.md#scrollwindow)  
   
--   [GetClientRect](../Topic/COleControl::GetClientRect.md)  
+-   [GetClientRect](../mfc/reference/colecontrol-class.md#getclientrect)  
   
- Dans les contrôles sans fenêtre, vous devez toujours utiliser les fonctions membres de `COleControl` au lieu des fonctions membres correspondantes de `CWnd` ou de leurs fonctions connexes API Win32.  
+ In windowless controls, you should always use the `COleControl` member functions instead of the corresponding `CWnd` member functions or their related Win32 API functions.  
   
- Vous pouvez souhaiter qu'un contrôle sans fenêtre soit la cible d'une opération de glisser\-déplacer OLE.  Normalement, cela suppose que la fenêtre de contrôle est stockée en tant que cible de suppression.  Puisque le contrôle n'a aucune fenêtre qui lui est propre, le conteneur utilise sa propre fenêtre comme cible de suppression.  Le contrôle fournit une implémentation de l'interface de `IDropTarget` à laquelle le conteneur peut déléguer des appels au moment opportun.  Pour exposer cette interface au conteneur, substituer [COleControl::GetWindowlessDropTarget](../Topic/COleControl::GetWindowlessDropTarget.md).  Par exemple :  
+ You may want a windowless control to be the target of an OLE drag-and-drop operation. Normally, this would require that the control's window be registered as a drop target. Since the control has no window of its own, the container uses its own window as a drop target. The control provides an implementation of the `IDropTarget` interface to which the container can delegate calls at the appropriate time. To expose this interface to the container, override [COleControl::GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). For example:  
   
- [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/CPP/providing-windowless-activation_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]  
   
-## Voir aussi  
- [Contrôles ActiveX MFC : optimisation](../mfc/mfc-activex-controls-optimization.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
+
+

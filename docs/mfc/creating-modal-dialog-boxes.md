@@ -1,30 +1,49 @@
 ---
-title: "Cr&#233;ation de bo&#238;tes de dialogue modales | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "boîtes de dialogue MFC, créer"
-  - "boîtes de dialogue MFC, modales"
-  - "boîtes de dialogue modales, créer"
+title: Creating Modal Dialog Boxes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- modal dialog boxes [MFC], creating
+- MFC dialog boxes [MFC], creating
+- MFC dialog boxes [MFC], modal
 ms.assetid: 26c7a68c-79f6-4862-a5a8-6024984644d2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Cr&#233;ation de bo&#238;tes de dialogue modales
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7b8e350830275aaa9202782eb69a997822a3d0f9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Pour créer une boîte de dialogue modale, appelez l'un des deux constructeurs publics déclarés dans [CDialog](../mfc/reference/cdialog-class.md).  Ensuite, appelez la fonction membre d' [DoModal](../Topic/CDialog::DoModal.md) de l'objet de dialogue pour afficher la boîte de dialogue et gérer l'interaction avec elle jusqu'à ce que l'utilisateur choisisse OK ou Annuler.  Cette gestion par `DoModal` est ce qui rend la boîte de dialogue modale.  Pour les boîtes de dialogue modales, `DoModal` charge la ressource de la boîte de dialogue.  
+---
+# <a name="creating-modal-dialog-boxes"></a>Creating Modal Dialog Boxes
+To create a modal dialog box, call either of the two public constructors declared in [CDialog](../mfc/reference/cdialog-class.md). Next, call the dialog object's [DoModal](../mfc/reference/cdialog-class.md#domodal) member function to display the dialog box and manage interaction with it until the user chooses OK or Cancel. This management by `DoModal` is what makes the dialog box modal. For modal dialog boxes, `DoModal` loads the dialog resource.  
   
-## Voir aussi  
- [Cycle de vie d'une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

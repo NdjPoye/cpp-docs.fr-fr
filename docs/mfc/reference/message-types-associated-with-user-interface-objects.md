@@ -1,45 +1,63 @@
 ---
-title: "Types de messages associ&#233;s aux objets interface utilisateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.uiobject.msgs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "types de messages et objets de l'interface utilisateur"
+title: Message Types Associated with User-Interface Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.uiobject.msgs
+dev_langs:
+- C++
+helpviewer_keywords:
+- message types and user interface objects [MFC]
 ms.assetid: 681ee1a7-f6e6-4ea0-9fc6-1fb53a35516e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Types de messages associ&#233;s aux objets interface utilisateur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 624b922d7c596a74a1b2105224158561c003f6c1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Le tableau suivant indique les types d'objets que vous pouvez utiliser et les types de messages qui leur sont associés.  
+---
+# <a name="message-types-associated-with-user-interface-objects"></a>Message Types Associated with User-Interface Objects
+The following table shows the types of objects with which you work, and the types of messages associated with them.  
   
-### Objets interface utilisateur et messages associés  
+### <a name="user-interface-objects-and-associated-messages"></a>User Interface Objects and Associated Messages  
   
-|ID d'objet|Messages|  
-|----------------|--------------|  
-|Nom de la classe, représentant la fenêtre contenante|Messages Windows appropriés pour une classe dérivée de [CWnd](../../mfc/reference/cwnd-class.md) : boîte de dialogue, fenêtre, fenêtre enfant, fenêtre enfant MDI ou fenêtre frame située au premier plan.|  
-|Identificateur de menu ou d'accélérateur|-   Message **COMMAND** \(exécute la fonction de programme\).<br />-   Message **UPDATE\_COMMAND\_UI** \(met à jour l'élément de menu de manière dynamique\).|  
-|Identificateur de contrôle|Messages de notification de contrôle pour le type de contrôle sélectionné.|  
+|Object ID|Messages|  
+|---------------|--------------|  
+|Class name, representing the containing window|Windows messages appropriate to a [CWnd](../../mfc/reference/cwnd-class.md)-derived class: a dialog box, window, child window, MDI child window, or topmost frame window.|  
+|Menu or accelerator identifier|-   **COMMAND** message (executes the program function).<br />-   **UPDATE_COMMAND_UI** message (dynamically updates the menu item).|  
+|Control identifier|Control notification messages for the selected control type.|  
   
-## Voir aussi  
- [Mappage de messages à des fonctions](../../mfc/reference/mapping-messages-to-functions.md)   
- [Ajout de fonctionnalités à l'aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Ajout d'une classe](../../ide/adding-a-class-visual-cpp.md)   
- [Ajout d'une fonction membre](../../ide/adding-a-member-function-visual-cpp.md)   
- [Ajout d'une variable membre](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Substitution d'une fonction virtuelle](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC, gestionnaire de messages](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Parcours de la structure de classe](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Mapping Messages to Functions](../../mfc/reference/mapping-messages-to-functions.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
+

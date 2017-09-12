@@ -1,5 +1,5 @@
 ---
-title: Classe de CVSListBox | Documents Microsoft
+title: CVSListBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,8 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CVSListBox::PreTranslateMessage method
-- CVSListBox class
+- CVSListBox [MFC], CVSListBox
+- CVSListBox [MFC], AddItem
+- CVSListBox [MFC], EditItem
+- CVSListBox [MFC], GetCount
+- CVSListBox [MFC], GetItemData
+- CVSListBox [MFC], GetItemText
+- CVSListBox [MFC], GetSelItem
+- CVSListBox [MFC], RemoveItem
+- CVSListBox [MFC], SelectItem
+- CVSListBox [MFC], SetItemData
+- CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
 caps.latest.revision: 30
 author: mikeblome
@@ -46,66 +55,66 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 4527249fc1a22a1db0623ea46954065fcbd071f4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d84db3fe2c27925db01188f43a3d467e6119ca2b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cvslistbox-class"></a>Classe de CVSListBox
-La `CVSListBox` classe prend en charge un contrôle de liste modifiable.  
+# <a name="cvslistbox-class"></a>CVSListBox Class
+The `CVSListBox` class supports an editable list control.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CVSListBox : public CVSListBoxBase  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CVSListBox::CVSListBox](#cvslistbox)|Construit un objet `CVSListBox`.|  
-|`CVSListBox::~CVSListBox`|Destructeur.|  
+|[CVSListBox::CVSListBox](#cvslistbox)|Constructs a `CVSListBox` object.|  
+|`CVSListBox::~CVSListBox`|Destructor.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CVSListBox::AddItem](#additem)|Ajoute une chaîne à un contrôle de liste. (Substitue `CVSListBoxBase::AddItem`.)|  
-|[CVSListBox::EditItem](#edititem)|Commence une opération de modification sur le texte d’un élément de contrôle de liste. (Substitue `CVSListBoxBase::EditItem`.)|  
-|[CVSListBox::GetCount](#getcount)|Récupère le nombre de chaînes dans un contrôle de liste modifiable. (Substitue `CVSListBoxBase::GetCount`.)|  
-|[CVSListBox::GetItemData](#getitemdata)|Récupère une valeur spécifique à l’application 32 bits qui est associée à un élément de contrôle de liste modifiable. (Substitue `CVSListBoxBase::GetItemData`.)|  
-|[CVSListBox::GetItemText](#getitemtext)|Récupère le texte d’un élément de contrôle de liste modifiable. (Substitue `CVSListBoxBase::GetItemText`.)|  
-|[CVSListBox::GetSelItem](#getselitem)|Récupère l’index de base zéro de l’élément actuellement sélectionné dans un contrôle de liste modifiable. (Substitue `CVSListBoxBase::GetSelItem`.)|  
-|`CVSListBox::PreTranslateMessage`|Convertit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) fonctions de Windows. Pour plus d’informations et syntaxe de méthode, consultez [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Substitue `CVSListBoxBase::PreTranslateMessage`.)|  
-|[CVSListBox::RemoveItem](#removeitem)|Supprime un élément d’un contrôle de liste modifiable. (Substitue `CVSListBoxBase::RemoveItem`.)|  
-|[CVSListBox::SelectItem](#selectitem)|Sélectionne une chaîne de contrôle de liste modifiable. (Substitue `CVSListBoxBase::SelectItem`.)|  
-|[CVSListBox::SetItemData](#setitemdata)|Associe une valeur de 32 bits spécifique à l’application à un élément de contrôle de liste modifiable. (Substitue `CVSListBoxBase::SetItemData`.)|  
+|[CVSListBox::AddItem](#additem)|Adds a string to a list control. (Overrides `CVSListBoxBase::AddItem`.)|  
+|[CVSListBox::EditItem](#edititem)|Starts an edit operation on the text of a list control item. (Overrides `CVSListBoxBase::EditItem`.)|  
+|[CVSListBox::GetCount](#getcount)|Retrieves the number of strings in an editable list control. (Overrides `CVSListBoxBase::GetCount`.)|  
+|[CVSListBox::GetItemData](#getitemdata)|Retrieves an application-specific 32-bit value that is associated with an editable list control item. (Overrides `CVSListBoxBase::GetItemData`.)|  
+|[CVSListBox::GetItemText](#getitemtext)|Retrieves the text of an editable list control item. (Overrides `CVSListBoxBase::GetItemText`.)|  
+|[CVSListBox::GetSelItem](#getselitem)|Retrieves the zero-based index of the currently selected item in an editable list control. (Overrides `CVSListBoxBase::GetSelItem`.)|  
+|`CVSListBox::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. For more information and method syntax, see [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Overrides `CVSListBoxBase::PreTranslateMessage`.)|  
+|[CVSListBox::RemoveItem](#removeitem)|Removes an item from an editable list control. (Overrides `CVSListBoxBase::RemoveItem`.)|  
+|[CVSListBox::SelectItem](#selectitem)|Selects an editable list control string. (Overrides `CVSListBoxBase::SelectItem`.)|  
+|[CVSListBox::SetItemData](#setitemdata)|Associates an application-specific 32-bit value with an editable list control item. (Overrides `CVSListBoxBase::SetItemData`.)|  
   
-### <a name="protected-methods"></a>Méthodes protégées  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CVSListBox::GetListHwnd](#getlisthwnd)|Retourne le handle pour le contrôle liste intégrée en cours.|  
+|[CVSListBox::GetListHwnd](#getlisthwnd)|Returns the handle to the current embedded list view control.|  
   
-## <a name="remarks"></a>Notes  
- La `CVSListBox` classe fournit un ensemble de boutons d’édition qui permettent aux utilisateurs de créer, modifier, supprimer ou réorganiser les éléments d’un contrôle de liste.  
+## <a name="remarks"></a>Remarks  
+ The `CVSListBox` class provides a set of edit buttons that enable the user to create, modify, delete, or rearrange the items in a list control.  
   
- Voici une image du contrôle de liste modifiable. La deuxième entrée de liste, qui est intitulée « Item2 », est sélectionnée pour le modifier.  
+ The following is a picture of the editable list control. The second list entry, which is titled "Item2", is selected for editing.  
   
- ![Contrôle CVSListBox](../../mfc/reference/media/cvslistbox.png "cvslistbox")  
+ ![CVSListBox control](../../mfc/reference/media/cvslistbox.png "cvslistbox")  
   
- Si vous utilisez l’éditeur de ressources pour ajouter un contrôle de liste modifiable, notez que la **boîte à outils** volet de l’éditeur ne fournit pas un contrôle de liste modifiable prédéfinie. Au lieu de cela, ajoutez un contrôle statique tel que le **zone de groupe** contrôle. Le framework utilise le contrôle statique comme espace réservé pour spécifier la taille et la position du contrôle de liste modifiable.  
+ If you use the resource editor to add an editable list control, notice that the **Toolbox** pane of the editor does not provide a predefined editable list control. Instead, add a static control such as the **Group Box** control. The framework uses the static control as a placeholder to specify the size and position of the editable list control.  
   
- Pour utiliser un contrôle de liste modifiable dans un modèle de boîte de dialogue, déclarez une `CVSListBox` variable dans votre classe de boîte de dialogue. Pour prendre en charge d’échange de données entre la variable et le contrôle, vous devez définir un `DDX_Control` entrée de macro dans le `DoDataExchange` (méthode) de la boîte de dialogue. Par défaut, le contrôle de liste modifiable est créé sans les boutons d’édition. Utilisez la méthode CVSListBoxBase::SetStandardButtons héritée pour activer les boutons de modification.  
+ To use an editable list control in a dialog box template, declare a `CVSListBox` variable in your dialog box class. To support data exchange between the variable and the control, define a `DDX_Control` macro entry in the `DoDataExchange` method of the dialog box. By default, the editable list control is created without edit buttons. Use the inherited CVSListBoxBase::SetStandardButtons method to enable the edit buttons.  
   
- Pour plus d’informations, consultez le répertoire d’exemples, la `New Controls` exemple, les fichiers Page3.cpp et Page3.h.  
+ For more information, see the Samples directory, the `New Controls` sample, the Page3.cpp and Page3.h files.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -118,11 +127,11 @@ class CVSListBox : public CVSListBoxBase
   
  [CVSListBox](../../mfc/reference/cvslistbox-class.md)  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxvslistbox.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxvslistbox.h  
   
-##  <a name="additem"></a>CVSListBox::AddItem  
- Ajoute une chaîne à un contrôle de liste.  
+##  <a name="additem"></a>  CVSListBox::AddItem  
+ Adds a string to a list control.  
   
 ```  
 virtual int AddItem(
@@ -131,156 +140,156 @@ virtual int AddItem(
     int iIndex=-1);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `strIext`  
- Une référence à une chaîne.  
+ A reference to a string.  
   
  [in] `dwData`  
- Une valeur de 32 bits spécifique à l’application associée à la chaîne. La valeur par défaut est 0.  
+ An application-specific 32-bit value that is associated with the string. The default value is 0.  
   
  [in] `iIndex`  
- Index de base zéro de la position qui contienne la chaîne. Si le `iIndex` paramètre est -1, la chaîne est ajoutée à la fin de la liste. La valeur par défaut est -1.  
+ The zero-based index of the position that will hold the string. If the `iIndex` parameter is -1, the string is added to the end of the list. The default value is -1.  
   
-### <a name="return-value"></a>Valeur de retour  
- Index de base zéro de la position de la chaîne dans le contrôle de liste.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the position of the string in the list control.  
   
-### <a name="remarks"></a>Notes  
- Utilisez le [CVSListBox::GetItemData](#getitemdata) méthode pour récupérer la valeur spécifiée par la `dwData` paramètre. Cette valeur peut être un entier spécifiques à l’application ou un pointeur à d’autres données.  
+### <a name="remarks"></a>Remarks  
+ Use the [CVSListBox::GetItemData](#getitemdata) method to retrieve the value that is specified by the `dwData` parameter. This value can be an application-specific integer or a pointer to other data.  
   
-##  <a name="cvslistbox"></a>CVSListBox::CVSListBox  
- Construit un objet `CVSListBox`.  
+##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
+ Constructs a `CVSListBox` object.  
   
 ```  
 CVSListBox();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="edititem"></a>CVSListBox::EditItem  
- Commence une opération de modification sur le texte d’un élément de contrôle de liste.  
+##  <a name="edititem"></a>  CVSListBox::EditItem  
+ Starts an edit operation on the text of a list control item.  
   
 ```  
 virtual BOOL EditItem(int iIndex);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Index de base zéro d’un élément de contrôle de liste.  
+ Zero-based index of a list control item.  
   
-### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si l’opération de modification démarre avec succès ; dans le cas contraire, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the edit operation starts successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
- L’utilisateur commence une opération de modification en double-cliquant sur l’étiquette d’un élément, ou en appuyant sur la **F2** ou **espace** clé lorsqu’un élément a le focus.  
+### <a name="remarks"></a>Remarks  
+ The user starts an edit operation either by double-clicking the label of an item, or by pressing the **F2** or **SPACEBAR** key when an item has the focus.  
   
-##  <a name="getcount"></a>CVSListBox::GetCount  
- Récupère le nombre de chaînes dans un contrôle de liste modifiable.  
+##  <a name="getcount"></a>  CVSListBox::GetCount  
+ Retrieves the number of strings in an editable list control.  
   
 ```  
 virtual int GetCount() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre d'éléments figurant dans le contrôle de liste.  
+### <a name="return-value"></a>Return Value  
+ The number of items in the list control.  
   
-### <a name="remarks"></a>Remarques  
- Notez que le nombre est supérieur à la valeur d’index du dernier élément, car l’index est de base zéro.  
+### <a name="remarks"></a>Remarks  
+ Note that the count is one greater than the index value of the last item because the index is zero-based.  
   
-##  <a name="getitemdata"></a>CVSListBox::GetItemData  
- Récupère une valeur spécifique à l’application 32 bits qui est associée à un élément de contrôle de liste modifiable.  
+##  <a name="getitemdata"></a>  CVSListBox::GetItemData  
+ Retrieves an application-specific 32-bit value that is associated with an editable list control item.  
   
 ```  
 virtual DWORD_PTR GetItemData(int iIndex) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Index de base zéro d’un élément de contrôle de liste modifiable.  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>Valeur de retour  
- La valeur de 32 bits qui est associée à l’élément spécifié.  
+### <a name="return-value"></a>Return Value  
+ The 32-bit value that is associated with the specified item.  
   
-### <a name="remarks"></a>Remarques  
- Utilisez le [CVSListBox::SetItemData](#setitemdata) ou [CVSListBox::AddItem](#additem) méthode pour associer la valeur 32 bits à l’élément de contrôle de liste. Cette valeur peut être un entier spécifiques à l’application ou un pointeur à d’autres données.  
+### <a name="remarks"></a>Remarks  
+ Use the [CVSListBox::SetItemData](#setitemdata) or [CVSListBox::AddItem](#additem) method to associate the 32-bit value with the list control item. This value can be an application-specific integer or a pointer to other data.  
   
-##  <a name="getitemtext"></a>CVSListBox::GetItemText  
- Récupère le texte d’un élément de contrôle de liste modifiable.  
+##  <a name="getitemtext"></a>  CVSListBox::GetItemText  
+ Retrieves the text of an editable list control item.  
   
 ```  
 virtual CString GetItemText(int iIndex) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Index de base zéro d’un élément de contrôle de liste modifiable.  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>Valeur de retour  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) objet qui contient le texte de l’élément spécifié.  
+### <a name="return-value"></a>Return Value  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that contains the text of the specified item.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
- Retourne le handle pour le contrôle liste intégrée en cours.  
+##  <a name="getlisthwnd"></a>  CVSListBox::GetListHwnd  
+ Returns the handle to the current embedded list view control.  
   
 ```  
 virtual HWND GetListHwnd() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un handle pour le contrôle ListView incorporé.  
+### <a name="return-value"></a>Return Value  
+ A handle to the embedded list view control.  
   
-### <a name="remarks"></a>Remarques  
- Utilisez cette méthode pour récupérer un handle pour le contrôle liste intégrée qui prend en charge la `CVSListBox` classe.  
+### <a name="remarks"></a>Remarks  
+ Use this method to retrieve a handle to the embedded list view control that supports the `CVSListBox` class.  
   
-##  <a name="getselitem"></a>CVSListBox::GetSelItem  
- Récupère l’index de base zéro de l’élément actuellement sélectionné dans un contrôle de liste modifiable.  
+##  <a name="getselitem"></a>  CVSListBox::GetSelItem  
+ Retrieves the zero-based index of the currently selected item in an editable list control.  
   
 ```  
 virtual int GetSelItem() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Si cette méthode réussite, l’index de base zéro de l’élément actuellement sélectionné ; Sinon, -1.  
+### <a name="return-value"></a>Return Value  
+ If this method is successful, the zero-based index of the currently selected item; otherwise, -1.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removeitem"></a>CVSListBox::RemoveItem  
- Supprime un élément d’un contrôle de liste modifiable.  
+##  <a name="removeitem"></a>  CVSListBox::RemoveItem  
+ Removes an item from an editable list control.  
   
 ```  
 virtual BOOL RemoveItem(int iIndex);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Index de base zéro d’un élément de contrôle de liste modifiable.  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si l’élément spécifié est supprimé ; dans le cas contraire, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified item is removed; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="selectitem"></a>CVSListBox::SelectItem  
- Sélectionne une chaîne de contrôle de liste modifiable.  
+##  <a name="selectitem"></a>  CVSListBox::SelectItem  
+ Selects an editable list control string.  
   
 ```  
 virtual BOOL SelectItem(int iItem);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `iItem`  
- Index de base zéro d’un élément de contrôle de liste modifiable.  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si cette méthode a réussi ; dans le cas contraire, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
- Cette méthode sélectionne l’élément spécifié et si nécessaire, fait défiler l’élément dans la vue.  
+### <a name="remarks"></a>Remarks  
+ This method selects the specified item, and if it is required, scrolls the item into view.  
   
-##  <a name="setitemdata"></a>CVSListBox::SetItemData  
- Associe une valeur de 32 bits spécifique à l’application à un élément de contrôle de liste modifiable.  
+##  <a name="setitemdata"></a>  CVSListBox::SetItemData  
+ Associates an application-specific 32-bit value with an editable list control item.  
   
 ```  
 virtual void SetItemData(
@@ -288,16 +297,16 @@ virtual void SetItemData(
     DWORD_PTR dwData);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Index de base zéro d’un élément de contrôle de liste modifiable.  
+ The zero-based index of an editable list control item.  
   
  [in] `dwData`  
- Une valeur 32 bits. Cette valeur peut être un entier spécifiques à l’application ou un pointeur à d’autres données.  
+ A 32-bit value. This value can be an application-specific integer or a pointer to other data.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Voir aussi  
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)
 

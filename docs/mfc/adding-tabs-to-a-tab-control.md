@@ -1,42 +1,61 @@
 ---
-title: "Ajout d&#39;onglets &#224; un contr&#244;le Tab | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTabCtrl (classe), ajouter des onglets"
-  - "mettre des onglets sur des CTabCtrl"
-  - "contrôles onglet, ajouter des onglets"
-  - "onglets, ajouter à la classe CTabCtrl"
+title: Adding Tabs to a Tab Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tab controls [MFC], adding tabs
+- putting tabs on CTabCtrls [MFC]
+- CTabCtrl class [MFC], adding tabs
+- tabs [MFC], adding to CTabCtrl class [MFC]
 ms.assetid: 7f3d9340-e3c7-4c71-9912-be57534ecc78
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ajout d&#39;onglets &#224; un contr&#244;le Tab
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9da423b56c254bc58bcbe940ebcd366e83c8f385
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Après avoir créé un contrôle onglet \([CTabCtrl](../mfc/reference/ctabctrl-class.md)\), ajoutez autant d'onglets que nécessaire.  
+---
+# <a name="adding-tabs-to-a-tab-control"></a>Adding Tabs to a Tab Control
+After creating the tab control ([CTabCtrl](../mfc/reference/ctabctrl-class.md)), add as many tabs as you need.  
   
-### Pour ajouter un élément onglet  
+### <a name="to-add-a-tab-item"></a>To add a tab item  
   
-1.  Préparer une structure [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554).  
+1.  Prepare a [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure.  
   
-2.  Appelez [CTabCtrl::InsertItem](../Topic/CTabCtrl::InsertItem.md), en passant la structure.  
+2.  Call [CTabCtrl::InsertItem](../mfc/reference/ctabctrl-class.md#insertitem), passing the structure.  
   
-3.  Répétez les étapes 1 et 2 pour les autres éléments d'onglet.  
+3.  Repeat steps 1 and 2 for additional tab items.  
   
- Pour plus d'informations, consultez  [Création de contrôles d'onglet](http://msdn.microsoft.com/library/windows/desktop/bb760550) dans le [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For more information, see [Creating a Tab Control](http://msdn.microsoft.com/library/windows/desktop/bb760550) in the Windows SDK.  
   
-## Voir aussi  
- [Utilisation de CTabCtrl](../mfc/using-ctabctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTabCtrl](../mfc/using-ctabctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

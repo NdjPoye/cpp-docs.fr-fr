@@ -1,5 +1,5 @@
 ---
-title: "Services du modèle objet d’exécution | Documents Microsoft"
+title: Run-Time Object Model Services | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,46 +33,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 2ac30fa747b13c469846c51e9826242fdf54f8c1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5d1433042bb0f1d01ba5a8fa78e1ffc0cccaa38e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="run-time-object-model-services"></a>Services du modèle objet au moment de l'exécution
-Les classes [CObject](../../mfc/reference/cobject-class.md) et [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) encapsulent plusieurs services d’objet, notamment l’accès aux informations de classe d’exécution, la sérialisation et la création d’objet dynamique. Toutes les classes dérivées de `CObject` héritent de cette fonctionnalité.  
+# <a name="run-time-object-model-services"></a>Run-Time Object Model Services
+The classes [CObject](../../mfc/reference/cobject-class.md) and [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) encapsulate several object services, including access to run-time class information, serialization, and dynamic object creation. All classes derived from `CObject` inherit this functionality.  
   
- L'accès aux informations sur la classe d'exécution vous permet de déterminer les informations sur une classe d'objets au moment de l'exécution. La capacité de déterminer la classe d'un objet au moment de l'exécution est utile lorsque vous avez besoin de vérifications de type supplémentaires d'arguments de fonction et lorsque vous devez écrire un code spécial en fonction de la classe d'un objet. Les informations sur la classe d'exécution ne sont pas prises en charge directement par le langage C++.  
+ Access to run-time class information enables you to determine information about an object's class at run time. The ability to determine the class of an object at run time is useful when you need extra type-checking of function arguments and when you must write special-purpose code based on the class of an object. Run-time class information is not supported directly by the C++ language.  
   
- La sérialisation est le processus d'écriture ou de lecture du contenu d'un objet vers et à partir d'un fichier. Vous pouvez utiliser la sérialisation pour stocker le contenu d'un objet même après que l'application se termine. L'objet peut ensuite être lu à partir du fichier lorsque l'application est redémarrée. De tels objets de données sont dits "persistants".  
+ Serialization is the process of writing or reading an object's contents to or from a file. You can use serialization to store an object's contents even after the application exits. The object can then be read from the file when the application is restarted. Such data objects are said to be "persistent."  
   
- La création d'objets dynamique permet de créer un objet d'une classe spécifiée au moment de l'exécution. Par exemple, les objets document, vue et frame doivent prendre en charge la création dynamique car le framework doit les créer dynamiquement.  
+ Dynamic object creation enables you to create an object of a specified class at run time. For example, document, view, and frame objects must support dynamic creation because the framework needs to create them dynamically.  
   
- Le tableau suivant répertorie les macros MFC qui prennent en charge les informations relatives à la classe au moment de l'exécution, la sérialisation et la création dynamique.  
+ The following table lists the MFC macros that support run-time class information, serialization, and dynamic creation.  
   
- Pour plus d’informations sur ces services de l’objet d’exécution et la sérialisation, consultez l’article [classe CObject : l’accès aux informations de classe d’exécution](../../mfc/accessing-run-time-class-information.md).  
+ For more information on these run-time object services and serialization, see the article [CObject Class: Accessing Run-Time Class Information](../../mfc/accessing-run-time-class-information.md).  
   
-### <a name="run-time-object-model-services-macros"></a>Macros des services du modèle objet au moment de l'exécution  
+### <a name="run-time-object-model-services-macros"></a>Run-Time Object Model Services Macros  
   
 
 
 |||  
 |-|-|  
-|[DECLARE_DYNAMIC](#declare_dynamic)|Permet d'accéder aux informations sur la classe d'exécution (doit être utilisé dans la déclaration de classe).|  
-|[DECLARE_DYNCREATE](#declare_dyncreate)|Permet la création dynamique et l'accès aux informations sur la classe d'exécution (doit être utilisé dans la déclaration de classe).|  
-|[DECLARE_SERIAL](#declare_serial)|Permet la sérialisation dynamique et l'accès aux informations sur la classe d'exécution (doit être utilisé dans la déclaration de classe).|  
-|[IMPLEMENT_DYNAMIC](#implement_dynamic)|Permet d'accéder aux informations sur la classe d'exécution (doit être utilisé dans l'implémentation de classe).|  
-|[IMPLEMENT_DYNCREATE](#implement_dyncreate)|Permet la création dynamique et l'accès aux informations sur la classe d'exécution (doit être utilisé dans l'implémentation de classe).|  
-|[IMPLEMENT_SERIAL](#implement_serial)|Permet la sérialisation et l'accès aux informations sur la classe d'exécution (doit être utilisé dans l'implémentation de classe).|  
-|[RUNTIME_CLASS](#runtime_class)|Retourne la structure `CRuntimeClass` qui correspond à la classe nommée.|  
+|[DECLARE_DYNAMIC](#declare_dynamic)|Enables access to run-time class information (must be used in the class declaration).|  
+|[DECLARE_DYNCREATE](#declare_dyncreate)|Enables dynamic creation and access to run-time class information (must be used in the class declaration).|  
+|[DECLARE_SERIAL](#declare_serial)|Enables serialization and access to run-time class information (must be used in the class declaration).|  
+|[IMPLEMENT_DYNAMIC](#implement_dynamic)|Enables access to run-time class information (must be used in the class implementation).|  
+|[IMPLEMENT_DYNCREATE](#implement_dyncreate)|Enables dynamic creation and access to run-time information (must be used in the class implementation).|  
+|[IMPLEMENT_SERIAL](#implement_serial)|Permits serialization and access to run-time class information (must be used in the class implementation).|  
+|[RUNTIME_CLASS](#runtime_class)|Returns the `CRuntimeClass` structure that corresponds to the named class.|  
 
 
- OLE requiert souvent la création dynamique des objets au moment de l'exécution. Par exemple, une application serveur OLE doit pouvoir créer des éléments OLE dynamiquement en réponse à la demande d'un client. De même, un serveur Automation doit être en mesure de créer des éléments en réponse aux demandes des clients Automation.  
+ OLE frequently requires the dynamic creation of objects at run time. For example, an OLE server application must be able to create OLE items dynamically in response to a request from a client. Similarly, an automation server must be able to create items in response to requests from automation clients.  
   
- La bibliothèque MFC fournit deux macros spécifiques à OLE.  
+ The Microsoft Foundation Class Library provides two macros specific to OLE.  
   
-### <a name="dynamic-creation-of-ole-objects"></a>Création dynamique des objets OLE  
+### <a name="dynamic-creation-of-ole-objects"></a>Dynamic Creation of OLE Objects  
 
  
 
@@ -83,431 +83,429 @@ Les classes [CObject](../../mfc/reference/cobject-class.md) et [CRuntimeClass](.
 
 |||  
 |-|-|  
-|[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)|Détermine si la bibliothèque de contrôles communs implémente l’API spécifiée.|
-|[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)|Détermine si la bibliothèque de contrôles communs implémente l’API spécifiée.|
-|[DECLARE_OLECREATE](#declare_olecreate)|Active les objets à créer par l'intermédiaire de OLE Automation.|  
-|[DECLARE_OLECTLTYPE](#declare_olectltype)|Déclare le **GetUserTypeNameID** et `GetMiscStatus` les fonctions membres de votre classe du contrôle.|
-|[DECLARE_PROPPAGEIDS](#declare_proppageids)|Déclare que le contrôle OLE fournit une liste de pages de propriétés pour afficher ses propriétés.|
-|[IMPLEMENT_OLECREATE](#implement_olecreate)|Active les objets à créer par le système OLE.|  
-|[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|Implémente le **GetUserTypeNameID** et `GetMiscStatus` les fonctions membres de votre classe du contrôle.|  
-|[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|Soit cette macro ou [IMPLEMENT_OLECREATE](#implement_olecreate) doit apparaître dans le fichier d’implémentation pour toute classe qui utilise `DECLARE_OLECREATE`. |
+|[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)|Determines whether the Common Controls library implements the specified API.|
+|[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)|Determines whether the Common Controls library implements the specified API.|
+|[DECLARE_OLECREATE](#declare_olecreate)|Enables objects to be created through OLE automation.|  
+|[DECLARE_OLECTLTYPE](#declare_olectltype)|Declares the **GetUserTypeNameID** and `GetMiscStatus` member functions of your control class.|
+|[DECLARE_PROPPAGEIDS](#declare_proppageids)|Declares that the OLE control provides a list of property pages to display its properties.|
+|[IMPLEMENT_OLECREATE](#implement_olecreate)|Enables objects to be created by the OLE system.|  
+|[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|Implements the **GetUserTypeNameID** and `GetMiscStatus` member functions of your control class.|  
+|[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|Either this macro or [IMPLEMENT_OLECREATE](#implement_olecreate) must appear in the implementation file for any class that uses `DECLARE_OLECREATE`. |
 
-## <a name="afx_comctl32_if_exists"></a>AFX_COMCTL32_IF_EXISTS
-Détermine si la bibliothèque de contrôles communs implémente l’API spécifiée.  
+## <a name="afx_comctl32_if_exists"></a> AFX_COMCTL32_IF_EXISTS
+Determines whether the Common Controls library implements the specified API.  
    
-### <a name="syntax"></a>Syntaxe  
+### <a name="syntax"></a>Syntax  
   ```  
 AFX_COMCTL32_IF_EXISTS(  proc );  
 ```
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `proc`  
- Pointeur vers une chaîne terminée par le caractère null qui contient le nom de fonction, ou spécifie la valeur ordinale de la fonction. Si ce paramètre est une valeur ordinale, il doit être dans le mot de poids faible ; le mot de poids fort doit être égal à zéro. Ce paramètre doit être au format Unicode.  
+ Pointer to a null-terminated string containing the function name, or specifies the function's ordinal value. If this parameter is an ordinal value, it must be in the low-order word; the high-order word must be zero. This parameter must be in Unicode.  
    
-### <a name="remarks"></a>Notes  
- Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs la fonction spécifiée par `proc` (au lieu d’appeler [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212).  
+### <a name="remarks"></a>Remarks  
+ Use this macro to determine whether the Common Controls library the function specified by `proc` (instead of calling [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212).  
    
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Requirements  
  afxcomctl32.h, afxcomctl32.inl  
    
-### <a name="see-also"></a>Voir aussi  
- [Bibliothèque de contrôles d’isolation courantes MFC](../isolation-of-the-mfc-common-controls-library.md)
- [AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
+### <a name="see-also"></a>See Also  
+ [Isolation of the MFC Common Controls Library](../isolation-of-the-mfc-common-controls-library.md) [AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
  
-## <a name="afx_comctl32_if_exists2"></a>AFX_COMCTL32_IF_EXISTS2
-Détermine si la bibliothèque de contrôles communs implémente l’API spécifiée (c’est la version Unicode de [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)).  
+## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2
+Determines whether the Common Controls library implements the specified API (this is the Unicode version of [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)).  
    
-### <a name="syntax"></a>Syntaxe    
+### <a name="syntax"></a>Syntax    
 ```  
 AFX_COMCTL32_IF_EXISTS2( proc );  
 ```
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `proc`  
- Pointeur vers une chaîne terminée par le caractère null qui contient le nom de fonction, ou spécifie la valeur ordinale de la fonction. Si ce paramètre est une valeur ordinale, il doit être dans le mot de poids faible ; le mot de poids fort doit être égal à zéro. Ce paramètre doit être au format Unicode.  
+ Pointer to a null-terminated string containing the function name, or specifies the function's ordinal value. If this parameter is an ordinal value, it must be in the low-order word; the high-order word must be zero. This parameter must be in Unicode.  
    
-### <a name="remarks"></a>Remarques  
- Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs la fonction spécifiée par `proc` (au lieu d’appeler [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212). Cette macro est la version Unicode de `AFX_COMCTL32_IF_EXISTS`.  
+### <a name="remarks"></a>Remarks  
+ Use this macro to determine whether the Common Controls library the function specified by `proc` (instead of calling [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212). This macro is the Unicode version of `AFX_COMCTL32_IF_EXISTS`.  
    
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Requirements  
  afxcomctl32.h, afxcomctl32.inl  
    
-### <a name="see-also"></a>Voir aussi  
- [Bibliothèque de contrôles d’isolation courantes MFC](../isolation-of-the-mfc-common-controls-library.md)
- [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
+### <a name="see-also"></a>See Also  
+ [Isolation of the MFC Common Controls Library](../isolation-of-the-mfc-common-controls-library.md) [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
 
 
 
-##  <a name="declare_dynamic"></a>DECLARE_DYNAMIC  
- Ajoute la possibilité d’accéder aux informations d’exécution sur une classe d’objets lorsque vous dérivez une classe à partir de `CObject`.  
+##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC  
+ Adds the ability to access run-time information about an object's class when deriving a class from `CObject`.  
   
 ```
 DECLARE_DYNAMIC(class_name) 
 ```  
   
-### <a name="parameters"></a>Paramètres  
- *CLASS_NAME*  
- Le nom réel de la classe.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The actual name of the class.  
   
-### <a name="remarks"></a>Notes  
- Ajouter le `DECLARE_DYNAMIC` macro pour le module d’en-tête (.h) pour la classe, puis inclure ce module dans tous les modules .cpp qui ont besoin d’accéder aux objets de cette classe.  
+### <a name="remarks"></a>Remarks  
+ Add the `DECLARE_DYNAMIC` macro to the header (.h) module for the class, then include that module in all .cpp modules that need access to objects of this class.  
   
- Si vous utilisez la **DECLARE**_ **dynamique** et `IMPLEMENT_DYNAMIC` macros comme décrit, vous pouvez ensuite utiliser le `RUNTIME_CLASS` (macro) et le `CObject::IsKindOf` afin de déterminer la classe de vos objets au moment de l’exécution.  
+ If you use the **DECLARE**_ **DYNAMIC** and `IMPLEMENT_DYNAMIC` macros as described, you can then use the `RUNTIME_CLASS` macro and the `CObject::IsKindOf` function to determine the class of your objects at run time.  
   
- Si `DECLARE_DYNAMIC` est inclus dans la déclaration de classe, puis `IMPLEMENT_DYNAMIC` doit être inclus dans l’implémentation de classe.  
+ If `DECLARE_DYNAMIC` is included in the class declaration, then `IMPLEMENT_DYNAMIC` must be included in the class implementation.  
   
- Pour plus d’informations sur la `DECLARE_DYNAMIC` (macro), consultez [rubriques de la classe CObject](../../mfc/using-cobject.md).  
+ For more information on the `DECLARE_DYNAMIC` macro, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
-### <a name="example"></a>Exemple  
- Consultez l’exemple de [IMPLEMENT_DYNAMIC](#implement_dynamic).  
+### <a name="example"></a>Example  
+ See the example for [IMPLEMENT_DYNAMIC](#implement_dynamic).  
 
-### <a name="requirements"></a>Spécifications  
- **En-tête :** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="declare_dyncreate"></a>DECLARE_DYNCREATE  
- Permet aux objets de `CObject`-classes dérivées pour créer dynamiquement au moment de l’exécution.  
+##  <a name="declare_dyncreate"></a>  DECLARE_DYNCREATE  
+ Enables objects of `CObject`-derived classes to be created dynamically at run time.  
   
 ```
 DECLARE_DYNCREATE(class_name)   
 ```  
   
-### <a name="parameters"></a>Paramètres  
- *CLASS_NAME*  
- Le nom réel de la classe.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The actual name of the class.  
   
-### <a name="remarks"></a>Notes  
- L’infrastructure utilise cette possibilité de créer des objets de manière dynamique. Par exemple, le nouvel affichage créé lorsque vous ouvrez un nouveau document. Document, vue et classes de frame doivent prendre en charge la création dynamique, car l’infrastructure doit créer dynamiquement.  
+### <a name="remarks"></a>Remarks  
+ The framework uses this ability to create new objects dynamically. For example, the new view created when you open a new document. Document, view, and frame classes should support dynamic creation because the framework needs to create them dynamically.  
   
- Ajouter le `DECLARE_DYNCREATE` macro dans un module .h pour la classe, puis inclure ce module dans tous les modules .cpp qui ont besoin d’accéder aux objets de cette classe.  
+ Add the `DECLARE_DYNCREATE` macro in the .h module for the class, then include that module in all .cpp modules that need access to objects of this class.  
   
- Si `DECLARE_DYNCREATE` est inclus dans la déclaration de classe, puis `IMPLEMENT_DYNCREATE` doit être inclus dans l’implémentation de classe.  
+ If `DECLARE_DYNCREATE` is included in the class declaration, then `IMPLEMENT_DYNCREATE` must be included in the class implementation.  
   
- Pour plus d’informations sur la `DECLARE_DYNCREATE` (macro), consultez [rubriques de la classe CObject](../../mfc/using-cobject.md).  
+ For more information on the `DECLARE_DYNCREATE` macro, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
 > [!NOTE]
->  Le `DECLARE_DYNCREATE` macro inclut toutes les fonctionnalités de `DECLARE_DYNAMIC`.  
+>  The `DECLARE_DYNCREATE` macro includes all the functionality of `DECLARE_DYNAMIC`.  
   
-### <a name="example"></a>Exemple  
- Consultez l’exemple de [IMPLEMENT_DYNCREATE](#implement_dyncreate).  
+### <a name="example"></a>Example  
+ See the example for [IMPLEMENT_DYNCREATE](#implement_dyncreate).  
 
-### <a name="requirements"></a>Spécifications  
- **En-tête :** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
  
 ## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
-Déclare le **GetUserTypeNameID** et `GetMiscStatus` les fonctions membres de votre classe du contrôle.  
+Declares the **GetUserTypeNameID** and `GetMiscStatus` member functions of your control class.  
    
-### <a name="syntax"></a>Syntaxe    
+### <a name="syntax"></a>Syntax    
 ```
 DECLARE_OLECTLTYPE( class_name )  
 ```
-### <a name="parameters"></a>Paramètres  
- *CLASS_NAME*  
- Le nom de la classe du contrôle.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The name of the control class.  
    
-### <a name="remarks"></a>Remarques  
- **GetUserTypeNameID** et `GetMiscStatus` sont des fonctions virtuelles pures, déclarées dans `COleControl`. Étant donné que ces fonctions sont pures virtuelle, il doivent être substituées dans votre classe de contrôle. En plus de **DECLARE_OLECTLTYPE**, vous devez ajouter le `IMPLEMENT_OLECTLTYPE` macro pour que votre déclaration de classe du contrôle.  
+### <a name="remarks"></a>Remarks  
+ **GetUserTypeNameID** and `GetMiscStatus` are pure virtual functions, declared in `COleControl`. Because these functions are pure virtual, they must be overridden in your control class. In addition to **DECLARE_OLECTLTYPE**, you must add the `IMPLEMENT_OLECTLTYPE` macro to your control class declaration.  
    
-### <a name="requirements"></a>Spécifications  
- **En-tête :** afxctl.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
    
-### <a name="see-also"></a>Voir aussi  
+### <a name="see-also"></a>See Also  
  [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
  
 
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
-Déclare que le contrôle OLE fournit une liste de pages de propriétés pour afficher ses propriétés.  
+Declares that the OLE control provides a list of property pages to display its properties.  
    
-### <a name="syntax"></a>Syntaxe    
+### <a name="syntax"></a>Syntax    
 ```
 DECLARE_PROPPAGEIDS( class_name )  
 ```
-### <a name="parameters"></a>Paramètres  
- *CLASS_NAME*  
- Le nom de la classe de contrôle qui possède les pages de propriétés.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The name of the control class that owns the property pages.  
    
-### <a name="remarks"></a>Remarques  
- Utilisez le `DECLARE_PROPPAGEIDS` (macro) à la fin de votre déclaration de classe. Ensuite, dans le fichier .cpp qui définit les fonctions membres de la classe, utilisez le `BEGIN_PROPPAGEIDS` (macro), les entrées de la macro pour chacune des pages de propriétés de votre contrôle et le `END_PROPPAGEIDS` macro pour déclarer la fin de la liste de propriétés de page.  
+### <a name="remarks"></a>Remarks  
+ Use the `DECLARE_PROPPAGEIDS` macro at the end of your class declaration. Then, in the .cpp file that defines the member functions for the class, use the `BEGIN_PROPPAGEIDS` macro, macro entries for each of your control's property pages, and the `END_PROPPAGEIDS` macro to declare the end of the property page list.  
   
- Pour plus d’informations sur les pages de propriétés, consultez l’article [contrôles ActiveX : Pages de propriétés](../mfc-activex-controls-property-pages.md).  
+ For more information on property pages, see the article [ActiveX Controls: Property Pages](../mfc-activex-controls-property-pages.md).  
    
-### <a name="requirements"></a>Spécifications  
- **En-tête :** afxctl.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
    
-### <a name="see-also"></a>Voir aussi   
+### <a name="see-also"></a>See Also   
  [BEGIN_PROPPAGEIDS](#begin_proppageids)   
  [END_PROPPAGEIDS](#end_proppageids)
 
-##  <a name="declare_serial"></a>DECLARE_SERIAL  
- Génère le code d’en-tête C++ nécessaire pour un `CObject`-classe dérivée qui peut être sérialisé.  
+##  <a name="declare_serial"></a>  DECLARE_SERIAL  
+ Generates the C++ header code necessary for a `CObject`-derived class that can be serialized.  
   
 ```
 DECLARE_SERIAL(class_name)   
 ```  
   
-### <a name="parameters"></a>Paramètres  
- *CLASS_NAME*  
- Le nom réel de la classe.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The actual name of the class.  
   
-### <a name="remarks"></a>Notes  
- La sérialisation est le processus d’écriture ou de la lecture du contenu d’un objet vers et à partir d’un fichier.  
+### <a name="remarks"></a>Remarks  
+ Serialization is the process of writing or reading the contents of an object to and from a file.  
   
- Utilisez le `DECLARE_SERIAL` macro dans un module .h, puis inclure ce module dans tous les modules .cpp qui ont besoin d’accéder aux objets de cette classe.  
+ Use the `DECLARE_SERIAL` macro in an .h module, and then include that module in all .cpp modules that need access to objects of this class.  
   
- Si `DECLARE_SERIAL` est inclus dans la déclaration de classe, puis `IMPLEMENT_SERIAL` doit être inclus dans l’implémentation de classe.  
+ If `DECLARE_SERIAL` is included in the class declaration, then `IMPLEMENT_SERIAL` must be included in the class implementation.  
   
- Le `DECLARE_SERIAL` macro inclut toutes les fonctionnalités de `DECLARE_DYNAMIC` et `DECLARE_DYNCREATE`.  
+ The `DECLARE_SERIAL` macro includes all the functionality of `DECLARE_DYNAMIC` and `DECLARE_DYNCREATE`.  
   
- Vous pouvez utiliser la **AFX_API** macro pour exporter automatiquement la `CArchive` opérateur d’extraction pour les classes qui utilisent la `DECLARE_SERIAL` et `IMPLEMENT_SERIAL` macros. Crochet les déclarations de classe (situées dans le fichier .h) avec le code suivant :  
+ You can use the **AFX_API** macro to automatically export the `CArchive` extraction operator for classes that use the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros. Bracket the class declarations (located in the .h file) with the following code:  
   
- [!code-cpp[NVC_MFCCObjectSample ° 20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
+ [!code-cpp[NVC_MFCCObjectSample#20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
   
- Pour plus d’informations sur la `DECLARE_SERIAL` (macro), consultez [rubriques de la classe CObject](../../mfc/using-cobject.md).  
+ For more information on the `DECLARE_SERIAL` macro, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCCObjectSample #21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]  
   
-### <a name="requirements"></a>Spécifications  
- **En-tête :** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="implement_dynamic"></a>IMPLEMENT_DYNAMIC  
- Génère le code C++ nécessaire pour un dynamique `CObject`-dérivée de classe avec un accès d’exécution pour le nom de classe et la position dans la hiérarchie.  
+##  <a name="implement_dynamic"></a>  IMPLEMENT_DYNAMIC  
+ Generates the C++ code necessary for a dynamic `CObject`-derived class with run-time access to the class name and position within the hierarchy.  
   
 ```
 IMPLEMENT_DYNAMIC(class_name, base_class_name)  
 ```  
   
-### <a name="parameters"></a>Paramètres  
- *CLASS_NAME*  
- Le nom réel de la classe.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The actual name of the class.  
   
  `base_class_name`  
- Le nom de la classe de base.  
+ The name of the base class.  
   
-### <a name="remarks"></a>Notes  
- Utilisez le `IMPLEMENT_DYNAMIC` macro dans un module de .cpp, puis liez code de l’objet qui en résulte qu’une seule fois.  
+### <a name="remarks"></a>Remarks  
+ Use the `IMPLEMENT_DYNAMIC` macro in a .cpp module, and then link the resulting object code only once.  
   
- Pour plus d’informations, consultez [rubriques de la classe CObject](../../mfc/using-cobject.md).  
+ For more information, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCCObjectSample #2](../../mfc/codesnippet/cpp/run-time-object-model-services_3.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#2](../../mfc/codesnippet/cpp/run-time-object-model-services_3.h)]  
   
- [!code-cpp[NVC_MFCCObjectSample n° 3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample#3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
- **En-tête :** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="implement_dyncreate"></a>IMPLEMENT_DYNCREATE  
- Permet aux objets de `CObject`-classes dérivées de créé dynamiquement à l’exécution de temps lorsqu’il est utilisé avec le `DECLARE_DYNCREATE` (macro).  
+##  <a name="implement_dyncreate"></a>  IMPLEMENT_DYNCREATE  
+ Enables objects of `CObject`-derived classes to be created dynamically at run time when used with the `DECLARE_DYNCREATE` macro.  
   
 ```
 IMPLEMENT_DYNCREATE(class_name, base_class_name)   
 ```  
   
-### <a name="parameters"></a>Paramètres  
- *CLASS_NAME*  
- Le nom réel de la classe.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The actual name of the class.  
   
  `base_class_name`  
- Le nom réel de la classe de base.  
+ The actual name of the base class.  
   
-### <a name="remarks"></a>Notes  
- L’infrastructure utilise cette possibilité de créer des objets de manière dynamique, par exemple, lorsqu’il lit un objet à partir du disque pendant la sérialisation. Ajouter le `IMPLEMENT_DYNCREATE` macro dans le fichier d’implémentation de classe. Pour plus d’informations, consultez [rubriques de la classe CObject](../../mfc/using-cobject.md).  
+### <a name="remarks"></a>Remarks  
+ The framework uses this ability to create new objects dynamically, for example, when it reads an object from disk during serialization. Add the `IMPLEMENT_DYNCREATE` macro in the class implementation file. For more information, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
- Si vous utilisez la `DECLARE_DYNCREATE` et `IMPLEMENT_DYNCREATE` macros, vous pouvez ensuite utiliser le `RUNTIME_CLASS` macro et `CObject::IsKindOf` fonction membre pour déterminer la classe de vos objets au moment de l’exécution.  
+ If you use the `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE` macros, you can then use the `RUNTIME_CLASS` macro and the `CObject::IsKindOf` member function to determine the class of your objects at run time.  
   
- Si `DECLARE_DYNCREATE` est inclus dans la déclaration de classe, puis `IMPLEMENT_DYNCREATE` doit être inclus dans l’implémentation de classe.  
+ If `DECLARE_DYNCREATE` is included in the class declaration, then `IMPLEMENT_DYNCREATE` must be included in the class implementation.  
   
- Notez que cette définition de macro va appeler le constructeur par défaut pour votre classe. Si un constructeur non trivial est explicitement implémenté par la classe, elle doit implémenter explicitement également le constructeur par défaut. Le constructeur par défaut peut être ajouté à la classe **privé** ou **protégé** sections de membre pour l’empêcher de qui est appelée depuis l’extérieur de l’implémentation de classe.  
+ Note that this macro definition will invoke the default constructor for your class. If a non-trivial constructor is explicitly implemented by the class, it must also explicitly implement the default constructor as well. The default constructor can be added to the class's **private** or **protected** member sections to prevent it from being called from outside the class implementation.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCCObjectSample #22](../../mfc/codesnippet/cpp/run-time-object-model-services_5.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#22](../../mfc/codesnippet/cpp/run-time-object-model-services_5.h)]  
   
- [!code-cpp[NVC_MFCCObjectSample #23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample#23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
- **En-tête :** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-## <a name="implement_olecreate_flags"></a>IMPLEMENT_OLECREATE_FLAGS
-Soit cette macro ou [IMPLEMENT_OLECREATE](#implement_olecreate) doit apparaître dans le fichier d’implémentation pour toute classe qui utilise `DECLARE_OLECREATE`.  
+## <a name="implement_olecreate_flags"></a>  IMPLEMENT_OLECREATE_FLAGS
+Either this macro or [IMPLEMENT_OLECREATE](#implement_olecreate) must appear in the implementation file for any class that uses `DECLARE_OLECREATE`.  
    
-### <a name="syntax"></a>Syntaxe    
+### <a name="syntax"></a>Syntax    
 ```
 IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags, 
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)  
   
 ```
-### <a name="parameters"></a>Paramètres  
- *CLASS_NAME*  
- Le nom réel de la classe.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The actual name of the class.  
   
  *external_name*  
- Le nom d’objet exposé à d’autres applications (entourées guillemets).  
+ The object name exposed to other applications (enclosed in quotation marks).  
   
  `nFlags`  
- Contient un ou plusieurs des indicateurs suivants :  
+ Contains one or more of the following flags:  
   
--   `afxRegInsertable`Permet le contrôle s’affiche dans la boîte de dialogue Insérer un objet pour les objets OLE.    
--   `afxRegApartmentThreading`Définit le modèle de thread dans le Registre pour ThreadingModel = cloisonnement.    
--   **afxRegFreeThreading** définit le modèle de thread dans le Registre pour ThreadingModel = libre.  
+-   `afxRegInsertable` Allows the control to appear in the Insert Object dialog box for OLE objects.    
+-   `afxRegApartmentThreading` Sets the threading model in the registry to ThreadingModel=Apartment.    
+-   **afxRegFreeThreading** Sets the threading model in the registry to ThreadingModel=Free.  
   
-     Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` pour définir ThreadingModel = les deux. Consultez [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) dans le SDK Windows pour plus d’informations sur l’inscription du modèle de thread.    
+     You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) in the Windows SDK for more information on threading model registration.    
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
- Composants de la classe **CLSID**.  
+ Components of the class's **CLSID**.  
    
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  Si vous utilisez `IMPLEMENT_OLECREATE_FLAGS`, vous pouvez spécifier le modèle de thread votre objet prend en charge à l’aide de le `nFlags` paramètre. Si vous souhaitez prendre en charge le modèle la marche périlleuse unique, utilisez `IMPLEMENT_OLECREATE`.  
+>  If you use `IMPLEMENT_OLECREATE_FLAGS`, you can specify which threading model your object supports by using the `nFlags` parameter. If you want to support only the single-treading model, use `IMPLEMENT_OLECREATE`.  
   
- Le nom externe est l’identificateur exposée à d’autres applications. Applications clientes utilisent le nom externe pour demander un objet de cette classe à partir d’un serveur automation.  
+ The external name is the identifier exposed to other applications. Client applications use the external name to request an object of this class from an automation server.  
   
- L’ID de classe est un identificateur unique de 128 bits pour l’objet. Il se compose d’une **long**, deux **WORD**s et huit **octets**s, telle que représentée par *l*, *w1*, *w2*, et *b1* via *M8* dans la description de la syntaxe. Les Assistants code et Assistant Application créent unique ID de classe OLE pour vous, en fonction des besoins.  
+ The OLE class ID is a unique 128-bit identifier for the object. It consists of one **long**, two **WORD**s, and eight **BYTE**s, as represented by *l*, *w1*, *w2*, and *b1* through *b8* in the syntax description. The Application Wizard and code wizards create unique OLE class IDs for you as required.  
    
-### <a name="requirements"></a>Spécifications  
- **En-tête :** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
    
-### <a name="see-also"></a>Voir aussi  
- [Macros et objet Globals](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
  [DECLARE_OLECREATE](#declare_olecreate)   
- [Clé de CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424)
+ [CLSID Key](http://msdn.microsoft.com/library/windows/desktop/ms691424)
 
 
-## <a name="implement_olecreate"></a>IMPLEMENT_OLECTLTYPE
-Implémente le **GetUserTypeNameID** et `GetMiscStatus` les fonctions membres de votre classe du contrôle.  
+## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
+Implements the **GetUserTypeNameID** and `GetMiscStatus` member functions of your control class.  
    
-### <a name="syntax"></a>Syntaxe    
+### <a name="syntax"></a>Syntax    
 ```
 DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )  
 ```
-### <a name="parameters"></a>Paramètres  
- *CLASS_NAME*  
- Le nom de la classe du contrôle.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The name of the control class.  
   
  *idsUserTypeName*  
- L’ID de ressource d’une chaîne contenant le nom externe du contrôle.  
+ The resource ID of a string containing the external name of the control.  
   
  *dwOleMisc*  
- Énumération qui contient un ou plusieurs indicateurs. Pour plus d’informations sur cette énumération, consultez [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) dans le Kit de développement logiciel Windows.  
+ An enumeration containing one or more flags. For more information on this enumeration, see [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) in the Windows SDK.  
    
-### <a name="remarks"></a>Remarques  
- En plus de `IMPLEMENT_OLECTLTYPE`, vous devez ajouter le **DECLARE_OLECTLTYPE** macro pour que votre déclaration de classe du contrôle.  
+### <a name="remarks"></a>Remarks  
+ In addition to `IMPLEMENT_OLECTLTYPE`, you must add the **DECLARE_OLECTLTYPE** macro to your control class declaration.  
   
- Le **GetUserTypeNameID** fonction membre retourne la chaîne de ressource qui identifie la classe du contrôle. `GetMiscStatus`Retourne le **OLEMISC** bits pour votre contrôle. Cette énumération spécifie une collection de paramètres qui décrivent les diverses caractéristiques de votre contrôle. Pour obtenir une description complète de la **OLEMISC** paramètres, voir [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) dans le Kit de développement logiciel Windows.  
+ The **GetUserTypeNameID** member function returns the resource string that identifies your control class. `GetMiscStatus` returns the **OLEMISC** bits for your control. This enumeration specifies a collection of settings describing miscellaneous characteristics of your control. For a full description of the **OLEMISC** settings, see [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) in the Windows SDK.  
   
 > [!NOTE]
->  Les paramètres par défaut utilisés par le ActiveX ControlWizard sont : **OLEMISC_ACTIVATEWHENVISIBLE**, **OLEMISC_SETCLIENTSITEFIRST**, **OLEMISC_INSIDEOUT**, **OLEMISC_CANTLINKINSIDE**, et **OLEMISC_RECOMPOSEONRESIZE**.  
+>  The default settings used by the ActiveX ControlWizard are: **OLEMISC_ACTIVATEWHENVISIBLE**, **OLEMISC_SETCLIENTSITEFIRST**, **OLEMISC_INSIDEOUT**, **OLEMISC_CANTLINKINSIDE**, and **OLEMISC_RECOMPOSEONRESIZE**.  
    
-### <a name="requirements"></a>Spécifications  
- **En-tête :** afxctl.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
    
-### <a name="see-also"></a>Voir aussi  
- [Macros et objet Globals](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
  [DECLARE_OLECTLTYPE](#declare_olectltype)
 
-##  <a name="implement_serial"></a>IMPLEMENT_SERIAL  
- Génère le code C++ nécessaire pour un dynamique `CObject`-dérivée de classe avec un accès d’exécution pour le nom de classe et la position dans la hiérarchie.  
+##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL  
+ Generates the C++ code necessary for a dynamic `CObject`-derived class with run-time access to the class name and position within the hierarchy.  
   
 ```
 IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)  
 ```  
   
-### <a name="parameters"></a>Paramètres  
- *CLASS_NAME*  
- Le nom réel de la classe.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The actual name of the class.  
   
  `base_class_name`  
- Le nom de la classe de base.  
+ The name of the base class.  
   
  *wSchema*  
- A **UINT** « numéro de version » qui doit être encodé dans l’archive pour activer un programme de la désérialisation identifier et gérer les données créées par programme plus tôt les versions. Le numéro de schéma de classe ne doit pas être -1.  
+ A **UINT** "version number" that will be encoded in the archive to enable a deserializing program to identify and handle data created by earlier program versions. The class schema number must not be -1.  
   
-### <a name="remarks"></a>Remarques  
- Utilisez le `IMPLEMENT_SERIAL` macro dans un module .cpp ; puis lier le code d’objet qui en résulte qu’une seule fois.  
+### <a name="remarks"></a>Remarks  
+ Use the `IMPLEMENT_SERIAL` macro in a .cpp module; then link the resulting object code only once.  
   
- Vous pouvez utiliser la **AFX_API** macro pour exporter automatiquement la `CArchive` opérateur d’extraction pour les classes qui utilisent la `DECLARE_SERIAL` et `IMPLEMENT_SERIAL` macros. Crochet les déclarations de classe (situées dans le fichier .h) avec le code suivant :  
+ You can use the **AFX_API** macro to automatically export the `CArchive` extraction operator for classes that use the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros. Bracket the class declarations (located in the .h file) with the following code:  
   
- [!code-cpp[NVC_MFCCObjectSample ° 20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
+ [!code-cpp[NVC_MFCCObjectSample#20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
   
- Pour plus d’informations, consultez la [rubriques de la classe CObject](../../mfc/using-cobject.md).  
+ For more information, see the [CObject Class Topics](../../mfc/using-cobject.md).  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCCObjectSample #24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
- **En-tête :** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="runtime_class"></a>RUNTIME_CLASS  
- Obtient la structure de classe d’exécution à partir du nom d’une classe C++.  
+##  <a name="runtime_class"></a>  RUNTIME_CLASS  
+ Gets the run-time class structure from the name of a C++ class.  
   
 ```
 RUNTIME_CLASS(class_name)  
 ```  
   
-### <a name="parameters"></a>Paramètres  
- *CLASS_NAME*  
- Le nom réel de la classe (ne pas entourée guillemets).  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The actual name of the class (not enclosed in quotation marks).  
   
-### <a name="remarks"></a>Notes  
- `RUNTIME_CLASS`Retourne un pointeur vers un [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) structure pour la classe spécifiée par *class_name*. Uniquement `CObject`-déclarés avec des classes dérivées `DECLARE_DYNAMIC`, `DECLARE_DYNCREATE`, ou `DECLARE_SERIAL` retourne des pointeurs vers un `CRuntimeClass` structure.  
+### <a name="remarks"></a>Remarks  
+ `RUNTIME_CLASS` returns a pointer to a [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) structure for the class specified by *class_name*. Only `CObject`-derived classes declared with `DECLARE_DYNAMIC`, `DECLARE_DYNCREATE`, or `DECLARE_SERIAL` will return pointers to a `CRuntimeClass` structure.  
   
- Pour plus d’informations, consultez [rubriques de la classe CObject](../../mfc/using-cobject.md).  
+ For more information, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCCObjectSample #25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]  
 
-### <a name="requirements"></a>Spécifications  
- **En-tête :** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
    
-##  <a name="declare_olecreate"></a>DECLARE_OLECREATE  
- Permet aux objets de `CCmdTarget`-classes dérivées pour être créé via OLE automation.  
+##  <a name="declare_olecreate"></a>  DECLARE_OLECREATE  
+ Enables objects of `CCmdTarget`-derived classes to be created through OLE automation.  
   
 ```
 DECLARE_OLECREATE(class_name) 
 ```  
   
-### <a name="parameters"></a>Paramètres  
- *CLASS_NAME*  
- Le nom réel de la classe.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The actual name of the class.  
   
-### <a name="remarks"></a>Remarques  
- Cette macro permet d’autres applications OLE créer des objets de ce type.  
+### <a name="remarks"></a>Remarks  
+ This macro enables other OLE-enabled applications to create objects of this type.  
   
- Ajouter le `DECLARE_OLECREATE` macro dans un module pour la classe, .h, puis inclure ce module dans tous les modules .cpp qui ont besoin d’accéder aux objets de cette classe.  
+ Add the `DECLARE_OLECREATE` macro in the .h module for the class, and then include that module in all .cpp modules that need access to objects of this class.  
   
- Si `DECLARE_OLECREATE` est inclus dans la déclaration de classe, puis `IMPLEMENT_OLECREATE` doit être inclus dans l’implémentation de classe. Une déclaration de classe à l’aide de `DECLARE_OLECREATE` doit également utiliser `DECLARE_DYNCREATE` ou `DECLARE_SERIAL`.  
+ If `DECLARE_OLECREATE` is included in the class declaration, then `IMPLEMENT_OLECREATE` must be included in the class implementation. A class declaration using `DECLARE_OLECREATE` must also use `DECLARE_DYNCREATE` or `DECLARE_SERIAL`.  
 
-### <a name="requirements"></a>Spécifications  
- **En-tête**: afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h  
 
-##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
- Soit cette macro ou [IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags) doit apparaître dans le fichier d’implémentation pour toute classe qui utilise `DECLARE_OLECREATE`.  
+##  <a name="implement_olecreate"></a>  IMPLEMENT_OLECREATE  
+ Either this macro or [IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags) must appear in the implementation file for any class that uses `DECLARE_OLECREATE`.  
   
 ```
 IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)  
 ```  
   
-### <a name="parameters"></a>Paramètres  
- *CLASS_NAME*  
- Le nom réel de la classe.  
+### <a name="parameters"></a>Parameters  
+ *class_name*  
+ The actual name of the class.  
   
  *external_name*  
- Le nom d’objet exposé à d’autres applications (entourées guillemets).  
+ The object name exposed to other applications (enclosed in quotation marks).  
   
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
- Composants de la classe **CLSID**.  
+ Components of the class's **CLSID**.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  Si vous utilisez `IMPLEMENT_OLECREATE`, par défaut, vous prenez en charge le modèle de thread unique. Si vous utilisez `IMPLEMENT_OLECREATE_FLAGS`, vous pouvez spécifier le modèle de thread votre objet prend en charge à l’aide de le `nFlags` paramètre.  
+>  If you use `IMPLEMENT_OLECREATE`, by default, you support only the single threading model. If you use `IMPLEMENT_OLECREATE_FLAGS`, you can specify which threading model your object supports by using the `nFlags` parameter.  
   
- Le nom externe est l’identificateur exposée à d’autres applications. Applications clientes utilisent le nom externe pour demander un objet de cette classe à partir d’un serveur automation.  
+ The external name is the identifier exposed to other applications. Client applications use the external name to request an object of this class from an automation server.  
   
- L’ID de classe est un identificateur unique de 128 bits pour l’objet. Il se compose d’une **long**, deux **WORD**s et huit **octets**s, telle que représentée par *l*, *w1*, *w2*, et *b1* via *M8* dans la description de la syntaxe. Les Assistants code et Assistant Application créent unique ID de classe OLE pour vous, en fonction des besoins.  
+ The OLE class ID is a unique 128-bit identifier for the object. It consists of one **long**, two **WORD**s, and eight **BYTE**s, as represented by *l*, *w1*, *w2*, and *b1* through *b8* in the syntax description. The Application Wizard and code wizards create unique OLE class IDs for you as required.  
 
-### <a name="requirements"></a>Spécifications  
- **En-tête**: afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h 
 
-## <a name="see-also"></a>Voir aussi  
- [Macros et objet Globals](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 
 

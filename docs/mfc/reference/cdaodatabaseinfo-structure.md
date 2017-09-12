@@ -1,5 +1,5 @@
 ---
-title: CDaoDatabaseInfo (Structure) | Documents Microsoft
+title: CDaoDatabaseInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDaoDatabaseInfo structure
+- CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
 caps.latest.revision: 14
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ed7eb8612099daf59cb7e722434102095122f3d1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4403b7ac9d37f55763ecadbac3f8bd912860ea74
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo, structure
-Le `CDaoDatabaseInfo` structure contient des informations sur un objet de base de données défini pour les objets d’accès aux données (DAO).  
+# <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo Structure
+The `CDaoDatabaseInfo` structure contains information about a database object defined for data access objects (DAO).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoDatabaseInfo  
@@ -59,76 +59,76 @@ struct CDaoDatabaseInfo
 };  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- Identifie l’objet de base de données. Pour récupérer directement cette propriété, appelez [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname). Pour plus d’informations, consultez la rubrique « Nom de propriété » dans l’aide de DAO.  
+ Uniquely names the database object. To directly retrieve this property, call [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname). For details, see the topic "Name Property" in DAO Help.  
   
  `m_bUpdatable`  
- Indique si des modifications peuvent être apportées à la base de données. Pour récupérer directement cette propriété, appelez [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate). Pour plus d’informations, consultez la rubrique « Propriété actualisable » dans l’aide de DAO.  
+ Indicates whether changes can be made to the database. To directly retrieve this property, call [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate). For details, see the topic "Updatable Property" in DAO Help.  
   
  *m_bTransactions*  
- Indique si une source de données prend en charge les transactions, l’enregistrement d’une série de modifications peut ultérieurement être restaurée (annulée) ou validée (enregistré). Si une base de données est basé sur le moteur de base de données Microsoft Jet, la propriété Transactions est différente de zéro et vous pouvez utiliser des transactions. Autres moteurs de base de données ne peuvent pas en charge les transactions. Pour récupérer directement cette propriété, appelez [CDaoDatabase::CanTransact](../../mfc/reference/cdaodatabase-class.md#cantransact). Pour plus d’informations, consultez la rubrique « Propriété de Transactions » dans l’aide de DAO.  
+ Indicates whether a data source supports transactions — the recording of a series of changes that can later be rolled back (canceled) or committed (saved). If a database is based on the Microsoft Jet database engine, the Transactions property is nonzero and you can use transactions. Other database engines may not support transactions. To directly retrieve this property, call [CDaoDatabase::CanTransact](../../mfc/reference/cdaodatabase-class.md#cantransact). For details, see the topic "Transactions Property" in DAO Help.  
   
  *m_strVersion*  
- Indique la version du moteur de base de données Microsoft Jet. Pour récupérer la valeur de cette propriété directement, appelez l’objet de base de données [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) fonction membre. Pour plus d’informations, consultez la rubrique « Propriété de Version » dans l’aide de DAO.  
+ Indicates the version of the Microsoft Jet database engine. To retrieve the value of this property directly, call the database object's [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) member function. For details, see the topic "Version Property" in DAO Help.  
   
  `m_lCollatingOrder`  
- Spécifie la séquence de l’ordre de tri du texte pour la comparaison de chaînes ou de tri. Les valeurs possibles sont les suivantes :  
+ Specifies the sequence of the sort order in text for string comparison or sorting. Possible values include:  
   
-- **dbSortGeneral** utiliser l’ordre de tri Général (anglais, Français, allemand, portugais, italien et Espagnol moderne).  
+- **dbSortGeneral** Use the General (English, French, German, Portuguese, Italian, and Modern Spanish) sort order.  
   
-- **dbSortArabic** utiliser l’ordre de tri de l’arabe.  
+- **dbSortArabic** Use the Arabic sort order.  
   
-- **dbSortCyrillic** utiliser l’ordre de tri russe.  
+- **dbSortCyrillic** Use the Russian sort order.  
   
-- **dbSortCzech** utiliser l’ordre de tri tchèque.  
+- **dbSortCzech** Use the Czech sort order.  
   
-- **dbSortDutch** utiliser l’ordre de tri néerlandais.  
+- **dbSortDutch** Use the Dutch sort order.  
   
-- **dbSortGreek** utiliser l’ordre de tri grec.  
+- **dbSortGreek** Use the Greek sort order.  
   
-- **dbSortHebrew** utiliser l’ordre de tri de l’hébreu.  
+- **dbSortHebrew** Use the Hebrew sort order.  
   
-- **dbSortHungarian** utiliser l’ordre de tri hongrois.  
+- **dbSortHungarian** Use the Hungarian sort order.  
   
-- **dbSortIcelandic** utiliser l’ordre de tri islandais.  
+- **dbSortIcelandic** Use the Icelandic sort order.  
   
-- **dbSortNorwdan** utiliser l’ordre de tri norvégien ou danois.  
+- **dbSortNorwdan** Use the Norwegian or Danish sort order.  
   
-- **dbSortPDXIntl** utiliser l’ordre de tri Paradox International.  
+- **dbSortPDXIntl** Use the Paradox International sort order.  
   
-- **dbSortPDXNor** utiliser le paradoxe norvégien ou ordre de tri danois.  
+- **dbSortPDXNor** Use the Paradox Norwegian or Danish sort order.  
   
-- **dbSortPDXSwe** utiliser le paradoxe suédois ou finnois de tri.  
+- **dbSortPDXSwe** Use the Paradox Swedish or Finnish sort order.  
   
-- **dbSortPolish** utiliser l’ordre de tri polonais.  
+- **dbSortPolish** Use the Polish sort order.  
   
-- **dbSortSpanish** utiliser l’ordre de tri espagnol.  
+- **dbSortSpanish** Use the Spanish sort order.  
   
-- **dbSortSwedFin** utiliser l’ordre de tri suédois ou finnois.  
+- **dbSortSwedFin** Use the Swedish or Finnish sort order.  
   
-- **dbSortTurkish** utiliser l’ordre de tri turc.  
+- **dbSortTurkish** Use the Turkish sort order.  
   
-- **dbSortUndefined** l’ordre de tri est inconnue ou non définie.  
+- **dbSortUndefined** The sort order is undefined or unknown.  
   
- Pour plus d’informations, consultez la rubrique « Personnalisation Windows Registre paramètres d’accès aux données » dans l’aide de DAO.  
+ For more information, see the topic "Customizing Windows Registry Settings for Data Access" in DAO Help.  
   
  *m_nQueryTimeout*  
- Le nombre de secondes pendant lequel que le moteur de base de données Microsoft Jet attend avant une erreur de délai d’attente se produit lorsqu’une requête est exécutée sur une base de données ODBC. La valeur de délai d’attente par défaut est de 60 secondes. Lorsque la valeur QueryTimeout est 0, aucun délai d’expiration se produit ; Cela peut provoquer le blocage du programme. Pour récupérer la valeur de cette propriété directement, appelez l’objet de base de données [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) fonction membre. Pour plus d’informations, consultez la rubrique « Propriété QueryTimeout » dans l’aide de DAO.  
+ The number of seconds the Microsoft Jet database engine waits before a timeout error occurs when a query is run on an ODBC database. The default timeout value is 60 seconds. When QueryTimeout is set to 0, no timeout occurs; this can cause the program to stop responding. To retrieve the value of this property directly, call the database object's [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) member function. For details, see the topic "QueryTimeout Property" in DAO Help.  
   
  `m_strConnect`  
- Fournit des informations sur la source d’une base de données ouverte. Pour plus d’informations sur les chaînes de connexion et pour plus d’informations sur la récupération de la valeur de cette propriété directement, consultez le [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) fonction membre. Pour plus d’informations, consultez la rubrique « Se connecter Property » dans l’aide de DAO.  
+ Provides information about the source of an open database. For information about connect strings, and for information about retrieving the value of this property directly, see the [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) member function. For more information, see the topic "Connect Property" in DAO Help.  
   
-## <a name="remarks"></a>Remarques  
- La base de données est un objet DAO sous-jacent d’un objet MFC de classe [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). Les références au principal, secondaire et toutes les ci-dessus indiquent comment les informations sont renvoyées par le [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) fonction membre.  
+## <a name="remarks"></a>Remarks  
+ The database is a DAO object underlying an MFC object of class [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). The references to Primary, Secondary, and All above indicate how the information is returned by the [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) member function.  
   
- Les informations récupérées par le [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) fonction membre est stockée dans un `CDaoDatabaseInfo` structure. Appelez `GetDatabaseInfo` pour la `CDaoWorkspace` objet dans dont la collection de bases de données est stocké l’objet de base de données. `CDaoDatabaseInfo`définit également un `Dump` builds de la fonction membre en mode de débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoDatabaseInfo` objet.  
+ Information retrieved by the [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) member function is stored in a `CDaoDatabaseInfo` structure. Call `GetDatabaseInfo` for the `CDaoWorkspace` object in whose Databases collection the database object is stored. `CDaoDatabaseInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoDatabaseInfo` object.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoWorkspace (classe)](../../mfc/reference/cdaoworkspace-class.md)   
- [CDaoDatabase (classe)](../../mfc/reference/cdaodatabase-class.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoWorkspace Class](../../mfc/reference/cdaoworkspace-class.md)   
+ [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)
 

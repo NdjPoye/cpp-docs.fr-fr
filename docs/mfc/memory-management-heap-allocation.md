@@ -1,39 +1,58 @@
 ---
-title: "Gestion de la m&#233;moire&#160;: allocation de tas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "delete (opérateur), utiliser avec le débogage MFC"
-  - "détection des fuites de mémoire"
-  - "allocation des tas"
-  - "allocation des tas, description"
-  - "allocation de mémoire, mémoire de tas"
-  - "fuites de mémoire, détecter"
-  - "mémoire, détection des fuites"
-  - "new (opérateur), utiliser avec le débogage MFC"
+title: 'Memory Management: Heap Allocation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory [MFC], detecting leaks
+- delete operator [MFC], using with debug MFC
+- heap allocation [MFC], described
+- memory allocation [MFC], heap memory
+- memory leaks [MFC], detecting
+- new operator [MFC], using with debug MFC
+- heap allocation [MFC]
+- detecting memory leaks [MFC]
 ms.assetid: a5d949c6-1b79-476e-9c66-513a558203d9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Gestion de la m&#233;moire&#160;: allocation de tas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c3fa05362ea2d20b353ed6532686fbc54dcabb60
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Le segment de mémoire est utilisé pour les besoins d'allocation de mémoire du programme.  Il s'agit d'une zone en dehors de programmation et de la pile.  Les programmes C standard utilisent les fonctions `malloc` et **free** pour allouer et libérer de la mémoire de segment.  La version de débogage de MFC fournit les versions de modifier des opérateurs prédéfinis **new** et **supprimer** C\+\+ pour allouer et de libérer des objets dans la mémoire du segment.  
+---
+# <a name="memory-management-heap-allocation"></a>Memory Management: Heap Allocation
+The heap is reserved for the memory allocation needs of the program. It is an area apart from the program code and the stack. Typical C programs use the functions `malloc` and **free** to allocate and deallocate heap memory. The Debug version of MFC provides modified versions of the C++ built-in operators **new** and **delete** to allocate and deallocate objects in heap memory.  
   
- Lorsque vous utilisez **nouveau** et **supprimer** au lieu de `malloc` et de **libre**, vous pouvez bénéficier des améliorations en termes de débogage de la gestion de la mémoire de la bibliothèque de classes, qui peuvent être utiles lors de la détection des fuites de mémoire.  Lorsque vous créez votre programme avec la version Release de MFC, les versions standard des opérateurs de **nouveau** et de **supprimer** offrent un moyen efficace pour allouer et libérer de la mémoire \(la version préliminaire de MFC ne fournit pas les versions de modifier des opérateurs\).  
+ When you use **new** and **delete** instead of `malloc` and **free**, you are able to take advantage of the class library's memory-management debugging enhancements, which can be useful in detecting memory leaks. When you build your program with the Release version of MFC, the standard versions of the **new** and **delete** operators provide an efficient way to allocate and deallocate memory (the Release version of MFC does not provide modified versions of these operators).  
   
- Notez que la taille totale des objets alloués sur le segment est uniquement limitée par la mémoire virtuelle disponible sur votre système.  
+ Note that the total size of objects allocated on the heap is limited only by your system's available virtual memory.  
   
-## Voir aussi  
- [Gestion de la mémoire](../mfc/memory-management.md)
+## <a name="see-also"></a>See Also  
+ [Memory Management](../mfc/memory-management.md)
+
+

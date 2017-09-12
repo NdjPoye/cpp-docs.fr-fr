@@ -1,119 +1,138 @@
 ---
-title: "Concepteur de ruban (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.ribbon.F1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC (concepteur de ruban)"
-  - "Concepteur de ruban (MFC)"
+title: Ribbon Designer (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.ribbon.F1
+dev_langs:
+- C++
+helpviewer_keywords:
+- Ribbon Designer (MFC)
+- MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Concepteur de ruban (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 21372eebe92c9cba42d25f79b9e2ffc32f43f019
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Le Concepteur de ruban permet de créer et de personnaliser des rubans dans les applications MFC.  Un ruban est un élément d'interface utilisateur \(IU\) qui organise les commandes en groupes logiques.  Ces groupes apparaissent sous des onglets distincts dans une bande transversale située dans la partie supérieure de la fenêtre.  Le ruban remplace la barre de menus et les barres d'outils.  Un ruban peut considérablement améliorer la convivialité d'une l'application.  Pour plus d'informations, consultez [Rubans](http://go.microsoft.com/fwlink/?LinkId=129233).  L'illustration suivante représente un ruban.  
+---
+# <a name="ribbon-designer-mfc"></a>Ribbon Designer (MFC)
+The Ribbon Designer lets you create and customize ribbons in MFC applications. A ribbon is a user interface (UI) element that organizes commands into logical groups. These groups appear on separate tabs in a strip across the top of the window. The ribbon replaces the menu bar and toolbars. A ribbon can significantly improve application usability. For more information, see [Ribbons](http://go.microsoft.com/fwlink/linkid=129233). The following illustration shows a ribbon.  
   
- ![Contrôle de ressources de ruban MFC](../mfc/media/ribbon_no_callouts.png "Ribbon\_No\_Callouts")  
+ ![MFC Ribbon Resource Control](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   
- Dans les versions antérieures de Visual Studio, les rubans devaient être créés en écrivant du code qui utilise les classes de ruban MFC, telles que la [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md).  Dans [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], le Concepteur de ruban propose une méthode alternative pour générer des rubans. Dans un premier temps, il convient de créer et de personnaliser un ruban en tant que ressource.  Chargez ensuite la ressource de ruban à partir du code de l'application MFC.  Vous pouvez même utiliser les ressources de ruban et les classes de ruban MFC conjointement.  Par exemple, vous pouvez créer une ressource de ruban et y ajouter par programmation des éléments supplémentaires au moment de l'exécution en utilisant du code.  
+ In earlier versions of Visual Studio, ribbons had to be created by writing code that uses the MFC ribbon classes such as [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md). In [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], the ribbon designer provides an alternative method for building ribbons. First, create and customize a ribbon as a resource. Then load the ribbon resource from code in the MFC application. You can even use ribbon resources and MFC ribbon classes together. For example, you can create a ribbon resource, and then programmatically add more elements to it at runtime by using code.  
   
-## Présentation du Concepteur de ruban  
- Le Concepteur de ruban crée et stocke le ruban en tant que ressource.  Quand vous créez une ressource de ruban, le Concepteur de ruban effectue trois opérations :  
+## <a name="understanding-the-ribbon-designer"></a>Understanding the Ribbon Designer  
+ The ribbon designer creates and stores the ribbon as a resource. When you create a ribbon resource, the ribbon designer does these three things:  
   
--   Il ajoute une entrée dans le script de définition de ressources du projet \(\* .rc\).  Dans l'exemple suivant, `IDR_RIBBON` est le nom unique qui identifie la ressource de ruban, `RT_RIBBON_XML` est le type de ressource et `ribbon.mfcribbon-ms` est le nom du fichier de ressources.  
+-   Adds an entry in the project resource definition script (*.rc). In the following example, `IDR_RIBBON` is the unique name that identifies the ribbon resource, `RT_RIBBON_XML` is the resource type, and `ribbon.mfcribbon-ms` is the name of the resource file.  
   
-    ```  
-    IDR_RIBBON             RT_RIBBON_XML                      "res\\ribbon.mfcribbon-ms"  
-    ```  
+ ```  
+    IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  
+ ```  
   
--   Ajoute les définitions des ID de commande à resource.h.  
+-   Adds the definitions of Command IDs to resource.h.  
   
-    ```  
-    #define IDR_RIBBON            307  
-    ```  
+ ```  
+ #define IDR_RIBBON            307  
+ ```  
   
--   Crée un fichier de ressources de ruban \(\*.mfcribbon\-ms\) qui contient le code XML définissant les boutons, les contrôles et les attributs du ruban.  Les modifications apportées au ruban dans le Concepteur de ruban sont stockées dans le fichier de ressources au format XML.  L'exemple de code suivant montre une partie du contenu d'un fichier \*.mfcribbon\-ms :  
+-   Creates a ribbon resource file (*.mfcribbon-ms) that contains the XML code that defines the ribbon's buttons, controls, and attributes. Changes to the ribbon in the ribbon designer are stored in the resource file as XML. The following code example shows part of the contents of a \*.mfcribbon-ms file:  
   
-    ```  
-    <RIBBON_BAR>  
-      <ELEMENT_NAME>RibbonBar</ELEMENT_NAME>  
-      <IMAGE>  
-        <ID>  
-          <NAME>IDB_BUTTONS</NAME>  
-          <VALUE>113</VALUE>  
-        </ID> …  
-    ```  
+ ```  
+ <RIBBON_BAR>  
+ <ELEMENT_NAME>RibbonBar</ELEMENT_NAME>  
+ <IMAGE>  
+ <ID>  
+ <NAME>IDB_BUTTONS</NAME>  
+ <VALUE>113</VALUE>  
+ </ID>   
+ ```  
   
- Pour utiliser la ressource de ruban dans votre application MFC, chargez\-la en appelant [CMFCRibbonBar::LoadFromResource](../Topic/CMFCRibbonBar::LoadFromResource.md).  
+ To use the ribbon resource in your MFC application, load the resource by calling [CMFCRibbonBar::LoadFromResource](../mfc/reference/cmfcribbonbar-class.md#loadfromresource).  
   
-## Création d'un ruban à l'aide du Concepteur de ruban  
- Il existe deux façons d'ajouter une ressource de ruban à votre projet MFC :  
+## <a name="creating-a-ribbon-by-using-the-ribbon-designer"></a>Creating a Ribbon By Using the Ribbon Designer  
+ These are the two ways to add a ribbon resource to your MFC project:  
   
--   Créez une application MFC et configurez l'Assistant de projet MFC pour créer le ruban.  Pour plus d'informations, consultez [Procédure pas à pas : création d'une application de ruban à l'aide de MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).  
+-   Create an MFC application and configure the MFC Project Wizard to create the ribbon. For more information, see [Walkthrough: Creating a Ribbon Application By Using MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).  
   
--   Dans un projet MFC existant, créez une ressource de ruban et chargez\-la.  Pour plus d'informations, consultez [Procédure pas à pas : mise à jour de l'application Scribble MFC \(partie 1\)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
+-   In an existing MFC project, create a ribbon resource and load it. For more information, see [Walkthrough: Updating the MFC Scribble Application (Part 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).  
   
- Si votre projet contient déjà un ruban codé manuellement, vous pouvez utiliser les fonctions de MFC pour convertir le ruban existant en ressource de ruban.  Pour plus d'informations, consultez [Comment : convertir un ruban MFC existant en ressource du ruban](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).  
+ If your project already has a manually coded ribbon, MFC has functions that you can use to convert the existing ribbon to a ribbon resource. For more information, see [How to: Convert an Existing MFC Ribbon to a Ribbon Resource](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).  
   
 > [!NOTE]
->  Il n'est pas possible de créer des rubans dans des applications à base de boîtes de dialogue.  Pour plus d'informations, consultez [Type d'application, Assistant Application MFC](../mfc/reference/application-type-mfc-application-wizard.md).  
+>  Ribbons cannot be created in dialog-based applications. For more information, see [Application Type, MFC Application Wizard](../mfc/reference/application-type-mfc-application-wizard.md).  
   
-## Personnalisation des rubans  
- Pour ouvrir un ruban dans le Concepteur de ruban, double\-cliquez sur la ressource de ruban dans l'Affichage des ressources.  Dans le concepteur, vous pouvez ajouter, supprimer et personnaliser les éléments du ruban, le bouton d'application ou la barre d'outils Accès rapide.  Vous pouvez aussi lier des événements, par exemple, des événements de clic de bouton et des événements de menu, à une méthode dans votre application.  
+## <a name="customizing-ribbons"></a>Customizing Ribbons  
+ To open a ribbon in the ribbon designer, double-click the ribbon resource in Resource View. In the designer, you can add, remove, and customize elements on the ribbon, the Application button, or the quick access toolbar. You can also link events, for example, button-click events and menu events, to a method in your application.  
   
- L'illustration suivante représente les différents composants du Concepteur de ruban.  
+ The following illustration shows the various components in the ribbon designer.  
   
- ![Concepteur de ruban MFC](../mfc/media/ribbon_designer.png "Ribbon\_Designer")  
+ ![MFC Ribbon Designer](../mfc/media/ribbon_designer.png "ribbon_designer")  
   
--   **Boîte à outils :** contient les contrôles qui peuvent être déplacés vers l'aire du concepteur.  
+- **Toolbox:** Contains controls that can be dragged to the designer surface.  
   
--   **Aire du concepteur :** contient la représentation visuelle de la ressource de ruban.  
+- **Designer Surface:** Contains the visual representation of the ribbon resource.  
   
--   **Fenêtre Propriétés :** répertorie les attributs de l'élément sélectionné dans l'aire du concepteur.  
+- **Properties window:** Lists the attributes of the item that is selected on the designer surface.  
   
--   **Fenêtre Affichage des ressources :** affiche les ressources qui incluent des ressources de ruban dans votre projet.  
+- **Resource View window:** Displays the resources that include ribbon resources, in your project.  
   
--   **Barre d'outils Éditeur Ribbon :** contient des commandes qui vous permettent d'afficher un aperçu du ruban et de modifier son thème visuel.  
+- **Ribbon Editor Toolbar:** Contains commands that let you preview the ribbon and change its visual theme.  
   
- Les rubriques suivantes expliquent comment utiliser les fonctionnalités du Concepteur de ruban :  
+ The following topics describe how to use the features in the ribbon designer:  
   
--   [Comment : personnaliser le bouton Application](../mfc/how-to-customize-the-application-button.md)  
+- [How to: Customize the Application Button](../mfc/how-to-customize-the-application-button.md)  
   
--   [Comment : personnaliser la barre d'outils Accès rapide](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+- [How to: Customize the Quick Access Toolbar](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
--   [Comment : ajouter des contrôles de ruban et des gestionnaires d'événements](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
+- [How to: Add Ribbon Controls and Event Handlers](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)  
   
--   [Comment : charger une ressource du ruban à partir d'une application MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
+- [How to: Load a Ribbon Resource from an MFC Application](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)  
   
-## Définition des éléments de ruban  
- ![Ruban MFC](../mfc/media/ribbon.png "Ribbon")  
+## <a name="definitions-of-ribbon-elements"></a>Definitions of Ribbon Elements  
+ ![MFC Ribbon](../mfc/media/ribbon.png "ribbon")  
   
--   **Bouton d'application :** bouton qui apparaît dans le coin supérieur gauche d'un ruban.  Le bouton d'application remplace le menu Fichier et est visible même quand le ruban est réduit.  Quand vous cliquez sur ce bouton, vous obtenez un menu qui contient une liste de commandes.  
+- **Application button:** The button that appears on the upper-left corner of a ribbon. The Application button replaces the File menu and is visible even when the ribbon is minimized. When the button is clicked, a menu that has a list of commands is displayed.  
   
--   **Barre d'outils Accès rapide :** petite barre d'outils personnalisable qui affiche les commandes fréquemment utilisées.  
+- **Quick Access toolbar:** A small, customizable toolbar that displays frequently used commands.  
   
--   **Catégorie** : regroupement logique qui représente le contenu d'un onglet du ruban.  
+- **Category**: The logical grouping that represents the contents of a ribbon tab.  
   
--   **Bouton par défaut de catégorie :** bouton qui apparaît sur le ruban quand celui\-ci est réduit.  Quand vous cliquez sur ce bouton, la catégorie réapparaît sous forme de menu.  
+- **Category Default button:** The button that appears on the ribbon when the ribbon is minimized. When the button is clicked, the category reappears as a menu.  
   
--   **Volet :** zone de la barre de ruban qui affiche un groupe de contrôles connexes.  Chaque catégorie du ruban contient un ou plusieurs volets de ruban.  
+- **Panel:** An area of the ribbon bar that displays a group of related controls. Every ribbon category contains one or more ribbon panels.  
   
--   **Éléments de ruban :** contrôles figurant dans les volets, par exemple, des boutons et des zones de liste modifiables.  Pour connaître les différents contrôles qui peuvent prendre place sur un ruban, consultez [Exemple RibbonGadgets : application de gadgets de ruban](../top/visual-cpp-samples.md).  
+- **Ribbon elements:** Controls in the panels, for example, buttons and combo boxes. To see the various controls that can be hosted on a ribbon, see [RibbonGadgets Sample: Ribbon Gadgets Application](../visual-cpp-samples.md).  
   
-## Voir aussi  
- [Éléments de l'interface utilisateur](../mfc/user-interface-elements-mfc.md)   
- [Working with Resource Files](../mfc/working-with-resource-files.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Working with Resource Files](../windows/working-with-resource-files.md)
+
+

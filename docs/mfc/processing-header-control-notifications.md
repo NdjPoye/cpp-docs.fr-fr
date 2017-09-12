@@ -1,35 +1,54 @@
 ---
-title: "Traitement des notifications de contr&#244;le Header | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl (classe), notifications de traitement"
-  - "contrôles (MFC), header"
-  - "notifications de contrôle header"
-  - "contrôles header, notifications de traitement"
-  - "notifications, traitement pour CHeaderCtrl"
+title: Processing Header-Control Notifications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHeaderCtrl class [MFC], processing notifications
+- controls [MFC], header
+- notifications [MFC], processing for CHeaderCtrl
+- header controls [MFC], processing notifications
+- header control notifications
 ms.assetid: e6c6af7c-d458-4d33-85aa-48014ccde5f6
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Traitement des notifications de contr&#244;le Header
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: da13a2c3c352a7688242aa84c138dc1253b062a7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Dans la vue ou dans la boîte de dialogue, utilisez la fenêtre Propriétés pour créer une fonction gestionnaire d'[OnChildNotify](../Topic/CWnd::OnChildNotify.md) avec une instruction SWITCH pour tous les messages de notification de contrôle à traiter \([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)\)  \(voir l'[Mapper des messages aux fonctions](../mfc/reference/mapping-messages-to-functions.md)\).  Les notifications sont envoyées à la fenêtre parente lorsque l'utilisateur clique sur ou double\-clique sur un élément d'en\-tête, faites glisser un diviseur entre les éléments, et ainsi de suite.  
+---
+# <a name="processing-header-control-notifications"></a>Processing Header-Control Notifications
+In your view or dialog class, use the Properties window to create an [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) handler function with a switch statement for any header-control ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) notification messages you want to handle (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)). Notifications are sent to the parent window when the user clicks or double-clicks a header item, drags a divider between items, and so on.  
   
- Les messages de notification associée à un contrôle header sont répertoriées dans [Référence de contrôle header](http://msdn.microsoft.com/library/windows/desktop/bb775239) dans [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ The notification messages associated with a header control are listed in [Header Control Reference](http://msdn.microsoft.com/library/windows/desktop/bb775239) in the Windows SDK.  
   
-## Voir aussi  
- [Utilisation de CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

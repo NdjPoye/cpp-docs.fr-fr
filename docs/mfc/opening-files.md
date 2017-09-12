@@ -1,63 +1,82 @@
 ---
-title: "Ouverture de fichiers | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CFile (classe), variable"
-  - "exemples (MFC), ouvrir des fichiers"
-  - "gestion des exceptions (C++), ouvrir des fichiers"
-  - "gestion des exceptions (C++), à l'ouverture des fichiers"
-  - "objets de fichiers (C++)"
-  - "fichiers (C++), ouvrir"
-  - "MFC (C++), opérations sur les fichiers"
-  - "ouverture (appels)"
-  - "ouverture (fonctions membres)"
-  - "Open (méthode), CFile (classe)"
-  - "ouvrir des fichiers"
-  - "ouvrir des fichiers, gérer les exceptions"
-  - "ouvrir des fichiers, dans MFC"
+title: Opening Files | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Open member functions [MFC]
+- CFile class [MFC], variable
+- opening files, in MFC
+- Open calls [MFC]
+- Open method, CFile class [MFC]
+- examples [MFC], opening files
+- opening files, handling exceptions
+- exception handling [MFC], when opening files
+- files [MFC], opening
+- file objects [MFC]
+- MFC, file operations
+- opening files [MFC]
+- exception handling [MFC], opening files
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ouverture de fichiers
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: aba8aa5c5f2d55058422d64b101f68106ea2667b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Dans MFC, la façon la plus courante pour ouvrir un fichier est un processus en deux étapes.  
+---
+# <a name="opening-files"></a>Opening Files
+In MFC, the most common way to open a file is a two-stage process.  
   
-#### Pour ouvrir un fichier.  
+#### <a name="to-open-a-file"></a>To open a file  
   
-1.  Créez le fichier objet sans spécifier de chemin d'accès ou d'indicateurs d'autorisation.  
+1.  Create the file object without specifying a path or permission flags.  
   
-     Vous créez généralement un objet fichier lorsque vous déclarez une variable [Fichier C](../mfc/reference/cfile-class.md) sur le frame de pile.  
+     You usually create a file object by declaring a [CFile](../mfc/reference/cfile-class.md) variable on the stack frame.  
   
-2.  Appelez la fonction membre [Ouvrir](../Topic/CFile::Open.md) du fichier objet, en indiquant le chemin d'accès et les indicateurs d'autorisation.  
+2.  Call the [Open](../mfc/reference/cfile-class.md#open) member function for the file object, supplying a path and permission flags.  
   
-     La valeur de retour pour `Open` est différente de zéro si le fichier a été ouvert correctement ou 0 si le fichier spécifié n'a pas pu être ouvert.  La fonction membre `Open` est prototypée comme suit :  
+     The return value for `Open` will be nonzero if the file was opened successfully or 0 if the specified file could not be opened. The `Open` member function is prototyped as follows:  
   
      `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`  
   
-     Les balises ouvertes spécifient quelles autorisations, par exemple en lecture seule, vous souhaitez pour le fichier.  Les valeurs d'indicateur possibles sont définies comme constantes énumérées dans la classe `CFile`, elles sont qualifiées par « `CFile::` » comme dans `CFile::modeRead`.  Utilisez l'indicateur `CFile::modeCreate` si vous souhaitez créer le fichier.  
+     The open flags specify which permissions, such as read-only, you want for the file. The possible flag values are defined as enumerated constants within the `CFile` class, so they are qualified with "`CFile::`" as in `CFile::modeRead`. Use the `CFile::modeCreate` flag if you want to create the file.  
   
- L'exemple suivant montre comment créer un fichier avec autorisation de lecture\/écriture \(en remplaçant un fichier précédent avec le même chemin d'accès\) :  
+ The following example shows how to create a new file with read/write permission (replacing any previous file with the same path):  
   
- [!code-cpp[NVC_MFCFiles#1](../mfc/codesnippet/CPP/opening-files_1.cpp)]  
+ [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]  
   
 > [!NOTE]
->  Cet exemple crée et ouvre un fichier.  Si il y a des problèmes, l'appel à `Open` peut retourner un objet `CFileException` dans son dernier paramètre, comme illustré ici.  La macro `TRACE` affiche le nom et le code indiquant la raison de l'échec.  Vous pouvez appeler la fonction `AfxThrowFileException` si vous avez besoin d'un rapport d'erreurs plus détaillé.  
+>  This example creates and opens a file. If there are problems, the `Open` call can return a `CFileException` object in its last parameter, as shown here. The `TRACE` macro prints both the file name and a code indicating the reason for failure. You can call the `AfxThrowFileException` function if you require more detailed error reporting.  
   
-## Voir aussi  
+## <a name="see-also"></a>See Also  
  [CFile Class](../mfc/reference/cfile-class.md)   
- [CFile::Open](../Topic/CFile::Open.md)   
- [Fichiers](../mfc/files-in-mfc.md)
+ [CFile::Open](../mfc/reference/cfile-class.md#open)   
+ [Files](../mfc/files-in-mfc.md)
+
+

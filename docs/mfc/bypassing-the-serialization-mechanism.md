@@ -1,42 +1,61 @@
 ---
-title: "Ignorer le m&#233;canisme de s&#233;rialisation | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objets archive (C++)"
-  - "archives (C++)"
-  - "archives (C++), sérialisation"
-  - "ignorer la sérialisation"
-  - "sérialisation (C++), ignorer"
-  - "sérialisation (C++), substituer"
-  - "sérialisation (C++), rôle de l'infrastructure"
+title: Bypassing the Serialization Mechanism | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- archive objects [MFC]
+- bypassing serialization
+- archives [MFC], serialization
+- serialization [MFC], bypassing
+- archives [MFC]
+- serialization [MFC], role of framework
+- serialization [MFC], overriding
 ms.assetid: 48d4a279-b51c-4ba5-81cd-ed043312b582
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Ignorer le m&#233;canisme de s&#233;rialisation
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 12efe0a246eba721834bab2a37513aeafc09a24c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Comme vous l'avez vu, l'infrastructure fournit une méthode par défaut pour lire et écrire des données dans et à partir de fichiers.  La sérialisation par le biais d'un objet archive est adaptée aux besoins d'un grand nombre d'applications.  Une application lit un fichier entièrement en mémoire, permet à l'utilisateur de mettre le fichier à jour, puis entre la version mise à jour sur le disque à nouveau.  
+---
+# <a name="bypassing-the-serialization-mechanism"></a>Bypassing the Serialization Mechanism
+As you have seen, the framework provides a default way to read and write data to and from files. Serializing through an archive object suits the needs of a great many applications. Such an application reads a file entirely into memory, lets the user update the file, and then writes the updated version to disk again.  
   
- Toutefois, certaines applications traitent les données très différemment, et pour ces applications, la sérialisation par le biais d'une archive n'est pas appropriée.  Les exemples incluent des outils de base de données, les programmes qui modifient uniquement les parties de fichiers volumineux, les programmes qui écrivent des fichiers texte, et les programmes qui partagent des fichiers de données.  
+ However, some applications operate on data very differently, and for these applications serialization through an archive is not suitable. Examples include database programs, programs that edit only parts of large files, programs that write text-only files, and programs that share data files.  
   
- Dans ces cas, vous pouvez remplacer la fonction [Serialize](../Topic/CObject::Serialize.md) d'une manière différente pour mener les actions de fichier via un objet [CFile](../mfc/reference/cfile-class.md) plutôt qu'un objet [CArchive](../mfc/reference/carchive-class.md).  
+ In these cases, you can override the [Serialize](../mfc/reference/cobject-class.md#serialize) function in a different way to mediate file actions through a [CFile](../mfc/reference/cfile-class.md) object rather than a [CArchive](../mfc/reference/carchive-class.md) object.  
   
- Vous pouvez utiliser les méthodes **Open**, **Read**, **Write**, **Close**,  et`Seek` de la classe `CFile` pour ouvrir un fichier, déplacer le pointeur de fichier \(accès\) à un point spécifique dans le fichier, lire un enregistrement \(un nombre spécifié d'octets\) à ce point, laisser l'utilisateur mettre à jour l'enregistrement, puis revenir au même point de nouveau et entrer l'enregistrement dans le fichier.  L'infrastructure ouvre le fichier à votre place, et vous pouvez utiliser la méthode `GetFile` de la classe `CArchive` pour obtenir un pointeur vers l'objet `CFile`.  Pour une utilisation encore plus complexe et flexible, vous pouvez remplacer les méthodes [OnOpenDocument](../Topic/CDocument::OnOpenDocument.md) et [OnSaveDocument](../Topic/CDocument::OnSaveDocument.md) de la classe `CWinApp`.  Pour plus d'informations, consultez la classe [CFile](../mfc/reference/cfile-class.md) dans *le guide de MFC*.  
+ You can use the **Open**, **Read**, **Write**, **Close**, and `Seek` member functions of class `CFile` to open a file, move the file pointer (seek) to a specific point in the file, read a record (a specified number of bytes) at that point, let the user update the record, then seek to the same point again and write the record back to the file. The framework will open the file for you, and you can use the `GetFile` member function of class `CArchive` to obtain a pointer to the `CFile` object. For even more sophisticated and flexible use, you can override the [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) and [OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument) member functions of class `CWinApp`. For more information, see class [CFile](../mfc/reference/cfile-class.md) in the *MFC Reference*.  
   
- Dans ce scénario, la substitution de `Serialize` n'a aucun effet, sauf si, par exemple, vous souhaitez l'utiliser en lecture et écrire un en\-tête de fichier pour le maintenir à jour lorsque le document se ferme.  
+ In this scenario, your `Serialize` override does nothing, unless, for example, you want to have it read and write a file header to keep it up to date when the document closes.  
   
-## Voir aussi  
- [Utilisation de documents](../mfc/using-documents.md)
+## <a name="see-also"></a>See Also  
+ [Using Documents](../mfc/using-documents.md)
+
+

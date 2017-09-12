@@ -1,50 +1,66 @@
 ---
-title: "Classes de fen&#234;tre frame cr&#233;&#233;es par l&#39;Assistant Application | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CMainFrame"
-  - "CMainFrame::PreCreateWindow"
-  - "CMainFrame.PreCreateWindow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistants Application (C++), classes de fenêtre frame créées par"
-  - "CFrameWnd (classe), fenêtres frame"
-  - "classes (C++), fenêtre frame"
-  - "CMainFrame (classe)"
-  - "CMDIChildWnd (classe), fenêtres frame"
-  - "CMDIFrameWnd (classe), fenêtres frame"
-  - "classes de fenêtre frame, créées par les Assistants Application"
-  - "classes de fenêtre"
-  - "classes de fenêtre, frame"
+title: Frame-Window Classes Created by the Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CMainFrame
+dev_langs:
+- C++
+helpviewer_keywords:
+- application wizards [MFC], frame window classes created by
+- window classes [MFC]
+- classes [MFC], frame-window
+- CMDIFrameWnd class [MFC], frame windows
+- window classes [MFC], frame
+- CFrameWnd class [MFC], frame windows
+- CMDIChildWnd class [MFC], frame windows
+- frame window classes [MFC], created by application wizards
+- CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
 caps.latest.revision: 8
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classes de fen&#234;tre frame cr&#233;&#233;es par l&#39;Assistant Application
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19de6bdd291126933c5a1f893c37c99824ccd062
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Lorsque vous utilisez [L'Application](../ide/creating-desktop-projects-by-using-application-wizards.md) pour créer une application squelette, en plus de l'application, du document, les classes d'affichage, l'Application crée une classe de fenêtre dérivée cadre de la fenêtre principale cadre de votre application.  La classe est appelée `CMainFrame` par défaut, les fichiers qui contiennent le sont appelés MAINFRM.H et MAINFRM.CPP.  
+---
+# <a name="frame-window-classes-created-by-the-application-wizard"></a>Frame-Window Classes Created by the Application Wizard
+When you use the [Application Wizard](../ide/creating-desktop-projects-by-using-application-wizards.md) to create a skeleton application, in addition to application, document, and view classes, the Application Wizard creates a derived frame-window class for your application's main frame window. The class is called `CMainFrame` by default, and the files that contain it are named MAINFRM.H and MAINFRM.CPP.  
   
- Si votre application est SDI, votre classe de `CMainFrame` est dérivée de la classe [CFrameWnd](../mfc/reference/cframewnd-class.md).  
+ If your application is SDI, your `CMainFrame` class is derived from class [CFrameWnd](../mfc/reference/cframewnd-class.md).  
   
- Si votre application est MDI, `CMainFrame` est dérivé de la classe [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md).  Dans ce cas `CMainFrame` implémente le cadre principal, qui contient le menu, la barre d'outils, et les barres d'état.  L'application assistance ne dérive pas de nouveaux documents de classe fenêtre\-cadre pour vous.  Au lieu de cela, il utilise l'implémentation par défaut dans [Classe de CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).  L'infrastructure MFC crée une fenêtre enfant pour contenir chaque vue \(qui peut être de type `CScrollView`, `CEditView`, `CTreeView`, `CListView`, etc.\) que l'application requiert.  Si vous devez personnaliser le cadre de fenêtre de document, créez une nouvelle classe cadre de fenêtre de document \(voir le [Ajouter une classe](../ide/adding-a-class-visual-cpp.md)\).  
+ If your application is MDI, `CMainFrame` is derived from class [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md). In this case `CMainFrame` implements the main frame, which holds the menu, toolbar, and status bars. The Application Wizard does not derive a new document frame-window class for you. Instead, it uses the default implementation in [CMDIChildWnd Class](../mfc/reference/cmdichildwnd-class.md). The MFC framework creates a child window to contain each view (which can be of type `CScrollView`, `CEditView`, `CTreeView`, `CListView`, and so on) that the application requires. If you need to customize your document frame window, you can create a new document frame-window class (see [Adding a Class](../ide/adding-a-class-visual-cpp.md)).  
   
- Si vous choisissez de prendre en charge une barre d'outils, la classe contient également des variables membres de type [CToolBar](../mfc/reference/ctoolbar-class.md) et [CStatusBar](../mfc/reference/cstatusbar-class.md) et une fonction gestionnaire des messages de `OnCreate` pour initialiser deux [barres de contrôle](../mfc/control-bars.md).  
+ If you choose to support a toolbar, the class also has member variables of type [CToolBar](../mfc/reference/ctoolbar-class.md) and [CStatusBar](../mfc/reference/cstatusbar-class.md) and an `OnCreate` message-handler function to initialize the two [control bars](../mfc/control-bars.md).  
   
- Ces classes fenêtre\-cadre marche comme tel, mais pour améliorer leur fonctionnalité, vous devez ajouter des variables membres et les fonctions de membre.  Vous pouvez également souhaiter avoir votre classe fenêtre gérer d'autres messages de Windows.  Pour plus d'informations, consultez [Modification des styles d'une fenêtre créée par MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md).  
+ These frame-window classes work as created, but to enhance their functionality, you must add member variables and member functions. You may also want to have your window classes handle other Windows messages. For more information, see [Changing the Styles of a Window Created by MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md).  
   
-## Voir aussi  
- [Classes de fenêtre frame](../mfc/frame-window-classes.md)   
- [Fichiers d'en\-tête et fichiers sources de contrôle ou de programme MFC](../ide/mfc-program-or-control-source-and-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Frame-Window Classes](../mfc/frame-window-classes.md)   
+ [MFC Program or Control Source and Header Files](../ide/mfc-program-or-control-source-and-header-files.md)
+
+

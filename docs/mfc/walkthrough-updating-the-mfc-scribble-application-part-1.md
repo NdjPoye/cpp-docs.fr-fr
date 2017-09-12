@@ -1,286 +1,309 @@
 ---
-title: "Proc&#233;dure pas &#224; pas&#160;: mise &#224; jour de l&#39;application Scribble MFC (partie&#160;1) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exemples (C++), mettre à jour des applications existantes"
-  - "MFC Feature Pack, mettre à jour des applications existantes"
-  - "Office Fluent (interface utilisateur), porter vers"
-  - "ruban (interface utilisateur), porter vers"
-  - "exemples (C++), mettre à jour des applications existantes"
-  - "procédures pas à pas (C++), mettre à jour des applications existantes"
+title: 'Walkthrough: Updating the MFC Scribble Application (Part 1) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- examples [MFC], update existing application
+- ribbon UI, porting to
+- Office Fluent UI, porting to
+- samples [MFC], update existing application
+- MFC Feature Pack, update existing application
+- walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
 caps.latest.revision: 54
-caps.handback.revision: 50
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Proc&#233;dure pas &#224; pas&#160;: mise &#224; jour de l&#39;application Scribble MFC (partie&#160;1)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b6b10b3a5f8033e927c6a7359b7eca48dddbc8eb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cette procédure pas\-à\-pas explique comment modifier une application MFC existante pour utiliser l'interface utilisateur de ruban.  Visual Studio prend en charge le ruban Office 2007 et le ruban scénique Windows 7.  Pour plus d'informations sur l'interface utilisateur de ruban, consultez [Rubans](http://go.microsoft.com/fwlink/?LinkId=129233) sur le site Web MSDN.  
+---
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Walkthrough: Updating the MFC Scribble Application (Part 1)
+This walkthrough demonstrates how to modify an existing MFC application to use the Ribbon user interface. Visual Studio supports both the Office 2007 Ribbon and the Windows 7 Scenic Ribbon. For more information about the Ribbon user interface, see [Ribbons](http://go.microsoft.com/fwlink/linkid=129233) on the MSDN Web site.  
   
- Cette procédure pas \- à \- pas modifie l'exemple Scribble MFC classique de Scribble 1,0 qui vous permet d'utiliser la souris pour créer des dessins constitués de traits.  Cette partie de la procédure indique comment modifier l'exemple Scribble afin qu'il affiche une barre de ruban.  [Étape 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) ajoute plusieurs boutons à la barre de ruban.  
+ This walkthrough modifies the classic Scribble 1.0 MFC sample that lets you use the mouse to create line drawings. This part of the walkthrough shows how to modify the Scribble sample so that it displays a ribbon bar. [Part 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) adds more buttons to the ribbon bar.  
   
-## Composants requis  
- [Exemples Visual C\+\+](../top/visual-cpp-samples.md)  
+## <a name="prerequisites"></a>Prerequisites  
+ [Visual C++ Samples](../visual-cpp-samples.md)  
   
- [Exemples Visual C\+\+](../top/visual-cpp-samples.md)  
+ [Visual C++ Samples](../visual-cpp-samples.md)  
   
 ##  <a name="top"></a> Sections  
- Cette partie de la procédure contient les sections suivantes :  
+ This part of the walkthrough has the following sections:  
   
--   [Remplacer les classes de base](#replaceClass)  
+- [Replacing the Base Classes](#replaceclass)  
   
--   [Ajouter des Bitmaps au projet](#addBitmap)  
+- [Adding Bitmaps to the Project](#addbitmap)  
   
--   [Ajout d'une ressource de ruban au projet](#addRibbon)  
+- [Adding a Ribbon Resource to the Project](#addribbon)  
   
--   [Création d'une instance de la barre de Ruban](#createInstance)  
+- [Creating an Instance of the Ribbon Bar](#createinstance)  
   
--   [Ajout d'une catégorie ruban](#addCategory)  
+- [Adding a Ribbon Category](#addcategory)  
   
--   [Définition du style de l'application](#setLook)  
+- [Setting the Look of the Application](#setlook)  
   
-##  <a name="replaceClass"></a> Remplacer les classes de base  
- Pour convertir une application qui prend en charge un menu à une application qui prend en charge un ruban, vous devez dériver l'application, la fenêtre frame, et les classes ToolBars des classes de base mises à jour. \(Nous vous suggérons que vous ne modifiez pas l'exemple d'origine Scribble ; à la place, supprimez le projet Scribble, copiez\-le dans un autre répertoire, puis modifiez la copie.\)  
+##  <a name="replaceclass"></a> Replacing the Base Classes  
+ To convert an application that supports a menu to an application that supports a ribbon, you must derive the application, frame window, and toolbar classes from updated base classes. (We suggest that you do not modify the original Scribble sample; instead, clean the Scribble project, copy it to another directory, and then modify the copy.)  
   
-#### Pour remplacer les classes de base dans l'application Scribble  
+#### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>To replace the base classes in the Scribble application  
   
-1.  Dans scribble.cpp, vérifiez que `CScribbleApp::InitInstance` inclut un appel à [AfxOleInit](../Topic/AfxOleInit.md).  
+1.  In scribble.cpp, verify that `CScribbleApp::InitInstance` includes a call to [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).  
   
-2.  Ajoutez le code suivant au fichier stdafx.h:  
+2.  Add the following code to the stdafx.h file.  
   
-    ```  
+ ```  
     #include <afxcontrolbars.h>  
-    ```  
+ ```  
   
-3.  Dans scribble.h, modifiez la définition de la classe `CScribbleApp` afin qu'elle soit dérivée de [CWinAppEx Class](../mfc/reference/cwinappex-class.md).  
+3.  In scribble.h, modify the definition for the `CScribbleApp` class so that it is derived from [CWinAppEx Class](../mfc/reference/cwinappex-class.md).  
   
-    ```  
+ ```  
     class CScribbleApp: public CWinAppEx  
-    ```  
+ ```  
   
-4.  Scribble 1,0 a été entré lorsque les applications Windows utilisaient un fichier d'initialisation \(.ini\) pour enregistrer des données sur les préférences de l'utilisateur.  Au lieu d'un fichier d'initialisation, modifiez le Scribble pour stocker des préférences utilisateur dans le Registre.  Pour définir la clé de Registre et la base, tapez le code suivant dans `CScribbleApp::InitInstance` après l'instruction `LoadStdProfileSettings()`.  
+4.  Scribble 1.0 was written when Windows applications used an initialization (.ini) file to save user preference data. Instead of an initialization file, modify Scribble to store user preferences in the registry. To set the registry key and base, type the following code in `CScribbleApp::InitInstance` after the `LoadStdProfileSettings()` statement.  
   
-    ```  
-    SetRegistryKey(_T("MFCNext\\Samples\\Scribble2"));  
-    SetRegistryBase(_T("Settings"));  
-    ```  
+ ```  
+    SetRegistryKey(_T("MFCNext\\Samples\\Scribble2"));
+
+ SetRegistryBase(_T("Settings"));
+
+ ```  
   
-5.  Le frame principal pour une application d'interface multidocument \(MDI\) n'est plus dérivé de la classe `CMDIFrameWnd`.  À la place, il est dérivé de la classe [CMDIFrameWndEx](../mfc/reference/cmdiframewndex-class.md).  
+5.  The main frame for a multiple document interface (MDI) application is no longer derived from the `CMDIFrameWnd` class. Instead, it is derived from the [CMDIFrameWndEx](../mfc/reference/cmdiframewndex-class.md) class.  
   
-     Dans les fichiers mainfrm.h et mainfrm.cpp, remplacez toutes les références à `CMDIFrameWnd` par `CMDIFrameWndEx`.  
+     In the mainfrm.h and mainfrm.cpp files, replace all references to `CMDIFrameWnd` with `CMDIFrameWndEx`.  
   
-6.  Dans les fichiers childfrm.h et childfrm.cpp, remplacez `CMDIChildWnd` par `CMDIChildWndEx`.  
+6.  In the childfrm.h and childfrm.cpp files, replace `CMDIChildWnd` with `CMDIChildWndEx`.  
   
-     Dans le fichier childfrm.h , remplacez `CSplitterWnd` par `CSplitterWndEx`.  
+     In the childfrm. h file, replace `CSplitterWnd` with `CSplitterWndEx`.  
   
-7.  Modifiez les barres d'outils et les barres d'état pour utiliser les nouvelles classes MFC.  
+7.  Modify toolbars and status bars to use the new MFC classes.  
   
-     Dans le fichier mainfrm.h :  
+     In the mainfrm.h file:  
   
-    1.  Remplacez `CToolBar` par `CMFCToolBar`.  
+    1.  Replace `CToolBar` with `CMFCToolBar`.  
   
-    2.  Remplacez `CStatusBar` par `CMFCStatusBar`.  
+    2.  Replace `CStatusBar` with `CMFCStatusBar`.  
   
-8.  Dans le fichier mainfrm.cpp :  
+8.  In the mainfrm.cpp file:  
   
-    1.  Remplacez `m_wndToolBar.SetBarStyle` par `m_wndToolBar.SetPaneStyle`  
+    1.  Replace `m_wndToolBar.SetBarStyle` with `m_wndToolBar.SetPaneStyle`  
   
-    2.  Remplacez `m_wndToolBar.GetBarStyle` par `m_wndToolBar.GetPaneStyle`  
+    2.  Replace `m_wndToolBar.GetBarStyle` with `m_wndToolBar.GetPaneStyle`  
   
-    3.  Remplacez `DockControlBar(&m_wndToolBar)` par `DockPane(&m_wndToolBar)`  
+    3.  Replace `DockControlBar(&m_wndToolBar)` with `DockPane(&m_wndToolBar)`  
   
-9. Dans le fichier d'ipframe.cpp, commentez les trois lignes de code suivantes.  
+9. In the ipframe.cpp file, comment out the following three lines of code.  
   
-    ```  
-    m_wndToolBar.EnableDocking(CBRS_ALIGN_ANY);  
-    pWndFrame->EnableDocking(CBRS_ALIGN_ANY);  
-    pWndFrame->DockPane(&m_wndToolBar);  
-    ```  
+ ```  
+    m_wndToolBar.EnableDocking(CBRS_ALIGN_ANY);
+
+ pWndFrame->EnableDocking(CBRS_ALIGN_ANY);
+
+    pWndFrame->DockPane(&m_wndToolBar);
+
+ ```  
   
-10. Si vous projetez de lier votre application de manière statique, ajoutez le code suivant au début du fichier de ressources du projet \(.rc\).  
+10. If you intend to link your application statically, add the following code to the start of the project resource (.rc) file.  
   
-    ```  
+ ```  
     #include "afxribbon.rc"  
-    ```  
+ ```  
   
-     Le fichier afxribbon.rc contient les ressources requises au moment de l'exécution.  [Assistant Application MFC](../mfc/reference/mfc-application-wizard.md) inclut automatiquement ce fichier lorsque vous créez une application.  
+     The afxribbon.rc file contains resources that are required at run time. The [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md) includes this file automatically when you create an application.  
   
-11. Enregistrez tous les changements, puis générez et exécutez l'application.  
+11. Save the changes and then build and run the application.  
   
- \[[Sections](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="addBitmap"></a> Ajouter des Bitmaps au projet  
- Les quatre étapes suivantes de cette procédure requièrent des ressources bitmap.  Obtenez les bitmaps appropriées de différentes façons :  
+##  <a name="addbitmap"></a> Adding Bitmaps to the Project  
+ The next four steps of this walkthrough require bitmap resources. You can obtain appropriate bitmaps in various ways:  
   
--   Utilisez [Resource Editors](../mfc/resource-editors.md) pour inventer vos propres bitmaps.  Ou utilisez les éditeurs de ressources pour assembler des bitmaps à partir d'images portables des graphiques de réseau \(.png\) inclus avec [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  Ces images sont dans le répertoire `VS2008ImageLibrary`.  
+-   Use the [Resource Editors](../windows/resource-editors.md) to invent your own bitmaps. Or use the resource editors to assemble bitmaps from the portable network graphics (.png) images that are included with [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. These images are in the `VS2008ImageLibrary` directory.  
   
-     Toutefois, l'interface utilisateur du ruban exige que certaines bitmap prennent en charge des images transparentes.  Les bitmaps transparentes utilisent les pixels 32 bits, les 24 bits spécifient les composantes rouge, vert, et bleu de la couleur, et les 8 bits définissent *un canal alpha* qui spécifie la transparence de la couleur.  Les éditeurs de ressources actuels peuvent afficher, sans les modifier des bitmaps avec les pixels 32 bits.  Par conséquent, utilisez un éditeur d'image externe au lieu des éditeurs de ressources pour manipuler les bitmaps transparentes.  
+     However, the Ribbon user interface requires that certain bitmaps support transparent images. Transparent bitmaps use 32-bit pixels, where 24 bits specify the red, green, and blue components of the color, and 8 bits define an *alpha channel* that specifies the transparency of the color. The current resource editors can view, but not modify bitmaps with 32-bit pixels. Consequently, use an external image editor instead of the resource editors to manipulate transparent bitmaps.  
   
--   Copiez un fichier de ressources approprié d'une autre application à votre projet puis importez les bitmap à partir de ce fichier.  
+-   Copy an appropriate resource file from another application to your project and then import bitmaps from that file.  
   
- Cette procédure pas \- à \- pas copie des fichiers de ressources d'une application dans le répertoire Samples.  
+ This walkthrough copies resource files from an application in the Samples directory.  
   
-#### Pour ajouter des bitmaps au projet  
+#### <a name="to-add-bitmaps-to-the-project"></a>To add bitmaps to the Project  
   
-1.  Utilisez l'Explorateur de fichiers pour copier les fichiers suivants .bmp du répertoire Ressources \(`res`\) de l'exemple RibbonGadgets :  
+1.  Use File Explorer to copy the following .bmp files from the resources directory (`res`) of the RibbonGadgets sample:  
   
-    1.  Copiez main.bmp à votre projet Scribble.  
+    1.  Copy main.bmp to your Scribble project.  
   
-    2.  Copiez filesmall.bmp et filelarge.bmp à votre projet Scribble.  
+    2.  Copy filesmall.bmp and filelarge.bmp to your Scribble project.  
   
-    3.  Effectuez les nouvelles copies des fichiers de filelarge.bmp et de filesmall.bmp, mais enregistrer des copies dans l'exemple RibbonGadgets.  Renommez les copies homesmall.bmp et homelarge.bmp puis déplacer les copies à votre projet Scribble.  
+    3.  Make new copies of the filelarge.bmp and filesmall.bmp files, but save the copies in the RibbonGadgets sample. Rename the copies homesmall.bmp and homelarge.bmp and then move the copies to your Scribble project.  
   
-    4.  Effectuez une copie du fichier de toolbar.bmp, mais enregistrez la copie dans l'exemple RibbonGadgets.  Renommez la copie panelicons.bmp puis déplacez la copie dans votre projet Scribble.  
+    4.  Make a copy of the toolbar.bmp file, but save the copy in the RibbonGadgets sample. Rename the copy panelicons.bmp and then move the copy to your Scribble project.  
   
-2.  Importer la bitmap pour une application MFC.  Dans **Affichage des ressources**, double\-cliquez sur le nœud **scribble.rc**, double\-cliquez sur le nœud **Bitmap**, puis cliquez sur **Ajouter une ressource**.  Dans la boîte de dialogue qui apparaît, cliquez sur **Installer**.  Accédez au répertoire d'un `res`, sélectionnez le fichier de main.bmp, puis cliquez sur **Ouvrir**.  
+2.  Import the bitmap for an MFC application. In **Resource View**, double-click the **scribble.rc** node, double-click the **Bitmap** node, and then click **Add resource**. On the dialog box that appears, click **Import**. Browse to the `res` directory, select the main.bmp file, and then click **Open**.  
   
-     La bitmap de main.bmp contient une image 26x26.  Remplacez l'ID de la bitmap à IDB\_RIBBON\_MAIN.  
+     The main.bmp bitmap contains a 26x26 image. Change the ID of the bitmap to IDB_RIBBON_MAIN.  
   
-3.  Importez les bitmaps pour le menu fichier associé à la touche application.  
+3.  Import the bitmaps for the file menu that is attached to the Application button.  
   
-    1.  Importer le fichier filesmall.bmp, qui contient dix images 16x16 \(16x160\).  Comme nous avons besoin uniquement huit images 16x16 \(16x128\), utilisez **Affichage des ressources** pour modifier la largeur de cette bitmap de 160 à 128.  Remplacez l'ID de la bitmap à IDB\_RIBBON\_FILESMALL.  
+    1.  Import the filesmall.bmp file, which contains ten 16x16 (16x160) images. Because we need only eight 16x16 images (16x128),  use the **Resource View** to change the width of that bitmap from 160 to 128. Change the ID of the bitmap to IDB_RIBBON_FILESMALL.  
   
-    2.  Importez le filelarge.bmp, qui contient huit images 32x32 \(32x256\).  Remplacez l'ID de la bitmap à IDB\_RIBBON\_FILELARGE.  
+    2.  Import the filelarge.bmp, which contains eight 32x32 (32x256) images. Change the ID of the bitmap to IDB_RIBBON_FILELARGE.  
   
-4.  Importez les bitmaps pour les catégories ruban et les panneaux.  Chaque onglet de la barre de ruban est une catégorie, et se compose d'une étiquette de texte et d'une image facultative.  
+4.  Import the bitmaps for the ribbon categories and panels. Each tab on the ribbon bar is a category, and consists of a text label and an optional image.  
   
-    1.  Importer la bitmap de homesmall.bmp, qui contient huit images 16x16 pour les petites bitmap de bouton.  Remplacez l'ID de la bitmap à IDB\_RIBBON\_HOMESMALL.  
+    1.  Import the homesmall.bmp bitmap, which contains eight 16x16 images for small button bitmaps. Change the ID of the bitmap to IDB_RIBBON_HOMESMALL.  
   
-    2.  Importer la bitmap de homelarge.bmp, qui contient huit images 32x32 pour les grandes bitmap de bouton.  Remplacez l'ID de la bitmap à IDB\_RIBBON\_HOMELARGE.  
+    2.  Import the homelarge.bmp bitmap, which contains eight 32x32 images for large button bitmaps. Change the ID of the bitmap to IDB_RIBBON_HOMELARGE.  
   
-5.  Importez les bitmaps pour les panneaux redimensionnés de ruban.  Ces bitmaps, ou icônes du panneau, sont utilisées après une opération de redimensionnement si le ruban est trop petit pour afficher le Panel.  
+5.  Import bitmaps for the resized ribbon panels. These bitmaps, or panel icons, are used after a resize operation if the ribbon is too small to display the entire panel.  
   
-    1.  Importer la bitmap de panelicons.bmp, qui contient huit images 16x16.  Dans la fenêtre **Propriétés Éditeur de bitmaps**, ajustez la largeur de la bitmap à 64 \(16x64\).  Remplacez l'ID de la bitmap à IDB\_PANEL\_ICONS.  
+    1.  Import the panelicons.bmp bitmap, which contains eight 16x16 images. In the **Properties** window of the **Bitmap Editor**, adjust the width of the bitmap to 64 (16x64). Change the ID of the bitmap to IDB_PANEL_ICONS.  
   
- \[[Sections](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="addRibbon"></a> Ajout d'une ressource de ruban au projet  
- Lorsque vous convertissez une application qui utilise des menus à une application qui utilise un ruban, vous ne devez pas supprimer ou désactiver les menus existants.  À la place, vous créez une ressource de ruban, ajoutez des boutons de ruban, puis associez les nouveaux boutons avec des éléments de menu existants.  Bien que les menus ne sont plus visibles, les messages de la barre du ruban sont routés via les menus.  En outre, les raccourcis de menu continuent à fonctionner.  
+##  <a name="addribbon"></a> Adding a Ribbon Resource to the Project  
+ When you convert an application that uses menus to an application that uses a ribbon, you do not have to remove or disable the existing menus. Instead, you create a ribbon resource, add ribbon buttons, and then associate the new buttons with the existing menu items. Although the menus are no longer visible, messages from the ribbon bar are routed through the menus. In addition, menu shortcuts continue to work.  
   
- Un ruban comprend la touche application, qui est le grand bouton du côté supérieur gauche du ruban, et un ou plusieurs onglets de catégorie.  Chaque onglet de catégorie contient un ou plusieurs panneaux qui agissent comme conteneurs pour les boutons et des contrôles de ruban.  La procédure suivante indique comment créer une ressource de ruban puis personnaliser la touche application.  
+ A ribbon consists of the Application button, which is the large button on the upper-left side of the ribbon, and one or more category tabs. Each category tab contains one or more panels that act as containers for ribbon buttons and controls. The following procedure shows how to create a ribbon resource and then customize the Application button.  
   
-#### Pour ajouter une ressource de ruban au projet  
+#### <a name="to-add-a-ribbon-resource-to-the-project"></a>To add a ribbon resource to the project  
   
-1.  Dans le menu **Projet**, cliquez sur **Ajouter une Ressource**.  
+1.  On the **Project** menu, click **Add Resource**.  
   
-2.  Dans la boîte de dialogue **Ajouter une nouvelle ressource**, sélectionnez **Ruban \(Concepteur visuel\)** puis cliquez sur **Nouveau**.  
+2.  In the **Add Resource** dialog box, select **Ribbon** and then click **New**.  
   
-     Visual Studio crée un ruban de ressources et l'ouvre dans le concepteur.  L'ID de ressource de ruban est IDR\_RIBBON1, qui s'affiche dans **Affichage des ressources**.  Le ruban contient une catégorie et un panneau.  
+     Visual Studio creates a ribbon resource and opens it in the design view. The ribbon resource ID is IDR_RIBBON1, which is displayed in **Resource View**. The ribbon contains one category and one panel.  
   
-3.  Personnalisez la touche application en modifiant ses propriétés.  Les ID de message utilisés dans ce code sont déjà définis dans le menu pour le Scribble 1,0.  
+3.  You can customize the Application button by modifying its properties. The message IDs that are used in this code are already defined in the menu for Scribble 1.0.  
   
-4.  En mode Design, cliquez sur la touche application pour afficher ses propriétés.  Changez les valeurs de propriété comme suit: **Image** en `IDB_RIBBON_MAIN`, `Fichier`en **Invite** , **Clés** en `f`, `IDB_RIBBON_FILELARGE`en **Grandes images**, et **Petites images** en `IDB_RIBBON_FILESMALL`.  
+4.  In the design view, click the Application Button to display its properties. Change property values as follows: **Image** to `IDB_RIBBON_MAIN`, **Prompt** to `File`, **Keys** to `f`, **Large Images** to `IDB_RIBBON_FILELARGE`, and **Small Images** to `IDB_RIBBON_FILESMALL`.  
   
-5.  Les modifications suivantes créent le menu apparaissant lorsque l'utilisateur clique sur la touche application.  Cliquez sur le bouton de sélection \(**...**\) à côté de **Éléments principaux** pour ouvrir **Éditeur d'éléments**.  
+5.  The following modifications create the menu that appears when the user clicks the Application button. Click the ellipsis (**...**) next to **Main Items** to open the **Items Editor**.  
   
-    1.  Cliquez sur **Ajouter** pour ajouter un bouton.  Remplacez **Légende** par `&New`, **ID** par `ID_FILE_NEW`, **Image** par `0`, **Grande image** par `0`.  
+    1.  Click **Add** to add a button. Change **Caption** to `&New`, **ID** to `ID_FILE_NEW`, **Image** to `0`, **Image Large** to `0`.  
   
-    2.  Cliquez sur le bouton **Ajouter** pour ajouter un groupe.  Remplacez **Légende** par `&Save`, **ID** par `ID_FILE_SAVE`, **Image** par `2`, puis **Grande image** par `2`.  
+    2.  Click **Add** to add a second button. Change **Caption** to `&Save`, **ID** to `ID_FILE_SAVE`, **Image** to `2`, and **Image Large** to `2`.  
   
-    3.  Cliquez sur le bouton **Ajouter** pour ajouter un troisième boutton.  Remplacez **Légende** par `Save &As`, **ID** par `ID_FILE_SAVE_AS`, **Image** par `3`, puis **Grande image** par `3`.  
+    3.  Click **Add** to add a third button. Change **Caption** to `Save &As`, **ID** to `ID_FILE_SAVE_AS`, **Image** to `3`, and **Image Large** to `3`.  
   
-    4.  Cliquez sur le bouton **Ajouter** pour ajouter un quatrième bouton.  Remplacez **Légende** par `&Imprimer`, **ID** par `ID_FILE_PRINT`, **Image** par `4`, puis **Grande image** par `4`.  
+    4.  Click **Add** to add a fourth  button. Change **Caption** to `&Print`, **ID** to `ID_FILE_PRINT`, **Image** to `4`, and **Image Large** to `4`.  
   
-    5.  Modifiez le type **Élément** à **Séparateur** puis cliquez sur **Ajouter**.  
+    5.  Change the **Item** type to **Separator** and then click **Add**.  
   
-    6.  Modifiez le type **Élément** par **Bouton**.  Cliquez sur le bouton **Ajouter** pour ajouter un cinquième bouton.  Remplacez **Légende** par `&Fermer`, **ID** par `ID_FILE_CLOSE`, **Image** par `5`, puis **Grande image** par `5`.  
+    6.  Change the **Item** type to **Button**. Click **Add** to add a fifth button. Change **Caption** to `&Close`, **ID** to `ID_FILE_CLOSE`, **Image** to `5`, and **Image Large** to `5`.  
   
-6.  Les modifications suivantes créent un sous\-menu sous le bouton Imprimer créée à l'étape précédente.  
+6.  The following modifications create a submenu under the Print button that you created in the previous step.  
   
-    1.  Cliquez sur le bouton **Imprimer**, remplacez le type **Élément** par **Étiquette**, puis cliquez sur **Insérer**.  Remplacez **Légende** par `Afficher un aperçu et imprimer le document`.  
+    1.  Click the **Print** button, change the **Item** type to **Label**, and then click **Insert**. Change **Caption** to `Preview and print the document`.  
   
-    2.  Cliquez sur le bouton **Imprimer** , remplacez le type **Élément** par **Étiquette**, puis cliquez sur **Insérer**.  Remplacez **Légende** par `&Imprimer`, **ID** par `ID_FILE_PRINT`, **Image** par `4`, puis **Grande image** par `4`.  
+    2.  Click the **Print** button, change the **Item** type to **Button**, and click **Insert**. Change **Caption** to `&Print`, **ID** to `ID_FILE_PRINT`, **Image** to `4`, and **Image Large** to `4`.  
   
-    3.  Cliquez sur le bouton **Imprimer** puis cliquez sur **Insérer** pour ajouter un bouton.  Remplacez **Légende** par `&Impression Rapide`, **ID** par `ID_FILE_PRINT_DIRECT`, **Image** par `7`, puis **Grande image** par `7`.  
+    3.  Click the **Print** button and then click **Insert** to add a button. Change **Caption** to `&Quick Print`, **ID** to `ID_FILE_PRINT_DIRECT`, **Image** to `7`, and **Image Large** to `7`.  
   
-    4.  Cliquez sur le bouton **Imprimer** puis cliquez sur **Insérer** pour ajouter un autre bouton.  Remplacez **Légende** par `Copie Pre&affichage`, par **ID** la valeur `ID_FILE_PRINT_PREVIEW`, **Image** par `6`, puis **Grande image** par`6`.  
+    4.  Click the **Print** button and then click **Insert** to add another button. Change **Caption** to `Print Pre&view`, **ID** to `ID_FILE_PRINT_PREVIEW`, **Image** to `6`, and **Image Large** to `6`.  
   
-    5.  Vous avez maintenant modifié les **Éléments principaux**.  Cliquez sur **Fermer** pour quitter **Éditeur d'éléments**.  
+    5.  You have now modified the **Main Items**. Click **Close** to exit the **Items Editor**.  
   
-7.  La modification suivante crée un bouton de sortie qui apparaît en bas du menu de touche application.  
+7.  The following modification creates an exit button that appears at the bottom of the Application button menu.  
   
-    1.  Dans la fenêtre **Propriétés**, cliquez sur le bouton de sélection \(\) situé à côté de **Bouton** pour ouvrir **Editeur d'éléments**.  
+    1.  In the **Properties** window, click the ellipsis (**...**) next to **Button** to open the **Items Editor**.  
   
-    2.  Cliquez sur **Ajouter** pour ajouter un bouton.  Remplacez **Légende** par `E&xit`, **ID** par `ID_APP_EXIT`, **Image** par`8`.  
+    2.  Click **Add** to add a button. Change **Caption** to `E&xit`, **ID** to `ID_APP_EXIT`, **Image** to `8`.  
   
- \[[Sections](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="createInstance"></a> Création d'une instance de la barre de Ruban  
- Les étapes suivantes indiquent comment créer une instance de la barre de ruban lorsque votre application démarre.  Pour ajouter une barre Ruban à une application, déclarez la barre du ruban dans le fichier mainfrm.h.  Puis, dans le fichier mainfrm.cpp, écrivez du code pour charger la ressource de ruban.  
+##  <a name="createinstance"></a> Creating an Instance of the Ribbon Bar  
+ The following steps show how to create an instance of the ribbon bar when your application starts. To add a ribbon bar to an application, declare the ribbon bar in the mainfrm.h file. Then, in the mainfrm.cpp file, write code to load the ribbon resource.  
   
-#### Pour créer une instance de la barre de ruban  
+#### <a name="to-create-an-instance-of-the-ribbon-bar"></a>To create an instance of the ribbon bar  
   
-1.  Dans le fichier de mainfrm.h, ajoutez une donnée membre à la section protégée `CMainFrame`, la définition de classe du frame principal.  Ce membre représente la barre de ruban.  
+1.  In the mainfrm.h file, add a data member to the protected section of `CMainFrame`, the class definition for the main frame. This member represents the ribbon bar.  
   
-    ```  
-    // Ribbon bar for the application  
-    CMFCRibbonBar  m_wndRibbonBar;  
-    ```  
+ ``` *// Ribbon bar for the application  
+    CMFCRibbonBar m_wndRibbonBar;  
+ ```  
   
-2.  Dans le fichier mainfrm.cpp, ajoutez le code suivant avant l'instruction `return` finale à la fin de la fonction `CMainFrame::OnCreate`.  Cela crée une instance de barre de ruban.  
+2.  In the mainfrm.cpp file, add the following code before the final `return` statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
   
-    ```  
-    // Create the ribbon bar  
+ ``` *// Create the ribbon bar  
     if (!m_wndRibbonBar.Create(this))  
-    {  
+ {  
     return -1;   //Failed to create ribbon bar  
-    }  
-    m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);  
-    ```  
+ }  
+    m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
+
+ ```  
   
- \[[Sections](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="addCategory"></a> Personnalisation de la ressource de ruban  
- Maintenant que vous avez créé la touche application, vous pouvez ajouter des éléments au ruban.  
+##  <a name="addcategory"></a> Customizing the Ribbon Resource  
+ Now that you have created the Application button, you can add elements to the ribbon.  
   
 > [!NOTE]
->  Cette procédure pas \- à \- pas utilise la même icône du panneau pour tous les panneaux.  Toutefois, vous pouvez utiliser d'autres index de liste d'images pour afficher d'autres icônes.  
+>  This walkthrough uses the same panel icon for all panels. However, you can use other image list indexes to display other icons.  
   
-#### Pour ajouter une catégorie et un panneau d'accueil de modification  
+#### <a name="to-add-a-home-category-and-edit-panel"></a>To add a Home category and Edit panel  
   
-1.  Le programme Scribble requiert une seule catégorie.  En mode Design, cliquez sur **Catégorie** pour afficher ses propriétés.  Changez les valeurs de propriété comme suit: **Légende** en `&Home`, **Grandes images** en `IDB_RIBBON_HOMELARGE`, **Petites images** en `IDB_RIBBON_HOMESMALL`.  
+1.  The Scribble program requires only one category. In the design view, click **Category** to display its properties. Change property values as follows: **Caption** to `&Home`, **Large Images** to `IDB_RIBBON_HOMELARGE`, **Small Images** to `IDB_RIBBON_HOMESMALL`.  
   
-2.  Chaque catégorie ruban est organisée en panneaux nommés.  Chaque panneau contient un ensemble de contrôles qui exécutent des opérations connexes.  Cette catégorie a un panneau.  Cliquez sur **Volet**, puis remplacez **Légende** par `Modification` et **Index de l'image** par `0`.  
+2.  Each ribbon category is organized into named panels. Each panel contains a set of controls that perform related operations. This category has one panel. Click **Panel**, and then change **Caption** to `Edit` and **Image Index** to `0`.  
   
-3.  Dans le panneau **Edition**, ajoutez un bouton qui est responsable du dédouanement du contenu du document.  ID de message pour ce bouton a déjà été défini dans la ressource menu en IDR\_SCRIBBTYPE.  Spécifiez `Effacer tous` comme texte du bouton et index de la bitmap qui décore le bouton.  Ouvrez **Boîte à outils**, puis faites glisser **Bouton** dans le panneau **Edition**.  Cliquez sur le bouton et remplacez **Légende** par `Effacer tous`, **ID** par `ID_EDIT_CLEAR_ALL`, **Index de l'image** par `0`, **Grand index d'image** par `0`.  
+3.  To the **Edit** panel, add a button that is responsible for clearing the contents of the document. The message ID for this button has already been defined in the IDR_SCRIBBTYPE menu resource. Specify `Clear All` as the button text and the index of the bitmap that decorates the button. Open the **Toolbox**, and then drag a **Button** to the **Edit** panel. Click the button  and then change **Caption** to `Clear All`, **ID** to `ID_EDIT_CLEAR_ALL`, **Image Index** to `0`, **Large Image Index** to `0`.  
   
-4.  Enregistrez tous les changements, puis générez et exécutez l'application.  L'application Scribble doit être affichée, elle doit comporter une barre de ruban en haut de la fenêtre au lieu d'une barre de menus.  La barre de ruban doit avoir une catégorie, **Accueil**, et **Accueil** doit avoir un panneau, **Edition**.  Les boutons de ruban que vous avez ajouté doivent être associés aux gestionnaires d'événements existants, sur **Ouvrir**, **Fermer**, **Enregistrer**, **Imprimer**, et les boutons **Effacer tout** doivent fonctionner comme prévu.  
+4.  Save the changes, and then build and run the application. The Scribble application should be displayed, and it should have a ribbon bar at the top of the window instead of a menu bar. The ribbon bar should have one category, **Home**, and **Home** should have one panel, **Edit**. The ribbon buttons that you added should be associated with the existing event handlers, and the **Open**, **Close**, **Save**, **Print**, and **Clear All** buttons should work as expected.  
   
- \[[Sections](#top)\]  
+ [[Sections](#top)]  
   
-##  <a name="setLook"></a> Définition du style de l'application  
- Un *gestionnaire visuel* est un objet global qui contrôle tout le dessin pour une application.  Puisque l'application d'origine Scribble utilise le style d'interface utilisateur \(UI\) Office 2000, l'application peut paraître un peu daté.  Réinitialisez l'application pour utiliser le Gestionnaire visuel Office 2007 afin qu'elle ressemble à une application Office 2007.  
+##  <a name="setlook"></a> Setting the Look of the Application  
+ A *visual manager* is a global object that controls all drawing for an application. Because the original Scribble application uses the Office 2000 user interface (UI) style, the application may look old-fashioned. You can reset the application to use the Office 2007 visual manager so that it resembles an Office 2007 application.  
   
-#### Pour définir l'aspect de l'application  
+#### <a name="to-set-the-look-of-the-application"></a>To set the look of the application  
   
-1.  Dans la fonction `CMainFrame::OnCreate`, tapez le code suivant pour modifier le gestionnaire et le style visuels par défaut.  
+1.  In the `CMainFrame::OnCreate` function, type the following code to change the default visual manager and style.  
   
-    ```  
-    // Set the default manager to Office 2007   
-    CMFCVisualManager::SetDefaultManager(RUNTIME_CLASS(CMFCVisualManagerOffice2007));  
-    CMFCVisualManagerOffice2007::SetStyle(CMFCVisualManagerOffice2007::Office2007_LunaBlue);  
-    ```  
+ ``` *// Set the default manager to Office 2007   
+    CMFCVisualManager::SetDefaultManager(RUNTIME_CLASS(CMFCVisualManagerOffice2007));
+
+ CMFCVisualManagerOffice2007::SetStyle(CMFCVisualManagerOffice2007::Office2007_LunaBlue);
+
+ ```  
   
-2.  Enregistrez tous les changements, puis générez et exécutez l'application.  L'interface utilisateur d'application doit ressembler à Office 2007 interface utilisateur.  
+2.  Save the changes, and then build and run the application. The application UI should resemble the Office 2007 UI.  
   
- \[[Sections](#top)\]  
+ [[Sections](#top)]  
   
-## Étapes suivantes  
- Vous avez modifié l'exemple Scribble MFC classique de Scribble 1,0 pour utiliser le Concepteur de ruban.  Maintenant allez à [l'Étape2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).  
+## Next Steps  
+ You have modified the classic Scribble 1.0 MFC sample to use the Ribbon Designer. Now go to [Part 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).  
   
-## Voir aussi  
- [procédures pas à pas](../mfc/walkthroughs-mfc.md)   
- [Procédure pas à pas : mise à jour de l'application Scribble MFC \(partie 2\)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+## See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)   
+ [Walkthrough: Updating the MFC Scribble Application (Part 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+
+

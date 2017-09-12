@@ -1,51 +1,70 @@
 ---
-title: "Stockage et chargement de CObjects via une archive | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CArchive (classe), stocker et charger des objets"
-  - "CObject (classe), objets CArchive"
-  - "CObjects"
-  - "CObjects, charger via les archives"
-  - "Serialize (méthode), différences par rapport aux opérateurs CArchive"
+title: Storing and Loading CObjects via an Archive | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CObject
+dev_langs:
+- C++
+helpviewer_keywords:
+- CObjects [MFC], loading through archives
+- CArchive class [MFC], storing and loading objects
+- Serialize method, vs. CArchive operators
+- CObject class [MFC], CArchive objects
+- CObjects [MFC]
 ms.assetid: a829b6dd-bc31-47e0-8108-fbb946722db9
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Stockage et chargement de CObjects via une archive
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eee40784ef6b8270efc631d9f585371a15b0f33a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Le stockage et chargement de `CObject`s via une archive requiert une attention supplémentaire.  Dans certains cas, vous devez appeler la fonction `Serialize` de l'objet, où l'objet `CArchive` est un paramètre de l'appel `Serialize`, par opposition à utiliser l'opérateur **\<\<** ou **\>\>** de `CArchive`.  Le fait qu'il est important de prendre en compte est que l'opérateur `CArchive`**\>\>** construit le `CObject` en mémoire en fonction des informations `CRuntimeClass` précédemment écrites dans le fichier d'archive de journalisation.  
+---
+# <a name="storing-and-loading-cobjects-via-an-archive"></a>Storing and Loading CObjects via an Archive
+Storing and loading `CObject`s via an archive requires extra consideration. In certain cases, you should call the `Serialize` function of the object, where the `CArchive` object is a parameter of the `Serialize` call, as opposed to using the **<\<** or **>>** operator of the `CArchive`. The important fact to keep in mind is that the `CArchive` **>>** operator constructs the `CObject` in memory based on `CRuntimeClass` information previously written to the file by the storing archive.  
   
- Par conséquent, si vous utilisez les opérateurs `CArchive` **\<\<** et **\>\>**, plutôt qu'appeler `Serialize`, dépend de si vous *avez besoin* que l'archive de chargement reconstruise dynamiquement l'objet selon les informations `CRuntimeClass` préalablement stockées.  Utilisez la fonction `Serialize` dans les cas suivants :  
+ Therefore, whether you use the `CArchive` **<\<** and **>>** operators, versus calling `Serialize`, depends on whether you *need* the loading archive to dynamically reconstruct the object based on previously stored `CRuntimeClass` information. Use the `Serialize` function in the following cases:  
   
--   En désérialisant l'objet, vous connaissez la classe exacte de l'objet au préalable.  
+-   When deserializing the object, you know the exact class of the object beforehand.  
   
--   En désérialisant l'objet, vous avez déjà de la mémoire allouée pour ce dernier.  
+-   When deserializing the object, you already have memory allocated for it.  
   
 > [!CAUTION]
->  Si vous chargez l'objet à l'aide de la fonction `Serialize`, vous devez également stocker l'objet à l'aide de la fonction `Serialize`.  Ne stockez pas en utilisant l'opérateur `CArchive`**\<\<** puis en chargeant en utilisant la fonction `Serialize`, ou à l'aide de la fonction `Serialize` puis en chargeant en utilisant l'opérateur **CArchive \>\>**.  
+>  If you load the object using the `Serialize` function, you must also store the object using the `Serialize` function. Don't store using the `CArchive` **<<** operator and then load using the `Serialize` function, or store using the `Serialize` function and then load using **CArchive >>** operator.  
   
- L'exemple de code suivant illustre le cas :  
+ The following example illustrates the cases:  
   
- [!code-cpp[NVC_MFCSerialization#36](../mfc/codesnippet/CPP/storing-and-loading-cobjects-via-an-archive_1.h)]  
+ [!code-cpp[NVC_MFCSerialization#36](../mfc/codesnippet/cpp/storing-and-loading-cobjects-via-an-archive_1.h)]  
   
- [!code-cpp[NVC_MFCSerialization#37](../mfc/codesnippet/CPP/storing-and-loading-cobjects-via-an-archive_2.cpp)]  
+ [!code-cpp[NVC_MFCSerialization#37](../mfc/codesnippet/cpp/storing-and-loading-cobjects-via-an-archive_2.cpp)]  
   
- En résumé, si votre classe sérialisable définit **CObjec**t incorporé comme membre, vous ne devez *pas* utiliser `CArchive` **\<\<** et les opérateurs **\>\>** pour cet objet, mais vous devez appeler la fonction `Serialize` à la place.  En outre, si votre classe sérialisable définit un pointeur vers un `CObject` \(ou un objet dérivé de `CObject`\) en tant que membre, mais construit l'autre objet dans son propre constructeur, vous devez aussi appeler `Serialize`.  
+ In summary, if your serializable class defines an embedded **CObjec**t as a member, you should *not* use the `CArchive` **<\<** and **>>** operators for that object, but should call the `Serialize` function instead. Also, if your serializable class defines a pointer to a `CObject` (or an object derived from `CObject`) as a member, but constructs this other object in its own constructor, you should also call `Serialize`.  
   
-## Voir aussi  
- [Sérialisation : sérialisation d'un objet](../mfc/serialization-serializing-an-object.md)
+## <a name="see-also"></a>See Also  
+ [Serialization: Serializing an Object](../mfc/serialization-serializing-an-object.md)
+
+

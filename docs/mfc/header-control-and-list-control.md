@@ -1,49 +1,68 @@
 ---
-title: "Contr&#244;le Header et contr&#244;le List | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl (classe), avec CListCtrl"
-  - "CListCtrl (classe), contrôles header"
-  - "CListCtrl (classe), avec CHeaderCtrl"
-  - "contrôles (MFC), header"
-  - "contrôles header"
-  - "contrôles header, contrôles de liste utilisés avec"
+title: Header Control and List Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListCtrl class [MFC], with CHeaderCtrl
+- CListCtrl class [MFC], header controls
+- CHeaderCtrl class [MFC], with CListCtrl
+- controls [MFC], header
+- header controls [MFC]
+- header controls [MFC], list controls used with
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Contr&#244;le Header et contr&#244;le List
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 144e5ee7bd7e60ad152ddcaa7d4928706a5cf1d8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Dans la plupart des cas, vous utilisez le contrôle header incorporé dans un objet [CListCtrl](../mfc/reference/clistctrl-class.md) ou [CListView](../mfc/reference/clistview-class.md).  Toutefois, il existe des cas où un objet de contrôle header disctinc est souhaitable, comme la manipulation des données, organisées dans des colonnes ou des lignes, dans un objet dérivé de [CView](../mfc/reference/cview-class.md).  Dans ce cas, vous devez disposer d'un contrôle optimisé d'apparence et du comportement par défaut d'un contrôle header incorporé.  
+---
+# <a name="header-control-and-list-control"></a>Header Control and List Control
+In most cases, you will use the header control that is embedded in a [CListCtrl](../mfc/reference/clistctrl-class.md) or [CListView](../mfc/reference/clistview-class.md) object. However, there are cases where a separate header control object is desirable, such as manipulating data, arranged in columns or rows, in a [CView](../mfc/reference/cview-class.md)-derived object. In these cases, you need greater control over the appearance and default behavior of an embedded header control.  
   
- Dans le cas courant où vous voulez un contrôle header pour fournir le comportement par défaut, vous pouvez utiliser [CListCtrl](../mfc/reference/clistctrl-class.md) ou [CListView](../mfc/reference/clistview-class.md) à la place.  Utilisez `CListCtrl` lorsque vous souhaitez les fonctionnalités d'un contrôle header par défaut, incorporé dans un contrôle courant de Liste.  Utilisez [CListView](../mfc/reference/clistview-class.md) lorsque vous souhaitez les fonctionnalités d'un contrôle header par défaut, incorporé dans un objet de vue.  
+ In the common case that you want a header control to provide standard, default behavior, you may want to use [CListCtrl](../mfc/reference/clistctrl-class.md) or [CListView](../mfc/reference/clistview-class.md) instead. Use `CListCtrl` when you want the functionality of a default header control, embedded in a list view common control. Use [CListView](../mfc/reference/clistview-class.md) when you want the functionality of a default header control, embedded in a view object.  
   
 > [!NOTE]
->  Ces contrôles incluent uniquement un contrôle header intégré si le contrôle de vue de liste est créé avec le style `LVS_REPORT`.  
+>  These controls only include a built-in header control if the list view control is created using the `LVS_REPORT` style.  
   
- Dans la plupart des cas, l'apparence du contrôle header incorporé peut être modifiée en modifiant les styles de contrôle de vue de liste conteneur.  En outre, les informations sur le contrôle header peuvent être obtenues via les fonctions membres du contrôle de vue de liste parent.  Toutefois, pour un contrôle total, et l'accès aux attributs et aux styles de contrôle header incorporé, il est recommandé que pointeur vers l'objet de contrôle header soit obtenu.  
+ In most cases, the appearance of the embedded header control can be modified by changing the styles of the containing list view control. In addition, information about the header control can be obtained through member functions of the parent list view control. However, for complete control, and access, to the attributes and styles of the embedded header control, it is recommended that a pointer to the header control object be obtained.  
   
- L'objet incorporé de contrôle header est accessible de **CListCtrl** ou `CListView` par un appel à la fonction membre `GetHeaderCtrl` de la classe correspondante.  Le code suivant illustre cette méthode :  
+ The embedded header control object can be accessed from either **CListCtrl** or `CListView` with a call to the respective class's `GetHeaderCtrl` member function. The following code demonstrates this:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/CPP/header-control-and-list-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/cpp/header-control-and-list-control_1.cpp)]  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Utilisation de listes d'images avec des contrôles Header](../mfc/using-image-lists-with-header-controls.md)  
+-   [Using image lists with header controls](../mfc/using-image-lists-with-header-controls.md)  
   
-## Voir aussi  
- [Utilisation de CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

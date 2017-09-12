@@ -1,55 +1,74 @@
 ---
-title: "Utilisation d&#39;une barre de bo&#238;te de dialogue avec un contr&#244;le rebar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WM_EX_TRANSPARENT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "barres de boîte de dialogue, utiliser avec des bandes rebar"
-  - "rebar (contrôles), barres de boîte de dialogue"
-  - "WS_EX_TRANSPARENT (style)"
+title: Using a Dialog Bar with a Rebar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- WM_EX_TRANSPARENT
+dev_langs:
+- C++
+helpviewer_keywords:
+- WS_EX_TRANSPARENT style
+- rebar controls [MFC], dialog bars
+- dialog bars [MFC], using with rebar bands
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Utilisation d&#39;une barre de bo&#238;te de dialogue avec un contr&#244;le rebar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 98589878d82693fca3c4efdbc9a3a669b504abc3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Comme indiqué dans [Contrôles rebars et bandes](../mfc/rebar-controls-and-bands.md), chaque bande ne peut contenir qu'une fenêtre enfant \(ou contrôle\).  Il peut s'agir d'une limitation si vous souhaitez avoir plusieurs fenêtre enfant par bande.  Une solution pratique consiste à créer une ressource barre de la boîte de dialogue avec plusieurs vérifications puis d'ajouter une bande rebar \(contenant la barre de la boîte de dialogue\) pour vérifier rebar.  
+---
+# <a name="using-a-dialog-bar-with-a-rebar-control"></a>Using a Dialog Bar with a Rebar Control
+As mentioned in [Rebar Controls and Bands](../mfc/rebar-controls-and-bands.md), each band can contain only one child window (or control). This might be a limitation if you want to have more than one child window per band. A convenient workaround is to create a dialog bar resource with multiple controls and then add a rebar band (containing the dialog bar) to the rebar control.  
   
- Normalement, si vous souhaitez que la bande de la barre de la boîte de dialogue pour être transparentes, vous définissez le style étendue par **WS\_EX\_TRANSPARENT** pour l'objet de la barre de la boîte de dialogue.  Toutefois, étant donné que **WS\_EX\_TRANSPARENT** a des problèmes liés à peindre correctement l'arrière\-plan d'une barre de la boîte de dialogue, vous devez exécuter le travail une quantité supplémentaire pour obtenir l'effet souhaité.  
+ Normally, if you wanted the dialog bar band to appear transparent, you would set the **WS_EX_TRANSPARENT** extended style for the dialog bar object. However, because **WS_EX_TRANSPARENT** has some issues with properly painting the background of a dialog bar, you will need to do a little extra work to achieve the desired effect.  
   
- La procédure suivante décrit les étapes nécessaires pour effectuer la transparence sans utiliser le style étendue par **WS\_EX\_TRANSPARENT**.  
+ The following procedure details the steps necessary to achieve transparency without using the **WS_EX_TRANSPARENT** extended style.  
   
-### Pour implémenter une barre de la boîte de dialogue donnée transparente dans une bande rebar  
+### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>To implement a transparent dialog bar in a rebar band  
   
-1.  Utilisation [Ajoutez la boîte de dialogue classe](../mfc/reference/adding-an-mfc-class.md), ajoutez une nouvelle classe \(par exemple, `CMyDlgBar`\) qui implémente l'objet de la barre de la boîte de dialogue.  
+1.  Using the [Add Class dialog box](../mfc/reference/adding-an-mfc-class.md), add a new class (for example, `CMyDlgBar`) that implements your dialog bar object.  
   
-2.  Ajoutez un gestionnaire pour l'événement `WM_ERASEBKGND`.  
+2.  Add a handler for the `WM_ERASEBKGND` message.  
   
-3.  Dans le gestionnaire, modifiez le code existant pour faire correspondre l'exemple suivant :  
+3.  In the new handler, modify the existing code to match the following example:  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/CPP/using-a-dialog-bar-with-a-rebar-control_1.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]  
   
-4.  Ajoutez un gestionnaire pour l'événement `WM_MOVE`.  
+4.  Add a handler for the `WM_MOVE` message.  
   
-5.  Dans le gestionnaire, modifiez le code existant pour faire correspondre l'exemple suivant :  
+5.  In the new handler, modify the existing code to match the following example:  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/CPP/using-a-dialog-bar-with-a-rebar-control_2.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]  
   
- Les nouveaux handlers simulent la transparence de la barre de la boîte de dialogue lors de le transfert du message d'`WM_ERASEBKGND` de la fenêtre parente et en forçant un redessiner chaque fois que l'objet de la barre de la boîte de dialogue est déplacé.  
+ The new handlers simulate the transparency of the dialog bar by forwarding the `WM_ERASEBKGND` message to the parent window and forcing a repaint every time the dialog bar object is moved.  
   
-## Voir aussi  
- [Utilisation de CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,35 +1,54 @@
 ---
-title: "Traitement des messages de notification du contr&#244;le Tab | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTabCtrl (classe), notifications de traitement"
-  - "notifications, traiter dans CTabCtrl"
-  - "notifications, contrôles onglet"
-  - "notifications de traitement"
-  - "contrôles onglet, notifications de traitement"
+title: Processing Tab Control Notification Messages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- notifications [MFC], tab controls
+- CTabCtrl class [MFC], processing notifications
+- notifications [MFC], processing in CTabCtrl
+- processing notifications [MFC]
+- tab controls [MFC], processing notifications
 ms.assetid: 758ccb7a-9e73-48f8-9073-23f7cb09918c
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Traitement des messages de notification du contr&#244;le Tab
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 76c40264c0726a321714704720ac177828daaffd
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Lorsque les utilisateurs cliquent sur des onglets ou boutons, le contrôle onglet \([CTabCtrl](../mfc/reference/ctabctrl-class.md)\) envoie des messages de notification dans la fenêtre parente.  Traitez ces messages si vous souhaitez effectuer quelque chose en réponse.  Par exemple, lorsque l'utilisateur clique sur un onglet, vous pouvez pré\-établir des paramètres dans la page avant de l'afficher.  
+---
+# <a name="processing-tab-control-notification-messages"></a>Processing Tab Control Notification Messages
+As users click tabs or buttons, the tab control ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) sends notification messages to its parent window. Handle these messages if you want to do something in response. For example, when the user clicks a tab, you may want to preset control data on the page prior to displaying it.  
   
- Traitez les messages **WM\_NOTIFY** du contrôle d'onglet dans votre classe vue ou boîte de dialogue.  Utilisez la fenêtre Propriétés pour créer une fonction gestionnaire [OnChildNotify](../Topic/CWnd::OnChildNotify.md) avec une instruction SWITCH sur laquelle le message de notification est traité.  Pour obtenir la liste des notifications qu'un contrôle onglet peut envoyer à la fenêtre parente, consultez la section de **Notifications** [Référence de contrôle onglet](http://msdn.microsoft.com/library/windows/desktop/bb760548) dans [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ Process **WM_NOTIFY** messages from the tab control in your view or dialog class. Use the Properties window to create an [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) handler function with a switch statement based on which notification message is being handled. For a list of the notifications a tab control can send to its parent window, see the **Notifications** section of [Tab Control Reference](http://msdn.microsoft.com/library/windows/desktop/bb760548) in the Windows SDK.  
   
-## Voir aussi  
- [Utilisation de CTabCtrl](../mfc/using-ctabctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTabCtrl](../mfc/using-ctabctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

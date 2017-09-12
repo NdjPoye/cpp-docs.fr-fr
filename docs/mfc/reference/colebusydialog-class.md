@@ -1,5 +1,5 @@
 ---
-title: Classe de la classe COleBusyDialog | Documents Microsoft
+title: COleBusyDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,9 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Server Not Responding dialog box
-- Server Busy dialog box
-- COleBusyDialog class
+- COleBusyDialog [MFC], COleBusyDialog
+- COleBusyDialog [MFC], DoModal
+- COleBusyDialog [MFC], GetSelectionType
+- COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
 caps.latest.revision: 22
 author: mikeblome
@@ -40,54 +41,54 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 0c3ed264cdb83bc97337f13279a20f26b21d454b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0a985c969c47fe0cac2bcc62f2c88a2ae5f85c86
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colebusydialog-class"></a>Classe de la classe COleBusyDialog
-Utilisé pour les boîtes de dialogue OLE Le serveur ne répond pas ou Le serveur est occupé.  
+# <a name="colebusydialog-class"></a>COleBusyDialog Class
+Used for the OLE Server Not Responding or Server Busy dialog boxes.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleBusyDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleBusyDialog::COleBusyDialog](#colebusydialog)|Construit un objet `COleBusyDialog`.|  
+|[COleBusyDialog::COleBusyDialog](#colebusydialog)|Constructs a `COleBusyDialog` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleBusyDialog::DoModal](#domodal)|Affiche la boîte de dialogue OLE le serveur est occupé.|  
-|[COleBusyDialog::GetSelectionType](#getselectiontype)|Détermine le choix effectué dans la boîte de dialogue.|  
+|[COleBusyDialog::DoModal](#domodal)|Displays the OLE Server Busy dialog box.|  
+|[COleBusyDialog::GetSelectionType](#getselectiontype)|Determines the choice made in the dialog box.|  
   
-### <a name="public-data-members"></a>Membres de données publics  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleBusyDialog::m_bz](#m_bz)|Structure de type **OLEUIBUSY** qui contrôle le comportement de la boîte de dialogue.|  
+|[COleBusyDialog::m_bz](#m_bz)|Structure of type **OLEUIBUSY** that controls the behavior of the dialog box.|  
   
-## <a name="remarks"></a>Notes  
- Créer un objet de classe `COleBusyDialog` lorsque vous souhaitez appeler ces boîtes de dialogue. Après un `COleBusyDialog` objet a été construit, vous pouvez utiliser la [m_bz](#m_bz) structure pour initialiser les valeurs ou les États des contrôles dans la boîte de dialogue. Le `m_bz` structure est de type **OLEUIBUSY**. Pour plus d’informations sur l’utilisation de cette classe de boîte de dialogue, consultez la [DoModal](#domodal) fonction membre.  
+## <a name="remarks"></a>Remarks  
+ Create an object of class `COleBusyDialog` when you want to call these dialog boxes. After a `COleBusyDialog` object has been constructed, you can use the [m_bz](#m_bz) structure to initialize the values or states of controls in the dialog box. The `m_bz` structure is of type **OLEUIBUSY**. For more information about using this dialog class, see the [DoModal](#domodal) member function.  
   
 > [!NOTE]
->  Code de l’application conteneur généré par l’Assistant utilise cette classe.  
+>  Application Wizard-generated container code uses this class.  
   
- Pour plus d’informations, consultez la [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) de la structure dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) structure in the Windows SDK.  
   
- Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, consultez l’article [des boîtes de dialogue OLE](../../mfc/dialog-boxes-in-ole.md).  
+ For more information on OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -102,11 +103,11 @@ class COleBusyDialog : public COleDialog
   
  `COleBusyDialog`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxodlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
- Cette fonction crée uniquement une `COleBusyDialog` objet.  
+##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog  
+ This function only constructs a `COleBusyDialog` object.  
   
 ```  
 explicit COleBusyDialog(
@@ -116,63 +117,63 @@ explicit COleBusyDialog(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *htaskBusy*  
- Handle vers la tâche de serveur est occupée.  
+ Handle to the server task that is busy.  
   
  *bNotResponding*  
- Si **TRUE**, appeler la boîte de dialogue ne répond pas au lieu de la boîte de dialogue serveur occupé. Le libellé dans la boîte de dialogue ne répond pas est légèrement différent de celle du texte dans la boîte de dialogue serveur occupé, et le bouton Annuler est désactivé.  
+ If **TRUE**, call the Not Responding dialog box instead of the Server Busy dialog box. The wording in the Not Responding dialog box is slightly different than the wording in the Server Busy dialog box, and the Cancel button is disabled.  
   
  `dwFlags`  
- Indicateur de création. Peut contenir zéro ou plusieurs des valeurs suivantes combinées avec l’opérateur de bits OR :  
+ Creation flag. Can contain zero or more of the following values combined with the bitwise-OR operator:  
   
-- **BZ_DISABLECANCELBUTTON** désactiver le bouton Annuler lors de l’appel de la boîte de dialogue.  
+- **BZ_DISABLECANCELBUTTON** Disable the Cancel button when calling the dialog box.  
   
-- **BZ_DISABLESWITCHTOBUTTON** désactiver le bouton Basculer vers lors de l’appel de la boîte de dialogue.  
+- **BZ_DISABLESWITCHTOBUTTON** Disable the Switch To button when calling the dialog box.  
   
-- **BZ_DISABLERETRYBUTTON** désactiver le bouton de nouvelle tentative lors de l’appel de la boîte de dialogue.  
+- **BZ_DISABLERETRYBUTTON** Disable the Retry button when calling the dialog box.  
   
  `pParentWnd`  
- Pointe vers l’objet de fenêtre parente ou propriétaire (de type `CWnd`) auquel appartient l’objet de la boîte de dialogue. S’il s’agit **NULL**, la fenêtre parente de l’objet de la boîte de dialogue est définie dans la fenêtre principale de l’application.  
+ Points to the parent or owner window object (of type `CWnd`) to which the dialog object belongs. If it is **NULL**, the parent window of the dialog object is set to the main application window.  
   
-### <a name="remarks"></a>Remarques  
- Pour afficher la boîte de dialogue, appelez [DoModal](#domodal).  
+### <a name="remarks"></a>Remarks  
+ To display the dialog box, call [DoModal](#domodal).  
   
- Pour plus d’informations, consultez la [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) de la structure dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) structure in the Windows SDK.  
   
-##  <a name="domodal"></a>COleBusyDialog::DoModal  
- Appelez cette fonction pour afficher la boîte de dialogue OLE le serveur est occupé ou serveur ne répond pas.  
+##  <a name="domodal"></a>  COleBusyDialog::DoModal  
+ Call this function to display the OLE Server Busy or Server Not Responding dialog box.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- État d’achèvement de la boîte de dialogue. Une des valeurs suivantes :  
+### <a name="return-value"></a>Return Value  
+ Completion status for the dialog box. One of the following values:  
   
-- **IDOK** si la boîte de dialogue est affichée avec succès.  
+- **IDOK** if the dialog box was successfully displayed.  
   
-- **IDCANCEL** si l’utilisateur a annulé la boîte de dialogue.  
+- **IDCANCEL** if the user canceled the dialog box.  
   
-- **IDABORT** si une erreur s’est produite. Si **IDABORT** est retourné, appelez le `COleDialog::GetLastError` fonction membre pour obtenir plus d’informations sur le type d’erreur qui s’est produite. Pour obtenir la liste des erreurs possibles, consultez la [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) de fonction dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+- **IDABORT** if an error occurred. If **IDABORT** is returned, call the `COleDialog::GetLastError` member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) function in the Windows SDK.  
   
-### <a name="remarks"></a>Remarques  
- Si vous souhaitez initialiser les différents contrôles de boîte de dialogue en définissant les membres de la [m_bz](#m_bz) structure, vous devez le faire avant d’appeler `DoModal`, mais une fois que l’objet de la boîte de dialogue est construit.  
+### <a name="remarks"></a>Remarks  
+ If you want to initialize the various dialog box controls by setting members of the [m_bz](#m_bz) structure, you should do this before calling `DoModal`, but after the dialog object is constructed.  
   
- Si `DoModal` retourne **IDOK**, vous pouvez appeler des fonctions pour récupérer les paramètres ou les informations qui a été entrées par l’utilisateur dans la boîte de dialogue autres membres.  
+ If `DoModal` returns **IDOK**, you can call other member functions to retrieve the settings or information that was input by the user into the dialog box.  
   
-##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
- Appelez cette fonction pour obtenir le type de sélection choisi par l’utilisateur dans la boîte de dialogue serveur occupé.  
+##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType  
+ Call this function to get the selection type chosen by the user in the Server Busy dialog box.  
   
 ```  
 UINT GetSelectionType() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Type de sélection.  
+### <a name="return-value"></a>Return Value  
+ Type of selection made.  
   
-### <a name="remarks"></a>Remarques  
- Les valeurs de type de retour sont spécifiés par le **sélection** type énumération déclarée dans la `COleBusyDialog` classe.  
+### <a name="remarks"></a>Remarks  
+ The return type values are specified by the **Selection** enumeration type declared in the `COleBusyDialog` class.  
   
 ```  
 enum Selection {
@@ -182,28 +183,28 @@ enum Selection {
     };
 ```  
   
- Suivent de brèves descriptions de ces valeurs :  
+ Brief descriptions of these values follow:  
   
-- **COleBusyDialog::switchTo** basculer vers a cliqué.  
+- **COleBusyDialog::switchTo** Switch To button was pressed.  
   
-- **COleBusyDialog::retry** a cliqué sur Réessayer.  
+- **COleBusyDialog::retry** Retry button was pressed.  
   
-- **COleBusyDialog::callUnblocked** appel pour activer le serveur est maintenant débloqué.  
+- **COleBusyDialog::callUnblocked** Call to activate the server is now unblocked.  
   
-##  <a name="m_bz"></a>COleBusyDialog::m_bz  
- Structure de type **OLEUIBUSY** utilisé pour contrôler le comportement de la boîte de dialogue serveur occupé.  
+##  <a name="m_bz"></a>  COleBusyDialog::m_bz  
+ Structure of type **OLEUIBUSY** used to control the behavior of the Server Busy dialog box.  
   
 ```  
 OLEUIBUSY m_bz;  
 ```  
   
-### <a name="remarks"></a>Remarques  
- Les membres de cette structure peuvent être modifiés directement ou via les fonctions membres.  
+### <a name="remarks"></a>Remarks  
+ Members of this structure can be modified directly or through member functions.  
   
- Pour plus d’informations, consultez la [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) de la structure dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) structure in the Windows SDK.  
   
-## <a name="see-also"></a>Voir aussi  
- [COleDialog (classe)](../../mfc/reference/coledialog-class.md)   
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [COleDialog (classe)](../../mfc/reference/coledialog-class.md)
+## <a name="see-also"></a>See Also  
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)
 

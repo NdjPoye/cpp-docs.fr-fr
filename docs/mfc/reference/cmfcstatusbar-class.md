@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCStatusBar | Documents Microsoft
+title: CMFCStatusBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -47,7 +47,39 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCStatusBar class
+- CMFCStatusBar [MFC], CalcFixedLayout
+- CMFCStatusBar [MFC], CommandToIndex
+- CMFCStatusBar [MFC], Create
+- CMFCStatusBar [MFC], CreateEx
+- CMFCStatusBar [MFC], DoesAllowDynInsertBefore
+- CMFCStatusBar [MFC], EnablePaneDoubleClick
+- CMFCStatusBar [MFC], EnablePaneProgressBar
+- CMFCStatusBar [MFC], GetCount
+- CMFCStatusBar [MFC], GetDrawExtendedArea
+- CMFCStatusBar [MFC], GetExtendedArea
+- CMFCStatusBar [MFC], GetItemID
+- CMFCStatusBar [MFC], GetItemRect
+- CMFCStatusBar [MFC], GetPaneInfo
+- CMFCStatusBar [MFC], GetPaneProgress
+- CMFCStatusBar [MFC], GetPaneStyle
+- CMFCStatusBar [MFC], GetPaneText
+- CMFCStatusBar [MFC], GetPaneWidth
+- CMFCStatusBar [MFC], GetTipText
+- CMFCStatusBar [MFC], InvalidatePaneContent
+- CMFCStatusBar [MFC], PreCreateWindow
+- CMFCStatusBar [MFC], SetDrawExtendedArea
+- CMFCStatusBar [MFC], SetIndicators
+- CMFCStatusBar [MFC], SetPaneAnimation
+- CMFCStatusBar [MFC], SetPaneBackgroundColor
+- CMFCStatusBar [MFC], SetPaneIcon
+- CMFCStatusBar [MFC], SetPaneInfo
+- CMFCStatusBar [MFC], SetPaneProgress
+- CMFCStatusBar [MFC], SetPaneStyle
+- CMFCStatusBar [MFC], SetPaneText
+- CMFCStatusBar [MFC], SetPaneTextColor
+- CMFCStatusBar [MFC], SetPaneWidth
+- CMFCStatusBar [MFC], SetTipText
+- CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
 caps.latest.revision: 36
 author: mikeblome
@@ -67,96 +99,96 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 20881637d74bafffbcf2e0c3dcd1cc98e173aa07
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a1f9347816896114516244acbf3faf106277d49b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcstatusbar-class"></a>Classe de CMFCStatusBar
-Le `CMFCStatusBar` classe implémente une barre d’état semblable à la `CStatusBar` classe. Toutefois, la classe `CMFCStatusBar` a des fonctionnalités que n'offre pas la classe `CStatusBar` , telles que la capacité à afficher des images, des animations et des barres de progression et la possibilité de répondre aux doubles-clics de souris. 
+# <a name="cmfcstatusbar-class"></a>CMFCStatusBar Class
+The `CMFCStatusBar` class implements a status bar similar to the `CStatusBar` class. However, the `CMFCStatusBar` class has features not offered by the `CStatusBar` class, such as the ability to display images, animations, and progress bars; and the ability to respond to mouse double-clicks. 
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCStatusBar : public CPane  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCStatusBar::CalcFixedLayout](#calcfixedlayout)|(Substitue [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
+|[CMFCStatusBar::CalcFixedLayout](#calcfixedlayout)|(Overrides [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
 |[CMFCStatusBar::CommandToIndex](#commandtoindex)||  
-|[CMFCStatusBar::Create](#create)|Crée une barre de contrôle et l’attache à la [CPane](../../mfc/reference/cpane-class.md) objet. (Substitue [CPane::Create](../../mfc/reference/cpane-class.md#create).)|  
-|[CMFCStatusBar::CreateEx](#createex)|Crée une barre de contrôle et l’attache à la [CPane](../../mfc/reference/cpane-class.md) objet. (Substitue [CPane::CreateEx](../../mfc/reference/cpane-class.md#createex).)|  
-|[CMFCStatusBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Détermine si un autre volet peut être dynamiquement inséré dans ce volet et le frame parent. (Substitue [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
-|[CMFCStatusBar::EnablePaneDoubleClick](#enablepanedoubleclick)|Active ou désactive la gestion de la souris double-clique sur la barre d’état.|  
-|[CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar)|Affiche une barre de progression dans le volet spécifié.|  
-|[CMFCStatusBar::GetCount](#getcount)|Retourne le nombre de volets dans la barre d’état.|  
+|[CMFCStatusBar::Create](#create)|Creates a control bar and attaches it to the [CPane](../../mfc/reference/cpane-class.md) object. (Overrides [CPane::Create](../../mfc/reference/cpane-class.md#create).)|  
+|[CMFCStatusBar::CreateEx](#createex)|Creates a control bar and attaches it to the [CPane](../../mfc/reference/cpane-class.md) object. (Overrides [CPane::CreateEx](../../mfc/reference/cpane-class.md#createex).)|  
+|[CMFCStatusBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Determines whether another pane can be dynamically inserted between this pane and the parent frame. (Overrides [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
+|[CMFCStatusBar::EnablePaneDoubleClick](#enablepanedoubleclick)|Enables or disables the handling of mouse double-clicks on the status bar.|  
+|[CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar)|Displays a progress bar on the specified pane.|  
+|[CMFCStatusBar::GetCount](#getcount)|Returns the number of panes on the status bar.|  
 |[CMFCStatusBar::GetDrawExtendedArea](#getdrawextendedarea)||  
 |[CMFCStatusBar::GetExtendedArea](#getextendedarea)||  
 |[CMFCStatusBar::GetItemID](#getitemid)||  
 |[CMFCStatusBar::GetItemRect](#getitemrect)||  
 |[CMFCStatusBar::GetPaneInfo](#getpaneinfo)||  
 |[CMFCStatusBar::GetPaneProgress](#getpaneprogress)||  
-|[CMFCStatusBar::GetPaneStyle](#getpanestyle)|Retourne le style du volet. (Substitue [CBasePane::GetPaneStyle](../../mfc/reference/cbasepane-class.md#getpanestyle).)|  
+|[CMFCStatusBar::GetPaneStyle](#getpanestyle)|Returns the pane style. (Overrides [CBasePane::GetPaneStyle](../../mfc/reference/cbasepane-class.md#getpanestyle).)|  
 |[CMFCStatusBar::GetPaneText](#getpanetext)||  
-|[CMFCStatusBar::GetPaneWidth](#getpanewidth)|Retourne la largeur, en pixels, du volet de la barre d’état spécifié.|  
-|[CMFCStatusBar::GetTipText](#gettiptext)|Retourne le texte info-bulle pour le volet de la barre d’état spécifié.|  
-|[CMFCStatusBar::InvalidatePaneContent](#invalidatepanecontent)|Invalide le volet spécifié et son contenu pour redessiner.|  
-|[CMFCStatusBar::PreCreateWindow](#precreatewindow)|Appelé par l’infrastructure avant la création de la fenêtre Windows associée à ce `CWnd` objet. (Substitue [CWnd::PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow).)|  
+|[CMFCStatusBar::GetPaneWidth](#getpanewidth)|Returns the width, in pixels, of the specified pane of the status bar.|  
+|[CMFCStatusBar::GetTipText](#gettiptext)|Returns the tool tip text for the specified pane of the status bar.|  
+|[CMFCStatusBar::InvalidatePaneContent](#invalidatepanecontent)|Invalidates the specified pane and redraws its content.|  
+|[CMFCStatusBar::PreCreateWindow](#precreatewindow)|Called by the framework before the creation of the Windows window attached to this `CWnd` object. (Overrides [CWnd::PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow).)|  
 |[CMFCStatusBar::SetDrawExtendedArea](#setdrawextendedarea)||  
 |[CMFCStatusBar::SetIndicators](#setindicators)||  
-|[CMFCStatusBar::SetPaneAnimation](#setpaneanimation)|Assigne une animation dans le volet spécifié.|  
-|[CMFCStatusBar::SetPaneBackgroundColor](#setpanebackgroundcolor)|Définit la couleur d’arrière-plan du volet de la barre d’état spécifié.|  
-|[CMFCStatusBar::SetPaneIcon](#setpaneicon)|Définit l’icône d’indicateur du volet de la barre d’état spécifié.|  
+|[CMFCStatusBar::SetPaneAnimation](#setpaneanimation)|Assigns an animation to the specified pane.|  
+|[CMFCStatusBar::SetPaneBackgroundColor](#setpanebackgroundcolor)|Sets the background color for the specified pane of the status bar.|  
+|[CMFCStatusBar::SetPaneIcon](#setpaneicon)|Sets the indicator icon for the specified pane of the status bar.|  
 |[CMFCStatusBar::SetPaneInfo](#setpaneinfo)||  
-|[CMFCStatusBar::SetPaneProgress](#setpaneprogress)|Définit la progression actuelle de la barre de progression pour le volet de la barre d’état spécifié.|  
-|[CMFCStatusBar::SetPaneStyle](#setpanestyle)|Définit le style du volet. (Substitue [CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle).)|  
+|[CMFCStatusBar::SetPaneProgress](#setpaneprogress)|Sets the current progress of the progress bar for the specified pane of the status bar.|  
+|[CMFCStatusBar::SetPaneStyle](#setpanestyle)|Sets the style of the pane. (Overrides [CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle).)|  
 |[CMFCStatusBar::SetPaneText](#setpanetext)||  
-|[CMFCStatusBar::SetPaneTextColor](#setpanetextcolor)|Définit la couleur du texte pour le volet de la barre d’état spécifié.|  
-|[CMFCStatusBar::SetPaneWidth](#setpanewidth)|Définit la largeur en pixels du volet de la barre d’état spécifié.|  
-|[CMFCStatusBar::SetTipText](#settiptext)|Définit le texte info-bulle pour le volet de la barre d’état spécifié.|  
+|[CMFCStatusBar::SetPaneTextColor](#setpanetextcolor)|Sets the text color for the specified pane of the status bar.|  
+|[CMFCStatusBar::SetPaneWidth](#setpanewidth)|Sets the width in pixels of the specified pane of the status bar.|  
+|[CMFCStatusBar::SetTipText](#settiptext)|Sets the tool tip text for the specified pane of the status bar.|  
   
-### <a name="protected-methods"></a>Méthodes protégées  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCStatusBar::OnDrawPane](#ondrawpane)|Appelé par l’infrastructure lorsqu’il redessine le volet de la barre d’état.|  
+|[CMFCStatusBar::OnDrawPane](#ondrawpane)|Called by the framework when it redraws the pane of the status bar.|  
   
-## <a name="remarks"></a>Notes  
- Le diagramme suivant illustre un chiffre de la barre d’état [exemple de démonstration de barre d’état](../../visual-cpp-samples.md) application.  
+## <a name="remarks"></a>Remarks  
+ The following diagram shows a figure of the status bar from [Status Bar Demo sample](../../visual-cpp-samples.md) application.  
   
- ![Exemple de CMFCStatusBar](../../mfc/reference/media/cmfcstatusbar.png "cmfcstatusbar")  
+ ![Example of CMFCStatusBar](../../mfc/reference/media/cmfcstatusbar.png "cmfcstatusbar")  
   
-## <a name="example"></a>Exemple  
- L’exemple suivant montre les variables locales que l’application utilise pour appeler les différentes méthodes la `CMFCStatusBar` classe. Ces variables sont déclarées dans StatusBarDemoView.h. Le frame principal est déclaré dans MainFrm.h, le document est déclaré dans StatusBarDemoDoc.h et la vue est déclarée dans StatusBarDemoView.h. Cet extrait de code fait partie de la [exemple de démonstration de barre d’état](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates the local variables that the application uses to call various methods in the `CMFCStatusBar` class. These variables are declared in StatusBarDemoView.h. The main frame is declared in MainFrm.h, the document is declared in StatusBarDemoDoc.h, and the view is declared in StatusBarDemoView.h. This code snippet is part of the [Status Bar Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_StatusBarDemo&#9;](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]  
+ [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]  
   
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment obtenir une référence à `CMFCStatusBar` objet en introduisant le `GetStatusBar` méthode MainFrm.h, puis en appelant cette méthode à partir de la `GetStatusBar` méthode dans StatusBarDemoView.h. Cet extrait de code fait partie de la [exemple de démonstration de barre d’état](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to get a reference to `CMFCStatusBar` object by introducing the `GetStatusBar` method in MainFrm.h and then calling this method from the `GetStatusBar` method in StatusBarDemoView.h. This code snippet is part of the [Status Bar Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_StatusBarDemo&#7;](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]  
-[!code-cpp[NVC_MFC_StatusBarDemo n °&8;](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]  
+ [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]  
+[!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]  
   
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment appeler des méthodes la `CMFCStatusBar` classe dans StatusBarDemoView.cpp. Les constantes sont déclarées dans MainFrm.h. L’exemple montre comment définir l’icône, définir le texte d’info-bulle du volet de barre d’état, afficher une barre de progression dans le volet spécifié, attribuer une animation dans le volet spécifié, définir le texte et la largeur du volet de barre d’état et l’indicateur de progression de la barre de progression pour le volet de barre d’état. Cet extrait de code fait partie de la [exemple de démonstration de barre d’état](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to call various methods in the `CMFCStatusBar` class in StatusBarDemoView.cpp. The constants are declared in MainFrm.h. The example shows how to set the icon, set the tooltip text of the status bar pane, display a progress bar on the specified pane, assign an animation to the specified pane, set the text and the width of the status bar pane, and set the current progress indicator of the progress bar for the status bar pane. This code snippet is part of the [Status Bar Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_StatusBarDemo n °&6;](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]  
-[!code-cpp[NVC_MFC_StatusBarDemo n °&1;](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]  
-[!code-cpp[NVC_MFC_StatusBarDemo n °&2;](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_6.cpp)]  
-[!code-cpp[NVC_MFC_StatusBarDemo n °&3;](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_7.cpp)]  
-[!code-cpp[NVC_MFC_StatusBarDemo n °&4;](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_8.cpp)]  
-[!code-cpp[NVC_MFC_StatusBarDemo n °&5;](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_9.cpp)]  
+ [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]  
+[!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]  
+[!code-cpp[NVC_MFC_StatusBarDemo#2](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_6.cpp)]  
+[!code-cpp[NVC_MFC_StatusBarDemo#3](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_7.cpp)]  
+[!code-cpp[NVC_MFC_StatusBarDemo#4](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_8.cpp)]  
+[!code-cpp[NVC_MFC_StatusBarDemo#5](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_9.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -169,10 +201,10 @@ class CMFCStatusBar : public CPane
   
  [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxstatusbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxstatusbar.h  
   
-##  <a name="calcfixedlayout"></a>CMFCStatusBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CMFCStatusBar::CalcFixedLayout  
 
   
 ```  
@@ -181,29 +213,29 @@ virtual CSize CalcFixedLayout(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `bStretch`  
  [in] `bHorz`  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="commandtoindex"></a>CMFCStatusBar::CommandToIndex  
+##  <a name="commandtoindex"></a>  CMFCStatusBar::CommandToIndex  
 
   
 ```  
 int CommandToIndex(UINT nIDFind) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIDFind`  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="create"></a>CMFCStatusBar::Create  
+##  <a name="create"></a>  CMFCStatusBar::Create  
 
   
 ```  
@@ -213,16 +245,16 @@ BOOL Create(
     UINT nID = AFX_IDW_STATUS_BAR);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `pParentWnd`  
  [in] `dwStyle`  
  [in] `nID`  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="createex"></a>CMFCStatusBar::CreateEx  
+##  <a name="createex"></a>  CMFCStatusBar::CreateEx  
 
   
 ```  
@@ -233,43 +265,43 @@ BOOL CreateEx(
     UINT nID = AFX_IDW_STATUS_BAR);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `pParentWnd`  
  [in] `dwCtrlStyle`  
  [in] `dwStyle`  
  [in] `nID`  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="doesallowdyninsertbefore"></a>CMFCStatusBar::DoesAllowDynInsertBefore  
+##  <a name="doesallowdyninsertbefore"></a>  CMFCStatusBar::DoesAllowDynInsertBefore  
 
   
 ```  
 virtual BOOL DoesAllowDynInsertBefore() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enablepanedoubleclick"></a>CMFCStatusBar::EnablePaneDoubleClick  
- Active ou désactive la gestion de la souris double-clique sur la barre d’état.  
+##  <a name="enablepanedoubleclick"></a>  CMFCStatusBar::EnablePaneDoubleClick  
+ Enables or disables the handling of mouse double-clicks on the status bar.  
   
 ```  
 void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- Si `TRUE`, activer, double-cliquez sur le traitement de la souris. Sinon, désactivez le traitement de la double-clic de souris.  
+ If `TRUE`, enable the processing of the mouse double-click. Otherwise disable the processing of the mouse double-click.  
   
-### <a name="remarks"></a>Remarques  
- Si la barre d’état est activée pour traiter les double-clics, Windows envoie le `WM_COMMAND` notification avec un ID de ressource pour le propriétaire de l’état de la barre chaque fois que l’utilisateur double-clique sur le volet de barre d’état.  
+### <a name="remarks"></a>Remarks  
+ If the status bar is enabled to process double clicks, Windows sends the `WM_COMMAND` notification together with a resource ID to the owner of the status bar every time that the user double clicks on the status bar pane.  
   
-##  <a name="enablepaneprogressbar"></a>CMFCStatusBar::EnablePaneProgressBar  
- Afficher une barre de progression dans le volet spécifié.  
+##  <a name="enablepaneprogressbar"></a>  CMFCStatusBar::EnablePaneProgressBar  
+ Display a progress bar on the specified pane.  
   
 ```  
 void EnablePaneProgressBar(
@@ -281,82 +313,82 @@ void EnablePaneProgressBar(
     COLORREF clrProgressText=-1);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Spécifie l’index du volet dont barre de progression pour l’activer.  
+ Specifies the index of the pane whose progress bar to enable.  
   
  [in] `nTotal`  
- Spécifie la valeur maximale de la barre de progression.  
+ Specifies the maximum value for the progress bar.  
   
  [in] `bDisplayText`  
- Spécifie si la barre de progression doit afficher la valeur de progression actuelle.  
+ Specifies whether the progress bar should display the current progress value.  
   
  [in] `clrBar`  
- Spécifie la couleur d’arrière-plan de la barre de progression.  
+ Specifies the background color of the progress bar.  
   
  [in] `clrBarDest`  
- Spécifie la couleur secondaire de l’arrière-plan de barre de progression. Utilisez une valeur autre que `clrBar` à remplir par une couleur de fond dans un dégradé.  
+ Specifies the secondary color of the progress bar background. Use different value than `clrBar` to fill by a color blended into a gradient.  
   
  [in] `clrProgressText`  
- Spécifie la couleur du texte de la barre de progression.  
+ Specifies the color of the text of the progress bar.  
   
-### <a name="remarks"></a>Notes  
- Si vous souhaitez désactiver l’appel de barre de progression `EnablePaneProgressBar` avec `nTotal` la valeur -1. Par défaut `nTotal` est défini à 100. Par conséquent, il est inutile des calculs supplémentaires pour afficher la progression en pourcentage.  
+### <a name="remarks"></a>Remarks  
+ If you want to disable the progress bar call `EnablePaneProgressBar` with `nTotal` set to -1. By default `nTotal` is set to 100. Therefore, you do not need any additional calculations to display progress as percentage.  
   
- Vous devez passer des valeurs différentes `clrBar` et `clrBarDest` afin que la couleur d’arrière-plan de la barre de progression affiche un fusionnée dans un dégradé de couleur. .  
+ You should pass different values for `clrBar` and `clrBarDest` so that the background color of the progress bar displays a color blended into a gradient. .  
   
- Pour définir l’état d’avancement, appelez le [CMFCStatusBar::SetPaneProgress](#setpaneprogress) (méthode).  
+ To set the current progress, call the [CMFCStatusBar::SetPaneProgress](#setpaneprogress) method.  
   
-##  <a name="getcount"></a>CMFCStatusBar::GetCount  
- Récupère le nombre de volets dans la barre d’état.  
+##  <a name="getcount"></a>  CMFCStatusBar::GetCount  
+ Retrieves the number of panes in the status bar.  
   
 ```  
 int GetCount() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Le nombre de volets dans la barre d’état.  
+### <a name="return-value"></a>Return Value  
+ The number of panes in the status bar.  
   
-##  <a name="getdrawextendedarea"></a>CMFCStatusBar::GetDrawExtendedArea  
+##  <a name="getdrawextendedarea"></a>  CMFCStatusBar::GetDrawExtendedArea  
 
   
 ```  
 BOOL GetDrawExtendedArea() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getextendedarea"></a>CMFCStatusBar::GetExtendedArea  
+##  <a name="getextendedarea"></a>  CMFCStatusBar::GetExtendedArea  
 
   
 ```  
 virtual BOOL GetExtendedArea(CRect& rect) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getitemid"></a>CMFCStatusBar::GetItemID  
+##  <a name="getitemid"></a>  CMFCStatusBar::GetItemID  
 
   
 ```  
 UINT GetItemID(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getitemrect"></a>CMFCStatusBar::GetItemRect  
+##  <a name="getitemrect"></a>  CMFCStatusBar::GetItemRect  
 
   
 ```  
@@ -365,13 +397,13 @@ void GetItemRect(
     LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
  [in] `lpRect`  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getpaneinfo"></a>CMFCStatusBar::GetPaneInfo  
+##  <a name="getpaneinfo"></a>  CMFCStatusBar::GetPaneInfo  
 
   
 ```  
@@ -382,43 +414,43 @@ void GetPaneInfo(
     int& cxWidth) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
  [in] `nID`  
  [in] `nStyle`  
  [in] `cxWidth`  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getpaneprogress"></a>CMFCStatusBar::GetPaneProgress  
+##  <a name="getpaneprogress"></a>  CMFCStatusBar::GetPaneProgress  
 
   
 ```  
 long GetPaneProgress(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getpanestyle"></a>CMFCStatusBar::GetPaneStyle  
+##  <a name="getpanestyle"></a>  CMFCStatusBar::GetPaneStyle  
 
   
 ```  
 UINT GetPaneStyle(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getpanetext"></a>CMFCStatusBar::GetPaneText  
+##  <a name="getpanetext"></a>  CMFCStatusBar::GetPaneText  
 
   
 ```  
@@ -429,58 +461,58 @@ void GetPaneText(
 CString GetPaneText(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
  [in] `s`  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getpanewidth"></a>CMFCStatusBar::GetPaneWidth  
- Récupère la largeur du volet de barre d’état.  
+##  <a name="getpanewidth"></a>  CMFCStatusBar::GetPaneWidth  
+ Retrieves the width of the pane of a status bar.  
   
 ```  
 int GetPaneWidth(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Spécifie l’index du volet de barre d’état.  
+ Specifies the index of the status bar pane.  
   
-### <a name="return-value"></a>Valeur de retour  
- La largeur du volet de barre d’état qui `nIndex` spécifie ; sinon, zéro si un volet de barre d’état n’existe pas.  
+### <a name="return-value"></a>Return Value  
+ The width of the status bar pane that `nIndex` specifies; otherwise, zero if a status-bar pane does not exist.  
   
-##  <a name="gettiptext"></a>CMFCStatusBar::GetTipText  
- Récupérer le texte info-bulle du volet d’une barre état.  
+##  <a name="gettiptext"></a>  CMFCStatusBar::GetTipText  
+ Retrieve the tooltip text of a status bar's pane.  
   
 ```  
 CString GetTipText(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Spécifie l’index du volet pour lequel récupérer le texte info-bulle.  
+ Specifies the index of the pane for which to retrieve tool tip text.  
   
-### <a name="return-value"></a>Valeur de retour  
- Le texte d’info-bulle du volet de barre d’état qui `nIndex` spécifie. Sinon, la chaîne vide si un volet de barre d’état n’existe pas pour l’objet `nIndex` ou si son texte d’info-bulle est vide.  
+### <a name="return-value"></a>Return Value  
+ The tooltip text of the status-bar pane that `nIndex` specifies. Otherwise, the empty string if a status bar pane does not exist for the specified `nIndex` or if its tooltip text is empty.  
   
-##  <a name="invalidatepanecontent"></a>CMFCStatusBar::InvalidatePaneContent  
- Invalider le volet de barre d’état et renouveler son contenu.  
+##  <a name="invalidatepanecontent"></a>  CMFCStatusBar::InvalidatePaneContent  
+ Invalidate the status bar pane and redraw its content.  
   
 ```  
 void InvalidatePaneContent(int nIndex);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Spécifie l’index du volet dont le contenu doit être invalidés et redessinés.  
+ Specifies the index of the pane whose content is to be invalidated and redrawn.  
   
-### <a name="remarks"></a>Remarques  
- Lorsque la barre d’état est invalidée, il est marqué pour être redessiné. Windows redessine lorsque la `UpdateWindow` méthode envoie un `WM_PAINT` de message pour le `OnPaint` (méthode).  
+### <a name="remarks"></a>Remarks  
+ When the status bar is invalidated, it is marked for redrawing. Windows redraws it when the `UpdateWindow` method sends a `WM_PAINT` message to the `OnPaint` method.  
   
-##  <a name="ondrawpane"></a>CMFCStatusBar::OnDrawPane  
- Redessiner le volet de la barre d’état.  
+##  <a name="ondrawpane"></a>  CMFCStatusBar::OnDrawPane  
+ Redraw the pane of the status bar.  
   
 ```  
 virtual void OnDrawPane(
@@ -488,45 +520,45 @@ virtual void OnDrawPane(
     CMFCStatusBarPaneInfo* pPane);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Pointeur vers un contexte de périphérique pour le dessin.  
+ A pointer to a device context for drawing.  
   
  [in] `pPane`  
- Un pointeur vers un `CMFCStatusBarPaneInfo` structure qui contient des informations sur le volet à être redessiné.  
+ A pointer to a `CMFCStatusBarPaneInfo` structure that contains the information about the pane to be redrawn.  
   
-### <a name="remarks"></a>Remarques  
- Par défaut, `OnDrawPane` redessine le volet à l’aide du contexte de périphérique `pDC` en fonction de style et le contenu de celui-ci.  
+### <a name="remarks"></a>Remarks  
+ By default, `OnDrawPane` redraws the pane by using the device context `pDC` according to the pane's style and content.  
   
- Substituez cette méthode dans un `CMFCStatusBar`-dérivée de la classe pour personnaliser l’apparence d’un volet.  
+ Override this method in a `CMFCStatusBar`-derived class to customize the appearance of a pane.  
   
-##  <a name="precreatewindow"></a>CMFCStatusBar::PreCreateWindow  
+##  <a name="precreatewindow"></a>  CMFCStatusBar::PreCreateWindow  
 
   
 ```  
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `cs`  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdrawextendedarea"></a>CMFCStatusBar::SetDrawExtendedArea  
+##  <a name="setdrawextendedarea"></a>  CMFCStatusBar::SetDrawExtendedArea  
 
   
 ```  
 void SetDrawExtendedArea(BOOL bSet = TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `bSet`  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setindicators"></a>CMFCStatusBar::SetIndicators  
+##  <a name="setindicators"></a>  CMFCStatusBar::SetIndicators  
 
   
 ```  
@@ -535,16 +567,16 @@ BOOL SetIndicators(
     int nIDCount);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `lpIDArray`  
  [in] `nIDCount`  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setpaneanimation"></a>CMFCStatusBar::SetPaneAnimation  
- Assigne une animation dans le volet spécifié.  
+##  <a name="setpaneanimation"></a>  CMFCStatusBar::SetPaneAnimation  
+ Assigns an animation to the specified pane.  
   
 ```  
 void SetPaneAnimation(
@@ -554,24 +586,24 @@ void SetPaneAnimation(
     BOOL bUpdate=TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Spécifie l’index du volet auquel vous souhaitez lui attribuer une animation.  
+ Specifies the index of the pane to which you want to assign to it an animation.  
   
  [in] `hImageList`  
- Spécifie un handle de la liste d’images contenant les images d’animation.  
+ Specifies a handle to the image list that holds the animation frames.  
   
  [in] `nFrameRate`  
- Spécifie la fréquence d’images, en millisecondes, pour l’animation.  
+ Specifies the frame rate, in milliseconds, for the animation.  
   
  [in] `bUpdate`  
- Si `TRUE`, mettre à jour le volet de contenu immédiatement. Dans le cas contraire, le volet de contenu est mis à jour lorsqu’elle est invalidée.  
+ If `TRUE`, update the pane content immediately. Otherwise, the pane content is updated when it is invalidated.  
   
-### <a name="remarks"></a>Remarques  
- Si vous souhaitez désactiver l’animation en cours, appelez `SetPaneAnimation` avec `hImageList` la valeur `NULL`.  
+### <a name="remarks"></a>Remarks  
+ If you want to disable the current animation, call `SetPaneAnimation` with `hImageList` set to `NULL`.  
   
-##  <a name="setpanebackgroundcolor"></a>CMFCStatusBar::SetPaneBackgroundColor  
- Définit la couleur d’arrière-plan du volet de barre d’état.  
+##  <a name="setpanebackgroundcolor"></a>  CMFCStatusBar::SetPaneBackgroundColor  
+ Sets the background color of the status bar pane.  
   
 ```  
 void SetPaneBackgroundColor(
@@ -580,18 +612,18 @@ void SetPaneBackgroundColor(
     BOOL bUpdate=TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Spécifie l’index du volet pour lequel définir une couleur d’arrière-plan.  
+ Specifies the index of the pane for which to set a new background color.  
   
  [in] `clrBackground`  
- Spécifie la couleur d’arrière-plan.  
+ Specifies the new background color.  
   
  [in] `bUpdate`  
- Si `TRUE`, mettre à jour le volet de contenu immédiatement. Dans le cas contraire, ne pas à jour le volet de contenu jusqu'à ce que le volet est invalidé par une autre méthode.  
+ If `TRUE`, update the pane content immediately. Otherwise, do not update the pane content until the pane is invalidated by another method.  
   
-##  <a name="setpaneicon"></a>CMFCStatusBar::SetPaneIcon  
- Définir l’icône du volet de barre d’état.  
+##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon  
+ Set the icon of the status bar pane.  
   
 ```  
 void SetPaneIcon(
@@ -607,28 +639,28 @@ void SetPaneIcon(
     BOOL bUpdate=TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Spécifie l’index du volet pour lequel définir l’image.  
+ Specifies the index of the pane for which to set the image.  
   
  [in] `hIcon`  
- Spécifie un handle de l’icône à définir comme l’image du volet.  
+ Specifies a handle to the icon to be set as the pane image.  
   
  [in] `bUpdate`  
- Spécifie s’il faut mettre immédiatement à jour le volet de contenu.  
+ Specifies whether to update the pane content immediately.  
   
  [in] `hBmp`  
- Spécifie un handle de bitmap par l’image du volet.  
+ Specifies a handle to the bitmap to be set as the pane image.  
   
  [in] `clrTransparent`  
- Spécifie la couleur transparente de l’image bitmap qui le `hBmp` indique.  
+ Specifies the transparent color of the bitmap that the `hBmp` indicates.  
   
-### <a name="remarks"></a>Remarques  
- Vous pouvez passer soit `HICON` ou `HBITMAP` avec la couleur transparente pour définir image du volet. Si vous ne souhaitez pas afficher l’image de plus, passez la `NULL` valeur en tant que handle de l’image.  
+### <a name="remarks"></a>Remarks  
+ You can pass either `HICON` or `HBITMAP` together with the transparent color to set the pane's image. If you do not want to display the image any longer, pass the `NULL` value as the image handle.  
   
- S’il existe une animation en cours d’exécution qui [CMFCStatusBar::SetPaneAnimation](#setpaneanimation) a la valeur, l’animation sera arrêtée.  
+ If there is any running animation that [CMFCStatusBar::SetPaneAnimation](#setpaneanimation) has set, the animation will be stopped.  
   
-##  <a name="setpaneinfo"></a>CMFCStatusBar::SetPaneInfo  
+##  <a name="setpaneinfo"></a>  CMFCStatusBar::SetPaneInfo  
 
   
 ```  
@@ -639,16 +671,16 @@ void SetPaneInfo(
     int cxWidth);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
  [in] `nID`  
  [in] `nStyle`  
  [in] `cxWidth`  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setpaneprogress"></a>CMFCStatusBar::SetPaneProgress  
- Définir l’indicateur de progression de la barre de progression du volet spécifié.  
+##  <a name="setpaneprogress"></a>  CMFCStatusBar::SetPaneProgress  
+ Set the current progress indicator of the progress bar for the specified pane.  
   
 ```  
 void SetPaneProgress(
@@ -657,22 +689,22 @@ void SetPaneProgress(
     BOOL bUpdate=TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Spécifie l’index du volet pour laquelle mettre à jour l’indicateur de progression.  
+ Specifies the index of the pane for which to update the progress indicator.  
   
  [in] `nCurr`  
- Spécifie la valeur actuelle de l’indicateur de progression.  
+ Specifies the current value of the progress indicator.  
   
  [in] `bUpdate`  
- Spécifie si le volet doit être mis à jour immédiatement.  
+ Specifies whether the pane should be updated immediately.  
   
-### <a name="remarks"></a>Notes  
- Appelez cette méthode lorsque vous souhaitez mettre à jour l’indicateur de progression de la barre de progression dans le volet spécifié.  
+### <a name="remarks"></a>Remarks  
+ Call this method when you want to update the progress indicator for the progress bar in the specified pane.  
   
- Pour utiliser cette fonction pour le volet donné, vous devez appeler [CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar) premier.  
+ To use this function for the given pane, you must call [CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar) first.  
   
-##  <a name="setpanestyle"></a>CMFCStatusBar::SetPaneStyle  
+##  <a name="setpanestyle"></a>  CMFCStatusBar::SetPaneStyle  
 
   
 ```  
@@ -681,13 +713,13 @@ void SetPaneStyle(
     UINT nStyle);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
  [in] `nStyle`  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setpanetext"></a>CMFCStatusBar::SetPaneText  
+##  <a name="setpanetext"></a>  CMFCStatusBar::SetPaneText  
 
   
 ```  
@@ -697,17 +729,17 @@ virtual BOOL SetPaneText(
     BOOL bUpdate = TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
  [in] `lpszNewText`  
  [in] `bUpdate`  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setpanetextcolor"></a>CMFCStatusBar::SetPaneTextColor  
- Définit la couleur du texte du volet spécifié.  
+##  <a name="setpanetextcolor"></a>  CMFCStatusBar::SetPaneTextColor  
+ Sets the text color of the specified pane.  
   
 ```  
 void SetPaneTextColor(
@@ -716,18 +748,18 @@ void SetPaneTextColor(
     BOOL bUpdate=TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Spécifie l’index du volet auquel vous souhaitez affecter une nouvelle couleur de texte.  
+ Specifies the index of the pane to which you want to assign a new text color.  
   
  [in] `clrText`  
- Spécifie la couleur du texte.  
+ Specifies the text color.  
   
  [in] `bUpdate`  
- Si `TRUE`, mettre à jour le volet de contenu immédiatement. Dans le cas contraire, ne pas à jour le volet de contenu jusqu'à ce que le volet est invalidé par une autre méthode.  
+ If `TRUE`, update the pane content immediately. Otherwise, do not update the pane content until the pane is invalidated by another method.  
   
-##  <a name="setpanewidth"></a>CMFCStatusBar::SetPaneWidth  
- Définissez la largeur du volet de barre d’état.  
+##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth  
+ Set the width of the status bar pane.  
   
 ```  
 void SetPaneWidth(
@@ -735,15 +767,15 @@ void SetPaneWidth(
     int cx);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Index du volet de barre d’état pour lequel définir une nouvelle largeur.  
+ The index of the status bar pane for which to set a new width.  
   
  [in] `cx`  
- La nouvelle largeur du volet de barre de l’état, en pixels.  
+ The new width of the status bar pane, in pixels.  
   
-##  <a name="settiptext"></a>CMFCStatusBar::SetTipText  
- Définir le texte d’info-bulle d’un volet de barre d’état.  
+##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText  
+ Set the tooltip text of a status bar pane.  
   
 ```  
 void SetTipText(
@@ -751,16 +783,16 @@ void SetTipText(
     LPCTSTR pszTipText);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- L’index du volet auquel vous souhaitez affecter le texte d’info-bulle.  
+ The index of the pane to which you want to assign the tooltip text.  
   
  [in] `pszTipText`  
- Le nouveau texte d’info-bulle.  
+ The new tooltip text.  
   
-## <a name="see-also"></a>Voir aussi  
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [CPane (classe)](../../mfc/reference/cpane-class.md)   
- [CStatusBar (classe)](../../mfc/reference/cstatusbar-class.md)
+ [CPane Class](../../mfc/reference/cpane-class.md)   
+ [CStatusBar Class](../../mfc/reference/cstatusbar-class.md)
 

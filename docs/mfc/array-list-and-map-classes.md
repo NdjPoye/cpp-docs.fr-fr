@@ -1,40 +1,59 @@
 ---
-title: "Classes de tableaux, listes et mappages | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tableaux (C++), classes"
-  - "classes de collection, listes"
-  - "classes de collection, mappages"
-  - "classes de liste"
-  - "map (classes)"
+title: Array, List, and Map Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [MFC], classes
+- list classes [MFC]
+- collection classes [MFC], maps
+- map classes [MFC]
+- collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Classes de tableaux, listes et mappages
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 28ed43e1451c484dc2bb3ed08e1db194f77075de
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Pour gérer des agrégats de données, la bibliothèque de classes fournit un groupe de classes de collection \(tables, listes, et cartes\) pouvant contenir différents types d'objets et types prédéfinis.  Les collections sont dynamiquement ordonnées.  Ces classes peuvent être utilisées dans tout programme, écrits pour Windows ou non.  Toutefois, elles sont les plus utiles pour implémenter les structures de données qui définissent les classes du document dans le framework d'application.  Vous pouvez facilement dériver les classes de collection spécialisées de ces éléments, ou vous pouvez les créer en fonction des classes du modèle.  Pour plus d'informations sur ces méthodes, consultez l'article [Collections](../mfc/collections.md).  Pour une liste de classes de collection de modèle, consultez l'article [Classes du modèle pour les tables, les listes, et la carte](../mfc/template-classes-for-arrays-lists-and-maps.md).  
+---
+# <a name="array-list-and-map-classes"></a>Array, List, and Map Classes
+For handling aggregates of data, the class library provides a group of collection classes — arrays, lists, and maps — that can hold a variety of object and predefined types. The collections are dynamically sized. These classes can be used in any program, whether written for Windows or not. However, they are most useful for implementing the data structures that define your document classes in the application framework. You can readily derive specialized collection classes from these, or you can create them based on the template classes. For more information about these approaches, see the article [Collections](../mfc/collections.md). For a list of the template collection classes, see the article [Template Classes for Arrays, Lists, and Maps](../mfc/template-classes-for-arrays-lists-and-maps.md).  
   
- Les tables sont des structures de données unidimensionnelles stockées contiguement en mémoire.  Ils prennent en charge l'accès aléatoire très rapide \(RAM\) puisque l'adresse mémoire d'un élément donné peut être calculée en multipliant l'index de l'élément par la taille d'un élément et en ajoutant le résultat à l'adresse du tableau.  Les tableaux sont très coûteux si vous devez insérer des éléments dans le tableau, puisque le tableau entier après l'élément inséré doit être déplacé pour libérer de l'espace pour l'élément à insérer.  Les tableaux peuvent être développés et réduits selon les besoins.  
+ Arrays are one-dimensional data structures that are stored contiguously in memory. They support very fast random access since the memory address of any given element can be calculated by multiplying the index of the element by the size of an element and adding the result to the base address of the array. But arrays are very expensive if you have to insert elements into the array, since the entire array past the element inserted has to be moved to make room for the element to be inserted. Arrays can grow and shrink as necessary.  
   
- Les listes sont similaires aux tableaux mais elles sont stockées différemment.  Chaque élément dans une liste inclut également un pointeur vers les éléments précédent et suivant, ce qui en fait une liste doublement liée.  Il est très rapide d'ajouter ou supprimer des éléments car cela implique seulement de modifier des pointeurs.  Toutefois, la liste peut être coûteuse puisque les recherches doivent commencer à un à la fin de la liste.  
+ Lists are similar to arrays but are stored very differently. Each element in a list also includes a pointer to the previous and next elements, making it a doubly linked list. It is very fast to add or delete items because doing so only involves changing a few pointers. However, searching a list can be expensive since all searches need to start at one of the list's ends.  
   
- Les maps lient une valeur clé à une valeur de données.  Par exemple, la clé d'une map peut être une chaîne et la donnée un pointeur vers une liste.  Vous demanderiez à la carte de vous donner le pointeur associé à une chaîne spécifique.  Les recherches de map sont rapide car les maps utilisent des tables de hachage pour les recherches de clés.  Ajouter et supprimer des éléments est aussi rapide.  La carte est souvent utilisée avec d'autres structures de données en tant qu'index auxiliaire.  MFC utilise un type spécial de map appelé [map des messages](../mfc/mapping-messages.md) pour mapper des messages Windows à un pointeur à la fonction de handler du message.  
+ Maps relate a key value to a data value. For instance, the key of a map could be a string and the data a pointer into a list. You would ask the map to give you the pointer associated with a particular string. Map lookups are fast because maps use hash tables for key lookups. Adding and deleting items is also fast. Maps are often used with other data structures as auxiliary indices. MFC uses a special kind of map called a [message map](../mfc/mapping-messages.md) to map Windows messages to a pointer to the handler function for that message.  
   
-## Voir aussi  
- [Vue d'ensemble des classes](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

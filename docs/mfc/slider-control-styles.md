@@ -1,42 +1,61 @@
 ---
-title: "Styles de contr&#244;le Slider | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSliderCtrl (classe), styles"
-  - "contrôles Slider, styles"
-  - "styles, CSliderCtrl"
-  - "styles, contrôles Slider"
+title: Slider Control Styles | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- slider controls [MFC], styles
+- CSliderCtrl class [MFC], styles
+- styles [MFC], CSliderCtrl
+- styles [MFC], slider controls
 ms.assetid: 64c491fc-5af1-4f97-ae30-854071b3dc02
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Styles de contr&#244;le Slider
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 21d2b10675ceb88e36ffb1bcf13d53ed60e9ec50
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Les contrôles de curseur \([CSliderCtrl](../mfc/reference/csliderctrl-class.md)\) peuvent avoir une orientation verticale ou horizontale.  Ils peuvent contenir des graduations de chaque côté, les deux parties, ou ni l'un ni l'autre.  Ils peuvent également être utilisés pour spécifier une plage de valeurs consécutives.  Ces propriétés sont contrôlées en utilisant des styles de curseur, que vous spécifiez lors de la création du curseur.  
+---
+# <a name="slider-control-styles"></a>Slider Control Styles
+Slider controls ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) can have either a vertical or horizontal orientation. They can have tick marks on either side, both sides, or neither. They can also be used to specify a range of consecutive values. These properties are controlled by using slider control styles, which you specify when you create the slider control.  
   
- Les styles `TBS_HORZ` et `TBS_VERT` déterminent l'orientation du curseur.  Si vous ne spécifiez pas une orientation, le curseur est orienté horizontalement.  
+ The `TBS_HORZ` and `TBS_VERT` styles determine the orientation of the slider control. If you do not specify an orientation, the slider control is oriented horizontally.  
   
- Le style `TBS_AUTOTICKS` crée un curseur qui a une graduation pour chaque incrément dans sa plage de valeurs.  Ces graduations sont ajoutées automatiquement lorsque vous appelez la fonction membre [SetRange](../Topic/CSliderCtrl::SetRange.md).  Si vous ne spécifiez pas `TBS_AUTOTICKS`, vous pouvez utiliser des fonctions membres, telles que [SetTic](../Topic/CSliderCtrl::SetTic.md) et [SetTicFreq](../Topic/CSliderCtrl::SetTicFreq.md), pour spécifier les positions des graduations.  Pour créer un curseur qui n'affiche pas les graduations, vous pouvez utiliser le style d`TBS_NOTICKS`.  
+ The `TBS_AUTOTICKS` style creates a slider control that has a tick mark for each increment in its range of values. These tick marks are added automatically when you call the [SetRange](../mfc/reference/csliderctrl-class.md#setrange) member function. If you do not specify `TBS_AUTOTICKS`, you can use member functions, such as [SetTic](../mfc/reference/csliderctrl-class.md#settic) and [SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq), to specify the positions of the tick marks. To create a slider control that does not display tick marks, you can use the `TBS_NOTICKS` style.  
   
- Vous pouvez afficher les graduations le ou des deux côtés du curseur.  Pour les contrôles Slider horizontal, vous pouvez spécifier le style `TBS_BOTTOM` ou `TBS_TOP`.  Pour les contrôles Slider horizontal, vous pouvez spécifier le style `TBS_RIGHT` ou `TBS_LEFT`. Les valeurs par défaut sont `TBS_BOTTOM` et `TBS_RIGHT`. Pour les graduations des deux côtés du contrôle Slider dans n'importe quelle orientation, spécifiez le style `TBS_BOTH`.  
+ You can display tick marks on either or both sides of the slider control. For horizontal slider controls, you can specify the `TBS_BOTTOM` or `TBS_TOP` style. For vertical slider controls, you can specify the `TBS_RIGHT` or `TBS_LEFT` style. (`TBS_BOTTOM` and `TBS_RIGHT` are the default settings.) For tick marks on both sides of the slider control in any orientation, specify the `TBS_BOTH` style.  
   
- Un curseur peut afficher une plage de sélection que si vous spécifiez le style `TBS_ENABLESELRANGE` lorsque vous la créez.  Lorsqu'un curseur est le style, les graduations aux positions de début et de fin d'une plage de sélection sont affichées comme des triangles \(au lieu des tirets vertical\) et la plage de sélection est mise en surbrillance.  Par exemple, les plages de sélection peuvent être utiles pour une application de planification.  L'utilisateur peut sélectionner une plage des graduations qui correspondent aux heures dans un jour pour identifier une heure de réunion planifiée.  
+ A slider control can display a selection range only if you specify the `TBS_ENABLESELRANGE` style when you create it. When a slider control has this style, the tick marks at the starting and ending positions of a selection range are displayed as triangles (instead of vertical dashes) and the selection range is highlighted. For example, selection ranges might be useful in a simple scheduling application. The user could select a range of tick marks corresponding to hours in a day to identify a scheduled meeting time.  
   
- Par défaut, la longueur du curseur dans un curseur varie comme la plage de sélection change.  Si le curseur a le style de **TBS\_FIXEDLENGTH**, la longueur du curseur reste la même même si la plage de sélection change.  Un curseur qui a le style de **TBS\_NOTHUMB** n'inclut pas de curseur.  
+ By default, the length of a slider control's slider varies as the selection range changes. If the slider control has the **TBS_FIXEDLENGTH** style, the length of the slider remains the same even if the selection range changes. A slider control that has the **TBS_NOTHUMB** style does not include a slider.  
   
-## Voir aussi  
- [Utilisation de CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSliderCtrl](../mfc/using-csliderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

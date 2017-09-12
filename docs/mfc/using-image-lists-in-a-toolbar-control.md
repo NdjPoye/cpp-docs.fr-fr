@@ -1,50 +1,69 @@
 ---
-title: "Utilisation de listes d&#39;images dans un contr&#244;le ToolBar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBarCtrl (classe), listes d'images"
-  - "listes d'images (C++), contrôles de barre d'outils"
-  - "contrôles de barre d'outils (MFC), image"
+title: Using Image Lists in a Toolbar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- toolbar controls [MFC], image
+- image lists [MFC], toolbar controls
+- CToolBarCtrl class [MFC], image lists
 ms.assetid: ccbe8df4-4ed9-4b54-bb93-9a1dcb3b97eb
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Utilisation de listes d&#39;images dans un contr&#244;le ToolBar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5569e45080f2427481041ef8164e369becc97792
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Par défaut, les images utilisées par les boutons dans un contrôle de la barre d'outils sont stockées sous forme de bitmap unique.  Toutefois, vous pouvez également enregistrer les images des boutons dans un ensemble de listes d'image.  L'objet de contrôle de la barre d'outils peut utiliser jusqu'à trois listes d'images distinctes :  
+---
+# <a name="using-image-lists-in-a-toolbar-control"></a>Using Image Lists in a Toolbar Control
+By default, the images used by the buttons in a toolbar control are stored as a single bitmap. However, you can also store button images in a set of image lists. The toolbar control object can use up to three separate image lists:  
   
--   La liste des images active contient des images des boutons de la barre d'outils qui sont actuellement activées.  
+-   Enabled image list   Contains images for toolbar buttons that are currently enabled.  
   
--   La liste des images inactive contient des images des boutons de la barre d'outils qui sont actuellement désactivées.  
+-   Disabled image list   Contains images for toolbar buttons that are currently disabled.  
   
--   La liste des images en surbrillance contient des images des boutons de la barre d'outils qui sont actuellement mises en surbrillance.  Cette liste des images est utilisée uniquement lorsque la barre d'outils utilise le style **TBSTYLE\_FLAT**.  
+-   Highlighted image list   Contains images for toolbar buttons that are currently highlighted. This image list is used only when the toolbar uses the **TBSTYLE_FLAT** style.  
   
- Ces listes d'images sont utilisées par le contrôle de la barre d'outils lorsque vous les associez à l'objet `CToolBarCtrl`.  Cette association est effectuée en effectuant des appels à [CToolBarCtrl::SetImageList](../Topic/CToolBarCtrl::SetImageList.md), à [SetDisabledImageList](../Topic/CToolBarCtrl::SetDisabledImageList.md), et [SetHotImageList](../Topic/CToolBarCtrl::SetHotImageList.md).  
+ These image lists are used by the toolbar control when you associate them with the `CToolBarCtrl` object. This association is accomplished by making calls to [CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist), [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist), and [SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist).  
   
- Par défaut, MFC utilise la classe `CToolBar` pour implémenter des barres d'outils d'application MFC.  Toutefois, la fonction membre `GetToolBarCtrl` peut être utilisée pour récupérer l'objet incorporé `CToolBarCtrl`.  Vous pouvez ensuite faire des appels aux fonctions membres `CToolBarCtrl` utilisant l'objet retourné.  
+ By default, MFC uses the `CToolBar` class to implement MFC application toolbars. However, the `GetToolBarCtrl` member function can be used to retrieve the embedded `CToolBarCtrl` object. You can then make calls to `CToolBarCtrl` member functions using the returned object.  
   
- L'exemple suivant illustre cette technique en affectant une liste des images active \(`m_ToolBarImages`\) ou désactives \(`m_ToolBarDisabledImages`\)à un objet de `CToolBarCtrl` \(`m_ToolBarCtrl`\).  
+ The following example demonstrates this technique by assigning an enabled (`m_ToolBarImages`) and disabled (`m_ToolBarDisabledImages`) image list to a `CToolBarCtrl` object (`m_ToolBarCtrl`).  
   
- [!code-cpp[NVC_MFCControlLadenDialog#35](../mfc/codesnippet/CPP/using-image-lists-in-a-toolbar-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#35](../mfc/codesnippet/cpp/using-image-lists-in-a-toolbar-control_1.cpp)]  
   
 > [!NOTE]
->  Les listes d'images utilisées par l'objet barre d'outils doivent être des objets permanents.  Par conséquent, elles sont généralement des membres de données d'une classe de MFC ; dans cet exemple, la classe cadre de fenêtre principale.  
+>  The image lists used by the toolbar object must be permanent objects. For this reason, they are commonly data members of an MFC class; in this example, the main frame window class.  
   
- Une fois que les listes d'images sont associées à l'objet `CToolBarCtrl`, l'environnement affiche automatiquement l'image de bouton appropriée.  
+ Once the image lists are associated with the `CToolBarCtrl` object, the framework automatically displays the proper button image.  
   
-## Voir aussi  
- [Utilisation de CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

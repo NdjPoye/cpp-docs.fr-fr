@@ -1,5 +1,5 @@
 ---
-title: CMenu (classe) | Documents Microsoft
+title: CMenu Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -53,12 +53,45 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- HMENU
-- menus, class
-- menus, base class
-- menus, creating
-- menus, managing
-- CMenu class
+- CMenu [MFC], CMenu
+- CMenu [MFC], AppendMenu
+- CMenu [MFC], Attach
+- CMenu [MFC], CheckMenuItem
+- CMenu [MFC], CheckMenuRadioItem
+- CMenu [MFC], CreateMenu
+- CMenu [MFC], CreatePopupMenu
+- CMenu [MFC], DeleteMenu
+- CMenu [MFC], DeleteTempMap
+- CMenu [MFC], DestroyMenu
+- CMenu [MFC], Detach
+- CMenu [MFC], DrawItem
+- CMenu [MFC], EnableMenuItem
+- CMenu [MFC], FromHandle
+- CMenu [MFC], GetDefaultItem
+- CMenu [MFC], GetMenuContextHelpId
+- CMenu [MFC], GetMenuInfo
+- CMenu [MFC], GetMenuItemCount
+- CMenu [MFC], GetMenuItemID
+- CMenu [MFC], GetMenuItemInfo
+- CMenu [MFC], GetMenuState
+- CMenu [MFC], GetMenuString
+- CMenu [MFC], GetSafeHmenu
+- CMenu [MFC], GetSubMenu
+- CMenu [MFC], InsertMenu
+- CMenu [MFC], InsertMenuItem
+- CMenu [MFC], LoadMenu
+- CMenu [MFC], LoadMenuIndirect
+- CMenu [MFC], MeasureItem
+- CMenu [MFC], ModifyMenu
+- CMenu [MFC], RemoveMenu
+- CMenu [MFC], SetDefaultItem
+- CMenu [MFC], SetMenuContextHelpId
+- CMenu [MFC], SetMenuInfo
+- CMenu [MFC], SetMenuItemBitmaps
+- CMenu [MFC], SetMenuItemInfo
+- CMenu [MFC], TrackPopupMenu
+- CMenu [MFC], TrackPopupMenuEx
+- CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
 caps.latest.revision: 22
 author: mikeblome
@@ -78,103 +111,103 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0cb607262df58905d63298cdf2d7e88d281108f1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 902032515ca36489587928560d9ae2d85a611ef7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmenu-class"></a>CMenu (classe)
-Encapsulation du `HMENU`Windows.  
+# <a name="cmenu-class"></a>CMenu Class
+An encapsulation of the Windows `HMENU`.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMenu : public CObject  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMenu::CMenu](#cmenu)|Construit un objet `CMenu`.|  
+|[CMenu::CMenu](#cmenu)|Constructs a `CMenu` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMenu::AppendMenu](#appendmenu)|Ajoute un nouvel élément à la fin de ce menu.|  
-|[CMenu::Attach](#attach)|Attache un handle de menu Windows vers un `CMenu` objet.|  
-|[CMenu::CheckMenuItem](#checkmenuitem)|Place une coche à côté, ou supprime une coche à partir d’un élément de menu dans le menu contextuel.|  
-|[CMenu::CheckMenuRadioItem](#checkmenuradioitem)|Place un bouton radio en regard d’un élément de menu et supprime tous les autres éléments de menu dans le groupe de la case d’option.|  
-|[CMenu::CreateMenu](#createmenu)|Crée un menu vide et l’attache à un `CMenu` objet.|  
-|[CMenu::CreatePopupMenu](#createpopupmenu)|Crée un menu contextuel vide et l’attache à un `CMenu` objet.|  
-|[CMenu::DeleteMenu](#deletemenu)|Supprime un élément spécifié à partir du menu. Si l’élément de menu possède un menu contextuel associé, détruit le handle pour le menu contextuel et libère la mémoire utilisée par celui-ci.|  
-|[CMenu::DeleteTempMap](#deletetempmap)|Supprime tout temporaire `CMenu` les objets créés par le `FromHandle` fonction membre.|  
-|[CMenu::DestroyMenu](#destroymenu)|Supprime le menu attaché à un `CMenu` de l’objet et libère la mémoire occupée par le menu.|  
-|[CMenu::Detach](#detach)|Détache un handle de menu Windows d’un `CMenu` de l’objet et retourne le handle.|  
-|[CMenu::DrawItem](#drawitem)|Appelé par le framework lorsqu’un aspect visuel d’une modification de menu owner-drawn.|  
-|[CMenu::EnableMenuItem](#enablemenuitem)|Active, désactive ou estompe (gris) un élément de menu.|  
-|[CMenu::FromHandle](#fromhandle)|Retourne un pointeur vers un `CMenu` objet un handle de menu Windows.|  
-|[CMenu::GetDefaultItem](#getdefaultitem)|Détermine l’élément de menu par défaut dans le menu spécifié.|  
-|[CMenu::GetMenuContextHelpId](#getmenucontexthelpid)|Récupère l’ID de contexte d’aide associé au menu.|  
-|[CMenu::GetMenuInfo](#getmenuinfo)|Récupère des informations sur un menu spécifique.|  
-|[CMenu::GetMenuItemCount](#getmenuitemcount)|Détermine le nombre d’éléments dans un menu contextuel ou de niveau supérieur.|  
-|[CMenu::GetMenuItemID](#getmenuitemid)|Obtient l’identificateur de l’élément de menu pour un élément de menu situé à la position spécifiée.|  
-|[CMenu::GetMenuItemInfo](#getmenuiteminfo)|Récupère des informations sur un élément de menu.|  
-|[CMenu::GetMenuState](#getmenustate)|Retourne l’état de l’élément de menu spécifié ou le nombre d’éléments dans un menu contextuel.|  
-|[CMenu::GetMenuString](#getmenustring)|Récupère l’étiquette de l’élément de menu spécifié.|  
-|[CMenu::GetSafeHmenu](#getsafehmenu)|Retourne le `m_hMenu` encapsulé par `CMenu` objet.|  
-|[CMenu::GetSubMenu](#getsubmenu)|Récupère un pointeur vers un menu contextuel.|  
-|[CMenu::InsertMenu](#insertmenu)|Insère un nouvel élément de menu à la position spécifiée, déplacement d’autres éléments du menu déroulant.|  
-|[CMenu::InsertMenuItem](#insertmenuitem)|Insère un nouvel élément de menu à la position spécifiée dans un menu.|  
-|[CMenu::LoadMenu](#loadmenu)|Charge une ressource de menu à partir du fichier exécutable et l’attache à un `CMenu` objet.|  
-|[CMenu::LoadMenuIndirect](#loadmenuindirect)|Charge un menu à partir d’un modèle de menu dans la mémoire et l’attache à un `CMenu` objet.|  
-|[CMenu::MeasureItem](#measureitem)|Appelé par l’infrastructure pour déterminer les dimensions de menu lors de la création d’un menu owner-drawn.|  
-|[CMenu::ModifyMenu](#modifymenu)|Modifie un élément de menu existant à la position spécifiée.|  
-|[CMenu::RemoveMenu](#removemenu)|Supprime un élément de menu avec un menu contextuel dans le menu spécifié.|  
-|[CMenu::SetDefaultItem](#setdefaultitem)|Définit l’élément de menu par défaut pour le menu spécifié.|  
-|[CMenu::SetMenuContextHelpId](#setmenucontexthelpid)|Définit l’ID de contexte d’aide à associer à l’aide du menu.|  
-|[CMenu::SetMenuInfo](#setmenuinfo)|Définit les informations dans un menu spécifique.|  
-|[CMenu::SetMenuItemBitmaps](#setmenuitembitmaps)|Associe les images bitmap de coche spécifié à un élément de menu.|  
-|[CMenu::SetMenuItemInfo](#setmenuiteminfo)|Modifie les informations relatives à un élément de menu.|  
-|[CMenu::TrackPopupMenu](#trackpopupmenu)|Affiche un menu contextuel flottant à l’emplacement spécifié et effectue le suivi de la sélection d’éléments dans le menu contextuel.|  
-|[CMenu::TrackPopupMenuEx](#trackpopupmenuex)|Affiche un menu contextuel flottant à l’emplacement spécifié et effectue le suivi de la sélection d’éléments dans le menu contextuel.|  
+|[CMenu::AppendMenu](#appendmenu)|Appends a new item to the end of this menu.|  
+|[CMenu::Attach](#attach)|Attaches a Windows menu handle to a `CMenu` object.|  
+|[CMenu::CheckMenuItem](#checkmenuitem)|Places a check mark next to or removes a check mark from a menu item in the pop-up menu.|  
+|[CMenu::CheckMenuRadioItem](#checkmenuradioitem)|Places a radio button next to a menu item and removes the radio button from all of the other menu items in the group.|  
+|[CMenu::CreateMenu](#createmenu)|Creates an empty menu and attaches it to a `CMenu` object.|  
+|[CMenu::CreatePopupMenu](#createpopupmenu)|Creates an empty pop-up menu and attaches it to a `CMenu` object.|  
+|[CMenu::DeleteMenu](#deletemenu)|Deletes a specified item from the menu. If the menu item has an associated pop-up menu, destroys the handle to the pop-up menu and frees the memory used by it.|  
+|[CMenu::DeleteTempMap](#deletetempmap)|Deletes any temporary `CMenu` objects created by the `FromHandle` member function.|  
+|[CMenu::DestroyMenu](#destroymenu)|Destroys the menu attached to a `CMenu` object and frees any memory that the menu occupied.|  
+|[CMenu::Detach](#detach)|Detaches a Windows menu handle from a `CMenu` object and returns the handle.|  
+|[CMenu::DrawItem](#drawitem)|Called by the framework when a visual aspect of an owner-drawn menu changes.|  
+|[CMenu::EnableMenuItem](#enablemenuitem)|Enables, disables, or dims (grays) a menu item.|  
+|[CMenu::FromHandle](#fromhandle)|Returns a pointer to a `CMenu` object given a Windows menu handle.|  
+|[CMenu::GetDefaultItem](#getdefaultitem)|Determines the default menu item on the specified menu.|  
+|[CMenu::GetMenuContextHelpId](#getmenucontexthelpid)|Retrieves the help context ID associated with the menu.|  
+|[CMenu::GetMenuInfo](#getmenuinfo)|Retrieves information on a specific menu.|  
+|[CMenu::GetMenuItemCount](#getmenuitemcount)|Determines the number of items in a pop-up or top-level menu.|  
+|[CMenu::GetMenuItemID](#getmenuitemid)|Obtains the menu-item identifier for a menu item located at the specified position.|  
+|[CMenu::GetMenuItemInfo](#getmenuiteminfo)|Retrieves information about a menu item.|  
+|[CMenu::GetMenuState](#getmenustate)|Returns the status of the specified menu item or the number of items in a pop-up menu.|  
+|[CMenu::GetMenuString](#getmenustring)|Retrieves the label of the specified menu item.|  
+|[CMenu::GetSafeHmenu](#getsafehmenu)|Returns the `m_hMenu` wrapped by this `CMenu` object.|  
+|[CMenu::GetSubMenu](#getsubmenu)|Retrieves a pointer to a pop-up menu.|  
+|[CMenu::InsertMenu](#insertmenu)|Inserts a new menu item at the specified position, moving other items down the menu.|  
+|[CMenu::InsertMenuItem](#insertmenuitem)|Inserts a new menu item at the specified position in a menu.|  
+|[CMenu::LoadMenu](#loadmenu)|Loads a menu resource from the executable file and attaches it to a `CMenu` object.|  
+|[CMenu::LoadMenuIndirect](#loadmenuindirect)|Loads a menu from a menu template in memory and attaches it to a `CMenu` object.|  
+|[CMenu::MeasureItem](#measureitem)|Called by the framework to determine menu dimensions when an owner-drawn menu is created.|  
+|[CMenu::ModifyMenu](#modifymenu)|Changes an existing menu item at the specified position.|  
+|[CMenu::RemoveMenu](#removemenu)|Deletes a menu item with an associated pop-up menu from the specified menu.|  
+|[CMenu::SetDefaultItem](#setdefaultitem)|Sets the default menu item for the specified menu.|  
+|[CMenu::SetMenuContextHelpId](#setmenucontexthelpid)|Sets the help context ID to be associated with the menu.|  
+|[CMenu::SetMenuInfo](#setmenuinfo)|Sets information on a specific menu.|  
+|[CMenu::SetMenuItemBitmaps](#setmenuitembitmaps)|Associates the specified check-mark bitmaps with a menu item.|  
+|[CMenu::SetMenuItemInfo](#setmenuiteminfo)|Changes information about a menu item.|  
+|[CMenu::TrackPopupMenu](#trackpopupmenu)|Displays a floating pop-up menu at the specified location and tracks the selection of items on the pop-up menu.|  
+|[CMenu::TrackPopupMenuEx](#trackpopupmenuex)|Displays a floating pop-up menu at the specified location and tracks the selection of items on the pop-up menu.|  
   
-### <a name="public-operators"></a>Op&#233;rateurs publics  
+### <a name="public-operators"></a>Public Operators  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMenu::operator HMENU](#operator_hmenu)|Récupère le handle de l’objet menu.|  
-|[CMenu::operator ! =](#operator_neq)|Détermine si deux objets de menu ne sont pas égales.|  
-|[CMenu::operator ==](#operator_eq_eq)|Détermine si deux objets de menu sont égaux.|  
+|[CMenu::operator HMENU](#operator_hmenu)|Retrieves the handle of the menu object.|  
+|[CMenu::operator !=](#operator_neq)|Determines if two menu objects are not equal.|  
+|[CMenu::operator ==](#operator_eq_eq)|Determines if two menu objects are equal.|  
   
-### <a name="public-data-members"></a>Membres de données publics  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMenu::m_hMenu](#m_hmenu)|Spécifie le handle vers le menu Windows attaché à la `CMenu` objet.|  
+|[CMenu::m_hMenu](#m_hmenu)|Specifies the handle to the Windows menu attached to the `CMenu` object.|  
   
-## <a name="remarks"></a>Remarques  
- Il fournit des fonctions membres pour créer, de suivi, la mise à jour et la destruction d’un menu.  
+## <a name="remarks"></a>Remarks  
+ It provides member functions for creating, tracking, updating, and destroying a menu.  
   
- Créer un `CMenu` objet sur le frame de pile comme local, puis appelez `CMenu`de fonctions de membre pour manipuler le nouveau menu, en fonction des besoins. Ensuite, appelez [CWnd::SetMenu](../../mfc/reference/cwnd-class.md#setmenu) pour définir le menu à une fenêtre, suivi immédiatement par un appel à la `CMenu` l’objet [détachement](#detach) fonction membre. Le `CWnd::SetMenu` fonction membre définit le menu fenêtre pour le nouveau menu, la fenêtre à être redessiné pour refléter la modification de menu et le passe également la propriété du menu dans la fenêtre. L’appel à **détachement** détache le `HMENU` à partir de la `CMenu` objet, que quand local `CMenu` variable passe hors de portée, la `CMenu` destructeur d’objet ne tente pas détruire un menu, il ne possède plus. Le menu en question est automatiquement détruit lorsque la fenêtre est détruite.  
+ Create a `CMenu` object on the stack frame as a local, then call `CMenu`'s member functions to manipulate the new menu as needed. Next, call [CWnd::SetMenu](../../mfc/reference/cwnd-class.md#setmenu) to set the menu to a window, followed immediately by a call to the `CMenu` object's [Detach](#detach) member function. The `CWnd::SetMenu` member function sets the window's menu to the new menu, causes the window to be redrawn to reflect the menu change, and also passes ownership of the menu to the window. The call to **Detach** detaches the `HMENU` from the `CMenu` object, so that when the local `CMenu` variable passes out of scope, the `CMenu` object destructor does not attempt to destroy a menu it no longer owns. The menu itself is automatically destroyed when the window is destroyed.  
   
- Vous pouvez utiliser la [LoadMenuIndirect](#loadmenuindirect) fonction membre pour créer un menu à partir d’un modèle en mémoire, mais un menu créé à partir d’une ressource par un appel à [LoadMenu](#loadmenu) est plus faciles à gérer, et la ressource de menu elle-même peut être créée et modifiée par l’éditeur de menus.  
+ You can use the [LoadMenuIndirect](#loadmenuindirect) member function to create a menu from a template in memory, but a menu created from a resource by a call to [LoadMenu](#loadmenu) is more easily maintained, and the menu resource itself can be created and modified by the menu editor.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMenu`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="appendmenu"></a>CMenu::AppendMenu  
- Ajoute un nouvel élément à la fin d’un menu.  
+##  <a name="appendmenu"></a>  CMenu::AppendMenu  
+ Appends a new item to the end of a menu.  
   
 ```  
 BOOL AppendMenu(
@@ -189,94 +222,94 @@ BOOL AppendMenu(
     const CBitmap* pBmp);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nFlags`  
- Spécifie des informations sur l’état du nouvel élément de menu lorsqu’il est ajouté au menu. Il se compose d’un ou plusieurs des valeurs répertoriées dans la section Notes.  
+ Specifies information about the state of the new menu item when it is added to the menu. It consists of one or more of the values listed in the Remarks section.  
   
  `nIDNewItem`  
- Spécifie l’ID de commande du nouvel élément de menu ou, si `nFlags` a la valeur **MF_POPUP**, le handle de menu ( `HMENU`) d’un menu contextuel. Le `nIDNewItem` paramètre est ignoré (non nécessaire) si `nFlags` a la valeur **MF_SEPARATOR**.  
+ Specifies either the command ID of the new menu item or, if `nFlags` is set to **MF_POPUP**, the menu handle ( `HMENU`) of a pop-up menu. The `nIDNewItem` parameter is ignored (not needed) if `nFlags` is set to **MF_SEPARATOR**.  
   
  `lpszNewItem`  
- Spécifie le contenu du nouvel élément de menu. Le `nFlags` paramètre est utilisé pour interpréter `lpszNewItem` de la façon suivante :  
+ Specifies the content of the new menu item. The `nFlags` parameter is used to interpret `lpszNewItem` in the following way:  
   
-|nIndicateurs|Interprétation de lpszNewItem|  
+|nFlags|Interpretation of lpszNewItem|  
 |------------|-----------------------------------|  
-|`MF_OWNERDRAW`|Contient une valeur de 32 bits fournie par l’application que l’application peut utiliser pour mettre à jour les données supplémentaires associées à l’élément de menu. Cette valeur de 32 bits est disponible à l’application lors du traitement de `WM_MEASUREITEM` et `WM_DRAWITEM` messages. La valeur est stockée dans le **itemData** membre de la structure fournie avec ces messages.|  
-|**MF_STRING**|Contient un pointeur vers une chaîne se terminant par null. Il s’agit de l’interprétation par défaut.|  
-|**MF_SEPARATOR**|Le `lpszNewItem` paramètre est ignoré (ne pas nécessaire).|  
+|`MF_OWNERDRAW`|Contains an application-supplied 32-bit value that the application can use to maintain additional data associated with the menu item. This 32-bit value is available to the application when it processes `WM_MEASUREITEM` and `WM_DRAWITEM` messages. The value is stored in the **itemData** member of the structure supplied with those messages.|  
+|**MF_STRING**|Contains a pointer to a null-terminated string. This is the default interpretation.|  
+|**MF_SEPARATOR**|The `lpszNewItem` parameter is ignored (not needed).|  
   
  *pBmp*  
- Pointe vers un `CBitmap` objet qui sera utilisé en tant que l’élément de menu.  
+ Points to a `CBitmap` object that will be used as the menu item.  
   
-### <a name="return-value"></a>Valeur de retour  
- Une valeur différente de zéro si la fonction réussit ; sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- L’application peut spécifier l’état de l’élément de menu en définissant les valeurs de `nFlags`. Lorsque `nIDNewItem` spécifie un menu contextuel, il devient partie intégrante du menu auquel il est ajouté. Si ce menu est détruit, le menu ajouté sera également détruit. Un menu ajouté doit être détaché d’un `CMenu` objet pour éviter tout conflit. Notez que **MF_STRING** et `MF_OWNERDRAW` ne sont pas valides pour la version de l’image bitmap de `AppendMenu`.  
+### <a name="remarks"></a>Remarks  
+ The application can specify the state of the menu item by setting values in `nFlags`. When `nIDNewItem` specifies a pop-up menu, it becomes part of the menu to which it is appended. If that menu is destroyed, the appended menu will also be destroyed. An appended menu should be detached from a `CMenu` object to avoid conflict. Note that **MF_STRING** and `MF_OWNERDRAW` are not valid for the bitmap version of `AppendMenu`.  
   
- La liste suivante décrit les indicateurs qui peuvent être définis dans `nFlags`:  
+ The following list describes the flags that may be set in `nFlags`:  
   
-- **MF_CHECKED** agit comme un bouton bascule avec **MF_UNCHECKED** pour placer la case à cocher en regard de l’élément par défaut. Lorsque l’application fournit des images bitmap de coche (consultez la [SetMenuItemBitmaps](#setmenuitembitmaps) fonction membre), l’image de la case à cocher « sur » s’affiche.  
+- **MF_CHECKED** Acts as a toggle with **MF_UNCHECKED** to place the default check mark next to the item. When the application supplies check-mark bitmaps (see the [SetMenuItemBitmaps](#setmenuitembitmaps) member function), the "check mark on" bitmap is displayed.  
   
-- **MF_UNCHECKED** agit comme un bouton bascule avec **MF_CHECKED** pour supprimer une case à cocher en regard de l’élément. Lorsque l’application fournit des images bitmap de coche (consultez la `SetMenuItemBitmaps` fonction membre), l’image de la case à cocher « désactivé » s’affiche.  
+- **MF_UNCHECKED** Acts as a toggle with **MF_CHECKED** to remove a check mark next to the item. When the application supplies check-mark bitmaps (see the `SetMenuItemBitmaps` member function), the "check mark off" bitmap is displayed.  
   
-- **MF_DISABLED** désactive l’élément de menu afin qu’il ne peut pas être sélectionné, mais n’est pas estomper.  
+- **MF_DISABLED** Disables the menu item so that it cannot be selected but does not dim it.  
   
-- `MF_ENABLED`Permet à l’élément de menu pour qu’il peut être sélectionné et le restaure à partir de son état estompé.  
+- `MF_ENABLED` Enables the menu item so that it can be selected and restores it from its dimmed state.  
   
-- **MF_GRAYED** désactive l’élément de menu pour qu’il ne peut pas être sélectionné et il estompe.  
+- **MF_GRAYED** Disables the menu item so that it cannot be selected and dims it.  
   
-- **MF_MENUBARBREAK** place l’élément sur une nouvelle ligne dans les menus statiques ou dans une nouvelle colonne dans les menus contextuels. La nouvelle colonne de menu contextuel doivent être séparée de l’ancienne par une ligne de séparation verticale.  
+- **MF_MENUBARBREAK** Places the item on a new line in static menus or in a new column in pop-up menus. The new pop-up menu column will be separated from the old column by a vertical dividing line.  
   
-- **MF_MENUBREAK** place l’élément sur une nouvelle ligne dans les menus statiques ou dans une nouvelle colonne dans les menus contextuels. Aucune ligne de démarcation n’est placé entre les colonnes.  
+- **MF_MENUBREAK** Places the item on a new line in static menus or in a new column in pop-up menus. No dividing line is placed between the columns.  
   
-- `MF_OWNERDRAW`Spécifie que l’élément est un élément en mode owner-draw. Lorsque le menu s’affiche pour la première fois, la fenêtre qui détient le menu reçoit un `WM_MEASUREITEM` message, qui Récupère la hauteur et la largeur de l’élément de menu. Le `WM_DRAWITEM` message est celui envoyé chaque fois que le propriétaire doit mettre à jour l’apparence visuelle de l’élément de menu. Cette option n’est pas valide pour un élément de menu de niveau supérieur.  
+- `MF_OWNERDRAW` Specifies that the item is an owner-draw item. When the menu is displayed for the first time, the window that owns the menu receives a `WM_MEASUREITEM` message, which retrieves the height and width of the menu item. The `WM_DRAWITEM` message is the one sent whenever the owner must update the visual appearance of the menu item. This option is not valid for a top-level menu item.  
   
-- **MF_POPUP** Spécifie qu’un menu contextuel associé à l’élément de menu. Le paramètre ID spécifie un handle d’un menu contextuel qui doit être associé à l’élément. Cela est utilisé pour l’ajout d’un menu contextuel de niveau supérieur ou d’un menu contextuel hiérarchique à un élément de menu contextuel.  
+- **MF_POPUP** Specifies that the menu item has a pop-up menu associated with it. The ID parameter specifies a handle to a pop-up menu that is to be associated with the item. This is used for adding either a top-level pop-up menu or a hierarchical pop-up menu to a pop-up menu item.  
   
-- **MF_SEPARATOR** Dessine une ligne de démarcation horizontale. Peut uniquement être utilisé dans un menu contextuel. Cette ligne ne peut pas être estompée, désactivée ou mis en surbrillance. Autres paramètres sont ignorés.  
+- **MF_SEPARATOR** Draws a horizontal dividing line. Can only be used in a pop-up menu. This line cannot be dimmed, disabled, or highlighted. Other parameters are ignored.  
   
-- **MF_STRING** Spécifie que l’élément de menu est une chaîne de caractères.  
+- **MF_STRING** Specifies that the menu item is a character string.  
   
- Chacun des groupes suivants répertorie les indicateurs qui s’excluent mutuellement et ne peuvent pas être utilisées ensemble :  
+ Each of the following groups lists flags that are mutually exclusive and cannot be used together:  
   
-- **MF_DISABLED**, `MF_ENABLED`, et **MF_GRAYED**  
+- **MF_DISABLED**, `MF_ENABLED`, and **MF_GRAYED**  
   
-- **MF_STRING**, `MF_OWNERDRAW`, **MF_SEPARATOR**et la version de l’image bitmap  
+- **MF_STRING**, `MF_OWNERDRAW`, **MF_SEPARATOR**, and the bitmap version  
   
-- **MF_MENUBARBREAK** et **MF_MENUBREAK**  
+- **MF_MENUBARBREAK** and **MF_MENUBREAK**  
   
-- **MF_CHECKED** et **MF_UNCHECKED**  
+- **MF_CHECKED** and **MF_UNCHECKED**  
   
- Chaque fois qu’un menu qui réside dans une fenêtre est modifiée (ou non la fenêtre s’affiche), l’application doit appeler [CWnd::DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar).  
+ Whenever a menu that resides in a window is changed (whether or not the window is displayed), the application should call [CWnd::DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar).  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::CreateMenu](#createmenu).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="attach"></a>CMenu::Attach  
- Attache un menu Windows existant à un `CMenu` objet.  
+##  <a name="attach"></a>  CMenu::Attach  
+ Attaches an existing Windows menu to a `CMenu` object.  
   
 ```  
 BOOL Attach(HMENU hMenu);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `hMenu`  
- Spécifie un handle à un menu Windows.  
+ Specifies a handle to a Windows menu.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’opération a réussi ; Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation was successful; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Cette fonction ne doit pas être appelée si un menu est déjà attaché à la `CMenu` objet. Le handle de menu est stocké dans le `m_hMenu` membre de données.  
+### <a name="remarks"></a>Remarks  
+ This function should not be called if a menu is already attached to the `CMenu` object. The menu handle is stored in the `m_hMenu` data member.  
   
- Si le menu que vous souhaitez manipuler est déjà associé à une fenêtre, vous pouvez utiliser la [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu) fonction permettant d’obtenir un handle vers le menu.  
+ If the menu you want to manipulate is already associated with a window, you can use the [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu) function to get a handle to the menu.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCWindowing #21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="checkmenuitem"></a>CMenu::CheckMenuItem  
- Ajoute des coches à ou supprime des cases à cocher des éléments de menu dans le menu contextuel.  
+##  <a name="checkmenuitem"></a>  CMenu::CheckMenuItem  
+ Adds check marks to or removes check marks from menu items in the pop-up menu.  
   
 ```  
 UINT CheckMenuItem(
@@ -284,34 +317,34 @@ UINT CheckMenuItem(
     UINT nCheck);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIDCheckItem`  
- Spécifie l’élément de menu doit être vérifiée, comme déterminé par `nCheck`.  
+ Specifies the menu item to be checked, as determined by `nCheck`.  
   
  `nCheck`  
- Spécifie la vérification de l’élément de menu et comment déterminer la position de l’élément dans le menu. Le `nCheck` paramètre peut être une combinaison de **MF_CHECKED** ou **MF_UNCHECKED** avec **MF_BYPOSITION** ou **MF_BYCOMMAND** indicateurs. Ces indicateurs peuvent être combinées à l’aide de l’opérateur OR au niveau du bit. Ils ont les significations suivantes :  
+ Specifies how to check the menu item and how to determine the item's position in the menu. The `nCheck` parameter can be a combination of **MF_CHECKED** or **MF_UNCHECKED** with **MF_BYPOSITION** or **MF_BYCOMMAND** flags. These flags can be combined by using the bitwise OR operator. They have the following meanings:  
   
-- **MF_BYCOMMAND** Spécifie que le paramètre indique l’ID de commande de l’élément de menu existant. Il s'agit de la valeur par défaut.  
+- **MF_BYCOMMAND** Specifies that the parameter gives the command ID of the existing menu item. This is the default.  
   
-- **MF_BYPOSITION** Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0.  
+- **MF_BYPOSITION** Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.  
   
-- **MF_CHECKED** agit comme un bouton bascule avec **MF_UNCHECKED** pour placer la case à cocher en regard de l’élément par défaut.  
+- **MF_CHECKED** Acts as a toggle with **MF_UNCHECKED** to place the default check mark next to the item.  
   
-- **MF_UNCHECKED** agit comme un bouton bascule avec **MF_CHECKED** pour supprimer une case à cocher en regard de l’élément.  
+- **MF_UNCHECKED** Acts as a toggle with **MF_CHECKED** to remove a check mark next to the item.  
   
-### <a name="return-value"></a>Valeur de retour  
- L’état précédent de l’élément : **MF_CHECKED** ou **MF_UNCHECKED**, ou 0xFFFFFFFF si l’élément de menu n’existe pas.  
+### <a name="return-value"></a>Return Value  
+ The previous state of the item: **MF_CHECKED** or **MF_UNCHECKED**, or 0xFFFFFFFF if the menu item did not exist.  
   
-### <a name="remarks"></a>Remarques  
- Le `nIDCheckItem` paramètre spécifie l’élément à modifier.  
+### <a name="remarks"></a>Remarks  
+ The `nIDCheckItem` parameter specifies the item to be modified.  
   
- Le `nIDCheckItem` paramètre peut identifier un élément de menu contextuel ainsi que d’un élément de menu. Aucune des étapes spéciales ne sont requises pour rechercher un élément de menu contextuel. Les éléments de menu de niveau supérieur ne peut pas être vérifiées. Un élément de menu contextuel doit être vérifié par position, car il n’a pas un identificateur d’élément de menu associé.  
+ The `nIDCheckItem` parameter may identify a pop-up menu item as well as a menu item. No special steps are required to check a pop-up menu item. Top-level menu items cannot be checked. A pop-up menu item must be checked by position since it does not have a menu-item identifier associated with it.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::GetMenuState](#getmenustate).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::GetMenuState](#getmenustate).  
   
-##  <a name="checkmenuradioitem"></a>CMenu::CheckMenuRadioItem  
- Vérifie un élément de menu spécifié et en fait un élément de case d’option.  
+##  <a name="checkmenuradioitem"></a>  CMenu::CheckMenuRadioItem  
+ Checks a specified menu item and makes it a radio item.  
   
 ```  
 BOOL CheckMenuRadioItem(
@@ -321,42 +354,42 @@ BOOL CheckMenuRadioItem(
     UINT nFlags);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIDFirst`  
- Spécifie (en tant qu’un ID ou un décalage, en fonction de la valeur de `nFlags`) le premier élément de menu dans le groupe de cases d’option.  
+ Specifies (as an ID or offset, depending on the value of `nFlags`) the first menu item in the radio button group.  
   
  `nIDLast`  
- Spécifie (en tant qu’un ID ou un décalage, en fonction de la valeur de `nFlags`) du dernier élément de menu dans le groupe de cases d’option.  
+ Specifies (as an ID or offset, depending on the value of `nFlags`) the last menu item in the radio button group.  
   
  `nIDItem`  
- Spécifie (en tant qu’un ID ou un décalage, en fonction de la valeur de `nFlags`) l’élément dans le groupe qui sera vérifié avec une case d’option.  
+ Specifies (as an ID or offset, depending on the value of `nFlags`) the item in the group which will be checked with a radio button.  
   
  `nFlags`  
- Spécifie l’interprétation de `nIDFirst`, `nIDLast`, et `nIDItem` de la façon suivante :  
+ Specifies interpretation of `nIDFirst`, `nIDLast`, and `nIDItem` in the following way:  
   
-|nIndicateurs|Interprétation|  
+|nFlags|Interpretation|  
 |------------|--------------------|  
-|**MF_BYCOMMAND**|Spécifie que le paramètre indique l’ID de commande de l’élément de menu existant. Ceci est la valeur par défaut si aucune **MF_BYCOMMAND** ni **MF_BYPOSITION** est défini.|  
-|**MF_BYPOSITION**|Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0.|  
+|**MF_BYCOMMAND**|Specifies that the parameter gives the command ID of the existing menu item. This is the default if neither **MF_BYCOMMAND** nor **MF_BYPOSITION** is set.|  
+|**MF_BYPOSITION**|Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.|  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’opération a réussi ; Sinon, 0  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0  
   
-### <a name="remarks"></a>Remarques  
- En même temps, la fonction désactive tous les autres éléments de menu dans le groupe associé et efface l’indicateur de type d’élément de case d’option correspondant à ces éléments. Les éléments cochés s’affiche à l’aide d’un bitmap de cases d’option bouton (ou puce) au lieu d’une image bitmap de coche.  
+### <a name="remarks"></a>Remarks  
+ At the same time, the function unchecks all other menu items in the associated group and clears the radio-item type flag for those items. The checked item is displayed using a radio button (or bullet) bitmap instead of a check mark bitmap.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [ON_COMMAND_RANGE](message-map-macros-mfc.md#on_command_range).  
+### <a name="example"></a>Example  
+  See the example for [ON_COMMAND_RANGE](message-map-macros-mfc.md#on_command_range).  
   
-##  <a name="cmenu"></a>CMenu::CMenu  
- Crée un menu vide et l’attache à un `CMenu` objet.  
+##  <a name="cmenu"></a>  CMenu::CMenu  
+ Creates an empty menu and attaches it to a `CMenu` object.  
   
 ```  
 CMenu();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Le menu n’est pas créé tant que vous appelez l’une des fonctions membres create ou charge de **CMenu :**  
+### <a name="remarks"></a>Remarks  
+ The menu is not created until you call one of the create or load member functions of **CMenu:**  
   
 - [CreateMenu](#createmenu)  
   
@@ -366,50 +399,50 @@ CMenu();
   
 - [LoadMenuIndirect](#loadmenuindirect)  
   
-- [Attacher](#attach)  
+- [Attach](#attach)  
   
-##  <a name="createmenu"></a>CMenu::CreateMenu  
- Crée un menu et l’attache à le `CMenu` objet.  
+##  <a name="createmenu"></a>  CMenu::CreateMenu  
+ Creates a menu and attaches it to the `CMenu` object.  
   
 ```  
 BOOL CreateMenu();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le menu a été créé avec succès ; Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the menu was created successfully; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Le menu est initialement vide. Éléments de menu peuvent être ajoutés à l’aide de la `AppendMenu` ou `InsertMenu` fonction membre.  
+### <a name="remarks"></a>Remarks  
+ The menu is initially empty. Menu items can be added by using the `AppendMenu` or `InsertMenu` member function.  
   
- Si le menu est assigné à une fenêtre, il est automatiquement détruit la fenêtre est détruite.  
+ If the menu is assigned to a window, it is automatically destroyed when the window is destroyed.  
   
- Avant de quitter, l’application doit libérer les ressources système associées à un menu si le menu n’est pas assigné à une fenêtre. Une application libère un menu en appelant le [DestroyMenu](#destroymenu) fonction membre.  
+ Before exiting, an application must free system resources associated with a menu if the menu is not assigned to a window. An application frees a menu by calling the [DestroyMenu](#destroymenu) member function.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCWindowing #22](../../mfc/reference/codesnippet/cpp/cmenu-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#22](../../mfc/reference/codesnippet/cpp/cmenu-class_2.cpp)]  
   
-##  <a name="createpopupmenu"></a>CMenu::CreatePopupMenu  
- Crée un menu contextuel et l’attache à le `CMenu` objet.  
+##  <a name="createpopupmenu"></a>  CMenu::CreatePopupMenu  
+ Creates a pop-up menu and attaches it to the `CMenu` object.  
   
 ```  
 BOOL CreatePopupMenu();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le menu contextuel a été créé avec succès ; Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the pop-up menu was successfully created; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Le menu est initialement vide. Éléments de menu peuvent être ajoutés à l’aide de la `AppendMenu` ou `InsertMenu` fonction membre. L’application peut ajouter le menu contextuel à un menu existant ou un menu contextuel. Le `TrackPopupMenu` fonction membre peut être utilisée pour afficher ce menu comme un menu contextuel flottant et pour effectuer le suivi des sélections dans le menu contextuel.  
+### <a name="remarks"></a>Remarks  
+ The menu is initially empty. Menu items can be added by using the `AppendMenu` or `InsertMenu` member function. The application can add the pop-up menu to an existing menu or pop-up menu. The `TrackPopupMenu` member function may be used to display this menu as a floating pop-up menu and to track selections on the pop-up menu.  
   
- Si le menu est assigné à une fenêtre, il est automatiquement détruit la fenêtre est détruite. Si le menu est ajouté à un menu existant, il est automatiquement détruite lorsque ce menu est détruit.  
+ If the menu is assigned to a window, it is automatically destroyed when the window is destroyed. If the menu is added to an existing menu, it is automatically destroyed when that menu is destroyed.  
   
- Avant de quitter, l’application doit libérer les ressources système associées à un menu contextuel si le menu n’est pas assigné à une fenêtre. Une application libère un menu en appelant le [DestroyMenu](#destroymenu) fonction membre.  
+ Before exiting, an application must free system resources associated with a pop-up menu if the menu is not assigned to a window. An application frees a menu by calling the [DestroyMenu](#destroymenu) member function.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::CreateMenu](#createmenu).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="deletemenu"></a>CMenu::DeleteMenu  
- Supprime un élément dans le menu.  
+##  <a name="deletemenu"></a>  CMenu::DeleteMenu  
+ Deletes an item from the menu.  
   
 ```  
 BOOL DeleteMenu(
@@ -417,97 +450,97 @@ BOOL DeleteMenu(
     UINT nFlags);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nPosition`  
- Spécifie l’élément de menu qui doit être supprimé, comme déterminé par `nFlags`.  
+ Specifies the menu item that is to be deleted, as determined by `nFlags`.  
   
  `nFlags`  
- Utilisé pour interpréter `nPosition` de la façon suivante :  
+ Is used to interpret `nPosition` in the following way:  
   
-|nIndicateurs|Interprétation de nPosition|  
+|nFlags|Interpretation of nPosition|  
 |------------|---------------------------------|  
-|**MF_BYCOMMAND**|Spécifie que le paramètre indique l’ID de commande de l’élément de menu existant. Ceci est la valeur par défaut si aucune **MF_BYCOMMAND** ni **MF_BYPOSITION** est défini.|  
-|**MF_BYPOSITION**|Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0.|  
+|**MF_BYCOMMAND**|Specifies that the parameter gives the command ID of the existing menu item. This is the default if neither **MF_BYCOMMAND** nor **MF_BYPOSITION** is set.|  
+|**MF_BYPOSITION**|Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.|  
   
-### <a name="return-value"></a>Valeur de retour  
- Une valeur différente de zéro si la fonction réussit ; sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Si l’élément de menu possède un menu contextuel associé, `DeleteMenu` détruit le handle pour le menu contextuel et libère la mémoire utilisée par le menu contextuel.  
+### <a name="remarks"></a>Remarks  
+ If the menu item has an associated pop-up menu, `DeleteMenu` destroys the handle to the pop-up menu and frees the memory used by the pop-up menu.  
   
- Chaque fois qu’un menu qui réside dans une fenêtre est modifiée (ou non la fenêtre s’affiche), l’application doit appeler [CWnd::DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar).  
+ Whenever a menu that resides in a window is changed (whether or not the window is displayed), the application must call [CWnd::DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar).  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu).  
+### <a name="example"></a>Example  
+  See the example for [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu).  
   
-##  <a name="deletetempmap"></a>CMenu::DeleteTempMap  
- Appelé automatiquement par le `CWinApp` Gestionnaire de durée d’inactivité, supprime toute temporaire `CMenu` les objets créés par le [FromHandle](#fromhandle) fonction membre.  
+##  <a name="deletetempmap"></a>  CMenu::DeleteTempMap  
+ Called automatically by the `CWinApp` idle-time handler, deletes any temporary `CMenu` objects created by the [FromHandle](#fromhandle) member function.  
   
 ```  
 static void PASCAL DeleteTempMap();
 ```  
   
-### <a name="remarks"></a>Notes  
- `DeleteTempMap`Détache l’objet de menu Windows attachée à une valeur temporaire `CMenu` objet avant de supprimer le `CMenu` objet.  
+### <a name="remarks"></a>Remarks  
+ `DeleteTempMap` detaches the Windows menu object attached to a temporary `CMenu` object before deleting the `CMenu` object.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCWindowing #23](../../mfc/reference/codesnippet/cpp/cmenu-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#23](../../mfc/reference/codesnippet/cpp/cmenu-class_3.cpp)]  
   
-##  <a name="destroymenu"></a>CMenu::DestroyMenu  
- Détruit le menu et toutes les ressources de Windows qui ont été utilisés.  
+##  <a name="destroymenu"></a>  CMenu::DestroyMenu  
+ Destroys the menu and any Windows resources that were used.  
   
 ```  
 BOOL DestroyMenu();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le menu est détruit ; Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the menu is destroyed; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Le menu est détaché de la `CMenu` de l’objet avant d’être détruit. Les fenêtres `DestroyMenu` fonction est appelée automatiquement dans le `CMenu` destructeur.  
+### <a name="remarks"></a>Remarks  
+ The menu is detached from the `CMenu` object before it is destroyed. The Windows `DestroyMenu` function is automatically called in the `CMenu` destructor.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::CreateMenu](#createmenu).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="detach"></a>CMenu::Detach  
- Détache un menu Windows un `CMenu` de l’objet et retourne le handle.  
+##  <a name="detach"></a>  CMenu::Detach  
+ Detaches a Windows menu from a `CMenu` object and returns the handle.  
   
 ```  
 HMENU Detach();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Le handle, de type `HMENU`, à un menu Windows, en cas de réussite ; **NULL**.  
+### <a name="return-value"></a>Return Value  
+ The handle, of type `HMENU`, to a Windows menu, if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>Remarques  
- Le `m_hMenu` membre de données est défini **NULL**.  
+### <a name="remarks"></a>Remarks  
+ The `m_hMenu` data member is set to **NULL**.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCWindowing #21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="drawitem"></a>CMenu::DrawItem  
- Appelé par le framework lorsqu’un aspect visuel d’une modification de menu owner-drawn.  
+##  <a name="drawitem"></a>  CMenu::DrawItem  
+ Called by the framework when a visual aspect of an owner-drawn menu changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- Un pointeur vers un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure qui contient des informations sur le type de dessin nécessaire.  
+ A pointer to a [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure that contains information about the type of drawing required.  
   
-### <a name="remarks"></a>Notes  
- Le `itemAction` membre de la `DRAWITEMSTRUCT` structure définit l’action de dessin qui doit être effectuée. Remplacez cette fonction membre pour implémenter le dessin pour un mode owner-draw `CMenu` objet. L’application doit restaurer tous les objets interface GDI périphérique graphique sélectionnés pour le contexte d’affichage fournie dans `lpDrawItemStruct` avant l’arrêt de cette fonction membre.  
+### <a name="remarks"></a>Remarks  
+ The `itemAction` member of the `DRAWITEMSTRUCT` structure defines the drawing action that is to be performed. Override this member function to implement drawing for an owner-draw `CMenu` object. The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before the termination of this member function.  
   
- Consultez [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) pour obtenir une description de la `DRAWITEMSTRUCT` structure.  
+ See [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) for a description of the `DRAWITEMSTRUCT` structure.  
   
-### <a name="example"></a>Exemple  
- Le code suivant présente de la bibliothèque MFC [CTRLTEST](../../visual-cpp-samples.md) exemple :  
+### <a name="example"></a>Example  
+ The following code is from the MFC [CTRLTEST](../../visual-cpp-samples.md) sample:  
   
- [!code-cpp[NVC_MFCWindowing #24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]  
+ [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]  
   
-##  <a name="enablemenuitem"></a>CMenu::EnableMenuItem  
- Active, désactive ou efface un élément de menu.  
+##  <a name="enablemenuitem"></a>  CMenu::EnableMenuItem  
+ Enables, disables, or dims a menu item.  
   
 ```  
 UINT EnableMenuItem(
@@ -515,60 +548,60 @@ UINT EnableMenuItem(
     UINT nEnable);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *nIDEnableItem*  
- Spécifie l’élément de menu doit être activé, comme déterminé par `nEnable`. Ce paramètre peut spécifier les éléments de menu contextuel, ainsi que des éléments de menu standard.  
+ Specifies the menu item to be enabled, as determined by `nEnable`. This parameter can specify pop-up menu items as well as standard menu items.  
   
  `nEnable`  
- Spécifie l’action à entreprendre. Il peut être une combinaison de **MF_DISABLED**, `MF_ENABLED`, ou **MF_GRAYED**, avec **MF_BYCOMMAND** ou **MF_BYPOSITION**. Ces valeurs peuvent être combinées à l’aide de l’opérateur OR au niveau du bit. Ces valeurs ont les significations suivantes :  
+ Specifies the action to take. It can be a combination of **MF_DISABLED**, `MF_ENABLED`, or **MF_GRAYED**, with **MF_BYCOMMAND** or **MF_BYPOSITION**. These values can be combined by using the bitwise OR operator. These values have the following meanings:  
   
-- **MF_BYCOMMAND** Spécifie que le paramètre indique l’ID de commande de l’élément de menu existant. Il s'agit de la valeur par défaut.  
+- **MF_BYCOMMAND** Specifies that the parameter gives the command ID of the existing menu item. This is the default.  
   
-- **MF_BYPOSITION** Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0.  
+- **MF_BYPOSITION** Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.  
   
-- **MF_DISABLED** désactive l’élément de menu afin qu’il ne peut pas être sélectionné, mais n’est pas estomper.  
+- **MF_DISABLED** Disables the menu item so that it cannot be selected but does not dim it.  
   
-- `MF_ENABLED`Permet à l’élément de menu pour qu’il peut être sélectionné et le restaure à partir de son état estompé.  
+- `MF_ENABLED` Enables the menu item so that it can be selected and restores it from its dimmed state.  
   
-- **MF_GRAYED** désactive l’élément de menu pour qu’il ne peut pas être sélectionné et il estompe.  
+- **MF_GRAYED** Disables the menu item so that it cannot be selected and dims it.  
   
-### <a name="return-value"></a>Valeur de retour  
- État précédent ( **MF_DISABLED**, `MF_ENABLED`, ou **MF_GRAYED**) ou -1 si elle est non valide.  
+### <a name="return-value"></a>Return Value  
+ Previous state ( **MF_DISABLED**, `MF_ENABLED`, or **MF_GRAYED**) or -1 if not valid.  
   
-### <a name="remarks"></a>Remarques  
- Le [CreateMenu](#createmenu), [InsertMenu](#insertmenu), [ModifyMenu](#modifymenu), et [LoadMenuIndirect](#loadmenuindirect) fonctions membres peuvent également définir l’état (activé, désactivé ou grisé) d’un élément de menu.  
+### <a name="remarks"></a>Remarks  
+ The [CreateMenu](#createmenu), [InsertMenu](#insertmenu), [ModifyMenu](#modifymenu), and [LoadMenuIndirect](#loadmenuindirect) member functions can also set the state (enabled, disabled, or dimmed) of a menu item.  
   
- À l’aide de la **MF_BYPOSITION** valeur requiert une application pour utiliser le bon `CMenu`. Si le `CMenu` du menu barre est utilisée, un élément de menu de niveau supérieur (il s’agit d’un élément dans la barre de menus) est affecté. Pour définir l’état d’un élément dans un menu contextuel ou imbriqué par position, une application doit spécifier le `CMenu` du menu contextuel.  
+ Using the **MF_BYPOSITION** value requires an application to use the correct `CMenu`. If the `CMenu` of the menu bar is used, a top-level menu item (an item in the menu bar) is affected. To set the state of an item in a pop-up or nested pop-up menu by position, an application must specify the `CMenu` of the pop-up menu.  
   
- Lorsqu’une application spécifie la **MF_BYCOMMAND** indicateur, Windows vérifie tous les éléments de menu contextuel qui dépendent de la `CMenu`; par conséquent, sauf si les éléments de menu en double sont présentes, à l’aide la `CMenu` du menu barre est suffisante.  
+ When an application specifies the **MF_BYCOMMAND** flag, Windows checks all pop-up menu items that are subordinate to the `CMenu`; therefore, unless duplicate menu items are present, using the `CMenu` of the menu bar is sufficient.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCWindowing #25](../../mfc/reference/codesnippet/cpp/cmenu-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#25](../../mfc/reference/codesnippet/cpp/cmenu-class_5.cpp)]  
   
-##  <a name="fromhandle"></a>CMenu::FromHandle  
- Retourne un pointeur vers un `CMenu` objet en fonction d’un handle Windows à un menu.  
+##  <a name="fromhandle"></a>  CMenu::FromHandle  
+ Returns a pointer to a `CMenu` object given a Windows handle to a menu.  
   
 ```  
 static CMenu* PASCAL FromHandle(HMENU hMenu);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `hMenu`  
- Handle Windows d’un menu.  
+ A Windows handle to a menu.  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers un `CMenu` qui peut être temporaire ou permanent.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CMenu` that may be temporary or permanent.  
   
-### <a name="remarks"></a>Notes  
- Si un `CMenu` objet n’est pas déjà attaché à l’objet menu Windows, une valeur temporaire `CMenu` objet est créé et attaché.  
+### <a name="remarks"></a>Remarks  
+ If a `CMenu` object is not already attached to the Windows menu object, a temporary `CMenu` object is created and attached.  
   
- Ce fichier temporaire `CMenu` objet est uniquement valide jusqu'à la prochaine fois que l’application a des temps d’inactivité dans sa boucle d’événements, auquel cas tous les objets temporaires sont supprimés.  
+ This temporary `CMenu` object is only valid until the next time the application has idle time in its event loop, at which time all temporary objects are deleted.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::CreateMenu](#createmenu).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::CreateMenu](#createmenu).  
   
-##  <a name="getdefaultitem"></a>CMenu::GetDefaultItem  
- Détermine l’élément de menu par défaut dans le menu spécifié.  
+##  <a name="getdefaultitem"></a>  CMenu::GetDefaultItem  
+ Determines the default menu item on the specified menu.  
   
 ```  
 UINT GetDefaultItem(
@@ -576,89 +609,89 @@ UINT GetDefaultItem(
     BOOL fByPos = FALSE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *gmdiFlags*  
- Valeur qui spécifie la façon dont la fonction de recherche des éléments de menu. Ce paramètre peut être none, une ou une combinaison des valeurs suivantes :  
+ Value specifying how the function searches for menu items. This parameter can be none, one, or a combination of the following values:  
   
-|Valeur|Signification|  
+|Value|Meaning|  
 |-----------|-------------|  
-|**GMDI_GOINTOPOPUPS**|Spécifie que, si la valeur par défaut est un élément qui ouvre un sous-menu, la fonction à rechercher dans le sous-menu correspondant de manière récursive. Si le sous-menu a pas de valeur par défaut, la valeur de retour identifie l’élément qui ouvre le sous-menu.<br /><br /> Par défaut, la fonction retourne le premier élément de la valeur par défaut dans le menu spécifié, qu’il s’agisse d’un élément qui ouvre un sous-menu.|  
-|**GMDI_USEDISABLED**|Spécifie que la fonction doit renvoyer un élément par défaut, même si elle est désactivée.<br /><br /> Par défaut, la fonction ignore les éléments désactivées et grisées.|  
+|**GMDI_GOINTOPOPUPS**|Specifies that, if the default item is one that opens a submenu, the function is to search in the corresponding submenu recursively. If the submenu has no default item, the return value identifies the item that opens the submenu.<br /><br /> By default, the function returns the first default item on the specified menu, regardless of whether it is an item that opens a submenu.|  
+|**GMDI_USEDISABLED**|Specifies that the function is to return a default item, even if it is disabled.<br /><br /> By default, the function skips disabled or grayed items.|  
   
  `fByPos`  
- Valeur qui spécifie s’il faut récupérer l’identificateur de l’élément de menu ou de sa position. Si ce paramètre est **FALSE**, l’identificateur est retourné. Dans le cas contraire, la position est retournée.  
+ Value specifying whether to retrieve the menu item's identifier or its position. If this parameter is **FALSE**, the identifier is returned. Otherwise, the position is returned.  
   
-### <a name="return-value"></a>Valeur de retour  
- Si la fonction réussit, la valeur de retour est l’identificateur ou la position de l’élément de menu. Si la fonction échoue, la valeur de retour est - 1.  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value is the identifier or position of the menu item. If the function fails, the return value is - 1.  
   
-### <a name="remarks"></a>Remarques  
- Cette fonction membre implémente le comportement de la fonction Win32 [GetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647976), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 function [GetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647976), as described in the Windows SDK.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::InsertMenu](#insertmenu).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getmenucontexthelpid"></a>CMenu::GetMenuContextHelpId  
- Récupère l’aide du contexte associé à un ID `CMenu`.  
+##  <a name="getmenucontexthelpid"></a>  CMenu::GetMenuContextHelpId  
+ Retrieves the context help ID associated with `CMenu`.  
   
 ```  
 DWORD GetMenuContextHelpId() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- L’aide contextuelle ID associé actuellement `CMenu` le cas échéant ; sinon, de zéro.  
+### <a name="return-value"></a>Return Value  
+ The context help ID currently associated with `CMenu` if it has one; zero otherwise.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::InsertMenu](#insertmenu).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getmenuinfo"></a>CMenu::GetMenuInfo  
- Récupère les informations pour un menu.  
+##  <a name="getmenuinfo"></a>  CMenu::GetMenuInfo  
+ Retrieves information for a menu.  
   
 ```  
 BOOL GetMenuInfo(LPMENUINFO lpcmi) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpcmi`  
- Un pointeur vers un [MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575) structure contenant des informations pour le menu.  
+ A pointer to a [MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575) structure containing information for the menu.  
   
-### <a name="return-value"></a>Valeur de retour  
- Si la fonction réussit, la valeur de retour est différent de zéro ; Sinon, la valeur de retour est zéro.  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value is nonzero; otherwise, the return value is zero.  
   
-### <a name="remarks"></a>Remarques  
- Appelez cette fonction pour récupérer des informations sur le menu.  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve information about the menu.  
   
-##  <a name="getmenuitemcount"></a>CMenu::GetMenuItemCount  
- Détermine le nombre d’éléments dans un menu contextuel ou de niveau supérieur.  
+##  <a name="getmenuitemcount"></a>  CMenu::GetMenuItemCount  
+ Determines the number of items in a pop-up or top-level menu.  
   
 ```  
 UINT GetMenuItemCount() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Le nombre d’éléments dans le menu si la fonction réussit ; Sinon,-1.  
+### <a name="return-value"></a>Return Value  
+ The number of items in the menu if the function is successful; otherwise -1.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu).  
+### <a name="example"></a>Example  
+  See the example for [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu).  
   
-##  <a name="getmenuitemid"></a>CMenu::GetMenuItemID  
- Obtient l’identificateur de l’élément de menu pour un élément de menu situé à l’emplacement défini par `nPos`.  
+##  <a name="getmenuitemid"></a>  CMenu::GetMenuItemID  
+ Obtains the menu-item identifier for a menu item located at the position defined by `nPos`.  
   
 ```  
 UINT GetMenuItemID(int nPos) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- Spécifie la position (base zéro) de l’élément de menu dont l’ID est en cours de récupération.  
+ Specifies the position (zero-based) of the menu item whose ID is being retrieved.  
   
-### <a name="return-value"></a>Valeur de retour  
- L’ID d’élément pour l’élément spécifié dans un menu contextuel si la fonction réussit. Si l’élément spécifié est un menu déroulant (par opposition à un élément dans le menu contextuel), la valeur de retour est -1. Si `nPos` correspond à un **séparateur** élément de menu, la valeur de retour est 0.  
+### <a name="return-value"></a>Return Value  
+ The item ID for the specified item in a pop-up menu if the function is successful. If the specified item is a pop-up menu (as opposed to an item within the pop-up menu), the return value is -1. If `nPos` corresponds to a **SEPARATOR** menu item, the return value is 0.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::InsertMenu](#insertmenu).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getmenuiteminfo"></a>CMenu::GetMenuItemInfo  
- Récupère des informations sur un élément de menu.  
+##  <a name="getmenuiteminfo"></a>  CMenu::GetMenuItemInfo  
+ Retrieves information about a menu item.  
   
 ```  
 BOOL GetMenuItemInfo(
@@ -667,27 +700,27 @@ BOOL GetMenuItemInfo(
     BOOL fByPos = FALSE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `uItem`  
- Identificateur ou la position de l’élément de menu pour obtenir des informations. La signification de ce paramètre dépend de la valeur de `ByPos`.  
+ Identifier or position of the menu item to get information about. The meaning of this parameter depends on the value of `ByPos`.  
   
  `lpMenuItemInfo`  
- Un pointeur vers un [MENUITEMINFO](http://msdn.microsoft.com/library/windows/desktop/ms647578), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)], qui contient des informations sur le menu.  
+ A pointer to a [MENUITEMINFO](http://msdn.microsoft.com/library/windows/desktop/ms647578), as described in the Windows SDK, that contains information about the menu.  
   
  `fByPos`  
- Valeur spécifiant la signification de `nIDItem`. Par défaut, `ByPos` est **FALSE**, ce qui signifie qu’uItem est un identificateur d’élément de menu. Si `ByPos` n’est pas définie **FALSE**, il indique la position d’un élément de menu.  
+ Value specifying the meaning of `nIDItem`. By default, `ByPos` is **FALSE**, which indicates that uItem is a menu item identifier. If `ByPos` is not set to **FALSE**, it indicates a menu item position.  
   
-### <a name="return-value"></a>Valeur de retour  
- Si la fonction réussit, la valeur de retour est différente de zéro. Si la fonction échoue, la valeur de retour est égale à zéro. Pour obtenir des informations d’erreur plus complètes, utilisez la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value is nonzero. If the function fails, the return value is zero. To get extended error information, use the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360), as described in the Windows SDK.  
   
-### <a name="remarks"></a>Remarques  
- Cette fonction membre implémente le comportement de la de la fonction Win32 [GetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms647980), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Notez que dans l’implémentation MFC de `GetMenuItemInfo`, vous n’utilisez pas un handle à un menu.  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the of the Win32 function [GetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms647980), as described in the Windows SDK. Note that in the MFC implementation of `GetMenuItemInfo`, you do not use a handle to a menu.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCWindowing #26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
   
-##  <a name="getmenustate"></a>CMenu::GetMenuState  
- Retourne l’état de l’élément de menu spécifié ou le nombre d’éléments dans un menu contextuel.  
+##  <a name="getmenustate"></a>  CMenu::GetMenuState  
+ Returns the status of the specified menu item or the number of items in a pop-up menu.  
   
 ```  
 UINT GetMenuState(
@@ -695,41 +728,41 @@ UINT GetMenuState(
     UINT nFlags) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nID`  
- Spécifie l’ID d’élément de menu, comme déterminé par `nFlags`.  
+ Specifies the menu item ID, as determined by `nFlags`.  
   
  `nFlags`  
- Spécifie la nature de `nID`. Il peut prendre l’une des valeurs suivantes :  
+ Specifies the nature of `nID`. It can be one of the following values:  
   
-- **MF_BYCOMMAND** Spécifie que le paramètre indique l’ID de commande de l’élément de menu existant. Il s'agit de la valeur par défaut.  
+- **MF_BYCOMMAND** Specifies that the parameter gives the command ID of the existing menu item. This is the default.  
   
-- **MF_BYPOSITION** Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0.  
+- **MF_BYPOSITION** Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.  
   
-### <a name="return-value"></a>Valeur de retour  
- La valeur 0xFFFFFFFF si l’élément spécifié n’existe pas. Si *nId* identifie un menu contextuel, l’octet de poids fort contient le nombre d’éléments dans le menu contextuel et l’octet de poids faible contient les indicateurs de menu associés à la liste déroulante. Sinon, la valeur de retour est un masque (ou booléenne) des valeurs dans la liste suivante (ce masque décrit l’état du menu élément *nId* identifie) :  
+### <a name="return-value"></a>Return Value  
+ The value 0xFFFFFFFF if the specified item does not exist. If *nId* identifies a pop-up menu, the high-order byte contains the number of items in the pop-up menu and the low-order byte contains the menu flags associated with the pop-up menu. Otherwise the return value is a mask (Boolean OR) of the values from the following list (this mask describes the status of the menu item that *nId* identifies):  
   
-- **MF_CHECKED** agit comme un bouton bascule avec **MF_UNCHECKED** pour placer la case à cocher en regard de l’élément par défaut. Lorsque l’application fournit des images bitmap de coche (consultez la `SetMenuItemBitmaps` fonction membre), l’image de la case à cocher « sur » s’affiche.  
+- **MF_CHECKED** Acts as a toggle with **MF_UNCHECKED** to place the default check mark next to the item. When the application supplies check-mark bitmaps (see the `SetMenuItemBitmaps` member function), the "check mark on" bitmap is displayed.  
   
-- **MF_DISABLED** désactive l’élément de menu afin qu’il ne peut pas être sélectionné, mais n’est pas estomper.  
+- **MF_DISABLED** Disables the menu item so that it cannot be selected but does not dim it.  
   
-- `MF_ENABLED`Permet à l’élément de menu pour qu’il peut être sélectionné et le restaure à partir de son état estompé. Notez que la valeur de cette constante est 0 ; une application doit tester pas 0 pour un échec lors de l’utilisation de cette valeur.  
+- `MF_ENABLED` Enables the menu item so that it can be selected and restores it from its dimmed state. Note that the value of this constant is 0; an application should not test against 0 for failure when using this value.  
   
-- **MF_GRAYED** désactive l’élément de menu pour qu’il ne peut pas être sélectionné et il estompe.  
+- **MF_GRAYED** Disables the menu item so that it cannot be selected and dims it.  
   
-- **MF_MENUBARBREAK** place l’élément sur une nouvelle ligne dans les menus statiques ou dans une nouvelle colonne dans les menus contextuels. La nouvelle colonne de menu contextuel doivent être séparée de l’ancienne par une ligne de séparation verticale.  
+- **MF_MENUBARBREAK** Places the item on a new line in static menus or in a new column in pop-up menus. The new pop-up menu column will be separated from the old column by a vertical dividing line.  
   
-- **MF_MENUBREAK** place l’élément sur une nouvelle ligne dans les menus statiques ou dans une nouvelle colonne dans les menus contextuels. Aucune ligne de démarcation n’est placé entre les colonnes.  
+- **MF_MENUBREAK** Places the item on a new line in static menus or in a new column in pop-up menus. No dividing line is placed between the columns.  
   
-- **MF_SEPARATOR** Dessine une ligne de démarcation horizontale. Peut uniquement être utilisé dans un menu contextuel. Cette ligne ne peut pas être estompée, désactivée ou mis en surbrillance. Autres paramètres sont ignorés.  
+- **MF_SEPARATOR** Draws a horizontal dividing line. Can only be used in a pop-up menu. This line cannot be dimmed, disabled, or highlighted. Other parameters are ignored.  
   
-- **MF_UNCHECKED** agit comme un bouton bascule avec **MF_CHECKED** pour supprimer une case à cocher en regard de l’élément. Lorsque l’application fournit des images bitmap de coche (consultez la `SetMenuItemBitmaps` fonction membre), l’image de la case à cocher « désactivé » s’affiche. Notez que la valeur de cette constante est 0 ; une application doit tester pas 0 pour un échec lors de l’utilisation de cette valeur.  
+- **MF_UNCHECKED** Acts as a toggle with **MF_CHECKED** to remove a check mark next to the item. When the application supplies check-mark bitmaps (see the `SetMenuItemBitmaps` member function), the "check mark off" bitmap is displayed. Note that the value of this constant is 0; an application should not test against 0 for failure when using this value.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCWindowing #27](../../mfc/reference/codesnippet/cpp/cmenu-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#27](../../mfc/reference/codesnippet/cpp/cmenu-class_7.cpp)]  
   
-##  <a name="getmenustring"></a>CMenu::GetMenuString  
- Copie l’étiquette de l’élément de menu spécifié dans la mémoire tampon spécifiée.  
+##  <a name="getmenustring"></a>  CMenu::GetMenuString  
+ Copies the label of the specified menu item to the specified buffer.  
   
 ```  
 int GetMenuString(
@@ -744,65 +777,65 @@ int GetMenuString(
     UINT nFlags) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIDItem`  
- Spécifie l’identificateur entier de l’élément de menu ou le décalage de l’élément de menu dans le menu, selon la valeur de `nFlags`.  
+ Specifies the integer identifier of the menu item or the offset of the menu item in the menu, depending on the value of `nFlags`.  
   
  `lpString`  
- Pointe vers la mémoire tampon qui reçoit l’étiquette.  
+ Points to the buffer that is to receive the label.  
   
  `rString`  
- Une référence à un `CString` objet qui doit recevoir la chaîne copiée de menu.  
+ A reference to a `CString` object that is to receive the copied menu string.  
   
  `nMaxCount`  
- Spécifie la longueur maximale (en caractères) de l’étiquette doit être copié. Si l’étiquette est plus longue que le maximum spécifié dans `nMaxCount`, les caractères supplémentaires sont tronqués.  
+ Specifies the maximum length (in characters) of the label to be copied. If the label is longer than the maximum specified in `nMaxCount`, the extra characters are truncated.  
   
  `nFlags`  
- Spécifie l’interprétation de le `nIDItem` paramètre. Il peut prendre l’une des valeurs suivantes :  
+ Specifies the interpretation of the `nIDItem` parameter. It can be one of the following values:  
   
-|nIndicateurs|Interprétation de nIDItem|  
+|nFlags|Interpretation of nIDItem|  
 |------------|-------------------------------|  
-|**MF_BYCOMMAND**|Spécifie que le paramètre indique l’ID de commande de l’élément de menu existant. Ceci est la valeur par défaut si aucune **MF_BYCOMMAND** ni **MF_BYPOSITION** est défini.|  
-|**MF_BYPOSITION**|Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0.|  
+|**MF_BYCOMMAND**|Specifies that the parameter gives the command ID of the existing menu item. This is the default if neither **MF_BYCOMMAND** nor **MF_BYPOSITION** is set.|  
+|**MF_BYPOSITION**|Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.|  
   
-### <a name="return-value"></a>Valeur de retour  
- Spécifie le nombre réel de caractères copiés dans la mémoire tampon, non compris le terminateur null.  
+### <a name="return-value"></a>Return Value  
+ Specifies the actual number of characters copied to the buffer, not including the null terminator.  
   
-### <a name="remarks"></a>Remarques  
- Le `nMaxCount` paramètre doit être supérieure au nombre de caractères dans l’étiquette en fonction du caractère null qui met fin à une chaîne.  
+### <a name="remarks"></a>Remarks  
+ The `nMaxCount` parameter should be one larger than the number of characters in the label to accommodate the null character that terminates a string.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::InsertMenu](#insertmenu).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="getsafehmenu"></a>CMenu::GetSafeHmenu  
- Retourne le `HMENU` encapsulé par `CMenu` objet, ou un **NULL** `CMenu` pointeur.  
+##  <a name="getsafehmenu"></a>  CMenu::GetSafeHmenu  
+ Returns the `HMENU` wrapped by this `CMenu` object, or a **NULL**`CMenu` pointer.  
   
 ```  
 HMENU GetSafeHmenu() const;  
 ```  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::LoadMenu](#loadmenu).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::LoadMenu](#loadmenu).  
   
-##  <a name="getsubmenu"></a>CMenu::GetSubMenu  
- Récupère le `CMenu` l’objet d’un menu contextuel.  
+##  <a name="getsubmenu"></a>  CMenu::GetSubMenu  
+ Retrieves the `CMenu` object of a pop-up menu.  
   
 ```  
 CMenu* GetSubMenu(int nPos) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- Spécifie la position du menu contextuel contenu dans le menu. Valeurs de position commencent à 0 pour le premier élément de menu. Identificateur du menu contextuel ne peut pas être utilisé dans cette fonction.  
+ Specifies the position of the pop-up menu contained in the menu. Position values start at 0 for the first menu item. The pop-up menu's identifier cannot be used in this function.  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers un `CMenu` dont l’objet `m_hMenu` membre contient un handle vers le menu contextuel si un menu contextuel existe à la position donnée ; sinon **NULL**. Si un `CMenu` objet n’existe pas, puis un objet temporaire est créé. Le `CMenu` pointeur retourné ne doit pas être stocké.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CMenu` object whose `m_hMenu` member contains a handle to the pop-up menu if a pop-up menu exists at the given position; otherwise **NULL**. If a `CMenu` object does not exist, then a temporary one is created. The `CMenu` pointer returned should not be stored.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::TrackPopupMenu](#trackpopupmenu).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::TrackPopupMenu](#trackpopupmenu).  
   
-##  <a name="insertmenu"></a>CMenu::InsertMenu  
- Insère un nouvel élément de menu à la position spécifiée par `nPosition` et déplace les autres éléments du menu déroulant.  
+##  <a name="insertmenu"></a>  CMenu::InsertMenu  
+ Inserts a new menu item at the position specified by `nPosition` and moves other items down the menu.  
   
 ```  
 BOOL InsertMenu(
@@ -819,50 +852,50 @@ BOOL InsertMenu(
     const CBitmap* pBmp);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nPosition`  
- Spécifie l’élément de menu avant laquelle le nouvel élément de menu doit être inséré. Le `nFlags` paramètre peut être utilisé pour interpréter `nPosition` comme suit :  
+ Specifies the menu item before which the new menu item is to be inserted. The `nFlags` parameter can be used to interpret `nPosition` in the following ways:  
   
-|nIndicateurs|Interprétation de nPosition|  
+|nFlags|Interpretation of nPosition|  
 |------------|---------------------------------|  
-|**MF_BYCOMMAND**|Spécifie que le paramètre indique l’ID de commande de l’élément de menu existant. Ceci est la valeur par défaut si aucune **MF_BYCOMMAND** ni **MF_BYPOSITION** est défini.|  
-|**MF_BYPOSITION**|Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0. Si `nPosition` est -1, le nouvel élément de menu est ajouté à la fin du menu.|  
+|**MF_BYCOMMAND**|Specifies that the parameter gives the command ID of the existing menu item. This is the default if neither **MF_BYCOMMAND** nor **MF_BYPOSITION** is set.|  
+|**MF_BYPOSITION**|Specifies that the parameter gives the position of the existing menu item. The first item is at position 0. If `nPosition` is -1, the new menu item is appended to the end of the menu.|  
   
  `nFlags`  
- Spécifie comment `nPosition` est interprété et spécifie des informations sur l’état du nouvel élément de menu lorsqu’il est ajouté au menu. Pour obtenir la liste des indicateurs qui peuvent être définis, consultez la [AppendMenu](#appendmenu) fonction membre. Pour spécifier plusieurs valeurs, utilisez l’opérateur OR au niveau du bit pour les combiner avec le **MF_BYCOMMAND** ou **MF_BYPOSITION** indicateur.  
+ Specifies how `nPosition` is interpreted and specifies information about the state of the new menu item when it is added to the menu. For a list of the flags that may be set, see the [AppendMenu](#appendmenu) member function. To specify more than one value, use the bitwise OR operator to combine them with the **MF_BYCOMMAND** or **MF_BYPOSITION** flag.  
   
  `nIDNewItem`  
- Spécifie l’ID de commande du nouvel élément de menu ou, si `nFlags` a la valeur **MF_POPUP**, le handle de menu ( `HMENU`) du menu contextuel. Le `nIDNewItem` paramètre est ignoré (non nécessaire) si `nFlags` a la valeur **MF_SEPARATOR**.  
+ Specifies either the command ID of the new menu item or, if `nFlags` is set to **MF_POPUP**, the menu handle ( `HMENU`) of the pop-up menu. The `nIDNewItem` parameter is ignored (not needed) if `nFlags` is set to **MF_SEPARATOR**.  
   
  `lpszNewItem`  
- Spécifie le contenu du nouvel élément de menu. `nFlags`peut être utilisé pour interpréter `lpszNewItem` comme suit :  
+ Specifies the content of the new menu item. `nFlags` can be used to interpret `lpszNewItem` in the following ways:  
   
-|nIndicateurs|Interprétation de lpszNewItem|  
+|nFlags|Interpretation of lpszNewItem|  
 |------------|-----------------------------------|  
-|`MF_OWNERDRAW`|Contient une valeur de 32 bits fournie par l’application que l’application peut utiliser pour mettre à jour les données supplémentaires associées à l’élément de menu. Cette valeur de 32 bits est disponible à l’application dans le **itemData** membre de la structure fournie par le [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) et [WM_DRAWITEM](http://msdn.microsoft.com/library/windows/desktop/bb775923) messages. Ces messages sont envoyés lors de l’élément de menu est initialement affiché ou est modifié.|  
-|**MF_STRING**|Contient un pointeur long vers une chaîne se terminant par null. Il s’agit de l’interprétation par défaut.|  
-|**MF_SEPARATOR**|Le `lpszNewItem` paramètre est ignoré (ne pas nécessaire).|  
+|`MF_OWNERDRAW`|Contains an application-supplied 32-bit value that the application can use to maintain additional data associated with the menu item. This 32-bit value is available to the application in the **itemData** member of the structure supplied by the [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) and [WM_DRAWITEM](http://msdn.microsoft.com/library/windows/desktop/bb775923) messages. These messages are sent when the menu item is initially displayed or is changed.|  
+|**MF_STRING**|Contains a long pointer to a null-terminated string. This is the default interpretation.|  
+|**MF_SEPARATOR**|The `lpszNewItem` parameter is ignored (not needed).|  
   
  *pBmp*  
- Pointe vers un `CBitmap` objet qui sera utilisé en tant que l’élément de menu.  
+ Points to a `CBitmap` object that will be used as the menu item.  
   
-### <a name="return-value"></a>Valeur de retour  
- Une valeur différente de zéro si la fonction réussit ; sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- L’application peut spécifier l’état de l’élément de menu en définissant les valeurs de `nFlags`.  
+### <a name="remarks"></a>Remarks  
+ The application can specify the state of the menu item by setting values in `nFlags`.  
   
- Chaque fois qu’un menu qui réside dans une fenêtre est modifiée (ou non la fenêtre s’affiche), l’application doit appeler `CWnd::DrawMenuBar`.  
+ Whenever a menu that resides in a window is changed (whether or not the window is displayed), the application should call `CWnd::DrawMenuBar`.  
   
- Lorsque `nIDNewItem` spécifie un menu contextuel, il devient partie intégrante du menu dans lequel elle est insérée. Si ce menu est détruit, le menu inséré sera également détruit. Un menu inséré doit être détaché d’un `CMenu` objet pour éviter tout conflit.  
+ When `nIDNewItem` specifies a pop-up menu, it becomes part of the menu in which it is inserted. If that menu is destroyed, the inserted menu will also be destroyed. An inserted menu should be detached from a `CMenu` object to avoid conflict.  
   
- Si la fenêtre interface multidocument (MDI) enfant est agrandie actif et une application insère un menu contextuel dans le menu de l’application MDI en appelant cette fonction et en spécifiant le **MF_BYPOSITION** indicateur, le menu est inséré une position gauche de plus que prévu. Cela se produit parce que le menu de contrôle de la fenêtre enfant MDI active est inséré dans la première position de la barre de menus de la fenêtre frame MDI. Pour positionner le menu correctement, l’application doit ajouter 1 à la valeur de position qui serait utilisée sinon. Une application peut utiliser le **WM_MDIGETACTIVE** message afin de déterminer si la fenêtre enfant active est agrandie.  
+ If the active multiple document interface (MDI) child window is maximized and an application inserts a pop-up menu into the MDI application's menu by calling this function and specifying the **MF_BYPOSITION** flag, the menu is inserted one position farther left than expected. This happens because the Control menu of the active MDI child window is inserted into the first position of the MDI frame window's menu bar. To position the menu properly, the application must add 1 to the position value that would otherwise be used. An application can use the **WM_MDIGETACTIVE** message to determine whether the currently active child window is maximized.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCWindowing #28](../../mfc/reference/codesnippet/cpp/cmenu-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#28](../../mfc/reference/codesnippet/cpp/cmenu-class_8.cpp)]  
   
-##  <a name="insertmenuitem"></a>CMenu::InsertMenuItem  
- Insère un nouvel élément de menu à la position spécifiée dans un menu.  
+##  <a name="insertmenuitem"></a>  CMenu::InsertMenuItem  
+ Inserts a new menu item at the specified position in a menu.  
   
 ```  
 BOOL InsertMenuItem(
@@ -871,104 +904,104 @@ BOOL InsertMenuItem(
     BOOL fByPos = FALSE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `uItem`  
- Consultez la description de `uItem` dans [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ See description of `uItem` in [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988) in the Windows SDK.  
   
  `lpMenuItemInfo`  
- Consultez la description de `lpmii` dans **InsertMenuItem** dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ See description of `lpmii` in **InsertMenuItem** in the Windows SDK.  
   
  `fByPos`  
- Consultez la description de `fByPosition` dans **InsertMenuItem** dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ See description of `fByPosition` in **InsertMenuItem** in the Windows SDK.  
   
-### <a name="remarks"></a>Remarques  
- Cette fonction encapsule [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This function wraps [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988), described in the Windows SDK.  
   
-##  <a name="loadmenu"></a>CMenu::LoadMenu  
- Charge une ressource de menu à partir du fichier exécutable de l’application et l’attache à le `CMenu` objet.  
+##  <a name="loadmenu"></a>  CMenu::LoadMenu  
+ Loads a menu resource from the application's executable file and attaches it to the `CMenu` object.  
   
 ```  
 BOOL LoadMenu(LPCTSTR lpszResourceName);  
 BOOL LoadMenu(UINT nIDResource);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpszResourceName`  
- Pointe vers une chaîne terminée par le caractère null qui contient le nom de la ressource de menu à charger.  
+ Points to a null-terminated string that contains the name of the menu resource to load.  
   
  `nIDResource`  
- Spécifie l’ID de menu de la ressource de menu à charger.  
+ Specifies the menu ID of the menu resource to load.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si la ressource de menu a été chargée avec succès ; Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the menu resource was loaded successfully; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Avant de quitter, l’application doit libérer les ressources système associées à un menu si le menu n’est pas assigné à une fenêtre. Une application libère un menu en appelant le [DestroyMenu](#destroymenu) fonction membre.  
+### <a name="remarks"></a>Remarks  
+ Before exiting, an application must free system resources associated with a menu if the menu is not assigned to a window. An application frees a menu by calling the [DestroyMenu](#destroymenu) member function.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCWindowing #29](../../mfc/reference/codesnippet/cpp/cmenu-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#29](../../mfc/reference/codesnippet/cpp/cmenu-class_9.cpp)]  
   
-##  <a name="loadmenuindirect"></a>CMenu::LoadMenuIndirect  
- Charge une ressource à partir d’un modèle de menu dans la mémoire et l’attache à le `CMenu` objet.  
+##  <a name="loadmenuindirect"></a>  CMenu::LoadMenuIndirect  
+ Loads a resource from a menu template in memory and attaches it to the `CMenu` object.  
   
 ```  
 BOOL LoadMenuIndirect(const void* lpMenuTemplate);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *lpMenuTemplate*  
- Pointe vers un modèle de menu (c'est-à-dire un seul [MENUITEMTEMPLATEHEADER](http://msdn.microsoft.com/library/windows/desktop/ms647583) structure et une collection d’un ou plusieurs [MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581) structures). Pour plus d’informations sur ces deux structures, consultez le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Points to a menu template (which is a single [MENUITEMTEMPLATEHEADER](http://msdn.microsoft.com/library/windows/desktop/ms647583) structure and a collection of one or more [MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581) structures). For more information on these two structures, see the Windows SDK.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si la ressource de menu a été chargée avec succès ; Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the menu resource was loaded successfully; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Un modèle de menu est un en-tête suivi d’une collection d’un ou plusieurs [MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581) structures, chacun d’eux peut contenir un ou plusieurs éléments de menu et les menus contextuels.  
+### <a name="remarks"></a>Remarks  
+ A menu template is a header followed by a collection of one or more [MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581) structures, each of which may contain one or more menu items and pop-up menus.  
   
- Le numéro de version doit être 0.  
+ The version number should be 0.  
   
- Le **mtOption** doivent inclure des indicateurs **MF_END** pour le dernier élément dans une liste déroulante et du dernier élément dans la liste principale. Consultez le `AppendMenu` fonction membre pour les autres indicateurs. Le **mtId** membre doit être omis de la **MENUITEMTEMPLATE** lors de la structure **MF_POPUP** n’est spécifié dans **mtOption**.  
+ The **mtOption** flags should include **MF_END** for the last item in a pop-up list and for the last item in the main list. See the `AppendMenu` member function for other flags. The **mtId** member must be omitted from the **MENUITEMTEMPLATE** structure when **MF_POPUP** is specified in **mtOption**.  
   
- L’espace alloué pour le **MENUITEMTEMPLATE** structure doit être suffisamment grande pour **mtString** pour contenir le nom de l’élément de menu sous forme de chaîne se terminant par null.  
+ The space allocated for the **MENUITEMTEMPLATE** structure must be large enough for **mtString** to contain the name of the menu item as a null-terminated string.  
   
- Avant de quitter, l’application doit libérer les ressources système associées à un menu si le menu n’est pas assigné à une fenêtre. Une application libère un menu en appelant le [DestroyMenu](#destroymenu) fonction membre.  
+ Before exiting, an application must free system resources associated with a menu if the menu is not assigned to a window. An application frees a menu by calling the [DestroyMenu](#destroymenu) member function.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCWindowing #30](../../mfc/reference/codesnippet/cpp/cmenu-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#30](../../mfc/reference/codesnippet/cpp/cmenu-class_10.cpp)]  
   
-##  <a name="m_hmenu"></a>CMenu::m_hMenu  
- Spécifie le `HMENU` handle du menu Windows attachée à la `CMenu` objet.  
+##  <a name="m_hmenu"></a>  CMenu::m_hMenu  
+ Specifies the `HMENU` handle of the Windows menu attached to the `CMenu` object.  
   
 ```  
 HMENU m_hMenu;  
 ```  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::LoadMenu](#loadmenu).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::LoadMenu](#loadmenu).  
   
-##  <a name="measureitem"></a>CMenu::MeasureItem  
- Appelé par l’infrastructure lors de la création d’un menu avec le style mode owner-draw.  
+##  <a name="measureitem"></a>  CMenu::MeasureItem  
+ Called by the framework when a menu with the owner-draw style is created.  
   
 ```  
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpMeasureItemStruct`  
- Un pointeur vers un `MEASUREITEMSTRUCT` structure.  
+ A pointer to a `MEASUREITEMSTRUCT` structure.  
   
-### <a name="remarks"></a>Remarques  
- Par défaut, cette fonction membre ne fait rien. Remplacez cette fonction membre et renseignez la `MEASUREITEMSTRUCT` structure pour informer Windows de dimensions du menu.  
+### <a name="remarks"></a>Remarks  
+ By default, this member function does nothing. Override this member function and fill in the `MEASUREITEMSTRUCT` structure to inform Windows of the menu's dimensions.  
   
- Consultez [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) pour obtenir une description de la `MEASUREITEMSTRUCT` structure.  
+ See [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) for a description of the `MEASUREITEMSTRUCT` structure.  
   
-### <a name="example"></a>Exemple  
- Le code suivant présente de la bibliothèque MFC [CTRLTEST](../../visual-cpp-samples.md) exemple :  
+### <a name="example"></a>Example  
+ The following code is from the MFC [CTRLTEST](../../visual-cpp-samples.md) sample:  
   
- [!code-cpp[NVC_MFCWindowing #31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]  
+ [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]  
   
-##  <a name="modifymenu"></a>CMenu::ModifyMenu  
- Modifie un élément de menu existant à la position spécifiée par `nPosition`.  
+##  <a name="modifymenu"></a>  CMenu::ModifyMenu  
+ Changes an existing menu item at the position specified by `nPosition`.  
   
 ```  
 BOOL ModifyMenu(
@@ -985,89 +1018,89 @@ BOOL ModifyMenu(
     const CBitmap* pBmp);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nPosition`  
- Spécifie l’élément de menu à modifier. Le `nFlags` paramètre peut être utilisé pour interpréter `nPosition` comme suit :  
+ Specifies the menu item to be changed. The `nFlags` parameter can be used to interpret `nPosition` in the following ways:  
   
-|nIndicateurs|Interprétation de nPosition|  
+|nFlags|Interpretation of nPosition|  
 |------------|---------------------------------|  
-|**MF_BYCOMMAND**|Spécifie que le paramètre indique l’ID de commande de l’élément de menu existant. Ceci est la valeur par défaut si aucune **MF_BYCOMMAND** ni **MF_BYPOSITION** est défini.|  
-|**MF_BYPOSITION**|Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0.|  
+|**MF_BYCOMMAND**|Specifies that the parameter gives the command ID of the existing menu item. This is the default if neither **MF_BYCOMMAND** nor **MF_BYPOSITION** is set.|  
+|**MF_BYPOSITION**|Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.|  
   
  `nFlags`  
- Spécifie comment `nPosition` est interprété et fournit des informations sur les modifications à apporter à l’élément de menu. Pour obtenir la liste des indicateurs qui peuvent être définis, consultez la [AppendMenu](#appendmenu) fonction membre.  
+ Specifies how `nPosition` is interpreted and gives information about the changes to be made to the menu item. For a list of flags that may be set, see the [AppendMenu](#appendmenu) member function.  
   
  `nIDNewItem`  
- Spécifie l’ID de commande de l’élément de menu modifié ou si `nFlags` a la valeur **MF_POPUP**, le handle de menu ( `HMENU`) d’un menu contextuel. Le `nIDNewItem` paramètre est ignoré (non nécessaire) si `nFlags` a la valeur **MF_SEPARATOR**.  
+ Specifies either the command ID of the modified menu item or, if `nFlags` is set to **MF_POPUP**, the menu handle ( `HMENU`) of a pop-up menu. The `nIDNewItem` parameter is ignored (not needed) if `nFlags` is set to **MF_SEPARATOR**.  
   
  `lpszNewItem`  
- Spécifie le contenu du nouvel élément de menu. Le `nFlags` paramètre peut être utilisé pour interpréter `lpszNewItem` comme suit :  
+ Specifies the content of the new menu item. The `nFlags` parameter can be used to interpret `lpszNewItem` in the following ways:  
   
-|nIndicateurs|Interprétation de lpszNewItem|  
+|nFlags|Interpretation of lpszNewItem|  
 |------------|-----------------------------------|  
-|`MF_OWNERDRAW`|Contient une valeur de 32 bits fournie par l’application que l’application peut utiliser pour mettre à jour les données supplémentaires associées à l’élément de menu. Cette valeur de 32 bits est disponible à l’application lors du traitement de **MF_MEASUREITEM** et **MF_DRAWITEM**.|  
-|**MF_STRING**|Contient un pointeur long vers une chaîne se terminant par null ou à un `CString`.|  
-|**MF_SEPARATOR**|Le `lpszNewItem` paramètre est ignoré (ne pas nécessaire).|  
+|`MF_OWNERDRAW`|Contains an application-supplied 32-bit value that the application can use to maintain additional data associated with the menu item. This 32-bit value is available to the application when it processes **MF_MEASUREITEM** and **MF_DRAWITEM**.|  
+|**MF_STRING**|Contains a long pointer to a null-terminated string or to a `CString`.|  
+|**MF_SEPARATOR**|The `lpszNewItem` parameter is ignored (not needed).|  
   
  *pBmp*  
- Pointe vers un `CBitmap` objet qui sera utilisé en tant que l’élément de menu.  
+ Points to a `CBitmap` object that will be used as the menu item.  
   
-### <a name="return-value"></a>Valeur de retour  
- Une valeur différente de zéro si la fonction réussit ; sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- L’application spécifie le nouvel état de l’élément de menu en définissant les valeurs de `nFlags`. Si cette fonction remplace un menu contextuel associé à l’élément de menu, il supprime le menu contextuel ancien et libère la mémoire utilisée par le menu contextuel.  
+### <a name="remarks"></a>Remarks  
+ The application specifies the new state of the menu item by setting values in `nFlags`. If this function replaces a pop-up menu associated with the menu item, it destroys the old pop-up menu and frees the memory used by the pop-up menu.  
   
- Lorsque `nIDNewItem` spécifie un menu contextuel, il devient partie intégrante du menu dans lequel elle est insérée. Si ce menu est détruit, le menu inséré sera également détruit. Un menu inséré doit être détaché d’un `CMenu` objet pour éviter tout conflit.  
+ When `nIDNewItem` specifies a pop-up menu, it becomes part of the menu in which it is inserted. If that menu is destroyed, the inserted menu will also be destroyed. An inserted menu should be detached from a `CMenu` object to avoid conflict.  
   
- Chaque fois qu’un menu qui réside dans une fenêtre est modifiée (ou non la fenêtre s’affiche), l’application doit appeler `CWnd::DrawMenuBar`. Pour modifier les attributs d’éléments de menu existant, il est beaucoup plus rapide d’utiliser le `CheckMenuItem` et `EnableMenuItem` fonctions membres.  
+ Whenever a menu that resides in a window is changed (whether or not the window is displayed), the application should call `CWnd::DrawMenuBar`. To change the attributes of existing menu items, it is much faster to use the `CheckMenuItem` and `EnableMenuItem` member functions.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::InsertMenu](#insertmenu).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="operator_hmenu"></a>CMenu::operator HMENU  
- Utilisez cet opérateur pour récupérer le descripteur de la `CMenu` objet.  
+##  <a name="operator_hmenu"></a>  CMenu::operator HMENU  
+ Use this operator to retrieve the handle of the `CMenu` object.  
   
 ```  
 operator HMENU() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- En cas de réussite, le handle de la `CMenu` de l’objet ; sinon, **NULL**.  
+### <a name="return-value"></a>Return Value  
+ If successful, the handle of the `CMenu` object; otherwise, **NULL**.  
   
-### <a name="remarks"></a>Remarques  
- Vous pouvez utiliser le handle d’appeler directement des API Windows.  
+### <a name="remarks"></a>Remarks  
+ You can use the handle to call Windows APIs directly.  
   
-##  <a name="operator_neq"></a>CMenu::operator ! =  
- Détermine si deux menus sont logiquement pas égaux.  
+##  <a name="operator_neq"></a>  CMenu::operator !=  
+ Determines if two menus are logically not equal.  
   
 ```  
 BOOL operator!=(const CMenu& menu) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `menu`  
- A `CMenu` objet pour la comparaison.  
+ A `CMenu` object for comparison.  
   
-### <a name="remarks"></a>Remarques  
- Teste si un objet de menu sur le côté gauche n’est pas égal à un objet de menu située à droite.  
+### <a name="remarks"></a>Remarks  
+ Tests if a menu object on the left side is not equal to a menu object on the right side.  
   
-##  <a name="operator_eq_eq"></a>CMenu::operator ==  
- Détermine si deux menus sont logiquement égales.  
+##  <a name="operator_eq_eq"></a>  CMenu::operator ==  
+ Determines if two menus are logically equal.  
   
 ```  
 BOOL operator==(const CMenu& menu) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `menu`  
- A `CMenu` objet pour la comparaison.  
+ A `CMenu` object for comparison.  
   
-### <a name="remarks"></a>Remarques  
- Teste si un objet de menu sur le côté gauche est égal (en termes de la `HMENU` valeur) à un objet de menu située à droite.  
+### <a name="remarks"></a>Remarks  
+ Tests if a menu object on the left side is equal (in terms of the `HMENU` value) to a menu object on the right side.  
   
-##  <a name="removemenu"></a>CMenu::RemoveMenu  
- Supprime un élément de menu avec un menu contextuel à partir du menu.  
+##  <a name="removemenu"></a>  CMenu::RemoveMenu  
+ Deletes a menu item with an associated pop-up menu from the menu.  
   
 ```  
 BOOL RemoveMenu(
@@ -1075,31 +1108,31 @@ BOOL RemoveMenu(
     UINT nFlags);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nPosition`  
- Spécifie l’élément de menu à supprimer. Le `nFlags` paramètre peut être utilisé pour interpréter `nPosition` comme suit :  
+ Specifies the menu item to be removed. The `nFlags` parameter can be used to interpret `nPosition` in the following ways:  
   
-|nIndicateurs|Interprétation de nPosition|  
+|nFlags|Interpretation of nPosition|  
 |------------|---------------------------------|  
-|**MF_BYCOMMAND**|Spécifie que le paramètre indique l’ID de commande de l’élément de menu existant. Ceci est la valeur par défaut si aucune **MF_BYCOMMAND** ni **MF_BYPOSITION** est défini.|  
-|**MF_BYPOSITION**|Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0.|  
+|**MF_BYCOMMAND**|Specifies that the parameter gives the command ID of the existing menu item. This is the default if neither **MF_BYCOMMAND** nor **MF_BYPOSITION** is set.|  
+|**MF_BYPOSITION**|Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.|  
   
  `nFlags`  
- Spécifie comment `nPosition` est interprété.  
+ Specifies how `nPosition` is interpreted.  
   
-### <a name="return-value"></a>Valeur de retour  
- Une valeur différente de zéro si la fonction réussit ; sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Elle ne supprime pas le handle d’un menu contextuel, le menu peut donc être réutilisé. Avant d’appeler cette fonction, l’application peut appeler le `GetSubMenu` fonction membre pour récupérer la fenêtre contextuelle `CMenu` objet pour une réutilisation.  
+### <a name="remarks"></a>Remarks  
+ It does not destroy the handle for a pop-up menu, so the menu can be reused. Before calling this function, the application may call the `GetSubMenu` member function to retrieve the pop-up `CMenu` object for reuse.  
   
- Chaque fois qu’un menu qui réside dans une fenêtre est modifiée (ou non la fenêtre s’affiche), l’application doit appeler `CWnd::DrawMenuBar`.  
+ Whenever a menu that resides in a window is changed (whether or not the window is displayed), the application must call `CWnd::DrawMenuBar`.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::InsertMenu](#insertmenu).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="setdefaultitem"></a>CMenu::SetDefaultItem  
- Définit l’élément de menu par défaut pour le menu spécifié.  
+##  <a name="setdefaultitem"></a>  CMenu::SetDefaultItem  
+ Sets the default menu item for the specified menu.  
   
 ```  
 BOOL SetDefaultItem(
@@ -1107,61 +1140,61 @@ BOOL SetDefaultItem(
     BOOL fByPos = FALSE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `uItem`  
- Identificateur ou la position du nouvel élément de menu par défaut ou - 1 pour aucun élément par défaut. La signification de ce paramètre dépend de la valeur de `fByPos`.  
+ Identifier or position of the new default menu item or - 1 for no default item. The meaning of this parameter depends on the value of `fByPos`.  
   
  `fByPos`  
- Valeur spécifiant la signification de `uItem`. Si ce paramètre est **FALSE**, `uItem` est un identificateur d’élément de menu. Sinon, elle est une position d’élément de menu.  
+ Value specifying the meaning of `uItem`. If this parameter is **FALSE**, `uItem` is a menu item identifier. Otherwise, it is a menu item position.  
   
-### <a name="return-value"></a>Valeur de retour  
- Si la fonction réussit, la valeur de retour est différente de zéro. Si la fonction échoue, la valeur de retour est égale à zéro. Pour obtenir des informations d’erreur plus complètes, utilisez la fonction Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value is nonzero. If the function fails, the return value is zero. To get extended error information, use the Win32 function [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360), as described in the Windows SDK.  
   
-### <a name="remarks"></a>Notes  
- Cette fonction membre implémente le comportement de la fonction Win32 [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 function [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996), as described in the Windows SDK.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::InsertMenu](#insertmenu).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="setmenucontexthelpid"></a>CMenu::SetMenuContextHelpId  
- Associe un ID d’aide de contexte avec `CMenu`.  
+##  <a name="setmenucontexthelpid"></a>  CMenu::SetMenuContextHelpId  
+ Associates a context help ID with `CMenu`.  
   
 ```  
 BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `dwContextHelpId`  
- ID de contexte d’aide à associer à `CMenu`.  
+ Context help ID to associate with `CMenu`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’opération a réussi ; Sinon, 0  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0  
   
-### <a name="remarks"></a>Remarques  
- Tous les éléments dans le menu partagent cet identificateur, il n’est pas possible d’attacher un identificateur de contexte d’aide pour les éléments de menu individuels.  
+### <a name="remarks"></a>Remarks  
+ All items in the menu share this identifier — it is not possible to attach a help context identifier to the individual menu items.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CMenu::InsertMenu](#insertmenu).  
+### <a name="example"></a>Example  
+  See the example for [CMenu::InsertMenu](#insertmenu).  
   
-##  <a name="setmenuinfo"></a>CMenu::SetMenuInfo  
- Définit les informations d’un menu.  
+##  <a name="setmenuinfo"></a>  CMenu::SetMenuInfo  
+ Sets information for a menu.  
   
 ```  
 BOOL SetMenuInfo(LPCMENUINFO lpcmi);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpcmi`  
- Un pointeur vers un [MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575) structure contenant des informations pour le menu.  
+ A pointer to a [MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575) structure containing information for the menu.  
   
-### <a name="return-value"></a>Valeur de retour  
- Si la fonction réussit, la valeur de retour est différent de zéro ; Sinon, la valeur de retour est zéro.  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value is nonzero; otherwise, the return value is zero.  
   
-### <a name="remarks"></a>Remarques  
- Appelez cette fonction pour définir des informations spécifiques sur le menu.  
+### <a name="remarks"></a>Remarks  
+ Call this function to set specific information about the menu.  
   
-##  <a name="setmenuitembitmaps"></a>CMenu::SetMenuItemBitmaps  
- Associe les bitmaps spécifiés à un élément de menu.  
+##  <a name="setmenuitembitmaps"></a>  CMenu::SetMenuItemBitmaps  
+ Associates the specified bitmaps with a menu item.  
   
 ```  
 BOOL SetMenuItemBitmaps(
@@ -1171,43 +1204,43 @@ BOOL SetMenuItemBitmaps(
     const CBitmap* pBmpChecked);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nPosition`  
- Spécifie l’élément de menu à modifier. Le `nFlags` paramètre peut être utilisé pour interpréter `nPosition` comme suit :  
+ Specifies the menu item to be changed. The `nFlags` parameter can be used to interpret `nPosition` in the following ways:  
   
-|nIndicateurs|Interprétation de nPosition|  
+|nFlags|Interpretation of nPosition|  
 |------------|---------------------------------|  
-|**MF_BYCOMMAND**|Spécifie que le paramètre indique l’ID de commande de l’élément de menu existant. Ceci est la valeur par défaut si aucune **MF_BYCOMMAND** ni **MF_BYPOSITION** est défini.|  
-|**MF_BYPOSITION**|Spécifie que le paramètre indique la position de l’élément de menu existant. Le premier élément est à la position 0.|  
+|**MF_BYCOMMAND**|Specifies that the parameter gives the command ID of the existing menu item. This is the default if neither **MF_BYCOMMAND** nor **MF_BYPOSITION** is set.|  
+|**MF_BYPOSITION**|Specifies that the parameter gives the position of the existing menu item. The first item is at position 0.|  
   
  `nFlags`  
- Spécifie comment `nPosition` est interprété.  
+ Specifies how `nPosition` is interpreted.  
   
  `pBmpUnchecked`  
- Spécifie l’image bitmap à utiliser pour les éléments de menu qui ne sont pas vérifiées.  
+ Specifies the bitmap to use for menu items that are not checked.  
   
  `pBmpChecked`  
- Spécifie l’image bitmap à utiliser pour les éléments de menu qui sont vérifiées.  
+ Specifies the bitmap to use for menu items that are checked.  
   
-### <a name="return-value"></a>Valeur de retour  
- Une valeur différente de zéro si la fonction réussit ; sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Si l’élément de menu est activée ou désactivée, Windows affiche le bitmap appropriée en regard de l’élément de menu.  
+### <a name="remarks"></a>Remarks  
+ Whether the menu item is checked or unchecked, Windows displays the appropriate bitmap next to the menu item.  
   
- Si le paramètre `pBmpUnchecked` ou `pBmpChecked` est **NULL**, puis Windows n’affiche rien en regard de l’élément de menu pour l’attribut correspondant. Si les deux paramètres sont **NULL**, Windows utilise la case à cocher par défaut lorsque l’élément est activé et supprime la case à cocher lorsque l’élément est désactivé.  
+ If either `pBmpUnchecked` or `pBmpChecked` is **NULL**, then Windows displays nothing next to the menu item for the corresponding attribute. If both parameters are **NULL**, Windows uses the default check mark when the item is checked and removes the check mark when the item is unchecked.  
   
- Lorsque le menu est détruit, ces bitmaps ne sont pas détruits ; l’application doit les détruire.  
+ When the menu is destroyed, these bitmaps are not destroyed; the application must destroy them.  
   
- Les fenêtres **GetMenuCheckMarkDimensions** fonction récupère les dimensions de la case à cocher par défaut utilisé pour les éléments de menu. L’application utilise ces valeurs pour déterminer la taille appropriée pour les bitmaps fournis avec cette fonction. Obtenir la taille, créer vos images bitmap, puis de les définir.  
+ The Windows **GetMenuCheckMarkDimensions** function retrieves the dimensions of the default check mark used for menu items. The application uses these values to determine the appropriate size for the bitmaps supplied with this function. Get the size, create your bitmaps, and then set them.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCWindowing #32](../../mfc/reference/codesnippet/cpp/cmenu-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#32](../../mfc/reference/codesnippet/cpp/cmenu-class_12.cpp)]  
   
- [!code-cpp[NVC_MFCWindowing #33](../../mfc/reference/codesnippet/cpp/cmenu-class_13.cpp)]  
+ [!code-cpp[NVC_MFCWindowing#33](../../mfc/reference/codesnippet/cpp/cmenu-class_13.cpp)]  
   
-##  <a name="setmenuiteminfo"></a>CMenu::SetMenuItemInfo  
- Modifie les informations relatives à un élément de menu.  
+##  <a name="setmenuiteminfo"></a>  CMenu::SetMenuItemInfo  
+ Changes information about a menu item.  
   
 ```  
 BOOL SetMenuItemInfo(
@@ -1216,21 +1249,21 @@ BOOL SetMenuItemInfo(
     BOOL fByPos = FALSE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `uItem`  
- Consultez la description de `uItem` dans [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ See description of `uItem` in [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001) in the Windows SDK.  
   
  `lpMenuItemInfo`  
- Consultez la description de `lpmii` dans **SetMenuItemInfo** dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ See description of `lpmii` in **SetMenuItemInfo** in the Windows SDK.  
   
  `fByPos`  
- Consultez la description de `fByPosition` dans **SetMenuItemInfo** dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ See description of `fByPosition` in **SetMenuItemInfo** in the Windows SDK.  
   
-### <a name="remarks"></a>Remarques  
- Cette fonction encapsule [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001), comme décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This function wraps [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001), described in the Windows SDK.  
   
-##  <a name="trackpopupmenu"></a>CMenu::TrackPopupMenu  
- Affiche un menu contextuel flottant à l’emplacement spécifié et effectue le suivi de la sélection d’éléments dans le menu contextuel.  
+##  <a name="trackpopupmenu"></a>  CMenu::TrackPopupMenu  
+ Displays a floating pop-up menu at the specified location and tracks the selection of items on the pop-up menu.  
   
 ```  
 BOOL TrackPopupMenu(
@@ -1241,33 +1274,33 @@ BOOL TrackPopupMenu(
     LPCRECT lpRect = 0);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nFlags`  
- Spécifie des indicateurs de position de l’écran et la position de la souris. Consultez [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) pour obtenir la liste des indicateurs disponibles.  
+ Specifies screen-position and mouse-position flags. See [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) for a list of available flags.  
   
  *x*  
- Spécifie la position horizontale, en coordonnées d’écran du menu contextuel. Selon la valeur de le `nFlags` paramètre, le menu peut être aligné à gauche, aligné à droite ou centré par rapport à cette position.  
+ Specifies the horizontal position in screen coordinates of the pop-up menu. Depending on the value of the `nFlags` parameter, the menu can be left-aligned, right-aligned, or centered relative to this position.  
   
  *y*  
- Spécifie la position verticale, en coordonnées d’écran du haut du menu à l’écran.  
+ Specifies the vertical position in screen coordinates of the top of the menu on the screen.  
   
  `pWnd`  
- Identifie la fenêtre propriétaire de la liste déroulante. Ce paramètre ne peut pas être **NULL**, même si le **TPM_NONOTIFY** indicateur est spécifié. Cette fenêtre reçoit tous les **WM_COMMAND** messages à partir du menu. Dans Windows 3.1 et versions ultérieures, la fenêtre ne reçoit pas **WM_COMMAND** jusqu'à ce que les messages `TrackPopupMenu` retourne. Dans Windows 3.0, la fenêtre reçoit **WM_COMMAND** messages avant `TrackPopupMenu` retourne.  
+ Identifies the window that owns the pop-up menu. This parameter cannot be **NULL**, even if the **TPM_NONOTIFY** flag is specified. This window receives all **WM_COMMAND** messages from the menu. In Windows versions 3.1 and later, the window does not receive **WM_COMMAND** messages until `TrackPopupMenu` returns. In Windows 3.0, the window receives **WM_COMMAND** messages before `TrackPopupMenu` returns.  
   
  `lpRect`  
- Ignoré.  
+ Ignored.  
   
-### <a name="return-value"></a>Valeur de retour  
- Cette méthode retourne le résultat de l’appel de [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ This method returns the result of calling [TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) in the Windows SDK.  
   
-### <a name="remarks"></a>Remarques  
- Un menu contextuel flottant peut apparaître n’importe où sur l’écran.  
+### <a name="remarks"></a>Remarks  
+ A floating pop-up menu can appear anywhere on the screen.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCWindowing #34](../../mfc/reference/codesnippet/cpp/cmenu-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#34](../../mfc/reference/codesnippet/cpp/cmenu-class_14.cpp)]  
   
-##  <a name="trackpopupmenuex"></a>CMenu::TrackPopupMenuEx  
- Affiche un menu contextuel flottant à l’emplacement spécifié et effectue le suivi de la sélection d’éléments dans le menu contextuel.  
+##  <a name="trackpopupmenuex"></a>  CMenu::TrackPopupMenuEx  
+ Displays a floating pop-up menu at the specified location and tracks the selection of items on the pop-up menu.  
   
 ```  
 BOOL TrackPopupMenuEx(
@@ -1278,34 +1311,34 @@ BOOL TrackPopupMenuEx(
     LPTPMPARAMS lptpm);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `fuFlags`  
- Spécifie les diverses fonctions de menu étendu. Pour obtenir la liste de toutes les valeurs et leur signification, consultez [fonction TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003).  
+ Specifies various functions for the extended menu. For a listing of all values and their meaning, see [TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003).  
   
  *x*  
- Spécifie la position horizontale, en coordonnées d’écran du menu contextuel.  
+ Specifies the horizontal position in screen coordinates of the pop-up menu.  
   
  *y*  
- Spécifie la position verticale, en coordonnées d’écran du haut du menu à l’écran.  
+ Specifies the vertical position in screen coordinates of the top of the menu on the screen.  
   
  `pWnd`  
- Pointeur vers la fenêtre propriétaire de la liste déroulante et la réception des messages à partir du menu créé. Cette fenêtre peut être n’importe quelle fenêtre de l’application active, mais ne peut pas être **NULL**. Si vous spécifiez **TPM_NONOTIFY** dans les `fuFlags` paramètre, la fonction n’envoie pas de tous les messages vers `pWnd`. La fonction doit retourner pour la fenêtre vers laquelle pointée `pWnd` pour recevoir le **WM_COMMAND** message.  
+ A pointer to the window owning the pop-up menu and receiving the messages from the created menu. This window can be any window from the current application but cannot be **NULL**. If you specify **TPM_NONOTIFY** in the `fuFlags` parameter, the function does not send any messages to `pWnd`. The function must return for the window pointed to by `pWnd` to receive the **WM_COMMAND** message.  
   
  *lptpm*  
- Pointeur vers un [TPMPARAMS](http://msdn.microsoft.com/library/windows/desktop/ms647586) structure qui spécifie une zone de l’écran du menu ne doit pas se chevaucher. Ce paramètre peut être **NULL**.  
+ Pointer to a [TPMPARAMS](http://msdn.microsoft.com/library/windows/desktop/ms647586) structure that specifies an area of the screen the menu should not overlap. This parameter can be **NULL**.  
   
-### <a name="return-value"></a>Valeur de retour  
- Si vous spécifiez **TPM_RETURNCMD** dans le `fuFlags` paramètre, la valeur de retour est l’identificateur de l’élément de menu de l’élément sélectionné par l’utilisateur. Si l’utilisateur annule le menu sans effectuer de sélection, ou si une erreur se produit, la valeur de retour est 0.  
+### <a name="return-value"></a>Return Value  
+ If you specify **TPM_RETURNCMD** in the `fuFlags` parameter, the return value is the menu-item identifier of the item that the user selected. If the user cancels the menu without making a selection, or if an error occurs, then the return value is 0.  
   
- Si vous ne spécifiez pas **TPM_RETURNCMD** dans le `fuFlags` paramètre, la valeur de retour est différent de zéro si la fonction réussit et 0 en cas d’échec. Pour obtenir des informations d’erreur plus complètes, appelez [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ If you do not specify **TPM_RETURNCMD** in the `fuFlags` parameter, the return value is nonzero if the function succeeds and 0 if it fails. To get extended error information, call [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>Remarques  
- Un menu contextuel flottant peut apparaître n’importe où sur l’écran. Pour plus d’informations sur la gestion des erreurs lors de la création du menu contextuel, consultez [fonction TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003).  
+### <a name="remarks"></a>Remarks  
+ A floating pop-up menu can appear anywhere on the screen. For more information on handling errors when creating the pop-up menu, see [TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003).  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemple MFC CTRLTEST](../../visual-cpp-samples.md)   
- [Exemple MFC DYNAMENU](../../visual-cpp-samples.md)   
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
- [CObject, classe](../../mfc/reference/cobject-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CTRLTEST](../../visual-cpp-samples.md)   
+ [MFC Sample DYNAMENU](../../visual-cpp-samples.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)
 

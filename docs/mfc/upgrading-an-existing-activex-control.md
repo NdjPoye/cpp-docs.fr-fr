@@ -1,254 +1,288 @@
 ---
-title: "Mise &#224; niveau d&#39;un contr&#244;le ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contrôles ActiveX (C++), Internet"
-  - "fichiers CAB, pour les contrôles ActiveX"
-  - "applications Internet (C++), contrôles ActiveX"
-  - "applications Internet (C++), empaqueter le code pour le téléchargement"
-  - "licences des contrôles ActiveX"
-  - "fichiers LPK pour les contrôles Internet"
-  - "contrôles OLE (C++), mettre à niveau vers ActiveX"
-  - "sûrs pour l'écriture de scripts et l'initialisation (contrôles)"
-  - "mettre à niveau des contrôles ActiveX"
+title: Upgrading an Existing ActiveX Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX controls [MFC], Internet
+- LPK files for Internet controls
+- safe for scripting and initialization (controls)
+- OLE controls [MFC], upgrading to ActiveX
+- CAB files, for ActiveX controls
+- Internet applications [MFC], ActiveX controls
+- Internet applications [MFC], packaging code for download
+- upgrading ActiveX controls
+- licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Mise &#224; niveau d&#39;un contr&#244;le ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2c53e74f1122405aa414a22677e0c25d71112596
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Les contrôles ActiveX \(anciennement contrôles OLE\) existants peuven être utilisés sur Internet sans modification.  Toutefois, vous pouvez vouloir modifier des contrôles pour améliorer leurs performances.  Lors de l'utilisation de votre contrôle sur une page Web, il y a des considérations supplémentaires.  Le fichier .ocx et les fichiers de prise en charge doivent se trouver sur l'ordinateur cible ou être téléchargés sur Internet.  Cela fait que le nombre et le temps de téléchargement des instructions est un aspect important.  Les téléchargements peuvent être emballés dans un fichier .cab signé.  Vous pouvez marquer le contrôle comme sûr de script, et comme sécurisé pour initialiser.  
+---
+# <a name="upgrading-an-existing-activex-control"></a>Upgrading an Existing ActiveX Control
+Existing ActiveX controls (formerly OLE controls) can be used on the Internet without modification. However, you may want to modify controls to improve their performance. When using your control on a Web page, there are additional considerations. The .ocx file and all supporting files must be on the target machine or be downloaded across the Internet. This makes code size and download time an important consideration. Downloads can be packaged in a signed .cab file. You can mark your control as safe for scripting, and as safe for initializing.  
   
- Cette rubrique traite des sujets suivants :  
+ This article discusses the following topics:  
   
--   [Empaqueter du code pour le téléchargement](#_core_packaging_code_for_downloading)  
+- [Packaging Code for Downloading](#_core_packaging_code_for_downloading)  
   
--   [Marquer un contrôle comme sur pour scriptage et initialisation](#_core_marking_a_control_safe_for_scripting_and_initializing)  
+- [Marking a Control Safe for Scripting and Initializing](#_core_marking_a_control_safe_for_scripting_and_initializing)  
   
--   [Problèmes de licences](#_core_licensing_issues)  
+- [Licensing Issues](#_core_licensing_issues)  
   
--   [Signature du code](#_core_signing_code)  
+- [Signing Code](#_core_signing_code)  
   
--   [Gérer la palette](#_core_managing_the_palette)  
+- [Managing the Palette](#_core_managing_the_palette)  
   
--   [Niveaux de sécurité de navigateur Internet Explorer et comportement du contrôle](#_core_internet_explorer_browser_safety_levels_and_control_behavior)  
+- [Internet Explorer Browser Safety Levels and Control Behavior](#_core_internet_explorer_browser_safety_levels_and_control_behavior)  
   
- Vous pouvez également ajouter des optimisations, comme décrit dans [Contrôles ActiveX : Optimisation](../mfc/mfc-activex-controls-optimization.md).  Des monikers peuvent être utilisés pour télécharger des propriétés et des objets BLOB de façon asynchrone, comme décrit dans [Contrôles ActiveX Internet](../mfc/activex-controls-on-the-internet.md).  
+ You can also add optimizations, as described in [ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md). Monikers can be used to download properties and large BLOBs asynchronously, as described in [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md).  
   
-##  <a name="_core_packaging_code_for_downloading"></a> Empaqueter du code pour le téléchargement  
- Pour plus d'informations sur cette rubrique, consultez l'article de la Base de connaissances « empaquetage des contrôles MFC pour utilisation sur Internet » \(Q167158\).  Vous trouverez les articles de Base de connaissances sur le CD\-ROM de la bibliothèque MSDN ou à l'adresse [http:\/\/support.microsoft.com\/support](http://support.microsoft.com/support).  
+##  <a name="_core_packaging_code_for_downloading"></a> Packaging Code for Downloading  
+ For more information on this subject, see the Knowledge Base article "Packaging MFC Controls for Use Over the Internet" (Q167158). You can find Knowledge Base articles at [http://support.microsoft.com/support](http://support.microsoft.com/support).  
   
-### L'indicateur CODEBASE  
- Les contrôles ActiveX sont incorporés dans les pages Web à l'aide de l'indicateur `<OBJECT>`.  Le paramètre `CODEBASE` de l'indicateur `<OBJECT>` spécifie l'emplacement à partir duquel télécharger du contrôle.  `CODEBASE` peut pointer à plusieurs autres types de fichiers avec succès.  
+### <a name="the-codebase-tag"></a>The CODEBASE Tag  
+ ActiveX controls are embedded in Web pages using the `<OBJECT>` tag. The `CODEBASE` parameter of the `<OBJECT>` tag specifies the location from which to download the control. `CODEBASE` can point at a number of different file types successfully.  
   
-### L'utilisation de l'indicateur CODEBASE avec un fichier d'OCX  
+### <a name="using-the-codebase-tag-with-an-ocx-file"></a>Using the CODEBASE Tag with an OCX File  
   
 ```  
-CODEBASE="http://example.microsoft.com/mycontrol.ocx#version=4,70,0,1086"  
+CODEBASE="http://example.microsoft.com/mycontrol.ocx#version=4,
+    70,
+    0,
+    1086"  
 ```  
   
- Cette solution ne télécharge que le fichier .ocx du contrôle, et nécessite toutes les DLL de prise en charge déjà installées sur l'ordinateur client.  Ceci fonctionne pour Internet Explorer et les contrôles ActiveX MFC construits avec Visual C\+\+, car Internet Explorer est fourni avec les DLL de prise en charge pour les contrôles Visual C\+\+.  Si un autre navigateur Internet qui supporte les contrôles ActiveX est utilisé pour afficher ce contrôle, cette solution ne s'exécutera pas.  
+ This solution downloads only the control's .ocx file, and requires any supporting DLLs to already be installed on the client machine. This will work for Internet Explorer and MFC ActiveX controls built with Visual C++, because Internet Explorer ships with the supporting DLLs for Visual C++ controls. If another Internet browser that is ActiveX control-capable is used to view this control, this solution will not work.  
   
-### L'utilisation de l'indicateur CODEBASE avec un fichier INF  
+### <a name="using-the-codebase-tag-with-an-inf-file"></a>Using the CODEBASE Tag with an INF File  
   
 ```  
 CODEBASE="http://example.microsoft.com/trustme.inf"  
 ```  
   
- Un fichier .inf contrôlera l'installation d'un .ocx et ses fichiers de prise en charge.  Cette méthode n'est pas recommandée car il n'est pas possible de signer un fichier .inf \(voir [Signature de code](#_core_signing_code) pour des bases sur la signature de code\).  
+ An .inf file will control the installation of an .ocx and its supporting files. This method is not recommended because it is not possible to sign an .inf file (see [Signing Code](#_core_signing_code) for pointers on code signing).  
   
-### Utilisation de l'indicateur CODEBASE avec un fichier CAB  
+### <a name="using-the-codebase-tag-with-a-cab-file"></a>Using the CODEBASE Tag with a CAB File  
   
 ```  
-CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,2,0,0"  
+CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
+    2,
+    0,
+    0"  
 ```  
   
- Les fichiers CAB sont la méthode recommandée d'empaqueter les contrôles ActiveX qui utilisent MFC.  Empaqueter un contrôle ActiveX MFC dans un fichier CAB permet à un fichier .inf d'être inclus pour contrôler l'installation du contrôle ActiveX et de toutes les DLL nécessaires \(tels que les DLL MFC\).  L'utilisation d'un fichier CAB compresse automatiquement le code pour un chargement plus rapide.  Si vous utilisez un fichier .cab pour le téléchargement d'un composant, il est plus rapide de signer le fichier .cab entier que chaque composant spécifique.  
+ Cabinet files are the recommended way to package ActiveX controls that use MFC. Packaging an MFC ActiveX control in a cabinet file allows an .inf file to be included to control installation of the ActiveX control and any dependent DLLs (such as the MFC DLLs). Using a CAB file automatically compresses the code for quicker download. If you are using a .cab file for component download, it is faster to sign the entire .cab file than each individual component.  
   
-### Créer des fichiers CAB  
- Vous pouvez télécharger le kit de développement CAB à partir de l'article de la Base de Connaissances [310618 : Kit de développement CAB de Microsoft](http://go.microsoft.com/fwlink/?LinkId=148204).  Dans le kit, vous trouverez les outils requis pour construire des fichiers CAB.  
+### <a name="creating-cab-files"></a>Creating CAB Files  
+ You can download the Cabinet Development Kit from the Knowledge Base article [310618: Microsoft Cabinet Software Development Kit](http://go.microsoft.com/fwlink/linkid=148204). In this kit you will find the necessary tools to construct cabinet files.  
   
- Le fichier CAB référencé par `CODEBASE` devrait contenir le fichier .ocx pour votre contrôle ActiveX et un fichier .inf pour contrôler son installation.  Vous créez le fichier CAB en spécifiant le nom de votre fichier de contrôle et d'un fichier .inf.  N'incluez pas les DLL dépendants qui peuvent exister sur le système dans ce fichier CAB.  Par exemple, les DLL MFC sont emballés dans un fichier CAB séparé et désignés par le fichier contrôle .inf.  
+ The cabinet file pointed to by `CODEBASE` should contain the .ocx file for your ActiveX control and an .inf file to control its installation. You create the cabinet file by specifying the name of your control file and an .inf file. Do not include dependent DLLs that may already exist on the system in this cabinet file. For example, the MFC DLLs are packaged in a separate cabinet file and referred to by the controlling .inf file.  
   
- Pour plus d'informations sur la création d'un fichier CAB, consultez [Créer un fichier CAB](http://msdn.microsoft.com/fr-fr/cc52fd09-bdf6-4410-a693-149a308f36a3).  
+ For details on how to create a CAB file, see [Creating a CAB File](http://msdn.microsoft.com/en-us/cc52fd09-bdf6-4410-a693-149a308f36a3).  
   
-### Le fichier INF  
- L'exemple suivant, spindial.inf, répertorie les fichiers de prise en charge et les informations de version requis pour le contrôle MFC Spindial.  Notez que l'emplacement des fichiers DLL MFC est un site Web Microsoft.  Le mfc42.cab est fourni et signé par Microsoft.  
+### <a name="the-inf-file"></a>The INF File  
+ The following example, spindial.inf, lists the supporting files and the version information needed for the MFC Spindial control. Notice the location for the MFC DLLs is a Microsoft Web site. The mfc42.cab is provided and signed by Microsoft.  
   
 ```  
 Contents of spindial.inf:  
 [mfc42installer]   
 file-win32-x86=http://activex.microsoft.com/controls/vc/mfc42.cab   
-[Olepro32.dll] - FileVersion=5,0,4261,0  
-[Mfc42.dll] - FileVersion=6,0,8168,0  
-[Msvcrt.dll] - FileVersion=6,0,8168,0  
+[Olepro32.dll] - FileVersion=5,
+    0,
+    4261,
+    0  
+[Mfc42.dll] - FileVersion=6,
+    0,
+    8168,
+    0  
+[Msvcrt.dll] - FileVersion=6,
+    0,
+    8168,
+    0  
 ```  
   
-### L'indicateur \<OBJECT\>  
- L'exemple suivant illustre l'utilisation de l'indicateur `<OBJECT>` pour emballer le contrôle exemple MFC Spindial.  
+### <a name="the-object-tag"></a>The \<OBJECT> Tag  
+ The following example illustrates using the `<OBJECT>` tag to package the MFC Spindial sample control.  
   
 ```  
 <OBJECT ID="Spindial1" WIDTH=100 HEIGHT=51  
-  CLASSID="CLSID:06889605-B8D0-101A-91F1-00608CEAD5B3"  
-  CODEBASE="http://example.microsoft.com/spindial.cab#Version=1,0,0,001">  
-    <PARAM NAME="_Version" VALUE="65536">  
-    <PARAM NAME="_ExtentX" VALUE="2646">  
-    <PARAM NAME="_ExtentY" VALUE="1323">  
-    <PARAM NAME="_StockProps" VALUE="0">  
-    <PARAM NAME="NeedlePosition" VALUE="2">  
+    CLASSID="CLSID:06889605-B8D0-101A-91F1-00608CEAD5B3" 
+    CODEBASE="http://example.microsoft.com/spindial.cab#Version=1,0,0,001"> 
+ <PARAM NAME="_Version" VALUE="65536">  
+ <PARAM NAME="_ExtentX" VALUE="2646">  
+ <PARAM NAME="_ExtentY" VALUE="1323">  
+ <PARAM NAME="_StockProps" VALUE="0">  
+ <PARAM NAME="NeedlePosition" VALUE="2">  
 </OBJECT>  
 ```  
   
- Dans ce cas, spindial.cab contient deux fichiers, spindial.ocx et spindial.inf.  La commande suivante générera le fichier CAB :  
+ In this case, spindial.cab will contain two files, spindial.ocx and spindial.inf. The following command will build the cabinet file:  
   
 ```  
 C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf   
 ```  
   
- Le paramètre `–s 6144` réserve de l'espace dans le fichier CAB pour la signature de code.  
+ The `-s 6144` parameter reserves space in the cabinet for code signing.  
   
-### L'indicateur de version  
- Notez ici que les informations de `#Version` spécifiées dans un fichier CAB s'appliquent au contrôle spécifié par le paramètre `CLASSID` de l'indicateur `<OBJECT>`.  
+### <a name="the-version-tag"></a>The Version Tag  
+ Note here that the `#Version` information specified with a CAB file applies to the control specified by the `CLASSID` parameter of the `<OBJECT>` tag.  
   
- Selon la version, vous pouvez forcer le téléchargement du contrôle.  Pour les fonctionnalités complètes de l'indicateur `OBJECT` y compris le paramètre `CODEBASE`, consultez la référence W3C.  
+ Depending on the version specified, you can force download of your control. For complete specifications of the `OBJECT` tag including the `CODEBASE` parameter, see the W3C reference.  
   
-##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Marquer un contrôle comme sur pour scriptage et initialisation  
- Les contrôles ActiveX utilisés dans les pages Web doivent être marquées comme sûr pour scriptage et initialisation s'ils sont en fait sécurisés.  Un contrôle sécurisé n'effectue pas de tâche E\/S de disque ou d'accès à la mémoire ou les registres d'un ordinateur.  
+##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Marking a Control Safe for Scripting and Initializing  
+ ActiveX controls used in Web pages should be marked as safe for scripting and safe for initializing if they are in fact safe. A safe control will not perform disk IO or access the memory or registers of a machine directly.  
   
- Les contrôles peuvent être marqués comme sûr pour scriptage et initialisation via le Registre.  Modifiez `DllRegisterServer` pour ajouter des entrées semblables aux suivantes pour marquer le contrôle comme sûr pour scriptage et persistance dans le Registre.  Une autre méthode consiste à implémenter `IObjectSafety`.  
+ Controls can be marked as safe for scripting and safe for initializing via the registry. Modify `DllRegisterServer` to add entries similar to the following to mark the control as safe for scripting and persistence in the registry. An alternative method is to implement `IObjectSafety`.  
   
- Vous définirez des GUID \(identificateurs globaux uniques\) pour le contrôle pour le marquer comme sécurisé pour scriptage et persistance.  Les contrôles qui peuvent être écrits en toute sécurité contiendront une entrée de Registre comme suit :  
+ You will define GUIDs (Globally Unique Identifiers) for your control to mark it safe for scripting and for persistence. Controls that can be safely scripted will contain a registry entry similar to the following:  
   
 ```  
 HKEY_CLASSES_ROOT\Component Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}  
 ```  
   
- Les contrôles qui peuvent être initialisés sans risque pour les données persistantes sont marqués sûrs pour la persistance avec une entrée de Registre similaire à :  
+ Controls that can be safely initialized from persistent data are marked safe for persistence with a registry entry similar to:  
   
 ```  
 HKEY_CLASSES_ROOT\Component Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}  
 ```  
   
- Ajoutez des entrées semblables aux suivantes \(en remplaçant l'ID de classe de votre contrôle au lieu de `{06889605-B8D0-101A-91F1-00608CEAD5B3}`\) pour associer les clés avec l'ID de classe suivant :  
+ Add entries similar to the following (substituting your control's class ID in place of `{06889605-B8D0-101A-91F1-00608CEAD5B3}`) to associate your keys with the following class ID:  
   
 ```  
 HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}   
 HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}   
 ```  
   
-##  <a name="_core_licensing_issues"></a> Problèmes de licences  
- Si vous souhaitez utiliser un contrôle autorisé dans une page Web, vous devez vérifier que le contrat de licence permet son utilisation sur Internet et créer un fichier de package de licence \(LPK\) pour celui\-ci.  
+##  <a name="_core_licensing_issues"></a> Licensing Issues  
+ If you want to use a licensed control on a Web page, you must verify that the license agreement allows its use on the Internet and create a license package file (LPK) for it.  
   
- Un contrôle ActiveX autorisé ne chargera pas correctement dans une page HTML si l'ordinateur exécutant Internet Explorer n'est pas autorisé à utiliser le contrôle.  Par exemple, si un contrôle autorisé est établi à l'aide de Visual C\+\+, la page HTML utilisant le contrôle charge correctement sur l'ordinateur où le contrôle a été créé, mais ne chargera pas sur un autre ordinateur à moins que les informations de licences soit incluses.  
+ A licensed ActiveX control will not load properly in an HTML page if the computer running Internet Explorer is not licensed to use the control. For example, if a licensed control was built using Visual C++, the HTML page using the control will load properly on the computer where the control was built, but it will not load on a different computer unless licensing information is included.  
   
- Pour utiliser un contrôle ActiveX autorisé dans Internet Explorer, vous devez vérifier le contrat de licence du fournisseur pour vérifier que la licence du contrôle permet :  
+ To use a licensed ActiveX control in Internet Explorer, you must check the vendor's license agreement to verify that the license for the control permits:  
   
 -   Redistribution  
   
--   Utilisation du contrôle sur Internet  
+-   Use of the control on the Internet  
   
--   Utilisation du paramètre Codebase  
+-   Use of the Codebase parameter  
   
- Pour utiliser un contrôle sous license dans une page HTML sur un ordinateur sans license, vous devez générer un fichier de package de licence \(LPK\).  Le fichier LPK contient des licences d'exécution pour les contrôles autorisés dans la page HTML.  Ce fichier est généré via LPK\_TOOL.EXE fourni avec le SDK ActiveX.  Pour plus d'informations, consultez cette page sur le site MSDN à [http:\/\/msdn.microsoft.com](http://msdn.microsoft.com).  
+ To use a licensed control in an HTML page on a nonlicensed machine, you must generate a license package file (LPK). The LPK file contains run-time licenses for licensed controls in the HTML page. This file is generated via LPK_TOOL.EXE which comes with the ActiveX SDK. For more information, see the MSDN Web site at [http://msdn.microsoft.com](http://msdn.microsoft.com).  
   
-#### Pour créer un fichier LPK  
+#### <a name="to-create-an-lpk-file"></a>To create an LPK file  
   
-1.  Exécutez LPK\_TOOL.EXE sur un ordinateur qui est autorisé à utiliser le contrôle.  
+1.  Run LPK_TOOL.EXE on a computer that is licensed to use the control.  
   
-2.  Dans la boîte de dialogue **License Package Authoring Tool**, dans la zone de liste **Available Controls**, sélectionnez chaque contrôle ActiveX sous license qui est utilisé dans la page HTML et cliquez sur **Add**.  
+2.  In the **License Package Authoring Tool** dialog box, in the **Available Controls** list box, select each licensed ActiveX control that will be used on the HTML page and click **Add**.  
   
-3.  Cliquez sur **Save & Exit** et tapez un nom pour le fichier LPK.  Cela crée le fichier LPK et clôturera l'application.  
+3.  Click **Save & Exit** and type a name for the LPK file. This will create the LPK file and close the application.  
   
-#### Pour inclure un contrôle autorisé dans une page HTML  
+#### <a name="to-embed-a-licensed-control-on-an-html-page"></a>To embed a licensed control on an HTML page  
   
-1.  Modifiez votre page HTML.  Dans la page HTML, insérez un indicateur \<OBJECT\> pour l'objet de gestionnaire de licence avant les autres indicateurs \<OBJECT\>.  Le gestionnaire de licence est un contrôle ActiveX qui est installé avec Internet Explorer.  L'ID de classe est indiqué ci\-dessous.  Définissez la propriété LPKPath de l'objet gestionnaire de licence au chemin d'accès et au nom du fichier LPK.  Il ne peut exister qu'un seul fichier LPK par page HTML.  
+1.  Edit your HTML page. In the HTML page, insert an \<OBJECT> tag for the License Manager object before any other \<OBJECT> tags. The License Manager is an ActiveX control that is installed with Internet Explorer. Its class ID is shown below. Set the LPKPath property of the License Manager object to the path and name of the LPK file. You can have only one LPK file per HTML page.  
   
-    ```  
-    <OBJECT CLASSID = "clsid:5220cb21-c88d-11cf-b347-00aa00a28331">  
-        <PARAM NAME="LPKPath" VALUE="relative URL to .LPK file">  
-    </OBJECT>  
-    ```  
+ ```  
+ <OBJECT CLASSID = "clsid:5220cb21-c88d-11cf-b347-00aa00a28331">  
+ <PARAM NAME="LPKPath" VALUE="relative URL to .LPK file">  
+ </OBJECT>  
+ ```  
   
-2.  Insérez l'indicateur \<OBJECT\> pour le contrôle sous license après l'indicateur du gestionnaire de licence.  
+2.  Insert the \<OBJECT> tag for your licensed control after the License Manager tag.  
   
-     Par exemple, une page HTML qui affiche le contrôle Microsoft Masked Edit est affichée ci\-dessous.  Le premier ID de classe est pour le contrôle du gestionnaire de licence, le deuxième ID de classe est pour le contrôle Masked Edit.  Modifiez les indicateurs pour indiquer le chemin d'accès relatif du fichier .lpk que vous avez créé précédemment, puis ajoutez un indicateur OBJECT incluant l'ID de classe pour le contrôle.  
+     For example, an HTML page that displays the Microsoft Masked Edit control is shown below. The first class ID is for the License Manager control, the second class ID is for the Masked Edit control. Change the tags to point to the relative path of the .lpk file you created earlier, and add an object tag including the class ID for your control.  
   
-3.  Insérez l'attribut \<EMBED\> pour votre fichier LPK, si vous utilisez le plug\-in ActiveX NCompass.  
+3.  Insert the \<EMBED> attribute for your LPK file, if using the NCompass ActiveX plug-in.  
   
-     Si le contrôle peut être affiché dans d'autres navigateurs compatibles Active \(par exemple, Netscape avec le plug\-in ActiveX NCompass — vous devez ajouter la syntaxe \<EMBED\> comme indiqué ci\-dessous.  
+     If your control may be viewed on other Active enabled browsers — for example, Netscape using the NCompass ActiveX plug-in — you must add the \<EMBED> syntax as shown below.  
   
-    ```  
-    <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">  
-        <PARAM NAME="LPKPath" VALUE="maskedit.lpk">  
+ ```  
+ <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">  
+ <PARAM NAME="LPKPath" VALUE="maskedit.lpk">  
+ 
+ <EMBED SRC = "maskedit.LPK">  
+ 
+ </OBJECT>  
+ <OBJECT CLASSID="clsid:C932BA85-4374-101B-A56C-00AA003668DC" WIDTH=100 HEIGHT=25>  
+ </OBJECT>  
+ ```  
   
-        <EMBED SRC = "maskedit.LPK">  
+ For more information about control licensing, see [ActiveX Controls: Licensing an ActiveX Control](../mfc/mfc-activex-controls-licensing-an-activex-control.md).  
   
-    </OBJECT>  
-    <OBJECT CLASSID="clsid:C932BA85-4374-101B-A56C-00AA003668DC" WIDTH=100 HEIGHT=25>  
-    </OBJECT>  
-    ```  
+##  <a name="_core_signing_code"></a> Signing Code  
+ Code signing is designed to identify the source of code, and to guarantee that the code has not changed since it was signed. Depending on browser safety settings, users may be warned before the code is downloaded. Users may choose to trust certain certificate owners or companies, in which case code signed by those trusted will be downloaded without warning. Code is digitally signed to avoid tampering.  
   
- Pour plus d'informations sur les licences des contrôles, consultez [Contrôles ActiveX : Licences des contrôles ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md).  
+ Make sure your final code is signed so that your control can be automatically downloaded without displaying trust warning messages. For details on how to sign code, check the documentation on Authenticode in the ActiveX SDK and see [Signing a CAB File](http://msdn.microsoft.com/en-us/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
   
-##  <a name="_core_signing_code"></a> Signature du code  
- La signature du code est conçue pour identifier la source du code, et vérifier que le code n'a pas changé depuis qu'il a été signé.  Selon les paramètres de sécurité de navigateur, les utilisateurs peuvent être prévenus avant que le code soit téléchargé.  Les utilisateurs peuvent choisir de faire confiance à certaines sociétés ou propriétaires de certificat, auquel cas le code signé par les éditeurs approuvés sera téléchargé sans avertissement.  Le code est signé numériquement pour éviter de le falsifier.  
+ Depending on trust and browser safety level settings, a certificate may be displayed to identify the signing person or company. If the safety level is none, or if the signed control's certificate owner is trusted, a certificate will not be displayed. See [Internet Explorer Browser Safety Levels and Control Behavior](#_core_internet_explorer_browser_safety_levels_and_control_behavior) for details on how the browser safety setting will determine whether your control is downloaded and a certificate displayed.  
   
- Vérifiez que votre code final est signé afin que le contrôle soit automatiquement téléchargé sans afficher les messages d'avertissement de confiance.  Pour plus d'informations sur la façon de signer du code, consultez la documentation sur Authenticode dans le SDK ActiveX et consultez [Signer un fichier CAB](http://msdn.microsoft.com/fr-fr/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
+ Digital signing guarantees code has not changed since it's been signed. A hash of the code is taken and embedded in the certificate. This hash is later compared with a hash of the code taken after the code is downloaded but before it runs. Companies such as Verisign can supply private and public keys needed to sign code. The ActiveX SDK ships with MakeCert, a utility for creating test certificates.  
   
- Selon les paramètres de confiance et de sécurité du navigateur, un certificat peut être affiché pour identifier la personne ou la société ayant signé.  Si le niveau de sécurité est nul, ou si le propriétaire du certificat signé du contrôle est approuvé, le certificat ne sera pas affiché.  Voir [Niveaux de sécurité de navigateur Internet Explorer et comportement des contrôles](#_core_internet_explorer_browser_safety_levels_and_control_behavior) pour plus d'informations sur la façon dont les paramètres de sécurité de navigateur déterminent si le contrôle est téléchargé et si un certificat est affiché.  
+##  <a name="_core_managing_the_palette"></a> Managing the Palette  
+ Containers determine the palette and make it available as an ambient property, **DISPID_AMBIENT_PALETTE**. A container (for example, Internet Explorer) chooses a palette that is used by all ActiveX controls on a page to determine their own palette. This prevents display flickering and presents a consistent appearance.  
   
- La signature numérique de code garantit que le code n'a pas été modifié depuis qu'il a été signé.  Un hachage du code est pris et incorporé au certificat.  Le hachage est ensuite comparé à un hachage du code pris après le téléchargement mais avant son exécution.  Les sociétés telles que Verisign peuvent fournir une clé privée et des clés publiques nécessaires pour signer du code.  Le SDK ActiveX est fourni avec MakeCert, un utilitaire pour créer des certificats de test.  
+ A control can override `OnAmbientPropertyChange` to handle notification of changes to the palette.  
   
-##  <a name="_core_managing_the_palette"></a> Gérer la palette  
- Les conteneurs déterminent la palette et la mettent à disposition en tant que propriété ambiante, **DISPID\_AMBIENT\_PALETTE**.  Un conteneur \(par exemple, Internet Explorer\) choisit une palette utilisée par tous les contrôles ActiveX dans la page pour déterminer leur propre palette.  Cela empêche le scintillement et présente un affichage cohérent.  
+ A control can override `OnGetColorSet` to return a color set to draw the palette. Containers use the return value to determine if a control is palette-aware.  
   
- Un contrôle peut remplacer `OnAmbientPropertyChange` pour traiter la notification des modifications à la palette.  
+ Under OCX 96 guidelines, a control must always realize its palette in the background.  
   
- Un contrôle peut remplacer `OnGetColorSet` pour retourner un jeu de couleurs pour dessiner la palette.  Les conteneurs utilisent la valeur de retour pour déterminer si un contrôle utilise la palette.  
+ Older containers that do not use the ambient palette property will send `WM_QUERYNEWPALETTE` and `WM_PALETTECHANGED` messages. A control can override `OnQueryNewPalette` and `OnPaletteChanged` to handle these messages.  
   
- Sous les instructions d'OCX 96, un contrôle doit toujours réaliser la palette en arrière\-plan.  
+##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Internet Explorer Browser Safety Levels and Control Behavior  
+ A browser has options for safety level, configurable by the user. Because Web pages can contain active content that might potentially harm a user's computer, browsers allow the user to select options for safety level. Depending on the way a browser implements safety levels, a control may not be downloaded at all, or will display a certificate or a warning message to allow the user to choose at run time whether or not to download the control. The behavior of ActiveX controls under high, medium, and low safety levels on Internet Explorer is listed below.  
   
- Les conteneurs plus anciens qui n'utilisent pas la propriété ambiante de palette enverront des messages `WM_QUERYNEWPALETTE` et `WM_PALETTECHANGED`.  Un contrôle peut remplacer `OnQueryNewPalette` et `OnPaletteChanged` pour traiter les messages.  
+### <a name="high-safety-mode"></a>High Safety Mode  
   
-##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Niveaux de sécurité de navigateur Internet Explorer et comportement du contrôle  
- Un navigateur a des options pour le niveau de sécurité, configurables par l'utilisateur.  Les pages Web peuvent contenir du contenu actif qui pourrait mettre en péril l'ordinateur d'un utilisateur, les navigateurs permettent aux utilisateurs de sélectionner des options pour le niveau de sécurité.  Selon la façon dont un navigateur implémente des niveaux de sécurité, un contrôle peut ne pas être téléchargé du tout, ou afficher un certificat ou un message d'avertissement pour permettre à l'utilisateur de choisir au moment de l'exécution s'il faut télécharger le contrôle.  Le comportement des contrôles ActiveX dans les niveaux haut, moyen et bas de sécurité dans Internet Explorer est répertorié ci\-dessous.  
+-   Unsigned controls will not be downloaded.  
   
-### Mode haute sécurité  
+-   Signed controls will display a certificate if untrusted (a user can choose an option to always trust code from this certificate owner from now on).  
   
--   Les contrôles non signés ne sont pas téléchargés.  
+-   Only controls marked as safe will have persistent data and/or be scriptable.  
   
--   Les contrôles signés affichent un certificat s'ils ne sont pas dignes de confiance \(un utilisateur peut choisir une option pour toujours faire confiance au code du propriétaire du certificat à partir de maintenant\).  
+### <a name="medium-safety-mode"></a>Medium Safety Mode  
   
--   Seuls les contrôles marqués comme sûr ont des données persistantes et\/ou sont scriptables.  
+-   Unsigned controls will display a warning before downloading.  
   
-### Mode de sécurité intermédiaire  
+-   Signed controls will display a certificate if untrusted.  
   
--   Les contrôles non signés affichent un avertissement avant de télécharger.  
+-   Controls not marked as safe will display a warning.  
   
--   Les contrôles signés affichent un certificat si non approuvés.  
+### <a name="low-safety-mode"></a>Low Safety Mode  
   
--   Les contrôles non marqués comme sûr affichent un avertissement.  
+-   Controls are downloaded without warning.  
   
-### Mode de sécurité basse  
+-   Scripting and persistence occur without warning.  
   
--   Les contrôles sont téléchargés sans avertissement.  
-  
--   Le scriptage et la persistance se produisent sans avertissement.  
-  
-## Voir aussi  
- [Tâches de programmation Internet MFC](../mfc/mfc-internet-programming-tasks.md)   
- [Éléments fondamentaux relatifs à la programmation Internet MFC](../mfc/mfc-internet-programming-basics.md)   
- [Contrôles ActiveX MFC : gestion des licences d'un contrôle ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)   
+ [MFC ActiveX Controls: Licensing an ActiveX Control](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
+
+

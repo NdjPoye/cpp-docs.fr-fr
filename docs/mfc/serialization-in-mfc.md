@@ -1,60 +1,78 @@
 ---
-title: "S&#233;rialisation dans MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ignorer la sérialisation"
-  - "classes de collection, sérialisation"
-  - "MFC, sérialisation"
-  - "sérialisation (C++), ignorer"
-  - "sérialisation (C++), MFC"
+title: Serialization in MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- collection classes [MFC], serialization
+- bypassing serialization [MFC]
+- MFC, serialization
+- serialization [MFC], MFC
+- serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# S&#233;rialisation dans MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: faeb78915a399d212b3b04d467e9a2e8d266ee15
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cet article décrit le mécanisme de sérialisation fourni dans la bibliothèque MFC \(MFC\) pour permettre aux objets de persister entre des exécutions de votre programme.  
+---
+# <a name="serialization-in-mfc"></a>Serialization in MFC
+This article explains the serialization mechanism provided in the Microsoft Foundation Class Library (MFC) to allow objects to persist between runs of your program.  
   
- La sérialisation est le processus d'écriture ou de lecture d'un objet à partir d'un support de stockage permanent tel qu'un fichier de disque.  La sérialisation est idéale pour les situations où il est désiré de gérer l'état des données structurées \(telles que les classes ou structures C\+\+\) pendant ou après l'exécution d'un programme.  L'utilisation de la sérialisation d'objets fournis par MFC permet à cela de se passer de façon standard et cohérente, soulageant l'utilisateur de la nécessité d'effectuer des opérations de fichier à la main.  
+ Serialization is the process of writing or reading an object to or from a persistent storage medium such as a disk file. Serialization is ideal for situations where it is desired to maintain the state of structured data (such as C++ classes or structures) during or after execution of a program. Using the serialization objects provided by MFC allows this to occur in a standard and consistent manner, relieving the user from the need to perform file operations by hand.  
   
- MFC fournit la prise en charge intégrée de la sérialisation de la classe `CObject`.  Par conséquent, toutes les classes dérivées `CObject` peuvent tirer parti du protocole de sérialisation de `CObject`.  
+ MFC supplies built-in support for serialization in the class `CObject`. Thus, all classes derived from `CObject` can take advantage of `CObject`'s serialization protocol.  
   
- L'idée de la sérialisation est qu'un objet doit pouvoir d'écrire son état actuel, généralement désigné par la valeur de ses variables membres, en stockage permanent.  Par la suite, l'objet peut être recréé par la lecture, ou la désérialisation, de l'état de l'objet dans le stockage.  La sérialisation gère tous les détails des pointeurs d'objets et des références circulaires des objets utilisés pour sérialiser un objet.  Un point clé est ici que l'objet lui\-même est chargé de lire et d'écrire son propre état.  Par conséquent, pour qu'une classe soit sérialisable, elle doit implémenter les opérations sérialisation basiques.  Comme indiqué dans le groupe d'articles sur la sérialisation, il est facile d'ajouter cette fonctionnalité dans une classe.  
+ The basic idea of serialization is that an object should be able to write its current state, usually indicated by the value of its member variables, to persistent storage. Later, the object can be re-created by reading, or deserializing, the object's state from the storage. Serialization handles all the details of object pointers and circular references to objects that are used when you serialize an object. A key point is that the object itself is responsible for reading and writing its own state. Thus, for a class to be serializable, it must implement the basic serialization operations. As shown in the Serialization group of articles, it is easy to add this functionality to a class.  
   
- MFC utilise un objet de la classe `CArchive` comme intermédiaire entre l'objet à sérialiser et le support de stockage.  Cet objet est toujours associé à un objet `CFile`, à partir duquel il obtient les informations nécessaires à la sérialisation, y compris le nom de fichier et si l'opération demandée est une lecture ou une écriture.  L'objet qui effectue une opération de sérialisation peut utiliser l'objet `CArchive` indépendamment de la nature du support de stockage.  
+ MFC uses an object of the `CArchive` class as an intermediary between the object to be serialized and the storage medium. This object is always associated with a `CFile` object, from which it obtains the necessary information for serialization, including the file name and whether the requested operation is a read or write. The object that performs a serialization operation can use the `CArchive` object without regard to the nature of the storage medium.  
   
- Un objet `CArchive` utilise des opérateurs surchargés d'insertion \(**\<\<**\) et d'extraction \(**\>\>**\) pour effectuer des opérations de lecture et de lecture.  Pour plus d'informations, consultez [Stockage et de CObjects via une archive](../mfc/storing-and-loading-cobjects-via-an-archive.md) dans l'article Sérialisation : Sérialiser un objet.  
+ A `CArchive` object uses overloaded insertion (**<\<**) and extraction (**>>**) operators to perform writing and reading operations. For more information, see [Storing and Loading CObjects via an Archive](../mfc/storing-and-loading-cobjects-via-an-archive.md) in the article Serialization: Serializing an Object.  
   
 > [!NOTE]
->  Ne confondez pas la classe `CArchive` à l'aide de classes iostream à caractère général, qui est du texte mis en forme uniquement.  La classe `CArchive` concerne les objets sérialisés au format binaire.  
+>  Do not confuse the `CArchive` class with general-purpose iostream classes, which are for formatted text only. The `CArchive` class is for binary-format serialized objects.  
   
- Si vous le souhaitez, vous pouvez ignorer la sérialisation de MFC pour créer votre propre mécanisme de stockage des données persistantes.  Vous devez remplacer les fonctions membre classe qui initie cette sérialisation à l'ordre de l'utilisateur.  Consultez la discussion dans [Note technique 22](../mfc/tn022-standard-commands-implementation.md) des commandes standard `ID_FILE_OPEN`, **ID\_FILE\_SAVE**, et **ID\_FILE\_SAVE\_AS**.  
+ If you want, you can bypass MFC serialization to create your own mechanism for persistent data storage. You will need to override the class member functions that initiate serialization at the user's command. See the discussion in [Technical Note 22](../mfc/tn022-standard-commands-implementation.md) of the `ID_FILE_OPEN`, **ID_FILE_SAVE**, and **ID_FILE_SAVE_AS** standard commands.  
   
- Les éléments suivants couvrent les deux tâches principales nécessaires à la sérialisation :  
+ The following articles cover the two main tasks required for serialization:  
   
--   [Sérialisation : définir une classe sérialisable](../mfc/serialization-making-a-serializable-class.md)  
+-   [Serialization: Making a Serializable Class](../mfc/serialization-making-a-serializable-class.md)  
   
--   [Sérialisation : sérialisation d'un objet](../mfc/serialization-serializing-an-object.md)  
+-   [Serialization: Serializing an Object](../mfc/serialization-serializing-an-object.md)  
   
- L'article [Sérialisation : Sérialisation vs l'entrée\/sortie de base de données](../mfc/serialization-serialization-vs-database-input-output.md) indique quand la sérialisation est une technique appropriée d'entrée\/sortie dans des applications de base de données.  
+ The article [Serialization: Serialization vs. Database Input/Output](../mfc/serialization-serialization-vs-database-input-output.md) describes when serialization is an appropriate input/output technique in database applications.  
   
-## Voir aussi  
+## <a name="see-also"></a>See Also  
  [Concepts](../mfc/mfc-concepts.md)   
- [Rubriques MFC générales](../mfc/general-mfc-topics.md)   
+ [General MFC Topics](../mfc/general-mfc-topics.md)   
  [CArchive Class](../mfc/reference/carchive-class.md)   
  [CObject Class](../mfc/reference/cobject-class.md)   
  [CDocument Class](../mfc/reference/cdocument-class.md)   
  [CFile Class](../mfc/reference/cfile-class.md)
+

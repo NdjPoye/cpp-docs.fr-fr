@@ -1,39 +1,58 @@
 ---
-title: "Gestion de l&#39;affichage actuel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vue active dans une fenêtre frame"
-  - "désactiver des vues"
-  - "fenêtres frame, affichage actuel"
-  - "OnActivateView (méthode)"
-  - "vues, activer"
-  - "vues, et méthode OnActivateView"
-  - "vues, actuels"
-  - "vues, désactiver"
+title: Managing the Current View | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- views [MFC], and OnActivateView method [MFC]
+- views [MFC], deactivating
+- views [MFC], activating
+- frame windows [MFC], current view
+- OnActivateView method [MFC]
+- views [MFC], current
+- deactivating views [MFC]
+- current view in frame window [MFC]
 ms.assetid: 0a1cc22d-d646-4536-9ad2-3cb6d7092e4a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Gestion de l&#39;affichage actuel
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fbdd5ed9ba0935fd224f2b62796ea005593b77b9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Lors de l'implémentation par défaut des fenêtres frames, une fenêtre cadre contient une vue actuellement active.  Si la fenêtre cadre contient plusieurs vues, comme par exemple dans une fenêtre de fractionnement, la vue actuelle est la vue la plus récente utilisée.  La vue active est indépendante de la fenêtre active windows ou le focus d'entrée actuel.  
+---
+# <a name="managing-the-current-view"></a>Managing the Current View
+As part of the default implementation of frame windows, a frame window keeps track of a currently active view. If the frame window contains more than one view, as for example in a splitter window, the current view is the most recent view in use. The active view is independent of the active window in Windows or the current input focus.  
   
- Lorsque la vue active change, l'infrastructure notifie la vue actuelle en appelant la fonction membre de [OnActivateView](../Topic/CView::OnActivateView.md).  Déterminez si la vue est activée ou désactivée en examinant le paramètre `bActivate` de `OnActivateView`.  Par défaut, `OnActivateView` définit le focus sur la vue actuelle au moment de l'activation.  Remplacez `OnActivateView` pour effectuer tout traitement spécial lorsque la vue est désactivée ou réactivée.  Par exemple, fournissez des signaux visuels spéciaux pour distinguer la vue active, d'autres vues inactives.  
+ When the active view changes, the framework notifies the current view by calling its [OnActivateView](../mfc/reference/cview-class.md#onactivateview) member function. You can tell whether the view is being activated or deactivated by examining `OnActivateView`'s `bActivate` parameter. By default, `OnActivateView` sets the focus to the current view on activation. You can override `OnActivateView` to perform any special processing when the view is deactivated or reactivated. For example, you might want to provide special visual cues to distinguish the active view from other, inactive views.  
   
- Une fenêtre cadre transfère les commandes à sa vue actuelle \(active\), comme décrit dans [Routage des commandes](../mfc/command-routing.md), dans le cadre du routage des commandes standard.  
+ A frame window forwards commands to its current (active) view, as described in [Command Routing](../mfc/command-routing.md), as part of the standard command routing.  
   
-## Voir aussi  
- [Utilisation de fenêtres frame](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

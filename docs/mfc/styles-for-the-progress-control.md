@@ -1,55 +1,74 @@
 ---
-title: "Styles du contr&#244;le Progress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CProgressCtrl (classe), styles"
-  - "PBS_SMOOTH (style)"
-  - "PBS_VERTICAL (style)"
-  - "progress (contrôles) (C++), styles"
+title: Styles for the Progress Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- PBS_SMOOTH style
+- progress controls [MFC], styles
+- PBS_VERTICAL style
+- CProgressCtrl class [MFC], styles
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Styles du contr&#244;le Progress
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2f7a2fd46e9a9af0e3de95f99b717629feab3357
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Lorsque vous créez initialement le contrôle de progression \([CProgressCtrl::Create](../Topic/CProgressCtrl::Create.md)\), utilisez le paramètre `dwStyle` pour spécifier les styles de fenêtre de votre choix pour votre contrôle de progression.  La liste suivante décrit les styles de fenêtre applicables.  Le contrôle ignore tout style de fenêtre autre que celui ici.  Vous devez toujours créer le contrôle dans une fenêtre enfant, généralement d'un parent de la boîte de dialogue.  
+---
+# <a name="styles-for-the-progress-control"></a>Styles for the Progress Control
+When you initially create the progress control ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create)), use the `dwStyle` parameter to specify the desired window styles for your progress control. The following list details the applicable window styles. The control ignores any window style other than the ones listed here. You should always create the control as a child window, usually of a dialog box parent.  
   
-|Style de fenêtre|Effet|  
-|----------------------|-----------|  
-|`WS_BORDER`|Crée une bordure autour de la fenêtre.|  
-|**WS\_CHILD**|Crée une fenêtre enfant \(doit toujours être utilisé pour `CProgressCtrl`\).|  
-|**WS\_CLIPCHILDREN**|Exclut la zone occupée par les fenêtres enfants lorsque vous dessinez dans la fenêtre parente.  Utilisée lorsque vous créez la fenêtre parente.|  
-|**WS\_CLIPSIBLINGS**|Fait coïncider les fenêtres enfants connexes.|  
-|**WS\_DISABLED**|Crée une fenêtre qui est initialement désactivée.|  
-|**WS\_VISIBLE**|Crée une fenêtre initialement visible.|  
-|**WS\_TABSTOP**|Spécifie que le contrôle peut accepter le focus lorsque l'utilisateur appuie sur la touche TAB pour vous déplacer vers celui\-ci.|  
+|Window style|Effect|  
+|------------------|------------|  
+|`WS_BORDER`|Creates a border around the window.|  
+|**WS_CHILD**|Creates a child window (should always be used for `CProgressCtrl`).|  
+|**WS_CLIPCHILDREN**|Excludes the area occupied by child windows when you draw within the parent window. Used when you create the parent window.|  
+|**WS_CLIPSIBLINGS**|Clips child windows relative to each other.|  
+|**WS_DISABLED**|Creates a window that is initially disabled.|  
+|**WS_VISIBLE**|Creates a window that is initially visible.|  
+|**WS_TABSTOP**|Specifies that the control can receive focus when the user presses the TAB key to move to it.|  
   
- En outre, vous pouvez spécifier deux styles qui s'appliquent uniquement au contrôle de progression, à `PBS_VERTICAL` et `PBS_SMOOTH`.  
+ In addition, you can specify two styles that apply only to the progress control, `PBS_VERTICAL` and `PBS_SMOOTH`.  
   
- Utilisez `PBS_VERTICAL` pour orienter le contrôle verticalement, plutôt qu'horizontalement.  Utilisez `PBS_SMOOTH` pour remplir complètement le contrôle, plutôt qu'en consultant les petites étendues suivies qui remplissent le contrôle de façon incrémentielle.  
+ Use `PBS_VERTICAL` to orient the control vertically, rather than horizontally. Use `PBS_SMOOTH` to fill the control completely, rather than displaying small delineated squares that fill the control incrementally.  
   
- Sans style `PBS_SMOOTH`:  
+ Without `PBS_SMOOTH` style:  
   
- ![Style de la barre de progression standard](../mfc/media/vc4ruw1.png "vc4RUW1")  
+ ![Standard progress bar style](../mfc/media/vc4ruw1.gif "vc4ruw1")  
   
- Avec `PBS_SMOOTH` et les styles `PBS_VERTICAL`:  
+ With `PBS_SMOOTH` and `PBS_VERTICAL` styles:  
   
- ![Style de la barre de progression, lisse et vertical](../mfc/media/vc4ruw2.png "vc4RUW2")  
+ ![Progress bar style, smooth and vertical](../mfc/media/vc4ruw2.gif "vc4ruw2")  
   
- Pour plus d'informations, consultez [Styles de fenêtre](../mfc/reference/frame-window-styles-mfc.md) dans le *Guide de MFC*.  
+ For more information, see [Window Styles](../mfc/reference/styles-used-by-mfc.md#frame-window-styles-mfc) in the *MFC Reference*.  
   
-## Voir aussi  
- [Utilisation de CProgressCtrl](../mfc/using-cprogressctrl.md)
+## <a name="see-also"></a>See Also  
+ [Using CProgressCtrl](../mfc/using-cprogressctrl.md)
+
+

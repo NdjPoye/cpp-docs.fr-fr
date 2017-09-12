@@ -1,52 +1,72 @@
 ---
-title: "Comment&#160;: ajouter des contr&#244;les de ruban et des gestionnaires d&#39;&#233;v&#233;nements | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestionnaires d'événements, ajouter"
-  - "contrôles du ruban, ajouter"
+title: 'How to: Add Ribbon Controls and Event Handlers | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handlers [MFC], adding
+- ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Comment&#160;: ajouter des contr&#244;les de ruban et des gestionnaires d&#39;&#233;v&#233;nements
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 99bd07de331cb9281bffeb39eb78123377fe31b6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Les contrôles du ruban sont des éléments, comme les boutons et les zones de liste déroulante, que vous ajoutez aux panneaux.  Les panneaux sont des zones de la barre de ruban qui affichent un groupe de contrôles connexes.  
+---
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>How to: Add Ribbon Controls and Event Handlers
+Ribbon controls are elements, such as buttons and combo boxes, that you add to panels. Panels are areas of the ribbon bar that display a group of related controls.  
   
- Dans cette rubrique, vous allez ouvrir le concepteur de ruban, ajouter un bouton, puis lier un événement qui affiche « Hello World ».  
+ In this topic, you will open the Ribbon Designer, add a button, and then link an event that displays "Hello World".  
   
-### Pour ouvrir le Concepteur de ruban  
+### <a name="to-open-the-ribbon-designer"></a>To open the Ribbon Designer  
   
-1.  Dans Visual Studio, dans le menu **Affichage**, cliquez sur **Affichage des ressources**.  
+1.  In Visual Studio, on the **View** menu, click **Resource View**.  
   
-2.  Dans **Affichage des ressources**, double\-cliquez sur la ressource du ruban pour l'afficher dans l'aire de conception.  
+2.  In **Resource View**, double-click the ribbon resource to display it on the design surface.  
   
-### Pour ajouter un bouton et un gestionnaire d'événement  
+### <a name="to-add-a-button-and-an-event-handler"></a>To add a Button and an Event Handler  
   
-1.  Depuis la **Barre d'outils**, cliquez sur **Bouton** et faites\-le glisser jusqu'à un panneau dans l'aire de conception.  
+1.  From the **Toolbar**, click **Button** and drag it on to a panel in the design surface.  
   
-2.  Cliquez avec le bouton droit sur le bouton, puis cliquez sur **Ajouter un gestionnaire d'événements**.  
+2.  Right-click the button, and click **Add Event Handler**.  
   
-3.  Dans **Assistant Gestionnaire d'événements**, vérifiez les paramètres par défaut et cliquez sur **Ajouter**.  Pour plus d'informations, consultez [Assistant Gestionnaire d'événements](../ide/event-handler-wizard.md).  
+3.  In the **Event Handler Wizard**, confirm the default settings and click **Add and Edit**. For more information, see [Event Handler Wizard](../ide/event-handler-wizard.md).  
   
-4.  Dans l'éditeur de code, ajoutez le code suivant dans la fonction gestionnaire :  
+4.  In the code editor, add the following code into the handler function:  
   
-    ```  
-    MessageBox((LPCTSTR)L"Hello World");  
-    ```  
+ ```  
+    MessageBox((LPCTSTR)L"Hello World");
+
+ ```  
   
-## Voir aussi  
- [RibbonGadgets, exemple : application de gadgets du ruban](../top/visual-cpp-samples.md)   
- [Concepteur de ruban \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [RibbonGadgets Sample: Ribbon Gadgets Application](../visual-cpp-samples.md)   
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

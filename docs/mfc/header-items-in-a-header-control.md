@@ -1,43 +1,62 @@
 ---
-title: "&#201;l&#233;ments d&#39;en-t&#234;te dans un contr&#244;le Header | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl (classe), éléments d'en-tête dans"
-  - "contrôles (MFC), header"
-  - "contrôles header, éléments d'en-tête dans"
-  - "éléments d'en-tête dans les contrôles header"
+title: Header Items in a Header Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- header controls [MFC], header items in
+- header items in header controls [MFC]
+- CHeaderCtrl class [MFC], header items in
+- controls [MFC], header
 ms.assetid: ac79ef1f-a671-4ab2-93e9-b1aa016a48bf
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# &#201;l&#233;ments d&#39;en-t&#234;te dans un contr&#244;le Header
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 65f579669d62b50686925587001362a3251ca0e4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Vous avez un contrôle considérable sur l'apparence et le comportement des éléments d'en\-tête qui composent un contrôle header \([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)\).  Chaque élément d'en\-tête peut avoir une chaîne, une image bitmap, une image d'une liste d'image associée, ou une valeur 32 bits définies par l'application associée à celui\-ci.  La chaîne, la bitmap, ou l'image est affichée dans l'élément d'en\-tête.  
+---
+# <a name="header-items-in-a-header-control"></a>Header Items in a Header Control
+You have considerable control over the appearance and behavior of the header items that make up a header control ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)). Each header item can have a string, a bitmapped image, an image from an associated image list, or an application-defined 32-bit value associated with it. The string, bitmap, or image is displayed in the header item.  
   
- Vous pouvez personnaliser l'apparence et le contenu des éléments lorsqu'ils sont créés lors d'un appel [CHeaderCtrl::InsertItem](../Topic/CHeaderCtrl::InsertItem.md) ou en modifiant un élément existant, par un appel à [CHeaderCtrl::GetItem](../Topic/CHeaderCtrl::GetItem.md) et [CHeaderCtrl::SetItem](../Topic/CHeaderCtrl::SetItem.md).  
+ You can customize the appearance and contents of new items when they are created by making a call [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem) or by modifying an existing item, with a call to [CHeaderCtrl::GetItem](../mfc/reference/cheaderctrl-class.md#getitem) and [CHeaderCtrl::SetItem](../mfc/reference/cheaderctrl-class.md#setitem).  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Personnalisation de l'apparence de l'élément d'en\-tête](../mfc/customizing-the-header-item-s-appearance.md)  
+-   [Customizing the header item's appearance](../mfc/customizing-the-header-item-s-appearance.md)  
   
--   [Organisation des éléments dans le contrôle Header](../mfc/ordering-items-in-the-header-control.md)  
+-   [Ordering items in the header control](../mfc/ordering-items-in-the-header-control.md)  
   
--   [Prise en charge du glisser\-déposer pour les éléments d'en\-tête](../mfc/providing-drag-and-drop-support-for-header-items.md)  
+-   [Providing drag-and-drop support for the header items](../mfc/providing-drag-and-drop-support-for-header-items.md)  
   
--   [Utilisation de listes d'images avec des contrôles Header](../mfc/using-image-lists-with-header-controls.md)  
+-   [Using image lists with header controls](../mfc/using-image-lists-with-header-controls.md)  
   
-## Voir aussi  
- [Utilisation de CHeaderCtrl](../mfc/using-cheaderctrl.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)
+
+

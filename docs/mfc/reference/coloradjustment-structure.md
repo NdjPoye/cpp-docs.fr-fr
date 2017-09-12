@@ -1,5 +1,5 @@
 ---
-title: "Structure de réglage des couleurs | Documents Microsoft"
+title: COLORADJUSTMENT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COLORADJUSTMENT structure
+- COLORADJUSTMENT structure [MFC]
 ms.assetid: 67fc4e63-0e0e-4fcb-8c45-aa5ebfefa013
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 7f88877fa009abf4e811ba0a99b7e0e1683f998a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f8d3066b39a11369ca8f0a4f04429a26d2f04702
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coloradjustment-structure"></a>COLORADJUSTMENT, structure
-Le `COLORADJUSTMENT` structure définit les valeurs d’ajustement de couleur utilisés par Windows `StretchBlt` et **StretchDIBits** fonctions lors de la `StretchBlt` mode est **demi-teintes**.  
+# <a name="coloradjustment-structure"></a>COLORADJUSTMENT Structure
+The `COLORADJUSTMENT` structure defines the color adjustment values used by the Windows `StretchBlt` and **StretchDIBits** functions when the `StretchBlt` mode is **HALFTONE**.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct  tagCOLORADJUSTMENT {    /* ca */  
@@ -62,19 +62,19 @@ typedef struct  tagCOLORADJUSTMENT {    /* ca */
 } COLORADJUSTMENT;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  *caSize*  
- Spécifie la taille de la structure en octets.  
+ Specifies the size of the structure in bytes.  
   
  *caFlags*  
- Spécifie comment l’image de sortie doit être préparée. Ce membre peut être défini sur **NULL** ou n’importe quelle combinaison des valeurs suivantes :  
+ Specifies how the output image should be prepared. This member can be set to **NULL** or any combination of the following values:  
   
-- **CA_NEGATIVE** indique que la valeur négative de l’image d’origine doit être affichée.  
+- **CA_NEGATIVE** Specifies that the negative of the original image should be displayed.  
   
-- **CA_LOG_FILTER** Spécifie qu’une fonction logarithmique doit être appliquée à la densité des couleurs de sortie finale. Cela augmentera le contraste des couleurs lorsque la luminance est faible.  
+- **CA_LOG_FILTER** Specifies that a logarithmic function should be applied to the final density of the output colors. This will increase the color contrast when the luminance is low.  
   
  *caIlluminantIndex*  
- Spécifie la luminance de la source lumineuse sous lequel l’objet d’image est affichée. Ce membre peut être défini à une des valeurs suivantes :  
+ Specifies the luminance of the light source under which the image object is viewed. This member can be set to one of the following values:  
   
 - **ILLUMINANT_EQUAL_ENERGY**  
   
@@ -103,37 +103,37 @@ typedef struct  tagCOLORADJUSTMENT {    /* ca */
 - **ILLUMINANT_NTSC**  
   
  *caRedGamma*  
- Spécifie la valeur de correction gamma de puissance n de rouge principal des couleurs source. La valeur doit être comprise entre 2 500 à 65,000. Une valeur de 10 000 ne signifie aucune correction gamma.  
+ Specifies the nth power gamma-correction value for the red primary of the source colors. The value must be in the range from 2,500 to 65,000. A value of 10,000 means no gamma-correction.  
   
  *caGreenGamma*  
- Spécifie la valeur de correction gamma de puissance n de vert principal des couleurs source. La valeur doit être comprise entre 2 500 à 65,000. Une valeur de 10 000 ne signifie aucune correction gamma.  
+ Specifies the nth power gamma-correction value for the green primary of the source colors. The value must be in the range from 2,500 to 65,000. A value of 10,000 means no gamma-correction.  
   
  *caBlueGamma*  
- Spécifie la valeur de correction gamma de puissance n de bleu primaire des couleurs source. La valeur doit être comprise entre 2 500 à 65,000. Une valeur de 10 000 ne signifie aucune correction gamma.  
+ Specifies the nth power gamma-correction value for the blue primary of the source colors. The value must be in the range from 2,500 to 65,000. A value of 10,000 means no gamma-correction.  
   
  *caReferenceBlack*  
- Spécifie la référence noire pour les couleurs de la source. Les couleurs plus sombres que ce sont traités en noir. La valeur doit être dans la plage de 0 à 4 000.  
+ Specifies the black reference for the source colors. Any colors that are darker than this are treated as black. The value must be in the range from 0 to 4,000.  
   
  *caReferenceWhite*  
- Spécifie la référence de blanche pour les couleurs de la source. Les couleurs plus claires que ce sont traités comme blanc. La valeur doit être comprise entre 6 000 à 10 000.  
+ Specifies the white reference for the source colors. Any colors that are lighter than this are treated as white. The value must be in the range from 6,000 to 10,000.  
   
  *caContrast*  
- Spécifie la quantité de contraste à appliquer à l’objet source. La valeur doit être comprise entre -100 et 100. La valeur 0 ne signifie aucun ajustement de contraste.  
+ Specifies the amount of contrast to be applied to the source object. The value must be in the range from -100 to 100. A value of 0 means no contrast adjustment.  
   
  *caBrightness*  
- Spécifie la quantité de luminosité à appliquer à l’objet source. La valeur doit être comprise entre -100 et 100. La valeur 0 ne signifie aucun ajustement de la luminosité.  
+ Specifies the amount of brightness to be applied to the source object. The value must be in the range from -100 to 100. A value of 0 means no brightness adjustment.  
   
  *caColorfulness*  
- Spécifie la quantité de colorfulness à appliquer à l’objet source. La valeur doit être comprise entre -100 et 100. La valeur 0 ne signifie aucun ajustement colorfulness.  
+ Specifies the amount of colorfulness to be applied to the source object. The value must be in the range from -100 to 100. A value of 0 means no colorfulness adjustment.  
   
  *caRedGreenTint*  
- Spécifie la quantité d’ajustement rouge ou vert à appliquer à l’objet source. La valeur doit être comprise entre -100 et 100. Nombres positifs ajusterait vers le rouge et ajustez les nombres négatifs vers le vert. 0 ne signifie aucun ajustement de la teinte.  
+ Specifies the amount of red or green tint adjustment to be applied to the source object. The value must be in the range from -100 to 100. Positive numbers would adjust towards red and negative numbers adjust towards green. A 0 means no tint adjustment.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** wingdi.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDC::GetColorAdjustment](../../mfc/reference/cdc-class.md#getcoloradjustment)
 
 

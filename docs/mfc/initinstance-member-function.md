@@ -1,50 +1,68 @@
 ---
-title: "InitInstance, fonction membre | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "InitInstance"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "applications (MFC), initialiser"
-  - "initialiser des applications MFC"
-  - "InitInstance (méthode)"
-  - "MFC (C++), initialiser"
+title: InitInstance Member Function | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- InitInstance
+dev_langs:
+- C++
+helpviewer_keywords:
+- InitInstance method [MFC]
+- applications [MFC], initializing
+- MFC, initializing
+- initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# InitInstance, fonction membre
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 79983bf7027ee121f5843427262caac6174fde83
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Le système d'exploitation Windows vous permet d'exécuter plus d'une copie, ou « instance, » de la même application.  `WinMain` appelle [InitInstance](../Topic/CWinApp::InitInstance.md) chaque fois qu'une nouvelle instance d'application démarre.  
+---
+# <a name="initinstance-member-function"></a>InitInstance Member Function
+The Windows operating system allows you to run more than one copy, or "instance," of the same application. `WinMain` calls [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) every time a new instance of the application starts.  
   
- L'implémentation standard de `InitInstance` créée par l'Assistant Application MFC effectue les tâches suivantes :  
+ The standard `InitInstance` implementation created by the MFC Application Wizard performs the following tasks:  
   
--   Comme action centrale, crée des modèles de document qui créent ensuite des documents, des vues, et des cadres.  Pour une description de ce processus, consultez [Création d'un modèle de document](../mfc/document-template-creation.md).  
+-   As its central action, creates the document templates that in turn create documents, views, and frame windows. For a description of this process, see [Document Template Creation](../mfc/document-template-creation.md).  
   
--   Charge les options de fichier standard d'un fichier .ini ou du Registre windows, notamment les noms des fichiers récemment utilisés.  
+-   Loads standard file options from an .ini file or the Windows registry, including the names of the most recently used files.  
   
--   Enregistre un ou plusieurs modèles de document.  
+-   Registers one or more document templates.  
   
--   Pour une application MDI, crée une fenêtre cadre principale.  
+-   For an MDI application, creates a main frame window.  
   
--   Traite la ligne de commande pour ouvrir un document spécifié sur la ligne de commande ou ouvrir un nouveau document vide.  
+-   Processes the command line to open a document specified on the command line or to open a new, empty document.  
   
- Vous pouvez ajouter votre propre code d'initialisation ou modifier le code écrit par l'Assistant.  
+ You can add your own initialization code or modify the code written by the wizard.  
   
 > [!NOTE]
->  Les applications MFC doivent être initialisées comme un cloisonnement à thread unique \(STA\).  Si vous appelez [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) dans la substitution de `InitInstance`, spécifiez `COINIT_APARTMENTTHREADED` \(et non `COINIT_MULTITHREADED`\).  Pour plus d'informations, consultez PRB : L'application MFC cesse de répondre quand vous démarrez l'application comme un cloisonnement multithread \(828643\) à [http:\/\/support.microsoft.com\/default.aspx?scid\=kb;en\-us;828643](http://support.microsoft.com/default.aspx?scid=kb;en-us;828643).  
+>  MFC applications must be initialized as single threaded apartment (STA). If you call [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) in your `InitInstance` override, specify `COINIT_APARTMENTTHREADED` (rather than `COINIT_MULTITHREADED`). For more information, see PRB: MFC Application Stops Responding When You Initialize the Application as a Multithreaded Apartment (828643) at [http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
   
-## Voir aussi  
- [CWinApp : classe d'application](../mfc/cwinapp-the-application-class.md)
+## <a name="see-also"></a>See Also  
+ [CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md)
+

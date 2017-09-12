@@ -1,57 +1,76 @@
 ---
-title: "Utilisation de CRichEditCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRichEditCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl (classe), utilisation"
-  - "contrôles RichEdit, utilisation"
+title: Using CRichEditCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRichEditCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- rich edit controls [MFC], using
+- CRichEditCtrl class [MFC], using
 ms.assetid: e400c6ed-563e-4d4c-ab3b-a3f0aa20273b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Utilisation de CRichEditCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ccf20f2b621e2b000ca28b380339ff479dac0ace
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Un contrôle RichEdit est une fenêtre dans laquelle l'utilisateur peut entrer et modification du texte.  Le texte peut bénéficier du caractère et la mise en forme de paragraphe, et peut comprendre les objets OLE incorporés.  Le contrôle RichEdit est représenté dans MFC par la classe d'[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md).  
+---
+# <a name="using-cricheditctrl"></a>Using CRichEditCtrl
+A rich edit control is a window in which the user can enter and edit text. The text can be assigned character and paragraph formatting, and can include embedded OLE objects. The rich edit control is represented in MFC by the [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) class.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Vue d'ensemble du contrôle RichEdit](../mfc/overview-of-the-rich-edit-control.md)  
+-   [Overview of the Rich Edit Control](../mfc/overview-of-the-rich-edit-control.md)  
   
--   [Classes associées aux contrôles RichEdit](../mfc/classes-related-to-rich-edit-controls.md)  
+-   [Classes Related to Rich Edit Controls](../mfc/classes-related-to-rich-edit-controls.md)  
   
--   [Exemples de contrôle RichEdit](../mfc/rich-edit-control-examples.md)  
+-   [Rich Edit Control Examples](../mfc/rich-edit-control-examples.md)  
   
--   [Mise en forme des caractères dans les contrôles RichEdit](../mfc/character-formatting-in-rich-edit-controls.md)  
+-   [Character Formatting in Rich Edit Controls](../mfc/character-formatting-in-rich-edit-controls.md)  
   
--   [Mise en forme des paragraphes dans les contrôles RichEdit](../mfc/paragraph-formatting-in-rich-edit-controls.md)  
+-   [Paragraph Formatting in Rich Edit Controls](../mfc/paragraph-formatting-in-rich-edit-controls.md)  
   
--   [Sélection actuelle dans un contrôle RichEdit](../mfc/current-selection-in-a-rich-edit-control.md)  
+-   [Current Selection in a Rich Edit Control](../mfc/current-selection-in-a-rich-edit-control.md)  
   
--   [Coupure des mots dans les contrôles RichEdit \(MFC\)](../mfc/word-breaks-in-rich-edit-controls.md)  
+-   [Word Breaks in a Rich Edit Control](../mfc/word-breaks-in-rich-edit-controls.md)  
   
--   [Opérations du Presse\-papiers dans les contrôles RichEdit](../mfc/clipboard-operations-in-rich-edit-controls.md)  
+-   [Clipboard Operations in Rich Edit Controls](../mfc/clipboard-operations-in-rich-edit-controls.md)  
   
--   [Opérations de flux dans les contrôles RichEdit](../mfc/stream-operations-in-rich-edit-controls.md)  
+-   [Stream Operations in Rich Edit Controls](../mfc/stream-operations-in-rich-edit-controls.md)  
   
--   [Impression dans des contrôles RichEdit](../mfc/printing-in-rich-edit-controls.md)  
+-   [Printing in Rich Edit Controls](../mfc/printing-in-rich-edit-controls.md)  
   
--   [Contrôles RichEdit sans marge inférieure](../mfc/bottomless-rich-edit-controls.md)  
+-   [Bottomless Rich Edit Controls](../mfc/bottomless-rich-edit-controls.md)  
   
--   [Notifications d'un contrôle RichEdit](../mfc/notifications-from-a-rich-edit-control.md)  
+-   [Notifications from a Rich Edit Control](../mfc/notifications-from-a-rich-edit-control.md)  
   
-## Voir aussi  
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

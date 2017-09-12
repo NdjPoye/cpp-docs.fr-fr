@@ -1,93 +1,112 @@
 ---
-title: "Fen&#234;tres frame | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CFrameWnd (classe), fenêtres frame"
-  - "fenêtres frame de document"
-  - "fenêtres frame (C++)"
-  - "fenêtres frame (C++), à propos des fenêtres frame"
-  - "MDI (C++), fenêtres frame"
-  - "MFC (C++), fenêtres frame"
-  - "interface monodocument"
-  - "interface monodocument, fenêtres frame"
-  - "fenêtres fractionnées, et fenêtres frame"
-  - "vues (C++), et fenêtres frame"
-  - "classes de fenêtre (C++), frame"
-  - "fenêtres (C++), MDI"
+title: Frame Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- document frame windows [MFC]
+- windows [MFC], MDI
+- window classes [MFC], frame
+- single document interface (SDI) [MFC]
+- single document interface (SDI) [MFC], frame windows
+- views [MFC], and frame windows
+- CFrameWnd class [MFC], frame windows
+- frame windows [MFC]
+- frame windows [MFC], about frame widows
+- MFC, frame windows
+- MDI [MFC], frame windows
+- splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Fen&#234;tres frame
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6e53a48c981fa6e470c33e54ef24bbb9bf500f09
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Lorsqu'une application s'exécute sous Windows, l'utilisateur interagit avec les documents affichés dans les fenêtres cadres.  Une fenêtre cadre de document deux composants principaux : le cadre et le contenu qu'il encadre.  Une fenêtre cadre d'un document peut être une fenêtre cadre d'[interface monodocument](../mfc/sdi-and-mdi.md) \(SDI\) ou une fenêtre enfant d'[interface multidocument](../mfc/sdi-and-mdi.md) \(MDI\).  Windows gère la plupart de l'interaction de l'utilisateur avec la fenêtre cadre : déplacement et redimensionnement la fenêtre, clôture, réduction et agrandissement.  Vous gérez le contenu à l'intérieur du cadre.  
+---
+# <a name="frame-windows"></a>Frame Windows
+When an application runs under Windows, the user interacts with documents displayed in frame windows. A document frame window has two major components: the frame and the contents that it frames. A document frame window can be a [single document interface](../mfc/sdi-and-mdi.md) (SDI) frame window or a [multiple document interface](../mfc/sdi-and-mdi.md) (MDI) child window. Windows manages most of the user's interaction with the frame window: moving and resizing the window, closing it, and minimizing and maximizing it. You manage the contents inside the frame.  
   
-## Cadres de fenêtres et vues  
- L'infrastructure MFC utilise les fenêtres de cadre pour contenir des vues.  Les deux composants — cadre et contenu — sont mentionnés et gérés par deux classes différentes de MFC.  Une classe de fenêtre cadre gère le cadre, et une classe d'affichage gère le contenu.  La fenêtre d'affichage est un enfant de la fenêtre cadre.  Le dessin et les autres interventions de l'utilisateur avec le document ont lieu dans la zone client de la vue, et non la zone client de la fenêtre cadre.  La fenêtre cadre fournit un cadre visible autour d'une vue, avec une barre de légende et des contrôles standard tels qu'un menu de contrôle, des boutons pour réduire et agrandir la fenêtre, et des contrôles pour redimensionner la fenêtre.  Le "contenu" inclut la zone client dans la fenêtre, qui est entièrement occupée par une fenêtre enfant — la vue.  L'illustration suivante montre la relation entre les une fenêtre cadre et une vue.  
+## <a name="frame-windows-and-views"></a>Frame Windows and Views  
+ The MFC framework uses frame windows to contain views. The two components — frame and contents — are represented and managed by two different classes in MFC. A frame-window class manages the frame, and a view class manages the contents. The view window is a child of the frame window. Drawing and other user interaction with the document take place in the view's client area, not the frame window's client area. The frame window provides a visible frame around a view, complete with a caption bar and standard window controls such as a control menu, buttons to minimize and maximize the window, and controls for resizing the window. The "contents" consist of the window's client area, which is fully occupied by a child window — the view. The following figure shows the relationship between a frame window and a view.  
   
- ![Affichage de la fenêtre Frame](../mfc/media/vc37fx1.png "vc37FX1")  
-Fenêtre cadre et vue  
+ ![Frame window view](../mfc/media/vc37fx1.gif "vc37fx1")  
+Frame Window and View  
   
-## Fenêtres cadres et fenêtres de fractionnement  
- Une autre disposition courante est quand la fenêtre cadre encadre plusieurs vues, généralement en utilisant une [fenêtre fractionnée](../mfc/multiple-document-types-views-and-frame-windows.md).  Dans une fenêtre fractionneé, la zone client de la fenêtre cadre est occupée par une fenêtre fractionnée, qui à son tour a plusieurs fenêtres enfants, appelées les volets, qui sont des vues.  
+## <a name="frame-windows-and-splitter-windows"></a>Frame Windows and Splitter Windows  
+ Another common arrangement is for the frame window to frame multiple views, usually using a [splitter window](../mfc/multiple-document-types-views-and-frame-windows.md). In a splitter window, the frame window's client area is occupied by a splitter window, which in turn has multiple child windows, called panes, which are views.  
   
-### Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
- **Rubriques générales de fenêtres de cadre**  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
+ **General Frame Window Topics**  
   
--   [Objets fenêtres](../mfc/window-objects.md)  
+-   [Window objects](../mfc/window-objects.md)  
   
--   [Classes de fenêtres de cadre](../mfc/frame-window-classes.md)  
+-   [Frame window classes](../mfc/frame-window-classes.md)  
   
--   [Les classes de fenêtre de cadre créées par l'Assistant Application](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
+-   [The Frame-Window classes created by the Application Wizard](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
   
--   [Styles des fenêtres de cadre](../mfc/frame-window-styles-cpp.md)  
+-   [Frame window styles](../mfc/frame-window-styles-cpp.md)  
   
--   [Ce que font les fenêtres de cadres](../mfc/what-frame-windows-do.md)  
+-   [What frame windows do](../mfc/what-frame-windows-do.md)  
   
- **Rubriques sur l'utilisation de fenêtres de cadres**  
+ **Topics on Using Frame Windows**  
   
--   [Utilisation des fenêtres de cadres](../mfc/using-frame-windows.md)  
+-   [Using frame windows](../mfc/using-frame-windows.md)  
   
--   [Création de fenêtres de cadre de document](../mfc/creating-document-frame-windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
--   [Destruction des fenêtres de cadres](../mfc/destroying-frame-windows.md)  
+-   [Destroying frame windows](../mfc/destroying-frame-windows.md)  
   
--   [Gérer les fenêtres enfants MDI](../mfc/managing-mdi-child-windows.md)  
+-   [Managing MDI child windows](../mfc/managing-mdi-child-windows.md)  
   
--   [Gérer la vue actuelle](../mfc/managing-the-current-view.md) dans une fenêtre cadre qui contient plusieurs vues  
+-   [Managing the current view](../mfc/managing-the-current-view.md) in a frame window that contains more than one view  
   
--   [Gestion des menus, barres de contrôle, accélérateurs \(d'autres objets qui partagent l'espace de la fenêtre cadre\)](../mfc/managing-menus-control-bars-and-accelerators.md)  
+-   [Managing menus, control bars, and accelerators (other objects that share the frame window's space)](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
- **Rubriques sur les fonctions spéciales fenêtre de cadre**  
+ **Topics on Special Frame Window Capabilities**  
   
--   [Glisser\-déplacer de fichiers](../mfc/dragging-and-dropping-files-in-a-frame-window.md) d'un explorateur ou gestionnaire de fichiers dans une fenêtre cadre  
+-   [Dragging and dropping files](../mfc/dragging-and-dropping-files-in-a-frame-window.md) from File Explorer or File Manager into a frame window  
   
--   [Répondre à un échange dynamique de données \(DDE\)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
+-   [Responding to dynamic data exchange (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
   
--   [États Semimodaux : Aide contextuelle Windows \(orchestrant d'autres actions de fenêtre\)](../mfc/orchestrating-other-window-actions.md)  
+-   [Semimodal states: Context-sensitive Windows Help (Orchestrating other window actions)](../mfc/orchestrating-other-window-actions.md)  
   
--   [États Semimodaux : impression et aperçu avant impression \(orchestrant d'autres actions de fenêtre\)](../mfc/orchestrating-other-window-actions.md)  
+-   [Semimodal states: printing and print preview (Orchestrating other window actions)](../mfc/orchestrating-other-window-actions.md)  
   
- **Rubriques sur les autres types de fenêtres**  
+ **Topics on Other Kinds of Windows**  
   
--   [Utilisation de vues](../mfc/using-views.md)  
+-   [Using Views](../mfc/using-views.md)  
   
--   [Boîtes de dialogue](../mfc/dialog-boxes.md)  
+-   [Dialog boxes](../mfc/dialog-boxes.md)  
   
--   [des contrôles.](../mfc/controls-mfc.md)  
+-   [Controls](../mfc/controls-mfc.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>See Also  
  [Windows](../mfc/windows.md)
+
+

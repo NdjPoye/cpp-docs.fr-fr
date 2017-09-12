@@ -1,11 +1,11 @@
 ---
-title: CDaoRecordset (classe) | Documents Microsoft
+title: CDaoRecordset Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -94,9 +94,86 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- recordsets, types
-- CDaoRecordset class
-- records, CDaoRecordSet
+- CDaoRecordset [MFC], CDaoRecordset
+- CDaoRecordset [MFC], AddNew
+- CDaoRecordset [MFC], CanAppend
+- CDaoRecordset [MFC], CanBookmark
+- CDaoRecordset [MFC], CancelUpdate
+- CDaoRecordset [MFC], CanRestart
+- CDaoRecordset [MFC], CanScroll
+- CDaoRecordset [MFC], CanTransact
+- CDaoRecordset [MFC], CanUpdate
+- CDaoRecordset [MFC], Close
+- CDaoRecordset [MFC], Delete
+- CDaoRecordset [MFC], DoFieldExchange
+- CDaoRecordset [MFC], Edit
+- CDaoRecordset [MFC], FillCache
+- CDaoRecordset [MFC], Find
+- CDaoRecordset [MFC], FindFirst
+- CDaoRecordset [MFC], FindLast
+- CDaoRecordset [MFC], FindNext
+- CDaoRecordset [MFC], FindPrev
+- CDaoRecordset [MFC], GetAbsolutePosition
+- CDaoRecordset [MFC], GetBookmark
+- CDaoRecordset [MFC], GetCacheSize
+- CDaoRecordset [MFC], GetCacheStart
+- CDaoRecordset [MFC], GetCurrentIndex
+- CDaoRecordset [MFC], GetDateCreated
+- CDaoRecordset [MFC], GetDateLastUpdated
+- CDaoRecordset [MFC], GetDefaultDBName
+- CDaoRecordset [MFC], GetDefaultSQL
+- CDaoRecordset [MFC], GetEditMode
+- CDaoRecordset [MFC], GetFieldCount
+- CDaoRecordset [MFC], GetFieldInfo
+- CDaoRecordset [MFC], GetFieldValue
+- CDaoRecordset [MFC], GetIndexCount
+- CDaoRecordset [MFC], GetIndexInfo
+- CDaoRecordset [MFC], GetLastModifiedBookmark
+- CDaoRecordset [MFC], GetLockingMode
+- CDaoRecordset [MFC], GetName
+- CDaoRecordset [MFC], GetParamValue
+- CDaoRecordset [MFC], GetPercentPosition
+- CDaoRecordset [MFC], GetRecordCount
+- CDaoRecordset [MFC], GetSQL
+- CDaoRecordset [MFC], GetType
+- CDaoRecordset [MFC], GetValidationRule
+- CDaoRecordset [MFC], GetValidationText
+- CDaoRecordset [MFC], IsBOF
+- CDaoRecordset [MFC], IsDeleted
+- CDaoRecordset [MFC], IsEOF
+- CDaoRecordset [MFC], IsFieldDirty
+- CDaoRecordset [MFC], IsFieldNull
+- CDaoRecordset [MFC], IsFieldNullable
+- CDaoRecordset [MFC], IsOpen
+- CDaoRecordset [MFC], Move
+- CDaoRecordset [MFC], MoveFirst
+- CDaoRecordset [MFC], MoveLast
+- CDaoRecordset [MFC], MoveNext
+- CDaoRecordset [MFC], MovePrev
+- CDaoRecordset [MFC], Open
+- CDaoRecordset [MFC], Requery
+- CDaoRecordset [MFC], Seek
+- CDaoRecordset [MFC], SetAbsolutePosition
+- CDaoRecordset [MFC], SetBookmark
+- CDaoRecordset [MFC], SetCacheSize
+- CDaoRecordset [MFC], SetCacheStart
+- CDaoRecordset [MFC], SetCurrentIndex
+- CDaoRecordset [MFC], SetFieldDirty
+- CDaoRecordset [MFC], SetFieldNull
+- CDaoRecordset [MFC], SetFieldValue
+- CDaoRecordset [MFC], SetFieldValueNull
+- CDaoRecordset [MFC], SetLockingMode
+- CDaoRecordset [MFC], SetParamValue
+- CDaoRecordset [MFC], SetParamValueNull
+- CDaoRecordset [MFC], SetPercentPosition
+- CDaoRecordset [MFC], Update
+- CDaoRecordset [MFC], m_bCheckCacheForDirtyFields
+- CDaoRecordset [MFC], m_nFields
+- CDaoRecordset [MFC], m_nParams
+- CDaoRecordset [MFC], m_pDAORecordset
+- CDaoRecordset [MFC], m_pDatabase
+- CDaoRecordset [MFC], m_strFilter
+- CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
 caps.latest.revision: 26
 author: mikeblome
@@ -116,425 +193,426 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: bd211f55e2a07ef2d0c61e039df526fc2cd654f4
-ms.lasthandoff: 04/01/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 089a9910e4950a2ecfbdc85355e8f5d4b0600f36
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaorecordset-class"></a>CDaoRecordset (classe)
-Représente un ensemble d'enregistrements sélectionnés à partir d'une source de données.  
+# <a name="cdaorecordset-class"></a>CDaoRecordset Class
+Represents a set of records selected from a data source.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDaoRecordset : public CObject  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoRecordset::CDaoRecordset](#cdaorecordset)|Construit un objet `CDaoRecordset`.|  
+|[CDaoRecordset::CDaoRecordset](#cdaorecordset)|Constructs a `CDaoRecordset` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoRecordset::AddNew](#addnew)|Prépare pour ajouter un nouvel enregistrement. Appelez [mise à jour](#update) pour terminer l’ajout.|  
-|[CDaoRecordset::CanAppend](#canappend)|Retourne zéro si les nouveaux enregistrements peuvent être ajoutés à l’ensemble d’enregistrements par le biais du [AddNew](#addnew) fonction membre.|  
-|[CDaoRecordset::CanBookmark](#canbookmark)|Retourne zéro si le jeu d’enregistrements prend en charge les signets.|  
-|[CDaoRecordset::CancelUpdate](#cancelupdate)|Annule les mises à jour en attente due à une [modifier](#edit) ou [AddNew](#addnew) opération.|  
-|[CDaoRecordset::CanRestart](#canrestart)|Retourne zéro si [Requery](#requery) peut être appelée pour exécuter de nouveau la requête du recordset.|  
-|[CDaoRecordset::CanScroll](#canscroll)|Retourne zéro si vous pouvez faire défiler les enregistrements.|  
-|[CDaoRecordset::CanTransact](#cantransact)|Retourne zéro si la source de données prend en charge les transactions.|  
-|[CDaoRecordset::CanUpdate](#canupdate)|Retourne zéro si le jeu d’enregistrements peut être mis à jour (vous pouvez ajouter, mettre à jour ou supprimer des enregistrements).|  
-|[CDaoRecordset::Close](#close)|Ferme l’ensemble d’enregistrements.|  
-|[CDaoRecordset::Delete](#delete)|Supprime l’enregistrement actif du jeu d’enregistrements. Vous devez explicitement accéder à un autre enregistrement après la suppression.|  
-|[CDaoRecordset::DoFieldExchange](#dofieldexchange)|Appelé pour échanger des données (dans les deux sens) entre les membres de données de champ de l’objet recordset et l’enregistrement correspondant de la source de données. Implémente DAO champ échange enregistrements (DFX).|  
-|[CDaoRecordset::Edit](#edit)|Prépare les modifications à l’enregistrement actif. Appelez **mise à jour** pour terminer la modification.|  
-|[CDaoRecordset::FillCache](#fillcache)|Remplit tout ou partie d’un cache local pour un objet recordset qui contient les données d’une source de données ODBC.|  
-|[CDaoRecordset::Find](#find)|Recherche la première, suivante, précédente ou le dernier emplacement d’une chaîne particulière dans un jeu d’enregistrements de type qui répond aux critères spécifiés et rend l’enregistrement en cours.|  
-|[CDaoRecordset::FindFirst](#findfirst)|Recherche le premier enregistrement dans un jeu d’enregistrements de type instantané qui satisfait aux critères spécifiés et rend l’enregistrement en cours ou de type.|  
-|[CDaoRecordset::FindLast](#findlast)|Recherche le dernier enregistrement dans un jeu d’enregistrements de type instantané qui satisfait aux critères spécifiés et rend l’enregistrement en cours ou de type.|  
-|[CDaoRecordset::FindNext](#findnext)|Recherche l’enregistrement suivant d’un jeu d’enregistrements de type instantané qui satisfait aux critères spécifiés et rend l’enregistrement en cours ou de type.|  
-|[CDaoRecordset::FindPrev](#findprev)|Recherche l’enregistrement précédent d’un jeu d’enregistrements de type instantané qui satisfait aux critères spécifiés et rend l’enregistrement en cours ou de type.|  
-|[CDaoRecordset::GetAbsolutePosition](#getabsoluteposition)|Retourne le numéro d’enregistrement de l’enregistrement en cours de l’objet recordset.|  
-|[CDaoRecordset::CanBookmark](#getbookmark)|Retourne une valeur qui représente le signet d’un enregistrement.|  
-|[CDaoRecordset::GetCacheSize](#getcachesize)|Retourne une valeur qui spécifie le nombre d’enregistrements dans un jeu d’enregistrements de type instantané contenant les données à mettre en cache localement à partir d’une source de données ODBC.|  
-|[CDaoRecordset::GetCacheStart](#getcachestart)|Retourne une valeur qui spécifie le signet du premier enregistrement dans le jeu d’enregistrements à mettre en cache.|  
-|[CDaoRecordset::GetCurrentIndex](#getcurrentindex)|Retourne un `CString` qui contient le nom de l’index la plus récemment utilisées sur un type de table indexé, `CDaoRecordset`.|  
-|[CDaoRecordset::GetDateCreated](#getdatecreated)|Retourne la date et l’heure de la table de base sous-jacente une `CDaoRecordset` objet a été créé.|  
-|[CDaoRecordset::GetDateLastUpdated](#getdatelastupdated)|Retourne la date et l’heure de la dernière modification apportée à la conception d’une table de base sous-jacente une `CDaoRecordset` objet.|  
-|[CDaoRecordset::GetDefaultDBName](#getdefaultdbname)|Retourne le nom de la source de données par défaut.|  
-|[CDaoRecordset::GetDefaultSQL](#getdefaultsql)|Appelé pour obtenir la chaîne SQL par défaut à exécuter.|  
-|[CDaoRecordset::GetEditMode](#geteditmode)|Retourne une valeur qui indique l’état de modification de l’enregistrement actif.|  
-|[CDaoRecordset::GetFieldCount](#getfieldcount)|Retourne une valeur qui représente le nombre de champs dans un jeu d’enregistrements.|  
-|[CDaoRecordset::GetFieldInfo](#getfieldinfo)|Retourne des informations sur les champs particuliers dans le jeu d’enregistrements.|  
-|[CDaoRecordset::GetFieldValue](#getfieldvalue)|Retourne la valeur d’un champ dans un jeu d’enregistrements.|  
-|[CDaoRecordset::GetIndexCount](#getindexcount)|Récupère le nombre d’index dans une table sous-jacente d’un jeu d’enregistrements.|  
-|[CDaoRecordset::GetIndexInfo](#getindexinfo)|Retourne différents types d’informations relatives à un index.|  
-|[CDaoRecordset::GetLastModifiedBookmark](#getlastmodifiedbookmark)|Utilisé pour déterminer le plus récemment ajoutés ou mis à jour d’enregistrement.|  
-|[CDaoRecordset::GetLockingMode](#getlockingmode)|Retourne une valeur qui indique le type de verrouillage qui est en vigueur lors de la modification.|  
-|[CDaoRecordset::GetName](#getname)|Retourne un `CString` contenant le nom de l’objet recordset.|  
-|[CDaoRecordset::GetParamValue](#getparamvalue)|Récupère la valeur actuelle du paramètre spécifié stocké dans l’objet DAOParameter sous-jacent.|  
-|[CDaoRecordset::GetPercentPosition](#getpercentposition)|Retourne la position de l’enregistrement actif sous forme de pourcentage du nombre total d’enregistrements.|  
-|[CDaoRecordset::GetRecordCount](#getrecordcount)|Retourne le nombre d’enregistrements accédés dans un objet recordset.|  
-|[CDaoRecordset::GetSQL](#getsql)|Obtient la chaîne SQL utilisée pour sélectionner des enregistrements pour l’ensemble d’enregistrements.|  
-|[CDaoRecordset::GetType](#gettype)|Appelé pour déterminer le type d’un jeu d’enregistrements : type de table, de type ou de type instantané.|  
-|[CDaoRecordset::GetValidationRule](#getvalidationrule)|Retourne un `CString` contenant la valeur qui valide les données lorsqu’elles sont entrées dans un champ.|  
-|[CDaoRecordset::GetValidationText](#getvalidationtext)|Récupère le texte qui s’affiche lorsqu’une règle de validation n’est pas satisfaite.|  
-|[CDaoRecordset::IsBOF](#isbof)|Retourne zéro si le jeu d’enregistrements a été positionné avant le premier enregistrement. Il n’existe aucun enregistrement actif.|  
-|[CDaoRecordset::IsDeleted](#isdeleted)|Retourne zéro si le jeu d’enregistrements est positionné sur un enregistrement supprimé.|  
-|[CDaoRecordset::IsEOF](#iseof)|Retourne zéro si le jeu d’enregistrements a été positionné après le dernier enregistrement. Il n’existe aucun enregistrement actif.|  
-|[CDaoRecordset::IsFieldDirty](#isfielddirty)|Retourne zéro si le champ spécifié dans l’enregistrement actif a été modifié.|  
-|[CDaoRecordset::IsFieldNull](#isfieldnull)|Retourne zéro si le champ spécifié dans l’enregistrement actif est Null (n’ayant aucune valeur).|  
-|[CDaoRecordset::IsFieldNullable](#isfieldnullable)|Retourne zéro si le champ spécifié dans l’enregistrement actif peut être défini avec la valeur Null (n’ayant aucune valeur).|  
-|[CDaoRecordset::IsOpen](#isopen)|Retourne zéro si [ouvrir](#open) a été appelé précédemment.|  
-|[Méthode CDaoRecordset::Move](#move)|Positionne le jeu d’enregistrements à un nombre spécifié d’enregistrements à partir de l’enregistrement actif dans les deux sens.|  
-|[CDaoRecordset::MoveFirst](#movefirst)|Positionne l’enregistrement actif sur le premier enregistrement dans le jeu d’enregistrements.|  
-|[CDaoRecordset::MoveLast](#movelast)|Positionne l’enregistrement actif sur le dernier enregistrement dans le jeu d’enregistrements.|  
-|[CDaoRecordset::MoveNext](#movenext)|Positionne l’enregistrement en cours sur l’enregistrement suivant dans le jeu d’enregistrements.|  
-|[CDaoRecordset::MovePrev](#moveprev)|Positionne l’enregistrement en cours sur l’enregistrement précédent dans le jeu d’enregistrements.|  
-|[CDaoRecordset::Open](#open)|Crée un nouveau jeu d’enregistrements à partir d’une table, une feuille de réponse dynamique ou un instantané.|  
-|[CDaoRecordset::Requery](#requery)|Exécute la requête du recordset pour actualiser les enregistrements sélectionnés.|  
-|[CDaoRecordset::Seek](#seek)|Recherche l’enregistrement dans un objet de jeu d’enregistrements de type table indexée qui répond aux critères spécifiés pour l’index actuel et en fait l’enregistre actif.|  
-|[CDaoRecordset::SetAbsolutePosition](#setabsoluteposition)|Définit le numéro d’enregistrement de l’enregistrement en cours de l’objet recordset.|  
-|[CDaoRecordset::SetBookmark](#setbookmark)|Positionne le jeu d’enregistrements sur un enregistrement qui contient le signet spécifié.|  
-|[CDaoRecordset::SetCacheSize](#setcachesize)|Définit une valeur qui spécifie le nombre d’enregistrements dans un jeu d’enregistrements de type instantané contenant les données à mettre en cache localement à partir d’une source de données ODBC.|  
-|[CDaoRecordset::SetCacheStart](#setcachestart)|Définit une valeur qui spécifie le signet du premier enregistrement dans le jeu d’enregistrements à mettre en cache.|  
-|[CDaoRecordset::SetCurrentIndex](#setcurrentindex)|Appelé pour définir un index sur un jeu d’enregistrements de type table.|  
-|[CDaoRecordset::SetFieldDirty](#setfielddirty)|Marque le champ spécifié dans l’enregistrement actif comme modifié.|  
-|[CDaoRecordset::SetFieldNull](#setfieldnull)|Définit la valeur du champ spécifié dans l’enregistrement actif avec la valeur Null (n’ayant aucune valeur).|  
-|[CDaoRecordset::SetFieldValue](#setfieldvalue)|Définit la valeur d’un champ dans un jeu d’enregistrements.|  
-|[CDaoRecordset::SetFieldValueNull](#setfieldvaluenull)|Définit la valeur d’un champ dans un jeu d’enregistrements avec la valeur Null. (n’ayant aucune valeur).|  
-|[CDaoRecordset::SetLockingMode](#setlockingmode)|Définit une valeur qui indique le type de verrouillage pour mettre en vigueur lors de la modification.|  
-|[CDaoRecordset::SetParamValue](#setparamvalue)|Définit la valeur actuelle du paramètre spécifié stocké dans l’objet sous-jacent DAOParameter|  
-|[CDaoRecordset::SetParamValueNull](#setparamvaluenull)|Définit la valeur actuelle du paramètre spécifié avec la valeur Null (n’ayant aucune valeur).|  
-|[CDaoRecordset::SetPercentPosition](#setpercentposition)|Définit la position de l’enregistrement actif vers un emplacement correspondant à un pourcentage du nombre total d’enregistrements dans un jeu d’enregistrements.|  
-|[CDaoRecordset::Update](#update)|Termine une `AddNew` ou **modifier** opération en enregistrant les données nouvelles ou modifiées sur la source de données.|  
+|[CDaoRecordset::AddNew](#addnew)|Prepares for adding a new record. Call [Update](#update) to complete the addition.|  
+|[CDaoRecordset::CanAppend](#canappend)|Returns nonzero if new records can be added to the recordset via the [AddNew](#addnew) member function.|  
+|[CDaoRecordset::CanBookmark](#canbookmark)|Returns nonzero if the recordset supports bookmarks.|  
+|[CDaoRecordset::CancelUpdate](#cancelupdate)|Cancels any pending updates due to an [Edit](#edit) or [AddNew](#addnew) operation.|  
+|[CDaoRecordset::CanRestart](#canrestart)|Returns nonzero if [Requery](#requery) can be called to run the recordset's query again.|  
+|[CDaoRecordset::CanScroll](#canscroll)|Returns nonzero if you can scroll through the records.|  
+|[CDaoRecordset::CanTransact](#cantransact)|Returns nonzero if the data source supports transactions.|  
+|[CDaoRecordset::CanUpdate](#canupdate)|Returns nonzero if the recordset can be updated (you can add, update, or delete records).|  
+|[CDaoRecordset::Close](#close)|Closes the recordset.|  
+|[CDaoRecordset::Delete](#delete)|Deletes the current record from the recordset. You must explicitly scroll to another record after the deletion.|  
+|[CDaoRecordset::DoFieldExchange](#dofieldexchange)|Called to exchange data (in both directions) between the field data members of the recordset and the corresponding record on the data source. Implements DAO record field exchange (DFX).|  
+|[CDaoRecordset::Edit](#edit)|Prepares for changes to the current record. Call **Update** to complete the edit.|  
+|[CDaoRecordset::FillCache](#fillcache)|Fills all or a part of a local cache for a recordset object that contains data from an ODBC data source.|  
+|[CDaoRecordset::Find](#find)|Locates the first, next, previous, or last location of a particular string in a dynaset-type recordset that satisfies the specified criteria and makes that record the current record.|  
+|[CDaoRecordset::FindFirst](#findfirst)|Locates the first record in a dynaset-type or snapshot-type recordset that satisfies the specified criteria and makes that record the current record.|  
+|[CDaoRecordset::FindLast](#findlast)|Locates the last record in a dynaset-type or snapshot-type recordset that satisfies the specified criteria and makes that record the current record.|  
+|[CDaoRecordset::FindNext](#findnext)|Locates the next record in a dynaset-type or snapshot-type recordset that satisfies the specified criteria and makes that record the current record.|  
+|[CDaoRecordset::FindPrev](#findprev)|Locates the previous record in a dynaset-type or snapshot-type recordset that satisfies the specified criteria and makes that record the current record.|  
+|[CDaoRecordset::GetAbsolutePosition](#getabsoluteposition)|Returns the record number of a recordset object's current record.|  
+|[CDaoRecordset::GetBookmark](#getbookmark)|Returns a value that represents the bookmark on a record.|  
+|[CDaoRecordset::GetCacheSize](#getcachesize)|Returns a value that specifies the number of records in a dynaset-type recordset containing data to be locally cached from an ODBC data source.|  
+|[CDaoRecordset::GetCacheStart](#getcachestart)|Returns a value that specifies the bookmark of the first record in the recordset to be cached.|  
+|[CDaoRecordset::GetCurrentIndex](#getcurrentindex)|Returns a `CString` containing the name of the index most recently used on an indexed, table-type `CDaoRecordset`.|  
+|[CDaoRecordset::GetDateCreated](#getdatecreated)|Returns the date and time the base table underlying a `CDaoRecordset` object was created|  
+|[CDaoRecordset::GetDateLastUpdated](#getdatelastupdated)|Returns the date and time of the most recent change made to the design of a base table underlying a `CDaoRecordset` object.|  
+|[CDaoRecordset::GetDefaultDBName](#getdefaultdbname)|Returns the name of the default data source.|  
+|[CDaoRecordset::GetDefaultSQL](#getdefaultsql)|Called to get the default SQL string to execute.|  
+|[CDaoRecordset::GetEditMode](#geteditmode)|Returns a value that indicates the state of editing for the current record.|  
+|[CDaoRecordset::GetFieldCount](#getfieldcount)|Returns a value that represents the number of fields in a recordset.|  
+|[CDaoRecordset::GetFieldInfo](#getfieldinfo)|Returns specific kinds of information about the fields in the recordset.|  
+|[CDaoRecordset::GetFieldValue](#getfieldvalue)|Returns the value of a field in a recordset.|  
+|[CDaoRecordset::GetIndexCount](#getindexcount)|Retrieves the number of indexes in a table underlying a recordset.|  
+|[CDaoRecordset::GetIndexInfo](#getindexinfo)|Returns various kinds of information about an index.|  
+|[CDaoRecordset::GetLastModifiedBookmark](#getlastmodifiedbookmark)|Used to determine the most recently added or updated record.|  
+|[CDaoRecordset::GetLockingMode](#getlockingmode)|Returns a value that indicates the type of locking that is in effect during editing.|  
+|[CDaoRecordset::GetName](#getname)|Returns a `CString` containing the name of the recordset.|  
+|[CDaoRecordset::GetParamValue](#getparamvalue)|Retrieves the current value of the specified parameter stored in the underlying DAOParameter object.|  
+|[CDaoRecordset::GetPercentPosition](#getpercentposition)|Returns the position of the current record as a percentage of the total number of records.|  
+|[CDaoRecordset::GetRecordCount](#getrecordcount)|Returns the number of records accessed in a recordset object.|  
+|[CDaoRecordset::GetSQL](#getsql)|Gets the SQL string used to select records for the recordset.|  
+|[CDaoRecordset::GetType](#gettype)|Called to determine the type of a recordset: table-type, dynaset-type, or snapshot-type.|  
+|[CDaoRecordset::GetValidationRule](#getvalidationrule)|Returns a `CString` containing the value that validates data as it is entered into a field.|  
+|[CDaoRecordset::GetValidationText](#getvalidationtext)|Retrieves the text that is displayed when a validation rule is not satisfied.|  
+|[CDaoRecordset::IsBOF](#isbof)|Returns nonzero if the recordset has been positioned before the first record. There is no current record.|  
+|[CDaoRecordset::IsDeleted](#isdeleted)|Returns nonzero if the recordset is positioned on a deleted record.|  
+|[CDaoRecordset::IsEOF](#iseof)|Returns nonzero if the recordset has been positioned after the last record. There is no current record.|  
+|[CDaoRecordset::IsFieldDirty](#isfielddirty)|Returns nonzero if the specified field in the current record has been changed.|  
+|[CDaoRecordset::IsFieldNull](#isfieldnull)|Returns nonzero if the specified field in the current record is Null (having no value).|  
+|[CDaoRecordset::IsFieldNullable](#isfieldnullable)|Returns nonzero if the specified field in the current record can be set to Null (having no value).|  
+|[CDaoRecordset::IsOpen](#isopen)|Returns nonzero if [Open](#open) has been called previously.|  
+|[CDaoRecordset::Move](#move)|Positions the recordset to a specified number of records from the current record in either direction.|  
+|[CDaoRecordset::MoveFirst](#movefirst)|Positions the current record on the first record in the recordset.|  
+|[CDaoRecordset::MoveLast](#movelast)|Positions the current record on the last record in the recordset.|  
+|[CDaoRecordset::MoveNext](#movenext)|Positions the current record on the next record in the recordset .|  
+|[CDaoRecordset::MovePrev](#moveprev)|Positions the current record on the previous record in the recordset.|  
+|[CDaoRecordset::Open](#open)|Creates a new recordset from a table, dynaset, or snapshot.|  
+|[CDaoRecordset::Requery](#requery)|Runs the recordset's query again to refresh the selected records.|  
+|[CDaoRecordset::Seek](#seek)|Locates the record in an indexed table-type recordset object that satisfies the specified criteria for the current index and makes that record the current record.|  
+|[CDaoRecordset::SetAbsolutePosition](#setabsoluteposition)|Sets the record number of a recordset object's current record.|  
+|[CDaoRecordset::SetBookmark](#setbookmark)|Positions the recordset on a record containing the specified bookmark.|  
+|[CDaoRecordset::SetCacheSize](#setcachesize)|Sets a value that specifies the number of records in a dynaset-type recordset containing data to be locally cached from an ODBC data source.|  
+|[CDaoRecordset::SetCacheStart](#setcachestart)|Sets a value that specifies the bookmark of the first record in the recordset to be cached.|  
+|[CDaoRecordset::SetCurrentIndex](#setcurrentindex)|Called to set an index on a table-type recordset.|  
+|[CDaoRecordset::SetFieldDirty](#setfielddirty)|Marks the specified field in the current record as changed.|  
+|[CDaoRecordset::SetFieldNull](#setfieldnull)|Sets the value of the specified field in the current record to Null (having no value).|  
+|[CDaoRecordset::SetFieldValue](#setfieldvalue)|Sets the value of a field in a recordset.|  
+|[CDaoRecordset::SetFieldValueNull](#setfieldvaluenull)|Sets the value of a field in a recordset to Null. (having no value).|  
+|[CDaoRecordset::SetLockingMode](#setlockingmode)|Sets a value that indicates the type of locking to put into effect during editing.|  
+|[CDaoRecordset::SetParamValue](#setparamvalue)|Sets the current value of the specified parameter stored in the underlying DAOParameter object|  
+|[CDaoRecordset::SetParamValueNull](#setparamvaluenull)|Sets the current value of the specified parameter to Null (having no value).|  
+|[CDaoRecordset::SetPercentPosition](#setpercentposition)|Sets the position of the current record to a location corresponding to a percentage of the total number of records in a recordset.|  
+|[CDaoRecordset::Update](#update)|Completes an `AddNew` or **Edit** operation by saving the new or edited data on the data source.|  
   
-### <a name="public-data-members"></a>Membres de données publics  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoRecordset::m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|Contient un indicateur qui indique si les champs sont automatiquement marquées comme modifiées.|  
-|[CDaoRecordset::m_nFields](#m_nfields)|Contient le nombre de membres de données de champ dans la classe de recordset et le nombre de colonnes sélectionnées par l’ensemble d’enregistrements à partir de la source de données.|  
-|[CDaoRecordset::m_nParams](#m_nparams)|Contient le nombre de membres de données de paramètre dans la classe de recordset : le nombre de paramètres passé avec la requête du recordset|  
-|[CDaoRecordset::m_pDAORecordset](#m_pdaorecordset)|Pointeur vers l’interface DAO sous-jacent à l’objet recordset.|  
-|[CDaoRecordset::m_pDatabase](#m_pdatabase)|Base de données source pour ce jeu de résultats. Contient un pointeur vers un [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objet.|  
-|[CDaoRecordset::m_strFilter](#m_strfilter)|Contient une chaîne utilisée pour construire SQL **où** instruction.|  
-|[CDaoRecordset::m_strSort](#m_strsort)|Contient une chaîne utilisée pour construire SQL **ORDER BY** instruction.|  
+|[CDaoRecordset::m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|Contains a flag indicating whether fields are automatically marked as changed.|  
+|[CDaoRecordset::m_nFields](#m_nfields)|Contains the number of field data members in the recordset class and the number of columns selected by the recordset from the data source.|  
+|[CDaoRecordset::m_nParams](#m_nparams)|Contains the number of parameter data members in the recordset class — the number of parameters passed with the recordset's query|  
+|[CDaoRecordset::m_pDAORecordset](#m_pdaorecordset)|A pointer to the DAO interface underlying the recordset object.|  
+|[CDaoRecordset::m_pDatabase](#m_pdatabase)|Source database for this result set. Contains a pointer to a [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) object.|  
+|[CDaoRecordset::m_strFilter](#m_strfilter)|Contains a string used to construct a SQL **WHERE** statement.|  
+|[CDaoRecordset::m_strSort](#m_strsort)|Contains a string used to construct a SQL **ORDER BY** statement.|  
   
-## <a name="remarks"></a>Remarques  
- Appelé « jeux d’enregistrements, » `CDaoRecordset` objets sont disponibles dans les trois formes suivantes :  
+## <a name="remarks"></a>Remarks  
+ Known as "recordsets," `CDaoRecordset` objects are available in the following three forms:  
   
--   Jeux d’enregistrements de type table représente une table de base que vous pouvez utiliser pour examiner, ajouter, modifier ou supprimer des enregistrements d’une table de base de données unique.  
+-   Table-type recordsets represent a base table that you can use to examine, add, change, or delete records from a single database table.  
   
--   Types d’enregistrements sont le résultat d’une requête qui peut avoir des enregistrements d’être mis à jour. Ces jeux d’enregistrements est un ensemble d’enregistrements que vous pouvez utiliser pour examiner, ajouter, modifier ou supprimer des enregistrements d’une ou plusieurs tables de base de données sous-jacente. Types d’enregistrements peut contenir des champs à partir d’une ou plusieurs tables dans une base de données.  
+-   Dynaset-type recordsets are the result of a query that can have updateable records. These recordsets are a set of records that you can use to examine, add, change, or delete records from an underlying database table or tables. Dynaset-type recordsets can contain fields from one or more tables in a database.  
   
--   Jeux d’enregistrements de type instantané est une copie statique d’un jeu d’enregistrements que vous pouvez utiliser pour rechercher des données ou générer des rapports. Ces jeux d’enregistrements peut contenir des champs à partir d’une ou plusieurs tables dans une base de données, mais ne peut pas être mis à jour.  
+-   Snapshot-type recordsets are a static copy of a set of records that you can use to find data or generate reports. These recordsets can contain fields from one or more tables in a database but cannot be updated.  
   
- Chaque formulaire de jeu d’enregistrements représente un ensemble d’enregistrements au moment de que l’ensemble d’enregistrements est ouvert. Lorsque vous faites défiler un enregistrement dans un jeu d’enregistrements de type table ou un jeu d’enregistrements de type, il reflète les modifications apportées à l’enregistrement une fois que le jeu d’enregistrements est ouvert par d’autres utilisateurs ou par d’autres jeux d’enregistrements dans votre application. (Un jeu d’enregistrements de type instantané ne peut pas être mis à jour.) Vous pouvez utiliser `CDaoRecordset` directement ou dériver une classe de jeu d’enregistrements spécifiques à l’application à partir de `CDaoRecordset`. Vous pouvez ensuite :  
+ Each form of recordset represents a set of records fixed at the time the recordset is opened. When you scroll to a record in a table-type recordset or a dynaset-type recordset, it reflects changes made to the record after the recordset is opened, either by other users or by other recordsets in your application. (A snapshot-type recordset cannot be updated.) You can use `CDaoRecordset` directly or derive an application-specific recordset class from `CDaoRecordset`. You can then:  
   
--   Faites défiler les enregistrements.  
+-   Scroll through the records.  
   
--   Définir un index et rechercher rapidement des enregistrements à l’aide [recherche](#seek) (jeux d’enregistrements de type table uniquement).  
+-   Set an index and quickly look for records using [Seek](#seek) (table-type recordsets only).  
   
--   Rechercher des enregistrements basés sur une comparaison de chaînes : «<",></",>\<= », « = », « > = », ou « > » (de type et jeux d’enregistrements de type instantané).  
+-   Find records based on a string comparison: "<", "\<=", "=", ">=", or ">" (dynaset-type and snapshot-type recordsets).  
   
--   Mettre à jour les enregistrements et spécifier un mode de verrouillage (sauf les jeux d’enregistrements de type instantané).  
+-   Update the records and specify a locking mode (except snapshot-type recordsets).  
   
--   Filtrer le jeu d’enregistrements pour limiter les enregistrements qu’il sélectionne parmi ceux disponibles sur la source de données.  
+-   Filter the recordset to constrain which records it selects from those available on the data source.  
   
--   Trier le jeu d’enregistrements.  
+-   Sort the recordset.  
   
--   Paramétrer le recordset pour personnaliser sa sélection avec des informations ne pas connues jusqu'à l’exécution.  
+-   Parameterize the recordset to customize its selection with information not known until run time.  
   
- Classe `CDaoRecordset` fournit une interface similaire à celle de la classe `CRecordset`. La principale différence est que la classe `CDaoRecordset` accède aux données via un objet DAO (Data Access) basée sur OLE. Classe `CRecordset` accède au SGBD via la connectivité ODBC (Open Database) et un pilote ODBC pour ce système SGBD.  
+ Class `CDaoRecordset` supplies an interface similar to that of class `CRecordset`. The main difference is that class `CDaoRecordset` accesses data through a Data Access Object (DAO) based on OLE. Class `CRecordset` accesses the DBMS through Open Database Connectivity (ODBC) and an ODBC driver for that DBMS.  
   
 > [!NOTE]
->  Les classes de base de données DAO sont distincts des classes de base de données MFC basées sur ODBC Open Database Connectivity (). Tous les noms de classe de base de données DAO ont le préfixe « CDao ». Vous pouvez toujours accès aux sources de données ODBC avec les classes DAO ; les classes DAO offrent généralement des fonctionnalités supérieures, car elles sont propres au moteur de base de données Microsoft Jet.  
+>  The DAO database classes are distinct from the MFC database classes based on Open Database Connectivity (ODBC). All DAO database class names have the "CDao" prefix. You can still access ODBC data sources with the DAO classes; the DAO classes generally offer superior capabilities because they are specific to the Microsoft Jet database engine.  
   
- Vous pouvez utiliser `CDaoRecordset` directement ou dériver une classe de `CDaoRecordset`. Pour utiliser une classe de recordset dans les deux cas, ouvrez une base de données et construire un objet recordset, en passant le constructeur un pointeur vers votre `CDaoDatabase` objet. Vous pouvez également construire un `CDaoRecordset` de l’objet et permettent de créer une variable temporaire MFC `CDaoDatabase` objet pour vous. Appelez ensuite le jeu d’enregistrements [ouvrir](#open) fonction membre, en spécifiant si l’objet est un jeu d’enregistrements de type table, un jeu d’enregistrements de type instantané ou un jeu d’enregistrements de type instantané. Appel de **ouvrir** sélectionne des données de la base de données et récupère le premier enregistrement.  
+ You can either use `CDaoRecordset` directly or derive a class from `CDaoRecordset`. To use a recordset class in either case, open a database and construct a recordset object, passing the constructor a pointer to your `CDaoDatabase` object. You can also construct a `CDaoRecordset` object and let MFC create a temporary `CDaoDatabase` object for you. Then call the recordset's [Open](#open) member function, specifying whether the object is a table-type recordset, a dynaset-type recordset, or a snapshot-type recordset. Calling **Open** selects data from the database and retrieves the first record.  
   
- Utilisez les membres de données et des fonctions de membre de l’objet pour faire défiler les enregistrements et opérer sur les. Les opérations disponibles dépendent de si l’objet est un jeu d’enregistrements de type table, un jeu d’enregistrements de type instantané ou un jeu d’enregistrements de type instantané, et si elle est modifiable ou en lecture seule, cela dépend de la capacité de la base de données ou la source de données de base de données ODBC (Open Connectivity). Pour actualiser les enregistrements qui ont été être modifiés ou ajoutés depuis la **ouvrir** appeler, appelez l’objet [Requery](#requery) fonction membre. Appelez l’objet **fermer** membre de la fonction et détruire l’objet lorsque vous avez terminé avec lui.  
+ Use the object's member functions and data members to scroll through the records and operate on them. The operations available depend on whether the object is a table-type recordset, a dynaset-type recordset, or a snapshot-type recordset, and whether it is updateable or read-only — this depends on the capability of the database or Open Database Connectivity (ODBC) data source. To refresh records that may have been changed or added since the **Open** call, call the object's [Requery](#requery) member function. Call the object's **Close** member function and destroy the object when you finish with it.  
   
- `CDaoRecordset`utilise l’échange de champs d’enregistrements DAO (DFX) pour prendre en charge la lecture et mise à jour des champs d’enregistrement via membres C++ de type sécurisé de votre `CDaoRecordset` ou `CDaoRecordset`-classe dérivée. Vous pouvez également implémenter la liaison dynamique des colonnes dans une base de données sans à l’aide du mécanisme DFX [GetFieldValue](#getfieldvalue) et [SetFieldValue](#setfieldvalue).  
+ `CDaoRecordset` uses DAO record field exchange (DFX) to support reading and updating of record fields through type-safe C++ members of your `CDaoRecordset` or `CDaoRecordset`-derived class. You can also implement dynamic binding of columns in a database without using the DFX mechanism using [GetFieldValue](#getfieldvalue) and [SetFieldValue](#setfieldvalue).  
   
- Pour plus d’informations, consultez la rubrique « Objet Recordset » dans l’aide de DAO.  
+ For related information, see the topic "Recordset Object" in DAO Help.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDaoRecordset`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-##  <a name="addnew"></a>CDaoRecordset::AddNew  
- Appelez cette fonction membre pour ajouter un nouvel enregistrement à un jeu d’enregistrements de type table ou de type.  
+##  <a name="addnew"></a>  CDaoRecordset::AddNew  
+ Call this member function to add a new record to a table-type or dynaset-type recordset.  
   
 ```  
 virtual void AddNew();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Champs de l’enregistrement sont initialement Null. (Dans la terminologie de base de données, Null donne « aucune valeur » et n’est pas le même que **NULL** en C++.) Pour terminer l’opération, vous devez appeler la [mise à jour](#update) fonction membre. **Mise à jour** enregistre vos modifications dans la source de données.  
+### <a name="remarks"></a>Remarks  
+ The record's fields are initially Null. (In database terminology, Null means "having no value" and is not the same as **NULL** in C++.) To complete the operation, you must call the [Update](#update) member function. **Update** saves your changes to the data source.  
   
 > [!CAUTION]
->  Si vous modifiez un enregistrement et puis faites défiler vers un autre enregistrement sans appeler **mise à jour**, vos modifications sont perdues sans avertissement.  
+>  If you edit a record and then scroll to another record without calling **Update**, your changes are lost without warning.  
   
- Si vous ajoutez un enregistrement à un jeu d’enregistrements de type en appelant [AddNew](#addnew), l’enregistrement est visible dans l’objet recordset et inclus dans la table sous-jacente où il devient visible à aucun nouveau `CDaoRecordset` objets.  
+ If you add a record to a dynaset-type recordset by calling [AddNew](#addnew), the record is visible in the recordset and included in the underlying table where it becomes visible to any new `CDaoRecordset` objects.  
   
- La position du nouvel enregistrement varie selon le type de jeu d’enregistrements :  
+ The position of the new record depends on the type of recordset:  
   
--   Dans un type de la feuille de réponse dynamique recordset, où le nouvel enregistrement est inséré n’est pas garantie. Ce comportement est modifié avec Microsoft Jet 3.0 pour des raisons de performances et d’accès concurrentiel. Si votre objectif est de rendre le dernier enregistrement ajouté l’enregistrement actif, obtenez le signet du dernier enregistrement modifié et déplacer vers ce signet :  
+-   In a dynaset-type recordset, where the new record is inserted is not guaranteed. This behavior changed with Microsoft Jet 3.0 for reasons of performance and concurrency. If your goal is to make the newly added record the current record, get the bookmark of the last modified record and move to that bookmark:  
   
- [!code-cpp[NVC_MFCDatabase n° 1](../../mfc/codesnippet/cpp/cdaorecordset-class_1.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#1](../../mfc/codesnippet/cpp/cdaorecordset-class_1.cpp)]  
   
--   Dans un jeu d’enregistrements de type de table pour laquelle un index a été spécifié, les enregistrements sont renvoyés à l’emplacement adéquat dans l’ordre de tri. Si aucun index n’a été spécifié, les nouveaux enregistrements sont renvoyés à la fin de l’objet recordset.  
+-   In a table-type recordset for which an index has been specified, records are returned in their proper place in the sort order. If no index has been specified, new records are returned at the end of the recordset.  
   
- L’enregistrement qui était actif avant que vous avez utilisé `AddNew` reste actif. Si vous souhaitez que le nouvel enregistrement actuel et le jeu d’enregistrements prend en charge les signets, appel [SetBookmark](#setbookmark) le signet identifié par le paramètre de propriété LastModified de l’objet de jeu d’enregistrements DAO sous-jacent. Cela est utile pour déterminer la valeur des champs de compteur (incrémentation automatique) dans un enregistrement ajouté. Pour plus d’informations, consultez [GetLastModifiedBookmark](#getlastmodifiedbookmark).  
+ The record that was current before you used `AddNew` remains current. If you want to make the new record current and the recordset supports bookmarks, call [SetBookmark](#setbookmark) to the bookmark identified by the LastModified property setting of the underlying DAO recordset object. Doing so is useful for determining the value for counter (auto-increment) fields in an added record. For more information, see [GetLastModifiedBookmark](#getlastmodifiedbookmark).  
   
- Si la base de données prend en charge les transactions, vous pouvez rendre votre `AddNew` appeler partie d’une transaction. Pour plus d’informations sur les transactions, consultez la classe [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md). Notez que vous devez appeler [CDaoWorkspace::BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans) avant d’appeler `AddNew`.  
+ If the database supports transactions, you can make your `AddNew` call part of a transaction. For more information about transactions, see class [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md). Note that you should call [CDaoWorkspace::BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans) before calling `AddNew`.  
   
- N’est pas autorisé à appeler `AddNew` pour un jeu d’enregistrements dont [ouvrir](#open) fonction membre n’a pas été appelée. A `CDaoException` est levée si vous appelez `AddNew` pour un jeu d’enregistrements qui ne peut pas être ajouté. Vous pouvez déterminer si le jeu d’enregistrements est modifiable en appelant [CanAppend](#canappend).  
+ It is illegal to call `AddNew` for a recordset whose [Open](#open) member function has not been called. A `CDaoException` is thrown if you call `AddNew` for a recordset that cannot be appended. You can determine whether the recordset is updateable by calling [CanAppend](#canappend).  
   
- Les marques de framework modifié des données membres de champ pour vous assurer qu’ils seront écrits à l’enregistrement sur la source de données par le mécanisme DAO record field exchange (DFX). Généralement la modification de la valeur d’un champ définit le champ modifié automatiquement, donc vous devrez rarement appeler [SetFieldDirty](#setfielddirty) vous-même, mais vous pouvez parfois souhaiter vous assurer que les colonnes seront explicitement mis à jour ou insérées, quelle que soit la valeur est dans le membre de données de champ. Le mécanisme DFX utilise également l’utilisation de **PSEUDO NULL**. Pour plus d’informations, consultez [section CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
+ The framework marks changed field data members to ensure they will be written to the record on the data source by the DAO record field exchange (DFX) mechanism. Changing the value of a field generally sets the field dirty automatically, so you will seldom need to call [SetFieldDirty](#setfielddirty) yourself, but you might sometimes want to ensure that columns will be explicitly updated or inserted regardless of what value is in the field data member. The DFX mechanism also employs the use of **PSEUDO NULL**. For more information, see [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
   
- Si le mécanisme de double tampon n’est pas utilisé, puis en modifiant la valeur du champ ne définit pas automatiquement le champ comme modifié. Dans ce cas, il sera nécessaire de définir explicitement le champ modifié. L’indicateur contenues dans [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) contrôle de cette vérification automatique de champ.  
+ If the double-buffering mechanism is not being used, then changing the value of the field does not automatically set the field as dirty. In this case, it will be necessary to explicitly set the field dirty. The flag contained in [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) controls this automatic field checking.  
   
 > [!NOTE]
->  Si les enregistrements sont mis en mémoire tampon le double (autrement dit, la vérification de champ automatique est activée), appelant `CancelUpdate` restaure les variables membres pour les valeurs qu’ils avaient avant `AddNew` ou **modifier** a été appelée.  
+>  If records are double-buffered (that is, automatic field checking is enabled), calling `CancelUpdate` will restore the member variables to the values they had before `AddNew` or **Edit** was called.  
   
- Pour plus d’informations, consultez les rubriques « Méthode AddNew », « Méthode CancelUpdate », « Propriété LastModified » et « EditMode Property » dans l’aide de DAO.  
+ For related information, see the topics "AddNew Method", "CancelUpdate Method", "LastModified Property", and "EditMode Property" in DAO Help.  
   
-##  <a name="canappend"></a>CDaoRecordset::CanAppend  
- Appelez cette fonction membre pour déterminer si le jeu d’enregistrements précédemment ouvert vous permet d’ajouter de nouveaux enregistrements en appelant le [AddNew](#addnew) fonction membre.  
+##  <a name="canappend"></a>  CDaoRecordset::CanAppend  
+ Call this member function to determine whether the previously opened recordset allows you to add new records by calling the [AddNew](#addnew) member function.  
   
 ```  
 BOOL CanAppend() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le jeu d’enregistrements permet d’ajouter de nouveaux enregistrements ; Sinon, 0. `CanAppend`retourne 0 si vous avez ouvert le jeu d’enregistrements en lecture seule.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset allows adding new records; otherwise 0. `CanAppend` will return 0 if you opened the recordset as read-only.  
   
-### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez la rubrique « Ajout de la méthode » dans l’aide de DAO.  
+### <a name="remarks"></a>Remarks  
+ For related information, see the topic "Append Method" in DAO Help.  
   
-##  <a name="canbookmark"></a>CDaoRecordset::CanBookmark  
- Appelez cette fonction membre pour déterminer si le jeu d’enregistrements précédemment ouvert vous permet de marquer individuellement les enregistrements à l’aide de signets.  
+##  <a name="canbookmark"></a>  CDaoRecordset::CanBookmark  
+ Call this member function to determine whether the previously opened recordset allows you to individually mark records using bookmarks.  
   
 ```  
 BOOL CanBookmark();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le jeu d’enregistrements prend en charge les signets, sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset supports bookmarks, otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Si vous utilisez des jeux d’enregistrements entièrement basées sur des tables de moteur de base de données Microsoft Jet, les signets peuvent être utilisés sauf sur les jeux d’enregistrements de type instantané marquée comme en jeux d’enregistrements de défilement avant uniquement. Autres produits de base de données (sources de données ODBC externes) ne peuvent pas en charge les signets.  
+### <a name="remarks"></a>Remarks  
+ If you are using recordsets based entirely on Microsoft Jet database engine tables, bookmarks can be used except on snapshot-type recordsets flagged as forward-only scrolling recordsets. Other database products (external ODBC data sources) may not support bookmarks.  
   
- Pour plus d’informations, consultez la rubrique « Propriété de signet » dans l’aide de DAO.  
+ For related information, see the topic "Bookmarkable Property" in DAO Help.  
   
-##  <a name="cancelupdate"></a>CDaoRecordset::CancelUpdate  
- Le `CancelUpdate` fonction membre annule les mises à jour en attente due à une [modifier](#edit) ou [AddNew](#addnew) opération.  
+##  <a name="cancelupdate"></a>  CDaoRecordset::CancelUpdate  
+ The `CancelUpdate` member function cancels any pending updates due to an [Edit](#edit) or [AddNew](#addnew) operation.  
   
 ```  
 virtual void CancelUpdate();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Par exemple, si une application appelle la **modifier** ou `AddNew` fonction membre et n’a pas appelé [mise à jour](#update), `CancelUpdate` annule les modifications apportées après **modifier** ou `AddNew` a été appelée.  
+### <a name="remarks"></a>Remarks  
+ For example, if an application calls the **Edit** or `AddNew` member function and has not called [Update](#update), `CancelUpdate` cancels any changes made after **Edit** or `AddNew` was called.  
   
 > [!NOTE]
->  Si les enregistrements sont mis en mémoire tampon le double (autrement dit, la vérification de champ automatique est activée), appelant `CancelUpdate` restaure les variables membres pour les valeurs qu’ils avaient avant `AddNew` ou **modifier** a été appelée.  
+>  If records are double-buffered (that is, automatic field checking is enabled), calling `CancelUpdate` will restore the member variables to the values they had before `AddNew` or **Edit** was called.  
   
- S’il existe aucune **modifier** ou `AddNew` opération en attente, `CancelUpdate` provoque des MFC lever une exception. Appelez le [GetEditMode](#geteditmode) fonction membre pour déterminer s’il existe une opération en attente qui peut être annulée.  
+ If there is no **Edit** or `AddNew` operation pending, `CancelUpdate` causes MFC to throw an exception. Call the [GetEditMode](#geteditmode) member function to determine if there is a pending operation that can be canceled.  
   
- Pour plus d’informations, consultez la rubrique « CancelUpdate méthode » dans l’aide de DAO.  
+ For related information, see the topic "CancelUpdate Method" in DAO Help.  
   
-##  <a name="canrestart"></a>CDaoRecordset::CanRestart  
- Appelez cette fonction membre pour déterminer si le jeu d’enregistrements autorise le redémarrage de la requête (pour actualiser ses enregistrements) en appelant le **Requery** fonction membre.  
+##  <a name="canrestart"></a>  CDaoRecordset::CanRestart  
+ Call this member function to determine whether the recordset allows restarting its query (to refresh its records) by calling the **Requery** member function.  
   
 ```  
 BOOL CanRestart();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si **Requery** peut être appelée pour exécuter la requête du recordset, sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if **Requery** can be called to run the recordset's query again, otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Jeux d’enregistrements de type de table ne gèrent pas **Requery**.  
+### <a name="remarks"></a>Remarks  
+ Table-type recordsets do not support **Requery**.  
   
- Si **Requery** est ne pas pris en charge, appelez [fermer](#close) puis [ouvrir](#open) pour actualiser les données. Vous pouvez appeler **Requery** pour mettre à jour un objet recordset sous-jacent de la requête paramétrée après les valeurs de paramètre ont été modifiés.  
+ If **Requery** is not supported, call [Close](#close) then [Open](#open) to refresh the data. You can call **Requery** to update a recordset object's underlying parameter query after the parameter values have been changed.  
   
- Pour plus d’informations, consultez la rubrique « Propriété redémarrables » dans l’aide de DAO.  
+ For related information, see the topic "Restartable Property" in DAO Help.  
   
-##  <a name="canscroll"></a>CDaoRecordset::CanScroll  
- Appelez cette fonction membre pour déterminer si le jeu d’enregistrements autorise le défilement.  
+##  <a name="canscroll"></a>  CDaoRecordset::CanScroll  
+ Call this member function to determine whether the recordset allows scrolling.  
   
 ```  
 BOOL CanScroll() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si vous pouvez faire défiler les enregistrements, sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if you can scroll through the records, otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Si vous appelez [ouvrir](#open) avec **dbForwardOnly**, le jeu d’enregistrements peut aller uniquement.  
+### <a name="remarks"></a>Remarks  
+ If you call [Open](#open) with **dbForwardOnly**, the recordset can only scroll forward.  
   
- Pour plus d’informations, consultez la rubrique « Positionnement du pointeur d’enregistrement actuel avec DAO » dans l’aide de DAO.  
+ For related information, see the topic "Positioning the Current Record Pointer with DAO" in DAO Help.  
   
-##  <a name="cantransact"></a>CDaoRecordset::CanTransact  
- Appelez cette fonction membre pour déterminer si le jeu d’enregistrements permet aux transactions.  
+##  <a name="cantransact"></a>  CDaoRecordset::CanTransact  
+ Call this member function to determine whether the recordset allows transactions.  
   
 ```  
 BOOL CanTransact();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si la source de données sous-jacente prend en charge les transactions, sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the underlying data source supports transactions, otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Pour plus d’informations, consultez la rubrique « Propriété de Transactions » dans l’aide de DAO.  
+### <a name="remarks"></a>Remarks  
+ For related information, see the topic "Transactions Property" in DAO Help.  
   
-##  <a name="canupdate"></a>CDaoRecordset::CanUpdate  
- Appelez cette fonction membre pour déterminer si le jeu d’enregistrements peut être mis à jour.  
+##  <a name="canupdate"></a>  CDaoRecordset::CanUpdate  
+ Call this member function to determine whether the recordset can be updated.  
   
 ```  
 BOOL CanUpdate() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le jeu d’enregistrements peut être mis à jour (ajouter, mettre à jour et supprimer des enregistrements), sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset can be updated (add, update, and delete records), otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Un jeu d’enregistrements peut être en lecture seule si la source de données sous-jacente est en lecture seule ou si vous avez spécifié **peut entraîner** pour `nOptions` lorsque vous avez appelé [ouvrir](#open) pour l’ensemble d’enregistrements.  
+### <a name="remarks"></a>Remarks  
+ A recordset might be read-only if the underlying data source is read-only or if you specified **dbReadOnly** for `nOptions` when you called [Open](#open) for the recordset.  
   
- Pour plus d’informations, consultez les rubriques « Méthode AddNew », « Modifier la méthode », « Méthode Delete », « Méthode de mise à jour » et « Propriété actualisable » dans l’aide de DAO.  
+ For related information, see the topics "AddNew Method", "Edit Method", "Delete Method", "Update Method", and "Updatable Property" in DAO Help.  
   
-##  <a name="cdaorecordset"></a>CDaoRecordset::CDaoRecordset  
- Construit un objet `CDaoRecordset`.  
+##  <a name="cdaorecordset"></a>  CDaoRecordset::CDaoRecordset  
+ Constructs a `CDaoRecordset` object.  
   
 ```  
 CDaoRecordset(CDaoDatabase* pDatabase = NULL);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pDatabase`  
- Contient un pointeur vers un [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objet ou la valeur **NULL**. Si ce n’est pas **NULL** et `CDaoDatabase` l’objet **ouvrir** fonction membre n’a pas été appelée pour le connecter à la source de données, le jeu d’enregistrements tente d’ouvrir pour vous lors de son propre [ouvrir](#open) appeler. Si vous passez **NULL**, un `CDaoDatabase` objet est construit et connecté automatiquement à l’aide des informations de source de données spécifié si vous dérivé votre classe de recordset de `CDaoRecordset`.  
+ Contains a pointer to a [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) object or the value **NULL**. If not **NULL** and the `CDaoDatabase` object's **Open** member function has not been called to connect it to the data source, the recordset attempts to open it for you during its own [Open](#open) call. If you pass **NULL**, a `CDaoDatabase` object is constructed and connected for you using the data source information you specified if you derived your recordset class from `CDaoRecordset`.  
   
-### <a name="remarks"></a>Remarques  
- Vous pouvez utiliser `CDaoRecordset` directement ou dériver une classe spécifique à l’application de `CDaoRecordset`. Vous pouvez utiliser ClassWizard pour dériver vos classes de jeu d’enregistrements.  
+### <a name="remarks"></a>Remarks  
+ You can either use `CDaoRecordset` directly or derive an application-specific class from `CDaoRecordset`. You can use ClassWizard to derive your recordset classes.  
   
 > [!NOTE]
->  Si vous dérivez un `CDaoRecordset` classe votre dérivée classe doit fournir son propre constructeur. Dans le constructeur de votre classe dérivée, appelez le constructeur `CDaoRecordset::CDaoRecordset`, en passant les paramètres appropriés sur lui.  
+>  If you derive a `CDaoRecordset` class, your derived class must supply its own constructor. In the constructor of your derived class, call the constructor `CDaoRecordset::CDaoRecordset`, passing the appropriate parameters along to it.  
   
- Passer **NULL** au constructeur de votre jeu d’enregistrements d’avoir un `CDaoDatabase` objet construit et connecté automatiquement pour vous. Il s’agit d’un raccourci utile qui ne nécessite pas construire et de vous connecter une `CDaoDatabase` objet avant de créer le jeu d’enregistrements. Si le `CDaoDatabase` objet n’est pas ouvert, une [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objet sera également créé qui utilise l’espace de travail par défaut. Pour plus d’informations, consultez [CDaoDatabase::CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase).  
+ Pass **NULL** to your recordset constructor to have a `CDaoDatabase` object constructed and connected for you automatically. This is a useful shortcut that does not require you to construct and connect a `CDaoDatabase` object prior to constructing your recordset. If the `CDaoDatabase` object is not open, a [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) object will also be created for you that uses the default workspace. For more information, see [CDaoDatabase::CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase).  
   
-##  <a name="close"></a>CDaoRecordset::Close  
- Fermeture d’un `CDaoRecordset` objet supprime de la collection de jeux d’enregistrements ouverts dans la base de données associée.  
+##  <a name="close"></a>  CDaoRecordset::Close  
+ Closing a `CDaoRecordset` object removes it from the collection of open recordsets in the associated database.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Étant donné que **fermer** ne détruit pas les `CDaoRecordset` de l’objet, vous pouvez réutiliser l’objet en appelant **ouvrir** sur la même source de données ou une autre source de données.  
+### <a name="remarks"></a>Remarks  
+ Because **Close** does not destroy the `CDaoRecordset` object, you can reuse the object by calling **Open** on the same data source or a different data source.  
   
- Tout en attente [AddNew](#addnew) ou [modifier](#edit) instructions sont, et toutes les transactions en attente sont annulées. Si vous souhaitez conserver les ajouts ou modifications en attente, appelez [mise à jour](#update) avant d’appeler **fermer** pour chaque jeu d’enregistrements.  
+ All pending [AddNew](#addnew) or [Edit](#edit) statements are canceled, and all pending transactions are rolled back. If you want to preserve pending additions or edits, call [Update](#update) before you call **Close** for each recordset.  
   
- Vous pouvez appeler **ouvrir** à nouveau après l’appel **fermer**. Cela vous permet de réutiliser l’objet recordset. Une meilleure solution consiste à appeler [Requery](#requery), si possible.  
+ You can call **Open** again after calling **Close**. This lets you reuse the recordset object. A better alternative is to call [Requery](#requery), if possible.  
   
- Pour plus d’informations, consultez la rubrique « Close (méthode) » dans l’aide de DAO.  
+ For related information, see the topic "Close Method" in DAO Help.  
   
-##  <a name="delete"></a>CDaoRecordset::Delete  
- Appelez cette fonction membre pour supprimer l’enregistrement actif dans un objet de jeu d’enregistrements de type de table ou de type ouvert.  
+##  <a name="delete"></a>  CDaoRecordset::Delete  
+ Call this member function to delete the current record in an open dynaset-type or table-type recordset object.  
   
 ```  
 virtual void Delete();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Après une suppression réussie, les membres de données de champ du jeu d’enregistrements sont définies sur une valeur Null, et vous devez appeler explicitement une des fonctions membres de navigation de jeu d’enregistrements ( [déplacer](#move), [recherche](#seek), [SetBookmark](#setbookmark), et ainsi de suite) afin de déplacer l’enregistrement supprimé. Lorsque vous supprimez des enregistrements à partir d’un jeu d’enregistrements, il faut un enregistrement actif dans le jeu d’enregistrements avant d’appeler **supprimer**; sinon, MFC lève une exception.  
+### <a name="remarks"></a>Remarks  
+ After a successful deletion, the recordset's field data members are set to a Null value, and you must explicitly call one of the recordset navigation member functions ( [Move](#move), [Seek](#seek), [SetBookmark](#setbookmark), and so on) in order to move off the deleted record. When you delete records from a recordset, there must be a current record in the recordset before you call **Delete**; otherwise, MFC throws an exception.  
   
- **Supprimer** supprime l’enregistrement actif et les rend inaccessibles. Bien que vous ne peut pas modifier ou utiliser l’enregistrement supprimé, il reste actif. Une fois que vous déplacez vers un autre enregistrement, toutefois, vous ne peut pas refaire l’enregistrement supprimé en cours.  
+ **Delete** removes the current record and makes it inaccessible. Although you cannot edit or use the deleted record, it remains current. Once you move to another record, however, you cannot make the deleted record current again.  
   
 > [!CAUTION]
->  Le jeu d’enregistrements doive être mis à jour et il doit y avoir un enregistrement valide dans le jeu d’enregistrements lorsque vous appelez **supprimer**. Par exemple, si vous supprimez un enregistrement, mais ne pas faire défiler vers un nouvel enregistrement avant d’appeler **supprimer** , **supprimer** lève une [CDaoException](../../mfc/reference/cdaoexception-class.md).  
+>  The recordset must be updatable and there must be a valid record current in the recordset when you call **Delete**. For example, if you delete a record but do not scroll to a new record before you call **Delete** again, **Delete** throws a [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
- Vous pouvez annuler la suppression d’un enregistrement si vous utilisez des transactions et que vous appelez le [CDaoWorkspace::Rollback](../../mfc/reference/cdaoworkspace-class.md#rollback) fonction membre. Si la table de base est la table primaire en cascade supprimer la relation, la suppression de l’enregistrement actif peut également de supprimer un ou plusieurs enregistrements dans une table externe. Pour plus d’informations, consultez « cascade » définition supprimer dans l’aide de DAO.  
+ You can undelete a record if you use transactions and you call the [CDaoWorkspace::Rollback](../../mfc/reference/cdaoworkspace-class.md#rollback) member function. If the base table is the primary table in a cascade delete relationship, deleting the current record may also delete one or more records in a foreign table. For more information, see the definition "cascade delete" in DAO Help.  
   
- Contrairement aux `AddNew` et **modifier**, un appel à **supprimer** n’est pas suivi par un appel à **mise à jour**.  
+ Unlike `AddNew` and **Edit**, a call to **Delete** is not followed by a call to **Update**.  
   
- Pour plus d’informations, consultez les rubriques « Méthode AddNew », « Modifier la méthode », « Méthode Delete », « Méthode de mise à jour » et « Propriété actualisable » dans l’aide de DAO.  
+ For related information, see the topics "AddNew Method", "Edit Method", "Delete Method", "Update Method", and "Updatable Property" in DAO Help.  
   
-##  <a name="dofieldexchange"></a>CDaoRecordset::DoFieldExchange  
- L’infrastructure appelle cette fonction membre pour échanger automatiquement des données entre les membres de données de champ de votre objet recordset et les colonnes correspondantes de l’enregistrement actif sur la source de données.  
+##  <a name="dofieldexchange"></a>  CDaoRecordset::DoFieldExchange  
+ The framework calls this member function to automatically exchange data between the field data members of your recordset object and the corresponding columns of the current record on the data source.  
   
 ```  
 virtual void DoFieldExchange(CDaoFieldExchange* pFX);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Contient un pointeur vers un `CDaoFieldExchange` objet. Le framework sera déjà avoir configuré cet objet permet de spécifier un contexte pour l’opération d’échange de champs.  
+ Contains a pointer to a `CDaoFieldExchange` object. The framework will already have set up this object to specify a context for the field exchange operation.  
   
-### <a name="remarks"></a>Notes  
- Il lie également les membres de données de paramètre, cas échéant, aux espaces réservés de paramètre dans la chaîne d’instruction SQL pour la sélection du jeu d’enregistrements. L’échange de données de champ, appelées l’échange de champs d’enregistrements DAO (DFX), fonctionne dans les deux sens : de membres de données de champ de l’objet recordset vers les champs de l’enregistrement sur la source de données et de l’enregistrement de la source de données à l’objet recordset. Si vous liez dynamiquement des colonnes, vous ne devez pas implémenter `DoFieldExchange`.  
+### <a name="remarks"></a>Remarks  
+ It also binds your parameter data members, if any, to parameter placeholders in the SQL statement string for the recordset's selection. The exchange of field data, called DAO record field exchange (DFX), works in both directions: from the recordset object's field data members to the fields of the record on the data source, and from the record on the data source to the recordset object. If you are binding columns dynamically, you are not required to implement `DoFieldExchange`.  
   
- La seule action que vous devez normalement suivre pour implémenter `DoFieldExchange` pour votre jeu d’enregistrements dérivée classe consiste à créer la classe avec ClassWizard et spécifiez les noms et types de données des membres de données du champ. Vous pouvez également ajouter le code vers ce que ClassWizard écrit spécifier les membres de données de paramètre. Si tous les champs doivent être lié dynamiquement, cette fonction sera inactive, sauf si vous spécifiez les membres de données de paramètre.  
+ The only action you must normally take to implement `DoFieldExchange` for your derived recordset class is to create the class with ClassWizard and specify the names and data types of the field data members. You might also add code to what ClassWizard writes to specify parameter data members. If all fields are to be bound dynamically, this function will be inactive unless you specify parameter data members.  
   
- Lorsque vous déclarez la classe de recordset dérivée avec ClassWizard, l’Assistant écrit une substitution de `DoFieldExchange` , qui ressemble à l’exemple suivant :  
+ When you declare your derived recordset class with ClassWizard, the wizard writes an override of `DoFieldExchange` for you, which resembles the following example:  
   
- [!code-cpp[NVC_MFCDatabase #2](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#2](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]  
   
-##  <a name="edit"></a>CDaoRecordset::Edit  
- Appelez cette fonction membre pour autoriser les modifications apportées à l’enregistrement actif.  
+##  <a name="edit"></a>  CDaoRecordset::Edit  
+ Call this member function to allow changes to the current record.  
   
 ```  
 virtual void Edit();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Une fois que vous appelez le **modifier** fonction membre, les modifications apportées aux champs de l’enregistrement actuel sont copiés dans le tampon de copie. Après avoir apporté les modifications souhaitées à l’enregistrement, appelez **mise à jour** pour enregistrer vos modifications. **Modifier** enregistre les valeurs des membres de données du jeu d’enregistrements. Si vous appelez **modifier**, apporter des modifications, puis appelez **modifier** là encore, les valeurs de l’enregistrement sont restaurés qu’ils étaient avant le premier **modifier** appeler.  
+### <a name="remarks"></a>Remarks  
+ Once you call the **Edit** member function, changes made to the current record's fields are copied to the copy buffer. After you make the desired changes to the record, call **Update** to save your changes. **Edit** saves the values of the recordset's data members. If you call **Edit**, make changes, then call **Edit** again, the record's values are restored to what they were before the first **Edit** call.  
   
 > [!CAUTION]
->  Si vous modifiez un enregistrement et que vous effectuez ensuite une opération qui se déplace vers un autre enregistrement sans appeler d’abord **mise à jour**, vos modifications sont perdues sans avertissement. En outre, si vous fermez le jeu d’enregistrements ou de la base de données parente, votre enregistrement modifié est ignoré sans avertissement.  
+>  If you edit a record and then perform any operation that moves to another record without first calling **Update**, your changes are lost without warning. In addition, if you close the recordset or the parent database, your edited record is discarded without warning.  
   
- Dans certains cas, vous souhaiterez mettre à jour une colonne en le rendant Null (ne contenant pas de données). Pour ce faire, appelez `SetFieldNull` avec un paramètre de **TRUE** pour marquer le champ Null ; cela entraîne également la colonne à mettre à jour. Si vous souhaitez un champ pour être écrites dans la source de données, même si sa valeur n’a pas changé, appelez `SetFieldDirty` avec un paramètre de **TRUE**. Cela fonctionne même si le champ a la valeur Null.  
+ In some cases, you may want to update a column by making it Null (containing no data). To do so, call `SetFieldNull` with a parameter of **TRUE** to mark the field Null; this also causes the column to be updated. If you want a field to be written to the data source even though its value has not changed, call `SetFieldDirty` with a parameter of **TRUE**. This works even if the field had the value Null.  
   
- Les marques de framework modifié des données membres de champ pour vous assurer qu’ils seront écrits à l’enregistrement sur la source de données par le mécanisme DAO record field exchange (DFX). Généralement la modification de la valeur d’un champ définit le champ modifié automatiquement, donc vous devrez rarement appeler [SetFieldDirty](#setfielddirty) vous-même, mais vous pouvez parfois souhaiter vous assurer que les colonnes seront explicitement mis à jour ou insérées, quelle que soit la valeur est dans le membre de données de champ. Le mécanisme DFX utilise également l’utilisation de **PSEUDO NULL**. Pour plus d’informations, consultez [section CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
+ The framework marks changed field data members to ensure they will be written to the record on the data source by the DAO record field exchange (DFX) mechanism. Changing the value of a field generally sets the field dirty automatically, so you will seldom need to call [SetFieldDirty](#setfielddirty) yourself, but you might sometimes want to ensure that columns will be explicitly updated or inserted regardless of what value is in the field data member. The DFX mechanism also employs the use of **PSEUDO NULL**. For more information, see [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
   
- Si le mécanisme de double tampon n’est pas utilisé, puis en modifiant la valeur du champ ne définit pas automatiquement le champ comme modifié. Dans ce cas, il sera nécessaire de définir explicitement le champ modifié. L’indicateur contenues dans [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) contrôle de cette vérification automatique de champ.  
+ If the double-buffering mechanism is not being used, then changing the value of the field does not automatically set the field as dirty. In this case, it will be necessary to explicitly set the field dirty. The flag contained in [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) controls this automatic field checking.  
   
- Lorsque l’objet recordset est verrouillage pessimiste dans un environnement multi-utilisateur, l’enregistrement reste verrouillé à partir du moment **modifier** est utilisé jusqu'à ce que la mise à jour est terminée. Si le jeu d’enregistrements est verrouillage optimiste, l’enregistrement est verrouillé et comparé à l’enregistrement avant la modification juste avant qu’il est mis à jour dans la base de données. Si l’enregistrement a été modifié dans la mesure où vous avez appelé **modifier**, le **mise à jour** échoue et MFC lève une exception. Vous pouvez modifier le mode de verrouillage avec `SetLockingMode`.  
+ When the recordset object is pessimistically locked in a multiuser environment, the record remains locked from the time **Edit** is used until the updating is complete. If the recordset is optimistically locked, the record is locked and compared with the pre-edited record just before it is updated in the database. If the record has changed since you called **Edit**, the **Update** operation fails and MFC throws an exception. You can change the locking mode with `SetLockingMode`.  
   
 > [!NOTE]
->  Verrouillage optimiste est toujours utilisé sur les formats de base de données externe, telles que ODBC et ISAM installable.  
+>  Optimistic locking is always used on external database formats, such as ODBC and installable ISAM.  
   
- L’enregistrement actif reste actif après avoir appelé **modifier**. Pour appeler **modifier**, il doit y avoir un enregistrement en cours. S’il n’existe aucun enregistrement actif ou si le jeu d’enregistrements ne fait pas référence à une table-type ouvert ou d’un objet de jeu d’enregistrements de type, une exception se produit. Appel de **modifier** provoque un `CDaoException` levée dans les conditions suivantes :  
+ The current record remains current after you call **Edit**. To call **Edit**, there must be a current record. If there is no current record or if the recordset does not refer to an open table-type or dynaset-type recordset object, an exception occurs. Calling **Edit** causes a `CDaoException` to be thrown under the following conditions:  
   
--   Il n’existe aucun enregistrement actif.  
+-   There is no current record.  
   
--   La base de données ou d’un jeu d’enregistrements est en lecture seule.  
+-   The database or recordset is read-only.  
   
--   Aucun champ dans l’enregistrement est modifiable.  
+-   No fields in the record are updatable.  
   
--   La base de données ou d’un jeu d’enregistrements a été ouvert pour une utilisation exclusive par un autre utilisateur.  
+-   The database or recordset was opened for exclusive use by another user.  
   
--   Un autre utilisateur a verrouillé la page contenant votre enregistrement.  
+-   Another user has locked the page containing your record.  
   
- Si la source de données prend en charge les transactions, vous pouvez rendre le **modifier** appeler partie d’une transaction. Notez que vous devez appeler `CDaoWorkspace::BeginTrans` avant d’appeler **modifier** et après le jeu d’enregistrements a été ouvert. Notez également que l’appel `CDaoWorkspace::CommitTrans` n’est pas un substitut pour appeler **mise à jour** pour terminer le **modifier** opération. Pour plus d’informations sur les transactions, consultez la classe `CDaoWorkspace`.  
+ If the data source supports transactions, you can make the **Edit** call part of a transaction. Note that you should call `CDaoWorkspace::BeginTrans` before calling **Edit** and after the recordset has been opened. Also note that calling `CDaoWorkspace::CommitTrans` is not a substitute for calling **Update** to complete the **Edit** operation. For more information about transactions, see class `CDaoWorkspace`.  
   
- Pour plus d’informations, consultez les rubriques « Méthode AddNew », « Modifier la méthode », « Méthode Delete », « Méthode de mise à jour » et « Propriété actualisable » dans l’aide de DAO.  
+ For related information, see the topics "AddNew Method", "Edit Method", "Delete Method", "Update Method", and "Updatable Property" in DAO Help.  
   
-##  <a name="fillcache"></a>CDaoRecordset::FillCache  
- Appelez cette fonction membre pour mettre en cache un nombre spécifié d’enregistrements à partir de l’ensemble d’enregistrements.  
+##  <a name="fillcache"></a>  CDaoRecordset::FillCache  
+ Call this member function to cache a specified number of records from the recordset.  
   
 ```  
 void FillCache(
@@ -542,28 +620,28 @@ void FillCache(
     COleVariant* pBookmark = NULL);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pSize`  
- Spécifie le nombre de lignes pour remplir le cache. Si vous omettez ce paramètre, la valeur est déterminée par le paramètre de propriété CacheSize de l’objet DAO sous-jacent.  
+ Specifies the number of rows to fill in the cache. If you omit this parameter, the value is determined by the CacheSize property setting of the underlying DAO object.  
   
  `pBookmark`  
- A [COleVariant](../../mfc/reference/colevariant-class.md) spécifiant un signet. Le cache est rempli à partir de l’enregistrement indiqué par ce signet. Si vous omettez ce paramètre, le cache est rempli à partir de l’enregistrement indiqué par la propriété CacheStart de l’objet DAO sous-jacent.  
+ A [COleVariant](../../mfc/reference/colevariant-class.md) specifying a bookmark. The cache is filled starting from the record indicated by this bookmark. If you omit this parameter, the cache is filled starting from the record indicated by the CacheStart property of the underlying DAO object.  
   
-### <a name="remarks"></a>Remarques  
- Mise en cache améliore les performances d’une application qui Récupère ou extrait, les données à partir d’un serveur distant. Un cache est un espace dans la mémoire locale qui contient les données extraites le plus récemment à partir du serveur sur l’hypothèse que les données seront probablement être demandées de nouveau pendant que l’application est en cours d’exécution. La demande de données, le moteur de base de données Microsoft Jet vérifie tout d’abord le cache de données plutôt que depuis le serveur, ce qui prend plus de temps. À l’aide de données mise en cache sur les sources de données non-ODBC n’a aucun effet car les données ne sont pas enregistrées dans le cache.  
+### <a name="remarks"></a>Remarks  
+ Caching improves the performance of an application that retrieves, or fetches, data from a remote server. A cache is space in local memory that holds the data most recently fetched from the server on the assumption that the data will probably be requested again while the application is running. When data is requested, the Microsoft Jet database engine checks the cache for the data first rather than fetching it from the server, which takes more time. Using data caching on non-ODBC data sources has no effect as the data is not saved in the cache.  
   
- Au lieu d’attendre que le cache doit être remplie avec les enregistrements comme elles sont lues, vous pouvez remplir explicitement le cache à tout moment en appelant le `FillCache` fonction membre. Il s’agit d’une méthode plus rapide pour remplir le cache, car `FillCache` extrait plusieurs enregistrements à la fois au lieu d’un à la fois. Par exemple, tandis que chaque écran d’enregistrements est affiché, vous pouvez avoir votre appel de l’application `FillCache` pour extraire l’écran suivant d’enregistrements.  
+ Rather than waiting for the cache to be filled with records as they are fetched, you can explicitly fill the cache at any time by calling the `FillCache` member function. This is a faster way to fill the cache because `FillCache` fetches several records at once instead of one at a time. For example, while each screenful of records is being displayed, you can have your application call `FillCache` to fetch the next screenful of records.  
   
- Une base de données ODBC accessible avec les objets recordset peut avoir un cache local. Pour créer le cache, ouvrez un objet recordset à partir de la source de données à distance, puis appelez le `SetCacheSize` et `SetCacheStart` les fonctions membres de l’objet recordset. Si `lSize` et *lBookmark* créer une plage qui est effacé, partiellement ou en dehors de la plage spécifiée par `SetCacheSize` et `SetCacheStart`, la partie de l’ensemble d’enregistrements en dehors de cette plage est ignorée et n’est pas chargée dans le cache. Si `FillCache` demande plus d’enregistrements que restent dans la source de données à distance, que les enregistrements restants sont extraits, et aucune exception n’est levée.  
+ Any ODBC database accessed with recordset objects can have a local cache. To create the cache, open a recordset object from the remote data source, and then call the `SetCacheSize` and `SetCacheStart` member functions of the recordset. If `lSize` and *lBookmark* create a range that is partly or wholly outside the range specified by `SetCacheSize` and `SetCacheStart`, the portion of the recordset outside this range is ignored and is not loaded into the cache. If `FillCache` requests more records than remain in the remote data source, only the remaining records are fetched, and no exception is thrown.  
   
- Enregistrements extraits à partir du cache ne reflètent pas les modifications apportées simultanément à la source de données par d’autres utilisateurs.  
+ Records fetched from the cache do not reflect changes made concurrently to the source data by other users.  
   
- `FillCache`extrait uniquement les enregistrements pas déjà mis en cache. Pour forcer une mise à jour de toutes les données mises en cache, appelez le `SetCacheSize` fonction membre avec un `lSize` paramètre égal à 0, l’appel `SetCacheSize` à l’aide de la `lSize` paramètre égal à la taille du cache initialement demandé, puis appelez `FillCache`.  
+ `FillCache` fetches only records not already cached. To force an update of all the cached data, call the `SetCacheSize` member function with an `lSize` parameter equal to 0, call `SetCacheSize` again with the `lSize` parameter equal to the size of the cache you originally requested, and then call `FillCache`.  
   
- Pour plus d’informations, consultez la rubrique « FillCache méthode » dans l’aide de DAO.  
+ For related information, see the topic "FillCache Method" in DAO Help.  
   
-##  <a name="find"></a>CDaoRecordset::Find  
- Appelez cette fonction membre pour rechercher une chaîne particulière dans un jeu d’enregistrements de type feuille de réponse dynamique ou instantané à l’aide d’un opérateur de comparaison.  
+##  <a name="find"></a>  CDaoRecordset::Find  
+ Call this member function to locate a particular string in a dynaset- or snapshot-type recordset using a comparison operator.  
   
 ```  
 virtual BOOL Find(
@@ -571,394 +649,394 @@ virtual BOOL Find(
     LPCTSTR lpszFilter);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *lFindType*  
- Une valeur qui indique le type d’opération de recherche que vous le souhaitez. Les valeurs possibles sont :  
+ A value indicating the type of Find operation desired. The possible values are:  
   
-- **AFX_DAO_NEXT** trouver l’emplacement suivant d’une chaîne correspondante.  
+- **AFX_DAO_NEXT** Find the next location of a matching string.  
   
-- **AFX_DAO_PREV** trouver l’emplacement précédent d’une chaîne correspondante.  
+- **AFX_DAO_PREV** Find the previous location of a matching string.  
   
-- **AFX_DAO_FIRST** rechercher le premier emplacement d’une chaîne correspondante.  
+- **AFX_DAO_FIRST** Find the first location of a matching string.  
   
-- **AFX_DAO_LAST** rechercher le dernier emplacement d’une chaîne correspondante.  
+- **AFX_DAO_LAST** Find the last location of a matching string.  
   
  `lpszFilter`  
- Une expression de chaîne (comme la **où** clause dans une instruction SQL sans le mot **où**) utilisé pour rechercher l’enregistrement. Exemple :  
+ A string expression (like the **WHERE** clause in a SQL statement without the word **WHERE**) used to locate the record. For example:  
   
- [!code-cpp[NVC_MFCDatabase n° 3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si les enregistrements correspondants sont trouvés, sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if matching records are found, otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Vous pouvez rechercher la première, suivante, précédente ou la dernière instance de la chaîne. **Rechercher** étant une fonction virtuelle, vous pouvez le remplacer et ajouter votre propre implémentation. Le `FindFirst`, `FindLast`, `FindNext`, et `FindPrev` fonctions membres appellent le **trouver** fonction membre, vous pouvez donc utiliser **trouver** pour contrôler le comportement de toutes les opérations de recherche.  
+### <a name="remarks"></a>Remarks  
+ You can find the first, next, previous, or last instance of the string. **Find** is a virtual function, so you can override it and add your own implementation. The `FindFirst`, `FindLast`, `FindNext`, and `FindPrev` member functions call the **Find** member function, so you can use **Find** to control the behavior of all Find operations.  
   
- Pour rechercher un enregistrement dans un jeu d’enregistrements de type table, appelez le [recherche](#seek) fonction membre.  
+ To locate a record in a table-type recordset, call the [Seek](#seek) member function.  
   
 > [!TIP]
->  Le plus petit ensemble d’enregistrements vous avez, la plus efficace **trouver** sera. En général et surtout avec les données ODBC, il est préférable de créer une requête qui récupère uniquement les enregistrements que vous souhaitez.  
+>  The smaller the set of records you have, the more effective **Find** will be. In general, and especially with ODBC data, it is better to create a new query that retrieves just the records you want.  
   
- Pour plus d’informations, consultez la rubrique « FindFirst, FindLast, FindNext, FindPrevious méthodes » dans l’aide de DAO.  
+ For related information, see the topic "FindFirst, FindLast, FindNext, FindPrevious Methods" in DAO Help.  
   
-##  <a name="findfirst"></a>CDaoRecordset::FindFirst  
- Appelez cette fonction membre pour rechercher le premier enregistrement qui correspond à une condition spécifiée.  
+##  <a name="findfirst"></a>  CDaoRecordset::FindFirst  
+ Call this member function to find the first record that matches a specified condition.  
   
 ```  
 BOOL FindFirst(LPCTSTR lpszFilter);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpszFilter`  
- Une expression de chaîne (comme la **où** clause dans une instruction SQL sans le mot **où**) utilisé pour rechercher l’enregistrement.  
+ A string expression (like the **WHERE** clause in a SQL statement without the word **WHERE**) used to locate the record.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si les enregistrements correspondants sont trouvés, sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if matching records are found, otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Le `FindFirst` fonction membre commence la recherche à partir du début de l’objet recordset et effectue la recherche vers la fin de l’objet recordset.  
+### <a name="remarks"></a>Remarks  
+ The `FindFirst` member function begins its search from the beginning of the recordset and searches to the end of the recordset.  
   
- Si vous souhaitez inclure tous les enregistrements dans votre recherche (pas seulement ceux qui répondent à une condition spécifique) l’une des opérations de déplacement permettant de déplacer d’un enregistrement à l’autre. Pour rechercher un enregistrement dans un jeu d’enregistrements de type table, appelez le `Seek` fonction membre.  
+ If you want to include all the records in your search (not just those that meet a specific condition) use one of the Move operations to move from record to record. To locate a record in a table-type recordset, call the `Seek` member function.  
   
- Si un enregistrement correspondant aux critères n’est pas localisé, le pointeur d’enregistrement actif est indéterminé, et `FindFirst` retourne zéro. Si le jeu d’enregistrements contient plus d’un enregistrement qui répond aux critères, `FindFirst` recherche la première occurrence, `FindNext` recherche l’occurrence suivante et ainsi de suite.  
+ If a record matching the criteria is not located, the current record pointer is undetermined, and `FindFirst` returns zero. If the recordset contains more than one record that satisfies the criteria, `FindFirst` locates the first occurrence, `FindNext` locates the next occurrence, and so on.  
   
 > [!CAUTION]
->  Si vous modifiez l’enregistrement actif, veillez à enregistrer les modifications en appelant le **mise à jour** fonction membre avant de passer à un autre enregistrement. Si vous déplacez vers un autre enregistrement sans mettre à jour, vos modifications sont perdues sans avertissement.  
+>  If you edit the current record, be sure to save the changes by calling the **Update** member function before you move to another record. If you move to another record without updating, your changes are lost without warning.  
   
- Le **trouver** fonctions membres de recherche à partir de l’emplacement et dans la direction spécifiée dans le tableau suivant :  
+ The **Find** member functions search from the location and in the direction specified in the following table:  
   
-|Les opérations de recherche|Commencer|Direction de la recherche|  
+|Find operations|Begin|Search direction|  
 |---------------------|-----------|----------------------|  
-|`FindFirst`|Début du jeu d’enregistrements|Fin du jeu d’enregistrements|  
-|`FindLast`|Fin du jeu d’enregistrements|Début du jeu d’enregistrements|  
-|`FindNext`|Enregistrement actif|Fin du jeu d’enregistrements|  
-|**FindPrevious**|Enregistrement actif|Début du jeu d’enregistrements|  
+|`FindFirst`|Beginning of recordset|End of recordset|  
+|`FindLast`|End of recordset|Beginning of recordset|  
+|`FindNext`|Current record|End of recordset|  
+|**FindPrevious**|Current record|Beginning of recordset|  
   
 > [!NOTE]
->  Lorsque vous appelez `FindLast`, le moteur de base de données Microsoft Jet remplit entièrement le jeu d’enregistrements avant de commencer la recherche, si cela n’a pas déjà été fait. La première recherche peut prendre plue de recherches suivantes.  
+>  When you call `FindLast`, the Microsoft Jet database engine fully populates your recordset before beginning the search, if this has not already been done. The first search may take longer than subsequent searches.  
   
- À l’aide de l’une des opérations de recherche n’est pas le même que l’appel **MoveFirst** ou `MoveNext`, toutefois, ce qui rend simplement le premier ou le prochain enregistrement actuel sans spécifier une condition. Vous pouvez suivre une opération de recherche avec une opération de déplacement.  
+ Using one of the Find operations is not the same as calling **MoveFirst** or `MoveNext`, however, which simply makes the first or next record current without specifying a condition. You can follow a Find operation with a Move operation.  
   
- Gardez les éléments suivants à l’esprit lorsque vous utilisez les opérations de recherche :  
+ Keep the following in mind when using the Find operations:  
   
--   Si **trouver** retourne différent de zéro, l’enregistrement actif n’est pas défini. Dans ce cas, vous devez positionner le pointeur d’enregistrement actif vers un enregistrement valide.  
+-   If **Find** returns nonzero, the current record is not defined. In this case, you must position the current record pointer back to a valid record.  
   
--   Vous ne pouvez pas utiliser une opération de recherche avec un recordset de type instantané défilement avant uniquement.  
+-   You cannot use a Find operation with a forward-only scrolling snapshot-type recordset.  
   
--   Vous devez utiliser le format de date des États-Unis (mois-jour-année) lorsque vous recherchez des champs contenant des dates, même si vous n’utilisez pas la version américaine du moteur de base de données Microsoft Jet ; Sinon, enregistrements correspondants peut être introuvable.  
+-   You should use the U.S. date format (month-day-year) when you search for fields containing dates, even if you are not using the U.S. version of the Microsoft Jet database engine; otherwise, matching records may not be found.  
   
--   Lorsque vous travaillez avec des bases de données ODBC et les feuilles de réponse dynamiques volumineux, vous pouvez constater que vous utilisez les opérations de recherche est lent, en particulier lorsque vous travaillez avec des jeux d’enregistrements volumineux. Vous pouvez améliorer les performances à l’aide de requêtes SQL avec personnalisé **ORDERBY** ou **où** clauses, des requêtes de paramètre, ou **CDaoQuerydef** objets qui extraient des enregistrements indexés spécifiques.  
+-   When working with ODBC databases and large dynasets, you may discover that using the Find operations is slow, especially when working with large recordsets. You can improve performance by using SQL queries with customized **ORDERBY** or **WHERE** clauses, parameter queries, or **CDaoQuerydef** objects that retrieve specific indexed records.  
   
- Pour plus d’informations, consultez la rubrique « FindFirst, FindLast, FindNext, FindPrevious méthodes » dans l’aide de DAO.  
+ For related information, see the topic "FindFirst, FindLast, FindNext, FindPrevious Methods" in DAO Help.  
   
-##  <a name="findlast"></a>CDaoRecordset::FindLast  
- Appelez cette fonction membre pour rechercher le dernier enregistrement qui correspond à une condition spécifiée.  
+##  <a name="findlast"></a>  CDaoRecordset::FindLast  
+ Call this member function to find the last record that matches a specified condition.  
   
 ```  
 BOOL FindLast(LPCTSTR lpszFilter);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpszFilter`  
- Une expression de chaîne (comme la **où** clause dans une instruction SQL sans le mot **où**) utilisé pour rechercher l’enregistrement.  
+ A string expression (like the **WHERE** clause in a SQL statement without the word **WHERE**) used to locate the record.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si les enregistrements correspondants sont trouvés, sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if matching records are found, otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Le `FindLast` fonction membre commence la recherche à la fin de l’ensemble d’enregistrements et recherche vers le haut jusqu’au début de l’objet recordset.  
+### <a name="remarks"></a>Remarks  
+ The `FindLast` member function begins its search at the end of the recordset and searches backward towards the beginning of the recordset.  
   
- Si vous souhaitez inclure tous les enregistrements dans votre recherche (pas seulement ceux qui répondent à une condition spécifique) l’une des opérations de déplacement permettant de déplacer d’un enregistrement à l’autre. Pour rechercher un enregistrement dans un jeu d’enregistrements de type table, appelez le `Seek` fonction membre.  
+ If you want to include all the records in your search (not just those that meet a specific condition) use one of the Move operations to move from record to record. To locate a record in a table-type recordset, call the `Seek` member function.  
   
- Si un enregistrement correspondant aux critères n’est pas localisé, le pointeur d’enregistrement actif est indéterminé, et `FindLast` retourne zéro. Si le jeu d’enregistrements contient plus d’un enregistrement qui répond aux critères, `FindFirst` recherche la première occurrence, `FindNext` recherche l’occurrence suivante après la première occurrence et ainsi de suite.  
+ If a record matching the criteria is not located, the current record pointer is undetermined, and `FindLast` returns zero. If the recordset contains more than one record that satisfies the criteria, `FindFirst` locates the first occurrence, `FindNext` locates the next occurrence after the first occurrence, and so on.  
   
 > [!CAUTION]
->  Si vous modifiez l’enregistrement actif, veillez à ce que vous enregistrez les modifications en appelant le **mise à jour** fonction membre avant de passer à un autre enregistrement. Si vous déplacez vers un autre enregistrement sans mettre à jour, vos modifications sont perdues sans avertissement.  
+>  If you edit the current record, be sure you save the changes by calling the **Update** member function before you move to another record. If you move to another record without updating, your changes are lost without warning.  
   
- À l’aide de l’une des opérations de recherche n’est pas le même que l’appel **MoveFirst** ou `MoveNext`, toutefois, ce qui rend simplement le premier ou le prochain enregistrement actuel sans spécifier une condition. Vous pouvez suivre une opération de recherche avec une opération de déplacement.  
+ Using one of the Find operations is not the same as calling **MoveFirst** or `MoveNext`, however, which simply makes the first or next record current without specifying a condition. You can follow a Find operation with a Move operation.  
   
- Gardez les éléments suivants à l’esprit lorsque vous utilisez les opérations de recherche :  
+ Keep the following in mind when using the Find operations:  
   
--   Si **trouver** retourne différent de zéro, l’enregistrement actif n’est pas défini. Dans ce cas, vous devez positionner le pointeur d’enregistrement actif vers un enregistrement valide.  
+-   If **Find** returns nonzero, the current record is not defined. In this case, you must position the current record pointer back to a valid record.  
   
--   Vous ne pouvez pas utiliser une opération de recherche avec un recordset de type instantané défilement avant uniquement.  
+-   You cannot use a Find operation with a forward-only scrolling snapshot-type recordset.  
   
--   Vous devez utiliser le format de date des États-Unis (mois-jour-année) lorsque vous recherchez des champs contenant des dates, même si vous n’utilisez pas la version américaine du moteur de base de données Microsoft Jet ; Sinon, enregistrements correspondants peut être introuvable.  
+-   You should use the U.S. date format (month-day-year) when you search for fields containing dates, even if you are not using the U.S. version of the Microsoft Jet database engine; otherwise, matching records may not be found.  
   
--   Lorsque vous travaillez avec des bases de données ODBC et les feuilles de réponse dynamiques volumineux, vous pouvez constater que vous utilisez les opérations de recherche est lent, en particulier lorsque vous travaillez avec des jeux d’enregistrements volumineux. Vous pouvez améliorer les performances à l’aide de requêtes SQL avec personnalisé **ORDERBY** ou **où** clauses, des requêtes de paramètre, ou **CDaoQuerydef** objets qui extraient des enregistrements indexés spécifiques.  
+-   When working with ODBC databases and large dynasets, you may discover that using the Find operations is slow, especially when working with large recordsets. You can improve performance by using SQL queries with customized **ORDERBY** or **WHERE** clauses, parameter queries, or **CDaoQuerydef** objects that retrieve specific indexed records.  
   
- Pour plus d’informations, consultez la rubrique « FindFirst, FindLast, FindNext, FindPrevious méthodes » dans l’aide de DAO.  
+ For related information, see the topic "FindFirst, FindLast, FindNext, FindPrevious Methods" in DAO Help.  
   
-##  <a name="findnext"></a>CDaoRecordset::FindNext  
- Appelez cette fonction membre pour rechercher l’enregistrement suivant qui correspond à une condition spécifiée.  
+##  <a name="findnext"></a>  CDaoRecordset::FindNext  
+ Call this member function to find the next record that matches a specified condition.  
   
 ```  
 BOOL FindNext(LPCTSTR lpszFilter);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpszFilter`  
- Une expression de chaîne (comme la **où** clause dans une instruction SQL sans le mot **où**) utilisé pour rechercher l’enregistrement.  
+ A string expression (like the **WHERE** clause in a SQL statement without the word **WHERE**) used to locate the record.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si les enregistrements correspondants sont trouvés, sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if matching records are found, otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Le `FindNext` fonction membre commence la recherche à l’enregistrement actif et effectue la recherche à la fin de l’objet recordset.  
+### <a name="remarks"></a>Remarks  
+ The `FindNext` member function begins its search at the current record and searches to the end of the recordset.  
   
- Si vous souhaitez inclure tous les enregistrements dans votre recherche (pas seulement ceux qui répondent à une condition spécifique) l’une des opérations de déplacement permettant de déplacer d’un enregistrement à l’autre. Pour rechercher un enregistrement dans un jeu d’enregistrements de type table, appelez le `Seek` fonction membre.  
+ If you want to include all the records in your search (not just those that meet a specific condition) use one of the Move operations to move from record to record. To locate a record in a table-type recordset, call the `Seek` member function.  
   
- Si un enregistrement correspondant aux critères n’est pas localisé, le pointeur d’enregistrement actif est indéterminé, et `FindNext` retourne zéro. Si le jeu d’enregistrements contient plus d’un enregistrement qui répond aux critères, `FindFirst` recherche la première occurrence, `FindNext` recherche l’occurrence suivante et ainsi de suite.  
+ If a record matching the criteria is not located, the current record pointer is undetermined, and `FindNext` returns zero. If the recordset contains more than one record that satisfies the criteria, `FindFirst` locates the first occurrence, `FindNext` locates the next occurrence, and so on.  
   
 > [!CAUTION]
->  Si vous modifiez l’enregistrement actif, veillez à ce que vous enregistrez les modifications en appelant le **mise à jour** fonction membre avant de passer à un autre enregistrement. Si vous déplacez vers un autre enregistrement sans mettre à jour, vos modifications sont perdues sans avertissement.  
+>  If you edit the current record, be sure you save the changes by calling the **Update** member function before you move to another record. If you move to another record without updating, your changes are lost without warning.  
   
- À l’aide de l’une des opérations de recherche n’est pas le même que l’appel **MoveFirst** ou `MoveNext`, toutefois, ce qui rend simplement le premier ou le prochain enregistrement actuel sans spécifier une condition. Vous pouvez suivre une opération de recherche avec une opération de déplacement.  
+ Using one of the Find operations is not the same as calling **MoveFirst** or `MoveNext`, however, which simply makes the first or next record current without specifying a condition. You can follow a Find operation with a Move operation.  
   
- Gardez les éléments suivants à l’esprit lorsque vous utilisez les opérations de recherche :  
+ Keep the following in mind when using the Find operations:  
   
--   Si **trouver** retourne différent de zéro, l’enregistrement actif n’est pas défini. Dans ce cas, vous devez positionner le pointeur d’enregistrement actif vers un enregistrement valide.  
+-   If **Find** returns nonzero, the current record is not defined. In this case, you must position the current record pointer back to a valid record.  
   
--   Vous ne pouvez pas utiliser une opération de recherche avec un recordset de type instantané défilement avant uniquement.  
+-   You cannot use a Find operation with a forward-only scrolling snapshot-type recordset.  
   
--   Vous devez utiliser le format de date des États-Unis (mois-jour-année) lorsque vous recherchez des champs contenant des dates, même si vous n’utilisez pas la version américaine du moteur de base de données Microsoft Jet ; Sinon, enregistrements correspondants peut être introuvable.  
+-   You should use the U.S. date format (month-day-year) when you search for fields containing dates, even if you are not using the U.S. version of the Microsoft Jet database engine; otherwise, matching records may not be found.  
   
--   Lorsque vous travaillez avec des bases de données ODBC et les feuilles de réponse dynamiques volumineux, vous pouvez constater que vous utilisez les opérations de recherche est lent, en particulier lorsque vous travaillez avec des jeux d’enregistrements volumineux. Vous pouvez améliorer les performances à l’aide de requêtes SQL avec personnalisé **ORDERBY** ou **où** clauses, des requêtes de paramètre, ou **CDaoQuerydef** objets qui extraient des enregistrements indexés spécifiques.  
+-   When working with ODBC databases and large dynasets, you may discover that using the Find operations is slow, especially when working with large recordsets. You can improve performance by using SQL queries with customized **ORDERBY** or **WHERE** clauses, parameter queries, or **CDaoQuerydef** objects that retrieve specific indexed records.  
   
- Pour plus d’informations, consultez la rubrique « FindFirst, FindLast, FindNext, FindPrevious méthodes » dans l’aide de DAO.  
+ For related information, see the topic "FindFirst, FindLast, FindNext, FindPrevious Methods" in DAO Help.  
   
-##  <a name="findprev"></a>CDaoRecordset::FindPrev  
- Appelez cette fonction membre pour rechercher l’enregistrement précédent qui correspond à une condition spécifiée.  
+##  <a name="findprev"></a>  CDaoRecordset::FindPrev  
+ Call this member function to find the previous record that matches a specified condition.  
   
 ```  
 BOOL FindPrev(LPCTSTR lpszFilter);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpszFilter`  
- Une expression de chaîne (comme la **où** clause dans une instruction SQL sans le mot **où**) utilisé pour rechercher l’enregistrement.  
+ A string expression (like the **WHERE** clause in a SQL statement without the word **WHERE**) used to locate the record.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si les enregistrements correspondants sont trouvés, sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if matching records are found, otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Le `FindPrev` fonction membre commence la recherche à l’enregistrement actif et effectue la recherche vers l’arrière jusqu’au début de l’objet recordset.  
+### <a name="remarks"></a>Remarks  
+ The `FindPrev` member function begins its search at the current record and searches backward towards the beginning of the recordset.  
   
- Si vous souhaitez inclure tous les enregistrements dans votre recherche (pas seulement ceux qui répondent à une condition spécifique) l’une des opérations de déplacement permettant de déplacer d’un enregistrement à l’autre. Pour rechercher un enregistrement dans un jeu d’enregistrements de type table, appelez le `Seek` fonction membre.  
+ If you want to include all the records in your search (not just those that meet a specific condition) use one of the Move operations to move from record to record. To locate a record in a table-type recordset, call the `Seek` member function.  
   
- Si un enregistrement correspondant aux critères n’est pas localisé, le pointeur d’enregistrement actif est indéterminé, et `FindPrev` retourne zéro. Si le jeu d’enregistrements contient plus d’un enregistrement qui répond aux critères, `FindFirst` recherche la première occurrence, `FindNext` recherche l’occurrence suivante et ainsi de suite.  
+ If a record matching the criteria is not located, the current record pointer is undetermined, and `FindPrev` returns zero. If the recordset contains more than one record that satisfies the criteria, `FindFirst` locates the first occurrence, `FindNext` locates the next occurrence, and so on.  
   
 > [!CAUTION]
->  Si vous modifiez l’enregistrement actif, veillez à ce que vous enregistrez les modifications en appelant le **mise à jour** fonction membre avant de passer à un autre enregistrement. Si vous déplacez vers un autre enregistrement sans mettre à jour, vos modifications sont perdues sans avertissement.  
+>  If you edit the current record, be sure you save the changes by calling the **Update** member function before you move to another record. If you move to another record without updating, your changes are lost without warning.  
   
- À l’aide de l’une des opérations de recherche n’est pas le même que l’appel **MoveFirst** ou `MoveNext`, toutefois, ce qui rend simplement le premier ou le prochain enregistrement actuel sans spécifier une condition. Vous pouvez suivre une opération de recherche avec une opération de déplacement.  
+ Using one of the Find operations is not the same as calling **MoveFirst** or `MoveNext`, however, which simply makes the first or next record current without specifying a condition. You can follow a Find operation with a Move operation.  
   
- Gardez les éléments suivants à l’esprit lorsque vous utilisez les opérations de recherche :  
+ Keep the following in mind when using the Find operations:  
   
--   Si **trouver** retourne différent de zéro, l’enregistrement actif n’est pas défini. Dans ce cas, vous devez positionner le pointeur d’enregistrement actif vers un enregistrement valide.  
+-   If **Find** returns nonzero, the current record is not defined. In this case, you must position the current record pointer back to a valid record.  
   
--   Vous ne pouvez pas utiliser une opération de recherche avec un recordset de type instantané défilement avant uniquement.  
+-   You cannot use a Find operation with a forward-only scrolling snapshot-type recordset.  
   
--   Vous devez utiliser le format de date des États-Unis (mois-jour-année) lorsque vous recherchez des champs contenant des dates, même si vous n’utilisez pas la version américaine du moteur de base de données Microsoft Jet ; Sinon, enregistrements correspondants peut être introuvable.  
+-   You should use the U.S. date format (month-day-year) when you search for fields containing dates, even if you are not using the U.S. version of the Microsoft Jet database engine; otherwise, matching records may not be found.  
   
--   Lorsque vous travaillez avec des bases de données ODBC et les feuilles de réponse dynamiques volumineux, vous pouvez constater que vous utilisez les opérations de recherche est lent, en particulier lorsque vous travaillez avec des jeux d’enregistrements volumineux. Vous pouvez améliorer les performances à l’aide de requêtes SQL avec personnalisé **ORDERBY** ou **où** clauses, des requêtes de paramètre, ou **CDaoQuerydef** objets qui extraient des enregistrements indexés spécifiques.  
+-   When working with ODBC databases and large dynasets, you may discover that using the Find operations is slow, especially when working with large recordsets. You can improve performance by using SQL queries with customized **ORDERBY** or **WHERE** clauses, parameter queries, or **CDaoQuerydef** objects that retrieve specific indexed records.  
   
- Pour plus d’informations, consultez la rubrique « FindFirst, FindLast, FindNext, FindPrevious méthodes » dans l’aide de DAO.  
+ For related information, see the topic "FindFirst, FindLast, FindNext, FindPrevious Methods" in DAO Help.  
   
-##  <a name="getabsoluteposition"></a>CDaoRecordset::GetAbsolutePosition  
- Retourne le numéro d’enregistrement de l’enregistrement en cours de l’objet recordset.  
+##  <a name="getabsoluteposition"></a>  CDaoRecordset::GetAbsolutePosition  
+ Returns the record number of a recordset object's current record.  
   
 ```  
 long GetAbsolutePosition();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un entier entre 0 et le nombre d’enregistrements dans le jeu d’enregistrements. Correspond à la position ordinale de l’enregistrement actif dans le jeu d’enregistrements.  
+### <a name="return-value"></a>Return Value  
+ An integer from 0 to the number of records in the recordset. Corresponds to the ordinal position of the current record in the recordset.  
   
-### <a name="remarks"></a>Notes  
- La valeur de propriété AbsolutePosition de l’objet DAO sous-jacent est zéro ; la valeur 0 fait référence au premier enregistrement dans le jeu d’enregistrements. Vous pouvez déterminer le nombre d’enregistrements dans le jeu d’enregistrements en appelant [GetRecordCount](#getrecordcount). Appel de `GetRecordCount` peut prendre un certain temps, car il doit accéder à tous les enregistrements pour déterminer le nombre.  
+### <a name="remarks"></a>Remarks  
+ The AbsolutePosition property value of the underlying DAO object is zero-based; a setting of 0 refers to the first record in the recordset. You can determine the number of populated records in the recordset by calling [GetRecordCount](#getrecordcount). Calling `GetRecordCount` may take some time because it must access all records to determine the count.  
   
- S’il n’existe aucun enregistrement en cours, en tant que lorsqu’il n’existe aucun enregistrement dans le jeu d’enregistrements, - 1 est retourné. Si l’enregistrement actif est supprimé, la valeur de la propriété AbsolutePosition n’est pas définie, et MFC lève une exception si elle est référencée. Pour les types d’enregistrements, les nouveaux enregistrements sont ajoutés à la fin de la séquence.  
-  
-> [!NOTE]
->  Cette propriété n’est pas destinée à être utilisé comme un numéro d’enregistrement de substitution. Les signets restent le meilleur moyen de conserver et revenir à une position donnée et sont la seule façon de positionner l’enregistrement actif dans tous les types d’objets recordset. En particulier, la position d’un enregistrement donné change lorsqu’ou précèdent les enregistrements sont supprimés. Il n’existe également aucune assurance qu’un enregistrement donné aura la même position absolue si le jeu d’enregistrements est recréé, car l’ordre des enregistrements individuels dans un jeu d’enregistrements n’est pas garantie, sauf si elle est créée avec une instruction SQL à l’aide un **ORDERBY** clause.  
+ If there is no current record, as when there are no records in the recordset, - 1 is returned. If the current record is deleted, the AbsolutePosition property value is not defined, and MFC throws an exception if it is referenced. For dynaset-type recordsets, new records are added to the end of the sequence.  
   
 > [!NOTE]
->  Cette fonction membre est valide uniquement pour la feuille de réponse dynamique et des jeux d’enregistrements de type instantané.  
+>  This property is not intended to be used as a surrogate record number. Bookmarks are still the recommended way of retaining and returning to a given position and are the only way to position the current record across all types of recordset objects. In particular, the position of a given record changes when record(s) preceding it are deleted. There is also no assurance that a given record will have the same absolute position if the recordset is re-created again because the order of individual records within a recordset is not guaranteed unless it is created with a SQL statement using an **ORDERBY** clause.  
   
- Pour plus d’informations, consultez la rubrique « AbsolutePosition, propriété » dans l’aide de DAO.  
+> [!NOTE]
+>  This member function is valid only for dynaset-type and snapshot-type recordsets.  
   
-##  <a name="getbookmark"></a>CDaoRecordset::CanBookmark  
- Appelez cette fonction membre pour obtenir la valeur du signet dans un enregistrement particulier.  
+ For related information, see the topic "AbsolutePosition Property" in DAO Help.  
+  
+##  <a name="getbookmark"></a>  CDaoRecordset::GetBookmark  
+ Call this member function to obtain the bookmark value in a particular record.  
   
 ```  
 COleVariant GetBookmark();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne une valeur représentant le signet sur l’enregistrement actif.  
+### <a name="return-value"></a>Return Value  
+ Returns a value representing the bookmark on the current record.  
   
-### <a name="remarks"></a>Remarques  
- Lorsqu’un objet recordset est créé ou ouvert, chacun de ses enregistrements possède déjà un signet unique si elle prend en charge les. Appelez `CanBookmark` pour déterminer si un jeu d’enregistrements prend en charge les signets.  
+### <a name="remarks"></a>Remarks  
+ When a recordset object is created or opened, each of its records already has a unique bookmark if it supports them. Call `CanBookmark` to determine whether a recordset supports bookmarks.  
   
- Vous pouvez enregistrer le signet de l’enregistrement actif en affectant la valeur du signet à un `COleVariant` objet. Pour retourner rapidement à cet enregistrement à tout moment après avoir déplacé vers un autre enregistrement, appelez `SetBookmark` avec un paramètre correspondant à la valeur de cet `COleVariant` objet.  
+ You can save the bookmark for the current record by assigning the value of the bookmark to a `COleVariant` object. To quickly return to that record at any time after moving to a different record, call `SetBookmark` with a parameter corresponding to the value of that `COleVariant` object.  
   
 > [!NOTE]
->  Appel de [Requery](#requery) modifie les signets DAO.  
+>  Calling [Requery](#requery) changes DAO bookmarks.  
   
- Pour plus d’informations, consultez la rubrique « Propriété de signet » dans l’aide de DAO.  
+ For related information, see the topic "Bookmark Property" in DAO Help.  
   
-##  <a name="getcachesize"></a>CDaoRecordset::GetCacheSize  
- Appelez cette fonction membre pour obtenir le nombre d’enregistrements mis en cache.  
+##  <a name="getcachesize"></a>  CDaoRecordset::GetCacheSize  
+ Call this member function to obtain the number of records cached.  
   
 ```  
 long GetCacheSize();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Une valeur qui spécifie le nombre d’enregistrements dans un jeu d’enregistrements de type instantané contenant les données à mettre en cache localement à partir d’une source de données ODBC.  
+### <a name="return-value"></a>Return Value  
+ A value that specifies the number of records in a dynaset-type recordset containing data to be locally cached from an ODBC data source.  
   
-### <a name="remarks"></a>Remarques  
- La mise en cache des données améliorent les performances d’une application qui Récupère des données à partir d’un serveur distant via des objets de jeu d’enregistrements de type. Un cache est un espace dans la mémoire locale qui contient les données récemment extraites du serveur dans le cas où les données seront demandées à nouveau lors de l’application est en cours d’exécution. La demande de données, le moteur de base de données Microsoft Jet vérifie tout d’abord le cache pour les données demandées au lieu de devoir les extraire à partir du serveur, ce qui prend plus de temps. Les données qui ne provient pas d’une source de données ODBC ne sont pas enregistrées dans le cache.  
+### <a name="remarks"></a>Remarks  
+ Data caching improves the performance of an application that retrieves data from a remote server through dynaset-type recordset objects. A cache is a space in local memory that holds the data most recently retrieved from the server in the event that the data will be requested again while the application is running. When data is requested, the Microsoft Jet database engine checks the cache for the requested data first rather than retrieving it from the server, which takes more time. Data that does not come from an ODBC data source is not saved in the cache.  
   
- Toutes les sources de données ODBC, comme une table attachée, peuvent posséder un cache local.  
+ Any ODBC data source, such as an attached table, can have a local cache.  
   
- Pour plus d’informations, consultez la rubrique « CacheSize, CacheStart propriétés » dans l’aide de DAO.  
+ For related information, see the topic "CacheSize, CacheStart Properties" in DAO Help.  
   
-##  <a name="getcachestart"></a>CDaoRecordset::GetCacheStart  
- Appelez cette fonction membre pour obtenir la valeur du signet du premier enregistrement dans le jeu d’enregistrements à mettre en cache.  
+##  <a name="getcachestart"></a>  CDaoRecordset::GetCacheStart  
+ Call this member function to obtain the bookmark value of the first record in the recordset to be cached.  
   
 ```  
 COleVariant GetCacheStart();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un `COleVariant` qui spécifie le signet du premier enregistrement dans le jeu d’enregistrements à mettre en cache.  
+### <a name="return-value"></a>Return Value  
+ A `COleVariant` that specifies the bookmark of the first record in the recordset to be cached.  
   
-### <a name="remarks"></a>Notes  
- Le moteur de base de données Microsoft Jet demande des enregistrements dans la plage de cache à partir du cache, et elle demande des enregistrements en dehors de la plage de cache à partir du serveur.  
+### <a name="remarks"></a>Remarks  
+ The Microsoft Jet database engine requests records within the cache range from the cache, and it requests records outside the cache range from the server.  
   
 > [!NOTE]
->  Enregistrements récupérés du cache ne reflètent pas les modifications apportées simultanément à la source de données par d’autres utilisateurs.  
+>  Records retrieved from the cache do not reflect changes made concurrently to the source data by other users.  
   
- Pour plus d’informations, consultez la rubrique « CacheSize, CacheStart propriétés » dans l’aide de DAO.  
+ For related information, see the topic "CacheSize, CacheStart Properties" in DAO Help.  
   
-##  <a name="getcurrentindex"></a>CDaoRecordset::GetCurrentIndex  
- Appelez cette fonction membre pour déterminer l’index en cours d’utilisation dans un type de table indexée `CDaoRecordset` objet.  
+##  <a name="getcurrentindex"></a>  CDaoRecordset::GetCurrentIndex  
+ Call this member function to determine the index currently in use in an indexed table-type `CDaoRecordset` object.  
   
 ```  
 CString GetCurrentIndex();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- A `CString` contenant le nom de l’index en cours d’utilisation avec un jeu d’enregistrements de type table. Retourne une chaîne vide si aucun index n’a été défini.  
+### <a name="return-value"></a>Return Value  
+ A `CString` containing the name of the index currently in use with a table-type recordset. Returns an empty string if no index has been set.  
   
-### <a name="remarks"></a>Remarques  
- Cet index est la base pour le classement des enregistrements dans un jeu d’enregistrements de type table et est utilisé par le [recherche](#seek) fonction membre pour rechercher des enregistrements.  
+### <a name="remarks"></a>Remarks  
+ This index is the basis for ordering records in a table-type recordset, and is used by the [Seek](#seek) member function to locate records.  
   
- A `CDaoRecordset` objet peut avoir plusieurs index mais peut utiliser qu’un seul index à la fois (bien qu’un [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) objet peut avoir plusieurs index définis sur lui).  
+ A `CDaoRecordset` object can have more than one index but can use only one index at a time (although a [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) object may have several indexes defined on it).  
   
- Pour plus d’informations, consultez la rubrique « Objet Index » et la définition de « index en cours » dans l’aide de DAO.  
+ For related information, see the topic "Index Object" and the definition "current index" in DAO Help.  
   
-##  <a name="getdatecreated"></a>CDaoRecordset::GetDateCreated  
- Appelez cette fonction membre pour récupérer la date et l’heure de que création d’une table de base.  
+##  <a name="getdatecreated"></a>  CDaoRecordset::GetDateCreated  
+ Call this member function to retrieve the date and time a base table was created.  
   
 ```  
 COleDateTime GetDateCreated();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objet contenant la date et l’heure de création de la table de base.  
+### <a name="return-value"></a>Return Value  
+ A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) object containing the date and time the base table was created.  
   
-### <a name="remarks"></a>Notes  
- Les paramètres de date et d’heure sont dérivés de l’ordinateur sur lequel la table de base a été créée.  
+### <a name="remarks"></a>Remarks  
+ Date and time settings are derived from the computer on which the base table was created.  
   
- Pour plus d’informations, consultez la rubrique « DateCreated, LastUpdated propriétés » dans l’aide de DAO.  
+ For related information, see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
   
-##  <a name="getdatelastupdated"></a>CDaoRecordset::GetDateLastUpdated  
- Appelez cette fonction membre pour récupérer les date et heure de que dernière mise à jour de schéma.  
+##  <a name="getdatelastupdated"></a>  CDaoRecordset::GetDateLastUpdated  
+ Call this member function to retrieve the date and time the schema was last updated.  
   
 ```  
 COleDateTime GetDateLastUpdated();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objet contenant la date et heure de dernière mise à jour de la structure de la table de base (schéma).  
+### <a name="return-value"></a>Return Value  
+ A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) object containing the date and time the base table structure (schema) was last updated.  
   
-### <a name="remarks"></a>Remarques  
- Les paramètres de date et d’heure sont dérivés de l’ordinateur sur lequel la structure de la table de base (schéma) a été modifiée.  
+### <a name="remarks"></a>Remarks  
+ Date and time settings are derived from the computer on which the base table structure (schema) was last updated.  
   
- Pour plus d’informations, consultez la rubrique « DateCreated, LastUpdated propriétés » dans l’aide de DAO.  
+ For related information, see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
   
-##  <a name="getdefaultdbname"></a>CDaoRecordset::GetDefaultDBName  
- Appelez cette fonction membre pour déterminer le nom de la base de données pour ce jeu d’enregistrements.  
+##  <a name="getdefaultdbname"></a>  CDaoRecordset::GetDefaultDBName  
+ Call this member function to determine the name of the database for this recordset.  
   
 ```  
 virtual CString GetDefaultDBName();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un `CString` qui contient le chemin d’accès et le nom de la base de données à partir duquel ce jeu d’enregistrements est dérivée.  
+### <a name="return-value"></a>Return Value  
+ A `CString` that contains the path and name of the database from which this recordset is derived.  
   
-### <a name="remarks"></a>Notes  
- Si un jeu d’enregistrements est créé sans un pointeur vers un [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md), ce chemin d’accès est utilisé par le jeu d’enregistrements pour ouvrir la base de données par défaut. Par défaut, cette fonction retourne une chaîne vide. Lorsque ClassWizard dérive un nouveau jeu d’enregistrements à partir de `CDaoRecordset`, il créera cette fonction pour vous.  
+### <a name="remarks"></a>Remarks  
+ If a recordset is created without a pointer to a [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md), then this path is used by the recordset to open the default database. By default, this function returns an empty string. When ClassWizard derives a new recordset from `CDaoRecordset`, it will create this function for you.  
   
- L’exemple suivant illustre l’utilisation de la double barre oblique inverse (\\\\) dans la chaîne, en l’état requis pour la chaîne être interprétés correctement.  
+ The following example illustrates the use of the double backslash (\\\\) in the string, as is required for the string to be interpreted correctly.  
   
- [!code-cpp[NVC_MFCDatabase #4](../../mfc/codesnippet/cpp/cdaorecordset-class_4.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#4](../../mfc/codesnippet/cpp/cdaorecordset-class_4.cpp)]  
   
-##  <a name="getdefaultsql"></a>CDaoRecordset::GetDefaultSQL  
- L’infrastructure appelle cette fonction membre pour obtenir de l’instruction SQL par défaut sur lequel repose le jeu d’enregistrements.  
+##  <a name="getdefaultsql"></a>  CDaoRecordset::GetDefaultSQL  
+ The framework calls this member function to get the default SQL statement on which the recordset is based.  
   
 ```  
 virtual CString GetDefaultSQL();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un `CString` qui contient l’instruction SQL par défaut.  
+### <a name="return-value"></a>Return Value  
+ A `CString` that contains the default SQL statement.  
   
-### <a name="remarks"></a>Remarques  
- Cela peut être un nom de table ou une SQL **sélectionnez** instruction.  
+### <a name="remarks"></a>Remarks  
+ This might be a table name or a SQL **SELECT** statement.  
   
- Vous définissez indirectement l’instruction SQL par défaut par déclarer votre classe de recordset avec ClassWizard et ClassWizard effectue cette tâche pour vous.  
+ You indirectly define the default SQL statement by declaring your recordset class with ClassWizard, and ClassWizard performs this task for you.  
   
- Si vous passez une chaîne SQL null à [ouvrir](#open), cette fonction est appelée pour déterminer le nom de la table ou de SQL pour le jeu d’enregistrements.  
+ If you pass a null SQL string to [Open](#open), then this function is called to determine the table name or SQL for your recordset.  
   
-##  <a name="geteditmode"></a>CDaoRecordset::GetEditMode  
- Appelez cette fonction membre pour déterminer l’état de la modification, qui est une des valeurs suivantes :  
+##  <a name="geteditmode"></a>  CDaoRecordset::GetEditMode  
+ Call this member function to determine the state of editing, which is one of the following values:  
   
 ```  
 short GetEditMode();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne une valeur qui indique l’état de modification de l’enregistrement actif.  
+### <a name="return-value"></a>Return Value  
+ Returns a value that indicates the state of editing for the current record.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**dbEditNone**|Aucune opération de modification n’est en cours.|  
-|**dbEditInProgress**|**Modifier** a été appelée.|  
-|**dbEditAdd**|`AddNew`a été appelé.|  
+|**dbEditNone**|No editing operation is in progress.|  
+|**dbEditInProgress**|**Edit** has been called.|  
+|**dbEditAdd**|`AddNew` has been called.|  
   
- Pour plus d’informations, consultez la rubrique « Propriété EditMode » dans l’aide de DAO.  
+ For related information, see the topic "EditMode Property" in DAO Help.  
   
-##  <a name="getfieldcount"></a>CDaoRecordset::GetFieldCount  
- Appelez cette fonction membre pour récupérer le nombre de champs (colonnes) défini dans le jeu d’enregistrements.  
+##  <a name="getfieldcount"></a>  CDaoRecordset::GetFieldCount  
+ Call this member function to retrieve the number of fields (columns) defined in the recordset.  
   
 ```  
 short GetFieldCount();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Le nombre de champs dans le jeu d’enregistrements.  
+### <a name="return-value"></a>Return Value  
+ The number of fields in the recordset.  
   
-### <a name="remarks"></a>Remarques  
- Pour plus d’informations, consultez la rubrique « Propriété Count » dans l’aide de DAO.  
+### <a name="remarks"></a>Remarks  
+ For related information, see the topic "Count Property" in DAO Help.  
   
-##  <a name="getfieldinfo"></a>CDaoRecordset::GetFieldInfo  
- Appelez cette fonction membre pour obtenir des informations sur les champs dans un jeu d’enregistrements.  
+##  <a name="getfieldinfo"></a>  CDaoRecordset::GetFieldInfo  
+ Call this member function to obtain information about the fields in a recordset.  
   
 ```  
 void GetFieldInfo(
@@ -973,34 +1051,34 @@ void GetFieldInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Index de base zéro du champ prédéfini dans la collection de champs du jeu d’enregistrements, pour la recherche par index.  
+ The zero-based index of the predefined field in the recordset's Fields collection, for lookup by index.  
   
  `fieldinfo`  
- Une référence à un [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure.  
+ A reference to a [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure.  
   
  `dwInfoOptions`  
- Options qui spécifient les informations sur l’ensemble d’enregistrements à récupérer. Les options disponibles sont répertoriées ici, ainsi que leur cause la fonction à retourner. Pour de meilleures performances, récupérer uniquement le niveau des informations dont vous avez besoin :  
+ Options that specify which information about the recordset to retrieve. The available options are listed here along with what they cause the function to return. For best performance, retrieve only the level of information you need:  
   
-- `AFX_DAO_PRIMARY_INFO`(Par défaut) Nom, Type, taille, attributs  
+- `AFX_DAO_PRIMARY_INFO` (Default) Name, Type, Size, Attributes  
   
-- `AFX_DAO_SECONDARY_INFO`Informations principales, ainsi que : Ordinal, obligatoire, permettre de Position zéro Table Source du nom externe, champ Source, longueur, ordre de classement,  
+- `AFX_DAO_SECONDARY_INFO` Primary information, plus: Ordinal Position, Required, Allow Zero Length, Collating Order, Foreign Name, Source Field, Source Table  
   
-- `AFX_DAO_ALL_INFO`Informations primaires et secondaires, ainsi que : texte de Validation de valeur par défaut, règle de Validation,  
+- `AFX_DAO_ALL_INFO` Primary and secondary information, plus: Default Value, Validation Rule, Validation Text  
   
  `lpszName`  
- Nom du champ.  
+ The name of the field.  
   
-### <a name="remarks"></a>Notes  
- Une version de la fonction vous permet de rechercher un champ par index. L’autre version vous permet de rechercher un champ par nom.  
+### <a name="remarks"></a>Remarks  
+ One version of the function lets you look up a field by index. The other version lets you look up a field by name.  
   
- Pour obtenir une description des informations retournées, consultez la [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure. Cette structure possède des membres qui correspondent aux éléments d’informations répertoriés ci-dessus dans la description de `dwInfoOptions`. Lorsque vous demandez des informations à un niveau, vous obtenez des informations pour les niveaux de préalables.  
+ For a description of the information returned, see the [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure. This structure has members that correspond to the items of information listed above in the description of `dwInfoOptions`. When you request information at one level, you get information for any prior levels as well.  
   
- Pour plus d’informations, consultez la rubrique « Propriété des attributs » dans l’aide de DAO.  
+ For related information, see the topic "Attributes Property" in DAO Help.  
   
-##  <a name="getfieldvalue"></a>CDaoRecordset::GetFieldValue  
- Appelez cette fonction membre pour récupérer des données dans un jeu d’enregistrements.  
+##  <a name="getfieldvalue"></a>  CDaoRecordset::GetFieldValue  
+ Call this member function to retrieve data in a recordset.  
   
 ```  
 virtual void GetFieldValue(
@@ -1016,48 +1094,48 @@ virtual COleVariant GetFieldValue(LPCTSTR lpszName);
 virtual COleVariant GetFieldValue(int nIndex);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- Un pointeur vers une chaîne qui contient le nom d’un champ.  
+ A pointer to a string that contains the name of a field.  
   
  `varValue`  
- Une référence à un `COleVariant` objet qui stocke la valeur d’un champ.  
+ A reference to a `COleVariant` object that will store the value of a field.  
   
  `nIndex`  
- Index de base zéro du champ dans la collection de champs du jeu d’enregistrements, pour la recherche par index.  
+ A zero-based index of the field in the recordset's Fields collection, for lookup by index.  
   
-### <a name="return-value"></a>Valeur de retour  
- Les deux versions de `GetFieldValue` qui retournent une valeur de retour une [COleVariant](../../mfc/reference/colevariant-class.md) objet qui contient la valeur d’un champ.  
+### <a name="return-value"></a>Return Value  
+ The two versions of `GetFieldValue` that return a value return a [COleVariant](../../mfc/reference/colevariant-class.md) object that contains the value of a field.  
   
-### <a name="remarks"></a>Notes  
- Vous pouvez rechercher un champ par nom ou par position ordinale.  
+### <a name="remarks"></a>Remarks  
+ You can look up a field by name or by ordinal position.  
   
 > [!NOTE]
->  Il est plus efficace pour appeler l’une des versions de cette fonction membre qui accepte un `COleVariant` référence d’objet comme un paramètre, au lieu d’appeler une version qui retourne un `COleVariant` objet. Les versions de cette fonction de ce dernier sont conservées pour la compatibilité descendante.  
+>  It is more efficient to call one of the versions of this member function that takes a `COleVariant` object reference as a parameter, rather than calling a version that returns a `COleVariant` object. The latter versions of this function are kept for backward compatibility.  
   
- Utilisez `GetFieldValue` et [SetFieldValue](#setfieldvalue) pour lier les champs de manière dynamique au moment de l’exécution plutôt que de manière statique des colonnes de liaison à l’aide du [DoFieldExchange](#dofieldexchange) mécanisme.  
+ Use `GetFieldValue` and [SetFieldValue](#setfieldvalue) to dynamically bind fields at run time rather than statically binding columns using the [DoFieldExchange](#dofieldexchange) mechanism.  
   
- `GetFieldValue`et le `DoFieldExchange` mécanisme peut être combiné pour améliorer les performances. Par exemple, utilisez `GetFieldValue` pour récupérer une valeur dont vous avez besoin uniquement à la demande et affecter qu’un appel à un bouton « Plus d’informations » dans l’interface.  
+ `GetFieldValue` and the `DoFieldExchange` mechanism can be combined to improve performance. For example, use `GetFieldValue` to retrieve a value that you need only on demand, and assign that call to a "More Information" button in the interface.  
   
- Pour plus d’informations, consultez les rubriques « Champ objet » et « Valeur de propriété » dans l’aide de DAO.  
+ For related information, see the topics "Field Object" and "Value Property" in DAO Help.  
   
-##  <a name="getindexcount"></a>CDaoRecordset::GetIndexCount  
- Appelez cette fonction membre pour déterminer le nombre d’index disponibles dans le jeu d’enregistrements de type table.  
+##  <a name="getindexcount"></a>  CDaoRecordset::GetIndexCount  
+ Call this member function to determine the number of indexes available on the table-type recordset.  
   
 ```  
 short GetIndexCount();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Le nombre d’index dans le jeu d’enregistrements de type table.  
+### <a name="return-value"></a>Return Value  
+ The number of indexes in the table-type recordset.  
   
-### <a name="remarks"></a>Notes  
- `GetIndexCount`est utile pour exécuter une boucle dans tous les index dans le jeu d’enregistrements. Pour cela, utilisez `GetIndexCount` conjointement avec [GetIndexInfo](#getindexinfo). Si vous appelez cette fonction membre sur les jeux d’enregistrements de type instantané ou de type, MFC lève une exception.  
+### <a name="remarks"></a>Remarks  
+ `GetIndexCount` is useful for looping through all indexes in the recordset. For that purpose, use `GetIndexCount` in conjunction with [GetIndexInfo](#getindexinfo). If you call this member function on dynaset-type or snapshot-type recordsets, MFC throws an exception.  
   
- Pour plus d’informations, consultez la rubrique « Propriété des attributs » dans l’aide de DAO.  
+ For related information, see the topic "Attributes Property" in DAO Help.  
   
-##  <a name="getindexinfo"></a>CDaoRecordset::GetIndexInfo  
- Appelez cette fonction membre pour obtenir les différents types d’informations sur un index défini dans la table de base sous-jacent d’un jeu d’enregistrements.  
+##  <a name="getindexinfo"></a>  CDaoRecordset::GetIndexInfo  
+ Call this member function to obtain various kinds of information about an index defined in the base table underlying a recordset.  
   
 ```  
 void GetIndexInfo(
@@ -1072,612 +1150,612 @@ void GetIndexInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Index de base zéro dans la collection de table index, pour la recherche par position numérique.  
+ The zero-based index in the table's Indexes collection, for lookup by numerical position.  
   
  `indexinfo`  
- Une référence à un [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) structure.  
+ A reference to a [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) structure.  
   
  `dwInfoOptions`  
- Options qui spécifient les informations sur l’index à récupérer. Les options disponibles sont répertoriées ici, ainsi que leur cause la fonction à retourner. Pour de meilleures performances, récupérer uniquement le niveau des informations dont vous avez besoin :  
+ Options that specify which information about the index to retrieve. The available options are listed here along with what they cause the function to return. For best performance, retrieve only the level of information you need:  
   
-- `AFX_DAO_PRIMARY_INFO`(Par défaut) Champs de noms, les informations de champ  
+- `AFX_DAO_PRIMARY_INFO` (Default) Name, Field Info, Fields  
   
-- `AFX_DAO_SECONDARY_INFO`Informations principales, ainsi que : principal, Unique, Clustered, Ignorer Nulls, obligatoire, étrangères  
+- `AFX_DAO_SECONDARY_INFO` Primary information, plus: Primary, Unique, Clustered, IgnoreNulls, Required, Foreign  
   
-- `AFX_DAO_ALL_INFO`Informations primaires et secondaires, ainsi que : comptage de valeurs  
+- `AFX_DAO_ALL_INFO` Primary and secondary information, plus: Distinct Count  
   
  `lpszName`  
- Pointeur vers le nom de l’objet index, pour la recherche par nom.  
+ A pointer to the name of the index object, for lookup by name.  
   
-### <a name="remarks"></a>Notes  
- Une version de la fonction vous permet de rechercher un index par sa position dans la collection. L’autre version vous permet de rechercher un index par nom.  
+### <a name="remarks"></a>Remarks  
+ One version of the function lets you look up a index by its position in the collection. The other version lets you look up an index by name.  
   
- Pour obtenir une description des informations retournées, consultez la [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) structure. Cette structure possède des membres qui correspondent aux éléments d’informations répertoriés ci-dessus dans la description de `dwInfoOptions`. Lorsque vous demandez des informations à un niveau, vous obtenez des informations pour les niveaux de préalables.  
+ For a description of the information returned, see the [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) structure. This structure has members that correspond to the items of information listed above in the description of `dwInfoOptions`. When you request information at one level, you get information for any prior levels as well.  
   
- Pour plus d’informations, consultez la rubrique « Propriété des attributs » dans l’aide de DAO.  
+ For related information, see the topic "Attributes Property" in DAO Help.  
   
-##  <a name="getlastmodifiedbookmark"></a>CDaoRecordset::GetLastModifiedBookmark  
- Appelez cette fonction membre pour récupérer le signet de l’enregistrement de la plus récemment ajouté ou mis à jour.  
+##  <a name="getlastmodifiedbookmark"></a>  CDaoRecordset::GetLastModifiedBookmark  
+ Call this member function to retrieve the bookmark of the most recently added or updated record.  
   
 ```  
 COleVariant GetLastModifiedBookmark();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- A `COleVariant` contenant un signet qui indique le dernier enregistrement ajouté ou modifié.  
+### <a name="return-value"></a>Return Value  
+ A `COleVariant` containing a bookmark that indicates the most recently added or changed record.  
   
-### <a name="remarks"></a>Notes  
- Lorsqu’un objet recordset est créé ou ouvert, chacun de ses enregistrements possède déjà un signet unique si elle prend en charge les. Appelez [GetBookmark](#getbookmark) pour déterminer si le jeu d’enregistrements prend en charge les signets. Si le jeu d’enregistrements ne prend pas en charge les signets, un `CDaoException` est levée.  
+### <a name="remarks"></a>Remarks  
+ When a recordset object is created or opened, each of its records already has a unique bookmark if it supports them. Call [GetBookmark](#getbookmark) to determine if the recordset supports bookmarks. If the recordset does not support bookmarks, a `CDaoException` is thrown.  
   
- Lorsque vous ajoutez un enregistrement, il apparaît à la fin de l’objet recordset et n’est pas l’enregistrement actif. Pour rendre le nouvel enregistrement actif, appelez `GetLastModifiedBookmark` , puis appelez `SetBookmark` pour revenir à l’enregistrement qui vient d’être ajouté.  
+ When you add a record, it appears at the end of the recordset, and is not the current record. To make the new record current, call `GetLastModifiedBookmark` and then call `SetBookmark` to return to the newly added record.  
   
- Pour plus d’informations, consultez la rubrique « Propriété LastModified » dans l’aide de DAO.  
+ For related information, see the topic "LastModified Property" in DAO Help.  
   
-##  <a name="getlockingmode"></a>CDaoRecordset::GetLockingMode  
- Appelez cette fonction membre pour déterminer le type de verrouillage en vigueur pour le jeu d’enregistrements.  
+##  <a name="getlockingmode"></a>  CDaoRecordset::GetLockingMode  
+ Call this member function to determine the type of locking in effect for the recordset.  
   
 ```  
 BOOL GetLockingMode();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le type de verrouillage pessimiste, sinon 0 pour le verrouillage optimiste.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the type of locking is pessimistic, otherwise 0 for optimistic record locking.  
   
-### <a name="remarks"></a>Notes  
- Lorsque le verrouillage pessimiste est en effet, la page de données contenant l’enregistrement que vous modifiez est verrouillé dès que vous appelez le [modifier](#edit) fonction membre. La page est déverrouillée lorsque vous appelez le [mise à jour](#update) ou [fermer](#close) fonction membre ou une des opérations de déplacement ou de recherche.  
+### <a name="remarks"></a>Remarks  
+ When pessimistic locking is in effect, the data page containing the record you are editing is locked as soon as you call the [Edit](#edit) member function. The page is unlocked when you call the [Update](#update) or [Close](#close) member function or any of the Move or Find operations.  
   
- Lorsque le verrouillage est appliqué optimiste, la page de données contenant l’enregistrement est verrouillée uniquement lors de l’enregistrement est mis à jour avec la **mise à jour** fonction membre.  
+ When optimistic locking is in effect, the data page containing the record is locked only while the record is being updated with the **Update** member function.  
   
- Lorsque vous travaillez avec des sources de données ODBC, le mode de verrouillage est toujours l’optimisé.  
+ When working with ODBC data sources, the locking mode is always optimistic.  
   
- Pour plus d’informations, consultez les rubriques « Propriété LockEdits » et « Comportement de verrouillage dans multi-utilisateur Applications » dans l’aide de DAO.  
+ For related information, see the topics "LockEdits Property" and "Locking Behavior in Multiuser Applications" in DAO Help.  
   
-##  <a name="getname"></a>CDaoRecordset::GetName  
- Appelez cette fonction membre pour récupérer le nom de l’objet recordset.  
+##  <a name="getname"></a>  CDaoRecordset::GetName  
+ Call this member function to retrieve the name of the recordset.  
   
 ```  
 CString GetName();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- A `CString` contenant le nom de l’objet recordset.  
+### <a name="return-value"></a>Return Value  
+ A `CString` containing the name of the recordset.  
   
-### <a name="remarks"></a>Notes  
- Le nom de l’objet recordset doit commencer par une lettre et peut contenir un maximum de 40 caractères. Il peut inclure des nombres et caractères de trait de soulignement mais ne peut pas inclure de signes de ponctuation ou d’espaces.  
+### <a name="remarks"></a>Remarks  
+ The name of the recordset must start with a letter and can contain a maximum of 40 characters. It can include numbers and underscore characters but can't include punctuation or spaces.  
   
- Pour plus d’informations, consultez la rubrique « Nom de propriété » dans l’aide de DAO.  
+ For related information, see the topic "Name Property" in DAO Help.  
   
-##  <a name="getparamvalue"></a>CDaoRecordset::GetParamValue  
- Appelez cette fonction membre pour extraire la valeur actuelle du paramètre spécifié stocké dans l’objet DAOParameter sous-jacent.  
+##  <a name="getparamvalue"></a>  CDaoRecordset::GetParamValue  
+ Call this member function to retrieve the current value of the specified parameter stored in the underlying DAOParameter object.  
   
 ```  
 virtual COleVariant GetParamValue(int nIndex);  
 virtual COleVariant GetParamValue(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- La position numérique du paramètre dans l’objet DAOParameter sous-jacent.  
+ The numerical position of the parameter in the underlying DAOParameter object.  
   
  `lpszName`  
- Le nom du paramètre dont vous souhaitez que la valeur.  
+ The name of the parameter whose value you want.  
   
-### <a name="return-value"></a>Valeur de retour  
- Un objet de classe [COleVariant](../../mfc/reference/colevariant-class.md) qui contient la valeur du paramètre.  
+### <a name="return-value"></a>Return Value  
+ An object of class [COleVariant](../../mfc/reference/colevariant-class.md) that contains the parameter's value.  
   
-### <a name="remarks"></a>Remarques  
- Vous pouvez accéder à la paramètre par nom ou par sa position numérique dans la collection.  
+### <a name="remarks"></a>Remarks  
+ You can access the parameter either by name or by its numerical position in the collection.  
   
- Pour plus d’informations, consultez la rubrique « Objet de paramètre » dans l’aide de DAO.  
+ For related information, see the topic "Parameter Object" in DAO Help.  
   
-##  <a name="getpercentposition"></a>CDaoRecordset::GetPercentPosition  
- Lorsque vous travaillez avec un jeu d’enregistrements de type instantané, ou de type, si vous appelez `GetPercentPosition` avant le remplissage complet de l’ensemble d’enregistrements, la quantité de déplacement est par rapport au nombre d’enregistrements accédés, tel qu’indiqué par l’appel de [GetRecordCount](#getrecordcount).  
+##  <a name="getpercentposition"></a>  CDaoRecordset::GetPercentPosition  
+ When working with a dynaset-type or snapshot-type recordset, if you call `GetPercentPosition` before fully populating the recordset, the amount of movement is relative to the number of records accessed as indicated by calling [GetRecordCount](#getrecordcount).  
   
 ```  
 float GetPercentPosition();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un nombre compris entre 0 et 100 qui indique l’emplacement approximatif de l’enregistrement actif dans l’objet de jeu d’enregistrements basé sur un pourcentage des enregistrements dans le jeu d’enregistrements.  
+### <a name="return-value"></a>Return Value  
+ A number between 0 and 100 that indicates the approximate location of the current record in the recordset object based on a percentage of the records in the recordset.  
   
-### <a name="remarks"></a>Notes  
- Vous pouvez accéder au dernier enregistrement en appelant [MoveLast](#movelast) à complète l’alimentation de tous les jeux d’enregistrements, mais cela peut prendre beaucoup de temps.  
+### <a name="remarks"></a>Remarks  
+ You can move to the last record by calling [MoveLast](#movelast) to complete the population of all recordsets, but this may take a significant amount of time.  
   
- Vous pouvez appeler `GetPercentPosition` sur les trois types d’objets recordset, y compris les tables sans index. Toutefois, vous ne pouvez pas appeler `GetPercentPosition` sur les instantanés de défilement avant uniquement, ou sur un jeu d’enregistrements ouvert à partir d’une requête directe sur une base de données externe. S’il n’existe aucun enregistrement actif ou l’enregistrement en cours a a été supprimé, un `CDaoException` est levée.  
+ You can call `GetPercentPosition` on all three types of recordset objects, including tables without indexes. However, you cannot call `GetPercentPosition` on forward-only scrolling snapshots, or on a recordset opened from a pass-through query against an external database. If there is no current record, or he current record has been deleted, a `CDaoException` is thrown.  
   
- Pour plus d’informations, consultez la rubrique « PercentPosition, propriété » dans l’aide de DAO.  
+ For related information, see the topic "PercentPosition Property" in DAO Help.  
   
-##  <a name="getrecordcount"></a>CDaoRecordset::GetRecordCount  
- Appelez cette fonction membre pour déterminer le nombre d’enregistrements dans un jeu d’enregistrements ont été sollicitée.  
+##  <a name="getrecordcount"></a>  CDaoRecordset::GetRecordCount  
+ Call this member function to find out how many records in a recordset have been accessed.  
   
 ```  
 long GetRecordCount();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne le nombre d’enregistrements accédés dans un objet recordset.  
+### <a name="return-value"></a>Return Value  
+ Returns the number of records accessed in a recordset object.  
   
-### <a name="remarks"></a>Notes  
- `GetRecordCount`n’indique pas le nombre d’enregistrements contenu dans un jeu d’enregistrements de type instantané ou de type jusqu'à ce que tous les enregistrements ont été sollicitées. Cet appel de fonction membre peut prendre beaucoup de temps.  
+### <a name="remarks"></a>Remarks  
+ `GetRecordCount` does not indicate how many records are contained in a dynaset-type or snapshot-type recordset until all records have been accessed. This member function call may take a significant amount of time to complete.  
   
- Une fois que le dernier enregistrement a été accédé, la valeur de retour indique le nombre total d’enregistrements non supprimés dans le jeu d’enregistrements. Pour forcer le dernier enregistrement accessible, appelez le `MoveLast` ou `FindLast` fonction membre du jeu d’enregistrements. Vous pouvez également utiliser un compte SQL pour déterminer le nombre approximatif d’enregistrements renvoyés par votre requête.  
+ Once the last record has been accessed, the return value indicates the total number of undeleted records in the recordset. To force the last record to be accessed, call the `MoveLast` or `FindLast` member function for the recordset. You can also use a SQL Count to determine the approximate number of records your query will return.  
   
- À mesure que votre application supprime des enregistrements dans un jeu d’enregistrements de type, la valeur de retour de `GetRecordCount` diminue. Toutefois, les enregistrements supprimés par d’autres utilisateurs ne sont pas reflétées par `GetRecordCount` jusqu'à ce que l’enregistrement actif est positionné sur un enregistrement supprimé. Si vous exécutez une transaction qui affecte le nombre d’enregistrements et restaurer par la suite la transaction, `GetRecordCount` ne reflète pas le nombre réel d’enregistrements restants.  
+ As your application deletes records in a dynaset-type recordset, the return value of `GetRecordCount` decreases. However, records deleted by other users are not reflected by `GetRecordCount` until the current record is positioned to a deleted record. If you execute a transaction that affects the record count and subsequently roll back the transaction, `GetRecordCount` will not reflect the actual number of remaining records.  
   
- La valeur de `GetRecordCount` n’est pas affectée par les modifications apportées dans les tables sous-jacentes à partir d’un jeu d’enregistrements de type instantané.  
+ The value of `GetRecordCount` from a snapshot-type recordset is not affected by changes in the underlying tables.  
   
- La valeur de `GetRecordCount` à partir d’un type de table recordset reflète le nombre approximatif d’enregistrements dans la table et est concernée immédiatement, car les enregistrements de la table sont ajoutés et supprimés.  
+ The value of `GetRecordCount` from a table-type recordset reflects the approximate number of records in the table and is affected immediately as table records are added and deleted.  
   
- Un jeu d’enregistrements sans enregistrements retourne une valeur égale à 0. Lorsque vous travaillez avec des tables attachées ou des bases de données ODBC `GetRecordCount` retourne toujours - 1. Appel de la **Requery** fonction membre sur un jeu d’enregistrements rétablit la valeur de `GetRecordCount` comme si la requête ont été réexécutée.  
+ A recordset with no records returns a value of 0. When working with attached tables or ODBC databases, `GetRecordCount` always returns - 1. Calling the **Requery** member function on a recordset resets the value of `GetRecordCount` just as if the query were re-executed.  
   
- Pour plus d’informations, consultez la rubrique « Propriété RecordCount » dans l’aide de DAO.  
+ For related information, see the topic "RecordCount Property" in DAO Help.  
   
-##  <a name="getsql"></a>CDaoRecordset::GetSQL  
- Appelez cette fonction membre pour obtenir de l’instruction SQL qui a été utilisée pour sélectionner les enregistrements du jeu d’enregistrements lorsqu’il a été ouvert.  
+##  <a name="getsql"></a>  CDaoRecordset::GetSQL  
+ Call this member function to get the SQL statement that was used to select the recordset's records when it was opened.  
   
 ```  
 CString GetSQL() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un `CString` qui contient l’instruction SQL.  
+### <a name="return-value"></a>Return Value  
+ A `CString` that contains the SQL statement.  
   
-### <a name="remarks"></a>Remarques  
- Il s’agit généralement d’un SQL **sélectionnez** instruction.  
+### <a name="remarks"></a>Remarks  
+ This will generally be a SQL **SELECT** statement.  
   
- La chaîne retournée par `GetSQL` est généralement différent à partir de n’importe quelle chaîne que vous avez peut-être passé à l’ensemble d’enregistrements dans la `lpszSQL` paramètre à la [ouvrir](#open) fonction membre. C’est parce que l’objet recordset construit l’instruction SQL complète en fonction de ce que vous avez passé à **ouvrir**, ce que vous avez spécifié avec ClassWizard et ce que vous avez spécifié dans le [m_strFilter](#m_strfilter) et [m_strSort](#m_strsort) membres de données.  
+ The string returned by `GetSQL` is typically different from any string you may have passed to the recordset in the `lpszSQL` parameter to the [Open](#open) member function. This is because the recordset constructs a full SQL statement based on what you passed to **Open**, what you specified with ClassWizard, and what you may have specified in the [m_strFilter](#m_strfilter) and [m_strSort](#m_strsort) data members.  
   
 > [!NOTE]
->  Appelez cette fonction membre uniquement après avoir appelé **ouvrir**.  
+>  Call this member function only after calling **Open**.  
   
- Pour plus d’informations, consultez la rubrique « Propriété SQL » dans l’aide de DAO.  
+ For related information, see the topic "SQL Property" in DAO Help.  
   
-##  <a name="gettype"></a>CDaoRecordset::GetType  
- Appelez cette fonction membre après l’ouverture de l’ensemble d’enregistrements pour déterminer le type de l’objet recordset.  
+##  <a name="gettype"></a>  CDaoRecordset::GetType  
+ Call this member function after opening the recordset to determine the type of the recordset object.  
   
 ```  
 short GetType();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Une des valeurs suivantes, qui indique le type d’un jeu d’enregistrements :  
+### <a name="return-value"></a>Return Value  
+ One of the following values that indicates the type of a recordset:  
   
-- **dbOpenTable** recordset de type Table  
+- **dbOpenTable** Table-type recordset  
   
-- **dbOpenDynaset** enregistrements  
+- **dbOpenDynaset** Dynaset-type recordset  
   
-- **dbOpenSnapshot** jeu d’enregistrements de type instantané  
+- **dbOpenSnapshot** Snapshot-type recordset  
   
-### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez la rubrique « Propriété de Type » dans l’aide de DAO.  
+### <a name="remarks"></a>Remarks  
+ For related information, see the topic "Type Property" in DAO Help.  
   
-##  <a name="getvalidationrule"></a>CDaoRecordset::GetValidationRule  
- Appelez cette fonction membre pour déterminer la règle utilisée pour valider les données.  
+##  <a name="getvalidationrule"></a>  CDaoRecordset::GetValidationRule  
+ Call this member function to determine the rule used to validate data.  
   
 ```  
 CString GetValidationRule();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- A `CString` objet qui contient une valeur qui valide les données dans un enregistrement comme il est modifié ou ajouté à une table.  
+### <a name="return-value"></a>Return Value  
+ A `CString` object containing a value that validates the data in a record as it is changed or added to a table.  
   
-### <a name="remarks"></a>Remarques  
- Cette règle est basée sur le texte et est appliquée à chaque modification de la table sous-jacente. Si les données ne sont pas autorisées, MFC lève une exception. Le message d’erreur renvoyé est le texte de la propriété ValidationRule de l’objet sous-jacent de champ, si spécifié, ou le texte de l’expression spécifiée par la propriété ValidationRule de l’objet de champ sous-jacent. Vous pouvez appeler [GetValidationText](#getvalidationtext) pour obtenir le texte du message d’erreur.  
+### <a name="remarks"></a>Remarks  
+ This rule is text-based, and is applied each time the underlying table is changed. If the data is not legal, MFC throws an exception. The returned error message is the text of the ValidationText property of the underlying field object, if specified, or the text of the expression specified by the ValidationRule property of the underlying field object. You can call [GetValidationText](#getvalidationtext) to obtain the text of the error message.  
   
- Par exemple, un champ dans un enregistrement qui nécessite le jour du mois peut-être une règle de validation comme « jour entre 1 et 31. »  
+ For example, a field in a record that requires the day of the month might have a validation rule such as "DAY BETWEEN 1 AND 31."  
   
- Pour plus d’informations, consultez la rubrique « Propriété ValidationRule » dans l’aide de DAO.  
+ For related information, see the topic "ValidationRule Property" in DAO Help.  
   
-##  <a name="getvalidationtext"></a>CDaoRecordset::GetValidationText  
- Appelez cette fonction membre pour récupérer le texte de la propriété ValidationRule de l’objet de champ sous-jacent.  
+##  <a name="getvalidationtext"></a>  CDaoRecordset::GetValidationText  
+ Call this member function to retrieve the text of the ValidationText property of the underlying field object.  
   
 ```  
 CString GetValidationText();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- A `CString` objet contenant le texte du message qui s’affiche si la valeur d’un champ ne satisfait pas la règle de validation de l’objet de champ sous-jacent.  
+### <a name="return-value"></a>Return Value  
+ A `CString` object containing the text of the message that is displayed if the value of a field does not satisfy the validation rule of the underlying field object.  
   
-### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez la rubrique « ValidationRule Property » dans l’aide de DAO.  
+### <a name="remarks"></a>Remarks  
+ For related information, see the topic "ValidationText Property" in DAO Help.  
   
-##  <a name="isbof"></a>CDaoRecordset::IsBOF  
- Appelez cette fonction membre avant que vous accédez à partir de l’enregistrement à enregistrement pour savoir si vous avez vérifié avant le premier enregistrement de l’objet recordset.  
+##  <a name="isbof"></a>  CDaoRecordset::IsBOF  
+ Call this member function before you scroll from record to record to learn whether you have gone before the first record of the recordset.  
   
 ```  
 BOOL IsBOF() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le jeu d’enregistrements ne contient aucun enregistrement ou si vous avez le défilement arrière avant le premier enregistrement ; Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset contains no records or if you have scrolled backward before the first record; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Vous pouvez également appeler `IsBOF` avec `IsEOF` pour déterminer si le jeu d’enregistrements contient des enregistrements ou est vide. Immédiatement après avoir appelé **ouvrir**, si le jeu d’enregistrements ne contient aucun enregistrement, `IsBOF` retourne différente de zéro. Lorsque vous ouvrez un jeu d’enregistrements qui a au moins un enregistrement, le premier enregistrement est l’enregistrement actif et `IsBOF` retourne 0.  
+### <a name="remarks"></a>Remarks  
+ You can also call `IsBOF` along with `IsEOF` to determine whether the recordset contains any records or is empty. Immediately after you call **Open**, if the recordset contains no records, `IsBOF` returns nonzero. When you open a recordset that has at least one record, the first record is the current record and `IsBOF` returns 0.  
   
- Si le premier enregistrement est l’enregistrement actif et que vous appelez `MovePrev`, `IsBOF` retournera ensuite différente de zéro. Si `IsBOF` retourne différente de zéro et que vous appelez `MovePrev`, une exception est levée. Si `IsBOF` retourne différente de zéro, l’enregistrement actif n’est pas défini, et toute action qui nécessite un enregistrement actuel entraîne une exception.  
+ If the first record is the current record and you call `MovePrev`, `IsBOF` will subsequently return nonzero. If `IsBOF` returns nonzero and you call `MovePrev`, an exception is thrown. If `IsBOF` returns nonzero, the current record is undefined, and any action that requires a current record will result in an exception.  
   
- Effet de méthodes spécifiques sur `IsBOF` et `IsEOF` paramètres :  
+ Effect of specific methods on `IsBOF` and `IsEOF` settings:  
   
--   Appel de **ouvrir** en interne fait du premier enregistrement dans le jeu d’enregistrements l’enregistrement en cours en appelant **MoveFirst**. Par conséquent, l’appel **ouvrir** sur un ensemble de causes d’enregistrements vide `IsBOF` et `IsEOF` pour renvoyer différente de zéro. (Consultez le tableau suivant pour le comportement d’un échec **MoveFirst** ou `MoveLast` appeler.)  
+-   Calling **Open** internally makes the first record in the recordset the current record by calling **MoveFirst**. Therefore, calling **Open** on an empty set of records causes `IsBOF` and `IsEOF` to return nonzero. (See the following table for the behavior of a failed **MoveFirst** or `MoveLast` call.)  
   
--   Toutes les opérations de déplacement qui parviennent à localiser un enregistrement de provoquer `IsBOF` et `IsEOF` pour retourner 0.  
+-   All Move operations that successfully locate a record cause both `IsBOF` and `IsEOF` to return 0.  
   
--   Un `AddNew` appel suivi par une **mise à jour** appel qui a été insère un nouvel enregistrement entraîne `IsBOF` pour retourner 0, mais uniquement si `IsEOF` est déjà différente de zéro. L’état de `IsEOF` demeure inchangée. Comme défini par le moteur de base de données Microsoft Jet, le pointeur d’enregistrement actif d’un objet recordset vide étant à la fin d’un fichier, un nouvel enregistrement est inséré après l’enregistrement actif.  
+-   An `AddNew` call followed by an **Update** call that successfully inserts a new record will cause `IsBOF` to return 0, but only if `IsEOF` is already nonzero. The state of `IsEOF` will always remain unchanged. As defined by the Microsoft Jet database engine, the current record pointer of an empty recordset is at the end of a file, so any new record is inserted after the current record.  
   
--   N’importe quel **supprimer** appel, même si elle supprime le dernier enregistrement à partir d’un recordset, ne changera pas la valeur de `IsBOF` ou `IsEOF`.  
+-   Any **Delete** call, even if it removes the only remaining record from a recordset, will not change the value of `IsBOF` or `IsEOF`.  
   
- Le tableau suivant répertorie les opérations de déplacement autorisées avec les différentes combinaisons de `IsBOF` /  `IsEOF`.  
+ This table shows which Move operations are allowed with different combinations of `IsBOF`/ `IsEOF`.  
   
-||MoveFirst, MoveLast|MovePrev,<br /><br /> Déplacement< 0></ 0>|Déplacer 0|MoveNext,<br /><br /> Déplacer > 0|  
+||MoveFirst, MoveLast|MovePrev,<br /><br /> Move < 0|Move 0|MoveNext,<br /><br /> Move > 0|  
 |------|-------------------------|-----------------------------|------------|-----------------------------|  
-|`IsBOF`= différent de zéro,<br /><br /> `IsEOF`=0|Allowed|Exception|Exception|Allowed|  
-|`IsBOF`=0,<br /><br /> `IsEOF`= différente de zéro|Allowed|Allowed|Exception|Exception|  
-|Les deux différente de zéro|Exception|Exception|Exception|Exception|  
-|Les deux 0|Allowed|Allowed|Allowed|Allowed|  
+|`IsBOF`=nonzero,<br /><br /> `IsEOF`=0|Allowed|Exception|Exception|Allowed|  
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|Exception|Exception|  
+|Both nonzero|Exception|Exception|Exception|Exception|  
+|Both 0|Allowed|Allowed|Allowed|Allowed|  
   
- Autoriser une opération de déplacement ne signifie pas que l’opération parviendra à localiser un enregistrement. Il indique simplement que toute tentative d’exécution de l’opération de déplacement spécifiée est autorisée et ne lève pas d’exception. La valeur de la `IsBOF` et `IsEOF` fonctions membres peuvent changer suite à la méthode move exécutée.  
+ Allowing a Move operation does not mean that the operation will successfully locate a record. It merely indicates that an attempt to perform the specified Move operation is allowed and will not generate an exception. The value of the `IsBOF` and `IsEOF` member functions may change as a result of the attempted move.  
   
- L’effet des opérations de déplacement qui ne trouvez pas un enregistrement de la valeur de `IsBOF` et `IsEOF` paramètres est indiqué dans le tableau suivant.  
+ The effect of Move operations that do not locate a record on the value of `IsBOF` and `IsEOF` settings is shown in the following table.  
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst**,`MoveLast`|Différent de zéro|Différent de zéro|  
-|**Déplacer** 0|Aucune modification|Aucune modification|  
-|`MovePrev`, **Move**< 0></ 0>|Différent de zéro|Aucune modification|  
-|`MoveNext`, **Move** > 0|Aucune modification|Différent de zéro|  
+|**MoveFirst**, `MoveLast`|Nonzero|Nonzero|  
+|**Move** 0|No change|No change|  
+|`MovePrev`, **Move** < 0|Nonzero|No change|  
+|`MoveNext`, **Move** > 0|No change|Nonzero|  
   
- Pour plus d’informations, consultez la rubrique « BOF, EOF propriétés » dans l’aide de DAO.  
+ For related information, see the topic "BOF, EOF Properties" in DAO Help.  
   
-##  <a name="isdeleted"></a>CDaoRecordset::IsDeleted  
- Appelez cette fonction membre pour déterminer si l’enregistrement actif a été supprimé.  
+##  <a name="isdeleted"></a>  CDaoRecordset::IsDeleted  
+ Call this member function to determine whether the current record has been deleted.  
   
 ```  
 BOOL IsDeleted() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le jeu d’enregistrements est positionné sur un enregistrement supprimé. Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset is positioned on a deleted record; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Si vous accédez à un enregistrement et `IsDeleted` retourne **TRUE** (différente de zéro), puis vous devez accéder à un autre enregistrement avant d’effectuer d’autres opérations de jeu d’enregistrements.  
+### <a name="remarks"></a>Remarks  
+ If you scroll to a record and `IsDeleted` returns **TRUE** (nonzero), then you must scroll to another record before you can perform any other recordset operations.  
   
 > [!NOTE]
->  Vous n’avez pas besoin de vérifier l’état supprimé des enregistrements dans un jeu d’enregistrements de type table ou d’instantané. Étant donné que les enregistrements ne peuvent pas être supprimés à partir d’un instantané, il n’est pas nécessaire d’appeler `IsDeleted`. Pour les recordsets de type table, les enregistrements supprimés sont effectivement supprimés de l’ensemble d’enregistrements. Une fois qu’un enregistrement a été supprimé, soit par vous, un autre utilisateur, ou un autre jeu d’enregistrements, vous ne pouvez pas afficher à cet enregistrement. Par conséquent, il n’est pas nécessaire d’appeler `IsDeleted`.  
+>  You don't need to check the deleted status for records in a snapshot or table-type recordset. Because records cannot be deleted from a snapshot, there is no need to call `IsDeleted`. For table-type recordsets, deleted records are actually removed from the recordset. Once a record has been deleted, either by you, another user, or in another recordset, you cannot scroll back to that record. Therefore, there is no need to call `IsDeleted`.  
   
- Lorsque vous supprimez un enregistrement à partir d’une feuille de réponse dynamique, il est supprimé de l’ensemble d’enregistrements, et vous ne peut pas accéder à cet enregistrement. Toutefois, si un enregistrement dans une feuille de réponse dynamique est supprimé par un autre utilisateur ou dans un autre jeu d’enregistrements basé sur la même table, `IsDeleted` retournera **TRUE** lorsque vous passez ultérieurement à cet enregistrement.  
+ When you delete a record from a dynaset, it is removed from the recordset and you cannot scroll back to that record. However, if a record in a dynaset is deleted either by another user or in another recordset based on the same table, `IsDeleted` will return **TRUE** when you later scroll to that record.  
   
- Pour plus d’informations, consultez les rubriques « Méthode Delete », « Propriété LastModified » et « EditMode Property » dans l’aide de DAO.  
+ For related information, see the topics "Delete Method", "LastModified Property", and "EditMode Property" in DAO Help.  
   
-##  <a name="iseof"></a>CDaoRecordset::IsEOF  
- Appelez cette fonction membre que vous accédez à partir de l’enregistrement à enregistrement pour savoir si vous avez dépassé le dernier enregistrement de l’objet recordset.  
+##  <a name="iseof"></a>  CDaoRecordset::IsEOF  
+ Call this member function as you scroll from record to record to learn whether you have gone beyond the last record of the recordset.  
   
 ```  
 BOOL IsEOF() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le jeu d’enregistrements ne contient aucun enregistrement ou si vous avez déplacé au-delà du dernier enregistrement ; Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset contains no records or if you have scrolled beyond the last record; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Vous pouvez également appeler `IsEOF` pour déterminer si le jeu d’enregistrements contient des enregistrements ou est vide. Immédiatement après avoir appelé **ouvrir**, si le jeu d’enregistrements ne contient aucun enregistrement, `IsEOF` retourne différente de zéro. Lorsque vous ouvrez un jeu d’enregistrements qui a au moins un enregistrement, le premier enregistrement est l’enregistrement actif et `IsEOF` retourne 0.  
+### <a name="remarks"></a>Remarks  
+ You can also call `IsEOF` to determine whether the recordset contains any records or is empty. Immediately after you call **Open**, if the recordset contains no records, `IsEOF` returns nonzero. When you open a recordset that has at least one record, the first record is the current record and `IsEOF` returns 0.  
   
- Si le dernier enregistrement est l’enregistrement actif lorsque vous appelez `MoveNext`, `IsEOF` retournera ensuite différente de zéro. Si `IsEOF` retourne différente de zéro et que vous appelez `MoveNext`, une exception est levée. Si `IsEOF` retourne différente de zéro, l’enregistrement actif n’est pas défini, et toute action qui nécessite un enregistrement actuel entraîne une exception.  
+ If the last record is the current record when you call `MoveNext`, `IsEOF` will subsequently return nonzero. If `IsEOF` returns nonzero and you call `MoveNext`, an exception is thrown. If `IsEOF` returns nonzero, the current record is undefined, and any action that requires a current record will result in an exception.  
   
- Effet de méthodes spécifiques sur `IsBOF` et `IsEOF` paramètres :  
+ Effect of specific methods on `IsBOF` and `IsEOF` settings:  
   
--   Appel de **ouvrir** en interne fait du premier enregistrement dans le jeu d’enregistrements l’enregistrement en cours en appelant **MoveFirst**. Par conséquent, l’appel **ouvrir** sur un ensemble de causes d’enregistrements vide `IsBOF` et `IsEOF` pour renvoyer différente de zéro. (Consultez le tableau suivant pour le comportement d’un échec **MoveFirst** appeler.)  
+-   Calling **Open** internally makes the first record in the recordset the current record by calling **MoveFirst**. Therefore, calling **Open** on an empty set of records causes `IsBOF` and `IsEOF` to return nonzero. (See the following table for the behavior of a failed **MoveFirst** call.)  
   
--   Toutes les opérations de déplacement qui parviennent à localiser un enregistrement de provoquer `IsBOF` et `IsEOF` pour retourner 0.  
+-   All Move operations that successfully locate a record cause both `IsBOF` and `IsEOF` to return 0.  
   
--   Un `AddNew` appel suivi par une **mise à jour** appel qui a été insère un nouvel enregistrement entraîne `IsBOF` pour retourner 0, mais uniquement si `IsEOF` est déjà différente de zéro. L’état de `IsEOF` demeure inchangée. Comme défini par le moteur de base de données Microsoft Jet, le pointeur d’enregistrement actif d’un objet recordset vide étant à la fin d’un fichier, un nouvel enregistrement est inséré après l’enregistrement actif.  
+-   An `AddNew` call followed by an **Update** call that successfully inserts a new record will cause `IsBOF` to return 0, but only if `IsEOF` is already nonzero. The state of `IsEOF` will always remain unchanged. As defined by the Microsoft Jet database engine, the current record pointer of an empty recordset is at the end of a file, so any new record is inserted after the current record.  
   
--   N’importe quel **supprimer** appel, même si elle supprime le dernier enregistrement à partir d’un recordset, ne changera pas la valeur de `IsBOF` ou `IsEOF`.  
+-   Any **Delete** call, even if it removes the only remaining record from a recordset, will not change the value of `IsBOF` or `IsEOF`.  
   
- Le tableau suivant répertorie les opérations de déplacement autorisées avec les différentes combinaisons de `IsBOF` /  `IsEOF`.  
+ This table shows which Move operations are allowed with different combinations of `IsBOF`/ `IsEOF`.  
   
-||MoveFirst, MoveLast|MovePrev,<br /><br /> Déplacement< 0></ 0>|Déplacer 0|MoveNext,<br /><br /> Déplacer > 0|  
+||MoveFirst, MoveLast|MovePrev,<br /><br /> Move < 0|Move 0|MoveNext,<br /><br /> Move > 0|  
 |------|-------------------------|-----------------------------|------------|-----------------------------|  
-|`IsBOF`= différent de zéro,<br /><br /> `IsEOF`=0|Allowed|Exception|Exception|Allowed|  
-|`IsBOF`=0,<br /><br /> `IsEOF`= différente de zéro|Allowed|Allowed|Exception|Exception|  
-|Les deux différente de zéro|Exception|Exception|Exception|Exception|  
-|Les deux 0|Allowed|Allowed|Allowed|Allowed|  
+|`IsBOF`=nonzero,<br /><br /> `IsEOF`=0|Allowed|Exception|Exception|Allowed|  
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|Exception|Exception|  
+|Both nonzero|Exception|Exception|Exception|Exception|  
+|Both 0|Allowed|Allowed|Allowed|Allowed|  
   
- Autoriser une opération de déplacement ne signifie pas que l’opération parviendra à localiser un enregistrement. Il indique simplement que toute tentative d’exécution de l’opération de déplacement spécifiée est autorisée et ne lève pas d’exception. La valeur de la `IsBOF` et `IsEOF` fonctions membres peuvent changer suite à la méthode Move exécutée.  
+ Allowing a Move operation does not mean that the operation will successfully locate a record. It merely indicates that an attempt to perform the specified Move operation is allowed and will not generate an exception. The value of the `IsBOF` and `IsEOF` member functions may change as a result of the attempted Move.  
   
- L’effet des opérations de déplacement qui ne trouvez pas un enregistrement de la valeur de `IsBOF` et `IsEOF` paramètres est indiqué dans le tableau suivant.  
+ The effect of Move operations that do not locate a record on the value of `IsBOF` and `IsEOF` settings is shown in the following table.  
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst**,`MoveLast`|Différent de zéro|Différent de zéro|  
-|**Déplacer** 0|Aucune modification|Aucune modification|  
-|`MovePrev`, **Move**< 0></ 0>|Différent de zéro|Aucune modification|  
-|`MoveNext`, **Move** > 0|Aucune modification|Différent de zéro|  
+|**MoveFirst**, `MoveLast`|Nonzero|Nonzero|  
+|**Move** 0|No change|No change|  
+|`MovePrev`, **Move** < 0|Nonzero|No change|  
+|`MoveNext`, **Move** > 0|No change|Nonzero|  
   
- Pour plus d’informations, consultez la rubrique « BOF, EOF propriétés » dans l’aide de DAO.  
+ For related information, see the topic "BOF, EOF Properties" in DAO Help.  
   
-##  <a name="isfielddirty"></a>CDaoRecordset::IsFieldDirty  
- Appelez cette fonction membre pour déterminer si le membre de données de champ spécifié de la feuille de réponse dynamique a été marqué comme « modifiées » (modifié).  
+##  <a name="isfielddirty"></a>  CDaoRecordset::IsFieldDirty  
+ Call this member function to determine whether the specified field data member of a dynaset has been flagged as "dirty" (changed).  
   
 ```  
 BOOL IsFieldDirty(void* pv);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pv`  
- Un pointeur vers le membre de données du champ dont vous souhaitez vérifier, l’état ou **NULL** pour déterminer si l’un des champs sont incorrect.  
+ A pointer to the field data member whose status you want to check, or **NULL** to determine if any of the fields are dirty.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le membre de données du champ spécifié est marqué comme modifié ; Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified field data member is flagged as dirty; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Les données de tous les membres de données de champ modifié seront transférées à l’enregistrement sur la source de données lors de l’enregistrement actif est mis à jour par un appel à la **mise à jour** fonction membre de `CDaoRecordset` (après un appel à **modifier** ou `AddNew`). Sachant cela, vous pouvez suivre d’autres étapes, telles que suppression d’indicateur le membre de données de champ pour marquer la colonne, donc il n’est pas écrit dans la source de données.  
+### <a name="remarks"></a>Remarks  
+ The data in all dirty field data members will be transferred to the record on the data source when the current record is updated by a call to the **Update** member function of `CDaoRecordset` (following a call to **Edit** or `AddNew`). With this knowledge, you can take further steps, such as unflagging the field data member to mark the column so it will not be written to the data source.  
   
- `IsFieldDirty`est implémenté via `DoFieldExchange`.  
+ `IsFieldDirty` is implemented through `DoFieldExchange`.  
   
-##  <a name="isfieldnull"></a>CDaoRecordset::IsFieldNull  
- Appelez cette fonction membre pour déterminer si le membre de données de champ spécifié d’un jeu d’enregistrements a été marquée comme Null.  
+##  <a name="isfieldnull"></a>  CDaoRecordset::IsFieldNull  
+ Call this member function to determine whether the specified field data member of a recordset has been flagged as Null.  
   
 ```  
 BOOL IsFieldNull(void* pv);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pv`  
- Un pointeur vers le membre de données du champ dont vous souhaitez vérifier, l’état ou **NULL** pour déterminer si les champs sont Null.  
+ A pointer to the field data member whose status you want to check, or **NULL** to determine if any of the fields are Null.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le membre de données du champ spécifié est marqué en tant que valeur Null. Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified field data member is flagged as Null; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- (Dans la terminologie de base de données, Null donne « aucune valeur » et n’est pas le même que **NULL** en C++.) Si un membre de données de champ est marqué avec la valeur Null, il est interprété en tant que colonne de l’enregistrement en cours pour lequel il n’existe aucune valeur.  
-  
-> [!NOTE]
->  Dans certains cas, à l’aide de `IsFieldNull` peut être inefficace, comme l’illustre l’exemple de code suivant :  
-  
- [!code-cpp[NVC_MFCDatabase n ° 5](../../mfc/codesnippet/cpp/cdaorecordset-class_5.cpp)]  
+### <a name="remarks"></a>Remarks  
+ (In database terminology, Null means "having no value" and is not the same as **NULL** in C++.) If a field data member is flagged as Null, it is interpreted as a column of the current record for which there is no value.  
   
 > [!NOTE]
->  Si vous utilisez une liaison enregistrement dynamique, sans dériver `CDaoRecordset`, veillez à utiliser **VT_NULL** comme indiqué dans l’exemple.  
+>  In certain situations, using `IsFieldNull` can be inefficient, as the following code example illustrates:  
   
-##  <a name="isfieldnullable"></a>CDaoRecordset::IsFieldNullable  
- Appelez cette fonction membre pour déterminer si le membre de données du champ spécifié est « null » (peut être définie sur une valeur Null ; C++ **NULL** n’est pas identique à Null, ce qui, dans la terminologie de base de données, signifie « aucune valeur les clauses having »).  
+ [!code-cpp[NVC_MFCDatabase#5](../../mfc/codesnippet/cpp/cdaorecordset-class_5.cpp)]  
+  
+> [!NOTE]
+>  If you are using dynamic record binding, without deriving from `CDaoRecordset`, be sure to use **VT_NULL** as shown in the example.  
+  
+##  <a name="isfieldnullable"></a>  CDaoRecordset::IsFieldNullable  
+ Call this member function to determine whether the specified field data member is "nullable" (can be set to a Null value; C++ **NULL** is not the same as Null, which, in database terminology, means "having no value").  
   
 ```  
 BOOL IsFieldNullable(void* pv);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pv`  
- Un pointeur vers le membre de données du champ dont vous souhaitez vérifier, l’état ou **NULL** pour déterminer si les champs sont Null.  
+ A pointer to the field data member whose status you want to check, or **NULL** to determine if any of the fields are Null.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le membre de données du champ spécifié peut être Null ; Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified field data member can be made Null; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Un champ qui ne peut pas être Null doit avoir une valeur. Si vous essayez de définir un tel champ null lors de l’ajout ou la mise à jour un enregistrement, la source de données rejette l’ajout ou la mise à jour, et **mettre à jour** lève une exception. L’exception se produit lorsque vous appelez **mise à jour**, pas lorsque vous appelez `SetFieldNull`.  
+### <a name="remarks"></a>Remarks  
+ A field that cannot be Null must have a value. If you attempt to set such a field to Null when adding or updating a record, the data source rejects the addition or update, and **Update** will throw an exception. The exception occurs when you call **Update**, not when you call `SetFieldNull`.  
   
-##  <a name="isopen"></a>CDaoRecordset::IsOpen  
- Appelez cette fonction membre pour déterminer si le jeu d’enregistrements est ouvert.  
+##  <a name="isopen"></a>  CDaoRecordset::IsOpen  
+ Call this member function to determine if the recordset is open.  
   
 ```  
 BOOL IsOpen() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’objet recordset **ouvrir** ou **Requery** fonction membre a été précédemment appelée et le jeu d’enregistrements n’a pas été fermé ; sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset object's **Open** or **Requery** member function has previously been called and the recordset has not been closed; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_bcheckcachefordirtyfields"></a>CDaoRecordset::m_bCheckCacheForDirtyFields  
- Contient un indicateur qui indique si les champs mis en cache sont automatiquement marqués comme modifiés (modifiés) et Null.  
+##  <a name="m_bcheckcachefordirtyfields"></a>  CDaoRecordset::m_bCheckCacheForDirtyFields  
+ Contains a flag indicating whether cached fields are automatically marked as dirty (changed) and Null.  
   
-### <a name="remarks"></a>Notes  
- L’indicateur par défaut est **TRUE**. Le paramètre de ce membre de données détermine le mécanisme de double tampon entière. Si vous définissez l’indicateur **TRUE**, vous pouvez désactiver la mise en cache sur une base de champ par champ à l’aide du mécanisme DFX. Si vous définissez l’indicateur **FALSE**, vous devez appeler `SetFieldDirty` et `SetFieldNull` vous-même.  
+### <a name="remarks"></a>Remarks  
+ The flag defaults to **TRUE**. The setting in this data member controls the entire double-buffering mechanism. If you set the flag to **TRUE**, you can turn off the caching on a field-by-field basis using the DFX mechanism. If you set the flag to **FALSE**, you must call `SetFieldDirty` and `SetFieldNull` yourself.  
   
- Définir ce membre de données avant d’appeler **ouvrir**. Ce mécanisme est principalement pour la facilité d’utilisation. Performances peuvent être ralenties en raison du mécanisme de double tampon de champs lorsque des modifications sont apportées.  
+ Set this data member before calling **Open**. This mechanism is primarily for ease-of-use. Performance may be slower because of the double-buffering of fields as changes are made.  
   
-##  <a name="m_nfields"></a>CDaoRecordset::m_nFields  
- Contient le nombre de membres de données de champ dans la classe de recordset et le nombre de colonnes sélectionnées par l’ensemble d’enregistrements à partir de la source de données.  
+##  <a name="m_nfields"></a>  CDaoRecordset::m_nFields  
+ Contains the number of field data members in the recordset class and the number of columns selected by the recordset from the data source.  
   
-### <a name="remarks"></a>Notes  
- Le constructeur de la classe de recordset doit initialiser `m_nFields` avec le nombre correct de champs liés statiquement. ClassWizard écrit cette initialisation pour vous lorsque vous l’utilisez pour déclarer la classe de recordset. Vous pouvez également le créer manuellement.  
+### <a name="remarks"></a>Remarks  
+ The constructor for the recordset class must initialize `m_nFields` with the correct number of statically bound fields. ClassWizard writes this initialization for you when you use it to declare your recordset class. You can also write it manually.  
   
- L’infrastructure utilise ce numéro pour gérer l’interaction entre les membres de données de champ et les colonnes correspondantes de l’enregistrement actif sur la source de données.  
-  
-> [!NOTE]
->  Ce numéro doit correspondre au nombre de colonnes de sortie inscrit dans `DoFieldExchange` après un appel à `SetFieldType` avec le paramètre **CDaoFieldExchange::outputColumn**.  
-  
- Vous pouvez lier des colonnes dynamiquement par le biais de `CDaoRecordset::GetFieldValue` et `CDaoRecordset::SetFieldValue`. Si vous procédez ainsi, vous n’avez pas besoin incrémenter le compteur de `m_nFields` afin de refléter le nombre de fonction DFX appelle votre `DoFieldExchange` fonction membre.  
-  
-##  <a name="m_nparams"></a>CDaoRecordset::m_nParams  
- Contient le nombre de membres de données de paramètre dans la classe de recordset : le nombre de paramètres passé avec la requête du recordset.  
-  
-### <a name="remarks"></a>Remarques  
- Si votre classe de recordset possède des membres de données de paramètre, le constructeur de la classe doit initialiser `m_nParams` avec le nombre correct. La valeur de `m_nParams` valeur par défaut est 0. Si vous ajoutez des membres de données de paramètre, ce que vous devez effectuer manuellement, vous devez également ajouter manuellement une initialisation dans le constructeur de classe pour refléter le nombre de paramètres (qui doit être au moins aussi grand que le nombre de '' espaces réservés dans votre **m_strFilter** ou `m_strSort` chaîne).  
-  
- L’infrastructure utilise ce numéro lorsqu’il paramètre la requête du recordset.  
+ The framework uses this number to manage interaction between the field data members and the corresponding columns of the current record on the data source.  
   
 > [!NOTE]
->  Ce nombre doit correspondre au nombre de « paramètres » inscrit dans `DoFieldExchange` après un appel à `SetFieldType` avec le paramètre **CFieldExchange::param**.  
+>  This number must correspond to the number of output columns registered in `DoFieldExchange` after a call to `SetFieldType` with the parameter **CDaoFieldExchange::outputColumn**.  
   
- Pour plus d’informations, consultez la rubrique « Objet de paramètre » dans l’aide de DAO.  
+ You can bind columns dynamically by way of `CDaoRecordset::GetFieldValue` and `CDaoRecordset::SetFieldValue`. If you do so, you do not need to increment the count in `m_nFields` to reflect the number of DFX function calls in your `DoFieldExchange` member function.  
   
-##  <a name="m_pdaorecordset"></a>CDaoRecordset::m_pDAORecordset  
- Contient un pointeur vers l’interface OLE pour DAO recordset objet sous-jacent le `CDaoRecordset` objet.  
+##  <a name="m_nparams"></a>  CDaoRecordset::m_nParams  
+ Contains the number of parameter data members in the recordset class — the number of parameters passed with the recordset's query.  
   
-### <a name="remarks"></a>Notes  
- Utilisez ce pointeur si vous avez besoin d’accéder à l’interface DAO directement.  
+### <a name="remarks"></a>Remarks  
+ If your recordset class has any parameter data members, the constructor for the class must initialize `m_nParams` with the correct number. The value of `m_nParams` defaults to 0. If you add parameter data members — which you must do manually — you must also manually add an initialization in the class constructor to reflect the number of parameters (which must be at least as large as the number of '' placeholders in your **m_strFilter** or `m_strSort` string).  
   
- Pour plus d’informations, consultez la rubrique « Objet Recordset » dans l’aide de DAO.  
+ The framework uses this number when it parameterizes the recordset's query.  
   
-##  <a name="m_pdatabase"></a>CDaoRecordset::m_pDatabase  
- Contient un pointeur vers le `CDaoDatabase` objet via lequel le jeu d’enregistrements est connecté à une source de données.  
+> [!NOTE]
+>  This number must correspond to the number of "params" registered in `DoFieldExchange` after a call to `SetFieldType` with the parameter **CFieldExchange::param**.  
   
-### <a name="remarks"></a>Remarques  
- Cette variable est définie de deux manières. En règle générale, vous passez un pointeur à déjà ouvert `CDaoDatabase` de l’objet lorsque vous construisez l’objet recordset. Si vous passez **NULL** au lieu de cela, **CDaoRecordset** crée un `CDaoDatabase` objet pour vous et l’ouvre. Dans les deux cas, `CDaoRecordset` stocke le pointeur dans cette variable.  
+ For related information, see the topic "Parameter Object" in DAO Help.  
   
- Normalement vous directement aurez pas à utiliser le pointeur stocké dans **m_pDatabase**. Si vous écrivez vos propres extensions `CDaoRecordset`, toutefois, vous devrez peut-être utiliser le pointeur. Par exemple, vous devrez peut-être le pointeur si vous levez vos propres `CDaoException`(s).  
+##  <a name="m_pdaorecordset"></a>  CDaoRecordset::m_pDAORecordset  
+ Contains a pointer to the OLE interface for the DAO recordset object underlying the `CDaoRecordset` object.  
   
- Pour plus d’informations, consultez la rubrique « Objet de base de données » dans l’aide de DAO.  
+### <a name="remarks"></a>Remarks  
+ Use this pointer if you need to access the DAO interface directly.  
   
-##  <a name="m_strfilter"></a>CDaoRecordset::m_strFilter  
- Contient une chaîne qui est utilisée pour construire la **où** clause d’une instruction SQL.  
+ For related information, see the topic "Recordset Object" in DAO Help.  
   
-### <a name="remarks"></a>Remarques  
- Il n’inclut pas le mot réservé **où** pour filtrer le jeu d’enregistrements. L’utilisation de ce membre de données n’est pas applicable aux jeux d’enregistrements de type table. L’utilisation de **m_strFilter** n’a aucun effet lors de l’ouverture d’un jeu d’enregistrements à l’aide un `CDaoQueryDef` pointeur.  
+##  <a name="m_pdatabase"></a>  CDaoRecordset::m_pDatabase  
+ Contains a pointer to the `CDaoDatabase` object through which the recordset is connected to a data source.  
   
- Utilisez le format de date américain (mois-jour-année) lorsque vous filtrez des champs contenant des dates, même si vous n’utilisez pas la version américaine du moteur de base de données Microsoft Jet ; dans le cas contraire, les données ne peuvent pas être filtrées comme prévu.  
+### <a name="remarks"></a>Remarks  
+ This variable is set in two ways. Typically, you pass a pointer to an already open `CDaoDatabase` object when you construct the recordset object. If you pass **NULL** instead, **CDaoRecordset** creates a `CDaoDatabase` object for you and opens it. In either case, `CDaoRecordset` stores the pointer in this variable.  
   
- Pour plus d’informations, consultez la rubrique « Propriété Filter » dans l’aide de DAO.  
+ Normally you will not directly need to use the pointer stored in **m_pDatabase**. If you write your own extensions to `CDaoRecordset`, however, you might need to use the pointer. For example, you might need the pointer if you throw your own `CDaoException`(s).  
   
-##  <a name="m_strsort"></a>CDaoRecordset::m_strSort  
- Contient une chaîne contenant le **ORDERBY** clause d’une instruction SQL sans les mots réservés **ORDERBY**.  
+ For related information, see the topic "Database Object" in DAO Help.  
   
-### <a name="remarks"></a>Notes  
- Vous pouvez trier sur les objets de type feuille de réponse dynamique et instantané recordset.  
+##  <a name="m_strfilter"></a>  CDaoRecordset::m_strFilter  
+ Contains a string that is used to construct the **WHERE** clause of a SQL statement.  
   
- Vous ne pouvez pas trier les objets de jeu d’enregistrements de type table. Pour déterminer l’ordre de tri d’un jeu d’enregistrements de type table, appelez [SetCurrentIndex](#setcurrentindex).  
+### <a name="remarks"></a>Remarks  
+ It does not include the reserved word **WHERE** to filter the recordset. The use of this data member is not applicable to table-type recordsets. The use of **m_strFilter** has no effect when opening a recordset using a `CDaoQueryDef` pointer.  
   
- L’utilisation de `m_strSort` n’a aucun effet lors de l’ouverture d’un jeu d’enregistrements à l’aide un `CDaoQueryDef` pointeur.  
+ Use the U.S. date format (month-day-year) when you filter fields containing dates, even if you are not using the U.S. version of the Microsoft Jet database engine; otherwise, the data may not be filtered as you expect.  
   
- Pour plus d’informations, consultez la rubrique « Propriété de tri » dans l’aide de DAO.  
+ For related information, see the topic "Filter Property" in DAO Help.  
   
-##  <a name="move"></a>Méthode CDaoRecordset::Move  
- Appelez cette fonction membre afin de positionner le jeu d’enregistrements `lRows` enregistrements à partir de l’enregistrement actif.  
+##  <a name="m_strsort"></a>  CDaoRecordset::m_strSort  
+ Contains a string containing the **ORDERBY** clause of a SQL statement without the reserved words **ORDERBY**.  
+  
+### <a name="remarks"></a>Remarks  
+ You can sort on dynaset- and snapshot-type recordset objects.  
+  
+ You cannot sort table-type recordset objects. To determine the sort order of a table-type recordset, call [SetCurrentIndex](#setcurrentindex).  
+  
+ The use of `m_strSort` has no effect when opening a recordset using a `CDaoQueryDef` pointer.  
+  
+ For related information, see the topic "Sort Property" in DAO Help.  
+  
+##  <a name="move"></a>  CDaoRecordset::Move  
+ Call this member function to position the recordset `lRows` records from the current record.  
   
 ```  
 virtual void Move(long lRows);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lRows`  
- Le nombre d’enregistrements à avancer ou reculer. Les valeurs positives déplacent vers l’avant, vers la fin de l’objet recordset. Les valeurs négatives déplacent vers le haut, vers le début.  
+ The number of records to move forward or backward. Positive values move forward, toward the end of the recordset. Negative values move backward, toward the beginning.  
   
-### <a name="remarks"></a>Notes  
- Vous pouvez déplacer vers l’avant ou vers l’arrière. `Move( 1 )`équivaut à `MoveNext`, et `Move( -1 )` équivaut à `MovePrev`.  
+### <a name="remarks"></a>Remarks  
+ You can move forward or backward. `Move( 1 )` is equivalent to `MoveNext`, and `Move( -1 )` is equivalent to `MovePrev`.  
   
 > [!CAUTION]
->  L’appel de la **déplacer** fonctions lève une exception si le jeu d’enregistrements ne comporte pas d’enregistrement. En règle générale, appeler à la fois `IsBOF` et `IsEOF` avant une opération de déplacement pour déterminer si le jeu d’enregistrements a des enregistrements. Après avoir appelé **ouvrir** ou **Requery**, appelez `IsBOF` ou `IsEOF`.  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. In general, call both `IsBOF` and `IsEOF` before a Move operation to determine whether the recordset has any records. After you call **Open** or **Requery**, call either `IsBOF` or `IsEOF`.  
   
 > [!NOTE]
->  Si vous avez atteint le début ou la fin de l’objet recordset ( `IsBOF` ou `IsEOF` retourne différente de zéro), un appel à **déplacer** lève une `CDaoException`.  
+>  If you have scrolled past the beginning or end of the recordset ( `IsBOF` or `IsEOF` returns nonzero), a call to **Move** throws a `CDaoException`.  
   
 > [!NOTE]
->  Si vous appelez une de le **déplacer** fonctions pendant que l’enregistrement actif est mis à jour ou ajouté, les mises à jour sont perdues sans avertissement.  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- Lorsque vous appelez **déplacer** sur un instantané de défilement avant uniquement, le `lRows` paramètre doit être un entier positif et les signets ne sont pas autorisées, donc vous pouvez uniquement déplacer vers le bas.  
+ When you call **Move** on a forward-only scrolling snapshot, the `lRows` parameter must be a positive integer and bookmarks are not allowed, so you can move forward only.  
   
- Pour rendre le premier, dernier, suivant ou précédent à enregistrer de dans un jeu d’enregistrements, l’appel en cours de l’enregistrement, la **MoveFirst**, `MoveLast`, `MoveNext`, ou `MovePrev` fonction membre.  
+ To make the first, last, next, or previous record in a recordset the current record, call the **MoveFirst**, `MoveLast`, `MoveNext`, or `MovePrev` member function.  
   
- Pour plus d’informations, consultez les rubriques « Méthode déplacer » et « MoveFirst, MoveLast, MoveNext, MovePrevious méthodes » dans l’aide de DAO.  
+ For related information, see the topics "Move Method" and "MoveFirst, MoveLast, MoveNext, MovePrevious Methods" in DAO Help.  
   
-##  <a name="movefirst"></a>CDaoRecordset::MoveFirst  
- Appelez cette fonction membre pour rendre le premier enregistrement dans le jeu d’enregistrements (le cas échéant) l’enregistrement actif.  
+##  <a name="movefirst"></a>  CDaoRecordset::MoveFirst  
+ Call this member function to make the first record in the recordset (if any) the current record.  
   
 ```  
 void MoveFirst();
 ```  
   
-### <a name="remarks"></a>Notes  
- Vous n’avez pas à appeler **MoveFirst** immédiatement après l’ouverture de l’ensemble d’enregistrements. À ce stade, le premier enregistrement (le cas échéant) est automatiquement l’enregistrement actif.  
+### <a name="remarks"></a>Remarks  
+ You do not have to call **MoveFirst** immediately after you open the recordset. At that time, the first record (if any) is automatically the current record.  
   
 > [!CAUTION]
->  L’appel de la **déplacer** fonctions lève une exception si le jeu d’enregistrements ne comporte pas d’enregistrement. En règle générale, appeler à la fois `IsBOF` et `IsEOF` avant une opération de déplacement pour déterminer si le jeu d’enregistrements a des enregistrements. Après avoir appelé **ouvrir** ou **Requery**, appelez `IsBOF` ou `IsEOF`.  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. In general, call both `IsBOF` and `IsEOF` before a Move operation to determine whether the recordset has any records. After you call **Open** or **Requery**, call either `IsBOF` or `IsEOF`.  
   
 > [!NOTE]
->  Si vous appelez une de le **déplacer** fonctions pendant que l’enregistrement actif est mis à jour ou ajouté, les mises à jour sont perdues sans avertissement.  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- Utilisez le **déplacer** fonctions déplacement entre les enregistrements sans avoir à appliquer une condition. Utilisez les opérations de recherche pour rechercher des enregistrements dans une feuille de réponse dynamique ou un objet de jeu d’enregistrements de type instantané qui répondent à une certaine condition. Pour rechercher un enregistrement dans un objet de jeu d’enregistrements de type table, appelez `Seek`.  
+ Use the **Move** functions to move from record to record without applying a condition. Use the Find operations to locate records in a dynaset-type or snapshot-type recordset object that satisfy a certain condition. To locate a record in a table-type recordset object, call `Seek`.  
   
- Si le jeu d’enregistrements fait référence à un jeu d’enregistrements de type table, le déplacement suit l’index de table en cours. Vous pouvez définir l’index en cours à l’aide de la propriété de l’Index de l’objet DAO sous-jacent. Si vous ne définissez pas l’index en cours, l’ordre des enregistrements retournés est non défini.  
+ If the recordset refers to a table-type recordset, movement follows the table's current index. You can set the current index by using the Index property of the underlying DAO object. If you do not set the current index, the order of returned records is undefined.  
   
- Si vous appelez `MoveLast` sur un objet recordset basé sur une requête SQL ou une querydef, la requête est obligée d’achèvement et l’objet recordset est pleine.  
+ If you call `MoveLast` on a recordset object based on a SQL query or querydef, the query is forced to completion and the recordset object is fully populated.  
   
- Vous ne pouvez pas appeler la **MoveFirst** ou `MovePrev` fonction membre avec un instantané de défilement avant uniquement.  
+ You cannot call the **MoveFirst** or `MovePrev` member function with a forward-only scrolling snapshot.  
   
- Pour déplacer la position actuelles enregistrer dans un objet recordset spécifique à un nombre d’enregistrements vers l’avant ou vers l’arrière, appelez **déplacer**.  
+ To move the position of the current record in a recordset object a specific number of records forward or backward, call **Move**.  
   
- Pour plus d’informations, consultez les rubriques « Méthode déplacer » et « MoveFirst, MoveLast, MoveNext, MovePrevious méthodes » dans l’aide de DAO.  
+ For related information, see the topics "Move Method" and "MoveFirst, MoveLast, MoveNext, MovePrevious Methods" in DAO Help.  
   
-##  <a name="movelast"></a>CDaoRecordset::MoveLast  
- Appelez cette fonction membre pour le dernier enregistrement (le cas échéant) dans le jeu d’enregistrements de l’enregistrement actif.  
+##  <a name="movelast"></a>  CDaoRecordset::MoveLast  
+ Call this member function to make the last record (if any) in the recordset the current record.  
   
 ```  
 void MoveLast();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
 > [!CAUTION]
->  L’appel de la **déplacer** fonctions lève une exception si le jeu d’enregistrements ne comporte pas d’enregistrement. En règle générale, appeler à la fois `IsBOF` et `IsEOF` avant une opération de déplacement pour déterminer si le jeu d’enregistrements a des enregistrements. Après avoir appelé **ouvrir** ou **Requery**, appelez `IsBOF` ou `IsEOF`.  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. In general, call both `IsBOF` and `IsEOF` before a Move operation to determine whether the recordset has any records. After you call **Open** or **Requery**, call either `IsBOF` or `IsEOF`.  
   
 > [!NOTE]
->  Si vous appelez une de le **déplacer** fonctions pendant que l’enregistrement actif est mis à jour ou ajouté, les mises à jour sont perdues sans avertissement.  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- Utilisez le **déplacer** fonctions déplacement entre les enregistrements sans avoir à appliquer une condition. Utilisez les opérations de recherche pour rechercher des enregistrements dans une feuille de réponse dynamique ou un objet de jeu d’enregistrements de type instantané qui répondent à une certaine condition. Pour rechercher un enregistrement dans un objet de jeu d’enregistrements de type table, appelez `Seek`.  
+ Use the **Move** functions to move from record to record without applying a condition. Use the Find operations to locate records in a dynaset-type or snapshot-type recordset object that satisfy a certain condition. To locate a record in a table-type recordset object, call `Seek`.  
   
- Si le jeu d’enregistrements fait référence à un jeu d’enregistrements de type table, le déplacement suit l’index de table en cours. Vous pouvez définir l’index en cours à l’aide de la propriété de l’Index de l’objet DAO sous-jacent. Si vous ne définissez pas l’index en cours, l’ordre des enregistrements retournés est non défini.  
+ If the recordset refers to a table-type recordset, movement follows the table's current index. You can set the current index by using the Index property of the underlying DAO object. If you do not set the current index, the order of returned records is undefined.  
   
- Si vous appelez `MoveLast` sur un objet recordset basé sur une requête SQL ou une querydef, la requête est obligée d’achèvement et l’objet recordset est pleine.  
+ If you call `MoveLast` on a recordset object based on a SQL query or querydef, the query is forced to completion and the recordset object is fully populated.  
   
- Pour déplacer la position actuelles enregistrer dans un objet recordset spécifique à un nombre d’enregistrements vers l’avant ou vers l’arrière, appelez **déplacer**.  
+ To move the position of the current record in a recordset object a specific number of records forward or backward, call **Move**.  
   
- Pour plus d’informations, consultez les rubriques « Méthode déplacer » et « MoveFirst, MoveLast, MoveNext, MovePrevious méthodes » dans l’aide de DAO.  
+ For related information, see the topics "Move Method" and "MoveFirst, MoveLast, MoveNext, MovePrevious Methods" in DAO Help.  
   
-##  <a name="movenext"></a>CDaoRecordset::MoveNext  
- Appelez cette fonction membre pour rendre l’enregistrement suivant dans le jeu d’enregistrements de l’enregistrement actif.  
+##  <a name="movenext"></a>  CDaoRecordset::MoveNext  
+ Call this member function to make the next record in the recordset the current record.  
   
 ```  
 void MoveNext();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Il est recommandé d’appeler `IsBOF` avant de tenter de les déplacer vers l’enregistrement précédent. Un appel à `MovePrev` lèvera une `CDaoException` si `IsBOF` retourne différent de zéro, indiquant que vous avez atteint avant le premier enregistrement ou qu’aucun enregistrement ont été sélectionnés par l’ensemble d’enregistrements.  
+### <a name="remarks"></a>Remarks  
+ It is recommended that you call `IsBOF` before you attempt to move to the previous record. A call to `MovePrev` will throw a `CDaoException` if `IsBOF` returns nonzero, indicating either that you have already scrolled before the first record or that no records were selected by the recordset.  
   
 > [!CAUTION]
->  L’appel de la **déplacer** fonctions lève une exception si le jeu d’enregistrements ne comporte pas d’enregistrement. En règle générale, appeler à la fois `IsBOF` et `IsEOF` avant une opération de déplacement pour déterminer si le jeu d’enregistrements a des enregistrements. Après avoir appelé **ouvrir** ou **Requery**, appelez `IsBOF` ou `IsEOF`.  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. In general, call both `IsBOF` and `IsEOF` before a Move operation to determine whether the recordset has any records. After you call **Open** or **Requery**, call either `IsBOF` or `IsEOF`.  
   
 > [!NOTE]
->  Si vous appelez une de le **déplacer** fonctions pendant que l’enregistrement actif est mis à jour ou ajouté, les mises à jour sont perdues sans avertissement.  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- Utilisez le **déplacer** fonctions déplacement entre les enregistrements sans avoir à appliquer une condition. Utilisez les opérations de recherche pour rechercher des enregistrements dans une feuille de réponse dynamique ou un objet de jeu d’enregistrements de type instantané qui répondent à une certaine condition. Pour rechercher un enregistrement dans un objet de jeu d’enregistrements de type table, appelez `Seek`.  
+ Use the **Move** functions to move from record to record without applying a condition. Use the Find operations to locate records in a dynaset-type or snapshot-type recordset object that satisfy a certain condition. To locate a record in a table-type recordset object, call `Seek`.  
   
- Si le jeu d’enregistrements fait référence à un jeu d’enregistrements de type table, le déplacement suit l’index de table en cours. Vous pouvez définir l’index en cours à l’aide de la propriété de l’Index de l’objet DAO sous-jacent. Si vous ne définissez pas l’index en cours, l’ordre des enregistrements retournés est non défini.  
+ If the recordset refers to a table-type recordset, movement follows the table's current index. You can set the current index by using the Index property of the underlying DAO object. If you do not set the current index, the order of returned records is undefined.  
   
- Pour déplacer la position actuelles enregistrer dans un objet recordset spécifique à un nombre d’enregistrements vers l’avant ou vers l’arrière, appelez **déplacer**.  
+ To move the position of the current record in a recordset object a specific number of records forward or backward, call **Move**.  
   
- Pour plus d’informations, consultez les rubriques « Méthode déplacer » et « MoveFirst, MoveLast, MoveNext, MovePrevious méthodes » dans l’aide de DAO.  
+ For related information, see the topics "Move Method" and "MoveFirst, MoveLast, MoveNext, MovePrevious Methods" in DAO Help.  
   
-##  <a name="moveprev"></a>CDaoRecordset::MovePrev  
- Appelez cette fonction membre pour rendre l’enregistrement précédent dans le jeu d’enregistrements de l’enregistrement actif.  
+##  <a name="moveprev"></a>  CDaoRecordset::MovePrev  
+ Call this member function to make the previous record in the recordset the current record.  
   
 ```  
 void MovePrev();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Il est recommandé d’appeler `IsBOF` avant de tenter de les déplacer vers l’enregistrement précédent. Un appel à `MovePrev` lèvera une `CDaoException` si `IsBOF` retourne différent de zéro, indiquant que vous avez atteint avant le premier enregistrement ou qu’aucun enregistrement ont été sélectionnés par l’ensemble d’enregistrements.  
+### <a name="remarks"></a>Remarks  
+ It is recommended that you call `IsBOF` before you attempt to move to the previous record. A call to `MovePrev` will throw a `CDaoException` if `IsBOF` returns nonzero, indicating either that you have already scrolled before the first record or that no records were selected by the recordset.  
   
 > [!CAUTION]
->  L’appel de la **déplacer** fonctions lève une exception si le jeu d’enregistrements ne comporte pas d’enregistrement. En règle générale, appeler à la fois `IsBOF` et `IsEOF` avant une opération de déplacement pour déterminer si le jeu d’enregistrements a des enregistrements. Après avoir appelé **ouvrir** ou **Requery**, appelez `IsBOF` ou `IsEOF`.  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. In general, call both `IsBOF` and `IsEOF` before a Move operation to determine whether the recordset has any records. After you call **Open** or **Requery**, call either `IsBOF` or `IsEOF`.  
   
 > [!NOTE]
->  Si vous appelez une de le **déplacer** fonctions pendant que l’enregistrement actif est mis à jour ou ajouté, les mises à jour sont perdues sans avertissement.  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- Utilisez le **déplacer** fonctions déplacement entre les enregistrements sans avoir à appliquer une condition. Utilisez les opérations de recherche pour rechercher des enregistrements dans une feuille de réponse dynamique ou un objet de jeu d’enregistrements de type instantané qui répondent à une certaine condition. Pour rechercher un enregistrement dans un objet de jeu d’enregistrements de type table, appelez `Seek`.  
+ Use the **Move** functions to move from record to record without applying a condition. Use the Find operations to locate records in a dynaset-type or snapshot-type recordset object that satisfy a certain condition. To locate a record in a table-type recordset object, call `Seek`.  
   
- Si le jeu d’enregistrements fait référence à un jeu d’enregistrements de type table, le déplacement suit l’index de table en cours. Vous pouvez définir l’index en cours à l’aide de la propriété de l’Index de l’objet DAO sous-jacent. Si vous ne définissez pas l’index en cours, l’ordre des enregistrements retournés est non défini.  
+ If the recordset refers to a table-type recordset, movement follows the table's current index. You can set the current index by using the Index property of the underlying DAO object. If you do not set the current index, the order of returned records is undefined.  
   
- Vous ne pouvez pas appeler la **MoveFirst** ou `MovePrev` fonction membre avec un instantané de défilement avant uniquement.  
+ You cannot call the **MoveFirst** or `MovePrev` member function with a forward-only scrolling snapshot.  
   
- Pour déplacer la position actuelles enregistrer dans un objet recordset spécifique à un nombre d’enregistrements vers l’avant ou vers l’arrière, appelez **déplacer**.  
+ To move the position of the current record in a recordset object a specific number of records forward or backward, call **Move**.  
   
- Pour plus d’informations, consultez les rubriques « Méthode déplacer » et « MoveFirst, MoveLast, MoveNext, MovePrevious méthodes » dans l’aide de DAO.  
+ For related information, see the topics "Move Method" and "MoveFirst, MoveLast, MoveNext, MovePrevious Methods" in DAO Help.  
   
-##  <a name="open"></a>CDaoRecordset::Open  
- Vous devez appeler cette fonction membre pour récupérer les enregistrements pour l’ensemble d’enregistrements.  
+##  <a name="open"></a>  CDaoRecordset::Open  
+ You must call this member function to retrieve the records for the recordset.  
   
 ```  
 virtual void Open(
@@ -1698,136 +1776,136 @@ virtual void Open(
     int nOptions = 0);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nOpenType`  
- Une des valeurs suivantes :  
+ One of the following values:  
   
-- **dbOpenDynaset** un jeu d’enregistrements de type instantané bidirectionnel défilement. Il s'agit de la valeur par défaut.  
+- **dbOpenDynaset** A dynaset-type recordset with bidirectional scrolling. This is the default.  
   
-- **dbOpenTable** un jeu d’enregistrements de type table bidirectionnel défilement.  
+- **dbOpenTable** A table-type recordset with bidirectional scrolling.  
   
-- **dbOpenSnapshot** un jeu d’enregistrements de type instantané bidirectionnel défilement.  
+- **dbOpenSnapshot** A snapshot-type recordset with bidirectional scrolling.  
   
  `lpszSQL`  
- Un pointeur de chaîne contenant l’une des opérations suivantes :  
+ A string pointer containing one of the following:  
   
--   A **NULL** pointeur.  
+-   A **NULL** pointer.  
   
--   Le nom d’un ou plusieurs objets TableDef et/ou querydefs (séparées par des virgules).  
+-   The name of one or more tabledefs and/or querydefs (comma-separated).  
   
--   SQL **sélectionnez** instruction (éventuellement avec un SQL **où** ou **ORDERBY** clause).  
+-   A SQL **SELECT** statement (optionally with a SQL **WHERE** or **ORDERBY** clause).  
   
--   Une requête directe.  
+-   A pass-through query.  
   
  `nOptions`  
- Un ou plusieurs des options ci-dessous. La valeur par défaut est 0. Les valeurs possibles sont les suivantes :  
+ One or more of the options listed below. The default value is 0. Possible values are as follows:  
   
-- **dbAppendOnly** vous ne pouvez ajouter des nouveaux enregistrements (enregistrements uniquement). Cette option signifie littéralement que les enregistrements peuvent uniquement être ajoutés. Les classes de base de données ODBC MFC ont une option d’ajout uniquement qui autorise les enregistrements à récupérer et ajouté.  
+- **dbAppendOnly** You can only append new records (dynaset-type recordset only). This option means literally that records may only be appended. The MFC ODBC database classes have an append-only option that allows records to be retrieved and appended.  
   
-- **dbForwardOnly** le jeu d’enregistrements est un instantané de défilement avant uniquement.  
+- **dbForwardOnly** The recordset is a forward-only scrolling snapshot.  
   
-- **dbSeeChanges** génère une exception si un autre utilisateur modifie les données que vous modifiez.  
+- **dbSeeChanges** Generate an exception if another user is changing data you are editing.  
   
-- **dbDenyWrite** les autres utilisateurs ne peuvent pas modifier ou ajouter des enregistrements.  
+- **dbDenyWrite** Other users cannot modify or add records.  
   
-- **dbDenyRead** les autres utilisateurs ne peuvent pas afficher les enregistrements (jeu d’enregistrements de type table uniquement).  
+- **dbDenyRead** Other users cannot view records (table-type recordset only).  
   
-- **peut entraîner** vous pouvez afficher uniquement les enregistrements ; d’autres utilisateurs peuvent les modifier.  
+- **dbReadOnly** You can only view records; other users can modify them.  
   
-- **dbInconsistent** mises à jour incohérentes sont autorisées (jeu d’enregistrements de type uniquement).  
+- **dbInconsistent** Inconsistent updates are allowed (dynaset-type recordset only).  
   
-- **dbConsistent** seules les mises à jour cohérentes sont autorisées (jeu d’enregistrements de type uniquement).  
+- **dbConsistent** Only consistent updates are allowed (dynaset-type recordset only).  
   
 > [!NOTE]
->  Les constantes **dbConsistent** et **dbInconsistent** s’excluent mutuellement. Vous pouvez utiliser l’une ou l’autre, mais pas les deux dans une instance donnée de **ouvrir**.  
+>  The constants **dbConsistent** and **dbInconsistent** are mutually exclusive. You can use one or the other, but not both in a given instance of **Open**.  
   
  *pTableDef*  
- Un pointeur vers un [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) objet. Cette version est valide uniquement pour les jeux d’enregistrements de type table. Lorsque vous utilisez cette option, le `CDaoDatabase` pointeur utilisé pour construire le `CDaoRecordset` n’est pas utilisé ; au lieu de cela, la base de données dans laquelle réside l’objet tabledef est utilisé.  
+ A pointer to a [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) object. This version is valid only for table-type recordsets. When using this option, the `CDaoDatabase` pointer used to construct the `CDaoRecordset` is not used; rather, the database in which the tabledef resides is used.  
   
  *pQueryDef*  
- Un pointeur vers un [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) objet. Cette version est valide uniquement pour la feuille de réponse dynamique et des jeux d’enregistrements de type instantané. Lorsque vous utilisez cette option, le `CDaoDatabase` pointeur utilisé pour construire le `CDaoRecordset` n’est pas utilisé ; au lieu de cela, la base de données dans laquelle réside la querydef est utilisé.  
+ A pointer to a [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) object. This version is valid only for dynaset-type and snapshot-type recordsets. When using this option, the `CDaoDatabase` pointer used to construct the `CDaoRecordset` is not used; rather, the database in which the querydef resides is used.  
   
-### <a name="remarks"></a>Notes  
- Avant d’appeler **ouvrir**, vous devez construire l’objet recordset. Pour ce faire, plusieurs méthodes sont possibles :  
+### <a name="remarks"></a>Remarks  
+ Before calling **Open**, you must construct the recordset object. There are several ways to do this:  
   
--   Lorsque vous construisez l’objet recordset, passez un pointeur vers un `CDaoDatabase` objet qui est déjà ouvert.  
+-   When you construct the recordset object, pass a pointer to a `CDaoDatabase` object that is already open.  
   
--   Lorsque vous construisez l’objet recordset, passez un pointeur vers un `CDaoDatabase` objet n’est pas ouvert. Le jeu d’enregistrements ouvre un `CDaoDatabase` de l’objet, mais fermera pas la fermeture de l’objet recordset.  
+-   When you construct the recordset object, pass a pointer to a `CDaoDatabase` object that is not open. The recordset opens a `CDaoDatabase` object, but will not close it when the recordset object closes.  
   
--   Lorsque vous construisez l’objet recordset, passez un **NULL** pointeur. Les appels d’objet recordset `GetDefaultDBName` pour obtenir le nom de Microsoft Access. Fichier MDB à ouvrir. Le jeu d’enregistrements puis ouvre un `CDaoDatabase` objet et conserve il ouvre tant que le jeu d’enregistrements est ouvert. Lorsque vous appelez **fermer** sur le jeu d’enregistrements, les `CDaoDatabase` objet est également fermé.  
+-   When you construct the recordset object, pass a **NULL** pointer. The recordset object calls `GetDefaultDBName` to get the name of the Microsoft Access .MDB file to open. The recordset then opens a `CDaoDatabase` object and keeps it open as long as the recordset is open. When you call **Close** on the recordset, the `CDaoDatabase` object is also closed.  
   
     > [!NOTE]
-    >  Lorsque le jeu d’enregistrements ouvre le `CDaoDatabase` de l’objet, il ouvre la source de données avec un accès non exclusif.  
+    >  When the recordset opens the `CDaoDatabase` object, it opens the data source with nonexclusive access.  
   
- Pour la version de **ouvrir** qui utilise le `lpszSQL` paramètre, une fois que le jeu d’enregistrements est ouvert, vous pouvez récupérer les enregistrements de plusieurs façons. La première option consiste à avoir des fonctions DFX dans votre `DoFieldExchange`. La deuxième option consiste à utiliser la liaison dynamique en appelant le `GetFieldValue` fonction membre. Ces options peuvent être implémentées séparément ou en combinaison. Si elles sont combinées, vous devez passer dans l’instruction SQL vous-même sur l’appel à **ouvrir**.  
+ For the version of **Open** that uses the `lpszSQL` parameter, once the recordset is open you can retrieve records in one of several ways. The first option is to have DFX functions in your `DoFieldExchange`. The second option is to use dynamic binding by calling the `GetFieldValue` member function. These options can be implemented separately or in combination. If they are combined, you will have to pass in the SQL statement yourself on the call to **Open**.  
   
- Lorsque vous utilisez la deuxième version de **ouvrir** où vous passez un `CDaoTableDef` de l’objet, les colonnes résultants sera disponibles pour vous permet de lier `DoFieldExchange` et le mécanisme DFX et/ou bind dynamiquement via `GetFieldValue`.  
-  
-> [!NOTE]
->  Vous pouvez uniquement appeler **ouvrir** à l’aide un `CDaoTableDef` objet pour les recordsets de type table.  
-  
- Lorsque vous utilisez la troisième version de **ouvrir** où vous passez un `CDaoQueryDef` de l’objet, que la requête sera exécutée, et les colonnes résultants sera disponibles pour vous permet de lier `DoFieldExchange` et le mécanisme DFX et/ou bind dynamiquement via `GetFieldValue`.  
+ When you use the second version of **Open** where you pass in a `CDaoTableDef` object, the resulting columns will be available for you to bind via `DoFieldExchange` and the DFX mechanism, and/or bind dynamically via `GetFieldValue`.  
   
 > [!NOTE]
->  Vous pouvez uniquement appeler **ouvrir** à l’aide un `CDaoQueryDef` objet de type jeu de données et les jeux d’enregistrements de type instantané.  
+>  You can only call **Open** using a `CDaoTableDef` object for table-type recordsets.  
   
- Pour la première version de **ouvrir** qui utilise le `lpszSQL` paramètre, les enregistrements sont sélectionnés en fonction de critères indiqué dans le tableau suivant.  
+ When you use the third version of **Open** where you pass in a `CDaoQueryDef` object, that query will be executed, and the resulting columns will be available for you to bind via `DoFieldExchange` and the DFX mechanism, and/or bind dynamically via `GetFieldValue`.  
   
-|Valeur du paramètre `lpszSQL`.|Enregistrements sélectionnés sont déterminés par|Exemple|  
+> [!NOTE]
+>  You can only call **Open** using a `CDaoQueryDef` object for dynaset-type and snapshot-type recordsets.  
+  
+ For the first version of **Open** that uses the `lpszSQL` parameter, records are selected based on criteria shown in the following table.  
+  
+|Value of the `lpszSQL` parameter|Records selected are determined by|Example|  
 |--------------------------------------|----------------------------------------|-------------|  
-|**VALEUR NULL**|La chaîne retournée par `GetDefaultSQL`.||  
-|Une liste séparée par des virgules d’un ou plusieurs tabledefs et/ou querydef noms.|Toutes les colonnes représentées dans le `DoFieldExchange`.|`"Customer"`|  
-|**Sélectionnez** -liste des colonnes **FROM** liste de tables|Les colonnes spécifiées à partir de la tabledef(s) spécifié et/ou querydef(s).|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|  
+|**NULL**|The string returned by `GetDefaultSQL`.||  
+|A comma-separated list of one or more tabledefs and/or querydef names.|All columns represented in the `DoFieldExchange`.|`"Customer"`|  
+|**SELECT** column-list **FROM** table-list|The specified columns from the specified tabledef(s) and/or querydef(s).|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|  
   
- La procédure habituelle consiste à passer **NULL** à **ouvrir**; dans ce cas, **ouvrir** appelle `GetDefaultSQL`, une fonction membre substituable ClassWizard généré lors de la création par un `CDaoRecordset`-classe dérivée. Cette valeur donne les noms tabledef(s) et/ou querydef spécifié dans ClassWizard. Vous pouvez spécifier à la place d’autres informations dans le `lpszSQL` paramètre.  
+ The usual procedure is to pass **NULL** to **Open**; in that case, **Open** calls `GetDefaultSQL`, an overridable member function that ClassWizard generates when creating a `CDaoRecordset`-derived class. This value gives the tabledef(s) and/or querydef name(s) you specified in ClassWizard. You can instead specify other information in the `lpszSQL` parameter.  
   
- Tout ce que vous passez, **ouvrir** construit une chaîne SQL finale pour la requête (la chaîne peut avoir SQL **où** et **ORDERBY** clauses ajouté à la `lpszSQL` chaîne que vous avez passé), puis exécute la requête. Vous pouvez examiner la chaîne construite en appelant `GetSQL` après avoir appelé **ouvrir**.  
+ Whatever you pass, **Open** constructs a final SQL string for the query (the string may have SQL **WHERE** and **ORDERBY** clauses appended to the `lpszSQL` string you passed) and then executes the query. You can examine the constructed string by calling `GetSQL` after calling **Open**.  
   
- Données membres de champ de la classe de recordset sont liés aux colonnes de données sélectionnées. Si tous les enregistrements sont retournés, le premier enregistrement devient l’enregistrement actif.  
+ The field data members of your recordset class are bound to the columns of the data selected. If any records are returned, the first record becomes the current record.  
   
- Si vous souhaitez définir des options pour l’ensemble d’enregistrements, tel qu’un filtre ou un tri, définissez `m_strSort` ou **m_strFilter** après avoir construit l’objet recordset, mais avant d’appeler **ouvrir**. Si vous souhaitez actualiser les enregistrements dans le jeu d’enregistrements après le jeu d’enregistrements est déjà ouvert, appelez **Requery**.  
+ If you want to set options for the recordset, such as a filter or sort, set `m_strSort` or **m_strFilter** after you construct the recordset object but before you call **Open**. If you want to refresh the records in the recordset after the recordset is already open, call **Requery**.  
   
- Si vous appelez **ouvrir** sur un jeu d’enregistrements de type instantané, ou de type ou si la source de données fait référence à une instruction SQL ou d’un objet tabledef qui représente une table attachée, vous ne pouvez pas utiliser **dbOpenTable** pour l’argument de type ; si vous le faites, MFC lève une exception. Pour déterminer si un objet tabledef représente une table attachée, créez un [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) objet et appeler ses [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) fonction membre.  
+ If you call **Open** on a dynaset-type or snapshot-type recordset, or if the data source refers to a SQL statement or a tabledef that represents an attached table, you cannot use **dbOpenTable** for the type argument; if you do, MFC throws an exception. To determine whether a tabledef object represents an attached table, create a [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) object and call its [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) member function.  
   
- Utilisez le **dbSeeChanges** indicateur si vous souhaitez intercepter les modifications apportées par un autre utilisateur ou un autre programme sur votre ordinateur lors de la modification ou suppression de l’enregistrement de même. Par exemple, si deux utilisateurs commencent à modifier le même enregistrement, le premier utilisateur d’appeler le **mise à jour** fonction membre réussit. Lorsque **mise à jour** est appelée par le second utilisateur, un `CDaoException` est levée. De même, si le deuxième utilisateur tente d’appeler **supprimer** pour supprimer l’enregistrement et il a déjà été modifié par le premier utilisateur, un `CDaoException` se produit.  
+ Use the **dbSeeChanges** flag if you wish to trap changes made by another user or another program on your machine when you are editing or deleting the same record. For example, if two users start editing the same record, the first user to call the **Update** member function succeeds. When **Update** is called by the second user, a `CDaoException` is thrown. Similarly, if the second user tries to call **Delete** to delete the record, and it has already been changed by the first user, a `CDaoException` occurs.  
   
- En règle générale, si l’utilisateur obtient ce `CDaoException` lors de la mise à jour, votre code doit actualiser le contenu des champs et récupérer les valeurs qui vient d’être modifiés. Si l’exception se produit lors de la suppression, le code peut afficher les données d’enregistrement à l’utilisateur et un message indiquant que les données a changé récemment. À ce stade, votre code peut demander une confirmation que l’utilisateur veut supprimer l’enregistrement.  
+ Typically, if the user gets this `CDaoException` while updating, your code should refresh the contents of the fields and retrieve the newly modified values. If the exception occurs in the process of deleting, your code could display the new record data to the user and a message indicating that the data has recently changed. At this point, your code can request a confirmation that the user still wants to delete the record.  
   
 > [!TIP]
->  Utilisez l’option de défilement avant uniquement ( **dbForwardOnly**) pour améliorer les performances lorsque votre application effectue une seule passe via un jeu d’enregistrements a été ouverte à partir d’une source de données ODBC.  
+>  Use the forward-only scrolling option ( **dbForwardOnly**) to improve performance when your application makes a single pass through a recordset opened from an ODBC data source.  
   
- Pour plus d’informations, consultez la rubrique « OpenRecordset méthode » dans l’aide de DAO.  
+ For related information, see the topic "OpenRecordset Method" in DAO Help.  
   
-##  <a name="requery"></a>CDaoRecordset::Requery  
- Appelez cette fonction membre pour reconstruire (Actualiser) un jeu d’enregistrements.  
+##  <a name="requery"></a>  CDaoRecordset::Requery  
+ Call this member function to rebuild (refresh) a recordset.  
   
 ```  
 virtual void Requery();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Si tous les enregistrements sont retournés, le premier enregistrement devient l’enregistrement actif.  
+### <a name="remarks"></a>Remarks  
+ If any records are returned, the first record becomes the current record.  
   
- Dans l’ordre du jeu d’enregistrements afin de refléter les ajouts et suppressions que vous ou autres utilisateurs effectuent dans la source de données, vous devez reconstruire l’ensemble d’enregistrements en appelant **Requery**. Si le recordset est une feuille de réponse dynamique, il reflète automatiquement les mises à jour que vous ou autres utilisateurs apporter à ses enregistrements existants (mais pas les ajouts). Si le jeu d’enregistrements est un instantané, vous devez appeler **Requery** afin de refléter les modifications apportées par d’autres utilisateurs, ainsi que les ajouts et les suppressions.  
+ In order for the recordset to reflect the additions and deletions that you or other users are making to the data source, you must rebuild the recordset by calling **Requery**. If the recordset is a dynaset, it automatically reflects updates that you or other users make to its existing records (but not additions). If the recordset is a snapshot, you must call **Requery** to reflect edits by other users as well as additions and deletions.  
   
- Pour une feuille de réponse dynamique ou un instantané, appelez **Requery** n’importe quel moment vous souhaitez reconstruire le jeu d’enregistrements à l’aide des valeurs de paramètre. Définir le nouveau filtre ou tri en définissant [m_strFilter](#m_strfilter) et [m_strSort](#m_strsort) avant d’appeler **Requery**. Définir de nouveaux paramètres en assignant de nouvelles valeurs aux membres de données de paramètre avant d’appeler **Requery**.  
+ For either a dynaset or a snapshot, call **Requery** any time you want to rebuild the recordset using parameter values. Set the new filter or sort by setting [m_strFilter](#m_strfilter) and [m_strSort](#m_strsort) before calling **Requery**. Set new parameters by assigning new values to parameter data members before calling **Requery**.  
   
- Si la tentative pour reconstruire le recordset échoue, le jeu d’enregistrements est fermé. Avant d’appeler **Requery**, vous pouvez déterminer si le jeu d’enregistrements peut être actualisé en appelant le [CanRestart](#canrestart) fonction membre. `CanRestart`ne garantit pas que **Requery** réussira.  
+ If the attempt to rebuild the recordset fails, the recordset is closed. Before you call **Requery**, you can determine whether the recordset can be requeried by calling the [CanRestart](#canrestart) member function. `CanRestart` does not guarantee that **Requery** will succeed.  
   
 > [!CAUTION]
->  Appelez **Requery** uniquement après avoir appelé **ouvrir**.  
+>  Call **Requery** only after you have called **Open**.  
   
 > [!NOTE]
->  Appel de [Requery](#requery) modifie les signets DAO.  
+>  Calling [Requery](#requery) changes DAO bookmarks.  
   
- Vous ne pouvez pas appeler **Requery** sur un jeu d’enregistrements de type instantané si l’appel ou de type `CanRestart` retourne 0, ni l’utiliser sur un jeu d’enregistrements de type table.  
+ You can't call **Requery** on a dynaset-type or snapshot-type recordset if calling `CanRestart` returns 0, nor can you use it on a table-type recordset.  
   
- Si les deux `IsBOF` et `IsEOF` de retour différente de zéro après avoir appelé **Requery**, la requête n’a pas retourné de tous les enregistrements et le jeu d’enregistrements ne contiendront aucune donnée.  
+ If both `IsBOF` and `IsEOF` return nonzero after you call **Requery**, the query didn't return any records and the recordset will contain no data.  
   
- Pour plus d’informations, consultez la rubrique « Requery, méthode » dans l’aide de DAO.  
+ For related information, see the topic "Requery Method" in DAO Help.  
   
-##  <a name="seek"></a>CDaoRecordset::Seek  
- Appelez cette fonction membre pour rechercher l’enregistrement dans un objet recordset de type table indexée qui satisfait aux critères spécifiés en cours d’index et vérifiez que l’enregistrement actif.  
+##  <a name="seek"></a>  CDaoRecordset::Seek  
+ Call this member function to locate the record in an indexed table-type recordset object that satisfies the specified criteria for the current index and make that record the current record.  
   
 ```  
 BOOL Seek(
@@ -1843,161 +1921,161 @@ BOOL Seek(
     WORD nKeys);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpszComparison`  
- Une des expressions de chaîne suivantes : «<",></",>\<= », « = », « > = », ou « > ».  
+ One of the following string expressions: "<", "\<=", "=", ">=", or ">".  
   
  `pKey1`  
- Un pointeur vers un [COleVariant](../../mfc/reference/colevariant-class.md) dont la valeur correspond au premier champ dans l’index. Obligatoire.  
+ A pointer to a [COleVariant](../../mfc/reference/colevariant-class.md) whose value corresponds to the first field in the index. Required.  
   
  *pKey2*  
- Un pointeur vers un `COleVariant` dont la valeur correspond à la deuxième champ dans l’index, le cas échéant. Valeur par défaut est **NULL**.  
+ A pointer to a `COleVariant` whose value corresponds to the second field in the index, if any. Defaults to **NULL**.  
   
  *pKey3*  
- Un pointeur vers un `COleVariant` dont la valeur correspond au troisième champ dans l’index, le cas échéant. Valeur par défaut est **NULL**.  
+ A pointer to a `COleVariant` whose value corresponds to the third field in the index, if any. Defaults to **NULL**.  
   
  *pKeyArray*  
- Pointeur vers un tableau de variantes. La taille du tableau correspond au nombre de champs dans l’index.  
+ A pointer to an array of variants. The array size corresponds to the number of fields in the index.  
   
  *nKeys*  
- Entier correspondant à la taille du tableau, qui est le nombre de champs dans l’index.  
+ An integer corresponding to the size of the array, which is the number of fields in the index.  
   
 > [!NOTE]
->  Ne spécifiez pas de caractères génériques dans les clés. Les caractères génériques entraîne `Seek` à retourner sans enregistrements correspondants.  
+>  Do not specify wildcards in the keys. Wildcards will cause `Seek` to return no matching records.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si les enregistrements correspondants sont trouvés, sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if matching records are found, otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Utilisez la deuxième version (array) de `Seek` pour gérer les index de quatre champs ou plus.  
+### <a name="remarks"></a>Remarks  
+ Use the second (array) version of `Seek` to handle indexes of four fields or more.  
   
- `Seek`Active l’index hautes performances recherche sur des jeux d’enregistrements de type table. Vous devez définir l’index en cours en appelant `SetCurrentIndex` avant d’appeler `Seek`. Si l’index identifie un champ de clé non unique ou des champs, `Seek` recherche le premier enregistrement qui répond aux critères. Si vous ne définissez pas un index, une exception est levée.  
+ `Seek` enables high-performance index searching on table-type recordsets. You must set the current index by calling `SetCurrentIndex` before calling `Seek`. If the index identifies a nonunique key field or fields, `Seek` locates the first record that satisfies the criteria. If you do not set an index, an exception is thrown.  
   
- Notez que si vous ne créez pas un jeu d’enregistrements UNICODE, le `COleVariant` objets doivent être déclarées explicitement ANSI. Cela est possible à l’aide de la [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** forme de constructeur avec `vtSrc` la valeur `VT_BSTRT` (ANSI) ou à l’aide de la **COleVariant** (fonction) [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** avec `vtSrc` la valeur `VT_BSTRT`.  
+ Note that if you are not creating a UNICODE recordset, the `COleVariant` objects must be explicitly declared ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc`**,** `vtSrc` **)** form of constructor with `vtSrc` set to `VT_BSTRT` (ANSI) or by using the **COleVariant** function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc`**,** `vtSrc` **)** with `vtSrc` set to `VT_BSTRT`.  
   
- Lorsque vous appelez `Seek`, vous passez d’une ou plusieurs valeurs de clé et un opérateur de comparaison («<",></",>\<= », « = », « > = », ou « > »). `Seek`recherche dans les champs de clé spécifiés et recherche le premier enregistrement qui répond aux critères spécifiés par `lpszComparison` et `pKey1`. Une fois trouvé, `Seek` retourne différente de zéro et rend cet enregistrement en cours. Si `Seek` ne parvient pas à trouver de correspondance, `Seek` retourne zéro, et l’enregistrement actif n’est pas défini. Lorsque vous utilisez DAO directement, vous devez vérifier explicitement la propriété NoMatch.  
+ When you call `Seek`, you pass one or more key values and a comparison operator ("<", "\<=", "=", ">=", or ">"). `Seek` searches through the specified key fields and locates the first record that satisfies the criteria specified by `lpszComparison` and `pKey1`. Once found, `Seek` returns nonzero, and makes that record current. If `Seek` fails to locate a match, `Seek` returns zero, and the current record is undefined. When using DAO directly, you must explicitly check the NoMatch property.  
   
- Si `lpszComparison` est « = », « > = », ou « > », `Seek` commence au début de l’index. Si `lpszComparison` est «<" or=""> </"> <=",> </=",> `Seek` commence à la fin de l’index et effectue la recherche vers l’arrière sauf s’il existe des entrées d’index en double à la fin. Dans ce cas, `Seek` commence par une entrée arbitraire parmi les entrées d’index en double à la fin de l’index.  
+ If `lpszComparison` is "=", ">=", or ">", `Seek` starts at the beginning of the index. If `lpszComparison` is "<" or "<=", `Seek` starts at the end of the index and searches backward unless there are duplicate index entries at the end. In this case, `Seek` starts at an arbitrary entry among the duplicate index entries at the end of the index.  
   
- Il ne dispose pas d’un enregistrement actif lorsque vous utilisez `Seek`.  
+ There does not have to be a current record when you use `Seek`.  
   
- Pour localiser un enregistrement dans un jeu d’enregistrements de type instantané qui satisfait à une condition spécifique ou de type, utilisez les opérations de recherche. Pour inclure tous les enregistrements, et pas seulement ceux qui répondent à une condition spécifique, utilisez les opérations de déplacement pour déplacer d’un enregistrement à l’autre.  
+ To locate a record in a dynaset-type or snapshot-type recordset that satisfies a specific condition, use the Find operations. To include all records, not just those that satisfy a specific condition, use the Move operations to move from record to record.  
   
- Vous ne pouvez pas appeler `Seek` sur une table attachée de n’importe quel type, car les tables attachées doivent être ouvert en tant que jeu de données ou les jeux d’enregistrements de type instantané. Toutefois, si vous appelez `CDaoDatabase::Open` pour ouvrir directement une base de données ISAM installable, vous pouvez appeler `Seek` sur les tables de cette base de données, bien que les performances peuvent être lentes.  
+ You cannot call `Seek` on an attached table of any type because attached tables must be opened as dynaset-type or snapshot-type recordsets. However, if you call `CDaoDatabase::Open` to directly open an installable ISAM database, you can call `Seek` on tables in that database, although the performance may be slow.  
   
- Pour plus d’informations, consultez la rubrique « Recherche la méthode » dans l’aide de DAO.  
+ For related information, see the topic "Seek Method" in DAO Help.  
   
-##  <a name="setabsoluteposition"></a>CDaoRecordset::SetAbsolutePosition  
- Définit le numéro d’enregistrement relatif de l’enregistrement en cours de l’objet recordset.  
+##  <a name="setabsoluteposition"></a>  CDaoRecordset::SetAbsolutePosition  
+ Sets the relative record number of a recordset object's current record.  
   
 ```  
 void SetAbsolutePosition(long lPosition);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *lPosition*  
- Correspond à la position ordinale de l’enregistrement actif dans le jeu d’enregistrements.  
+ Corresponds to the ordinal position of the current record in the recordset.  
   
-### <a name="remarks"></a>Remarques  
- Appel de `SetAbsolutePosition` vous permet de positionner le pointeur d’enregistrement actif vers un enregistrement spécifique en fonction de sa position ordinale dans un jeu d’enregistrements de type instantané ou de type. Vous pouvez également déterminer le numéro d’enregistrement en cours en appelant [GetAbsolutePosition](#getabsoluteposition).  
-  
-> [!NOTE]
->  Cette fonction membre est valide uniquement pour la feuille de réponse dynamique et des jeux d’enregistrements de type instantané.  
-  
- La valeur de propriété AbsolutePosition de l’objet DAO sous-jacent est zéro ; la valeur 0 fait référence au premier enregistrement dans le jeu d’enregistrements. Définition d’une valeur supérieure au nombre de causes d’enregistrements MFC pour lever une exception. Vous pouvez déterminer le nombre d’enregistrements dans le jeu d’enregistrements en appelant le `GetRecordCount` fonction membre.  
-  
- Si l’enregistrement actif est supprimé, la valeur de la propriété AbsolutePosition n’est pas définie, et MFC lève une exception si elle est référencée. Nouveaux enregistrements sont ajoutés à la fin de la séquence.  
+### <a name="remarks"></a>Remarks  
+ Calling `SetAbsolutePosition` enables you to position the current record pointer to a specific record based on its ordinal position in a dynaset-type or snapshot-type recordset. You can also determine the current record number by calling [GetAbsolutePosition](#getabsoluteposition).  
   
 > [!NOTE]
->  Cette propriété n’est pas destinée à être utilisé comme un numéro d’enregistrement de substitution. Les signets restent le meilleur moyen de conserver et revenir à une position donnée et sont la seule façon de positionner l’enregistrement actif dans tous les types d’objets recordset qui prennent en charge des signets. En particulier, la position d’un enregistrement donné change lorsqu’ou précèdent les enregistrements sont supprimés. Il n’existe également aucune assurance qu’un enregistrement donné aura la même position absolue si le jeu d’enregistrements est recréé, car l’ordre des enregistrements individuels dans un jeu d’enregistrements n’est pas garantie, sauf si elle est créée avec une instruction SQL à l’aide un **ORDERBY** clause.  
+>  This member function is valid only for dynaset-type and snapshot-type recordsets.  
   
- Pour plus d’informations, consultez la rubrique « AbsolutePosition, propriété » dans l’aide de DAO.  
+ The AbsolutePosition property value of the underlying DAO object is zero-based; a setting of 0 refers to the first record in the recordset. Setting a value greater than the number of populated records causes MFC to throw an exception. You can determine the number of populated records in the recordset by calling the `GetRecordCount` member function.  
   
-##  <a name="setbookmark"></a>CDaoRecordset::SetBookmark  
- Appelez cette fonction membre afin de positionner le jeu d’enregistrements sur l’enregistrement qui contient le signet spécifié.  
+ If the current record is deleted, the AbsolutePosition property value is not defined, and MFC throws an exception if it is referenced. New records are added to the end of the sequence.  
+  
+> [!NOTE]
+>  This property is not intended to be used as a surrogate record number. Bookmarks are still the recommended way of retaining and returning to a given position and are the only way to position the current record across all types of recordset objects that support bookmarks. In particular, the position of a given record changes when record(s) preceding it are deleted. There is also no assurance that a given record will have the same absolute position if the recordset is re-created again because the order of individual records within a recordset is not guaranteed unless it is created with a SQL statement using an **ORDERBY** clause.  
+  
+ For related information, see the topic "AbsolutePosition Property" in DAO Help.  
+  
+##  <a name="setbookmark"></a>  CDaoRecordset::SetBookmark  
+ Call this member function to position the recordset on the record containing the specified bookmark.  
   
 ```  
 void SetBookmark(COleVariant varBookmark);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `varBookmark`  
- A [COleVariant](../../mfc/reference/colevariant-class.md) objet contenant la valeur du signet pour un enregistrement spécifique.  
+ A [COleVariant](../../mfc/reference/colevariant-class.md) object containing the bookmark value for a specific record.  
   
-### <a name="remarks"></a>Remarques  
- Lorsqu’un objet recordset est créé ou ouvert, chacun de ses enregistrements possède déjà un signet unique. Vous pouvez récupérer le signet de l’enregistrement actif en appelant `GetBookmark` et l’enregistrement de la valeur à un `COleVariant` objet. Vous pouvez revenir ultérieurement à cet enregistrement en appelant `SetBookmark` à l’aide de la valeur du signet enregistré.  
+### <a name="remarks"></a>Remarks  
+ When a recordset object is created or opened, each of its records already has a unique bookmark. You can retrieve the bookmark for the current record by calling `GetBookmark` and saving the value to a `COleVariant` object. You can later return to that record by calling `SetBookmark` using the saved bookmark value.  
   
 > [!NOTE]
->  Appel de [Requery](#requery) modifie les signets DAO.  
+>  Calling [Requery](#requery) changes DAO bookmarks.  
   
- Notez que si vous ne créez pas un jeu d’enregistrements UNICODE, le `COleVariant` objet doit être déclaré explicitement ANSI. Cela est possible à l’aide de la [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** forme de constructeur avec `vtSrc` la valeur `VT_BSTRT` (ANSI) ou à l’aide de la **COleVariant** (fonction) [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** avec `vtSrc` la valeur `VT_BSTRT`.  
+ Note that if you are not creating a UNICODE recordset, the `COleVariant` object must be explicitly declared ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc`**,** `vtSrc` **)** form of constructor with `vtSrc` set to `VT_BSTRT` (ANSI) or by using the **COleVariant** function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc`**,** `vtSrc` **)** with `vtSrc` set to `VT_BSTRT`.  
   
- Pour plus d’informations, consultez les rubriques « Propriété de signet » et de la propriété de signet » dans l’aide de DAO.  
+ For related information, see the topics "Bookmark Property" and Bookmarkable Property" in DAO Help.  
   
-##  <a name="setcachesize"></a>CDaoRecordset::SetCacheSize  
- Appelez cette fonction membre pour définir le nombre d’enregistrements à mettre en cache.  
+##  <a name="setcachesize"></a>  CDaoRecordset::SetCacheSize  
+ Call this member function to set the number of records to be cached.  
   
 ```  
 void SetCacheSize(long lSize);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lSize`  
- Spécifie le nombre d’enregistrements. Une valeur par défaut est 100. La valeur 0 désactive la mise en cache. Le paramètre doit comprendre entre 5 et 1200 enregistrements. Le cache peut utiliser une quantité importante de mémoire.  
+ Specifies the number of records. A typical value is 100. A setting of 0 turns off caching. The setting must be between 5 and 1200 records. The cache may use a considerable amount of memory.  
   
-### <a name="remarks"></a>Notes  
- Un cache est un espace dans la mémoire locale qui contient les données récemment extraites du serveur dans le cas où les données seront demandées à nouveau lors de l’application est en cours d’exécution. La mise en cache des données améliorent les performances d’une application qui Récupère des données à partir d’un serveur distant via des objets de jeu d’enregistrements de type. La demande de données, le moteur de base de données Microsoft Jet vérifie tout d’abord le cache pour les données demandées au lieu de devoir les extraire à partir du serveur, ce qui prend plus de temps. Les données qui ne provient pas d’une source de données ODBC ne sont pas enregistrées dans le cache.  
+### <a name="remarks"></a>Remarks  
+ A cache is a space in local memory that holds the data most recently retrieved from the server in the event that the data will be requested again while the application is running. Data caching improves the performance of an application that retrieves data from a remote server through dynaset-type recordset objects. When data is requested, the Microsoft Jet database engine checks the cache for the requested data first rather than retrieving it from the server, which takes more time. Data that does not come from an ODBC data source is not saved in the cache.  
   
- Toutes les sources de données ODBC, comme une table attachée, peuvent posséder un cache local. Pour créer le cache, ouvrez un objet recordset à partir de la source de données distante, appel de la `SetCacheSize` et `SetCacheStart` fonctions membres, puis appelez le `FillCache` fonction membre ou parcourir les enregistrements à l’aide de l’une des opérations de déplacement. Le `lSize` paramètre de la `SetCacheSize` fonction membre peut être basée sur le nombre d’enregistrements que votre application peut fonctionner avec à la fois. Par exemple, si vous utilisez un jeu d’enregistrements comme source de données à afficher sur l’écran, vous pouvez passer le `SetCacheSize``lSize` paramètre en tant que 20 afin d’afficher les 20 enregistrements à la fois.  
+ Any ODBC data source, such as an attached table, can have a local cache. To create the cache, open a recordset object from the remote data source, call the `SetCacheSize` and `SetCacheStart` member functions, and then call the `FillCache` member function or step through the records by using one of the Move operations. The `lSize` parameter of the `SetCacheSize` member function can be based on the number of records your application can work with at one time. For example, if you are using a recordset as the source of the data to be displayed on screen, you could pass the `SetCacheSize` `lSize` parameter as 20 to display 20 records at one time.  
   
- Pour plus d’informations, consultez la rubrique « CacheSize, CacheStart propriétés » dans l’aide de DAO.  
+ For related information, see the topic "CacheSize, CacheStart Properties" in DAO Help.  
   
-##  <a name="setcachestart"></a>CDaoRecordset::SetCacheStart  
- Appelez cette fonction membre pour spécifier le signet du premier enregistrement dans le jeu d’enregistrements à mettre en cache.  
+##  <a name="setcachestart"></a>  CDaoRecordset::SetCacheStart  
+ Call this member function to specify the bookmark of the first record in the recordset to be cached.  
   
 ```  
 void SetCacheStart(COleVariant varBookmark);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `varBookmark`  
- A [COleVariant](../../mfc/reference/colevariant-class.md) qui spécifie le signet du premier enregistrement dans le jeu d’enregistrements à mettre en cache.  
+ A [COleVariant](../../mfc/reference/colevariant-class.md) that specifies the bookmark of the first record in the recordset to be cached.  
   
-### <a name="remarks"></a>Remarques  
- Vous pouvez utiliser la valeur du signet d’un enregistrement pour le `varBookmark` paramètre de la `SetCacheStart` fonction membre. L’enregistrement que vous souhaitez démarrer le cache avec l’enregistrement actif, l’établissement d’un signet pour cet enregistrement à l’aide [SetBookmark](#setbookmark)et passez la valeur du signet comme paramètre pour la `SetCacheStart` fonction membre.  
+### <a name="remarks"></a>Remarks  
+ You can use the bookmark value of any record for the `varBookmark` parameter of the `SetCacheStart` member function. Make the record you want to start the cache with the current record, establish a bookmark for that record using [SetBookmark](#setbookmark), and pass the bookmark value as the parameter for the `SetCacheStart` member function.  
   
- Le moteur de base de données Microsoft Jet demande des enregistrements dans la plage de cache à partir du cache, et elle demande des enregistrements en dehors de la plage de cache à partir du serveur.  
+ The Microsoft Jet database engine requests records within the cache range from the cache, and it requests records outside the cache range from the server.  
   
- Enregistrements récupérés du cache ne reflètent pas les modifications apportées simultanément à la source de données par d’autres utilisateurs.  
+ Records retrieved from the cache do not reflect changes made concurrently to the source data by other users.  
   
- Pour forcer une mise à jour de toutes les données mises en cache, vous devez passer le `lSize` paramètre de `SetCacheSize` comme 0, appelez `SetCacheSize` à nouveau avec la taille du cache de votre initialement demandée, puis appelez le `FillCache` fonction membre.  
+ To force an update of all the cached data, pass the `lSize` parameter of `SetCacheSize` as 0, call `SetCacheSize` again with the size of the cache you originally requested, and then call the `FillCache` member function.  
   
- Notez que si vous ne créez pas un jeu d’enregistrements UNICODE, le `COleVariant` objet doit être déclaré explicitement ANSI. Cela est possible à l’aide de la [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** forme de constructeur avec `vtSrc` la valeur `VT_BSTRT` (ANSI) ou à l’aide de la **COleVariant** (fonction) [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** avec `vtSrc` la valeur `VT_BSTRT`.  
+ Note that if you are not creating a UNICODE recordset, the `COleVariant` object must be explicitly declared ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc`**,** `vtSrc` **)** form of constructor with `vtSrc` set to `VT_BSTRT` (ANSI) or by using the **COleVariant** function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc`**,** `vtSrc` **)** with `vtSrc` set to `VT_BSTRT`.  
   
- Pour plus d’informations, consultez la rubrique CacheSize, CacheStart propriétés » dans l’aide de DAO.  
+ For related information, see the topic CacheSize, CacheStart Properties" in DAO Help.  
   
-##  <a name="setcurrentindex"></a>CDaoRecordset::SetCurrentIndex  
- Appelez cette fonction membre pour définir un index sur un jeu d’enregistrements de type table.  
+##  <a name="setcurrentindex"></a>  CDaoRecordset::SetCurrentIndex  
+ Call this member function to set an index on a table-type recordset.  
   
 ```  
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpszIndex`  
- Un pointeur qui contient le nom de l’index à définir.  
+ A pointer containing the name of the index to be set.  
   
-### <a name="remarks"></a>Notes  
- Enregistrements dans les tables de base ne sont pas stockés dans un ordre particulier. Définition d’un index modifie l’ordre des enregistrements retournés à partir de la base de données, mais elle n’affecte pas l’ordre dans lequel les enregistrements sont stockés. L’index spécifié doit déjà être défini. Si vous essayez d’utiliser un objet d’index qui n’existe pas, ou si l’index n’est pas définie lorsque vous appelez [recherche](#seek), MFC lève une exception.  
+### <a name="remarks"></a>Remarks  
+ Records in base tables are not stored in any particular order. Setting an index changes the order of records returned from the database, but it does not affect the order in which the records are stored. The specified index must already be defined. If you try to use an index object that does not exist, or if the index is not set when you call [Seek](#seek), MFC throws an exception.  
   
- Vous pouvez créer un nouvel index pour la table en appelant [CDaoTableDef::CreateIndex](../../mfc/reference/cdaotabledef-class.md#createindex) et en ajoutant le nouvel index à la collection d’index de l’objet sous-jacent en appelant [CDaoTableDef::Append](../../mfc/reference/cdaotabledef-class.md#append), puis de rouvrir le jeu d’enregistrements.  
+ You can create a new index for the table by calling [CDaoTableDef::CreateIndex](../../mfc/reference/cdaotabledef-class.md#createindex) and appending the new index to the Indexes collection of the underlying tabledef by calling [CDaoTableDef::Append](../../mfc/reference/cdaotabledef-class.md#append), and then reopening the recordset.  
   
- Les enregistrements retournés à partir d’un jeu d’enregistrements de type table peuvent être classés que par les index définis pour l’objet tabledef sous-jacent. Pour trier les enregistrements dans un ordre donné, vous pouvez ouvrir un jeu d’enregistrements de type instantané à l’aide de SQL ou de type **ORDERBY** clause stockées dans [CDaoRecordset::m_strSort](#m_strsort).  
+ Records returned from a table-type recordset can be ordered only by the indexes defined for the underlying tabledef. To sort records in some other order, you can open a dynaset-type or snapshot-type recordset using a SQL **ORDERBY** clause stored in [CDaoRecordset::m_strSort](#m_strsort).  
   
- Pour plus d’informations, consultez la rubrique « Objet Index » et la définition de « index en cours » dans l’aide de DAO.  
+ For related information, see the topic "Index Object" and the definition "current index" in DAO Help.  
   
-##  <a name="setfielddirty"></a>CDaoRecordset::SetFieldDirty  
- Appelez cette fonction membre pour un membre de données de champ de l’objet recordset comme étant modifié ou inchangé comme un indicateur.  
+##  <a name="setfielddirty"></a>  CDaoRecordset::SetFieldDirty  
+ Call this member function to flag a field data member of the recordset as changed or as unchanged.  
   
 ```  
 void SetFieldDirty(
@@ -2005,39 +2083,39 @@ void SetFieldDirty(
     BOOL bDirty = TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pv`  
- Contient l’adresse d’un membre de données de champ dans le jeu d’enregistrements ou **NULL**. Si **NULL**, tous les membres de données de champ dans le jeu d’enregistrements marqués. (C++ **NULL** n’est pas le même que la valeur Null dans la terminologie de base de données, ce qui signifie « n’avoir aucune valeur. »)  
+ Contains the address of a field data member in the recordset or **NULL**. If **NULL**, all field data members in the recordset are flagged. (C++ **NULL** is not the same as Null in database terminology, which means "having no value.")  
   
  `bDirty`  
- **TRUE** si le membre de données de champ doit être marqué comme « dirty » (modifiés). Dans le cas contraire **FALSE** si le membre de données de champ doit être marqué comme « nettoyer » (non modifié).  
+ **TRUE** if the field data member is to be flagged as "dirty" (changed). Otherwise **FALSE** if the field data member is to be flagged as "clean" (unchanged).  
   
-### <a name="remarks"></a>Remarques  
- Le marquage des champs restent inchangés garantit que le champ n’est pas mis à jour.  
+### <a name="remarks"></a>Remarks  
+ Marking fields as unchanged ensures the field is not updated.  
   
- Les marques de framework modifié des données membres de champ pour vous assurer qu’ils seront écrits à l’enregistrement sur la source de données par le mécanisme DAO record field exchange (DFX). Généralement la modification de la valeur d’un champ définit le champ modifié automatiquement, donc vous devrez rarement appeler `SetFieldDirty` vous-même, mais vous pouvez parfois souhaiter vous assurer que les colonnes seront explicitement mis à jour ou insérées, quelle que soit la valeur est dans le membre de données de champ. Le mécanisme DFX utilise également l’utilisation de **PSEUDONULL**. Pour plus d’informations, consultez [section CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
+ The framework marks changed field data members to ensure they will be written to the record on the data source by the DAO record field exchange (DFX) mechanism. Changing the value of a field generally sets the field dirty automatically, so you will seldom need to call `SetFieldDirty` yourself, but you might sometimes want to ensure that columns will be explicitly updated or inserted regardless of what value is in the field data member. The DFX mechanism also employs the use of **PSEUDONULL**. For more information, see [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
   
- Si le mécanisme de double tampon n’est pas utilisé, puis en modifiant la valeur du champ ne définit pas automatiquement le champ comme modifié. Dans ce cas, il sera nécessaire définir explicitement le champ comme modifié. L’indicateur contenues dans [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) contrôle de cette vérification automatique de champ.  
+ If the double-buffering mechanism is not being used, then changing the value of the field does not automatically set the field as dirty. In this case, it will be necessary to explicitly set the field as dirty. The flag contained in [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) controls this automatic field checking.  
   
 > [!NOTE]
->  Appelez cette fonction membre uniquement après avoir appelé [modifier](#edit) ou [AddNew](#addnew).  
+>  Call this member function only after you have called [Edit](#edit) or [AddNew](#addnew).  
   
- À l’aide de **NULL** pour le premier argument de la fonction s’appliqueront la fonction à tous **outputColumn** ne champs pas **param** champs `CDaoFieldExchange`. Par exemple, l’appel  
+ Using **NULL** for the first argument of the function will apply the function to all **outputColumn** fields, not **param** fields in `CDaoFieldExchange`. For instance, the call  
   
- [!code-cpp[NVC_MFCDatabase n° 6](../../mfc/codesnippet/cpp/cdaorecordset-class_6.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#6](../../mfc/codesnippet/cpp/cdaorecordset-class_6.cpp)]  
   
- définit uniquement **outputColumn** champs **NULL**; **param** champs ne seront pas affectées.  
+ will set only **outputColumn** fields to **NULL**; **param** fields will be unaffected.  
   
- Pour travailler sur une **param**, vous devez fournir l’adresse réelle de la personne **param** vous souhaitez travailler, telles que :  
+ To work on a **param**, you must supply the actual address of the individual **param** you want to work on, such as:  
   
- [!code-cpp[NVC_MFCDatabase #7](../../mfc/codesnippet/cpp/cdaorecordset-class_7.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#7](../../mfc/codesnippet/cpp/cdaorecordset-class_7.cpp)]  
   
- Cela signifie que vous ne pouvez pas définir tous les **param** champs **NULL**, comme vous pouvez le faire avec **outputColumn** champs.  
+ This means you cannot set all **param** fields to **NULL**, as you can with **outputColumn** fields.  
   
- `SetFieldDirty`est implémenté via `DoFieldExchange`.  
+ `SetFieldDirty` is implemented through `DoFieldExchange`.  
   
-##  <a name="setfieldnull"></a>CDaoRecordset::SetFieldNull  
- Appelez cette fonction membre pour marquer un membre de données de champ de l’objet recordset comme Null (en particulier n’avoir aucune valeur) ou non Null.  
+##  <a name="setfieldnull"></a>  CDaoRecordset::SetFieldNull  
+ Call this member function to flag a field data member of the recordset as Null (specifically having no value) or as non-Null.  
   
 ```  
 void SetFieldNull(
@@ -2045,35 +2123,35 @@ void SetFieldNull(
     BOOL bNull = TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pv`  
- Contient l’adresse d’un membre de données de champ dans le jeu d’enregistrements ou **NULL**. Si **NULL**, tous les membres de données de champ dans le jeu d’enregistrements marqués. (C++ **NULL** n’est pas le même que la valeur Null dans la terminologie de base de données, ce qui signifie « n’avoir aucune valeur. »)  
+ Contains the address of a field data member in the recordset or **NULL**. If **NULL**, all field data members in the recordset are flagged. (C++ **NULL** is not the same as Null in database terminology, which means "having no value.")  
   
  `bNull`  
- Différent de zéro si le membre de données de champ doit être marquée comme en ne comportant aucun valeur (Null). 0 dans le cas contraire, si le membre de données de champ doit être marquée comme étant non Null.  
+ Nonzero if the field data member is to be flagged as having no value (Null). Otherwise 0 if the field data member is to be flagged as non-Null.  
   
-### <a name="remarks"></a>Remarques  
- `SetFieldNull`est utilisé pour les champs liés dans le `DoFieldExchange` mécanisme.  
+### <a name="remarks"></a>Remarks  
+ `SetFieldNull` is used for fields bound in the `DoFieldExchange` mechanism.  
   
- Lorsque vous ajoutez un nouvel enregistrement à un jeu d’enregistrements, tous les membres de données de champ sont initialement définies sur une valeur Null et marqués comme « dirty » (modifiés). Lorsque vous récupérez un enregistrement à partir d’une source de données, ses colonnes déjà ont des valeurs ou sont Null. Si elle n’est pas approprié de sorte qu’un champ Null, un [CDaoException](../../mfc/reference/cdaoexception-class.md) est levée.  
+ When you add a new record to a recordset, all field data members are initially set to a Null value and flagged as "dirty" (changed). When you retrieve a record from a data source, its columns either already have values or are Null. If it is not appropriate to make a field Null, a [CDaoException](../../mfc/reference/cdaoexception-class.md) is thrown.  
   
- Si vous utilisez le mécanisme de double tampon, par exemple, si vous voulez désigner un champ de l’enregistrement actuel comme n’ayant ne pas une valeur, appelez `SetFieldNull` avec `bNull` la valeur **TRUE** à marquer comme Null. Si un champ a été marqué Null et que vous voulez lui attribuer une valeur, il vous suffit de définir sa nouvelle valeur. Vous n’êtes pas obligé de supprimer l’indicateur de valeur Null avec `SetFieldNull`. Pour déterminer si le champ peut être Null, appelez [IsFieldNullable](#isfieldnullable).  
+ If you are using the double-buffering mechanism, for example, if you specifically wish to designate a field of the current record as not having a value, call `SetFieldNull` with `bNull` set to **TRUE** to flag it as Null. If a field was previously marked Null and you now want to give it a value, simply set its new value. You do not have to remove the Null flag with `SetFieldNull`. To determine whether the field is allowed to be Null, call [IsFieldNullable](#isfieldnullable).  
   
- Si vous n’utilisez pas le mécanisme de double tampon, puis en modifiant la valeur du champ ne définit pas automatiquement le champ comme incorrectes et non Null. Vous devez spécifiquement définir les champs dirty et Null. L’indicateur contenues dans [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) contrôle de cette vérification automatique de champ.  
+ If you are not using the double-buffering mechanism, then changing the value of the field does not automatically set the field as dirty and non-Null. You must specifically set the fields dirty and non-Null. The flag contained in [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) controls this automatic field checking.  
   
- Le mécanisme DFX emploie l’utilisation de **PSEUDONULL**. Pour plus d’informations, consultez [section CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
+ The DFX mechanism employs the use of **PSEUDONULL**. For more information, see [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
   
 > [!NOTE]
->  Appelez cette fonction membre uniquement après avoir appelé [modifier](#edit) ou [AddNew](#addnew).  
+>  Call this member function only after you have called [Edit](#edit) or [AddNew](#addnew).  
   
- À l’aide de **NULL** pour le premier argument de la fonction appliquera la fonction uniquement à **outputColumn** ne champs pas **param** champs `CDaoFieldExchange`. Par exemple, l’appel  
+ Using **NULL** for the first argument of the function will apply the function only to **outputColumn** fields, not **param** fields in `CDaoFieldExchange`. For instance, the call  
   
- [!code-cpp[NVC_MFCDatabase #8](../../mfc/codesnippet/cpp/cdaorecordset-class_8.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#8](../../mfc/codesnippet/cpp/cdaorecordset-class_8.cpp)]  
   
- définit uniquement **outputColumn** champs **NULL**; **param** champs ne seront pas affectées.  
+ will set only **outputColumn** fields to **NULL**; **param** fields will be unaffected.  
   
-##  <a name="setfieldvalue"></a>CDaoRecordset::SetFieldValue  
- Appelez cette fonction membre pour définir la valeur d’un champ, position ordinale ou en modifiant la valeur de la chaîne.  
+##  <a name="setfieldvalue"></a>  CDaoRecordset::SetFieldValue  
+ Call this member function to set the value of a field, either by ordinal position or by changing the value of the string.  
   
 ```  
 virtual void SetFieldValue(
@@ -2096,70 +2174,70 @@ void SetFieldValue(
     LPCTSTR lpszValue);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- Un pointeur vers une chaîne contenant le nom d’un champ.  
+ A pointer to a string containing the name of a field.  
   
  `varValue`  
- Une référence à un [COleVariant](../../mfc/reference/colevariant-class.md) objet contenant la valeur du contenu du champ.  
+ A reference to a [COleVariant](../../mfc/reference/colevariant-class.md) object containing the value of the field's contents.  
   
  `nIndex`  
- Entier qui représente la position ordinale du champ dans la collection de champs du jeu d’enregistrements (de base zéro).  
+ An integer that represents the ordinal position of the field in the recordset's Fields collection (zero-based).  
   
  `lpszValue`  
- Un pointeur vers une chaîne contenant la valeur du contenu du champ.  
+ A pointer to a string containing the value of the field's contents.  
   
-### <a name="remarks"></a>Remarques  
- Utilisez `SetFieldValue` et [GetFieldValue](#getfieldvalue) pour lier les champs de manière dynamique au moment de l’exécution plutôt que de manière statique des colonnes de liaison à l’aide du [DoFieldExchange](#dofieldexchange) mécanisme.  
+### <a name="remarks"></a>Remarks  
+ Use `SetFieldValue` and [GetFieldValue](#getfieldvalue) to dynamically bind fields at run time rather than statically binding columns using the [DoFieldExchange](#dofieldexchange) mechanism.  
   
- Notez que si vous ne créez pas un jeu d’enregistrements UNICODE, vous devez utiliser une forme de `SetFieldValue` qui ne contient pas un `COleVariant` paramètre, ou le `COleVariant` objet doit être déclaré explicitement ANSI. Cela est possible à l’aide de la [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** forme de constructeur avec `vtSrc` la valeur `VT_BSTRT` (ANSI) ou à l’aide de la **COleVariant** (fonction) [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** avec `vtSrc` la valeur `VT_BSTRT`.  
+ Note that if you are not creating a UNICODE recordset, you must either use a form of `SetFieldValue` that does not contain a `COleVariant` parameter, or the `COleVariant` object must be explicitly declared ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc`**,** `vtSrc` **)** form of constructor with `vtSrc` set to `VT_BSTRT` (ANSI) or by using the **COleVariant** function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc`**,** `vtSrc` **)** with `vtSrc` set to `VT_BSTRT`.  
   
- Pour plus d’informations, consultez les rubriques « Champ objet » et « Valeur de propriété » dans l’aide de DAO.  
+ For related information, see the topics "Field Object" and "Value Property" in DAO Help.  
   
-##  <a name="setfieldvaluenull"></a>CDaoRecordset::SetFieldValueNull  
- Appelez cette fonction membre pour définir le champ à une valeur Null.  
+##  <a name="setfieldvaluenull"></a>  CDaoRecordset::SetFieldValueNull  
+ Call this member function to set the field to a Null value.  
   
 ```  
 void SetFieldValueNull(int nIndex);  
 void SetFieldValueNull(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- L’index du champ dans le jeu d’enregistrements, pour la recherche de l’index de base zéro.  
+ The index of the field in the recordset, for lookup by zero-based index.  
   
  `lpszName`  
- Le nom du champ dans le jeu d’enregistrements, pour la recherche par nom.  
+ The name of the field in the recordset, for lookup by name.  
   
-### <a name="remarks"></a>Notes  
- C++ **NULL** n’est pas identique à Null, ce qui, dans la terminologie de base de données, signifie « n’avoir aucune valeur. »  
+### <a name="remarks"></a>Remarks  
+ C++ **NULL** is not the same as Null, which, in database terminology, means "having no value."  
   
- Pour plus d’informations, consultez les rubriques « Champ objet » et « Valeur de propriété » dans l’aide de DAO.  
+ For related information, see the topics "Field Object" and "Value Property" in DAO Help.  
   
-##  <a name="setlockingmode"></a>CDaoRecordset::SetLockingMode  
- Appelez cette fonction membre pour définir le type de verrouillage pour l’ensemble d’enregistrements.  
+##  <a name="setlockingmode"></a>  CDaoRecordset::SetLockingMode  
+ Call this member function to set the type of locking for the recordset.  
   
 ```  
 void SetLockingMode(BOOL bPessimistic);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *bPessimistic*  
- Indicateur qui indique le type de verrouillage.  
+ A flag that indicates the type of locking.  
   
-### <a name="remarks"></a>Remarques  
- Lorsque le verrouillage pessimiste est en effet, la page de 2 Ko qui contient l’enregistrement que vous modifiez est verrouillé dès que vous appelez le **modifier** fonction membre. La page est déverrouillée lorsque vous appelez le **mise à jour** ou **fermer** fonction membre ou une des opérations de déplacement ou de recherche.  
+### <a name="remarks"></a>Remarks  
+ When pessimistic locking is in effect, the 2K page containing the record you are editing is locked as soon as you call the **Edit** member function. The page is unlocked when you call the **Update** or **Close** member function or any of the Move or Find operations.  
   
- Lorsque le verrouillage est appliqué optimiste, la page de 2 Ko qui contient l’enregistrement est verrouillée uniquement lors de l’enregistrement est mis à jour avec la **mise à jour** fonction membre.  
+ When optimistic locking is in effect, the 2K page containing the record is locked only while the record is being updated with the **Update** member function.  
   
- Si une page est verrouillée, aucun autre utilisateur peut modifier des enregistrements sur la même page. Si vous appelez `SetLockingMode` et passer une valeur différente de zéro et un autre utilisateur a déjà verrouillé la page, une exception est levée lorsque vous appelez **modifier**. Autres utilisateurs peuvent lire des données à partir de pages verrouillées.  
+ If a page is locked, no other user can edit records on the same page. If you call `SetLockingMode` and pass a nonzero value and another user already has the page locked, an exception is thrown when you call **Edit**. Other users can read data from locked pages.  
   
- Si vous appelez `SetLockingMode` avec une valeur de zéro et versions ultérieures appeler **mise à jour** pendant que la page est verrouillée par un autre utilisateur, une exception se produit. Pour voir les modifications apportées à votre enregistrement par un autre utilisateur (et perdre vos modifications), appelez le `SetBookmark` fonction membre avec la valeur du signet de l’enregistrement actif.  
+ If you call `SetLockingMode` with a zero value and later call **Update** while the page is locked by another user, an exception occurs. To see the changes made to your record by another user (and lose your changes), call the `SetBookmark` member function with the bookmark value of the current record.  
   
- Lorsque vous travaillez avec des sources de données ODBC, le mode de verrouillage est toujours l’optimisé.  
+ When working with ODBC data sources, the locking mode is always optimistic.  
   
-##  <a name="setparamvalue"></a>CDaoRecordset::SetParamValue  
- Appelez cette fonction membre pour définir la valeur d’un paramètre dans le jeu d’enregistrements en cours d’exécution.  
+##  <a name="setparamvalue"></a>  CDaoRecordset::SetParamValue  
+ Call this member function to set the value of a parameter in the recordset at run time.  
   
 ```  
 virtual void SetParamValue(
@@ -2172,89 +2250,89 @@ virtual void SetParamValue(
     const COleVariant& varValue);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- La position numérique du paramètre dans la collection de paramètres de la querydef.  
+ The numerical position of the parameter in the querydef's Parameters collection.  
   
  `var`  
- La valeur à définir ; consultez la section Notes.  
+ The value to set; see Remarks.  
   
  `lpszName`  
- Le nom du paramètre dont vous souhaitez définir la valeur.  
+ The name of the parameter whose value you want to set.  
   
-### <a name="remarks"></a>Notes  
- Le paramètre doit déjà avoir été établi dans le cadre de la chaîne du recordset SQL. Vous pouvez accéder à la paramètre par nom ou par sa position d’index dans la collection.  
+### <a name="remarks"></a>Remarks  
+ The parameter must already have been established as part of the recordset's SQL string. You can access the parameter either by name or by its index position in the collection.  
   
- Spécifiez la valeur à définir comme un `COleVariant` objet. Pour plus d’informations sur la définition de la valeur souhaitée et le type dans votre `COleVariant` d’objet, consultez la classe [COleVariant](../../mfc/reference/colevariant-class.md). Notez que si vous ne créez pas un jeu d’enregistrements UNICODE, le `COleVariant` objet doit être déclaré explicitement ANSI. Cela est possible à l’aide de la [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** forme de constructeur avec `vtSrc` la valeur `VT_BSTRT` (ANSI) ou à l’aide de la **COleVariant** (fonction) [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** avec `vtSrc` la valeur `VT_BSTRT`.  
+ Specify the value to set as a `COleVariant` object. For information about setting the desired value and type in your `COleVariant` object, see class [COleVariant](../../mfc/reference/colevariant-class.md). Note that if you are not creating a UNICODE recordset, the `COleVariant` object must be explicitly declared ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc`**,** `vtSrc` **)** form of constructor with `vtSrc` set to `VT_BSTRT` (ANSI) or by using the **COleVariant** function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc`**,** `vtSrc` **)** with `vtSrc` set to `VT_BSTRT`.  
   
-##  <a name="setparamvaluenull"></a>CDaoRecordset::SetParamValueNull  
- Appelez cette fonction membre pour définir le paramètre à une valeur Null.  
+##  <a name="setparamvaluenull"></a>  CDaoRecordset::SetParamValueNull  
+ Call this member function to set the parameter to a Null value.  
   
 ```  
 void SetParamValueNull(int nIndex);  
 void SetParamValueNull(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- L’index du champ dans le jeu d’enregistrements, pour la recherche de l’index de base zéro.  
+ The index of the field in the recordset, for lookup by zero-based index.  
   
  `lpszName`  
- Le nom du champ dans le jeu d’enregistrements, pour la recherche par nom.  
+ The name of the field in the recordset, for lookup by name.  
   
-### <a name="remarks"></a>Remarques  
- C++ **NULL** n’est pas identique à Null, ce qui, dans la terminologie de base de données, signifie « n’avoir aucune valeur. »  
+### <a name="remarks"></a>Remarks  
+ C++ **NULL** is not the same as Null, which, in database terminology, means "having no value."  
   
-##  <a name="setpercentposition"></a>CDaoRecordset::SetPercentPosition  
- Appelez cette fonction membre pour définir une valeur qui modifie l’emplacement approximatif de l’enregistrement actif dans l’objet de jeu d’enregistrements basé sur un pourcentage des enregistrements dans le jeu d’enregistrements.  
+##  <a name="setpercentposition"></a>  CDaoRecordset::SetPercentPosition  
+ Call this member function to set a value that changes the approximate location of the current record in the recordset object based on a percentage of the records in the recordset.  
   
 ```  
 void SetPercentPosition(float fPosition);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *fPosition*  
- Nombre compris entre 0 et 100.  
+ A number between 0 and 100.  
   
-### <a name="remarks"></a>Remarques  
- Lorsque vous travaillez avec un jeu d’enregistrements de type instantané ou de type, commencez par remplir l’objet recordset en accédant au dernier enregistrement avant d’appeler `SetPercentPosition`. Si vous appelez `SetPercentPosition` avant le remplissage complet de l’ensemble d’enregistrements, la quantité de déplacement est par rapport au nombre d’enregistrements accédés, comme indiqué par la valeur de [GetRecordCount](#getrecordcount). Vous pouvez accéder au dernier enregistrement en appelant `MoveLast`.  
+### <a name="remarks"></a>Remarks  
+ When working with a dynaset-type or snapshot-type recordset, first populate the recordset by moving to the last record before you call `SetPercentPosition`. If you call `SetPercentPosition` before fully populating the recordset, the amount of movement is relative to the number of records accessed as indicated by the value of [GetRecordCount](#getrecordcount). You can move to the last record by calling `MoveLast`.  
   
- Une fois que vous appelez `SetPercentPosition`, l’enregistrement à la position approximative correspondant à cette valeur devient le thread actuel.  
+ Once you call `SetPercentPosition`, the record at the approximate position corresponding to that value becomes current.  
   
 > [!NOTE]
->  Appel de `SetPercentPosition` pour déplacer l’enregistrement actif à un enregistrement spécifique dans un jeu d’enregistrements n’est pas recommandée. Appelez le [SetBookmark](#setbookmark) fonction de membre à la place.  
+>  Calling `SetPercentPosition` to move the current record to a specific record in a recordset is not recommended. Call the [SetBookmark](#setbookmark) member function instead.  
   
- Pour plus d’informations, consultez la rubrique « PercentPosition, propriété » dans l’aide de DAO.  
+ For related information, see the topic "PercentPosition Property" in DAO Help.  
   
-##  <a name="update"></a>CDaoRecordset::Update  
- Appelez cette fonction membre après un appel à la `AddNew` ou **modifier** fonction membre.  
+##  <a name="update"></a>  CDaoRecordset::Update  
+ Call this member function after a call to the `AddNew` or **Edit** member function.  
   
 ```  
 virtual void Update();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Cet appel est requis pour terminer la `AddNew` ou **modifier** opération.  
+### <a name="remarks"></a>Remarks  
+ This call is required to complete the `AddNew` or **Edit** operation.  
   
- Les deux `AddNew` et **modifier** préparer un tampon d’édition dans lequel sont placées les données ajoutées ou modifiées pour l’enregistrement dans la source de données. **Mise à jour** enregistre les données. Seuls les champs marqués ou détecté comme étant modifiées sont mises à jour.  
+ Both `AddNew` and **Edit** prepare an edit buffer in which the added or edited data is placed for saving to the data source. **Update** saves the data. Only those fields marked or detected as changed are updated.  
   
- Si la source de données prend en charge les transactions, vous pouvez rendre le **mise à jour** appeler (et de son `AddNew` ou **modifier** appeler) dans le cadre d’une transaction.  
+ If the data source supports transactions, you can make the **Update** call (and its corresponding `AddNew` or **Edit** call) part of a transaction.  
   
 > [!CAUTION]
->  Si vous appelez **mise à jour** sans d’abord appeler `AddNew` ou **modifier**, **mise à jour** lève une `CDaoException`. Si vous appelez `AddNew` ou **modifier**, vous devez appeler **mise à jour** avant d’appeler [MoveNext](#movenext) ou fermer l’ensemble d’enregistrements ou de la connexion de source de données. Dans le cas contraire, vos modifications sont perdues sans notification.  
+>  If you call **Update** without first calling either `AddNew` or **Edit**, **Update** throws a `CDaoException`. If you call `AddNew` or **Edit**, you must call **Update** before you call [MoveNext](#movenext) or close either the recordset or the data source connection. Otherwise, your changes are lost without notification.  
   
- Lorsque l’objet recordset est verrouillage pessimiste dans un environnement multi-utilisateur, l’enregistrement reste verrouillé à partir du moment **modifier** est utilisé jusqu'à ce que la mise à jour est terminée. Si le jeu d’enregistrements est verrouillage optimiste, l’enregistrement est verrouillé et comparé à l’enregistrement avant la modification juste avant qu’il est mis à jour dans la base de données. Si l’enregistrement a été modifié dans la mesure où vous avez appelé **modifier**, le **mise à jour** échoue et MFC lève une exception. Vous pouvez modifier le mode de verrouillage avec `SetLockingMode`.  
+ When the recordset object is pessimistically locked in a multiuser environment, the record remains locked from the time **Edit** is used until the updating is complete. If the recordset is optimistically locked, the record is locked and compared with the pre-edited record just before it is updated in the database. If the record has changed since you called **Edit**, the **Update** operation fails and MFC throws an exception. You can change the locking mode with `SetLockingMode`.  
   
 > [!NOTE]
->  Verrouillage optimiste est toujours utilisé sur les formats de base de données externe, telles que ODBC et ISAM installable.  
+>  Optimistic locking is always used on external database formats, such as ODBC and installable ISAM.  
   
- Pour plus d’informations, consultez les rubriques « Méthode AddNew », « Méthode CancelUpdate », « Méthode Delete », « Propriété LastModified », « Méthode de mise à jour » et « EditMode Property » dans l’aide de DAO.  
+ For related information, see the topics "AddNew Method", "CancelUpdate Method", "Delete Method", "LastModified Property", "Update Method", and "EditMode Property" in DAO Help.  
   
-## <a name="see-also"></a>Voir aussi  
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
- [Classe d’objet CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)   
- [CDaoWorkspace (classe)](../../mfc/reference/cdaoworkspace-class.md)   
- [CDaoDatabase (classe)](../../mfc/reference/cdaodatabase-class.md)   
- [CDaoQueryDef, classe](../../mfc/reference/cdaoquerydef-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDaoTableDef Class](../../mfc/reference/cdaotabledef-class.md)   
+ [CDaoWorkspace Class](../../mfc/reference/cdaoworkspace-class.md)   
+ [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)   
+ [CDaoQueryDef Class](../../mfc/reference/cdaoquerydef-class.md)
 

@@ -1,56 +1,75 @@
 ---
-title: "Presse-papiers&#160;: utilisation du m&#233;canisme de Presse-papiers OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "applications (OLE), Presse-papiers"
-  - "Presse-papiers (C++), formats d'OLE"
-  - "formats (C++), Presse-papiers pour OLE"
-  - "OLE (Presse-papiers)"
-  - "OLE (Presse-papiers), formats"
+title: 'Clipboard: Using the OLE Clipboard Mechanism | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [OLE], Clipboard
+- OLE Clipboard
+- Clipboard [MFC], OLE formats
+- OLE Clipboard, formats
+- formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Presse-papiers&#160;: utilisation du m&#233;canisme de Presse-papiers OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8087ff3c5054193fa681ea094d1f223855889b78
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-OLE utilise des formats standard et certains formats spécifiques à OLE pour transférer des données à travers le presse\-papiers.  
+---
+# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Clipboard: Using the OLE Clipboard Mechanism
+OLE uses standard formats and some OLE-specific formats for transferring data through the Clipboard.  
   
- Lorsque vous découpez ou copiez des données à partir d'une application, les données sont stockées dans le presse\-papiers pour être utilisées ultérieurement dans les opérations de collage.  Ces données sont dans divers formats.  Lorsqu'un utilisateur choisit de coller des données à partir de le presse\-papiers, l'application qui peut choisir lequel de ces formats utiliser.  L'application doit être écrite pour choisir le format qui offre le plus d'informations, à moins que l'utilisateur demande spécifiquement un certain format, utilisant un collage spécial.  Avant de continuer, vous pouvez lire les rubriques [Objets de données et sources de données \(OLE\)](../mfc/data-objects-and-data-sources-ole.md).  Elles décrivent les aspects fondamentaux de la façon dont les transferts de données fonctionnent, et leur implémentation dans vos applications.  
+ When you cut or copy data from an application, the data is stored on the Clipboard to be used later in paste operations. This data is in a variety of formats. When a user chooses to paste data from the Clipboard, the application can choose which of these formats to use. The application should be written to choose the format that provides the most information, unless the user specifically asks for a certain format, using Paste Special. Before continuing, you may want to read the [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md) topics. They describe the fundamentals of how data transfers work, and how to implement them in your applications.  
   
- Windows définit plusieurs formats standard qui peuvent être utilisés pour transférer des données dans le presse\-papiers.  Cela inclut les métafichiers, le texte, les images bitmap, entre autres.  OLE définit plusieurs formats spécifiques OLE.  Pour les applications qui nécessitent plus de détail que spécifié par ces formats standard, il est judicieux d'enregistrer leurs propres formats personnalisés de presse\-papiers.  Utilisez la fonction [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) de l'API Win32 pour cela.  
+ Windows defines a number of standard formats that can be used for transferring data through the Clipboard. These include metafiles, text, bitmaps, and others. OLE defines a number of OLE-specific formats, as well. For applications that need more detail than given by these standard formats, it is a good idea to register their own custom Clipboard formats. Use the Win32 API function [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) to do this.  
   
- Par exemple, Microsoft Excel enregistre un format personnalisé pour les feuilles de calcul.  Ce format contient davantage d'informations qu'une bitmap par exemple.  Lorsque ces données sont collées dans une application qui prend en charge le format feuille de calcul, toutes les formules et valeurs de la feuille de calcul sont conservées et peuvent être mises à jour si nécessaire.  Microsoft Excel met également des données formatées dans le presse\-papiers afin qu'elles puissent être collées comme des éléments OLE.  Tout conteneur de document OLE peut également coller ces informations comme élément incorporé.  Cet élément incorporé peut être modifié à l'aide de Microsoft Excel.  Le presse\-papiers contient également une bitmap simple de l'image de la plage sélectionnée dans la feuille de calcul.  Ceci peut aussi être collé dans des conteneurs de document OLE ou dans des éditeurs de bitmaps, comme Paint.  Dans le cas d'une bitmap, toutefois, il n'existe aucune méthode pour manipuler les données sous la forme d'une feuille de calcul.  
+ For example, Microsoft Excel registers a custom format for spreadsheets. This format carries much more information than, for example, a bitmap does. When this data is pasted into an application that supports the spreadsheet format, all the formulas and values from the spreadsheet are retained and can be updated if necessary. Microsoft Excel also puts data on the Clipboard in formats so that it can be pasted as an OLE item. Any OLE document container can paste this information as an embedded item. This embedded item can be changed using Microsoft Excel. The Clipboard also contains a simple bitmap of the image of the selected range on the spreadsheet. This can also be pasted into OLE document containers or into bitmap editors, like Paint. In the case of a bitmap, however, there is no way to manipulate the data as a spreadsheet.  
   
- Pour récupérer le maximum d'informations du presse\-papiers, les applications doivent vérifier ces formats personnalisés avant de copier les données du presse\-papiers.  
+ To retrieve the maximum amount of information from the Clipboard, applications should check for these custom formats before pasting data from the Clipboard.  
   
- Par exemple, pour activer la commande de secteur, vous pouvez entrer à un gestionnaire quelque chose similaire à ce qui suit :  
+ For example, to enable the Cut command, you might write a handler something like the following:  
   
- [!code-cpp[NVC_MFCListView#3](../mfc/codesnippet/CPP/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]  
+ [!code-cpp[NVC_MFCListView#3](../atl/reference/codesnippet/cpp/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [copie et collage de données](../mfc/clipboard-copying-and-pasting-data.md)  
+-   [Copying and pasting data](../mfc/clipboard-copying-and-pasting-data.md)  
   
--   [Ajouter d'autres formats](../mfc/clipboard-adding-other-formats.md)  
+-   [Adding other formats](../mfc/clipboard-adding-other-formats.md)  
   
--   [Utilisation du presse\-papiers windows](../mfc/clipboard-using-the-windows-clipboard.md)  
+-   [Using the Windows Clipboard](../mfc/clipboard-using-the-windows-clipboard.md)  
   
 -   [OLE](../mfc/ole-background.md)  
   
--   [Objets OLE de données et sources de données et transfert de données uniforme](../mfc/data-objects-and-data-sources-ole.md)  
+-   [OLE data objects and data sources and uniform data transfer](../mfc/data-objects-and-data-sources-ole.md)  
   
-## Voir aussi  
- [Presse\-papiers](../mfc/clipboard.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard](../mfc/clipboard.md)
+
+

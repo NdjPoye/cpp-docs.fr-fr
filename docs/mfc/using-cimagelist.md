@@ -1,49 +1,68 @@
 ---
-title: "Utilisation de CImageList | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CImageList"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList (classe), utilisation"
-  - "liste des images (contrôle)"
+title: Using CImageList | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CImageList
+dev_langs:
+- C++
+helpviewer_keywords:
+- image list control
+- CImageList class [MFC], using
 ms.assetid: 3d2a909e-d641-46b7-aada-81cab1a29b41
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Utilisation de CImageList
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bf76d92b14c2c4fc4d43115c569d1289a7ddc95c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Une liste d'images, représentée par la classe [CImageList](../mfc/reference/cimagelist-class.md), est un ensemble d'images de même taille, qui peuvent être référencées par leurs indices.  Les listes d'images sont utilisées pour gérer efficacement des jeux d'icônes ou bitmaps.  Les listes d'images ne sont pas elles\-mêmes des contrôles puisqu'elles ne sont pas des fenêtres; toutefois, elles sont utilisées avec différents types de contrôles, notamment les contrôles de liste \([CListCtrl](../mfc/reference/clistctrl-class.md)\), les contrôles d'arborescence \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\), et les contrôles de tabulation \([CTabCtrl](../mfc/reference/ctabctrl-class.md)\).  
+---
+# <a name="using-cimagelist"></a>Using CImageList
+An image list, represented by class [CImageList](../mfc/reference/cimagelist-class.md), is a collection of same-sized images, each of which can be referred to by its index. Image lists are used to efficiently manage large sets of icons or bitmaps. Image lists are not themselves controls since they are not windows; however, they are used with several different types of controls, including list controls ([CListCtrl](../mfc/reference/clistctrl-class.md)), tree controls ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)), and tab controls ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).  
   
- Toutes les images dans une liste d'images sont contenues dans une seule bitmap large dans le format d'affichage.  Une liste d'images peut également inclure une bitmap monochrome qui contient les masques utilisés pour ajouter des images de façon transparente \(style d'icône\).  `CImageList` fournit les méthodes qui vous permettent d'ajouter des images, créer et détruire des listes d'images, ajouter et supprimer des images, remplacer des images, fusionner des images, et déplacer des images.  
+ All images in an image list are contained in a single, wide bitmap in screen-device format. An image list may also include a monochrome bitmap that contains masks used to draw images transparently (icon style). `CImageList` provides member functions that enable you to draw images, create and destroy image lists, add and remove images, replace images, merge images, and drag images.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Types de listes d'images](../mfc/types-of-image-lists.md)  
+-   [Types of Image Lists](../mfc/types-of-image-lists.md)  
   
--   [Utilisation d'une liste d'images](../mfc/using-an-image-list.md)  
+-   [Using an Image List](../mfc/using-an-image-list.md)  
   
--   [Manipulation de listes d'images](../mfc/manipulating-image-lists.md)  
+-   [Manipulating Image Lists](../mfc/manipulating-image-lists.md)  
   
--   [Dessin d'images à partir d'une liste d'images](../mfc/drawing-images-from-an-image-list.md)  
+-   [Drawing Images from an Image List](../mfc/drawing-images-from-an-image-list.md)  
   
--   [Superpositions d'images dans les listes d'images](../mfc/image-overlays-in-image-lists.md)  
+-   [Image Overlays in Image Lists](../mfc/image-overlays-in-image-lists.md)  
   
--   [Faire glisser des images à partir d'une liste d'images](../mfc/dragging-images-from-an-image-list.md)  
+-   [Dragging Images from an Image List](../mfc/dragging-images-from-an-image-list.md)  
   
--   [Informations relatives aux images dans les listes d'images](../mfc/image-information-in-image-lists.md)  
+-   [Image Information in Image Lists](../mfc/image-information-in-image-lists.md)  
   
-## Voir aussi  
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

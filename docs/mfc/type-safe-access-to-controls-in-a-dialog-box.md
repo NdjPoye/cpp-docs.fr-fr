@@ -1,40 +1,59 @@
 ---
-title: "Acc&#232;s de type s&#233;curis&#233; aux contr&#244;les d&#39;une bo&#238;te de dialogue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contrôles communs (C++), dans des boîtes de dialogue"
-  - "contrôles (MFC), accéder dans les boîtes de dialogue"
-  - "boîtes de dialogue (C++), accès de type sécurisé aux contrôles"
-  - "boîtes de dialogue MFC, accès de type sécurisé aux contrôles"
-  - "accès sécurisé aux contrôles de boîte de dialogue"
-  - "accès de type sécurisé aux contrôles de boîte de dialogue"
-  - "contrôles Windows communs (C++), dans des boîtes de dialogue"
+title: Type-Safe Access to Controls in a Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- common controls [MFC], in dialog boxes
+- Windows common controls [MFC], in dialog boxes
+- safe access to dialog box controls
+- dialog boxes [MFC], type-safe access to controls
+- controls [MFC], accessing in dialog boxes
+- type-safe access to dialog box controls
+- MFC dialog boxes [MFC], type-safe access to controls
 ms.assetid: 67021025-dd93-4d6a-8bed-a1348fe50685
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Acc&#232;s de type s&#233;curis&#233; aux contr&#244;les d&#39;une bo&#238;te de dialogue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 31b00f0bfa97c0f725bd0254b171b0da6c79392d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Les contrôles d'une boîte de dialogue peuvent utiliser les interfaces des classes de contrôles MFC telles que `CListBox` et `CEdit`.  Vous pouvez créer un objet contrôle et l'attacher à un contrôle de boîte de dialogue.  Vous pouvez ensuite accéder au contrôle via son interface de classe, en appelant des fonctions membres pour agir sur le contrôle.  Les méthodes décrites ici sont conçues pour vous donner un accès de type sécurisé à un contrôle.  Ceci est particulièrement utile pour les contrôles tels que les zones d'édition et les zones de liste.  
+---
+# <a name="type-safe-access-to-controls-in-a-dialog-box"></a>Type-Safe Access to Controls in a Dialog Box
+The controls in a dialog box can use the interfaces of MFC control classes such as `CListBox` and `CEdit`. You can create a control object and attach it to a dialog control. Then you can access the control through its class interface, calling member functions to operate on the control. The methods described here are designed to give you type-safe access to a control. This is especially useful for controls such as edit boxes and list boxes.  
   
- Vous disposez de deux méthodes pour établir une connexion entre un contrôle d'une boîte de dialogue et une variable membre de contrôle C\+\+ dans une classe dérivée de `CDialog` :  
+ There are two approaches to making a connection between a control in a dialog box and a C++ control member variable in a `CDialog`-derived class:  
   
--   [Sans Assistants Code](../mfc/type-safe-access-to-controls-without-code-wizards.md)  
+-   [Without Code Wizards](../mfc/type-safe-access-to-controls-without-code-wizards.md)  
   
--   [Avec des Assistants Code](../mfc/type-safe-access-to-controls-with-code-wizards.md)  
+-   [With Code Wizards](../mfc/type-safe-access-to-controls-with-code-wizards.md)  
   
-## Voir aussi  
- [Boîtes de dialogue](../mfc/dialog-boxes.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)
+
+

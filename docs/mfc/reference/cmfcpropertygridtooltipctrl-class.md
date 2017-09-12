@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCPropertyGridToolTipCtrl | Documents Microsoft
+title: CMFCPropertyGridToolTipCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,10 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCPropertyGridToolTipCtrl class
-- CMFCPropertyGridToolTipCtrl class, destructor
-- PreTranslateMessage method
-- ~CMFCPropertyGridToolTipCtrl destructor
+- CMFCPropertyGridToolTipCtrl [MFC], CMFCPropertyGridToolTipCtrl
+- CMFCPropertyGridToolTipCtrl [MFC], Create
+- CMFCPropertyGridToolTipCtrl [MFC], Deactivate
+- CMFCPropertyGridToolTipCtrl [MFC], GetLastRect
+- CMFCPropertyGridToolTipCtrl [MFC], Hide
+- CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
+- CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
 caps.latest.revision: 24
 author: mikeblome
@@ -44,56 +47,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: e5290706799dcd253205ac74dad72cd7783d19dd
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bdc742b8713252d57dbf58888f51b37d7042623f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl (classe)
-Implémente une info-bulle de contrôle qui le [CMFCPropertyGridCtrl classe](../../mfc/reference/cmfcpropertygridctrl-class.md) utilise pour afficher des info-bulles.  
+# <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl Class
+Implements a tooltip control that the [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md) uses to display tooltips.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCPropertyGridToolTipCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
-  
-|||  
-|-|-|  
-|Nom|Description|  
-|[CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl](#cmfcpropertygridtooltipctrl)|Construit un objet `CMFCPropertyGridToolTipCtrl`.|  
-|`CMFCPropertyGridToolTipCtrl::~CMFCPropertyGridToolTipCtrl`|Destructeur.|  
-  
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|Nom|Description|  
-|[CMFCPropertyGridToolTipCtrl::Create](#create)|Crée une fenêtre pour le contrôle d’info-bulle.|  
-|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Désactive et masque le contrôle d’info-bulle.|  
-|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Retourne les coordonnées de la dernière position du contrôle d’info-bulle.|  
-|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Masque le contrôle d’info-bulle.|  
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour convertir des messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
-|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Définit l’espacement entre le texte d’info-bulle et la bordure de la fenêtre d’info-bulle.|  
-|[CMFCPropertyGridToolTipCtrl::Track](#track)|Affiche le contrôle d’info-bulle.|  
+|Name|Description|  
+|[CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl](#cmfcpropertygridtooltipctrl)|Constructs a `CMFCPropertyGridToolTipCtrl` object.|  
+|`CMFCPropertyGridToolTipCtrl::~CMFCPropertyGridToolTipCtrl`|Destructor.|  
   
-## <a name="remarks"></a>Remarques  
- Info-bulles sont affichent lorsque le pointeur se trouve sur un nom de propriété. Le [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) classe affiche une info-bulle afin qu’il soit lisible par l’utilisateur. En règle générale, la position d’une info-bulle est déterminée par la position du pointeur. À l’aide de cette classe, l’info-bulle s’affiche sur le nom de propriété et ressemble à l’extension de propriété naturelle, afin que le nom de propriété soit entièrement visible.  
+### <a name="public-methods"></a>Public Methods  
   
- MFC crée ce contrôle automatiquement et l’utilise dans les [CMFCPropertyGridCtrl classe](../../mfc/reference/cmfcpropertygridctrl-class.md).  
+|||  
+|-|-|  
+|Name|Description|  
+|[CMFCPropertyGridToolTipCtrl::Create](#create)|Creates a window for the tooltip control.|  
+|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Deactivates and hides the tooltip control.|  
+|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Returns the coordinates of the last position of the tooltip control.|  
+|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Hides the tooltip control.|  
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Used by class [CWinApp](../../mfc/reference/cwinapp-class.md) to translate window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Sets the spacing between the tooltip text and the border of the tooltip window.|  
+|[CMFCPropertyGridToolTipCtrl::Track](#track)|Displays the tooltip control.|  
   
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment construire un objet de la `CMFCPropertyGridToolTipCtrl` classe et comment afficher le contrôle d’info-bulle.  
+## <a name="remarks"></a>Remarks  
+ Tooltips are displayed when the pointer rests on a property name. The [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) class displays a tooltip so that it is easily readable by the user. Usually, the position of a tooltip is determined by the position of the pointer. By using this class, the tooltip appears over the property name and resembles the natural property extension, so that the property name is fully visible.  
   
- [!code-cpp[NVC_MFC_RibbonApp n °&23;](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]  
+ MFC automatically creates this control and uses it in the [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCPropertyGridToolTipCtrl` class, and how to display the tooltip control.  
+  
+ [!code-cpp[NVC_MFC_RibbonApp#23](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -102,71 +105,71 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
   
  [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxpropertygridtooltipctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxpropertygridtooltipctrl.h  
   
-##  <a name="cmfcpropertygridtooltipctrl"></a>CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
- Construit un objet `CMFCPropertyGridToolTipCtrl`.  
+##  <a name="cmfcpropertygridtooltipctrl"></a>  CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl  
+ Constructs a `CMFCPropertyGridToolTipCtrl` object.  
   
 ```  
 CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
 ```  
   
-##  <a name="create"></a>CMFCPropertyGridToolTipCtrl::Create  
- Crée une fenêtre pour le contrôle d’info-bulle.  
+##  <a name="create"></a>  CMFCPropertyGridToolTipCtrl::Create  
+ Creates a window for the tooltip control.  
   
 ```  
 BOOL Create(CWnd* pWndParent);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- Pointeur vers la fenêtre parente.  
+ A pointer to the parent window.  
   
-### <a name="return-value"></a>Valeur de retour  
- TRUE si la fenêtre a été créée avec succès ; Sinon, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the window was successfully created; otherwise, FALSE.  
   
-##  <a name="deactivate"></a>CMFCPropertyGridToolTipCtrl::Deactivate  
- Désactive et masque le contrôle d’info-bulle.  
+##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate  
+ Deactivates and hides the tooltip control.  
   
 ```  
 void Deactivate();
 ```  
   
-### <a name="remarks"></a>Notes  
- Cette méthode définit la dernière position et texte des valeurs vides, afin que les futurs appels à [CMFCPropertyGridToolTipCtrl::Track](#track) l’info-bulle.  
+### <a name="remarks"></a>Remarks  
+ This method sets the last position and text to empty values, so that future calls to [CMFCPropertyGridToolTipCtrl::Track](#track) display the tooltip.  
   
-##  <a name="getlastrect"></a>CMFCPropertyGridToolTipCtrl::GetLastRect  
- Retourne les coordonnées de la dernière position du contrôle d’info-bulle.  
+##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect  
+ Returns the coordinates of the last position of the tooltip control.  
   
 ```  
 void GetLastRect(CRect& rect) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [out] `rect`  
- Contient la dernière position du contrôle d’info-bulle.  
+ Contains the last position of the tooltip control.  
   
-##  <a name="hide"></a>CMFCPropertyGridToolTipCtrl::Hide  
- Masque le contrôle d’info-bulle.  
+##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
+ Hides the tooltip control.  
   
 ```  
 void Hide();
 ```  
   
-##  <a name="settextmargin"></a>CMFCPropertyGridToolTipCtrl::SetTextMargin  
- Définit l’espacement entre le texte d’info-bulle et la bordure de la fenêtre d’info-bulle.  
+##  <a name="settextmargin"></a>  CMFCPropertyGridToolTipCtrl::SetTextMargin  
+ Sets the spacing between the tooltip text and the border of the tooltip window.  
   
 ```  
 void SetTextMargin(int nTextMargin);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nTextMargin`  
- Spécifie l’espacement entre le texte info-bulle du contrôle et la bordure de la fenêtre d’info-bulle. La valeur par défaut est 10 pixels.  
+ Specifies the spacing between the tooltip control text and the border of the tooltip window. The default value is 10 pixels.  
   
-##  <a name="track"></a>CMFCPropertyGridToolTipCtrl::Track  
- Affiche le contrôle d’info-bulle.  
+##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
+ Displays the tooltip control.  
   
 ```  
 void Track(
@@ -174,17 +177,17 @@ void Track(
     const CString& strText);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Spécifie la position et la taille de l’info-bulle du contrôle.  
+ Specifies the position and size of the tooltip control.  
   
  [in] `strText`  
- Spécifie le texte à afficher dans l’info-bulle.  
+ Specifies the text to be shown in the tooltip.  
   
-### <a name="remarks"></a>Remarques  
- Cette méthode affiche le contrôle d’info-bulle à la position et la taille spécifiée par `rect`. Si la position, la taille et le texte n’ont pas changé depuis la dernière fois que cette méthode a été appelée, cette méthode n’a aucun effet.  
+### <a name="remarks"></a>Remarks  
+ This method displays the tooltip control at the position and size specified by `rect`. If the position, size, and text have not changed since the last time this method was called, this method has no effect.  
   
-## <a name="see-also"></a>Voir aussi  
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)
 

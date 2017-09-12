@@ -1,51 +1,70 @@
 ---
-title: "Installation de l&#39;Automation &#224; distance | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "installer l'Automation à distance"
-  - "Automation à distance, installation"
+title: Remote Automation Installation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation [MFC], installation
+- installing Remote Automation [MFC]
 ms.assetid: 9a02c9f6-dfc6-4489-b240-a1afe25fa0c5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Installation de l&#39;Automation &#224; distance
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 146a571ddd3b612aa7f7b3cb9489bb2764463967
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-L'automatisation distante a relativement peu de composants.  
+---
+# <a name="remote-automation-installation"></a>Remote Automation Installation
+Remote Automation has relatively few components:  
   
--   Le proxy client d'automatisation à distance, AUTPRX32.DLL.  
+-   The Remote Automation client proxy, AUTPRX32.DLL.  
   
--   Le composant côté serveur d'automatisation à distance, Gestionnaire d'automation, AUTMGR32.EXE.  
+-   The Remote Automation server-side component, the Automation Manager, AUTMGR32.EXE.  
   
--   Le gestionnaire RAC, RACMGR32.EXE, avec sa correspondance RACREG32.DLL.  
+-   The RAC Manager, RACMGR32.EXE, with its matching RACREG32.DLL.  
   
- Sur ceux\-ci, le gestionnaire RAC est écrit dans Visual Basic et requiert donc une prise en charge de la librairie de Visual Basic run\-time.  Celles\-ci et les autres fichiers d'automatisation distante sont installés par le programme d'installation si vous installez Visual C\+\+ Enterprise Edition.  
+ Of these, RAC Manager is written in Visual Basic and therefore needs the Visual Basic run-time support. These and the other Remote Automation files are installed by Setup when you install Visual C++ Enterprise Edition.  
   
- Si vous copiez des composants d'automatisation à distance sur un ordinateur sur lequel la version de Visual C\+\+ Enterprise Edition est installée, vérifiez que REGSRV32.EXE est dans le chemin d'accès de l'ordinateur, et le registre RACREG32.DLL à la ligne de commande suivante :  
+ If you copy the Remote Automation components to a computer on which Visual C++ version Enterprise Edition is not installed, ensure that REGSRV32.EXE is on the computer's path, and register RACREG32.DLL using the following command line:  
   
  REGSRVR32 RACREG32.DLL  
   
 > [!NOTE]
->  Les versions du gestionnaire RAC avant Visual C\+\+ 5.0 demandaient GUAGE32.OCX et TABCTL32.OCX.  Aucune de ces dernières n'est requise pour la version du gestionnaire RAC fournie avec Visual C\+\+ Enterprise Edition, la version 5,0 ou celle ultérieure.  
+>  Versions of RAC Manager before Visual C++ 5.0 required GUAGE32.OCX and TABCTL32.OCX. Neither of these is required for the version of RAC Manager that ships with Visual C++ Enterprise Edition, version 5.0 or later.  
   
-## Dans cette section  
- [Le gestionnaire d'Automation](../mfc/automation-manager-mfc.md)  
+## <a name="in-this-section"></a>In This Section  
+ [The Automation Manager](../mfc/automation-manager-mfc.md)  
   
- [Le gestionnaire de connexion automatique à distance.](../mfc/remote-automation-connection-manager.md)  
+ [The Remote Automation Connection Manager](../mfc/remote-automation-connection-manager.md)  
   
- [Composants utilisateur d'automation à distance](../mfc/remote-automation-user-components.md)  
+ [Remote Automation User Components](../mfc/remote-automation-user-components.md)  
   
-## Voir aussi  
- [Automation à distance](../mfc/remote-automation.md)
+## <a name="see-also"></a>See Also  
+ [Remote Automation](../mfc/remote-automation.md)
+
+

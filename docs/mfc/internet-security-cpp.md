@@ -1,45 +1,62 @@
 ---
-title: "S&#233;curit&#233; Internet (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sécurité d'accès du code (C++), considérations relatives à la sécurité Internet"
-  - "signature du code (C++)"
-  - "signature du code (C++), sécurité Internet"
-  - "signatures numériques, sécurité Internet"
-  - "applications Internet, sécurité"
-  - "sandboxing"
-  - "sécurité (MFC)"
-  - "sécurité (MFC), Internet"
-  - "sécurité des applications Web"
-  - "sécurité des applications Web, approches de la sécurité Internet"
+title: Internet Security (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- code signing [MFC], Internet security
+- sandboxing [MFC]
+- digital signatures [MFC], Internet security
+- code signing [MFC]
+- Web application security [MFC]
+- code access security [MFC], Internet security considerations
+- security [MFC]
+- security [MFC], Internet
+- Internet applications [MFC], security
+- Web application security [MFC], Internet security approaches
 ms.assetid: bf0da697-81bc-41f0-83fa-d7f82ed83df8
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# S&#233;curit&#233; Internet (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: aeaa61e8486e3811f6ae25843490d3043db8cabf
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-La sécurité du code est un problème majeur pour les développeurs et les utilisateurs des applications Web.  Il existe des risques : code malveillant, code qui a été falsifié, et code de sites ou d'auteurs inconnus.  
+---
+# <a name="internet-security-c"></a>Internet Security (C++)
+Code safety is a major issue for developers and for users of Internet applications. There are risks: malicious code, code that has been tampered with, and code from unknown sites or authors.  
   
- Il existe deux approches de base pour la sécurité du développement sur Internet.  Le premier est appelé « sandboxing ». Dans cette approche, une application est limitée à un ensemble spécifique d'API, et exclue de ceux qui peuvent se révéler dangereux tel qu'un fichier E\/S où un programme pourrait détruire les données sur l'ordinateur d'un utilisateur.  Le deuxième est implémenté à l'aide de signatures numériques.  Cette approche est appelée « shrinkwrap » pour Internet.  Le code est extrait et archivé à l'aide de la technologie de clé privée\/clé publique.  Avant que le code soit exécuté, la signature numérique est vérifiée pour garantir que le code provient d'une source connue authentifiée, et que le code n'a pas été modifié vu qu'il a été signé.  
+ There are two basic approaches to security when developing for the Internet. The first is called "sandboxing." In this approach, an application is restricted to a particular set of APIs, and excluded from potentially dangerous ones such as file I/O where a program could destroy data on a user's computer. The second is implemented using digital signatures. This approach is referred to as "shrinkwrap" for the Internet. Code is verified and signed using private key/public key technology. Before the code is run, its digital signature is verified to ensure that the code is from a known authenticated source, and that the code has not been altered since it has been signed.  
   
- Dans le premier cas, vous espérez que l'application ne causera pas de problème et vous faites confiance à l'origine de l'application.  Dans le second, les signatures numériques sont utilisées pour vérifier l'authenticité.  La signature numérique est une utilisation standard pour identifier et fournir des détails sur l'auteur du code.  Sa technologie est basés sur des normes, notamment RSA et X.509.  Les navigateurs permettent généralement aux utilisateurs de choisir s'ils souhaitent télécharger et exécuter les codes d'origines inconnues.  
+ In the first case, you trust that the application will not do any harm and you trust the origin of the application. In the second, digital signatures are used to verify authenticity. Digital signing is an industry standard used to identify and provide details about the publisher of the code. Its technology is based on standards, including RSA and X.509. Browsers typically allow users to choose if they want to download and run code of unknown origin.  
   
- Des informations supplémentaires sur la signature de code et d'autres mesures de sécurité sont disponibles sur le Web.  Les informations sont accessibles via le site d'atelier Web de MSDN Online [http:\/\/msdn.microsoft.com\/](http://msdn.microsoft.com/), ou via World Wide Web Consortium à [http:\/\/www.w3.org\/](http://www.w3.org/).  
   
-## Voir aussi  
- [Tâches de programmation Internet MFC](../mfc/mfc-internet-programming-tasks.md)   
- [Éléments fondamentaux relatifs à la programmation Internet MFC](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

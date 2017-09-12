@@ -1,5 +1,5 @@
 ---
-title: "Styles de contrôle de barre d’outils | Documents Microsoft"
+title: ToolBar Control Styles | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,7 +11,7 @@ ms.topic: article
 dev_langs:
 - C++
 helpviewer_keywords:
-- ToolBar control styles
+- ToolBar control styles [MFC]
 ms.assetid: 0f717eb9-fa32-4263-b852-809238863feb
 caps.latest.revision: 16
 author: mikeblome
@@ -31,65 +31,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1c50009a50c5b80e007add9de679315df6aecea9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 383120b1eecd7db663ef878c386f51ad6a2a92f8
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="toolbar-control-styles"></a>Styles de contrôle ToolBar
-[Classe de CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) a un jeu d’indicateurs de style qui déterminent l’apparence et le comportement du bouton. Vous pouvez définir une combinaison de ces indicateurs en appelant [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). Cette rubrique répertorie les valeurs d’indicateur de style et leur signification.  
+# <a name="toolbar-control-styles"></a>ToolBar Control Styles
+[CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) has a set of style flags that determine the appearance and behavior of the button. You can set a combination of these flags by calling             [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). This topic lists the style flag values and their meanings.  
   
-## <a name="property-values"></a>Valeurs de la propriété  
- Les valeurs suivantes déterminent le type de bouton qui représente le contrôle :  
+## <a name="property-values"></a>Property Values  
+ The following values determine the type of button that the control represents:  
   
  TBBS_BUTTON  
- Bouton de commande standard (par défaut).  
+ Standard pushbutton (default).  
   
  TBBS_CHECKBOX  
- Case à cocher.  
+ Check box.  
   
  TBBS_CHECKGROUP  
- Le début d’un groupe de cases à cocher.  
+ The start of a group of checkboxes.  
   
  TBBS_GROUP  
- Le début d’un groupe de boutons.  
+ The start of a group of buttons.  
   
  TBBS_SEPARATOR  
- Séparateur.  
+ Separator.  
   
- Les valeurs suivantes représentent l’état actuel du contrôle :  
+ The following values represent the current status of the control:  
   
  TBBS_CHECKED  
- Case à cocher est activée.  
+ Check box is checked.  
   
  TBBS_DISABLED  
- Le contrôle est désactivé.  
+ Control is disabled.  
   
  TBBS_INDETERMINATE  
- Case à cocher est dans un état indéterminé.  
+ Check box is in an indeterminate state.  
   
  TBBS_PRESSED  
- Bouton est enfoncé.  
+ Button is pressed.  
   
- La valeur suivante modifie la disposition du bouton dans la barre d’outils :  
+ The following value changes the layout of the button in the toolbar:  
   
  TBBS_BREAK  
- Place l’élément sur une nouvelle ligne ou dans une nouvelle colonne sans séparation de colonnes.  
+ Places the item on a new line or in a new column without separating columns.  
   
-## <a name="remarks"></a>Notes  
- Le style actuel est stocké dans [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Ne définissez pas une nouvelle valeur dans `m_nStyle` directement, car certaines classes dérivées effectuent un traitement supplémentaire lorsque vous appelez `SetStyles`.  
+## <a name="remarks"></a>Remarks  
+ The current style is stored in                 [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Do not set a new value in                 `m_nStyle` directly, because some derived classes perform additional processing when you call                 `SetStyles`.  
   
- Le Gestionnaire visuel détermine l’apparence des boutons dans chaque état. Consultez la page [Gestionnaire de visualisation](../../mfc/visualization-manager.md) pour plus d’informations.  
+ The visual manager determines the appearance of buttons in each state. See                 [Visualization Manager](../../mfc/visualization-manager.md) for more information.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxtoolbarbutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbarbutton.h  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)   
- [CMFCToolBarButton (classe)](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [Gestionnaire de visualisation](../../mfc/visualization-manager.md)
+ [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [Visualization Manager](../../mfc/visualization-manager.md)
 
 
 

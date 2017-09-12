@@ -1,66 +1,85 @@
 ---
-title: "Exemple de liste de bo&#238;te de dialogue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exemples d'applications (MFC), boîtes de dialogue"
+title: Dialog Sample List | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sample applications [MFC], dialog boxes
 ms.assetid: 3fc7dd7c-d758-4c43-96bb-0ea638ca1ad7
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Exemple de liste de bo&#238;te de dialogue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: daab211b6f804bb5ab16eaddf970b90bd9ec32b3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Consultez les exemples de programmes suivants qui illustrent des boîtes de dialogue et les feuilles de propriétés :  
+---
+# <a name="dialog-sample-list"></a>Dialog Sample List
+See the following sample programs that illustrate dialog boxes and property sheets:  
   
- *Exemple d'application MDI avec boîtes de dialogue*  
+ *MDI Sample Application with Dialog Boxes*  
   
--   [SCRIBBLE](../top/visual-cpp-samples.md)  
+-   [SCRIBBLE](../visual-cpp-samples.md)  
   
- *Boîtes de dialogue non modales*  
+ *Modeless Dialog Box*  
   
--   [MODELESS](../top/visual-cpp-samples.md)  
+-   [MODELESS](../visual-cpp-samples.md)  
   
- *Boîte de dialogue de feuille de propriétés \(boîte de dialogue de l'Onglet\)*  
+ *Property Sheet Dialog Box (Tab Dialog Box)*  
   
--   [PROPDLG](../top/visual-cpp-samples.md)  
+-   [PROPDLG](../visual-cpp-samples.md)  
   
--   [CMNCTRL1](../top/visual-cpp-samples.md)  
+-   [CMNCTRL1](../visual-cpp-samples.md)  
   
--   [CMNCTRL2](../top/visual-cpp-samples.md)  
+-   [CMNCTRL2](../visual-cpp-samples.md)  
   
- *Application basée sur une boîte de dialogue*  
+ *Application Based on a Dialog Box*  
   
--   [CMNCTRL1](../top/visual-cpp-samples.md)  
+-   [CMNCTRL1](../visual-cpp-samples.md)  
   
--   [CMNCTRL2](../top/visual-cpp-samples.md)  
+-   [CMNCTRL2](../visual-cpp-samples.md)  
   
- *Contrôles de boîte de dialogue*  
+ *Dialog-Box Controls*  
   
--   [CMNCTRL1](../top/visual-cpp-samples.md)  
+-   [CMNCTRL1](../visual-cpp-samples.md)  
   
--   [CMNCTRL2](../top/visual-cpp-samples.md)  
+-   [CMNCTRL2](../visual-cpp-samples.md)  
   
--   [CTRLTEST](../top/visual-cpp-samples.md)  
+-   [CTRLTEST](../visual-cpp-samples.md)  
   
- *Modes formulaire comme un dialogue*  
+ *Dialog-Like Form Views*  
   
--   [VIEWEX](../top/visual-cpp-samples.md)  
+-   [VIEWEX](../visual-cpp-samples.md)  
   
- *Modèle de dialogue en mémoire*  
+ *In-Memory Dialog Template*  
   
--   [DLGTEMPL](../top/visual-cpp-samples.md)  
+-   [DLGTEMPL](../visual-cpp-samples.md)  
   
-## Voir aussi  
- [Boîtes de dialogue](../mfc/dialog-boxes.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)
+
+

@@ -1,40 +1,58 @@
 ---
-title: "Dispositifs de suivi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "applications (OLE), dispositifs de suivi"
-  - "CDC (classe), dispositifs de suivi"
-  - "CRectTracker (classe), implémenter des dispositifs de suivi"
-  - "OLE (applications) (C++), dispositifs de suivi"
-  - "conteneurs OLE, dispositifs de suivi"
-  - "applications serveur OLE, dispositifs de suivi"
-  - "dispositifs de suivi"
-  - "suivre des éléments OLE"
+title: Trackers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- trackers [MFC]
+- OLE applications [MFC], trackers
+- applications [OLE], trackers
+- tracking OLE items [MFC]
+- OLE containers [MFC], trackers
+- CDC class [MFC], trackers
+- CRectTracker class [MFC], implementing trackers
+- OLE server applications [MFC], trackers
 ms.assetid: dcd09399-6637-4621-80e5-d12670429787
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Dispositifs de suivi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f4ea3db56feb48124a56ab71602261ab52fa7559
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-La classe de [CRectTracker](../mfc/reference/crecttracker-class.md) fournit une interface utilisateur entre les éléments rectangulaires dans votre application et l'utilisateur en fournissant divers styles d'affichage.  Ces styles incluent les bordures pleines , hachées ou discontinues ; un modèle haché couvrant l'élément ; et poignées de redimensionnement qui peuvent être placées à l'extérieur ou à l'intérieur d'une bordure.  Les dispositifs de suivi sont souvent utilisés conjointement avec des éléments OLE, c. \- à\-d., les objets dérivés de `COleClientItem`.  Les rectangles de suivi donnent des signaux visuels sur l'état actuel de l'élément.  
+---
+# <a name="trackers"></a>Trackers
+The [CRectTracker](../mfc/reference/crecttracker-class.md) class provides a user interface between rectangular items in your application and your user by providing a variety of display styles. These styles include solid, hatched, or dashed borders; a hatched pattern that covers the item; and resize handles that can be located on the outside or inside of a border. Trackers are often used in conjunction with OLE items, that is, objects derived from `COleClientItem`. The tracker rectangles give visual cues on the current status of the item.  
   
- L'exemple de liaison et incorporation d'objets MFC [OCLIENT](../top/visual-cpp-samples.md) illustre une interface commune à des dispositifs de suivi et des éléments client OLE du point de vue d'une application conteneur.  Pour une démonstration des différents styles et capacités d'un dispositif de suivi objet, consultez l'exemple général MFC [DISPOSITIF DE SUIVI](../top/visual-cpp-samples.md).  
+ The MFC OLE sample [OCLIENT](../visual-cpp-samples.md) demonstrates a common interface using trackers and OLE client items from the viewpoint of a container application. For a demonstration of the different styles and abilities of a tracker object, see the MFC general sample [TRACKER](../visual-cpp-samples.md).  
   
- Pour plus d'informations sur l'implémentation de l'unité de suivi dans votre application OLE, consultez [Dispositifs de suivi : Implémentation de l'unité de suivi dans votre application OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)  
+ For more information on implementing trackers in your OLE application, see [Trackers: Implementing Trackers in Your OLE Application](../mfc/trackers-implementing-trackers-in-your-ole-application.md)  
   
-## Voir aussi  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
  [COleClientItem Class](../mfc/reference/coleclientitem-class.md)
+

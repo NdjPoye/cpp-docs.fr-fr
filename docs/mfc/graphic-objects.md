@@ -1,75 +1,92 @@
 ---
-title: "Objets graphiques | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "HRGN"
-  - "HFONT"
-  - "HBITMAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bitmaps (C++), créer dans des contextes de périphérique"
-  - "pinceaux, créer dans un contexte de périphérique"
-  - "CBitmap (classe), HBITMAP (type de handle)"
-  - "CBrush (classe), HBRUSH (type de handle)"
-  - "CFont (classe), HFONT (type de handle)"
-  - "CPalette (classe), HPALETTE (type de handle)"
-  - "CPen (classe), HPEN (type de handle)"
-  - "CRgn (classe), HRGN (type de handle)"
-  - "contextes de périphérique, objets graphiques"
-  - "dessiner, dans des contextes de périphérique"
-  - "polices (C++), créer dans un contexte de périphérique"
-  - "GDI (C++), classes d'objets graphiques"
-  - "objets GDI (C++)"
-  - "objets GDI (C++), classes d'objets graphiques"
-  - "objets graphiques"
-  - "objets graphiques, créer dans un contexte de périphérique"
-  - "HBITMAP et classe CBitmap"
-  - "HBRUSH et classe CBrush"
-  - "HFONT et classe CFont"
-  - "HPALETTE et classe CPalette"
-  - "HPEN"
-  - "HRGN"
-  - "images (C++), objets graphiques"
-  - "mémoire (C++), contextes d'affichage"
-  - "MFC, objets graphiques"
-  - "objets (C++), graphiques"
-  - "objets (C++), objets graphiques"
-  - "peinture et contexte de périphérique"
-  - "objets de palette"
-  - "palettes, créer dans un contexte de périphérique"
-  - "objets Pen"
-  - "stylets, créer dans un contexte de périphérique"
-  - "objets de zone"
-  - "régions, créer dans un contexte de périphérique"
+title: Graphic Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- HRGN
+- HFONT
+- HBITMAP
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRgn class [MFC], HRGN handle type
+- HPEN [MFC]
+- objects [MFC], graphic
+- palettes [MFC], creating in device context
+- pens [MFC], creating in device context
+- bitmaps [MFC], creating in device contexts
+- palette objects [MFC]
+- memory [MFC], display contexts
+- MFC, graphic objects
+- regions [MFC], creating in device context
+- CPen class [MFC], HPEN handle type
+- GDI objects [MFC]
+- HRGN [MFC]
+- graphic objects [MFC]
+- GDI objects [MFC], graphic-object classes
+- CFont class [MFC], HFONT handle type
+- HFONT and class CFont [MFC]
+- HBITMAP and class CBitmap [MFC]
+- fonts [MFC], creating in device context
+- images [MFC], graphic objects [MFC]
+- CBitmap class [MFC], HBITMAP handle type
+- HPALETTE and class CPalette [MFC]
+- CBrush class [MFC], HBRUSH handle type
+- objects [MFC], graphic objects
+- drawing [MFC], in device contexts
+- device contexts [MFC], graphic objects [MFC]
+- brushes [MFC], creating in device context
+- region objects [MFC]
+- pen objects [MFC]
+- GDI [MFC], graphic-object classes
+- graphic objects [MFC], creating in device context
+- HBRUSH and class CBrush [MFC]
+- painting and device context [MFC]
+- CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Objets graphiques
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ac48cbc659056cc8633842856a5b20a3152099c8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Windows propose divers outils de dessin à utiliser dans des contextes de périphériques.  On trouve des stylets pour tracer des lignes, des pinceaux pour remplir des intérieurs et des polices pour dessiner du texte.  MFC propose des classes d'objets graphiques équivalentes aux outils de dessin de Windows.  Le tableau ci\-dessous présente les classes disponibles et les types de handle GDI \(Graphics Device Interface\) Windows équivalents.  
+---
+# <a name="graphic-objects"></a>Graphic Objects
+Windows provides a variety of drawing tools to use in device contexts. It provides pens to draw lines, brushes to fill interiors, and fonts to draw text. MFC provides graphic-object classes equivalent to the drawing tools in Windows. The table below shows the available classes and the equivalent Windows graphics device interface (GDI) handle types.  
   
 > [!NOTE]
->  GDI\+ est fourni avec Windows XP et est disponible sous forme de composant redistribuable pour Windows NT 4.0 SP6, Windows 2000, Windows 98 et Windows Me.  Pour télécharger le composant redistribuable le plus récent, consultez [http:\/\/www.microsoft.com\/msdownload\/platformsdk\/sdkupdate\/psdkredist.htm](http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm).  Pour plus d'informations, consultez la documentation du Kit de développement logiciel \(SDK\) GDI\+ dans MSDN : [http:\/\/msdn.microsoft.com\/library\/default.asp?url\=\/library\/gdicpp\/GDIPlus\/GDIPlus.asp](http://msdn.microsoft.com/library/default.asp?url=/library/gdicpp/GDIPlus/GDIPlus.asp).  
+>  GDI+ is included with Windows XP and is available as a redistributable for Windows NT 4.0  SP6, Windows 2000, Windows 98, and Windows Me. To download the latest redistributable, see  [http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm](http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm). For more information, see the GDI+ SDK documentation at: [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).  
   
- Cet article explique l'utilisation de ces classes d'objets graphiques :  
+ This article explains the use of these graphic-object classes:  
   
-### Classes pour objets Windows GDI  
+### <a name="classes-for-windows-gdi-objects"></a>Classes for Windows GDI Objects  
   
-|Classe|Type de handle Windows|  
-|------------|----------------------------|  
+|Class|Windows handle type|  
+|-----------|-------------------------|  
 |[CPen](../mfc/reference/cpen-class.md)|`HPEN`|  
 |[CBrush](../mfc/reference/cbrush-class.md)|`HBRUSH`|  
 |[CFont](../mfc/reference/cfont-class.md)|**HFONT**|  
@@ -78,40 +95,42 @@ Windows propose divers outils de dessin à utiliser dans des contextes de périp
 |[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|  
   
 > [!NOTE]
->  La classe [CImage](../atl-mfc-shared/reference/cimage-class.md) assure une prise en charge améliorée des images bitmap.  
+>  The class [CImage](../atl-mfc-shared/reference/cimage-class.md) provides enhanced bitmap support.  
   
- À chaque classe d'objets graphiques de la bibliothèque de classes correspond un constructeur qui vous permet de créer des objets graphiques de cette classe, que vous devez ensuite initialiser avec la fonction de création appropriée, comme `CreatePen`.  
+ Each graphic-object class in the class library has a constructor that allows you to create graphic objects of that class, which you must then initialize with the appropriate create function, such as `CreatePen`.  
   
- À chaque classe d'objets graphiques de la bibliothèque de classes correspond un opérateur de conversion de type \(transtypage\) chargé de convertir un objet MFC en handle Windows associé.  Le handle obtenu est valide tant que l'objet associé ne le détache pas.  Pour détacher le handle, utilisez la fonction membre **Detach** de l'objet.  
+ Each graphic-object class in the class library has a cast operator that will cast an MFC object to the associated Windows handle. The resulting handle is valid until the associated object detaches it. Use the object's **Detach** member function to detach the handle.  
   
- Le code suivant convertit un `CPen` objet en handle Windows :  
+ The following code casts a `CPen` object to a Windows handle:  
   
- [!code-cpp[NVC_MFCDocViewSDI#5](../mfc/codesnippet/CPP/graphic-objects_1.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#5](../mfc/codesnippet/cpp/graphic-objects_1.cpp)]  
   
-#### Pour créer un objet graphique dans un contexte de périphérique  
+#### <a name="to-create-a-graphic-object-in-a-device-context"></a>To create a graphic object in a device context  
   
-1.  Définissez un objet graphique sur le frame de pile.  Initialisez l'objet avec la fonction de création propre au type, par exemple, `CreatePen`.  Vous pouvez aussi initialiser l'objet dans le constructeur.  Consultez la rubrique qui décrit les [méthodes de création en une ou deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md), dans laquelle vous trouverez un exemple de code.  
+1.  Define a graphic object on the stack frame. Initialize the object with the type-specific create function, such as `CreatePen`. Alternatively, initialize the object in the constructor. See the discussion of [one-stage and two-stage creation](../mfc/one-stage-and-two-stage-construction-of-objects.md), which provides example code.  
   
-2.  [Sélectionnez l'objet dans le contexte de périphérique actuel](../mfc/selecting-a-graphic-object-into-a-device-context.md), en enregistrant l'ancien objet graphique qui était sélectionné auparavant.  
+2.  [Select the object into the current device context](../mfc/selecting-a-graphic-object-into-a-device-context.md), saving the old graphic object that was selected before.  
   
-3.  Quand vous en avez terminé avec l'objet graphique actuel, sélectionnez à nouveau l'ancien objet graphique dans le contexte de périphérique pour restaurer son état.  
+3.  When done with the current graphic object, select the old graphic object back into the device context to restore its state.  
   
-4.  Autorisez la suppression automatique de l'objet graphique alloué par le frame dès qu'il est hors de portée.  
+4.  Allow the frame-allocated graphic object to be deleted automatically when the scope is exited.  
   
 > [!NOTE]
->  Si vous prévoyez d'utiliser un objet graphique de façon récurrente, vous pouvez l'allouer une fois et le sélectionner dans un contexte de périphérique chaque fois que vous en avez besoin.  Veillez à supprimer cet objet dès que vous n'en avez plus besoin.  
+>  If you will be using a graphic object repeatedly, you can allocate it once and select it into a device context each time it is needed. Be sure to delete such an object when you no longer need it.  
   
-### Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Construction d'objets graphiques en une ou deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
+-   [One-stage and two-stage construction of graphic objects](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
   
--   [Exemple de construction d'un stylet en une ou deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
+-   [Example of constructing a pen in one and two stages](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
   
--   [Sélection d'un objet graphique dans un contexte de périphérique](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
+-   [Selecting a Graphic Object into a Device Context](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
   
--   [Contextes de périphérique](../mfc/device-contexts.md)  
+-   [Device contexts](../mfc/device-contexts.md)  
   
--   [Limitations de CImage avec les systèmes d'exploitation antérieurs](../mfc/cimage-limitations-with-earlier-operating-systems.md)  
+-   [CImage limitations with earlier operating systems](../mfc/cimage-limitations-with-earlier-operating-systems.md)  
   
-## Voir aussi  
- [Objets fenêtres](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

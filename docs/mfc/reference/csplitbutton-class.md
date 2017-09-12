@@ -1,5 +1,5 @@
 ---
-title: Classe de CSplitButton | Documents Microsoft
+title: CSplitButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSplitButton class
+- CSplitButton [MFC], CSplitButton
+- CSplitButton [MFC], Create
+- CSplitButton [MFC], SetDropDownMenu
+- CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
 caps.latest.revision: 24
 author: mikeblome
@@ -38,51 +41,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b4c038a177d5c501d4baad8eaa208af0e76ce231
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0048cd50f84e2a0707ea851142378337231af770
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csplitbutton-class"></a>CSplitButton (classe)
-La `CSplitButton` classe représente un contrôle bouton partagé. Le contrôle bouton partagé exécute un comportement par défaut lorsqu’un utilisateur clique sur la partie principale du bouton et affiche un menu déroulant lorsqu’un utilisateur clique sur la flèche déroulante du bouton.  
+# <a name="csplitbutton-class"></a>CSplitButton Class
+The `CSplitButton` class represents a split button control. The split button control performs a default behavior when a user clicks the main part of the button, and displays a drop-down menu when a user clicks the drop-down arrow of the button.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSplitButton : public CButton  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSplitButton::CSplitButton](#csplitbutton)|Construit un objet `CSplitButton`.|  
+|[CSplitButton::CSplitButton](#csplitbutton)|Constructs a `CSplitButton` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSplitButton::Create](#create)|Crée un contrôle bouton partagé avec des styles spécifiés et l’attache à actuel `CSplitButton` objet.|  
-|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Définit le menu déroulant qui s’affiche lorsqu’un utilisateur clique sur la flèche déroulante du contrôle de bouton Fractionner en cours.|  
+|[CSplitButton::Create](#create)|Creates a split button control with specified styles and attaches it to the current `CSplitButton` object.|  
+|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Sets the drop-down menu that is displayed when a user clicks the drop-down arrow of the current split button control.|  
   
-### <a name="protected-methods"></a>Méthodes protégées  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSplitButton::OnDropDown](#ondropdown)|Gère la `BCN_DROPDOWN` notification envoyé par le système lorsqu’un utilisateur clique sur la flèche déroulante du contrôle de bouton Fractionner en cours.|  
+|[CSplitButton::OnDropDown](#ondropdown)|Handles the `BCN_DROPDOWN` notification that the system sends when a user clicks the drop-down arrow of the current split button control.|  
   
-## <a name="remarks"></a>Notes  
- Le `CSplitButton` classe est dérivée de la [CButton](../../mfc/reference/cbutton-class.md) classe. Le contrôle bouton partagé est un contrôle bouton dont le style est `BS_SPLITBUTTON`. Il affiche un menu personnalisé lorsqu’un utilisateur clique sur la flèche déroulante. Pour plus d’informations, consultez la `BS_SPLITBUTTON` et `BS_DEFSPLITBUTTON` styles dans [Styles des boutons](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
+## <a name="remarks"></a>Remarks  
+ The `CSplitButton` class is derived from the [CButton](../../mfc/reference/cbutton-class.md) class. The split button control is a button control whose style is `BS_SPLITBUTTON`. It displays a custom menu when a user clicks the drop-down arrow. For more information, see the `BS_SPLITBUTTON` and `BS_DEFSPLITBUTTON` styles in [Button Styles](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
   
- La figure suivante représente une boîte de dialogue qui contient un contrôle pager et un contrôle bouton partagé (1). La flèche déroulante (2) a déjà été cliqué et le sous-menu (3) s’affiche.  
+ The following figure depicts a dialog box that contains a pager control and a (1) split button control. The (2) drop-down arrow has already been clicked and the (3) submenu is displayed.  
   
- ![Boîte de dialogue avec un bouton partagé et un contrôle pager. ] (../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
+ ![Dialog with a splitbutton and pager control.](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -93,15 +96,15 @@ class CSplitButton : public CButton
   
  `CSplitButton`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
- Cette classe prend en charge [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] et versions ultérieures.  
+ This class is supported in [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] and later.  
   
- Exigences supplémentaires pour cette classe sont décrites dans [Build Configuration requise pour les contrôles communs Windows Vista](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
+ Additional requirements for this class are described in [Build Requirements for Windows Vista Common Controls](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
-##  <a name="create"></a>CSplitButton::Create  
- Crée un contrôle bouton partagé avec des styles spécifiés et l’attache à actuel `CSplitButton` objet.  
+##  <a name="create"></a>  CSplitButton::Create  
+ Creates a split button control with specified styles and attaches it to the current `CSplitButton` object.  
   
 ```  
 virtual BOOL Create(
@@ -111,20 +114,20 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `dwStyle`|Combinaison de bits (OR) des styles à appliquer au contrôle. Pour plus d’informations, consultez [Styles des boutons](../../mfc/reference/button-styles.md).|  
-|[in] `rect`|Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure qui contient la position et la taille du contrôle.|  
-|[in] `pParentWnd`|Un pointeur non null pour un [CWnd](../../mfc/reference/cwnd-class.md) objet de la fenêtre parent du contrôle.|  
-|[in] `nID`|L’ID du contrôle.|  
+|[in] `dwStyle`|A bitwise combination (OR) of styles to be applied to the control. For more information, see [Button Styles](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
+|[in] `rect`|A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that contains the position and size of the control.|  
+|[in] `pParentWnd`|A non-null pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the control.|  
+|[in] `nID`|The ID of the control.|  
   
-### <a name="return-value"></a>Valeur de retour  
- `true`Si cette méthode a réussi ; dans le cas contraire, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-##  <a name="csplitbutton"></a>CSplitButton::CSplitButton  
- Construit un objet `CSplitButton`. Les paramètres du constructeur spécifient un sous-menu qui s’affiche lorsqu’un utilisateur clique sur la flèche déroulante du contrôle split button.  
+##  <a name="csplitbutton"></a>  CSplitButton::CSplitButton  
+ Constructs a `CSplitButton` object. The constructor's parameters specify a submenu that is displayed when a user clicks the drop-down arrow of the split button control.  
   
 ```  
 CSplitButton();
@@ -136,19 +139,19 @@ CSplitButton(
 CSplitButton(CMenu* pMenu)  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `nMenuId`|L’ID de ressource de la barre de menus.|  
-|[in] `nSubMenuId`|L’ID de ressource d’un sous-menu.|  
-|[in] `pMenu`|Un pointeur vers un [CMenu](../../mfc/reference/cmenu-class.md) objet qui spécifie un sous-menu. Le `CSplitButton` supprime l’objet du `CMenu` objet et lui est associée `HMENU` lorsque le `CSplitButton` objet devient hors de portée.|  
+|[in] `nMenuId`|The resource ID of the menu bar.|  
+|[in] `nSubMenuId`|The resource ID of a submenu.|  
+|[in] `pMenu`|A pointer to a [CMenu](../../mfc/reference/cmenu-class.md) object that specifies a submenu. The `CSplitButton` object deletes the `CMenu` object and its associated `HMENU` when the `CSplitButton` object goes out of scope.|  
   
-### <a name="remarks"></a>Remarques  
- Utilisez le [CSplitButton::Create](#create) méthode pour créer un contrôle bouton partagé et l’attacher à la `CSplitButton` objet.  
+### <a name="remarks"></a>Remarks  
+ Use the [CSplitButton::Create](#create) method to create a split button control and attach it to the `CSplitButton` object.  
   
-##  <a name="ondropdown"></a>CSplitButton::OnDropDown  
- Gère la `BCN_DROPDOWN` notification envoyé par le système lorsqu’un utilisateur clique sur la flèche déroulante du contrôle de bouton Fractionner en cours.  
+##  <a name="ondropdown"></a>  CSplitButton::OnDropDown  
+ Handles the `BCN_DROPDOWN` notification that the system sends when a user clicks the drop-down arrow of the current split button control.  
   
 ```  
 afx_msg void OnDropDown(
@@ -156,19 +159,19 @@ afx_msg void OnDropDown(
     LRESULT* pResult);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `pNMHDR`|Pointeur vers un [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) structure qui contient des informations sur le [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notification.|  
-|[out] `pResult`|(Aucune valeur n’est retournée ; non utilisé.) Valeur de retour de la [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notification.|  
+|[in] `pNMHDR`|Pointer to an [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) structure that contains information about the [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notification.|  
+|[out] `pResult`|(Not used; no value is returned.) Return value of the [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notification.|  
   
-### <a name="remarks"></a>Remarques  
- Lorsque l’utilisateur clique sur la flèche déroulante sur un contrôle bouton partagé, le système envoie une `BCN_DROPDOWN` notification d’un message, ce qui le `OnDropDown` méthode gère. Toutefois, le `CSplitButton` objet ne transmet pas le `BCN_DROPDOWN` notification au contrôle qui contient le contrôle bouton partagé. En conséquence, le contrôle conteneur ne peut pas prendre en charge une action personnalisée en réponse à la notification.  
+### <a name="remarks"></a>Remarks  
+ When the user clicks the drop-down arrow on a split button control, system sends a `BCN_DROPDOWN` notification message, which the `OnDropDown` method handles. However, the `CSplitButton` object does not forward the `BCN_DROPDOWN` notification to the control that contains the split button control. Consequently, the containing control cannot support a custom action in response to the notification.  
   
- Pour implémenter une action personnalisée qui prend en charge le contrôle conteneur, utilisez un [CButton](../../mfc/reference/cbutton-class.md) objet avec un style de `BS_SPLITBUTTON` au lieu d’un `CSplitButton` objet. Puis implémenter un gestionnaire pour le `BCN_DROPDOWN` notification dans le `CButton` objet. Pour plus d’informations, consultez [Styles des boutons](../../mfc/reference/button-styles.md).  
+ To implement a custom action that the containing control supports, use a [CButton](../../mfc/reference/cbutton-class.md) object with a style of `BS_SPLITBUTTON` instead of a `CSplitButton` object. Then implement a handler for the `BCN_DROPDOWN` notification in the `CButton` object. For more information, see [Button Styles](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
   
- Pour implémenter une action personnalisée que le bouton partagé contrôle lui-même prend en charge, utilisez [la réflexion de message](../../mfc/tn062-message-reflection-for-windows-controls.md). Dérivez votre propre classe de la `CSplitButton` classe et nommez-le, par exemple, CMySplitButton. Puis ajoutez la table des messages suivants à votre application pour traiter les `BCN_DROPDOWN` notification :  
+ To implement a custom action that the split button control itself supports, use [message reflection](../../mfc/tn062-message-reflection-for-windows-controls.md). Derive your own class from the `CSplitButton` class and name it, for example, CMySplitButton. Then add the following message map to your application to handle the `BCN_DROPDOWN` notification:  
   
 ```  
 BEGIN_MESSAGE_MAP(CMySplitButton,
@@ -177,8 +180,8 @@ BEGIN_MESSAGE_MAP(CMySplitButton,
 END_MESSAGE_MAP()  
 ```  
   
-##  <a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
- Définit le menu déroulant qui s’affiche lorsqu’un utilisateur clique sur la flèche déroulante du contrôle de bouton Fractionner en cours.  
+##  <a name="setdropdownmenu"></a>  CSplitButton::SetDropDownMenu  
+ Sets the drop-down menu that is displayed when a user clicks the drop-down arrow of the current split button control.  
   
 ```  
 void SetDropDownMenu(
@@ -188,28 +191,28 @@ void SetDropDownMenu(
 void SetDropDownMenu(CMenu* pMenu);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `nMenuId`|L’ID de ressource de la barre de menus.|  
-|[in] `nSubMenuId`|L’ID de ressource d’un sous-menu.|  
-|[in] `pMenu`|Pointeur vers un [CMenu](../../mfc/reference/cmenu-class.md) objet qui spécifie un sous-menu. Le `CSplitButton` supprime l’objet du `CMenu` objet et lui est associée `HMENU` lorsque le `CSplitButton` objet devient hors de portée.|  
+|[in] `nMenuId`|The resource ID of the menu bar.|  
+|[in] `nSubMenuId`|The resource ID of a submenu.|  
+|[in] `pMenu`|Pointer to a [CMenu](../../mfc/reference/cmenu-class.md) object that specifies a submenu. The `CSplitButton` object deletes the `CMenu` object and its associated `HMENU` when the `CSplitButton` object goes out of scope.|  
   
-### <a name="remarks"></a>Remarques  
- Le `nMenuId` paramètre identifie une barre de menus, qui est une liste d’éléments de barre de menu horizontale. Le `nSubMenuId` paramètre est un indice de base zéro qui identifie un sous-menu, la liste déroulante d’éléments de menu associé à chaque élément de la barre de menu. Par exemple, une application classique comporte un menu qui contient les éléments de barre de menu « Fichier », « Modifier » et « Aide ». L’élément de barre de menu « Fichier » a un sous-menu qui contient les éléments de menu « Ouvrir », « Fermer » et « Exit ». Lorsque vous cliquez sur la flèche déroulante du contrôle bouton partagé, le contrôle affiche le sous-menu spécifié, pas la barre de menus.  
+### <a name="remarks"></a>Remarks  
+ The `nMenuId` parameter identifies a menu bar, which is a horizontal list of menu bar items. The `nSubMenuId` parameter is a zero-based index number that identifies a submenu, which is the drop-down list of menu items associated with each menu bar item. For example, a typical application has a menu that contains the menu bar items, "File," "Edit," and "Help." The "File" menu bar item has a submenu that contains the menu items, "Open," "Close" and "Exit." When the drop-down arrow of the split-button control is clicked, the control displays the specified submenu, not the menu bar.  
   
- La figure suivante représente une boîte de dialogue qui contient un contrôle pager et un contrôle bouton partagé (1). La flèche déroulante (2) a déjà été cliqué et le sous-menu (3) s’affiche.  
+ The following figure depicts a dialog box that contains a pager control and a (1) split button control. The (2) drop-down arrow has already been clicked and the (3) submenu is displayed.  
   
- ![Boîte de dialogue avec un bouton partagé et un contrôle pager. ] (../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
+ ![Dialog with a splitbutton and pager control.](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
   
-### <a name="example"></a>Exemple  
- La première instruction dans l’exemple de code suivant illustre la [CSplitButton::SetDropDownMenu](#setdropdownmenu) (méthode). Nous avons créé le menu avec Visual Studio éditeur de ressources, ce qui l’a nommé automatiquement l’ID de barre de menus, `IDR_MENU1`. Le `nSubMenuId` paramètre, qui est égal à zéro, désigne le sous-menu uniquement de la barre de menus.  
+### <a name="example"></a>Example  
+ The first statement in the following code example demonstrates the [CSplitButton::SetDropDownMenu](#setdropdownmenu) method. We created the menu with the Visual Studio resource editor, which automatically named the menu bar ID, `IDR_MENU1`. The `nSubMenuId` parameter, which is zero, refers to the only submenu of the menu bar.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s2 n °&1;](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]  
   
-## <a name="see-also"></a>Voir aussi  
- [CSplitButton (classe)](../../mfc/reference/csplitbutton-class.md)   
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [CButton (classe)](../../mfc/reference/cbutton-class.md)
+## <a name="see-also"></a>See Also  
+ [CSplitButton Class](../../mfc/reference/csplitbutton-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CButton Class](../../mfc/reference/cbutton-class.md)
 

@@ -1,84 +1,102 @@
 ---
-title: "Composants requis pour les classes clientes Internet | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes (C++), connexions"
-  - "connexions (C++), classes pour"
-  - "fichiers (C++), lire"
-  - "fichiers (C++), écrire dans"
-  - "FTP (File Transfer Protocol), classes MFC"
-  - "Gopher (applications clientes)"
-  - "Gopher (composants requis)"
-  - "HTTP, composants requis pour les clients Internet"
-  - "Internet (C++), connexions"
-  - "classe de client Internet (composants requis) (C++)"
-  - "Fichiers Internet (C++), écrire dans"
-  - "composants requis, classes de client Internet"
-  - "URL (C++), Internet (applications clientes)"
+title: Prerequisites for Internet Client Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet files [MFC], writing to
+- Internet [MFC], connections
+- FTP (File Transfer Protocol), MFC classes
+- Gopher prerequisites [MFC]
+- files [MFC], writing to
+- classes [MFC], connections
+- HTTP [MFC], prerequisites for Internet clients
+- connections [MFC], classes for
+- Internet client class prerequisites [MFC]
+- files [MFC], reading
+- URLs [MFC], Internet client applications
+- prerequisites, Internet client classes [MFC]
+- Gopher client applications [MFC]
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Composants requis pour les classes clientes Internet
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 942e2805313f6949f2e9e7f61712725092a1eab8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Certaines actions effectuées par un client Internet \(la lecture d'un fichier, par exemple\) implique des actions nécessaires \(dans ce cas, l'établissement d'une connexion Internet\).  Les tableaux suivants répertorient les éléments requis pour certaines actions clientes.  
+---
+# <a name="prerequisites-for-internet-client-classes"></a>Prerequisites for Internet Client Classes
+Some actions taken by an Internet client (reading a file, for example) have prerequisite actions (in this case, establishing an Internet connection). The following tables list the prerequisites for some client actions.  
   
-### URL Internet générale \(FTP, Gopher, ou HTTP\)  
+### <a name="general-internet-url-ftp-gopher-or-http"></a>General Internet URL (FTP, Gopher, or HTTP)  
   
-|Action|Condition préalable|  
-|------------|-------------------------|  
-|Établir une connexion.|Créer une [CInternetSession](../mfc/reference/cinternetsession-class.md) pour générer la base d'une application cliente Internet.|  
-|Ouvrir une URL.|Établir une connexion.  Appeler [CInternetSession::OpenURL](../Topic/CInternetSession::OpenURL.md).  La fonction `OpenURL` retourne un objet de ressource en lecture seule.|  
-|Lire les données d'URL.|Ouvrir l'URL.  Appeler [CInternetFile::Read](../Topic/CInternetFile::Read.md).|  
-|Définir une option Internet.|Établir une connexion.  Appeler [CInternetSession::SetOption](../Topic/CInternetSession::SetOption.md).|  
-|Définir une fonction à appeler avec les informations d'état.|Établir une connexion.  Appeler [CInternetSession::EnableStatusCallback](../Topic/CInternetSession::EnableStatusCallback.md).  Redéfinir [CInternetSession::OnStatusCallback](../Topic/CInternetSession::OnStatusCallback.md) pour traiter des appels.|  
+|Action|Prerequisite|  
+|------------|------------------|  
+|Establish a connection.|Create a [CInternetSession](../mfc/reference/cinternetsession-class.md) to establish the basis of an Internet client application.|  
+|Open a URL.|Establish a connection. Call [CInternetSession::OpenURL](../mfc/reference/cinternetsession-class.md#openurl). The `OpenURL` function returns a read-only resource object.|  
+|Read URL data.|Open the URL. Call [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read).|  
+|Set an Internet option.|Establish a connection. Call [CInternetSession::SetOption](../mfc/reference/cinternetsession-class.md#setoption).|  
+|Set a function to be called with status information.|Establish a connection. Call [CInternetSession::EnableStatusCallback](../mfc/reference/cinternetsession-class.md#enablestatuscallback). Override [CInternetSession::OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) to handle calls.|  
   
-### FTP  
+### <a name="ftp"></a>FTP  
   
-|Action|Condition préalable|  
-|------------|-------------------------|  
-|Établir une connexion FTP.|Créer [CInternetSession](../mfc/reference/cinternetsession-class.md) comme base de cette application cliente Internet.  Appeler [CInternetSession::GetFtpConnection](../Topic/CInternetSession::GetFtpConnection.md) pour créer un objet [CFtpConnection](../mfc/reference/cftpconnection-class.md).|  
-|Trouver la première ressource.|Établir une connexion FTP.  Créer un objet [CFtpFileFind](../mfc/reference/cftpfilefind-class.md).  Appeler [CFtpFileFind::FindFile](../Topic/CFtpFileFind::FindFile.md).|  
-|Énumérer toutes les ressources disponibles.|trouver le premier fichier :  Appeler [CFtpFileFind::FindNextFile](../Topic/CFtpFileFind::FindNextFile.md) jusqu'à ce qu'il retourne FALSE.|  
-|Ouvrir un fichier FTP.|Établir une connexion FTP.  Appeler [CFtpConnection::OpenFile](../Topic/CFtpConnection::OpenFile.md) pour créer et ouvrir un objet [CInternetFile](../mfc/reference/cinternetfile-class.md).|  
-|Lire un fichier FTP.|Ouvrir un fichier FTP avec un accès en lecture.  Appeler [CInternetFile::Read](../Topic/CInternetFile::Read.md).|  
-|Ecrire dans un fichier FTP|Ouvrir un fichier FTP avec accès en écriture.  Appeler [CInternetFile::Write](../Topic/CInternetFile::Write.md).|  
-|Accéder au répertoire du client sur le serveur.|Établir une connexion FTP.  Appeler [CFtpConnection::SetCurrentDirectory](../Topic/CFtpConnection::SetCurrentDirectory.md).|  
-|Récupérer le répertoire actif du client sur le serveur.|Établir une connexion FTP.  Appeler [CFtpConnection::GetCurrentDirectory](../Topic/CFtpConnection::GetCurrentDirectory.md).|  
+|Action|Prerequisite|  
+|------------|------------------|  
+|Establish an FTP connection.|Create a [CInternetSession](../mfc/reference/cinternetsession-class.md) as the basis of this Internet client application. Call [CInternetSession::GetFtpConnection](../mfc/reference/cinternetsession-class.md#getftpconnection) to create a [CFtpConnection](../mfc/reference/cftpconnection-class.md) object.|  
+|Find the first resource.|Establish an FTP connection. Create a [CFtpFileFind](../mfc/reference/cftpfilefind-class.md) object. Call [CFtpFileFind::FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|  
+|Enumerate all available resources.|Find the first file. Call [CFtpFileFind::FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile) until it returns FALSE.|  
+|Open an FTP file.|Establish an FTP connection. Call [CFtpConnection::OpenFile](../mfc/reference/cftpconnection-class.md#openfile) to create and open a [CInternetFile](../mfc/reference/cinternetfile-class.md) object.|  
+|Read an FTP file.|Open an FTP file with read access. Call [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read).|  
+|Write to an FTP file.|Open an FTP file with write access. Call [CInternetFile::Write](../mfc/reference/cinternetfile-class.md#write).|  
+|Change the client's directory on the server.|Establish an FTP connection. Call [CFtpConnection::SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory).|  
+|Retrieve the client's current directory on the server.|Establish an FTP connection. Call [CFtpConnection::GetCurrentDirectory](../mfc/reference/cftpconnection-class.md#getcurrentdirectory).|  
   
-### HTTP  
+### <a name="http"></a>HTTP  
   
-|Action|Condition préalable|  
-|------------|-------------------------|  
-|Établir une connexion HTTP.|Créer [CInternetSession](../mfc/reference/cinternetsession-class.md) comme base de cette application cliente Internet.  Appeler [CInternetSession::GetHttpConnection](../Topic/CInternetSession::GetHttpConnection.md) pour créer un objet [CHttpConnection](../mfc/reference/chttpconnection-class.md).|  
-|Ouvrir un fichier HTTP.|Établir une connexion HTTP.  Appeler [CHttpConnection::OpenRequest](../Topic/CHttpConnection::OpenRequest.md) pour créer un objet [CHttpFile](../mfc/reference/chttpfile-class.md).  Appeler [CHttpFile::AddRequestHeaders](../Topic/CHttpFile::AddRequestHeaders.md).  Appeler [CHttpFile::SendRequest](../Topic/CHttpFile::SendRequest.md).|  
-|Lire un fichier HTTP.|Ouvrir un fichier HTTP.  Appeler [CInternetFile::Read](../Topic/CInternetFile::Read.md).|  
-|Obtenir des informations sur un requête HTTP.|Établir une connexion HTTP.  Appeler [CHttpConnection::OpenRequest](../Topic/CHttpConnection::OpenRequest.md) pour créer un objet [CHttpFile](../mfc/reference/chttpfile-class.md).  Appeler [CHttpFile::QueryInfo](../Topic/CHttpFile::QueryInfo.md).|  
+|Action|Prerequisite|  
+|------------|------------------|  
+|Establish an HTTP connection.|Create a [CInternetSession](../mfc/reference/cinternetsession-class.md) as the basis of this Internet client application. Call [CInternetSession::GetHttpConnection](../mfc/reference/cinternetsession-class.md#gethttpconnection) to create a [CHttpConnection](../mfc/reference/chttpconnection-class.md) object.|  
+|Open an HTTP file.|Establish an HTTP connection. Call [CHttpConnection::OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest) to create a [CHttpFile](../mfc/reference/chttpfile-class.md) object. Call [CHttpFile::AddRequestHeaders](../mfc/reference/chttpfile-class.md#addrequestheaders). Call [CHttpFile::SendRequest](../mfc/reference/chttpfile-class.md#sendrequest).|  
+|Read an HTTP file.|Open an HTTP file. Call [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read).|  
+|Get information about an HTTP request.|Establish an HTTP connection. Call [CHttpConnection::OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest) to create a [CHttpFile](../mfc/reference/chttpfile-class.md) object. Call [CHttpFile::QueryInfo](../mfc/reference/chttpfile-class.md#queryinfo).|  
   
-### gopher  
+### <a name="gopher"></a>Gopher  
   
-|Action|Condition préalable|  
-|------------|-------------------------|  
-|Créez une connexion de Gopher.|Créer [CInternetSession](../mfc/reference/cinternetsession-class.md) comme base de cette application cliente Internet.  Appeler [CInternetSession::GetGopherConnection](../Topic/CInternetSession::GetGopherConnection.md) pour créer [CGopherConnection](../mfc/reference/cgopherconnection-class.md).|  
-|Recherchez le premier fichier dans le répertoire en cours.|Créez une connexion de Gopher.  Créer un objet [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md).  Appeler [CGopherConnection::CreateLocator](../Topic/CGopherConnection::CreateLocator.md) pour créer un objet [CGopherLocator](../mfc/reference/cgopherlocator-class.md).  Passer le localisateur pointe vers [CGopherFileFind::FindFile](../Topic/CGopherFileFind::FindFile.md).  Appeler [CGopherFileFind::GetLocator](../Topic/CGopherFileFind::GetLocator.md) pour obtenir le localisateur d'un fichier si vous avez besoin d'utiliser ultérieurement.|  
-|Enumérer tous les fichiers disponibles.|Trouver le premier fichier :  Appeler [CGopherFileFind::FindNextFile](../Topic/CGopherFileFind::FindNextFile.md) jusqu'à ce qu'il retourne FALSE.|  
-|Ouvrir un fichier gopher|Créez une connexion de Gopher.  Créer un localisateur de Gopher avec [CGopherConnection::CreateLocator](../Topic/CGopherConnection::CreateLocator.md) ou recherchez un localisateur de [CGopherFileFind::GetLocator](../Topic/CGopherFileFind::GetLocator.md).  Appeler [CGopherConnection::OpenFile](../Topic/CGopherConnection::OpenFile.md).|  
-|Lire un fichier de Gopher.|Ouvrir un fichier gopher  Utiliser [CGopherFile](../mfc/reference/cgopherfile-class.md).|  
+|Action|Prerequisite|  
+|------------|------------------|  
+|Establish a gopher connection.|Create a [CInternetSession](../mfc/reference/cinternetsession-class.md) as the basis of this Internet client application. Call [CInternetSession::GetGopherConnection](../mfc/reference/cinternetsession-class.md#getgopherconnection) to create a [CGopherConnection](../mfc/reference/cgopherconnection-class.md).|  
+|Find the first file in the current directory.|Establish a gopher connection. Create a [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md) object. Call [CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator) to create a [CGopherLocator](../mfc/reference/cgopherlocator-class.md) object. Pass the locator to [CGopherFileFind::FindFile](../mfc/reference/cgopherfilefind-class.md#findfile). Call [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator) to get the locator of a file if you need it later.|  
+|Enumerate all available files.|Find the first file. Call [CGopherFileFind::FindNextFile](../mfc/reference/cgopherfilefind-class.md#findnextfile) until it returns FALSE.|  
+|Open a gopher file.|Establish a gopher connection. Create a gopher locator with [CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator) or find a locator with [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator). Call [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|  
+|Read a gopher file.|Open a gopher file. Use [CGopherFile](../mfc/reference/cgopherfile-class.md).|  
   
-## Voir aussi  
- [Extension Internet Win32 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)   
- [Classes MFC pour la création d'applications clientes Internet](../mfc/mfc-classes-for-creating-internet-client-applications.md)   
- [Écriture d'une application cliente Internet en utilisant des classes WinInet MFC](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+## <a name="see-also"></a>See Also  
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
+ [MFC Classes for Creating Internet Client Applications](../mfc/mfc-classes-for-creating-internet-client-applications.md)   
+ [Writing an Internet Client Application Using MFC WinInet Classes](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+

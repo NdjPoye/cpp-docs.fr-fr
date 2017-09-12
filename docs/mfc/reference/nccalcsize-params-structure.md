@@ -1,5 +1,5 @@
 ---
-title: NCCALCSIZE_PARAMS (Structure) | Documents Microsoft
+title: NCCALCSIZE_PARAMS Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- NCCALCSIZE_PARAMS structure
+- NCCALCSIZE_PARAMS structure [MFC]
 ms.assetid: 3424cd9f-806a-4089-82fb-414187589edf
 caps.latest.revision: 13
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 88c25fd5e5862d5f0954ae853442c66eaf7320c8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2cd507ff9e7c7f6703425044c34b38bc1576109e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="nccalcsizeparams-structure"></a>NCCALCSIZE_PARAMS, structure
-Le `NCCALCSIZE_PARAMS` structure contient des informations qu’une application peut utiliser lors du traitement de la `WM_NCCALCSIZE` pour calculer la taille, la position et le contenu valid de la zone cliente d’une fenêtre de message.  
+# <a name="nccalcsizeparams-structure"></a>NCCALCSIZE_PARAMS Structure
+The `NCCALCSIZE_PARAMS` structure contains information that an application can use while processing the `WM_NCCALCSIZE` message to calculate the size, position, and valid contents of the client area of a window.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagNCCALCSIZE_PARAMS {  
@@ -52,18 +52,18 @@ typedef struct tagNCCALCSIZE_PARAMS {
 } NCCALCSIZE_PARAMS;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  *rgrc*  
- Spécifie un tableau de rectangles. Le premier contient les nouvelles coordonnées d’une fenêtre qui a été déplacé ou redimensionné. Le second contient les coordonnées de la fenêtre avant qu’il a été déplacé ou redimensionné. La troisième contient les coordonnées de la zone cliente d’une fenêtre avant qu’il a été déplacé ou redimensionné. Si la fenêtre est une fenêtre enfant, les coordonnées sont relatives à la zone client de la fenêtre parente. Si la fenêtre est une fenêtre de niveau supérieur, les coordonnées sont par rapport à l’écran.  
+ Specifies an array of rectangles. The first contains the new coordinates of a window that has been moved or resized. The second contains the coordinates of the window before it was moved or resized. The third contains the coordinates of the client area of a window before it was moved or resized. If the window is a child window, the coordinates are relative to the client area of the parent window. If the window is a top-level window, the coordinates are relative to the screen.  
   
  *lppos*  
- Pointe vers une [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) structure qui contient les valeurs de taille et la position spécifiées dans l’opération qui a provoqué la fenêtre d’être déplacé ou redimensionné.  
+ Points to a [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) structure that contains the size and position values specified in the operation that caused the window to be moved or resized.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)
 
 

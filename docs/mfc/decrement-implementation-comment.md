@@ -1,44 +1,62 @@
 ---
-title: "// Commentaire sur l&#39;impl&#233;mentation | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "commentaires, commentaires sur l'implémentation"
-  - "commentaires, MFC"
-  - "commentaire sur l'implémentation dans des fichiers sources MFC"
-  - "fichiers sources MFC, commentaire sur l'implémentation"
+title: -- Implementation Comment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Implementation comment in MFC source files
+- comments, MFC
+- MFC source files, Implementation comment
+- comments, Implementation comments
 ms.assetid: 4d799c07-8e71-4a6b-90ab-8282d6ff48ce
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# // Commentaire sur l&#39;impl&#233;mentation
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 74c75369879369232c35e114c2b283911a072795
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-La section `// Implementation` est la partie la plus importante de toute déclaration de classe MFC.  
+---
+# <a name="-implementation-comment"></a>// Implementation Comment
+The `// Implementation` section is the most important part of any MFC class declaration.  
   
- Cette section regroupe tous les détails d'implémentation.  Les attributs et les méthodes peuvent apparaître dans cette section.  Tout en dessous de cette ligne peut changer dans une version ultérieure de MFC.  À moins que vous ne puissiez pas l'éviter, vous ne devez pas compter sur les détails sous la ligne `// Implementation`.  En outre, les membres déclarés sous la ligne d'implémentation ne sont pas documentés, bien que certaines implémentations soient discutées dans des notes techniques.  Les substitutions des fonctions virtuelles dans la classe de base résident dans cette section, indépendamment de la section où la fonction de la classe de base, parce que le fait qu'une fonction remplace l'implémentation de la classe de base est considéré comme un détail d'implémentation.  En général, ces membres sont protégés, mais pas toujours.  
+ This section houses all implementation details. Both member variables and member functions can appear in this section. Everything below this line could change in a future release of MFC. Unless you cannot avoid it, you should not rely on details below the `// Implementation` line. In addition, members declared below the implementation line are not documented, although some implementation is discussed in technical notes. Overrides of virtual functions in the base class reside in this section, regardless of which section the base class function is defined in, because the fact that a function overrides the base class implementation is considered an implementation detail. Typically, these members are protected, but not always.  
   
- Note de la liste `CStdioFile` sous [Un exemple de commentaires](../mfc/an-example-of-the-comments.md) que les membres déclarés sous le commentaire `// Implementation` peuvent être déclarés comme **public**, `protected`, ou `private`.  Vous devez utiliser ces membres avec précaution, car ils peuvent changer à l'avenir.  La déclaration d'un groupe de membres comme **public** peut être nécessaire pour que l'implémentation de la bibliothèque de classes fonctionne correctement.  Toutefois, cela ne signifie pas que vous pouvez utiliser en toute sécurité les membres déclarés ainsi.  
+ Notice from the `CStdioFile` listing under [An Example of the Comments](../mfc/an-example-of-the-comments.md) that members declared below the `// Implementation` comment may be declared as **public**, `protected`, or `private`. You should only use these members with caution, because they may change in the future. Declaring a group of members as **public** may be necessary for the class library implementation to work correctly. However, this does not mean that you may safely use the members so declared.  
   
 > [!NOTE]
->  Vous pouvez rechercher les commentaires des types restants au\-dessus ou en dessous du commentaire `// Implementation`.  Dans l'un et l'autre cas, ils décrivent les types de membres déclarés en dessous.  S'ils apparaissent sous le commentaire `// Implementation`, vous devez supposer que les membres peuvent changer dans les versions ultérieures de MFC.  
+>  You may find comments of the remaining types either above or below the `// Implementation` comment. In either case, they describe the kinds of members declared below them. If they occur below the `// Implementation` comment, you should assume that the members may change in future versions of MFC.  
   
-## Voir aussi  
- [Utilisation des fichiers sources MFC](../mfc/using-the-mfc-source-files.md)   
- [Un exemple des commentaires](../mfc/an-example-of-the-comments.md)   
- [\/\/ Constructeurs, commentaire](../mfc/decrement-constructors-comment.md)   
- [\/\/ Attributs, commentaire](../mfc/decrement-attributes-comment.md)   
- [\/\/ Opérations, commentaires](../mfc/decrement-operations-comment.md)   
- [\/\/ Remplaçable, commentaire](../mfc/decrement-overridables-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [An Example of the Comments](../mfc/an-example-of-the-comments.md)   
+ [// Constructors Comment](../mfc/decrement-constructors-comment.md)   
+ [// Attributes Comment](../mfc/decrement-attributes-comment.md)   
+ [// Operations Comment](../mfc/decrement-operations-comment.md)   
+ [// Overridables Comment](../mfc/decrement-overridables-comment.md)
+
+

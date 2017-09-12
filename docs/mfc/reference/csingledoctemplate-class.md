@@ -1,5 +1,5 @@
 ---
-title: Classe CSingleDocTemplate | Documents Microsoft
+title: CSingleDocTemplate Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,10 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- templates, SDI
-- document templates, single
-- single document interface (SDI), applications
-- CSingleDocTemplate class
+- CSingleDocTemplate [MFC], CSingleDocTemplate
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 caps.latest.revision: 23
 author: mikeblome
@@ -38,48 +35,48 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: 78e288dd958e73495a8d513d7fe3427ccc956a61
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 113ea3c8dca65f1762e1bdf969d4433afc884bef
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csingledoctemplate-class"></a>Classe CSingleDocTemplate
-Définit un modèle de document qui implémente l'interface monodocument (SDI).  
+# <a name="csingledoctemplate-class"></a>CSingleDocTemplate Class
+Defines a document template that implements the single document interface (SDI).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSingleDocTemplate : public CDocTemplate  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSingleDocTemplate::CSingleDocTemplate](#csingledoctemplate)|Construit un objet `CSingleDocTemplate`.|  
+|[CSingleDocTemplate::CSingleDocTemplate](#csingledoctemplate)|Constructs a `CSingleDocTemplate` object.|  
   
-## <a name="remarks"></a>Remarques  
- Une application SDI utilise la fenêtre frame principale pour afficher un document ; un seul document peut être ouvert à la fois.  
+## <a name="remarks"></a>Remarks  
+ An SDI application uses the main frame window to display a document; only one document can be open at a time.  
   
- Un modèle de document définit la relation entre les trois types de classes :  
+ A document template defines the relationship between three types of classes:  
   
--   Une classe de document, vous dérivez de **CDocument**.  
+-   A document class, which you derive from **CDocument**.  
   
--   Une classe d’affichage, qui affiche des données à partir de la classe de document répertoriée ci-dessus. Vous pouvez dériver de cette classe à partir de `CView`, `CScrollView`, `CFormView`, ou `CEditView`. (Vous pouvez également utiliser `CEditView` directement.)  
+-   A view class, which displays data from the document class listed above. You can derive this class from `CView`, `CScrollView`, `CFormView`, or `CEditView`. (You can also use `CEditView` directly.)  
   
--   Une classe de fenêtre frame, qui contient la vue. Pour un modèle de document SDI, vous pouvez dériver de cette classe à partir de `CFrameWnd`des fenêtres frame ; s’il est inutile de personnaliser le comportement de la main, vous pouvez utiliser `CFrameWnd` directement sans dériver votre propre classe.  
+-   A frame window class, which contains the view. For an SDI document template, you can derive this class from `CFrameWnd`; if you do not need to customize the behavior of the main frame window, you can use `CFrameWnd` directly without deriving your own class.  
   
- Une application SDI généralement prend en charge un type de document, afin qu’il a un seul `CSingleDocTemplate` objet. Un seul document peut être ouvert à la fois.  
+ An SDI application typically supports one type of document, so it has only one `CSingleDocTemplate` object. Only one document can be open at a time.  
   
- Vous n’avez pas besoin d’appeler des fonctions de n’importe quel membre `CSingleDocTemplate` sauf le constructeur. Les poignées de framework `CSingleDocTemplate` objets en interne.  
+ You don't need to call any member functions of `CSingleDocTemplate` except the constructor. The framework handles `CSingleDocTemplate` objects internally.  
   
- Pour plus d’informations sur l’utilisation de `CSingleDocTemplate`, consultez [modèles de Document et le processus de création de Document/vue](../../mfc/document-templates-and-the-document-view-creation-process.md).  
+ For more information on using `CSingleDocTemplate`, see [Document Templates and the Document/View Creation Process](../../mfc/document-templates-and-the-document-view-creation-process.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,11 +85,11 @@ class CSingleDocTemplate : public CDocTemplate
   
  `CSingleDocTemplate`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="csingledoctemplate"></a>CSingleDocTemplate::CSingleDocTemplate  
- Construit un objet `CSingleDocTemplate`.  
+##  <a name="csingledoctemplate"></a>  CSingleDocTemplate::CSingleDocTemplate  
+ Constructs a `CSingleDocTemplate` object.  
   
 ```  
 CSingleDocTemplate(
@@ -102,11 +99,11 @@ CSingleDocTemplate(
     CRuntimeClass* pViewClass);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIDResource`  
- Spécifie l’ID des ressources utilisées avec le type de document. Cela peut inclure le menu, icône, table d’accélérateurs et des ressources de chaîne.  
+ Specifies the ID of the resources used with the document type. This may include menu, icon, accelerator table, and string resources.  
   
- La ressource de chaîne se compose d’au moins sept sous-chaînes séparés par le caractère « \n » (le caractère '\n' est requis, car un espace réservé si une sous-chaîne n’est pas incluse ; Toutefois, les caractères de fin '\n' ne sont pas nécessaires) ; Ces sous-chaînes décrivent le type de document. Pour plus d’informations sur les sous-chaînes, consultez [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Cette ressource de chaîne se trouve dans le fichier de ressources. Exemple :  
+ The string resource consists of up to seven substrings separated by the '\n' character (the '\n' character is needed as a placeholder if a substring is not included; however, trailing '\n' characters are not necessary); these substrings describe the document type. For information about the substrings, see [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). This string resource is found in the application's resource file. For example:  
   
  `// MYCALC.RC`  
   
@@ -118,35 +115,35 @@ CSingleDocTemplate(
   
  `END`  
   
- Vous pouvez modifier cette chaîne à l’aide de l’éditeur de chaînes ; la chaîne entière apparaît comme une seule entrée dans l’éditeur de chaînes, pas comme les sept entrées différentes.  
+ You can edit this string using the string editor; the entire string appears as a single entry in the String Editor, not as seven separate entries.  
   
- Pour plus d’informations sur ces types de ressources, consultez le [éditeur de chaînes](../../windows/string-editor.md).  
+ For more information about these resource types, see the [String Editor](../../windows/string-editor.md).  
   
  `pDocClass`  
- Pointe vers le `CRuntimeClass` objet de la classe de document. Cette classe est un **CDocument**-vous définissez pour représenter vos documents de classe dérivée.  
+ Points to the `CRuntimeClass` object of the document class. This class is a **CDocument**-derived class you define to represent your documents.  
   
  `pFrameClass`  
- Pointe vers le `CRuntimeClass` objet de la classe de fenêtre frame. Cette classe peut être un `CFrameWnd`-classe dérivée, ou il peut être `CFrameWnd` elle-même si vous préférez le comportement par défaut pour votre fenêtre frame principale.  
+ Points to the `CRuntimeClass` object of the frame window class. This class can be a `CFrameWnd`-derived class, or it can be `CFrameWnd` itself if you want default behavior for your main frame window.  
   
  `pViewClass`  
- Pointe vers le `CRuntimeClass` objet de la classe d’affichage. Cette classe est un `CView`-vous définissez pour afficher vos documents de classe dérivée.  
+ Points to the `CRuntimeClass` object of the view class. This class is a `CView`-derived class you define to display your documents.  
   
-### <a name="remarks"></a>Remarques  
- Allouer dynamiquement un `CSingleDocTemplate` de l’objet et le passer à `CWinApp::AddDocTemplate` à partir de la `InitInstance` fonction membre de classe de votre application.  
+### <a name="remarks"></a>Remarks  
+ Dynamically allocate a `CSingleDocTemplate` object and pass it to `CWinApp::AddDocTemplate` from the `InitInstance` member function of your application class.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCDocViewSDI&#13;](../../mfc/codesnippet/cpp/csingledoctemplate-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocViewSDI#13](../../mfc/codesnippet/cpp/csingledoctemplate-class_1.cpp)]  
   
- [!code-cpp[NVC_MFCDocViewSDI&#14;](../../mfc/codesnippet/cpp/csingledoctemplate-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#14](../../mfc/codesnippet/cpp/csingledoctemplate-class_2.cpp)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemple MFC DOCKTOOL](../../visual-cpp-samples.md)   
- [CDocTemplate (classe)](../../mfc/reference/cdoctemplate-class.md)   
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [CDocTemplate (classe)](../../mfc/reference/cdoctemplate-class.md)   
- [CDocument (classe)](../../mfc/reference/cdocument-class.md)   
- [CFrameWnd (classe)](../../mfc/reference/cframewnd-class.md)   
- [CMultiDocTemplate (classe)](../../mfc/reference/cmultidoctemplate-class.md)   
- [CView (classe)](../../mfc/reference/cview-class.md)   
- [CWinApp (classe)](../../mfc/reference/cwinapp-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample DOCKTOOL](../../visual-cpp-samples.md)   
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)   
+ [CDocument Class](../../mfc/reference/cdocument-class.md)   
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)   
+ [CMultiDocTemplate Class](../../mfc/reference/cmultidoctemplate-class.md)   
+ [CView Class](../../mfc/reference/cview-class.md)   
+ [CWinApp Class](../../mfc/reference/cwinapp-class.md)
 

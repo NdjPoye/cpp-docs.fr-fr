@@ -1,45 +1,64 @@
 ---
-title: "Graphique hi&#233;rarchique | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes (C++), MFC (hiérarchie)"
-  - "MFC, modèle objet"
-  - "modèles objet, MFC"
+title: Hierarchy Chart | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- object models, MFC
+- classes [MFC], MFC hierarchy
+- MFC, object model
 ms.assetid: 19d70341-e391-4a72-94c6-35755ce975d4
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Graphique hi&#233;rarchique
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3f26aece0ba4c70e240f71ef24f6efd87d4c2b17
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-L'illustration suivante représente les classes MFC dérivées de `CObject` :  
+---
+# <a name="hierarchy-chart"></a>Hierarchy Chart
+The following illustration represents the MFC classes derived from `CObject`:  
   
- ![Classes dérivées de CObject](../mfc/media/mfc_heirarchy_chart1of3.png "MFC\_Heirarchy\_Chart1of3")  
+ ![Classes Derived From CObject](../mfc/media/mfc_heirarchy_chart1of3.png "mfc_heirarchy_chart1of3")  
   
- L'illustration suivante représente les classes MFC dérivées de `CWnd` et `CCmdTarget` :  
+ The following illustration represents the MFC classes derived from `CWnd` and `CCmdTarget`:  
   
- ![Classes dérivées de CCmdTarget ou CWnd](../mfc/media/mfc_heirarchy_chart2of3.png "MFC\_Heirarchy\_Chart2of3")  
+ ![Classes Derived From CCmdTarget or CWnd](../mfc/media/mfc_heirarchy_chart2of3.png "mfc_heirarchy_chart2of3")  
   
- L'illustration suivante représente les classes MFC non dérivées de `CObject` :  
+ The following illustration represents the MFC classes not derived from `CObject`:  
   
- ![Classes non dérivées de CObject](../mfc/media/mfc_heirarchy_chart3of3.png "MFC\_Heirarchy\_Chart3of3")  
+ ![Classes Not Derived From CObject](../mfc/media/mfc_heirarchy_chart3of3.png "mfc_heirarchy_chart3of3")  
   
- Vous pouvez télécharger le graphique complet depuis l'emplacement suivant : [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=112301](http://go.microsoft.com/fwlink/?LinkId=112301).  
+ You can download the complete chart from the following location: [MFC Hierarchy Charts Download](https://aka.ms/hxgg8e).  
   
-## Voir aussi  
- [Catégories du graphique hiérarchique](../mfc/hierarchy-chart-categories.md)   
- [Vue d'ensemble des classes](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart Categories](../mfc/hierarchy-chart-categories.md)   
+ [Class Overview](../mfc/class-library-overview.md)
+
+

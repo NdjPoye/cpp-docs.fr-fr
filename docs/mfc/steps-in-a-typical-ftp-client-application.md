@@ -1,56 +1,74 @@
 ---
-title: "&#201;tapes dans une application cliente FTP classique | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FTP (File Transfer Protocol)"
-  - "FTP (File Transfer Protocol), applications clientes"
-  - "applications Internet, applications clientes FTP"
-  - "Internet (applications clientes), table FTP"
-  - "classes WinInet, FTP"
+title: Steps in a Typical FTP Client Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet client applications [MFC], FTP table
+- FTP (File Transfer Protocol)
+- WinInet classes [MFC], FTP
+- FTP (File Transfer Protocol) [MFC], client applications
+- Internet applications [MFC], FTP client applications
 ms.assetid: 70bed7b5-6040-40d1-bc77-702e63a698f2
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# &#201;tapes dans une application cliente FTP classique
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d1607e23d88400afb2a3f5c3d6e6c2f52382b2bb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Une application cliente \(généralement [CInternetSession](../mfc/reference/cinternetsession-class.md) et crée un objet [CFtpConnection](../mfc/reference/cftpconnection-class.md).  Notez que ces classes WinInet MFC ne contrôle pas réellement les paramètres du type de proxy ; IIS est.  
+---
+# <a name="steps-in-a-typical-ftp-client-application"></a>Steps in a Typical FTP Client Application
+A typical FTP client application creates a [CInternetSession](../mfc/reference/cinternetsession-class.md) and a [CFtpConnection](../mfc/reference/cftpconnection-class.md) object. Note that these MFC WinInet classes do not actually control the proxy type settings; IIS does.  
   
- En outre, consultez les articles de la Base de connaissances :  
+ Also, see these Knowledge Base articles:  
   
--   HOWTO : FTP avec le proxy CERN\- sur l'utilisation de l'API de WinInet \(ID d'article : Q166961\)  
+-   HOWTO: FTP with CERN-Based Proxy Using WinInet API (Article ID: Q166961)  
   
--   APERÇU : FTP avec le proxy protégé par mot de passe CERN\- sur \(ID d'article : Q216214\)  
+-   SAMPLE: FTP with CERN-Based Password Protected Proxy (Article ID: Q216214)  
   
--   Le gestionnaire des services Internet n'affiche pas les services installés de proxy \(ID d'article : Q216802\)  
+-   Internet Services Manager Fails to Show Installed Proxy Services (Article ID: Q216802)  
   
- Le tableau suivant montre les étapes que vous pouvez effectuer dans une application cliente FTP standard.  
+ The following table shows the steps you might perform in a typical FTP client application.  
   
-|Votre objectif|Mesures que vous prenez|Effets|  
-|--------------------|-----------------------------|------------|  
-|Démarrez une session FTP.|Créez un objet [CInternetSession](../mfc/reference/cinternetsession-class.md).|Initialise WinInet et se connecte au serveur.|  
-|Connectez vous à un serveur FTP.|Utilisez [CInternetSession::GetFtpConnection](../Topic/CInternetSession::GetFtpConnection.md).|Retourne un objet [CFtpConnection](../mfc/reference/cftpconnection-class.md).|  
-|Accédez à un nouveau répertoire FTP sur le serveur.|Utilisez [CFtpConnection::SetCurrentDirectory](../Topic/CFtpConnection::SetCurrentDirectory.md).|Modifie le répertoire auquel vous êtes connecté sur le serveur.|  
-|Recherchez le premier fichier dans le répertoire FTP.|Utilisez [CFtpFileFind::FindFile](../Topic/CFtpFileFind::FindFile.md).|Recherche le premier fichier.  Retourne FALSE si aucun fichier n'est trouvé.|  
-|Recherchez le premier fichier dans le répertoire FTP.|Utilisez [CFtpFileFind::FindNextFile](../Topic/CFtpFileFind::FindNextFile.md).|Recherche le fichier suivant.  Retourne FALSE si le fichier est introuvable.|  
-|Ouvrez le fichier recherché par **FindFile** ou `FindNextFile` pour lire ou écrire.|Utilisez [CFtpConnection::OpenFile](../Topic/CFtpConnection::OpenFile.md), avec le nom de fichier renvoyé par [FindFile](../Topic/CFtpFileFind::FindFile.md) ou [FindNextFile](../Topic/CFtpFileFind::FindNextFile.md).|Supprime le fichier sur le serveur pour lire ou écrire.  Retourne la longueur d'un objet [CInternetFile](../mfc/reference/cinternetfile-class.md).|  
-|Lire ou écrire dans le fichier.|Utilisez [CInternetFile::Read](../Topic/CInternetFile::Read.md) ou [CInternetFile::Write](../Topic/CInternetFile::Write.md).|Lit le nombre d'octets spécifié, avec une mémoire tampon que vous fournissez.|  
-|Gestion des exceptions.|Utilisez la classe [CInternetException](../mfc/reference/cinternetexception-class.md).|Gère tous les types d'exception Internet communs.|  
-|Termine la session FTP.|Jetez l'objet [CInternetSession](../mfc/reference/cinternetsession-class.md).|Nettoie automatiquement les handles et les connexions de fichiers ouverts.|  
+|Your goal|Actions you take|Effects|  
+|---------------|----------------------|-------------|  
+|Begin an FTP session.|Create a [CInternetSession](../mfc/reference/cinternetsession-class.md) object.|Initializes WinInet and connects to server.|  
+|Connect to an FTP server.|Use [CInternetSession::GetFtpConnection](../mfc/reference/cinternetsession-class.md#getftpconnection).|Returns a [CFtpConnection](../mfc/reference/cftpconnection-class.md) object.|  
+|Change to a new FTP directory on the server.|Use [CFtpConnection::SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory).|Changes the directory you are currently connected to on the server.|  
+|Find the first file in the FTP directory.|Use [CFtpFileFind::FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|Finds the first file. Returns FALSE if no files are found.|  
+|Find the next file in the FTP directory.|Use [CFtpFileFind::FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Finds the next file. Returns FALSE if the file is not found.|  
+|Open the file found by **FindFile** or `FindNextFile` for reading or writing.|Use [CFtpConnection::OpenFile](../mfc/reference/cftpconnection-class.md#openfile), using the file name returned by [FindFile](../mfc/reference/cftpfilefind-class.md#findfile) or [FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Opens the file on the server for reading or writing. Returns a [CInternetFile](../mfc/reference/cinternetfile-class.md) object.|  
+|Read from or write to the file.|Use [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read) or [CInternetFile::Write](../mfc/reference/cinternetfile-class.md#write).|Reads or writes the specified number of bytes, using a buffer you supply.|  
+|Handle exceptions.|Use the [CInternetException](../mfc/reference/cinternetexception-class.md) class.|Handles all common Internet exception types.|  
+|End the FTP session.|Dispose of the [CInternetSession](../mfc/reference/cinternetsession-class.md) object.|Automatically cleans up open file handles and connections.|  
   
-## Voir aussi  
- [Extension Internet Win32 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)   
- [Composants requis pour les classes clientes Internet](../mfc/prerequisites-for-internet-client-classes.md)   
- [Écriture d'une application cliente Internet en utilisant des classes WinInet MFC](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+## <a name="see-also"></a>See Also  
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
+ [Prerequisites for Internet Client Classes](../mfc/prerequisites-for-internet-client-classes.md)   
+ [Writing an Internet Client Application Using MFC WinInet Classes](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+

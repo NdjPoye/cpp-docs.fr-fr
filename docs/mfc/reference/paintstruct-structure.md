@@ -1,5 +1,5 @@
 ---
-title: Structure PAINTSTRUCT | Documents Microsoft
+title: PAINTSTRUCT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- PAINTSTRUCT structure
+- PAINTSTRUCT structure [MFC]
 ms.assetid: 81ce4993-3e89-43b2-8c98-7946f1314d24
 caps.latest.revision: 12
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 07b79b9ae20bd6e5648c67fa277ddde2929028c7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b27dcb247437b37631e306b171c4201142c33cae
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="paintstruct-structure"></a>PAINTSTRUCT, structure
-Le `PAINTSTRUCT` structure contient des informations qui peuvent être utilisées pour peindre la zone cliente d’une fenêtre.  
+# <a name="paintstruct-structure"></a>PAINTSTRUCT Structure
+The `PAINTSTRUCT` structure contains information that can be used to paint the client area of a window.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagPAINTSTRUCT {  
@@ -56,30 +56,30 @@ typedef struct tagPAINTSTRUCT {
 } PAINTSTRUCT;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- *HDC*  
- Identifie le contexte d’affichage à utiliser pour peindre.  
+#### <a name="parameters"></a>Parameters  
+ *hdc*  
+ Identifies the display context to be used for painting.  
   
  *fErase*  
- Spécifie si l’arrière-plan doit être redessiné. Il n’est pas 0 si l’application doit redessiner l’arrière-plan. L’application est responsable du dessin de l’arrière-plan si une classe de fenêtre Windows est créée sans un pinceau d’arrière-plan (voir la description de la **hbrBackground** membre de la [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]).  
+ Specifies whether the background needs to be redrawn. It is not 0 if the application should redraw the background. The application is responsible for drawing the background if a Windows window-class is created without a background brush (see the description of the **hbrBackground** member of the [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure in the Windows SDK).  
   
  *rcPaint*  
- Spécifie l’angle supérieur gauche et inférieure droite du rectangle dans lequel le dessin est demandé.  
+ Specifies the upper left and lower right corners of the rectangle in which the painting is requested.  
   
  *fRestore*  
- Membre réservé. Il est utilisé en interne par Windows.  
+ Reserved member. It is used internally by Windows.  
   
  *fIncUpdate*  
- Membre réservé. Il est utilisé en interne par Windows.  
+ Reserved member. It is used internally by Windows.  
   
- *rgbReserved [16]*  
- Membre réservé. Un bloc réservé de la mémoire utilisée en interne par Windows.  
+ *rgbReserved[16]*  
+ Reserved member. A reserved block of memory used internally by Windows.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CPaintDC::m_ps](../../mfc/reference/cpaintdc-class.md#m_ps)
 
 

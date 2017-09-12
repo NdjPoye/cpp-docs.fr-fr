@@ -1,88 +1,105 @@
 ---
-title: "Mise &#224; jour du texte d&#39;un volet de barre d&#39;&#233;tat | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBar (classe), mettre à jour"
-  - "ON_UPDATE_COMMAND_UI (macro)"
-  - "volets, barre d'état"
-  - "SetText (méthode)"
-  - "barres d'état, mettre à jour"
-  - "texte, barre d'état"
-  - "mettre à jour des objets de l'interface utilisateur"
-  - "objets de l'interface utilisateur, mettre à jour"
+title: Updating the Text of a Status-Bar Pane | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- updating user interface objects [MFC]
+- ON_UPDATE_COMMAND_UI macro [MFC]
+- user interface objects [MFC], updating
+- text, status bar
+- CStatusBar class [MFC], updating
+- SetText method [MFC]
+- panes, status bar
+- status bars [MFC], updating
 ms.assetid: 4984a3f4-9905-4d8c-a927-dca19781053b
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Mise &#224; jour du texte d&#39;un volet de barre d&#39;&#233;tat
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8a935d43a026259ecfacf44785c784e1a52534ae
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cet article explique comment modifier le texte qui apparaît dans un de volet barre d'état MFC.  Une barre d'état — objet fenêtre de la classe [CStatusBar](../mfc/reference/cstatusbar-class.md) — contient plusieurs "volets". Chaque volet est une zone rectangulaire de la barre d'état que vous pouvez utiliser pour afficher des informations.  Par exemple, de nombreuses applications affichent l'état de CAPS LOCK, de NUM LOCK, et d'autres touches dans les volets à droite.  Les applications affichent également souvent le texte informatif dans le volet situé le plus à gauche \(volet 0\), parfois appelé le "volet de message". Par exemple, la barre d'état MFC par défaut utilise le volet de message pour afficher une chaîne qui explique l'élément de menu ou le bouton de la barre d'outils sélectionné.  La figure dans [Barres d'état](../mfc/status-bar-implementation-in-mfc.md) affiche une barre d'état d'une application créée par l'Assistant Application MFC.  
+---
+# <a name="updating-the-text-of-a-status-bar-pane"></a>Updating the Text of a Status-Bar Pane
+This article explains how to change the text that appears in an MFC status bar pane. A status bar — a window object of class [CStatusBar](../mfc/reference/cstatusbar-class.md) — contains several "panes." Each pane is a rectangular area of the status bar that you can use to display information. For example, many applications display the status of the CAPS LOCK, NUM LOCK, and other keys in the rightmost panes. Applications also often display informative text in the leftmost pane (pane 0), sometimes called the "message pane." For example, the default MFC status bar uses the message pane to display a string explaining the currently selected menu item or toolbar button. The figure in [Status Bars](../mfc/status-bar-implementation-in-mfc.md) shows a status bar from an Application Wizard-created MFC application.  
   
- Par défaut, MFC n'active pas un volet `CStatusBar` lorsqu'il crée le volet.  Pour activer un volet, vous devez utiliser la macro `ON_UPDATE_COMMAND_UI` pour chaque volet dans la barre d'état et mettre à jour les volets.  Comme les volets n'envoie aucun message **WM\_COMMAND** \(ils ne sont pas comme les boutons de la barre d'outils\), vous devez taper le code manuellement.  
+ By default, MFC does not enable a `CStatusBar` pane when it creates the pane. To activate a pane, you must use the `ON_UPDATE_COMMAND_UI` macro for each pane on the status bar and update the panes. Because panes do not send **WM_COMMAND** messages (they aren't like toolbar buttons), you must type the code manually.  
   
- Par exemple, supposons qu'un volet a `ID_INDICATOR_PAGE` comme identificateur de commande et qu'il contient le numéro de page actuelle dans un document.  La procédure suivante explique comment créer un nouveau volet dans la barre d'état.  
+ For example, suppose one pane has `ID_INDICATOR_PAGE` as its command identifier and that it contains the current page number in a document. The following procedure describes how to create a new pane in the status bar.  
   
-### Pour créer un nouveau volet  
+### <a name="to-make-a-new-pane"></a>To make a new pane  
   
-1.  Définissez l'ID de commande du volet  
+1.  Define the pane's command ID.  
   
-     Dans le menu **View**, cliquez sur **Resource View**.  Cliquez avec le bouton droit sur la ressource projet puis cliquez sur **Resource Symbols**.  Dans la boîte de dialogue Symboles de ressource, cliquez sur `New`.  Tapez le nom de l'ID de commande : par exemple, `ID_INDICATOR_PAGE`.  Spécifiez une valeur pour l'ID, ou acceptez la valeur suggérée par la boîte de dialogue de symboles de ressources.  Par exemple, pour `ID_INDICATOR_PAGE`, acceptez la valeur par défaut.  Fermez la boîte de dialogue de symboles de ressources.  
+     On the **View** menu, click **Resource View**. Right-click the project resource and click **Resource Symbols**. In the Resource Symbols dialog box, click `New`. Type a command ID name: for example, `ID_INDICATOR_PAGE`. Specify a value for the ID, or accept the value suggested by the Resource Symbols dialog box. For example, for `ID_INDICATOR_PAGE`, accept the default value. Close the Resource Symbols dialog box.  
   
-2.  Définissez une chaîne par défaut à afficher dans le volet.  
+2.  Define a default string to display in the pane.  
   
-     Avec l'affichage des ressources ouvert, double\-cliquez sur **Table de chaînes** dans la fenêtre qui répertorie les types de ressources pour votre application.  Avec l'éditeur de **Table de chaînes** ouvert, choisissez **Nouvelle chaîne** dans le menu **Insert** .  Dans la fenêtre de propriétés de chaîne, sélectionnez l'ID de commande du volet \(par exemple, `ID_INDICATOR_PAGE`\) et tapez une valeur de chaîne par défaut, telle que « page ».  Fermez l'éditeur de chaîne. \(Vous avez besoin d'une chaîne par défaut pour éviter une erreur de compilation.\)  
+     With Resource View open, double-click **String Table** in the window that lists resource types for your application. With the **String Table** editor open, choose **New String** from the **Insert** menu. In the String Properties window, select your pane's command ID (for example, `ID_INDICATOR_PAGE`) and type a default string value, such as "Page   ". Close the string editor. (You need a default string to avoid a compiler error.)  
   
-3.  Ajoutez le volet au tableau d'**indicators**.  
+3.  Add the pane to the **indicators** array.  
   
-     Dans le fichier MAINFRM.CPP, recherchez le tableau d'**indicators**.  Ces tableaux listent les ID de commande pour tous les indicateurs de barre d'état, de gauche à droite.  Au point approprié dans le tableau, entrez l'ID de commande du volet, comme indiqué ici pour `ID_INDICATOR_PAGE`:  
+     In file MAINFRM.CPP, locate the **indicators** array. This array lists command IDs for all of the status bar's indicators, in order from left to right. At the appropriate point in the array, enter your pane's command ID, as shown here for `ID_INDICATOR_PAGE`:  
   
-     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/CPP/updating-the-text-of-a-status-bar-pane_1.cpp)]  
+     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]  
   
- La méthode recommandée d'affichage du texte dans le volet consiste à appeler la méthode **SetText** de la classe `CCmdUI` dans une fonction de gestionnaire de mise à jour du volet.  Par exemple, vous pouvez vouloir placer une variable de type entier `m_nPage` qui contient le numéro de page et utilise **SetText** pour définir le texte du volet vers une version en chaîne de cette valeur.  
+ The recommended way to display text in a pane is to call the **SetText** member function of class `CCmdUI` in an update handler function for the pane. For example, you might want to set up an integer variable `m_nPage` that contains the current page number and use **SetText** to set the pane's text to a string version of that number.  
   
 > [!NOTE]
->  La méthode **SetText** est recommandée.  Il est possible d'effectuer cette tâche à un niveau légèrement inférieur en appelant la méthode `SetPaneText`de `CStatusBar`.  Toutefois, vous avez toujours besoin d'un gestionnaire de mise à jour.  Sans ce gestionnaire pour le volet, MFC désactive automatiquement le volet, effaçant son contenu.  
+>  The **SetText** approach is recommended. It is possible to perform this task at a slightly lower level by calling the `CStatusBar` member function `SetPaneText`. Even so, you still need an update handler. Without such a handler for the pane, MFC automatically disables the pane, erasing its content.  
   
- La procédure suivante montre comment utiliser une fonction du gestionnaire de mise à jour pour afficher du texte dans le volet.  
+ The following procedure shows how to use an update handler function to display text in a pane.  
   
-#### Pour qu'un volet affiche du texte  
+#### <a name="to-make-a-pane-display-text"></a>To make a pane display text  
   
-1.  Ajoutez un gestionnaire de mise à jour de commande pour la commande.  
+1.  Add a command update handler for the command.  
   
-     Ajoutez manuellement un prototype du gestionnaire, comme indiqué ici pour `ID_INDICATOR_PAGE` \(dans MAINFRM.H\) :  
+     Manually add a prototype for the handler, as shown here for `ID_INDICATOR_PAGE` (in MAINFRM.H):  
   
-     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/CPP/updating-the-text-of-a-status-bar-pane_2.h)]  
+     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]  
   
-2.  Dans le fichier .cpp adapté, ajoutez la définition du gestionnaire, comme indiqué ici pour `ID_INDICATOR_PAGE` \(dans MAINFRM.CPP\) :  
+2.  In the appropriate .CPP file, add the handler's definition, as shown here for `ID_INDICATOR_PAGE` (in MAINFRM.CPP):  
   
-     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/CPP/updating-the-text-of-a-status-bar-pane_3.cpp)]  
+     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]  
   
-     Les trois dernières lignes de ce gestionnaire sont le code qui affiche le texte.  
+     The last three lines of this handler are the code that displays your text.  
   
-3.  Dans la table des messages appropriée, ajoutez la macro `ON_UPDATE_COMMAND_UI`, comme indiqué ici pour `ID_INDICATOR_PAGE` \(dans MAINFRM.CPP\) :  
+3.  In the appropriate message map, add the `ON_UPDATE_COMMAND_UI` macro, as shown here for `ID_INDICATOR_PAGE` (in MAINFRM.CPP):  
   
-     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/CPP/updating-the-text-of-a-status-bar-pane_4.cpp)]  
+     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]  
   
- Une fois que vous donnez une valeur à l'attribut `m_nPage` \(classe `CMainFrame`\), cette technique fait que le numéro de page apparaît dans le volet au cours du traitement du temps d'inactivité de la même façon que l'application met à jour d'autres indicateurs.  Si `m_nPage` change, l'affichage change durant la boucle inactive suivante.  
+ Once you define the value of the `m_nPage` member variable (of class `CMainFrame`), this technique causes the page number to appear in the pane during idle processing in the same manner that the application updates other indicators. If `m_nPage` changes, the display changes during the next idle loop.  
   
-### Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Mise à jour des objets d'interface utilisateur \(comment mettre à jour les boutons des barres d'outils et les éléments de menu comme modification des états de programme\)](../mfc/how-to-update-user-interface-objects.md)  
+-   [Updating user-interface objects (how to update toolbar buttons and menu items as program conditions change)](../mfc/how-to-update-user-interface-objects.md)  
   
-## Voir aussi  
- [Implémentation de la barre d'état dans MFC](../mfc/status-bar-implementation-in-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [Status Bar Implementation in MFC](../mfc/status-bar-implementation-in-mfc.md)   
  [CStatusBar Class](../mfc/reference/cstatusbar-class.md)
+

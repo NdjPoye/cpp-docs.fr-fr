@@ -1,42 +1,61 @@
 ---
-title: "D&#233;tachement d&#39;un objet CWnd de son HWND | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CWnd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objets CWnd, détacher de HWND"
-  - "Detach (méthode) (classe CWnd)"
-  - "détacher des CWnd de HWND"
-  - "HWND, détacher CWnd de"
-  - "supprimer des HWND de CWnd"
+title: Detaching a CWnd from Its HWND | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CWnd
+dev_langs:
+- C++
+helpviewer_keywords:
+- HWND, detaching CWnd from
+- removing HWNDs from CWnds
+- CWnd objects [MFC], detaching from HWND
+- detaching CWnds from HWNDs
+- Detach method (CWnd class)
 ms.assetid: 6efadf84-0517-4a3f-acfd-216e088f19c6
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# D&#233;tachement d&#39;un objet CWnd de son HWND
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7b93a8205a5e6bafbf1561735e02b137ad4aa56e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Si vous devez éviter la relation `HWND` d'objet, MFC fournit une fonction membre `CWnd`, [Détacher](../Topic/CWnd::Detach.md), qui déconnecte l'objet fenêtre C\+\+ de la fenêtre du windows.  Cela empêché le destructeur de détruire la fenêtre du windows lorsque l'objet est détruit.  
+---
+# <a name="detaching-a-cwnd-from-its-hwnd"></a>Detaching a CWnd from Its HWND
+If you need to circumvent the object-`HWND` relationship, MFC provides another `CWnd` member function, [Detach](../mfc/reference/cwnd-class.md#detach), which disconnects the C++ window object from the Windows window. This prevents the destructor from destroying the Windows window when the object is destroyed.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Création de fenêtres](../mfc/creating-windows.md)  
+-   [Creating windows](../mfc/creating-windows.md)  
   
--   [Séquence de destruction de fenêtres](../mfc/window-destruction-sequence.md)  
+-   [Window destruction sequence](../mfc/window-destruction-sequence.md)  
   
--   [Allocation et libération de la mémoire de la fenêtre](../mfc/allocating-and-deallocating-window-memory.md)  
+-   [Allocating and deallocating window memory](../mfc/allocating-and-deallocating-window-memory.md)  
   
-## Voir aussi  
- [Objets fenêtres](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

@@ -1,71 +1,90 @@
 ---
-title: "Classes de fen&#234;tre d&#233;riv&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes (C++), dérivés"
-  - "CWnd (classe), classes dérivées de"
-  - "classes dérivées, classes de fenêtre"
-  - "hiérarchies, classes de fenêtre"
-  - "hiérarchie de classe de fenêtre"
-  - "classes de fenêtre, dérivés"
+title: Derived Window Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- window class hierarchy
+- hierarchies, window classes
+- classes [MFC], derived
+- CWnd class [MFC], classes derived from
+- derived classes [MFC], window classes
+- window classes [MFC], derived
 ms.assetid: 6f7e437e-fbde-4a06-bfab-72d9dbf05292
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Classes de fen&#234;tre d&#233;riv&#233;es
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: adfe0c19c2a6797022dfa22cab3e15b084ed3514
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Vous pouvez créer des fenêtres directement depuis [CWnd](../mfc/reference/cwnd-class.md), ou dériver de nouvelles classes de fenêtres depuis `CWnd`.  Voici comment vous créez généralement vos propres fenêtres personnalisées.  Toutefois, la plupart des fenêtres utilisées dans un programme .NET Framework sont plutôt créées à partir d'une des classes `CWnd` de cadre de fenêtre dérivées fournies par MFC.  
+---
+# <a name="derived-window-classes"></a>Derived Window Classes
+You can create windows directly from [CWnd](../mfc/reference/cwnd-class.md), or derive new window classes from `CWnd`. This is how you typically create your own custom windows. However, most windows used in a framework program are instead created from one of the `CWnd`-derived frame-window classes supplied by MFC.  
   
-## Classes de fenêtre frame  
+## <a name="frame-window-classes"></a>Frame Window Classes  
  [CFrameWnd](../mfc/reference/cframewnd-class.md)  
- Utilisé pour les fenêtres frame SDI qui encadrent un document unique et sa vue.  La fenêtre frame est à la fois la fenêtre frame principale pour l'application et la fenêtre frame du document actif.  
+ Used for SDI frame windows that frame a single document and its view. The frame window is both the main frame window for the application and the frame window for the current document.  
   
  [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)  
- Utilisé comme fenêtre frame principale pour les applications MDI.  La fenêtre frame principale est un conteneur pour toutes les fenêtres de document MDI et partage sa barre de menus avec elles.  Une fenêtre frame MDI est une fenêtre de niveau supérieur qui apparaît sur le Bureau.  
+ Used as the main frame window for MDI applications. The main frame window is a container for all MDI document windows and shares its menu bar with them. An MDI frame window is a top-level window that appears on the desktop.  
   
  [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
- Utilisé pour des documents individuels que vous avez ouvert dans une fenêtre frame principale MDI.  Chaque document et sa vue sont encadrés par une fenêtre frame MDI enfant contenue dans la fenêtre frame principale MDI.  Une fenêtre enfant MDI ressemble beaucoup à une fenêtre frame classique mais est contenue dans une fenêtre frame MDI au lieu de reposer sur le Bureau.  Toutefois, il manque à la fenêtre enfant MDI une barre de menus qui lui est propre et elle doit partager la barre de menus de la fenêtre frame MDI qui la contient.  
+ Used for individual documents opened in an MDI main frame window. Each document and its view are framed by an MDI child frame window contained by the MDI main frame window. An MDI child window looks much like a typical frame window but is contained inside an MDI frame window instead of sitting on the desktop. However, the MDI child window lacks a menu bar of its own and must share the menu bar of the MDI frame window that contains it.  
   
- Pour plus d'informations, consultez [Fenêtres Frame](../mfc/frame-windows.md).  
+ For more information, see [Frame Windows](../mfc/frame-windows.md).  
   
-## D'autres classes de fenêtres dérivées de CWnd  
- En plus des fenêtres frames, plusieurs autres grandes catégories de fenêtres sont dérivés de `CWnd`:  
+## <a name="other-window-classes-derived-from-cwnd"></a>Other Window Classes Derived from CWnd  
+ In addition to frame windows, several other major categories of windows are derived from `CWnd`:  
   
- *Vues*  
- Les vues sont créées à l'aide de la classe `CWnd` dérivée [CView](../mfc/reference/cview-class.md) \(ou une de ses classes dérivées\).  Une vue est attachée à un document et sert d'intermédiaire entre le document et l'utilisateur.  Une vue est une fenêtre enfant \(pas un enfant MDI\) qui remplit généralement la zone cliente d'une fenêtre frame SDI ou d'une fenêtre frame enfant MDI \(ou cette partie de la zone cliente non couverte par une barre d'outils et\/ou une barre d'état\).  
+ *Views*  
+ Views are created using the `CWnd`-derived class [CView](../mfc/reference/cview-class.md) (or one of its derived classes). A view is attached to a document and acts as an intermediary between the document and the user. A view is a child window (not an MDI child) that typically fills the client area of an SDI frame window or an MDI child frame window (or that portion of the client area not covered by a toolbar and/or a status bar).  
   
- *Boîtes de dialogue*  
- Les boîtes de dialogue sont créées avec une classe `CWnd`dérivée [CDialog](../mfc/reference/cdialog-class.md).  
+ *Dialog Boxes*  
+ Dialog boxes are created using the `CWnd`-derived class [CDialog](../mfc/reference/cdialog-class.md).  
   
- *Formulaires*  
- Les vues formulaires reposant sur des ressources de modèles de dialogue, telles que les boîtes de dialogue, sont créés à l'aide des classes [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), ou [CDaoRecordView](../mfc/reference/cdaorecordview-class.md).  
+ *Forms*  
+ Form views based on dialog-template resources, such as dialog boxes, are created using classes [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), or [CDaoRecordView](../mfc/reference/cdaorecordview-class.md).  
   
- *Contrôles*  
- Les contrôles tels que les boutons, les zones de liste et les zones de liste modifiables sont créés à l'aide d'autres classes dérivées de `CWnd`.  Consultez [Rubriques de contrôle](../mfc/controls-mfc.md).  
+ *Controls*  
+ Controls such as buttons, list boxes, and combo boxes are created using other classes derived from `CWnd`. See [Control Topics](../mfc/controls-mfc.md).  
   
- *Barres de contrôles*  
- Fenêtres enfants contenant des contrôles.  Les exemples incluent des barres d'outils et des barres d'état.  Consultez [Barres de contrôles](../mfc/control-bars.md).  
+ *Control Bars*  
+ Child windows that contain controls. Examples include toolbars and status bars. See [Control Bars](../mfc/control-bars.md).  
   
-## Hiérarchie de classe de fenêtre  
- Se renvoyer à [Graphique de hiérarchie MFC](../mfc/hierarchy-chart.md) dans la *référence MFC*.  Les vues sont expliquées dans [Architecture Document\/Vue](../mfc/document-view-architecture.md).  Les boîtes de dialogue sont expliquées dans [Boîtes de dialogue](../mfc/dialog-boxes.md).  
+## <a name="window-class-hierarchy"></a>Window Class Hierarchy  
+ Refer to the [MFC hierarchy chart](../mfc/hierarchy-chart.md) in the *MFC Reference*. Views are explained in [Document/View Architecture](../mfc/document-view-architecture.md). Dialog boxes are explained in [Dialog Boxes](../mfc/dialog-boxes.md).  
   
-## Création de vos propres classes de fenêtres spécialisés  
- En plus des classes de fenêtres fournies par la bibliothèque de classes, vous pouvez avoir besoin de fenêtres enfants spécialisés.  Pour créer une telle fenêtre, créer votre propre classe dérivée de [CWnd](../mfc/reference/cwnd-class.md)et faites en une fenêtre enfant d'une frame ou d'une vue.  Gardez à l'esprit que la structure gère l'étendue de la zone cliente d'une fenêtre frame de document.  L'essentiel de la zone cliente est gérée par une vue, mais d'autres fenêtres, telles que des barres de contrôles ou vos propres fenêtres personnalisées, peuvent partager l'espace avec la vue.  Vous devrez peut\-être interagir avec les mécanismes dans les classes [CView](../mfc/reference/cview-class.md) et [CControlBar](../mfc/reference/ccontrolbar-class.md) pour positionner les fenêtres enfants dans la zone cliente d'une fenêtre frame.  
+## <a name="creating-your-own-special-purpose-window-classes"></a>Creating Your Own Special-Purpose Window Classes  
+ In addition to the window classes provided by the class library, you may need special-purpose child windows. To create such a window, create your own [CWnd](../mfc/reference/cwnd-class.md)-derived class and make it a child window of a frame or view. Bear in mind that the framework manages the extent of the client area of a document frame window. Most of the client area is managed by a view, but other windows, such as control bars or your own custom windows, may share the space with the view. You may need to interact with the mechanisms in classes [CView](../mfc/reference/cview-class.md) and [CControlBar](../mfc/reference/ccontrolbar-class.md) for positioning child windows in a frame window's client area.  
   
- [Création des fenêtres](../mfc/creating-windows.md) décrit la création d'objets fenêtre et les fenêtres qu'ils gèrent.  
+ [Creating Windows](../mfc/creating-windows.md) discusses creation of window objects and the windows they manage.  
   
-## Voir aussi  
- [Objets fenêtres](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

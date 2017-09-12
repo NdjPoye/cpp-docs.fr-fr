@@ -1,42 +1,59 @@
 ---
-title: "Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC (C++), fenêtres"
-  - "objets (C++), fenêtres"
-  - "objets fenêtres (C++), MFC (Framework)"
-  - "fenêtres (C++)"
+title: Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], window
+- windows [MFC]
+- MFC, windows
+- window objects [MFC], MFC Framework
 ms.assetid: dd92bf34-842e-40fe-8aea-3028b55314d5
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Windows
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 79e436760e1a96a4e3d6e3edf9729c6d9f3cb0b8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-This family of articles covers window objects in the MFC framework.  All MFC windows derive from class [CWnd](../mfc/reference/cwnd-class.md), including frame windows, views, dialog boxes, and controls.  
+---
+# <a name="windows"></a>Windows
+This family of articles covers window objects in the MFC framework. All MFC windows derive from class [CWnd](../mfc/reference/cwnd-class.md), including frame windows, views, dialog boxes, and controls.  
   
- The first group of articles describes [window objects](../mfc/window-objects.md) in general.  Refer to this group for general information about C\+\+ window objects, how they encapsulate an HWND, and how you use them when creating your own windows, such as child windows.  
+ The first group of articles describes [window objects](../mfc/window-objects.md) in general. Refer to this group for general information about C++ window objects, how they encapsulate an HWND, and how you use them when creating your own windows, such as child windows.  
   
- The second group of articles describes [frame windows](../mfc/frame-windows.md)—windows that put a frame around content — in particular.  Refer to this group for information about how the MFC framework manages frame windows and the contents that they frame, including control bars and views.  
+ The second group of articles describes [frame windows](../mfc/frame-windows.md)—windows that put a frame around content — in particular. Refer to this group for information about how the MFC framework manages frame windows and the contents that they frame, including control bars and views.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
  *Topics on Window Objects in General*  
   
 -   [Window objects](../mfc/window-objects.md)  
   
--   [Relationship between a C\+\+ window objects and HWND handles](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)  
+-   [Relationship between a C++ window objects and HWND handles](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)  
   
 -   [Derived Window classes](../mfc/derived-window-classes.md)  
   
@@ -48,7 +65,7 @@ This family of articles covers window objects in the MFC framework.  All MFC win
   
 -   [Working with window objects](../mfc/working-with-window-objects.md)  
   
--   [Device contexts](../mfc/device-contexts.md): objects that make Windows drawing device\-independent  
+-   [Device contexts](../mfc/device-contexts.md): objects that make Windows drawing device-independent  
   
 -   [Graphic objects](../mfc/graphic-objects.md): pens, brushes, fonts, bitmaps, palettes, regions  
   
@@ -58,9 +75,9 @@ This family of articles covers window objects in the MFC framework.  All MFC win
   
 -   [Frame windows and views](../mfc/frame-windows.md)  
   
--   [Frame\-window classes](../mfc/frame-window-classes.md)  
+-   [Frame-window classes](../mfc/frame-window-classes.md)  
   
--   [Frame\-window styles](../mfc/frame-window-styles-cpp.md)  
+-   [Frame-window styles](../mfc/frame-window-styles-cpp.md)  
   
 -   [Changing the styles of a window created by MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
   
@@ -68,7 +85,7 @@ This family of articles covers window objects in the MFC framework.  All MFC win
   
 -   [Using frame windows](../mfc/using-frame-windows.md)  
   
--   [Managing MD\/Child windows \(the MDICLIENT window\)](../mfc/managing-mdi-child-windows.md)  
+-   [Managing MD/Child windows (the MDICLIENT window)](../mfc/managing-mdi-child-windows.md)  
   
 -   [Managing menus, control bars, and accelerators](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
@@ -80,9 +97,9 @@ This family of articles covers window objects in the MFC framework.  All MFC win
   
 -   [Using Views](../mfc/using-views.md)  
   
--   [Multiple Document Types, Views, and Frame Windows \(Splitter windows\)](../mfc/multiple-document-types-views-and-frame-windows.md)  
+-   [Multiple Document Types, Views, and Frame Windows (Splitter windows)](../mfc/multiple-document-types-views-and-frame-windows.md)  
   
--   [Messages \(maps and handler functions\)](../mfc/messages.md)  
+-   [Messages (maps and handler functions)](../mfc/messages.md)  
   
  *Create and Destroy Windows*  
   
@@ -112,9 +129,11 @@ This family of articles covers window objects in the MFC framework.  All MFC win
   
 -   [Change the styles of a window created by MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
   
-## Voir aussi  
- [Éléments de l'interface utilisateur](../mfc/user-interface-elements-mfc.md)   
- [Boîtes de dialogue](../mfc/dialog-boxes.md)   
- [Barres d'outils](../mfc/toolbars.md)   
- [Barres d'état](../mfc/status-bars.md)   
- [Barres de boîte de dialogue](../mfc/dialog-bars.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Toolbars](../mfc/toolbars.md)   
+ [Status Bars](../mfc/status-bars.md)   
+ [Dialog Bars](../mfc/dialog-bars.md)
+
+

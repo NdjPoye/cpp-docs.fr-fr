@@ -1,34 +1,53 @@
 ---
-title: "Initialisation des documents et vues | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "documents, initialiser"
-  - "initialiser des documents"
-  - "initialiser des objets, objets Document"
-  - "Initialiser des vues"
-  - "vues, initialiser"
+title: Initializing Documents and Views | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing documents [MFC]
+- documents [MFC], initializing
+- views [MFC], initializing
+- initializing objects [MFC], document objects
+- initializing views [MFC]
 ms.assetid: 33cb8643-8a16-478c-bc26-eccc734e3661
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Initialisation des documents et vues
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9214fc1f08e0b22a2660e542689e3dd4fb4002f8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Les documents sont créés de deux façons différentes, donc la classe de document doit prendre en charge les deux manières.  D'abord, l'utilisateur peut créer un nouveau document vide avec la commande Nouveau Fichier.  Dans ce cas, initialisez le document dans la substitution de la méthode [OnNewDocument](../Topic/CDocument::OnNewDocument.md) de la classe [CDocument](../mfc/reference/cdocument-class.md).  Ensuite, l'utilisateur peut utiliser la commande Ouvrir dans le menu Fichier pour créer un document dont le contenu est lu à partir d'un fichier.  Dans ce cas, initialisez le document dans la substitution de la méthode [OnNewDocument](../Topic/CDocument::OnOpenDocument.md) de la classe **CDocument**.  Si les deux initialisations sont identiques, vous pouvez appeler une méthode commune des deux substitutions, ou `OnOpenDocument` peut appeler `OnNewDocument` pour initialiser un document propre puis terminer l'opération d'ouverture.  
+---
+# <a name="initializing-documents-and-views"></a>Initializing Documents and Views
+Documents are created in two different ways, so your document class must support both ways. First, the user can create a new, empty document with the File New command. In that case, initialize the document in your override of the [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) member function of class [CDocument](../mfc/reference/cdocument-class.md). Second, the user can use the Open command on the File menu to create a new document whose contents are read from a file. In that case, initialize the document in your override of the [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) member function of class **CDocument**. If both initializations are the same, you can call a common member function from both overrides, or `OnOpenDocument` can call `OnNewDocument` to initialize a clean document and then finish the open operation.  
   
- Les vues sont créées après la création des documents.  Le meilleur moment pour lancer une vue est une fois que l'infrastructure a fini de créer le document, le cadre et la vue.  Vous pouvez initialiser l'affichage en remplaçant la méthode [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md) de [CView](../mfc/reference/cview-class.md).  Si vous devez réinitialiser ou ajuster quelque chose chaque fois que le document change, vous pouvez remplacer [OnUpdate](../Topic/CView::OnUpdate.md).  
+ Views are created after their documents are created. The best time to initialize a view is after the framework has finished creating the document, frame window, and view. You can initialize your view by overriding the [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) member function of [CView](../mfc/reference/cview-class.md). If you need to reinitialize or adjust anything each time the document changes, you can override [OnUpdate](../mfc/reference/cview-class.md#onupdate).  
   
-## Voir aussi  
- [Initialisation et nettoyage des documents et vues](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+## <a name="see-also"></a>See Also  
+ [Initializing and Cleaning Up Documents and Views](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+
+

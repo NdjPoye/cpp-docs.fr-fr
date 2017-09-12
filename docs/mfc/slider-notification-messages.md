@@ -1,48 +1,67 @@
 ---
-title: "Messages de notification du Slider | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSliderCtrl (classe), notifications"
-  - "messages, notification"
-  - "notifications, CSliderCtrl"
-  - "contrôles Slider, messages de notification"
+title: Slider Notification Messages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSliderCtrl class [MFC], notifications
+- slider controls [MFC], notification messages
+- messages, notification
+- notifications [MFC], CSliderCtrl
 ms.assetid: b9121104-3889-4a10-92bf-f3723f1af9d0
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Messages de notification du Slider
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2d6a14233d3db646a6536bd11f276dbcf1aea937
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Un curseur notifie la fenêtre parente d'actions utilisateur en envoyant des messages aux parents `WM_HSCROLL` ou `WM_VSCROLL`, selon l'orientation du curseur.  Pour traiter ces messages, ajouter des gestionnaires des messages de `WM_HSCROLL` et de `WM_VSCROLL` à la fenêtre parente.  Les fonctions membres de [OnHScroll](../Topic/CWnd::OnHScroll.md) et de [OnVScroll](../Topic/CWnd::OnVScroll.md) recevront un code de notification, la position du curseur, et un pointeur vers l'objet de [CSliderCtrl](../mfc/reference/csliderctrl-class.md).  Notez que le pointeur est de type **CScrollBar \*** bien qu'il indique un objet de `CSliderCtrl`.  Vous devrez peut\-être cataloguer ce pointeur si vous manipulez le curseur.  
+---
+# <a name="slider-notification-messages"></a>Slider Notification Messages
+A slider control notifies its parent window of user actions by sending the parent `WM_HSCROLL` or `WM_VSCROLL` messages, depending on the orientation of the slider control. To handle these messages, add handlers for the `WM_HSCROLL` and `WM_VSCROLL` messages to the parent window. The [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) and [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) member functions will be passed a notification code, the position of the slider, and a pointer to the [CSliderCtrl](../mfc/reference/csliderctrl-class.md) object. Note that the pointer is of type **CScrollBar \*** even though it points to a `CSliderCtrl` object. You may need to typecast this pointer if you need to manipulate the slider control.  
   
- Au lieu d'utiliser les codes de notification de la barre de défilement, les curseurs envoient un ensemble différent de codes de notification.  Un curseur envoie des notifications de **TB\_BOTTOM**, de **TB\_LINEDOWN**, de **TB\_LINEUP**, et de **TB\_TOP** uniquement lorsque l'utilisateur interagit avec un curseur à l'aide de le clavier.  Les messages de notification de **TB\_THUMBPOSITION** et de **TB\_THUMBTRACK** sont envoyés uniquement lorsque l'utilisateur utilise la souris.  Les codes de notification de **TB\_ENDTRACK**, de **TB\_PAGEDOWN**, et de **TB\_PAGEUP** sont envoyés dans les deux cas.  
+ Rather than using the scroll bar notification codes, slider controls send a different set of notification codes. A slider control sends the **TB_BOTTOM**, **TB_LINEDOWN**, **TB_LINEUP**, and **TB_TOP** notification codes only when the user interacts with a slider control by using the keyboard. The **TB_THUMBPOSITION** and **TB_THUMBTRACK** notification messages are only sent when the user is using the mouse. The **TB_ENDTRACK**, **TB_PAGEDOWN**, and **TB_PAGEUP** notification codes are sent in both cases.  
   
- Le tableau suivant répertorie les messages de notification de curseur et les événements \(codes de clé virtuelle ou événements de la souris\) qui causent l'envoi notifications. \(Pour obtenir la liste de codes touche virtuelle standard, consultez Winuser.h.\)  
+ The following table lists the slider control notification messages and the events (virtual key codes or mouse events) that cause the notifications to be sent. (For a list of standard virtual key codes, see Winuser.h.)  
   
-|messages de notification|Événement qui provoque la notification à envoyer|  
-|------------------------------|------------------------------------------------------|  
-|**TB\_BOTTOM**|**VK\_END**|  
-|**TB\_ENDTRACK**|`WM_KEYUP` \(l'utilisateur a levé une clé qui a envoyé le code de clé virtuelle pertinent\)|  
-|**TB\_LINEDOWN**|**VK\_RIGHT** ou **VK\_DOWN**|  
-|**TB\_LINEUP**|**VK\_LEFT** ou **VK\_UP**|  
-|**TB\_PAGEDOWN**|**VK\_NEXT** \(l'utilisateur a cliqué sur le canal sous le curseur ou à sa droite\)|  
-|**TB\_PAGEUP**|**VK\_PRIOR** \(l'utilisateur a cliqué sur le canal au\-dessus ou à gauche du curseur\)|  
-|**TB\_THUMBPOSITION**|`WM_LBUTTONUP` après un message de notification de **TB\_THUMBTRACK**|  
-|**TB\_THUMBTRACK**|Déplacement du curseur \(l'utilisaeur a fait glisser le curseur\)|  
-|**TB\_TOP**|**VK\_HOME**|  
+|Notification message|Event causing notification to be sent|  
+|--------------------------|-------------------------------------------|  
+|**TB_BOTTOM**|**VK_END**|  
+|**TB_ENDTRACK**|`WM_KEYUP` (the user released a key that sent a relevant virtual key code)|  
+|**TB_LINEDOWN**|**VK_RIGHT** or **VK_DOWN**|  
+|**TB_LINEUP**|**VK_LEFT** or **VK_UP**|  
+|**TB_PAGEDOWN**|**VK_NEXT** (the user clicked the channel below or to the right of the slider)|  
+|**TB_PAGEUP**|**VK_PRIOR** (the user clicked the channel above or to the left of the slider)|  
+|**TB_THUMBPOSITION**|`WM_LBUTTONUP` following a **TB_THUMBTRACK** notification message|  
+|**TB_THUMBTRACK**|Slider movement (the user dragged the slider)|  
+|**TB_TOP**|**VK_HOME**|  
   
-## Voir aussi  
- [Utilisation de CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSliderCtrl](../mfc/using-csliderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

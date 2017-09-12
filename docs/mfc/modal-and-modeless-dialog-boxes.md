@@ -1,49 +1,67 @@
 ---
-title: "Bo&#238;tes de dialogue modales et non modales | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "boîtes de dialogue MFC, modales"
-  - "boîtes de dialogue MFC, non modales"
-  - "boîtes de dialogue modales"
-  - "boîtes de dialogue non modales"
+title: Modal and Modeless Dialog Boxes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], modeless
+- modeless dialog boxes [MFC]
+- MFC dialog boxes [MFC], modal
+- modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Bo&#238;tes de dialogue modales et non modales
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 85bddb463705b83332bd16dc19fcbd627ffc3063
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Vous pouvez utiliser la classe [CDialog](../mfc/reference/cdialog-class.md) pour gérer deux types de boîtes de dialogue :  
+---
+# <a name="modal-and-modeless-dialog-boxes"></a>Modal and Modeless Dialog Boxes
+You can use class [CDialog](../mfc/reference/cdialog-class.md) to manage two kinds of dialog boxes:  
   
--   *Boîtes de dialogue modales*, qui nécessitent l'utilisateur pour répondre avant de poursuivre le programme  
+-   *Modal dialog boxes*, which require the user to respond before continuing the program  
   
--   *Les boîtes de dialogue non modales*, qui restent à l'écran et sont disponibles à tout moment mais permettent d'autres activités de la part de l'utilisateur  
+-   *Modeless dialog boxes*, which stay on the screen and are available for use at any time but permit other user activities  
   
- La modification et les procédures de ressource pour créer un modèle de la boîte de dialogue sont les mêmes pour les boîtes de dialogue modale et non modales.  
+ The resource editing and procedures for creating a dialog template are the same for modal and modeless dialog boxes.  
   
- Créer d'une boîte de dialogue pour votre application requiert des étapes suivantes :  
+ Creating a dialog box for your program requires the following steps:  
   
-1.  Utilisez [, l'éditeur de boîtes de dialogue](../mfc/dialog-editor.md) pour concevoir la boîte de dialogue et créer la ressource modèle de la boîte de dialogue.  
+1.  Use the [dialog editor](../windows/dialog-editor.md) to design the dialog box and create its dialog-template resource.  
   
-2.  Créer une boîte de dialogue  
+2.  Create a dialog class.  
   
-3.  Connectez les contrôles de ressources boîte de dialogue [aux gestionnaires de messages](../mfc/adding-event-handlers-for-dialog-box-controls.md) dans la classe de la boîte de dialogue.  
+3.  Connect the [dialog resource's controls to message handlers](../windows/adding-event-handlers-for-dialog-box-controls.md) in the dialog class.  
   
-4.  Ajouter des membres de données associés aux contrôles de la boîte de dialogue et spécifier les boîtes de dialogue d'échange de données [](../mfc/dialog-data-exchange.md "Dialog Data Exchange") et boîtes de dialogue de validation des données [](../mfc/dialog-data-validation.md "Dialog Data Validation") pour les contrôles.  
+4.  Add data members associated with the dialog box's controls and to specify [dialog data exchange](../mfc/dialog-data-exchange.md) and [dialog data validations](../mfc/dialog-data-validation.md) for the controls.  
   
-## Voir aussi  
- [Boîtes de dialogue](../mfc/dialog-boxes.md)   
- [Cycle de vie d'une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

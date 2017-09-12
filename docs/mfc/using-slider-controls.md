@@ -1,39 +1,58 @@
 ---
-title: "Utilisation de contr&#244;les Slider | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSliderCtrl (classe), utilisation"
-  - "contrôles Slider"
-  - "contrôles Slider, utilisation"
+title: Using Slider Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSliderCtrl class [MFC], using
+- slider controls
+- slider controls [MFC], using
 ms.assetid: 2b1a8ac8-2b17-41e1-aa24-83c1fd737049
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Utilisation de contr&#244;les Slider
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 27b4b5b8bb454a5b4bee0fdd09b6ff8698651761
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-L'utilisation standard d'un curseur de contrôle suit le modèle ci\-dessous:  
+---
+# <a name="using-slider-controls"></a>Using Slider Controls
+Typical usage of an slider control follows the pattern below:  
   
--   Le contrôle est créé.  Si le contrôle est spécifié dans un modèle de la boîte de dialogue, la création est automatique lorsque la boîte de dialogue est créée. \(Vous devez avoir un membre de [CAnimateCtrl](../mfc/reference/csliderctrl-class.md) dans votre classe de dialogue correspondant au curseur de contrôle.\) Autrement, vous pouvez utiliser la fonction membre [Créer](../Topic/CSliderCtrl::Create.md) pour créer le contrôle comme une fenêtre enfant de n'importe quelle fenêtre.  
+-   The control is created. If the control is specified in a dialog box template, creation is automatic when the dialog box is created. (You should have a [CSliderCtrl](../mfc/reference/csliderctrl-class.md) member in your dialog class that corresponds to the slider control.) Alternatively, you can use the [Create](../mfc/reference/csliderctrl-class.md#create) member function to create the control as a child window of any window.  
   
--   Appelez plusieurs fonctions membres Définir pour définir les valeurs du contrôle.  Les modifications que vous pouvez apporter incluent définir les positions des valeurs minimale et maximale pour le curseur, ajouter les graduations, définir une plage de sélection, et repositionner le curseur.  Pour les contrôles dans une boîte de dialogue, le bon moment pour le faire est dans la fonction [OnInitDialog](../Topic/CDialog::OnInitDialog.md) de la boîte de dialogue.  
+-   Call the various Set member functions to set values for the control. Changes that you can make include setting the minimum and maximum positions for the slider, drawing tick marks, setting a selection range, and repositioning the slider. For controls in a dialog box, a good time to do this is in the dialog's [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) function.  
   
--   Lorsque l'utilisateur interagit avec le contrôle, il envoie des messages de notification.  Vous pouvez extraire la valeur de curseur du contrôle en appelant la fonction membre d' [GetPos](../Topic/CSliderCtrl::GetPos.md).  
+-   As the user interacts with the control, it will send various notification messages. You can extract the slider value from the control by calling the [GetPos](../mfc/reference/csliderctrl-class.md#getpos) member function.  
   
--   Lorsque vous en avez terminé avec le contrôle, vous devez vérifier qu'il est correctement détruit.  Si le curseur de contrôle est dans une boîte de dialogue, lui et l'objet de `CSliderCtrl` sont détruits automatiquement.  Sinon, vous devez vérifier que le flux de contrôle et l'objet `CSliderCtrl` sont correctement détruits.  
+-   When you're done with the control, you need to make sure it's properly destroyed. If the slider control is in a dialog box, it and the `CSliderCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CSliderCtrl` object are properly destroyed.  
   
-## Voir aussi  
- [Utilisation de CSliderCtrl](../mfc/using-csliderctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSliderCtrl](../mfc/using-csliderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

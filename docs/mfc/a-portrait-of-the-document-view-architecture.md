@@ -1,55 +1,74 @@
 ---
-title: "Portrait de l&#39;architecture document/vue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "architecture document/vue"
-  - "architecture document/vue, à propos de l'architecture document/vue (C++)"
-  - "architecture document/vue, accéder aux données à partir d'une vue"
-  - "documents, accéder aux données à partir d'une vue"
-  - "documents, vues multiples"
-  - "documents, vues"
-  - "entrée, view (classe)"
-  - "vues multiples, mettre à jour à partir d'un document"
-  - "vues, accéder aux données de documents à partir de"
-  - "vues, et entrée d'utilisateur"
-  - "vues, mettre à jour"
+title: A Portrait of the Document-View Architecture | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], views
+- multiple views [MFC], updating from document
+- document/view architecture [MFC]
+- views [MFC], and user input
+- documents [MFC], accessing data from view
+- views [MFC], updating
+- input [MFC], view class
+- documents [MFC], multiple views
+- document/view architecture [MFC], accessing data from view
+- document/view architecture [MFC], about document/view architecture
+- views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Portrait de l&#39;architecture document/vue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 10c7091bfdc1f5439e1a2a55fe473fa6deccc352
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Les documents et les vues sont appariés dans une application classique MFC.  Les données sont stockées dans le document, mais la vue a un accès privilégié aux données.  La séparation du document de la vue sépare le stockage et la gestion des données de son affichage.  
+---
+# <a name="a-portrait-of-the-documentview-architecture"></a>A Portrait of the Document/View Architecture
+Documents and views are paired in a typical MFC application. Data is stored in the document, but the view has privileged access to the data. The separation of document from view separates the storage and maintenance of data from its display.  
   
-## Accéder aux données de document de la vue  
- La vue accède aux données de son document soit avec la fonction [GetDocument](../Topic/CView::GetDocument.md), qui retourne un pointeur vers le document, ou en faisant de la classe un objet C\+\+ `friend` de la classe de document.  La vue utilise ensuite l'accès aux données pour obtenir les données lorsqu'il est prêt à dessiner ou manipuler d'une autre façon.  
+## <a name="gaining-access-to-document-data-from-the-view"></a>Gaining Access to Document Data from the View  
+ The view accesses its document's data either with the [GetDocument](../mfc/reference/cview-class.md#getdocument) function, which returns a pointer to the document, or by making the view class a C++ `friend` of the document class. The view then uses its access to the data to obtain the data when it is ready to draw or otherwise manipulate it.  
   
- Par exemple, de la méthode [OnDraw](../Topic/CView::OnDraw.md) de la vue, la vue utilise **GetDocument** pour obtenir un pointeur de document.  Elle utilise ce pointeur pour accéder à un membre de données `CString` dans le document.  La vue passe la chaîne à la fonction `TextOut`.  Pour afficher le code pour cet exemple, consultez [Dessiner dans une vue](../mfc/drawing-in-a-view.md).  
+ For example, from the view's [OnDraw](../mfc/reference/cview-class.md#ondraw) member function, the view uses **GetDocument** to obtain a document pointer. Then it uses that pointer to access a `CString` data member in the document. The view passes the string to the `TextOut` function. To see the code for this example, see [Drawing in a View](../mfc/drawing-in-a-view.md).  
   
-## Entrée à la vue  
- La vue peut également interpréter un clic de souris dans elle\-même comme une sélection ou modification des données.  De même elle peut interpréter les séquences de clés comme entrée de données ou modification.  Supposons que l'utilisateur entre une chaîne dans une vue qui gère le texte.  La vue obtient un pointeur au document et utilise le pointeur pour passer les nouvelles données au document, qui l'enregistre dans une certaine structure de données.  
+## <a name="user-input-to-the-view"></a>User Input to the View  
+ The view might also interpret a mouse click within itself as either selection or editing of data. Similarly it might interpret keystrokes as data entry or editing. Suppose the user types a string in a view that manages text. The view obtains a pointer to the document and uses the pointer to pass the new data to the document, which stores it in some data structure.  
   
-## Mettre à jour plusieurs vues du même document  
- Dans une application avec plusieurs vues du même document — telles qu'une fenêtre séparée dans un éditeur de texte — la vue passe d'abord les nouvelles données du document.  Elle appelle ensuite la méthode [UpdateAllViews](../Topic/CDocument::UpdateAllViews.md) du document, qui dit à toutes les vues du document de se mettre à jour, en renvoyant les nouvelles données.  Ceci synchronise les vues.  
+## <a name="updating-multiple-views-of-the-same-document"></a>Updating Multiple Views of the Same Document  
+ In an application with multiple views of the same document — such as a splitter window in a text editor — the view first passes the new data to the document. Then it calls the document's [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) member function, which tells all views of the document to update themselves, reflecting the new data. This synchronizes the views.  
   
-### Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Avantages de l'architecture document\/vue](../mfc/advantages-of-the-document-view-architecture.md)  
+-   [Advantages of the document/view architecture](../mfc/advantages-of-the-document-view-architecture.md)  
   
--   [Solutions de remplacement de l'architecture document\/vue](../mfc/alternatives-to-the-document-view-architecture.md)  
+-   [Alternatives to the document/view architecture](../mfc/alternatives-to-the-document-view-architecture.md)  
   
-## Voir aussi  
- [Architecture document\/vue](../mfc/document-view-architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

@@ -1,40 +1,59 @@
 ---
-title: "Comment&#160;: utiliser la r&#233;f&#233;rence crois&#233;e de la table des messages | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.messages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fenêtres (C++), tables des messages"
+title: 'How to: Use the Message-Map Cross-Reference | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.messages
+dev_langs:
+- C++
+helpviewer_keywords:
+- windows [MFC], message maps
 ms.assetid: 2e863d23-9e58-45ba-b5e4-a8ceefccd0c8
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Comment&#160;: utiliser la r&#233;f&#233;rence crois&#233;e de la table des messages
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b25095aab5f565df033945a9523d21fd14ae567c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Dans les entrées étiquetées \<memberFxn\>, entrez votre propre fonction membre d'une classe dérivée de [CWnd](../../mfc/reference/cwnd-class.md).  Attribuez à votre fonction le nom que vous souhaitez.  D'autres fonctions, telles que `OnActivate`, sont des fonctions membres de la classe `CWnd`.  Si appelé, ils passent le message à la fonction Windows de `DefWindowProc`.  Pour traiter les messages de notification Windows, substituez la fonction correspondante de `CWnd` dans la classe dérivée.  Votre fonction doit appeler la fonction remplacée dans votre classe de base pour permettre à la classe de base et à Windows de répondre au message.  
+---
+# <a name="how-to-use-the-message-map-cross-reference"></a>How to: Use the Message-Map Cross-Reference
+In entries labeled \<memberFxn>, write your own member function for a derived [CWnd](../../mfc/reference/cwnd-class.md) class. Give your function any name you like. Other functions, such as `OnActivate`, are member functions of class `CWnd`. If called, they pass the message to the `DefWindowProc` Windows function. To process Windows notification messages, override the corresponding `CWnd` function in your derived class. Your function should call the overridden function in your base class to let the base class and Windows respond to the message.  
   
- Dans tous les cas, placez le prototype de la fonction dans `CWnd`\- en\-tête dérivée de la classe, et codez l'entrée de la table des messages comme indiqué.  
+ In all cases, put the function prototype in the `CWnd`-derived class header, and code the message map entry as shown.  
   
- Les termes suivants sont utilisés:  
+ The following terms are used:  
   
-|Terme|Définition|  
-|-----------|----------------|  
-|id|N'importe quel ID d'élément de menu défini par l'utilisateur \(messages de**WM\_COMMAND** \) ou ID de contrôle \(messages de notification de la fenêtre enfant\).|  
-|« message » et « wNotifyCode »|ID de message Windows comme défini dans WINDOWS.H.|  
-|nMessageVariable|Nom d'une variable qui contient la valeur de retour de la fonction Windows de **RegisterWindowMessage**.|  
+|Term|Definition|  
+|----------|----------------|  
+|id|Any user-defined menu item ID (**WM_COMMAND** messages) or control ID (child window notification messages).|  
+|"message" and "wNotifyCode"|Windows message IDs as defined in WINDOWS.H.|  
+|nMessageVariable|Name of a variable that contains the return value from the **RegisterWindowMessage** Windows function.|  
   
-## Voir aussi  
- [Tables des messages](../../mfc/reference/message-maps-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)
+
+

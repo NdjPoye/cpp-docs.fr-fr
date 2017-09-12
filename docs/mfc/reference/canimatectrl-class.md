@@ -1,5 +1,5 @@
 ---
-title: CAnimateCtrl (classe) | Documents Microsoft
+title: CAnimateCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,9 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- animation controls [C++], CAnimateCtrl class
-- Windows common controls [C++], CAnimateCtrl class
-- CAnimateCtrl class
+- CAnimateCtrl [MFC], CAnimateCtrl
+- CAnimateCtrl [MFC], Close
+- CAnimateCtrl [MFC], Create
+- CAnimateCtrl [MFC], CreateEx
+- CAnimateCtrl [MFC], IsPlaying
+- CAnimateCtrl [MFC], Open
+- CAnimateCtrl [MFC], Play
+- CAnimateCtrl [MFC], Seek
+- CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
 caps.latest.revision: 25
 author: mikeblome
@@ -45,69 +51,69 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: c4b8472a0dd8d2470f8e069e144efd0949201266
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: aab4f8a110fe77b606143efea2a37fc55ff48f92
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimatectrl-class"></a>CAnimateCtrl (classe)
-Fournit les fonctionnalités du contrôle commun d'animation Windows.  
+# <a name="canimatectrl-class"></a>CAnimateCtrl Class
+Provides the functionality of the Windows common animation control.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimateCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimateCtrl::CAnimateCtrl](#canimatectrl)|Construit un objet `CAnimateCtrl`.|  
+|[CAnimateCtrl::CAnimateCtrl](#canimatectrl)|Constructs a `CAnimateCtrl` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimateCtrl::Close](#close)|Ferme le clip AVI.|  
-|[CAnimateCtrl::Create](#create)|Crée un contrôle animation et l’attache à un `CAnimateCtrl` objet.|  
-|[CAnimateCtrl::CreateEx](#createex)|Crée un contrôle animation avec les styles étendus Windows spécifiés et l’attache à un `CAnimateCtrl` objet.|  
-|[CAnimateCtrl::IsPlaying](#isplaying)|Indique si un clip Audio-Video Interleaved (AVI) en cours de lecture.|  
-|[CAnimateCtrl::Open](#open)|Ouvre un clip AVI à partir d’un fichier ou une ressource et affiche le premier frame.|  
-|[CAnimateCtrl::Play](#play)|Lit le clip AVI sans son.|  
-|[CAnimateCtrl::Seek](#seek)|Affiche un frame unique sélectionné du clip AVI.|  
-|[CAnimateCtrl::Stop](#stop)|Arrête la lecture du clip AVI.|  
+|[CAnimateCtrl::Close](#close)|Closes the AVI clip.|  
+|[CAnimateCtrl::Create](#create)|Creates an animation control and attaches it to a `CAnimateCtrl` object.|  
+|[CAnimateCtrl::CreateEx](#createex)|Creates an animation control with the specified Windows extended styles and attaches it to a `CAnimateCtrl` object.|  
+|[CAnimateCtrl::IsPlaying](#isplaying)|Indicates whether an Audio-Video Interleaved (AVI) clip is playing.|  
+|[CAnimateCtrl::Open](#open)|Opens an AVI clip from a file or resource and displays the first frame.|  
+|[CAnimateCtrl::Play](#play)|Plays the AVI clip without sound.|  
+|[CAnimateCtrl::Seek](#seek)|Displays a selected single frame of the AVI clip.|  
+|[CAnimateCtrl::Stop](#stop)|Stops playing the AVI clip.|  
   
-## <a name="remarks"></a>Notes  
- Ce contrôle (et par conséquent la `CAnimateCtrl` classe) est disponible uniquement pour les programmes s’exécutant sous Windows 95, Windows 98 et Windows NT version 3.51 et ultérieures.  
+## <a name="remarks"></a>Remarks  
+ This control (and therefore the `CAnimateCtrl` class) is available only to programs running under Windows 95, Windows 98, and Windows NT version 3.51 and later.  
   
- Un contrôle animation est une fenêtre rectangulaire qui affiche un clip au format AVI (Audio Video Interleaved), le format audio/vidéo Windows standard. Un clip AVI est une série d’images bitmap, comme un film.  
+ An animation control is a rectangular window that displays a clip in AVI (Audio Video Interleaved) format— the standard Windows video/audio format. An AVI clip is a series of bitmap frames, like a movie.  
   
- Contrôles animation peuvent lire uniquement les éléments AVI simples. Plus précisément, les éléments devant être lu par un contrôle animation doivent remplir les conditions suivantes :  
+ Animation controls can play only simple AVI clips. Specifically, the clips to be played by an animation control must meet the following requirements:  
   
--   Il doit y avoir un seul flux vidéo et doit avoir au moins une image.  
+-   There must be exactly one video stream and it must have at least one frame.  
   
--   Il peut y avoir au plus deux flux de données dans le fichier (en général, l’autres flux de données, le cas échéant, est un flux audio, bien que le contrôle animation ignore les informations audio).  
+-   There can be at most two streams in the file (typically the other stream, if present, is an audio stream, although the animation control ignores audio information).  
   
--   L’élément doit être décompressé ou compressé avec la compression de RLE8.  
+-   The clip must either be uncompressed or compressed with RLE8 compression.  
   
--   Aucune modification de la palette est autorisée dans le flux vidéo.  
+-   No palette changes are allowed in the video stream.  
   
- Vous pouvez ajouter du clip AVI à votre application comme une ressource AVI, ou elle peut accompagner votre application dans un fichier AVI distinct.  
+ You can add the AVI clip to your application as an AVI resource, or it can accompany your application as a separate AVI file.  
   
- Étant donné que votre thread continue de s’exécuter pendant que le clip AVI est affiché, une utilisation courante d’un contrôle animation consiste à indiquer l’activité du système pendant une longue opération. Par exemple, la boîte de dialogue Rechercher de l’Explorateur de fichiers affiche une loupe qui se déplace en tant que le système recherche un fichier.  
+ Because your thread continues executing while the AVI clip is displayed, one common use for an animation control is to indicate system activity during a lengthy operation. For example, the Find dialog box of File Explorer displays a moving magnifying glass as the system searches for a file.  
   
- Si vous créez un `CAnimateCtrl` de l’objet dans une boîte de dialogue zone ou à partir d’une ressource de boîte de dialogue à l’aide de l’éditeur de boîte de dialogue, il est automatiquement détruit lorsque l’utilisateur ferme la boîte de dialogue.  
+ If you create a `CAnimateCtrl` object within a dialog box or from a dialog resource using the dialog editor, it will be automatically destroyed when the user closes the dialog box.  
   
- Si vous créez un `CAnimateCtrl` de l’objet dans une fenêtre, vous devrez peut-être à détruire. Si vous créez le `CAnimateCtrl` de l’objet sur la pile, il est supprimé automatiquement. Si vous créez le `CAnimateCtrl` objet sur le tas à l’aide de la **nouveau** (fonction), vous devez appeler **supprimer** sur l’objet à détruire. Si vous dérivez une nouvelle classe à partir de `CAnimateCtrl` et allouer de mémoire dans cette classe, remplacez le `CAnimateCtrl` destructeur pour éliminer les allocations.  
+ If you create a `CAnimateCtrl` object within a window, you may need to destroy it. If you create the `CAnimateCtrl` object on the stack, it is destroyed automatically. If you create the `CAnimateCtrl` object on the heap by using the **new** function, you must call **delete** on the object to destroy it. If you derive a new class from `CAnimateCtrl` and allocate any memory in that class, override the `CAnimateCtrl` destructor to dispose of the allocations.  
   
- Pour plus d’informations sur l’utilisation de `CAnimateCtrl`, consultez [contrôles](../../mfc/controls-mfc.md) et [à l’aide de CAnimateCtrl](../../mfc/using-canimatectrl.md).  
+ For more information on using `CAnimateCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CAnimateCtrl](../../mfc/using-canimatectrl.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -116,37 +122,37 @@ class CAnimateCtrl : public CWnd
   
  `CAnimateCtrl`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl  
- Construit un objet `CAnimateCtrl`.  
+##  <a name="canimatectrl"></a>  CAnimateCtrl::CAnimateCtrl  
+ Constructs a `CAnimateCtrl` object.  
   
 ```  
 CAnimateCtrl();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Vous devez appeler la [créer](#create) fonction membre avant d’effectuer d’autres opérations sur l’objet que vous créez.  
+### <a name="remarks"></a>Remarks  
+ You must call the [Create](#create) member function before you can perform any other operations on the object you create.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCControlLadenDialog #56](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#56](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]  
   
-##  <a name="close"></a>CAnimateCtrl::Close  
- Ferme le clip AVI qui a été précédemment ouvert dans le contrôle animation (le cas échéant) et le supprime de la mémoire.  
+##  <a name="close"></a>  CAnimateCtrl::Close  
+ Closes the AVI clip that was previously opened in the animation control (if any) and removes it from memory.  
   
 ```  
 BOOL Close();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro en cas de réussite ; sinon, zéro.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
+### <a name="example"></a>Example  
+  See the example for [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="create"></a>CAnimateCtrl::Create  
- Crée un contrôle animation et l’attache à un `CAnimateCtrl` objet.  
+##  <a name="create"></a>  CAnimateCtrl::Create  
+ Creates an animation control and attaches it to a `CAnimateCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -156,42 +162,42 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Spécifie le style du contrôle de l’animation. Appliquer n’importe quelle combinaison de styles décrits dans la section Notes ci-dessous et les styles de contrôle animation décrites dans windows [Styles de contrôle Animation](http://msdn.microsoft.com/library/windows/desktop/bb761886) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the animation control's style. Apply any combination of the windows styles described in the Remarks section below and the animation control styles described in [Animation Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb761886) in the Windows SDK.  
   
  `rect`  
- Spécifie la position et la taille d' un contrôle animation. Il peut être soit un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](../../mfc/reference/rect-structure1.md) structure.  
+ Specifies the animation control's position and size. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](../../mfc/reference/rect-structure1.md) structure.  
   
  `pParentWnd`  
- Spécifie les fenêtre parente d' un contrôle animation généralement un `CDialog`. Il ne doit pas être **NULL.**  
+ Specifies the animation control's parent window, usually a `CDialog`. It must not be **NULL.**  
   
  `nID`  
- Spécifie l’ID. du contrôle de l’animation  
+ Specifies the animation control's ID.  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro en cas de réussite ; sinon, zéro.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>Remarques  
- Vous construisez un `CAnimateCtrl` en deux étapes. Tout d’abord, appelez le constructeur, puis **créer**, ce qui crée le contrôle de l’animation et l’attache à le `CAnimateCtrl` objet.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CAnimateCtrl` in two steps. First, call the constructor, and then call **Create**, which creates the animation control and attaches it to the `CAnimateCtrl` object.  
   
- Appliquez ce qui suit [styles de fenêtre](../../mfc/reference/window-styles.md) à un contrôle de l’animation.  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to an animation control.  
   
-- **WS_CHILD** toujours  
+- **WS_CHILD** Always  
   
-- **WS_VISIBLE** généralement  
+- **WS_VISIBLE** Usually  
   
-- **WS_DISABLED** rarement  
+- **WS_DISABLED** Rarely  
   
- Si vous souhaitez utiliser les styles étendus windows avec votre contrôle animation, appelez [CreateEx](#createex) au lieu de **créer**.  
+ If you want to use extended windows styles with your animation control, call [CreateEx](#createex) instead of **Create**.  
   
- Outre les styles de fenêtre répertoriés ci-dessus, il pouvez que vous souhaitez appliquer une ou plusieurs des styles de contrôle animation à un contrôle animation. Consultez le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] pour plus d’informations sur [styles de contrôle animation](http://msdn.microsoft.com/library/windows/desktop/bb761886).  
+ In addition to the window styles listed above, you may want to apply one or more of the animation control styles to an animation control. See the Windows SDK for more information on [animation control styles](http://msdn.microsoft.com/library/windows/desktop/bb761886).  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
+### <a name="example"></a>Example  
+  See the example for [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="createex"></a>CAnimateCtrl::CreateEx  
- Crée un contrôle (une fenêtre enfant) et l’associe le `CAnimateCtrl` objet.  
+##  <a name="createex"></a>  CAnimateCtrl::CreateEx  
+ Creates a control (a child window) and associates it with the `CAnimateCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -202,75 +208,75 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- Spécifie le style étendu du contrôle en cours de création. Pour obtenir la liste des styles étendus de Windows, consultez le `dwExStyle` paramètre [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- Spécifie le style du contrôle de l’animation. Appliquer n’importe quelle combinaison de la fenêtre et de styles de contrôle animation décrites dans [Styles de contrôle Animation](http://msdn.microsoft.com/library/windows/desktop/bb761886) dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the animation control's style. Apply any combination of the window and animation control styles described in [Animation Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb761886) in the Windows SDK.  
   
  `rect`  
- Une référence à un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure décrivant la taille et la position de la fenêtre doit être créée, en coordonnées clientes de `pParentWnd`.  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- Pointeur vers la fenêtre qui est le parent du contrôle.  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- ID de fenêtre enfant. du contrôle  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Utilisez `CreateEx` au lieu de [créer](#create) pour appliquer des styles étendus Windows spécifiés par la préface style étendu de Windows **WS_EX_**.  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="isplaying"></a>CAnimateCtrl::IsPlaying  
- Indique si un clip Audio-Video Interleaved (AVI) en cours de lecture.  
+##  <a name="isplaying"></a>  CAnimateCtrl::IsPlaying  
+ Indicates whether an Audio-Video Interleaved (AVI) clip is playing.  
   
 ```  
 BOOL IsPlaying() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `true`la lecture d’un clip AVI ; dans le cas contraire, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if an AVI clip is playing; otherwise, `false`.  
   
-### <a name="remarks"></a>Remarques  
- Cette méthode envoie le [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) message, ce qui est décrit dans la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) message, which is described in the Windows SDK.  
   
-##  <a name="open"></a>CAnimateCtrl::Open  
- Appelez cette fonction pour ouvrir un clip AVI et afficher sa première image.  
+##  <a name="open"></a>  CAnimateCtrl::Open  
+ Call this function to open an AVI clip and display its first frame.  
   
 ```  
 BOOL Open(LPCTSTR lpszFileName);  
 BOOL Open(UINT nID);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpszFileName`  
- A `CString` objet ou un pointeur vers une chaîne se terminant par null qui contient le nom du fichier AVI ou le nom d’une ressource AVI. Si ce paramètre est **NULL**, le système ferme le clip AVI qui a été ouverte précédemment pour le contrôle de l’animation, le cas échéant.  
+ A `CString` object or a pointer to a null-terminated string that contains either the name of the AVI file or the name of an AVI resource. If this parameter is **NULL**, the system closes the AVI clip that was previously opened for the animation control, if any.  
   
  `nID`  
- L’identificateur de ressource AVI. Si ce paramètre est **NULL**, le système ferme le clip AVI qui a été ouverte précédemment pour le contrôle de l’animation, le cas échéant.  
+ The AVI resource identifier. If this parameter is **NULL**, the system closes the AVI clip that was previously opened for the animation control, if any.  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro en cas de réussite ; sinon, zéro.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>Remarques  
- La ressource AVI est chargée à partir du module qui a créé le contrôle de l’animation.  
+### <a name="remarks"></a>Remarks  
+ The AVI resource is loaded from the module that created the animation control.  
   
- **Ouvrez** ne prend pas en charge son dans un clip AVI ; vous pouvez ouvrir uniquement les éléments AVI en mode silencieux.  
+ **Open** does not support sound in an AVI clip; you can open only silent AVI clips.  
   
- Si le contrôle de l’animation a la `ACS_AUTOPLAY` style, le contrôle animation démarre automatiquement la lecture de l’élément immédiatement après, il s’ouvre. Il continue à lire l’élément en arrière-plan pendant que votre thread continue l’exécution. Lorsque l’élément est effectuée pour la lecture, il sera automatiquement répété.  
+ If the animation control has the `ACS_AUTOPLAY` style, the animation control will automatically start playing the clip immediately after it opens it. It will continue to play the clip in the background while your thread continues executing. When the clip is done playing, it will automatically be repeated.  
   
- Si le contrôle de l’animation a la `ACS_CENTER` du clip AVI sera centré dans le contrôle de style, et la taille du contrôle ne change pas. Si le contrôle animation n’a pas la `ACS_CENTER` style, le contrôle doit être redimensionné à la taille des images du clip AVI ouverture du clip AVI. La position de l’angle supérieur gauche du contrôle pas change, uniquement la taille du contrôle.  
+ If the animation control has the `ACS_CENTER` style, the AVI clip will be centered in the control and the size of the control will not change. If the animation control does not have the `ACS_CENTER` style, the control will be resized when the AVI clip is opened to the size of the images in the AVI clip. The position of the top left corner of the control will not change, only the size of the control.  
   
- Si le contrôle de l’animation a la `ACS_TRANSPARENT` style, la première image sera dessinée à l’aide d’un arrière-plan transparent au lieu de la couleur d’arrière-plan spécifiée dans l’élément d’animation.  
+ If the animation control has the `ACS_TRANSPARENT` style, the first frame will be drawn using a transparent background rather than the background color specified in the animation clip.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
+### <a name="example"></a>Example  
+  See the example for [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="play"></a>CAnimateCtrl::Play  
- Appelez cette fonction pour lire un clip AVI dans un contrôle de l’animation.  
+##  <a name="play"></a>  CAnimateCtrl::Play  
+ Call this function to play an AVI clip in an animation control.  
   
 ```  
 BOOL Play(
@@ -279,61 +285,61 @@ BOOL Play(
     UINT nRep);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nFrom`  
- Index de base zéro de l’image où la lecture commence. Valeur doit être inférieure à 65 536. Valeur 0 signifie commence par le premier frame du clip AVI.  
+ Zero-based index of the frame where playing begins. Value must be less than 65,536. A value of 0 means begin with the first frame in the AVI clip.  
   
  `nTo`  
- Index de base zéro de l’image où lecture se termine. Valeur doit être inférieure à 65 536. Une valeur de - 1 signifie la dernière image du clip AVI.  
+ Zero-based index of the frame where playing ends. Value must be less than 65,536. A value of - 1 means end with the last frame in the AVI clip.  
   
  *nRep*  
- Nombre de fois pour relire le clip AVI. Une valeur de - 1 signifie que le fichier de relecture indéfiniment.  
+ Number of times to replay the AVI clip. A value of - 1 means replay the file indefinitely.  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro en cas de réussite ; sinon, zéro.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>Notes  
- Le contrôle de l’animation est lue l’élément en arrière-plan pendant que votre thread continue l’exécution. Si le contrôle de l’animation a `ACS_TRANSPARENT` style, du clip AVI est lu à l’aide d’un arrière-plan transparent, plutôt que la couleur d’arrière-plan spécifiée dans l’élément d’animation.  
+### <a name="remarks"></a>Remarks  
+ The animation control will play the clip in the background while your thread continues executing. If the animation control has `ACS_TRANSPARENT` style, the AVI clip will be played using a transparent background rather than the background color specified in the animation clip.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
+### <a name="example"></a>Example  
+  See the example for [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="seek"></a>CAnimateCtrl::Seek  
- Appelez cette fonction pour afficher statiquement un seul frame de votre clip AVI.  
+##  <a name="seek"></a>  CAnimateCtrl::Seek  
+ Call this function to statically display a single frame of your AVI clip.  
   
 ```  
 BOOL Seek(UINT nTo);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nTo`  
- Index de base zéro de l’image à afficher. Valeur doit être inférieure à 65 536. La valeur 0 permet d’afficher le premier frame du clip AVI. La valeur -1 permet d’afficher la dernière image du clip AVI.  
+ Zero-based index of the frame to display. Value must be less than 65,536. A value of 0 means display the first frame in the AVI clip. A value of -1 means display the last frame in the AVI clip.  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro en cas de réussite ; sinon, zéro.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>Notes  
- Si le contrôle de l’animation a `ACS_TRANSPARENT` style, du clip AVI sera dessiné à l’aide d’un arrière-plan transparent au lieu de la couleur d’arrière-plan spécifiée dans l’élément d’animation.  
+### <a name="remarks"></a>Remarks  
+ If the animation control has `ACS_TRANSPARENT` style, the AVI clip will be drawn using a transparent background rather than the background color specified in the animation clip.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
+### <a name="example"></a>Example  
+  See the example for [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="stop"></a>CAnimateCtrl::Stop  
- Appelez cette fonction pour arrêter la lecture d’un clip AVI dans un contrôle de l’animation.  
+##  <a name="stop"></a>  CAnimateCtrl::Stop  
+ Call this function to stop playing an AVI clip in an animation control.  
   
 ```  
 BOOL Stop();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro en cas de réussite ; sinon, zéro.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
+### <a name="example"></a>Example  
+  See the example for [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-## <a name="see-also"></a>Voir aussi  
- [CWnd (classe)](../../mfc/reference/cwnd-class.md)   
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CAnimateCtrl::Create](#create)   
  [ON_CONTROL](message-map-macros-mfc.md#on_control)
 

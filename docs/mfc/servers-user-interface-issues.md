@@ -1,31 +1,50 @@
 ---
-title: "Serveurs&#160;: probl&#232;mes d&#39;interface utilisateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "applications serveur OLE, interface utilisateur"
-  - "serveurs, problèmes d'interface utilisateur"
-  - "interface utilisateur (problèmes)"
+title: 'Servers: User-Interface Issues | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC], user interface
+- servers, user-interface issues
+- user interface issues
 ms.assetid: 7ef55702-b439-43fa-8ced-c69b96239a89
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Serveurs&#160;: probl&#232;mes d&#39;interface utilisateur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4ff0fba43ea1d604cc9b64e3263cd6fcdaf077ce
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Une application serveur offre plusieurs fonctionnalités qui doivent être ajoutées à l'interface utilisateur pour fournir de OLE éléments des applications conteneur.  Pour les informations sur les menus et les ressources qui doivent être ajoutés à une application serveur, consultez [Menus et de ressources : Ajouts de serveur](../mfc/menus-and-resources-server-additions.md).  
+---
+# <a name="servers-user-interface-issues"></a>Servers: User-Interface Issues
+A server application has a number of features that must be added to the user interface to supply OLE items to container applications. For further information on the menus and additional resources that need to be added to a server application, see [Menus and Resources: Server Additions](../mfc/menus-and-resources-server-additions.md).  
   
-## Voir aussi  
- [Serveurs](../mfc/servers.md)   
- [Menus et ressources \(OLE\)](../mfc/menus-and-resources-ole.md)
+## <a name="see-also"></a>See Also  
+ [Servers](../mfc/servers.md)   
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)
+
+

@@ -1,33 +1,51 @@
 ---
-title: "Traitement des messages Windows dans votre bo&#238;te de dialogue | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestion des messages (C++), dans des boîtes de dialogue"
-  - "boîtes de dialogue MFC, messages Windows"
-  - "messages Windows (C++), gérer"
+title: Handling Windows Messages in Your Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], Windows messages
+- Windows messages [MFC], handling
+- message handling [MFC], in dialog boxes
 ms.assetid: 4af0c9cb-09da-4b15-97df-a1cfb89def79
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Traitement des messages Windows dans votre bo&#238;te de dialogue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0335c83e91b7e40f30c03bab4d38672db526b880
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Les boîtes de dialogue sont des fenêtres, elles peuvent donc traiter les messages Windows si vous fournissez les fonctions gestionnaires appropriées.  Lorsque vous créez votre classe de dialogue à l'aide de l'Assistant Ajout de Classe, l'assistant ajoute un tableau de messages vide à la classe.  Utilisez la fenêtre Propriétés pour mapper tous les messages ou commandes Windows que vous souhaitez que votre classe gère.  
+---
+# <a name="handling-windows-messages-in-your-dialog-box"></a>Handling Windows Messages in Your Dialog Box
+Dialog boxes are windows, so they can handle Windows messages if you supply the appropriate handler functions. When you create your dialog class with the Add Class Wizard, the wizard adds an empty message map to the class. Use the Properties window to map any Windows messages or commands you want your class to handle.  
   
- Voir [Mappage de messages Windows à votre classe de dialogue](../mfc/mapping-windows-messages-to-your-class.md) pour plus d'informations.  
+ See [Mapping Windows Messages to Your Dialog Class](../mfc/mapping-windows-messages-to-your-class.md) for more information.  
   
-## Voir aussi  
- [Cycle de vie d'une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

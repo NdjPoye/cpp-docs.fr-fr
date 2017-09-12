@@ -1,38 +1,57 @@
 ---
-title: "Cr&#233;ation des listes d&#39;images | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl (classe), créer des listes d'images pour"
-  - "listes d'images (C++), créer pour CListCtrl"
-  - "listes (C++), image"
+title: Creating the Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListCtrl class [MFC], creating image lists for
+- image lists [MFC], creating for CListCtrl
+- lists [MFC], image
 ms.assetid: c2768515-deba-49e8-a6f3-5be6482afb19
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Cr&#233;ation des listes d&#39;images
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7a384572397c78a91d93f2aaba338591a6158b5a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Créer des listes d'images est identique que vous utilisiez [CListView](../mfc/reference/clistview-class.md) ou [CListCtrl](../mfc/reference/clistctrl-class.md).  
+---
+# <a name="creating-the-image-lists"></a>Creating the Image Lists
+Creating image lists is the same whether you use [CListView](../mfc/reference/clistview-class.md) or [CListCtrl](../mfc/reference/clistctrl-class.md).  
   
 > [!NOTE]
->  Vous n'avez besoin que de listes d'images si votre contrôle de liste inclut le style `LVS_ICON`.  
+>  You only need image lists if your list control includes the `LVS_ICON` style.  
   
- Utilisez la classe `CImageList` pour créer une ou plusieurs listes d'images \(pour les grandes icônes, les petites icônes, et les états standard\).  Voir le [CImageList](../mfc/reference/cimagelist-class.md), et afficher [Listes des images en mode Liste](http://msdn.microsoft.com/library/windows/desktop/bb774736) dans [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ Use class `CImageList` to create one or more image lists (for full-size icons, small icons, and states). See [CImageList](../mfc/reference/cimagelist-class.md), and see [List View Image Lists](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK.  
   
- Appelez [CListCtrl::SetImageList](../Topic/CListCtrl::SetImageList.md) pour chaque liste des images ; passez un pointeur à l'objet approprié `CImageList`.  
+ Call [CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) for each image list; pass a pointer to the appropriate `CImageList` object.  
   
-## Voir aussi  
- [Utilisation de CListCtrl](../mfc/using-clistctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

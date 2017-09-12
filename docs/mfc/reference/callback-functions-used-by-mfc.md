@@ -1,5 +1,5 @@
 ---
-title: "Fonctions de rappel utilisées par MFC | Documents Microsoft"
+title: Callback Functions Used by MFC | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,10 +13,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- callback functions, MFC
+- callback functions [MFC], MFC
 - MFC, callback functions
-- functions [C++], callback
-- callback functions
+- functions [MFC], callback
+- callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
 caps.latest.revision: 11
 author: mikeblome
@@ -36,29 +36,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d4b97ed874b145f9c6d9a9536476243bba0fd1c1
-ms.openlocfilehash: 08c6f547c95adb4c6794ec71259888d390e42e92
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d02fd24240aae6eba247052120d387e4e0219d11
 ms.contentlocale: fr-fr
-ms.lasthandoff: 03/06/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="callback-functions-used-by-mfc"></a>Fonctions de rappel utilisées par MFC
-Trois fonctions de rappel apparaissent dans la bibliothèque Microsoft Foundation Class. Ces fonctions de rappel sont passées à [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), et [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Notez que toutes les fonctions de rappel doivent intercepter les exceptions MFC avant de retourner à Windows, étant donné que les exceptions ne peuvent pas être levées au-delà des limites de rappel. Pour plus d’informations sur les exceptions, consultez l’article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
+# <a name="callback-functions-used-by-mfc"></a>Callback Functions Used by MFC
+Three callback functions appear in the Microsoft Foundation Class Library. These callback functions are passed to [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), and [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Note that all callback functions must trap MFC exceptions before returning to Windows, since exceptions cannot be thrown across callback boundaries. For more information about exceptions, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
 
-|Nom||  
+|Name||  
 |----------|-----------------|  
-|[Fonction de rappel pour CDC::EnumObjects](#enum_objects)||  
-|[Fonction de rappel pour CDC::GrayString](#graystring)||
-|[Fonction de rappel pour CDC::SetAbortProc](#setabortproc)|| 
+|[Callback Function for CDC::EnumObjects](#enum_objects)||  
+|[Callback Function for CDC::GrayString](#graystring)||
+|[Callback Function for CDC::SetAbortProc](#setabortproc)|| 
 
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxwin.h 
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h 
 
-## <a name="enum_objects"></a>Fonction de rappel pour CDC::EnumObjects
-Le *ObjectFunc* nom est un espace réservé pour le nom de fonction fourni par l’application.  
+## <a name="enum_objects"></a> Callback Function for CDC::EnumObjects
+The *ObjectFunc* name is a placeholder for the application-supplied function name.  
   
-### <a name="syntax"></a>Syntaxe  
+### <a name="syntax"></a>Syntax  
   
 ```  
 int CALLBACK EXPORT ObjectFunc(
@@ -66,23 +66,23 @@ int CALLBACK EXPORT ObjectFunc(
     LPSTR* lpData);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *lpszLogObject*  
- Pointe vers une [LOGPEN](../../mfc/reference/logpen-structure.md) ou [LOGBRUSH](../../mfc/reference/logbrush-structure.md) structure de données qui contient des informations sur les attributs logiques de l’objet.  
+ Points to a [LOGPEN](../../mfc/reference/logpen-structure.md) or [LOGBRUSH](../../mfc/reference/logbrush-structure.md) data structure that contains information about the logical attributes of the object.  
   
  `lpData`  
- Les points de données fourni par l’application passé à la `EnumObjects` (fonction).  
+ Points to the application-supplied data passed to the `EnumObjects` function.  
   
-### <a name="return-value"></a>Valeur de retour  
- La fonction de rappel renvoie un `int`. La valeur de ce retour est définie par l’utilisateur. Si la fonction de rappel renvoie la valeur 0, `EnumObjects` arrête l’énumération au début.  
+### <a name="return-value"></a>Return Value  
+ The callback function returns an `int`. The value of this return is user-defined. If the callback function returns 0, `EnumObjects` stops enumeration early.  
   
-### <a name="remarks"></a>Remarques  
- Le nom doit être exporté.  
+### <a name="remarks"></a>Remarks  
+ The actual name must be exported.  
   
-## <a name="graystring"></a>Fonction de rappel pour CDC::GrayString
-*OutputFunc* est un espace réservé pour le nom de la fonction de rappel fournie par l’application.  
+## <a name="graystring"></a>  Callback Function for CDC::GrayString
+*OutputFunc* is a placeholder for the application-supplied callback function name.  
   
-### <a name="syntax"></a>Syntaxe  
+### <a name="syntax"></a>Syntax  
   
 ```  
 BOOL CALLBACK EXPORT OutputFunc(
@@ -91,26 +91,26 @@ BOOL CALLBACK EXPORT OutputFunc(
     int nCount);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `hDC`  
- Identifie un contexte de périphérique de mémoire avec une bitmap au moins égale à la largeur et la hauteur spécifiées par `nWidth` et `nHeight` à `GrayString`.  
+ Identifies a memory device context with a bitmap of at least the width and height specified by `nWidth` and `nHeight` to `GrayString`.  
   
  `lpData`  
- Pointe vers la chaîne de caractères à ajouter.  
+ Points to the character string to be drawn.  
   
  `nCount`  
- Spécifie le nombre de caractères en sortie.  
+ Specifies the number of characters to output.  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur de retour de la fonction de rappel doit être **TRUE** pour indiquer la réussite ; sinon, il est **FALSE**.  
+### <a name="return-value"></a>Return Value  
+ The callback function's return value must be **TRUE** to indicate success; otherwise it is **FALSE**.  
   
-### <a name="remarks"></a>Remarques  
- La fonction de rappel (*OutputFunc*) doit dessiner une image par rapport aux coordonnées (0,0) au lieu de (*x*, *y*).  
+### <a name="remarks"></a>Remarks  
+ The callback function (*OutputFunc*) must draw an image relative to the coordinates (0,0) rather than (*x*, *y*).  
 
-## <a name="setabortproc"></a>Fonction de rappel pour CDC::SetAbortProc
-Le nom *AbortFunc* est un espace réservé pour le nom de fonction fourni par l’application.  
+## <a name="setabortproc"></a>  Callback Function for CDC::SetAbortProc
+The name *AbortFunc* is a placeholder for the application-supplied function name.  
   
-### <a name="syntax"></a>Syntaxe  
+### <a name="syntax"></a>Syntax  
   
 ```  
 BOOL CALLBACK EXPORT AbortFunc(
@@ -118,24 +118,21 @@ BOOL CALLBACK EXPORT AbortFunc(
     int code);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *hPr*  
- Identifie le contexte de périphérique.  
+ Identifies the device context.  
   
  `code`  
- Spécifie si une erreur s’est produite. Il est 0 si aucune erreur ne se n’est produite. Il est **SP_OUTOFDISK** si le Gestionnaire d’impression n’est pas l’espace disque et davantage d’espace disque devient disponible si l’application attend. Si `code` est **SP_OUTOFDISK**, l’application ne doit pas abandonner le travail d’impression. Si elle n’est pas le cas, il doit être cédée le Gestionnaire d’impression en appelant le **PeekMessage** ou **GetMessage** fonction Windows.  
+ Specifies whether an error has occurred. It is 0 if no error has occurred. It is **SP_OUTOFDISK** if the Print Manager is currently out of disk space and more disk space will become available if the application waits. If `code` is **SP_OUTOFDISK**, the application does not have to abort the print job. If it does not, it must yield to the Print Manager by calling the **PeekMessage** or **GetMessage** Windows function.  
   
-### <a name="return-value"></a>Valeur de retour  
- La valeur de retour de la fonction de gestionnaire d’abandon est différent de zéro si le travail d’impression doit continuer et 0 si elle est annulée.  
+### <a name="return-value"></a>Return Value  
+ The return value of the abort-handler function is nonzero if the print job is to continue, and 0 if it is canceled.  
   
-### <a name="remarks"></a>Notes  
- Le nom doit être exporté comme décrit dans la section Notes de [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).  
+### <a name="remarks"></a>Remarks  
+ The actual name must be exported as described in the Remarks section of [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).  
  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures, Styles, rappels et tables des messages](structures-styles-callbacks-and-message-maps.md)
- [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)
- [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)
- [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](structures-styles-callbacks-and-message-maps.md) [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects) [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc) [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)
 
 

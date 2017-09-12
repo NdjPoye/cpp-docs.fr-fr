@@ -1,11 +1,11 @@
 ---
-title: CMap (classe) | Documents Microsoft
+title: CMap Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -30,9 +30,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dictionary mapping class
-- collection classes, dictionary mapping
-- CMap class
+- CMap [MFC], CPair
+- CMap [MFC], CMap
+- CMap [MFC], GetCount
+- CMap [MFC], GetHashTableSize
+- CMap [MFC], GetNextAssoc
+- CMap [MFC], GetSize
+- CMap [MFC], GetStartPosition
+- CMap [MFC], InitHashTable
+- CMap [MFC], IsEmpty
+- CMap [MFC], Lookup
+- CMap [MFC], PGetFirstAssoc
+- CMap [MFC], PGetNextAssoc
+- CMap [MFC], PLookup
+- CMap [MFC], RemoveAll
+- CMap [MFC], RemoveKey
+- CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
 caps.latest.revision: 24
 author: mikeblome
@@ -52,158 +65,159 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 24f2c70210db2d0179f3234f18c3fcbd3bf093f2
-ms.lasthandoff: 04/01/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e7e9ba0ffe6ed0175b97234fa41c9812052b94df
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmap-class"></a>CMap (classe)
-Classe de collection de dictionnaires qui mappe des clés uniques à des valeurs.  
+# <a name="cmap-class"></a>CMap Class
+A dictionary collection class that maps unique keys to values.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : public CObject  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `KEY`  
- Classe de l’objet utilisé comme clé pour la carte.  
+ Class of the object used as the key to the map.  
   
  `ARG` *_* `KEY`  
- Type de données utilisé pour `KEY` arguments ; généralement une référence à `KEY`.  
+ Data type used for `KEY` arguments; usually a reference to `KEY`.  
   
  `VALUE`  
- Classe de l’objet stocké dans le mappage.  
+ Class of the object stored in the map.  
   
  `ARG` *_* `VALUE`  
- Type de données utilisé pour `VALUE` arguments ; généralement une référence à `VALUE`.  
+ Data type used for `VALUE` arguments; usually a reference to `VALUE`.  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-structures"></a>Structures publiques  
+### <a name="public-structures"></a>Public Structures  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMap::CPair](#cpair)|Une structure imbriquée contenant une valeur de clé et la valeur de l’objet associé.|  
+|[CMap::CPair](#cpair)|A nested structure containing a key value and the value of the associated object.|  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMap::CMap](#cmap)|Construit une collection qui mappe les valeurs des clés.|  
+|[CMap::CMap](#cmap)|Constructs a collection that maps keys to values.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMap::GetCount](#getcount)|Retourne le nombre d’éléments dans ce mappage.|  
-|[CMap::GetHashTableSize](#gethashtablesize)|Retourne le nombre d’éléments dans la table de hachage.|  
-|[CMap::GetNextAssoc](#getnextassoc)|Obtient l’élément suivant pour une itération.|  
-|[CMap::GetSize](#getsize)|Retourne le nombre d’éléments dans ce mappage.|  
-|[CMap::GetStartPosition](#getstartposition)|Retourne la position du premier élément.|  
-|[CMap::InitHashTable](#inithashtable)|Initialise la table de hachage et spécifie sa taille.|  
-|[CMap::IsEmpty](#isempty)|Vérifie si la condition de table vide (aucun élément).|  
-|[CMap::Lookup](#lookup)|Recherche la valeur mappée à une clé donnée.|  
-|[CMap::PGetFirstAssoc](#pgetfirstassoc)|Retourne un pointeur vers le premier élément.|  
-|[CMap::PGetNextAssoc](#pgetnextassoc)|Obtient un pointeur vers l’élément suivant pour une itération.|  
-|[CMap::PLookup](#plookup)|Retourne un pointeur vers une clé dont la valeur correspond à la valeur spécifiée.|  
-|[CMap::RemoveAll](#removeall)|Supprime tous les éléments de cette carte.|  
-|[CMap::RemoveKey](#removekey)|Supprime un élément spécifié par une clé.|  
-|[CMap::SetAt](#setat)|Insère un élément dans l’objet map. remplace un élément existant si une clé est trouvée.|  
+|[CMap::GetCount](#getcount)|Returns the number of elements in this map.|  
+|[CMap::GetHashTableSize](#gethashtablesize)|Returns the number of elements in the hash table.|  
+|[CMap::GetNextAssoc](#getnextassoc)|Gets the next element for iterating.|  
+|[CMap::GetSize](#getsize)|Returns the number of elements in this map.|  
+|[CMap::GetStartPosition](#getstartposition)|Returns the position of the first element.|  
+|[CMap::InitHashTable](#inithashtable)|Initializes the hash table and specifies its size.|  
+|[CMap::IsEmpty](#isempty)|Tests for the empty-map condition (no elements).|  
+|[CMap::Lookup](#lookup)|Looks up the value mapped to a given key.|  
+|[CMap::PGetFirstAssoc](#pgetfirstassoc)|Returns a pointer to the first element.|  
+|[CMap::PGetNextAssoc](#pgetnextassoc)|Gets a pointer to the next element for iterating.|  
+|[CMap::PLookup](#plookup)|Returns a pointer to a key whose value matches the specified value.|  
+|[CMap::RemoveAll](#removeall)|Removes all the elements from this map.|  
+|[CMap::RemoveKey](#removekey)|Removes an element specified by a key.|  
+|[CMap::SetAt](#setat)|Inserts an element into the map; replaces an existing element if a matching key is found.|  
   
-### <a name="public-operators"></a>Op&#233;rateurs publics  
+### <a name="public-operators"></a>Public Operators  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[[] De CMap::operator](#operator_at)|Insère un élément dans la classe map : substitution de l’opérateur pour `SetAt`.|  
+|[CMap::operator [ ]](#operator_at)|Inserts an element into the map — operator substitution for `SetAt`.|  
   
-## <a name="remarks"></a>Notes  
- Une fois que vous avez inséré une paire clé-valeur (élément) dans le mappage, vous pouvez efficacement récupérer ou supprimer la paire à l’aide de la clé d’accès. Vous pouvez également itérer sur tous les éléments dans le mappage.  
+## <a name="remarks"></a>Remarks  
+ Once you have inserted a key-value pair (element) into the map, you can efficiently retrieve or delete the pair using the key to access it. You can also iterate over all the elements in the map.  
   
- Une variable de type **POSITION** est utilisé pour un autre accès aux entrées. Vous pouvez utiliser un **POSITION** pour « se souviennent » une entrée et une itération au sein de la carte. Vous pouvez considérer que cette itération est séquentielle par valeur de clé ; Il n’est pas le cas. La séquence des éléments récupérés est indéterminée.  
+ A variable of type **POSITION** is used for alternate access to entries. You can use a **POSITION** to "remember" an entry and to iterate through the map. You might think that this iteration is sequential by key value; it is not. The sequence of retrieved elements is indeterminate.  
   
- Certaines fonctions membres de cet appel de la classe d’assistance globales des fonctions qui doivent être adaptées pour la plupart des utilisations de la `CMap` classe. Consultez [Assistants de classe de Collection](../../mfc/reference/collection-class-helpers.md) dans la section de Macros et objet Globals de la `MFC``Reference`.  
+ Certain member functions of this class call global helper functions that must be customized for most uses of the `CMap` class. See [Collection Class Helpers](../../mfc/reference/collection-class-helpers.md) in the Macros and Globals section of the `MFC Reference`.  
   
- `CMap`substitue [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) pour prendre en charge la sérialisation et le vidage de ses éléments. Si un mappage est stocké dans une archive à l’aide de `Serialize`, chaque élément cartographique est sérialisé à son tour. L’implémentation par défaut de la `SerializeElements` fonction d’assistance effectue une écriture au niveau du bit. Pour plus d’informations sur la sérialisation des éléments de collecte de pointeur dérivé `CObject` ou autres types définis par l’utilisateur, consultez [Comment : définir une Collection de Type sécurisé](../../mfc/how-to-make-a-type-safe-collection.md).  
+ `CMap` overrides [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) to support serialization and dumping of its elements. If a map is stored to an archive using `Serialize`, each map element is serialized in turn. The default implementation of the `SerializeElements` helper function does a bitwise write. For information about serialization of pointer collection items derived from `CObject` or other user defined types, see [How to: Make a Type-Safe Collection](../../mfc/how-to-make-a-type-safe-collection.md).  
   
- Si vous avez besoin d’un vidage de diagnostic de chaque élément dans le mappage (les clés et valeurs), vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.  
+ If you need a diagnostic dump of the individual elements in the map (the keys and values), you must set the depth of the dump context to 1 or greater.  
   
- Lorsqu’un `CMap` objet est supprimé, ou lorsque ses éléments sont supprimés, les clés et valeurs sont supprimés.  
+ When a `CMap` object is deleted, or when its elements are removed, the keys and values both are removed.  
   
- Dérivation de classe de carte est similaire à la dérivation de la liste. Consultez l’article [Collections](../../mfc/collections.md) pour une illustration de la dérivation d’une classe de liste de spécial.  
+ Map class derivation is similar to list derivation. See the article [Collections](../../mfc/collections.md) for an illustration of the derivation of a special-purpose list class.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMap`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxtempl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtempl.h  
   
-##  <a name="cmap"></a>CMap::CMap  
- Construit un mappage vide.  
+##  <a name="cmap"></a>  CMap::CMap  
+ Constructs an empty map.  
   
 ```  
 CMap(INT_PTR nBlockSize = 10);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nBlockSize`  
- Spécifie la granularité d’allocation de mémoire pour l’extension de la carte.  
+ Specifies the memory-allocation granularity for extending the map.  
   
-### <a name="remarks"></a>Remarques  
- À mesure que la carte augmente, la mémoire est allouée en unités de `nBlockSize` entrées.  
+### <a name="remarks"></a>Remarks  
+ As the map grows, memory is allocated in units of `nBlockSize` entries.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCCollections #56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
   
-##  <a name="cpair"></a>CMap::CPair  
- Contient une valeur de clé et la valeur de l’objet associé.  
+##  <a name="cpair"></a>  CMap::CPair  
+ Contains a key value and the value of the associated object.  
   
-### <a name="remarks"></a>Remarques  
- Il s’agit d’une structure imbriquée dans la classe [CMap](../../mfc/reference/cmap-class.md).  
+### <a name="remarks"></a>Remarks  
+ This is a nested structure within class [CMap](../../mfc/reference/cmap-class.md).  
   
- La structure est composée de deux champs :  
+ The structure is composed of two fields:  
   
-- **clé** la valeur réelle du type de clé.  
+- **key** The actual value of the key type.  
   
-- **valeur** la valeur de l’objet associé.  
+- **value** The value of the associated object.  
   
- Il est utilisé pour stocker les valeurs de retour à partir de [CMap::PLookup](#plookup), [CMap::PGetFirstAssoc](#pgetfirstassoc), et [CMap::PGetNextAssoc](#pgetnextassoc).  
+ It is used to store the return values from [CMap::PLookup](#plookup), [CMap::PGetFirstAssoc](#pgetfirstassoc), and [CMap::PGetNextAssoc](#pgetnextassoc).  
   
-### <a name="example"></a>Exemple  
- Pour obtenir un exemple d’utilisation, consultez l’exemple de [CMap::PLookup](#plookup).  
+### <a name="example"></a>Example  
+ For an example of usage, see the example for [CMap::PLookup](#plookup).  
   
-##  <a name="getcount"></a>CMap::GetCount  
- Récupère le nombre d’éléments de la carte.  
+##  <a name="getcount"></a>  CMap::GetCount  
+ Retrieves the number of elements in the map.  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre d'éléments.  
+### <a name="return-value"></a>Return Value  
+ The number of elements.  
   
-### <a name="example"></a>Exemple  
- Consultez l’exemple de [CMap::Lookup](#lookup).  
+### <a name="example"></a>Example  
+ See the example for [CMap::Lookup](#lookup).  
   
-##  <a name="gethashtablesize"></a>CMap::GetHashTableSize  
- Détermine le nombre d’éléments dans la table de hachage de la carte.  
+##  <a name="gethashtablesize"></a>  CMap::GetHashTableSize  
+ Determines the number of elements in the hash table for the map.  
   
 ```  
 UINT GetHashTableSize() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Le nombre d’éléments dans la table de hachage.  
+### <a name="return-value"></a>Return Value  
+ The number of elements in the hash table.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCCollections #57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
-##  <a name="getnextassoc"></a>CMap::GetNextAssoc  
- Récupère l’élément de mappage à `rNextPosition`, puis met à jour `rNextPosition` pour faire référence à l’élément suivant dans la carte.  
+##  <a name="getnextassoc"></a>  CMap::GetNextAssoc  
+ Retrieves the map element at `rNextPosition`, then updates `rNextPosition` to refer to the next element in the map.  
   
 ```  
 void GetNextAssoc(
@@ -212,168 +226,168 @@ void GetNextAssoc(
     VALUE& rValue) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `rNextPosition`  
- Spécifie une référence à un **POSITION** valeur retournée par une précédente `GetNextAssoc` ou `GetStartPosition` appeler.  
+ Specifies a reference to a **POSITION** value returned by a previous `GetNextAssoc` or `GetStartPosition` call.  
   
- *CLÉ*  
- Paramètre de modèle qui spécifie le type de clé de la carte.  
+ *KEY*  
+ Template parameter specifying the type of the map's key.  
   
  `rKey`  
- Spécifie la clé retournée de l’élément récupéré.  
+ Specifies the returned key of the retrieved element.  
   
- *VALEUR*  
- Paramètre de modèle qui spécifie le type de valeur de la carte.  
+ *VALUE*  
+ Template parameter specifying the type of the map's value.  
   
  `rValue`  
- Spécifie la valeur retournée de l’élément récupéré.  
+ Specifies the returned value of the retrieved element.  
   
-### <a name="remarks"></a>Remarques  
- Cette fonction est particulièrement utile pour l’itération au sein de tous les éléments dans le mappage. Notez que la séquence de position n’est pas nécessairement identique à la séquence de la valeur de clé.  
+### <a name="remarks"></a>Remarks  
+ This function is most useful for iterating through all the elements in the map. Note that the position sequence is not necessarily the same as the key value sequence.  
   
- Si l’élément récupéré est le dernier dans le mappage, puis la nouvelle valeur de `rNextPosition` a la valeur **NULL**.  
+ If the retrieved element is the last in the map, then the new value of `rNextPosition` is set to **NULL**.  
   
-### <a name="example"></a>Exemple  
- Consultez l’exemple de [CMap::SetAt](#setat).  
+### <a name="example"></a>Example  
+ See the example for [CMap::SetAt](#setat).  
   
-##  <a name="getsize"></a>CMap::GetSize  
- Retourne le nombre d’éléments de mappage.  
+##  <a name="getsize"></a>  CMap::GetSize  
+ Returns the number of map elements.  
   
 ```  
 INT_PTR GetSize() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Le nombre d’éléments dans le mappage.  
+### <a name="return-value"></a>Return Value  
+ The number of items in the map.  
   
-### <a name="remarks"></a>Remarques  
- Appelez cette méthode pour récupérer le nombre d’éléments de la carte.  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve the number of elements in the map.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCCollections #58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="getstartposition"></a>CMap::GetStartPosition  
- Démarre une itération de la carte en retournant un **POSITION** valeur qui peut être passé à un `GetNextAssoc` appeler.  
+##  <a name="getstartposition"></a>  CMap::GetStartPosition  
+ Starts a map iteration by returning a **POSITION** value that can be passed to a `GetNextAssoc` call.  
   
 ```  
 POSITION GetStartPosition() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- A **POSITION** valeur qui indique une position de départ pour une itération de la carte ; ou **NULL** si la carte est vide.  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that indicates a starting position for iterating the map; or **NULL** if the map is empty.  
   
-### <a name="remarks"></a>Remarques  
- La séquence d’itération n’est pas prévisible ; Par conséquent, le « premier élément dans le mappage de » n’a aucune signification spéciale.  
+### <a name="remarks"></a>Remarks  
+ The iteration sequence is not predictable; therefore, the "first element in the map" has no special significance.  
   
-### <a name="example"></a>Exemple  
- Consultez l’exemple de [CMap::SetAt](#setat).  
+### <a name="example"></a>Example  
+ See the example for [CMap::SetAt](#setat).  
   
-##  <a name="inithashtable"></a>CMap::InitHashTable  
- Initialise la table de hachage.  
+##  <a name="inithashtable"></a>  CMap::InitHashTable  
+ Initializes the hash table.  
   
 ```  
 void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `hashSize`  
- Nombre d’entrées dans la table de hachage.  
+ Number of entries in the hash table.  
   
  `bAllocNow`  
- Si **TRUE**, alloue de la table de hachage lors de l’initialisation ; sinon, la table est allouée lorsque nécessaire.  
+ If **TRUE**, allocates the hash table upon initialization; otherwise the table is allocated when needed.  
   
-### <a name="remarks"></a>Remarques  
- Pour de meilleures performances, la taille de table de hachage doit être un nombre premier. Pour réduire les conflits, la taille doit être environ 20 pour cent supérieur le plus grand jeu de données prévu.  
+### <a name="remarks"></a>Remarks  
+ For best performance, the hash table size should be a prime number. To minimize collisions, the size should be roughly 20 percent larger than the largest anticipated data set.  
   
-### <a name="example"></a>Exemple  
- Consultez l’exemple de [CMap::Lookup](#lookup).  
+### <a name="example"></a>Example  
+ See the example for [CMap::Lookup](#lookup).  
   
-##  <a name="isempty"></a>CMap::IsEmpty  
- Détermine si la carte est vide.  
+##  <a name="isempty"></a>  CMap::IsEmpty  
+ Determines whether the map is empty.  
   
 ```  
 BOOL IsEmpty() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si ce mappage ne contient aucun élément ; Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if this map contains no elements; otherwise 0.  
   
-### <a name="example"></a>Exemple  
- Consultez l’exemple de [CMap::RemoveAll](#removeall).  
+### <a name="example"></a>Example  
+ See the example for [CMap::RemoveAll](#removeall).  
   
-##  <a name="lookup"></a>CMap::Lookup  
- Recherche la valeur mappée à une clé donnée.  
+##  <a name="lookup"></a>  CMap::Lookup  
+ Looks up the value mapped to a given key.  
   
 ```  
 BOOL Lookup(ARG_KEY key, VALUE& rValue) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `ARG_KEY`  
- Paramètre de modèle qui spécifie le type de la `key` valeur.  
+ Template parameter specifying the type of the `key` value.  
   
  `key`  
- Spécifie la clé qui identifie l’élément à rechercher.  
+ Specifies the key that identifies the element to be looked up.  
   
- *VALEUR*  
- Spécifie le type de la valeur à rechercher.  
+ *VALUE*  
+ Specifies the type of the value to be looked up.  
   
  `rValue`  
- Reçoit la valeur recherchée.  
+ Receives the looked-up value.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’élément a été trouvé ; Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the element was found; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- `Lookup`utilise un algorithme de hachage pour trouver rapidement l’élément de carte avec une clé correspondant exactement à la clé donnée.  
+### <a name="remarks"></a>Remarks  
+ `Lookup` uses a hashing algorithm to quickly find the map element with a key that exactly matches the given key.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCCollections #58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="operator_at"></a>[] De CMap::operator  
- Pratique pour remplacer le `SetAt` fonction membre.  
+##  <a name="operator_at"></a>  CMap::operator [ ]  
+ A convenient substitute for the `SetAt` member function.  
   
 ```  
 VALUE& operator[](arg_key key);
 ```  
   
-### <a name="parameters"></a>Paramètres  
- *VALEUR*  
- Paramètre de modèle qui spécifie le type de la valeur de la carte.  
+### <a name="parameters"></a>Parameters  
+ *VALUE*  
+ Template parameter specifying the type of the map value.  
   
  `ARG_KEY`  
- Paramètre de modèle qui spécifie le type de la valeur de clé.  
+ Template parameter specifying the type of the key value.  
   
  `key`  
- La clé utilisée pour récupérer la valeur de la carte.  
+ The key used to retrieve the value from the map.  
   
-### <a name="remarks"></a>Notes  
- Par conséquent, il peut être utilisé uniquement sur le côté gauche d’une instruction d’assignation (une l-value). S’il n’existe aucun élément de carte avec la clé spécifiée, un nouvel élément est créé.  
+### <a name="remarks"></a>Remarks  
+ Thus it can be used only on the left side of an assignment statement (an l-value). If there is no map element with the specified key, then a new element is created.  
   
- Aucun (r-value) « droite » n’est équivalent à cet opérateur, car il n’est possible qu’une clé peut être introuvable dans le mappage. Utilisez le `Lookup` fonction membre pour l’extraction d’un élément.  
+ There is no "right side" (r-value) equivalent to this operator because there is a possibility that a key may not be found in the map. Use the `Lookup` member function for element retrieval.  
   
-### <a name="example"></a>Exemple  
- Consultez l’exemple de [CMap::Lookup](#lookup).  
+### <a name="example"></a>Example  
+ See the example for [CMap::Lookup](#lookup).  
   
-##  <a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
- Retourne la première entrée de l’objet map.  
+##  <a name="pgetfirstassoc"></a>  CMap::PGetFirstAssoc  
+ Returns the first entry of the map object.  
   
 ```  
 const CPair* PGetFirstAssoc() const; 
 CPair* PGetFirstAssoc();  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers la première entrée de la carte ; consultez [CMap::CPair](#cpair). Si la carte ne contient aucune entrée, la valeur est **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first entry in the map; see [CMap::CPair](#cpair). If the map contains no entries, the value is **NULL**.  
   
-### <a name="remarks"></a>Remarques  
- Appelez cette fonction pour retourner un pointeur du premier élément dans l’objet map.  
+### <a name="remarks"></a>Remarks  
+ Call this function to return a pointer the first element in the map object.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCCollections #59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
-##  <a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
- Récupère l’élément de mappage vers lequel pointé `pAssocRec`.  
+##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
+ Retrieves the map element pointed to by `pAssocRec`.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;  
@@ -381,104 +395,104 @@ const CPair *PGetNextAssoc(const CPair* pAssocRet) const;
 CPair *PGetNextAssoc(const CPair* pAssocRet);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *pAssocRet*  
- Pointe vers une entrée de mappage retournée par une précédente [PGetNextAssoc](#pgetnextassoc) ou [CMap::PGetFirstAssoc](#pgetfirstassoc) appeler.  
+ Points to a map entry returned by a previous [PGetNextAssoc](#pgetnextassoc) or [CMap::PGetFirstAssoc](#pgetfirstassoc) call.  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers l’entrée suivante dans l’objet map. consultez [CMap::CPair](#cpair). Si l’élément est le dernier dans le mappage, la valeur est **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the next entry in the map; see [CMap::CPair](#cpair). If the element is the last in the map, the value is **NULL**.  
   
-### <a name="remarks"></a>Remarques  
- Appelez cette méthode pour itérer sur tous les éléments dans le mappage. Récupérer le premier élément avec un appel à `PGetFirstAssoc` , puis itérer la carte avec les appels successifs à `PGetNextAssoc`.  
+### <a name="remarks"></a>Remarks  
+ Call this method to iterate through all the elements in the map. Retrieve the first element with a call to `PGetFirstAssoc` and then iterate through the map with successive calls to `PGetNextAssoc`.  
   
-### <a name="example"></a>Exemple  
- Consultez l’exemple de [CMap::PGetFirstAssoc](#pgetfirstassoc).  
+### <a name="example"></a>Example  
+ See the example for [CMap::PGetFirstAssoc](#pgetfirstassoc).  
   
-##  <a name="plookup"></a>CMap::PLookup  
- Recherche la valeur mappée à une clé donnée.  
+##  <a name="plookup"></a>  CMap::PLookup  
+ Finds the value mapped to a given key.  
   
 ```  
 const CPair* PLookup(ARG_KEY key) const;
 CPair* PLookup(ARG_KEY key);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `key`  
- Clé de l’élément à rechercher.  
+ Key for the element to be searched for.  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers une structure de clés ; consultez [CMap::CPair](#cpair). Si aucune correspondance n’est trouvée, `CMap::PLookup` retourne `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a key structure; see [CMap::CPair](#cpair). If no match is found, `CMap::PLookup` returns `NULL`.  
   
-### <a name="remarks"></a>Remarques  
- Appelez cette méthode pour rechercher un élément de carte avec une clé correspondant exactement à la clé donnée.  
+### <a name="remarks"></a>Remarks  
+ Call this method to search for a map element with a key that exactly matches the given key.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCCollections #60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
   
-##  <a name="removeall"></a>CMap::RemoveAll  
- Supprime toutes les valeurs de ce mappage en appelant la fonction d’assistance globales **DestructElements**.  
+##  <a name="removeall"></a>  CMap::RemoveAll  
+ Removes all the values from this map by calling the global helper function **DestructElements**.  
   
 ```  
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>Remarques  
- La fonction fonctionne correctement si la carte est déjà vide.  
+### <a name="remarks"></a>Remarks  
+ The function works correctly if the map is already empty.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCCollections #61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
   
-##  <a name="removekey"></a>CMap::RemoveKey  
- Recherche l’entrée de mappage correspondant à la clé fournie ; Ensuite, si la clé est trouvée, supprime l’entrée.  
+##  <a name="removekey"></a>  CMap::RemoveKey  
+ Looks up the map entry corresponding to the supplied key; then, if the key is found, removes the entry.  
   
 ```  
 BOOL RemoveKey(ARG_KEY key);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `ARG_KEY`  
- Paramètre de modèle qui spécifie le type de la clé.  
+ Template parameter specifying the type of the key.  
   
  `key`  
- Clé de l’élément à supprimer.  
+ Key for the element to be removed.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’entrée a été trouvée et supprimée avec succès ; Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the entry was found and successfully removed; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Le **DestructElements** fonction d’assistance est utilisée pour supprimer l’entrée.  
+### <a name="remarks"></a>Remarks  
+ The **DestructElements** helper function is used to remove the entry.  
   
-### <a name="example"></a>Exemple  
- Consultez l’exemple de [CMap::SetAt](#setat).  
+### <a name="example"></a>Example  
+ See the example for [CMap::SetAt](#setat).  
   
-##  <a name="setat"></a>CMap::SetAt  
- Le principal moyen d’insérer un élément dans un mappage.  
+##  <a name="setat"></a>  CMap::SetAt  
+ The primary means to insert an element in a map.  
   
 ```  
 void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `ARG_KEY`  
- Paramètre de modèle qui spécifie le type de le `key` paramètre.  
+ Template parameter specifying the type of the `key` parameter.  
   
  `key`  
- Spécifie la clé du nouvel élément.  
+ Specifies the key of the new element.  
   
  `ARG_VALUE`  
- Paramètre de modèle qui spécifie le type de le `newValue` paramètre.  
+ Template parameter specifying the type of the `newValue` parameter.  
   
  `newValue`  
- Spécifie la valeur du nouvel élément.  
+ Specifies the value of the new element.  
   
-### <a name="remarks"></a>Remarques  
- Tout d’abord, la clé est recherchée. Si la clé est trouvée, la valeur correspondante est modifiée. Sinon, une nouvelle paire clé-valeur est créée.  
+### <a name="remarks"></a>Remarks  
+ First, the key is looked up. If the key is found, then the corresponding value is changed; otherwise a new key-value pair is created.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCCollections #62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemple MFC COLLECT](../../visual-cpp-samples.md)   
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)  
+## <a name="see-also"></a>See Also  
+ [MFC Sample COLLECT](../../visual-cpp-samples.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)  
 

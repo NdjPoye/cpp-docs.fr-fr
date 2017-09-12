@@ -1,54 +1,73 @@
 ---
-title: "Cat&#233;gories de messages | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "messages de commande (C++)"
-  - "messages de notification de contrôle"
-  - "contrôles (MFC), notifications"
-  - "gestion des messages (C++), types de message"
-  - "messages (C++), catégories"
-  - "messages (C++), Windows"
-  - "messages Windows (C++), catégories"
+title: Message Categories | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- messages [MFC], categories
+- control-notification messages [MFC]
+- Windows messages [MFC], categories
+- controls [MFC], notifications
+- command messages [MFC]
+- messages [MFC], Windows
+- message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Cat&#233;gories de messages
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eddd5d0e35bd76f3efbff916ce541bb840ca4936
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Pour les types de messages écrivez\-vous des gestionnaires ?  Il existe trois catégories :  
+---
+# <a name="message-categories"></a>Message Categories
+What kinds of messages do you write handlers for There are three main categories:  
   
-1.  messages Windows  
+1.  Windows messages  
   
-     Il s'agit essentiellement ces messages commençant par le préfixe de **WM\_**, à l'exception **WM\_COMMAND**.  Les messages windows sont traités par windows et les vues.  Ces messages peuvent occuper des paramètres qui sont utilisés pour déterminer comment traiter le message.  
+     This includes primarily those messages beginning with the **WM_** prefix, except for **WM_COMMAND**. Windows messages are handled by windows and views. These messages often have parameters that are used in determining how to handle the message.  
   
-2.  notification de contrôle  
+2.  Control notifications  
   
-     Cela inclut des messages de notification de **WM\_COMMAND** les contrôles et d'autres fenêtres enfants vers les fenêtres parent.  Par exemple, un contrôle d'édition de qui est un message de **WM\_COMMAND** contenant le code de contrôle notification **EN\_CHANGE** lorsque l'utilisateur a pris une mesure qui peut avoir modifié le texte du contrôle d'édition.  Le gestionnaire de la fenêtre du message répond au message de notification d'une certaine façon appropriée, comme récupérer le texte du contrôle.  
+     This includes **WM_COMMAND** notification messages from controls and other child windows to their parent windows. For example, an edit control sends its parent a **WM_COMMAND** message containing the **EN_CHANGE** control-notification code when the user has taken an action that may have altered text in the edit control. The window's handler for the message responds to the notification message in some appropriate way, such as retrieving the text in the control.  
   
-     L'infrastructure achemine les messages de notification contrôle comme les autres messages de **WM\_**.  Une exception ; toutefois, est le message de notification de contrôle **BN\_CLICKED** envoyé par les boutons lorsque l'utilisateur clique sur les.  Ce message est traité en particulier en tant que message de commande et routé comme les autres commandes.  
+     The framework routes control-notification messages like other **WM_** messages. One exception, however, is the **BN_CLICKED** control-notification message sent by buttons when the user clicks them. This message is treated specially as a command message and routed like other commands.  
   
-3.  messages de commande  
+3.  Command messages  
   
-     Cela inclut des messages de notification de **WM\_COMMAND** des objets d'interface utilisateur : menus, les boutons de la barre d'outils, et touches accélérateur.  L'infrastructure traite des commandes différemment des autres messages, et elles peuvent être gérées par des types d'objets, comme expliqué dans [Cible de la commande](../mfc/command-targets.md).  
+     This includes **WM_COMMAND** notification messages from user-interface objects: menus, toolbar buttons, and accelerator keys. The framework processes commands differently from other messages, and they can be handled by more kinds of objects, as explained in [Command Targets](../mfc/command-targets.md).  
   
-##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Messages windows et les messages de notification contrôle  
- Les messages dans les catégories 1 et 2 — les messages windows et les notifications de contrôle \)sont traités par windows : objets de classes dérivées de la classe `CWnd`.  Cela inclut `CFrameWnd`, `CMDIFrameWnd`, `CMDIChildWnd`, `CView`, `CDialog`, et vos propres classes dérivées des classes de base.  De tels objets encapsulent `HWND`, un descripteur de la fenêtre du windows.  
+##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Windows Messages and Control-Notification Messages  
+ Messages in categories 1 and 2 — Windows messages and control notifications — are handled by windows: objects of classes derived from class `CWnd`. This includes `CFrameWnd`, `CMDIFrameWnd`, `CMDIChildWnd`, `CView`, `CDialog`, and your own classes derived from these base classes. Such objects encapsulate an `HWND`, a handle to a Windows window.  
   
-##  <a name="_core_command_messages"></a> OCM\_COMMAND \(message\)  
- Les messages dans la catégorie 3 — les commandes et peuvent être traités par les objets larges de divers : documents, des modèles de document, et l'objet d'application lui\-même en plus de les fenêtres et les vues.  Lorsqu'une commande affecte directement un certain objet particulier, il est logique d'avoir ce handle d'objet de la commande.  Par exemple, la commande ouverte dans le menu Fichier est logiquement associée à l'application : l'application ouvre un document spécifié en acceptant la commande.  Et le gestionnaire de la commande ouverte est une fonction membre de la classe d'application.  Pour plus d'informations sur les commandes et leur mode routés aux objets, consultez l'[Comment l'infrastructure appelle un gestionnaire](../mfc/how-the-framework-calls-a-handler.md).  
+##  <a name="_core_command_messages"></a> Command Messages  
+ Messages in category 3 — commands — can be handled by a wider variety of objects: documents, document templates, and the application object itself in addition to windows and views. When a command directly affects some particular object, it makes sense to have that object handle the command. For example, the Open command on the File menu is logically associated with the application: the application opens a specified document upon receiving the command. So the handler for the Open command is a member function of the application class. For more about commands and how they are routed to objects, see [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md).  
   
-## Voir aussi  
- [Messages et commandes dans le Framework](../mfc/messages-and-commands-in-the-framework.md)
+## <a name="see-also"></a>See Also  
+ [Messages and Commands in the Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCButton | Documents Microsoft
+title: CMFCButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -51,12 +51,43 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCButton::CreateObject method
-- CMFCButton::DrawItem method
-- CMFCButton::PreTranslateMessage method
-- CMFCButton constructor
-- CMFCButton::OnDrawParentBackground method
-- CMFCButton class
+- CMFCButton [MFC], CleanUp
+- CMFCButton [MFC], EnableFullTextTooltip
+- CMFCButton [MFC], EnableMenuFont
+- CMFCButton [MFC], EnableWindowsTheming
+- CMFCButton [MFC], GetToolTipCtrl
+- CMFCButton [MFC], IsAutoCheck
+- CMFCButton [MFC], IsAutorepeatCommandMode
+- CMFCButton [MFC], IsCheckBox
+- CMFCButton [MFC], IsChecked
+- CMFCButton [MFC], IsHighlighted
+- CMFCButton [MFC], IsPressed
+- CMFCButton [MFC], IsPushed
+- CMFCButton [MFC], IsRadioButton
+- CMFCButton [MFC], IsWindowsThemingEnabled
+- CMFCButton [MFC], SetAutorepeatMode
+- CMFCButton [MFC], SetCheckedImage
+- CMFCButton [MFC], SetFaceColor
+- CMFCButton [MFC], SetImage
+- CMFCButton [MFC], SetMouseCursor
+- CMFCButton [MFC], SetMouseCursorHand
+- CMFCButton [MFC], SetStdImage
+- CMFCButton [MFC], SetTextColor
+- CMFCButton [MFC], SetTextHotColor
+- CMFCButton [MFC], SetTooltip
+- CMFCButton [MFC], SizeToContent
+- CMFCButton [MFC], OnDraw
+- CMFCButton [MFC], OnDrawBorder
+- CMFCButton [MFC], OnDrawFocusRect
+- CMFCButton [MFC], OnDrawText
+- CMFCButton [MFC], OnFillBackground
+- CMFCButton [MFC], SelectFont
+- CMFCButton [MFC], m_bDrawFocus
+- CMFCButton [MFC], m_bHighlightChecked
+- CMFCButton [MFC], m_bRightImage
+- CMFCButton [MFC], m_bTransparent
+- CMFCButton [MFC], m_nAlignStyle
+- CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
 caps.latest.revision: 35
 author: mikeblome
@@ -76,106 +107,106 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 89cd722ac15a1d9ac6b6c815c837559e302f0e68
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b7a448c8c8228ab64f06bd63c851e1f7364e88c1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcbutton-class"></a>CMFCButton (classe)
-Le `CMFCButton` classe ajoute des fonctionnalités à la [CButton](../../mfc/reference/cbutton-class.md) classe telles que l’alignement du texte du bouton, combinaison de texte et une image, en sélectionnant un curseur et en spécifiant une info-bulle.  
+# <a name="cmfcbutton-class"></a>CMFCButton Class
+The `CMFCButton` class adds functionality to the [CButton](../../mfc/reference/cbutton-class.md) class such as aligning button text, combining button text and an image, selecting a cursor, and specifying a tool tip.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCButton : public CButton  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCButton::CMFCButton`|Constructeur par défaut.|  
-|`CMFCButton::~CMFCButton`|Destructeur.|  
+|`CMFCButton::CMFCButton`|Default constructor.|  
+|`CMFCButton::~CMFCButton`|Destructor.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCButton::CleanUp](#cleanup)|Réinitialise les variables internes et libère les ressources allouées tels que des images, bitmaps et icônes.|  
-|`CMFCButton::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|  
-|`CMFCButton::DrawItem`|Appelé par l’infrastructure lorsqu’un aspect visuel d’un bouton owner-drawn a été modifiée. (Substitue [CButton::DrawItem](../../mfc/reference/cbutton-class.md#drawitem).)|  
-|[CMFCButton::EnableFullTextTooltip](#enablefulltexttooltip)|Spécifie s’il faut afficher le texte intégral d’une info-bulle dans une fenêtre d’info-bulle volumineux ou une version tronquée du texte dans une fenêtre d’info-bulle petit.|  
-|[CMFCButton::EnableMenuFont](#enablemenufont)|Spécifie si la police de texte du bouton est identique à la police du menu application.|  
-|[CMFCButton::EnableWindowsTheming](#enablewindowstheming)|Spécifie si le style de la bordure du bouton correspond au thème Windows en cours.|  
-|`CMFCButton::GetThisClass`|Utilisé par le framework d’obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet associé à ce type de classe.|  
-|[CMFCButton::GetToolTipCtrl](#gettooltipctrl)|Retourne une référence au contrôle d’info-bulle sous-jacent.|  
-|[CMFCButton::IsAutoCheck](#isautocheck)|Indique si une case à cocher ou une case d’option est un bouton automatique.|  
-|[CMFCButton::IsAutorepeatCommandMode](#isautorepeatcommandmode)|Indique si un bouton est défini en mode de répétition automatique.|  
-|[CMFCButton::IsCheckBox](#ischeckbox)|Indique si un bouton est un bouton de case à cocher.|  
-|[CMFCButton::IsChecked](#ischecked)|Indique si le bouton est activé.|  
-|[CMFCButton::IsHighlighted](#ishighlighted)|Indique si un bouton est mis en surbrillance.|  
-|[CMFCButton::IsPressed](#ispressed)|Indique si un bouton est envoyé et mis en surbrillance.|  
-|[CMFCButton::IsPushed](#ispushed)|Indique si un bouton est activé.|  
-|[CMFCButton::IsRadioButton](#isradiobutton)|Indique si un bouton est un bouton radio.|  
-|[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|Indique si le style de la bordure du bouton correspond au thème Windows en cours.|  
-|`CMFCButton::OnDrawParentBackground`|Dessine l’arrière-plan du parent d’un bouton dans la zone spécifiée. (Substitue [AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|  
-|`CMFCButton::PreTranslateMessage`|Convertit les messages de fenêtre avant qu’ils soient distribués à le [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) et [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) fonctions de Windows. (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
-|[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|Définit un bouton en mode de répétition automatique.|  
-|[CMFCButton::SetCheckedImage](#setcheckedimage)|Définit l’image d’un bouton activé.|  
-|[CMFCButton::SetFaceColor](#setfacecolor)|Définit la couleur d’arrière-plan pour le texte du bouton.|  
-|[CMFCButton::SetImage](#setimage)|Définit l’image d’un bouton.|  
-|[CMFCButton::SetMouseCursor](#setmousecursor)|Définit l’image de curseur.|  
-|[CMFCButton::SetMouseCursorHand](#setmousecursorhand)|Définit le curseur de l’image d’une main.|  
-|[CMFCButton::SetStdImage](#setstdimage)|Utilise un `CMenuImages` objet pour définir l’image du bouton.|  
-|[CMFCButton::SetTextColor](#settextcolor)|Définit la couleur du texte du bouton pour un bouton qui n’est pas sélectionné.|  
-|[CMFCButton::SetTextHotColor](#settexthotcolor)|Définit la couleur du texte du bouton pour un bouton est sélectionné.|  
-|[CMFCButton::SetTooltip](#settooltip)|Associe une info-bulle à un bouton.|  
-|[CMFCButton::SizeToContent](#sizetocontent)|Redimensionne un bouton pour contenir le texte du bouton et l’image.|  
+|[CMFCButton::CleanUp](#cleanup)|Resets internal variables and frees allocated resources such as images, bitmaps, and icons.|  
+|`CMFCButton::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCButton::DrawItem`|Called by the framework when a visual aspect of an owner-drawn button has changed. (Overrides [CButton::DrawItem](../../mfc/reference/cbutton-class.md#drawitem).)|  
+|[CMFCButton::EnableFullTextTooltip](#enablefulltexttooltip)|Specifies whether to display the full text of a tooltip in a large tooltip window or a truncated version of the text in a small tooltip window.|  
+|[CMFCButton::EnableMenuFont](#enablemenufont)|Specifies whether the button text font is the same as the application menu font.|  
+|[CMFCButton::EnableWindowsTheming](#enablewindowstheming)|Specifies whether the style of the button border corresponds to the current Windows theme.|  
+|`CMFCButton::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCButton::GetToolTipCtrl](#gettooltipctrl)|Returns a reference to the underlying tooltip control.|  
+|[CMFCButton::IsAutoCheck](#isautocheck)|Indicates whether a check box or radio button is an automatic button.|  
+|[CMFCButton::IsAutorepeatCommandMode](#isautorepeatcommandmode)|Indicates whether a button is set to auto-repeat mode.|  
+|[CMFCButton::IsCheckBox](#ischeckbox)|Indicates whether a button is a check box button.|  
+|[CMFCButton::IsChecked](#ischecked)|Indicates whether the current button is checked.|  
+|[CMFCButton::IsHighlighted](#ishighlighted)|Indicates whether a button is highlighted.|  
+|[CMFCButton::IsPressed](#ispressed)|Indicates whether a button is pushed and highlighted.|  
+|[CMFCButton::IsPushed](#ispushed)|Indicates whether a button is pushed.|  
+|[CMFCButton::IsRadioButton](#isradiobutton)|Indicates whether a button is a radio button.|  
+|[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|Indicates whether the style of the button border corresponds to the current Windows theme.|  
+|`CMFCButton::OnDrawParentBackground`|Draws the background of a button's parent in the specified area. (Overrides [AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|  
+|`CMFCButton::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|Sets a button to auto-repeat mode.|  
+|[CMFCButton::SetCheckedImage](#setcheckedimage)|Sets the image for a checked button.|  
+|[CMFCButton::SetFaceColor](#setfacecolor)|Sets the background color for the button text.|  
+|[CMFCButton::SetImage](#setimage)|Sets the image for a button.|  
+|[CMFCButton::SetMouseCursor](#setmousecursor)|Sets the cursor image.|  
+|[CMFCButton::SetMouseCursorHand](#setmousecursorhand)|Sets the cursor to the image of a hand.|  
+|[CMFCButton::SetStdImage](#setstdimage)|Uses a `CMenuImages` object to set the button image.|  
+|[CMFCButton::SetTextColor](#settextcolor)|Sets the color of the button text for a button that is not selected.|  
+|[CMFCButton::SetTextHotColor](#settexthotcolor)|Sets the color of the button text for a button that is selected.|  
+|[CMFCButton::SetTooltip](#settooltip)|Associates a tooltip with a button.|  
+|[CMFCButton::SizeToContent](#sizetocontent)|Resizes a button to contain its button text and image.|  
   
-### <a name="protected-methods"></a>Méthodes protégées  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCButton::OnDraw](#ondraw)|Appelé par l’infrastructure pour dessiner un bouton.|  
-|[CMFCButton::OnDrawBorder](#ondrawborder)|Appelé par l’infrastructure pour dessiner la bordure d’un bouton.|  
-|[CMFCButton::OnDrawFocusRect](#ondrawfocusrect)|Appelé par l’infrastructure pour dessiner le rectangle de focus pour un bouton.|  
-|[CMFCButton::OnDrawText](#ondrawtext)|Appelé par l’infrastructure pour dessiner le texte du bouton.|  
-|[CMFCButton::OnFillBackground](#onfillbackground)|Appelé par l’infrastructure pour dessiner l’arrière-plan du texte du bouton.|  
-|[CMFCButton::SelectFont](#selectfont)|Récupère la police qui est associée au contexte de périphérique spécifié.|  
+|[CMFCButton::OnDraw](#ondraw)|Called by the framework to draw a button.|  
+|[CMFCButton::OnDrawBorder](#ondrawborder)|Called by the framework to draw the border of a button.|  
+|[CMFCButton::OnDrawFocusRect](#ondrawfocusrect)|Called by the framework to draw the focus rectangle for a button.|  
+|[CMFCButton::OnDrawText](#ondrawtext)|Called by the framework to draw the button text.|  
+|[CMFCButton::OnFillBackground](#onfillbackground)|Called by the framework to draw the background of the button text.|  
+|[CMFCButton::SelectFont](#selectfont)|Retrieves the font that is associated with the specified device context.|  
   
-### <a name="data-members"></a>Membres de données  
+### <a name="data-members"></a>Data Members  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Indique s’il faut dessiner un rectangle de focus autour d’un bouton.|  
-|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Indique s’il faut mettre en surbrillance un bouton de style BS_CHECKBOX lorsque le curseur passe dessus.|  
-|[CMFCButton::m_bRightImage](#m_brightimage)|Indique s’il faut afficher une image sur le côté droit du bouton.|  
-|[CMFCButton::m_bTransparent](#m_btransparent)|Indique si le bouton est transparent.|  
-|[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Spécifie l’alignement du texte du bouton.|  
-|[CMFCButton::m_nFlatStyle](#m_nflatstyle)|Spécifie le style de bouton, telles que la bordure, plat, plats point-virgule ou 3D.|  
+|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Indicates whether to draw a focus rectangle around a button.|  
+|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Indicates whether to highlight a BS_CHECKBOX-style button when the cursor hovers over it.|  
+|[CMFCButton::m_bRightImage](#m_brightimage)|Indicates whether to display an image on the right side of the button.|  
+|[CMFCButton::m_bTransparent](#m_btransparent)|Indicates whether the button is transparent.|  
+|[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Specifies the alignment of the button text.|  
+|[CMFCButton::m_nFlatStyle](#m_nflatstyle)|Specifies the style of the button, such as borderless, flat, semi-flat, or 3D.|  
   
-## <a name="remarks"></a>Remarques  
- Autres types de boutons sont dérivés de la `CMFCButton` classe, telles que la [CMFCURLLinkButton](../../mfc/reference/cmfclinkctrl-class.md) (classe), qui prend en charge les liens hypertexte, et le `CMFCColorButton` (classe), qui prend en charge une boîte de dialogue de sélecteur de couleurs.  
+## <a name="remarks"></a>Remarks  
+ Other types of buttons are derived from the `CMFCButton` class, such as the [CMFCURLLinkButton](../../mfc/reference/cmfclinkctrl-class.md) class, which supports hyperlinks, and the `CMFCColorButton` class, which supports a color picker dialog box.  
   
- Le style d’un `CMFCButton` objet peut être *3D*, *plat*, *plat point-virgule* ou *aucune bordure*. Texte du bouton peut être aligné à gauche, haut ou au centre d’un bouton. Au moment de l’exécution, vous pouvez contrôler si le bouton affiche texte, une image, ou du texte et une image. Vous pouvez également spécifier qu’une image de curseur affiché lorsque le curseur pointe sur un bouton.  
+ The style of a `CMFCButton` object can be *3D*, *flat*, *semi-flat* or *no border*. Button text can be aligned at the left, top, or center of a button. At run time, you can control whether the button displays text, an image, or text and an image. You can also specify that a particular cursor image be displayed when the cursor hovers over a button.  
   
- Créer un contrôle bouton directement dans votre code, ou à l’aide de la **Assistant classe MFC** outil et un modèle de boîte de dialogue. Si vous créez directement un contrôle de bouton, ajouter un `CMFCButton` à votre application et puis appelez le constructeur de la variable et `Create` méthodes de la `CMFCButton` objet. Si vous utilisez la **Assistant classe MFC**, ajouter un `CButton` variable à votre application, puis modifiez le type de la variable de `CButton` à `CMFCButton`.  
+ Create a button control either directly in your code, or by using the **MFC Class Wizard** tool and a dialog box template. If you create a button control directly, add a `CMFCButton` variable to your application, and then call the constructor and `Create` methods of the `CMFCButton` object. If you use the **MFC Class Wizard**, add a `CButton` variable to your application, and then change the type of the variable from `CButton` to `CMFCButton`.  
   
- Pour gérer les messages de notification dans une application de boîte de dialogue, ajoutez une entrée de mappage de message et un gestionnaire d’événements pour chaque notification. Les notifications envoyées par un `CMFCButton` objet sont les mêmes que celles envoyées par un `CButton` objet.  
+ To handle notification messages in a dialog box application, add a message map entry and an event handler for each notification. The notifications sent by a `CMFCButton` object are the same as those sent by a `CButton` object.  
   
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment configurer les propriétés du bouton à l’aide de différentes méthodes dans la `CMFCButton` classe. L’exemple fait partie de la [exemple de nouveaux contrôles](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to configure the properties of the button by using various methods in the `CMFCButton` class. The example is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls&#28;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
-[!code-cpp[NVC_MFC_NewControls&#31;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]  
-[!code-cpp[NVC_MFC_NewControls n°&32;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_3.cpp)]  
-[!code-cpp[NVC_MFC_NewControls&#33;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
+[!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]  
+[!code-cpp[NVC_MFC_NewControls#32](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_3.cpp)]  
+[!code-cpp[NVC_MFC_NewControls#33](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_4.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -186,31 +217,31 @@ class CMFCButton : public CButton
   
  [CMFCButton](../../mfc/reference/cmfcbutton-class.md)  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxbutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxbutton.h  
   
-##  <a name="cleanup"></a>CMFCButton::CleanUp  
- Réinitialise les variables internes et libère les ressources allouées tels que des images, bitmaps et icônes.  
+##  <a name="cleanup"></a>  CMFCButton::CleanUp  
+ Resets internal variables and frees allocated resources such as images, bitmaps, and icons.  
   
 ```  
 virtual void CleanUp();
 ```  
   
-##  <a name="enablefulltexttooltip"></a>CMFCButton::EnableFullTextTooltip  
- Spécifie s’il faut afficher le texte intégral d’une info-bulle dans une fenêtre d’info-bulle volumineux ou une version tronquée du texte dans une fenêtre d’info-bulle petit.  
+##  <a name="enablefulltexttooltip"></a>  CMFCButton::EnableFullTextTooltip  
+ Specifies whether to display the full text of a tooltip in a large tooltip window or a truncated version of the text in a small tooltip window.  
   
 ```  
 void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `bOn`  
- `TRUE`Pour afficher tout le texte ; `FALSE` au texte tronqué.  
+ `TRUE` to display all of the text; `FALSE` to display truncated text.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enablemenufont"></a>CMFCButton::EnableMenuFont  
- Spécifie si la police de texte du bouton est identique à la police du menu application.  
+##  <a name="enablemenufont"></a>  CMFCButton::EnableMenuFont  
+ Specifies whether the button text font is the same as the application menu font.  
   
 ```  
 void EnableMenuFont(
@@ -218,238 +249,238 @@ void EnableMenuFont(
     BOOL bRedraw=TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `bOn`  
- `TRUE`Pour utiliser la police du menu application comme la police de texte de bouton. `FALSE` pour utiliser la police système. La valeur par défaut est `TRUE`.  
+ `TRUE` to use the application menu font as the button text font; `FALSE` to use the system font. The default is `TRUE`.  
   
  [in] `bRedraw`  
- `TRUE`à se redessiner immédiatement avec l’écran ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.  
+ `TRUE` to immediately redraw the screen; otherwise, `FALSE`. The default is `TRUE`.  
   
-### <a name="remarks"></a>Notes  
- Si vous n’utilisez pas cette méthode pour spécifier la police de texte de bouton, vous pouvez spécifier la police avec la [CWnd::SetFont](../../mfc/reference/cwnd-class.md#setfont) (méthode). Si vous ne spécifiez pas du tout une police, le framework définit une police par défaut.  
+### <a name="remarks"></a>Remarks  
+ If you do not use this method to specify the button text font, you can specify the font with the [CWnd::SetFont](../../mfc/reference/cwnd-class.md#setfont) method. If you do not specify a font at all, the framework sets a default font.  
   
-##  <a name="enablewindowstheming"></a>CMFCButton::EnableWindowsTheming  
- Spécifie si le style de la bordure du bouton correspond au thème Windows en cours.  
+##  <a name="enablewindowstheming"></a>  CMFCButton::EnableWindowsTheming  
+ Specifies whether the style of the button border corresponds to the current Windows theme.  
   
 ```  
 static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`Pour utiliser le thème Windows en cours pour dessiner les bordures du bouton ; `FALSE` à ne pas utiliser le thème Windows. La valeur par défaut est `TRUE`.  
+ `TRUE` to use the current Windows theme to draw button borders; `FALSE` to not use the Windows theme. The default is `TRUE`.  
   
-### <a name="remarks"></a>Notes  
- Cette méthode affecte tous les boutons dans votre application, qui sont dérivées de la `CMFCButton` classe.  
+### <a name="remarks"></a>Remarks  
+ This method affects all buttons in your application that are derived from the `CMFCButton` class.  
   
-##  <a name="gettooltipctrl"></a>CMFCButton::GetToolTipCtrl  
- Retourne une référence au contrôle d’info-bulle sous-jacent.  
+##  <a name="gettooltipctrl"></a>  CMFCButton::GetToolTipCtrl  
+ Returns a reference to the underlying tooltip control.  
   
 ```  
 CToolTipCtrl& GetToolTipCtrl();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Une référence au contrôle d’info-bulle sous-jacent.  
+### <a name="return-value"></a>Return Value  
+ A reference to the underlying tooltip control.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isautocheck"></a>CMFCButton::IsAutoCheck  
- Indique si une case à cocher ou une case d’option est un bouton automatique.  
+##  <a name="isautocheck"></a>  CMFCButton::IsAutoCheck  
+ Indicates whether a check box or radio button is an automatic button.  
   
 ```  
 BOOL IsAutoCheck() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si le bouton a le style BS_AUTOCHECKBOX ou BS_AUTORADIOBUTTON ; dans le cas contraire, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the button has style BS_AUTOCHECKBOX or BS_AUTORADIOBUTTON; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isautorepeatcommandmode"></a>CMFCButton::IsAutorepeatCommandMode  
- Indique si un bouton est défini en mode de répétition automatique.  
+##  <a name="isautorepeatcommandmode"></a>  CMFCButton::IsAutorepeatCommandMode  
+ Indicates whether a button is set to auto-repeat mode.  
   
 ```  
 BOOL IsAutorepeatCommandMode() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- TRUE si le bouton est défini en mode de répétition automatique ; Sinon, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the button is set to auto-repeat mode; otherwise, FALSE.  
   
-### <a name="remarks"></a>Notes  
- Utilisez le [CMFCButton::SetAutorepeatMode](#setautorepeatmode) méthode pour définir un bouton en mode de répétition automatique.  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCButton::SetAutorepeatMode](#setautorepeatmode) method to set a button to auto-repeat mode.  
   
-##  <a name="ischeckbox"></a>CMFCButton::IsCheckBox  
- Indique si un bouton est un bouton de case à cocher.  
+##  <a name="ischeckbox"></a>  CMFCButton::IsCheckBox  
+ Indicates whether a button is a check box button.  
   
 ```  
 BOOL IsCheckBox() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- TRUE si le bouton a le style BS_CHECKBOX ou BS_AUTOCHECKBOX ; Sinon, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the button has either BS_CHECKBOX or BS_AUTOCHECKBOX style; otherwise, FALSE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ischecked"></a>CMFCButton::IsChecked  
- Indique si le bouton est activé.  
+##  <a name="ischecked"></a>  CMFCButton::IsChecked  
+ Indicates whether the current button is checked.  
   
 ```  
 BOOL IsChecked() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si le bouton est activé ; dans le cas contraire, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current button is checked; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Notes  
- Le framework utilise différentes façons pour indiquer que les différents types de boutons sont vérifiés. Par exemple, une case d’option est activée lorsqu’elle contient un point ; une case à cocher est activée lorsqu’elle contient un **X**.  
+### <a name="remarks"></a>Remarks  
+ The framework uses different ways to indicate that different kinds of buttons are checked. For example, a radio button is checked when it contains a dot; a check box is checked when it contains an **X**.  
   
-##  <a name="ishighlighted"></a>CMFCButton::IsHighlighted  
- Indique si un bouton est mis en surbrillance.  
+##  <a name="ishighlighted"></a>  CMFCButton::IsHighlighted  
+ Indicates whether a button is highlighted.  
   
 ```  
 BOOL IsHighlighted() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- TRUE si le bouton est mis en surbrillance ; Sinon, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the button is highlighted; otherwise, FALSE.  
   
-### <a name="remarks"></a>Notes  
- Un bouton est mis en surbrillance lorsque la souris pointe sur le bouton.  
+### <a name="remarks"></a>Remarks  
+ A button becomes highlighted when the mouse hovers over the button.  
   
-##  <a name="ispressed"></a>CMFCButton::IsPressed  
- Indique si un bouton est envoyé et mis en surbrillance.  
+##  <a name="ispressed"></a>  CMFCButton::IsPressed  
+ Indicates whether a button is pushed and highlighted.  
   
 ```  
 BOOL IsPressed() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- TRUE si le bouton est activé ; Sinon, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the button is pressed; otherwise, FALSE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ispushed"></a>CMFCButton::IsPushed  
- Indique si un bouton est activé.  
+##  <a name="ispushed"></a>  CMFCButton::IsPushed  
+ Indicates whether a button is pushed.  
   
 ```  
 BOOL IsPushed() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- TRUE si le bouton est activé ; Sinon, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the button is pushed; otherwise, FALSE.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isradiobutton"></a>CMFCButton::IsRadioButton  
- Indique si un bouton est un bouton radio.  
+##  <a name="isradiobutton"></a>  CMFCButton::IsRadioButton  
+ Indicates whether a button is a radio button.  
   
 ```  
 BOOL IsRadioButton() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- TRUE si le style de bouton est BS_RADIOBUTTON ou BS_AUTORADIOBUTTON ; Sinon, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the button style is BS_RADIOBUTTON or BS_AUTORADIOBUTTON; otherwise, FALSE.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="iswindowsthemingenabled"></a>CMFCButton::IsWindowsThemingEnabled  
- Indique si le style de la bordure du bouton correspond au thème Windows en cours.  
+##  <a name="iswindowsthemingenabled"></a>  CMFCButton::IsWindowsThemingEnabled  
+ Indicates whether the style of the button border corresponds to the current Windows theme.  
   
 ```  
 static BOOL IsWindowsThemingEnabled();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si le style de la bordure du bouton correspond au thème Windows en cours ; dans le cas contraire, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the style of the button border corresponds to the current Windows theme; otherwise, `FALSE`.  
   
-##  <a name="m_bdrawfocus"></a>CMFCButton::m_bDrawFocus  
- Indique s’il faut dessiner un rectangle de focus autour d’un bouton.  
+##  <a name="m_bdrawfocus"></a>  CMFCButton::m_bDrawFocus  
+ Indicates whether to draw a focus rectangle around a button.  
   
 ```  
 BOOL m_bDrawFocus;  
 ```  
   
-### <a name="remarks"></a>Remarques  
- Définir le `m_bDrawFocus` membre `TRUE` pour indiquer que l’infrastructure sera dessiner un rectangle de focus autour le texte du bouton et de l’image si le bouton reçoit le focus.  
+### <a name="remarks"></a>Remarks  
+ Set the `m_bDrawFocus` member to `TRUE` to specify that the framework will draw a focus rectangle around the button's text and image if the button receives focus.  
   
- Le `CMFCButton` constructeur initialise ce membre en `TRUE`.  
+ The `CMFCButton` constructor initializes this member to `TRUE`.  
   
-##  <a name="m_bhighlightchecked"></a>CMFCButton::m_bHighlightChecked  
- Indique s’il faut mettre en surbrillance un bouton de style BS_CHECKBOX lorsque le curseur passe dessus.  
+##  <a name="m_bhighlightchecked"></a>  CMFCButton::m_bHighlightChecked  
+ Indicates whether to highlight a BS_CHECKBOX-style button when the cursor hovers over it.  
   
 ```  
 BOOL m_bHighlightChecked;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Définir le `m_bHighlightChecked` membre `TRUE` pour spécifier que le framework met en évidence un bouton de style BS_CHECKBOX lorsque la souris passe dessus.  
+### <a name="remarks"></a>Remarks  
+ Set the `m_bHighlightChecked` member to `TRUE` to specify that the framework will highlight a BS_CHECKBOX-style button when the mouse hovers over it.  
   
-##  <a name="m_brightimage"></a>CMFCButton::m_bRightImage  
- Indique s’il faut afficher une image sur le côté droit du bouton.  
+##  <a name="m_brightimage"></a>  CMFCButton::m_bRightImage  
+ Indicates whether to display an image on the right side of the button.  
   
 ```  
 BOOL m_bRightImage;  
 ```  
   
-### <a name="remarks"></a>Remarques  
- Définir le `m_bRightImage` membre `TRUE` pour spécifier que le framework affiche l’image du bouton à droite de l’étiquette de texte du bouton.  
+### <a name="remarks"></a>Remarks  
+ Set the `m_bRightImage` member to `TRUE` to specify that the framework will display the button's image to the right of the button's text label.  
   
-##  <a name="m_btransparent"></a>CMFCButton::m_bTransparent  
- Indique si le bouton est transparent.  
+##  <a name="m_btransparent"></a>  CMFCButton::m_bTransparent  
+ Indicates whether the button is transparent.  
   
 ```  
 BOOL m_bTransparent;  
 ```  
   
-### <a name="remarks"></a>Remarques  
- Définir le `m_bTransparent` membre `TRUE` pour spécifier que le framework que le bouton transparent. Le `CMFCButton` constructeur initialise ce membre en `FALSE`.  
+### <a name="remarks"></a>Remarks  
+ Set the `m_bTransparent` member to `TRUE` to specify that the framework will make the button transparent. The `CMFCButton` constructor initializes this member to `FALSE`.  
   
-##  <a name="m_nalignstyle"></a>CMFCButton::m_nAlignStyle  
- Spécifie l’alignement du texte du bouton.  
+##  <a name="m_nalignstyle"></a>  CMFCButton::m_nAlignStyle  
+ Specifies the alignment of the button text.  
   
 ```  
 AlignStyle m_nAlignStyle;  
 ```  
   
-### <a name="remarks"></a>Remarques  
- Utilisez une des opérations suivantes `CMFCButton::AlignStyle` des valeurs d’énumération pour spécifier l’alignement du texte du bouton :  
+### <a name="remarks"></a>Remarks  
+ Use one of the following `CMFCButton::AlignStyle` enumeration values to specify the alignment of the button text:  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|ALIGN_CENTER|(Par défaut) Aligne le texte du bouton au centre du bouton.|  
-|ALIGN_LEFT|Aligne le texte du bouton sur le côté gauche du bouton.|  
-|ALIGN_RIGHT|Aligne le texte du bouton à droite du bouton.|  
+|ALIGN_CENTER|(Default) Aligns the button text to the center of the button.|  
+|ALIGN_LEFT|Aligns the button text to the left side of the button.|  
+|ALIGN_RIGHT|Aligns the button text to the right side of the button.|  
   
- Le `CMFCButton` constructeur initialise ce membre en ALIGN_CENTER.  
+ The `CMFCButton` constructor initializes this member to ALIGN_CENTER.  
   
-##  <a name="m_nflatstyle"></a>CMFCButton::m_nFlatStyle  
- Spécifie le style de bouton, telles que la bordure, plat, plats point-virgule ou 3D.  
+##  <a name="m_nflatstyle"></a>  CMFCButton::m_nFlatStyle  
+ Specifies the style of the button, such as borderless, flat, semi-flat, or 3D.  
   
 ```  
 FlatStyle  m_nFlatStyle;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le tableau suivant répertorie les `CMFCButton::m_nFlatStyle` des valeurs d’énumération qui spécifient l’apparence d’un bouton.  
+### <a name="remarks"></a>Remarks  
+ The following table lists the `CMFCButton::m_nFlatStyle` enumeration values that specify the appearance of a button.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|BUTTONSTYLE_3D|(Par défaut) Le bouton semble avoir des côtés haute, en trois dimensions. Lorsque le bouton est activé, le bouton apparaît à la touche dans un retrait approfondi.|  
-|BUTTONSTYLE_FLAT|Lorsque la souris ne s’arrête pas sur le bouton, le bouton semble être à deux dimensions et n’a pas déclenchées côtés. Lorsque la souris s’arrête sur le bouton, le bouton semble avoir côtés faibles, en trois dimensions. Lorsque le bouton est activé, le bouton apparaît à la touche dans un retrait de premier niveau.|  
-|BUTTONSTYLE_SEMIFLAT|Le bouton apparaît à côtés faible, en trois dimensions. Lorsque le bouton est activé, le bouton apparaît à la touche dans un retrait approfondi.|  
-|BUTTONSTYLE_NOBORDERS|Le bouton ne pas avoir déclenché côtés et apparaît toujours à deux dimensions. Le bouton ne semble pas être utilisées pour une mise en retrait lorsqu’il est sélectionné.|  
+|BUTTONSTYLE_3D|(Default) The button appears to have high, three-dimensional sides. When the button is clicked, the button appears to be pressed into a deep indentation.|  
+|BUTTONSTYLE_FLAT|When the mouse does not pause over the button, the button appears to be two-dimensional and does not have raised sides. When the mouse pauses over the button, the button appears to have low, three-dimensional sides. When the button is clicked, the button appears to be pressed into a shallow indentation.|  
+|BUTTONSTYLE_SEMIFLAT|The button appears to have low, three-dimensional sides. When the button is clicked, the button appears to be pressed into a deep indentation.|  
+|BUTTONSTYLE_NOBORDERS|The button does not have raised sides and always appears two-dimensional. The button does not appear to be pressed into an indentation when it is clicked.|  
   
- Le `CMFCButton` constructeur initialise ce membre en `BUTTONSTYLE_3D`.  
+ The `CMFCButton` constructor initializes this member to `BUTTONSTYLE_3D`.  
   
-### <a name="example"></a>Exemple  
- L’exemple suivant montre comment définir les valeurs de la `m_nFlatStyle` variable de membre dans la `CMFCButton` classe. Cet exemple fait partie de la [exemple de nouveaux contrôles](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to set the values of the `m_nFlatStyle` member variable in the `CMFCButton` class. This example is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls&#28;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
-[!code-cpp[NVC_MFC_NewControls&#29;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
+[!code-cpp[NVC_MFC_NewControls#29](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]  
   
-##  <a name="ondraw"></a>CMFCButton::OnDraw  
- Appelé par l’infrastructure pour dessiner un bouton.  
+##  <a name="ondraw"></a>  CMFCButton::OnDraw  
+ Called by the framework to draw a button.  
   
 ```  
 virtual void OnDraw(
@@ -458,21 +489,21 @@ virtual void OnDraw(
     UINT uiState);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Pointeur vers un contexte de périphérique.  
+ A pointer to a device context.  
   
  [in] `rect`  
- Une référence à un rectangle qui délimite le bouton.  
+ A reference to a rectangle that bounds the button.  
   
  [in] `uiState`  
- L’état actuel du bouton. Pour plus d’informations, consultez la `itemState` membre de la [drawitemstruct, Structure](../../mfc/reference/drawitemstruct-structure.md) rubrique.  
+ The current button state. For more information, see the `itemState` member of the [DRAWITEMSTRUCT Structure](../../mfc/reference/drawitemstruct-structure.md) topic.  
   
-### <a name="remarks"></a>Remarques  
- Substituez cette méthode pour utiliser votre propre code pour dessiner un bouton.  
+### <a name="remarks"></a>Remarks  
+ Override this method to use your own code to draw a button.  
   
-##  <a name="ondrawborder"></a>CMFCButton::OnDrawBorder  
- Appelé par l’infrastructure pour dessiner la bordure d’un bouton.  
+##  <a name="ondrawborder"></a>  CMFCButton::OnDrawBorder  
+ Called by the framework to draw the border of a button.  
   
 ```  
 virtual void OnDrawBorder(
@@ -481,21 +512,21 @@ virtual void OnDrawBorder(
     UINT uiState);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Pointeur vers un contexte de périphérique.  
+ A pointer to a device context.  
   
  [in] `rectClient`  
- Une référence à un rectangle qui délimite le bouton.  
+ A reference to a rectangle that bounds the button.  
   
  [in] `uiState`  
- L’état actuel du bouton. Pour plus d’informations, consultez la `itemState` membre de la [drawitemstruct, Structure](../../mfc/reference/drawitemstruct-structure.md) rubrique.  
+ The current button state. For more information, see the `itemState` member of the [DRAWITEMSTRUCT Structure](../../mfc/reference/drawitemstruct-structure.md) topic.  
   
-### <a name="remarks"></a>Remarques  
- Substituez cette méthode pour utiliser votre propre code pour dessiner la bordure.  
+### <a name="remarks"></a>Remarks  
+ Override this method to use your own code to draw the border.  
   
-##  <a name="ondrawfocusrect"></a>CMFCButton::OnDrawFocusRect  
- Appelé par l’infrastructure pour dessiner le rectangle de focus pour un bouton.  
+##  <a name="ondrawfocusrect"></a>  CMFCButton::OnDrawFocusRect  
+ Called by the framework to draw the focus rectangle for a button.  
   
 ```  
 virtual void OnDrawFocusRect(
@@ -503,18 +534,18 @@ virtual void OnDrawFocusRect(
     const CRect& rectClient);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Pointeur vers un contexte de périphérique.  
+ A pointer to a device context.  
   
  [in] `rectClient`  
- Une référence à un rectangle qui délimite le bouton.  
+ A reference to a rectangle that bounds the button.  
   
-### <a name="remarks"></a>Notes  
- Substituez cette méthode pour utiliser votre propre code pour dessiner le rectangle de focus.  
+### <a name="remarks"></a>Remarks  
+ Override this method to use your own code to draw the focus rectangle.  
   
-##  <a name="ondrawtext"></a>CMFCButton::OnDrawText  
- Appelé par l’infrastructure pour dessiner le texte du bouton.  
+##  <a name="ondrawtext"></a>  CMFCButton::OnDrawText  
+ Called by the framework to draw the button text.  
   
 ```  
 virtual void OnDrawText(
@@ -525,27 +556,27 @@ virtual void OnDrawText(
     UINT uiState);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Pointeur vers un contexte de périphérique.  
+ A pointer to a device context.  
   
  [in] `rect`  
- Une référence à un rectangle qui délimite le bouton.  
+ A reference to a rectangle that bounds the button.  
   
  [in] `strText`  
- Texte à dessiner.  
+ The text to draw.  
   
  [in] `uiDTFlags`  
- Indicateurs qui spécifient comment mettre en forme le texte. Pour plus d’informations, consultez la `nFormat` paramètre de la [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) méthode.  
+ Flags that specify how to format the text. For more information, see the `nFormat` parameter of the [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) method.  
   
  [in] `uiState`  
- (Réservé).  
+ (Reserved.)  
   
-### <a name="remarks"></a>Notes  
- Substituez cette méthode pour utiliser votre propre code pour dessiner le texte du bouton.  
+### <a name="remarks"></a>Remarks  
+ Override this method to use your own code to draw the button text.  
   
-##  <a name="onfillbackground"></a>CMFCButton::OnFillBackground  
- Appelé par l’infrastructure pour dessiner l’arrière-plan du texte du bouton.  
+##  <a name="onfillbackground"></a>  CMFCButton::OnFillBackground  
+ Called by the framework to draw the background of the button text.  
   
 ```  
 virtual void OnFillBackground(
@@ -553,48 +584,48 @@ virtual void OnFillBackground(
     const CRect& rectClient);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Pointeur vers un contexte de périphérique.  
+ A pointer to a device context.  
   
  [in] `rectClient`  
- Une référence à un rectangle qui délimite le bouton.  
+ A reference to a rectangle that bounds the button.  
   
-### <a name="remarks"></a>Remarques  
- Substituez cette méthode pour utiliser votre propre code pour dessiner l’arrière-plan d’un bouton.  
+### <a name="remarks"></a>Remarks  
+ Override this method to use your own code to draw the background of a button.  
   
-##  <a name="selectfont"></a>CMFCButton::SelectFont  
- Récupère la police qui est associée au contexte de périphérique spécifié.  
+##  <a name="selectfont"></a>  CMFCButton::SelectFont  
+ Retrieves the font that is associated with the specified device context.  
   
 ```  
 virtual CFont* SelectFont(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Pointeur vers un contexte de périphérique.  
+ A pointer to a device context.  
   
-### <a name="return-value"></a>Valeur de retour  
- Substituez cette méthode pour utiliser votre propre code pour récupérer la police.  
+### <a name="return-value"></a>Return Value  
+ Override this method to use your own code to retrieve the font.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setautorepeatmode"></a>CMFCButton::SetAutorepeatMode  
- Définit un bouton en mode de répétition automatique.  
+##  <a name="setautorepeatmode"></a>  CMFCButton::SetAutorepeatMode  
+ Sets a button to auto-repeat mode.  
   
 ```  
 void SetAutorepeatMode(int nTimeDelay=500);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nTimeDelay`  
- Un nombre entier positif qui spécifie l’intervalle entre les messages sont envoyés à la fenêtre parente. L’intervalle est mesuré en millisecondes et sa valeur par défaut est 500 millisecondes. Spécifiez zéro pour désactiver le mode de répétition automatique message.  
+ A nonnegative number that specifies the interval between messages that are sent to the parent window. The interval is measured in milliseconds and its default value is 500 milliseconds. Specify zero to disable auto-repeat message mode.  
   
-### <a name="remarks"></a>Remarques  
- Cette méthode provoque le bouton pour envoyer des messages WM_COMMAND constamment à la fenêtre parente jusqu'à ce que le bouton est relâché, ou `nTimeDelay` paramètre est défini sur zéro.  
+### <a name="remarks"></a>Remarks  
+ This method causes the button to constantly send WM_COMMAND messages to the parent window until the button is released, or the `nTimeDelay` parameter is set to zero.  
   
-##  <a name="setcheckedimage"></a>CMFCButton::SetCheckedImage  
- Définit l’image d’un bouton activé.  
+##  <a name="setcheckedimage"></a>  CMFCButton::SetCheckedImage  
+ Sets the image for a checked button.  
   
 ```  
 void SetCheckedImage(
@@ -619,47 +650,47 @@ void SetCheckedImage(
     UINT uiBmpDsblResID=0);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `hIcon`  
- Handle de l’icône qui contient l’image bitmap et un masque pour la nouvelle image.  
+ Handle to the icon that contains the bitmap and mask for the new image.  
   
  [in] `bAutoDestroy`  
- `TRUE`Pour spécifier que les ressources bitmap détruit automatiquement ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.  
+ `TRUE` to specify that bitmap resources be destroyed automatically; otherwise, `FALSE`. The default is `TRUE`.  
   
  [in] `hIconHot`  
- Handle de l’icône qui contient l’image pour l’état sélectionné.  
+ Handle to the icon that contains the image for the selected state.  
   
  [in] `hBitmap`  
- Handle de bitmap qui contient l’image pour l’état non sélectionné.  
+ Handle to the bitmap that contains the image for the non-selected state.  
   
  [in] `hBitmapHot`  
- Handle de bitmap qui contient l’image pour l’état sélectionné.  
+ Handle to the bitmap that contains the image for the selected state.  
   
  [in] `bMap3dColors`  
- Spécifie une couleur transparente pour l’arrière-plan du bouton. Autrement dit, l’image du bouton. `TRUE`Pour utiliser la valeur de couleur RVB (192, 192, 192) ; `FALSE` à utiliser la valeur de couleur définie par `AFX_GLOBAL_DATA::clrBtnFace`.  
+ Specifies a transparent color for the button background; that is, the face of the button. `TRUE` to use the color value RGB(192, 192, 192); `FALSE` to use the color value defined by `AFX_GLOBAL_DATA::clrBtnFace`.  
   
  [in] `uiBmpResId`  
- ID de ressource de l’image non sélectionné.  
+ Resource ID for the non-selected image.  
   
  [in] `uiBmpHotResId`  
- ID de ressource de l’image sélectionnée.  
+ Resource ID for the selected image.  
   
  [in] `hIconDisabled`  
- Handle de l’icône de l’image désactivée.  
+ Handle to the icon for the disabled image.  
   
  [in] `hBitmapDisabled`  
- Handle de bitmap qui contient l’image désactivée.  
+ Handle to the bitmap that contains the disabled image.  
   
  [in] `uiBmpDsblResID`  
- ID de ressource de la bitmap désactivée.  
+ Resource ID of the disabled bitmap.  
   
  [in] `bAlphaBlend`  
- `TRUE`utiliser uniquement des images 32 bits qui utilisent le canal alpha ; `FALSE`, de ne pas utiliser uniquement des images de canal alpha. La valeur par défaut est `FALSE`.  
+ `TRUE` to use only 32-bit images that use the alpha channel; `FALSE`, to not use only alpha channel images. The default is `FALSE`.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setfacecolor"></a>CMFCButton::SetFaceColor  
- Définit la couleur d’arrière-plan pour le texte du bouton.  
+##  <a name="setfacecolor"></a>  CMFCButton::SetFaceColor  
+ Sets the background color for the button text.  
   
 ```  
 void SetFaceColor(
@@ -667,18 +698,18 @@ void SetFaceColor(
     BOOL bRedraw=TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `crFace`  
- Une valeur de couleur RVB.  
+ An RGB color value.  
   
  [in] `bRedraw`  
- `TRUE`pour redessiner l’écran immédiatement. dans le cas contraire, `FALSE`.  
+ `TRUE` to redraw the screen immediately; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
- Utilisez cette méthode pour définir une nouvelle couleur de remplissage pour l’arrière-plan du bouton (face). Notez que l’arrière-plan n’est pas remplie quand le [CMFCButton::m_bTransparent](#m_btransparent) variable membre est `TRUE`.  
+### <a name="remarks"></a>Remarks  
+ Use this method to define a new fill color for the button background (face). Note that the background is not filled when the [CMFCButton::m_bTransparent](#m_btransparent) member variable is `TRUE`.  
   
-##  <a name="setimage"></a>CMFCButton::SetImage  
- Définit l’image d’un bouton.  
+##  <a name="setimage"></a>  CMFCButton::SetImage  
+ Sets the image for a button.  
   
 ```  
 void SetImage(
@@ -703,83 +734,83 @@ void SetImage(
     UINT uiBmpDsblResID=0);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `hIcon`  
- Handle de l’icône qui contient l’image bitmap et un masque pour la nouvelle image.  
+ Handle to the icon that contains the bitmap and mask for the new image.  
   
  [in] `bAutoDestroy`  
- `TRUE`Pour spécifier que les ressources bitmap détruit automatiquement ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.  
+ `TRUE` to specify that bitmap resources be destroyed automatically; otherwise, `FALSE`. The default is `TRUE`.  
   
  [in] `hIconHot`  
- Handle de l’icône qui contient l’image pour l’état sélectionné.  
+ Handle to the icon that contains the image for the selected state.  
   
  [in] `hBitmap`  
- Handle de bitmap qui contient l’image pour l’état non sélectionné.  
+ Handle to the bitmap that contains the image for the non-selected state.  
   
  [in] `hBitmapHot`  
- Handle de bitmap qui contient l’image pour l’état sélectionné.  
+ Handle to the bitmap that contains the image for the selected state.  
   
  [in] `uiBmpResId`  
- ID de ressource de l’image non sélectionné.  
+ Resource ID for the non-selected image.  
   
  [in] `uiBmpHotResId`  
- ID de ressource de l’image sélectionnée.  
+ Resource ID for the selected image.  
   
  [in] `bMap3dColors`  
- Spécifie une couleur transparente pour l’arrière-plan du bouton. Autrement dit, l’image du bouton. `TRUE`Pour utiliser la valeur de couleur RVB (192, 192, 192) ; `FALSE` à utiliser la valeur de couleur définie par `AFX_GLOBAL_DATA::clrBtnFace`.  
+ Specifies a transparent color for the button background; that is, the face of the button. `TRUE` to use the color value RGB(192, 192, 192); `FALSE` to use the color value defined by `AFX_GLOBAL_DATA::clrBtnFace`.  
   
  [in] `hIconDisabled`  
- Handle de l’icône de l’image désactivée.  
+ Handle to the icon for the disabled image.  
   
  [in] `hBitmapDisabled`  
- Handle de bitmap qui contient l’image désactivée.  
+ Handle to the bitmap that contains the disabled image.  
   
  [in] `uiBmpDsblResID`  
- ID de ressource de la bitmap désactivée.  
+ Resource ID of the disabled bitmap.  
   
  [in] `bAlphaBlend`  
- `TRUE`utiliser uniquement des images 32 bits qui utilisent le canal alpha ; `FALSE`, de ne pas utiliser uniquement des images de canal alpha. La valeur par défaut est `FALSE`.  
+ `TRUE` to use only 32-bit images that use the alpha channel; `FALSE`, to not use only alpha channel images. The default is `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-### <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser les différentes versions de la `SetImage` méthode dans la `CMFCButton` classe. L’exemple fait partie de la [exemple de nouveaux contrôles](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use various versions of the `SetImage` method in the `CMFCButton` class. The example is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls&#28;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
-[!code-cpp[NVC_MFC_NewControls&#31;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
+[!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]  
   
-##  <a name="setmousecursor"></a>CMFCButton::SetMouseCursor  
- Définit l’image de curseur.  
+##  <a name="setmousecursor"></a>  CMFCButton::SetMouseCursor  
+ Sets the cursor image.  
   
 ```  
 void SetMouseCursor(HCURSOR hcursor);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `hcursor`  
- Le handle d’un curseur.  
+ The handle of a cursor.  
   
-### <a name="remarks"></a>Remarques  
- Utilisez cette méthode pour associer une image de curseur, telles que la main, le bouton. Le curseur est chargé à partir de ressources d’application.  
+### <a name="remarks"></a>Remarks  
+ Use this method to associate a cursor image, such as the hand cursor, with the button. The cursor is loaded from the application resources.  
   
-### <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser le `SetMouseCursor` méthode dans la `CMFCButton` classe. L’exemple fait partie du code dans le [exemple de nouveaux contrôles](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `SetMouseCursor` method in the `CMFCButton` class. The example is part of the code in the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls&#28;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
-[!code-cpp[30 NVC_MFC_NewControls](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
+[!code-cpp[NVC_MFC_NewControls#30](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]  
   
-##  <a name="setmousecursorhand"></a>CMFCButton::SetMouseCursorHand  
- Définit le curseur de l’image d’une main.  
+##  <a name="setmousecursorhand"></a>  CMFCButton::SetMouseCursorHand  
+ Sets the cursor to the image of a hand.  
   
 ```  
 void SetMouseCursorHand();
 ```  
   
-### <a name="remarks"></a>Notes  
- Utilisez cette méthode pour associer l’image de curseur d’une main avec le bouton. Le curseur est chargé à partir de ressources d’application.  
+### <a name="remarks"></a>Remarks  
+ Use this method to associate the cursor image of a hand with the button. The cursor is loaded from the application resources.  
   
-##  <a name="setstdimage"></a>CMFCButton::SetStdImage  
- Utilise un `CMenuImages` objet pour définir l’image du bouton.  
+##  <a name="setstdimage"></a>  CMFCButton::SetStdImage  
+ Uses a `CMenuImages` object to set the button image.  
   
 ```  
 void SetStdImage(
@@ -788,78 +819,78 @@ void SetStdImage(
     CMenuImages::IMAGES_IDS idDisabled=(CMenuImages::IMAGES_IDS)0);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `id`  
- Un des identificateurs d’image de bouton qui est défini dans le `CMenuImage::IMAGES_IDS` (énumération). Les valeurs d’image spécifient des images telles que des flèches, des codes confidentiels et cases d’option.  
+ One of the button image identifiers that is defined in the `CMenuImage::IMAGES_IDS` enumeration. The image values specify images such as arrows, pins, and radio buttons.  
   
  [in] `state`  
- Un des identificateurs de bouton image état est défini dans le `CMenuImages::IMAGE_STATE` (énumération). Les États d’image spécifient les couleurs de bouton comme gris foncé et blancs de gris noir, gris clair. La valeur par défaut est `CMenuImages::ImageBlack`.  
+ One of the button image state identifiers that is defined in the `CMenuImages::IMAGE_STATE` enumeration. The image states specify button colors such as black, gray, light gray, white, and dark gray. The default value is `CMenuImages::ImageBlack`.  
   
  [in] `idDisabled`  
- Un des identificateurs d’image de bouton qui est défini dans le `CMenuImage::IMAGES_IDS` (énumération). L’image indique que le bouton est désactivé. La valeur par défaut est la première image de bouton ( `CMenuImages::IdArrowDown`).  
+ One of the button image identifiers that is defined in the `CMenuImage::IMAGES_IDS` enumeration. The image indicates that the button is disabled. The default value is the first button image ( `CMenuImages::IdArrowDown`).  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settextcolor"></a>CMFCButton::SetTextColor  
- Définit la couleur du texte du bouton pour un bouton qui n’est pas sélectionné.  
+##  <a name="settextcolor"></a>  CMFCButton::SetTextColor  
+ Sets the color of the button text for a button that is not selected.  
   
 ```  
 void SetTextColor(COLORREF clrText);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `clrText`  
- Une valeur de couleur RVB.  
+ An RGB color value.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settexthotcolor"></a>CMFCButton::SetTextHotColor  
- Définit la couleur du texte du bouton pour un bouton est sélectionné.  
+##  <a name="settexthotcolor"></a>  CMFCButton::SetTextHotColor  
+ Sets the color of the button text for a button that is selected.  
   
 ```  
 void SetTextHotColor(COLORREF clrTextHot);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `clrTextHot`  
- Une valeur de couleur RVB.  
+ An RGB color value.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settooltip"></a>CMFCButton::SetTooltip  
- Associe une info-bulle à un bouton.  
+##  <a name="settooltip"></a>  CMFCButton::SetTooltip  
+ Associates a tooltip with a button.  
   
 ```  
 void SetTooltip(LPCTSTR lpszToolTipText);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `lpszToolTipText`  
- Pointeur vers le texte de l’info-bulle. Spécifiez NULL pour désactiver l’info-bulle.  
+ Pointer to the text for the tooltip. Specify NULL to disable the tooltip.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="sizetocontent"></a>CMFCButton::SizeToContent  
- Redimensionne un bouton pour contenir le texte du bouton et l’image.  
+##  <a name="sizetocontent"></a>  CMFCButton::SizeToContent  
+ Resizes a button to contain its button text and image.  
   
 ```  
 virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `bCalcOnly`  
- `TRUE`pour calculer, mais pas modifier, la nouvelle taille du bouton ; `FALSE` pour modifier la taille du bouton. La valeur par défaut est `FALSE`.  
+ `TRUE` to calculate, but not change, the new size of the button; `FALSE` to change the size of the button. The default is `FALSE`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Un `CSize` objet qui contient la nouvelle taille du bouton.  
+### <a name="return-value"></a>Return Value  
+ A `CSize` object that contains the new size of the button.  
   
-### <a name="remarks"></a>Notes  
- Par défaut, cette méthode calcule une nouvelle taille qui inclut une marge horizontale de 10 pixels et une marge verticale de 5 pixels.  
+### <a name="remarks"></a>Remarks  
+ By default, this method calculates a new size that includes a horizontal margin of 10 pixels and a vertical margin of 5 pixels.  
   
-## <a name="see-also"></a>Voir aussi  
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCLinkCtrl (classe)](../../mfc/reference/cmfclinkctrl-class.md)   
- [CMFCColorButton (classe)](../../mfc/reference/cmfccolorbutton-class.md)   
- [CMFCMenuButton (classe)](../../mfc/reference/cmfcmenubutton-class.md)
+ [CMFCLinkCtrl Class](../../mfc/reference/cmfclinkctrl-class.md)   
+ [CMFCColorButton Class](../../mfc/reference/cmfccolorbutton-class.md)   
+ [CMFCMenuButton Class](../../mfc/reference/cmfcmenubutton-class.md)
 

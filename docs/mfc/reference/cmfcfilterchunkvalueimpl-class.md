@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCFilterChunkValueImpl | Documents Microsoft
+title: CMFCFilterChunkValueImpl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,7 +34,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCFilterChunkValueImpl class
+- CMFCFilterChunkValueImpl [MFC], CMFCFilterChunkValueImpl
+- CMFCFilterChunkValueImpl [MFC], Clear
+- CMFCFilterChunkValueImpl [MFC], CopyChunk
+- CMFCFilterChunkValueImpl [MFC], CopyFrom
+- CMFCFilterChunkValueImpl [MFC], GetChunkGUID
+- CMFCFilterChunkValueImpl [MFC], GetChunkPID
+- CMFCFilterChunkValueImpl [MFC], GetChunkType
+- CMFCFilterChunkValueImpl [MFC], GetString
+- CMFCFilterChunkValueImpl [MFC], GetValue
+- CMFCFilterChunkValueImpl [MFC], GetValueNoAlloc
+- CMFCFilterChunkValueImpl [MFC], IsValid
+- CMFCFilterChunkValueImpl [MFC], SetBoolValue
+- CMFCFilterChunkValueImpl [MFC], SetDwordValue
+- CMFCFilterChunkValueImpl [MFC], SetFileTimeValue
+- CMFCFilterChunkValueImpl [MFC], SetInt64Value
+- CMFCFilterChunkValueImpl [MFC], SetIntValue
+- CMFCFilterChunkValueImpl [MFC], SetLongValue
+- CMFCFilterChunkValueImpl [MFC], SetSystemTimeValue
+- CMFCFilterChunkValueImpl [MFC], SetTextValue
+- CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
 caps.latest.revision: 25
 author: mikeblome
@@ -54,227 +73,227 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8de3cba19a60b8022df96a9edafd13677fa3fecb
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: df02b6a6b6ac7e0683dbd75f45a77dd6cb5bd06d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl, classe
-Il s’agit d’une classe qui simplifie la logique de paires de valeur à la fois des segments et des propriétés.  
+# <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl Class
+This is a class which simplifies both chunk and property value pair logic.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCFilterChunkValueImpl :: ~ CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destruction de l’objet.|  
-|[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|Construit l’objet.|  
+|[CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destructs the object.|  
+|[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|Constructs the object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCFilterChunkValueImpl::Clear](#clear)|Efface le ChunkValue.|  
-|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|Copie ce segment vers une structure qui décrit les caractéristiques d’un segment.|  
-|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|Initialise cette valeur de segment à partir de l’autre valeur.|  
-|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Récupère le GUID du segment.|  
-|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Récupère le segment PID (ID de propriété).|  
-|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Obtient segment type.|  
-|[CMFCFilterChunkValueImpl::GetString](#getstring)|Récupère la valeur de chaîne.|  
-|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|Récupère la valeur en un propvariant alloué.|  
-|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Valeur renvoie non allouée (valeur interne).|  
-|[CMFCFilterChunkValueImpl::IsValid](#isvalid)|Vérifie si la valeur de cette propriété est valide ou non.|  
-|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|Surchargé. Définit la propriété par clé à une valeur booléenne.|  
-|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Définit la propriété par clé à une valeur DWORD.|  
-|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Définit la propriété par clé en filetime.|  
-|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Définit la propriété par clé pour un int64.|  
-|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Définit la propriété à une clé à un entier.|  
-|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Définit la propriété par clé pour une longue durée.|  
-|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Définit la propriété par clé un SYSTEMTIME.|  
-|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|Définit la propriété par clé en une chaîne Unicode.|  
+|[CMFCFilterChunkValueImpl::Clear](#clear)|Clears the ChunkValue.|  
+|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|Copies this chunk to a structure describing the characteristics of a chunk.|  
+|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|Initializes this chunk value from the other value.|  
+|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Retrieves the chunk GUID.|  
+|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Retrieves the chunk PID (property ID).|  
+|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Gets chunk type.|  
+|[CMFCFilterChunkValueImpl::GetString](#getstring)|Retrieves the the string value.|  
+|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|Retrieves the value as an allocated propvariant.|  
+|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Returns non-allocated (internal value) value.|  
+|[CMFCFilterChunkValueImpl::IsValid](#isvalid)|Checks whether this property value is valid or not.|  
+|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|Overloaded. Sets the property by key to a Boolean.|  
+|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Sets the property by key to a DWORD.|  
+|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Sets the property by key to a filetime.|  
+|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Sets the property by key to an int64.|  
+|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Sets the property by key to an int.|  
+|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Sets the property by key to a LONG.|  
+|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Sets the property by key to a SystemTime.|  
+|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|Sets the property by key to a Unicode string.|  
   
-### <a name="protected-methods"></a>Méthodes protégées  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|Une fonction d’assistance qui définit les propriétés communes du segment.|  
+|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|A helper function that sets the chunk's common properties.|  
   
-## <a name="remarks"></a>Notes  
- Pour utiliser, vous créez simplement une classe CMFCFilterChunkValueImpl du type approprié  
+## <a name="remarks"></a>Remarks  
+ To use, you simply create a CMFCFilterChunkValueImpl class of the right kind  
   
- Exemple :  
+ Example:  
   
- Segment CMFCFilterChunkValueImpl ;  
+ CMFCFilterChunkValueImpl chunk;  
   
- HR = segment. SetBoolValue(PKEY_IsAttachment, true) ;  
+ hr = chunk.SetBoolValue(PKEY_IsAttachment, true);  
   
- ou  
+ or  
   
- HR = segment. SetFileTimeValue (PKEY_ItemDate, ftLastModified) ;  
+ hr = chunk.SetFileTimeValue(PKEY_ItemDate, ftLastModified);  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `ATL::IFilterChunkValue`  
   
  [CMFCFilterChunkValueImpl](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="clear"></a>CMFCFilterChunkValueImpl::Clear  
- Efface le ChunkValue.  
+##  <a name="clear"></a>  CMFCFilterChunkValueImpl::Clear  
+ Clears the ChunkValue.  
   
 ```  
 void Clear();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="cmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
- Construit l’objet.  
+##  <a name="cmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
+ Constructs the object.  
   
 ```  
 CMFCFilterChunkValueImpl();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl :: ~ CMFCFilterChunkValueImpl  
- Destruction de l’objet.  
+##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl  
+ Destructs the object.  
   
 ```  
 virtual ~CMFCFilterChunkValueImpl();
 ```  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="copychunk"></a>CMFCFilterChunkValueImpl::CopyChunk  
- Copie ce segment vers une structure qui décrit les caractéristiques d’un segment.  
+##  <a name="copychunk"></a>  CMFCFilterChunkValueImpl::CopyChunk  
+ Copies this chunk to a structure describing the characteristics of a chunk.  
   
 ```  
 HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pStatChunk`  
- Un pointeur vers la valeur de destination qui décrivent les caractéristiques du segment.  
+ A pointer to destination value describing the characteristics of the chunk.  
   
-### <a name="return-value"></a>Valeur de retour  
- S_OK si l’opération a réussi ; Sinon, un code d’erreur.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="copyfrom"></a>CMFCFilterChunkValueImpl::CopyFrom  
- Initialise cette valeur de segment à partir de l’autre valeur.  
+##  <a name="copyfrom"></a>  CMFCFilterChunkValueImpl::CopyFrom  
+ Initializes this chunk value from the other value.  
   
 ```  
 void CopyFrom (IFilterChunkValue* pValue);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pValue`  
- Spécifie la valeur de la source d’origine.  
+ Specifies the source value to copy from.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getchunkguid"></a>CMFCFilterChunkValueImpl::GetChunkGUID  
- Récupère le GUID du segment.  
+##  <a name="getchunkguid"></a>  CMFCFilterChunkValueImpl::GetChunkGUID  
+ Retrieves the chunk GUID.  
   
 ```  
 REFGUID GetChunkGUID() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Une référence à un GUID qui identifie le segment.  
+### <a name="return-value"></a>Return Value  
+ A reference to a GUID identifying the chunk.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getchunkpid"></a>CMFCFilterChunkValueImpl::GetChunkPID  
- Récupère le segment PID (ID de propriété).  
+##  <a name="getchunkpid"></a>  CMFCFilterChunkValueImpl::GetChunkPID  
+ Retrieves the chunk PID (property ID).  
   
 ```  
 DWORD GetChunkPID() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Une valeur DWORD qui contient l’ID de propriété.  
+### <a name="return-value"></a>Return Value  
+ A DWORD value containing the property ID.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getchunktype"></a>CMFCFilterChunkValueImpl::GetChunkType  
- Récupère le type de segment.  
+##  <a name="getchunktype"></a>  CMFCFilterChunkValueImpl::GetChunkType  
+ Retrieves the chunk type.  
   
 ```  
 CHUNKSTATE GetChunkType() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Une valeur énumérée de CHUNKSTATE, qui spécifie si le segment actuel est une propriété de type texte ou un type valeur.  
+### <a name="return-value"></a>Return Value  
+ A CHUNKSTATE enumerated value, which specifies whether the current chunk is a text-type property or a value-type property.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getstring"></a>CMFCFilterChunkValueImpl::GetString  
- Récupère la valeur de chaîne.  
+##  <a name="getstring"></a>  CMFCFilterChunkValueImpl::GetString  
+ Retrieves the string value.  
   
 ```  
 CString &GetString();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Chaîne contenant la valeur du segment.  
+### <a name="return-value"></a>Return Value  
+ A string containing the chunk value.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getvalue"></a>CMFCFilterChunkValueImpl::GetValue  
- Récupère la valeur en un propvariant alloué.  
+##  <a name="getvalue"></a>  CMFCFilterChunkValueImpl::GetValue  
+ Retrieves the value as an allocated propvariant.  
   
 ```  
 HRESULT GetValue(PROPVARIANT** ppPropVariant);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `ppPropVariant`  
- Lorsque la fonction retourne une valeur, ce paramètre contient la valeur du segment.  
+ When the function returns, this parameter contains the chunk value.  
   
-### <a name="return-value"></a>Valeur de retour  
- S_OK si PROPVARIANT a été allouée avec succès et que la valeur du segment a été copiée avec succès à `ppPropVariant`; sinon un code d’erreur.  
+### <a name="return-value"></a>Return Value  
+ S_OK if PROPVARIANT was allocated successfully and the chunk value was successfully copied to `ppPropVariant`; otherwise an error code.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getvaluenoalloc"></a>CMFCFilterChunkValueImpl::GetValueNoAlloc  
- Retourne la valeur non allouée (valeur interne).  
+##  <a name="getvaluenoalloc"></a>  CMFCFilterChunkValueImpl::GetValueNoAlloc  
+ Returns the non-allocated (internal value) value.  
   
 ```  
 PROPVARIANT GetValueNoAlloc ();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur actuelle de segment.  
+### <a name="return-value"></a>Return Value  
+ Returns the current chunk value.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isvalid"></a>CMFCFilterChunkValueImpl::IsValid  
- Vérifie si la valeur de cette propriété est valide ou non.  
+##  <a name="isvalid"></a>  CMFCFilterChunkValueImpl::IsValid  
+ Checks whether this property value is valid or not.  
   
 ```  
 BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si la valeur de segment actuel est valide ; dans le cas contraire `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current chunk value is valid; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setboolvalue"></a>CMFCFilterChunkValueImpl::SetBoolValue  
- Surchargé. Définit la propriété par clé à une valeur booléenne.  
+##  <a name="setboolvalue"></a>  CMFCFilterChunkValueImpl::SetBoolValue  
+ Overloaded. Sets the property by key to a Boolean.  
   
 ```  
 HRESULT SetBoolValue(
@@ -297,35 +316,35 @@ HRESULT SetBoolValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- Spécifie une clé de propriété.  
+ Specifies a property key.  
   
  `bVal`  
- Spécifie la valeur du segment à définir.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type valeur. Les valeurs qui proviennent de l’énumération CHUNKSTATE.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- La langue et sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de document pour effectuer la césure correcte du texte. Si le segment est un type valeur avec le type de données VT_BSTR, VT_LPSTR ou VT_LPWSTR ni type texte, ce champ est ignoré.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. Une valeur zéro signifie que la correspondance entre le texte source et le texte dérivé caractère par caractère. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- Le type de saut qui sépare le segment précédent le segment actuel. Valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>Valeur de retour  
- S_OK si l’opération a réussi ; Sinon, un code d’erreur.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setchunk"></a>CMFCFilterChunkValueImpl::SetChunk  
- Une fonction d’assistance qui définit les propriétés communes du segment.  
+##  <a name="setchunk"></a>  CMFCFilterChunkValueImpl::SetChunk  
+ A helper function that sets the chunk's common properties.  
   
 ```  
 HRESULT SetChunk(
@@ -337,32 +356,32 @@ HRESULT SetChunk(
     CHUNK_BREAKTYPE chunkBreakType=CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- Spécifie une clé de propriété.  
+ Specifies a property key.  
   
  `chunkType`  
- Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type valeur. Les valeurs qui proviennent de l’énumération CHUNKSTATE.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- La langue et sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de document pour effectuer la césure correcte du texte. Si le segment est un type valeur avec le type de données VT_BSTR, VT_LPSTR ou VT_LPWSTR ni type texte, ce champ est ignoré.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. Une valeur zéro signifie que la correspondance entre le texte source et le texte dérivé caractère par caractère. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- Le type de saut qui sépare le segment précédent le segment actuel. Valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>Valeur de retour  
- S_OK si l’opération a réussi ; code d’erreur dans le cas contraire.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise error code.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdwordvalue"></a>CMFCFilterChunkValueImpl::SetDwordValue  
- Définissez la propriété par clé à une valeur DWORD.  
+##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue  
+ Set the property by key to a DWORD.  
   
 ```  
 HRESULT SetDwordValue(
@@ -375,35 +394,35 @@ HRESULT SetDwordValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- Spécifie une clé de propriété.  
+ Specifies a property key.  
   
  `dwVal`  
- Spécifie la valeur du segment à définir.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type valeur. Les valeurs qui proviennent de l’énumération CHUNKSTATE.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- La langue et sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de document pour effectuer la césure correcte du texte. Si le segment est un type valeur avec le type de données VT_BSTR, VT_LPSTR ou VT_LPWSTR ni type texte, ce champ est ignoré.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. Une valeur zéro signifie que la correspondance entre le texte source et le texte dérivé caractère par caractère. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- Le type de saut qui sépare le segment précédent le segment actuel. Valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>Valeur de retour  
- S_OK si l’opération a réussi ; Sinon, un code d’erreur.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setfiletimevalue"></a>CMFCFilterChunkValueImpl::SetFileTimeValue  
- Définissez la propriété par clé en filetime.  
+##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue  
+ Set the property by key to a filetime.  
   
 ```  
 HRESULT SetFileTimeValue(
@@ -416,35 +435,35 @@ HRESULT SetFileTimeValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- Spécifie une clé de propriété.  
+ Specifies a property key.  
   
  `dtVal`  
- Spécifie la valeur du segment à définir.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type valeur. Les valeurs qui proviennent de l’énumération CHUNKSTATE.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- La langue et sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de document pour effectuer la césure correcte du texte. Si le segment est un type valeur avec le type de données VT_BSTR, VT_LPSTR ou VT_LPWSTR ni type texte, ce champ est ignoré.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. Une valeur zéro signifie que la correspondance entre le texte source et le texte dérivé caractère par caractère. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- Le type de saut qui sépare le segment précédent le segment actuel. Valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>Valeur de retour  
- S_OK si l’opération a réussi ; Sinon, un code d’erreur.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setint64value"></a>CMFCFilterChunkValueImpl::SetInt64Value  
- Définissez la propriété par clé pour un int64.  
+##  <a name="setint64value"></a>  CMFCFilterChunkValueImpl::SetInt64Value  
+ Set the property by key to an int64.  
   
 ```  
 HRESULT SetInt64Value(
@@ -457,35 +476,35 @@ HRESULT SetInt64Value(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- Spécifie une clé de propriété.  
+ Specifies a property key.  
   
  `nVal`  
- Spécifie la valeur du segment à définir.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type valeur. Les valeurs qui proviennent de l’énumération CHUNKSTATE.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- La langue et sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de document pour effectuer la césure correcte du texte. Si le segment est un type valeur avec le type de données VT_BSTR, VT_LPSTR ou VT_LPWSTR ni type texte, ce champ est ignoré.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. Une valeur zéro signifie que la correspondance entre le texte source et le texte dérivé caractère par caractère. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- Le type de saut qui sépare le segment précédent le segment actuel. Valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>Valeur de retour  
- S_OK si l’opération a réussi ; Sinon, un code d’erreur.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setintvalue"></a>CMFCFilterChunkValueImpl::SetIntValue  
- Définir la propriété à une clé à un entier.  
+##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue  
+ Set the property by key to an int.  
   
 ```  
 HRESULT SetIntValue(
@@ -498,35 +517,35 @@ HRESULT SetIntValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- Spécifie une clé de propriété.  
+ Specifies a property key.  
   
  `nVal`  
- Spécifie la valeur du segment à définir.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type valeur. Les valeurs qui proviennent de l’énumération CHUNKSTATE.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- La langue et sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de document pour effectuer la césure correcte du texte. Si le segment est un type valeur avec le type de données VT_BSTR, VT_LPSTR ou VT_LPWSTR ni type texte, ce champ est ignoré.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. Une valeur zéro signifie que la correspondance entre le texte source et le texte dérivé caractère par caractère. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- Le type de saut qui sépare le segment précédent le segment actuel. Valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>Valeur de retour  
- S_OK si l’opération a réussi ; Sinon, un code d’erreur.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setlongvalue"></a>CMFCFilterChunkValueImpl::SetLongValue  
- Définissez la propriété par clé pour une longue durée.  
+##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue  
+ Set the property by key to a LONG.  
   
 ```  
 HRESULT SetLongValue(
@@ -539,35 +558,35 @@ HRESULT SetLongValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- Spécifie une clé de propriété.  
+ Specifies a property key.  
   
  `lVal`  
- Spécifie la valeur du segment à définir.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type valeur. Les valeurs qui proviennent de l’énumération CHUNKSTATE.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- La langue et sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de document pour effectuer la césure correcte du texte. Si le segment est un type valeur avec le type de données VT_BSTR, VT_LPSTR ou VT_LPWSTR ni type texte, ce champ est ignoré.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. Une valeur zéro signifie que la correspondance entre le texte source et le texte dérivé caractère par caractère. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- Le type de saut qui sépare le segment précédent le segment actuel. Valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>Valeur de retour  
- S_OK si l’opération a réussi ; Sinon, un code d’erreur.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setsystemtimevalue"></a>CMFCFilterChunkValueImpl::SetSystemTimeValue  
- Définit la propriété par clé un SYSTEMTIME.  
+##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue  
+ Sets the property by key to a SystemTime.  
   
 ```  
 HRESULT SetSystemTimeValue(
@@ -580,35 +599,35 @@ HRESULT SetSystemTimeValue(
     CHUNK_BREAKTYPE chunkBreakType=CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- Spécifie une clé de propriété.  
+ Specifies a property key.  
   
  `systemTime`  
- Spécifie la valeur du segment à définir.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type valeur. Les valeurs qui proviennent de l’énumération CHUNKSTATE.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- La langue et sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de document pour effectuer la césure correcte du texte. Si le segment est un type valeur avec le type de données VT_BSTR, VT_LPSTR ou VT_LPWSTR ni type texte, ce champ est ignoré.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. Une valeur zéro signifie que la correspondance entre le texte source et le texte dérivé caractère par caractère. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- Le type de saut qui sépare le segment précédent le segment actuel. Valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>Valeur de retour  
- S_OK si l’opération a réussi ; Sinon, un code d’erreur.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settextvalue"></a>CMFCFilterChunkValueImpl::SetTextValue  
- Définit la propriété par clé en une chaîne Unicode.  
+##  <a name="settextvalue"></a>  CMFCFilterChunkValueImpl::SetTextValue  
+ Sets the property by key to a Unicode string.  
   
 ```  
 HRESULT SetTextValue(
@@ -621,33 +640,33 @@ HRESULT SetTextValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- Spécifie une clé de propriété.  
+ Specifies a property key.  
   
  `pszValue`  
- Spécifie la valeur du segment à définir.  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- Indicateurs indiquent si ce segment contient un type de texte ou une propriété de type valeur. Les valeurs qui proviennent de l’énumération CHUNKSTATE.  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- La langue et sous-langue associé à un bloc de texte. Paramètres régionaux de segment sont utilisé par les indexeurs de document pour effectuer la césure correcte du texte. Si le segment est un type valeur avec le type de données VT_BSTR, VT_LPSTR ou VT_LPWSTR ni type texte, ce champ est ignoré.  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- La longueur en caractères du texte source à partir duquel le segment actuel a été dérivé. Une valeur zéro signifie que la correspondance entre le texte source et le texte dérivé caractère par caractère. Une valeur différente de zéro signifie qu’aucune cette correspondance directe n’existe.  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- Le décalage à partir de laquelle le texte de la source pour un segment dérivé commence dans le segment de code source.  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- Le type de saut qui sépare le segment précédent le segment actuel. Valeurs proviennent de l’énumération CHUNK_BREAKTYPE.  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>Valeur de retour  
- S_OK si l’opération a réussi ; Sinon, un code d’erreur.  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [Classes](../../mfc/reference/mfc-classes.md)
 

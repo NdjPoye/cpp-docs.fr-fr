@@ -1,91 +1,109 @@
 ---
-title: "MEASUREITEMSTRUCT, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MEASUREITEMSTRUCT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MEASUREITEMSTRUCT (structure)"
+title: MEASUREITEMSTRUCT Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MEASUREITEMSTRUCT
+dev_langs:
+- C++
+helpviewer_keywords:
+- MEASUREITEMSTRUCT structure [MFC]
 ms.assetid: d141ace4-47cb-46b5-a81c-ad2c5e5a8501
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# MEASUREITEMSTRUCT, structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6eb06380885269ba55c187e1151d296808ccbe08
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-La structure `MEASUREITEMSTRUCT` notifie Windows des dimensions d'un contrôle  owner\-drawn ou d'un élément de menu.  
+---
+# <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT Structure
+The `MEASUREITEMSTRUCT` structure informs Windows of the dimensions of an owner-drawn control or menu item.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      typedef struct tagMEASUREITEMSTRUCT {  
-   UINT CtlType;  
-   UINT CtlID;  
-   UINT itemID;  
-   UINT itemWidth;  
-   UINT itemHeight;  
-   DWORD itemData  
+typedef struct tagMEASUREITEMSTRUCT {  
+    UINT CtlType;  
+    UINT CtlID;  
+    UINT itemID;  
+    UINT itemWidth;  
+    UINT itemHeight;  
+    DWORD itemData  
 } MEASUREITEMSTRUCT;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Parameters  
  `CtlType`  
- Contient le type de contrôle.  Les valeurs pour les types de contrôle sont les suivantes :  
+ Contains the control type. The values for control types are as follows:  
   
--   Fenêtre de liste déroulante owner\-draw de **ODT\_COMBOBOX** .  
+- **ODT_COMBOBOX** Owner-draw combo box  
   
--   Zone de liste owner\-draw d'**ODT\_LISTBOX**  
+- **ODT_LISTBOX** Owner-draw list box  
   
--   **ODT\_MENU** Menu de dessin du possesseur.  
+- **ODT_MENU** Owner-draw menu  
   
  `CtlID`  
- Contient l'ID de contrôle pour une fenêtre de liste déroulante, une zone de liste, ou un bouton.  Ce membre n'est pas utilisé pour le menu.  
+ Contains the control ID for a combo box, list box, or button. This member is not used for a menu.  
   
  `itemID`  
- Contient l'ID de l'élément de menu pour un menu ou ID de la zone de liste pour une zone de liste déroulante ou une zone de liste de variables \(hauteur.  Ce membre n'est pas utilisé pour une zone de liste déroulante ou une zone de liste à altitude fixe, ou pour un bouton.  
+ Contains the menu-item ID for a menu or the list-box-item ID for a variable-height combo box or list box. This member is not used for a fixed-height combo box or list box, or for a button.  
   
  *itemWidth*  
- Spécifie la largeur de l'élément de menu.  Le propriétaire de l'élément de menu dessiner doit remplir ce membre avant qu'il retourne du message.  
+ Specifies the width of a menu item. The owner of the owner-draw menu item must fill this member before it returns from the message.  
   
  *itemHeight*  
- Spécifie la hauteur d'un élément contenu dans cette zone de liste ou un menu.  Avant qu'il ne revienne du message, le propriétaire de la zone de liste déroulante owner\-draw, dans la zone de liste, ou de l'élément de menu doit effectuer ce membre.  La hauteur maximale d'un élément de la zone de liste est 255.  
+ Specifies the height of an individual item in a list box or a menu. Before it returns from the message, the owner of the owner-draw combo box, list box, or menu item must fill out this member. The maximum height of a list box item is 255.  
   
  `itemData`  
- Pour une zone de liste déroulante ou une zone de liste, ce membre contient la valeur qui a été transmise à la zone de liste par un des éléments suivants :  
+ For a combo box or list box, this member contains the value that was passed to the list box by one of the following:  
   
--   [CComboBox::AddString](../Topic/CComboBox::AddString.md)  
+- [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
   
--   [CComboBox::InsertString](../Topic/CComboBox::InsertString.md)  
+- [CComboBox::InsertString](../../mfc/reference/ccombobox-class.md#insertstring)  
   
--   [CListBox::AddString](../Topic/CListBox::AddString.md)  
+- [CListBox::AddString](../../mfc/reference/clistbox-class.md#addstring)  
   
--   [CListBox::InsertString](../Topic/CListBox::InsertString.md)  
+- [CListBox::InsertString](../../mfc/reference/clistbox-class.md#insertstring)  
   
- Pour un projet, ce membre contient la valeur qui a été transmise au menu par un des éléments suivants :  
+ For a menu, this member contains the value that was passed to the menu by one of the following:  
   
--   [CMenu::AppendMenu](../Topic/CMenu::AppendMenu.md)  
+- [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)  
   
--   [CMenu::InsertMenu](../Topic/CMenu::InsertMenu.md)  
+- [CMenu::InsertMenu](../../mfc/reference/cmenu-class.md#insertmenu)  
   
--   [CMenu::ModifyMenu](../Topic/CMenu::ModifyMenu.md)  
+- [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
- Cela permet à Windows d'utiliser l'interaction avec le contrôle correctement.  L'absence de remplissage des membres appropriés dans la structure de `MEASUREITEMSTRUCT` provoque l'exécution inexact du contrôle.  
+ This allows Windows to process user interaction with the control correctly. Failure to fill out the proper members in the `MEASUREITEMSTRUCT` structure will cause improper operation of the control.  
   
-## Configuration requise  
- **En\-tête :** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## Voir aussi  
- [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnMeasureItem](../Topic/CWnd::OnMeasureItem.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)
+
+

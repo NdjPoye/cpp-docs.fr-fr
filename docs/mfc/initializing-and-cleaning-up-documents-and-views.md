@@ -1,62 +1,81 @@
 ---
-title: "Initialisation et nettoyage des documents et vues | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objets Document, cycle de vie de"
-  - "documents, nettoyage"
-  - "documents, initialiser"
-  - "initialiser des documents"
-  - "initialiser des objets, objets Document"
-  - "Initialiser des vues"
-  - "vues, nettoyage"
-  - "vues, initialiser"
+title: Initializing and Cleaning Up Documents and Views | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing documents [MFC]
+- views [MFC], cleaning up
+- documents [MFC], initializing
+- documents [MFC], cleaning up
+- views [MFC], initializing
+- initializing objects [MFC], document objects
+- document objects [MFC], life cycle of
+- initializing views [MFC]
 ms.assetid: 95d6f09b-a047-4079-856a-ae7d0548e9d2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Initialisation et nettoyage des documents et vues
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e08b862b32a58c545fb1f3265ec6a5110b920724
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Utilisez les instructions suivantes pour initialiser et nettoyer après vos documents et vues :  
+---
+# <a name="initializing-and-cleaning-up-documents-and-views"></a>Initializing and Cleaning Up Documents and Views
+Use the following guidelines for initializing and cleaning up after your documents and views:  
   
--   L'infrastructure MFC initialise des documents et des vues ; vous initialisez toutes les données que vous ajoutez à celles\-ci.  
+-   The MFC framework initializes documents and views; you initialize any data you add to them.  
   
--   L'infrastructure nettoie les documents et les vues se ferment ; vous devez récupérer toute mémoire que vous avez allouée sur le segment depuis les fonctions membres de ces documents et des vues.  
+-   The framework cleans up as documents and views close; you must deallocate any memory that you allocated on the heap from within the member functions of those documents and views.  
   
 > [!NOTE]
->  N'oubliez pas que l'initialisation de l'application entière est au mieux créée à votre substitution de la fonction membre de [InitialiserInstance](../Topic/CWinApp::InitInstance.md) de la classe `CWinApp`, et le nettoyage de l'application du mieux s'effectue dans la substitution de la fonction membre [QuitterInstance](../Topic/CWinApp::ExitInstance.md)de `CWinApp`.  
+>  Recall that initialization for the whole application is best done in your override of the [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) member function of class `CWinApp`, and cleanup for the whole application is best done in your override of the `CWinApp` member function [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance).  
   
- Le cycle de vie d'un document \(et sa fenêtre cadre et vue ou vues\) dans une application MDI est la suivante :  
+ The life cycle of a document (and its frame window and view or views) in an MDI application is as follows:  
   
-1.  Lors de la création dynamique, le constructeur de document est appelé.  
+1.  During dynamic creation, the document constructor is called.  
   
-2.  Pour chaque document, [SurNouveauDocument](../Topic/CDocument::OnNewDocument.md) ou [SurDocumentOuvert](../Topic/CDocument::OnOpenDocument.md) du document est appelé.  
+2.  For each new document, the document's [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) or [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) is called.  
   
-3.  L'utilisateur interagit avec le document durant toute la durée de vie.  Généralement cela se produit pendant que l'utilisateur utilise des données de document par le biais de la vue, la sélection et la modification des données.  La vue transmet les modifications apportées au document pour le stockage et la mise à jour d'autres vues.  Pendant ce temps le document et la vue peuvent gérer des commandes.  
+3.  The user interacts with the document throughout its lifetime. Typically this happens as the user works on document data through the view, selecting and editing the data. The view passes changes on to the document for storage and updating other views. During this time both the document and the view might handle commands.  
   
-4.  L'infrastructure appelle [DeleteContents](../Topic/CDocument::DeleteContents.md) pour supprimer les données propres à un document.  
+4.  The framework calls [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) to delete data specific to a document.  
   
-5.  Le destructeur du document est appelé.  
+5.  The document's destructor is called.  
   
- Dans une application de SDI, l'étape 1 est effectuée une seule fois, lorsque le document est d'abord créé.  Les étapes 2 et 4 sont effectuées à plusieurs reprises chaque fois qu'un document est ouvert.  Le document réutilise l'objet document existant.  Enfin, l'étape 5 est effectuée lorsque l'application se termine.  
+ In an SDI application, step 1 is performed once, when the document is first created. Then steps 2 through 4 are performed repeatedly each time a new document is opened. The new document reuses the existing document object. Finally, step 5 is performed when the application ends.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Initialisation des documents et vues](../mfc/initializing-documents-and-views.md)  
+-   [Initializing Documents and Views](../mfc/initializing-documents-and-views.md)  
   
--   [Nettoyage des documents et vues](../mfc/cleaning-up-documents-and-views.md)  
+-   [Cleaning Up Documents and Views](../mfc/cleaning-up-documents-and-views.md)  
   
-## Voir aussi  
- [Architecture document\/vue](../mfc/document-view-architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

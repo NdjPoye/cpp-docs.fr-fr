@@ -1,61 +1,80 @@
 ---
-title: "Manipulation du contr&#244;le Progress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contrôler des contrôles de progression"
-  - "CProgressCtrl (classe), manipuler"
-  - "CProgressCtrl (classe), utilisation"
-  - "CProgressCtrl (classe), utiliser"
-  - "progress (contrôles) (C++), manipuler"
+title: Manipulating the Progress Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CProgressCtrl class [MFC], working with
+- progress controls [MFC], manipulating
+- CProgressCtrl class [MFC], manipulating
+- controlling progress controls [MFC]
+- CProgressCtrl class [MFC], using
 ms.assetid: 9af561d1-980b-4003-a6da-ff79be15bf23
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Manipulation du contr&#244;le Progress
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 82c8e32789f396a371af38c372d622d1405024f4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Il existe trois manières de modifier la position actuelle d'un contrôle de progression \([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)\).  
+---
+# <a name="manipulating-the-progress-control"></a>Manipulating the Progress Control
+There are three ways to change the current position of a progress control ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).  
   
--   L'emplacement peut être modifiée par un montant prédéfinie d'index.  
+-   The position can be changed by a preset increment amount.  
   
--   L'emplacement peut être modifiée par une valeur arbitraire.  
+-   The position can be changed by an arbitrary amount.  
   
--   L'emplacement peut être modifiée à une valeur spécifique.  
+-   The position can be changed to a specific value.  
   
-### Pour modifier la position par une valeur prédéfinie  
+### <a name="to-change-the-position-by-a-preset-amount"></a>To change the position by a preset amount  
   
-1.  Utilisez la fonction membre [SetStep](../Topic/CProgressCtrl::SetStep.md) pour définir la quantité d'index.  Par défaut, cette valeur est 10.  Cette valeur est généralement définie comme un des paramètres initiaux pour le contrôle.  La pas peut\-être une valeur négative.  
+1.  Use the [SetStep](../mfc/reference/cprogressctrl-class.md#setstep) member function to set the increment amount. By default, this value is 10. This value is typically set as one of the initial settings for the control. The step value can be negative.  
   
-2.  Utilisez la fonction membre [StepIt](../Topic/CProgressCtrl::StepIt.md) pour incrémenter la position.  Cela entraîne le rafraichissement du contrôle.  
-  
-    > [!NOTE]
-    >  `StepIt` provoque la position de la forme.  Par exemple, considérons une plage de 1 à 100, une étape à 20, et une position 90, `StepIt` définira à la position 10.  
-  
-### Pour modifier la position par une valeur aléatoire  
-  
-1.  Utilisez la fonction membre [OffsetPos](../Topic/CProgressCtrl::OffsetPos.md) pour modifier la position.  `OffsetPos` accepte des valeurs négatives.  
+2.  Use the [StepIt](../mfc/reference/cprogressctrl-class.md#stepit) member function to increment the position. This causes the control to redraw itself.  
   
     > [!NOTE]
-    >  `OffsetPos`, contrairement à `StepIt`, n'encapsulera pas la position.  La nouvelle position est ajustée pour rester dans la plage.  
+    >  `StepIt` will cause the position to wrap. For example, given a range of 1 -100, a step of 20, and a position of 90, `StepIt` will set the position to 10.  
   
-### Pour modifier la position d'une valeur spécifique  
+### <a name="to-change-the-position-by-an-arbitrary-amount"></a>To change the position by an arbitrary amount  
   
-1.  Utilisez la fonction membre de [SetPos](../Topic/CProgressCtrl::SetPos.md) pour définir la position d'une valeur spécifique.  Si nécessaire, la nouvelle position est ajustée pour figurer dans la plage.  
+1.  Use the [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) member function to change the position. `OffsetPos` will accept negative values.  
   
- En général, le contrôle de progression est utilisé uniquement pour la sortie.  Pour obtenir la position actuelle sans spécifier une nouvelle valeur, utilisez [GetPos](../Topic/CProgressCtrl::GetPos.md).  
+    > [!NOTE]
+    >  `OffsetPos`, unlike `StepIt`, will not wrap the position. The new position is adjusted to remain within the range.  
   
-## Voir aussi  
- [Utilisation de CProgressCtrl](../mfc/using-cprogressctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+### <a name="to-change-the-position-to-a-specific-value"></a>To change the position to a specific value  
+  
+1.  Use the [SetPos](../mfc/reference/cprogressctrl-class.md#setpos) member function to set the position to a specific value. If necessary, the new position is adjusted to be within the range.  
+  
+ Typically, the progress control is used solely for output. To get the current position without specifying a new value, use [GetPos](../mfc/reference/cprogressctrl-class.md#getpos).  
+  
+## <a name="see-also"></a>See Also  
+ [Using CProgressCtrl](../mfc/using-cprogressctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

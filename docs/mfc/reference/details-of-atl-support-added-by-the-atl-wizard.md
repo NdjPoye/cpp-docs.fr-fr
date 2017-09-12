@@ -1,5 +1,5 @@
 ---
-title: "Détails de la prise en charge ATL ajoutée par l’Assistant ATL | Documents Microsoft"
+title: Details of ATL Support Added by the ATL Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,32 +34,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: e353df6f4f6e728fb7b866fc7690215be28b8155
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 44532e102ab648ad553917b2b6a8a5307fc20f93
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Détails de la prise en charge ATL ajoutée par l'Assistant ATL
-Lorsque vous [ajouter la prise en charge ATL à un exécutable MFC ou une DLL existante](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual C++ apporte les modifications suivantes au projet MFC existant (dans cet exemple, le projet est appelé `MFCEXE`) :  
+# <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Details of ATL Support Added by the ATL Wizard
+When you [add ATL support to an existing MFC executable or DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual C++ makes the following modifications to the existing MFC project (in this example, the project is called `MFCEXE`):  
   
--   Deux nouveaux fichiers (un fichier .idl et un fichier .rgs, utilisés pour inscrire le serveur) sont ajoutés.  
+-   Two new files (an .idl file and an .rgs file, used to register the server) are added.  
   
--   Dans les fichiers application principale en-tête et d’implémentation (Mfcexe.h et Mfcexe.cpp), une nouvelle classe (dérivée de **CAtlMFCModule**) est ajouté. Outre la nouvelle classe, le code est ajouté à `InitInstance` pour l’inscription. Code est également ajouté à la `ExitInstance` fonction pour révoquer l’objet de classe. Dans le fichier d’en-tête, enfin, deux nouveaux fichiers d’en-tête (Initguid.h et Mfcexe_i.c) sont inclus dans le fichier d’implémentation, déclarant et initialisant les nouveaux identificateurs pour les **CAtlMFCModule**-classe dérivée.  
+-   In the main application header and implementation files (Mfcexe.h and Mfcexe.cpp), a new class (derived from **CAtlMFCModule**) is added. In addition to the new class, code is added to `InitInstance` for registration. Code is also added to the `ExitInstance` function for revoking the class object. In the header file, Finally, two new header files (Initguid.h and Mfcexe_i.c) are included in the implementation file, declaring and initializing the new GUIDs for the **CAtlMFCModule**-derived class.  
   
--   Pour inscrire le serveur correctement, une entrée pour le nouveau fichier .rgs est ajoutée au fichier de ressources du projet.  
+-   To register the server properly, an entry for the new .rgs file is added to the project's resource file.  
   
-## <a name="notes-for-dll-projects"></a>Notes de publication pour les projets DLL  
- Lorsque vous ajoutez la prise en charge ATL à un projet DLL MFC, vous verrez certaines différences. Code est ajouté à la **DLLRegisterServer** et **DLLUnregisterServer** fonctions pour l’inscription et la désinscription de la DLL. Code est également ajouté à [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) et [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).  
+## <a name="notes-for-dll-projects"></a>Notes for DLL Projects  
+ When you add ATL support to an MFC DLL project, you will see some differences. Code is added to the **DLLRegisterServer** and **DLLUnregisterServer** functions for registering and unregistering the DLL. Code is also added to [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) and [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).  
   
-## <a name="see-also"></a>Voir aussi  
- [Prise en charge ATL dans un projet MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   
- [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Ajout d’une classe](../../ide/adding-a-class-visual-cpp.md)   
- [Ajout d’une fonction membre](../../ide/adding-a-member-function-visual-cpp.md)   
- [Ajout d’une Variable membre](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Substitution d’une fonction virtuelle](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Gestionnaire de messages MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navigation dans la Structure de classe](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [ATL Support in an MFC Project](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
 

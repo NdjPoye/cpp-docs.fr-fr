@@ -1,5 +1,5 @@
 ---
-title: "Création d’une Application MFC | Documents Microsoft"
+title: Creating an MFC Application | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,7 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - applications [MFC]
-- MFC [C++], creating applications
+- MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
 caps.latest.revision: 12
@@ -34,52 +34,52 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 6d900cc7c81907fa755ab44b23af3e3ec5fab56b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bcd182ca4dd184bb8a7986b7b818117a24cc89da
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="creating-an-mfc-application"></a>Création d'une application MFC
-Une application MFC est une application exécutable pour Windows qui se base sur la bibliothèque MFC (Microsoft Foundation Class). L'utilisation de l'Assistant Application MFC constitue le moyen le plus facile pour créer une application MFC.  
+# <a name="creating-an-mfc-application"></a>Creating an MFC Application
+An MFC application is an executable application for Windows that is based on the Microsoft Foundation Class (MFC) Library. The easiest way to create an MFC application is to use the MFC Application Wizard.  
   
 > [!IMPORTANT]
->  Les projets MFC ne sont pas pris en charge dans les éditions Visual Studio Express.  
+>  MFC projects are not supported in Visual Studio Express editions.  
   
- Les exécutables MFC se répartissent généralement en cinq types : les applications Windows standard, boîtes de dialogue, les applications basées sur les formulaires, applications de style Explorateur et les applications de style navigateur Web. Pour plus d'informations, voir :  
+ MFC executables generally fall into five types: standard Windows applications, dialog boxes, forms-based applications, Explorer-style applications, and Web browser-style applications. For more information, see:  
   
--   [Utilisation des Classes pour écrire des Applications Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)  
+-   [Using the Classes to Write Windows Applications](../../mfc/using-the-classes-to-write-applications-for-windows.md)  
   
--   [Création et affichage de boîtes de dialogue](../../mfc/creating-and-displaying-dialog-boxes.md)  
+-   [Creating and Displaying Dialog Boxes](../../mfc/creating-and-displaying-dialog-boxes.md)  
   
--   [Création d’une application MFC basée sur les formulaires](../../mfc/reference/creating-a-forms-based-mfc-application.md)  
+-   [Creating a Forms-Based MFC Application](../../mfc/reference/creating-a-forms-based-mfc-application.md)  
   
--   [Création d’une application MFC de style Explorateur de fichiers](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)  
+-   [Creating a File Explorer-Style MFC Application](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)  
   
--   [Création d’une application MFC de style navigateur web](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)  
+-   [Creating a Web Browser-Style MFC Application](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)  
   
- L'Assistant Application MFC génère les classes et fichiers appropriés pour n'importe lequel de ces types d'applications, en fonction des options sélectionnées dans l'Assistant.  
+ The MFC Application Wizard generates the appropriate classes and files for any of these types of applications, depending on the options you select in the wizard.  
   
-### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>Pour créer une application MFC à l'aide de l'Assistant Application MFC  
+### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>To create an MFC application using the MFC Application Wizard  
   
-1.  Suivez les instructions de la rubrique d’aide [création d’un projet avec l’Assistant Application Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
+1.  Follow the instructions in the help topic [Creating a Project with a Visual C++ Application Wizard](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
-2.  Dans le **nouveau projet** boîte de dialogue, sélectionnez **Application MFC** dans le volet Modèles pour ouvrir l’Assistant.  
+2.  In the **New Project** dialog box, select **MFC Application** in the Templates pane to open the wizard.  
   
-3.  Définir les paramètres de votre application à l’aide de la [Assistant Application MFC](../../mfc/reference/mfc-application-wizard.md).  
+3.  Define your application settings using the [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md).  
   
     > [!NOTE]
-    >  Ignorez cette étape afin que l'Assistant conserve les paramètres par défaut.  
+    >  Skip this step to keep the wizard default settings.  
   
-4.  Cliquez sur **Terminer** pour fermer l’Assistant et ouvrir votre nouveau projet dans l’environnement de développement.  
+4.  Click **Finish** to close the wizard and open your new project in the development environment.  
   
- Une fois votre projet créé, vous pouvez afficher les fichiers créés dans **l’Explorateur de solutions**. Pour plus d'informations sur les fichiers créés par l'Assistant pour votre projet, consultez le fichier Readme.txt généré pour le projet. Pour plus d’informations sur les types de fichiers, consultez [Types de fichiers créés pour les projets Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).  
+ Once your project is created, you can view the files created in **Solution Explorer**. For more information about the files the wizard creates for your project, see the project-generated file ReadMe.txt. For more information about the file types, see [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Préparation du débogage : Les Applications Windows Visual C++](http://msdn.microsoft.com/en-us/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
- [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Pages de propriétés](../../ide/property-pages-visual-cpp.md)   
- [Déploiement d’Applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+## <a name="see-also"></a>See Also  
+ [Debugging Preparation: Visual C++ Windows Applications](http://msdn.microsoft.com/en-us/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Property Pages](../../ide/property-pages-visual-cpp.md)   
+ [Deploying Applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 
 

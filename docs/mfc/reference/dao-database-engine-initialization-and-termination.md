@@ -1,5 +1,5 @@
 ---
-title: "Initialisation du moteur de base de données DAO et arrêt | Documents Microsoft"
+title: DAO Database Engine Initialization and Termination | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,25 +34,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b6119279234558998fad1f220239a29618c69cc5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 46bacd608c5cf37b148c7ea4b9096fa63681d1d3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="dao-database-engine-initialization-and-termination"></a>Initialisation et terminaison du moteur de base de données DAO
-Lorsque vous utilisez des objets DAO de MFC, le moteur de base de données DAO doit d’abord être initialisé et puis interrompue avant la fermeture de votre application ou DLL. Deux fonctions, `AfxDaoInit` et `AfxDaoTerm`, effectuer ces tâches.  
+# <a name="dao-database-engine-initialization-and-termination"></a>DAO Database Engine Initialization and Termination
+When using MFC DAO objects, the DAO database engine must first be initialized and then terminated before your application or DLL quits. Two functions, `AfxDaoInit` and `AfxDaoTerm`, perform these tasks.  
   
-### <a name="dao-database-engine-initialization-and-termination"></a>Initialisation et terminaison du moteur de base de données DAO  
+### <a name="dao-database-engine-initialization-and-termination"></a>DAO Database Engine Initialization and Termination  
   
 |||  
 |-|-|  
-|[AfxDaoInit](#afxdaoinit)|Initialise le moteur de base de données DAO.|  
-|[AfxDaoTerm](#afxdaoterm)|Arrête le moteur de base de données DAO.|  
+|[AfxDaoInit](#afxdaoinit)|Initializes the DAO database engine.|  
+|[AfxDaoTerm](#afxdaoterm)|Terminates the DAO database engine.|  
   
-##  <a name="afxdaoinit"></a>AfxDaoInit  
- Cette fonction initialise le moteur de base de données DAO.  
+##  <a name="afxdaoinit"></a>  AfxDaoInit  
+ This function initializes the DAO database engine.  
   
 ```  
  
@@ -61,32 +61,32 @@ void AfxDaoInit();
 throw(CDaoException*);  
 ```  
   
-### <a name="remarks"></a>Remarques  
- Dans la plupart des cas, vous n’avez pas besoin d’appeler `AfxDaoInit` , car l’application qu’il appelle automatiquement lorsqu’il est nécessaire.  
+### <a name="remarks"></a>Remarks  
+ In most cases, you don't need to call `AfxDaoInit` because the application automatically calls it when it is needed.  
   
- Pour plus d’informations et pour obtenir un exemple de l’appel de `AfxDaoInit`, consultez [Note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
+ For related information, and for an example of calling `AfxDaoInit`, see [Technical Note 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
   
-### <a name="requirements"></a>Spécifications  
-  **En-tête** afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="afxdaoterm"></a>AfxDaoTerm  
- Cette fonction termine le moteur de base de données DAO.  
+##  <a name="afxdaoterm"></a>  AfxDaoTerm  
+ This function terminates the DAO database engine.  
   
 ```  
  
 void AfxDaoTerm();  
 ```  
   
-### <a name="remarks"></a>Remarques  
- En général, vous devez uniquement appeler cette fonction dans une DLL normale ; une application appelle automatiquement `AfxDaoTerm` lorsqu’il est nécessaire.  
+### <a name="remarks"></a>Remarks  
+ Typically, you only need to call this function in a regular MFC DLL; an application will automatically call `AfxDaoTerm` when it is needed.  
   
- Dans les DLL ordinaires, appelez `AfxDaoTerm` avant la `ExitInstance` (fonction), mais une fois que tous les objets DAO de MFC ont été détruits.  
+ In regular MFC DLLs, call `AfxDaoTerm` before the `ExitInstance` function, but after all MFC DAO objects have been destroyed.  
   
- Pour plus d’informations, consultez [Note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
+ For related information, see [Technical Note 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
 
-### <a name="requirements"></a>Spécifications  
-  **En-tête** afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

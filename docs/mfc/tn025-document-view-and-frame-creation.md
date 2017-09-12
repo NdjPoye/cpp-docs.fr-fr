@@ -1,77 +1,96 @@
 ---
-title: "TN025&#160;: cr&#233;ation de document, vue et frame | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.creation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "documents, vue et cadre (création)"
-  - "TN025"
+title: 'TN025: Document, View, and Frame Creation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.creation
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], view and frame creation
+- TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# TN025&#160;: cr&#233;ation de document, vue et frame
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f2464f927450319b2b649d5601a157f4269993ea
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn025-document-view-and-frame-creation"></a>TN025: Document, View, and Frame Creation
 > [!NOTE]
->  La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne.  Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes.  Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Cette remarque décrit des problèmes de conception et de propriété pour des WinApps, des DocTemplates, des documents, des cadres et des vues.  
+ This note describes the creation and ownership issues for WinApps, DocTemplates, Documents, Frames and Views.  
   
-## WinApp  
- Il y a un objet `CWinApp` dans le système.  
+## <a name="winapp"></a>WinApp  
+ There is one `CWinApp` object in the system.  
   
- Il est statiquement construit et initialisé par l'implémentation interne de l'infrastructure `WinMain`.  Vous devez dériver de `CWinApp` pour faire quelque chose utile \(exception : les DLL d'extension ne doivent pas avoir une instance de `CWinApp` — l'initialisation est créée dans `DllMain` à la place\).  
+ It is statically constructed and initialized by the framework's internal implementation of `WinMain`. You must derive from `CWinApp` to do anything useful (exception: MFC extension DLLs should not have a `CWinApp` instance — initialization is done in `DllMain` instead).  
   
- L'objet `CWinApp` possède une liste de modèles de document \( `CPtrList`\).  Il existe un ou plusieurs modèles de document par application.  Les DocTemplates sont généralement chargés à partir du fichier de ressources \(autrement dit, un tableau de chaînes\) dans `CWinApp::InitInstance`.  
+ The one `CWinApp` object owns a list of document templates (a `CPtrList`). There is one or more document template per application. DocTemplates are usually loaded from the resource file (that is, a string array) in `CWinApp::InitInstance`.  
   
 ```  
-pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);  
-AddDocTemplate(pTemplate);  
+pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);
+
+AddDocTemplate(pTemplate);
 ```  
   
- L'objet `CWinApp` possède toutes les fenêtres cadres dans l'application.  La principale fenêtre cadre de l'application doit figurer dans **CWinApp::m\_pMainWnd**; en général vous définissez `m_pMainWnd` dans l'implémentation de `InitInstance` si vous n'avez pas autorisé AppWizard à le faire pour vous.  Pour l'interface monodocument \(SDI\) il s'agit d'un `CFrameWnd` qui sert de cadre d'application principale ainsi que le seul cadre de fenêtre de document.  Pour l'interface à plusieurs documents \(MDI\) il s'agit d'un cadre MDI cadre \(classe `CMDIFrameWnd`\) qui sert de principal fenêtre de cadre d'application content tous les enfants `CFrameWnd`s.  Chaque fenêtre enfant est de la classe `CMDIChildWnd` \(dérivé de `CFrameWnd`\) et sert en tant qu'une des potentiellement nombreuses fenêtres de cadre de document.  
+ The one `CWinApp` object owns all frame windows in the application. The main frame window for the application should be stored in **CWinApp::m_pMainWnd**; usually you set `m_pMainWnd` in the `InitInstance` implementation if you have not let AppWizard do it for you. For single document interface (SDI) this is one `CFrameWnd` that serves as the main application frame window as well as the only document frame window. For multiple document interface (MDI) this is an MDI-Frame (class `CMDIFrameWnd`) that serves as the main application frame window that contains all the child `CFrameWnd`s. Each child window is of class `CMDIChildWnd` (derived from `CFrameWnd`) and serves as one of potentially many document frame windows.  
   
-## DocTemplates  
- `CDocTemplate` est le créateur et le gestionnaire de documents.  Il possède les documents qu'il crée.  Si votre application utilise une approche basée sur les ressources décrite ci\-dessous, il n'aura pas besoin de le déduire de `CDocTemplate`.  
+## <a name="doctemplates"></a>DocTemplates  
+ The `CDocTemplate` is the creator and manager of documents. It owns the documents that it creates. If your application uses the resource-based approach described below, it will not need to derive from `CDocTemplate`.  
   
- Pour une application de SDI, la classe `CSingleDocTemplate` suit un document ouvert.  Pour une application MDI, la classe `CMultiDocTemplate` conserve une liste \( `CPtrList`\) de tous les documents ouverts actuellement créés à partir de ce modèle.  `CDocTemplate::AddDocument` et `CDocTemplate::RemoveDocument` fournissent des fonctions membres virtuelles pour ajouter ou supprimer un document du modèle.  `CDocTemplate` est un ami de **CDocument** afin que nous puissions définir le pointeur protégé de restauration de **CDocument::m\_pDocTemplate** pour pointer vers le modèle de doc qui a créé le document.  
+ For an SDI application, the class `CSingleDocTemplate` keeps track of one open document. For an MDI application, the class `CMultiDocTemplate` keeps a list (a `CPtrList`) of all the currently open documents created from that template. `CDocTemplate::AddDocument` and `CDocTemplate::RemoveDocument` provide the virtual member functions for adding or removing a document from the template. `CDocTemplate` is a friend of **CDocument** so we can set the protected **CDocument::m_pDocTemplate** back pointer to point back to the doc template that created the document.  
   
- `CWinApp` gère l'implémentation par défaut de `OnFileOpen`, qui à son tour interrogera tous les modèles de doc.  L'implémentation inclut déjà la recherche les documents ouverts et la détermination du format à ouvrir pour de nouveaux documents.  
+ `CWinApp` handles the default `OnFileOpen` implementation, which will in turn query all the doc templates. The implementation includes looking for already open documents and deciding what format to open new documents in.  
   
- `CDocTemplate` gère la liaison d'interface utilisateur des documents et des cadres.  
+ `CDocTemplate` manages the UI binding for documents and frames.  
   
- `CDocTemplate` conserve le nombre de documents sans nom.  
+ `CDocTemplate` keeps a count of the number of unnamed documents.  
   
-## CDocument  
- Un **CDocument** appartient à `CDocTemplate`.  
+## <a name="cdocument"></a>CDocument  
+ A **CDocument** is owned by a `CDocTemplate`.  
   
- Les documents ont une liste de vues actuellement ouverts \(dérivées de `CView`\) qui affichent le document \( `CPtrList`\).  
+ Documents have a list of currently open views (derived from `CView`) that are viewing the document (a `CPtrList`).  
   
- Les documents ne créent pas\/ne détruisent pas les vues, mais ils sont joints entre eux lorsqu'ils sont créés.  Lorsqu'un document est fermé \(autrement dit, par Fichier\/Fermer\), toutes les vues jointes sont fermées.  Lorsque la dernière vue sur un document est fermée \(autrement dit, Fenêtre\/Fermer\) le document est fermé.  
+ Documents do not create/destroy the views, but they are attached to each other after they are created. When a document is closed (that is, through File/Close), all attached views will be closed. When the last view on a document is closed (that is, Window/Close) the document will be closed.  
   
- Les interfaces `CDocument::AddView`, `RemoveView` sont utilisées pour contenir la liste de la vue.  **CDocument** est un ami de `CView` nous puissions définir le pointeur arrière de **CView::m\_pDocument**.  
+ The `CDocument::AddView`, `RemoveView` interface is used to maintain the view list. **CDocument** is a friend of `CView` so we can set the **CView::m_pDocument** back pointer.  
   
-## CFrameWnd  
- `CFrameWnd` \(également appelé cadre\) joue le rôle de MFC 1,0, mais désormais la classe `CFrameWnd` est conçue pour être utilisé dans de nombreux cas sans dériver une nouvelle classe.  Les classes dérivées `CMDIFrameWnd` et `CMDIChildWnd` sont également améliorées donc bon nombre de commandes standard sont déjà implémentées.  
+## <a name="cframewnd"></a>CFrameWnd  
+ A `CFrameWnd` (also known as a frame) plays the same role as in MFC 1.0, but now the `CFrameWnd` class is designed to be used in many cases without deriving a new class. The derived classes `CMDIFrameWnd` and `CMDIChildWnd` are also enhanced so many standard commands are already implemented.  
   
- Le `CFrameWnd` est chargé de créer des fenêtres dans la zone client du cadre.  Normalement il existe une fenêtre principale remplissant la zone client du cadre.  
+ The `CFrameWnd` is responsible for creating windows in the client area of the frame. Normally there is one main window filling the client area of the frame.  
   
- Pour une fenêtre de cadre MDI, la zone client est remplie avec le contrôle de MDICLIENT qui est à son tour le parent de toutes les fenêtres enfants cadre MDI.  Pour une fenêtre cadre SDI ou une fenêtre cadre enfants MDI, la zone client est généralement remplie par un objet fenêtre `CView` déduit.  Dans le cas de `CSplitterWnd`, la zone client de la vue est remplie par l'objet fenêtre `CSplitterWnd`, et la `CView`\- objets fenêtre déduits \(un par panneau séparé\) sont créés en tant que fenêtres enfants de `CSplitterWnd`.  
+ For an MDI-Frame window, the client area is filled with the MDICLIENT control which is in turn the parent of all the MDI-Child frame windows. For an SDI-Frame window or an MDI-Child frame window, the client area is usually filled with a `CView`-derived window object. In the case of `CSplitterWnd`, the client area of the view is filled with the `CSplitterWnd` window object, and the `CView`-derived window objects (one per split pane) are created as child windows of the `CSplitterWnd`.  
   
-## Voir aussi  
- [Notes techniques par numéro](../mfc/technical-notes-by-number.md)   
- [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

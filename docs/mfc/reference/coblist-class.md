@@ -1,5 +1,5 @@
 ---
-title: Classe de cObList | Documents Microsoft
+title: CObList Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,9 +36,28 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- objects [C++], lists of
-- CObList class
-- lists, object
+- CObList [MFC], CObList
+- CObList [MFC], AddHead
+- CObList [MFC], AddTail
+- CObList [MFC], Find
+- CObList [MFC], FindIndex
+- CObList [MFC], GetAt
+- CObList [MFC], GetCount
+- CObList [MFC], GetHead
+- CObList [MFC], GetHeadPosition
+- CObList [MFC], GetNext
+- CObList [MFC], GetPrev
+- CObList [MFC], GetSize
+- CObList [MFC], GetTail
+- CObList [MFC], GetTailPosition
+- CObList [MFC], InsertAfter
+- CObList [MFC], InsertBefore
+- CObList [MFC], IsEmpty
+- CObList [MFC], RemoveAll
+- CObList [MFC], RemoveAt
+- CObList [MFC], RemoveHead
+- CObList [MFC], RemoveTail
+- CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
 caps.latest.revision: 20
 author: mikeblome
@@ -58,118 +77,118 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: dc95f76be56f00f4779724facaf668a72b3d5ed6
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c20435e9e3bae1faae8d372a4e00f35e1f80a1b5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coblist-class"></a>CObList (classe)
-fSupports les listes ordonnées d’identifiant `CObject` pointeurs accessibles séquentiellement ou par le pointeur de valeur.  
+# <a name="coblist-class"></a>CObList Class
+fSupports ordered lists of nonunique `CObject` pointers accessible sequentially or by pointer value.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CObList : public CObject  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CObList::CObList](#coblist)|Construit une liste vide pour `CObject` des pointeurs.|  
+|[CObList::CObList](#coblist)|Constructs an empty list for `CObject` pointers.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CObList::AddHead](#addhead)|Ajoute un élément (ou tous les éléments dans une autre liste) au début de la liste (fait une nouvelle tête).|  
-|[CObList::AddTail](#addtail)|Ajoute un élément (ou tous les éléments dans une autre liste) à la fin de la liste (fait une nouvelle fin).|  
-|[CObList::Find](#find)|Obtient la position d’un élément spécifié par la valeur du pointeur.|  
-|[CObList::FindIndex](#findindex)|Obtient la position d’un élément spécifié par un index de base zéro.|  
-|[CObList::GetAt](#getat)|Obtient l’élément à une position donnée.|  
-|[CObList::GetCount](#getcount)|Renvoie le nombre d’éléments dans cette liste.|  
-|[CObList::GetHead](#gethead)|Retourne l’élément head de la liste (ne peut pas être vide).|  
-|[CObList::GetHeadPosition](#getheadposition)|Retourne la position de l’élément head de la liste.|  
-|[CObList::GetNext](#getnext)|Obtient l’élément suivant pour l’itération.|  
-|[CObList::GetPrev](#getprev)|Obtient l’élément précédent pour l’itération.|  
-|[CObList::GetSize](#getsize)|Renvoie le nombre d’éléments dans cette liste.|  
-|[CObList::GetTail](#gettail)|Retourne l’élément de fin de la liste (ne peut pas être vide).|  
-|[CObList::GetTailPosition](#gettailposition)|Retourne la position de l’élément de fin de la liste.|  
-|[CObList::InsertAfter](#insertafter)|Insère un nouvel élément après une position donnée.|  
-|[CObList::InsertBefore](#insertbefore)|Insère un élément avant une position donnée.|  
-|[CObList::IsEmpty](#isempty)|Vérifie si la condition de la liste vide (aucun élément).|  
-|[CObList::RemoveAll](#removeall)|Supprime tous les éléments de cette liste.|  
-|[CObList::RemoveAt](#removeat)|Supprime un élément de cette liste, spécifiée par position.|  
-|[CObList::RemoveHead](#removehead)|Supprime l’élément au début de la liste.|  
-|[CObList::RemoveTail](#removetail)|Supprime l’élément de la fin de la liste.|  
-|[CObList::SetAt](#setat)|Définit l’élément à une position donnée.|  
+|[CObList::AddHead](#addhead)|Adds an element (or all the elements in another list) to the head of the list (makes a new head).|  
+|[CObList::AddTail](#addtail)|Adds an element (or all the elements in another list) to the tail of the list (makes a new tail).|  
+|[CObList::Find](#find)|Gets the position of an element specified by pointer value.|  
+|[CObList::FindIndex](#findindex)|Gets the position of an element specified by a zero-based index.|  
+|[CObList::GetAt](#getat)|Gets the element at a given position.|  
+|[CObList::GetCount](#getcount)|Returns the number of elements in this list.|  
+|[CObList::GetHead](#gethead)|Returns the head element of the list (cannot be empty).|  
+|[CObList::GetHeadPosition](#getheadposition)|Returns the position of the head element of the list.|  
+|[CObList::GetNext](#getnext)|Gets the next element for iterating.|  
+|[CObList::GetPrev](#getprev)|Gets the previous element for iterating.|  
+|[CObList::GetSize](#getsize)|Returns the number of elements in this list.|  
+|[CObList::GetTail](#gettail)|Returns the tail element of the list (cannot be empty).|  
+|[CObList::GetTailPosition](#gettailposition)|Returns the position of the tail element of the list.|  
+|[CObList::InsertAfter](#insertafter)|Inserts a new element after a given position.|  
+|[CObList::InsertBefore](#insertbefore)|Inserts a new element before a given position.|  
+|[CObList::IsEmpty](#isempty)|Tests for the empty list condition (no elements).|  
+|[CObList::RemoveAll](#removeall)|Removes all the elements from this list.|  
+|[CObList::RemoveAt](#removeat)|Removes an element from this list, specified by position.|  
+|[CObList::RemoveHead](#removehead)|Removes the element from the head of the list.|  
+|[CObList::RemoveTail](#removetail)|Removes the element from the tail of the list.|  
+|[CObList::SetAt](#setat)|Sets the element at a given position.|  
   
-## <a name="remarks"></a>Remarques  
- `CObList`listes se comportent comme des listes à chaînage double.  
+## <a name="remarks"></a>Remarks  
+ `CObList` lists behave like doubly-linked lists.  
   
- Une variable de type **POSITION** est une clé pour la liste. Vous pouvez utiliser un **POSITION** variable comme un itérateur pour parcourir une liste séquentielle et comme un signet à un espace réservé. Une position n’est pas identique à un index, toutefois.  
+ A variable of type **POSITION** is a key for the list. You can use a **POSITION** variable both as an iterator to traverse a list sequentially and as a bookmark to hold a place. A position is not the same as an index, however.  
   
- Insertion d’éléments est très rapide à la tête de liste, à la fin et à un autre **POSITION**. Une recherche séquentielle est nécessaire pour rechercher un élément par valeur ou index. Cette recherche peut être lente si la liste est longue.  
+ Element insertion is very fast at the list head, at the tail, and at a known **POSITION**. A sequential search is necessary to look up an element by value or index. This search can be slow if the list is long.  
   
- `CObList` incorpore la macro `IMPLEMENT_SERIAL` pour prendre en charge la sérialisation et le vidage de ses éléments. Si une liste de `CObject` des pointeurs est stocké dans une archive, avec un opérateur d’insertion surchargés ou les `Serialize` fonction membre, chaque `CObject` élément est sérialisé à son tour.  
+ `CObList` incorporates the `IMPLEMENT_SERIAL` macro to support serialization and dumping of its elements. If a list of `CObject` pointers is stored to an archive, either with an overloaded insertion operator or with the `Serialize` member function, each `CObject` element is serialized in turn.  
   
- Si vous avez besoin d’une image de chaque `CObject` éléments dans la liste, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.  
+ If you need a dump of individual `CObject` elements in the list, you must set the depth of the dump context to 1 or greater.  
   
- Lorsqu’un `CObList` objet est supprimé, ou lorsque ses éléments sont supprimés, uniquement le `CObject` pointeurs sont supprimées, pas les objets qu’ils référencent.  
+ When a `CObList` object is deleted, or when its elements are removed, only the `CObject` pointers are removed, not the objects they reference.  
   
- Vous pouvez dériver vos propres classes de `CObList`. Votre nouvelle classe de liste, conçu pour contenir des pointeurs vers des objets dérivés de `CObject`, ajoute de nouveaux membres de données et les nouvelles fonctions membres. Notez que la liste résultante n’est pas strictement type sécurisé, car il autorise l’insertion de n’importe quel `CObject` pointeur.  
+ You can derive your own classes from `CObList`. Your new list class, designed to hold pointers to objects derived from `CObject`, adds new data members and new member functions. Note that the resulting list is not strictly type safe, because it allows insertion of any `CObject` pointer.  
   
 > [!NOTE]
->  Vous devez utiliser le [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro dans l’implémentation de votre classe dérivée si vous prévoyez de sérialiser la liste.  
+>  You must use the [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) macro in the implementation of your derived class if you intend to serialize the list.  
   
- Pour plus d’informations sur l’utilisation de `CObList`, consultez l’article [Collections](../../mfc/collections.md).  
+ For more information on using `CObList`, see the article [Collections](../../mfc/collections.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CObList`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxcoll.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcoll.h  
   
-##  <a name="addhead"></a>CObList::AddHead  
- Ajoute un nouvel élément ou une liste d’éléments à la tête de la liste.  
+##  <a name="addhead"></a>  CObList::AddHead  
+ Adds a new element or list of elements to the head of this list.  
   
 ```  
 POSITION AddHead(CObject* newElement);  
 void AddHead(CObList* pNewList);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `newElement`  
- Le `CObject` pointeur à ajouter à cette liste.  
+ The `CObject` pointer to be added to this list.  
   
  `pNewList`  
- Un pointeur vers un autre `CObList` liste. Les éléments de `pNewList` sera ajouté à cette liste.  
+ A pointer to another `CObList` list. The elements in `pNewList` will be added to this list.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne la première version du **POSITION** valeur de l’élément nouvellement inséré.  
+### <a name="return-value"></a>Return Value  
+ The first version returns the **POSITION** value of the newly inserted element.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::AddHead`.  
+ The following table shows other member functions that are similar to `CObList::AddHead`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION AddHead (void\* ** `newElement` **) ;**<br /><br /> **void AddHead (CPtrList\* ** `pNewList` **) ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION AddHead (const CString se** `newElement` **) ;**<br /><br /> **POSITION AddHead (LPCTSTR** `newElement` **) ;**<br /><br /> **void AddHead (CStringList\* ** `pNewList` **) ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION AddHead( void\*** `newElement` **);**<br /><br /> **void AddHead( CPtrList\*** `pNewList` **);**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION AddHead(const CString&** `newElement` **);**<br /><br /> **POSITION AddHead(LPCTSTR** `newElement` **);**<br /><br /> **void AddHead(CStringList\*** `pNewList` **);**|  
   
-### <a name="remarks"></a>Remarques  
- La liste peut être vide avant l’opération.  
+### <a name="remarks"></a>Remarks  
+ The list can be empty before the operation.  
   
-### <a name="example"></a>Exemple  
-  Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+  See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#89;](../../mfc/codesnippet/cpp/coblist-class_1.cpp)]  
+ [!code-cpp[NVC_MFCCollections#89](../../mfc/codesnippet/cpp/coblist-class_1.cpp)]  
   
- Les résultats de ce programme sont les suivantes :  
+ The results from this program are as follows:  
   
  `AddHead example: A CObList with 2 elements`  
   
@@ -177,40 +196,40 @@ void AddHead(CObList* pNewList);
   
  `a CAge at $442A 21`  
   
-##  <a name="addtail"></a>CObList::AddTail  
- Ajoute un nouvel élément ou une liste d’éléments à la fin de cette liste.  
+##  <a name="addtail"></a>  CObList::AddTail  
+ Adds a new element or list of elements to the tail of this list.  
   
 ```  
 POSITION AddTail(CObject* newElement);  
 void AddTail(CObList* pNewList);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `newElement`  
- Le `CObject` pointeur à ajouter à cette liste.  
+ The `CObject` pointer to be added to this list.  
   
  `pNewList`  
- Un pointeur vers un autre `CObList` liste. Les éléments de `pNewList` sera ajouté à cette liste.  
+ A pointer to another `CObList` list. The elements in `pNewList` will be added to this list.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne la première version du **POSITION** valeur de l’élément nouvellement inséré.  
+### <a name="return-value"></a>Return Value  
+ The first version returns the **POSITION** value of the newly inserted element.  
   
-### <a name="remarks"></a>Notes  
- La liste peut être vide avant l’opération.  
+### <a name="remarks"></a>Remarks  
+ The list can be empty before the operation.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::AddTail`.  
+ The following table shows other member functions that are similar to `CObList::AddTail`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION AddTail (void\* ** `newElement` **) ;**<br /><br /> **void AddTail (CPtrList\* ** `pNewList` **) ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION AddTail (const CString se** `newElement` **) ;**<br /><br /> **POSITION AddTail (LPCTSTR** `newElement` **) ;**<br /><br /> **void AddTail (CStringList\* ** `pNewList` **) ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION AddTail( void\*** `newElement` **);**<br /><br /> **void AddTail( CPtrList\*** `pNewList` **);**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION AddTail( const CString&** `newElement` **);**<br /><br /> **POSITION AddTail( LPCTSTR** `newElement` **);**<br /><br /> **void AddTail( CStringList\*** `pNewList` **);**|  
   
-### <a name="example"></a>Exemple  
-  Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+  See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#90;](../../mfc/codesnippet/cpp/coblist-class_2.cpp)]  
+ [!code-cpp[NVC_MFCCollections#90](../../mfc/codesnippet/cpp/coblist-class_2.cpp)]  
   
- Les résultats de ce programme sont les suivantes :  
+ The results from this program are as follows:  
   
  `AddTail example: A CObList with 2 elements`  
   
@@ -218,38 +237,38 @@ void AddTail(CObList* pNewList);
   
  `a CAge at $4526 40`  
   
-##  <a name="coblist"></a>CObList::CObList  
- Construit un vide `CObject` liste de pointeurs.  
+##  <a name="coblist"></a>  CObList::CObList  
+ Constructs an empty `CObject` pointer list.  
   
 ```  
 CObList(INT_PTR nBlockSize = 10);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nBlockSize`  
- La granularité d’allocation de mémoire pour l’extension de la liste.  
+ The memory-allocation granularity for extending the list.  
   
-### <a name="remarks"></a>Remarques  
- À mesure que la liste augmente, la mémoire est allouée en unités de `nBlockSize` entrées. Si une allocation de mémoire échoue, un `CMemoryException` est levée.  
+### <a name="remarks"></a>Remarks  
+ As the list grows, memory is allocated in units of `nBlockSize` entries. If a memory allocation fails, a `CMemoryException` is thrown.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::CObList`.  
+ The following table shows other member functions that are similar to `CObList::CObList`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList (INT_PTR** `nBlockSize` **= 10) ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList (INT_PTR** `nBlockSize` **= 10) ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList( INT_PTR** `nBlockSize` **= 10 );**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList( INT_PTR** `nBlockSize` **= 10 );**|  
   
-### <a name="example"></a>Exemple  
-  Voici un exemple de la `CObject`-classe dérivée `CAge` utilisés dans les exemples de regroupement :  
+### <a name="example"></a>Example  
+  Below is a listing of the `CObject`-derived class `CAge` used in all the collection examples:  
   
- [!code-cpp[NVC_MFCCollections&#91;](../../mfc/codesnippet/cpp/coblist-class_3.h)]  
+ [!code-cpp[NVC_MFCCollections#91](../../mfc/codesnippet/cpp/coblist-class_3.h)]  
   
- Voici un exemple de `CObList` l’utilisation du constructeur :  
+ Below is an example of `CObList` constructor usage:  
   
- [!code-cpp[NVC_MFCCollections&#92;](../../mfc/codesnippet/cpp/coblist-class_4.cpp)]  
+ [!code-cpp[NVC_MFCCollections#92](../../mfc/codesnippet/cpp/coblist-class_4.cpp)]  
   
-##  <a name="find"></a>CObList::Find  
- Recherche dans la liste de manière séquentielle pour rechercher la première `CObject` pointeur correspondant spécifié `CObject` pointeur.  
+##  <a name="find"></a>  CObList::Find  
+ Searches the list sequentially to find the first `CObject` pointer matching the specified `CObject` pointer.  
   
 ```  
 POSITION Find(
@@ -257,327 +276,327 @@ POSITION Find(
     POSITION startAfter = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `searchValue`  
- Le pointeur d’objet à rechercher dans cette liste.  
+ The object pointer to be found in this list.  
   
  `startAfter`  
- La position de départ pour la recherche.  
+ The start position for the search.  
   
-### <a name="return-value"></a>Valeur de retour  
- A **POSITION** valeur qui peut être utilisé pour l’itération ou l’extraction de pointeur d’objet ; **NULL** si l’objet est introuvable.  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that can be used for iteration or object pointer retrieval; **NULL** if the object is not found.  
   
-### <a name="remarks"></a>Remarques  
- Notez que les valeurs de pointeur sont comparées, pas le contenu des objets.  
+### <a name="remarks"></a>Remarks  
+ Note that the pointer values are compared, not the contents of the objects.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::Find`.  
+ The following table shows other member functions that are similar to `CObList::Find`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Recherche POSITION (void\* ** `searchValue` **, POSITION** `startAfter` **= NULL) const ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Recherche POSITION (LPCTSTR** `searchValue` **, POSITION** `startAfter` **= NULL) const ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION Find( void\*** `searchValue` **, POSITION** `startAfter` **= NULL ) const;**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION Find( LPCTSTR** `searchValue` **, POSITION** `startAfter` **= NULL ) const;**|  
   
-### <a name="example"></a>Exemple  
- Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#93;](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
+ [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
-##  <a name="findindex"></a>CObList::FindIndex  
- Utilise la valeur de `nIndex` en tant qu’index dans la liste.  
+##  <a name="findindex"></a>  CObList::FindIndex  
+ Uses the value of `nIndex` as an index into the list.  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Index de base zéro de l’élément de liste à rechercher.  
+ The zero-based index of the list element to be found.  
   
-### <a name="return-value"></a>Valeur de retour  
- A **POSITION** valeur qui peut être utilisé pour l’itération ou l’extraction de pointeur d’objet ; **NULL** si `nIndex` est trop grande. (L’infrastructure génère une assertion si `nIndex` est négatif.)  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that can be used for iteration or object pointer retrieval; **NULL** if `nIndex` is too large. (The framework generates an assertion if `nIndex` is negative.)  
   
-### <a name="remarks"></a>Remarques  
- Démarrer une analyse séquentielle de la tête de la liste, l’arrêt de la *n*élément th.  
+### <a name="remarks"></a>Remarks  
+ It starts a sequential scan from the head of the list, stopping on the *n*th element.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::FindIndex`.  
+ The following table shows other member functions that are similar to `CObList::FindIndex`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION FindIndex (INT_PTR** `nIndex` **) const ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION FindIndex (INT_PTR** `nIndex` **) const ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION FindIndex( INT_PTR** `nIndex` **) const;**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION FindIndex( INT_PTR** `nIndex` **) const;**|  
   
-### <a name="example"></a>Exemple  
- Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#94;](../../mfc/codesnippet/cpp/coblist-class_6.cpp)]  
+ [!code-cpp[NVC_MFCCollections#94](../../mfc/codesnippet/cpp/coblist-class_6.cpp)]  
   
-##  <a name="getat"></a>CObList::GetAt  
- Une variable de type **POSITION** est une clé pour la liste.  
+##  <a name="getat"></a>  CObList::GetAt  
+ A variable of type **POSITION** is a key for the list.  
   
 ```  
 CObject*& GetAt(POSITION position);  
 const CObject*& GetAt(POSITION position) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *position*  
- A **POSITION** valeur retournée par une précédente `GetHeadPosition` ou **trouver** appel de fonction membre.  
+ A **POSITION** value returned by a previous `GetHeadPosition` or **Find** member function call.  
   
-### <a name="return-value"></a>Valeur de retour  
- Consultez la description de la valeur de retour de [GetHead](#gethead).  
+### <a name="return-value"></a>Return Value  
+ See the return value description for [GetHead](#gethead).  
   
-### <a name="remarks"></a>Remarques  
- Il n’est pas identique à un index, et vous ne pouvez pas utiliser un **POSITION** valeur vous-même. `GetAt`Récupère le `CObject` pointeur associé à une position donnée.  
+### <a name="remarks"></a>Remarks  
+ It is not the same as an index, and you cannot operate on a **POSITION** value yourself. `GetAt` retrieves the `CObject` pointer associated with a given position.  
   
- Vous devez vous assurer que votre **POSITION** valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::GetAt`.  
+ The following table shows other member functions that are similar to `CObList::GetAt`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void const\*se GetAt (POSITION** *position* **) const ;**<br /><br /> **void\*se GetAt (POSITION** *position* **) ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const GetAt se de CString (POSITION** *position* **) const ;**<br /><br /> **CString se GetAt (POSITION** *position* **) ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetAt( POSITION** *position* **) const;**<br /><br /> **void\*& GetAt( POSITION** *position* **);**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetAt( POSITION** *position* **) const;**<br /><br /> **CString& GetAt( POSITION** *position* **);**|  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [FindIndex](#findindex).  
+### <a name="example"></a>Example  
+  See the example for [FindIndex](#findindex).  
   
-##  <a name="getcount"></a>CObList::GetCount  
- Obtient le nombre d’éléments dans cette liste.  
+##  <a name="getcount"></a>  CObList::GetCount  
+ Gets the number of elements in this list.  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur entière qui contient le nombre d’éléments.  
+### <a name="return-value"></a>Return Value  
+ An integer value containing the element count.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::GetCount`.  
+ The following table shows other member functions that are similar to `CObList::GetCount`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR const ; (GetCount)**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR const ; (GetCount)**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetCount( ) const;**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetCount( ) const;**|  
   
-### <a name="example"></a>Exemple  
- Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#95;](../../mfc/codesnippet/cpp/coblist-class_7.cpp)]  
+ [!code-cpp[NVC_MFCCollections#95](../../mfc/codesnippet/cpp/coblist-class_7.cpp)]  
   
-##  <a name="gethead"></a>CObList::GetHead  
- Obtient le `CObject` pointeur qui représente l’élément head de cette liste.  
+##  <a name="gethead"></a>  CObList::GetHead  
+ Gets the `CObject` pointer that represents the head element of this list.  
   
 ```  
 CObject*& GetHead();  
 const CObject*& GetHead() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Si la liste est accessible via un pointeur vers un **CObList const**, puis `GetHead` renvoie un `CObject` pointeur. Cela permet à la fonction doit être utilisé uniquement sur le côté droit d’une instruction d’assignation et qui protège la liste de toute modification.  
+### <a name="return-value"></a>Return Value  
+ If the list is accessed through a pointer to a **const CObList**, then `GetHead` returns a `CObject` pointer. This allows the function to be used only on the right side of an assignment statement and thus protects the list from modification.  
   
- Si la liste est accessible directement ou via un pointeur vers un `CObList`, puis `GetHead` renvoie une référence à un `CObject` pointeur. Cela permet la fonction à utiliser sur chaque côté d’une instruction d’assignation et donc les entrées de liste à modifier.  
+ If the list is accessed directly or through a pointer to a `CObList`, then `GetHead` returns a reference to a `CObject` pointer. This allows the function to be used on either side of an assignment statement and thus allows the list entries to be modified.  
   
-### <a name="remarks"></a>Notes  
- Vous devez vous assurer que la liste n’est pas vide avant d’appeler `GetHead`. Si la liste est vide, la version Debug de la bibliothèque Microsoft Foundation Class déclare. Utilisez [IsEmpty](#isempty) pour vérifier que la liste contient des éléments.  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `GetHead`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](#isempty) to verify that the list contains elements.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::GetHead`.  
+ The following table shows other member functions that are similar to `CObList::GetHead`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void const\*se () GetHead const ; void\*se () GetHead ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const (CString se GetHead) const ; () CString se GetHead ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetHead( ) const; void\*& GetHead( );**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetHead( ) const; CString& GetHead( );**|  
   
-### <a name="example"></a>Exemple  
- Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- L’exemple suivant illustre l’utilisation de `GetHead` sur le côté gauche d’une instruction d’assignation.  
+ The following example illustrates the use of `GetHead` on the left side of an assignment statement.  
   
- [!code-cpp[NVC_MFCCollections&#96;](../../mfc/codesnippet/cpp/coblist-class_8.cpp)]  
+ [!code-cpp[NVC_MFCCollections#96](../../mfc/codesnippet/cpp/coblist-class_8.cpp)]  
   
-##  <a name="getheadposition"></a>CObList::GetHeadPosition  
- Obtient la position de l’élément head de cette liste.  
+##  <a name="getheadposition"></a>  CObList::GetHeadPosition  
+ Gets the position of the head element of this list.  
   
 ```  
 POSITION GetHeadPosition() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- A **POSITION** valeur qui peut être utilisé pour l’itération ou l’extraction de pointeur d’objet ; **NULL** si la liste est vide.  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that can be used for iteration or object pointer retrieval; **NULL** if the list is empty.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::GetHeadPosition`.  
+ The following table shows other member functions that are similar to `CObList::GetHeadPosition`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION const ; (GetHeadPosition)**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION const ; (GetHeadPosition)**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION GetHeadPosition( ) const;**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION GetHeadPosition( ) const;**|  
   
-### <a name="example"></a>Exemple  
- Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#97;](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
+ [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
-##  <a name="getnext"></a>CObList::GetNext  
- Obtient l’élément de liste identifié par `rPosition`, puis définit `rPosition` à le `POSITION` la valeur de l’entrée suivante dans la liste.  
+##  <a name="getnext"></a>  CObList::GetNext  
+ Gets the list element identified by `rPosition`, then sets `rPosition` to the `POSITION` value of the next entry in the list.  
   
 ```  
 CObject*& GetNext(POSITION& rPosition);  
 const CObject* GetNext(POSITION& rPosition) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `rPosition`  
- Une référence à un `POSITION` valeur retournée par une précédente `GetNext`, `GetHeadPosition`, ou un autre appel de fonction membre.  
+ A reference to a `POSITION` value returned by a previous `GetNext`, `GetHeadPosition`, or other member function call.  
   
-### <a name="return-value"></a>Valeur de retour  
- Consultez la description de la valeur de retour de [GetHead](#gethead).  
+### <a name="return-value"></a>Return Value  
+ See the return value description for [GetHead](#gethead).  
   
-### <a name="remarks"></a>Notes  
- Vous pouvez utiliser `GetNext` dans une boucle d’itération en avant si vous établissez la position initiale avec un appel à `GetHeadPosition` ou `Find`.  
+### <a name="remarks"></a>Remarks  
+ You can use `GetNext` in a forward iteration loop if you establish the initial position with a call to `GetHeadPosition` or `Find`.  
   
- Vous devez vous assurer que votre `POSITION` valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
+ You must ensure that your `POSITION` value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
- Si l’élément récupéré est le dernier dans la liste, puis la nouvelle valeur de `rPosition` est défini sur `NULL`.  
+ If the retrieved element is the last in the list, then the new value of `rPosition` is set to `NULL`.  
   
- Il est possible de supprimer un élément lors d’une itération. Consultez l’exemple de [RemoveAt](#removeat).  
+ It is possible to remove an element during an iteration. See the example for [RemoveAt](#removeat).  
   
 > [!NOTE]
->  Depuis MFC 8.0, la version de cette méthode const a changé pour retourner `const CObject*` au lieu de `const CObject*&`.  Cette modification a été effectuée pour mettre le compilateur en conformité avec la norme C++.  
+>  As of MFC 8.0 the const version of this method has changed to return `const CObject*` instead of `const CObject*&`.  This change was made to bring the compiler into conformance with the C++ standard.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::GetNext`.  
+ The following table shows other member functions that are similar to `CObList::GetNext`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const void* GetNext( POSITION&` `rPosition` `) const;`|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|`CString& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetNext( POSITION&` `rPosition` `) const;`|  
   
-### <a name="example"></a>Exemple  
-  Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+  See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#98;](../../mfc/codesnippet/cpp/coblist-class_10.cpp)]  
+ [!code-cpp[NVC_MFCCollections#98](../../mfc/codesnippet/cpp/coblist-class_10.cpp)]  
   
- Les résultats de ce programme sont les suivantes :  
+ The results from this program are as follows:  
   
  `a CAge at $479C 40`  
   
  `a CAge at $46C0 21`  
   
-##  <a name="getprev"></a>CObList::GetPrev  
- Obtient l’élément de liste identifié par `rPosition`, puis définit `rPosition` à le `POSITION` la valeur de l’entrée précédente dans la liste.  
+##  <a name="getprev"></a>  CObList::GetPrev  
+ Gets the list element identified by `rPosition`, then sets `rPosition` to the `POSITION` value of the previous entry in the list.  
   
 ```  
 CObject*& GetPrev(POSITION& rPosition);  
 const CObject* GetPrev(POSITION& rPosition) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `rPosition`  
- Une référence à un `POSITION` valeur retourné par une `GetPrev` ou un autre appel de fonction membre.  
+ A reference to a `POSITION` value returned by a previous `GetPrev` or other member function call.  
   
-### <a name="return-value"></a>Valeur de retour  
- Consultez la description de la valeur de retour de [GetHead](#gethead).  
+### <a name="return-value"></a>Return Value  
+ See the return value description for [GetHead](#gethead).  
   
-### <a name="remarks"></a>Remarques  
- Vous pouvez utiliser `GetPrev` dans une boucle d’itération inverse si vous établissez la position initiale avec un appel à `GetTailPosition` ou `Find`.  
+### <a name="remarks"></a>Remarks  
+ You can use `GetPrev` in a reverse iteration loop if you establish the initial position with a call to `GetTailPosition` or `Find`.  
   
- Vous devez vous assurer que votre `POSITION` valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
+ You must ensure that your `POSITION` value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
- Si l’élément récupéré est le premier dans la liste, puis la nouvelle valeur de `rPosition` est défini sur `NULL`.  
+ If the retrieved element is the first in the list, then the new value of `rPosition` is set to `NULL`.  
   
 > [!NOTE]
->  Depuis MFC 8.0, la version de cette méthode const a changé pour retourner `const CObject*` au lieu de `const CObject*&`.  Cette modification a été effectuée pour mettre le compilateur en conformité avec la norme C++.  
+>  As of MFC 8.0 the const version of this method has changed to return `const CObject*` instead of `const CObject*&`.  This change was made to bring the compiler into conformance with the C++ standard.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::GetPrev`.  
+ The following table shows other member functions that are similar to `CObList::GetPrev`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const void* GetPrev( POSITION&` `rPosition` `) const;`|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|`CString& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetPrev( POSITION&` `rPosition` `) const;`|  
   
-### <a name="example"></a>Exemple  
-  Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+  See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#99;](../../mfc/codesnippet/cpp/coblist-class_11.cpp)]  
+ [!code-cpp[NVC_MFCCollections#99](../../mfc/codesnippet/cpp/coblist-class_11.cpp)]  
   
- Les résultats de ce programme sont les suivantes :  
+ The results from this program are as follows:  
   
  `a CAge at $421C 21`  
   
  `a CAge at $421C 40`  
   
-##  <a name="getsize"></a>CObList::GetSize  
- Retourne le nombre d’éléments de liste.  
+##  <a name="getsize"></a>  CObList::GetSize  
+ Returns the number of list elements.  
   
 ```  
 INT_PTR GetSize() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre d'éléments de la liste.  
+### <a name="return-value"></a>Return Value  
+ The number of items in the list.  
   
-### <a name="remarks"></a>Notes  
- Appelez cette méthode pour récupérer le nombre d’éléments dans la liste.  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve the number of elements in the list.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::GetSize`.  
+ The following table shows other member functions that are similar to `CObList::GetSize`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetSize () const ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetSize () const ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetSize( ) const;**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetSize( ) const;**|  
   
-### <a name="example"></a>Exemple  
- Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[100 NVC_MFCCollections](../../mfc/codesnippet/cpp/coblist-class_12.cpp)]  
+ [!code-cpp[NVC_MFCCollections#100](../../mfc/codesnippet/cpp/coblist-class_12.cpp)]  
   
-##  <a name="gettail"></a>CObList::GetTail  
- Obtient le `CObject` pointeur qui représente l’élément de fin de cette liste.  
+##  <a name="gettail"></a>  CObList::GetTail  
+ Gets the `CObject` pointer that represents the tail element of this list.  
   
 ```  
 CObject*& GetTail();  
 const CObject*& GetTail() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Consultez la description de la valeur de retour de [GetHead](#gethead).  
+### <a name="return-value"></a>Return Value  
+ See the return value description for [GetHead](#gethead).  
   
-### <a name="remarks"></a>Notes  
- Vous devez vous assurer que la liste n’est pas vide avant d’appeler `GetTail`. Si la liste est vide, la version Debug de la bibliothèque Microsoft Foundation Class déclare. Utilisez [IsEmpty](#isempty) pour vérifier que la liste contient des éléments.  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `GetTail`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](#isempty) to verify that the list contains elements.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::GetTail`.  
+ The following table shows other member functions that are similar to `CObList::GetTail`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void const\*se () GetTail const ; void\*se () GetTail ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const (CString se GetTail) const ; () CString se GetTail ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetTail( ) const; void\*& GetTail( );**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetTail( ) const; CString& GetTail( );**|  
   
-### <a name="example"></a>Exemple  
- Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#101;](../../mfc/codesnippet/cpp/coblist-class_13.cpp)]  
+ [!code-cpp[NVC_MFCCollections#101](../../mfc/codesnippet/cpp/coblist-class_13.cpp)]  
   
-##  <a name="gettailposition"></a>CObList::GetTailPosition  
- Obtient la position de l’élément de fin de cette liste. **NULL** si la liste est vide.  
+##  <a name="gettailposition"></a>  CObList::GetTailPosition  
+ Gets the position of the tail element of this list; **NULL** if the list is empty.  
   
 ```  
 POSITION GetTailPosition() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- A **POSITION** valeur qui peut être utilisé pour l’itération ou l’extraction de pointeur d’objet ; **NULL** si la liste est vide.  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that can be used for iteration or object pointer retrieval; **NULL** if the list is empty.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::GetTailPosition`.  
+ The following table shows other member functions that are similar to `CObList::GetTailPosition`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION const ; (GetTailPosition)**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION const ; (GetTailPosition)**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION GetTailPosition( ) const;**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION GetTailPosition( ) const;**|  
   
-### <a name="example"></a>Exemple  
- Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#102;](../../mfc/codesnippet/cpp/coblist-class_14.cpp)]  
+ [!code-cpp[NVC_MFCCollections#102](../../mfc/codesnippet/cpp/coblist-class_14.cpp)]  
   
-##  <a name="insertafter"></a>CObList::InsertAfter  
- Ajoute un élément à cette liste après l’élément à la position spécifiée.  
+##  <a name="insertafter"></a>  CObList::InsertAfter  
+ Adds an element to this list after the element at the specified position.  
   
 ```  
 POSITION InsertAfter(
@@ -585,29 +604,29 @@ POSITION InsertAfter(
     CObject* newElement);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *position*  
- Une valeur **POSITION** retournée par un appel précédent de `GetNext`, `GetPrev`ou de la fonction membre **Find** .  
+ A **POSITION** value returned by a previous `GetNext`, `GetPrev`, or **Find** member function call.  
   
  `newElement`  
- Le pointeur d’objet à ajouter à cette liste.  
+ The object pointer to be added to this list.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::InsertAfter`.  
+ The following table shows other member functions that are similar to `CObList::InsertAfter`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**InsertAfter POSITION (POSITION** *position* **, void\* ** `newElement` **) ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**InsertAfter POSITION (POSITION** *position* **, const CString se** `newElement` **) ;**<br /><br /> **InsertAfter POSITION (POSITION** *position* **, LPCTSTR** `newElement` **) ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION InsertAfter( POSITION** *position* **, void\*** `newElement` **);**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION InsertAfter( POSITION** *position* **, const CString&** `newElement` **);**<br /><br /> **POSITION InsertAfter( POSITION** *position* **, LPCTSTR** `newElement` **);**|  
   
-### <a name="return-value"></a>Valeur de retour  
- A **POSITION** valeur qui est le même que le *position* paramètre.  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value which is the same as the *position* parameter.  
   
-### <a name="example"></a>Exemple  
-  Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+  See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#103;](../../mfc/codesnippet/cpp/coblist-class_15.cpp)]  
+ [!code-cpp[NVC_MFCCollections#103](../../mfc/codesnippet/cpp/coblist-class_15.cpp)]  
   
- Les résultats de ce programme sont les suivantes :  
+ The results from this program are as follows:  
   
  `InsertAfter example: A CObList with 3 elements`  
   
@@ -617,8 +636,8 @@ POSITION InsertAfter(
   
  `a CAge at $4968 21`  
   
-##  <a name="insertbefore"></a>CObList::InsertBefore  
- Ajoute un élément à cette liste avant l’élément à la position spécifiée.  
+##  <a name="insertbefore"></a>  CObList::InsertBefore  
+ Adds an element to this list before the element at the specified position.  
   
 ```  
 POSITION InsertBefore(
@@ -626,29 +645,29 @@ POSITION InsertBefore(
     CObject* newElement);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *position*  
- Une valeur **POSITION** retournée par un appel précédent de `GetNext`, `GetPrev`ou de la fonction membre **Find** .  
+ A **POSITION** value returned by a previous `GetNext`, `GetPrev`, or **Find** member function call.  
   
  `newElement`  
- Le pointeur d’objet à ajouter à cette liste.  
+ The object pointer to be added to this list.  
   
-### <a name="return-value"></a>Valeur de retour  
- A **POSITION** valeur qui peut être utilisé pour l’itération ou l’extraction de pointeur d’objet ; **NULL** si la liste est vide.  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that can be used for iteration or object pointer retrieval; **NULL** if the list is empty.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::InsertBefore`.  
+ The following table shows other member functions that are similar to `CObList::InsertBefore`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION InsertBefore (POSITION** *position* **, void\* ** `newElement` **) ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION InsertBefore (POSITION** *position* **, const CString se** `newElement` **) ;**<br /><br /> **POSITION InsertBefore (POSITION** *position* **, LPCTSTR** `newElement` **) ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION InsertBefore( POSITION** *position* **, void\*** `newElement` **);**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION InsertBefore( POSITION** *position* **, const CString&** `newElement` **);**<br /><br /> **POSITION InsertBefore( POSITION** *position* **, LPCTSTR** `newElement` **);**|  
   
-### <a name="example"></a>Exemple  
-  Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+  See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#104;](../../mfc/codesnippet/cpp/coblist-class_16.cpp)]  
+ [!code-cpp[NVC_MFCCollections#104](../../mfc/codesnippet/cpp/coblist-class_16.cpp)]  
   
- Les résultats de ce programme sont les suivantes :  
+ The results from this program are as follows:  
   
  `InsertBefore example: A CObList with 3 elements`  
   
@@ -658,81 +677,81 @@ POSITION InsertBefore(
   
  `a CAge at $49E6 21`  
   
-##  <a name="isempty"></a>CObList::IsEmpty  
- Indique si cette liste ne contient aucun élément.  
+##  <a name="isempty"></a>  CObList::IsEmpty  
+ Indicates whether this list contains no elements.  
   
 ```  
 BOOL IsEmpty() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si cette liste est vide. sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if this list is empty; otherwise 0.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::IsEmpty`.  
+ The following table shows other member functions that are similar to `CObList::IsEmpty`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**BOOL IsEmpty () const ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**BOOL IsEmpty () const ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**BOOL IsEmpty( ) const;**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**BOOL IsEmpty( ) const;**|  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple de [RemoveAll](#removeall).  
+### <a name="example"></a>Example  
+  See the example for [RemoveAll](#removeall).  
   
-##  <a name="removeall"></a>CObList::RemoveAll  
- Supprime tous les éléments de cette liste et libère associé `CObList` mémoire.  
+##  <a name="removeall"></a>  CObList::RemoveAll  
+ Removes all the elements from this list and frees the associated `CObList` memory.  
   
 ```  
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Aucune erreur n’est générée si la liste est déjà vide.  
+### <a name="remarks"></a>Remarks  
+ No error is generated if the list is already empty.  
   
- Lorsque vous supprimez des éléments d’un `CObList`, vous supprimez les pointeurs d’objet de la liste. Il vous incombe de supprimer les objets eux-mêmes.  
+ When you remove elements from a `CObList`, you remove the object pointers from the list. It is your responsibility to delete the objects themselves.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::RemoveAll`.  
+ The following table shows other member functions that are similar to `CObList::RemoveAll`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void () RemoveAll ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**void () RemoveAll ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAll( );**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAll( );**|  
   
-### <a name="example"></a>Exemple  
- Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#105;](../../mfc/codesnippet/cpp/coblist-class_17.cpp)]  
+ [!code-cpp[NVC_MFCCollections#105](../../mfc/codesnippet/cpp/coblist-class_17.cpp)]  
   
-##  <a name="removeat"></a>CObList::RemoveAt  
- Supprime l’élément spécifié dans cette liste.  
+##  <a name="removeat"></a>  CObList::RemoveAt  
+ Removes the specified element from this list.  
   
 ```  
 void RemoveAt(POSITION position);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *position*  
- La position de l’élément à supprimer de la liste.  
+ The position of the element to be removed from the list.  
   
-### <a name="remarks"></a>Notes  
- Lorsque vous supprimez un élément d’un `CObList`, vous supprimez le pointeur d’objet de la liste. Il vous incombe de supprimer les objets eux-mêmes.  
+### <a name="remarks"></a>Remarks  
+ When you remove an element from a `CObList`, you remove the object pointer from the list. It is your responsibility to delete the objects themselves.  
   
- Vous devez vous assurer que votre **POSITION** valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::RemoveAt`.  
+ The following table shows other member functions that are similar to `CObList::RemoveAt`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAt (POSITION** *position* **) ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAt (POSITION** *position* **) ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAt( POSITION** *position* **);**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAt( POSITION** *position* **);**|  
   
-### <a name="example"></a>Exemple  
-  Soyez prudent lors de la suppression d’un élément lors d’une itération de la liste. L’exemple suivant illustre une technique de suppression qui garantit une valide **POSITION** valeur [GetNext](#getnext).  
+### <a name="example"></a>Example  
+  Be careful when removing an element during a list iteration. The following example shows a removal technique that guarantees a valid **POSITION** value for [GetNext](#getnext).  
   
- Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+ See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#106;](../../mfc/codesnippet/cpp/coblist-class_18.cpp)]  
+ [!code-cpp[NVC_MFCCollections#106](../../mfc/codesnippet/cpp/coblist-class_18.cpp)]  
   
- Les résultats de ce programme sont les suivantes :  
+ The results from this program are as follows:  
   
  `RemoveAt example: A CObList with 2 elements`  
   
@@ -740,58 +759,58 @@ void RemoveAt(POSITION position);
   
  `a CAge at $4B22 21`  
   
-##  <a name="removehead"></a>CObList::RemoveHead  
- Supprime l’élément au début de la liste et retourne un pointeur vers elle.  
+##  <a name="removehead"></a>  CObList::RemoveHead  
+ Removes the element from the head of the list and returns a pointer to it.  
   
 ```  
 CObject* RemoveHead();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Le `CObject` pointeur précédemment au début de la liste.  
+### <a name="return-value"></a>Return Value  
+ The `CObject` pointer previously at the head of the list.  
   
-### <a name="remarks"></a>Remarques  
- Vous devez vous assurer que la liste n’est pas vide avant d’appeler `RemoveHead`. Si la liste est vide, la version Debug de la bibliothèque Microsoft Foundation Class déclare. Utilisez [IsEmpty](#isempty) pour vérifier que la liste contient des éléments.  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `RemoveHead`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](#isempty) to verify that the list contains elements.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::RemoveHead`.  
+ The following table shows other member functions that are similar to `CObList::RemoveHead`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* () RemoveHead ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**() CString RemoveHead ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveHead( );**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveHead( );**|  
   
-### <a name="example"></a>Exemple  
- Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#107;](../../mfc/codesnippet/cpp/coblist-class_19.cpp)]  
+ [!code-cpp[NVC_MFCCollections#107](../../mfc/codesnippet/cpp/coblist-class_19.cpp)]  
   
-##  <a name="removetail"></a>CObList::RemoveTail  
- Supprime l’élément de la fin de la liste et retourne un pointeur vers elle.  
+##  <a name="removetail"></a>  CObList::RemoveTail  
+ Removes the element from the tail of the list and returns a pointer to it.  
   
 ```  
 CObject* RemoveTail();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Pointeur vers l’objet qui était à la fin de la liste.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the object that was at the tail of the list.  
   
-### <a name="remarks"></a>Remarques  
- Vous devez vous assurer que la liste n’est pas vide avant d’appeler `RemoveTail`. Si la liste est vide, la version Debug de la bibliothèque Microsoft Foundation Class déclare. Utilisez [IsEmpty](#isempty) pour vérifier que la liste contient des éléments.  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `RemoveTail`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](#isempty) to verify that the list contains elements.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::RemoveTail`.  
+ The following table shows other member functions that are similar to `CObList::RemoveTail`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* () RemoveTail ;**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**() CString RemoveTail ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveTail( );**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveTail( );**|  
   
-### <a name="example"></a>Exemple  
- Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+ See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#108;](../../mfc/codesnippet/cpp/coblist-class_20.cpp)]  
+ [!code-cpp[NVC_MFCCollections#108](../../mfc/codesnippet/cpp/coblist-class_20.cpp)]  
   
-##  <a name="setat"></a>CObList::SetAt  
- Définit l’élément à une position donnée.  
+##  <a name="setat"></a>  CObList::SetAt  
+ Sets the element at a given position.  
   
 ```  
 void SetAt(
@@ -799,31 +818,31 @@ void SetAt(
     CObject* newElement);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pos`  
- Le **POSITION** de l’élément à définir.  
+ The **POSITION** of the element to be set.  
   
  `newElement`  
- Le `CObject` pointeur à écrire dans la liste.  
+ The `CObject` pointer to be written to the list.  
   
-### <a name="remarks"></a>Remarques  
- Une variable de type **POSITION** est une clé pour la liste. Il n’est pas identique à un index, et vous ne pouvez pas utiliser un **POSITION** valeur vous-même. `SetAt`écrit le `CObject` pointeur vers la position spécifiée dans la liste.  
+### <a name="remarks"></a>Remarks  
+ A variable of type **POSITION** is a key for the list. It is not the same as an index, and you cannot operate on a **POSITION** value yourself. `SetAt` writes the `CObject` pointer to the specified position in the list.  
   
- Vous devez vous assurer que votre **POSITION** valeur représente une position valide dans la liste. Si elle n’est pas valide, la version Debug de la bibliothèque Microsoft Foundation Class déclare.  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
- Le tableau suivant présente les autres membres qui sont similaires aux fonctions `CObList::SetAt`.  
+ The following table shows other member functions that are similar to `CObList::SetAt`.  
   
-|Classe|Fonction membre|  
+|Class|Member Function|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void SetAt (POSITION** `pos` **, const CString se** `newElement` **) ;**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void SetAt( POSITION** `pos` **, const CString&** `newElement` **);**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**void SetAt( POSITION** `pos` **, LPCTSTR** `newElement` **);**|  
   
-### <a name="example"></a>Exemple  
-  Consultez la page [CObList::CObList](#coblist) pour obtenir la liste de la `CAge` classe.  
+### <a name="example"></a>Example  
+  See [CObList::CObList](#coblist) for a listing of the `CAge` class.  
   
- [!code-cpp[NVC_MFCCollections&#109;](../../mfc/codesnippet/cpp/coblist-class_21.cpp)]  
+ [!code-cpp[NVC_MFCCollections#109](../../mfc/codesnippet/cpp/coblist-class_21.cpp)]  
   
- Les résultats de ce programme sont les suivantes :  
+ The results from this program are as follows:  
   
  `SetAt example: A CObList with 2 elements`  
   
@@ -831,9 +850,9 @@ void SetAt(
   
  `a CAge at $4DB8 65`  
   
-## <a name="see-also"></a>Voir aussi  
- [CObject (classe)](../../mfc/reference/cobject-class.md)   
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [CStringList (classe)](../../mfc/reference/cstringlist-class.md)   
- [CPtrList (classe)](../../mfc/reference/cptrlist-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CStringList Class](../../mfc/reference/cstringlist-class.md)   
+ [CPtrList Class](../../mfc/reference/cptrlist-class.md)
 

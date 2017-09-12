@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCRibbonSlider | Documents Microsoft
+title: CMFCRibbonSlider Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonSlider class
+- CMFCRibbonSlider [MFC], CMFCRibbonSlider
+- CMFCRibbonSlider [MFC], GetPos
+- CMFCRibbonSlider [MFC], GetRangeMax
+- CMFCRibbonSlider [MFC], GetRangeMin
+- CMFCRibbonSlider [MFC], GetRegularSize
+- CMFCRibbonSlider [MFC], GetZoomIncrement
+- CMFCRibbonSlider [MFC], HasZoomButtons
+- CMFCRibbonSlider [MFC], OnDraw
+- CMFCRibbonSlider [MFC], SetPos
+- CMFCRibbonSlider [MFC], SetRange
+- CMFCRibbonSlider [MFC], SetZoomButtons
+- CMFCRibbonSlider [MFC], SetZoomIncrement
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
 caps.latest.revision: 43
 author: mikeblome
@@ -46,70 +57,70 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9f05ae7d0f3e1775a3321928867471749e11e679
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 94c838e6a076f0bae82eef4baf47f00b1c1c2e01
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider (classe)
-La `CMFCRibbonSlider` classe implémente un contrôle slider que vous pouvez ajouter à une barre de ruban ou la barre d’état du ruban. Le contrôle Slider de ruban ressemble aux curseurs de zoom présents dans les applications Office 2007.  
+# <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider Class
+The `CMFCRibbonSlider` class implements a slider control that you can add to a ribbon bar or ribbon status bar. The ribbon slider control resembles the zoom sliders that appear in Office 2007 applications.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonSlider : public CMFCRibbonBaseElement  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonSlider::CMFCRibbonSlider](#cmfcribbonslider)|Construit et initialise un contrôle slider de ruban.|  
+|[CMFCRibbonSlider::CMFCRibbonSlider](#cmfcribbonslider)|Constructs and initializes a ribbon slider control.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonSlider::GetPos](#getpos)|Retourne la position actuelle du curseur.|  
-|[CMFCRibbonSlider::GetRangeMax](#getrangemax)|Retourne la valeur maximale du curseur.|  
-|[CMFCRibbonSlider::GetRangeMin](#getrangemin)|Retourne la valeur minimale du curseur.|  
-|[CMFCRibbonSlider::GetRegularSize](#getregularsize)|Retourne la taille normale de l'élément de ruban. (Substitue [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
-|[CMFCRibbonSlider::GetZoomIncrement](#getzoomincrement)|Retourne la taille de l’incrément de zoom du contrôle slider.|  
-|[CMFCRibbonSlider::HasZoomButtons](#haszoombuttons)|Spécifie si le curseur comporte des boutons de zoom.|  
-|[CMFCRibbonSlider::OnDraw](#ondraw)|Appelé par l'infrastructure pour dessiner l'élément de ruban. (Substitue [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|  
-|[CMFCRibbonSlider::SetPos](#setpos)|Définit la position actuelle du curseur.|  
-|[CMFCRibbonSlider::SetRange](#setrange)|Spécifie la plage du contrôle slider en définissant les valeurs minimales et maximales.|  
-|[CMFCRibbonSlider::SetZoomButtons](#setzoombuttons)|Affiche ou masque les boutons de zoom.|  
-|[CMFCRibbonSlider::SetZoomIncrement](#setzoomincrement)|Définit la taille de l’incrément de zoom du contrôle slider.|  
+|[CMFCRibbonSlider::GetPos](#getpos)|Returns the current position of the slider control.|  
+|[CMFCRibbonSlider::GetRangeMax](#getrangemax)|Returns the maximum value of the slider.|  
+|[CMFCRibbonSlider::GetRangeMin](#getrangemin)|Returns the minimum value of the slider.|  
+|[CMFCRibbonSlider::GetRegularSize](#getregularsize)|Returns the regular size of the ribbon element. (Overrides [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
+|[CMFCRibbonSlider::GetZoomIncrement](#getzoomincrement)|Returns the size of the zoom increment for the slider control.|  
+|[CMFCRibbonSlider::HasZoomButtons](#haszoombuttons)|Specifies whether the slider has zoom buttons.|  
+|[CMFCRibbonSlider::OnDraw](#ondraw)|Called by the framework to draw the ribbon element. (Overrides [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|  
+|[CMFCRibbonSlider::SetPos](#setpos)|Sets the current position of the slider control.|  
+|[CMFCRibbonSlider::SetRange](#setrange)|Specifies the range of the slider control by setting the minimum and maximum values.|  
+|[CMFCRibbonSlider::SetZoomButtons](#setzoombuttons)|Shows or hides the zoom buttons.|  
+|[CMFCRibbonSlider::SetZoomIncrement](#setzoomincrement)|Sets size of the zoom increment for the slider control.|  
   
-## <a name="remarks"></a>Notes  
- Vous pouvez utiliser la `SetRange` méthode pour configurer la plage de zoom est incrémentée pour le curseur. Vous pouvez définir la position actuelle du curseur à l’aide de la `SetPos` méthode.  
+## <a name="remarks"></a>Remarks  
+ You can use the `SetRange` method to configure the range of zoom increments for the slider. You can set current position of the slider by using the `SetPos` method.  
   
- Vous pouvez afficher les boutons de zoom circulaire à gauche et à droite du contrôle slider à l’aide de la `SetZoomButtons` méthode. Par défaut, le curseur est horizontal, le bouton Zoom sur la gauche affiche un signe moins et le bouton zoom de droite affiche un signe plus (+).  
+ You can display circular zoom buttons on the left and right side of the slider control by using the `SetZoomButtons` method. By default, the slider is horizontal, the left zoom button displays a minus sign and the right zoom button displays a plus sign.  
   
- Le `SetZoomIncrement` méthode définit l’incrément à ajouter ou à soustraire de la position actuelle lorsqu’un utilisateur clique sur les boutons de zoom.  
+ The `SetZoomIncrement` method defines the increment to add to or subtract from the current position when a user clicks the zoom buttons.  
   
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser différentes méthodes dans la `CMFCRibbonSlider` classe pour définir les propriétés du curseur. L’exemple montre comment construire un `CMFCRibbonSlider` de l’objet, afficher les boutons de zoom, définir la position actuelle du curseur et la plage de valeurs pour le contrôle de curseur.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCRibbonSlider` class to set the properties of the slider. The example shows how to construct a `CMFCRibbonSlider` object, display zoom buttons, set the current position of the slider control, and set the range of values for the slider control.  
   
- [!code-cpp[NVC_MFC_RibbonApp&#12;](../../mfc/reference/codesnippet/cpp/cmfcribbonslider-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#12](../../mfc/reference/codesnippet/cpp/cmfcribbonslider-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
  [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxribbonslider.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxribbonslider.h  
   
-##  <a name="cmfcribbonslider"></a>CMFCRibbonSlider::CMFCRibbonSlider  
- Construire un curseur de ruban.  
+##  <a name="cmfcribbonslider"></a>  CMFCRibbonSlider::CMFCRibbonSlider  
+ Construct a ribbon slider.  
   
 ```  
 CMFCRibbonSlider(
@@ -117,94 +128,94 @@ CMFCRibbonSlider(
     int nWidth=100);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- ID de curseur.  
+ Slider ID.  
   
  [in]. `nWidth`  
- Largeur du curseur en pixels.  
+ Slider width in pixels.  
   
-### <a name="remarks"></a>Remarques  
- Construit un curseur de ruban est `nWidth` pixels de large dans la catégorie du Panneau de configuration dans lequel le curseur est ajouté. Par défaut, le curseur est horizontal.  
+### <a name="remarks"></a>Remarks  
+ Constructs a ribbon slider that is `nWidth` pixels wide in the panel category where the slider is added. By default, the slider is horizontal.  
   
-##  <a name="getpos"></a>CMFCRibbonSlider::GetPos  
- Retourne la position actuelle du curseur.  
+##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
+ Returns the current position of the slider control.  
   
 ```  
 int GetPos() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- La position actuelle du curseur, qui correspond à une position par rapport au début du curseur.  
+### <a name="return-value"></a>Return Value  
+ The current position of the slider control, which is a position relative to the beginning of the slider.  
   
-##  <a name="getrangemax"></a>CMFCRibbonSlider::GetRangeMax  
- Obtient l’incrément maximal du curseur qui le curseur peut voyager sur le contrôle slider.  
+##  <a name="getrangemax"></a>  CMFCRibbonSlider::GetRangeMax  
+ Obtains the maximum increment of the slider that the slider can travel on the slider control.  
   
 ```  
 int GetRangeMax() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- L’incrément maximal du curseur qui le curseur peut voyager sur le contrôle slider.  
+### <a name="return-value"></a>Return Value  
+ The maximum increment of the slider that the slider can travel on the slider control.  
   
-##  <a name="getrangemin"></a>CMFCRibbonSlider::GetRangeMin  
- Retourne l’incrément minimale que le curseur peut voyager sur le contrôle slider.  
+##  <a name="getrangemin"></a>  CMFCRibbonSlider::GetRangeMin  
+ Returns the minimum increment that the slider can travel on the slider control.  
   
 ```  
 int GetRangeMin() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- L’incrément minimum que le curseur peut voyager sur le contrôle slider.  
+### <a name="return-value"></a>Return Value  
+ The minimum increment that the slider can travel on the slider control.  
   
-##  <a name="getregularsize"></a>CMFCRibbonSlider::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonSlider::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getzoomincrement"></a>CMFCRibbonSlider::GetZoomIncrement  
- Obtenir l’incrément de zoom du contrôle slider.  
+##  <a name="getzoomincrement"></a>  CMFCRibbonSlider::GetZoomIncrement  
+ Obtain the zoom increment for the slider control.  
   
 ```  
 int GetZoomIncrement() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- L’incrément de zoom du contrôle slider.  
+### <a name="return-value"></a>Return Value  
+ The zoom increment for the slider control.  
   
-##  <a name="haszoombuttons"></a>CMFCRibbonSlider::HasZoomButtons  
- Spécifie si le curseur comporte des boutons de zoom.  
+##  <a name="haszoombuttons"></a>  CMFCRibbonSlider::HasZoomButtons  
+ Specifies whether the slider has zoom buttons.  
   
 ```  
 BOOL HasZoomButtons() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si le curseur comporte des boutons de zoom ; `FALSE` dans le cas contraire.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the slider has zoom buttons; `FALSE` otherwise.  
   
-##  <a name="ondraw"></a>CMFCRibbonSlider::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonSlider::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setpos"></a>CMFCRibbonSlider::SetPos  
- Définir la position actuelle du curseur.  
+##  <a name="setpos"></a>  CMFCRibbonSlider::SetPos  
+ Set the current position of the slider control.  
   
 ```  
 void SetPos(
@@ -212,15 +223,15 @@ void SetPos(
     BOOL bRedraw=TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nPos`  
- Spécifie la position à définir pour le curseur. La position est par rapport au début du curseur.  
+ Specifies the position to set for the slider. The position is relative to the beginning of the slider.  
   
  [in] `bRedraw`  
- Si `TRUE`, le curseur est redessiné.  
+ If `TRUE`, the slider will be redrawn.  
   
-##  <a name="setrange"></a>CMFCRibbonSlider::SetRange  
- Définir la plage de valeurs pour le contrôle de curseur.  
+##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
+ Set the range of values for the slider control.  
   
 ```  
 void SetRange(
@@ -228,40 +239,40 @@ void SetRange(
     int nMax);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nMin`  
- Spécifie la valeur minimale du contrôle slider.  
+ Specifies minimum value of the slider control.  
   
  [in] `nMax`  
- Spécifie la valeur maximale du contrôle slider.  
+ Specifies maximum value of the slider control.  
   
-### <a name="remarks"></a>Notes  
- Spécifie la plage de valeurs pour le contrôle de curseur en définissant les valeurs minimales et maximales.  
+### <a name="remarks"></a>Remarks  
+ Specifies the range of values for the slider control by setting the minimum and maximum values.  
   
-##  <a name="setzoombuttons"></a>CMFCRibbonSlider::SetZoomButtons  
- Afficher ou masquer les boutons de zoom.  
+##  <a name="setzoombuttons"></a>  CMFCRibbonSlider::SetZoomButtons  
+ Display or hide zoom buttons.  
   
 ```  
 void SetZoomButtons(BOOL bSet=TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in]. `bSet`  
- `TRUE`Pour afficher les boutons de zoom ; `FALSE` pour les masquer.  
+ `TRUE` to display zoom buttons; `FALSE` to hide them.  
   
-##  <a name="setzoomincrement"></a>CMFCRibbonSlider::SetZoomIncrement  
- Définissez l’incrément de zoom du contrôle slider.  
+##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
+ Set the zoom increment for the slider control.  
   
 ```  
 void SetZoomIncrement(int nZoomIncrement);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nZoomIncrement`  
- Spécifie l’incrément de zoom du contrôle slider.  
+ Specifies the zoom increment of the slider control.  
   
-## <a name="see-also"></a>Voir aussi  
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonBaseElement (classe)](../../mfc/reference/cmfcribbonbaseelement-class.md)
+ [CMFCRibbonBaseElement Class](../../mfc/reference/cmfcribbonbaseelement-class.md)
 

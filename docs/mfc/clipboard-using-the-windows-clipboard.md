@@ -1,53 +1,72 @@
 ---
-title: "Presse-papiers&#160;: utilisation du Presse-papiers Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Presse-papiers (C++), commandes"
-  - "Presse-papiers (C++), Presse-papiers Windows (API)"
-  - "commandes du Presse-papiers"
-  - "commandes du Presse-papiers, implémenter"
-  - "commandes (C++), implémenter l'édition"
-  - "Fonctions du gestionnaire de commandes Couper/Copier et Coller"
-  - "fonctions gestionnaires, commandes Couper/Copier et Coller"
-  - "Presse-papiers Windows (C++)"
+title: 'Clipboard: Using the Windows Clipboard | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Clipboard commands
+- Cut/Copy and Paste command handler functions [MFC]
+- handler functions, Cut/Copy and Paste commands
+- Clipboard [MFC], commands
+- commands [MFC], implementing Edit
+- Clipboard commands [MFC], implementing
+- Windows Clipboard [MFC]
+- Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Presse-papiers&#160;: utilisation du Presse-papiers Windows
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 12a35751354566d8d260734aea6f19f9f8a8cabb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cette rubrique explique comment utiliser l'API standard du Presse\-papiers Windows dans votre application de MFC.  
+---
+# <a name="clipboard-using-the-windows-clipboard"></a>Clipboard: Using the Windows Clipboard
+This topic describes how to use the standard Windows Clipboard API within your MFC application.  
   
- La plupart des applications Windows prennent en charge la coupe ou la copie de données dans le Presse\-papiers Windows et le collage de données du Presse\-papiers.  Les formats de données du Presse\-papiers varient entre les applications.  L'infrastructure prend en charge qu'un nombre limité de formats de Presse\-papiers pour un nombre limité de classes.  Vous implémenterez normalement les commandes liées au Presse\-papiers — Couper, Copier et Coller — dans le menu Edition pour votre vue.  La bibliothèque de classes définit les ID de commande pour les commandes : **ID\_EDIT\_CUT**, **ID\_EDIT\_COPY** et **ID\_EDIT\_PASTE**.  Leurs invites en ligne de message sont également définies.  
+ Most applications for Windows support cutting or copying data to the Windows Clipboard and pasting data from the Clipboard. The Clipboard data formats vary among applications. The framework supports only a limited number of Clipboard formats for a limited number of classes. You will normally implement the Clipboard-related commands — Cut, Copy, and Paste — on the Edit menu for your view. The class library defines the command IDs for these commands: **ID_EDIT_CUT**, **ID_EDIT_COPY**, and **ID_EDIT_PASTE**. Their message-line prompts are also defined.  
   
- [Messages et Commandes dans l'Infrastructure](../mfc/messages-and-commands-in-the-framework.md) explique comment gérer les commandes du menu dans votre application en mappant la commande de menu à la fonction gestionnaire.  Tant que votre application ne définit pas de fonctions gestionnaires pour les commandes du Presse\-papiers dans le menu Edition, elles restent désactivées.  Pour écrire des fonctions gestionnaires pour les commandes Couper et Copier, implémentez sélection dans votre application.  Pour écrire une fonction gestionnaire de la commande Coller, interrogez le Presse\-papiers pour savoir s'il contient des données dans un format que votre application peut accepter.  Par exemple, pour activer la commande Copier, vous pouvez entrer dans un gestionnaire quelque chose similaire à ce qui suit :  
+ [Messages and Commands in the Framework](../mfc/messages-and-commands-in-the-framework.md) explains how to handle menu commands in your application by mapping the menu command to a handler function. As long as your application does not define handler functions for the Clipboard commands on the Edit menu, they remain disabled. To write handler functions for the Cut and Copy commands, implement selection in your application. To write a handler function for the Paste command, query the Clipboard to see whether it contains data in a format your application can accept. For example, to enable the Copy command, you might write a handler something like the following:  
   
- [!code-cpp[NVC_MFCListView#2](../mfc/codesnippet/CPP/clipboard-using-the-windows-clipboard_1.cpp)]  
+ [!code-cpp[NVC_MFCListView#2](../atl/reference/codesnippet/cpp/clipboard-using-the-windows-clipboard_1.cpp)]  
   
- Les commandes Couper, Copier et Coller n'ont de sens que dans certains contextes.  Les commandes Couper et Copier doivent être activées uniquement lorsque quelque chose est sélectionné, et la commande Coller uniquement lorsque quelque chose se trouve dans le Presse\-papiers.  Vous pouvez spécifier ce comportement en définissant des fonctionnalités du gestionnaire de mises à jour qui activent ou désactivent ces commandes selon le contexte.  Pour plus d'informations, consultez [Procédure de mise à jour d'objets de l'interface utilisateur](../mfc/how-to-update-user-interface-objects.md).  
+ The Cut, Copy, and Paste commands are only meaningful in certain contexts. The Cut and Copy commands should be enabled only when something is selected, and the Paste command only when something is in the Clipboard. You can provide this behavior by defining update handler functions that enable or disable these commands depending on the context. For more information, see [How to Update User-Interface Objects](../mfc/how-to-update-user-interface-objects.md).  
   
- La bibliothèque de MFC fournit la prise en charge du Presse\-papiers de pour l'édition de texte avec les classes d' `CEdit` et d' `CEditView` .  Les classes d'OLE simplifient également l'implémentation d'opérations du presse\-papiers impliquant des éléments d'OLE.  Pour plus d'informations sur les classes d'OLE, consultez [Presse\-papiers : utilisation du mécanisme OLE du Presse\-papiers](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).  
+ The Microsoft Foundation Class Library does provide Clipboard support for text editing with the `CEdit` and `CEditView` classes. The OLE classes also simplify implementing Clipboard operations that involve OLE items. For more information on the OLE classes, see [Clipboard: Using the OLE Clipboard Mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).  
   
- L'implémentation d'autres commandes du menu Edition, telles que Défaire \(**ID\_EDIT\_UNDO**\) et Refaire \(**ID\_EDIT\_REDO**\), est également laissée à vous.  Si votre application ne prend pas en charge ces commandes, vous pouvez facilement les supprimer à partir de votre fichier de ressources à l'aide des éditeurs de ressources Visual C\+\+.  
+ Implementing other Edit menu commands, such as Undo (**ID_EDIT_UNDO**) and Redo (**ID_EDIT_REDO**), is also left to you. If your application does not support these commands, you can easily delete them from your resource file using the Visual C++ resource editors.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Copier et coller des données](../mfc/clipboard-copying-and-pasting-data.md)  
+-   [Copying and pasting data](../mfc/clipboard-copying-and-pasting-data.md)  
   
--   [À l'aide du mécanisme OLE du presse\-papiers](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
+-   [Using the OLE Clipboard mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
   
-## Voir aussi  
- [Presse\-papiers](../mfc/clipboard.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard](../mfc/clipboard.md)
+
+

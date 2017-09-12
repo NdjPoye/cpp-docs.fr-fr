@@ -1,44 +1,63 @@
 ---
-title: "Points d&#39;entr&#233;e de fonction DLL export&#233;e | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exporter des DLL, fonctions"
-  - "MFC, gérer des données d'état"
-  - "gestion d'état, DLL exportées"
+title: Exported DLL Function Entry Points | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- exporting DLLs [MFC], functions
+- MFC, managing state data
+- state management [MFC], exported DLLs
 ms.assetid: 3268666e-d24b-44f2-80e8-7c80f73b93ca
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Points d&#39;entr&#233;e de fonction DLL export&#233;e
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9e6d9db627e34af49ed48a97997b2677ff3f09d1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Pour les fonctions exportées d'une DLL, utilisez la macro [AFX\_MANAGE\_STATE](../Topic/AFX_MANAGE_STATE.md) pour maintenir l'état global approprié en basculant du module DLL à la DLL de l'application appelante.  
+---
+# <a name="exported-dll-function-entry-points"></a>Exported DLL Function Entry Points
+For exported functions of a DLL, use the [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) macro to maintain the proper global state when switching from the DLL module to the calling application's DLL.  
   
- En cas d'appel, cette macro définit `pModuleState`, un pointeur vers une structure `AFX_MODULE_STATE` contenant des données globales du module, comme l'état du module efficace pour le reste de l'étendue contenante de la fonction.  Lors de la libération de l'étendue contenant la macro, l'état du module efficace précédent est automatiquement restauré.  
+ When called, this macro sets `pModuleState`, a pointer to an `AFX_MODULE_STATE` structure containing global data for the module, as the effective module state for the remainder of the containing scope of the function. Upon leaving the scope containing the macro, the previous effective module state is automatically restored.  
   
- Ce basculement est effectué en construisant une instance d'une classe **AFX\_MODULE\_STATE** dans la pile.  Dans le constructeur, cette classe obtient un pointeur vers l'état du module en cours et l'enregistre dans un attribut, puis définit `pModuleState` comme nouvel état du module efficace.  Dans le destructeur, cette classe restaure le pointeur stocké dans un attribut en tant qu'état du module efficace.  
+ This switching is achieved by constructing an instance of an **AFX_MODULE_STATE** class on the stack. In its constructor, this class obtains a pointer to the current module state and stores it in a member variable, and then sets `pModuleState` as the new effective module state. In its destructor, this class restores the pointer stored in its member variable as the effective module state.  
   
- Si vous avez une fonction exportée, telle qu'une qui affiche une boîte de dialogue dans la DLL, vous devez ajouter le code suivant au début de la fonction :  
+ If you have an exported function, such as one that launches a dialog box in your DLL, you need to add the following code to the beginning of the function:  
   
- [!code-cpp[NVC_MFCConnectionPoints#6](../mfc/codesnippet/CPP/exported-dll-function-entry-points_1.cpp)]  
+ [!code-cpp[NVC_MFCConnectionPoints#6](../mfc/codesnippet/cpp/exported-dll-function-entry-points_1.cpp)]  
   
- Cela permute l'état du module en cours avec l'état retourné par [AfxGetStaticModuleState](../Topic/AfxGetStaticModuleState.md) jusqu'à la fin de l'étendue actuelle.  
+ This swaps the current module state with the state returned from [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate) until the end of the current scope.  
   
- Les problèmes avec des ressources dans les DLL se poseront si la macro `AFX_MANAGE_STATE` n'est pas utilisée.  Par défaut, MFC utilise le handle de ressource d'application principale pour charger le modèle de ressources.  Ce modèle est réellement enregistré dans la DLL.  La cause première est que les informations d'état du module MFC n'ont pas été basculées par la macro `AFX_MANAGE_STATE`.  Le handle de ressources est récupérée de l'état du module MFC.  Ne pas afficher l'état du module provoque l'utilisation du mauvais handle de ressource.  
+ Problems with resources in DLLs will occur if the `AFX_MANAGE_STATE` macro is not used. By default, MFC uses the resource handle of the main application to load the resource template. This template is actually stored in the DLL. The root cause is that MFC's module state information has not been switched by the `AFX_MANAGE_STATE` macro. The resource handle is recovered from MFC's module state. Not switching the module state causes the wrong resource handle to be used.  
   
- `AFX_MANAGE_STATE` n'a pas besoin d'être placé dans chaque fonction de la DLL.  Par exemple, `InitInstance` peut être appelé par du code MFC dans l'application sans `AFX_MANAGE_STATE` car MFC déplace automatiquement l'état du module avant `InitInstance` puis les le restaure après que `InitInstance` retourne.  Il en va de même pour tous les gestionnaires de table des messages.  Les DLL normaux ont en fait une procédure spéciale de base de données qui bascule automatiquement l'état du module avant d'acheminer un message.  
+ `AFX_MANAGE_STATE` does not need to be put into every function in the DLL. For example, `InitInstance` can be called by the MFC code in the application without `AFX_MANAGE_STATE` because MFC automatically shifts the module state before `InitInstance` and then switches it back after `InitInstance` returns. The same is true for all message-map handlers. Regular MFC DLLs actually have a special master window procedure that automatically switches the module state before routing any message.  
   
-## Voir aussi  
- [Gestion des données d'état des modules MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
+## <a name="see-also"></a>See Also  
+ [Managing the State Data of MFC Modules](../mfc/managing-the-state-data-of-mfc-modules.md)
+
+

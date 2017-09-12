@@ -1,60 +1,79 @@
 ---
-title: "Serveurs&#160;: &#233;l&#233;ments du serveur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "architecture (C++), server-item"
-  - "applications serveur OLE, éléments du serveur"
-  - "éléments du serveur"
-  - "éléments du serveur, implémenter"
-  - "serveurs (C++), éléments du serveur"
+title: 'Servers: Server Items | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- server items, implementing
+- servers [MFC], server items
+- architecture [MFC], server-item
+- server items
+- OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Serveurs&#160;: &#233;l&#233;ments du serveur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ccdaf2febe91c683996eb4e2e14309f68675293b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Lorsqu'un conteneur lance un serveur afin qu'un utilisateur puisse modifier un élément OLE incorporé ou lié, l'application serveur « crée un élément du serveur. » L'élément du serveur, qui est un objet d'une classe dérivé d' `COleServerItem`, fournit une interface entre le document serveur et l'application conteneur.  
+---
+# <a name="servers-server-items"></a>Servers: Server Items
+When a container launches a server so that a user can edit an embedded or linked OLE item, the server application creates a "server item." The server item, which is an object of a class derived from `COleServerItem`, provides an interface between the server document and the container application.  
   
- La classe d' `COleServerItem` définit plusieurs fonctions membres substituables appelées par OLE, généralement en réponse aux requêtes du conteneur.  Les éléments du serveur peuvent représenter une partie du document serveur ou le document entier.  Lorsqu'un élément d'OLE est incorporé dans le document conteneur, l'élément du serveur représente le document serveur tout entier.  Lorsque l'élément OLE est lié, l'élément du serveur peut représenter une partie du document serveur ou le document entier, selon que la liaison est faite vers une partie ou vers le tout.  
+ The `COleServerItem` class defines several overridable member functions that are called by OLE, usually in response to requests from the container. Server items can represent part of the server document or the entire document. When an OLE item is embedded in the container document, the server item represents the entire server document. When the OLE item is linked, the server item can represent a part of the server document or the whole document, depending on whether the link is to a part or to the whole.  
   
- Dans l'exemple de [HIERSVR](../top/visual-cpp-samples.md), par exemple, la classe de l'élément serveur, **CServerItem**, a un membre qui est un pointeur vers un objet de la classe **CServerNode**.  L'objet de **CServerNode** est un nœud dans le document de l'application de HIERSVR, qui est une arborescence.  Lorsque l'objet de **CServerNode** est le nœud racine, l'objet de **CServerItem** représente le document entier.  Lorsque l'objet de **CServerNode** est un nœud enfant, l'objet de **CServerItem** représente une partie du document.  Pour obtenir un exemple de cette interaction, consultez l'exemple [HIERSVR](../top/visual-cpp-samples.md) du OLE de MFC.  
+ In the [HIERSVR](../visual-cpp-samples.md) sample, for example, the server-item class, **CServerItem**, has a member that is a pointer to an object of the class **CServerNode**. The **CServerNode** object is a node in the HIERSVR application's document, which is a tree. When the **CServerNode** object is the root node, the **CServerItem** object represents the whole document. When the **CServerNode** object is a child node, the **CServerItem** object represents a part of the document. See the MFC OLE sample [HIERSVR](../visual-cpp-samples.md) for an example of this interaction.  
   
-##  <a name="_core_implementing_server_items"></a> Implémenter des éléments du serveur  
- Si vous utilisez l'assisant d'application pour générer le code « démarreur » pour votre application, tout ce que vous devez effectuer pour inclure les éléments du serveur dans votre code de démarrage est de choisir l'une des options de serveur à partir de la page d'options d'OLE.  Si vous ajoutez des éléments du serveur à une application existante, procédez comme suit :  
+##  <a name="_core_implementing_server_items"></a> Implementing Server Items  
+ If you use the application wizard to produce "starter" code for your application, all you have to do to include server items in your starter code is to choose one of the server options from the OLE Options page. If you are adding server items to an existing application, perform the following steps:  
   
-#### Pour implémenter un élément du serveur  
+#### <a name="to-implement-a-server-item"></a>To implement a server item  
   
-1.  Dériver une classe de `COleServerItem`.  
+1.  Derive a class from `COleServerItem`.  
   
-2.  Dans votre classe dérivée, substituez la fonction membre d' `OnDraw`.  
+2.  In your derived class, override the `OnDraw` member function.  
   
-     L'infrastructure appelle `OnDraw` pour afficher l'élément OLE dans un métafichier.  L'application conteneur utilise ce métafichier pour afficher l'élément.  La classe d'affichage de votre application a également une fonction membre d' `OnDraw`, utilisée pour afficher l'élément lorsque l'application serveur est active.  
+     The framework calls `OnDraw` to render the OLE item into a metafile. The container application uses this metafile to render the item. Your application's view class also has an `OnDraw` member function, which is used to render the item when the server application is active.  
   
-3.  Implémenter une substitution de `OnGetEmbeddedItem` pour votre classe de document serveur.  Pour plus d'informations, consultez l'article [Serveurs : Implémenter des documents de serveur](../mfc/servers-implementing-server-documents.md) et l'exemple du OLE de MFC [HIERSVR](../top/visual-cpp-samples.md).  
+3.  Implement an override of `OnGetEmbeddedItem` for your server-document class. For further information, see the article [Servers: Implementing Server Documents](../mfc/servers-implementing-server-documents.md) and the MFC OLE sample [HIERSVR](../visual-cpp-samples.md).  
   
-4.  Implémentez la fonction membre d' `OnGetExtent` de la classe du serveur.  L'infrastructure appelle cette fonction pour extraire la taille de l'élément.  L'implémentation par défaut n'exécute aucune opération.  
+4.  Implement your server-item class's `OnGetExtent` member function. The framework calls this function to retrieve the size of the item. The default implementation does nothing.  
   
-##  <a name="_core_a_tip_for_server.2d.item_architecture"></a> Un indicateur pour l'architecture de l'élément serveur  
- Comme mentionné dans [Implémenter des éléments du serveur](#_core_implementing_server_items), les applications serveur doivent pouvoir afficher les éléments à la fois dans la vue du serveur et dans un métafichier utilisé par l'application conteneur.  Dans l'architecture de l'application de la bibliothèque Microsoft Foundation Class, la fonction membre d' `OnDraw` de la classe d'affichage affiche l'élément lorsqu'elle est modifiée \(consultez [CView::OnDraw](../Topic/CView::OnDraw.md) dans *la référence de la bibliothèque de classes*\).  `OnDraw` de l'élément du serveur affiche l'élément dans un métafichier dans tous les autres cas \(consultez [COleServerItem::OnDraw](../Topic/COleServerItem::OnDraw.md)\).  
+##  <a name="_core_a_tip_for_server.2d.item_architecture"></a> A Tip for Server-Item Architecture  
+ As noted in [Implementing Server Items](#_core_implementing_server_items), server applications must be able to render items both in the server's view and in a metafile used by the container application. In the Microsoft Foundation Class Library's application architecture, the view class's `OnDraw` member function renders the item when it is being edited (see [CView::OnDraw](../mfc/reference/cview-class.md#ondraw) in the *Class Library Reference*). The server item's `OnDraw` renders the item into a metafile in all other cases (see [COleServerItem::OnDraw](../mfc/reference/coleserveritem-class.md#ondraw)).  
   
- Vous pouvez éviter la duplication de code en écrivant des fonctions d'assistance dans la classe du document serveur et en les appelant à partir des fonctions d' `OnDraw` dans vos classes d'affichage et d'éléments du serveur.  L'exemple de liaison et incorporation d'objets MFC [HIERSVR](../top/visual-cpp-samples.md) utilise cette stratégie: les fonctions **CServerView::OnDraw** et **CServerItem::OnDraw** appellent toutes deux **CServerDoc::DrawTree** pour afficher l'élément.  
+ You can avoid duplication of code by writing helper functions in your server-document class and calling them from the `OnDraw` functions in your view and server-item classes. The MFC OLE sample [HIERSVR](../visual-cpp-samples.md) uses this strategy: the functions **CServerView::OnDraw** and **CServerItem::OnDraw** both call **CServerDoc::DrawTree** to render the item.  
   
- La vue et l'élément ont tous deux des fonctions membres d' `OnDraw` car elles dessinent dans différentes conditions.  L'affichage doit prendre en compte des facteurs tels que le zoom, la taille et l'extension de sélection, la réduction, et des éléments d'interface utilisateur tels que les barres de défilement.  L'élément du serveur, en revanche, dessine toujours l'objet OLE entier.  
+ The view and the item both have `OnDraw` member functions because they draw under different conditions. The view must take into account such factors as zooming, selection size and extent, clipping, and user-interface elements such as scroll bars. The server item, on the other hand, always draws the entire OLE object.  
   
- Pour plus d'informations, consultez [CView::OnDraw](../Topic/CView::OnDraw.md), [COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerItem::OnDraw](../Topic/COleServerItem::OnDraw.md), et l' [COleServerDoc::OnGetEmbeddedItem](../Topic/COleServerDoc::OnGetEmbeddedItem.md) dans *la référence de la bibliothèque de classes*.  
+ For more information, see [CView::OnDraw](../mfc/reference/cview-class.md#ondraw), [COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerItem::OnDraw](../mfc/reference/coleserveritem-class.md#ondraw), and [COleServerDoc::OnGetEmbeddedItem](../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) in the *Class Library Reference*.  
   
-## Voir aussi  
- [Serveurs](../mfc/servers.md)
+## <a name="see-also"></a>See Also  
+ [Servers](../mfc/servers.md)
+
+

@@ -1,41 +1,60 @@
 ---
-title: "Proc&#233;dures pas &#224; pas (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC Feature Pack, procédures pas à pas"
+title: Walkthroughs (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC Feature Pack, walkthroughs
 ms.assetid: 20d5756f-ad58-46f4-8b6c-c7a1020b72eb
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Proc&#233;dures pas &#224; pas (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 91f269f18c85672f41ffb1ee74b528d541a5d7e7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cette section contient les articles qui vous guident dans les diverses tâches associées aux nouvelles fonctionnalités de la bibliothèque MFC.  
+---
+# <a name="walkthroughs-mfc"></a>Walkthroughs (MFC)
+This section contains articles that walk you through various tasks associated with new MFC library features.  
   
-## Dans cette section  
- [Procédure pas à pas : utilisation des nouveaux contrôles d'environnement MFC](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)  
- Dans cette procédure, vous allez créer une application similaire à l'Explorateur de fichiers.  Vous créerez une fenêtre composée de deux volets.  Le volet gauche contiendra un objet [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) affichant votre Bureau sous forme de vue hiérarchique.  Le volet droit contiendra un [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) affichant les fichiers du dossier sélectionné dans le volet gauche.  
+## <a name="in-this-section"></a>In This Section  
+ [Walkthrough: Using the New MFC Shell Controls](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)  
+ In this walkthrough, you will create an application that resembles File Explorer. You will create a window that contains two panes. The left pane will contain a [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) object that will display your Desktop in a hierarchical view. The right pane will contain a [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) that will show the files in the folder that is selected in the left pane.  
   
- [Procédure pas à pas : placement de contrôles dans les barres d'outils](../mfc/walkthrough-putting-controls-on-toolbars.md)  
- Les barres d'outils MFC modernes peuvent héberger des contrôles autres que de simples boutons.  Cet article explique la procédure à suivre.  
+ [Walkthrough: Putting Controls On Toolbars](../mfc/walkthrough-putting-controls-on-toolbars.md)  
+ Modern MFC toolbars can host controls other than simple buttons. This article explains how to do it.  
   
- [Procédure pas à pas : ajout d'un objet D2D à un projet MFC](../mfc/walkthrough-adding-a-d2d-object-to-an-mfc-project.md)  
- Indique comment ajouter un objet D2D à un projet et explique comment utiliser D2D.  
+ [Walkthrough: Adding a D2D Object to an MFC Project](../mfc/walkthrough-adding-a-d2d-object-to-an-mfc-project.md)  
+ Demonstrates how to add a D2D object to a project and introduces how to use D2D.  
   
- [Procédure pas à pas : ajout d'une animation à un projet MFC](../mfc/walkthrough-adding-animation-to-an-mfc-project.md)  
- Indique comment ajouter un objet graphique à un projet et explique comment l'animer.  
+ [Walkthrough: Adding Animation to an MFC Project](../mfc/walkthrough-adding-animation-to-an-mfc-project.md)  
+ Demonstrates how to add a graphical object to a project and introduces how to animate it.  
   
-## Voir aussi  
- [MFC, applications de bureau](../mfc/mfc-desktop-applications.md)
+## <a name="see-also"></a>See Also  
+ [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)
+
+
