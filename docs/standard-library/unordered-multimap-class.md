@@ -1,5 +1,5 @@
 ---
-title: unordered_multimap, classe | Microsoft Docs
+title: unordered_multimap Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- unordered_multimap
 - unordered_map/std::unordered_multimap
 - unordered_map/std::unordered_multimap::allocator_type
 - unordered_map/std::unordered_multimap::const_iterator
@@ -100,7 +99,93 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- unordered_multimap class
+- std::unordered_multimap
+- std::unordered_multimap::allocator_type
+- std::unordered_multimap::const_iterator
+- std::unordered_multimap::const_local_iterator
+- std::unordered_multimap::const_pointer
+- std::unordered_multimap::const_reference
+- std::unordered_multimap::difference_type
+- std::unordered_multimap::hasher
+- std::unordered_multimap::iterator
+- std::unordered_multimap::key_equal
+- std::unordered_multimap::key_type
+- std::unordered_multimap::local_iterator
+- std::unordered_multimap::mapped_type
+- std::unordered_multimap::pointer
+- std::unordered_multimap::reference
+- std::unordered_multimap::size_type
+- std::unordered_multimap::value_type
+- std::unordered_multimap::begin
+- std::unordered_multimap::bucket
+- std::unordered_multimap::bucket_count
+- std::unordered_multimap::bucket_size
+- std::unordered_multimap::cbegin
+- std::unordered_multimap::cend
+- std::unordered_multimap::clear
+- std::unordered_multimap::count
+- std::unordered_multimap::emplace
+- std::unordered_multimap::emplace_hint
+- std::unordered_multimap::empty
+- std::unordered_multimap::end
+- std::unordered_multimap::equal_range
+- std::unordered_multimap::erase
+- std::unordered_multimap::find
+- std::unordered_multimap::get_allocator
+- std::unordered_multimap::hash
+- std::unordered_multimap::insert
+- std::unordered_multimap::key_eq
+- std::unordered_multimap::load_factor
+- std::unordered_multimap::max_bucket_count
+- std::unordered_multimap::max_load_factor
+- std::unordered_multimap::max_size
+- std::unordered_multimap::rehash
+- std::unordered_multimap::size
+- std::unordered_multimap::swap
+- std::unordered_multimap::unordered_multimap
+- std::unordered_multimap::operator=
+- std::unordered_multimap::allocator_type
+- std::unordered_multimap::const_iterator
+- std::unordered_multimap::const_local_iterator
+- std::unordered_multimap::const_pointer
+- std::unordered_multimap::const_reference
+- std::unordered_multimap::difference_type
+- std::unordered_multimap::hasher
+- std::unordered_multimap::iterator
+- std::unordered_multimap::key_equal
+- std::unordered_multimap::key_type
+- std::unordered_multimap::local_iterator
+- std::unordered_multimap::mapped_type
+- std::unordered_multimap::pointer
+- std::unordered_multimap::reference
+- std::unordered_multimap::size_type
+- std::unordered_multimap::value_type
+- std::unordered_multimap::begin
+- std::unordered_multimap::bucket
+- std::unordered_multimap::bucket_count
+- std::unordered_multimap::bucket_size
+- std::unordered_multimap::cbegin
+- std::unordered_multimap::cend
+- std::unordered_multimap::clear
+- std::unordered_multimap::count
+- std::unordered_multimap::emplace
+- std::unordered_multimap::emplace_hint
+- std::unordered_multimap::empty
+- std::unordered_multimap::end
+- std::unordered_multimap::equal_range
+- std::unordered_multimap::erase
+- std::unordered_multimap::find
+- std::unordered_multimap::get_allocator
+- std::unordered_multimap::hash_function
+- std::unordered_multimap::insert
+- std::unordered_multimap::key_eq
+- std::unordered_multimap::load_factor
+- std::unordered_multimap::max_bucket_count
+- std::unordered_multimap::max_load_factor
+- std::unordered_multimap::max_size
+- std::unordered_multimap::rehash
+- std::unordered_multimap::size
+- std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
 caps.latest.revision: 28
 author: corob-msft
@@ -120,17 +205,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f268454a196fe0eca5e7c3972db74342bbb96904
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d2bdd2adaff81776050d90fe864f9a6c1d412153
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="unorderedmultimap-class"></a>unordered_multimap, classe
-La classe de modèle décrit un objet qui contrôle une séquence de longueur variable constituée d'éléments de type `std::pair<const Key, Ty>`. La séquence est triée par ordre faible avec une fonction de hachage, qui partitionne la séquence en un ensemble trié de sous-séquences appelées compartiments. Dans chaque compartiment, une fonction de comparaison détermine si des paires d'éléments possèdent un ordre équivalent. Chaque élément stocke deux objets, une clé de tri et une valeur. La séquence est représentée de façon à permettre la recherche, l'insertion et la suppression d'un élément arbitraire à l'aide d'un certain nombre d'opérations qui peut être indépendant du nombre d'éléments de la séquence (temps constant), du moins lorsque les compartiments sont de longueur à peu près équivalente. Dans le pire des cas, lorsque tous les éléments se trouvent dans un compartiment, le nombre d'opérations est proportionnel au nombre d'éléments de la séquence (temps linéaire). De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.  
+# <a name="unorderedmultimap-class"></a>unordered_multimap Class
+The template class describes an object that controls a varying-length sequence of elements of type `std::pair<const Key, Ty>`. The sequence is weakly ordered by a hash function, which partitions the sequence into an ordered set of subsequences called buckets. Within each bucket a comparison function determines whether any pair of elements has equivalent ordering. Each element stores two objects, a sort key and a value. The sequence is represented in a way that permits lookup, insertion, and removal of an arbitrary element with a number of operations that can be independent of the number of elements in the sequence (constant time), at least when all buckets are of roughly equal length. In the worst case, when all of the elements are in one bucket, the number of operations is proportional to the number of elements in the sequence (linear time). Moreover, inserting an element invalidates no iterators, and removing an element invalidates only those iterators which point at the removed element.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Key,  
@@ -141,100 +226,100 @@ template <class Key,
 class unordered_multimap;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Paramètre|Description|  
-|`Key`|Type de clé.|  
-|`Ty`|Type mappé.|  
-|`Hash`|Type d’objet de la fonction de hachage.|  
-|`Pred`|Type d’objet de fonction de comparaison d’égalité.|  
-|`Alloc`|Classe allocator.|  
+|Parameter|Description|  
+|`Key`|The key type.|  
+|`Ty`|The mapped type.|  
+|`Hash`|The hash function object type.|  
+|`Pred`|The equality comparison function object type.|  
+|`Alloc`|The allocator class.|  
   
-## <a name="members"></a>Membres  
-  
-|||  
-|-|-|  
-|Définition de types|Description|  
-|[allocator_type](#allocator_type)|Type d'un allocateur pour la gestion du stockage.|  
-|[const_iterator](#const_iterator)|Type d'un itérateur constant pour la séquence contrôlée.|  
-|[const_local_iterator](#const_local_iterator)|Type d’un itérateur de compartiment constant pour la séquence contrôlée.|  
-|[const_pointer](#const_pointer)|Type d'un pointeur constant vers un élément.|  
-|[const_reference](#const_reference)|Type d'une référence constante à un élément.|  
-|[difference_type](#difference_type)|Type d'une distance signée entre deux éléments.|  
-|[hasher](#hasher)|Type de la fonction de hachage.|  
-|[iterator](#iterator)|Type d'un itérateur pour la séquence contrôlée.|  
-|[key_equal](#key_equal)|Type de la fonction de comparaison.|  
-|[key_type](#key_type)|Type d'une clé de tri.|  
-|[local_iterator](#local_iterator)|Type d'un itérateur de compartiment pour la séquence contrôlée.|  
-|[mapped_type](#mapped_type)|Type d'une valeur mappée associée à chaque clé.|  
-|[pointer](#pointer)|Type d'un pointeur vers un élément.|  
-|[reference](#reference)|Type d'une référence à un élément.|  
-|[size_type](#size_type)|Type d'une distance non signée entre deux éléments.|  
-|[value_type](#value_type)|Type d’un élément.|  
+## <a name="members"></a>Members  
   
 |||  
 |-|-|  
-|Fonction membre|Description|  
-|[begin](#begin)|Désigne le début de la séquence contrôlée.|  
-|[compartiment](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|  
-|[bucket_count](#bucket_count)|Obtient le nombre de compartiments.|  
-|[bucket_size](#bucket_size)|Obtient la taille d'un compartiment.|  
-|[cbegin](#cbegin)|Désigne le début de la séquence contrôlée.|  
-|[cend](#cend)|Désigne la fin de la séquence contrôlée.|  
-|[clear](#clear)|Supprime tous les éléments.|  
-|[count](#count)|Recherche le nombre d’éléments qui correspondent à une clé spécifiée.|  
-|[emplace](#emplace)|Ajoute un élément construit sur place.|  
-|[emplace_hint](#emplace_hint)|Ajoute un élément construit sur place, avec un indicateur.|  
-|[empty](#empty)|Vérifie l'absence d'éléments.|  
-|[end](#end)|Désigne la fin de la séquence contrôlée.|  
-|[equal_range](#equal_range)|Recherche une plage qui correspond à une clé spécifiée.|  
-|[erase](#erase)|Supprime les éléments placés aux positions spécifiées.|  
-|[find](#find)|Recherche un élément qui correspond à une clé spécifiée.|  
-|[get_allocator](#get_allocator)|Obtient l’objet allocateur stocké.|  
-|[hash_function](#hash)|Obtient l'objet de fonction de hachage stocké.|  
-|[insert](#insert)|Ajoute des éléments.|  
-|[key_eq](#key_eq)|Obtient l'objet de fonction de comparaison stocké.|  
-|[load_factor](#load_factor)|Compte le nombre moyen d'éléments par compartiment.|  
-|[max_bucket_count](#max_bucket_count)|Obtient le nombre maximal de compartiments.|  
-|[max_load_factor](#max_load_factor)|Obtient ou définit le nombre maximal d’éléments par compartiment.|  
-|[max_size](#max_size)|Obtient ou définit la taille maximale de la séquence contrôlée.|  
-|[rehash)](#rehash)|Régénère la table de hachage.|  
-|[size](#size)|Compte le nombre d'éléments.|  
-|[swap](#swap)|Échange le contenu de deux conteneurs.|  
-|[unordered_multimap](#unordered_multimap)|Construit un objet conteneur.|  
+|Type Definition|Description|  
+|[allocator_type](#allocator_type)|The type of an allocator for managing storage.|  
+|[const_iterator](#const_iterator)|The type of a constant iterator for the controlled sequence.|  
+|[const_local_iterator](#const_local_iterator)|The type of a constant bucket iterator for the controlled sequence.|  
+|[const_pointer](#const_pointer)|The type of a constant pointer to an element.|  
+|[const_reference](#const_reference)|The type of a constant reference to an element.|  
+|[difference_type](#difference_type)|The type of a signed distance between two elements.|  
+|[hasher](#hasher)|The type of the hash function.|  
+|[iterator](#iterator)|The type of an iterator for the controlled sequence.|  
+|[key_equal](#key_equal)|The type of the comparison function.|  
+|[key_type](#key_type)|The type of an ordering key.|  
+|[local_iterator](#local_iterator)|The type of a bucket iterator for the controlled sequence.|  
+|[mapped_type](#mapped_type)|The type of a mapped value associated with each key.|  
+|[pointer](#pointer)|The type of a pointer to an element.|  
+|[reference](#reference)|The type of a reference to an element.|  
+|[size_type](#size_type)|The type of an unsigned distance between two elements.|  
+|[value_type](#value_type)|The type of an element.|  
   
 |||  
 |-|-|  
-|Opérateur|Description|  
-|[unordered_multimap::operator=](#op_eq)|Copie une table de hachage.|  
+|Member Function|Description|  
+|[begin](#begin)|Designates the beginning of the controlled sequence.|  
+|[bucket](#bucket)|Gets the bucket number for a key value.|  
+|[bucket_count](#bucket_count)|Gets the number of buckets.|  
+|[bucket_size](#bucket_size)|Gets the size of a bucket.|  
+|[cbegin](#cbegin)|Designates the beginning of the controlled sequence.|  
+|[cend](#cend)|Designates the end of the controlled sequence.|  
+|[clear](#clear)|Removes all elements.|  
+|[count](#count)|Finds the number of elements matching a specified key.|  
+|[emplace](#emplace)|Adds an element constructed in place.|  
+|[emplace_hint](#emplace_hint)|Adds an element constructed in place, with hint.|  
+|[empty](#empty)|Tests whether no elements are present.|  
+|[end](#end)|Designates the end of the controlled sequence.|  
+|[equal_range](#equal_range)|Finds range that matches a specified key.|  
+|[erase](#erase)|Removes elements at specified positions.|  
+|[find](#find)|Finds an element that matches a specified key.|  
+|[get_allocator](#get_allocator)|Gets the stored allocator object.|  
+|[hash_function](#hash)|Gets the stored hash function object.|  
+|[insert](#insert)|Adds elements.|  
+|[key_eq](#key_eq)|Gets the stored comparison function object.|  
+|[load_factor](#load_factor)|Counts the average elements per bucket.|  
+|[max_bucket_count](#max_bucket_count)|Gets the maximum number of buckets.|  
+|[max_load_factor](#max_load_factor)|Gets or sets the maximum elements per bucket.|  
+|[max_size](#max_size)|Gets the maximum size of the controlled sequence.|  
+|[rehash](#rehash)|Rebuilds the hash table.|  
+|[size](#size)|Counts the number of elements.|  
+|[swap](#swap)|Swaps the contents of two containers.|  
+|[unordered_multimap](#unordered_multimap)|Constructs a container object.|  
   
-## <a name="remarks"></a>Notes  
- L’objet trie la séquence qu’il contrôle en appelant deux objets stockés, un objet de fonction de comparaison de type [unordered_multimap::key_equal](#key_equal) et un objet de fonction de hachage de type [unordered_multimap::hasher](#hasher). Pour accéder au premier objet stocké, appelez la fonction membre [unordered_multimap::key_eq](#key_eq)`()`. Pour accéder au second objet stocké, appelez la fonction membre [unordered_multimap::hash_function](#hash)`()`. Pour toutes les valeurs `X` et `Y` de type `Key`, l'appel `key_eq()(X, Y)` retourne true uniquement si les valeurs des deux arguments ont un classement équivalent. L'appel `hash_function()(keyval)` génère une distribution des valeurs de type `size_t`. Contrairement à la classe de modèle [unordered_map](../standard-library/unordered-map-class.md), un objet de classe de modèle `unordered_multimap` ne garantit pas que `key_eq()(X, Y)` a toujours la valeur false pour deux éléments quelconques de la séquence contrôlée. Il n'est pas nécessaire que les clés soient uniques.  
+|||  
+|-|-|  
+|Operator|Description|  
+|[unordered_multimap::operator=](#op_eq)|Copies a hash table.|  
   
- L'objet stocke également un facteur de charge maximale, qui spécifie le nombre moyen maximal d'éléments souhaité par compartiment. Si après l’insertion d’un élément, [unordered_multimap::load_factor](#load_factor)`()` dépasse le facteur de charge maximale, le conteneur augmente le nombre de compartiments et reconstruit la table de hachage si nécessaire.  
+## <a name="remarks"></a>Remarks  
+ The object orders the sequence it controls by calling two stored objects, a comparison function object of type [unordered_multimap::key_equal](#key_equal) and a hash function object of type [unordered_multimap::hasher](#hasher). You access the first stored object by calling the member function [unordered_multimap::key_eq](#key_eq)`()`; and you access the second stored object by calling the member function [unordered_multimap::hash_function](#hash)`()`. Specifically, for all values `X` and `Y` of type `Key`, the call `key_eq()(X, Y)` returns true only if the two argument values have equivalent ordering; the call `hash_function()(keyval)` yields a distribution of values of type `size_t`. Unlike template class [unordered_map Class](../standard-library/unordered-map-class.md), an object of template class `unordered_multimap` does not ensure that `key_eq()(X, Y)` is always false for any two elements of the controlled sequence. (Keys need not be unique.)  
   
- L'ordre réel des éléments de la séquence contrôlée dépend de la fonction de hachage, de la fonction de comparaison, de l'ordre d'insertion, du facteur de charge maximale et du nombre de compartiments. En général, il n'est pas possible de prévoir l'ordre des éléments de la séquence contrôlée. Toutefois, vous avez la garantie que tous les sous-ensembles d'éléments dont le classement est équivalent sont adjacents dans la séquence contrôlée.  
+ The object also stores a maximum load factor, which specifies the maximum desired average number of elements per bucket. If inserting an element causes [unordered_multimap::load_factor](#load_factor)`()` to exceed the maximum load factor, the container increases the number of buckets and rebuilds the hash table as needed.  
   
- L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un objet allocateur stocké de type [unordered_multimap::allocator_type](#allocator_type). Un tel objet allocateur doit avoir la même interface externe qu'un objet de classe de modèle `allocator`. Notez que l'objet allocateur stocké n'est pas copié lorsque l'objet conteneur est assigné.  
+ The actual order of elements in the controlled sequence depends on the hash function, the comparison function, the order of insertion, the maximum load factor, and the current number of buckets. You cannot in general predict the order of elements in the controlled sequence. You can always be assured, however, that any subset of elements that have equivalent ordering are adjacent in the controlled sequence.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<unordered_map>  
+ The object allocates and frees storage for the sequence it controls through a stored allocator object of type [unordered_multimap::allocator_type](#allocator_type). Such an allocator object must have the same external interface as an object of template class `allocator`. Note that the stored allocator object is not copied when the container object is assigned.  
   
- **Espace de noms :** std  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<unordered_map>  
+  
+ **Namespace:** std  
   
 ##  <a name="allocator_type"></a>  unordered_multimap::allocator_type  
- Type d’un allocateur pour la gestion du stockage.  
+ The type of an allocator for managing storage.  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme du paramètre de modèle `Alloc`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Alloc`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_allocator_type.cpp   
@@ -262,7 +347,7 @@ al == std::allocator() is true
 ```  
   
 ##  <a name="begin"></a>  unordered_multimap::begin  
- Désigne le début de la séquence contrôlée ou un compartiment.  
+ Designates the beginning of the controlled sequence or a bucket.  
   
 ```  
 iterator begin();
@@ -275,17 +360,17 @@ local_iterator begin(size_type nbucket);
 const_local_iterator begin(size_type nbucket) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Paramètre|Description|  
-|`nbucket`|Numéro de compartiment.|  
+|Parameter|Description|  
+|`nbucket`|The bucket number.|  
   
-### <a name="remarks"></a>Notes  
- Les deux premières fonctions membres retournent un itérateur vers l'avant qui pointe vers le premier élément de la séquence (ou juste après la fin d'une séquence vide). Les deux dernières fonctions membres retournent un itérateur vers l'avant qui pointe vers le premier élément du compartiment `nbucket` (ou juste après la fin d'un compartiment vide).  
+### <a name="remarks"></a>Remarks  
+ The first two member functions return a forward iterator that points at the first element of the sequence (or just beyond the end of an empty sequence). The last two member functions return a forward iterator that points at the first element of bucket `nbucket` (or just beyond the end of an empty bucket).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_begin.cpp   
@@ -331,20 +416,20 @@ int main()
 ```  
   
 ##  <a name="bucket"></a>  unordered_multimap::bucket  
- Obtient le numéro du compartiment pour une valeur de clé.  
+ Gets the bucket number for a key value.  
   
 ```  
 size_type bucket(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `keyval`  
- Valeur de clé à mapper.  
+ The key value to map.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne le numéro de compartiment correspondant actuellement à la valeur de clé `keyval`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the bucket number currently corresponding to the key value `keyval`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_bucket.cpp   
@@ -385,16 +470,16 @@ bucket_size(7) == 1
 ```  
   
 ##  <a name="bucket_count"></a>  unordered_multimap::bucket_count  
- Obtient le nombre de compartiments.  
+ Gets the number of buckets.  
   
 ```  
 size_type bucket_count() const;
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne le nombre actuel de comportements.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the current number of buckets.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_bucket_count.cpp   
@@ -471,20 +556,20 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="bucket_size"></a>  unordered_multimap::bucket_size  
- Obtient la taille d’un compartiment.  
+ Gets the size of a bucket  
   
 ```  
 size_type bucket_size(size_type nbucket) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nbucket`  
- Numéro de compartiment.  
+ The bucket number.  
   
-### <a name="remarks"></a>Notes  
- Les fonctions membres retournent la taille du compartiment numéro `nbucket`.  
+### <a name="remarks"></a>Remarks  
+ The member functions returns the size of bucket number `nbucket`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_bucket_size.cpp   
@@ -525,19 +610,19 @@ bucket_size(7) == 1
 ```  
   
 ##  <a name="cbegin"></a>  unordered_multimap::cbegin  
- Retourne un itérateur `const` qui traite le premier élément d'une plage.  
+ Returns a `const` iterator that addresses the first element in the range.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur forward `const` qui pointe vers le premier élément de la plage, ou vers l'emplacement situé juste après la fin d'une plage vide (pour une plage vide : `cbegin() == cend()`).  
+### <a name="return-value"></a>Return Value  
+ A `const` forward-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>Notes  
- Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, il est supposé que `Container` est un conteneur modifiable (autre que `const`) de tout type, prenant en charge `begin()` et `cbegin()`.  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -548,19 +633,19 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  unordered_multimap::cend  
- Retourne un itérateur `const` qui traite l'emplacement situé immédiatement après le dernier élément d'une plage.  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur forward `const` qui pointe juste après la fin de la plage.  
+### <a name="return-value"></a>Return Value  
+ A `const` forward-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>Notes  
- `cend` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, `Container` est supposé être un conteneur modifiable (autre que `const`) de type indéfini prenant en charge `end()` et `cend()`.  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -570,19 +655,19 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- La valeur retournée par `cend` ne doit pas être déréférencée.  
+ The value returned by `cend` should not be dereferenced.  
   
 ##  <a name="clear"></a>  unordered_multimap::clear  
- Supprime tous les éléments.  
+ Removes all elements.  
   
 ```  
 void clear();
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre appelle [unordered_multimap::erase](#erase)`(` [unordered_multimap::begin](#begin)`(),` [unordered_multimap::end](#end)`())`.  
+### <a name="remarks"></a>Remarks  
+ The member function calls [unordered_multimap::erase](#erase)`(` [unordered_multimap::begin](#begin)`(),` [unordered_multimap::end](#end)`())`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_clear.cpp   
@@ -639,16 +724,16 @@ empty() == false
 ```  
   
 ##  <a name="const_iterator"></a>  unordered_multimap::const_iterator  
- Type d'un itérateur constant pour la séquence contrôlée.  
+ The type of a constant iterator for the controlled sequence.  
   
 ```  
 typedef T1 const_iterator;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type décrit un objet pouvant servir d'itérateur vers l'avant constant pour la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T1`.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant forward iterator for the controlled sequence. It is described here as a synonym for the implementation-defined type `T1`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_const_iterator.cpp   
@@ -681,16 +766,16 @@ int main()
 ```  
   
 ##  <a name="const_local_iterator"></a>  unordered_multimap::const_local_iterator  
- Type d’un itérateur de compartiment constant pour la séquence contrôlée.  
+ The type of a constant bucket iterator for the controlled sequence.  
   
 ```  
 typedef T5 const_local_iterator;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type décrit un objet pouvant servir d’itérateur de constante vers l’avant pour un compartiment. Il est décrit ici comme un synonyme du type défini par l’implémentation `T5`.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant forward iterator for a bucket. It is described here as a synonym for the implementation-defined type `T5`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_const_local_iterator.cpp   
@@ -728,16 +813,16 @@ int main()
 ```  
   
 ##  <a name="const_pointer"></a>  unordered_multimap::const_pointer  
- Type d'un pointeur constant vers un élément.  
+ The type of a constant pointer to an element.  
   
 ```  
 typedef Alloc::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type décrit un objet pouvant servir de pointeur constant à un élément de la séquence contrôlée.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant pointer to an element of the controlled sequence.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_const_pointer.cpp   
@@ -773,16 +858,16 @@ int main()
 ```  
   
 ##  <a name="const_reference"></a>  unordered_multimap::const_reference  
- Type d'une référence constante à un élément.  
+ The type of a constant reference to an element.  
   
 ```  
 typedef Alloc::const_reference const_reference;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type décrit un objet pouvant servir de référence constante à un élément de la séquence contrôlée.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant reference to an element of the controlled sequence.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_const_reference.cpp   
@@ -818,20 +903,20 @@ int main()
 ```  
   
 ##  <a name="count"></a>  unordered_multimap::count  
- Recherche le nombre d’éléments qui correspondent à une clé spécifiée.  
+ Finds the number of elements matching a specified key.  
   
 ```  
 size_type count(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `keyval`  
- Valeur de clé à rechercher.  
+ Key value to search for.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne le nombre d’éléments dans la plage délimitée par [unordered_multimap::equal_range](#equal_range)`(keyval)`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of elements in the range delimited by [unordered_multimap::equal_range](#equal_range)`(keyval)`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_count.cpp   
@@ -871,16 +956,16 @@ count('C') == 0
 ```  
   
 ##  <a name="difference_type"></a>  unordered_multimap::difference_type  
- Type d'une distance signée entre deux éléments.  
+ The type of a signed distance between two elements.  
   
 ```  
 typedef T3 difference_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type d'entier signé décrit un objet qui peut représenter la différence entre les adresses de deux éléments quelconques dans la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T3`.  
+### <a name="remarks"></a>Remarks  
+ The signed integer type describes an object that can represent the difference between the addresses of any two elements in the controlled sequence. It is described here as a synonym for the implementation-defined type `T3`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_difference_type.cpp   
@@ -929,34 +1014,34 @@ begin()-end() == -3
 ```  
   
 ##  <a name="emplace"></a>  unordered_multimap::emplace  
- Insère un élément construit sur place (aucune opération de copie ni de déplacement n’est effectuée) avec un indicateur de positionnement.  
+ Inserts an element constructed in place (no copy or move operations are performed), with a placement hint.  
   
 ```  
 template <class... Args>  
 iterator emplace(Args&&... args);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Paramètre|Description|  
-|`args`|Les arguments transférés pour construire un élément à insérer dans la classe unordered_multimap.|  
+|Parameter|Description|  
+|`args`|The arguments forwarded to construct an element to be inserted into the unordered_multimap.|  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur vers l’élément qui vient d’être inséré.  
+### <a name="return-value"></a>Return Value  
+ An iterator to the newly inserted element.  
   
-### <a name="remarks"></a>Remarques  
- Aucune référence aux éléments conteneurs n’est invalidée par cette fonction, mais elle peut invalider tous les itérateurs du conteneur.  
+### <a name="remarks"></a>Remarks  
+ No references to container elements are invalidated by this function, but it may invalidate all iterators to the container.  
   
- Le [value_type](../standard-library/map-class.md#value_type) d’un élément est une paire, si bien que la valeur d’un élément est une paire ordonnée dont le premier composant est égal à la valeur de clé et le deuxième à la valeur de données de l’élément.  
+ The [value_type](../standard-library/map-class.md#value_type) of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.  
   
- Durant l’insertion, si une exception est levée mais qu’elle ne se produit pas dans la fonction de hachage du conteneur, le conteneur n’est pas modifié. Si l'exception est levée dans la fonction de hachage, le résultat n'est pas défini.  
+ During the insertion, if an exception is thrown but does not occur in the container's hash function, the container is not modified. If the exception is thrown in the hash function, the result is undefined.  
   
- Pour obtenir un exemple de code, consultez [multimap::emplace](../standard-library/multimap-class.md#emplace).  
+ For a code example, see [multimap::emplace](../standard-library/multimap-class.md#emplace).  
   
 ##  <a name="emplace_hint"></a>  unordered_multimap::emplace_hint  
- Insère un élément construit sur place (aucune opération de copie ni de déplacement n’est effectuée) avec un indicateur de positionnement.  
+ Inserts an element constructed in place (no copy or move operations are performed), with a placement hint.  
   
 ```  
 template <class... Args>  
@@ -965,37 +1050,37 @@ iterator emplace_hint(
     Args&&... args);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Paramètre|Description|  
-|`args`|Les arguments transférés pour construire un élément à insérer dans la classe unordered.|  
-|`where`|Indicateur concernant l’emplacement où commencer à rechercher le point d’insertion correct.|  
+|Parameter|Description|  
+|`args`|The arguments forwarded to construct an element to be inserted into the unordered.|  
+|`where`|A hint regarding the place to start searching for the correct point of insertion.|  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur vers l’élément qui vient d’être inséré.  
+### <a name="return-value"></a>Return Value  
+ An iterator to the newly inserted element.  
   
-### <a name="remarks"></a>Remarques  
- Aucune référence aux éléments conteneurs n’est invalidée par cette fonction, mais elle peut invalider tous les itérateurs du conteneur.  
+### <a name="remarks"></a>Remarks  
+ No references to container elements are invalidated by this function, but it may invalidate all iterators to the container.  
   
- Durant l’insertion, si une exception est levée mais qu’elle ne se produit pas dans la fonction de hachage du conteneur, le conteneur n’est pas modifié. Si l'exception est levée dans la fonction de hachage, le résultat n'est pas défini.  
+ During the insertion, if an exception is thrown but does not occur in the container's hash function, the container is not modified. If the exception is thrown in the hash function, the result is undefined.  
   
- Le [value_type](../standard-library/map-class.md#value_type) d’un élément est une paire, si bien que la valeur d’un élément est une paire ordonnée dont le premier composant est égal à la valeur de clé et le deuxième à la valeur de données de l’élément.  
+ The [value_type](../standard-library/map-class.md#value_type) of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.  
   
- Pour obtenir un exemple de code, consultez [map::emplace_hint](../standard-library/map-class.md#emplace_hint).  
+ For a code example, see [map::emplace_hint](../standard-library/map-class.md#emplace_hint).  
   
 ##  <a name="empty"></a>  unordered_multimap::empty  
- Vérifie l'absence d'éléments.  
+ Tests whether no elements are present.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne la valeur true pour une séquence contrôlée vide.  
+### <a name="remarks"></a>Remarks  
+ The member function returns true for an empty controlled sequence.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_empty.cpp   
@@ -1052,7 +1137,7 @@ empty() == false
 ```  
   
 ##  <a name="end"></a>  unordered_multimap::end  
- Désigne la fin de la séquence contrôlée.  
+ Designates the end of the controlled sequence.  
   
 ```  
 iterator end();
@@ -1065,17 +1150,17 @@ local_iterator end(size_type nbucket);
 const_local_iterator end(size_type nbucket) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Paramètre|Description|  
-|`nbucket`|Numéro de compartiment.|  
+|Parameter|Description|  
+|`nbucket`|The bucket number.|  
   
-### <a name="remarks"></a>Notes  
- Les deux premières fonctions membres retournent un itérateur vers l'avant qui pointe juste après la fin de la séquence. Les deux dernières fonctions membres retournent un itérateur vers l'avant qui pointe juste après la fin du compartiment `nbucket`.  
+### <a name="remarks"></a>Remarks  
+ The first two member functions return a forward iterator that points just beyond the end of the sequence. The last two member functions return a forward iterator that points just beyond the end of bucket `nbucket`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_end.cpp   
@@ -1123,7 +1208,7 @@ int main()
 ```  
   
 ##  <a name="equal_range"></a>  unordered_multimap::equal_range  
- Recherche une plage qui correspond à une clé spécifiée.  
+ Finds range that matches a specified key.  
   
 ```  
 std::pair<iterator, iterator>  
@@ -1133,14 +1218,14 @@ std::pair<const_iterator, const_iterator>
     equal_range(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `keyval`  
- Valeur de clé à rechercher.  
+ Key value to search for.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne une paire d’itérateurs `X` tel que `[X.first, X.second)` délimite uniquement les éléments de la séquence contrôlée qui ont un classement équivalent à `keyval`. Si aucun de ces éléments n’existe, les deux itérateurs sont `end()`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns a pair of iterators `X` such that `[X.first, X.second)` delimits just those elements of the controlled sequence that have equivalent ordering with `keyval`. If no such elements exist, both iterators are `end()`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_equal_range.cpp   
@@ -1192,7 +1277,7 @@ equal_range('b'): [b, 2]
 ```  
   
 ##  <a name="erase"></a>  unordered_multimap::erase  
- Supprime un élément ou une plage d’éléments dans une classe unordered_multimap aux positions spécifiées ou supprime les éléments qui correspondent à une clé spécifiée.  
+ Removes an element or a range of elements in a unordered_multimap from specified positions or removes elements that match a specified key.  
   
 ```  
 iterator erase(
@@ -1206,42 +1291,42 @@ size_type erase(
     const key_type& Key);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Where`  
- Position de l’élément à supprimer.  
+ Position of the element to be removed.  
   
  `First`  
- Position du premier élément à supprimer.  
+ Position of the first element to be removed.  
   
  `Last`  
- Position juste après le dernier élément à supprimer.  
+ Position just beyond the last element to be removed.  
   
  `Key`  
- Valeur de clé des éléments à supprimer.  
+ The key value of the elements to be removed.  
   
-### <a name="return-value"></a>Valeur de retour  
- Pour les deux premières fonctions membres, un itérateur bidirectionnel qui désigne le premier élément restant après tous les éléments supprimés, ou un élément à la fin de la classe map si aucun élément de ce type n’existe.  
+### <a name="return-value"></a>Return Value  
+ For the first two member functions, a bidirectional iterator that designates the first element remaining beyond any elements removed, or an element that is the end of the map if no such element exists.  
   
- Pour la troisième fonction membre, retourne le nombre d’éléments qui ont été supprimés de la classe unordered_multimap.  
+ For the third member function, returns the number of elements that have been removed from the unordered_multimap.  
   
-### <a name="remarks"></a>Notes  
- Pour obtenir un exemple de code, consultez [map::erase](../standard-library/map-class.md#erase).  
+### <a name="remarks"></a>Remarks  
+ For a code example, see [map::erase](../standard-library/map-class.md#erase).  
   
 ##  <a name="find"></a>  unordered_multimap::find  
- Recherche un élément qui correspond à une clé spécifiée.  
+ Finds an element that matches a specified key.  
   
 ```  
 const_iterator find(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `keyval`  
- Valeur de clé à rechercher.  
+ Key value to search for.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne [unordered_multimap::equal_range](#equal_range)`(keyval).first`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [unordered_multimap::equal_range](#equal_range)`(keyval).first`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_find.cpp   
@@ -1286,16 +1371,16 @@ find('b') == true: [b, 2]
 ```  
   
 ##  <a name="get_allocator"></a>  unordered_multimap::get_allocator  
- Obtient l’objet allocateur stocké.  
+ Gets the stored allocator object.  
   
 ```  
 Alloc get_allocator() const;
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne l’objet d’allocateur stocké.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored allocator object.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_get_allocator.cpp   
@@ -1323,16 +1408,16 @@ al == std::allocator() is true
 ```  
   
 ##  <a name="hash"></a>  unordered_multimap::hash_function  
- Obtient l'objet de fonction de hachage stocké.  
+ Gets the stored hash function object.  
   
 ```  
 Hash hash_function() const;
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne l’objet de fonction de hachage stocké.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored hash function object.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_hash_function.cpp   
@@ -1360,16 +1445,16 @@ hfn('b') == 1647086
 ```  
   
 ##  <a name="hasher"></a>  unordered_multimap::hasher  
- Type de la fonction de hachage.  
+ The type of the hash function.  
   
 ```  
 typedef Hash hasher;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme du paramètre de modèle `Hash`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Hash`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_hasher.cpp   
@@ -1397,7 +1482,7 @@ hfn('b') == 1647086
 ```  
   
 ##  <a name="insert"></a>  unordered_multimap::insert  
- Insère un élément ou une plage d'éléments dans une classe unordered_multimap.  
+ Inserts an element or a range of elements into an unordered_multimap.  
   
 ```  
 // (1) single element  
@@ -1438,50 +1523,50 @@ void insert(
 IList);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Paramètre|Description|  
-|`Val`|Valeur d'un élément à insérer dans la classe unordered_multimap.|  
-|`Where`|Emplacement où commencer à rechercher le point d'insertion correct.|  
-|`ValTy`|Paramètre de modèle qui spécifie le type d’argument que la classe unordered_multimap peut utiliser pour construire un élément de [value_type](../standard-library/map-class.md#value_type) et effectue un transfert parfait de `Val` comme argument.|  
-|`First`|Position du premier élément à copier.|  
-|`Last`|Position juste au-delà du dernier élément à copier.|  
-|`InputIterator`|Argument de fonction de modèle qui remplit les conditions requises par un [itérateur d’entrée](../standard-library/input-iterator-tag-struct.md) qui pointe vers des éléments d’un type pouvant servir à construire des objets [value_type](../standard-library/map-class.md#value_type).|  
-|`IList`|[initializer_list](../standard-library/initializer-list.md) à partir de laquelle copier les éléments.|  
+|Parameter|Description|  
+|`Val`|The value of an element to be inserted into the unordered_multimap.|  
+|`Where`|The place to start searching for the correct point of insertion.|  
+|`ValTy`|Template parameter that specifies the argument type that the unordered_multimap can use to construct an element of [value_type](../standard-library/map-class.md#value_type), and perfect-forwards `Val` as an argument.|  
+|`First`|The position of the first element to be copied.|  
+|`Last`|The position just beyond the last element to be copied.|  
+|`InputIterator`|Template function argument that meets the requirements of an [input iterator](../standard-library/input-iterator-tag-struct.md) that points to elements of a type that can be used to construct [value_type](../standard-library/map-class.md#value_type) objects.|  
+|`IList`|The [initializer_list](../standard-library/initializer-list.md) from which to copy the elements.|  
   
-### <a name="return-value"></a>Valeur de retour  
- Les fonctions membres d'insertion à un élément, (1) et (2), retournent un itérateur vers l'emplacement où le nouvel élément a été inséré dans la classe unordered_multimap.  
+### <a name="return-value"></a>Return Value  
+ The single-element-insert member functions, (1) and (2), return an iterator to the position where the new element was inserted into the unordered_multimap.  
   
- Les fonctions membres à un élément avec indicateur, (3) et (4), retournent un itérateur qui pointe vers l'emplacement où le nouvel élément a été inséré dans la classe unordered_multimap.  
+ The single-element-with-hint member functions, (3) and (4), return an iterator that points to the position where the new element was inserted into the unordered_multimap.  
   
-### <a name="remarks"></a>Notes  
- Aucun pointeur ou référence n'est invalidé par cette fonction, mais elle peut invalider tous les itérateurs du conteneur.  
+### <a name="remarks"></a>Remarks  
+ No pointers or references are invalidated by this function, but it may invalidate all iterators to the container.  
   
- Durant l'insertion d'un seul élément, si une exception est levée mais qu'elle ne se produit pas dans la fonction de hachage du conteneur, l'état du conteneur n'est pas modifié. Si l'exception est levée dans la fonction de hachage, le résultat n'est pas défini. Durant l'insertion de plusieurs éléments, si une exception est levée, le conteneur reste dans un état non spécifié mais valide.  
+ During the insertion of just one element, if an exception is thrown but does not occur in the container's hash function, the container's state is not modified. If the exception is thrown in the hash function, the result is undefined. During the insertion of multiple elements, if an exception is thrown, the container is left in an unspecified but valid state.  
   
- Le [value_type](../standard-library/map-class.md#value_type) d’un conteneur est un typedef qui appartient au conteneur et, pour la classe map, `map<K, V>::value_type` est `pair<const K, V>`. La valeur d'un élément est une paire ordonnée dans laquelle le premier composant est égal à la valeur de clé et le second composant est égal à la valeur de données de l'élément.  
+ The [value_type](../standard-library/map-class.md#value_type) of a container is a typedef that belongs to the container, and for map, `map<K, V>::value_type` is `pair<const K, V>`. The value of an element is an ordered pair in which the first component is equal to the key value and the second component is equal to the data value of the element.  
   
- La fonction membre de plage (5) insère la séquence de valeurs d'éléments dans une classe unordered_multimap qui correspond à chaque élément traité par un itérateur dans la plage `[First, Last)` ; ainsi, `Last` n'est pas inséré. La fonction membre de conteneur `end()` fait référence à la position qui suit le dernier élément du conteneur. Par exemple, l'instruction `m.insert(v.begin(), v.end());` insère tous les éléments de `v` dans `m`.  
+ The range member function (5) inserts the sequence of element values into an unordered_multimap that corresponds to each element addressed by an iterator in the range `[First, Last)`; therefore, `Last` does not get inserted. The container member function `end()` refers to the position just after the last element in the container—for example, the statement `m.insert(v.begin(), v.end());` inserts all elements of `v` into `m`.  
   
- La fonction membre de liste d’initialiseurs (6) utilise un objet [initializer_list](../standard-library/initializer-list.md) pour copier des éléments dans l’objet unordered_multimap.  
+ The initializer list member function (6) uses an [initializer_list](../standard-library/initializer-list.md) to copy elements into the unordered_multimap.  
   
- Pour l’insertion d’un élément construit sur place (aucune opération de copie ni de déplacement n’est effectuée), consultez [unordered_multimap::emplace](#emplace) et [unordered_multimap::emplace_hint](#emplace_hint).  
+ For insertion of an element constructed in place—that is, no copy or move operations are performed—see [unordered_multimap::emplace](#emplace) and [unordered_multimap::emplace_hint](#emplace_hint).  
   
- Pour obtenir un exemple de code, consultez [multimap::insert](../standard-library/multiset-class.md#insert).  
+ For a code example, see [multimap::insert](../standard-library/multiset-class.md#insert).  
   
 ##  <a name="iterator"></a>  unordered_multimap::iterator  
- Type d'un itérateur pour la séquence contrôlée.  
+ The type of an iterator for the controlled sequence.  
   
 ```  
 typedef T0 iterator;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type décrit un objet pouvant servir d’itérateur forward pour la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T0`.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a forward iterator for the controlled sequence. It is described here as a synonym for the implementation-defined type `T0`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_iterator.cpp   
@@ -1514,16 +1599,16 @@ int main()
 ```  
   
 ##  <a name="key_eq"></a>  unordered_multimap::key_eq  
- Obtient l'objet de fonction de comparaison stocké.  
+ Gets the stored comparison function object.  
   
 ```  
 Pred key_eq() const;
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne l’objet de fonction de comparaison stocké.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored comparison function object.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_key_eq.cpp   
@@ -1553,16 +1638,16 @@ cmpfn('a', 'b') == false
 ```  
   
 ##  <a name="key_equal"></a>  unordered_multimap::key_equal  
- Type de la fonction de comparaison.  
+ The type of the comparison function.  
   
 ```  
 typedef Pred key_equal;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme du paramètre de modèle `Pred`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Pred`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_key_equal.cpp   
@@ -1592,16 +1677,16 @@ cmpfn('a', 'b') == false
 ```  
   
 ##  <a name="key_type"></a>  unordered_multimap::key_type  
- Type d'une clé de tri.  
+ The type of an ordering key.  
   
 ```  
 typedef Key key_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme du paramètre de modèle `Key`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Key`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_key_type.cpp   
@@ -1646,16 +1731,16 @@ int main()
 ```  
   
 ##  <a name="load_factor"></a>  unordered_multimap::load_factor  
- Compte le nombre moyen d'éléments par compartiment.  
+ Counts the average elements per bucket.  
   
 ```  
 float load_factor() const;
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne `(float)`[unordered_multimap::size](#size)`() / (float)`[unordered_multimap::bucket_count](#bucket_count)`()`, le nombre moyen d’éléments par compartiment.  
+### <a name="remarks"></a>Remarks  
+ The member function returns `(float)`[unordered_multimap::size](#size)`() / (float)`[unordered_multimap::bucket_count](#bucket_count)`()`, the average number of elements per bucket.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_load_factor.cpp   
@@ -1713,16 +1798,16 @@ int main()
 ```  
   
 ##  <a name="local_iterator"></a>  unordered_multimap::local_iterator  
- Type d'un itérateur de compartiment.  
+ The type of a bucket iterator.  
   
 ```  
 typedef T4 local_iterator;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type décrit un objet pouvant servir d'itérateur vers l'avant pour un compartiment. Il est décrit ici comme un synonyme du type défini par l'implémentation `T4`.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a forward iterator for a bucket. It is described here as a synonym for the implementation-defined type `T4`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_local_iterator.cpp   
@@ -1760,16 +1845,16 @@ int main()
 ```  
   
 ##  <a name="mapped_type"></a>  unordered_multimap::mapped_type  
- Type d'une valeur mappée associée à chaque clé.  
+ The type of a mapped value associated with each key.  
   
 ```  
 typedef Ty mapped_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme du paramètre de modèle `Ty`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Ty`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_mapped_type.cpp   
@@ -1814,16 +1899,16 @@ int main()
 ```  
   
 ##  <a name="max_bucket_count"></a>  unordered_multimap::max_bucket_count  
- Obtient le nombre maximal de compartiments.  
+ Gets the maximum number of buckets.  
   
 ```  
 size_type max_bucket_count() const;
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne le nombre maximal de compartiments actuellement autorisés.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the maximum number of buckets currently permitted.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_max_bucket_count.cpp   
@@ -1900,7 +1985,7 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="max_load_factor"></a>  unordered_multimap::max_load_factor  
- Obtient ou définit le nombre maximal d’éléments par compartiment.  
+ Gets or sets the maximum elements per bucket.  
   
 ```  
 float max_load_factor() const;
@@ -1909,14 +1994,14 @@ float max_load_factor() const;
 void max_load_factor(float factor);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `factor`  
- Nouveau facteur de charge maximale.  
+ The new maximum load factor.  
   
-### <a name="remarks"></a>Notes  
- La première fonction membre retourne le facteur de charge maximale stockée. La seconde fonction membre retourne le facteur de charge maximale stockée avec `factor`.  
+### <a name="remarks"></a>Remarks  
+ The first member function returns the stored maximum load factor. The second member function replaces the stored maximum load factor with `factor`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_max_load_factor.cpp   
@@ -1993,16 +2078,16 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="max_size"></a>  unordered_multimap::max_size  
- Obtient ou définit la taille maximale de la séquence contrôlée.  
+ Gets the maximum size of the controlled sequence.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne la longueur de la séquence la plus longue que l'objet peut contrôler.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the length of the longest sequence that the object can control.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_max_size.cpp   
@@ -2027,7 +2112,7 @@ max_size() == 536870911
 ```  
   
 ##  <a name="op_eq"></a>  unordered_multimap::operator=  
- Copie une table de hachage.  
+ Copies a hash table.  
   
 ```  
 unordered_multimap& operator=(const unordered_multimap& right);
@@ -2035,17 +2120,17 @@ unordered_multimap& operator=(const unordered_multimap& right);
 unordered_multimap& operator=(unordered_multimap&& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Paramètre|Description|  
-|`right`|unordered_multimap qui est copié dans le unordered_multimap.|  
+|Parameter|Description|  
+|`right`|The unordered_multimap being copied into the unordered_multimap.|  
   
-### <a name="remarks"></a>Notes  
- Après l'effacement des éléments existants dans un unordered_multimap, `operator=` copie ou déplace le contenu de `right` dans le unordered_multimap.  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in a unordered_multimap, `operator=` either copies or moves the contents of `right` into the unordered_multimap.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // unordered_multimap_operator_as.cpp  
@@ -2083,16 +2168,16 @@ int main( )
 ```  
   
 ##  <a name="pointer"></a>  unordered_multimap::pointer  
- Type d'un pointeur vers un élément.  
+ The type of a pointer to an element.  
   
 ```  
 typedef Alloc::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type décrit un objet pouvant servir de pointeur vers un élément de la séquence contrôlée.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a pointer to an element of the controlled sequence.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_pointer.cpp   
@@ -2128,16 +2213,16 @@ int main()
 ```  
   
 ##  <a name="reference"></a>  unordered_multimap::reference  
- Type d'une référence à un élément.  
+ The type of a reference to an element.  
   
 ```  
 typedef Alloc::reference reference;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type décrit un objet qui peut servir de référence à un élément de la séquence contrôlée.  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a reference to an element of the controlled sequence.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_reference.cpp   
@@ -2173,20 +2258,20 @@ int main()
 ```  
   
 ##  <a name="rehash"></a>  unordered_multimap::rehash  
- Régénère la table de hachage.  
+ Rebuilds the hash table.  
   
 ```  
 void rehash(size_type nbuckets);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nbuckets`  
- Nombre de compartiments demandés.  
+ The requested number of buckets.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre modifie le nombre de compartiments pour qu’il soit au moins égal à `nbuckets` et régénère la table de hachage en fonction des besoins.  
+### <a name="remarks"></a>Remarks  
+ The member function alters the number of buckets to be at least `nbuckets` and rebuilds the hash table as needed.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_rehash.cpp   
@@ -2249,16 +2334,16 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="size"></a>  unordered_multimap::size  
- Compte le nombre d'éléments.  
+ Counts the number of elements.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne la longueur de la séquence contrôlée.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the length of the controlled sequence.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_size.cpp   
@@ -2315,16 +2400,16 @@ empty() == false
 ```  
   
 ##  <a name="size_type"></a>  unordered_multimap::size_type  
- Type d'une distance non signée entre deux éléments.  
+ The type of an unsigned distance between two elements.  
   
 ```  
 typedef T2 size_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type d'entier non signé décrit un objet qui peut représenter la longueur de n'importe quelle séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T2`.  
+### <a name="remarks"></a>Remarks  
+ The unsigned integer type describes an object that can represent the length of any controlled sequence. It is described here as a synonym for the implementation-defined type `T2`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_size_type.cpp   
@@ -2350,20 +2435,20 @@ size == 0
 ```  
   
 ##  <a name="swap"></a>  unordered_multimap::swap  
- Échange le contenu de deux conteneurs.  
+ Swaps the contents of two containers.  
   
 ```  
 void swap(unordered_multimap& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Conteneur avec lequel faire l’échange.  
+ The container to swap with.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre échange les séquences contrôlées entre `*this` et `right`. Si [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()`, elle le fait en un temps constant, elle lève une exception seulement dans le cas de la copie de l’objet traits stocké de type `Tr`, et n’invalide aucune référence, ni aucun pointeur ou itérateur, qui désigne des éléments dans les deux séquences contrôlées. Sinon, elle effectue un nombre d’affectations d’éléments et d’appels de constructeurs proportionnel au nombre d’éléments dans les deux séquences contrôlées.  
+### <a name="remarks"></a>Remarks  
+ The member function swaps the controlled sequences between `*this` and `right`. If [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()`, it does so in constant time, it throws an exception only as a result of copying the stored traits object of type `Tr`, and it invalidates no references, pointers, or iterators that designate elements in the two controlled sequences. Otherwise, it performs a number of element assignments and constructor calls proportional to the number of elements in the two controlled sequences.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_swap.cpp   
@@ -2420,7 +2505,7 @@ int main()
 ```  
   
 ##  <a name="unordered_multimap"></a>  unordered_multimap::unordered_multimap  
- Construit un objet conteneur.  
+ Constructs a container object.  
   
 ```  
 unordered_multimap(
@@ -2469,33 +2554,33 @@ unordered_multimap(
     const Allocator& Al = Alloc());
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Paramètre|Description|  
-|`InputIterator`|Type d'itérateur.|  
-|`Al`|Objet allocateur à stocker.|  
-|`Comp`|Objet de fonction de comparaison à stocker.|  
-|`Hash`|Objet de fonction de hachage à stocker.|  
-|`Bucket_count`|Nombre minimal de compartiments.|  
-|`Right`|Conteneur à copier.|  
-|`IList`|Initializer_list depuis laquelle copier les éléments.|  
+|Parameter|Description|  
+|`InputIterator`|The iterator type.|  
+|`Al`|The allocator object to store.|  
+|`Comp`|The comparison function object to store.|  
+|`Hash`|The hash function object to store.|  
+|`Bucket_count`|The minimum number of buckets.|  
+|`Right`|The container to copy.|  
+|`IList`|The initializer_list from which to copy the elements.|  
   
-### <a name="remarks"></a>Notes  
- Le premier constructeur spécifie une copie de la séquence contrôlée par `Right`. Le deuxième constructeur spécifie une séquence vide contrôlée. Le troisième constructeur spécifie une copie de la séquence en déplaçant `Right`. Le quatrième, le cinquième, le sixième, le septième et le huitième constructeurs utilisent une initializer_list pour les membres. Le neuvième constructeur insère la séquence de valeurs d'éléments `[First, Last)`.  
+### <a name="remarks"></a>Remarks  
+ The first constructor specifies a copy of the sequence controlled by `Right`. The second constructor specifies an empty controlled sequence. The third constructor. specifies a copy of the sequence by moving `Right`. The fourth, fifth, sixth, seventh, and eighth constructors use an initializer_list for the members. The ninth constructor inserts the sequence of element values `[First, Last)`.  
   
- Tous les constructeurs initialisent également plusieurs valeurs stockées. Pour le constructeur de copie, les valeurs sont obtenues à partir de `Right`. Sinon :  
+ All constructors also initialize several stored values. For the copy constructor, the values are obtained from `Right`. Otherwise:  
   
- Le nombre minimal de compartiments est l'argument `Bucket_count`, s'il existe ; sinon c'est une valeur par défaut décrite ici comme valeur `N0` définie par l'implémentation.  
+ The minimum number of buckets is the argument `Bucket_count`, if present; otherwise it is a default value described here as the implementation-defined value `N0`.  
   
- L'objet de fonction de hachage est l'argument `Hash`, s'il existe ; sinon c'est `Hash()`.  
+ The hash function object is the argument `Hash`, if present; otherwise it is `Hash()`.  
   
- L'objet de fonction de comparaison est l'argument `Comp`, s'il existe ; sinon c'est `Pred()`.  
+ The comparison function object is the argument `Comp`, if present; otherwise it is `Pred()`.  
   
- L'objet allocateur est l'argument `Al`, s'il existe ; sinon, c'est `Alloc()`.  
+ The allocator object is the argument `Al`, if present; otherwise, it is `Alloc()`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_construct.cpp   
@@ -2620,16 +2705,16 @@ int main()
 ```  
   
 ##  <a name="value_type"></a>  unordered_multimap::value_type  
- Type d’un élément.  
+ The type of an element.  
   
 ```  
 typedef std::pair<const Key, Ty> value_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Ce type décrit un élément de la séquence contrôlée.  
+### <a name="remarks"></a>Remarks  
+ The type describes an element of the controlled sequence.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_map__unordered_multimap_value_type.cpp   
@@ -2673,10 +2758,10 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<unordered_map>](../standard-library/unordered-map.md)   
- [Conteneurs](../cpp/containers-modern-cpp.md)   
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+ [Containers](../cpp/containers-modern-cpp.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

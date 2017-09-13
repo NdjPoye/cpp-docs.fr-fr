@@ -1,38 +1,57 @@
 ---
-title: "Modification des &#233;tiquettes de contr&#244;les d&#39;arborescence | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl (classe), modifier les étiquettes"
-  - "modifier les étiquettes de contrôles d'arborescence"
-  - "modification d'étiquette dans la classe CTreeCtrl"
-  - "contrôles d'arborescence, modification d'étiquette"
+title: Tree Control Label Editing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- editing tree control labels
+- CTreeCtrl class [MFC], editing labels
+- label editing in CTreeCtrl class [MFC]
+- tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Modification des &#233;tiquettes de contr&#244;les d&#39;arborescence
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 51c2f148861015f7d34c25f1f94c3047dd627aaa
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-L'utilisateur peut modifier directement les noms des éléments dans un contrôle d'arborescence \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) qui contient le style de **TVS\_EDITLABELS**.  L'utilisateur démarre la modification en cliquant sur le nom de l'élément qui est active.  Une application engage la modifier à l'aide de la fonction membre [EditLabel](../Topic/CTreeCtrl::EditLabel.md).  L'arborescence envoie une notification en cas de démarrage et lorsqu'il est annulée ou terminé.  Lorsque la modification est terminé, vous êtes chargé de mettre à jour le nom de l'élément, le cas échéant.  
+---
+# <a name="tree-control-label-editing"></a>Tree Control Label Editing
+The user can directly edit the labels of items in a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) that has the **TVS_EDITLABELS** style. The user begins editing by clicking the label of the item that has the focus. An application begins editing by using the [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) member function. The tree control sends the notification when editing begins and when it is canceled or completed. When editing is completed, you are responsible for updating the item's label, if appropriate.  
   
- Lorsque le changement de nom commence, un contrôle d'arborescence envoie un message de notification [TVN\_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506).  Lors de cette notification, vous pouvez autoriser la modification des noms et empêcher la modification d'autres informations.  Retourne 0 autorise la modification, et retourner une valeur non nulle l'empêché.  
+ When label editing begins, a tree control sends a [TVN_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) notification message. By processing this notification, you can allow editing of some labels and prevent editing of others. Returning 0 allows editing, and returning nonzero prevents it.  
   
- Lorsque le changement de nom est annulée ou terminée, un contrôle d'arborescence envoie un message de notification [TVN\_ENDLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773515).  Le paramètre d'`lParam` est l'adresse d'une structure [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418).  Le membre de **élément** est une structure [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) qui identifie l'élément y compris le texte modifié.  Vous êtes chargé de mettre à jour le nom de l'élément, le cas échéant, par exemple après avoir validé la chaîne modifiée.  Le membre **pszText** de`TV_ITEM` autorisé est 0 si la modification est annulé.  
+ When label editing is canceled or completed, a tree control sends a [TVN_ENDLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773515) notification message. The `lParam` parameter is the address of a [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) structure. The **item** member is a [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) structure that identifies the item and includes the edited text. You are responsible for updating the item's label, if appropriate, perhaps after validating the edited string. The **pszText** member of `TV_ITEM` is 0 if editing is canceled.  
   
- Lors de le changement de nom, généralement en réponse au message de notification [TVN\_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506), vous pouvez obtenir un pointeur vers le contrôle d'édition utilisée pour le changement de nom à l'aide de la fonction membre [GetEditControl](../Topic/CTreeCtrl::GetEditControl.md).  Vous pouvez appeler la fonction membre [SetLimitText](../Topic/CEdit::SetLimitText.md) du contrôle d'édition pour limiter la quantité de texte qu'un utilisateur peut entrer ou sous\-classe le contrôle d'édition pour désactiver et ignorer les caractères non valides.  Notez, toutefois, que le contrôle d'édition s'affiche uniquement *après* que**TVN\_BEGINLABELEDIT** est envoyé.  
+ During label editing, typically in response to the [TVN_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) notification message, you can get a pointer to the edit control used for label editing by using the [GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) member function. You can call the edit control's [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) member function to limit the amount of text a user can enter or subclass the edit control to intercept and discard invalid characters. Note, however, that the edit control is displayed only *after* **TVN_BEGINLABELEDIT** is sent.  
   
-## Voir aussi  
- [Utilisation de CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

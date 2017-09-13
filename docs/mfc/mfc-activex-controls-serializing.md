@@ -1,101 +1,119 @@
 ---
-title: "Contr&#244;les ActiveX MFC&#160;: s&#233;rialisation | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_wVerMinor"
-  - "DoPropExchange"
-  - "_wVerMajor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DoPropExchange (méthode)"
-  - "ExchangeVersion (méthode)"
-  - "GetVersion (méthode)"
-  - "contrôles ActiveX MFC, sérialisation"
-  - "contrôles ActiveX MFC, prise en charge des versions"
-  - "contrôle de version des contrôles ActiveX"
-  - "wVerMajor global (constante)"
-  - "wVerMinor global (constante)"
+title: 'MFC ActiveX Controls: Serializing | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _wVerMinor
+- DoPropExchange
+- _wVerMajor
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], version support
+- wVerMinor global constant [MFC]
+- GetVersion method [MFC]
+- ExchangeVersion method [MFC]
+- MFC ActiveX controls [MFC], serializing
+- DoPropExchange method [MFC]
+- versioning ActiveX controls
+- wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Contr&#244;les ActiveX MFC&#160;: s&#233;rialisation
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4594131d8814122b93b0132dc2c5e121cae2e3ba
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cet article explique comment sérialiser un contrôle ActiveX.  La sérialisation est le processus de lire ou d'écrire dans un support de stockage permanent, tel qu'un fichier de disque.  La bibliothèque Microsoft Foundation Class \(MFC\) fournit une prise en charge intégrée pour la sérialisation de la classe `CObject`.  `COleControl` étend cette prise en charge des contrôles ActiveX via l'utilisation d'un mécanisme d'échange de propriétés.  
+---
+# <a name="mfc-activex-controls-serializing"></a>MFC ActiveX Controls: Serializing
+This article discusses how to serialize an ActiveX control. Serialization is the process of reading from or writing to a persistent storage medium, such as a disk file. The Microsoft Foundation Class (MFC) Library provides built-in support for serialization in class `CObject`. `COleControl` extends this support to ActiveX controls through the use of a property exchange mechanism.  
   
- La sérialisation des contrôles ActiveX est implémentée en remplaçant [COleControl::DoPropExchange](../Topic/COleControl::DoPropExchange.md).  Cette fonction, appelée pendant le chargement et l'enregistrement de l'objet de contrôle, stocke toutes les propriétés qui sont exécutées avec une variable membre ou une variable membre à la notification de modification.  
+ Serialization for ActiveX controls is implemented by overriding [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). This function, called during the loading and saving of the control object, stores all properties implemented with a member variable or a member variable with change notification.  
   
- Les rubriques suivantes expliquent les principaux problèmes liés à sérialiser un contrôle ActiveX :  
+ The following topics cover the main issues related to serializing an ActiveX control:  
   
--   Implémentation de la fonction de `DoPropExchange` pour sérialiser l'objet de contrôle  
+-   Implementing `DoPropExchange` function to serialize your control object  
   
--   [Personnalisation du processus de sérialisation](#_core_customizing_the_default_behavior_of_dopropexchange)  
+-   [Customizing the Serialization Process](#_core_customizing_the_default_behavior_of_dopropexchange)  
   
--   [Implémenter la prise en charge des versions](#_core_implementing_version_support)  
+-   [Implementing Version Support](#_core_implementing_version_support)  
   
-##  <a name="_core_implementing_the_dopropexchange_function"></a> Implémentation de la fonction de FaireEchangeProprietaire  
- Lorsque vous utilisez l'Assistant Contrôle ActiveX pour générer le projet de contrôle, plusieurs fonctions gestionnaires par défaut sont ajoutées automatiquement à la classe de contrôle, y compris l'implémentation par défaut de [COleControl::DoPropExchange](../Topic/COleControl::DoPropExchange.md).  L'exemple suivant montre le code ajouté aux classes générées à l'aide de l'Assistant Contrôle ActiveX :  
+##  <a name="_core_implementing_the_dopropexchange_function"></a> Implementing the DoPropExchange Function  
+ When you use the ActiveX Control Wizard to generate the control project, several default handler functions are automatically added to the control class, including the default implementation of [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). The following example shows the code added to classes created with the ActiveX Control Wizard:  
   
- [!code-cpp[NVC_MFC_AxUI#43](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#43](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_1.cpp)]  
   
- Si vous souhaitez rendre une propriété persistante, modifiez `DoPropExchange` en ajoutant un appel à la fonction d'échange de propriétés.  L'exemple suivant illustre la sérialisation d'une propriété booléenne personnalisée de CircleShape, où la propriété de CircleShape a une valeur par défaut de **TRUE**:  
+ If you want to make a property persistent, modify `DoPropExchange` by adding a call to the property exchange function. The following example demonstrates the serialization of a custom Boolean CircleShape property, where the CircleShape property has a default value of **TRUE**:  
   
- [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_2.cpp)]  
-[!code-cpp[NVC_MFC_AxSer#2](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]  
+[!code-cpp[NVC_MFC_AxSer#2](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_3.cpp)]  
   
- Le tableau suivant répertorie les fonctions possibles d'échange des propriétés que vous pouvez utiliser pour sérialiser les propriétés du contrôle :  
+ The following table lists the possible property exchange functions you can use to serialize the control's properties:  
   
-|Fonctions d'échange de propriétés|Objectif|  
-|---------------------------------------|--------------|  
-|**PX\_Blob\( \)**|Sérialise un type d'objet binaire large \(BLOB\) propriété d'information.|  
-|**PX\_Bool\( \)**|Sérialise une propriété de type booléen.|  
-|**PX\_Color\( \)**|Sérialise une propriété de couleur de type.|  
-|**PX\_Currency\( \)**|Sérialise une propriété de type **CY**.|  
-|**PX\_Double\( \)**|Sérialise une propriété de type **double**.|  
-|**PX\_Font\( \)**|Sérialise une propriété de type de police de caractères.|  
-|**PX\_Float\( \)**|Sérialise une propriété de type de **float**.|  
-|**PX\_IUnknown\( \)**|Sérialise une propriété de type `LPUNKNOWN`.|  
-|**PX\_Long\( \)**|Sérialise une propriété de type **long**.|  
-|**PX\_Picture\( \)**|Sérialise une propriété de type image.|  
-|**PX\_Short\( \)**|Sérialise une propriété de type **short**.|  
-|**PX\_String\( \)**|Sérialise une propriété de type `CString`.|  
-|**PX\_ULong\( \)**|Sérialise une propriété de type **long**.|  
-|**PX\_UShort\( \)**|Sérialise une propriété de type **USHORT**.|  
+|Property exchange functions|Purpose|  
+|---------------------------------|-------------|  
+|**PX_Blob( )**|Serializes a type Binary Large Object (BLOB) data property.|  
+|**PX_Bool( )**|Serializes a type Boolean property.|  
+|**PX_Color( )**|Serializes a type color property.|  
+|**PX_Currency( )**|Serializes a type **CY** (currency) property.|  
+|**PX_Double( )**|Serializes a type **double** property.|  
+|**PX_Font( )**|Serializes a Font type property.|  
+|**PX_Float( )**|Serializes a type **float** property.|  
+|**PX_IUnknown( )**|Serializes a property of type `LPUNKNOWN`.|  
+|**PX_Long( )**|Serializes a type **long** property.|  
+|**PX_Picture( )**|Serializes a type Picture property.|  
+|**PX_Short( )**|Serializes a type **short** property.|  
+|**PXstring( )**|Serializes a type `CString` property.|  
+|**PX_ULong( )**|Serializes a type **ULONG** property.|  
+|**PX_UShort( )**|Serializes a type **USHORT** property.|  
   
- Pour plus d'informations sur ces fonctions d'échange de propriétés, consultez le [Persistance des contrôles OLE](../mfc/reference/persistence-of-ole-controls.md) dans *le guide de MFC*.  
+ For more information on these property exchange functions, see [Persistence of OLE Controls](../mfc/reference/persistence-of-ole-controls.md) in the *MFC Reference*.  
   
-##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> Personnaliser le comportement par défaut de DoPropExchange  
- L'implémentation par défaut de **DoPropertyExchange** \(comme illustré rubrique précédente\) effectue un appel à la classe de base `COleControl`.  Cela sérialise le jeu de propriétés automatiquement prises en charge par `COleControl`, qui utilise davantage d'espace de stockage qu'à sérialiser uniquement les propriétés personnalisées du contrôle.  Supprimer cet appel permet à votre objet de sérialiser uniquement les propriétés que vous considérez importantes.  Propriété stock en états que le contrôle est implémenté n'est pas sérialisée en enregistrant ou lors de le chargement de l'objet de contrôle à moins que vous n'ajoutiez explicitement les appels de **PX\_** pour eux.  
+##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> Customizing the Default Behavior of DoPropExchange  
+ The default implementation of **DoPropertyExchange** (as shown in the previous topic) makes a call to base class `COleControl`. This serializes the set of properties automatically supported by `COleControl`, which uses more storage space than serializing only the custom properties of the control. Removing this call allows your object to serialize only those properties you consider important. Any stock property states the control has implemented will not be serialized when saving or loading the control object unless you explicitly add **PX_** calls for them.  
   
-##  <a name="_core_implementing_version_support"></a> Implémenter la prise en charge des versions  
- La prise en charge des versions permet à un contrôle ActiveX modifié pour ajouter de nouvelles propriétés persistantes, et peut toujours détecter et charger l'état permanent créé par une version précédente du contrôle.  Pour rendre la version d'un contrôle disponible dans le cadre de ses données persistantes, appelez [COleControl::ExchangeVersion](../Topic/COleControl::ExchangeVersion.md) dans la fonction `DoPropExchange` du contrôle.  Cet appel est automatiquement inséré si le contrôle ActiveX a été créé à l'aide de l'Assistant Contrôle ActiveX.  Il peut être supprimé si la prise en charge des versions n'est pas nécessaire.  Toutefois, le coût de la taille de contrôle est très faible \(4 octets\) pour la flexibilité ajoutée à la prise en charge des versions fournit.  
+##  <a name="_core_implementing_version_support"></a> Implementing Version Support  
+ Version support enables a revised ActiveX control to add new persistent properties, and still be able to detect and load the persistent state created by an earlier version of the control. To make a control's version available as part of its persistent data, call [COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion) in the control's `DoPropExchange` function. This call is automatically inserted if the ActiveX control was created using the ActiveX Control Wizard. It can be removed if version support is not needed. However, the cost in control size is very small (4 bytes) for the added flexibility that version support provides.  
   
- Si le contrôle n'a pas été créé à l'aide de l'Assistant Contrôle ActiveX, ajoutez un appel à `COleControl::ExchangeVersion` en insérant la ligne suivante au début de la fonction de `DoPropExchange` \(avant l'appel à `COleControl::DoPropExchange`\) :  
+ If the control was not created with the ActiveX Control Wizard, add a call to `COleControl::ExchangeVersion` by inserting the following line at the beginning of your `DoPropExchange` function (before the call to `COleControl::DoPropExchange`):  
   
- [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_2.cpp)]  
-[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]  
+[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]  
   
- Utilisez tout `DWORD` comme numéro de version.  Projets générés par l'utilisation **\_wVerMinor** et **\_wVerMajor** de l'Assistant Contrôle ActiveX comme valeur par défaut.  Ce sont des constantes globales définies dans le fichier d'implémentation de classe de contrôle ActiveX du projet.  Dans le reste de la fonction de `DoPropExchange`, vous pouvez appeler [CPropExchange::GetVersion](../Topic/CPropExchange::GetVersion.md) à tout moment pour récupérer la version que vous enregistrez ou récupérer.  
+ You can use any `DWORD` as the version number. Projects generated by the ActiveX Control Wizard use **_wVerMinor** and **_wVerMajor** as the default. These are global constants defined in the implementation file of the project's ActiveX control class. Within the remainder of your `DoPropExchange` function, you can call [CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion) at any time to retrieve the version you are saving or retrieving.  
   
- Dans l'exemple suivant, la version 1 de cette simple vérification une seule propriété « ReleaseDate ».  La version 2 ajoute une propriété « OriginalDate ».  Si le contrôle est chargé de charger l'état permanent de la version antérieure, il initialise la variable membre de la nouvelle propriété la valeur par défaut.  
+ In the following example, version 1 of this sample control has only a "ReleaseDate" property. Version 2 adds an "OriginalDate" property. If the control is instructed to load the persistent state from the old version, it initializes the member variable for the new property to a default value.  
   
- [!code-cpp[NVC_MFC_AxSer#4](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_5.cpp)]  
-[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxSer#4](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_5.cpp)]  
+[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]  
   
- Par défaut, un contrôle «convertit» les anciennes données correspondant au dernier format.  Par exemple, si la version 2 d'un contrôle charge les données enregistrées par la version 1, il écrit le format version 2 lorsqu'il est stocké à nouveau.  Si vous voulez un contrôle pour enregistrer des données dans la lecture de bout de format, passez **FALSE** en tant que troisième paramètre en appelant `ExchangeVersion`.  Ce troisième paramètre est facultatif et est **TRUE** par défaut.  
+ By default, a control "converts" old data to the latest format. For example, if version 2 of a control loads data that was saved by version 1, it will write the version 2 format when it is saved again. If you want the control to save data in the format last read, pass **FALSE** as a third parameter when calling `ExchangeVersion`. This third parameter is optional and is **TRUE** by default.  
   
-## Voir aussi  
- [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

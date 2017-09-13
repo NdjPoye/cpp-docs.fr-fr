@@ -1,5 +1,5 @@
 ---
-title: Classe de CD2DSolidColorBrush | Documents Microsoft
+title: CD2DSolidColorBrush Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DSolidColorBrush class
+- CD2DSolidColorBrush [MFC], CD2DSolidColorBrush
+- CD2DSolidColorBrush [MFC], Attach
+- CD2DSolidColorBrush [MFC], Create
+- CD2DSolidColorBrush [MFC], Destroy
+- CD2DSolidColorBrush [MFC], Detach
+- CD2DSolidColorBrush [MFC], Get
+- CD2DSolidColorBrush [MFC], GetColor
+- CD2DSolidColorBrush [MFC], SetColor
+- CD2DSolidColorBrush [MFC], m_colorSolid
+- CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
 caps.latest.revision: 16
 author: mikeblome
@@ -44,57 +53,57 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5b6cbd6a6a5557f5ea23c0556a4b87011b510411
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3842452031c9cc952c7be740a877029985ae2b5a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush, classe
-Wrapper pour ID2D1SolidColorBrush.  
+# <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush Class
+A wrapper for ID2D1SolidColorBrush.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DSolidColorBrush : public CD2DBrush;  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Surchargé. Construit un objet CD2DSolidColorBrush.|  
-|[CD2DSolidColorBrush :: ~ CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|Destructeur. Appelé lorsqu’un objet de pinceau plein D2D est détruit.|  
+|[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Overloaded. Constructs a CD2DSolidColorBrush object.|  
+|[CD2DSolidColorBrush::~CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|The destructor. Called when a D2D solid brush object is being destroyed.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSolidColorBrush::Attach](#attach)|Attache existant à l’objet interface de la ressource|  
-|[CD2DSolidColorBrush::Create](#create)|Crée un CD2DSolidColorBrush. (Substitue [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
-|[CD2DSolidColorBrush::Destroy](#destroy)|Détruit un objet CD2DSolidColorBrush. (Substitue [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|  
-|[CD2DSolidColorBrush::Detach](#detach)|Détache l’interface de la ressource à partir de l’objet|  
-|[CD2DSolidColorBrush::Get](#get)|Renvoie l’interface ID2D1SolidColorBrush|  
-|[CD2DSolidColorBrush::GetColor](#getcolor)|Récupère la couleur du pinceau de couleur unie|  
-|[CD2DSolidColorBrush::SetColor](#setcolor)|Spécifie la couleur de ce pinceau de couleur unie|  
+|[CD2DSolidColorBrush::Attach](#attach)|Attaches existing resource interface to the object|  
+|[CD2DSolidColorBrush::Create](#create)|Creates a CD2DSolidColorBrush. (Overrides [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DSolidColorBrush::Destroy](#destroy)|Destroys a CD2DSolidColorBrush object. (Overrides [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|  
+|[CD2DSolidColorBrush::Detach](#detach)|Detaches resource interface from the object|  
+|[CD2DSolidColorBrush::Get](#get)|Returns ID2D1SolidColorBrush interface|  
+|[CD2DSolidColorBrush::GetColor](#getcolor)|Retrieves the color of the solid color brush|  
+|[CD2DSolidColorBrush::SetColor](#setcolor)|Specifies the color of this solid color brush|  
   
-### <a name="public-operators"></a>Op&#233;rateurs publics  
+### <a name="public-operators"></a>Public Operators  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSolidColorBrush::operator ID2D1SolidColorBrush *](#operator_id2d1solidcolorbrush_star)|Renvoie l’interface ID2D1SolidColorBrush|  
+|[CD2DSolidColorBrush::operator ID2D1SolidColorBrush*](#operator_id2d1solidcolorbrush_star)|Returns ID2D1SolidColorBrush interface|  
   
-### <a name="protected-data-members"></a>Membres de données protégés  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|Pinceau de couleur unie.|  
-|[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|Stocke un pointeur vers un objet ID2D1SolidColorBrush.|  
+|[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|Brush solid color.|  
+|[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|Stores a pointer to an ID2D1SolidColorBrush object.|  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
@@ -103,29 +112,29 @@ class CD2DSolidColorBrush : public CD2DBrush;
   
  [CD2DSolidColorBrush](../../mfc/reference/cd2dsolidcolorbrush-class.md)  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dsolidcolorbrush"></a>CD2DSolidColorBrush :: ~ CD2DSolidColorBrush  
- Destructeur. Appelé lorsqu’un objet de pinceau plein D2D est détruit.  
+##  <a name="_dtorcd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::~CD2DSolidColorBrush  
+ The destructor. Called when a D2D solid brush object is being destroyed.  
   
 ```  
 virtual ~CD2DSolidColorBrush();
 ```  
   
-##  <a name="attach"></a>CD2DSolidColorBrush::Attach  
- Attache existant à l’objet interface de la ressource  
+##  <a name="attach"></a>  CD2DSolidColorBrush::Attach  
+ Attaches existing resource interface to the object  
   
 ```  
 void Attach(ID2D1SolidColorBrush* pResource);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pResource`  
- Interface de la ressource existante. Ne peut pas être NULL  
+ Existing resource interface. Cannot be NULL  
   
-##  <a name="cd2dsolidcolorbrush"></a>CD2DSolidColorBrush::CD2DSolidColorBrush  
- Construit un objet CD2DSolidColorBrush.  
+##  <a name="cd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::CD2DSolidColorBrush  
+ Constructs a CD2DSolidColorBrush object.  
   
 ```  
 CD2DSolidColorBrush(
@@ -143,108 +152,108 @@ CD2DSolidColorBrush(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- Pointeur vers la cible de rendu.  
+ A pointer to the render target.  
   
  `color`  
- Les valeurs rouges, verts, bleus et alphanumériques de la couleur du pinceau.  
+ The red, green, blue, and alpha values of the brush's color.  
   
  `pBrushProperties`  
- Pointeur vers l’opacité et la transformation d’un pinceau.  
+ A pointer to the opacity and transformation of a brush.  
   
  `bAutoDestroy`  
- Indique que l’objet sera détruit par le propriétaire (pParentTarget).  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
  `nAlpha`  
- L’opacité de la couleur du pinceau.  
+ The opacity of the brush's color.  
   
-##  <a name="create"></a>CD2DSolidColorBrush::Create  
- Crée un CD2DSolidColorBrush.  
+##  <a name="create"></a>  CD2DSolidColorBrush::Create  
+ Creates a CD2DSolidColorBrush.  
   
 ```  
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pRenderTarget`  
- Pointeur vers la cible de rendu.  
+ A pointer to the render target.  
   
-### <a name="return-value"></a>Valeur de retour  
- Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="destroy"></a>CD2DSolidColorBrush::Destroy  
- Détruit un objet CD2DSolidColorBrush.  
+##  <a name="destroy"></a>  CD2DSolidColorBrush::Destroy  
+ Destroys a CD2DSolidColorBrush object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DSolidColorBrush::Detach  
- Détache l’interface de la ressource à partir de l’objet  
+##  <a name="detach"></a>  CD2DSolidColorBrush::Detach  
+ Detaches resource interface from the object  
   
 ```  
 ID2D1SolidColorBrush* Detach();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Pointeur vers l’interface de la ressource détachée.  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached resource interface.  
   
-##  <a name="get"></a>CD2DSolidColorBrush::Get  
- Renvoie l’interface ID2D1SolidColorBrush  
+##  <a name="get"></a>  CD2DSolidColorBrush::Get  
+ Returns ID2D1SolidColorBrush interface  
   
 ```  
 ID2D1SolidColorBrush* Get();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Pointeur vers une interface de ID2D1SolidColorBrush ou NULL si l’objet n’est pas encore initialisé.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1SolidColorBrush interface or NULL if object is not initialized yet.  
   
-##  <a name="getcolor"></a>CD2DSolidColorBrush::GetColor  
- Récupère la couleur du pinceau de couleur unie  
+##  <a name="getcolor"></a>  CD2DSolidColorBrush::GetColor  
+ Retrieves the color of the solid color brush  
   
 ```  
 D2D1_COLOR_F GetColor() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- La couleur de ce pinceau de couleur unie  
+### <a name="return-value"></a>Return Value  
+ The color of this solid color brush  
   
-##  <a name="m_colorsolid"></a>CD2DSolidColorBrush::m_colorSolid  
- Pinceau de couleur unie.  
+##  <a name="m_colorsolid"></a>  CD2DSolidColorBrush::m_colorSolid  
+ Brush solid color.  
   
 ```  
 D2D1_COLOR_F m_colorSolid;  
 ```  
   
-##  <a name="m_psolidcolorbrush"></a>CD2DSolidColorBrush::m_pSolidColorBrush  
- Stocke un pointeur vers un objet ID2D1SolidColorBrush.  
+##  <a name="m_psolidcolorbrush"></a>  CD2DSolidColorBrush::m_pSolidColorBrush  
+ Stores a pointer to an ID2D1SolidColorBrush object.  
   
 ```  
 ID2D1SolidColorBrush* m_pSolidColorBrush;  
 ```  
   
-##  <a name="operator_id2d1solidcolorbrush_star"></a>CD2DSolidColorBrush::operator ID2D1SolidColorBrush *  
- Renvoie l’interface ID2D1SolidColorBrush  
+##  <a name="operator_id2d1solidcolorbrush_star"></a>  CD2DSolidColorBrush::operator ID2D1SolidColorBrush*  
+ Returns ID2D1SolidColorBrush interface  
   
 ```  
 operator ID2D1SolidColorBrush*();
 ```   
   
-### <a name="return-value"></a>Valeur de retour  
- Pointeur vers une interface de ID2D1SolidColorBrush ou NULL si l’objet n’est pas encore initialisé.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1SolidColorBrush interface or NULL if object is not initialized yet.  
   
-##  <a name="setcolor"></a>CD2DSolidColorBrush::SetColor  
- Spécifie la couleur de ce pinceau de couleur unie  
+##  <a name="setcolor"></a>  CD2DSolidColorBrush::SetColor  
+ Specifies the color of this solid color brush  
   
 ```  
 void SetColor(D2D1_COLOR_F color);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `color`  
- La couleur de ce pinceau de couleur unie  
+ The color of this solid color brush  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [Classes](../../mfc/reference/mfc-classes.md)
 

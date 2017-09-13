@@ -1,43 +1,62 @@
 ---
-title: "Destruction d&#39;objets fen&#234;tres | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fenêtres frame, détruire"
-  - "objets fenêtres, supprimer"
-  - "objets fenêtres, détruire"
-  - "objets fenêtres, supprimer"
+title: Destroying Window Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], destroying
+- window objects [MFC], deleting
+- window objects [MFC], destroying
+- window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Destruction d&#39;objets fen&#234;tres
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b72195923ba98afbd281bbda2a85d3e599258a43
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Prenez soin avec vos propres fenêtres enfants de détruire l'objet fenêtre C\+\+ lorsque l'utilisateur a fini avec la fenêtre.  Si ces objets ne sont pas détruits, votre application ne récupère pas la mémoire.  Heureusement, l'infrastructure gère la destruction ainsi que la création des fenêtres cadres, vues, et boîtes de dialogue.  Si vous créez des fenêtres supplémentaires, vous devez vous charger de les détruire.  
+---
+# <a name="destroying-window-objects"></a>Destroying Window Objects
+Care must be taken with your own child windows to destroy the C++ window object when the user is finished with the window. If these objects are not destroyed, your application will not recover their memory. Fortunately, the framework manages window destruction as well as creation for frame windows, views, and dialog boxes. If you create additional windows, you are responsible for destroying them.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Séquence de destruction de fenêtres](../mfc/window-destruction-sequence.md)  
+-   [Window destruction sequence](../mfc/window-destruction-sequence.md)  
   
--   [Allocation et libération de la mémoire de la fenêtre](../mfc/allocating-and-deallocating-window-memory.md)  
+-   [Allocating and deallocating window memory](../mfc/allocating-and-deallocating-window-memory.md)  
   
--   [Détachement d'un objet CWnd de son HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
+-   [Detaching a CWnd from its HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
   
--   [Séquence générale de création d'une fenêtre](../mfc/general-window-creation-sequence.md)  
+-   [General Window Creation Sequence](../mfc/general-window-creation-sequence.md)  
   
--   [Destruction des fenêtres cadres](../mfc/destroying-frame-windows.md)  
+-   [Destroying frame windows](../mfc/destroying-frame-windows.md)  
   
-## Voir aussi  
- [Objets fenêtres](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

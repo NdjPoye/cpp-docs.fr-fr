@@ -1,42 +1,60 @@
 ---
-title: "Manipulation de listes d&#39;images | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList (classe), manipuler"
-  - "listes d'images (C++), manipuler"
-  - "listes (C++), image"
+title: Manipulating Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- image lists [MFC], manipulating
+- lists [MFC], image
+- CImageList class [MFC], manipulating
 ms.assetid: 043418f8-077e-4dce-b8bb-2b7b0d7b5156
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Manipulation de listes d&#39;images
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1e913c26ad4fa616e215f3c732aa92ca612bf55d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-La fonction membre [Remplacer](../Topic/CImageList::Replace.md) remplace une image dans une liste d'image \([CImageList](../mfc/reference/cimagelist-class.md)\) par une nouvelle image.  Cette fonction est également utile lorsque vous devez augmenter dynamiquement le nombre d'images dans un objet de liste d'images.  La fonction [SetImageCount](../Topic/CImageList::SetImageCount.md) modifie dynamiquement le nombre d'images stockées dans la liste des images.  Si vous augmentez la taille de la liste des images, appelez **Remplacer** pour ajouter des images vers les nouveaux emplacements d'image.  Si vous réduisez la taille de la liste des images, des images au delà de la nouvelle taille sont libérées.  
+---
+# <a name="manipulating-image-lists"></a>Manipulating Image Lists
+The [Replace](../mfc/reference/cimagelist-class.md#replace) member function replaces an image in an image list ([CImageList](../mfc/reference/cimagelist-class.md)) with a new image. This function is also useful if you need to dynamically increase the number of images in an image list object. The [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount) function dynamically changes the number of images stored in the image list. If you increase the size of the image list, call **Replace** to add images to the new image slots. If you decrease the size of the image list, the images beyond the new size are freed.  
   
- La fonction membre [Supprimer](../Topic/CImageList::Remove.md) supprime une image d'une liste d'images.  La fonction membre [Copier](../Topic/CImageList::Copy.md) peut copier ou échanger des images dans une liste d'images.  Cette fonction permet d'indiquer si l'image source doit être copiée à l'index de destination ou si les images de source et de destination doivent être permutées.  
+ The [Remove](../mfc/reference/cimagelist-class.md#remove) member function removes an image from an image list. The [Copy](../mfc/reference/cimagelist-class.md#copy) member function can copy or swap images within an image list. This function allows you to indicate whether the source image should be copied to the destination index or the source and destination images should be swapped.  
   
- Pour créer une nouvelle liste d'images en mélangeant deux listes d'images, utilisez la surcharge appropriée de la fonction membre [Créer](../Topic/CImageList::Create.md).  Cette surcharge de **Créer** fusionne la première image des listes d'images existantes, en inscrivant l'image obtenu dans un nouvel objet de liste d'images.  La nouvelle image est créée en traçant la deuxième image de façon transparente sur la première.  Le masque pour la nouvelle image est le résultat d'une opération OU logique sur les bits des masques pour les deux images existantes.  
+ To create a new image list by merging two image lists, use the appropriate overload of the [Create](../mfc/reference/cimagelist-class.md#create) member function. This overload of **Create** merges the first image of the existing image lists, storing the resultant image in a new image list object. The new image is created by drawing the second image transparently over the first. The mask for the new image is the result of performing a logical-OR operation on the bits of the masks for the two existing images.  
   
- Cela est répété jusqu'à ce que toutes les images aient été fusionnées et ajoutées au nouvel objet de liste d'images.  
+ This is repeated until all images are merged and added to the new image list object.  
   
- Entrez des informations d'image vers une archive en appelant la fonction membre [Écriture](../Topic/CImageList::Write.md), puis y lire le moment en appelant la fonction membre [Lecture](../Topic/CImageList::Read.md).  
+ You can write the image information to an archive by calling the [Write](../mfc/reference/cimagelist-class.md#write) member function, and read it back by calling the [Read](../mfc/reference/cimagelist-class.md#read) member function.  
   
- Les fonctions membres [GetSafeHandle](../Topic/CImageList::GetSafeHandle.md), [Attacher](../Topic/CImageList::Attach.md), et [Détacher](../Topic/CImageList::Detach.md) vous permettent de manipuler le descripteur de la liste d'images associée à l'objet `CImageList`, tandis que la fonction membre [DeleteImageList](../Topic/CImageList::DeleteImageList.md) supprime la liste d'images sans détruire l'objet `CImageList`.  
+ The [GetSafeHandle](../mfc/reference/cimagelist-class.md#getsafehandle), [Attach](../mfc/reference/cimagelist-class.md#attach), and [Detach](../mfc/reference/cimagelist-class.md#detach) member functions allow you to manipulate the handle of the image list attached to the `CImageList` object, while the [DeleteImageList](../mfc/reference/cimagelist-class.md#deleteimagelist) member function deletes the image list without destroying the `CImageList` object.  
   
-## Voir aussi  
- [Utilisation de CImageList](../mfc/using-cimagelist.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

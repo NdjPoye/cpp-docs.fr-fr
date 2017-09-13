@@ -1,35 +1,51 @@
 ---
-title: "Types de valeur (Modern C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Value Types (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
 caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Types de valeur (Modern C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 20f7ef06bd0bd505ab429ac112d9af0c9bc80b59
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/11/2017
 
-Les classes C\+\+ sont par défaut des types de valeur.  Cette rubrique fournit une vue d'ensemble préliminaire des types de valeurs et les problèmes concernant leur utilisation.  
+---
+# <a name="value-types-modern-c"></a>Value Types (Modern C++)
+C++ classes are by default value types. This topic provides an introductory overview of value types and issues relating to their use.  
   
-## Par valeur ou par référence  
- Comme indiqué précédemment, les classes C\+\+ sont par défaut des types de valeur.  Mais vous pouvez les spécifier comme types référence pour activer le comportement polymorphe qui prend en charge la programmation orientée objet.  Les types de valeurs sont parfois rendus ne la différencie du contrôle de mémoire et de mise en page, tandis que les types référence sont sur les classes de base et des fonctions virtuelles à des fins polymorphes.  Par défaut, les types valeur sont copiables. Ils ont chacun un constructeur de copie et un opérateur d'assignation de copie.  Lorsque vous spécifiez un type référence, rendez la classe impossible à copier \(désactivez le constructeur de copie et copiez l'opérateur d'affectation\) et utilisez un destructeur virtuel, ce qui assure la prise en charge du polymorphisme.  Les types valeur concernent également le contenu qui, en cas de copie, vous donne deux valeurs distinctes que vous pouvez modifier séparément.  Les types référence sont des informations d'identité – qu'un peu l'objet est \-il ?  Pour cette raison, « types de référence » est également sous le nom « types polymorphes ».  
+## <a name="value-vs-reference-types"></a>Value vs. reference types  
+ As previously stated, C++ classes are by default value types. They can be specified as reference types, which enable polymorphic behavior to support object-oriented programming. Value types are sometimes viewed from the perspective of memory and layout control, whereas reference types are about base classes and virtual functions for polymorphic purposes. By default, value types are copyable, which means there is always a copy constructor and a copy assignment operator. For reference types, you make the class non-copyable (disable the copy constructor and copy assignment operator) and use a virtual destructor, which supports their intended polymorphism. Value types are also about the contents, which, when they are copied, always give you two independent values that can be modified separately. Reference types are about identity - what kind of object is it? For this reason, "reference types" are also referred to as "polymorphic types".  
   
- Si vous voulez vraiment un type comme référence \(classe de base, fonctions virtuelles\), vous devez désactiver explicitement la sauvegarde, comme indiqué dans la classe d'`MyRefType` dans le code suivant.  
+ If you really want a reference-like type (base class, virtual functions), you need to explicitly disable copying, as shown in the `MyRefType` class in the following code.  
   
 ```cpp  
-  
 // cl /EHsc /nologo /W4  
   
 class MyRefType {  
@@ -48,20 +64,23 @@ int main()
 }  
 ```  
   
- Compilation du code ci\-dessus génère l'erreur suivante :  
+ Compiling the above code will result in the following error:  
   
-  **test.cpp \(15\) : erreur C2248 : « MyRefType::operator \= » : ne peut pas accéder au membre privée déclaré dans MyRefType des classes »**  
- **meow.cpp \(5\) : consultez la déclaration « MyRefType::operator \= »**  
- **meow.cpp \(3\) : consultez la déclaration «  » MyRefType**   
-## Types de valeurs et efficacité de déplacement  
- La surcharge d'allocation de sauvegarde est évitée en raison de les optimisations de copie.  Par exemple, lorsque vous insérez une chaîne au milieu d'un vecteur de chaînes, il n'y a aucune surcharge de redistribution de sauvegarde, qu'un déplacement même s'il en résulte un développement du vecteur lui\-même.  Cela s'applique aussi aux autres opérations, par exemple effectuant une opération d'ajout sur deux objets de grande taille.  Comment activez\-vous ces optimisations d'opération de valeur ?  Dans certains compilateurs C\+\+, le compilateur il vérifie automatiquement implicitement, comme les constructeurs d'envoi peut être généré automatiquement par le compilateur.  Toutefois, dans Visual C\+\+, votre classe a besoin de exécution «  » pour déplacer l'attribution les constructeurs et en indiquant dans la définition de classe.  Cela s'effectue en utilisant la double référence de rvalue et commercial \(&&\) dans les déclarations et la définition d'une fonction membre appropriées des méthodes de constructeur de déplacement et d'assignation de déplacement.  Vous devez également insérer code correct « volez les entrailles » hors de l'objet source.  
+```Output  
+test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private member declared in class 'MyRefType'  
+        meow.cpp(5) : see declaration of 'MyRefType::operator ='  
+        meow.cpp(3) : see declaration of 'MyRefType'  
   
- Comment décidez\-vous si vous avez besoin de déplacement activé ?  Si vous savez déjà vous avez besoin de la construction de copie activée, vous souhaitez peut\-être déplacer activé s'il est préférable d'une copie complète.  Toutefois, si vous savez vous avez besoin de prise en charge de déplacer, cela ne signifie pas nécessairement que la copie activée.  Ce dernier cas est appelé « type réservé à déplacer.  Un exemple déjà dans la bibliothèque standard est `unique_ptr`.  Une note marginal, `auto_ptr` ancien est déconseillé, et a été remplacé par `unique_ptr` précisément en raison de l'absence de prise en charge de la sémantique de déplacement dans la version précédente C\+\+.  
+```  
   
- En utilisant la sémantique de déplacement vous pouvez RETURN\-par\- unique ou INSERT\-dans\- moyen.  Le déplacement est une optimisation de copie.  Il y a besoin d'allocation des segments pour contourner ce problème.  Examinons le code ci\-dessous.  
+## <a name="value-types-and-move-efficiency"></a>Value types and move efficiency  
+ Copy allocation overhead is avoided due to new copy optimizations. For example, when you insert a string in the middle of a vector of strings, there will be no copy re-allocation overhead, only a move- even if it results in a grow of the vector itself. This also applies to other operations, for instance performing an add operation on two very large objects. How do you enable these value operation optimizations? In some C++ compilers, the compiler will enable this for you implicitly, much like copy constructors can be automatically generated by the compiler. However, in Visual C++, your class will need to "opt-in" to move assignment and constructors by declaring it in your class definition. This is accomplished by using the double ampersand (&&) rvalue reference in the appropriate member function declarations and defining move constructor and move assignment methods.  You also need to insert the correct code to "steal the guts" out of the source object.  
+  
+ How do you decide if you need move enabled? If you already know you need copy construction enabled, you probably want move enabled if it can be cheaper than a deep copy. However, if you know you need move support, it doesn't necessarily mean you want copy enabled. This latter case would be called a "move-only type". An example already in the standard library is `unique_ptr`. As a side note, the old `auto_ptr` is deprecated, and was replaced by `unique_ptr` precisely due to the lack of move semantics support in the previous version of C++.  
+  
+ By using move semantics you can return-by-value or insert-in-middle. Move is an optimization of copy. There is need for heap allocation as a workaround. Consider the following pseudocode:  
   
 ```cpp  
-  
 #include <set>  
 #include <vector>  
 #include <string>  
@@ -88,11 +107,10 @@ HugeMatrix operator+(      HugeMatrix&&,       HugeMatrix&&);
 hm5 = hm1+hm2+hm3+hm4+hm5;   // efficient, no extra copies  
 ```  
   
-### Activer le déplacement des types de valeurs appropriées  
- Pour une classe en tant que valeur où le déplacement peut être préférable d'une copie complète, activer la construction de déplacement et l'attribution de déplacement pour l'efficacité.  Examinons le code ci\-dessous.  
+### <a name="enabling-move-for-appropriate-value-types"></a>Enabling move for appropriate value types  
+ For a value-like class where move can be cheaper than a deep copy, enable move construction and move assignment for efficiency. Consider the following pseudocode:  
   
 ```cpp  
-  
 #include <memory>  
 #include <stdexcept>  
 using namespace std;  
@@ -113,15 +131,15 @@ public:
   
 ```  
   
- Si vous activez la construction et l'affectation de copie, activez également la construction et l'affectation du déplacement s'il est préférable d'une copie complète.  
+ If you enable copy construction/assignment, also enable move construction/assignment if it can be cheaper than a deep copy.  
   
- Certains types *non multiples* sont réservés à déplacer, comme lorsque vous ne pouvez pas dupliquer une ressource, seule la propriété de transfert.  Par exemple : `unique_ptr`  
+ Some *non-value* types are move-only, such as when you can’t clone a resource, only transfer ownership. Example: `unique_ptr`.  
   
-## Section  
- Contenu  
+## <a name="section"></a>Section  
+ Content  
   
-## Voir aussi  
- [Système de type C\+\+](../cpp/cpp-type-system-modern-cpp.md)   
- [Bienvenue dans C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Référence du langage C\+\+](../cpp/cpp-language-reference.md)   
- [Bibliothèque standard C\+\+](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [C++ Type System](../cpp/cpp-type-system-modern-cpp.md)   
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)

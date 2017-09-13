@@ -1,5 +1,5 @@
 ---
-title: is_nothrow_move_assignable, classe | Microsoft Docs
+title: is_nothrow_move_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_nothrow_move_assignable
 - type_traits/std::is_nothrow_move_assignable
 dev_langs:
 - C++
@@ -34,36 +33,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: c44d71f547215a337e86c0c2a2da7b965bdc83f2
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 749df7061246b302a609cd3399164aa91f3849ed
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isnothrowmoveassignable-class"></a>is_nothrow_move_assignable, classe
-Teste si le type a un opérateur d’assignation de déplacement **nothrow**.  
+# <a name="isnothrowmoveassignable-class"></a>is_nothrow_move_assignable Class
+Tests whether type has a **nothrow** move assignment operator.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct is_nothrow_move_assignable;
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Type à interroger.  
+ The type to query.  
   
-## <a name="remarks"></a>Notes  
- Une instance du prédicat de type a la valeur true si le type `Ty` a un opérateur d'assignation de déplacement nothrow. Sinon, sa valeur est false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` has a nothrow move assignment operator, otherwise it holds false.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

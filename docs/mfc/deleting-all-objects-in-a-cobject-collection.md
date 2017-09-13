@@ -1,91 +1,110 @@
 ---
-title: "Suppression de tous les objets d&#39;une collection CObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CObject (classe) (collection)"
-  - "CObject (classe), supprimer dans la collection"
-  - "classes de collection, supprimer tous les objets"
-  - "classes de collection, objets partagés"
-  - "objets (C++), supprimer dans les collections"
-  - "objets dans les collections CObject"
-  - "objets dans les collections CObject, supprimer"
+title: Deleting All Objects in a CObject Collection | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], deleting in collections
+- objects in CObject collections, deleting
+- CObject class [MFC], deleting in collection
+- collection classes [MFC], deleting all objects
+- CObject class collection
+- objects in CObject collections
+- collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Suppression de tous les objets d&#39;une collection CObject
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0f85d6ead18f6fb338c3e911484cdbca8c6c15eb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cet article explique comment supprimer tous les objets d'une collection \(sans supprimer l'objet collection lui\-même\).  
+---
+# <a name="deleting-all-objects-in-a-cobject-collection"></a>Deleting All Objects in a CObject Collection
+This article explains how to delete all objects in a collection (without deleting the collection object itself).  
   
- Pour supprimer tous les objets dans une collection de `CObject` \(ou d'objets dérivés de `CObject`\), vous utilisez l'une des techniques d'itération décrites dans l'article [Accès à tous les membres d'une collection](../mfc/accessing-all-members-of-a-collection.md) pour supprimer chaque objet.  
+ To delete all the objects in a collection of `CObject`s (or of objects derived from `CObject`), you use one of the iteration techniques described in the article [Accessing All Members of a Collection](../mfc/accessing-all-members-of-a-collection.md) to delete each object in turn.  
   
 > [!CAUTION]
->  Les objets dans les collections peuvent être partagés.  Autrement dit, la collection conserve un pointeur vers l'objet, mais d'autres parties du programme peuvent également avoir des pointeurs sur le même objet.  Vous devez alors veiller à ne pas supprimer un objet qui est partagé jusqu'à ce que toutes les parties aient fini d'utiliser l'objet.  
+>  Objects in collections can be shared. That is, the collection keeps a pointer to the object, but other parts of the program may also have pointers to the same object. You must be careful not to delete an object that is shared until all the parts have finished using the object.  
   
- Cet article explique comment supprimer des objets dans :  
+ This article shows you how to delete the objects in:  
   
--   [Une liste](#_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject)  
+-   [A list](#_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject)  
   
--   [Un tableau.](#_core_to_delete_all_elements_in_an_array)  
+-   [An array](#_core_to_delete_all_elements_in_an_array)  
   
--   [Une map](#_core_to_delete_all_elements_in_a_map)  
+-   [A map](#_core_to_delete_all_elements_in_a_map)  
   
-#### Pour supprimer tous les objets d'une liste de pointeurs vers CObject  
+#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  To delete all objects in a list of pointers to CObject  
   
-1.  Utilisez `GetHeadPosition` et `GetNext` pour parcourir la liste.  
+1.  Use `GetHeadPosition` and `GetNext` to iterate through the list.  
   
-2.  Utilisez l'opérateur **supprimer** pour supprimer chaque objet tel qu'il est trouvé dans l'itération.  
+2.  Use the **delete** operator to delete each object as it is encountered in the iteration.  
   
-3.  Appelez la fonction `RemoveAll` pour supprimer tous les éléments dans la liste une fois que les objets associés à ces éléments ont été supprimés.  
+3.  Call the `RemoveAll` function to remove all elements from the list after the objects associated with those elements have been deleted.  
   
- L'exemple suivant montre comment supprimer tous les objets d'une liste d'objets `CPerson`.  Chaque objet de la liste est un pointeur vers un objet `CPerson` qui a été initialement alloué sur le tas.  
+ The following example shows how to delete all objects from a list of `CPerson` objects. Each object in the list is a pointer to a `CPerson` object that was originally allocated on the heap.  
   
- [!code-cpp[NVC_MFCCollections#17](../mfc/codesnippet/CPP/deleting-all-objects-in-a-cobject-collection_1.cpp)]  
+ [!code-cpp[NVC_MFCCollections#17](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_1.cpp)]  
   
- Le dernier appel de fonction, `RemoveAll`, est une fonction membre de la liste qui supprime tous les éléments de la liste.  La fonction membre `RemoveAt` supprime un élément.  
+ The last function call, `RemoveAll`, is a list member function that removes all elements from the list. The member function `RemoveAt` removes a single element.  
   
- Notez la différence entre supprimer l'élément d'un objet et supprimer l'élément lui\-même.  Supprimer un élément de la liste supprime seulement la référence de la liste à l'objet.  L'objet existe encore en mémoire.  Lorsque vous supprimez un objet, il arrête d'exister et sa mémoire est libérée.  Par conséquent, il est important de supprimer un élément dès que l'objet de l'élément a été supprimé afin que la liste ne tente pas d'accéder aux objets qui n'existent plus.  
+ Notice the difference between deleting an element's object and removing the element itself. Removing an element from the list merely removes the list's reference to the object. The object still exists in memory. When you delete an object, it ceases to exist and its memory is reclaimed. Thus, it is important to remove an element immediately after the element's object has been deleted so that the list won't try to access objects that no longer exist.  
   
-#### Pour supprimer tous les éléments d'un tableau  
+#### <a name="_core_to_delete_all_elements_in_an_array"></a>  To delete all elements in an array  
   
-1.  Utilisez `GetSize` et des indices entiers pour itérer au sein de le tableau.  
+1.  Use `GetSize` and integer index values to iterate through the array.  
   
-2.  Utilisez l'opérateur **supprimer** pour supprimer chaque élément tel qu'il est trouvé dans l'itération.  
+2.  Use the **delete** operator to delete each element as it is encountered in the iteration.  
   
-3.  Appelez la fonction `RemoveAll` pour supprimer tous les éléments du tableau après qu'ils ont été supprimés.  
+3.  Call the `RemoveAll` function to remove all elements from the array after they have been deleted.  
   
-     Le code pour supprimer tous les éléments d'un tableau est comme suit :  
+     The code for deleting all elements of an array is as follows:  
   
-     [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/CPP/deleting-all-objects-in-a-cobject-collection_2.cpp)]  
+     [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]  
   
- Comme dans l'exemple de liste ci\-dessus, vous pouvez appeler `RemoveAll` pour supprimer tous les éléments d'un tableau ou `RemoveAt` pour supprimer un élément individuel.  
+ As with the list example above, you can call `RemoveAll` to remove all elements in an array or `RemoveAt` to remove an individual element.  
   
-#### Pour supprimer tous les éléments d'une map  
+#### <a name="_core_to_delete_all_elements_in_a_map"></a> To delete all elements in a map  
   
-1.  Utilisez `GetStartPosition` et `GetNextAssoc` pour parcourir le tableau.  
+1.  Use `GetStartPosition` and `GetNextAssoc` to iterate through the array.  
   
-2.  Utilisez l'opérateur **supprimer** pour supprimer la clé et\/ou la valeur de chaque élément de carte tel qu'il est produit dans l'itération.  
+2.  Use the **delete** operator to delete the key and/or value for each map element as it is encountered in the iteration.  
   
-3.  Appelez la fonction `RemoveAll` pour supprimer tous les éléments de la map après qu'ils ont été supprimés.  
+3.  Call the `RemoveAll` function to remove all elements from the map after they have been deleted.  
   
-     Le code pour supprimer tous les éléments d'une collection `CMap` est comme suit.  Chaque élément de la map a une chaîne comme clé et un objet `CPerson` \(dérivés de `CObject`\) comme valeur.  
+     The code for deleting all elements of a `CMap` collection is as follows. Each element in the map has a string as the key and a `CPerson` object (derived from `CObject`) as the value.  
   
-     [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/CPP/deleting-all-objects-in-a-cobject-collection_3.cpp)]  
+     [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]  
   
- Vous pouvez appeler `RemoveAll` pour supprimer tous les éléments d'une map ou `RemoveKey` pour supprimer un élément individuel avec la clé spécifiée.  
+ You can call `RemoveAll` to remove all elements in a map or `RemoveKey` to remove an individual element with the specified key.  
   
-## Voir aussi  
- [Accès à tous les membres d'une collection](../mfc/accessing-all-members-of-a-collection.md)
+## <a name="see-also"></a>See Also  
+ [Accessing All Members of a Collection](../mfc/accessing-all-members-of-a-collection.md)
+
+

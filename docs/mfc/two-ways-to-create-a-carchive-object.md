@@ -1,79 +1,98 @@
 ---
-title: "Deux mani&#232;res de cr&#233;er un objet CArchive | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CArchive"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CArchive (classe), fermer des objets CArchive"
-  - "CArchive (classe), constructeur"
-  - "objets CArchive"
-  - "objets CArchive, fermer"
-  - "stockage des données (C++), CArchive (classe)"
-  - "E/S (MFC), créer des objets CArchive"
-  - "sérialisation (C++), CArchive (classe)"
-  - "stockage (C++), CArchive (classe)"
+title: Two Ways to Create a CArchive Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CArchive
+dev_langs:
+- C++
+helpviewer_keywords:
+- CArchive class [MFC], closing CArchive objects
+- CArchive objects [MFC], closing
+- I/O [MFC], creating CArchive objects
+- serialization [MFC], CArchive class
+- CArchive objects [MFC]
+- storage [MFC], CArchive class [MFC]
+- data storage [MFC], CArchive class
+- CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Deux mani&#232;res de cr&#233;er un objet CArchive
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 13ac03d1c1188dff80c8ca0f33d39a8554a106c1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Il existe deux manières de créer un objet `CArchive`:  
+---
+# <a name="two-ways-to-create-a-carchive-object"></a>Two Ways to Create a CArchive Object
+There are two ways to create a `CArchive` object:  
   
--   [Création implicite d'un objet CArchive via le framework](#_core_implicit_creation_of_a_carchive_object_via_the_framework)  
+-   [Implicit creation of a CArchive object via the framework](#_core_implicit_creation_of_a_carchive_object_via_the_framework)  
   
--   [Création explicite d'un objet CArchive](#_core_explicit_creation_of_a_carchive_object)  
+-   [Explicit creation of a CArchive object](#_core_explicit_creation_of_a_carchive_object)  
   
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> Création implicite d'un objet CArchive via le framework  
- La méthode la plus courante, et la plus simple, consiste à permettre au framework de créer un objet `CArchive` pour votre document au nom des commandes de sauvegarde, sauvegarde, et ouverture du menu Fichier.  
+##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> Implicit Creation of a CArchive Object via the Framework  
+ The most common, and easiest, way is to let the framework create a `CArchive` object for your document on behalf of the Save, Save As, and Open commands on the File menu.  
   
- Voici ce que l'infrastructure effectue lorsque l'utilisateur de votre application émet la commande enregistrer sous dans le menu Fichier :  
+ Here is what the framework does when the user of your application issues the Save As command from the File menu:  
   
-1.  Affiche la boîte de dialogue **Enregistrer sous** et obtient le nom de fichier de l'utilisateur.  
+1.  Presents the **Save As** dialog box and gets the filename from the user.  
   
-2.  Ouvre le fichier nommé par l'utilisateur en tant qu'objet `CFile`.  
+2.  Opens the file named by the user as a `CFile` object.  
   
-3.  Crée un objet `CArchive` qui pointe vers cet `CFile` objet.  Lors de la création de l'objet `CArchive`, le framework définit le mode sur « stockage » \(écriture, sérialisation\), par opposition à « chargement » \(lecture, désérialisation\).  
+3.  Creates a `CArchive` object that points to this `CFile` object. In creating the `CArchive` object, the framework sets the mode to "store" (write, serialize), as opposed to "load" (read, deserialize).  
   
-4.  Appelle la fonction `Serialize` définie dans votre classe dérivée de **CDocument**, et lui transmet une référence à l'objet `CArchive`.  
+4.  Calls the `Serialize` function defined in your **CDocument**-derived class, passing it a reference to the `CArchive` object.  
   
- La fonction `Serialize` de votre document écrit les données dans l'objet `CArchive`, comme expliqué.  Lors du retour de la fonction `Serialize`, le framework détruit l'objet `CArchive` puis l'objet `CFile`.  
+ Your document's `Serialize` function then writes data to the `CArchive` object, as explained shortly. Upon return from your `Serialize` function, the framework destroys the `CArchive` object and then the `CFile` object.  
   
- Par conséquent, si vous laissez le framework créer l'objet `CArchive` pour votre document, il vous suffit d'implémentation de la fonction `Serialize` du document qui écrit et la lit vers et depuis l'archive.  Vous devez également implémenter `Serialize` pour tous les objets dérivés de`CObject` que la fonction `Serialize` du document sérialise ensuite directement ou indirectement.  
+ Thus, if you let the framework create the `CArchive` object for your document, all you have to do is implement the document's `Serialize` function that writes and reads to and from the archive. You also have to implement `Serialize` for any `CObject`-derived objects that the document's `Serialize` function in turn serializes directly or indirectly.  
   
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a> Création explicite d'un objet CArchive  
- Outre la sérialisation un document via le framework, il existe d'autres occasions dans lesquelles vous aurez besoin d'un objet `CArchive`.  Par exemple, vous pouvez sérialiser des données vers le presse\-papiers, représenté par un objet `CSharedFile`.  Ou, vous pouvez utiliser une interface utilisateur pour stocker un fichier qui est différent de celui proposé par l'infrastructure.  Dans ce cas, vous pouvez explicitement créer un objet `CArchive`.  Vous faites cela de la même façon que le framework, à l'aide de la procédure suivante.  
+##  <a name="_core_explicit_creation_of_a_carchive_object"></a> Explicit Creation of a CArchive Object  
+ Besides serializing a document via the framework, there are other occasions when you may need a `CArchive` object. For example, you might want to serialize data to and from the Clipboard, represented by a `CSharedFile` object. Or, you may want to use a user interface for saving a file that is different from the one offered by the framework. In this case, you can explicitly create a `CArchive` object. You do this the same way the framework does, using the following procedure.  
   
-#### Pour créer explicitement un objet de CArchive  
+#### <a name="to-explicitly-create-a-carchive-object"></a>To explicitly create a CArchive object  
   
-1.  Construisez un objet `CFile` ou un objet dérivé de `CFile`.  
+1.  Construct a `CFile` object or an object derived from `CFile`.  
   
-2.  Passez l'objet `CFile` au constructeur de `CArchive`, comme le montre l'exemple suivant :  
+2.  Pass the `CFile` object to the constructor for `CArchive`, as shown in the following example:  
   
-     [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/CPP/two-ways-to-create-a-carchive-object_1.cpp)]  
+     [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]  
   
-     Le deuxième argument du constructeur `CArchive` est une valeur énumérée de la propriété qui spécifie si l'archive sera utilisée pour enregistrer ou charger des données à partir du fichier.  La fonction `Serialize` d'un objet vérifie cet état en appelant la fonction `IsStoring` pour l'objet archive.  
+     The second argument to the `CArchive` constructor is an enumerated value that specifies whether the archive will be used for storing or loading data to or from the file. The `Serialize` function of an object checks this state by calling the `IsStoring` function for the archive object.  
   
- Lorsque vous avez terminé l'enregistrement ou le chargement des données à partir de `CArchive` objet, fermez\-le.  Bien que les objets `CArchive` \(et `CFile`\) fermeront automatiquement l'archive \(et le fichier\), il est recommandé de le faire explicitement car cela permet la récupération des erreurs.  Pour plus d'informations sur la gestion des erreurs, consultez l'article [Exceptions : Intercepter et supprimer des exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
+ When you are finished storing or loading data to or from the `CArchive` object, close it. Although the `CArchive` (and `CFile`) objects will automatically close the archive (and file), it is good practice to explicitly do so since it makes recovery from errors easier. For more information about error handling, see the article [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
-#### Pour fermer l'objet CArchive  
+#### <a name="to-close-the-carchive-object"></a>To close the CArchive object  
   
-1.  L'exemple suivant illustre comment fermer l'objet `CArchive` :  
+1.  The following example illustrates how to close the `CArchive` object:  
   
-     [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/CPP/two-ways-to-create-a-carchive-object_2.cpp)]  
+     [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]  
   
-## Voir aussi  
- [Sérialisation : sérialisation d'un objet](../mfc/serialization-serializing-an-object.md)
+## <a name="see-also"></a>See Also  
+ [Serialization: Serializing an Object](../mfc/serialization-serializing-an-object.md)
+
+

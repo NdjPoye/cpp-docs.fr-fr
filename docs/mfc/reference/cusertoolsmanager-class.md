@@ -1,5 +1,5 @@
 ---
-title: Classe de CUserToolsManager | Documents Microsoft
+title: CUserToolsManager Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,7 +33,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CUserToolsManager class
+- CUserToolsManager [MFC], CUserToolsManager
+- CUserToolsManager [MFC], CreateNewTool
+- CUserToolsManager [MFC], FindTool
+- CUserToolsManager [MFC], GetArgumentsMenuID
+- CUserToolsManager [MFC], GetDefExt
+- CUserToolsManager [MFC], GetFilter
+- CUserToolsManager [MFC], GetInitialDirMenuID
+- CUserToolsManager [MFC], GetMaxTools
+- CUserToolsManager [MFC], GetToolsEntryCmd
+- CUserToolsManager [MFC], GetUserTools
+- CUserToolsManager [MFC], InvokeTool
+- CUserToolsManager [MFC], IsUserToolCmd
+- CUserToolsManager [MFC], LoadState
+- CUserToolsManager [MFC], MoveToolDown
+- CUserToolsManager [MFC], MoveToolUp
+- CUserToolsManager [MFC], RemoveTool
+- CUserToolsManager [MFC], SaveState
+- CUserToolsManager [MFC], SetDefExt
+- CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
 caps.latest.revision: 26
 author: mikeblome
@@ -53,96 +71,96 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 0b82adf0f9eba5ee334ada2c169546f27894c1dd
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 68a6b8e0ebbc5b3aa50ea910eb868d17c9a27ce6
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cusertoolsmanager-class"></a>CUserToolsManager (classe)
-Gère la collection de [CUserTool classe](../../mfc/reference/cusertool-class.md) objets dans une application. Un outil utilisateur est un élément de menu qui exécute une application externe. L'objet `CUserToolsManager` permet à l'utilisateur ou au développeur d'ajouter de nouveaux outils utilisateur à l'application. Il prend en charge l'exécution des commandes associées aux outils utilisateur. En outre, il stocke des informations sur les outils utilisateur dans le Registre Windows.  
+# <a name="cusertoolsmanager-class"></a>CUserToolsManager Class
+Maintains the collection of [CUserTool Class](../../mfc/reference/cusertool-class.md) objects in an application. A user tool is a menu item that runs an external application. The `CUserToolsManager` object enables the user or developer to add new user tools to the application. It supports the execution of the commands associated with user tools, and it also saves information about user tools in the Windows registry.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CUserToolsManager : public CObject  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CUserToolsManager::CUserToolsManager](#cusertoolsmanager)|Construit un objet `CUserToolsManager`.|  
+|[CUserToolsManager::CUserToolsManager](#cusertoolsmanager)|Constructs a `CUserToolsManager`.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CUserToolsManager::CreateNewTool](#createnewtool)|Crée un nouvel outil de l’utilisateur.|  
-|[CUserToolsManager::FindTool](#findtool)|Retourne le pointeur vers le `CMFCUserTool` objet qui est associé à un ID de commande spécifié.|  
-|[CUserToolsManager::GetArgumentsMenuID](#getargumentsmenuid)|Retourne l’ID de ressource qui est associé à la **Arguments** menu sur le **outils** onglet de la **personnaliser** boîte de dialogue.|  
-|[CUserToolsManager::GetDefExt](#getdefext)|Renvoie l’extension par défaut qui le **ouvrir le fichier** boîte de dialogue ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) utilise dans les **commande** de la **outils** onglet de la **personnaliser** boîte de dialogue.|  
-|[CUserToolsManager::GetFilter](#getfilter)|Retourne le filtre de fichiers qui le **ouvrir le fichier** boîte de dialogue ( [classe CFileDialog](../../mfc/reference/cfiledialog-class.md)) utilise dans le **commande** de la **outils** onglet de la **personnaliser** boîte de dialogue.|  
-|[CUserToolsManager::GetInitialDirMenuID](#getinitialdirmenuid)|Retourne l’ID de ressource qui est associé à la **répertoire Initial** menu sur le **outils** onglet de la **personnaliser** boîte de dialogue.|  
-|[CUserToolsManager::GetMaxTools](#getmaxtools)|Retourne le nombre maximal d’outils utilisateur qui peuvent être alloués dans l’application.|  
-|[CUserToolsManager::GetToolsEntryCmd](#gettoolsentrycmd)|Retourne l’ID de commande de l’espace réservé d’élément menu pour les outils de l’utilisateur.|  
-|[CUserToolsManager::GetUserTools](#getusertools)|Retourne une référence à la liste des outils de l’utilisateur.|  
-|[CUserToolsManager::InvokeTool](#invoketool)|Exécute une application associée à l’outil utilisateur qui possède un ID de commande spécifié.|  
-|[CUserToolsManager::IsUserToolCmd](#isusertoolcmd)|Détermine si un ID de commande est associé à un outil utilisateur.|  
-|[CUserToolsManager::LoadState](#loadstate)|Charge les informations sur les outils utilisateur à partir du Registre Windows.|  
-|[CUserToolsManager::MoveToolDown](#movetooldown)|Déplace l’outil utilisateur spécifié vers le bas dans la liste des outils de l’utilisateur.|  
-|[CUserToolsManager::MoveToolUp](#movetoolup)|Monter l’outil utilisateur spécifié dans la liste des outils de l’utilisateur.|  
-|[CUserToolsManager::RemoveTool](#removetool)|Supprime l’outil utilisateur spécifié à partir de l’application.|  
-|[CUserToolsManager::SaveState](#savestate)|Stocke les informations sur les outils utilisateur dans le Registre Windows.|  
-|[CUserToolsManager::SetDefExt](#setdefext)|Spécifie l’extension par défaut qui le **ouvrir le fichier** boîte de dialogue ( [classe CFileDialog](../../mfc/reference/cfiledialog-class.md)) utilise dans le **commande** de la **outils** onglet de la **personnaliser** boîte de dialogue.|  
-|[CUserToolsManager::SetFilter](#setfilter)|Spécifie le fichier de filtre qui le **ouvrir le fichier** boîte de dialogue ( [classe CFileDialog](../../mfc/reference/cfiledialog-class.md)) utilise dans le **commande** de la **outils** onglet de la **personnaliser** boîte de dialogue.|  
+|[CUserToolsManager::CreateNewTool](#createnewtool)|Creates a new user tool.|  
+|[CUserToolsManager::FindTool](#findtool)|Returns the pointer to the `CMFCUserTool` object that is associated with a specified command ID.|  
+|[CUserToolsManager::GetArgumentsMenuID](#getargumentsmenuid)|Returns the resource ID that is associated with the **Arguments** menu on the **Tools** tab of the **Customize** dialog box.|  
+|[CUserToolsManager::GetDefExt](#getdefext)|Returns the default extension that the **File Open** dialog box ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.|  
+|[CUserToolsManager::GetFilter](#getfilter)|Returns the file filter that the **File Open** dialog box ( [CFileDialog Class](../../mfc/reference/cfiledialog-class.md)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.|  
+|[CUserToolsManager::GetInitialDirMenuID](#getinitialdirmenuid)|Returns the resource ID that is associated with the **Initial directory** menu on the **Tools** tab of the **Customize** dialog box.|  
+|[CUserToolsManager::GetMaxTools](#getmaxtools)|Returns the maximum number of user tools that can be allocated in the application.|  
+|[CUserToolsManager::GetToolsEntryCmd](#gettoolsentrycmd)|Returns the command ID of the menu item placeholder for user tools.|  
+|[CUserToolsManager::GetUserTools](#getusertools)|Returns a reference to the list of user tools.|  
+|[CUserToolsManager::InvokeTool](#invoketool)|Executes an application associated with the user tool that has a specified command ID.|  
+|[CUserToolsManager::IsUserToolCmd](#isusertoolcmd)|Determines whether a command ID is associated with a user tool.|  
+|[CUserToolsManager::LoadState](#loadstate)|Loads information about user tools from the Windows registry.|  
+|[CUserToolsManager::MoveToolDown](#movetooldown)|Moves the specified user tool down in the list of user tools.|  
+|[CUserToolsManager::MoveToolUp](#movetoolup)|Moves the specified user tool up in the list of user tools.|  
+|[CUserToolsManager::RemoveTool](#removetool)|Removes the specified user tool from the application.|  
+|[CUserToolsManager::SaveState](#savestate)|Stores information about user tools in the Windows registry.|  
+|[CUserToolsManager::SetDefExt](#setdefext)|Specifies the default extension that the **File Open** dialog box ( [CFileDialog Class](../../mfc/reference/cfiledialog-class.md)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.|  
+|[CUserToolsManager::SetFilter](#setfilter)|Specifies the file filter that the **File Open** dialog box ( [CFileDialog Class](../../mfc/reference/cfiledialog-class.md)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.|  
   
-## <a name="remarks"></a>Notes  
- Pour intégrer les outils utilisateur dans votre application, vous devez :  
+## <a name="remarks"></a>Remarks  
+ To incorporate user tools into your application, you must:  
   
- 1. Réserver un élément de menu et d’un ID de commande associée à une entrée de menu outil utilisateur.  
+ 1. Reserve a menu item and an associated command ID for a user tool menu entry.  
   
- 2. Réservez un ID de commande séquentiel pour chaque outil utilisateur un utilisateur peut définir dans votre application.  
+ 2. Reserve a sequential command ID for each user tool that a user can define in your application.  
   
- 3. Appelez le [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) méthode et fournir les paramètres suivants : dernier ID de commande outil utilisateur, premier ID de commande d’outil utilisateur et ID de commande de menu  
+ 3. Call the [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) method and supply the following parameters: menu command ID, first user tool command ID, and last user tool command ID.  
   
- Il doit y avoir qu’un seul global `CUserToolsManager` objet par application.  
+ There should be only one global `CUserToolsManager` object per application.  
   
- Pour obtenir un exemple d’outils de l’utilisateur, consultez l’exemple de projet VisualStudioDemo.  
+ For an example of user tools, see the VisualStudioDemo sample project.  
   
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment récupérer une référence à un `CUserToolsManager` objet et comment créer de nouveaux outils utilisateur. Cet extrait de code fait partie de la [exemple de Visual Studio démonstration](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to retrieve a reference to a `CUserToolsManager` object and how to create new user tools. This code snippet is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo&#38;](../../mfc/codesnippet/cpp/cusertoolsmanager-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#38](../../mfc/codesnippet/cpp/cusertoolsmanager-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CUserToolsManager`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxusertoolsmanager.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxusertoolsmanager.h  
   
-##  <a name="createnewtool"></a>CUserToolsManager::CreateNewTool  
- Crée un nouvel outil de l’utilisateur.  
+##  <a name="createnewtool"></a>  CUserToolsManager::CreateNewTool  
+ Creates a new user tool.  
   
 ```  
 CUserTool* CreateNewTool();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers l’outil utilisateur nouvellement créé, ou `NULL` si le nombre d’outils de l’utilisateur a dépassé la valeur maximale. Le type retourné est le même que le type qui est passé à `CWinAppEx::EnableUserTools` comme le `pToolRTC` paramètre.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the newly created user tool, or `NULL` if the number of user tools has exceeded the maximum. The returned type is the same as the type that is passed to `CWinAppEx::EnableUserTools` as the `pToolRTC` parameter.  
   
-### <a name="remarks"></a>Remarques  
- Cette méthode recherche le premier ID de commande de menu disponibles dans la plage qui est fournie dans l’appel à [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) et attribue l’outil utilisateur ce code.  
+### <a name="remarks"></a>Remarks  
+ This method finds the first available menu command ID in the range that is supplied in the call to [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) and assigns the user tool this ID.  
   
- La méthode échoue si le nombre d’outils a atteint le maximum. Cela se produit lorsque tous les ID de commande dans la plage sont attribués à des outils de l’utilisateur. Vous pouvez récupérer le nombre maximal d’outils en appelant [CUserToolsManager::GetMaxTools](#getmaxtools). Vous pouvez accéder à la liste des outils en appelant le [CUserToolsManager::GetUserTools](#getusertools) (méthode).  
+ The method fails if the number of tools has reached the maximum. This occurs when all command IDs within the range are assigned to user tools. You can retrieve the maximum number of tools by calling [CUserToolsManager::GetMaxTools](#getmaxtools). You can get access to the tools list by calling the [CUserToolsManager::GetUserTools](#getusertools) method.  
   
-##  <a name="cusertoolsmanager"></a>CUserToolsManager::CUserToolsManager  
- Construit un objet `CUserToolsManager`. Chaque application doit avoir au plus un responsable d’outils utilisateur.  
+##  <a name="cusertoolsmanager"></a>  CUserToolsManager::CUserToolsManager  
+ Constructs a `CUserToolsManager`. Each application must have at most one user tools manager.  
   
 ```  
 CUserToolsManager();
@@ -157,281 +175,281 @@ CUserToolsManager(
     UINT uInitDirMenuID=0);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdToolsDummy`  
- Entier non signé par le framework comme espace réservé pour l’ID de commande du menu outils utilisateur.  
+ An unsigned integer that the framework uses as a placeholder for the command ID of the user tools menu.  
   
  [in] `uiCmdFirst`  
- L’ID de commande pour la première commande de l’outil utilisateur.  
+ The command ID for the first user tool command.  
   
  [in] `uiCmdLast`  
- L’ID de commande pour la dernière commande d’outil utilisateur.  
+ The command ID for the last user tool command.  
   
  [in] `pToolRTC`  
- La classe qui [CUserToolsManager::CreateNewTool](#createnewtool) crée. À l’aide de cette classe, vous pouvez utiliser un type dérivé de [CUserTool classe](../../mfc/reference/cusertool-class.md) au lieu de l’implémentation par défaut.  
+ The class that [CUserToolsManager::CreateNewTool](#createnewtool) creates. By using this class, you can use a derived type of [CUserTool Class](../../mfc/reference/cusertool-class.md) instead of the default implementation.  
   
  [in] `uArgMenuID`  
- L’ID de ressource de menu du menu contextuel arguments.  
+ The menu resource ID of the arguments popup menu.  
   
  [in] `uInitDirMenuID`  
- L’ID de ressource de menu du menu contextuel répertoire initial.  
+ The menu resource ID of the initial directory popup menu.  
   
-### <a name="remarks"></a>Remarques  
- N’appelez pas ce constructeur. Au lieu de cela, appelez [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) pour activer les outils utilisateur, puis appelez [CWinAppEx::GetUserToolsManager](../../mfc/reference/cwinappex-class.md#getusertoolsmanager) pour obtenir un pointeur vers le `CUserToolsManager`. Pour plus d’informations, consultez [outils définis par l’utilisateur](../../mfc/user-defined-tools.md).  
+### <a name="remarks"></a>Remarks  
+ Do not call this constructor. Instead, call [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) to enable user tools, and call [CWinAppEx::GetUserToolsManager](../../mfc/reference/cwinappex-class.md#getusertoolsmanager) to obtain a pointer to the `CUserToolsManager`. For more information, see [User-defined Tools](../../mfc/user-defined-tools.md).  
   
-##  <a name="findtool"></a>CUserToolsManager::FindTool  
- Retourne le pointeur vers le [CUserTool classe](../../mfc/reference/cusertool-class.md) objet qui est associé à un ID de commande spécifié.  
+##  <a name="findtool"></a>  CUserToolsManager::FindTool  
+ Returns the pointer to the [CUserTool Class](../../mfc/reference/cusertool-class.md) object that is associated with a specified command ID.  
   
 ```  
 CUserTool* FindTool(UINT uiCmdId) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdId`  
- Un identificateur de commande de menu.  
+ A menu command identifier.  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers un [CUserTool classe](../../mfc/reference/cusertool-class.md) ou `CUserTool`-objet dérivé si succès ; sinon `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CUserTool Class](../../mfc/reference/cusertool-class.md) or `CUserTool`-derived object if success; otherwise `NULL`.  
   
-### <a name="remarks"></a>Notes  
- Lors de la `FindTool` est réussie, le type retourné est le même que le type de la `pToolRTC` paramètre [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
+### <a name="remarks"></a>Remarks  
+ When `FindTool` is successful, the returned type is the same as the type of the `pToolRTC` parameter to [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
-##  <a name="getargumentsmenuid"></a>CUserToolsManager::GetArgumentsMenuID  
- Retourne l’ID de ressource qui est associé à la **Arguments** menu sur le **outils** onglet de la **personnaliser** boîte de dialogue.  
+##  <a name="getargumentsmenuid"></a>  CUserToolsManager::GetArgumentsMenuID  
+ Returns the resource ID that is associated with the **Arguments** menu on the **Tools** tab of the **Customize** dialog box.  
   
 ```  
 UINT GetArgumentsMenuID() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- L’identificateur d’une ressource de menu.  
+### <a name="return-value"></a>Return Value  
+ The identifier of a menu resource.  
   
-### <a name="remarks"></a>Notes  
- Le `uArgMenuID` paramètre de [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) Spécifie l’ID de la ressource.  
+### <a name="remarks"></a>Remarks  
+ The `uArgMenuID` parameter of [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) specifies the ID of the resource.  
   
-##  <a name="getdefext"></a>CUserToolsManager::GetDefExt  
- Renvoie l’extension par défaut qui le **ouvrir le fichier** boîte de dialogue ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) utilise dans les **commande** de la **outils** onglet de la **personnaliser** boîte de dialogue.  
+##  <a name="getdefext"></a>  CUserToolsManager::GetDefExt  
+ Returns the default extension that the **File Open** dialog box ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.  
   
 ```  
 const CString& GetDefExt() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Une référence à la `CString` objet qui contient l’extension.  
+### <a name="return-value"></a>Return Value  
+ A reference to the `CString` object that contains the extension.  
   
-##  <a name="getfilter"></a>CUserToolsManager::GetFilter  
- Retourne le filtre de fichiers qui le **ouvrir le fichier** boîte de dialogue ( [classe CFileDialog](../../mfc/reference/cfiledialog-class.md)) utilise dans le **commande** de la **outils** onglet de la **personnaliser** boîte de dialogue.  
+##  <a name="getfilter"></a>  CUserToolsManager::GetFilter  
+ Returns the file filter that the **File Open** dialog box ( [CFileDialog Class](../../mfc/reference/cfiledialog-class.md)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.  
   
 ```  
 const CString& GetFilter() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Une référence à la `CString` objet qui contient le filtre.  
+### <a name="return-value"></a>Return Value  
+ A reference to the `CString` object that contains the filter.  
   
-##  <a name="getinitialdirmenuid"></a>CUserToolsManager::GetInitialDirMenuID  
- Retourne l’ID de ressource qui est associé à la **répertoire Initial** menu sur le **outils** onglet de la **personnaliser** boîte de dialogue.  
+##  <a name="getinitialdirmenuid"></a>  CUserToolsManager::GetInitialDirMenuID  
+ Returns the resource ID that is associated with the **Initial directory** menu on the **Tools** tab of the **Customize** dialog box.  
   
 ```  
 UINT GetInitialDirMenuID() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un identificateur de ressource de menu.  
+### <a name="return-value"></a>Return Value  
+ A menu resource identifier.  
   
-### <a name="remarks"></a>Remarques  
- L’ID retourné est spécifié dans le `uInitDirMenuID` paramètre de [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
+### <a name="remarks"></a>Remarks  
+ The returned ID is specified in the `uInitDirMenuID` parameter of [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
-##  <a name="getmaxtools"></a>CUserToolsManager::GetMaxTools  
- Retourne le nombre maximal d’outils utilisateur qui peuvent être alloués dans l’application.  
+##  <a name="getmaxtools"></a>  CUserToolsManager::GetMaxTools  
+ Returns the maximum number of user tools that can be allocated in the application.  
   
 ```  
 int GetMaxTools() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Le nombre maximal d’outils utilisateur qui peuvent être alloués.  
+### <a name="return-value"></a>Return Value  
+ The maximum number of user tools that can be allocated.  
   
-### <a name="remarks"></a>Notes  
- Appelez cette méthode pour récupérer le nombre maximal d’outils qui peuvent être alloués dans l’application. Ce nombre est le nombre d’ID dans la plage comprise entre le `uiCmdFirst` via la `uiCmdLast` les paramètres que vous passez à [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve the maximum number of tools that can be allocated in the application. This number is the number of IDs in the range from the `uiCmdFirst` through the `uiCmdLast` parameters that you pass to [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
-##  <a name="gettoolsentrycmd"></a>CUserToolsManager::GetToolsEntryCmd  
- Retourne l’ID de commande de l’espace réservé d’élément menu pour les outils de l’utilisateur.  
+##  <a name="gettoolsentrycmd"></a>  CUserToolsManager::GetToolsEntryCmd  
+ Returns the command ID of the menu item placeholder for user tools.  
   
 ```  
 UINT GetToolsEntryCmd() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- L’ID de commande de l’espace réservé.  
+### <a name="return-value"></a>Return Value  
+ The command ID of the placeholder.  
   
-### <a name="remarks"></a>Notes  
- Pour activer les outils de l’utilisateur, vous appelez [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools). Le `uiCmdToolsDummy` paramètre spécifie l’ID de commande de la commande d’entrée outils. Cette méthode retourne l’ID de commande de saisie des outils. Partout où cet ID est utilisé dans un menu, elle est remplacée par la liste des outils de l’utilisateur lorsque le menu s’affiche.  
+### <a name="remarks"></a>Remarks  
+ To enable user tools, you call [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools). The `uiCmdToolsDummy` parameter specifies the command ID of the tools entry command. This method returns the tools entry command ID. Wherever that ID is used in a menu, it is replaced by the list of user tools when the menu appears.  
   
-##  <a name="getusertools"></a>CUserToolsManager::GetUserTools  
- Retourne une référence à la liste des outils de l’utilisateur.  
+##  <a name="getusertools"></a>  CUserToolsManager::GetUserTools  
+ Returns a reference to the list of user tools.  
   
 ```  
 const CObList& GetUserTools() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Une référence const vers un [CObList classe](../../mfc/reference/coblist-class.md) objet qui contient une liste d’outils de l’utilisateur.  
+### <a name="return-value"></a>Return Value  
+ A const reference to a [CObList Class](../../mfc/reference/coblist-class.md) object that contains a list of user tools.  
   
-### <a name="remarks"></a>Remarques  
- Appel de cette méthode pour récupérer la liste des utilisateurs des outils fournis par le [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) objet conserve. Chaque outil utilisateur est représenté par un objet de type [CUserTool classe](../../mfc/reference/cusertool-class.md) ou un type dérivé `CUserTool`. Le type est spécifié par le `pToolRTC` paramètre lorsque vous appelez [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) pour permettre aux outils de l’utilisateur.  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve a list of user tools that the [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) object maintains. Each user tool is represented by an object of type [CUserTool Class](../../mfc/reference/cusertool-class.md) or a type derived from `CUserTool`. The type is specified by the `pToolRTC` parameter when you call [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) to enable user tools.  
   
-##  <a name="invoketool"></a>CUserToolsManager::InvokeTool  
- Exécute une application associée à l’outil utilisateur qui possède un ID de commande spécifié.  
+##  <a name="invoketool"></a>  CUserToolsManager::InvokeTool  
+ Executes an application associated with the user tool that has a specified command ID.  
   
 ```  
 BOOL InvokeTool(UINT uiCmdId);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdId`  
- L’ID de commande de menu associé à l’outil.  
+ The menu command ID associated with the user tool.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si la commande associée outil utilisateur a été exécutée avec succès ; sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the command associated with user tool was executed successfully; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Appel de cette méthode pour exécuter une application associée à l’utilisateur d’outils qui a l’ID de commande spécifié par `uiCmdId`.  
+### <a name="remarks"></a>Remarks  
+ Call this method to execute an application associated with the user tool that has the command ID specified by `uiCmdId`.  
   
-##  <a name="isusertoolcmd"></a>CUserToolsManager::IsUserToolCmd  
- Détermine si un ID de commande est associé à un outil utilisateur.  
+##  <a name="isusertoolcmd"></a>  CUserToolsManager::IsUserToolCmd  
+ Determines whether a command ID is associated with a user tool.  
   
 ```  
 BOOL IsUserToolCmd(UINT uiCmdId) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdId`  
- ID de commande de l’élément de menu.  
+ A command ID of the menu item.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’ID de commande donné est associé à un outil utilisateur ; sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if a given command ID is associated with a user tool; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Cette méthode vérifie si l’ID de commande donné est dans la plage d’ID de commande. Vous spécifiez la plage lorsque vous appelez [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) pour permettre aux outils de l’utilisateur.  
+### <a name="remarks"></a>Remarks  
+ This method checks whether the given command ID is in the command ID range. You specify the range when you call [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) to enable user tools.  
   
-##  <a name="loadstate"></a>CUserToolsManager::LoadState  
- Charge les informations sur les outils utilisateur à partir du Registre Windows.  
+##  <a name="loadstate"></a>  CUserToolsManager::LoadState  
+ Loads information about user tools from the Windows registry.  
   
 ```  
 BOOL LoadState(LPCTSTR lpszProfileName=NULL);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- Le chemin d’accès de la clé de Registre Windows.  
+ The path of the Windows registry key.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’état a été chargé avec succès ; sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the state was loaded successfully; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Cette méthode charge l’état de le `CUserToolsManager` l’objet à partir du Registre Windows.  
+### <a name="remarks"></a>Remarks  
+ This method loads the state of the `CUserToolsManager` object from the Windows registry.  
   
- En règle générale, vous n’appelez pas cette méthode directement. [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate) appelle dans le cadre du processus d’initialisation d’espace de travail.  
+ Usually, you do not call this method directly. [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate) calls it as part of workspace initialization process.  
   
-##  <a name="movetooldown"></a>CUserToolsManager::MoveToolDown  
- Déplace l’outil utilisateur spécifié vers le bas dans la liste des outils de l’utilisateur.  
+##  <a name="movetooldown"></a>  CUserToolsManager::MoveToolDown  
+ Moves the specified user tool down in the list of user tools.  
   
 ```  
 BOOL MoveToolDown(CUserTool* pTool);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `pTool`  
- Spécifie l’outil utilisateur à déplacer.  
+ Specifies the user tool to move.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’outil a été déplacé vers le bas avec succès ; sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user tool was moved down successfully; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- La méthode échoue si l’outil qui le `pTool` Spécifie n’est pas dans la liste interne ou si l’outil est le dernier dans la liste.  
+### <a name="remarks"></a>Remarks  
+ The method fails if the tool that the `pTool` specifies is not in the internal list or if the tool is last in the list.  
   
-##  <a name="movetoolup"></a>CUserToolsManager::MoveToolUp  
- Monter l’outil utilisateur spécifié dans la liste des outils de l’utilisateur.  
+##  <a name="movetoolup"></a>  CUserToolsManager::MoveToolUp  
+ Moves the specified user tool up in the list of user tools.  
   
 ```  
 BOOL MoveToolUp(CUserTool* pTool);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `pTool`  
- Spécifie l’outil utilisateur à déplacer.  
+ Specifies the user tool to move.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’outil a été déplacé vers le haut avec succès ; sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user tool was moved up successfully; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- La méthode échoue si l’outil qui le `pTool` paramètre spécifie n’est pas dans la liste interne ou si l’outil est le premier élément d’outil dans la liste.  
+### <a name="remarks"></a>Remarks  
+ The method fails if the tool that the `pTool` parameter specifies is not in the internal list or if the tool is the first tool item in the list.  
   
-##  <a name="removetool"></a>CUserToolsManager::RemoveTool  
- Supprime l’outil utilisateur spécifié à partir de l’application.  
+##  <a name="removetool"></a>  CUserToolsManager::RemoveTool  
+ Removes the specified user tool from the application.  
   
 ```  
 BOOL RemoveTool(CUserTool* pTool);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in, out] `pTool`  
- Pointeur vers un outil utilisateur à supprimer.  
+ A pointer to a user tool to be removed.  
   
-### <a name="return-value"></a>Valeur de retour  
- `TRUE`Si l’outil a été supprimé. Sinon, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tool is successfully removed. Otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Notes  
- Si l’outil a été supprimé, cette méthode supprime `pTool`.  
+### <a name="remarks"></a>Remarks  
+ If the tool is successfully removed, this method deletes `pTool`.  
   
-##  <a name="savestate"></a>CUserToolsManager::SaveState  
- Stocke les informations sur les outils utilisateur dans le Registre Windows.  
+##  <a name="savestate"></a>  CUserToolsManager::SaveState  
+ Stores information about user tools in the Windows registry.  
   
 ```  
 BOOL SaveState(LPCTSTR lpszProfileName=NULL);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- Un chemin d’accès à la clé de Registre Windows.  
+ A path to the Windows registry key.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’état a été enregistré avec succès ; sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the state was saved successfully; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- La méthode stocke l’état actuel de le `CUserToolsManager` l’objet dans le Registre Windows.  
+### <a name="remarks"></a>Remarks  
+ The method stores the current state of the `CUserToolsManager` object in the Windows registry.  
   
- En règle générale, il est inutile d’appeler cette méthode directement, [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate) appelle automatiquement dans le cadre du processus de sérialisation d’espace de travail de l’application.  
+ Usually, you do not need to call this method directly, [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate) calls it automatically as a part of the workspace serialization process of the application.  
   
-##  <a name="setdefext"></a>CUserToolsManager::SetDefExt  
- Spécifie l’extension par défaut qui le **ouvrir le fichier** boîte de dialogue ( [classe CFileDialog](../../mfc/reference/cfiledialog-class.md)) utilise dans le **commande** de la **outils** onglet de la **personnaliser** boîte de dialogue.  
+##  <a name="setdefext"></a>  CUserToolsManager::SetDefExt  
+ Specifies the default extension that the **File Open** dialog box ( [CFileDialog Class](../../mfc/reference/cfiledialog-class.md)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.  
   
 ```  
 void SetDefExt(const CString& strDefExt);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `strDefExt`  
- Une chaîne de texte qui contient l’extension de nom de fichier par défaut.  
+ A text string that contains the default file name extension.  
   
-### <a name="remarks"></a>Remarques  
- Appelez cette méthode pour spécifier une extension de nom de fichier par défaut dans le **ouvrir le fichier** boîte de dialogue qui s’affiche lorsque l’utilisateur sélectionne une application à associer à l’outil. La valeur par défaut est « exe ».  
+### <a name="remarks"></a>Remarks  
+ Call this method to specify a default file name extension in the **File Open** dialog box, which is displayed when the user selects an application to associate with the user tool. The default is "exe".  
   
-##  <a name="setfilter"></a>CUserToolsManager::SetFilter  
- Spécifie le fichier de filtre qui le **ouvrir le fichier** boîte de dialogue ( [classe CFileDialog](../../mfc/reference/cfiledialog-class.md)) utilise dans le **commande** de la **outils** onglet de la **personnaliser** boîte de dialogue.  
+##  <a name="setfilter"></a>  CUserToolsManager::SetFilter  
+ Specifies the file filter that the **File Open** dialog box ( [CFileDialog Class](../../mfc/reference/cfiledialog-class.md)) uses in the **Command** field on the **Tools** tab of the **Customize** dialog box.  
   
 ```  
 void SetFilter(const CString& strFilter);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `strFilter`  
- Spécifie le filtre.  
+ Specifies the filter.  
   
-## <a name="see-also"></a>Voir aussi  
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [CWinAppEx (classe)](../../mfc/reference/cwinappex-class.md)   
- [CUserTool (classe)](../../mfc/reference/cusertool-class.md)
+ [CWinAppEx Class](../../mfc/reference/cwinappex-class.md)   
+ [CUserTool Class](../../mfc/reference/cusertool-class.md)
 

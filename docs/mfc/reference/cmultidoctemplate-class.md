@@ -1,5 +1,5 @@
 ---
-title: Classe de CMultiDocTemplate | Documents Microsoft
+title: CMultiDocTemplate Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,8 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MDI, template
-- CMultiDocTemplate class
+- CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
 caps.latest.revision: 21
 author: mikeblome
@@ -36,50 +35,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: 6e58325cd4dcaec01bf8a76006bb397fccd9a171
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 24a67c832c2fca2af5e91acc799e42f2324df6ad
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmultidoctemplate-class"></a>CMultiDocTemplate (classe)
-Définit un modèle de document qui implémente l'interface multidocument (MDI).  
+# <a name="cmultidoctemplate-class"></a>CMultiDocTemplate Class
+Defines a document template that implements the multiple document interface (MDI).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMultiDocTemplate : public CDocTemplate  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMultiDocTemplate::CMultiDocTemplate](#cmultidoctemplate)|Construit un objet `CMultiDocTemplate`.|  
+|[CMultiDocTemplate::CMultiDocTemplate](#cmultidoctemplate)|Constructs a `CMultiDocTemplate` object.|  
   
-## <a name="remarks"></a>Remarques  
- Une application MDI utilise la fenêtre frame principale comme un espace de travail dans lequel l’utilisateur peut ouvrir des fenêtres frame de document zéro ou plus, chacun d'entre eux affiche un document. Pour obtenir une description plus détaillée de l’interface MDI, consultez *Windows Interface Guidelines for Software Design*.  
+## <a name="remarks"></a>Remarks  
+ An MDI application uses the main frame window as a workspace in which the user can open zero or more document frame windows, each of which displays a document. For a more detailed description of the MDI, see *Windows Interface Guidelines for Software Design*.  
   
- Un modèle de document définit les relations entre les trois types de classes :  
+ A document template defines the relationships among three types of classes:  
   
--   Une classe de document, vous dérivez de [CDocument](../../mfc/reference/cdocument-class.md).  
+-   A document class, which you derive from [CDocument](../../mfc/reference/cdocument-class.md).  
   
--   Une classe d’affichage, qui affiche des données à partir de la classe de document répertoriée ci-dessus. Vous pouvez dériver de cette classe à partir de [CView](../../mfc/reference/cview-class.md), `CScrollView`, `CFormView`, ou `CEditView`. (Vous pouvez également utiliser `CEditView` directement.)  
+-   A view class, which displays data from the document class listed above. You can derive this class from [CView](../../mfc/reference/cview-class.md), `CScrollView`, `CFormView`, or `CEditView`. (You can also use `CEditView` directly.)  
   
--   Une classe de fenêtre frame, qui contient la vue. Pour un modèle de document MDI, vous pouvez dériver de cette classe à partir de `CMDIChildWnd`, ou, si vous n’avez pas besoin de personnaliser le comportement des fenêtres frame, vous pouvez utiliser [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) directement sans dériver votre propre classe.  
+-   A frame window class, which contains the view. For an MDI document template, you can derive this class from `CMDIChildWnd`, or, if you don't need to customize the behavior of the document frame windows, you can use [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) directly without deriving your own class.  
   
- Une application MDI peut prendre en charge plusieurs types de documents et des documents de types différents peuvent être ouvertes en même temps. Votre application dispose d’un modèle de document pour chaque type de document pris en charge. Par exemple, si votre application MDI prend en charge les feuilles de calcul et des documents texte, l’application possède deux `CMultiDocTemplate` objets.  
+ An MDI application can support more than one type of document, and documents of different types can be open at the same time. Your application has one document template for each document type that it supports. For example, if your MDI application supports both spreadsheets and text documents, the application has two `CMultiDocTemplate` objects.  
   
- L’application utilise les modèles de document lorsque l’utilisateur crée un nouveau document. Si l’application prend en charge plusieurs types de document, le framework Obtient les noms des types de documents pris en charge dans les modèles de document et les affiche dans une liste dans la boîte de dialogue Nouveau fichier. Une fois que l’utilisateur a sélectionné un type de document, l’application crée un objet de classe de document, un objet fenêtre frame et un objet de vue et attache les uns aux autres.  
+ The application uses the document template(s) when the user creates a new document. If the application supports more than one type of document, then the framework gets the names of the supported document types from the document templates and displays them in a list in the File New dialog box. Once the user has selected a document type, the application creates a document class object, a frame window object, and a view object and attaches them to each other.  
   
- Vous n’avez pas besoin d’appeler des fonctions de n’importe quel membre `CMultiDocTemplate` sauf le constructeur. Les poignées de framework `CMultiDocTemplate` objets en interne.  
+ You do not need to call any member functions of `CMultiDocTemplate` except the constructor. The framework handles `CMultiDocTemplate` objects internally.  
   
- Pour plus d’informations sur `CMultiDocTemplate`, consultez [modèles de Document et le processus de création de Document/vue](../../mfc/document-templates-and-the-document-view-creation-process.md).  
+ For more information on `CMultiDocTemplate`, see [Document Templates and the Document/View Creation Process](../../mfc/document-templates-and-the-document-view-creation-process.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,11 +87,11 @@ class CMultiDocTemplate : public CDocTemplate
   
  `CMultiDocTemplate`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cmultidoctemplate"></a>CMultiDocTemplate::CMultiDocTemplate  
- Construit un objet `CMultiDocTemplate`.  
+##  <a name="cmultidoctemplate"></a>  CMultiDocTemplate::CMultiDocTemplate  
+ Constructs a `CMultiDocTemplate` object.  
   
 ```  
 CMultiDocTemplate(
@@ -102,11 +101,11 @@ CMultiDocTemplate(
     CRuntimeClass* pViewClass);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIDResource`  
- Spécifie l’ID des ressources utilisées avec le type de document. Cela peut inclure le menu, icône, table d’accélérateurs et des ressources de chaîne.  
+ Specifies the ID of the resources used with the document type. This may include menu, icon, accelerator table, and string resources.  
   
- La ressource de chaîne se compose d’au moins sept sous-chaînes séparés par le caractère « \n » (le caractère '\n' est requis, car un espace réservé si une sous-chaîne n’est pas incluse ; Toutefois, les caractères de fin '\n' ne sont pas nécessaires) ; Ces sous-chaînes décrivent le type de document. Pour plus d’informations sur les sous-chaînes, consultez [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Cette ressource de chaîne se trouve dans le fichier de ressources. Exemple :  
+ The string resource consists of up to seven substrings separated by the '\n' character (the '\n' character is needed as a place holder if a substring is not included; however, trailing '\n' characters are not necessary); these substrings describe the document type. For information on the substrings, see [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). This string resource is found in the application's resource file. For example:  
   
  `// MYCALC.RC`  
   
@@ -118,33 +117,33 @@ CMultiDocTemplate(
   
  `END`  
   
- Notez que la chaîne commence par un caractère « \n » ; Il s’agit, car la première sous-chaîne n’est pas utilisée pour les applications MDI et n’est donc pas incluse. Vous pouvez modifier cette chaîne à l’aide de l’éditeur de chaînes ; la chaîne entière apparaît comme une seule entrée dans l’éditeur de chaînes, pas comme les sept entrées différentes.  
+ Note that the string begins with a '\n' character; this is because the first substring is not used for MDI applications and so is not included. You can edit this string using the string editor; the entire string appears as a single entry in the String Editor, not as seven separate entries.  
   
- Pour plus d’informations sur ces types de ressources, consultez [éditeurs de ressources](../../windows/resource-editors.md).  
+ For more information about these resource types, see [Resource Editors](../../windows/resource-editors.md).  
   
  `pDocClass`  
- Pointe vers le `CRuntimeClass` objet de la classe de document. Cette classe est un **CDocument**-vous définissez pour représenter vos documents de classe dérivée.  
+ Points to the `CRuntimeClass` object of the document class. This class is a **CDocument**-derived class you define to represent your documents.  
   
  `pFrameClass`  
- Pointe vers le `CRuntimeClass` objet de la classe de fenêtre frame. Cette classe peut être un `CMDIChildWnd`-classe dérivée, ou il peut être `CMDIChildWnd` lui-même si vous souhaitez que vos fenêtres frame de document par défaut.  
+ Points to the `CRuntimeClass` object of the frame-window class. This class can be a `CMDIChildWnd`-derived class, or it can be `CMDIChildWnd` itself if you want default behavior for your document frame windows.  
   
  `pViewClass`  
- Pointe vers le `CRuntimeClass` objet de la classe d’affichage. Cette classe est un `CView`-vous définissez pour afficher vos documents de classe dérivée.  
+ Points to the `CRuntimeClass` object of the view class. This class is a `CView`-derived class you define to display your documents.  
   
-### <a name="remarks"></a>Remarques  
- Allouer dynamiquement une `CMultiDocTemplate` objet pour chaque type de document que votre application prend en charge et de passer chacun d’eux au `CWinApp::AddDocTemplate` à partir de la `InitInstance` fonction membre de classe de votre application.  
+### <a name="remarks"></a>Remarks  
+ Dynamically allocate one `CMultiDocTemplate` object for each document type that your application supports and pass each one to `CWinApp::AddDocTemplate` from the `InitInstance` member function of your application class.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCDocView&#92;](../../mfc/codesnippet/cpp/cmultidoctemplate-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#92](../../mfc/codesnippet/cpp/cmultidoctemplate-class_1.cpp)]  
   
- Voici un autre exemple.  
+ Here is a second example.  
   
- [!code-cpp[NVC_MFCDocView&#93;](../../mfc/codesnippet/cpp/cmultidoctemplate-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#93](../../mfc/codesnippet/cpp/cmultidoctemplate-class_2.cpp)]  
   
-## <a name="see-also"></a>Voir aussi  
- [CDocTemplate (classe)](../../mfc/reference/cdoctemplate-class.md)   
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [CDocTemplate (classe)](../../mfc/reference/cdoctemplate-class.md)   
- [Classe CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)   
- [CWinApp (classe)](../../mfc/reference/cwinapp-class.md)
+## <a name="see-also"></a>See Also  
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)   
+ [CSingleDocTemplate Class](../../mfc/reference/csingledoctemplate-class.md)   
+ [CWinApp Class](../../mfc/reference/cwinapp-class.md)
 

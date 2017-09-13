@@ -1,42 +1,60 @@
 ---
-title: "// Attributs, commentaire | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Attributs (commentaire dans des fichiers sources MFC)"
-  - "commentaires, Attributs"
-  - "fichiers sources MFC, Attributs (commentaire)"
-  - "commentaire d'attributs publics"
+title: -- Attributes Comment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- comments, Attributes
+- Attributes comment in MFC source files
+- MFC source files, Attributes comment
+- public attributes comment
 ms.assetid: 96388e11-42df-4994-aedf-decd152961a7
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# // Attributs, commentaire
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 20eaa2e4851dd69e9123cea385bbe04b7c950a9e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-La section de `// Attributes` d'une déclaration de classe de MFC contient les attributs publics \(ou les propriétés\) de l'objet.  Il s'agit généralement de variables membres, ou le obtenir\/assembler s'exécute.  « Obtenir » et les fonctions « et » peuvent ne pas être virtuels.  Les fonctions « obtenir » sont généralement **const**, car dans la plupart des cas elles n'ont pas d'effets secondaires.  Les membres sont normalement publics ; les attributs protégés et privés sont généralement dans la section d'implémentation.  
+---
+# <a name="-attributes-comment"></a>// Attributes Comment
+The `// Attributes` section of an MFC class declaration contains the public attributes (or properties) of the object. Typically these are member variables, or Get/Set functions. The "Get" and "Set" functions may or may not be virtual. The "Get" functions are usually **const**, because in most cases they do not have side effects. These members are normally public; protected and private attributes are typically found in the implementation section.  
   
- Dans la liste témoin de la classe `CStdioFile`, sous [Un exemple de commentaires](../mfc/an-example-of-the-comments.md), la liste inclut une variable membre, `m_pStream`.  La classe `CDC` répertorie environ 20 membres avec ce commentaire.  
+ In the sample listing from class `CStdioFile`, under [An Example of the Comments](../mfc/an-example-of-the-comments.md), the list includes one member variable, `m_pStream`. Class `CDC` lists nearly 20 members under this comment.  
   
 > [!NOTE]
->  Les classes importantes, telles que `CDC` et `CWnd`, peuvent contenir tellement de membres qu'en répertoriant simplement tous les attributs à un groupe n'ajouterait peu de clarté.  Dans ce cas, la bibliothèque de classes utilise d'autres commentaires comme les titres pour effectuer davantage les membres.  Par exemple, `CDC` utilise `// Device-Context Functions`, `// Drawing Tool Functions`, `// Drawing Attribute Functions`, et plus.  Les groupes qui représentent des attributs suivront la syntaxe décrite ci\-dessus habituelle.  De nombreuses OLE classes ont une section d'implémentation appelée `// Interface Maps`.  
+>  Large classes, such as `CDC` and `CWnd`, may have so many members that simply listing all the attributes in one group would not add much to clarity. In such cases, the class library uses other comments as headings to further delineate the members. For example, `CDC` uses `// Device-Context Functions`, `// Drawing Tool Functions`, `// Drawing Attribute Functions`, and more. Groups that represent attributes will follow the usual syntax described above. Many OLE classes have an implementation section called `// Interface Maps`.  
   
-## Voir aussi  
- [Utilisation des fichiers sources MFC](../mfc/using-the-mfc-source-files.md)   
- [Un exemple des commentaires](../mfc/an-example-of-the-comments.md)   
- [\/\/ Commentaire sur l'implémentation](../mfc/decrement-implementation-comment.md)   
- [\/\/ Constructeurs, commentaire](../mfc/decrement-constructors-comment.md)   
- [\/\/ Opérations, commentaires](../mfc/decrement-operations-comment.md)   
- [\/\/ Remplaçable, commentaire](../mfc/decrement-overridables-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [An Example of the Comments](../mfc/an-example-of-the-comments.md)   
+ [// Implementation Comment](../mfc/decrement-implementation-comment.md)   
+ [// Constructors Comment](../mfc/decrement-constructors-comment.md)   
+ [// Operations Comment](../mfc/decrement-operations-comment.md)   
+ [// Overridables Comment](../mfc/decrement-overridables-comment.md)
+
+

@@ -1,67 +1,86 @@
 ---
-title: "Commandes standard | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ID de commande, commandes standard"
-  - "commandes (C++), standard"
-  - "Menu Edition (commandes standard)"
-  - "menu Fichier"
-  - "Aide, menus"
-  - "identificateurs (C++), ID de commande"
-  - "commandes OLE"
-  - "ID définis par le programmeur (C++)"
-  - "ID de commandes standard"
-  - "commandes standard"
-  - "commandes du menu Affichage"
-  - "commandes du menu Fenêtre"
+title: Standard Commands | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- File menu
+- identifiers [MFC], command IDs
+- command IDs, standard commands
+- OLE commands
+- commands [MFC], standard
+- standard command IDs
+- Window menu commands
+- standard commands
+- View menu commands
+- Edit menu standard commands
+- Help [MFC], menus
+- programmer-defined IDs [MFC]
 ms.assetid: 88cf3ab4-79b3-4ac6-9365-8ac561036fbf
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Commandes standard
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 092d67376a9384ab9470d2d3bd6b1dcb12ad37a6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Définit l'infrastructure de nombreux messages standards de commande.  Les ID pour les commandes prennent généralement la forme suivante :  
+---
+# <a name="standard-commands"></a>Standard Commands
+The framework defines many standard command messages. The IDs for these commands typically take the form:  
   
- **ID\_** *Source*\_*élément*  
+ **ID_** *Source*_*Item*  
   
- où la *Cource* est généralement un nom de menu et un *élément* est un élément de menu.  Par exemple, l'ID de commande pour la nouvelle commande du menu Fichier est `ID_FILE_NEW`.  Les identificateurs standard de commande sont indiqués en gras dans la documentation.  Les ID définis par le programmeur sont affichés dans une police qui diffère du texte environnant.  
+ where *Source* is usually a menu name and *Item* is a menu item. For example, the command ID for the New command on the File menu is `ID_FILE_NEW`. Standard command IDs are shown in bold type in the documentation. Programmer-defined IDs are shown in a font that is different from the surrounding text.  
   
- Voici une liste des commandes prises en charge les plus importantes :  
+ The following is a list of some of the most important commands supported:  
   
- *Commandes du Menu Fichier*  
- Nouveau, Ouvrir, Fermer, Sauvegarder, Sauvegarder sous, Mise en page, Configuration de l'impression, Impression, Aperçu avant impression, Sortie, et fichiers récemment utilisés.  
+ *File Menu Commands*  
+ New, Open, Close, Save, Save As, Page Setup, Print Setup, Print, Print Preview, Exit, and most-recently-used files.  
   
- *Commandes du menu édition*  
- Effacer, Tout effacer, Copier, Couper, Rechercher, Coller, Répéter, Remplacer, Sélectionnez tout, Annuler, Refaire.  
+ *Edit Menu Commands*  
+ Clear, Clear All, Copy, Cut, Find, Paste, Repeat, Replace, Select All, Undo, and Redo.  
   
- *Commandes du menu Affichage*  
- Barre d'outils et barre d'état.  
+ *View Menu Commands*  
+ Toolbar and Status Bar.  
   
- *Commandes du menu Fenêtre*  
- Nouveau, Arranger, Empiler, Mosaïque horizontale, Mosaïque verticale, et Séparer.  
+ *Window Menu Commands*  
+ New, Arrange, Cascade, Tile Horizontal, Tile Vertical, and Split.  
   
- *Commandes du menu ? \(Aide\)*  
- Index, à l'aide, et A propos de.  
+ *Help Menu Commands*  
+ Index, Using Help, and About.  
   
- *Commandes OLE du menu édition*  
- Insérer un nouvel objet, Editer un lien, Copier un lien, Collage spécial, et objet *typename* \(commandes verbales\).  
+ *OLE Commands (Edit Menu)*  
+ Insert New Object, Edit Links, Paste Link, Paste Special, and *typename* Object (verb commands).  
   
- L'infrastructure fournit différents niveaux de prise en charge de ces commandes.  Certaines commandes sont prises en charge uniquement comme ID définis de commande, tandis que d'autres sont prises en charge avec des implémentations complètes.  Par exemple, l'infrastructure implémente la commande ouverte dans le menu Fichier lorsque vous créez un objet document, en affichant une boîte de dialogue ouverte, et en ouvrant et lors de la lecture du fichier.  En revanche, vous devez implémenter des commandes du menu Edition vous\-même, les commandes comme **ID\_EDIT\_COPY** dépendent de la nature des données copiée.  
+ The framework provides varying levels of support for these commands. Some commands are supported only as defined command IDs, while others are supported with thorough implementations. For example, the framework implements the Open command on the File menu by creating a new document object, displaying an Open dialog box, and opening and reading the file. In contrast, you must implement commands on the Edit menu yourself, since commands like **ID_EDIT_COPY** depend on the nature of the data you are copying.  
   
- Pour plus d'informations sur les commandes prises en charge et le niveau de l'implémentation fourni, consultez la [Note technique 22](../mfc/tn022-standard-commands-implementation.md).  Les commandes standards sont définies dans le fichier AFXRES.H.  
+ For more information about the commands supported and the level of implementation provided, see [Technical Note 22](../mfc/tn022-standard-commands-implementation.md). The standard commands are defined in the file AFXRES.H.  
   
-## Voir aussi  
- [Objets d'interface utilisateur et ID de commande](../mfc/user-interface-objects-and-command-ids.md)
+## <a name="see-also"></a>See Also  
+ [User-Interface Objects and Command IDs](../mfc/user-interface-objects-and-command-ids.md)
+
+

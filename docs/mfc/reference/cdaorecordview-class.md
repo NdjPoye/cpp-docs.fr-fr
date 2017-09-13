@@ -1,5 +1,5 @@
 ---
-title: CDaoRecordView (classe) | Documents Microsoft
+title: CDaoRecordView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,12 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDaoRecordView class
-- data-bound controls [C++], DAO controls
-- data binding [C++], DAO views
-- bound controls [C++], displaying database data
-- application wizards [C++], creating record views
-- controls [MFC], data binding
+- CDaoRecordView [MFC], CDaoRecordView
+- CDaoRecordView [MFC], IsOnFirstRecord
+- CDaoRecordView [MFC], IsOnLastRecord
+- CDaoRecordView [MFC], OnGetRecordset
+- CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
 caps.latest.revision: 23
 author: mikeblome
@@ -44,58 +43,58 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 11aa318e84e89835ceb710725590f3c3e6387fcd
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4d300082bf01394958c02a4cf8dd33305df1c4a0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaorecordview-class"></a>CDaoRecordView (classe)
-Vue qui affiche des enregistrements de base de données dans des contrôles.  
+# <a name="cdaorecordview-class"></a>CDaoRecordView Class
+A view that displays database records in controls.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class AFX_NOVTABLE CDaoRecordView : public CFormView  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Constructeurs protégés  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoRecordView::CDaoRecordView](#cdaorecordview)|Construit un objet `CDaoRecordView`.|  
+|[CDaoRecordView::CDaoRecordView](#cdaorecordview)|Constructs a `CDaoRecordView` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoRecordView::IsOnFirstRecord](#isonfirstrecord)|Retourne zéro si l’enregistrement actif est le premier enregistrement dans le jeu d’enregistrements.|  
-|[CDaoRecordView::IsOnLastRecord](#isonlastrecord)|Retourne zéro si l’enregistrement actif est le dernier enregistrement dans le jeu d’enregistrements.|  
-|[CDaoRecordView::OnGetRecordset](#ongetrecordset)|Retourne un pointeur vers un objet d’une classe dérivée de `CDaoRecordset`. ClassWizard substitue cette fonction pour vous et crée le jeu d’enregistrements si nécessaire.|  
-|[CDaoRecordView::OnMove](#onmove)|Si l’enregistrement en cours a changé, il met à jour sur la source de données, puis passe à l’enregistrement spécifié (suivante, précédente, première ou dernière).|  
+|[CDaoRecordView::IsOnFirstRecord](#isonfirstrecord)|Returns nonzero if the current record is the first record in the associated recordset.|  
+|[CDaoRecordView::IsOnLastRecord](#isonlastrecord)|Returns nonzero if the current record is the last record in the associated recordset.|  
+|[CDaoRecordView::OnGetRecordset](#ongetrecordset)|Returns a pointer to an object of a class derived from `CDaoRecordset`. ClassWizard overrides this function for you and creates the recordset if necessary.|  
+|[CDaoRecordView::OnMove](#onmove)|If the current record has changed, updates it on the data source, then moves to the specified record (next, previous, first, or last).|  
   
-## <a name="remarks"></a>Remarques  
- La vue est une vue de formulaire directement connectée à un `CDaoRecordset` objet. La vue est créée à partir d’une ressource modèle de boîte de dialogue et affiche les champs de le `CDaoRecordset` l’objet dans les contrôles du modèle de boîte de dialogue. Le `CDaoRecordView` objet utilise l’échange de données de boîtes de dialogue (DDX) et l’échange de champs d’enregistrements DAO (DFX) pour automatiser le déplacement des données entre les contrôles sur le formulaire et les champs de l’objet recordset. `CDaoRecordView`fournit également une implémentation par défaut pour le déplacement vers le premier, suivant, précédent ou le dernier enregistrement et une interface de l’enregistrement actuellement en mode de mise à jour.  
+## <a name="remarks"></a>Remarks  
+ The view is a form view directly connected to a `CDaoRecordset` object. The view is created from a dialog template resource and displays the fields of the `CDaoRecordset` object in the dialog template's controls. The `CDaoRecordView` object uses dialog data exchange (DDX) and DAO record field exchange (DFX) to automate the movement of data between the controls on the form and the fields of the recordset. `CDaoRecordView` also supplies a default implementation for moving to the first, next, previous, or last record and an interface for updating the record currently in view.  
   
 > [!NOTE]
->  Les classes de base de données DAO sont distinctes des classes de base de données MFC basées sur Open Database Connectivity (ODBC). Tous les noms de classe de base de données DAO ont le préfixe « CDao ». Vous pouvez toujours accès aux sources de données ODBC avec les classes DAO ; les classes DAO offrent généralement des fonctionnalités supérieures, car elles utilisent le moteur de base de données Microsoft Jet.  
+>  The DAO database classes are distinct from the MFC database classes based on Open Database Connectivity (ODBC). All DAO database class names have the "CDao" prefix. You can still access ODBC data sources with the DAO classes; the DAO classes generally offer superior capabilities because they use the Microsoft Jet database engine.  
   
- La plus courante consiste à créer votre vue de l’enregistrement avec l’Assistant Application. L’Assistant Application crée la classe de vue de l’enregistrement et ses classes de recordset associées dans le cadre de votre application squelette starter.  
+ The most common way to create your record view is with the Application Wizard. The Application Wizard creates both the record view class and its associated recordset class as part of your skeleton starter application.  
   
- Si vous devez simplement un formulaire unique, l’approche de l’Assistant Création d’applications est plus facile. ClassWizard vous permet de décider d’utiliser une vue d’enregistrement plus tard dans le processus de développement. Si vous ne créez pas la classe de vue de l’enregistrement avec l’Assistant Application, vous pouvez le créer ultérieurement avec ClassWizard. Pour créer une vue d’enregistrement et un jeu d’enregistrements séparément et puis de les connecter à l’aide de ClassWizard est l’approche la plus souple car elle vous donne davantage de contrôle dans la classe de recordset et son. H /. Fichier CPP. Cette approche vous permet également de disposer de plusieurs vues des enregistrements sur la même classe de recordset.  
+ If you simply need a single form, the Application Wizard approach is easier. ClassWizard lets you decide to use a record view later in the development process. If you don't create the record view class with the Application Wizard, you can create it later with ClassWizard. Using ClassWizard to create a record view and a recordset separately and then connect them is the most flexible approach because it gives you more control in naming the recordset class and its .H/.CPP files. This approach also lets you have multiple record views on the same recordset class.  
   
- Pour faciliter aux utilisateurs finaux de déplacement entre les enregistrements dans la vue de l’enregistrement, l’Assistant Application crée menu (et éventuellement de barre d’outils) pour déplacer des ressources à la première, suivant, précédent ou le dernier enregistrement. Si vous créez une classe d’affichage de l’enregistrement avec ClassWizard, vous devez créer ces ressources vous-même avec les menus et la bitmap des éditeurs.  
+ To make it easy for end-users to move from record to record in the record view, the Application Wizard creates menu (and optionally toolbar) resources for moving to the first, next, previous, or last record. If you create a record view class with ClassWizard, you need to create these resources yourself with the menu and bitmap editors.  
   
- Pour plus d’informations sur l’implémentation par défaut pour le déplacement entre les enregistrements, consultez `IsOnFirstRecord` et `IsOnLastRecord` et l’article [à l’aide d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md), qui s’applique aux deux `CRecordView` et `CDaoRecordView`.  
+ For information about the default implementation for moving from record to record, see `IsOnFirstRecord` and `IsOnLastRecord` and the article [Using a Record View](../../data/using-a-record-view-mfc-data-access.md), which applies to both `CRecordView` and `CDaoRecordView`.  
   
- `CDaoRecordView`assure le suivi de la position de l’utilisateur dans le jeu d’enregistrements afin que la vue de l’enregistrement peut mettre à jour l’interface utilisateur. Lorsque l’utilisateur passe à des extrémités de l’objet recordset, la vue d’enregistrement désactive les objets d’interface utilisateur, tels que les éléments de menu ou des boutons de barre d’outils, pour déplacer ultérieurement dans la même direction.  
+ `CDaoRecordView` keeps track of the user's position in the recordset so that the record view can update the user interface. When the user moves to either end of the recordset, the record view disables user interface objects — such as menu items or toolbar buttons — for moving further in the same direction.  
   
- Pour plus d’informations sur la déclaration et utilisation de votre vue de l’enregistrement et les classes de jeu d’enregistrements, consultez « Conception et création d’une vue enregistrement » dans l’article [vues des enregistrements](../../data/record-views-mfc-data-access.md). Pour plus d’informations sur le travail vues d’enregistrement et de leur utilisation, consultez l’article [à l’aide d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md). Tous les articles mentionnés ci-dessus s’appliquent aux deux `CRecordView` et `CDaoRecordView`.  
+ For more information about declaring and using your record view and recordset classes, see "Designing and Creating a Record View" in the article [Record Views](../../data/record-views-mfc-data-access.md). For more information about how record views work and how to use them, see the article [Using a Record View](../../data/using-a-record-view-mfc-data-access.md). All the articles mentioned above apply to both `CRecordView` and `CDaoRecordView`.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -110,124 +109,124 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
   
  `CDaoRecordView`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-##  <a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
- Lorsque vous créez un objet d’un type dérivé de `CDaoRecordView`, appelez des deux formes de constructeur pour initialiser l’objet de vue et d’identifier la ressource de boîte de dialogue sur laquelle repose la vue.  
+##  <a name="cdaorecordview"></a>  CDaoRecordView::CDaoRecordView  
+ When you create an object of a type derived from `CDaoRecordView`, call either form of the constructor to initialize the view object and identify the dialog resource on which the view is based.  
   
 ```  
 explicit CDaoRecordView(LPCTSTR lpszTemplateName);  
 explicit CDaoRecordView(UINT nIDTemplate);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpszTemplateName`  
- Contient une chaîne terminée par le caractère null qui correspond au nom d’une ressource modèle de boîte de dialogue.  
+ Contains a null-terminated string that is the name of a dialog template resource.  
   
  `nIDTemplate`  
- Contient le numéro d’ID d’une ressource modèle de boîte de dialogue.  
+ Contains the ID number of a dialog template resource.  
   
-### <a name="remarks"></a>Remarques  
- Vous pouvez soit identifier la ressource par son nom (passez une chaîne comme argument au constructeur) ou par son ID (passer un entier non signé comme argument). ID est recommandé d’utiliser une ressource.  
-  
-> [!NOTE]
->  Votre classe dérivée doit fournir son propre constructeur. Dans le constructeur de votre classe dérivée, appelez le constructeur de `CDaoRecordView::CDaoRecordView` avec le nom de la ressource ou l’ID en tant qu’argument.  
-  
- **CDaoRecordView::OnInitialUpdate** appelle `CWnd::UpdateData`, qui appelle la méthode `CWnd::DoDataExchange`. Cet appel initial à `DoDataExchange` se connecte `CDaoRecordView` contrôle (indirectement) de `CDaoRecordset` créés par ClassWizard de données membres de champ. Ces membres de données ne peut pas être utilisés tant qu’après l’appel de la classe de base **CFormView::OnInitialUpdate** fonction membre.  
+### <a name="remarks"></a>Remarks  
+ You can either identify the resource by name (pass a string as the argument to the constructor) or by its ID (pass an unsigned integer as the argument). Using a resource ID is recommended.  
   
 > [!NOTE]
->  Si vous utilisez ClassWizard, l’Assistant définit un `enum` valeur `CDaoRecordView::IDD` dans la déclaration de classe et les utilise dans l’initialisation d’un membre de liste pour le constructeur.  
+>  Your derived class must supply its own constructor. In the constructor of your derived class, call the constructor `CDaoRecordView::CDaoRecordView` with the resource name or ID as an argument.  
   
- [!code-cpp[NVC_MFCDatabase&#35;](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
+ **CDaoRecordView::OnInitialUpdate** calls `CWnd::UpdateData`, which calls `CWnd::DoDataExchange`. This initial call to `DoDataExchange` connects `CDaoRecordView` controls (indirectly) to `CDaoRecordset` field data members created by ClassWizard. These data members cannot be used until after you call the base class **CFormView::OnInitialUpdate** member function.  
   
-##  <a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
- Appelez cette fonction membre pour déterminer si l’enregistrement actif est le premier enregistrement de l’objet recordset associé à cette vue de l’enregistrement.  
+> [!NOTE]
+>  If you use ClassWizard, the wizard defines an `enum` value `CDaoRecordView::IDD` in the class declaration and uses it in the member initialization list for the constructor.  
+  
+ [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
+  
+##  <a name="isonfirstrecord"></a>  CDaoRecordView::IsOnFirstRecord  
+ Call this member function to determine whether the current record is the first record in the recordset object associated with this record view.  
   
 ```  
 BOOL IsOnFirstRecord();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’enregistrement actif est le premier enregistrement de l’objet recordset. sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the current record is the first record in the recordset; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Cette fonction est utile pour écrire des gestionnaires de mise à jour de commande écrits par ClassWizard vos propres implémentations de la valeur par défaut.  
+### <a name="remarks"></a>Remarks  
+ This function is useful for writing your own implementations of the default command update handlers written by ClassWizard.  
   
- Si l’utilisateur se déplace vers le premier enregistrement, le désactive framework des objets d’interface utilisateur (par exemple, les éléments de menu ou les boutons de barre d’outils) que vous avez pour passer à la première ou de l’enregistrement précédent.  
+ If the user moves to the first record, the framework disables any user interface objects (for example, menu items or toolbar buttons) you have for moving to the first or the previous record.  
   
-##  <a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
- Appelez cette fonction membre pour déterminer si l’enregistrement actif est le dernier enregistrement de l’objet recordset associé à cette vue de l’enregistrement.  
+##  <a name="isonlastrecord"></a>  CDaoRecordView::IsOnLastRecord  
+ Call this member function to determine whether the current record is the last record in the recordset object associated with this record view.  
   
 ```  
 BOOL IsOnLastRecord();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’enregistrement actif est le dernier enregistrement de l’objet recordset. sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the current record is the last record in the recordset; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Cette fonction est utile pour écrire vos propres implémentations de la valeur par défaut des gestionnaires de mise à jour de commandes ClassWizard écrit pour prendre en charge une interface utilisateur pour le déplacement entre les enregistrements.  
+### <a name="remarks"></a>Remarks  
+ This function is useful for writing your own implementations of the default command update handlers that ClassWizard writes to support a user interface for moving from record to record.  
   
 > [!CAUTION]
->  Le résultat de cette fonction est fiable, à ceci près que la vue n’est peut-être pas en mesure de détecter la fin du jeu d’enregistrements jusqu'à ce que l’utilisateur ait dépassé. L’utilisateur peut avoir d’aller au-delà du dernier enregistrement avant l’affichage de l’enregistrement peut indiquer qu’il doit désactiver les objets d’interface utilisateur pour les déplacer vers l’enregistrement suivant ou le dernier. Si l’utilisateur déplace au-delà du dernier enregistrement, puis revient au dernier enregistrement (ou avant qu’elle), la vue de l’enregistrement peut effectuer le suivi de la position de l’utilisateur dans le jeu d’enregistrements et désactiver les objets d’interface utilisateur correctement.  
+>  The result of this function is reliable except that the view may not be able to detect the end of the recordset until the user has moved past it. The user might have to move beyond the last record before the record view can tell that it must disable any user interface objects for moving to the next or last record. If the user moves past the last record and then moves back to the last record (or before it), the record view can track the user's position in the recordset and disable user interface objects correctly.  
   
-##  <a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
- Retourne un pointeur vers le `CDaoRecordset`-dérivés d’objet associé à la vue de l’enregistrement.  
+##  <a name="ongetrecordset"></a>  CDaoRecordView::OnGetRecordset  
+ Returns a pointer to the `CDaoRecordset`-derived object associated with the record view.  
   
 ```  
 virtual CDaoRecordset* OnGetRecordset() = 0;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers un `CDaoRecordset`-objet dérivé si l’objet a été créé ; sinon une **NULL** pointeur.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CDaoRecordset`-derived object if the object was successfully created; otherwise a **NULL** pointer.  
   
-### <a name="remarks"></a>Remarques  
- Vous devez substituer cette fonction membre pour créer ou obtenir un objet recordset et de retourner un pointeur vers lui. Si vous déclarez votre classe d’affichage de l’enregistrement avec ClassWizard, l’Assistant écrit un remplacement de la valeur par défaut. Implémentation de ClassWizard par défaut retourne le pointeur de jeu d’enregistrements stocké dans la vue de l’enregistrement s’il en existe. Si non, il construit un objet recordset du type que vous avez spécifié avec ClassWizard et appelle son **ouvrir** membre de fonction pour ouvrir la table ou exécuter la requête, puis retourne un pointeur vers l’objet.  
+### <a name="remarks"></a>Remarks  
+ You must override this member function to construct or obtain a recordset object and return a pointer to it. If you declare your record view class with ClassWizard, the wizard writes a default override for you. ClassWizard's default implementation returns the recordset pointer stored in the record view if one exists. If not, it constructs a recordset object of the type you specified with ClassWizard and calls its **Open** member function to open the table or run the query, and then returns a pointer to the object.  
   
- Pour plus d’informations et d’exemples, consultez l’article [vues des enregistrements : utilisation d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).  
+ For more information and examples, see the article [Record Views: Using a Record View](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>CDaoRecordView::OnMove  
- Appelez cette fonction membre pour déplacer vers un autre enregistrement dans le jeu d’enregistrements et afficher ses champs dans les contrôles de la vue de l’enregistrement.  
+##  <a name="onmove"></a>  CDaoRecordView::OnMove  
+ Call this member function to move to a different record in the recordset and display its fields in the controls of the record view.  
   
 ```  
 virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIDMoveCommand`  
- Une des valeurs d’ID de commande standard suivantes :  
+ One of the following standard command ID values:  
   
-- `ID_RECORD_FIRST`Déplacer vers le premier enregistrement du jeu d’enregistrements.  
+- `ID_RECORD_FIRST` Move to the first record in the recordset.  
   
-- `ID_RECORD_LAST`Accéder au dernier enregistrement dans le jeu d’enregistrements.  
+- `ID_RECORD_LAST` Move to the last record in the recordset.  
   
-- `ID_RECORD_NEXT`Déplacer vers l’enregistrement suivant dans le jeu d’enregistrements.  
+- `ID_RECORD_NEXT` Move to the next record in the recordset.  
   
-- `ID_RECORD_PREV`Déplacer vers l’enregistrement précédent dans le jeu d’enregistrements.  
+- `ID_RECORD_PREV` Move to the previous record in the recordset.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le déplacement a réussi ; Sinon, 0 si la demande de déplacement a été refusée.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the move was successful; otherwise 0 if the move request was denied.  
   
-### <a name="remarks"></a>Remarques  
- L’implémentation par défaut appelle la fonction de membre de déplacement appropriée de le `CDaoRecordset` objet associé à la vue de l’enregistrement.  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls the appropriate Move member function of the `CDaoRecordset` object associated with the record view.  
   
- Par défaut, `OnMove` met à jour l’enregistrement en cours dans la source de données si l’utilisateur a été modifié dans la vue de l’enregistrement.  
+ By default, `OnMove` updates the current record on the data source if the user has changed it in the record view.  
   
- L’Assistant Application crée une ressource de menu avec des éléments de menu premier, dernier enregistrement, enregistrement suivant et enregistrement précédent. Si vous sélectionnez l’option de barre d’outils initiale, l’Assistant Application crée également une barre d’outils avec des boutons correspondant à ces commandes.  
+ The Application Wizard creates a menu resource with First Record, Last Record, Next Record, and Previous Record menu items. If you select the Initial Toolbar option, the Application Wizard also creates a toolbar with buttons corresponding to these commands.  
   
- Si vous déplacez au-delà du dernier enregistrement du jeu d’enregistrements, la vue de l’enregistrement continue d’afficher le dernier enregistrement. Si vous déplacez vers l’arrière au-delà du premier enregistrement, la vue de l’enregistrement continue à afficher le premier enregistrement.  
+ If you move past the last record in the recordset, the record view continues to display the last record. If you move backward past the first record, the record view continues to display the first record.  
   
 > [!CAUTION]
->  L’appel `OnMove` lève une exception si l’objet recordset ne comporte aucun enregistrement. Appeler la fonction de gestionnaire de mise à jour interface utilisateur approprié : **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, ou **OnUpdateRecordPrev** — correspondants avant de déplacer pour déterminer si le jeu d’enregistrements comporte tous les enregistrements.  
+>  Calling `OnMove` throws an exception if the recordset has no records. Call the appropriate user interface update handler function — **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, or **OnUpdateRecordPrev** — before the corresponding move operation to determine whether the recordset has any records.  
   
-## <a name="see-also"></a>Voir aussi  
- [Classe de CFormView](../../mfc/reference/cformview-class.md)   
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [CDaoRecordset (classe)](../../mfc/reference/cdaorecordset-class.md)   
- [Classe d’objet CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)   
- [CDaoQueryDef (classe)](../../mfc/reference/cdaoquerydef-class.md)   
- [CDaoDatabase (classe)](../../mfc/reference/cdaodatabase-class.md)   
- [CDaoWorkspace (classe)](../../mfc/reference/cdaoworkspace-class.md)   
- [Classe de CFormView](../../mfc/reference/cformview-class.md)
+## <a name="see-also"></a>See Also  
+ [CFormView Class](../../mfc/reference/cformview-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDaoRecordset Class](../../mfc/reference/cdaorecordset-class.md)   
+ [CDaoTableDef Class](../../mfc/reference/cdaotabledef-class.md)   
+ [CDaoQueryDef Class](../../mfc/reference/cdaoquerydef-class.md)   
+ [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)   
+ [CDaoWorkspace Class](../../mfc/reference/cdaoworkspace-class.md)   
+ [CFormView Class](../../mfc/reference/cformview-class.md)
 

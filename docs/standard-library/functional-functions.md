@@ -1,11 +1,11 @@
 ---
-title: '&lt;functional&gt;, fonctions | Microsoft Docs'
+title: '&lt;functional&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -47,20 +47,54 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- functional functions
+- std::bind [C++]
+- std::bind1st
+- std::bind2nd
+- std::bit_and [C++]
+- std::bit_not [C++]
+- std::bit_or [C++]
+- std::bit_xor [C++]
+- std::cref [C++]
+- 
+- std::mem_fn [C++]
+- std::mem_fun [C++]
+- std::mem_fun_ref [C++]
+- std::not1
+- std::not2
+- std::ptr_fun [C++]
+- std::ref [C++]
+- 
+- std::swap [C++]
+- 
+- std::bind [C++]
+- std::bind1st
+- std::bind2nd
+- std::bit_and [C++]
+- std::bit_not [C++]
+- std::bit_or [C++]
+- std::bit_xor [C++]
+- std::cref [C++]
+- std::mem_fn [C++]
+- std::mem_fun [C++]
+- std::mem_fun_ref [C++]
+- std::not1
+- std::not2
+- std::ptr_fun [C++]
+- std::ref [C++]
+- std::swap [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
 caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 16d93ad5a46dccbc53fa67a08e2f8432b18f14b5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2bfc2d23e642167528730a8abee406931625b3bd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltfunctionalgt-functions"></a>&lt;functional&gt;, fonctions
+# <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; functions
 ||||  
 |-|-|-|  
 |[bind](#bind)|[bind1st](#bind1st)|[bind2nd](#bind2nd)|  
@@ -71,7 +105,7 @@ ms.lasthandoff: 04/19/2017
 |[swap](#swap)|  
   
 ##  <a name="bind"></a>  bind  
- Lie des arguments à un objet pouvant être appelé.  
+ Binds arguments to a callable object.  
   
 ```  
 template <class Fty, class T1, class T2, ..., class TN>  
@@ -81,43 +115,43 @@ template <class Ret, class Fty, class T1, class T2, ..., class TN>
 unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Fty`  
- Type de l’objet à appeler.  
+ The type of the object to call.  
   
  `TN`  
- Type du N-ième argument de l’appel.  
+ The type of the Nth call argument.  
   
  `fn`  
- Objet à appeler.  
+ The object to call.  
   
  `tN`  
- N-ième argument de l’appel.  
+ The Nth call argument.  
   
-### <a name="remarks"></a>Notes  
- Les types `Fty, T1, T2, ..., TN` doivent être constructibles par copie et `INVOKE(fn, t1, ..., tN)` doit être une expression valide pour certaines valeurs `w1, w2, ..., wN`.  
+### <a name="remarks"></a>Remarks  
+ The types `Fty, T1, T2, ..., TN` must be copy constructible, and `INVOKE(fn, t1, ..., tN)` must be a valid expression for some values `w1, w2, ..., wN`.  
   
- La première fonction de modèle retourne un wrapper d’appel de transfert `g` avec un type de résultat faible. L’effet de `g(u1, u2, ..., uM)` est `INVOKE(f, v1, v2, ..., vN, ` [result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, où `cv` est les qualificateurs cv de `g` et les valeurs et les types des arguments liées `v1, v2, ..., vN` sont déterminés comme indiqué ci-dessous. Vous l’utilisez pour lier des arguments à un objet pouvant être appelé afin de créer un objet pouvant être appelé avec une liste d’arguments personnalisés.  
+ The first template function returns a forwarding call wrapper `g` with a weak result type. The effect of `g(u1, u2, ..., uM)` is `INVOKE(f, v1, v2, ..., vN, `[result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, where `cv` is the cv-qualifiers of `g` and the values and types of the bound arguments `v1, v2, ..., vN` are determined as specified below. You use it to bind arguments to a callable object to make a callable object with a tailored argument list.  
   
- La deuxième fonction de modèle retourne un wrapper d’appel de transfert `g` avec un type imbriqué `result_type` qui est un synonyme de `Ret`. L’effet de `g(u1, u2, ..., uM)` est `INVOKE(f, v1, v2, ..., vN, Ret)`, où `cv` désigne les qualificateurs cv de `g`, et les valeurs et types des arguments liés `v1, v2, ..., vN` sont déterminés comme indiqué ci-dessous. Vous l’utilisez pour lier des arguments à un objet pouvant être appelé afin de créer un objet pouvant être appelé avec une liste d’arguments personnalisés et un type de retour spécifié.  
+ The second template function returns a forwarding call wrapper `g` with a nested type `result_type` that is a synonym for `Ret`. The effect of `g(u1, u2, ..., uM)` is `INVOKE(f, v1, v2, ..., vN, Ret)`, where `cv` is the cv-qualifiers of `g` and the values and types of the bound arguments `v1, v2, ..., vN` are determined as specified below. You use it to bind arguments to a callable object to make a callable object with a tailored argument list and with a specified return type.  
   
- Les valeurs des arguments liés `v1, v2, ..., vN` et leurs types correspondants `V1, V2, ..., VN` dépendent du type de l’argument correspondant `ti` de type `Ti` dans l’appel à `bind` et des qualificateurs cv `cv` du wrapper d’appel `g` comme suit :  
+ The values of the bound arguments `v1, v2, ..., vN` and their corresponding types `V1, V2, ..., VN` depend on the type of the corresponding argument `ti` of type `Ti` in the call to `bind` and the cv-qualifiers `cv` of the call wrapper `g` as follows:  
   
- si `ti` est de type `reference_wrapper<T>`, l’argument `vi` est `ti.get()` et son type `Vi` est `T&` ;  
+ if `ti` is of type `reference_wrapper<T>` the argument `vi` is `ti.get()` and its type `Vi` is `T&`;  
   
- si `std::is_bind_expression<Ti>::value` est de type `true`, l’argument `vi` est `ti(u1, u2, ..., uM)` et son type `Vi` est `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type` ;  
+ if the value of `std::is_bind_expression<Ti>::value` is `true` the argument `vi` is `ti(u1, u2, ..., uM)` and its type `Vi` is `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`;  
   
- si la valeur `j` de `std::is_placeholder<Ti>::value` n’est pas égale à zéro, l’argument `vi` est `uj` et son type `Vi` est `Uj&` ;  
+ if the value `j` of `std::is_placeholder<Ti>::value` is not zero the argument `vi` is `uj` and its type `Vi` is `Uj&`;  
   
- sinon l’argument `vi` est `ti` et son type `Vi` est `Ti` `cv` `&`.  
+ otherwise the argument `vi` is `ti` and its type `Vi` is `Ti` `cv` `&`.  
   
- Par exemple, avec une fonction `f(int, int)`, l’expression `bind(f, _1, 0)` retourne un wrappel d’appel de transfert `cw` de sorte que `cw(x)` appelle `f(x, 0)`. L’expression `bind(f, 0, _1)` retourne un wrapper d’appel de transfert `cw` de sorte que `cw(x)` appelle `f(0, x)`.  
+ For example, given a function `f(int, int)` the expression `bind(f, _1, 0)` returns a forwarding call wrapper `cw` such that `cw(x)` calls `f(x, 0)`. The expression `bind(f, 0, _1)` returns a forwarding call wrapper `cw` such that `cw(x)` calls `f(0, x)`.  
   
- Le nombre d’arguments dans un appel à `bind` en plus de l’argument `fn` doit être égal au nombre d’arguments qui peut être passé à l’objet pouvant être appelé `fn`. Par conséquent, `bind(cos, 1.0)` est correct, et `bind(cos)` et `bind(cos, _1, 0.0)` sont incorrects.  
+ The number of arguments in a call to `bind` in addition to the argument `fn` must be equal to the number of arguments that can be passed to the callable object `fn`. Thus, `bind(cos, 1.0)` is correct, and both `bind(cos)` and `bind(cos, _1, 0.0)` are incorrect.  
   
- Le nombre d’arguments dans l’appel de la fonction au wrapper d’appel retourné par `bind` doit être au moins aussi grand que la valeur numérotée la plus élevée de `is_placeholder<PH>::value` pour tous les arguments d’espace réservé dans l’appel à `bind`. Par conséquent, `bind(cos, _2)(0.0, 1.0)` est correct (et retourne `cos(1.0)`) et `bind(cos, _2)(0.0)` est incorrect.  
+ The number of arguments in the function call to the call wrapper returned by `bind` must be at least as large as the highest numbered value of `is_placeholder<PH>::value` for all of the placeholder arguments in the call to `bind`. Thus, `bind(cos, _2)(0.0, 1.0)` is correct (and returns `cos(1.0)`), and `bind(cos, _2)(0.0)` is incorrect.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__bind.cpp   
@@ -170,29 +204,29 @@ int main()
 ```  
   
 ##  <a name="bind1st"></a>  bind1st  
- Classe de modèle d’assistance qui crée un adaptateur pour convertir un objet de fonction binaire en objet de fonction unaire en liant le premier argument de la fonction binaire à une valeur spécifiée.  
+ A helper template function that creates an adaptor to convert a binary function object into a unary function object by binding the first argument of the binary function to a specified value.  
   
 ```  
 template <class Operation, class Type>  
 binder1st <Operation> bind1st (const Operation& func, const Type& left);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `func`  
- Objet de fonction binaire à convertir en un objet de fonction unaire.  
+ The binary function object to be converted to a unary function object.  
   
  `left`  
- Valeur à laquelle le premier argument de l’objet de fonction binaire doit être lié.  
+ The value to which the first argument of the binary function object is to be bound.  
   
-### <a name="return-value"></a>Valeur de retour  
- L’objet de fonction unaire qui résulte de la liaison du premier argument de l’objet de fonction binaire à la valeur `left`.  
+### <a name="return-value"></a>Return Value  
+ The unary function object that results from binding the first argument of the binary function object to the value `left`.  
   
-### <a name="remarks"></a>Remarques  
- Les binders de fonction sont un type d’adaptateur de fonction. Comme elles retournent des objets de fonction, elles peuvent être utilisées dans certains types de composition de fonction pour construire des expressions plus complexes et plus puissantes.  
+### <a name="remarks"></a>Remarks  
+ Function binders are a kind of function adaptor and, because they return function objects, can be used in certain types of function composition to construct more complicated and powerful expressions.  
   
- Si `func` est un objet de type `Operation` et que `c` est une constante, `bind1st` ( `func`, `c`) est équivalent au constructeur de classe [binder1st](../standard-library/binder1st-class.md) `binder1st`< `Operation`> ( `func`, `c`) et il est plus pratique.  
+ If `func` is an object of type `Operation` and `c` is a constant, then `bind1st` ( `func`, `c`) is equivalent to the [binder1st](../standard-library/binder1st-class.md) class constructor `binder1st`< `Operation`> ( `func`, `c`) and is more convenient.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_bind1st.cpp  
@@ -260,29 +294,29 @@ The number of elements in v1 less than 10 is: 2.
 ```  
   
 ##  <a name="bind2nd"></a>  bind2nd  
- Classe de modèle d’assistance qui crée un adaptateur pour convertir un objet de fonction binaire en objet de fonction unaire en liant le second argument de la fonction binaire à une valeur spécifiée.  
+ A helper template function that creates an adaptor to convert a binary function object into a unary function object by binding the second argument of the binary function to a specified value.  
   
 ```  
 template <class Operation, class Type>  
 binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `func`  
- Objet de fonction binaire à convertir en un objet de fonction unaire.  
+ The binary function object to be converted to a unary function object.  
   
  `right`  
- Valeur à laquelle le deuxième argument de l’objet de fonction binaire doit être lié.  
+ The value to which the second argument of the binary function object is to be bound.  
   
-### <a name="return-value"></a>Valeur de retour  
- L’objet de fonction unaire qui résulte de la liaison le deuxième argument de l’objet de fonction binaire à la valeur `right`.  
+### <a name="return-value"></a>Return Value  
+ The unary function object that results from binding the second argument of the binary function object to the value `right`.  
   
-### <a name="remarks"></a>Remarques  
- Les binders de fonction sont un type d’adaptateur de fonction. Comme elles retournent des objets de fonction, elles peuvent être utilisées dans certains types de composition de fonction pour construire des expressions plus complexes et plus puissantes.  
+### <a name="remarks"></a>Remarks  
+ Function binders are a kind of function adaptor and, because they return function objects, can be used in certain types of function composition to construct more complicated and powerful expressions.  
   
- Si `func` est un objet de type **Operation** et que `c` est une constante, `bind2nd` ( `func`, `c` ) est équivalent au constructeur de classe [binder2nd](../standard-library/binder2nd-class.md) **binder2nd\<Operation>** ( `func`, `c` ) et il est plus pratique.  
+ If `func` is an object of type **Operation** and `c` is a constant, then `bind2nd` ( `func`, `c` ) is equivalent to the [binder2nd](../standard-library/binder2nd-class.md) class constructor **binder2nd\<Operation>** ( `func`, `c` ) and more convenient.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_bind2nd.cpp  
@@ -350,7 +384,7 @@ The number of elements in v1 less than 10 is: 2.
 ```  
   
 ##  <a name="bit_and"></a>  bit_and  
- Objet de fonction prédéfini qui effectue l’opération AND au niveau du bit (`operator&` binaire) sur ses arguments.  
+ A predefined function object that performs the bitwise AND operation (binary `operator&`) on its arguments.  
   
 ```  
 template <class Type = void>  
@@ -370,24 +404,24 @@ struct bit_and<void>
 };
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- Tout type qui prend en charge un `operator&` qui accepte des opérandes des types spécifiés ou inférés.  
+ Any type that supports an `operator&` that takes operands of the specified or inferred types.  
   
  `Left`  
- Opérande gauche de l’opération AND au niveau du bit. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `T`.  
+ The left operand of the bitwise AND operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- Opérande droit de l’opération AND au niveau du bit. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `U`.  
+ The right operand of the bitwise AND operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Résultat de `Left``&``Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator&`.  
+### <a name="return-value"></a>Return Value  
+ The result of `Left & Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator&`.  
   
-### <a name="remarks"></a>Notes  
- Le foncteur `bit_and` est limité aux types intégraux pour les types de données de base ou aux types définis par l’utilisateur qui implémentent `operator&` binaire.  
+### <a name="remarks"></a>Remarks  
+ The `bit_and` functor is restricted to integral types for the basic data types, or to user-defined types that implement binary `operator&`.  
   
 ##  <a name="bit_not"></a>  bit_not  
- Objet de fonction prédéfini qui effectue l’opération de complément (NOT) au niveau du bit (`operator~` unaire) sur ses arguments.  
+ A predefined function object that performs the bitwise complement (NOT) operation (unary `operator~`) on its argument.  
   
 ```  
 template <class Type = void>  
@@ -405,21 +439,21 @@ struct bit_not<void>
  };  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Type`  
- Type prenant en charge un `operator~` unaire.  
+ A type that supports a unary `operator~`.  
   
  `Right`  
- Opérande de l’opération de complément au niveau du bit. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait d’un argument de référence lvalue et rvalue du type inféré `Type`.  
+ The operand of the bitwise complement operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of an lvalue or rvalue reference argument of inferred type `Type`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Résultat de `~``Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator~`.  
+### <a name="return-value"></a>Return Value  
+ The result of `~ Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator~`.  
   
-### <a name="remarks"></a>Notes  
- Le foncteur `bit_not` est limité aux types intégraux pour les types de données de base ou aux types définis par l’utilisateur qui implémentent `operator~` binaire.  
+### <a name="remarks"></a>Remarks  
+ The `bit_not` functor is restricted to integral types for the basic data types, or to user-defined types that implement binary `operator~`.  
   
 ##  <a name="bit_or"></a>  bit_or  
- Objet de fonction prédéfini qui effectue l’opération OR au niveau du bit (`operator|`) sur ses arguments.  
+ A predefined function object that performs the bitwise OR operation ( `operator|`) on its arguments.  
   
 ```  
 template <class Type = void>  
@@ -439,24 +473,24 @@ struct bit_or<void>
 };
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- Tout type qui prend en charge un `operator|` qui accepte des opérandes des types spécifiés ou inférés.  
+ Any type that supports an `operator|` that takes operands of the specified or inferred types.  
   
  `Left`  
- Opérande gauche de l’opération OR au niveau du bit. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `T`.  
+ The left operand of the bitwise OR operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- Opérande droit de l’opération OR au niveau du bit. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `U`.  
+ The right operand of the bitwise OR operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Résultat de `Left``|``Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator|`.  
+### <a name="return-value"></a>Return Value  
+ The result of `Left | Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator|`.  
   
-### <a name="remarks"></a>Notes  
- Le foncteur `bit_or` est limité aux types intégraux pour les types de données de base ou aux types définis par l'utilisateur qui implémentent `operator|`.  
+### <a name="remarks"></a>Remarks  
+ The `bit_or` functor is restricted to integral types for the basic data types, or to user-defined types that implement `operator|`.  
   
 ##  <a name="bit_xor"></a>  bit_xor  
- Objet de fonction prédéfini qui effectue l’opération XOR au niveau du bit (`operator^` binaire) sur ses arguments.  
+ A predefined function object that performs the bitwise XOR operation (binary `operator^`) on its arguments.  
   
 ```  
 template <class Type = void>  
@@ -476,24 +510,24 @@ struct bit_xor<void>
 };
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- Tout type qui prend en charge un `operator^` qui accepte des opérandes des types spécifiés ou inférés.  
+ Any type that supports an `operator^` that takes operands of the specified or inferred types.  
   
  `Left`  
- Opérande gauche de l’opération XOR au niveau du bit. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `T`.  
+ The left operand of the bitwise XOR operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- Opérande droit de l’opération XOR au niveau du bit. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `U`.  
+ The right operand of the bitwise XOR operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Résultat de `Left``^``Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator^`.  
+### <a name="return-value"></a>Return Value  
+ The result of `Left ^ Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator^`.  
   
-### <a name="remarks"></a>Notes  
- Le foncteur `bit_xor` est limité aux types intégraux pour les types de données de base ou aux types définis par l’utilisateur qui implémentent `operator^` binaire.  
+### <a name="remarks"></a>Remarks  
+ The `bit_xor` functor is restricted to integral types for the basic data types, or to user-defined types that implement binary `operator^`.  
   
 ##  <a name="cref"></a>  cref  
- Construit un `reference_wrapper` const à partir d'un argument.  
+ Constructs a const `reference_wrapper` from an argument.  
   
 ```  
 template <class Ty>  
@@ -503,17 +537,17 @@ template <class Ty>
 reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Type de l’argument à inclure dans un wrapper.  
+ The type of the argument to wrap.  
   
  `arg`  
- Argument à inclure dans un wrapper.  
+ The argument to wrap.  
   
-### <a name="remarks"></a>Notes  
- La première fonction retourne `reference_wrapper<const Ty>(arg.get())`. Vous l’utilisez pour inclure une référence const dans un wrapper. La deuxième fonction retourne `reference_wrapper<const Ty>(arg)`. Vous l’utilisez pour inclure dans un wrapper une référence déjà incluse dans un wrapper comme référence const.  
+### <a name="remarks"></a>Remarks  
+ The first function returns `reference_wrapper<const Ty>(arg.get())`. You use it to wrap a const reference. The second function returns `reference_wrapper<const Ty>(arg)`. You use it to rewrap a wrapped reference as a const reference.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__cref.cpp   
@@ -547,28 +581,28 @@ cref(neg)(i) = -1
 ```  
   
 ##  <a name="mem_fn"></a>  mem_fn  
- Génère un wrapper d'appel simple.  
+ Generates a simple call wrapper.  
   
 ```  
 template <class Ret, class Ty>  
 unspecified mem_fn(Ret Ty::*pm);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Ret`  
- Type de retour de la fonction incluse dans un wrapper.  
+ The return type of the wrapped function.  
   
  `Ty`  
- Type de pointeur de la fonction membre.  
+ The type of the member function pointer.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle retourne un wrapper d’appel simple `cw` avec un type de résultat faible, de sorte que l’expression `cw(t, a2, ..., aN)` équivaut à `INVOKE(pm, t, a2, ..., aN)`. Elle ne lève aucune exception.  
+### <a name="remarks"></a>Remarks  
+ The template function returns a simple call wrapper `cw`, with a weak result type, such that the expression `cw(t, a2, ..., aN)` is equivalent to `INVOKE(pm, t, a2, ..., aN)`. It does not throw any exceptions.  
   
- Le wrapper d’appel retourné est dérivé de `std::unary_function<cv Ty*, Ret>` (d’où la définition du type imbriqué `result_type` comme synonyme de `Ret` et du type imbriqué `argument_type` comme synonyme de `cv Ty*`) uniquement si le type `Ty` est un pointeur vers une fonction membre avec un qualificateur cv `cv` qui n’accepte aucun argument.  
+ The returned call wrapper is derived from `std::unary_function<cv Ty*, Ret>` (hence defining the nested type `result_type` as a synonym for `Ret` and the nested type `argument_type` as a synonym for `cv Ty*`) only if the type `Ty` is a pointer to member function with cv-qualifier `cv` that takes no arguments.  
   
- Le wrapper d’appel retourné est dérivé de `std::binary_function<cv Ty*, T2, Ret>` (d’où la définition du type imbriqué `result_type` comme synonyme de `Ret`, du type imbriqué `first argument_type` comme synonyme de `cv Ty*` et du type imbriqué `second argument_type` comme synonyme de `T2`) uniquement si le type `Ty` est un pointeur vers une fonction membre avec un qualificateur cv `cv` qui accepte un argument de type `T2`.  
+ The returned call wrapper is derived from `std::binary_function<cv Ty*, T2, Ret>` (hence defining the nested type `result_type` as a synonym for `Ret`, the nested type `first argument_type` as a synonym for `cv Ty*`, and the nested type `second argument_type` as a synonym for `T2`) only if the type `Ty` is a pointer to member function with cv-qualifier `cv` that takes one argument, of type `T2`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__mem_fn.cpp   
@@ -608,7 +642,7 @@ int main()
 ```  
   
 ##  <a name="mem_fun"></a>  mem_fun  
- Fonctions de modèle d’assistance utilisées pour construire des adaptateurs d’objets de fonction pour des fonctions membres en cas d’initialisation avec des arguments de pointeur.  
+ Helper template functions used to construct function object adaptors for member functions when initialized with pointer arguments.  
   
 ```  
 template <class Result, class Type>  
@@ -624,14 +658,14 @@ template <class Result, class Type, class Arg>
 const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pmem`  
- Pointeur vers la fonction membre de la classe **Type** à convertir en objet de fonction.  
+ A pointer to the member function of class **Type** to be converted to a function object.  
   
-### <a name="return-value"></a>Valeur de retour  
- Objet de fonction **const** ou **non_const** de type `mem_fun_t` ou `mem_fun1_t`.  
+### <a name="return-value"></a>Return Value  
+ A **const** or **non_const** function object of type `mem_fun_t` or `mem_fun1_t`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_mem_fun.cpp  
@@ -692,7 +726,7 @@ int main( )
 ```  
   
 ##  <a name="mem_fun_ref"></a>  mem_fun_ref  
- Fonctions de modèle d’assistance utilisées pour construire des adaptateurs d’objet de fonction pour des fonctions membres en cas d’initialisation avec des arguments de référence.  
+ Helper template functions used to construct function object adaptors for member functions when initialized by using reference arguments.  
   
 ```  
 template <class Result, class Type>  
@@ -708,14 +742,14 @@ template <class Result, class Type, class Arg>
 const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) const);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pmem`  
- Pointeur vers la fonction membre de la classe `Type` à convertir en objet de fonction.  
+ A pointer to the member function of class `Type` to be converted to a function object.  
   
-### <a name="return-value"></a>Valeur de retour  
- Objet de fonction `const` ou `non_const` de type `mem_fun_ref_t` ou `mem_fun1_ref_t`.  
+### <a name="return-value"></a>Return Value  
+ A `const` or `non_const` function object of type `mem_fun_ref_t` or `mem_fun1_ref_t`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_mem_fun_ref.cpp  
@@ -794,24 +828,24 @@ With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```  
   
 ##  <a name="not1"></a>  not1  
- Retourne le complément d’un prédicat unaire.  
+ Returns the complement of a unary predicate.  
   
 ```  
 template <class UnaryPredicate>  
 unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pred`  
- Prédicat unaire à rendre négatif.  
+ The unary predicate to be negated.  
   
-### <a name="return-value"></a>Valeur de retour  
- Prédicat unaire qui est la négation du prédicat unaire modifié.  
+### <a name="return-value"></a>Return Value  
+ A unary predicate that is the negation of the unary predicate modified.  
   
-### <a name="remarks"></a>Notes  
- Si un `unary_negate` est construit à partir d’un prédicat unaire **Pred**( *x*), il retourne **!Pred**( *x*).  
+### <a name="remarks"></a>Remarks  
+ If a `unary_negate` is constructed from a unary predicate **Pred**( *x*), then it returns **!Pred**( *x*).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_not1.cpp  
@@ -862,24 +896,24 @@ The number of elements in v1 not greater than 10 is: 3.
 ```  
   
 ##  <a name="not2"></a>  not2  
- Retourne le complément d’un prédicat binaire.  
+ Returns the complement of a binary predicate.  
   
 ```  
 template <class BinaryPredicate>  
 binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `func`  
- Prédicat binaire à rendre négatif.  
+ The binary predicate to be negated.  
   
-### <a name="return-value"></a>Valeur de retour  
- Prédicat binaire qui est la négation du prédicat binaire modifié.  
+### <a name="return-value"></a>Return Value  
+ A binary predicate that is the negation of the binary predicate modified.  
   
-### <a name="remarks"></a>Notes  
- Si un `binary_negate` est construit à partir d’un prédicat binaire **BinPred**( *x*), *y*), il retourne ! **BinPred**( *x*, *y*).  
+### <a name="remarks"></a>Remarks  
+ If a `binary_negate` is constructed from a binary predicate **BinPred**( *x*, *y*), then it returns ! **BinPred**( *x*, *y*).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_not2.cpp  
@@ -934,7 +968,7 @@ Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```  
   
 ##  <a name="ptr_fun"></a>  ptr_fun  
- Fonctions de modèle d’assistance utilisées pour convertir des pointeurs de fonction unaires et binaires, respectivement, en fonctions adaptables unaires et binaires.  
+ Helper template functions used to convert unary and binary function pointers, respectively, into unary and binary adaptable functions.  
   
 ```  
 template <class Arg, class Result>  
@@ -944,23 +978,23 @@ template <class Arg1, class Arg2, class Result>
 pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(Result (*pfunc)(Arg1, Arg2));
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pfunc`  
- Pointeur de fonction unaire ou binaire à convertir en fonction adaptable.  
+ The unary or binary function pointer to be converted to an adaptable function.  
   
-### <a name="return-value"></a>Valeur de retour  
- La première fonction de modèle retourne la fonction unaire [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) < `Arg`, **Result**>(* `pfunc`).  
+### <a name="return-value"></a>Return Value  
+ The first template function returns the unary function [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) < `Arg`, **Result**>(* `pfunc`).  
   
- La deuxième fonction de modèle retourne la fonction binaire [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \< **Arg1**, **Arg2**, **Result**>(* `pfunc`).  
+ The second template function returns binary function [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \< **Arg1**, **Arg2**, **Result**>(* `pfunc`).  
   
-### <a name="remarks"></a>Notes  
- Un pointeur de fonction est un objet de fonction. Il peut être passé à n’importe quel algorithme de bibliothèque C++ Standard qui attend une fonction comme paramètre, mais il n’est pas adaptable. Pour l’utiliser avec un adaptateur, en le liant à une valeur ou en l’utilisant avec une négation, vous devez également fournir les types imbriqués qui rendent l’adaptation possible. La conversion de pointeurs de fonction unaire et binaire par la fonction d’assistance `ptr_fun` permet aux adaptateurs de fonction d’utiliser des pointeurs de fonction unaire et binaire.  
+### <a name="remarks"></a>Remarks  
+ A function pointer is a function object and may be passed to any C++ Standard Library algorithm that is expecting a function as a parameter, but it is not adaptable. To use it with an adaptor, such as binding a value to it or using it with a negator, it must be supplied with the nested types that make such an adaptation possible. The conversion of unary and binary function pointers by the `ptr_fun` helper function allows the function adaptors to work with unary and binary function pointers.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
  [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]  
   
 ##  <a name="ref"></a>  ref  
- Construit un `reference_wrapper` à partir d'un argument.  
+ Constructs a `reference_wrapper` from an argument.  
   
 ```  
 template <class Ty>  
@@ -970,11 +1004,11 @@ template <class Ty>
 reference_wrapper<Ty> ref(reference_wrapper<Ty>& arg);
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Une référence à `arg`; spécifiquement, `reference_wrapper<Ty>(arg)`.  
+### <a name="return-value"></a>Return Value  
+ A reference to `arg`; specifically, `reference_wrapper<Ty>(arg)`.  
   
-### <a name="example"></a>Exemple  
-  L’exemple suivant définit deux fonctions : une liée  à une variable chaîne, l’autre liée à une référence de la variable chaîne calculée par un appel à `ref`. Quand la valeur de la variable change, la première fonction continue à utiliser l’ancienne valeur et la seconde fonction utilise la nouvelle valeur.  
+### <a name="example"></a>Example  
+  The following example defines two functions: one bound to a string variable, the other bound to a reference of the string variable computed by a call to `ref`. When the value of the variable changes, the first function continues to use the old value and the second function uses the new value.  
   
 ```cpp  
 #include <algorithm>  
@@ -1049,27 +1083,27 @@ tiger cougar
 ```  
   
 ##  <a name="swap"></a>  swap  
- Échange deux objets `function`.  
+ Swaps two `function` objects.  
   
 ```  
 template <class Fty>  
 void swap(function<Fty>& f1, function<Fty>& f2);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Fty`  
- Type contrôlé par les objets de fonction.  
+ The type controlled by the function objects.  
   
  `f1`  
- Premier objet de fonction.  
+ The first function object.  
   
  `f2`  
- Deuxième objet de fonction.  
+ The second function object.  
   
-### <a name="remarks"></a>Notes  
- La fonction retourne `f1.swap(f2)`.  
+### <a name="remarks"></a>Remarks  
+ The function returns `f1.swap(f2)`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__swap.cpp   
@@ -1112,7 +1146,7 @@ empty == false
 val == -3  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<functional>](../standard-library/functional.md)
 
 

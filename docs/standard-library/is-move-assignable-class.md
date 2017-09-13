@@ -1,5 +1,5 @@
 ---
-title: is_move_assignable, classe | Microsoft Docs
+title: is_move_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_move_assignable
 - type_traits/std::is_move_assignable
 dev_langs:
 - C++
@@ -34,36 +33,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: db3e621e4638aab864fa897a6f046f81a6549daa
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9b7593198b72c0c479475618940c767328112d2a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ismoveassignable-class"></a>is_move_assignable, classe
-Teste si le type peut être assigné par déplacement.  
+# <a name="ismoveassignable-class"></a>is_move_assignable Class
+Tests if the type can be move assigned.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>
 struct is_move_assignable;
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Type à interroger.  
+ The type to query.  
   
-## <a name="remarks"></a>Notes  
- Un type est assignable par déplacement si une référence rvalue au type peut être assignée à une référence au type. Le prédicat de type équivaut à `is_assignable<T&, T&&>`. Les types assignables par déplacement incluent les types scalaires référençables et les types de classe qui ont des opérateurs d’assignation par déplacement générés par le compilateur ou définis par l’utilisateur.  
+## <a name="remarks"></a>Remarks  
+ A type is move assignable if an rvalue reference to the type can be assigned to a reference to the type. The type predicate is equivalent to `is_assignable<T&, T&&>`. Move assignable types include referenceable scalar types and class types that have either compiler-generated or user-defined move assignment operators.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

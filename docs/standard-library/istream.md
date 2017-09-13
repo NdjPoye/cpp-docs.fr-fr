@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- istream/std::<istream>
-- std.<istream>
-- <istream>
-- std::<istream>
+- istream/std::<istream>", "<istream>", "std::<istream>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a329d340709ca5d74f6a52c6ee6c8070ef2faa7f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7891190468f04f2fade1156fceb406e33bdf6431
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
-Définit la classe de modèle basic_istream, qui sert d'intermédiaire pour l'extraction des iostreams, et la classe de modèle basic_iostream, qui sert d'intermédiaire pour les insertions et les extractions. L'en-tête définit également un manipulateur associé. Ce fichier d'en-tête est généralement inclus pour vous par un autre en-tête iostreams ; vous devez rarement l'inclure directement.  
+Defines the template class basic_istream, which mediates extractions for the iostreams, and the template class basic_iostream, which mediates both insertions and extractions. The header also defines a related manipulator. This header file is typically included for you by another iostreams header; you rarely have to include it directly.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <istream>  
@@ -57,35 +54,35 @@ Définit la classe de modèle basic_istream, qui sert d'intermédiaire pour l'ex
   
 |||  
 |-|-|  
-|[iostream](../standard-library/istream-typedefs.md#iostream)|Type `basic_iostream` spécialisé sur `char`.|  
-|[istream](../standard-library/istream-typedefs.md#istream)|Type `basic_istream` spécialisé sur `char`.|  
-|[wiostream](../standard-library/istream-typedefs.md#wiostream)|Type `basic_iostream` spécialisé sur **wchar**.|  
-|[wistream](../standard-library/istream-typedefs.md#wistream)|Type `basic_istream` spécialisé sur **wchar**.|  
+|[iostream](../standard-library/istream-typedefs.md#iostream)|A type `basic_iostream` specialized on `char`.|  
+|[istream](../standard-library/istream-typedefs.md#istream)|A type `basic_istream` specialized on `char`.|  
+|[wiostream](../standard-library/istream-typedefs.md#wiostream)|A type `basic_iostream` specialized on **wchar**.|  
+|[wistream](../standard-library/istream-typedefs.md#wistream)|A type `basic_istream` specialized on **wchar**.|  
   
-### <a name="manipulators"></a>Manipulateurs  
-  
-|||  
-|-|-|  
-|[ws](../standard-library/istream-functions.md#ws)|Ignore l'espace blanc dans le flux.|  
-|[swap](../standard-library/istream-functions.md#istream_swap)|Échange deux objets de flux.|  
-  
-### <a name="operators"></a>Opérateurs  
+### <a name="manipulators"></a>Manipulators  
   
 |||  
 |-|-|  
-|[operator>>](../standard-library/istream-operators.md#op_gt_gt)|Extrait des chaînes et des caractères à partir du flux.|  
+|[ws](../standard-library/istream-functions.md#ws)|Skips white space in the stream.|  
+|[swap](../standard-library/istream-functions.md#istream_swap)|Exchanges two stream objects.|  
+  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[operator>>](../standard-library/istream-operators.md#op_gt_gt)|Extracts characters and strings from the stream.|  
   
 ### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[basic_iostream](../standard-library/basic-iostream-class.md)|Classe de flux qui peut effectuer à la fois l'entrée et la sortie.|  
-|[basic_istream](../standard-library/basic-istream-class.md)|La classe de modèle décrit un objet qui contrôle l’extraction d’éléments et d’objets encodés à partir d’une mémoire tampon de flux avec des éléments de type **Elem**, également appelé [char_type](../standard-library/basic-ios-class.md#char_type), dont les caractéristiques sont déterminées par la classe **Tr**, également appelée [traits_type](../standard-library/basic-ios-class.md#traits_type).|  
+|[basic_iostream](../standard-library/basic-iostream-class.md)|A stream class that can do both input and output.|  
+|[basic_istream](../standard-library/basic-istream-class.md)|The template class describes an object that controls extraction of elements and encoded objects from a stream buffer with elements of type **Elem**, also known as [char_type](../standard-library/basic-ios-class.md#char_type), whose character traits are determined by the class **Tr**, also known as [traits_type](../standard-library/basic-ios-class.md#traits_type).|  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream, programmation](../standard-library/iostream-programming.md)   
- [iostreams, conventions](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
 

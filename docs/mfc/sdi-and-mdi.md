@@ -1,40 +1,57 @@
 ---
-title: "SDI et MDI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fenêtres frame, applications MDI"
-  - "fenêtres frame, applications SDI"
-  - "MDI, différences par rapport à SDI"
-  - "MFC, fenêtres"
-  - "interface monodocument, applications"
+title: SDI and MDI | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], SDI applications
+- frame windows [MFC], MDI applications
+- MFC, windows
+- single document interface (SDI) [MFC], applications
+- MDI [MFC], vs. SDI
 ms.assetid: bb7239d9-4759-4f63-bfff-44a04b48c067
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# SDI et MDI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 974b31893158d532397441f37403028e39aa60de
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-MFC rend plus facile de travailler avec à la fois des applications interfaces de monodocuments \(SDI\) et des applications interfaces de documents multiples \(MDI\).  
+---
+# <a name="sdi-and-mdi"></a>SDI and MDI
+MFC makes it easy to work with both single-document interface (SDI) and multiple-document interface (MDI) applications.  
   
- Les applications SDI permettent qu'une unique fenêtre cadre soit ouverte à la fois.  Les applications MDI permettent à plusieurs fenêtres cadre d'être ouvertes dans la même instance d'une application.  Une application MDI a une fenêtre dans laquelle plusieurs fenêtres enfants MDI, qui sont des fenêtres cadres elles\-mêmes, peuvent être ouvertes, chacune contenant un document distinct.  Dans certaines applications, les fenêtres enfants peuvent être de types différents, tels que les fenêtres de graphique et la fenêtre de feuille de calcul.  Dans ce cas, la barre de menus peut changer à mesure que les fenêtres enfants MDI de différents types sont activées.  
+ SDI applications allow only one open document frame window at a time. MDI applications allow multiple document frame windows to be open in the same instance of an application. An MDI application has a window within which multiple MDI child windows, which are frame windows themselves, can be opened, each containing a separate document. In some applications, the child windows can be of different types, such as chart windows and spreadsheet windows. In that case, the menu bar can change as MDI child windows of different types are activated.  
   
 > [!NOTE]
->  Sous Windows 95 et versions ultérieures, les applications sont généralement SDI car le système d'exploitation a adopté une vue « centré sur les documents ».  
+>  Under Windows 95 and later, applications are commonly SDI because the operating system has adopted a "document-centered" view.  
   
- Pour plus d'informations, consultez [Documents, vues, et le .NET Framework](../mfc/documents-views-and-the-framework.md).  
+ For more information, see [Documents, Views, and the Framework](../mfc/documents-views-and-the-framework.md).  
   
-## Voir aussi  
- [Utilisation des classes pour l'écriture d'applications pour Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+

@@ -1,5 +1,5 @@
 ---
-title: is_enum, classe | Microsoft Docs
+title: is_enum Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_enum
 - type_traits/std::is_enum
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 1e57d67f920b6742c8ba6b732675c00a8b0df992
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a5a0c18678d6b679e4d02eabfdc052957fd94ec1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isenum-class"></a>is_enum, classe
-Teste si le type est une énumération.  
+# <a name="isenum-class"></a>is_enum Class
+Tests if type is an enumeration.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_enum;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Type à interroger.  
+ The type to query.  
   
-## <a name="remarks"></a>Notes  
- Une instance du prédicat de type a la valeur true si le type `Ty` est un type énumération ou une forme `cv-qualified` d'un type énumération. Sinon, sa valeur est false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is an enumeration type or a `cv-qualified` form of an enumeration type, otherwise it holds false.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_enum.cpp   
@@ -95,12 +94,12 @@ is_enum<color> == true
 is_enum<int> == false  
 ```  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_integral, classe](../standard-library/is-integral-class.md)
+ [is_integral Class](../standard-library/is-integral-class.md)
 

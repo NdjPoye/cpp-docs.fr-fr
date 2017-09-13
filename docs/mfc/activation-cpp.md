@@ -1,58 +1,76 @@
 ---
-title: "Activation (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "activer des objets"
-  - "activation (C++)"
-  - "activation (C++), éléments OLE incorporés"
-  - "documents, OLE"
-  - "objets incorporés"
-  - "activation sur place"
-  - "activation sur place, éléments liés et incorporés"
-  - "OLE (C++), activation"
-  - "OLE (C++), modifier"
-  - "OLE (C++), activation sur place"
-  - "activation des OLE"
-  - "OLE (éléments), édition visuelle"
-  - "applications serveur OLE, activation"
-  - "édition visuelle"
-  - "édition visuelle, activation"
+title: Activation (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC], activation
+- OLE items [MFC], visual editing
+- activation [MFC]
+- OLE [MFC], in-place activation
+- OLE [MFC], activation
+- in-place activation, embedded and linked items
+- activating objects
+- visual editing, activation
+- visual editing
+- documents [MFC], OLE
+- embedded objects [MFC]
+- OLE [MFC], editing
+- in-place activation
+- activation [MFC], embedded OLE items
+- OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Activation (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b0c5d9a92de6d15b4034d44bf4a07a9526eeb3fb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cet article explique le rôle de l'activation de la modification sur place de OLE éléments.  Après qu'un utilisateur a incorporé OLE un élément dans un document conteneur, il peut être utilisé.  Pour ce faire, l'utilisateur sur l'élément, qui permet l'élément.  L'activité les plus fréquentes pour l'activation remplace.  De nombreuses OLE éléments et, une fois activés pour la modification, faites pour refléter les menus et les barres d'outils de la fenêtre frame actuel jusqu'à la modification ceux qui appartiennent à l'application serveur qui a créé l'élément.  Ce comportement, appelé l'activation sur place, permet à l'utilisateur de modifier un élément incorporé dans un document composite sans quitter la fenêtre de document conteneur.  
+---
+# <a name="activation-c"></a>Activation (C++)
+This article explains the role of activation in the visual editing of OLE items. After a user has embedded an OLE item in a container document, it may need to be used. To do this, the user double-clicks the item, which activates that item. The most frequent activity for activation is editing. Many current OLE items, when activated for editing, cause the menus and toolbars in the current frame window to change to reflect those belonging to the server application that created the item. This behavior, known as in-place activation, allows the user to edit any embedded item in a compound document without leaving the container document's window.  
   
- Il est également possible de modifier de OLE éléments imbriqués dans une fenêtre distincte.  Cela se produit si le conteneur ou l'application serveur ne prend pas en charge l'activation sur place.  Dans ce cas, lorsque l'utilisateur sur un élément incorporé, l'application serveur s'affiche dans une fenêtre distincte et l'élément incorporé apparaît comme son propre document.  L'utilisateur modifie l'élément dans la fenêtre.  Lorsque la modification est terminé, l'utilisateur ferme l'application serveur et retourne à l'application conteneur.  
+ It is also possible to edit embedded OLE items in a separate window. This will happen if either the container or server application does not support in-place activation. In this case, when the user double-clicks an embedded item, the server application is launched in a separate window and the embedded item appears as its own document. The user edits the item in this window. When editing is complete, the user closes the server application and returns to the container application.  
   
- Ou bien, l'utilisateur peut choisir la modification « ouverte » avec l'ordre des **\<object\> Open** dans le menu de **Modifier**.  Cela entraîne l'objet dans une fenêtre distincte.  
+ As an alternative, the user can choose "open editing" with the **\<object> Open** command on the **Edit** menu. This opens the object in a separate window.  
   
 > [!NOTE]
->  Modifier des éléments imbriqués dans une fenêtre distincte est comportement standard de la version 1 OLE, et certaines applications OLE peuvent prendre en charge que ce style de la modification.  
+>  Editing embedded items in a separate window was standard behavior in version 1 of OLE, and some OLE applications may support only this style of editing.  
   
- L'activation sur place promeut une approche document\- centrale pour documenter la conception.  L'utilisateur peut traiter un document composite comme une entité unique, vous travaillez sur sans basculer entre les applications.  Toutefois, l'activation sur place n'est utilisée que pour les éléments imbriqués, pas pour les éléments : elles doivent être modifiés dans une fenêtre distincte.  Cela est dû au fait qu'un élément lié est enregistré réellement dans un emplacement différent.  La modification d'un élément lié a lieu dans le contexte réel des données, c. \- à\-d., où les données sont stockées.  Modification d'un élément lié dans une fenêtre distincte rappelle à l'utilisateur que les données appartenant à un autre document.  
+ In-place activation promotes a document-centric approach to document creation. The user can treat a compound document as a single entity, working on it without switching between applications. However, in-place activation is used only for embedded items, not for linked items: they must be edited in a separate window. This is because a linked item is actually stored in a different place. The editing of a linked item takes place within the actual context of the data, that is, where the data is stored. Editing a linked item in a separate window reminds the user that the data belongs to another document.  
   
- MFC ne prend pas en charge l'activation sur place imbriquée.  Si vous créez une application conteneur\/serveur, et ces conteneurs\/serveur est incorporé dans un conteneur et activé sur place différents, il ne peut pas sur place vérification des objets incorporés à l'intérieur de est.  
+ MFC does not support nested in-place activation. If you build a container/server application, and that container/server is embedded in another container and in-place activated, it cannot in-place activate objects embedded inside it.  
   
- Ce qui arrive à un élément incorporé lorsque les doubles\-clics utilisateur il dépend des verbes définis pour l'élément.  Pour plus d'informations, consultez l'[Activation : Verbes](../mfc/activation-verbs.md).  
+ What happens to an embedded item when the user double-clicks it depends on the verbs defined for the item. For information, see [Activation: Verbs](../mfc/activation-verbs.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
- [Conteneurs](../mfc/containers.md)   
- [Serveurs](../mfc/servers.md)
+ [Containers](../mfc/containers.md)   
+ [Servers](../mfc/servers.md)
+
+

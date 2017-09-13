@@ -1,107 +1,127 @@
 ---
-title: "Recommandations relatives au choix d&#39;une classe de collection | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sécurité de type des classes de collection (C++)"
-  - "classes de collection (sérialisation)"
-  - "classes de collection (vitesse)"
-  - "classes de collection (sécurité de type)"
-  - "classes de collection (choix)"
-  - "classes de collection (fonctionnalité)"
-  - "formes (collection)"
-  - "classes de collection (basées sur un modèle)"
-  - "classes de collection MFC (caractéristiques)"
-  - "classes de collection (à propos des classes de collection)"
-  - "sérialisation [C++] (classes de collection)"
-  - "classes de collection (doublons autorisés)"
-  - "classes de collection (formes)"
+title: Recommendations for Choosing a Collection Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- type safety of collection classes [MFC]
+- collection classes [MFC], serialization
+- collection classes [MFC], speed
+- collection classes [MFC], type safety
+- collection classes [MFC], choosing
+- collection classes [MFC], functionality
+- shapes, collection
+- collection classes [MFC], template-based
+- MFC collection classes [MFC], characteristics
+- collection classes [MFC], about collection classes [MFC]
+- serialization [MFC], collection classes
+- collection classes [MFC], duplicates allowed
+- collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Recommandations relatives au choix d&#39;une classe de collection
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 293503782cc27ef44654cf7931fcb8235ac66eee
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cet article contient des informations détaillées visant à vous aider à choisir une classe de collection adaptée aux besoins de votre application.  
+---
+# <a name="recommendations-for-choosing-a-collection-class"></a>Recommendations for Choosing a Collection Class
+This article contains detailed information designed to help you choose a collection class for your particular application needs.  
   
- Votre choix de classe de collection dépend de plusieurs facteurs, notamment :  
+ Your choice of a collection class depends on a number of factors, including:  
   
--   Les fonctionnalités de la forme de classe : ordre, indexation et performances, comme indiqué dans le tableau [Fonctionnalités des formes de collection](#_core_collection_shape_features) plus loin dans cette rubrique.  
+-   The features of the class shape: order, indexing, and performance, as shown in the [Collection Shape Features](#_core_collection_shape_features) table later in this topic  
   
--   Si la classe utilise des modèles C\+\+  
+-   Whether the class uses C++ templates  
   
--   Si les éléments stockés dans la collection peuvent être sérialisés  
+-   Whether the elements stored in the collection can be serialized  
   
--   Si les éléments stockés dans la collection peuvent faire l'objet d'un dump pour effectuer des diagnostics  
+-   Whether the elements stored in the collection can be dumped for diagnostics  
   
--   Si la collection est de type sécurisé  
+-   Whether the collection is type-safe  
   
- Le tableau suivant, [Fonctionnalités des formes de collection](#_core_collection_shape_features), résume les caractéristiques des formes de collection disponibles.  
+ The following table, [Collection Shape Features](#_core_collection_shape_features), summarizes the characteristics of the available collection shapes.  
   
--   Les colonnes 2 et 3 décrivent les caractéristiques d’accès et de classement de chaque forme. Dans le tableau, le terme « ordonné » signifie que l’ordre dans lequel les éléments sont insérés et supprimés détermine leur ordre dans la collection. Il ne signifie pas que les éléments sont triés en fonction de leur contenu. Le terme « indexé » signifie que les éléments de la collection peuvent être récupérés par un index entier, comme les éléments d’un tableau standard.  
+-   Columns 2 and 3 describe each shape's ordering and access characteristics. In the table, the term "ordered" means that the order in which items are inserted and deleted determines their order in the collection; it does not mean the items are sorted on their contents. The term "indexed" means that the items in the collection can be retrieved by an integer index, much like items in a typical array.  
   
--   Les colonnes 4 et 5 décrivent les performances de chaque forme. Dans les applications qui nécessitent de nombreuses insertions dans la collection, la vitesse d’insertion peut être particulièrement importante. Pour d’autres applications, la vitesse de recherche peut être plus importante.  
+-   Columns 4 and 5 describe each shape's performance. In applications that require many insertions into the collection, insertion speed might be especially important; for other applications, lookup speed may be more important.  
   
--   La colonne 6 indique si chaque forme autorise des éléments en double.  
+-   Column 6 describes whether each shape allows duplicate elements.  
   
-### Fonctionnalités des formes de collection  
+### <a name="_core_collection_shape_features"></a>  Collection Shape Features  
   
-|Forme|Ordonné ?|Indexé ?|Insérer un élément|Rechercher un élément spécifié|Éléments en double ?|  
-|-----------|---------------|--------------|------------------------|------------------------------------|--------------------------|  
-|Liste|Oui|Non|Rapide|Lente|Oui|  
-|Tableau|Oui|Par entier|Lente|Lente|Oui|  
-|Carte|Non|Par clé|Rapide|Rapide|Non \(clés\) Oui \(valeurs\)|  
+|Shape|Ordered|Indexed|Insert an element|Search for specified element|Duplicate elements|  
+|-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|  
+|List|Yes|No|Fast|Slow|Yes|  
+|Array|Yes|By int|Slow|Slow|Yes|  
+|Map|No|By key|Fast|Fast|No (keys) Yes (values)|  
   
- Le tableau suivant, [Caractéristiques des classes de collection MFC](#_core_characteristics_of_mfc_collection_classes), résume d’autres caractéristiques importantes de classes de collection MFC spécifiques afin de faciliter la sélection. Votre choix peut différer selon que la classe est basée sur des modèles C\+\+, que ses éléments peuvent être sérialisés par le biais du mécanisme de [sérialisation](../mfc/serialization-in-mfc.md) du document MFC, que ses éléments peuvent être vidés par le biais du mécanisme de vidage de diagnostic du document MFC, ou que la classe est de type sécurisé \(autrement dit, si vous pouvez garantir le type des éléments stockés dans une collection et récupérés à partir d’une collection d’après la classe\).  
+ The following table, [Characteristics of MFC Collection Classes](#_core_characteristics_of_mfc_collection_classes), summarizes other important characteristics of specific MFC collection classes as a guide to selection. Your choice may depend on whether the class is based on C++ templates, whether its elements can be serialized via MFC's document [serialization](../mfc/serialization-in-mfc.md) mechanism, whether its elements can be dumped via MFC's diagnostic dumping mechanism, or whether the class is type-safe — that is, whether you can guarantee the type of elements stored in and retrieved from a collection based on the class.  
   
-### Caractéristiques des classes de collection MFC  
+### <a name="_core_characteristics_of_mfc_collection_classes"></a>  Characteristics of MFC Collection Classes  
   
-|Classe|Utilise des modèles<br /><br /> C\+\+|Peut être<br /><br /> sérialisée|Peut être<br /><br /> vidée|Est<br /><br /> de type sécurisé|  
-|------------|-----------------------------------|------------------------------|-------------------------|------------------------------|  
-|`CArray`|Oui|Oui 1|Oui 1|Non|  
-|`CByteArray`|Non|Oui|Oui|Oui 3|  
-|`CDWordArray`|Non|Oui|Oui|Oui 3|  
-|`CList`|Oui|Oui 1|Oui 1|Non|  
-|`CMap`|Oui|Oui 1|Oui 1|Non|  
-|`CMapPtrToPtr`|Non|Non|Oui|Non|  
-|`CMapPtrToWord`|Non|Non|Oui|Non|  
-|`CMapStringToOb`|Non|Oui|Oui|Non|  
-|`CMapStringToPtr`|Non|Non|Oui|Non|  
-|`CMapStringToString`|Non|Oui|Oui|Oui 3|  
-|`CMapWordToOb`|Non|Oui|Oui|Non|  
-|`CMapWordToPtr`|Non|Non|Oui|Non|  
-|`CObArray`|Non|Oui|Oui|Non|  
-|`CObList`|Non|Oui|Oui|Non|  
-|`CPtrArray`|Non|Non|Oui|Non|  
-|`CPtrList`|Non|Non|Oui|Non|  
-|`CStringArray`|Non|Oui|Oui|Oui 3|  
-|`CStringList`|Non|Oui|Oui|Oui 3|  
-|`CTypedPtrArray`|Oui|Selon le cas 2|Oui|Oui|  
-|`CTypedPtrList`|Oui|Selon le cas 2|Oui|Oui|  
-|`CTypedPtrMap`|Oui|Selon le cas 2|Oui|Oui|  
-|`CUIntArray`|Non|Non|Oui|Oui 3|  
-|`CWordArray`|Non|Oui|Oui|Oui 3|  
+|Class|Uses C++<br /><br /> templates|Can be<br /><br /> serialized|Can be<br /><br /> dumped|Is<br /><br /> type-safe|  
+|-----------|------------------------------|---------------------------|-----------------------|-----------------------|  
+|`CArray`|Yes|Yes 1|Yes 1|No|  
+|`CByteArray`|No|Yes|Yes|Yes 3|  
+|`CDWordArray`|No|Yes|Yes|Yes 3|  
+|`CList`|Yes|Yes 1|Yes 1|No|  
+|`CMap`|Yes|Yes 1|Yes 1|No|  
+|`CMapPtrToPtr`|No|No|Yes|No|  
+|`CMapPtrToWord`|No|No|Yes|No|  
+|`CMapStringToOb`|No|Yes|Yes|No|  
+|`CMapStringToPtr`|No|No|Yes|No|  
+|`CMapStringToString`|No|Yes|Yes|Yes 3|  
+|`CMapWordToOb`|No|Yes|Yes|No|  
+|`CMapWordToPtr`|No|No|Yes|No|  
+|`CObArray`|No|Yes|Yes|No|  
+|`CObList`|No|Yes|Yes|No|  
+|`CPtrArray`|No|No|Yes|No|  
+|`CPtrList`|No|No|Yes|No|  
+|`CStringArray`|No|Yes|Yes|Yes 3|  
+|`CStringList`|No|Yes|Yes|Yes 3|  
+|`CTypedPtrArray`|Yes|Depends 2|Yes|Yes|  
+|`CTypedPtrList`|Yes|Depends 2|Yes|Yes|  
+|`CTypedPtrMap`|Yes|Depends 2|Yes|Yes|  
+|`CUIntArray`|No|No|Yes|Yes 3|  
+|`CWordArray`|No|Yes|Yes|Yes 3|  
   
- 1. Pour sérialiser, vous devez appeler explicitement la fonction `Serialize` de l’objet de collection. Pour vider, vous devez appeler explicitement sa fonction `Dump`. Vous ne pouvez pas utiliser la forme `ar << collObj` pour sérialiser ou la forme `dmp` `<< collObj` pour faire un dump.  
+ 1. To serialize, you must explicitly call the collection object's `Serialize` function; to dump, you must explicitly call its `Dump` function. You cannot use the form `ar << collObj` to serialize or the form `dmp` `<< collObj` to dump.  
   
- 2. La capacité à sérialiser varie en fonction du type de collection sous\-jacent. Par exemple, si un tableau de pointeurs typés est basé sur `CObArray`, il est sérialisable. S’il est basé sur `CPtrArray`, il n’est pas sérialisable. En général, les classes « Ptr » ne peuvent pas être sérialisées.  
+ 2. Serializability depends on the underlying collection type. For example, if a typed pointer array is based on `CObArray`, it is serializable; if based on `CPtrArray`, it is not serializable. In general, the "Ptr" classes cannot be serialized.  
   
- 3. Si Oui est indiqué dans cette colonne, une classe de collection qui n’est pas basée sur un modèle est de type sécurisé si vous l’utilisez comme prévu. Par exemple, si vous stockez des octets dans un `CByteArray`, le tableau est de type sécurisé. En revanche, si vous l’utilisez pour stocker des caractères, la sécurité de type est plus incertaine.  
+ 3. If marked Yes in this column, a nontemplate collection class is type-safe provided you use it as intended. For example, if you store bytes in a `CByteArray`, the array is type-safe. But if you use it to store characters, its type safety is less certain.  
   
-## Voir aussi  
+## <a name="see-also"></a>See Also  
  [Collections](../mfc/collections.md)   
- [Classes basées sur un modèle](../mfc/template-based-classes.md)   
- [Comment : définir une collection de type sécurisé](../mfc/how-to-make-a-type-safe-collection.md)   
- [Accès à tous les membres d'une collection](../mfc/accessing-all-members-of-a-collection.md)
+ [Template-Based Classes](../mfc/template-based-classes.md)   
+ [How to: Make a Type-Safe Collection](../mfc/how-to-make-a-type-safe-collection.md)   
+ [Accessing All Members of a Collection](../mfc/accessing-all-members-of-a-collection.md)
+
+

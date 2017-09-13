@@ -1,39 +1,55 @@
 ---
-title: "Liaison automatique de la version de la biblioth&#232;que&#160;MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "defaultlib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "liens automatiques (C++)"
-  - "defaultlib dans MFC"
-  - "liaison (C++)"
-  - "liaison (C++), automatique de la version de la bibliothèque MFC"
-  - "liaison (C++), de MFC"
-  - "bibliothèques MFC, lier"
-  - "bibliothèques MFC, versions"
+title: Automatic Linking of MFC Library Version | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- defaultlib
+dev_langs:
+- C++
+helpviewer_keywords:
+- defaultlib in MFC
+- automatic links [MFC]
+- MFC libraries, linking to
+- linking [MFC], automatic of MFC library version
+- linking [MFC]
+- linking [MFC], of MFC
+- MFC libraries, versions
 ms.assetid: 02af4a20-2034-4fce-b200-c2202c3c8311
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Liaison automatique de la version de la biblioth&#232;que&#160;MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c256d88f7873f5e29858b3908329f0c9e8fbdb12
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Dans les versions de MFC avant la version 3,0 \(avant version 2,0 Visual C\+\+\), vous deviez spécifier manuellement la version correcte de la bibliothèque MFC dans la liste d'entrée des bibliothèques de l'éditeur de liens.  Avec la version 3,0 de MFC et versions ultérieures, il n'est plus nécessaire de spécifier manuellement la version de la bibliothèque MFC.  À la place, les fichiers d'en\-tête MFC déterminent automatiquement la version correcte de la bibliothèque MFC, en fonction des valeurs définies avec `#define`, tels que **\_DEBUG** ou **\_UNICODE**.  Les fichiers d'en\-tête MFC ajoutent les directives **\/defaultlib** en demandant à l'éditeur de liens d'établir la liaison avec une version spécifique de la bibliothèque MFC.  
+---
+# <a name="automatic-linking-of-mfc-library-version"></a>Automatic Linking of MFC Library Version
+In versions of MFC before version 3.0 (before Visual C++ version 2.0), you had to manually specify the correct version of the MFC library in the input list of libraries for the linker. With MFC version 3.0 and later, it is no longer necessary to manually specify the version of the MFC library. Instead, the MFC header files automatically determine the correct version of the MFC library, based on values defined with `#define`, such as **_DEBUG** or **_UNICODE**. The MFC header files add **/defaultlib** directives instructing the linker to link in a specific version of the MFC library.  
   
- Par exemple, le fragment de code suivant à partir du fichier d'en\-tête d'AFX.H indique à l'éditeur de liens de lier dans la version soit de NAFXCWD.LIB soit de NAFXCW.LIB de MFC, selon la version de débogage de MFC que vous utilisez :  
+ For example, the following code fragment from the AFX.H header file instructs the linker to link in either the NAFXCWD.LIB or NAFXCW.LIB version of MFC, depending on whether you are using the debug version of MFC:  
   
  `#ifndef _UNICODE`  
   
@@ -61,7 +77,9 @@ Dans les versions de MFC avant la version 3,0 \(avant version 2,0 Visual C\+\+\)
   
  `#endif`  
   
- Les fichiers d'en\-tête de MFC lient aussi dans toutes les bibliothèques nécessaires, notamment les bibliothèques MFC, les bibliothèques Win32, OLE bibliothèques, les bibliothèques OME générées à partir d'exemples, les bibliothèques ODBC, et ainsi de suite.  Les bibliothèques Win32 sont Kernel32.Lib, User32.Lib, et GDI32.Lib.  
+ MFC header files also link in all required libraries, including MFC libraries, Win32 libraries, OLE libraries, OLE libraries built from samples, ODBC libraries, and so on. The Win32 libraries include Kernel32.Lib, User32.Lib, and GDI32.Lib.  
   
-## Voir aussi  
- [Versions de bibliothèque MFC](../mfc/mfc-library-versions.md)
+## <a name="see-also"></a>See Also  
+ [MFC Library Versions](../mfc/mfc-library-versions.md)
+
+

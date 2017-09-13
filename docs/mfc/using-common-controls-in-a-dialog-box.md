@@ -1,71 +1,90 @@
 ---
-title: "Utilisation de contr&#244;les communs dans une bo&#238;te de dialogue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contrôles communs (C++), dans des boîtes de dialogue"
-  - "contrôles de boîte de dialogue (C++), contrôles communs"
-  - "contrôles Windows communs (C++), dans des boîtes de dialogue"
+title: Using Common Controls in a Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- common controls [MFC], in dialog boxes
+- dialog box controls [MFC], common controls
+- Windows common controls [MFC], in dialog boxes
 ms.assetid: 17713caf-09f8-484a-bf54-5f48bf09cce9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Utilisation de contr&#244;les communs dans une bo&#238;te de dialogue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8dc48fa0370c6801c40819151374b178446d0dc1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Les contrôles communs Windows peuvent être utilisés dans des [boîtes de dialogue](../mfc/dialog-boxes.md), les modes formulaire, les vues des enregistrements, et toute autre fenêtre selon un modèle de boîte de dialogue.  La procédure suivante, avec quelques modifications mineures, fonctionne pour les formes.  
+---
+# <a name="using-common-controls-in-a-dialog-box"></a>Using Common Controls in a Dialog Box
+The Windows common controls can be used in [dialog boxes](../mfc/dialog-boxes.md), form views, record views, and any other window based on a dialog template. The following procedure, with minor changes, will work for forms as well.  
   
-## Procédures  
+## <a name="procedures"></a>Procedures  
   
-#### Utiliser un contrôle commun dans une boîte de dialogue  
+#### <a name="to-use-a-common-control-in-a-dialog-box"></a>To use a common control in a dialog box  
   
-1.  Localisez le contrôle dans le modèle de boîte de dialogue [utilisation de l'éditeur de boîtes de dialogue](../mfc/using-the-dialog-editor-to-add-controls.md).  
+1.  Place the control on the dialog template [using the dialog editor](../mfc/using-the-dialog-editor-to-add-controls.md).  
   
-2.  Ajoutez une variable membre qui représente le contrôle à une classe de boîte de dialogue.  Dans la boîte de dialogue **Ajouter une variable membre**, vérifiez **Variable du contrôle** et vérifiez que **Contrôler** est sélectionné pour la **Catégorie**.  
+2.  Add to the dialog class a member variable that represents the control. In the **Add Member Variable** dialog box, check **Control variable** and ensure that **Control** is selected for the **Category**.  
   
-3.  Si ce contrôle commun fournit des données au programme, déclarez la variable membre supplémentaire dans la classe de la boîte de dialogue pour gérer les valeurs d'entrée.  
-  
-    > [!NOTE]
-    >  Vous pouvez ajouter ces variables membres à l'aide du menu contextuel dans Affichage de classes \(voir [Ajouter une variable membre](../ide/adding-a-member-variable-visual-cpp.md)\).  
-  
-4.  Dans [OnInitDialog](../Topic/CDialog::OnInitDialog.md) pour votre classe de boîte de dialogue, définissez des conditions initiales pour le contrôle commun.  Utilisation de la variable membre créée à l'étape précédente, utilisez les fonctions membres pour définir la valeur initiale et d'autres paramètres.  Consultez les descriptions suivantes des contrôles pour plus d'informations sur les paramètres.  
-  
-     Vous pouvez également utiliser [échange de données de boîtes de dialogue](../mfc/dialog-data-exchange-and-validation.md) \(DDX\) pour initialiser des contrôles dans une boîte de dialogue.  
-  
-5.  Dans les gestionnaires des contrôles dans la boîte de dialogue, utilisez la variable membre pour manipuler le contrôle.  Consultez les descriptions suivantes des contrôles pour plus d'informations sur les méthodes.  
+3.  If this common control is providing input to the program, declare additional member variable(s) in the dialog class to handle those input values.  
   
     > [!NOTE]
-    >  La variable membre existera uniquement tant que la boîte de dialogue existe.  Vous ne pouvez pas interroger le contrôle sur les valeurs d'entrée après que la boîte de dialogue a été fermée.  Pour utiliser des valeurs d'entrée d'un contrôle commun, substituez `OnOK` dans la classe de la boîte de dialogue.  Dans votre fichier, interrogez le contrôle des valeurs d'entrée et stockez les valeurs des variables membres des classes de boîte de dialogue.  
+    >  You can add these member variables using the context menu in Class View (see [Adding a Member Variable](../ide/adding-a-member-variable-visual-cpp.md)).  
+  
+4.  In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) for your dialog class, set the initial conditions for the common control. Using the member variable created in the previous step, use the member functions to set initial value and other settings. See the following descriptions of the controls for details on settings.  
+  
+     You can also use [dialog data exchange](../mfc/dialog-data-exchange-and-validation.md) (DDX) to initialize controls in a dialog box.  
+  
+5.  In handlers for controls on the dialog box, use the member variable to manipulate the control. See the following descriptions of the controls for details on methods.  
   
     > [!NOTE]
-    >  Vous pouvez également utiliser l'échange de données de boîtes de dialogue pour définir et récupérer des valeurs de contrôles dans une boîte de dialogue.  
+    >  The member variable will exist only as long as the dialog box itself exists. You will not be able to query the control for input values after the dialog box has been closed. To work with input values from a common control, override `OnOK` in your dialog class. In your override, query the control for input values and store those values in member variables of the dialog class.  
   
-## Remarques  
- L'ajout des contrôles communs à une boîte de dialogue entraîne le non fonctionnement de la boîte de dialogue.  Reportez\-vous à [Adding Controls to a Dialog Causes the Dialog to No Longer Function](../mfc/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md) pour plus d'informations sur la gestion de cette situation.  
+    > [!NOTE]
+    >  You can also use dialog data exchange to set or retrieve values from the controls in a dialog box.  
   
-## Que voulez\-vous faire ?  
+## <a name="remarks"></a>Remarks  
+ The addition of some common controls to a dialog box will cause the dialog box to no longer function. Refer to [Adding Controls to a Dialog Causes the Dialog to No Longer Function](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md) for more information on handling this situation.  
   
--   [Ajouter des contrôles dans une boîte de dialogue à la main plutôt qu'avec l'éditeur boîtes de dialogue](../mfc/adding-controls-by-hand.md)  
+## <a name="what-do-you-want-to-do"></a>What do you want to do  
   
--   [Dériver mon contrôle de l'un des contrôles communs Windows standard](../mfc/deriving-controls-from-a-standard-control.md)  
+-   [Add controls to a dialog box by hand instead of with the dialog editor](../mfc/adding-controls-by-hand.md)  
   
--   [Utilisation d'un contrôle commun en tant que fenêtre enfant](../mfc/using-a-common-control-as-a-child-window.md)  
+-   [Derive my control from one of the standard Windows common controls](../mfc/deriving-controls-from-a-standard-control.md)  
   
--   [Recevoir les messages de notification d'un contrôle](../mfc/receiving-notification-from-common-controls.md)  
+-   [Use a common control as a child window](../mfc/using-a-common-control-as-a-child-window.md)  
   
--   [Échange de données de boîtes de dialogue \(DDX\)](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Receive notification messages from a control](../mfc/receiving-notification-from-common-controls.md)  
   
-## Voir aussi  
- [Création et utilisation de contrôles](../mfc/making-and-using-controls.md)   
- [Contrôles](../mfc/controls-mfc.md)
+-   [Use dialog data exchange (DDX)](../mfc/dialog-data-exchange-and-validation.md)  
+  
+## <a name="see-also"></a>See Also  
+ [Making and Using Controls](../mfc/making-and-using-controls.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

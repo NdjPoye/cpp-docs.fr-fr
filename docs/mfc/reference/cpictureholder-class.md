@@ -1,5 +1,5 @@
 ---
-title: CPictureHolder (classe) | Documents Microsoft
+title: CPictureHolder Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,10 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Picture property
-- controls [MFC], OLE
-- OLE controls, image
-- CPictureHolder class
+- CPictureHolder [MFC], CPictureHolder
+- CPictureHolder [MFC], CreateEmpty
+- CPictureHolder [MFC], CreateFromBitmap
+- CPictureHolder [MFC], CreateFromIcon
+- CPictureHolder [MFC], CreateFromMetafile
+- CPictureHolder [MFC], GetDisplayString
+- CPictureHolder [MFC], GetPictureDispatch
+- CPictureHolder [MFC], GetType
+- CPictureHolder [MFC], Render
+- CPictureHolder [MFC], SetPictureDispatch
+- CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
 caps.latest.revision: 20
 author: mikeblome
@@ -48,82 +55,82 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 14a774e3edc8b5e160b287612d3709c3424503be
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ffe96a13ca0535918450bec32888e1120269b671
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cpictureholder-class"></a>CPictureHolder (classe)
-Implémente une propriété Picture, qui permet à l’utilisateur d’afficher une image dans votre contrôle.  
+# <a name="cpictureholder-class"></a>CPictureHolder Class
+Implements a Picture property, which allows the user to display a picture in your control.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CPictureHolder  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPictureHolder::CPictureHolder](#cpictureholder)|Construit un objet `CPictureHolder`.|  
+|[CPictureHolder::CPictureHolder](#cpictureholder)|Constructs a `CPictureHolder` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPictureHolder::CreateEmpty](#createempty)|Crée un objet `CPictureHolder` vide.|  
-|[CPictureHolder::CreateFromBitmap](#createfrombitmap)|Crée un `CPictureHolder` objet à partir d’une image bitmap.|  
-|[CPictureHolder::CreateFromIcon](#createfromicon)|Crée un `CPictureHolder` objet à partir d’une icône.|  
-|[CPictureHolder::CreateFromMetafile](#createfrommetafile)|Crée un `CPictureHolder` objet à partir d’un métafichier.|  
-|[CPictureHolder::GetDisplayString](#getdisplaystring)|Récupère la chaîne affichée dans l’Explorateur de propriétés d’un conteneur de contrôle.|  
-|[CPictureHolder::GetPictureDispatch](#getpicturedispatch)|Retourne le `CPictureHolder` l’objet `IDispatch` interface.|  
-|[CPictureHolder::GetType](#gettype)|Indique si le `CPictureHolder` objet est une image bitmap, un métafichier ou une icône.|  
-|[CPictureHolder::Render](#render)|Affiche l’image.|  
-|[CPictureHolder::SetPictureDispatch](#setpicturedispatch)|Définit les `CPictureHolder` l’objet `IDispatch` interface.|  
+|[CPictureHolder::CreateEmpty](#createempty)|Creates an empty `CPictureHolder` object.|  
+|[CPictureHolder::CreateFromBitmap](#createfrombitmap)|Creates a `CPictureHolder` object from a bitmap.|  
+|[CPictureHolder::CreateFromIcon](#createfromicon)|Creates a `CPictureHolder` object from an icon.|  
+|[CPictureHolder::CreateFromMetafile](#createfrommetafile)|Creates a `CPictureHolder` object from a metafile.|  
+|[CPictureHolder::GetDisplayString](#getdisplaystring)|Retrieves the string displayed in a control container's property browser.|  
+|[CPictureHolder::GetPictureDispatch](#getpicturedispatch)|Returns the `CPictureHolder` object's `IDispatch` interface.|  
+|[CPictureHolder::GetType](#gettype)|Tells whether the `CPictureHolder` object is a bitmap, a metafile, or an icon.|  
+|[CPictureHolder::Render](#render)|Renders the picture.|  
+|[CPictureHolder::SetPictureDispatch](#setpicturedispatch)|Sets the `CPictureHolder` object's `IDispatch` interface.|  
   
-### <a name="public-data-members"></a>Membres de données publics  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPictureHolder::m_pPict](#m_ppict)|Pointeur vers un objet image.|  
+|[CPictureHolder::m_pPict](#m_ppict)|A pointer to a picture object.|  
   
-## <a name="remarks"></a>Notes  
- `CPictureHolder`n’a pas d’une classe de base.  
+## <a name="remarks"></a>Remarks  
+ `CPictureHolder` does not have a base class.  
   
- Avec la propriété stock de l’image, le développeur peut spécifier une bitmap, une icône ou un métafichier pour l’affichage.  
+ With the stock Picture property, the developer can specify a bitmap, icon, or metafile for display.  
   
- Pour plus d’informations sur la création de propriétés de l’image personnalisée, consultez l’article [contrôles ActiveX MFC : utilisation d’images dans un contrôle ActiveX](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).  
+ For information on creating custom picture properties, see the article [MFC ActiveX Controls: Using Pictures in an ActiveX Control](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CPictureHolder`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxctl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
   
-##  <a name="cpictureholder"></a>CPictureHolder::CPictureHolder  
- Construit un objet `CPictureHolder`.  
+##  <a name="cpictureholder"></a>  CPictureHolder::CPictureHolder  
+ Constructs a `CPictureHolder` object.  
   
 ```  
 CPictureHolder();
 ```  
   
-##  <a name="createempty"></a>CPictureHolder::CreateEmpty  
- Crée un vide `CPictureHolder` de l’objet et se connecte à un `IPicture` interface.  
+##  <a name="createempty"></a>  CPictureHolder::CreateEmpty  
+ Creates an empty `CPictureHolder` object and connects it to an `IPicture` interface.  
   
 ```  
 BOOL CreateEmpty();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’objet est créé avec succès ; sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the object is successfully created; otherwise 0.  
   
-##  <a name="createfrombitmap"></a>CPictureHolder::CreateFromBitmap  
- Utilise un bitmap pour initialiser l’objet de l’image dans un `CPictureHolder`.  
+##  <a name="createfrombitmap"></a>  CPictureHolder::CreateFromBitmap  
+ Uses a bitmap to initialize the picture object in a `CPictureHolder`.  
   
 ```  
 BOOL CreateFromBitmap(
@@ -142,33 +149,33 @@ BOOL CreateFromBitmap(
     BOOL bTransferOwnership = FALSE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `idResource`  
- ID de ressource d’une ressource bitmap.  
+ Resource ID of a bitmap resource.  
   
  `pBitmap`  
- Pointeur vers un [CBitmap](../../mfc/reference/cbitmap-class.md) objet.  
+ Pointer to a [CBitmap](../../mfc/reference/cbitmap-class.md) object.  
   
  *pPal*  
- Pointeur vers un [CPalette](../../mfc/reference/cpalette-class.md) objet.  
+ Pointer to a [CPalette](../../mfc/reference/cpalette-class.md) object.  
   
  `bTransferOwnership`  
- Indique si l’objet image prendra possession des objets bitmap et de palette.  
+ Indicates whether the picture object will take ownership of the bitmap and palette objects.  
   
  `hbm`  
- Handle de l’image bitmap à partir de laquelle le `CPictureHolder` objet est créé.  
+ Handle to the bitmap from which the `CPictureHolder` object is created.  
   
  `hpal`  
- Handle vers la palette utilisée pour le rendu de l’image bitmap.  
+ Handle to the palette used for rendering the bitmap.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’objet est créé avec succès ; sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the object is successfully created; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Si `bTransferOwnership` est **TRUE**, l’appelant ne doit pas utiliser l’image bitmap ou objet palette en aucune façon après cet appel renvoie. Si `bTransferOwnership` est **FALSE**, l’appelant est chargé de s’assurer que les objets bitmap et de palette restent valides pour la durée de vie de l’objet image.  
+### <a name="remarks"></a>Remarks  
+ If `bTransferOwnership` is **TRUE**, the caller should not use the bitmap or palette object in any way after this call returns. If `bTransferOwnership` is **FALSE**, the caller is responsible for ensuring that the bitmap and palette objects remain valid for the lifetime of the picture object.  
   
-##  <a name="createfromicon"></a>CPictureHolder::CreateFromIcon  
- Utilise une icône pour initialiser l’objet de l’image dans un `CPictureHolder`.  
+##  <a name="createfromicon"></a>  CPictureHolder::CreateFromIcon  
+ Uses an icon to initialize the picture object in a `CPictureHolder`.  
   
 ```  
 BOOL CreateFromIcon(
@@ -180,24 +187,24 @@ BOOL CreateFromIcon(
     BOOL bTransferOwnership = FALSE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `idResource`  
- ID de ressource d’une ressource bitmap.  
+ Resource ID of a bitmap resource.  
   
  `hIcon`  
- Handle de l’icône à partir de laquelle le `CPictureHolder` objet est créé.  
+ Handle to the icon from which the `CPictureHolder` object is created.  
   
  `bTransferOwnership`  
- Indique si l’objet image prend possession de l’objet de l’icône.  
+ Indicates whether the picture object will take ownership of the icon object.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’objet est créé avec succès ; sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the object is successfully created; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Si `bTransferOwnership` est **TRUE**, l’appelant ne doit pas utiliser l’objet d’icône en aucune façon après le retour de cet appel. Si `bTransferOwnership` est **FALSE**, l’appelant est chargé de s’assurer que l’objet de l’icône reste valide pendant la durée de vie de l’objet image.  
+### <a name="remarks"></a>Remarks  
+ If `bTransferOwnership` is **TRUE**, the caller should not use the icon object in any way after this call returns. If `bTransferOwnership` is **FALSE**, the caller is responsible for ensuring that the icon object remains valid for the lifetime of the picture object.  
   
-##  <a name="createfrommetafile"></a>CPictureHolder::CreateFromMetafile  
- Utilise un métafichier pour initialiser l’objet de l’image dans un `CPictureHolder`.  
+##  <a name="createfrommetafile"></a>  CPictureHolder::CreateFromMetafile  
+ Uses a metafile to initialize the picture object in a `CPictureHolder`.  
   
 ```  
 BOOL CreateFromMetafile(
@@ -207,79 +214,79 @@ BOOL CreateFromMetafile(
     BOOL bTransferOwnership = FALSE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `hmf`  
- Handle vers un métafichier utilisé pour créer le `CPictureHolder` objet.  
+ Handle to the metafile used to create the `CPictureHolder` object.  
   
  *xExt*  
- X étendue de l’image.  
+ X extent of the picture.  
   
  *yExt*  
- Étendue Y de l’image.  
+ Y extent of the picture.  
   
  `bTransferOwnership`  
- Indique si l’objet image prend possession de l’objet d’un métafichier.  
+ Indicates whether the picture object will take ownership of the metafile object.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’objet est créé avec succès ; sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the object is successfully created; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Si `bTransferOwnership` est **TRUE**, l’appelant ne doit pas utiliser l’objet de métafichier en aucune façon après le retour de cet appel. Si `bTransferOwnership` est **FALSE**, l’appelant est chargé de s’assurer que l’objet de métafichier reste valide pendant la durée de vie de l’objet image.  
+### <a name="remarks"></a>Remarks  
+ If `bTransferOwnership` is **TRUE**, the caller should not use the metafile object in any way after this call returns. If `bTransferOwnership` is **FALSE**, the caller is responsible for ensuring that the metafile object remains valid for the lifetime of the picture object.  
   
-##  <a name="getdisplaystring"></a>CPictureHolder::GetDisplayString  
- Récupère la chaîne affichée dans l’Explorateur de propriétés d’un conteneur.  
+##  <a name="getdisplaystring"></a>  CPictureHolder::GetDisplayString  
+ Retrieves the string that is displayed in a container's property browser.  
   
 ```  
 BOOL GetDisplayString(CString& strValue);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `strValue`  
- Référence à la [CString](../../atl-mfc-shared/reference/cstringt-class.md) qui doit contenir la chaîne d’affichage.  
+ Reference to the [CString](../../atl-mfc-shared/reference/cstringt-class.md) that is to hold the display string.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si la chaîne est récupérée avec succès ; sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the string is successfully retrieved; otherwise 0.  
   
-##  <a name="getpicturedispatch"></a>CPictureHolder::GetPictureDispatch  
- Cette fonction retourne un pointeur vers le `CPictureHolder` l’objet `IPictureDisp` interface.  
+##  <a name="getpicturedispatch"></a>  CPictureHolder::GetPictureDispatch  
+ This function returns a pointer to the `CPictureHolder` object's `IPictureDisp` interface.  
   
 ```  
 LPPICTUREDISP GetPictureDispatch();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le `CPictureHolder` l’objet `IPictureDisp` interface.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `CPictureHolder` object's `IPictureDisp` interface.  
   
-### <a name="remarks"></a>Remarques  
- L’appelant doit appeler **version** sur ce pointeur lorsque terminé avec lui.  
+### <a name="remarks"></a>Remarks  
+ The caller must call **Release** on this pointer when finished with it.  
   
-##  <a name="gettype"></a>CPictureHolder::GetType  
- Indique si l’image est une bitmap, métafichier ou icône.  
+##  <a name="gettype"></a>  CPictureHolder::GetType  
+ Indicates whether the picture is a bitmap, metafile, or icon.  
   
 ```  
 short GetType();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Une valeur qui indique le type de l’image. Les valeurs possibles et leurs significations sont les suivantes :  
+### <a name="return-value"></a>Return Value  
+ A value indicating the type of the picture. Possible values and their meanings are as follows:  
   
-|Valeur|Signification|  
+|Value|Meaning|  
 |-----------|-------------|  
-|**PICTYPE_UNINITIALIZED**|`CPictureHolder`objet est unititialized.|  
-|**PICTYPE_NONE**|`CPictureHolder`l’objet est vide.|  
-|**PICTYPE_BITMAP**|Image est une bitmap.|  
-|**PICTYPE_METAFILE**|L’image est un métafichier.|  
-|**PICTYPE_ICON**|Image est une icône.|  
+|**PICTYPE_UNINITIALIZED**|`CPictureHolder` object is unititialized.|  
+|**PICTYPE_NONE**|`CPictureHolder` object is empty.|  
+|**PICTYPE_BITMAP**|Picture is a bitmap.|  
+|**PICTYPE_METAFILE**|Picture is a metafile.|  
+|**PICTYPE_ICON**|Picture is an icon.|  
   
-##  <a name="m_ppict"></a>CPictureHolder::m_pPict  
- Un pointeur vers le `CPictureHolder` l’objet `IPicture` interface.  
+##  <a name="m_ppict"></a>  CPictureHolder::m_pPict  
+ A pointer to the `CPictureHolder` object's `IPicture` interface.  
   
 ```  
 LPPICTURE m_pPict;  
 ```  
   
-##  <a name="render"></a>CPictureHolder::Render  
- Affiche l’image dans le rectangle référencé par `rcRender`.  
+##  <a name="render"></a>  CPictureHolder::Render  
+ Renders the picture in the rectangle referenced by `rcRender`.  
   
 ```  
 void Render(
@@ -288,28 +295,28 @@ void Render(
     const CRect& rcWBounds);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Pointeur vers le contexte d’affichage dans lequel l’image doit être restitué.  
+ Pointer to the display context in which the picture is to be rendered.  
   
  `rcRender`  
- Rectangle dans lequel l’image doit être restitué.  
+ Rectangle in which the picture is to be rendered.  
   
  *rcWBounds*  
- Un rectangle qui représente le rectangle englobant de l’objet de rendu de l’image. Pour un contrôle, ce rectangle est la `rcBounds` paramètre passé à une substitution de [COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw).  
+ A rectangle representing the bounding rectangle of the object rendering the picture. For a control, this rectangle is the `rcBounds` parameter passed to an override of [COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw).  
   
-##  <a name="setpicturedispatch"></a>CPictureHolder::SetPictureDispatch  
- Connecte le `CPictureHolder` de l’objet à un `IPictureDisp` interface.  
+##  <a name="setpicturedispatch"></a>  CPictureHolder::SetPictureDispatch  
+ Connects the `CPictureHolder` object to a `IPictureDisp` interface.  
   
 ```  
 void SetPictureDispatch(LPPICTUREDISP pDisp);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pDisp`  
- Pointeur vers la nouvelle `IPictureDisp` interface.  
+ Pointer to the new `IPictureDisp` interface.  
   
-## <a name="see-also"></a>Voir aussi  
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [CFontHolder (classe)](../../mfc/reference/cfontholder-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFontHolder Class](../../mfc/reference/cfontholder-class.md)
 

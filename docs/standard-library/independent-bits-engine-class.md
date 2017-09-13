@@ -1,5 +1,5 @@
 ---
-title: independent_bits_engine, classe | Microsoft Docs
+title: independent_bits_engine Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- independent_bits_engine
 - random/std::independent_bits_engine
 dev_langs:
 - C++
@@ -34,51 +33,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: ca810e4918a31ebfbe6217de0eb3cc2f786188ac
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e223c95051ed4452c81c3ef0cc83be33f1b446f5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="independentbitsengine-class"></a>independent_bits_engine, classe
-Génère une séquence aléatoire de nombres avec un nombre spécifié de bits en recompressant les bits des valeurs retournées par son moteur de base.  
+# <a name="independentbitsengine-class"></a>independent_bits_engine Class
+Generates a random sequence of numbers with a specified number of bits by repacking bits from the values returned by its base engine.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Engine, size_t W, class UIntType>  
 class independent_bits_engine;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Engine`  
- Type de moteur de base.  
+ The base engine type.  
   
  `W`  
- **Taille de mot**. Taille, en bits, de chaque nombre généré. **Condition préalable** : `0 < W ≤ numeric_limits<UIntType>::digits`  
+ **Word size**. Size, in bits, of each number generated. **Precondition**: `0 < W ≤ numeric_limits<UIntType>::digits`  
   
  `UIntType`  
- Type des résultats entiers non signés. Pour plus d’informations sur les types possibles, consultez [\<random>](../standard-library/random.md).  
+ The unsigned integer result type. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
 ||||  
 |-|-|-|  
 |`independent_bits_engine::independent_bits_engine`|`independent_bits_engine::base`|`independent_bits_engine::discard`|  
 |`independent_bits_engine::operator()`|`independent_bits_engine::base_type`|`independent_bits_engine::seed`|  
   
- Pour plus d’informations sur les membres moteurs, consultez [\<random>](../standard-library/random.md).  
+ For more information about engine members, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Notes  
- Cette classe de modèle décrit un *adaptateur de moteur* qui produit des valeurs en recompressant les bits à partir des valeurs retournées par son moteur de base, ce qui produit des valeurs de `W` bits.  
+## <a name="remarks"></a>Remarks  
+ This template class describes an *engine adaptor* that produces values by repacking bits from the values returned by its base engine, resulting in `W`-bit values.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

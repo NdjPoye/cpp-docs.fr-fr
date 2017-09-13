@@ -1,32 +1,49 @@
 ---
-title: "R&#232;gles g&#233;n&#233;rales et limitations | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: General Rules and Limitations | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# R&#232;gles g&#233;n&#233;rales et limitations
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 722fabfa40045883ac7d3dcdbf5a1eb159439551
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/11/2017
 
-## Section spécifique à Microsoft  
+---
+# <a name="general-rules-and-limitations"></a>General Rules and Limitations
+## <a name="microsoft-specific"></a>Microsoft Specific  
   
--   Si vous déclarez une fonction ou un objet sans l'attribut **dllimport** ou `dllexport`, la fonction ou l'objet n'est pas considéré comme une partie de l'interface DLL.  Par conséquent, la définition de la fonction ou de l'objet doit être présente dans ce module ou dans un autre module du même programme.  Pour que la fonction ou que l'objet fasse partie de l'interface DLL, vous devez déclarer la définition de la fonction ou de l'objet dans l'autre module en tant que `dllexport`.  Sinon, une erreur d'éditeur de liens est générée.  
+-   If you declare a function or object without the **dllimport** or `dllexport` attribute, the function or object is not considered part of the DLL interface. Therefore, the definition of the function or object must be present in that module or in another module of the same program. To make the function or object part of the DLL interface, you must declare the definition of the function or object in the other module as `dllexport`. Otherwise, a linker error is generated.  
   
-     Si vous déclarez une fonction ou un objet avec l'attribut `dllexport`, sa définition doit apparaître dans un module du même programme.  Sinon, une erreur d'éditeur de liens est générée.  
+     If you declare a function or object with the `dllexport` attribute, its definition must appear in some module of the same program. Otherwise, a linker error is generated.  
   
--   Si un seul module de votre programme contient **dllimport** et des déclarations `dllexport` pour la même fonction ou pour le même objet, l'attribut `dllexport` est prioritaire sur l'attribut **dllimport**.  Toutefois, un avertissement du compilateur est généré.  Par exemple :  
+-   If a single module in your program contains both **dllimport** and `dllexport` declarations for the same function or object, the `dllexport` attribute takes precedence over the **dllimport** attribute. However, a compiler warning is generated. For example:  
   
     ```  
     __declspec( dllimport ) int i;  
@@ -34,7 +51,7 @@ caps.handback.revision: 7
                                      // dllexport takes precedence.  
     ```  
   
--   En C\+\+, vous pouvez initialiser un pointeur données local déclaré globalement ou statique avec l'adresse d'un objet de données déclaré avec l'attribut **dllimport**, ce qui génère une erreur en C.  Vous pouvez également initialiser un pointeur fonction local statique avec l'adresse d'une fonction déclarée avec l'attribut **dllimport**.  En C, ce type d'assignation définit le pointeur sur l'adresse de la conversion de code d'importation de la DLL \(stub de code qui transfère un contrôle à la fonction\) plutôt que l'adresse de la fonction.  En C\+\+, il définit le pointeur sur l'adresse de la fonction.  Par exemple :  
+-   In C++, you can initialize a globally declared or static local data pointer or with the address of a data object declared with the **dllimport** attribute, which generates an error in C. In addition, you can initialize a static local function pointer with the address of a function declared with the **dllimport** attribute. In C, such an assignment sets the pointer to the address of the DLL import thunk (a code stub that transfers control to the function) rather than the address of the function. In C++, it sets the pointer to the address of the function. For example:  
   
     ```  
     __declspec( dllimport ) void func1( void );  
@@ -52,7 +69,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-     Toutefois, comme un programme qui inclut l'attribut `dllexport` dans la déclaration d'un objet doit fournir la définition de cet objet dans le programme, vous pouvez initialiser un pointeur fonction statique global ou local avec l'adresse d'une fonction `dllexport`.  De même, vous pouvez initialiser un pointeur de données statiques global ou local avec l'adresse d'un objet de données `dllexport`.  Par exemple, le code suivant ne génère pas d'erreur en C ni en C\+\+ :  
+     However, because a program that includes the `dllexport` attribute in the declaration of an object must provide the definition for that object somewhere in the program, you can initialize a global or local static function pointer with the address of a `dllexport` function. Similarly, you can initialize a global or local static data pointer with the address of a `dllexport` data object. For example, the following code does not generate errors in C or C++:  
   
     ```  
     __declspec( dllexport ) void func1( void );  
@@ -68,9 +85,9 @@ caps.handback.revision: 7
     }  
     ```  
   
--   Suite à une modification du comportement apportée dans Visual C\+\+ .NET pour rendre l'application de `dllexport` plus cohérente entre les classes normales et les spécialisations de modèles de classe, si vous appliquez `dllexport` à une classe normale qui possède une classe de base qui n'est pas marquée comme `dllexport`, le compilateur génère une erreur C4275.  
+-   Because of a change in behavior introduce in Visual C++ .NET to make the application of `dllexport` more consistent between regular classes and specializations of class templates, if you apply `dllexport` to a regular class that has a base class that is not marked as `dllexport`, the compiler will generate C4275.  
   
-     Le compilateur génère le même avertissement si la classe de base est une spécialisation d'un modèle de classe.  Pour contourner ce problème, marquez la classe de base avec `dllexport`.  Le problème avec une spécialisation d'un modèle de classe est l'emplacement de **\_\_declspec\(dllexport\)** ; vous n'êtes pas autorisé à marquer le modèle de classe.  Au lieu de cela, instanciez le modèle de classe et marquez cette instanciation explicite avec `dllexport`.  Par exemple :  
+     The compiler generates the same warning if the base class is a specialization of a class template. To work around this, mark the base-class with `dllexport`. The problem with a specialization of a class template is where to place the **__declspec(dllexport)**; you are not allowed to mark the class template. Instead, explicitly instantiate the class template and mark this explicit instantiation with `dllexport`. For example:  
   
     ```  
     template class __declspec(dllexport) B<int>;  
@@ -78,21 +95,21 @@ caps.handback.revision: 7
     // ...  
     ```  
   
-     Cette solution de contournement échoue si l'argument template est la classe dérivée.  Par exemple :  
+     This workaround fails if the template argument is the deriving class. For example:  
   
     ```  
     class __declspec(dllexport) D : public B<D> {  
     // ...  
     ```  
   
-     Étant donné qu'il s'agit du modèle commun avec les modèles, le compilateur a modifié la sémantique de `dllexport` lorsqu'il est appliqué à une classe qui comporte une ou plusieurs classes de base et qu'une ou plusieurs classes de base sont une spécialisation d'un modèle de classe.  Dans ce cas, le compilateur applique implicitement `dllexport` aux spécialisations des modèles de classe.  Dans Visual C\+\+ .NET, un utilisateur peut procéder comme suit pour ne pas obtenir d'avertissement :  
+     Because this is common pattern with templates, the compiler changed the semantics of `dllexport` when it is applied to a class that has one or more base-classes and when one or more of the base classes is a specialization of a class template. In this case, the compiler implicitly applies `dllexport` to the specializations of class templates. In Visual C++ .NET, a user can do the following and not get a warning:  
   
     ```  
     class __declspec(dllexport) D : public B<D> {  
     // ...  
     ```  
   
-## FIN de la section spécifique à Microsoft  
+**END Microsoft Specific**  
   
-## Voir aussi  
+## <a name="see-also"></a>See Also  
  [dllexport, dllimport](../cpp/dllexport-dllimport.md)

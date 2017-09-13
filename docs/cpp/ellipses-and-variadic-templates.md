@@ -1,56 +1,73 @@
 ---
-title: "Ellipses et mod&#232;les variadiques | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Ellipses and Variadic Templates | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Ellipses et mod&#232;les variadiques
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: cd760bb7b3d5c91ac0fccd92866043cda70d9967
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/11/2017
 
-Cet article explique comment utiliser l'ellipse \(`...`\) avec les modèles variadic C\+\+.  L'ellipse a de [nombreux usages](../misc/ellipsis-dot-dot-dot.md) dans C et C\+\+.  Ceux\-ci incluent des listes d'arguments variables pour les fonctions.  La fonction `printf()` de la bibliothèque Runtime C est l'un des exemples les plus connus.  
+---
+# <a name="ellipses-and-variadic-templates"></a>Ellipses and Variadic Templates
+This article shows how to use the ellipsis (`...`) with C++ variadic templates. The ellipsis has had many uses in C and C++. These include variable argument lists for functions. The `printf()` function from the C Runtime Library is one of the most well-known examples.  
   
- Un *modèle variadique* est une classe ou un modèle de fonction qui prend en charge un nombre arbitraire d'arguments.  Ce mécanisme est particulièrement utile pour les développeurs de bibliothèques C\+\+ car vous pouvez l'appliquer aux modèles de classe et aux modèles de fonction, et donc fournir une large gamme de fonctionnalités et de flexibilité de type sécurisé et non triviales.  
+ A *variadic template* is a class or function template that supports an arbitrary number of arguments. This mechanism is especially useful to C++ library developers because you can apply it to both class templates and function templates, and thereby provide a wide range of type-safe and non-trivial functionality and flexibility.  
   
-## Syntaxe  
- Un bouton de sélection est utilisé de deux façons par les modèles variadiques.  À gauche du nom de paramètre, cela signifie un *paquet de paramètre*, et à droite du nom de paramètre, cela permet d'étendre les paquets de paramètre dans des noms différents.  
+## <a name="syntax"></a>Syntax  
+ An ellipsis is used in two ways by variadic templates. To the left of the parameter name, it signifies a *parameter pack*, and to the right of the parameter name, it expands the parameter packs into separate names.  
   
- Voici un exemple de base de la syntaxe de définition de la *classe de modèle variadique* :  
+ Here's a basic example of *variadic template class* definition syntax:  
   
 ```cpp  
 template<typename... Arguments> class classname;  
 ```  
   
- Pour des packages et des expansions de paramètres, vous pouvez ajouter des espaces blancs autour des ellipses, selon votre préférence, comme indiqué dans ces exemples :  
+ For both parameter packs and expansions, you can add whitespace around the ellipsis, based on your preference, as shown in these examples:  
   
 ```cpp  
 template<typename ...Arguments> class classname;  
 ```  
   
- Ou comme suit :  
+ Or this:  
   
 ```cpp  
 template<typename ... Arguments> class classname;  
 ```  
   
- Notez que cet article utilise la convention qui est présentée dans le premier exemple \(l'ellipses est attachée à `typename`\).  
+ Notice that this article uses the convention that's shown in the first example (the ellipsis is attached to `typename`).  
   
- Dans les exemples précédents, `Arguments` est un package de paramètre.  La classe `classname` peut accepter un nombre d'arguments variable, comme dans les exemples suivants :  
+ In the preceding examples, `Arguments` is a parameter pack. The class `classname` can accept a variable number of arguments, as in these examples:  
   
 ```cpp  
-  
 template<typename... Arguments> class vtclass;  
   
 vtclass< > vtinstance1;  
@@ -60,22 +77,22 @@ vtclass<long, std::vector<int>, std::string> vtinstance4;
   
 ```  
   
- En utilisant une définition de classe de modèle variadique, vous pouvez également exiger au moins un paramètre :  
+ By using a variadic template class definition, you can also require at least one parameter:  
   
 ```cpp  
 template <typename First, typename... Rest> class classname;  
   
 ```  
   
- Voici un exemple de base de la syntaxe de la *fonction de modèle variadique* :  
+ Here's a basic example of *variadic template function* syntax:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- Le package de paramètres `Arguments` est ensuite développé pour être utilisé, comme indiqué dans la section suivante, **Présentation des modèles variadiques**.  
+ The `Arguments` parameter pack is then expanded for use, as shown in the next section, **Understanding variadic templates**.  
   
- D'autres formes de syntaxe de fonction de modèle variadique sont possibles, y compris mais sans s'y limiter, les exemples suivants :  
+ Other forms of variadic template function syntax are possible—including, but not limited to, these examples:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(Arguments&... args);   
@@ -83,27 +100,27 @@ template <typename... Arguments> returntype functionname(Arguments&&... args);
 template <typename... Arguments> returntype functionname(Arguments*... args);  
 ```  
   
- Les spécificateurs tels que `const` sont également autorisés :  
+ Specifiers like `const` are also allowed:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
   
 ```  
   
- Comme avec les définitions de classe de modèle variadique, vous pouvez concevoir des fonctions qui nécessitent au moins un paramètre :  
+ As with variadic template class definitions, you can make functions that require at least one parameter:  
   
 ```cpp  
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);  
   
 ```  
   
- Les modèles variadiques utilisent l'opérateur `sizeof...()` \(non lié à l'opérateur plus ancien `sizeof()`\) :  
+ Variadic templates use the `sizeof...()` operator (unrelated to the older `sizeof()` operator):  
   
 ```cpp  
 template<typename... Arguments>  
 void tfunc(const Arguments&... args)  
 {  
-    const unsigned numargs = sizeof...(Arguments);  
+    constexpr auto numargs{ sizeof...(Arguments) };  
   
     X xobj[numargs]; // array of some previously defined type X  
   
@@ -112,15 +129,14 @@ void tfunc(const Arguments&... args)
   
 ```  
   
-## Informations complémentaires sur le positionnement d'ellipse  
- Auparavant, cet article décrivait le positionnement de sélection qui définit des packages et des expansions de paramètre comme « à gauche du nom de paramètre, cela signifie un paquet de paramètre, et à droite du nom de paramètre, cela développe les paquets de paramètre dans des noms distincts ».  C'est techniquement vrai mais peut être ambigu dans la transposition en code.  Considérez :  
+## <a name="more-about-ellipsis-placement"></a>More about ellipsis placement  
+ Previously, this article described ellipsis placement that defines parameter packs and expansions as "to the left of the parameter name, it signifies a parameter pack, and to the right of the parameter name, it expands the parameter packs into separate names". This is technically true but can be confusing in translation to code. Consider:  
   
--   Dans une liste de paramètres de modèle \(`template <parameter-list>`\), `typename...` introduit un paquet de paramètre de modèle.  
+-   In a template-parameter-list (`template <parameter-list>`), `typename...` introduces a template parameter pack.  
   
--   Dans une clause de déclaration de paramètre \(`func(parameter-list)`\), des points de suspension « de niveau supérieur » présentent un paquet de paramètre de fonction, et le positionnement de sélection est important :  
+-   In a parameter-declaration-clause (`func(parameter-list)`), a "top-level" ellipsis introduces a function parameter pack, and the ellipsis positioning is important:  
   
     ```cpp  
-  
     // v1 is NOT a function parameter pack:  
     template <typename... Types> void func1(std::vector<Types...> v1);   
   
@@ -128,10 +144,10 @@ void tfunc(const Arguments&... args)
     template <typename... Types> void func2(std::vector<Types>... v2);   
     ```  
   
--   Lorsque les ellipses apparaissent immédiatement après un nom de paramètre, vous avez une expansion de pack de paramètre.  
+-   Where the ellipsis appears immediately after a parameter name, you have a parameter pack expansion.  
   
-## Exemple  
- Un bon moyen d'illustrer le mécanisme de fonction de modèle variadique consiste à l'utiliser dans une réécriture d'une fonctionnalité de `printf` :  
+## <a name="example"></a>Example  
+ A good way to illustrate the variadic template function mechanism is to use it in a re-write of some of the functionality of `printf`:  
   
 ```cpp  
 #include <iostream>  
@@ -165,7 +181,7 @@ int main()
   
 ```  
   
-## Sortie  
+## <a name="output"></a>Output  
   
 ```  
   
@@ -176,7 +192,6 @@ first, 2, third, 3.14159
 ```  
   
 > [!NOTE]
->  La plupart des implémentations qui intègrent des fonctions de modèles variadiques utilisent la récurrence sous une forme quelconque, mais elle est légèrement différente de la récurrence classique. La récurrence classique implique qu'une fonction s'appelle en utilisant la même signature. \(Elle peut être surchargée ou modélisée, mais la même signature est choisie à chaque fois.\) La récursivité variadique implique l'appel d'un modèle de fonction variadique en utilisant des nombres d'arguments qui différent \(presque toujours décroissants\) et, de ce fait, en horodatant une signature différente à chaque fois.  Un « cas de base » est encore requis, mais la nature de la récursivité est différente.  
+>  Most implementations that incorporate variadic template functions use recursion of some form, but it's slightly different from traditional recursion.  Traditional recursion involves a function calling itself by using the same signature. (It may be overloaded or templated, but the same signature is chosen each time.) Variadic recursion involves calling a variadic function template by using differing (almost always decreasing) numbers of arguments, and thereby stamping out a different signature every time. A "base case" is still required, but the nature of the recursion is different.  
   
-## Voir aussi  
- [Points de suspension \(...\)](../misc/ellipsis-dot-dot-dot.md)
+

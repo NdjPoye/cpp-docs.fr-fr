@@ -1,66 +1,88 @@
 ---
-title: "Outils d&#233;finis par l&#39;utilisateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "outils définis par l'utilisateur (extensions MFC)"
+title: User-defined Tools | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Outils d&#233;finis par l&#39;utilisateur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4bab2e4ce2537b0fd7d06536c20a9b85f56e636d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-MFC prend en charge les outils définis pour l'utilisateur.  Un outil défini par l'utilisateur est une commande particulière qui exécute un programme externe et spécifié par l'utilisateur.  Vous pouvez utiliser le processus de personnalisation pour gérer les outils définis par l'utilisateur.  Toutefois, vous ne pouvez pas utiliser ce processus si votre objet d'application n'est pas dérivé de [CWinAppEx Class](../mfc/reference/cwinappex-class.md).  Pour plus d'informations sur la personnalisation du code, consultez [Personnalisation pour MFC](../mfc/customization-for-mfc.md).  
+---
+# <a name="user-defined-tools"></a>User-defined Tools
+MFC supports user-defined tools. A user-defined tool is a special command that executes an external, user-specified program. You can use the customization process to manage user-defined tools. However, you cannot use this process if your application object is not derived from [CWinAppEx Class](../mfc/reference/cwinappex-class.md). For more information about customization, see [Customization for MFC](../mfc/customization-for-mfc.md).  
   
- Si vous activez la prise en charge des outils définis par l'utilisateur, la boîte de dialogue de personnalisation inclut automatiquement l'onglet **Outils**.  L'illustration suivante présente la page **Outils**.  
+ If you enabled user-defined tools support, the customization dialog box automatically includes the **Tools** tab. The following illustration shows the **Tools** page.  
   
- ![Onglet Outils de la boîte de dialogue Personnalisation](../mfc/media/custdialogboxtoolstab.png "CustDialogBoxToolsTab")  
-Onglet personnalisation de la boîte de dialogue des Outils  
+ ![Tools tab in the Customize dialog box](../mfc/media/custdialogboxtoolstab.png "custdialogboxtoolstab")  
+Customization dialog box Tools tab  
   
-## Activer la prise en charge d'outils définis par l'utilisateur  
- Pour activer les outils définis par l'utilisateur dans une application, appelez [CWinAppEx::EnableUserTools](../Topic/CWinAppEx::EnableUserTools.md).  Toutefois, vous devez d'abord définir plusieurs constantes dans les fichiers de ressources de votre application à utiliser comme paramètres pour cet appel.  
+## <a name="enabling-user-defined-tools-support"></a>Enabling user-defined tools support  
+ To enable user-defined tools in an application, call [CWinAppEx::EnableUserTools](../mfc/reference/cwinappex-class.md#enableusertools). However, you must first define several constants in the resource files of your application to use as parameters for this call.  
   
- Dans l'éditeur de ressources créez une commande factice qui utilise un ID de commande approprié  Dans l'exemple suivant, nous utilisons **ID\_TOOLS\_ENTRY** comme ID de commande  Cet ID de commande signale un emplacement dans un ou plusieurs menus où l'environnement insèrera les outils définis par l'utilisateur.  
+ In the resource editor create a dummy command that uses an appropriate command ID. In the following example, we use **ID_TOOLS_ENTRY** as the command ID. This command ID marks a location in one or more menus where the framework will insert the user-defined tools.  
   
- Vous devez mettre de côté certains ID consécutifs dans la table de chaînes pour représenter les outils définis par l'utilisateur.  Le nombre de chaînes à mettre de côté est égal au nombre maximal d'outils d'utilisateur que les utilisateurs peuvent définir.  Dans l'exemple suivant, ils sont appelés **ID\_USER\_TOOL1** via **ID\_USER\_TOOL10**.  
+ You must set aside some consecutive IDs in the string table to represent the user-defined tools. The number of strings that you set aside is equal to the maximum number of user tools that the users can define. In the following example, these are named **ID_USER_TOOL1** through **ID_USER_TOOL10**.  
   
- Vous pouvez offrir des suggestions aux utilisateurs pour les aider à sélectionner des répertoires et des arguments pour les programmes externes qui seront appelés en tant qu'outils.  Pour cela, créez deux menus contextuels dans l'éditeur de ressources.  Dans l'exemple suivant, ils sont appelés **IDR\_MENU\_ARGS** et **IDR\_MENU\_DIRS**.  Pour chaque commande dans les menus, définissez la chaîne dans la table de chaînes d'application.  L'ID de ressource de la chaîne doit être égal à l'ID de commande  
+ You can offer suggestions to the users to help them select directories and arguments for the external programs that will be called as tools. To do this, create two popup menus in the resource editor. In the following example these are named **IDR_MENU_ARGS** and **IDR_MENU_DIRS**. For each command in these menus, define a string in your application string table. The resource ID of the string must be equal to the command ID.  
   
- Vous pouvez également créer une classe dérivée de [CUserTool Class](../mfc/reference/cusertool-class.md) pour remplacer l'implémentation par défaut.  Pour cela, transmettez les informations d'exécution pour votre classe dérivée comme quatrième paramètre dans CWinAppEx::EnableUserTools, au lieu de RUNTIME\_CLASS \([CUserTool Class](../mfc/reference/cusertool-class.md)\).  
+ You can also create a derived class from [CUserTool Class](../mfc/reference/cusertool-class.md) to replace the default implementation. To do this, pass the runtime information for your derived class as the fourth parameter in CWinAppEx::EnableUserTools, instead of RUNTIME_CLASS([CUserTool Class](../mfc/reference/cusertool-class.md)).  
   
- Après avoir défini les constantes appropriées, appelez [CWinAppEx::EnableUserTools](../Topic/CWinAppEx::EnableUserTools.md) pour activer les outils définis par l'utilisateur.  
+ After you define the appropriate constants, call [CWinAppEx::EnableUserTools](../mfc/reference/cwinappex-class.md#enableusertools) to enable user-defined tools.  
   
- L'appel de la méthode suivante montre comment utiliser ces constantes :  
+ The following method call shows how to use these constants:  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo#1](../mfc/codesnippet/CPP/user-defined-tools_1.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#1](../mfc/codesnippet/cpp/user-defined-tools_1.cpp)]  
   
- Dans cet exemple, l'onglet d'outils est inclus dans la boîte de dialogue **Personnalisation**.  L'environnement remplace toute commande qui correspond à l'ID de commande **ID\_TOOLS\_ENTRY** dans n'importe quel élément avec l'ensemble d'outils définis par l'utilisateur lorsqu'un utilisateur ouvre le menu.  Les IDs de commande **ID\_USER\_TOOL1** via **ID\_USER\_TOOL10** sont réservés à l'utilisation des outils définis par l'utilisateur.  La classe [CUserTool Class](../mfc/reference/cusertool-class.md) traite les appels aux outils utilisateur.  L'onglet d'outils de la boîte de dialogue **Personnalisation** fournit des boutons situés à droite de l'argument et des champs d'entrée du répertoire pour accéder aux menus **IDR\_MENU\_ARGS** et **IDR\_MENU\_DIRS**.Lorsqu'un utilisateur sélectionne une commande de l'un de ces menus, l'environnement ajoute à la zone de texte la chaîne qui possède l'ID ressource identique à celui de l'ID de commande.  
+ In this example, the tools tab will be included on the **Customization** dialog box. The framework will replace any command that matches the command ID **ID_TOOLS_ENTRY** in any menu with the set of currently defined user tools whenever a user opens that menu. The command IDs **ID_USER_TOOL1** through **ID_USER_TOOL10** are reserved for use for user-defined tools. The class [CUserTool Class](../mfc/reference/cusertool-class.md) handles calls to the user tools. The tool tab of the **Customization** dialog box provides buttons to the right of the argument and directory entry fields to access the menus **IDR_MENU_ARGS** and **IDR_MENU_DIRS**.When a user selects a command from one of these menus, the framework appends to the appropriate text box the string that has the resource ID equal to the command ID.  
   
-### Y compris les outils prédéfinis  
- Si vous souhaitez prédéfinir certains outils au démarrage de l'application, vous devez remplacer la méthode [CFrameWnd::LoadFrame](../Topic/CFrameWnd::LoadFrame.md) de la fenêtre principale de votre application.  Avec cette méthode, vous devez suivre les étapes suivantes :  
+### <a name="including-predefined-tools"></a>Including predefined tools  
+ If you want to predefine some tools on the application startup, you must override the [CFrameWnd::LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) method of the main window of your application. In that method, you must perform the following steps.  
   
-##### Pour ajouter de nouveaux outils dans LoadFrame  
+##### <a name="to-add-new-tools-in-loadframe"></a>To add new tools in LoadFrame  
   
-1.  Obtenir un pointeur vers l'objet [CUserToolsManager Class](../mfc/reference/cusertoolsmanager-class.md) en appelant [CWinAppEx::GetUserToolsManager](../Topic/CWinAppEx::GetUserToolsManager.md).  
+1.  Obtain a pointer to the [CUserToolsManager Class](../mfc/reference/cusertoolsmanager-class.md) object by calling [CWinAppEx::GetUserToolsManager](../mfc/reference/cwinappex-class.md#getusertoolsmanager).  
   
-2.  Pour chaque outil à créer, appelez [CUserToolsManager::CreateNewTool](../Topic/CUserToolsManager::CreateNewTool.md).  Cette méthode retourne un pointeur vers un objet [CUserTool Class](../mfc/reference/cusertool-class.md) et ajoute l'outil d'utilisateur créé récemment à la collection interne d'outils.  Si vous avez fourni des informations d'exécution à une classe dérivée de [CUserTool Class](../mfc/reference/cusertool-class.md) comme quatrième paramètre de [CWinAppEx::EnableUserTools](../Topic/CWinAppEx::EnableUserTools.md), [CUserToolsManager::CreateNewTool](../Topic/CUserToolsManager::CreateNewTool.md) instanciera et retournera une instance de cette classe à la place.  
+2.  For every tool that you want to create, call [CUserToolsManager::CreateNewTool](../mfc/reference/cusertoolsmanager-class.md#createnewtool). This method returns a pointer to a [CUserTool Class](../mfc/reference/cusertool-class.md) object and adds the newly created user tool to the internal collection of tools. If you provided the runtime information for a derived class of [CUserTool Class](../mfc/reference/cusertool-class.md) as the fourth parameter of [CWinAppEx::EnableUserTools](../mfc/reference/cwinappex-class.md#enableusertools), [CUserToolsManager::CreateNewTool](../mfc/reference/cusertoolsmanager-class.md#createnewtool) will instantiate and return an instance of that class instead.  
   
-3.  Pour chaque outil, définissez son étiquette de texte en définissant `CUserTool::m_strLabel` et définissez sa commande en appelant `CUserTool::SetCommand`.  L'implémentation par défaut de [CUserTool Class](../mfc/reference/cusertool-class.md) récupère automatiquement les icônes disponibles du programme spécifié dans l'appel à `SetCommand`.  
+3.  For each tool, set its text label by setting `CUserTool::m_strLabel` and set its command by calling `CUserTool::SetCommand`. The default implementation of [CUserTool Class](../mfc/reference/cusertool-class.md) automatically retrieves available icons from the program that is specified in the call to `SetCommand`.  
   
-## Voir aussi  
- [Personnalisation pour MFC](../mfc/customization-for-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [Customization for MFC](../mfc/customization-for-mfc.md)   
  [CUserTool Class](../mfc/reference/cusertool-class.md)   
  [CUserToolsManager Class](../mfc/reference/cusertoolsmanager-class.md)   
  [CWinAppEx Class](../mfc/reference/cwinappex-class.md)
+
+
+
+
+

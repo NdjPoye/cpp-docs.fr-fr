@@ -1,58 +1,77 @@
 ---
-title: "D&#233;filement et mise &#224; l&#39;&#233;chelle des vues | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestionnaires de messages"
-  - "gestion des messages, barres de défilement dans la classe de vue"
-  - "mettre à l'échelle les vues"
-  - "barres de défilement, messages"
-  - "faire défiler les vues"
+title: Scrolling and Scaling Views | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers [MFC]
+- scaling views [MFC]
+- message handling [MFC], scroll bars in view class [MFC]
+- scroll bars [MFC], messages
+- scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# D&#233;filement et mise &#224; l&#39;&#233;chelle des vues
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3ba8ef3c6b1eaa228d136289323209d8bf220023
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-MFC prend en charge les vues de défilement et les vues qui sont automatiquement mises à l'échelle de la taille de la fenêtre cadre qui s'affiche.  La classe `CScrollView` prend en charge les deux types de vues.  
+---
+# <a name="scrolling-and-scaling-views"></a>Scrolling and Scaling Views
+MFC supports views that scroll and views that are automatically scaled to the size of the frame window that displays them. Class `CScrollView` supports both kinds of views.  
   
- Pour plus d'informations sur le défilement et la mise à l'échelle, consultez la classe [CScrollView](../mfc/reference/cscrollview-class.md) dans *le guide de MFC*.  Pour obtenir un exemple de défilement, consultez [L'exemple Griffonnage](../top/visual-cpp-samples.md).  
+ For more information about scrolling and scaling, see class [CScrollView](../mfc/reference/cscrollview-class.md) in the *MFC Reference*. For a scrolling example, see the [Scribble sample](../visual-cpp-samples.md).  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   Faire défiler une vue  
+-   Scrolling a view  
   
--   Mettre une vue à l'échelle  
+-   Scaling a view  
   
--   [\<caps:sentence id\="tgt8" sentenceid\="f321fcf7c88bc6e3f892ae0fc9b2f0d8" class\="tgtSentence"\>Coordonnées de vue\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/dd145205)  
+-   [View coordinates](http://msdn.microsoft.com/library/windows/desktop/dd145205)  
   
-##  <a name="_core_scrolling_a_view"></a> Faire défiler une vue  
- Si la taille d'un document est supérieure à la taille que la vue peut afficher.  Cela peut se produire si les données du document augmentent ou réduisent la fenêtre qui encadre la vue.  Dans ce cas, la vue doit prendre en charge le défilement.  
+##  <a name="_core_scrolling_a_view"></a> Scrolling a View  
+ Frequently the size of a document is greater than the size its view can display. This may occur because the document's data increases or the user shrinks the window that frames the view. In such cases, the view must support scrolling.  
   
- Toute vue peut traiter les messages de barre de défilement dans les fonctions membres `OnHScroll` et `OnVScroll`.  Implémentez la gestion des messages de barre de défilement de ces fonctions, soit en effectuant tout le travail vous\-même, soit en utilisant la classe `CScrollView` pour gérer le défilement pour vous.  
+ Any view can handle scroll-bar messages in its `OnHScroll` and `OnVScroll` member functions. You can either implement scroll-bar message handling in these functions, doing all the work yourself, or you can use the `CScrollView` class to handle scrolling for you.  
   
- `CScrollView` procède comme suit :  
+ `CScrollView` does the following:  
   
--   Gère la taille et le mode de mappage de la fenêtre et de la fenêtre d'affichage  
+-   Manages window and viewport sizes and mapping modes  
   
--   Défile automatiquement en réponse aux messages de barre de défilement  
+-   Scrolls automatically in response to scroll-bar messages  
   
- Vous pouvez spécifier le défilement pour une « page » \(lorsque l'utilisateur clique sur un axe de barre de défilement\) et une « ligne » \(lorsque l'utilisateur clique sur la flèche de défilement\).  Envisagez ces valeurs en fonction de la nature de la vue.  Par exemple, vous pouvez faire défiler par incréments de 1 pixels pour une vue de graphiques et par incréments de la hauteur de ligne dans les documents texte.  
+ You can specify how much to scroll for a "page" (when the user clicks in a scroll-bar shaft) and a "line" (when the user clicks in a scroll arrow). Plan these values to suit the nature of your view. For example, you might want to scroll in 1-pixel increments for a graphics view but in increments based on the line height in text documents.  
   
-##  <a name="_core_scaling_a_view"></a> Mettre une vue à l'échelle  
- Lorsque vous souhaitez que la vue pour ajuste automatiquement la taille de la fenêtre cadre, vous pouvez utiliser `CScrollView` pour mettre à l'échelle au lieu de défiler.  La vue logique est étirée ou réduite à la zone client de la fenêtre exactement.  Une vue mise à l'échelle n'a pas de barre de défilement.  
+##  <a name="_core_scaling_a_view"></a> Scaling a View  
+ When you want the view to automatically fit the size of its frame window, you can use `CScrollView` for scaling instead of scrolling. The logical view is stretched or shrunk to fit the window's client area exactly. A scaled view has no scroll bars.  
   
-## Voir aussi  
- [Utilisation de vues](../mfc/using-views.md)
+## <a name="see-also"></a>See Also  
+ [Using Views](../mfc/using-views.md)
+
+

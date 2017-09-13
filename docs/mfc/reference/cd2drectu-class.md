@@ -1,5 +1,5 @@
 ---
-title: Classe de CD2DRectU | Documents Microsoft
+title: CD2DRectU Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DRectU class
+- CD2DRectU [MFC], CD2DRectU
+- CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
 caps.latest.revision: 18
 author: mikeblome
@@ -36,52 +37,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 74c05d7f4be9b9308cdcb2b91a0455a4cd025dc1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f5e7cf6c071fa4b4cdef655551b6442d85e1c350
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2drectu-class"></a>CD2DRectU, classe
-Wrapper pour `D2D1_RECT_U`.  
+# <a name="cd2drectu-class"></a>CD2DRectU Class
+A wrapper for `D2D1_RECT_U`.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DRectU : public D2D1_RECT_U;  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRectU::CD2DRectU](#cd2drectu)|Surchargé. Construit un `CD2DRectU` à partir de l’objet `D2D1_RECT_U` objet.|  
+|[CD2DRectU::CD2DRectU](#cd2drectu)|Overloaded. Constructs a `CD2DRectU` object from `D2D1_RECT_U` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRectU::IsNull](#isnull)|Retourne un `boolean` valeur qui indique si une expression ne contient aucune donnée valide ( `null`).|  
+|[CD2DRectU::IsNull](#isnull)|Returns a `boolean` value that indicates whether an expression contains no valid data ( `null`).|  
   
-### <a name="public-operators"></a>Op&#233;rateurs publics  
+### <a name="public-operators"></a>Public Operators  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRectU::operator CRect](#operator_crect)|Convertit `CD2DRectU` à `CRect` objet.|  
+|[CD2DRectU::operator CRect](#operator_crect)|Converts `CD2DRectU` to `CRect` object.|  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `D2D1_RECT_U`  
   
  `CD2DRectU`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="cd2drectu"></a>CD2DRectU::CD2DRectU  
- Construit un objet CD2DRectU à partir de l’objet CRect.  
+##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU  
+ Constructs a CD2DRectU object from CRect object.  
   
 ```  
 CD2DRectU(const CRect& rect);  
@@ -96,42 +97,42 @@ CD2DRectU(
     UINT32 uBottom = 0);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `rect`  
- rectangle source  
+ source rectangle  
   
  `uLeft`  
- Coordonnée gauche source  
+ source left coordinate  
   
  `uTop`  
- coordonnée supérieure source  
+ source top coordinate  
   
  `uRight`  
- coordonnée droite source  
+ source right coordinate  
   
  `uBottom`  
- Coordonnée inférieure source  
+ source bottom coordinate  
   
-##  <a name="isnull"></a>CD2DRectU::IsNull  
- Retourne une valeur booléenne qui indique si une expression ne contient aucune donnée valide (Null).  
+##  <a name="isnull"></a>  CD2DRectU::IsNull  
+ Returns a Boolean value that indicates whether an expression contains no valid data (Null).  
   
 ```  
 BOOL IsNull() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- TRUE si ce rectangle en haut, gauche, inférieure et valeurs sont toujours égaux à 0 ; Sinon, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if rectangle's top, left, bottom, and right values are all equal to 0; otherwise FALSE.  
   
-##  <a name="operator_crect"></a>CD2DRectU::operator CRect  
- Convertit CD2DRectU en objet CRect.  
+##  <a name="operator_crect"></a>  CD2DRectU::operator CRect  
+ Converts CD2DRectU to CRect object.  
   
 ```  
 operator CRect();
 ```   
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur actuelle du rectangle de D2D.  
+### <a name="return-value"></a>Return Value  
+ Current value of D2D rectangle.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [Classes](../../mfc/reference/mfc-classes.md)
 

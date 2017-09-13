@@ -1,44 +1,63 @@
 ---
-title: "Utilisation de contr&#244;les d&#39;arborescence | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl (classe), utilisation"
-  - "contrôles d'arborescence, à propos des contrôles d'arborescence"
+title: Using Tree Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTreeCtrl class [MFC], using
+- tree controls [MFC], about tree controls
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Utilisation de contr&#244;les d&#39;arborescence
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 906a4ba64103450e4c2d8e0496a33bd9543122e0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-L'utilisation standard d'un contrôle d'arbre \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) suit le modèle ci\-dessous :  
+---
+# <a name="using-tree-controls"></a>Using Tree Controls
+Typical usage of a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) follows the pattern below:  
   
--   Le contrôle est créé.  Si le contrôle est spécifié dans un modèle de boîte de dialogue ou si vous utilisez `CTreeView`, la création est automatique lorsque la boîte de dialogue ou la vue est créée.  Si vous souhaitez créer l'arbre dans une fenêtre enfant d'une autre fenêtre, utilisez la méthode [Créer](../Topic/CTreeCtrl::Create.md).  
+-   The control is created. If the control is specified in a dialog box template or if you're using `CTreeView`, creation is automatic when the dialog box or view is created. If you want to create the tree control as a child window of some other window, use the [Create](../mfc/reference/ctreectrl-class.md#create) member function.  
   
--   Si vous souhaitez que votre contrôle d'arbre utilise des images, générez liste des images en appelant [SetImageList](../Topic/CTreeCtrl::SetImageList.md).  Vous pouvez également modifier l'indentation en appelant [SetIndent](../Topic/CTreeCtrl::SetIndent.md).  Un bon moment pour cela est dans [OnInitDialog](../Topic/CDialog::OnInitDialog.md) \(pour les contrôles dans les boîtes de dialogue\) ou [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md) \(pour les vues\).  
+-   If you want your tree control to use images, set an image list by calling [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist). You can also change the indentation by calling [SetIndent](../mfc/reference/ctreectrl-class.md#setindent). A good time to do this is in [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (for controls in dialog boxes) or [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (for views).  
   
--   Placez les données dans le contrôle en appelant la fonction[InsertItem](../Topic/CTreeCtrl::InsertItem.md) de `CTreeCtrl` une fois pour chaque élément de données.  `InsertItem` retourne un handle de l'élément que vous pouvez utiliser pour y faire référence ultérieurement, par exemple en ajoutant des éléments enfants.  Un bon moment pour initialiser les données est dans `OnInitDialog` \(pour les contrôles dans les boîtes de dialogue\) ou `OnInitialUpdate` \(pour les vues\).  
+-   Put data into the control by calling the `CTreeCtrl`'s [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) function once for each data item. `InsertItem` returns a handle to the item you can use to refer to it later, such as when adding child items. A good time to initialize the data is in `OnInitDialog` (for controls in dialog boxes) or `OnInitialUpdate` (for views).  
   
--   Lorsque l'utilisateur interagit avec le contrôle, il envoie des messages de notification.  Vous pouvez spécifier une fonction pour gérer les messages à traiter en ajoutant une macro **ON\_NOTIFY\_REFLECT** dans la table des messages de la fenêtre de contrôle ou en ajoutant une macro`ON_NOTIFY` à la table des messages de la fenêtre parent.  Voir [Messages de notification d'arbre](../mfc/tree-control-notification-messages.md) plus loin dans cette rubrique pour obtenir la liste des notifications possibles.  
+-   As the user interacts with the control, it will send various notification messages. You can specify a function to handle each of the messages you want to handle by adding an **ON_NOTIFY_REFLECT** macro in your control window's message map or by adding an `ON_NOTIFY` macro to your parent window's message map. See [Tree Control Notification Messages](../mfc/tree-control-notification-messages.md) later in this topic for a list of possible notifications.  
   
--   Appelez plusieurs fonctions membres Set pour définir les valeurs du contrôle.  Les modifications que vous pouvez faire inclusent définir la mise en retrait et la modification du texte, des images, ou des données associées à un élément.  
+-   Call the various Set member functions to set values for the control. Changes that you can make include setting the indentation and changing the text, image, or data associated with an item.  
   
--   Utilisez les différentes fonctions Get pour examiner le contenu du contrôle.  Vous pouvez également parcourir le contenu du contrôle d'arbre avec des fonctions qui vous permettent de récupérer les handles vers les parents, les enfants, et les frères d'un élément spécifié.  Vous pouvez même trier les enfants d'un nœud particulier.  
+-   Use the various Get functions to examine the contents of the control. You can also traverse the contents of the tree control with functions that allow you to retrieve handles to parents, children, and siblings of a specified item. You can even sort the children of a particular node.  
   
--   Lorsque vous en avez terminé avec le contrôle, assurez vous qu'il est correctement détruit.  Si le contrôle d'arbre est dans une boîte de dialogue ou s'il s'agit d'une vue, lui et l'objet `CTreeCtrl` sont détruits automatiquement.  Sinon, vous devez vérifier que le contrôle et l'objet `CTreeCtrl` sont correctement détruits.  
+-   When you're done with the control, make sure it's properly destroyed. If the tree control is in a dialog box or if it's a view, it and the `CTreeCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CTreeCtrl` object are properly destroyed.  
   
-## Voir aussi  
- [Utilisation de CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

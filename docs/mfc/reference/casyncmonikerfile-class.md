@@ -1,5 +1,5 @@
 ---
-title: Classe CAsyncMonikerFile | Documents Microsoft
+title: CAsyncMonikerFile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,12 +27,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ActiveX controls [C++], asynchronous
-- OLE controls [C++], asynchronous
-- monikers [C++], MFC
-- asynchronous controls [C++]
-- CAsyncMonikerFile class
-- IMoniker interface, binding
+- CAsyncMonikerFile [MFC], CAsyncMonikerFile
+- CAsyncMonikerFile [MFC], Close
+- CAsyncMonikerFile [MFC], GetBinding
+- CAsyncMonikerFile [MFC], GetFormatEtc
+- CAsyncMonikerFile [MFC], Open
+- CAsyncMonikerFile [MFC], CreateBindStatusCallback
+- CAsyncMonikerFile [MFC], GetBindInfo
+- CAsyncMonikerFile [MFC], GetPriority
+- CAsyncMonikerFile [MFC], OnDataAvailable
+- CAsyncMonikerFile [MFC], OnLowResource
+- CAsyncMonikerFile [MFC], OnProgress
+- CAsyncMonikerFile [MFC], OnStartBinding
+- CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
 caps.latest.revision: 23
 author: mikeblome
@@ -52,64 +59,64 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 47ba3137b5d0d38aa59e9d627101de8350eebd50
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d188df15c70be6eb32bb53f72eb974ac286d723e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="casyncmonikerfile-class"></a>Classe CAsyncMonikerFile
-Fournit les fonctionnalités nécessaires à l'utilisation de monikers asynchrones dans les contrôles ActiveX (anciennement contrôles OLE).  
+# <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile Class
+Provides functionality for the use of asynchronous monikers in ActiveX controls (formerly OLE controls).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAsyncMonikerFile : public CMonikerFile  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAsyncMonikerFile::CAsyncMonikerFile](#casyncmonikerfile)|Construit un objet `CAsyncMonikerFile`.|  
+|[CAsyncMonikerFile::CAsyncMonikerFile](#casyncmonikerfile)|Constructs a `CAsyncMonikerFile` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAsyncMonikerFile::Close](#close)|Ferme et libère toutes les ressources.|  
-|[CAsyncMonikerFile::GetBinding](#getbinding)|Récupère un pointeur vers le transfert asynchrone la liaison.|  
-|[CAsyncMonikerFile::GetFormatEtc](#getformatetc)|Récupère le format des données dans le flux de données.|  
-|[CAsyncMonikerFile::Open](#open)|Ouvre un fichier de façon asynchrone.|  
+|[CAsyncMonikerFile::Close](#close)|Closes and releases all resources.|  
+|[CAsyncMonikerFile::GetBinding](#getbinding)|Retrieves a pointer to the asynchronous transfer binding.|  
+|[CAsyncMonikerFile::GetFormatEtc](#getformatetc)|Retrieves the format of the data in the stream.|  
+|[CAsyncMonikerFile::Open](#open)|Opens a file asynchronously.|  
   
-### <a name="protected-methods"></a>Méthodes protégées  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAsyncMonikerFile::CreateBindStatusCallback](#createbindstatuscallback)|Crée un objet COM qui implémente `IBindStatusCallback`.|  
-|[CAsyncMonikerFile::GetBindInfo](#getbindinfo)|Appelée par la bibliothèque du système OLE pour demander des informations sur le type de liaison à créer.|  
-|[CAsyncMonikerFile::GetPriority](#getpriority)|Appelée par la bibliothèque du système OLE pour obtenir la priorité de la liaison.|  
-|[CAsyncMonikerFile::OnDataAvailable](#ondataavailable)|Appelé pour fournir des données dès qu’il sera disponible pour le client lors des opérations de liaison asynchrone.|  
-|[CAsyncMonikerFile::OnLowResource](#onlowresource)|Appelé lorsque les ressources sont insuffisantes.|  
-|[CAsyncMonikerFile::OnProgress](#onprogress)|Appelé pour indiquer la progression sur les données du processus de téléchargement.|  
-|[CAsyncMonikerFile::OnStartBinding](#onstartbinding)|Appelé lorsque la liaison démarre.|  
-|[CAsyncMonikerFile::OnStopBinding](#onstopbinding)|Appelé lorsque le transfert asynchrone est arrêté.|  
+|[CAsyncMonikerFile::CreateBindStatusCallback](#createbindstatuscallback)|Creates a COM object that implements `IBindStatusCallback`.|  
+|[CAsyncMonikerFile::GetBindInfo](#getbindinfo)|Called by the OLE system library to request information on the type of bind to be created.|  
+|[CAsyncMonikerFile::GetPriority](#getpriority)|Called by the OLE system library to get the priority of the binding.|  
+|[CAsyncMonikerFile::OnDataAvailable](#ondataavailable)|Called to provide data as it becomes available to the client during asynchronous bind operations.|  
+|[CAsyncMonikerFile::OnLowResource](#onlowresource)|Called when resources are low.|  
+|[CAsyncMonikerFile::OnProgress](#onprogress)|Called to indicate progress on the data downloading process.|  
+|[CAsyncMonikerFile::OnStartBinding](#onstartbinding)|Called when binding is starting up.|  
+|[CAsyncMonikerFile::OnStopBinding](#onstopbinding)|Called when asynchronous transfer is stopped.|  
   
-## <a name="remarks"></a>Notes  
- Dérivé de [CMonikerFile](../../mfc/reference/cmonikerfile-class.md), qui à son tour est dérivée de [COleStreamFile](../../mfc/reference/colestreamfile-class.md), `CAsyncMonikerFile` utilise le [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) interface pour accéder à n’importe quel flux de données en mode asynchrone, y compris le chargement des fichiers à partir d’une URL de façon asynchrone. Les fichiers peuvent être le chemin de données des propriétés des contrôles ActiveX.  
+## <a name="remarks"></a>Remarks  
+ Derived from [CMonikerFile](../../mfc/reference/cmonikerfile-class.md), which in turn is derived from [COleStreamFile](../../mfc/reference/colestreamfile-class.md), `CAsyncMonikerFile` uses the [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) interface to access any data stream asynchronously, including loading files asynchronously from a URL. The files can be datapath properties of ActiveX controls.  
   
- Les monikers asynchrones sont utilisés principalement dans les applications compatibles avec Internet et les contrôles ActiveX pour fournir une interface utilisateur réactive pendant les transferts de fichiers. Un exemple de cela est l’utilisation de [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) pour fournir des propriétés asynchrones aux contrôles ActiveX. Le `CDataPathProperty` objet obtenez à plusieurs reprises un rappel pour indiquer la disponibilité de nouvelles données lors d’un processus d’échange propriété longue.  
+ Asynchronous monikers are used primarily in Internet-enabled applications and ActiveX controls to provide a responsive user-interface during file transfers. A prime example of this is the use of [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) to provide asynchronous properties for ActiveX controls. The `CDataPathProperty` object will repeatedly get a callback to indicate availability of new data during a lengthy property exchange process.  
   
- Pour plus d’informations sur l’utilisation de monikers asynchrones et les contrôles ActiveX dans les applications Internet, consultez les articles suivants :  
+ For more information about how to use asynchronous monikers and ActiveX controls in Internet applications, see the following articles:  
   
-- [Internet premières étapes : Les Monikers asynchrones](../../mfc/asynchronous-monikers-on-the-internet.md)  
+- [Internet First Steps: Asynchronous Monikers](../../mfc/asynchronous-monikers-on-the-internet.md)  
   
-- [Internet premières étapes : Les contrôles ActiveX](../../mfc/activex-controls-on-the-internet.md)  
+- [Internet First Steps: ActiveX Controls](../../mfc/activex-controls-on-the-internet.md)  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
@@ -120,145 +127,145 @@ class CAsyncMonikerFile : public CMonikerFile
   
  `CAsyncMonikerFile`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="casyncmonikerfile"></a>CAsyncMonikerFile::CAsyncMonikerFile  
- Construit un objet `CAsyncMonikerFile`.  
+##  <a name="casyncmonikerfile"></a>  CAsyncMonikerFile::CAsyncMonikerFile  
+ Constructs a `CAsyncMonikerFile` object.  
   
 ```  
 CAsyncMonikerFile();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Il ne crée pas le `IBindHost` interface. `IBindHost`est utilisé uniquement si vous fournissez dans le **ouvrir** fonction membre.  
+### <a name="remarks"></a>Remarks  
+ It does not create the `IBindHost` interface. `IBindHost` is used only if you provide it in the **Open** member function.  
   
- Pour obtenir une description de la `IBindHost` l’interface, consultez la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For a description of the `IBindHost` interface, see the Windows SDK.  
   
-##  <a name="close"></a>CAsyncMonikerFile::Close  
- Appelez cette fonction pour fermer et libérer toutes les ressources.  
+##  <a name="close"></a>  CAsyncMonikerFile::Close  
+ Call this function to close and release all resources.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Peut être appelée sur des fichiers non ouverts ou déjà fermés.  
+### <a name="remarks"></a>Remarks  
+ Can be called on unopened or already closed files.  
   
-##  <a name="createbindstatuscallback"></a>CAsyncMonikerFile::CreateBindStatusCallback  
- Crée un objet COM qui implémente `IBindStatusCallback`.  
+##  <a name="createbindstatuscallback"></a>  CAsyncMonikerFile::CreateBindStatusCallback  
+ Creates a COM object that implements `IBindStatusCallback`.  
   
 ```  
 virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pUnkControlling`  
- Un pointeur vers l’inconnu de contrôle (externe **IUnknown**) ou **NULL** si l’agrégation n’est pas utilisée.  
+ A pointer to the controlling unknown (the outer **IUnknown**) or **NULL** if aggregation is not being used.  
   
-### <a name="return-value"></a>Valeur de retour  
- Si `pUnkControlling` n’est pas **NULL**, la fonction retourne un pointeur à l’exception interne **IUnknown** sur un nouvel objet COM prenant en charge `IBindStatusCallback`. Si `pUnkControlling` est **NULL**, la fonction retourne un pointeur vers un **IUnknown** sur un nouvel objet COM prenant en charge `IBindStatusCallback`.  
+### <a name="return-value"></a>Return Value  
+ If `pUnkControlling` is not **NULL**, the function returns a pointer to the inner **IUnknown** on a new COM object supporting `IBindStatusCallback`. If `pUnkControlling` is **NULL**, the function returns a pointer to an **IUnknown** on a new COM object supporting `IBindStatusCallback`.  
   
-### <a name="remarks"></a>Remarques  
- `CAsyncMonikerFile`nécessite un objet COM qui implémente `IBindStatusCallback`. MFC implémente ce type d’objet, et il ne peut être agrégé. Vous pouvez substituer `CreateBindStatusCallback` pour retourner votre propre objet COM. Votre objet COM peut agréger l’implémentation MFC en appelant `CreateBindStatusCallback` avec inconnu de contrôle de votre objet COM. Les objets COM implémentés à l’aide de la `CCmdTarget` prise en charge COM peut récupérer le contrôle inconnu à l’aide de **CCmdTarget::GetControllingUnknown**.  
+### <a name="remarks"></a>Remarks  
+ `CAsyncMonikerFile` requires a COM object that implements `IBindStatusCallback`. MFC implements such an object, and it is aggregatable. You can override `CreateBindStatusCallback` to return your own COM object. Your COM object can aggregate MFC's implementation by calling `CreateBindStatusCallback` with the controlling unknown of your COM object. COM objects implemented using the `CCmdTarget` COM support can retrieve the controlling unknown using **CCmdTarget::GetControllingUnknown**.  
   
- Vous pouvez également votre objet COM peut déléguer à l’implémentation MFC en appelant **CreateBindStatusCallback (NULL)**.  
+ Alternately, your COM object can delegate to MFC's implementation by calling **CreateBindStatusCallback( NULL )**.  
   
- [CAsyncMonikerFile::Open](#open) appelle `CreateBindStatusCallback`.  
+ [CAsyncMonikerFile::Open](#open) calls `CreateBindStatusCallback`.  
   
- Pour plus d’informations sur les monikers asynchrones et liaison asynchrone, consultez le [IBindStatusCallback](http://msdn.microsoft.com/library/ie/ms775060) interface et [comment une liaison asynchrone et le travail de stockage](http://msdn.microsoft.com/library/windows/desktop/aa379152). Pour une présentation d’agrégation, consultez [agrégation](http://msdn.microsoft.com/library/windows/desktop/ms686558). Tous les trois rubriques se trouvent dans le [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information about asynchronous monikers and asynchronous binding, see the [IBindStatusCallback](http://msdn.microsoft.com/library/ie/ms775060) interface and [How Asynchronous Binding and Storage Work](http://msdn.microsoft.com/library/windows/desktop/aa379152). For a discussion of aggregation, see [Aggregation](http://msdn.microsoft.com/library/windows/desktop/ms686558). All three topics are in the Windows SDK.  
   
-##  <a name="getbindinfo"></a>CAsyncMonikerFile::GetBindInfo  
- Appelée à partir du client d’un moniker asynchrone pour indiquer le moniker asynchrone comment il souhaite lier.  
+##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo  
+ Called from the client of an asynchronous moniker to tell the asynchronous moniker how it wants to bind.  
   
 ```  
 virtual DWORD GetBindInfo() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Récupère les paramètres pour **IBindStatusCallBack**. Pour obtenir une description de la `IBindStatusCallback` l’interface, consultez la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ Retrieves the settings for **IBindStatusCallBack**. For a description of the `IBindStatusCallback` interface, see the Windows SDK.  
   
-### <a name="remarks"></a>Remarques  
- L’implémentation par défaut définit la liaison doit être asynchrone, utilisez un support de stockage (un flux de données) et à utiliser le modèle d’émission de données. Remplacez cette fonction si vous souhaitez modifier le comportement de la liaison.  
+### <a name="remarks"></a>Remarks  
+ The default implementation sets the binding to be asynchronous, to use a storage medium (a stream), and to use the data-push model. Override this function if you want to change the behavior of the binding.  
   
- L’une des raisons pour cela serait à la liaison avec le modèle d’extraction de données au lieu du modèle de push de données. Dans un modèle d’extraction de données, le client lecteurs de l’opération de liaison et le moniker fournit des données au client lorsqu’il est lu. Dans un modèle de push de données, le moniker de l’opération de liaison asynchrone les lecteurs et signale en permanence au client chaque fois que les nouvelles données sont disponibles.  
+ One reason for doing this would be to bind using the data-pull model instead of the data-push model. In a data-pull model, the client drives the bind operation, and the moniker only provides data to the client when it is read. In a data-push model, the moniker drives the asynchronous bind operation and continuously notifies the client whenever new data is available.  
   
-##  <a name="getbinding"></a>CAsyncMonikerFile::GetBinding  
- Appelez cette fonction pour récupérer un pointeur vers le transfert asynchrone la liaison.  
+##  <a name="getbinding"></a>  CAsyncMonikerFile::GetBinding  
+ Call this function to retrieve a pointer to the asynchronous transfer binding.  
   
 ```  
 IBinding* GetBinding() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le `IBinding` interface fournie au commencement de transfert asynchrone. Retourne **NULL** si pour une raison quelconque le transfert ne peut pas être exécutée de façon asynchrone.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `IBinding` interface provided when asynchronous transfer begins. Returns **NULL** if for any reason the transfer cannot be made asynchronously.  
   
-### <a name="remarks"></a>Notes  
- Cela permet de contrôler le transfert de données processus via le `IBinding` de l’interface, par exemple, avec **IBinding::Abort**, **IBinding::Pause**, et **IBinding::Resume**.  
+### <a name="remarks"></a>Remarks  
+ This allows you to control the data transfer process through the `IBinding` interface, for example, with **IBinding::Abort**, **IBinding::Pause**, and **IBinding::Resume**.  
   
- Pour obtenir une description de la `IBinding` l’interface, consultez la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For a description of the `IBinding` interface, see the Windows SDK.  
   
-##  <a name="getformatetc"></a>CAsyncMonikerFile::GetFormatEtc  
- Appelez cette fonction pour récupérer le format des données dans le flux de données.  
+##  <a name="getformatetc"></a>  CAsyncMonikerFile::GetFormatEtc  
+ Call this function to retrieve the format of the data in the stream.  
   
 ```  
 FORMATETC* GetFormatEtc() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers la structure Windows [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) pour le flux ouvert. Retourne **NULL** si le moniker n’a pas été lié, si elle n’est pas asynchrone, ou si l’opération asynchrone n’a pas commencé.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the Windows structure [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) for the currently opened stream. Returns **NULL** if the moniker has not been bound, if it is not asynchronous, or if the asynchronous operation has not begun.  
   
-##  <a name="getpriority"></a>CAsyncMonikerFile::GetPriority  
- Appelée à partir du client d’un moniker asynchrone au démarrage du processus de liaison recevoir la priorité donnée au thread pour l’opération de liaison.  
+##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority  
+ Called from the client of an asynchronous moniker as the binding process starts to receive the priority given to the thread for the binding operation.  
   
 ```  
 virtual LONG GetPriority() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- La priorité à laquelle le transfert asynchrone a lieu. Un des indicateurs de priorité de thread standard : **THREAD_PRIORITY_ABOVE_NORMAL**, **THREAD_PRIORITY_BELOW_NORMAL**, **THREAD_PRIORITY_HIGHEST**, **THREAD_PRIORITY_IDLE**, **niveau de priorité**, **THREAD_PRIORITY_NORMAL**, et **THREAD_PRIORITY_TIME_CRITICAL**. Consultez la fonction Windows [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) pour obtenir une description de ces valeurs.  
+### <a name="return-value"></a>Return Value  
+ The priority at which the asynchronous transfer will take place. One of the standard thread priority flags: **THREAD_PRIORITY_ABOVE_NORMAL**, **THREAD_PRIORITY_BELOW_NORMAL**, **THREAD_PRIORITY_HIGHEST**, **THREAD_PRIORITY_IDLE**, **THREAD_PRIORITY_LOWEST**, **THREAD_PRIORITY_NORMAL**, and **THREAD_PRIORITY_TIME_CRITICAL**. See the Windows function [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) for a description of these values.  
   
-### <a name="remarks"></a>Notes  
- `GetPriority`doit pas être appelée directement. **THREAD_PRIORITY_NORMAL** est retourné par l’implémentation par défaut.  
+### <a name="remarks"></a>Remarks  
+ `GetPriority` should not be called directly. **THREAD_PRIORITY_NORMAL** is returned by the default implementation.  
   
-##  <a name="ondataavailable"></a>CAsyncMonikerFile::OnDataAvailable  
- Un moniker asynchrone appelle `OnDataAvailable` pour fournir des données au client qu’il est disponible, lier des opérations pendant asynchrone.  
+##  <a name="ondataavailable"></a>  CAsyncMonikerFile::OnDataAvailable  
+ An asynchronous moniker calls `OnDataAvailable` to provide data to the client as it becomes available, during asynchronous bind operations.  
   
 ```  
 virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `dwSize`  
- La quantité cumulée (en octets) de données disponibles depuis le début de la liaison. Peut être égal à zéro, indiquant que la quantité de données ne s’applique pas à l’opération, ou qu’aucun montant spécifique est désormais disponible.  
+ The cumulative amount (in bytes) of data available since the beginning of the binding. Can be zero, indicating that the amount of data is not relevant to the operation, or that no specific amount became available.  
   
  *bscfFlag*  
- A **BSCF** valeur d’énumération. Peut être une ou plusieurs des valeurs suivantes :  
+ A **BSCF** enumeration value. Can be one or more of the following values:  
   
-- **BSCF_FIRSTDATANOTIFICATION** identifie le premier appel à `OnDataAvailable` pour une opération de liaison de donnée.  
+- **BSCF_FIRSTDATANOTIFICATION** Identifies the first call to `OnDataAvailable` for a given bind operation.  
   
-- **BSCF_INTERMEDIATEDATANOTIFICATION** identifie un appel intermédiaire à `OnDataAvailable` pour une opération de liaison.  
+- **BSCF_INTERMEDIATEDATANOTIFICATION** Identifies an intermediary call to `OnDataAvailable` for a bind operation.  
   
-- **BSCF_LASTDATANOTIFICATION** identifie le dernier appel à `OnDataAvailable` pour une opération de liaison.  
+- **BSCF_LASTDATANOTIFICATION** Identifies the last call to `OnDataAvailable` for a bind operation.  
   
-### <a name="remarks"></a>Remarques  
- L’implémentation par défaut de cette fonction est sans effet. Consultez l’exemple suivant pour un exemple d’implémentation.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function does nothing. See the following example for a sample implementation.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCWinInet n ° 5](../../mfc/codesnippet/cpp/casyncmonikerfile-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWinInet#5](../../mfc/codesnippet/cpp/casyncmonikerfile-class_1.cpp)]  
   
-##  <a name="onlowresource"></a>CAsyncMonikerFile::OnLowResource  
- Appelé par le moniker lorsque les ressources sont insuffisantes.  
+##  <a name="onlowresource"></a>  CAsyncMonikerFile::OnLowResource  
+ Called by the moniker when resources are low.  
   
 ```  
 virtual void OnLowResource();
 ```  
   
-### <a name="remarks"></a>Remarques  
- L’implémentation par défaut appelle `GetBinding( )-> Abort( )`.  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls `GetBinding( )-> Abort( )`.  
   
-##  <a name="onprogress"></a>CAsyncMonikerFile::OnProgress  
- Appelé par le moniker à plusieurs reprises pour indiquer la progression actuelle de cette opération de liaison, généralement à des intervalles raisonnables pendant une longue opération.  
+##  <a name="onprogress"></a>  CAsyncMonikerFile::OnProgress  
+ Called by the moniker repeatedly to indicate the current progress of this bind operation, typically at reasonable intervals during a lengthy operation.  
   
 ```  
 virtual void OnProgress(
@@ -268,80 +275,80 @@ virtual void OnProgress(
     LPCTSTR szStatusText);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `ulProgress`  
- Indique la progression actuelle de l’opération de liaison par rapport à la valeur maximale attendue indiquée dans `ulProgressMax`.  
+ Indicates the current progress of the bind operation relative to the expected maximum indicated in `ulProgressMax`.  
   
  `ulProgressMax`  
- Indique la valeur maximale attendue de `ulProgress` pour la durée des appels à `OnProgress` pour cette opération.  
+ Indicates the expected maximum value of `ulProgress` for the duration of calls to `OnProgress` for this operation.  
   
  `ulStatusCode`  
- Fournit des informations supplémentaires concernant la progression de l’opération de liaison. Les valeurs valides sont effectuées à partir de la `BINDSTATUS` énumération. Consultez la section Notes pour les valeurs possibles.  
+ Provides additional information regarding the progress of the bind operation. Valid values are taken from the `BINDSTATUS` enumeration. See Remarks for possible values.  
   
  `szStatusText`  
- Plus d’informations sur l’état d’avancement, selon la valeur de `ulStatusCode`. Consultez la section Notes pour les valeurs possibles.  
+ Information about the current progress, depending on the value of `ulStatusCode`. See Remarks for possible values.  
   
-### <a name="remarks"></a>Notes  
- Les valeurs possibles pour `ulStatusCode` (et `szStatusText` pour chaque valeur) sont :  
+### <a name="remarks"></a>Remarks  
+ Possible values for `ulStatusCode` (and the `szStatusText` for each value) are:  
   
  **BINDSTATUS_FINDINGRESOURCE**  
- L’opération de liaison est de trouver la ressource qui contient l’objet ou le stockage liée. Le `szStatusText` fournit le nom d’affichage de la ressource recherchée pour (par exemple, « www.microsoft.com »).  
+ The bind operation is finding the resource that holds the object or storage being bound to. The `szStatusText` provides the display name of the resource being searched for (for example, "www.microsoft.com").  
   
  **BINDSTATUS_CONNECTING**  
- L’opération de liaison se connecte à la ressource qui contient l’objet ou le stockage liée. Le `szStatusText` fournit le nom d’affichage de la ressource qui est connecté à (par exemple, une adresse IP).  
+ The bind operation is connecting to the resource that holds the object or storage being bound to. The `szStatusText` provides the display name of the resource being connected to (for example, an IP address).  
   
  **BINDSTATUS_SENDINGREQUEST**  
- Demande l’objet ou le stockage liée à l’opération de liaison. Le `szStatusText` fournit le nom complet de l’objet (par exemple, un nom de fichier).  
+ The bind operation is requesting the object or storage being bound to. The `szStatusText` provides the display name of the object (for example, a file name).  
   
  **BINDSTATUS_REDIRECTING**  
- L’opération de liaison a été redirigée vers un emplacement de données différents. Le `szStatusText` fournit le nom complet du nouvel emplacement de données.  
+ The bind operation has been redirected to a different data location. The `szStatusText` provides the display name of the new data location.  
   
  **BINDSTATUS_USINGCACHEDCOPY**  
- L’opération de liaison est la récupération de l’objet ou le stockage à partir d’une copie mise en cache. The `szStatusText` is **NULL**.  
+ The bind operation is retrieving the requested object or storage from a cached copy. The `szStatusText` is **NULL**.  
   
  **BINDSTATUS_BEGINDOWNLOADDATA**  
- L’opération de liaison a commencé à recevoir de l’objet ou le stockage liée. Le `szStatusText` fournit le nom complet de l’emplacement des données.  
+ The bind operation has begun receiving the object or storage being bound to. The `szStatusText` provides the display name of the data location.  
   
  **BINDSTATUS_DOWNLOADINGDATA**  
- L’opération de liaison continue de recevoir l’objet ou le stockage liée à. Le `szStatusText` fournit le nom complet de l’emplacement des données.  
+ The bind operation continues to receive the object or storage being bound to. The `szStatusText` provides the display name of the data location.  
   
  **BINDSTATUS_ENDDOWNLOADDATA**  
- L’opération de liaison a fini de recevoir l’objet ou le stockage liée. Le `szStatusText` fournit le nom complet de l’emplacement des données.  
+ The bind operation has finished receiving the object or storage being bound to. The `szStatusText` provides the display name of the data location.  
   
  **BINDSTATUS_CLASSIDAVAILABLE**  
- Une instance de l’objet lié aux est sur le point d’être créé. Le `szStatusText` fournit le CLSID du nouvel objet au format de chaîne, permettant au client d’annuler l’opération de liaison, si vous le souhaitez.  
+ An instance of the object being bound to is just about to be created. The `szStatusText` provides the CLSID of the new object in string format, allowing the client an opportunity to cancel the bind operation, if desired.  
   
-##  <a name="onstartbinding"></a>CAsyncMonikerFile::OnStartBinding  
- Remplacez cette fonction dans vos classes dérivées pour effectuer des actions lors de la liaison démarre.  
+##  <a name="onstartbinding"></a>  CAsyncMonikerFile::OnStartBinding  
+ Override this function in your derived classes to perform actions when binding is starting up.  
   
 ```  
 virtual void OnStartBinding();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Cette fonction est rappelée par le moniker. L'implémentation par défaut n'exécute aucune opération.  
+### <a name="remarks"></a>Remarks  
+ This function is called back by the moniker. The default implementation does nothing.  
   
-##  <a name="onstopbinding"></a>CAsyncMonikerFile::OnStopBinding  
- Appelé par le moniker à la fin de l’opération de liaison.  
+##  <a name="onstopbinding"></a>  CAsyncMonikerFile::OnStopBinding  
+ Called by the moniker at the end of the bind operation.  
   
 ```  
 virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `hresult`  
- Un `HRESULT` qui est l’erreur ou la valeur de l’avertissement.  
+ An `HRESULT` that is the error or warning value.  
   
  *szErrort*  
- Une chaîne de caractères décrivant l’erreur.  
+ A character string describing the error.  
   
-### <a name="remarks"></a>Remarques  
- Remplacez cette fonction pour effectuer des actions lorsque le transfert est arrêté. Par défaut, la fonction libère `IBinding`.  
+### <a name="remarks"></a>Remarks  
+ Override this function to perform actions when the transfer is stopped. By default, the function releases `IBinding`.  
   
- Pour obtenir une description de la `IBinding` l’interface, consultez la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For a description of the `IBinding` interface, see the Windows SDK.  
   
-##  <a name="open"></a>CAsyncMonikerFile::Open  
- Appelez cette fonction membre pour ouvrir un fichier de façon asynchrone.  
+##  <a name="open"></a>  CAsyncMonikerFile::Open  
+ Call this member function to open a file asynchronously.  
   
 ```  
 virtual BOOL Open(
@@ -383,42 +390,42 @@ virtual BOOL Open(
     CFileException* pError = NULL);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpszURL`  
- Pointeur vers le fichier à ouvrir en mode asynchrone. Le fichier peut être n’importe quel nom de fichier ou une URL valide.  
+ A pointer to file to be opened asynchronously. The file can be any valid URL or filename.  
   
  `pError`  
- Pointeur vers les exceptions de fichier. En cas d’erreur, elle est définie à la cause.  
+ A pointer to the file exceptions. In the event of an error, it will be set to the cause.  
   
  `pMoniker`  
- Un pointeur vers l’interface de monikers asynchrones `IMoniker`, un moniker précis qui est la combinaison du moniker du document, que vous pouvez extraire avec **IOleClientSite::GetMoniker (** *OLEWHICHMK_CONTAINER* **)**et un moniker créé à partir du nom de chemin d’accès. Le contrôle peut utiliser ce moniker à lier, mais ce n’est pas le moniker qu'est conseillé d’enregistrer le contrôle.  
+ A pointer to the asynchronous moniker interface `IMoniker`, a precise moniker that is the combination of the document's own moniker, which you can retrieve with **IOleClientSite::GetMoniker(** *OLEWHICHMK_CONTAINER* **)**, and a moniker created from the path name. The control can use this moniker to bind, but this is not the moniker the control should save.  
   
  *pBindHost*  
- Un pointeur vers le `IBindHost` interface permettant de créer le moniker à partir d’un chemin d’accès relatif potentiellement. Si l’hôte de la liaison n’est pas valide ou ne fournit pas d’un moniker, l’appel par défaut **ouvrir (** `lpszFileName` **,**`pError`**)**. Pour obtenir une description de la `IBindHost` l’interface, consultez la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ A pointer to the `IBindHost` interface that will be used to create the moniker from a potentially relative pathname. If the bind host is invalid or does not provide a moniker, the call defaults to **Open(** `lpszFileName`**,**`pError`**)**. For a description of the `IBindHost` interface, see the Windows SDK.  
   
  `pServiceProvider`  
- Un pointeur vers le `IServiceProvider` interface. Si le fournisseur de services n’est pas valide ou ne parvient pas à fournir le service pour `IBindHost`, l’appel par défaut est **ouvrir (** `lpszFileName` **,**`pError`**)**.  
+ A pointer to the `IServiceProvider` interface. If the service provider is invalid or fails to provide the service for `IBindHost`, the call defaults to **Open(** `lpszFileName`**,**`pError`**)**.  
   
  *pUnknown*  
- Un pointeur vers le **IUnknown** interface. Si `IServiceProvider` est trouvée, la fonction interroge pour `IBindHost`. Si le fournisseur de services n’est pas valide ou ne parvient pas à fournir le service pour `IBindHost`, l’appel par défaut est **ouvrir (** `lpszFileName` **,**`pError`**)**.  
+ A pointer to the **IUnknown** interface. If `IServiceProvider` is found, the function queries for `IBindHost`. If the service provider is invalid or fails to provide the service for `IBindHost`, the call defaults to **Open(** `lpszFileName`**,**`pError`**)**.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le fichier est ouvert avec succès ; Sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the file is opened successfully; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Cet appel lance le processus de liaison.  
+### <a name="remarks"></a>Remarks  
+ This call initiates the binding process.  
   
- Vous pouvez utiliser une URL ou un nom de fichier pour le `lpszURL` paramètre. Exemple :  
+ You can use a URL or a filename for the `lpszURL` parameter. For example:  
   
- [!code-cpp[NVC_MFCWinInet n° 6](../../mfc/codesnippet/cpp/casyncmonikerfile-class_2.cpp)]  
+ [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/casyncmonikerfile-class_2.cpp)]  
   
- - ou  
+ - or -  
   
- [!code-cpp[NVC_MFCWinInet #7](../../mfc/codesnippet/cpp/casyncmonikerfile-class_3.cpp)]  
+ [!code-cpp[NVC_MFCWinInet#7](../../mfc/codesnippet/cpp/casyncmonikerfile-class_3.cpp)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Classe de CMonikerFile](../../mfc/reference/cmonikerfile-class.md)   
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
- [Classe de CMonikerFile](../../mfc/reference/cmonikerfile-class.md)   
- [CDataPathProperty, classe](../../mfc/reference/cdatapathproperty-class.md)
+## <a name="see-also"></a>See Also  
+ [CMonikerFile Class](../../mfc/reference/cmonikerfile-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CMonikerFile Class](../../mfc/reference/cmonikerfile-class.md)   
+ [CDataPathProperty Class](../../mfc/reference/cdatapathproperty-class.md)
 

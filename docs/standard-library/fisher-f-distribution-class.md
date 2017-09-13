@@ -1,15 +1,14 @@
 ---
-title: fisher_f_distribution, classe | Microsoft Docs
+title: fisher_f_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- fisher_f_distribution
 - random/std::fisher_f_distribution
 - random/std::fisher_f_distribution::reset
 - random/std::fisher_f_distribution::m
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- fisher_f_distribution class
+- std::fisher_f_distribution [C++]
+- std::fisher_f_distribution [C++], reset
+- std::fisher_f_distribution [C++], m
+- std::fisher_f_distribution [C++], n
+- std::fisher_f_distribution [C++], param
+- std::fisher_f_distribution [C++], min
+- std::fisher_f_distribution [C++], max
+- std::fisher_f_distribution [C++], param_type
+- std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
 caps.latest.revision: 17
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 98a51009b6aaccf9e7799fa4bb124ec001ccca0f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 26616222a3290b426fbe84cbbf8df1ea09db7a48
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="fisherfdistribution-class"></a>fisher_f_distribution, classe
-Génère une distribution selon la loi de Fisher.  
+# <a name="fisherfdistribution-class"></a>fisher_f_distribution Class
+Generates a Fisher F distribution.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class RealType = double>
 class fisher_f_distribution  
@@ -85,35 +92,35 @@ public:
    result_type max() const;
    };  
 ```  
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
 *RealType*  
-Le type des résultats à virgule flottante est `double` par défaut. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-*URNG* Le moteur de génération de nombres aléatoires uniformes. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).  
+*URNG* The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Notes  
- La classe de modèle décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou du type `double` si aucun type n’est fourni, distribuées selon la loi de Fisher. Le tableau suivant contient des liens vers des articles sur différents membres.  
+## <a name="remarks"></a>Remarks  
+ The template class describes a distribution that produces values of a user-specified floating-point type, or type `double` if none is provided, distributed according to the Fisher's F-Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[fisher_f_distribution](#fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|  
 |`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type](#param_type)|  
   
- Les fonctions de propriété `m()` et `n()` retournent les valeurs des paramètres de distribution stockés `m` et `n`, respectivement.  
+ The property functions `m()` and `n()` return the values for the stored distribution parameters `m` and `n` respectively.  
   
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-La fonction membre `reset()` ignore toutes les valeurs mises en cache. Ainsi, le résultat de l’appel suivant à `operator()` ne dépend d’aucune valeur obtenue à partir du moteur avant l’appel.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-Les fonctions membres `operator()` retournent la valeur générée suivante d’après le moteur URNG, à partir du package de paramètres actuel ou spécifié.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
- Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).  
+ For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
- Pour plus d’informations sur la loi de Fisher, consultez l’article de Wolfram MathWorld [-Distribution](http://go.microsoft.com/fwlink/LinkId=400899).  
+ For detailed information about the F-distribution, see the Wolfram MathWorld article [F-Distribution](http://go.microsoft.com/fwlink/LinkId=400899).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -173,8 +180,8 @@ int main()
   
 ```  
   
-## <a name="output"></a>Sortie  
- Première exécution :  
+## <a name="output"></a>Output  
+ First run:  
   
 ```  
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): 1  
@@ -198,7 +205,7 @@ Distribution for 10 samples:
     10: 3.4320929653  
 ```  
   
- Deuxième exécution :  
+ Second run:  
   
 ```  
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): 1  
@@ -222,7 +229,7 @@ Distribution for 10 samples:
     10: 20829747131.7185860000  
 ```  
   
- Troisième exécution :  
+ Third run:  
   
 ```  
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): .1  
@@ -246,38 +253,38 @@ Distribution for 10 samples:
     10: 3.4363333954  
 ```  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
 ##  <a name="fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution  
- Construit la distribution.  
+ Constructs the distribution.  
   
 ```  
 explicit fisher_f_distribution(result_type m = 1.0, result_type n = 1.0);
 explicit fisher_f_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
 *m*  
- Paramètre de distribution `m`.  
+ The `m` distribution parameter.  
   
 *n*  
- Paramètre de distribution `n`.  
+ The `n` distribution parameter.  
   
 *parm*  
- Structure `param_type` utilisée pour construire la distribution.  
+ The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>Notes  
- **Condition préalable :** `0.0 < m` et `0.0 < n`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < m` and `0.0 < n`  
   
- Le premier constructeur construit un objet dont la valeur `m` stockée contient la valeur *m* et dont la valeur `n` stockée contient la valeur *n*.  
+ The first constructor constructs an object whose stored `m` value holds the value *m* and whose stored `n` value holds the value *n*.  
   
- Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.  
+ The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  fisher_f_distribution::param_type  
- Stocke les paramètres de la distribution.  
+ Stores the parameters of the distribution.  
   
 ```cpp  
 struct param_type {  
@@ -290,22 +297,22 @@ struct param_type {
    bool operator!=(const param_type& right) const;
    };  
 ```  
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
 *m*  
- Paramètre de distribution `m`.  
+ The `m` distribution parameter.  
   
 *n*  
- Paramètre de distribution `n`.  
+ The `n` distribution parameter.  
   
 *right*  
-Objet `param_type` à comparer à this.  
+The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>Notes  
- **Condition préalable :** `0.0 < m` et `0.0 < n`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < m` and `0.0 < n`  
   
- Cette structure peut être passée au constructeur de classe de la distribution au moment de l'instanciation, à la fonction membre `param()` pour définir les paramètres stockés d'une distribution existante et à `operator()` pour une utilisation à la place des paramètres stockés.  
+ This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

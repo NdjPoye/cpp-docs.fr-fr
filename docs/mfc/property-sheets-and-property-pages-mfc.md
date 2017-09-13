@@ -1,44 +1,62 @@
 ---
-title: "Pages et feuilles de propri&#233;t&#233;s (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CPropertyPage (classe), pages et feuilles de propriétés"
-  - "CPropertySheet (classe), pages et feuilles de propriétés"
-  - "boîtes de dialogue MFC, onglets"
-  - "pages de propriétés, feuilles de propriétés"
-  - "feuilles de propriétés, propert (pages)"
+title: Property Sheets and Property Pages (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], tabs
+- property pages [MFC], property sheets
+- CPropertyPage class [MFC], property sheets and pages
+- CPropertySheet class [MFC], property sheets and pages
+- property sheets, propert pages
 ms.assetid: de8fea12-6c35-4cef-8625-b8073a379446
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Pages et feuilles de propri&#233;t&#233;s (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d8cb91f7a222fd78e5ccb53ce118b42f6938e420
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Une MFC [boîte de dialogue](../mfc/dialog-boxes.md) peut prendre un aspect de « dialogue d'onglets » en incorporant des feuilles de propriétés et des pages de propriétés.  Appelé « feuille de propriétés » de MFC, ce type de la boîte de dialogue, semblable à de nombreuses boîtes de dialogue dans Microsoft Word, Excel, et Visual C\+\+, semble contenir une pile de pages avec onglets, comme une pile de dossiers de fichiers visibles de l'avant, ou un groupe de fenêtres empilées.  Les contrôles sur l'onglet plan sont visibles ; seul l'onglet intitulé est visible sous les onglets restaurés.  Les feuilles de propriétés sont particulièrement utiles pour gérer un grand nombre de propriétés ou des paramètres qui se situent de manière suffisamment ordonnée en plusieurs groupes.  En général, une feuille de propriétés peut simplifier une interface utilisateur en remplaçant plusieurs boîtes de dialogue distinctes.  
+---
+# <a name="property-sheets-and-property-pages-mfc"></a>Property Sheets and Property Pages (MFC)
+An MFC [dialog box](../mfc/dialog-boxes.md) can take on a "tab dialog" look by incorporating property sheets and property pages. Called a "property sheet" in MFC, this kind of dialog box, similar to many dialog boxes in Microsoft Word, Excel, and Visual C++, appears to contain a stack of tabbed sheets, much like a stack of file folders seen from front to back, or a group of cascaded windows. Controls on the front tab are visible; only the labeled tab is visible on the rear tabs. Property sheets are particularly useful for managing large numbers of properties or settings that fall fairly neatly into several groups. Typically, one property sheet can simplify a user interface by replacing several separate dialog boxes.  
   
- À compter de la version 4.0 de MFC, les feuilles de propriétés et les pages de propriétés sont implémentées à l'aide des contrôles communs provenant de la version 3.51 de Windows 95 et Windows NT et des versions ultérieures.  
+ As of MFC version 4.0, property sheets and property pages are implemented using the common controls that come with Windows 95 and Windows NT version 3.51 and later.  
   
- Les feuilles de propriétés sont exécutées avec des classes [CPropertySheet](../mfc/reference/cpropertysheet-class.md) et [CPropertyPage](../mfc/reference/cpropertypage-class.md) \(décrites dans *le guide de MFC*\).  `CPropertySheet` définit la boîte de dialogue totale, qui peut contenir plusieurs « pages » basées sur `CPropertyPage`.  
+ Property sheets are implemented with classes [CPropertySheet](../mfc/reference/cpropertysheet-class.md) and [CPropertyPage](../mfc/reference/cpropertypage-class.md) (described in the *MFC Reference*). `CPropertySheet` defines the overall dialog box, which can contain multiple "pages" based on `CPropertyPage`.  
   
- Pour plus d'informations sur la création et l'utilisation des feuilles de propriétés, consultez la rubrique [Feuilles de propriétés](../mfc/property-sheets-mfc.md).  
+ For information on creating and working with property sheets, see the topic [Property Sheets](../mfc/property-sheets-mfc.md).  
   
-## Voir aussi  
- [Boîtes de dialogue](../mfc/dialog-boxes.md)   
- [Cycle de vie d'une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)   
- [Pages et feuilles de propriétés dans MFC](../mfc/property-sheets-and-property-pages-in-mfc.md)   
- [Échange des données](../mfc/exchanging-data.md)   
- [Création d'une feuille de propriétés non modale](../mfc/creating-a-modeless-property-sheet.md)   
- [Gestion du bouton Appliquer](../mfc/handling-the-apply-button.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)   
+ [Property Sheets and Property Pages in MFC](../mfc/property-sheets-and-property-pages-in-mfc.md)   
+ [Exchanging Data](../mfc/exchanging-data.md)   
+ [Creating a Modeless Property Sheet](../mfc/creating-a-modeless-property-sheet.md)   
+ [Handling the Apply Button](../mfc/handling-the-apply-button.md)
+
+

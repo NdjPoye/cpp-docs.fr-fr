@@ -1,48 +1,67 @@
 ---
-title: "Fonctionnement des fen&#234;tres frame | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fenêtres frame, à propos des fenêtres frame"
-  - "fenêtres frame, tâches"
-  - "MFC, fenêtres frame"
+title: What Frame Windows Do | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], about frame widows
+- frame windows [MFC], tasks
+- MFC, frame windows
 ms.assetid: 1148a952-6786-4622-b5a8-68a2d7eae584
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Fonctionnement des fen&#234;tres frame
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c36c7c4390f548128ad31767bfd8288f079b5f40
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-En plus d'encadrer simplement une vue, les fenêtres de cadre sont responsables de nombreuses tâches impliquées dans coordination du cadre avec sa vue et l'application.  [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) et [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) héritent de [CFrameWnd](../mfc/reference/cframewnd-class.md), elles ont les fonctions `CFrameWnd` ainsi que les nouvelles fonctions qu'ils ajoutent.  Les exemples de fenêtres enfants contiennent des vues et contrôles, tels que les boutons et zones de liste, et barres de contrôle, y compris les barres d'outils, les barres d'état, et les barres de la boîte de dialogue.  
+---
+# <a name="what-frame-windows-do"></a>What Frame Windows Do
+Besides simply framing a view, frame windows are responsible for numerous tasks involved in coordinating the frame with its view and with the application. [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) and [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) inherit from [CFrameWnd](../mfc/reference/cframewnd-class.md), so they have `CFrameWnd` capabilities as well as new capabilities that they add. Examples of child windows include views, controls such as buttons and list boxes, and control bars, including toolbars, status bars, and dialog bars.  
   
- La fenêtre cadre est chargée de gérer la disposition de ses fenêtres enfants.  Dans le framework MFC, une fenêtre cadre positionne toutes les barres de contrôle, des vues, et d'autres fenêtres enfants à l'intérieur de la zone client.  
+ The frame window is responsible for managing the layout of its child windows. In the MFC framework, a frame window positions any control bars, views, and other child windows inside its client area.  
   
- La fenêtre cadre transfère également les commandes ses vues et peut répondre aux messages de notification des fenêtres de contrôle.  
+ The frame window also forwards commands to its views and can respond to notification messages from control windows.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Barres de contrôle \(comment elles s'insèrent dans la fenêtre cadre\)](../mfc/control-bars.md)  
+-   [Control bars (how they fit into the frame window)](../mfc/control-bars.md)  
   
--   [Gestion des menus, barres de contrôle, accélérateurs \(comment ils s'insèrent dans la fenêtre cadre\)](../mfc/managing-menus-control-bars-and-accelerators.md)  
+-   [Managing menus, control bars, and accelerators (how they fit into the frame window)](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
--   [Routage des commandes \(de la fenêtre cadre à sa vue et autres cibles de la commande\)](../mfc/command-routing.md)  
+-   [Command Routing (from the frame window to its view and other command targets)](../mfc/command-routing.md)  
   
--   [Architecture document\/vue](../mfc/document-view-architecture.md)  
+-   [Document /View Architecture](../mfc/document-view-architecture.md)  
   
 -   [Control bars](../mfc/control-bars.md)  
   
--   [des contrôles.](../mfc/controls-mfc.md)  
+-   [Controls](../mfc/controls-mfc.md)  
   
-## Voir aussi  
- [Fenêtres frame](../mfc/frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Frame Windows](../mfc/frame-windows.md)
+
+

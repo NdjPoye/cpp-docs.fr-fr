@@ -1,5 +1,5 @@
 ---
-title: is_copy_constructible, classe | Microsoft Docs
+title: is_copy_constructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_copy_constructible
 - type_traits/std::is_copy_constructible
 dev_langs:
 - C++
@@ -34,31 +33,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 1f98b67a4b9773a4c701dd89f4db404b4587c694
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 1c93a43f448ecd533f989b364eed5a74b56d3eba
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="iscopyconstructible-class"></a>is_copy_constructible, classe
-Teste si le type a un constructeur de copie.  
+# <a name="iscopyconstructible-class"></a>is_copy_constructible Class
+Tests if type has a copy constructor.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_copy_constructible;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Type à interroger.  
+ The type to query.  
   
-## <a name="remarks"></a>Notes  
- Une instance du prédicat de type a la valeur true si le type `Ty` est une classe qui a un constructeur de copie. Sinon, sa valeur est false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a class that has a copy constructor, otherwise it holds false.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -93,12 +92,12 @@ is_copy_constructible<Copyable> == true
 is_copy_constructible<NotCopyable > == false  
 ```  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

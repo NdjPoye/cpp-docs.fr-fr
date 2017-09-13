@@ -1,5 +1,5 @@
 ---
-title: "Noms du contrôle, Assistant contrôle ActiveX MFC | Documents Microsoft"
+title: Control Names, MFC ActiveX Control Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,73 +33,73 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 28ef331cb66ee184c4bc104fedddf69e9296367c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c027e7a3f24c33e4fa15ec666bdc2b7838502f76
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="control-names-mfc-activex-control-wizard"></a>Noms du contrôle, Assistant Contrôle ActiveX MFC
-Spécifier les noms de la classe de contrôle et de la classe de page de propriétés, les noms de type et les identificateurs de type pour votre contrôle. À l’exception de **nom court**, tous les autres champs peuvent être modifiés de manière indépendante. Si vous modifiez le texte de **nom court**, la modification est répercutée dans les noms de tous les autres champs de cette page. Ce comportement d’affectation de noms est conçu pour rendre tous les noms de facilement identifiables pour vous lorsque vous développez votre contrôle.  
+# <a name="control-names-mfc-activex-control-wizard"></a>Control Names, MFC ActiveX Control Wizard
+Specify the names for the control class and property page class, the type names, and type identifiers for your control. With the exception of **Short name**, all other fields can be edited independently. If you change the text for **Short name**, the change is reflected in the names of all other fields in this page. This naming behavior is designed to make all the names easily identifiable for you as you develop your control.  
   
- **Nom court**  
- Fournissez un nom abrégé pour le contrôle. Par défaut, ce nom est basé sur le nom de projet fourni dans le **nouveau projet** boîte de dialogue. Le nom que vous fournissez détermine les noms de classe, les noms de types et les identificateurs de type, sauf si vous modifiez ces champs individuellement.  
+ **Short name**  
+ Provide an abbreviated name for the control. By default, this name is based on the project name you provided in the **New Project** dialog box. The name you provide determines the class names, the type names, and the type identifiers, unless you change those fields individually.  
   
- **Nom de classe de contrôle**  
- Par défaut, le nom de la classe du contrôle est basé sur le nom court, avec `C` en tant que préfixe et `Ctrl` comme suffixe. Par exemple, si votre contrôle court de nom est `Price`, le nom de classe du contrôle est `CPriceCtrl`.  
+ **Control class name**  
+ By default, the name of the control class is based on the short name, with `C` as a prefix and `Ctrl` as a suffix. For example, if your control's short name is `Price`, the control class name is `CPriceCtrl`.  
   
- **Fichier .h de contrôle**  
- Par défaut, le nom du fichier d’en-tête est basé sur le nom court, avec `Ctrl` comme suffixe et `.h` en tant que l’extension de fichier. Par exemple, si votre contrôle court de nom est `Price`, le nom de fichier d’en-tête est `PriceCtrl.h`. Le nom de ce champ doit correspondre au nom de classe de contrôle.  
+ **Control .h file**  
+ By default, the name of the header file is based on the short name, with `Ctrl` as a suffix and `.h` as the file extension. For example, if your control's short name is `Price`, the header file name is `PriceCtrl.h`. The name in this field should match the control class name.  
   
- **Fichier .cpp du contrôle**  
- Par défaut, le nom du fichier d’en-tête est basé sur le nom court, avec `Ctrl` comme suffixe et `.cpp` en tant que l’extension de fichier. Par exemple, si votre contrôle court de nom est `Price`, le nom de fichier d’en-tête est `PriceCtrl.cpp`. Le nom de ce champ doit correspondre au nom de l’en-tête.  
+ **Control .cpp file**  
+ By default, the name of the header file is based on the short name, with `Ctrl` as a suffix and `.cpp` as the file extension. For example, if your control's short name is `Price`, the header file name is `PriceCtrl.cpp`. The name in this field should match the header name.  
   
- **Nom de type de contrôle**  
- Par défaut, le nom du type de contrôle est basé sur le nom court, suivi par `Control`. Par exemple, si votre contrôle court de nom est `Price`, le nom de type de classe de contrôle est `Price Control`. Si vous modifiez la valeur dans ce champ, assurez-vous que le nom indique un héritage.  
+ **Control type name**  
+ By default, the name of the control type is based on the short name, followed by `Control`. For example, if your control's short name is `Price`, the control class type name is `Price Control`. If you change the value in this field, make sure the name indicates an inheritance.  
   
- **ID de type de contrôle**  
- Définit l’ID de type de contrôle de la classe du contrôle. Le contrôle, cette chaîne est consignée dans le Registre lorsqu’il est ajouté à un projet. Applications conteneur utilisent cette chaîne pour créer une instance du contrôle.  
+ **Control type ID**  
+ Sets the control type ID of the control class. The control writes this string to the registry when it is added to a project. Container applications use this string to create an instance of the control.  
   
- Par défaut, l’ID de type de contrôle est basé sur le nom du projet, que vous avez spécifié dans le **nouveau projet** boîte de dialogue et le nom court. Ce nom doit correspondre au nom de type.  
+ By default, the control type ID is based on the project name, which you indicated in the **New Project** dialog box, and the short name. This name should match the type name.  
   
- Par défaut, l’ID de type de contrôle s’affiche comme suit :  
+ By default, the control type ID appears as follows:  
   
- *ProjectName.ShortName*CTRL.1.  
+ *ProjectName.ShortName*Ctrl.1  
   
- Si vous modifiez le nom court dans cette boîte de dialogue, l’ID de type de contrôle s’affiche comme suit :  
+ If you change the short name in this dialog box, the control type ID appears as follows:  
   
- *ProjectName.NewShortName*CTRL.1.  
+ *ProjectName.NewShortName*Ctrl.1  
   
- **Nom de la classe PropPage**  
- Par défaut, le nom de la classe de page de propriétés est basé sur le nom court, avec `C` en tant que préfixe et `PropPage` comme suffixe. Par exemple, si votre contrôle court de nom est `Price`, le nom de classe de page de propriétés est `CPricePropPage`. Ce nom doit correspondre au nom de la classe du contrôle, avec `PropPage`.  
+ **PropPage class name**  
+ By default, the name of the property page class is based on the short name, with `C` as a prefix and `PropPage` as a suffix. For example, if your control's short name is `Price`, the property page class name is `CPricePropPage`. This name should match the control class name, appended with `PropPage`.  
   
- **Fichier .h PropPage**  
- Par défaut, le nom du fichier d’en-tête de page propriété repose sur le nom court, avec comme un `PropPage` comme suffixe et `.h` en tant que l’extension de fichier. Par exemple, si votre contrôle court de nom est `Price`, nom de fichier en-tête de page de propriétés est `PricePropPage.h`. Ce nom doit correspondre au nom de la classe.  
+ **PropPage .h file**  
+ By default, the name of the property page header file is based on the short name, with as a `PropPage` as a suffix and `.h` as the file extension. For example, if your control's short name is `Price`, the property page header file name is `PricePropPage.h`. This name should match the class name.  
   
- **Fichier .cpp de la page de Prop.**  
- Par défaut, le nom du fichier de mise en œuvre de page de propriétés est basé sur le nom court, avec comme un `PropPage` comme suffixe et `.cpp` en tant que l’extension de fichier. Par exemple, si votre contrôle court de nom est `Price`, nom de fichier en-tête de page de propriétés est `PricePropPage.cpp`. Ce nom doit correspondre le nom de fichier d’en-tête.  
+ **PropPage .cpp file**  
+ By default, the name of the property page implementation file is based on the short name, with as a `PropPage` as a suffix and `.cpp` as the file extension. For example, if your control's short name is `Price`, the property page header file name is `PricePropPage.cpp`. This name should match the header file name.  
   
- **Nom du type de page de Prop.**  
- Par défaut, le nom de type de page de propriétés est basé sur le nom court, suivi par `Property Page`. Par exemple, si votre contrôle court de nom est `Price`, le nom de type de page de propriétés est `Price Property Page`. Si vous modifiez la valeur dans ce champ, assurez-vous que le nom indique la classe du contrôle.  
+ **PropPage type name**  
+ By default, the property page type name is based on the short name, followed by `Property Page`. For example, if your control's short name is `Price`, the property page type name is `Price Property Page`. If you change the value in this field, make sure the name indicates the control class.  
   
- **ID du type de page de Prop.**  
- Définit l’ID de la classe de page de propriétés. Le contrôle, cette chaîne est consignée dans le Registre lorsqu’il est appliqué à un projet. Une application conteneur utilise cette chaîne pour créer une instance de la page de propriétés du contrôle.  
+ **PropPage type ID**  
+ Sets the ID of the property page class. The control writes this string in the registry when it is applied to a project. A container application uses this string to create an instance of the control's property page.  
   
- Par défaut, l’ID de type de page de propriétés est basé sur le nom du projet, que vous avez spécifié dans le **nouveau projet** boîte de dialogue et le nom court. Ce nom doit correspondre au nom de type.  
+ By default, the property page type ID is based on the project name, which you indicated in the **New Project** dialog box, and the short name. This name should match the type name.  
   
- Par défaut, l’ID de type de page de propriétés apparaît comme suit :  
+ By default, the property page type ID appears as follows:  
   
- *ProjectName.ShortName*PropPage.1.  
+ *ProjectName.ShortName*PropPage.1  
   
- Si vous modifiez le nom court dans cette boîte de dialogue, l’ID de type de page de propriétés apparaît comme suit :  
+ If you change the short name in this dialog box, the property page type ID appears as follows:  
   
- *ProjectName.NewShortName*PropPage.1.  
+ *ProjectName.NewShortName*PropPage.1  
   
-## <a name="see-also"></a>Voir aussi  
- [Assistant contrôle ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)   
- [Paramètres d’application, Assistant contrôle ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
- [Paramètres du contrôle, Assistant contrôle ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)   
- [Types de fichiers créés pour les projets Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)   
+ [Application Settings, MFC ActiveX Control Wizard](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
+ [Control Settings, MFC ActiveX Control Wizard](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)   
+ [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md)
 
 

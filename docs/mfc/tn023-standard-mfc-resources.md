@@ -1,111 +1,130 @@
 ---
-title: "TN023&#160;: ressources MFC standard | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.resources"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ressources (MFC)"
-  - "ressources standard"
-  - "TN023"
+title: 'TN023: Standard MFC Resources | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.resources
+dev_langs:
+- C++
+helpviewer_keywords:
+- resources [MFC]
+- TN023
+- standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# TN023&#160;: ressources MFC standard
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7eb5865f96cb7308159a2035c051f470e8d8143c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cette remarque décrit les ressources standard prédites et requises par la bibliothèque MFC.  
+---
+# <a name="tn023-standard-mfc-resources"></a>TN023: Standard MFC Resources
+This note describes the standard resources provided with and needed by the MFC library.  
   
-## Ressources standard  
- MFC propose deux catégories de ressources prédéfinis que vous pouvez utiliser dans votre application : ressources image clipart et ressources standard en infrastructure.  
+## <a name="standard-resources"></a>Standard Resources  
+ MFC offers two categories of predefined resources that you can use in your application: clip-art resources and standard framework resources.  
   
- Les ressources image clipart sont des ressources supplémentaires que l'infrastructure ne dépend pas de fonction, mais que vous pouvez souhaiter ajouter à l'interface utilisateur de l'application.  Les ressources suivantes en image clipart figurent dans l'exemple de [CLIPART](../top/visual-cpp-samples.md)de MFC :  
+ Clip-art resources are additional resources that the framework does not depend on, but which you might want to add to your application's user interface. The following clip-art resources are contained in the MFC General sample [CLIPART](../visual-cpp-samples.md):  
   
--   Common.rc : Un seul fichier de ressources qui contient :  
+-   Common.rc: A single file of resources that contains:  
   
-    -   Une grande collection d'icônes qui représentent une série d'entreprise et des travaux mécanographiques.  
+    -   A large collection of icons that represent a variety of business and data-processing tasks.  
   
-    -   Plusieurs curseurs communs \(voir aussi l'Afxres.rc\).  
+    -   Several common cursors (see also Afxres.rc).  
   
-    -   Bitmap de la barre d'outils qui contient plusieurs boutons de la barre d'outils.  
+    -   A toolbar bitmap that contains several toolbar buttons.  
   
-    -   Les ressources Bitmap et icône utilisées par Commdlg.dll.  
+    -   The bitmap and icon resources that are used by Commdlg.dll.  
   
--   Indicate.rc : Contient des ressources de chaîne pour les indicateurs d'état du bouton de la barre d'état, tels que « CAP » pour la fonction upper\-case.  
+-   Indicate.rc: Contains string resources for the status-bar key-state indicators, such as "CAP" for Caps Lock.  
   
--   Prompts.rc : Contient des ressources de chaîne en menu\- ligne pour chaque commande prédéfinie, par exemple « créer un document » pour `ID_FILE_NEW`.  
+-   Prompts.rc: Contains menu-prompt string resources for each predefined command, such as "Create a new document" for `ID_FILE_NEW`.  
   
--   Commdlg.rc : Un fichier compatible Visual C\+\+ .rc qui contient les modèles de la boîte de dialogue standard COMMDLG.  
+-   Commdlg.rc: A Visual C++ compatible .rc file that contains the standard COMMDLG dialog templates.  
   
- Les ressources en infrastructure standard sont des ressources avec des ID AFX\- définis sur lesquelles l'infrastructure dépend pour des implémentations internes.  Vous devez fréquemment modifier ces ressources AFX\- définies.  Dans ce cas, vous devez suivre la procédure soulignée les grandes lignes plus loin dans cette rubrique.  
+ Standard framework resources are resources with AFX-defined IDs that the framework depends on for internal implementations. You will rarely need to change these AFX-defined resources. If you do, you should follow the procedure outlined later in this topic.  
   
- Les ressources suivantes en infrastructure sont contenues dans le répertoire MFC\\Include :  
+ The following framework resources are contained in the MFC\INCLUDE directory:  
   
--   Afxres.rc : Ressources courantes par l'infrastructure.  
+-   Afxres.rc: Common resources used by the framework.  
   
--   Afxprint.rc : Ressources spécifiques à imprimer.  
+-   Afxprint.rc: Resources specific to printing.  
   
--   Afxolecl.rc : Ressources spécifiques à OLE applications clientes.  
+-   Afxolecl.rc: Resources specific to OLE client applications.  
   
--   Afxolev.rc : Ressources spécifiques aux applications serveur OLE complètes.  
+-   Afxolev.rc: Resources specific to full OLE server applications.  
   
-## Utilisation des ressources image clipart  
+## <a name="using-clip-art-resources"></a>Using Clip-Art Resources  
   
-#### Pour utiliser une ressource binaire d'image clipart  
+#### <a name="to-use-a-clip-art-binary-resource"></a>To use a clip-art binary resource  
   
-1.  Ouvrez le fichier des ressources de votre application dans Visual C\+\+.  
+1.  Open your application's resource file in Visual C++.  
   
-2.  Ouvrez Common.rc.  Ce fichier contient toutes les ressources binaires en image clipart.  Cette opération peut prendre quelque temps car le fichier de Common.rc est compilé.  
+2.  Open Common.rc. This file contains all the binary clip-art resources. This may take some time because the Common.rc file is compiled.  
   
-3.  Maintenez la touche CTRL enfoncée pendant que vous faites glisser les ressources à utiliser dans Common.rc au fichier des ressources de votre application.  
+3.  Hold down CTRL while you drag the resources that you want to use from Common.rc to your application's resource file.  
   
- Pour utiliser d'autres ressources image clipart, suivez les mêmes étapes.  La seule différence est que vous ouvrirez le fichier approprié de .rc au lieu de Common.rc.  
+ To use other clip-art resources, follow the same steps. The only difference is that you will open the appropriate .rc file instead of Common.rc.  
   
 > [!NOTE]
->  Faites attention de ne pas déplacer involontairement des ressources en dehors de Common.rc définitivement.  Si vous maintenez la touche CTRL enfoncée pendant que vous faites glisser des ressources, vous allez créer une copie.  Si vous ne conservez pas la touche CTRL enfoncée pendant que vous faites glisser, les ressources seront déplacées.  Si vous êtes concerné que vous avez pu accidentellement apporté des modifications au fichier de Common.rc, cliquez sur « no » lorsque vous êtes invité à enregistrer ou non les modifications apportées à Common.rc.  
+>  Be careful not to unintentionally move resources out of Common.rc permanently. If you hold the CTRL key while you drag resources, you will create a copy. If you do not hold CTRL down while you drag, the resources will be moved. If you are concerned that you might have accidentally made changes to the Common.rc file, click "No" when you are asked whether to save the changes to Common.rc.  
   
 > [!NOTE]
->  Les fichiers de ressources de .rc ont une ressource particulière en `TEXTINCLUDE` qu'elles que vous empêchent de journalisation par erreur sur les fichiers standard .rc.  
+>  The .rc resource files have a special `TEXTINCLUDE` resource in them that will prevent you from accidentally saving on top of the standard .rc files.  
   
-### Personnaliser les ressources en infrastructure standard  
- Les ressources en infrastructure standard sont généralement incluses dans une application avec la commande de \#include dans le fichier de ressources d'une application.  AppWizard génère un fichier de ressources.  Ce fichier contient des ressources infrastructure de niveau adéquat, selon lesquelles les options d'AppWizard vous sélectionnez.  Vous pouvez examiner, ajouter ou supprimer les ressources sont incluses en modifiant les directives de compilation.  Pour cela, ouvrez le menu **Ressource** et sélectionnez **Définir les inclusions**.  Recherchez l'élément de modification « directives de compilation ».  Par exemple :  
+### <a name="customizing-standard-framework-resources"></a>Customizing Standard Framework Resources  
+ Standard framework resources are usually included in an application by using the #include command in an application's resource file. AppWizard will generate a resource file. This file includes the appropriate standard framework resources, depending on which AppWizard options you select. You can review, add, or remove which resources are included by changing the compile-time directives. To do this, open the **Resource** menu and select **Set Includes**. Look at the "Compile-Time Directives" edit item. For example:  
   
 ```  
 #include "afxres.rc"  
 #include "afxprint.rc"  
 ```  
   
- La plupart des cas courants de personnalisation les ressources standard en infrastructure est d'ajouter ou supprimer les inclusions supplémentaires pour l'impression, OLE client, et OLE prise en charge de serveur.  
+ The most common case of customizing standard framework resources is adding or removing additional includes for printing, OLE Client, and OLE Server support.  
   
- Dans certains cas exceptionnels vous pouvez personnaliser le contenu des ressources standard en infrastructure pour votre application spécifique, pas seulement pour ajouter et supprimer le fichier complet.  Les étapes suivantes montrent comment vous pouvez limiter les ressources qui sont incluses :  
+ In some rare cases you might want to customize the contents of the standard framework resources for your particular application, not just add and remove the entire file. The followings steps show how you can limit the resources that are included:  
   
-##### Pour personnaliser le contenu d'un fichier de ressources standard  
+##### <a name="to-customize-the-contents-of-a-standard-resource-file"></a>To customize the contents of a standard resource file  
   
-1.  Ouvrez le fichier de ressources dans Visual C\+\+.  
+1.  Open the resource file in Visual C++.  
   
-2.  Lors de l'utilisation de l'ensemble des ressources inclut la commande, supprimez `#include` du fichier standard .rc que vous souhaitez personnaliser.  Par exemple, pour personnaliser la barre d'outils d'aperçu avant impression, supprimez la ligne `#include "afxprint.rc"`.  
+2.  Using the Resource Set Includes command, remove the `#include` for the standard .rc file that you want to customize. For example, to customize the print-preview toolbar, remove the `#include "afxprint.rc"` line.  
   
-3.  Ouvrez les fichiers de ressources de niveau adéquat de MFC\\LES INCLUDE.  Après l'exemple précédent de cette rubrique, le fichier approprié est MFC incluent\\\\ Aafxprint.rc  
+3.  Open the appropriate standard resources files in MFC\INCLUDE. Following the example earlier in this topic, the appropriate file is MFC\Include\Aafxprint.rc  
   
-4.  Copiez toutes les ressources du fichier standard .rc à votre fichier de ressources d'application.  
+4.  Copy all the resources from the standard .rc file to your application resource file.  
   
-5.  Modifiez la copie des ressources standard dans votre fichier de ressources d'application.  
+5.  Modify the copy of the standard resources in your application resource file.  
   
 > [!NOTE]
->  Ne modifiez pas les ressources directement dans les fichiers standard .rc.  Ce qui modifie les ressources disponibles dans chaque application, et non dans celle que vous utilisez actuellement sur.  
+>  Do not modify the resources directly in the standard .rc files. Doing so will modify the resources available in every application, not just in the one you are currently working on.  
   
-## Voir aussi  
- [Notes techniques par numéro](../mfc/technical-notes-by-number.md)   
- [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

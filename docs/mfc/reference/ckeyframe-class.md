@@ -1,5 +1,5 @@
 ---
-title: Classe CKeyFrame | Documents Microsoft
+title: CKeyFrame Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CKeyFrame class
+- CKeyFrame [MFC], CKeyFrame
+- CKeyFrame [MFC], AddToStoryboard
+- CKeyFrame [MFC], AddToStoryboardAfterTransition
+- CKeyFrame [MFC], AddToStoryboardAtOffset
+- CKeyFrame [MFC], GetExistingKeyframe
+- CKeyFrame [MFC], GetOffset
+- CKeyFrame [MFC], GetTransition
+- CKeyFrame [MFC], m_offset
+- CKeyFrame [MFC], m_pExistingKeyFrame
+- CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
 caps.latest.revision: 18
 author: mikeblome
@@ -44,64 +53,64 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d8ecff2e36148fb114ee708712b6e8bd0fe558ed
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0f7fbeccae04eaeb02be295c45b33db20144f115
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ckeyframe-class"></a>CKeyFrame, classe
-Représente une image clé de l'animation.  
+# <a name="ckeyframe-class"></a>CKeyFrame Class
+Represents an animation keyframe.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CKeyFrame : public CBaseKeyFrame;  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CKeyFrame::CKeyFrame](#ckeyframe)|Surchargé. Construit une image clé qui dépend d’autres images clés.|  
+|[CKeyFrame::CKeyFrame](#ckeyframe)|Overloaded. Constructs a keyframe that depends on other keyframe.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CKeyFrame::AddToStoryboard](#addtostoryboard)|Ajoute une image clé à un storyboard. (Substitue [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|  
-|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Ajoute une image clé au storyboard après la transition.|  
-|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Ajoute une image clé au storyboard à l’offset.|  
-|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Retourne un pointeur vers une image clé que dépend cette image clé.|  
-|[CKeyFrame::GetOffset](#getoffset)|Retourne un offset à partir d’autres images clés.|  
-|[CKeyFrame::GetTransition](#gettransition)|Retourne un pointeur à une transition dont dépend cette image clé.|  
+|[CKeyFrame::AddToStoryboard](#addtostoryboard)|Adds a keyframe to a storyboard. (Overrides [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|  
+|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Adds a keyframe to storyboard after transition.|  
+|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Adds a keyframe to storyboard at offset.|  
+|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Returns a pointer to a keyframe this keyframe depends on.|  
+|[CKeyFrame::GetOffset](#getoffset)|Returns an offset from other keyframe.|  
+|[CKeyFrame::GetTransition](#gettransition)|Returns a pointer to a transition this keyframe depends on.|  
   
-### <a name="protected-data-members"></a>Membres de données protégés  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CKeyFrame::m_offset](#m_offset)|Spécifie le décalage de l’image clé à partir d’une image clé stockée dans m_pExistingKeyFrame.|  
-|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Stocke un pointeur vers une image clé existante. Cette image clé est ajoutée au storyboard avec m_offset à l’image clé existante.|  
-|[CKeyFrame::m_pTransition](#m_ptransition)|Stocke un pointeur vers la transition qui commence à cette image clé.|  
+|[CKeyFrame::m_offset](#m_offset)|Specifies offset of this keyframe from a keyframe stored in m_pExistingKeyFrame.|  
+|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Stores a pointer to an existing keframe. This keyframe is added to storyboard with m_offset to the existing keyframe.|  
+|[CKeyFrame::m_pTransition](#m_ptransition)|Stores a pointer to transtion that begins at this keyframe.|  
   
-## <a name="remarks"></a>Remarques  
- Cette classe implémente une image clé de l’animation. Une image clé représente un moment dans une table de montage séquentiel et peut servir à spécifier les heures de début et de fin des transitions. Une image clé peut être basée sur une autre image clé et avoir un décalage (en secondes) à partir de celui-ci, ou peut être basée sur une transition et représente un instant lorsque cette transition se termine.  
+## <a name="remarks"></a>Remarks  
+ This class implements an animation keyframe. A keyframe represents a moment in time within a storyboard and can be used to specify the start and end times of transitions. A keyframe may be based on other keyframe and have an offset (in seconds) from it, or may be based on a transition and represent a moment in time when this transition ends.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseKeyFrame](../../mfc/reference/cbasekeyframe-class.md)  
   
  [CKeyFrame](../../mfc/reference/ckeyframe-class.md)  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard  
- Ajoute une image clé à un storyboard.  
+##  <a name="addtostoryboard"></a>  CKeyFrame::AddToStoryboard  
+ Adds a keyframe to a storyboard.  
   
 ```  
 virtual BOOL AddToStoryboard(
@@ -109,21 +118,21 @@ virtual BOOL AddToStoryboard(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- Pointeur vers un storyboard.  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- Spécifie s’il faut ajouter des images clés ou de manière récursive la transition.  
+ Specifies whether to add keyframe or transition recursively.  
   
-### <a name="return-value"></a>Valeur de retour  
- TRUE si l’image clé a été ajoutée avec succès.  
+### <a name="return-value"></a>Return Value  
+ TRUE, if keyframe was added successfully.  
   
-### <a name="remarks"></a>Remarques  
- Cette méthode ajoute une image clé au storyboard. Si elle dépend d’autres images clés ou de transition et que bDeepAdd a la valeur TRUE, cette méthode tente d’ajouter de manière récursive.  
+### <a name="remarks"></a>Remarks  
+ This method adds a keyframe to storyboard. If it depends on other keyframe or transition and bDeepAdd is TRUE, this method tries to add them recursively.  
   
-##  <a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition  
- Ajoute une image clé au storyboard après la transition.  
+##  <a name="addtostoryboardaftertransition"></a>  CKeyFrame::AddToStoryboardAfterTransition  
+ Adds a keyframe to storyboard after transition.  
   
 ```  
 BOOL AddToStoryboardAfterTransition(
@@ -131,21 +140,21 @@ BOOL AddToStoryboardAfterTransition(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- Pointeur vers un storyboard.  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- Spécifie s’il faut ajouter une transition de manière récursive.  
+ Specifies whether to add a transition recursively.  
   
-### <a name="return-value"></a>Valeur de retour  
- TRUE si l’image clé a été ajoutée avec succès.  
+### <a name="return-value"></a>Return Value  
+ TRUE, if keyframe was added successfully.  
   
-### <a name="remarks"></a>Remarques  
- Cette fonction est appelée par l’infrastructure pour ajouter une image clé au storyboard après la transition.  
+### <a name="remarks"></a>Remarks  
+ This function is called by the framework to add a keyframe to storyboard after transition.  
   
-##  <a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset  
- Ajoute une image clé au storyboard à l’offset.  
+##  <a name="addtostoryboardatoffset"></a>  CKeyFrame::AddToStoryboardAtOffset  
+ Adds a keyframe to storyboard at offset.  
   
 ```  
 virtual BOOL AddToStoryboardAtOffset(
@@ -153,21 +162,21 @@ virtual BOOL AddToStoryboardAtOffset(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- Pointeur vers un storyboard.  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- Spécifie si cette image clé dépendante de façon récursive pour ajouter une image clé.  
+ Specifies whether to add a keyframe this keyframe depend on recursively.  
   
-### <a name="return-value"></a>Valeur de retour  
- TRUE si l’image clé a été ajoutée avec succès.  
+### <a name="return-value"></a>Return Value  
+ TRUE, if keyframe was added successfully.  
   
-### <a name="remarks"></a>Remarques  
- Cette fonction est appelée par l’infrastructure pour ajouter une image clé au storyboard à l’offset.  
+### <a name="remarks"></a>Remarks  
+ This function is called by the framework to add a keyframe to storyboard at offset.  
   
-##  <a name="ckeyframe"></a>CKeyFrame::CKeyFrame  
- Construit une image clé qui dépend d’une transition.  
+##  <a name="ckeyframe"></a>  CKeyFrame::CKeyFrame  
+ Constructs a keyframe that depends on a transition.  
   
 ```  
 CKeyFrame(CBaseTransition* pTransition);
@@ -178,79 +187,79 @@ CKeyFrame(
     UI_ANIMATION_SECONDS offset = 0.0);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pTransition`  
- Pointeur vers une transition.  
+ A pointer to a transition.  
   
  `pKeyframe`  
- Pointeur vers une image clé.  
+ A pointer to keyframe.  
   
  `offset`  
- Offset, en secondes, à partir de l’image clé spécifiée par pKeyframe.  
+ Offset, in seconds, from keyframe specified by pKeyframe.  
   
-### <a name="remarks"></a>Notes  
- Les images clés construites représentent un moment dans le temps dans un storyboard lors de la transition spécifiée prend fin.  
+### <a name="remarks"></a>Remarks  
+ The constructed keyframe will represent a moment in time within a storyboard when the specified transition ends.  
   
-##  <a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe  
- Retourne un pointeur vers une image clé que dépend cette image clé.  
+##  <a name="getexistingkeyframe"></a>  CKeyFrame::GetExistingKeyframe  
+ Returns a pointer to a keyframe this keyframe depends on.  
   
 ```  
 CBaseKeyFrame* GetExistingKeyframe();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur valide pour l’image clé, ou NULL si cette image clé ne dépend pas d’autres images clés.  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to keyframe, or NULL if this keyframe does not depend on other keyframe.  
   
-### <a name="remarks"></a>Remarques  
- Il s’agit d’un accesseur à une image clé que dépend cette image clé.  
+### <a name="remarks"></a>Remarks  
+ This is an accessor to a keyframe this keyframe depends on.  
   
-##  <a name="getoffset"></a>CKeyFrame::GetOffset  
- Retourne un offset à partir d’autres images clés.  
+##  <a name="getoffset"></a>  CKeyFrame::GetOffset  
+ Returns an offset from other keyframe.  
   
 ```  
 UI_ANIMATION_SECONDS GetOffset();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Offset en secondes à partir d’autres images clés.  
+### <a name="return-value"></a>Return Value  
+ An offset in seconds from other keyframe.  
   
-### <a name="remarks"></a>Remarques  
- Cette méthode doit être appelée pour déterminer un offset en secondes à partir d’autres images clés.  
+### <a name="remarks"></a>Remarks  
+ This method should be called to determine an offset in seconds from other keyframe.  
   
-##  <a name="gettransition"></a>CKeyFrame::GetTransition  
- Retourne un pointeur à une transition dont dépend cette image clé.  
+##  <a name="gettransition"></a>  CKeyFrame::GetTransition  
+ Returns a pointer to a transition this keyframe depends on.  
   
 ```  
 CBaseTransition* GetTransition();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur valide vers la transition, ou NULL si cette image clé ne dépend pas de transition.  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to transition, or NULL if this keyframe does not depend on transition.  
   
-### <a name="remarks"></a>Notes  
- Il s’agit d’un accesseur à une transition dont dépend cette image clé.  
+### <a name="remarks"></a>Remarks  
+ This is an accessor to a transition this keyframe depends on.  
   
-##  <a name="m_offset"></a>CKeyFrame::m_offset  
- Spécifie le décalage de l’image clé à partir d’une image clé stockée dans m_pExistingKeyFrame.  
+##  <a name="m_offset"></a>  CKeyFrame::m_offset  
+ Specifies offset of this keyframe from a keyframe stored in m_pExistingKeyFrame.  
   
 ```  
 UI_ANIMATION_SECONDS m_offset;  
 ```  
   
-##  <a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame  
- Stocke un pointeur vers une image clé existante. Cette image clé est ajoutée au storyboard avec m_offset à l’image clé existante.  
+##  <a name="m_pexistingkeyframe"></a>  CKeyFrame::m_pExistingKeyFrame  
+ Stores a pointer to an existing keframe. This keyframe is added to storyboard with m_offset to the existing keyframe.  
   
 ```  
 CBaseKeyFrame* m_pExistingKeyFrame;  
 ```  
   
-##  <a name="m_ptransition"></a>CKeyFrame::m_pTransition  
- Stocke un pointeur vers la transition qui commence à cette image clé.  
+##  <a name="m_ptransition"></a>  CKeyFrame::m_pTransition  
+ Stores a pointer to transtion that begins at this keyframe.  
   
 ```  
 CBaseTransition* m_pTransition;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [Classes](../../mfc/reference/mfc-classes.md)
 

@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ae857750efe2d1f80e703e0c44f9646f7bfd3733
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 39d42e2a74e2ef5000367dfbc5cd789011837434
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
-Définit les classes de modèle de conteneur [unordered_multiset](../standard-library/unordered-multiset-class.md) et [unordered_set](../standard-library/unordered-set-class.md), et leurs modèles de prise en charge.  
+Defines the container template classes [unordered_multiset](../standard-library/unordered-multiset-class.md) and [unordered_set](../standard-library/unordered-set-class.md) and their supporting templates.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <unordered_set>  
@@ -53,21 +53,21 @@ Définit les classes de modèle de conteneur [unordered_multiset](../standard-li
   
 |||  
 |-|-|  
-|[unordered_multiset, classe](../standard-library/unordered-multiset-class.md)|Stocke une table de hachage de clés.|  
-|[unordered_set, classe](../standard-library/unordered-set-class.md)|Stocke une table de hachage de clés.|  
+|[unordered_multiset Class](../standard-library/unordered-multiset-class.md)|Stores hash table of keys.|  
+|[unordered_set Class](../standard-library/unordered-set-class.md)|Stores hash table of keys.|  
   
-### <a name="functions"></a>Fonctions  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Teste si l’objet unordered_multiset situé à gauche de l’opérateur n’est pas égal à l’objet unordered_multiset situé à droite.|  
-|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Teste si l’objet unordered_multiset situé à gauche de l’opérateur est égal à l’objet unordered_multiset situé à droite.|  
-|[swap](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Échange deux objets multiset.|  
-|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Teste si l’objet unordered_set situé à gauche de l’opérateur n’est pas égal à l’objet unordered_set situé à droite.|  
-|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Teste si l’objet unordered_set situé à gauche de l’opérateur est égal à l’objet unordered_set situé à droite.|  
-|[swap](../standard-library/unordered-set-functions.md#swap)|Échange deux objets set.|  
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Tests if the unordered_multiset object on the left side of the operator is not equal to the unordered_multiset object on the right side.|  
+|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Tests if the unordered_multiset object on the left side of the operator is equal to the unordered_multiset object on the right side.|  
+|[swap](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Swaps two multisets.|  
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Tests if the unordered_set object on the left side of the operator is not equal to the unordered_set object on the right side.|  
+|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Tests if the unordered_set object on the left side of the operator is equal to the unordered_set object on the right side.|  
+|[swap](../standard-library/unordered-set-functions.md#swap)|Swaps two sets.|  
   
-## <a name="see-also"></a>Voir aussi  
- [unordered_map, classe](../standard-library/unordered-map-class.md)   
- [unordered_multimap, classe](../standard-library/unordered-multimap-class.md)
+## <a name="see-also"></a>See Also  
+ [unordered_map Class](../standard-library/unordered-map-class.md)   
+ [unordered_multimap Class](../standard-library/unordered-multimap-class.md)
 

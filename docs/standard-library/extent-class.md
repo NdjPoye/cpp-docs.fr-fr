@@ -1,5 +1,5 @@
 ---
-title: extent, classe | Microsoft Docs
+title: extent Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- extent
 - type_traits/std::extent
 dev_langs:
 - C++
@@ -35,34 +34,34 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 23cf8230cd5b8adb7975ec21a249d9efc4d66c71
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2c7650f705b47075bd03fe5b3d04c749441c28a0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="extent-class"></a>extent, classe
-Obtient une dimension de tableau.  
+# <a name="extent-class"></a>extent Class
+Gets an array dimension.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty, unsigned I = 0>  
 struct extent;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Type à interroger.  
+ The type to query.  
   
  `I`  
- Tableau lié à interroger.  
+ The array bound to query.  
   
-## <a name="remarks"></a>Notes  
- Si `Ty` est un type tableau qui possède au moins `I` dimensions, la requête de type contient le nombre d'éléments dans la dimension spécifié par `I`. Si `Ty` n'est pas un type tableau ou si son rang est inférieur à `I`, ou si `I` est égal à zéro et que `Ty` est de type « tableau ayant des limites d'index inconnues de `U` », la requête de type contient la valeur 0.  
+## <a name="remarks"></a>Remarks  
+ If `Ty` is an array type that has at least `I` dimensions, the type query holds the number of elements in the dimension specified by `I`. If `Ty` is not an array type or its rank is less than `I`, or if `I` is zero and `Ty` is of type "array of unknown bound of `U`", the type query holds the value 0.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__extent.cpp   
@@ -87,13 +86,13 @@ extent 0 == 5
 extent 1 == 10  
 ```  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_all_extents, classe](../standard-library/remove-all-extents-class.md)   
- [remove_extent, classe](../standard-library/remove-extent-class.md)
+ [remove_all_extents Class](../standard-library/remove-all-extents-class.md)   
+ [remove_extent Class](../standard-library/remove-extent-class.md)
 

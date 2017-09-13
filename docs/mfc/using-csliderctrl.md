@@ -1,46 +1,64 @@
 ---
-title: "Utilisation de CSliderCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSliderCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSliderCtrl (classe), utilisation"
-  - "contrôles Slider, utilisation"
+title: Using CSliderCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSliderCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSliderCtrl class [MFC], using
+- slider controls [MFC], using
 ms.assetid: 242c7bcd-126e-4b9b-8f76-8082ad06fe73
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Utilisation de CSliderCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a942ef48c8916866d647e7b358ffa1a6b7e4829f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-La classe d' [CSliderCtrl](../mfc/reference/csliderctrl-class.md) représente un contrôle de curseur, également appelé trackbar.  Un « contrôle de curseur » est une fenêtre qui contient un curseur et des graduations facultatives.  Lorsque l'utilisateur déplace le curseur, à l'aide de la souris ou des touches de direction, le contôle du curseur envoie des messages de notification pour indiquer la modification.  
+---
+# <a name="using-csliderctrl"></a>Using CSliderCtrl
+The [CSliderCtrl](../mfc/reference/csliderctrl-class.md) class represents a slider control, which is also called a trackbar. A "slider control" is a window that contains a slider and optional tick marks. When the user moves the slider, using either the mouse or the arrow keys, the slider control sends notification messages to indicate the change.  
   
- Les contrôles de curseur sont utiles lorsque vous souhaitez que l'utilisateur sélectionne une valeur discrète ou un ensemble de valeurs consécutives dans une gamme.  Par exemple, vous pouvez utiliser un contôle de curseur pour permettre à l'utilisateur de définir la fréquence de répétition du clavier en déplaçant le curseur à une graduation donnée.  
+ Slider controls are useful when you want the user to select a discrete value or a set of consecutive values in a range. For example, you might use a slider control to allow the user to set the repeat rate of the keyboard by moving the slider to a given tick mark.  
   
- Le curseur dans un contôle de curseur se déplace par incrémentations que vous spécifiez lorsque vous le créez.  Par exemple, si vous spécifiez que le contôle de curseur doit avoir une plage de cinq, le curseur ne peut occuper que six positions : une position à gauche du contrôle de curseur et une position pour chaque incrément de la plage.  En général, chacune de ces positions est identifiée par une graduation.  
+ The slider in a slider control moves in increments that you specify when you create it. For example, if you specify that the slider control should have a range of five, the slider can only occupy six positions: a position at the left side of the slider control and one position for each increment in the range. Typically, each of these positions is identified by a tick mark.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Utilisation de Contrôles de Curseur](../mfc/using-slider-controls.md)  
+-   [Using Slider Controls](../mfc/using-slider-controls.md)  
   
--   [Styles de Contrôles de Curseur](../mfc/slider-control-styles.md)  
+-   [Slider Control Styles](../mfc/slider-control-styles.md)  
   
--   [Fonctions Membres de Contrôles de Curseur](../mfc/slider-control-member-functions.md)  
+-   [Slider Control Member Functions](../mfc/slider-control-member-functions.md)  
   
--   [Messages de notification du Curseur](../mfc/slider-notification-messages.md)  
+-   [Slider Notification Messages](../mfc/slider-notification-messages.md)  
   
-## Voir aussi  
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

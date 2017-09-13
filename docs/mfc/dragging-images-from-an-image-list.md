@@ -1,44 +1,63 @@
 ---
-title: "Faire glisser des images &#224; partir d&#39;une liste d&#39;images | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList (classe), déplacer des images de"
-  - "déplacer des images à partir de listes d'images"
-  - "listes d'images (C++), déplacer des images de"
-  - "images (C++), déplacer à partir de listes d'images"
+title: Dragging Images from an Image List | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImageList class [MFC], dragging images from
+- dragging images from image lists [MFC]
+- image lists [MFC], dragging images from
+- images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Faire glisser des images &#224; partir d&#39;une liste d&#39;images
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 15c483b33b5f2f3fa127b93343797747de093351
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-[CImageList](../mfc/reference/cimagelist-class.md) inclut des fonctions pour faire glisser une image sur l'écran.  Les fonctions de glissage déplace une image sans à coups, en couleurs, sans aucun clignotement du curseur.  Les images masquées et démasquées peuvent être glissées.  
+---
+# <a name="dragging-images-from-an-image-list"></a>Dragging Images from an Image List
+[CImageList](../mfc/reference/cimagelist-class.md) includes functions for dragging an image on the screen. The dragging functions move an image smoothly, in color, and without any flashing of the cursor. Both masked and unmasked images can be dragged.  
   
- La fonction membre [BeginDrag](../Topic/CImageList::BeginDrag.md) démarre une opération glisser\-déplacer.  Les paramètres incluent l'index de l'image à faire glisser et l'emplacement de la zone réactive dans l'image.  La zone réactive est un seul pixel que les fonctions de glissage identifient comme l'emplacement exact de l'image à l'écran .  Généralement, une application définit la zone réactive afin qu'elle coïncide avec la zone réactive du curseur de la souris.  La fonction membre [DragMove](../Topic/CImageList::DragMove.md) déplace l'image vers un nouvel emplacement.  
+ The [BeginDrag](../mfc/reference/cimagelist-class.md#begindrag) member function begins a drag operation. The parameters include the index of the image to drag and the location of the hot spot within the image. The hot spot is a single pixel that the dragging functions recognize as the exact screen location of the image. Typically, an application sets the hot spot so that it coincides with the hot spot of the mouse cursor. The [DragMove](../mfc/reference/cimagelist-class.md#dragmove) member function moves the image to a new location.  
   
- La fonction membre [DragEnter](../Topic/CImageList::DragEnter.md) définit la position initiale de l'image glissée dans la fenêtre et dessine l'image à la place.  Les paramètres incluent un pointeur vers la fenêtre dans laquelle ajouter l'image et un point qui spécifie les détails de la position initiale dans la fenêtre.  Les coordonnées sont exprimées par rapport au coin supérieur gauche de la fenêtre, pas de la zone cliente.  Il en va de même pour tous les fonctions de glissage d'image qui prennent des coordonnées en paramètres.  Cela signifie que vous devez compenser la largeur des éléments de la fenêtre, telles que la bordure, la barre de titre, et la barre de menus, lors de la spécification des coordonnées.  Si vous spécifiez un handle de fenêtre **NULL** en appelant `DragEnter`, les fonctions de glissages dessinent l'image dans le contexte de périphérique associé à la fenêtre de bureau, et les coordonnées sont relatives au coin supérieur gauche de l'écran.  
+ The [DragEnter](../mfc/reference/cimagelist-class.md#dragenter) member function sets the initial position of the drag image within a window and draws the image at the position. The parameters include a pointer to the window in which to draw the image and a point that specifies the coordinates of the initial position within the window. The coordinates are relative to the window's upper-left corner, not the client area. The same is true for all of the image-dragging functions that take coordinates as parameters. This means you must compensate for the widths of window elements, such as the border, title bar, and menu bar, when specifying the coordinates. If you specify a **NULL** window handle when calling `DragEnter`, the dragging functions draw the image in the device context associated with the desktop window, and the coordinates are relative to the upper-left corner of the screen.  
   
- `DragEnter` verrouille toutes les mises à jour dans la fenêtre données pendant l'opération de glissement.  Si vous devez effectuer un dessin au cours d'une opération glisser\-déplacer, telles que la mise en surbrillance de la cible d'une opération de glisser\-déplacer, vous pouvez masquer temporairement l'image à l'aide de la fonction membre [DragLeave](../Topic/CImageList::DragLeave.md).  Vous pouvez également utiliser la fonction membre [DragShowNoLock](../Topic/CImageList::DragShowNolock.md).  
+ `DragEnter` locks all other updates to the given window during the drag operation. If you need to do any drawing during a drag operation, such as highlighting the target of a drag-and-drop operation, you can temporarily hide the dragged image by using the [DragLeave](../mfc/reference/cimagelist-class.md#dragleave) member function. You can also use the [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) member function.  
   
- Appelez [EndDrag](../Topic/CImageList::EndDrag.md) lorsque vous avez terminé de faire glisser l'image.  
+ Call [EndDrag](../mfc/reference/cimagelist-class.md#enddrag) when you're done dragging the image.  
   
- La fonction membre [SetDragCursorImage](../Topic/CImageList::SetDragCursorImage.md) crée une nouvelle image glissée en combinant l'image donnée \(généralement une image de curseur de la souris\) avec l'image glissée actuelle.  Comme les fonctions de glissage utilisent la nouvelle image lors d'une opération glisser\-déplacer, vous devez utiliser la fonction [ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396) Windows pour masquer le curseur de la souris réel après avoir appelé `SetDragCursorImage`.  Sinon, le système peut sembler être composée de deux curseurs de souris pour la durée de l'opération glisser\-déplacer.  
+ The [SetDragCursorImage](../mfc/reference/cimagelist-class.md#setdragcursorimage) member function creates a new drag image by combining the given image (typically a mouse cursor image) with the current drag image. Because the dragging functions use the new image during a drag operation, you should use the Windows [ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396) function to hide the actual mouse cursor after calling `SetDragCursorImage`. Otherwise, the system may appear to have two mouse cursors for the duration of the drag operation.  
   
- Lorsqu'une application appelle `BeginDrag`, le système crée une liste d'images temporaire interne et copie l'image glissée spécifiée à la liste interne.  Vous pouvez récupérer un pointeur vers la liste temporaire d'image glissée à l'aide de la fonction membre [GetDragImage](../Topic/CImageList::GetDragImage.md).  La fonction récupère également l'emplacement actuel de glisser\-déplacer et le décalage de l'image glissée par rapport à la position de glisser\-déplacer.  
+ When an application calls `BeginDrag`, the system creates a temporary, internal image list and copies the specified drag image to the internal list. You can retrieve a pointer to the temporary drag image list by using the [GetDragImage](../mfc/reference/cimagelist-class.md#getdragimage) member function. The function also retrieves the current drag position and the offset of the drag image relative to the drag position.  
   
-## Voir aussi  
- [Utilisation de CImageList](../mfc/using-cimagelist.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

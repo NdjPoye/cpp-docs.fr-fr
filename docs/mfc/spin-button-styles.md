@@ -1,49 +1,68 @@
 ---
-title: "Styles de bouton toupie | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSpinButtonCtrl (classe), styles"
-  - "contrôle toupie, styles"
-  - "styles, CSpinButtonCtrl"
-  - "styles, contrôle toupie"
+title: Spin Button Styles | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- styles [MFC], CSpinButtonCtrl
+- CSpinButtonCtrl class [MFC], styles
+- styles [MFC], spin button control
+- spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Styles de bouton toupie
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f13ad271270af4c5eb5bcc12d62c3397d8edb8fb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Plusieurs paramètres pour un bouton de spin \([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)\) sont contrôlés par les styles.  Vous pouvez définir les styles suivants dans la fenêtre **Propriétés** dans l'éditeur de boîtes de dialogue.  
+---
+# <a name="spin-button-styles"></a>Spin Button Styles
+Many of the settings for a spin button ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) are controlled by styles. You can set the following styles using the **Properties** window in the dialog editor.  
   
--   **Orientation** Verticale ou horizontale.  Contrôle l'orientation des boutons de direction.  Associé au style `UDS_HORZ`.  
+-   **Orientation** Either Vertical or Horizontal. Controls the orientation of the arrow buttons. Associated with the `UDS_HORZ` style.  
   
--   **Alignement** détaché, gauche, ou droite.  Contrôle l'emplacement du bouton de spin.  Positionne à gauche et droite le bouton de spin en regard de la fenêtre associée.  La largeur de la fenêtre associée est diminuée pour s'adapter au bouton de spin.  Associé aux styles `UDS_ALIGNLEFT` et `UDS_ALIGNRIGHT`.  
+-   **Alignment** One of Unattached, Left, or Right. Controls the location of the spin button. Left and Right position the spin button next to the buddy window. The width of the buddy window is decreased to accommodate the spin button. Associated with the `UDS_ALIGNLEFT` and `UDS_ALIGNRIGHT` styles.  
   
--   **Auto Buddy** sélectionne automatiquement la fenêtre précédente dans l'ordre de plan dans une fenêtre associé au bouton de spin.  Dans un modèle de boîte de dialogue, il s'agit du contrôle qui précède la toupie dans l'ordre de tabulation.  Associé au style `UDS_AUTOBUDDY`.  
+-   **Auto Buddy** Automatically selects the previous window in Z-order as buddy window to the spin button. In a dialog template, this is the control which precedes the spin button in the tab order. Associated with the `UDS_AUTOBUDDY` style.  
   
--   **Set Buddy Integer** Provoque l'incrémentation et la décrémentation par le contrôle de spin de la légende de la fenêtre associé lorsque la position actuelle change.  Associé au style `UDS_SETBUDDYINT`.  
+-   **Set Buddy Integer** Causes the spin control to increment and decrement the caption of the buddy window as the current position changes. Associated with the `UDS_SETBUDDYINT` style.  
   
--   **No Thousands** n'insère pas le séparateur de milliers dans la valeur de la légende de la fenêtre associée.  Associé au style `UDS_NOTHOUSANDS`.  
+-   **No Thousands** Does not insert the thousands separator in the value in the caption of the buddy window. Associated with the `UDS_NOTHOUSANDS` style.  
   
     > [!NOTE]
-    >  Définissez ce style si vous souhaitez utiliser l'échange de données de boîtes de dialogue \(DDX\) pour obtenir la valeur entière du contrôle associé.  `DDX_Text` n'accepte pas les séparateurs de milliers incorporés.  
+    >  Set this style if you want to use dialog data exchange (DDX) to get the integer value from the buddy control. `DDX_Text` does not accept embedded thousand separators.  
   
--   **Retour à la ligne** Provoque que la position de la forme « encapsule » quand une valeur est incrémentée ou décrémentée au delà de la plage du contrôle.  Associé au style `UDS_WRAP`.  
+-   **Wrap** Causes the position to "wrap" as the value is incremented or decremented beyond the range of the control. Associated with the `UDS_WRAP` style.  
   
--   **Arrow Keys** Provoque que le bouton de spin incrémente ou décrémente la position lorsque les touches de direction BAS et HAUT sont appuyées.  Associé au style `UDS_ARROWKEYS`.  
+-   **Arrow Keys** Causes the spin button to increment or decrement the position when the UP ARROW and DOWN ARROW keys are pressed. Associated with the `UDS_ARROWKEYS` style.  
   
-## Voir aussi  
- [Utilisation de CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

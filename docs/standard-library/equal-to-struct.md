@@ -1,15 +1,14 @@
 ---
-title: equal_to, struct | Microsoft Docs
+title: equal_to Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- equal_to
 - xfunctional/std::equal_to
 dev_langs:
 - C++
@@ -36,17 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: bac0d0114b10fc4ac7a83a60f21db5218cb3f1c8
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 21ed5f4db02ed8fa096a7e10271e5c3a5d9a3261
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="equalto-struct"></a>equal_to, struct
-Prédicat binaire qui effectue l’opération d’égalité ( `operator==`) sur ses arguments.  
+# <a name="equalto-struct"></a>equal_to Struct
+A binary predicate that performs the equality operation ( `operator==`) on its arguments.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Type = void>  
@@ -65,23 +64,23 @@ struct equal_to<void>
  };  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- Tout type qui prend en charge un `operator==` qui accepte des opérandes des types spécifiés ou inférés.  
+ Any type that supports an `operator==` that takes operands of the specified or inferred types.  
   
  `Left`  
- Opérande gauche de l’opération d’égalité. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `T`.  
+ The left operand of the equality operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- Opérande droit de l’opération d’égalité. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `U`.  
+ The right operand of the equality operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>Valeur de retour  
- Résultat de `Left``==``Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator==`.  
+## <a name="return-value"></a>Return Value  
+ The result of `Left == Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator==`.  
   
-## <a name="remarks"></a>Remarques  
- L’égalité des objets de type `Type` doit pouvoir être comparée. `operator==` défini sur l’ensemble d’objets doit donc satisfaire les propriétés mathématiques d’une relation d’équivalence. Tous les types pointeur et numériques intégrés répondent à cette exigence.  
+## <a name="remarks"></a>Remarks  
+ The objects of type `Type` must be equality-comparable. This requires that the `operator==` defined on the set of objects satisfies the mathematical properties of an equivalence relation. All of the built-in numeric and pointer types satisfy this requirement.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_equal_to.cpp  

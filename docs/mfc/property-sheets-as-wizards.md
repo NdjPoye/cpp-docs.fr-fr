@@ -1,35 +1,54 @@
 ---
-title: "Feuilles de propri&#233;t&#233;s sous forme d&#39;assistants | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "feuilles de propriétés, sous forme d'assistants"
+title: Property Sheets as Wizards | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- property sheets, as wizards
 ms.assetid: 1ea66ecb-23b0-484a-838d-58671a2999b5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Feuilles de propri&#233;t&#233;s sous forme d&#39;assistants
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0b590d9587fafe23e570e22fac04173d91ca1976
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Une caractéristique clé d'une feuille de propriétés daAssistant est que la navigation est fournie avec les boutons Suivant ou Terminer, Retour, et Annuler au lieu des onglets.  Vous devez appeler [CPropertySheet::SetWizardMode](../Topic/CPropertySheet::SetWizardMode.md) avant d'appeler [CPropertySheet::DoModal](../Topic/CPropertySheet::DoModal.md) sur l'objet de feuille de propriétés pour tirer parti de cette fonctionnalité.  
+---
+# <a name="property-sheets-as-wizards"></a>Property Sheets as Wizards
+A key characteristic of a wizard property sheet is that navigation is provided with Next or Finish, Back, and Cancel buttons instead of tabs. You need to call [CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode) before calling [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) on the property sheet object to take advantage of this feature.  
   
- L'utilisateur reçoit les mêmes notifications [CPropertyPage::OnSetActive](../Topic/CPropertyPage::OnSetActive.md) et [CPropertyPage::OnKillActive](../Topic/CPropertyPage::OnKillActive.md) lors du déplacement d'une page vers une autre page.  Les boutons Suivant et Terminer sont des contrôles mutuellement exclusifs ; autrement dit, seule l'un d'eux est montré à la fois.  Dans la première page, le bouton suivant doit être activé.  Si l'utilisateur est sur la dernière page, le bouton terminer doit être activé.  Cela n'est pas fait automatiquement par le framework.  Vous devez appeler [CPropertySheet::SetWizardButton](../Topic/CPropertySheet::SetWizardButtons.md) sur la dernière page pour ce faire.  
+ The user receives the same [CPropertyPage::OnSetActive](../mfc/reference/cpropertypage-class.md#onsetactive) and [CPropertyPage::OnKillActive](../mfc/reference/cpropertypage-class.md#onkillactive) notifications while moving from one page to another page. Next and Finish buttons are mutually exclusive controls; that is, only one of them will be shown at a time. On the first page, the Next button should be enabled. If the user is on the last page, the Finish button should be enabled. This is not done automatically by the framework. You have to call [CPropertySheet::SetWizardButton](../mfc/reference/cpropertysheet-class.md#setwizardbuttons) on the last page to achieve this.  
   
- Pour afficher tous les boutons par défaut, vous devez montrer le bouton terminer et déplacer le bouton suivant.  Déplacez le bouton précédent afin que sa position relative par rapport au bouton suivant soit conservée.  Pour de plus d'explications, recherchez l'article de la Base de connaissances Q143210.  Vous pouvez rechercher des articles sur la Base de connaissances dans MSDN library.  
+ To display all of the default buttons, you mush show the Finish button and move the Next button. Then move the Back button so that its relative position to the Next button is maintained.  
   
-## Exemple  
- [!code-cpp[NVC_MFCDocView#5](../mfc/codesnippet/CPP/property-sheets-as-wizards_1.cpp)]  
+## <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#5](../mfc/codesnippet/cpp/property-sheets-as-wizards_1.cpp)]  
   
-## Voir aussi  
- [Feuilles de propriétés](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: regex_constants, classe | Microsoft Docs
+title: regex_constants Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,63 +9,34 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- regex_constants
 - regex/std::regex_constants
-- error_collate
 - regex/std::regex_constants::error_collate
-- error_ctype
 - regex/std::regex_constants::error_ctype
-- error_escape
 - regex/std::regex_constants::error_escape
-- error_backref
 - regex/std::regex_constants::error_backref
-- error_brack
 - regex/std::regex_constants::error_brack
-- error_paren
 - regex/std::regex_constants::error_paren
-- error_brace
 - regex/std::regex_constants::error_brace
-- error_badbrace
 - regex/std::regex_constants::error_badbrace
-- error_range
 - regex/std::regex_constants::error_range
-- error_space
 - regex/std::regex_constants::error_space
-- error_badrepeat
 - regex/std::regex_constants::error_badrepeat
-- error_complexity
 - regex/std::regex_constants::error_complexity
-- error_stack
 - regex/std::regex_constants::error_stack
-- error_parse
 - regex/std::regex_constants::error_parse
-- error_syntax
 - regex/std::regex_constants::error_syntax
-- match_default
 - regex/std::regex_constants::match_default
-- match_not_bol
 - regex/std::regex_constants::match_not_bol
-- match_not_eol
 - regex/std::regex_constants::match_not_eol
-- match_not_bow
 - regex/std::regex_constants::match_not_bow
-- match_not_eow
 - regex/std::regex_constants::match_not_eow
-- match_any
 - regex/std::regex_constants::match_any
-- match_not_null
 - regex/std::regex_constants::match_not_null
-- match_continuous
 - regex/std::regex_constants::match_continuous
-- match_prev_avail
 - regex/std::regex_constants::match_prev_avail
-- format_default
 - regex/std::regex_constants::format_default
-- format_sed
 - regex/std::regex_constants::format_sed
-- format_no_copy
 - regex/std::regex_constants::format_no_copy
-- format_first_only
 - regex/std::regex_constants::format_first_only
 - regex/std::regex_constants::ECMAScript
 - regex/std::regex_constants::basic
@@ -80,7 +51,45 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- regex_constants class
+- std::regex_constants [C++]
+- std::regex_constants [C++], error_collate
+- std::regex_constants [C++], error_ctype
+- std::regex_constants [C++], error_escape
+- std::regex_constants [C++], error_backref
+- std::regex_constants [C++], error_brack
+- std::regex_constants [C++], error_paren
+- std::regex_constants [C++], error_brace
+- std::regex_constants [C++], error_badbrace
+- std::regex_constants [C++], error_range
+- std::regex_constants [C++], error_space
+- std::regex_constants [C++], error_badrepeat
+- std::regex_constants [C++], error_complexity
+- std::regex_constants [C++], error_stack
+- std::regex_constants [C++], error_parse
+- std::regex_constants [C++], error_syntax
+- std::regex_constants [C++], match_default
+- std::regex_constants [C++], match_not_bol
+- std::regex_constants [C++], match_not_eol
+- std::regex_constants [C++], match_not_bow
+- std::regex_constants [C++], match_not_eow
+- std::regex_constants [C++], match_any
+- std::regex_constants [C++], match_not_null
+- std::regex_constants [C++], match_continuous
+- std::regex_constants [C++], match_prev_avail
+- std::regex_constants [C++], format_default
+- std::regex_constants [C++], format_sed
+- std::regex_constants [C++], format_no_copy
+- std::regex_constants [C++], format_first_only
+- std::regex_constants [C++], ECMAScript
+- std::regex_constants [C++], basic
+- std::regex_constants [C++], extended
+- std::regex_constants [C++], awk
+- std::regex_constants [C++], grep
+- std::regex_constants [C++], egrep
+- std::regex_constants [C++], icase
+- std::regex_constants [C++], nosubs
+- std::regex_constants [C++], optimize
+- std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 caps.latest.revision: 18
 author: corob-msft
@@ -100,17 +109,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 83cf6d3c8b6c571898bf6d1f2aeeefbc930dd573
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 88a553e1c9a29a1057af91ff096b16547e266ce0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="regexconstants-class"></a>regex_constants, classe
-Espace de noms des indicateurs d'expression régulière.  
+# <a name="regexconstants-class"></a>regex_constants Class
+Namespace for regular expression flags.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 namespace regex_constants {  
@@ -120,16 +129,16 @@ namespace regex_constants {
  }  
 ```  
   
-## <a name="remarks"></a>Notes  
- L'espace de noms `regex_constants` inclut plusieurs types d'indicateurs et les valeurs qui leur sont associées.  
+## <a name="remarks"></a>Remarks  
+ The namespace `regex_constants` encapsulates several flag types and their associated flag values.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<regex>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<regex>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
 ##  <a name="error_type"></a>  regex_constants::error_type  
- Indicateurs pour signaler les erreurs de syntaxe des expressions régulières.  
+ Flags for reporting regular expression syntax errors.  
   
 ```  
 enum error_type
@@ -152,43 +161,43 @@ enum error_type
     };  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un type énuméré qui décrit un objet pouvant stocker des indicateurs d’erreur. Les valeurs distinctes des indicateurs sont :  
+### <a name="remarks"></a>Remarks  
+ The type is an enumerated type that describes an object that can hold error flags. The distinct flag values are:  
   
- `error_backref` : l’expression contient une référence arrière non valide  
+ `error_backref` -- the expression contained an invalid back reference  
   
- `error_badbrace` : l’expression contient un nombre non valide dans une expression { }  
+ `error_badbrace` -- the expression contained an invalid count in a { } expression  
   
- `error_badrepeat` : une expression de répétition (« * », « ? », « + », « { » dans la plupart des contextes) n’est pas précédée d’une expression  
+ `error_badrepeat` -- a repeat expression (one of '*', '', '+', '{' in most contexts) was not preceded by an expression  
   
- `error_brace` : l’expression contient une accolade « { » ou « } » sans correspondance  
+ `error_brace` -- the expression contained an unmatched '{' or '}'  
   
- `error_brack` : l’expression contient un crochet « [ » ou « ] » sans correspondance  
+ `error_brack` -- the expression contained an unmatched '[' or ']'  
   
- `error_collate` : l’expression contient un nom d’élément de classement non valide  
+ `error_collate` -- the expression contained an invalid collating element name  
   
- `error_complexity` : une tentative de mise en correspondance a échoué, car elle était trop complexe  
+ `error_complexity` -- an attempted match failed because it was too complex  
   
- `error_ctype` : l’expression contient un nom de classe de caractères non valide  
+ `error_ctype` -- the expression contained an invalid character class name  
   
- `error_escape` : l’expression contient une séquence d’échappement non valide  
+ `error_escape` -- the expression contained an invalid escape sequence  
   
- `error_paren` : l’expression contient une parenthèse « ( » ou « ) » sans correspondance  
+ `error_paren` -- the expression contained an unmatched '(' or ')'  
   
- `error_parse` : l’expression n’a pas pu être analysée  
+ `error_parse` -- the expression failed to parse  
   
- `error_range` : l’expression contient un spécificateur de plage de caractères non valide  
+ `error_range` -- the expression contained an invalid character range specifier  
   
- `error_space` : l’analyse d’une expression régulière a échoué, car il n’y avait pas suffisamment de ressources disponibles  
+ `error_space` -- parsing a regular expression failed because there were not enough resources available  
   
- `error_stack` : une tentative de mise en correspondance a échoué, car il n’y avait pas suffisamment de mémoire disponible  
+ `error_stack` -- an attempted match failed because there was not enough memory available  
   
- `error_syntax` : échec de l’analyse sur une erreur de syntaxe  
+ `error_syntax` -- parsing failed on a syntax error  
   
- `error_backref` : l’expression contient une référence arrière non valide  
+ `error_backref` -- the expression contained an invalid back reference  
   
 ##  <a name="match_flag_type"></a>  regex_constants::match_flag_type  
- Indicateurs des options de correspondance d’expression régulière.  
+ Flags for regular expression matching options.  
   
 ```  
 enum match_flag_type 
@@ -210,41 +219,41 @@ enum match_flag_type
     };  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un type de masque de bits qui décrit les options à utiliser durant la mise en correspondance d’une séquence de texte par rapport à une expression régulière, ainsi que les indicateurs de format à utiliser durant le remplacement de texte. Vous pouvez combiner des options avec `|`.  
+### <a name="remarks"></a>Remarks  
+ The type is a bitmask type that describes options to be used when matching a text sequence against a regular expression and format flags to be used when replacing text. Options can be combined with `|`.  
   
- Options de correspondance :  
+ The match options are:  
   
  `match_default`  
   
- `match_not_bol` : ne pas considérer la première position dans la séquence cible comme le début d’une ligne  
+ `match_not_bol` -- do not treat the first position in the target sequence as the beginning of a line  
   
- `match_not_eol` : ne pas considérer la position située après la fin dans la séquence cible comme la fin d’une ligne  
+ `match_not_eol` -- do not treat the past-the-end position in the target sequence as the end of a line  
   
- `match_not_bow` : ne pas considérer la première position dans la séquence cible comme le début d’un mot  
+ `match_not_bow` -- do not treat the first position in the target sequence as the beginning of a word  
   
- `match_not_eow` : ne pas considérer la position située après la fin dans la séquence cible comme la fin d’un mot  
+ `match_not_eow` -- do not treat the past-the-end position in the target sequence as the end of a word  
   
- `match_any` : si plusieurs correspondances sont possibles, n’importe quelle correspondance est acceptable  
+ `match_any` -- if more than one match is possible any match is acceptable  
   
- `match_not_null` : ne pas considérer une sous-séquence vide comme une correspondance  
+ `match_not_null` -- do not treat an empty subsequence as a match  
   
- `match_continuous` : ne pas rechercher de correspondances ailleurs qu’au début de la séquence cible  
+ `match_continuous` -- do not search for matches other than at the beginning of the target sequence  
   
- `match_prev_avail` -- `--first` est un itérateur valide. Ignorer `match_not_bol` et `match_not_bow` s’ils sont définis  
+ `match_prev_avail` -- `--first` is a valid iterator; ignore `match_not_bol` and `match_not_bow` if set  
   
- Indicateurs de format :  
+ The format flags are:  
   
- `format_default` : utiliser les règles de format ECMAScript  
+ `format_default` -- use ECMAScript format rules  
   
- `format_sed` : utiliser les règles de format sed  
+ `format_sed` -- use sed format rules  
   
- `format_no_copy` : ne pas copier le texte qui ne correspond pas à l’expression régulière  
+ `format_no_copy` -- do not copy text that does not match the regular expression  
   
- `format_first_only` : ne pas rechercher de correspondances après la première  
+ `format_first_only` -- do not search for matches after the first one  
   
 ##  <a name="syntax_option_type"></a>  regex_constants::syntax_option_type  
- Indicateurs pour la sélection des options de syntaxe.  
+ Flags for selecting syntax options.  
   
 ```  
 enum syntax_option_type
@@ -264,40 +273,40 @@ enum syntax_option_type
     };  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un type de masque de bits qui décrit les spécificateurs de langage et les modificateurs de syntaxe à utiliser durant la compilation d’une expression régulière. Vous pouvez combiner des options avec `|`. Vous devez utiliser un seul spécificateur de langage à la fois.  
+### <a name="remarks"></a>Remarks  
+ The type is a bitmask type that describes language specifiers and syntax modifiers to be used when compiling a regular expression. Options can be combined with `|`. No more than one language specifier should be used at a time.  
   
- Spécificateurs de langage :  
+ The language specifiers are:  
   
- `ECMAScript` : compiler en ECMAScript  
+ `ECMAScript` -- compile as ECMAScript  
   
- `basic` : compiler en BRE  
+ `basic` -- compile as BRE  
   
- `extended` : compiler en ERE  
+ `extended` -- compile as ERE  
   
- `awk` : compiler en awk  
+ `awk` -- compile as awk  
   
- `grep` : compiler en grep  
+ `grep` -- compile as grep  
   
- `egrep` : compiler en egrep  
+ `egrep` -- compile as egrep  
   
- Modificateurs de syntaxe :  
+ The syntax modifiers are:  
   
- `icase` : les correspondances ne respectent pas la casse  
+ `icase` -- make matches case-insensitive  
   
- `nosubs` : l’implémentation n’a pas besoin d’assurer le suivi du contenu des groupes de capture  
+ `nosubs` -- the implementaton need not keep track of the contents of capture groups  
   
- `optimize` : l’implémentation doit privilégier la vitesse de mise en correspondance plutôt que la vitesse de compilation des expressions régulières  
+ `optimize` -- the implementation should emphasize speed of matching rather than speed of regular expression compilation  
   
- `collate` : les correspondances varient selon les paramètres régionaux  
+ `collate` -- make matches locale-sensitive  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[regex_error, classe](../standard-library/regex-error-class.md)  
-[\<regex>, fonctions](../standard-library/regex-functions.md)  
-[regex_iterator, classe](../standard-library/regex-iterator-class.md)  
-[\<regex>, opérateurs](../standard-library/regex-operators.md)  
-[regex_token_iterator, classe](../standard-library/regex-token-iterator-class.md)  
-[regex_traits, classe](../standard-library/regex-traits-class.md)  
-[\<regex>, typedefs](../standard-library/regex-typedefs.md)  
+[regex_error Class](../standard-library/regex-error-class.md)  
+[\<regex> functions](../standard-library/regex-functions.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
+[\<regex> operators](../standard-library/regex-operators.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
+[\<regex> typedefs](../standard-library/regex-typedefs.md)  
 

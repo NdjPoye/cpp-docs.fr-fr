@@ -1,86 +1,103 @@
 ---
-title: "TN029&#160;: fen&#234;tres fractionn&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.windows.splitter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fenêtres fractionnées, à propos des fenêtres fractionnées"
-  - "TN029"
+title: 'TN029: Splitter Windows | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.windows.splitter
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN029
+- splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# TN029&#160;: fen&#234;tres fractionn&#233;es
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d0885dea840b73b78be581383c7f4a194b5cb9a8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cette remarque décrit MFC [CSplitterWnd Class](../mfc/reference/csplitterwnd-class.md), qui fournit des fractionnements de fenêtre et gère le redimensionnement d'autres fenêtres du volet.  
+---
+# <a name="tn029-splitter-windows"></a>TN029: Splitter Windows
+This note describes the MFC [CSplitterWnd Class](../mfc/reference/csplitterwnd-class.md), which provides window splits and manages the resizing of other pane windows.  
   
-## Styles de séparateur  
- Un `CSplitterWnd` prend en charge deux styles différents de fractionnement de fenêtres.  
+## <a name="splitter-styles"></a>Splitter Styles  
+ A `CSplitterWnd` supports two different styles of splitting windows.  
   
- Dans la section des "séparateurs statiques", la fenêtre de fractionnement crée les volets lors de sa création.  L'ordre et le nombre des volets ne changent jamais.  Les barres de division sont utilisées pour redimensionner les différents volets.  Vous pouvez utiliser ce style pour afficher une classe d'affichage différente dans chaque volet.  L'éditeur graphique Visual C\+\+ et le gestionnaire de fichiers windows sont des exemples de programmes qui utilisent ce style de séparateur.  Ce style de la fenêtre de fractionnement n'utilise pas les zones de séparateur.  
+ In "static splitters," the splitter window creates the panes when it is created. The order and number of panes never change. Splitter bars are used to resize the different panes. You can use this style to display a different view class in each pane. The Visual C++ graphics editor and the Windows File Manager are examples of programs that use this splitter style. This style of splitter window does not use splitter boxes.  
   
- Dans « fractionneurs dynamiques » , des volets supplémentaires sont créés et détruits lorsque l'utilisateur fractionne et rassemble des affichages nouveaux.  Cette séparation commence par une vue et fournit des zones de séparateur de l'utilisateur à fractionner ouverture.  La fenêtre de fractionnement crée dynamiquement un objet de la vue lorsque la vue est fractionné dans une direction.  Ce nouvel objet de vue représente le nouveau volet.  Si la vue est fractionnée en deux instructions à l'aide de l'interface du clavier, la fenêtre de fractionnement crée trois nouveaux objets de vue des trois nouveaux volets.  Lorsque le fractionnement est actif, la fenêtre affiche la zone de séparateur sous la barre de fractionnement entre les volets.  Windows détruit les afficher des objets supplémentaires lorsque l'utilisateur supprime une division, mais la vue d'origine est conservée tant que la fenêtre de fractionnement est elle\-même détruite.  Microsoft Excel et Microsoft Word sont des exemples d'applications qui utilisent le style d'affichage de fractionnement.  
+ In "dynamic splitters," additional panes are created and destroyed as the user splits and un-splits new views. This splitter starts out with a single view and provides splitter boxes for the user to initiate splitting. The splitter window dynamically creates a new view object when the view is split in one direction. This new view object represents the new pane. If the view is split in two directions by using the keyboard interface, the splitter window creates three new view objects for the three new panes. While the split is active, Windows displays the splitter box as a splitter bar between the panes. Windows destroys additional view objects when the user removes a split, but the original view remains until the splitter window itself is destroyed. Microsoft Excel and Microsoft Word are examples of applications that use the dynamic splitter style.  
   
- Lorsque vous créez l'un ou l'autre de type du point de fractionnement, vous devez spécifier le nombre maximal de lignes et de colonnes que le séparateur gère.  Un séparateur statique crée des volets pour remplir toutes les lignes et colonnes.  Un point de fractionnement va créer uniquement le premier volet lorsque `CSplitterWnd` est créé.  
+ When you create either kind of splitter window, you must specify the maximum number of rows and columns that the splitter will manage. A static splitter will create panes to fill all the rows and columns. A dynamic splitter will create only the first pane when the `CSplitterWnd` is created.  
   
- Le nombre maximal des volets que vous pouvez spécifier des séparateurs statiques est 16 lignes par 16 colonnes.  Les configurations recommandées sont :  
+ The maximum number of panes you can specify for static splitters is 16 rows by 16 columns. The recommended configurations are:  
   
--   1 ligne x 2 colonnes : généralement avec les différents volets  
+-   1 row x 2 columns : usually with dissimilar panes  
   
--   2 lignes x 1 colonne : généralement avec les différents volets  
+-   2 rows x 1 column : usually with dissimilar panes  
   
--   2 lignes X 2 colonnes : généralement avec les volets similaires  
+-   2 rows x 2 columns : usually with similar panes  
   
- Le nombre maximal des volets que vous pouvez spécifier pour windows fractionnement est 2 lignes par 2 colonnes.  Les configurations recommandées sont :  
+ The maximum number of panes that you can specify for dynamic splitters is 2 rows by 2 columns. The recommended configurations are:  
   
--   ligne 1 X 2 colonnes : pour des données en colonnes  
+-   1 row x 2 columns : for columnar data  
   
--   2 X 1 lignes colonne : pour les données textuelles ou autres  
+-   2 rows x 1 column : for textual or other data  
   
--   2 lignes X 2 colonnes : pour la grille ou la table données orientées  
+-   2 rows x 2 columns : for grid or table oriented data  
   
-## Exemples de séparateur  
- Plusieurs fenêtres fractionnement d'exemples utilisent de MFC directement ou indirectement.  L'exemple général [VIEWEX](../top/visual-cpp-samples.md) de MFC illustre plusieurs utilise des séparateurs statiques, notamment le mode de placement d'un serveur de distribution dans un serveur de distribution.  
+## <a name="splitter-examples"></a>Splitter Examples  
+ Many of the MFC sample programs use splitter windows directly or indirectly. The MFC General sample [VIEWEX](../visual-cpp-samples.md) illustrates several uses of static splitters, including how to place a splitter in a splitter.  
   
- Vous pouvez également utiliser ClassWizard pour créer une classe enfant de la fenêtre cadre de \(MDI\) nouvelle interface MD qui contient une fenêtre de fractionnement.  Pour plus d'informations sur les fenêtres de fractionnement, consultez l' [Plusieurs types de document, vues, et fenêtres frames](../mfc/multiple-document-types-views-and-frame-windows.md).  
+ You can also use ClassWizard to create a new multiple document interface (MDI) Child frame window class that contains a splitter window. For more information on splitter windows, see [Multiple Document Types, Views, and Frame Windows](../mfc/multiple-document-types-views-and-frame-windows.md).  
   
-## Terminologie utilisée par implémentation  
- Voici une liste de termes qui sont propres à windows fractionnement :  
+## <a name="terminology-used-by-implementation"></a>Terminology Used by Implementation  
+ Here is a list of terms that are specific to splitter windows:  
   
  `CSplitterWnd`:  
- Une fenêtre fournissant volet\- fractionner les contrôles et les barres de défilement partagés entre les volets dans une ligne ou colonne.  Vous spécifiez les lignes et les colonnes contenant des numérations de base \(le premier volet est ligne \= 0 et la colonne \= 0\).  
+ A window that provides pane-splitting controls and scroll bars that are shared between all panes on a row or column. You specify rows and columns with zero-based numbers (the first pane is row = 0 and column = 0).  
   
  Pane:  
- Un point spécifique à l'application d' `CSplitterWnd` gère.  Un volet est généralement un objet dérivé de [CView Class](../mfc/reference/cview-class.md), mais peut être n'importe quel objet d' [CWnd](../mfc/reference/cwnd-class.md) associé à l'ID appropriée de fenêtre enfant  
+ An application-specific window that a `CSplitterWnd` manages. A pane is usually an object that is derived from the [CView Class](../mfc/reference/cview-class.md), but can be any [CWnd](../mfc/reference/cwnd-class.md) object that has the appropriate child window ID.  
   
- Pour utiliser un `CWnd`\- objet dérivé, passez `RUNTIME_CLASS` de l'objet à la fonction d' `CreateView` comme si vous avez utilisé `CView`\- classe dérivée.  Votre classe doit utiliser `DECLARE_DYNCREATE` et `IMPLEMENT_DYNCREATE` car l'infrastructure utilise la création dynamique au moment de l'exécution.  Bien qu'il y a beaucoup de code dans `CSplitterWnd` spécifiques à la classe d' `CView`, [CObject::IsKindOf](../Topic/CObject::IsKindOf.md) est toujours utilisé avant que ces actions sont exécutées.  
+ To use a `CWnd`-derived object, pass the `RUNTIME_CLASS` of the object to the `CreateView` function as you would if you were using a `CView`-derived class. Your class must use `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE` because the framework uses dynamic creation at runtime. Although there is a lot of code in `CSplitterWnd` that is specific to the `CView` class, [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) is always used before those actions are performed.  
   
- Barre de fractionnement :  
- Un contrôle qui se trouve entre les lignes et les colonnes des volets.  Il peut être utilisé pour ajuster la taille des lignes ou des colonnes des volets.  
+ Splitter Bar:  
+ A control that is placed between rows and columns of panes. It may be used to adjust the sizes of rows or columns of panes.  
   
- Zone de séparateur :  
- Un contrôle d' `CSplitterWnd` dynamique que vous pouvez utiliser pour créer de nouvelles lignes ou colonnes des volets.  Il se trouve en haut des barres de défilement verticale ou à gauche des barres de défilement horizontales.  
+ Splitter Box:  
+ A control in a dynamic `CSplitterWnd` that you can use to create new rows or columns of panes. It is located at the top of the vertical scroll bars or to the left of the horizontal scroll bars.  
   
- Intersection de séparateur :  
- L'intersection d'une barre de fractionnement verticale et la barre de fractionnement horizontale.  Vous pouvez le faire glisser pour ajuster la taille d'une ligne et une colonne des volets simultanément.  
+ Splitter Intersection:  
+ The intersection of a vertical splitter bar and a horizontal splitter bar. You can drag it to adjust the size of a row and column of panes simultaneously.  
   
-## Barres de défilement partagées  
- La classe d' `CSplitterWnd` prend également en charge les barres de défilement partagées.  Ces contrôles de la barre de défilement sont des enfants d' `CSplitterWnd` et sont partagées avec les différents volets du séparateur.  
+## <a name="shared-scroll-bars"></a>Shared Scroll Bars  
+ The `CSplitterWnd` class also supports shared scroll bars. These scroll bar controls are children of the `CSplitterWnd` and are shared with the different panes in the splitter.  
   
- Par exemple, dans une ligne 1 X fenêtre de 2 colonnes, vous pouvez spécifier WS\_VSCROLL en créant `CSplitterWnd`.  Windows crée un contrôle de barre de défilement spécial qui est partagée entre les deux volets.  
+ For example, in a 1 row x 2 column window, you can specify WS_VSCROLL when creating the `CSplitterWnd`. Windows creates a special scroll bar control that is shared between the two panes.  
   
 ```  
 [      ][      ][^]  
@@ -88,57 +105,59 @@ Cette remarque décrit MFC [CSplitterWnd Class](../mfc/reference/csplitterwnd-cl
 [      ][      ][v]  
 ```  
   
- Lorsque l'utilisateur est la barre de défilement, les messages d' `WM_VSCROLL` sont envoyés aux deux vues.  Si l'une ou l'autre de vue définit la position de barre de défilement, la barre de défilement partagée est définie.  
+ When the user moves the scroll bar, `WM_VSCROLL` messages will be sent to both views. When either view sets the scroll bar position, the shared scroll bar will be set.  
   
- Notez que les barres de défilement partagées sont les plus utiles avec les objets de vue similaires.  Si vous combinez des vues de types différents dans un séparateur, vous devrez peut\-être écrire un code spécial pour coordonner leurs positions de défilement.  Tout `CView`\- la classe dérivée qui utilise les API de barre de défilement d' `CWnd` la délèguera dans la barre de défilement partagée si elle existe.  L'implémentation d' `CScrollView` est un exemple d'une classe d' `CView` qui prend en charge les barres de défilement partagées.  Les classes qui ne sont pas dérivées d' `CView`, les classes qui reposent sur des barres de défilement non contrôle, les classes qui utilisent des implémentations standard windows \(par exemple, `CEditView`\) ne fonctionnent pas avec la fonctionnalité partagée de barre de défilement d' `CSplitterWnd`.  
+ Note that shared scroll bars are most useful with similar view objects. If you mix views of different types in a splitter, then you may have to write special code to coordinate their scroll positions. Any `CView`-derived class that uses the `CWnd` scroll bar APIs will delegate to the shared scroll bar if it exists. The `CScrollView` implementation is one example of a `CView` class that supports shared scroll bars. Classes that are not derived from `CView`, classes that rely on non-control scroll bars, or classes that use standard Windows implementations (for example, `CEditView`) will not work with the shared scroll bar feature of `CSplitterWnd`.  
   
-## Tailles minimales  
- Pour chaque ligne il existe une hauteur de ligne minimale, et pour chaque colonne il existe une largeur de colonne minimales.  Cette valeur assure qu'un volet n'est pas trop petit pour être affiché dans le détail complet.  
+## <a name="minimum-sizes"></a>Minimum Sizes  
+ For each row there is a minimum row height, and for each column there is a minimum column width. This minimum guarantees that a pane is not too small to be shown in complete detail.  
   
- Pour un point de fractionnement statique, la hauteur de ligne et la largeur des colonnes initiales minimale est 0.  Pour un point de fractionnement dynamique, la hauteur de ligne et la largeur de colonne minimales initiales sont définies par le paramètre d' `sizeMin` de la fonction d' `CSplitterWnd::Create`.  
+ For a static splitter window, the initial minimum row height and column width is 0. For a dynamic splitter window, the initial minimum row height and column width are set by the `sizeMin` parameter of the `CSplitterWnd::Create` function.  
   
- Vous pouvez modifier les tailles minimales à l'aide de [CSplitterWnd::SetRowInfo](../Topic/CSplitterWnd::SetRowInfo.md) et [CSplitterWnd::SetColumnInfo](../Topic/CSplitterWnd::SetColumnInfo.md) s'exécute.  
+ You can change these minimum sizes by using the [CSplitterWnd::SetRowInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo) and [CSplitterWnd::SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo) functions.  
   
-## Tailles réelles vs tailles idéales  
- La disposition des volets dans la fenêtre de fractionnement dépend de la taille du cadre qui les contient.  Lorsqu'un utilisateur redimensionne le cadre conteneur, `CSplitterWnd` REPLACE et redimensionne le volet afin qu'elles s'ajustent ainsi que possible.  
+## <a name="actual-vs-ideal-sizes"></a>Actual vs. Ideal Sizes  
+ The layout of the panes in the splitter window depends on the size of the frame that contains them. When a user resizes the containing frame, the `CSplitterWnd` repositions and resizes the panes so that they fit as well as possible.  
   
- L'utilisateur peut définir manuellement la taille de la hauteur de ligne et de largeur de colonne, le programme peut définir la taille idéale à l'aide de la classe d' `CSplitterWnd`.  La taille réelle peut être inférieure ou supérieure à l'idéal.  Windows régleront la taille réelle s'il n'y a pas assez de place pour afficher la taille idéale ou génère trop d'espace vide à droite et en bas de la fenêtre de fractionnement.  
+ The user can manually set the row height and column width sizes, or the program can set the ideal size by using the `CSplitterWnd` class. The actual size can be smaller or larger than the ideal. Windows will adjust the actual size if there is not enough room to display the ideal size or if there is too much empty space on the right or bottom of the splitter window.  
   
-## Contrôles personnalisés  
- Vous pouvez remplacer de nombreuses fonctions pour fournir le comportement personnalisé et une interface personnalisée.  Vous pouvez remplacer ce premier jeu pour fournir d'autres images pour les différents composants graphiques d'un point de fractionnement.  
+## <a name="custom-controls"></a>Custom Controls  
+ You can override many functions to provide customized behavior and a customized interface. You can override this first set to provide alternate imagery for the various graphical components of a splitter window.  
   
--   `virtual void OnDrawSpltter(CDC* pDC, ESplitType nType, const CRect& rect);`  
+- `virtual void OnDrawSpltter(CDC* pDC, ESplitType nType, const CRect& rect);`  
   
--   `virtual void OnInvertTracker(const CRect& rect);`  
+- `virtual void OnInvertTracker(const CRect& rect);`  
   
- Vous devez appeler cette fonction pour créer un contrôle de barre de défilement partagé.  Vous pouvez le remplacer pour créer les contrôles supplémentaires en regard de la barre de défilement.  
+ You call this function to create a shared scroll bar control. You can override it to create extra controls next to the scroll bar.  
   
--   `virtual BOOL CreateScrollBarCtrl(DWORD dwStyle, UINT nID);`  
+- `virtual BOOL CreateScrollBarCtrl(DWORD dwStyle, UINT nID);`  
   
- Ces fonctions implémentent la logique de la fenêtre de fractionnement dynamique.  Vous pouvez remplacer ces pour fournir une logique plus avancées de séparateur.  
+ These functions implement the logic of the dynamic splitter window. You can override these to provide more advanced splitter logic.  
   
--   `virtual void DeleteView(int row, int col);`  
+- `virtual void DeleteView(int row, int col);`  
   
--   `virtual BOOL SplitRow(int cyBefore);`  
+- `virtual BOOL SplitRow(int cyBefore);`  
   
--   `virtual BOOL SplitColumn(int cxBefore);`  
+- `virtual BOOL SplitColumn(int cxBefore);`  
   
--   `virtual void DeleteRow(int rowDelete);`  
+- `virtual void DeleteRow(int rowDelete);`  
   
--   `virtual void DeleteColumn(int colDelete);`  
+- `virtual void DeleteColumn(int colDelete);`  
   
-## Fonctionnalités de CView  
- La classe d' `CView` utilise les commandes de haut niveau suivantes pour déléguer `CSplitterWnd` à l'implémentation.  Comme ces commandes sont virtuelles, l'implémentation standard d' `CView` ne requiert pas l'implémentation complète d' `CSplitterWnd` à lier dans.  Pour les applications qui utilisent `CView` mais pas `CSplitterWnd`, l'implémentation d' `CSplitterWnd` n'est pas liée à l'application.  
+## <a name="cview-functionality"></a>CView Functionality  
+ The `CView` class uses the following high level commands to delegate to the `CSplitterWnd` implementation. Because these commands are virtual, the standard `CView` implementation will not require the entire `CSplitterWnd` implementation to be linked in. For applications that use `CView` but not `CSplitterWnd`, the `CSplitterWnd` implementation will not be linked with the application.  
   
  `virtual BOOL CanActivateNext(BOOL bPrev = FALSE);`  
- Vérifie si ID\_NEXT\_PANE ou ID\_PREV\_PANE est actuellement possible.  
+ Checks whether ID_NEXT_PANE or ID_PREV_PANE is currently possible.  
   
  `virtual void ActivateNext(BOOL bPrev = FALSE);`  
- Exécute la commande « du volet suivant » ou « volet précédent ».  
+ Executes the "Next Pane" or "Previous Pane" command.  
   
  `virtual BOOL DoKeyboardSplit();`  
- Exécute la commande de fractionnement du clavier, habituellement « fractionnement de fenêtre ».  
+ Executes the keyboard split command, usually "Window Split".  
   
-## Voir aussi  
- [Notes techniques par numéro](../mfc/technical-notes-by-number.md)   
- [Notes techniques par catégorie](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

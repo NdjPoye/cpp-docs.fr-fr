@@ -1,43 +1,62 @@
 ---
-title: "Arri&#232;re-plan OLE&#160;: liaison et incorporation | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objets incorporés (C++)"
-  - "types d'élément"
-  - "types d'élément, définir"
-  - "éléments liés (OLE) (C++)"
-  - "OLE (éléments incorporés)"
-  - "OLE (éléments), types"
-  - "OLE, éléments liés"
+title: 'OLE Background: Linking and Embedding | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE embedded items [MFC]
+- item types [MFC], defined
+- item types [MFC]
+- OLE [MFC], linked items
+- linked items (OLE) [MFC]
+- embedded objects [MFC]
+- OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Arri&#232;re-plan OLE&#160;: liaison et incorporation
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ab76058d859758ac9c42e63839ad2fd683e58e08
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-L'utilisation de la commande Coller dans une application conteneur peut créer un composant incorporé, ou un élément incorporé.  Les données sources pour un élément incorporé sont stockées dans le document OLE qui le contient.  De cette manière, un fichier document pour un document de traitement de texte peut contenir du texte et peut également contenir des bitmap, les graphiques, les formules, ou tout autre type de données.  
+---
+# <a name="ole-background-linking-and-embedding"></a>OLE Background: Linking and Embedding
+Using the Paste command in a container application can create an embedded component, or embedded item. The source data for an embedded item is stored as part of the OLE document that contains it. In this way, a document file for a word processor document can contain text and also can contain bitmaps, graphs, formulas, or any other type of data.  
   
- OLE fournit une autre façon d'intégrer les données d'une autre application : créer un composant lié, ou élément lié, ou un lien.  Les étapes de création d'un élément lié sont semblables à celles utilisées pour créer un élément incorporé, sauf que vous exécutez la commande de collage de lien au lieu de la commande de collage.  Contrairement à un composant incorporé, un composant lié contient un chemin d'accès aux données d'origine, qui sont souvent dans un fichier distinct.  
+ OLE provides another way to incorporate data from another application: creating a linked component, or linked item, or a link. The steps for creating a linked item are similar to those for creating an embedded item, except that you use the Paste Link command instead of the Paste command. Unlike an embedded component, a linked component stores a path to the original data, which is often in a separate file.  
   
- Par exemple, si vous travaillez dans un document de traitement de texte et créez un élément lié à certaines cellules de la feuille de calcul, les données pour l'élément lié sont stockées dans le document d'origine des feuilles de calcul.  Le document de traitement de texte contient uniquement des informations indiquant où l'élément se trouve, c'est à dire qu'elle contient un lien vers le fichier d'origine de la feuille de calcul.  Lorsque vous double\-cliquez sur les cellules, l'application de feuille de calcul s'affiche et le document d'origine de feuilles de calcul est chargé à partir de l'emplacement où il est stocké.  
+ For example, if you are working in a word processor document and create a linked item to some spreadsheet cells, the data for the linked item is stored in the original spreadsheet document. The word processor document contains only the information specifying where the item can be found, that is, it contains a link to the original spreadsheet document. When you double-click the cells, the spreadsheet application is launched and the original spreadsheet document is loaded from where it was stored.  
   
- Chaque élément OLE, qu'il soit incorporé ou lié, a un type associé basé sur l'application qui l'a créé.  Par exemple, un élément de pinceau Microsoft est un type d'élément, et un élément de Microsoft Excel est un autre type.  Certaines applications, toutefois, peuvent créer plusieurs types d'élément.  Par exemple, Microsoft Excel peut créer des éléments de feuille de calcul, de graphique, et de feuille de macros.  Chacun de ces éléments peut être reconnu par le système à l'aide d'un identificateur de classe ou **CLSID**.  
+ Every OLE item, whether embedded or linked, has a type associated with it based on the application that created it. For example, a Microsoft Paintbrush item is one type of item, and a Microsoft Excel item is another type. Some applications, however, can create more than one item type. For example, Microsoft Excel can create worksheet items, chart items, and macrosheet items. Each of these items can be uniquely identified by the system using a Class Identifier or **CLSID**.  
   
-## Voir aussi  
- [Arrière\-plan OLE](../mfc/ole-background.md)   
- [Arrière\-plan OLE : conteneurs et serveurs](../mfc/ole-background-containers-and-servers.md)   
- [Conteneurs : éléments clients](../mfc/containers-client-items.md)   
- [Serveurs : éléments du serveur](../mfc/servers-server-items.md)
+## <a name="see-also"></a>See Also  
+ [OLE Background](../mfc/ole-background.md)   
+ [OLE Background: Containers and Servers](../mfc/ole-background-containers-and-servers.md)   
+ [Containers: Client Items](../mfc/containers-client-items.md)   
+ [Servers: Server Items](../mfc/servers-server-items.md)
+
+

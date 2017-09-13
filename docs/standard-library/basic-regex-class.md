@@ -1,5 +1,5 @@
 ---
-title: basic_regex, classe | Microsoft Docs
+title: basic_regex Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- basic_regex
 - regex/std::basic_regex
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f7b9afbe09fe010596a40f37eba9b0679a38268c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6d09c6e2522c866e6c7a86016c2a85dd6b0dcc3f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicregex-class"></a>basic_regex, classe
-Encapsule une expression régulière.  
+# <a name="basicregex-class"></a>basic_regex Class
+Wraps a regular expression.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class basic_regex {  
@@ -99,39 +98,39 @@ class basic_regex {
    };  
    ```   
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Elem`  
- Type des éléments à faire correspondre.  
+ The type of elements to match.  
   
  `RXtraits`  
- Classe Traits des éléments.  
+ Traits class for elements.  
   
-## <a name="remarks"></a>Notes  
- La classe de modèle décrit un objet qui contient une expression régulière. Les objets de cette classe de modèle peuvent être passés aux fonctions de modèle [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search), et [regex_replace](../standard-library/regex-functions.md#regex_replace), ainsi que les arguments de chaîne de texte appropriés, pour rechercher du texte qui correspond à l’expression régulière. Il existe deux spécialisations de cette classe de modèle avec les définitions de type [regex](../standard-library/regex-typedefs.md#regex) pour les éléments de type `char`, et [wregex](../standard-library/regex-typedefs.md#wregex) pour les éléments de type `wchar_t`.  
+## <a name="remarks"></a>Remarks  
+ The template class describes an object that holds a regular expression. Objects of this template class can be passed to the template functions [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search), and [regex_replace](../standard-library/regex-functions.md#regex_replace), along with suitable text string arguments, to search for text that matches the regular expression. There are two specializations of this template class, with the type definitions [regex](../standard-library/regex-typedefs.md#regex) for elements of type `char`, and [wregex](../standard-library/regex-typedefs.md#wregex) for elements of type `wchar_t`.  
   
- L'argument de modèle `RXtraits` décrit plusieurs propriétés importantes de la syntaxe des expressions régulières prises en charge par la classe de modèle. Une classe qui spécifie ces caractéristiques d’expression régulière doit avoir la même interface externe qu’un objet de la classe de modèle [regex_traits](../standard-library/regex-traits-class.md).  
+ The template argument `RXtraits` describes various important properties of the syntax of the regular expressions that the template class supports. A class that specifies these regular expression traits must have the same external interface as an object of template class [regex_traits Class](../standard-library/regex-traits-class.md).  
   
- Certaines fonctions acceptent une séquence d’opérande qui définit une expression régulière. Vous pouvez spécifier cette séquence d'opérande de plusieurs façons :  
+ Some functions take an operand sequence that defines a regular expression. You can specify such an operand sequence several ways:  
   
- `ptr` -- une séquence se terminant par null (telle qu'une chaîne en C, pour un `Elem` de type `char`) commençant à `ptr` (qui doit être un pointeur null), où l'élément de fin est la valeur `value_type()` et ne fait pas partie de la séquence d'opérande.  
+ `ptr` -- a null-terminated sequence (such as a C string, for `Elem` of type `char`) beginning at `ptr` (which must not be a null pointer), where the terminating element is the value `value_type()` and is not part of the operand sequence  
   
- `ptr`, `count` -- une séquence d'éléments `count` commençant à `ptr` (qui ne doit pas être un pointeur null).  
+ `ptr`, `count` -- a sequence of `count` elements beginning at `ptr` (which must not be a null pointer)  
   
- `str` -- la séquence spécifiée par l'objet `basic_string` `str`.  
+ `str` -- the sequence specified by the `basic_string` object `str`  
   
- `first`, `last` -- une séquence d'éléments délimités par les itérateurs `first` et `last`, dans la plage `[first, last)`.  
+ `first`, `last` -- a sequence of elements delimited by the iterators `first` and `last`, in the range `[first, last)`  
   
- `right` -- l'objet `basic_regex` `right`.  
+ `right` -- the `basic_regex` object `right`  
   
- Ces fonctions membres acceptent également un argument `flags` qui spécifie plusieurs options pour l'interprétation de l'expression régulière, en plus de celles décrites par le type `RXtraits`.  
+ These member functions also take an argument `flags` that specifies various options for the interpretation of the regular expression in addition to those described by the `RXtraits` type.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<regex>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<regex>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
 ##  <a name="assign"></a>  basic_regex::assign  
- Assigne une valeur à l'objet d'expression régulière.  
+ Assigns a value to the regular expressoin object.  
   
 ```  
 basic_regex& assign(
@@ -161,44 +160,44 @@ basic_regex& assign(
     flag_type flags = ECMAScript);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `STtraits`  
- Classe de caractéristiques pour une source de chaîne.  
+ Traits class for a string source.  
   
  `STalloc`  
- Classe d'allocateurs pour une source de chaîne.  
+ Allocator class for a string source.  
   
  `InIt`  
- Type d'itérateur d'entrée pour une source de plage.  
+ Input iterator type for a range source.  
   
  `right`  
- Regex source à copier.  
+ Regex source to copy.  
   
  `ptr`  
- Pointeur vers le début de la séquence à copier.  
+ Pointer to beginning of sequence to copy.  
   
  `flags`  
- Indicateurs d'option de syntaxe à ajouter lors de la copie.  
+ Syntax option flags to add while copying.  
   
  `len/TD>`  
- Longueur de la séquence à copier.  
+ Length of sequence to copy.  
   
  `str`  
- Chaîne à copier.  
+ String to copy.  
   
  `first`  
- Début de la séquence à copier.  
+ Beginning of sequence to copy.  
   
  `last`  
- Fin de la séquence à copier.  
+ End of sequence to copy.  
   
  `IList`  
- Initializer_list à copier.  
+ The initializer_list to copy.  
   
-### <a name="remarks"></a>Notes  
- Les fonctions membres remplacent chacune l'expression régulière détenue par `*this` par l'expression régulière décrite par la séquence d'opérande, puis retournent `*this`.  
+### <a name="remarks"></a>Remarks  
+ The member functions each replace the regular expression held by `*this` with the regular expression described by the operand sequence, then return `*this`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_assign.cpp   
@@ -281,7 +280,7 @@ match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == tru
 ```  
   
 ##  <a name="basic_regex"></a>  basic_regex::basic_regex  
- Construit l'objet d'expression régulière.  
+ Construct the regular expression object.  
   
 ```  
 basic_regex();
@@ -314,48 +313,48 @@ explicit basic_regex(
     flag_type flags);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `STtraits`  
- Classe de caractéristiques pour une source de chaîne.  
+ Traits class for a string source.  
   
  `STalloc`  
- Classe d'allocateurs pour une source de chaîne.  
+ Allocator class for a string source.  
   
  `InIt`  
- Type d'itérateur d'entrée pour une source de plage.  
+ Input iterator type for a range source.  
   
  `right`  
- Regex source à copier.  
+ Regex source to copy.  
   
  `ptr`  
- Pointeur vers le début de la séquence à copier.  
+ Pointer to beginning of sequence to copy.  
   
  `flags`  
- Indicateurs d'option de syntaxe à ajouter lors de la copie.  
+ Syntax option flags to add while copying.  
   
  `len/TD>`  
- Longueur de la séquence à copier.  
+ Length of sequence to copy.  
   
  `str`  
- Chaîne à copier.  
+ String to copy.  
   
  `first`  
- Début de la séquence à copier.  
+ Beginning of sequence to copy.  
   
  `last`  
- Fin de la séquence à copier.  
+ End of sequence to copy.  
   
  `IList`  
- Initializer_list à copier.  
+ The initializer_list to copy.  
   
-### <a name="remarks"></a>Notes  
- Tous les constructeurs stockent un objet construit par défaut de type `RXtraits`.  
+### <a name="remarks"></a>Remarks  
+ All constructors store a default-constructed object of type `RXtraits`.  
   
- Le premier constructeur construit un objet `basic_regex` vide. Les autres constructeurs construisent un objet `basic_regex` qui contient l'expression régulière décrite par la séquence d'opérande.  
+ The first constructor constructs an empty `basic_regex` object. The other constructors construct a `basic_regex` object that holds the regular expression described by the operand sequence.  
   
- Vide `basic_regex` objet ne correspond pas à n’importe quelle séquence de caractères lorsqu’il est passé à [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search), ou [regex_replace](../standard-library/regex-functions.md#regex_replace).  
+ An empty `basic_regex` object does not match any character sequence when passed to [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search), or [regex_replace](../standard-library/regex-functions.md#regex_replace).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_construct.cpp   
@@ -438,16 +437,16 @@ match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == tru
 ```  
   
 ##  <a name="flag_type"></a>  basic_regex::flag_type  
- Type des indicateurs d’option de syntaxe.  
+ The type of syntax option flags.  
   
 ```  
 typedef regex_constants::syntax_option_type flag_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme de [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_flag_type.cpp   
@@ -533,16 +532,16 @@ getloc == imbued == true
 ```  
   
 ##  <a name="flags"></a>  basic_regex::flags  
- Retourne des indicateurs d’option de syntaxe.  
+ Returns syntax option flags.  
   
 ```  
 flag_type flags() const;
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne la valeur de l’argument `flag_type` passé à l’appel le plus récent des fonctions membres [basic_regex::assign](#assign) ou, si aucun appel n’a été effectué, la valeur passée au constructeur.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the value of the `flag_type` argument passed to the most recent call to one of the [basic_regex::assign](#assign) member functions or, if no such call has been made, the value passed to the constructor.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_flags.cpp   
@@ -628,16 +627,16 @@ getloc == imbued == true
 ```  
   
 ##  <a name="getloc"></a>  basic_regex::getloc  
- Retourne l’objet des paramètres régionaux stockés.  
+ Returns the stored locale object.  
   
 ```  
 locale_type getloc() const;
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne `traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns `traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_getloc.cpp   
@@ -723,20 +722,20 @@ getloc == imbued == true
 ```  
   
 ##  <a name="imbue"></a>  basic_regex::imbue  
- Modifie l’objet des paramètres régionaux stocké.  
+ Alters the stored locale object.  
   
 ```  
 locale_type imbue(locale_type loc);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `loc`  
- Objet de paramètres régionaux à stocker.  
+ The locale object to store.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre vide `*this` et retourne `traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#imbue)`(loc)`.  
+### <a name="remarks"></a>Remarks  
+ The member function empties `*this` and returns `traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#imbue)`(loc)`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_imbue.cpp   
@@ -822,16 +821,16 @@ getloc == imbued == true
 ```  
   
 ##  <a name="locale_type"></a>  basic_regex::locale_type  
- Type de l’objet de paramètres régionaux stocké.  
+ The type of the stored locale object.  
   
 ```  
 typedef typename RXtraits::locale_type locale_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme de [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type).  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_locale_type.cpp   
@@ -917,16 +916,16 @@ getloc == imbued == true
 ```  
   
 ##  <a name="mark_count"></a>  basic_regex::mark_count  
- Retourne le nombre de sous-expressions en correspondance.  
+ Returns number of subexpressions matched.  
   
 ```  
 unsigned mark_count() const;
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne le nombre de groupes de capture dans l’expression régulière.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of capture groups in the regular expression.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_mark_count.cpp   
@@ -1012,7 +1011,7 @@ getloc == imbued == true
 ```  
   
 ##  <a name="op_eq"></a>  basic_regex::operator=  
- Assigne une valeur à l’objet d’expression régulière.  
+ Assigns a value to the regular expression object.  
   
 ```  
 basic_regex& operator=(const basic_regex& right);
@@ -1023,23 +1022,23 @@ template <class STtraits, class STalloc>
 basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `STtraits`  
- Classe de caractéristiques pour une source de chaîne.  
+ Traits class for a string source.  
   
  `STalloc`  
- Classe d'allocateurs pour une source de chaîne.  
+ Allocator class for a string source.  
   
  `right`  
- Regex source à copier.  
+ Regex source to copy.  
   
  `str`  
- Chaîne à copier.  
+ String to copy.  
   
-### <a name="remarks"></a>Notes  
- Les opérateurs remplacent chacun l’expression régulière détenue par `*this` par l’expression régulière décrite par la séquence d’opérande, puis retournent `*this`.  
+### <a name="remarks"></a>Remarks  
+ The operators each replace the regular expression held by `*this` with the regular expression described by the operand sequence, then return `*this`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_operator_as.cpp   
@@ -1125,20 +1124,20 @@ getloc == imbued == true
 ```  
   
 ##  <a name="swap"></a>  basic_regex::swap  
- Échange deux objets d’expression régulière.  
+ Swaps two regular expression objects.  
   
 ```  
 void swap(basic_regex& right) throw();
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Objet d’expression régulière à échanger.  
+ The regular expression object to swap with.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre échange les expressions régulières entre `*this` et `right`. Elle le fait dans un cadre de temps fixe, et ne lève aucune exception.  
+### <a name="remarks"></a>Remarks  
+ The member function swaps the regular expressions between `*this` and `right`. It does so in constant time and throws no exceptions.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_swap.cpp   
@@ -1224,16 +1223,16 @@ getloc == imbued == true
 ```  
   
 ##  <a name="value_type"></a>  basic_regex::value_type  
- Type de l’élément.  
+ The element type.  
   
 ```  
 typedef Elem value_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme du paramètre de modèle `Elem`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Elem`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_value_type.cpp   
@@ -1318,13 +1317,13 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<regex>](../standard-library/regex.md)   
  [regex_match](../standard-library/regex-functions.md#regex_match)   
  [regex_search](../standard-library/regex-functions.md#regex_search)   
  [regex_replace](../standard-library/regex-functions.md#regex_replace)   
  [regex](../standard-library/regex-typedefs.md#regex)   
  [wregex](../standard-library/regex-typedefs.md#wregex)   
- [regex_traits, classe](../standard-library/regex-traits-class.md)
+ [regex_traits Class](../standard-library/regex-traits-class.md)
 
 

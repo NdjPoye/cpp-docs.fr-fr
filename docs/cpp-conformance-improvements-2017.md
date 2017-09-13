@@ -1,7 +1,7 @@
 ---
-title: "Améliorations de la conformité du compilateur C++ | Microsoft Docs"
+title: C++ compiler conformance improvements | Microsoft Docs
 ms.custom: 
-ms.date: 06/05/2017
+ms.date: 08/13/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -27,63 +27,63 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 467fc9fdbdf1df73590e5ca498067eb2a5b5c900
-ms.openlocfilehash: 42b93960a6e0b829f3501c92a081953cf1051be4
+ms.sourcegitcommit: 0286098cb87ecfea244269a8e5756829759b82f7
+ms.openlocfilehash: c31882efb37255526d2536133027436067e19a78
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/09/2017
 
 ---
    
-# <a name="c-conformance-improvements-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Améliorations de la conformité de C++ dans [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
+# <a name="c-conformance-improvements-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>C++ conformance improvements in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
-## <a name="new-language-features"></a>Nouvelles fonctionnalités de langage  
-Avec la prise en charge des expressions constexpr généralisées et de NSDMI pour les agrégats, le compilateur est désormais complet pour les fonctionnalités ajoutées à la norme C++14. Notez que le compilateur ne dispose pas encore de certaines fonctionnalités des normes C++11 et C++98. Consultez [Conformité du langage Visual C++](visual-cpp-language-conformance.md) pour obtenir un tableau affichant l’état actuel du compilateur.
+## <a name="new-language-features"></a>New language features  
+With support for generalized constexpr and NSDMI for aggregates, the compiler is now complete for features added in the C++14 Standard. Note that the compiler still lacks a few features from the C++11 and C++98 Standards. See [Visual C++ Language Conformance](visual-cpp-language-conformance.md) for a table that shows the current state of the compiler.
 
-### <a name="c11"></a>C++11 :
-**Prise en charge de la fonctionnalité SFINAE pour les expressions dans d’autres bibliothèques** Le compilateur Visual C++ continue d’améliorer sa prise en charge de la fonctionnalité SFINAE pour les expressions, qui est nécessaire pour la déduction et la substitution d’argument de modèle dans lesquelles les expressions decltype et constexpr peuvent apparaître en tant que paramètres de modèle. Pour plus d’informations, consultez [Expression SFINAE improvements in Visual Studio 2017 RC](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3). 
+### <a name="c11"></a>C++11:
+**Expression SFINAE support in more libraries** The Visual C++ compiler continues to improve its support for expression SFINAE, which is required for template argument deduction and substitution where decltype and constexpr expressions may appear as template parameters. For more information, see [Expression SFINAE improvements in Visual Studio 2017 RC](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3). 
 
 
-### <a name="c-14"></a>C++ 14 :
-**NSDMI pour les agrégats** Un agrégat est un tableau ou une classe sans constructeur fourni par l’utilisateur, sans membres de données non statiques privés ou protégés, sans classes de base et sans fonctions virtuelles. À compter de C++14, les agrégats peuvent contenir des initialiseurs de membres. Pour plus d’informations, consultez [Member initializers and aggregates](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3605.html).
+### <a name="c-14"></a>C++ 14:
+**NSDMI for Aggregates** An aggregate is an array or a class with no user-provided constructor, no private or protected non-static data members, no base classes, and no virtual functions. Beginning in C++14 aggregates may contain member initializers. For more information, see [Member initializers and aggregates](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3605.html).
 
-**Expressions constexpr étendues** Les expressions déclarées en tant qu’expressions constexpr sont désormais autorisées à contenir certains types de déclarations, des instructions if et switch, des instructions de boucle et une mutation d’objets dont la vie a commencé dans l’évaluation de l’expression constexpr. En outre, il n’est plus nécessaire qu’une fonction membre non statique constexpr soit implicitement de type const. Pour plus d’informations, consultez [Relaxing constraints on constexpr functions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html). 
+**Extended constexpr** Expressions declared as constexpr are now allowed to contain certain kinds of declarations, if and switch statements, loop statements, and mutation of objects whose lifetime began within the constexpr expression evaluation. Also, there is no longer a requirement that a constexpr non-static member function be implicitly const. For more information, see [Relaxing constraints on constexpr functions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html). 
 
-### <a name="c17"></a>C++17 :
-**static_assert laconique** (disponible avec /std:c++latest) Dans C++17, le paramètre de message pour static_assert est facultatif. Pour plus d’informations, consultez [Extending static_assert, v2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf). 
+### <a name="c17"></a>C++17:
+**Terse static_assert**  (available with /std:c++latest) In C++17 the message parameter for static_assert is optional. For more information, see [Extending static_assert, v2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf). 
 
-**Attribut [[fallthrough]]** (disponible avec /std:c++latest) L’attribut [[fallthrough]] est utilisable dans le contexte des instructions switch en tant qu’indicateur informant le compilateur que le comportement fallthrough est prévu. Ce dispositif empêche le compilateur d’émettre des avertissements dans de tels cas. Pour plus d’informations, consultez [Wording for [[fallthrough]] attribute](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0188r0.pdf). 
+**[[fallthrough]] attribute**  (available with /std:c++latest) The [[fallthrough]] attribute can be used in the context of switch statements as a hint to the compiler that the fall-through behavior is intended. This prevents the compiler from issuing warnings in such cases. For more information, see [Wording for [[fallthrough]] attribute](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0188r0.pdf). 
 
-**Boucles range-based for généralisées** (aucun commutateur de compilateur nécessaire) Les Boucles range-based for n’exigent plus que begin() et end() retournent des objets du même type. Ainsi, end() peut retourner un objet sentinel, à l’image de ceux utilisés par les plages définies selon la proposition Ranges-V3. Pour plus d’informations, consultez [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) et la [bibliothèque range-v3 sur GitHub](https://github.com/ericniebler/range-v3). 
+**Generalized range-based for loops** (no compiler switch required) Range-based for loops no longer require that begin() and end() return objects of the same type. This enables end() to return a sentinel object such as used by ranges as defined in the Ranges-V3 proposal. For more information, see [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) and the [range-v3 library on GitHub](https://github.com/ericniebler/range-v3). 
 
-**Visual Studio 2017 version 15.3** :
+**Visual Studio 2017 version 15.3**:
 
-**constexpr lambdas** Les expressions lambda peuvent désormais être utilisées dans les expressions constantes. Pour plus d’informations, consultez [Constexpr Lambda](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf).
+**constexpr lambdas** Lambda expressions may now be used in constant expressions. For more information, see [Constexpr Lambda](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf).
 
-**if constexpr dans des modèles de fonction** Un modèle de fonction peut contenir des instructions `if constexpr` permettant de créer une branche au moment de la compilation. Pour plus d’informations, consultez [if constexpr](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0128r1.html).
+**if constexpr in function templates** A function template may contain `if constexpr` statements to enable compile-time branching. For more information, see [if constexpr](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0128r1.html).
 
-**Instructions Selection avec initialiseurs** Une instruction `if` peut inclure un initialiseur qui présente une variable à portée de bloc dans l’instruction elle-même. Pour plus d’informations, consultez [Selection statements with initializer](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0305r1.html).
+**Selection statements with initializers** An `if` statement may include an initializer that introduces a variable at block scope within the statement itself. For more information, see [Selection statements with initializer](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0305r1.html).
 
-**Attributs [[maybe_unused]] et [[nodiscard]]** Nouveaux attributs permettant de mettre en silence les avertissements lorsqu’une entité n’est pas utilisée, ou pour créer un avertissement si la valeur de retour d’un appel de fonction est ignorée. Pour plus d’informations, consultez [Wording for maybe_unused attribute](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0212r0.pdf) et [Proposal of unused,nodiscard and fallthrough attributes](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf).
+**[[maybe_unused]] and [[nodiscard]] attributes** New attributes to silence warnings when an entity is not used, or to create a warning if the return value of a function call is discarded. For more information, see [Wording for maybe_unused attribute](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0212r0.pdf) and [Proposal of unused,nodiscard and fallthrough attributes](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf).
 
-**Utilisation des espaces de noms d’attribut sans répétition** Nouvelle syntaxe pour activer uniquement un seul identificateur d’espace de noms dans une liste d’attributs. Pour plus d’informations, consultez [Attributes in C++](cpp/attributes2.md).
+**Using attribute namespaces without repetition** New syntax to enable only a single namespace identifier in an attribute list. For more information, see [Attributes in C++](cpp/attributes2.md).
 
-**Liaisons structurées** Il est désormais possible dans une déclaration unique de stocker une valeur avec des noms individuels pour ses composants, lorsque la valeur est un tableau, un std::tuple ou std::pair, ou contient uniquement des membres de données non statiques publiques. Pour plus d’informations, consultez [Structured Bindings](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf).
+**Structured bindings** It is now possible in a single declaration to store a value with individual names for its components, when the value is an array, a std::tuple or std::pair, or has all public non-static data members. For more information, see [Structured Bindings](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf).
 
-**Règles de construction pour les valeurs de classe enum** Il existe désormais une conversion implicite/non restrictive à partir du type sous-jacent d’une énumération étendue vers l’énumération elle-même, lorsque sa définition ne présente aucun énumérateur et que la source utilise une syntaxe d’initialisation de liste. Pour plus d’informations, consultez [Construction Rules for enum class Values ](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf).
+**Construction rules for enum class values** There is now an implicit/non-narrowing conversion from a scoped enumeration's underlying type to the enumeration itself, when its definition introduces no enumerator and the source uses a list-initialization syntax. For more information, see [Construction Rules for enum class Values ](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf).
 
-**Capture de *this par sa valeur** L’objet « \*this » dans une expression lambda peut désormais être capturé par sa valeur. Cela permet des scénarios dans lesquels l’expression lambda est invoquée dans des opérations parallèles et asynchrones, en particulier sur des architectures de machines plus récentes. Pour plus d’informations, consultez [Lambda Capture of \*this by Value as [=,\*this]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html).
+**Capturing *this by value** The "\*this" object in a lambda expression may now be captured by value. This enables scenarios in which the lambda will be invoked in parallel and asynchronous operations, especially on newer machine architectures. For more information, see [Lambda Capture of \*this by Value as [=,\*this]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html).
 
-**Suppression de operator++ pour bool** operator++ n’est plus pris en charge sur les types `bool`. Pour plus d’informations, consultez [Remove Deprecated operator++(bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html).
+**Removing operator++ for bool** operator++ is no longer supported on `bool` types. For more information, see [Remove Deprecated operator++(bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html).
 
-**Suppression du mot clé « register » déconseillé** Le mot clé `register`, précédemment déconseillé (et ignoré par le compilateur Visual C++), est supprimé du langage. Pour plus d’informations, consultez [Remove Deprecated Use of the register Keyword](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html).
+**Removing deprecated "register" keyword** The `register` keyword, previously deprecated (and ignored by the Visual C++ compiler), is now removed from the language. For more information, see [Remove Deprecated Use of the register Keyword](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html).
 
-Pour obtenir la liste complète des améliorations de la conformité jusqu’à Visual Studio 2015, Update 3, consultez [Visual C++ What’s New 2003 through 2015](https://msdn.microsoft.com/en-us/library/mt723604.aspx).
+For the complete list of conformance improvements up through Visual Studio 2015, Update 3, see [Visual C++ What's New 2003 through 2015](https://msdn.microsoft.com/en-us/library/mt723604.aspx).
 
-## <a name="bug-fixes"></a>Correctifs de bogues
+## <a name="bug-fixes"></a>Bug fixes
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
-Visual Studio 2017 déclenche correctement les erreurs de compilateur liées à la création d’objets à l’aide de listes d’initialiseurs qui n’étaient pas interceptées dans Visual Studio 2015 et qui pouvaient entraîner des blocages ou un comportement d’exécution non défini. Conformément au document N4594, point 13.3.1.7p1, dans copy-list-initialization, le compilateur doit envisager un constructeur explicite pour la résolution de la surcharge, mais doit générer une erreur si cette surcharge est choisie. 
+Visual Studio 2017 correctly raises compiler errors related to object creation using initializer lists that were not caught in Visual Studio 2015 and could lead to crashes or undefined runtime behavior. As per N4594 13.3.1.7p1, in copy-list-initialization, the compiler is required to consider an explicit constructor for overload resolution, but must raise an error if that overload is actually chosen. 
 
-Les deux exemples suivants se compilent dans Visual Studio 2015, mais pas dans Visual Studio 2017.
+The following two examples compile in Visual Studio 2015 but not in Visual Studio 2017.
 ```cpp  
 struct A
 {
@@ -98,13 +98,13 @@ int main()
 
 }
 ```
-Pour corriger l’erreur, utilisez une initialisation directe :
+To correct the error, use direct initialization:
 ```cpp  
 A a1{ 1 };
 const A& a2{ 1 };
 ```
 
-Dans Visual Studio 2015, le compilateur traitait à tort copy-list-initialization de la même façon que l’instruction copy-initialization ordinaire ; il envisageait uniquement de convertir les constructeurs pour résoudre la surcharge. Dans l’exemple suivant, Visual Studio 2015 choisit MyInt(23), mais Visual Studio 2017 déclenche l’erreur correctement. 
+In Visual Studio 2015, the compiler erroneously treated copy-list-initialization in the same way as regular copy-initialization; it considered only converting constructors for overload resolution. In the following example, Visual Studio 2015 chooses MyInt(23) but Visual Studio 2017 correctly raises the error. 
 
 ```cpp  
 // From http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_closed.html#1228
@@ -127,7 +127,7 @@ void f() {
 }
 ```
 
-Cet exemple est semblable au précédent, mais génère une erreur différente. Il réussit dans Visual Studio 2015, mais échoue dans Visual Studio 2017 avec l’erreur C2668. 
+This example is similar to the previous one but raises a different error. It succeeds in Visual Studio 2015 and fails in Visual Studio 2017 with C2668. 
 
 ```cpp  
 struct A {
@@ -147,8 +147,8 @@ int main()
 }
 ```
 
-### <a name="deprecated-typedefs"></a>Typedefs dépréciées
-Visual Studio 2017 émet désormais l’avertissement correct pour les typedefs dépréciées qui sont déclarées dans une classe ou une structure. L’exemple suivant se compile sans avertissements dans Visual Studio 2015, mais génère l’erreur C4996 dans Visual Studio 2017.
+### <a name="deprecated-typedefs"></a>Deprecated typedefs
+Visual Studio 2017 now issues the correct warning for deprecated typedefs that are declared in a class or struct. The following example compiles without warnings in Visual Studio 2015 but produces C4996 in Visual Studio 2017.
 
 ```cpp  
 struct A 
@@ -164,7 +164,7 @@ int main()
 ```
 
 ### <a name="constexpr"></a>constexpr
-Visual Studio 2017 génère correctement une erreur quand l’opérande de gauche d’une opération à évaluation conditionnelle n’est pas valide dans un contexte constexpr. Le code suivant compile dans Visual Studio 2015, mais pas dans Visual Studio 2017 (C3615, la fonction constexpr 'f' ne peut pas produire une expression constante) :
+Visual Studio 2017 correctly raises an error when the left-hand operand of a conditionally evaluating operation is not valid in a constexpr context. The following code compiles in Visual Studio 2015 but not in Visual Studio 2017 (C3615 constexpr function 'f' cannot result in a constant expression):
 
 ```cpp  
 template<int N>
@@ -178,10 +178,10 @@ constexpr bool f(const array<1> &arr)
        return arr.size() == 10 || arr.size() == 11; // C3615    
 }
 ```
-Pour corriger cette erreur, déclarez la fonction array::size() en tant que constexpr ou supprimez le qualificateur constexpr de f. 
+To correct the error, either declare the array::size() function as constexpr or remove the constexpr qualifier from f. 
 
-### <a name="class-types-passed-to-variadic-functions"></a>Types de classe transmis aux fonctions variadiques
-Dans Visual Studio 2017, les classes ou structures qui sont passées à une fonction variadique telle que printf doivent être copiables de manière triviale. Quand de tels objets sont passés, le compilateur effectue simplement une copie au niveau du bit et n’appelle pas le constructeur ou le destructeur. 
+### <a name="class-types-passed-to-variadic-functions"></a>Class types passed to variadic functions
+In Visual Studio 2017, classes or structs that are passed to a variadic function such as printf must be trivially copyable. When passing such objects, the compiler simply makes a bitwise copy and does not call the constructor or destructor. 
 
 ```cpp  
 #include <atomic>
@@ -209,18 +209,18 @@ int main()
                       // as an argument to a variadic function
 }
 ```
-Pour corriger cette erreur, vous pouvez appeler une fonction membre qui retourne un type copiable de manière triviale, 
+To correct the error, you can call a member function that returns a trivially copyable type, 
 
 ```cpp  
     std::atomic<int> i(0);
     printf("%i\n", i.load());
 ```
-ou effectuer un cast statique pour convertir l’objet avant de le transmettre :
+or else perform a static cast to convert the object before passing it:
 ```cpp  
     struct S {/* as before */} s(0);
     printf("%i\n", static_cast<int>(s))
 ```
-Pour les chaînes générées et gérées à l’aide de CStringW, vous devez utiliser le `operator LPCWSTR()` fourni pour caster un objet CStringW vers le pointeur C attendu par la chaîne de format.
+For strings built and managed using CStringW, the provided `operator LPCWSTR()` should be used to cast a CStringW object to the C pointer expected by the format string.
 
 ```cpp  
 CStringW str1;
@@ -228,8 +228,8 @@ CStringW str2;
 str1.Format(L"%s", static_cast<LPCWSTR>(str2));
 ```
 
-### <a name="cv-qualifiers-in-class-construction"></a>Qualificateurs cv dans la construction de la classe
-Dans Visual Studio 2015, le compilateur ignore parfois à tort le qualificateur cv pendant la génération d’un objet de classe par le biais d’un appel de constructeur. Cela peut provoquer un incident ou un comportement inattendu au moment de l’exécution. L’exemple suivant se compile dans Visual Studio 2015, mais génère une erreur de compilateur dans Visual Studio 2017 :
+### <a name="cv-qualifiers-in-class-construction"></a>cv-qualifiers in class construction
+In Visual Studio 2015, the compiler sometimes incorrectly ignores the cv-qualifier when generating a class object via a constructor call. This can potentially cause a crash or unexpected runtime behavior. The following example compiles in Visual Studio 2015 but raises a compiler error in Visual Studio 2017:
 
 ```cpp  
 struct S 
@@ -240,10 +240,10 @@ struct S
 
 int i = (const S)0; // error C2440
 ```
-Pour corriger cette erreur, déclarez l’opérateur int() en tant que const. 
+To correct the error, declare operator int() as const. 
 
-### <a name="access-checking-on-qualified-names-in-templates"></a>Contrôle d’accès sur les noms qualifiés dans les modèles
-Les versions précédentes du compilateur n’effectuaient pas de contrôle d’accès sur les noms qualifiés dans certains contextes de modèle. Cela peut interférer avec le comportement attendu de la fonctionnalité SFINAE où la substitution est supposée échouer en raison de l’inaccessibilité d’un nom. Cette situation peut entraîner un incident ou un comportement inattendu au moment de l’exécution en raison de l’appel par le compilateur de la surcharge incorrecte de l’opérateur. Dans Visual Studio 2017, une erreur de compilateur est générée. L’erreur spécifique peut varier, mais, en général, il s’agit de « C2672 fonction correspondante surchargée introuvable ». Le code suivant se compile dans Visual Studio 2015, mais génère une erreur dans Visual Studio 2017 :
+### <a name="access-checking-on-qualified-names-in-templates"></a>Access checking on qualified names in templates
+Previous versions of the compiler did not perform access checking on qualified names in some template contexts. This can interfere with expected SFINAE behavior where the substitution is expected to fail due to the inaccessibility of a name. This could have potentially caused a crash or unexpected behavior at runtime due to the compiler incorrectly calling the wrong overload of the operator. In Visual Studio 2017, a compiler error is raised. The specific error might vary but typically it is "C2672 no matching overloaded function found". The following code compiles in Visual Studio 2015 but raises an error in Visual Studio 2017:
 
 ```cpp  
 #include <type_traits>
@@ -261,8 +261,8 @@ int main()
 }
 ```
 
-### <a name="missing-template-argument-lists"></a>Listes d’arguments de modèle manquantes
-Dans Visual Studio 2015 et versions antérieures, le compilateur ne diagnostiquait pas les listes d’arguments de modèle manquantes quand le modèle apparaissait dans une liste de paramètres de modèle (par exemple, dans le cadre d’un argument de modèle par défaut ou d’un paramètre de modèle sans type). Cela peut entraîner un comportement imprévisible, y compris des pannes du compilateur ou un comportement inattendu au moment de l’exécution. Le code suivant se compile dans Visual Studio 2015, mais génère une erreur dans Visual Studio 2017 :
+### <a name="missing-template-argument-lists"></a>Missing template argument lists
+In Visual Studio 2015 and earlier, the compiler did not diagnose missing template argument lists when the template appeared in a template parameter list (for example as part of a default template argument or a non-type template parameter). This can result in unpredictable behavior, including compiler crashes or unexpected runtime behavior. The following code compiles in Visual Studio 2015 but produces an error in Visual Studio 2017.
 
 ```cpp  
 template <class T> class ListNode;
@@ -273,10 +273,10 @@ template <class T, ListNodeMember M> class ListHead; // C2955: 'ListNodeMember':
 // correct:  template <class T, ListNodeMember<T> M> class ListHead;  
 ```
 
-### <a name="expression-sfinae"></a>Fonctionnalité SFINAE pour les expressions
-Pour prendre en charge la fonctionnalité SFINAE pour les expressions, le compilateur analyse maintenant les arguments decltype quand les modèles sont déclarés et non instanciés. Ainsi, si une spécialisation non dépendante est trouvée dans l’argument decltype, elle n’est pas reportée à l’instanciation et est traitée immédiatement, et toute erreur résultante est diagnostiquée à ce moment-là.  
+### <a name="expression-sfinae"></a>Expression-SFINAE
+To support expression-SFINAE, the compiler now parses decltype arguments when the templates are declared rather than instantiated. Consequently, if a non-dependent specialization is found in the decltype argument, it will not be deferred to instantiation-time and will be processed immediately and any resulting errors will be diagnosed at that time.  
 
-L’exemple suivant montre une erreur de compilateur de ce type générée au moment de la déclaration :
+The following example shows such a compiler error that is raised at the point of declaration:
 
 ```cpp  
 #include <utility>
@@ -296,15 +296,15 @@ static_assert(test1, "PASS1");
 constexpr bool test2 = !IsCallable<int*, int>::value;
 static_assert(test2, "PASS2");
 ```
-### <a name="classes-declared-in-anonymous-namespaces"></a>Classes déclarées dans des espaces de noms anonymes
-Selon la norme C++, une classe déclarée dans un espace de noms anonyme a une liaison interne et, par conséquent, ne peut pas être exportée. Dans Visual Studio 2015 et versions antérieures, cette règle n’était pas appliquée. Dans Visual Studio 2017, la règle est partiellement appliquée. L’exemple suivant génère cette erreur dans Visual Studio 2017 : « erreur C2201 : const anonymous namespace::S1::vftable doit avoir une liaison externe afin d’être exporté/importé. »
+### <a name="classes-declared-in-anonymous-namespaces"></a>Classes declared in anonymous namespaces
+According to the C++ standard, a class declared inside an anonymous namespace has internal linkage, and therefore cannot be exported. In Visual Studio 2015 and earlier, this rule was not enforced. In Visual Studio 2017 the rule is partially enforced. The following example raises this error in Visual Studio 2017: "error C2201: const anonymous namespace::S1::vftable: must have external linkage in order to be exported/imported."
 
 ```cpp
 struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
 ```
 
-### <a name="default-initializers-for-value-class-members-ccli"></a>Initialiseurs par défaut pour les membres de classe value (C++/CLI)
-Dans Visual Studio 2015 et antérieur, le compilateur autorisait (mais ignorait) un initialiseur de membre par défaut pour un membre d’une classe value. L’initialisation par défaut d’une classe value initialise systématiquement les membres à zéro ; un constructeur par défaut n’est pas autorisé. Dans Visual Studio 2017, les initialiseurs de membres par défaut déclenchent une erreur de compilateur, comme illustré dans cet exemple :
+### <a name="default-initializers-for-value-class-members-ccli"></a>Default initializers for value class members (C++/CLI)
+In Visual Studio 2015 and earlier, the compiler permitted (but ignored) a default member initializer for a member of a value class. Default initialization of a value class always zero-initializes the members; a default constructor is not permitted. In Visual Studio 2017, default member initializers raise a compiler error, as shown in this example:
 
 ```cpp  
 value struct V
@@ -314,8 +314,8 @@ value struct V
 };
 ```
 
-### <a name="default-indexers-ccli"></a>Indexeurs par défaut (C++/CLI)
-Dans Visual Studio 2015 et antérieur, le compilateur identifiait à tort une propriété par défaut en tant qu’indexeur par défaut dans certaines circonstances. Il était possible de contourner le problème en utilisant l’identificateur « default » pour accéder à la propriété. La solution de contournement elle-même est devenue problématique dès que default a été introduit comme mot clé dans C++11. Ainsi, dans Visual Studio 2017, les bogues qui nécessitaient la solution de contournement ont été corrigés, et le compilateur génère maintenant une erreur quand l’utilisateur recourt à « default » pour accéder à la propriété par défaut d’une classe.
+### <a name="default-indexers-ccli"></a>Default Indexers (C++/CLI)
+In Visual Studio 2015 and earlier, the compiler in some cases misidentified a default property as a default indexer. It was possible to work around the issue by using the identifier "default" to access the property. The workaround itself became problematic after default was introduced as a keyword in C++11. Therefore, in Visual Studio 2017 the bugs that required the workaround were fixed, and the compiler now raises an error when "default" is used to access the default property for a class.
 
 ```cpp  
 //class1.cs
@@ -358,7 +358,7 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 }
 ```
 
-Dans Visual Studio 2017, vous pouvez accéder aux deux propriétés Value par leur nom :
+In Visual Studio 2017, you can access both Value properties by their name:
 
 ```cpp  
 #using "class1.dll"
@@ -370,9 +370,9 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 }
 ```
 
-## <a name="update_153"></a> Correctifs de bogues dans Visual Studio 2017 version 15.3
-### <a name="calls-to-deleted-member-templates"></a>Appels à des modèles membres supprimés
-Dans les versions précédentes de Visual Studio, le compilateur ne parvenait pas dans certains cas à émettre une erreur pour les appels incorrects à un modèle membre supprimé qui pouvaient éventuellement provoquer des incidents lors de l’exécution. Le code suivant génère désormais l’erreur C2280, « 'int S<int>::f<int>(void)' : tentative de référencement d’une fonction supprimée » :
+## <a name="update_153"></a> Bug fixes in Visual Studio 2017 version 15.3
+### <a name="calls-to-deleted-member-templates"></a>Calls to deleted member templates
+In previous versions of Visual Studio, the compiler in some cases would fail to emit an error for ill-formed calls to a deleted member template which would’ve potentially caused crashes at runtime. The following code now produces C2280, "'int S<int>::f<int>(void)': attempting to reference a deleted function":
 ```cpp
 template<typename T> 
 struct S { 
@@ -384,10 +384,10 @@ void g()
    decltype(S<int>::f<int>()) i; // this should fail 
 }
 ```
-Pour corriger cette erreur, déclarez i comme `int`.
+To fix the error, declare i as `int`.
 
-### <a name="pre-condition-checks-for-type-traits"></a>Vérifications de conditions préalables pour les traits de type
-Visual Studio 2017 version 15.3 améliore les vérifications de conditions préalables pour les traits de type afin de suivre plus strictement la norme. Une telle vérification doit être affectée. Le code suivant génère l’erreur C2139 dans la version de mise à jour 15.3 :
+### <a name="pre-condition-checks-for-type-traits"></a>Pre-condition checks for type traits
+Visual Studio 2017 version 15.3 improves pre-condition checks for type-traits to more strictly follow the standard. One such check is for assignable. The following code produces C2139 in Update Version 15.3:
 
 ```cpp
 struct S; 
@@ -397,10 +397,10 @@ static_assert(!__is_assignable(S, S), "fail"); // C2139 in 15.3
 static_assert(__is_convertible_to(E, E), "fail"); // C2139 in 15.3
 ```
 
-### <a name="new-compiler-warning-and-runtime-checks-on-native-to-managed-marshaling"></a>Nouvel avertissement du compilateur et nouvelles vérifications à l’exécution sur du marshaling de fonctions natives à managées
-L’appel des fonctions managées aux fonctions natives nécessite un marshaling. Le CLR exécute le marshaling, mais il ne comprend pas la sémantique C++. Si vous passez un objet natif par valeur, le CLR appelle le constructeur de copie de l’objet ou utilise BitBlt, ce qui peut provoquer un comportement non défini lors de l’exécution. 
+### <a name="new-compiler-warning-and-runtime-checks-on-native-to-managed-marshaling"></a>New compiler warning and runtime checks on native-to-managed marshaling
+Calling from managed functions to native functions requires marshalling. The CLR performs the marshaling but it doesn't understand C++ semantics. If you pass a native object by value, CLR will either call the object's copy-constructor or use BitBlt, which may cause undefined behavior at runtime. 
  
-Désormais, le compilateur émet un avertissement s’il peut savoir au moment de la compilation qu’un objet natif avec un constructeur de copie supprimé est transmis entre les limites native et managée par valeur. Pour les cas où le compilateur ne sait rien au moment de la compilation, il injecte une vérification à l’exécution afin que le programme appelle std::terminate immédiatement dès qu’un marshaling incorrect se produit. Dans la version de mise à jour 15.3, le code suivant génère l’erreur C4606, « 'A' : le passage d’un argument par valeur à travers une frontière native/managée nécessite un constructeur de copie valide. Sinon, le comportement au moment de l’exécution est non défini. »
+Now the compiler will emit a warning if it can know at compile time that a native object with deleted copy ctor is passed between native and managed boundary by value. For those cases in which the compiler doesn't know at compile time, it will inject a runtime check so that the program will call std::terminate immediately when an ill-formed marshalling occurs. In Update Version 15.3, the following code produces C4606 " 'A': passing argument by value across native and managed boundary requires valid copy constructor. Otherwise the runtime behavior is undefined".
 ```cpp
 class A 
 { 
@@ -430,16 +430,16 @@ int main()
     f(A()); // This call from managed to native requires marshalling. The CLR doesn't understand C++ and uses BitBlt, which will result in a double-free later. 
 }
 ```
-Pour corriger cette erreur, supprimez la directive `#pragma managed` pour marquer l’appelant comme natif et éviter le marshaling. 
+To fix the error, remove the `#pragma managed` directive to mark the caller as native and avoid marshalling. 
 
-### <a name="experimental-api-warning-for-winrt"></a>Avertissement d’API expérimentale pour WinRT
-Les API WinRT publiées pour l’expérimentation et les commentaires sont décorées avec `Windows.Foundation.Metadata.ExperimentalAttribute`. Dans Visual Studio 2017 version 15.3, le compilateur génère l’avertissement C4698 quand il rencontre l’attribut. Certaines API dans les versions précédentes du SDK Windows ont déjà été décorées avec l’attribut et les appels à ces API déclenchent cet avertissement du compilateur. L’attribut est supprimé de tous les types fournis dans les SDK Windows plus récents mais, si vous utilisez un SDK plus ancien, vous devez supprimer ces avertissements pour tous les appels aux types fournis.
-Le code suivant génère l’avertissement C4698 : « 'Windows::Storage::IApplicationDataStatics2::GetForUserAsync' est utilisé à des fins d’évaluation uniquement. Il sera peut-être changé ou supprimé au cours des prochaines mises à jour. » :
+### <a name="experimental-api-warning-for-winrt"></a>Experimental API warning for WinRT
+WinRT APIs that are released for experimentation and feedback will be decorated with `Windows.Foundation.Metadata.ExperimentalAttribute`. In Visual Studio 2017 version 15.3, the compiler will produce warning C4698 when it encounters the attribute. A few APIs in previous versions of the Windows SDK have already been decorated with the attribute, and calls to these APIs will start triggering this compiler warning. Newer Windows SDKs will have the attribute removed from all shipped types, but if you are using an older SDK, you'll need to suppress these warnings for all calls to shipped types.
+The following code produces warning C4698: "'Windows::Storage::IApplicationDataStatics2::GetForUserAsync' is for evaluation purposes only and is subject to change or removal in future updates":
 ```cpp
 Windows::Storage::IApplicationDataStatics2::GetForUserAsync() //C4698
 ```
 
-Pour désactiver l’avertissement, ajoutez un #pragma :
+To disable the warning, add a #pragma:
 
 ```cpp
 #pragma warning(push) 
@@ -449,8 +449,8 @@ Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
  
 #pragma warning(pop)
 ```
-### <a name="out-of-line-definition-of-a-template-member-function"></a>Définition hors ligne d’une fonction membre de modèle 
-Visual Studio 2017 version 15.3 génère une erreur quand elle rencontre une définition hors ligne d’une fonction membre de modèle qui n’a pas été déclarée dans la classe. Le code suivant génère désormais l’erreur C2039 : 'f' : n’est pas un membre de 'S' :
+### <a name="out-of-line-definition-of-a-template-member-function"></a>Out-of-line definition of a template member function 
+Visual Studio 2017 version 15.3 produces an error when it encounters an out-of-line definition of a template member function that was not declared in the class. The following code now produces error C2039: 'f': is not a member of 'S':
 
 ```cpp
 struct S {}; 
@@ -459,7 +459,7 @@ template <typename T>
 void S::f(T t) {} //C2039: 'f': is not a member of 'S'
 ```
 
-Pour corriger cette erreur, ajoutez une déclaration à la classe :
+To fix the error, add a declaration to the class:
 
 ```cpp
 struct S { 
@@ -470,11 +470,11 @@ template <typename T>
 void S::f(T t) {}
 ```
 
-### <a name="attempting-to-take-the-address-of-this-pointer"></a>Tentative de prendre l’adresse du pointeur 'this'
-En C++, 'this' est une prvalue de pointeur de type vers X. Vous ne pouvez pas prendre l’adresse de 'this' ni la lier à une référence lvalue. Dans les versions précédentes de Visual Studio, le compilateur vous permettait de contourner cette restriction en effectuant un cast. Dans Visual Studio 2017 version 15.3, le compilateur génère l’erreur C2664.
+### <a name="attempting-to-take-the-address-of-this-pointer"></a>Attempting to take the address of "this" pointer
+In C++ 'this' is an prvalue of type pointer to X. You cannot take the address of 'this' or bind it to an lvalue reference. In previous versions of Visual Studio, the compiler would allow you to circumvent this restriction by performing a cast. In Visual Studio 2017 version 15.3, the compiler produces error C2664.
 
-### <a name="conversion-to-an-inaccessible-base-class"></a>Conversion vers une classe de base inaccessible
-Visual Studio 2017 version 15.3 génère une erreur quand vous essayez de convertir un type en une classe de base qui n’est pas accessible. Le compilateur génère désormais « erreur C2243 : 'cast de type' : la conversion de 'D *' en 'B *' existe, mais n’est pas accessible ». Le code suivant est incorrect et peut éventuellement provoquer un incident lors de l’exécution. Le compilateur génère désormais l’erreur C2243 quand il rencontre un code tel que le suivant :
+### <a name="conversion-to-an-inaccessible-base-class"></a>Conversion to an inaccessible base class
+Visual Studio 2017 version 15.3 produces an error when you attempt to convert a type to a base class which is inaccessible. The compiler now raises "error C2243: 'type cast': conversion from 'D *' to 'B *' exists, but is inaccessible". The following code is ill-formed and can potentially cause a crash at runtime. The compiler now produces C2243 when it encounters code like this:
 
 ```cpp
 #include <memory> 
@@ -487,10 +487,10 @@ void f()
    std::unique_ptr<B>(new D()); 
 }
 ```
-### <a name="default-arguments-are-not-allowed-on-out-of-line-definitions-of-member-functions"></a>Les arguments par défaut ne sont pas autorisés sur les définitions hors ligne des fonctions membres
-Les arguments par défaut ne sont pas autorisés sur les définitions hors ligne des fonctions membres dans les classes de modèles Le compilateur émet un avertissement sous /permissive et une erreur matérielle sous /permissive-. 
+### <a name="default-arguments-are-not-allowed-on-out-of-line-definitions-of-member-functions"></a>Default arguments are not allowed on out of line definitions of member functions
+Default arguments are not allowed on out-of-line definitions of member functions in template classes The compiler will issue a warning under /permissive, and a hard error under /permissive-. 
 
-Dans les versions précédentes de Visual Studio, le code incorrect suivant peut entraîner un incident lors de l’exécution. Visual Studio 2017 version 15.3 génère l’avertissement C5034 : 'A<T>::f' : une définition hors ligne d’un membre d’un modèle de classe ne peut pas avoir d’arguments par défaut :
+In previous versions of Visual Studio, the following ill-formed code could potentially cause a runtime crash. Visual Studio 2017 version 15.3 produces warning C5034: 'A<T>::f': an out-of-line definition of a member of a class template cannot have default arguments:
 ```cpp
  
 template <typename T> 
@@ -504,10 +504,10 @@ T A<T>::f(T t, bool b = false) // C5034
 ... 
 }
 ```
-Pour corriger cette erreur, supprimez l’argument par défaut « = false ». 
+To fix the error, remove the "= false" default argument. 
 
-### <a name="use-of-offsetof-with-compound-member-designator"></a>Utilisation d’offsetof avec désignateur de membre composé
-Dans Visual Studio 2017 version 15.3, l’utilisation d’offsetof(T, m) où m est un « désignateur de membre composé » aboutit à un avertissement quand vous compilez avec l’option /Wall. Le code suivant est incorrect et peut éventuellement provoquer un incident lors de l’exécution. Visual Studio 2017 version 15.3 génère « l’avertissement C4841 : extension non standard utilisée : désignateur de membre composé dans offsetof » :
+### <a name="use-of-offsetof-with-compound-member-designator"></a>Use of offsetof with compound member designator
+In Visual Studio 2017 version 15.3, using offsetof(T, m) where m is a "compound member designator" will result in a warning when you compile with the /Wall option. The following code is ill-formed and could potentially cause a crash at runtime. Visual Studio 2017 version 15.3 produces "warning C4841: non-standard extension used: compound member designator in offseto":
 
 ```cpp
   
@@ -518,7 +518,7 @@ int arr[10];
 // warning C4841: non-standard extension used: compound member designator in offsetof 
 constexpr auto off = offsetof(A, arr[2]);
 ```
-Pour corriger le code, désactivez l’avertissement avec un pragma ou modifiez le code pour ne pas utiliser offsetof : 
+To fix the code, either disable the warning with a pragma or change the code to not use offsetof: 
 
 ```cpp
 #pragma warning(push) 
@@ -527,8 +527,8 @@ constexpr auto off = offsetof(A, arr[2]);
 #pragma warning(pop) 
 ```
 
-### <a name="using-offsetof-with-static-data-member-or-member-function"></a>Utilisation d’offsetof avec des données membres static ou une fonction membre
-Dans Visual Studio 2017 version 15.3, l’utilisation d’offsetof(T, m) où m fait référence à des données membres static ou une fonction membre aboutit à une erreur. Le code suivant génère « erreur C4597 : comportement non défini : offsetof appliqué à la fonction membre « foo » » et « erreur C4597 : comportement non défini : offsetof appliqué à des données membres static 'bar' » :
+### <a name="using-offsetof-with-static-data-member-or-member-function"></a>Using offsetof with static data member or member function
+In Visual Studio 2017 version 15.3, using offsetof(T, m) where m refers to a static data member or a member function will result in an error. The following code produces "error C4597: undefined behavior: offsetof applied to member function 'foo'" and "error C4597: undefined behavior: offsetof applied to static data member 'bar'":
 ```cpp
  
 #include <cstddef> 
@@ -542,25 +542,25 @@ constexpr auto off = offsetof(A, foo);
 Constexpr auto off2 = offsetof(A, bar);
 ```
  
-Ce code est incorrect et peut éventuellement provoquer un incident lors de l’exécution. Pour corriger cette erreur, modifiez le code pour ne plus appeler un comportement non défini. Il s’agit de code non portable qui n’est pas autorisé par la norme C++.
+This code is ill-formed and could potentially cause a crash at runtime. To fix the error, change the code to no longer invoke undefined behavior. This is non-portable code that is disallowed by the C++ standard.
 
-### <a name="new-warning-on-declspec-attributes"></a>Nouvel avertissement sur les attributs declspec
-Dans Visual Studio 2017 version 15.3, le compilateur n’ignore plus les attributs si __declspec(…) est appliqué avant une spécification de liaison 'C' externe. Auparavant, le compilateur ignorait l’attribut, ce qui pouvait avoir des implications lors de l’exécution. Quand l’option `/Wall /WX` est définie, le code suivant génère « avertissement C4768 : les attributs __declspec avant la spécification de liaison sont ignorés » :
+### <a name="new-warning-on-declspec-attributes"></a>New warning on declspec attributes
+In Visual Studio 2017 version 15.3, the compiler no longer ignores attributes if __declspec(…) is applied before extern "C" linkage specification. Previously, the compiler would ignore the attritbute, which could have runtime implications. When the `/Wall /WX` option is set, the following code produces "warning C4768: __declspec attributes before linkage specification are ignored":
 
 ```cpp
  
 __declspec(noinline) extern "C" HRESULT __stdcall //C4768
 ```
 
-Pour corriger l’avertissement, placez 'C' externe en premier :
+To fix the warning, put extern "C" first:
 
 ```cpp
 extern "C" __declspec(noinline) HRESULT __stdcall
 ```
-Cet avertissement est désactivé par défaut et impacte uniquement le code compilé avec `/Wall /WX`.
+This warning is off-by-default and only impacts code compiled with  `/Wall /WX`.
 
-### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype et appels à des destructeurs supprimés
-Dans les versions précédentes de Visual Studio, le compilateur ne détectait pas quand un appel à un destructeur supprimé se produisait dans le contexte de l’expression associée à « decltype ». Dans Visual Studio 2017 version 15.3, le code suivant génère « erreur C2280 : 'A<T>::~A(void)' : tentative de référencement d’une fonction supprimée » :
+### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype and calls to deleted destructors
+In previous versions of Visual Studio, the compiler did not detect when a call to a deleted destructor occurred in the context of the expression associated with 'decltype'. In Visual Studio 2017 version 15.3, the following code produces  "error C2280: 'A<T>::~A(void)': attempting to reference a deleted function":
 
 ```cpp
 template<typename T> 
@@ -580,16 +580,16 @@ void h()
    g(42); 
 }
 ```
-### <a name="uninitialized-const-variables"></a>Variables const non initialisées
-La version Visual Studio 2017 RTW avait une régression dans laquelle le compilateur C++ n’émettait pas de diagnostic si une variable 'const' n’était pas initialisée. Cette régression a été corrigée dans Visual Studio 2017 version 15.3. Le code suivant génère désormais « avertissement C4132 : 'Value' : un objet const doit être initialisé » :
+### <a name="uninitialized-const-variables"></a>Uninitialized const variables
+Visual Studio 2017 RTW release had a regression in which the C++ compiler would not issue a diagnostic if a 'const' variable was not initialized. This regression has been fixed in Visual Studio 2017 version 15.3. The following code now produces "warning C4132: 'Value': const object should be initialized":
 
 ```cpp
 const int Value; //C4132
 ```
-Pour corriger cette erreur, attribuez une valeur à `Value`.
+To fix the error, assign a value to `Value`.
 
-### <a name="empty-declarations"></a>Déclarations vides
-Visual Studio 2017 version 15.3 émet désormais un avertissement relatif aux déclarations vides pour tous les types, non seulement les types intégrés. Le code suivant génère désormais un avertissement C4091 de niveau 2 pour les quatre déclarations :
+### <a name="empty-declarations"></a>Empty declarations
+Visual Studio 2017 version 15.3 now warns on empty declarations for all types, not just built-in types. The following code now produces a level 2 C4091 warning for all four declarations:
 
 ```cpp
 struct A {};
@@ -602,13 +602,13 @@ B<int>; // warning C4091 : '' : ignored on left of 'B<int>' when no variable is 
 C;      // warning C4091 : '' : ignored on left of 'C' when no variable is declared
 ```
 
-Pour supprimer les avertissements, il vous suffit de commenter ou de supprimer les déclarations vides. Dans les cas où l’objet sans nom doit avoir un effet secondaire (par exemple, RAII), vous devez lui affecter un nom.
+To remove the warnings, simply comment-out or remove the empty declarations. In cases where the un-named object is intended to have a side effect (such as RAII) it should be given a name.
  
-L’avertissement est exclu sous /Wv:18 et est activé par défaut sous le niveau d’avertissement W2.
+The warning is excluded under /Wv:18 and is on by default under warning level W2.
 
 
-### <a name="stdisconvertible-for-array-types"></a>std::is_convertible pour les types tableau
-Les versions précédentes du compilateur ont donné des résultats incorrects avec [std::is_convertible](standard-library/is-convertible-class.md) pour les types tableau. Cela obligeait les auteurs de bibliothèques à particulariser le compilateur Visual C++ lors de l’utilisation du trait de type `std::is_convertible<…>`. Dans l’exemple suivant, les assertions statiques passent dans les versions antérieures de Visual Studio, mais échouent dans Visual Studio 2017 version 15.3 :
+### <a name="stdisconvertible-for-array-types"></a>std::is_convertible for array types
+Previous versions of the compiler gave incorrect results for [std::is_convertible](standard-library/is-convertible-class.md) for array types. This required library writers to special-case the Visual C++ compiler when using the `std::is_convertible<…>` type trait. In the following example, the static asserts pass in earlier versions of Visual Studio but fail in Visual Studio 2017 version 15.3:
 
 ```cpp
 #include <type_traits>
@@ -621,13 +621,13 @@ static_assert(std::is_convertible<Array&, Array>::value, "");
 static_assert(std::is_convertible<Array, Array&>::value, "");
 ```
 
-Le calcul de **std::is_convertible<From, To>** s’effectue en vérifiant si une définition de fonction imaginaire est correcte :
+**std::is_convertible<From, To>** is calculated by checking to see if an imaginary function definition is well formed:
 ```cpp 
    To test() { return std::declval<From>(); }
 ``` 
 
-### <a name="private-destructors-and-stdisconstructible"></a>Les destructeurs privés et std::is_constructible
-Les versions précédentes du compilateur ignoraient si un destructeur était privé lors de la détermination du résultat de [std::is_constructible](standard-library/is-constructible-class.md). Il en tient compte désormais. Dans l’exemple suivant, les assertions statiques passent dans les versions antérieures de Visual Studio, mais échouent dans Visual Studio 2017 version 15.3 :
+### <a name="private-destructors-and-stdisconstructible"></a>Private destructors and std::is_constructible
+Previous versions of the compiler ignored whether a destructor was private when deciding the result of [std::is_constructible](standard-library/is-constructible-class.md). It now considers them. In the following example, the static asserts pass in earlier versions of Visual Studio but fail in Visual Studio 2017 version 15.3:
 
 ```cpp
 #include <type_traits>
@@ -642,14 +642,14 @@ private:
 static_assert(std::is_constructible<PrivateDtor, int>::value);
 ```  
 
-Les destructeurs privés entraînent la non-constructibilité d’un type. Le calcul de **std::is_constructible<T, Args...>** est effectué comme si la déclaration suivante était écrite :
+Private destructors cause a type to be non-constructible. **std::is_constructible<T, Args…>** is calculated as if the following declaration were written:
 ```cpp 
    T obj(std::declval<Args>()…)
 ``` 
-Cet appel implique un appel de destructeur.
+This call implies a destructor call.
 
-### <a name="c2668-ambiguous-overload-resolution"></a>C2668 : Résolution de surcharge ambiguë
-Parfois, les versions précédentes du compilateur ne parvenaient pas à détecter une ambiguïté lors de la découverte de plusieurs candidats par le biais simultanément des déclarations et des recherches dépendantes d’arguments. Cela pouvait conduire à choisir une surcharge incorrecte et entraîner un comportement inattendu au moment de l’exécution. Dans l’exemple suivant, Visual Studio 2017 version 15.3 déclenche correctement C2668, 'f' : appel ambigu à une fonction surchargée :
+### <a name="c2668-ambiguous-overload-resolution"></a>C2668: Ambiguous overload resolution
+Previous versions of the compiler sometimes failed to detect ambiguity when it found multiple candidates via both using declarations and argument dependent lookup. This can lead to wrong overload being chosen and unexpected runtime behavior. In the following example, Visual Studio 2017 version 15.3 correctly raises C2668 'f': ambiguous call to overloaded function:
 
 ```cpp
 namespace N {
@@ -672,11 +672,11 @@ void f()
    f(s1, s2); // C2668
 }
 ```
-Pour corriger le code, supprimez l’instruction using N::f si vous souhaitez appeler :: f().
+To fix the code, remove the using N::f statement if you intended to call ::f().
 
-### <a name="c2660-local-function-declarations-and-argument-dependent-lookup"></a>C2660 : Déclarations de fonction locale et recherche dépendante d’argument
-Les déclarations de fonction locale masquent la déclaration de fonction dans la portée englobante et désactivent la recherche dépendante d’argument.
-Pourtant, les versions précédentes du compilateur Visual C++ effectuaient une recherche dépendante d’argument dans ce cas, conduisant éventuellement à choisir une surcharge incorrecte et entraînant un comportement inattendu au moment de l’exécution. En règle générale, l’erreur est due à une signature incorrecte de la déclaration de fonction locale. Dans l’exemple suivant, Visual Studio 2017 version 15.3 déclenche correctement C2660, 'f' : la fonction n’accepte pas 2 arguments :
+### <a name="c2660-local-function-declarations-and-argument-dependent-lookup"></a>C2660: local function declarations and argument dependent lookup
+Local function declarations hide the function declaration in the enclosing scope and disable argument dependent lookup.
+However, previous versions of the Visual C++ compiler performed argument dependent lookup in this case, potentially leading to the wrong overload being chosen and unexpected runtime behavior. Typically, the error is due to an incorrect signature of the local function declaration. In the following example, Visual Studio 2017 version 15.3 correctly raises C2660 'f': function does not take 2 arguments:
 
 ```cpp
 struct S {}; 
@@ -691,10 +691,10 @@ void g()
 }
 ```
 
-Pour résoudre le problème, changez la signature **f(S)** ou supprimez-la.
+To fix the problem, either change the **f(S)** signature or remove it.
 
-### <a name="c5038-order-of-initialization-in-initializer-lists"></a>C5038 : Ordre d’initialisation dans les listes d’initialiseurs
-Les membres de classe sont initialisés dans l’ordre suivant lequel ils sont déclarés, et non selon celui de leur apparition dans les listes d’initialiseurs. Les versions précédentes du compilateur n’avertissaient pas lorsque l’ordre de la liste d’initialiseurs était différent de celui des déclarations. Cela pouvait aboutir à un comportement d’exécution non défini si l’initialisation d’un membre dépendait d’un autre membre dans la liste déjà en cours d’initialisation. Dans l’exemple suivant, Visual Studio 2017 version 15.3 (avec /Wall) génère l’avertissement C5038 : le membre de données 'A::y' sera initialisé après le membre de données 'A::x' :
+### <a name="c5038-order-of-initialization-in-initializer-lists"></a>C5038: order of initialization in initializer lists
+Class members are initialized in the order they are declared, not the order they appear in initializer lists. Previous versions of the compiler did not warn when the order of the initializer list differed from the order of declaration. This could lead to undefined runtime behavior if the intialization of one member depended on another member in the list already being initialized. In the following example, Visual Studio 2017 version 15.3 (with /Wall) raises warning C5038: data member 'A::y' will be initialized after data member 'A::x':
 
 ```cpp
 struct A
@@ -705,10 +705,10 @@ struct A
 };
 
 ```
-Pour résoudre le problème, réorganisez la liste d’initialiseurs afin d’avoir le même ordre que dans les déclarations. Un avertissement similaire est déclenché lorsqu’un ou les deux initialiseurs se réfèrent aux membres de classe de base.
+To fix the problem arrange the intializer list to have the same order as the declarations. A similar warning is raised when one or both initializers refer to base class members.
 
-Notez que l’avertissement est désactivé par défaut et affecte uniquement le code compilé avec /Wall.
+Note that the warning is off-by-default and only affects code compiled with /Wall.
 
-## <a name="see-also"></a>Voir aussi  
-[Conformité du langage Visual C++](visual-cpp-language-conformance.md)  
+## <a name="see-also"></a>See Also  
+[Visual C++ Language Conformance](visual-cpp-language-conformance.md)  
 

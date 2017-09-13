@@ -1,15 +1,14 @@
 ---
-title: logical_or, struct | Microsoft Docs
+title: logical_or Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- logical_or
 - xfunctional/std::logical_or
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 4928eb5d79877dd4d1e2c1a1c0f25dbc29e4ec1b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3e8c5a109c882669231967ea06a8770e07057da6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="logicalor-struct"></a>logical_or, struct
-Objet de fonction prédéfini qui effectue l’opération de disjonction logique ( `operator||`) sur ses arguments.  
+# <a name="logicalor-struct"></a>logical_or Struct
+A predefined function object that performs the logical disjunction operation ( `operator||`) on its arguments.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -64,23 +64,23 @@ struct logical_or<void>
  };
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- Tout type qui prend en charge un `operator||` qui accepte des opérandes des types spécifiés ou inférés.  
+ Any type that supports an `operator||` that takes operands of the specified or inferred types.  
   
  `Left`  
- Opérande gauche de l’opération de disjonction logique. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `T`.  
+ The left operand of the logical disjunction operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- Opérande droit de l’opération de disjonction logique. Le modèle non spécialisé prend un argument de référence lvalue de type `Type`. Le modèle spécialisé effectue un transfert parfait des arguments de référence lvalue et rvalue du type inféré `U`.  
+ The right operand of the logical disjunction operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>Valeur de retour  
- Résultat de `Left``||``Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator||`.  
+## <a name="return-value"></a>Return Value  
+ The result of `Left || Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator||`.  
   
-## <a name="remarks"></a>Remarques  
- Pour les types définis par l’utilisateur, il n’y a aucun court-circuit d’évaluation de l’opérande. Les deux arguments sont évalués par `operator||`.  
+## <a name="remarks"></a>Remarks  
+ For user-defined types, there is no short-circuiting of operand evaluation. Both arguments are evaluated by `operator||`.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_logical_or.cpp  
@@ -140,14 +140,14 @@ The deque which is the disjuction of d1 & d2 is:
   
 ```  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

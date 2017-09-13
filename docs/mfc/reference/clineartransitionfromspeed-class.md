@@ -1,5 +1,5 @@
 ---
-title: Classe CLinearTransitionFromSpeed | Documents Microsoft
+title: CLinearTransitionFromSpeed Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CLinearTransitionFromSpeed class
+- CLinearTransitionFromSpeed [MFC], CLinearTransitionFromSpeed
+- CLinearTransitionFromSpeed [MFC], Create
+- CLinearTransitionFromSpeed [MFC], m_dblFinalValue
+- CLinearTransitionFromSpeed [MFC], m_dblSpeed
 ms.assetid: 8f159a1c-8893-4017-951e-09e5758aba7d
 caps.latest.revision: 18
 author: mikeblome
@@ -38,58 +41,58 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: b96ed05e0fbed5fdb6d384f49ca634b4bc7d9269
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 86d2ca78a3be96e379b312f067b982911eed43a4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed, classe
-Encapsule une transition de vitesse linéaire.  
+# <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed Class
+Encapsulates a linear-speed transition.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CLinearTransitionFromSpeed : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Construit un objet de transition de vitesse linéaire et l’initialise avec la vitesse et la valeur finale.|  
+|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Constructs a linear-speed transition object and initializes it with speed and final value.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CLinearTransitionFromSpeed::Create](#create)|Appelle la bibliothèque des transitions pour créer l’objet COM de transition encapsulé. (Substitue [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CLinearTransitionFromSpeed::Create](#create)|Calls the transition library to create encapsulated transition COM object. (Overrides [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-### <a name="public-data-members"></a>Membres de données publics  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|La valeur de la variable d’animation à la fin de la transition.|  
-|[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|La valeur absolue de la rapidité de la variable.|  
+|[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|The value of the animation variable at the end of the transition.|  
+|[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|The absolute value of the variable's velocity.|  
   
-## <a name="remarks"></a>Remarques  
- Pendant une transition de vitesse linéaire, la valeur de la variable d’animation change à un taux spécifié. La durée de la transition est déterminée par la différence entre la valeur initiale et la valeur finale spécifiée. Car toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouveau opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que c’est NULL. Modification des variables de membre après que la création de cet objet COM n’a aucun effet.  
+## <a name="remarks"></a>Remarks  
+ During a linear-speed transition, the value of the animation variable changes at a specified rate. The duration of the transition is determined by the difference between the initial value and the specified final value. Because all transitions are cleared automatically, it's recommended to allocated them using operator new. The encapsulated IUIAnimationTransition COM object is created by CAnimationController::AnimateGroup, until then it's NULL. Changing member variables after creation of this COM object has no effect.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  [CLinearTransitionFromSpeed](../../mfc/reference/clineartransitionfromspeed-class.md)  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="clineartransitionfromspeed"></a>CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
- Construit un objet de transition de vitesse linéaire et l’initialise avec la vitesse et la valeur finale.  
+##  <a name="clineartransitionfromspeed"></a>  CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
+ Constructs a linear-speed transition object and initializes it with speed and final value.  
   
 ```  
 CLinearTransitionFromSpeed(
@@ -97,15 +100,15 @@ CLinearTransitionFromSpeed(
     DOUBLE dblFinalValue);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `dblSpeed`  
- La valeur absolue de la rapidité de la variable.  
+ The absolute value of the variable's velocity.  
   
  `dblFinalValue`  
- La valeur de la variable d’animation à la fin de la transition.  
+ The value of the animation variable at the end of the transition.  
   
-##  <a name="create"></a>CLinearTransitionFromSpeed::Create  
- Appelle la bibliothèque des transitions pour créer l’objet COM de transition encapsulé.  
+##  <a name="create"></a>  CLinearTransitionFromSpeed::Create  
+ Calls the transition library to create encapsulated transition COM object.  
   
 ```  
 virtual BOOL Create(
@@ -113,27 +116,27 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
 `pLibrary`  
- Un pointeur vers un [interface IUIAnimationTransitionLibrary](https://msdn.microsoft.com/library/windows/desktop/dd371897), qui définit une bibliothèque de transitions standards.  
+ A pointer to an [IUIAnimationTransitionLibrary interface](https://msdn.microsoft.com/library/windows/desktop/dd371897), which defines a library of standard transitions.  
   
-### <a name="return-value"></a>Valeur de retour  
- TRUE si la transition est créée avec succès ; Sinon, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if transition is created successfully; otherwise FALSE.  
   
-##  <a name="m_dblfinalvalue"></a>CLinearTransitionFromSpeed::m_dblFinalValue  
- La valeur de la variable d’animation à la fin de la transition.  
+##  <a name="m_dblfinalvalue"></a>  CLinearTransitionFromSpeed::m_dblFinalValue  
+ The value of the animation variable at the end of the transition.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_dblspeed"></a>CLinearTransitionFromSpeed::m_dblSpeed  
- La valeur absolue de la rapidité de la variable.  
+##  <a name="m_dblspeed"></a>  CLinearTransitionFromSpeed::m_dblSpeed  
+ The absolute value of the variable's velocity.  
   
 ```  
 DOUBLE m_dblSpeed;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [Classes](../../mfc/reference/mfc-classes.md)
 

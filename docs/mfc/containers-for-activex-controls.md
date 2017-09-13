@@ -1,63 +1,82 @@
 ---
-title: "Conteneurs de contr&#244;les ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conteneurs de contrôles ActiveX (C++), prise en charge des applications"
+title: Containers for ActiveX Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX control containers [MFC], application support
 ms.assetid: 5ff0bf37-07f4-49aa-ad9c-c63d3756243a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Conteneurs de contr&#244;les ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 130a2b5572f0fc93ad99b68bf8f8405a5b229391
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Vous pouvez utiliser les contrôles ActiveX développés dans Visual C\+\+ dans d'autres applications, tant qu'ils prennent en charge la relation contenant\-contenu de contrôle ActiveX.  Plusieurs applications Microsoft, à partir de les versions répertoriées, la relation contenant\-contenu de contrôle ActiveX de support.  
+---
+# <a name="containers-for-activex-controls"></a>Containers for ActiveX Controls
+You can use ActiveX controls developed in Visual C++ in other applications, as long as they support ActiveX control containment. A number of Microsoft applications, beginning with the versions listed, support ActiveX control containment.  
   
 > [!NOTE]
->  La liste suivante n'est pas une liste complète des applications qui prennent en charge les contrôles ActiveX et représente le jeu utilisé le plus souvent dans le test :  
+>  The following list is not a complete list of applications that support ActiveX controls but represents the set used most often in testing:  
   
- Les applications qui prennent en charge la relation contenant\-contenu de contrôle ActiveX sont les suivantes :  
+ Applications that support ActiveX control containment include:  
   
--   Internet Explorer 3.x et supérieur  
+-   Internet Explorer 3.x and greater  
   
--   Visual Basic 4.x et supérieur  
+-   Visual Basic 4.x and greater  
   
--   Visual C\+\+ 4.x et supérieur  
+-   Visual C++ 4.x and greater  
   
--   Access 95 et supérieur  
+-   Access 95 and greater  
   
--   Excel 97 et supérieur  
+-   Excel 97 and greater  
   
--   Word 97 et supérieur  
+-   Word 97 and greater  
   
--   Access 97 et supérieur  
+-   Access 97 and greater  
   
--   FrontPage 97 et supérieur  
+-   FrontPage 97 and greater  
   
--   PowerPoint 97 et supérieur  
+-   PowerPoint 97 and greater  
   
--   Visual InterDev 97 et supérieur  
+-   Visual InterDev 97 and greater  
   
- Voici les applications non Microsoft qui prennent en charge la relation contenant\-contenu de contrôle ActiveX :  
+ The following are non-Microsoft applications that support ActiveX control containment:  
   
 -   PowerBuilder  
   
--   Delphes  
+-   Delphi  
   
--   Générateur C\+\+  
+-   C++ Builder  
   
--   Plug\-in de NCompass pour Netscape Navigator  
+-   NCompass Plug-in for Netscape Navigator  
   
-## Voir aussi  
- [Conteneurs de contrôles ActiveX](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

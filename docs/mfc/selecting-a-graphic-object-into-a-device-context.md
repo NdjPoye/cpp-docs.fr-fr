@@ -1,49 +1,67 @@
 ---
-title: "S&#233;lection d&#39;un objet graphique dans un contexte de p&#233;riph&#233;rique | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contextes de périphérique, objets graphiques"
-  - "contextes de périphérique, sélectionner des objets graphiques dans"
-  - "objets GDI (C++), contextes de périphérique"
-  - "objets graphiques, sélectionner dans le contexte de périphérique"
-  - "durée de vie, objets graphiques"
-  - "SelectObject (méthode)"
+title: Selecting a Graphic Object into a Device Context | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- graphic objects [MFC], selecting into device context
+- SelectObject method [MFC]
+- GDI objects [MFC], device contexts
+- lifetime, graphic objects [MFC]
+- device contexts, selecting graphic objects into
+- device contexts, graphic objects [MFC]
 ms.assetid: cf54a330-63ef-421f-83eb-90ec7bd82eef
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# S&#233;lection d&#39;un objet graphique dans un contexte de p&#233;riph&#233;rique
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4c9d3aaa2a3580be476f750d31c24ee61ddd6dbb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cette rubrique s'applique à utiliser des objets graphiques dans le contexte du périphérique d'une fenêtre.  Après avoir [créer un objet de dessin](../mfc/one-stage-and-two-stage-construction-of-objects.md), vous devez sélectionner dans le contexte de périphérique à la place de l'objet par défaut stocké que :  
+---
+# <a name="selecting-a-graphic-object-into-a-device-context"></a>Selecting a Graphic Object into a Device Context
+This topic applies to using graphic objects in a window's device context. After you [create a drawing object](../mfc/one-stage-and-two-stage-construction-of-objects.md), you must select it into the device context in place of the default object stored there:  
   
- [!code-cpp[NVC_MFCDocViewSDI#7](../mfc/codesnippet/CPP/selecting-a-graphic-object-into-a-device-context_1.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#7](../mfc/codesnippet/cpp/selecting-a-graphic-object-into-a-device-context_1.cpp)]  
   
-## Durée de vie des objets graphiques  
- L'objet graphique retourné par [SelectObject](../Topic/CDC::SelectObject.md) est "temporaire". Cela étant, il est supprimé par la fonction membre [OnIdle](../Topic/CWinApp::OnIdle.md) de la classe `CWinApp` la prochaine exécution du programme traverse une durée d'inactivité.  Tant que vous utilisez l'objet retourné par `SelectObject` dans une seule fonction sans restituer le contrôle à la boucle de message principal, vous n'aurez aucun problème.  
+## <a name="lifetime-of-graphic-objects"></a>Lifetime of Graphic Objects  
+ The graphic object returned by [SelectObject](../mfc/reference/cdc-class.md#selectobject) is "temporary." That is, it will be deleted by the [OnIdle](../mfc/reference/cwinapp-class.md#onidle) member function of class `CWinApp` the next time the program gets idle time. As long as you use the object returned by `SelectObject` in a single function without returning control to the main message loop, you will have no problem.  
   
-### Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Objets graphiques](../mfc/graphic-objects.md)  
+-   [Graphic objects](../mfc/graphic-objects.md)  
   
--   [Construction d'objets graphiques en une et en deux étapes](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
+-   [One-stage and two-stage construction of graphic objects](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
   
--   [Contextes de périphérique](../mfc/device-contexts.md)  
+-   [Device contexts](../mfc/device-contexts.md)  
   
--   [Dessin dans une vue](../mfc/drawing-in-a-view.md)  
+-   [Drawing in a View](../mfc/drawing-in-a-view.md)  
   
-## Voir aussi  
- [Objets graphiques](../mfc/graphic-objects.md)
+## <a name="see-also"></a>See Also  
+ [Graphic Objects](../mfc/graphic-objects.md)
+
+

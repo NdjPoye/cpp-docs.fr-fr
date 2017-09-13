@@ -1,5 +1,5 @@
 ---
-title: istreambuf_iterator, classe | Microsoft Docs
+title: istreambuf_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- istreambuf_iterator
 - streambuf/std::istreambuf_iterator
 - iterator/std::istreambuf_iterator::char_type
 - iterator/std::istreambuf_iterator::int_type
@@ -20,7 +19,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- istreambuf_iterator class
+- std::istreambuf_iterator [C++]
+- std::istreambuf_iterator [C++], char_type
+- std::istreambuf_iterator [C++], int_type
+- std::istreambuf_iterator [C++], istream_type
+- std::istreambuf_iterator [C++], streambuf_type
+- std::istreambuf_iterator [C++], traits_type
+- std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
 caps.latest.revision: 19
 author: corob-msft
@@ -40,17 +45,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 942f61a053e77bf3d677f51cc30d39b5f4c76db6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c93e635fbd36b36082f5cd74499fc07fadb3e826
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istreambufiterator-class"></a>istreambuf_iterator, classe
-La classe de modèle istreambuf_iterator décrit un objet d’itérateur d’entrée qui extrait des éléments de caractères à partir d’une mémoire tampon de flux d’entrée, à laquelle il accède par le biais d’un objet qu’il stocke, de type pointeur vers `basic_streambuf`\< **CharType**, **Traits**>.  
+# <a name="istreambufiterator-class"></a>istreambuf_iterator Class
+The template class istreambuf_iterator describes an input iterator object that extracts character elements from an input stream buffer, which it accesses through an object it stores, of type pointer to `basic_streambuf`\< **CharType**, **Traits**>.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType class Traits = char_traits <CharType>>  
@@ -58,64 +63,64 @@ class istreambuf_iterator
 : public iterator<input_iterator_tag, CharType, typename Traits ::off_type, CharType*, CharType&>
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- Type qui représente le type de caractère pour istreambuf_iterator.  
+ The type that represents the character type for the istreambuf_iterator.  
   
  `Traits`  
- Type qui représente le type de caractère pour istreambuf_iterator. Cet argument est facultatif et sa valeur par défaut est `char_traits`\< *CharType>.*  
+ The type that represents the character type for the istreambuf_iterator. This argument is optional and the default value is `char_traits`\< *CharType>.*  
   
-## <a name="remarks"></a>Notes  
- La classe istreambuf_iterator doit répondre aux exigences d’un itérateur d’entrée.  
+## <a name="remarks"></a>Remarks  
+ The istreambuf_iterator class must satisfy the requirements for an input iterator.  
   
- Après avoir construit ou incrémenté un objet de classe istreambuf_iterator avec un pointeur stocké non null, l’objet tente d’extraire et de stocker un objet de type **CharType** à partir du flux d’entrée associé. Toutefois, l'extraction peut être différée jusqu'à ce que l'objet soit déréférencé ou copié. Si l'extraction échoue, l'objet remplace le pointeur stocké par un pointeur null, créant ainsi un indicateur de fin de séquence.  
+ After constructing or incrementing an object of class istreambuf_iterator with a non-null stored pointer, the object effectively attempts to extract and store an object of type **CharType** from the associated input stream. The extraction may be delayed, however, until the object is actually dereferenced or copied. If the extraction fails, the object effectively replaces the stored pointer with a null pointer, thus making an end-of-sequence indicator.  
   
-### <a name="constructors"></a>Constructeurs  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[istreambuf_iterator](#istreambuf_iterator)|Construit un `istreambuf_iterator` qui est initialisé pour lire des caractères à partir du flux d'entrée.|  
+|[istreambuf_iterator](#istreambuf_iterator)|Constructs an `istreambuf_iterator` that is initialized to read characters from the input stream.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|Type qui fournit le type de caractère de `ostreambuf_iterator`.|  
-|[int_type](#int_type)|Type qui fournit un type entier pour un `istreambuf_iterator`.|  
-|[istream_type](#istream_type)|Type qui fournit le type de flux de `istream_iterator`.|  
-|[streambuf_type](#streambuf_type)|Type qui fournit le type de flux de `istreambuf_iterator`.|  
-|[traits_type](../standard-library/istream-iterator-class.md#traits_type)|Type qui fournit le type de caractéristique de `istream_iterator`.|  
+|[char_type](#char_type)|A type that provides for the character type of the `ostreambuf_iterator`.|  
+|[int_type](#int_type)|A type that provides an integer type for an `istreambuf_iterator`.|  
+|[istream_type](#istream_type)|A type that provides for the stream type of the `istream_iterator`.|  
+|[streambuf_type](#streambuf_type)|A type that provides for the stream type of the `istreambuf_iterator`.|  
+|[traits_type](../standard-library/istream-iterator-class.md#traits_type)|A type that provides for the character traits type of the `istream_iterator`.|  
   
-### <a name="member-functions"></a>Fonctions membres  
-  
-|||  
-|-|-|  
-|[equal](#equal)|Vérifie l'égalité de deux itérateurs de tampon de flux d'entrée.|  
-  
-### <a name="operators"></a>Opérateurs  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator*](#op_star)|L'opérateur de suppression de référence retourne le caractère suivant du flux.|  
-|[operator++](#op_add_add)|Retourne le caractère suivant du flux d'entrée ou copie l'objet avant de l'incrémenter et de retourner sa copie.|  
-|[operator->](#operator-_gt)|Retourne la valeur d'un membre, le cas échéant.|  
+|[equal](#equal)|Tests for equality between two input stream buffer iterators.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<iterator>  
+### <a name="operators"></a>Operators  
   
- **Espace de noms :** std  
+|||  
+|-|-|  
+|[operator*](#op_star)|The dereferencing operator returns the next character in the stream.|  
+|[operator++](#op_add_add)|Either returns the next character from the input stream or copies the object before incrementing it and returns the copy.|  
+|[operator->](#operator-_gt)|Returns the value of a member, if any.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<iterator>  
+  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  istreambuf_iterator::char_type  
- Type qui fournit le type de caractère de `ostreambuf_iterator`.  
+ A type that provides for the character type of the `ostreambuf_iterator`.  
   
 ```
 typedef CharType char_type;
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme du paramètre de modèle **CharType**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_char_type.cpp  
@@ -149,23 +154,23 @@ int main( )
 ```  
   
 ##  <a name="equal"></a>  istreambuf_iterator::equal  
- Teste l’équivalence de deux itérateurs de mémoire tampon de flux d’entrée.  
+ Tests for equivalence between two input stream buffer iterators.  
   
 ```
 bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Itérateur pour lequel vérifier l’égalité.  
+ The iterator for which to check for equality.  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si les deux `istreambuf_iterator`s sont des itérateurs de fin de flux ou si aucun des deux n’est un itérateur de fin du flux. Sinon, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if both `istreambuf_iterator`s are end-of-stream iterators or if neither is an end-of-stream iterator; otherwise **false**.  
   
-### <a name="remarks"></a>Notes  
- Une plage est définie par le `istreambuf_iterator` à la position actuelle et l’itérateur de fin de flux, mais comme tous les itérateurs de non fin de flux sont équivalents sous la fonction membre **equal**, il n’est pas possible de définir de sous-plages à l’aide de `istreambuf_iterator`s. Les opérateurs `==` et `!=` ont la même sémantique.  
+### <a name="remarks"></a>Remarks  
+ A range is defined by the `istreambuf_iterator` to the current position and the end-of-stream iterator, but since all non-end-of stream iterators are equivalent under the **equal** member function, it is not possible to define any subranges using `istreambuf_iterator`s. The `==` and `!=` operators have the same semantics.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_equal.cpp  
@@ -194,16 +199,16 @@ int main( )
 ```  
   
 ##  <a name="int_type"></a>  istreambuf_iterator::int_type  
- Type qui fournit un type entier pour un `istreambuf_iterator`.  
+ A type that provides an integer type for an `istreambuf_iterator`.  
   
 ```
 typedef typename traits_type::int_type int_type;
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme de **Traits::int_type**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for **Traits::int_type**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_int_type.cpp  
@@ -223,37 +228,37 @@ The inttype1 = 100.
 ```  
   
 ##  <a name="istream_type"></a>  istreambuf_iterator::istream_type  
- Type qui fournit le type de flux de `istreambuf_iterator`.  
+ A type that provides for the stream type of the `istreambuf_iterator`.  
   
 ```
 typedef basic_istream<CharType, Traits> istream_type;
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme de `basic_istream`\< **CharType**, **Traits**>.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `basic_istream`\< **CharType**, **Traits**>.  
   
-### <a name="example"></a>Exemple  
-  Pour découvrir comment déclarer et utiliser `istream_type`, consultez l’exemple relatif à [istreambuf_iterator](#istreambuf_iterator).  
+### <a name="example"></a>Example  
+  See [istreambuf_iterator](#istreambuf_iterator) for an example of how to declare and use `istream_type`.  
   
 ##  <a name="istreambuf_iterator"></a>  istreambuf_iterator::istreambuf_iterator  
- Construit un istreambuf_iterator qui est initialisé pour lire des caractères à partir du flux d’entrée.  
+ Constructs an istreambuf_iterator that is initialized to read characters from the input stream.  
   
 ```
 istreambuf_iterator(streambuf_type* strbuf = 0) throw();
 istreambuf_iterator(istream_type& _Istr) throw();
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `strbuf`  
- Mémoire tampon de flux d’entrée à laquelle le `istreambuf_iterator` est attaché.  
+ The input stream buffer to which the `istreambuf_iterator` is being attached.  
   
  `_Istr`  
- Flux d’entrée auquel le `istreambuf_iterator` est attaché.  
+ The input stream to which the `istreambuf_iterator` is being attached.  
   
-### <a name="remarks"></a>Notes  
- Le premier constructeur initialise le pointeur de mémoire tampon de flux d’entrée avec `strbuf`. Le deuxième constructeur initialise le pointeur de mémoire tampon de flux d’entrée avec `_Istr`. `rdbuf`, puis tente finalement d’extraire et de stocker un objet de type **CharType**.  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the input stream-buffer pointer with `strbuf`. The second constructor initializes the input stream-buffer pointer with `_Istr`. `rdbuf`, and then eventually attempts to extract and store an object of type **CharType**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_istreambuf_iterator.cpp  
@@ -286,16 +291,16 @@ int main( )
 ```  
   
 ##  <a name="op_star"></a>  istreambuf_iterator::operator*  
- L'opérateur de suppression de référence retourne le caractère suivant du flux.  
+ The dereferencing operator returns the next character in the stream.  
   
 ```
 CharType operator*() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Caractère suivant dans le flux.  
+### <a name="return-value"></a>Return Value  
+ The next character in the stream.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_operator_deref.cpp  
@@ -324,20 +329,20 @@ int main( )
 ```  
   
 ##  <a name="op_add_add"></a>  istreambuf_iterator::operator++  
- Retourne le caractère suivant du flux d'entrée ou copie l'objet avant de l'incrémenter et de retourner sa copie.  
+ Either returns the next character from the input stream or copies the object before incrementing it and returns the copy.  
   
 ```
 istreambuf_iterator<CharType, Traits>& operator++();
 istreambuf_iterator<CharType, Traits> operator++(int);
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `istreambuf_iterator` ou une référence à un `istreambuf_iterator`.  
+### <a name="return-value"></a>Return Value  
+ An `istreambuf_iterator` or a reference to an `istreambuf_iterator`.  
   
-### <a name="remarks"></a>Notes  
- Le premier opérateur tente finalement d’extraire et de stocker un objet de type **CharType** à partir du flux d’entrée associé. Le deuxième opérateur effectue une copie de l’objet, incrémente l’objet, puis retourne la copie.  
+### <a name="remarks"></a>Remarks  
+ The first operator eventually attempts to extract and store an object of type **CharType** from the associated input stream. The second operator makes a copy of the object, increments the object, and then returns the copy.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_operator_incr.cpp  
@@ -366,39 +371,39 @@ int main( )
 ```  
   
 ##  <a name="istreambuf_iterator__operator-_gt"></a>  istreambuf_iterator::operator-&gt;  
- Retourne la valeur d'un membre, le cas échéant.  
+ Returns the value of a member, if any.  
   
 ```
 const Elem* operator->() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- L’opérateur retourne **&\*\*this**.  
+### <a name="return-value"></a>Return Value  
+ The operator returns **&\*\*this**.  
   
 ##  <a name="streambuf_type"></a>  istreambuf_iterator::streambuf_type  
- Type qui fournit le type de flux de istreambuf_iterator.  
+ A type that provides for the stream type of the istreambuf_iterator.  
   
 ```
 typedef basic_streambuf<CharType, Traits> streambuf_type;
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme de `basic_streambuf`\< **CharType**, **Traits**>.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `basic_streambuf`\< **CharType**, **Traits**>.  
   
-### <a name="example"></a>Exemple  
-  Pour découvrir comment déclarer et utiliser **istreambuf_type**, consultez l’exemple relatif à [istreambuf_iterator](#istreambuf_iterator).  
+### <a name="example"></a>Example  
+  See [istreambuf_iterator](#istreambuf_iterator) for an example of how to declare and use **istreambuf_type**.  
   
 ##  <a name="traits_type"></a>  istreambuf_iterator::traits_type  
- Type qui fournit le type de caractéristique de `istream_iterator`.  
+ A type that provides for the character traits type of the `istream_iterator`.  
   
 ```
 typedef Traits traits_type;
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme du paramètre de modèle **Traits**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **Traits**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_traits_type.cpp  
@@ -431,11 +436,11 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [iterator, struct](../standard-library/iterator-struct.md)   
+## <a name="see-also"></a>See Also  
+ [iterator Struct](../standard-library/iterator-struct.md)   
  [\<iterator>](../standard-library/iterator.md)   
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

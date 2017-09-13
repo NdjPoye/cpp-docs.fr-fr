@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::complex<float>
-- std.complex<float>
-- complex<float>
+- std::complex<float>", "complex<float>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 50b4cd9578da0b70c1c37ea2919bc2dc765ee521
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c6dcc25f08b2a57e9992b9e85dc3ff0b3d39af9c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
-Décrit un objet qui stocke une paire ordonnée d’objets de type **float***,* le premier représentant la partie réelle d’un nombre complexe et le deuxième représentant la partie imaginaire.  
+Describes an object that stores an ordered pair of objects both of type **float***,* the first representing the real part of a complex number and the second representing the imaginary part.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <>
@@ -67,25 +65,25 @@ constexpr complex(
 };
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `_RealVal`  
- Valeur de type **float** pour la partie réelle du nombre complexe qui est construit.  
+ The value of type **float** for the real part of the complex number being constructed.  
   
  `_ImagVal`  
- Valeur de type **float** pour la partie imaginaire du nombre complexe qui est construit.  
+ The value of type **float** for the imaginary part of the complex number being constructed.  
   
  `complexNum`  
- Nombre complexe de type **double** ou `long double` dont les parties réelle et imaginaire sont utilisées pour initialiser un nombre complexe de type **float** en cours de construction.  
+ The complex number of type **double** or of type `long double` whose real and imaginary parts are used to initialize a complex number of type **float** being constructed.  
   
-## <a name="return-value"></a>Valeur de retour  
- Nombre complexe de type **float**.  
+## <a name="return-value"></a>Return Value  
+ A complex number of type **float**.  
   
-## <a name="remarks"></a>Notes  
- La spécialisation explicite de la classe de modèle complex en classe complex de type **float** diffère de la classe de modèle seulement par les constructeurs qu’elle définit. La conversion de **float** en **double** peut être implicite, mais la conversion moins sécurisée de **float** en `long double` doit être de type **explicit**. L’utilisation d’**explicit** exclut l’initialisation avec la conversion de type à l’aide de la syntaxe d’assignation.  
+## <a name="remarks"></a>Remarks  
+ The explicit specialization of the template class complex to a complex class of type **float** differs from the template class only in the constructors it defines. The conversion from **float** to **double** is allowed to be implicit, but the less safe conversion from **float** to `long double` is required to be **explicit**. The use of **explicit** rules out the initiation with type conversion using assignment syntax.  
   
- Pour plus d’informations sur la classe de modèle `complex`, consultez [complex, classe](../standard-library/complex-class.md). Pour obtenir la liste des membres de la classe de modèle `complex`, consultez .  
+ For more information on the template class `complex`, see [complex Class](../standard-library/complex-class.md). For a list of members of the template class `complex`, see .  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a>Example  
   
 ```cpp  
 // complex_comp_flt.cpp  
@@ -140,14 +138,14 @@ Argument of c3 is recovered from c3 using:
 *\  
 ```  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête** : \<complex>  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<complex>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
- [complex, classe](../standard-library/complex-class.md)   
- [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [complex Class](../standard-library/complex-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

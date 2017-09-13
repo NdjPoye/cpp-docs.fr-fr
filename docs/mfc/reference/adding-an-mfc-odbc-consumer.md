@@ -1,40 +1,59 @@
 ---
-title: "Ajout d&#39;un consommateur ODBC MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "consommateurs ODBC MFC"
+title: Adding an MFC ODBC Consumer | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ODBC consumers
 ms.assetid: 2dc97909-1f7e-43ee-9d47-99e612727058
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ajout d&#39;un consommateur ODBC MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6e345261ba9cde7e7d97c3741de0e34fd7fd2db8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Un consommateur ODBC MFC est constitué d'une classe de recordset ODBC et des liaisons de données nécessaires pour accéder à une source de données.  
+---
+# <a name="adding-an-mfc-odbc-consumer"></a>Adding an MFC ODBC Consumer
+An MFC ODBC consumer consists of an ODBC recordset class and data bindings necessary to access a data source.  
   
-### Pour ajouter un consommateur ODBC MFC  
+### <a name="to-add-an-mfc-odbc-consumer"></a>To add an MFC ODBC consumer  
   
-1.  Dans l'Affichage de classes, cliquez avec le bouton droit sur le projet.  Dans le menu contextuel, cliquez sur **Ajouter**, puis sur **Ajouter une classe**.  
+1.  In Class View, right-click the project. On the shortcut menu, click **Add** and then click **Add Class**.  
   
-2.  Dans le dossier Visual C\+\+, double\-cliquez sur l'icône **Consommateur ODBC MFC** ou sélectionnez\-la et cliquez sur **Ouvrir**.  
+2.  In the Visual C++ folder, double-click the **MFC ODBC Consumer** icon or select it and click **Open**.  
   
-     L'Assistant Consommateur ODBC MFC s'ouvre.  
+     The MFC ODBC Consumer Wizard opens.  
   
-3.  Définissez les paramètres de la manière décrite dans [Assistant Consommateur ODBC MFC](../../mfc/reference/mfc-odbc-consumer-wizard.md).  
+3.  Define settings as described in [MFC ODBC Consumer Wizard](../../mfc/reference/mfc-odbc-consumer-wizard.md).  
   
-4.  Cliquez sur **Terminer** pour fermer l'Assistant. Le code de consommateur ODBC que vous venez de créer est inséré dans votre projet.  
+4.  Click **Finish** to close the wizard, which will insert the newly created ODBC consumer code in your project.  
   
-## Voir aussi  
- [Ajout de fonctionnalités à l'aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)
+
+

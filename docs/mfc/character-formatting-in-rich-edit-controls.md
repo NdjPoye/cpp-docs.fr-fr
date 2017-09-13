@@ -1,39 +1,58 @@
 ---
-title: "Mise en forme des caract&#232;res dans les contr&#244;les RichEdit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl (classe), formatage de caractères dans"
-  - "mise en forme (C++), caractères"
-  - "contrôles RichEdit, formatage de caractères dans"
+title: Character Formatting in Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- formatting [MFC], characters
+- rich edit controls [MFC], character formatting in
+- CRichEditCtrl class [MFC], character formatting in
 ms.assetid: c80f4305-75ad-45f9-8d17-d83d0fe79be5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Mise en forme des caract&#232;res dans les contr&#244;les RichEdit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e2da6052721125835517a2b93341a6800c75205e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Vous pouvez utiliser les fonctions membres du contrôle RichEdit \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) pour mettre en forme les caractères et récupérer les informations de mise en forme.  Pour les caractères, vous pouvez spécifier la police, la taille, la couleur, et les effets comme gras, en italique, et protégé.  
+---
+# <a name="character-formatting-in-rich-edit-controls"></a>Character Formatting in Rich Edit Controls
+You can use member functions of the rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) to format characters and to retrieve formatting information. For characters, you can specify typeface, size, color, and effects such as bold, italic, and protected.  
   
- Vous pouvez appliquer une mise en forme de caractères à l'aide de les fonctions membres de [SetSelectionCharFormat](../Topic/CRichEditCtrl::SetSelectionCharFormat.md) et de [SetWordCharFormat](../Topic/CRichEditCtrl::SetWordCharFormat.md).  Pour déterminer la mise en forme de caractères actuelle du texte sélectionné, utilisez la fonction membre [GetSelectionCharFormat](../Topic/CRichEditCtrl::GetSelectionCharFormat.md).  La structure de [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) est utilisée avec ces fonctions de membre pour spécifier des attributs de caractères.  L'un des membres importants de **CHARFORMAT** est **dwMask**.  Dans `SetSelectionCharFormat` et `SetWordCharFormat`, **dwMask** spécifie quels attributs de caractère est défini par cet appel de fonction.  `GetSelectionCharFormat` indique les attributs du premier caractère de la sélection ; **dwMask** spécifie les attributs qui sont cohérents dans toute la sélection.  
+ You can apply character formatting by using the [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat) and [SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat) member functions. To determine the current character formatting for the selected text, use the [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat) member function. The [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) structure is used with these member functions to specify character attributes. One of the important members of **CHARFORMAT** is **dwMask**. In `SetSelectionCharFormat` and `SetWordCharFormat`, **dwMask** specifies which character attributes will be set by this function call. `GetSelectionCharFormat` reports the attributes of the first character in the selection; **dwMask** specifies the attributes that are consistent throughout the selection.  
   
- Vous pouvez également obtenir et définir « la mise en forme de caractères par défaut, » qui est la mise en forme appliquée à tous les caractères ensuite inséré.  Par exemple, si une application définit la mise en forme de caractères par défaut en gras et que l'utilisateur entre ensuite un caractère, le caractère sera en gras.  Pour obtenir et définir la mise en forme de caractères par défaut, utilisez les fonctions membres [GetDefaultCharFormat](../Topic/CRichEditCtrl::GetDefaultCharFormat.md) et [SetDefaultCharFormat](../Topic/CRichEditCtrl::SetDefaultCharFormat.md).  
+ You can also get and set the "default character formatting," which is the formatting applied to any subsequently inserted characters. For example, if an application sets the default character formatting to bold and the user then types a character, that character is bold. To get and set default character formatting, use the [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat) and [SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat) member functions.  
   
- L'attribut « Protégé » d'un caractère ne modifie pas la présentation du texte.  Si l'utilisateur tente de modifier le texte protégé, un contrôle RichEdit envoie à la fenêtre parente un message de notification **EN\_PROTECTED**, ce qui permet à la fenêtre parente d'autoriser ou empêcher la modification.  Pour recevoir le message de notification, vous devez l'activer en utilisant la fonction membre [SetEventMask](../Topic/CRichEditCtrl::SetEventMask.md).  Pour plus d'informations sur le filtre d'événement, consultez [Notifications d'un contrôle RichEdit](../mfc/notifications-from-a-rich-edit-control.md), plus loin dans cette rubrique.  
+ The "protected" character attribute does not change the appearance of text. If the user attempts to modify protected text, a rich edit control sends its parent window an **EN_PROTECTED** notification message, allowing the parent window to allow or prevent the change. To receive this notification message, you must enable it by using the [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) member function. For more information about the event mask, see [Notifications from a Rich Edit Control](../mfc/notifications-from-a-rich-edit-control.md), later in this topic.  
   
- La couleur de premier plan est un attribut de type caractère, mais la couleur d'arrière\-plan est une propriété du contrôle RichEdit.  Pour définir la couleur d'arrière\-plan, utilisez la fonction membre [SetBackgroundColor](../Topic/CRichEditCtrl::SetBackgroundColor.md).  
+ Foreground color is a character attribute, but background color is a property of the rich edit control. To set the background color, use the [SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor) member function.  
   
-## Voir aussi  
- [Utilisation de CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

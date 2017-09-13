@@ -1,5 +1,5 @@
 ---
-title: is_placeholder, classe | Microsoft Docs
+title: is_placeholder Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_placeholder
 - functional/std::is_placeholder
 dev_langs:
 - C++
@@ -34,26 +33,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: a3624a752a500410ad906ba43a6c65310ba1cb41
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 15cd09104039d45df72e2bc0476d9d6005b69a68
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isplaceholder-class"></a>is_placeholder, classe
-Teste si le type est un espace réservé.  
+# <a name="isplaceholder-class"></a>is_placeholder Class
+Tests if type is a placeholder.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 struct is_placeholder {  
    static const int value;  
    };  
   
-## <a name="remarks"></a>Notes  
- La valeur de constante `value` est 0 si le type `Ty` n’est pas un espace réservé ; sinon, sa valeur est la position de l’argument d’appel de fonction auquel elle est liée. Vous pouvez l’utiliser pour déterminer la valeur `N` du nième espace réservé `_N`.  
+## <a name="remarks"></a>Remarks  
+ The constant value `value` is 0 if the type `Ty` is not a placeholder; otherwise, its value is the position of the function call argument that it binds to. You use it to determine the value `N` for the Nth placeholder `_N`.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__is_placeholder.cpp   
@@ -83,12 +82,12 @@ int main()
 3  
 ```  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
- [_1, objet](../standard-library/1-object.md)
+## <a name="see-also"></a>See Also  
+ [_1 Object](../standard-library/1-object.md)
 
 

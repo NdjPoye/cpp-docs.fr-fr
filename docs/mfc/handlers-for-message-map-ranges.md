@@ -1,155 +1,172 @@
 ---
-title: "Gestionnaires pour les plages de table des messages | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestion des commandes, gestionnaires de mise à jour des commandes"
-  - "ID de commande, mappage des messages"
-  - "routage des commandes, gestionnaires de mise à jour des commandes"
-  - "gestionnaires de mise à jour des commandes"
-  - "messages de notification de contrôle"
-  - "contrôles (MFC), notifications"
-  - "fonctions gestionnaires"
-  - "fonctions gestionnaires, déclarer"
-  - "fonctions gestionnaires, plages des tables des messages"
-  - "gestionnaires"
-  - "gestionnaires, plages des tables des messages"
-  - "mappages, plages des messages"
-  - "gestionnaires de messages"
-  - "gestion des messages, gestionnaire de messages (fonctions)"
-  - "tables des messages, gestionnaire de messages (fonctions)"
-  - "tables des messages, plages"
-  - "plages des messages"
-  - "plages des messages, mapper"
-  - "plages des tables des messages"
+title: Handlers for Message-Map Ranges | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers [MFC]
+- handlers [MFC], message-map ranges
+- message maps [MFC]], message handler functions
+- message maps [MFC]], ranges
+- control-notification messages [MFC]
+- command IDs [MFC], message mapping
+- message-map ranges [MFC]
+- handlers [MFC]
+- message handling [MFC], message handler functions
+- mappings [MFC]], message ranges
+- command handling [MFC], command update handlers
+- controls [MFC], notifications
+- handler functions [MFC], message-map ranges
+- handler functions [MFC]
+- command update handlers [MFC]
+- command routing [MFC], command update handlers
+- message ranges [MFC]
+- handler functions [MFC], declaring
+- message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Gestionnaires pour les plages de table des messages
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a0fe020931bc63084b3b7bfa640cec95afae0108
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cet article explique comment mapper une plage des messages à une seule fonction gestionnaire des messages \(au lieu du message d'un mappage à une seule fonction\).  
+---
+# <a name="handlers-for-message-map-ranges"></a>Handlers for Message-Map Ranges
+This article explains how to map a range of messages to a single message handler function (instead of mapping one message to only one function).  
   
- Il arrive que vous devez traiter plusieurs notifications de message ou le contrôle de la même manière.  Dans de tels cas, vous pouvez mapper tous les messages d'une seule fonction gestionnaire.  Les chaînes de table des messages vous permettent de procéder pour une plage contigue des messages :  
+ There are times when you need to process more than one message or control notification in exactly the same way. At such times, you might wish to map all of the messages to a single handler function. Message-map ranges allow you to do this for a contiguous range of messages:  
   
--   Vous pouvez mapper les plages des ID de commande :  
+-   You can map ranges of command IDs to:  
   
-    -   Une fonction de responsable de commandes.  
+    -   A command handler function.  
   
-    -   Une fonction du conseiller de mise à jour de commande.  
+    -   A command update handler function.  
   
--   Vous pouvez mapper les messages de notification contrôle pour une plage des ID de contrôle dans une fonction gestionnaire des messages.  
+-   You can map control-notification messages for a range of control IDs to a message handler function.  
   
- Les rubriques traitées dans cet article sont les suivantes :  
+ Topics covered in this article include:  
   
--   [Écriture de l'entrée de la table des messages](#_core_writing_the_message.2d.map_entry)  
+-   [Writing the message-map entry](#_core_writing_the_message.2d.map_entry)  
   
--   [États la fonction gestionnaire](#_core_declaring_the_handler_function)  
+-   [Declaring the handler function](#_core_declaring_the_handler_function)  
   
--   [Exemple d'une plage d'ID de commande](#_core_example_for_a_range_of_command_ids)  
+-   [Example for a range of command IDs](#_core_example_for_a_range_of_command_ids)  
   
--   [Exemple d'une plage d'ID de contrôle.](#_core_example_for_a_range_of_control_ids)  
+-   [Example for a range of control IDs](#_core_example_for_a_range_of_control_ids)  
   
-##  <a name="_core_writing_the_message.2d.map_entry"></a> Écriture de l'entrée du mappage des messages  
- Dans le fichier .cpp, ajoutez l'entrée de la table des messages, comme le montre l'exemple suivant :  
+##  <a name="_core_writing_the_message.2d.map_entry"></a> Writing the Message-Map Entry  
+ In the .CPP file, add your message-map entry, as shown in the following example:  
   
- [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/CPP/handlers-for-message-map-ranges_1.cpp)]  
+ [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]  
   
- L'entrée de la table des messages incluent les éléments suivants :  
+ The message-map entry consists of the following items:  
   
--   La macro de la plage de table des messages :  
+-   The message-map range macro:  
   
-    -   [ON\_COMMAND\_RANGE](../Topic/ON_COMMAND_RANGE.md)  
+    -   [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)  
   
-    -   [ON\_UPDATE\_COMMAND\_UI\_RANGE](../Topic/ON_UPDATE_COMMAND_UI_RANGE.md)  
+    -   [ON_UPDATE_COMMAND_UI_RANGE](reference/message-map-macros-mfc.md#on_update_command_ui_range)  
   
-    -   [ON\_CONTROL\_RANGE](../Topic/ON_CONTROL_RANGE.md)  
+    -   [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range)  
   
--   Paramètres de la macro :  
+-   Parameters to the macro:  
   
-     Les deux premières macros prennent trois paramètres :  
+     The first two macros take three parameters:  
   
-    -   ID de commande qui engage la plage  
+    -   The command ID that starts the range  
   
-    -   ID de commande qui termine la plage  
+    -   The command ID that ends the range  
   
-    -   Le nom de la fonction gestionnaire des messages  
+    -   The name of the message handler function  
   
-     La plage des ID de commande doit être contigue.  
+     The range of command IDs must be contiguous.  
   
-     La troisième macro, `ON_CONTROL_RANGE`, accepte un premier paramètre supplémentaire : un message de notification contrôle, tel que **EN\_CHANGE**.  
+     The third macro, `ON_CONTROL_RANGE`, takes an additional first parameter: a control-notification message, such as **EN_CHANGE**.  
   
-##  <a name="_core_declaring_the_handler_function"></a> Déclare la fonction gestionnaire  
- Ajoutez votre déclaration de fonction gestionnaire de rôles dans. Fichier de H.  Le code suivant montre comment il peut le consulter, comme indiqué ci\-dessous :  
+##  <a name="_core_declaring_the_handler_function"></a> Declaring the Handler Function  
+ Add your handler function declaration in the .H file. The following code shows how this might look, as shown below:  
   
- [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/CPP/handlers-for-message-map-ranges_2.h)]  
+ [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
   
- Les fonctions de gestion pour chaques commandes ne prennent pas de paramètres en général.  À l'exception de les fonctions du gestionnaire de mise à jour, les fonctions et pour les plages de table des messages requièrent un paramètre supplémentaire, `nID`, de type **UINT**.  Ce paramètre est le premier paramètre.  Le paramètre supplémentaire s'adapte à l'ID de commande supplémentaire requis pour spécifier quelle commande l'utilisateur a réellement choisi.  
+ Handler functions for single commands normally take no parameters. With the exception of update handler functions, handler functions for message-map ranges require an extra parameter, `nID`, of type **UINT**. This parameter is the first parameter. The extra parameter accommodates the extra command ID needed to specify which command the user actually chose.  
   
- Pour plus d'informations sur les spécifications de paramètre pour mettre à jour les fonctions et, consultez [Exemple d'une plage d'ID de commande](#_core_example_for_a_range_of_command_ids).  
+ For more information about parameter requirements for updating handler functions, see [Example for a Range of Command IDs](#_core_example_for_a_range_of_command_ids).  
   
-##  <a name="_core_example_for_a_range_of_command_ids"></a> Exemple d'une portée d'ID de commande  
- Quand pourrez\-vous utiliser ces plages ?  Un exemple est dans commandes de gestion tels que l'ordre de zoom dans l'exemple [HIERSVR](../top/visual-cpp-samples.md)de MFC.  Cette commande zoome la vue, la mise à l'échelle est comprise entre 25% et 300% de sa taille normale.  La classe d'affichage de HIERSVR utilise une plage pour gérer les commandes de zoom avec une entrée de la table des messages ressemblant à ceci :  
+##  <a name="_core_example_for_a_range_of_command_ids"></a> Example for a Range of Command IDs  
+ When might you use ranges One example is in handling commands like the Zoom command in the MFC sample [HIERSVR](../visual-cpp-samples.md). This command zooms the view, scaling it between 25% and 300% of its normal size. HIERSVR's view class uses a range to handle the Zoom commands with a message-map entry resembling this:  
   
- [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/CPP/handlers-for-message-map-ranges_3.cpp)]  
+ [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]  
   
- Lorsque vous entrez l'entrée du mappage des messages, spécifiez :  
+ When you write the message-map entry, you specify:  
   
--   Deux ID de commande, débute et fin de commande d'une plage contigue.  
+-   Two command IDs, beginning and ending a contiguous range.  
   
-     Ici ils sont `ID_VIEW_ZOOM25` et `ID_VIEW_ZOOM300`.  
+     Here they are `ID_VIEW_ZOOM25` and `ID_VIEW_ZOOM300`.  
   
--   Le nom de la fonction gestionnaire pour la commande.  
+-   The name of the handler function for the commands.  
   
-     Ici il s'agit `OnZoom`.  
+     Here it's `OnZoom`.  
   
- La déclaration de fonction ressemblerait à ceci :  
+ The function declaration would resemble this:  
   
- [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/CPP/handlers-for-message-map-ranges_4.h)]  
+ [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]  
   
- Le cas de la mise à jour des fonctions de gestions est similaire, et supposé être bien plus utile.  Il est assez fréquent d'écrire des gestionnaires de `ON_UPDATE_COMMAND_UI` pour plusieurs commandes et de recherche en écriture, ou en copiant le même code de façon répétée.  La solution consiste à mapper une plage d'ID d'ordre à une fonction du conseiller de mise à jour à l'aide de la macro de `ON_UPDATE_COMMAND_UI_RANGE`.  Les ID de commande doivent constituer une plage contigue.  Pour obtenir un exemple, consultez le gestionnaire de **OnUpdateZoom** et de son entrée de la table des messages de `ON_UPDATE_COMMAND_UI_RANGE` de la classe d'affichage de l'exemple de HIERSVR.  
+ The case of update handler functions is similar, and likely to be more widely useful. It's quite common to write `ON_UPDATE_COMMAND_UI` handlers for a number of commands and find yourself writing, or copying, the same code over and over. The solution is to map a range of command IDs to one update handler function using the `ON_UPDATE_COMMAND_UI_RANGE` macro. The command IDs must form a contiguous range. For an example, see the **OnUpdateZoom** handler and its `ON_UPDATE_COMMAND_UI_RANGE` message-map entry in the HIERSVR sample's view class.  
   
- Les fonctionnalités du conseiller de mise à jour pour les commandes prennent généralement un seul paramètre, `pCmdUI`, de type **CCmdUI\***.  Contrairement aux fonctions, et les fonctionnalités du conseiller de mise à jour pour les plages de table des messages ne requièrent pas un paramètre supplémentaire, `nID`, de type **UINT**.  ID de commande, qui est nécessaire pour spécifier quelle commande l'utilisateur a choisi, se trouve dans l'objet de `CCmdUI`.  
+ Update handler functions for single commands normally take a single parameter, `pCmdUI`, of type **CCmdUI\***. Unlike handler functions, update handler functions for message-map ranges do not require an extra parameter, `nID`, of type **UINT**. The command ID, which is needed to specify which command the user actually chose, is found in the `CCmdUI` object.  
   
-##  <a name="_core_example_for_a_range_of_control_ids"></a> Exemple d'une plage d'ID de contrôle.  
- Un autre cas intéressant mappe les messages de notification de contrôle pour une plage des ID de contrôle à un seul gestionnaire.  Supposons que l'utilisateur peut cliquer sur l'un des 10 boutons.  Pour mapper chacun des 10 boutons à un responsable, votre entrée de la table des messages ressemblerait à ceci :  
+##  <a name="_core_example_for_a_range_of_control_ids"></a> Example for a Range of Control IDs  
+ Another interesting case is mapping control-notification messages for a range of control IDs to a single handler. Suppose the user can click any of 10 buttons. To map all 10 buttons to one handler, your message-map entry would look like this:  
   
- [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/CPP/handlers-for-message-map-ranges_5.cpp)]  
+ [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]  
   
- Lorsque vous entrez la macro de `ON_CONTROL_RANGE` dans la table des messages, spécifiez :  
+ When you write the `ON_CONTROL_RANGE` macro in your message map, you specify:  
   
--   Un message particulier de contrôle de notification.  
+-   A particular control-notification message.  
   
-     Ici il s'agit **BN\_CLICKED**.  
+     Here it's **BN_CLICKED**.  
   
--   Les valeurs d'ID du contrôle associées à la plage contigue des contrôles.  
+-   The control ID values associated with the contiguous range of controls.  
   
-     Ici ce sont `IDC_BUTTON1` et `IDC_BUTTON10`.  
+     Here these are `IDC_BUTTON1` and `IDC_BUTTON10`.  
   
--   Le nom de la fonction gestionnaire des messages.  
+-   The name of the message handler function.  
   
-     Ici il s'agit `OnButtonClicked`.  
+     Here it's `OnButtonClicked`.  
   
- Lorsque vous entrez la fonction gestionnaire, spécifiez le paramètre supplémentaire de **UINT**, comme suit :  
+ When you write the handler function, specify the extra **UINT** parameter, as shown in the following:  
   
- [!code-cpp[NVC_MFCMessageHandling#11](../mfc/codesnippet/CPP/handlers-for-message-map-ranges_6.cpp)]  
+ [!code-cpp[NVC_MFCMessageHandling#11](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_6.cpp)]  
   
- Le gestionnaire de `OnButtonClicked` pour un seul message de **BN\_CLICKED** ne requiert aucun paramètre.  Le même gestionnaire pour une plage de boutons prend un **UINT**.  Le paramètre supplémentaire permet d'identifier le contrôle particulier chargé de générer un message de **BN\_CLICKED**.  
+ The `OnButtonClicked` handler for a single **BN_CLICKED** message takes no parameters. The same handler for a range of buttons takes one **UINT**. The extra parameter allows for identifying the particular control responsible for generating the **BN_CLICKED** message.  
   
- Le code présenté dans l'exemple de scénario : la conversion de la valeur passée à `int` dans la plage de message et déclarer que c'est le cas.  Vous pouvez effectuer certaines mesures différente selon le bouton sur lequel l'utilisateur a cliqué.  
+ The code shown in the example is typical: converting the value passed to an `int` within the message range and asserting that this is the case. Then you might take some different action depending on which button was clicked.  
   
-## Voir aussi  
- [Déclaration des fonctions de gestionnaire de messages](../mfc/declaring-message-handler-functions.md)
+## <a name="see-also"></a>See Also  
+ [Declaring Message Handler Functions](../mfc/declaring-message-handler-functions.md)
+

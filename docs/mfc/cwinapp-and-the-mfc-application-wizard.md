@@ -1,46 +1,65 @@
 ---
-title: "CWinApp et l&#39;Assistant Application MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CWinApp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assistants Application (C++), et CWinApp"
-  - "CWinApp (classe), et Assistant Application MFC"
-  - "MFC (C++), Assistants"
+title: CWinApp and the MFC Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CWinApp
+dev_langs:
+- C++
+helpviewer_keywords:
+- application wizards [MFC], and CWinApp
+- CWinApp class [MFC], and MFC Application Wizard
+- MFC, wizards
 ms.assetid: f8ac0491-3302-4e46-981d-0790624eb8a2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# CWinApp et l&#39;Assistant Application MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1f58774c6a7d3ed608847b72e22e042bb9bf61e8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Lorsqu'elle crée une application squelette, l'Application MFC déclare une classe d'application dérivée de[CWinApp](../mfc/reference/cwinapp-class.md).  L'Application MFC crée également un fichier d'implémentation qui contient les éléments suivants :  
+---
+# <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp and the MFC Application Wizard
+When it creates a skeleton application, the MFC Application Wizard declares an application class derived from [CWinApp](../mfc/reference/cwinapp-class.md). The MFC Application Wizard also generates an implementation file that contains the following items:  
   
--   Une table des messages pour la classe d'application.  
+-   A message map for the application class.  
   
--   Un constructeur vide de la classe.  
+-   An empty class constructor.  
   
--   Une variable qui déclare un et un seul objet de la classe.  
+-   A variable that declares the one and only object of the class.  
   
--   Une implémentation standard de la fonction membre `InitInstance`.  
+-   A standard implementation of your `InitInstance` member function.  
   
- La classe d'application est placée dans les fichiers sources d'en\-tête et de main du projet.  Les noms de la classe et des fichiers créés sont basés sur le nom du projet que vous fournissez dans l'Assistant d'Application MFC.  La méthode la plus facile pour consulter le code de ces classes est via [Affichage de classes](http://msdn.microsoft.com/fr-fr/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+ The application class is placed in the project header and main source files. The names of the class and files created are based on the project name you supply in the MFC Application Wizard. The easiest way to view the code for these classes is through [Class View](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
   
- Les implémentations et la table des messages standard fournies sont appropriées à de nombreuses fins, mais vous pouvez les modifier si nécessaire.  La plus intéressante de ces implémentations est la fonction membre `InitInstance`.  En général, vous allez ajouter du code à l'implémentation squelette de `InitInstance`.  
+ The standard implementations and message map supplied are adequate for many purposes, but you can modify them as needed. The most interesting of these implementations is the `InitInstance` member function. Typically, you will add code to the skeletal implementation of `InitInstance`.  
   
-## Voir aussi  
- [CWinApp : classe d'application](../mfc/cwinapp-the-application-class.md)   
- [Fonctions membres CWinApp remplaçables](../mfc/overridable-cwinapp-member-functions.md)   
- [Services CWinApp spéciaux](../mfc/special-cwinapp-services.md)
+## <a name="see-also"></a>See Also  
+ [CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md)   
+ [Overridable CWinApp Member Functions](../mfc/overridable-cwinapp-member-functions.md)   
+ [Special CWinApp Services](../mfc/special-cwinapp-services.md)
+
+

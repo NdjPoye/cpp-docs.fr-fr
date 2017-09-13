@@ -1,5 +1,5 @@
 ---
-title: Classe de CFormView | Documents Microsoft
+title: CFormView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,9 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- views, containing controls
-- CFormView class
-- form views
+- CFormView [MFC], CFormView
+- CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
 caps.latest.revision: 23
 author: mikeblome
@@ -38,46 +37,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 82b38b04aa3cf2368d41ee20847c952c3082d4e4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a300c3ab480127012d51f232884ab57b7e5a2e22
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cformview-class"></a>Classe de CFormView
-Classe de base utilisée pour les modes formulaire.  
+# <a name="cformview-class"></a>CFormView Class
+The base class used for form views.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CFormView : public CScrollView  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Constructeurs protégés  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFormView::CFormView](#cformview)|Construit un objet `CFormView`.|  
+|[CFormView::CFormView](#cformview)|Constructs a `CFormView` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFormView::IsInitDlgCompleted](#isinitdlgcompleted)|Utilisé pour la synchronisation pendant l’initialisation.|  
+|[CFormView::IsInitDlgCompleted](#isinitdlgcompleted)|Used for synchronization during initialization.|  
   
-## <a name="remarks"></a>Remarques  
- En substance, me mode Formulaire est une vue qui contient des contrôles. La disposition de ces contrôles est basée sur une ressource de modèle de boîte de dialogue. Utilisez `CFormView` si vous voulez des formulaires dans votre application. Ces vues prennent en charge le défilement, le cas échéant, à l’aide de la [CScrollView](../../mfc/reference/cscrollview-class.md) fonctionnalité.  
+## <a name="remarks"></a>Remarks  
+ A form view is essentially a view that contains controls. These controls are laid out based on a dialog-template resource. Use `CFormView` if you want forms in your application. These views support scrolling, as needed, using the [CScrollView](../../mfc/reference/cscrollview-class.md) functionality.  
   
- Lorsque vous êtes [création d’une Application basée sur les formulaires](../../mfc/reference/creating-a-forms-based-mfc-application.md), vous pouvez baser sa classe d’affichage sur `CFormView`, rend une application basée sur les formulaires.  
+ When you are [Creating a Forms-Based Application](../../mfc/reference/creating-a-forms-based-mfc-application.md), you can base its view class on `CFormView`, making it a forms-based application.  
   
- Vous pouvez également insérer de nouvelles [rubriques relatives aux formulaires](../../mfc/form-views-mfc.md) dans des applications basé sur la vue de document. Même si, au départ, votre application ne prend pas en charge les formulaires, Visual C++ ajoute cette prise en charge du moment que vous insérez un nouveau formulaire.  
+ You can also insert new [Form Topics](../../mfc/form-views-mfc.md) into document-view-based applications. Even if your application did not initially support forms, Visual C++ will add this support when you insert a new form.  
   
- L'Assistant Application MFC et la commande Ajouter une classe sont les méthodes recommandées pour créer des applications basées sur les formulaires. Si vous avez besoin créer une application basée sur les formulaires sans l’aide de ces méthodes, consultez [création d’une Application basée sur les formulaires](../../mfc/reference/creating-a-forms-based-mfc-application.md).  
+ The MFC Application Wizard and the Add Class command are the preferred methods for creating forms-based applications. If you need to create a forms-based application without using these methods, see [Creating a Forms-Based Application](../../mfc/reference/creating-a-forms-based-mfc-application.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -90,52 +89,52 @@ class CFormView : public CScrollView
   
  `CFormView`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="cformview"></a>CFormView::CFormView  
- Construit un objet `CFormView`.  
+##  <a name="cformview"></a>  CFormView::CFormView  
+ Constructs a `CFormView` object.  
   
 ```  
 CFormView(LPCTSTR lpszTemplateName);  
 CFormView(UINT nIDTemplate);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpszTemplateName`  
- Contient une chaîne terminée par le caractère null qui correspond au nom d’une ressource modèle de boîte de dialogue.  
+ Contains a null-terminated string that is the name of a dialog-template resource.  
   
  `nIDTemplate`  
- Contient le numéro d’ID d’une ressource modèle de boîte de dialogue.  
+ Contains the ID number of a dialog-template resource.  
   
-### <a name="remarks"></a>Remarques  
- Lorsque vous créez un objet d’un type dérivé de `CFormView`, appelez un des constructeurs pour créer l’objet d’affichage et d’identifier la ressource de boîte de dialogue sur laquelle repose la vue. Vous pouvez identifier la ressource par son nom (passez une chaîne comme argument au constructeur) ou par son ID (passer un entier non signé comme argument).  
+### <a name="remarks"></a>Remarks  
+ When you create an object of a type derived from `CFormView`, invoke one of the constructors to create the view object and identify the dialog resource on which the view is based. You can identify the resource either by name (pass a string as the argument to the constructor) or by its ID (pass an unsigned integer as the argument).  
   
- Les contrôles de fenêtre et enfant en mode formulaire ne sont pas créés tant que `CWnd::Create` est appelée. `CWnd::Create`est appelé par l’infrastructure en tant que partie du document et la vue processus de création, pilotée par le modèle de document.  
+ The form-view window and child controls are not created until `CWnd::Create` is called. `CWnd::Create` is called by the framework as part of the document and view creation process, which is driven by the document template.  
   
 > [!NOTE]
->  Votre classe dérivée *doit* fournir son propre constructeur. Dans le constructeur, appelez le constructeur, `CFormView::CFormView`, avec le nom de la ressource ou l’ID en tant qu’argument comme indiqué dans la rubrique de présentation (classe).  
+>  Your derived class *must* supply its own constructor. In the constructor, invoke the constructor, `CFormView::CFormView`, with the resource name or ID as an argument as shown in the preceding class overview.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCDocView&#90;](../../mfc/codesnippet/cpp/cformview-class_1.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#90](../../mfc/codesnippet/cpp/cformview-class_1.h)]  
   
- [!code-cpp[NVC_MFCDocView&#91;](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#91](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]  
   
-##  <a name="isinitdlgcompleted"></a>CFormView::IsInitDlgCompleted  
- Utilisé par MFC pour faire en sorte que l'initialisation se termine avant que d'autres opérations soient entreprises.  
+##  <a name="isinitdlgcompleted"></a>  CFormView::IsInitDlgCompleted  
+ Used by MFC to ensure that initialization is completed before performing other operations.  
   
 ```  
 BOOL IsInitDlgCompleted() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- True si la fonction d'initialisation de cette boîte de dialogue a abouti.  
+### <a name="return-value"></a>Return Value  
+ True if the initialization function for this dialog has completed.  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemple MFC SNAPVW](../../visual-cpp-samples.md)   
- [Exemple MFC VIEWEX](../../visual-cpp-samples.md)   
- [CScrollView (classe)](../../mfc/reference/cscrollview-class.md)   
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [CDialog (classe)](../../mfc/reference/cdialog-class.md)   
- [CScrollView (classe)](../../mfc/reference/cscrollview-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample SNAPVW](../../visual-cpp-samples.md)   
+ [MFC Sample VIEWEX](../../visual-cpp-samples.md)   
+ [CScrollView Class](../../mfc/reference/cscrollview-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDialog Class](../../mfc/reference/cdialog-class.md)   
+ [CScrollView Class](../../mfc/reference/cscrollview-class.md)
 

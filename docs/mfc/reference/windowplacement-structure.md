@@ -1,5 +1,5 @@
 ---
-title: WINDOWPLACEMENT (Structure) | Documents Microsoft
+title: WINDOWPLACEMENT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- WINDOWPLACEMENT structure
+- WINDOWPLACEMENT structure [MFC]
 ms.assetid: ea7d61f6-eb57-478e-9b08-7c1d07091aa8
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 62cf7003f43d50d5998dd527ae5ad7b10ab95686
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e26448daeff10c576944e5d9af79fa08a67b86c4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="windowplacement-structure"></a>WINDOWPLACEMENT, structure
-Le `WINDOWPLACEMENT` structure contient des informations relatives à l’emplacement d’une fenêtre sur l’écran**.**  
+# <a name="windowplacement-structure"></a>WINDOWPLACEMENT Structure
+The `WINDOWPLACEMENT` structure contains information about the placement of a window on the screen**.**  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagWINDOWPLACEMENT {     /* wndpl */  
@@ -56,54 +56,54 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
 } WINDOWPLACEMENT;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  *length*  
- Spécifie la longueur, en octets, de la structure**.**  
+ Specifies the length, in bytes, of the structure**.**  
   
  `flags`  
- Spécifie des indicateurs qui contrôlent la position de la fenêtre réduite et la méthode par laquelle la fenêtre est restaurée. Ce membre peut être une ou les deux des indicateurs suivants :  
+ Specifies flags that control the position of the minimized window and the method by which the window is restored. This member can be one or both of the following flags:  
   
-- **WPF_SETMINPOSITION** Spécifie que les positions x et y de la fenêtre réduite peut être spécifiée**.** Cet indicateur doit être spécifiée si les coordonnées sont définies dans le **ptMinPosition** membre.  
+- **WPF_SETMINPOSITION** Specifies that the x- and y-positions of the minimized window can be specified**.** This flag must be specified if the coordinates are set in the **ptMinPosition** member.  
   
-- **WPF_RESTORETOMAXIMIZED** Spécifie que la fenêtre restaurée sera agrandie, indépendamment de si elle a été agrandie avant qu’il a été réduit. Ce paramètre est valid uniquement la prochaine fois que la fenêtre est restaurée. Il ne modifie pas le comportement de restauration par défaut. Cet indicateur est valide uniquement lorsque la **SW_SHOWMINIMIZED** valeur est spécifiée pour le **showCmd** membre.  
+- **WPF_RESTORETOMAXIMIZED** Specifies that the restored window will be maximized, regardless of whether it was maximized before it was minimized. This setting is valid only the next time the window is restored. It does not change the default restoration behavior. This flag is valid only when the **SW_SHOWMINIMIZED** value is specified for the **showCmd** member.  
   
  *showCmd*  
- Spécifie l’état affiché en cours de la fenêtre. Ce membre peut être une des valeurs suivantes :  
+ Specifies the current show state of the window. This member can be one of the following values:  
   
-- **SW_HIDE** masque la fenêtre et Active une autre fenêtre.  
+- **SW_HIDE** Hides the window and passes activation to another window.  
   
-- **SW_MINIMIZE** réduit la fenêtre spécifiée et Active la fenêtre de niveau supérieur dans la liste du système.  
+- **SW_MINIMIZE** Minimizes the specified window and activates the top-level window in the system's list.  
   
-- **SW_RESTORE** active et affiche une fenêtre. Si la fenêtre est réduite ou agrandie, Windows le restaure à sa taille et sa position d’origine (même en tant que **SW_SHOWNORMAL**).  
+- **SW_RESTORE** Activates and displays a window. If the window is minimized or maximized, Windows restores it to its original size and position (same as **SW_SHOWNORMAL**).  
   
-- **SW_SHOW** Active une fenêtre et l’affiche dans sa taille actuelle et son emplacement.  
+- **SW_SHOW** Activates a window and displays it in its current size and position.  
   
-- **SW_SHOWMAXIMIZED** Active une fenêtre et l’affiche comme une fenêtre agrandie.  
+- **SW_SHOWMAXIMIZED** Activates a window and displays it as a maximized window.  
   
-- **SW_SHOWMINIMIZED** Active une fenêtre et l’affiche sous forme d’icône.  
+- **SW_SHOWMINIMIZED** Activates a window and displays it as an icon.  
   
-- **SW_SHOWMINNOACTIVE** affiche une fenêtre sous forme d’icône. La fenêtre actuellement active reste active.  
+- **SW_SHOWMINNOACTIVE** Displays a window as an icon. The window that is currently active remains active.  
   
-- **SW_SHOWNA** affiche une fenêtre dans son état actuel. La fenêtre actuellement active reste active.  
+- **SW_SHOWNA** Displays a window in its current state. The window that is currently active remains active.  
   
-- **SW_SHOWNOACTIVATE** affiche une fenêtre dans sa taille et la position la plus récente. La fenêtre actuellement active reste active.  
+- **SW_SHOWNOACTIVATE** Displays a window in its most recent size and position. The window that is currently active remains active.  
   
-- **SW_SHOWNORMAL** active et affiche une fenêtre. Si la fenêtre est réduite ou agrandie, Windows le restaure à sa taille et sa position d’origine (même en tant que **SW_RESTORE**).  
+- **SW_SHOWNORMAL** Activates and displays a window. If the window is minimized or maximized, Windows restores it to its original size and position (same as **SW_RESTORE**).  
   
  *ptMinPosition*  
- Spécifie la position du coin supérieur gauche de la fenêtre lorsque la fenêtre est réduite.  
+ Specifies the position of the window's top-left corner when the window is minimized.  
   
  `ptMaxPosition`  
- Spécifie la position du coin supérieur gauche de la fenêtre lorsque la fenêtre est agrandie.  
+ Specifies the position of the window's top-left corner when the window is maximized.  
   
  *rcNormalPosition*  
- Spécifie les coordonnées de la fenêtre lorsque la fenêtre est en position normale (restaurée).  
+ Specifies the window's coordinates when the window is in the normal (restored) position.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::SetWindowPlacement](../../mfc/reference/cwnd-class.md#setwindowplacement)
 
 

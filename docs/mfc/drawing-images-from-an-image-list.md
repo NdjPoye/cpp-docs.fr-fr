@@ -1,44 +1,63 @@
 ---
-title: "Dessin d&#39;images &#224; partir d&#39;une liste d&#39;images | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList (classe), dessiner des images"
-  - "dessiner, images à partir de listes d'images"
-  - "listes d'images (C++), dessiner des images"
-  - "images (C++), dessin"
+title: Drawing Images from an Image List | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImageList class [MFC], drawing images from
+- drawing [MFC], images from image lists
+- image lists [MFC], drawing images from
+- images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Dessin d&#39;images &#224; partir d&#39;une liste d&#39;images
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b0ffa8a402eb7a9c34d2496a39621f12310df12c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Pour dessiner une image, utilisez la fonction membre d' [CImageList::Draw](../Topic/CImageList::Draw.md).  Spécifiez un pointeur vers un objet de contexte de périphérique, l'index de l'image à dessiner, l'emplacement dans le contexte de périphérique où dessiner l'image, et un jeu d'indicateurs pour indiquer le style de dessin.  
+---
+# <a name="drawing-images-from-an-image-list"></a>Drawing Images from an Image List
+To draw an image, use the [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) member function. You'll specify a pointer to a device context object, the index of the image to draw, the location in the device context at which to draw the image, and a set of flags to indicate the drawing style.  
   
- Lorsque vous spécifiez le style d' `ILD_TRANSPARENT`, **Dessiner** utilise un processus en deux étapes pour dessiner une image masquée.  En premier lieu, elle effectue une opération AND logique\- sur les bits de l'image et les bits du masque.  Puis elle exécute une opération de logique\- XOR sur les résultats de la première opération et les bits d'arrière\-plan du contexte de destination de périphérique.  Ce processus crée des zones transparentes dans l'image résultante; autrement dit, chaque bit blanc dans le masque rend le bit correspondant dans l'image résultante transparent.  
+ When you specify the `ILD_TRANSPARENT` style, **Draw** uses a two-step process to draw a masked image. First, it performs a logical-AND operation on the bits of the image and the bits of the mask. Then it performs a logical-XOR operation on the results of the first operation and the background bits of the destination device context. This process creates transparent areas in the resulting image; that is, each white bit in the mask causes the corresponding bit in the resulting image to be transparent.  
   
- Avant de dessiner une image masquée sur un arrière\-plan de couleur unie, vous devez utiliser la fonction membre d' [SetBkColor](../Topic/CImageList::SetBkColor.md) pour définir la couleur d'arrière\-plan de la liste des images à la même couleur que la destination.  Définir la couleur élimine le besoin de créer des zones transparentes dans l'image et permet à **Dessiner** de copier simplement l'image au contexte de destination de périphérique, ce qui entraîne une augmentation significative des performances.  Pour ajouter l'image, spécifiez le style d' `ILD_NORMAL` lorsque vous appelez **Dessiner**.  
+ Before drawing a masked image on a solid color background, you should use the [SetBkColor](../mfc/reference/cimagelist-class.md#setbkcolor) member function to set the background color of the image list to the same color as the destination. Setting the color eliminates the need to create transparent areas in the image and enables **Draw** to simply copy the image to the destination device context, resulting in a significant increase in performance. To draw the image, specify the `ILD_NORMAL` style when you call **Draw**.  
   
- Vous pouvez définir la couleur d'arrière\-plan pour une liste d'images masquées \([CImageList](../mfc/reference/cimagelist-class.md)\) à tout moment afin qu'elle dessine correctement sur n'importe quel arrière\-plan uni.  Définir la couleur d'arrière\-plan à `CLR_NONE` entraîne que les images à ajouter soient dessinées transparentes par défaut.  Pour récupérer la couleur d'arrière\-plan d'une liste d'images, utilisez la fonction membre d' [GetBkColor](../Topic/CImageList::GetBkColor.md).  
+ You can set the background color for a masked image list ([CImageList](../mfc/reference/cimagelist-class.md)) at any time so that it draws correctly on any solid background. Setting the background color to `CLR_NONE` causes images to be drawn transparently by default. To retrieve the background color of an image list, use the [GetBkColor](../mfc/reference/cimagelist-class.md#getbkcolor) member function.  
   
- Les styles d' `ILD_BLEND25` et d' `ILD_BLEND50` font trembler l'image avec la couleur de surbrillance du système.  Ces styles sont utiles si vous utilisez une image masquée pour représenter un objet que l'utilisateur puisse sélectionner.  Par exemple, vous pouvez utiliser le style d' `ILD_BLEND50` pour dessiner l'image lorsque l'utilisateur la sélectionne.  
+ The `ILD_BLEND25` and `ILD_BLEND50` styles dither the image with the system highlight color. These styles are useful if you use a masked image to represent an object that the user can select. For example, you can use the `ILD_BLEND50` style to draw the image when the user selects it.  
   
- Une image non masquée est copiée dans le contexte de périphérique de destination à l'aide de l'opération de trame **SRCCOPY**.  Les couleurs dans l'image s'affichent de la même façon indépendamment de la couleur d'arrière\-plan du contexte de périphérique.  Les styles de dessin spécifiés dans **Dessiner** n'ont également aucun effet sur l'apparence d'une image non masquée.  
+ A nonmasked image is copied to the destination device context using the **SRCCOPY** raster operation. The colors in the image appear the same regardless of the background color of the device context. The drawing styles specified in **Draw** also have no effect on the appearance of a nonmasked image.  
   
- En plus de la fonction membre Dessiner, une autre fonction, [DrawIndirect](../Topic/CImageList::DrawIndirect.md), étend la capacité d'afficher une image.  `DrawIndirect` prend comme paramètre une structure d' [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395).  Cette structure peut être utilisée pour personnaliser le rendu de l'image actuelle, notamment l'utilisation de codes d'opérations de trame \(ROP\).  Pour plus d'informations sur les codes d'opération de trame, consultez [Code d'opération de trame](http://msdn.microsoft.com/library/windows/desktop/dd162892) et [Bitmap comme pinceaux](http://msdn.microsoft.com/library/windows/desktop/dd183378) dans [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ In addition to the Draw member function, another function, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), extends the ability to render an image. `DrawIndirect` takes, as a parameter, an [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) structure. This structure can be used to customize the rendering of the current image, including the use of raster operation (ROP) codes. For more information on ROP codes, see [Raster Operation Codes](http://msdn.microsoft.com/library/windows/desktop/dd162892) and [Bitmaps as Brushes](http://msdn.microsoft.com/library/windows/desktop/dd183378) in the Windows SDK.  
   
-## Voir aussi  
- [Utilisation de CImageList](../mfc/using-cimagelist.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

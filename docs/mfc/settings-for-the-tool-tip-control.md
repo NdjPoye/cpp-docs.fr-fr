@@ -1,34 +1,53 @@
 ---
-title: "Param&#232;tres du contr&#244;le d’info-bulle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "info-bulles [C++], activer"
-  - "Classe CToolTipCtrl, paramètres"
+title: Settings for the Tool Tip Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tool tips [MFC], activating
+- CToolTipCtrl class [MFC], settings
 ms.assetid: ff8c5c46-2047-403a-bd98-ffec3d21ee3a
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Param&#232;tres du contr&#244;le d’info-bulle
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1fe26a166503e772c0ed7241cbbdb937c65b4211
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Vous pouvez définir le contrôle d’info\-bulle \([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)\) de sorte qu’il soit actif ou inactif. Quand vous le définissez comme étant actif, le contrôle d’info\-bulle s’affiche quand le curseur se trouve sur un outil. Quand vous le définissez comme étant inactif, le contrôle d’info\-bulle ne s’affiche pas, même si le curseur se trouve sur un outil. Appelez [Activate](../Topic/CToolTipCtrl::Activate.md) pour activer ou désactiver un contrôle d’info\-bulle.  
+---
+# <a name="settings-for-the-tool-tip-control"></a>Settings for the Tool Tip Control
+You can set the tool tip control ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) to be either active or inactive. When you set it to be active, the tool tip control appears when the cursor is on a tool. When you set it to be inactive, the tool tip control does not appear, even if the cursor is on a tool. Call [Activate](../mfc/reference/ctooltipctrl-class.md#activate) to activate or deactivate a tool tip control.  
   
- Vous pouvez définir une info\-bulle active pour qu’elle s’affiche quand le curseur se trouve sur un outil, que la fenêtre propriétaire du contrôle d’info\-bulle soit active ou inactive, en utilisant le style **TTS\_ALWAYSTIP**. Si vous n’utilisez pas ce style, le contrôle d’info\-bulle s’affiche quand la fenêtre de propriétaire de l’outil est active, mais pas quand elle est inactive.  
+ You can set an active tool tip to display the tool tip when the cursor is on a tool, whether or not the tool tip control's owner window is active or inactive, by using the **TTS_ALWAYSTIP** style. If you do not use this style, the tool tip control appears when the tool's owner window is active, but not when it is inactive.  
   
- La plupart des applications contiennent des barres d’outils qui correspondent à des commandes de menu. Pour ces outils, il est pratique que le contrôle d’info\-bulle affiche le même texte que l’élément de menu correspondant. Le système supprime automatiquement les caractères de raccourci « & » \(esperluette\) de toutes les chaînes passées à un contrôle d’info\-bulle, sauf si le contrôle a le style **TTS\_NOPREFIX**.  
+ Most applications contain toolbars with tools that correspond to menu commands. For such tools, it is convenient for the tool tip control to display the same text as the corresponding menu item. The system automatically strips the ampersand (&) accelerator characters from all strings passed to a tool tip control, unless the control has the **TTS_NOPREFIX** style.  
   
-## Voir aussi  
- [Utilisation de CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

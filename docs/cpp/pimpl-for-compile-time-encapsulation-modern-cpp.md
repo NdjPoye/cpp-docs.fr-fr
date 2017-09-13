@@ -1,41 +1,56 @@
 ---
-title: "Pimpl pour l&#39;encapsulation au moment de la compilation (Modern C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Pimpl For Compile-Time Encapsulation (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Pimpl pour l&#39;encapsulation au moment de la compilation (Modern C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 0982df3552bd97cbaecf754afd6d442749745412
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/11/2017
 
-L'*idiome pimpl* est une technique moderne de C\+\+ pour masquer l'implémentation, réduire le couplage, et pour séparer les interfaces.  Pimpl est l'abréviation de « pointeur vers implémentation. » Vous connaissez peut\-être déjà le concept mais le connaissez sous d'autres noms tels que Cheshire Cat ou idiome de pare\-feu du compilateur.  
+---
+# <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl For Compile-Time Encapsulation (Modern C++)
+The *pimpl idiom* is a modern C++ technique to hide implementation, to minimize coupling, and to separate interfaces. Pimpl is short for "pointer to implementation." You may already be familiar with the concept but know it by other names like Cheshire Cat or Compiler Firewall idiom.  
   
-## Pourquoi utiliser pimpl ?  
- Voici comment l'idiome pimpl peut améliorer le cycle de vie de développement logiciel :  
+## <a name="why-use-pimpl"></a>Why use pimpl?  
+ Here's how the pimpl idiom can improve the software development lifecycle:  
   
--   Minimisation des dépendances de compilation.  
+-   Minimization of compilation dependencies.  
   
--   Séparation d'interface et d'implémentation.  
+-   Separation of interface and implementation.  
   
--   Portabilité  
+-   Portability.  
   
-## En\-tête de Pimpl  
+## <a name="pimpl-header"></a>Pimpl header  
   
 ```cpp  
-  
 // my_class.h  
 class my_class {  
    //  ... all public and protected stuff goes here ...  
@@ -45,13 +60,12 @@ private:
   
 ```  
   
- L'idiome pimpl évite des cascades de reconstruction et les mises en page fragiles de l'objet.  Il convient bien pour les types \(transitivement\) très utilisés.  
+ The pimpl idiom avoids rebuild cascades and brittle object layouts. It's well suited for (transitively) popular types.  
   
-## Implémentation de pimple  
- Définissez la classe `impl` dans le fichier.cpp.  
+## <a name="pimpl-implementation"></a>Pimpl implementation  
+ Define the `impl` class in the .cpp file.  
   
 ```cpp  
-  
 // my_class.cpp  
 class my_class::impl {  // defined privately here  
   // ... all private data and functions: all of these  
@@ -63,10 +77,10 @@ my_class::my_class(): pimpl( new impl )
 }  
 ```  
   
-## Méthodes conseillées  
- Demandez\-vous s'il faut ajouter la prise en charge de la spécialisation non\-throwing swap.  
+## <a name="best-practices"></a>Best practices  
+ Consider whether to add support for non-throwing swap specialization.  
   
-## Voir aussi  
- [Bienvenue dans C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [Référence du langage C\+\+](../cpp/cpp-language-reference.md)   
- [Bibliothèque standard C\+\+](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)

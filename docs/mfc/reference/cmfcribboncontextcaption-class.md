@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCRibbonContextCaption | Documents Microsoft
+title: CMFCRibbonContextCaption Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonContextCaption class
+- CMFCRibbonContextCaption [MFC], GetColor
+- CMFCRibbonContextCaption [MFC], GetRightTabX
 ms.assetid: cce2c0a2-8370-4266-997e-f8d0eeb3d616
 caps.latest.revision: 24
 author: mikeblome
@@ -36,39 +37,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 54f71af5ec46a8ddac4459e9ffdbc5b10f3106d4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b5d6e65bc5b40c867f54a6cf80a39645eb7e18e4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribboncontextcaption-class"></a>CMFCRibbonContextCaption (classe)
-Implémente une légende colorée qui apparaît en haut d'une catégorie de ruban ou d'une catégorie de contexte.  
+# <a name="cmfcribboncontextcaption-class"></a>CMFCRibbonContextCaption Class
+Implements a colored caption that appears at the top of a ribbon category or a context category.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonContextCaption : public CMFCRibbonButton  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonContextCaption::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|  
-|[CMFCRibbonContextCaption::GetColor](#getcolor)|Retourne la couleur de la légende.|  
+|`CMFCRibbonContextCaption::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCRibbonContextCaption::GetColor](#getcolor)|Returns the color of the caption.|  
 |[CMFCRibbonContextCaption::GetRightTabX](#getrighttabx)||  
-|`CMFCRibbonContextCaption::GetThisClass`|Utilisé par le framework d’obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet associé à ce type de classe.|  
+|`CMFCRibbonContextCaption::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
   
-## <a name="remarks"></a>Remarques  
- Cette classe ne peut pas être instanciée directement. Le [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md) classe utilise cette classe en interne pour ajouter une couleur à des catégories de ruban.  
+## <a name="remarks"></a>Remarks  
+ This class cannot be directly instantiated. The [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md) class uses this class internally to add color to ribbon categories.  
   
- Pour définir la couleur pour les catégories du ruban, appelez [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor). Pour définir la couleur pour les catégories de contexte, appelez [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).  
+ To set the color for ribbon categories, call [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor). To set the color for context categories, call [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -77,18 +78,18 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
   
  [CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md)  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxRibbonBar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxRibbonBar.h  
   
-##  <a name="getcolor"></a>CMFCRibbonContextCaption::GetColor  
- Retourne la couleur d’arrière-plan de la légende.  
+##  <a name="getcolor"></a>  CMFCRibbonContextCaption::GetColor  
+ Returns the background color of the caption.  
   
 ```  
 AFX_RibbonCategoryColor GetColor() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- La valeur retournée peut être une des valeurs énumérées suivantes :  
+### <a name="return-value"></a>Return Value  
+ The returned value can be one of the following enumerated values:  
   
 - `AFX_CategoryColor_None`  
   
@@ -106,25 +107,25 @@ AFX_RibbonCategoryColor GetColor() const;
   
 - `AFX_CategoryColor_Violet`  
   
-### <a name="remarks"></a>Remarques  
- La couleur de la légende peut être définie en appelant [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) ou [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).  
+### <a name="remarks"></a>Remarks  
+ The color of the caption can be set by calling [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) or [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).  
   
-##  <a name="getrighttabx"></a>CMFCRibbonContextCaption::GetRightTabX  
- Récupère la position du bord droit de l’onglet de ruban de la catégorie.  
+##  <a name="getrighttabx"></a>  CMFCRibbonContextCaption::GetRightTabX  
+ Retrieves the position of the right-hand edge of the category’s ribbon tab.  
   
 ```  
 int GetRightTabX() const;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur de X droite du rectangle englobant de le `CMFCRibbonCategory` onglet de ruban de l’objet ou la valeur -1 si l’onglet est tronqué.  
+### <a name="return-value"></a>Return Value  
+ Returns the right-hand X-value of the enclosing rectangle of the `CMFCRibbonCategory` object’s ribbon tab, or a value of -1 if the tab is truncated.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>Voir aussi  
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonButton (classe)](../../mfc/reference/cmfcribbonbutton-class.md)   
- [Classe de CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)   
- [CMFCRibbonBar (classe)](../../mfc/reference/cmfcribbonbar-class.md)
+ [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)   
+ [CMFCRibbonCategory Class](../../mfc/reference/cmfcribboncategory-class.md)   
+ [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)
 

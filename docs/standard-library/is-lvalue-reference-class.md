@@ -1,5 +1,5 @@
 ---
-title: "is_lvalue_reference, classe │ Microsoft Docs"
+title: is_lvalue_reference Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_lvalue_reference
 - type_traits/std::is_lvalue_reference
 dev_langs:
 - C++
@@ -35,38 +34,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 71a98284e641ad5d24dc3f1413bdf8d210b2091a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d95d1194812ca4b5184d96026d384068502e9b75
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="islvaluereference-class"></a>is_lvalue_reference, classe
-Teste si le type est une référence lvalue.  
+# <a name="islvaluereference-class"></a>is_lvalue_reference Class
+Tests if type is an lvalue reference.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct is_lvalue_reference;
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Type à interroger.  
+ The type to query.  
   
-## <a name="remarks"></a>Notes  
- Une instance de ce prédicat de type a la valeur True si le type `Ty` est une référence à un objet ou à une fonction. Sinon, sa valeur est False. Notez que `Ty` ne peut pas être une référence rvalue. Pour plus d’informations sur les rvalues, consultez [Déclarateur de référence Rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+## <a name="remarks"></a>Remarks  
+ An instance of this type predicate holds true if the type `Ty` is a reference to an object or to a function, otherwise it holds false. Note that `Ty` may not be an rvalue reference. For more information about rvalues, see [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Lvalues et Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)
+ [Lvalues and Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)
 
 
 

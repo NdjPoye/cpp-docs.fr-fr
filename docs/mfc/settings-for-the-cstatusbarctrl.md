@@ -1,45 +1,64 @@
 ---
-title: "Param&#232;tres de l&#39;objet CStatusBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CStatusBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBarCtrl (classe), paramètres"
-  - "contrôles de barre d'état, paramètres"
+title: Settings for the CStatusBarCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CStatusBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- status bar controls [MFC], settings
+- CStatusBarCtrl class [MFC], settings
 ms.assetid: adeba0c3-17f3-435c-b140-a57845e9ce49
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Param&#232;tres de l&#39;objet CStatusBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d7a94d4f8943c35c3adfad13314bc7b44d05efeb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-La position par défaut d'une fenêtre d'état[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) est sur le bas de la fenêtre parente, mais vous pouvez spécifier le style `CCS_TOP` pour le faire apparaître en haut de la zone client de la fenêtre parente.  
+---
+# <a name="settings-for-the-cstatusbarctrl"></a>Settings for the CStatusBarCtrl
+The default position of a [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) status window is along the bottom of the parent window, but you can specify the `CCS_TOP` style to have it appear at the top of the parent window's client area.  
   
- Vous pouvez spécifier au style **SBARS\_SIZEGRIP** d'inclure une poignée de dimensionnement à l'extrémité droite de la fenêtre d'état `CStatusBarCtrl`.  Une poignée de dimensionnement est semblable à une bordure de dimensionnement ; il s'agit d'une zone rectangulaire que l'utilisateur peut cliquer et faire glisser pour redimensionner la fenêtre parente.  
+ You can specify the **SBARS_SIZEGRIP** style to include a sizing grip at the right end of the `CStatusBarCtrl` status window. A sizing grip is similar to a sizing border; it is a rectangular area that the user can click and drag to resize the parent window.  
   
 > [!NOTE]
->  Si vous combinez `CCS_TOP` et les styles de **SBARS\_SIZEGRIP**, la poignée de dimensionnement résultante ne fonctionne pas même si la système dessine dans la fenêtre d'état.  
+>  If you combine the `CCS_TOP` and **SBARS_SIZEGRIP** styles, the resulting sizing grip is not functional even though the system draws it in the status window.  
   
- La procédure d'affichage de la fenêtre d'état définit automatiquement la taille et la position initiales de la fenêtre de contrôle.  La largeur est le même que celle de la zone client de la fenêtre parente.  La hauteur est basée sur la taille de la police actuellement sélectionnée dans le contexte du périphérique de la fenêtre d'état et sur la largeur des bordures de fenêtre.  
+ The window procedure for the status window automatically sets the initial size and position of the control window. The width is the same as that of the parent window's client area. The height is based on the metrics of the font that is currently selected into the status window's device context and on the width of the window's borders.  
   
- La procédure d'affichage règle automatiquement la taille de la fenêtre d'état lorsqu'elle reçoit un message `WM_SIZE`.  En règle générale, lorsque la taille de la fenêtre parente change, le parent envoie un message `WM_SIZE` dans la fenêtre d'état.  
+ The window procedure automatically adjusts the size of the status window whenever it receives a `WM_SIZE` message. Typically, when the size of the parent window changes, the parent sends a `WM_SIZE` message to the status window.  
   
- Vous pouvez définir la hauteur minimale de la zone de dessin représentant une fenêtre d'état en appelant [SetMinHeight](../Topic/CStatusBarCtrl::SetMinHeight.md), en spécifiant la hauteur minimale en pixels.  La zone de dessin ne comprend pas les bordures de la fenêtre.  
+ You can set the minimum height of a status window's drawing area by calling [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight), specifying the minimum height in pixels. The drawing area does not include the window's borders.  
   
- Vous récupérez la largeur des bordures d'état en appelant [GetBorders](../Topic/CStatusBarCtrl::GetBorders.md).  Cette fonction membre inclut le pointeur vers un tableau de trois élément qui reçoit la largeur de la bordure horizontale, la bordure verticale, et la bordure entre les rectangles.  
+ You retrieve the widths of the borders of a status window by calling [GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders). This member function includes the pointer to a three-element array that receives the width of the horizontal border, the vertical border, and the border between rectangles.  
   
-## Voir aussi  
- [Utilisation de CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

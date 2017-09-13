@@ -1,48 +1,67 @@
 ---
-title: "Utilisation de CSpinButtonCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSpinButtonCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSpinButtonCtrl (classe), utilisation"
-  - "contrôle toupie"
-  - "contrôles up-down"
-  - "contrôles up-down, contrôle toupie"
+title: Using CSpinButtonCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSpinButtonCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- up-down controls [MFC], spin button control
+- up-down controls
+- spin button control
+- CSpinButtonCtrl class [MFC], using
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Utilisation de CSpinButtonCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7afe4fb7053c5da720cf2ae219f85ea6bac649aa
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Le contrôle *bouton de spin* \(également appelé contrôle *inversion*\)  fournit une paire de flèches sur lesquelle un utilisateur peut cliquer pour paramétrer une valeur.  Cette valeur est appelée *position actuelle*.  La position reste dans la plage du bouton de spin.  Lorsque l'utilisateur clique sur la flèche haut, la position se déplace vers le maximum ; et lorsque l'utilisateur clique sur la flèche vers le bas, la position déplace vers le minimum.  
+---
+# <a name="using-cspinbuttonctrl"></a>Using CSpinButtonCtrl
+The *spin button* control (also known as an *up-down* control) provides a pair of arrows that a user can click to adjust a value. This value is known as the *current position*. The position stays within the range of the spin button. When the user clicks the up arrow, the position moves toward the maximum; and when the user clicks the down arrow, the position moves toward the minimum.  
   
- Le contrôle de bouton de spin est représenté dans MFC par la classe [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md).  
+ The spin button control is represented in MFC by the [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) class.  
   
 > [!NOTE]
->  Par défaut, la plage du bouton de spin a la valeur maximale définie à zéro \(0\) et la valeur minimale 100.  Étant donné que la valeur maximale est inférieure à la valeur minimale, cliquez sur la flèche haut pour diminuer la position et cliquez sur la flèche bas pour l'augmenter.  Utilisez [CSpinButtonCtrl::SetRange](../Topic/CSpinButtonCtrl::SetRange.md) pour ajuster ces valeurs.  
+>  By default, the range for the spin button has the maximum set to zero (0) and the minimum set to 100. Because the maximum value is less than the minimum value, clicking the up arrow decreases the position and clicking the down arrow increases it. Use [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) to adjust these values.  
   
- En général, la position actuelle est affichée dans un contrôle assistant.  Le contrôle assistant est appelé *fenêtre compagnon*.  Pour une figure d'un contrôle de spin, consultez [À propos de contrôle up\-down](http://msdn.microsoft.com/library/windows/desktop/bb759889) dans [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ Typically, the current position is displayed in a companion control. The companion control is known as the *buddy window*. For an illustration of a spin button control, see [About Up-Down Controls](http://msdn.microsoft.com/library/windows/desktop/bb759889) in the Windows SDK.  
   
- Pour créer un contrôle de spin et une fenêtre compagnon de contrôle d'édition, dans Visual Studio, faites glisser d'abord un contrôle d'édition dans la boîte de dialogue ou dans la fenêtre, puis faites glisser à son tour un contrôle de spin.  Sélectionnez le contrôle de spin et définissez ses propriétés **Compagnon Automatique** et **Définir l'entier compagnon** sur **Vrai**.  Définissez également la propriété **Alignement** ; **Aligner à droite** est le plus commun.  Avec ces paramètres, le contrôle de version est défini comme fenêtre compagnon car il précède directement le contrôle d'édition dans l'ordre de tabulation.  Le contrôle d'édition affiche des entiers et le contrôle de spin est incorporé dans la partie droite du contrôle d'édition.  Éventuellement, vous pouvez définir la plage valide du contrôle de spin à l'aide de la méthode [CSpinButtonCtrl::SetRange](../Topic/CSpinButtonCtrl::SetRange.md).  Aucun gestionnaire d'événements n'est requis pour la communication entre le contrôle de spin et la fenêtre compagnon car ils échangent des données directement.  Si vous utilisez un contrôle de spin pour d'autres fins, par exemple, pour paginer dans une séquence de fenêtres ou des boîtes de dialogue, ajoutez un gestionnaire pour le message `UDN_DELTAPOS` et exécutez votre action personnalisée à cet endroit.  
+ To create a spin control and an edit control buddy window, in Visual Studio, first drag an edit control to the dialog box or window, and then drag a spin control. Select the spin control and set its **Auto Buddy** and **Set Buddy Integer** properties to **True**. Also set the **Alignment** property; **Right Align** is most typical. With these settings, the edit control is set as the buddy window because it directly precedes the edit control in the tab order. The edit control displays integers and the spin control is embedded in the right side of the edit control. Optionally, you can set the valid range of the spin control by using the [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) method. No event handlers are required to communicate between the spin control and buddy window because they exchange data directly. If you use a spin control for some other purpose, for example, to page through a sequence of windows or dialog boxes, then add a handler for the `UDN_DELTAPOS` message and perform your custom action there.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Styles de bouton toupie](../mfc/spin-button-styles.md)  
+-   [Spin Button Styles](../mfc/spin-button-styles.md)  
   
--   [Bouton toupie, fonctions membres](../mfc/spin-button-member-functions.md)  
+-   [Spin Button Member Functions](../mfc/spin-button-member-functions.md)  
   
-## Voir aussi  
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

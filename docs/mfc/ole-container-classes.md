@@ -1,61 +1,80 @@
 ---
-title: "Classes de conteneur OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes ActiveX (C++)"
-  - "classes de conteneur (C++)"
-  - "conteneurs (C++), applications conteneur OLE"
-  - "OLE (C++), classes"
-  - "OLE (classes) (C++)"
-  - "édition visuelle (C++), classes"
+title: OLE Container Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- container classes [MFC]
+- OLE classes [MFC]
+- visual editing [MFC], classes
+- OLE [MFC], classes
+- containers [MFC], OLE container applications
 ms.assetid: 1e27e1ab-4c22-41eb-8547-6915c72668ae
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Classes de conteneur OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb954b9d9671bc9f09bae737469c90151c7011f3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Ces classes sont utilisées par les applications conteneur.  `COleLinkingDoc` et `COleDocument` gèrent les collections d'objets `COleClientItem`.  Au lieu de dériver la classe de document de **CDocument**, vous le dériverez depuis `COleLinkingDoc` ou `COleDocument`, selon que vous souhaitez la prise en charge des liens vers des objets incorporés dans votre document.  
+---
+# <a name="ole-container-classes"></a>OLE Container Classes
+These classes are used by container applications. Both `COleLinkingDoc` and `COleDocument` manage collections of `COleClientItem` objects. Rather than deriving your document class from **CDocument**, you'll derive it from `COleLinkingDoc` or `COleDocument`, depending on whether you want support for links to objects embedded in your document.  
   
- Utilisez un objet `COleClientItem` pour représenter chaque élément OLE dans le document qui est incorporé à un autre document, ou qui est un lien vers un autre document.  
+ Use a `COleClientItem` object to represent each OLE item in your document that is embedded from another document or is a link to another document.  
   
  [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)  
- Prend en charge l'incorporation de documents actifs.  
+ Supports active document containment.  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
- Utilisé pour l'implémentation de document composite, ainsi que la prise en charge de base du conteneur.  Sert de conteneur aux classes dérivées de  `CDocItem`.  Cette classe peut être utilisée en tant que classe de base pour les documents conteneur et est la classe de base pour `COleServerDoc`.  
+ Used for compound document implementation, as well as basic container support. Serves as a container for classes derived from `CDocItem`. This class can be used as the base class for container documents and is the base class for `COleServerDoc`.  
   
  [COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)  
- Une classe dérivée de `COleDocument` qui fournit l'infrastructure pour lier.  Vous pouvez dériver les classes de document pour vos applications conteneur depuis cette classe plutôt que depuis `COleDocument` si vous voulez qu'elles prennent en chargeles liens vers des objets incorporés.  
+ A class derived from `COleDocument` that provides the infrastructure for linking. You should derive the document classes for your container applications from this class instead of from `COleDocument` if you want them to support links to embedded objects.  
   
  [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)  
- Contient la liste de clients OLE éléments contenus dans le contrôle RichEdit.  Utilisé avec [CRichEditView](../mfc/reference/cricheditview-class.md) et [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).  
+ Maintains the list of OLE client items that are in the rich edit control. Used with [CRichEditView](../mfc/reference/cricheditview-class.md) and [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
- Classe abstraite de `COleClientItem` et `COleServerItem`.  Les objets de classes dérivées de `CDocItem` représentent des parties de documents.  
+ Abstract base class of `COleClientItem` and `COleServerItem`. Objects of classes derived from `CDocItem` represent parts of documents.  
   
  [COleClientItem](../mfc/reference/coleclientitem-class.md)  
- Une classe d'élément client qui représente le côté client de la connexion OLE à un élément incorporé ou lié.  Dérive les éléments clients depuis cette classe.  
+ A client item class that represents the client's side of the connection to an embedded or linked OLE item. Derive your client items from this class.  
   
  [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)  
- Fournit l'accès côté client à un élément OLE stocké dans un contrôle RichEdit en cas d'utilisation avec `CRichEditView` et `CRichEditDoc`.  
+ Provides client-side access to an OLE item stored in a rich edit control when used with `CRichEditView` and `CRichEditDoc`.  
   
  [COleException](../mfc/reference/coleexception-class.md)  
- Une exception résultant d'une défaillance de traitement OLE.  Cette classe est utilisée par les conteneurs et les serveurs.  
+ An exception resulting from a failure in OLE processing. This class is used by both containers and servers.  
   
-## Voir aussi  
- [Vue d'ensemble des classes](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: Classe de CMFCToolBarInfo | Documents Microsoft
+title: CMFCToolBarInfo Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,7 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolBarInfo class
+- CMFCToolBarInfo [MFC], m_uiColdResID
+- CMFCToolBarInfo [MFC], m_uiDisabledResID
+- CMFCToolBarInfo [MFC], m_uiHotResID
+- CMFCToolBarInfo [MFC], m_uiLargeColdResID
+- CMFCToolBarInfo [MFC], m_uiLargeDisabledResID
+- CMFCToolBarInfo [MFC], m_uiLargeHotResID
+- CMFCToolBarInfo [MFC], m_uiMenuDisabledResID
+- CMFCToolBarInfo [MFC], m_uiMenuResID
 ms.assetid: 6dc84482-eaaa-491f-aa5d-dd7a57886b46
 caps.latest.revision: 22
 author: mikeblome
@@ -42,104 +49,104 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: a9e66ffa0b5a751a7e5711ed20927a6adcede45d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8fca818372c2eea28b9246ade814ef72d62259fb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctoolbarinfo-class"></a>CMFCToolBarInfo (classe)
-Contient les ID de ressources des images de barre d'outils dans différents états. `CMFCToolBarInfo`est une classe d’assistance qui est utilisée en tant que paramètre de la [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) (méthode).  
+# <a name="cmfctoolbarinfo-class"></a>CMFCToolBarInfo Class
+Contains the resource IDs of toolbar images in various states. `CMFCToolBarInfo` is a helper class that is used as a parameter of the [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) method.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolBarInfo  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="data-members"></a>Membres de données  
+### <a name="data-members"></a>Data Members  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|ID de ressource de la bitmap de la barre d’outils qui contient des images de barre d’outils (à froid) standard.|  
-|[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|ID de ressource de la bitmap de la barre d’outils qui contient des images de barre d’outils désactivés.|  
-|[CMFCToolBarInfo::m_uiHotResID](#m_uihotresid)|ID de ressource de la bitmap de la barre d’outils qui contient des images de barre d’outils (à chaud) sélectionné.|  
-|[CMFCToolBarInfo::m_uiLargeColdResID](#m_uilargecoldresid)|ID de ressource de la bitmap de la barre d’outils qui contient des images de grande barre d’outils standard.|  
-|[CMFCToolBarInfo::m_uiLargeDisabledResID](#m_uilargedisabledresid)|ID de ressource de la bitmap de la barre d’outils qui contient un grand, désactivé les images de barre d’outils.|  
-|[CMFCToolBarInfo::m_uiLargeHotResID](#m_uilargehotresid)|ID de ressource de la bitmap de la barre d’outils qui contient des images de grande barre d’outils sélectionné.|  
-|[CMFCToolBarInfo::m_uiMenuDisabledResID](#m_uimenudisabledresid)|ID de ressource de la bitmap de la barre d’outils qui contient des images de menu désactivé.|  
-|[CMFCToolBarInfo::m_uiMenuResID](#m_uimenuresid)|ID de ressource de la bitmap de la barre d’outils qui contient des images de menu.|  
+|[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|Resource ID of the toolbar bitmap that contains regular (cold) toolbar images.|  
+|[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|Resource ID of the toolbar bitmap that contains disabled toolbar images.|  
+|[CMFCToolBarInfo::m_uiHotResID](#m_uihotresid)|Resource ID of the toolbar bitmap that contains selected (hot) toolbar images.|  
+|[CMFCToolBarInfo::m_uiLargeColdResID](#m_uilargecoldresid)|Resource ID of the toolbar bitmap that contains large, regular toolbar images.|  
+|[CMFCToolBarInfo::m_uiLargeDisabledResID](#m_uilargedisabledresid)|Resource ID of the toolbar bitmap that contains large, disabled toolbar images.|  
+|[CMFCToolBarInfo::m_uiLargeHotResID](#m_uilargehotresid)|Resource ID of the toolbar bitmap that contains large, selected toolbar images.|  
+|[CMFCToolBarInfo::m_uiMenuDisabledResID](#m_uimenudisabledresid)|Resource ID of the toolbar bitmap that contains disabled menu images.|  
+|[CMFCToolBarInfo::m_uiMenuResID](#m_uimenuresid)|Resource ID of the toolbar bitmap that contains menu images.|  
   
-## <a name="remarks"></a>Notes  
- Une image bitmap de barre d’outils complète se compose d’images de petite barre d’outils (boutons) de taille fixe. Chaque ID de ressource qui est stocké dans un `CMFCToolBarInfo` objet est une image bitmap qui contient un ensemble d’images de barre d’outils dans un état unique (par exemple, sélectionné, désactivé, grand ou images de menu).  
+## <a name="remarks"></a>Remarks  
+ A full toolbar bitmap consists of small toolbar images (buttons) of a fixed size. Each resource ID that is stored in a `CMFCToolBarInfo` object is a bitmap that contains a full set of toolbar images in a single state (for example, selected, disabled, large, or menu images).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CMFCToolBarInfo](../../mfc/reference/cmfctoolbarinfo-class.md)  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxtoolbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbar.h  
   
-##  <a name="m_uicoldresid"></a>CMFCToolBarInfo::m_uiColdResID  
- Spécifie un ID de ressource pour toutes les images de bouton standard d’une barre d’outils.  
+##  <a name="m_uicoldresid"></a>  CMFCToolBarInfo::m_uiColdResID  
+ Specifies a resource ID for all the regular button images of a toolbar.  
   
 ```  
 UINT m_uiColdResID;  
 ```  
   
-##  <a name="m_uidisabledresid"></a>CMFCToolBarInfo::m_uiDisabledResID  
- Spécifie un ID de ressource pour les images non disponible de bouton de barre d’outils.  
+##  <a name="m_uidisabledresid"></a>  CMFCToolBarInfo::m_uiDisabledResID  
+ Specifies a resource ID for the button-unavailable images of a toolbar.  
   
 ```  
 UINT m_uiDisabledResID;  
 ```  
   
-##  <a name="m_uihotresid"></a>CMFCToolBarInfo::m_uiHotResID  
- Spécifie un ID de ressource pour toutes les images de bouton en surbrillance d’une barre d’outils.  
+##  <a name="m_uihotresid"></a>  CMFCToolBarInfo::m_uiHotResID  
+ Specifies a resource ID for all the highlighted button images of a toolbar.  
   
 ```  
 UINT m_uiHotResID  
 ```  
   
-##  <a name="m_uilargecoldresid"></a>CMFCToolBarInfo::m_uiLargeColdResID  
- Spécifie un ID de ressource pour toutes les images de grand bouton normal d’une barre d’outils.  
+##  <a name="m_uilargecoldresid"></a>  CMFCToolBarInfo::m_uiLargeColdResID  
+ Specifies a resource ID for all the large regular button images of a toolbar.  
   
 ```  
 UINT m_uiLargeColdResID  
 ```  
   
-##  <a name="m_uilargedisabledresid"></a>CMFCToolBarInfo::m_uiLargeDisabledResID  
- Spécifie un ID de ressource pour toutes les images de grand bouton désactivé des barres d’outils.  
+##  <a name="m_uilargedisabledresid"></a>  CMFCToolBarInfo::m_uiLargeDisabledResID  
+ Specifies a resource ID for all the large disabled button images of a toolbar.  
   
 ```  
 UINT m_uiLargeDisabledResID;  
 ```  
   
-##  <a name="m_uilargehotresid"></a>CMFCToolBarInfo::m_uiLargeHotResID  
- Spécifie un ID de ressource pour toutes les images volumineux en surbrillance d’une barre d’outils.  
+##  <a name="m_uilargehotresid"></a>  CMFCToolBarInfo::m_uiLargeHotResID  
+ Specifies a resource ID for all the large highlighted images of a toolbar.  
   
 ```  
 UINT m_uiLargeHotResID;  
 ```  
   
-##  <a name="m_uimenudisabledresid"></a>CMFCToolBarInfo::m_uiMenuDisabledResID  
- Spécifie un ID de ressource pour les images non disponible de commande d’une barre d’outils.  
+##  <a name="m_uimenudisabledresid"></a>  CMFCToolBarInfo::m_uiMenuDisabledResID  
+ Specifies a resource ID for the command-unavailable images of a toolbar.  
   
 ```  
 UINT m_uiMenuDisabledResID;  
 ```  
   
-##  <a name="m_uimenuresid"></a>CMFCToolBarInfo::m_uiMenuResID  
- Spécifie un ID de ressource pour toutes les images d’élément de menu classique d’une barre d’outils.  
+##  <a name="m_uimenuresid"></a>  CMFCToolBarInfo::m_uiMenuResID  
+ Specifies a resource ID for all the regular menu item images of a toolbar.  
   
 ```  
 UINT m_uiMenuResID;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBar (classe)](../../mfc/reference/cmfctoolbar-class.md)
+ [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)
 

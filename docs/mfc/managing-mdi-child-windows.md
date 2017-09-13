@@ -1,49 +1,68 @@
 ---
-title: "G&#233;rer les fen&#234;tres enfants MDI | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MDICLIENT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fenêtres enfants"
-  - "fenêtres enfants, et fenêtre MDICLIENT"
-  - "fenêtres frame (C++), fenêtres enfants MDI"
-  - "MDI (C++), fenêtres enfants"
-  - "MDI (C++), fenêtres frame"
-  - "fenêtre MDICLIENT"
-  - "fenêtres (C++), MDI"
+title: Managing MDI Child Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MDICLIENT
+dev_langs:
+- C++
+helpviewer_keywords:
+- MDI [MFC], child windows
+- child windows [MFC], and MDICLIENT window
+- MDICLIENT window [MFC]
+- windows [MFC], MDI
+- frame windows [MFC], MDI child windows
+- child windows [MFC]
+- MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# G&#233;rer les fen&#234;tres enfants MDI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 11655e9d318d7b240b72da8fbe4cfdd465210b1c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Les fenêtres cadres principales MDI \(une par application\) contiennent une fenêtre enfant spéciale appelée la fenêtre **MDICLIENT**.  La fenêtre **MDICLIENT** gère la zone client de la fenêtre cadre principale, et elle\-même a des fenêtres enfants : les fenêtres de document, dérivées de `CMDIChildWnd`.  Les fenêtres de document sont les fenêtres cadres elles\-mêmes \(les fenêtres enfants MDI\), elles peuvent également avoir leurs propres enfants.  Dans tous ces cas, la fenêtre parente gère ses fenêtres enfants et transfère des commandes associées.  
+---
+# <a name="managing-mdi-child-windows"></a>Managing MDI Child Windows
+MDI main frame windows (one per application) contain a special child window called the **MDICLIENT** window. The **MDICLIENT** window manages the client area of the main frame window, and itself has child windows: the document windows, derived from `CMDIChildWnd`. Because the document windows are frame windows themselves (MDI child windows), they can also have their own children. In all of these cases, the parent window manages its child windows and forwards some commands to them.  
   
- Dans une fenêtre cadre MDI, la fenêtre cadre gère la fenêtre de **MDICLIENT**, la replaçant conjointement avec les barres de contrôle.  La fenêtre de **MDICLIENT**, à son tour, gère toutes les fenêtres enfants MDI cadre.  L'illustration suivante montre la relation entre un point cadre MDI, sa fenêtre **MDICLIENT**, et ses fenêtres cadres de document enfants.  
+ In an MDI frame window, the frame window manages the **MDICLIENT** window, repositioning it in conjunction with control bars. The **MDICLIENT** window, in turn, manages all MDI child frame windows. The following figure shows the relationship between an MDI frame window, its **MDICLIENT** window, and its child document frame windows.  
   
- ![Fenêtres enfants dans une fenêtre frame MDI](../mfc/media/vc37gb1.png "vc37GB1")  
-Fenêtres cadres MDI et enfants  
+ ![Child windows in an MDI frame window](../mfc/media/vc37gb1.gif "vc37gb1")  
+MDI Frame Windows and Children  
   
- Une fenêtre cadre MDI fonctionne aussi conjointement avec la fenêtre enfant MDI active, s'il en existe une.  La fenêtre cadre MDI délègue des messages de commande à l'enfant MDI avant qu'il essaye de les gérer lui même.  
+ An MDI frame window also works in conjunction with the current MDI child window, if there is one. The MDI frame window delegates command messages to the MDI child before it tries to handle them itself.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Création de fenêtres cadre de document](../mfc/creating-document-frame-windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
--   [Styles de fenêtre cadre](../mfc/frame-window-styles-cpp.md)  
+-   [Frame-window styles](../mfc/frame-window-styles-cpp.md)  
   
-## Voir aussi  
- [Utilisation de fenêtres frame](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: Linger, Structure | Documents Microsoft
+title: LINGER Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LINGER structure
+- LINGER structure [MFC]
 ms.assetid: 1fb1c5bf-a64e-4a6c-89d6-1734e4fdbb1b
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ed880c29f43c074ba61f52b11f812a79eece0416
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5240b0349bbe87a779df49bb3b24dea861883bef
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="linger-structure"></a>LINGER, structure
-Le `LINGER` structure est utilisée pour la manipulation de la **SO_LINGER** et **SO_DONTLINGER** options de `CAsyncSocket::GetSockOpt`.  
+# <a name="linger-structure"></a>LINGER Structure
+The `LINGER` structure is used for manipulating the **SO_LINGER** and **SO_DONTLINGER** options of `CAsyncSocket::GetSockOpt`.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct linger {  
@@ -52,14 +52,14 @@ struct linger {
 };  
 ```  
   
-## <a name="remarks"></a>Remarques  
- Définition de la **SO_DONTLINGER** option empêche le blocage sur la fonction membre **fermer** en attendant que les données non envoyées à envoyer. Cette option est équivalente à la définition **SO_LINGER** avec **l_onoff** la valeur 0.  
+## <a name="remarks"></a>Remarks  
+ Setting the **SO_DONTLINGER** option prevents blocking on member function **Close** while waiting for unsent data to be sent. Setting this option is equivalent to setting **SO_LINGER** with **l_onoff** set to 0.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** winsock2.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winsock2.h  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CAsyncSocket::GetSockOpt](../../mfc/reference/casyncsocket-class.md#getsockopt)   
  [CAsyncSocket::SetSockOpt](../../mfc/reference/casyncsocket-class.md#setsockopt)
 

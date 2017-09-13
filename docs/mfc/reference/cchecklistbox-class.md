@@ -1,5 +1,5 @@
 ---
-title: Classe de CCheckListBox | Documents Microsoft
+title: CCheckListBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,8 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CCheckListBox class
-- checklist boxes
+- CCheckListBox [MFC], CCheckListBox
+- CCheckListBox [MFC], Create
+- CCheckListBox [MFC], DrawItem
+- CCheckListBox [MFC], Enable
+- CCheckListBox [MFC], GetCheck
+- CCheckListBox [MFC], GetCheckStyle
+- CCheckListBox [MFC], IsEnabled
+- CCheckListBox [MFC], MeasureItem
+- CCheckListBox [MFC], OnGetCheckPosition
+- CCheckListBox [MFC], SetCheck
+- CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
 caps.latest.revision: 26
 author: mikeblome
@@ -46,73 +55,73 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 2cce91e3b6cb6cdf6ec2f4564fcf5090a54c917f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: af338e05ffbbbcce5cd6fadd8e8d9e432924b353
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cchecklistbox-class"></a>CCheckListBox (classe)
-Fournit les fonctionnalités d'une zone de liste de contrôle Windows.  
+# <a name="cchecklistbox-class"></a>CCheckListBox Class
+Provides the functionality of a Windows checklist box.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCheckListBox : public CListBox  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCheckListBox::CCheckListBox](#cchecklistbox)|Construit un objet `CCheckListBox`.|  
+|[CCheckListBox::CCheckListBox](#cchecklistbox)|Constructs a `CCheckListBox` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCheckListBox::Create](#create)|Crée la zone de liste de vérification de Windows et l’attache à le `CCheckListBox` objet.|  
-|[CCheckListBox::DrawItem](#drawitem)|Appelé par l’infrastructure lorsqu’un aspect visuel d’une modification de zone de liste owner-draw.|  
-|[CCheckListBox::Enable](#enable)|Active ou désactive un élément de la liste de vérification.|  
-|[CCheckListBox::GetCheck](#getcheck)|Obtient l’état de la case à cocher d’un élément.|  
-|[CCheckListBox::GetCheckStyle](#getcheckstyle)|Obtient le style des cases à cocher du contrôle.|  
-|[CCheckListBox::IsEnabled](#isenabled)|Détermine si un élément est activé.|  
-|[CCheckListBox::MeasureItem](#measureitem)|Appelé par l’infrastructure lors de la création d’une zone de liste avec un style de dessin.|  
-|[CCheckListBox::OnGetCheckPosition](#ongetcheckposition)|Appelé par l’infrastructure pour obtenir la position de la case à cocher d’un élément.|  
-|[CCheckListBox::SetCheck](#setcheck)|Définit l’état de la case à cocher d’un élément.|  
-|[CCheckListBox::SetCheckStyle](#setcheckstyle)|Définit le style des cases à cocher du contrôle.|  
+|[CCheckListBox::Create](#create)|Creates the Windows checklist box and attaches it to the `CCheckListBox` object.|  
+|[CCheckListBox::DrawItem](#drawitem)|Called by the framework when a visual aspect of an owner-draw list box changes.|  
+|[CCheckListBox::Enable](#enable)|Enables or disables a checklist box item.|  
+|[CCheckListBox::GetCheck](#getcheck)|Gets the state of an item's check box.|  
+|[CCheckListBox::GetCheckStyle](#getcheckstyle)|Gets the style of the control's check boxes.|  
+|[CCheckListBox::IsEnabled](#isenabled)|Determines whether an item is enabled.|  
+|[CCheckListBox::MeasureItem](#measureitem)|Called by the framework when a list box with an owner-draw style is created.|  
+|[CCheckListBox::OnGetCheckPosition](#ongetcheckposition)|Called by the framework to get the position of an item's check box.|  
+|[CCheckListBox::SetCheck](#setcheck)|Sets the state of an item's check box.|  
+|[CCheckListBox::SetCheckStyle](#setcheckstyle)|Sets the style of the control's check boxes.|  
   
-## <a name="remarks"></a>Remarques  
- Une « liste de vérification » affiche une liste d’éléments, tels que les noms de fichiers. Chaque élément de la liste a une case à cocher en regard de ce que l’utilisateur peut vérifier ou effacer.  
+## <a name="remarks"></a>Remarks  
+ A "checklist box" displays a list of items, such as filenames. Each item in the list has a check box next to it that the user can check or clear.  
   
- `CCheckListBox`concerne uniquement les contrôles owner-drawn, car la liste contient plus de chaînes de texte. La plus simple, une zone de liste de contrôle contient les chaînes de texte et des cases à cocher, mais vous n’avez pas besoin pour que tout le texte. Par exemple, vous pourriez avoir une liste de petits bitmaps avec une case à cocher en regard de chaque élément.  
+ `CCheckListBox` is only for owner-drawn controls because the list contains more than text strings. At its simplest, a checklist box contains text strings and check boxes, but you do not need to have text at all. For example, you could have a list of small bitmaps with a check box next to each item.  
   
- Pour créer votre propre boîte de dialogue liste de vérification, vous devez dériver votre propre classe de `CCheckListBox`. Dérivez votre propre classe, écrire un constructeur de la classe dérivée, puis appelez **créer**.  
+ To create your own checklist box, you must derive your own class from `CCheckListBox`. To derive your own class, write a constructor for the derived class, then call **Create**.  
   
- Si vous souhaitez gérer les messages de notification Windows envoyés par une zone de liste à son parent (généralement une classe dérivée de [CDialog](../../mfc/reference/cdialog-class.md)), ajouter une fonction table des messages de membre des entrée et le Gestionnaire de messages pour la classe parente pour chaque message.  
+ If you want to handle Windows notification messages sent by a list box to its parent (usually a class derived from [CDialog](../../mfc/reference/cdialog-class.md)), add a message-map entry and message-handler member function to the parent class for each message.  
   
- Chaque entrée dans la table message prend la forme suivante :  
+ Each message-map entry takes the following form:  
   
  **ON_**Notification **(**`id`, `memberFxn`**)**  
   
- où `id` Spécifie l’ID de fenêtre enfant du contrôle qui envoie la notification et `memberFxn` est le nom de la fonction de membre parent que vous avez écrit pour gérer les notifications.  
+ where `id` specifies the child window ID of the control sending the notification and `memberFxn` is the name of the parent member function you have written to handle the notification.  
   
- Prototype de fonction du parent est la suivante :  
+ The parent's function prototype is as follows:  
   
  **afx_msg** `void` `memberFxn` **( );**  
   
- Il existe uniquement une entrée de table des messages qui se rapporte spécifiquement à **CCheckListBox** (mais également les table des messages pour voir les entrées [CListBox](../../mfc/reference/clistbox-class.md)) :  
+ There is only one message-map entry that pertains specifically to **CCheckListBox** (but see also the message-map entries for [CListBox](../../mfc/reference/clistbox-class.md)):  
   
-- **ON_CLBN_CHKCHANGE** l’utilisateur a modifié l’état de la case à cocher d’un élément.  
+- **ON_CLBN_CHKCHANGE** The user has changed the state of an item's checkbox.  
   
- Si votre zone de liste de vérification est une zone de liste de vérification par défaut (une liste de chaînes avec les cases à cocher à gauche de chaque taille par défaut), vous pouvez utiliser la valeur par défaut [CCheckListBox::DrawItem](#drawitem) pour dessiner la zone de liste de vérification. Dans le cas contraire, vous devez substituer les [CListBox::CompareItem](../../mfc/reference/clistbox-class.md#compareitem) (fonction) et [CCheckListBox::DrawItem](#drawitem) et [CCheckListBox::MeasureItem](#measureitem) fonctions.  
+ If your checklist box is a default checklist box (a list of strings with the default-sized checkboxes to the left of each), you can use the default [CCheckListBox::DrawItem](#drawitem) to draw the checklist box. Otherwise, you must override the [CListBox::CompareItem](../../mfc/reference/clistbox-class.md#compareitem) function and the [CCheckListBox::DrawItem](#drawitem) and [CCheckListBox::MeasureItem](#measureitem) functions.  
   
- Vous pouvez créer une zone de liste de vérification à partir d’un modèle de boîte de dialogue ou directement dans votre code.  
+ You can create a checklist box either from a dialog template or directly in your code.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -123,24 +132,24 @@ class CCheckListBox : public CListBox
   
  `CCheckListBox`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
- Construit un objet `CCheckListBox`.  
+##  <a name="cchecklistbox"></a>  CCheckListBox::CCheckListBox  
+ Constructs a `CCheckListBox` object.  
   
 ```  
 CCheckListBox();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Vous construisez un `CCheckListBox` objet en deux étapes. Tout d’abord définir une classe dérivée de `CCheckListBox`, puis appelez **créer**, qui initialise la zone de liste de vérification de Windows et l’attache à le `CCheckListBox` objet.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CCheckListBox` object in two steps. First define a class derived from `CCheckListBox`, then call **Create**, which initializes the Windows checklist box and attaches it to the `CCheckListBox` object.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCControlLadenDialog&#60;](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
-##  <a name="create"></a>CCheckListBox::Create  
- Crée la zone de liste de vérification de Windows et l’attache à le `CCheckListBox` objet.  
+##  <a name="create"></a>  CCheckListBox::Create  
+ Creates the Windows checklist box and attaches it to the `CCheckListBox` object.  
   
 ```  
 virtual BOOL Create(
@@ -150,67 +159,67 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Spécifie le style de la zone de liste de vérification. Le style doit être **LBS_HASSTRINGS** et **LBS_OWNERDRAWFIXED** (tous les éléments dans la liste ont la même hauteur) ou **LBS_OWNERDRAWVARIABLE** (éléments de la liste sont de différentes hauteurs). Ce style peut être combiné avec d’autres [styles de zone de liste](../../mfc/reference/list-box-styles.md) sauf **LBS_USETABSTOPS**.  
+ Specifies the style of the checklist box. The style must be **LBS_HASSTRINGS** and either **LBS_OWNERDRAWFIXED** (all items in the list are the same height) or **LBS_OWNERDRAWVARIABLE** (items in the list are of varying heights). This style can be combined with other [list-box styles](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) except **LBS_USETABSTOPS**.  
   
  `rect`  
- Spécifie la taille de la zone de liste de vérification et la position. Peut être un [CRect](../../atl-mfc-shared/reference/crect-class.md) objet ou un [RECT](../../mfc/reference/rect-structure1.md) structure.  
+ Specifies the checklist-box size and position. Can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](../../mfc/reference/rect-structure1.md) structure.  
   
  `pParentWnd`  
- Spécifie la fenêtre parente de la zone liste de vérification (généralement un `CDialog` objet). Il ne doit pas être **NULL**.  
+ Specifies the checklist box's parent window (usually a `CDialog` object). It must not be **NULL**.  
   
  `nID`  
- Spécifie l’ID du contrôle. de la zone de liste de vérification  
+ Specifies the checklist box's control ID.  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Vous construisez un `CCheckListBox` objet en deux étapes. Tout d’abord, définissez une classe dérivée de **CcheckListBox** , puis appelez **créer**, qui initialise la zone de liste de vérification de Windows et l’attache à le `CCheckListBox`. Consultez la page [CCheckListBox::CCheckListBox](#cchecklistbox) pour obtenir un exemple.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CCheckListBox` object in two steps. First, define a class derived from **CcheckListBox** and then call **Create**, which initializes the Windows checklist box and attaches it to the `CCheckListBox`. See [CCheckListBox::CCheckListBox](#cchecklistbox) for a sample.  
   
- Lors de la **créer** s’exécute, Windows envoie le [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), et [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) messages pour le contrôle de zone de liste de vérification.  
+ When **Create** executes, Windows sends the [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), and [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) messages to the checklist-box control.  
   
- Ces messages sont gérées par défaut par le [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), et [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) les fonctions membres dans la `CWnd` classe de base. Pour étendre le traitement du message par défaut, ajouter une table des messages pour le votre classe dérivée et les fonctions membres de remplacement, le Gestionnaire de message précédent. Substituer `OnCreate`, par exemple, pour effectuer l’initialisation nécessaire pour une nouvelle classe.  
+ These messages are handled by default by the [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), and [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) member functions in the `CWnd` base class. To extend the default message handling, add a message map to the your derived class and override the preceding message-handler member functions. Override `OnCreate`, for example, to perform needed initialization for a new class.  
   
- Appliquez ce qui suit [styles de fenêtre](../../mfc/reference/window-styles.md) à un contrôle zone de liste de vérification :  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to a checklist-box control:  
   
-- **WS_CHILD** toujours  
+- **WS_CHILD** Always  
   
-- **WS_VISIBLE** généralement  
+- **WS_VISIBLE** Usually  
   
-- **WS_DISABLED** rarement  
+- **WS_DISABLED** Rarely  
   
-- **WS_VSCROLL** pour ajouter une barre de défilement verticale  
+- **WS_VSCROLL** To add a vertical scroll bar  
   
-- **WS_HSCROLL** pour ajouter une barre de défilement horizontale  
+- **WS_HSCROLL** To add a horizontal scroll bar  
   
-- **WS_GROUP** pour regrouper des contrôles  
+- **WS_GROUP** To group controls  
   
-- **WS_TABSTOP** pour permettre la tabulation pour ce contrôle  
+- **WS_TABSTOP** To allow tabbing to this control  
   
-##  <a name="drawitem"></a>CCheckListBox::DrawItem  
- Appelé par l’infrastructure lorsqu’un aspect visuel d’une modification de zone de liste owner-drawn.  
+##  <a name="drawitem"></a>  CCheckListBox::DrawItem  
+ Called by the framework when a visual aspect of an owner-drawn checklist box changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- Un pointeur long vers un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure qui contient des informations sur le type de dessin requis.  
+ A long pointer to a [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure that contains information about the type of drawing required.  
   
-### <a name="remarks"></a>Remarques  
- Le **itemAction** et **itemState** les membres de le `DRAWITEMSTRUCT` structure définissent l’action de dessin qui doit être effectuée.  
+### <a name="remarks"></a>Remarks  
+ The **itemAction** and **itemState** members of the `DRAWITEMSTRUCT` structure define the drawing action that is to be performed.  
   
- Par défaut, cette fonction Dessine une liste de case à cocher par défaut, constituée d’une liste de chaînes avec une case à cocher taille par défaut à gauche. La taille de la case à cocher liste est celui spécifié dans [créer](#create).  
+ By default, this function draws a default checkbox list, consisting of a list of strings each with a default-sized checkbox to the left. The checkbox list size is the one specified in [Create](#create).  
   
- Remplacez cette fonction membre pour implémenter le dessin des zones de liste de contrôle de mode owner-draw qui ne sont pas la valeur par défaut, tels que les zones de liste de contrôle avec des listes qui ne sont pas des chaînes, des éléments de hauteur variable ou avec cases à cocher qui ne sont pas sur la gauche. L’application doit restaurer tous les objets interface (GDI) périphérique graphique sélectionnés pour le contexte d’affichage fournie dans `lpDrawItemStruct` avant l’arrêt de cette fonction membre.  
+ Override this member function to implement drawing of owner-draw checklist boxes that are not the default, such as checklist boxes with lists that aren't strings, with variable-height items, or with checkboxes that aren't on the left. The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before the termination of this member function.  
   
- Si les éléments de zone de liste de vérification ne sont pas toutes la même hauteur, la liste de contrôle de zone de style (spécifié dans **créer**) doivent être **LBS_OWNERVARIABLE**, et vous devez substituer les [MeasureItem](#measureitem) (fonction).  
+ If checklist box items are not all the same height, the checklist box style (specified in **Create**) must be **LBS_OWNERVARIABLE**, and you must override the [MeasureItem](#measureitem) function.  
   
-##  <a name="enable"></a>CCheckListBox::Enable  
- Appelez cette fonction pour activer ou désactiver un élément de la liste de vérification.  
+##  <a name="enable"></a>  CCheckListBox::Enable  
+ Call this function to enable or disable a checklist box item.  
   
 ```  
 void Enable(
@@ -218,76 +227,76 @@ void Enable(
     BOOL bEnabled = TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Index de l’élément de zone de liste de contrôle doit être activé.  
+ Index of the checklist box item to be enabled.  
   
  `bEnabled`  
- Spécifie si l’élément est activé ou désactivé.  
+ Specifies whether the item is enabled or disabled.  
   
-##  <a name="getcheck"></a>CCheckListBox::GetCheck  
- Récupère l’état de la case à cocher spécifiée.  
+##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
+ Retrieves the state of the specified check box.  
   
 ```  
 int GetCheck(int nIndex);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Index de base zéro d’une case à cocher qui est contenue dans la zone de liste.  
+ Zero-based index of a check box that is contained in the list box.  
   
-### <a name="return-value"></a>Valeur de retour  
- L’état de la case à cocher spécifiée. Le tableau suivant répertorie les valeurs possibles.  
+### <a name="return-value"></a>Return Value  
+ The state of the specified check box. The following table lists possible values.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|`BST_CHECKED`|La case à cocher est activée.|  
-|`BST_UNCHECKED`|La case à cocher n’est pas vérifiée.|  
-|`BST_INDETERMINATE`|L’état de la case à cocher est indéterminé.|  
+|`BST_CHECKED`|The check box is checked.|  
+|`BST_UNCHECKED`|The check box is not checked.|  
+|`BST_INDETERMINATE`|The check box state is indeterminate.|  
   
-##  <a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
- Appelez cette fonction pour obtenir le style de la zone de liste de vérification.  
+##  <a name="getcheckstyle"></a>  CCheckListBox::GetCheckStyle  
+ Call this function to get the checklist box's style.  
   
 ```  
 UINT GetCheckStyle();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Style de cases à cocher du contrôle.  
+### <a name="return-value"></a>Return Value  
+ The style of the control's check boxes.  
   
-### <a name="remarks"></a>Notes  
- Pour plus d’informations sur les styles possibles, consultez la page [SetCheckStyle](#setcheckstyle).  
+### <a name="remarks"></a>Remarks  
+ For information on possible styles, see [SetCheckStyle](#setcheckstyle).  
   
-##  <a name="isenabled"></a>CCheckListBox::IsEnabled  
- Appelez cette fonction pour déterminer si un élément est activé.  
+##  <a name="isenabled"></a>  CCheckListBox::IsEnabled  
+ Call this function to determine whether an item is enabled.  
   
 ```  
 BOOL IsEnabled(int nIndex);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Index de l’élément.  
+ Index of the item.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si l’élément est activé ; sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the item is enabled; otherwise 0.  
   
-##  <a name="measureitem"></a>CCheckListBox::MeasureItem  
- Appelé par l’infrastructure lors de la création d’une zone de liste de contrôle avec un style différent.  
+##  <a name="measureitem"></a>  CCheckListBox::MeasureItem  
+ Called by the framework when a checklist box with a nondefault style is created.  
   
 ```  
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpMeasureItemStruct`  
- Un pointeur long vers un [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) structure.  
+ A long pointer to a [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) structure.  
   
-### <a name="remarks"></a>Remarques  
- Par défaut, cette fonction membre ne fait rien. Remplacez cette fonction membre et renseignez les `MEASUREITEMSTRUCT` structure d’informer Windows des dimensions d’éléments de zone de liste de vérification. Si la zone de liste de contrôle est créée avec le [LBS_OWNERDRAWVARIABLE](../../mfc/reference/list-box-styles.md) style, l’infrastructure appelle cette fonction membre pour chaque élément dans la zone de liste. Sinon, ce membre est appelé une seule fois.  
+### <a name="remarks"></a>Remarks  
+ By default, this member function does nothing. Override this member function and fill in the `MEASUREITEMSTRUCT` structure to inform Windows of the dimensions of checklist-box items. If the checklist box is created with the [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) style, the framework calls this member function for each item in the list box. Otherwise, this member is called only once.  
   
-##  <a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
- L’infrastructure appelle cette fonction pour obtenir la position et la taille de la case à cocher dans un élément.  
+##  <a name="ongetcheckposition"></a>  CCheckListBox::OnGetCheckPosition  
+ The framework calls this function to get the position and size of the check box in an item.  
   
 ```  
 virtual CRect OnGetCheckPosition(
@@ -295,21 +304,21 @@ virtual CRect OnGetCheckPosition(
     CRect rectCheckBox);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *rectItem*  
- La position et la taille de l’élément de liste.  
+ The position and size of the list item.  
   
  `rectCheckBox`  
- La position par défaut et la taille de la case à cocher d’un élément.  
+ The default position and size of an item's check box.  
   
-### <a name="return-value"></a>Valeur de retour  
- La position et la taille de la case à cocher d’un élément.  
+### <a name="return-value"></a>Return Value  
+ The position and size of an item's check box.  
   
-### <a name="remarks"></a>Notes  
- L’implémentation par défaut retourne uniquement la position par défaut et la taille de la case à cocher ( `rectCheckBox`). Par défaut, une case à cocher est aligné dans le coin supérieur gauche d’un élément et la taille de la case à cocher standard. Il peut arriver dans lequel vous souhaitez les cases à cocher sur la droite, ou une case à cocher supérieure ou inférieure. Dans ce cas, vous devez substituer `OnGetCheckPosition` pour modifier la position de la case à cocher et la taille de l’élément.  
+### <a name="remarks"></a>Remarks  
+ The default implementation only returns the default position and size of the check box ( `rectCheckBox`). By default, a check box is aligned in the upper-left corner of an item and is the standard check box size. There may be cases where you want the check boxes on the right, or want a larger or smaller check box. In these cases, override `OnGetCheckPosition` to change the check box position and size within the item.  
   
-##  <a name="setcheck"></a>CCheckListBox::SetCheck  
- Définit l’état de la case à cocher spécifiée.  
+##  <a name="setcheck"></a>  CCheckListBox::SetCheck  
+ Sets the state of the specified check box.  
   
 ```  
 void SetCheck(
@@ -317,35 +326,35 @@ void SetCheck(
     int nCheck);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Index de base zéro d’une case à cocher qui est contenue dans la zone de liste.  
+ Zero-based index of a check box that is contained in the list box.  
   
  `nCheck`  
- L’état du bouton de la case à cocher spécifiée. Consultez la section Notes pour les valeurs possibles.  
+ The button state for the specified check box. See the Remarks section for possible values.  
   
-### <a name="remarks"></a>Notes  
- Le tableau suivant répertorie les valeurs possibles pour le `nCheck` paramètre.  
+### <a name="remarks"></a>Remarks  
+ The following table lists possible values for the `nCheck` parameter.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**BST_CHECKED**|Activez la case à cocher spécifiée.|  
-|**BST_UNCHECKED**|Désactivez la case à cocher spécifiée.|  
-|**BST_INDETERMINATE**|Définir l’état de la case à cocher spécifiée à une valeur indéterminée.<br /><br /> Cet état est disponible uniquement si le style de case à cocher est `BS_AUTO3STATE` ou `BS_3STATE`. Pour plus d’informations, consultez [Styles des boutons](../../mfc/reference/button-styles.md).|  
+|**BST_CHECKED**|Select the specified check box.|  
+|**BST_UNCHECKED**|Clear the specified check box.|  
+|**BST_INDETERMINATE**|Set the specified check box state to indeterminate.<br /><br /> This state is only available if the check box style is `BS_AUTO3STATE` or `BS_3STATE`. For more information, see [Button Styles](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
   
-##  <a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
- Appelez cette fonction pour définir le style des cases à cocher dans la zone de liste de vérification.  
+##  <a name="setcheckstyle"></a>  CCheckListBox::SetCheckStyle  
+ Call this function to set the style of check boxes in the checklist box.  
   
 ```  
 void SetCheckStyle(UINT nStyle);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nStyle`  
- Détermine le style des cases à cocher dans la zone de liste de vérification.  
+ Determines the style of check boxes in the checklist box.  
   
-### <a name="remarks"></a>Remarques  
- Les styles valides sont :  
+### <a name="remarks"></a>Remarks  
+ Valid styles are:  
   
 - **BS_CHECKBOX**  
   
@@ -355,11 +364,11 @@ void SetCheckStyle(UINT nStyle);
   
 - **BS_3STATE**  
   
- Pour plus d’informations sur ces styles, consultez [Styles des boutons](../../mfc/reference/button-styles.md).  
+ For information on these styles, see [Button Styles](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemple MFC TSTCON](../../visual-cpp-samples.md)   
- [CListBox (classe)](../../mfc/reference/clistbox-class.md)   
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [CListBox (classe)](../../mfc/reference/clistbox-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample TSTCON](../../visual-cpp-samples.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)
 

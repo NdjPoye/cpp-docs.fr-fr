@@ -1,52 +1,71 @@
 ---
-title: "Cr&#233;ation d&#39;un contr&#244;le ActiveX MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.activex.project"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contrôles ActiveX (C++), créer"
-  - "contrôles ActiveX MFC (C++), créer"
+title: Creating an MFC ActiveX Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.activex.project
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], creating
+- ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Cr&#233;ation d&#39;un contr&#244;le ActiveX MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0d17052296be743ecf8099fe689974fae1c60d9d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Les programmes de création de contrôles ActiveX sont des programmes modulaires conçus pour ajouter un type spécifique de fonctionnalité à une application parente.  Par exemple, vous pouvez créer un contrôle de type bouton pour une utilisation dans une boîte de dialogue ou un contrôle de type barre d'outils destiné à une page Web.  
+---
+# <a name="creating-an-mfc-activex-control"></a>Creating an MFC ActiveX Control
+ActiveX control programs are modular programs designed to give a specific type of functionality to a parent application. For example, you can create a control such as a button for use in a dialog, or toolbar for use in a Web page.  
   
- L'utilisation de l'[Assistant Contrôle ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md) constitue le moyen le plus rapide de créer un contrôle ActiveX MFC.  
+ The easiest way to create an MFC ActiveX control is to use the [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md).  
   
-### Pour créer un contrôle ActiveX MFC à l'aide de l'Assistant Contrôle ActiveX MFC  
+### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>To create an MFC ActiveX Control using the MFC ActiveX Control Wizard  
   
-1.  Suivez les instructions de la rubrique d'aide [Création d'un projet à l'aide d'un Assistant Application Visual C\+\+](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
+1.  Follow the instructions in the help topic [Creating a Project with a Visual C++ Application Wizard](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
-2.  Dans la boîte de dialogue **Nouveau projet**, sélectionnez l'icône **Contrôle ActiveX MFC** dans le volet Modèles pour démarrer l'Assistant Contrôle ActiveX MFC.  
+2.  In the **New Project** dialog box, select the **MFC ActiveX Control** icon in the Templates pane to open the MFC ActiveX Control Wizard.  
   
-3.  À l'aide de l'Assistant, définissez les [paramètres de l'application](../../mfc/reference/application-settings-mfc-activex-control-wizard.md), les [noms du contrôle](../../mfc/reference/control-names-mfc-activex-control-wizard.md) et les [paramètres du contrôle](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) souhaités.  
+3.  Define your [application settings](../../mfc/reference/application-settings-mfc-activex-control-wizard.md), [control names](../../mfc/reference/control-names-mfc-activex-control-wizard.md), and [control settings](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) using the MFC ActiveX Control Wizard.  
   
     > [!NOTE]
-    >  Ignorez cette étape afin que l'Assistant conserve les paramètres par défaut.  
+    >  Skip this step to keep the wizard default settings.  
   
-4.  Cliquez sur **Terminer** pour fermer l'Assistant et ouvrir votre nouveau projet dans l'environnement de développement.  
+4.  Click **Finish** to close the wizard and open your new project in the development environment.  
   
- Une fois votre projet créé, tous les nouveaux fichiers sont affichés dans l'**Explorateur de solutions**.  Pour plus d'informations sur les fichiers créés par l'Assistant pour votre projet, consultez le fichier Readme.txt généré pour le projet.  Pour plus d'informations sur les types de fichiers, consultez [Types de fichiers créés pour les projets Visual C\+\+](../../ide/file-types-created-for-visual-cpp-projects.md).  
+ After you have created your project, you can view the files created in **Solution Explorer**. For more information about the files the wizard creates for your project, see the project-generated file ReadMe.txt. For more information about the file types, see [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
- Après avoir créé votre projet, vous pouvez y ajouter des [fonctions](../../ide/add-member-function-wizard.md), des [variables](../../ide/add-member-variable-wizard.md), des [événements](../../ide/add-event-wizard.md), des [propriétés](../../ide/names-add-property-wizard.md) et des [méthodes](../../ide/add-method-wizard.md) en utilisant les Assistants Code.  Pour plus d'informations sur la personnalisation d'un contrôle ActiveX, consultez [Contrôles ActiveX MFC](../../mfc/mfc-activex-controls.md).  
+ After you have created your project, you can use the code wizards to add [functions](../../ide/add-member-function-wizard.md), [variables](../../ide/add-member-variable-wizard.md), [events](../../ide/add-event-wizard.md), [properties](../../ide/names-add-property-wizard.md), and [methods](../../ide/add-method-wizard.md). For more information about customizing your ActiveX control, see [MFC ActiveX Controls](../../mfc/mfc-activex-controls.md).  
   
-## Voir aussi  
- [Ajout de fonctionnalités à l'aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Pages de propriétés](../../ide/property-pages-visual-cpp.md)   
- [Deploying Applications](http://msdn.microsoft.com/fr-fr/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+## <a name="see-also"></a>See Also  
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Property Pages](../../ide/property-pages-visual-cpp.md)   
+ [Deploying Applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
+

@@ -1,55 +1,73 @@
 ---
-title: "Cr&#233;ation du contr&#244;le Header | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl (classe), créer"
-  - "contrôles header, créer"
+title: Creating the Header Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHeaderCtrl class [MFC], creating
+- header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Cr&#233;ation du contr&#244;le Header
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19990137630ff7074523f98399ca21b0accc00ee
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Le contrôle header n'est pas directement disponible dans l'éditeur de boîtes de dialogue \(bien que vous pouvez ajouter un contrôle de liste, ce qui inclut un contrôle header\).  
+---
+# <a name="creating-the-header-control"></a>Creating the Header Control
+The header control is not directly available in the dialog editor (although you can add a list control, which includes a header control).  
   
-### Pour mettre un contrôle header dans une boîte de dialogue  
+### <a name="to-put-a-header-control-in-a-dialog-box"></a>To put a header control in a dialog box  
   
-1.  Incorporer manuellement une variable membre de type [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) dans la classe de la boîte de dialogue.  
+1.  Manually embed a member variable of type [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) in your dialog class.  
   
-2.  Dans [OnInitDialog](../Topic/CDialog::OnInitDialog.md), créer et définir les styles pour `CHeaderCtrl`, positionnez\-les, et affichez\-les.  
+2.  In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), create and set the styles for the `CHeaderCtrl`, position it, and display it.  
   
-3.  Ajout d'éléments au contrôle d'en\-tête.  
+3.  Add items to the header control.  
   
-4.  Utilisez la fenêtre Propriétés pour mapper les fonctions de gestion dans la classe de la boîte de dialogue pour tous les messages de notifications de contrôle d'en\-tête \(voir [Mapper des messages aux fonctions](../mfc/reference/mapping-messages-to-functions.md)\).  
+4.  Use the Properties window to map handler functions in the dialog class for any header-control notification messages you need to handle (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)).  
   
-### Pour mettre un contrôle header dans une vue \(et non un CListView\)  
+### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>To put a header control in a view (not a CListView)  
   
-1.  Incluez un objet [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) dans la classe d'affichage.  
+1.  Embed a [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) object in your view class.  
   
-2.  Le style, la position, et l'affichage de la fenêtre de contrôle d'en\-tête dans la fonction membre [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md) de la vue.  
+2.  Style, position, and display the header control window in the view's [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) member function.  
   
-3.  Ajout d'éléments au contrôle d'en\-tête.  
+3.  Add items to the header control.  
   
-4.  Utilisez la fenêtre Propriétés pour mapper les fonctions de gestion dans la classe de la vue pour tous les messages de notifications de contrôle d'en\-tête \(voir [Mapper des messages aux fonctions](../mfc/reference/mapping-messages-to-functions.md)\).  
+4.  Use the Properties window to map handler functions in the view class for any header-control notification messages you need to handle (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)).  
   
- Dans l'un et l'autre cas, l'objet de contrôle incorporé est créé lorsque la vue ou l'objet du dialogue est créé.  Vous devez appeler [CHeaderCtrl::Create](../Topic/CHeaderCtrl::Create.md) pour créer le point de contrôle.  Pour positionner le contrôle, appelez [CHeaderCtrl::Layout](../Topic/CHeaderCtrl::Layout.md) pour déterminer la taille initiale du contrôle et les placer et [SetWindowPos](../Topic/CWnd::SetWindowPos.md) pour définir la position souhaitée.  Ajoutez ensuite des éléments comme décrit dans [Ajout d'éléments dans le contrôle header](../mfc/adding-items-to-the-header-control.md).  
+ In either case, the embedded control object is created when the view or dialog object is created. Then you must call [CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create) to create the control window. To position the control, call [CHeaderCtrl::Layout](../mfc/reference/cheaderctrl-class.md#layout) to determine the control's initial size and position and [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos) to set the position you want. Then add items as described in [Adding Items to the Header Control](../mfc/adding-items-to-the-header-control.md).  
   
- Pour plus d'informations, consultez  [Création de contrôles d'en\-tête](http://msdn.microsoft.com/library/windows/desktop/bb775238) dans le [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For more information, see [Creating a Header Control](http://msdn.microsoft.com/library/windows/desktop/bb775238) in the Windows SDK.  
   
-## Voir aussi  
- [Utilisation de CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

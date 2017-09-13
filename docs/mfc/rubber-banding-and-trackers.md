@@ -1,43 +1,61 @@
 ---
-title: "Bande &#233;lastique et dispositifs de suivi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRectTracker (classe), implémenter des dispositifs de suivi"
-  - "objets OLE, sélectionner"
-  - "bande élastique"
-  - "dispositifs de suivi"
-  - "WM_LBUTTONDOWN"
+title: Rubber-Banding and Trackers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- trackers [MFC]
+- CRectTracker class [MFC], implementing trackers
+- OLE objects [MFC], selecting
+- rubber banding [MFC]
+- WM_LBUTTONDOWN [MFC]
 ms.assetid: 0d0fa64c-6418-4baf-ab7f-2d16ca039230
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Bande &#233;lastique et dispositifs de suivi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3bf323ef1cd887b1f4dbc6129568249733000310
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Une autre fonctionnalité fournie avec des dispositifs de suivi est la sélection "élastique", qui permet à un utilisateur de sélectionner plusieurs éléments OLE en faisant glisser un rectangle de dimensionnement autour de les éléments à sélectionner.  Lorsque l'utilisateur libère le bouton droit de la souris, les éléments dans la zone sélectionnée par l'utilisateur sont sélectionnés et peuvent être manipulés par l'utilisateur.  Par exemple, l'utilisateur peut faire glisser la sélection dans une autre application conteneur.  
+---
+# <a name="rubber-banding-and-trackers"></a>Rubber-Banding and Trackers
+Another feature supplied with trackers is the "rubber-band" selection, which allows a user to select multiple OLE items by dragging a sizing rectangle around the items to be selected. When the user releases the left mouse button, items within the region selected by the user are selected and can be manipulated by the user. For instance, the user might drag the selection into another container application.  
   
- Implémenter cette fonctionnalité nécessite un code supplémentaire dans la fonction gestionnaire `WM_LBUTTONDOWN` de votre application.  
+ Implementing this feature requires some additional code in your application's `WM_LBUTTONDOWN` handler function.  
   
- L'exemple de code suivant implémente la sélection élastique et des fonctionnalités supplémentaires.  
+ The following code sample implements rubber-band selection and additional features.  
   
- [!code-cpp[NVC_MFCOClient#6](../mfc/codesnippet/CPP/rubber-banding-and-trackers_1.cpp)]  
+ [!code-cpp[NVC_MFCOClient#6](../mfc/codesnippet/cpp/rubber-banding-and-trackers_1.cpp)]  
   
- Si vous souhaitez autoriser l'orientation réversible du dispositif de suivi de l'étirement, vous devez appeler [CRectTracker::TrackRubberBand](../Topic/CRectTracker::TrackRubberBand.md) avec le troisième paramètre à **TRUE**.  N'oubliez pas qu'autoriser l'orientation réversible provoquera parfois l'inversion de [CRectTracker::m\_rect](../Topic/CRectTracker::m_rect.md).  Cela peut être corrigée par un appel à [CRect::NormalizeRect](../Topic/CRect::NormalizeRect.md).  
+ If you want to allow reversible orientation of the tracker during rubber-banding, you should call [CRectTracker::TrackRubberBand](../mfc/reference/crecttracker-class.md#trackrubberband) with the third parameter set to **TRUE**. Remember that allowing reversible orientation will sometimes cause [CRectTracker::m_rect](../mfc/reference/crecttracker-class.md#m_rect) to become inverted. This can be corrected by a call to [CRect::NormalizeRect](../atl-mfc-shared/reference/crect-class.md#normalizerect).  
   
- Pour plus d'informations, consultez [Éléments client de conteneur](../mfc/containers-client-items.md) et [Personnaliser le glisser\-déplacer](../mfc/drag-and-drop-customizing.md).  
+ For more information, see [Container Client Items](../mfc/containers-client-items.md) and [Customizing Drag and Drop](../mfc/drag-and-drop-customizing.md).  
   
-## Voir aussi  
- [Dispositifs de suivi : implémentation de dispositifs de suivi dans votre application OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)   
+## <a name="see-also"></a>See Also  
+ [Trackers: Implementing Trackers in Your OLE Application](../mfc/trackers-implementing-trackers-in-your-ole-application.md)   
  [CRectTracker Class](../mfc/reference/crecttracker-class.md)
+

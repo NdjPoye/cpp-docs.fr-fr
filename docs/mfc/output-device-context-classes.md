@@ -1,77 +1,96 @@
 ---
-title: "Classes de sortie (contexte de p&#233;riph&#233;rique) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.output"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contextes de périphérique, classes"
-  - "classes de sortie"
-  - "classes de peinture"
-  - "classes d'impression"
-  - "classes de sortie écran"
-  - "classes de dessin de fenêtre"
+title: Output (Device Context) Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.output
+dev_langs:
+- C++
+helpviewer_keywords:
+- device contexts [MFC], classes
+- screen output classes [MFC]
+- printing classes [MFC]
+- window drawing classes [MFC]
+- painting classes [MFC]
+- output classes [MFC]
 ms.assetid: 35fd6435-a38e-42c6-a3fa-cd6f39370fc3
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Classes de sortie (contexte de p&#233;riph&#233;rique)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9fc6d8cb179395a27a021f5508cd3084ef86e7c5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Ces classes encapsulent les différents types de contextes de périphérique disponibles dans windows.  
+---
+# <a name="output-device-context-classes"></a>Output (Device Context) Classes
+These classes encapsulate the different types of device contexts available in Windows.  
   
- La plupart des classes suivantes encapsulent un handle à un contexte de périphérique Windows.  Un contexte de périphérique est un objet Windows qui contient des informations sur les attributs de dessin d'un périphérique tels qu'une vue ou une imprimante.  Tous les appels de dessin sont effectués via un objet contexte de périphérique.  Les classes supplémentaires dérivées de `CDC` encapsulent des fonctionnalités spéciales de contexte de périphérique, y compris la prise en charge des métafichiers Windows.  
+ Most of the following classes encapsulate a handle to a Windows device context. A device context is a Windows object that contains information about the drawing attributes of a device such as a display or a printer. All drawing calls are made through a device-context object. Additional classes derived from `CDC` encapsulate specialized device-context functionality, including support for Windows metafiles.  
   
  [CDC](../mfc/reference/cdc-class.md)  
- La classe de base pour les contextes de périphérique.  Utilisé pour accéder directement à la vue entière et pour accéder à des contextes sans affichage tels que des imprimantes.  
+ The base class for device contexts. Used directly for accessing the whole display and for accessing nondisplay contexts such as printers.  
   
  [CPaintDC](../mfc/reference/cpaintdc-class.md)  
- Un contexte d'affichage utilisé dans les méthodes Windows `OnPaint`.  Appelle automatiquement `BeginPaint` à la construction et `EndPaint` à la destruction.  
+ A display context used in `OnPaint` member functions of windows. Automatically calls `BeginPaint` on construction and `EndPaint` on destruction.  
   
  [CClientDC](../mfc/reference/cclientdc-class.md)  
- Un contexte d'affichage des domaines client Windows.  Utilisé, par exemple, pour tracer en réponse immédiate aux événements de la souris.  
+ A display context for client areas of windows. Used, for example, to draw in an immediate response to mouse events.  
   
  [CWindowDC](../mfc/reference/cwindowdc-class.md)  
- Un contexte d'affichage de fenêtres entières, qui inclut les zones client et non client.  
+ A display context for entire windows, including both the client and nonclient areas.  
   
  [CMetaFileDC](../mfc/reference/cmetafiledc-class.md)  
- Un contexte de périphérique pour les métafichiers Windows.  Un métafichier Windows contient une séquence de commandes GDI \(Graphics Device Interface\) qui peuvent être relues pour créer une image.  Les appels effectués aux méthodes `CMetaFileDC` sont stockés dans un métafichier.  
+ A device context for Windows metafiles. A Windows metafile contains a sequence of graphics device interface (GDI) commands that can be replayed to create an image. Calls made to the member functions of a `CMetaFileDC` are recorded in a metafile.  
   
-## Classes liées  
+## <a name="related-classes"></a>Related Classes  
  [CPoint](../atl-mfc-shared/reference/cpoint-class.md)  
- Contient des paires \(x, y\) de coordonnées.  
+ Holds coordinate (x, y) pairs.  
   
  [CSize](../atl-mfc-shared/reference/csize-class.md)  
- Contient la distance, les positions relatives, ou les valeurs couplées.  
+ Holds distance, relative positions, or paired values.  
   
  [CRect](../atl-mfc-shared/reference/crect-class.md)  
- Contient des coordonnées de zones rectangulaires.  
+ Holds coordinates of rectangular areas.  
   
  [CRgn](../mfc/reference/crgn-class.md)  
- Encapsule une région GDI pour manipuler une zone elliptique, polygonale ou irrégulière dans une fenêtre.  Utilisé conjointement avec les méthodes de réduction de la classe `CDC`.  
+ Encapsulates a GDI region for manipulating an elliptical, polygonal, or irregular area within a window. Used in conjunction with the clipping member functions in class `CDC`.  
   
  [CRectTracker](../mfc/reference/crecttracker-class.md)  
- Affiche et gère l'interface utilisateur pour redimensionner ou déplacer les objets rectangulaires.  
+ Displays and handles the user interface for resizing and moving rectangular objects.  
   
  [CColorDialog](../mfc/reference/ccolordialog-class.md)  
- Affiche une boîte de dialogue standard pour sélectionner une couleur.  
+ Provides a standard dialog box for selecting a color.  
   
  [CFontDialog](../mfc/reference/cfontdialog-class.md)  
- Affiche une boîte de dialogue standard pour sélectionner une police.  
+ Provides a standard dialog box for selecting a font.  
   
  [CPrintDialog](../mfc/reference/cprintdialog-class.md)  
- Affiche une boîte de dialogue standard pour imprimer un fichier.  
+ Provides a standard dialog box for printing a file.  
   
-## Voir aussi  
- [Vue d'ensemble des classes](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

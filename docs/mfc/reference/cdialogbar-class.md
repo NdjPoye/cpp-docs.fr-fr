@@ -1,5 +1,5 @@
 ---
-title: CDialogBar (classe) | Documents Microsoft
+title: CDialogBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,9 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog bars, Windows modeless dialog box
-- CDialogBar class
-- dialog boxes, modeless
+- CDialogBar [MFC], CDialogBar
+- CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
 caps.latest.revision: 23
 author: mikeblome
@@ -38,47 +37,47 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: 33dc5f5f4d345745a4b9435e725f411f4387e287
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f3a292e7cf09871b4d22e60f4e81f6fedf13d3c0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdialogbar-class"></a>CDialogBar (classe)
-Fournit les fonctionnalités d'une boîte de dialogue non modale Windows dans une barre de contrôles.  
+# <a name="cdialogbar-class"></a>CDialogBar Class
+Provides the functionality of a Windows modeless dialog box in a control bar.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDialogBar : public CControlBar  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialogBar::CDialogBar](#cdialogbar)|Construit un objet `CDialogBar`.|  
+|[CDialogBar::CDialogBar](#cdialogbar)|Constructs a `CDialogBar` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialogBar::Create](#create)|Crée une barre de boîte de dialogue Windows et l’attache à le `CDialogBar` objet.|  
+|[CDialogBar::Create](#create)|Creates a Windows dialog bar and attaches it to the `CDialogBar` object.|  
   
-## <a name="remarks"></a>Notes  
- Une barre de boîte de dialogue ressemble à une boîte de dialogue qui contient des contrôles Windows standard que l’utilisateur peut tabuler entre. Un autre similarité est que vous créez un modèle de boîte de dialogue pour représenter la barre de boîte de dialogue.  
+## <a name="remarks"></a>Remarks  
+ A dialog bar resembles a dialog box in that it contains standard Windows controls that the user can tab between. Another similarity is that you create a dialog template to represent the dialog bar.  
   
- Création et utilisation d’une barre de boîte de dialogue sont similaire à la création et utilisation d’un `CFormView` objet. Tout d’abord, utilisez le [éditeur de boîte de dialogue](../../windows/dialog-editor.md) pour définir un modèle de boîte de dialogue avec le style **WS_CHILD** et aucun autre style. Le modèle ne doit pas avoir le style **WS_VISIBLE**. Dans votre code d’application, appelez le constructeur pour construire le `CDialogBar` de l’objet, puis appelez **créer** pour créer la fenêtre de la barre de boîte de dialogue et l’attacher à la `CDialogBar` objet.  
+ Creating and using a dialog bar is similar to creating and using a `CFormView` object. First, use the [dialog editor](../../windows/dialog-editor.md) to define a dialog template with the style **WS_CHILD** and no other style. The template must not have the style **WS_VISIBLE**. In your application code, call the constructor to construct the `CDialogBar` object, then call **Create** to create the dialog-bar window and attach it to the `CDialogBar` object.  
   
- Pour plus d’informations sur `CDialogBar`, consultez l’article [barres de boîte de dialogue](../../mfc/dialog-bars.md) et [Note technique 31](../../mfc/tn031-control-bars.md), barres de contrôles.  
+ For more information on `CDialogBar`, see the article [Dialog Bars](../../mfc/dialog-bars.md) and [Technical Note 31](../../mfc/tn031-control-bars.md), Control Bars.  
   
 > [!NOTE]
->  Dans la version actuelle, un `CDialogBar` objet ne peut pas héberger de contrôles Windows Forms. Pour plus d’informations sur les contrôles Windows Forms dans Visual C++, consultez [à l’aide d’un contrôle utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+>  In the current release, a `CDialogBar` object cannot host Windows Forms controls. For more information about Windows Forms controls in Visual C++, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -89,18 +88,18 @@ class CDialogBar : public CControlBar
   
  `CDialogBar`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
- Construit un objet `CDialogBar`.  
+##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar  
+ Constructs a `CDialogBar` object.  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="create"></a>CDialogBar::Create  
- Charge le modèle de ressource de la boîte de dialogue spécifié par `lpszTemplateName` ou `nIDTemplate`, crée la fenêtre de la barre de boîte de dialogue, définit son style et associe la `CDialogBar` objet.  
+##  <a name="create"></a>  CDialogBar::Create  
+ Loads the dialog-box resource template specified by `lpszTemplateName` or `nIDTemplate`, creates the dialog-bar window, sets its style, and associates it with the `CDialogBar` object.  
   
 ```  
 virtual BOOL Create(
@@ -117,53 +116,53 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- Un pointeur vers le parent `CWnd` objet.  
+ A pointer to the parent `CWnd` object.  
   
  `lpszTemplateName`  
- Un pointeur vers le nom de la `CDialogBar` modèle de ressource de la boîte de dialogue de l’objet.  
+ A pointer to the name of the `CDialogBar` object's dialog-box resource template.  
   
  `nStyle`  
- Le style de la barre d’outils. Styles de barre d’outils supplémentaires pris en charge sont :  
+ The toolbar style. Additional toolbar styles supported are:  
   
-- `CBRS_TOP`Barre de contrôle est en haut de la fenêtre frame.  
+- `CBRS_TOP` Control bar is at top of the frame window.  
   
-- `CBRS_BOTTOM`Barre de contrôle est en bas de la fenêtre frame.  
+- `CBRS_BOTTOM` Control bar is at bottom of the frame window.  
   
-- `CBRS_NOALIGN`Barre de contrôle n’est pas repositionnée lorsque le parent est redimensionné.  
+- `CBRS_NOALIGN` Control bar is not repositioned when the parent is resized.  
   
-- `CBRS_TOOLTIPS`Barre de contrôle affiche des info-bulles.  
+- `CBRS_TOOLTIPS` Control bar displays tool tips.  
   
-- **CBRS_SIZE_DYNAMIC** barre de contrôle est dynamique.  
+- **CBRS_SIZE_DYNAMIC** Control bar is dynamic.  
   
-- **CBRS_SIZE_FIXED** barre de contrôle est fixe.  
+- **CBRS_SIZE_FIXED** Control bar is fixed.  
   
-- **CBRS_FLOATING** barre de contrôle est flottant.  
+- **CBRS_FLOATING** Control bar is floating.  
   
-- `CBRS_FLYBY`Barre d’état affiche des informations sur le bouton.  
+- `CBRS_FLYBY` Status bar displays information about the button.  
   
-- **CBRS_HIDE_INPLACE** barre de contrôle n’est pas affichée à l’utilisateur.  
+- **CBRS_HIDE_INPLACE** Control bar is not displayed to the user.  
   
  `nID`  
- L’ID de contrôle de la barre de boîte de dialogue.  
+ The control ID of the dialog bar.  
   
  `nIDTemplate`  
- L’ID de ressource de la `CDialogBar` modèle de boîte de dialogue de l’objet.  
+ The resource ID of the `CDialogBar` object's dialog-box template.  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur différente de zéro cas de réussite ; sinon, 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Notes  
- Si vous spécifiez le `CBRS_TOP` ou `CBRS_BOTTOM` style d’alignement, la largeur de la barre boîte de dialogue est celui de la fenêtre frame et sa hauteur est celui de la ressource spécifiée par `nIDTemplate`. Si vous spécifiez le `CBRS_LEFT` ou `CBRS_RIGHT` style d’alignement, hauteur de la barre de boîte de dialogue est celui de la fenêtre frame et sa largeur est celle de la ressource spécifiée par `nIDTemplate`.  
+### <a name="remarks"></a>Remarks  
+ If you specify the `CBRS_TOP` or `CBRS_BOTTOM` alignment style, the dialog bar's width is that of the frame window and its height is that of the resource specified by `nIDTemplate`. If you specify the `CBRS_LEFT` or `CBRS_RIGHT` alignment style, the dialog bar's height is that of the frame window and its width is that of the resource specified by `nIDTemplate`.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCMessageMaps&#13;](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemple MFC CTRLBARS](../../visual-cpp-samples.md)   
- [CControlBar (classe)](../../mfc/reference/ccontrolbar-class.md)   
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [Classe de CFormView](../../mfc/reference/cformview-class.md)   
- [CControlBar (classe)](../../mfc/reference/ccontrolbar-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CTRLBARS](../../visual-cpp-samples.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFormView Class](../../mfc/reference/cformview-class.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)
 

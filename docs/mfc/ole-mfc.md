@@ -1,48 +1,65 @@
 ---
-title: "OLE (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "applications (OLE), interface utilisateur"
-  - "OLE (C++), rubriques relatives à l'interface utilisateur"
-  - "OLE (applications) (C++), interface utilisateur"
-  - "interfaces utilisateur, OLE"
+title: OLE (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE [MFC], user-interface topics
+- OLE applications [MFC], user interface
+- user interfaces, OLE
+- applications [OLE], user interface
 ms.assetid: 61cb5d3e-1108-4e9b-b301-a8d8fcc586cb
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# OLE (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 098e40f6027715e67b361b899bbf13459e7c4979
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Implémentation de la fonctionnalité OLE dans votre programme affecte l'interface utilisateur de plusieurs manières :  
+---
+# <a name="ole-mfc"></a>OLE (MFC)
+Implementing OLE functionality in your program affects your user interface in several ways:  
   
--   La modification sur place \(activation sur place\) affiche l'interface utilisateur d'un autre programme dans des fenêtres de votre programme et modifier les menus de votre programme avec des éléments de l'autre programme.  
+-   Visual editing (in-place activation) displays the user interface of another program in your program's windows and modifies your program's menus with items from the other program.  
   
--   Le glisser\-déplacer permet aux utilisateurs de sélectionner des objets de glisser\-déplacer à l'intérieur et entre windows et même entre les programmes.  
+-   Drag and drop allows users to drag objects within and between windows and even between programs.  
   
--   Les dispositifs de trace fournissent des signaux visuels à l'état des objets lors de la modification sur place et faites glisser.  
+-   Trackers provide visual cues to the state of objects during visual editing and drag and drop.  
   
- Pour plus d'informations, consultez :  
+ For more information, see:  
   
--   [OLE et MFC](../mfc/ole-in-mfc.md)  
+-   [OLE and MFC](../mfc/ole-in-mfc.md)  
   
--   [Modification sur place \(activation\)](../mfc/activation-cpp.md)  
+-   [Visual Editing (Activation)](../mfc/activation-cpp.md)  
   
--   [Glisser\-déplacer](../mfc/drag-and-drop-ole.md)  
+-   [Drag and Drop](../mfc/drag-and-drop-ole.md)  
   
--   [Dispositifs de suivi](../mfc/trackers.md)  
+-   [Trackers](../mfc/trackers.md)  
   
-## Voir aussi  
- [Éléments de l'interface utilisateur](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

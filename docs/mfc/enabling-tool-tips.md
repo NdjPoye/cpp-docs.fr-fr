@@ -1,37 +1,56 @@
 ---
-title: "Activation des info-bulles | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "activer les astuces"
-  - "initialiser les astuces"
-  - "info-bulles (C++), activer"
-  - "info-bulles (C++), initialiser"
+title: Enabling Tool Tips | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing tool tips [MFC]
+- enabling tool tips [MFC]
+- tool tips [MFC], initializing
+- tool tips [MFC], enabling
 ms.assetid: 06b7c889-7722-4ce6-8b88-9efa50fe6369
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Activation des info-bulles
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ee1005229690073748667706bc3ce6b8609b0ea8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Activez la prise en charge des info\-bulles pour les contrôles enfants d'une fenêtre \(tels que les contrôles sur un formulaire ou une boîte de dialogue\).  
+---
+# <a name="enabling-tool-tips"></a>Enabling Tool Tips
+You can enable tool tip support for the child controls of a window (such as the controls on a form view or dialog box).  
   
-### Pour activer les info\-bulles des contrôles enfants d'une fenêtre  
+### <a name="to-enable-tool-tips-for-the-child-controls-of-a-window"></a>To enable tool tips for the child controls of a window  
   
-1.  Appelez `EnableToolTips` pour la fenêtre pour laquelle vous souhaitez fournir des info\-bulles.  
+1.  Call `EnableToolTips` for the window for which you want to provide tool tips.  
   
-2.  Spécifiez une chaîne pour chaque contrôle dans le gestionnaire de [Notifications de TTN\_NEEDTEXT](../mfc/handling-ttn-needtext-notification-for-tool-tips.md).  Le gestionnaire est dans la table des messages de la fenêtre qui contient les contrôles enfants \(par exemple, votre classe en mode formulaire\).  Ce gestionnaire doit appeler une fonction qui identifie le contrôle et définit **pszText** pour spécifier le texte utilisé par le contrôle d'une info\-bulle.  
+2.  Provide a string for each control in your [TTN_NEEDTEXT notification](../mfc/handling-ttn-needtext-notification-for-tool-tips.md) handler. The handler is in the message map of the window that contains the child controls (for example, your form view class). This handler should call a function that identifies the control and sets **pszText** to specify the text used by the tool tip control.  
   
-## Voir aussi  
- [Info\-bulles dans les fenêtres non dérivées de CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+## <a name="see-also"></a>See Also  
+ [Tool Tips in Windows Not Derived from CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+

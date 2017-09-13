@@ -1,5 +1,5 @@
 ---
-title: POINT Structure1 | Documents Microsoft
+title: POINT Structure1 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,8 +14,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LPPOINT structure
-- POINT structure
+- LPPOINT structure [MFC]
+- POINT structure [MFC]
 ms.assetid: 965736d8-4e53-41b6-9b8b-6961992dd21f
 caps.latest.revision: 13
 author: mikeblome
@@ -35,17 +35,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: d1e2bb05f9bad785b13e79413866d8e0ce1e1faa
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 067a69b5a68fd00bd1ba6da2d9df4a45ba541829
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="point-structure1"></a>POINT de Structure1
-Le **POINT** structure définit x* - * coordonnées d’un point.  
+# <a name="point-structure1"></a>POINT Structure1
+The **POINT** structure defines the x*-* and y-coordinates of a point.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagPOINT {  
@@ -54,20 +54,20 @@ typedef struct tagPOINT {
 } POINT;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  *x*  
- Spécifie la coordonnée x d’un point.  
+ Specifies the x-coordinate of a point.  
   
  *y*  
- Spécifie la coordonnée y d’un point.  
+ Specifies the y-coordinate of a point.  
   
-## <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFC_Utilities&#37;](../../mfc/codesnippet/cpp/point-structure1_1.cpp)]  
+## <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#37](../../mfc/codesnippet/cpp/point-structure1_1.cpp)]  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** windef.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** windef.h  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CPoint (classe)](../../atl-mfc-shared/reference/cpoint-class.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CPoint Class](../../atl-mfc-shared/reference/cpoint-class.md)
 

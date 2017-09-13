@@ -1,5 +1,5 @@
 ---
-title: output_iterator_tag, struct | Microsoft Docs
+title: output_iterator_tag Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- output_iterator_tag
 - xutility/std::output_iterator_tag
 dev_langs:
 - C++
@@ -35,38 +34,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: a0376983916f511bec198a4b5d7d9e7131ae25b6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: daf3313952bf917b317516c04c9ace028fb1f1b0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="outputiteratortag-struct"></a>output_iterator_tag, struct
-Classe qui fournit un type de retour pour une fonction **iterator_category** représentant un itérateur de sortie.  
+# <a name="outputiteratortag-struct"></a>output_iterator_tag Struct
+A class that provides a return type for **iterator_category** function that represents an output iterator.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 struct output_iterator_tag {};  
   
-## <a name="remarks"></a>Notes  
- Les classes de balise de catégorie sont utilisées comme balises de compilation pour la sélection de l’algorithme. La fonction de modèle doit rechercher la catégorie la plus spécifique de son argument d’itérateur, pour pouvoir utiliser l’algorithme le plus efficace au moment de la compilation. Pour chaque itérateur de type `Iterator`, `iterator_traits`< `Iterator`> **::iterator_category** doit être défini comme étant la balise de catégorie la plus spécifique qui décrit le comportement de l’itérateur.  
+## <a name="remarks"></a>Remarks  
+ The category tag classes are used as compile tags for algorithm selection. The template function needs to find the most specific category of its iterator argument so that it can use the most efficient algorithm at compile time. For every iterator of type `Iterator`, `iterator_traits`< `Iterator`> **::iterator_category** must be defined to be the most specific category tag that describes the iterator's behavior.  
   
- Le type est identique à **iterator**\< **Iter**> **::iterator_category** quand **Iter** décrit un objet pouvant servir d’itérateur de sortie.  
+ The type is the same as **iterator**\< **Iter**> **::iterator_category** when **Iter** describes an object that can serve as a output iterator.  
   
- Cette balise n’est pas paramétrable sur `value_type` ou `difference_type` pour l’itérateur, comme avec les autres balises d’itérateur, car les itérateurs de sortie n’ont pas de `value_type` ou `difference_type`.  
+ This tag is not parameterized on the `value_type` or `difference_type` for the iterator, as with the other iterator tags, because output iterators do not have either a `value_type` or a `difference_type`.  
   
-## <a name="example"></a>Exemple  
- Consultez [iterator_traits](../standard-library/iterator-traits-struct.md) ou [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) pour obtenir un exemple montrant comment utiliser des balises **iterator_tag**.  
+## <a name="example"></a>Example  
+ See [iterator_traits](../standard-library/iterator-traits-struct.md) or [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) for an example of how to use **iterator_tag**s.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<iterator>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<iterator>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

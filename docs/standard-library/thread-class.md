@@ -1,5 +1,5 @@
 ---
-title: thread, classe | Microsoft Docs
+title: thread Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -40,100 +40,110 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b1c5282d284a70917c6c14511bacda305180d778
+helpviewer_keywords:
+- std::thread [C++]
+- std::thread [C++], thread
+- std::thread [C++], detach
+- std::thread [C++], get_id
+- std::thread [C++], hardware_concurrency
+- std::thread [C++], join
+- std::thread [C++], joinable
+- std::thread [C++], native_handle
+- std::thread [C++], swap
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a1fbc3d94a1f2081bc29fd7b469f87bc54b89728
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="thread-class"></a>thread, classe
-Définit un objet qui sert à observer et à gérer un thread d’exécution dans une application.  
+# <a name="thread-class"></a>thread Class
+Defines an object that's used to observe and manage a thread of execution within an application.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 class thread;
 ```  
   
-## <a name="remarks"></a>Notes  
- Vous pouvez utiliser un objet `thread` pour observer et gérer un thread d’exécution dans une application. Un objet thread qui est créé à l’aide du constructeur par défaut n’est associé à aucun thread d’exécution. Un objet thread qui est construit à l’aide d’un objet joignable crée un nouveau thread d’exécution et appelle l’objet joignable dans ce thread. Les objets thread peuvent être déplacés mais pas copiés. Par conséquent, un thread d’exécution peut être associé à un seul objet thread.  
+## <a name="remarks"></a>Remarks  
+ You can use a `thread` object to observe and manage a thread of execution within an application. A thread object that's created by using the default constructor is not associated with any thread of execution. A thread object that's constructed by using a callable object creates a new thread of execution and calls the callable object in that thread. Thread objects can be moved but not copied. Therefore, a thread of execution can be associated with only one thread object.  
   
- Chaque thread d’exécution possède un identificateur unique de type `thread::id`. La fonction `this_thread::get_id` retourne l’identificateur du thread appelant. La fonction membre `thread::get_id` retourne l’identificateur du thread qui est géré par un objet thread. Pour un objet thread construit par défaut, la méthode `thread::get_id` retourne un objet qui a une valeur identique pour tous les objets thread construits par défaut et différente de la valeur retournée par `this_thread::get_id` pour n’importe quel thread d’exécution qui pouvait être joint au moment de l’appel.  
+ Every thread of execution has a unique identifier of type `thread::id`. The function `this_thread::get_id` returns the identifier of the calling thread. The member function `thread::get_id` returns the identifier of the thread that's managed by a thread object. For a default-constructed thread object, the `thread::get_id` method returns an object that has a value that's the same for all default-constructed thread objects and different from the value that's returned by `this_thread::get_id` for any thread of execution that could be joined at the time of the call.  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-classes"></a>Classes publiques  
+### <a name="public-classes"></a>Public Classes  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[thread::id, classe](#id_class)|Identifie de façon unique le thread associé.|  
+|[thread::id Class](#id_class)|Uniquely identifies the associated thread.|  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[thread](#thread)|Construit un objet `thread`.|  
+|[thread](#thread)|Constructs a `thread` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[détacher](#detach)|Détache le thread associé de l’objet `thread`.|  
-|[get_id](#get_id)|Retourne l’identificateur unique du thread associé.|  
-|[hardware_concurrency](#hardware_concurrency)|Static. Retourne une estimation du nombre de contextes de thread matériel.|  
-|[join](#join)|Bloque jusqu’à ce que le thread associé soit terminé.|  
-|[joignable](#joinable)|Spécifie si le thread associé est joignable.|  
-|[native_handle](#native_handle)|Retourne le type propre à l’implémentation qui représente le descripteur de thread.|  
-|[swap](#swap)|Permute l’état de l’objet avec un objet `thread` spécifié.|  
+|[detach](#detach)|Detaches the associated thread from the `thread` object.|  
+|[get_id](#get_id)|Returns the unique identifier of the associated thread.|  
+|[hardware_concurrency](#hardware_concurrency)|Static. Returns an estimate of the number of hardware thread contexts.|  
+|[join](#join)|Blocks until the associated thread completes.|  
+|[joinable](#joinable)|Specifies whether the associated thread is joinable.|  
+|[native_handle](#native_handle)|Returns the implementation-specific type that represents the thread handle.|  
+|[swap](#swap)|Swaps the object state with a specified `thread` object.|  
   
-### <a name="public-operators"></a>Op&#233;rateurs publics  
+### <a name="public-operators"></a>Public Operators  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[thread::operator=](#op_eq)|Associe un thread avec l’objet `thread` en cours.|  
+|[thread::operator=](#op_eq)|Associates a thread with the current `thread` object.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<thread >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<thread>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-##  <a name="detach"></a>thread::Detach
- Détache le thread associé. Le système d’exploitation devient responsable de la libération des ressources de thread lors d’un arrêt.  
+##  <a name="detach"></a>  thread::detach
+ Detaches the associated thread. The operating system becomes responsible for releasing thread resources on termination.  
   
 ```
 void detach();
 ```  
   
-### <a name="remarks"></a>Notes  
- Après un appel à `detach`, les appels suivants à [get_id](#get_id) retournent [id](#id_class).  
+### <a name="remarks"></a>Remarks  
+ After a call to `detach`, subsequent calls to [get_id](#get_id) return [id](#id_class).  
   
- Si le thread qui est associé à l’objet appelant n’est pas joignable, la fonction lève un objet [system_error](../standard-library/system-error-class.md) doté du code d’erreur `invalid_argument`.  
+ If the thread that's associated with the calling object is not joinable, the function throws a [system_error](../standard-library/system-error-class.md) that has an error code of `invalid_argument`.  
   
- Si le thread qui est associé à l’objet appelant est non valide, la fonction lève un objet `system_error` dotée du code d’erreur `no_such_process`.  
+ If the thread that's associated with the calling object is invalid, the function throws a `system_error` that has an error code of `no_such_process`.  
   
-##  <a name="get_id"></a>thread::get_id
- Retourne un identificateur unique du thread associé.  
+##  <a name="get_id"></a>  thread::get_id
+ Returns a unique identifier for the associated thread.  
   
 ```
 id get_id() const noexcept;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Un objet [thread::id](#id_class) qui identifie de façon unique le thread associé, ou `thread::id()` si aucun thread n’est associé à l’objet.  
+### <a name="return-value"></a>Return Value  
+ A [thread::id](#id_class) object that uniquely identifies the associated thread, or `thread::id()` if no thread is associated with the object.  
   
-##  <a name="hardware_concurrency"></a>thread::hardware_concurrency
- Méthode statique qui retourne une estimation du nombre de contextes de thread matériel.  
+##  <a name="hardware_concurrency"></a>  thread::hardware_concurrency
+ Static method that returns an estimate of the number of hardware thread contexts.  
   
 ```
 static unsigned int hardware_concurrency() noexcept;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Une estimation du nombre de contextes de thread matériel. Si la valeur ne peut pas être calculée ou n’est pas bien définie, cette méthode retourne 0.  
+### <a name="return-value"></a>Return Value  
+ An estimate of the number of hardware thread contexts. If the value cannot be computed or is not well defined, this method returns 0.  
   
-##  <a name="id_class"></a>  thread::id, classe  
- Fournit un identificateur unique pour chaque thread d’exécution dans le processus.  
+##  <a name="id_class"></a>  thread::id Class  
+ Provides a unique identifier for each thread of execution in the process.  
   
 ```
 class thread::id {
@@ -141,76 +151,76 @@ class thread::id {
 };
 ```  
   
-### <a name="remarks"></a>Notes  
- Le constructeur par défaut crée un objet qui n’est pas considéré comme égal à l’objet `thread::id` pour n’importe quel thread existant.  
+### <a name="remarks"></a>Remarks  
+ The default constructor creates an object that does not compare equal to the `thread::id` object for any existing thread.  
   
- Tous les objets `thread::id` construits par défaut sont considérés comme égaux.  
+ All default-constructed `thread::id` objects compare equal.  
   
-##  <a name="join"></a>thread::Join
- Bloque jusqu’à ce que le thread d’exécution associé à l’objet appelant soit terminé.  
+##  <a name="join"></a>  thread::join
+ Blocks until the thread of execution that's associated with the calling object completes.  
   
 ```
 void join();
 ```  
   
-### <a name="remarks"></a>Notes  
- Si l’appel réussit, les appels suivants à [get_id](#get_id) pour l’objet appelant retournent un [thread::id](#id_class) par défaut qui n’est pas considéré comme égal au `thread::id` de n’importe quel thread existant ; si l’appel n’aboutit pas, la valeur retournée par `get_id` est inchangée.  
+### <a name="remarks"></a>Remarks  
+ If the call succeeds, subsequent calls to [get_id](#get_id) for the calling object return a default [thread::id](#id_class) that does not compare equal to the `thread::id` of any existing thread; if the call does not succeed, the value that's returned by `get_id` is unchanged.  
   
-##  <a name="joinable"></a>thread::joinable
- Spécifie si le thread associé est *joignable*.  
+##  <a name="joinable"></a>  thread::joinable
+ Specifies whether the associated thread is *joinable*.  
   
 ```
 bool joinable() const noexcept;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `true` si le thread associé est *joignable* ; sinon, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the associated thread is *joinable*; otherwise, `false`.  
   
-### <a name="remarks"></a>Notes  
- Un objet thread est *joignable* si `get_id() != id()`.  
+### <a name="remarks"></a>Remarks  
+ A thread object is *joinable* if `get_id() != id()`.  
   
-##  <a name="native_handle"></a>thread::native_handle
- Retourne le type propre à l’implémentation qui représente le descripteur de thread. Vous pouvez utiliser le descripteur de thread de plusieurs manières propres à l’implémentation.  
+##  <a name="native_handle"></a>  thread::native_handle
+ Returns the implementation-specific type that represents the thread handle. The thread handle can be used in implementation-specific ways.  
   
 ```
 native_handle_type native_handle();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `native_handle_type` est défini comme un `HANDLE` Win32 converti en `void *`.  
+### <a name="return-value"></a>Return Value  
+ `native_handle_type` is defined as a Win32 `HANDLE` that's cast as `void *`.  
   
 ##  <a name="op_eq"></a>  thread::operator=  
- Associe le thread d’un objet spécifié à l’objet en cours.  
+ Associates the thread of a specified object with the current object.  
   
 ```
 thread& operator=(thread&& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Other`  
- Objet `thread`.  
+ A `thread` object.  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
  `*this`  
   
-### <a name="remarks"></a>Notes  
- La méthode appelle detach si l’objet appelant est joignable.  
+### <a name="remarks"></a>Remarks  
+ The method calls detach if the calling object is joinable.  
   
- Une fois l’association établie, `Other` est défini à un état construit par défaut.  
+ After the association is made, `Other` is set to a default-constructed state.  
   
-##  <a name="swap"></a>thread::swap
- Permute l’état de l’objet avec celui d’un objet `thread` spécifié.  
+##  <a name="swap"></a>  thread::swap
+ Swaps the object state with that of a specified `thread` object.  
   
 ```
 void swap(thread& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Other`  
- Objet `thread`.  
+ A `thread` object.  
   
-##  <a name="thread"></a>  thread::thread, constructeur  
- Construit un objet `thread`.  
+##  <a name="thread"></a>  thread::thread Constructor  
+ Constructs a `thread` object.  
   
 ```
 thread() noexcept;
@@ -220,25 +230,25 @@ explicit thread(Fn&& F, Args&&... A);
 thread(thread&& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `F`  
- Une fonction définie par l’application doit être exécutée par le thread.  
+ An application-defined function to be executed by the thread.  
   
  `A`  
- Liste d’arguments à passer à `F`.  
+ A list of arguments to be passed to `F`.  
   
  `Other`  
- Objet `thread` existant.  
+ An existing `thread` object.  
   
-### <a name="remarks"></a>Notes  
- Le premier constructeur construit un objet qui n’est pas associé à un thread d’exécution. La valeur retournée par un appel à `get_id` pour l’objet construit est `thread::id()`.  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs an object that's not associated with a thread of execution. The value that's returned by a call to `get_id` for the constructed object is `thread::id()`.  
   
- Le deuxième constructeur construit un objet qui est associé à un nouveau thread d’exécution et exécute la pseudo-fonction `INVOKE` qui est définie dans [\<functional>](../standard-library/functional.md). Si des ressources insuffisantes sont disponibles pour démarrer un nouveau thread, la fonction lève un objet [system_error](../standard-library/system-error-class.md) doté du code d’erreur `resource_unavailable_try_again`. Si l’appel à `F` se termine avec une exception non interceptée, la fonction [terminate](../standard-library/exception-functions.md#terminate) est appelée.  
+ The second constructor constructs an object that's associated with a new thread of execution and executes the pseudo-function `INVOKE` that's defined in [\<functional>](../standard-library/functional.md). If not enough resources are available to start a new thread, the function throws a [system_error](../standard-library/system-error-class.md) object that has an error code of `resource_unavailable_try_again`. If the call to `F` terminates with an uncaught exception, [terminate](../standard-library/exception-functions.md#terminate) is called.  
   
- Le troisième constructeur construit un objet associé au thread qui est associé à `Other`. `Other` est ensuite défini à un état construit par défaut.  
+ The third constructor constructs an object that's associated with the thread that's associated with `Other`. `Other` is then set to a default-constructed state.  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<thread>](../standard-library/thread.md)
 
 

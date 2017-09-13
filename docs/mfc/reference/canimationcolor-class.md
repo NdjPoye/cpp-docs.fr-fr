@@ -1,5 +1,5 @@
 ---
-title: Classe CAnimationColor | Documents Microsoft
+title: CAnimationColor Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationColor class
+- CAnimationColor [MFC], CAnimationColor
+- CAnimationColor [MFC], AddTransition
+- CAnimationColor [MFC], GetB
+- CAnimationColor [MFC], GetDefaultValue
+- CAnimationColor [MFC], GetG
+- CAnimationColor [MFC], GetR
+- CAnimationColor [MFC], GetValue
+- CAnimationColor [MFC], SetDefaultValue
+- CAnimationColor [MFC], GetAnimationVariableList
+- CAnimationColor [MFC], m_bValue
+- CAnimationColor [MFC], m_gValue
+- CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
 caps.latest.revision: 17
 author: mikeblome
@@ -46,78 +57,78 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: e053986737b8e62103666787b99b01cbf19cdc60
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 72899175fb8783ecf8c5300cc67e8f6e719b1c83
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationcolor-class"></a>CAnimationColor, classe
-Implémente les fonctionnalités d'une couleur dont les composants rouge, vert et bleu peuvent être animés.  
+# <a name="canimationcolor-class"></a>CAnimationColor Class
+Implements the functionality of a color whose red, green, and blue components can be animated.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimationColor : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationColor::CAnimationColor](#canimationcolor)|Surchargé. Construit un objet de couleur de l’animation.|  
+|[CAnimationColor::CAnimationColor](#canimationcolor)|Overloaded. Constructs an animation color object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationColor::AddTransition](#addtransition)|Ajoute des transitions pour les composants rouge, vert et bleu.|  
-|[CAnimationColor::GetB](#getb)|Fournit l’accès à CAnimationVariable qui représente la composante bleu.|  
-|[CAnimationColor::GetDefaultValue](#getdefaultvalue)|Retourne les valeurs par défaut pour les composants de couleur.|  
-|[CAnimationColor::GetG](#getg)|Fournit l’accès à CAnimationVariable qui représente la composante verte.|  
-|[CAnimationColor::GetR](#getr)|Fournit l’accès à CAnimationVariable qui représente la composante rouge.|  
-|[CAnimationColor::GetValue](#getvalue)|Retourne la valeur actuelle.|  
-|[CAnimationColor::SetDefaultValue](#setdefaultvalue)|Définit la valeur par défaut.|  
+|[CAnimationColor::AddTransition](#addtransition)|Adds transitions for Red, Green and Blue components.|  
+|[CAnimationColor::GetB](#getb)|Provides access to CAnimationVariable representing Blue component.|  
+|[CAnimationColor::GetDefaultValue](#getdefaultvalue)|Returns the default values for color components.|  
+|[CAnimationColor::GetG](#getg)|Provides access to CAnimationVariable representing Green component.|  
+|[CAnimationColor::GetR](#getr)|Provides access to CAnimationVariable representing Red component.|  
+|[CAnimationColor::GetValue](#getvalue)|Returns current value.|  
+|[CAnimationColor::SetDefaultValue](#setdefaultvalue)|Sets default value.|  
   
-### <a name="protected-methods"></a>Méthodes protégées  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationColor::GetAnimationVariableList](#getanimationvariablelist)|Insère les variables d’animation encapsulées dans une liste. (Substitue [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
+|[CAnimationColor::GetAnimationVariableList](#getanimationvariablelist)|Puts the encapsulated animation variables into a list. (Overrides [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
-### <a name="public-operators"></a>Op&#233;rateurs publics  
+### <a name="public-operators"></a>Public Operators  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |[CAnimationColor::operator COLORREF](#operator_colorref)||  
-|[CAnimationColor::operator =](#operator_eq)|Affecte la couleur à CAnimationColor.|  
+|[CAnimationColor::operator=](#operator_eq)|Assigns color to CAnimationColor.|  
   
-### <a name="protected-data-members"></a>Membres de données protégés  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationColor::m_bValue](#m_bvalue)|La variable d’animation encapsulée qui représente la composante bleue de la couleur d’animation.|  
-|[CAnimationColor::m_gValue](#m_gvalue)|La variable d’animation encapsulée qui représente la composante verte de la couleur d’animation.|  
-|[CAnimationColor::m_rValue](#m_rvalue)|La variable d’animation encapsulée qui représente la composante rouge de la couleur d’animation.|  
+|[CAnimationColor::m_bValue](#m_bvalue)|The encapsulated animation variable that represents Blue component of animation color.|  
+|[CAnimationColor::m_gValue](#m_gvalue)|The encapsulated animation variable that represents Green component of animation color.|  
+|[CAnimationColor::m_rValue](#m_rvalue)|The encapsulated animation variable that represents Red component of animation color.|  
   
-## <a name="remarks"></a>Notes  
- La classe CAnimationColor encapsule trois objets CAnimationVariable et peut représenter dans les applications une couleur. Par exemple, vous pouvez utiliser cette classe pour animer des couleurs de n’importe quel objet sur l’écran (comme la couleur du texte, la couleur d’arrière-plan etc.). Pour utiliser cette classe dans l’application, simplement instancier un objet de cette classe, ajoutez-le au contrôleur de l’animation à l’aide de CAnimationController::AddAnimationObject et appeler AddTransition pour chaque transition à appliquer aux composants rouge, vert et bleu.  
+## <a name="remarks"></a>Remarks  
+ The CAnimationColor class encapsulates three CAnimationVariable objects and can represent in applications a color. For example, you can use this class to animate colors of any object on the screen (like text color, background color etc). To use this class in application, just instantiate an object of this class, add it to animation controller using CAnimationController::AddAnimationObject and call AddTransition for each transition to be applied to Red, Green and Blue components.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)  
   
  `CAnimationColor`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationColor::AddTransition  
- Ajoute des transitions pour les composants rouge, vert et bleu.  
+##  <a name="addtransition"></a>  CAnimationColor::AddTransition  
+ Adds transitions for Red, Green and Blue components.  
   
 ```  
 void AddTransition(
@@ -126,21 +137,21 @@ void AddTransition(
     CBaseTransition* pBTransition);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pRTransition`  
- Transition pour la composante rouge.  
+ Transition for Red component.  
   
  `pGTransition`  
- Transition pour la composante verte.  
+ Transition for Green component.  
   
  `pBTransition`  
- Transition pour la composante bleue.  
+ Transition for Blue component.  
   
-### <a name="remarks"></a>Notes  
- Appelez cette fonction pour ajouter les transitions spécifiées à la liste interne des transitions à appliquer aux variables d’animation représentant les composants de couleur. Lorsque vous ajoutez des transitions, ils ne sont pas appliquées immédiatement et stockées dans une liste interne. Les transitions sont appliquées (ajoutée à un storyboard pour une valeur particulière) lorsque vous appelez CAnimationController::AnimateGroup. Si vous n’avez pas besoin d’appliquer une transition à une des composantes de couleur, vous pouvez passer NULL.  
+### <a name="remarks"></a>Remarks  
+ Call this function to add the specified transitions to the internal list of transitions to be applied to animation variables representing color components. When you add transitions, they are not applied immediately and stored in an internal list. Transitions are applied (added to a storyboard for a particular value) when you call CAnimationController::AnimateGroup. If you don't need to apply a transition to one of the color components, you can pass NULL.  
   
-##  <a name="canimationcolor"></a>CAnimationColor::CAnimationColor  
- Construit un objet CAnimationColor.  
+##  <a name="canimationcolor"></a>  CAnimationColor::CAnimationColor  
+ Constructs a CAnimationColor object.  
   
 ```  
 CAnimationColor();
@@ -152,159 +163,159 @@ CAnimationColor(
     DWORD dwUserData = 0);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `color`  
- Spécifie la couleur par défaut.  
+ Specifies default color.  
   
  `nGroupID`  
- Spécifie l’ID de groupe.  
+ Specifies Group ID.  
   
  `nObjectID`  
- Spécifie l’ID d’objet.  
+ Specifies Object ID.  
   
  `dwUserData`  
- Spécifie les données définies par l’utilisateur.  
+ Specifies user-defined data.  
   
-### <a name="remarks"></a>Remarques  
- L’objet est construit avec les valeurs par défaut pour le rouge, vert, bleu, ID d’objet et ID de groupe, qui auront la valeur 0. Ils peuvent être modifiés ultérieurement lors de l’exécution avec SetDefaultValue et SetID.  
+### <a name="remarks"></a>Remarks  
+ The object is constructed with default values for red, green, blue, Object ID and Group ID, which will be set to 0. They can be changed later at runtime using SetDefaultValue and SetID.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationColor::GetAnimationVariableList  
- Insère les variables d’animation encapsulées dans une liste.  
+##  <a name="getanimationvariablelist"></a>  CAnimationColor::GetAnimationVariableList  
+ Puts the encapsulated animation variables into a list.  
   
 ```  
 virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lst`  
- Lorsque la fonction est retournée, contient des pointeurs aux trois objets CAnimationVariable représentant les composants rouges, verts et bleus.  
+ When the function returns, it contains pointers to three CAnimationVariable objects representing red, green and blue components.  
   
-##  <a name="getb"></a>CAnimationColor::GetB  
- Fournit l’accès à CAnimationVariable qui représente la composante bleu.  
+##  <a name="getb"></a>  CAnimationColor::GetB  
+ Provides access to CAnimationVariable representing Blue component.  
   
 ```  
 CAnimationVariable& GetB();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Référence à CAnimationVariable encapsulée qui représente la composante bleu.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated CAnimationVariable representing Blue component.  
   
-### <a name="remarks"></a>Remarques  
- Vous pouvez appeler cette méthode pour accéder directement à l’objet CAnimationVariable sous-jacent représentant la composante bleu.  
+### <a name="remarks"></a>Remarks  
+ You can call this method to get direct access to underlying CAnimationVariable representing Blue component.  
   
-##  <a name="getdefaultvalue"></a>CAnimationColor::GetDefaultValue  
- Retourne les valeurs par défaut pour les composants de couleur.  
+##  <a name="getdefaultvalue"></a>  CAnimationColor::GetDefaultValue  
+ Returns the default values for color components.  
   
 ```  
 COLORREF GetDefaultValue();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur COLORREF qui contient les valeurs par défaut pour les composants RGB.  
+### <a name="return-value"></a>Return Value  
+ A COLORREF value containing defaults for RGB components.  
   
-### <a name="remarks"></a>Notes  
- Appelez cette fonction pour récupérer la valeur par défaut, ce qui a été précédemment définie par le constructeur ou SetDefaultValue.  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve default value, which was previously set by constructor or SetDefaultValue.  
   
-##  <a name="getg"></a>CAnimationColor::GetG  
- Fournit l’accès à CAnimationVariable qui représente la composante verte.  
+##  <a name="getg"></a>  CAnimationColor::GetG  
+ Provides access to CAnimationVariable representing Green component.  
   
 ```  
 CAnimationVariable& GetG();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Une référence à encapsulé CAnimationVariable représentant la composante vert.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated CAnimationVariable representing Green component.  
   
-### <a name="remarks"></a>Remarques  
- Vous pouvez appeler cette méthode pour obtenir un accès direct au composant vert représentant CAnimationVariable sous-jacent.  
+### <a name="remarks"></a>Remarks  
+ You can call this method to get direct access to underlying CAnimationVariable representing Green component.  
   
-##  <a name="getr"></a>CAnimationColor::GetR  
- Fournit l’accès à CAnimationVariable qui représente la composante rouge.  
+##  <a name="getr"></a>  CAnimationColor::GetR  
+ Provides access to CAnimationVariable representing Red component.  
   
 ```  
 CAnimationVariable& GetR();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Référence à CAnimationVariable encapsulée qui représente la composante rouge.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated CAnimationVariable representing Red component.  
   
-### <a name="remarks"></a>Remarques  
- Vous pouvez appeler cette méthode pour accéder directement à l’objet CAnimationVariable sous-jacent représentant la composante rouge.  
+### <a name="remarks"></a>Remarks  
+ You can call this method to get direct access to underlying CAnimationVariable representing Red component.  
   
-##  <a name="getvalue"></a>CAnimationColor::GetValue  
- Retourne la valeur actuelle.  
+##  <a name="getvalue"></a>  CAnimationColor::GetValue  
+ Returns current value.  
   
 ```  
 BOOL GetValue(COLORREF& color);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `color`  
- Sortie. Contient la valeur actuelle lorsque cette méthode est retournée.  
+ Output. Contains the current value when this method returns.  
   
-### <a name="return-value"></a>Valeur de retour  
- TRUE si la valeur actuelle a été extrait avec succès ; Sinon, FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE, if the current value was successfully retrieved; otherwise FALSE.  
   
-### <a name="remarks"></a>Remarques  
- Appelez cette fonction pour extraire la valeur actuelle de la couleur de l’animation. Si cette méthode échoue ou que les objets COM sous-jacents pour les composants de couleur n’ont pas été initialisés, color contient la valeur par défaut, ce qui a été définie précédemment dans le constructeur ou SetDefaultValue.  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve the current value of animation color. If this method fails or underlying COM objects for color components have not been initialized, color contains default value, which was previously set in constructor or by SetDefaultValue.  
   
-##  <a name="m_bvalue"></a>CAnimationColor::m_bValue  
- La variable d’animation encapsulée qui représente la composante bleue de la couleur d’animation.  
+##  <a name="m_bvalue"></a>  CAnimationColor::m_bValue  
+ The encapsulated animation variable that represents Blue component of animation color.  
   
 ```  
 CAnimationVariable m_bValue;  
 ```  
   
-##  <a name="m_gvalue"></a>CAnimationColor::m_gValue  
- La variable d’animation encapsulée qui représente la composante verte de la couleur d’animation.  
+##  <a name="m_gvalue"></a>  CAnimationColor::m_gValue  
+ The encapsulated animation variable that represents Green component of animation color.  
   
 ```  
 CAnimationVariable m_gValue;  
 ```  
   
-##  <a name="m_rvalue"></a>CAnimationColor::m_rValue  
- La variable d’animation encapsulée qui représente la composante rouge de la couleur d’animation.  
+##  <a name="m_rvalue"></a>  CAnimationColor::m_rValue  
+ The encapsulated animation variable that represents Red component of animation color.  
   
 ```  
 CAnimationVariable m_rValue;  
 ```  
   
-##  <a name="operator_colorref"></a>CAnimationColor::operator COLORREF  
+##  <a name="operator_colorref"></a>  CAnimationColor::operator COLORREF  
   
 ```  
 operator COLORREF();
 ```   
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-##  <a name="operator_eq"></a>CAnimationColor::operator =  
- Affecte la couleur à CAnimationColor.  
+##  <a name="operator_eq"></a>  CAnimationColor::operator=  
+ Assigns color to CAnimationColor.  
   
 ```  
 void operator=(COLORREF color);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `color`  
- Spécifie la nouvelle valeur de couleur d’Animation.  
+ Specifies new value Animation Color.  
   
-### <a name="remarks"></a>Remarques  
- Il est recommandé du pour faire avant le démarrage de l’animation, parce que cet opérateur appelle SetDefaultValue qui recrée les objets COM sous-jacents pour les composants de couleur s’ils ont été créés. Si vous êtes abonné aux événements (ValueChanged ou IntegerValueChanged), cet objet d’animation, vous devez réactiver ces événements.  
+### <a name="remarks"></a>Remarks  
+ It's recommended to do that before animation start, because this operator calls SetDefaultValue, which recreates the underlying COM objects for color components if they have been created. If you subscribed this animation object to events (ValueChanged or IntegerValueChanged), you need to re-enable these events.  
   
-##  <a name="setdefaultvalue"></a>CAnimationColor::SetDefaultValue  
- Définit la valeur par défaut.  
+##  <a name="setdefaultvalue"></a>  CAnimationColor::SetDefaultValue  
+ Sets default value.  
   
 ```  
 void SetDefaultValue(COLORREF color);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `color`  
- Spécifie les nouvelles valeurs par défaut pour les composants rouges, verts et bleus.  
+ Specifies new default values for red, green and blue components.  
   
-### <a name="remarks"></a>Remarques  
- Utilisez cette fonction pour définir une valeur par défaut pour l’objet d’animation. Ces méthodes assignent des valeurs par défaut pour les composants de couleur de la couleur d’animation. Il recrée également les objets COM sous-jacents s’ils ont été créés. Si vous êtes abonné aux événements (ValueChanged ou IntegerValueChanged), cet objet d’animation, vous devez réactiver ces événements.  
+### <a name="remarks"></a>Remarks  
+ Use this function to set a default value to animation object. This methods assigns default values to color components of animation color. It also recreates underlying COM objects if they have been created. If you subscribed this animation object to events (ValueChanged or IntegerValueChanged), you need to re-enable these events.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [Classes](../../mfc/reference/mfc-classes.md)
 

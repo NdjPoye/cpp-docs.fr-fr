@@ -1,5 +1,5 @@
 ---
-title: Styles de zone de liste | Documents Microsoft
+title: List-Box Styles | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,22 +28,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LBS_NOSEL constant
-- LBS_NOREDRAW constant
-- LBS_HASSTRINGS constant
-- LBS_OWNERDRAWFIXED constant
-- LBS_WANTKEYBOARDINPUT constant
-- LBS_STANDARD constant
-- LBS_MULTIPLESEL constant
-- LBS_OWNERDRAWVARIABLE constant
-- LBS_DISABLENOSCROLL constant
-- LBS_NODATA constant
-- list boxes, styles
-- LBS_EXTENDEDSEL constant
-- LBS_MULTICOLUMN constant
-- LBS_NOTIFY constant
-- LBS_USETABSTOPS constant
-- LBS_NOINTEGRALHEIGHT constant
+- LBS_NOSEL constant [MFC]
+- LBS_NOREDRAW constant [MFC]
+- LBS_HASSTRINGS constant [MFC]
+- LBS_OWNERDRAWFIXED constant [MFC]
+- LBS_WANTKEYBOARDINPUT constant [MFC]
+- LBS_STANDARD constant [MFC]
+- LBS_MULTIPLESEL constant [MFC]
+- LBS_OWNERDRAWVARIABLE constant [MFC]
+- LBS_DISABLENOSCROLL constant [MFC]
+- LBS_NODATA constant [MFC]
+- list boxes [MFC], styles
+- LBS_EXTENDEDSEL constant [MFC]
+- LBS_MULTICOLUMN constant [MFC]
+- LBS_NOTIFY constant [MFC]
+- LBS_USETABSTOPS constant [MFC]
+- LBS_NOINTEGRALHEIGHT constant [MFC]
 - LBS_SORT constant
 ms.assetid: 3f357b8d-9118-4f41-9e28-02ed92d1e88f
 caps.latest.revision: 12
@@ -64,51 +64,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 8e038e5cef50bd15df85c9d7f8b213b54ed03825
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cad7dce447e41b72116dc8317f7a05649cd34e76
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="list-box-styles"></a>Styles de zone de liste
--   **LBS_DISABLENOSCROLL** la zone de liste affiche une désactivé verticale barre de défilement lorsque la zone de liste ne contient pas suffisamment d’éléments pour faire défiler. Sans ce style, la barre de défilement est masquée lorsque la zone de liste ne contient pas assez d'éléments.  
+# <a name="list-box-styles"></a>List-Box Styles
+-   **LBS_DISABLENOSCROLL** The list box shows a disabled vertical scroll bar when the list box does not contain enough items to scroll. Without this style, the scroll bar is hidden when the list box does not contain enough items.  
   
--   **LBS_EXTENDEDSEL** l’utilisateur peut sélectionner plusieurs éléments à l’aide de la touche MAJ et la souris ou les combinaisons de touches spéciales.  
+-   **LBS_EXTENDEDSEL** The user can select multiple items using the SHIFT key and the mouse or special key combinations.  
   
--   **LBS_HASSTRINGS** spécifie une zone de liste owner-draw qui contient des éléments composés de chaînes. La zone de liste contient la mémoire et les pointeurs des chaînes afin que l'application puisse utiliser la fonction membre `GetText` pour récupérer le texte d'un élément particulier.  
+-   **LBS_HASSTRINGS** Specifies an owner-draw list box that contains items consisting of strings. The list box maintains the memory and pointers for the strings so the application can use the `GetText` member function to retrieve the text for a particular item.  
   
--   **LBS_MULTICOLUMN** spécifie une zone de liste multicolonne défilement horizontal. La fonction membre `SetColumnWidth` définit la largeur des colonnes.  
+-   **LBS_MULTICOLUMN** Specifies a multicolumn list box that is scrolled horizontally. The `SetColumnWidth` member function sets the width of the columns.  
   
--   **LBS_MULTIPLESEL** sélection de chaînes est modifiée chaque fois que l’utilisateur clique ou double-clique sur la chaîne. Plusieurs chaînes peuvent être sélectionnées.  
+-   **LBS_MULTIPLESEL** String selection is toggled each time the user clicks or double-clicks the string. Any number of strings can be selected.  
   
--   **LBS_NODATA** spécifie une zone de liste sans données. Spécifiez ce style lorsque le nombre d'éléments dans la zone de liste dépasse&1000;. Une zone de liste sans données doit également disposer du **LBS_OWNERDRAWFIXED** de style, mais ne doit pas avoir la **LBS_SORT** ou **LBS_HASSTRINGS** style.  
+-   **LBS_NODATA** Specifies a no-data list box. Specify this style when the count of items in the list box will exceed one thousand. A no-data list box must also have the **LBS_OWNERDRAWFIXED** style, but must not have the **LBS_SORT** or **LBS_HASSTRINGS** style.  
   
-     Une zone de liste sans données s'apparente à une zone de liste personnalisée par son propriétaire sauf qu'elle ne contient aucune chaîne ou donnée bitmap d'un élément. Les commandes d'ajout, d'insertion ou de suppression d'un élément ignorent toutes les données d'un élément donné ; les requêtes de recherche d'une chaîne dans la zone de liste échouent toujours. Le système envoie le message `WM_DRAWITEM` dans la fenêtre propriétaire lorsqu'un élément doit être dessiné. Le membre itemID de la structure `DRAWITEMSTRUCT` passée avec le message `WM_DRAWITEM` spécifie le numéro de ligne de l'élément à tracer. Une zone de liste sans données n'envoie pas de message `WM_DELETEITEM`.  
+     A no-data list box resembles an owner-drawn list box except that it contains no string or bitmap data for an item. Commands to add, insert, or delete an item always ignore any given item data; requests to find a string within the list box always fail. The system sends the `WM_DRAWITEM` message to the owner window when an item must be drawn. The itemID member of the `DRAWITEMSTRUCT` structure passed with the `WM_DRAWITEM` message specifies the line number of the item to be drawn. A no-data list box does not send a `WM_DELETEITEM` message.  
   
--   **LBS_NOINTEGRALHEIGHT** la taille de la zone de liste est exactement la taille spécifiée par l’application lors de la création de la zone de liste. Généralement, Windows redimensionne une zone de liste pour qu'elle n'affiche aucun élément de manière partielle.  
+-   **LBS_NOINTEGRALHEIGHT** The size of the list box is exactly the size specified by the application when it created the list box. Usually, Windows sizes a list box so that the list box does not display partial items.  
   
--   **LBS_NOREDRAW** affichage de la zone de liste n’est pas mis à jour lorsque des modifications sont apportées. Ce style peut être modifié à tout moment en envoyant un **WM_SETREDRAW** message.  
+-   **LBS_NOREDRAW** List-box display is not updated when changes are made. This style can be changed at any time by sending a **WM_SETREDRAW** message.  
   
--   **LBS_NOSEL** Spécifie que la zone de liste contient des éléments qui peuvent être consultés mais non sélectionnés.  
+-   **LBS_NOSEL** Specifies that the list box contains items that can be viewed but not selected.  
   
--   **LBS_NOTIFY** fenêtre parente reçoit un message d’entrée chaque fois que l’utilisateur clique ou double-clique sur une chaîne.  
+-   **LBS_NOTIFY** Parent window receives an input message whenever the user clicks or double-clicks a string.  
   
--   **LBS_OWNERDRAWFIXED** le propriétaire de la zone de liste est responsable du dessin de son contenu ; les éléments dans la zone de liste sont la même hauteur.  
+-   **LBS_OWNERDRAWFIXED** The owner of the list box is responsible for drawing its contents; the items in the list box are the same height.  
   
--   **LBS_OWNERDRAWVARIABLE** le propriétaire de la zone de liste est responsable du dessin de son contenu ; les éléments dans la zone de liste sont variables en hauteur.  
+-   **LBS_OWNERDRAWVARIABLE** The owner of the list box is responsible for drawing its contents; the items in the list box are variable in height.  
   
--   **LBS_SORT** chaînes dans la zone de liste sont triés par ordre alphabétique.  
+-   **LBS_SORT** Strings in the list box are sorted alphabetically.  
   
--   **LBS_STANDARD** chaînes dans la zone de liste sont triés par ordre alphabétique, et la fenêtre parente reçoit un message d’entrée chaque fois que l’utilisateur clique ou double-clique sur une chaîne. La zone de liste contient des bordures de chaque côté.  
+-   **LBS_STANDARD** Strings in the list box are sorted alphabetically, and the parent window receives an input message whenever the user clicks or double-clicks a string. The list box contains borders on all sides.  
   
--   **LBS_USETABSTOPS** permet à une zone de liste de reconnaître et développer des caractères de tabulation en dessinant ses chaînes. Les positions des onglets par défaut correspondent à 32 unités de boîte de dialogue. (L'unité de boîte de dialogue est une distance horizontale ou verticale. Une unité de boîte de dialogue horizontale est égale à un quart de l'unité de largeur de base de dialogue actuelle. Les unités de dialogue sont calculées en fonction de la hauteur et de la largeur de la police système actuelle. Le **GetDialogBaseUnits** fonction Windows retourne des unités de la boîte de dialogue actuelle en pixels.) Ce style ne doit pas être utilisé avec **LBS_OWNERDRAWFIXED**.  
+-   **LBS_USETABSTOPS** Allows a list box to recognize and expand tab characters when drawing its strings. The default tab positions are 32 dialog units. (A dialog unit is a horizontal or vertical distance. One horizontal dialog unit is equal to one-fourth of the current dialog base width unit. The dialog base units are computed based on the height and width of the current system font. The **GetDialogBaseUnits** Windows function returns the current dialog base units in pixels.) This style should not be used with **LBS_OWNERDRAWFIXED**.  
   
--   **LBS_WANTKEYBOARDINPUT** le propriétaire de la zone de liste reçoit `WM_VKEYTOITEM` ou `WM_CHARTOITEM` des messages chaque fois que l’utilisateur appuie sur une touche alors que la zone de liste a le focus. Cela permet à une application d'effectuer un traitement spécial sur l'entrée de clavier.  
+-   **LBS_WANTKEYBOARDINPUT** The owner of the list box receives `WM_VKEYTOITEM` or `WM_CHARTOITEM` messages whenever the user presses a key while the list box has input focus. This allows an application to perform special processing on the keyboard input.  
   
-## <a name="see-also"></a>Voir aussi  
- [Styles utilisés par MFC](../../mfc/reference/styles-used-by-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [Styles Used by MFC](../../mfc/reference/styles-used-by-mfc.md)   
  [CListBox::Create](../../mfc/reference/clistbox-class.md#create)   
- [Styles de zone de liste](http://msdn.microsoft.com/library/windows/desktop/bb775149)
+ [List Box Styles](http://msdn.microsoft.com/library/windows/desktop/bb775149)
 
 

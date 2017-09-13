@@ -1,34 +1,51 @@
 ---
-title: "Classes MFC pour la cr&#233;ation d&#39;applications clientes Internet | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes (C++), MFC"
-  - "applications Internet, MFC"
-  - "Internet (applications clientes), MFC"
-  - "MFC, classes WinInet"
-  - "classes WinInet, classes"
+title: MFC Classes for Creating Internet Client Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, WinInet classes
+- WinInet classes [MFC], classes
+- classes [MFC], MFC
+- Internet client applications [MFC], MFC
+- Internet applications [MFC], MFC
 ms.assetid: 67d34117-9839-4f4b-8bb8-0e4a9471c606
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Classes MFC pour la cr&#233;ation d&#39;applications clientes Internet
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4d1bf2c587c8a80547ee6793433f83a94945937e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-MFC fournit les classes suivantes et les fonctions globales pour écrire des applications clientes Internet.  La mise en retrait montre une classe est dérivée de la classe retrait au\-dessus de elle.  `CGopherFile` et `CHttpFile` dérivent de `CInternetFile`, par exemple.  Ces classes et fonctions globales sont déclarées dans AFXINET.H, sauf `CFileFind`, qui est déclaré dans. AFX.H.  
+---
+# <a name="mfc-classes-for-creating-internet-client-applications"></a>MFC Classes for Creating Internet Client Applications
+MFC provides the following classes and global functions for writing Internet client applications. Indentation indicates a class is derived from the unindented class above it. `CGopherFile` and `CHttpFile` derive from `CInternetFile`, for example. These classes and global functions are declared in AFXINET.H, except `CFileFind`, which is declared in AFX.H.  
   
-## Classes  
+## <a name="classes"></a>Classes  
   
 -   [CInternetSession](../mfc/reference/cinternetsession-class.md)  
   
@@ -56,15 +73,16 @@ MFC fournit les classes suivantes et les fonctions globales pour écrire des app
   
 -   [CInternetException](../mfc/reference/cinternetexception-class.md)  
   
-## fonctions globales  
+## <a name="global-functions"></a>Global Functions  
   
--   [AfxParseURL](../Topic/AfxParseURL.md)  
+-   [AfxParseURL](reference/internet-url-parsing-globals.md#afxparseurl)  
   
--   [AfxGetInternetHandleType](../Topic/AfxGetInternetHandleType.md)  
+-   [AfxGetInternetHandleType](reference/internet-url-parsing-globals.md#afxgetinternethandletype)  
   
--   [AfxThrowInternetException](../Topic/AfxThrowInternetException.md)  
+-   [AfxThrowInternetException](reference/internet-url-parsing-globals.md#afxthrowinternetexception)  
   
-## Voir aussi  
- [Extension Internet Win32 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)   
- [Composants requis pour les classes clientes Internet](../mfc/prerequisites-for-internet-client-classes.md)   
- [Écriture d'une application cliente Internet en utilisant des classes WinInet MFC](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+## <a name="see-also"></a>See Also  
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
+ [Prerequisites for Internet Client Classes](../mfc/prerequisites-for-internet-client-classes.md)   
+ [Writing an Internet Client Application Using MFC WinInet Classes](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+

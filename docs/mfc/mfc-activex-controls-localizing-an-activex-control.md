@@ -1,109 +1,127 @@
 ---
-title: "Contr&#244;les ActiveX MFC&#160;: localisation d&#39;un contr&#244;le ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LocaleID"
-  - "AfxOleRegisterTypeLib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LocaleID ambient (propriété)"
-  - "localisation, contrôles ActiveX"
-  - "LOCALIZE (exemple) (MFC)"
-  - "contrôles ActiveX MFC, localiser"
+title: 'MFC ActiveX Controls: Localizing an ActiveX Control | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LocaleID
+- AfxOleRegisterTypeLib
+dev_langs:
+- C++
+helpviewer_keywords:
+- localization, ActiveX controls
+- MFC ActiveX controls [MFC], localizing
+- LocaleID ambient property [MFC]
+- LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
 caps.latest.revision: 12
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Contr&#244;les ActiveX MFC&#160;: localisation d&#39;un contr&#244;le ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b223ad97ce18882a5333a4f5d07501709796f4f0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cet article décrit les procédures permettant de rechercher des interfaces de contrôle ActiveX.  
+---
+# <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX Controls: Localizing an ActiveX Control
+This article discusses procedures for localizing ActiveX control interfaces.  
   
- Si vous souhaitez faire tenir un contrôle ActiveX à un marché int, vous pouvez rechercher le contrôle.  Windows prend en charge plusieurs langues en plus de l'anglais par défaut, y compris l'Allemand, le Français, et le Suédois.  Cela peut présenter des problèmes pour le contrôle si l'interface est uniquement en anglais.  
+ If you want to adapt an ActiveX control to an international market, you may want to localize the control. Windows supports many languages in addition to the default English, including German, French, and Swedish. This can present problems for the control if its interface is in English only.  
   
- En général les contrôles ActiveX doivent toujours être basées sur les paramètres régionaux de la propriété ambiante de LocaleID.  Il y a trois manières pour effectuer cette opération :  
+ In general, ActiveX controls should always base their locale on the ambient LocaleID property. There are three ways to do this:  
   
--   Chargez les ressources, toujours à la demande, en fonction de la valeur actuelle de la propriété ambiante de LocaleID.  L'exemple de [LOCALISEZ](../top/visual-cpp-samples.md) ActiveX MFC utilise cette stratégie.  
+-   Load resources, always on demand, based on the current value of the ambient LocaleID property. The MFC ActiveX controls sample [LOCALIZE](../visual-cpp-samples.md) uses this strategy.  
   
--   Chargez les ressources lorsque le premier contrôle est cité, selon la propriété ambiante de LocaleID, et utilisez ces ressources pour toutes les autres instances.  Cet article explique cette stratégie.  
-  
-    > [!NOTE]
-    >  Cela ne fonctionne pas correctement dans certains cas, lorsque les instances ont des paramètres régionaux.  
-  
--   Utilisez la fonction de notification de **SurAmbiantChangé** pour charger dynamiquement les ressources pertinentes pour les paramètres régionaux du conteneur.  
+-   Load resources when the first control is instanced, based on the ambient LocaleID property, and use these resources for all other instances. This article demonstrates this strategy.  
   
     > [!NOTE]
-    >  Cela fonctionne pour le contrôle, mais la DLL d'exécution ne met pas à jour dynamiquement ses ressources propres lorsque la propriété ambiante de LocaleID change.  En outre, les DLL d'exécution pour les contrôles ActiveX utilisent les paramètres régionaux du thread pour déterminer les paramètres régionaux pour ses ressources.  
+    >  This will not work correctly in some cases, if future instances have different locales.  
   
- Le reste de cet article décrit deux stratégies localisantes.  La première stratégie [localise l'interface de la programmabilité de contrôle](#_core_localizing_your_control.92.s_programmability_interface) \(noms des propriétés, méthodes, et les événements\).  La deuxième stratégie [localise l'interface utilisateur du contrôle](#_core_localizing_the_control.92.s_user_interface), à l'aide de la propriété ambiante de LocaleID du conteneur.  Afin de voir l'emplacement du contrôle, consultez la rubrique ActiveX MFC avec l'exemple de [LOCALISEZ](../top/visual-cpp-samples.md).  
+-   Use the **OnAmbientChanged** notification function to dynamically load the proper resources for the container's locale.  
   
-##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> Rechercher l'interface de la programmabilité de contrôle  
- En recherchant l'interface de la programmabilité de contrôle \(l'interface utilisée par des programmeurs dans les applications qui utilisent votre contrôle\), vous devez créer une version modifiée du fichier .IDL de contrôle \(un script pour générer la bibliothèque de types de contrôle\) pour chaque langue que vous envisagez de prendre en charge.  Il s'agit du seul emplacement dont vous avez besoin pour rechercher les noms de propriété du contrôle.  
+    > [!NOTE]
+    >  This will work for the control, but the run-time DLL will not dynamically update its own resources when the ambient LocaleID property changes. In addition, run-time DLLs for ActiveX controls use the thread locale to determine the locale for its resources.  
   
- Lorsque vous développez un contrôle localisé, incluez l'ID de paramètres régionaux comme attribut au niveau de la bibliothèque de types.  Par exemple, si vous souhaitez fournir une bibliothèque de types des noms de propriété localisée par Français, effectuez une copie de la SAMPLE.IDL classer, ainsi appelez\- la SAMPLEFR.IDL.  Ajouter un attribut ID de paramètres régionaux au fichier \(ID de paramètres régionaux pour le Français est 0x040c\), comme suit :  
+ The rest of this article describes two localizing strategies. The first strategy [localizes the control's programmability interface](#_core_localizing_your_control.92.s_programmability_interface) (names of properties, methods, and events). The second strategy [localizes the control's user interface](#_core_localizing_the_control.92.s_user_interface), using the container's ambient LocaleID property. For a demonstration of control localization, see the MFC ActiveX controls sample [LOCALIZE](../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_AxLoc#1](../mfc/codesnippet/CPP/mfc-activex-controls-localizing-an-activex-control_1.idl)]  
+##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> Localizing the Control's Programmability Interface  
+ When localizing the control's programmability interface (the interface used by programmers writing applications that use your control), you must create a modified version of the control .IDL file (a script for building the control type library) for each language you intend to support. This is the only place you need to localize the control property names.  
   
- Modifiez les noms des propriétés dans SAMPLEFR.IDL en leurs équivalents français, puis utilisez MKTYPLIB.EXE pour produire la bibliothèque de types française, SAMPLEFR.TLB.  
+ When you develop a localized control, include the locale ID as an attribute at the type library level. For example, if you want to provide a type library with French localized property names, make a copy of your SAMPLE.IDL file, and call it SAMPLEFR.IDL. Add a locale ID attribute to the file (the locale ID for French is 0x040c), similar to the following:  
   
- Pour créer des bibliothèques de types traduites par plusieurs vous pouvez ajouter des fichiers situés de .IDL au projet et ils sont générés automatiquement.  
+ [!code-cpp[NVC_MFC_AxLoc#1](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_1.idl)]  
   
-#### Pour ajouter un fichier .IDL à votre projet de contrôle ActiveX MFC  
+ Change the property names in SAMPLEFR.IDL to their French equivalents, and then use MKTYPLIB.EXE to produce the French type library, SAMPLEFR.TLB.  
   
-1.  Avec un projet ouvert dans le menu de **Projet** , cliquez sur **Ajouter un élément existant**.  
+ To create multiple localized type libraries you can add any localized .IDL files to the project and they will be built automatically.  
   
-     La boîte de dialogue **Ajouter un élément existant** s'affiche.  
+#### <a name="to-add-an-idl-file-to-your-activex-control-project"></a>To add an .IDL file to your ActiveX control project  
   
-2.  Si nécessaire, sélectionnez l'unité et le répertoire à afficher.  
+1.  With your control project open, on the **Project** menu, click **Add Existing Item**.  
   
-3.  Dans la zone **Type de fichiers**, sélectionnez **Tous les fichiers \(\*.\*\)**.  
+     The **Add Existing Item** dialog box appears.  
   
-4.  Dans la zone de liste de fichiers, double\-cliquez sur le fichier .IDL que vous souhaitez insérer dans le projet.  
+2.  If necessary, select the drive and directory to view.  
   
-5.  Cliquez sur **Ouvrir** lorsque vous avez ajouté tous les fichiers nécessaires pour .IDL.  
+3.  In the **Files of Type** box, select **All Files (\*.\*)**.  
   
- Les fichiers ont été ajoutés au projet, ils sont générés lorsque le reste du projet est généré.  Les bibliothèques de types localisées se trouvent dans le répertoire du projet actuel du contrôle ActiveX.  
+4.  In the file list box, double-click the .IDL file you want to insert into the project.  
   
- Dans votre code, les noms des propriétés internes \(généralement en anglais\) sont toujours utilisés et ne sont jamais localisés.  Cela inclut la table de dispatch de vérification, l'échange de propriétés s'exécute, et votre code d'échange de données de page de propriétés.  
+5.  Click **Open** when you have added all necessary .IDL files.  
   
- Un seul fichier de bibliothèque de types \(.TLB\) peut être liée à des ressources du fichier d'audit de l'implémentation \(.OCX\).  C'est généralement la version avec \(en général en anglais\) les noms standardisés.  Pour fournir une version localisée de votre contrôle, vous devez fournir le .OCX \(qui est déjà liée à la version de la valeur par défaut .TLB\) et le .TLB pour les paramètres régionaux appropriés.  Cela signifie que le .OCX est nécessaire pour les versions en anglais, le .TLB correct est déjà liée à celui\-ci.  Pour les autres paramètres régionaux, la bibliothèque de types localisée doit être fournie avec le .OCX.  
+ Because the files have been added to the project, they will be built when the rest of the project is built. The localized type libraries are located in the current ActiveX control project directory.  
   
- Pour vous assurer que les clients du contrôle peuvent rechercher la bibliothèque de types localisée, enregistrez vos fichiers spécifiques aux paramètres régionaux de .TLB sous la section de typelib de Registre système Windows.  Le troisième paramètre \(normalement facultatif\) dans la fonction de [AfxOleRegisterTypeLib](../Topic/AfxOleRegisterTypeLib.md) est fourni à cet effet.  L'exemple suivant inscrit une bibliothèque de types française d'un contrôle ActiveX :  
+ Within your code, the internal property names (usually in English) are always used and are never localized. This includes the control dispatch map, the property exchange functions, and your property page data exchange code.  
   
- [!code-cpp[NVC_MFC_AxLoc#2](../mfc/codesnippet/CPP/mfc-activex-controls-localizing-an-activex-control_2.cpp)]  
+ Only one type library (.TLB) file may be bound into the resources of the control implementation (.OCX) file. This is usually the version with the standardized (typically, English) names. To ship a localized version of your control you need to ship the .OCX (which has already been bound to the default .TLB version) and the .TLB for the appropriate locale. This means that only the .OCX is needed for English versions, since the correct .TLB has already been bound to it. For other locales, the localized type library also must be shipped with the .OCX.  
   
- Lorsque l'audit est stocké, la fonction de `AfxOleRegisterTypeLib` recherche automatiquement le fichier spécifié de .TLB dans le même répertoire que le flux de contrôle et les stocke dans la base de données d'inscription de Windows.  Si le fichier de .TLB est introuvable, la fonction n'a aucun effet.  
+ To ensure that clients of your control can find the localized type library, register your locale-specific .TLB file(s) under the TypeLib section of the Windows system registry. The third parameter (normally optional) of the [AfxOleRegisterTypeLib](../mfc/reference/registering-ole-controls.md#afxoleregistertypelib) function is provided for this purpose. The following example registers a French type library for an ActiveX control:  
   
-##  <a name="_core_localizing_the_control.92.s_user_interface"></a> Rechercher l'interface utilisateur du contrôle  
- Pour rechercher l'interface utilisateur d'un contrôle, placez les ressources accessibles à l'utilisateur de tout le contrôle \(telles que les pages de propriétés et des messages d'erreur\) dans les DLL de ressource spécifiques aux langues.  Vous pouvez utiliser la propriété de ambiante LocaleID du conteneur pour sélectionner la DLL approprié pour les paramètres régionaux de l'utilisateur.  
+ [!code-cpp[NVC_MFC_AxLoc#2](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_2.cpp)]  
   
- L'exemple de code suivant illustre une approche pour localiser et de charger la DLL de ressource pour les paramètres régionaux spécifiques.  Cette fonction membre, appelée `GetLocalizedResourceHandle` pour cet exemple, peut être une fonction membre de la classe de contrôle ActiveX :  
+ When your control is registered, the `AfxOleRegisterTypeLib` function automatically looks for the specified .TLB file in the same directory as the control and registers it in the Windows registration database. If the .TLB file is not found, the function has no effect.  
   
- [!code-cpp[NVC_MFC_AxLoc#3](../mfc/codesnippet/CPP/mfc-activex-controls-localizing-an-activex-control_3.cpp)]  
+##  <a name="_core_localizing_the_control.92.s_user_interface"></a> Localizing the Control's User Interface  
+ To localize a control's user interface, place all of the control's user-visible resources (such as property pages and error messages) into language-specific resource DLLs. You then can use the container's ambient LocaleID property to select the appropriate DLL for the user's locale.  
   
- Notez que l'identificateur de sous\-langue peut être signé chaque cas de échec de l'instruction, pour fournir l'emplacement version spéciale.  Afin de voir cette fonction, consultez la fonction de `GetResourceHandle` dans l'exemple de [LOCALISEZ](../top/visual-cpp-samples.md)ActiveX MFC.  
+ The following code example demonstrates one approach to locate and load the resource DLL for a specific locale. This member function, called `GetLocalizedResourceHandle` for this example, can be a member function of your ActiveX control class:  
   
- Lorsque le premier de contrôle se charge dans un conteneur, il peut appeler [COleControl::AmbientLocaleID](../Topic/COleControl::AmbientLocaleID.md) pour extraire l'ID de paramètres régionaux  Le contrôle peut ensuite passer la valeur retournée de l'ID des paramètres régionaux à la fonction de `GetLocalizedResourceHandle`, qui charge la bibliothèque appropriée de ressources.  Le contrôle doit passer le descripteur obtenu, le cas échéant, à [AfxSetResourceHandle](../Topic/AfxSetResourceHandle.md):  
+ [!code-cpp[NVC_MFC_AxLoc#3](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_3.cpp)]  
   
- [!code-cpp[NVC_MFC_AxLoc#4](../mfc/codesnippet/CPP/mfc-activex-controls-localizing-an-activex-control_4.cpp)]  
+ Note that the sublanguage ID could be checked in each case of the switch statement, to provide more specialized localization. For a demonstration of this function, see the `GetResourceHandle` function in the MFC ActiveX controls sample [LOCALIZE](../visual-cpp-samples.md).  
   
- Recherchez l'exemple de code ci\-dessus dans une fonction membre du contrôle, tel qu'une substitution de [COleControl::SurEnsembleSiteClients](../Topic/COleControl::OnSetClientSite.md).  En outre, `m_hResDLL` doit être une variable membre de la classe de contrôle.  
+ When the control first loads itself into a container, it can call [COleControl::AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid) to retrieve the locale ID. The control can then pass the returned locale ID value to the `GetLocalizedResourceHandle` function, which loads the proper resource library. The control should pass the resulting handle, if any, to [AfxSetResourceHandle](../mfc/reference/application-information-and-management.md#afxsetresourcehandle):  
   
- Vous pouvez utiliser une logique similaire pour localiser la page des propriétés d'un contrôle.  Pour rechercher la page de propriétés, ajoutez l'exemple de code semblable au suivant dans le fichier d'implémentation de la page de propriétés \(dans une substitution de [COlePropertyPage::SurEnsemblePagesSites](../Topic/COlePropertyPage::OnSetPageSite.md)\) :  
+ [!code-cpp[NVC_MFC_AxLoc#4](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_4.cpp)]  
   
- [!code-cpp[NVC_MFC_AxLoc#5](../mfc/codesnippet/CPP/mfc-activex-controls-localizing-an-activex-control_5.cpp)]  
+ Place the code sample above into a member function of the control, such as an override of [COleControl::OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite). In addition, `m_hResDLL` should be a member variable of the control class.  
   
-## Voir aussi  
- [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
+ You can use similar logic for localizing a control's property page. To localize the property page, add code similar to the following sample to your property page's implementation file (in an override of [COlePropertyPage::OnSetPageSite](../mfc/reference/colepropertypage-class.md#onsetpagesite)):  
+  
+ [!code-cpp[NVC_MFC_AxLoc#5](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_5.cpp)]  
+  
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

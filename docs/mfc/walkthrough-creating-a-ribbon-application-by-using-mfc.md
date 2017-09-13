@@ -1,101 +1,120 @@
 ---
-title: "Proc&#233;dure pas &#224; pas&#160;: cr&#233;ation d&#39;une application de ruban &#224; l&#39;aide de MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "créer une application de ruban (MFC)"
-  - "application de ruban, création (MFC)"
+title: 'Walkthrough: Creating a Ribbon Application By Using MFC | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ribbon application, creating (MFC)
+- creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Proc&#233;dure pas &#224; pas&#160;: cr&#233;ation d&#39;une application de ruban &#224; l&#39;aide de MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd9aff0bf52100207e2df0504226c991d0f66614
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cette procédure pas à pas vous montre comment utiliser l'**Assistant Application MFC** pour créer une application comportant un ruban par défaut.  Vous pourrez ensuite développer le ruban en ajoutant une catégorie de ruban **Personnalisée** qui a un volet de ruban **Favoris** et en ajoutant ensuite quelques unes des commandes les plus utilisées au volet.  
+---
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Walkthrough: Creating a Ribbon Application By Using MFC
+This walkthrough shows how to use the **MFC Application Wizard** to create an application that has a ribbon by default. You can then expand the ribbon by adding a **Custom** ribbon category that has a **Favorites** ribbon panel, and then adding some frequently used commands to the panel.  
   
-## Composants requis  
- Cette procédure part du principe que vous avez défini [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] pour utiliser l'option **Paramètres de développement généraux**.  Si vous utilisez des paramètres différents, certains éléments de l'interface utilisateur qui sont référencés dans les instructions suivantes peuvent ne pas s'afficher.  Pour plus d'informations sur la modification des paramètres, consultez [How to: Reset Your Settings](http://msdn.microsoft.com/fr-fr/c95c51be-e609-4769-abba-65e6beedec76).  
+## <a name="prerequisites"></a>Prerequisites  
+ This walkthrough assumes that you have set [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] to use **General Development Settings**. If you are using different settings, some of the user interface (UI) elements that are referenced in the following instructions might not be displayed. For information about how to change settings, see [How to: Reset Your Settings](http://msdn.microsoft.com/en-us/c95c51be-e609-4769-abba-65e6beedec76).  
   
-### Pour créer une application MFC comportant un ruban  
+### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>To create an MFC application that has a ribbon  
   
-1.  Utilisez l'**Assistant Application MFC** pour créer une application MFC comportant un ruban.  Pour exécuter l'Assistant, dans le menu **Fichier**, pointez sur **Nouveau**, puis cliquez sur **Projet**.  
+1.  Use the **MFC Application Wizard** to create an MFC application that has a ribbon. To run the wizard, on the **File** menu, point to **New**, and then click **Project**.  
   
-2.  Dans la boîte de dialogue **Nouveau projet**, sous **Modèles installés**, ouvrez le nœud **Visual C\+\+**, sélectionnez **MFC**, puis sélectionnez **Application MFC**.  Tapez un nom de projet, par exemple, `MFCRibbonApp`, puis cliquez sur **OK**.  
+2.  In the **New Project** dialog box, expand the **Visual C++** node under **Installed Templates**, select **MFC**, and then select **MFC Application**. Type a name for the project, for example, `MFCRibbonApp`, and then click **OK**.  
   
-3.  Sur la première page de l'**Assistant Application MFC**, cliquez sur **Suivant**.  
+3.  On the first page of the **MFC Application Wizard**, click **Next**.  
   
-4.  Sur la page **Type d'application**, sous **Style visuel et couleurs**, sélectionnez **Office 2007 \(Thème blue\)**.  Laissez les valeurs des autres paramètres inchangées.  Cliquez sur **Suivant**.  
+4.  On the **Application Type** page, under **Visual style and colors**, select **Office 2007 (Blue theme)**. Leave the other settings as they are. Click **Next**.  
   
-5.  Sur la page **Prise en charge des documents composés**, vérifiez que **Aucun** est sélectionné, puis cliquez sur **Suivant**.  
+5.  On the **Compound Document Support** page, make sure that **None** is selected and then click **Next**.  
   
-6.  Sur la page **Propriétés du modèle de document**, dans la zone **Extension de fichier**, tapez une extension de nom de fichier pour les documents que cette application crée, par exemple, `mfcrbnapp`.  Cliquez sur **Suivant**.  
+6.  On the **Document Template Properties** page, in the **File extension** box, type a file name extension for documents that this application creates, for example, `mfcrbnapp`. Click **Next**.  
   
-7.  Sur la page **Prise en charge des bases de données**, vérifiez que **Aucun** est sélectionné, puis cliquez sur **Suivant**.  
+7.  On the **Database Support** page, make sure that **None** is selected and then click **Next**.  
   
-8.  Sur la page **Fonctionnalités de l'interface utilisateur**, vérifiez que **Utiliser un ruban** est sélectionné.  Cliquez sur **Suivant**.  
+8.  On the **User Interface Features** page, make sure that **Use a ribbon** is selected. Click **Next**.  
   
-9. Par défaut, l'**Assistant Application MFC** ajoute la prise en charge de plusieurs volets d'ancrage.  Cette procédure pas à pas ne concernant que le ruban, vous pouvez supprimer ces options de l'application.  Sur la page **Fonctionnalités avancées**, effacez toutes les options.  Cliquez sur **Suivant**.  
+9. By default, the **MFC Application Wizard** adds support for several docking panes. Because this walkthrough just teaches about the ribbon, you can remove these options from the application. On the **Advanced Features** page, clear all options. Click **Next**.  
   
-10. Sur la page **Classes générées**, cliquez sur **Terminer** pour créer l'application MFC.  
+10. On the **Generated Classes** page, click **Finish** to create the MFC application.  
   
-11. Pour vérifier que l'application a été créée avec succès, générez\-la et exécutez\-la.  Pour générer l'application, dans le menu **Générer**, cliquez sur **Générer la solution**.  Si l'application est générée avec succès, exécutez\-la en cliquant sur **Démarrer le débogage** dans le menu **Déboguer**.  
+11. To verify that the application was created successfully, build it and run it. To build the application, on the **Build** menu, click **Build Solution**. If the application builds successfully, run it by clicking **Start Debugging** on the **Debug** menu.  
   
-     L'Assistant crée automatiquement un ruban comportant une catégorie de ruban nommée **Accueil**.  Ce ruban contient trois volets de ruban, nommés **Presse\-papiers**, **Vue** et **Fenêtre**.  
+     The wizard automatically creates a ribbon that has one ribbon category that is named **Home**. This ribbon contains three ribbon panels, which are named **Clipboard**, **View**, and **Window**.  
   
-### Pour ajouter une catégorie et un volet au ruban  
+### <a name="to-add-a-category-and-panel-to-the-ribbon"></a>To add a category and panel to the ribbon  
   
-1.  Pour ouvrir la ressource de ruban que l'Assistant a créé, dans le menu **Vue**, pointez vers **Autres fenêtres**, puis cliquez sur **Affichage des ressources**.  Dans **Affichage des ressources**, cliquez sur **Ruban**, puis double\-cliquez sur **IDR\_RIBBON**.  
+1.  To open the ribbon resource that the wizard created, on the **View** menu, point to **Other Windows** and then click **Resource View**. In **Resource View**, click **Ribbon** and then double-click **IDR_RIBBON**.  
   
-2.  Commencez par ajouter une catégorie personnalisée au ruban en double\-cliquant sur **Catégorie** dans la **Boîte à outils**.  
+2.  First, add a custom category to the ribbon by double-clicking **Category** in the **Toolbox**.  
   
-     A catégorie comportant la légende **Category1** est créée.  Par défaut, la catégorie contient un seul volet.  
+     A category that has the caption **Category1** is created. By default, the category contains one panel.  
   
-     Cliquez avec le bouton droit sur **Category1**, puis cliquez sur **Propriétés**.  Dans la fenêtre **Propriétés**, remplacez la **Légende** par `Personnalisé`.  
+     Right-click **Category1** and then click **Properties**. In the **Properties** window, change **Caption** to `Custom`.  
   
-     Les propriétés **Large images** et **Small Images** spécifient les bitmaps qui sont utilisées comme icônes pour les éléments du ruban dans cette catégorie.  La création de bitmaps personnalisées n'entrant pas dans le cadre de cette procédure, réutilisez les bitmaps créées par l'Assistant.  Les bitmaps de petite taille mesurent 16 pixels par 16 pixels.  Pour les petites images, utilisez les bitmaps qui sont accessibles par l'ID de ressource IDB\_FILESMALL.  Les bitmaps de grande taille mesurent 32 pixels par 32 pixels.  Pour les grandes images, utilisez les bitmaps qui sont accessibles par l'ID de ressource IDB\_FILELARGE.  
+     The **Large Images** and **Small Images** properties specify the bitmaps that are used as icons for the ribbon elements in this category. Because creating custom bitmaps is beyond the scope of this walkthrough, just reuse the bitmaps that were created by the wizard. Small bitmaps are 16 pixels by 16 pixels. For small images, use the bitmaps that are accessed by the IDB_FILESMALL resource ID. Large bitmaps are 32 pixels by 32 pixels. For large images, use the bitmaps that are accessed by the IDB_FILELARGE resource ID.  
   
     > [!NOTE]
-    >  Sur les écrans HDPI \(high dots per inch\), les versions HDPI des images sont automatiquement utilisées.  
+    >  On high dots per inch (HDPI) displays, the HDPI versions of the images are automatically used.  
   
-3.  Il vous appartient maintenant de personnaliser le volet.  Les volets sont utilisés pour regrouper des éléments qui sont liés de façon logique les uns aux autres.  Par exemple, sur l'onglet **Accueil** de cette application, les commandes **Couper**, **Copier** et **Coller** se trouvent toutes sur le volet **Presse\-papiers**.  Pour personnaliser le volet, cliquez avec le bouton droit sur **Panel1**, puis cliquez sur **Propriétés**.  Dans la fenêtre **Propriétés**, remplacez la **Légende** par `Favoris`.  
+3.  Next, customize the panel. Panels are used to group items that are logically related to one another. For example, on the **Home** tab of this application, the **Cut**, **Copy**, and **Paste** commands are all located on the **Clipboard** panel. To customize the panel, right-click **Panel1** and then click **Properties**. In the **Properties** window, change **Caption** to `Favorites`.  
   
-     Vous pouvez spécifiez l'**index d'image** du volet.  Ce nombre spécifie l'icône qui est affichée si le volet du ruban est ajouté à la **barre d'outils Accès rapide**.  L'icône n'est pas affichée sur le volet du ruban.  
+     You can specify the **Image Index** for the panel. This number specifies the icon that is displayed if the ribbon panel is added to the **Quick Access Toolbar**. The icon is not displayed on the ribbon panel itself.  
   
-4.  Pour vérifier que le volet et la catégorie de ruban ont été correctement créés, affichez un aperçu du contrôle de ruban.  Dans la **barre d'outils de l'Éditeur Ribbon**, cliquez sur le bouton **Ruban de test**.  Un onglet **Personnalisé** et un volet **Favoris** doivent être affichés sur le ruban.  
+4.  To verify that the ribbon category and panel were created successfully, preview the ribbon control. On the **Ribbon Editor Toolbar**, click the **Test Ribbon** button. A **Custom** tab and **Favorites** panel should be displayed on the ribbon.  
   
-### Pour ajouter des éléments aux volets de ruban  
+### <a name="to-add-elements-to-the-ribbon-panels"></a>To add elements to the ribbon panels  
   
-1.  Pour ajouter des éléments au volet que vous avez créé lors de la procédure précédente, faites glisser les contrôles de la section **Éditeur Ribbon** de la **Boîte à outils** vers le volet dans le mode de conception.  
+1.  To add elements to the panel that you created in the previous procedure, drag controls from the **Ribbon Editor** section of the **Toolbox** to the panel in the design view.  
   
-2.  Tout d'abord, ajoutez un bouton **Imprimer**.  Le bouton **Imprimer** comporte un sous\-menu qui contient une commande **Impression Rapide** qui imprime en utilisant l'imprimante par défaut.  Ces deux commandes sont déjà définies pour cette application.  Elles se trouvent dans le menu de l'application.  
+2.  First, add a **Print** button. The **Print** button will have a submenu that contains a **Quick Print** command that prints by using the default printer. Both of these commands are already defined for this application. They are located on the application menu.  
   
-     Pour créer le bouton **Imprimer**, faites glisser un outil Bouton vers le volet.  
+     To create the **Print** button, drag a Button tool to the panel.  
   
-     Dans la fenêtre **Propriétés**, remplacez la propriété **ID** par **ID\_FILE\_PRINT**, qui doit déjà être définie.  Remplacez la **Légende** par `Imprimer`.  Modifier **Image Index** en affectant la valeur `4`.  
+     In the **Properties** window, change the **ID** property to **ID_FILE_PRINT**, which should already be defined. Change **Caption** to `Print`. Change **Image Index** to `4`.  
   
-     Pour créer le bouton **Impression Rapide**, cliquez sur la colonne Valeur de propriété en regard de l'option **Éléments de menu**, puis cliquez sur les points de suspension \(**...**\).  Dans l'**Éditeur d'éléments**, cliquez sur le bouton **Ajouter** sans étiquette pour créer un élément de menu.  Dans la fenêtre **Propriétés**, remplacez **Légende** par `Impression Rapide`, **ID** par `ID_FILE_PRINT_DIRECT`, et affectez à **Image** la valeur `5`.  La propriété de l'image spécifie l'icône Impression rapide dans la ressource de bitmap IDB\_FILESMALL.  
+     To create the **Quick Print** button, click the property value column next to **Menu Items**, and then click the ellipsis (**...**). In the **Items Editor**, click the unlabeled **Add** button to create a menu item. In the **Properties** window, change **Caption** to `Quick Print`, **ID** to `ID_FILE_PRINT_DIRECT`, and **Image** to `5`. The image property specifies the Quick Print icon in the IDB_FILESMALL bitmap resource.  
   
-3.  Pour vérifier que les boutons ont été ajoutés au volet du ruban, générez l'application et exécutez\-la.  Pour générer l'application, dans le menu **Générer**, cliquez sur **Générer la solution**.  Si l'application est générée avec succès, exécutez\-la en cliquant sur le bouton **Démarrer le débogage** dans le menu **Déboguer**.  Le bouton **Imprimer** et la zone de liste déroulante sur le volet **Favoris** de l'onglet **Personnalisé** sur le ruban doivent être affichés.  
+3.  To verify that the buttons were added to the ribbon panel, build the application and run it. To build the application, on the **Build** menu, click **Build Solution**. If the application builds successfully, run the application by clicking **Start Debugging** on the **Debug** menu. The **Print** button and the combo box on the **Favorites** panel on the **Custom** tab on the ribbon should be displayed.  
   
-## Étapes suivantes  
- [Comment : personnaliser la barre d'outils Accès rapide](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+## <a name="next-steps"></a>Next Steps  
+ [How to: Customize the Quick Access Toolbar](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
- [Comment : personnaliser le bouton Application](../mfc/how-to-customize-the-application-button.md)  
+ [How to: Customize the Application Button](../mfc/how-to-customize-the-application-button.md)  
   
- Pour consulter des exemples de bout en bout, reportez\-vous à [Exemples \(MFC Feature Pack\)](../top/visual-cpp-samples.md).  
+ For end-to-end samples, see [Samples (MFC Feature Pack)](../visual-cpp-samples.md).  
   
-## Voir aussi  
- [procédures pas à pas](../mfc/walkthroughs-mfc.md)   
- [Exemples \(MFC Feature Pack\)](../top/visual-cpp-samples.md)
+## <a name="see-also"></a>See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)   
+ [Samples (MFC Feature Pack)](../visual-cpp-samples.md)
+
+

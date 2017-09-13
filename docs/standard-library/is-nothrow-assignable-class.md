@@ -1,5 +1,5 @@
 ---
-title: is_nothrow_assignable, classe | Microsoft Docs
+title: is_nothrow_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- is_nothrow_assignable
 - type_traits/std::is_nothrow_assignable
 dev_langs:
 - C++
@@ -35,38 +34,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8f7cfa4eafda6061e503b5b8495d64c29a19eda8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e9184758ec0ecd094975cf7edcb7266427cca225
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isnothrowassignable-class"></a>is_nothrow_assignable, classe
-Teste si une valeur de type `From` peut être assignée au type `To` et si l’assignation est connue comme ne levant pas d’exception.  
+# <a name="isnothrowassignable-class"></a>is_nothrow_assignable Class
+Tests whether a value of `From` type can be assigned to `To` type and the assignment is known not to throw.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class To, class From>  
 struct is_nothrow_assignable;
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- Pour  
- Type de l'objet qui reçoit l'assignation.  
+#### <a name="parameters"></a>Parameters  
+ To  
+ The type of the object that receives the assignment.  
   
  From  
- Type de l'objet qui fournit la valeur.  
+ The type of the object that provides the value.  
   
-## <a name="remarks"></a>Notes  
- L’expression `declval<To>() = declval<From>()` doit être bien formée et le compilateur doit savoir qu’elle ne lève pas d’exception. `From` et `To` doivent tous deux être des types complets, `void`, ou des tableaux de limite inconnue.  
+## <a name="remarks"></a>Remarks  
+ The expression `declval<To>() = declval<From>()` must be well-formed and must be known to the compiler not to throw. Both `From` and `To` must be complete types, `void`, or arrays of unknown bound.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

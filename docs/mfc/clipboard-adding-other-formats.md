@@ -1,58 +1,76 @@
 ---
-title: "Presse-papiers&#160;: ajout d&#39;autres formats | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Presse-papiers, formats"
-  - "formats de données du Presse-papiers personnalisés"
-  - "formats personnalisés"
-  - "formats personnalisés, placer sur le Presse-papiers"
-  - "formats (C++), Presse-papiers"
-  - "inscrire des formats de données du Presse-papiers personnalisés"
+title: 'Clipboard: Adding Other Formats | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- formats [MFC], Clipboard
+- Clipboard, formats
+- custom formats, placing on Clipboard
+- custom formats
+- registering custom Clipboard data formats
+- custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Presse-papiers&#160;: ajout d&#39;autres formats
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0df2fcfdc762b7e47ffc051a257b9406ba2cc48a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cette rubrique explique comment développer la liste des formats pris en charge, notamment pour la prise en charge de OLE.  La rubrique [Presse\-papiers : Copier et coller des données](../mfc/clipboard-copying-and-pasting-data.md) décrit l'implémentation minimale nécessaire pour prendre en charge la copie et le collage depuis le presse\-papiers.  Si c'est tout ce que vous implémentez, les seuls formats placés dans le presse\-papiers sont `CF_METAFILEPICT`, **CF\_EMBEDSOURCE**, **CF\_OBJECTDESCRIPTOR**, et éventuellement `CF_LINKSOURCE`.  La plupart des applications ont besoin de plus de formats dans le presse\-papiers que ces trois.  
+---
+# <a name="clipboard-adding-other-formats"></a>Clipboard: Adding Other Formats
+This topic explains how to expand the list of supported formats, particularly for OLE support. The topic [Clipboard: Copying and Pasting Data](../mfc/clipboard-copying-and-pasting-data.md) describes the minimum implementation necessary to support copying and pasting from the Clipboard. If this is all you implement, the only formats placed on the Clipboard are `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**, and possibly `CF_LINKSOURCE`. Most applications will need more formats on the Clipboard than these three.  
   
-##  <a name="_core_registering_custom_formats"></a> Enregistrer des formats personnalisés  
- Pour créer vos propres formats personnalisés, suivez la même procédure que vous utiliseriez en enregistrant un format dans le presse\-papiers personnalisé : passez le nom du format à la fonction **RegisterClipboardFormat** et utilisez la valeur de retour comme ID de format  
+##  <a name="_core_registering_custom_formats"></a> Registering Custom Formats  
+ To create your own custom formats, follow the same procedure you would use when registering any custom Clipboard format: pass the name of the format to the **RegisterClipboardFormat** function and use its return value as the format ID.  
   
-##  <a name="_core_placing_formats_on_the_clipboard"></a> Placer des formats dans le presse\-papiers  
- Pour ajouter des formats à ceux placés dans le presse\-papiers, vous devez substituer la fonction `OnGetClipboardData` dans la classe que vous avez dérivée `COleClientItem` ou `COleServerItem` \(selon que les données à copier sont natives ou non\).  Dans cette fonction, vous devez utiliser la procédure suivante.  
+##  <a name="_core_placing_formats_on_the_clipboard"></a> Placing Formats on the Clipboard  
+ To add more formats to those placed on the Clipboard, you must override the `OnGetClipboardData` function in the class you derived from either `COleClientItem` or `COleServerItem` (depending on whether the data to be copied is native). In this function, you should use the following procedure.  
   
-#### Pour placer des formats dans le presse\-papiers  
+#### <a name="to-place-formats-on-the-clipboard"></a>To place formats on the Clipboard  
   
-1.  Créez un objet `COleDataSource`.  
+1.  Create a `COleDataSource` object.  
   
-2.  Passez cette source de données à une fonction qui ajoute les formats de données natifs à la liste des formats pris en charge en appelant `COleDataSource::CacheGlobalData`.  
+2.  Pass this data source to a function that adds your native data formats to the list of supported formats by calling `COleDataSource::CacheGlobalData`.  
   
-3.  Ajoutez des formats standard en appelant `COleDataSource::CacheGlobalData` pour chaque format standard que vous voulez prendre en charge.  
+3.  Add standard formats by calling `COleDataSource::CacheGlobalData` for each standard format you want to support.  
   
- Cette technique est utilisée dans le programme d'exemple OLE MFC [HIERSVR](../top/visual-cpp-samples.md) \(examinez la fonction membre `OnGetClipboardData` de la classe **CServerItem** \).  La seule différence dans cet exemple est que l'étape trois étape n'est pas implémentée car HIERSVR n'accepte pas d'autres formats standard.  
+ This technique is used in the MFC OLE sample program [HIERSVR](../visual-cpp-samples.md) (examine the `OnGetClipboardData` member function of the **CServerItem** class). The only difference in this sample is that step three is not implemented because HIERSVR supports no other standard formats.  
   
-### Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Objets OLE de données et sources de données et transfert de données uniforme](../mfc/data-objects-and-data-sources-ole.md)  
+-   [OLE data objects and data sources and uniform data transfer](../mfc/data-objects-and-data-sources-ole.md)  
   
--   [OLE \(glisser\-déplacer\)](../mfc/drag-and-drop-ole.md)  
+-   [OLE drag and drop](../mfc/drag-and-drop-ole.md)  
   
 -   [OLE](../mfc/ole-background.md)  
   
-## Voir aussi  
- [Presse\-papiers : utilisation du mécanisme de Presse\-papiers OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard: Using the OLE Clipboard Mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+

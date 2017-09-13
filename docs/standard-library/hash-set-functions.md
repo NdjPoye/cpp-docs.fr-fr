@@ -1,5 +1,5 @@
 ---
-title: '&lt;hash_set&gt;, fonctions | Microsoft Docs'
+title: '&lt;hash_set&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
 caps.latest.revision: 7
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2743e67d8077cdf75b51a3dce914ced0894a3392
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cb98cfbaa2716569df75913af054f4d764dc11df
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lthashsetgt-functions"></a>&lt;hash_set&gt;, fonctions
+# <a name="lthashsetgt-functions"></a>&lt;hash_set&gt; functions
 |||  
 |-|-|  
 |[swap](#swap)|[swap (hash_multiset)](#swap_hash_multiset)|  
@@ -27,9 +27,9 @@ ms.lasthandoff: 04/29/2017
 ##  <a name="swap"></a>  swap  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_set, classe](../standard-library/unordered-set-class.md).  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- Échange les éléments de deux hash_sets.  
+ Exchanges the elements of two hash_sets.  
   
 ```
 void swap(
@@ -37,56 +37,56 @@ void swap(
     hash_set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- hash_set qui fournit les éléments à échanger ou hash_set dont les éléments doivent être échangés avec ceux du hash_set `left`.  
+ The hash_set providing the elements to be swapped, or the hash_set whose elements are to be exchanged with those of the hash_set `left`.  
   
  `left`  
- hash_set dont les éléments doivent être échangés avec ceux du hash_set `right`.  
+ The hash_set whose elements are to be exchanged with those of the hash_set `right`.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle `swap` est un algorithme spécialisé sur la classe de conteneur hash_set pour exécuter la fonction membre `left``.`[swap](../standard-library/hash-set-class.md#swap)( `right`). Il s’agit d’une instance de l’ordonnancement partiel des modèles de fonctions par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle  
+### <a name="remarks"></a>Remarks  
+ The `swap` template function is an algorithm specialized on the container class hash_set to execute the member function `left.`[swap](../standard-library/hash-set-class.md#swap)( `right`). This is an instance of the partial ordering of function templates by the compiler. When template functions are overloaded in such a way that the match of the template with the function call is not unique, then the compiler will select the most specialized version of the template function. The general version of the template function  
   
  **template \<class T> void swap(T&, T&),**  
   
- dans l’algorithme de classe fonctionne par assignation et il s’agit d’une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide car elle peut fonctionner avec la représentation interne de la classe conteneur.  
+ in the algorithm class works by assignment and is a slow operation. The specialized version in each container is much faster as it can work with the internal representation of the container class.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
-  Pour obtenir un exemple qui utilise la version de modèle de `swap`, consultez l’exemple de code de la classe membre [hash_set::swap](../standard-library/hash-set-class.md#swap).  
+### <a name="example"></a>Example  
+  See the code example for the member class [hash_set::swap](../standard-library/hash-set-class.md#swap) for an example that uses the template version of `swap`.  
   
 ##  <a name="swap_hash_multiset"></a>  swap (hash_multiset)  
   
 > [!NOTE]
->  Cette API méthode est obsolète. L’alternative est [unordered_set, classe](../standard-library/unordered-set-class.md).  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- Échange les éléments de deux hash_multisets.  
+ Exchanges the elements of two hash_multisets.  
   
 ```
 void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- hash_multiset qui fournit les éléments à échanger ou hash_multiset dont les éléments doivent être échangés avec ceux du hash_multiset `left`.  
+ The hash_multiset providing the elements to be swapped, or the hash_multiset whose elements are to be exchanged with those of the hash_multiset `left`.  
   
  `left`  
- hash_multiset dont les éléments doivent être échangés avec ceux du hash_multiset `right`.  
+ The hash_multiset whose elements are to be exchanged with those of the hash_multiset `right`.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle `swap` est un algorithme spécialisé sur la classe de conteneur hash_multiset pour exécuter la fonction membre `left``.`[swap](../standard-library/hash-multiset-class.md#swap)( `right`). Il s’agit d’une instance de l’ordonnancement partiel des modèles de fonctions par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle  
+### <a name="remarks"></a>Remarks  
+ The `swap` template function is an algorithm specialized on the container class hash_multiset to execute the member function `left.`[swap](../standard-library/hash-multiset-class.md#swap)( `right`). This is an instance of the partial ordering of function templates by the compiler. When template functions are overloaded in such a way that the match of the template with the function call is not unique, then the compiler will select the most specialized version of the template function. The general version of the template function  
   
  **template \<class T> void swap(T&, T&),**  
   
- dans l’algorithme de classe fonctionne par assignation et il s’agit d’une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide car elle peut fonctionner avec la représentation interne de la classe conteneur.  
+ in the algorithm class works by assignment and is a slow operation. The specialized version in each container is much faster as it can work with the internal representation of the container class.  
   
- Dans Visual C++ .NET 2003, les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set>](../standard-library/hash-set.md) ne sont plus dans l’espace de noms std. Ils ont été transférés dans l’espace de noms stdext. Pour plus d’informations, consultez [stdext, espace de noms](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>Exemple  
-  Pour obtenir un exemple qui utilise la version de modèle de `swap`, consultez l’exemple de code de la classe membre [hash_multiset::swap](../standard-library/hash-multiset-class.md#swap).  
+### <a name="example"></a>Example  
+  See the code example for the member class [hash_multiset::swap](../standard-library/hash-multiset-class.md#swap) for an example that uses the template version of `swap`.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<hash_set>](../standard-library/hash-set.md)
 
 

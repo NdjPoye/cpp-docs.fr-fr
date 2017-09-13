@@ -1,45 +1,63 @@
 ---
-title: "Classes li&#233;es &#224; OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes ActiveX (C++)"
-  - "OLE (C++), classes"
-  - "OLE (classes) (C++)"
+title: OLE-Related Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- OLE classes [MFC]
+- OLE [MFC], classes
 ms.assetid: 2135cf54-1d9d-4e0e-91b4-943b3440effa
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Classes li&#233;es &#224; OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 76f496ed2a4f2587ce2773ff7d244c1ed7f2485d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Ces classes fournissent plusieurs services, allant des exceptions aux entrées et sorties de fichier.  
+---
+# <a name="ole-related-classes"></a>OLE-Related Classes
+These classes provide a number of different services, ranging from exceptions to file input and output.  
   
  [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)  
- Utilisé pour créer des éléments lorsque c'est demandé par d'autres conteneurs.  Cette classe sert de classe de base pour des types de fabriques, y compris `COleTemplateServer`.  
+ Used to create items when requested from other containers. This class serves as the base class for more specific types of factories, including `COleTemplateServer`.  
   
  [COleMessageFilter](../mfc/reference/colemessagefilter-class.md)  
- Sert à gérer la concurrence avec des appels de procédure distante légers \(LRPC\) OLE.  
+ Used to manage concurrency with OLE Lightweight Remote Procedure Calls (LRPC).  
   
  [COleStreamFile](../mfc/reference/colestreamfile-class.md)  
- Utilise l'interface COM `IStream` pour d'accéder aux fichiers `CFile` composites.  Cette classe \(dérivée de `CFile`\) permet à la sérialisation MFC d'utiliser le stockage structuré OLE.  
+ Uses the COM `IStream` interface to provide `CFile` access to compound files. This class (derived from `CFile`) enables MFC serialization to use OLE structured storage.  
   
  [CRectTracker](../mfc/reference/crecttracker-class.md)  
- Utilisé pour permettre déplacer, redimensionner, et réorientater les éléments sur place.  
+ Used to allow moving, resizing, and reorientation of in-place items.  
   
-## Voir aussi  
- [Vue d'ensemble des classes](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

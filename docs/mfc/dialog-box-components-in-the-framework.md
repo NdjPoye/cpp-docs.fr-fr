@@ -1,42 +1,60 @@
 ---
-title: "Composants de bo&#238;te de dialogue dans le Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes de boîte de dialogue, composants de boîte de dialogue"
-  - "modèles de boîte de dialogue, infrastructure MFC"
-  - "boîtes de dialogue MFC, À propos des boîtes de dialogue MFC"
-  - "boîtes de dialogue MFC, créer"
-  - "boîtes de dialogue MFC, ressource de boîte de dialogue"
+title: Dialog-Box Components in the Framework | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], creating
+- dialog classes [MFC], dialog box components
+- MFC dialog boxes [MFC], about MFC dialog boxes
+- dialog templates [MFC], MFC framework
+- MFC dialog boxes [MFC], dialog resource
 ms.assetid: 592db160-0a8a-49be-ac72-ead278aca53f
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Composants de bo&#238;te de dialogue dans le Framework
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: febab670bf86f87701da0d6ea23784fa56979137
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Dans l'infrastructure MFC, une boîte de dialogue contient deux composants :  
+---
+# <a name="dialog-box-components-in-the-framework"></a>Dialog-Box Components in the Framework
+In the MFC framework, a dialog box has two components:  
   
--   Une ressource modèle de la boîte de dialogue qui spécifie les commandes de la boîte de dialogue et leur position.  
+-   A dialog-template resource that specifies the dialog box's controls and their placement.  
   
-     La ressource de la boîte de dialogue fournit un modèle de la boîte de dialogue de windows crée la fenêtre de dialogue et l'affiche.  Le modèle spécifie les caractéristiques de la boîte de dialogue, notamment sa taille, emplacement, style, les types et les positions des contrôles de la boîte de dialogue.  Vous utiliserez généralement un modèle de la boîte de dialogue enregistré en tant que ressource, mais vous pouvez également créer votre propre modèle en mémoire.  
+     The dialog resource stores a dialog template from which Windows creates the dialog window and displays it. The template specifies the dialog box's characteristics, including its size, location, style, and the types and positions of the dialog box's controls. You will usually use a dialog template stored as a resource, but you can also create your own template in memory.  
   
--   Une classe de la boîte de dialogue, dérivée de [CDialog](../mfc/reference/cdialog-class.md), pour fournir une interface de programmation pour gérer la boîte de dialogue.  
+-   A dialog class, derived from [CDialog](../mfc/reference/cdialog-class.md), to provide a programmatic interface for managing the dialog box.  
   
-     Une boîte de dialogue est une fenêtre et sera jointe dans une fenêtre windows si visible.  Lorsque la fenêtre de dialogue est créée, la ressource modèle de la boîte de dialogue est utilisée comme modèle pour créer des contrôles de fenêtre enfant de la boîte de dialogue.  
+     A dialog box is a window and will be attached to a Windows window when visible. When the dialog window is created, the dialog-template resource is used as a template for creating child window controls for the dialog box.  
   
-## Voir aussi  
- [Boîtes de dialogue](../mfc/dialog-boxes.md)   
- [Cycle de vie d'une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

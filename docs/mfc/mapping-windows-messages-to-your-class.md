@@ -1,46 +1,64 @@
 ---
-title: "Mappage des messages Windows &#224; votre classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mappages, messages à la classe de boîte de dialogue"
-  - "tables des messages (C++), dans la classe de boîte de dialogue"
-  - "tables des messages (C++), mapper les messages Windows aux classes"
-  - "messages à la classe de boîte de dialogue"
-  - "messages à la classe de boîte de dialogue, mapper"
-  - "boîtes de dialogue MFC, messages Windows"
-  - "messages Windows (C++), mapper dans les classes de boîte de dialogue"
+title: Mapping Windows Messages to Your Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], Windows messages
+- message maps [MFC], in dialog class
+- Windows messages [MFC], mapping in dialog classes
+- messages to dialog class [MFC]
+- mappings [MFC]], messages to dialog class [MFC]
+- message maps [MFC], mapping Windows messages to classes
+- messages to dialog class [MFC], mapping
 ms.assetid: a4c6fd1f-1d33-47c9-baa0-001755746d6d
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Mappage des messages Windows &#224; votre classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d1b5e151bcd5c36647849100b50161752878bf7d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Si vous avez besoin de la boîte de dialogue pour traiter les messages Windows, remplacez les fonctions de gestions appropriées.  Pour cela, utilisez la fenêtre Propriétés à [mappez les messages](../mfc/reference/mapping-messages-to-functions.md) dans la classe de la boîte de dialogue.  Cela écrit un message\-mappage d'entrée pour chaque message et ajoute les fonctions membres responsables de messages à la classe.  Utilisez l'éditeur de code source Visual C\+\+ pour écrire du code dans des gestionnaires de messages.  
+---
+# <a name="mapping-windows-messages-to-your-class"></a>Mapping Windows Messages to Your Class
+If you need your dialog box to handle Windows messages, override the appropriate handler functions. To do so, use the Properties window to [map the messages](../mfc/reference/mapping-messages-to-functions.md) to the dialog class. This writes a message-map entry for each message and adds the message-handler member functions to the class. Use the Visual C++ source code editor to write code in the message handlers.  
   
- Vous pouvez également remplacer les fonctions membres de [CDialog](../mfc/reference/cdialog-class.md) et ses classes de base, notamment [CWnd](../mfc/reference/cwnd-class.md).  
+ You can also override member functions of [CDialog](../mfc/reference/cdialog-class.md) and its base classes, especially [CWnd](../mfc/reference/cwnd-class.md).  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Gestion et mappage des messages](../mfc/message-handling-and-mapping.md)  
+-   [Message handling and mapping](../mfc/message-handling-and-mapping.md)  
   
--   [Fonctions membres couramment substituées](../mfc/commonly-overridden-member-functions.md)  
+-   [Commonly overridden member functions](../mfc/commonly-overridden-member-functions.md)  
   
--   [Fonctions membres couramment ajoutées](../mfc/commonly-added-member-functions.md)  
+-   [Commonly added member functions](../mfc/commonly-added-member-functions.md)  
   
-## Voir aussi  
- [Boîtes de dialogue](../mfc/dialog-boxes.md)   
- [Cycle de vie d'une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

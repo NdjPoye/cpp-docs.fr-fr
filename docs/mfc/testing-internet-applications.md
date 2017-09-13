@@ -1,37 +1,56 @@
 ---
-title: "Test des applications Internet | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "déboguer (MFC), applications Web"
-  - "déboguer les applications Web, test d'applications"
-  - "Internet (déboguer et tester)"
-  - "tester, applications Internet"
-  - "applications Web, tester"
+title: Testing Internet Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Web applications [MFC], testing
+- debugging Web applications [MFC], testing applications
+- testing [MFC], Internet applications
+- debugging [MFC], Web applications
+- Internet debugging and testing
 ms.assetid: ac4c74e3-d4ad-4e19-8f6c-e270de067f01
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Test des applications Internet
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1bdf3922311d334eecece5fefbd7573f6dffab26
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Il existe des problèmes de test uniques sur Internet, notamment pour les applications qui s'exécutent sur un serveur Web.  Votre test initial sera probablement fait à l'aide d'un client mono\-utilisateur se connectant à un serveur de test.  Cela sera utile à des fins de débogage.  
+---
+# <a name="testing-internet-applications"></a>Testing Internet Applications
+There are some unique testing challenges on the Internet, especially for applications running on a Web server. Your initial testing will probably be done using a single-user client connecting to a test server. This will be useful for debugging your code.  
   
- Vous souhaiterez également tester dans des conditions réelles : avec plusieurs clients connectés à sur les connexions haut débit ainsi que des lignes série à faible vitesse, y compris les connexions modem.  Il peut être difficile de simuler des conditions réelles, mais il est intéressant de passer un moment à la conception des scénarios possibles et de les exécuter.  Si possible, vous souhaiterez également utiliser des outils pour effectuer des tests de capacité et de contrainte.  Ccertaines classes les bogues, tels que les bogues d'horloge, sont difficiles à trouver et à reproduire.  
+ You will also want to test under real conditions: with multiple clients connected over high-speed connections as well as low-speed serial lines, including modem connections. It can be difficult to simulate real conditions, but it is certainly worth spending time designing possible scenarios and executing them. If possible, you will also want to use tools to do capacity and stress testing. Certain classes of bugs, such as timing bugs, are difficult to find and to reproduce.  
   
- Un des problèmes de la programmation Internet est sa visibilité.  De nombreux accès à votre site peuvent ralentir votre serveur.  Vous souhaiterez que votre serveur se dégrade gracieusement.  Vous voulez empêcher tout ce qui peut être néfaste pour l'ordinateur d'un utilisateur si votre application échoue \(par exemple, l'altération des données lors de l'écriture dans le Registre ou lors de l'écriture des cookies sur le client\).  
+ One of the challenges of Internet programming is its visibility. Many accesses to your site may slow down your server. You want your server to degrade gracefully. You want to prevent anything that could be destructive to a user's computer if your application fails (for example, corruption of data while writing to the registry or while writing cookies on the client).  
   
-## Voir aussi  
- [Tâches de programmation Internet MFC](../mfc/mfc-internet-programming-tasks.md)   
- [Éléments fondamentaux relatifs à la programmation Internet MFC](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

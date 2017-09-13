@@ -1,5 +1,5 @@
 ---
-title: Classe de CDialogEx | Documents Microsoft
+title: CDialogEx Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,8 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDialogEx class
-- CDialogEx::PreTranslateMessage method
+- CDialogEx [MFC], CDialogEx
+- CDialogEx [MFC], SetBackgroundColor
+- CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
 caps.latest.revision: 27
 author: mikeblome
@@ -38,46 +39,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: c12aa0152fdbf83e423b944a0100045962ddb704
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63da5d8ae72d64020ee336dc4d8b3b0bceb428ff
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdialogex-class"></a>CDialogEx (classe)
-La classe `CDialogEx` spécifie la couleur d'arrière-plan et l'image d'arrière-plan d'une boîte de dialogue.  
+# <a name="cdialogex-class"></a>CDialogEx Class
+The `CDialogEx` class specifies the background color and background image of a dialog box.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDialogEx : public CDialog  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialogEx::CDialogEx](#cdialogex)|Construit un objet `CDialogEx`.|  
-|`CDialogEx::~CDialogEx`|Destructeur.|  
+|[CDialogEx::CDialogEx](#cdialogex)|Constructs a `CDialogEx` object.|  
+|`CDialogEx::~CDialogEx`|Destructor.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialogEx::SetBackgroundColor](#setbackgroundcolor)|Définit la couleur d'arrière-plan de la boîte de dialogue.|  
-|[CDialogEx::SetBackgroundImage](#setbackgroundimage)|Définit l'image d'arrière-plan de la boîte de dialogue.|  
+|[CDialogEx::SetBackgroundColor](#setbackgroundcolor)|Sets the background color of the dialog box.|  
+|[CDialogEx::SetBackgroundImage](#setbackgroundimage)|Sets the background image of the dialog box.|  
   
-## <a name="remarks"></a>Remarques  
- Pour utiliser la classe `CDialogEx`, dérivez votre classe de boîte de dialogue de la classe `CDialogEx` plutôt que de la classe `CDialog`.  
+## <a name="remarks"></a>Remarks  
+ To use the `CDialogEx` class, derive your dialog box class from the `CDialogEx` class instead of the `CDialog` class.  
   
- Les images de boîte de dialogue sont stockées dans un fichier de ressources. Le framework supprime automatiquement toute image qui est chargée à partir du fichier de ressources. Pour supprimer par programme l’image d’arrière-plan en cours, appelez le [CDialogEx::SetBackgroundImage](#setbackgroundimage) méthode ou implémentez un `OnDestroy` Gestionnaire d’événements. Lorsque vous appelez le [CDialogEx::SetBackgroundImage](#setbackgroundimage) méthode, passez un `HBITMAP` paramètre en tant que handle de l’image. L'objet `CDialogEx` prend possession de l'image et la supprime si l'indicateur `m_bAutoDestroyBmp` a pour valeur `TRUE`.  
+ Dialog box images are stored in a resource file. The framework automatically deletes any image that is loaded from the resource file. To programmatically delete the current background image, call the [CDialogEx::SetBackgroundImage](#setbackgroundimage) method or implement an `OnDestroy` event handler. When you call the [CDialogEx::SetBackgroundImage](#setbackgroundimage) method, pass in an `HBITMAP` parameter as the image handle. The `CDialogEx` object will take ownership of the image and delete it if the `m_bAutoDestroyBmp` flag is `TRUE`.  
   
- A `CDialogEx` objet peut être un parent d’un [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md) objet. Le [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md) object appelle le `CDialogEx::SetActiveMenu` (méthode) lors de la [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md) ouvre l’objet. Ensuite, le `CDialogEx` objet gère tout événement de menu jusqu'à ce que la [CMFCPopupMenu classe](../../mfc/reference/cmfcpopupmenu-class.md) objet est fermé.  
+ A `CDialogEx` object can be a parent of a [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object. The [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object calls the `CDialogEx::SetActiveMenu` method when the [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object opens. Afterward, the `CDialogEx` object handles any menu event until the [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object is closed.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,11 +89,11 @@ class CDialogEx : public CDialog
   
  [CDialogEx](../../mfc/reference/cdialogex-class.md)  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxdialogex.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdialogex.h  
   
-##  <a name="cdialogex"></a>CDialogEx::CDialogEx  
- Construit un objet `CDialogEx`.  
+##  <a name="cdialogex"></a>  CDialogEx::CDialogEx  
+ Constructs a `CDialogEx` object.  
   
 ```  
 CDialogEx(
@@ -105,25 +106,25 @@ CDialogEx(
     CWnd* pParentWnd=NULL);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `nIDTemplate`  
- L’ID de ressource d’un modèle de boîte de dialogue.  
+ The resource ID of a dialog box template.  
   
  [in] `lpszTemplateName`  
- Le nom de la ressource d’un modèle de boîte de dialogue.  
+ The resource name of a dialog box template.  
   
  [in] `pParent`  
- Pointeur vers la fenêtre parente. La valeur par défaut est `NULL`.  
+ A pointer to the parent window. The default value is `NULL`.  
   
  [in] `pParentWnd`  
- Pointeur vers la fenêtre parente. La valeur par défaut est `NULL`.  
+ A pointer to the parent window. The default value is `NULL`.  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Remarques  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
- Définit la couleur d'arrière-plan de la boîte de dialogue.  
+##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor  
+ Sets the background color of the dialog box.  
   
 ```  
 void SetBackgroundColor(
@@ -131,17 +132,17 @@ void SetBackgroundColor(
     BOOL bRepaint=TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `color`  
- Une valeur de couleur RVB.  
+ An RGB color value.  
   
  [in] `bRepaint`  
- `TRUE`Pour mettre immédiatement à jour l’écran ; dans le cas contraire, `FALSE`. La valeur par défaut est `TRUE`.  
+ `TRUE` to immediately update the screen; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
- Définit l'image d'arrière-plan de la boîte de dialogue.  
+##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage  
+ Sets the background image of the dialog box.  
   
 ```  
 void SetBackgroundImage(
@@ -157,31 +158,31 @@ BOOL SetBackgroundImage(
     BOOL bRepaint=TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  [in] `hBitmap`  
- Handle de l’image d’arrière-plan.  
+ A handle to the background image.  
   
  [in] `uiBmpResId`  
- L’ID de ressource de l’image d’arrière-plan.  
+ The resource ID of the background image.  
   
  [in] `location`  
- Parmi les `CDialogEx::BackgroundLocation` les valeurs qui spécifient l’emplacement de l’image. Les valeurs valides sont BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT et BACKGR_BOTTOMRIGHT. La valeur par défaut est BACKGR_TILE.  
+ One of the `CDialogEx::BackgroundLocation` values that specify the location of the image. Valid values include BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT, and BACKGR_BOTTOMRIGHT. The default value is BACKGR_TILE.  
   
  [in] `bAutoDestroy`  
- `TRUE`Pour détruire automatiquement l’image d’arrière-plan ; dans le cas contraire, `FALSE`.  
+ `TRUE` to automatically destroy the background image; otherwise, `FALSE`.  
   
  [in] `bRepaint`  
- `TRUE`pour redessiner immédiatement la boîte de dialogue dans le cas contraire, `FALSE`.  
+ `TRUE` to immediately redraw the dialog box; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Dans la deuxième méthode de surcharge syntaxe, `TRUE` si la méthode réussit ; sinon, `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ In the second method overload syntax, `TRUE` if the method is successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Notes  
- L’image que vous spécifiez n’est pas étirée pour s’ajuster à la zone cliente de la boîte de dialogue.  
+### <a name="remarks"></a>Remarks  
+ The image that you specify is not stretched to fit the dialog box client area.  
   
-## <a name="see-also"></a>Voir aussi  
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
- [CMFCPopupMenu (classe)](../../mfc/reference/cmfcpopupmenu-class.md)   
- [CContextMenuManager (classe)](../../mfc/reference/ccontextmenumanager-class.md)
+ [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md)   
+ [CContextMenuManager Class](../../mfc/reference/ccontextmenumanager-class.md)
 

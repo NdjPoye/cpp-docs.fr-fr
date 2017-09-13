@@ -1,5 +1,5 @@
 ---
-title: basic_ifstream, classe | Microsoft Docs
+title: basic_ifstream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- basic_ifstream
 - fstream/std::basic_ifstream
 - fstream/std::basic_ifstream::close
 - fstream/std::basic_ifstream::is_open
@@ -19,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_ifstream class
+- std::basic_ifstream [C++]
+- std::basic_ifstream [C++], close
+- std::basic_ifstream [C++], is_open
+- std::basic_ifstream [C++], open
+- std::basic_ifstream [C++], rdbuf
+- std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
 caps.latest.revision: 23
 author: corob-msft
@@ -39,35 +43,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: e1027f916c8ab40a8e1040c3e1da47e5c15a3ae1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8ebf5bbc9c7a97742c16e5842aaa6cf1dcd9a257
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicifstream-class"></a>basic_ifstream, classe
-Décrit un objet qui contrôle l’extraction d’éléments et d’objets codés à partir d’une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, avec des éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`.  
+# <a name="basicifstream-class"></a>basic_ifstream Class
+Describes an object that controls extraction of elements and encoded objects from a stream buffer of class [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, with elements of type `Elem`, whose character traits are determined by the class `Tr`.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Elem, class Tr = char_traits<Elem>>  
 class basic_ifstream : public basic_istream<Elem, Tr>  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Elem`  
- Élément de base de la mémoire tampon de fichier.  
+ The basic element of the file buffer.  
   
  `Tr`  
- Caractéristiques de l’élément de base de la mémoire tampon de fichier (généralement `char_traits`< `Elem`>).  
+ The traits of the basic element of the file buffer (usually `char_traits`< `Elem`>).  
   
-## <a name="remarks"></a>Notes  
- L’objet stocke un objet de classe `basic_filebuf`< `Elem`, `Tr`>.  
+## <a name="remarks"></a>Remarks  
+ The object stores an object of class `basic_filebuf`< `Elem`, `Tr`>.  
   
-## <a name="example"></a>Exemple  
- L'exemple suivant montre comment lire le texte d'un fichier.  
+## <a name="example"></a>Example  
+ The following example shows how to read in text from a file.  
   
 ```  
 // basic_ifstream_class.cpp  
@@ -90,47 +94,47 @@ int main(int argc, char **argv)
 }  
 ```  
   
-## <a name="input-basicifstreamclasstxt"></a>Entrée : basic_ifstream_class.txt  
+## <a name="input-basicifstreamclasstxt"></a>Input: basic_ifstream_class.txt  
   
 ```  
 This is the contents of basic_ifstream_class.txt.  
 ```  
   
-## <a name="output"></a>Sortie  
+## <a name="output"></a>Output  
   
 ```  
 This is the contents of basic_ifstream_class.txt.  
 ```  
   
-### <a name="constructors"></a>Constructeurs  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[basic_ifstream](#basic_ifstream)|Initialise une nouvelle instance d'un objet `basic_ifstream`.|  
+|[basic_ifstream](#basic_ifstream)|Initializes a new instance of a `basic_ifstream` object.|  
   
-### <a name="member-functions"></a>Fonctions membres  
-  
-|||  
-|-|-|  
-|[close](#close)|Ferme un fichier.|  
-|[is_open](#is_open)|Détermine si un fichier est ouvert.|  
-|[open](#open)|Ouvre un fichier.|  
-|[rdbuf](#rdbuf)|Retourne l'adresse de la mémoire tampon de flux stockée.|  
-|[swap](#swap)|Échange le contenu de ce `basic_ifstream` avec le contenu du `basic_ifstream` fourni.|  
-  
-### <a name="operators"></a>Opérateurs  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator=](#op_eq)|Assigne le contenu de cet objet de flux. Il s'agit d'une assignation de déplacement impliquant une `rvalue` qui ne laisse pas de copie.|  
+|[close](#close)|Closes a file.|  
+|[is_open](#is_open)|Determines if a file is open.|  
+|[open](#open)|Opens a file.|  
+|[rdbuf](#rdbuf)|Returns the address of the stored stream buffer.|  
+|[swap](#swap)|Exchanges the content of this `basic_ifstream` for the content of the provided `basic_ifstream`.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<fstream>  
+### <a name="operators"></a>Operators  
   
- **Espace de noms :** std  
+|||  
+|-|-|  
+|[operator=](#op_eq)|Assigns the content of this stream object. This is a move assignment involving an `rvalue` that does not leave a copy behind.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<fstream>  
+  
+ **Namespace:** std  
   
 ##  <a name="basic_ifstream"></a>  basic_ifstream::basic_ifstream  
- Construit un objet de type `basic_ifstream`.  
+ Constructs an object of type `basic_ifstream`.  
   
 ```  
 basic_ifstream();
@@ -148,25 +152,25 @@ explicit basic_ifstream(
 basic_ifstream(basic_ifstream&& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Filename`  
- Nom du fichier à ouvrir.  
+ The name of the file to open.  
   
  `_Mode`  
- Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
+ One of the enumerations in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
  `_Prot`  
- Protection d’ouverture de fichier par défaut, équivalente au paramètre `shflag` dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).  
+ The default file opening protection, equivalent to the `shflag` parameter in [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).  
   
-### <a name="remarks"></a>Notes  
- Le premier constructeur initialise la classe de base en appelant [basic_istream](../standard-library/basic-istream-class.md)( `sb`), où `sb` est l’objet stocké de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>. Il initialise également `sb` en appelant `basic_filebuf`< `Elem`, `Tr`>.  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the base class by calling [basic_istream](../standard-library/basic-istream-class.md)( `sb`), where `sb` is the stored object of class [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>. It also initializes `sb` by calling `basic_filebuf`< `Elem`, `Tr`>.  
   
- Les deuxième et troisième constructeurs initialisent la classe de base en appelant `basic_istream`( `sb`). Ils initialisent également `sb` en appelant [basic_filebuf](../standard-library/basic-filebuf-class.md#basic_filebuf)< `Elem`, `Tr`>, puis `sb`. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::in`). Si cette dernière fonction retourne un pointeur null, le constructeur appelle **setstate**( `failbit`).  
+ The second and third constructors initializes the base class by calling `basic_istream`( `sb`). It also initializes `sb` by calling [basic_filebuf](../standard-library/basic-filebuf-class.md#basic_filebuf)< `Elem`, `Tr`>, then `sb`. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::in`). If the latter function returns a null pointer, the constructor calls **setstate**( `failbit`).  
   
- Le quatrième constructeur initialise l’objet avec le contenu de `right`, traité comme une référence rvalue.  
+ The fourth constructor initializes the object with the contents of `right`, treated as an rvalue reference.  
   
-### <a name="example"></a>Exemple  
-  L'exemple suivant montre comment lire le texte d'un fichier. Pour créer le fichier, consultez l’exemple de [basic_ofstream::basic_ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream).  
+### <a name="example"></a>Example  
+  The following example shows how to read in text from a file. To create the file, see the example for [basic_ofstream::basic_ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream).  
   
 ```  
 // basic_ifstream_ctor.cpp  
@@ -190,36 +194,36 @@ int main(int argc, char **argv)
 ```  
   
 ##  <a name="close"></a>  basic_ifstream::close  
- Ferme un fichier.  
+ Closes a file.  
   
 ```  
 void close();
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre appelle [rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close).  
+### <a name="remarks"></a>Remarks  
+ The member function calls [rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close).  
   
-### <a name="example"></a>Exemple  
-  Consultez [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pour obtenir un exemple qui utilise **close**.  
+### <a name="example"></a>Example  
+  See [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) for an example that uses **close**.  
   
 ##  <a name="is_open"></a>  basic_ifstream::is_open  
- Détermine si un fichier est ouvert.  
+ Determines if a file is open.  
   
 ```  
 bool is_open() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si le fichier est ouvert, **false** dans le cas contraire.  
+### <a name="return-value"></a>Return Value  
+ **true** if the file is open, **false** otherwise.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).  
   
-### <a name="example"></a>Exemple  
-  Consultez [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open) pour obtenir un exemple qui utilise `is_open`.  
+### <a name="example"></a>Example  
+  See [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open) for an example that uses `is_open`.  
   
 ##  <a name="open"></a>  basic_ifstream::open  
- Ouvre un fichier.  
+ Opens a file.  
   
 ```  
 void open(
@@ -241,70 +245,70 @@ void open(
     ios_base::openmode _Mode);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Filename`  
- Nom du fichier à ouvrir.  
+ The name of the file to open.  
   
  `_Mode`  
- Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
+ One of the enumerations in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
  `_Prot`  
- Protection d’ouverture de fichier par défaut, équivalente au paramètre `shflag` dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).  
+ The default file opening protection, equivalent to the `shflag` parameter in [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).  
   
-### <a name="remarks"></a>Notes  
- La fonction membre appelle [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). Si open échoue, la fonction appelle [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) qui peut lever une exception ios_base::failure.  
+### <a name="remarks"></a>Remarks  
+ The member function calls [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). If open fails, the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**), which may throw an ios_base::failure exception.  
   
-### <a name="example"></a>Exemple  
-  Consultez [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) pour obtenir un exemple qui utilise **open**.  
+### <a name="example"></a>Example  
+  See [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) for an example that uses **open**.  
   
 ##  <a name="op_eq"></a>  basic_ifstream::operator=  
- Assigne le contenu de cet objet de flux. Il s'agit d'une assignation de déplacement qui implique une rvalue qui ne laisse pas de copie.  
+ Assigns the content of this stream object. This is a move assignment involving an rvalue that does not leave a copy behind.  
   
 ```  
 basic_ifstream& operator=(basic_ifstream&& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Référence rvalue à un objet `basic_ifstream`.  
+ An rvalue reference to a `basic_ifstream` object.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne `*this`.  
+### <a name="return-value"></a>Return Value  
+ Returns `*this`.  
   
-### <a name="remarks"></a>Notes  
- L'opérateur membre remplace le contenu de l'objet à l'aide du contenu de `right`, traité comme une référence rvalue. Pour plus d’informations, consultez [Lvalues et Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md).  
+### <a name="remarks"></a>Remarks  
+ The member operator replaces the contents of the object by using the contents of `right`, treated as an rvalue reference. For more information, see [Lvalues and Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md).  
   
 ##  <a name="rdbuf"></a>  basic_ifstream::rdbuf  
- Retourne l'adresse de la mémoire tampon de flux stockée.  
+ Returns the address of the stored stream buffer.  
   
 ```  
 basic_filebuf<Elem, Tr> *rdbuf() const 
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Pointeur vers un objet [basic_filebuf](../standard-library/basic-filebuf-class.md) qui représente la mémoire tampon de flux stockée.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [basic_filebuf](../standard-library/basic-filebuf-class.md) object representing the stored stream buffer.  
   
-### <a name="example"></a>Exemple  
-  Consultez [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pour obtenir un exemple qui utilise `rdbuf`.  
+### <a name="example"></a>Example  
+  See [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) for an example that uses `rdbuf`.  
   
 ##  <a name="swap"></a>  basic_ifstream::swap  
- Échange le contenu de deux objets `basic_ifstream`.  
+ Exchanges the contents of two `basic_ifstream` objects.  
   
 ```  
 void swap(basic_ifstream& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Référence à une autre mémoire tampon de flux.  
+ A reference to another stream buffer.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre échange le contenu de cet objet avec celui de `right`.  
+### <a name="remarks"></a>Remarks  
+ The member function exchanges the contents of this object for the contents of `right`.  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream, programmation](../standard-library/iostream-programming.md)   
- [iostreams, conventions](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
 

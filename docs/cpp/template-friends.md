@@ -1,32 +1,63 @@
+
 ---
-title: "Friends de mod&#232;le | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Template Friends | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 077acea5-0d0f-4b33-916d-1211797e5e28
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
 robots: noindex,nofollow
-caps.handback.revision: 9
----
-# Friends de mod&#232;le
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2503967191bed658e8f3e9f56f8a32b3917590b2
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Les modèles de classe peuvent avoir des éléments [friend](http://msdn.microsoft.com/fr-fr/bf412640-d857-4acb-b2b5-513131cb9681).  Une classe ou un modèle de classe, une fonction ou un modèle de fonction peuvent être des éléments friend d'une classe de modèle.  Les éléments friend peuvent également être des spécialisations d'un modèle de classe ou de fonction, mais des spécialisations non partielles.  
+---
+# <a name="template-friends"></a>Template Friends
+
+Class templates can have [friends](http://msdn.microsoft.com/en-us/bf412640-d857-4acb-b2b5-513131cb9681). A class or class template, function, or function template can be a friend to a template class. Friends can also be specializations of a class template or function template, but not partial specializations.  
   
-## Exemple  
- Dans l'exemple suivant, une fonction friend est définie en tant que modèle de fonction dans le modèle de classe.  Ce code génère une version de la fonction friend pour chaque instanciation du modèle.  Cette construction est utile si votre fonction friend dépend des mêmes paramètres de modèle que la classe.  
+**C++ 11**:  A type parameter can be declared as a friend by using the form `friend T;`.  
   
+```cpp
+template <typename T>  
+class my_class  
+{  
+    friend T;  
+    //...  
+};  
 ```  
+  
+## <a name="example"></a>Example
+
+In the following example, a friend function is defined as a function template within the class template. This code produces a version of the friend function for every instantiation of the template. This construct is useful if your friend function depends on the same template parameters as the class does.  
+  
+```cpp
 // template_friend1.cpp  
 // compile with: /EHsc  
   
@@ -96,15 +127,19 @@ int main() {
 }  
 ```  
   
-  **A B C D E F G H I J K L M N O P Q R S T U V W X Y Z**   
-**a b c d e f g h i j k l m n o p q r s t u v w x y z**   
-**A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z**    
-## Exemple  
- L'exemple suivant implique un élément friend possédant une spécialisation de modèle.  Une spécialisation de modèle de fonction est automatiquement un élément friend si le modèle de fonction d'origine est un élément friend.  
-  
- Il est également possible de déclarer uniquement la version spécialisée du modèle en tant qu'élément friend, comme l'indique le commentaire avant la déclaration friend dans le code suivant.  Dans ce cas, vous devez mettre la définition de la spécialisation du modèle friend en dehors de la classe de modèle.  
-  
+```Output
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z   
+a b c d e f g h i j k l m n o p q r s t u v w x y z   
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z   
 ```  
+  
+## <a name="example"></a>Example  
+
+The next example involves a friend that has a template specialization. A function template specialization is automatically a friend if the original function template is a friend.  
+  
+It is also possible to declare only the specialized version of the template as the friend, as the comment before the friend declaration in the following code indicates. If you do this, you must put the definition of the friend template specialization outside of the template class.  
+  
+```cpp
 // template_friend2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -182,13 +217,17 @@ int main()
     f(a);  
 }  
 ```  
-  
-  **10 generic**  
-**10 int**   
-## Exemple  
- L'exemple suivant montre un modèle de classe friend déclaré dans un modèle de classe.  Le modèle de classe est utilisé ensuite comme argument template pour la classe friend.  Les modèles de classe Friend doivent être définis en dehors du modèle de classe dans lequel ils sont déclarés.  Toutes les spécialisations ou spécialisations partielles du modèle friend sont également des éléments friend du modèle de classe d'origine.  
-  
+
+```Output
+10 generic  
+10 int  
 ```  
+  
+## <a name="example"></a>Example  
+ 
+The next example shows a friend class template declared within a class template. The class template is then used as the template argument for the friend class. Friend class templates must be defined outside of the class template in which they are declared. Any specializations or partial specializations of the friend template are also friends of the original class template.  
+  
+```cpp  
 // template_friend3.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -232,10 +271,15 @@ int main()
    x4->print();  
 }  
 ```  
+
+```Output 
+65  
+97  
+A  
+a  
+```  
   
-  **65**  
-**97**  
-**A**  
-**a**   
-## Voir aussi  
- [Arguments par défaut](../cpp/default-arguments.md)
+## <a name="see-also"></a>See Also  
+
+[Default Arguments](../cpp/default-arguments.md)
+

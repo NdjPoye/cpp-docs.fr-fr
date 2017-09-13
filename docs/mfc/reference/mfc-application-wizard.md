@@ -1,93 +1,111 @@
 ---
-title: "Assistant Application MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.exe.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fichiers exécutables, créer"
-  - "Assistant Application MFC"
+title: MFC Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.exe.overview
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC Application Wizard
+- executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Assistant Application MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 53d9ebf66ba5d097b68690ecefd5aa58aac6a55a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-L'Assistant Application MFC génère une application qui, lorsqu'elle est compilée, implémente les fonctions de base d'une application exécutable \(.exe\) Windows.  L'application de départ MFC inclut des fichiers sources C\+\+ \(.cpp\), des fichiers de ressources \(.rc\), des fichiers d'en\-tête \(.h\) et un fichier projet \(.vcxproj\).  Le code généré dans ces fichiers de démarrage est basé sur MFC.  
+---
+# <a name="mfc-application-wizard"></a>MFC Application Wizard
+The MFC Application Wizard generates an application that, when compiled, implements the basic features of a Windows executable (.exe) application. The MFC starter application includes C++ source (.cpp) files, resource (.rc) files, header (.h) files, and a project (.vcxproj) file. The code that is generated in these starter files is based on MFC.  
   
 > [!NOTE]
->  Selon les options que vous sélectionnez, l'Assistant crée des fichiers supplémentaires dans votre projet.  Par exemple, si vous sélectionnez **Aide contextuelle** dans la page [Fonctionnalités avancées](../../mfc/reference/advanced-features-mfc-application-wizard.md), l'Assistant crée les fichiers nécessaires à la compilation des fichiers d'aide du projet.  Pour plus d'informations sur les fichiers créés par l'Assistant, consultez [Types de fichiers créés pour les projets Visual C\+\+](../../ide/file-types-created-for-visual-cpp-projects.md), ainsi que le fichier Readme.txt du projet.  
+>  Depending on the options that you select, the wizard creates additional files in your project. For example, if you select **Context-sensitive help** on the [Advanced Features](../../mfc/reference/advanced-features-mfc-application-wizard.md) page, the wizard creates the files that are necessary to compile the project's Help files. For more information about the files that the wizard creates, see [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md), and see the Readme.txt file in the project.  
   
-## Vue d'ensemble  
- La page Vue d'ensemble de l'Assistant décrit les paramètres d'application en cours pour l'application MFC que vous êtes en train de créer.  Par défaut, l'Assistant crée un projet comme suit :  
+## <a name="overview"></a>Overview  
+ This wizard page describes the current application settings for the MFC application that you are creating. By default, the wizard creates a project as follows:  
   
--   [Type d'application, Assistant Application MFC](../../mfc/reference/application-type-mfc-application-wizard.md)  
+-   [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md)  
   
-    -   Le projet est créé avec une prise en charge d'interface multidocument \(MDI\) avec onglets.  Pour plus d'informations, consultez [SDI et MDI](../../mfc/sdi-and-mdi.md).  
+    -   The project is created with tabbed multiple-document interface (MDI) support. For more information, see [SDI and MDI](../../mfc/sdi-and-mdi.md).  
   
-    -   Le projet utilise l'[Architecture document\/vue](../../mfc/document-view-architecture.md).  
+    -   The project uses the [Document/View Architecture](../../mfc/document-view-architecture.md).  
   
-    -   Le projet utilise des bibliothèques Unicode.  
+    -   The project uses Unicode libraries.  
   
-    -   Le projet est créé à l'aide du style de projet Visual Studio et active la commutation de style visuel.  
+    -   The project is created using the Visual Studio project style and enables visual style switching.  
   
-    -   Le projet utilise les MFC dans une DLL partagée.  Pour plus d'informations, consultez [DLL en Visual C\+\+](../../build/dlls-in-visual-cpp.md).  
+    -   The project uses MFC in a shared DLL. For more information, see [DLLs in Visual C++](../../build/dlls-in-visual-cpp.md).  
   
--   [Prise en charge des documents composés, Assistant Application MFC](../../mfc/reference/compound-document-support-mfc-application-wizard.md)  
+-   [Compound Document Support, MFC Application Wizard](../../mfc/reference/compound-document-support-mfc-application-wizard.md)  
   
-    -   Le projet n'assure aucune prise en charge des documents composés.  
+    -   The project provides no support for compound documents.  
   
--   [Chaînes modèles de document, Assistant Application MFC](../../mfc/reference/document-template-strings-mfc-application-wizard.md)  
+-   [Document Template Strings, MFC Application Wizard](../../mfc/reference/document-template-strings-mfc-application-wizard.md)  
   
-    -   Le projet utilise le nom du projet pour les chaînes modèles de document par défaut.  
+    -   The project uses the project name for the default document template strings.  
   
--   [Prise en charge des bases de données, Assistant Application MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
+-   [Database Support, MFC Application Wizard](../../mfc/reference/database-support-mfc-application-wizard.md)  
   
-    -   Le projet n'assure aucune prise en charge des bases de données.  
+    -   The project provides no support for databases.  
   
--   [Fonctionnalités de l'interface utilisateur, Assistant Application MFC](../../mfc/reference/user-interface-features-mfc-application-wizard.md)  
+-   [User Interface Features, MFC Application Wizard](../../mfc/reference/user-interface-features-mfc-application-wizard.md)  
   
-    -   Le projet implémente les fonctionnalités de l'interface utilisateur Windows standard, telles qu'un menu Système, une barre d'état, des boutons d'agrandissement et de réduction, une boîte de dialogue **À propos de**, une barre d'outils de menus et une barre ancrée standard, ainsi que des frames enfants.  
+    -   The project implements standard Windows user interface features such as a system menu, a status bar, maximize and minimize boxes, an **About** box, a standard menu bar and docking toolbar, and child frames.  
   
--   [Fonctionnalités avancées, Assistant Application MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)  
+-   [Advanced Features, MFC Application Wizard](../../mfc/reference/advanced-features-mfc-application-wizard.md)  
   
-    -   Le projet prend en charge l'impression et l'aperçu avant impression.  
+    -   The project supports printing and print preview.  
   
-    -   Le projet prend en charge les contrôles ActiveX.  Pour plus d'informations, consultez [Ordre des opérations pour la création de contrôles ActiveX](../../mfc/sequence-of-operations-for-creating-activex-controls.md).  
+    -   The project supports ActiveX controls. For more information, see [Sequence of Operations for Creating ActiveX Controls](../../mfc/sequence-of-operations-for-creating-activex-controls.md).  
   
-    -   Le projet n'assure aucune prise en charge d'[Automation](../../mfc/automation.md), de [MAPI](../../mfc/mapi-support-in-mfc.md), de [Windows Sockets](../../mfc/windows-sockets-in-mfc.md) ou d'Active Accessibility.  
+    -   The project provides no support for [Automation](../../mfc/automation.md), [MAPI](../../mfc/mapi-support-in-mfc.md), [Windows Sockets](../../mfc/windows-sockets-in-mfc.md), or Active Accessibility.  
   
-    -   Le projet prend en charge trois volets d'ancrage : **Explorateur**, **Sortie** et **Propriétés**.  
+    -   The project supports an **Explorer** docking pane, an **Ouput** docking pane, and a **Properties** docking pane.  
   
--   [Classes générées, Assistant Application MFC](../../mfc/reference/generated-classes-mfc-application-wizard.md)  
+-   [Generated Classes, MFC Application Wizard](../../mfc/reference/generated-classes-mfc-application-wizard.md)  
   
-    -   La classe d'affichage du projet est dérivée de la classe CView \(voir [CView Class](../../mfc/reference/cview-class.md)\).  
+    -   The project's view class is derived from the [CView Class](../../mfc/reference/cview-class.md).  
   
-    -   La classe d'application du projet est dérivée la classe CWinApp \(voir [CWinAppEx Class](../../mfc/reference/cwinappex-class.md)\).  
+    -   The project's application class is derived from the [CWinAppEx Class](../../mfc/reference/cwinappex-class.md).  
   
-    -   La classe de document du projet est dérivée la classe CDocument \(voir [CDocument Class](../../mfc/reference/cdocument-class.md)\).  
+    -   The project's document class is derived from the [CDocument Class](../../mfc/reference/cdocument-class.md).  
   
-    -   La classe de frame principal du projet est dérivée la classe CMDIFrameWndEx \(voir [Classe CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)\).  
+    -   The project's main frame class is derived from the [CMDIFrameWndEx Class](../../mfc/reference/cmdiframewndex-class.md).  
   
-    -   La classe de frame enfant principal du projet est dérivée la classe CDMIChildWndEx \(voir [Classe CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md)\).  
+    -   The project's child frame class is derived from the [CMDIChildWndEx Class](../../mfc/reference/cmdichildwndex-class.md).  
   
- Pour changer ces paramètres par défaut, cliquez sur les titres d'onglet correspondants dans la colonne de gauche de l'Assistant et apportez les modifications dans la page appropriée.  
+ To change these default settings, click the appropriate tab title in the left column of the wizard and make the changes on the page that appears.  
   
- Une fois que vous avez créé un projet d'application MFC, vous pouvez y ajouter des objets ou des contrôles à l'aide des [Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md) Visual C\+\+.  
+ After you create an MFC application project, you can add objects or controls to your project using Visual C++ [code wizards](../../ide/adding-functionality-with-code-wizards-cpp.md).  
   
-## Voir aussi  
- [Création d'une application MFC](../../mfc/reference/creating-an-mfc-application.md)   
- [MFC, applications de bureau](../../mfc/mfc-desktop-applications.md)   
- [Utilisation des classes pour l'écriture d'applications pour Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)
+## <a name="see-also"></a>See Also  
+ [Creating an MFC Application](../../mfc/reference/creating-an-mfc-application.md)   
+ [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md)   
+ [Using the Classes to Write Applications for Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)
+

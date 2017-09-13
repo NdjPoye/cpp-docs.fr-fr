@@ -1,48 +1,65 @@
 ---
-title: "Comment&#160;: cr&#233;er une table des messages pour une classe de mod&#232;le | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tables des messages, classes de modèle"
-  - "classes de modèle, créer des tables des messages"
+title: 'How to: Create a Message Map for a Template Class | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- template classes [MFC], creating message maps
+- message maps [MFC]], template classes
 ms.assetid: 4e7e24f8-06df-4b46-82aa-7435c8650de3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Comment&#160;: cr&#233;er une table des messages pour une classe de mod&#232;le
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2bbd27405bb31e07a006a6285b47cda335649f21
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Le mappage de message dans MFC est un moyen efficace de diriger les messages Windows à une instance d'objet appropriée C\+\+.  Les exemples de cibles de table des messages MFC comprennent des classes d'application, des classes document et vue, des classes de contrôle, et ainsi de suite.  
+---
+# <a name="how-to-create-a-message-map-for-a-template-class"></a>How to: Create a Message Map for a Template Class
+Message mapping in MFC provides an efficient way to direct Windows messages to an appropriate C++ object instance. Examples of MFC message map targets include application classes, document and view classes, control classes, and so on.  
   
- Les tables de messages traditionnelles MFC sont déclarées avec la macro [BEGIN\_MESSAGE\_MAP](../Topic/BEGIN_MESSAGE_MAP.md) pour déclarer le début de la table des messages, une entrée macro pour chaque méthode de la classe de gestionnaire de messages, et enfin la macro [END\_MESSAGE\_MAP](../Topic/END_MESSAGE_MAP.md) pour donner la fin de la carte du message.  
+ Traditional MFC message maps are declared using the [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) macro to declare the start of the message map, a macro entry for each message-handler class method, and finally the [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map) macro to declare the end of the message map.  
   
- Une limite avec la macro [BEGIN\_MESSAGE\_MAP](../Topic/BEGIN_MESSAGE_MAP.md) se produit lorsqu'elle est utilisée conjointement avec une classe qui contient les arguments de modèle.  Si elle est utilisée avec une classe de modèle, la macro entraînera une erreur de compilation en raison des paramètres de modèle manquants pendant l'expansion macro.  La macro [BEGIN\_TEMPLATE\_MESSAGE\_MAP](../Topic/BEGIN_TEMPLATE_MESSAGE_MAP.md) a été conçue pour autoriser les classes qui contient un seul argument de modèle pour déclarer leurs propres tables de messages.  
+ One limitation with the [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) macro occurs when it is used in conjunction with a class containing template arguments. When used with a template class, this macro will cause a compile-time error due to the missing template parameters during macro expansion. The [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map) macro was designed to allow classes containing a single template argument to declare their own message maps.  
   
-## Exemple  
- Prenons un exemple où la classe MFC [CListBox](../mfc/reference/clistbox-class.md) est étendue pour assurer la synchronisation avec une source de données externe.  La classe fictive **CSyncListBox** est déclarée comme suit :  
+## <a name="example"></a>Example  
+ Consider an example where the MFC [CListBox](../mfc/reference/clistbox-class.md) class is extended to provide synchronization with an external data source. The fictitious **CSyncListBox** class is declared as follows:  
   
- [!code-cpp[NVC_MFC_CListBox#42](../mfc/codesnippet/CPP/how-to-create-a-message-map-for-a-template-class_1.h)]  
+ [!code-cpp[NVC_MFC_CListBox#42](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_1.h)]  
   
- La classe **CSyncListBox** est basée sur des modèles sur un seul type qui décrit la source de données avec laquelle elle synchronisera.  Il déclare également trois méthodes qui participeront à la table des messages de la classe : **OnPaint**, **OnDestroy**, et **OnSynchronize**.  La méthode **OnSynchronize** est implémentée comme suit :  
+ The **CSyncListBox** class is templated on a single type that describes the data source it will synchronize with. It also declares three methods that will participate in the message map of the class: **OnPaint**, **OnDestroy**, and **OnSynchronize**. The **OnSynchronize** method is implemented as follows:  
   
- [!code-cpp[NVC_MFC_CListBox#43](../mfc/codesnippet/CPP/how-to-create-a-message-map-for-a-template-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_CListBox#43](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_2.cpp)]  
   
- L'implémentation ci\-dessus fournit la classe **CSyncListBox** à spécialiser sur n'importe quel type de classe qui implémente la méthode **GetCount**, telle que **CArray**, **CList**, et **CMap**.  La fonction de **StringizeElement** est une fonction de modèle prototype par ce qui suit :  
+ The above implementation allows the **CSyncListBox** class to be specialized on any class type that implements the **GetCount** method, such as **CArray**, **CList**, and **CMap**. The **StringizeElement** function is a template function prototyped by the following:  
   
- [!code-cpp[NVC_MFC_CListBox#44](../mfc/codesnippet/CPP/how-to-create-a-message-map-for-a-template-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_CListBox#44](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_3.cpp)]  
   
- Normalement, la table des messages pour cette classe est définie comme suit :  
+ Normally, the message map for this class would be defined as:  
   
  `BEGIN_MESSAGE_MAP(CSyncListBox, CListBox)`  
   
@@ -54,22 +71,24 @@ Le mappage de message dans MFC est un moyen efficace de diriger les messages Win
   
  `END_MESSAGE_MAP()`  
   
- où **LBN\_SYNCHRONIZE** est un message utilisateur personnalisé défini par l'application, par exemple :  
+ where **LBN_SYNCHRONIZE** is a custom user message defined by the application, such as:  
   
- [!code-cpp[NVC_MFC_CListBox#45](../mfc/codesnippet/CPP/how-to-create-a-message-map-for-a-template-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_CListBox#45](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_4.cpp)]  
   
- La carte de macro ci\-dessus ne compilera pas, en raison du fait que la spécification du modèle pour la classe **CSyncListBox** est absente pendant l'expansion macro.  La macro **BEGIN\_TEMPLATE\_MESSAGE\_MAP** résout ce problème en incorporant le paramètre de modèle dans la carte étendue de macro.  La table des messages pour cette classe est :  
+ The above macro map will not compile, due to the fact that the template specification for the **CSyncListBox** class will be missing during macro expansion. The **BEGIN_TEMPLATE_MESSAGE_MAP** macro solves this by incorporating the specified template parameter into the expanded macro map. The message map for this class becomes:  
   
- [!code-cpp[NVC_MFC_CListBox#46](../mfc/codesnippet/CPP/how-to-create-a-message-map-for-a-template-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_CListBox#46](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_5.cpp)]  
   
- L'exemple suivant illustre l'utilisation de l'exemple de la classe de **CSyncListBox** à l'aide d'un objet **CStringList**:  
+ The following demonstrates sample usage of the **CSyncListBox** class using a **CStringList** object:  
   
- [!code-cpp[NVC_MFC_CListBox#47](../mfc/codesnippet/CPP/how-to-create-a-message-map-for-a-template-class_6.cpp)]  
+ [!code-cpp[NVC_MFC_CListBox#47](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_6.cpp)]  
   
- Pour effectuer le test, la fonction **StringizeElement** doit être spécialisée pour fonctionner avec la classe **CStringList**:  
+ To complete the test, the **StringizeElement** function must be specialized to work with the **CStringList** class:  
   
- [!code-cpp[NVC_MFC_CListBox#48](../mfc/codesnippet/CPP/how-to-create-a-message-map-for-a-template-class_7.cpp)]  
+ [!code-cpp[NVC_MFC_CListBox#48](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_7.cpp)]  
   
-## Voir aussi  
- [BEGIN\_TEMPLATE\_MESSAGE\_MAP](../Topic/BEGIN_TEMPLATE_MESSAGE_MAP.md)   
- [Gestion et mappage des messages](../mfc/message-handling-and-mapping.md)
+## <a name="see-also"></a>See Also  
+ [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map)   
+ [Message Handling and Mapping](../mfc/message-handling-and-mapping.md)
+
+

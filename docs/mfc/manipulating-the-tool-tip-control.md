@@ -1,48 +1,67 @@
 ---
-title: "Manipulation du contr&#244;le d&#39;info-bulle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolTipCtrl (classe), manipuler les attributs des astuces"
-  - "info-bulles (C++), attributs"
+title: Manipulating the Tool Tip Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CToolTipCtrl class [MFC], manipulating tool tip attributes
+- tool tips [MFC], attributes
 ms.assetid: 3600afe5-712a-4b56-8456-96e85fe879af
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Manipulation du contr&#244;le d&#39;info-bulle
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a6f30981d9bacbd9191c1cc70012131c9064b91f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-La classe `CToolTipCtrl` fournit un groupe de méthodes qui contrôlent les différents attributs de l'objet `CToolTipCtrl` et la fenêtre d'info\-bulle.  
+---
+# <a name="manipulating-the-tool-tip-control"></a>Manipulating the Tool Tip Control
+Class `CToolTipCtrl` provides a group of member functions that control the various attributes of the `CToolTipCtrl` object and the tool tip window.  
   
- Les durées initiale, de popup et de réapparition pour les fenêtres d'info\-bulle peuvent être définies et récupérées avec des appels à [GetDelayTime](../Topic/CToolTipCtrl::GetDelayTime.md) et [SetDelayTime](../Topic/CToolTipCtrl::SetDelayTime.md).  
+ The initial, pop-up, and reshow durations for the tool tip windows can be set and retrieved with calls to [GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime) and [SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime).  
   
- Modifier l'apparence des fenêtres d'info\-bulle avec les fonctions suivantes :  
+ Change the appearance of the tool tip windows with the following functions:  
   
--   [GetMargin](../Topic/CToolTipCtrl::GetMargin.md) et [SetMargin](../Topic/CToolTipCtrl::SetMargin.md) Récupère et définit la largeur entre la bordure d'info\-bulle et le texte d'info\-bulle.  
+-   [GetMargin](../mfc/reference/ctooltipctrl-class.md#getmargin) and [SetMargin](../mfc/reference/ctooltipctrl-class.md#setmargin) Retrieves and sets the width between the tool tip border and the tool tip text.  
   
--   [GetMaxTipWidth](../Topic/CToolTipCtrl::GetMaxTipWidth.md) et [SetMaxTipWidth](../Topic/CToolTipCtrl::SetMaxTipWidth.md) Récupère et définit la largeur maximale de la fenêtre d'info\-bulle.  
+-   [GetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#getmaxtipwidth) and [SetMaxTipWidth](../mfc/reference/ctooltipctrl-class.md#setmaxtipwidth) Retrieves and sets the maximum width of the tool tip window.  
   
--   [GetTipBkColor](../Topic/CToolTipCtrl::GetTipBkColor.md) et [SetTipBkColor](../Topic/CToolTipCtrl::SetTipBkColor.md) Récupère et définit la couleur d'arrière\-plan de la fenêtre d'info\-bulle.  
+-   [GetTipBkColor](../mfc/reference/ctooltipctrl-class.md#gettipbkcolor) and [SetTipBkColor](../mfc/reference/ctooltipctrl-class.md#settipbkcolor) Retrieves and sets the background color of the tool tip window.  
   
--   [GetTipTextColor](../Topic/CToolTipCtrl::GetTipTextColor.md) et [SetTipTextColor](../Topic/CToolTipCtrl::SetTipTextColor.md) Récupère et définit la couleur du texte de la fenêtre d'info\-bulle.  
+-   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) and [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) Retrieves and sets the text color of the tool tip window.  
   
- Pour que le contrôle d'info\-bulle soit notifié des messages importants, par exemple des messages **WM\_LBUTTONXXX**, vous devez relayer les messages à votre contrôle d'info\-bulle.  La meilleure méthode pour le relai consiste à effectuer un appel à [CToolTipCtrl::RelayEvent](../Topic/CToolTipCtrl::RelayEvent.md), dans la fonction `PreTranslateMessage` de la fenêtre propriétaire.  L'exemple suivant illustre une méthode possible \(supposant que le contrôle d'info\-bulle est appelé `m_ToolTip`\) :  
+ In order for the tool tip control to be notified of important messages, such as **WM_LBUTTONXXX** messages, you must relay the messages to your tool tip control. The best method for this relay is to make a call to [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent), in the `PreTranslateMessage` function of the owner window. The following example illustrates one possible method (assuming the tool tip control is called `m_ToolTip`):  
   
- [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/CPP/manipulating-the-tool-tip-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
   
- Pour supprimer immédiatement une fenêtre d'info\-bulle, appelez la méthode [Pop](../Topic/CToolTipCtrl::Pop.md).  
+ To immediately remove a tool tip window, call the [Pop](../mfc/reference/ctooltipctrl-class.md#pop) member function.  
   
-## Voir aussi  
- [Utilisation de CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

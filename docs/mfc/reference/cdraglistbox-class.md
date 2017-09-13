@@ -1,5 +1,5 @@
 ---
-title: Classe de CDragListBox | Documents Microsoft
+title: CDragListBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,11 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- drag list box [C++]
-- dragging list items
-- CDragListBox class
-- Windows [C++], list boxes
-- list boxes
+- CDragListBox [MFC], CDragListBox
+- CDragListBox [MFC], BeginDrag
+- CDragListBox [MFC], CancelDrag
+- CDragListBox [MFC], Dragging
+- CDragListBox [MFC], DrawInsert
+- CDragListBox [MFC], Dropped
+- CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
 caps.latest.revision: 24
 author: mikeblome
@@ -45,51 +47,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: 3010fd9a363aa1ca1c946a6fe967a7ba415649d4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7867c4d7b3e242c7d59044b93fe9dee3caddc9dd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdraglistbox-class"></a>CDragListBox (classe)
-En plus des fonctionnalités d’une zone de liste Windows, la `CDragListBox` classe permet à l’utilisateur de déplacer des éléments de liste, tels que des noms de fichiers, dans la zone de liste.  
+# <a name="cdraglistbox-class"></a>CDragListBox Class
+In addition to providing the functionality of a Windows list box, the `CDragListBox` class allows the user to move list box items, such as filenames, within the list box.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDragListBox : public CListBox  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDragListBox::CDragListBox](#cdraglistbox)|Construit un objet `CDragListBox`.|  
+|[CDragListBox::CDragListBox](#cdraglistbox)|Constructs a `CDragListBox` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDragListBox::BeginDrag](#begindrag)|Appelé par l’infrastructure au démarrage d’une opération de glisser-déplacer.|  
-|[CDragListBox::CancelDrag](#canceldrag)|Appelé par l’infrastructure lorsqu’une opération glisser a été annulée.|  
-|[CDragListBox::Dragging](#dragging)|Appelé par l’infrastructure pendant une opération glisser.|  
-|[CDragListBox::DrawInsert](#drawinsert)|Dessine le guide d’insertion de la zone de liste glisser.|  
-|[CDragListBox::Dropped](#dropped)|Appelé par l’infrastructure après que l’élément a été supprimé.|  
-|[CDragListBox::ItemFromPt](#itemfrompt)|Retourne les coordonnées de l’élément déplacé.|  
+|[CDragListBox::BeginDrag](#begindrag)|Called by the framework when a drag operation starts.|  
+|[CDragListBox::CancelDrag](#canceldrag)|Called by the framework when a drag operation has been canceled.|  
+|[CDragListBox::Dragging](#dragging)|Called by the framework during a drag operation.|  
+|[CDragListBox::DrawInsert](#drawinsert)|Draws the insertion guide of the drag list box.|  
+|[CDragListBox::Dropped](#dropped)|Called by the framework after the item has been dropped.|  
+|[CDragListBox::ItemFromPt](#itemfrompt)|Returns the coordinates of the item being dragged.|  
   
-## <a name="remarks"></a>Remarques  
- Zones de liste avec cette fonctionnalité permettent aux utilisateurs de classer les éléments dans une liste de quelque manière plus utile pour eux. Par défaut, la zone de liste sera déplacer l’élément vers le nouvel emplacement dans la liste. Toutefois, `CDragListBox` objets peuvent être personnalisés pour copier des éléments au lieu de les déplacer.  
+## <a name="remarks"></a>Remarks  
+ List boxes with this capability allow users to order the items in a list in whatever manner is most useful to them. By default, the list box will move the item to the new location in the list. However, `CDragListBox` objects can be customized to copy items instead of moving them.  
   
- Le contrôle de zone de liste associée le `CDragListBox` classe ne doit pas avoir la **LBS_SORT** ou **LBS_MULTIPLESELECT** style. Pour obtenir une description des styles de zone de liste, consultez [Styles de zone de liste](../../mfc/reference/list-box-styles.md).  
+ The list box control associated with the `CDragListBox` class must not have the **LBS_SORT** or the **LBS_MULTIPLESELECT** style. For a description of list box styles, see [List-Box Styles](../../mfc/reference/styles-used-by-mfc.md#list-box-styles).  
   
- Pour utiliser une zone de liste glisser dans une boîte de dialogue existante de votre application, ajoutez un contrôle de zone de liste à votre modèle de boîte de dialogue à l’aide de l’éditeur de boîtes de dialogue et puis affectez une variable membre (de la catégorie `Control` et le Type de Variable `CDragListBox`) correspondant à la zone de liste dans votre modèle de boîte de dialogue.  
+ To use a drag list box in an existing dialog box of your application, add a list box control to your dialog template using the dialog editor and then assign a member variable (of Category `Control` and Variable Type `CDragListBox`) corresponding to the list box control in your dialog template.  
   
- Pour plus d’informations sur l’affectation des contrôles à des variables de membre, consultez la page [raccourci pour la définition des Variables membres pour les contrôles de boîte de dialogue](../../windows/defining-member-variables-for-dialog-controls.md).  
+ For more information on assigning controls to member variables, see [Shortcut for Defining Member Variables for Dialog Controls](../../windows/defining-member-variables-for-dialog-controls.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -100,86 +102,86 @@ class CDragListBox : public CListBox
   
  `CDragListBox`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="begindrag"></a>CDragListBox::BeginDrag  
- Appelée par l’infrastructure lorsque survient un événement qui pourrait commencer une opération glisser, telles que le bouton gauche de la souris.  
+##  <a name="begindrag"></a>  CDragListBox::BeginDrag  
+ Called by the framework when an event occurs that could begin a drag operation, such as pressing the left mouse button.  
   
 ```  
 virtual BOOL BeginDrag(CPoint pt);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pt`  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui contient les coordonnées de l’élément déplacé.  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object that contains the coordinates of the item being dragged.  
   
-### <a name="return-value"></a>Valeur de retour  
- Différent de zéro si le glissement est autorisée, sinon 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if dragging is allowed, otherwise 0.  
   
-### <a name="remarks"></a>Remarques  
- Remplacez cette fonction si vous souhaitez contrôler ce qui se passe lorsqu’une opération glisser commence. L’implémentation par défaut capture la souris et reste en mode glisser jusqu'à ce que l’utilisateur clique sur le bouton gauche ou droit de la souris ou appuie sur la touche ÉCHAP, moment auquel l’opération glisser est annulée.  
+### <a name="remarks"></a>Remarks  
+ Override this function if you want to control what happens when a drag operation begins. The default implementation captures the mouse and stays in drag mode until the user clicks the left or right mouse button or presses ESC, at which time the drag operation is canceled.  
   
-##  <a name="canceldrag"></a>CDragListBox::CancelDrag  
- Appelé par l’infrastructure lorsqu’une opération glisser a été annulée.  
+##  <a name="canceldrag"></a>  CDragListBox::CancelDrag  
+ Called by the framework when a drag operation has been canceled.  
   
 ```  
 virtual void CancelDrag(CPoint pt);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pt`  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui contient les coordonnées de l’élément déplacé.  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object that contains the coordinates of the item being dragged.  
   
-### <a name="remarks"></a>Remarques  
- Remplacez cette fonction pour traiter tout traitement spécial pour votre contrôle de zone de liste.  
+### <a name="remarks"></a>Remarks  
+ Override this function to handle any special processing for your list box control.  
   
-##  <a name="cdraglistbox"></a>CDragListBox::CDragListBox  
- Construit un objet `CDragListBox`.  
+##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox  
+ Constructs a `CDragListBox` object.  
   
 ```  
 CDragListBox();
 ```  
   
-##  <a name="dragging"></a>CDragListBox::Dragging  
- Appelé par l’infrastructure lorsqu’un élément de zone de liste est glissé dans les `CDragListBox` objet.  
+##  <a name="dragging"></a>  CDragListBox::Dragging  
+ Called by the framework when a list box item is being dragged within the `CDragListBox` object.  
   
 ```  
 virtual UINT Dragging(CPoint pt);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pt`  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui contient les coordonnées x et y de l’écran coordonnées du curseur.  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object that contains the x and y screen coordinates of the cursor.  
   
-### <a name="return-value"></a>Valeur de retour  
- L’ID de ressource du curseur à afficher. Les valeurs suivantes sont possibles :  
+### <a name="return-value"></a>Return Value  
+ The resource ID of the cursor to be displayed. The following values are possible:  
   
-- `DL_COPYCURSOR`Indique que l’élément sera copié.  
+- `DL_COPYCURSOR` Indicates that the item will be copied.  
   
-- `DL_MOVECURSOR`Indique que l’élément sera déplacé.  
+- `DL_MOVECURSOR` Indicates that the item will be moved.  
   
-- `DL_STOPCURSOR`Indique que la cible de déplacement actuelle n’est pas acceptable.  
+- `DL_STOPCURSOR` Indicates that the current drop target is not acceptable.  
   
-### <a name="remarks"></a>Remarques  
- Le comportement par défaut retourne `DL_MOVECURSOR`. Remplacez cette fonction si vous souhaitez fournir des fonctionnalités supplémentaires.  
+### <a name="remarks"></a>Remarks  
+ The default behavior returns `DL_MOVECURSOR`. Override this function if you want to provide additional functionality.  
   
-##  <a name="drawinsert"></a>CDragListBox::DrawInsert  
- Appelé par l’infrastructure pour dessiner le guide d’insertion avant l’élément avec l’index spécifié.  
+##  <a name="drawinsert"></a>  CDragListBox::DrawInsert  
+ Called by the framework to draw the insertion guide before the item with the indicated index.  
   
 ```  
 virtual void DrawInsert(int nItem);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Index de base zéro du point d’insertion.  
+ Zero-based index of the insertion point.  
   
-### <a name="remarks"></a>Remarques  
- Une valeur de - 1 efface le guide d’insertion. Remplacez cette fonction pour modifier l’apparence ou le comportement du guide d’insertion.  
+### <a name="remarks"></a>Remarks  
+ A value of - 1 clears the insertion guide. Override this function to modify the appearance or behavior of the insertion guide.  
   
-##  <a name="dropped"></a>CDragListBox::Dropped  
- Appelé par l’infrastructure lorsqu’un élément est supprimé dans un `CDragListBox` objet.  
+##  <a name="dropped"></a>  CDragListBox::Dropped  
+ Called by the framework when an item is dropped within a `CDragListBox` object.  
   
 ```  
 virtual void Dropped(
@@ -187,18 +189,18 @@ virtual void Dropped(
     CPoint pt);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *nSrcIndex*  
- Spécifie l’index de base zéro de la chaîne supprimée.  
+ Specifies the zero-based index of the dropped string.  
   
  `pt`  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet qui contient les coordonnées du site de dépôt.  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object that contains the coordinates of the drop site.  
   
-### <a name="remarks"></a>Remarques  
- Le comportement par défaut copie l’élément de zone de liste et ses données vers le nouvel emplacement, puis supprime l’élément d’origine. Remplacez cette fonction pour personnaliser le comportement par défaut, telles que l’activation des copies des éléments de zone de liste à faire glisser vers d’autres emplacements au sein de la liste.  
+### <a name="remarks"></a>Remarks  
+ The default behavior copies the list box item and its data to the new location and then deletes the original item. Override this function to customize the default behavior, such as enabling copies of list box items to be dragged to other locations within the list.  
   
-##  <a name="itemfrompt"></a>CDragListBox::ItemFromPt  
- Appel de cette fonction pour récupérer l’index de base zéro de l’élément de zone de liste située à `pt`.  
+##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
+ Call this function to retrieve the zero-based index of the list box item located at `pt`.  
   
 ```  
 int ItemFromPt(
@@ -206,19 +208,19 @@ int ItemFromPt(
     BOOL bAutoScroll = TRUE) const;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pt`  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objet contenant les coordonnées d’un point dans la zone de liste.  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object containing the coordinates of a point within the list box.  
   
  *bAutoScroll*  
- Différent de zéro si le défilement est autorisé, sinon 0.  
+ Nonzero if scrolling is allowed, otherwise 0.  
   
-### <a name="return-value"></a>Valeur de retour  
- Index de base zéro de l’élément de zone de liste de glissement.  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the drag list box item.  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemple MFC TSTCON](../../visual-cpp-samples.md)   
- [CListBox (classe)](../../mfc/reference/clistbox-class.md)   
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [CListBox (classe)](../../mfc/reference/clistbox-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample TSTCON](../../visual-cpp-samples.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)
 

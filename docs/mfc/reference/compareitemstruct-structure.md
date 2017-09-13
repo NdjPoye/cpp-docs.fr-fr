@@ -1,74 +1,92 @@
 ---
-title: "COMPAREITEMSTRUCT, structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COMPAREITEMSTRUCT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COMPAREITEMSTRUCT (structure)"
+title: COMPAREITEMSTRUCT Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- COMPAREITEMSTRUCT
+dev_langs:
+- C++
+helpviewer_keywords:
+- COMPAREITEMSTRUCT structure [MFC]
 ms.assetid: 4b7131a5-5c7d-4e98-aac7-e85650262b52
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# COMPAREITEMSTRUCT, structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3ca1c8370a64667578092bb3ad0046cdcc0d2cf1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-La structure `COMPAREITEMSTRUCT` fournit des identificateurs et des données fournies par l'application pour deux éléments dans une zone de liste ou une zone combinée triée et dessinée par le propriétaire.  
+---
+# <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT Structure
+The `COMPAREITEMSTRUCT` structure supplies the identifiers and application-supplied data for two items in a sorted, owner-drawn list box or combo box.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      typedef struct tagCOMPAREITEMSTRUCT {  
-    UINT   CtlType;  
-    UINT   CtlID;  
-    HWND   hwndItem;  
-    UINT   itemID1;  
-    DWORD  itemData1;  
-    UINT   itemID2;  
-    DWORD  itemData2;  
+typedef struct tagCOMPAREITEMSTRUCT {  
+    UINT CtlType;  
+    UINT CtlID;  
+    HWND hwndItem;  
+    UINT itemID1;  
+    DWORD itemData1;  
+    UINT itemID2;  
+    DWORD itemData2;  
 } COMPAREITEMSTRUCT;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Parameters  
  `CtlType`  
- **ODT\_LISTBOX** \(qui spécifie une zone de liste \) ou **ODT\_COMBOBOX** \(qui spécifie une zone combinée dessinée par le propriétaire\).  
+ **ODT_LISTBOX** (which specifies an owner-draw list box) or **ODT_COMBOBOX** (which specifies an owner-draw combo box).  
   
  `CtlID`  
- ID du contrôle de la zone de liste ou la zone combinée.  
+ The control ID for the list box or combo box.  
   
  `hwndItem`  
- Handle de fenêtre du contrôle.  
+ The window handle of the control.  
   
  *itemID1*  
- Indice du premier élément dans la zone de liste ou la zone combinée qui est comparée.  
+ The index of the first item in the list box or combo box being compared.  
   
  *itemData1*  
- Données fournies par l'application pour le premier élément comparé.  Cette valeur a été passée dans l'appel qui a ajouté l'élément dans la zone combinée ou la zone de liste.  
+ Application-supplied data for the first item being compared. This value was passed in the call that added the item to the combo or list box.  
   
  *itemID2*  
- Indice du second élément dans la zone de liste ou la zone combinée à être comparé.  
+ Index of the second item in the list box or combo box being compared.  
   
  *itemData2*  
- Données fournies par l'application pour le second élément comparé.  Cette valeur a été passée dans l'appel qui a ajouté l'élément dans la zone combinée ou la zone de liste.  
+ Application-supplied data for the second item being compared. This value was passed in the call that added the item to the combo or list box.  
   
-## Notes  
- Lorsqu'une application ajoute un nouvel élément à une zone de liste ou une zone combinée dessinée par le propriétaire créée avec le style **CBS\_SORT** ou **LBS\_SORT**, Windows envoie au propriétaire un message `WM_COMPAREITEM`.  Le paramètre `lParam` du message contient un pointeur long vers une structure `COMPAREITEMSTRUCT`.  A la réception du message, le propriétaire compare les deux éléments et retourne une valeur indiquant quel élément est trié avant l'autre.  
+## <a name="remarks"></a>Remarks  
+ Whenever an application adds a new item to an owner-drawn list box or combo box created with the **CBS_SORT** or **LBS_SORT** style, Windows sends the owner a `WM_COMPAREITEM` message. The `lParam` parameter of the message contains a long pointer to a `COMPAREITEMSTRUCT` structure. Upon receiving the message, the owner compares the two items and returns a value indicating which item sorts before the other.  
   
-## Configuration requise  
- **En\-tête :** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## Voir aussi  
- [Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnCompareItem](../Topic/CWnd::OnCompareItem.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem)
+
+

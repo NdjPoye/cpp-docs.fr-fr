@@ -1,67 +1,86 @@
 ---
-title: "Classes de barre de contr&#244;le | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.control"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "barres de contrôles, classes"
+title: Control Bar Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.control
+dev_langs:
+- C++
+helpviewer_keywords:
+- control bars [MFC], classes
 ms.assetid: 11009103-cad8-4309-85ce-3d2e858e1818
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Classes de barre de contr&#244;le
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b798583c9848ca035fbbea45d9a58b638caf137d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Les barres de contrôles sont jointes dans une fenêtre cadre.  Elles contiennent des boutons, des volets d'état, ou des modèles de boîte de dialogue.  Les barres de contrôle en déplacement libre, également appelées palettes d'outils, sont implémentées en les attachant à un objet [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md).  
+---
+# <a name="control-bar-classes"></a>Control Bar Classes
+Control bars are attached to a frame window. They contain buttons, status panes, or a dialog template. Free-floating control bars, also called tool palettes, are implemented by attaching them to a [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md) object.  
   
-## Barres de contrôles du framework  
- Ces barres de contrôles sont partie intégrante du framework MFC.  Elles sont plus faciles à utilisaer et plus puissantes que les barres de contrôle Windows car elles sont intégrées au framework.  La plupart des applications MFC utilisent ces barres de contrôles plutôt que les barres de contrôle Windows.  
+## <a name="framework-control-bars"></a>Framework Control Bars  
+ These control bars are an integral part of the MFC framework. They are easier to use and more powerful than the Windows control bars because they are integrated with the framework. Most MFC applications use these control bars rather than the Windows control bars.  
   
  [CControlBar](../mfc/reference/ccontrolbar-class.md)  
- La classe de base pour les barres de contrôles MFC répertoriées dans cette section.  Une barre de contrôle est une fenêtre alignée sur le bord d'une fenêtre cadre.  La barre de contrôle contient soit les contrôles enfants ou les contrôles basés sur des `HWND` ou des contrôles non basés sur `HWND`, tels que les boutons de la barre d'outils.  
+ The base class for MFC control bars listed in this section. A control bar is a window aligned to the edge of a frame window. The control bar contains either `HWND`-based child controls or controls not based on an `HWND`, such as toolbar buttons.  
   
  [CDialogBar](../mfc/reference/cdialogbar-class.md)  
- Une barre de contrôles basée sur un modèle de boîte de dialogue.  
+ A control bar that is based on a dialog box template.  
   
  [CReBar](../mfc/reference/crebar-class.md)  
- Supporte une barre d'outils qui peut contenir des fenêtres enfant supplémentaires sous forme de contrôles  
+ Supports a toolbar that can contain additional child windows in the form of controls.  
   
  [CToolBar](../mfc/reference/ctoolbar-class.md)  
- Le contrôle de barre d'outils qui contient les boutons de commande bitmap non basés sur un `HWND`.  La plupart des applications MFC utilisent cette classe au lieu de `CToolBarCtrl`.  
+ Toolbar control windows that contain bitmap command buttons not based on an `HWND`. Most MFC applications use this class rather than `CToolBarCtrl`.  
   
  [CStatusBar](../mfc/reference/cstatusbar-class.md)  
- La classe de base pour les fenêtres de contrôle de la barre d'état.  La plupart des applications MFC utilisent cette classe au lieu de `CStatusBarCtrl`.  
+ The base class for status-bar control windows. Most MFC applications use this class rather than `CStatusBarCtrl`.  
   
-## Barres de Contrôle Windows  
- Ces barres de contrôle sont des wrappers légers pour les contrôles Windows correspondants.  Étant donné qu'elles ne sont pas incluses dans le frameworke, il est plus difficile de les utiliser que les barres de contrôle précédemment répertoriées.  La plupart des applications MFC utilisent les barres de contrôle précédemment répertoriées.  
+## <a name="windows-control-bars"></a>Windows Control Bars  
+ These control bars are thin wrappers for the corresponding Windows controls. Because they are not integrated with the framework, they are harder to use than the control bars previously listed. Most MFC applications use the control bars previously listed.  
   
  [CRebarCtrl](../mfc/reference/crebarctrl-class.md)  
- Implémente le contrôle interne de l'objet `CRebar`.  
+ Implements the internal control of the `CRebar` object.  
   
  [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)  
- Une fenêtre horizontale, généralement divisée en volets, où une application peut afficher les informations d'état.  
+ A horizontal window, usually divided into panes, in which an application can display status information.  
   
  [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)  
- Fournit les fonctionnalités du contrôle commun de barre d'outils Windows.  
+ Provides the functionality of the Windows toolbar common control.  
   
-## Classes liées  
+## <a name="related-classes"></a>Related Classes  
  [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)  
- Une petite fenêtre indépendante qui contient une seule ligne de texte qui décrit l'objectif d'un outil dans une application.  
+ A small pop-up window that displays a single line of text describing the purpose of a tool in an application.  
   
  [CDockState](../mfc/reference/cdockstate-class.md)  
- Gère le stockage permanent des données d'état d'ancrage des barres de contrôle.  
+ Handles persistent storage of docking state data for control bars.  
   
-## Voir aussi  
- [Vue d'ensemble des classes](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

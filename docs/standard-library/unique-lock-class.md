@@ -1,5 +1,5 @@
 ---
-title: unique_lock, classe | Microsoft Docs
+title: unique_lock Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,173 +31,173 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: aceca2d408b1c28f1fb9f9f1f1f9f0a1720f7849
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 89846c17200b233d6588d9f9a4d59b9bd81cdd1a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="uniquelock-class"></a>unique_lock, classe
-Représente un modèle qui peut être instancié pour créer des objets qui gèrent le verrouillage et le déverrouillage d'un `mutex`.  
+# <a name="uniquelock-class"></a>unique_lock Class
+Represents a template that can be instantiated to create objects that manage the locking and unlocking of a `mutex`.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Mutex>
 class unique_lock;
 ```  
   
-## <a name="remarks"></a>Notes  
- L’argument de modèle `Mutex` doit nommer un *type mutex*.  
+## <a name="remarks"></a>Remarks  
+ The template argument `Mutex` must name a *mutex type*.  
   
- En interne, un `unique_lock` stocke un pointeur vers un objet `mutex` associé et un `bool` qui indique si le thread actuel détient le `mutex`.  
+ Internally, a `unique_lock` stores a pointer to an associated `mutex` object and a `bool` that indicates whether the current thread owns the `mutex`.  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-typedefs"></a>Typedefs publics  
+### <a name="public-typedefs"></a>Public Typedefs  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|`mutex_type`|Synonyme de l’argument de modèle `Mutex`.|  
+|`mutex_type`|Synonym for the template argument `Mutex`.|  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[unique_lock](#unique_lock)|Construit un objet `unique_lock`.|  
-|[~unique_lock, destructeur](#dtorunique_lock_destructor)|Libère toutes les ressources associées à l’objet `unique_lock`.|  
+|[unique_lock](#unique_lock)|Constructs a `unique_lock` object.|  
+|[~unique_lock Destructor](#dtorunique_lock_destructor)|Releases any resources that are associated with the `unique_lock` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[lock](#lock)|Bloque le thread appelant jusqu’à ce que le thread obtienne la propriété du `mutex` associé.|  
-|[mutex](#mutex)|Récupère le pointeur stocké vers le `mutex` associé.|  
-|[owns_lock](#owns_lock)|Spécifie si le thread appelant possède le `mutex` associé.|  
-|[release](#release)|Dissocie l’objet `unique_lock` de l’objet `mutex` associé.|  
-|[swap](#swap)|Échange le `mutex` associé et l’état de propriété avec ceux d’un objet spécifié.|  
-|[try_lock](#try_lock)|Tente d'obtenir la propriété de la référence `mutex` associée sans se bloquer.|  
-|[try_lock_for](#try_lock_for)|Tente d'obtenir la propriété de la référence `mutex` associée sans se bloquer.|  
-|[try_lock_until](#try_lock_until)|Tente d'obtenir la propriété de la référence `mutex` associée sans se bloquer.|  
-|[unlock](#unlock)|Libère la propriété du `mutex` associé.|  
+|[lock](#lock)|Blocks the calling thread until the thread obtains ownership of the associated `mutex`.|  
+|[mutex](#mutex)|Retrieves the stored pointer to the associated `mutex`.|  
+|[owns_lock](#owns_lock)|Specifies whether the calling thread owns the associated `mutex`.|  
+|[release](#release)|Disassociates the `unique_lock` object from the associated `mutex` object.|  
+|[swap](#swap)|Swaps the associated `mutex` and ownership status with that of a specified object.|  
+|[try_lock](#try_lock)|Attempts to obtain ownership of the associated `mutex` without blocking.|  
+|[try_lock_for](#try_lock_for)|Attempts to obtain ownership of the associated `mutex` without blocking.|  
+|[try_lock_until](#try_lock_until)|Attempts to obtain ownership of the associated `mutex` without blocking.|  
+|[unlock](#unlock)|Releases ownership of the associated `mutex`.|  
   
-### <a name="public-operators"></a>Op&#233;rateurs publics  
+### <a name="public-operators"></a>Public Operators  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[operator bool](#op_bool)|Spécifie si le thread appelant possède le `mutex` associé.|  
-|[operator=](#op_eq)|Copie le pointeur `mutex` stocké et l’état de propriété associé à partir d’un objet spécifié.|  
+|[operator bool](#op_bool)|Specifies whether the calling thread has ownership of the associated `mutex`.|  
+|[operator=](#op_eq)|Copies the stored `mutex` pointer and associated ownership status from a specified object.|  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `unique_lock`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<mutex >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<mutex>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
 ##  <a name="lock"></a>  lock  
- Bloque le thread appelant jusqu’à ce que le thread obtienne la propriété du `mutex` associé.  
+ Blocks the calling thread until the thread obtains ownership of the associated `mutex`.  
   
 ```cpp  
 void lock();
 ```  
   
-### <a name="remarks"></a>Notes  
- Si le pointeur `mutex` stocké est `null`, cette méthode lève une [system_error](../standard-library/system-error-class.md) avec le code d’erreur `operation_not_permitted`.  
+### <a name="remarks"></a>Remarks  
+ If the stored `mutex` pointer is `null`, this method throws a [system_error](../standard-library/system-error-class.md) that has an error code of `operation_not_permitted`.  
   
- Si le thread appelant possède déjà le `mutex` associé, cette méthode lève une `system_error` avec le code d’erreur `resource_deadlock_would_occur`.  
+ If the calling thread already owns the associated `mutex`, this method throws a `system_error` that has an error code of `resource_deadlock_would_occur`.  
   
- Sinon, cette méthode appelle `lock` sur le `mutex` associé et définit l’indicateur de propriété de thread interne sur `true`.  
+ Otherwise, this method calls `lock` on the associated `mutex` and sets the internal thread ownership flag to `true`.  
   
 ##  <a name="mutex"></a>  mutex  
- Récupère le pointeur stocké vers le `mutex` associé.  
+ Retrieves the stored pointer to the associated `mutex`.  
   
 ```cpp  
 mutex_type *mutex() const noexcept;
 ```  
   
 ##  <a name="op_bool"></a>  operator bool  
- Spécifie si le thread appelant possède le mutex associé.  
+ Specifies whether the calling thread has ownership of the associated mutex.  
   
 ```cpp  
 explicit operator bool() noexcept
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `true` si le thread possède le mutex ; sinon, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the thread owns the mutex; otherwise `false`.  
   
 ##  <a name="op_eq"></a>  operator=  
- Copie le pointeur `mutex` stocké et l’état de propriété associé à partir d’un objet spécifié.  
+ Copies the stored `mutex` pointer and associated ownership status from a specified object.  
   
 ```cpp  
 unique_lock& operator=(unique_lock&& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Other`  
- Objet `unique_lock`.  
+ A `unique_lock` object.  
   
-### <a name="return-value"></a>Valeur de retour  
+### <a name="return-value"></a>Return Value  
  `*this`  
   
-### <a name="remarks"></a>Notes  
- Si le thread appelant possède le `mutex` précédemment associé, avant que cette méthode appelle `unlock` sur le `mutex`, il assigne les nouvelles valeurs.  
+### <a name="remarks"></a>Remarks  
+ If the calling thread owns the previously associated `mutex`, before this method calls `unlock` on the `mutex`, it assigns the new values.  
   
- Après la copie, cette méthode définit `Other` à un état construit par défaut.  
+ After the copy, this method sets `Other` to a default-constructed state.  
   
 ##  <a name="owns_lock"></a>  owns_lock  
- Spécifie si le thread appelant possède le `mutex` associé.  
+ Specifies whether the calling thread owns the associated `mutex`.  
   
 ```cpp  
 bool owns_lock() const noexcept;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `true` si le thread possède le `mutex` ; sinon, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the thread owns the `mutex`; otherwise, `false`.  
   
 ##  <a name="release"></a>  release  
- Dissocie l’objet `unique_lock` de l’objet `mutex` associé.  
+ Disassociates the `unique_lock` object from the associated `mutex` object.  
   
 ```cpp  
 mutex_type *release() noexcept;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- La valeur précédente du pointeur `mutex` stocké.  
+### <a name="return-value"></a>Return Value  
+ The previous value of the stored `mutex` pointer.  
   
-### <a name="remarks"></a>Notes  
- Cette méthode définit la valeur du pointeur `mutex` stocké à 0 et l’indicateur de propriété `mutex` interne à `false`.  
+### <a name="remarks"></a>Remarks  
+ This method sets the value of the stored `mutex` pointer to 0 and sets the internal `mutex` ownership flag to `false`.  
   
 ##  <a name="swap"></a>  swap  
- Échange le `mutex` associé et l’état de propriété avec ceux d’un objet spécifié.  
+ Swaps the associated `mutex` and ownership status with that of a specified object.  
   
 ```
 void swap(unique_lock& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Other`  
- Objet `unique_lock`.  
+ A `unique_lock` object.  
   
 ##  <a name="try_lock"></a>  try_lock  
- Tente d'obtenir la propriété de la référence `mutex` associée sans se bloquer.  
+ Attempts to obtain ownership of the associated `mutex` without blocking.  
   
 ```cpp  
 bool try_lock() noexcept;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- `true` si la méthode obtient correctement la propriété du `mutex` ; sinon, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the method successfully obtains ownership of the `mutex`; otherwise, `false`.  
   
-### <a name="remarks"></a>Notes  
- Si le pointeur `mutex` stocké est `null`, la méthode lève une [system_error](../standard-library/system-error-class.md) avec le code d’erreur `operation_not_permitted`.  
+### <a name="remarks"></a>Remarks  
+ If the stored `mutex` pointer is `null`, the method throws a [system_error](../standard-library/system-error-class.md) that has an error code of `operation_not_permitted`.  
   
- Si le thread appelant possède déjà le `mutex`, la méthode lève une `system_error` avec le code d’erreur `resource_deadlock_would_occur`.  
+ If the calling thread already owns the `mutex`, the method throws a `system_error` that has an error code of `resource_deadlock_would_occur`.  
   
 ##  <a name="try_lock_for"></a>  try_lock_for  
- Tente d'obtenir la propriété de la référence `mutex` associée sans se bloquer.  
+ Attempts to obtain ownership of the associated `mutex` without blocking.  
   
 ```
 template <class Rep, class Period>
@@ -205,20 +205,20 @@ bool try_lock_for(
     const chrono::duration<Rep, Period>& Rel_time);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Rel_time`  
- Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie la durée maximale pendant laquelle la méthode essaie d’obtenir la propriété du `mutex`.  
+ A [chrono::duration](../standard-library/duration-class.md) object that specifies the maximum amount of time that the method attempts to obtain ownership of the `mutex`.  
   
-### <a name="return-value"></a>Valeur de retour  
- `true` si la méthode obtient correctement la propriété du `mutex` ; sinon, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the method successfully obtains ownership of the `mutex`; otherwise, `false`.  
   
-### <a name="remarks"></a>Notes  
- Si le pointeur `mutex` stocké est `null`, la méthode lève une [system_error](../standard-library/system-error-class.md) avec le code d’erreur `operation_not_permitted`.  
+### <a name="remarks"></a>Remarks  
+ If the stored `mutex` pointer is `null`, the method throws a [system_error](../standard-library/system-error-class.md) that has an error code of `operation_not_permitted`.  
   
- Si le thread appelant possède déjà le `mutex`, la méthode lève une `system_error` avec le code d’erreur `resource_deadlock_would_occur`.  
+ If the calling thread already owns the `mutex`, the method throws a `system_error` that has an error code of `resource_deadlock_would_occur`.  
   
 ##  <a name="try_lock_until"></a>  try_lock_until  
- Tente d'obtenir la propriété de la référence `mutex` associée sans se bloquer.  
+ Attempts to obtain ownership of the associated `mutex` without blocking.  
   
 ```cpp  
 template <class Clock, class Duration>
@@ -227,20 +227,20 @@ bool try_lock_until(const chrono::time_point<Clock, Duration>& Abs_time);
 bool try_lock_until(const xtime* Abs_time);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Abs_time`  
- Point dans le temps qui spécifie le seuil au-delà duquel la méthode ne tente plus d'obtenir la propriété du `mutex`.  
+ A point in time that specifies the threshold after which the method no longer attempts to obtain ownership of the `mutex`.  
   
-### <a name="return-value"></a>Valeur de retour  
- `true` si la méthode obtient correctement la propriété du `mutex` ; sinon, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the method successfully obtains ownership of the `mutex`; otherwise, `false`.  
   
-### <a name="remarks"></a>Notes  
- Si le pointeur `mutex` stocké est `null`, la méthode lève une [system_error](../standard-library/system-error-class.md) avec le code d’erreur `operation_not_permitted`.  
+### <a name="remarks"></a>Remarks  
+ If the stored `mutex` pointer is `null`, the method throws a [system_error](../standard-library/system-error-class.md) that has an error code of `operation_not_permitted`.  
   
- Si le thread appelant possède déjà le `mutex`, la méthode lève une `system_error` avec le code d’erreur `resource_deadlock_would_occur`.  
+ If the calling thread already owns the `mutex`, the method throws a `system_error` that has an error code of `resource_deadlock_would_occur`.  
   
-##  <a name="unique_lock"></a>  unique_lock, constructeur  
- Construit un objet `unique_lock`.  
+##  <a name="unique_lock"></a>  unique_lock Constructor  
+ Constructs a `unique_lock` object.  
   
 ```cpp  
 unique_lock() noexcept;
@@ -266,59 +266,59 @@ unique_lock(mutex_type& Mtx,
     const xtime* Abs_time) noexcept;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Mtx`  
- Objet de type mutex.  
+ A mutex type object.  
   
  `Rel_time`  
- Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie la durée maximale pendant laquelle la méthode essaie d’obtenir la propriété du `mutex`.  
+ A [chrono::duration](../standard-library/duration-class.md) object that specifies the maximum amount of time that the method attempts to obtain ownership of the `mutex`.  
   
  `Abs_time`  
- Point dans le temps qui spécifie le seuil au-delà duquel la méthode ne tente plus d'obtenir la propriété du `mutex`.  
+ A point in time that specifies the threshold after which the method no longer attempts to obtain ownership of the `mutex`.  
   
  `Other`  
- Objet `unique_lock`.  
+ A `unique_lock` object.  
   
-### <a name="remarks"></a>Notes  
- Le premier constructeur construit un objet qui a une valeur de pointeur mutex associé de 0.  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs an object that has an associated mutex pointer value of 0.  
   
- Le deuxième constructeur déplace l’état mutex associé de `Other`. Après le déplacement, `Other` n’est plus associé à un mutex.  
+ The second constructor moves the associated mutex status from `Other`. After the move, `Other` is no longer associated with a mutex.  
   
- Les constructeurs restants stockent & `Mtx` en tant que pointeur `mutex` stocké. L’appartenance du `mutex` est déterminée par le deuxième argument, s’il existe.  
+ The remaining constructors store & `Mtx` as the stored `mutex` pointer. Ownership of the `mutex` is determined by the second argument, if it exists.  
   
 |||  
 |-|-|  
-|`No argument`|L’appartenance est obtenue en appelant la méthode `lock` sur l’objet `mutex` associé.|  
-|`Adopt`|L’appartenance est supposée. `Mtx` doit être verrouillé quand le constructeur est appelé.|  
-|`Defer`|Le thread appelant est supposé ne pas posséder l’objet `mutex`. `Mtx` ne doit pas être verrouillé quand le constructeur est appelé.|  
-|`Try`|L’appartenance est déterminée en appelant `try_lock` sur l’objet `mutex` associé. Le constructeur ne lève aucune exception.|  
-|`Rel_time`|L’appartenance est déterminée en appelant `try_lock_for(Rel_time)`.|  
-|`Abs_time`|L’appartenance est déterminée en appelant `try_lock_until(Abs_time)`.|  
+|`No argument`|Ownership is obtained by calling the `lock` method on the associated `mutex` object.|  
+|`Adopt`|Ownership is assumed. `Mtx` must be locked when the constructor is called.|  
+|`Defer`|The calling thread is assumed not to own the `mutex` object. `Mtx` must not be locked when the constructor is called.|  
+|`Try`|Ownership is determined by calling `try_lock` on the associated `mutex` object. The constructor throws nothing.|  
+|`Rel_time`|Ownership is determined by calling `try_lock_for(Rel_time)`.|  
+|`Abs_time`|Ownership is determined by calling `try_lock_until(Abs_time)`.|  
   
-##  <a name="dtorunique_lock_destructor"></a>  ~unique_lock, destructeur  
- Libère toutes les ressources associées à l’objet `unique_lock`.  
+##  <a name="dtorunique_lock_destructor"></a>  ~unique_lock Destructor  
+ Releases any resources that are associated with the `unique_lock` object.  
   
 ```cpp  
 ~unique_lock() noexcept;
 ```  
   
-### <a name="remarks"></a>Notes  
- Si le thread appelant possède le `mutex` associé, le destructeur libère la propriété en appelant unlock sur l’objet `mutex`.  
+### <a name="remarks"></a>Remarks  
+ If the calling thread owns the associated `mutex`, the destructor releases ownership by calling unlock on the `mutex` object.  
   
 ##  <a name="unlock"></a>  unlock  
- Libère la propriété du `mutex` associé.  
+ Releases ownership of the associated `mutex`.  
   
 ```cpp  
 void unlock();
 ```  
   
-### <a name="remarks"></a>Notes  
- Si le thread appelant ne possède pas le `mutex` associé, cette méthode lève une [system_error](../standard-library/system-error-class.md) avec le code d’erreur `operation_not_permitted`.  
+### <a name="remarks"></a>Remarks  
+ If the calling thread doesn't own the associated `mutex`, this method throws a [system_error](../standard-library/system-error-class.md) that has an error code of `operation_not_permitted`.  
   
- Sinon, cette méthode appelle `unlock` sur le `mutex` associé et définit l’indicateur de propriété de thread interne sur `false`.  
+ Otherwise, this method calls `unlock` on the associated `mutex` and sets the internal thread ownership flag to `false`.  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Classe d’objet CHttpConnection | Documents Microsoft"
+title: CHttpConnection Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,18 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- servers, connecting to
-- protocols, HTTP
-- connecting to servers, HTTP servers
-- Internet protocols, HTTP
-- HTTP connections
-- Internet protocols
-- CHttpConnection class
-- HTTP servers, connecting to
-- connecting to servers
-- Internet connections, HTTP
-- connections [C++], HTTP
-- Internet server, HTTP
+- CHttpConnection [MFC], CHttpConnection
+- CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
 caps.latest.revision: 24
 author: mikeblome
@@ -47,57 +37,57 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1b02a79cebbd73a05478887115646f0544f0a92d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4a484b97fcdb5a3cb3ddfe603594d6e10657a181
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="chttpconnection-class"></a>Classe d’objet CHttpConnection
-Gère votre connexion à un serveur HTTP.  
+# <a name="chttpconnection-class"></a>CHttpConnection Class
+Manages your connection to an HTTP server.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CHttpConnection : public CInternetConnection  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHttpConnection::CHttpConnection](#chttpconnection)|Crée un objet `CHttpConnection`.|  
+|[CHttpConnection::CHttpConnection](#chttpconnection)|Creates a `CHttpConnection` object.|  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHttpConnection::OpenRequest](#openrequest)|Ouvre une requête HTTP.|  
+|[CHttpConnection::OpenRequest](#openrequest)|Opens an HTTP request.|  
   
-## <a name="remarks"></a>Remarques  
- HTTP est un des trois protocoles de serveur Internet implémentées par les classes WinInet MFC.  
+## <a name="remarks"></a>Remarks  
+ HTTP is one of three Internet server protocols implemented by the MFC WinInet classes.  
   
- La classe `CHttpConnection` contient un constructeur et une fonction une membre [OpenRequest](#openrequest), qui gère les connexions à un serveur avec le protocole HTTP.  
+ The class `CHttpConnection` contains a constructor and one member function, [OpenRequest](#openrequest), that manages connections to a server with an HTTP protocol.  
   
- Pour communiquer avec un serveur HTTP, vous devez d’abord créer une instance de [CInternetSession](../../mfc/reference/cinternetsession-class.md), puis créez un [objet CHttpConnection](#_mfc_chttpconnection) objet. Vous ne créez jamais un `CHttpConnection` objet directement ; au lieu de cela, appelez [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection), qui crée le `CHttpConnection` d’objet et retourne un pointeur vers elle.  
+ To communicate with an HTTP server, you must first create an instance of [CInternetSession](../../mfc/reference/cinternetsession-class.md), and then create a [CHttpConnection](#_mfc_chttpconnection) object. You never create a `CHttpConnection` object directly; rather, call [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection), which creates the `CHttpConnection` object and returns a pointer to it.  
   
- Pour en savoir plus sur le `CHttpConnection` fonctionne avec les autres classes MFC Internet, consultez l’article [de programmation Internet avec WinInet](../../mfc/win32-internet-extensions-wininet.md). Pour plus d’informations sur la connexion aux serveurs à l’aide de deux autres prises en charge des protocoles Internet, gopher et FTP, consultez les classes [objet CGopherConnection](../../mfc/reference/cgopherconnection-class.md) et [CFtpConnection](../../mfc/reference/cftpconnection-class.md).  
+ To learn more about how `CHttpConnection` works with the other MFC Internet classes, see the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md). For more information about connecting to servers using the other two supported Internet protocols, gopher and FTP, see the classes [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) and [CFtpConnection](../../mfc/reference/cftpconnection-class.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)  
   
  `CHttpConnection`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxinet.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxinet.h  
   
-##  <a name="chttpconnection"></a>CHttpConnection::CHttpConnection  
- Cette fonction membre est appelée pour construire un `CHttpConnection` objet.  
+##  <a name="chttpconnection"></a>  CHttpConnection::CHttpConnection  
+ This member function is called to construct a `CHttpConnection` object.  
   
 ```  
 CHttpConnection(
@@ -126,43 +116,43 @@ CHttpConnection(
     DWORD_PTR dwContext = 1);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pSession`  
- Un pointeur vers un [CInternetSession](../../mfc/reference/cinternetsession-class.md) objet.  
+ A pointer to a [CInternetSession](../../mfc/reference/cinternetsession-class.md) object.  
   
  `hConnected`  
- Handle d’une connexion Internet.  
+ A handle to an Internet connection.  
   
  `pstrServer`  
- Pointeur vers une chaîne contenant le nom du serveur.  
+ A pointer to a string containing the server name.  
   
  `dwContext`  
- L’identificateur de contexte pour le `CInternetConnection` objet. Consultez la page **remarques** pour plus d’informations sur `dwContext`.  
+ The context identifier for the `CInternetConnection` object. See **Remarks** for more information about `dwContext`.  
   
  `nPort`  
- Numéro qui identifie le port Internet pour cette connexion.  
+ The number that identifies the Internet port for this connection.  
   
  `pstrUserName`  
- Pointeur vers une chaîne terminée par le caractère null qui spécifie le nom de l’utilisateur pour se connecter. Si **NULL**, la valeur par défaut est anonyme.  
+ Pointer to a null-terminated string that specifies the name of the user to log in. If **NULL**, the default is anonymous.  
   
  `pstrPassword`  
- Pointeur vers une chaîne terminée par le caractère null qui spécifie le mot de passe à utiliser pour se connecter. Si les deux `pstrPassword` et `pstrUserName` sont **NULL**, le mot de passe anonyme par défaut est le nom d’utilisateur par courrier électronique. Si `pstrPassword` est **NULL** (ou une chaîne vide), mais `pstrUserName` n’est pas **NULL**, un mot de passe vierge est utilisé. Le tableau suivant décrit le comportement pour les quatre paramètres possibles de `pstrUserName` et `pstrPassword`:  
+ A pointer to a null-terminated string that specifies the password to use to log in. If both `pstrPassword` and `pstrUserName` are **NULL**, the default anonymous password is the user's email name. If `pstrPassword` is **NULL** (or an empty string) but `pstrUserName` is not **NULL**, a blank password is used. The following table describes the behavior for the four possible settings of `pstrUserName` and `pstrPassword`:  
   
-|`pstrUserName`|`pstrPassword`|Nom d’utilisateur est envoyé au serveur FTP|Mot de passe envoyé au serveur FTP|  
+|`pstrUserName`|`pstrPassword`|Username sent to FTP server|Password sent to FTP server|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL** ou « »|**NULL** ou « »|« anonyme »|Nom de l’utilisateur par courrier électronique|  
-|Non- **NULL** chaîne|**NULL** ou « »|`pstrUserName`|" "|  
-|**NULL** non **NULL** chaîne|**ERREUR**|**ERREUR**||  
-|Non- **NULL** chaîne|Non- **NULL** chaîne|`pstrUserName`|`pstrPassword`|  
+|**NULL** or " "|**NULL** or " "|"anonymous"|User's email name|  
+|Non- **NULL** String|**NULL** or " "|`pstrUserName`|" "|  
+|**NULL** Non- **NULL** String|**ERROR**|**ERROR**||  
+|Non- **NULL** String|Non- **NULL** String|`pstrUserName`|`pstrPassword`|  
   
  `dwFlags`  
- N’importe quelle combinaison de la **INTERNET_ FLAG_\* ** indicateurs. Consultez le tableau dans le **remarques** section de [CHttpConnection::OpenRequest](#openrequest) pour obtenir une description de `dwFlags` valeurs.  
+ Any combination of the **INTERNET_ FLAG_\*** flags. See the table in the **Remarks** section of [CHttpConnection::OpenRequest](#openrequest) for a description of `dwFlags` values.  
   
-### <a name="remarks"></a>Notes  
- Vous ne créez jamais un `CHttpConnection` directement. Au lieu de cela, vous créez un objet en appelant [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  
+### <a name="remarks"></a>Remarks  
+ You never create a `CHttpConnection` directly. Rather, you create an object by calling [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  
   
-##  <a name="openrequest"></a>CHttpConnection::OpenRequest  
- Appelez cette fonction membre pour ouvrir une connexion HTTP.  
+##  <a name="openrequest"></a>  CHttpConnection::OpenRequest  
+ Call this member function to open an HTTP connection.  
   
 ```  
 CHttpFile* OpenRequest(
@@ -185,32 +175,32 @@ CHttpFile* OpenRequest(
     DWORD dwFlags = INTERNET_FLAG_EXISTING_CONNECT);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `pstrVerb`  
- Pointeur vers une chaîne contenant le verbe à utiliser dans la demande. Si `NULL`, « GET » est utilisé.  
+ A pointer to a string containing the verb to use in the request. If `NULL`, "GET" is used.  
   
  `pstrObjectName`  
- Pointeur vers une chaîne qui contient l’objet cible du verbe spécifié. C’est généralement un nom de fichier, un module exécutable ou d’un spécificateur de recherche.  
+ A pointer to a string containing the target object of the specified verb. This is generally a filename, an executable module, or a search specifier.  
   
  `pstrReferer`  
- Un pointeur vers une chaîne qui spécifie l’adresse (URL) du document à partir duquel l’URL dans la demande ( `pstrObjectName`) a été obtenu. Si `NULL`, aucun en-tête HTTP n’est spécifié.  
+ A pointer to a string that specifies the address (URL) of the document from which the URL in the request ( `pstrObjectName`) was obtained. If `NULL`, no HTTP header is specified.  
   
  `dwContext`  
- L’identificateur de contexte pour le `OpenRequest` opération. Consultez la section Notes pour plus d’informations `dwContext`.  
+ The context identifier for the `OpenRequest` operation. See the Remarks section for more information about `dwContext`.  
   
  `ppstrAcceptTypes`  
- Un pointeur vers un tableau nul de `LPCTSTR` des pointeurs vers des chaînes indiquant les types de contenu accepté par le client. Si `ppstrAcceptTypes` est `NULL`, les serveurs interprètent que le client accepte uniquement des documents de type « texte / * » (autrement dit, les documents texte uniquement et pas images ou autres fichiers binaires). Le type de contenu est équivalent à la CONTENT_TYPE variable CGI, qui identifie le type de données pour les requêtes que vous ont lié des informations, tels que HTTP POST et PUT.  
+ A pointer to a null-terminated array of `LPCTSTR` pointers to strings indicating content types accepted by the client. If `ppstrAcceptTypes` is `NULL`, the servers interpret that the client only accepts documents of type "text/*" (that is, only text documents and not pictures or other binary files). The content type is equivalent to the CGI variable CONTENT_TYPE, which identifies the type of data for queries that have attached information, such as HTTP POST and PUT.  
   
  `pstrVersion`  
- Pointeur vers une chaîne définissant la version HTTP. Si `NULL`, « HTTP/1.0 » est utilisé.  
+ A pointer to a string defining the HTTP version. If `NULL`, "HTTP/1.0" is used.  
   
  `dwFlags`  
- N’importe quelle combinaison des indicateurs INTERNET_ FLAG_ *. Consultez la section Notes pour plus d’informations possible `dwFlags` valeurs.  
+ Any combination of the INTERNET_ FLAG_* flags. See the Remarks section for a description of possible `dwFlags` values.  
   
  `nVerb`  
- Un numéro associé au type de demande HTTP. Il peut s'agir d'une des valeurs suivantes :  
+ A number associated with the HTTP request type. Can be one of the following:  
   
-|Type de demande HTTP|Valeur `nVerb`|  
+|HTTP request type|`nVerb` value|  
 |-----------------------|-------------------|  
 |`HTTP_VERB_POST`|0|  
 |`HTTP_VERB_GET`|1|  
@@ -220,27 +210,27 @@ CHttpFile* OpenRequest(
 |`HTTP_VERB_DELETE`|5|  
 |`HTTP_VERB_UNLINK`|6|  
   
-### <a name="return-value"></a>Valeur de retour  
- Un pointeur vers le [CHttpFile](../../mfc/reference/chttpfile-class.md) objet demandé.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CHttpFile](../../mfc/reference/chttpfile-class.md) object requested.  
   
-### <a name="remarks"></a>Remarques  
- `dwFlags` peut avoir l'une des valeurs suivantes :  
+### <a name="remarks"></a>Remarks  
+ `dwFlags` can be one of the following:  
   
-|Indicateur d’Internet|Description|  
+|Internet flag|Description|  
 |-------------------|-----------------|  
-|`INTERNET_FLAG_RELOAD`|Force un téléchargement du fichier demandé, objet ou liste des répertoires à partir du serveur d’origine, pas à partir du cache.|  
-|`INTERNET_FLAG_DONT_CACHE`|N’ajoute pas l’entité renvoyée dans le cache.|  
-|`INTERNET_FLAG_MAKE_PERSISTENT`|Ajoute l’entité renvoyée dans le cache comme une entité persistante. Cela signifie que le nettoyage de cache standard, la vérification de cohérence ou le garbage collection ne peut pas supprimer cet élément à partir du cache.|  
-|`INTERNET_FLAG_SECURE`|Utilise un sémantique de transaction. Cela se traduit par l’utilisation de SSL/PCT et n’est significative que dans les requêtes HTTP|  
-|`INTERNET_FLAG_NO_AUTO_REDIRECT`|Utilisé uniquement avec HTTP, spécifie que les redirections ne doivent pas automatiquement gérées dans [CHttpFile::SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest).|  
+|`INTERNET_FLAG_RELOAD`|Forces a download of the requested file, object, or directory listing from the origin server, not from the cache.|  
+|`INTERNET_FLAG_DONT_CACHE`|Does not add the returned entity to the cache.|  
+|`INTERNET_FLAG_MAKE_PERSISTENT`|Adds the returned entity to the cache as a persistent entity. This means that standard cache cleanup, consistency checking, or garbage collection cannot remove this item from the cache.|  
+|`INTERNET_FLAG_SECURE`|Uses secure transaction semantics. This translates to using SSL/PCT and is only meaningful in HTTP requests|  
+|`INTERNET_FLAG_NO_AUTO_REDIRECT`|Used only with HTTP, specifies that redirections should not be automatically handled in [CHttpFile::SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest).|  
   
- Remplacer le `dwContext` par défaut pour définir l’identificateur de contexte pour une valeur de votre choix. L’identificateur de contexte est associé à cette opération spécifique de la `CHttpConnection` objet créé par son [CInternetSession](../../mfc/reference/cinternetsession-class.md) objet. La valeur est retournée à [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état de l’opération à laquelle elle est identifiée. Consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.  
+ Override the `dwContext` default to set the context identifier to a value of your choosing. The context identifier is associated with this specific operation of the `CHttpConnection` object created by its [CInternetSession](../../mfc/reference/cinternetsession-class.md) object. The value is returned to [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) to provide status on the operation with which it is identified. See the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md) for more information about the context identifier.  
   
- Exceptions peuvent être levées par cette fonction.  
+ Exceptions may be thrown with this function.  
   
-## <a name="see-also"></a>Voir aussi  
- [CInternetConnection (classe)](../../mfc/reference/cinternetconnection-class.md)   
- [Graphique de la hiérarchie](../../mfc/hierarchy-chart.md)   
- [CInternetConnection (classe)](../../mfc/reference/cinternetconnection-class.md)   
- [CHttpFile (classe)](../../mfc/reference/chttpfile-class.md)
+## <a name="see-also"></a>See Also  
+ [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)   
+ [CHttpFile Class](../../mfc/reference/chttpfile-class.md)
 

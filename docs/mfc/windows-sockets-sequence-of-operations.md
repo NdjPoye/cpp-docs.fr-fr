@@ -1,80 +1,99 @@
 ---
-title: "Windows Sockets&#160;: ordre des op&#233;rations | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sockets (C++), opérations"
-  - "sockets (C++), sockets flux"
-  - "sockets flux (C++)"
-  - "Windows Sockets (C++), opérations"
-  - "Windows Sockets (C++), sockets flux"
+title: 'Windows Sockets: Sequence of Operations | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows Sockets [MFC], operations
+- Windows Sockets [MFC], stream sockets
+- sockets [MFC], stream sockets
+- sockets [MFC], operations
+- stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Windows Sockets&#160;: ordre des op&#233;rations
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f3daa26edce7467237b40ffc3c0809318253d236
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cet article explique, côte à côte, la séquence d'événements pour un socket serveur et un socket client.  Les sockets utilisent des objets `CArchive`, ils sont nécessairement des [sockets flux](../mfc/windows-sockets-stream-sockets.md).  
+---
+# <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Sequence of Operations
+This article illustrates, side by side, the sequence of operations for a server socket and a client socket. Because the sockets use `CArchive` objects, they are necessarily [stream sockets](../mfc/windows-sockets-stream-sockets.md).  
   
-## Séquence d'événements pour une communication Stream Socket  
- Jusqu'à la création d'un objet `CSocketFile`, la suite est exacte \(avec quelques différences de paramètre\) pour `CAsyncSocket` et `CSocket`.  À partir de ce point, la séquence est strictement pour `CSocket`.  Le tableau suivant montre la séquence d'événements pour configurer la communication entre un client et un serveur.  
+## <a name="sequence-of-operations-for-a-stream-socket-communication"></a>Sequence of Operations for a Stream Socket Communication  
+ Up to the point of constructing a `CSocketFile` object, the following sequence is accurate (with a few parameter differences) for both `CAsyncSocket` and `CSocket`. From that point on, the sequence is strictly for `CSocket`. The following table illustrates the sequence of operations for setting up communication between a client and a server.  
   
-### Configuration des communications entre un serveur et un client  
+### <a name="setting-up-communication-between-a-server-and-a-client"></a>Setting Up Communication Between a Server and a Client  
   
-|Serveur|Client|  
-|-------------|------------|  
+|Server|Client|  
+|------------|------------|  
 |`// construct a socket`<br /><br /> `CSocket sockSrvr;`|`// construct a socket`<br /><br /> `CSocket sockClient;`|  
 |`// create the SOCKET`<br /><br /> `sockSrvr.Create(nPort);`1,2|`// create the SOCKET`<br /><br /> `sockClient.Create( );`2|  
 |`// start listening`<br /><br /> `sockSrvr.Listen( );`||  
 ||`// seek a connection`<br /><br /> `sockClient.Connect(strAddr, nPort);`3,4|  
 |`// construct a new, empty socket`<br /><br /> `CSocket sockRecv;`<br /><br /> `// accept connection`<br /><br /> `sockSrvr.Accept( sockRecv );` 5||  
 |`// construct file object`<br /><br /> `CSocketFile file(&sockRecv);`|`// construct file object`<br /><br /> `CSocketFile file(&sockClient);`|  
-|`// construct an archive`<br /><br /> `CArchive arIn(&file,`  `CArchive::load);`<br /><br /> ou<br /><br /> `CArchive arOut(&file,`  `CArchive::store);`<br /><br /> – ou les deux –|`// construct an archive`<br /><br /> `CArchive arIn(&file,`  `CArchive::load);`<br /><br /> ou<br /><br /> `CArchive arOut(&file,`  `CArchive::store);`<br /><br /> – ou les deux –|  
-|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> ou<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> ou<br /><br /> `arOut << dwValue;`6|  
+|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -or-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - or Both -|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -or-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - or Both -|  
+|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -or-<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -or-<br /><br /> `arOut << dwValue;`6|  
   
- 1.  Où `nPort` est un numéro de port.  Voir le [Protocole Windows : Ports et Adresses de Sockets](../mfc/windows-sockets-ports-and-socket-addresses.md) pour plus d'informations sur les ports.  
+ 1. Where `nPort` is a port number. See [Windows Sockets: Ports and Socket Addresses](../mfc/windows-sockets-ports-and-socket-addresses.md) for details about ports.  
   
- 2.  Le serveur doit toujours spécifier un port afin que les clients puissent se connecter.  L'appel à **Create** spécifie parfois également une adresse.  Côté client, utilisez les paramètres par défaut, qui demandent à MFC d'utiliser tout port disponible.  
+ 2. The server must always specify a port so clients can connect. The **Create** call sometimes also specifies an address. On the client side, use the default parameters, which ask MFC to use any available port.  
   
- 3.  Où `nPort` est un numéro de port et *un strAddr* est une adresse d'ordinateur ou une adresse Internet Protocol \(IP\).  
+ 3. Where `nPort` is a port number and *strAddr* is a machine address or an Internet Protocol (IP) address.  
   
- 4.  Les adresses d'ordinateur peut prendre plusieurs formes : « ftp.microsoft.com », « microsoft.com ».  Les adresses IP utilisent la forme en nombre pointés « 127.54.67.32 ».  La fonciton **Connect** vérifie si l'adresse est un nombre pointé \(bien qu'il ne vérifie pas si le nombre est un ordinateur valide sur le réseau\).  Sinon, **Connect** suppose un nom d'ordinateur de l'une des autres formes.  
+ 4. Machine addresses can take several forms: "ftp.microsoft.com", "microsoft.com". IP addresses use the "dotted number" form "127.54.67.32". The **Connect** function checks to see if the address is a dotted number (although it does not check to ensure the number is a valid machine on the network). If not, **Connect** assumes a machine name of one of the other forms.  
   
- 5.  Lorsque vous appelez **Accept** côté serveur, vous passez une référence à un objet socket.  Vous devez créer cet objet dans un premier temps, mais n'appelez pas **Create** pour celui\-ci.  N'oubliez pas que si cet objet socket sort de l'étendue, la connexion se ferme.  MFC connecte le nouvel objet à un descripteur de **SOCKET**.  Vous pouvez construire le socket dans la pile, tel qu'indiqué, ou sur le tas.  
+ 5. When you call **Accept** on the server side, you pass a reference to a new socket object. You must construct this object first, but do not call **Create** for it. Keep in mind that if this socket object goes out of scope, the connection closes. MFC connects the new object to a **SOCKET** handle. You can construct the socket on the stack, as shown, or on the heap.  
   
- 6.  L'archive et le fichier de socket sont fermés lorsqu'ils passent hors de portée.  Le destructeur de l'objet socket appelle également la méthode [Close](../Topic/CAsyncSocket::Close.md) de l'objet socket lorsque l'objet sort de l'étendue ou est supprimé.  
+ 6. The archive and the socket file are closed when they go out of scope. The socket object's destructor also calls the [Close](../mfc/reference/casyncsocket-class.md#close) member function for the socket object when the object goes out of scope or is deleted.  
   
-## Remarques supplémentaires sur la séquence  
- La séquence d'appels indiqués dans le tableau précédent concerne un socket flux.  Les sockets datagramme, qui sont sans connexion, ne nécessitent pas [CAsyncSocket::Connect](../Topic/CAsyncSocket::Connect.md), [Listen](../Topic/CAsyncSocket::Listen.md), et les appels à [Accept](../Topic/CAsyncSocket::Accept.md) \(bien que vous pouvez éventuellement utiliser **Connect**\).  En revanche, si vous utilisez la classe `CAsyncSocket`, les sockets datagramme utilisent les méthodes `CAsyncSocket::SendTo` et `ReceiveFrom`. \(Si vous utilisez **Connect** avec un socket datagramme, vous utilisez **Send** et **Receive**.\) Comme `CArchive` ne fonctionne pas avec les datagrammes, n'utilisez pas `CSocket` avec une archive si le socket est un datagramme.  
+## <a name="additional-notes-about-the-sequence"></a>Additional Notes About the Sequence  
+ The sequence of calls shown in the preceding table is for a stream socket. Datagram sockets, which are connectionless, do not require the [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect), [Listen](../mfc/reference/casyncsocket-class.md#listen), and [Accept](../mfc/reference/casyncsocket-class.md#accept) calls (although you can optionally use **Connect**). Instead, if you are using class `CAsyncSocket`, datagram sockets use the `CAsyncSocket::SendTo` and `ReceiveFrom` member functions. (If you use **Connect** with a datagram socket, you use **Send** and **Receive**.) Because `CArchive` does not work with datagrams, do not use `CSocket` with an archive if the socket is a datagram.  
   
- [CSocketFile](../mfc/reference/csocketfile-class.md) ne prend pas en charge toutes les fonctionnalités de `CFile`; les membres de `CFile` comme `Seek`, qui n'ont pas de sens pour une communication de socket, ne sont pas disponibles.  Par conséquent, certaines fonctions de MFC par défault `Serialize` ne sont pas compatibles avec `CSocketFile`.  Cela est particulièrement vrai de la classe `CEditView`.  Vous ne devez pas essayer de sérialiser des données de `CEditView` via un objet `CArchive` associé à un objet `CSocketFile` en utilisant `CEditView::SerializeRaw`; utilisez **CEditView::Serialize** à la place \(non documenté\).  La fonction [SerializeRaw](../Topic/CEditView::SerializeRaw.md) attend que le fichier objet ait des fonctions, telles que `Seek`, que `CSocketFile` ne prend pas en charge.  
+ [CSocketFile](../mfc/reference/csocketfile-class.md) does not support all of `CFile`'s functionality; `CFile` members such as `Seek`, which make no sense for a socket communication, are unavailable. Because of this, some default MFC `Serialize` functions are not compatible with `CSocketFile`. This is particularly true of the `CEditView` class. You should not try to serialize `CEditView` data through a `CArchive` object attached to a `CSocketFile` object using `CEditView::SerializeRaw`; use **CEditView::Serialize** instead (not documented). The [SerializeRaw](../mfc/reference/ceditview-class.md#serializeraw) function expects the file object to have functions, such as `Seek`, that `CSocketFile` does not support.  
   
- Pour plus d'informations, consultez :  
+ For more information, see:  
   
--   [Windows Sockets : utilisation de sockets avec des archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows Sockets : utilisation de la classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets : ports et adresses de socket](../mfc/windows-sockets-ports-and-socket-addresses.md)  
+-   [Windows Sockets: Ports and Socket Addresses](../mfc/windows-sockets-ports-and-socket-addresses.md)  
   
--   [Windows Sockets : sockets flux](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows Sockets : sockets datagramme](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)  
   
-## Voir aussi  
- [Windows Sockets dans MFC](../mfc/windows-sockets-in-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
  [CSocket Class](../mfc/reference/csocket-class.md)   
- [CAsyncSocket::Create](../Topic/CAsyncSocket::Create.md)   
- [CAsyncSocket::Close](../Topic/CAsyncSocket::Close.md)
+ [CAsyncSocket::Create](../mfc/reference/casyncsocket-class.md#create)   
+ [CAsyncSocket::Close](../mfc/reference/casyncsocket-class.md#close)
+
+

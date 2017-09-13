@@ -1,5 +1,5 @@
 ---
-title: CCmdUI (classe) | Documents Microsoft
+title: CCmdUI Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,15 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- user interfaces, updating
-- states, updating user interface object
-- updating user interfaces for commands
-- commands [C++], updating UI
-- CCmdUI class
-- toolbars [C++], updating
-- command user interface
-- menus [C++], updating as context changes
-- buttons [C++], updating as context changes
+- CCmdUI [MFC], ContinueRouting
+- CCmdUI [MFC], Enable
+- CCmdUI [MFC], SetCheck
+- CCmdUI [MFC], SetRadio
+- CCmdUI [MFC], SetText
+- CCmdUI [MFC], m_nID
+- CCmdUI [MFC], m_nIndex
+- CCmdUI [MFC], m_pMenu
+- CCmdUI [MFC], m_pOther
+- CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
 caps.latest.revision: 21
 author: mikeblome
@@ -52,185 +53,185 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 45490a6af635c095e2a057dd2360240a4eac85a9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fd43998877d4a5929103993c221961ba258b9b17
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccmdui-class"></a>CCmdUI (classe)
-Est utilisé uniquement dans un `ON_UPDATE_COMMAND_UI` gestionnaire dans un `CCmdTarget`-classe dérivée.  
+# <a name="ccmdui-class"></a>CCmdUI Class
+Is used only within an `ON_UPDATE_COMMAND_UI` handler in a `CCmdTarget`-derived class.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCmdUI  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>M&#233;thodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCmdUI::ContinueRouting](#continuerouting)|Indique au mécanisme de routage des commandes pour continuer le routage du message en cours dans la chaîne de gestionnaires.|  
-|[CCmdUI::Enable](#enable)|Active ou désactive l’élément d’interface utilisateur pour cette commande.|  
-|[CCmdUI::SetCheck](#setcheck)|Définit l’état d’activation de l’élément d’interface utilisateur pour cette commande.|  
-|[CCmdUI::SetRadio](#setradio)|Comme le `SetCheck` fonction membre, mais fonctionne sur les groupes de cases d’option.|  
-|[CCmdUI::SetText](#settext)|Définit le texte de l’élément d’interface utilisateur pour cette commande.|  
+|[CCmdUI::ContinueRouting](#continuerouting)|Tells the command-routing mechanism to continue routing the current message down the chain of handlers.|  
+|[CCmdUI::Enable](#enable)|Enables or disables the user-interface item for this command.|  
+|[CCmdUI::SetCheck](#setcheck)|Sets the check state of the user-interface item for this command.|  
+|[CCmdUI::SetRadio](#setradio)|Like the `SetCheck` member function, but operates on radio groups.|  
+|[CCmdUI::SetText](#settext)|Sets the text for the user-interface item for this command.|  
   
-### <a name="public-data-members"></a>Membres de données publics  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCmdUI::m_nID](#m_nid)|L’ID de l’objet d’interface utilisateur.|  
-|[CCmdUI::m_nIndex](#m_nindex)|L’index de l’objet d’interface utilisateur.|  
-|[CCmdUI::m_pMenu](#m_pmenu)|Pointe vers le menu représenté par le `CCmdUI` objet.|  
-|[CCmdUI::m_pOther](#m_pother)|Pointe vers l’objet de fenêtre qui a envoyé la notification.|  
-|[CCmdUI::m_pSubMenu](#m_psubmenu)|Pointe vers le sous-menu contenu représenté par le `CCmdUI` objet.|  
+|[CCmdUI::m_nID](#m_nid)|The ID of the user-interface object.|  
+|[CCmdUI::m_nIndex](#m_nindex)|The index of the user-interface object.|  
+|[CCmdUI::m_pMenu](#m_pmenu)|Points to the menu represented by the `CCmdUI` object.|  
+|[CCmdUI::m_pOther](#m_pother)|Points to the window object that sent the notification.|  
+|[CCmdUI::m_pSubMenu](#m_psubmenu)|Points to the contained sub-menu represented by the `CCmdUI` object.|  
   
-## <a name="remarks"></a>Remarques  
- `CCmdUI`ne dispose pas d’une classe de base.  
+## <a name="remarks"></a>Remarks  
+ `CCmdUI` does not have a base class.  
   
- Lorsqu’un utilisateur de votre application extrait un menu, chaque élément de menu doit savoir si elle doit être affiché comme activé ou désactivé. La cible d’une commande de menu fournit ces informations en implémentant un `ON_UPDATE_COMMAND_UI` gestionnaire. Pour chacun des objets d’interface utilisateur de commande dans votre application, utilisez la fenêtre Propriétés pour créer un prototype d’entrée et de la fonction table des messages pour chaque gestionnaire.  
+ When a user of your application pulls down a menu, each menu item needs to know whether it should be displayed as enabled or disabled. The target of a menu command provides this information by implementing an `ON_UPDATE_COMMAND_UI` handler. For each of the command user-interface objects in your application, use the Properties window to create a message-map entry and function prototype for each handler.  
   
- Lorsque le menu est extraite, l’infrastructure recherche et appelle chacune `ON_UPDATE_COMMAND_UI` gestionnaire, chaque gestionnaire appelle `CCmdUI` telles que les fonctions membres **activer** et **vérifier**, le framework puis convenablement affiche chaque élément de menu.  
+ When the menu is pulled down, the framework searches for and calls each `ON_UPDATE_COMMAND_UI` handler, each handler calls `CCmdUI` member functions such as **Enable** and **Check**, and the framework then appropriately displays each menu item.  
   
- Un élément de menu peut être remplacé par un bouton de barre de contrôle ou un autre objet d’interface utilisateur de commande sans modifier le code dans le `ON_UPDATE_COMMAND_UI` gestionnaire.  
+ A menu item can be replaced with a control-bar button or other command user-interface object without changing the code within the `ON_UPDATE_COMMAND_UI` handler.  
   
- Le tableau suivant résume l’effet `CCmdUI`de fonctions membres ont sur les divers éléments d’interface utilisateur de commande.  
+ The following table summarizes the effect `CCmdUI`'s member functions have on various command user-interface items.  
   
-|Élément d’Interface utilisateur|Activer|SetCheck|SetRadio|SetText|  
+|User-Interface Item|Enable|SetCheck|SetRadio|SetText|  
 |--------------------------|------------|--------------|--------------|-------------|  
-|Menu Item|Active ou désactive|Active ou désactive|Vérifications à l’aide d’un point|Texte d’élément de jeux|  
-|Bouton de barre d’outils|Active ou désactive|Sélectionne, est désélectionnée, ou indéterminé|Identique à`SetCheck`|(Non applicable)|  
-|Volet de barre d’état|Rend le texte visible ou invisible|Bordure contextuelle ou normale de jeux|Identique à`SetCheck`|Définit le texte du volet|  
-|Bouton normal dans`CDialogBar`|Active ou désactive|Active ou désactive la case à cocher|Identique à`SetCheck`|Texte du bouton de jeux|  
-|Contrôle normal dans`CDialogBar`|Active ou désactive|(Non applicable)|(Non applicable)|Définit le texte de la fenêtre|  
+|Menu item|Enables or disables|Checks or unchecks|Checks using a dot|Sets item text|  
+|Toolbar button|Enables or disables|Selects, unselects, or indeterminate|Same as `SetCheck`|(Not applicable)|  
+|Status-bar pane|Makes text visible or invisible|Sets pop-out or normal border|Same as `SetCheck`|Sets pane text|  
+|Normal button in `CDialogBar`|Enables or disables|Checks or unchecks check box|Same as `SetCheck`|Sets button text|  
+|Normal control in `CDialogBar`|Enables or disables|(Not applicable)|(Not applicable)|Sets window text|  
   
- Pour plus d’informations sur l’utilisation de cette classe, consultez [comment les objets d’Interface utilisateur de mise à jour](../../mfc/how-to-update-user-interface-objects.md).  
+ For more on the use of this class, see [How to Update User-Interface Objects](../../mfc/how-to-update-user-interface-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CCmdUI`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="continuerouting"></a>CCmdUI::ContinueRouting  
- Appelez cette fonction membre pour indiquer le mécanisme de routage des commandes pour continuer le routage du message en cours dans la chaîne de gestionnaires.  
+##  <a name="continuerouting"></a>  CCmdUI::ContinueRouting  
+ Call this member function to tell the command-routing mechanism to continue routing the current message down the chain of handlers.  
   
 ```  
 void ContinueRouting();
 ```  
   
-### <a name="remarks"></a>Remarques  
- Il s’agit d’une fonction membre avancée qui doit être utilisée conjointement avec un `ON_COMMAND_EX` gestionnaire retourne **FALSE**. Pour plus d’informations, consultez [Technical Note 6](../../mfc/tn006-message-maps.md).  
+### <a name="remarks"></a>Remarks  
+ This is an advanced member function that should be used in conjunction with an `ON_COMMAND_EX` handler that returns **FALSE**. For more information, see [Technical Note 6](../../mfc/tn006-message-maps.md).  
   
-##  <a name="enable"></a>CCmdUI::Enable  
- Appelez cette fonction membre pour activer ou désactiver l’élément d’interface utilisateur pour cette commande.  
+##  <a name="enable"></a>  CCmdUI::Enable  
+ Call this member function to enable or disable the user-interface item for this command.  
   
 ```  
 virtual void Enable(BOOL bOn = TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `bOn`  
- **TRUE** pour activer l’élément, **FALSE** pour la désactiver.  
+ **TRUE** to enable the item, **FALSE** to disable it.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCDocView #46](../../mfc/codesnippet/cpp/ccmdui-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#46](../../mfc/codesnippet/cpp/ccmdui-class_1.cpp)]  
   
- [!code-cpp[NVC_MFCDocView #47](../../mfc/codesnippet/cpp/ccmdui-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#47](../../mfc/codesnippet/cpp/ccmdui-class_2.cpp)]  
   
-##  <a name="m_nid"></a>CCmdUI::m_nID  
- L’ID de l’élément de menu, le bouton de barre d’outils ou un autre objet d’interface utilisateur représenté par le `CCmdUI` objet.  
+##  <a name="m_nid"></a>  CCmdUI::m_nID  
+ The ID of the menu item, toolbar button, or other user-interface object represented by the `CCmdUI` object.  
   
 ```  
 UINT m_nID;  
 ```  
   
-##  <a name="m_nindex"></a>CCmdUI::m_nIndex  
- L’index de l’élément de menu, le bouton de barre d’outils ou un autre objet d’interface utilisateur représenté par le `CCmdUI` objet.  
+##  <a name="m_nindex"></a>  CCmdUI::m_nIndex  
+ The index of the menu item, toolbar button, or other user-interface object represented by the `CCmdUI` object.  
   
 ```  
 UINT m_nIndex;  
 ```  
   
-##  <a name="m_pmenu"></a>CCmdUI::m_pMenu  
- Pointeur (de `CMenu` type) au menu représenté par le `CCmdUI` objet.  
+##  <a name="m_pmenu"></a>  CCmdUI::m_pMenu  
+ Pointer (of `CMenu` type) to the menu represented by the `CCmdUI` object.  
   
 ```  
 CMenu* m_pMenu;  
 ```  
   
-### <a name="remarks"></a>Remarques  
- **NULL** si l’élément n’est pas un menu.  
+### <a name="remarks"></a>Remarks  
+ **NULL** if the item is not a menu.  
   
-##  <a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
- Pointeur (de `CMenu` type) pour le sous-menu contenu représenté par le `CCmdUI` objet.  
+##  <a name="m_psubmenu"></a>  CCmdUI::m_pSubMenu  
+ Pointer (of `CMenu` type) to the contained sub-menu represented by the `CCmdUI` object.  
   
 ```  
 CMenu* m_pSubMenu;  
 ```  
   
-### <a name="remarks"></a>Remarques  
- **NULL** si l’élément n’est pas un menu. Si le sous-menu est une fenêtre contextuelle, `m_nID` contient l’ID du premier élément dans le menu contextuel. Pour plus d’informations, consultez [Note technique 21](../../mfc/tn021-command-and-message-routing.md).  
+### <a name="remarks"></a>Remarks  
+ **NULL** if the item is not a menu. If the sub menu is a pop-up, `m_nID` contains the ID of the first item in the pop-up menu. For more information, see [Technical Note 21](../../mfc/tn021-command-and-message-routing.md).  
   
-##  <a name="m_pother"></a>CCmdUI::m_pOther  
- Pointeur (de type `CWnd`) à l’objet fenêtre, comme une barre d’outil ou d’état, qui la notification est envoyée.  
+##  <a name="m_pother"></a>  CCmdUI::m_pOther  
+ Pointer (of type `CWnd`) to the window object, such as a tool or status bar, that sent the notification.  
   
 ```  
 CWnd* m_pOther;  
 ```  
   
-### <a name="remarks"></a>Remarques  
- **NULL** si l’élément est un menu ou non - `CWnd` objet.  
+### <a name="remarks"></a>Remarks  
+ **NULL** if the item is a menu or a non- `CWnd` object.  
   
-##  <a name="setcheck"></a>CCmdUI::SetCheck  
- Appelez cette fonction membre pour définir l’élément d’interface utilisateur pour cette commande à l’état d’activation appropriée.  
+##  <a name="setcheck"></a>  CCmdUI::SetCheck  
+ Call this member function to set the user-interface item for this command to the appropriate check state.  
   
 ```  
 virtual void SetCheck(int nCheck = 1);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `nCheck`  
- Spécifie l’état de la vérification à définir. Si 0, désactive ; Si 1, les contrôles ; et si le 2 définit indéterminé.  
+ Specifies the check state to set. If 0, unchecks; if 1, checks; and if 2, sets indeterminate.  
   
-### <a name="remarks"></a>Remarques  
- Cette fonction membre fonctionne pour les éléments de menu et boutons de barre d’outils. L’état indéterminé s’applique uniquement aux boutons de barre d’outils.  
+### <a name="remarks"></a>Remarks  
+ This member function works for menu items and toolbar buttons. The indeterminate state applies only to toolbar buttons.  
   
-##  <a name="setradio"></a>CCmdUI::SetRadio  
- Appelez cette fonction membre pour définir l’élément d’interface utilisateur pour cette commande à l’état d’activation appropriée.  
+##  <a name="setradio"></a>  CCmdUI::SetRadio  
+ Call this member function to set the user-interface item for this command to the appropriate check state.  
   
 ```  
 virtual void SetRadio(BOOL bOn = TRUE);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `bOn`  
- **TRUE** pour activer l’élément ; sinon **FALSE**.  
+ **TRUE** to enable the item; otherwise **FALSE**.  
   
-### <a name="remarks"></a>Notes  
- Cette fonction membre fonctionne comme `SetCheck`, à ceci près qu’elle fonctionne sur les éléments d’interface utilisateur qui agit en tant que partie d’un groupe de cases d’option. Si vous décochez les autres éléments dans le groupe n’est pas automatique, sauf si les éléments proprement dits préserver le comportement de groupe de cases d’option.  
+### <a name="remarks"></a>Remarks  
+ This member function operates like `SetCheck`, except that it operates on user-interface items acting as part of a radio group. Unchecking the other items in the group is not automatic unless the items themselves maintain the radio-group behavior.  
   
-##  <a name="settext"></a>CCmdUI::SetText  
- Appelez cette fonction membre pour définir le texte de l’élément d’interface utilisateur pour cette commande.  
+##  <a name="settext"></a>  CCmdUI::SetText  
+ Call this member function to set the text of the user-interface item for this command.  
   
 ```  
 virtual void SetText(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `lpszText`  
- Pointeur vers une chaîne de texte.  
+ A pointer to a text string.  
   
-### <a name="example"></a>Exemple  
- [!code-cpp[NVC_MFCDocView #48](../../mfc/codesnippet/cpp/ccmdui-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#48](../../mfc/codesnippet/cpp/ccmdui-class_3.cpp)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemple MFC MDI](../../visual-cpp-samples.md)   
- [Graphique hiérarchique](../../mfc/hierarchy-chart.md)   
- [CCmdTarget, classe](../../mfc/reference/ccmdtarget-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MDI](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)
 

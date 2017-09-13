@@ -1,5 +1,5 @@
 ---
-title: RGNDATA (Structure) | Documents Microsoft
+title: RGNDATA Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- RGNDATA structure
+- RGNDATA structure [MFC]
 ms.assetid: 72257c00-f440-4dca-979e-9b6b5b2d5f2f
 caps.latest.revision: 14
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 93a7c79f175e22dcb0b40cb39b157cfe21a98e93
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb75f3182e14bf03180566d08e51c62c3fd220ed
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="rgndata-structure"></a>RGNDATA, structure
-Le `RGNDATA` structure contient un en-tête et un tableau de rectangles qui composent une région. Ces rectangles, triées de haut en bas à gauche à droite, ne se chevauchent pas.  
+# <a name="rgndata-structure"></a>RGNDATA Structure
+The `RGNDATA` structure contains a header and an array of rectangles that compose a region. These rectangles, sorted top to bottom left to right, do not overlap.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct _RGNDATA { /* rgnd */  
@@ -52,18 +52,18 @@ typedef struct _RGNDATA { /* rgnd */
 } RGNDATA;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
- *RDH*  
- Spécifie un [RGNDATAHEADER](http://msdn.microsoft.com/library/windows/desktop/dd162941) structure. (Pour plus d’informations sur cette structure, consultez la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].) Les membres de cette structure, spécifient le type de région (qu’il soit rectangulaire ou trapézoïdal), le nombre de rectangles qui constituent la région, la taille de la mémoire tampon qui contient les structures du rectangle, et ainsi de suite.  
+#### <a name="parameters"></a>Parameters  
+ *rdh*  
+ Specifies a [RGNDATAHEADER](http://msdn.microsoft.com/library/windows/desktop/dd162941) structure. (For more information on this structure, see the Windows SDK.) The members of this structure specify the type of region (whether it is rectangular or trapezoidal), the number of rectangles that make up the region, the size of the buffer that contains the rectangle structures, and so on.  
   
  `Buffer`  
- Spécifie un tampon de taille arbitraire qui contient la [RECT](../../mfc/reference/rect-structure1.md) structures qui composent la région.  
+ Specifies an arbitrary-size buffer that contains the [RECT](../../mfc/reference/rect-structure1.md) structures that make up the region.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** wingdi.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>Voir aussi  
- [Structures, Styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CRgn::CreateFromData](../../mfc/reference/crgn-class.md#createfromdata)   
  [CRgn::GetRegionData](../../mfc/reference/crgn-class.md#getregiondata)
 

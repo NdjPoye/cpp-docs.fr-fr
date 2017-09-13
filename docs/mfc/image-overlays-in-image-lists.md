@@ -1,36 +1,54 @@
 ---
-title: "Superpositions d&#39;images dans les listes d&#39;images | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList (classe), superpositions d'images dans"
-  - "listes d'images (C++), superpositions d'images dans"
-  - "superpositions"
+title: Image Overlays in Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- overlays [MFC]
+- image lists [MFC], image overlays in
+- CImageList class [MFC], image overlays in
 ms.assetid: aaf4e1c4-cd12-42c8-9af4-1bb458889b4e
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Superpositions d&#39;images dans les listes d&#39;images
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66d21c2435dbab938324bb9bf65fbdf6d5534b5a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Chaque liste d'images \([CImageList](../mfc/reference/cimagelist-class.md)\) comporte la liste des images à utiliser comme masques de superposition.  Un "masque de superposition" est une image dessinée de façon transparente sur une autre image.  Toute image peut être utilisée comme filtre de chevauchement.  Vous pouvez spécifier jusqu'à quatre masques de superposition par liste d'images.  
+---
+# <a name="image-overlays-in-image-lists"></a>Image Overlays in Image Lists
+Every image list ([CImageList](../mfc/reference/cimagelist-class.md)) includes a list of images to use as overlay masks. An "overlay mask" is an image drawn transparently over another image. Any image can be used as an overlay mask. You can specify up to four overlay masks per image list.  
   
- Vous ajoutez l'index d'une image à la liste des masques de superposition à l'aide de la fonction membre [SetOverlayImage](../Topic/CImageList::SetOverlayImage.md), l'index d'une image, et l'index d'un masque de superposition.  Notez que les index des masques de superposition est de base 1 et non de base zéro.  
+ You add the index of an image to the list of overlay masks by using the [SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage) member function, the index of an image, and the index of an overlay mask. Note that the indices for the overlay masks are one-based rather than zero-based.  
   
- Vous dessinez un masque de superposition sur une image en un seul appel à **Dessin**.  Les paramètres incluent l'index de l'image à ajouter et l'index d'un masque de superposition.  Vous devez utiliser la macro [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) pour spécifier l'index du masque de superposition.  Vous pouvez également spécifier une image de superposition en appelant la fonction membre [DrawIndirect](../Topic/CImageList::DrawIndirect.md).  
+ You draw an overlay mask over an image using a single call to **Draw**. The parameters include the index of the image to draw and the index of an overlay mask. You must use the [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) macro to specify the index of the overlay mask. You can also specify an overlay image when calling the [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect) member function.  
   
-## Voir aussi  
- [Utilisation de CImageList](../mfc/using-cimagelist.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

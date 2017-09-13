@@ -1,62 +1,81 @@
 ---
-title: "T&#226;ches de programmation Internet MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "applications Internet, premières étapes"
-  - "applications Internet, mise en route"
+title: MFC Internet Programming Tasks | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet applications [MFC], getting started
+- Internet applications [MFC], first steps
 ms.assetid: 6377e9b8-07c4-4380-b63b-05f5a9061313
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# T&#226;ches de programmation Internet MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 966dbcf797ee1429789afdd5bda4a1492307c324
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cette section contient des procédures détaillées pour ajouter la prise en charge d'Internet dans vos applications.  Les rubriques suivantes expliquent comment utiliser les classes de MFC internet pour vérifier vos applications existantes, et comment ajouter la prise en charge des documents actifs vers votre composant COM existant.  Voulez\-vous créer un document avec des scores de cotations boursières à la minute, des scores de football de Pittsburgh, et la dernière température en Antarctique ?  Microsoft fournit plusieurs technologies pour vous aider à le faire sur Internet.  
+---
+# <a name="mfc-internet-programming-tasks"></a>MFC Internet Programming Tasks
+This section contains detailed steps for adding Internet support to your applications. Topics include how to use the MFC classes to Internet-enable your existing applications, and how to add Active document support to your existing COM component. Do you want to create a document with up-to-the-minute stock quotes, Pittsburgh's football scores, and the latest temperature in Antarctica Microsoft provides a number of technologies to help you do that over the Internet.  
   
- Les technologies actives incluent des contrôles ActiveX \(anciennement contrôles OLE\) et des documents actifs ; WinInet pour récupérer facilement et en stockant les fichiers sur Internet ; et monikers asynchrones à télécharger efficace de données.  Visual C\+\+ propose des assistants pour vous feront découvrir une application de démarreur.  Pour une présentation de ces technologies, consultez [Notions de programmation Internet de MFC](../mfc/mfc-internet-programming-basics.md) et l'[MFC COM](../mfc/mfc-com.md).  
+ Active technologies include ActiveX controls (formerly OLE controls) and Active documents; WinInet for easily retrieving and saving files across the Internet; and asynchronous monikers for efficient data downloading. Visual C++ provides wizards to help you get started quickly with a starter application. For an introduction to these technologies, see [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md) and [MFC COM](../mfc/mfc-com.md).  
   
- Vous avez toujours souhaité stocker sur le serveur un fichier mais n'avez pas appris les protocoles de Winsock et la programmation réseau ?  Les classes de WinInet encapsulent ces protocoles, vous fournissant un jeu unique de fonctions qui vous permettent d'écrire une application cliente sur Internet pour télécharger des fichiers à l'aide de le protocole HTTP, FTP, et Gopher.  Vous pouvez utiliser WinInet pour rechercher des répertoires sur votre disque dur ou dans le monde.  Vous pouvez de façon transparente collecter des données de différents types, et le entrez dans une interface intégrée.  
+ Have you always wanted to FTP a file but haven't learned WinSock and network programming protocols WinInet classes encapsulate these protocols, providing you with a simple set of functions you can use to write a client application on the Internet to download files using HTTP, FTP, and gopher. You can use WinInet to search directories on your hard drive or around the world. You can transparently collect data of several different types, and present it to the user in an integrated interface.  
   
- Avez\-vous de grandes quantités de données à télécharger ?  Des monikers asynchrones fournit une solution de modèle COM \(component object model\) pour le rendu progressif d'objets.  WinInet peut également être utilisé de manière asynchrone.  
+ Do you have large amounts of data to download Asynchronous monikers provide a COM (Component Object Model) solution for progressive rendering of large objects. WinInet can also be used asynchronously.  
   
- Le tableau suivant décrit quelques une des opérations réalisables avec ces technologies.  
+ The following table describes a few of the things you can do with these technologies.  
   
-|Vous avez|Vous souhaitez|Vous devez|  
-|---------------|--------------------|----------------|  
-|Serveur Web.|Connexions et informations de suivi sur les demandes d'URL.|Entrez un filtre, les notifications de requête pour les événements d'ouverture de session et le mappage d'URL.|  
-|Navigateur Web.|Fournissez le contenu dynamique.|Créez les contrôles et les documents actifs ActiveX.|  
-|Une application document\-basée.|Ajouter la prise en charge au serveur un fichier.|Utilisez WinInet ou monikers asynchrones.|  
+|You have|You want to|You should|  
+|--------------|-----------------|----------------|  
+|A Web server.|Track logons and detailed information about URL requests.|Write a filter, request notifications for logon events and URL mapping.|  
+|A Web browser.|Provide dynamic content.|Create ActiveX controls and Active documents.|  
+|A document-based application.|Add support to FTP a file.|Use WinInet or asynchronous monikers.|  
   
- Consultez les rubriques suivantes pour obtenir des détails pour vous lancer :  
+ See the following topics for details to get you started:  
   
--   [Choix en matière de conception d'applications](../mfc/application-design-choices.md)  
+-   [Application Design Choices](../mfc/application-design-choices.md)  
   
--   [Écriture d'applications MFC](../mfc/writing-mfc-applications.md)  
+-   [Writing MFC Applications](../mfc/writing-mfc-applications.md)  
   
--   [Contrôles ActiveX sur Internet](../mfc/activex-controls-on-the-internet.md)  
+-   [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md)  
   
--   [Mise à niveau d'un contrôle ActiveX](../mfc/upgrading-an-existing-activex-control.md)  
+-   [Upgrading an Existing ActiveX Control](../mfc/upgrading-an-existing-activex-control.md)  
   
--   [Documents actifs sur Internet](../mfc/active-documents-on-the-internet.md)  
+-   [Active Documents on the Internet](../mfc/active-documents-on-the-internet.md)  
   
--   [Monikers asynchrones sur Internet](../mfc/asynchronous-monikers-on-the-internet.md)  
+-   [Asynchronous Monikers on the Internet](../mfc/asynchronous-monikers-on-the-internet.md)  
   
--   [Test des applications Internet](../mfc/testing-internet-applications.md)  
+-   [Testing Internet Applications](../mfc/testing-internet-applications.md)  
   
--   [Sécurité Internet](../mfc/internet-security-cpp.md)  
+-   [Internet Security](../mfc/internet-security-cpp.md)  
   
-## Voir aussi  
- [Éléments fondamentaux relatifs à la programmation Internet MFC](../mfc/mfc-internet-programming-basics.md)   
- [Informations Internet par tâche](../mfc/internet-information-by-task.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)   
+ [Internet Information by Task](../mfc/internet-information-by-task.md)
+
+

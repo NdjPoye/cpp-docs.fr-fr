@@ -1,5 +1,5 @@
 ---
-title: "Déclaration d’une Variable basée sur votre nouvelle classe de contrôle | Documents Microsoft"
+title: Declaring a Variable Based on Your New Control Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,9 +13,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- variables, control classes
-- control classes, variables
-- classes [C++], declaring variables based on
+- variables [MFC], control classes
+- control classes [MFC], variables
+- classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
 caps.latest.revision: 9
 author: mikeblome
@@ -35,47 +35,47 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: a5777019ca87616fbb7c6a0d27140b3fabbf7fde
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 94098a33b5f3f311d6ddd78d5b3569eb645deea3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="declaring-a-variable-based-on-your-new-control-class"></a>Déclaration d'une variable basée sur votre nouvelle classe de contrôle
-Une fois que vous avez créé une classe de contrôle MFC, vous pouvez déclarer une variable basée sur celui-ci. Pour fournir un contexte pour la nouvelle variable, vous devez ouvrir l’éditeur de boîtes de dialogue et modifier la boîte de dialogue dans laquelle vous souhaitez employer le contrôle réutilisable. En outre, la boîte de dialogue doit avoir déjà associée à une classe. Pour plus d’informations sur l’utilisation de l’éditeur de boîtes de dialogue, consultez [boîte de dialogue Éditeur](../../windows/dialog-editor.md).  
+# <a name="declaring-a-variable-based-on-your-new-control-class"></a>Declaring a Variable Based on Your New Control Class
+Once you have created an MFC control class, you can declare a variable based on it. To provide a context for the new variable, you must open the dialog editor and edit the dialog box in which you want to use your reusable control. Also, the dialog box must already have a class associated with it. For information on using the dialog editor, see [Dialog Editor](../../windows/dialog-editor.md).  
   
-### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Pour déclarer une variable basée sur votre classe réutilisable  
+### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>To declare a variable based on your reusable class  
   
-1.  Lors de la modification de la boîte de dialogue, faites glisser un contrôle du même type que la classe de base de votre nouveau contrôle à partir de la barre d’outils de contrôles dans la boîte de dialogue.  
+1.  While editing the dialog box, drag a control of the same type as the base class of your new control from the Controls toolbar onto the dialog box.  
   
-2.  Placez le pointeur de la souris sur le contrôle supprimé.  
+2.  Place the mouse pointer over the dropped control.  
   
-3.  Tout en appuyant sur la touche CTRL ENFONCÉE, double-cliquez sur le contrôle.  
+3.  While pressing the CTRL key, double-click the control.  
   
-     Le [ajouter une Variable membre](../../ide/add-member-variable-wizard.md) boîte de dialogue s’affiche.  
+     The [Add Member Variable](../../ide/add-member-variable-wizard.md) dialog box appears.  
   
-4.  Dans le **accès** , sélectionnez l’accès correct pour votre contrôle.  
+4.  In the **Access** box, select the correct access for your control.  
   
-5.  Cliquez sur le **variable de contrôle** case à cocher.  
+5.  Click the **Control variable** check box.  
   
-6.  Dans le **nom de la Variable** , tapez un nom.  
+6.  In the **Variable name** box, type a name.  
   
-7.  Sous **catégorie**, cliquez sur **contrôle**.  
+7.  Under **Category**, click **Control**.  
   
-8.  Dans le **ID de contrôle** liste, sélectionnez le contrôle que vous avez ajouté. Le **le type de Variable** liste affiche le type de variable correct et le **type de contrôle** zone doit afficher le type de contrôle correct.  
+8.  In the **Control ID** list, pick the control that you added. The **Variable type** list should display the correct variable type, and the **Control type** box should display the correct control type.  
   
-9. Dans le **commentaire** zone, ajouter un commentaire que vous souhaitez voir apparaître dans votre code.  
+9. In the **Comment** box, add any comment you want to appear in your code.  
   
-10. Cliquez sur **OK**.  
+10. Click **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
- [Mappage de Messages à des fonctions](../../mfc/reference/mapping-messages-to-functions.md)   
- [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Ajout d’une classe](../../ide/adding-a-class-visual-cpp.md)   
- [Ajout d’une fonction membre](../../ide/adding-a-member-function-visual-cpp.md)   
- [Ajout d’une Variable membre](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Substitution d’une fonction virtuelle](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Gestionnaire de messages MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navigation dans la Structure de classe](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Mapping Messages to Functions](../../mfc/reference/mapping-messages-to-functions.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
 

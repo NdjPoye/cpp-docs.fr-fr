@@ -1,50 +1,68 @@
 ---
-title: "Cr&#233;ation du contr&#244;le Month Calendar | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMonthCalCtrl (classe), créer"
-  - "calendrier mensuel (contrôles)"
-  - "calendrier mensuel (contrôles), créer"
+title: Creating the Month Calendar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMonthCalCtrl class [MFC], creating
+- month calendar controls [MFC], creating
+- month calendar controls [MFC]
 ms.assetid: 185cc642-85e9-4365-8a4c-d90b75b010f7
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Cr&#233;ation du contr&#244;le Month Calendar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5a8541375514b843d94ed21b3792377f7e0ebd65
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Comment le contrôle de calendrier month est créé selon que vous utilisez le contrôle dans une boîte de dialogue ou le créez dans une fenêtre sans boîte de dialogue.  
+---
+# <a name="creating-the-month-calendar-control"></a>Creating the Month Calendar Control
+How the month calendar control is created depends on whether you are using the control in a dialog box or creating it in a nondialog window.  
   
-### Pour utiliser CMonthCalCtrl directement dans une boîte de dialogue  
+### <a name="to-use-cmonthcalctrl-directly-in-a-dialog-box"></a>To use CMonthCalCtrl directly in a dialog box  
   
-1.  Dans l'éditeur de boîtes de dialogue, ajoutez un contrôle de calendrier month à la ressource du modèle de la boîte de dialogue.  Spécifiez son ID de contrôle  
+1.  In the dialog editor, add a Month Calendar Control to your dialog template resource. Specify its control ID.  
   
-2.  Spécifiez tous les styles requis, à l'aide de la boîte de dialogue Propriétés du contrôle de calendrier month.  
+2.  Specify any styles required, using the Properties dialog box of the month calendar control.  
   
-3.  Utilisez l'[Assistant d'Ajout de variable membre](../ide/adding-a-member-variable-visual-cpp.md) pour ajouter une variable membre de type [CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md) à la propriété de contrôle.  Vous pouvez utiliser ce membre pour appeler des fonctions membres `CMonthCalCtrl`.  
+3.  Use the [Add Member Variable Wizard](../ide/adding-a-member-variable-visual-cpp.md) to add a member variable of type [CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md) with the Control property. You can use this member to call `CMonthCalCtrl` member functions.  
   
-4.  Utilisez la fenêtre Propriétés pour mapper les fonctions de handler dans la classe de la boîte de dialogue pour tous les messages de notification de contrôle de calendrier month que vous devez traiter \(voir [Mapper des messages aux fonctions](../mfc/reference/mapping-messages-to-functions.md)\).  
+4.  Use the Properties window to map handler functions in the dialog class for any month calendar control notification messages you need to handle (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)).  
   
-5.  Dans [OnInitDialog](../Topic/CDialog::OnInitDialog.md), définissez les styles supplémentaires pour l'objet `CMonthCalCtrl`.  
+5.  In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), set any additional styles for the `CMonthCalCtrl` object.  
   
-### Pour utiliser CMonthCalCtrl dans une fenêtre de sans boîte de dialogue.  
+### <a name="to-use-cmonthcalctrl-in-a-nondialog-window"></a>To use CMonthCalCtrl in a nondialog window  
   
-1.  Définissez le contrôle d'une classe vue ou fenêtre.  
+1.  Define the control in the view or window class.  
   
-2.  Appelez la fonction membre [Créer](../Topic/CMonthCalCtrl::Create.md) du contrôle, éventuellement dans [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md), éventuellement dans la fonction gestionnaire [OnCreate](../Topic/CWnd::OnCreate.md) parente de la fenêtre \(si vous sous\-classez le contrôle\).  Définissez les styles pour le contrôle.  
+2.  Call the control's [Create](../mfc/reference/cmonthcalctrl-class.md#create) member function, possibly in [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), possibly as early as the parent window's [OnCreate](../mfc/reference/cwnd-class.md#oncreate) handler function (if you're subclassing the control). Set the styles for the control.  
   
-## Voir aussi  
- [Utilisation de CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

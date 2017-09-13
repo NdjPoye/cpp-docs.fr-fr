@@ -1,5 +1,5 @@
 ---
-title: '&lt;algorithm&gt;, fonctions | Microsoft Docs'
+title: '&lt;algorithm&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,172 +8,90 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - algorithm/std::adjacent_find
-- adjacent_find
 - algorithm/std::all_of
-- all_of
 - algorithm/std::any_of
-- any_of
 - algorithm/std::binary_search
-- binary_search
 - algorithm/std::copy
-- copy
 - algorithm/std::copy_backward
-- copy_backward
 - algorithm/std::copy_if
-- copy_if
 - algorithm/std::copy_n
-- copy_n
 - algorithm/std::equal
-- equal
 - algorithm/std::equal_range
-- equal_range
 - algorithm/std::fill
-- fill
 - algorithm/std::fill_n
-- fill_n
 - algorithm/std::find
-- find
 - algorithm/std::find_end
-- find_end
 - algorithm/std::find_first_of
-- find_first_of
 - algorithm/std::find_if
-- find_if
 - algorithm/std::find_if_not
-- find_if_not
 - algorithm/std::for_each
-- for_each
 - algorithm/std::generate
-- generate
 - algorithm/std::generate_n
-- generate_n
 - algorithm/std::includes
-- includes
 - algorithm/std::inplace_merge
-- inplace_merge
 - algorithm/std::is_heap
-- is_heap
 - algorithm/std::is_heap_until
-- is_heap_until
 - algorithm/std::is_partitioned
-- is_partitioned
 - algorithm/std::is_permutation
-- is_permutation
 - algorithm/std::is_sorted
-- is_sorted
 - algorithm/std::is_sorted_until
-- is_sorted_until
 - algorithm/std::iter_swap
-- iter_swap
 - algorithm/std::lexicographical_compare
-- lexicographical_compare
 - algorithm/std::lower_bound
-- lower_bound
 - algorithm/std::make_heap
-- make_heap
 - algorithm/std::max
-- max
 - algorithm/std::max_element
-- max_element
 - algorithm/std::merge
-- merge
 - algorithm/std::min
-- min
 - algorithm/std::minmax
-- minmax
 - algorithm/std::minmax_element
-- minmax_element
 - algorithm/std::min_element
-- min_element
 - algorithm/std::mismatch
-- mismatch
 - algorithm/std::move
-- move
 - algorithm/std::move_backward
-- move_backward
 - algorithm/std::next_permutation
-- next_permutation
 - algorithm/std::none_of
-- none_of
 - algorithm/std::nth_element
-- nth_element
 - algorithm/std::partial_sort
-- partial_sort
 - algorithm/std::partial_sort_copy
-- partial_sort_copy
 - algorithm/std::partition
-- partition
 - algorithm/std::partition_point
-- partition_point
 - algorithm/std::pop_heap
-- pop_heap
 - algorithm/std::prev_permutation
-- prev_permutation
 - algorithm/std::push_heap
-- push_heap
 - algorithm/std::random_shuffle
-- random_shuffle
 - algorithm/std::remove
-- remove
 - algorithm/std::remove_copy
-- remove_copy
 - algorithm/std::remove_copy_if
-- remove_copy_if
 - algorithm/std::remove_if
-- remove_if
 - algorithm/std::replace
-- replace
 - algorithm/std::replace_copy
-- replace_copy
 - algorithm/std::replace_copy_if
-- replace_copy_if
 - algorithm/std::replace_if
-- replace_if
 - algorithm/std::reverse
-- reverse
 - algorithm/std::reverse_copy
-- reverse_copy
 - algorithm/std::rotate
-- rotate
 - algorithm/std::rotate_copy
-- rotate_copy
 - algorithm/std::search
-- search
 - algorithm/std::search_n
-- search_n
 - algorithm/std::set_difference
-- set_difference
 - algorithm/std::set_intersection
-- set_intersection
 - algorithm/std::set_symmetric_difference
-- set_symmetric_difference
 - algorithm/std::set_union
-- set_union
 - algorithm/std::shuffle
-- shuffle
 - algorithm/std::sort
-- sort
 - algorithm/std::sort_heap
-- sort_heap
 - algorithm/std::stable_partition
-- stable_partition
 - algorithm/std::stable_sort
-- stable_sort
 - algorithm/std::swap_ranges
-- swap_ranges
 - algorithm/std::transform
-- transform
 - algorithm/std::unique
-- unique
 - algorithm/std::unique_copy
-- unique_copy
 - algorithm/std::upper_bound
-- upper_bound
 - xutility/std::copy
 - xutility/std::copy_backward
 - xutility/std::copy_n
 - xutility/std::count
-- count
 - xutility/std::equal
 - xutility/std::fill
 - xutility/std::fill_n
@@ -194,14 +112,113 @@ caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 6b3c288921fd86c4c02a8e2ffa09a060fe5fd3a1
+helpviewer_keywords:
+- std::adjacent_find [C++]
+- std::all_of [C++]
+- std::any_of [C++]
+- std::binary_search [C++]
+- std::copy [C++]
+- std::copy_backward [C++]
+- std::copy_if [C++]
+- std::copy_n [C++]
+- std::equal [C++]
+- std::equal_range [C++]
+- std::fill [C++]
+- std::fill_n [C++]
+- std::find [C++]
+- std::find_end [C++]
+- std::find_first_of [C++]
+- std::find_if [C++]
+- std::find_if_not [C++]
+- std::for_each [C++]
+- std::generate [C++]
+- std::generate_n [C++]
+- std::includes [C++]
+- std::inplace_merge [C++]
+- std::is_heap [C++]
+- std::is_heap_until [C++]
+- std::is_partitioned [C++]
+- std::is_permutation [C++]
+- std::is_sorted [C++]
+- std::is_sorted_until [C++]
+- std::iter_swap [C++]
+- std::lexicographical_compare [C++]
+- std::lower_bound [C++]
+- std::make_heap [C++]
+- std::max [C++]
+- std::max_element [C++]
+- std::merge [C++]
+- std::min [C++]
+- std::minmax [C++]
+- std::minmax_element [C++]
+- std::min_element [C++]
+- std::mismatch [C++]
+- std::move [C++]
+- std::move_backward [C++]
+- std::next_permutation [C++]
+- std::none_of [C++]
+- std::nth_element [C++]
+- std::partial_sort [C++]
+- std::partial_sort_copy [C++]
+- std::partition [C++]
+- std::partition_point [C++]
+- std::pop_heap [C++]
+- std::prev_permutation [C++]
+- std::push_heap [C++]
+- std::random_shuffle [C++]
+- std::remove [C++]
+- std::remove_copy [C++]
+- std::remove_copy_if [C++]
+- std::remove_if [C++]
+- std::replace [C++]
+- std::replace_copy [C++]
+- std::replace_copy_if [C++]
+- std::replace_if [C++]
+- std::reverse [C++]
+- std::reverse_copy [C++]
+- std::rotate [C++]
+- std::rotate_copy [C++]
+- std::search [C++]
+- std::search_n [C++]
+- std::set_difference [C++]
+- std::set_intersection [C++]
+- std::set_symmetric_difference [C++]
+- std::set_union [C++]
+- std::shuffle [C++]
+- std::sort [C++]
+- std::sort_heap [C++]
+- std::stable_partition [C++]
+- std::stable_sort [C++]
+- std::swap_ranges [C++]
+- std::transform [C++]
+- std::unique [C++]
+- std::unique_copy [C++]
+- std::upper_bound [C++]
+- std::copy [C++]
+- std::copy_backward [C++]
+- std::copy_n [C++]
+- std::count [C++]
+- std::equal [C++]
+- std::fill [C++]
+- std::fill_n [C++]
+- std::find [C++]
+- std::is_permutation [C++]
+- std::lexicographical_compare [C++]
+- std::move [C++]
+- std::move_backward [C++]
+- std::reverse [C++]
+- std::rotate [C++]
+- std::count_if [C++]
+- std::partition_copy [C++]
+- std::swap [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 941b66bd40b1b14fd07f823023675d9ac52e141c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt;, fonctions
+# <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; functions
 ||||  
 |-|-|-|  
 |[move](#alg_move)|[adjacent_find](#adjacent_find)|[all_of](#all_of)|  
@@ -235,7 +252,7 @@ ms.lasthandoff: 04/19/2017
 |[upper_bound](#upper_bound)|  
   
 ##  <a name="adjacent_find"></a>  adjacent_find  
- Recherche deux éléments adjacents qui ont la même valeur ou qui répondent à une condition spécifiée.  
+ Searches for two adjacent elements that are either equal or satisfy a specified condition.  
   
 ```  
 template<class ForwardIterator>  
@@ -250,25 +267,25 @@ template<class ForwardIterator , class BinaryPredicate>
         BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `comp`  
- Prédicat binaire indiquant la condition à satisfaire par les valeurs des éléments adjacents de la plage dans laquelle s’effectue la recherche.  
+ The binary predicate giving the condition to be satisfied by the values of the adjacent elements in the range being searched.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur vers l’avant jusqu’au premier élément de la paire adjacente dont les éléments sont égaux entre eux (dans la première version) ou répondent à la condition spécifiée par le prédicat binaire (dans la seconde version), à condition que cette paire d’éléments soit trouvée. Sinon, un itérateur pointant vers `last` est retourné.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator to the first element of the adjacent pair that are either equal to each other (in the first version) or that satisfy the condition given by the binary predicate (in the second version), provided that such a pair of elements is found. Otherwise, an iterator pointing to `last` is returned.  
   
-### <a name="remarks"></a>Notes  
- L'algorithme `adjacent_find` est un algorithme de séquence sans mutation. La plage dans laquelle s'effectue la recherche doit être valide. Tous les pointeurs doivent pouvoir être déréférencés. Par ailleurs, la dernière position est accessible depuis la première par incrémentation. La complexité temporelle de l'algorithme est linéaire pour le nombre d'éléments contenus dans la plage.  
+### <a name="remarks"></a>Remarks  
+ The `adjacent_find` algorithm is a nonmutating sequence algorithm. The range to be searched must be valid; all pointers must be dereferenceable and the last position is reachable from the first by incrementation. The time complexity of the algorithm is linear in the number of elements contained in the range.  
   
- `operator==`, qui sert à déterminer la correspondance entre des éléments, doit imposer une relation d'équivalence entre ses opérandes.  
+ The `operator==` used to determine the match between elements must impose an equivalence relation between its operands.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_adj_fnd.cpp  
@@ -331,7 +348,7 @@ There are two adjacent elements where the second is twice the first.
 ```  
   
 ##  <a name="all_of"></a>  all_of  
- Retourne `true` lorsqu'une condition est remplie pour chaque élément de la plage spécifiée.  
+ Returns `true` when a condition is present at each element in the given range.  
   
 ```  
 template<class InputIterator, class Predicate>  
@@ -341,24 +358,24 @@ template<class InputIterator, class Predicate>
         BinaryPredicatecomp);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’entrée qui indique le début de la recherche d’une condition. L’itérateur marque le début d’une plage d’éléments.  
+ An input iterator that indicates where to start to check for a condition. The iterator marks where a range of elements starts.  
   
  `last`  
- Itérateur d’entrée qui indique la fin d’une plage d’éléments dans laquelle rechercher une condition.  
+ An input iterator that indicates the end of the range of elements to check for a condition.  
   
  `comp`  
- Condition à vérifier. Il s’agit d’un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire par l’élément vérifié. Un prédicat accepte un seul argument et retourne `true` ou `false`.  
+ A condition to test for. This is a user-defined predicate function object that defines the condition to be satisfied by an element being checked. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne `true` si la condition est détectée au niveau de chaque élément d’une plage spécifiée et `false` si la condition n’est pas détectée au moins une fois.  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the condition is detected at each element in the indicated range, and `false` if the condition is not detected at least one time.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle retourne `true` uniquement si, pour chaque `N` de la plage `[0,Last - first)`, le prédicat `comp(*(_First + N))` est `true`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if, for each `N` in the range `[0,Last - first)`, the predicate `comp(*(_First + N))` is `true`.  
   
 ##  <a name="any_of"></a>  any_of  
- Retourne `true` lorsqu'une condition est remplie au moins une fois dans la plage d'éléments spécifiée.  
+ Returns `true` when a condition is present at least once in the specified range of elements.  
   
 ```  
 template<class InputIterator, class UnaryPredicate>  
@@ -368,26 +385,26 @@ template<class InputIterator, class UnaryPredicate>
         UnaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’entrée qui indique le début de la recherche d’une condition dans une plage d’éléments.  
+ An input iterator that indicates where to start checking a range of elements for a condition.  
   
  `last`  
- Itérateur d’entrée qui indique la fin d’une plage d’éléments dans laquelle rechercher une condition.  
+ An input iterator that indicates the end of the range of elements to check for a condition.  
   
  `comp`  
- Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur. Le prédicat définit la condition à satisfaire par l’élément vérifié. Un prédicat accepte un seul argument et retourne `true` ou `false`.  
+ A condition to test for. This is provided by a user-defined predicate function object. The predicate defines the condition to be satisfied by the element being tested. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne `true` si la condition est détectée au moins une fois dans la plage spécifiée, `false` si la condition n’est jamais détectée.  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the condition is detected at least once in the indicated range, `false` if the condition is never detected.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle retourne `true` uniquement si, pour certains `N` de la plage  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if, for some `N` in the range  
   
- `[0, last - first)`, le prédicat `comp(*(first + N))` a la valeur true.  
+ `[0, last - first)`, the predicate `comp(*(first + N))` is true.  
   
 ##  <a name="binary_search"></a>  binary_search  
- Teste si un élément d’une plage triée est égal à une valeur spécifiée ou équivalent, selon une condition spécifiée par un prédicat binaire.  
+ Tests whether there is an element in a sorted range that is equal to a specified value or that is equivalent to it in a sense specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator, class Type>      
@@ -405,34 +422,34 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `first`  
- Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `value`  
- Valeur qui doit correspondre à la valeur de l’élément ou qui doit satisfaire la condition avec la valeur d’élément spécifiée par le prédicat binaire.  
+ The value required to be matched by the value of the element or that must satisfy the condition with the element value specified by the binary predicate.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne `true` quand la condition est satisfaite et `false` quand elle ne l’est pas.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns `true` when satisfied and `false` when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- `true` si un élément de la plage est supérieur ou égal à la valeur spécifiée ; sinon, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if an element is found in the range that is equal or equivalent to the specified value; otherwise, `false`.  
   
-### <a name="remarks"></a>Notes  
- Les plages sources triées référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position doit être accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The sorted source range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- Les plages triées doivent chacune être structurées comme condition préalable à l’application de l’algorithme `binary_search` selon le même ordre que celui utilisé par l’algorithme pour trier les plages regroupées.  
+ The sorted range must each be arranged as a precondition to the application of the `binary_search` algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- Les plages sources ne sont pas modifiées par `binary_search`.  
+ The source ranges are not modified by `binary_search`.  
   
- Les types valeur des itérateurs vers l’avant doivent être comparables en termes d’infériorité pour être triés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. De cette façon, les éléments non équivalents sont ordonnés  
+ The value types of the forward iterators need to be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements  
   
- La complexité de l’algorithme est logarithmique pour les itérateurs à accès aléatoire et linéaire dans le cas contraire, avec le nombre d’étapes proportionnels au ( `last`  -  `first`).  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last` - `first`).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_bin_srch.cpp  
@@ -515,7 +532,7 @@ int main( )
 ```  
   
 ##  <a name="copy"></a>  copy  
- Assigne les valeurs des éléments d'une plage source à une plage de destination, en procédant à une itération via la séquence source d'éléments et en leur assignant de nouvelles positions, du haut vers le bas.  
+ Assigns the values of elements from a source range to a destination range, iterating through the source sequence of elements and assigning them new positions in a forward direction.  
   
 ```  
 template<class InputIterator, class OutputIterator>  
@@ -525,27 +542,27 @@ template<class InputIterator, class OutputIterator>
         OutputIterator destBeg);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’entrée ciblant la position du premier élément dans la plage source.  
+ An input iterator addressing the position of the first element in the source range.  
   
  `last`  
- Itérateur d’entrée ciblant la position située de suite après le dernier élément de la plage source.  
+ An input iterator addressing the position that is one past the final element in the source range.  
   
  *destBeg*  
- Itérateur de sortie qui traite la position du premier élément dans la plage de destination.  
+ An output iterator addressing the position of the first element in the destination range.  
   
-### <a name="return-value"></a>Valeur de retour  
- Un itérateur de sortie ciblant la position située immédiatement après le dernier élément de la plage de destination, autrement dit, l’itérateur `result` + ( `last`  -   `first` ).  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position that is one past the final element in the destination range, that is, the iterator addresses `result` + ( `last` -  `first` ).  
   
-### <a name="remarks"></a>Remarques  
- La plage source doit être valide et il doit y avoir suffisamment d'espace au niveau de la destination pour contenir tous les éléments qui sont copiés.  
+### <a name="remarks"></a>Remarks  
+ The source range must be valid and there must be sufficient space at the destination to hold all the elements being copied.  
   
- Comme l’algorithme copie les éléments sources dans l’ordre en commençant par le premier élément, la plage de destination peut chevaucher la plage source, à condition que la position `last` de la plage source ne soit pas contenue dans la plage de destination. **copy** peut être utilisé pour décaler des éléments vers la gauche mais pas vers la droite, à moins qu’il n’y ait aucun chevauchement entre les plages source et de destination. Pour décaler vers la droite d’un nombre quelconque de positions, utilisez l’algorithme [copy_backward](../standard-library/algorithm-functions.md#copy_backward).  
+ Because the algorithm copies the source elements in order beginning with the first element, the destination range can overlap with the source range provided the `last` position of the source range is not contained in the destination range. **copy** can be used to shift elements to the left but not the right, unless there is no overlap between the source and destination ranges. To shift to the right any number of positions, use the [copy_backward](../standard-library/algorithm-functions.md#copy_backward) algorithm.  
   
- L’algorithme **copy** modifie uniquement les valeurs sur lesquelles pointent les itérateurs, assignant de nouvelles valeurs aux éléments de la plage de destination. Il ne peut pas être utilisé pour créer de nouveaux éléments et ne peut pas insérer directement d'éléments dans un conteneur vide.  
+ The **copy** algorithm only modifies values pointed to by the iterators, assigning new values to elements in the destination range. It cannot be used to create new elements and cannot insert elements into an empty container directly.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_copy.cpp  
@@ -604,7 +621,7 @@ v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )
 ```  
   
 ##  <a name="copy_backward"></a>  copy_backward  
- Assigne les valeurs des éléments d'une plage source à une plage de destination, en procédant à une itération via la séquence source d'éléments et en leur assignant de nouvelles positions vers le haut.  
+ Assigns the values of elements from a source range to a destination range, iterating through the source sequence of elements and assigning them new positions in a backward direction.  
   
 ```  
 template<class BidirectionalIterator1, class BidirectionalIterator2>  
@@ -614,31 +631,31 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
         BidirectionalIterator2 destEnd);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur bidirectionnel se rapportant à la position du premier élément dans la plage source.  
+ A bidirectional iterator addressing the position of the first element in the source range.  
   
  `last`  
- Itérateur bidirectionnel se rapportant à la position située immédiatement après l'élément final dans la plage source.  
+ A bidirectional iterator addressing the position that is one past the final element in the source range.  
   
  `destEnd`  
- Itérateur bidirectionnel se rapportant à la position située immédiatement après l'élément final dans la plage de destination.  
+ A bidirectional iterator addressing the position of one past the final element in the destination range.  
   
-### <a name="return-value"></a>Valeur de retour  
- Un itérateur de sortie ciblant la position située immédiatement après le dernier élément de la plage de destination, autrement dit, l’itérateur `destEnd` -( `last`  -   `first` ).  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position that is one past the final element in the destination range, that is, the iterator addresses `destEnd` - ( `last` -  `first` ).  
   
-### <a name="remarks"></a>Remarques  
- La plage source doit être valide et il doit y avoir suffisamment d'espace au niveau de la destination pour contenir tous les éléments qui sont copiés.  
+### <a name="remarks"></a>Remarks  
+ The source range must be valid and there must be sufficient space at the destination to hold all the elements being copied.  
   
- L'algorithme `copy_backward` impose des exigences plus strictes que celles de l'algorithme de copie. Ses itérateurs d'entrée et de sortie doivent être bidirectionnels.  
+ The `copy_backward` algorithm imposes more stringent requirements than that the copy algorithm. Both its input and output iterators must be bidirectional.  
   
- Les algorithmes `copy_backward` et [move_backward](../standard-library/algorithm-functions.md#move_backward) sont les seuls algorithmes de la bibliothèque C++ Standard qui désignent la plage de sortie avec un itérateur pointant vers la fin de la plage de destination.  
+ The `copy_backward` and [move_backward](../standard-library/algorithm-functions.md#move_backward) algorithms are the only C++ Standard Library algorithms designating the output range with an iterator pointing to the end of the destination range.  
   
- Comme l’algorithme copie les éléments sources dans l’ordre en commençant par le dernier élément, la plage de destination peut chevaucher la plage source, à condition que la position `first` de la plage source ne soit pas contenue dans la plage de destination. `copy_backward` peut être utilisé pour décaler des éléments vers la droite mais pas vers la gauche, à moins qu'il n'y ait aucun chevauchement entre la plage source et celle de destination. Pour décaler vers la gauche d’un nombre quelconque de positions, utilisez l’algorithme [copy](../standard-library/algorithm-functions.md#copy).  
+ Because the algorithm copies the source elements in order beginning with the last element, the destination range can overlap with the source range provided the  `first` position of the source range is not contained in the destination range. `copy_backward` can be used to shift elements to the right but not the left, unless there is no overlap between the source and destination ranges. To shift to the left any number of positions, use the [copy](../standard-library/algorithm-functions.md#copy) algorithm.  
   
- L'algorithme `copy_backward` modifie uniquement les valeurs sur lesquelles pointent les itérateurs, assignant de nouvelles valeurs aux éléments dans la plage de destination. Il ne peut pas être utilisé pour créer de nouveaux éléments et ne peut pas insérer directement d'éléments dans un conteneur vide.  
+ The `copy_backward` algorithm only modifies values pointed to by the iterators, assigning new values to elements in the destination range. It cannot be used to create new elements and cannot insert elements into an empty container directly.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_copy_bkwd.cpp  
@@ -690,7 +707,7 @@ int main() {
 ```  
   
 ##  <a name="copy_if"></a>  copy_if  
- Dans une plage d’éléments, copie les éléments qui sont `true` pour la condition spécifiée.  
+ In a range of elements, copies the elements that are `true` for the specified condition.  
   
 ```  
 template<class InputIterator, class OutputIterator, class BinaryPredicate>  
@@ -701,31 +718,31 @@ template<class InputIterator, class OutputIterator, class BinaryPredicate>
         Predicate pred);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’entrée qui indique le début d’une plage dans laquelle rechercher la condition.  
+ An input iterator that indicates the start of a range to check for the condition.  
   
  `last`  
- Itérateur d’entrée qui indique la fin de la plage.  
+ An input iterator that indicates the end of the range.  
   
  `dest`  
- Itérateur de sortie qui indique la destination des éléments copiés.  
+ The output iterator that indicates the destination for the copied elements.  
   
  `_Pred`  
- Condition pour laquelle chaque élément de la plage est vérifié. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur. Un prédicat accepte un seul argument et retourne `true` ou `false`.  
+ The condition against which every element in the range is tested. This condition is provided by a user-defined predicate function object. A predicate takes one argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie égal à `dest` incrémenté une fois pour chaque élément qui répond à la condition. En d’autres termes, la valeur de retour moins `dest` est égale au nombre d’éléments copiés.  
+### <a name="return-value"></a>Return Value  
+ An output iterator that equals `dest` incremented once for each element that fulfills the condition. In other words, the return value minus `dest` equals the number of copied elements.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle évalue  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates  
   
  `if (_Pred(*_First + N)) * dest++ = *(_First + N))`  
   
- une fois pour chaque `N` de la plage `[0, last - first)`, pour les valeurs strictement croissantes de `N` en commençant par la valeur la plus petite. Si `dest` et `first` désignent des régions de stockage, `dest` ne doit pas se trouver dans la plage `[` `first``,` `last``)`.  
+ once for each `N` in the range `[0, last - first)`, for strictly increasing values of `N` starting with the lowest value. If `dest` and  `first` designate regions of storage, `dest` must not be in the range `[ first, last )`.  
   
 ##  <a name="copy_n"></a>  copy_n  
- Copie un nombre spécifié d'éléments.  
+ Copies a specified number of elements.  
   
 ```  
 template<class InputIterator, class Size, class OutputIterator>  
@@ -735,24 +752,24 @@ template<class InputIterator, class Size, class OutputIterator>
         OutputIterator dest);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `first`  
- Itérateur d'entrée qui indique l'emplacement à partir duquel les éléments doivent être copiés.  
+ An input iterator that indicates where to copy elements from.  
   
  `count`  
- Type entier signé ou non signé spécifiant le nombre d'éléments à copier.  
+ A signed or unsigned integer type specifying the number of elements to copy.  
   
  `dest`  
- Itérateur de sortie qui indique l'emplacement où les éléments doivent être copiés.  
+ An output iterator that indicates where to copy elements to.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne un itérateur de sortie indiquant où les éléments ont été copiés. Il est identique à la valeur retournée du troisième paramètre, `dest`.  
+### <a name="return-value"></a>Return Value  
+ Returns an output iterator where elements have been copied to. It is the same as the returned value of the third parameter, `dest`.  
   
-### <a name="remarks"></a>Remarques  
- La fonction de modèle évalue `*(dest + N) = *(first + N))` une fois pour chaque `N` dans la plage `[0, count)`, pour les valeurs strictement croissantes de `N` commençant par la valeur la plus faible. Elle retourne ensuite `dest + N`. Si `dest` et `first` désignent des régions de stockage, `dest` ne doit pas être dans la plage `[first, last)`.  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates `*(dest + N) = *(first + N))` once for each `N` in the range `[0, count)`, for strictly increasing values of `N` starting with the lowest value. It then returns `dest + N`. If `dest` and `first` designate regions of storage, `dest` must not be in the range `[first, last)`.  
   
 ##  <a name="count"></a>  count  
- Retourne le nombre d'éléments d'une plage dont les valeurs correspondent à une valeur spécifiée.  
+ Returns the number of elements in a range whose values match a specified value.  
   
 ```  
 template<class InputIterator, class Type> 
@@ -762,25 +779,25 @@ template<class InputIterator, class Type>
         const Type& val);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’entrée ciblant la position du premier élément de la plage à traverser.  
+ An input iterator addressing the position of the first element in the range to be traversed.  
   
  `last`  
- Itérateur d’entrée ciblant la position juste après le dernier élément de la plage à traverser.  
+ An input iterator addressing the position one past the final element in the range to be traversed.  
   
  `val`  
- Valeur des éléments à compter.  
+ The value of the elements to be counted.  
   
-### <a name="return-value"></a>Valeur de retour  
- Type de différence du **InputIterator** qui compte le nombre d’éléments de la plage [`first`, `last`) ayant une valeur `val`.  
+### <a name="return-value"></a>Return Value  
+ The difference type of the **InputIterator** that counts the number of elements in the range [  `first`, `last` ) that have value `val`.  
   
-### <a name="remarks"></a>Notes  
- `operator==`, qui sert à déterminer la correspondance entre un élément et la valeur spécifiée, doit imposer une relation d'équivalence entre ses opérandes.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- Cet algorithme est généralisé pour compter les éléments qui satisfont un prédicat avec la fonction de modèle [count_if](../standard-library/algorithm-functions.md#count_if).  
+ This algorithm is generalized to count elements that satisfy any predicate with the template function [count_if](../standard-library/algorithm-functions.md#count_if).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_count.cpp  
@@ -818,7 +835,7 @@ The number of 10s in v2 is: 3.
 ```  
   
 ##  <a name="count_if"></a>  count_if  
- Retourne le nombre d’éléments d’une plage dont les valeurs satisfont une condition spécifiée.  
+ Returns the number of elements in a range whose values satisfy a specified condition.  
   
 ```  
 template<class InputIterator, class Predicate>
@@ -828,23 +845,23 @@ template<class InputIterator, class Predicate>
         Predicate pred);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d'entrée qui traite la position du premier élément de la plage à rechercher.  
+ An input iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage à rechercher.  
+ An input iterator addressing the position one past the final element in the range to be searched.  
   
  `_Pred`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être compté. Un prédicat accepte un seul argument et retourne **true** ou **false**.  
+ User-defined predicate function object that defines the condition to be satisfied if an element is to be counted. A predicate takes single argument and returns **true** or **false**.  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre d’éléments qui satisfont la condition spécifiée par le prédicat.  
+### <a name="return-value"></a>Return Value  
+ The number of elements that satisfy the condition specified by the predicate.  
   
-### <a name="remarks"></a>Notes  
- Cette fonction de modèle est une généralisation de l’algorithme [count](../standard-library/algorithm-functions.md#count) et remplace le prédicat « est égal à une valeur spécifique » par un autre prédicat.  
+### <a name="remarks"></a>Remarks  
+ This template function is a generalization of the algorithm [count](../standard-library/algorithm-functions.md#count), replacing the predicate "equals a specific value" with any predicate.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_count_if.cpp  
@@ -888,11 +905,11 @@ The number of elements in v1 greater than 10 is: 2.
 ```  
   
 ##  <a name="equal"></a>  equal  
- Compare deux plages, élément par élément, à la recherche d’une égalité ou d’une équivalence, selon une condition spécifiée par un prédicat binaire.  
+ Compares two ranges element by element for equality or equivalence in a sense specified by a binary predicate.  
   
- Utilisez `std::equal` quand vous comparez des éléments de différents types de conteneurs (par exemple `vector` et `list`) ou différents types d’éléments, ou quand vous devez comparer des sous-plages de conteneurs. Sinon, quand vous comparez des éléments du même type dans le même type de conteneur, utilisez l’`operator==` de non-membre fourni pour chaque conteneur.  
+ Use `std::equal` when comparing elements in different container types (for example `vector` and `list`) or when comparing different element types, or when you need to compare sub-ranges of containers. Otherwise, when comparing elements of the same type in the same container type, use the non-member `operator==` that is provided for each container.  
   
- Utilisez les surcharges à double portée dans le code C++14, car les surcharges qui ne prennent qu'un seul itérateur pour la deuxième plage ne détecteront pas les différences si la deuxième plage est plus longue que la première et provoqueront un comportement non défini si la deuxième plage est plus courte que la première.  
+ Use the dual-range overloads in C++14 code because the overloads that only take a single iterator for the second range will not detect differences if the second range is longer than the first range, and will result in undefined behavior if the second range is shorter than the first range.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -924,33 +941,33 @@ bool equal(
     BinaryPredicate Comp);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `First1`  
- Itérateur d'entrée qui traite la position du premier élément de la première plage à tester.  
+ An input iterator addressing the position of the first element in the first range to be tested.  
   
  `Last1`  
- Itérateur d'entrée qui traite la position qui suit le dernier élément de la première plage à tester.  
+ An input iterator addressing the position one past the last element in the first range to be tested.  
   
  `First2`  
- Itérateur d'entrée qui traite la position du premier élément de la deuxième plage à tester.  
+ An input iterator addressing the position of the first element in the second range to be tested.  
   
  `First2`  
- Itérateur d'entrée qui traite la position qui suit le dernier élément de la deuxième plage à tester.  
+ An input iterator addressing the position of one past the last element in the second range to be tested.  
   
  `Comp`  
- Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si et seulement si les plages sont identiques ou équivalentes sous le prédicat binaire en cas de comparaison élément par élément ; sinon, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if and only if the ranges are identical or equivalent under the binary predicate when compared element by element; otherwise, **false**.  
   
-### <a name="remarks"></a>Notes  
- La plage dans laquelle s'effectue la recherche doit être valide. Tous les itérateurs doivent pouvoir être déréférencés. Par ailleurs, la dernière position est accessible depuis la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The range to be searched must be valid; all iterators must be dereferenceable and the last position is reachable from the first by incrementation.  
   
- Si les deux plages sont de longueur égale, la complexité temporelle de l'algorithme est linéaire quant au nombre d'éléments contenus dans la plage. Sinon, la fonction retourne immédiatement `false`.  
+ If the two ranges are equal length, then the time complexity of the algorithm is linear in the number of elements contained in the range. Otherwise the function immediately returns `false`.  
   
- Ni le `operator==`, ni le prédicat défini par l'utilisateur ne doit obligatoirement imposer une relation d'équivalence qui est symétrique, réflexive et transitive entre ses opérandes.  
+ Neither the `operator==` nor the user-defined predicate is required to impose an equivalence relation that symmetric, reflexive and transitive between its operands.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <iostream>  
@@ -985,7 +1002,7 @@ int main()
 ```  
   
 ##  <a name="equal_range"></a>  equal_range  
- Dans une plage ordonnée définie, recherche la sous-plage dans laquelle tous les éléments sont équivalents à une valeur donnée.  
+ Given an ordered range, finds the subrange in which all elements are equivalent to a given value.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -1002,34 +1019,34 @@ pair<ForwardIterator, ForwardIterator> equal_range(
     Predicate comp);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `first`  
- Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `val`  
- Valeur recherchée dans la plage ordonnée.  
+ The value being searched for in the ordered range.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre.  
+ User-defined predicate function object that defines the sense in which one element is less than another.  
   
-### <a name="return-value"></a>Valeur de retour  
- Paire d’itérateurs vers l’avant qui spécifient une sous-plage contenue dans la plage de recherche, dans laquelle tous les éléments sont équivalents à `val` selon la logique définie par le prédicat binaire utilisé (`comp` ou la valeur par défaut, Inférieur à).  
+### <a name="return-value"></a>Return Value  
+ A pair of forward iterators that specify a subrange, contained within the range searched, in which all of the elements are equivalent to `val` in the sense defined by the binary predicate used (either `comp` or the default, less-than).  
   
- Si aucun élément de la plage n’est équivalent à `val`, les deux itérateurs vers l’avant retournés sont égaux et spécifient le point où `val` peut être inséré sans perturber l’ordre de la plage.  
+ If no elements in the range are equivalent to `val`, the returned pair of forward iterators are equal and specify the point where `val` could be inserted without disturbing the order of the range.  
   
-### <a name="remarks"></a>Notes  
- Le premier itérateur de la paire retournée par l’algorithme est [lower_bound](../standard-library/algorithm-functions.md#lower_bound) et le deuxième est [upper_bound](../standard-library/algorithm-functions.md#upper_bound).  
+### <a name="remarks"></a>Remarks  
+ The first iterator of the pair returned by the algorithm is [lower_bound](../standard-library/algorithm-functions.md#lower_bound), and the second iterator is [upper_bound](../standard-library/algorithm-functions.md#upper_bound).  
   
- La plage doit être triée selon le prédicat fourni à `equal_range`. Par exemple, si vous comptez utiliser le prédicat Supérieur à, la plage doit être triée par ordre décroissant.  
+ The range must be sorted according to the predicate provided to `equal_range`. For example, if you are going to use the greater-than predicate, the range must be sorted in descending order.  
   
- Les éléments de la sous-plage éventuellement vide définie par la paire d’itérateurs retournés par `equal_range` sont équivalents à `val` selon la logique définie par le prédicat utilisé.  
+ Elements in the possibly empty subrange defined by the pair of iterators returned by `equal_range` will be equivalent to `val` in the sense defined by the predicate used.  
   
- La complexité de l’algorithme est logarithmique pour les itérateurs à accès aléatoire et linéaire dans le cas contraire, avec le nombre d’étapes proportionnels au ( `last`  -  `first`).  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last` - `first`).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_equal_range.cpp  
@@ -1148,7 +1165,7 @@ int main()
 ```  
   
 ##  <a name="fill"></a>  fill  
- Affecte la même nouvelle valeur à chaque élément d'une plage spécifiée.  
+ Assigns the same new value to every element in a specified range.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -1158,20 +1175,20 @@ void fill(
     const Type& val);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur vers l’avant ciblant la position du premier élément de la plage à traverser.  
+ A forward iterator addressing the position of the first element in the range to be traversed.  
   
  `last`  
- Itérateur vers l’avant ciblant la position juste après le dernier élément de la plage à traverser.  
+ A forward iterator addressing the position one past the final element in the range to be traversed.  
   
  `val`  
- Valeur à attribuer aux éléments de la plage [`first`, `last`).  
+ The value to be assigned to elements in the range [  `first`, `last`).  
   
-### <a name="remarks"></a>Notes  
- La plage de destination doit être valide. Tous les pointeurs doivent pouvoir être déréférencés. Par ailleurs, la dernière position est accessible à partir de la première par incrémentation. La complexité est linéaire par rapport à la taille de la plage.  
+### <a name="remarks"></a>Remarks  
+ The destination range must be valid; all pointers must be dereferenceable, and the last position is reachable from the first by incrementation. The complexity is linear with the size of the range.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_fill.cpp  
@@ -1213,7 +1230,7 @@ Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )
 ```  
   
 ##  <a name="fill_n"></a>  fill_n  
- Attribue une nouvelle valeur à un nombre spécifié d’éléments d’une plage commençant par un élément particulier.  
+ Assigns a new value to a specified number of elements in a range beginning with a particular element.  
   
 ```  
 template<class OutputIterator, class Size, class Type>  
@@ -1223,23 +1240,23 @@ OutputIterator fill_n(
     const Type& Val);   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `First`  
- Itérateur de sortie ciblant la position du premier élément de la plage auquel attribuer la valeur `Val`.  
+ An output iterator addressing the position of the first element in the range to be assigned the value `Val`.  
   
  `Count`  
- Type entier signé ou non signé spécifiant le nombre d’éléments auxquels attribuer une valeur.  
+ A signed or unsigned integer type specifying the number of elements to be assigned the value.  
   
  `Val`  
- Valeur à attribuer aux éléments de la plage [`First`,          *First + Count*).  
+ The value to be assigned to elements in the range [ `First`,          *First + Count*).  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur ciblant l’élément qui suit le dernier élément rempli si `Count` > à zéro, sinon le premier élément.  
+### <a name="return-value"></a>Return Value  
+ An iterator to the element that follows the last element filled if `Count` > zero, otherwise the first element.  
   
-### <a name="remarks"></a>Notes  
- La plage de destination doit être valide. Tous les pointeurs doivent pouvoir être déréférencés. Par ailleurs, la dernière position est accessible à partir de la première par incrémentation. La complexité est linéaire par rapport à la taille de la plage.  
+### <a name="remarks"></a>Remarks  
+ The destination range must be valid; all pointers must be dereferenceable, and the last position is reachable from the first by incrementation. The complexity is linear with the size of the range.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_fill_n.cpp  
@@ -1289,7 +1306,7 @@ int main()
 ```  
   
 ##  <a name="find"></a>  find  
- Recherche la position de la première occurrence d'un élément d'une plage ayant une valeur spécifiée.  
+ Locates the position of the first occurrence of an element in a range that has a specified value.  
   
 ```  
 template<class InputIterator, class T>  
@@ -1299,26 +1316,26 @@ InputIterator find(
     const T& val);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `first`  
- Itérateur d'entrée qui traite la position du premier élément de la plage où effectuer la recherche de la valeur spécifiée.  
+ An input iterator addressing the position of the first element in the range to be searched for the specified value.  
   
  `last`  
- Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage où effectuer la recherche de la valeur spécifiée.  
+ An input iterator addressing the position one past the final element in the range to be searched for the specified value.  
   
  `val`  
- Valeur à rechercher.  
+ The value to be searched for.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur d'entrée qui traite la première occurrence de la valeur spécifiée dans la plage où effectuer la recherche. Si aucun élément n'est trouvé avec une valeur équivalente, `last` est retourné.  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first occurrence of the specified value in the range being searched. If no element is found with an equivalent value, returns `last`.  
   
-### <a name="remarks"></a>Notes  
- `operator==`, qui sert à déterminer la correspondance entre un élément et la valeur spécifiée, doit imposer une relation d'équivalence entre ses opérandes.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- Pour obtenir un exemple de code avec `find()`, consultez [find_if](../standard-library/algorithm-functions.md#find_if).  
+ For a code example using `find()`, see [find_if](../standard-library/algorithm-functions.md#find_if).  
   
 ##  <a name="find_end"></a>  find_end  
- Recherche dans une plage la dernière sous-séquence qui est identique à une séquence spécifiée ou qui est équivalente, selon une condition spécifiée par un prédicat binaire.  
+ Looks in a range for the last subsequence that is identical to a specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -1337,31 +1354,31 @@ ForwardIterator1 find_end(
     Pred Comp);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `First1`  
- Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `Last1`  
- Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position one past the last element in the range to be searched.  
   
  `First2`  
- Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position of the first element in the range to search for.  
   
  `Last2`  
- Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position one past the last element in the range to search for.  
   
  `Comp`  
- Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur vers l'avant qui traite la position du premier élément de la dernière sous-séquence dans [First1, Last1) qui correspond à la séquence spécifiée [First2, Last2).  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the last subsequence within [First1, Last1) that matches the specified sequence [First2, Last2).  
   
-### <a name="remarks"></a>Notes  
- `operator==`, qui sert à déterminer la correspondance entre un élément et la valeur spécifiée, doit imposer une relation d'équivalence entre ses opérandes.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+ The ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_find_end.cpp  
@@ -1458,7 +1475,7 @@ There is a sequence of elements in v1 that are equivalent to those
 ```  
   
 ##  <a name="find_first_of"></a>  find_first_of  
- Recherche la première occurrence parmi plusieurs valeurs d’une plage cible, ou la première occurrence parmi plusieurs éléments qui sont équivalents, selon une condition spécifiée par un prédicat binaire, à un ensemble d’éléments spécifiés.  
+ Searches for the first occurrence of any of several values within a target range or for the first occurrence of any of several elements that are equivalent in a sense specified by a binary predicate to a specified set of the elements.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -1477,31 +1494,31 @@ ForwardIterator1 find_first_of(
     BinaryPredicate  comp);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last1`  
- Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
   `first2`  
- Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la correspondance.  
+ A forward iterator addressing the position of the first element in the range to be matched.  
   
  `last2`  
- Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la correspondance.  
+ A forward iterator addressing the position one past the final element in the range to be matched.  
   
  `comp`  
- Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur vers l’avant qui traite la position du premier élément de la première sous-séquence qui correspond à la séquence spécifiée ou qui est équivalente au sens spécifié par un prédicat binaire.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the first subsequence that matches the specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
-### <a name="remarks"></a>Notes  
- `operator==`, qui sert à déterminer la correspondance entre un élément et la valeur spécifiée, doit imposer une relation d'équivalence entre ses opérandes.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+ The ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_find_first_of.cpp  
@@ -1601,7 +1618,7 @@ There is a sequence of elements in v1 that are equivalent
 ```  
   
 ##  <a name="find_if"></a>  find_if  
- Recherche la position de la première occurrence d'un élément d'une plage qui répond à une condition spécifiée.  
+ Locates the position of the first occurrence of an element in a range that satisfies a specified condition.  
   
 ```  
 template<class InputIterator, class Predicate>  
@@ -1611,23 +1628,23 @@ InputIterator find_if(
     Predicate pred);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `first`  
- Itérateur d'entrée qui traite la position du premier élément de la plage à rechercher.  
+ An input iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage à rechercher.  
+ An input iterator addressing the position one past the final element in the range to be searched.  
   
  `pred`  
- Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à satisfaire par l’élément recherché. Un prédicat accepte un seul argument et retourne `true` (condition satisfaite) ou `false` (condition non satisfaite). La signature de `pred` doit être `bool pred(const T& arg);`, où `T` est un type dans lequel `InputIterator` peut être converti implicitement quand il est déréférencé. Le mot clé `const` s'affiche uniquement pour montrer que l'expression lambda ou l'objet de fonction ne doit pas changer l'argument.  
+ User-defined predicate function object or [lambda expression](../cpp/lambda-expressions-in-cpp.md) that defines the condition to be satisfied by the element being searched for. A predicate takes single argument and returns `true` (satisfied) or `false` (not satisfied). The signature of `pred` must effectively be `bool pred(const T& arg);`, where `T` is a type to which `InputIterator` can be implicitly converted when dereferenced. The `const` keyword is shown only to illustrate that the function object or lambda should not modify the argument.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur d'entrée qui fait référence au premier élément de la plage répondant à la condition spécifiée par le prédicat (le prédicat retourne `true`). Si aucun élément n'est trouvé pour satisfaire le prédicat, `last` est retourné.  
+### <a name="return-value"></a>Return Value  
+ An input iterator that refers to the first element in the range that satisfies the condition specified by the predicate (the predicate results in `true`). If no element is found to satisfy the predicate, returns `last`.  
   
-### <a name="remarks"></a>Notes  
- Cette fonction de modèle est une généralisation de l’algorithme [find](../standard-library/algorithm-functions.md#find) et remplace le prédicat « est égal à une valeur spécifique » par un autre prédicat. Pour l’opposé logique (rechercher le premier élément qui ne satisfait pas le prédicat), consultez [find_if_not](../standard-library/algorithm-functions.md#find_if_not).  
+### <a name="remarks"></a>Remarks  
+ This template function is a generalization of the algorithm [find](../standard-library/algorithm-functions.md#find), replacing the predicate "equals a specific value" with any predicate. For the logical opposite (find the first element that does not satisfy the predicate), see [find_if_not](../standard-library/algorithm-functions.md#find_if_not).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // cl.exe /W4 /nologo /EHsc /MTd  
@@ -1714,7 +1731,7 @@ int main()
 ```  
   
 ##  <a name="find_if_not"></a>  find_if_not  
- Retourne le premier élément d'une plage spécifiée qui ne répond pas à une condition.  
+ Returns the first element in the indicated range that does not satisfy a condition.  
   
 ```  
 template<class InputIterator, class Predicate>  
@@ -1724,26 +1741,26 @@ InputIterator find_if_not(
     Predicate pred);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `first`  
- Itérateur d'entrée qui traite la position du premier élément de la plage à rechercher.  
+ An input iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage à rechercher.  
+ An input iterator addressing the position one past the final element in the range to be searched.  
   
  `pred`  
- Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à ne pas satisfaire par l’élément recherché. Un prédicat accepte un seul argument et retourne `true` (condition satisfaite) ou `false` (condition non satisfaite). La signature de `pred` doit être `bool pred(const T& arg);`, où `T` est un type dans lequel `InputIterator` peut être converti implicitement quand il est déréférencé. Le mot clé `const` s'affiche uniquement pour montrer que l'expression lambda ou l'objet de fonction ne doit pas changer l'argument.  
+ User-defined predicate function object or [lambda expression](../cpp/lambda-expressions-in-cpp.md) that defines the condition to be not satisfied by the element being searched for. A predicate takes single argument and returns `true` (satisfied) or `false` (not satisfied). The signature of `pred` must effectively be `bool pred(const T& arg);`, where `T` is a type to which `InputIterator` can be implicitly converted when dereferenced. The `const` keyword is shown only to illustrate that the function object or lambda should not modify the argument.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur d'entrée qui fait référence au premier élément de la plage ne répondant pas à la condition spécifiée par le prédicat (le prédicat retourne `false`). Si tous les éléments répondent au prédicat (le prédicat retourne `true` pour chaque élément), `last` est retourné.  
+### <a name="return-value"></a>Return Value  
+ An input iterator that refers to the first element in the range that does not satisfy the condition specified by the predicate (the predicate results in `false`). If all elements satisfy the predicate (the predicate results in `true` for every element), returns `last`.  
   
-### <a name="remarks"></a>Notes  
- Cette fonction de modèle est une généralisation de l’algorithme [find](../standard-library/algorithm-functions.md#find) et remplace le prédicat « est égal à une valeur spécifique » par un autre prédicat. Pour l’opposé logique (rechercher le premier élément qui satisfait le prédicat), consultez [find_if](../standard-library/algorithm-functions.md#find_if).  
+### <a name="remarks"></a>Remarks  
+ This template function is a generalization of the algorithm [find](../standard-library/algorithm-functions.md#find), replacing the predicate "equals a specific value" with any predicate. For the logical opposite (find the first element that does satisfy the predicate), see [find_if](../standard-library/algorithm-functions.md#find_if).  
   
- Pour obtenir un exemple de code facilement adaptable à `find_if_not()`, consultez [find_if](../standard-library/algorithm-functions.md#find_if).  
+ For a code example readily adaptable to `find_if_not()`, see [find_if](../standard-library/algorithm-functions.md#find_if).  
   
 ##  <a name="for_each"></a>  for_each  
- Applique un objet de fonction spécifié à chaque élément d'une plage, du haut vers le bas, et retourne l'objet de la fonction.  
+ Applies a specified function object to each element in a forward order within a range and returns the function object.  
   
 ```  
 template<class InputIterator, class Function>  
@@ -1753,27 +1770,27 @@ Function for_each(
     Function _Func);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’entrée ciblant la position du premier élément de la plage à traiter.  
+ An input iterator addressing the position of the first element in the range to be operated on.  
   
  `last`  
- Itérateur d’entrée ciblant la position juste après le dernier élément de la plage à traiter.  
+ An input iterator addressing the position one past the final element in the range operated on.  
   
  `_Func`  
- Objet de fonction défini par l’utilisateur appliqué à chaque élément de la plage.  
+ User-defined function object that is applied to each element in the range.  
   
-### <a name="return-value"></a>Valeur de retour  
- Copie de l’objet de fonction une fois qu’il a été appliqué à tous les éléments de la plage.  
+### <a name="return-value"></a>Return Value  
+ A copy of the function object after it has been applied to all of the elements in the range.  
   
-### <a name="remarks"></a>Notes  
- L’algorithme `for_each` est très souple et autorise la modification de chaque élément d’une plage de différentes façons spécifiées par l’utilisateur. Vous pouvez réutiliser des fonctions modélisées sous une forme modifiée en passant des paramètres différents. Les fonctions définies par l’utilisateur peuvent accumuler des informations dans un état interne que l’algorithme peut retourner après le traitement de tous les éléments de la plage.  
+### <a name="remarks"></a>Remarks  
+ The algorithm `for_each` is very flexible, allowing the modification of each element within a range in different, user-specified ways. Templatized functions may be reused in a modified form by passing different parameters. User-defined functions may accumulate information within an internal state that the algorithm may return after processing all of the elements in the range.  
   
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position doit être accessible depuis la première au moyen d'une incrémentation.  
+ The range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- La complexité est linéaire au maximum ( `last`  -   `first`) les comparaisons.  
+ The complexity is linear with at most ( `last` -  `first`) comparisons.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_for_each.cpp  
@@ -1887,7 +1904,7 @@ The average of the elements of v1 is:
 ```  
   
 ##  <a name="generate"></a>  generate  
- Assigne les valeurs générées par un objet de fonction à chaque élément d'une plage.  
+ Assigns the values generated by a function object to each element in a range.  
   
 ```  
 template<class ForwardIterator, class Generator>  
@@ -1897,24 +1914,24 @@ void generate(
     Generator _Gen);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur vers l’avant ciblant la position du premier élément de la plage auquel les valeurs doivent être attribuées.  
+ A forward iterator addressing the position of the first element in the range to which values are to be assigned.  
   
  `last`  
- Itérateur vers l’avant ciblant la position juste après le dernier élément de la plage auquel les valeurs doivent être attribuées.  
+ A forward iterator addressing the position one past the final element in the range to which values are to be assigned.  
   
  `_Gen`  
- Objet de fonction qui est appelé sans argument qui permet de générer les valeurs à assigner à chacun des éléments de la plage.  
+ A function object that is called with no arguments that is used to generate the values to be assigned to each of the elements in the range.  
   
-### <a name="remarks"></a>Notes  
- L'objet de fonction est appelé pour chaque élément de la plage et n'a pas besoin de retourner la même valeur à chaque appel. Il peut, par exemple, lire un fichier ou référencer et modifier un état local. Le type de résultat du générateur doit être convertible dans le type de valeur des itérateurs de transfert pour la plage.  
+### <a name="remarks"></a>Remarks  
+ The function object is invoked for each element in the range and does not need to return the same value each time it is called. It may, for example, read from a file or refer to and modify a local state. The generator's result type must be convertible to the value type of the forward iterators for the range.  
   
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position doit être accessible depuis la première au moyen d'une incrémentation.  
+ The range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- La complexité est linéaire avec exactement ( `last`  -   `first`) les appels au générateur requis.  
+ The complexity is linear, with exactly ( `last` -  `first`) calls to the generator being required.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_generate.cpp  
@@ -1958,7 +1975,7 @@ Deque deq1 is ( 15724 11478 29358 26962 24464 ).
 ```  
   
 ##  <a name="generate_n"></a>  generate_n  
- Assigne les valeurs générées par un objet de fonction à un nombre spécifié d'éléments d'une plage et retourne à la position située juste après la dernière valeur assignée.  
+ Assigns the values generated by a function object to a specified number of elements in a range and returns to the position one past the last assigned value.  
   
 ```  
 template<class OutputIterator, class Diff, class Generator>  
@@ -1968,24 +1985,24 @@ void generate_n(
     Generator Gen);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `First`  
- Itérateur de sortie se rapportant à la position du premier élément dans la plage auquel les valeurs doivent être assignées.  
+ An output iterator addressing the position of first element in the range to which values are to be assigned.  
   
  `Count`  
- Type entier signé ou non signé spécifiant le nombre d'éléments auxquels une valeur doit être assignée par la fonction de générateur.  
+ A signed or unsigned integer type specifying the number of elements to be assigned a value by the generator function.  
   
  `Gen`  
- Objet de fonction qui est appelé sans argument qui permet de générer les valeurs à assigner à chacun des éléments de la plage.  
+ A function object that is called with no arguments that is used to generate the values to be assigned to each of the elements in the range.  
   
-### <a name="remarks"></a>Notes  
- L'objet de fonction est appelé pour chaque élément de la plage et n'a pas besoin de retourner la même valeur à chaque appel. Il peut, par exemple, lire un fichier ou référencer et modifier un état local. Le type de résultat du générateur doit être convertible dans le type de valeur des itérateurs de transfert pour la plage.  
+### <a name="remarks"></a>Remarks  
+ The function object is invoked for each element in the range and does not need to return the same value each time it is called. It may, for example, read from a file or refer to and modify a local state. The generator's result type must be convertible to the value type of the forward iterators for the range.  
   
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position doit être accessible depuis la première au moyen d'une incrémentation.  
+ The range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- La complexité est linéaire, avec exactement `Count` appels au générateur requis.  
+ The complexity is linear, with exactly `Count` calls to the generator being required.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // cl.exe /EHsc /nologo /W4 /MTd  
@@ -2030,7 +2047,7 @@ int main()
 ```  
   
 ##  <a name="includes"></a>  includes  
- Teste si une plage triée contient tous les éléments d’une autre plage triée. Le critère de tri ou d’équivalence entre les éléments peut être spécifié par un prédicat binaire.  
+ Tests whether one sorted range contains all the elements contained in a second sorted range, where the ordering or equivalence criterion between elements may be specified by a binary predicate.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -2049,39 +2066,39 @@ bool includes(
     BinaryPredicate comp );  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Itérateur d’entrée ciblant la position du premier élément de la première de deux plages sources triées à vérifier pour déterminer si tous les éléments de la deuxième sont contenus dans la première.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
  `last1`  
- Itérateur d’entrée ciblant la position juste après le dernier élément de la première de deux plages sources triées à vérifier pour déterminer si tous les éléments de la deuxième sont contenus dans la première.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
   `first2`  
- Itérateur d’entrée ciblant la position du premier élément de la deuxième de deux plages sources triées consécutives à vérifier pour déterminer si tous les éléments de la deuxième sont contenus dans la première.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
  `last2`  
- Itérateur d’entrée ciblant la position juste après le dernier élément de la deuxième de deux plages sources triées consécutives à vérifier pour déterminer si tous les éléments de la deuxième sont contenus dans la première.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si la première plage triée contient tous les éléments de la deuxième ; sinon, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the first sorted range contains all the elements in the second sorted range; otherwise, **false**.  
   
-### <a name="remarks"></a>Notes  
- Une autre façon d’interpréter ce test est de déterminer si la deuxième plage source est un sous-ensemble de la première plage source.  
+### <a name="remarks"></a>Remarks  
+ Another way to think of this test is that it determined whether the second source range is a subset of the first source range.  
   
- Les plages sources triées référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position doit être accessible à partir de la première par incrémentation.  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position must be reachable from the first by incrementation.  
   
- Les plages sources triées doivent chacune être organisées comme une condition préalable à l’application de l’algorithme includes selon le même ordre que celui utilisé par l’algorithme pour trier les plages regroupées.  
+ The sorted source ranges must each be arranged as a precondition to the application of the algorithm includes in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- Les plages sources ne sont pas modifiées par l’algorithme **merge**.  
+ The source ranges are not modified by the algorithm **merge**.  
   
- Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Plus précisément, l’algorithme vérifie si tous les éléments de la première plage triée sous un prédicat binaire spécifié sont ordonnés de la même façon que ceux de la deuxième plage triée.  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. More precisely, the algorithm tests whether all the elements in the first sorted range under a specified binary predicate have equivalent ordering to those in the second sorted range.  
   
- La complexité de l’algorithme est linéaire avec au maximum 2 \* (( *last1 - first1*)-(* nom2 - first2 *)) - 1 comparaisons pour des plages sources non vides.  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) - ( * last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_includes.cpp  
@@ -2231,7 +2248,7 @@ At least one of the elements in vector v3b is  not contained under mod_lesser in
 ```  
   
 ##  <a name="inplace_merge"></a>  inplace_merge  
- Regroupe les éléments de deux plages triées consécutives au sein d’une même plage triée. Le critère de tri peut être spécifié par un prédicat binaire.  
+ Combines the elements from two consecutive sorted ranges into a single sorted range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -2248,27 +2265,27 @@ void inplace_merge(
     Predicate comp);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur bidirectionnel ciblant la position du premier élément de la première de deux plages triées consécutives à regrouper en une seule plage et trier.  
+ A bidirectional iterator addressing the position of the first element in the first of two consecutive sorted ranges to be combined and sorted into a single range.  
   
  `middle`  
- Itérateur bidirectionnel ciblant la position du premier élément de la deuxième de deux plages triées consécutives à regrouper en une seule plage et trier.  
+ A bidirectional iterator addressing the position of the first element in the second of two consecutive sorted ranges to be combined and sorted into a single range.  
   
  `last`  
- Itérateur bidirectionnel ciblant la position juste après le dernier élément de la deuxième de deux plages triées consécutives à regrouper en une seule plage et trier.  
+ A bidirectional iterator addressing the position one past the last element in the second of two consecutive sorted ranges to be combined and sorted into a single range.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est supérieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="remarks"></a>Notes  
- Les plages triées consécutives référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position doit être accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The sorted consecutive ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position must be reachable from the first by incrementation.  
   
- Les plages triées consécutives doivent chacune être organisées comme une condition préalable à l’application de l’algorithme `inplace_merge` selon le même ordre que celui utilisé par l’algorithme pour trier les plages regroupées. L’opération est stable, car l’ordre relatif des éléments de chaque plage est préservé. Quand il existe des éléments équivalents dans les deux plages sources, l’élément de la première plage précède celui de la deuxième dans la plage regroupée.  
+ The sorted consecutive ranges must each be arranged as a precondition to the application of the `inplace_merge` algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges. The operation is stable as the relative order of elements within each range is preserved. When there are equivalent elements in both source ranges, the element is the first range precedes the element from the second in the combined range.  
   
- La complexité dépend de la mémoire disponible, car l’algorithme alloue de la mémoire à une mémoire tampon temporaire. Si la mémoire disponible est suffisante, le meilleur cas est linéaire avec (* dernière - tout d’abord*) - 1 comparaisons ; si aucune mémoire auxiliaire n’est disponible, le pire des cas sont *N* journal *(N)*, où *N* = (* dernière - tout d’abord*).  
+ The complexity depends on the available memory as the algorithm allocates memory to a temporary buffer. If sufficient memory is available, the best case is linear with ( * last - first*) - 1 comparisons; if no auxiliary memory is available, the worst case is  *N* log *(N)*, where  *N* = ( * last - first*).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_inplace_merge.cpp  
@@ -2380,7 +2397,7 @@ Merged inplace with binary predicate mod_lesser specified,
 ```  
   
 ##  <a name="is_heap"></a>  is_heap  
- Retourne `true` si les éléments d'une plage spécifiée forment un tas.  
+ Returns `true` if the elements in the specified range form a heap.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -2395,28 +2412,28 @@ bool is_heap(
     BinaryPredicate comp);   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’accès aléatoire qui indique le début d’une plage dans laquelle rechercher un tas.  
+ A random access iterator that indicates the start of a range to check for a heap.  
   
  `last`  
- Itérateur d’accès aléatoire qui indique la fin d’une plage.  
+ A random access iterator that indicates the end of a range.  
   
  `comp`  
- Condition à vérifier pour ordonner des éléments. Un prédicat binaire accepte un seul argument et retourne `true` ou `false`.  
+ A condition to test to order elements. A binary predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne `true` si les éléments de la plage spécifiée forment un tas ; sinon `false`.  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the elements in the specified range form a heap, `false` if they do not.  
   
-### <a name="remarks"></a>Notes  
- La première fonction de modèle retourne [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(` `first``,` `last``) ==` `last`.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(` `first ,` `last ) ==` `last`.  
   
- La deuxième fonction de modèle retourne  
+ The second template function returns  
   
  `is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`.  
   
 ##  <a name="is_heap_until"></a>  is_heap_until  
- Retourne un itérateur pointant sur le premier élément de la plage [`begin`, `end`) qui ne satisfait pas la condition de tri du tas, ou `end` si la plage forme un tas.  
+ Returns an iterator positioned at the first element in the range [ `begin`, `end`) that does not satisfy the heap ordering condition, or `end` if the range forms a heap.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -2431,26 +2448,26 @@ RandomAccessIterator is_heap_until(
     BinaryPredicate compare);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `begin`  
- Itérateur à accès aléatoire qui spécifie le premier élément d'une plage dans laquelle effectuer la recherche d'un tas.  
+ A random access iterator that specifies the first element of a range to check for a heap.  
   
  `end`  
- Itérateur à accès aléatoire qui spécifie le dernier élément de la plage où effectuer la recherche d'un tas.  
+ A random access iterator that specifies the end of the range to check for a heap.  
   
  `compare`  
- Prédicat binaire qui spécifie la condition d'ordonnancement faible strict qui définit un tas. Si `compare` n'est pas spécifié, le prédicat par défaut est `std::less<>`.  
+ A binary predicate that specifies the strict weak ordering condition that defines a heap. The default predicate when `compare` is not specified is `std::less<>`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne `end` si la plage spécifiée forme un tas ou contient un élément au maximum. Sinon, retourne un itérateur pointant vers le premier élément trouvé qui ne remplit pas la condition de tas.  
+### <a name="return-value"></a>Return Value  
+ Returns `end` if the specified range forms a heap or contains one or fewer elements. Otherwise, returns an iterator for the first element found that does not satisfy the heap condition.  
   
-### <a name="remarks"></a>Notes  
- La première fonction de modèle retourne le dernier itérateur `next` de `[``begin``,` `end``]` où `[``begin``, next)` est un tas ordonné par l’objet de fonction `std::less<>`. Si la distance `end` `-` `begin` `< 2`, la fonction retourne `end`.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns the last iterator `next` in `[ begin , end ]` where `[ begin , next)` is a heap ordered by the function object `std::less<>`. If the distance `end - begin < 2`, the function returns `end`.  
   
- La deuxième fonction de modèle se comporte comme la première, sauf qu'elle utilise le prédicat `compare` à la place du prédicat `std::less<>` comme condition d'ordonnancement du tas.  
+ The second template function behaves the same as the first, except that it uses the predicate `compare` instead of `std::less<>` as the heap ordering condition.  
   
 ##  <a name="is_partitioned"></a>  is_partitioned  
- Retourne `true` si tous les éléments d'une plage qui testent `true` pour une condition donnée, se trouvent avant les éléments qui testent `false`.  
+ Returns `true` if all the elements in the given range that test `true` for a condition come before any elements that test `false`.  
   
 ```  
 template<class InputIterator, class BinaryPredicate>  
@@ -2460,24 +2477,24 @@ bool is_partitioned(
     BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’entrée qui indique le début de la recherche d’une condition dans une plage.  
+ An input iterator that indicates where a range starts to check for a condition.  
   
  `last`  
- Itérateur d’entrée qui indique la fin d’une plage.  
+ An input iterator that indicates the end of a range.  
   
  `comp`  
- Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire par l’élément recherché. Un prédicat accepte un seul argument et retourne `true` ou `false`.  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition to be satisfied by the element being searched for. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne true si tous les éléments d’une plage donnée qui sont `true` pour une condition se trouvent avant les éléments qui sont `false` ; sinon retourne `false`.  
+### <a name="return-value"></a>Return Value  
+ Returns true when all of the elements in the given range that test `true` for a condition come before any elements that test `false`, and otherwise returns `false`.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle retourne `true` uniquement si tous les éléments de `[` `first``,` `last``)` sont partitionnés par `comp` ; autrement dit, tous les éléments `X` de `[` `first``,` `last``)` pour lesquels `comp``(X)` est true se produisent avant tous les éléments `Y` pour lesquels `comp``(Y)` est `false`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if all elements in `[` `first ,` `last )` are partitioned by `comp`; that is, all elements `X` in `[` `first ,` `last )` for which `comp (X)` is true occur before all elements `Y` for which `comp (Y)` is `false`.  
   
 ##  <a name="is_permutation"></a>  is_permutation  
- Retourne la valeur true si les deux plages contiennent les mêmes éléments, même s'ils ne sont pas dans le même ordre. Utilisez les surcharges à double portée dans le code C++14, car les surcharges qui ne prennent qu'un seul itérateur pour la deuxième plage ne détecteront pas les différences si la deuxième plage est plus longue que la première et provoqueront un comportement non défini si la deuxième plage est plus courte que la première.  
+ Returns true if both ranges contain the same elements, whether or not the elements are in the same order. Use the dual-range overloads in C++14 code because the overloads that only take a single iterator for the second range will not detect differences if the second range is longer than the first range, and will result in undefined behavior if the second range is shorter than the first range.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -2510,34 +2527,34 @@ bool is_permutation(
     Predicate Pred);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `First1`  
- Itérateur vers l'avant qui fait référence au premier élément de la plage.  
+ A forward iterator that refers to the first element of the range.  
   
  `Last1`  
- Itérateur vers l'avant qui fait référence à l'élément qui suit le dernier élément de la plage.  
+ A forward iterator that refers one past the last element of the range.  
   
  `First2`  
- Itérateur vers l'avant qui fait référence au premier élément d'une deuxième plage, utilisé à des fins de comparaison.  
+ A forward iterator that refers to the first element of a second range, used for comparison.  
   
  `Last2`  
- Itérateur vers l'avant qui fait référence à l'élément qui suit le dernier élément d'une deuxième plage, utilisé à des fins de comparaison.  
+ A forward iterator that refers to one past the last element of a second range, used for comparison.  
   
  `Pred`  
- Prédicat qui teste l'équivalence et retourne un `bool`.  
+ A predicate that tests for equivalence and returns a `bool`.  
   
-### <a name="return-value"></a>Valeur de retour  
- `true` quand les plages peuvent être réorganisées pour être identiques en fonction du prédicat de comparaison ; sinon, `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` when the ranges can be rearranged so as to be identical according to the comparator predicate; otherwise, `false`.  
   
-### <a name="remarks"></a>Notes  
- `is_permutation` a une complexité quadratique dans le pire des cas.  
+### <a name="remarks"></a>Remarks  
+ `is_permutation` has quadratic complexity in the worst case.  
   
- La première fonction de modèle part du principe qu’il existe autant d’éléments dans la plage commençant par `First2` que dans la plage désignée par [`First1`, `Last1`). S'il y a plus d'éléments dans la deuxième plage, ils sont ignorés ; s'il y en a moins, le comportement est non défini. La troisième fonction de modèle (C++14 et versions ultérieures) ne part pas de ce principe.  Toutes deux retournent `true` uniquement si, pour chaque élément X de la plage désignée par [`First1`, `Last1`), il y a autant d’éléments Y dans la même plage pour lesquels X == Y qu’il y en a dans la plage commençant par `First2` ou [`First2, Last2).`. Ici, `operator==` doit effectuer une comparaison par paire entre ses opérandes.  
+ The first template function assumes that there are as many elements in the range beginning at `First2` as there are in the range designated by [ `First1`, `Last1`). If there are more elements in the second range, they are ignored; if there are less, undefined behavior will occur. The third template function (C++14 and later) does not make this assumption.  Both return `true` only if, for each element X in the range designated by [ `First1`, `Last1`) there are as many elements Y in the same range for which X == Y as there are in the range beginning at `First2` or [ `First2, Last2).` Here, `operator==` must perform a pairwise comparison between its operands.  
   
- Les deuxième et quatrième fonctions avec modèle ont le même comportement, hormis le fait qu'elles remplacent `operator==(X, Y)` par `Pred(X, Y)`. Pour se comporter correctement, le prédicat doit être symétrique, réflexif et transitif.  
+ The second and fourth template functions behave the same, except that they replace `operator==(X, Y)` with `Pred(X, Y)`. To behave correctly, the predicate must be symmetric, reflexive and transitive.  
   
-### <a name="example"></a>Exemple  
-  L'exemple suivant montre comment utiliser `is_permutation` :  
+### <a name="example"></a>Example  
+  The following example shows how to use `is_permutation`:  
   
 ```cpp  
 #include <vector>  
@@ -2593,7 +2610,7 @@ int main()
 ```  
   
 ##  <a name="is_sorted"></a>  is_sorted  
- Retourne `true` si les éléments de la plage spécifiée sont triés.  
+ Returns `true` if the elements in the specified range are in sorted order.  
   
 ```  
 template<class ForwardIterator>  
@@ -2608,25 +2625,25 @@ bool is_sorted(
     BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur vers l’avant qui indique où commence la plage à vérifier.  
+ A forward iterator that indicates where the range to check begins.  
   
  `last`  
- Itérateur vers l’avant qui indique la fin d’une plage.  
+ A forward iterator that indicates the end of a range.  
   
  `comp`  
- Condition à vérifier pour déterminer un ordre entre deux éléments. Un prédicat accepte un seul argument et retourne `true` ou `false`. Il effectue la même tâche que `operator<`.  
+ The condition to test to determine an order between two elements. A predicate takes a single argument and returns `true` or `false`. This performs the same task as `operator<`.  
   
-### <a name="remarks"></a>Notes  
- La première fonction de modèle retourne [is_sorted_until](http://msdn.microsoft.com/en-us/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`(` `first``,` `last``) ==` `last`. La fonction operator< compare l’ordre.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns [is_sorted_until](http://msdn.microsoft.com/en-us/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`( first, last ) == last`. The `operator<` function performs the order comparison.  
   
- La deuxième fonction de modèle retourne `is_sorted_until``(` `first``,` `last``,` `comp``) ==` `last`. La fonction de prédicat `comp` compare l’ordre.  
+ The second template function returns `is_sorted_until( first, last , comp ) == last`. The `comp` predicate function performs the order comparison.  
   
 ##  <a name="is_sorted_until"></a>  is_sorted_until  
- Retourne un `ForwardIterator` défini sur le dernier élément qui se trouve dans l’ordre trié d’une plage spécifiée.  
+ Returns a `ForwardIterator` that is set to the last element that is in sorted order from a specified range.  
   
- La deuxième version vous permet de fournir une fonction `BinaryPredicate` qui retourne `true` quand deux éléments donnés sont triés, et `false` dans le cas contraire.  
+ The second version lets you provide a `BinaryPredicate` function that returns `true` when two given elements are in sorted order, and `false` otherwise.  
   
 ```  
 template<class ForwardIterator>  
@@ -2642,26 +2659,26 @@ template<class ForwardIterator, class BinaryPredicate>
     );  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur vers l’avant qui indique où commence la plage à vérifier.  
+ A forward iterator that indicates where the range to check starts.  
   
  `last`  
- Itérateur vers l’avant qui indique la fin d’une plage.  
+ A forward iterator that indicates the end of a range.  
   
  `comp`  
- Condition à vérifier pour déterminer un ordre entre deux éléments. Un prédicat accepte un seul argument et retourne `true` ou `false`.  
+ The condition to test to determine an order between two elements. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne un `ForwardIterator` défini sur le dernier élément dans un ordre trié. La séquence triée commence à partir de `first`.  
+### <a name="return-value"></a>Return Value  
+ Returns a `ForwardIterator` set to the last element in sorted order. The sorted sequence starts from  `first`.  
   
-### <a name="remarks"></a>Notes  
- La première fonction de modèle retourne le dernier itérateur `next` de `[` `first``,` `last``]` pour que `[` `first``, next)` soit une séquence triée par `operator<`. Si `distance()` `< 2`, la fonction retourne `last`.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns the last iterator `next` in `[` `first ,` `last ]` so that `[` `first , next)` is a sorted sequence ordered by `operator<`. If `distance()` `< 2` the function returns `last`.  
   
- La deuxième fonction de modèle se comporte de la même façon, sauf qu’elle remplace `operator<(X, Y)` par `comp``(X, Y)`.  
+ The second template function behaves the same, except that it replaces `operator<(X, Y)` with `comp (X, Y)`.  
   
 ##  <a name="iter_swap"></a>  iter_swap  
- Échange deux valeurs référencées par une paire d'itérateurs spécifiés.  
+ Exchanges two values referred to by a pair of specified iterators.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -2669,19 +2686,19 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `left`  
- Un des itérateurs vers l’avant dont la valeur est à échanger.  
+ One of the forward iterators whose value is to be exchanged.  
   
  `right`  
- Le deuxième des itérateurs vers l’avant dont la valeur est à échanger.  
+ The second of the forward iterators whose value is to be exchanged.  
   
-### <a name="remarks"></a>Notes  
- `swap` doit être utilisé en priorité par rapport à i**ter_swap**, qui a été inclus dans la norme C++ pour la compatibilité descendante. Si `Fit1` et `Fit2` sont des itérateurs vers l’avant, `iter_swap` (`Fit1`, `Fit2`) est équivalent à `swap` (* `Fit1`, \* `Fit2`).  
+### <a name="remarks"></a>Remarks  
+ `swap` should be used in preference to i **ter_swap**, which was included in the C++ Standard for backward compatibility. If `Fit1` and `Fit2` are forward iterators, then `iter_swap` ( `Fit1`, `Fit2` ), is equivalent to `swap` ( * `Fit1`, \* `Fit2` ).  
   
- Les types valeur des itérateurs vers l’avant/d’entrée doivent avoir la même valeur.  
+ The value types of the input forward iterators must have the same value.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_iter_swap.cpp  
@@ -2815,7 +2832,7 @@ After exchanging first elements,
 ```  
   
 ##  <a name="lexicographical_compare"></a>  lexicographical_compare  
- Compare deux séquences, élément par élément, pour déterminer lequel est inférieur à l'autre.  
+ Compares element by element between two sequences to determine which is lesser of the two.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -2835,35 +2852,35 @@ bool lexicographical_compare(
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Itérateur d’entrée ciblant la position du premier élément de la première plage à comparer.  
+ An input iterator addressing the position of the first element in the first range to be compared.  
   
  `last1`  
- Itérateur d’entrée ciblant la position juste après le dernier élément de la première plage à comparer.  
+ An input iterator addressing the position one past the final element in the first range to be compared.  
   
   `first2`  
- Itérateur d’entrée ciblant la position du premier élément de la deuxième plage à comparer.  
+ An input iterator addressing the position of the first element in the second range to be compared.  
   
  `last2`  
- Itérateur d’entrée ciblant la position juste après le dernier élément de la deuxième plage à comparer.  
+ An input iterator addressing the position one past the final element in the second range to be compared.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si la première plage est inférieure à la deuxième plage d’un point de vue lexicographique ; sinon **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the first range is lexicographically less than the second range; otherwise **false**.  
   
-### <a name="remarks"></a>Notes  
- Une comparaison lexicographique entre séquences les compare élément par élément jusqu’à ce que :  
+### <a name="remarks"></a>Remarks  
+ A lexicographical comparison between sequences compares them element by element until:  
   
--   Elle trouve deux éléments correspondants inégaux et le résultat de leur comparaison est considéré comme étant le résultat de la comparaison entre les séquences.  
+-   It finds two corresponding elements unequal, and the result of their comparison is taken as the result of the comparison between sequences.  
   
--   Aucune inégalité n’est trouvée, mais une séquence a plus d’éléments que l’autre et la séquence la plus courte est considérée comme inférieure à la séquence la plus longue.  
+-   No inequalities are found, but one sequence has more elements than the other, and the shorter sequence is considered less than the longer sequence.  
   
--   Aucune inégalité n’est trouvée et les séquences ont le même nombre d’éléments, par conséquent, les séquences sont égales et le résultat de la comparaison a la valeur false.  
+-   No inequalities are found and the sequences have the same number of elements, and so the sequences are equal and the result of the comparison is false.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_lex_comp.cpp  
@@ -2959,7 +2976,7 @@ Vector v1 is not lexicographically_less than v2 under twice.
 ```  
   
 ##  <a name="lower_bound"></a>  lower_bound  
- Recherche la position du premier élément d’une plage triée dont la valeur est supérieure ou équivalente à une valeur spécifiée. Le critère de tri peut être spécifié par un prédicat binaire.  
+ Finds the position of the first element in an ordered range that has a value greater than or equivalent to a specified value, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class ForwardIterator, class Type>  
@@ -2977,34 +2994,34 @@ ForwardIterator lower_bound(
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `first`  
- Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `value`  
- Valeur dont la première position ou la première position possible est recherchée dans la plage ordonnée.  
+ The value whose first position or possible first position is being searched for in the ordered range.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur vers l’avant situé à la position du premier élément d’une plage triée dont la valeur est supérieure ou égale à une valeur spécifiée, où l’équivalence est spécifiée par un prédicat binaire.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator at the position of the first element in an ordered range with a value that is greater than or equivalent to a specified value, where the equivalence is specified with a binary predicate.  
   
-### <a name="remarks"></a>Notes  
- Le plage source triée référencée doit être valide ; tous les itérateurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position doit être accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The sorted source range referenced must be valid; all iterators must be dereferenceable and within the sequence the last position must be reachable from the first by incrementation.  
   
- Une plage triée est une condition préalable à l’utilisation de `lower_bound` et son ordre est identique à celui spécifié par un prédicat binaire.  
+ A sorted range is a precondition of using `lower_bound` and where the ordering is the same as specified by with binary predicate.  
   
- La plage n’est pas modifiée par l’algorithme `lower_bound`.  
+ The range is not modified by the algorithm `lower_bound`.  
   
- Les types valeur des itérateurs vers l’avant doivent être comparables en termes d’infériorité pour être ordonnés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. De cette façon, les éléments non équivalents sont ordonnés  
+ The value types of the forward iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements  
   
- La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec un nombre d’étapes proportionnel à (`last - first`).  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last - first`).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_lower_bound.cpp  
@@ -3096,7 +3113,7 @@ int main( )
 ```  
   
 ##  <a name="make_heap"></a>  make_heap  
- Convertit les éléments d’une plage spécifiée en un tas, dans lequel le premier élément est le plus grand, et pour lequel un critère de tri peut être spécifié à l’aide d’un prédicat binaire.  
+ Converts elements from a specified range into a heap in which the first element is the largest and for which a sorting criterion may be specified with a binary predicate.  
   
 ```  
  template<class RandomAccessIterator>  
@@ -3112,28 +3129,28 @@ void make_heap(
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’accès aléatoire ciblant la position du premier élément de la plage à convertir en tas.  
+ A random-access iterator addressing the position of the first element in the range to be converted into a heap.  
   
  `last`  
- Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à convertir en tas.  
+ A random-access iterator addressing the position one past the final element in the range to be converted into a heap.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>Notes  
- Les tas ont deux propriétés :  
+### <a name="remarks"></a>Remarks  
+ Heaps have two properties:  
   
--   Le premier élément est toujours le plus grand.  
+-   The first element is always the largest.  
   
--   Des éléments peuvent être ajoutés ou supprimés en temps logarithmique.  
+-   Elements may be added or removed in logarithmic time.  
   
- Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires et sont utilisés dans l’implémentation de la [classe priority_queue](../standard-library/priority-queue-class.md) de l’adaptateur de conteneur de bibliothèque C++ Standard.  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- La complexité est linéaire, nécessitant 3 \* (* nom - prénom *) les comparaisons.  
+ The complexity is linear, requiring 3 \* ( * last - first*) comparisons.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_make_heap.cpp  
@@ -3176,7 +3193,7 @@ int main() {
 ```  
   
 ##  <a name="max"></a>  max  
- Compare deux objets et retourne le plus grand des deux. Un critère de tri peut être spécifié à l’aide d’un prédicat binaire.  
+ Compares two objects and returns the larger of the two, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class Type>  
@@ -3201,26 +3218,26 @@ template<class Type, class Pr>
     );  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `left`  
- Premier des deux objets comparés.  
+ The first of the two objects being compared.  
   
  `right`  
- Second des deux objets comparés.  
+ The second of the two objects being compared.  
   
  `comp`  
- Prédicat binaire utilisé pour comparer deux objets.  
+ A binary predicate used to compare the two objects.  
   
  `_IList`  
- Liste d'initialiseurs qui contient les objets à comparer.  
+ The initializer list that contains the objects to be compared.  
   
-### <a name="return-value"></a>Valeur de retour  
- Le plus grand des deux objets, sauf si aucun n'est plus grand que l'autre ; dans ce cas, retourne le premier des deux objets. Dans le cas d'une initializer_list, retourne le plus grand des objets dans la liste.  
+### <a name="return-value"></a>Return Value  
+ The greater of the two objects, unless neither is greater; in that case, it returns the first of the two objects. In the case of an initializer_list, it returns the greatest of the objects in the list.  
   
-### <a name="remarks"></a>Notes  
- L'algorithme `max` est inhabituel, dans la mesure où les objets sont passés comme paramètres. La plupart des algorithmes de la bibliothèque C++ Standard opèrent sur une plage d’éléments dont la position est spécifiée par des itérateurs passés comme paramètres. Si vous avez besoin d’une fonction qui opère sur une plage d’éléments, utilisez plutôt [max_element](../standard-library/algorithm-functions.md#max_element).  
+### <a name="remarks"></a>Remarks  
+ The `max` algorithm is unusual in having objects passed as parameters. Most C++ Standard Library algorithms operate on a range of elements whose position is specified by iterators passed as parameters. If you need a function that operates on a range of elements, use [max_element](../standard-library/algorithm-functions.md#max_element) instead.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_max.cpp  
@@ -3389,7 +3406,7 @@ Vector v5 = max (v1,v3) is ( 0 2 4 ).
 ```  
   
 ##  <a name="max_element"></a>  max_element  
- Recherche la première occurrence du plus grand élément dans une plage spécifiée. Un critère de tri peut être spécifié par un prédicat binaire.  
+ Finds the first occurrence of largest element in a specified range where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator>  
@@ -3400,25 +3417,25 @@ ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryP
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur vers l’avant ciblant la position du premier élément de la plage dans laquelle rechercher l’élément le plus grand.  
+ A forward iterator addressing the position of the first element in the range to be searched for the largest element.  
   
  `last`  
- Itérateur vers l’avant ciblant la position juste après le dernier élément de la plage dans laquelle rechercher l’élément le plus grand.  
+ A forward iterator addressing the position one past the final element in the range to be searched for the largest element.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est supérieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur vers l’avant ciblant la position de la première occurrence de l’élément le plus grand de la plage dans laquelle s’effectue la recherche.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first occurrence of the largest element in the range searched.  
   
-### <a name="remarks"></a>Notes  
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position est accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation.  
   
- La complexité est linéaire : ( `last`  -   `first`) - 1 comparaisons sont requises pour une plage non vide.  
+ The complexity is linear: ( `last` -  `first`) - 1 comparisons are required for a nonempty range.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_max_element.cpp  
@@ -3519,7 +3536,7 @@ int main( )
 ```  
   
 ##  <a name="merge"></a>  merge  
- Regroupe tous les éléments de deux plages sources triées au sein d’une même plage de destination triée. Le critère de tri peut être spécifié par un prédicat binaire.  
+ Combines all of the elements from two sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -3541,44 +3558,44 @@ OutputIterator merge(
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Itérateur d’entrée ciblant la position du premier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be combined and sorted into a single range.  
   
  `last1`  
- Itérateur d’entrée ciblant la position située de suite après le dernier élément de la première des deux plages sources triées à regrouper et trier au sein d’une même plage.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be combined and sorted into a single range.  
   
   `first2`  
- Itérateur d’entrée ciblant la position du premier élément de la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be combined and sorted into a single range.  
   
  `last2`  
- Itérateur d’entrée ciblant la position située de suite après le dernier élément de la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be combined and sorted into a single range.  
   
  `result`  
- Itérateur de sortie ciblant la position du premier élément de la plage de destination quand les deux plages sources doivent être regroupées au sein d’une même plage triée.  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be combined into a single sorted range.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est supérieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination triée.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range.  
   
-### <a name="remarks"></a>Notes  
- Les plages sources triées référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position doit être accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- La plage de destination ne doit pas chevaucher les plages sources et doit être suffisamment grande pour contenir la plage de destination.  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- Les plages sources triées doivent chacune être structurées comme condition préalable à l’application de l’algorithme **merge** selon le même ordre que celui utilisé par l’algorithme chargé de trier les plages regroupées.  
+ The sorted source ranges must each be arranged as a precondition to the application of the **merge** algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme **merge**.  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm **merge**.  
   
- Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination.  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range.  
   
- La complexité de l’algorithme est linéaire au maximum (* last1 - first1*)-(* last2 - first2*) - 1 comparaisons.  
+ The complexity of the algorithm is linear with at most ( * last1 - first1*) - ( * last2 - first2*) - 1 comparisons.  
   
- La [classe list](../standard-library/list-class.md) fournit une fonction membre « merge » pour fusionner les éléments de deux listes.  
+ The [list class](../standard-library/list-class.md) provides a member function "merge" to merge the elements of two lists.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_merge.cpp  
@@ -3689,7 +3706,7 @@ int main() {
 ```  
   
 ##  <a name="min"></a>  min  
- Compare deux objets et retourne le plus petit des deux. Un critère de tri peut être spécifié à l’aide d’un prédicat binaire.  
+ Compares two objects and returns the lesser of the two, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class Type>  
@@ -3713,26 +3730,26 @@ template<class Type, class Pr>    Type min (
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `left`  
- Premier des deux objets comparés.  
+ The first of the two objects being compared.  
   
  `right`  
- Second des deux objets comparés.  
+ The second of the two objects being compared.  
   
  `comp`  
- Prédicat binaire utilisé pour comparer deux objets.  
+ A binary predicate used to compare the two objects.  
   
  `_IList`  
- initializer_list qui contient les membres à comparer.  
+ The initializer_list that contains the members to be compared.  
   
-### <a name="return-value"></a>Valeur de retour  
- Le plus petit des deux objets, sauf si aucun n’est plus petit que l’autre ; dans ce cas, retourne le premier des deux objets. Dans le cas d’un initializer_list, retourne le plus petit des objets de la liste.  
+### <a name="return-value"></a>Return Value  
+ The lesser of the two objects, unless neither is lesser; in that case, it returns the first of the two objects. In the case of an initializer_list, it returns the least of the objects in the list.  
   
-### <a name="remarks"></a>Notes  
- L'algorithme `min` est inhabituel, dans la mesure où les objets sont passés comme paramètres. La plupart des algorithmes de la bibliothèque C++ Standard opèrent sur une plage d’éléments dont la position est spécifiée par des itérateurs passés comme paramètres. Si vous avez besoin d’une fonction qui utilise une plage d’éléments, utilisez [min_element](../standard-library/algorithm-functions.md#min_element).  
+### <a name="remarks"></a>Remarks  
+ The `min` algorithm is unusual in having objects passed as parameters. Most C++ Standard Library algorithms operate on a range of elements whose position is specified by iterators passed as parameters. If you need a function that uses a range of elements, use [min_element](../standard-library/algorithm-functions.md#min_element).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_min.cpp  
@@ -3900,7 +3917,7 @@ Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).
 ```  
   
 ##  <a name="min_element"></a>  min_element  
- Recherche la première occurrence du plus petit élément dans une plage spécifiée. Un critère de tri peut être spécifié par un prédicat binaire.  
+ Finds the first occurrence of smallest element in a specified range where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class ForwardIterator>  
@@ -3911,25 +3928,25 @@ ForwardIterator min_element(ForwardIterator first, ForwardIterator last, BinaryP
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `first`  
- Itérateur vers l’avant ciblant la position du premier élément de la plage dans laquelle rechercher l’élément le plus petit.  
+ A forward iterator addressing the position of the first element in the range to be searched for the smallest element.  
   
  `last`  
- Itérateur vers l’avant ciblant la position juste après le dernier élément de la plage dans laquelle rechercher l’élément le plus petit.  
+ A forward iterator addressing the position one past the final element in the range to be searched for the smallest element.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est supérieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur vers l’avant ciblant la position de la première occurrence de l’élément le plus petit de la plage dans laquelle s’effectue la recherche.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first occurrence of the smallest element in the range searched.  
   
-### <a name="remarks"></a>Notes  
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position est accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation.  
   
- La complexité est linéaire : ( `last`  -  `first`) - 1 comparaisons sont requises pour une plage non vide.  
+ The complexity is linear: ( `last` - `first`) - 1 comparisons are required for a nonempty range.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_min_element.cpp  
@@ -4040,7 +4057,7 @@ The smallest element in v1 under the mod_lesser
 ```  
   
 ##  <a name="minmax_element"></a>  minmax_element  
- Exécute le travail effectué par `min_element` et `max_element` au sein d’un même appel.  
+ Performs the work performed by `min_element` and `max_element` in one call.  
   
 ```  
 template<class ForwardIterator>  
@@ -4058,36 +4075,36 @@ template<class ForwardIterator, class BinaryPredicate>
                 );  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur vers l’avant qui indique le début d’une plage.  
+ A forward iterator that indicates the beginning of a range.  
   
  `last`  
- Itérateur vers l’avant qui indique la fin d’une plage.  
+ A forward iterator that indicates the end of a range.  
   
  `comp`  
- Test facultatif utilisé pour trier les éléments.  
+ An optional test used to order elements.  
   
-### <a name="return-value"></a>Valeur de retour  
- Returns (Retours)  
+### <a name="return-value"></a>Return Value  
+ Returns  
   
  `pair<ForwardIterator, ForwardIterator>`  
   
- `(` [min_element](../standard-library/algorithm-functions.md#min_element)(`first`, `last`), [max_element](../standard-library/algorithm-functions.md#max_element)(`first`, `last`)).  
+ `(` [min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`.  
   
-### <a name="remarks"></a>Notes  
- La première fonction de modèle retourne  
+### <a name="remarks"></a>Remarks  
+ The first template function returns  
   
  `pair<ForwardIterator,ForwardIterator>`  
   
- `(min_element(_First,Last),max_element(_First,Last))`.  
+ `(min_element(_First,Last), max_element(_First,Last))`.  
   
- La deuxième fonction de modèle se comporte de la même façon, sauf qu’elle remplace `operator<(X, Y)` par `comp``(X, Y)`.  
+ The second template function behaves the same, except that it replaces `operator<(X, Y)` with `comp (X, Y)`.  
   
- Si la séquence n’est pas vide, la fonction effectue au maximum `3 * (``last` `-` `first` `- 1) / 2` comparaisons.  
+ If the sequence is non-empty, the function performs at most `3 * (last - first - 1) / 2` comparisons.  
   
 ##  <a name="minmax"></a>  minmax  
- Compare deux paramètres d’entrée et les retourne sous forme de paire, du plus petit au plus grand.  
+ Compares two input parameters and returns them as a pair, in order of lesser to greater.  
   
 ```  
 template<class Type>  
@@ -4114,32 +4131,32 @@ template<class Type, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `left`  
- Premier des deux objets comparés.  
+ The first of the two objects being compared.  
   
  `right`  
- Second des deux objets comparés.  
+ The second of the two objects being compared.  
   
  `comp`  
- Prédicat binaire utilisé pour comparer deux objets.  
+ A binary predicate used to compare the two objects.  
   
  `_IList`  
- initializer_list qui contient les membres à comparer.  
+ The initializer_list that contains the members to be compared.  
   
-### <a name="remarks"></a>Notes  
- La première fonction de modèle retourne `pair<const Type&, const Type&>(``right``,` `left``)` si `right` est inférieur à `left`. Sinon, elle retourne `pair<const Type&, const Type&>(``left``,` `right``)`.  
+### <a name="remarks"></a>Remarks  
+ The first template function returns `pair<const Type&, const Type&>( right , left )` if `right` is less than `left`. Otherwise, it returns `pair<const Type&, const Type&>( left , right )`.  
   
- La deuxième fonction membre retourne une paire où le premier élément est le plus petit et le deuxième est le plus grand dans la comparaison effectuée par le prédicat `comp`.  
+ The second member function returns a pair where the first element is the lesser and the second is the greater when compared by the predicate `comp`.  
   
- Les fonctions de modèle restantes ont le même comportement, sauf qu’elles remplacent les paramètres `left` et `right` par `_IList`.  
+ The remaining template functions behave the same, except that they replace the `left` and `right` parameters with `_IList`.  
   
- La fonction effectue exactement une comparaison.  
+ The function performs exactly one comparison.  
   
 ##  <a name="mismatch"></a>  mismatch  
- Compare deux plages, élément par élément, et recherche la première position où il y a une différence.  
+ Compares two ranges element by element and locates the first position where a difference occurs.  
   
- Utilisez les surcharges à double portée dans le code C++14, car les surcharges qui ne prennent qu'un seul itérateur pour la deuxième plage ne détecteront pas les différences si la deuxième plage est plus longue que la première et provoqueront un comportement non défini si la deuxième plage est plus courte que la première.  
+ Use the dual-range overloads in C++14 code because the overloads that only take a single iterator for the second range will not detect differences if the second range is longer than the first range, and will result in undefined behavior if the second range is shorter than the first range.  
   
 ```  
  template<class InputIterator1, class InputIterator2> pair<InputIterator1, InputIterator2>>   
@@ -4172,36 +4189,36 @@ mismatch(
      BinaryPredicate Comp);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `First1`  
- Itérateur d'entrée qui traite la position du premier élément de la première plage à tester.  
+ An input iterator addressing the position of the first element in the first range to be tested.  
   
  `Last1`  
- Itérateur d'entrée qui traite la position qui suit le dernier élément de la première plage à tester.  
+ An input iterator addressing the position one past the last element in the first range to be tested.  
   
  `First2`  
- Itérateur d'entrée qui traite la position du premier élément de la deuxième plage à tester.  
+ An input iterator addressing the position of the first element in the second range to be tested.  
   
  `Last2`  
- Itérateur d'entrée qui traite la position qui suit le dernier élément de la deuxième plage à tester.  
+ An input iterator addressing the position of one past the last element in the second range to be tested.  
   
  `Comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui compare les éléments actuels dans chaque plage et détermine s’ils sont équivalents. Retourne **true** si la condition est satisfaite et **false** dans le cas contraire.  
+ User-defined predicate function object that compares the current elements in each range and determines whether they are equivalent. It returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- Paire d'itérateurs qui traite les positions de l'incohérence dans les deux plages, le premier itérateur de composant à la position dans la première plage et le deuxième itérateur de composant à la position dans la deuxième plage. S’il n’existe aucune différence entre les éléments dans les plages comparées ou si le prédicat binaire dans la deuxième version est satisfait par toutes les paires d’éléments dans les deux plages, le premier itérateur de composant pointe vers la position située juste après le dernier élément dans la première plage et le deuxième itérateur de composant pointe vers la position juste après le dernier élément testé dans la seconde plage.  
+### <a name="return-value"></a>Return Value  
+ A pair of iterators addressing the positions of the mismatch in the two ranges, the first component iterator to the position in the first range and the second component iterator to the position in the second range. If there is no difference between the elements in the ranges compared or if the binary predicate in the second version is satisfied by all element pairs from the two ranges, then the first component iterator points to the position one past the final element in the first range and the second component iterator to position one past the final element tested in the second range.  
   
-### <a name="remarks"></a>Notes  
- La première fonction avec modèle part du principe qu'il existe autant d'éléments dans la plage commençant à first2 que dans la plage désignée par [first1, last1). S'il y a plus d'éléments dans la deuxième plage, ils sont ignorés ; s'il y en a moins, le comportement est non défini.  
+### <a name="remarks"></a>Remarks  
+ The first template function assumes that there are as many elements in the range beginning at first2 as there are in the range designated by [first1, last1). If there are more in the second range, they are ignored; if there are less then undefined behavior will result.  
   
- La plage dans laquelle s'effectue la recherche doit être valide. Tous les itérateurs doivent pouvoir être déréférencés. Par ailleurs, la dernière position est accessible depuis la première par incrémentation.  
+ The range to be searched must be valid; all iterators must be dereferenceable and the last position is reachable from the first by incrementation.  
   
- La complexité temporelle de l'algorithme est linéaire pour le nombre d'éléments contenus dans la plage la plus courte.  
+ The time complexity of the algorithm is linear in the number of elements contained in the shorter range.  
   
- Le prédicat défini par l’utilisateur ne doit pas obligatoirement imposer une relation d’équivalence qui est symétrique, réflexive et transitive entre ses opérandes.  
+ The user-defined predicate is not required to impose an equivalence relation that symmetric, reflexive and transitive between its operands.  
   
-### <a name="example"></a>Exemple  
-  L'exemple suivant montre comment utiliser mismatch. La surcharge C++03 est affichée uniquement pour montrer comment elle peut produire un résultat inattendu.  
+### <a name="example"></a>Example  
+  The following example demonstrates how to use mismatch. The C++03 overload is shown only in order to demonstrate how it can produce an unexpected result.  
   
 ```cpp  
 #include <vector>  
@@ -4297,7 +4314,7 @@ Press a key
 ```  
   
 ##  <a name="alg_move"></a>  &lt;alg&gt; move  
- Déplace les éléments associés à une plage spécifiée.  
+ Move elements associated with a specified range.  
   
 ```  
 template<class InputIterator, class OutputIterator>  
@@ -4308,21 +4325,21 @@ template<class InputIterator, class OutputIterator>
                   );  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’entrée qui indique le début de la plage d’éléments à déplacer.  
+ An input iterator that indicates where to start the range of elements to move.  
   
  `last`  
- Itérateur d’entrée qui indique la fin d’une plage d’éléments à déplacer.  
+ An input iterator that indicates the end of a range of elements to move.  
   
  `dest`  
- Itérateur de sortie qui doit contenir les éléments déplacés.  
+ The output iterator that is to contain the moved elements.  
   
-### <a name="remarks"></a>Remarques  
- La fonction de modèle évalue `*(dest + N) = move(*(first + N))` une fois pour chaque `N` dans la plage `[0, last - first)`, pour les valeurs strictement croissantes de `N` commençant par la valeur la plus faible. Elle retourne ensuite `dest + N`. Si `dest` et `first` désignent des régions de stockage, `dest` ne doit pas être dans la plage `[first, last)`.  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates `*(dest + N) = move(*(first + N))` once for each `N` in the range `[0, last - first)`, for strictly increasing values of `N` starting with the lowest value. It then returns `dest + N`. If `dest` and `first` designate regions of storage, `dest` must not be in the range `[first, last)`.  
   
 ##  <a name="move_backward"></a>  move_backward  
- Déplace les éléments d'un itérateur vers un autre. Le déplacement commence par le dernier élément d'une plage spécifiée, et se termine par le premier élément de cette plage.  
+ Moves the elements of one iterator to another. The move starts with the last element in a specified range, and ends with the first element in that range.  
   
 ```  
 template<class BidirectionalIterator1, class BidirectionalIterator2>  
@@ -4333,23 +4350,23 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur qui indique le début d’une plage à partir de laquelle déplacer des éléments.  
+ An iterator that indicates the start of a range to move elements from.  
   
  `last`  
- Itérateur qui indique la fin d’une plage à partir de laquelle déplacer des éléments. Cet élément n’est pas déplacé.  
+ An iterator that indicates the end of a range to move elements from. This element is not moved.  
   
  `destEnd`  
- Itérateur bidirectionnel se rapportant à la position située immédiatement après l'élément final dans la plage de destination.  
+ A bidirectional iterator addressing the position of one past the final element in the destination range.  
   
-### <a name="remarks"></a>Remarques  
- La fonction de modèle évalue `*(destEnd - N - 1) = move(*(last - N - 1))` une fois pour chaque `N` dans la plage `[0, last - first)`, pour les valeurs strictement croissantes de `N` commençant par la valeur la plus faible. Elle retourne ensuite `destEnd - (last - first)`. Si `destEnd` et `first` désignent des régions de stockage, `destEnd` ne doit pas être dans la plage `[first, last)`.  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates `*(destEnd - N - 1) = move(*(last - N - 1))` once for each `N` in the range `[0, last - first)`, for strictly increasing values of `N` starting with the lowest value. It then returns `destEnd - (last - first)`. If `destEnd` and  `first` designate regions of storage, `destEnd` must not be in the range `[first, last)`.  
   
- `move` et `move_backward` reviennent fonctionnellement à utiliser `copy` et `copy_backward` avec un itérateur move.  
+ `move` and `move_backward` are functionally equivalent to using `copy` and `copy_backward` with a move iterator.  
   
 ##  <a name="next_permutation"></a>  next_permutation  
- Réorganise les éléments d’une plage, de sorte que le tri d’origine soit remplacé par la prochaine permutation plus élevée d’un point de vue lexicographique (s’il en existe une). La notion de "prochaine" peut être définie à l’aide d’un prédicat binaire.  
+ Reorders the elements in a range so that the original ordering is replaced by the lexicographically next greater permutation if it exists, where the sense of next may be specified with a binary predicate.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -4360,27 +4377,27 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur bidirectionnel ciblant la position du premier élément de la plage à permuter.  
+ A bidirectional iterator pointing to the position of the first element in the range to be permuted.  
   
  `last`  
- Itérateur bidirectionnel ciblant la position juste après le dernier élément de la plage à permuter.  
+ A bidirectional iterator pointing to the position one past the final element in the range to be permuted.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si la permutation lexicographique suivante existe et a remplacé l’ordre d’origine de la plage ; sinon **false**, auquel cas l’ordre est transformé selon la plus petite permutation lexicographique.  
+### <a name="return-value"></a>Return Value  
+ **true** if the lexicographically next permutation exists and has replaced the original ordering of the range; otherwise **false**, in which case the ordering is transformed into the lexicographically smallest permutation.  
   
-### <a name="remarks"></a>Notes  
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Le prédicat binaire par défaut est Inférieur à et les éléments de la plage doivent être comparables en termes d’infériorité pour s’assurer que la prochaine permutation est bien définie.  
+ The default binary predicate is less than and the elements in the range must be less than comparable to insure that the next permutation is well defined.  
   
- La complexité est linéaire au maximum (* nom - prénom *) / 2 échange.  
+ The complexity is linear with at most ( * last - first*)/2 swaps.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_next_perm.cpp  
@@ -4520,7 +4537,7 @@ After another next_permutation of vector v1,
 ```  
   
 ##  <a name="nth_element"></a>  nth_element  
- Partitionne une plage d’éléments, en recherchant le *n*-ième élément de la séquence dans la plage, de sorte que tous les éléments qui le précèdent sont inférieurs ou égaux et que tous les éléments qui le suivent sont supérieurs ou égaux.  
+ Partitions a range of elements, correctly locating the                 *n*th element of the sequence in the range so that all the elements in front of it are less than or equal to it and all the elements that follow it in the sequence are greater than or equal to it.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4531,29 +4548,29 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’accès aléatoire ciblant la position du premier élément de la plage à partitionner.  
+ A random-access iterator addressing the position of the first element in the range to be partitioned.  
   
  *_Nth*  
- Itérateur d’accès aléatoire ciblant la position de l’élément à ordonner correctement sur la limite de la partition.  
+ A random-access iterator addressing the position of element to be correctly ordered on the boundary of the partition.  
   
  `last`  
- Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à partitionner.  
+ A random-access iterator addressing the position one past the final element in the range to be partitioned.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>Notes  
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- L’algorithme `nth_element` ne garantit pas que les éléments des sous-plages de part et d’autre du *n*-ième élément sont triés. Il apporte donc encore moins de garanties que `partial_sort`, qui ordonne les éléments de la plage en dessous d’un élément choisi, et peut être utilisé comme alternative plus rapide à `partial_sort` quand l’ordre de la plage inférieure n’est pas nécessaire.  
+ The `nth_element` algorithm does not guarantee that elements in the sub-ranges either side of the  *n*th element are sorted. It thus makes fewer guarantees than `partial_sort`, which orders the elements in the range below some chosen element, and may be used as a faster alternative to `partial_sort` when the ordering of the lower range is not required.  
   
- Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’est inférieur à l’autre.  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other.  
   
- La moyenne d’une complexité de tri est linéaire par rapport à * nom - prénom *.  
+ The average of a sort complexity is linear with respect to  * last - first*.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_nth_elem.cpp  
@@ -4620,31 +4637,31 @@ int main() {
 ```  
   
 ##  <a name="none_of"></a>  none_of  
- Retourne `true` lorsqu'une condition n'est remplie par aucun des éléments d'une plage spécifiée.  
+ Returns `true` when a condition is never present among elements in the given range.  
   
 ```  
 template<class InputIterator, class BinaryPredicate>  
 bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’entrée qui indique le début de la recherche d’une condition dans une plage d’éléments.  
+ An input iterator that indicates where to start to check a range of elements for a condition.  
   
  `last`  
- Itérateur d’entrée qui indique la fin d’une plage d’éléments.  
+ An input iterator that indicates the end of a range of elements.  
   
  `comp`  
- Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition. Un prédicat accepte un seul argument et retourne `true` ou `false`.  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne `true` si la condition n’est pas détectée au moins une fois dans la plage spécifiée, `false` si la condition est détectée.  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the condition is not detected at least once in the indicated range, and `false` if the condition is detected.  
   
-### <a name="remarks"></a>Remarques  
- La fonction de modèle retourne `true` uniquement si, pour certaines `N` dans la plage `[0, last - first)`, le prédicat `comp(*(first + N))` est toujours `false`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if, for some `N` in the range `[0, last - first)`, the predicate `comp(*(first + N))` is always `false`.  
   
 ##  <a name="partial_sort"></a>  partial_sort  
- Réorganise un nombre spécifié d’éléments plus petits au sein d’une plage, dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire.  
+ Arranges a specified number of the smaller elements in a range into a nondescending order or according to an ordering criterion specified by a binary predicate.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4662,27 +4679,27 @@ template<class RandomAccessIterator, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `first`  
- Itérateur d’accès aléatoire ciblant la position du premier élément de la plage à trier.  
+ A random-access iterator addressing the position of the first element in the range to be sorted.  
   
  `sortEnd`  
- Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la sous-plage à trier.  
+ A random-access iterator addressing the position one past the final element in the subrange to be sorted.  
   
  `last`  
- Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à trier partiellement.  
+ A random-access iterator addressing the position one past the final element in the range to be partially sorted.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>Notes  
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’est inférieur à l’autre. L’algorithme **sort** n’est pas stable et ne garantit pas que l’ordre relatif des éléments équivalents est conservé. L’algorithme `stable_sort` conserve cet ordre d’origine.  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other. The **sort** algorithm is not stable and does not guarantee that the relative ordering of equivalent elements will be preserved. The algorithm `stable_sort` does preserve this original ordering.  
   
- La complexité moyenne du tri partiel est *O*((`last`- `first`) log (`sortEnd`- `first`)).  
+ The average partial sort complexity is  *O*(( `last`- `first`) log ( `sortEnd`- `first`)).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_partial_sort.cpp  
@@ -4756,7 +4773,7 @@ Partially resorted (UDgreater) vector:
 ```  
   
 ##  <a name="partial_sort_copy"></a>  partial_sort_copy  
- Copie les éléments d’une plage source dans une plage de destination. Les éléments sources sont triés par ordre croissant ou selon un autre prédicat binaire spécifié.  
+ Copies elements from a source range into a destination range where the source elements are ordered by either less than or another specified binary predicate.  
   
 ```  
  template<class InputIterator, class RandomAccessIterator>  
@@ -4776,31 +4793,31 @@ template<class InputIterator, class RandomAccessIterator, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Itérateur d’entrée ciblant la position du premier élément dans la plage source.  
+ An input iterator addressing the position of the first element in the source range.  
   
  `last1`  
- Itérateur d’entrée ciblant la position juste après le dernier élément de la plage source.  
+ An input iterator addressing the position one past the final element in the source range.  
   
   `first2`  
- Itérateur d’accès aléatoire ciblant la position du premier élément de la plage de destination triée.  
+ A random-access iterator addressing the position of the first element in the sorted destination range.  
   
  `last2`  
- Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage de destination triée.  
+ A random-access iterator addressing the position one past the final element in the sorted destination range.  
   
  `comp`  
- Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne `true` quand la condition est satisfaite et `false` quand elle ne l’est pas.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns `true` when satisfied and `false` when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur d’accès aléatoire ciblant l’élément de la plage de destination situé une position après le dernier élément inséré à partir de la plage source.  
+### <a name="return-value"></a>Return Value  
+ A random-access iterator addressing the element in the destination range one position beyond the last element inserted from the source range.  
   
-### <a name="remarks"></a>Notes  
- Les plages source et de destination ne doivent pas se chevaucher et doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position doit être accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges must not overlap and must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- Le prédicat binaire doit fournir un ordre faible strict pour que les éléments qui ne sont pas équivalents soient ordonnés, mais que ceux qui sont équivalents ne le soient pas. Deux éléments sont équivalents sous le prédicat Inférieur à, mais pas nécessairement égaux si aucun n’est inférieur à l’autre.  
+ The binary predicate must provide a strict weak ordering so that elements that are not equivalent are ordered, but elements that are equivalent are not. Two elements are equivalent under less than, but not necessarily equal, if neither is less than the other.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_partial_sort_copy.cpp  
@@ -4877,7 +4894,7 @@ int main() {
 ```  
   
 ##  <a name="partition"></a>  partition  
- Répartit les éléments d’une plage en deux ensembles disjoints. Les éléments qui répondent à un prédicat unaire doivent précéder ceux qui n’y répondent pas.  
+ Classifies elements in a range into two disjoint sets, with those elements satisfying a unary predicate preceding those that fail to satisfy it.  
   
 ```  
 template<class BidirectionalIterator, class Predicate>  
@@ -4888,27 +4905,27 @@ template<class BidirectionalIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur bidirectionnel ciblant la position du premier élément de la plage à partitionner.  
+ A bidirectional iterator addressing the position of the first element in the range to be partitioned.  
   
  `last`  
- Itérateur bidirectionnel ciblant la position juste après le dernier élément de la plage à partitionner.  
+ A bidirectional iterator addressing the position one past the final element in the range to be partitioned.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être classé. Un prédicat accepte un seul argument et retourne **true** ou **false**.  
+ User-defined predicate function object that defines the condition to be satisfied if an element is to be classified. A predicate takes a single argument and returns **true** or **false**.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur bidirectionnel ciblant la position du premier élément de la plage qui ne satisfait pas la condition du prédicat.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the position of the first element in the range to not satisfy the predicate condition.  
   
-### <a name="remarks"></a>Notes  
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Les éléments *a* et *b* sont équivalents, mais pas nécessairement égaux si *Pr* (*a*, *b*) est false et *Pr* (*b*, *a*) est false, où *Pr* est le prédicat du paramètre spécifié. L’algorithme **partition** n’est pas stable et ne garantit pas que l’ordre relatif des éléments équivalents est conservé. L’algorithme **stable_partition** conserve cet ordre d’origine.  
+ Elements  *a* and  *b* are equivalent, but not necessarily equal, if both  *Pr* ( *a*,  *b*) is false and  *Pr* ( *b*,  *a*) if false, where  *Pr* is the parameter-specified predicate. The **partition** algorithm is not stable and does not guarantee that the relative ordering of equivalent elements will be preserved. The algorithm **stable_ partition** does preserve this original ordering.  
   
- La complexité est linéaire : il existe ( `last`  -   `first`) les applications de `comp` et au maximum ( `last`  -   `first`) / 2 échange.  
+ The complexity is linear: there are ( `last` -  `first`) applications of `comp` and at most ( `last` -  `first`)/2 swaps.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_partition.cpp  
@@ -4948,7 +4965,7 @@ int main( ) {
 ```  
   
 ##  <a name="partition_copy"></a>  partition_copy  
- Copie les éléments qui renvoient la valeur `true` dans une destination pour une condition donnée, et qui renvoient la valeur `false` dans une autre destination. Les éléments doivent provenir d'une plage spécifiée.  
+ Copies elements for which a condition is `true` to one destination, and for which the condition is `false` to another. The elements must come from a specified range.  
   
 ```  
 template<class InputIterator, class OutputIterator1, class OutputIterator2, class Predicate>  
@@ -4962,27 +4979,27 @@ template<class InputIterator, class OutputIterator1, class OutputIterator2, clas
         );  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’entrée qui indique le début d’une plage dans laquelle rechercher une condition.  
+ An input iterator that indicates the beginning of a range to check for a condition.  
   
  `last`  
- Itérateur d’entrée qui indique la fin d’une plage.  
+ An input iterator that indicates the end of a range.  
   
  `dest1`  
- Itérateur de sortie utilisé pour copier des éléments qui retournent la valeur true pour une condition vérifiée à l’aide de `_Pred`.  
+ An output iterator used to copy elements that return true for a condition tested by using `_Pred`.  
   
  `dest2`  
- Itérateur de sortie utilisé pour copier des éléments qui retournent la valeur false pour une condition vérifiée à l’aide de `_Pred`.  
+ An output iterator used to copy elements that return false for a condition tested by using `_Pred`.  
   
  `_Pred`  
- Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à vérifier. Un prédicat accepte un seul argument et retourne `true` ou `false`.  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition to be tested. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="remarks"></a>Remarques  
- La fonction de modèle copie chaque élément `X` dans `[first,last)` à `*dest1++` si `_Pred(X)` a la valeur true, ou à `*dest2++` si ce n’est pas le cas. Il retourne `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.  
+### <a name="remarks"></a>Remarks  
+ The template function copies each element `X` in `[first,last)` to `*dest1++` if `_Pred(X)` is true, or to `*dest2++` if not. It returns `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.  
   
 ##  <a name="partition_point"></a>  partition_point  
- Retourne le premier élément d'une plage donnée qui ne répond pas à une condition. Les éléments sont triés de sorte que ceux qui répondent à la condition précèdent ceux qui n'y répondent pas.  
+ Returns the first element in the given range that does not satisfy the condition. The elements are sorted so that those that satisfy the condition come before those that do not.  
   
 ```  
 template<class ForwardIterator, class Predicate>  
@@ -4993,24 +5010,24 @@ template<class ForwardIterator, class Predicate>
     );  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- `ForwardIterator` qui indique le début d’une plage dans laquelle rechercher une condition.  
+ A `ForwardIterator` that indicates the start of a range to check for a condition.  
   
  `last`  
- `ForwardIterator` qui indique la fin d’une plage.  
+ A `ForwardIterator` that indicates the end of a range.  
   
  `comp`  
- Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire par l’élément recherché. Un prédicat accepte un seul argument et retourne `true` ou `false`.  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition to be satisfied by the element being searched for. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne un `ForwardIterator` qui référence le premier élément qui ne remplit pas la condition vérifiée par `comp`, ou retourne `last` aucun élément n’est trouvé.  
+### <a name="return-value"></a>Return Value  
+ Returns a `ForwardIterator` that refers to the first element that does not fulfill the condition tested for by `comp`, or returns `last` if one is not found.  
   
-### <a name="remarks"></a>Remarques  
- La fonction de modèle recherche le premier itérateur `it` dans `[first, last)` pour lequel `comp(*it)` est `false`. La séquence doit être ordonnée par `comp`.  
+### <a name="remarks"></a>Remarks  
+ The template function finds the first iterator `it` in `[first, last)` for which `comp(*it)` is `false`. The sequence must be ordered by `comp`.  
   
 ##  <a name="pop_heap"></a>  pop_heap  
- Retire le plus grand élément du début du tas et le place à l'avant-dernière position de la plage, puis forme un nouveau tas à partir des éléments restants.  
+ Removes the largest element from the front of a heap to the next-to-last position in the range and then forms a new heap from the remaining elements.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -5021,34 +5038,34 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’accès aléatoire ciblant la position du premier élément du tas.  
+ A random-access iterator addressing the position of the first element in the heap.  
   
  `last`  
- Itérateur d’accès aléatoire ciblant la position juste après le dernier élément du tas.  
+ A random-access iterator addressing the position one past the final element in the heap.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>Notes  
- L’algorithme `pop_heap` est l’inverse de l’opération effectuée par l’algorithme push_heap, dans lequel un élément à l’avant-dernière position d’une plage est ajouté à un tas constitué des éléments précédents de la plage, au cas où l’élément ajouté au tas est supérieur à tous les éléments déjà présents dans le tas.  
+### <a name="remarks"></a>Remarks  
+ The `pop_heap` algorithm is the inverse of the operation performed by the push_heap algorithm, in which an element at the next-to-last position of a range is added to a heap consisting of the prior elements in the range, in the case when the element being added to the heap is larger than any of the elements already in the heap.  
   
- Les tas ont deux propriétés :  
+ Heaps have two properties:  
   
--   Le premier élément est toujours le plus grand.  
+-   The first element is always the largest.  
   
--   Des éléments peuvent être ajoutés ou supprimés en temps logarithmique.  
+-   Elements may be added or removed in logarithmic time.  
   
- Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires et sont utilisés dans l’implémentation de la [classe priority_queue](../standard-library/priority-queue-class.md) de l’adaptateur de conteneur de bibliothèque C++ Standard.  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- La plage qui exclut l’élément qui vient d’être ajouté à la fin doit être un tas.  
+ The range excluding the newly added element at the end must be a heap.  
   
- La complexité est logarithmique, nécessiter de journal au maximum (* nom - prénom *) les comparaisons.  
+ The complexity is logarithmic, requiring at most log ( * last - first*) comparisons.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_pop_heap.cpp  
@@ -5111,7 +5128,7 @@ int main( )  {
 ```  
   
 ##  <a name="prev_permutation"></a>  prev_permutation  
- Réorganise les éléments d’une plage, de sorte que l’ordre d’origine est remplacé par la permutation précédente la plus élevée d’un point de vue lexicographique (s’il en existe une). Le sens de « précédente » peut être défini à l’aide d’un prédicat binaire.  
+ Reorders the elements in a range so that the original ordering is replaced by the lexicographically previous greater permutation if it exists, where the sense of previous may be specified with a binary predicate.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -5127,27 +5144,27 @@ template<class BidirectionalIterator, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur bidirectionnel ciblant la position du premier élément de la plage à permuter.  
+ A bidirectional iterator pointing to the position of the first element in the range to be permuted.  
   
  `last`  
- Itérateur bidirectionnel ciblant la position juste après le dernier élément de la plage à permuter.  
+ A bidirectional iterator pointing to the position one past the final element in the range to be permuted.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne `true` quand la condition est satisfaite et `false` quand elle ne l’est pas.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns `true` when satisfied and `false` when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- `true` si la permutation lexicographique précédente existe et a remplacé l’ordre d’origine de la plage ; sinon `false`, auquel cas l’ordre est transformé selon la plus grande permutation lexicographique.  
+### <a name="return-value"></a>Return Value  
+ `true` if the lexicographically previous permutation exists and has replaced the original ordering of the range; otherwise `false`, in which case the ordering is transformed into the lexicographically largest permutation.  
   
-### <a name="remarks"></a>Notes  
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Le prédicat binaire par défaut est Inférieur à et les éléments de la plage doivent être comparables en termes d’infériorité pour s’assurer que la permutation précédente est bien définie.  
+ The default binary predicate is less than and the elements in the range must be less-than comparable to ensure that the previous permutation is well defined.  
   
- La complexité est linéaire avec au maximum ( `last`  -   `first`) / 2 échange.  
+ The complexity is linear, with at most ( `last` -  `first`)/2 swaps.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_prev_perm.cpp  
@@ -5282,7 +5299,7 @@ After another prev_permutation of vector v1,
 ```  
   
 ##  <a name="push_heap"></a>  push_heap  
- Ajoute un élément qui se trouve à la fin d'une plage à un tas existant, constitué des éléments précédents de la plage.  
+ Adds an element that is at the end of a range to an existing heap consisting of the prior elements in the range.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -5293,34 +5310,34 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’accès aléatoire ciblant la position du premier élément du tas.  
+ A random-access iterator addressing the position of the first element in the heap.  
   
  `last`  
- Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à convertir en tas.  
+ A random-access iterator addressing the position one past the final element in the range to be converted into a heap.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>Notes  
- L’élément doit d’abord être déplacé à la fin d’un tas existant, puis l’algorithme est utilisé pour ajouter cet élément au tas existant.  
+### <a name="remarks"></a>Remarks  
+ The element must first be pushed back to the end of an existing heap and then the algorithm is used to add this element to the existing heap.  
   
- Les tas ont deux propriétés :  
+ Heaps have two properties:  
   
--   Le premier élément est toujours le plus grand.  
+-   The first element is always the largest.  
   
--   Des éléments peuvent être ajoutés ou supprimés en temps logarithmique.  
+-   Elements may be added or removed in logarithmic time.  
   
- Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires et sont utilisés dans l’implémentation de la [classe priority_queue](../standard-library/priority-queue-class.md) de l’adaptateur de conteneur de bibliothèque C++ Standard.  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- La plage qui exclut l’élément qui vient d’être ajouté à la fin doit être un tas.  
+ The range excluding the newly added element at the end must be a heap.  
   
- La complexité est logarithmique, nécessiter de journal au maximum ( *nom - prénom*) les comparaisons.  
+ The complexity is logarithmic, requiring at most log ( *last - first*) comparisons.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_push_heap.cpp  
@@ -5388,10 +5405,10 @@ int main( ) {
 ```  
   
 ##  <a name="random_shuffle"></a>  random_shuffle  
- La fonction std ::random_shuffle() est déconseillée et remplacée par [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Pour un exemple de code et plus d’informations, consultez [ \<aléatoire >](../standard-library/random.md) et la validation Stackoverflow [pourquoi sont les méthodes std::random_shuffle déconseillés dans C ++ 14 ?](http://go.microsoft.com/fwlink/?LinkId=397954).  
+ The std::random_shuffle() function is deprecated, replaced by [std::shuffle](../standard-library/algorithm-functions.md#shuffle). For a code example and more information, see [\<random>](../standard-library/random.md) and the Stackoverflow posting  [Why are std::random_shuffle methods being deprecated in C++14?](http://go.microsoft.com/fwlink/?LinkId=397954).  
   
 ##  <a name="remove"></a>  remove  
- Élimine une valeur spécifiée d'une plage donnée sans modifier l'ordre des éléments restants, et retourne la fin d'une nouvelle plage exempte de la valeur spécifiée.  
+ Eliminates a specified value from a given range without disturbing the order of the remaining elements and returning the end of a new range free of the specified value.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -5399,31 +5416,31 @@ template<class ForwardIterator, class Type>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur de transfert se rapportant à la position du premier élément dans la plage de laquelle les éléments sont supprimés.  
+ A forward iterator addressing the position of the first element in the range from which elements are being removed.  
   
  `last`  
- Itérateur de transfert se rapportant à la position située immédiatement après l'élément final dans la plage de laquelle les éléments sont supprimés.  
+ A forward iterator addressing the position one past the final element in the range from which elements are being removed.  
   
  `val`  
- Valeur qui doit être supprimée de la plage.  
+ The value that is to be removed from the range.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de transfert se rapportant à la nouvelle position de fin de la plage modifiée, située immédiatement après l'élément final de la séquence restante exempte de la valeur spécifiée.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the modified range, one past the final element of the remnant sequence free of the specified value.  
   
-### <a name="remarks"></a>Notes  
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- L'ordre des éléments non supprimés reste stable.  
+ The order of the elements not removed remains stable.  
   
- L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- La complexité est linéaire ; Il existe ( `last`  -   `first`) les comparaisons d’égalité.  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality.  
   
- La [classe list](../standard-library/list-class.md) a une version de fonction membre **remove** plus efficace qui rétablit également les liens des pointeurs.  
+ The [list class](../standard-library/list-class.md) has a more efficient member function version of **remove**, which also relinks pointers.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove.cpp  
@@ -5470,7 +5487,7 @@ int main( ) {
 ```  
   
 ##  <a name="remove_copy"></a>  remove_copy  
- Copie les éléments d'une plage source vers une plage de destination. Les éléments ayant une valeur spécifiée ne sont pas copiés. L'ordre des éléments restants n'est pas modifié et la fin d'une nouvelle plage de destination est retournée.  
+ Copies elements from a source range to a destination range, except that elements of a specified value are not copied, without disturbing the order of the remaining elements and returning the end of a new destination range.  
   
 ```  
 template<class InputIterator, class OutputIterator, class Type>  
@@ -5478,34 +5495,34 @@ template<class InputIterator, class OutputIterator, class Type>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’entrée ciblant la position du premier élément dans la plage de laquelle les éléments sont supprimés.  
+ An input iterator addressing the position of the first element in the range from which elements are being removed.  
   
  `last`  
- Itérateur d’entrée ciblant la position située de suite après le dernier élément de la plage de laquelle les éléments sont supprimés.  
+ An input iterator addressing the position one past the final element in the range from which elements are being removed.  
   
  `result`  
- Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans laquelle les éléments sont supprimés.  
+ An output iterator addressing the position of the first element in the destination range to which elements are being removed.  
   
  `val`  
- Valeur qui doit être supprimée de la plage.  
+ The value that is to be removed from the range.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de transfert ciblant la nouvelle position de fin de la plage de destination, de suite après le dernier élément de la copie de la séquence restante exempte de la valeur spécifiée.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the destination range, one past the final element of the copy of the remnant sequence free of the specified value.  
   
-### <a name="remarks"></a>Notes  
- Les plages source et de destination référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- La plage de destination doit avoir suffisamment d’espace pour accueillir les éléments restants qui seront copiés après la suppression de la valeur spécifiée.  
+ There must be enough space in the destination range to contain the remnant elements that will be copied after elements of the specified value are removed.  
   
- L'ordre des éléments non supprimés reste stable.  
+ The order of the elements not removed remains stable.  
   
- L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- La complexité est linéaire ; Il existe ( `last`  -   `first`) comparaisons d’égalité et au maximum ( `last`  -   `first`) affectations.  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove_copy.cpp  
@@ -5549,7 +5566,7 @@ int main() {
 ```  
   
 ##  <a name="remove_copy_if"></a>  remove_copy_if  
- Copie les éléments d'une plage source vers une plage de destination. Les éléments répondant à un prédicat ne sont pas copiés. L'ordre des éléments restants n'est pas modifié et la fin d'une nouvelle plage de destination est retournée.  
+ Copies elements from a source range to a destination range, except that satisfying a predicate are not copied, without disturbing the order of the remaining elements and returning the end of a new destination range.  
   
 ```  
 template<class InputIterator, class OutputIterator, class Predicate>  
@@ -5557,36 +5574,36 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’entrée ciblant la position du premier élément dans la plage de laquelle les éléments sont supprimés.  
+ An input iterator addressing the position of the first element in the range from which elements are being removed.  
   
  `last`  
- Itérateur d’entrée ciblant la position située de suite après le dernier élément de la plage de laquelle les éléments sont supprimés.  
+ An input iterator addressing the position one past the final element in the range from which elements are being removed.  
   
  `result`  
- Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans laquelle les éléments sont supprimés.  
+ An output iterator addressing the position of the first element in the destination range to which elements are being removed.  
   
  `_Pred`  
- Prédicat unaire qui doit être satisfait si la valeur d’un élément doit être remplacée.  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de transfert ciblant la nouvelle position de fin de la plage de destination, de suite après le dernier élément de la séquence restante exempte des éléments satisfaisant le prédicat.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the destination range, one past the final element of the remnant sequence free of the elements satisfying the predicate.  
   
-### <a name="remarks"></a>Notes  
- La plage source référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The source range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- La plage de destination doit avoir suffisamment d’espace pour accueillir les éléments restants qui seront copiés après la suppression de la valeur spécifiée.  
+ There must be enough space in the destination range to contain the remnant elements that will be copied after elements of the specified value are removed.  
   
- L'ordre des éléments non supprimés reste stable.  
+ The order of the elements not removed remains stable.  
   
- L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- La complexité est linéaire : il existe ( `last`  -   `first`) comparaisons d’égalité et au maximum ( `last`  -   `first`) affectations.  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments.  
   
- Pour plus d’informations sur le comportement de ces fonctions, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md).  
+ For information on how these functions behave, see [Checked Iterators](../standard-library/checked-iterators.md).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove_copy_if.cpp  
@@ -5637,7 +5654,7 @@ int main() {
 ```  
   
 ##  <a name="remove_if"></a>  remove_if  
- Élimine d’une plage donnée les éléments qui répondent à un prédicat, sans modifier l’ordre des éléments restants et en retournant la fin d’une nouvelle plage exempte de la valeur spécifiée.  
+ Eliminates elements that satisfy a predicate from a given range without disturbing the order of the remaining elements and returning the end of a new range free of the specified value.  
   
 ```  
 template<class ForwardIterator, class Predicate>  
@@ -5645,31 +5662,31 @@ template<class ForwardIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur vers l’avant pointant sur la position du premier élément de la plage dont les éléments sont supprimés.  
+ A forward iterator pointing to the position of the first element in the range from which elements are being removed.  
   
  `last`  
- Itérateur vers l’avant pointant sur la position juste après le dernier élément de la plage dont les éléments sont supprimés.  
+ A forward iterator pointing to the position one past the final element in the range from which elements are being removed.  
   
  `_Pred`  
- Prédicat unaire qui doit être satisfait si la valeur d’un élément doit être remplacée.  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de transfert se rapportant à la nouvelle position de fin de la plage modifiée, située immédiatement après l'élément final de la séquence restante exempte de la valeur spécifiée.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the modified range, one past the final element of the remnant sequence free of the specified value.  
   
-### <a name="remarks"></a>Notes  
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- L'ordre des éléments non supprimés reste stable.  
+ The order of the elements not removed remains stable.  
   
- L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- La complexité est linéaire : il existe ( `last`  -   `first`) les comparaisons d’égalité.  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality.  
   
- La classe list a une version de fonction membre remove plus efficace qui rétablit les liens des pointeurs.  
+ List has a more efficient member function version of remove which relinks pointers.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove_if.cpp  
@@ -5720,36 +5737,36 @@ int main( ) {
 ```  
   
 ##  <a name="replace"></a>  replace  
- Examine tous les éléments d'une plage et les remplace s'ils correspondent à une valeur spécifiée.  
+ Examines each element in a range and replaces it if it matches a specified value.  
   
 ```  
 template<class ForwardIterator, class Type>  
 void replace(ForwardIterator first, ForwardIterator last, const Type& _OldVal, const Type& _NewVal);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur vers l’avant pointant sur la position du premier élément de la plage dont les éléments sont remplacés.  
+ A forward iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- Itérateur vers l’avant pointant sur la position juste après le dernier élément de la plage dont les éléments sont remplacés.  
+ A forward iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `_OldVal`  
- Ancienne valeur des éléments remplacés.  
+ The old value of the elements being replaced.  
   
  `_NewVal`  
- Nouvelle valeur assignée aux éléments ayant l’ancienne valeur.  
+ The new value being assigned to the elements with the old value.  
   
-### <a name="remarks"></a>Notes  
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- L’ordre des éléments non remplacés reste stable.  
+ The order of the elements not replaced remains stable.  
   
- L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- La complexité est linéaire ; Il existe ( `last`  -   `first`) comparaisons d’égalité et au maximum ( `last`  -   `first`) affectations de nouvelles valeurs.  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace.cpp  
@@ -5788,7 +5805,7 @@ int main( ) {
 ```  
   
 ##  <a name="replace_copy"></a>  replace_copy  
- Examine tous les éléments d'une plage source et les remplace s'ils correspondent à une valeur spécifiée, tout en copiant le résultat dans une nouvelle plage de destination.  
+ Examines each element in a source range and replaces it if it matches a specified value while copying the result into a new destination range.  
   
 ```  
  template<class InputIterator, class OutputIterator, class Type>  
@@ -5801,35 +5818,35 @@ int main( ) {
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’entrée pointant vers la position du premier élément de la plage dont les éléments sont remplacés.  
+ An input iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- Itérateur d’entrée pointant vers la position située de suite après le dernier élément de la plage dont les éléments sont remplacés.  
+ An input iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `result`  
- Itérateur de sortie pointant vers le premier élément de la plage de destination dans laquelle la séquence d’éléments modifiée est copiée.  
+ An output iterator pointing to the first element in the destination range to where the altered sequence of elements is being copied.  
   
  `_OldVal`  
- Ancienne valeur des éléments remplacés.  
+ The old value of the elements being replaced.  
   
  `_NewVal`  
- Nouvelle valeur assignée aux éléments ayant l’ancienne valeur.  
+ The new value being assigned to the elements with the old value.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie pointant vers la position située de suite après le dernier élément de la plage de destination dans laquelle la séquence d’éléments modifiée est copiée.  
+### <a name="return-value"></a>Return Value  
+ An output iterator pointing to the position one past the final element in the destination range to where the altered sequence of elements is being copied.  
   
-### <a name="remarks"></a>Notes  
- Les plages source et de destination référencées ne doivent pas se chevaucher et doivent toutes deux être valides : tous les pointeurs doivent pouvoir être déréférencés et, dans les séquences, la dernière position est accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must not overlap and must both be valid: all pointers must be dereferenceable and within the sequences the last position is reachable from the first by incrementation.  
   
- L’ordre des éléments non remplacés reste stable.  
+ The order of the elements not replaced remains stable.  
   
- L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- La complexité est linéaire : il existe ( `last`  -   `first`) comparaisons d’égalité et au maximum ( `last`  -   `first`) affectations de nouvelles valeurs.  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace_copy.cpp  
@@ -5887,7 +5904,7 @@ int main( ) {
 ```  
   
 ##  <a name="replace_copy_if"></a>  replace_copy_if  
- Examine tous les éléments d'une plage source et les remplace s'ils répondent à un prédicat, tout en copiant le résultat dans une nouvelle plage de destination.  
+ Examines each element in a source range and replaces it if it satisfies a specified predicate while copying the result into a new destination range.  
   
 ```  
 template<class InputIterator, class OutputIterator, class Predicate, class Type>  
@@ -5900,35 +5917,35 @@ OutputIterator replace_copy_if(
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’entrée pointant vers la position du premier élément de la plage dont les éléments sont remplacés.  
+ An input iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- Itérateur d’entrée pointant vers la position située de suite après le dernier élément de la plage dont les éléments sont remplacés.  
+ An input iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `result`  
- Itérateur de sortie pointant vers la position du premier élément de la plage de destination dans laquelle les éléments sont copiés.  
+ An output iterator pointing to the position of the first element in the destination range to which elements are being copied.  
   
  `_Pred`  
- Prédicat unaire qui doit être satisfait si la valeur d’un élément doit être remplacée.  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
  `val`  
- Nouvelle valeur assignée aux éléments dont l’ancienne valeur satisfait au prédicat.  
+ The new value being assigned to the elements whose old value satisfies the predicate.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie pointant vers la position située de suite après le dernier élément de la plage de destination dans laquelle la séquence d’éléments modifiée est copiée.  
+### <a name="return-value"></a>Return Value  
+ An output iterator pointing to the position one past the final element in the destination range to where the altered sequence of elements is being copied.  
   
-### <a name="remarks"></a>Notes  
- Les plages source et de destination référencées ne doivent pas se chevaucher et doivent toutes deux être valides : tous les pointeurs doivent pouvoir être déréférencés et, dans les séquences, la dernière position est accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must not overlap and must both be valid: all pointers must be dereferenceable and within the sequences the last position is reachable from the first by incrementation.  
   
- L’ordre des éléments non remplacés reste stable.  
+ The order of the elements not replaced remains stable.  
   
- L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- La complexité est linéaire ; Il existe ( `last`  -   `first`) comparaisons d’égalité et au maximum ( `last`  -   `first`) affectations de nouvelles valeurs.  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace_copy_if.cpp  
@@ -5993,7 +6010,7 @@ int main( ) {
 ```  
   
 ##  <a name="replace_if"></a>  replace_if  
- Examine tous les éléments d’une plage et les remplace s’ils répondent à un prédicat spécifié.  
+ Examines each element in a range and replaces it if it satisfies a specified predicate.  
   
 ```  
 template<class ForwardIterator, class Predicate, class Type>  
@@ -6001,31 +6018,31 @@ void replace_if(ForwardIterator first, ForwardIterator last, Predicate pred, con
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur vers l’avant pointant sur la position du premier élément de la plage dont les éléments sont remplacés.  
+ A forward iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- Itérateur pointant sur la position juste après le dernier élément de la plage dont les éléments sont remplacés.  
+ An iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `_Pred`  
- Prédicat unaire qui doit être satisfait si la valeur d’un élément doit être remplacée.  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
  `val`  
- Nouvelle valeur assignée aux éléments dont l’ancienne valeur satisfait au prédicat.  
+ The new value being assigned to the elements whose old value satisfies the predicate.  
   
-### <a name="remarks"></a>Notes  
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- L’ordre des éléments non remplacés reste stable.  
+ The order of the elements not replaced remains stable.  
   
- L’algorithme `replace_if` est une généralisation de l’algorithme **replace** qui permet de spécifier n’importe quel prédicat, au lieu de l’égalité à une valeur constante spécifiée.  
+ The algorithm `replace_if` is a generalization of the algorithm **replace**, allowing any predicate to be specified, rather than equality to a specified constant value.  
   
- L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- La complexité est linéaire : il existe ( `last`  -   `first`) comparaisons d’égalité et au maximum ( `last`  -   `first`) affectations de nouvelles valeurs.  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace_if.cpp  
@@ -6070,7 +6087,7 @@ int main( ) {
 ```  
   
 ##  <a name="reverse"></a>  reverse  
- Inverse l'ordre des éléments d'une plage.  
+ Reverses the order of the elements within a range.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -6078,17 +6095,17 @@ template<class BidirectionalIterator>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur bidirectionnel pointant sur la position du premier élément de la plage dont les éléments sont permutés.  
+ A bidirectional iterator pointing to the position of the first element in the range within which the elements are being permuted.  
   
  `last`  
- Itérateur bidirectionnel pointant sur la position juste après le dernier élément de la plage dont les éléments sont permutés.  
+ A bidirectional iterator pointing to the position one past the final element in the range within which the elements are being permuted.  
   
-### <a name="remarks"></a>Notes  
- La plage source référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The source range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_reverse.cpp  
@@ -6131,7 +6148,7 @@ The modified vector v1 with values reversed is:
 ```  
   
 ##  <a name="reverse_copy"></a>  reverse_copy  
- Inverse l'ordre des éléments d'une plage source, tout en les copiant dans une plage de destination.  
+ Reverses the order of the elements within a source range while copying them into a destination range  
   
 ```  
 template<class BidirectionalIterator, class OutputIterator>  
@@ -6142,23 +6159,23 @@ OutputIterator reverse_copy(
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur bidirectionnel pointant vers la position du premier élément de la plage source dont les éléments sont permutés.  
+ A bidirectional iterator pointing to the position of the first element in the source range within which the elements are being permuted.  
   
  `last`  
- Itérateur bidirectionnel pointant vers la position située de suite après le dernier élément de la plage source dont les éléments sont permutés.  
+ A bidirectional iterator pointing to the position one past the final element in the source range within which the elements are being permuted.  
   
  `result`  
- Itérateur de sortie pointant vers la position du premier élément de la plage de destination dans laquelle les éléments sont copiés.  
+ An output iterator pointing to the position of the first element in the destination range to which elements are being copied.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie pointant vers la position située de suite après le dernier élément de la plage de destination dans laquelle la séquence d’éléments modifiée est copiée.  
+### <a name="return-value"></a>Return Value  
+ An output iterator pointing to the position one past the final element in the destination range to where the altered sequence of elements is being copied.  
   
-### <a name="remarks"></a>Notes  
- Les plages source et de destination référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_reverse_copy.cpp  
@@ -6199,7 +6216,7 @@ int main( ) {
 ```  
   
 ##  <a name="rotate"></a>  rotate  
- Échange les éléments de deux plages adjacentes.  
+ Exchanges the elements in two adjacent ranges.  
   
 ```  
 template<class ForwardIterator>  
@@ -6207,22 +6224,22 @@ template<class ForwardIterator>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur vers l’avant ciblant la position du premier élément de la plage à faire pivoter.  
+ A forward iterator addressing the position of the first element in the range to be rotated.  
   
  `middle`  
- Itérateur vers l’avant définissant la limite au sein de la plage qui cible la position du premier élément dans la deuxième partie de la plage dont les éléments doivent être échangés avec ceux de la première partie de la plage.  
+ A forward iterator defining the boundary within the range that addresses the position of the first element in the second part of the range whose elements are to be exchanged with those in the first part of the range.  
   
 `Last`  
- Itérateur vers l’avant ciblant la position située de suite après le dernier élément de la plage à faire pivoter.  
+ A forward iterator addressing the position one past the final element in the range to be rotated.  
   
-### <a name="remarks"></a>Notes  
- Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- La complexité est linéaire au maximum ( `last`  -   `first`) échange.  
+ The complexity is linear with at most ( `last` -  `first`) swaps.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_rotate.cpp  
@@ -6298,7 +6315,7 @@ After the rotation of a single deque element to the back,
 ```  
   
 ##  <a name="rotate_copy"></a>  rotate_copy  
- Échange les éléments de deux plages adjacentes au sein d'une plage source et copie le résultat dans une plage de destination.  
+ Exchanges the elements in two adjacent ranges within a source range and copies the result to a destination range.  
   
 ```  
 template<class ForwardIterator, class OutputIterator>  
@@ -6310,28 +6327,28 @@ OutputIterator rotate_copy(
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur vers l’avant ciblant la position du premier élément de la plage à faire pivoter.  
+ A forward iterator addressing the position of the first element in the range to be rotated.  
   
  `middle`  
- Itérateur vers l’avant définissant la limite au sein de la plage qui cible la position du premier élément dans la deuxième partie de la plage dont les éléments doivent être échangés avec ceux de la première partie de la plage.  
+ A forward iterator defining the boundary within the range that addresses the position of the first element in the second part of the range whose elements are to be exchanged with those in the first part of the range.  
   
  _ `Last`  
- Itérateur vers l’avant ciblant la position située de suite après le dernier élément de la plage à faire pivoter.  
+ A forward iterator addressing the position one past the final element in the range to be rotated.  
   
  `result`  
- Itérateur de sortie qui traite la position du premier élément dans la plage de destination.  
+ An output iterator addressing the position of the first element in the destination range.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the final element in the destination range.  
   
-### <a name="remarks"></a>Notes  
- Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- La complexité est linéaire au maximum ( `last`  -   `first`) échange.  
+ The complexity is linear with at most ( `last` -  `first`) swaps.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_rotate_copy.cpp  
@@ -6391,7 +6408,7 @@ int main() {
 ```  
   
 ##  <a name="search"></a>  search  
- Recherche la première occurrence d’une séquence au sein d’une plage cible dont les éléments sont égaux à ceux d’une séquence d’éléments donnée ou dont les éléments sont équivalents à ceux d’une séquence donnée, selon un prédicat binaire spécifié.  
+ Searches for the first occurrence of a sequence within a target range whose elements are equal to those in a given sequence of elements or whose elements are equivalent in a sense specified by a binary predicate to the elements in the given sequence.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -6411,33 +6428,33 @@ template<class ForwardIterator1, class ForwardIterator2, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last1`  
- Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
   `first2`  
- Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la correspondance.  
+ A forward iterator addressing the position of the first element in the range to be matched.  
   
  `last2`  
- Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la correspondance.  
+ A forward iterator addressing the position one past the final element in the range to be matched.  
   
  `comp`  
- Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur vers l’avant qui traite la position du premier élément de la première sous-séquence qui correspond à la séquence spécifiée ou qui est équivalente au sens spécifié par un prédicat binaire.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the first subsequence that matches the specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
-### <a name="remarks"></a>Notes  
- `operator==`, qui sert à déterminer la correspondance entre un élément et la valeur spécifiée, doit imposer une relation d'équivalence entre ses opérandes.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position est accessible à partir de la première par incrémentation.  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation.  
   
- La complexité moyenne est linéaire par rapport à la taille de la plage de recherche et le pire cas de complexité est également linéaire par rapport à la taille de la séquence recherchée.  
+ Average complexity is linear with respect to the size of the searched range, and worst case complexity is also linear with respect to the size of the sequence being searched for.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_search.cpp  
@@ -6536,7 +6553,7 @@ There is a sequence of elements in v1 that are equivalent
 ```  
   
 ##  <a name="search_n"></a>  search_n  
- Recherche la première sous-séquence d’une plage dont un nombre spécifié d’éléments ont une valeur particulière ou une relation à cette valeur, selon un prédicat binaire spécifié.  
+ Searches for the first subsequence in a range that of a specified number of elements having a particular value or a relation to that value as specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator1, class Diff2, class Type>  
@@ -6556,33 +6573,33 @@ template<class ForwardIterator1, class Diff2, class Type, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last1`  
- Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `count`  
- Taille de la sous-séquence recherchée.  
+ The size of the subsequence being searched for.  
   
  `val`  
- Valeur des éléments de la séquence recherchée.  
+ The value of the elements in the sequence being searched for.  
   
  `comp`  
- Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur vers l’avant qui traite la position du premier élément de la première sous-séquence qui correspond à la séquence spécifiée ou qui est équivalente au sens spécifié par un prédicat binaire.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the first subsequence that matches the specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
-### <a name="remarks"></a>Notes  
- `operator==`, qui sert à déterminer la correspondance entre un élément et la valeur spécifiée, doit imposer une relation d'équivalence entre ses opérandes.  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- La complexité est linéaire par rapport à la taille de la plage de recherche.  
+ Complexity is linear with respect to the size of the searched.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_search_n.cpp  
@@ -6666,7 +6683,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
 ```  
   
 ##  <a name="set_difference"></a>  set_difference  
- Regroupe tous les éléments qui appartiennent à une plage source triée, mais pas à une autre plage source triée, en une même plage de destination triée. Un critère de tri peut être spécifié par un prédicat binaire.  
+ Unites all of the elements that belong to one sorted source range, but not to a second sorted source range, into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -6688,42 +6705,42 @@ OutputIterator set_difference(
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `first1`  
- Itérateur d’entrée ciblant la position du premier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant la différence des deux plages sources.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `last1`  
- Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant la différence des deux plages sources.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `first2`  
- Itérateur d’entrée ciblant la position du premier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant la différence des deux plages sources.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `last2`  
- Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant la différence des deux plages sources.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `result`  
- Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans la mesure où les deux plages sources doivent être regroupées au sein d’une même plage triée représentant la différence des deux plages sources.  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the difference of the two source ranges.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est supérieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination triée représentant la différence des deux plages sources.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the difference of the two source ranges.  
   
-### <a name="remarks"></a>Notes  
- Les plages sources triées référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position doit être accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- La plage de destination ne doit pas chevaucher les plages sources et doit être suffisamment grande pour contenir la première plage source.  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the first source range.  
   
- Les plages sources triées doivent chacune être structurées comme condition préalable à l’application de l’algorithme `set_difference` selon le même ordre que celui utilisé par l’algorithme pour trier les plages regroupées.  
+ The sorted source ranges must each be arranged as a precondition to the application of the `set_difference` algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme merge.  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm merge.  
   
- Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double (de telle sorte qu’il y a plus d’éléments dans la première plage source que dans la seconde), la plage de destination contient le nombre d’occurrences supplémentaires de ces éléments que contient la première plage source par rapport à la deuxième.  
+ The value types of the input iterators need be less-than-comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element such that there are more in the first source range than in the second, then the destination range will contain the number by which the occurrences of those elements in the first source range exceed the occurrences of those elements in the second source range.  
   
- La complexité de l’algorithme est linéaire avec au maximum 2 \* (( *last1 - first1*)-( *last2 - first2*)) - 1 comparaisons pour des plages sources non vides.  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) - ( *last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_diff.cpp  
@@ -6843,7 +6860,7 @@ int main( )
 ```  
   
 ##  <a name="set_intersection"></a>  set_intersection  
- Regroupe tous les éléments de deux plages sources triées au sein d'une même plage de destination triée. Le critère de tri peut être spécifié par un prédicat binaire.  
+ Unites all of the elements that belong to both sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -6865,42 +6882,42 @@ OutputIterator set_intersection(
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Itérateur d’entrée ciblant la position du premier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant l’intersection des deux plages sources.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
  `last1`  
- Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant l’intersection des deux plages sources.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
   `first2`  
- Itérateur d’entrée ciblant la position du premier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant l’intersection des deux plages sources.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
  `last2`  
- Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant l’intersection des deux plages sources.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
- **_** *Résultat*  
- Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans la mesure où les deux plages sources doivent être regroupées au sein d’une même plage triée représentant l’intersection des deux plages sources.  
+ **_** *Result*  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the intersection of the two source ranges.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est supérieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination triée représentant l’intersection des deux plages sources.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the intersection of the two source ranges.  
   
-### <a name="remarks"></a>Notes  
- Les plages sources triées référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position doit être accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- La plage de destination ne doit pas chevaucher les plages sources et doit être suffisamment grande pour contenir la plage de destination.  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- Les plages sources triées doivent chacune être structurées comme condition préalable à l’application de l’algorithme merge selon le même ordre que celui utilisé par l’algorithme chargé de trier les plages regroupées.  
+ The sorted source ranges must each be arranged as a precondition to the application of the merge algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme.  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm.  
   
- Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient le nombre maximal de ces éléments qui figurent dans les deux plages sources.  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element, then the destination range will contain the maximum number of those elements that occur in both source ranges.  
   
- La complexité de l’algorithme est linéaire avec au maximum 2 \* (( *last1 - first1*) + ( *last2 - first2*)) - 1 comparaisons pour des plages sources non vides.  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) + ( *last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_intersection.cpp  
@@ -7014,7 +7031,7 @@ int main() {
 ```  
   
 ##  <a name="set_symmetric_difference"></a>  set_symmetric_difference  
- Regroupe tous les éléments qui appartiennent à l'une de deux plages sources triées (mais pas aux deux) au sein d'une même plage de destination triée. Le critère de tri peut être spécifié par un prédicat binaire.  
+ Unites all of the elements that belong to one, but not both, of the sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -7036,42 +7053,42 @@ OutputIterator set_symmetric_difference(
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Itérateur d’entrée ciblant la position du premier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant la différence symétrique des deux plages sources.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
  `last1`  
- Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant la différence symétrique des deux plages sources.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
   `first2`  
- Itérateur d’entrée ciblant la position du premier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant la différence symétrique des deux plages sources.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
  `last2`  
- Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant la différence symétrique des deux plages sources.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
- **_** *Résultat*  
- Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans la mesure où les deux plages sources doivent être regroupées au sein d’une même plage triée représentant la différence symétrique des deux plages sources.  
+ **_** *Result*  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the symmetric difference of the two source ranges.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est supérieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination triée représentant la différence symétrique des deux plages sources.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the symmetric difference of the two source ranges.  
   
-### <a name="remarks"></a>Notes  
- Les plages sources triées référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position doit être accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- La plage de destination ne doit pas chevaucher les plages sources et doit être suffisamment grande pour contenir la plage de destination.  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- Les plages sources triées doivent chacune être structurées comme condition préalable à l’application de l’algorithme **merge** selon le même ordre que celui utilisé par l’algorithme chargé de trier les plages regroupées.  
+ The sorted source ranges must each be arranged as a precondition to the application of the **merge** algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme merge.  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm merge.  
   
- Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient la valeur absolue du nombre d’occurrences supplémentaires de ces éléments que contient l’une des plages sources par rapport à la deuxième.  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element, then the destination range will contain the absolute value of the number by which the occurrences of those elements in the one of the source ranges exceeds the occurrences of those elements in the second source range.  
   
- La complexité de l’algorithme est linéaire avec au maximum 2 \* ((*last1 - first1*)-(*last2 - first2*)) - 1 comparaisons pour des plages sources non vides.  
+ The complexity of the algorithm is linear with at most 2 \* ( (*last1 - first1*) - (*last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_sym_diff.cpp  
@@ -7191,7 +7208,7 @@ int main( )
 ```  
   
 ##  <a name="set_union"></a>  set_union  
- Regroupe tous les éléments qui appartiennent au moins à l'une de deux plages sources triées au sein d'une même plage de destination triée. Le critère de tri peut être spécifié par un prédicat binaire.  
+ Unites all of the elements that belong to at least one of two sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -7212,42 +7229,42 @@ OutputIterator set_union(
     BinaryPredicate comp );  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Itérateur d’entrée ciblant la position du premier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant l’union des deux plages sources.  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
  `last1`  
- Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant l’union des deux plages sources.  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
   `first2`  
- Itérateur d’entrée ciblant la position du premier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant l’union des deux plages sources.  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
  `last2`  
- Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant l’union des deux plages sources.  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
- **_** *Résultat*  
- Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans la mesure où les deux plages sources doivent être regroupées au sein d’une même plage triée représentant l’union des deux plages sources.  
+ **_** *Result*  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the union of the two source ranges.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est supérieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination triée représentant l’union des deux plages sources.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the union of the two source ranges.  
   
-### <a name="remarks"></a>Notes  
- Les plages sources triées référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position doit être accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- La plage de destination ne doit pas chevaucher les plages sources et doit être suffisamment grande pour contenir la plage de destination.  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- Les plages sources triées doivent chacune être structurées comme condition préalable à l’application de l’algorithme **merge** selon le même ordre que celui utilisé par l’algorithme chargé de trier les plages regroupées.  
+ The sorted source ranges must each be arranged as a precondition to the application of the **merge** algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme **merge**.  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm **merge**.  
   
- Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient le nombre maximal de ces éléments qui figurent dans les deux plages sources.  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element, then the destination range will contain the maximum number of those elements that occur in both source ranges.  
   
- La complexité de l’algorithme est linéaire avec au maximum 2 \* (( *last1 - first1*)-( *last2 - first2*)) - 1 comparaisons.  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) - ( *last2 - first2*) ) - 1 comparisons.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_union.cpp  
@@ -7367,7 +7384,7 @@ int main( )
 ```  
   
 ##  <a name="shuffle"></a>  std::shuffle  
- Lit de façon aléatoire (réorganise) les éléments pour une plage donnée à l'aide d'un générateur de nombres aléatoires.  
+ Shuffles (rearranges) elements for a given range by using a random number generator.  
   
 ```  
 template<class RandomAccessIterator, class UniformRandomNumberGenerator>  
@@ -7376,21 +7393,21 @@ void shuffle(RandomAccessIterator first,
     UniformRandomNumberGenerator&& gen);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `first`  
- Itérateur sur le premier élément de la plage à lire de façon aléatoire, compris. Doit remplir les conditions de `RandomAccessIterator` et `ValueSwappable`.  
+ An iterator to the first element in the range to be shuffled, inclusive. Must meet the requirements of `RandomAccessIterator` and `ValueSwappable`.  
   
  `last`  
- Itérateur sur le dernier élément de la plage à lire de façon aléatoire, non compris. Doit remplir les conditions de `RandomAccessIterator` et `ValueSwappable`.  
+ An iterator to the last element in the range to be shuffled, exclusive. Must meet the requirements of `RandomAccessIterator` and `ValueSwappable`.  
   
  `gen`  
- Générateur de nombres aléatoires que la fonction `shuffle()` utilisera pour l'opération. Doit remplir les conditions d'un `UniformRandomNumberGenerator`.  
+ The random number generator that the `shuffle()` function will use for the operation. Must meet the requirements of a `UniformRandomNumberGenerator`.  
   
-### <a name="remarks"></a>Notes  
- Pour plus d’informations et pour obtenir un exemple de code qui utilise `shuffle()`, consultez [\<random>](../standard-library/random.md).  
+### <a name="remarks"></a>Remarks  
+ For more information, and a code sample that uses `shuffle()`, see [\<random>](../standard-library/random.md).  
   
 ##  <a name="sort"></a>  sort  
- Réorganise les éléments d’une plage spécifiée, dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire.  
+ Arranges the elements in a specified range into a nondescending order or according to an ordering criterion specified by a binary predicate.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -7406,24 +7423,24 @@ template<class RandomAccessIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `first`  
- Itérateur d’accès aléatoire ciblant la position du premier élément de la plage à trier.  
+ A random-access iterator addressing the position of the first element in the range to be sorted.  
   
  `last`  
- Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à trier.  
+ A random-access iterator addressing the position one past the final element in the range to be sorted.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Ce prédicat binaire accepte deux arguments, et retourne `true` si les deux arguments sont dans l’ordre et `false` dans le cas contraire. Cette fonction de comparaison doit imposer un ordre faible strict sur les paires d’éléments de la séquence. Pour plus d’informations, consultez [Algorithmes](../standard-library/algorithms.md).  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. This binary predicate takes two arguments and returns `true` if the two arguments are in order and `false` otherwise. This comparator function must impose a strict weak ordering on pairs of elements from the sequence. For more information, see [Algorithms](../standard-library/algorithms.md).  
   
-### <a name="remarks"></a>Notes  
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’est inférieur à l’autre. L’algorithme `sort` n’est pas stable et ne garantit pas que l’ordre relatif des éléments équivalents est conservé. L’algorithme `stable_sort` conserve cet ordre d’origine.  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other. The `sort` algorithm is not stable and so does not guarantee that the relative ordering of equivalent elements will be preserved. The algorithm `stable_sort` does preserve this original ordering.  
   
- La moyenne d’une complexité de tri est *O*( *N* journal *N*), où *N* =  *nom - prénom*.  
+ The average of a sort complexity is  *O*( *N* log  *N*), where  *N* =  *last - first*.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_sort.cpp  
@@ -7492,7 +7509,7 @@ Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 ```  
   
 ##  <a name="sort_heap"></a>  sort_heap  
- Convertit un tas en une plage triée.  
+ Converts a heap into a sorted range.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -7507,34 +7524,34 @@ template<class RandomAccessIterator, class Predicate>
       Predicate comp);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur d’accès aléatoire ciblant la position du premier élément du tas cible.  
+ A random-access iterator addressing the position of the first element in the target heap.  
   
  `last`  
- Itérateur d’accès aléatoire ciblant la position juste après le dernier élément du tas cible.  
+ A random-access iterator addressing the position one past the final element in the target heap.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>Notes  
- Les tas ont deux propriétés :  
+### <a name="remarks"></a>Remarks  
+ Heaps have two properties:  
   
--   Le premier élément est toujours le plus grand.  
+-   The first element is always the largest.  
   
--   Des éléments peuvent être ajoutés ou supprimés en temps logarithmique.  
+-   Elements may be added or removed in logarithmic time.  
   
- Après l’application de cet algorithme, la plage à laquelle il a été appliqué n’est plus un tas.  
+ After the application if this algorithm, the range it was applied to is no longer a heap.  
   
- Il ne s’agit pas d’un tri stable, car l’ordre relatif des éléments équivalents n’est pas nécessairement conservé.  
+ This is not a stable sort because the relative order of equivalent elements is not necessarily preserved.  
   
- Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires et sont utilisés dans l’implémentation de la [classe priority_queue](../standard-library/priority-queue-class.md) de l’adaptateur de conteneur de bibliothèque C++ Standard.  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- La complexité est au plus *N* journal *N*, où *N* = ( *nom - prénom*).  
+ The complexity is at most  *N* log  *N*, where  *N* = ( *last - first*).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_sort_heap.cpp  
@@ -7585,7 +7602,7 @@ int main() {
 ```  
   
 ##  <a name="stable_partition"></a>  stable_partition  
- Classe les éléments d’une plage en deux ensembles disjoints. Les éléments qui répondent à un prédicat unaire doivent précéder ceux qui n’y répondent pas, et l’ordre relatif des éléments équivalents doit être conservé.  
+ Classifies elements in a range into two disjoint sets, with those elements satisfying a unary predicate preceding those that fail to satisfy it, preserving the relative order of equivalent elements.  
   
 ```  
 template<class BidirectionalIterator, class Predicate>  
@@ -7596,25 +7613,25 @@ BidirectionalIterator stable_partition(
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur bidirectionnel ciblant la position du premier élément de la plage à partitionner.  
+ A bidirectional iterator addressing the position of the first element in the range to be partitioned.  
   
  `last`  
- Itérateur bidirectionnel ciblant la position juste après le dernier élément de la plage à partitionner.  
+ A bidirectional iterator addressing the position one past the final element in the range to be partitioned.  
   
  `_Pred`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être classé. Un prédicat accepte un seul argument et retourne **true** ou **false**.  
+ User-defined predicate function object that defines the condition to be satisfied if an element is to be classified. A predicate takes single argument and returns **true** or **false**.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur bidirectionnel ciblant la position du premier élément de la plage qui ne satisfait pas la condition du prédicat.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the position of the first element in the range to not satisfy the predicate condition.  
   
-### <a name="remarks"></a>Notes  
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Les éléments *a* et *b* sont équivalents, mais pas nécessairement égaux si *Pr* (*a*, *b*) est false et *Pr* (*b*, *a*) est false, où *Pr* est le prédicat du paramètre spécifié. L’algorithme **stable_partition** est stable et garantit que l’ordre relatif des éléments équivalents est conservé. L’algorithme **partition** ne conserve pas nécessairement cet ordre d’origine.  
+ Elements  *a* and  *b* are equivalent, but not necessarily equal, if both  *Pr* ( *a*,  *b*) is false and  *Pr* ( *b*,  *a*) if false, where  *Pr* is the parameter-specified predicate. The **stable_ partition** algorithm is stable and guarantees that the relative ordering of equivalent elements will be preserved. The algorithm **partition** does not necessarily preserve this original ordering.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_stable_partition.cpp  
@@ -7660,7 +7677,7 @@ int main( ) {
 ```  
   
 ##  <a name="stable_sort"></a>  stable_sort  
- Classe les éléments d’une plage spécifiée dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire, et conserve l’ordre relatif des éléments équivalents.  
+ Arranges the elements in a specified range into a nondescending order or according to an ordering criterion specified by a binary predicate and preserves the relative ordering of equivalent elements.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -7674,24 +7691,24 @@ void stable_sort(
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur bidirectionnel ciblant la position du premier élément de la plage à trier.  
+ A bidirectional iterator addressing the position of the first element in the range to be sorted.  
   
  `last`  
- Itérateur bidirectionnel ciblant la position située juste après le dernier élément de la plage à trier.  
+ A bidirectional iterator addressing the position one past the final element in the range to be sorted.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>Notes  
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’est inférieur à l’autre. L’algorithme **sort** est stable et garantit que l’ordre relatif des éléments équivalents est conservé.  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other. The **sort** algorithm is stable and guarantees that the relative ordering of equivalent elements will be preserved.  
   
- La complexité de l’exécution de `stable_sort` dépend de la quantité de mémoire disponible, mais le meilleur cas (Si suffisamment de mémoire) est *O*( *N* journal *N*) et le pire des cas est *O*( *N* (journal *N* ) 2), où *N* =  *nom - prénom.* En règle générale, l’algorithme **sort** est beaucoup plus rapide que `stable_sort`.  
+ The run-time complexity of `stable_sort` depends on the amount of memory available, but the best case (given sufficient memory) is  *O*( *N* log  *N*) and the worst case is  *O*(  *N* ( log  *N* )2 ), where  *N* =  *last - First.* Usually, the **sort** algorithm is significantly faster than `stable_sort`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_stable_sort.cpp  
@@ -7759,7 +7776,7 @@ Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 ```  
   
 ##  <a name="swap"></a>  swap  
- Le premier remplacement échange les valeurs de deux objets. Le deuxième remplacement échange les valeurs de deux tableaux d’objets.  
+ The first override exchanges the values of two objects. The second override exchanges the values between two arrays of objects.  
   
 ```  
 template<class Type>  
@@ -7773,17 +7790,17 @@ template<class Type, size_t N>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `left`  
- Pour le premier remplacement, premier objet dont le contenu est échangé. Pour le deuxième remplacement, premier tableau d’objets dont le contenu est échangé.  
+ For the first override, the first object to have its contents exchanged. For the second override, the first array of objects to have its contents exchanged.  
   
  `right`  
- Pour le premier remplacement, deuxième objet dont le contenu est échangé. Pour le deuxième remplacement, deuxième tableau d’objets dont le contenu est échangé.  
+ For the first override, the second object to have its contents exchanged. For the second override, the second array of objects to have its contents exchanged.  
   
-### <a name="remarks"></a>Notes  
- La première surcharge est conçue pour traiter des objets individuels. La deuxième surcharge échange le contenu des objets entre deux tableaux.  
+### <a name="remarks"></a>Remarks  
+ The first overload is designed to operate on individual objects. The second overload swaps the contents of objects between two arrays.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_swap.cpp  
@@ -7840,7 +7857,7 @@ Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).
 ```  
   
 ##  <a name="swap_ranges"></a>  swap_ranges  
- Échange les éléments d'une plage avec ceux d'une autre plage de taille égale.  
+ Exchanges the elements of one range with the elements of another, equal sized range.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -7851,25 +7868,25 @@ ForwardIterator2 swap_ranges(
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Itérateur vers l’avant pointant sur la première position de la première plage dont les éléments doivent être échangés.  
+ A forward iterator pointing to the first position of the first range whose elements are to be exchanged.  
   
  `last1`  
- Itérateur vers l’avant pointant juste après la dernière position de la première plage dont les éléments doivent être échangés.  
+ A forward iterator pointing to one past the final position of the first range whose elements are to be exchanged.  
   
   `first2`  
- Itérateur vers l’avant pointant sur la première position de la deuxième plage dont les éléments doivent être échangés.  
+ A forward iterator pointing to the first position of the second range whose elements are to be exchanged.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur vers l’avant pointant juste après la dernière position de la deuxième plage dont les éléments doivent être échangés.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator pointing to one past the final position of the second range whose elements are to be exchanged.  
   
-### <a name="remarks"></a>Notes  
- Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position est accessible à partir de la première par incrémentation. La deuxième plage doit être aussi grande que la première.  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation. The second range has to be as large as the first range.  
   
- La complexité est linéaire avec `last1`  -   `first1` les permutations. Si les éléments des conteneurs du même type sont échangés, la fonction membre `swap` de ce conteneur doit être utilisée, car la fonction membre a généralement une complexité constante.  
+ The complexity is linear with `last1` -  `first1` swaps performed. If elements from containers of the same type are being swapped, them the `swap` member function from that container should be used, because the member function typically has constant complexity.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_swap_ranges.cpp  
@@ -7931,7 +7948,7 @@ After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```  
   
 ##  <a name="transform"></a>  transform  
- Applique un objet de fonction spécifié à chaque élément d'une plage source ou à une paire d'éléments de deux plages sources, et copie les valeurs de retour de l'objet de fonction dans une plage de destination.  
+ Applies a specified function object to each element in a source range or to a pair of elements from two source ranges and copies the return values of the function object into a destination range.  
   
 ```  
  template<class InputIterator, class OutputIterator, class UnaryFunction>  
@@ -7951,33 +7968,33 @@ OutputIterator transform(
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first1`  
- Itérateur d’entrée ciblant la position du premier élément de la première plage source à traiter.  
+ An input iterator addressing the position of the first element in the first source range to be operated on.  
   
  `last1`  
- Itérateur d’entrée ciblant la position juste après le dernier élément de la première plage source à traiter.  
+ An input iterator addressing the position one past the final element in the first source range operated on.  
   
   `first2`  
- Itérateur d'entrée qui traite la position du premier élément de la seconde plage source à traiter.  
+ An input iterator addressing the position of the first element in the second source range to be operated on.  
   
  `result`  
- Itérateur de sortie qui traite la position du premier élément dans la plage de destination.  
+ An output iterator addressing the position of the first element in the destination range.  
   
  `_Func`  
- Objet de fonction unaire défini par l’utilisateur utilisé dans la première version de l’algorithme appliqué à chaque élément de la première plage source, ou objet de fonction binaire défini par l’utilisateur utilisé dans la deuxième version de l’algorithme appliqué par paire, dans un ordre vers l’avant, aux deux plages sources.  
+ User-defined unary function object used in the first version of the algorithm that is applied to each element in the first source range or A user-defined (UD) binary function object used in the second version of the algorithm that is applied pairwise, in a forward order, to the two source ranges.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie qui traite la position située immédiatement après le dernier élément de la plage de destination qui reçoit les éléments de sortie transformés par l'objet de fonction.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the final element in the destination range that is receiving the output elements transformed by the function object.  
   
-### <a name="remarks"></a>Notes  
- Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position doit être accessible à partir de la première par incrémentation. La plage de destination doit être suffisamment grande pour contenir la plage source transformée.  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation. The destination range must be large enough to contain the transformed source range.  
   
- Si `result` a la valeur `first1` dans la première version de l’algorithme, puis les plages source et de destination doit être le même et la séquence sera modifiée en place. Mais le `result` ne peut pas adresser une position dans la plage [`first1` + 1, `last1`).  
+ If `result` is set equal to  `first1` in the first version of the algorithm, then the source and destination ranges will be the same and the sequence will be modified in place. But the `result` may not address a position within the range [`first1` + 1, `last1`).  
   
- La complexité est linéaire au maximum (`last1` -  `first1`) les comparaisons.  
+ The complexity is linear with at most (`last1` -  `first1`) comparisons.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_transform.cpp  
@@ -8065,7 +8082,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 ```  
   
 ##  <a name="unique"></a>  unique  
- Supprime les éléments en double adjacents dans une plage spécifiée.  
+ Removes duplicate elements that are adjacent to each other in a specified range.  
   
 ```  
 template<class ForwardIterator>  
@@ -8081,33 +8098,33 @@ template<class ForwardIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle rechercher des doublons à supprimer.  
+ A forward iterator addressing the position of the first element in the range to be scanned for duplicate removal.  
   
  `last`  
- Itérateur vers l’avant ciblant la position juste après le dernier élément de la plage dans laquelle rechercher des doublons à supprimer.  
+ A forward iterator addressing the position one past the final element in the range to be scanned for duplicate removal.  
   
  `comp`  
- Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur vers l’avant à la fin de la séquence modifiée qui ne contient aucun doublon consécutif, ciblant la position juste après le dernier élément non supprimé.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator to the new end of the modified sequence that contains no consecutive duplicates, addressing the position one past the last element not removed.  
   
-### <a name="remarks"></a>Notes  
- Les deux formes de l’algorithme suppriment le deuxième doublon d’une paire consécutive d’éléments égaux.  
+### <a name="remarks"></a>Remarks  
+ Both forms of the algorithm remove the second duplicate of a consecutive pair of equal elements.  
   
- Le fonctionnement de l’algorithme est stable pour ne pas modifier l’ordre relatif des éléments rétablis.  
+ The operation of the algorithm is stable so that the relative order of the undeleted elements is not changed.  
   
- La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation. Le nombre d’éléments de la séquence n’est pas modifié par l’algorithme **unique** et les éléments situés après la fin de la séquence modifiée peuvent être déréférencés, mais ne sont pas spécifiés.  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation. he number of elements in the sequence is not changed by the algorithm **unique** and the elements beyond the end of the modified sequence are dereferenceable but not specified.  
   
- La complexité est linéaire, nécessitant ( `last`  -   `first`) - 1 comparaisons.  
+ The complexity is linear, requiring ( `last` -  `first`) - 1 comparisons.  
   
- La classe list fournit une fonction membre « unique » plus efficace qui peut donner de meilleurs résultats.  
+ List provides a more efficient member function "unique", which may perform better.  
   
- Ces algorithmes ne peuvent pas être utilisés sur un conteneur associatif.  
+ These algorithms cannot be used on an associative container.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_unique.cpp  
@@ -8195,7 +8212,7 @@ Removing adjacent elements satisfying the binary
 ```  
   
 ##  <a name="unique_copy"></a>  unique_copy  
- Copie les éléments d'une plage source dans une plage de destination, à l'exception des éléments en double adjacents.  
+ Copies elements from a source range into a destination range except for the duplicate elements that are adjacent to each other.  
   
 ```  
  template<class InputIterator, class OutputIterator>  
@@ -8211,32 +8228,32 @@ OutputIterator unique_copy( InputIterator first,
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   `first`  
- Itérateur vers l’avant ciblant la position du premier élément de la plage source à copier.  
+ A forward iterator addressing the position of the first element in the source range to be copied.  
   
  `last`  
- Itérateur vers l’avant ciblant la position située de suite après le dernier élément de la plage source à copier.  
+ A forward iterator addressing the position one past the final element in the source range to be copied.  
   
  `result`  
- Itérateur de sortie ciblant la position du premier élément dans la plage de destination recevant la copie avec suppression des doublons consécutifs.  
+ An output iterator addressing the position of the first element in the destination range that is receiving the copy with consecutive duplicates removed.  
   
  `comp`  
- Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur de sortie ciblant la position située de suite après le dernier élément dans la plage de destination recevant la copie avec suppression des doublons consécutifs.  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the final element in the destination range that is receiving the copy with consecutive duplicates removed.  
   
-### <a name="remarks"></a>Notes  
- Les deux formes de l’algorithme suppriment le deuxième doublon d’une paire consécutive d’éléments égaux.  
+### <a name="remarks"></a>Remarks  
+ Both forms of the algorithm remove the second duplicate of a consecutive pair of equal elements.  
   
- Le fonctionnement de l’algorithme est stable pour ne pas modifier l’ordre relatif des éléments rétablis.  
+ The operation of the algorithm is stable so that the relative order of the undeleted elements is not changed.  
   
- Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans une séquence, la dernière position est accessible depuis la première au moyen d’une incrémentation.  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within a sequence the last position is reachable from the first by incrementation.  
   
- La complexité est linéaire, nécessitant ( `last`  -   `first`) les comparaisons.  
+ The complexity is linear, requiring ( `last` -  `first`) comparisons.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_unique_copy.cpp  
@@ -8309,7 +8326,7 @@ int main() {
 ```  
   
 ##  <a name="upper_bound"></a>  upper_bound  
- Recherche la position du premier élément d’une plage triée dont la valeur est supérieure à une valeur spécifiée. Le critère de tri peut être spécifié par un prédicat binaire.  
+ Finds the position of the first element in an ordered range that has a value that is greater than a specified value, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -8327,34 +8344,34 @@ template<class ForwardIterator, class Type, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `first`  
- Position du premier élément de la plage dans laquelle effectuer la recherche.  
+ The position of the first element in the range to be searched.  
   
  `last`  
- Position juste après le dernier élément de la plage dans laquelle effectuer la recherche.  
+ The position one past the final element in the range to be searched.  
   
  `value`  
- Valeur dans la plage ordonnée qui doit être dépassée par la valeur de l’élément ciblé par l’itérateur retourné.  
+ The value in the ordered range that needs to be exceeded by the value of the element addressed by the iterator returned.  
   
  `comp`  
- Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur vers l’avant ciblant la position du premier élément ayant une valeur supérieure à une valeur spécifiée.  
+### <a name="return-value"></a>Return Value  
+ A forward iterator to the position of the first element that has a value greater than a specified value.  
   
-### <a name="remarks"></a>Notes  
- Le plage source triée référencée doit être valide ; tous les itérateurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position doit être accessible à partir de la première par incrémentation.  
+### <a name="remarks"></a>Remarks  
+ The sorted source range referenced must be valid; all iterators must be dereferenceable and within the sequence the last position must be reachable from the first by incrementation.  
   
- Une plage triée est une condition préalable à l’utilisation de `upper_bound` et son critère d’ordre est identique à celui spécifié par le prédicat binaire.  
+ A sorted range is a precondition of the use of `upper_bound` and where the ordering criterion is the same as specified by the binary predicate.  
   
- La plage n’est pas modifiée par l’algorithme `upper_bound`.  
+ The range is not modified by `upper_bound`.  
   
- Les types valeur des itérateurs vers l’avant doivent être comparables en termes d’infériorité pour être ordonnés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. De cette façon, les éléments non équivalents sont ordonnés  
+ The value types of the forward iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements  
   
- La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec un nombre d’étapes proportionnel à (`last - first`).  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last - first`).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_upper_bound.cpp  
@@ -8444,5 +8461,5 @@ int main( )
 }  
   
 ```  
-## <a name="see-also"></a>Voir aussi   
+## <a name="see-also"></a>See Also   
  [\<algorithm>](../standard-library/algorithm.md)

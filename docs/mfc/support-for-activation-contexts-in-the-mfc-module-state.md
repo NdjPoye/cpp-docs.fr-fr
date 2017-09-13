@@ -1,29 +1,46 @@
 ---
-title: "Prise en charge des contextes d&#39;activation dans l&#39;&#233;tat du module MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contextes d'activation (C++)"
-  - "contextes d'activation (C++), prise en charge des MFC"
+title: Support for Activation Contexts in the MFC Module State | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- activation contexts [MFC]
+- activation contexts [MFC], MFC support
 ms.assetid: 1e49eea9-3620-46dd-bc5f-d664749567c7
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Prise en charge des contextes d&#39;activation dans l&#39;&#233;tat du module MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8a269fcc1100df489ffc4c3eaf84c4950cc293f9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-MFC crée un contexte d'activation en utilisant une ressource manifeste spécifiée par le module utilisateur.  Pour plus d'informations sur la façon dont les contextes d'activation sont créés, consultez les rubriques suivantes :  
+---
+# <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>Support for Activation Contexts in the MFC Module State
+MFC creates an activation context using a manifest resource provided by the user module. For more information on how activation contexts are created, see the following topics:  
   
 -   [Activation Contexts](http://msdn.microsoft.com/library/aa374153)  
   
@@ -31,27 +48,29 @@ MFC crée un contexte d'activation en utilisant une ressource manifeste spécifi
   
 -   [Assembly Manifests](http://msdn.microsoft.com/library/aa374219)  
   
-## Remarques  
- En lisant les rubriques [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)], notez que le mécanisme de contexte d'activation de MFC ressemble au contexte d'activation de [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] sauf que MFC n'utilise pas l'API de contexte d'activation de [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+## <a name="remarks"></a>Remarks  
+ When reading these Windows SDK topics, note that the MFC activation context mechanism resembles the Windows SDK activation context except that MFC does not use the Windows SDK Activation Context API.  
   
- Le contexte d'activation s'exécute dans des applications MFC, des DLL d'utilisateur, et des DLL d'extension des manières suivantes :  
+ Activation context works in MFC applications, user DLLs, and MFC extension DLLs in the following ways:  
   
--   Les applications MFC utilisent l'ID de ressource 1 pour leur ressource manifeste.  Dans ce cas, le MFC ne crée pas son propre contexte d'activation, mais utilise le contexte d'application par défaut.  
+-   MFC applications use resource ID 1 for their manifest resource. In this case, the MFC does not create its own activation context, but uses the default application context.  
   
--   Les DLL MFC utilisent l'ID de ressource 2 comme ressource de manifeste.  Ici, MFC crée un contexte d'activation pour chaque DLL utilisateur, de sorte que les DLL utilisateur peuvent utiliser des versions différentes des mêmes bibliothèques \(par exemple, la bibliothèque de contrôles communs\).  
+-   MFC user DLLs use resource ID 2 for their manifest resource. Here, MFC creates an activation context for each User DLL, so different user DLLs can use different versions of the same libraries (for example, the Common Controls library).  
   
--   Les DLL d'extension de MFC reposent sur leurs applications d'hébergement ou DLL utilisateur pour générer leur contexte d'activation.  
+-   MFC extension DLLs rely on their hosting applications or user DLLs to establish their activation context.  
   
- Bien que l'état de contexte d'activation peut être modifié à l'aide de les processus décrits dans [Using the Activation Context API](http://msdn.microsoft.com/library/aa376620), l'utilisation du mécanisme de contexte d'activation de MFC peut être utile lors du développement des architectures de plug\-in basés sur des DLL de où il n'est pas simple \(ou impossible\) de basculer manuellement l'état d'activation avant et après les appels individuels aux connexions externes.  
+ Although the activation context state can be modified using the processes described under [Using the Activation Context API](http://msdn.microsoft.com/library/aa376620), using the MFC activation context mechanism can be useful when developing DLL-based plug-in architectures where it is not easy (or not possible) to manually switch activation state before and after individual calls to external plug-ins.  
   
- Le contexte d'activation est créé dans [AfxWinInit](../Topic/AfxWinInit.md).  Il est détruit dans le destructeur `AFX_MODULE_STATE`.  Un descripteur de contexte d'activation est conservé dans `AFX_MODULE_STATE`. \(`AFX_MODULE_STATE` est décrit dans [AfxGetStaticModuleState](../Topic/AfxGetStaticModuleState.md).\)  
+ The activation context is created in [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit). It is destroyed in the `AFX_MODULE_STATE` destructor. An activation context handle is kept in `AFX_MODULE_STATE`. (`AFX_MODULE_STATE` is described in [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate).)  
   
- La macro [AFX\_MANAGE\_STATE](../Topic/AFX_MANAGE_STATE.md) active ou désactive le contexte d'activation.  `AFX_MANAGE_STATE` est activé pour les bibliothèques MFC statiques, ainsi que les DLL MFC, pour permettre au code de MFC de s'exécuter dans le contexte d'activation approprié sélectionné par la DLL utilisateur.  
+ The [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) macro activates and deactivates the activation context. `AFX_MANAGE_STATE` is enabled for static MFC libraries, as well as MFC DLLs, to allow MFC code to execute in the proper activation context selected by the User DLL.  
   
-## Voir aussi  
+## <a name="see-also"></a>See Also  
  [Activation Contexts](http://msdn.microsoft.com/library/aa374153)   
  [Application Manifests](http://msdn.microsoft.com/library/aa374191)   
  [Assembly Manifests](http://msdn.microsoft.com/library/aa374219)   
- [AfxWinInit](../Topic/AfxWinInit.md)   
- [AfxGetStaticModuleState](../Topic/AfxGetStaticModuleState.md)   
- [AFX\_MANAGE\_STATE](../Topic/AFX_MANAGE_STATE.md)
+ [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit)   
+ [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate)   
+ [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)
+
+

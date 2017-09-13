@@ -1,5 +1,5 @@
 ---
-title: max_none, classe | Microsoft Docs
+title: max_none Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,8 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- max_none
-- stdext::max_none
 - allocators/stdext::max_none
 - allocators/stdext::max_none::allocated
 - allocators/stdext::max_none::deallocated
@@ -20,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- max_none class
+- stdext::max_none
+- stdext::max_none [C++], allocated
+- stdext::max_none [C++], deallocated
+- stdext::max_none [C++], full
+- stdext::max_none [C++], released
+- stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
 caps.latest.revision: 19
 author: corob-msft
@@ -40,110 +43,110 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a8d3380f89f3bd25be0c23e719dfa94df5539ae4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2ecc4f3e90e9749e109f48577f4ff8e64e055718
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="maxnone-class"></a>max_none, classe
-Décrit un objet de [classe max](../standard-library/allocators-header.md) qui limite un objet [freelist](../standard-library/freelist-class.md) à une longueur maximale de zéro.  
+# <a name="maxnone-class"></a>max_none Class
+Describes a [max class](../standard-library/allocators-header.md) object that limits a [freelist](../standard-library/freelist-class.md) object to a maximum length of zero.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <std::size_t Max>  
 class max_none
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Max`|Classe maximale qui détermine le nombre maximal d’éléments à stocker dans la `freelist`.|  
+|`Max`|The max class that determines the maximum number of elements to store in the `freelist`.|  
   
-### <a name="member-functions"></a>Fonctions membres  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[allocated](#allocated)|Incrémente le nombre de blocs de mémoire alloués.|  
-|[deallocated](#deallocated)|Décrémente le nombre de blocs de mémoire alloués.|  
-|[full](#full)|Retourne une valeur qui indique si davantage de blocs de mémoire doivent être ajoutés à la liste libre.|  
-|[released](#released)|Décrémente le nombre de blocs de mémoire dans la liste libre.|  
-|[saved](#saved)|Incrémente le nombre de blocs de mémoire dans la liste libre.|  
+|[allocated](#allocated)|Increments the count of allocated memory blocks.|  
+|[deallocated](#deallocated)|Decrements the count of allocated memory blocks.|  
+|[full](#full)|Returns a value that specifies whether more memory blocks should be added to the free list.|  
+|[released](#released)|Decrements the count of memory blocks on the free list.|  
+|[saved](#saved)|Increments the count of memory blocks on the free list.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<allocators>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
   
- **Espace de noms :** stdext  
+ **Namespace:** stdext  
   
 ##  <a name="allocated"></a>  max_none::allocated  
- Incrémente le nombre de blocs de mémoire alloués.  
+ Increments the count of allocated memory blocks.  
   
 ```
 void allocated(std::size_t _Nx = 1);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Nx`|Valeur d’incrément.|  
+|`_Nx`|The increment value.|  
   
-### <a name="remarks"></a>Notes  
- Cette fonction membre ne fait rien. Elle est appelée après chaque appel réussi par `cache_freelist::allocate` à l’opérateur `new`. L’argument `_Nx` est le nombre de blocs de mémoire dans le bloc alloués par l’opérateur `new`.  
+### <a name="remarks"></a>Remarks  
+ This member function does nothing. It is called after each successful call by `cache_freelist::allocate` to operator `new`. The argument `_Nx` is the number of memory blocks in the chunk allocated by operator `new`.  
   
 ##  <a name="deallocated"></a>  max_none::deallocated  
- Décrémente le nombre de blocs de mémoire alloués.  
+ Decrements the count of allocated memory blocks.  
   
 ```
 void deallocated(std::size_t _Nx = 1);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Nx`|Valeur d’incrément.|  
+|`_Nx`|The increment value.|  
   
-### <a name="remarks"></a>Notes  
- La fonction membre ne fait rien. Cette fonction membre est appelée après chaque appel par `cache_freelist::deallocate` à l’opérateur `delete`. L’argument `_Nx` est le nombre de blocs de mémoire dans le bloc libérés par l’opérateur `delete`.  
+### <a name="remarks"></a>Remarks  
+ The member function does nothing. This member function is called after each call by `cache_freelist::deallocate` to operator `delete`. The argument `_Nx` is the number of memory blocks in the chunk deallocated by operator `delete`.  
   
 ##  <a name="full"></a>  max_none::full  
- Retourne une valeur qui indique si davantage de blocs de mémoire doivent être ajoutés à la liste libre.  
+ Returns a value that specifies whether more memory blocks should be added to the free list.  
   
 ```
 bool full();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Cette fonction membre retourne toujours `true`.  
+### <a name="return-value"></a>Return Value  
+ This member function always returns `true`.  
   
-### <a name="remarks"></a>Notes  
- Cette fonction membre est appelée par `cache_freelist::deallocate`. Si l’appel retourne `true`, `deallocate` place le bloc de mémoire dans la liste libre ; s’il retourne false, `deallocate` appelle l’opérateur `delete` pour libérer le bloc.  
+### <a name="remarks"></a>Remarks  
+ This member function is called by `cache_freelist::deallocate`. If the call returns `true`, `deallocate` puts the memory block on the free list; if it returns false, `deallocate` calls operator `delete` to deallocate the block.  
   
 ##  <a name="released"></a>  max_none::released  
- Décrémente le nombre de blocs de mémoire dans la liste libre.  
+ Decrements the count of memory blocks on the free list.  
   
 ```
 void released();
 ```  
   
-### <a name="remarks"></a>Notes  
- Cette fonction membre ne fait rien. La fonction membre `released` de la classe max actuelle est appelée par `cache_freelist::allocate` chaque fois qu’elle supprime un bloc de mémoire de la liste libre.  
+### <a name="remarks"></a>Remarks  
+ This member function does nothing. The `released` member function of the current max class is called by `cache_freelist::allocate` whenever it removes a memory block from the free list.  
   
 ##  <a name="saved"></a>  max_none::saved  
- Incrémente le nombre de blocs de mémoire dans la liste libre.  
+ Increments the count of memory blocks on the free list.  
   
 ```
 void saved();
 ```  
   
-### <a name="remarks"></a>Notes  
- Cette fonction membre ne fait rien. Elle est appelée par `cache_freelist::deallocate` chaque fois qu’elle place un bloc de mémoire dans la liste libre.  
+### <a name="remarks"></a>Remarks  
+ This member function does nothing. It is called by `cache_freelist::deallocate` whenever it puts a memory block on the free list.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

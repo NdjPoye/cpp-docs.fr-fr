@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<strstream>
-- std::<strstream>
-- <strstream>
+- std::<strstream>", "<strstream>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,44 +33,44 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 665d71e2c5966dd04cd72d7b2ad24c9f32fde206
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: dfd5120f518a1de5bc035537d99dfa725686be1b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
-Définit plusieurs classes qui prennent en charge les opérations iostreams sur les séquences stockées dans un tableau d'objets `char` alloué. Ces séquences sont facilement converties vers et à partir de chaînes C.  
+Defines several classes that support iostreams operations on sequences stored in an allocated array of `char` object. Such sequences are easily converted to and from C strings.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <strstream>  
   
 ```  
   
-## <a name="remarks"></a>Notes  
- Les objets de type `strstream` fonctionnent avec `char` *, qui sont des chaînes C. Utilisez [\<sstream>](../standard-library/sstream.md) pour les objets de type [basic_string](../standard-library/basic-string-class.md).  
+## <a name="remarks"></a>Remarks  
+ Objects of type `strstream` work with `char` *, which are C strings. Use [\<sstream>](../standard-library/sstream.md) to work with objects of type [basic_string](../standard-library/basic-string-class.md).  
   
 > [!NOTE]
->  Les classes dans `<strstream>` sont dépréciées. Utilisez plutôt les classes dans `<sstream>`.  
+>  The classes in `<strstream>` are deprecated. Consider using the classes in `<sstream>` instead.  
   
 ### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[strstreambuf, classe](../standard-library/strstreambuf-class.md)|Cette classe décrit une mémoire tampon de flux qui contrôle la transmission d'éléments vers et à partir d'une séquence d'éléments stockée dans un objet de tableau `char`.|  
-|[istrstream, classe](../standard-library/istrstream-class.md)|La classe décrit un objet qui contrôle l’extraction d’éléments et d’objets encodés à partir d’une mémoire tampon de flux de classe [strstreambuf](../standard-library/strstreambuf-class.md).|  
-|[ostrstream, classe](../standard-library/ostrstream-class.md)|La classe décrit un objet qui contrôle l’insertion d’éléments et d’objets encodés dans une mémoire tampon de flux de classe [strstreambuf](../standard-library/strstreambuf-class.md).|  
-|[strstream, classe](../standard-library/strstream-class.md)|La classe décrit un objet qui contrôle l’insertion et l’extraction d’éléments et d’objets encodés à l’aide d’une mémoire tampon de flux de classe [strstreambuf](../standard-library/strstreambuf-class.md).|  
+|[strstreambuf Class](../standard-library/strstreambuf-class.md)|The class describes a stream buffer that controls the transmission of elements to and from a sequence of elements stored in a `char` array object.|  
+|[istrstream Class](../standard-library/istrstream-class.md)|The class describes an object that controls extraction of elements and encoded objects from a stream buffer of class [strstreambuf](../standard-library/strstreambuf-class.md).|  
+|[ostrstream Class](../standard-library/ostrstream-class.md)|The class describes an object that controls insertion of elements and encoded objects into a stream buffer of class [strstreambuf](../standard-library/strstreambuf-class.md).|  
+|[strstream Class](../standard-library/strstream-class.md)|The class describes an object that controls insertion and extraction of elements and encoded objects using a stream buffer of class [strstreambuf](../standard-library/strstreambuf-class.md).|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<strstream>](../standard-library/strstream.md)   
- [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream, programmation](../standard-library/iostream-programming.md)   
- [iostreams, conventions](../standard-library/iostreams-conventions.md)
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
 

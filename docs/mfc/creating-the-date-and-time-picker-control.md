@@ -1,48 +1,67 @@
 ---
-title: "Cr&#233;ation du contr&#244;le de s&#233;lecteur de date et heure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDateTimeCtrl (classe), créer"
-  - "DateTimePicker (contrôle) (MFC), créer"
+title: Creating the Date and Time Picker Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DateTimePicker control [MFC], creating
+- CDateTimeCtrl class [MFC], creating
 ms.assetid: 764ec2fb-98cd-478b-a5f2-d63f0bb12279
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Cr&#233;ation du contr&#244;le de s&#233;lecteur de date et heure
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 03f5f3b6e4941976d8eb9bfe21e5fcd2fc6723e0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Comment le contrôle Date Time Picker est dépend de si vous utilisez le contrôle dans une boîte de dialogue ou le créez dans une fenêtre sans boîte de dialogue.  
+---
+# <a name="creating-the-date-and-time-picker-control"></a>Creating the Date and Time Picker Control
+How the date and time picker control is created depends on whether you are using the control in a dialog box or creating it in a nondialog window.  
   
-### Pour utiliser CDateTimeCtrl directement dans une boîte de dialogue  
+### <a name="to-use-cdatetimectrl-directly-in-a-dialog-box"></a>To use CDateTimeCtrl directly in a dialog box  
   
-1.  Dans l'éditeur de boîtes de dialogue, ajoutez un contrôle Date Time Picker à la ressource de modèle de boîte de dialogue.  Spécifiez son ID de contrôle  
+1.  In the dialog editor, add a Date and Time Picker Control to your dialog template resource. Specify its control ID.  
   
-2.  Spécifiez tous les styles requis, à l'aide de la boîte de dialogue Propriétés du contrôle Date Time Picker.  
+2.  Specify any styles required, using the Properties dialog box of the date and time picker control.  
   
-3.  Utilisez [Assistant d'Ajout de variable membre](../ide/adding-a-member-variable-visual-cpp.md) pour ajouter une variable membre de type [CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md) à la propriété de contrôle.  Vous pouvez utiliser ce membre pour appeler des méthodes `CDateTimeCtrl`.  
+3.  Use the [Add Member Variable Wizard](../ide/adding-a-member-variable-visual-cpp.md) to add a member variable of type [CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md) with the Control property. You can use this member to call `CDateTimeCtrl` member functions.  
   
-4.  Utilisez la fenêtre Propriétés pour mapper les fonctions de handler dans la classe de la boîte de dialogue pour tous les messages de notification de contrôle dedate time picker control [notification](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md) que vous devez traiter \(voir [Mapper des messages aux fonctions](../mfc/reference/mapping-messages-to-functions.md)\).  
+4.  Use the Properties window to map handler functions in the dialog class for any date time picker control [notification](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md) messages you need to handle (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)).  
   
-5.  Dans [OnInitDialog](../Topic/CDialog::OnInitDialog.md), définissez les styles supplémentaires pour l'objet `CDateTimeCtrl`.  
+5.  In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), set any additional styles for the `CDateTimeCtrl` object.  
   
-### Pour utiliser CDateTimeCtrl dans une fenêtre boîte sans dialogue.  
+### <a name="to-use-cdatetimectrl-in-a-nondialog-window"></a>To use CDateTimeCtrl in a nondialog window  
   
-1.  Déclarez le contrôle d'une classe vue ou fenêtre.  
+1.  Declare the control in the view or window class.  
   
-2.  Appelez la méthode [Create](../Topic/CTabCtrl::Create.md) du contrôle, éventuellement dans [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md), éventuellement dans la fonction gestionnaire [OnCreate](../Topic/CWnd::OnCreate.md) de la fenêtre parente \(si vous sous\-classez le contrôle\).  Définissez les styles pour le contrôle.  
+2.  Call the control's [Create](../mfc/reference/ctabctrl-class.md#create) member function, possibly in [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), possibly as early as the parent window's [OnCreate](../mfc/reference/cwnd-class.md#oncreate) handler function (if you're subclassing the control). Set the styles for the control.  
   
-## Voir aussi  
- [Utilisation de CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

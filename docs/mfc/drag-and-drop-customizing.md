@@ -1,46 +1,64 @@
 ---
-title: "Glisser-d&#233;placer&#160;: personnalisation | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "glisser-déplacer, appeler DoDragDrop"
-  - "glisser-déplacer, COleDataSource (objet)"
-  - "glisser-déplacer, personnaliser le comportement"
-  - "glisser-déplacer, implémentation dans des application autres que OLE"
-  - "OLE (glisser-déplacer), personnaliser le comportement"
+title: 'Drag and Drop: Customizing | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- drag and drop [MFC], implementing in non-OLE applications
+- drag and drop [MFC], customizing behavior
+- drag and  [MFC], COleDataSource object
+- drag and drop [MFC], calling DoDragDrop
+- OLE drag and drop [MFC], customizing behavior
 ms.assetid: 03369d3e-46bf-4140-b58c-d0c9657cf38a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Glisser-d&#233;placer&#160;: personnalisation
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bdfdc32dc8f9b97becf8fd1189123b19d483c30b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-L'implémentation par défaut de la fonctionnalité glisser\-déplacer est suffisante pour la plupart des applications.  Toutefois, certaines applications peuvent exiger que ce comportement standard soit modifié.  Cet article décrit les étapes nécessaires pour modifier ces valeurs par défaut.  En outre, utilisez cette technique pour générer des applications qui ne prennent pas en charge les documents composés comme sources de suppression.  
+---
+# <a name="drag-and-drop-customizing"></a>Drag and Drop: Customizing
+The default implementation of the drag-and-drop feature is sufficient for most applications. However, some applications may require that this standard behavior be changed. This article explains the steps necessary to change these defaults. In addition, you can use this technique to establish applications that do not support compound documents as drop sources.  
   
- Si vous personnalisez le comportement standard de glissement OLE, ou si vous possédez une application non OLE, vous devez créer un objet `COleDataSource` pour contenir les données.  Lorsque l'utilisateur lance une opération de glisser\-déplacer, votre code doit appeler la fonction `DoDragDrop` de cet objet au lieu d'autres classes qui prennent en charge les opérations de glisser\-déplacer.  
+ If you are customizing standard OLE drag-and-drop behavior, or you have a non-OLE application, you must create a `COleDataSource` object to contain the data. When the user starts a drag-and-drop operation, your code should call the `DoDragDrop` function from this object instead of from other classes that support drag-and-drop operations.  
   
- Éventuellement, vous pouvez créer un objet `COleDropSource` pour contrôler le déplacement et pour remplacer certaines de ses fonctions selon le type de comportement que vous souhaitez modifier.  Cet objet de source de suppression est ensuite transmis à `COleDataSource::DoDragDrop` pour modifier le comportement par défaut de ces fonctions.  Ces différentes options permettent une grande souplesse dans la façon dont vous prenez en charge les opérations de glisser\-déplacer dans votre application.  Pour plus d'informations sur les sources de données, consultez l'article [Objets de données et sources de données \(OLE\)](../mfc/data-objects-and-data-sources-ole.md).  
+ Optionally, you can create a `COleDropSource` object to control the drop and override some of its functions depending on the type of behavior you want to change. This drop-source object is then passed to `COleDataSource::DoDragDrop` to change the default behavior of these functions. These different options allow a great deal of flexibility in how you support drag-and-drop operations in your application. For more information about data sources, see the article [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md).  
   
- Vous pouvez remplacer les fonctions suivantes pour personnaliser les opérations de glisser\-déplacer :  
+ You can override the following functions to customize drag-and-drop operations:  
   
-|Substitution|Pour personnaliser|  
-|------------------|------------------------|  
-|`OnBeginDrag`|Comment la glisse est initialisée après avoir appelé `DoDragDrop`.|  
-|`GiveFeedback`|Commentaires visuel, telles que l'apparence de curseur, pour différents résultats de suppression.|  
-|`QueryContinueDrag`|L'arrêt d'une opération de glisser\-déplacer.  Cette fonction vous permet de vérifier des états de clé de modification pendant l'opération de glissement.|  
+|Override|To customize|  
+|--------------|------------------|  
+|`OnBeginDrag`|How dragging is initiated after you call `DoDragDrop`.|  
+|`GiveFeedback`|Visual feedback, such as cursor appearance, for different drop results.|  
+|`QueryContinueDrag`|The termination of a drag-and-drop operation. This function enables you to check modifier key states during the drag operation.|  
   
-## Voir aussi  
- [Glisser\-déplacer \(OLE\)](../mfc/drag-and-drop-ole.md)   
+## <a name="see-also"></a>See Also  
+ [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md)   
  [COleDropSource Class](../mfc/reference/coledropsource-class.md)   
  [COleDataSource Class](../mfc/reference/coledatasource-class.md)
+

@@ -1,34 +1,51 @@
 ---
-title: "Que fournit l&#39;automation &#224; distance&#160;? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Automation à distance, DCOM"
+title: What Does Remote Automation Provide? | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
 ms.assetid: 269ad218-e164-40ef-9b87-25fcc8ba21de
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Que fournit l&#39;automation &#224; distance&#160;?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 48da6339cea7c8a39d93641fa5c5a59d0a63e207
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-L'automatisation à distance permet aux programmes d'invoquer les implémentations d' `IDispatch` sur un ordinateur à partir d'un autre.  Il prend également en charge d'autres interfaces nécessaires à l'automatisation, notamment **IEnumVARIANT** pour la prise en charge de la collection.  Elle ne fournit pas la possibilité de ne distribuer aucune autre interface COM \(sauf **IUnknown**naturellement\) et, comme l'automation standard, il contient la prise en charge de marshaling uniquement pour les types de données pris en charge par automation.  
+---
+# <a name="what-does-remote-automation-provide"></a>What Does Remote Automation Provide?
+Remote Automation allows programs to invoke `IDispatch` implementations on one machine from another. It also supports other interfaces required by Automation, specifically **IEnumVARIANT** for collection support. It does not provide the ability to distribute any other COM interface (except **IUnknown**, of course) and, like regular Automation, it contains marshaling support only for those data types supported by Automation.  
   
- Cet ensemble de fonctionnalités permet à un programme d'accéder aux méthodes et propriétés, y compris celles qui retournent des collections ou des objets d'automation ultérieurs, d'un objet s'exécutant sur un nœud de réseau accessible.  Si l'ordinateur client exécute également le logiciel approprié, il est possible pour le serveur de rappeler le client, à nouveau à l'aide de les fonctionnalités d'automation \(ceci fonctionne pour les clients 32 bits et 64 bits uniquement, et est conceptuellement semblable aux événements, bien qu'il n'utilise pas le même mécanisme\).  
+ This set of facilities allows a program to access the methods and properties, including those that return collections or further automation objects, of an object running on an accessible network node. If the client machine is also running the appropriate software, it is possible for the server to call back to the client, again using Automation facilities (this works for 32-bit and 64-bit clients only, and is conceptually similar to events, although it does not use the same mechanism).  
   
- Pour qu'une application soit fonctionnelle comme serveur d'automation à distance, elle doit être implémentée comme un fichier exécutable \(autrement dit, comme « serveur local » et non comme « serveur inproc »\).  
+ For an application to be operable as a Remote Automation server, it must be implemented as an executable (that is, as a "local server" rather than as an "inproc server").  
   
-## Voir aussi  
- [Quand l'automation à distance convient\-elle ?](../mfc/where-does-remote-automation-fit-in-q.md)   
- [Historique de DCOM](../mfc/history-of-dcom.md)
+## <a name="see-also"></a>See Also  
+ [Where Does Remote Automation Fit In](where-does-remote-automation-fit-in-q.md)   
+ [History of DCOM](../mfc/history-of-dcom.md)
+

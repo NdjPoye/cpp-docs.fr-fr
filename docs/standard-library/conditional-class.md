@@ -1,5 +1,5 @@
 ---
-title: conditional, classe | Microsoft Docs
+title: conditional Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- conditional
 - type_traits/std::conditional
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: b7e187e8ddbb4a9457b5fe9eddda152464d7518d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ac4654577ee1869050a2750587bdef36f170432e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="conditional-class"></a>conditional, classe
-Sélectionne un des deux types, selon la condition spécifiée.  
+# <a name="conditional-class"></a>conditional Class
+Selects one of two types, depending on the specified condition.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <bool B, class T1, class T2>  
@@ -55,25 +54,25 @@ template <bool _Test, class _T1, class _T2>
 using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `B`  
- Valeur qui détermine le type sélectionné.  
+ The value that determines the selected type.  
   
  `T1`  
- Résultat de type quand B a la valeur true.  
+ The type result when B is true.  
   
  `T2`  
- Résultat de type quand B a la valeur false.  
+ The type result when B is false.  
   
-## <a name="remarks"></a>Notes  
- Le typedef de membre de modèle `conditional<B, T1, T2>::type` équivaut à `T1` quand `B` équivaut à `true`, et équivaut à `T2` quand `B` équivaut à `false`.  
+## <a name="remarks"></a>Remarks  
+ The template member typedef `conditional<B, T1, T2>::type` evaluates to `T1` when `B` evaluates to `true`, and evaluates to `T2` when `B` evaluates to `false`.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

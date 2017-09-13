@@ -1,42 +1,60 @@
 ---
-title: "&lt;cvt-wstring&gt;&lt;/cvt-wstring&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdext.cvt.<cvt/wstring>"
-  - "<cvt/wstring>"
-  - "stdext::cvt::<cvt/wstring>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cvt/wstring (en-tête)"
+title: '&lt;cvt-wstring&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- stdext.cvt.<cvt/wstring>", "<cvt/wstring>", "stdext::cvt::<cvt/wstring>
+dev_langs:
+- C++
+helpviewer_keywords:
+- cvt/wstring header
 ms.assetid: d78b04bb-9ac0-4adb-8ffe-3aefb9b14c2d
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# &lt;cvt/wstring&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 721aaf9facd2b37f7c27e6de39a2b70837af3ac3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
 
-L'en\-tête `<cvt/wstring>` dans les versions précédentes de Visual Studio définissait la classe de modèle [wstring\_convert, classe](../standard-library/wstring-convert-class.md) dans l'espace de noms stdext::cvt.  L'en\-tête est conservé à des fins de compatibilité descendante.  Le nouveau code doit utiliser la version de la classe qui est définie dans [\<locale\>](../standard-library/locale.md) dans l'espace de noms `std`.  
+---
+# <a name="ltcvtwstringgt"></a>&lt;cvt/wstring&gt;
+The header `<cvt/wstring>` in previous versions of Visual Studio defined the template class [wstring_convert Class](../standard-library/wstring-convert-class.md) in the stdext::cvt namespace. The header is maintained for backward compatibility. New code should use the version of the class that is defined in [\<locale>](../standard-library/locale.md) in the `std` namespace  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #include <cvt/wstring>  
   
 ```  
   
-## Configuration requise  
+## <a name="requirements"></a>Requirements  
   
-## Voir aussi  
- [Référence de fichiers d'en\-tête](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

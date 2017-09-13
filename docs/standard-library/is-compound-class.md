@@ -1,15 +1,14 @@
 ---
-title: is_compound, classe | Microsoft Docs
+title: is_compound Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_compound
 - type_traits/std::is_compound
 dev_langs:
 - C++
@@ -35,30 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 2137c8a92c3821137ab1669b4b9162fd309d0fbe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 11ef1e4b7d65849961ab6596bf95866485d4b68a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="iscompound-class"></a>is_compound, classe
-Teste si le type spécifié n'est pas fondamental.  
+# <a name="iscompound-class"></a>is_compound Class
+Tests if the specified type is not fundamental.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_compound;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Type à interroger.  
+ The type to query.  
   
-## <a name="remarks"></a>Notes  
- Une instance du prédicat de type a la valeur `false` si le type de `Ty` est un type fondamental (autrement dit, si [is_fundamental](../standard-library/is-fundamental-class.md)`<``Ty``>` contient `true`). Sinon, elle a la valeur `true`. Ainsi, le prédicat a la valeur `true` si `Ty` est un type tableau, un type fonction, un pointeur vers `void` ou un objet ou une fonction, une référence, une classe, une union, une énumération ou un pointeur vers un membre de classe non statique, ou une forme *cv-qualified* de l’un d’eux.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds `false` if the type of `Ty` is a fundamental type (that is, if [is_fundamental](../standard-library/is-fundamental-class.md)`<Ty>` holds `true`); otherwise, it holds `true`. Thus, the predicate holds `true` if `Ty` is an array type, a function type, a pointer to `void` or an object or a function, a reference, a class, a union, an enumeration, or a pointer to non-static class member, or a *cv-qualified* form of one of them.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_compound.cpp   
@@ -100,12 +100,12 @@ is_compound<void *> == true
 is_compound<int> == false  
 ```  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_class, classe](../standard-library/is-class-class.md)
+ [is_class Class](../standard-library/is-class-class.md)
 

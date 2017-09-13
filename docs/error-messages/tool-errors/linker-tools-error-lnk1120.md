@@ -1,7 +1,7 @@
 ---
-title: "L’erreur LNK1120 des outils Éditeur de liens | Documents Microsoft"
+title: Linker Tools Error LNK1120 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 05/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,17 +34,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 1809ed4e5950165d6a187fd3c62871c25124663f
+ms.translationtype: MT
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: f183981b9c3bccdf2629e8f5f3bd2c1b07b52b6a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="linker-tools-error-lnk1120"></a>Erreur des outils Éditeur de liens LNK1120
-*nombre* externes non résolus  
+# <a name="linker-tools-error-lnk1120"></a>Linker Tools Error LNK1120
+*number* unresolved externals  
   
-L’erreur LNK1120 indique le nombre (*nombre*) d’erreurs de symbole externe non résolu pour cette opération de liaison. La plupart non résolue de symbole externe les erreurs sont signalées individuellement par [erreur des outils Éditeur de liens LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) et [erreur des outils Éditeur de liens LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md), qui précède ce message d’erreur, une fois pour chaque non résolus erreur de symbole externe.  
+Error LNK1120 reports the count (*number*) of unresolved external symbol errors for this link operation. Most unresolved external symbol errors are reported individually by [Linker Tools Error LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) and  [Linker Tools Error LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md), which precede this error message, once for each unresolved external symbol error.  
   
-Pour corriger cette erreur, corrigez toutes les autres erreurs externes non résolues ou d’autres erreurs de l’éditeur de liens qui la précèdent dans la sortie de génération. Cette erreur n’est pas signalée lorsqu’il ne reste aucune erreur externe non résolu.  
+To fix this error, correct all of the other unresolved external errors or other linker errors that precede it in the build output. This error is not reported when no unresolved external errors remain.  
 

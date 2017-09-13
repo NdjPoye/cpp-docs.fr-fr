@@ -1,29 +1,33 @@
 ---
-title: "&lt;system_error&gt;, opérateurs | Microsoft Docs"
+title: '&lt;system_error&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- system_error/std::operator!=
+- system_error/std::operator==
+dev_langs:
+- C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: d5d69831f5157fab1914351de06adf050b74cc93
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 887b7c019857b1ae685b3108791e47158f48b921
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt;, opérateurs
+# <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&lt;](#op_lt)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Teste si l’objet situé à gauche de l’opérateur est égal à l’objet situé à droite.  
+ Tests if the object on the left side of the operator is equal to the object on the right side.  
   
 ```
 bool operator==(const error_code& left,
@@ -33,21 +37,21 @@ bool operator==(const error_condition& left,
     const error_code& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|Objet dont l’égalité doit être vérifiée.|  
-|`right`|Objet dont l’égalité doit être vérifiée.|  
+|`left`|The object to be tested for equality.|  
+|`right`|The object to be tested for equality.|  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si les objets sont égaux ; **false** si les objets ne sont pas égaux.  
+### <a name="return-value"></a>Return Value  
+ **true** if the objects are equal; **false** if objects are not equal.  
   
-### <a name="remarks"></a>Notes  
- Cette fonction retourne `left.category() == right.category() && left.value() == right.value()`.  
+### <a name="remarks"></a>Remarks  
+ This function returns `left.category() == right.category() && left.value() == right.value()`.  
   
 ##  <a name="op_neq"></a>  operator!=  
- Teste si l’objet situé à gauche de l’opérateur n’est pas égal à l’objet situé à droite.  
+ Tests if the object on the left side of the operator is not equal to the object on the right side.  
   
 ```
 bool operator!=(const error_code& left,
@@ -57,21 +61,21 @@ bool operator!=(const error_condition& left,
     const error_code& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|Objet dont l’inégalité doit être vérifiée.|  
-|`right`|Objet dont l’inégalité doit être vérifiée.|  
+|`left`|The object to be tested for inequality.|  
+|`right`|The object to be tested for inequality.|  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si l’objet passé dans `left` n’est pas égal à l’objet passé dans `right` ; sinon, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the object passed in `left` is not equal to the object passed in `right`; otherwise **false**.  
   
-### <a name="remarks"></a>Notes  
- Cette fonction retourne `!(left == right)`.  
+### <a name="remarks"></a>Remarks  
+ This function returns `!(left == right)`.  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- Vérifie si un objet est inférieur à l'objet passé en vue de leur comparaison.  
+ Tests if an object is less than the object passed in for comparison.  
   
 ```
 template <class _Enum>  
@@ -97,20 +101,20 @@ inline bool operator<(
     const error_condition&>::type left, _Enum right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|Objet à comparer.|  
-|`right`|Objet à comparer.|  
+|`left`|The object to be compared.|  
+|`right`|The object to be compared.|  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si l’objet passé dans `left` est inférieur à l’objet passé dans `right` ; sinon, **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the object passed in `left` is less than the object passed in `right`; Otherwise, **false**.  
   
-### <a name="remarks"></a>Notes  
- Cette fonction permet de tester l'ordre des erreurs.  
+### <a name="remarks"></a>Remarks  
+ This function tests the error order.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<system_error>](../standard-library/system-error.md)
 
 

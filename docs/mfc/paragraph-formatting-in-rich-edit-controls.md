@@ -1,34 +1,53 @@
 ---
-title: "Mise en forme des paragraphes dans les contr&#244;les RichEdit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl (classe), mise en forme des paragraphes"
-  - "mise en forme (C++), paragraphes"
-  - "mise en forme des paragraphes dans CRichEditCtrl"
-  - "contrôles RichEdit, mise en forme des paragraphes"
+title: Paragraph Formatting in Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- rich edit controls [MFC], paragraph formatting in
+- paragraph formatting in CRichEditCtrl [MFC]
+- CRichEditCtrl class [MFC], paragraph formatting in
+- formatting [MFC], paragraphs
 ms.assetid: 0df2e4c9-2074-4e41-b913-87cb8c1b4d43
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Mise en forme des paragraphes dans les contr&#244;les RichEdit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 12424417c0d2ff6ca8d48a047ee2d44b29c06a3d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Utilisez les fonctions membres du contrôle RichEdit \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) pour mettre en forme les paragraphes et récupérer les informations de mise en forme.  Les attributs de format de paragraphe incluent l'inscription, les onglets, les retraits, et la numérotation.  
+---
+# <a name="paragraph-formatting-in-rich-edit-controls"></a>Paragraph Formatting in Rich Edit Controls
+You can use member functions of the rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) to format paragraphs and to retrieve formatting information. Paragraph formatting attributes include alignment, tabs, indents, and numbering.  
   
- Appliquez une mise en forme de paragraphe à l'aide de la fonction membre de [SetParaFormat](../Topic/CRichEditCtrl::SetParaFormat.md).  Pour déterminer la mise en forme de paragraphe actuelle du texte sélectionné, utilisez la fonction membre de [GetParaFormat](../Topic/CRichEditCtrl::GetParaFormat.md).  La structure de [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) est utilisée avec ces fonctions de membre pour spécifier des attributs de paragraphe.  L'un des membres importants de **PARAFORMAT** est **dwMask**.  Dans `SetParaFormat`, **dwMask** spécifie quels attributs de paragraphe sont définis par cet appel de fonction.  `GetParaFormat` indique les attributs du premier paragraphe de la sélection ; **dwMask** spécifie les attributs qui sont cohérents dans toute la sélection.  
+ You can apply paragraph formatting by using the [SetParaFormat](../mfc/reference/cricheditctrl-class.md#setparaformat) member function. To determine the current paragraph formatting for the selected text, use the [GetParaFormat](../mfc/reference/cricheditctrl-class.md#getparaformat) member function. The [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) structure is used with these member functions to specify paragraph attributes. One of the important members of **PARAFORMAT** is **dwMask**. In `SetParaFormat`, **dwMask** specifies which paragraph attributes will be set by this function call. `GetParaFormat` reports the attributes of the first paragraph in the selection; **dwMask** specifies the attributes that are consistent throughout the selection.  
   
-## Voir aussi  
- [Utilisation de CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

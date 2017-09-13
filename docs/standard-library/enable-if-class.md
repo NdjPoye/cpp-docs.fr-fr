@@ -1,5 +1,5 @@
 ---
-title: enable_if, classe | Microsoft Docs
+title: enable_if Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- enable_if
 - type_traits/std::enable_if
 dev_langs:
 - C++
@@ -35,47 +34,47 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: febf80876856eb8f27ccb00310f9ceece30c2047
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 773882e76efa464d7770779bdfa1fd86272ee048
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="enableif-class"></a>enable_if, classe
-Crée une instance d’un type pour une résolution de surcharge SFINAE sous certaines conditions. Le typedef `enable_if<Condition,Type>::type` imbriqué existe et est synonyme de `Type` si et seulement si `Condition` a la valeur `true`.  
+# <a name="enableif-class"></a>enable_if Class
+Conditionally makes an instance of a type for SFINAE overload resolution. The nested typedef `enable_if<Condition,Type>::type` exists—and is a synonym for `Type`—if and only if `Condition` is `true`.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <bool B, class T = void>
 struct enable_if;
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `B`  
- Valeur qui détermine l'existence du type obtenu.  
+ The value that determines the existence of the resulting type.  
   
  `T`  
- Type à instancier si `B` a la valeur true.  
+ The type to instantiate if `B` is true.  
   
-## <a name="remarks"></a>Notes  
- Si `B` a la valeur true, `enable_if<B, T>` possède un typedef imbriqué nommé « type » qui est synonyme de `T`.  
+## <a name="remarks"></a>Remarks  
+ If `B` is true, `enable_if<B, T>` has a nested typedef named "type" that's a synonym for `T`.  
   
- Si `B` a la valeur false, `enable_if<B, T>` ne possède pas de typedef imbriqué nommé « type ».  
+ If `B` is false, `enable_if<B, T>` doesn't have a nested typedef named "type".  
   
- Le modèle d'alias suivant est fourni :  
+ This alias template is provided:  
   
 ```cpp  
 template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```  
   
- En C++, l’échec du remplacement des paramètres de modèle n’est pas une erreur en soi : il est désigné sous le nom de *SFINAE* (Substitution Failure Is Not An Error). En règle générale, `enable_if` permet de supprimer des candidats de la résolution de surcharge (autrement dit, elle trie l'ensemble des surcharges) pour qu'une définition puisse être rejetée en faveur d'une autre. Cette opération est conforme au comportement SFINAE. Pour plus d’informations sur SFINAE, consultez [Substitution failure is not an error](http://go.microsoft.com/fwlink/LinkId=394798) (l’échec du remplacement n’est pas une erreur) sur Wikipedia.  
+ In C++, substitution failure of template parameters is not an error in itself—this is referred to as *SFINAE* (substitution failure is not an error). Typically, `enable_if` is used to remove candidates from overload resolution—that is, it culls the overload set—so that one definition can be rejected in favor of another. This conforms to SFINAE behavior. For more information about SFINAE, see [Substitution failure is not an error](http://go.microsoft.com/fwlink/LinkId=394798) on Wikipedia.  
   
- Voici quatre exemples de scénarios :  
+ Here are four example scenarios:  
   
--   Scénario 1 : Encapsulation du type de retour d'une fonction :  
+-   Scenario 1: Wrapping the return type of a function:  
   
  ```cpp  
     template <your_stuff>  
@@ -89,7 +88,7 @@ yourfunction(args) {// ...
  }
 ```  
   
--   Scénario 2 : Ajout d'un paramètre de fonction qui a un argument par défaut :  
+-   Scenario 2: Adding a function parameter that has a default argument:  
   
  ```cpp  
     template <your_stuff>  
@@ -98,14 +97,14 @@ your_return_type_if_present
  }
 ```  
   
--   Scénario 3 : Ajout d'un paramètre de modèle qui a un argument par défaut :  
+-   Scenario 3: Adding a template parameter that has a default argument:  
   
  ```cpp  
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>  
 rest_of_function_declaration_goes_here
 ```  
   
--   Scénario 4 : Si votre fonction a un argument non basé sur un modèle, vous pouvez encapsuler son type :  
+-   Scenario 4: If your function has a non-templated argument, you can wrap its type:  
   
  ```cpp  
     template <typename T>  
@@ -115,9 +114,9 @@ s) {// ...
  }
 ```  
   
- Le scénario 1 ne fonctionne pas avec des constructeurs ni des opérateurs de conversion, car ils n'ont pas de types de retour.  
+ Scenario 1 doesn't work with constructors and conversion operators because they don't have return types.  
   
- Le scénario 2 laisse le paramètre sans nom. Vous pouvez dire `::type Dummy = BAR`, mais le nom `Dummy` n'est pas pertinent et l'affectation d'un nom risque de déclencher un avertissement de type « paramètre non référencé ». Vous devez choisir un type de paramètre de fonction `FOO` et un argument par défaut `BAR`.  Vous pouvez dire `int` et `0`, mais les utilisateurs de votre code peuvent alors par inadvertance passer à la fonction un entier supplémentaire qui serait ignoré. Nous vous conseillons plutôt d'utiliser `void **` et `0` ou `nullptr` car presque rien n'est convertible en `void **`:  
+ Scenario 2 leaves the parameter unnamed. You could say `::type Dummy = BAR`, but the name `Dummy` is irrelevant, and giving it a name is likely to trigger an "unreferenced parameter" warning. You have to choose a `FOO` function parameter type and `BAR` default argument.  You could say `int` and `0`, but then users of your code could accidentally pass to the function an extra integer that would be ignored. Instead, we recommend that you use `void **` and either `0` or `nullptr` because almost nothing is convertible to `void **`:  
   
 ```cpp  
 template <your_stuff>  
@@ -126,22 +125,22 @@ yourfunction(args, typename enable_if<your_condition, void **>::type = nullptr) 
 }
 ```  
   
- Le scénario 2 fonctionne également pour les constructeurs ordinaires.  Toutefois, il ne fonctionne pas pour les opérateurs de conversion, car ils ne peuvent pas accepter de paramètres supplémentaires.  Il ne fonctionne pas non plus pour les constructeurs [variadic](../cpp/ellipses-and-variadic-templates.md), car l’ajout de paramètres supplémentaires transforme le package de paramètres de fonction en contexte non déduit et va ainsi à l’encontre de l’objectif de `enable_if`.  
+ Scenario 2 also works for ordinary constructors.  However, it doesn't work for conversion operators because they can't take extra parameters.  It also doesn't work for [variadic](../cpp/ellipses-and-variadic-templates.md) constructors because adding extra parameters makes the function parameter pack a non-deduced context and thereby defeats the purpose of `enable_if`.  
   
- Le scénario 3 utilise le nom `Dummy`, mais il est facultatif. « `typename = typename` » seul fonctionne, mais si cela vous semble bizarre, vous pouvez utiliser un nom « factice » : simplement, n’utilisez pas de nom qui pourrait aussi être utilisé dans la définition de fonction. Si vous n'affectez pas de type à `enable_if`, la valeur par défaut est void et cela est parfaitement judicieux car vous ne vous souciez pas de `Dummy`. Cela fonctionne pour tout, y compris les opérateurs de conversion et les constructeurs [variadic](../cpp/ellipses-and-variadic-templates.md).  
+ Scenario 3 uses the name `Dummy`, but it's optional. Just " `typename = typename`" would work, but if you think that looks weird, you can use a "dummy" name—just don't use one that might also be used in the function definition. If you don't give a type to `enable_if`, it defaults to void, and that's perfectly reasonable because you don't care what `Dummy` is. This works for everything, including conversion operators and [variadic](../cpp/ellipses-and-variadic-templates.md) constructors.  
   
- Le scénario 4 fonctionne dans les constructeurs sans type de retour et résout ainsi la limite d’encapsulation du scénario 1.  Toutefois, le scénario 4 est limité à des arguments de fonction non basés sur un modèle, qui ne sont pas toujours disponibles.  (L'utilisation du scénario 4 sur un argument de fonction basé sur un modèle empêche le fonctionnement de la déduction de l'argument de modèle.)  
+ Scenario 4 works in constructors that don't have return types, and thereby solves the wrapping limitation of Scenario 1.  However, Scenario 4 is limited to non-templated function arguments, which aren't always available.  (Using Scenario 4 on a templated function argument prevents template argument deduction from working on it.)  
   
- `enable_if` est puissante, mais aussi dangereuse en cas d'utilisation inappropriée.  Comme son objectif est de faire disparaître les candidats avant la résolution de surcharge, ses effets peuvent être très déroutants si elle est mal utilisée.  Voici quelques recommandations :  
+ `enable_if` is powerful, but also dangerous if it's misused.  Because its purpose is to make candidates vanish before overload resolution, when it's misused, its effects can be very confusing.  Here are some recommendations:  
   
--   N'utilisez pas `enable_if` pour choisir entre les implémentations au moment de la compilation. N'écrivez jamais une classe `enable_if` pour `CONDITION` et une autre pour `!CONDITION`.  Utilisez plutôt un modèle de *répartition d’étiquette*, par exemple, un algorithme qui sélectionne des implémentations en fonction des points forts des itérateurs donnés.  
+-   Do not use `enable_if` to select between implementations at compile-time. Don't ever write one `enable_if` for `CONDITION` and another for `!CONDITION`.  Instead, use a *tag dispatch* pattern—for example, an algorithm that selects implementations depending on the strengths of the iterators they're given.  
   
--   N'utilisez pas `enable_if` pour appliquer une configuration requise.  Si vous voulez valider les paramètres de modèle et que la validation échoue, causant une erreur au lieu de donner la possibilité de sélectionner une autre implémentation, utilisez [static_assert](../cpp/static-assert.md).  
+-   Do not use `enable_if` to enforce requirements.  If you want to validate template parameters, and if the validation fails, cause an error instead of selecting another implementation, use [static_assert](../cpp/static-assert.md).  
   
--   Utilisez `enable_if` quand un ensemble de surcharges rend ambigu un code par ailleurs pertinent.  Cela se produit le plus souvent dans des constructeurs de conversion implicite.  
+-   Use `enable_if` when you have an overload set that makes otherwise good code ambiguous.  Most often, this occurs in implicitly converting constructors.  
   
-## <a name="example"></a>Exemple  
- Cet exemple explique comment la fonction de modèle de bibliothèque C++ Standard [std::make_pair()](../standard-library/utility-functions.md#make_pair) tire parti de `enable_if`.  
+## <a name="example"></a>Example  
+ This example explains how the C++ Standard Library template function [std::make_pair()](../standard-library/utility-functions.md#make_pair) takes advantage of `enable_if`.  
   
 ```cpp  
 void func(const pair<int, int>&);
@@ -151,16 +150,16 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```  
   
-  Dans cet exemple, `make_pair("foo", "bar")` retourne `pair<const char *, const char *>`. La résolution de surcharge doit déterminer l'élément `func()` voulu. `pair<A, B>` a un constructeur de conversion implicite de `pair<X, Y>`.  Cela n'est pas nouveau et figurait déjà dans C++98. Toutefois, dans C++98/03, la signature du constructeur de conversion implicite existe toujours, même s'il s'agit de `pair<int, int>(const pair<const char *, const char *>&)`.  La résolution de surcharge ne se soucie pas de savoir si une tentative d'instanciation de ce constructeur explose littéralement, car `const char *` n'est pas implicitement convertible en `int` ; elle examine uniquement les signatures avant que les définitions de fonctions ne soient instanciées.  Ainsi, l'exemple de code est ambigu, car des signatures existent pour convertir `pair<const char *, const char *>` à la fois en `pair<int, int>` et `pair<string, string>`.  
+  In this example, `make_pair("foo", "bar")` returns `pair<const char *, const char *>`. Overload resolution has to determine which `func()` you want. `pair<A, B>` has an implicitly converting constructor from `pair<X, Y>`.  This isn't new—it was in C++98. However, in C++98/03, the implicitly converting constructor's signature always exists, even if it's `pair<int, int>(const pair<const char *, const char *>&)`.  Overload resolution doesn't care that an attempt to instantiate that constructor explodes horribly because `const char *` isn't implicitly convertible to `int`; it's only looking at signatures, before function definitions are instantiated.  Therefore, the example code is ambiguous, because signatures exist to convert `pair<const char *, const char *>` to both `pair<int, int>` and `pair<string, string>`.  
   
- C++11 a résolu cette ambiguïté en utilisant `enable_if` pour garantir que `pair<A, B>(const pair<X, Y>&)` existe **uniquement** quand `const X&` est implicitement convertible en `A` et que `const Y&` est implicitement convertible en `B`.  Cela permet à la résolution de surcharge de déterminer que `pair<const char *, const char *>` n'est pas convertible en `pair<int, int>` et que la surcharge qui accepte `pair<string, string>` est valide.  
+ C++11 solved this ambiguity by using `enable_if` to make sure `pair<A, B>(const pair<X, Y>&)` exists **only** when `const X&` is implicitly convertible to `A` and `const Y&` is implicitly convertible to `B`.  This allows overload resolution to determine that `pair<const char *, const char *>` is not convertible to `pair<int, int>` and that the overload that takes `pair<string, string>` is viable.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

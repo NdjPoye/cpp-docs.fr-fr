@@ -1,46 +1,65 @@
 ---
-title: "&#201;change et validation de donn&#233;es de bo&#238;tes de dialogue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contrôles communs (C++), boîtes de dialogue"
-  - "données (MFC), boîtes de dialogue"
-  - "données (validation) (C++), boîtes de dialogue"
-  - "DDV (validation de données de boîtes de dialogue) (C++)"
-  - "DDX (échange de données de boîtes de dialogue) (C++), validation des données"
-  - "données de boîte de dialogue (C++)"
-  - "données de boîte de dialogue (C++), récupérer"
-  - "boîtes de dialogue (C++), récupérer des données"
-  - "boîtes de dialogue (C++), valider des données"
-  - "récupérer les données d'une boîte de dialogue"
-  - "valider des données (C++), entrée de données de boîte de dialogue"
-  - "contrôles Windows communs (C++), boîtes de dialogue"
+title: Dialog Data Exchange and Validation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- data validation [MFC], dialog boxes
+- dialog box data [MFC]
+- dialog boxes [MFC], validating data
+- validating data [MFC], dialog box data entry
+- DDX (dialog data exchange) [MFC], data validation
+- dialog box data [MFC], retrieving
+- Windows common controls [MFC], dialog boxes
+- DDV (dialog data validation) [MFC]
+- data [MFC], dialog boxes
+- common controls [MFC], dialog boxes
+- dialog boxes [MFC], retrieving data
+- retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# &#201;change et validation de donn&#233;es de bo&#238;tes de dialogue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ed01ece0c4318b0c3cd92100147aab030222e2f9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-L'échange de données de boîtes de dialogue \(DDX\) est un moyen facile d'initialiser les contrôles dans la boîte de dialogue et de rassembler l'entrée de données par l'utilisateur.  La validation des données \(DDV\) de dialogue est un moyen aisé de validation de l'entrée de données dans une boîte de dialogue.  Pour bénéficier de DDX et de DDV dans vos boîtes de dialogue, utilisez l'[Assistant Ajout de variable membre](../ide/add-member-variable-wizard.md) pour créer des membres de données et définir leurs types de données et spécifier des règles de validation.  
+---
+# <a name="dialog-data-exchange-and-validation"></a>Dialog Data Exchange and Validation
+Dialog data exchange (DDX) is an easy way to initialize the controls in your dialog box and to gather data input by the user. Dialog data validation (DDV) is an easy way to validate data entry in a dialog box. To take advantage of DDX and DDV in your dialog boxes, use the [Add Member Variable Wizard](../ide/add-member-variable-wizard.md) to create the data members and set their data types and specify validation rules.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Échange de données de boîtes de dialogue](../mfc/dialog-data-exchange.md)  
+-   [Dialog data exchange](../mfc/dialog-data-exchange.md)  
   
--   [Validation de données de boîtes de dialogue](../mfc/dialog-data-validation.md)  
+-   [Dialog data validation](../mfc/dialog-data-validation.md)  
   
-## Voir aussi  
- [Boîtes de dialogue](../mfc/dialog-boxes.md)   
- [Cycle de vie d'une boîte de dialogue](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

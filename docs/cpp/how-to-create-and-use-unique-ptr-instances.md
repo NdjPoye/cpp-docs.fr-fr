@@ -1,60 +1,76 @@
 ---
-title: "Comment&#160;: cr&#233;er et utiliser des instances unique_ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'How to: Create and Use unique_ptr Instances | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Comment&#160;: cr&#233;er et utiliser des instances unique_ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: e1dbcea010f4dfde35a604bfc640fb9cb3a792c3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/11/2017
 
-Un [unique\_ptr](../standard-library/unique-ptr-class.md) ne partage pas son pointeur.  Il ne peut pas être copié vers un autre `unique_ptr`, passé par valeur à une fonction, ni utilisé dans un algorithme STL \(Standard Template Library\) qui nécessite d'effectuer des copies.  Un `unique_ptr` peut uniquement être déplacé.  Cela signifie que la propriété de la ressource mémoire est transférée à un autre `unique_ptr` et que le `unique_ptr` d'origine ne le possède plus.  Il est recommandé de restreindre un objet à un seul propriétaire, car la multiplicité des propriétaires ajoute de la complexité à la logique du programme.  Par conséquent, lorsque vous avez besoin d'un pointeur intelligent pour un objet ordinaire C\+\+, utilisez `unique_ptr`et, lorsque vous construisez un `unique_ptr`, utilisez la fonction d'assistance [make\_unique](../Topic/make_unique.md).  
+---
+# <a name="how-to-create-and-use-uniqueptr-instances"></a>How to: Create and Use unique_ptr Instances
+A [unique_ptr](../standard-library/unique-ptr-class.md) does not share its pointer. It cannot be copied to another `unique_ptr`, passed by value to a function, or used in any C++ Standard Library algorithm that requires copies to be made. A `unique_ptr` can only be moved. This means that the ownership of the memory resource is transferred to another `unique_ptr` and the original `unique_ptr` no longer owns it. We recommend that you restrict an object to one owner, because multiple ownership adds complexity to the program logic. Therefore, when you need a smart pointer for a plain C++ object, use `unique_ptr`, and when you construct a `unique_ptr`, use the [make_unique](../standard-library/memory-functions.md#make_unique) helper function.  
   
- Le diagramme suivant illustre le transfert de propriété entre deux instances `unique_ptr`.  
+ The following diagram illustrates the transfer of ownership between two `unique_ptr` instances.  
   
- ![Déplacement de la propriété d'un unique&#95;ptr](../cpp/media/unique_ptr.png "unique\_ptr")  
+ ![Moving the ownership of a unique&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
- `unique_ptr` est défini dans l'en\-tête `<memory>` dans la bibliothèque STL.  Il est efficace comme pointeur brut et peut être utilisé dans des conteneurs STL.  L'ajout d'instances `unique_ptr` à des conteneurs STL est efficace, car le constructeur de déplacement de `unique_ptr` ne nécessite pas d'opération de copie.  
+ `unique_ptr` is defined in the `<memory>` header in the C++ Standard Library. It is exactly is efficient as a raw pointer and can be used in C++ Standard Library containers. The addition of `unique_ptr` instances to C++ Standard Library containers is efficient because the move constructor of the `unique_ptr` eliminates the need for a copy operation.  
   
-## Exemple  
- L'exemple suivant montre comment créer des instances `unique_ptr` et les passer entre des fonctions.  
+## <a name="example"></a>Example  
+ The following example shows how to create `unique_ptr` instances and pass them between functions.  
   
  [!code-cpp[stl_smart_pointers#210](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_1.cpp)]  
   
- Ces exemples illustrent cette caractéristique de base de `unique_ptr` : il peut être déplacé, mais pas copié. Le « déplacement » transfère la propriété à un nouvel `unique_ptr` et réinitialise l'ancien `unique_ptr`.  
+ These examples demonstrate this basic characteristic of `unique_ptr`: it can be moved, but not copied. "Moving" transfers ownership to a new `unique_ptr` and resets the old `unique_ptr`.  
   
-## Exemple  
- L'exemple suivant montre comment créer des instances `unique_ptr` et les utiliser dans un vecteur.  
+## <a name="example"></a>Example  
+ The following example shows how to create `unique_ptr` instances and use them in a vector.  
   
  [!code-cpp[stl_smart_pointers#211](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_2.cpp)]  
   
- Dans la boucle for de plage, remarquez que `unique_ptr` est passé par référence.  Si vous essayez d'effectuer un passage par valeur ici, le compilateur génère une erreur, car le constructeur de copie `unique_ptr` est supprimé.  
+ In the range for  loop, notice that the `unique_ptr` is passed by reference. If you try to pass by value here, the compiler will throw an error because the `unique_ptr` copy constructor is deleted.  
   
-## Exemple  
- L'exemple suivant montre comment initialiser un `unique_ptr` qui est un membre de classe.  
+## <a name="example"></a>Example  
+ The following example shows how to initialize a `unique_ptr` that is a class member.  
   
  [!code-cpp[stl_smart_pointers#212](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_3.cpp)]  
   
-## Exemple  
- Vous pouvez utiliser [make\_unique](../Topic/make_unique.md) pour créer un `unique_ptr` dans un tableau, mais vous ne pouvez pas utiliser `make_unique` pour initialiser les éléments du tableau.  
+## <a name="example"></a>Example  
+ You can use [make_unique](../standard-library/memory-functions.md#make_unique) to create a `unique_ptr` to an array, but you cannot use `make_unique` to initialize the array elements.  
   
  [!code-cpp[stl_smart_pointers#213](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_4.cpp)]  
   
- Pour plus d'exemples, consultez [make\_unique](../Topic/make_unique.md).  
+ For more examples, see [make_unique](../standard-library/memory-functions.md#make_unique).  
   
-## Voir aussi  
- [Pointeurs intelligents](../cpp/smart-pointers-modern-cpp.md)   
- [make\_unique](../Topic/make_unique.md)
+## <a name="see-also"></a>See Also  
+ [Smart Pointers](../cpp/smart-pointers-modern-cpp.md)   
+ [make_unique](../standard-library/memory-functions.md#make_unique)

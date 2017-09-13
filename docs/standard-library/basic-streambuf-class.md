@@ -1,15 +1,14 @@
 ---
-title: basic_streambuf, classe | Microsoft Docs
+title: basic_streambuf Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- basic_streambuf
 - streambuf/std::basic_streambuf
 - streambuf/std::basic_streambuf::char_type
 - streambuf/std::basic_streambuf::int_type
@@ -58,7 +57,51 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_streambuf class
+- std::basic_streambuf [C++]
+- std::basic_streambuf [C++], char_type
+- std::basic_streambuf [C++], int_type
+- std::basic_streambuf [C++], off_type
+- std::basic_streambuf [C++], pos_type
+- std::basic_streambuf [C++], traits_type
+- std::basic_streambuf [C++], eback
+- std::basic_streambuf [C++], egptr
+- std::basic_streambuf [C++], epptr
+- std::basic_streambuf [C++], gbump
+- std::basic_streambuf [C++], getloc
+- std::basic_streambuf [C++], gptr
+- std::basic_streambuf [C++], imbue
+- std::basic_streambuf [C++], in_avail
+- std::basic_streambuf [C++], overflow
+- std::basic_streambuf [C++], pbackfail
+- std::basic_streambuf [C++], pbase
+- std::basic_streambuf [C++], pbump
+- std::basic_streambuf [C++], pptr
+- std::basic_streambuf [C++], pubimbue
+- std::basic_streambuf [C++], pubseekoff
+- std::basic_streambuf [C++], pubseekpos
+- std::basic_streambuf [C++], pubsetbuf
+- std::basic_streambuf [C++], pubsync
+- std::basic_streambuf [C++], sbumpc
+- std::basic_streambuf [C++], seekoff
+- std::basic_streambuf [C++], seekpos
+- std::basic_streambuf [C++], setbuf
+- std::basic_streambuf [C++], setg
+- std::basic_streambuf [C++], setp
+- std::basic_streambuf [C++], sgetc
+- std::basic_streambuf [C++], sgetn
+- std::basic_streambuf [C++], showmanyc
+- std::basic_streambuf [C++], snextc
+- std::basic_streambuf [C++], sputbackc
+- std::basic_streambuf [C++], sputc
+- std::basic_streambuf [C++], sputn
+- std::basic_streambuf [C++], stossc
+- std::basic_streambuf [C++], sungetc
+- std::basic_streambuf [C++], swap
+- std::basic_streambuf [C++], sync
+- std::basic_streambuf [C++], uflow
+- std::basic_streambuf [C++], underflow
+- std::basic_streambuf [C++], xsgetn
+- std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
 caps.latest.revision: 27
 author: corob-msft
@@ -78,140 +121,140 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0e20dfefcfc46871d43ec5b89f492102d07a9610
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: df3cddeeb4f7d597b97325b7e0d8e7ddb4b96c1b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicstreambuf-class"></a>basic_streambuf, classe
-Décrit une classe de base abstraite pour dériver une mémoire tampon de flux qui contrôle la transmission des éléments depuis et vers une représentation spécifique d'un flux.  
+# <a name="basicstreambuf-class"></a>basic_streambuf Class
+Describes an abstract base class for deriving a stream buffer, which controls the transmission of elements to and from a specific representation of a stream.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Elem, class Tr = char_traits<Elem>>  
 class basic_streambuf;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `Elem`  
- Un [char_type](#char_type).  
+ A [char_type](#char_type).  
   
  `Tr`  
- Le [traits_type](#traits_type) du caractère.  
+ The character [traits_type](#traits_type).  
   
-## <a name="remarks"></a>Notes  
- La classe de modèle décrit une classe de base abstraite pour dériver une mémoire tampon de flux qui contrôle la transmission des éléments depuis et vers une représentation spécifique d'un flux. Un objet de la classe `basic_streambuf` permet de contrôler un flux avec des éléments de type `Tr`, également appelé [char_type](#char_type), dont les caractéristiques sont déterminées par la classe [char_traits](../standard-library/char-traits-struct.md), également appelée [traits_type](#traits_type).  
+## <a name="remarks"></a>Remarks  
+ The template class describes an abstract base class for deriving a stream buffer, which controls the transmission of elements to and from a specific representation of a stream. An object of class `basic_streambuf` helps control a stream with elements of type `Tr`, also known as [char_type](#char_type), whose character traits are determined by the class [char_traits](../standard-library/char-traits-struct.md), also known as [traits_type](#traits_type).  
   
- Chaque mémoire tampon de flux contrôle conceptuellement deux flux indépendants : un pour les extractions (entrée) et un pour les insertions (sortie). Une représentation spécifique peut cependant rendre l'un ou l'autre (ou les deux) de ces flux inaccessible. Elle conserve en général une relation entre les deux flux. Par exemple, les éléments que vous insérez dans le flux de sortie d’un objet [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`> sont ceux que vous extrayez par la suite de son flux d’entrée. Quand vous positionnez un flux d’un objet [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, vous positionnez l’autre flux en tandem.  
+ Every stream buffer conceptually controls two independent streams: one for extractions (input) and one for insertions (output). A specific representation may, however, make either or both of these streams inaccessible. It typically maintains some relationship between the two streams. What you insert into the output stream of a [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`> object, for example, is what you later extract from its input stream. When you position one stream of a [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> object, you position the other stream in tandem.  
   
- L'interface publique de la classe de modèle `basic_streambuf` fournit les opérations qui sont communes à tous les tampons de flux, qui sont cependant spécialisés. L'interface protégée fournit les opérations nécessaires pour qu'une représentation spécifique d'un flux effectue son travail. Les fonctions membres virtuelles protégées vous permettent de personnaliser le comportement d'une mémoire tampon de flux dérivée pour une représentation spécifique d'un flux. Chaque mémoire tampon de flux dérivée de cette bibliothèque décrit comment elle spécialise le comportement de ses fonctions membres virtuelles protégées. Le comportement par défaut pour la classe de base, qui est souvent de ne rien faire, est décrit dans cette rubrique.  
+ The public interface to template class `basic_streambuf` supplies the operations that are common to all stream buffers, however specialized. The protected interface supplies the operations needed for a specific representation of a stream to do its work. The protected virtual member functions let you tailor the behavior of a derived stream buffer for a specific representation of a stream. Each derived stream buffer in this library describes how it specializes the behavior of its protected virtual member functions. The default behavior for the base class, which is often to do nothing, is described in this topic.  
   
- Les fonctions membres protégées restantes contrôlent la copie de et vers le stockage fourni pour mettre en mémoire tampon les transmissions vers et depuis des flux. Par exemple, une mémoire tampon d'entrée est caractérisée par :  
+ The remaining protected member functions control copying to and from any storage supplied to buffer transmissions to and from streams. An input buffer, for example, is characterized by:  
   
-- [eback](#eback), un pointeur vers le début de la mémoire tampon.  
+- [eback](#eback), a pointer to the beginning of the buffer.  
   
-- [gptr](#gptr), un pointeur vers l’élément suivant à lire.  
+- [gptr](#gptr), a pointer to the next element to read.  
   
-- [egptr](#egptr), un pointeur juste après la fin de la mémoire tampon.  
+- [egptr](#egptr), a pointer just past the end of the buffer.  
   
- De façon similaire, une mémoire tampon de sortie est caractérisée par :  
+ Similarly, an output buffer is characterized by:  
   
-- [pbase](#pbase), un pointeur vers le début de la mémoire tampon.  
+- [pbase](#pbase), a pointer to the beginning of the buffer.  
   
-- [pptr](#pptr), un pointeur vers l’élément suivant à écrire.  
+- [pptr](#pptr), a pointer to the next element to write.  
   
-- [epptr](#epptr), un pointeur juste après la fin de la mémoire tampon.  
+- [epptr](#epptr), a pointer just past the end of the buffer.  
   
- Pour toutes les mémoires tampons, le protocole suivant est utilisé :  
+ For any buffer, the following protocol is used:  
   
--   Si le pointeur suivant est null, c'est qu'il n'existe pas de mémoire tampon. Dans le cas contraire, les trois pointeurs pointent tous dans la même séquence. Ils peuvent être comparés de façon fiable quant à l'ordre.  
+-   If the next pointer is null, no buffer exists. Otherwise, all three pointers point into the same sequence. They can be safely compared for order.  
   
--   Pour une mémoire tampon de sortie, si le pointeur suivant est inférieur au pointeur de fin, vous pouvez stocker un élément à la position d'écriture désignée par le pointeur suivant.  
+-   For an output buffer, if the next pointer compares less than the end pointer, you can store an element at the write position designated by the next pointer.  
   
--   Pour une mémoire tampon d'entrée, si le pointeur suivant est inférieur au pointeur de fin, vous pouvez lire un élément à la position de lecture désignée par le pointeur suivant.  
+-   For an input buffer, if the next pointer compares less than the end pointer, you can read an element at the read position designated by the next pointer.  
   
--   Pour une mémoire tampon d'entrée, si le pointeur de début est inférieur au pointeur suivant, vous pouvez replacer un élément à la position de replacement désignée par le pointeur suivant décrémenté.  
+-   For an input buffer, if the beginning pointer compares less than the next pointer, you can put back an element at the putback position designated by the decremented next pointer.  
   
- Les fonctions membres virtuelles protégées que vous écrivez pour une classe dérivée de `basic_streambuf`< `Elem`, `Tr`> doivent collaborer à la gestion de ce protocole.  
+ Any protected virtual member functions you write for a class derived from `basic_streambuf`< `Elem`, `Tr`> must cooperate in maintaining this protocol.  
   
- Un objet de la classe `basic_streambuf`< `Elem`, `Tr`> stocke les six pointeurs décrits précédemment. Il stocke également un objet de paramètres régionaux dans un objet de type [locale](../standard-library/locale-class.md) pour une éventuelle utilisation par une mémoire tampon de flux dérivée.  
+ An object of class `basic_streambuf`< `Elem`, `Tr`> stores the six pointers previously described. It also stores a locale object in an object of type [locale](../standard-library/locale-class.md) for potential use by a derived stream buffer.  
   
-### <a name="constructors"></a>Constructeurs  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[basic_streambuf](#basic_streambuf)|Construit un objet de type `basic_streambuf`.|  
+|[basic_streambuf](#basic_streambuf)|Constructs an object of type `basic_streambuf`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|Associe un nom de type au paramètre de modèle `Elem`.|  
-|[int_type](#int_type)|Associe un nom de type dans la portée `basic_streambuf` avec le paramètre de modèle `Elem`.|  
-|[off_type](#off_type)|Associe un nom de type dans la portée `basic_streambuf` avec le paramètre de modèle `Elem`.|  
-|[pos_type](#pos_type)|Associe un nom de type dans la portée `basic_streambuf` avec le paramètre de modèle `Elem`.|  
-|[traits_type](#traits_type)|Associe un nom de type au paramètre de modèle `Tr`.|  
+|[char_type](#char_type)|Associates a type name with the `Elem` template parameter.|  
+|[int_type](#int_type)|Associates a type name within `basic_streambuf` scope with the `Elem` template parameter.|  
+|[off_type](#off_type)|Associates a type name within `basic_streambuf` scope with the `Elem` template parameter.|  
+|[pos_type](#pos_type)|Associates a type name within `basic_streambuf` scope with the `Elem` template parameter.|  
+|[traits_type](#traits_type)|Associates a type name with the `Tr` template parameter.|  
   
-### <a name="member-functions"></a>Fonctions membres  
-  
-|||  
-|-|-|  
-|[eback](#eback)|Une fonction protégée qui retourne un pointeur vers le début de la mémoire tampon d'entrée.|  
-|[egptr](#egptr)|Une fonction protégée qui retourne un pointeur qui pointe juste après la fin de la mémoire tampon d'entrée.|  
-|[epptr](#epptr)|Une fonction protégée qui retourne un pointeur qui pointe juste après la fin de la mémoire tampon de sortie.|  
-|[gbump](#gbump)|Une fonction protégée qui ajoute `count` au pointeur suivant pour la mémoire tampon d'entrée.|  
-|[getloc](#getloc)|Obtient les paramètres régionaux de l'objet `basic_streambuf`.|  
-|[gptr](#gptr)|Une fonction protégée qui retourne un pointeur vers l'élément suivant de la mémoire tampon d'entrée.|  
-|[imbue](#imbue)|Fonction virtuelle protégée appelée par [pubimbue](#pubimbue).|  
-|[in_avail](#in_avail)|Retourne le nombre d'éléments qui sont prêts à être lus dans la mémoire tampon.|  
-|[overflow](#overflow)|Fonction virtuelle protégée qui peut être appelée quand un nouveau caractère est inséré dans une mémoire tampon saturée.|  
-|[pbackfail](#pbackfail)|Une fonction membre virtuelle protégée qui tente de replacer un élément dans le flux d'entrée, puis d'en faire l'élément actif (pointé par le pointeur suivant).|  
-|[pbase](#pbase)|Une fonction protégée qui retourne un pointeur vers le début de la mémoire tampon de sortie.|  
-|[pbump](#pbump)|Une fonction protégée qui ajoute `count` au pointeur suivant pour la mémoire tampon de sortie.|  
-|[pptr](#pptr)|Une fonction protégée qui retourne un pointeur vers l'élément suivant de la mémoire tampon de sortie.|  
-|[pubimbue](#pubimbue)|Définit les paramètres régionaux de l'objet `basic_streambuf`.|  
-|[pubseekoff](#pubseekoff)|Appelle [seekoff](#seekoff), une fonction virtuelle protégée qui est remplacée dans une classe dérivée.|  
-|[pubseekpos](#pubseekpos)|Appelle [seekpos](#seekpos), une fonction virtuelle protégée qui est remplacée dans une classe dérivée et réinitialise la position actuelle du pointeur.|  
-|[pubsetbuf](#pubsetbuf)|Appelle [setbuf](#setbuf), une fonction virtuelle protégée qui est remplacée dans une classe dérivée.|  
-|[pubsync](#pubsync)|Appelle [sync](#sync), une fonction virtuelle protégée qui est remplacée dans une classe dérivée et met à jour le flux externe associé à cette mémoire tampon.|  
-|[sbumpc](#sbumpc)|Lit et retourne l'élément actuel, en déplaçant le pointeur du flux.|  
-|[seekoff](#seekoff)|La fonction membre virtuelle protégée tente de modifier les positions actuelles des flux contrôlés.|  
-|[seekpos](#seekpos)|La fonction membre virtuelle protégée tente de modifier les positions actuelles des flux contrôlés.|  
-|[setbuf](#setbuf)|La fonction membre virtuelle protégée effectue une opération spécifique à chaque mémoire tampon de flux dérivée.|  
-|[setg](#setg)|Une fonction protégée qui stocke `_Gbeg` dans le pointeur de début, `_Gnext` dans le pointeur suivant et `_Gend` dans le pointeur de fin pour la mémoire tampon d'entrée.|  
-|[setp](#setp)|Une fonction protégée qui stocke `_Pbeg` dans le pointeur de début et `_Pend` dans le pointeur suivant dans le pointeur de fin pour la mémoire tampon de sortie.|  
-|[sgetc](#sgetc)|Retourne l'élément actuel sans changer la position dans le flux.|  
-|[sgetn](#sgetn)|Retourne le nombre d'éléments lus.|  
-|[showmanyc](#showmanyc)|Fonction membre virtuelle protégée qui retourne le nombre de caractères qui peuvent être extraits du flux d'entrée et garantit que le programme ne sera pas soumis à un délai d'attente indéfini.|  
-|[snextc](#snextc)|Lit l'élément actuel et retourne l'élément suivant.|  
-|[sputbackc](#sputbackc)|Place un `char_type` dans le flux.|  
-|[sputc](#sputc)|Place un caractère dans le flux.|  
-|[sputn](#sputn)|Place une chaîne de caractères dans le flux.|  
-|[stossc](#stossc)|Se déplace après l'élément actuel du flux.|  
-|[sungetc](#sungetc)|Obtient un caractère du flux.|  
-|[swap](#swap)|Échange les valeurs de cet objet avec les valeurs du paramètre de l'objet `basic_streambuf`.|  
-|[sync](#sync)|Une fonction virtuelle protégée qui tente de synchroniser les flux contrôlés avec tous les flux externes associés.|  
-|[uflow](#uflow)|Une fonction virtuelle protégée qui extrait l'élément actuel du flux d'entrée.|  
-|[underflow](#underflow)|Une fonction virtuelle protégée qui extrait l'élément actuel du flux d'entrée.|  
-|[xsgetn](#xsgetn)|Une fonction virtuelle protégée qui extrait des éléments du flux d'entrée.|  
-|[xsputn](#xsputn)|Une fonction virtuelle protégée qui insère des éléments dans le flux d'entrée.|  
-  
-### <a name="operators"></a>Opérateurs  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator=](#op_eq)|Assigne les valeurs de cet objet à partir d'un autre objet `basic_streambuf`.|  
+|[eback](#eback)|A protected function that returns a pointer to the beginning of the input buffer.|  
+|[egptr](#egptr)|A protected function that returns a pointer just past the end of the input buffer.|  
+|[epptr](#epptr)|A protected function that returns a pointer just past the end of the output buffer.|  
+|[gbump](#gbump)|A protected function that adds `count` to the next pointer for the input buffer.|  
+|[getloc](#getloc)|Gets the `basic_streambuf` object's locale.|  
+|[gptr](#gptr)|A protected function that returns a pointer to the next element of the input buffer.|  
+|[imbue](#imbue)|A protected, virtual function called by [pubimbue](#pubimbue).|  
+|[in_avail](#in_avail)|Returns the number of elements that are ready to be read from the buffer.|  
+|[overflow](#overflow)|A protected virtual function that can be called when a new character is inserted into a full buffer.|  
+|[pbackfail](#pbackfail)|A protected virtual member function that tries to put back an element into the input stream, then make it the current element (pointed to by the next pointer).|  
+|[pbase](#pbase)|A protected function that returns a pointer to the beginning of the output buffer.|  
+|[pbump](#pbump)|A protected function that adds `count` to the next pointer for the output buffer.|  
+|[pptr](#pptr)|A protected function that returns a pointer to the next element of the output buffer.|  
+|[pubimbue](#pubimbue)|Sets the `basic_streambuf` object's locale.|  
+|[pubseekoff](#pubseekoff)|Calls [seekoff](#seekoff), a protected virtual function that is overridden in a derived class.|  
+|[pubseekpos](#pubseekpos)|Calls [seekpos](#seekpos), a protected virtual function that is overridden in a derived class and resets the current pointer position.|  
+|[pubsetbuf](#pubsetbuf)|Calls [setbuf](#setbuf), a protected virtual function that is overridden in a derived class.|  
+|[pubsync](#pubsync)|Calls [sync](#sync), a protected virtual function that is overridden in a derived class and updates the external stream associated with this buffer.|  
+|[sbumpc](#sbumpc)|Reads and returns the current element, moving the stream pointer.|  
+|[seekoff](#seekoff)|The protected virtual member function tries to alter the current positions for the controlled streams.|  
+|[seekpos](#seekpos)|The protected virtual member function tries to alter the current positions for the controlled streams.|  
+|[setbuf](#setbuf)|The protected virtual member function performs an operation particular to each derived stream buffer.|  
+|[setg](#setg)|A protected function that stores `_Gbeg` in the beginning pointer, `_Gnext` in the next pointer, and `_Gend` in the end pointer for the input buffer.|  
+|[setp](#setp)|A protected function that stores `_Pbeg` in the beginning pointer and `_Pend` in the end pointer for the output buffer.|  
+|[sgetc](#sgetc)|Returns current element without changing position in the stream.|  
+|[sgetn](#sgetn)|Returns the number of elements read.|  
+|[showmanyc](#showmanyc)|Protected virtual member function that returns a count of the number of characters that can be extracted from the input stream and ensure that the program will not be subject to an indefinite wait.|  
+|[snextc](#snextc)|Reads the current element and returns the following element.|  
+|[sputbackc](#sputbackc)|Puts a `char_type` in the stream.|  
+|[sputc](#sputc)|Puts a character into the stream.|  
+|[sputn](#sputn)|Puts a character string into the stream.|  
+|[stossc](#stossc)|Move past the current element in the stream.|  
+|[sungetc](#sungetc)|Gets a character from the stream.|  
+|[swap](#swap)|Exchanges the values in this object for the values in the provided `basic_streambuf` object parameter.|  
+|[sync](#sync)|A protected virtual function that tries to synchronize the controlled streams with any associated external streams.|  
+|[uflow](#uflow)|A protected virtual function that extracts the current element from the input stream.|  
+|[underflow](#underflow)|A protected virtual function that extracts the current element from the input stream.|  
+|[xsgetn](#xsgetn)|A protected virtual function that extracts elements from the input stream.|  
+|[xsputn](#xsputn)|A protected virtual function that inserts elements into the output stream.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<streambuf>  
+### <a name="operators"></a>Operators  
   
- **Espace de noms :** std  
+|||  
+|-|-|  
+|[operator=](#op_eq)|Assigns the values of this object from another `basic_streambuf` object.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<streambuf>  
+  
+ **Namespace:** std  
   
 ##  <a name="basic_streambuf"></a>  basic_streambuf::basic_streambuf  
- Construit un objet de type `basic_streambuf`.  
+ Constructs an object of type `basic_streambuf`.  
   
 ```  
 basic_streambuf();
@@ -219,77 +262,77 @@ basic_streambuf();
 basic_streambuf(const basic_streambuf& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Référence lvalue à l’objet `basic_streambuf` qui est utilisée pour définir les valeurs de cet objet `basic_streambuf`.  
+ An lvalue reference to the `basic_streambuf` object that is used to set the values for this `basic_streambuf` object.  
   
-### <a name="remarks"></a>Notes  
- Le premier constructeur protégé stocke un pointeur null dans tous les pointeurs contrôlant la mémoire tampon d’entrée et la mémoire tampon de sortie. Il stocke également `locale::classic` dans l’objet de paramètres régionaux. Pour plus d’informations, consultez [locale::classic](../standard-library/locale-class.md#classic).  
+### <a name="remarks"></a>Remarks  
+ The first protected constructor stores a null pointer in all pointers controlling the input buffer and the output buffer. It also stores `locale::classic` in the locale object. For more information, see [locale::classic](../standard-library/locale-class.md#classic).  
   
- Le deuxième constructeur protégé copie les pointeurs et les paramètres régionaux à partir de `right`.  
+ The second protected constructor copies the pointers and locale from `right`.  
   
 ##  <a name="char_type"></a>  basic_streambuf::char_type  
- Associe un nom de type au paramètre de modèle **Elem**.  
+ Associates a type name with the **Elem** template parameter.  
   
 ```  
 typedef Elem char_type;  
 ```  
   
 ##  <a name="eback"></a>  basic_streambuf::eback  
- Une fonction protégée qui retourne un pointeur vers le début de la mémoire tampon d'entrée.  
+ A protected function that returns a pointer to the beginning of the input buffer.  
   
 ```  
 char_type *eback() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Pointeur vers le début de la mémoire tampon d’entrée.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the beginning of the input buffer.  
   
 ##  <a name="egptr"></a>  basic_streambuf::egptr  
- Une fonction protégée qui retourne un pointeur qui pointe juste après la fin de la mémoire tampon d'entrée.  
+ A protected function that returns a pointer just past the end of the input buffer.  
   
 ```  
 char_type *egptr() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Pointeur juste après la fin de la mémoire tampon d’entrée.  
+### <a name="return-value"></a>Return Value  
+ A pointer just past the end of the input buffer.  
   
 ##  <a name="epptr"></a>  basic_streambuf::epptr  
- Une fonction protégée qui retourne un pointeur qui pointe juste après la fin de la mémoire tampon de sortie.  
+ A protected function that returns a pointer just past the end of the output buffer.  
   
 ```  
 char_type *epptr() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Pointeur juste après la fin de la mémoire tampon de sortie.  
+### <a name="return-value"></a>Return Value  
+ A pointer just past the end of the output buffer.  
   
 ##  <a name="gbump"></a>  basic_streambuf::gbump  
- Une fonction protégée qui ajoute `count` au pointeur suivant pour la mémoire tampon d'entrée.  
+ A protected function that adds `count` to the next pointer for the input buffer.  
   
 ```  
 void gbump(int count);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `count`  
- Quantité de laquelle faire avancer le pointeur.  
+ The amount by which to advance the pointer.  
   
 ##  <a name="getloc"></a>  basic_streambuf::getloc  
- Obtient les paramètres régionaux de l’objet basic_streambuf.  
+ Gets the basic_streambuf object's locale.  
   
 ```  
 locale getloc() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Objet de paramètres régionaux stocké.  
+### <a name="return-value"></a>Return Value  
+ The stored locale object.  
   
-### <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [ios_base::getloc](../standard-library/ios-base-class.md#getloc).  
+### <a name="remarks"></a>Remarks  
+ For related information, see [ios_base::getloc](../standard-library/ios-base-class.md#getloc).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_getloc.cpp  
@@ -308,43 +351,43 @@ C
 ```  
   
 ##  <a name="gptr"></a>  basic_streambuf::gptr  
- Une fonction protégée qui retourne un pointeur vers l'élément suivant de la mémoire tampon d'entrée.  
+ A protected function that returns a pointer to the next element of the input buffer.  
   
 ```  
 char_type *gptr() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Pointeur vers l’élément suivant de la mémoire tampon d’entrée.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the next element of the input buffer.  
   
 ##  <a name="imbue"></a>  basic_streambuf::imbue  
- Fonction virtuelle protégée appelée par [pubimbue](#pubimbue).  
+ A protected virtual function called by [pubimbue](#pubimbue).  
   
 ```  
 virtual void imbue(const locale& _Loc);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Loc`  
- Référence à des paramètres régionaux.  
+ A reference to a locale.  
   
-### <a name="remarks"></a>Notes  
- Le comportement par défaut consiste à n’effectuer aucune opération.  
+### <a name="remarks"></a>Remarks  
+ The default behavior is to do nothing.  
   
 ##  <a name="in_avail"></a>  basic_streambuf::in_avail  
- Retourne le nombre d'éléments qui sont prêts à être lus dans la mémoire tampon.  
+ Returns the number of elements that are ready to be read from the buffer.  
   
 ```  
 streamsize in_avail();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre d’éléments prêts à être lus dans la mémoire tampon.  
+### <a name="return-value"></a>Return Value  
+ The number of elements that are ready to be read from the buffer.  
   
-### <a name="remarks"></a>Remarques  
- Si un [position de lecture](../standard-library/basic-streambuf-class.md) n’est disponible, la fonction membre retourne [egptr](#egptr) - [gptr](#gptr). Sinon, elle retourne [showmanyc](#showmanyc).  
+### <a name="remarks"></a>Remarks  
+ If a [read position](../standard-library/basic-streambuf-class.md) is available, the member function returns [egptr](#egptr) - [gptr](#gptr). Otherwise, it returns [showmanyc](#showmanyc).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_in_avail.cpp  
@@ -363,147 +406,147 @@ int main( )
 ```  
   
 ##  <a name="int_type"></a>  basic_streambuf::int_type  
- Associe un nom de type de la portée basic_streambuf à l’un des types d’un paramètre de modèle.  
+ Associates a type name within basic_streambuf scope with one of the types in a template parameter.  
   
 ```  
 typedef typename traits_type::int_type int_type;  
 ```  
   
 ##  <a name="off_type"></a>  basic_streambuf::off_type  
- Associe un nom de type de la portée basic_streambuf à l’un des types d’un paramètre de modèle.  
+ Associates a type name within basic_streambuf scope with one of the types in a template parameter.  
   
 ```  
 typedef typename traits_type::off_type off_type;  
 ```  
   
 ##  <a name="op_eq"></a>  basic_streambuf::operator=  
- Assigne les valeurs de cet objet à partir d'un autre objet `basic_streambuf`.  
+ Assigns the values of this object from another `basic_streambuf` object.  
   
 ```  
 basic_streambuf& operator=(const basic_streambuf& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `right`  
- Référence lvalue à l'objet `basic_streambuf` qui est utilisée pour affecter des valeurs à cet objet.  
+ An lvalue reference to the `basic_streambuf` object that is used to assign values to this object.  
   
-### <a name="remarks"></a>Notes  
- L'opérateur membre protégé copie à partir de `right` les pointeurs qui contrôlent la mémoire tampon d'entrée et la mémoire tampon de sortie. Il stocke également `right``.`[getloc()](#getloc) dans le `locale object`. Il retourne `*this`.  
+### <a name="remarks"></a>Remarks  
+ The protected member operator copies from `right` the pointers that control the input buffer and the output buffer. It also stores `right.`[getloc()](#getloc) in the `locale object`. It returns `*this`.  
   
 ##  <a name="overflow"></a>  basic_streambuf::overflow  
- Fonction virtuelle protégée qui peut être appelée quand un nouveau caractère est inséré dans une mémoire tampon saturée.  
+ A protected virtual function that can be called when a new character is inserted into a full buffer.  
   
 ```  
 virtual int_type overflow(int_type _Meta = traits_type::eof());
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Meta`  
- Caractère à insérer dans la mémoire tampon ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).  
+ The character to insert into the buffer, or **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).  
   
-### <a name="return-value"></a>Valeur de retour  
- Si la fonction ne peut pas réussir, elle retourne **traits_type::eof** ou lève une exception. Sinon, elle retourne **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*). Le comportement par défaut consiste à retourner **traits_type::eof**.  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns **traits_type::eof** or throws an exception. Otherwise, it returns **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*). The default behavior is to return **traits_type::eof**.  
   
-### <a name="remarks"></a>Notes  
- Si _ *Meta* n’a pas une valeur égale à **traits_type::eof**, la fonction membre virtuelle protégée s’efforce d’insérer l’élément **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) dans le flux de sortie. Elle peut le faire de différentes manières :  
+### <a name="remarks"></a>Remarks  
+ If _ *Meta* does not compare equal to **traits_type::eof**, the protected virtual member function endeavors to insert the element **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) into the output stream. It can do so in various ways:  
   
--   Si une `write position` est disponible, elle peut stocker l’élément dans la position d’écriture et incrémenter le pointeur suivant pour la mémoire tampon de sortie.  
+-   If a `write position` is available, it can store the element into the write position and increment the next pointer for the output buffer.  
   
--   Elle peut rendre disponible une position d’écriture en allouant du stockage nouveau ou supplémentaire à la mémoire tampon de sortie.  
+-   It can make a write position available by allocating new or additional storage for the output buffer.  
   
--   Elle peut rendre disponible une position d’écriture en écrivant, dans une destination externe quelconque, tout ou partie des éléments entre le pointeur de début et le suivant pour la mémoire tampon de sortie.  
+-   It can make a write position available by writing out, to some external destination, some or all of the elements between the beginning and next pointers for the output buffer.  
   
- La fonction overflow virtuelle, avec les fonctions [sync](#sync) et [underflow](#underflow), définit les caractéristiques de la classe dérivée de streambuf. Chaque classe dérivée peut implémenter la fonction overflow de différentes façons, mais l’interface avec la classe de flux d’appel est la même.  
+ The virtual overflow function, together with the [sync](#sync) and [underflow](#underflow) functions, defines the characteristics of the streambuf-derived class. Each derived class might implement overflow differently, but the interface with the calling stream class is the same.  
   
- La fonction `overflow` est souvent appelée par les fonctions publiques `streambuf` comme `sputc` et `sputn` quand la zone de placement est saturée, mais les autres classes, y compris les classes de flux, peuvent appeler `overflow` à tout moment.  
+ The `overflow` function is most frequently called by public `streambuf` functions like `sputc` and `sputn` when the put area is full, but other classes, including the stream classes, can call `overflow` anytime.  
   
- La fonction consomme les caractères de la zone de placement entre les pointeurs `pbase` et `pptr`, puis réinitialise la zone de placement. La fonction `overflow` doit également consommer `nCh` (si `nCh` n’est pas `EOF`) ou elle peut choisir de placer ce caractère dans la nouvelle zone de placement pour qu’il soit utilisé lors du prochain appel.  
+ The function consumes the characters in the put area between the `pbase` and `pptr` pointers and then reinitializes the put area. The `overflow` function must also consume `nCh` (if `nCh` is not `EOF`), or it might choose to put that character in the new put area so that it will be consumed on the next call.  
   
- La définition du mot consommation varie selon les classes dérivées. Par exemple, la classe `filebuf` écrit ses caractères dans un fichier, tandis que la classe `strstreambuf` les conserve dans sa mémoire tampon et (si la mémoire tampon est désignée comme étant dynamique) étend la mémoire tampon en réponse à un appel à la fonction overflow. Cette extension est obtenue en libérant l’ancienne mémoire tampon et en la remplaçant par une nouvelle mémoire tampon plus grande. Les pointeurs sont ajustés selon les besoins.  
+ The definition of consume varies among derived classes. For example, the `filebuf` class writes its characters to a file, while the `strstreambuf` class keeps them in its buffer and (if the buffer is designated as dynamic) expands the buffer in response to a call to overflow. This expansion is achieved by freeing the old buffer and replacing it with a new, larger one. The pointers are adjusted as necessary.  
   
 ##  <a name="pbackfail"></a>  basic_streambuf::pbackfail  
- Une fonction membre virtuelle protégée qui tente de replacer un élément dans le flux d'entrée, puis d'en faire l'élément actif (pointé par le pointeur suivant).  
+ A protected virtual member function that tries to put back an element into the input stream, then make it the current element (pointed to by the next pointer).  
   
 ```  
 virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Meta`  
- Caractère à insérer dans la mémoire tampon ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).  
+ The character to insert into the buffer, or **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).  
   
-### <a name="return-value"></a>Valeur de retour  
- Si la fonction ne peut pas réussir, elle retourne **traits_type::eof** ou lève une exception. Sinon, elle retourne une autre valeur. Le comportement par défaut consiste à retourner **traits_type::eof**.  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns **traits_type::eof** or throws an exception. Otherwise, it returns some other value. The default behavior is to return **traits_type::eof**.  
   
-### <a name="remarks"></a>Notes  
- Si _ *Meta* a la même valeur que **traits_type::eof**, l’élément à remettre est celui qui se trouve dans le flux avant l’élément actuel. Sinon, cet élément est remplacé par **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). La fonction peut remettre un élément de différentes manières :  
+### <a name="remarks"></a>Remarks  
+ If _ *Meta* compares equal to **traits_type::eof**, the element to push back is effectively the one already in the stream before the current element. Otherwise, that element is replaced by **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). The function can put back an element in various ways:  
   
--   Si une position où remettre l’élément est disponible, elle peut stocker l’élément dans cette position et décrémenter le pointeur suivant pour la mémoire tampon d’entrée.  
+-   If a putback position is available, it can store the element into the putback position and decrement the next pointer for the input buffer.  
   
--   Elle peut rendre disponible une position en allouant du stockage nouveau ou supplémentaire à la mémoire tampon d’entrée.  
+-   It can make a putback position available by allocating new or additional storage for the input buffer.  
   
--   Pour une mémoire tampon de flux avec des flux d’entrée et de sortie courants, elle peut rendre disponible une position en écrivant, dans une destination externe quelconque, tout ou partie des éléments entre le pointeur de début et le suivant pour la mémoire tampon de sortie.  
+-   For a stream buffer with common input and output streams, it can make a putback position available by writing out, to some external destination, some or all of the elements between the beginning and next pointers for the output buffer.  
   
 ##  <a name="pbase"></a>  basic_streambuf::pbase  
- Une fonction protégée qui retourne un pointeur vers le début de la mémoire tampon de sortie.  
+ A protected function that returns a pointer to the beginning of the output buffer.  
   
 ```  
 char_type *pbase() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Pointeur vers le début de la mémoire tampon de sortie.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the beginning of the output buffer.  
   
 ##  <a name="pbump"></a>  basic_streambuf::pbump  
- Une fonction protégée qui ajoute `count` au pointeur suivant pour la mémoire tampon de sortie.  
+ A protected function that adds `count` to the next pointer for the output buffer.  
   
 ```  
 void pbump(int count);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `count`  
- Nombre de caractères duquel avancer la position d’écriture.  
+ The number of characters by which to move the write position forward.  
   
 ##  <a name="pos_type"></a>  basic_streambuf::pos_type  
- Associe un nom de type de la portée basic_streambuf à l’un des types d’un paramètre de modèle.  
+ Associates a type name within basic_streambuf scope with one of the types in a template parameter.  
   
 ```  
 typedef typename traits_type::pos_type pos_type;  
 ```  
   
 ##  <a name="pptr"></a>  basic_streambuf::pptr  
- Une fonction protégée qui retourne un pointeur vers l'élément suivant de la mémoire tampon de sortie.  
+ A protected function that returns a pointer to the next element of the output buffer.  
   
 ```  
 char_type *pptr() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Pointeur vers l’élément suivant de la mémoire tampon de sortie.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the next element of the output buffer.  
   
 ##  <a name="pubimbue"></a>  basic_streambuf::pubimbue  
- Définit les paramètres régionaux de l’objet basic_streambuf.  
+ Sets the basic_streambuf object's locale.  
   
 ```  
 locale pubimbue(const locale& _Loc);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Loc`  
- Référence à des paramètres régionaux.  
+ A reference to a locale.  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur précédente stockée dans l’objet de paramètres régionaux.  
+### <a name="return-value"></a>Return Value  
+ The previous value stored in the locale object.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre stocke _ *Loc* dans l’objet de paramètres régionaux et appelle [imbue](#imbue).  
+### <a name="remarks"></a>Remarks  
+ The member function stores _ *Loc* in the locale object and calls [imbue](#imbue).  
   
-### <a name="example"></a>Exemple  
-  Consultez [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue) pour obtenir un exemple d’utilisation de `pubimbue`.  
+### <a name="example"></a>Example  
+  See [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue) for an example that uses `pubimbue`.  
   
 ##  <a name="pubseekoff"></a>  basic_streambuf::pubseekoff  
- Appelle [seekoff](#seekoff), une fonction virtuelle protégée qui est remplacée dans une classe dérivée.  
+ Calls [seekoff](#seekoff), a protected virtual function that is overridden in a derived class.  
   
 ```  
 pos_type pubseekoff(off_type _Off,
@@ -511,44 +554,44 @@ pos_type pubseekoff(off_type _Off,
     ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- Position à rechercher par rapport à `_Way`.  
+ The position to seek for relative to `_Way`.  
   
  `_Way`  
- Point de départ des opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.  
+ The starting point for offset operations. See [seekdir](../standard-library/ios-base-class.md#seekdir) for possible values.  
   
  `_Which`  
- Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne la nouvelle position ou une position de flux non valide ( [seekoff](#seekoff)(_ *Off*, `_Way`, `_Which`) ).  
+### <a name="return-value"></a>Return Value  
+ Returns the new position or an invalid stream position ( [seekoff](#seekoff)(_ *Off*, `_Way`, `_Which`) ).  
   
-### <a name="remarks"></a>Notes  
- Déplace le pointeur par rapport à `_Way`.  
+### <a name="remarks"></a>Remarks  
+ Moves the pointer relative to `_Way`.  
   
 ##  <a name="pubseekpos"></a>  basic_streambuf::pubseekpos  
- Appelle [seekpos](#seekpos), une fonction virtuelle protégée qui est remplacée dans une classe dérivée et réinitialise la position actuelle du pointeur.  
+ Calls [seekpos](#seekpos), a protected virtual function that is overridden in a derived class, and resets the current pointer position.  
   
 ```  
 pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Sp`  
- Position à rechercher.  
+ The position to seek for.  
   
  `_Which`  
- Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.  
   
-### <a name="return-value"></a>Valeur de retour  
- Nouvelle position ou position de flux non valide. Pour déterminer si la position du flux n’est pas valide, comparez la valeur de retour à `pos_type(off_type(-1))`.  
+### <a name="return-value"></a>Return Value  
+ The new position or an invalid stream position. To determine if the stream position is invalid, compare the return value with `pos_type(off_type(-1))`.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne [seekpos](#seekpos)(_ *Sp*, `_Which`).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [seekpos](#seekpos)(_ *Sp*, `_Which`).  
   
 ##  <a name="pubsetbuf"></a>  basic_streambuf::pubsetbuf  
- Appelle [setbuf](#setbuf), une fonction virtuelle protégée qui est remplacée dans une classe dérivée.  
+ Calls [setbuf](#setbuf), a protected virtual function that is overridden in a derived class.  
   
 ```  
 basic_streambuf<Elem, Tr> *pubsetbuf(
@@ -556,40 +599,40 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Buffer`  
- Pointeur vers `char_type` pour cette instanciation.  
+ A pointer to `char_type` for this instantiation.  
   
  `count`  
- Taille de la mémoire tampon.  
+ The size of the buffer.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne [setbuf](#setbuf)( `_Buffer`, `count`).  
+### <a name="return-value"></a>Return Value  
+ Returns [setbuf](#setbuf)( `_Buffer`, `count`).  
   
 ##  <a name="pubsync"></a>  basic_streambuf::pubsync  
- Appelle [sync](#sync), une fonction virtuelle protégée qui est remplacée dans une classe dérivée et met à jour le flux externe associé à cette mémoire tampon.  
+ Calls [sync](#sync), a protected virtual function that is overridden in a derived class, and updates the external stream associated with this buffer.  
   
 ```  
 int pubsync();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne [synchronisation](#sync) ou -1 si échec.  
+### <a name="return-value"></a>Return Value  
+ Returns [sync](#sync) or -1 if failure.  
   
 ##  <a name="sbumpc"></a>  basic_streambuf::sbumpc  
- Lit et retourne l'élément actuel, en déplaçant le pointeur du flux.  
+ Reads and returns the current element, moving the stream pointer.  
   
 ```  
 int_type sbumpc();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Élément actuel.  
+### <a name="return-value"></a>Return Value  
+ The current element.  
   
-### <a name="remarks"></a>Notes  
- Si une position de lecture est disponible, la fonction membre retourne **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **\***[gptr](#gptr)) et incrémente le pointeur suivant pour la mémoire tampon d’entrée. Sinon, elle retourne [uflow](#uflow).  
+### <a name="remarks"></a>Remarks  
+ If a read position is available, the member function returns **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **\***[gptr](#gptr)) and increments the next pointer for the input buffer. Otherwise, it returns [uflow](#uflow).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_sbumpc.cpp  
@@ -618,7 +661,7 @@ int main( )
 ```  
   
 ##  <a name="seekoff"></a>  basic_streambuf::seekoff  
- Fonction membre virtuelle protégée qui tente de modifier les positions actuelles des flux contrôlés.  
+ A protected virtual member function that tries to alter the current positions for the controlled streams.  
   
 ```  
 virtual pos_type seekoff(
@@ -627,58 +670,58 @@ virtual pos_type seekoff(
     ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- Position à rechercher par rapport à `_Way`.  
+ The position to seek for relative to `_Way`.  
   
  `_Way`  
- Point de départ des opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.  
+ The starting point for offset operations. See [seekdir](../standard-library/ios-base-class.md#seekdir) for possible values.  
   
  `_Which`  
- Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne la nouvelle position ou une position de flux non valide ( `seekoff` (_ *Off*, `_Way`, `_Which`) ).  
+### <a name="return-value"></a>Return Value  
+ Returns the new position or an invalid stream position ( `seekoff` (_ *Off*, `_Way`, `_Which`) ).  
   
-### <a name="remarks"></a>Notes  
- La nouvelle position est déterminée comme suit :  
+### <a name="remarks"></a>Remarks  
+ The new position is determined as follows:  
   
--   Si `_Way` == `ios_base::beg`, la nouvelle position est le début du flux plus _ *Off*.  
+-   If `_Way` == `ios_base::beg`, the new position is the beginning of the stream plus _ *Off*.  
   
--   Si `_Way` == `ios_base::cur`, la nouvelle position est la position actuelle du flux plus _ *Off*.  
+-   If `_Way` == `ios_base::cur`, the new position is the current stream position plus _ *Off*.  
   
--   Si `_Way` == `ios_base::end`, la nouvelle position est la fin du flux plus _ *Off*.  
+-   If `_Way` == `ios_base::end`, the new position is the end of the stream plus _ *Off*.  
   
- En règle générale, si **which & ios_base::in** est différent de zéro, le flux d’entrée est affecté et si **which & ios_base::out** est différent de zéro, le flux de sortie est affecté. Toutefois, l’utilisation réelle de ce paramètre varie selon les mémoires tampons de flux dérivées.  
+ Typically, if **which & ios_base::in** is nonzero, the input stream is affected, and if **which & ios_base::out** is nonzero, the output stream is affected. Actual use of this parameter varies among derived stream buffers, however.  
   
- Si la fonction réussit à modifier la ou les positions du flux, elle retourne la ou les positions du flux qui en résultent. Sinon, elle retourne une position de flux non valide. Le comportement par défaut consiste à retourner une position de flux non valide.  
+ If the function succeeds in altering the stream position or positions, it returns the resulting stream position or one of the resulting stream positions. Otherwise, it returns an invalid stream position. The default behavior is to return an invalid stream position.  
   
 ##  <a name="seekpos"></a>  basic_streambuf::seekpos  
- Fonction membre virtuelle protégée qui tente de modifier les positions actuelles des flux contrôlés.  
+ A protected virtual member function that tries to alter the current positions for the controlled streams.  
   
 ```  
 virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Sp`  
- Position à rechercher.  
+ The position to seek for.  
   
  `_Which`  
- Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.  
   
-### <a name="return-value"></a>Valeur de retour  
- Nouvelle position ou position de flux non valide. Pour déterminer si la position du flux n’est pas valide, comparez la valeur de retour à `pos_type(off_type(-1))`.  
+### <a name="return-value"></a>Return Value  
+ The new position, or an invalid stream position. To determine if the stream position is invalid, compare the return value with `pos_type(off_type(-1))`.  
   
-### <a name="remarks"></a>Notes  
- La nouvelle position est _ *Sp*.  
+### <a name="remarks"></a>Remarks  
+ The new position is _ *Sp*.  
   
- En règle générale, si **which & ios_base::in** est différent de zéro, le flux d’entrée est affecté et si **which & ios_base::out** est différent de zéro, le flux de sortie est affecté. Toutefois, l’utilisation réelle de ce paramètre varie selon les mémoires tampons de flux dérivées.  
+ Typically, if **which & ios_base::in** is nonzero, the input stream is affected, and if **which & ios_base::out** is nonzero, the output stream is affected. Actual use of this parameter varies among derived stream buffers, however.  
   
- Si la fonction réussit à modifier la ou les positions du flux, elle retourne la ou les positions du flux qui en résultent. Sinon, elle retourne une position de flux non valide (-1). Le comportement par défaut consiste à retourner une position de flux non valide.  
+ If the function succeeds in altering the stream position or positions, it returns the resulting stream position or one of the resulting stream positions. Otherwise, it returns an invalid stream position (-1). The default behavior is to return an invalid stream position.  
   
 ##  <a name="setbuf"></a>  basic_streambuf::setbuf  
- Fonction membre virtuelle protégée qui effectue une opération spécifique pour chaque mémoire tampon de flux dérivée.  
+ A protected virtual member function that performs an operation particular to each derived stream buffer.  
   
 ```  
 virtual basic_streambuf<Elem, Tr> *setbuf(
@@ -686,21 +729,21 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Buffer`  
- Pointeur vers une mémoire tampon.  
+ Pointer to a buffer.  
   
  `count`  
- Taille de la mémoire tampon.  
+ Size of the buffer.  
   
-### <a name="return-value"></a>Valeur de retour  
- Le comportement par défaut consiste à retourner **this**.  
+### <a name="return-value"></a>Return Value  
+ The default behavior is to return **this**.  
   
-### <a name="remarks"></a>Notes  
- Consultez [basic_filebuf](../standard-library/basic-filebuf-class.md). `setbuf` fournit une zone de mémoire pour l’objet `streambuf` à utiliser. La façon dont la mémoire tampon est utilisée est définie dans les classes dérivées.  
+### <a name="remarks"></a>Remarks  
+ See [basic_filebuf](../standard-library/basic-filebuf-class.md). `setbuf` provides an area of memory for the `streambuf` object to use. How the buffer is used in defined in the derived classes.  
   
 ##  <a name="setg"></a>  basic_streambuf::setg  
- Fonction protégée qui stocke _ *Gbeg* dans le pointeur de début, `_Gnext` dans le pointeur suivant et `_Gend` dans le pointeur de fin pour la mémoire tampon d’entrée.  
+ A protected function that stores _ *Gbeg* in the beginning pointer, `_Gnext` in the next pointer, and `_Gend` in the end pointer for the input buffer.  
   
 ```  
 void setg(char_type* _Gbeg,
@@ -708,44 +751,44 @@ void setg(char_type* _Gbeg,
     char_type* _Gend);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *_Gbeg*  
- Pointeur vers le début de la mémoire tampon.  
+ A pointer to the beginning of the buffer.  
   
  `_Gnext`  
- Pointeur vers un emplacement situé au milieu de la mémoire tampon.  
+ A pointer to somewhere in the middle of the buffer.  
   
  `_Gend`  
- Pointeur vers la fin de la mémoire tampon.  
+ A pointer to the end of the buffer.  
   
 ##  <a name="setp"></a>  basic_streambuf::setp  
- Une fonction protégée qui stocke `_Pbeg` dans le pointeur de début et `_Pend` dans le pointeur suivant dans le pointeur de fin pour la mémoire tampon de sortie.  
+ A protected function that stores `_Pbeg` in the beginning pointer and `_Pend` in the end pointer for the output buffer.  
   
 ```  
 void setp(char_type* _Pbeg, char_type* _Pend);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Pbeg`  
- Pointeur vers le début de la mémoire tampon.  
+ A pointer to the beginning of the buffer.  
   
  `_Pend`  
- Pointeur vers la fin de la mémoire tampon.  
+ A pointer to the end of the buffer.  
   
 ##  <a name="sgetc"></a>  basic_streambuf::sgetc  
- Retourne l'élément actuel sans changer la position dans le flux.  
+ Returns current element without changing position in the stream.  
   
 ```  
 int_type sgetc();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Élément actuel.  
+### <a name="return-value"></a>Return Value  
+ The current element.  
   
-### <a name="remarks"></a>Notes  
- Si une position de lecture est disponible, la fonction membre retourne **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `*`[gptr](#gptr)). Sinon, elle retourne [underflow](#underflow).  
+### <a name="remarks"></a>Remarks  
+ If a read position is available, the member function returns **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `*`[gptr](#gptr)). Otherwise, it returns [underflow](#underflow).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_sgetc.cpp  
@@ -766,9 +809,9 @@ int main( )
 ```  
   
 ##  <a name="sgetn"></a>  basic_streambuf::sgetn  
- Extrait jusqu’à `count` caractères de la mémoire tampon d’entrée et les stocke dans la mémoire tampon fournie `ptr`.  
+ Extracts up to `count` characters from the input buffer and stores them in the provided buffer `ptr`.  
   
- Cette méthode est potentiellement dangereuse, car elle suppose que l’appelant vérifie que les valeurs passées sont correctes.  
+ This method is potentially unsafe, as it relies on the caller to check that the passed values are correct.  
   
 ```  
 streamsize sgetn(
@@ -776,20 +819,20 @@ streamsize sgetn(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- Mémoire tampon qui contient les caractères extraits.  
+ The buffer to contain the extracted characters.  
   
  `count`  
- Nombre d’éléments à lire.  
+ The number of elements to read.  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre d’éléments lus. Pour plus d’informations, consultez [streamsize](../standard-library/ios-typedefs.md#streamsize).  
+### <a name="return-value"></a>Return Value  
+ The number of elements read. See [streamsize](../standard-library/ios-typedefs.md#streamsize) for more information.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne [xsgetn](#xsgetn)( `ptr`, `count`).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [xsgetn](#xsgetn)( `ptr`, `count`).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_sgetn.cpp  
@@ -817,29 +860,29 @@ int main()
 ```  
   
 ##  <a name="showmanyc"></a>  basic_streambuf::showmanyc  
- Fonction membre virtuelle protégée qui retourne le nombre de caractères qui peuvent être extraits du flux d’entrée et garantit que le programme ne sera pas soumis à un délai d’attente indéfini.  
+ A protected virtual member function that returns a count of the number of characters that can be extracted from the input stream and ensure that the program will not be subject to an indefinite wait.  
   
 ```  
 virtual streamsize showmanyc();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Le comportement par défaut consiste à retourner zéro.  
+### <a name="return-value"></a>Return Value  
+ The default behavior is to return zero.  
   
 ##  <a name="snextc"></a>  basic_streambuf::snextc  
- Lit l'élément actuel et retourne l'élément suivant.  
+ Reads the current element and returns the following element.  
   
 ```  
 int_type snextc();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Élément suivant dans le flux.  
+### <a name="return-value"></a>Return Value  
+ The next element in the stream.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre appelle [sbumpc](#sbumpc) et, si cette fonction retourne **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), retourne **traits_type::eof**. Sinon, elle retourne [sgetc](#sgetc).  
+### <a name="remarks"></a>Remarks  
+ The member function calls [sbumpc](#sbumpc) and, if that function returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), returns **traits_type::eof**. Otherwise, it returns [sgetc](#sgetc).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_snextc.cpp  
@@ -867,23 +910,23 @@ aa97
 ```  
   
 ##  <a name="sputbackc"></a>  basic_streambuf::sputbackc  
- Place un char_type dans le flux.  
+ Puts a char_type in the stream.  
   
 ```  
 int_type sputbackc(char_type _Ch);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- Le caractère.  
+ The character.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne le caractère ou un échec.  
+### <a name="return-value"></a>Return Value  
+ Returns the character or failure.  
   
-### <a name="remarks"></a>Notes  
- Si une position de remise est disponible et que `_Ch` a une valeur égale au caractère stocké à cet emplacement, la fonction membre décrémente le pointeur suivant pour la mémoire tampon d’entrée et retourne **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). Sinon, elle retourne [pbackfail](#pbackfail)( `_Ch`).  
+### <a name="remarks"></a>Remarks  
+ If a putback position is available and `_Ch` compares equal to the character stored in that position, the member function decrements the next pointer for the input buffer and returns **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). Otherwise, it returns [pbackfail](#pbackfail)( `_Ch`).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_sputbackc.cpp  
@@ -911,23 +954,23 @@ int main( )
 ```  
   
 ##  <a name="sputc"></a>  basic_streambuf::sputc  
- Place un caractère dans le flux.  
+ Puts a character into the stream.  
   
 ```  
 int_type sputc(char_type _Ch);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- Le caractère.  
+ The character.  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne le caractère, en cas de réussite.  
+### <a name="return-value"></a>Return Value  
+ Returns the character, if successful.  
   
-### <a name="remarks"></a>Notes  
- Si une `write position` est disponible, la fonction membre retourne `_Ch` dans la position d’écriture, incrémente le pointeur suivant pour la mémoire tampon de sortie et retourne **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). Sinon, elle retourne [overflow](#overflow)( `_Ch`).  
+### <a name="remarks"></a>Remarks  
+ If a `write position` is available, the member function stores `_Ch` in the write position, increments the next pointer for the output buffer, and returns **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). Otherwise, it returns [overflow](#overflow)( `_Ch`).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_sputc.cpp  
@@ -950,26 +993,26 @@ a
 ```  
   
 ##  <a name="sputn"></a>  basic_streambuf::sputn  
- Place une chaîne de caractères dans le flux.  
+ Puts a character string into the stream.  
   
 ```  
 streamsize sputn(const char_type* ptr, streamsize count);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- La chaîne de caractères.  
+ The character string.  
   
  `count`  
- Le nombre de caractères.  
+ The count of characters.  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre de caractères réellement insérés dans le flux.  
+### <a name="return-value"></a>Return Value  
+ The number of characters actually inserted into the stream.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne [xsputn](#xsputn)( `ptr`, `count`). Consultez la section Notes de cette fonction membre pour plus d’informations.  
+### <a name="remarks"></a>Remarks  
+ The member function returns [xsputn](#xsputn)( `ptr`, `count`). See the Remarks section of this member for more information.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_sputn.cpp  
@@ -992,16 +1035,16 @@ test
 ```  
   
 ##  <a name="stossc"></a>  basic_streambuf::stossc  
- Se déplace après l'élément actuel du flux.  
+ Move past the current element in the stream.  
   
 ```  
 void stossc();
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre appelle [sbumpc](#sbumpc). Notez qu’une implémentation n’est pas nécessaire pour fournir cette fonction membre.  
+### <a name="remarks"></a>Remarks  
+ The member function calls [sbumpc](#sbumpc). Note that an implementation is not required to supply this member function.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_stossc.cpp  
@@ -1021,19 +1064,19 @@ int main( )
 ```  
   
 ##  <a name="sungetc"></a>  basic_streambuf::sungetc  
- Obtient un caractère du flux.  
+ Gets a character from the stream.  
   
 ```  
 int_type sungetc();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne le caractère ou un échec.  
+### <a name="return-value"></a>Return Value  
+ Returns either the character or failure.  
   
-### <a name="remarks"></a>Notes  
- Si une position de remise est disponible, la fonction membre décrémente le pointeur suivant pour la mémoire tampon d’entrée et retourne `traits_type::`[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `*`[gptr](#gptr)). Toutefois, il n’est pas toujours possible de déterminer le dernier caractère lu pour qu’il soit capturé dans l’état de la mémoire tampon actuelle. Si la valeur est true, la fonction retourne [pbackfail](#pbackfail). Pour éviter cette situation, suivez le caractère à remettre et appelez `sputbackc(ch)`, qui n’échoue pas, sauf si vous l’appelez au début du flux et que vous essayez de remettre plusieurs caractères.  
+### <a name="remarks"></a>Remarks  
+ If a putback position is available, the member function decrements the next pointer for the input buffer and returns `traits_type::`[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `*`[gptr](#gptr)). However, it is not always possible to determine the last character read so that it can be captured in the state of the current buffer. If this is true, then the function returns [pbackfail](#pbackfail). To avoid this situation, keep track of the character to put back and call `sputbackc(ch)`, which will not fail provided you don't call it at the beginning of the stream and you don't try to put back more than one character.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_sungetc.cpp  
@@ -1068,93 +1111,93 @@ int main( )
 ```  
   
 ##  <a name="swap"></a>  basic_streambuf::swap  
- Échange les valeurs de cet objet avec celles de l'objet `basic_streambuf` fourni.  
+ Exchanges the values in this object for the values in the provided `basic_streambuf` object.  
   
 ```  
 void swap(basic_streambuf& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
   
-|Paramètre|Description|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|Référence lvalue à l'objet `basic_streambuf`  utilisée pour échanger des valeurs.|  
+|`right`|An lvalue reference to the `basic_streambuf` object that is used to exchange values.|  
   
-### <a name="remarks"></a>Notes  
- La fonction membre protégée échange avec `right` tous les pointeurs contrôlant le `input buffer` et le `output buffer`. Elle échange également `right``.`[getloc()](#getloc) avec l’objet `locale`.  
+### <a name="remarks"></a>Remarks  
+ The protected member function exchanges with `right` all the pointers controlling the `input buffer` and the `output buffer`. It also exchanges `right.`[getloc()](#getloc) with the `locale` object.  
   
 ##  <a name="sync"></a>  basic_streambuf::sync  
- Une fonction virtuelle protégée qui tente de synchroniser les flux contrôlés avec tous les flux externes associés.  
+ A protected virtual function that tries to synchronize the controlled streams with any associated external streams.  
   
 ```  
 virtual int sync();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Si la fonction ne peut pas réussir, elle retourne -1. Le comportement par défaut consiste à retourner zéro.  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns -1. The default behavior is to return zero.  
   
-### <a name="remarks"></a>Notes  
- `sync` implique l’écriture de tous les éléments entre le pointeur de début et le suivant pour la mémoire tampon de sortie. Elle n’implique pas de remettre les éléments entre les pointeurs suivants et le pointeur de fin pour la mémoire tampon d’entrée.  
+### <a name="remarks"></a>Remarks  
+ `sync` involves writing out any elements between the beginning and next pointers for the output buffer. It does not involve putting back any elements between the next and end pointers for the input buffer.  
   
 ##  <a name="traits_type"></a>  basic_streambuf::traits_type  
- Associe un nom de type au paramètre de modèle **Tr**.  
+ Associates a type name with the **Tr** template parameter.  
   
 ```  
 typedef Tr traits_type;  
 ```  
   
 ##  <a name="uflow"></a>  basic_streambuf::uflow  
- Une fonction virtuelle protégée qui extrait l'élément actuel du flux d'entrée.  
+ A protected virtual function that extracts the current element from the input stream.  
   
 ```  
 virtual int_type uflow();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Élément actuel.  
+### <a name="return-value"></a>Return Value  
+ The current element.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre virtuelle protégée essaie d’extraire l’élément actuel **ch** du flux d’entrée, puis avance la position du flux actuel et retourne l’élément sous la forme **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**). Elle peut le faire de différentes manières :  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function tries to extract the current element **ch** from the input stream, then advance the current stream position, and return the element as **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**). It can do so in various ways:  
   
--   Si une position de lecture est disponible, elle accepte **ch** comme élément stocké dans la position de lecture et avance le pointeur suivant pour la mémoire tampon d’entrée.  
+-   If a read position is available, it takes **ch** as the element stored in the read position and advances the next pointer for the input buffer.  
   
--   Elle peut lire un élément directement à partir d’une source externe et le remettre avec la valeur **ch**.  
+-   It can read an element directly, from some external source, and deliver it as the value **ch**.  
   
--   Pour une mémoire tampon de flux avec des flux d’entrée et de sortie communs, elle peut rendre disponible une position de lecture en écrivant dans une destination externe quelconque tout ou partie des éléments entre le pointeur de début et le suivant pour la mémoire tampon de sortie. Sinon, elle peut allouer du stockage nouveau ou supplémentaire à la mémoire tampon d’entrée. La fonction lit ensuite un ou plusieurs éléments à partir d’une source externe.  
+-   For a stream buffer with common input and output streams, it can make a read position available by writing out, to some external destination, some or all of the elements between the beginning and next pointers for the output buffer. Or it can allocate new or additional storage for the input buffer. The function then reads in, from some external source, one or more elements.  
   
- Si la fonction ne peut pas réussir, elle retourne **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) ou lève une exception. Sinon, elle retourne l’élément actuel `ch` dans le flux d’entrée, converti comme décrit ci-dessus, et avance le pointeur suivant pour la mémoire tampon d’entrée. Le comportement par défaut consiste à appeler [underflow](#underflow) et, si cette fonction retourne **traits_type::eof**,à retourner **traits_type::eof**. Sinon, la fonction retourne l’élément actuel **ch** dans le flux d’entrée, converti comme décrit précédemment, et avance le pointeur suivant pour la mémoire tampon d’entrée.  
+ If the function cannot succeed, it returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), or throws an exception. Otherwise, it returns the current element `ch` in the input stream, converted as described above, and advances the next pointer for the input buffer. The default behavior is to call [underflow](#underflow) and, if that function returns **traits_type::eof**, to return **traits_type::eof**. Otherwise, the function returns the current element **ch** in the input stream, converted as previously described, and advances the next pointer for the input buffer.  
   
 ##  <a name="underflow"></a>  basic_streambuf::underflow  
- Fonction virtuelle protégée pour extraire l'élément actif du flux d'entrée.  
+ Protected, virtual function to extract the current element from the input stream.  
   
 ```  
 virtual int_type underflow();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Élément actuel.  
+### <a name="return-value"></a>Return Value  
+ The current element.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre virtuelle protégée s’efforce d’extraire l’élément actuel **ch** du flux d’entrée, sans avancer la position du flux actuel, et le retourne comme `traits_type::`[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**). Elle peut le faire de différentes manières :  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function endeavors to extract the current element **ch** from the input stream, without advancing the current stream position, and return it as `traits_type::`[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**). It can do so in various ways:  
   
--   Si une position de lecture est disponible, **ch** est l’élément stocké dans la position de lecture. Pour plus d’informations, consultez la section Notes de [basic_streambuf, classe](../standard-library/basic-streambuf-class.md).  
+-   If a read position is available, **ch** is the element stored in the read position. For more information on this, see the Remarks section of the [basic_streambuf Class](../standard-library/basic-streambuf-class.md).  
   
--   Elle peut rendre disponible une position de lecture en allouant du stockage nouveau ou supplémentaire à la mémoire tampon d’entrée, puis en lisant un ou plusieurs éléments à partir d’une source externe. Pour plus d’informations, consultez la section Notes de [basic_streambuf, classe](../standard-library/basic-streambuf-class.md).  
+-   It can make a read position available by allocating new or additional storage for the input buffer, then reading in, from some external source, one or more elements. For more information on this, see the Remarks section of the [basic_streambuf Class](../standard-library/basic-streambuf-class.md).  
   
- Si la fonction ne peut pas réussir, elle retourne `traits_type::`[eof](../standard-library/char-traits-struct.md#eof)`()` ou lève une exception. Sinon, elle retourne l’élément actuel dans le flux d’entrée, converti comme décrit précédemment. Le comportement par défaut consiste à retourner `traits_type::eof()`.  
+ If the function cannot succeed, it returns `traits_type::`[eof](../standard-library/char-traits-struct.md#eof)`()` or throws an exception. Otherwise, it returns the current element in the input stream, converted as previously described. The default behavior is to return `traits_type::eof()`.  
   
- La fonction `underflow` virtuelle, avec les fonctions [sync](#sync) et [underflow](#overflow), définit les caractéristiques de la classe dérivée de `streambuf`. Chaque classe dérivée peut implémenter `underflow` de différentes façons, mais l’interface avec la classe de flux d’appel est la même.  
+ The virtual `underflow` function, with the [sync](#sync) and [overflow](#overflow) functions, defines the characteristics of the `streambuf`-derived class. Each derived class might implement `underflow` differently, but the interface with the calling stream class is the same.  
   
- La fonction `underflow` est souvent appelée par les fonctions publiques `streambuf` comme [sgetc](#sgetc) et [sgetn](#sgetn) quand la zone de récupération est vide, mais les autres classes, y compris les classes de flux, peuvent appeler `underflow` à tout moment.  
+ The `underflow` function is most frequently called by public `streambuf` functions like [sgetc](#sgetc) and [sgetn](#sgetn) when the get area is empty, but other classes, including the stream classes, can call `underflow` anytime.  
   
- La fonction `underflow` fournit des caractères à la zone de récupération à partir de la source d’entrée. Si la zone de récupération contient des caractères, `underflow` retourne le premier caractère. Si la zone de récupération est vide, la fonction remplit la zone et retourne le caractère suivant (qu’elle laisse dans la zone de récupération). Si plus aucun caractère n’est disponible, `underflow` retourne `EOF` et laisse vide la zone de récupération.  
+ The `underflow` function supplies the get area with characters from the input source. If the get area contains characters, `underflow` returns the first character. If the get area is empty, it fills the get area and returns the next character (which it leaves in the get area). If there are no more characters available, then `underflow` returns `EOF` and leaves the get area empty.  
   
- Dans la classe `strstreambuf`, `underflow` ajuste le pointeur [egptr](#egptr) pour accéder au stockage alloué dynamiquement par un appel à `overflow`.  
+ In the `strstreambuf` class, `underflow` adjusts the [egptr](#egptr) pointer to access storage that was dynamically allocated by a call to `overflow`.  
   
 ##  <a name="xsgetn"></a>  basic_streambuf::xsgetn  
- Fonction virtuelle protégée qui extrait les éléments du flux d’entrée.  
+ Protected, virtual function to extract elements from the input stream.  
   
- Cette méthode est potentiellement dangereuse, car elle suppose que l’appelant vérifie que les valeurs passées sont correctes.  
+ This method is potentially unsafe, as it relies on the caller to check that the passed values are correct.  
   
 ```  
 virtual streamsize xsgetn(
@@ -1162,42 +1205,42 @@ virtual streamsize xsgetn(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- Mémoire tampon qui contient les caractères extraits.  
+ The buffer to contain the extracted characters.  
   
  `count`  
- Nombre d’éléments à extraire.  
+ The number of elements to extract.  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre d’éléments extraits.  
+### <a name="return-value"></a>Return Value  
+ The number of elements extracted.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre virtuelle protégée extrait jusqu’à `count` éléments du flux d’entrée, par des appels répétés à [sbumpc](#sbumpc), et les stocke dans le tableau à partir de `ptr`. Elle retourne le nombre d’éléments réellement extraits.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function extracts up to `count` elements from the input stream, as if by repeated calls to [sbumpc](#sbumpc), and stores them in the array beginning at `ptr`. It returns the number of elements actually extracted.  
   
 ##  <a name="xsputn"></a>  basic_streambuf::xsputn  
- Fonction virtuelle protégée qui insère les éléments dans le flux de sortie.  
+ Protected, virtual function to insert elements into the output stream.  
   
 ```  
 virtual streamsize xsputn(const char_type* ptr, streamsize count);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- Pointeur vers les éléments à insérer.  
+ Pointer to elements to insert.  
   
  `count`  
- Nombre d’éléments à insérer.  
+ Number of elements to insert.  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre d’éléments réellement insérés dans le flux.  
+### <a name="return-value"></a>Return Value  
+ The number of elements actually inserted into the stream.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre virtuelle protégée insère jusqu’à `count` éléments dans le flux de sortie, par des appels répétés à [sputc](#sputc), du tableau à partir de `ptr`. L’insertion de caractères dans le flux de sortie s’arrête une fois que les `count` caractères ont été écrits ou si l’appel de `sputc( count)` retourne `traits::eof()`. Elle retourne le nombre d’éléments réellement insérés.  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function inserts up to `count` elements into the output stream, as if by repeated calls to [sputc](#sputc), from the array beginning at `ptr`. The insertion of characters into the output stream stops once all `count` characters have been written, or if calling `sputc( count)` would return `traits::eof()`. It returns the number of elements actually inserted.  
   
-## <a name="see-also"></a>Voir aussi  
- [Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream, programmation](../standard-library/iostream-programming.md)   
- [iostreams, conventions](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

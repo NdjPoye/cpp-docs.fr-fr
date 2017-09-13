@@ -1,5 +1,5 @@
 ---
-title: system_clock, structure | Microsoft Docs
+title: system_clock Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,122 +36,122 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 053b2930d25bb7b1ec073764801530860511ac1b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 79e5cf6fa1d5fd952b74fcc2c444f6c169778247
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="systemclock-structure"></a>system_clock, structure
-Représente un *type d’horloge* basé sur l’horloge en temps réel du système.  
+# <a name="systemclock-structure"></a>system_clock Structure
+Represents a *clock type* that is based on the real-time clock of the system.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct system_clock;  
 ```  
   
-## <a name="remarks"></a>Notes  
- Un *type d’horloge* est utilisé pour obtenir l’heure actuelle au format UTC. Le type exprime une instanciation de la classe [duration](../standard-library/duration-class.md) et le modèle de classe [time_point](../standard-library/time-point-class.md), et il définit une fonction membre statique `now()` qui retourne l’heure.  
+## <a name="remarks"></a>Remarks  
+ A *clock type* is used to obtain the current time as UTC. The type embodies an instantiation of [duration](../standard-library/duration-class.md) and the class template [time_point](../standard-library/time-point-class.md), and defines a static member function `now()` that returns the time.  
   
- Une horloge est *monotone* si la valeur retournée par un premier appel à `now()` est toujours inférieure ou égale à la valeur retournée par un appel ultérieur à `now()`.  
+ A clock is *monotonic* if the value that is returned by a first call to `now()` is always less than or equal to the value that is returned by a subsequent call to `now()`.  
   
- Une horloge est *stable* si elle est *monotone* et si le laps de temps entre les battements d’horloge est constant.  
+ A clock is *steady* if it is *monotonic* and if the time between clock ticks is constant.  
   
- Dans cette implémentation, un `system_clock` est un synonyme de `high_resolution_clock`.  
+ In this implementation, a `system_clock` is synonymous with a `high_resolution_clock`.  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-typedefs"></a>Typedefs publics  
+### <a name="public-typedefs"></a>Public Typedefs  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|`system_clock::duration`|Synonyme de `duration<rep, period>`.|  
-|`system_clock::period`|Synonyme du type qui est utilisé pour représenter le cycle d'horloge dans l'instanciation contenue de `duration`.|  
-|`system_clock::rep`|Synonyme du type qui est utilisé pour représenter le nombre de battements d'horloge dans l'instanciation contenue de `duration`.|  
-|`system_clock::time_point`|Synonyme de `time_point<Clock, duration>`, où `Clock` est un synonyme du type d'horloge ou d'un autre type d'horloge basé sur la même époque et ayant le même type `duration` imbriqué.|  
+|`system_clock::duration`|A synonym for `duration<rep, period>`.|  
+|`system_clock::period`|A synonym for the type that is used to represent the tick period in the contained instantiation of `duration`.|  
+|`system_clock::rep`|A synonym for the type that is used to represent the number of clock ticks in the contained instantiation of `duration`.|  
+|`system_clock::time_point`|A synonym for `time_point<Clock, duration>`, where `Clock` is a synonym for either the clock type itself or another clock type that is based on the same epoch and has the same nested `duration` type.|  
   
-### <a name="public-methods"></a>Méthodes publiques  
+### <a name="public-methods"></a>Public Methods  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[from_time_t](#from_time_t)|Static. Retourne un `time_point` qui se rapproche le plus d'une heure spécifiée.|  
-|[maintenant](#now)|Static. Retourne l'heure actuelle.|  
-|[to_time_t](#to_time_t)|Static. Retourne un objet `time_t` qui se rapproche le plus d'un `time_point` spécifié.|  
+|[from_time_t](#from_time_t)|Static. Returns a `time_point` that most closely approximates a specified time.|  
+|[now](#now)|Static. Returns the current time.|  
+|[to_time_t](#to_time_t)|Static. Returns a `time_t` object that most closely approximates a specified `time_point`.|  
   
-### <a name="public-constants"></a>Constantes publiques  
+### <a name="public-constants"></a>Public Constants  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[system_clock::is_monotonic, constante](#is_monotonic_constant)|Spécifie si le type d'horloge est monotone.|  
-|[system_clock::is_steady, constante](#is_steady_constant)|Spécifie si le type d'horloge est stable.|  
+|[system_clock::is_monotonic Constant](#is_monotonic_constant)|Specifies whether the clock type is monotonic.|  
+|[system_clock::is_steady Constant](#is_steady_constant)|Specifies whether the clock type is steady.|  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<chrono >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<chrono>  
   
- **Espace de noms :** std::chrono  
+ **Namespace:** std::chrono  
   
-##  <a name="from_time_t"></a>system_clock::from_time_t
- Méthode statique qui retourne un [time_point](../standard-library/time-point-class.md) qui se rapproche le plus de l’heure représentée par `Tm`.  
+##  <a name="from_time_t"></a>  system_clock::from_time_t
+ Static method that returns a [time_point](../standard-library/time-point-class.md) that most closely approximates the time that is represented by `Tm`.  
   
 ```  
 static time_point from_time_t(time_t Tm) noexcept;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Tm`  
- Objet [time_t](../c-runtime-library/standard-types.md).  
+ A [time_t](../c-runtime-library/standard-types.md) object.  
   
-##  <a name="is_monotonic_constant"></a>  system_clock::is_monotonic, constante  
- Valeur statique qui spécifie si le type d’horloge est monotone.  
+##  <a name="is_monotonic_constant"></a>  system_clock::is_monotonic Constant  
+ Static value that specifies whether the clock type is monotonic.  
   
 ```  
 static const bool is_monotonic = false;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Dans cette implémentation, `system_clock::is_monotonic` retourne toujours `false`.  
+### <a name="return-value"></a>Return Value  
+ In this implementation, `system_clock::is_monotonic` always returns `false`.  
   
-### <a name="remarks"></a>Notes  
- Une horloge est *monotone* si la valeur retournée par un premier appel à `now()` est toujours inférieure ou égale à la valeur retournée par un appel ultérieur à `now()`.  
+### <a name="remarks"></a>Remarks  
+ A clock is *monotonic* if the value that is returned by a first call to `now()` is always less than or equal to the value that is returned by a subsequent call to `now()`.  
   
-##  <a name="is_steady_constant"></a>  system_clock::is_steady, constante  
- Valeur statique qui spécifie si le type d’horloge est *stable*.  
+##  <a name="is_steady_constant"></a>  system_clock::is_steady Constant  
+ Static value that specifies whether the clock type is *steady*.  
   
 ```  
 static const bool is_steady = false;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Dans cette implémentation, `system_clock::is_steady` retourne toujours `false`.  
+### <a name="return-value"></a>Return Value  
+ In this implementation, `system_clock::is_steady` always returns `false`.  
   
-### <a name="remarks"></a>Notes  
- Une horloge est *stable* si elle est [monotone](#is_monotonic_constant) et si le laps de temps entre les battements d’horloge est constant.  
+### <a name="remarks"></a>Remarks  
+ A clock is *steady* if it is [monotonic](#is_monotonic_constant) and if the time between clock ticks is constant.  
   
-##  <a name="now"></a>system_clock::Now
- Méthode statique qui retourne l’heure actuelle.  
+##  <a name="now"></a>  system_clock::now
+ Static method that returns the current time.  
   
 ```  
 static time_point now() noexcept;  
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Objet [time_point](../standard-library/time-point-class.md) qui représente l’heure actuelle.  
+### <a name="return-value"></a>Return Value  
+ A [time_point](../standard-library/time-point-class.md) object that represents the current time.  
   
-##  <a name="to_time_t"></a>system_clock::to_time_t
- Méthode statique qui retourne un [time_t](../c-runtime-library/standard-types.md) qui se rapproche le plus de l’heure représentée par `Time`.  
+##  <a name="to_time_t"></a>  system_clock::to_time_t
+ Static method that returns a [time_t](../c-runtime-library/standard-types.md) that most closely approximates the time that is represented by `Time`.  
   
 ```  
 static time_t to_time_t(const time_point& Time) noexcept;  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Time`  
- Objet [time_point](../standard-library/time-point-class.md).  
+ A [time_point](../standard-library/time-point-class.md) object.  
   
-## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)   
- [steady_clock, struct](../standard-library/steady-clock-struct.md)
+ [steady_clock struct](../standard-library/steady-clock-struct.md)
 

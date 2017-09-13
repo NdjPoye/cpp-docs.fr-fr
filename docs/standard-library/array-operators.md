@@ -1,5 +1,5 @@
 ---
-title: "&lt;array&gt;, opérateurs | Microsoft Docs"
+title: '&lt;array&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,15 +18,15 @@ dev_langs:
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c85e1930bc8bfe492368fd40fe488156cf9a3ed1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4bd1ed8f2c2ea40d7f500e302189762bc7f24962
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltarraygt-operators"></a>&lt;array&gt;, opérateurs
-L’en-tête \<array> inclut ces fonctions de modèle de comparaison non-membres `array`.  
+# <a name="ltarraygt-operators"></a>&lt;array&gt; operators
+The \<array> header includes these `array` non-member comparison template functions.  
   
 ||||  
 |-|-|-|  
@@ -34,7 +34,7 @@ L’en-tête \<array> inclut ces fonctions de modèle de comparaison non-membres
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- Comparaison de tableaux, non égal à.  
+ Array comparison, not equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -43,23 +43,23 @@ bool operator!=(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Type d’un élément.  
+ The type of an element.  
   
  `N`  
- Taille du tableau.  
+ The size of the array.  
   
  `left`  
- Conteneur de gauche à comparer.  
+ Left container to compare.  
   
  `right`  
- Conteneur de droite à comparer.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle retourne `!(left == right)`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `!(left == right)`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_ne.cpp   
@@ -104,7 +104,7 @@ true
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- Comparaison de tableaux, inférieur à.  
+ Array comparison, less than.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -113,23 +113,23 @@ bool operator<(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Type d’un élément.  
+ The type of an element.  
   
  `N`  
- Taille du tableau.  
+ The size of the array.  
   
  `left`  
- Conteneur de gauche à comparer.  
+ Left container to compare.  
   
  `right`  
- Conteneur de droite à comparer.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle surcharge `operator<` pour comparer deux objets de la classe de modèle [classe array](../standard-library/array-class-stl.md). La fonction retourne `lexicographical_compare(left.begin(), left.end(), right.begin())`.  
+### <a name="remarks"></a>Remarks  
+ The template function overloads `operator<` to compare two objects of template class [array Class](../standard-library/array-class-stl.md). The function returns `lexicographical_compare(left.begin(), left.end(), right.begin())`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_lt.cpp   
@@ -175,7 +175,7 @@ true
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- Comparaison de tableaux, inférieur ou égal à.  
+ Array comparison, less than or equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -184,23 +184,23 @@ bool operator<=(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Type d’un élément.  
+ The type of an element.  
   
  `N`  
- Taille du tableau.  
+ The size of the array.  
   
  `left`  
- Conteneur de gauche à comparer.  
+ Left container to compare.  
   
  `right`  
- Conteneur de droite à comparer.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle retourne `!(right < left)`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `!(right < left)`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_le.cpp   
@@ -246,7 +246,7 @@ false
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- Comparaison de tableaux, égal à.  
+ Array comparison, equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -255,23 +255,23 @@ bool operator==(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Type d’un élément.  
+ The type of an element.  
   
  `N`  
- Taille du tableau.  
+ The size of the array.  
   
  `left`  
- Conteneur de gauche à comparer.  
+ Left container to compare.  
   
  `right`  
- Conteneur de droite à comparer.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle surcharge `operator==` pour comparer deux objets de la classe de modèle [classe array](../standard-library/array-class-stl.md). La fonction retourne `equal(left.begin(), left.end(), right.begin())`.  
+### <a name="remarks"></a>Remarks  
+ The template function overloads `operator==` to compare two objects of template class [array Class](../standard-library/array-class-stl.md). The function returns `equal(left.begin(), left.end(), right.begin())`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_eq.cpp   
@@ -317,7 +317,7 @@ false
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- Comparaison de tableaux, supérieur à.  
+ Array comparison, greater than.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -326,23 +326,23 @@ bool operator>(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Type d’un élément.  
+ The type of an element.  
   
  `N`  
- Taille du tableau.  
+ The size of the array.  
   
  `left`  
- Conteneur de gauche à comparer.  
+ Left container to compare.  
   
  `right`  
- Conteneur de droite à comparer.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle retourne `(right < left)`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `(right < left)`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_gt.cpp   
@@ -388,7 +388,7 @@ true
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- Comparaison de tableaux, supérieur ou égal à.  
+ Array comparison, greater than or equal.  
   
 ```  
 template <Ty, std::size_t N>  
@@ -397,23 +397,23 @@ bool operator>=(
     const array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- Type d’un élément.  
+ The type of an element.  
   
  `N`  
- Taille du tableau.  
+ The size of the array.  
   
  `left`  
- Conteneur de gauche à comparer.  
+ Left container to compare.  
   
  `right`  
- Conteneur de droite à comparer.  
+ Right container to compare.  
   
-### <a name="remarks"></a>Notes  
- La fonction de modèle retourne `!(left < right)`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `!(left < right)`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__operator_ge.cpp   
@@ -458,7 +458,7 @@ true
 false  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<array>](../standard-library/array.md)
 
 

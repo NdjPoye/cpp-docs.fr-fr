@@ -1,48 +1,52 @@
 ---
-title: '&lt;random&gt;, fonctions | Microsoft Docs'
+title: '&lt;random&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- random/std::generate_canonical
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
+helpviewer_keywords:
+- std::generate_canonical
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3aebef535acb59046fab53d49051df16bd362c3c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0929e7c6749af19065f42f10ee6c15ab4d4a3e88
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltrandomgt-functions"></a>&lt;random&gt;, fonctions
+# <a name="ltrandomgt-functions"></a>&lt;random&gt; functions
   
 ##  <a name="generate_canonical"></a>  generate_canonical  
- Retourne une valeur à virgule flottante à partir d'une séquence aléatoire.  
+ Returns a floating-point value from a random sequence.  
   
 > [!NOTE]
->  La norme C++ ISO spécifie que cette fonction doit retourner des valeurs dans la plage [`0`, `1`). Visual Studio n'est pas encore conforme à cette contrainte. Comme solution de contournement pour générer des valeurs dans cette plage, utilisez [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md).  
+>  The ISO C++ Standard states that this function should return values in the range [ `0`, `1`). Visual Studio is not yet compliant with this constraint. As a workaround to generate values in this range, use [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md).  
   
 ```  
 template <class RealType, size_t Bits, class Generator>  
 RealType generate_canonical(Generator& Gen);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `RealType`  
- Type intégral à virgule flottante. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).  
+ The floating point integral type. For possible types, see [\<random>](../standard-library/random.md).  
   
  `Bits`  
- Générateur de nombres aléatoires.  
+ The random number generator.  
   
  `Gen`  
- Générateur de nombres aléatoires.  
+ The random number generator.  
   
-### <a name="remarks"></a>Notes  
- La fonction avec modèle appelle l'élément `operator()` de `Gen` à plusieurs reprises et compresse les valeurs retournées dans une valeur à virgule flottante `x` de type `RealType` jusqu'à ce qu'elle ait recueilli le nombre spécifié de bits de mantisse dans `x`. Le nombre spécifié est la plus petite valeur de `Bits` (qui doit être différente de zéro) et le nombre complet de bits de mantisse dans `RealType`. Le premier appel fournit les bits d'ordre le plus bas. La fonction retourne `x`.  
+### <a name="remarks"></a>Remarks  
+ The template function calls `operator()` of `Gen` repeatedly and packs the returned values into a floating-point value `x` of type `RealType` until it has gathered the specified number of mantissa bits in `x`. The specified number is the smaller of `Bits` (which must be nonzero) and the full number of mantissa bits in `RealType`. The first call supplies the lowest-order bits. The function returns `x`.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

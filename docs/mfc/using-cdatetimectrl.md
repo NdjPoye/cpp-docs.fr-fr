@@ -1,47 +1,66 @@
 ---
-title: "Utilisation de CDateTimeCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDateTimeCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DateTimePicker (contrôle) (MFC), CDateTimeCtrl (classe)"
+title: Using CDateTimeCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDateTimeCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- DateTimePicker control [MFC], CDateTimeCtrl class
 ms.assetid: cb2a8720-43f1-4c33-a3a4-def9a1622e00
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Utilisation de CDateTimeCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cb830cfa065546d07e49484b80dce084274d213c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Le contrôle Date Time Picker \([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)\) implémente une méthode intuitive et reconnaissable pour écrire ou sélectionne une date précise.  L'interface principale du contrôle est similaire dans son fonctionnement à celle d'une zone de liste déroulante.  Toutefois, si l'utilisateur développe le contrôle, un contrôle calendrier du mois s'affiche \(par défaut\), ce qui permet à l'utilisateur de spécifier une date particulière.  Lorsque la date est sélectionnée, le contrôle calendrier du mois disparaît automatiquement.  
+---
+# <a name="using-cdatetimectrl"></a>Using CDateTimeCtrl
+The date and time picker control ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implements an intuitive and recognizable method of entering or selecting a specific date. The main interface of the control is similar in functionality to a combo box. However, if the user expands the control, a month calendar control appears (by default), allowing the user to specify a particular date. When a date is chosen, the month calendar control automatically disappears.  
   
 > [!NOTE]
->  Pour utiliser à la fois les classes **CDateTimePicker** et `CMonthCalCtrl` dans votre projet, vous devez inclure AFXDTCTL.H, en général dans le fichier STDAFX.H de votre projet.  
+>  To use both the **CDateTimePicker** and `CMonthCalCtrl` classes in your project, you must include AFXDTCTL.H, usually in your project's STDAFX.H file.  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Création du contrôle de sélecteur de date et heure](../mfc/creating-the-date-and-time-picker-control.md)  
+-   [Creating the Date and Time Picker Control](../mfc/creating-the-date-and-time-picker-control.md)  
   
--   [Exemples de contrôle de sélecteur de date et heure](../mfc/date-and-time-picker-control-examples.md)  
+-   [Date and Time Picker Control Examples](../mfc/date-and-time-picker-control-examples.md)  
   
--   [Accès au contrôle calendrier du mois incorporé](../mfc/accessing-the-embedded-month-calendar-control.md)  
+-   [Accessing the Embedded Month Calendar Control](../mfc/accessing-the-embedded-month-calendar-control.md)  
   
--   [Utilisation de chaînes de format personnalisées dans un contrôle de sélecteur de date et heure](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)  
+-   [Using Custom Format Strings in a Date and Time Picker Control](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)  
   
--   [Utilisation des champs de rappel dans un contrôle de sélecteur de date et heure](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)  
+-   [Using Callback Fields in a Date and Time Picker Control](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)  
   
--   [Traitement des messages de notification dans les contrôles de sélecteur de date et heure](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md)  
+-   [Processing Notification Messages in Date and Time Picker Controls](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md)  
   
-## Voir aussi  
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

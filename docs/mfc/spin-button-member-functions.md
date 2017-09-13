@@ -1,40 +1,59 @@
 ---
-title: "Bouton toupie, fonctions membres | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSpinButtonCtrl (classe), méthodes"
-  - "contrôle toupie, méthodes"
+title: Spin Button Member Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- spin button control, methods
+- CSpinButtonCtrl class [MFC], methods
 ms.assetid: a08a26fd-b803-4cbe-a509-395fa357d057
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Bouton toupie, fonctions membres
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5582767fb0a68f41664499bdb31b5ae06c3379cf
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Il existe plusieurs fonctions membres disponibles pour le contrôle de rotation \([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)\).  Utilisez ces fonctions pour modifier les attributs suivants de la toupie.  
+---
+# <a name="spin-button-member-functions"></a>Spin Button Member Functions
+There are several member functions available for the spin control ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)). Use these functions to change the following attributes of the spin button.  
   
--   **Acceleration** Ajustez la fréquence à laquelle la position change lorsque l'utilisateur maintient le bouton fléché.  Pour utiliser l'accélération, utilisez les fonctions membres de [EnsembleAccelerations](../Topic/CSpinButtonCtrl::SetAccel.md) et de [ObtenirAcceleration](../Topic/CSpinButtonCtrl::GetAccel.md).  
+-   **Acceleration** You can adjust the rate at which the position changes when the user holds down the arrow button. To work with acceleration, use the [SetAccel](../mfc/reference/cspinbuttonctrl-class.md#setaccel) and [GetAccel](../mfc/reference/cspinbuttonctrl-class.md#getaccel) member functions.  
   
--   **Base** Modifiez la base \(10 ou 16\) utilisée pour afficher la position de la légende de la fenêtre associé.  Pour utiliser la base, utilisez les fonctions membres de [ObtenirBase](../Topic/CSpinButtonCtrl::GetBase.md) et de [EnsembleBase](../Topic/CSpinButtonCtrl::SetBase.md).  
+-   **Base** You can change the base (either 10 or 16) used to display the position in the caption of the buddy window. To work with the base, use the [GetBase](../mfc/reference/cspinbuttonctrl-class.md#getbase) and [SetBase](../mfc/reference/cspinbuttonctrl-class.md#setbase) member functions.  
   
--   **Buddy Window** Définissez dynamiquement la fenêtre associée.  Pour interroger ou modifier le fait que le contrôle est la fenêtre associé, utilisez les fonctions membres de [GetBuddy](../Topic/CSpinButtonCtrl::GetBuddy.md) et de [SetBuddy](../Topic/CSpinButtonCtrl::SetBuddy.md).  
+-   **Buddy Window** You can dynamically set the buddy window. To query or change which control is the buddy window, use the [GetBuddy](../mfc/reference/cspinbuttonctrl-class.md#getbuddy) and [SetBuddy](../mfc/reference/cspinbuttonctrl-class.md#setbuddy) member functions.  
   
--   **Position** Interrogez et modifiez la position.  Pour utiliser directement la position, utilisez les fonctions membres de [ObtenirPosition](../Topic/CSpinButtonCtrl::GetPos.md) et de [EnsemblePositions](../Topic/CSpinButtonCtrl::SetPos.md).  Étant donné que la légende du contrôle associé peut avoir changé \(par exemple, dans le cas de les états\-unis\) est un contrôle d'édition\), `GetPos` récupère la légende actuelle et ajuste la position en conséquence.  
+-   **Position** You can query and change the position. To work directly with position, use the [GetPos](../mfc/reference/cspinbuttonctrl-class.md#getpos) and [SetPos](../mfc/reference/cspinbuttonctrl-class.md#setpos) member functions. Since the caption of the buddy control may have changed (for example, in the case that the buddy is an edit control), `GetPos` retrieves the current caption and adjusts the position accordingly.  
   
--   **Plage** Modifier les positions de la valeur maximale et minimale pour le bouton de spin.  Par défaut, la valeur maximale est 0, et la valeur minimale de est 100.  Étant donné que la valeur maximale par défaut est inférieure à la valeur minimale par défaut, les actions des boutons fléchés est compteur\- intuitif.  Généralement, vous définissez la plage à l'aide de la fonction membre de [EnsemblePlage](../Topic/CSpinButtonCtrl::SetRange.md).  Pour interroger l'utilisation [ObtenirPlage](../Topic/CSpinButtonCtrl::GetRange.md)de plage.  
+-   **Range** You can change the maximum and minimum positions for the spin button. By default, the maximum is set to 0, and the minimum is set to 100. Since the default maximum is less than the default minimum, the actions of the arrow buttons is counter-intuitive. Typically, you will set the range using the [SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) member function. To query the range use [GetRange](../mfc/reference/cspinbuttonctrl-class.md#getrange).  
   
-## Voir aussi  
- [Utilisation de CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

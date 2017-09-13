@@ -1,49 +1,67 @@
 ---
-title: "&#201;l&#233;ments de rappel et masque de rappel | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "éléments de rappel dans la classe CListCtrl"
-  - "CListCtrl (classe), élément de rappel et masque de rappel"
+title: Callback Items and the Callback Mask | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- callback items in CListCtrl class [MFC]
+- CListCtrl class [MFC], callback item and callback mask
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# &#201;l&#233;ments de rappel et masque de rappel
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e943e5445620b25437a0f6d70a6703a927d5e636
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Pour chacun de ses éléments, un contrôle list VIEW enregistre généralement le texte d'étiquette, l'index de liste des images des icônes de l'élément, et un jeu d'indicateurs de bits pour l'état de l'élément.  Vous pouvez définir des éléments comme éléments de rappel, qui sont utiles si votre application stocke déjà une partie des informations pour un élément.  
+---
+# <a name="callback-items-and-the-callback-mask"></a>Callback Items and the Callback Mask
+For each of its items, a list view control typically stores the label text, the image list index of the item's icons, and a set of bit flags for the item's state. You can define individual items as callback items, which are useful if your application already stores some of the information for an item.  
   
- Vous définissez un élément en tant qu'élément de rappel en spécifiant les valeurs appropriées pour les membres `pszText` et `iImage` de la structure de **LV\_ITEM** \(voir [CListCtrl::GetItem](../Topic/CListCtrl::GetItem.md)\).  Si l'application gère l'élément ou le texte du sous\-élément, spécifiez la valeur de **LPSTR\_TEXTCALLBACK** du membre `pszText`.  Si l'application gère l'icône de l'élément, spécifiez la valeur de **I\_IMAGECALLBACK** du membre `iImage`.  
+ You define an item as a callback item by specifying appropriate values for the `pszText` and `iImage` members of the **LV_ITEM** structure (see [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem)). If the application maintains the item's or subitem's text, specify the **LPSTR_TEXTCALLBACK** value for the `pszText` member. If the application keeps track of the icon for the item, specify the **I_IMAGECALLBACK** value for the `iImage` member.  
   
- En plus de définir les éléments de rappel, vous pouvez également modifier le masque de rappel du contrôle.  Ce filtre est un ensemble d'indicateurs de bits qui spécifient les états d'éléments pour lesquels l'application, plutôt que le contrôle, stocke les données actuelles.  Le masque de rappel s'applique à tous les éléments de commande, contrairement à la désignation de rappel d'élément, qui s'applique à un élément spécifique.  Le masque de rappel est nulle par défaut, ce qui signifie que le contrôle suit tous les états d'élément.  Pour modifier ce comportement par défaut, initialisez le masque à n'importe quelle combinaison de valeurs suivantes :  
+ In addition to defining callback items, you can also modify the control's callback mask. This mask is a set of bit flags that specify the item states for which the application, rather than the control, stores the current data. The callback mask applies to all of the control's items, unlike the callback item designation, which applies to a specific item. The callback mask is zero by default, meaning that the control tracks all item states. To change this default behavior, initialize the mask to any combination of the following values:  
   
--   `LVIS_CUT` l'élément est marqué pour un couper et coller.  
+-   `LVIS_CUT` The item is marked for a cut-and-paste operation.  
   
--   `LVIS_DROPHILITED` l'élément est mis en surbrillance comme cible pour un glisser\-déplacer.  
+-   `LVIS_DROPHILITED` The item is highlighted as a drag-and-drop target.  
   
--   `LVIS_FOCUSED` l'élément a l'attention.  
+-   `LVIS_FOCUSED` The item has the focus.  
   
--   `LVIS_SELECTED` L'élément est sélectionné.  
+-   `LVIS_SELECTED` The item is selected.  
   
--   **LVIS\_OVERLAYMASK** l'application enregistre l'index de liste des images de chevauchement actuel pour chaque élément.  
+-   **LVIS_OVERLAYMASK** The application stores the image list index of the current overlay image for each item.  
   
--   **LVIS\_STATEIMAGEMASK** l'application enregistre l'index de liste des images d'état actuel pour chaque élément.  
+-   **LVIS_STATEIMAGEMASK** The application stores the image list index of the current state image for each item.  
   
- Pour les informations sur la récupération et la définition de ce masque, consultez [CListCtrl::GetCallbackMask](../Topic/CListCtrl::GetCallbackMask.md) et [CListCtrl::SetCallbackMask](../Topic/CListCtrl::SetCallbackMask.md).  
+ For further information on retrieving and setting this mask, see [CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask) and [CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask).  
   
-## Voir aussi  
- [Utilisation de CListCtrl](../mfc/using-clistctrl.md)   
- [Contrôles](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

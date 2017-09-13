@@ -1,5 +1,5 @@
 ---
-title: Classe de CMemoryException | Documents Microsoft
+title: CMemoryException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,11 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMemoryException class
-- memory exceptions
-- exceptions, memory type
-- C++ exception handling, memory
-- memory, exception handling
+- CMemoryException [MFC], CMemoryException
 ms.assetid: 9af0ed57-d12a-45ca-82b5-c910a60f7edf
 caps.latest.revision: 20
 author: mikeblome
@@ -39,36 +35,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 87be1b16d546791d24bbffa62207ec9ccb350139
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ed7fb0e3689129bf41b13511c70073253bb81b4a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmemoryexception-class"></a>CMemoryException (classe)
-Représente une condition d'exception liée à une insuffisance de mémoire.  
+# <a name="cmemoryexception-class"></a>CMemoryException Class
+Represents an out-of-memory exception condition.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMemoryException : public CSimpleException  
 ```  
   
-## <a name="members"></a>Membres  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Constructeurs publics  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Nom|Description|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMemoryException::CMemoryException](#cmemoryexception)|Construit un objet `CMemoryException`.|  
+|[CMemoryException::CMemoryException](#cmemoryexception)|Constructs a `CMemoryException` object.|  
   
-## <a name="remarks"></a>Remarques  
- Sans qualification supplémentaire est nécessaire ou possible. Mémoire des exceptions sont levées automatiquement par **nouveau**. Si vous écrivez vos propres fonctions de mémoire, à l’aide `malloc`, par exemple, vous êtes responsable de la lever des exceptions de mémoire.  
+## <a name="remarks"></a>Remarks  
+ No further qualification is necessary or possible. Memory exceptions are thrown automatically by **new**. If you write your own memory functions, using `malloc`, for example, then you are responsible for throwing memory exceptions.  
   
- Pour plus d’informations sur `CMemoryException`, consultez l’article [la gestion des exceptions (MFC)](../../mfc/exception-handling-in-mfc.md).  
+ For more information on `CMemoryException`, see the article [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
@@ -77,22 +73,22 @@ class CMemoryException : public CSimpleException
   
  `CMemoryException`  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="cmemoryexception"></a>CMemoryException::CMemoryException  
- Construit un objet `CMemoryException`.  
+##  <a name="cmemoryexception"></a>  CMemoryException::CMemoryException  
+ Constructs a `CMemoryException` object.  
   
 ```  
 CMemoryException();  
 ```  
   
-### <a name="remarks"></a>Remarques  
- N’utilisez pas ce constructeur directement, mais plutôt appeler la fonction globale [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). Cette fonction globale peut réussir dans une situation de mémoire insuffisante, car elle construit l’objet d’exception de mémoire précédemment alloué. Pour plus d’informations sur le traitement des exceptions, consultez l’article [exceptions](../exception-handling-in-mfc.md).  
+### <a name="remarks"></a>Remarks  
+ Do not use this constructor directly, but rather call the global function [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). this global function can succeed in an out-of-memory situation because it constructs the exception object in previously allocated memory. for more information about exception processing, see the article [exceptions](../exception-handling-in-mfc.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [CException (classe)](cexception-class.md)   
- [Graphique de la hiérarchie](../hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CException Class](cexception-class.md)   
+ [Hierarchy Chart](../hierarchy-chart.md)
 
 
 

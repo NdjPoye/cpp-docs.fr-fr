@@ -1,5 +1,5 @@
 ---
-title: "Styles de zone de liste déroulante | Documents Microsoft"
+title: Combo-Box Styles | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,19 +25,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBS_OWNERDRAWVARIABLE constant
-- CBS_NOINTEGRALHEIGHT constant
-- CBS_SIMPLE constant
-- CBS_AUTOHSCROLL constant
-- CBS_OEMCONVERT constant
-- CBS_DISABLENOSCROLL constant
-- CBS_HASSTRINGS constant
-- CBS_LOWERCASE constant
-- CBS_SORT constant
-- CBS_DROPDOWN constant
-- CBS_OWNERDRAWFIXED constant
-- combo boxes, styles
-- CBS_UPPERCASE constant
+- CBS_OWNERDRAWVARIABLE constant [MFC]
+- CBS_NOINTEGRALHEIGHT constant [MFC]
+- CBS_SIMPLE constant [MFC]
+- CBS_AUTOHSCROLL constant [MFC]
+- CBS_OEMCONVERT constant [MFC]
+- CBS_DISABLENOSCROLL constant [MFC]
+- CBS_HASSTRINGS constant [MFC]
+- CBS_LOWERCASE constant [MFC]
+- CBS_SORT constant [MFC]
+- CBS_DROPDOWN constant [MFC]
+- CBS_OWNERDRAWFIXED constant [MFC]
+- combo boxes [MFC], styles
+- CBS_UPPERCASE constant [MFC]
 - CBS_DROPDOWNLIST constant
 ms.assetid: d21a5023-e6a2-495b-a6bd-010a515cbc63
 caps.latest.revision: 12
@@ -59,45 +59,45 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 57069f6e6cd0999773ab3872e671a65e1e880bba
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6ca7dba78b9265110977b18549ffb6207ce9b877
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="combo-box-styles"></a>Styles de zone de liste modifiable
-Les styles de zone de liste modifiable suivants sont disponibles dans MFC.  
+# <a name="combo-box-styles"></a>Combo-Box Styles
+The following combo-box styles are available in MFC.  
   
--   **CBS_AUTOHSCROLL** : fait défiler automatiquement le texte du contrôle d’édition vers la droite quand l’utilisateur tape un caractère à la fin d’une ligne. Si ce style n’est pas défini, seul le texte qui rentre dans la limite rectangulaire est autorisé.  
+-   **CBS_AUTOHSCROLL** Automatically scrolls the text in the edit control to the right when the user types a character at the end of the line. If this style is not set, only text that fits within the rectangular boundary is allowed.  
   
--   **CBS_DISABLENOSCROLL** : la zone de liste affiche une barre de défilement verticale désactivée quand elle ne contient pas suffisamment d’éléments pour effectuer un défilement. Sans ce style, la barre de défilement est masquée lorsque la zone de liste ne contient pas assez d'éléments.  
+-   **CBS_DISABLENOSCROLL** The list box shows a disabled vertical scroll bar when the list box does not contain enough items to scroll. Without this style, the scroll bar is hidden when the list box does not contain enough items.  
   
--   **CBS_DROPDOWN** : est semblable à **CBS_SIMPLE**, à la différence près que la zone de liste ne s’affiche que si l’utilisateur sélectionne une icône à côté du contrôle d’édition.  
+-   **CBS_DROPDOWN** Similar to **CBS_SIMPLE**, except that the list box is not displayed unless the user selects an icon next to the edit control.  
   
--   **CBS_DROPDOWNLIST** : est semblable à **CBS_DROPDOWN**, à la différence près que le contrôle d’édition est remplacé par un élément de texte statique qui affiche la sélection actuelle dans la zone de liste.  
+-   **CBS_DROPDOWNLIST** Similar to **CBS_DROPDOWN**, except that the edit control is replaced by a static-text item that displays the current selection in the list box.  
   
--   **CBS_HASSTRINGS** : une zone de liste modifiable owner-draw contient des éléments se composant de chaînes. La zone de liste modifiable contient la mémoire et les pointeurs des chaînes, ce qui permet à l’application d’utiliser la fonction membre `GetText` pour récupérer le texte d’un élément particulier.  
+-   **CBS_HASSTRINGS** An owner-draw combo box contains items consisting of strings. The combo box maintains the memory and pointers for the strings so the application can use the `GetText` member function to retrieve the text for a particular item.  
   
--   **CBS_LOWERCASE** : convertit en minuscules tout le texte dans le champ de sélection et la liste.  
+-   **CBS_LOWERCASE** Converts to lowercase all text in both the selection field and the list.  
   
--   **CBS_NOINTEGRALHEIGHT** : spécifie que la taille de la zone de liste modifiable correspond exactement à la taille spécifiée par l’application au moment de la création de la zone de liste modifiable. Généralement, Windows redimensionne une zone de liste modifiable pour qu’elle n’affiche aucun élément de manière partielle.  
+-   **CBS_NOINTEGRALHEIGHT** Specifies that the size of the combo box is exactly the size specified by the application when it created the combo box. Normally, Windows sizes a combo box so that the combo box does not display partial items.  
   
--   **CBS_OEMCONVERT** : convertit le jeu de caractères ANSI du texte entré dans le contrôle d’édition de la zone de liste modifiable en jeu de caractères OEM, puis le reconvertit en ANSI. Cela garantit la conversion appropriée des caractères quand l’application appelle la fonction Windows `AnsiToOem` pour convertir une chaîne ANSI dans la zone de liste modifiable en caractères OEM. Ce style, particulièrement utile pour les zones de liste modifiable contenant des noms de fichiers, s’applique uniquement aux zones de liste modifiable créées avec les styles **CBS_SIMPLE** ou **CBS_DROPDOWN**  
+-   **CBS_OEMCONVERT** Text entered in the combo-box edit control is converted from the ANSI character set to the OEM character set and then back to ANSI. This ensures proper character conversion when the application calls the `AnsiToOem` Windows function to convert an ANSI string in the combo box to OEM characters. This style is most useful for combo boxes that contain filenames and applies only to combo boxes created with the **CBS_SIMPLE** or **CBS_DROPDOWN** styles.  
   
--   **CBS_OWNERDRAWFIXED** : le propriétaire de la zone de liste est chargé de dessiner son contenu ; les éléments de la zone de liste ont tous la même hauteur.  
+-   **CBS_OWNERDRAWFIXED** The owner of the list box is responsible for drawing its contents; the items in the list box are all the same height.  
   
--   **CBS_OWNERDRAWVARIABLE** : le propriétaire de la zone de liste est chargé de dessiner son contenu ; les éléments de la zone de liste varient en hauteur.  
+-   **CBS_OWNERDRAWVARIABLE** The owner of the list box is responsible for drawing its contents; the items in the list box are variable in height.  
   
--   **CBS_SIMPLE** : la zone de liste est affichée en permanence. La sélection actuelle dans la zone de liste s’affiche dans le contrôle d’édition.  
+-   **CBS_SIMPLE** The list box is displayed at all times. The current selection in the list box is displayed in the edit control.  
   
--   **CBS_SORT** : trie automatiquement les chaînes entrées dans la zone de liste.  
+-   **CBS_SORT** Automatically sorts strings entered into the list box.  
   
--   **CBS_UPPERCASE** : convertit en majuscules tout le texte dans le champ de sélection et la liste.  
+-   **CBS_UPPERCASE** Converts to uppercase all text in both the selection field and the list.  
   
-## <a name="see-also"></a>Voir aussi  
- [Styles utilisés par MFC](../../mfc/reference/styles-used-by-mfc.md)   
- [CComboBox::Create] (ccombobox-class.md #ccombobox__create   
+## <a name="see-also"></a>See Also  
+ [Styles Used by MFC](../../mfc/reference/styles-used-by-mfc.md)   
+ [CComboBox::Create](ccombobox-class.md#ccombobox__create   
 
 
 

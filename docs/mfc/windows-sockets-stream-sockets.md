@@ -1,55 +1,74 @@
 ---
-title: "Windows Sockets&#160;: sockets flux | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sockets (C++), sockets flux"
-  - "sockets flux (C++)"
-  - "Windows Sockets (C++), sockets flux"
+title: 'Windows Sockets: Stream Sockets | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows Sockets [MFC], stream sockets
+- sockets [MFC], stream sockets
+- stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
 caps.latest.revision: 12
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Windows Sockets&#160;: sockets flux
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 380b2922e253fcbeea84557e8bb15f9c2912e3c3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cet article décrit les flux de sockets, l'un des deux types de Windows Socket disponibles. \(L'autre type est le [datagramme de socket](../mfc/windows-sockets-datagram-sockets.md).\)  
+---
+# <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Stream Sockets
+This article describes stream sockets, one of the two Windows Socket types available. (The other type is the [datagram socket](../mfc/windows-sockets-datagram-sockets.md).)  
   
- Les flux de sockets fournissent pour un flux de données sans limites d'enregistrement: un flux d'octets pouvant être bidirectionnels \(l'application est totalement bidirectionnelle: elle peut transmettre et recevoir à travers le socket\).  Les flux peut être reliés afin de fournir des données organisées et non dupliquées. \(« Ordonnancé » signifie que des paquets sont remis dans l'ordre envoyé. « Non dupliqué » signifie que vous obtenez un paquet particulier une seule fois. La réception des messages de flux est garantie, et les flux sont bien adaptés pour gérer de grands nombre de données.  
+ Stream sockets provide for a data flow without record boundaries: a stream of bytes that can be bidirectional (the application is full duplex: it can both transmit and receive through the socket). Streams can be relied upon to deliver sequenced, unduplicated data. ("Sequenced" means that packets are delivered in the order sent. "Unduplicated" means that you get a particular packet only once.) Receipt of stream messages is guaranteed, and streams are well suited to handling large amounts of data.  
   
- La couche de transport réseau peut se diviser ou regrouper des données dans des paquets de taille raisonnable.  La classe d' `CSocket` gère l'emballage et la décompression à votre place.  
+ The network transport layer may break up or group data into packets of reasonable size. The `CSocket` class will handle the packing and unpacking for you.  
   
- Les flux sont basés sur des connexions explicites: le socket A demande une connexion au socket B; le socket B accepte ou refuse la demande de connexion.  
+ Streams are based on explicit connections: socket A requests a connection to socket B; socket B accepts or rejects the connection request.  
   
- Un appel téléphonique fournit une bonne analogie d'un flux.  Dans des conditions normales, la partie réceptrice entend ce que vous indiquez dans l'ordre que vous lui indiquez, sans duplication ou perte.  Les sockets de flux sont appropriés, par exemple, pour les implémentations telles que Protocole de Transfert de Fichiers \(FTP\), qui permet de transférer des fichier ASCII ou binaires de taille arbitraire.  
+ A telephone call provides a good analogy for a stream. Under normal circumstances, the receiving party hears what you say in the order that you say it, without duplication or loss. Stream sockets are appropriate, for example, for implementations such as the File Transfer Protocol (FTP), which facilitates transferring ASCII or binary files of arbitrary size.  
   
- Les sockets de flux sont préférables aux sockets de datagramme lorsque l'arrivée des données doivent être nécessairement garanties et lorsque la taille des données est importante.  Pour plus d'informations sur les sockets de flux, consultez la spécification de sockets Windows.  La spécification est disponible dans [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ Stream sockets are preferable to datagram sockets when the data must be guaranteed to arrive and when data size is large. For more information about stream sockets, see the Windows Sockets specification. The specification is available in the Windows SDK.  
   
- L'utilisation de sockets de flux peut être supérieure aux applications conçues pour utiliser un socket de datagramme pour la distribution à tous les sockets destinataires sur le réseau car  
+ Using stream sockets can be superior to applications designed to use a datagram socket for broadcasting to all receiving sockets on the network because  
   
--   Le modèle de diffusion est soumis à des problèmes d'inondation \(ou « tempête »\) du réseau.  
+-   The broadcast model is subject to network flood (or "storm") problems.  
   
--   Le modèle client\-serveur adopté par la suite est plus efficace.  
+-   The client-server model adopted subsequently is more efficient.  
   
--   Le modèle de flux de données fournit un transfert de données fiable, là où le modèle de datagramme échoue.  
+-   The stream model supplies reliable data transfer, where the datagram model does not.  
   
--   Le modèle final bénéficie de la capacité de communiquer entre les applications de Socket Unicode et ANSI qui classent les prêts CArchive à la classe CSocket.  
+-   The final model takes advantage of the ability to communicate between Unicode and ANSI socket applications that class CArchive lends to class CSocket.  
   
     > [!NOTE]
-    >  Si vous utilisez la classe `CSocket`, vous devez utiliser un flux de données.  Une assertion de MFC échoue si vous spécifiez le type de socket comme **SOCK\_DGRAM**.  
+    >  If you use class `CSocket`, you must use a stream. An MFC assertion fails if you specify the socket type as **SOCK_DGRAM**.  
   
-## Voir aussi  
- [Windows Sockets dans MFC](../mfc/windows-sockets-in-mfc.md)   
- [Windows Sockets : arrière\-plan](../mfc/windows-sockets-background.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
+ [Windows Sockets: Background](../mfc/windows-sockets-background.md)
+
+

@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- codecvt_utf8_utf16
 - codecvt/std::cvt_utf8_utf16
 dev_langs:
 - C++
@@ -34,35 +33,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: e628eb145b52cd3ab9b1e36770363c34099c6cb4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4f733e9eb6d5ebafe2c01fe1d7cc801fef6f7e3a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="codecvtutf8utf16"></a>codecvt_utf8_utf16
-Représente une facette [locale](../standard-library/locale-class.md) qui effectue la conversion entre des caractères larges codés au format UTF-16 et un flux d’octets codé au format UTF-8.
+Represents a [locale](../standard-library/locale-class.md) facet that converts between wide characters encoded as UTF-16 and a byte stream encoded as UTF-8.
 
 ```
 template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (codecvt_mode)0>
 class codecvt_utf8_utf16 : public _STD codecvt<Elem, char, StateType>
 ```
 
-## <a name="parameters"></a>Paramètres
+## <a name="parameters"></a>Parameters
 
 `Elem`  
-Type d'élément à caractères larges.  
+The wide-character element type.  
 `Maxcode`  
-Nombre maximal de caractères pour la facette de paramètres régionaux.  
+The maximum number of characters for the locale facet.  
 `Mode`  
-Informations de configuration pour les facettes de paramètres régionaux.  
+Configuration information for the locale facet.  
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarks
 
-Le flux d’octets peut être écrit dans un fichier binaire ou un fichier texte.  
+The byte stream can be written to either a binary file or a text file.  
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Requirements
 
-En-tête : <codecvt> Espace de noms : std
+Header: <codecvt> Namespace: std
 

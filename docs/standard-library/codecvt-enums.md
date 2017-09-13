@@ -1,26 +1,29 @@
 ---
-title: "&lt;codecvt&gt;, énumérations | Microsoft Docs"
+title: '&lt;codecvt&gt; enums | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- codecvt/std::codecvt_mode
 ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
+helpviewer_keywords:
+- std::codecvt_mode
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 268723c43d61761e2b0a01d337adecc3336e01f3
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bba1b53abb7286c64bdaf79ec8cb2004ba67a9dd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltcodecvtgt-enums"></a>&lt;codecvt&gt;, énumérations
+# <a name="ltcodecvtgt-enums"></a>&lt;codecvt&gt; enums
   
-##  <a name="codecvt_mode"></a>  codecvt_mode, énumération  
- Spécifie des informations de configuration pour les facettes [locale](../standard-library/locale-class.md).  
+##  <a name="codecvt_mode"></a>  codecvt_mode Enumeration  
+ Specifies configuration information for [locale](../standard-library/locale-class.md) facets.  
   
 ```  
 enum codecvt_mode {  
@@ -30,18 +33,18 @@ enum codecvt_mode {
  };  
 ```  
   
-### <a name="remarks"></a>Notes  
- L’énumération définit trois constantes qui fournissent des informations de configuration pour les facettes de paramètres régionaux déclarées dans [\<codecvt>](../standard-library/codecvt.md). Les différentes valeurs sont :  
+### <a name="remarks"></a>Remarks  
+ The enumeration defines three constants that supply configuration information to the locale facets declared in [\<codecvt>](../standard-library/codecvt.md). The distinct values are:  
   
-- `consume_header`, pour consommer une séquence d’en-têtes initiale pendant la lecture d’une séquence multioctet et déterminer le mode Endian de la séquence multioctet suivante à lire  
+- `consume_header`, to consume an initial header sequence when reading a multibyte sequence and determine the endianness of the subsequent multibyte sequence to be read  
   
-- `generate_header`, pour générer une séquence d’en-têtes pendant l’écriture d’une séquence multioctet afin d’annoncer le mode Endian de la séquence multioctet suivante à écrire  
+- `generate_header`, to generate an initial header sequence when writing a multibyte sequence to advertise the endianness of the subsequent multibyte sequence to be written  
   
-- `little_endian`, pour générer une séquence multioctet dans l’ordre du plus petit endian, par opposition à l’ordre par défaut du plus grand endian  
+- `little_endian`, to generate a multibyte sequence in little-endian order, as opposed to the default big-endian order  
   
- Ces constantes peuvent être liées par une condition OR dans des combinaisons arbitraires.  
+ These constants can be ORed together in arbitrary combinations.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<codecvt>](../standard-library/codecvt.md)
 
 

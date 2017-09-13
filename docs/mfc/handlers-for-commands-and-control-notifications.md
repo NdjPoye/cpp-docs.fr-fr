@@ -1,48 +1,66 @@
 ---
-title: "Gestionnaires pour les commandes et les notifications de contr&#244;le | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "commandes, gestionnaires pour"
-  - "contrôles (MFC), notifications"
-  - "fonctions (C++), gestionnaire"
-  - "gestionnaires"
-  - "gestionnaires, commande"
-  - "gestionnaires, notification de contrôle"
-  - "notifications, gestionnaires pour le contrôle"
+title: Handlers for Commands and Control Notifications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- commands [MFC], handlers for
+- functions [MFC], handler
+- handlers [MFC]
+- controls [MFC], notifications
+- handlers [MFC], control notification [MFC]
+- notifications [MFC], handlers for control
+- handlers [MFC]], command
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Gestionnaires pour les commandes et les notifications de contr&#244;le
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 601f4cc9f7da5c7038443d3d5d73e6192e37187a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Il n'y a aucun gestionnaire par défaut des commandes ou des messages de notification de contrôle.  Par conséquent, seule la convention vous impose d'affectater des noms pour les gestionnaires pour ces catégories de messages.  Lorsque vous mappez la notification de commandement ou de contrôle à un gestionnaire, les fenêtres Propriétés proposent un nom selon le code d'ID de commande ou de contrôle notification.  Vous pouvez accepter le nom proposé, le modifier, ou remplacer.  
+---
+# <a name="handlers-for-commands-and-control-notifications"></a>Handlers for Commands and Control Notifications
+There are no default handlers for commands or control-notification messages. Therefore, you are bound only by convention in naming your handlers for these categories of messages. When you map the command or control notification to a handler, the Properties windows proposes a name based on the command ID or control-notification code. You can accept the proposed name, change it, or replace it.  
   
- La convention suggère que vous nommiez les gestionnaires des deux catégories de l'objet interface utilisateur qu'ils représentent.  Ainsi un gestionnaire pour la commande Couper dans le menu Edition peut être nommé  
+ Convention suggests that you name handlers in both categories for the user-interface object they represent. Thus a handler for the Cut command on the Edit menu might be named  
   
- [!code-cpp[NVC_MFCMessageHandling#4](../mfc/codesnippet/CPP/handlers-for-commands-and-control-notifications_1.h)]  
+ [!code-cpp[NVC_MFCMessageHandling#4](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]  
   
- Étant donné que la commande Couper est si souvent implémentée dans les applications, le framework prédéfinit l'ID de commande pour la commande de secteur comme **ID\_EDIT\_CUT**.  Pour obtenir la liste de tous les ID de commande prédéfinis, consultez le fichier AFXRES.H.  Pour plus d'informations sur les commandes, consultez [Standard Commands](../mfc/standard-commands.md).  
+ Because the Cut command is so commonly implemented in applications, the framework predefines the command ID for the Cut command as **ID_EDIT_CUT**. For a list of all predefined command IDs, see the file AFXRES.H. For more information, see [Standard Commands](../mfc/standard-commands.md).  
   
- En outre, la convention propose qu'un gestionnaire pour le message de notification **BN\_CLICKED** à partir d'un bouton intitulé « my bouton » peut être nommé.  
+ In addition, convention suggests a handler for the **BN_CLICKED** notification message from a button labeled "My Button" might be named  
   
- [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/CPP/handlers-for-commands-and-control-notifications_2.h)]  
+ [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]  
   
- Vous pouvez affecter à cette commande un ID de`IDC_MY_BUTTON` car il correspond à un objet d'interface utilisateur spécifique à l'application.  
+ You might assign this command an ID of `IDC_MY_BUTTON` because it is equivalent to an application-specific user-interface object.  
   
- Les deux catégories de messages ne prennent aucun argument et ne retournent aucune valeur.  
+ Both categories of messages take no arguments and return no value.  
   
-## Voir aussi  
- [Déclaration des fonctions de gestionnaire de messages](../mfc/declaring-message-handler-functions.md)
+## <a name="see-also"></a>See Also  
+ [Declaring Message Handler Functions](../mfc/declaring-message-handler-functions.md)
+

@@ -1,5 +1,5 @@
 ---
-title: basic_string, classe | Microsoft Docs
+title: basic_string Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- basic_string
 - xstring/std::basic_string
 - string/std::basic_string::allocator_type
 - string/std::basic_string::const_iterator
@@ -69,7 +68,62 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_string class
+- std::basic_string [C++]
+- std::basic_string [C++], allocator_type
+- std::basic_string [C++], const_iterator
+- std::basic_string [C++], const_pointer
+- std::basic_string [C++], const_reference
+- std::basic_string [C++], const_reverse_iterator
+- std::basic_string [C++], difference_type
+- std::basic_string [C++], iterator
+- std::basic_string [C++], npos
+- std::basic_string [C++], pointer
+- std::basic_string [C++], reference
+- std::basic_string [C++], reverse_iterator
+- std::basic_string [C++], size_type
+- std::basic_string [C++], traits_type
+- std::basic_string [C++], value_type
+- std::basic_string [C++], append
+- std::basic_string [C++], assign
+- std::basic_string [C++], at
+- std::basic_string [C++], back
+- std::basic_string [C++], begin
+- std::basic_string [C++], c_str
+- std::basic_string [C++], capacity
+- std::basic_string [C++], cbegin
+- std::basic_string [C++], cend
+- std::basic_string [C++], clear
+- std::basic_string [C++], compare
+- std::basic_string [C++], copy
+- std::basic_string [C++], crbegin
+- std::basic_string [C++], crend
+- std::basic_string [C++], _Copy_s
+- std::basic_string [C++], data
+- std::basic_string [C++], empty
+- std::basic_string [C++], end
+- std::basic_string [C++], erase
+- std::basic_string [C++], find
+- std::basic_string [C++], find_first_not_of
+- std::basic_string [C++], find_first_of
+- std::basic_string [C++], find_last_not_of
+- std::basic_string [C++], find_last_of
+- std::basic_string [C++], front
+- std::basic_string [C++], get_allocator
+- std::basic_string [C++], insert
+- std::basic_string [C++], length
+- std::basic_string [C++], max_size
+- std::basic_string [C++], pop_back
+- std::basic_string [C++], push_back
+- std::basic_string [C++], rbegin
+- std::basic_string [C++], rend
+- std::basic_string [C++], replace
+- std::basic_string [C++], reserve
+- std::basic_string [C++], resize
+- std::basic_string [C++], rfind
+- std::basic_string [C++], shrink_to_fit
+- std::basic_string [C++], size
+- std::basic_string [C++], substr
+- std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
 caps.latest.revision: 19
 author: corob-msft
@@ -89,133 +143,133 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 062f7fdf2d3d57dc08a0e632326ccbc228eb7df6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 20e7039ed73d28f124c7a06b1e8436a99a024d8b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicstring-class"></a>basic_string, classe
-Les séquences contrôlées par un objet de la classe de modèle `basic_string` correspondent à la classe de chaîne C++ Standard et sont généralement appelées chaînes. Toutefois, elles ne doivent pas être confondues avec les chaînes de style C se terminant par un caractère null et utilisées dans la bibliothèque C++ Standard. La chaîne C++ Standard est un conteneur qui permet d’utiliser les chaînes comme types normaux, par exemple pour les opérations de comparaison et de concaténation, les itérateurs, les algorithmes de la bibliothèque C++ Standard, ainsi que les opérations de copie et d’assignation avec la mémoire gérée par la classe allocator. Si vous devez convertir une chaîne C++ Standard en chaîne de style C se terminant par un caractère null, utilisez le membre [basic_string::c_str](#c_str).  
+# <a name="basicstring-class"></a>basic_string Class
+The sequences controlled by an object of template class `basic_string` are the Standard C++ string class and are usually referred to as strings, but they should not be confused with the null-terminated C-style strings used throughout the C++ Standard Library. The Standard C++ string is a container that enables the use of strings as normal types, such as comparison and concatenation operations, iterators, C++ Standard Library algorithms, and copying and assigning with class allocator managed memory. If you need to convert a Standard C++ string to a null-terminated C-style string, use the [basic_string::c_str](#c_str) member.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType, class Traits = char_traits<CharType>, class Allocator = allocator<CharType>>  
 class basic_string;  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- Type de données d'un seul caractère à stocker dans la chaîne. La bibliothèque C++ Standard fournit des spécialisations de cette classe de modèle avec la [chaîne](../standard-library/string-typedefs.md#string) des définitions de type pour les éléments de type `char`, [wstring](../standard-library/string-typedefs.md#wstring), pour `wchar_t`, [u16string](../standard-library/string-typedefs.md#u16string) pour `char16_t` et [u32string](../standard-library/string-typedefs.md#u32string) pour `char32_t`.  
+ The data type of a single character to be stored in the string. The C++ Standard Library provides specializations of this template class, with the type definitions [string](../standard-library/string-typedefs.md#string) for elements of type `char`, [wstring](../standard-library/string-typedefs.md#wstring), for `wchar_t`, [u16string](../standard-library/string-typedefs.md#u16string) for `char16_t`, and [u32string](../standard-library/string-typedefs.md#u32string) for `char32_t`.  
   
  `Traits`  
- Plusieurs propriétés importantes des éléments **CharType** d’une spécialisation basic_string sont décrites par la classe **Traits**. La valeur par défaut est `char_traits`< `CharType`>.  
+ Various important properties of the **CharType** elements in a basic_string specialization are described by the class **Traits**. The default value is `char_traits`< `CharType`>.  
   
  `Allocator`  
- Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la libération de mémoire de la chaîne. La valeur par défaut est **allocator**< `CharType`>.  
+ The type that represents the stored allocator object that encapsulates details about the string's allocation and deallocation of memory. The default value is **allocator**< `CharType`>.  
   
-### <a name="constructors"></a>Constructeurs  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[basic_string](#basic_string)|Construit une chaîne vide ou initialisée par des caractères spécifiques, ou qui représente une copie complète ou partielle d'un autre objet string ou d'une autre chaîne de style C.|  
+|[basic_string](#basic_string)|Constructs a string that is empty or initialized by specific characters or that is a copy of all or part of some other string object or C-string.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|Type qui représente la classe `allocator` d'un objet string.|  
-|[const_iterator](#const_iterator)|Type qui fournit un itérateur à accès aléatoire pouvant accéder à un élément `const` et le lire dans la chaîne.|  
-|[const_pointer](#const_pointer)|Type qui fournit un pointeur vers un élément `const` d'une chaîne.|  
-|[const_reference](#const_reference)|Type qui fournit une référence à un élément `const` stocké dans une chaîne pour la lecture et l'exécution des opérations `const`.|  
-|[const_reverse_iterator](#const_reverse_iterator)|Type qui fournit un itérateur à accès aléatoire pouvant lire un élément `const` dans la chaîne.|  
-|[difference_type](#difference_type)|Type qui fournit la différence entre deux itérateurs qui font référence aux éléments d'une même chaîne.|  
-|[iterator](#iterator)|Type qui fournit un itérateur à accès aléatoire pouvant lire ou modifier un élément d'une chaîne.|  
-|[npos](#npos)|Une valeur intégrale non signée initialisée à -1 qui indique « introuvable » ou « tous les caractères restants » quand une fonction de recherche échoue.|  
-|[pointer](#pointer)|Type qui fournit un pointeur vers un élément caractère d'une chaîne ou d'un tableau de caractères.|  
-|[reference](#reference)|Type qui fournit une référence à un élément stocké dans une chaîne.|  
-|[reverse_iterator](#reverse_iterator)|Type qui fournit un itérateur à accès aléatoire pouvant lire ou modifier un élément d'une chaîne inversée.|  
-|[size_type](#size_type)|Type intégral non signé pour le nombre d'éléments d'une chaîne.|  
-|[traits_type](#traits_type)|Type pour les caractéristiques de caractère des éléments stockés dans une chaîne.|  
-|[value_type](#value_type)|Type qui représente le type des caractères stockés dans une chaîne.|  
+|[allocator_type](#allocator_type)|A type that represents the `allocator` class for a string object.|  
+|[const_iterator](#const_iterator)|A type that provides a random-access iterator that can access and read a `const` element in the string.|  
+|[const_pointer](#const_pointer)|A type that provides a pointer to a `const` element in a string.|  
+|[const_reference](#const_reference)|A type that provides a reference to a `const` element stored in a string for reading and performing `const` operations.|  
+|[const_reverse_iterator](#const_reverse_iterator)|A type that provides a random-access iterator that can read any `const` element in the string.|  
+|[difference_type](#difference_type)|A type that provides the difference between two iterators that refer to elements within the same string.|  
+|[iterator](#iterator)|A type that provides a random-access iterator that can read or modify any element in a string.|  
+|[npos](#npos)|An unsigned integral value initialized to -1 that indicates either "not found" or "all remaining characters" when a search function fails.|  
+|[pointer](#pointer)|A type that provides a pointer to a character element in a string or character array.|  
+|[reference](#reference)|A type that provides a reference to an element stored in a string.|  
+|[reverse_iterator](#reverse_iterator)|A type that provides a random-access iterator that can read or modify an element in a reversed string.|  
+|[size_type](#size_type)|An unsigned integral type for the number of elements in a string.|  
+|[traits_type](#traits_type)|A type for the character traits of the elements stored in a string.|  
+|[value_type](#value_type)|A type that represents the type of characters stored in a string.|  
   
-### <a name="member-functions"></a>Fonctions membres  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[append](#append)|Ajoute des caractères à la fin d'une chaîne.|  
-|[assign](#assign)|Assigne de nouvelles valeurs de caractère au contenu d'une chaîne.|  
-|[at](#at)|Retourne une référence à l'élément à un emplacement spécifié dans la chaîne.|  
+|[append](#append)|Adds characters to the end of a string.|  
+|[assign](#assign)|Assigns new character values to the contents of a string.|  
+|[at](#at)|Returns a reference to the element at a specified location in the string.|  
 |[back](#back)||  
-|[begin](#begin)|Retourne un itérateur qui traite le premier élément de la chaîne.|  
-|[c_str](#c_str)|Convertit le contenu d'une chaîne en chaîne de style C se terminant par un caractère Null.|  
-|[capacity](#capacity)|Retourne le plus grand nombre d'éléments qui peuvent être stockés dans une chaîne sans augmenter l'allocation de mémoire de la chaîne.|  
-|[cbegin](#cbegin)|Retourne un itérateur const qui traite le premier élément de la chaîne.|  
-|[cend](#cend)|Retourne un itérateur const qui traite l'emplacement situé après le dernier élément d'une chaîne.|  
-|[clear](#clear)|Efface tous les éléments d'une chaîne.|  
-|[compare](#compare)|Compare une chaîne à une chaîne spécifique pour déterminer si les deux chaînes sont équivalentes, ou si l'une est inférieure à l'autre d'un point de vue lexicographique.|  
-|[copy](#copy)|Copie tout au plus un nombre spécifique de caractères d'une position indexée dans une chaîne source vers un tableau de caractères cible. Obsolète. Utilisez [basic_string::_Copy_s](#copy_s) à la place.|  
-|[crbegin](#crbegin)|Retourne un itérateur const qui traite le premier élément d'une chaîne inversée.|  
-|[crend](#crend)|Retourne un itérateur const qui traite l'emplacement qui suit le dernier élément d'une chaîne inversée.|  
-|[_Copy_s](#copy_s)|Copie tout au plus un nombre spécifique de caractères d'une position indexée dans une chaîne source vers un tableau de caractères cible.|  
-|[data](#data)|Convertit le contenu d'une chaîne en tableau de caractères.|  
-|[empty](#empty)|Effectue un test pour déterminer si la chaîne contient des caractères.|  
-|[end](#end)|Retourne un itérateur qui traite l'emplacement qui suit le dernier élément d'une chaîne.|  
-|[erase](#erase)|Supprime un élément ou une plage d'éléments dans une chaîne à partir de l'emplacement spécifié.|  
-|[find](#find)|Recherche une chaîne vers l'avant pour trouver la première occurrence d'une sous-chaîne qui correspond à une séquence spécifique de caractères.|  
-|[find_first_not_of](#find_first_not_of)|Recherche dans une chaîne le premier caractère qui n'est pas un élément de la chaîne spécifiée.|  
-|[find_first_of](#find_first_of)|Recherche dans une chaîne le premier caractère qui correspond à un élément de la chaîne spécifiée.|  
-|[find_last_not_of](#find_last_not_of)|Recherche dans une chaîne le dernier caractère qui n'est pas un élément de la chaîne spécifiée.|  
-|[find_last_of](#find_last_of)|Recherche dans une chaîne le dernier caractère qui est un élément de la chaîne spécifiée.|  
-|[front](#front)|Retourne une référence au premier élément d'une chaîne.|  
-|[get_allocator](#get_allocator)|Retourne une copie de l'objet `allocator` utilisé pour construire la chaîne.|  
-|[insert](#insert)|Insère un élément, un certain nombre d'éléments ou une plage d'éléments dans la chaîne à la position spécifiée.|  
-|[length](#length)|Retourne le nombre actuel d'éléments contenus dans une chaîne.|  
-|[max_size](#max_size)|Retourne le nombre maximal de caractères qu'une chaîne peut contenir.|  
-|[pop_back](#pop_back)|Efface le dernier élément de la chaîne.|  
-|[push_back](#push_back)|Ajoute un élément à la fin de la chaîne.|  
-|[rbegin](#rbegin)|Retourne un itérateur au premier élément d'une chaîne inversée.|  
-|[rend](#rend)|Retourne un itérateur qui pointe juste après le dernier élément d'une chaîne inversée.|  
-|[replace](#replace)|Remplace les éléments d'une chaîne à la position spécifiée par des caractères spécifiques ou des caractères copiés à partir d'autres plages, chaînes ou chaînes de style C.|  
-|[reserve](#reserve)|Définit la capacité de la chaîne en fonction d'un nombre au moins aussi grand que le nombre spécifié.|  
-|[resize](#resize)|Spécifie une nouvelle taille pour une chaîne, en ajoutant ou en effaçant des éléments selon les besoins.|  
-|[rfind](#rfind)|Recherche une chaîne vers l'arrière pour trouver la première occurrence d'une sous-chaîne qui correspond à une séquence spécifique de caractères.|  
-|[shrink_to_fit](#shrink_to_fit)|Ignore la capacité excédentaire de la chaîne.|  
-|[size](#size)|Retourne le nombre actuel d'éléments contenus dans une chaîne.|  
-|[substr](#substr)|Copie une sous-chaîne d'un certain nombre de caractères dans une chaîne qui commence à la position spécifiée.|  
-|[swap](#swap)|Échange le contenu de deux chaînes.|  
+|[begin](#begin)|Returns an iterator addressing the first element in the string.|  
+|[c_str](#c_str)|Converts the contents of a string as a C-style, null-terminated, string.|  
+|[capacity](#capacity)|Returns the largest number of elements that could be stored in a string without increasing the memory allocation of the string.|  
+|[cbegin](#cbegin)|Returns a const iterator addressing the first element in the string.|  
+|[cend](#cend)|Returns a const iterator that addresses the location succeeding the last element in a string.|  
+|[clear](#clear)|Erases all elements of a string.|  
+|[compare](#compare)|Compares a string with a specified string to determine if the two strings are equal or if one is lexicographically less than the other.|  
+|[copy](#copy)|Copies at most a specified number of characters from an indexed position in a source string to a target character array. Deprecated. Use [basic_string::_Copy_s](#copy_s) instead.|  
+|[crbegin](#crbegin)|Returns a const iterator that addresses the first element in a reversed string.|  
+|[crend](#crend)|Returns a const iterator that addresses the location succeeding the last element in a reversed string.|  
+|[_Copy_s](#copy_s)|Copies at most a specified number of characters from an indexed position in a source string to a target character array.|  
+|[data](#data)|Converts the contents of a string into an array of characters.|  
+|[empty](#empty)|Tests whether the string contains characters.|  
+|[end](#end)|Returns an iterator that addresses the location succeeding the last element in a string.|  
+|[erase](#erase)|Removes an element or a range of elements in a string from a specified position.|  
+|[find](#find)|Searches a string in a forward direction for the first occurrence of a substring that matches a specified sequence of characters.|  
+|[find_first_not_of](#find_first_not_of)|Searches through a string for the first character that is not any element of a specified string.|  
+|[find_first_of](#find_first_of)|Searches through a string for the first character that matches any element of a specified string.|  
+|[find_last_not_of](#find_last_not_of)|Searches through a string for the last character that is not any element of a specified string.|  
+|[find_last_of](#find_last_of)|Searches through a string for the last character that is an element of a specified string.|  
+|[front](#front)|Returns a reference to the first element in a string.|  
+|[get_allocator](#get_allocator)|Returns a copy of the `allocator` object used to construct the string.|  
+|[insert](#insert)|Inserts an element or a number of elements or a range of elements into the string at a specified position.|  
+|[length](#length)|Returns the current number of elements in a string.|  
+|[max_size](#max_size)|Returns the maximum number of characters a string could contain.|  
+|[pop_back](#pop_back)|Erases the last element of the string.|  
+|[push_back](#push_back)|Adds an element to the end of the string.|  
+|[rbegin](#rbegin)|Returns an iterator to the first element in a reversed string.|  
+|[rend](#rend)|Returns an iterator that points just beyond the last element in a reversed string.|  
+|[replace](#replace)|Replaces elements in a string at a specified position with specified characters or characters copied from other ranges or strings or C-strings.|  
+|[reserve](#reserve)|Sets the capacity of the string to a number at least as great as a specified number.|  
+|[resize](#resize)|Specifies a new size for a string, appending or erasing elements as required.|  
+|[rfind](#rfind)|Searches a string in a backward direction for the first occurrence of a substring that matches a specified sequence of characters.|  
+|[shrink_to_fit](#shrink_to_fit)|Discards the excess capacity of the string.|  
+|[size](#size)|Returns the current number of elements in a string.|  
+|[substr](#substr)|Copies a substring of at most some number of characters from a string beginning from a specified position.|  
+|[swap](#swap)|Exchange the contents of two strings.|  
   
-### <a name="operators"></a>Opérateurs  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator+=](#op_add_eq)|Ajoute des caractères à une chaîne.|  
-|[operator=](#op_eq)|Assigne de nouvelles valeurs de caractère au contenu d'une chaîne.|  
-|[operator&#91;&#93;](#op_at)|Fournit une référence au caractère situé à l'index spécifié dans une chaîne.|  
+|[operator+=](#op_add_eq)|Appends characters to a string.|  
+|[operator=](#op_eq)|Assigns new character values to the contents of a string.|  
+|[operator&#91;&#93;](#op_at)|Provides a reference to the character with a specified index in a string.|  
   
-## <a name="remarks"></a>Notes  
- Si une fonction doit générer une séquence supérieure à [max_size](#max_size) éléments, la fonction signale une erreur de longueur en levant un objet de type [length_error](../standard-library/length-error-class.md).  
+## <a name="remarks"></a>Remarks  
+ If a function is asked to generate a sequence longer than [max_size](#max_size) elements, the function reports a length error by throwing an object of type [length_error](../standard-library/length-error-class.md).  
   
- Les références, pointeurs et itérateurs qui désignent les éléments de la séquence contrôlée peuvent devenir non valides après un appel à une fonction qui modifie la séquence contrôlée, ou après le premier appel à une fonction membre non-**const**.  
+ References, pointers, and iterators that designate elements of the controlled sequence can become invalid after any call to a function that alters the controlled sequence, or after the first call to a non- **const** member function.  
   
-## <a name="requirements"></a>Spécifications  
- **En-tête :** \<string>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<string>  
   
- **Espace de noms :** std  
+ **Namespace:** std  
   
 ##  <a name="allocator_type"></a>  basic_string::allocator_type  
- Type qui représente la classe allocator d’un objet string.  
+ A type that represents the allocator class for a string object.  
   
 ```  
 typedef Allocator allocator_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme du paramètre de modèle **Allocator**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **Allocator**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_allocator_type.cpp  
@@ -235,7 +289,7 @@ int main( )
 ```  
   
 ##  <a name="append"></a>  basic_string::append  
- Ajoute des caractères à la fin d'une chaîne.  
+ Adds characters to the end of a string.  
   
 ```  
 basic_string<CharType, Traits, Allocator>& append(
@@ -271,35 +325,35 @@ basic_string<CharType, Traits, Allocator>& append(
     const_iterator last);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- Chaîne C à ajouter.  
+ The C-string to be appended.  
   
  `str`  
- Chaîne dont les caractères sont à ajouter.  
+ The string whose characters are to be appended.  
   
  `_Off`  
- Index de la partie de la chaîne source fournissant les caractères à ajouter.  
+ The index of the part of the source string supplying the characters to be appended.  
   
  `count`  
- Nombre de caractères à ajouter, au maximum, à partir de la chaîne source.  
+ The number of characters to be appended, at most, from the source string.  
   
  `_Ch`  
- Valeur du caractère à ajouter.  
+ The character value to be appended.  
   
  `first`  
- Itérateur d’entrée qui cible le premier élément de la plage à ajouter.  
+ An input iterator addressing the first element in the range to be appended.  
   
  `last`  
- Itérateur d’entrée, const_pointer ou const_iterator, qui cible la position juste après le dernier élément dans la plage à ajouter.  
+ An input iterator, const_pointer, or const_iterator addressing the position of the one beyond the last element in the range to be appended.  
   
-### <a name="return-value"></a>Valeur de retour  
- Référence à l’objet string ajouté avec les caractères transmis par la fonction membre.  
+### <a name="return-value"></a>Return Value  
+ A reference to the string object that is being appended with the characters passed by the member function.  
   
-### <a name="remarks"></a>Notes  
- Les caractères peuvent être ajoutés à une chaîne à l’aide de [operator+=](#op_add_eq) ou des fonctions membres **append** ou [push_back](#push_back). `operator+=` ajoute des valeurs à argument unique tandis que la fonction membre **append** à plusieurs arguments permet de spécifier une partie spécifique d’une chaîne à ajouter.  
+### <a name="remarks"></a>Remarks  
+ Characters may be appended to a string using the [operator+=](#op_add_eq) or the member functions **append** or [push_back](#push_back). `operator+=` appends single-argument values while the multiple-argument **append** member function allows a specific part of a string to be specified for adding.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_append.cpp  
@@ -392,7 +446,7 @@ The appended string str1 is: Hello World.
 ```  
   
 ##  <a name="assign"></a>  basic_string::assign  
- Assigne de nouvelles valeurs de caractère au contenu d'une chaîne.  
+ Assigns new character values to the contents of a string.  
   
 ```  
 basic_string<CharType, Traits, Allocator>& assign(
@@ -428,35 +482,35 @@ basic_string<CharType, Traits, Allocator>& assign(
     const_iterator last);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- Pointeur vers les caractères de la chaîne C à assigner à la chaîne cible.  
+ A pointer to the characters of the C-string to be assigned to the target string.  
   
  `count`  
- Nombre de caractères à ajouter, au maximum, à partir de la chaîne source.  
+ The number of characters to be appended, at most, from the source string.  
   
  `str`  
- Chaîne source dont les caractères doivent être assignés à la chaîne cible.  
+ The source string whose characters are to be assigned to the target string.  
   
  `_Ch`  
- Valeur du caractère à assigner.  
+ The character value to be assigned.  
   
  `first`  
- Itérateur d’entrée, const_pointer ou const_iterator, qui cible le premier caractère de la plage de la chaîne source à assigner à la plage cible.  
+ An input iterator, const_pointer, or const_iterator addressing the first character in the range of the source string to be assigned to the target range.  
   
  `last`  
- Itérateur d’entrée, const_pointer ou const_iterator, qui cible la position juste après le dernier caractère de la plage de la chaîne source à assigner à la plage cible.  
+ An input iterator, const_pointer, or const_iterator addressing the one beyond the last character in the range of the source string to be assigned to the target range.  
   
  `off`  
- Position à laquelle les nouveaux caractères commencent à être assignés.  
+ The position at which new characters will start to be assigned.  
   
-### <a name="return-value"></a>Valeur de retour  
- Référence à l’objet string auquel la fonction membre assigne les nouveaux caractères.  
+### <a name="return-value"></a>Return Value  
+ A reference to the string object that is being assigned new characters by the member function.  
   
-### <a name="remarks"></a>Notes  
- Les chaînes peuvent recevoir de nouvelles valeurs de caractère. La nouvelle valeur peut être une chaîne et une chaîne C, ou un caractère unique. [operator=](#op_eq) peut être utilisé si la nouvelle valeur peut être décrite par un seul paramètre ; sinon la fonction membre **assign**, qui possède plusieurs paramètres, peut être utilisée pour spécifier la partie de la chaîne qui doit être assignée à une chaîne cible.  
+### <a name="remarks"></a>Remarks  
+ The strings can be assigned new character values. The new value can be either a string and C-string or a single character. The [operator=](#op_eq) may be used if the new value can be described by a single parameter; otherwise the member function **assign**, which has multiple parameters, can be used to specify which part of the string is to be assigned to a target string.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_assign.cpp  
@@ -549,7 +603,7 @@ The string str1 assigned a range of string str2f is: World.
 ```  
   
 ##  <a name="at"></a>  basic_string::at  
- Fournit une référence au caractère situé à l'index spécifié dans une chaîne.  
+ Provides a reference to the character with a specified index in a string.  
   
 ```  
 const_reference at(size_type _Off) const;
@@ -558,23 +612,23 @@ const_reference at(size_type _Off) const;
 reference at(size_type _Off);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- Index de la position de l’élément à référencer.  
+ The index of the position of the element to be referenced.  
   
-### <a name="return-value"></a>Valeur de retour  
- Référence au caractère de la chaîne à la position spécifiée par l’index de paramètre.  
+### <a name="return-value"></a>Return Value  
+ A reference to the character of the string at the position specified by the parameter index.  
   
-### <a name="remarks"></a>Remarques  
- Le premier élément de la chaîne possède un index de zéro et les éléments suivants sont indexés consécutivement par des entiers positifs, afin qu’une chaîne de longueur *n* a un *n*ième élément indexé par le nombre *n -* 1.  
+### <a name="remarks"></a>Remarks  
+ The first element of the string has an index of zero and the following elements are indexed consecutively by the positive integers, so that a string of length *n* has an *n*th element indexed by the number *n -* 1.  
   
- Le membre [operator&#91;&#93;](#op_at) est plus rapide que la fonction membre **at** pour fournir un accès en lecture et en écriture aux éléments d’une chaîne.  
+ The member [operator&#91;&#93;](#op_at) is faster than the member function **at** for providing read and write access to the elements of a string.  
   
- Le membre `operator[]` ne vérifie pas si l’index passé comme paramètre est valide, contrairement à la fonction membre **at** qui doit donc être utilisée si la validité n’est pas certaine. Un index non valide, qui est un index inférieur à zéro ou supérieur ou égal à la taille de la chaîne, passé à la fonction membre **at** lève une exception [classe out_of_range](../standard-library/out-of-range-class.md). Un index non valide passé à `operator[]` entraîne un comportement indéfini, mais l’index égal à la longueur de la chaîne est un index valide pour les chaînes const, et l’opérateur retourne le caractère null quand il reçoit cet index.  
+ The member `operator[]` does not check whether the index passed as a parameter is valid but the member function **at** does and so should be used if the validity is not certain. An invalid index, which is an index less that zero or greater than or equal to the size of the string, passed to the member function **at** throws an [out_of_range Class](../standard-library/out-of-range-class.md) exception. An invalid index passed to the `operator[]` results in undefined behavior, but the index equal to the length of the string is a valid index for const strings and the operator returns the null-character when passed this index.  
   
- La référence retournée peut être invalidée par des réallocations ou des modifications de chaîne pour les chaînes non-**const**.  
+ The reference returned may be invalidated by string reallocations or modifications for the non- **const** strings.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_at.cpp  
@@ -614,7 +668,7 @@ int main( )
 ```  
   
 ##  <a name="back"></a>  basic_string::back  
- Retourne une référence au dernier élément de la chaîne.  
+ Returns a reference to the last element in the string.  
   
 ```  
 const_reference back() const;
@@ -623,13 +677,13 @@ const_reference back() const;
 reference back();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Référence au dernier élément de la chaîne, qui doit être non vide.  
+### <a name="return-value"></a>Return Value  
+ A reference to the last element of the string, which must be non-empty.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="basic_string"></a>  basic_string::basic_string  
- Construit une chaîne vide, initialisée par des caractères spécifiques ou qui représente une copie complète ou partielle d'un autre objet String ou d'une autre chaîne de style C (non terminée par la valeur null).  
+ Constructs a string that is empty, initialized by specific characters, or is a copy of all or part of another string object or C style (null-terminated) string.  
   
 ```  
 basic_string();
@@ -699,40 +753,40 @@ basic_string(
     const_iterator last);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- Chaîne C dont les caractères doivent être utilisés pour initialiser le `string` en cours de construction. Cette valeur ne peut pas être un pointeur null.  
+ The C-string whose characters are to be used to initialize the `string` being constructed. This value cannot be a null pointer.  
   
  `_Al`  
- Classe d'allocateur de stockage pour l'objet String en cours de construction.  
+ The storage allocator class for the string object being constructed.  
   
  `count`  
- Nombre de caractères à initialiser.  
+ The number of characters to be initialized.  
   
  `right`  
- Chaîne pour initialiser la chaîne en cours de construction.  
+ The string to initialize the string being constructed.  
   
  `_Roff`  
- Index d'un caractère dans une chaîne qui est le premier à être utilisé pour initialiser les valeurs de caractère de la chaîne en cours de construction.  
+ The index of a character in a string that is the first to be used to initialize character values for the string being constructed.  
   
  `_Ch`  
- Valeur de caractère à copier dans la chaîne en cours de construction.  
+ The character value to be copied into the string being constructed.  
   
  `first`  
- Itérateur d'entrée, const_pointer ou const_iterator qui traite le premier élément dans la plage source à insérer.  
+ An input iterator, const_pointer, or const_iterator addressing the first element in the source range to be inserted.  
   
  `last`  
- Itérateur d'entrée, const_pointer ou const_iterator qui traite la position de l'objet au-delà du dernier élément dans la plage source à insérer.  
+ An input iterator, const_pointer, or const_iterator addressing the position of the one beyond the last element in the source range to be inserted.  
   
-### <a name="return-value"></a>Valeur de retour  
- Référence à l'objet String qui est construit par les constructeurs.  
+### <a name="return-value"></a>Return Value  
+ A reference to the string object that is being constructed by the constructors.  
   
-### <a name="remarks"></a>Notes  
- Tous les constructeurs stockent un [basic_string::allocator_type](#allocator_type) et initialisent la séquence contrôlée. L'objet allocateur est l'argument `al`, s'il est présent. Pour le constructeur de copie, il s’agit de `right.`[basic_string::get_allocator](#get_allocator)`()`. Sinon, il s'agit de `Alloc()`.  
+### <a name="remarks"></a>Remarks  
+ All constructors store an [basic_string::allocator_type](#allocator_type) and initialize the controlled sequence. The allocator object is the argument `al`, if present. For the copy constructor, it is `right.`[basic_string::get_allocator](#get_allocator)`()`. Otherwise, it is `Alloc()`.  
   
- La séquence contrôlée est initialisée avec une copie de la séquence d'opérandes spécifiée par les opérandes restants. Un constructeur sans séquence d’opérandes spécifie une séquence contrôlée initiale vide. Si `InputIterator` est de type entier dans un constructeur de modèle, la séquence d’opérandes _F`irst,  last` se comporte comme `(size_type) first, (value_type) last`.  
+ The controlled sequence is initialized to a copy of the operand sequence specified by the remaining operands. A constructor without an operand sequence specifies an empty initial controlled sequence. If `InputIterator` is an integer type in a template constructor, the operand sequence _F `irst,  last` behaves the same as `(size_type) first, (value_type) last`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_ctor.cpp  
@@ -782,7 +836,7 @@ int main( )
 ```  
   
 ##  <a name="begin"></a>  basic_string::begin  
- Retourne un itérateur qui traite le premier élément de la chaîne.  
+ Returns an iterator addressing the first element in the string.  
   
 ```  
 const_iterator begin() const;
@@ -791,10 +845,10 @@ const_iterator begin() const;
 iterator begin();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur d’accès aléatoire qui cible le premier élément de la séquence ou la position juste après la fin d’une séquence vide.  
+### <a name="return-value"></a>Return Value  
+ A random-access iterator that addresses the first element of the sequence or just beyond the end of an empty sequence.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_begin.cpp  
@@ -831,21 +885,21 @@ int main( ) {
 ```  
   
 ##  <a name="c_str"></a>  basic_string::c_str  
- Convertit le contenu d’une chaîne en chaîne de style C se terminant par un caractère null.  
+ Converts the contents of a string as a C-style, null-terminated string.  
   
 ```  
 const value_type *c_str() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Pointeur vers la version de style C de la chaîne d’appel.  La valeur du pointeur n’est pas valide après l’appel à une fonction non-const, y compris le destructeur, dans la classe basic_string sur l’objet.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the C-style version of the invoking string.  The pointer value is not valid after calling a non-const function, including the destructor, in the basic_string class on the object.  
   
-### <a name="remarks"></a>Notes  
- Les objets de type chaîne appartenant à la classe de modèle C++ basic_string\<char> ne sont pas nécessairement terminés par le caractère null. Le caractère null « \0 » est utilisé comme caractère spécial dans une chaîne C pour marquer la fin de la chaîne, mais il n’a aucune signification particulière dans un objet de type chaîne et peut faire partie de la chaîne comme tout autre caractère. Il existe une conversion automatique de const **char\*** en chaînes, mais la classe string ne fournit pas de conversion automatique des chaînes de style C en objets de type **basic_string\<char>**.  
+### <a name="remarks"></a>Remarks  
+ Objects of type string belonging to the C++ template class basic_string\<char> are not necessarily null terminated. The null character ' \0 ' is used as a special character in a C-string to mark the end of the string but has no special meaning in an object of type string and may be a part of the string just like any other character. There is an automatic conversion from const **char\*** into strings, but the string class does not provide for automatic conversions from C-style strings to objects of type **basic_string\<char>**.  
   
- La chaîne de style C retournée ne doit pas être modifiée, car cela peut invalider le pointeur vers la chaîne, ou supprimée, car la chaîne a une durée de vie limitée et appartient à la chaîne de la classe.  
+ The returned C-style string should not be modified, as this could invalidate the pointer to the string, or deleted, as the string has a limited lifetime and is owned by the class string.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_c_str.cpp  
@@ -892,19 +946,19 @@ The length of C-style string str1 = 11
 ```  
   
 ##  <a name="capacity"></a>  basic_string::capacity  
- Retourne le plus grand nombre d'éléments qui peuvent être stockés dans une chaîne sans augmenter l'allocation de mémoire de la chaîne.  
+ Returns the largest number of elements that could be stored in a string without increasing the memory allocation of the string.  
   
 ```  
 size_type capacity() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Taille du stockage actuellement alloué dans la mémoire pour contenir la chaîne.  
+### <a name="return-value"></a>Return Value  
+ The size of storage currently allocated in memory to hold the string.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne le stockage actuellement alloué pour contenir la séquence contrôlée, une valeur au moins aussi grande que [size](#size).  
+### <a name="remarks"></a>Remarks  
+ The member function returns the storage currently allocated to hold the controlled sequence, a value at least as large as [size](#size).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_capacity.cpp  
@@ -959,19 +1013,19 @@ int main( )
 ```  
   
 ##  <a name="cbegin"></a>  basic_string::cbegin  
- Retourne un itérateur `const` qui traite le premier élément d'une plage.  
+ Returns a `const` iterator that addresses the first element in the range.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur d'accès aléatoire `const` qui pointe vers le premier élément de la plage, ou vers l'emplacement situé juste après la fin d'une plage vide (pour une plage vide : `cbegin() == cend()`).  
+### <a name="return-value"></a>Return Value  
+ A `const` random-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>Notes  
- Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, il est supposé que `Container` est un conteneur modifiable (non-`const`) de tout type, prenant en charge `begin()` et `cbegin()`.  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -982,19 +1036,19 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  basic_string::cend  
- Retourne un itérateur `const` qui traite l'emplacement situé immédiatement après le dernier élément d'une plage.  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur d'accès aléatoire `const` qui pointe juste après la fin de la plage.  
+### <a name="return-value"></a>Return Value  
+ A `const` random-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>Notes  
- `cend` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans cet exemple, `Container` est supposé être un conteneur modifiable (autre que `const`) de type indéfini prenant en charge `end()` et `cend()`.  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -1004,19 +1058,19 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- La valeur retournée par `cend` ne doit pas être déréférencée.  
+ The value returned by `cend` should not be dereferenced.  
   
 ##  <a name="clear"></a>  basic_string::clear  
- Efface tous les éléments d'une chaîne.  
+ Erases all elements of a string.  
   
 ```  
 void clear();
 ```  
   
-### <a name="remarks"></a>Notes  
- La chaîne sur laquelle la fonction membre est appelée est vide.  
+### <a name="remarks"></a>Remarks  
+ The string on which the member function is called will be empty.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_clear.cpp  
@@ -1056,7 +1110,7 @@ Nothing printed above because the string str1 is empty.
 ```  
   
 ##  <a name="compare"></a>  basic_string::compare  
- Effectue une comparaison sensible à la casse entre une chaîne et une chaîne spécifiée pour déterminer si les deux chaînes sont équivalentes ou si l’une est inférieure à l’autre d’un point de vue lexicographique.  
+ Performs a case sensitive comparison with a specified string to determine if the two strings are equal or if one is lexicographically less than the other.  
   
 ```  
 int compare(
@@ -1094,37 +1148,37 @@ int compare(
     size_type _Num2) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `str`  
- Chaîne à comparer à la chaîne d’opérande.  
+ The string that is to be compared to the operand string.  
   
  `_Pos1`  
- Index de la chaîne d’opérande à partir duquel commence la comparaison.  
+ The index of the operand string at which the comparison begins.  
   
  `_Num1`  
- Nombre maximal de caractères de la chaîne d’opérande à comparer.  
+ The maximum number of characters from the operand string to be compared.  
   
  `_Num2`  
- Nombre maximal de caractères de la chaîne de paramètre à comparer.  
+ The maximum number of characters from the parameter string to be compared.  
   
  `_Off`  
- Index de la chaîne de paramètre à partir duquel commence la comparaison.  
+ The index of the parameter string at which the comparison begins.  
   
  `count`  
- Nombre maximal de caractères de la chaîne de paramètre à comparer.  
+ The maximum number of characters from the parameter string to be compared.  
   
  `ptr`  
- Chaîne C à comparer à la chaîne d’opérande.  
+ The C-string to be compared to the operand string.  
   
-### <a name="return-value"></a>Valeur de retour  
- Valeur négative si la chaîne d’opérande est inférieure à la chaîne de paramètre ; zéro si les deux chaînes sont égales ; ou valeur positive si la chaîne d’opérande est supérieure à la chaîne de paramètre.  
+### <a name="return-value"></a>Return Value  
+ A negative value if the operand string is less than the parameter string; zero if the two strings are equal; or a positive value if the operand string is greater than the parameter string.  
   
-### <a name="remarks"></a>Notes  
- Les fonctions membres **compare** comparent tout ou partie des chaînes de paramètre et d’opérande selon celle qui est utilisée.  
+### <a name="remarks"></a>Remarks  
+ The **compare** member functions compare either all or part of the parameter and operand strings depending on which in used.  
   
- La comparaison effectuée respecte la casse.  
+ The comparison performed is case sensitive.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_compare.cpp  
@@ -1318,33 +1372,33 @@ The 3 characters from position 2 of the operand string are equal to
 ```  
   
 ##  <a name="const_iterator"></a>  basic_string::const_iterator  
- Type qui fournit un itérateur d’accès aléatoire pouvant accéder à un élément **const** et le lire dans la chaîne.  
+ A type that provides a random-access iterator that can access and read a **const** element in the string.  
   
 ```  
 typedef implementation-defined const_iterator;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Un type `const_iterator` ne peut pas être utilisé pour modifier la valeur d’un caractère et est utilisé pour itérer sur une chaîne vers l’avant.  
+### <a name="remarks"></a>Remarks  
+ A type `const_iterator` cannot be used to modify the value of a character and is used to iterate through a string in a forward direction.  
   
-### <a name="example"></a>Exemple  
-  Pour savoir comment déclarer et utiliser `const_iterator`, consultez l’exemple relatif à [begin](#begin).  
+### <a name="example"></a>Example  
+  See the example for [begin](#begin) for an example of how to declare and use `const_iterator`.  
   
 ##  <a name="const_pointer"></a>  basic_string::const_pointer  
- Type qui fournit un pointeur vers un élément **const** dans une chaîne.  
+ A type that provides a pointer to a **const** element in a string.  
   
 ```  
 typedef typename allocator_type::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme de **allocator_type::const_pointer**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for **allocator_type::const_pointer**.  
   
- Pour le type **string**, il est équivalent à `char`*.  
+ For type **string**, it is equivalent to `char`*.  
   
- Les pointeurs déclarés comme const doivent être initialisés au moment de la déclaration. Les pointeurs const pointent toujours vers le même emplacement de mémoire et peuvent pointer vers des données constantes ou non-constantes.  
+ Pointers that are declared const must be initialized when they are declared. Const pointers always point to the same memory location and may point to constant or nonconstant data.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_const_ptr.cpp  
@@ -1369,37 +1423,37 @@ The C-string cstr1c is: Out There.
 ```  
   
 ##  <a name="const_reference"></a>  basic_string::const_reference  
- Type qui fournit une référence à un élément **const** stocké dans une chaîne pour la lecture et l’exécution des opérations **const**.  
+ A type that provides a reference to a **const** element stored in a string for reading and performing **const** operations.  
   
 ```  
 typedef typename allocator_type::const_reference const_reference;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Un type `const_reference` ne peut pas être utilisé pour changer la valeur d'un élément.  
+### <a name="remarks"></a>Remarks  
+ A type `const_reference` cannot be used to modify the value of an element.  
   
- Le type est un synonyme de **allocator_type::const_reference**. Pour la chaîne **type**, il est équivalent à const **char&**.  
+ The type is a synonym for **allocator_type::const_reference**. For string **type**, it is equivalent to const **char&**.  
   
-### <a name="example"></a>Exemple  
-  Pour savoir comment déclarer et utiliser `const_reference`, consultez l’exemple relatif à [at](#at).  
+### <a name="example"></a>Example  
+  See the example for [at](#at) for an example of how to declare and use `const_reference`.  
   
 ##  <a name="const_reverse_iterator"></a>  basic_string::const_reverse_iterator  
- Type qui fournit un itérateur d’accès aléatoire pouvant lire tout élément **const** dans la chaîne.  
+ A type that provides a random-access iterator that can read any **const** element in the string.  
   
 ```  
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Un type `const_reverse_iterator` ne peut pas changer la valeur d’un caractère. Il sert à itérer sur une chaîne dans l’ordre inverse.  
+### <a name="remarks"></a>Remarks  
+ A type `const_reverse_iterator` cannot modify the value of a character and is used to iterate through a string in reverse.  
   
-### <a name="example"></a>Exemple  
-  Pour savoir comment déclarer et utiliser `const_reverse_iterator`, consultez l’exemple relatif à [rbegin](#rbegin).  
+### <a name="example"></a>Example  
+  See the example for [rbegin](#rbegin) for an example of how to declare and use `const_reverse_iterator`.  
   
 ##  <a name="copy"></a>  basic_string::copy  
- Copie tout au plus un nombre spécifique de caractères d'une position indexée dans une chaîne source vers un tableau de caractères cible.  
+ Copies at most a specified number of characters from an indexed position in a source string to a target character array.  
   
- Cette méthode est potentiellement dangereuse, car elle suppose que l’appelant vérifie que les valeurs passées sont correctes. Utilisez [basic_string::_Copy_s](#copy_s) à la place.  
+ This method is potentially unsafe, as it relies on the caller to check that the passed values are correct. Consider using [basic_string::_Copy_s](#copy_s) instead.  
   
 ```  
 size_type copy(
@@ -1408,23 +1462,23 @@ size_type copy(
     size_type _Off = 0) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- Tableau de caractères cible dans lequel les éléments doivent être copiés.  
+ The target character array to which the elements are to be copied.  
   
  _ `Count`  
- Nombre de caractères à copier, au maximum, à partir de la chaîne source.  
+ The number of characters to be copied, at most, from the source string.  
   
  `_Off`  
- Position de début dans la chaîne source à partir de laquelle les copies doivent être effectuées.  
+ The beginning position in the source string from which copies are to be made.  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre de caractères réellement copiés.  
+### <a name="return-value"></a>Return Value  
+ The number of characters actually copied.  
   
-### <a name="remarks"></a>Notes  
- Un caractère null n’est pas ajouté à la fin de la copie.  
+### <a name="remarks"></a>Remarks  
+ A null character is not appended to the end of the copy.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_copy.cpp  
@@ -1474,29 +1528,29 @@ The copied characters array2 is: World
 ```  
   
 ##  <a name="crbegin"></a>  basic_string::crbegin  
- Retourne un itérateur const qui traite le premier élément d'une chaîne inversée.  
+ Returns a const iterator that addresses the first element in a reversed string.  
   
 ```  
 const_reverse_iterator crbegin() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur inverse qui pointe juste après la fin de la chaîne. La position désigne le début de la chaîne inverse.  
+### <a name="return-value"></a>Return Value  
+ A reverse iterator that points just beyond the end of the string. The position designates the beginning of the reverse string.  
   
 ##  <a name="crend"></a>  basic_string::crend  
- Retourne un itérateur const qui traite l'emplacement qui suit le dernier élément d'une chaîne inversée.  
+ Returns a const iterator that addresses the location succeeding the last element in a reversed string.  
   
 ```  
 const_reverse_iterator crend() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Itérateur inversé const qui traite l'emplacement qui suit le dernier élément d'une chaîne inversée (emplacement qui précédait celui du premier élément de la chaîne non inversée).  
+### <a name="return-value"></a>Return Value  
+ A const reverse iterator that addresses the location succeeding the last element in a reversed string (the location that had preceded the first element in the unreversed string).  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="copy_s"></a>  basic_string::_Copy_s  
- Copie tout au plus un nombre spécifique de caractères d'une position indexée dans une chaîne source vers un tableau de caractères cible.  
+ Copies at most a specified number of characters from an indexed position in a source string to a target character array.  
   
 ```  
 size_type _Copy_s(
@@ -1506,26 +1560,26 @@ size_type _Copy_s(
     size_type _Off = 0) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `dest`  
- Tableau de caractères cible dans lequel les éléments doivent être copiés.  
+ The target character array to which the elements are to be copied.  
   
  `dest_size`  
- Taille de `dest`.  
+ The size of `dest`.  
   
  _ `Count`  
- Nombre de caractères à copier, au maximum, à partir de la chaîne source.  
+ The number of characters to be copied, at most, from the source string.  
   
  `_Off`  
- Position de début dans la chaîne source à partir de laquelle les copies doivent être effectuées.  
+ The beginning position in the source string from which copies are to be made.  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre de caractères réellement copiés.  
+### <a name="return-value"></a>Return Value  
+ The number of characters actually copied.  
   
-### <a name="remarks"></a>Notes  
- Un caractère null n’est pas ajouté à la fin de la copie.  
+### <a name="remarks"></a>Remarks  
+ A null character is not appended to the end of the copy.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string__Copy_s.cpp  
@@ -1573,23 +1627,23 @@ The copied characters array2 is: World
 ```  
   
 ##  <a name="data"></a>  basic_string::data  
- Convertit le contenu d'une chaîne en tableau de caractères.  
+ Converts the contents of a string into an array of characters.  
   
 ```  
 const value_type *data() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Pointeur vers le premier élément du tableau qui contient le contenu de la chaîne ou, pour un tableau vide, un pointeur non null qui ne peut pas être déréférencé.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first element of the array containing the contents of the string, or, for an empty array, a non-null pointer that cannot be dereferenced.  
   
-### <a name="remarks"></a>Notes  
- Les objets de type chaîne appartenant à la classe de modèle C++ basic_string \<char> ne sont pas nécessairement terminés par le caractère null. Le type de retour pour **data** n’est pas une chaîne C valide, car aucun caractère null n’est ajouté. Le caractère null « \0 » est utilisé comme caractère spécial dans une chaîne C pour marquer la fin de la chaîne, mais il n’a aucune signification particulière dans un objet de type chaîne et peut faire partie de l’objet de chaîne comme tout autre caractère.  
+### <a name="remarks"></a>Remarks  
+ Objects of type string belonging to the C++ template class basic_string \<char> are not necessarily null terminated. The return type for **data** is not a valid C-string, because no null character gets appended. The null character ' \0 ' is used as a special character in a C-string to mark the end of the string, but has no special meaning in an object of type string and may be a part of the string object just like any other character.  
   
- Il existe une conversion automatique de const **char\*** en chaînes, mais la classe string ne fournit pas de conversion automatique des chaînes de style C en objets de type **basic_string\<char>**.  
+ There is an automatic conversion from const **char\*** into strings, but the string class does not provide for automatic conversions from C-style strings to objects of type **basic_string \<char>**.  
   
- La chaîne retournée ne doit pas être modifiée, car cela peut invalider le pointeur vers la chaîne, ou supprimée, car la chaîne a une durée de vie limitée et appartient à la chaîne de la classe.  
+ The returned string should not be modified, because this could invalidate the pointer to the string, or deleted, because the string has a limited lifetime and is owned by the class string.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_data.cpp  
@@ -1636,18 +1690,18 @@ The length of C-style string str1 = 11
 ```  
   
 ##  <a name="difference_type"></a>  basic_string::difference_type  
- Type qui fournit la différence entre deux itérateurs qui font référence aux éléments d'une même chaîne.  
+ A type that provides the difference between two iterators that refer to elements within the same string.  
   
 ```  
 typedef typename allocator_type::difference_type difference_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type d'entier signé décrit un objet qui peut représenter la différence entre les adresses de deux éléments quelconques dans la séquence contrôlée.  
+### <a name="remarks"></a>Remarks  
+ The signed integer type describes an object that can represent the difference between the addresses of any two elements in the controlled sequence.  
   
- Pour le type **string**, il est équivalent à **ptrdiff_t**.  
+ For type **string**, it is equivalent to **ptrdiff_t**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_diff_type.cpp  
@@ -1682,19 +1736,19 @@ The difference is: 6.
 ```  
   
 ##  <a name="empty"></a>  basic_string::empty  
- Vérifie si la chaîne contient ou non des caractères.  
+ Tests whether the string contains characters or not.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- **true** si l’objet de chaîne ne contient aucun caractère ; **false** s’il a au moins un caractère.  
+### <a name="return-value"></a>Return Value  
+ **true** if the string object contains no characters; **false** if it has at least one character.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre est équivalente à [size](#size) == 0.  
+### <a name="remarks"></a>Remarks  
+ The member function is equivalent to [size](#size) == 0.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_empty.cpp  
@@ -1727,7 +1781,7 @@ int main() {
 ```  
   
 ##  <a name="end"></a>  basic_string::end  
- Retourne un itérateur qui traite l'emplacement qui suit le dernier élément d'une chaîne.  
+ Returns an iterator that addresses the location succeeding the last element in a string.  
   
 ```  
 const_iterator end() const;
@@ -1736,15 +1790,15 @@ const_iterator end() const;
 iterator end();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne un itérateur d’accès aléatoire qui cible l’emplacement situé après le dernier élément d’une chaîne.  
+### <a name="return-value"></a>Return Value  
+ Returns a random-access iterator that addresses the location succeeding the last element in a string.  
   
-### <a name="remarks"></a>Notes  
- **end** est souvent utilisé pour déterminer si un itérateur a atteint la fin de sa chaîne. La valeur retournée par **end** ne doit pas être déréférencée.  
+### <a name="remarks"></a>Remarks  
+ **end** is often used to test whether an iterator has reached the end of its string. The value returned by **end** should not be dereferenced.  
   
- Si la valeur de retour de **end** est assignée à un `const_iterator`, l’objet de chaîne ne peut pas être modifié. Si la valeur de retour de **end** est assignée à un **iterator**, l’objet de chaîne peut être modifié.  
+ If the return value of **end** is assigned to a `const_iterator`, the string object cannot be modified. If the return value of **end** is assigned to an **iterator**, the string object can be modified.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_end.cpp  
@@ -1798,7 +1852,7 @@ The string str2 is empty.
 ```  
   
 ##  <a name="erase"></a>  basic_string::erase  
- Supprime un élément ou une plage d'éléments dans une chaîne à partir de l'emplacement spécifié.  
+ Removes an element or a range of elements in a string from a specified position.  
   
 ```  
 iterator erase(
@@ -1813,29 +1867,29 @@ basic_string<CharType, Traits, Allocator>& erase(
     size_type count = npos);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `first`  
- Itérateur qui cible la position du premier élément de la plage à effacer.  
+ An iterator addressing the position of the first element in the range to be erased.  
   
  `last`  
- Itérateur qui cible la position juste après le dernier élément de la plage à effacer.  
+ An iterator addressing the position one past the last element in the range to be erased.  
   
  `_It`  
- Itérateur qui cible la position de l’élément de la chaîne à effacer.  
+ An iterator addressing the position of the element in the string to be erased.  
   
  `_Pos`  
- Index du premier caractère de la chaîne à supprimer.  
+ The index of the first character in the string to be removed.  
   
  `count`  
- Nombre d’éléments à supprimer s’il y en a autant dans la plage de la chaîne commençant par *_Pos*.  
+ The number of elements that will be removed if there are as many in the range of the string beginning with *_Pos*.  
   
-### <a name="return-value"></a>Valeur de retour  
- Pour les deux premières fonctions membres, un itérateur qui cible le premier caractère après le dernier caractère supprimé par la fonction membre. Pour la troisième fonction membre, une référence à l’objet de chaîne à partir duquel les éléments ont été effacés.  
+### <a name="return-value"></a>Return Value  
+ For the first two member functions, an iterator addressing the first character after the last character removed by the member function. For the third member function, a reference to the string object from which the elements have been erased.  
   
-### <a name="remarks"></a>Notes  
- La troisième fonction membre retourne **\*this**.  
+### <a name="remarks"></a>Remarks  
+ The third member function returns **\*this**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_erase.cpp  
@@ -1897,7 +1951,7 @@ The modified string object str3m is: Hello .
 ```  
   
 ##  <a name="find"></a>  basic_string::find  
- Recherche une chaîne vers l'avant pour trouver la première occurrence d'une sous-chaîne qui correspond à une séquence spécifique de caractères.  
+ Searches a string in a forward direction for the first occurrence of a substring that matches a specified sequence of characters.  
   
 ```  
 size_type find(
@@ -1921,26 +1975,26 @@ size_type find(
     size_type _Off = 0) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- Valeur de caractère que la fonction membre doit rechercher.  
+ The character value for which the member function is to search.  
   
  `_Off`  
- Index de la position à laquelle la recherche doit commencer.  
+ Index of the position at which the search is to begin.  
   
  `ptr`  
- C-string que la fonction membre doit rechercher.  
+ The C-string for which the member function is to search.  
   
  `count`  
- Nombre de caractères, en comptant à partir du premier caractère, dans le C-string que la fonction membre doit rechercher.  
+ The number of characters, counting forward from the first character, in the C-string for which the member function is to search.  
   
  `str`  
- Chaîne que la fonction membre doit rechercher.  
+ The string for which the member function is to search.  
   
-### <a name="return-value"></a>Valeur de retour  
- Index du premier caractère de la sous-chaîne recherchée en cas de succès ; dans le cas contraire, `npos`.  
+### <a name="return-value"></a>Return Value  
+ The index of the first character of the substring searched for when successful; otherwise `npos`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_find.cpp  
@@ -2072,7 +2126,7 @@ The index of the 1st element of 'clear' in str4 is: 0
 ```  
   
 ##  <a name="find_first_not_of"></a>  basic_string::find_first_not_of  
- Recherche dans une chaîne le premier caractère qui n’est pas un élément de la chaîne spécifiée.  
+ Searches through a string for the first character that is not an element of a specified string.  
   
 ```  
 size_type find_first_not_of(
@@ -2096,26 +2150,26 @@ size_type find_first_not_of(
     size_type _Off = 0) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- Valeur de caractère que la fonction membre doit rechercher.  
+ The character value for which the member function is to search.  
   
  `_Off`  
- Index de la position à laquelle la recherche doit commencer.  
+ Index of the position at which the search is to begin.  
   
  `ptr`  
- C-string que la fonction membre doit rechercher.  
+ The C-string for which the member function is to search.  
   
  `count`  
- Nombre de caractères, en comptant à partir du premier caractère, dans le C-string que la fonction membre doit rechercher.  
+ The number of characters, counting forward from the first character, in the C-string for which the member function is to search.  
   
  `str`  
- Chaîne que la fonction membre doit rechercher.  
+ The string for which the member function is to search.  
   
-### <a name="return-value"></a>Valeur de retour  
- Index du premier caractère de la sous-chaîne recherchée en cas de succès ; dans le cas contraire, `npos`.  
+### <a name="return-value"></a>Return Value  
+ The index of the first character of the substring searched for when successful; otherwise `npos`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_find_first_not_of.cpp  
@@ -2260,7 +2314,7 @@ The index of the 1st non occurrence of an element of '12' in str4 after
 ```  
   
 ##  <a name="find_first_of"></a>  basic_string::find_first_of  
- Recherche dans une chaîne le premier caractère qui correspond à un élément de la chaîne spécifiée.  
+ Searches through a string for the first character that matches any element of a specified string.  
   
 ```  
 size_type find_first_of(
@@ -2284,26 +2338,26 @@ size_type find_first_of(
     size_type _Off = 0) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- Valeur de caractère que la fonction membre doit rechercher.  
+ The character value for which the member function is to search.  
   
  `_Off`  
- Index de la position à laquelle la recherche doit commencer.  
+ Index of the position at which the search is to begin.  
   
  `ptr`  
- C-string que la fonction membre doit rechercher.  
+ The C-string for which the member function is to search.  
   
  `count`  
- Nombre de caractères, en comptant à partir du premier caractère, dans le C-string que la fonction membre doit rechercher.  
+ The number of characters, counting forward from the first character, in the C-string for which the member function is to search.  
   
  `str`  
- Chaîne que la fonction membre doit rechercher.  
+ The string for which the member function is to search.  
   
-### <a name="return-value"></a>Valeur de retour  
- Index du premier caractère de la sous-chaîne recherchée en cas de succès ; dans le cas contraire, `npos`.  
+### <a name="return-value"></a>Return Value  
+ The index of the first character of the substring searched for when successful; otherwise `npos`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_find_first_of.cpp  
@@ -2447,7 +2501,7 @@ The index of the 1st occurrence of an element of 'a2' in str4 after
 ```  
   
 ##  <a name="find_last_not_of"></a>  basic_string::find_last_not_of  
- Recherche dans une chaîne le dernier caractère qui n'est pas un élément de la chaîne spécifiée.  
+ Searches through a string for the last character that is not any element of a specified string.  
   
 ```  
 size_type find_last_not_of(
@@ -2471,26 +2525,26 @@ size_type find_last_not_of(
     size_type _Off = npos) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- Valeur de caractère que la fonction membre doit rechercher.  
+ The character value for which the member function is to search.  
   
  `_Off`  
- Index de la position à laquelle la recherche doit se terminer.  
+ Index of the position at which the search is to finish.  
   
  `ptr`  
- C-string que la fonction membre doit rechercher.  
+ The C-string for which the member function is to search.  
   
  `count`  
- Nombre de caractères, en comptant à partir du premier caractère, dans le C-string que la fonction membre doit rechercher.  
+ The number of characters, counting forward from the first character, in the C-string for which the member function is to search.  
   
  `str`  
- Chaîne que la fonction membre doit rechercher.  
+ The string for which the member function is to search.  
   
-### <a name="return-value"></a>Valeur de retour  
- Index du premier caractère de la sous-chaîne recherchée en cas de succès ; dans le cas contraire, `npos`.  
+### <a name="return-value"></a>Return Value  
+ The index of the first character of the substring searched for when successful; otherwise `npos`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_find_last_not_of.cpp  
@@ -2636,7 +2690,7 @@ The index of the last occurrence of an element not in '12'
 ```  
   
 ##  <a name="find_last_of"></a>  basic_string::find_last_of  
- Recherche dans une chaîne le dernier caractère qui correspond à un élément de la chaîne spécifiée.  
+ Searches through a string for the last character that matches any element of a specified string.  
   
 ```  
 size_type find_last_of(
@@ -2663,26 +2717,26 @@ size_type find_last_of(
     size_type _Off = npos) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- Valeur de caractère que la fonction membre doit rechercher.  
+ The character value for which the member function is to search.  
   
  `_Off`  
- Index de la position à laquelle la recherche doit se terminer.  
+ Index of the position at which the search is to finish.  
   
  `ptr`  
- C-string que la fonction membre doit rechercher.  
+ The C-string for which the member function is to search.  
   
  `count`  
- Nombre de caractères, en comptant à partir du premier caractère, dans le C-string que la fonction membre doit rechercher.  
+ The number of characters, counting forward from the first character, in the C-string for which the member function is to search.  
   
  `str`  
- Chaîne que la fonction membre doit rechercher.  
+ The string for which the member function is to search.  
   
-### <a name="return-value"></a>Valeur de retour  
- Index du dernier caractère de la sous-chaîne recherchée en cas de réussite ; sinon, `npos`.  
+### <a name="return-value"></a>Return Value  
+ The index of the last character of the substring searched for when successful; otherwise `npos`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_find_last_of.cpp  
@@ -2813,7 +2867,7 @@ The index of the last occurrence of an element of 'a2' in str4 before
 ```  
   
 ##  <a name="front"></a>  basic_string::front  
- Retourne une référence au premier élément d'une chaîne.  
+ Returns a reference to the first element in a string.  
   
 ```  
 const_reference front() const;
@@ -2822,27 +2876,27 @@ const_reference front() const;
 reference front();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Référence au premier élément de la chaîne, qui doit être non vide.  
+### <a name="return-value"></a>Return Value  
+ A reference to the first element of the string, which must be non-empty.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="get_allocator"></a>  basic_string::get_allocator  
- Retourne une copie de l’objet allocateur utilisé pour construire la chaîne.  
+ Returns a copy of the allocator object used to construct the string.  
   
 ```  
 allocator_type get_allocator() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Allocateur utilisé par la chaîne.  
+### <a name="return-value"></a>Return Value  
+ The allocator used by the string.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre retourne l’objet d’allocateur stocké.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored allocator object.  
   
- Les allocateurs de la classe string spécifient la façon dont la classe gère le stockage. Les allocateurs par défaut fournis avec les classes de conteneur sont suffisants pour la plupart des besoins en programmation. L'écriture et l'utilisation de votre propre classe d'allocateur font l'objet d'une rubrique avancée du langage C++.  
+ Allocators for the string class specify how the class manages storage. The default allocators supplied with container classes are sufficient for most programming needs. Writing and using your own allocator class is an advanced C++ topic.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_get_allocator.cpp  
@@ -2868,7 +2922,7 @@ int main( )
 ```  
   
 ##  <a name="insert"></a>  basic_string::insert  
- Insère un élément, un certain nombre d'éléments ou une plage d'éléments dans la chaîne à la position spécifiée.  
+ Inserts an element or a number of elements or a range of elements into the string at a specified position.  
   
 ```  
 basic_string<CharType, Traits, Allocator>& insert(
@@ -2923,38 +2977,38 @@ void insert(
     const_iterator last);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  *_P0*  
- Index de la position derrière le point d’insertion des nouveaux caractères.  
+ The index of the position behind the point of insertion the new characters.  
   
  `ptr`  
- C-string à insérer en intégralité ou en partie dans la chaîne.  
+ The C-string to be wholly or partly inserted into the string.  
   
  `count`  
- Nombre de caractères à insérer.  
+ The number of characters to be inserted.  
   
  `str`  
- Chaîne à insérer en intégralité ou en partie dans la chaîne cible.  
+ The string to be wholly or partly inserted into the target string.  
   
  `_Off`  
- Index de la partie de la chaîne source fournissant les caractères à ajouter.  
+ The index of the part of the source string supplying the characters to be appended.  
   
  `_Ch`  
- Valeur de caractère des éléments à insérer.  
+ The character value of the elements to be inserted.  
   
  `_It`  
- Itérateur traitant la position derrière laquelle un caractère doit être inséré.  
+ An iterator addressing the position behind which a character is to be inserted.  
   
  `first`  
- Itérateur d'entrée, const_pointer ou const_iterator qui traite le premier élément dans la plage source à insérer.  
+ An input iterator, const_pointer, or const_iterator addressing the first element in the source range to be inserted.  
   
  `last`  
- Itérateur d'entrée, const_pointer ou const_iterator qui traite la position de l'objet au-delà du dernier élément dans la plage source à insérer.  
+ An input iterator, const_pointer, or const_iterator addressing the position of the one beyond the last element in the source range to be inserted.  
   
-### <a name="return-value"></a>Valeur de retour  
- Référence à l’objet string auquel la fonction membre affecte de nouveaux caractères ou, dans le cas d’insertions de caractères individuels, itérateur traitant la position du caractère inséré, ou aucune valeur, selon la fonction membre en question.  
+### <a name="return-value"></a>Return Value  
+ Either a reference to the string object that is being assigned new characters by the member function or, in the case of individual character insertions, an iterator addressing the position of the character inserted, or none, depending on the particular member function.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_insert.cpp  
@@ -3044,29 +3098,29 @@ The string with a character inserted from a range is: ABCDeeeHIJ
 ```  
   
 ##  <a name="iterator"></a>  basic_string::iterator  
- Type qui fournit un itérateur d’accès aléatoire pouvant accéder à un élément **const** et le lire dans la chaîne.  
+ A type that provides a random-access iterator that can access and read a **const** element in the string.  
   
 ```  
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Un type **iterator** peut être utilisé pour modifier la valeur d’un caractère et est utilisé pour itérer au sein d’une chaîne vers l’avant.  
+### <a name="remarks"></a>Remarks  
+ A type **iterator** can be used to modify the value of a character and is used to iterate through a string in a forward direction.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple relatif à [begin](#begin) pour savoir comment déclarer et utiliser **iterator**.  
+### <a name="example"></a>Example  
+  See the example for [begin](#begin) for an example of how to declare and use **iterator**.  
   
 ##  <a name="length"></a>  basic_string::length  
- Retourne le nombre actuel d'éléments contenus dans une chaîne.  
+ Returns the current number of elements in a string.  
   
 ```  
 size_type length() const;
 ```  
   
-### <a name="remarks"></a>Notes  
- La fonction membre est identique à [size](#size).  
+### <a name="remarks"></a>Remarks  
+ The member function is the same as [size](#size).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_length.cpp  
@@ -3121,19 +3175,19 @@ int main( )
 ```  
   
 ##  <a name="max_size"></a>  basic_string::max_size  
- Retourne le nombre maximal de caractères qu'une chaîne peut contenir.  
+ Returns the maximum number of characters a string could contain.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Nombre maximal de caractères qu’une chaîne peut contenir.  
+### <a name="return-value"></a>Return Value  
+ The maximum number of characters a string could contain.  
   
-### <a name="remarks"></a>Notes  
- Une exception de type [classe length_error](../standard-library/length-error-class.md) est levée quand une opération produit une chaîne d’une longueur supérieure à la taille maximale.  
+### <a name="remarks"></a>Remarks  
+ A exception of type [length_error Class](../standard-library/length-error-class.md) is thrown when an operation produces a string with a length greater than the maximum size.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_max_size.cpp  
@@ -3188,20 +3242,20 @@ int main( )
 ```  
   
 ##  <a name="npos"></a>  basic_string::npos  
- Une valeur intégrale non signée initialisée à -1 qui indique « introuvable » ou « tous les caractères restants » quand une fonction de recherche échoue.  
+ An unsigned integral value initialized to -1 that indicates either "not found" or "all remaining characters" when a search function fails.  
   
 ```  
 static const size_type npos = -1;  
 ```  
   
-### <a name="remarks"></a>Remarques  
- Quand la valeur de retour doit être vérifiée pour la valeur `npos`, la vérification peut échouer, sauf si la valeur de retour est de type [size_type](#size_type) et non `int` ou `unsigned`.  
+### <a name="remarks"></a>Remarks  
+ When the return value is to be checked for the `npos` value, it might not work unless the return value is of type [size_type](#size_type) and not either `int` or `unsigned`.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple relatif à [find](#find) pour savoir comment déclarer et utiliser `npos`.  
+### <a name="example"></a>Example  
+  See the example for [find](#find) for an example of how to declare and use `npos`.  
   
 ##  <a name="op_add_eq"></a>  basic_string::operator+=  
- Ajoute des caractères à une chaîne.  
+ Appends characters to a string.  
   
 ```  
 basic_string<CharType, Traits, Allocator>& operator+=(
@@ -3214,23 +3268,23 @@ basic_string<CharType, Traits, Allocator>& operator+=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- Caractère à ajouter.  
+ The character to be appended.  
   
  `ptr`  
- Caractères de la chaîne C à ajouter.  
+ The characters of the C-string to be appended.  
   
  `right`  
- Caractères de la chaîne à ajouter.  
+ The characters of the string to be appended.  
   
-### <a name="return-value"></a>Valeur de retour  
- Référence à l’objet string ajouté avec les caractères transmis par la fonction membre.  
+### <a name="return-value"></a>Return Value  
+ A reference to the string object that is being appended with the characters passed by the member function.  
   
-### <a name="remarks"></a>Notes  
- Les caractères peuvent être ajoutés à une chaîne à l’aide de `operator+=`, ou des fonctions membres [append](#append) ou [push_back](#push_back). `operator+=` ajoute des valeurs à argument unique tandis que la fonction membre append à plusieurs arguments permet de spécifier une partie spécifique d’une chaîne à ajouter.  
+### <a name="remarks"></a>Remarks  
+ Characters may be appended to a string using the `operator+=` or the member functions [append](#append) or [push_back](#push_back). The `operator+=` appends single-argument values while the multiple argument append member function allows a specific part of a string to be specified for adding.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_op_app.cpp  
@@ -3286,7 +3340,7 @@ The doubly appended strig str1 is: Hello Wide World.
 ```  
   
 ##  <a name="op_eq"></a>  basic_string::operator=  
- Assigne de nouvelles valeurs de caractère au contenu d'une chaîne.  
+ Assigns new character values to the contents of a string.  
   
 ```  
 basic_string<CharType, Traits, Allocator>& operator=(
@@ -3302,23 +3356,23 @@ basic_string<CharType, Traits, Allocator>& operator=(
     const basic_string<CharType, Traits, Allocator>&& right);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- Valeur du caractère à assigner.  
+ The character value to be assigned.  
   
  `ptr`  
- Pointeur vers les caractères de la chaîne C à assigner à la chaîne cible.  
+ A pointer to the characters of the C-string to be assigned to the target string.  
   
  `right`  
- Chaîne source dont les caractères doivent être assignés à la chaîne cible.  
+ The source string whose characters are to be assigned to the target string.  
   
-### <a name="return-value"></a>Valeur de retour  
- Référence à l’objet string auquel la fonction membre assigne les nouveaux caractères.  
+### <a name="return-value"></a>Return Value  
+ A reference to the string object that is being assigned new characters by the member function.  
   
-### <a name="remarks"></a>Notes  
- Les chaînes peuvent recevoir de nouvelles valeurs de caractère. La nouvelle valeur peut être une chaîne et une chaîne C, ou un caractère unique. `operator=` peut être utilisé si la nouvelle valeur peut être décrite par un seul paramètre ; sinon la fonction membre [assign](#assign), qui possède plusieurs paramètres, peut être utilisée pour spécifier la partie de la chaîne qui doit être assignée à une chaîne cible.  
+### <a name="remarks"></a>Remarks  
+ The strings may be assigned new character values. The new value may be either a string and C-string or a single character. The `operator=` may be used if the new value can be described by a single parameter, otherwise the member function [assign](#assign), which has multiple parameters, may be used to specify which part of the string is to be assigned to a target string.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_op_assign.cpp  
@@ -3376,32 +3430,32 @@ The string str1 reassigned with string str3c is: World.
 ```  
   
 ##  <a name="op_at"></a>  basic_string::operator[]  
- Fournit une référence au caractère situé à l'index spécifié dans une chaîne.  
+ Provides a reference to the character with a specified index in a string.  
   
 ```  
 const_reference operator[](size_type _Off) const;  
 reference operator[](size_type _Off);  
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- Index de la position de l’élément à référencer.  
+ The index of the position of the element to be referenced.  
   
-### <a name="return-value"></a>Valeur de retour  
- Référence au caractère de la chaîne à la position spécifiée par l’index de paramètre.  
+### <a name="return-value"></a>Return Value  
+ A reference to the character of the string at the position specified by the parameter index.  
   
-### <a name="remarks"></a>Notes  
- Le premier élément de la chaîne a un index égal à zéro et les éléments suivants sont indexés consécutivement par les entiers positifs, de sorte qu’une chaîne de longueur *n* a son *n*-ième élément indexé par le nombre *n* - 1.  
+### <a name="remarks"></a>Remarks  
+ The first element of the string has an index of zero, and the following elements are indexed consecutively by the positive integers, so that a string of length *n* has an *n*th element indexed by the number *n* - 1.  
   
- `operator[]` est plus rapide que la fonction membre [at](#at) pour fournir un accès en lecture et en écriture aux éléments d’une chaîne.  
+ `operator[]` is faster than the member function [at](#at) for providing read and write access to the elements of a string.  
   
- `operator[]` ne vérifie pas si l’index passé comme paramètre est valide, contrairement à la fonction membre **at** qui doit donc être utilisée si la validité n’est pas certaine. Un index non valide (index inférieur à zéro ou supérieur ou égal à la taille de la chaîne) passé à la fonction membre **at** lève une exception [classe out_of_range](../standard-library/out-of-range-class.md). Un index non valide passé à `operator[]` entraîne un comportement indéfini, mais l’index égal à la longueur de la chaîne est un index valide pour les chaînes const, et l’opérateur retourne le caractère null quand il reçoit cet index.  
+ `operator[]` does not check whether the index passed as a parameter is valid, but the member function **at** does and so should be used in the validity is not certain. An invalid index (an index less that zero or greater than or equal to the size of the string) passed to the member function **at** throws an [out_of_range Class](../standard-library/out-of-range-class.md) exception. An invalid index passed to `operator[]` results in undefined behavior, but the index equal to the length of the string is a valid index for const strings and the operator returns the null character when passed this index.  
   
- La référence retournée peut être invalidée par des réallocations ou des modifications de chaîne pour les chaînes non-**const**.  
+ The reference returned may be invalidated by string reallocations or modifications for the non- **const** strings.  
   
- Lors d’une compilation avec [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous tentez d’accéder à un élément en dehors des limites de la chaîne. Pour plus d’informations, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md).  
+ When compiling with [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) set to 1 or 2, a runtime error will occur if you attempt to access an element outside the bounds of the string. For more information, see [Checked Iterators](../standard-library/checked-iterators.md).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_op_ref.cpp  
@@ -3441,18 +3495,18 @@ int main( )
 ```  
   
 ##  <a name="pointer"></a>  basic_string::pointer  
- Type qui fournit un pointeur vers un élément caractère d'une chaîne ou d'un tableau de caractères.  
+ A type that provides a pointer to a character element in a string or character array.  
   
 ```  
 typedef typename allocator_type::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme de **allocator_type::pointer**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for **allocator_type::pointer**.  
   
- Pour le type **string**, il est équivalent à **char\***.  
+ For type **string**, it is equivalent to **char\***.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_pointer.cpp  
@@ -3476,30 +3530,30 @@ The C-string cstr1b is: Out There.
 ```  
   
 ##  <a name="pop_back"></a>  basic_string::pop_back  
- Efface le dernier élément de la chaîne.  
+ Erases the last element of the string.  
   
 ```  
 void pop_back();
 ```  
   
-### <a name="remarks"></a>Notes  
- Cette fonction membre appelle `erase(size() - 1)` pour effacer le dernier élément de la séquence, qui ne doit pas être vide.  
+### <a name="remarks"></a>Remarks  
+ This member function effectively calls `erase(size() - 1)` to erase the last element of the sequence, which must be non-empty.  
   
 ##  <a name="push_back"></a>  basic_string::push_back  
- Ajoute un élément à la fin de la chaîne.  
+ Adds an element to the end of the string.  
   
 ```  
 void push_back(value_type _Ch);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- Caractère à ajouter à la fin de la chaîne.  
+ The character to be added to the end of the string.  
   
-### <a name="remarks"></a>Notes  
- La fonction membre appelle [insert](#insert)( [end](#end), _ *Ch* ).  
+### <a name="remarks"></a>Remarks  
+ The member function effectively calls [insert](#insert)( [end](#end), _ *Ch* ).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_push_back.cpp  
@@ -3538,7 +3592,7 @@ The modified string str1 is: abc
 ```  
   
 ##  <a name="rbegin"></a>  basic_string::rbegin  
- Retourne un itérateur au premier élément d'une chaîne inversée.  
+ Returns an iterator to the first element in a reversed string.  
   
 ```  
 const_reverse_iterator rbegin() const;
@@ -3547,17 +3601,17 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne un itérateur d’accès aléatoire vers le premier élément d’une chaîne inversée, qui cible le dernier élément de la chaîne non inversée correspondante.  
+### <a name="return-value"></a>Return Value  
+ Returns a random-access iterator to the first element in a reversed string, addressing what would be the last element in the corresponding unreversed string.  
   
-### <a name="remarks"></a>Notes  
- `rbegin` est utilisé avec une chaîne inversée, de la même façon que [begin](#begin) est utilisé avec une chaîne.  
+### <a name="remarks"></a>Remarks  
+ `rbegin` is used with a reversed string just as [begin](#begin) is used with a string.  
   
- Si la valeur de retour de `rbegin` est assignée à un `const_reverse_iterator`, l’objet de chaîne ne peut pas être modifié. Si la valeur de retour de `rbegin` est assignée à un `reverse_iterator`, l’objet de chaîne peut être modifié.  
+ If the return value of `rbegin` is assigned to a `const_reverse_iterator`, the string object cannot be modified. If the return value of `rbegin` is assigned to a `reverse_iterator`, the string object can be modified.  
   
- `rbegin` peut être utilisé pour initialiser une itération au sein d’une chaîne vers l’arrière.  
+ `rbegin` can be used to initialize an iteration through a string backwards.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_rbegin.cpp  
@@ -3612,24 +3666,24 @@ The string str2 is empty.
 ```  
   
 ##  <a name="reference"></a>  basic_string::reference  
- Type qui fournit une référence à un élément stocké dans une chaîne.  
+ A type that provides a reference to an element stored in a string.  
   
 ```  
 typedef typename allocator_type::reference reference;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Un type **reference** peut être utilisé pour changer la valeur d’un élément.  
+### <a name="remarks"></a>Remarks  
+ A type **reference** can be used to modify the value of an element.  
   
- Le type est un synonyme de **allocator_type::reference**.  
+ The type is a synonym for **allocator_type::reference**.  
   
- Pour le type **string**, il est équivalent à **chr&**.  
+ For type **string**, it is equivalent to **chr&**.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple relatif à [at](#at) pour savoir comment déclarer et utiliser **reference**.  
+### <a name="example"></a>Example  
+  See the example for [at](#at) for an example of how to declare and use **reference**.  
   
 ##  <a name="rend"></a>  basic_string::rend  
- Retourne un itérateur qui cible l’emplacement suivant le dernier élément d’une chaîne inversée.  
+ Returns an iterator that addresses the location succeeding the last element in a reversed string.  
   
 ```  
 const_reverse_iterator rend() const;
@@ -3638,19 +3692,19 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Retourne un itérateur d’accès aléatoire qui cible l’emplacement suivant le dernier élément d’une chaîne inversée.  
+### <a name="return-value"></a>Return Value  
+ A reverse random-access iterator that addresses the location succeeding the last element in a reversed string.  
   
-### <a name="remarks"></a>Notes  
- `rend` est utilisé avec une chaîne inversée, de la même façon que [end](#end) est utilisé avec une chaîne.  
+### <a name="remarks"></a>Remarks  
+ `rend` is used with a reversed string just as [end](#end) is used with a string.  
   
- Si la valeur de retour de `rend` est assignée à un `const_reverse_iterator`, l’objet de chaîne ne peut pas être modifié. Si la valeur de retour de `rend` est assignée à un `reverse_iterator`, l’objet de chaîne peut être modifié.  
+ If the return value of `rend` is assigned to a `const_reverse_iterator`, the string object cannot be modified. If the return value of `rend` is assigned to a `reverse_iterator`, the string object can be modified.  
   
- `rend` peut être utilisé pour déterminer si un itérateur inversé a atteint la fin de sa chaîne.  
+ `rend` can be used to test whether a reverse iterator has reached the end of its string.  
   
- La valeur retournée par `rend` ne doit pas être déréférencée.  
+ The value returned by `rend` should not be dereferenced.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_rend.cpp  
@@ -3705,7 +3759,7 @@ The string str2 is empty.
 ```  
   
 ##  <a name="replace"></a>  basic_string::replace  
- Remplace les éléments d'une chaîne à la position spécifiée par des caractères spécifiques ou des caractères copiés à partir d'autres plages, chaînes ou chaînes de style C.  
+ Replaces elements in a string at a specified position with specified characters or characters copied from other ranges or strings or C-strings.  
   
 ```  
 basic_string<CharType, Traits, Allocator>& replace(
@@ -3779,47 +3833,47 @@ basic_string<CharType, Traits, Allocator>& replace(
     const_iterator last);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `str`  
- Chaîne qui doit être une source de caractères pour la chaîne d’opérande.  
+ The string that is to be a source of characters for the operand string.  
   
  `_Pos1`  
- Index de la chaîne d’opérande à partir duquel commence le remplacement.  
+ The index of the operand string at which the replacement begins.  
   
  `_Num1`  
- Nombre maximal de caractères à remplacer dans la chaîne d’opérande.  
+ The maximum number of characters to be replaced in the operand string.  
   
  *_Pos2*  
- Index de la chaîne de paramètre à partir duquel commence la copie.  
+ The index of the parameter string at which the copying begins.  
   
  `_Num2`  
- Nombre maximal de caractères à utiliser de la chaîne C de paramètre.  
+ The maximum number of characters to be used from the parameter C-string.  
   
  `ptr`  
- Chaîne C qui doit être une source de caractères pour la chaîne d’opérande.  
+ The C-string that is to be a source of characters for the operand string.  
   
  `_Ch`  
- Caractère à copier dans la chaîne d’opérande.  
+ The character to be copied into the operand string.  
   
  * first0*  
- Itérateur qui cible le premier caractère à supprimer dans la chaîne d’opérande.  
+ An iterator addressing the first character to be removed in the operand string.  
   
  * last0*  
- Itérateur qui cible le dernier caractère à supprimer dans la chaîne d’opérande.  
+ An iterator addressing the last character to be removed in the operand string.  
   
  `first`  
- Itérateur, const_pointer ou const_iterator qui cible le premier caractère à copier dans la chaîne de paramètre.  
+ An iterator, const_pointer, or const_iterator addressing the first character to be copied in the parameter string.  
   
  `last`  
- Itérateur, const_pointer ou const_iterator qui cible le dernier caractère à copier dans la chaîne de paramètre.  
+ An iterator, const_pointer, or const_iterator addressing the last character to be copied in the parameter string.  
   
  `count`  
- Nombre de fois où `_Ch` est copié dans la chaîne d’opérande.  
+ The number of times `_Ch` is copied into the operand string.  
   
-### <a name="return-value"></a>Valeur de retour  
- Chaîne d’opérande avec le remplacement effectué.  
+### <a name="return-value"></a>Return Value  
+ The operand string with the replacement made.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_replace.cpp  
@@ -3999,24 +4053,24 @@ The result of s7o.replace (IterF3 ,IterL3 ,IterF4 ,IterL4)
 ```  
   
 ##  <a name="reserve"></a>  basic_string::reserve  
- Définit la capacité de la chaîne en fonction d'un nombre au moins aussi grand que le nombre spécifié.  
+ Sets the capacity of the string to a number at least as great as a specified number.  
   
 ```  
 void reserve(size_type count = 0);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `count`  
- Nombre de caractères pour lequel la mémoire est réservée.  
+ The number of characters for which memory is being reserved.  
   
-### <a name="remarks"></a>Notes  
- Il est important d’avoir une capacité suffisante, car les réallocations sont chronophages et invalident toutes les références, pointeurs et itérateurs qui référencent les caractères d’une chaîne.  
+### <a name="remarks"></a>Remarks  
+ Having sufficient capacity is important because reallocations is a time-consuming process and invalidates all references, pointers, and iterators that refer to characters in a string.  
   
- Le concept de capacité pour les objets de type chaîne est le même que pour les objets de type vecteur. Contrairement au vecteur, la fonction membre **reserve** peut être appelée pour réduire la capacité d’un objet. La demande est non liante, et peut ou ne peut pas se produire. Comme la valeur par défaut du paramètre est zéro, un appel de **reserve** est une demande non liante pour réduire la capacité de la chaîne au nombre de caractères actuellement dans la chaîne. La capacité n’est jamais inférieure au nombre actuel de caractères.  
+ The concept of capacity for objects of type strings is the same as for objects of type vector. Unlike vector, the member function **reserve** may be called to shrink the capacity of an object. The request is nonbinding and may or may not happen. As the default value for the parameter is zero, a call of **reserve** is a non-binding request to shrink the capacity of the string to fit the number of characters currently in the string. The capacity is never reduced below the current number of characters.  
   
- L’appel à `reserve` est la seule façon possible de réduire la capacité d’une chaîne. Toutefois, comme indiqué ci-dessus, cette demande est non liante et peut ne pas se produire.  
+ Calling `reserve` is the only possible way to shrink the capacity of a string. However, as noted above, this request is nonbinding and may not happen.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_reserve.cpp  
@@ -4086,7 +4140,7 @@ The reduced capacity of string str1 is: 47.
 ```  
   
 ##  <a name="resize"></a>  basic_string::resize  
- Spécifie une nouvelle taille pour une chaîne, en ajoutant ou en effaçant des éléments selon les besoins.  
+ Specifies a new size for a string, appending or erasing elements as required.  
   
 ```  
 void resize(
@@ -4097,17 +4151,17 @@ void resize(
     _Elem _Ch);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `count`  
- Nouvelle taille de la chaîne.  
+ The new size of the string.  
   
  `_Ch`  
- Valeur avec laquelle les caractères ajoutés sont initialisés si des éléments supplémentaires sont nécessaires.  
+ The value that appended characters are initialized with if additional elements are required.  
   
-### <a name="remarks"></a>Notes  
- Si la taille obtenue dépasse le nombre maximal de caractères, le formulaire lève `length_error`.  
+### <a name="remarks"></a>Remarks  
+ If the resulting size exceeds the maximum number of characters, the form throws `length_error`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_resize.cpp  
@@ -4193,20 +4247,20 @@ The capacity of downsized string str1 is: 47.
 ```  
   
 ##  <a name="reverse_iterator"></a>  basic_string::reverse_iterator  
- Type qui fournit une référence à un élément stocké dans une chaîne.  
+ A type that provides a reference to an element stored in a string.  
   
 ```  
 typedef std::reverse_iterator<iterator> reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Un type `reverse_iterator` peut servir à changer la valeur d’un caractère. Il sert à itérer au sein d’une chaîne dans l’ordre inverse.  
+### <a name="remarks"></a>Remarks  
+ A type `reverse_iterator` can be used to modify the value of a character and is used to iterate through a string in reverse.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple relatif à [rbegin](#rbegin) pour savoir comment déclarer et utiliser `reverse_iterator`.  
+### <a name="example"></a>Example  
+  See the example for [rbegin](#rbegin) for an example of how to declare and use `reverse_iterator`.  
   
 ##  <a name="rfind"></a>  basic_string::rfind  
- Recherche une chaîne vers l'arrière pour trouver la première occurrence d'une sous-chaîne qui correspond à une séquence spécifique de caractères.  
+ Searches a string in a backward direction for the first occurrence of a substring that matches a specified sequence of characters.  
   
 ```  
 size_type rfind(
@@ -4230,26 +4284,26 @@ size_type rfind(
     size_type _Off = npos) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- Valeur de caractère que la fonction membre doit rechercher.  
+ The character value for which the member function is to search.  
   
  `_Off`  
- Index de la position à laquelle la recherche doit commencer.  
+ Index of the position at which the search is to begin.  
   
  `ptr`  
- C-string que la fonction membre doit rechercher.  
+ The C-string for which the member function is to search.  
   
  `count`  
- Nombre de caractères, en comptant à partir du premier caractère, dans le C-string que la fonction membre doit rechercher.  
+ The number of characters, counting forward from the first character, in the C-string for which the member function is to search.  
   
  `str`  
- Chaîne que la fonction membre doit rechercher.  
+ The string for which the member function is to search.  
   
-### <a name="return-value"></a>Valeur de retour  
- Index de la dernière occurrence, dans une recherche inversée, du premier caractère de la sous-chaîne en cas de réussite ; sinon, `npos`.  
+### <a name="return-value"></a>Return Value  
+ The index of the last occurrence, when searched backwards, of the first character of the substring when successful; otherwise `npos`.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_rfind.cpp  
@@ -4381,26 +4435,26 @@ The index of the 1st element of 'clear' in str4 is: 17
 ```  
   
 ##  <a name="shrink_to_fit"></a>  basic_string::shrink_to_fit  
- Ignore la capacité excédentaire de la chaîne.  
+ Discards the excess capacity of the string.  
   
 ```  
 void shrink_to_fit();
 ```  
   
-### <a name="remarks"></a>Notes  
- Cette fonction membre élimine tout stockage inutile dans le conteneur.  
+### <a name="remarks"></a>Remarks  
+ This member function eliminates any unneeded storage in the container.  
   
 ##  <a name="size"></a>  basic_string::size  
- Retourne le nombre actuel d'éléments contenus dans une chaîne.  
+ Returns the current number of elements in a string.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>Valeur de retour  
- Longueur de la chaîne.  
+### <a name="return-value"></a>Return Value  
+ The length of the string.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_size.cpp  
@@ -4455,18 +4509,18 @@ int main( )
 ```  
   
 ##  <a name="size_type"></a>  basic_string::size_type  
- Type entier non signé qui peut représenter le nombre d’éléments et d’index dans une chaîne.  
+ An unsigned integer type that can represent the number of elements and indices in a string.  
   
 ```  
 typedef typename allocator_type::size_type size_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Il est équivalent à **allocator_type::size_type**.  
+### <a name="remarks"></a>Remarks  
+ It is equivalent to **allocator_type::size_type**.  
   
- Pour le type **string**, il est équivalent à **size_t**.  
+ For type **string**, it is equivalent to **size_t**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_size_type.cpp  
@@ -4496,7 +4550,7 @@ The capacity of string str1 is: 15.
 ```  
   
 ##  <a name="substr"></a>  basic_string::substr  
- Copie une sous-chaîne d'un certain nombre de caractères dans une chaîne qui commence à la position spécifiée.  
+ Copies a substring of at most some number of characters from a string beginning from a specified position.  
   
 ```  
 basic_string<CharType, Traits, Allocator> substr(
@@ -4504,17 +4558,17 @@ basic_string<CharType, Traits, Allocator> substr(
     size_type count = npos) const;
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- Index situant l’élément à la position à partir de laquelle la copie de la chaîne est effectuée, avec une valeur par défaut égale à 0.  
+ An index locating the element at the position from which the copy of the string is made, with a default value of 0.  
   
  `count`  
- Nombre de caractères qui doivent être copiés s’ils sont présents.  
+ The number of characters that are to be copied if they are present.  
   
-### <a name="return-value"></a>Valeur de retour  
- Objet de sous-chaîne qui est une copie des éléments de l’opérande de chaîne commençant à la position spécifiée par le premier argument.  
+### <a name="return-value"></a>Return Value  
+ A substring object that is a copy of elements of the string operand beginning at the position specified by the first argument.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_substr.cpp  
@@ -4552,29 +4606,29 @@ The default substring str3 is:
 ```  
   
 ##  <a name="swap"></a>  basic_string::swap  
- Échange le contenu de deux chaînes.  
+ Exchange the contents of two strings.  
   
 ```  
 void swap(
     basic_string<CharType, Traits, Allocator>& str);
 ```  
   
-### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Parameters  
  `str`  
- Chaîne source dont les éléments doivent être échangés avec ceux de la chaîne de destination.  
+ The source string whose elements are to be exchanged with those in the destination string.  
   
-### <a name="remarks"></a>Notes  
- Si les chaînes échangées ont le même objet allocateur, la fonction membre `swap` :  
+### <a name="remarks"></a>Remarks  
+ If the strings being swapped have the same allocator object, the `swap` member function:  
   
--   Se produit en temps constant.  
+-   Occurs in constant time.  
   
--   Ne lève aucune exception.  
+-   Throws no exceptions.  
   
--   N’invalide aucune référence, pointeur ou itérateur qui désigne des éléments dans les deux chaînes.  
+-   Invalidates no references, pointers, or iterators that designate elements in the two strings.  
   
- Sinon, elle effectue un nombre d’affectations d’éléments et d’appels de constructeurs proportionnel au nombre d’éléments dans les deux séquences contrôlées.  
+ Otherwise, it performs a number of element assignments and constructor calls proportional to the number of elements in the two controlled sequences.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_swap.cpp  
@@ -4610,31 +4664,31 @@ After swapping string s1 and s2:
 ```  
   
 ##  <a name="traits_type"></a>  basic_string::traits_type  
- Type pour les caractéristiques de caractère des éléments stockés dans une chaîne.  
+ A type for the character traits of the elements stored in a string.  
   
 ```  
 typedef Traits traits_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Le type est un synonyme du deuxième paramètre de modèle **Traits**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the second template parameter **Traits**.  
   
- Pour le type **string**, il est équivalent à **char_traits\<char>**.  
+ For type **string**, it is equivalent to **char_traits\<char>**.  
   
-### <a name="example"></a>Exemple  
-  Consultez l’exemple relatif à [copy](../standard-library/char-traits-struct.md#copy) pour savoir comment déclarer et utiliser `traits_type`.  
+### <a name="example"></a>Example  
+  See the example for [copy](../standard-library/char-traits-struct.md#copy) for an example of how to declare and use `traits_type`.  
   
 ##  <a name="value_type"></a>  basic_string::value_type  
- Type qui représente le type des caractères stockés dans une chaîne.  
+ A type that represents the type of characters stored in a string.  
   
 ```  
 typedef typename allocator_type::value_type value_type;  
 ```  
   
-### <a name="remarks"></a>Notes  
- Il est équivalent à **traits_type::char_type** et à `char` pour les objets de type **string**.  
+### <a name="remarks"></a>Remarks  
+ It is equivalent to **traits_type::char_type** and is equivalent to `char` for objects of type **string**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_string_value_type.cpp  
@@ -4660,8 +4714,8 @@ The character ch1 is: G.
 The character ch2 is: H.  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>See Also  
  [\<string>](../standard-library/string.md)   
- [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

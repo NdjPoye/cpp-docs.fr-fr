@@ -1,62 +1,81 @@
 ---
-title: "Relations entre les objets MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "objets MFC (relations)"
-  - "MFC, relations entre des objets clés"
-  - "objets (C++), relations"
-  - "relations, objets MFC"
+title: Relationships Among MFC Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, relationships between key objects
+- objects [MFC], relationships
+- relationships, MFC objects
+- MFC object relationships
 ms.assetid: 6e8f3b51-e80f-4d88-94c8-4c1e4ee163ad
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Relations entre les objets MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66df0ca425038c60927822b14aba1cb6379488c4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Pour aider à mettre le processus de création de documents\/vue dans la perspective, envisagez un programme en cours de exécution : un document, la fenêtre cadre utilisée pour contenir la vue, puis la vue associées au document.  
+---
+# <a name="relationships-among-mfc-objects"></a>Relationships Among MFC Objects
+To help put the document/view creation process in perspective, consider a running program: a document, the frame window used to contain the view, and the view associated with the document.  
   
--   Un document conserve une liste des vues de ce document et un pointeur vers le modèle de document qui a créé le document.  
+-   A document keeps a list of the views of that document and a pointer to the document template that created the document.  
   
--   Une vue conserve un pointeur à son document et est un enfant de la fenêtre parente cadre.  
+-   A view keeps a pointer to its document and is a child of its parent frame window.  
   
--   Une fenêtre cadre de document conserve un pointeur vers la vue active actuelle.  
+-   A document frame window keeps a pointer to its current active view.  
   
--   Un modèle de document conserve une liste de les documents ouverts.  
+-   A document template keeps a list of its open documents.  
   
--   L'application conserve une liste de ses modèles de document.  
+-   The application keeps a list of its document templates.  
   
--   Windows gère toutes les fenêtres actives elle peut envoyer des messages à celles\-ci.  
+-   Windows keeps track of all open windows so it can send messages to them.  
   
- Ces relations sont créées lors de la création de documents\/vue.  Le tableau suivant illustre les objets dans un programme en cours de exécution peuvent accéder à d'autres objets.  Tout objet peut obtenir un pointeur vers l'objet d'application en appelant la fonction globale [AfxGetApp](../Topic/AfxGetApp.md).  
+ These relationships are established during document/view creation. The following table shows how objects in a running program can access other objects. Any object can obtain a pointer to the application object by calling the global function [AfxGetApp](../mfc/reference/application-information-and-management.md#afxgetapp).  
   
-### Accéder à d'autres objets dans votre application  
+### <a name="gaining-access-to-other-objects-in-your-application"></a>Gaining Access to Other Objects in Your Application  
   
-|à partir des objets|Comment accéder à d'autres objets|  
-|-------------------------|---------------------------------------|  
-|Document|Utilisez [GetFirstViewPosition](../Topic/CDocument::GetFirstViewPosition.md) et [GetNextView](../Topic/CDocument::GetNextView.md) pour accéder à la liste de la vue du document.<br /><br /> Appelez [GetDocTemplate](../Topic/CDocument::GetDocTemplate.md) pour obtenir le modèle de document.|  
-|Vue|Appelez [GetDocument](../Topic/CView::GetDocument.md) pour obtenir le document.<br /><br /> Appelez [GetParentFrame](../Topic/CWnd::GetParentFrame.md) pour obtenir la fenêtre cadre.|  
-|Fenêtres frame de document|Appelez [GetActiveView](../Topic/CFrameWnd::GetActiveView.md) pour obtenir la vue actuelle.<br /><br /> Appelez [GetActiveDocument](../Topic/CFrameWnd::GetActiveDocument.md) pour obtenir le document associé à la vue actuelle.|  
-|Fenêtre frame MDI|Appelez pour obtenir [MDIGetActive](../Topic/CMDIFrameWnd::MDIGetActive.md) actuellement actif [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)actif.|  
+|From object|How to access other objects|  
+|-----------------|---------------------------------|  
+|Document|Use [GetFirstViewPosition](../mfc/reference/cdocument-class.md#getfirstviewposition) and [GetNextView](../mfc/reference/cdocument-class.md#getnextview) to access the document's view list.<br /><br /> Call [GetDocTemplate](../mfc/reference/cdocument-class.md#getdoctemplate) to get the document template.|  
+|View|Call [GetDocument](../mfc/reference/cview-class.md#getdocument) to get the document.<br /><br /> Call [GetParentFrame](../mfc/reference/cwnd-class.md#getparentframe) to get the frame window.|  
+|Document frame window|Call [GetActiveView](../mfc/reference/cframewnd-class.md#getactiveview) to get the current view.<br /><br /> Call [GetActiveDocument](../mfc/reference/cframewnd-class.md#getactivedocument) to get the document attached to the current view.|  
+|MDI frame window|Call [MDIGetActive](../mfc/reference/cmdiframewnd-class.md#mdigetactive) to get the currently active [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).|  
   
- En général, une fenêtre cadre d'une perspective, mais dans certains cas, comme dans les fenêtres de fractionnement, la même fenêtre cadre contient plusieurs vues.  La fenêtre cadre conserve un pointeur actuellement actif à la vue active ; le pointeur est mis à jour lorsqu'une vue est activée.  
+ Typically, a frame window has one view, but sometimes, as in splitter windows, the same frame window contains multiple views. The frame window keeps a pointer to the currently active view; the pointer is updated any time another view is activated.  
   
 > [!NOTE]
->  Pointeur vers la fenêtre principale cadre est stockée dans la variable membre [m\_pMainWnd](../Topic/CWinThread::m_pMainWnd.md) de l'objet d'application.  Un appel à `OnFileNew` de la substitution de la fonction membre de `InitInstance` d'`CWinApp` définit `m_pMainWnd` automatiquement.  Si vous n'appelez pas `OnFileNew`, vous devez définir la valeur de la variable dans `InitInstance` vous\-même. \(Les applications de composant \(serveur\) COM SDI peuvent ne pas définir la variable si \/Embedding est sur la ligne de commande.\) Notez que `m_pMainWnd` est maintenant un membre de la classe `CWinThread` plutôt que `CWinApp`.  
+>  A pointer to the main frame window is stored in the [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) member variable of the application object. A call to `OnFileNew` in your override of the `InitInstance` member function of `CWinApp` sets `m_pMainWnd` for you. If you do not call `OnFileNew`, you must set the variable's value in `InitInstance` yourself. (SDI COM component (server) applications may not set the variable if /Embedding is on the command line.) Note that `m_pMainWnd` is now a member of class `CWinThread` rather than `CWinApp`.  
   
-## Voir aussi  
- [Modèles de document et processus de création de document\/vue](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [Création de modèle de document](../mfc/document-template-creation.md)   
- [Création d'un document\/d'une vue](../mfc/document-view-creation.md)   
- [Création de documents, fenêtres et vues](../mfc/creating-new-documents-windows-and-views.md)
+## <a name="see-also"></a>See Also  
+ [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md)   
+ [Document Template Creation](../mfc/document-template-creation.md)   
+ [Document/View Creation](../mfc/document-view-creation.md)   
+ [Creating New Documents, Windows, and Views](../mfc/creating-new-documents-windows-and-views.md)
+
+

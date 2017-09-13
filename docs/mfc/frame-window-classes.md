@@ -1,50 +1,69 @@
 ---
-title: "Classes de fen&#234;tre frame | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes (C++), fenêtres"
-  - "fenêtres frame de document, classes"
-  - "classes de fenêtre frame"
-  - "classes de fenêtre frame, à propos des classes de fenêtre frame"
-  - "MDI (C++), fenêtres frame"
-  - "MFC (C++), fenêtres frame"
-  - "interface monodocument, fenêtres frame"
-  - "classes de fenêtre, frame"
-  - "fenêtres (C++), MDI"
+title: Frame-Window Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame window classes [MFC], about frame window classes
+- frame window classes [MFC]
+- windows [MFC], MDI
+- document frame windows [MFC], classes
+- single document interface (SDI), frame windows
+- window classes [MFC], frame
+- MFC, frame windows
+- MDI [MFC], frame windows
+- classes [MFC], window
 ms.assetid: c27e43a7-8ad0-4759-b1b7-43f4725f4132
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Classes de fen&#234;tre frame
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f4817243b2dc96365af8f1b98008a4169d4aa6f0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Chaque application offre une « frame fenêtre principale, » une fenêtre de bureau qui a généralement le nom d'application dans sa légende.  Chaque document contient généralement un « frame fenêtre de document. » Une fenêtre cadre de document contient au moins une vue, qui présente les données du document.  
+---
+# <a name="frame-window-classes"></a>Frame-Window Classes
+Each application has one "main frame window," a desktop window that usually has the application name in its caption. Each document usually has one "document frame window." A document frame window contains at least one view, which presents the document's data.  
   
-## Fenêtres cadres dans les applications de SDI et MDI  
- Pour une application de SDI, il existe une fenêtre cadre dérivée de la classe [CFrameWnd](../mfc/reference/cframewnd-class.md).  Cette fenêtre est à la fois la fenêtre principale cadre et la fenêtre cadre de document.  Pour une application MDI, la fenêtre principale cadre est dérivée de la classe [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), et les fenêtres cadres de document, qui sont des fenêtres enfants MDI, sont dérivées de la classe [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).  
+## <a name="frame-windows-in-sdi-and-mdi-applications"></a>Frame Windows in SDI and MDI Applications  
+ For an SDI application, there is one frame window derived from class [CFrameWnd](../mfc/reference/cframewnd-class.md). This window is both the main frame window and the document frame window. For an MDI application, the main frame window is derived from class [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), and the document frame windows, which are MDI child windows, are derived from class [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).  
   
-## Utiliser la classe frame fenêtre, ou en dériver ?  
- Ces classes fournissent la plupart des fonctionnalités d'affichage cadre dont vous avez besoin pour vos applications.  Dans des conditions normales, le comportement par défaut et l'apparence qu'ils ont conviendront à vos besoins.  Si vous avez besoin de fonctionnalités supplémentaires, dérivez de ces classes.  
+## <a name="use-the-frame-window-class-or-derive-from-it"></a>Use the Frame-Window Class, or Derive from It  
+ These classes provide most of the frame-window functionality you need for your applications. Under normal circumstances, the default behavior and appearance they provide will suit your needs. If you need additional functionality, derive from these classes.  
   
-### Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Classes de fenêtre frame créées par l'Assistant Application](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
+-   [Frame-window classes created by the Application Wizard](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
   
--   [Styles des cadres des fenêtres](../mfc/frame-window-styles-cpp.md)  
+-   [Frame-window styles](../mfc/frame-window-styles-cpp.md)  
   
--   [Modification des styles d'une fenêtre créée par MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
+-   [Changing the styles of a window created by MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
   
-## Voir aussi  
- [Fenêtres frame](../mfc/frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Frame Windows](../mfc/frame-windows.md)
+
+

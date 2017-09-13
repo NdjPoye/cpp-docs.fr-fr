@@ -1,56 +1,74 @@
 ---
-title: "Presse-papiers | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Presse-papiers"
-  - "Presse-papiers, programmation"
-  - "copier les données"
-  - "couper et copier des données"
-  - "transférer des données"
+title: Clipboard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- cutting and copying data
+- copying data
+- Clipboard
+- Clipboard, programming
+- transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Presse-papiers
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7ecf2044ecfa659b8ab372d72ce71930e430dc8b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-Cette famille d'articles explique comment implémenter la prise en charge du presse\-papiers Windows dans des applications MFC.  Le presse\-papiers windows est utilisé de plusieurs façons :  
+---
+# <a name="clipboard"></a>Clipboard
+This family of articles explains how to implement support for the Windows Clipboard in MFC applications. The Windows Clipboard is used in two ways:  
   
--   En implémentant les commandes de menu Edition standard, telles que couper, copier et coller.  
+-   Implementing standard Edit menu commands, such as Cut, Copy, and Paste.  
   
--   Implémenter le transfert de données uniforme avec un glisser\/déposer \(OLE\).  
+-   Implementing uniform data transfer with drag and drop (OLE).  
   
- Le presse\-papiers est la méthode standard Windows de transfert des données entre une source et une destination.  Il peut également s'avérer très utile dans les opérations OLE.  Avec l'arrivée OLE, il existe deux mécanismes de presse\-papiers dans Windows.  L'API standard du presse\-papiers Windows est toujours disponible, mais elle a été effectuée avec le mécanisme de transfert de données OLE.  Le transfert de données uniforme \(UDT\) OLE prend en charge le couper, copier etcoller dans le presse\-papiers ainsi que le glisser déposer.  
+ The Clipboard is the standard Windows method of transferring data between a source and a destination. It can also be very useful in OLE operations. With the advent of OLE, there are two Clipboard mechanisms in Windows. The standard Windows Clipboard API is still available, but it has been supplemented with the OLE data transfer mechanism. OLE uniform data transfer (UDT) supports Cut, Copy, and Paste with the Clipboard and drag and drop.  
   
- Le presse\-papiers est un service système partagé par la session entière Windows, donc il n'a pas de descripteur ou une classe unique.  Vous gérez le presse\-papiers par le biais de fonctions membres de la classe [CWnd](../mfc/reference/cwnd-class.md).  
+ The Clipboard is a system service shared by the entire Windows session, so it does not have a handle or class of its own. You manage the Clipboard through member functions of class [CWnd](../mfc/reference/cwnd-class.md).  
   
-## Sur quels éléments souhaitez\-vous obtenir des informations supplémentaires ?  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Quand utiliser chaque mécanisme du Presse\-papiers](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)  
+-   [When to use each Clipboard mechanism](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)  
   
--   [Utilisation de l'API traditionnelle du presse\-papiers Windows](../mfc/clipboard-using-the-windows-clipboard.md)  
+-   [Using the traditional Windows Clipboard API](../mfc/clipboard-using-the-windows-clipboard.md)  
   
--   [À l'aide du mécanisme OLE du presse\-papiers](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
+-   [Using the OLE Clipboard mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
   
--   [Copier et coller des données](../mfc/clipboard-copying-and-pasting-data.md)  
+-   [Copying and pasting data](../mfc/clipboard-copying-and-pasting-data.md)  
   
--   [Ajouter d'autres formats](../mfc/clipboard-adding-other-formats.md)  
+-   [Adding other formats](../mfc/clipboard-adding-other-formats.md)  
   
--   [\<caps:sentence id\="tgt18" sentenceid\="1bc8aafd7da110d0b343b54cffa169d9" class\="tgtSentence"\>Le presse\-papiers Windows\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms648709)  
+-   [The Windows Clipboard](https://msdn.microsoft.com/library/ms648709)  
   
--   [Implémentation du glisser\-déposer \(OLE\)](../mfc/drag-and-drop-ole.md)  
+-   [Implementing drag and drop (OLE)](../mfc/drag-and-drop-ole.md)  
   
-## Voir aussi  
- [Éléments de l'interface utilisateur](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

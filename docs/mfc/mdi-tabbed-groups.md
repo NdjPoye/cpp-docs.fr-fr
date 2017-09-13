@@ -1,74 +1,92 @@
 ---
-title: "Groupes avec onglet MDI | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mdi, groupes avec onglet"
-  - "groupes avec onglet"
+title: MDI Tabbed Groups | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- mdi [MFC], tabbed groups
+- tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Groupes avec onglet MDI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 955c785bab2f16d12c71b3ba253f753e8ab581fb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/12/2017
 
-La fonctionnalité de groupes tabulée par l'interface à multiple documents \(MDI\) autorise les applications \(MDI\) à afficher une ou plusieurs fenêtres avec onglets \(ou groupes windows avec onglets, appelés *groupes à onglets*\) dans la zone client MDI.  Les fenêtres avec onglets peuvent être alignées verticalement ou horizontalement.  Si une application accueille plusieurs MDI groupe tabulé, les groupes sont séparés par des séparateurs.  
+---
+# <a name="mdi-tabbed-groups"></a>MDI Tabbed Groups
+The multiple document interface (MDI) tabbed groups feature enables multiple document interface (MDI) applications to display one or more tabbed windows (or groups of tabbed windows, known as *tabbed groups*) in the MDI client area. The tabbed windows can be aligned vertically or horizontally. If an application hosts more than one MDI tabbed group, the groups are separated by splitters.  
   
-## Fonctionnalités  
- Les fonctionnalités des groupes tabulés MDI sont les suivantes :  
+## <a name="features"></a>Features  
+ The following are the features of MDI tabbed groups:  
   
--   Une application peut créer des fenêtres avec onglets dynamiquement.  
+-   An application can create tabbed windows dynamically.  
   
--   Une application peut aligner les fenêtres avec onglets horizontalement ou verticalement.  
+-   An application can align tabbed windows horizontally or vertically.  
   
--   Les groupes de fenêtres avec onglets sont séparés par des séparateurs.  L'utilisateur peut redimensionner les groupes à onglets à l'aide du séparateur.  
+-   Groups of tabbed windows are separated by splitters. The user can resize tabbed groups by using the splitter.  
   
--   L'utilisateur peut faire glisser des onglets entre les groupes.  
+-   The user can drag individual tabs between groups.  
   
--   L'utilisateur peut faire glisser des onglets pour créer de nouveaux groupes.  
+-   The user can drag individual tabs to create new groups.  
   
--   L'utilisateur peut déplacer des onglets ou créer des groupes à l'aide d'un menu contextuel.  
+-   The user can move tabs or create new groups by using a shortcut menu.  
   
--   Une application peut enregistrer et charger la disposition des fenêtres avec onglets.  
+-   An application can save and load the layout of tabbed windows.  
   
--   Une application peut enregistrer et charger la liste des documents MDI.  
+-   An application can save and load the list of MDI documents.  
   
--   Une application peut accéder à des groupes à onglets et modifier leurs valeurs.  
+-   An application can access individual tabbed groups and modify their parameters.  
   
-### Utiliser les groupes tabulés MDI  
- Voici quelques tâches couramment réalisées à l'aide des groupes tabulés MDI :  
+### <a name="using-mdi-tabbed-groups"></a>Using MDI Tabbed Groups  
+ The following are tasks commonly performed with MDI tabbed groups:  
   
--   Pour activer les groupes tabulés MDI pour une fenêtre cadre principale, appelez [CMDIFrameWndEx::EnableMDITabbedGroups](../Topic/CMDIFrameWndEx::EnableMDITabbedGroups.md).  Le deuxième paramètre de cette méthode est une instance de la classe `CMDITabInfo`.  Vous pouvez utiliser les paramètres par défaut ou les modifier avant d'appeler `CMDIFrameWndEx::EnableMDITabbedGroups`.  
+-   To enable MDI tabbed groups for a main frame window, call [CMDIFrameWndEx::EnableMDITabbedGroups](../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups). The second parameter of this method is an instance of the `CMDITabInfo` class. You can use the default parameters or modify them before you call `CMDIFrameWndEx::EnableMDITabbedGroups`.  
   
--   Pour modifier les propriétés d'un groupe tabulé par MDI au moment de l'exécution, créer ou modifier un objet `CMDITabInfo` et appeler `CMDIFrameWndEx::EnableMDITabbedGroups` de nouveau  
+-   To modify the properties of an MDI tabbed group at run time, create or modify a `CMDITabInfo` object and call `CMDIFrameWndEx::EnableMDITabbedGroups` again  
   
--   Pour obtenir une liste des fenêtres tabulées MDI, appelez `CMDIFrameWndEx::GetMDITabGroups`.  
+-   To obtain a list of MDI tabbed windows, call `CMDIFrameWndEx::GetMDITabGroups`.  
   
--   Pour créer un nouveau groupe tabulé MDI en regard d'un groupe avec onglet actif, appelez `CMDIFrameWndEx::MDITabNewGroup`.  
+-   To create a new MDI tabbed group next to an active tabbed group, call `CMDIFrameWndEx::MDITabNewGroup`.  
   
--   Pour déplacer le focus d'entrée à la fenêtre précédente ou suivante d'un groupe avec onglets, appelez `CMDIFrameWndEx::MDITabMoveToNextGroup`.  
+-   To shift the input focus to the previous or next window of a tabbed group, call `CMDIFrameWndEx::MDITabMoveToNextGroup`.  
   
--   Pour déterminer si une fenêtre est membre d'un appel de groupe tabulé par MDI `CMDIFrameWndEx::IsMemberOfMDITabGroup`.  
+-   To determine whether a window is a member of an MDI tabbed group call `CMDIFrameWndEx::IsMemberOfMDITabGroup`.  
   
--   Pour déterminer si les onglets MDI ou groupes tabulés par MDI sont activés pour une fenêtre cadre principale, appelez `CMDIFrameWndEx::AreMDITabs`.  Pour déterminer si les groupes tabulés par MDI sont activés, appelez `CMDIFrameWndEx::IsMDITabbedGroup`.  
+-   To determine whether MDI tabs or MDI tabbed groups are enabled for a main frame window, call `CMDIFrameWndEx::AreMDITabs`. To determine only whether MDI tabbed groups are enabled, call `CMDIFrameWndEx::IsMDITabbedGroup`.  
   
--   Pour afficher un menu contextuel lorsque l'utilisateur clique sur un onglet ou le fait glisser vers un autre groupe tabulé par MDI, remplacez `CMDIFrameWndEx::OnShowMDITabContextMenu` dans la classe dérivée `CMDIFrameWndEx`.  Si vous n'appliquez pas cette méthode, l'application n'affiche pas le menu contextuel.  
+-   To display a shortcut menu when the user clicks a tab or drags it to another MDI tabbed group, override `CMDIFrameWndEx::OnShowMDITabContextMenu` in the `CMDIFrameWndEx`-derived class. If you do not implement this method, the application will not display the shortcut menu.  
   
--   Pour enregistrer la mise en page des groupes tabulés par MDI dans une application, appelez `CMDIFrameWndEx::SaveMDIState`.  Pour charger un profil de groupe tabulé par MDI sauvegardé précédemment, appelez `CMDIFrameWndEx::LoadMDIState`.  Vous pouvez également appeler les méthodes suivantes pour charger ou enregistrer la liste des documents ouverts dans une application MDI.  Pour plus d'informations sur l'état MDI d'enregistrement et de chargement, consultez [CMDIFrameWndEx::LoadMDIState](../Topic/CMDIFrameWndEx::LoadMDIState.md).  
+-   To save the layout of MDI tabbed groups in an application, call `CMDIFrameWndEx::SaveMDIState`. To load a previously saved MDI tabbed group profile, call `CMDIFrameWndEx::LoadMDIState`. You can also call these methods to load or save the list of opened documents in an MDI application. For more information about saving and loading MDI state, see [CMDIFrameWndEx::LoadMDIState](../mfc/reference/cmdiframewndex-class.md#loadmdistate).  
   
-## Voir aussi  
- [Éléments de l'interface utilisateur](../mfc/user-interface-elements-mfc.md)   
- [Classe CMDIFrameWndEx](../mfc/reference/cmdiframewndex-class.md)   
- [Classe CMDIChildWndEx](../mfc/reference/cmdichildwndex-class.md)   
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [CMDIFrameWndEx Class](../mfc/reference/cmdiframewndex-class.md)   
+ [CMDIChildWndEx Class](../mfc/reference/cmdichildwndex-class.md)   
  [CMDITabInfo Class](../mfc/reference/cmditabinfo-class.md)
+
