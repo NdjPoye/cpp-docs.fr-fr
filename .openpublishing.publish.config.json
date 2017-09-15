@@ -23,6 +23,9 @@
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/cpp-docs.fr-fr",
   "git_repository_branch_open_to_public_contributors": "live",
   "skip_source_output_uploading": false,
+  "contribution_branch_mappings":{
+    "master-sxs": "master"
+  },
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
