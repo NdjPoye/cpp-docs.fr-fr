@@ -1,83 +1,100 @@
 ---
-title: "_com_error, classe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_error"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_com_error (classe)"
+title: classe _com_error | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_error
+dev_langs:
+- C++
+helpviewer_keywords:
+- _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# _com_error, classe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 670be1988adb3ef5afa9113b9988ceafb249801f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-**Spécifique à Microsoft**  
+---
+# <a name="comerror-class"></a>_com_error, classe
+**Section spécifique à Microsoft**  
   
- Un objet `_com_error` représente une condition d'exception détectée par les fonctions wrapper de gestion des erreurs dans les fichiers d'en\-tête générés par la bibliothèque de types ou une des classes de prise en charge COM.  La classe `_com_error` encapsule le code d'erreur `HRESULT` et tout objet `IErrorInfo Interface` associé.  
+ A `_com_error` objet représente une condition d’exception détectée par les fonctions wrapper de gestion des erreurs dans les fichiers d’en-tête générés à partir de la bibliothèque de types ou par une des classes de prise en charge COM. Le `_com_error` classe encapsule le `HRESULT` code d’erreur et associés `IErrorInfo Interface` objet.  
   
-### Construction  
-  
-|||  
-|-|-|  
-|[\_com\_error](../cpp/com-error-com-error.md)|Construit un objet `_com_error`.|  
-  
-### Opérateurs  
+### <a name="construction"></a>Construction  
   
 |||  
 |-|-|  
-|[\=, opérateur](../cpp/com-error-operator-equal.md)|Assigne un objet `_com_error` existant à un autre.|  
+|[_com_error](../cpp/com-error-com-error.md)|Construit un objet `_com_error`.|  
   
-### Fonctions d'extracteur  
-  
-|||  
-|-|-|  
-|[Erreur](../cpp/com-error-error.md)|Récupère le `HRESULT` passé au constructeur.|  
-|[ErrorInfo](../cpp/com-error-errorinfo.md)|Récupère l'objet `IErrorInfo` passé au constructeur.|  
-|[WCode](../cpp/com-error-wcode.md)|Récupère le code d'erreur 16 bits mappé au `HRESULT`encapsulée.|  
-  
-### Fonctions d'IErrorInfo  
+### <a name="operators"></a>Opérateurs  
   
 |||  
 |-|-|  
-|[Description](../cpp/com-error-description.md)|Appels la fonction `IErrorInfo::GetDescription`|  
-|[Helpcontext](../cpp/com-error-helpcontext.md)|Appels la fonction `IErrorInfo::GetHelpContext`.|  
-|[Helpfile](../cpp/com-error-helpfile.md)|Appels la fonction `IErrorInfo::GetHelpFile`.|  
-|[Source](../cpp/com-error-source.md)|Appels la fonction `IErrorInfo::GetSource`.|  
-|[GUID](../cpp/com-error-guid.md)|Appels la fonction `IErrorInfo::GetGUID`.|  
+|[opérateur =](../cpp/com-error-operator-equal.md)|Assigne un objet `_com_error` existant à un autre.|  
   
-### Extracteur de message de format  
+### <a name="extractor-functions"></a>Fonctions d’extraction  
   
 |||  
 |-|-|  
-|[ErrorMessage](../cpp/com-error-errormessage.md)|Récupère le message de chaîne pour le HRESULT stocké dans l'objet `_com_error`.|  
+|[Error](../cpp/com-error-error.md)|Extrait le `HRESULT` transmis au constructeur.|  
+|[ErrorInfo](../cpp/com-error-errorinfo.md)|Récupère le `IErrorInfo` objet passé au constructeur.|  
+|[WCode](../cpp/com-error-wcode.md)|Récupère le code d'erreur 16 bits mappé dans le `HRESULT` encapsulé.|  
   
-### ExepInfo.wCode aux mappeurs HRESULT  
+### <a name="ierrorinfo-functions"></a>Fonctions d’IErrorInfo  
   
 |||  
 |-|-|  
-|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Mappe un `HRESULT` 32 bits à un `wCode`16 bits.|  
-|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Mappe un `wCode` 16 bits à un `HRESULT`32 bits.|  
+|[Description](../cpp/com-error-description.md)|Appels `IErrorInfo::GetDescription` (fonction).|  
+|[HelpContext](../cpp/com-error-helpcontext.md)|Appels `IErrorInfo::GetHelpContext` (fonction).|  
+|[HelpFile](../cpp/com-error-helpfile.md)|Appels `IErrorInfo::GetHelpFile` (fonction)|  
+|[Source](../cpp/com-error-source.md)|Appels `IErrorInfo::GetSource` (fonction).|  
+|[GUID](../cpp/com-error-guid.md)|Appels `IErrorInfo::GetGUID` (fonction).|  
   
-## END Spécifique à Microsoft  
+### <a name="format-message-extractor"></a>Extracteur de Message de format  
   
-## Configuration requise  
- `Header:` comdef.h  
+|||  
+|-|-|  
+|[Message d’erreur](../cpp/com-error-errormessage.md)|Récupère le message de chaîne pour HRESULT est stockée dans le `_com_error` objet.|  
   
- `Lib:` comsuppw.lib ou comsuppwd.lib \(consultez [\/Zc:wchar\_t \(wchar\_t est un type natif\)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) pour plusd'information\)  
+### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode à mappeurs de HRESULT  
   
-## Voir aussi  
- [Classes du support COM du compilateur](../cpp/compiler-com-support-classes.md)   
- [IErrorInfo Interface](http://msdn.microsoft.com/fr-fr/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)
+|||  
+|-|-|  
+|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Mappe les 32 bits `HRESULT` à 16 bits `wCode`.|  
+|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Mappe `wCode` 16 bits vers `HRESULT` 32 bits.|  
+  
+**FIN de la section spécifique à Microsoft**  
+  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** comdef.h  
+  
+ `Lib:`comsuppw.lib ou comsuppwd.lib (consultez [/Zc : wchar_t (wchar_t est un Type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) pour plus d’informations)  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Classes de prise en charge COM du compilateur](../cpp/compiler-com-support-classes.md)   
+ [Interface IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

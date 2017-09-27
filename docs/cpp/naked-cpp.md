@@ -1,80 +1,99 @@
 ---
-title: "naked (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "naked_cpp"
-  - "naked"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec, naked avec mot clé [C++]"
-  - "naked __declspec (mot clé)"
+title: naked (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- naked_cpp
+- naked
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++], naked
+- naked __declspec keyword
 ms.assetid: 69723241-05e1-439b-868e-20a83a16ab6d
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# naked (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 8d22ae96facd89f16ebabb74ba46a9172cc4d2e9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-**Spécifique à Microsoft**  
+---
+# <a name="naked-c"></a>naked (C++)
+**Section spécifique à Microsoft**  
   
- Pour les fonctions déclarées avec l'attribut `naked`, le compilateur génère un code sans code de prologue et d'épilogue.  Utilisez cette fonctionnalité pour écrire vos propres séquences de code de prologue\/épilogue utilisant du code assembleur inline.  Les fonctions naked sont particulièrement utiles pour l'écritures de pilotes de périphériques virtuels.  Notez que l'attribut `naked` est uniquement valide sur x86 et ARM, et pas disponible sur [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
+ Pour les fonctions déclarées avec le `naked` attribut, le compilateur génère du code sans code de prologue et épilogue. Vous pouvez utiliser cette fonctionnalité pour écrire vos propres séquences de code de prologue/épilogue à l'aide de code assembleur inline. Les fonctions naked sont particulièrement utiles pour l'écriture de pilotes de périphériques virtuels.  Notez que la `naked` attribut est valide uniquement sur x86 et ARM et n’est pas disponible sur [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 __declspec(naked) declarator  
 ```  
   
-## Notes  
- Comme l'attribut `naked` est uniquement approprié à la définition d'une fonction et pas d'un modificateur de type, les fonctions naked doivent utiliser la syntaxe d'attribut étendu et le mot clé [\_\_declspec](../cpp/declspec.md).  
+## <a name="remarks"></a>Remarques  
+ Étant donné que la `naked` attribut se rapporte uniquement à la définition d’une fonction et n’est pas un modificateur de type, les fonctions naked doivent utiliser la syntaxe à attributs étendus et le [__declspec](../cpp/declspec.md) (mot clé).  
   
- Le compilateur ne peut pas générer une fonction inline pour une fonction marquée avec l'attribut naked, même si la fonction est également identifiée avec le mot clé [\_\_forceinline](../misc/inline-inline-forceinline.md).  
+
+ Le compilateur ne peut pas générer une fonction inline pour une fonction marquée avec l’attribut naked, même si la fonction est également marquée avec la [__forceinline](inline-functions-cpp.md) (mot clé).  
+
   
- Le compilateur émet une erreur si l'attribut `naked` est appliqué à une valeur autre que la définition d'une méthode non\-membre.  
+ Le compilateur émet une erreur si le `naked` attribut est appliqué à une autre que la définition d’une méthode membre non.  
   
-## Exemples  
- Ce code définit une fonction avec l'attribut `naked` :  
+## <a name="examples"></a>Exemples  
+ Ce code définit une fonction avec la `naked` attribut :  
   
 ```  
 __declspec( naked ) int func( formal_parameters ) {}  
 ```  
   
- Sinon, aussi :  
+ Ou, vous pouvez également :  
   
 ```  
 #define Naked __declspec( naked )  
 Naked int func( formal_parameters ) {}  
 ```  
   
- L'attribut `naked` affecte uniquement la nature de la génération de code du compilateur pour les séquences de prologues et d'épilogue de la fonction.  Il n'affecte pas le code généré pour appeler de telles fonctions.  Ainsi, l'attribut `naked` n'est pas considéré comme faisant partie du type de la fonction, et les pointeurs fonction ne peuvent pas avoir l'attribut `naked`.  En outre, l'attribut `naked` ne peut pas être appliqué à une définition de données.  Par exemple, l'exemple de code suivant génère une erreur :  
+ L'attribut `naked` affecte uniquement la nature de la génération de code du compilateur pour les séquences de prologue et d'épilogue de la fonction. Il n'affecte pas le code généré pour appeler de telles fonctions. Ainsi, l'attribut `naked` n'est pas considéré comme faisant partie du type de la fonction, et les pointeurs fonction ne peuvent pas avoir l'attribut `naked`. De plus, l'attribut `naked` ne peut pas être appliqué à une définition de données. Par exemple, cet exemple de code génère une erreur :  
   
 ```  
 __declspec( naked ) int i;       // Error--naked attribute not  
                                  // permitted on data declarations.  
 ```  
   
- L'attribut `naked` est pertinent uniquement à la définition de la fonction et ne peut pas être spécifié dans le prototype de fonction.  Par exemple, cette déclaration génère une erreur de compilation :  
+ L'attribut `naked` se rapporte uniquement à la définition de la fonction et ne peut pas être spécifié dans le prototype de la fonction. Par exemple, cette déclaration génère une erreur du compilateur :  
   
 ```  
 __declspec( naked ) int func();  // Error--naked attribute not   
                                  // permitted on function declarations  
 ```  
   
- **END Spécifique à Microsoft**  
+ **FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [\_\_declspec](../cpp/declspec.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)   
+## <a name="see-also"></a>Voir aussi  
+ [__declspec](../cpp/declspec.md)   
+ [Mots clés](../cpp/keywords-cpp.md)   
  [Appels de fonction naked](../cpp/naked-function-calls.md)

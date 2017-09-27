@@ -1,32 +1,49 @@
 ---
-title: "Initialiseurs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "initialiseurs d'éléments de tableaux"
-  - "tableaux (C++), initialiseurs d'éléments de tableaux"
-  - "déclarateurs, en tant qu'initialiseurs"
-  - "initialiseurs, élément de tableau"
-  - "initialiser des tableaux, initialiseurs"
+title: Initialiseurs | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- array-element initializers
+- initializing arrays, initializers
+- arrays [C++], array-element initializers
+- declarators, as initializers
+- initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Initialiseurs
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d58a1d8ed688f927719411bdae29fe08969961c5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Un initialiseur spécifie la valeur initiale d'une variable.  Vous pouvez initialiser des variables dans les contextes suivants :  
+---
+# <a name="initializers"></a>Initialiseurs
+Un initialiseur spécifie la valeur initiale d'une variable. Vous pouvez initialiser des variables dans les contextes suivants :  
   
 -   Dans la définition d'une variable :  
   
@@ -51,7 +68,7 @@ Un initialiseur spécifie la valeur initiale d'une variable.  Vous pouvez initia
   
  Les initialiseurs peuvent prendre les formes suivantes :  
   
--   Une expression \(ou une liste d'expressions séparées par des virgules\) entre parenthèses :  
+-   Une expression (ou une liste d'expressions séparées par des virgules) entre parenthèses :  
   
     ```cpp  
     Point p1(1, 2);  
@@ -63,7 +80,7 @@ Un initialiseur spécifie la valeur initiale d'une variable.  Vous pouvez initia
     string s = "hello";  
     ```  
   
--   Une liste d'initialiseurs entre accolades.  La liste peut être vide ou comprendre un ensemble de listes, comme dans l'exemple suivant :  
+-   Une liste d'initialiseurs entre accolades. La liste peut être vide ou comprendre un ensemble de listes, comme dans l'exemple suivant :  
   
     ```cpp  
     struct Point{  
@@ -83,27 +100,27 @@ Un initialiseur spécifie la valeur initiale d'une variable.  Vous pouvez initia
     }  
     ```  
   
-## Types d'initialisations  
- Il existe plusieurs types d'initialisations, qui peuvent se produire à différents moments durant l'exécution du programme.  Les différents types d'initialisations ne s'excluent pas mutuellement. Par exemple, l'initialisation de listes peut déclencher l'initialisation de valeurs et dans d'autres cas, l'initialisation d'agrégats.  
+## <a name="kinds-of-initialization"></a>Types d'initialisations  
+ Il existe plusieurs types d'initialisations, qui peuvent se produire à différents moments durant l'exécution du programme. Les différents types d'initialisations ne s'excluent pas mutuellement. Par exemple, l'initialisation de listes peut déclencher l'initialisation de valeurs et dans d'autres cas, l'initialisation d'agrégats.  
   
-### Initialisation à zéro  
+### <a name="zero-initialization"></a>Initialisation à zéro  
  L'initialisation à zéro attribue à une variable une valeur zéro convertie implicitement en type :  
   
--   Les variables numériques sont initialisées à 0 \(ou 0,0, ou 0,0000000000, etc.\).  
+-   Les variables numériques sont initialisées à 0 (ou 0,0, ou 0,0000000000, etc.).  
   
--   Les variables de type caractère sont initialisées à '\\0'.  
+-   Variables de type caractère sont initialisées à `'\0'`.  
   
 -   Les pointeurs sont initialisés à `nullptr`.  
   
--   Les membres des tableaux, des classes [POD](../standard-library/is-pod-class.md), des structs et des unions sont initialisés à zéro.  
+-   Tableaux, [POD](../standard-library/is-pod-class.md) classes, structures et unions ont leurs membres est initialisé à une valeur zéro.  
   
  L'initialisation à zéro peut être effectuée à différents moments :  
   
--   Au démarrage du programme, pour toutes les variables nommées dont la durée est statique.  Ces variables pourront être initialisées à nouveau.  
+-   Au démarrage du programme, pour toutes les variables nommées dont la durée est statique. Ces variables pourront être initialisées à nouveau.  
   
 -   Pendant l'initialisation de valeurs, pour les types scalaires et ceux de classe POD qui sont initialisés à l'aide d'accolades vides.  
   
--   Pour les tableaux dont seul un sous\-ensemble de leurs membres est initialisé.  
+-   Pour les tableaux dont seul un sous-ensemble de leurs membres est initialisé.  
   
  Voici quelques exemples d'initialisation à zéro :  
   
@@ -124,8 +141,8 @@ int main() {
 }  
 ```  
   
-### Initialisation par défaut  
- L'initialisation par défaut des classes, des structs et des unions utilise un constructeur par défaut.  Le constructeur par défaut peut être appelé sans expression d'initialisation ou avec le mot clé `new` :  
+### <a name="default_initialization"></a>Initialisation par défaut  
+ L'initialisation par défaut des classes, des structs et des unions utilise un constructeur par défaut. Le constructeur par défaut peut être appelé sans expression d'initialisation ou avec le mot clé `new` :  
   
 ```cpp  
 MyClass mc1;  
@@ -134,7 +151,7 @@ MyClass* mc3 = new MyClass;
   
  Si la classe, le struct ou l'union n'a pas de constructeur par défaut, le compilateur renvoie une erreur.  
   
- Les variables scalaires sont initialisées par défaut lorsqu'elles sont définies sans expression d'initialisation.  Leurs valeurs sont indéterminées.  
+ Les variables scalaires sont initialisées par défaut lorsqu'elles sont définies sans expression d'initialisation. Leurs valeurs sont indéterminées.  
   
 ```cpp  
 int i1;  
@@ -142,7 +159,7 @@ float f;
 char c;  
 ```  
   
- Les tableaux sont initialisés par défaut lorsqu'ils sont définis sans expression d'initialisation.  Lorsqu'un tableau est initialisé par défaut, ses membres sont initialisés par défaut et ont des valeurs indéterminées, comme dans l'exemple suivant :  
+ Les tableaux sont initialisés par défaut lorsqu'ils sont définis sans expression d'initialisation. Lorsqu'un tableau est initialisé par défaut, ses membres sont initialisés par défaut et ont des valeurs indéterminées, comme dans l'exemple suivant :  
   
 ```cpp  
 int int_arr[3];  
@@ -150,8 +167,8 @@ int int_arr[3];
   
  Si les membres du tableau n'ont pas de constructeur par défaut, le compilateur renvoie une erreur.  
   
-#### Initialisation par défaut des variables constantes  
- Les variables constantes doivent être déclarées en même temps que l'initialiseur.  Si elles sont de type scalaire, elles entraîneront une erreur du compilateur. Si elles sont de type de classe avec un constructeur par défaut, elles entraîneront un avertissement :  
+#### <a name="default-initialization-of-constant-variables"></a>Initialisation par défaut des variables constantes  
+ Les variables constantes doivent être déclarées en même temps que l'initialiseur. Si elles sont de type scalaire, elles entraîneront une erreur du compilateur. Si elles sont de type de classe avec un constructeur par défaut, elles entraîneront un avertissement :  
   
 ```cpp  
 class MyClass{};  
@@ -162,8 +179,8 @@ int main() {
 }  
 ```  
   
-#### Initialisation par défaut des variables statiques  
- Les variables statiques déclarées sans initialiseur sont initialisées à 0 \(implicitement converties en type\).  
+#### <a name="default-initialization-of-static-variables"></a>Initialisation par défaut des variables statiques  
+ Les variables statiques déclarées sans initialiseur sont initialisées à 0 (implicitement converties en type).  
   
 ```cpp  
 class MyClass {     
@@ -180,9 +197,9 @@ int main() {
 }  
 ```  
   
- Pour plus d'informations sur l'initialisation d'objets statiques globaux, consultez [Considérations supplémentaires sur le démarrage](../cpp/additional-startup-considerations.md).  
+ Pour plus d’informations sur l’initialisation d’objets statiques globaux, consultez [considérations supplémentaires sur le démarrage](../cpp/additional-startup-considerations.md).  
   
-### Initialisation de valeurs  
+### <a name="value-initialization"></a>Initialisation de valeurs  
  L'initialisation de valeurs se produit dans les cas suivants :  
   
 -   une valeur nommée est initialisée à l'aide d'accolades vides ;  
@@ -195,7 +212,7 @@ int main() {
   
 -   pour les classes qui possèdent au moins un constructeur public, le constructeur par défaut est appelé ;  
   
--   pour les classes \(autres que les classes d'union\) qui n'ont pas déclaré de constructeur, l'objet est initialisé à zéro et le constructeur par défaut est appelé ;  
+-   pour les classes (autres que les classes d'union) qui n'ont pas déclaré de constructeur, l'objet est initialisé à zéro et le constructeur par défaut est appelé ;  
   
 -   pour les tableaux, chaque élément est initialisé par une valeur ;  
   
@@ -217,8 +234,8 @@ int main() {
   
 ```  
   
-### Initialisation de copie  
- L'initialisation de copie correspond à l'initialisation d'un objet à l'aide d'un autre objet.  Elle se produit dans les cas suivants :  
+### <a name="copy-initialization"></a>Initialisation de copie  
+ L'initialisation de copie correspond à l'initialisation d'un objet à l'aide d'un autre objet. Elle se produit dans les cas suivants :   
   
 -   Une variable est initialisée à l'aide d'un signe égal.  
   
@@ -230,7 +247,7 @@ int main() {
   
 -   Des données membres non statiques sont initialisées à l'aide d'un signe égal.  
   
--   Les membres des classes, des structs et des unions sont initialisés par initialisation de copie pendant l'initialisation des agrégats.  Pour obtenir des exemples, consultez [Initialisation d'agrégats](../cpp/initializers.md#INIT_AggInit).  
+-   Les membres des classes, des structs et des unions sont initialisés par initialisation de copie pendant l'initialisation des agrégats. Consultez [l’initialisation d’agrégats](#agginit) pour obtenir des exemples.  
   
  Le code suivant montre plusieurs exemples d'initialisation de copie :  
   
@@ -272,10 +289,10 @@ regex r = "a.*b"; // the constructor is explicit; same error
 shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error  
 ```  
   
- Dans certains cas, si le constructeur de copie de la classe est supprimé ou inaccessible, l'initialisation de copie entraîne une erreur du compilateur.  Pour plus d'informations, consultez [\(NOTINBUILD\) Explicit Initialization](http://msdn.microsoft.com/fr-fr/c89724f8-ddd3-4d77-b86d-77fcd8bd8595).  
+ Dans certains cas, si le constructeur de copie de la classe est supprimé ou inaccessible, l'initialisation de copie entraîne une erreur du compilateur. 
   
-### Initialisation directe  
- L'initialisation directe utilise des accolades ou des parenthèses non vides.  Contrairement à l'initialisation de copie, elle peut appeler des constructeurs explicites.  Elle se produit dans les cas suivants :  
+### <a name="direct-initialization"></a>Initialisation directe  
+ L'initialisation directe utilise des accolades ou des parenthèses non vides. Contrairement à l'initialisation de copie, elle peut appeler des constructeurs explicites. Elle se produit dans les cas suivants :   
   
 -   Une variable est initialisée à l'aide d'accolades ou de parenthèses non vides.  
   
@@ -316,8 +333,8 @@ int main(){
 }  
 ```  
   
-### Initialisation de liste  
- L'initialisation de liste se produit lorsqu'une variable est initialisée à l'aide d'une liste d'initialiseurs entre accolades.  Les listes d'initialiseurs entre accolades peuvent être utilisées dans les cas suivants :  
+### <a name="list-initialization"></a>Initialisation de liste  
+ L'initialisation de liste se produit lorsqu'une variable est initialisée à l'aide d'une liste d'initialiseurs entre accolades. Les listes d'initialiseurs entre accolades peuvent être utilisées dans les cas suivants :  
   
 -   Une variable est initialisée.  
   
@@ -335,7 +352,7 @@ int main(){
   
  Le code suivant montre des exemples d'initialisation de liste :  
   
-```vb  
+```cpp  
 class MyClass {  
 public:  
     MyClass(int myInt, char myChar) {}    
@@ -366,8 +383,8 @@ int main() {
 }  
 ```  
   
-### Initialisation d'agrégats  
- L'initialisation d'agrégats est un type d'initialisation de liste utilisé pour les tableaux et les types de classes \(souvent des structs ou des unions\) qui n'ont :  
+### <a name="agginit"></a>Initialisation d’agrégats  
+ L'initialisation d'agrégats est un type d'initialisation de liste utilisé pour les tableaux et les types de classes (souvent des structs ou des unions) qui n'ont :  
   
 -   aucun membre privé ou protégé ;  
   
@@ -377,7 +394,8 @@ int main() {
   
 -   aucune fonction membre virtuelle ;  
   
--   aucun initialiseur avec accolades ou signe égal pour les membres non statiques.  
+> [!NOTE]
+>  <!--conformance note-->In Visual Studio 2015 and earlier, an aggregate is not allowed to have  brace-or-equal initializers for non-static members. This restriction was removed in the C++14 standard and implemented in Visual Studio 2017. 
   
  Les initialiseurs d'agrégats se composent d'une liste d'initialisation entre accolades, avec ou sans signe égal, comme dans l'exemple suivant :  
   
@@ -424,10 +442,10 @@ myArr3: 8 9 10 0 0
 ```  
   
 > [!IMPORTANT]
->  Les membres de tableau qui ont fait l'objet d'une déclaration, mais pas d'une initialisation explicite pendant l'initialisation d'agrégats sont initialisés à zéro, comme dans `myArr3` ci\-dessus.  
+>  Membres du groupe qui sont déclarés, mais ne sont pas explicitement initialisées lors de l’initialisation d’agrégats sont initialisés à zéro, comme dans `myArr3` ci-dessus.  
   
-#### Initialisation des unions et des structs  
- Si une union n'a pas de constructeur, vous pouvez l'initialiser à l'aide d'une valeur \(ou d'une autre instance d'union\).  La valeur est utilisée pour initialiser le premier champ non static.  C'est donc différent de l'initialisation de struct, durant laquelle la première valeur de l'initialiseur est utilisée pour initialiser le premier champ, la deuxième pour initialiser le deuxième champ, et ainsi de suite.  L'exemple suivant vous permet de comparer l'initialisation des unions et des structs :  
+#### <a name="initializing-unions-and-structs"></a>Initialisation des unions et des structs  
+ Si une union n'a pas de constructeur, vous pouvez l'initialiser à l'aide d'une valeur (ou d'une autre instance d'union). La valeur est utilisée pour initialiser le premier champ non static. C'est donc différent de l'initialisation de struct, durant laquelle la première valeur de l'initialiseur est utilisée pour initialiser le premier champ, la deuxième pour initialiser le deuxième champ, et ainsi de suite. L'exemple suivant vous permet de comparer l'initialisation des unions et des structs :  
   
 ```cpp  
 struct MyStruct {  
@@ -458,8 +476,8 @@ int main() {
 }  
 ```  
   
-#### Initialisation d'agrégats contenant des agrégats  
- Les types d'agrégats peuvent contenir d'autres types d'agrégats. Par exemple, les tableaux peuvent contenir des tableaux, des structs, etc.  Ces types sont initialisés à l'aide de jeux imbriqués d'accolades, par exemple :  
+#### <a name="initializing-aggregates-that-contain-aggregates"></a>Initialisation d'agrégats contenant des agrégats  
+ Les types d'agrégats peuvent contenir d'autres types d'agrégats. Par exemple, les tableaux peuvent contenir des tableaux, des structs, etc. Ces types sont initialisés à l'aide de jeux imbriqués d'accolades, par exemple :  
   
 ```cpp  
 struct MyStruct {  
@@ -473,8 +491,8 @@ int main() {
 }  
 ```  
   
-### Initialisation de références  
- Les variables de type référence doivent être initialisées avec un objet du type à partir duquel le type référence est dérivé, ou avec un objet d'un type pouvant être converti en type à partir duquel le type référence est dérivé.  Exemple :  
+### <a name="reference-initialization"></a>Initialisation de références  
+ Les variables de type référence doivent être initialisées avec un objet du type à partir duquel le type référence est dérivé, ou avec un objet d'un type pouvant être converti en type à partir duquel le type référence est dérivé. Exemple :  
   
 ```  
 // initializing_references.cppint   
@@ -489,33 +507,33 @@ int main()
    LongRef3 = 11L;   // C3892}  
 ```  
   
- La seule façon d'initialiser une référence avec un objet temporaire consiste à initialiser un objet constant temporaire.  Une fois initialisée, une variable de type référence pointe toujours vers le même objet ; elle ne peut pas être modifiée pour pointer vers un autre objet.  
+ La seule façon d'initialiser une référence avec un objet temporaire consiste à initialiser un objet constant temporaire. Une fois initialisée, une variable de type référence pointe toujours vers le même objet ; elle ne peut pas être modifiée pour pointer vers un autre objet.  
   
- Bien que la syntaxe puisse être identique, l'initialisation des variables de type référence et l'assignation à des variables de type référence sont sémantiquement différentes.  Dans l'exemple précédent, les assignations qui modifient `iVar` et `lVar` ressemblent aux initialisations, mais leurs effets sont différents.  L'initialisation spécifie l'objet vers lequel pointe la variable de type référence ; l'assignation assigne à l'objet référencé via la référence.  
+ Bien que la syntaxe puisse être identique, l'initialisation des variables de type référence et l'assignation à des variables de type référence sont sémantiquement différentes. Dans l'exemple précédent, les assignations qui modifient `iVar` et `lVar` ressemblent aux initialisations, mais leurs effets sont différents. L'initialisation spécifie l'objet vers lequel pointe la variable de type référence ; l'assignation assigne à l'objet référencé via la référence.  
   
  Étant donné que le passage d'un argument de type référence à une fonction et le retour d'une valeur de type référence à partir d'une fonction sont des initialisations, les arguments formels d'une fonction sont initialisés correctement, de même que les références retournées.  
   
  Les variables de type référence peuvent être déclarées sans initialiseurs uniquement dans les éléments suivants :  
   
--   Déclarations de fonction \(prototypes\).  Exemple :  
+-   Déclarations de fonction (prototypes). Exemple :  
   
     ```  
     int func( int& );  
     ```  
   
--   Déclarations de type retour de fonction.  Exemple :  
+-   Déclarations de type retour de fonction. Exemple :  
   
     ```  
     int& func( int& );  
     ```  
   
--   Déclaration d'un membre de classe de type référence.  Exemple :  
+-   Déclaration d'un membre de classe de type référence. Exemple :  
   
     ```  
     class c {public:   int& i;};  
     ```  
   
--   Déclaration d'une variable spécifiée explicitement comme `extern`.  Exemple :  
+-   Déclaration d'une variable spécifiée explicitement comme `extern`. Exemple :  
   
     ```  
     extern int& iVal;  
@@ -523,15 +541,14 @@ int main()
   
  Lors de l'initialisation d'une variable de type référence, le compilateur utilise le graphique de décision représenté dans l'illustration suivante pour choisir entre la création d'une référence à un objet et la création d'un objet temporaire vers lequel pointe la référence.  
   
- ![Types référence d'initialisation des graphiques de décision](../cpp/media/vc38s71.png "vc38S71")  
+ ![Graphique de décision pour l’initialisation des types ref](../cpp/media/vc38s71.gif "vc38S71")  
 Graphique de décision pour l'initialisation des types référence  
   
- Les références aux types `volatile` \(déclarés comme `volatile` *typename***&** *identifier*\) peuvent être initialisées avec des objets `volatile` du même type ou avec des objets qui n'ont pas été déclarés comme `volatile`.  En revanche, elles ne peuvent pas être initialisées avec des objets **const** de ce type.  De même, les références aux types **const** \(déclarés comme **const** *typename***&** *identifier*\) peuvent être initialisées avec des objets **const** du même type \(ou tout ce qui a une conversion vers ce type ou avec des objets qui n'ont pas été déclarés comme **const**\).  En revanche, elles ne peuvent pas être initialisées avec des objets `volatile` de ce type.  
+ Des références aux `volatile` types (déclarés comme `volatile` *typename* ** & ** *identificateur*) peut être initialisée avec `volatile` objets du même type ou avec des objets qui n’ont pas été déclarés en tant que `volatile`. Ils ne peuvent pas, toutefois, être initialisées avec **const** objets de ce type. De même, des références aux **const** types (déclarés comme **const** *typename* ** & ** *identificateur *) peut être initialisée avec **const** objets du même type (ou tout ce qui a une conversion vers ce type ou avec des objets qui n’ont pas été déclarés en tant que **const**). En revanche, elles ne peuvent pas être initialisées avec des objets `volatile` de ce type.  
   
- Les références qui ne sont pas qualifiées avec le mot clé **const** ou `volatile` peuvent être initialisées uniquement avec des objets déclarés ni comme **const**, ni comme `volatile`.  
+ Les références qui ne sont pas qualifiées avec le **const** ou `volatile` mot clé peut être initialisé qu’avec les objets déclarés comme ni **const** ni `volatile`.  
   
-### Initialisation des variables externes  
- Les déclarations de variables automatiques, de registre, statiques et externes peuvent contenir des initialiseurs.  Toutefois, les déclarations de variables externes ne peuvent contenir des initialiseurs que si les variables ne sont pas déclarées comme `extern`.  Pour plus d'informations, consultez [Externe](../misc/external.md).  
+### <a name="initialization-of-external-variables"></a>Initialisation des variables externes  
+ Les déclarations de variables automatiques, statiques et externes peuvent contenir des initialiseurs. Toutefois, les déclarations de variables externes ne peuvent contenir des initialiseurs que si les variables ne sont pas déclarées comme `extern`.
   
-## Voir aussi  
- [\(NOTINBUILD\)Declarators](http://msdn.microsoft.com/fr-fr/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)
+

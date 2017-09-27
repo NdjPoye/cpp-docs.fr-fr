@@ -1,30 +1,47 @@
 ---
-title: "abort, fonction | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Abort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "abort (fonction)"
+title: Abort (fonction) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- Abort
+dev_langs:
+- C++
+helpviewer_keywords:
+- abort function
 ms.assetid: 3352bcc4-1a8a-4e1f-8dcc-fe30f6b50f2d
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# abort, fonction
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 169c76f4925dd02aeffbaa510526ce3caa53e93f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-La fonction **abort**, déclarée également dans le fichier Include standard STDLIB.H, arrête un programme C\+\+.  La différence entre **exit** et **abort** est que **exit** permet au processus d'arrêt du runtime C\+\+ d'avoir lieu \(les destructeurs d'objets globaux seront appelés\), alors que **abort** arrête le programme immédiatement.  Pour plus d'informations, consultez [abort](../c-runtime-library/reference/abort.md) dans la *Référence de la bibliothèque runtime*.  
+---
+# <a name="abort-function"></a>abort, fonction
+Le **abandonner** fonction, également déclarée dans le fichier include standard STDLIB. H, met fin à un programme C++. La différence entre **quitter** et **abandonner** qui est **quitter** permet le traitement de fin d’exécution C++ se déroulent (objet global destructeurs seront appelés), alors que **abandonner** termine le programme immédiatement. Pour plus d’informations, consultez [abandonner](../c-runtime-library/reference/abort.md) dans les *Run-Time Library Reference*.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Terminaison du programme](../cpp/program-termination.md)

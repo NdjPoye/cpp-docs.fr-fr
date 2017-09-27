@@ -1,32 +1,48 @@
 ---
-title: "Op&#233;rateur de cast&#160;: () | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "() (opérateur de cast)"
-  - "opérateurs de cast"
+title: "Opérateur de cast : () | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- cast operators
+- () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
 caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Op&#233;rateur de cast&#160;: ()
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bf8299fb0992f42fabe49bbbbffe0693fc93d961
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="cast-operator-"></a>Opérateur de cast : ()
 Un cast de type fournit une méthode pour la conversion explicite du type d'un objet dans une situation spécifique.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -34,12 +50,12 @@ Un cast de type fournit une méthode pour la conversion explicite du type d'un o
 ( type-name ) cast-expression  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
  Toute expression unaire est considérée comme une expression de cast.  
   
- Le compilateur traite *cast\-expression* comme le type *type\-name* après la réalisation d'un cast de type.  Les casts peuvent être utilisés pour convertir des objets de tout type scalaire vers ou depuis tout autre type scalaire.  Les casts de types explicites sont contraints par les mêmes règles qui déterminent les effets des conversions implicites.  Les restrictions supplémentaires sur les casts peuvent résulter des tailles réelles ou de la représentation des types spécifiques.  
+ Le compilateur traite *cast-expression* comme le type *type-name* après la réalisation d'un cast de type. Les casts peuvent être utilisés pour convertir des objets de tout type scalaire vers ou depuis tout autre type scalaire. Les casts de types explicites sont contraints par les mêmes règles qui déterminent les effets des conversions implicites. Les restrictions supplémentaires sur les casts peuvent résulter des tailles réelles ou de la représentation des types spécifiques.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // expre_CastOperator.cpp  
@@ -59,7 +75,7 @@ int main()
 }  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // expre_CastOperator2.cpp  
@@ -122,14 +138,16 @@ int main()
 }  
 ```  
   
-  **RawBytes tronqué à 10 caractères :   Intéressant \!**  
-**Octets castés :   Intéressant \!**  
-**Notez que le cast a modifié la chaîne interne brute**  
-**Octets bruts après le cast :   Intéressant \!**   
-## Voir aussi  
+```Output  
+RawBytes truncated to 10 chars:   Exciting!!  
+Casted Bytes:   Exciting  
+Note that the cast changed the raw internal string  
+Raw Bytes after cast:   Exciting  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [Expressions avec opérateurs unaires](../cpp/expressions-with-unary-operators.md)   
- [Opérateurs C\+\+](../misc/cpp-operators.md)   
- [Opérateurs, priorité et associativité C\+\+](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Opérateur de conversions de type explicite : \(\)](../cpp/explicit-type-conversion-operator-parens.md)   
+ [Les opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Opérateur de Conversion de Type explicite : ()](../cpp/explicit-type-conversion-operator-parens.md)   
  [Opérateurs de casting](../cpp/casting-operators.md)   
  [Opérateurs de cast](../c-language/cast-operators.md)

@@ -1,36 +1,52 @@
 ---
-title: "Pointeurs vers membres | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membres de classe, pointeurs vers"
-  - "déclarations, pointeurs"
-  - "membres, pointeurs vers"
-  - "pointeurs, déclarations"
-  - "pointeurs, vers des membres"
+title: Pointeurs vers des membres | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarations, pointers
+- class members, pointers to
+- pointers, to members
+- members, pointers to
+- pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Pointeurs vers membres
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 98a6db086443c15964a1dcf0a345b2fbaccfa233
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="pointers-to-members"></a>Pointeurs vers membres
 Les déclarations de pointeurs vers des membres sont des cas spéciaux de déclarations de pointeur.  Elles sont déclarées à l'aide de la séquence suivante :  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [ms-modifier]  
-qualified-name ::* [cv-qualifiers] identifier  
+[storage-class-specifiers] [cv-qualifiers] type-specifiers [ms-modifier]qualified-name ::* [cv-qualifiers] identifier  
 [= & qualified-name :: member-name];  
 ```  
   
@@ -38,29 +54,29 @@ qualified-name ::* [cv-qualifiers] identifier
   
     -   Spécificateur de classe de stockage facultatif.  
   
-    -   Spécificateurs **const** et\/ou `volatile` facultatifs.  
+    -   Facultatif **const** et/ou `volatile` spécificateurs.  
   
     -   Spécificateur de type : nom d'un type.  Il s'agit du type du membre vers lequel pointer, et non de la classe.  
   
 2.  Déclarateur :  
   
-    -   Modificateur spécifique Microsoft facultatif.  Pour plus d'informations, consultez [Modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).  
+    -   Modificateur spécifique Microsoft facultatif. Pour plus d’informations, consultez [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
-    -   Nom qualifié de la classe contenant les membres vers lesquels pointer.  Consultez [Noms et noms qualifiés](../misc/names-and-qualified-names.md).  
+    -   Nom qualifié de la classe contenant les membres vers lesquels pointer.   
   
     -   Opérateur ::.  
   
-    -   Opérateur **\***.  
+    -   Le ** \* ** opérateur.  
   
-    -   Spécificateurs **const** et\/ou `volatile` facultatifs.  
+    -   Facultatif **const** et/ou `volatile` spécificateurs.  
   
     -   Identificateur nommant le pointeur vers le membre.  
   
     -   Initialiseur facultatif :  
   
- de l'opérateur **\=**,  
+ Le ** = ** opérateur.  
   
- Opérateur **&**.  
+ Le ** & ** opérateur.  
   
  Nom qualifié de la classe.  
   
@@ -68,9 +84,9 @@ qualified-name ::* [cv-qualifiers] identifier
   
  Nom d'un membre non statique de la classe du type approprié.  
   
- Comme toujours, les déclarateurs multiples \(et tout initialiseur associé\) sont autorisés dans une même déclaration.  
+ Comme toujours, les déclarateurs multiples (et tout initialiseur associé) sont autorisés dans une même déclaration.  
   
- Un pointeur vers un membre d'une classe diffère d'un pointeur normal, car il comporte des informations de type pour le type du membre et pour la classe à laquelle le membre appartient.  Un pointeur normal identifie \(a l'adresse de\) un seul objet en mémoire.  Un pointeur vers un membre d'une classe identifie ce membre dans toute instance de la classe.  L'exemple suivant déclare une classe, `Window`, et certains pointeurs vers des données membres.  
+ Un pointeur vers un membre d'une classe diffère d'un pointeur normal, car il comporte des informations de type pour le type du membre et pour la classe à laquelle le membre appartient. Un pointeur normal identifie (a l'adresse de) un seul objet en mémoire. Un pointeur vers un membre d'une classe identifie ce membre dans toute instance de la classe. L'exemple suivant déclare une classe, `Window`, et certains pointeurs vers des données membres.  
   
 ```  
 // pointers_to_members1.cpp  
@@ -92,14 +108,14 @@ int main()
 }  
 ```  
   
- Dans l'exemple précédent, `pwCaption` est un pointeur vers tout membre de la classe `Window` ayant le type **char\***.  Le type de `pwCaption` est `char * Window::*`.  Le fragment de code suivant déclare des pointeurs vers les fonctions membres `SetCaption` et `GetCaption`.  
+ Dans l’exemple précédent, `pwCaption` est un pointeur vers un membre de classe `Window` qui possède un type **char\***. Le type de `pwCaption` est `char * Window::*`. Le fragment de code suivant déclare des pointeurs vers les fonctions membres `SetCaption` et `GetCaption`.  
   
 ```  
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
 bool (Window::*pfnwSC)( const char * ) = &Window::SetCaption;  
 ```  
   
- Les pointeurs `pfnwGC` et `pfnwSC` pointent respectivement vers `GetCaption` et `SetCaption` de la classe `Window`.  Le code copie directement des informations vers le titre de la fenêtre à l'aide du pointeur vers le membre `pwCaption` :  
+ Les pointeurs `pfnwGC` et `pfnwSC` pointent respectivement vers `GetCaption` et `SetCaption` de la classe `Window`. Le code copie directement des informations vers le titre de la fenêtre à l'aide du pointeur vers le membre `pwCaption` :  
   
 ```  
 Window wMainWindow;  
@@ -114,9 +130,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- La différence entre les opérateurs **.\*** et **–\>\*** \(opérateurs de pointeur vers membre\) est que l'opérateur **.\*** sélectionne des membres sur la base d'un objet ou d'une référence d'objet, tandis que l'opérateur **–\>\*** sélectionne des membres via un pointeur.  \(Pour plus d'informations sur ces opérateurs, consultez [Expressions avec des opérateurs de pointeur vers membre](../cpp/pointer-to-member-operators-dot-star-and-star.md).\)  
+ La différence entre la **.\* ** et ** -> \* ** opérateurs (les opérateurs de pointeur vers membre) est que le **.\* ** opérateur sélectionne des membres étant donné un objet ou une référence d’objet, alors que le ** -> \* ** opérateur sélectionne des membres via un pointeur. (Pour plus d’informations sur ces opérateurs, consultez [Expressions avec opérateurs pointeur vers membre](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- Le résultat des opérateurs de pointeur vers membre est le type du membre \(dans le cas présent, **char \***\).  
+ Le résultat des opérateurs pointeur vers membre est le type du membre : dans ce cas, **char \* **.  
   
  Le fragment de code suivant appelle les fonctions membres `GetCaption` et `SetCaption` à l'aide de pointeurs vers des membres :  
   
@@ -135,13 +151,13 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 (pwChildWindow->*pfnwSC)( szCaptionBase );  
 ```  
   
-## Restrictions sur les pointeurs vers des membres  
- L'adresse d'un membre statique n'est pas un pointeur vers un membre.  C'est un pointeur normal vers l'instance du membre statique.  Étant donné qu'une seule instance d'un membre statique existe pour tous les objets d'une classe donnée, les opérateurs d'adresse ordinaire **\(&\)** et les opérateurs de déférencement **\(\*\)** peuvent être utilisés.  
+## <a name="restrictions-on-pointers-to-members"></a>Restrictions sur les pointeurs vers des membres  
+ L'adresse d'un membre statique n'est pas un pointeur vers un membre. C'est un pointeur normal vers l'instance du membre statique. Étant donné que qu’une seule instance d’un membre statique existe pour tous les objets d’une classe donnée, le normales d’adresse **(&)** et déréférencer **(\*)** opérateurs peuvent être utilisés.  
   
-## Pointeurs vers des membres et des fonctions virtuelles  
- L'appel d'une fonction virtuelle via une fonction pointeur vers membre fonctionne comme si la fonction avait été appelée directement. La fonction correcte est recherchée dans la v\-table et appelée.  
+## <a name="pointers-to-members-and-virtual-functions"></a>Pointeurs vers des membres et des fonctions virtuelles  
+ L'appel d'une fonction virtuelle via une fonction pointeur vers membre fonctionne comme si la fonction avait été appelée directement. La fonction correcte est recherchée dans la v-table et appelée.  
   
- La clé du bon fonctionnement des fonctions virtuelles est, comme toujours, de les appeler via un pointeur vers une classe de base.  \(Pour plus d'informations sur les fonctions virtuelles, consultez [Fonctions virtuelles](../cpp/virtual-functions.md).\)  
+ La clé du bon fonctionnement des fonctions virtuelles est, comme toujours, de les appeler via un pointeur vers une classe de base. (Pour plus d’informations sur les fonctions virtuelles, consultez [fonctions virtuelles](../cpp/virtual-functions.md).)  
   
  Le code suivant montre comment appeler une fonction virtuelle via un pointeur de fonction membre :  
   
@@ -188,5 +204,5 @@ bPtr = &dObject;    // Set pointer to address of dObject.
 Print function for class Derived  
 ```  
   
-## Voir aussi  
- [Déclarateurs abstraits C\+\+](http://msdn.microsoft.com/fr-fr/e7e18c18-0cad-4450-942b-d27e1d4dd088)
+## <a name="see-also"></a>Voir aussi  
+ 

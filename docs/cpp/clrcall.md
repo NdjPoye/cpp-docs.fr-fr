@@ -1,58 +1,66 @@
 ---
-title: "__clrcall | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__clrcall"
-  - "__clrcall_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__clrcall (mot clé) (C++)"
+title: __clrcall | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __clrcall
+- __clrcall_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# __clrcall
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 10e0835064298306c4fa53d4d15f59ecc6c73217
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="clrcall"></a>__clrcall
 **Section spécifique à Microsoft**  
   
- Spécifie qu'une fonction peut uniquement être appelée à partir du code managé.  Utilisez `__clrcall` pour toutes les fonctions virtuelles qui seront uniquement appelées à partir du code managé.  Toutefois, cette convention d'appel ne peut pas être utilisée pour les fonctions qui sont appelées à partir du code natif.  
+ Spécifie qu'une fonction peut uniquement être appelée à partir du code managé.  Utilisez `__clrcall` pour toutes les fonctions virtuelles qui seront uniquement appelées à partir du code managé. Toutefois, cette convention d'appel ne peut pas être utilisée pour les fonctions qui sont appelées à partir du code natif.  
   
  Utilisez `__clrcall` pour améliorer les performances lors d'un appel à partir d'une fonction managée à une fonction managée virtuelle ou à partir de la fonction managée à la fonction managée via le pointeur.  
   
- Les points d'entrée sont des fonctions séparées et générées par le compilateur.  Si une fonction a des points d'entrée natifs et managés, l'un d'eux est la fonction réelle avec l'implémentation de fonction.  L'autre fonction est une fonction séparée \(une conversion de code\) qui appelle la fonction réelle et qui laisse le Common Langage Runtime effectuer PInvoke.  En marquant une fonction comme `__clrcall`, vous indiquez que l'implémentation de fonction doit être MSIL et que la fonction de point d'entrée native ne sera pas générée.  
+ Les points d'entrée sont des fonctions séparées et générées par le compilateur. Si une fonction a des points d'entrée natifs et managés, l'un d'eux est la fonction réelle avec l'implémentation de fonction. L'autre fonction est une fonction séparée (une conversion de code) qui appelle la fonction réelle et qui laisse le Common Langage Runtime effectuer PInvoke. En marquant une fonction comme `__clrcall`, vous indiquez que l'implémentation de fonction doit être MSIL et que la fonction de point d'entrée native ne sera pas générée.  
   
- Au moment d'acquérir l'adresse d'une fonction native si `__clrcall` n'est pas spécifié, le compilateur utilise le point d'entrée natif.  `__clrcall` indique que la fonction est gérée et qu'il n'est pas nécessaire de passer par la transition entre le code managé et le code natif.  Dans ce cas, le compilateur utilise le point d'entrée managé.  
+ Au moment d'acquérir l'adresse d'une fonction native si `__clrcall` n'est pas spécifié, le compilateur utilise le point d'entrée natif. `__clrcall` indique que la fonction est gérée et qu'il n'est pas nécessaire de passer par la transition entre le code managé et le code natif. Dans ce cas, le compilateur utilise le point d'entrée managé.  
   
- Lorsque **\/clr** \(pas **\/clr:pure** ou **\/clr:safe**\) est utilisé et que `__clrcall` n'est pas utilisé, le fait d'acquérir l'adresse d'une fonction retourne toujours l'adresse de la fonction de point d'entrée native.  Lorsque `__clrcall` est utilisé, la fonction de point d'entrée native n'est pas créée, vous obtenez donc l'adresse de la fonction managée, pas une fonction de conversion de code de point d'entrée.  Pour plus d'informations, consultez [Double conversion de code \(thunking\)](../dotnet/double-thunking-cpp.md).  
+ Lorsque **/CLR** (pas **/CLR : pure** ou **/CLR : safe**) est utilisé et `__clrcall` est ne pas utilisé, la prise d’adresse d’une fonction toujours retourne l’adresse de l’entrée native fonction de point. Lorsque `__clrcall` est utilisé, la fonction de point d'entrée native n'est pas créée, vous obtenez donc l'adresse de la fonction managée, pas une fonction de conversion de code de point d'entrée. Pour plus d’informations, consultez [Double médiateur](../dotnet/double-thunking-cpp.md). Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.  
   
- [\/clr \(Compilation pour le Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md) implique que toutes les fonctions et les pointeurs fonction sont `__clrcall` et que le compilateur ne permet pas à une fonction du module d'être marquée par autre chose que `__clrcall`.  Lorsque **\/clr:pure** est utilisé, `__clrcall` peut être spécifié sur les pointeurs fonction et les déclarations externes.  
+ [/CLR (Compilation pour le common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) implique que toutes les fonctions et les pointeurs de fonction sont `__clrcall` et le compilateur ne permettra pas d’une fonction à l’intérieur du module à quoi que ce soit marquer autre que `__clrcall`. Lorsque **/CLR : pure** est utilisé, `__clrcall` peut être spécifié uniquement sur les pointeurs de fonction et les déclarations externes.  
   
- Vous pouvez appeler directement les fonctions `__clrcall` à partir du code C\+\+ existant qui a été compilé à l'aide de **\/clr** tant que cette fonction a une implémentation MSIL.  Les fonctions `__clrcall` ne peuvent pas être appelées directement à partir des fonctions qui ont du code asm incorporé et appellent des intrinsèques spécifiques UC, par exemple, même si ces fonctions sont compilées avec **\/clr**.  
+ Vous pouvez appeler directement `__clrcall` fonctions à partir de code C++ existant qui a été compilé à l’aide de **/CLR** tant que cette fonction a une implémentation MSIL. `__clrcall`les fonctions ne peut pas être appelées directement à partir de fonctions qui ont le code asm incorporé et appellent des intrinsèques spécifiques UC, par exemple, même si ces fonctions sont compilées avec **/CLR**.  
   
- Des pointeurs fonction `__clrcall` sont uniquement destinés à être utilisés dans le domaine d'application dans lequel ils ont été créés.  Au lieu de passer des pointeurs fonction `__clrcall` entre des domaines d'application, utilisez <xref:System.CrossAppDomainDelegate>.  Pour plus d'informations, consultez [Domaines d'application et Visual C\+\+](../dotnet/application-domains-and-visual-cpp.md).  
+ Des pointeurs fonction `__clrcall` sont uniquement destinés à être utilisés dans le domaine d'application dans lequel ils ont été créés.  Au lieu de passer des pointeurs fonction `__clrcall` entre des domaines d'application, utilisez <xref:System.CrossAppDomainDelegate>. Pour plus d’informations, consultez [domaines d’Application et Visual C++](../dotnet/application-domains-and-visual-cpp.md).  
   
-## Exemple  
-  
-```  
-// clrcall.cpp  
-// compile with: /clr:oldSyntax /LD  
-void __clrcall Test1( ) {}  
-void (__clrcall *fpTest1)( ) = &Test1;  
-```  
-  
-## Exemple  
+## <a name="example"></a>Exemple  
  Notez que lorsqu'une fonction est déclarée avec `__clrcall`, le code sera généré lorsque nécessaire ; par exemple, lorsque la fonction est appelée.  
   
 ```  
@@ -83,12 +91,15 @@ int main() {
 }  
 ```  
   
-  **Dans Func1**  
-**&Func1 \! \= pf, échec de comparaison**  
-**Dans Func1**  
-**Dans Func1**   
-## Exemple  
- L'exemple suivant montre que vous pouvez définir un pointeur fonction, de sorte que vous indiquez que le pointeur fonction sera uniquement appelé à partir du code managé.  Cela permet au compilateur d'appeler directement la fonction managée et d'éviter le point d'entrée natif \(double problème de conversion de code\).  
+```Output  
+in Func1  
+&Func1 != pf, comparison fails  
+in Func1  
+in Func1  
+```  
+  
+## <a name="example"></a>Exemple  
+ L'exemple suivant montre que vous pouvez définir un pointeur fonction, de sorte que vous indiquez que le pointeur fonction sera uniquement appelé à partir du code managé. Cela permet au compilateur d'appeler directement la fonction managée et d'éviter le point d'entrée natif (double problème de conversion de code).  
   
 ```  
 // clrcall3.cpp  
@@ -106,6 +117,6 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [Passage des arguments et conventions de dénomination](../cpp/argument-passing-and-naming-conventions.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Passage des arguments et Conventions d’affectation de noms](../cpp/argument-passing-and-naming-conventions.md)   
+ [Mots clés](../cpp/keywords-cpp.md)

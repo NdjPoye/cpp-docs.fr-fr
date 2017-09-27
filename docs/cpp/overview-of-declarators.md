@@ -1,39 +1,57 @@
 ---
-title: "Vue d&#39;ensemble des d&#233;clarateurs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "déclarateurs, à propos des déclarateurs"
+title: "Vue d’ensemble des déclarateurs | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Vue d&#39;ensemble des d&#233;clarateurs
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 4a8f795a23f4e93f02d5d6b5ce98d60555a432d6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Les déclarateurs sont les composants d'une déclaration qui spécifient les noms des objets ou des fonctions. Les déclarateurs spécifient également si l'objet nommé est un objet, un pointeur, une référence ou un tableau.  Les déclarateurs ne spécifient pas le type de base, mais ils modifient les informations de type dans le type de base pour spécifier les types dérivés, tels que des pointeurs, des références et des tableaux.  Appliqué aux fonctions, le déclarateur utilise le spécificateur de type pour spécifier complètement le type de retour d'une fonction comme étant un objet, un pointeur ou une référence. (Spécificateurs, présentés dans [Déclarations](../misc/declarations.md), acheminent des propriétés telles que le stockage et le type de classe. Modificateurs, présentés dans cette section et dans [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md), modifier les déclarateurs.) La figure ci-dessous illustre une déclaration complète de `MyFunction` et répertorie les composants de la déclaration.  
+---
+# <a name="overview-of-declarators"></a>Vue d'ensemble des déclarateurs
+Les déclarateurs sont les composants d'une déclaration qui spécifient les noms des objets ou des fonctions. Les déclarateurs spécifient également si l'objet nommé est un objet, un pointeur, une référence ou un tableau.  Les déclarateurs ne spécifient pas le type de base, mais ils modifient les informations de type dans le type de base pour spécifier les types dérivés, tels que des pointeurs, des références et des tableaux.  Appliqué aux fonctions, le déclarateur utilise le spécificateur de type pour spécifier complètement le type de retour d'une fonction comme étant un objet, un pointeur ou une référence. (Spécificateurs, présentés dans [déclarations et définitions](declarations-and-definitions-cpp.md), acheminent des propriétés telles que le stockage et le type de classe. Modificateurs, présentés dans cette section et dans [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md), modifient les déclarateurs.) La figure ci-dessous illustre une déclaration complète de `MyFunction` et répertorie les composants de la déclaration.  
   
- ![Modificateurs, spécificateurs et déclarateurs](../cpp/media/vc38qy1.png "vc38QY1")  
+ ![Modificateurs, spécificateurs et déclarateurs](../cpp/media/vc38qy1.gif "vc38QY1")  
 Spécificateurs, modificateurs et déclarateurs  
   
- **Spécifique à Microsoft**  
+ **Section spécifique à Microsoft**  
   
- La plupart des mots clés étendus Microsoft peuvent être utilisés comme modificateurs pour former des types dérivés ; ce ne sont ni des spécificateurs, ni des déclarateurs. (Voir [Modificateurs Microsoft-Specific](../cpp/microsoft-specific-modifiers.md).)  
+ La plupart des mots clés étendus Microsoft peuvent être utilisés comme modificateurs pour former des types dérivés ; ce ne sont ni des spécificateurs, ni des déclarateurs. (Consultez [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).)  
   
- **FIN spécifique à Microsoft**  
+ **FIN de la section spécifique à Microsoft**  
   
- Les déclarateurs figurent dans la syntaxe d'une déclaration après une liste facultative de spécificateurs. Ces spécificateurs sont traités dans [déclarations.](../misc/declarations.md) Une déclaration peut contenir plusieurs déclarateurs, mais chaque déclarateur déclare un seul nom.  
+ Les déclarateurs figurent dans la syntaxe d'une déclaration après une liste facultative de spécificateurs. Ces spécificateurs sont présentés dans [déclarations.](declarations-and-definitions-cpp.md) Une déclaration peut contenir plusieurs déclarateurs, mais chaque déclarateur déclare un seul nom.  
   
  L'exemple de déclaration suivant indique comment les spécificateurs et les déclarateurs sont combinés pour former une déclaration complète :  
   
@@ -41,7 +59,7 @@ Spécificateurs, modificateurs et déclarateurs
 const char *pch, ch;  
 ```  
   
- Dans cet exemple, les mots clés **const** et `char` constituent la liste des spécificateurs. Deux déclarateurs sont répertoriés : `*pch` et `ch`.  Une déclaration qui déclare plusieurs entités se compose d'un spécificateur de type, suivi d'une liste de déclarateurs séparés par des virgules, et se termine par un point-virgule.  
+ Dans la déclaration précédente, les mots clés **const** et `char` constituent la liste des spécificateurs. Deux déclarateurs sont répertoriés : `*pch` et `ch`.  Une déclaration qui déclare plusieurs entités se compose d'un spécificateur de type, suivi d'une liste de déclarateurs séparés par des virgules, et se termine par un point-virgule.  
   
  **Déclarateurs d’objets simples**  
   
@@ -53,7 +71,7 @@ const char *pch, ch;
   
  **Déclarateurs de pointeurs, références et tableaux**  
   
- Les opérateurs de pointeur insérés devant le nom font de l'objet un pointeur ou une référence.  Le **\*** opérateur déclare le nom en tant que pointeur ; le **&** opérateur déclare en tant que référence.  
+ Les opérateurs de pointeur insérés devant le nom font de l'objet un pointeur ou une référence.  Le ** \* ** opérateur déclare le nom en tant que pointeur ; la ** & ** opérateur déclare en tant que référence.  
   
 ```  
 int *i; // declarator is *i  
@@ -69,7 +87,7 @@ const char *pcc; // pointer to const char
 const char *const cpcc; // const pointer to const char  
 ```  
   
- Pour plus d’informations peuvent être trouvées dans [pointeurs const et volatile](../cpp/const-and-volatile-pointers.md).  
+ Informations supplémentaires peuvent être disponibles dans [pointeurs const et volatile](../cpp/const-and-volatile-pointers.md).  
   
  Un pointeur désignant un membre d'une classe ou d'un struct est déclaré avec le spécificateur de nom imbriqué approprié :  
   
@@ -95,8 +113,6 @@ int i[2][2]; // two dimensional array
 ```  
 int f(int a, int b, int c);  
 ```  
-  
- Pour plus d’informations sur les listes d’arguments, consultez la page [des déclarations de fonction](http://msdn.microsoft.com/fr-fr/3f9b4e14-60d2-47c1-acd8-4fa8fc988be7).  
   
  Les pointeurs et les références de fonctions sont déclarés en ajoutant l'opérateur de pointeur ou de référence au début du nom de la fonction comme indiqué ci-dessous.  Les parenthèses, normalement facultatives, sont requises pour distinguer un pointeur désignant une fonction d'une fonction qui retourne un pointeur :  
   
@@ -151,7 +167,7 @@ PIFN pifnDispatchArray[7];
 int ( *pifnDispatchArray[7] )( char * );  
 ```  
   
- Pour plus d’informations sur typedef, consultez [typedef, spécificateur](http://msdn.microsoft.com/fr-fr/cc96cf26-ba93-4179-951e-695d1f5fdcf1).  
+ Pour plus d’informations sur typedef, consultez [alias et typedefs](aliases-and-typedefs-cpp.md).  
   
  Des pointeurs, des références et des tableaux d'un même type de base peuvent être associés dans une déclaration unique (séparés par des virgules) comme suit :  
   
@@ -177,7 +193,7 @@ int a, *b, c[5], **d, &e=a;
 6. ( declarator )  
 ```  
   
--   et *-opérateur pointeur* est un des :  
+-   et *opérateur de pointeur* est un des :  
   
 ```  
   
@@ -197,4 +213,4 @@ int a, *b, c[5], **d, &e=a;
 |tableau de 10|`(*i)[10]`|4|  
 |pointeur désignant|`*((*i)[10])`|6 puis 5|  
   
- Lorsque plusieurs modificateurs de pointeur, référence, tableau ou fonction sont utilisés, les déclarateurs peuvent devenir relativement complexes.  La rubrique [interprétation de déclarateurs plus complexes](../c-language/interpreting-more-complex-declarators.md) explique comment lire la syntaxe des déclarateurs plus complexe.  La rubrique s’applique à C et C++, même si en C++, partout où la * est utilisé pour indiquer un pointeur, un nom qualifié tel que MyClass ::\* peut être utilisée pour spécifier un pointeur vers un membre d’une classe.
+ Lorsque plusieurs modificateurs de pointeur, référence, tableau ou fonction sont utilisés, les déclarateurs peuvent devenir relativement complexes.  La rubrique [interprétation de déclarateurs plus complexes](../c-language/interpreting-more-complex-declarators.md) explique comment lire la syntaxe des déclarateurs plus complexe.  La rubrique s’applique à C et C++, même si en C++, partout où le * est utilisé pour indiquer un pointeur, un nom qualifié tel que MyClass ::\* peut être utilisé pour spécifier un pointeur vers un membre d’une classe.

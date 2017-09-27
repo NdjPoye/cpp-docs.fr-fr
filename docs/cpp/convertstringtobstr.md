@@ -1,34 +1,51 @@
 ---
-title: "ConvertStringToBSTR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "ConvertStringToBSTR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ConvertStringToBSTR (fonction)"
+title: ConvertStringToBSTR | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- ConvertStringToBSTR
+dev_langs:
+- C++
+helpviewer_keywords:
+- ConvertStringToBSTR function
 ms.assetid: 071f9b3b-9643-4e06-a1e5-de96ed15bab2
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# ConvertStringToBSTR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 3778f84f152b9ce5dd1121d9cf01d7c1a4472a1e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="convertstringtobstr"></a>ConvertStringToBSTR
 **Section spécifique à Microsoft**  
   
- Convertit une valeur **char \*** en un `BSTR`.  
+ Convertit un **char \* ** la valeur en un `BSTR`.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -37,11 +54,11 @@ caps.handback.revision: 9
 )  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `pSrc`  
- Variable **char \***.  
+ A **char \* ** variable.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // ConvertStringToBSTR.cpp  
@@ -62,14 +79,17 @@ int main() {
 }  
 ```  
   
-  **char \* text: Test**  
-**BSTR text: Test**   
-## FIN de la section spécifique à Microsoft  
+```Output  
+char * text: Test  
+BSTR text: Test  
+```  
   
-## Configuration requise  
- **En\-tête :** comutil.h  
+**FIN de la section spécifique à Microsoft**  
   
- **Bibliothèque :** comsuppw.lib ou comsuppwd.lib \(voir [\/Zc:wchar\_t \(wchar\_t est un type natif\)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) pour plus d'informations\)  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** comutil.h  
   
-## Voir aussi  
- [Fonctions globales COM du compilateur](../cpp/compiler-com-global-functions.md)
+ **Lib :** comsuppw.lib ou comsuppwd.lib (consultez [/Zc : wchar_t (wchar_t est un Type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) pour plus d’informations)  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Fonctions globales COM du compilateur](../cpp/compiler-com-global-functions.md)

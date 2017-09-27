@@ -1,40 +1,57 @@
 ---
-title: "Restrictions relatives &#224; la fonction main | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Main"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "main (fonction), limitations sur l'utilisation"
+title: les Restrictions de fonction principale | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- Main
+dev_langs:
+- C++
+helpviewer_keywords:
+- main function, restrictions on using
 ms.assetid: 7b3df731-344b-44a8-850c-11cbcbfbfa83
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Restrictions relatives &#224; la fonction main
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 10fe82b0bb7ad700164b05ba466854db7716ba76
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Plusieurs restrictions qui s'appliquent à la fonction **main** ne s'appliquent à aucune autre fonction C\+\+.  La fonction **main** :  
+---
+# <a name="main-function-restrictions"></a>Restrictions relatives à la fonction main
+Plusieurs restrictions s’appliquent à la **principal** fonction qui ne s’appliquent pas à d’autres fonctions C++. Le **principal** fonction :  
   
--   ne peut pas être surchargée \(consultez [Surcharge](../misc/overloading-cpp.md)\) ;  
+-   Ne peut pas être surchargé (voir [surcharge de fonction](function-overloading.md)).  
   
--   ne peut pas être déclarée comme **inline** ;  
+-   Ne peut pas être déclaré en tant que **inline**.  
   
--   ne peut pas être déclarée comme **static** ;  
+-   Ne peut pas être déclaré en tant que **statique**.  
   
 -   son adresse ne peut pas être prise.  
   
 -   Ne peut pas être appelé.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [main : démarrage du programme](../cpp/main-program-startup.md)

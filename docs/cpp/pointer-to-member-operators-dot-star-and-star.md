@@ -1,45 +1,60 @@
 ---
-title: "Op&#233;rateurs de pointeur vers membre&#160;: .* et -&gt;* | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - ".*"
-  - "->*"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".* (opérateur)"
-  - "->* (opérateur)"
-  - "expressions (C++), opérateurs"
-  - "expressions (C++), pointeur"
-  - "opérateurs pointeur vers membre"
+title: "Opérateurs de pointeur vers membre :. * et -&gt;* | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- .*
+- ->*
+dev_langs:
+- C++
+helpviewer_keywords:
+- expressions [C++], pointer
+- pointer-to-member operators
+- .* operator
+- expressions [C++], operators
+- ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Op&#233;rateurs de pointeur vers membre&#160;: .* et -&gt;*
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1dad74e99612df6ef868b4cd1f0b2ca5abb9c506
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-## Syntaxe  
+---
+# <a name="pointer-to-member-operators--and--gt"></a>Opérateurs de pointeur vers membre :. * et -&gt;*
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-      expression .* expression  
-expression –>* expression  
+expression .* expression  
+expression ->* expression  
 ```  
   
-## Notes  
- Les opérateurs de pointeur vers membre, .\* et –\>\*, retournent la valeur d'un membre de classe spécifique pour l'objet spécifié à gauche de l'expression.  Le côté droit doit spécifier un membre de la classe.  L'exemple ci\-dessous illustre l'utilisation de ces opérateurs :  
+## <a name="remarks"></a>Remarques  
+ Les opérateurs de pointeur vers membre,. * et ->\*, retourner la valeur d’un membre de classe spécifique pour l’objet spécifié sur le côté gauche de l’expression.  Le côté droit doit spécifier un membre de la classe.  L'exemple ci-dessous illustre l'utilisation de ces opérateurs :  
   
 ```  
 // expre_Expressions_with_Pointer_Member_Operators.cpp  
@@ -79,7 +94,7 @@ int main() {
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 m_func1  
@@ -88,17 +103,17 @@ m_func1
 2  
 ```  
   
- Dans l'exemple précédent, un pointeur vers un membre, `pmfn`, est utilisé pour appeler la fonction membre `m_func1`.  Un autre pointeur vers un membre, `pmd`, est utilisé pour accéder au membre `m_num`.  
+ Dans l'exemple précédent, un pointeur vers un membre, `pmfn`, est utilisé pour appeler la fonction membre `m_func1`. Un autre pointeur vers un membre, `pmd`, est utilisé pour accéder au membre `m_num`.  
   
- L'opérateur binaire .\* associe son premier opérande, qui doit être un objet de type classe, avec son second opérande, qui doit être un type pointeur vers membre.  
+ L’opérateur binaire .* associe son premier opérande, qui doit être un objet de type classe, avec son second opérande, qui doit être un type pointeur vers membre.  
   
- L'opérateur binaire –\>\* associe son premier opérande, qui doit être un pointeur désignant un objet de type classe, avec son second opérande, qui doit être un type pointeur vers membre.  
+ L’opérateur binaire -> * associe son premier opérande, qui doit être un pointeur vers un objet de type classe, avec son second opérande, qui doit être un type pointeur vers membre.  
   
- Dans une expression contenant l'opérateur .\*, le premier opérande doit être du type classe du pointeur vers le membre spécifié dans le second opérande, et accessible à ce dernier, ou d'un type accessible clairement dérivé de cette classe et accessible à cette dernière.  
+ Dans une expression contenant l’opérateur .*, le premier opérande doit être du type classe du pointeur vers le membre spécifié dans le second opérande, et accessible à ce dernier, ou d’un type accessible clairement dérivé de cette classe et accessible à cette dernière.  
   
- Dans une expression contenant l'opérateur –\>\*, le premier opérande doit être de type « pointeur vers le type classe » du type spécifié dans le second opérande, ou il doit être d'un type clairement dérivé de cette classe.  
+ Dans une expression contenant le-> * (opérateur), le premier opérande doit être du type « pointeur vers le type de classe » du type spécifié dans le second opérande, ou il doit être d’un type sans ambiguïté dérivée de cette classe.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  Considérez les classes et le fragment de programme suivants :  
   
 ```  
@@ -137,11 +152,12 @@ int main() {
 }  
 ```  
   
- Le résultat des opérateurs de pointeur vers membre .\* ou –\>\* est un objet ou une fonction du type spécifié dans la déclaration du pointeur vers membre.  Ainsi, dans l'exemple précédent, le résultat de l'expression `ADerived.*pmfnFunc1()` est un pointeur vers une fonction qui retourne void.  Ce résultat est une l\-value si le second opérande est une l\-value.  
+ Le résultat de la. * ou ->\* opérateurs pointeur vers membre est un objet ou une fonction du type spécifié dans la déclaration de pointeur vers le membre. Ainsi, dans l'exemple précédent, le résultat de l'expression `ADerived.*pmfnFunc1()` est un pointeur vers une fonction qui retourne void. Ce résultat est une l-value si le second opérande est une l-value.  
   
 > [!NOTE]
->  Si le résultat d'un des opérateurs de pointeur vers membre est une fonction, le résultat peut être utilisé uniquement comme opérande pour l'opérateur d'appel de fonction.  
+>  Si le résultat d’un des opérateurs de pointeur vers membre est une fonction, le résultat peut être utilisé uniquement comme opérande pour l’opérateur d’appel de fonction.  
   
-## Voir aussi  
- [Opérateurs C\+\+](../misc/cpp-operators.md)   
- [Opérateurs, priorité et associativité C\+\+](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+## <a name="see-also"></a>Voir aussi  
+ [Opérateurs intégrés, priorité et associativité C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+
+

@@ -1,36 +1,52 @@
 ---
-title: "_variant_t::operator = | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_variant_t.operator="
-  - "_variant_t::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= (opérateur), avec des objets Visual C++ spécifiques"
-  - "= (opérateur), variante"
-  - "= (opérateur), variante"
+title: _variant_t::operator = | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _variant_t.operator=
+- _variant_t::operator=
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator=, variant
+- operator =, variant
+- = operator, with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _variant_t::operator =
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 850562235442ef8fed4f7b130948a5e92b15a1fb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="varianttoperator-"></a>_variant_t::operator =
 **Section spécifique à Microsoft**  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -127,42 +143,42 @@ _variant_t& operator=(
 );  
 ```  
   
-## Notes  
- L'opérateur assigne une nouvelle valeur à l'objet `_variant_t` :  
+## <a name="remarks"></a>Remarques  
+ L'opérateur assigne une nouvelle valeur à l'objet `_variant_t` :  
   
--   **operator\=\(**  *varSrc*  **\)** Assigne un objet **VARIANT** existant à un objet `_variant_t`.  
+-   **opérateur = (***varSrc***)** affecte un existant **VARIANT** à un `_variant_t` objet.      
   
--   **operator\=\(**  *pVarSrc*  **\)** Assigne un objet **VARIANT** existant à un objet `_variant_t`.  
+-   **opérateur = (***pVarSrc***)** affecte un existant **VARIANT** à un `_variant_t` objet.      
   
--   **operator\=\(**  *var\_t\_Src*  **\)** Assigne un objet `_variant_t` existant à un objet `_variant_t`.  
+-   **opérateur = (***var_t_Src***)** affecte un existant `_variant_t` de l’objet à un `_variant_t` objet.      
   
--   **operator\=\(**  *sSrc*  **\)** Assigne une valeur entière **short** à un objet `_variant_t`.  
+-   **opérateur = (***sSrc***)** affecte un **court** valeur entière à un `_variant_t` objet.      
   
--   **operator\=\(**  `lSrc`  **\)** Assigne une valeur entière **long** à un objet `_variant_t`.  
+-   **opérateur = (**`lSrc`**)** affecte un **long** valeur entière à un `_variant_t` objet.      
   
--   **operator\=\(**  *fltSrc*  **\)** Assigne une valeur numérique **float** à un objet `_variant_t`.  
+-   **opérateur = (***fltSrc***)** affecte un **float** valeur numérique à un `_variant_t` objet.      
   
--   **operator\=\(**  *dblSrc*  **\)** Assigne une valeur numérique **double** à un objet `_variant_t`.  
+-   **opérateur = (***dblSrc***)** affecte un **double** valeur numérique à un `_variant_t` objet.      
   
--   **operator\=\(**  *cySrc*  **\)** Assigne un objet **CY** à un objet `_variant_t`.  
+-   **opérateur = (***cySrc***)** affecte un **CY** de l’objet à un `_variant_t` objet.      
   
--   **operator\=\(**  *bstrSrc*  **\)** Assigne un objet `BSTR` à un objet `_variant_t`.  
+-   **opérateur = (***bstrSrc***)** affecte un `BSTR` de l’objet à un `_variant_t` objet.      
   
--   **operator\=\(**  *wstrSrc*  **\)** Assigne une chaîne Unicode à un objet `_variant_t`.  
+-   **opérateur = (***wstrSrc***)** assigne une chaîne Unicode à un `_variant_t` objet.      
   
--   **operator\=\(**  `strSrc`  **\)** Assigne une chaîne multioctets à un objet `_variant_t`.  
+-   **opérateur = (**`strSrc`**)** assigne une chaîne multioctet à un `_variant_t` objet.      
   
--   **operator\=\(**  `bSrc` **\)** Assigne une valeur `bool` à un objet `_variant_t`.  
+-   **opérateur = (** `bSrc` **)** affecte un `bool` valeur un `_variant_t` objet.    
   
--   **operator\=\(**  *pDispSrc*  **\)** Assigne un objet **VT\_DISPATCH** à un objet `_variant_t`.  
+-   **opérateur = (***pDispSrc***)** affecte un **VT_DISPATCH** de l’objet à un `_variant_t` objet.      
   
--   **operator\=\(**  *pIUnknownSrc*  **\)** Assigne un objet **VT\_UNKNOWN** à un objet `_variant_t`.  
+-   **opérateur = (***pIUnknownSrc***)** affecte un **VT_UNKNOWN** de l’objet à un `_variant_t` objet.      
   
--   **operator\=\(**  *decSrc*  **\)** Assigne une valeur **DECIMAL** à un objet `_variant_t`.  
+-   **opérateur = (***decSrc***)** affecte un **décimal** valeur un `_variant_t` objet.      
   
--   **operator\=\(**  `bSrc` **\)** Assigne une valeur **BYTE** à un objet `_variant_t` .  
+-   **opérateur = (** `bSrc` **)** affecte un **octets** valeur un `_variant_t` objet.    
   
  **FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [\_variant\_t \(classe\)](../cpp/variant-t-class.md)
+## <a name="see-also"></a>Voir aussi  
+ [_variant_t, classe](../cpp/variant-t-class.md)

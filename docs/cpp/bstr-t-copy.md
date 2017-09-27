@@ -1,35 +1,52 @@
 ---
-title: "_bstr_t::copy | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::copy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BSTR (objet), copier"
-  - "Copy (méthode)"
+title: _bstr_t::Copy | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::copy
+dev_langs:
+- C++
+helpviewer_keywords:
+- Copy method
+- BSTR object, copy
 ms.assetid: 00ba7311-e82e-4a79-8106-5329fa2f869a
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _bstr_t::copy
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 25167305ae817ebd9d979c0145934996bbbfcddc
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="bstrtcopy"></a>_bstr_t::copy
 **Section spécifique à Microsoft**  
   
  Construit une copie du `BSTR` encapsulé.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -38,14 +55,14 @@ caps.handback.revision: 6
 ) const;  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `fCopy`  
- Si la valeur est **true**, **copy** retourne une copie du `BSTR` contenu, sinon **copy** retourne le BSTR réel.  
+ Si **true**, **copie** retourne une copie de la relation contenant-contenu `BSTR`, sinon **copie** retourne le BSTR réel.  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
  Retourne une copie nouvellement allouée de l'objet `BSTR` encapsulé.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t  
@@ -55,5 +72,5 @@ STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t
   
  **FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [\_bstr\_t, classe](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>Voir aussi  
+ [_bstr_t, classe](../cpp/bstr-t-class.md)

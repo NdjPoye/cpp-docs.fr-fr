@@ -1,52 +1,66 @@
 ---
-title: "auto, mot cl&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "auto"
-  - "auto_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto (mot clé)"
-  - "classe de stockage automatique, auto (mot clé)"
+title: "auto, mot clé | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- auto
+- auto_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- automatic storage class, auto keyword
+- auto keyword
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# auto, mot cl&#233;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 0413fd47b486cf1613b7c249b93e6a3507a5577c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Le mot clé `auto` est un spécificateur de déclaration.  Cependant, le code C\+\+ standard définit une signification originale et modifiée pour ce mot clé .  Avant [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)], le mot clé `auto` déclare une variable dans la classe de stockage *automatique* ; c'est\-à\-dire, une variable qui a une durée de vie locale.  À partir de [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)], le mot clé `auto` déclare une variable dont le type est déduit à partir de l'expression d'initialisation de la déclaration.  L'option du compilateur [\/Zc:auto &#91;\-&#93;](../build/reference/zc-auto-deduce-variable-type.md) contrôle la signification du mot clé `auto`.  
+---
+# <a name="auto-keyword"></a>auto, mot clé
+Le mot clé `auto` est un spécificateur de déclaration. Cependant, le code C++ standard définit une signification originale et modifiée pour ce mot clé . Avant Visual C++ 2010, le `auto` mot clé déclare une variable dans le *automatique* classe de stockage ; autrement dit, une variable qui a une durée de vie locale. Depuis Visual C++ 2010, le `auto` mot clé déclare une variable dont le type est déduit à partir de l’expression d’initialisation dans sa déclaration. Le [/Zc : auto &#91;-&#93;](../build/reference/zc-auto-deduce-variable-type.md) option du compilateur contrôle la signification de la `auto` (mot clé).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
 auto declarator ;  
 auto declarator initializer;  
 ```  
   
-## Notes  
- La définition du mot clé `auto` change dans le langage de programmation C\+\+, mais pas dans le langage de programmation C.  
+## <a name="remarks"></a>Remarques  
+ La définition du mot clé `auto` change dans le langage de programmation C++, mais pas dans le langage de programmation C.  
   
  Les rubriques suivantes décrivent le mot clé `auto` et l'option du compilateur correspondante :  
   
--   [auto](../cpp/auto-cpp.md) décrit la nouvelle définition du mot clé `auto`.  
+-   [Auto](../cpp/auto-cpp.md) décrit la nouvelle définition de la `auto` (mot clé).  
   
--   [\(NOTINBUILD\)auto Keyword \(Storage\-Class Specifier\)](http://msdn.microsoft.com/fr-fr/c7d0cecf-393d-4058-a6e6-b39e31d9edb0) décrit la définition d'origine du mot clé `auto`.  
   
--   [\/Zc:auto \(déduire le type de variable\)](../build/reference/zc-auto-deduce-variable-type.md) décrit l'option du compilateur qui indique au compilateur la définition du mot clé `auto` à utiliser.  
+-   [/ Zc : auto (déduire le Type de Variable)](../build/reference/zc-auto-deduce-variable-type.md) décrit l’option du compilateur qui indique au compilateur de la définition du `auto` mot clé à utiliser.  
   
-## Voir aussi  
- [\(NOTINBUILD\)Storage\-Class Specifiers](http://msdn.microsoft.com/fr-fr/10b3d22d-cb40-450b-994b-08cf9a211b6c)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Mots clés](../cpp/keywords-cpp.md)

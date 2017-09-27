@@ -1,31 +1,48 @@
 ---
-title: "Transferts de contr&#244;le | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "flux de contrôle, créer une branche"
-  - "flux de contrôle, transférer le contrôle"
+title: "Transferts de contrôle | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- control flow, branching
+- control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Transferts de contr&#244;le
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a604c95bb21ad0098a3d4563738971791fc94a07
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Vous pouvez utiliser l'instruction `goto` ou une étiquette **case** dans une instruction `switch` pour spécifier un programme qui crée une branche après un initialiseur.  Ce code est conforme sauf si la déclaration qui contient l'initialiseur figure dans un bloc se trouvant lui\-même dans le bloc dans lequel l'instruction de saut s'exécute.  
+---
+# <a name="transfers-of-control"></a>Transferts de contrôle
+Vous pouvez utiliser la `goto` instruction ou un **cas** étiquette dans un `switch` pour spécifier un programme branche après un initialiseur d’instruction. Ce code est conforme sauf si la déclaration qui contient l'initialiseur figure dans un bloc se trouvant lui-même dans le bloc dans lequel l'instruction de saut s'exécute.  
   
- L'exemple suivant montre une boucle qui déclare et initialise les objets `total`, `ch` et `i`.  Il comporte également une instruction `goto` erronée qui transfère le contrôle après un initialiseur.  
+ L'exemple suivant montre une boucle qui déclare et initialise les objets `total`, `ch` et `i`. Il comporte également une instruction `goto` erronée qui transfère le contrôle après un initialiseur.  
   
 ```  
 // transfers_of_control.cpp  
@@ -57,9 +74,8 @@ int main()
 }  
 ```  
   
- Dans l'exemple précédent, l'instruction `goto` tente de transférer le contrôle après l'initialisation de `i`.  Toutefois, si `i` était déclaré mais non initialisé, le transfert serait conforme.  
+ Dans l'exemple précédent, l'instruction `goto` tente de transférer le contrôle après l'initialisation de `i`. Toutefois, si `i` était déclaré mais non initialisé, le transfert serait conforme.  
   
- Les objets `total` et `ch`, déclarés dans le bloc qui sert de *statement* à l'instruction `while`, sont détruits lors de la sortie de ce bloc avec l'instruction `break`.  
+ Les objets `total` et `ch`, déclarés dans le bloc qui sert le *instruction* de la `while` instruction, sont détruits lors de la sortie de ce bloc à l’aide de la `break` instruction.  
   
-## Voir aussi  
- [\(NOTINBUILD\) Declaration of Automatic Objects](http://msdn.microsoft.com/fr-fr/81f941e9-c1b1-4d1c-a28d-70b6ee9765db)
+

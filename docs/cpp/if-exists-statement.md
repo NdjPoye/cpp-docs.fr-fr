@@ -1,65 +1,82 @@
 ---
-title: "__if_exists, instruction | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__if_exists_cpp"
-  - "__if_exists"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__if_exists (mot clé) (C++)"
-  - "identificateurs, tester l'existence"
-  - "symboles, tester l'existence"
+title: __if_exists, instruction | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __if_exists_cpp
+- __if_exists
+dev_langs:
+- C++
+helpviewer_keywords:
+- identifiers, testing for existence
+- symbols, testing for existence
+- __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# __if_exists, instruction
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 3d0eaa00abb1f833ef491fc27bfee01790776edb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-L'instruction `__if_exists` vérifie si l'identificateur spécifié existe.  Si l'identificateur existe, le bloc d'instructions spécifié est exécuté.  
+---
+# <a name="ifexists-statement"></a>__if_exists, instruction
+L'instruction `__if_exists` vérifie si l'identificateur spécifié existe. Si l'identificateur existe, le bloc d'instructions spécifié est exécuté.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-__if_exists ( identifier ) {   
+__if_exists ( identifier ) {   
 statements  
 };  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
 |`identifier`|Identificateur dont vous voulez tester l'existence.|  
 |`statements`|Une ou plusieurs instructions à exécuter si `identifier` existe.|  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
   
 > [!CAUTION]
 >  Pour obtenir les résultats les plus fiables, utilisez l'instruction `__if_exists` sous les contraintes suivantes.  
   
 -   Appliquez l'instruction `__if_exists` uniquement aux types simples, et non aux modèles.  
   
--   Appliquez l'instruction `__if_exists` aux identificateurs à l'intérieur ou à l'extérieur d'une classe.  N'appliquez pas l'instruction `__if_exists` aux variables locales.  
+-   Appliquez l'instruction `__if_exists` aux identificateurs à l'intérieur ou à l'extérieur d'une classe. N'appliquez pas l'instruction `__if_exists` aux variables locales.  
   
--   Utilisez l'instruction `__if_exists` uniquement dans le corps d'une fonction.  En dehors du corps d'une fonction, l'instruction `__if_exists` peut tester uniquement les types entièrement définis.  
+-   Utilisez l'instruction `__if_exists` uniquement dans le corps d'une fonction. En dehors du corps d'une fonction, l'instruction `__if_exists` peut tester uniquement les types entièrement définis.  
   
 -   Lorsque vous vérifiez la présence de fonctions surchargées, vous ne pouvez pas effectuer le test sur une forme spécifique de la surcharge.  
   
- Le complément de l'instruction `__if_exists` est l'instruction [\_\_if\_not\_exists](../cpp/if-not-exists-statement.md).  
+ Le complément à la `__if_exists` instruction est la [__if_not_exists](../cpp/if-not-exists-statement.md) instruction.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  Notez que cet exemple utilise des modèles, ce qui n'est pas recommandé.  
   
 ```  
@@ -119,7 +136,7 @@ int main() {
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 In X<T>::Dump()  
@@ -130,7 +147,7 @@ g_bFlag = 1
 C::f exists  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instructions de sélection](../cpp/selection-statements-cpp.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)   
- [\_\_if\_not\_exists, instruction](../cpp/if-not-exists-statement.md)
+ [Mots clés](../cpp/keywords-cpp.md)   
+ [__if_not_exists, instruction](../cpp/if-not-exists-statement.md)

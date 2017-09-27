@@ -1,41 +1,58 @@
 ---
-title: "noreturn | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "noreturn_cpp"
-  - "noreturn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec (mot clé) (C++), noreturn"
-  - "noreturn __declspec (mot clé)"
+title: noreturn | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- noreturn_cpp
+- noreturn
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++], noreturn
+- noreturn __declspec keyword
 ms.assetid: 9c6517e5-22d7-4051-9974-3d2200ae4d1d
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# noreturn
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 45de52c2c3c0b60a62bf19e38854c53e841ed500
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-## Section spécifique à Microsoft  
- Cet attribut `__declspec` indique au compilateur qu'une fonction ne retourne pas.  Par conséquent, le compilateur sait que le code qui suit un appel à une fonction **\_\_declspec\(noreturn\)** est inaccessible.  
+---
+# <a name="noreturn"></a>noreturn
+## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
+ Cet attribut `__declspec` indique au compilateur qu'une fonction ne retourne pas. Par conséquent, le compilateur sait que le code suivant d’un appel à une **__declspec (noreturn)** fonction n’est pas accessible.  
   
- Si le compilateur recherche une fonction avec un chemin d'accès au contrôle qui ne retourne pas de valeur, il génère un avertissement \(C4715\) ou le message d'erreur \(C2202\).  Si le chemin d'accès au contrôle ne peut pas être atteint en raison d'une fonction qui ne retourne jamais, vous pouvez utiliser **\_\_declspec\(noreturn\)** pour éviter cet avertissement ou cette erreur.  
+ Si le compilateur recherche une fonction avec un chemin d’accès au contrôle qui ne retourne pas de valeur, il génère un avertissement (C4715) ou le message d’erreur (C2202). Si le chemin d’accès de contrôle ne peut pas être atteint en raison d’une fonction qui ne retourne jamais, vous pouvez utiliser **__declspec (noreturn)** pour éviter cet avertissement ou une erreur.  
   
 > [!NOTE]
->  L'ajout de **\_\_declspec\(noreturn\)** à une fonction censée retourner peut entraîner un comportement non défini.  
+>  Ajout de **__declspec (noreturn)** à une fonction censée retourner peut entraîner un comportement non défini.  
   
-## Exemple  
- Dans l'exemple suivant, la clause **else** ne contient pas d'instruction return.  La déclaration `fatal` en tant que **\_\_declspec\(noreturn\)** évite une erreur ou un message d'avertissement.  
+## <a name="example"></a>Exemple  
+ Dans l’exemple suivant, la **else** clause ne contient pas une instruction return.  Déclaration `fatal` en tant que **__declspec (noreturn)** permet d’éviter une erreur ou un message d’avertissement.  
   
 ```  
 // noreturn2.cpp  
@@ -51,6 +68,6 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [\_\_declspec](../cpp/declspec.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [__declspec](../cpp/declspec.md)   
+ [Mots clés](../cpp/keywords-cpp.md)

@@ -1,36 +1,53 @@
 ---
-title: "_com_ptr_t::AddRef | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_ptr_t::AddRef"
-  - "_com_ptr_t.AddRef"
-  - "AddRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddRef (méthode) (C++), pointeur d'interface"
+title: _com_ptr_t::AddRef | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_ptr_t::AddRef
+- _com_ptr_t.AddRef
+- AddRef
+dev_langs:
+- C++
+helpviewer_keywords:
+- AddRef method [C++], interface pointers
 ms.assetid: c104dac3-aad3-40bb-a298-75c6cd0e63a2
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_ptr_t::AddRef
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d873d91192dc13f7b1277cbe8ef26b24421b6904
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="comptrtaddref"></a>_com_ptr_t::AddRef
 **Section spécifique à Microsoft**  
   
- Appelle la fonction membre `AddRef` de **IUnknown** sur le pointeur d'interface encapsulé.  
+ Appelle le `AddRef` fonction membre de **IUnknown** sur le pointeur d’interface encapsulé.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -38,10 +55,10 @@ void AddRef( );
   
 ```  
   
-## Notes  
- Appelle `IUnknown::AddRef` sur le pointeur d'interface encapsulé, ce qui génère une erreur `E_POINTER` si le pointeur est **NULL**.  
+## <a name="remarks"></a>Remarques  
+ Appels `IUnknown::AddRef` sur le pointeur d’interface encapsulé, le déclenchement d’un `E_POINTER` erreur si le pointeur est **NULL**.  
   
  **FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [\_com\_ptr\_t, classe](../cpp/com-ptr-t-class.md)
+## <a name="see-also"></a>Voir aussi  
+ [_com_ptr_t, classe](../cpp/com-ptr-t-class.md)

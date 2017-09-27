@@ -1,42 +1,58 @@
 ---
-title: "Fonctions globales&#160;COM du compilateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilateur cl.exe, prise en charge COM"
-  - "COM, prise en charge par le compilateur"
+title: Les fonctions globales COM du compilateur | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- cl.exe compiler, COM support
+- COM, compiler support
 ms.assetid: 74449d26-50a2-47c7-b175-7cf2cf83533e
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Fonctions globales&#160;COM du compilateur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 28755b770594209d22de0ae6ac35323ebf61e109
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="compiler-com-global-functions"></a>Fonctions globales COM du compilateur
 **Section spécifique à Microsoft**  
   
  Les routines suivantes sont disponibles :  
   
 |Fonction|Description|  
 |--------------|-----------------|  
-|[\_com\_raise\_error](../cpp/com-raise-error.md)|Lève [\_com\_error](../cpp/com-error-class.md) en réponse à un échec.|  
-|[\_set\_com\_error\_handler](../cpp/set-com-error-handler.md)|Remplace la fonction par défaut utilisée pour la gestion des erreurs COM.|  
-|[ConvertBSTRToString](../cpp/convertbstrtostring.md)|Convertit une valeur `BSTR` en **char \***.|  
-|[ConvertStringToBSTR](../cpp/convertstringtobstr.md)|Convertit une valeur **char \*** en un `BSTR`.|  
+|[_com_raise_error](../cpp/com-raise-error.md)|Lève un [_com_error](../cpp/com-error-class.md) en réponse à un échec.|  
+|[_set_com_error_handler](../cpp/set-com-error-handler.md)|Remplace la fonction par défaut utilisée pour la gestion des erreurs COM.|  
+|[ConvertBSTRToString](../cpp/convertbstrtostring.md)|Convertit un `BSTR` valeur un **char \* **.|  
+|[ConvertStringToBSTR](../cpp/convertstringtobstr.md)|Convertit un **char \* ** la valeur en un `BSTR`.|  
   
-## FIN de la section spécifique à Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [Classes du support COM du compilateur](../cpp/compiler-com-support-classes.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Classes de prise en charge COM du compilateur](../cpp/compiler-com-support-classes.md)   
  [Prise en charge COM du compilateur](../cpp/compiler-com-support.md)

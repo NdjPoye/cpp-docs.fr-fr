@@ -1,44 +1,61 @@
 ---
-title: "Consid&#233;rations suppl&#233;mentaires sur le d&#233;marrage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "initialiser avant principal"
-  - "démarrage du programme (C++)"
-  - "code de démarrage"
+title: "Considérations sur le démarrage supplémentaires | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- program startup [C++]
+- startup code
+- initializing before main
 ms.assetid: 0e942aa6-8342-447c-b068-8980ed7622bd
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Consid&#233;rations suppl&#233;mentaires sur le d&#233;marrage
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: cb437729d2c60f15bc798438ecbbba0637bf3d22
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-En langage C\+\+, la construction et la destruction d'objets peuvent impliquer l'exécution de code utilisateur.  Par conséquent, il est important de comprendre quelles initialisations ont lieu avant l'entrée dans **main** et quels destructeurs sont appelés après la sortie de **main**. \(Pour obtenir des informations détaillées sur la construction et la destruction d'objets, consultez [Constructeurs](../cpp/constructors-cpp.md) et [Destructeurs](../cpp/destructors-cpp.md).\)  
+---
+# <a name="additional-startup-considerations"></a>Considérations supplémentaires sur le démarrage
+En langage C++, la construction et la destruction d'objets peuvent impliquer l'exécution de code utilisateur. Par conséquent, il est important de comprendre quelles initialisations ont lieu avant l’entrée dans **principal** et les destructeurs sont appelés après la sortie de **principal**. (Pour plus d’informations sur la construction et la destruction d’objets, consultez [constructeurs](../cpp/constructors-cpp.md) et [destructeurs](../cpp/destructors-cpp.md).)  
   
- Les initialisations suivantes ont lieu avant l'entrée dans **main** :  
+ Les initialisations suivantes ont lieu avant l’entrée à **principal**:  
   
--   Mise à zéro par défaut des données statiques.  Toutes les données statiques sans initialiseurs explicites sont mises à zéro avant d'exécuter tout autre code, y compris l'initialisation du runtime.  Les données membres statiques doivent encore être définies explicitement.  
+-   Mise à zéro par défaut des données statiques. Toutes les données statiques sans initialiseurs explicites sont mises à zéro avant d'exécuter tout autre code, y compris l'initialisation du runtime. Les données membres statiques doivent encore être définies explicitement.  
   
--   Initialisation des objets statiques globaux dans une unité de traduction.  Cela peut se produire avant l'entrée dans **main** ou avant la première utilisation d'une fonction ou d'un objet quelconque dans l'unité de traduction de l'objet.  
+-   Initialisation des objets statiques globaux dans une unité de traduction. Cela peut se produire avant l’entrée dans **principal** ou avant la première utilisation d’une fonction ou un objet dans l’unité de traduction de l’objet.  
   
  **Section spécifique à Microsoft**  
   
- Dans Microsoft C\+\+, les objets statiques globaux sont initialisés avant l'entrée dans **main**.  
+ Dans Microsoft C++, les objets statiques globaux sont initialisés avant l’entrée dans **principal**.  
   
  **FIN de la section spécifique à Microsoft**  
   
  Des objets statiques globaux mutuellement interdépendants mais figurant dans des unités de traduction distinctes peuvent provoquer un comportement incorrect.  
   
-## Voir aussi  
- [Démarrage et terminaison](../cpp/startup-and-termination-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Démarrage et arrêt](../cpp/startup-and-termination-cpp.md)

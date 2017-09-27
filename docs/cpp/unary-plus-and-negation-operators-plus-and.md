@@ -1,36 +1,52 @@
 ---
-title: "Op&#233;rateurs plus et de n&#233;gation unaires&#160;: +&#160;et&#160;- | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "+"
-  - "-"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "- (opérateur)"
-  - "+ (opérateur)"
-  - "+ (opérateur), opérateurs unaires"
-  - "négation (opérateur)"
-  - "opérateurs unaires, plus"
+title: "Plus unaire et les opérateurs de négation : + et - | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- +
+- '-'
+dev_langs:
+- C++
+helpviewer_keywords:
+- unary operators, plus
+- '- operator'
+- negation operator
+- + operator, unary operators
+- + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Op&#233;rateurs plus et de n&#233;gation unaires&#160;: +&#160;et&#160;-
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9c664cd382685693da7ab12ba85891bc2ab0d7e8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-## Syntaxe  
+---
+# <a name="unary-plus-and-negation-operators--and--"></a>Opérateurs plus et de négation unaires : + et -
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -40,23 +56,21 @@ manager: "ghogen"
 ```  
   
 - cast-expression  
-  
 ```  
   
-## \+ \(opérateur\)  
- Le résultat de l'opérateur plus unaire \(**\+**\) est la valeur de son opérande.  L'opérande de l'opérateur plus unaire doit être d'un type arithmétique.  
+## <a name="-operator"></a>+ (opérateur)  
+ Le résultat de l’opérateur plus unaire (**+**) est la valeur de son opérande. L’opérande de l’opérateur plus unaire doit être d’un type arithmétique.  
   
- La promotion d'un intégral est exécutée sur des opérandes intégraux.  Le type résultant est le type vers lequel l'opérande est promu.  Ainsi, l'expression `+ch`, où `ch` est de type `char`, produit un résultat de type `int` ; la valeur est inchangée.  Pour plus d'informations sur la réalisation de la promotion, consultez [Promotions intégrales](../misc/integral-promotions.md).  
+ La promotion d'un intégral est exécutée sur des opérandes intégraux. Le type résultant est le type vers lequel l'opérande est promu. Ainsi, l'expression `+ch`, où `ch` est de type `char`, produit un résultat de type `int` ; la valeur est inchangée. Consultez [Conversions Standard](standard-conversions.md) pour plus d’informations sur la façon dont la promotion est effectuée.  
   
-## \- \(opérateur\)  
- L'opérateur de négation unaire \(**–**\) produit la valeur négative de son opérande.  L'opérande de l'opérateur de négation unaire doit être un type arithmétique.  
+## <a name="--operator"></a>- (opérateur)  
+ L’opérateur de négation unaire (**-**) produit la valeur négative de son opérande. L’opérande de l’opérateur de négation unaire doit être un type arithmétique.  
   
- La promotion intégrale est exécutée sur les opérandes intégraux et le type résultant est le type vers lequel l'opérande est promu.  Consultez [Promotions intégrales](../misc/integral-promotions.md) pour plus d'informations sur l'exécution de la promotion.  
+ La promotion intégrale est exécutée sur les opérandes intégraux et le type résultant est le type vers lequel l’opérande est promu. Consultez [Conversions Standard](standard-conversions.md) pour plus d’informations sur la façon dont la promotion est effectuée.  
   
-## Section spécifique à Microsoft  
- La négation unaire des quantités non signées est exécutée en soustrayant la valeur de l'opérande de 2^n, n correspondant au nombre de bits dans un objet du type non signé donné.  \(Microsoft C\+\+ s'exécute sur les processeurs qui utilisent l'arithmétique de type complément à deux.  Sur les autres processeurs, l'algorithme pour la négation peut être différent.\)  
+## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
+ La négation unaire des quantités non signées est exécutée en soustrayant la valeur de l'opérande de 2^n, n correspondant au nombre de bits dans un objet du type non signé donné. (Microsoft C++ s'exécute sur les processeurs qui utilisent l'arithmétique de type complément à deux. Sur les autres processeurs, l'algorithme pour la négation peut être différent.)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions avec opérateurs unaires](../cpp/expressions-with-unary-operators.md)   
- [Opérateurs C\+\+](../misc/cpp-operators.md)   
- [Opérateurs, priorité et associativité C\+\+](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+ [Opérateurs intégrés, priorité et associativité C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

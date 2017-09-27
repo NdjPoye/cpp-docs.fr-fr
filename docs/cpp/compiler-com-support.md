@@ -1,49 +1,66 @@
 ---
-title: "Prise en charge COM du compilateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilateur cl.exe, prise en charge COM"
-  - "COM, prise en charge par le compilateur"
+title: Support COM du compilateur | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- cl.exe compiler, COM support
+- COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Prise en charge COM du compilateur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d81c54f7af604024da852999ca78fa5ee55079ef
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-## Section spécifique à Microsoft  
- Le compilateur Visual C\+\+ peut directement lire les bibliothèques de types COM \(Component Object Model\) et traduire le contenu en code source C\+\+ qui peut être inclus dans la compilation.  Les extensions de langage sont disponibles pour simplifier la programmation COM côté client.  
+---
+# <a name="compiler-com-support"></a>Prise en charge COM du compilateur
+## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
+ Le compilateur Visual C++ peut directement lire les bibliothèques de types COM (Component Object Model) et traduire le contenu en code source C++ qui peut être inclus dans la compilation. Les extensions de langage sont disponibles pour simplifier la programmation COM côté client.  
   
- À l'aide de la [directive de préprocesseur \#import](../preprocessor/hash-import-directive-cpp.md), le compilateur peut lire une bibliothèque de types et la convertir en un fichier d'en\-tête C\+\+ qui décrit les interfaces COM en tant que classes.  Un ensemble d'attributs `#import` est disponible pour permettre le contrôle utilisateur du contenu pour les fichiers d'en\-tête de la bibliothèque de types obtenus.  
+ À l’aide de la [directive de préprocesseur #import](../preprocessor/hash-import-directive-cpp.md), le compilateur peut lire une bibliothèque de types et les convertir dans un fichier d’en-tête C++ qui décrit le modèle COM des interfaces en tant que classes. Un ensemble d'attributs `#import` est disponible pour permettre le contrôle utilisateur du contenu pour les fichiers d'en-tête de la bibliothèque de types obtenus.  
   
- Vous pouvez utiliser l'attribut étendu [\_\_declspec](../cpp/declspec.md) [uuid](../cpp/uuid-cpp.md) pour assigner un identificateur global unique \(GUID\) à un objet COM.  Le mot clé [\_\_uuidof](../cpp/uuidof-operator.md) peut être utilisé pour récupérer un GUID associé à un objet COM.  Un autre attribut `__declspec`, [propriété](../cpp/property-cpp.md), peut être utilisé pour spécifier les méthodes **get** et **set** pour une donnée membre d'un objet COM.  
+ Vous pouvez utiliser la [__declspec](../cpp/declspec.md) attribut étendu [uuid](../cpp/uuid-cpp.md) pour affecter un identificateur global unique (GUID) à un objet COM. Le mot clé [__uuidof](../cpp/uuidof-operator.md) peut être utilisé pour extraire le GUID associé à un objet COM. Un autre `__declspec` attribut, [propriété](../cpp/property-cpp.md), peut être utilisé pour spécifier le **obtenir** et **définir** méthodes pour un membre de données d’un objet COM.  
   
- Un ensemble de fonctions et de classes globales de prise en charge COM est fourni pour prendre en charge les types **VARIANT** et `BSTR`, pour implémenter les pointeurs intelligents et pour encapsuler l'objet d'erreur levé par `_com_raise_error` :  
+ Un ensemble de classes et fonctions globales de prise en charge COM est fourni pour prendre en charge la **VARIANT** et `BSTR` types implémentent des pointeurs intelligents et encapsuler l’objet d’erreur levé par `_com_raise_error`:  
   
 -   [Fonctions globales COM du compilateur](../cpp/compiler-com-global-functions.md)  
   
--   [\_bstr\_t](../cpp/bstr-t-class.md)  
+-   [_bstr_t](../cpp/bstr-t-class.md)  
   
--   [\_com\_error](../cpp/com-error-class.md)  
+-   [_com_error](../cpp/com-error-class.md)  
   
--   [\_com\_ptr\_t](../cpp/com-ptr-t-class.md)  
+-   [_com_ptr_t](../cpp/com-ptr-t-class.md)  
   
--   [\_variant\_t](../cpp/variant-t-class.md)  
+-   [_variant_t](../cpp/variant-t-class.md)  
   
-## FIN de la section spécifique à Microsoft  
+**FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [Classes du support COM du compilateur](../cpp/compiler-com-support-classes.md)   
- [Fonctions globales COM du compilateur](../cpp/compiler-com-global-functions.md)
+## <a name="see-also"></a>Voir aussi  
+ [Classes de prise en charge COM du compilateur](../cpp/compiler-com-support-classes.md)   
+ [Fonctions globales COM du compilateur](../cpp/compiler-com-global-functions.md)

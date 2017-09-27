@@ -1,41 +1,57 @@
 ---
-title: "Substitutions explicites (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes dérivées, fonctions virtuelles"
-  - "substitution explicite de fonction virtuelle"
-  - "substitutions explicites de fonctions virtuelles"
-  - "substituer, fonctions"
-  - "fonctions virtuelles, substitutions explicites"
+title: Substitutions explicites (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- virtual functions, explicit overrides
+- overriding, functions
+- derived classes, virtual functions
+- explicit virtual function overrides
+- explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Substitutions explicites (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9ee79034ca7c74094753094cce29fc4a11b044ff
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="explicit-overrides-c"></a>Substitutions explicites (C++)
 **Section spécifique à Microsoft**  
   
- Si la même fonction virtuelle est déclarée dans plusieurs [interfaces](../cpp/interface.md) et si une classe est dérivée de ces interfaces, vous pouvez substituer explicitement chaque fonction virtuelle.  
+ Si la même fonction virtuelle est déclarée dans deux ou plusieurs [interfaces](../cpp/interface.md) et si une classe est dérivée de ces interfaces, vous pouvez substituer explicitement chaque fonction virtuelle.  
   
- Pour plus d'informations sur les substitutions explicites dans le code managé à l'aide de la nouvelle syntaxe managée, consultez [Substitutions explicites](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Pour plus d’informations sur explicite substitue dans du code managé à l’aide de la nouvelle syntaxe managée, consultez [substitutions explicites](../windows/explicit-overrides-cpp-component-extensions.md).  
   
  **FIN de la section spécifique à Microsoft**  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple de code suivant montre comment utiliser les substitutions explicites :  
   
 ```  
@@ -113,17 +129,20 @@ int main() {
   
    // Cast to a CMyClass pointer so that the destructor gets called  
       CMyClass *p = dynamic_cast<CMyClass *>(pIMyInt1);  
-      delete p;  
+      delete p;  
 }  
 ```  
   
-  **In CMyClass::IMyInt1::mf1\(\)**  
-**In CMyClass::IMyInt1::mf1\(int\)**  
-**In CMyClass::IMyInt1::mf2\(\)**  
-**In CMyClass::IMyInt1::mf2\(int\)**  
-**In CMyClass::IMyInt2::mf1\(\)**  
-**In CMyClass::IMyInt2::mf1\(int\)**  
-**In CMyClass::IMyInt2::mf2\(\)**  
-**In CMyClass::IMyInt2::mf2\(int\)**   
-## Voir aussi  
+```Output  
+In CMyClass::IMyInt1::mf1()  
+In CMyClass::IMyInt1::mf1(int)  
+In CMyClass::IMyInt1::mf2()  
+In CMyClass::IMyInt1::mf2(int)  
+In CMyClass::IMyInt2::mf1()  
+In CMyClass::IMyInt2::mf1(int)  
+In CMyClass::IMyInt2::mf2()  
+In CMyClass::IMyInt2::mf2(int)  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [Héritage](../cpp/inheritance-cpp.md)

@@ -1,57 +1,72 @@
 ---
-title: "selectany | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "selectany_cpp"
-  - "selectany"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec (mot clé) (C++), selectany"
-  - "selectany __declspec (mot clé)"
+title: selectany | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- selectany_cpp
+- selectany
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++], selectany
+- selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# selectany
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9c17221e2d0875505d9aa3f1132ea4a4b6d4c489
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="selectany"></a>selectany
 **Section spécifique à Microsoft**  
   
- Indique au compilateur que l'élément de données global déclaré \(variable ou objet\) est un COMDAT pick\-any \(une fonction packagée\).  
+ Indique au compilateur que l'élément de données global déclaré (variable ou objet) est un COMDAT pick-any (une fonction packagée).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 __declspec( selectany ) declarator  
 ```  
   
-## Notes  
- Au moment d'effectuer le lien, si plusieurs définitions d'un COMDAT s'affichent, l'éditeur de liens en choisit un et ignore le reste.  Si l'option de l'éditeur de liens [\/OPT:REF](../build/reference/opt-optimizations.md) \(optimisations\) est sélectionnée, l'élimination COMDAT se produit pour supprimer tous les éléments de données non référencés dans la sortie de l'Éditeur de liens.  
+## <a name="remarks"></a>Remarques  
+ Au moment d'effectuer le lien, si plusieurs définitions d'un COMDAT s'affichent, l'éditeur de liens en choisit un et ignore le reste. Si l’option de l’éditeur de liens [/OPT : REF](../build/reference/opt-optimizations.md) (optimisations) est sélectionnée, puis l’élimination COMDAT se produit pour supprimer tous les éléments de données non référencées dans la sortie de l’éditeur de liens.  
   
- Les constructeurs et l'assignation par fonction globale ou méthodes statiques dans la déclaration ne créent pas de référence et n'empêchent pas la suppression \/OPT:REF.  Les effets secondaires d'un tel code ne doivent pas créer de dépendances quand il n'existe aucune autre référence à des données.  
+ Les constructeurs et l'assignation par fonction globale ou méthodes statiques dans la déclaration ne créent pas de référence et n'empêchent pas la suppression /OPT:REF. Les effets secondaires d'un tel code ne doivent pas créer de dépendances quand il n'existe aucune autre référence à des données.  
   
  Pour les objets dynamiquement initialisés et globaux, `selectany` ignorera le code d'initialisation d'un objet non référencé, également.  
   
- Un élément de données global ne peut généralement être initialisé qu'une seule fois dans un projet EXE ou DLL.  `selectany` peut être utilisé en initialisant les données globales définies par les en\-têtes, lorsque le même en\-tête apparaît dans plusieurs fichiers source.  `selectany` est disponible dans les compilateurs C et C\+\+.  
+ Un élément de données global ne peut généralement être initialisé qu'une seule fois dans un projet EXE ou DLL. `selectany` peut être utilisé en initialisant les données globales définies par les en-têtes, lorsque le même en-tête apparaît dans plusieurs fichiers source. `selectany` est disponible dans les compilateurs C et C++.  
   
 > [!NOTE]
 >  `selectany` peut être appliqué à l'initialisation actuelle des éléments de données globaux qui sont visibles.  
   
-## Exemple  
- Ce code indique comment utiliser l'attribut `selectany` :  
+## <a name="example"></a>Exemple  
+ Ce code indique comment utiliser l'attribut `selectany` :  
   
 ```  
 //Correct - x1 is initialized and externally visible   
@@ -83,8 +98,8 @@ int i;
 __declspec(selectany) X x(1);  
 ```  
   
-## Exemple  
- Ce code indique comment utiliser l'attribut `selectany` pour garantir le repli des données COMDAT lorsque vous utilisez également l'option de l'éditeur de liens pour [\/OPT:ICF](../build/reference/opt-optimizations.md).  Notez que les données doivent être marquées avec `selectany` et être placées dans une section **const** \(lecture seule\).  Vous devez spécifier explicitement la section en lecture seule.  
+## <a name="example"></a>Exemple  
+ Ce code montre comment utiliser le `selectany` attribut pour garantir le pliage des données COMDAT lorsque vous utilisez également le [/OPT : ICF](../build/reference/opt-optimizations.md) option de l’éditeur de liens. Notez que les données doivent être marquées avec `selectany` et placée dans un **const** section (en lecture seule). Vous devez spécifier explicitement la section en lecture seule.  
   
 ```  
 // selectany2.cpp  
@@ -99,6 +114,6 @@ int main() {
   
  **FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [\_\_declspec](../cpp/declspec.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [__declspec](../cpp/declspec.md)   
+ [Mots clés](../cpp/keywords-cpp.md)

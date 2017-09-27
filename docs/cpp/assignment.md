@@ -1,36 +1,52 @@
 ---
-title: "Assignation | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opérateurs d'assignation, surchargés"
-  - "opérateurs (C++), d'assignation"
+title: Affectation | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- operators [C++], assignment
+- assignment operators, overloaded
 ms.assetid: d87e4f89-f8f5-42c1-9d3c-184bca9d0e15
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Assignation
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c80a11e38225a8ed4fa424bbd3009e5701848cbd
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-L'opérateur d'assignation \(**\=**\) est, à proprement parler, un opérateur binaire.  Sa déclaration est identique à celle de tout autre opérateur binaire, avec les exceptions suivantes :  
+---
+# <a name="assignment"></a>Attribution
+L’opérateur d’assignation (**=**) est en principe, un opérateur binaire. Sa déclaration est identique à celle de tout autre opérateur binaire, avec les exceptions suivantes :  
   
--   Il doit s'agir d'une fonction membre non statique.  Aucun `operator=` ne peut être déclaré comme fonction non\-membre.  
+-   Il doit s'agir d'une fonction membre non statique. Aucun `operator=` ne peut être déclaré comme fonction non-membre.  
   
 -   Il n'est pas hérité par les classes dérivées.  
   
--   Une fonction `operator=` par défaut peut être générée par le compilateur pour les types de classe si aucune n'existe. \(Pour plus d'informations sur les fonctions `operator=` par défaut, consultez [Assignation et initialisation membre à membre](http://msdn.microsoft.com/fr-fr/94048213-8b49-4416-8069-b1b7a6f271f9).\)  
+-   Une fonction `operator=` par défaut peut être générée par le compilateur pour les types de classe si aucune n'existe. (Pour plus d’informations sur la valeur par défaut `operator=` fonctions, consultez [assignation et initialisation](http://msdn.microsoft.com/en-us/94048213-8b49-4416-8069-b1b7a6f271f9).)  
   
  L'exemple suivant montre comment déclarer un opérateur d'assignation :  
   
@@ -57,11 +73,11 @@ int main()
 }  
 ```  
   
- Notez que l'argument fourni est du côté droit de l'expression.  L'opérateur retourne l'objet pour conserver le comportement de l'opérateur d'assignation, qui retourne la valeur du côté gauche une fois l'assignation terminée.  Cela permet d'écrire des instructions telles que :  
+ Notez que l'argument fourni est du côté droit de l'expression. L'opérateur retourne l'objet pour conserver le comportement de l'opérateur d'assignation, qui retourne la valeur du côté gauche une fois l'assignation terminée. Cela permet d'écrire des instructions telles que :  
   
 ```  
 pt1 = pt2 = pt3;  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Surcharge d'opérateur](../cpp/operator-overloading.md)

@@ -1,33 +1,49 @@
 ---
-title: "Expressions constantes C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "expressions constantes"
-  - "expressions constantes, syntaxe"
-  - "expressions (C++), constante"
+title: Expressions constantes C++ | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- constant expressions, syntax
+- constant expressions
+- expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Expressions constantes C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 8333b761aa51de44c8225e5ace97885eaaed56da
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Une valeur de *constante* est une valeur qui ne change pas.  C\+\+ fournit deux mots clés qui vous permettent d'exprimer l'intention qu'un objet n'est pas destiné à être modifié, et d'appliquer cette intention.  
+---
+# <a name="c-constant-expressions"></a>Expressions constantes C++
+A *constante* valeur est une tâche qui ne change pas. C++ fournit deux mots clés qui vous permettent d'exprimer l'intention qu'un objet n'est pas destiné à être modifié, et d'appliquer cette intention.  
   
- C\+\+ requiert des expressions constantes \(expressions qui ont pour valeur une constante\) pour les déclarations des éléments suivants :  
+ C++ requiert des expressions constantes (expressions qui ont pour valeur une constante) pour les déclarations des éléments suivants :  
   
 -   Limites d'index de tableau  
   
@@ -47,7 +63,7 @@ Une valeur de *constante* est une valeur qui ne change pas.  C\+\+ fournit deux 
   
 -   Expressions `sizeof`  
   
- Les constantes non intégrales doivent être converties \(explicitement ou implicitement\) en types intégraux pour être autorisées dans une expression constante.  Par conséquent, le code suivant est conforme :  
+ Les constantes non intégrales doivent être converties (explicitement ou implicitement) en types intégraux pour être autorisées dans une expression constante. Par conséquent, le code suivant est conforme :  
   
 ```  
 const double Size = 11.0;  
@@ -58,5 +74,5 @@ char chArray[(int)Size];
   
  L'opérateur virgule et les opérateurs d'assignation de virgule ne peuvent pas être utilisés dans les expressions constantes.  
   
-## Voir aussi  
- [Types d'expressions](../cpp/types-of-expressions.md)
+## <a name="see-also"></a>Voir aussi  
+ [Types d’expressions](../cpp/types-of-expressions.md)

@@ -1,44 +1,61 @@
 ---
-title: "Pointeur this | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "this"
-  - "this_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fonctions membres non statiques"
-  - "pointeurs, vers des instances de classe"
-  - "ce pointeur"
+title: Ce pointeur | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- this
+- this_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- nonstatic member functions
+- pointers, to class instance
+- this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Pointeur this
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 86ccf50a089b1497bdc166ee9367215dc59b3ca1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Le pointeur **this** est accessible uniquement dans les fonctions membres non statiques de type **classe**, `struct` ou **union**.  Il pointe vers l'objet pour lequel la fonction membre est appelée.  Les fonctions membres statiques n'ont pas de pointeur **this**.  
+---
+# <a name="this-pointer"></a>Pointeur this
+Le **cela** pointeur est accessible uniquement dans les fonctions membres non statiques d’un **classe**, `struct`, ou **union** type. Il pointe vers l'objet pour lequel la fonction membre est appelée. Les fonctions membres statiques n’ont pas un **cela** pointeur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-        this   
+      this   
 this->member-identifier  
 ```  
   
-## Notes  
- Le pointeur **this** d'un objet ne fait pas partie de l'objet lui\-même ; il n'est pas répercuté dans le résultat d'une instruction `sizeof` sur l'objet.  En revanche, lorsqu'une fonction membre non statique est appelée pour un objet, l'adresse de l'objet est passée par le compilateur comme argument masqué à la fonction.  Par exemple, l'appel de fonction suivant :  
+## <a name="remarks"></a>Remarques  
+ D’un objet **cela** pointeur ne fait pas partie de l’objet lui-même ; il n’est pas reflétée dans le résultat d’une `sizeof` instruction sur l’objet. En revanche, lorsqu’une fonction membre non statique est appelée pour un objet, l’adresse de l’objet est passée par le compilateur comme argument masqué à la fonction. Par exemple, l'appel de fonction suivant :  
   
 ```  
 myDate.setMonth( 3 );  
@@ -50,7 +67,7 @@ myDate.setMonth( 3 );
 setMonth( &myDate, 3 );  
 ```  
   
- L'adresse de l'objet est disponible à partir de la fonction membre en tant que pointeur **this**.  La plupart des utilisations de **this** sont implicites.  Il est permis, bien qu'inutile, d'utiliser explicitement **this** lorsqu'il est fait référence aux membres de la classe.  Exemple :  
+ L’adresse de l’objet est accessible à partir de la fonction membre en tant que le **cela** pointeur. La plupart des utilisations de **cela** sont implicites. Il est permis, bien qu’inutile d’utiliser explicitement **cela** lorsque vous faites référence aux membres de la classe. Exemple :  
   
 ```  
 void Date::setMonth( int mn )  
@@ -67,7 +84,7 @@ void Date::setMonth( int mn )
 return *this;  
 ```  
   
- Le pointeur **this** est également utilisé pour la protection contre les autoréférences :  
+ Le **cela** pointeur est également utilisé pour se protéger contre les autoréférences :  
   
 ```  
 if (&Object != this) {  
@@ -75,11 +92,11 @@ if (&Object != this) {
 ```  
   
 > [!NOTE]
->  Le pointeur **this** étant non modifiable, les assignations à **this** ne sont pas autorisées.  Les implémentations précédentes de C\+\+ autorisaient les assignations à **this**.  
+>  Étant donné que la **cela** pointeur non modifiable, assignations en vue de **cela** ne sont pas autorisés. Les implémentations précédentes de C++ autorisaient les assignations à **cela**.  
   
- Parfois, le pointeur **this** est utilisé directement \(par exemple, pour manipuler les structures de données auto\-référentielles, où l'adresse de l'objet actif est requise\).  
+ Parfois, le **cela** pointeur est utilisé directement, par exemple, pour manipuler les données elles-mêmes les structures, où l’adresse de l’objet actuel est requis.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // this_pointer.cpp  
@@ -144,10 +161,13 @@ int main()
 }  
 ```  
   
-  **ma mémoire tampon**  
-**votre mémoire tampon**   
-## Type du pointeur this  
- Le type du pointeur **this** peut être modifié dans la déclaration d'une fonction par les mots clés **const** et `volatile`.  Pour déclarer une fonction comme ayant les attributs d'un ou plusieurs de ces mots clés, ajoutez le ou les mots clés après la liste d'arguments de la fonction.  
+```Output  
+my buffer  
+your buffer  
+```  
+  
+## <a name="type-of-the-this-pointer"></a>Type du pointeur this  
+ Le **cela** type de pointeur peut être modifié dans la déclaration de fonction par le **const** et `volatile` mots clés. Pour déclarer une fonction comme ayant les attributs d’un ou plusieurs de ces mots clés, ajoutez le ou les mots clés après la liste d’arguments de la fonction.  
   
  Considérez cet exemple :  
   
@@ -162,7 +182,7 @@ int main()
 }  
 ```  
   
- Le code précédent déclare une fonction membre, `X`, dans laquelle le pointeur **this** est traité comme un pointeur **const** désignant un objet **const**.  Des combinaisons des options *cv\-mod\-list* peuvent être utilisées, mais elles modifient toujours l'objet désigné par **this** et non pas le pointeur **this** lui\-même.  Par conséquent, la déclaration ci\-dessous déclare la fonction `X` ; le pointeur **this** est un pointeur **const** désignant un objet **const** :  
+ Le code précédent déclare une fonction membre, `X`, dans lequel le **cela** pointeur est traité comme un **const** pointeur vers un **const** objet. Combinaisons de *cv-mod-list* options peuvent être utilisées, mais elles modifient toujours l’objet vers lequel pointé **cela**, et non le **cela** pointeur lui-même. Par conséquent, la déclaration suivante déclare la fonction `X`; le **cela** pointeur est un **const** pointeur vers un **const** objet :  
   
 ```  
 // type_of_this_pointer2.cpp  
@@ -175,29 +195,28 @@ int main()
 }  
 ```  
   
- Le type du pointeur **this** dans une fonction membre est décrit par la syntaxe suivante, où *cv\-qualifier\-list* est déterminé à partir du déclarateur de fonction membre et peut être **const** ou **volatile** \(ou les deux\), et où *class\-type* est le nom de la classe :  
+ Le type de **cela** un membre de la fonction est décrite par la syntaxe suivante, où *cv-qualifier-list* est déterminée par le déclarateur de fonctions membres et peut être **const**ou **volatile** (ou les deux), et *de type classe* est le nom de la classe :  
   
- *\[cv\-qualifier\-list\] class\-type*  **\* const this**  
+ *type de classe [cv-qualifier-list]* ** \* const cela  **  
   
- En d'autres termes, **this** est toujours un pointeur const ; il ne peut pas être réassigné.  Les qualificateurs **const** ou `volatile` utilisés dans la déclaration de fonction membre s'appliquent à l'instance de classe désignée par **this** dans la portée de cette fonction.  
+ En d’autres termes, **cela** est toujours un pointeur const ; il ne peut pas être réassigné.  Le **const** ou `volatile` qualificateurs utilisés dans la déclaration de fonction membre s’appliquent à l’instance de classe vers laquelle pointé **cela** dans l’étendue de cette fonction.  
   
- Le tableau ci\-dessous fournit davantage d'explications sur le fonctionnement de ces modificateurs.  
+ Le tableau ci-dessous fournit davantage d'explications sur le fonctionnement de ces modificateurs.  
   
-### Sémantique des modificateurs du pointeur this  
+### <a name="semantics-of-this-modifiers"></a>Sémantique des modificateurs du pointeur this  
   
 |Modificateur|Signification|  
-|------------------|-------------------|  
-|**const**|Impossible de modifier les données membres ; impossible d'appeler les fonctions membres qui ne sont pas **const**.|  
+|--------------|-------------|  
+|**const**|Impossible de modifier les données membres ; Impossible d’appeler des fonctions membres qui ne sont pas **const**.|  
 |`volatile`|Les données membres sont chargées à partir de la mémoire chaque fois que vous y accédez ; certaines optimisations sont désactivées.|  
   
- Il est incorrect de passer un objet **const** à une fonction membre qui n'est pas **const**.  De même, il est incorrect de passer un objet `volatile` à une fonction membre qui n'est pas `volatile`.  
+ Il s’agit d’une erreur pour passer un **const** objet à une fonction membre qui n’est pas **const**. De même, il est incorrect de passer un objet `volatile` à une fonction membre qui n'est pas `volatile`.  
   
- Les fonctions membres déclarées comme **const** ne peuvent pas modifier les données membres \(dans ces fonctions, le pointeur **this** désigne un objet **const**\).  
+ Fonctions membres déclarées comme **const** ne peut pas modifier les données membres, dans ces fonctions, les **cela** pointeur est un pointeur vers un **const** objet.  
   
 > [!NOTE]
->  Il est impossible de déclarer des constructeurs ou des destructeurs comme **const** ou `volatile`.  Ils peuvent, toutefois, être appelés sur des objets **const** ou `volatile`.  
+>  Constructeurs et destructeurs ne peuvent pas être déclarés en tant que **const** ou `volatile`. Ils peuvent, toutefois, être appelée sur **const** ou `volatile` objets.  
   
-## Voir aussi  
- [Mots clés C\+\+](../cpp/keywords-cpp.md)   
- [Type de pointeur this](../misc/type-of-this-pointer.md)   
- [Argument correspondant et pointeur this](../misc/argument-matching-and-the-this-pointer.md)
+## <a name="see-also"></a>Voir aussi  
+ [Mots clés](../cpp/keywords-cpp.md)   
+ 

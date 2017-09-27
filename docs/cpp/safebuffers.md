@@ -1,60 +1,77 @@
 ---
-title: "safebuffers | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "safebuffers"
-  - "safebuffers_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec (mot clé) (C++), safebuffers"
-  - "safebuffers __declspec (mot clé)"
+title: safebuffers | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- safebuffers
+- safebuffers_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword (C++), safebuffers
+- safebuffers __declspec keyword
 ms.assetid: 0b0dce14-4523-44d2-8070-5dd0fdabc618
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# safebuffers
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ceb7d5796002bd54055b74d56a136706890494c4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="safebuffers"></a>safebuffers
 **Section spécifique à Microsoft**  
   
  Indique au compilateur de ne pas insérer de vérifications de sécurité de dépassement de mémoire tampon pour une fonction.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 __declspec( safebuffers )  
 ```  
   
-## Notes  
- L'option **\/GS** du compilateur oblige ce dernier à effectuer des tests pour détecter d'éventuels dépassements de mémoire tampon en insérant des vérifications de sécurité sur la pile.  Les types de structures de données pouvant faire l'objet de vérifications de sécurité sont décrites dans [\/GS \(vérification de la sécurité des mémoires tampons\)](../build/reference/gs-buffer-security-check.md).  Pour plus d'informations sur la détection des dépassements de mémoire tampon, consultez [Contrôles approfondis de la sécurité du compilateur](http://go.microsoft.com/fwlink/?linkid=7260) sur le site Web MSDN.  
+## <a name="remarks"></a>Remarques  
+ Le **/GS** option du compilateur, le compilateur tester les dépassements de mémoire tampon en insérant des vérifications de sécurité sur la pile. Les types de structures de données qui sont éligibles pour les vérifications de sécurité sont décrits dans [/GS (vérification de la sécurité de la mémoire tampon)](../build/reference/gs-buffer-security-check.md). Pour plus d’informations sur la détection de dépassement de mémoire tampon, consultez [du compilateur sécurité Contrôles approfondis de](http://go.microsoft.com/fwlink/?linkid=7260) sur le site Web MSDN.  
   
- Une révision manuelle du code par un expert ou une analyse externe peut déterminer qu'une fonction est protégée contre un dépassement de mémoire tampon.  Dans ce cas, vous pouvez supprimer les vérifications de sécurité pour une fonction en appliquant le mot clé \_\_`declspec(safebuffers)` à la déclaration de fonction.  
+ Une revue manuelle du code par un expert ou une analyse externe peut déterminer qu’une fonction est protégée contre un dépassement de mémoire tampon. Dans ce cas, vous pouvez supprimer des contrôles de sécurité pour une fonction en appliquant la `__declspec(safebuffers)` mot clé à la déclaration de fonction.  
   
 > [!CAUTION]
->  Les vérifications de sécurité de la mémoire tampon assurent une protection importante et ont un impact négligeable sur les performances.  Par conséquent, nous vous recommandons de ne pas les supprimer, sauf dans la rare éventualité où les performances d'une fonction est un problème critique et où la fonction est réputée pour être sécurisée.  
+>  Les vérifications de sécurité de la mémoire tampon assurent une protection importante et ont un impact négligeable sur les performances. Par conséquent, nous vous recommandons de ne pas les supprimer, sauf dans la rare éventualité où les performances d'une fonction est un problème critique et où la fonction est réputée pour être sécurisée.  
   
-## Fonctions inline  
- Une *fonction principale* peut utiliser un mot clé d'[incorporation](../misc/inline-inline-forceinline.md) pour insérer une copie d'une *fonction secondaire*.  Si le mot clé \_\_`declspec(safebuffers)` est appliqué à une fonction, la détection des dépassements de mémoire tampon est supprimée pour cette fonction.  Toutefois, l'incorporation affecte le mot clé \_\_`declspec(safebuffers)` des manières suivantes.  
+## <a name="inline-functions"></a>Fonctions inline  
+ A *fonction principale* peut utiliser un [incorporation (inlining)](inline-functions-cpp.md) mot clé permettant d’insérer une copie d’un *fonction secondaire*. Si le `__declspec(safebuffers)` (mot clé) est appliqué à une fonction, la détection de dépassement de mémoire tampon est supprimée pour cette fonction. Toutefois, incorporation affecte le `__declspec(safebuffers)` mot clé comme suit.  
   
- Supposons que l'option **\/GS** du compilateur est spécifiée pour les deux fonctions, mais que la fonction principale spécifie le mot clé \_\_`declspec(safebuffers)` .  Les structures de données présentes dans la fonction secondaire lui permettent de faire l'objet de vérifications de sécurité, et la fonction ne supprime pas ces vérifications.  Dans ce cas :  
+ Supposons que la **/GS** option du compilateur est spécifiée pour les deux fonctions, mais la fonction principale spécifie les `__declspec(safebuffers)` (mot clé). Les structures de données présentes dans la fonction secondaire lui permettent de faire l'objet de vérifications de sécurité, et la fonction ne supprime pas ces vérifications. Dans ce cas :  
   
--   Spécifiez le mot clé [\_\_forceinline](../misc/inline-inline-forceinline.md) sur la fonction secondaire pour forcer le compilateur à incorporer \(inline\) cette fonction indépendamment des optimisations du compilateur.  
+-   Spécifiez le [__forceinline](inline-functions-cpp.md) mot clé dans la fonction secondaire pour forcer le compilateur à incorporer cette fonction indépendamment des optimisations du compilateur.  
   
--   Comme la fonction secondaire peut faire l'objet de vérifications de sécurité, ces dernières sont également appliquées à la fonction principale bien qu'elle spécifie le mot clé \_\_`declspec(safebuffers)` .  
+-   Étant donné que la fonction secondaire est éligible à des vérifications de sécurité, les vérifications de sécurité sont également appliquées à la fonction principale bien qu’elle spécifie le `__declspec(safebuffers)` (mot clé).  
   
-## Exemple  
- Le code suivant montre comment utiliser le mot clé \_\_`declspec(safebuffers)` .  
+## <a name="example"></a>Exemple  
+ Le code suivant montre comment utiliser le `__declspec(safebuffers)` (mot clé).  
   
 ```  
 // compile with: /c /GS  
@@ -81,8 +98,8 @@ int wmain() {
   
  **FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [\_\_declspec](../cpp/declspec.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)   
- [inline, \_\_inline, \_\_forceinline](../misc/inline-inline-forceinline.md)   
- [strict\_gs\_check](../preprocessor/strict-gs-check.md)
+## <a name="see-also"></a>Voir aussi  
+ [__declspec](../cpp/declspec.md)   
+ [Mots clés](../cpp/keywords-cpp.md)   
+ [inline, __inline, \__forceinline](inline-functions-cpp.md)   
+ [strict_gs_check](../preprocessor/strict-gs-check.md)

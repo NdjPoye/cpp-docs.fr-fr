@@ -1,31 +1,47 @@
 ---
-title: "Instruction return dans la terminaison du programme (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "types de données (C++), types de retours de fonction"
-  - "types de retours de fonction, return (instruction)"
-  - "return (mot clé) (C++), syntaxe"
+title: Instruction return dans la terminaison du programme (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- data types [C++], function return types
+- function return types, return statement
+- return keyword [C++], syntax
 ms.assetid: 66d002ab-5625-4b68-8446-71e1b8fcdbd8
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Instruction return dans la terminaison du programme (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: f5ba078ef364a046a9e635d8b2632558e426f4b8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Du point de vue fonctionnel, émettre une instruction `return` à partir de **main** équivaut à appeler la fonction **exit**.  Prenons l'exemple suivant :  
+---
+# <a name="return-statement-in-program-termination-c"></a>Instruction return dans la terminaison du programme (C++)
+Émettre un `return` instruction à partir de **principal** est fonctionnellement équivalente à l’appel le **quitter** (fonction). Prenons l'exemple suivant :  
   
 ```  
 // return_statement.cpp  
@@ -37,7 +53,7 @@ int main()
 }  
 ```  
   
- Les instructions **exit** et `return` de l'exemple précédent sont identiques du point de vue fonctionnel.  Toutefois, C\+\+ exige que les fonctions dont les types de retour sont différents de `void` retournent une valeur.  L'instruction `return` vous permet de retourner une valeur à partir de **main**.  
+ Le **quitter** et `return` dans l’exemple précédent, les instructions sont fonctionnellement identiques. Toutefois, C++ exige que les fonctions dont les types de retour sont différents de `void` retournent une valeur. Le `return` instruction vous permet de retourner une valeur à partir de **principal**.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Terminaison du programme](../cpp/program-termination.md)

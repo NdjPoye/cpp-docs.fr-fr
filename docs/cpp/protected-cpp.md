@@ -1,33 +1,49 @@
 ---
-title: "protected (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "protected"
-  - "protected_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "protected (mot clé) (C++)"
-  - "protected (mot clé) (C++), accès aux membres"
+title: Protected (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- protected
+- protected_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- protected keyword [C++], member access
+- protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# protected (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b65c73c7ecc3419f4a2a40e4bf693049226bd8b7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-## Syntaxe  
+---
+# <a name="protected-c"></a>protected (C++)
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 protected:  
@@ -35,8 +51,8 @@ protected:
 protected base-class  
 ```  
   
-## Notes  
- Le mot clé `protected` spécifie l'accès aux membres de classe de *member\-list* jusqu'au spécificateur d'accès suivant \(**public** ou `private`\) ou la fin de la définition de classe.  Les membres de classe déclarés comme `protected` peuvent être uniquement utilisés par ce qui suit :  
+## <a name="remarks"></a>Remarques  
+ Le `protected` mot clé spécifie l’accès aux membres de classe dans le *-liste des membres* jusqu’au spécificateur d’accès suivant (**public** ou `private`) ou à la fin de la définition de classe. Les membres de classe déclarés comme `protected` peuvent être uniquement utilisés par ce qui suit :  
   
 -   Les fonctions membres de la classe qui a initialement déclaré ces membres.  
   
@@ -48,21 +64,21 @@ protected base-class
   
  En faisant précéder le nom d'une classe de base, le mot clé `protected` indique que les membres publics et protégés de la classe de base sont des membres protégés de sa classe dérivée.  
   
- Les membres protégés ne sont pas aussi privés que les membres `private`, qui sont accessibles uniquement par les membres de la classe dans laquelle ils sont déclarés, mais ils ne sont pas aussi publics que les membres **public**, accessibles dans toute fonction.  
+ Les membres protégés ne sont pas aussi privés que `private` membres, qui sont accessibles uniquement aux membres de la classe dans laquelle ils sont déclarés, mais ils ne sont pas aussi publics que **public** membres, qui sont accessibles dans n’importe quelle fonction.  
   
- Les membres protégés qui sont également déclarés comme **static** sont accessibles par tout friend ou fonction membre d'une classe dérivée.  Les membres protégés qui ne sont pas déclarés comme **statique** sont accessibles aux friends et aux fonctions membres dans une classe dérivée uniquement via un pointeur ou une référence vers la classe dérivée ou un objet de celle\-ci.  
+ Membres protégés qui sont également déclarés comme **statique** sont accessibles à n’importe quelle fonction friend ou un membre d’une classe dérivée. Membres protégés qui ne sont pas déclarés en tant que **statique** sont accessibles à vos amis et les fonctions membres dans une classe dérivée uniquement via un pointeur vers une référence vers un ou un objet de la classe dérivée.  
   
- Pour obtenir des informations connexes, consultez [friend](../cpp/friend-cpp.md), [public](../cpp/public-cpp.md), [private](../cpp/private-cpp.md) et le tableau d'accès aux membres dans [Contrôle de l'accès aux membres de classe](../misc/controlling-access-to-class-members.md).  
+ Pour plus d’informations, consultez [friend](../cpp/friend-cpp.md), [public](../cpp/public-cpp.md), [privé](../cpp/private-cpp.md)et la table d’accès aux membres de [contrôle de l’accès aux membres de classe](member-access-control-cpp.md) .  
   
-## Spécifique \/clr  
- Dans les types CLR, les mots clés de spécificateur d'accès C\+\+ \(**public**, `private`, et `protected`\) peuvent affecter la visibilité des types et des méthodes quant aux assemblys.  Pour plus d'informations, consultez [Visibilité de type et de membre](../misc/type-and-member-visibility.md).  
+## <a name="clr-specific"></a>Spécifique /clr  
+ Dans les types CLR, mots clés de spécificateur d’accès C++ (**public**, `private`, et `protected`) peuvent affecter la visibilité des types et méthodes quant aux assemblys. Pour plus d’informations, consultez [contrôle d’accès de membre](member-access-control-cpp.md).  
   
 > [!NOTE]
->  Les fichiers compilés avec [\/LN](../build/reference/ln-create-msil-module.md) ne sont pas affectés par ce comportement.  Dans ce cas, toutes les classes managées \(public ou privées\) seront visibles.  
+>  Fichiers compilés avec [/LN](../build/reference/ln-create-msil-module.md) ne sont pas affectés par ce comportement. Dans ce cas, toutes les classes managées (public ou privées) seront visibles.  
   
-## Spécifique END \/clr  
+## <a name="end-clr-specific"></a>Spécifique END /clr  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // keyword_protected.cpp  
@@ -96,6 +112,6 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [Contrôle de l'accès aux membres de classe](../misc/controlling-access-to-class-members.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Contrôle de l’accès aux membres de classe](member-access-control-cpp.md)   
+ [Mots clés](../cpp/keywords-cpp.md)

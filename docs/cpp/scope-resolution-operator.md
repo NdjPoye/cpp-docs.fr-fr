@@ -1,45 +1,65 @@
 ---
-title: "Op&#233;rateur de r&#233;solution de port&#233;e&#160;: :: | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "::"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ":: (opérateur)"
-  - "opérateurs (C++), résolution de portée"
-  - "opérateur de résolution de portée"
-  - "portée, opérateur de résolution de portée"
+title: "Opérateur de résolution de portée : :: | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '::'
+dev_langs:
+- C++
+helpviewer_keywords:
+- scope, scope resolution operator
+- operators [C++], scope resolution
+- scope resolution operator
+- ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Op&#233;rateur de r&#233;solution de port&#233;e&#160;: ::
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 715eb7c5e004d7e0731ef599e54beb5fc6690e50
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-L'opérateur de résolution de portée `::` est utilisé pour identifier et lever l'ambiguïté des identificateurs utilisés dans différentes portées.  Pour plus d'informations sur la portée, voir [Portée](../cpp/scope-visual-cpp.md).  
+---
+# <a name="scope-resolution-operator-"></a>Opérateur de résolution de portée : ::
+L'opérateur de résolution de portée `::` est utilisé pour identifier et lever l'ambiguïté des identificateurs utilisés dans différentes portées. Pour plus d’informations sur l’étendue, consultez [étendue](../cpp/scope-visual-cpp.md).  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-:: identifier class-name :: identifier namespace :: identifier enum class :: identifier enum struct :: identifier  
+:: identifier  
+class-name :: identifier  
+namespace :: identifier  
+enum class :: identifier  
+enum struct :: identifier  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
  `identifier` peut être une variable, une fonction ou une valeur d'énumération.  
   
-## Avec les classes et les espaces de noms  
+## <a name="with-classes-and-namespaces"></a>Avec les classes et les espaces de noms  
  L'exemple suivant montre comment l'opérateur de résolution de portée est utilisé avec les espaces de noms et les classes :  
   
 ```cpp  
@@ -86,7 +106,7 @@ int main() {
 }  
 ```  
   
- Vous pouvez utiliser l'opérateur de résolution de portée pour identifier un membre d'un espace de noms ou un espace de noms désignant l'espace de noms du membre dans une directive using.  Dans l'exemple ci\-dessous, vous pouvez utiliser `NamespaceC` pour qualifier `ClassB`, même si `ClassB` a été déclaré dans l'espace de noms `NamespaceB`, car `NamespaceB` a été désigné dans `NamespaceC` à l'aide d'une directive.  
+ Vous pouvez utiliser l'opérateur de résolution de portée pour identifier un membre d'un espace de noms ou un espace de noms désignant l'espace de noms du membre dans une directive using. Dans l'exemple ci-dessous, vous pouvez utiliser `NamespaceC` pour qualifier `ClassB`, même si `ClassB` a été déclaré dans l'espace de noms `NamespaceB`, car `NamespaceB` a été désigné dans `NamespaceC` à l'aide d'une directive.  
   
 ```cpp  
 namespace NamespaceB {  
@@ -110,7 +130,7 @@ int main() {
   
 ```  
   
- Vous pouvez utiliser des chaînes d'opérateurs de résolution de portée.  Dans l'exemple suivant, `NamespaceD::NamespaceD1` identifie l'espace de noms imbriqué `NamespaceD1` et `NamespaceE::ClassE::ClassE1` identifie la classe imbriquée `ClassE1`.  
+ Vous pouvez utiliser des chaînes d'opérateurs de résolution de portée. Dans l'exemple suivant, `NamespaceD::NamespaceD1` identifie l'espace de noms imbriqué `NamespaceD1` et `NamespaceE::ClassE::ClassE1` identifie la classe imbriquée `ClassE1`.  
   
 ```cpp  
 namespace NamespaceD{  
@@ -138,7 +158,7 @@ int main() {
   
 ```  
   
-## Avec des membres statiques  
+## <a name="with-static-members"></a>Avec des membres statiques  
  Vous devez utiliser l'opérateur de résolution de portée pour appeler des membres statiques de classes.  
   
 ```cpp  
@@ -158,8 +178,8 @@ int main() {
   
 ```  
   
-## Avec des énumérations délimitées  
- L'opérateur de résolution de portée est également utilisé avec les valeurs d'une énumération délimitée [Déclarations d'énumération](../cpp/enumerations-cpp.md), comme dans l'exemple suivant :  
+## <a name="with-scoped-enumerations"></a>Avec des énumérations délimitées  
+ L’opérateur de résolution de portée est également utilisé avec les valeurs d’une énumération délimitée [déclarations d’énumération](../cpp/enumerations-cpp.md), comme dans l’exemple suivant :  
   
 ```cpp  
 enum class EnumA{  
@@ -175,7 +195,6 @@ int main() {
   
 ```  
   
-## Voir aussi  
- [Opérateurs, priorité et associativité C\+\+](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>Voir aussi  
+ [Les opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Espaces de noms](../cpp/namespaces-cpp.md)   
- [Noms et noms qualifiés](../misc/names-and-qualified-names.md)

@@ -1,29 +1,45 @@
 ---
-title: "typeid, op&#233;rateur | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "typeid (opérateur)"
+title: "typeid (opérateur) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# typeid, op&#233;rateur
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 3b987f26e7908c85ca1630059eec434c009c3ef4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-## Syntaxe  
+---
+# <a name="typeid-operator"></a>typeid, opérateur
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -33,22 +49,22 @@ manager: "ghogen"
 typeid( expression )  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
  L'opérateur `typeid` permet de déterminer le type d'un objet au moment de l'exécution.  
   
- Le résultat de `typeid` est **const type\_info&**.  La valeur est une référence à un objet **type\_info** qui représente soit l'*ID type* soit le type de l'*expression*, selon la forme de `typeid` utilisée.  Consultez [classe type\_info](../cpp/type-info-class.md) pour plus d'informations.  
+ Le résultat de `typeid` est un **const type_info &**. La valeur est une référence à un **type_info** objet qui représente soit le *id de type* ou le type de la *expression*, en fonction de la forme de `typeid` est utilisé . Consultez [classe type_info](../cpp/type-info-class.md) pour plus d’informations.  
   
- L'opérateur `typeid` ne fonctionne pas avec les types managés \(les déclarateurs abstraits ou les instances\), consultez [typeid](../windows/typeid-cpp-component-extensions.md) pour plus d'informations sur l'obtention de <xref:System.Type> d'un type spécifié.  
+ Le `typeid` opérateur ne fonctionne pas avec les types managés (déclarateurs abstraits ou instances), consultez [typeid](../windows/typeid-cpp-component-extensions.md) pour plus d’informations sur l’obtention de la <xref:System.Type> d’un type spécifié.  
   
- L'opérateur `typeid` effectue un contrôle à l'exécution lorsqu'il est appliqué à une l\-value d'un type de classe polymorphe, où le type réel de l'objet ne peut pas être déterminé par les informations statiques fournies.  Dans les cas suivants par exemple :  
+ L'opérateur `typeid` effectue un contrôle à l'exécution lorsqu'il est appliqué à une l-value d'un type de classe polymorphe, où le type réel de l'objet ne peut pas être déterminé par les informations statiques fournies. Dans les cas suivants par exemple :  
   
 -   Une référence à une classe  
   
--   Un pointeur, déréférencé avec \*  
+-   Un pointeur, déréférencé avec *  
   
--   Un pointeur indicé \(\[ \] par exemple\). \(Notez qu'il n'est généralement pas possible d'utiliser un indice avec un pointeur vers un type polymorphe.\)  
+-   Un pointeur indicé ([ ] par exemple). (Notez qu'il n'est généralement pas possible d'utiliser un indice avec un pointeur vers un type polymorphe.)  
   
- Si l'*expression* pointe vers un type classe de base, l'objet est en fait d'un type dérivé de cette classe de base, une référence **type\_info** de la classe dérivée est le résultat.  L'*expression* doit pointer vers un type polymorphe \(une classe avec des fonctions virtuelles\).  Sinon, le résultat est **type\_info** pour la classe statique référencée dans l'*expression*.  De plus, le pointeur doit être déréférencé afin que l'objet qu'il pointe soit utilisé.  Si le pointeur n'est pas déréférencé, le résultat sera le **type\_info** du pointeur, et pas ce qu'il désigne.  Par exemple :  
+ Si le *expression* pointe vers un type de classe de base, l’objet est réellement d’un type dérivé de cette classe de base, un **type_info** référence de la classe dérivée est le résultat. Le *expression* doit pointer vers un type polymorphe (une classe avec des fonctions virtuelles). Dans le cas contraire, le résultat est le **type_info** pour la classe statique référencée dans le *expression*. De plus, le pointeur doit être déréférencé afin que l'objet qu'il pointe soit utilisé. Sans le déréférencement du pointeur, le résultat sera le **type_info** du pointeur, pas à ce qu’il pointe vers. Exemple :  
   
 ```  
 // expre_typeid_Operator.cpp  
@@ -75,9 +91,9 @@ int main() {
 }  
 ```  
   
- Si l'*expression* déréférence un pointeur, et que cette valeur du pointeur est zéro, **typeid** lève une exception [bad\_typeid](../cpp/bad-typeid-exception.md).  Si le pointeur ne pointe par vers un objet valide, une exception `__non_rtti_object` est levée, indiquant une tentative d'analyse du RTTI qui a déclenché une erreur \(comme la violation d'accès\), car l'objet est d'une certaine façon non valide \(le pointeur incorrect ou le code n'a pas été compilé avec [\/GR](../build/reference/gr-enable-run-time-type-information.md)\).  
+ Si le *expression* la référence à un pointeur, et que la valeur du pointeur est égal à zéro, **typeid** lève une [bad_typeid (exception)](../cpp/bad-typeid-exception.md). Si le pointeur ne pointe pas vers un objet valide, un `__non_rtti_object` exception est levée, indiquant une tentative d’analyse du RTTI qui a déclenché une erreur (telles que la violation d’accès), car l’objet n’est pas valide d’une certaine manière (pointeur incorrect ou le code n’a pas été compilé avec [/GR](../build/reference/gr-enable-run-time-type-information.md)).  
   
- Si l'*expression* n'est ni un pointeur ni une référence à une classe de base de l'objet, le résultat est une référence **type\_info** représentant le type statique de l'*expression*.  *Le type statique* d'une expression fait référence au type d'une expression telle qu'elle est connue au moment de la compilation.  Les sémantiques d'exécution sont ignorées en évaluant le type statique d'une expression.  De plus, les références sont ignorées si possible lors de la détermination du type statique d'une expression :  
+ Si le *expression* n’est ni un pointeur ni une référence à une classe de base de l’objet, le résultat est un **type_info** référence qui représente le type statique de la *expression*. Le *type statique* d’une expression désigne le type d’une expression telle qu’il est connu au moment de la compilation. Les sémantiques d'exécution sont ignorées en évaluant le type statique d'une expression. De plus, les références sont ignorées si possible lors de la détermination du type statique d'une expression :  
   
 ```  
 // expre_typeid_Operator_2.cpp  
@@ -89,7 +105,7 @@ int main()
 }  
 ```  
   
- **typeid** peut également être utilisé dans des modèles pour déterminer le type d'un paramètre de modèle :  
+ **typeid** peut également être utilisé dans les modèles de pour déterminer le type d’un paramètre de modèle :  
   
 ```  
 // expre_typeid_Operator_3.cpp  
@@ -102,6 +118,6 @@ T max( T arg1, T arg2 ) {
 }  
 ```  
   
-## Voir aussi  
- [Informations de type au moment de l'exécution](../cpp/run-time-type-information.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de type au moment de l’exécution](../cpp/run-time-type-information.md)   
+ [Mots clés](../cpp/keywords-cpp.md)
