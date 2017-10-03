@@ -1,7 +1,7 @@
 ---
 title: "Créer un projet Linux | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 08/16/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -26,11 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
-ms.openlocfilehash: e0a92f82413702c639af4a2cd4c4cc62abcce2b2
+ms.translationtype: HT
+ms.sourcegitcommit: 86fae508ea7be012e7491420faf10302f4eb11a9
+ms.openlocfilehash: f738ba6f85f7ba5c75fa32251efc9989e151258b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/03/2017
 
 ---
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 02/24/2017
 Pour créer un projet Linux dans Visual Studio, effectuez les étapes suivantes :
 
 1. Sélectionnez **Fichier > Nouveau projet** dans Visual Studio, ou appuyez sur **Ctrl+Maj+N**.
-1. Sélectionnez le nœud **Modèles > Autres langages > Visual C++ > Multiplateforme > Linux** et le type de projet que vous voulez créer, entrez un nom/emplacement, puis cliquez sur OK.
+1. Sélectionnez le nœud **Visual C++ > Multiplateforme > Linux** et le type de projet que vous voulez créer, entrez un nom/emplacement, puis cliquez sur OK.
 
    ![Nouveau projet Linux](media/newproject.png)
 
