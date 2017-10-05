@@ -1,76 +1,88 @@
 ---
-title: "Constructeurs (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "constructeurs [C++]"
-  - "constructeurs d'instance"
-  - "objets (C++), créer"
+title: Constructeurs (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- constructors [C++]
+- objects [C++], creating
+- instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
 caps.latest.revision: 17
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Constructeurs (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ece3414dbc7f4d362fa7dcc6f060e408b50e54e6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Un constructeur est un type de fonction membre qui initialise une instance de sa classe.  Un constructeur porte le même nom que la classe et n'a aucune valeur de retour.  Un constructeur peut avoir un nombre quelconque de paramètres et une classe peut avoir un nombre quelconque de constructeurs surchargés.  Les constructeurs peuvent avoir n'importe quelle accessibilité : publique, protégée ou privée.  Si vous ne définissez pas de constructeurs, le compilateur génère un constructeur par défaut qui n'accepte aucun paramètre ; vous pouvez substituer ce comportement en déclarant un constructeur par défaut comme supprimé.  
+---
+# <a name="constructors-c"></a>Constructeurs (C++)
+Un constructeur est un type de fonction membre qui initialise une instance de sa classe. Un constructeur porte le même nom que la classe et n'a aucune valeur de retour. Un constructeur peut avoir un nombre quelconque de paramètres et une classe peut avoir un nombre quelconque de constructeurs surchargés. Les constructeurs peuvent avoir n'importe quelle accessibilité : publique, protégée ou privée. Si vous ne définissez pas de constructeurs, le compilateur génère un constructeur par défaut qui n'accepte aucun paramètre ; vous pouvez substituer ce comportement en déclarant un constructeur par défaut comme supprimé.  
   
-## Dans cette rubrique  
+## <a name="in-this-topic"></a>Dans cette rubrique  
   
--   [Ordre de construction](#order_of_construction)  
+-   [Ordre de Construction](#order_of_construction)  
   
--   [Listes de membres](../cpp/constructors-cpp.md#member_lists)  
+-   [Listes de membres](#member_lists)  
   
--   [Constructeurs explicites](../cpp/constructors-cpp.md#explicit_constructors)  
+-   [Constructeurs explicites](#explicit_constructors)  
   
--   [Constructeurs par défaut](../cpp/constructors-cpp.md#default_constructors)  
+-   [Constructeurs par défaut](#default_constructors)  
   
--   [Constructeurs de copie et de déplacement](../cpp/constructors-cpp.md#copy_and_move_constructors)  
+-   [Copier et déplacer des constructeurs](#copy_and_move_constructors)  
   
--   [Constructeurs explicitement utilisés par défaut et supprimés](../cpp/constructors-cpp.md#explicitly_defaulted_and_deleted_constructors)  
+-   [Constructeurs explicitement utilisés par défaut et supprimés](#explicitly_defaulted_and_deleted_constructors)  
   
--   [Constructeurs dans les classes dérivées](../cpp/constructors-cpp.md#constructors_in_derived_classes)  
+-   [Constructeurs de Classes dérivées](#constructors_in_derived_classes)  
   
--   [Constructeurs pour les classes ayant un héritage multiple](../cpp/constructors-cpp.md#constructors_for_classes_that_have_multiple_inheritance)  
+-   [Fonctions virtuelles dans les constructeurs](#virtual_functions_in_constructors)  
   
--   [Fonctions virtuelles dans les constructeurs](../cpp/constructors-cpp.md#virtual_functions_in_constructors)  
+-   [Constructeurs et Classes composites](#constructors_in_composite_classes)  
   
--   [Constructeurs et classes composites](../cpp/constructors-cpp.md#constructors_in_composite_classes)  
+-   [Constructeurs de délégation](#delegating_constructors)  
   
--   [Constructeurs qui effectuent une délégation](../cpp/constructors-cpp.md#delegating_constructors)  
+-   [Constructeurs d’héritage (C ++ 11)](#inheriting_constructors)  
   
--   [Constructeurs d'héritage (C++11)](../cpp/constructors-cpp.md#inheriting_constructors)  
+-   [Règles de déclaration des constructeurs](#rules_for_declaring_constructors)  
   
--   [Règles de déclaration des constructeurs](../cpp/constructors-cpp.md#rules_for_declaring_constructors)  
+-   [Appel explicite des constructeurs](#explicitly_invoking_constructors)  
   
--   Constructeurs par défaut et constructeurs de copie  
-  
--   [Appel explicite des constructeurs](../cpp/constructors-cpp.md#explicitly_invoking_constructors)  
-  
-##  <a name="order_of_construction"></a> Ordre de construction  
+##  <a name="order_of_construction"></a>Ordre de Construction  
  Un constructeur effectue son travail dans l'ordre suivant :  
   
 1.  Il appelle les constructeurs membres et de classe de base dans l'ordre de déclaration.  
   
 2.  Si la classe est dérivée de classes de base virtuelles, il initialise les pointeurs de base virtuels de l'objet.  
   
-3.  Si la classe possède ou hérite des fonctions virtuelles, il initialise les pointeurs de fonction virtuelle de l'objet.  Les pointeurs de fonction virtuelle pointent sur la table de fonctions virtuelles de la classe pour permettre la liaison correcte des appels de fonction virtuelle au code.  
+3.  Si la classe possède ou hérite des fonctions virtuelles, il initialise les pointeurs de fonction virtuelle de l'objet. Les pointeurs de fonction virtuelle pointent sur la table de fonctions virtuelles de la classe pour permettre la liaison correcte des appels de fonction virtuelle au code.  
   
 4.  Il exécute le code dans son corps de fonction.  
   
- L'exemple suivant montre l'ordre dans lequel les constructeurs de classe de base et membres sont appelés dans le constructeur pour une classe dérivée.  D'abord, le constructeur de base est appelé, puis les membres de classe de base sont initialisés dans l'ordre dans lequel ils apparaissent dans la déclaration de classe, puis le constructeur dérivé est appelé.  
+ L'exemple suivant montre l'ordre dans lequel les constructeurs de classe de base et membres sont appelés dans le constructeur pour une classe dérivée. D'abord, le constructeur de base est appelé, puis les membres de classe de base sont initialisés dans l'ordre dans lequel ils apparaissent dans la déclaration de classe, puis le constructeur dérivé est appelé.  
   
 ```cpp  
 #include <iostream>  
@@ -139,10 +151,10 @@ DerivedContainer constructor.
   
 2.  Les objets de classe de base et membres sont détruits dans l'ordre inverse de déclaration.  
   
-3.  Si le constructeur ne délègue pas, tous les membres et objets de classe de base entièrement construits sont détruits.  Toutefois, l'objet lui\-même n'étant pas complètement construit, le destructeur n'est pas exécuté.  
+3.  Si le constructeur ne délègue pas, tous les membres et objets de classe de base entièrement construits sont détruits. Toutefois, l'objet lui-même n'étant pas complètement construit, le destructeur n'est pas exécuté.  
   
-##  <a name="member_lists"></a> Listes de membres  
- Initialisez les membres de classe à partir des arguments de constructeur à l'aide d'une liste d'initialiseurs membres.  Cette méthode utilise l'*initialisation directe*, qui est plus efficace que l'utilisation d'opérateurs d'assignation dans le corps du constructeur.  
+##  <a name="member_lists"></a>Listes de membres  
+ Initialisez les membres de classe à partir des arguments de constructeur à l’aide d’une liste d’initialiseurs membres. Cette méthode utilise *une initialisation directe*, qui est plus efficace que l’utilisation d’opérateurs d’assignation dans le corps du constructeur.  
   
 ```cpp  
 class Box {  
@@ -167,8 +179,8 @@ Box b(42, 21, 12);
 cout << "The volume is " << b.Volume();  
 ```  
   
-##  <a name="explicit_constructors"></a> Constructeurs explicites  
- Si une classe a un constructeur avec un paramètre unique, ou si tous les paramètres sauf un ont une valeur par défaut, le type de paramètre peut être implicitement converti en type de classe.  Par exemple, si la classe `Box` a un constructeur semblable au suivant :  
+##  <a name="explicit_constructors"></a>Constructeurs explicites  
+ Si une classe a un constructeur avec un paramètre unique, ou si tous les paramètres sauf un ont une valeur par défaut, le type de paramètre peut être implicitement converti en type de classe. Par exemple, si la classe `Box` a un constructeur semblable au suivant :  
   
 ```  
 Box(int size): m_width(size), m_length(size), m_height(size){}  
@@ -197,19 +209,19 @@ private:
   
 ```  
   
- Ces conversions peuvent être utiles dans certains cas mais, le plus souvent, elles peuvent entraîner des erreurs subtiles mais graves dans votre code.  En règle générale, vous devez utiliser le mot clé `explicit` sur un constructeur \(et des opérateurs définis par l'utilisateur\) afin d'éviter ce genre de conversion de type implicite :  
+ Ces conversions peuvent être utiles dans certains cas mais, le plus souvent, elles peuvent entraîner des erreurs subtiles mais graves dans votre code. En règle générale, vous devez utiliser le mot clé `explicit` sur un constructeur (et des opérateurs définis par l'utilisateur) afin d'éviter ce genre de conversion de type implicite :  
   
 ```  
   
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}  
 ```  
   
- Si le constructeur est explicite, cette ligne entraîne une erreur du compilateur : `ShippingOrder so(42, 10.8);`.  Pour plus d'informations, consultez [Conversions](../cpp/user-defined-type-conversions-cpp.md)  
+ Si le constructeur est explicite, cette ligne entraîne une erreur du compilateur : `ShippingOrder so(42, 10.8);`.  Pour plus d’informations, consultez [des Conversions de types définis par l’utilisateur](../cpp/user-defined-type-conversions-cpp.md).  
   
-##  <a name="default_constructors"></a> Constructeurs par défaut  
- Les *constructeurs par défaut* n'ont aucun paramètre ; ils suivent des règles légèrement différentes :  
+##  <a name="default_constructors"></a>Constructeurs par défaut  
+ *Constructeurs par défaut* n’avoir aucun paramètre ; ils suivent des règles légèrement différentes :  
   
- Les constructeurs par défaut sont l'une des *fonctions membres spéciales* ; si aucun constructeur n'est déclaré dans une classe, le compilateur fournit un constructeur par défaut :  
+ Les constructeurs par défaut sont un de la *fonctions membres spéciales*; si aucun constructeur n’est déclaré dans une classe, le compilateur fournit un constructeur par défaut :  
   
 ```cpp  
 class Box {  
@@ -233,7 +245,7 @@ myclass mc();     // warning C4930: prototyped function not called (was a variab
 }  
 ```  
   
- Voici un exemple de problème de type « Most Vexing Parse ».  Puisque l'exemple d'expression peut être interprété comme la déclaration d'une fonction ou comme l'appel d'un constructeur par défaut, et puisque les analyseurs C\+\+ privilégient les déclarations sur d'autres choses, l'expression est traitée comme une déclaration de fonction.  Pour plus d'informations, voir la page [Most Vexing Parse](http://en.wikipedia.org/wiki/Most_vexing_parse).  
+ Voici un exemple de problème de type « Most Vexing Parse ». Puisque l'exemple d'expression peut être interprété comme la déclaration d'une fonction ou comme l'appel d'un constructeur par défaut, et puisque les analyseurs C++ privilégient les déclarations sur d'autres choses, l'expression est traitée comme une déclaration de fonction. Pour plus d’informations, consultez [Most Vexing Parse](http://en.wikipedia.org/wiki/Most_vexing_parse).  
   
  Si des constructeurs autres que ceux par défaut sont déclarés, le compilateur ne fournit pas de constructeur par défaut :  
   
@@ -258,7 +270,7 @@ int main(){
   
 ```  
   
- Si une classe n'a aucun constructeur par défaut, un tableau d'objets de cette classe ne peut pas être construit seulement à l'aide de la syntaxe avec crochets.  Par exemple, dans le bloc de code précédent, un tableau de Boxes ne peut pas être déclaré comme suit :  
+ Si une classe n'a aucun constructeur par défaut, un tableau d'objets de cette classe ne peut pas être construit seulement à l'aide de la syntaxe avec crochets. Par exemple, dans le bloc de code précédent, un tableau de Boxes ne peut pas être déclaré comme suit :  
   
 ```cpp  
 Box boxes[3];    // compiler error C2512: no appropriate default constructor available  
@@ -271,14 +283,14 @@ Box boxes[3];    // compiler error C2512: no appropriate default constructor ava
 Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };  
 ```  
   
-##  <a name="copy_and_move_constructors"></a> Constructeurs de copie et de déplacement  
- Un *constructeur de copie* est une fonction membre spéciale qui prend comme entrée une référence à un objet du même type et en fait une copie.  Pour plus d'informations, consultez [Constructeurs de copie et opérateurs d'assignation de copie \(C\+\+\)](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md).  Un constructeur de déplacement est également une fonction membre spéciale qui déplace la possession d'un objet existant vers une nouvelle variable sans copier les données d'origine.  Pour plus d'informations, consultez [Constructeurs de déplacement et opérateurs d'assignation de déplacement \(C\+\+\)](http://msdn.microsoft.com/fr-fr/1442de5f-37a5-42a1-83a6-ec9cfe0414db) et [Constructeurs de déplacement et opérateurs d'assignation de déplacement \(C\+\+\)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
+##  <a name="copy_and_move_constructors"></a>Copier et déplacer des constructeurs  
+ A *constructeur de copie* est une fonction membre spéciale qui prend comme entrée une référence à un objet du même type et en fait une copie. Pour plus d’informations, consultez [constructeurs de copie et opérateurs d’assignation de copie (C++)](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md). A *constructeur de déplacement* est également une fonction membre spéciale qui déplace la propriété des données d’un objet existant à une nouvelle variable sans copier les données d’origine. Pour plus d’informations, consultez [constructeurs de déplacement et opérateurs d’assignation déplacer (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
   
-##  <a name="explicitly_defaulted_and_deleted_constructors"></a> Constructeurs explicitement utilisés par défaut et supprimés  
- Vous pouvez utiliser explicitement des constructeurs de copie par défaut, des constructeurs par défaut, des constructeurs de déplacement, des opérateurs d'affectation de copie, des opérateurs d'affectation de déplacement et des destructeurs.  Vous pouvez supprimer de manière explicite toutes les fonctions membres spéciales.  Pour plus d'informations, consultez [Fonctions utilisées par défaut et supprimées explicitement](../cpp/explicitly-defaulted-and-deleted-functions.md).  
+##  <a name="explicitly_defaulted_and_deleted_constructors"></a>Constructeurs explicitement utilisés par défaut et supprimés  
+ Vous pouvez explicitement *par défaut* constructeurs de copie, de constructeurs par défaut, de constructeurs de déplacement, de copier des opérateurs d’assignation, de déplacer des opérateurs d’assignation et les destructeurs. Vous pouvez explicitement *supprimer* toutes les fonctions membres spéciales. Pour plus d’informations, consultez [explicitement par défaut et supprimer des fonctions](../cpp/explicitly-defaulted-and-deleted-functions.md).  
   
-##  <a name="constructors_in_derived_classes"></a> Constructeurs dans les classes dérivées  
- Un constructeur de classe dérivée appelle toujours un constructeur de classe de base, afin de pouvoir s'appuyer sur des classes de base complètement construites avant d'effectuer tout travail supplémentaire.  Les constructeurs de classe de base sont appelés par ordre de dérivation. Par exemple, si ClasseA est dérivée de ClasseB, qui est dérivée de ClasseC, le constructeur ClasseC est appelé en premier, puis le constructeur ClasseB, puis le constructeur ClasseA.  
+##  <a name="constructors_in_derived_classes"></a>Constructeurs de Classes dérivées  
+ Un constructeur de classe dérivée appelle toujours un constructeur de classe de base, afin de pouvoir s'appuyer sur des classes de base complètement construites avant d'effectuer tout travail supplémentaire. Les constructeurs de classe de base sont appelés par ordre de dérivation. Par exemple, si ClasseA est dérivée de ClasseB, qui est dérivée de ClasseC, le constructeur ClasseC est appelé en premier, puis le constructeur ClasseB, puis le constructeur ClasseA.  
   
  Si une classe de base n'a pas de constructeur par défaut, vous devez fournir les paramètres du constructeur de classe de base dans le constructeur de classe dérivée :  
   
@@ -313,7 +325,7 @@ int main(){
 }   
 ```  
   
-### Constructeurs pour les classes ayant un héritage multiple  
+### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Constructeurs pour les classes ayant un héritage multiple  
  Si une classe est dérivée de plusieurs classes de base, les constructeurs de classe de base sont appelés dans l'ordre dans lequel ils sont répertoriés dans la déclaration de la classe dérivée :  
   
 ```cpp  
@@ -360,8 +372,8 @@ BaseClass3 constructor.
 DerivedClass constructor.  
 ```  
   
-##  <a name="virtual_functions_in_constructors"></a> Fonctions virtuelles dans les constructeurs  
- Nous vous recommandons d'être prudent lorsque vous appelez des fonctions virtuelles dans des constructeurs.  Le constructeur de classe de base étant toujours appelé avant le constructeur de classe dérivée, la fonction qui est appelée dans le constructeur de base est la version de classe de base, et non la version de classe dérivée.  Dans l'exemple suivant, la construction d'un objet `DerivedClass` provoque l'exécution de l'implémentation `BaseClass` de `print_it()` avant que le constructeur `DerivedClass` provoque l'exécution de l'implémentation `DerivedClass` de `print_it()` :  
+##  <a name="virtual_functions_in_constructors"></a>Fonctions virtuelles dans les constructeurs  
+ Nous vous recommandons d'être prudent lorsque vous appelez des fonctions virtuelles dans des constructeurs. Le constructeur de classe de base étant toujours appelé avant le constructeur de classe dérivée, la fonction qui est appelée dans le constructeur de base est la version de classe de base, et non la version de classe dérivée. Dans l'exemple suivant, la construction d'un objet `DerivedClass` provoque l'exécution de l'implémentation `BaseClass` de `print_it()` avant que le constructeur `DerivedClass` provoque l'exécution de l'implémentation `DerivedClass` de `print_it()` :  
   
 ```cpp  
 #include <iostream>  
@@ -400,8 +412,8 @@ BaseClass print_it
 Derived Class print_it  
 ```  
   
-##  <a name="constructors_in_composite_classes"></a> Constructeurs et classes composites  
- Les classes qui contiennent des membres de type classe portent le nom de *classes composites*.  Lorsqu'un membre de type classe d'une classe composite est créé, le constructeur est appelé avant le propre constructeur de la classe.  Lorsqu'une classe contenue n'a pas de constructeur par défaut, vous devez utiliser une liste d'initialisation dans le constructeur de la classe composite.  Dans l'exemple `StorageBox` précédent, si vous remplacez le type de la variable membre `m_label` par une nouvelle classe `Label`, vous devez appeler le constructeur de classe de base et initialiser la variable `m_label` dans le constructeur `StorageBox` :  
+##  <a name="constructors_in_composite_classes"></a>Constructeurs et Classes composites  
+ Les classes qui contiennent des membres de type de classe sont appelés *classes composites*. Lorsqu'un membre de type classe d'une classe composite est créé, le constructeur est appelé avant le propre constructeur de la classe. Lorsqu'une classe contenue n'a pas de constructeur par défaut, vous devez utiliser une liste d'initialisation dans le constructeur de la classe composite. Dans l'exemple `StorageBox` précédent, si vous remplacez le type de la variable membre `m_label` par une nouvelle classe `Label`, vous devez appeler le constructeur de classe de base et initialiser la variable `m_label` dans le constructeur `StorageBox` :  
   
 ```cpp  
 class Label {  
@@ -432,8 +444,8 @@ int main(){
 }  
 ```  
   
-##  <a name="delegating_constructors"></a> Constructeurs qui effectuent une délégation  
- Un *constructeur qui effectue une délégation* appelle un constructeur différent dans la même classe pour effectuer une partie du travail d'initialisation.  Dans l'exemple suivant, la classe dérivée a trois constructeurs : le second constructeur délègue au premier et le troisième constructeur délègue au second :  
+##  <a name="delegating_constructors"></a>Constructeurs de délégation  
+ A *délégation constructeur* appelle un autre constructeur de la même classe pour effectuer une partie du travail de l’initialisation. Dans l'exemple suivant, la classe dérivée a trois constructeurs : le second constructeur délègue au premier et le troisième constructeur délègue au second :  
   
 ```cpp  
 #include <iostream>  
@@ -474,7 +486,7 @@ ConstructorDestructor constructor with 2 ints.
 ConstructorDestructor constructor with 3 ints.  
 ```  
   
- L'objet créé par les constructeurs est entièrement initialisé dès qu'un constructeur est terminé.  `DerivedContainer(int int1)` réussit, mais `DerivedContainer(int int1, int int2)` échoue et le destructeur est appelé.  
+ L'objet créé par les constructeurs est entièrement initialisé dès qu'un constructeur est terminé. `DerivedContainer(int int1)` réussit, mais `DerivedContainer(int int1, int int2)` échoue et le destructeur est appelé.  
   
 ```cpp  
 class ConstructorDestructor {  
@@ -517,9 +529,9 @@ ConstructorDestructor constructor with 2 ints.
 ConstructorDestructor destructor.  
 ```  
   
- Pour plus d'informations, consultez [Constructeurs d'initialisation uniforme et de délégation](../cpp/uniform-initialization-and-delegating-constructors.md).  
+ Pour plus d’informations, consultez [d’initialisation uniforme et constructeurs de délégation](../cpp/uniform-initialization-and-delegating-constructors.md).  
   
-##  <a name="inheriting_constructors"></a> Constructeurs d'héritage \(C\+\+11\)  
+##  <a name="inheriting_constructors"></a>Constructeurs d’héritage (C ++ 11)  
  Une classe dérivée peut hériter des constructeurs d'une classe de base directe en utilisant une déclaration using, comme illustré dans l'exemple suivant :  
   
 ```  
@@ -578,7 +590,7 @@ Press Enter to exit.
   
 ```  
   
- L'instruction using place dans la portée tous les constructeurs de la classe de base, à l'exception de ceux qui ont une signature identique aux constructeurs de la classe dérivée.  En général, il est préférable d'utiliser les constructeurs d'héritage quand la classe dérivée ne déclare aucun nouveau constructeur ni aucune nouvelle donnée membre.  
+ L'instruction using place dans la portée tous les constructeurs de la classe de base, à l'exception de ceux qui ont une signature identique aux constructeurs de la classe dérivée. En général, il est préférable d'utiliser les constructeurs d'héritage quand la classe dérivée ne déclare aucun nouveau constructeur ni aucune nouvelle donnée membre.  
   
  Un modèle de classe peut hériter de tous les constructeurs d'un argument de type si ce type spécifie une classe de base :  
   
@@ -593,44 +605,44 @@ class Derived : T {
   
  Une classe dérivée ne peut pas hériter de plusieurs classes de base si ces classes de base possèdent des constructeurs qui ont une signature identique.  
   
-##  <a name="rules_for_declaring_constructors"></a> Règles de déclaration des constructeurs  
- Un constructeur porte le même nom que sa classe.  Un certain nombre de constructeurs peuvent être déclarés conformément aux règles des fonctions surchargées.  \(Pour plus d'informations, consultez [Surcharge](../misc/overloading-cpp.md).\)  
+##  <a name="rules_for_declaring_constructors"></a>Règles de déclaration des constructeurs  
+ Un constructeur porte le même nom que sa classe. Un certain nombre de constructeurs peuvent être déclarés conformément aux règles des fonctions surchargées.  
   
  La `argument-declaration-list` peut être vide.  
   
- C\+\+ définit deux genres particuliers de constructeurs, les constructeurs par défaut et les constructeurs de copie, décrits dans le tableau suivant.  
+ C++ définit deux genres particuliers de constructeurs, les constructeurs par défaut et les constructeurs de copie, décrits dans le tableau suivant.  
   
-### Constructeurs par défaut et constructeurs de copie  
+### <a name="default-and-copy-constructors"></a>Constructeurs par défaut et constructeurs de copie  
   
 |Type de construction|Arguments|Objectif|  
-|--------------------------|---------------|--------------|  
+|--------------------------|---------------|-------------|  
 |Constructeur par défaut|Peut être appelé sans argument|Construire un objet par défaut du type de classe.|  
 |Constructeur de copie|Peut accepter un argument unique de référence au même type de classe|Copier les objets du type de classe|  
   
- Les constructeurs par défaut peuvent être appelés sans argument.  Toutefois, vous pouvez déclarer un constructeur avec une liste d'arguments si tous les arguments ont des valeurs par défaut.  De même, les constructeurs de copie doivent accepter un argument unique de référence au même type de classe.  Plus d'arguments peuvent être fournis si tous les arguments suivants ont des valeurs par défaut.  
+ Les constructeurs par défaut peuvent être appelés sans argument. Toutefois, vous pouvez déclarer un constructeur avec une liste d'arguments si tous les arguments ont des valeurs par défaut. De même, les constructeurs de copie doivent accepter un argument unique de référence au même type de classe. Plus d'arguments peuvent être fournis si tous les arguments suivants ont des valeurs par défaut.  
   
- Si vous ne fournissez pas de constructeur, le compilateur tente de générer un constructeur par défaut.  Si vous ne fournissez pas de constructeur de copie, le compilateur tente d'en générer un.  Ces constructeurs générés par le compilateur sont considérés comme des fonctions membres publiques.  Une erreur est générée si vous spécifiez un constructeur de copie avec un premier argument qui est un objet et non une référence.  
+ Si vous ne fournissez pas de constructeur, le compilateur tente de générer un constructeur par défaut. Si vous ne fournissez pas de constructeur de copie, le compilateur tente d'en générer un. Ces constructeurs générés par le compilateur sont considérés comme des fonctions membres publiques. Une erreur est générée si vous spécifiez un constructeur de copie avec un premier argument qui est un objet et non une référence.  
   
- Un constructeur par défaut généré par le compilateur installe l'objet \(initialise des vftables et des vbtables, comme décrit précédemment\), et il appelle les constructeurs par défaut pour les classes de base et les membres mais il n'effectue aucune autre action.  Les constructeurs de classe de base et membres sont appelés uniquement s'ils existent, sont accessibles, et sont non équivoques.  
+ Un constructeur par défaut généré par le compilateur installe l'objet (initialise des vftables et des vbtables, comme décrit précédemment), et il appelle les constructeurs par défaut pour les classes de base et les membres mais il n'effectue aucune autre action. Les constructeurs de classe de base et membres sont appelés uniquement s'ils existent, sont accessibles, et sont non équivoques.  
   
- Un constructeur de copie généré par le compilateur installe un nouvel objet et effectue une copie de membre du contenu de l'objet à copier.  Si les constructeurs de classe de base ou membres existent, ils sont appelés. Sinon, une copie binaire est effectuée.  
+ Un constructeur de copie généré par le compilateur installe un nouvel objet et effectue une copie de membre du contenu de l'objet à copier. Si les constructeurs de classe de base ou membres existent, ils sont appelés. Sinon, une copie binaire est effectuée.  
   
- Si toutes les classes de base et membres d'une classe `type` possèdent des constructeurs de copie qui acceptent un argument **const**, le constructeur de copie généré par le compilateur accepte un seul argument de type **const** `type`**&**.  Sinon, le constructeur de copie généré par le compilateur accepte un argument unique de type `type`**&**.  
+ Si toutes les classes de base et membres d’une classe `type` ont des constructeurs de copie qui acceptent un **const** argument, le constructeur de copie générés par le compilateur accepte un argument unique de type **const** `type` **&**. Dans le cas contraire, le constructeur de copie générés par le compilateur accepte un argument unique de type `type` ** & **.  
   
- Vous pouvez utiliser un constructeur pour initialiser un objet **const** ou `volatile`, mais le constructeur lui\-même ne peut pas être déclaré comme **const** ou `volatile`.  La seule classe de stockage autorisée pour un constructeur est **inline**. L'utilisation de tout autre modificateur de classe de stockage, notamment le mot clé `__declspec`, avec un constructeur entraîne une erreur du compilateur.  
+ Vous pouvez utiliser un constructeur pour initialiser un **const** ou `volatile` objet, mais le constructeur lui-même ne peut pas être déclaré en tant que **const** ou `volatile`. La classe de stockage autorisée uniquement pour un constructeur est **inline**; utilisation de tout autre modificateur de classe de stockage, y compris le `__declspec` (mot clé), avec un constructeur entraîne une erreur du compilateur.  
   
- La convention d'appel stdcall est utilisée sur les fonctions membres statiques et les fonctions globales déclarées avec le mot clé **\_\_stdcall**, et qui n'utilisent pas de liste d'arguments de variables.  Lorsque vous utilisez le mot clé **\_\_stdcall** sur une fonction membre non statique, telle qu'un constructeur, le compilateur utilise la convention d'appel thiscall.  
+ La convention d’appel stdcall est utilisée sur les fonctions membres statiques et les fonctions globales déclarées avec le **__stdcall** (mot clé) et qui n’utilisent pas d’une liste d’arguments variable. Lorsque vous utilisez la **__stdcall** mot clé dans une fonction membre non statique, telle qu’un constructeur, le compilateur utilise la convention d’appel thiscall. »  
   
- Les constructeurs de classes de base ne sont pas héritées par les classes dérivées.  Lorsqu'un objet de type de classe dérivée est créé, il est construit en commençant par les composants de classe de base. Il passe ensuite aux composants de classe dérivée.  Le compilateur utilise chaque constructeur de classe de base au fur et à mesure que l'objet complet est initialisé \(sauf en cas de dérivation virtuelle, comme décrit dans [Initialisation des classes de base](../misc/initializing-base-classes.md)\).  
+ Les constructeurs de classes de base ne sont pas héritées par les classes dérivées. Lorsqu'un objet de type de classe dérivée est créé, il est construit en commençant par les composants de classe de base. Il passe ensuite aux composants de classe dérivée. Le compilateur utilise le constructeur de chaque classe de base comme partie de l’objet complet est initialisée (sauf en cas de dérivation virtuelle.  
   
-##  <a name="explicitly_invoking_constructors"></a> Appel explicite des constructeurs  
- Les constructeurs peuvent être explicitement appelés dans un programme pour créer des objets d'un type donné.  Par exemple, pour créer deux objets `Point` qui décrivent les extrémités d'une ligne, vous pouvez écrire le code suivant :  
+##  <a name="explicitly_invoking_constructors"></a>Appel explicite des constructeurs  
+ Les constructeurs peuvent être explicitement appelés dans un programme pour créer des objets d'un type donné. Par exemple, pour créer deux objets `Point` qui décrivent les extrémités d'une ligne, vous pouvez écrire le code suivant :  
   
 ```  
 DrawLine( Point( 13, 22 ), Point( 87, 91 ) );  
 ```  
   
- Deux objets de type `Point` sont créés, passés à la fonction `DrawLine`, puis détruits à la fin de l'expression \(appel de fonction\).  
+ Deux objets de type `Point` sont créés, passés à la fonction `DrawLine`, puis détruits à la fin de l'expression (appel de fonction).  
   
  Une initialisation est un autre contexte dans lequel un constructeur est appelé explicitement :  
   
@@ -640,11 +652,11 @@ Point pt = Point( 7, 11 );
   
  Un objet de type `Point` est créé et initialisé à l'aide du constructeur qui accepte deux arguments de type `int`.  
   
- Les objets créés par l'appel explicite de constructeurs, comme dans les deux exemples précédents, sont sans nom et possèdent la durée de vie de l'expression dans laquelle ils sont créés.  Ceci est expliqué plus en détail dans l'article [Objets temporaires](../cpp/temporary-objects.md).  
+ Les objets créés par l'appel explicite de constructeurs, comme dans les deux exemples précédents, sont sans nom et possèdent la durée de vie de l'expression dans laquelle ils sont créés. Ce sujet est abordé plus en détail dans [des objets temporaires](../cpp/temporary-objects.md).  
   
- En règle générale, il vaut mieux appeler une fonction membre à partir d'un constructeur car l'objet a été complètement configuré \(les tables virtuelles ont été initialisées, etc.\) avant l'exécution de la première ligne de code utilisateur.  En revanche, l'appel d'une fonction membre virtuelle par une fonction membre pour une classe de base abstraite pendant la construction ou la destruction présente un risque potentiel.  
+ En règle générale, il vaut mieux appeler une fonction membre à partir d'un constructeur car l'objet a été complètement configuré (les tables virtuelles ont été initialisées, etc.) avant l'exécution de la première ligne de code utilisateur. En revanche, l'appel d'une fonction membre virtuelle par une fonction membre pour une classe de base abstraite pendant la construction ou la destruction présente un risque potentiel.  
   
- Les constructeurs peuvent appeler des fonctions virtuelles.  Lorsque les fonctions virtuelles sont appelées, la fonction appelée est celle définie pour la propre classe du constructeur \(ou héritée de ses bases\).  L'exemple suivant illustre ce qui se produit lorsqu'une fonction virtuelle est appelée depuis un constructeur :  
+ Les constructeurs peuvent appeler des fonctions virtuelles. Lorsque les fonctions virtuelles sont appelées, la fonction appelée est celle définie pour la propre classe du constructeur (ou héritée de ses bases). L'exemple suivant illustre ce qui se produit lorsqu'une fonction virtuelle est appelée depuis un constructeur :  
   
 ```  
 // specl_calling_virtual_functions.cpp  
@@ -695,11 +707,10 @@ int main()
   
  Lorsque le programme précédent est lancé, la déclaration `Derived d` provoque la séquence d'événements suivante :  
   
-1.  Le constructeur de la classe `Derived` \(`Derived::Derived`\) est appelé.  
+1.  Le constructeur de la classe `Derived` (`Derived::Derived`) est appelé.  
   
-2.  Avant l'accès au corps du constructeur de la classe `Derived`, le constructeur de la classe `Base` \(`Base::Base`\) est appelé.  
+2.  Avant l'accès au corps du constructeur de la classe `Derived`, le constructeur de la classe `Base` (`Base::Base`) est appelé.  
   
- `Base::Base` appelle la fonction `f`, qui est une fonction virtuelle.  Normalement, `Derived::f` est appelée car l'objet `d` est de type `Derived`.  Étant donné que la fonction `Base::Base` est un constructeur, l'objet n'est pas encore de type `Derived`, et `Base::f` est appelée.  
+ `Base::Base` appelle la fonction `f`, qui est une fonction virtuelle. Normalement, `Derived::f` est appelée car l'objet `d` est de type `Derived`. Étant donné que la fonction `Base::Base` est un constructeur, l'objet n'est pas encore de type `Derived`, et `Base::f` est appelée.  
   
-## Voir aussi  
- [Fonctions membres spéciales](../misc/special-member-functions-cpp.md)
+

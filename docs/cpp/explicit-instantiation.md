@@ -1,63 +1,81 @@
 ---
-title: "Instanciation explicite | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modèles, instanciation"
-  - "instanciation explicite"
-  - "instanciation, explicite"
+title: Instanciation explicite | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- templates, instantiation
+- explicit instantiation
+- instantiation, explicit
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Instanciation explicite
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ecd8f8c893abab10699a0bd43f368356335c6e10
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Vous pouvez utiliser l'instanciation explicite pour créer une instanciation d'une classe ou fonction modélisée sans réellement l'utiliser dans votre code.  Puisque c'est utile lorsque vous créez des fichiers bibliothèque \(.lib\) qui utilisent des modèles pour la distribution, les définitions de modèle non instanciées ne sont pas stockées dans des fichiers objet \(.obj\).  
+---
+# <a name="explicit-instantiation"></a>instanciation explicite
+Vous pouvez utiliser l’instanciation explicite pour créer une instanciation d’une classe basée sur un modèle ou une fonction sans réellement l’utiliser dans votre code. Étant donné que cela est utile lorsque vous créez bibliothèque (.lib) les fichiers qui utilisent des modèles pour la distribution, les définitions de modèle non instancié ne sont pas placées dans des fichiers objets (.obj).  
   
- Ce code instancie explicitement `MyStack` pour les variables `int` et six éléments :  
+ Ce code instancie explicitement `MyStack` pour `int` variables et six éléments :  
   
 ```cpp  
 template class MyStack<int, 6>;  
 ```  
   
- Cette instruction crée une instanciation de `MyStack` sans réserver d'espace de stockage pour un objet.  Le code est généré pour tous les membres.  
+ Cette instruction crée une instanciation de `MyStack` sans réservation de stockage pour un objet. Code est généré pour tous les membres.  
   
- La ligne suivante instancie explicitement uniquement la fonction membre du constructeur :  
+ La ligne suivante instancie explicitement que la fonction membre de constructeur :  
   
 ```cpp  
 template MyStack<int, 6>::MyStack( void );  
 ```  
   
- Vous pouvez explicitement instancier des modèles de fonction à l'aide d'un argument de type spécifique pour les redéclarer, comme indiqué dans l'exemple [Instanciation du modèle de fonction](../cpp/function-template-instantiation.md).  
+ Vous pouvez instancier explicitement des modèles de fonction à l’aide d’un argument de type spécifique à nouveau les déclarer, comme indiqué dans l’exemple de [instanciation du modèle de fonction](../cpp/function-template-instantiation.md).  
   
- Utilisez le mot clé `extern` pour empêcher l'instanciation automatique des membres.  Par exemple :  
+ Vous pouvez utiliser le `extern` mot clé afin d’éviter l’instanciation automatique des membres. Exemple :  
   
 ```cpp  
 extern template class MyStack<int, 6>;  
 ```  
   
- De même, vous pouvez marquer des membres spécifiques comme étant externes et non instanciés :  
+ De même, vous pouvez marquer des membres spécifiques comme étant non instancié et externes :  
   
 ```cpp  
 extern template MyStack<int, 6>::MyStack( void );  
 ```  
   
- Utilisez le mot clé `extern` pour empêcher le compilateur de générer le même code d'instanciation dans plus d'un module objet.  Vous devez instancier la fonction de modèle en utilisant les paramètres de modèle explicites spécifiés dans au moins un module lié si la fonction est appelée, ou vous obtiendrez une erreur de l'éditeur de liens lorsque le programme est généré.  
+ Vous pouvez utiliser la `extern` (mot clé) pour conserver le compilateur de générer le même code d’instanciation dans plusieurs modules de l’objet. Vous devez instancier la fonction de modèle en utilisant les paramètres de modèle explicite spécifié au moins un module lié si la fonction est appelée, ou si vous obtenez une erreur de l’éditeur de liens lorsque le programme est généré.  
   
 > [!NOTE]
->  Le mot clé `extern` de la spécialisation s'applique uniquement aux fonctions membres définies en dehors du corps de la classe.  Les fonctions définies dans la déclaration de classe sont considérées comme des fonctions incluses et sont toujours instanciées.  
+>  Le `extern` mot clé dans la spécialisation s’applique uniquement aux fonctions membres définies en dehors du corps de la classe. Fonctions définies à l’intérieur de la déclaration de classe sont considérées comme des fonctions inline et sont toujours instanciées.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modèles de fonctions](../cpp/function-templates.md)

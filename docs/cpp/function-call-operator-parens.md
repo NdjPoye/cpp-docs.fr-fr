@@ -1,77 +1,92 @@
 ---
-title: "Op&#233;rateur d&#39;appel de fonction&#160;: () | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "( ) appel de fonction (opérateur)"
-  - "() appel de fonction (opérateur)"
-  - "appel de fonction ( ) (opérateur)"
-  - "appels de fonction, fonctions C++"
-  - "appels de fonction, d'opérateur"
-  - "fonctions (C++), opérateur d'appel de fonction"
-  - "opérateurs suffixés"
+title: "Opérateur d’appel de fonction : () | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ( ) function call operator
+- function calls, C++ functions
+- () function call operator
+- postfix operators
+- function calls, operator
+- functions [C++], function-call operator
+- function call operator ( )
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Op&#233;rateur d&#39;appel de fonction&#160;: ()
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bcd44b1c33488d4bbe4dac8bfe541dfa04f4709a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Une expression suffixée suivie de l'opérateur d'appel de fonction, **\( \)**, spécifie un appel de fonction.  
+---
+# <a name="function-call-operator-"></a>Opérateur d'appel de fonction : ()
+Une expression suffixée suivie par l’opérateur d’appel de fonction, **()**, spécifie un appel de fonction.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 postfix-expression   
 ( [argument-expression-list ] )  
 ```  
   
-## Notes  
- Les arguments de l'opérateur d'appel de fonction sont zéro expression ou plus séparées par des virgules, les arguments réels de la fonction.  
+## <a name="remarks"></a>Remarques  
+ Les arguments de l’opérateur d’appel de fonction sont zéro expression ou plus séparées par des virgules, les arguments réels de la fonction.  
   
- *postfix\-expression* doit prendre la valeur d'une adresse de fonction \(par exemple, un identificateur de fonction ou la valeur d'un pointeur fonction\), et *argument\-expression\-list* est une liste d'expressions \(séparées par des virgules\) dont les valeurs \(les arguments\) sont passées à la fonction.  L'argument *argument\-expression\-list* peut être vide.  
+ Le *postfix-expression* doit correspondre à une adresse de fonction (par exemple, un identificateur de fonction ou la valeur d’un pointeur fonction), et *argument-expression-list* est une liste d’expressions (séparées par des virgules) dont les valeurs (les arguments) sont passés à la fonction. L’argument *argument-expression-list* peut être vide.  
   
- *postfix\-expression* doit être un des types suivants :  
+ Le *postfix-expression* doit être l’un de ces types :  
   
--   Fonction retournant le type `T`.  Voici un exemple de déclaration  
+-   Fonction retournant le type `T`. Voici un exemple de déclaration  
   
     ```  
     T func( int i )  
     ```  
   
--   Pointeur d'une fonction qui retourne le type `T`.  Voici un exemple de déclaration  
+-   Pointeur d'une fonction qui retourne le type `T`. Voici un exemple de déclaration  
   
     ```  
     T (*func)( int i )  
     ```  
   
--   Référence à une fonction qui retourne le type `T`.  Voici un exemple de déclaration  
+-   Référence à une fonction qui retourne le type `T`. Voici un exemple de déclaration  
   
     ```  
     T (&func)(int i)  
     ```  
   
--   Déréférencement de fonction de pointeur de membre qui retourne le type `T`.  Voici des exemples d'appels de fonction  
+-   Déréférencement de fonction de pointeur de membre qui retourne le type `T`. Voici des exemples d'appels de fonction  
   
     ```  
     (pObject->*pmf)();  
     (Object.*pmf)();  
     ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant appelle la fonction de bibliothèque standard `strcat_s` avec trois arguments :  
   
 ```  
@@ -81,7 +96,7 @@ postfix-expression
 #include <iostream>  
 #include <string>  
   
-// STL name space  
+// C++ Standard Library name space  
 using namespace std;  
   
 int main()  
@@ -100,9 +115,12 @@ int main()
 }  
 ```  
   
-  **Bienvenue dans C\+\+**   
-## Résultats de l'appel de fonction  
- Un appel de fonction prend une r\-value, sauf si la fonction est déclarée en tant que type de référence.  Les fonctions avec type de retour de référence ont des l\-values et peuvent être utilisées à gauche d'une instruction d'assignation, comme suit :  
+```Output  
+Welcome to C++  
+```  
+  
+## <a name="function-call-results"></a>Résultats de l'appel de fonction  
+ Un appel de fonction prend une r-value, sauf si la fonction est déclarée en tant que type de référence. Les fonctions avec type de retour de référence ont des l-values et peuvent être utilisées à gauche d’une instruction d’assignation, comme suit :  
   
 ```  
 // expre_Function_Call_Results.cpp  
@@ -134,9 +152,9 @@ int main()
 }  
 ```  
   
- Le code précédent définit une classe appelée `Point`, qui contient les objets de données privés qui représentent les coordonnées *x* et *y*.  Ces objets de données doivent être modifiés et leurs valeurs, récupérées.  Ce programme n'est qu'une des nombreuses conceptions de ce type de classe ; l'utilisation des fonctions `GetX` et `SetX` ou `GetY` et `SetY` est une autre conception possible.  
+ Le code précédent définit une classe appelée `Point`, qui représentent des objets qui contiennent des données privées *x* et *y* coordonnées. Ces objets de données doivent être modifiés et leurs valeurs, récupérées. Ce programme n'est qu'une des nombreuses conceptions de ce type de classe ; l'utilisation des fonctions `GetX` et `SetX` ou `GetY` et `SetY` est une autre conception possible.  
   
- Les fonctions qui retournent des types de classe, des pointeurs vers des types de classe ou des références à des types de classe peuvent être utilisées comme opérande gauche pour les opérateurs de sélection de membres.  Par conséquent, le code suivant est conforme :  
+ Les fonctions qui retournent des types de classe, des pointeurs vers des types de classe ou des références à des types de classe peuvent être utilisées comme opérande gauche pour les opérateurs de sélection de membres. Par conséquent, le code suivant est conforme :  
   
 ```  
 // expre_Function_Results2.cpp  
@@ -179,11 +197,10 @@ int main() {
 }  
 ```  
   
- Les fonctions peuvent être appelées de manière récursive.  Pour plus d'informations sur les déclarations de fonction, consultez [Spécificateurs de fonction](../misc/function-specifiers.md) et [Fonctions membres](../misc/member-functions-cpp.md).  La documentation connexe est disponible dans [Programme et liaison](../cpp/program-and-linkage-cpp.md).  
+ Les fonctions peuvent être appelées de manière récursive. Pour plus d’informations sur les déclarations de fonction, consultez [fonctions](functions-cpp.md). Documentation connexe est dans [programme et liaison](../cpp/program-and-linkage-cpp.md).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions suffixées](../cpp/postfix-expressions.md)   
- [Opérateurs C\+\+](../misc/cpp-operators.md)   
- [Opérateurs, priorité et associativité C\+\+](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Les opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Appel de fonction](../c-language/function-call-c.md)   
- [\(NOTINBUILD\) Function Declarations](http://msdn.microsoft.com/fr-fr/3f9b4e14-60d2-47c1-acd8-4fa8fc988be7)
+

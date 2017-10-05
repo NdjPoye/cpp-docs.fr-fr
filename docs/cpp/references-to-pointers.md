@@ -1,34 +1,50 @@
 ---
-title: "R&#233;f&#233;rences aux pointeurs | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "références, vers des pointeurs"
+title: "Références aux pointeurs | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- references, to pointers
 ms.assetid: 4ce48b08-1511-4d2f-a31f-95f99eac0c70
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# R&#233;f&#233;rences aux pointeurs
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: cf7a3fe930e8b862578286908598c9152943f134
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Les références aux pointeurs peuvent être déclarées à peu près de la même façon que les références aux objets.  La déclaration d'une référence à un pointeur produit une valeur modifiable utilisée comme un pointeur normal.  
+---
+# <a name="references-to-pointers"></a>Références aux pointeurs
+Les références aux pointeurs peuvent être déclarées à peu près de la même façon que les références aux objets. La déclaration d'une référence à un pointeur produit une valeur modifiable utilisée comme un pointeur normal.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  Les exemples de code suivants illustrent la différence entre l'utilisation d'un pointeur vers un pointeur et d'une référence vers un pointeur.  
   
- Les fonctions `Add1` et `Add2` sont équivalentes \(bien qu'elles ne soient pas appelées de la même façon\).  La différence est que `Add1` utilise une double indirection tandis que `Add2` utilise la présence d'une référence à un pointeur.  
+ Les fonctions `Add1` et `Add2` sont équivalentes (bien qu'elles ne soient pas appelées de la même façon). La différence est que `Add1` utilise une double indirection tandis que `Add2` utilise la présence d'une référence à un pointeur.  
   
 ```  
 // references_to_pointers.cpp  
@@ -37,7 +53,7 @@ Les références aux pointeurs peuvent être déclarées à peu près de la mêm
 #include <iostream>  
 #include <string>  
   
-// STL namespace  
+// C++ Standard Library namespace  
 using namespace std;  
   
 enum {  
@@ -158,9 +174,15 @@ int Add2( BTree*& Root, char *szToAdd ) {
 }  
 ```  
   
-  **Utilisez : Refptr \[1 &#124; 2\]**  
-**où :**  
-**1 utilise la double indirection**  
-**2 utilise une référence à un pointeur.  L'entrée vient de stdin.**    
-## Voir aussi  
+```Output  
+Usage: Refptr [1 | 2]  
+  
+where:  
+1 uses double indirection  
+2 uses a reference to a pointer.  
+  
+Input is from stdin.  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [Références](../cpp/references-cpp.md)

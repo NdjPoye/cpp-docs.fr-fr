@@ -1,33 +1,50 @@
 ---
-title: "D&#233;clarations de classes imbriqu&#233;es | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes (C++), déclarer"
-  - "déclarations, de classes"
-  - "déclarations, classes imbriquées"
-  - "déclarer des classes"
-  - "classes imbriquées"
-  - "classes imbriquées, déclarer"
+title: "Déclarations de classes imbriquées | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- classes [C++], declaring
+- declarations, class
+- nested classes
+- nested classes, declaring
+- declaring classes
+- declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# D&#233;clarations de classes imbriqu&#233;es
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c66636f2780e15df83d016b604f78adae7b62143
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Une classe peut être déclarée dans la portée d'une autre classe.  Il s'agit d'une « classe imbriquée ». Les classes imbriquées sont prises dans la portée de la classe englobante et peuvent être utilisées dans cette portée.  Pour faire référence à une classe imbriquée à partir d'une portée différente de sa portée englobante immédiate, vous devez utiliser un nom qualifié complet.  
+---
+# <a name="nested-class-declarations"></a>Déclarations de classes imbriquées
+Une classe peut être déclarée dans la portée d'une autre classe. Il s'agit d'une « classe imbriquée ». Les classes imbriquées sont prises dans la portée de la classe englobante et peuvent être utilisées dans cette portée. Pour faire référence à une classe imbriquée à partir d'une portée différente de sa portée englobante immédiate, vous devez utiliser un nom qualifié complet.  
   
  L'exemple suivant montre comment déclarer des classes imbriquées :  
   
@@ -63,14 +80,14 @@ int main()
 }  
 ```  
   
- `BufferedIO::BufferedInput` et `BufferedIO::BufferedOutput` sont déclarées dans `BufferedIO`.  Ces noms de classe ne sont pas visibles en dehors de la portée de la classe `BufferedIO`.  Toutefois, un objet de type `BufferedIO` ne contient aucun objet de type `BufferedInput` ou `BufferedOutput`.  
+ `BufferedIO::BufferedInput` et `BufferedIO::BufferedOutput` sont déclarées dans `BufferedIO`. Ces noms de classe ne sont pas visibles en dehors de la portée de la classe `BufferedIO`. Toutefois, un objet de type `BufferedIO` ne contient aucun objet de type `BufferedInput` ou `BufferedOutput`.  
   
- Les classes imbriquées ne peuvent utiliser directement les noms, les noms de types, les noms des membres statiques et les énumérateurs qu'à partir de la classe englobante.  Pour utiliser des noms d'autres membres de classe, vous devez utiliser des pointeurs, les références ou des noms d'objet.  
+ Les classes imbriquées ne peuvent utiliser directement les noms, les noms de types, les noms des membres statiques et les énumérateurs qu'à partir de la classe englobante. Pour utiliser des noms d'autres membres de classe, vous devez utiliser des pointeurs, les références ou des noms d'objet.  
   
  Dans l'exemple `BufferedIO` précédent, l'énumération `IOError` est accessible directement par les fonctions membres des classes imbriquées, `BufferedIO::BufferedInput` ou `BufferedIO::BufferedOutput`, comme indiqué dans la fonction `good`.  
   
 > [!NOTE]
->  Les classes imbriquées déclarent uniquement des types dans la portée de classe.  Elles n'entraînent pas la création d'objets contenus de la classe imbriquée.  L'exemple précédent déclare deux classes imbriquées mais ne déclare aucun objet de ces types de classe.  
+>  Les classes imbriquées déclarent uniquement des types dans la portée de classe. Elles n'entraînent pas la création d'objets contenus de la classe imbriquée. L'exemple précédent déclare deux classes imbriquées mais ne déclare aucun objet de ces types de classe.  
   
  Il existe une exception à la visibilité de portée d'une déclaration de classe imbriquée : lorsqu'un nom de type est déclaré avec une déclaration anticipée.  Dans ce cas, le nom de classe déclaré par la déclaration anticipée est visible en dehors de la classe englobante, sa portée étant définie de telle sorte qu'elle est la plus petite portée englobante sans classe.  Exemple :  
   
@@ -99,11 +116,11 @@ int main()
 }  
 ```  
   
-## Privilège d'accès dans les classes imbriquées  
- Le fait d'imbriquer une classe dans une autre classe ne donne pas de privilèges d'accès spécifiques aux fonctions membres de la classe imbriquée.  De même, les fonctions membres de la classe englobante ne disposent d'aucun accès spécial aux membres de la classe imbriquée.  
+## <a name="access-privilege-in-nested-classes"></a>Privilège d'accès dans les classes imbriquées  
+ Le fait d'imbriquer une classe dans une autre classe ne donne pas de privilèges d'accès spécifiques aux fonctions membres de la classe imbriquée. De même, les fonctions membres de la classe englobante ne disposent d'aucun accès spécial aux membres de la classe imbriquée.  
   
-## Fonctions membres dans les classes imbriquées  
- Les fonctions membres déclarées dans des classes imbriquées peuvent être définies dans la portée du fichier.  L'exemple précédent pourrait avoir été écrit comme suit :  
+## <a name="member-functions-in-nested-classes"></a>Fonctions membres dans les classes imbriquées  
+ Les fonctions membres déclarées dans des classes imbriquées peuvent être définies dans la portée du fichier. L'exemple précédent pourrait avoir été écrit comme suit :  
   
 ```  
 // member_functions_in_nested_classes.cpp  
@@ -141,13 +158,13 @@ int main()
 }  
 ```  
   
- Dans l'exemple précédent, la syntaxe *qualified\-type\-name* sert à déclarer le nom de la fonction.  La déclaration :  
+ Dans l’exemple précédent, le *qualified-type-name* syntaxe est utilisée pour déclarer le nom de fonction. La déclaration :  
   
 ```  
 BufferedIO::BufferedInput::read()  
 ```  
   
- signifie « la fonction `read` qui est membre de la classe `BufferedInput` qui est dans la portée de la classe `BufferedIO` ». Étant donné que cette déclaration utilise la syntaxe *qualified\-type\-name*, les constructions de la forme suivante sont possibles :  
+ signifie « la fonction `read` qui est membre de la classe `BufferedInput` qui est dans la portée de la classe `BufferedIO`  ». Étant donné que cette déclaration utilise le *qualified-type-name* syntaxe, les constructions de la forme suivante sont possibles :  
   
 ```  
 typedef BufferedIO::BufferedInput BIO_INPUT;  
@@ -155,10 +172,10 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()  
 ```  
   
- La déclaration ci\-dessus équivaut à la précédente, mais elle utilise un nom `typedef` au lieu des noms de classes.  
+ La déclaration ci-dessus équivaut à la précédente, mais elle utilise un nom `typedef` au lieu des noms de classes.  
   
-## Fonctions friend dans les classes imbriquées  
- Les fonctions friend déclarées dans une classe imbriquée sont considérées comme étant dans la portée de la classe imbriquée, pas dans la classe englobante.  Par conséquent, les fonctions friend ne comprennent pas de privilèges d'accès spéciaux sur les membres ou les fonctions membres de la classe englobante.  Si vous souhaitez utiliser un nom déclaré dans une classe imbriquée dans une fonction friend et que la fonction friend est définie dans la portée du fichier, utilisez les noms de types qualifiés comme suit :  
+## <a name="friend-functions-in-nested-classes"></a>Fonctions friend dans les classes imbriquées  
+ Les fonctions friend déclarées dans une classe imbriquée sont considérées comme étant dans la portée de la classe imbriquée, pas dans la classe englobante. Par conséquent, les fonctions friend ne comprennent pas de privilèges d'accès spéciaux sur les membres ou les fonctions membres de la classe englobante. Si vous souhaitez utiliser un nom déclaré dans une classe imbriquée dans une fonction friend et que la fonction friend est définie dans la portée du fichier, utilisez les noms de types qualifiés comme suit :  
   
 ```  
 // friend_functions_and_nested_classes.cpp  
@@ -204,7 +221,7 @@ int main()
 }  
 ```  
   
- Le code suivant illustre la fonction `GetExtendedErrorStatus` déclarée comme fonction friend.  Dans la fonction, définie dans la portée du fichier, un message est copié d'un tableau statique dans un membre de classe.  Notez qu'une meilleure implémentation de `GetExtendedErrorStatus` consiste à le déclarer comme suit :  
+ Le code suivant illustre la fonction `GetExtendedErrorStatus` déclarée comme fonction friend. Dans la fonction, définie dans la portée du fichier, un message est copié d'un tableau statique dans un membre de classe. Notez qu'une meilleure implémentation de `GetExtendedErrorStatus` consiste à le déclarer comme suit :  
   
 ```  
 int GetExtendedErrorStatus( char *message )  
@@ -212,5 +229,5 @@ int GetExtendedErrorStatus( char *message )
   
  Avec l'interface précédente, plusieurs classes peuvent utiliser les services de cette fonction en passant par un emplacement en mémoire où ils souhaitent copier le message d'erreur.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Classes et structs](../cpp/classes-and-structs-cpp.md)

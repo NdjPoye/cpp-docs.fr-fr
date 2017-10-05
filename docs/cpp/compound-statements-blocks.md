@@ -1,42 +1,59 @@
 ---
-title: "Instructions compos&#233;es (blocs) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "}"
-  - "{"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "blocs, à propos des blocs"
-  - "instructions composées"
+title: "Instructions composées (blocs) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '}'
+- '{'
+dev_langs:
+- C++
+helpviewer_keywords:
+- blocks, about blocks
+- compound statements
 ms.assetid: 23855939-7430-498e-8936-0c70055ea701
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Instructions compos&#233;es (blocs)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9dc28fde0ab2cf5b21771347554d0c664b7f462d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Une instruction composée se compose de zéro, une ou plusieurs instructions entre accolades \(**{ }**\).  Une instruction composée peut être utilisée partout où une instruction est attendue.  Les instructions composées sont généralement appelées « blocs ».  
+---
+# <a name="compound-statements-blocks"></a>Instructions composées (blocs)
+Une instruction composée se compose de zéro ou plusieurs instructions entourées accolades (**{}**). Une instruction composée peut être utilisée partout où une instruction est attendue. Les instructions composées sont généralement appelées « blocs ».  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 { [ statement-list ] }  
 ```  
   
-## Notes  
- L'exemple suivant utilise une instruction composée en tant que partie *statement* de l'instruction **if** \(consultez l'article [Instruction if](../cpp/if-else-statement-cpp.md) pour plus d'informations sur la syntaxe\) :  
+## <a name="remarks"></a>Remarques  
+ L’exemple suivant utilise une instruction composée comme le *instruction* dans le cadre de la **si** instruction (consultez [if instruction](../cpp/if-else-statement-cpp.md) pour plus d’informations sur la syntaxe) :  
   
 ```  
 if( Amount > 100 )  
@@ -45,11 +62,13 @@ if( Amount > 100 )
     Alert();  
 }  
 else  
+{
     Balance -= Amount;  
+}
 ```  
   
 > [!NOTE]
->  Comme une déclaration est une instruction, une déclaration peut être l'une des instructions figurant dans *statement\-list*.  Par conséquent, les noms déclarés au sein d'une instruction composée, mais pas explicitement déclarés comme statiques, ont une portée locale et \(pour les objets\) une durée de vie locale.  Consultez [Portée](../cpp/scope-visual-cpp.md) pour plus d'informations sur le traitement des noms avec une portée locale.  
+>  Comme une déclaration est une instruction, une déclaration peut être une des instructions dans le *-liste d’instructions*. Par conséquent, les noms déclarés au sein d'une instruction composée, mais pas explicitement déclarés comme statiques, ont une portée locale et (pour les objets) une durée de vie locale. Consultez [étendue](../cpp/scope-visual-cpp.md) pour plus d’informations sur le traitement des noms avec une portée locale.  
   
-## Voir aussi  
- [Vue d'ensemble des instructions C\+\+](../cpp/overview-of-cpp-statements.md)
+## <a name="see-also"></a>Voir aussi  
+ [Vue d’ensemble des instructions C++](../cpp/overview-of-cpp-statements.md)

@@ -1,34 +1,50 @@
 ---
-title: "Op&#233;rateur OR logique&#160;: || | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "||"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "|| (opérateur)"
-  - "opérateur logique OR"
-  - "OR (opérateur)"
-  - "OR (opérateur), logique"
+title: "Logique ou un opérateur : || | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '||'
+dev_langs:
+- C++
+helpviewer_keywords:
+- OR operator, logical
+- '|| operator'
+- OR operator
+- logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Op&#233;rateur OR logique&#160;: ||
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1784a3f0e7d069f7f7e2976fc7b71ea130d7c34b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-## Syntaxe  
+---
+# <a name="logical-or-operator-"></a>Opérateur OR logique : ||
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -38,25 +54,25 @@ logical-or-expression
   
 ```  
   
-## Notes  
- L'opérateur OR logique \(`||`\) retourne la valeur booléenne **true** si un ou les deux opérandes ont la valeur **true**, et retourne **false** dans le cas contraire.  Les opérandes sont convertis implicitement vers le type `bool` avant leur évaluation, et le résultat est de type `bool`.  L'opérateur OR logique présente une associativité de gauche à droite.  
+## <a name="remarks"></a>Remarques  
+ L’opérateur OR logique (`||`) retourne la valeur booléenne **true** si un ou les deux opérandes est **true** et retourne **false** dans le cas contraire. Les opérandes sont convertis implicitement vers le type `bool` avant leur évaluation, et le résultat est de type `bool`. L'opérateur OR logique présente une associativité de gauche à droite.  
   
- Les opérandes de l'opérateur OR logique ne sont pas nécessairement du même type, mais ils doivent être de type intégral ou pointeur.  Les opérandes sont souvent des expressions relationnelles ou d'égalité.  
+ Les opérandes de l'opérateur OR logique ne sont pas nécessairement du même type, mais ils doivent être de type intégral ou pointeur. Les opérandes sont souvent des expressions relationnelles ou d'égalité.  
   
  Le premier opérande doit être complètement évalué et tous les effets secondaires terminés pour que l'évaluation de l'expression OR logique se poursuive.  
   
- Le second opérande est évalué seulement si le premier opérande équivaut à false \(0\).  Cela permet d'éviter l'évaluation inutile du second opérande lorsque l'expression OR logique a pour valeur true.  
+ Le second opérande est évalué seulement si le premier opérande équivaut à false (0). Cela permet d'éviter l'évaluation inutile du second opérande lorsque l'expression OR logique a pour valeur true.  
   
 ```  
 printf( "%d" , (x == w || x == y || x == z) );  
 ```  
   
- Dans l'exemple ci\-dessus, si `x` est égal à `w`, à `y` ou à `z`, le second argument de la fonction `printf` équivaut à true et la valeur 1 est affichée.  Dans le cas contraire, il équivaut à false et la valeur 0 est affichée.  Dès que l'une des conditions équivaut à true, l'évaluation cesse.  
+ Dans l'exemple ci-dessus, si `x` est égal à `w`, à `y` ou à `z`, le second argument de la fonction `printf` équivaut à true et la valeur 1 est affichée. Dans le cas contraire, il équivaut à false et la valeur 0 est affichée. Dès que l'une des conditions équivaut à true, l'évaluation cesse.  
   
-## Mot clé d'opérateur pour &#124;&#124;  
- L'opérateur **or** est l'équivalent textuel de `||`.  Il existe deux manières d'accéder à l'opérateur **or** dans vos programmes : en incluant le fichier d'en\-tête `iso646.h` ou en compilant avec l'option [\/Za](../build/reference/za-ze-disable-language-extensions.md) \(Désactivation des extensions de langage\) du compilateur.  
+## <a name="operator-keyword-for-124124"></a>Mot clé operator pour &#124; &#124;  
+ Le **ou** opérateur est l’équivalent textuel de `||`. Il existe deux moyens d’accéder à la **ou** opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // expre_Logical_OR_Operator.cpp  
@@ -76,8 +92,6 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [Opérateurs logiques](../misc/logical-operators.md)   
- [Opérateurs C\+\+](../misc/cpp-operators.md)   
- [Opérateurs, priorité et associativité C\+\+](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>Voir aussi  
+[Les opérateurs C++ intégrés priorité et associativité](cpp-built-in-operators-precedence-and-associativity.md) [C++ intégrés opérateurs, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Opérateurs logiques C](../c-language/c-logical-operators.md)

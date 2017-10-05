@@ -1,62 +1,78 @@
 ---
-title: "Sp&#233;cificateurs | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "spécificateurs de déclaration"
-  - "déclarations, spécificateurs"
-  - "spécificateurs, dans les déclarations"
+title: "Spécificateurs | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declaration specifiers
+- declarations, specifiers
+- specifiers, in declarations
 ms.assetid: 8b14e844-9880-4571-8779-28c8efe44633
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Sp&#233;cificateurs
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c67ae6ce353ee48635df1b3be6b124344cdd4e91
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Cette rubrique décrit le composant *decl\-specifiers* \(spécificateurs de déclaration\) d'une [déclaration](../misc/declarations.md).  
+---
+# <a name="specifiers"></a>Spécificateurs
+Cette rubrique décrit la *decl-specifiers* composant (spécificateurs de déclaration) d’un [déclaration](declarations-and-definitions-cpp.md).  
   
  Les espaces réservés et les mots clés de langage suivants sont des spécificateurs de déclaration :  
   
- *storage\-class\-specifier*  
+ *spécificateur de classe de stockage*  
   
- *type\-specifier*  
+ *spécificateur de type*  
   
- *function\-specifier*  
+ *spécificateur de fonction*  
   
- [friend](../cpp/friend-cpp.md)  
+ [Friend](../cpp/friend-cpp.md)  
   
- [typedef](http://msdn.microsoft.com/fr-fr/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
+ [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
   
- [\_\_declspec](../cpp/declspec.md) `(` *extended\-decl\-modifier\-seq* `)`  
+ [__declspec](../cpp/declspec.md) `(` *extended-decl-modifier-seq*`)`  
   
-## Notes  
- La partie *decl\-specifiers* d'une déclaration est la plus longue séquence de *decl\-specifiers* pouvant être prise pour indiquer un nom de type, sans inclure le pointeur ni les modificateurs de référence.  Le reste de la déclaration est l'élément *declarator* qui inclut le nom introduit.  
+## <a name="remarks"></a>Remarques  
+ Le *decl-specifiers* partie d’une déclaration est la plus longue séquence de *decl-specifiers* qui peuvent être prises pour signifier un nom de type, sans inclure le pointeur ou de modificateurs de référence. Le reste de la déclaration est la *déclarateur*, qui inclut le nom introduit.  
   
- Le tableau suivant répertorie quatre déclarations, puis présente les composants *decl\-specifers* et *declarator* de chacune d'elles séparément.  
+ Le tableau suivant répertorie quatre déclarations et puis de chaque déclaration *decl-specifers* et *déclarateur* composant séparément.  
   
-|Déclaration|*decl\-specifiers*|`declarator`|  
+|Déclaration|*decl-specifiers*|`declarator`|  
 |-----------------|------------------------|------------------|  
 |`char *lpszAppName;`|`char`|`*lpszAppName`|  
 |`typedef char * LPSTR;`|`char`|`*LPSTR`|  
 |`const int func1();`|`const int`|`func1`|  
 |`volatile void *pvvObj;`|`volatile void`|`*pvvObj`|  
   
- Comme `signed`, `unsigned`, `long` et `short` impliquent tous `int`, un nom `typedef` suivant l'un de ces mots clés est pris pour être membre de *declarator\-list*, et non de *decl\-specifiers*.  
+ Étant donné que `signed`, `unsigned`, `long`, et `short` impliquent tous `int`, un `typedef` nom suivant une de ces mots clés est considérée comme un membre de *declarator-list,* pas de *decl-specifiers*.  
   
 > [!NOTE]
->  Comme un nom peut être redéclaré, sa traduction est soumise à la déclaration la plus récente de la portée actuelle.  Une nouvelle déclaration peut affecter la façon dont les noms sont interprétés par le compilateur, notamment des noms `typedef`.  
+>  Comme un nom peut être redéclaré, sa traduction est soumise à la déclaration la plus récente de la portée actuelle. Une nouvelle déclaration peut affecter la façon dont les noms sont interprétés par le compilateur, notamment des noms `typedef`.  
   
-## Voir aussi  
- [Déclarations](../misc/declarations.md)
+## <a name="see-also"></a>Voir aussi  
+ [Déclarations et définitions](declarations-and-definitions-cpp.md)

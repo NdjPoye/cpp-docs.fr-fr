@@ -1,51 +1,67 @@
 ---
-title: "Fonctions avec listes d&#39;arguments variables (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "listes d'arguments (C++), nombre variable de"
-  - "arguments (C++), nombre variable de"
-  - "déclarateurs, fonctions"
-  - "déclarer des fonctions, variables"
-  - "appels de fonction, nombre variable d'arguments"
-  - "listes d'arguments de variable"
+title: "Fonctions avec listes d’arguments variables (C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], variable number of
+- variable argument lists
+- declarators, functions
+- argument lists [C++], variable number of
+- declaring functions, variables
+- function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Fonctions avec listes d&#39;arguments variables (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e7a1f434b9c286bfa625d703023080f55586f0a8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Les déclarations de fonction dans lesquelles le dernier membre d'argument\-declaration\-list est représenté par les points de suspension \(...\) peuvent prendre une quantité variable d'arguments.  Dans ces cas\-là, C\+\+ fournit une vérification du type uniquement pour les arguments déclarés explicitement.  Vous pouvez utiliser des listes d'arguments variables lorsque vous devez rendre une fonction si générale que même le nombre et les types des arguments peuvent varier.  La famille de fonctions printf est un exemple de fonctions qui utilisent des listes d'arguments de variables.`printf`*argument\-declaration\-list*  
+---
+# <a name="functions-with-variable-argument-lists--c"></a>Répertorie les fonctions avec des arguments de Variable (C++)
+Les déclarations de fonction dans lesquelles le dernier membre d’argument-declaration-list est représenté par les points de suspension (...) peuvent prendre une quantité variable d’arguments. Dans ces cas-là, C++ fournit une vérification du type uniquement pour les arguments déclarés explicitement. Vous pouvez utiliser des listes d’arguments variables lorsque vous devez rendre une fonction si générale que même le nombre et les types des arguments peuvent varier. La famille de fonctions est un exemple de fonctions qui utilisent des listes d’arguments variables. `printf` *argument-declaration-list.*  
   
-## Fonctions avec des arguments de variables  
- Pour accéder aux arguments après ceux qui sont déclarés, utilisez les macros contenues dans le fichier Include standard STDARG.H comme décrit ci\-dessous.  
+## <a name="functions-with-variable-arguments"></a>Fonctions avec des arguments de variables  
+ Pour accéder aux arguments après ceux qui sont déclarés, utilisez les macros contenues dans le fichier Include standard STDARG.H comme décrit ci-dessous.  
   
  **Section spécifique à Microsoft**  
   
- Microsoft C\+\+ autorise la spécification de l'ellipse comme argument s'il s'agit du dernier argument et qu'elle est précédée d'une virgule.  Par conséquent, la déclaration `int Func( int i, ... );` est conforme, contrairement à `int Func( int i ... );`.  
+ Microsoft C++ autorise la spécification de l’ellipse comme argument s’il s’agit du dernier argument et qu’elle est précédée d’une virgule. Par conséquent, la déclaration `int Func( int i, ... );` est conforme, contrairement à `int Func( int i ... );`.  
   
  **FIN de la section spécifique à Microsoft**  
   
- La déclaration d'une fonction qui accepte une quantité variable d'arguments nécessite au moins un argument d'espace réservé, même si elle n'est pas utilisée.  Si cet argument d'espace réservé n'est pas fourni, il est impossible d'accéder aux arguments restants.  
+ La déclaration d’une fonction qui accepte une quantité variable d’arguments nécessite au moins un argument d’espace réservé, même si elle n’est pas utilisée. Si cet argument d'espace réservé n'est pas fourni, il est impossible d'accéder aux arguments restants.  
   
- Lorsque des arguments de type `char` sont passés comme arguments variables, ils sont convertis en type `int`.  De même, lorsque des arguments de type **float** sont passés comme arguments variables, ils sont convertis en type **double**.  Les arguments d'autres types sont soumis aux promotions intégrales et à virgule flottante classiques.  Pour plus d'informations, consultez [Promotions intégrales](../misc/integral-promotions.md).  
+ Lorsque des arguments de type `char` sont passés comme arguments variables, ils sont convertis en type `int`. De même, lorsque les arguments de type **float** sont passés comme arguments variables, ils sont convertis en type **double**. Les arguments d'autres types sont soumis aux promotions intégrales et à virgule flottante classiques. Consultez [Conversions Standard](standard-conversions.md) pour plus d’informations.  
   
- Les fonctions qui requièrent des listes de variables sont déclarées avec des points de suspension \(...\) dans la liste d'arguments.  Utilisez les types et les macros décrits dans le fichier Include STDARG.H pour accéder aux arguments passés par une liste de variables.  Pour plus d'informations sur ces macros, consultez [va\_arg, va\_copy, va\_end, va\_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md).  dans la documentation de la bibliothèque Runtime C.  
+ Les fonctions qui requièrent des listes de variables sont déclarées avec des points de suspension (...) dans la liste d’arguments. Utilisez les types et les macros décrits dans le fichier Include STDARG.H pour accéder aux arguments passés par une liste de variables. Pour plus d’informations sur ces macros, consultez [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). dans la documentation de la bibliothèque Runtime C.  
   
- L'exemple ci\-dessous montre comment les macros fonctionnent avec le type \(déclaré dans STDARG.H\) : `va_list` `va_end` `va_arg` `va_start`  
+ L’exemple suivant montre comment les macros fonctionnent avec le type (déclaré dans STDARG. (H) : 
   
 ```  
 // variable_argument_lists.cpp  
@@ -121,11 +137,11 @@ void ShowVar( char *szTypes, ... ) {
 // Test string  
 ```  
   
- L'exemple ci\-dessus illustre les concepts importants suivants :  
+ L'exemple ci-dessus illustre les concepts importants suivants :  
   
-1.  Vous devez établir un marqueur de liste en tant que variable de type `va_list` avant d'accéder à tout argument variable.  Dans l'exemple précédent, le marqueur est appelé `vl`.  
+1.  Vous devez établir un marqueur de liste en tant que variable de type `va_list` avant d'accéder à tout argument variable. Dans l'exemple précédent, le marqueur est appelé `vl`.  
   
-2.  L'accès aux arguments individuels s'effectue à l'aide de la macro `va_arg`.  Vous devez indiquer à la macro `va_arg` le type d'argument à extraire afin qu'elle puisse transférer le nombre correct d'octets de la pile.  Si vous spécifiez un type incorrect d'une taille différente de celle fournie par le programme appelant à `va_arg`, les résultats sont imprévisibles.  
+2.  L'accès aux arguments individuels s'effectue à l'aide de la macro `va_arg`. Vous devez indiquer à la macro `va_arg` le type d'argument à extraire afin qu'elle puisse transférer le nombre correct d'octets de la pile. Si vous spécifiez un type incorrect d'une taille différente de celle fournie par le programme appelant à `va_arg`, les résultats sont imprévisibles.  
   
 3.  Vous devez effectuer un cast explicite du résultat obtenu à l'aide de la macro `va_arg` vers le type souhaité.  
   

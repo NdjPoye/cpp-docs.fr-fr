@@ -1,59 +1,66 @@
 ---
-title: "__thiscall | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__thiscall"
-  - "__thiscall_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__thiscall (mot clé) (C++)"
+title: __thiscall | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __thiscall
+- __thiscall_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# __thiscall
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 41dd6d823d9889f5ce0216b27ad01a8d29bc57f6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-## Spécifique à Microsoft  
- La convention d'appel `__thiscall` est utilisé sur les fonctions membres et est la convention d'appel par défaut utilisée par les fonctions membres C\+\+ qui n'utilisent pas d'arguments variables.  Sous `__thiscall`, l'appelé nettoie la pile, ce qui est impossible pour les fonctions `vararg`.  Les arguments sont l'objet d'un push sur la pile de droite à gauche, avec le pointeur `this` passé via le registre ECX, et non sur la pile, dans l'architecture x86.  
+---
+# <a name="thiscall"></a>__thiscall
+## <a name="microsoft-specific"></a>Section spécifique à Microsoft  
+ Le `__thiscall` convention d’appel est utilisé sur les fonctions membres et est la convention d’appel par défaut utilisé par les fonctions membres C++ qui n’utilisent pas d’arguments variables. Sous `__thiscall`, l’appelé nettoie la pile, qui est impossible pour `vararg` fonctions. Arguments sont insérés dans la pile de droite à gauche, avec le `this` pointeur transmis via le Registre ECX et non sur la pile, dans le x86 architecture.  
   
- Une raison d'utiliser `__thiscall` est dans les classes dont les fonctions membres utilisent `__clrcall` par défaut.  Dans ce cas, vous pouvez utiliser `__thiscall` pour rendre différentes fonctions membres appelables depuis le code natif.  
+ L’une des raisons d’utiliser `__thiscall` est dans les classes dont le membre fonctions utilisent `__clrcall` par défaut. Dans ce cas, vous pouvez utiliser `__thiscall` pour rendre les fonctions membre individuel peut être appelée à partir du code natif.  
   
- Lors de la compilation avec [\/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), toutes les fonctions et pointeurs fonction sont `__clrcall` sauf indication contraire.  
+ Lors de la compilation avec [/CLR : pure](../build/reference/clr-common-language-runtime-compilation.md), tous les pointeurs de fonction et les fonctions sont `__clrcall` , sauf indication contraire. Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.  
   
- Dans les versions antérieures à Visual C\+\+ 2005, la convention d'appel de thiscall ne pouvait pas être spécifiée explicitement dans un programme, car `thiscall` n'était pas un mot clé.  
+ Dans les versions antérieures à Visual C++ 2005, la convention d’appel thiscall ne peut pas être explicitement spécifiée dans un programme, car `thiscall` n’était pas un mot clé.  
   
- Les fonctions membres `vararg` utilisent la convention d'appel `__cdecl`.  Tous les arguments de fonction font l'objet d'un push sur la pile, le pointeur d' `this` étant placé sur le bout de pile  
+ `vararg`Utilisez les fonctions membres le `__cdecl` convention d’appel. Tous les arguments de fonction sont insérés dans la pile, avec le `this` pointeur placées en dernier dans la pile  
   
- Puisque cette convention d'appel s'applique uniquement à C\+\+, il n'existe aucun modèle de nom de décoration C.  
+ Étant donné que cette convention d’appel s’applique uniquement à C++, il n’existe aucun schéma de décoration de nom C.  
   
- Pour les ordinateurs ARM et les ordinateurs [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], `__thiscall` est accepté et ignoré par le compilateur.  
+ Sur ARM et [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] machines, `__thiscall` est accepté et ignoré par le compilateur.  
   
- Pour les fonctions de classe non statiques, si la fonction est définie hors ligne, il n'est pas nécessaire de spécifier le modificateur de convention d'appel dans la définition hors ligne.  En d'autres termes, pour les méthodes membres non statiques de classe, la convention d'appel spécifiée pendant la déclaration est prise par défaut au point de définition.  
+ Pour les fonctions de classe non statiques, si la fonction est définie hors ligne, il n’est pas nécessaire de spécifier le modificateur de convention d’appel dans la définition hors ligne. En d’autres termes, pour les méthodes membres non statiques de classe, la convention d’appel spécifiée dans le cadre de la déclaration est utilisée par défaut au stade de la définition.  
   
-## Exemple  
+**FIN de la section spécifique à Microsoft**  
   
-```  
-// thiscall_cc.cpp  
-// compile with: /c /clr:oldSyntax  
-struct CMyClass {  
-   void __thiscall mymethod();  
-   void __clrcall mymethod2();  
-};  
-```  
-  
-## END Spécifique à Microsoft  
-  
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Passage des arguments et conventions de dénomination](../cpp/argument-passing-and-naming-conventions.md)

@@ -1,31 +1,47 @@
 ---
-title: "Constructeurs de d&#233;placement et op&#233;rateurs d&#39;assignation de d&#233;placement (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "move (constructeur)"
+title: "Constructeurs de déplacement et opérateurs d’assignation de déplacement (C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- move constructor
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Constructeurs de d&#233;placement et op&#233;rateurs d&#39;assignation de d&#233;placement (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 07debd120c7757c049d1e3d23dfe1bb065a3cc17
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Cette rubrique explique comment écrire un *constructeur de déplacement* et un opérateur d'assignation de déplacement pour une classe C\+\+.  Un constructeur de déplacement vous permet d'implémenter une sémantique de déplacement, qui peut améliorer considérablement les performances de vos applications.  Pour plus d'informations sur la sémantique de mouvement, consultez [Déclarateur de référence Rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+---
+# <a name="move-constructors-and-move-assignment-operators-c"></a>Constructeurs de déplacement et opérateurs d'assignation de déplacement (C++)
+Cette rubrique explique comment écrire un *constructeur de déplacement* et un opérateur d’assignation de déplacement pour une classe C++. Un constructeur de déplacement vous permet d'implémenter une sémantique de déplacement, qui peut améliorer considérablement les performances de vos applications. Pour plus d’informations sur la sémantique de déplacement, consultez [déclarateur de référence Rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
- Cette rubrique repose sur la classe C\+\+ suivante, `MemoryBlock`, qui gère une mémoire tampon.  
+ Cette rubrique repose sur la classe C++ suivante, `MemoryBlock`, qui gère une mémoire tampon.  
   
 ```cpp  
 // MemoryBlock.h  
@@ -103,9 +119,9 @@ private:
 };  
 ```  
   
- Les procédures suivantes décrivent comment écrire un constructeur de déplacement ou un opérateur d'assignation de déplacement pour l'exemple de classe C\+\+.  
+ Les procédures suivantes décrivent comment écrire un constructeur de déplacement ou un opérateur d'assignation de déplacement pour l'exemple de classe C++.  
   
-### Pour créer un constructeur de déplacement pour une classe C\+\+  
+### <a name="to-create-a-move-constructor-for-a-c-class"></a>Pour créer un constructeur de déplacement pour une classe C++  
   
 1.  Définissez une méthode de constructeur vide qui accepte une référence rvalue au type de classe comme paramètre, comme illustré dans l'exemple suivant :  
   
@@ -124,14 +140,14 @@ private:
     _length = other._length;  
     ```  
   
-3.  Assignez les données membres de l'objet source aux valeurs par défaut.  Cela empêche le destructeur de libérer des ressources \(telles que de la mémoire\) à plusieurs reprises :  
+3.  Assignez les données membres de l'objet source aux valeurs par défaut. Cela empêche le destructeur de libérer des ressources (telles que de la mémoire) à plusieurs reprises :  
   
     ```cpp  
     other._data = nullptr;  
     other._length = 0;  
     ```  
   
-### Pour créer un opérateur d'assignation de déplacement pour une classe C\+\+  
+### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>Pour créer un opérateur d'assignation de déplacement pour une classe C++  
   
 1.  Définissez un opérateur d'assignation vide qui accepte une référence rvalue au type de classe comme paramètre et retourne une référence au type de classe, comme illustré dans l'exemple suivant :  
   
@@ -141,7 +157,7 @@ private:
     }  
     ```  
   
-2.  Dans l'opérateur d'assignation de déplacement, ajoutez une instruction conditionnelle qui n'effectue aucune opération si vous essayez d'assigner l'objet à lui\-même.  
+2.  Dans l'opérateur d'assignation de déplacement, ajoutez une instruction conditionnelle qui n'effectue aucune opération si vous essayez d'assigner l'objet à lui-même.  
   
     ```cpp  
     if (this != &other)  
@@ -149,7 +165,7 @@ private:
     }  
     ```  
   
-3.  Dans l'instruction conditionnelle, libérez des ressources \(telles que de la mémoire\) à partir de l'objet auquel elles sont assignées.  
+3.  Dans l'instruction conditionnelle, libérez des ressources (telles que de la mémoire) à partir de l'objet auquel elles sont assignées.  
   
      L'exemple suivant libère le membre `_data` de l'objet auquel il est assigné :  
   
@@ -178,8 +194,8 @@ private:
     return *this;  
     ```  
   
-## Exemple  
- L'exemple suivant montre le constructeur de déplacement et l'opérateur d'assignation de déplacement complets pour la classe `MemoryBlock` :  
+## <a name="example"></a>Exemple  
+ L'exemple suivant montre le constructeur de déplacement et l'opérateur d'assignation de déplacement complets pour la classe `MemoryBlock` :  
   
 ```cpp  
 // Move constructor.  
@@ -226,8 +242,8 @@ MemoryBlock& operator=(MemoryBlock&& other)
 }  
 ```  
   
-## Exemple  
- L'exemple suivant montre comment la sémantique de déplacement peut améliorer les performances de vos applications.  L'exemple ajoute deux éléments à un objet vectoriel, puis insère un nouvel élément entre les deux éléments existants.  Dans [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)], la classe `vector` utilise la sémantique de déplacement pour exécuter efficacement l'opération d'insertion en déplaçant les éléments du vecteur au lieu de les copier.  
+## <a name="example"></a>Exemple  
+ L'exemple suivant montre comment la sémantique de déplacement peut améliorer les performances de vos applications. L'exemple ajoute deux éléments à un objet vectoriel, puis insère un nouvel élément entre les deux éléments existants. Dans Visual C++ 2010, la `vector` classe utilise sémantique de déplacement pour effectuer l’opération d’insertion efficace en déplaçant les éléments du vecteur au lieu de les copier.  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -272,7 +288,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- Avant [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)], cet exemple génère la sortie suivante :  
+ Avant Visual C++ 2010, cet exemple génère la sortie suivante :  
   
 ```  
 In MemoryBlock(size_t). length = 25.  
@@ -297,12 +313,12 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  La version de cet exemple qui utilise la sémantique de déplacement est plus efficace que celle qui ne l'utilise pas, car elle exécute moins d'opérations de copie, d'allocation de mémoire et de libération de mémoire.  
   
-## Programmation fiable  
- Pour éviter les fuites de ressources, libérez toujours des ressources \(telles que la mémoire, les handles de fichiers et les sockets\) dans l'opérateur d'assignation de déplacement.  
+## <a name="robust-programming"></a>Programmation fiable  
+ Pour éviter les fuites de ressources, libérez toujours des ressources (telles que la mémoire, les handles de fichiers et les sockets) dans l'opérateur d'assignation de déplacement.  
   
- Pour empêcher la destruction irrécupérable des ressources, gérez correctement l'auto\-assignation dans l'opérateur d'assignation de déplacement.  
+ Pour empêcher la destruction irrécupérable des ressources, gérez correctement l'auto-assignation dans l'opérateur d'assignation de déplacement.  
   
- Si vous fournissez un constructeur de déplacement et un opérateur d'assignation de déplacement pour votre classe, vous pouvez supprimer le code redondant en écrivant le constructeur de déplacement de sorte qu'il appelle l'opérateur d'assignation de déplacement.  L'exemple suivant présente une version modifiée du constructeur de déplacement qui appelle l'opérateur d'assignation de déplacement :  
+ Si vous fournissez un constructeur de déplacement et un opérateur d'assignation de déplacement pour votre classe, vous pouvez supprimer le code redondant en écrivant le constructeur de déplacement de sorte qu'il appelle l'opérateur d'assignation de déplacement. L'exemple suivant présente une version modifiée du constructeur de déplacement qui appelle l'opérateur d'assignation de déplacement :  
   
 ```  
 // Move constructor.  
@@ -314,8 +330,8 @@ MemoryBlock(MemoryBlock&& other)
 }  
 ```  
   
- La fonction [std::move](../Topic/move.md) conserve la propriété rvalue du paramètre `other`.  
+ Le [std::move](../standard-library/utility-functions.md#move) fonction conserve la propriété rvalue de le `other` paramètre.  
   
-## Voir aussi  
- [Déclarateur de référence Rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<utility\> move](http://msdn.microsoft.com/fr-fr/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+## <a name="see-also"></a>Voir aussi  
+ [Déclarateur de référence rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
+ [\<utilitaire > déplacer](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

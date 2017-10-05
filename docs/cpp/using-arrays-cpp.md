@@ -1,29 +1,45 @@
 ---
-title: "Utilisation de tableaux (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tableaux (C++)"
+title: Utilisation des tableaux (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [C++]
 ms.assetid: 7818a7fe-7e82-4881-a3d1-7d25162b7fc7
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Utilisation de tableaux (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 31402e2f113deb89fce6d2d8b6c3633f06a944be
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Vous pouvez accéder à des éléments d'un tableau en utilisant l'opérateur d'indice de tableau \(`[ ]`\).  Si un tableau unidimensionnel est utilisé dans une expression sans indice, le nom de tableau correspond à un pointeur au premier élément du tableau.  
+---
+# <a name="using-arrays-c"></a>Utilisation de tableaux (C++)
+Vous pouvez accéder à des éléments individuels d’un tableau à l’aide de l’opérateur d’indice de tableau (`[ ]`). Si un tableau unidimensionnel est utilisé dans une expression qui ne comporte aucun indice, le nom du tableau a la valeur un pointeur vers le premier élément du tableau.  
   
 ```  
 // using_arrays.cpp  
@@ -35,7 +51,7 @@ int main() {
 }  
 ```  
   
- Lorsque vous utilisez des tableaux multidimensionnels, vous pouvez utiliser différentes combinaisons dans des expressions.  
+ Lorsque vous utilisez des tableaux multidimensionnels, vous pouvez utiliser différentes combinaisons dans les expressions.  
   
 ```  
 // using_arrays_2.cpp  
@@ -56,7 +72,7 @@ int main() {
 }  
 ```  
   
- Dans le code précédent, `multi` est un tableau à trois dimensions de type `double`.  Le pointeur `p2multi` pointe vers un tableau de type `double` de taille trois.  Dans cet exemple, le tableau est utilisé avec un, deux, et trois indices.  Bien qu'il soit plus courant de spécifier tous les indices, comme dans l'instruction `cout`, il est parfois utile de sélectionner un sous\-ensemble spécifique d'éléments de tableau, comme indiqué dans les instructions qui suivent `cout`.  
+ Dans le code précédent, `multi` est un tableau à trois dimensions de type `double`. Le `p2multi` pointeur pointe vers un tableau de type `double` de taille de trois. Dans cet exemple, le tableau est utilisé avec un, deux et trois indices. Bien qu’il soit plus courant pour spécifier tous les indices, comme dans le `cout` instruction, il est parfois utile de sélectionner un sous-ensemble spécifique d’éléments de tableau, comme indiqué dans les instructions qui suivent `cout`.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tableaux](../cpp/arrays-cpp.md)

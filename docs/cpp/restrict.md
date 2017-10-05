@@ -1,54 +1,72 @@
 ---
-title: "__restrict | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__restrict"
-  - "__restrict_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__restrict (mot clé) (C++)"
+title: restreindre | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- restrict
+- restrict_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++], restrict
+- restrict __declspec keyword
 ms.assetid: f39cf632-68d8-4362-a497-2d4c15693689
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# restrict
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 2d1cdbff84966e7926b30ef70c40581cc3801a93
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="restrict"></a>restrict
 **Section spécifique à Microsoft**  
   
  Appliqué à une déclaration ou une définition de fonction qui retourne un type pointeur et indique au compilateur que la fonction retourne un objet qui n'aura pas comme alias un autre pointeur.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 __declspec(restrict) return_type f();  
 ```  
   
-## Notes  
- Le compilateur propage `__declspec(restrict)`.  Par exemple, la fonction CRT `malloc` est décorée avec `__declspec(restrict)`. Par conséquent, les pointeurs initialisés à des emplacements de mémoire avec `malloc` sont également supposés ne pas avoir d'alias.  
+## <a name="remarks"></a>Remarques  
+ Le compilateur propage `__declspec(restrict)`. Par exemple, la fonction CRT `malloc` est décorée avec `__declspec(restrict)`. Par conséquent, les pointeurs initialisés à des emplacements de mémoire avec `malloc` sont également supposés ne pas avoir d'alias.  
   
- Le compilateur ne vérifie pas que le pointeur n'a pas réellement d'alias.  Il incombe au développeur de s'assurer que le programme n'attribue pas d'alias à un pointeur marqué avec le modificateur `restrict __declspec`.  
+ Le compilateur ne vérifie pas que le pointeur n'a pas réellement d'alias. Il incombe au développeur de s'assurer que le programme n'attribue pas d'alias à un pointeur marqué avec le modificateur `restrict __declspec`.  
   
- Pour plus d'informations sur la sémantique semblable concernant les variables, consultez [\_\_restrict](../cpp/extension-restrict.md).  
+ Pour une sémantique similaire sur les variables, consultez [__restrict](../cpp/extension-restrict.md).  
   
-## Exemple  
- Pour obtenir un exemple utilisant `restrict`, consultez [noalias](../cpp/noalias.md).  
+## <a name="example"></a>Exemple  
+ Consultez [noalias](../cpp/noalias.md) pour un exemple en utilisant `restrict`.  
   
- Pour plus d'informations sur le mot clé restrict qui fait partie de C\+\+ AMP, consultez [restrict \(C\+\+ AMP\)](../cpp/restrict-cpp-amp.md).  
+ Pour plus d’informations sur le mot clé restrict qui fait partie de C++ AMP, consultez [restrict (C++ AMP)](../cpp/restrict-cpp-amp.md).  
   
  **FIN de la section spécifique à Microsoft**  
   
-## Voir aussi  
- [\_\_declspec](../cpp/declspec.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [__declspec](../cpp/declspec.md)   
+ [Mots clés](../cpp/keywords-cpp.md)

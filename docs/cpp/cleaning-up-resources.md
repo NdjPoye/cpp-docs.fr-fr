@@ -1,44 +1,61 @@
 ---
-title: "Nettoyage des ressources | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestion d'exceptions C++, gestionnaires de terminaisons"
-  - "gestion des exceptions, nettoyer des ressources"
-  - "gestion des exceptions, code de nettoyage"
-  - "ressources (C++), nettoyage"
-  - "gestionnaires de terminaisons, nettoyer des ressources"
-  - "try-catch (mot clé) (C++), gestionnaires de terminaisons"
+title: Nettoyage des ressources | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- termination handlers, cleaning up resources
+- exception handling, cleaning up resources
+- C++ exception handling, termination handlers
+- resources [C++], cleaning up
+- exception handling, cleanup code
+- try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Nettoyage des ressources
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 830fd773536b9ab16aeced2b64d2a4062961bd1b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Pendant l'exécution du gestionnaire de terminaisons, il est possible que vous ne sachiez pas quelles ressources ont été réellement allouées avant l'appel du gestionnaire de terminaisons.  Il est possible que le bloc d'instructions `__try` ait été interrompu avant l'allocation de toutes les ressources, afin que toutes les ressources ne soient pas ouvertes.  
+---
+# <a name="cleaning-up-resources"></a>Nettoyage des ressources
+Pendant l'exécution du gestionnaire de terminaisons, il est possible que vous ne sachiez pas quelles ressources ont été réellement allouées avant l'appel du gestionnaire de terminaisons. Il est possible que le bloc d'instructions `__try` ait été interrompu avant l'allocation de toutes les ressources, afin que toutes les ressources ne soient pas ouvertes.  
   
- Ainsi, par sécurité, vous devez vérifier les ressources qui sont réellement ouvertes avant de procéder au nettoyage de la gestion du bloc de fin.  Voici une procédure recommandée :  
+ Ainsi, par sécurité, vous devez vérifier les ressources qui sont réellement ouvertes avant de procéder au nettoyage de la gestion du bloc de fin. Voici une procédure recommandée :  
   
 1.  Initialiser les handles sur NULL.  
   
-2.  Dans le bloc d'instructions `__try`, allouer les ressources.  Les handles sont définis sur des valeurs positives lorsque la ressource est allouée.  
+2.  Dans le bloc d'instructions `__try`, allouer les ressources. Les handles sont définis sur des valeurs positives lorsque la ressource est allouée.  
   
 3.  Dans le bloc d'instructions `__finally`, libérez chaque ressource dont la variable de handle ou de type indicateur est différente de zéro ou non Null.  
   
-## Exemple  
- Par exemple, le code suivant utilise un gestionnaire de terminaisons pour fermer trois fichiers et un bloc de mémoire alloués dans le bloc d'instructions `__try`.  Avant de nettoyer une ressource, le code vérifie si elle a été allouée.  
+## <a name="example"></a>Exemple  
+ Par exemple, le code suivant utilise un gestionnaire de terminaisons pour fermer trois fichiers et un bloc de mémoire alloués dans le bloc d'instructions `__try`. Avant de nettoyer une ressource, le code vérifie si elle a été allouée.  
   
 ```  
 // exceptions_Cleaning_up_Resources.cpp  
@@ -78,6 +95,6 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
- [Écriture d'un gestionnaire des terminaisons](../cpp/writing-a-termination-handler.md)   
- [Gestion structurée des exceptions](../cpp/structured-exception-handling-c-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [L’écriture d’un gestionnaire de terminaisons](../cpp/writing-a-termination-handler.md)   
+ [Gestion structurée des exceptions (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

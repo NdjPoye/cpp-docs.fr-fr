@@ -1,33 +1,50 @@
 ---
-title: "Utilisation d&#39;exit ou return | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Exit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exit (fonction)"
-  - "return (mot clé) (C++), utiliser pour arrêter les programmes"
+title: "À l’aide de sortie ou de retour | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- Exit
+dev_langs:
+- C++
+helpviewer_keywords:
+- exit function
+- return keyword [C++], using for program termination
 ms.assetid: b5136c5c-2505-4229-8691-2a1d6a98760b
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Utilisation d&#39;exit ou return
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9fc6588a6593559314774e30a4d65c5a60779eb5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Lorsque vous appelez **exit** ou exécutez une instruction `return` à partir de **main**, les objets statiques sont détruits dans l'ordre inverse de leur initialisation.  L'exemple suivant montre comment ce type d'initialisation et de nettoyage fonctionne.  
+---
+# <a name="using-exit-or-return"></a>Utilisation d'exit ou return
+Lorsque vous appelez **quitter** ou exécuter un `return` instruction à partir de **principal**, les objets statiques sont détruits dans l’ordre inverse de leur initialisation. L'exemple suivant montre comment ce type d'initialisation et de nettoyage fonctionne.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // using_exit_or_return1.cpp  
@@ -65,7 +82,7 @@ int main() {
 }  
 ```  
   
- Dans l'exemple précédent, les objets statiques `sd1` et `sd2` sont créés et initialisés avant l'entrée dans `main`.  Une fois ce programme terminé avec l'instruction `return`, le premier objet `sd2` est détruit, puis `sd1`.  Le destructeur de la classe `ShowData` ferme les fichiers associés à ces objets statiques. \(Pour plus d'informations sur l'initialisation, les constructeurs et les destructeurs, consultez [Fonctions membres spéciales](../misc/special-member-functions-cpp.md).\)  
+ Dans l'exemple précédent, les objets statiques `sd1` et `sd2` sont créés et initialisés avant l'entrée dans `main`. Une fois ce programme terminé avec l'instruction `return`, le premier objet `sd2` est détruit, puis `sd1`. Le destructeur de la classe `ShowData` ferme les fichiers associés à ces objets statiques.   
   
  Une autre façon d'écrire ce code consiste à déclarer les objets `ShowData` avec portée de bloc, ce qui permet leur description lorsqu'ils sont hors de portée :  
   
@@ -78,5 +95,5 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Considérations supplémentaires sur la terminaison](../cpp/additional-termination-considerations.md)

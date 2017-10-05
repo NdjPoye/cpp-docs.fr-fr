@@ -1,43 +1,59 @@
 ---
-title: "Surcharge d&#39;op&#233;rateurs d&#39;incr&#233;mentation et de d&#233;cr&#233;mentation (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opérateurs de décrémentation"
-  - "opérateurs de décrémentation, types de"
-  - "opérateur d'incrémentation"
-  - "opérateur d'incrémentation, types de"
+title: "Incrémentation et décrémentation surcharge d’opérateur (C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- increment operators
+- increment operators, types of
+- decrement operators
+- decrement operators, types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Surcharge d&#39;op&#233;rateurs d&#39;incr&#233;mentation et de d&#233;cr&#233;mentation (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 432863fd2d1600ff0e82a69813c0513a32c56612
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="increment-and-decrement-operator-overloading-c"></a>Surcharge d'opérateurs d'incrémentation et de décrémentation (C++)
 Les opérateurs d'incrémentation et de décrémentation appartiennent à une catégorie spéciale car chacun comporte deux variantes :  
   
 -   Incrémentation préfixée et incrémentation suffixée  
   
 -   Décrémentation préfixée et décrémentation suffixée  
   
- Lorsque vous écrivez des fonctions d'opérateur surchargées, il peut être utile d'implémenter des versions distinctes des versions préfixées et suffixées de ces opérateurs.  Pour distinguer les deux, la règle suivante est observée : la forme préfixée de l'opérateur est déclarée exactement de la même manière que tout autre opérateur unaire. La forme suffixée accepte un argument supplémentaire de type `int`.  
+ Lorsque vous écrivez des fonctions d'opérateur surchargées, il peut être utile d'implémenter des versions distinctes des versions préfixées et suffixées de ces opérateurs. Pour distinguer les deux, la règle suivante est observée : la forme préfixée de l'opérateur est déclarée exactement de la même manière que tout autre opérateur unaire. La forme suffixée accepte un argument supplémentaire de type `int`.  
   
 > [!NOTE]
 >  Pour spécifier un opérateur surchargé pour la forme suffixée de l'opérateur d'incrémentation ou de décrémentation, l'argument supplémentaire doit être de type `int`. La spécification de tout autre type génère une erreur.  
   
- L'exemple suivant indique comment définir les opérateurs d'incrémentation et de décrémentation préfixés et suffixés pour la classe `Point` :  
+ L'exemple suivant indique comment définir les opérateurs d'incrémentation et de décrémentation préfixés et suffixés pour la classe `Point` :  
   
 ```  
 // increment_and_decrement1.cpp  
@@ -98,7 +114,7 @@ int main()
 }  
 ```  
   
- Les mêmes opérateurs peuvent être définis dans la portée de fichier \(globalement\) à l'aide des en\-têtes de fonction suivants :  
+ Les mêmes opérateurs peuvent être définis dans la portée de fichier (globalement) à l'aide des en-têtes de fonction suivants :  
   
 ```  
 friend Point& operator++( Point& )      // Prefix increment  
@@ -107,7 +123,7 @@ friend Point& operator--( Point& )      // Prefix decrement
 friend Point& operator--( Point&, int ) // Postfix decrement  
 ```  
   
- L'argument de type `int` qui désigne la forme suffixée de l'opérateur d'incrémentation ou de décrémentation n'est pas couramment utilisé pour passer des arguments.  Il contient généralement la valeur 0.  Toutefois, il peut être utilisé comme suit :  
+ L'argument de type `int` qui désigne la forme suffixée de l'opérateur d'incrémentation ou de décrémentation n'est pas couramment utilisé pour passer des arguments. Il contient généralement la valeur 0. Toutefois, il peut être utilisé comme suit :  
   
 ```  
 // increment_and_decrement2.cpp  
@@ -134,7 +150,7 @@ int main()
 }  
 ```  
   
- Il n'existe aucune autre syntaxe pour utiliser les opérateurs d'incrémentation ou de décrémentation pour passer ces valeurs que l'appel explicite, comme indiqué dans le code précédent.  Une méthode plus simple pour implémenter cette fonctionnalité consiste à surcharger l'opérateur d'ajout\/d'assignation \(`+=`\).  
+ Il n'existe aucune autre syntaxe pour utiliser les opérateurs d'incrémentation ou de décrémentation pour passer ces valeurs que l'appel explicite, comme indiqué dans le code précédent. Une méthode plus simple pour implémenter cette fonctionnalité consiste à surcharger l'opérateur d'ajout/d'assignation (`+=`).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Surcharge d'opérateur](../cpp/operator-overloading.md)

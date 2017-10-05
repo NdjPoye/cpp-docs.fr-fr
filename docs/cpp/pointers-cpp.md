@@ -1,35 +1,51 @@
 ---
-title: "Pointeurs | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "déclarations, pointeurs"
-  - "déclarateurs, pointeurs"
-  - "pointeurs"
-  - "pointeurs, déclarations"
+title: Pointeurs (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, pointers
+- declarations, pointers
+- pointers
+- pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Pointeurs
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c164a934f14f7b65c159cf21feb576d0a8bdf36d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Les pointeurs sont déclarés à l'aide de la séquence ci\-dessous.  
+---
+# <a name="pointers-c"></a>Pointeurs (C++)
+Les pointeurs sont déclarés à l'aide de la séquence ci-dessous.  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers   
+[storage-class-specifiers] [cv-qualifiers] type-specifiers   
 [ms-modifier] declarator ;  
 ```  
   
@@ -39,21 +55,21 @@ Les pointeurs sont déclarés à l'aide de la séquence ci\-dessous.
 * [cv-qualifiers] identifier [= expression]  
 ```  
   
- 1.  Les spécificateurs de déclaration :  
+ 1. Les spécificateurs de déclaration :  
   
--   Spécificateur de classe de stockage facultatif.  Pour plus d'informations, consultez [Spécificateurs](../cpp/specifiers.md).  
+-   Spécificateur de classe de stockage facultatif. Pour plus d’informations, consultez [spécificateurs](../cpp/specifiers.md).  
   
 -   Mot clé `const` ou `volatile` facultatif appliqué au type de l'objet à pointer.  
   
 -   Le spécificateur de type : le nom d'un type représentant le type de l'objet à pointer.  
   
- 2.  Déclarateur :  
+ 2. Déclarateur :  
   
--   Modificateur spécifique Microsoft facultatif.  Pour plus d'informations, consultez [Modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).  
+-   Modificateur spécifique Microsoft facultatif. Pour plus d’informations, consultez [modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
--   Opérateur `*`.  
+-   opérateur `*`,  
   
--   Mot clé `const` ou `volatile` facultatif appliqué au pointeur lui\-même.  
+-   Mot clé `const` ou `volatile` facultatif appliqué au pointeur lui-même.  
   
 -   Identificateur.  
   
@@ -71,8 +87,6 @@ Les pointeurs sont déclarés à l'aide de la séquence ci\-dessous.
 ```  
 * identifier [ [ constant-expression ] ]  
 ```  
-  
--   Toutefois, les déclarateurs de pointeur peuvent être plus complexes.  Pour plus d'informations, consultez [Déclarateurs](http://msdn.microsoft.com/fr-fr/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
   
 -   Plusieurs déclarateurs et leurs initialiseurs peuvent apparaître simultanément dans une déclaration unique dans une liste séparée par des virgules suivant le spécificateur de déclaration.  
   
@@ -100,7 +114,7 @@ static int *p = &i, *q = &j;
   
  Dans l'exemple précédent, les pointeurs p et q pointent tous les deux vers des objets de type `int` et sont initialisés vers les adresses de i et de j respectivement.  Le spécificateur de classe de stockage `static` s'applique aux deux pointeurs.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // pointer.cpp  
@@ -176,18 +190,21 @@ int main() {
 }  
 ```  
   
-  **0x0012FEC8**  
-**0x0012FEC8 2**  
-**0x0012FEC8 7**  
-**j correspond à 10**  
-**0x00320850 5**  
-**0x00320850 0**  
-**0x00320854 10**  
-**0x00320858 20**  
-**0x0032085C 30**  
-**0x00320860 40**  
-**dog dog**   
-## Exemple  
+```Output  
+0x0012FEC8  
+0x0012FEC8 2  
+0x0012FEC8 7  
+j is 10  
+0x00320850 5  
+0x00320850 0  
+0x00320854 10  
+0x00320858 20  
+0x0032085C 30  
+0x00320860 40  
+dog dog  
+```  
+  
+## <a name="example"></a>Exemple  
  Un autre exemple illustre l'utilisation des pointeurs dans des structures de données. Dans ce cas, il s'agit d'une liste liée.  
   
 ```  
@@ -248,18 +265,26 @@ int main() {
 }  
 ```  
   
-  **`a 45 d a 789 d q`a \(ajouter le nœud\) d \(liste d'affichage\) q \(quitter\)**  
-**entrez un nombre :**   
-**a \(ajouter le nœud\) d \(liste d'affichage\) q \(quitter\)**  
-**nœud 1 \= 45**  
-**a \(ajouter le nœud\) d \(liste d'affichage\) q \(quitter\)**  
-**entrez un nombre :**   
-**a \(ajouter le nœud\) d \(liste d'affichage\) q \(quitter\)**  
-**nœud 1 \= 45**  
-**node 2 \= 789**  
-**a \(ajouter le nœud\) d \(liste d'affichage\) q \(quitter\)**   
-## Voir aussi  
- [C\+\+ Abstract Declarators](http://msdn.microsoft.com/fr-fr/e7e18c18-0cad-4450-942b-d27e1d4dd088)   
- [Addition de types pointeur](../misc/addition-of-pointer-types.md)   
- [Opérateur d'indirection : \*](../cpp/indirection-operator-star.md)   
- [Opérateur address\-of : &](../cpp/address-of-operator-amp.md)
+```Output  
+  
+      a  
+45  
+d  
+a  
+789  
+d  
+qa (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+a (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+node 2 = 789  
+a (add node)  d (display list)  q (quit)  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Opérateur d’indirection : *](../cpp/indirection-operator-star.md)   
+ [address-of, opérateur](../cpp/address-of-operator-amp.md)

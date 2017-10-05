@@ -1,49 +1,65 @@
 ---
-title: "D&#233;clarateur de r&#233;f&#233;rence Lvalue&#160;: &amp; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "&"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "& (opérateur), opérateur de référence"
-  - "opérateur de référence"
+title: "Déclarateur de référence lvalue : &amp; | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '&'
+dev_langs:
+- C++
+helpviewer_keywords:
+- reference operator
+- '& operator, reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# D&#233;clarateur de r&#233;f&#233;rence Lvalue&#160;: &amp;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6aa0c0a18d77f685369681c0d0400ada6f879e9d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="lvalue-reference-declarator-amp"></a>Déclarateur de référence lvalue :&amp;
 Contient l'adresse d'un objet mais se comporte syntaxiquement comme un objet.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 type-id & cast-expression  
 ```  
   
-## Notes  
- Vous pouvez considérer une référence lvalue comme un autre nom d'un objet.  Une déclaration de référence lvalue se compose d'une liste facultative de spécificateurs suivie d'un déclarateur de référence.  Une référence doit être initialisée et ne peut pas être modifiée.  
+## <a name="remarks"></a>Remarques  
+ Vous pouvez considérer une référence lvalue comme un autre nom d'un objet. Une déclaration de référence lvalue se compose d'une liste facultative de spécificateurs suivie d'un déclarateur de référence. Une référence doit être initialisée et ne peut pas être modifiée.  
   
- Tout objet dont l'adresse peut être convertie en un type pointeur donné peut également être converti en type référence similaire.  Par exemple, tout objet dont l'adresse peut être convertie en type `char *` peut également être converti en type `char &`.  
+ Tout objet dont l'adresse peut être convertie en un type pointeur donné peut également être converti en type référence similaire. Par exemple, tout objet dont l'adresse peut être convertie en type `char *` peut également être converti en type `char &`.  
   
- Ne confondez pas les déclarations de référence avec l'utilisation de l'[opérateur\-d'adresse](../cpp/address-of-operator-amp.md).  Quand l'`&`*identificateur* est précédé d'un type, comme `int` ou `char`, l'*identificateur* est déclaré comme une référence au type.  Quand l'`&`*identificateur* n'est pas précédé d'un type, l'utilisation est celle de l'opérateur d'adresse.  
+ Ne confondez pas les déclarations de référence avec l’utilisation de la [opérateur address-of](../cpp/address-of-operator-amp.md). Lorsque le `&` *identificateur* est précédé d’un type, tel que `int` ou `char`, *identificateur* est déclaré comme une référence au type. Lorsque `&` *identificateur* n’est pas précédé par un type, l’utilisation est celle de l’opérateur d’adresse.  
   
-## Exemple  
- L'exemple suivant illustre le déclarateur de référence en déclarant un objet `Person` et une référence à cet objet.  `rFriend` étant une référence à `myFriend`, la mise à jour de l'une ou l'autre variable modifie le même objet.  
+## <a name="example"></a>Exemple  
+ L'exemple suivant illustre le déclarateur de référence en déclarant un objet `Person` et une référence à cet objet. `rFriend` étant une référence à `myFriend`, la mise à jour de l'une ou l'autre variable modifie le même objet.  
   
 ```  
 // reference_declarator.cpp  
@@ -76,9 +92,12 @@ int main()
 }  
 ```  
   
-  **Bill a 40 ans**   
-## Voir aussi  
+```Output  
+Bill is 40  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
  [Références](../cpp/references-cpp.md)   
- [Arguments de fonction de type référence](../cpp/reference-type-function-arguments.md)   
- [Retours de fonction de type référence](../cpp/reference-type-function-returns.md)   
+ [Arguments de fonction de Type référence](../cpp/reference-type-function-arguments.md)   
+ [Retours de fonction de Type référence](../cpp/reference-type-function-returns.md)   
  [Références aux pointeurs](../cpp/references-to-pointers.md)

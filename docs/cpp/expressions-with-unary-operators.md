@@ -1,90 +1,107 @@
 ---
-title: "Expressions avec op&#233;rateurs unaires | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "expressions (C++), opérateurs"
-  - "expressions (C++), opérateurs unaires"
-  - "opérateurs unaires, expressions avec"
+title: "Expressions avec opérateurs unaires | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- expressions [C++], unary operators
+- unary operators, expressions with
+- expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Expressions avec op&#233;rateurs unaires
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: adde5e6fdb20924b633de60eba07390edad57907
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Les opérateurs unaires agissent sur un seul opérande dans une expression.  Opérateurs unaires :  
+---
+# <a name="expressions-with-unary-operators"></a>Expressions avec opérateurs unaires
+Les opérateurs unaires agissent sur un seul opérande dans une expression. Opérateurs unaires :  
   
--   [Opérateur d'indirection \(\*\)](../cpp/indirection-operator-star.md)  
+-   [Opérateur d’indirection (*)](../cpp/indirection-operator-star.md)  
   
--   [Opérateur d'adresse \(&\)](../cpp/address-of-operator-amp.md)  
+-   [Opérateur d’adresse (&)](../cpp/address-of-operator-amp.md)  
   
--   [Opérateur plus unaire \(\+\)](../cpp/unary-plus-and-negation-operators-plus-and.md)  
+-   [Opérateur (+) plus unaire](../cpp/unary-plus-and-negation-operators-plus-and.md)  
   
--   [Opérateur moins unaire \(–\)](../misc/unary-negation-operator.md)  
+-   [Opérateur de négation unaire (-)](../cpp/unary-plus-and-negation-operators-plus-and.md)  
   
--   [Opérateur de négation logique \(\!\)](../cpp/logical-negation-operator-exclpt.md)  
+-   [Opérateur de négation logique ( !)](../cpp/logical-negation-operator-exclpt.md)  
   
--   [Opérateur de complément à un \(~\)](../cpp/one-s-complement-operator-tilde.md)  
+-   [L’opérateur de complément (~)](../cpp/one-s-complement-operator-tilde.md)  
   
--   [Opérateur d'incrémentation de préfixe \(\+\+\)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
+-   [Opérateur de pré-incrémentation (++)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
   
--   [Opérateur de décrémentation de préfixe \(––\)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
+-   [Opérateur de pré-décrémentation (-)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
   
--   [Opérateur de cast \(\)](../cpp/cast-operator-parens.md)  
+-   [Opérateur de cast ()](../cpp/cast-operator-parens.md)  
   
--   [Opérateur sizeof](../cpp/sizeof-operator.md)  
+-   [opérateur sizeof](../cpp/sizeof-operator.md)  
   
--   [Opérateur \_\_uuidof](../cpp/uuidof-operator.md)  
+-   [__uuidof, opérateur](../cpp/uuidof-operator.md)  
   
--   [Opérateur \_\_alignof](../cpp/alignof-operator.md)  
+-   [__alignof, opérateur](../cpp/alignof-operator.md)  
   
--   [Opérateur new](../cpp/new-operator-cpp.md)  
+-   [New, opérateur](../cpp/new-operator-cpp.md)  
   
--   [Opérateur delete](../cpp/delete-operator-cpp.md)  
+-   [Delete (opérateur)](../cpp/delete-operator-cpp.md)  
   
- Ces opérateurs ont une associativité de droite à gauche.  Les expressions unaires impliquent en général une syntaxe qui précède une expression primaire ou suffixée.  
+ Ces opérateurs ont une associativité de droite à gauche. Les expressions unaires impliquent en général une syntaxe qui précède une expression primaire ou suffixée.  
   
  Voici les formes possibles des expressions unaires :  
   
--   *postfix\-expression*  
+-   *postfix-expression*  
   
--   `++` *unary\-expression*  
+-   `++`*expression unaire*  
   
--   `––` *unary\-expression*  
+-   `--`*expression unaire*  
   
--   *unary\-operator* *cast\-expression*  
+-   *opérateur unaire* *expression de cast*  
   
--   `sizeof` *unary\-expression*  
+-   `sizeof`*expression unaire*  
   
--   `sizeof(` *type\-name* `)`  
+-   `sizeof(`*-nom du type*`)`  
   
--   `decltype(` *expression* `)`  
+-   `decltype(`*expression*`)`  
   
--   *allocation\-expression*  
+-   *allocation-expression*  
   
--   *deallocation\-expression*  
+-   *expression de désallocation*  
   
- Toute *postfix\-expression* est considérée comme étant une *unary\-expression*, et comme toute expression primaire est considérée comme étant une *postfix\-expression*, toute expression primaire est considérée comme étant une *unary\-expression*.  Pour plus d'informations, consultez [Expressions suffixées](../cpp/postfix-expressions.md) et [Expressions primaires](../cpp/primary-expressions.md).  
+ N’importe quel *postfix-expression* est considéré comme un *expression unaire*, et parce que n’importe quelle expression principale est considéré comme un *postfix-expression*, toutes les expressions primaires est considéré comme un *expression unaire* également. Pour plus d’informations, consultez [Expressions suffixées](../cpp/postfix-expressions.md) et [Expressions primaires](../cpp/primary-expressions.md).  
   
- Un *unary\-operator* est constitué d'un ou de plusieurs des symboles suivants : `* &` `+` `–` `!` `~`  
+ A *-unaire* se compose d’un ou plusieurs des symboles suivants :`* & + - ! ~`  
   
- Une *cast\-expression* est une expression unaire avec un transtypage facultatif pour modifier le type.  Pour plus d'informations, consultez [Opérateur de cast : \(\)](../cpp/cast-operator-parens.md).  
+ Le *cast-expression* est une expression unaire avec un transtypage facultatif pour modifier le type. Pour plus d’informations, consultez [opérateur de Cast : ()](../cpp/cast-operator-parens.md).  
   
- Une *expression* peut être une expression quelconque.  Pour plus d'informations, consultez [Expressions](../cpp/expressions-cpp.md).  
+ Un *expression* peut être toute expression. Pour plus d’informations, consultez [Expressions](../cpp/expressions-cpp.md).  
   
- L'*allocation\-expression* fait référence à l'opérateur `new`.  L'*deallocation\-expression* fait référence à l'opérateur `delete`.  Pour plus d'informations, reportez\-vous aux liens fournis plus haut dans cette rubrique.  
+ Le *allocation-expression* fait référence à la `new` opérateur. Le *désallocation-expression* fait référence à la `delete` opérateur. Pour plus d'informations, reportez-vous aux liens fournis plus haut dans cette rubrique.  
   
-## Voir aussi  
- [Types d'expressions](../cpp/types-of-expressions.md)
+## <a name="see-also"></a>Voir aussi  
+ [Types d’expressions](../cpp/types-of-expressions.md)

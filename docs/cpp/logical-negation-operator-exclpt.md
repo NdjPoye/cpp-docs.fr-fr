@@ -1,49 +1,65 @@
 ---
-title: "Op&#233;rateur de n&#233;gation logique&#160;: ! | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "!"
-  - "Not"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "! d'opérateur"
-  - "négation logique"
-  - "NOT (opérateur)"
+title: "Opérateur de négation logique : ! | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '!'
+- Not
+dev_langs:
+- C++
+helpviewer_keywords:
+- '! operator'
+- NOT operator
+- logical negation
 ms.assetid: 650add9f-a7bc-426c-b01d-5fc6a81c8b62
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Op&#233;rateur de n&#233;gation logique&#160;: !
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 42d6135ab442a6f158fddd4ebfec1ef669fdecfd
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-## Syntaxe  
+---
+# <a name="logical-negation-operator-"></a>Opérateur de négation logique : !
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 ! cast-expression  
 ```  
   
-## Notes  
- L'opérateur de négation logique \(**\!**\) inverse la signification de son opérande.  L'opérande doit être de type arithmétique ou pointeur \(ou une expression qui a pour valeur le type arithmétique ou pointeur\).  L'opérande est implicitement converti en type `bool`.  Le résultat est **true** si l'opérande converti est **false** ; le résultat est **false** si l'opérande converti est **true**.  Le résultat est de type `bool`.  
+## <a name="remarks"></a>Remarques  
+ L’opérateur de négation logique (**!**) inverse la signification de son opérande. L’opérande doit être de type arithmétique ou pointeur (ou une expression qui a pour valeur le type arithmétique ou pointeur). L'opérande est implicitement converti en type `bool`. Le résultat est **true** si l’opérande converti est **false**; le résultat est **false** si l’opérande converti est **true**. Le résultat est de type `bool`.  
   
- Pour une expression *e*, l'expression unaire **\!***e* équivaut à l'expression **\(***e* `==` 0\), sauf si des opérateurs surchargés sont impliqués.  
+ Pour une expression *e*, l’expression unaire **!** *e* est équivalent à l’expression **(***e* `==` 0), sauf si les opérateurs surchargés sont impliqués.  
   
-## Mot clé Operator pour \!  
- L'opérateur **not** est l'équivalent textuel de **\!**.  Il existe deux moyens d'accéder à l'opérateur **not** dans vos programmes : inclure le fichier d'en\-tête `iso646.h` ou compiler avec l'option du compilateur [\/Za](../build/reference/za-ze-disable-language-extensions.md) \(désactivation des extensions de langage\).  
+## <a name="operator-keyword-for-"></a>Mot clé Operator pour !  
+ Le **pas** opérateur est l’équivalent textuel de **!**. Il existe deux moyens d’accéder à la **pas** opérateur dans vos programmes : incluez le fichier d’en-tête `iso646.h`, ou compilez avec le [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // expre_Logical_NOT_Operator.cpp  
@@ -58,8 +74,7 @@ int main() {
 }  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions avec opérateurs unaires](../cpp/expressions-with-unary-operators.md)   
- [Opérateurs C\+\+](../misc/cpp-operators.md)   
- [Opérateurs, priorité et associativité C\+\+](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [Les opérateurs C++ intégrés, priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Opérateurs arithmétiques unaires](../c-language/unary-arithmetic-operators.md)

@@ -1,52 +1,68 @@
 ---
-title: "return, instruction (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "return"
-  - "return_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "return (mot clé) (C++)"
-  - "return (mot clé) (C++), syntaxe"
+title: "retourner l’instruction (C++) | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- return
+- return_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- return keyword [C++], syntax
+- return keyword [C++]
 ms.assetid: a498903a-056a-4df0-a6cf-72f633a62210
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# return, instruction (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 7474bc55a5c9d2406465a6ee763c19c2e56e1159
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Termine l'exécution d'une fonction et retourne le contrôle à la fonction d'appel \(ou au système d'exploitation si vous transférez le contrôle à partir de la fonction `main`\).  L'exécution reprend dans la fonction d'appel au point immédiatement après l'appel.  
+---
+# <a name="return-statement-c"></a>return, instruction (C++)
+Termine l'exécution d'une fonction et retourne le contrôle à la fonction d'appel (ou au système d'exploitation si vous transférez le contrôle à partir de la fonction `main`). L'exécution reprend dans la fonction d'appel au point immédiatement après l'appel.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
 return [expression];  
 ```  
   
-## Notes  
- La clause `expression`, si elle est présente, est convertie dans le type spécifié dans la déclaration de fonction, comme si une initialisation était exécutée.  La conversion du type de l'expression au type `return` de la fonction peut créer des objets temporaires.  Pour plus d'informations sur les circonstances dans lesquelles les objets temporaries sont créés, consultez [Objets temporaires](../cpp/temporary-objects.md).  
+## <a name="remarks"></a>Remarques  
+ La clause `expression`, si elle est présente, est convertie dans le type spécifié dans la déclaration de fonction, comme si une initialisation était exécutée. La conversion du type de l'expression au type `return` de la fonction peut créer des objets temporaires. Pour plus d’informations sur comment et quand les objets temporaires sont créées, consultez [des objets temporaires](../cpp/temporary-objects.md).  
   
- La valeur de la clause `expression` est retournée à la fonction d'appel.  Si l'expression est omise, la valeur de retour de la fonction n'est pas définie.  Les constructeurs et les destructeurs, ainsi que les fonctions du type `void`, `` ne peuvent pas spécifier une expression dans l'instruction `return`.  Les fonctions de tous les autres types doivent spécifier une expression dans l'instruction `return`.  
+ La valeur de la clause `expression` est retournée à la fonction d'appel. Si l'expression est omise, la valeur de retour de la fonction n'est pas définie. Constructeurs et des destructeurs et des fonctions de type `void`, ne peut pas spécifier une expression dans la `return` instruction. Les fonctions de tous les autres types doivent spécifier une expression dans l'instruction `return`.  
   
- Lorsque l'ordre d'exécution quitte le bloc englobant la définition de fonction, le résultat est le même que si une instruction `return` sans expression avait été exécutée.  Ceci n'est pas valable pour les fonctions déclarées comme retournant une valeur.  
+ Lorsque l'ordre d'exécution quitte le bloc englobant la définition de fonction, le résultat est le même que si une instruction `return` sans expression avait été exécutée. Ceci n'est pas valable pour les fonctions déclarées comme retournant une valeur.  
   
  Une fonction peut comporter plusieurs instructions `return`.  
   
  L'exemple suivant utilise une expression avec une instruction `return` pour obtenir la plus grande valeur de deux entiers.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // return_statement2.cpp  
@@ -66,6 +82,6 @@ int main()
 }  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instructions de saut](../cpp/jump-statements-cpp.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)
+ [Mots clés](../cpp/keywords-cpp.md)

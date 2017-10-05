@@ -1,48 +1,64 @@
 ---
-title: "Gestion des &#233;v&#233;nements en mode natif C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestion des événements, Visual C++"
+title: "Gestion des événements dans C++ natif | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handling, Visual C++
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Gestion des &#233;v&#233;nements en mode natif C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 0ff5032966cb44ff8d14dd6e0a33fb5f8cf56ed7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Dans la gestion des événements C\+\+ native, vous configurez une source d'événement et un récepteur d'événements respectivement à l'aide des attributs de [event\_source](../windows/event-source.md) et [event\_receiver](../windows/event-receiver.md), en spécifiant `type`\=`native`.  Ces attributs permettent aux classes auxquelles ils sont appliqués de déclencher et de gérer des événements dans un contexte natif non COM.  
+---
+# <a name="event-handling-in-native-c"></a>Gestion des événements en mode natif C++
+Dans Gestion des événements C++ native, vous configurez un récepteur d’événement source et les événements à l’aide de la [event_source](../windows/event-source.md) et [event_receiver](../windows/event-receiver.md) des attributs, respectivement, en spécifiant `type` = `native`. Ces attributs permettent aux classes auxquelles ils sont appliqués de déclencher et de gérer des événements dans un contexte natif non COM.  
   
-## Déclaration d'événements  
- Dans une classe de source d'événement, utilisez le mot clé [\_\_event](../cpp/event.md) dans une déclaration de méthode pour déclarer la méthode comme événement.  Veillez à déclarer la méthode, mais ne la définissez pas ; cela générerait une erreur du compilateur, car celui\-ci définit la méthode implicitement lorsqu'elle est convertie en événement.  Les événements natifs peuvent être des méthodes avec zéro, un ou plusieurs paramètres.  Le type de retour peut être void ou un type intégral.  
+## <a name="declaring-events"></a>Déclaration d'événements  
+ Dans une classe source d’événements, utilisez le [__event](../cpp/event.md) mot clé dans une déclaration de méthode pour déclarer la méthode comme un événement. Veillez à déclarer la méthode, mais ne la définissez pas ; cela générerait une erreur du compilateur, car celui-ci définit la méthode implicitement lorsqu'elle est convertie en événement. Les événements natifs peuvent être des méthodes avec zéro, un ou plusieurs paramètres. Le type de retour peut être void ou un type intégral.  
   
-## Définition de gestionnaires d'événements  
- Dans une classe de récepteur d'événements, vous définissez des gestionnaires d'événements, qui sont des méthodes avec signatures \(types de retour, conventions d'appel et arguments\) qui correspondent à l'événement qu'ils doivent gérer.  
+## <a name="defining-event-handlers"></a>Définition de gestionnaires d'événements  
+ Dans une classe de récepteur d'événements, vous définissez des gestionnaires d'événements, qui sont des méthodes avec signatures (types de retour, conventions d'appel et arguments) qui correspondent à l'événement qu'ils doivent gérer.  
   
-## Raccordement de gestionnaires d'événements à des événements  
- Dans une classe de récepteur d'événements, vous utilisez également la fonction intrinsèque [\_\_hook](../cpp/hook.md) pour raccorder des événements aux gestionnaires d'événements et [\_\_unhook](../cpp/unhook.md) pour dissocier des événements des gestionnaires d'événements.  Vous pouvez raccorder plusieurs événements à un gestionnaire d'événements, ou plusieurs gestionnaires d'événements à un événement.  
+## <a name="hooking-event-handlers-to-events"></a>Raccordement de gestionnaires d'événements à des événements  
+ Également dans une classe de récepteur d’événements, vous utilisez la fonction intrinsèque [__hook](../cpp/hook.md) pour associer des événements à des gestionnaires d’événements et [__unhook](../cpp/unhook.md) pour dissocier des événements à partir des gestionnaires d’événements. Vous pouvez raccorder plusieurs événements à un gestionnaire d'événements, ou plusieurs gestionnaires d'événements à un événement.  
   
-## Déclenchement d'événements  
- Pour déclencher un événement, il vous suffit d'appeler la méthode déclarée comme événement dans la classe de source d'événement.  Si des gestionnaires ont été raccordés à l'événement, les gestionnaires sont appelés.  
+## <a name="firing-events"></a>Déclenchement d'événements  
+ Pour déclencher un événement, il vous suffit d'appeler la méthode déclarée comme événement dans la classe de source d'événement. Si des gestionnaires ont été raccordés à l'événement, les gestionnaires sont appelés.  
   
-### Code d'événement C\+\+ natif  
- L'exemple suivant montre comment déclencher un événement en C\+\+ natif.  Pour compiler et exécuter l'exemple, consultez les commentaires du code.  
+### <a name="native-c-event-code"></a>Code d'événement C++ natif  
+ L'exemple suivant montre comment déclencher un événement en C++ natif. Pour compiler et exécuter l'exemple, consultez les commentaires du code.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-### Code  
+### <a name="code"></a>Code  
   
 ```  
 // evh_native.cpp  
@@ -86,12 +102,12 @@ int main() {
 }  
 ```  
   
-### Sortie  
+### <a name="output"></a>Sortie  
   
 ```  
 MyHandler2 was called with value 123.  
 MyHandler1 was called with value 123.  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion des événements](../cpp/event-handling.md)

@@ -1,41 +1,58 @@
 ---
-title: "bad_typeid, exception | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bad_typeid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bad_typeid (exception)"
-  - "exceptions, bad_typeid"
+title: bad_typeid, Exception | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bad_typeid
+dev_langs:
+- C++
+helpviewer_keywords:
+- bad_typeid exception
+- exceptions, bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# bad_typeid, exception
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ea7dc85862622180038cf520ef92b752b65eba84
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-L'exception `bad_typeid` est levée par l'[opérateur de typeid](../cpp/typeid-operator.md) lorsque l'opérande de `typeid` est un pointeur NULL.  
+---
+# <a name="badtypeid-exception"></a>bad_typeid, exception
+Le `bad_typeid` exception est levée par le [opérateur typeid](../cpp/typeid-operator.md) lorsque l’opérande de `typeid` est un pointeur NULL.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
       catch (bad_typeid)  
-   statement  
+   statement  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
  L'interface de `bad_typeid` est :  
   
 ```  
@@ -76,12 +93,12 @@ catch (bad_typeid){
 }  
 ```  
   
-## Sortie  
+## <a name="output"></a>Sortie  
   
 ```  
 Object is NULL  
 ```  
   
-## Voir aussi  
- [Informations de type au moment de l'exécution](../cpp/run-time-type-information.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Informations de type au moment de l’exécution](../cpp/run-time-type-information.md)   
+ [Mots clés](../cpp/keywords-cpp.md)

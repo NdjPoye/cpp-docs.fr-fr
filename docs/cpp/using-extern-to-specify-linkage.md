@@ -1,43 +1,60 @@
 ---
-title: "Utilisation d&#39;extern pour sp&#233;cifier la liaison | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "extern"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "déclarations, externes"
-  - "extern (mot clé) (C++), liaison vers fonctions non-C++"
-  - "liaison externe, extern (modificateur)"
+title: "Utilisation d’extern pour spécifier la liaison | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- extern
+dev_langs:
+- C++
+helpviewer_keywords:
+- extern keyword [C++], linkage to non-C++ functions
+- declarations, external
+- external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Utilisation d&#39;extern pour sp&#233;cifier la liaison
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b17479bfda8dbe009d3b2381afc2d87819811bc5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-## Syntaxe  
+---
+# <a name="using-extern-to-specify-linkage"></a>Utilisation d'extern pour spécifier la liaison
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
-        extern string-literal { declaration-list }  
+      extern string-literal { declaration-list }  
 extern string-literal declaration  
 ```  
   
-## Notes  
- Le mot clé `extern` déclare une variable ou une fonction, et spécifie qu'elle possède une liaison externe \(son nom est visible à partir de fichiers autres que celui dans lequel elle est définie\).  Lorsque vous modifiez une variable, `extern` spécifie que la variable a une durée statique \(elle est allouée lorsque le programme démarre et libérée lorsque le programme se termine\).  La variable ou la fonction peut être définie dans un autre fichier source ou plus tard dans le même fichier.  Les déclarations de variables et de fonctions au niveau de la portée du fichier sont externes par défaut.  
+## <a name="remarks"></a>Remarques  
+ Le mot clé `extern` déclare une variable ou une fonction, et spécifie qu'elle possède une liaison externe (son nom est visible à partir de fichiers autres que celui dans lequel elle est définie). Lorsque vous modifiez une variable, `extern` spécifie que la variable a une durée statique (elle est allouée lorsque le programme démarre et libérée lorsque le programme se termine). La variable ou la fonction peut être définie dans un autre fichier source ou plus tard dans le même fichier. Les déclarations de variables et de fonctions au niveau de la portée du fichier sont externes par défaut.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // specifying_linkage1.cpp  
@@ -58,12 +75,12 @@ void other() {
 }  
 ```  
   
- En langage C\+\+, lorsqu'il est utilisé avec une chaîne, le mot clé `extern` spécifie que les conventions de liaison d'un autre langage sont utilisées pour le ou les déclarateurs.  Les données et les fonctions C sont accessibles uniquement si elles sont déclarées auparavant comme ayant une liaison C.  Toutefois, elles doivent être définies dans une unité de traduction compilée séparément.  
+ En langage C++, lorsqu'il est utilisé avec une chaîne, le mot clé `extern` spécifie que les conventions de liaison d'un autre langage sont utilisées pour le ou les déclarateurs. Les données et les fonctions C sont accessibles uniquement si elles sont déclarées auparavant comme ayant une liaison C. Toutefois, elles doivent être définies dans une unité de traduction compilée séparément.  
   
- Microsoft C\+\+ prend en charge les chaînes **"C"** et **"C\+\+"** dans le champ *string\-literal*.  Tous les fichiers Include standard utilisent la syntaxe `extern` "C" pour permettre aux fonctions de la bibliothèque Runtime d'être utilisées dans les programmes C\+\+.  
+ Microsoft C++ prend en charge les chaînes **« C »** et **« C++ »** dans les *littéral de chaîne* champ. Tous les fichiers Include standard utilisent la syntaxe `extern` "C" pour permettre aux fonctions de la bibliothèque Runtime d'être utilisées dans les programmes C++.  
   
-## Exemple  
- L'exemple ci\-dessous illustre d'autres méthodes qui permettent de déclarer des noms possédant une liaison C :  
+## <a name="example"></a>Exemple  
+ L'exemple ci-dessous illustre d'autres méthodes qui permettent de déclarer des noms possédant une liaison C :  
   
 ```  
 // specifying_linkage2.cpp  
@@ -103,7 +120,7 @@ extern "C" char GetChar( void ) {
 extern "C" int errno;  
 ```  
   
- Si une fonction a plusieurs spécifications de liaison, ils doivent concorder ; le fait de déclarer des fonctions comme ayant à la fois une liaison C et une liaison C\+\+ constitue une erreur.  En outre, si deux déclarations pour une fonction se produisent dans un programme \(une avec une spécification de liaison et une autre sans\), la déclaration avec la spécification de la liaison doit être la première.  Toutes les déclarations redondantes de fonctions qui ont déjà une spécification de liaison sont affectées de la liaison spécifiée dans la première déclaration.  Exemple :  
+ Si une fonction a plusieurs spécifications de liaison, ils doivent concorder ; le fait de déclarer des fonctions comme ayant à la fois une liaison C et une liaison C++ constitue une erreur. En outre, si deux déclarations pour une fonction se produisent dans un programme (une avec une spécification de liaison et une autre sans), la déclaration avec la spécification de la liaison doit être la première. Toutes les déclarations redondantes de fonctions qui ont déjà une spécification de liaison sont affectées de la liaison spécifiée dans la première déclaration. Exemple :  
   
 ```  
 extern "C" int CFunc1();  
@@ -118,11 +135,10 @@ extern "C" int CFunc2(); // Error: not the first declaration of
                          //  specifier.  
 ```  
   
- Les fonctions et objets déclarés explicitement comme **statiques** dans le corps d'un spécificateur de liaison composé \(**{ }**\) sont traités comme des fonctions ou objets statiques ; le spécificateur de liaison est ignoré.  Les autres fonctions et objets se comportent comme s'ils étaient déclarés avec le mot clé `extern`.  \(Consultez [Utilisation d'extern pour spécifier la liaison](../cpp/using-extern-to-specify-linkage.md) pour plus d'informations sur le mot clé `extern`.\)  
+ Fonctions et objets déclarés explicitement comme **statique** dans le corps d’un spécificateur de liaison composé (**{}**) sont traités en tant que fonctions statiques ou des objets ; le spécificateur de liaison est ignoré. Les autres fonctions et objets se comportent comme s'ils étaient déclarés avec le mot clé `extern`. (Consultez [utilisation d’extern pour spécifier la liaison](../cpp/using-extern-to-specify-linkage.md) pour plus d’informations sur la `extern` (mot clé).)  
   
-## Voir aussi  
- [Mots clés C\+\+](../cpp/keywords-cpp.md)   
- [\(NOTINBUILD\)Linkage Specifications](http://msdn.microsoft.com/fr-fr/d2b0cff1-7798-4c38-9ac8-61c3bfe2bfb9)   
+## <a name="see-also"></a>Voir aussi  
+ [Mots clés](../cpp/keywords-cpp.md)   
  [Spécificateur extern de classe de stockage](../c-language/extern-storage-class-specifier.md)   
  [Comportement des identificateurs](../c-language/behavior-of-identifiers.md)   
  [Liaison](../c-language/linkage.md)

@@ -1,30 +1,47 @@
 ---
-title: "tile_static, mot cl&#233; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "tile_static_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tile_static (mot clé)"
+title: "tile_static, mot clé | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- tile_static_CPP
+dev_langs:
+- C++
+helpviewer_keywords:
+- tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# tile_static, mot cl&#233;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 499aa37bb082636dd2947fa6f64a5ecc3cdd5e10
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Le mot clé `tile_static` sert à déclarer une variable accessible par tous les threads dans une mosaïque de threads.  La durée de vie des variables commence lorsque l'exécution atteint le point de déclaration et se termine lorsque la fonction noyau est retournée.  Pour plus d'informations sur l'utilisation des mosaïques, consultez [Utilisation des mosaïques](../parallel/amp/using-tiles.md).  
+---
+# <a name="tilestatic-keyword"></a>tile_static, mot clé
+Le mot clé `tile_static` sert à déclarer une variable accessible par tous les threads dans une mosaïque de threads. La durée de vie des variables commence lorsque l'exécution atteint le point de déclaration et se termine lorsque la fonction noyau est retournée. Pour plus d’informations sur l’utilisation de mosaïques, consultez [à l’aide de mosaïques](../parallel/amp/using-tiles.md).  
   
  Le mot clé `tile_static` présente les limitations suivantes :  
   
@@ -32,17 +49,16 @@ Le mot clé `tile_static` sert à déclarer une variable accessible par tous les
   
 -   Il ne peut pas être utilisé sur des variables qui sont des types pointeur ou référence.  
   
--   Une variable `tile_static` ne peut pas avoir d'initialiseur.  Les constructeurs et les destructeurs par défaut ne sont pas appelés automatiquement.  
+-   Une variable `tile_static` ne peut pas avoir d'initialiseur. Les constructeurs et les destructeurs par défaut ne sont pas appelés automatiquement.  
   
 -   La valeur d'une variable `tile_static` non initialisée est non définie.  
   
 -   Si une variable `tile_static` est déclarée dans un graphique des appels qui est enraciné par un appel non mosaïque à `parallel_for_each`, un avertissement est généré et le comportement de la variable est non défini.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant montre comment une variable `tile_static` peut être utilisée pour accumuler des données sur plusieurs threads dans une mosaïque.  
   
 ```cpp  
-  
 // Sample data:  
 int sampledata[] = {  
     2, 2, 9, 7, 1, 4,  
@@ -154,8 +170,8 @@ for (int i = 0; i < 4; i++) {
   
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modificateurs spécifiques Microsoft](../cpp/microsoft-specific-modifiers.md)   
- [Présentation de C\+\+ AMP](../parallel/amp/cpp-amp-overview.md)   
- [parallel\_for\_each, fonction \(C\+\+ AMP\)](../Topic/parallel_for_each%20Function%20\(C++%20AMP\).md)   
- [Procédure pas à pas : Multiplication des matrices](../parallel/amp/walkthrough-matrix-multiplication.md)
+ [Présentation de C++ AMP](../parallel/amp/cpp-amp-overview.md)   
+ [parallel_for_each, fonction (C++ AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)   
+ [Procédure pas à pas : multiplication des matrices](../parallel/amp/walkthrough-matrix-multiplication.md)

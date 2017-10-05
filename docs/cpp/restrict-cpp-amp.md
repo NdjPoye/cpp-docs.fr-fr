@@ -1,46 +1,62 @@
 ---
-title: "restrict (C++ AMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "cpu_CPP"
-  - "amp_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "restrict (clause) (C++ AMP)"
+title: restreindre (C++ AMP) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- cpu_CPP
+- amp_CPP
+dev_langs:
+- C++
+helpviewer_keywords:
+- restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
 caps.latest.revision: 22
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# restrict (C++ AMP)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 13c07d1bb085663abe9492d92835b9e05b89c742
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Le spécificateur de restriction peut être appliqué aux déclarations de fonctions et lambda.  Il applique des restrictions au code dans la fonction et sur le comportement de cette fonction dans les applications qui utilisent le runtime C\+\+ Accelerated Massive Parallelism \(C\+\+ AMP\).  
+---
+# <a name="restrict-c-amp"></a>restrict (C++ AMP)
+Le spécificateur de restriction peut être appliqué aux déclarations de fonctions et lambda. Il applique des restrictions au code dans la fonction et sur le comportement de cette fonction dans les applications qui utilisent le runtime C++ Accelerated Massive Parallelism (C++ AMP).  
   
 > [!NOTE]
->  Pour plus d'informations sur le mot clé `restrict` qui fait partie des attributs de la classe de stockage `__declspec`, reportez\-vous à la rubrique [restrict](../cpp/restrict.md).  
+>  Pour plus d’informations sur la `restrict` mot clé qui fait partie de la `__declspec` des attributs de classe de stockage, consultez [restreindre](../cpp/restrict.md).  
   
  La clause `restrict` prend les formes suivantes :  
   
 |Clause|Description|  
 |------------|-----------------|  
-|`restrict(cpu)`|La fonction peut utiliser le langage C\+\+ complet.  Seules les autres fonctions déclarées en utilisant des fonctions restrict\(cpu\) peuvent appeler la fonction.|  
-|`restrict(amp)`|La fonction peut uniquement utiliser le sous\-ensemble du langage C\+\+ que C\+\+ AMP peut accélérer.|  
-|Séquence de clauses `restrict(cpu)` et `restrict(amp)`|La fonction doit adhérer aux limitations des clauses `restrict(cpu)` et `restrict(amp)`.  La fonction peut être appelée par les fonctions déclarées au moyen de `restrict(cpu)`, `restrict(amp)`, `restrict(cpu, amp)` ou `restrict(amp, cpu)`.<br /><br /> L'expression `restrict(A) restrict(B)` peut être écrite `restrict(A,B)`.|  
+|`restrict(cpu)`|La fonction peut utiliser le langage C++ complet. Seules les autres fonctions déclarées en utilisant des fonctions restrict(cpu) peuvent appeler la fonction.|  
+|`restrict(amp)`|La fonction peut uniquement utiliser le sous-ensemble du langage C++ que C++ AMP peut accélérer.|  
+|Séquence de clauses `restrict(cpu)` et `restrict(amp)`|La fonction doit adhérer aux limitations des clauses `restrict(cpu)` et `restrict(amp)`. La fonction peut être appelée par les fonctions déclarées au moyen de `restrict(cpu)`, `restrict(amp)`, `restrict(cpu, amp)` ou `restrict(amp, cpu)`.<br /><br /> L'expression `restrict(A) restrict(B)` peut être écrite `restrict(A,B)`.|  
   
-## Notes  
- Le mot clé `restrict` est un mot clé contextuel.  Les spécificateurs de restrictions, `cpu` et `amp`, ne sont pas des mots réservés.  La liste des spécificateurs n'est pas extensible.  Une fonction qui n'a pas de clause `restrict` est identique à une fonction qui possède la clause `restrict(cpu)`.  
+## <a name="remarks"></a>Remarques  
+ Le mot clé `restrict` est un mot clé contextuel. Les spécificateurs de restrictions, `cpu` et `amp`, ne sont pas des mots réservés. La liste des spécificateurs n'est pas extensible. Une fonction qui n'a pas de clause `restrict` est identique à une fonction qui possède la clause `restrict(cpu)`.  
   
  Une fonction qui possède la clause `restrict(amp)` présente les limitations suivantes :  
   
@@ -48,7 +64,7 @@ Le spécificateur de restriction peut être appliqué aux déclarations de fonct
   
 -   La fonction doit être en mesure d'être inline.  
   
--   La fonction peut déclarer uniquement des variables `int`, `unsigned int`, `float` et `double`, ainsi que des classes et des structures contenant uniquement ces types.  Le type `bool` est également autorisé, mais il doit être aligné sur 4 octets si vous l'utilisez dans un type composite.  
+-   La fonction peut déclarer uniquement des variables `int`, `unsigned int`, `float` et `double`, ainsi que des classes et des structures contenant uniquement ces types. Le type `bool` est également autorisé, mais il doit être aligné sur 4 octets si vous l'utilisez dans un type composite.  
   
 -   Les fonctions lambda ne peuvent pas capturer par référence et ne peuvent pas capturer les pointeurs.  
   
@@ -58,7 +74,7 @@ Le spécificateur de restriction peut être appliqué aux déclarations de fonct
   
     -   récurrence,  
   
-    -   variables déclarées avec le mot clé [volatile](../cpp/volatile-cpp.md),  
+    -   Les variables déclarées avec le [volatile](../cpp/volatile-cpp.md) (mot clé).  
   
     -   fonctions virtuelles,  
   
@@ -78,7 +94,7 @@ Le spécificateur de restriction peut être appliqué aux déclarations de fonct
   
     -   Variables globales.  
   
-    -   variables statiques  \(utilisez plutôt [tile\_static, mot clé](../cpp/tile-static-keyword.md)\),  
+    -   variables statiques Utilisez [tile_static, mot clé](../cpp/tile-static-keyword.md) à la place.  
   
     -   casts `dynamic_cast`,  
   
@@ -88,10 +104,10 @@ Le spécificateur de restriction peut être appliqué aux déclarations de fonct
   
     -   varargs.  
   
- Pour en savoir plus sur les limitations des fonctions, voir [Restrictions restrict\(amp\)](http://go.microsoft.com/fwlink/p/?LinkId=251089).  
+ Pour en savoir plus sur les limitations de fonction, consultez [Restrict (amp) Restrictions](http://go.microsoft.com/fwlink/p/?LinkId=251089).  
   
-## Exemple  
- L'exemple suivant montre comment utiliser la clause `restrict(amp)`.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant montre comment utiliser le `restrict(amp)`clause.  
   
 ```  
   
@@ -114,5 +130,5 @@ void callFunctions() restrict(amp)
 }  
 ```  
   
-## Voir aussi  
- [C\+\+ AMP \(C\+\+ Accelerated Massive Parallelism\)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)
+## <a name="see-also"></a>Voir aussi  
+ [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)

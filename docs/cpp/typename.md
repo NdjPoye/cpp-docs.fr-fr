@@ -1,45 +1,60 @@
 ---
-title: "typename | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "typename"
-  - "typename_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "spécificateur de modèle de nom de type"
+title: TypeName | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- typename
+- typename_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# typename
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 95283efc5d3b92a461ba6507e669f6f3e2af2689
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Indique au compilateur qu'un identificateur inconnu est un type.  
+---
+# <a name="typename"></a>typename
+Dans les définitions de modèle, fournit une indication au compilateur qu’un identificateur inconnu est un type. Dans les listes de paramètres de modèle, est utilisé pour spécifier un paramètre de type.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 typename identifier;  
 ```  
   
-## Notes  
- Utilisez ce mot clé uniquement dans les définitions de modèle.  
+## <a name="remarks"></a>Remarques  
+ Ce mot clé doit être utilisé si un nom dans une définition de modèle est un nom qualifié qui dépend d’un argument de modèle ; Il est facultatif si le nom qualifié n’est pas dépendant. Pour plus d’informations, consultez [modèles et résolution de noms](../cpp/templates-and-name-resolution.md).  
   
- Ce mot clé doit être utilisé si le nom est un nom dépendant qualifié dans un argument template. Il est facultatif si le nom qualifié n'est pas dépendant.  Pour plus d'informations, consultez [Modèles et résolution de noms](../cpp/templates-and-name-resolution.md).  
-  
- Le mot clé **typename** peut être utilisé par tout type n'importe où dans une déclaration ou définition de modèle.  Il n'est pas autorisé dans la liste des classes de base sauf sous forme d'argument template pour une classe de base de modèle.  
+ **nom de type** peut être utilisé par n’importe quel type de n’importe où dans une définition ou déclaration de modèle. Il n’est pas autorisé dans la liste des classes de base sauf sous forme d’argument template pour une classe de base de modèle.  
   
 ```  
 template <class T>  
@@ -50,14 +65,14 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};  
 ```  
   
- Le mot clé **typename** peut également être utilisé à la place de **class** dans les listes de paramètres de modèle.  Par exemple, les instructions suivantes sont identiques :  
+ Le **typename** mot clé peut également être utilisé à la place de **classe** dans le paramètre de modèle. Par exemple, les instructions suivantes sont sémantiquement équivalentes :  
   
 ```  
 template<class T1, class T2>...  
 template<typename T1, typename T2>...  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // typename.cpp  
@@ -71,6 +86,6 @@ int main()
 }  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modèles](../cpp/templates-cpp.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)
+ [Mots clés](../cpp/keywords-cpp.md)

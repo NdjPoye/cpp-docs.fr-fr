@@ -1,41 +1,58 @@
 ---
-title: "Sp&#233;cificateur de substitution | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "substituer l'identificateur"
+title: "Spécificateur de substitution | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Sp&#233;cificateur de substitution
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 54c3b0de90ef3455af31c49592c6b405c345b0e9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="override-specifier"></a>Spécificateur de substitution
 Vous pouvez utiliser le mot clé `override` pour désigner les fonctions membres qui remplacent une fonction virtuelle dans une classe de base.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 function-declaration override;  
 ```  
   
-## Notes  
+## <a name="remarks"></a>Remarques  
  `override` est contextuel et a une signification spéciale uniquement lorsqu'il est utilisé après une déclaration de fonction membre ; sinon, ce n'est pas un mot clé réservé.  
   
-## Exemple  
- Utilisez `override` pour empêcher un comportement d'héritage inopportun dans votre code.  L'exemple suivant indique où, sans utiliser `override`, la fonction membre de classe dérivée ne s'est pas forcément comportée comme prévu.  Le compilateur n'émet pas d'erreurs pour ce code.  
+## <a name="example"></a>Exemple  
+ Utilisez `override` pour empêcher un comportement d'héritage inopportun dans votre code. L'exemple suivant indique où, sans utiliser `override`, la fonction membre de classe dérivée ne s'est pas forcément comportée comme prévu. Le compilateur n'émet pas d'erreurs pour ce code.  
   
 ```cpp  
 class BaseClass  
@@ -89,9 +106,9 @@ class DerivedClass: public BaseClass
   
 ```  
   
- Pour spécifier que les fonctions ne peuvent pas être substituées et que les classes ne peuvent pas être héritées, utilisez le mot clé [final](../cpp/final-specifier.md).  
+ Pour spécifier que les fonctions ne peut pas être remplacées et que les classes ne peut pas être héritées, utilisez le [final](../cpp/final-specifier.md) (mot clé).  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Spécificateur final](../cpp/final-specifier.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)   
- [\(NOTINBUILD\) C\+\+ Type Names](http://msdn.microsoft.com/fr-fr/b53ba470-e583-4e5c-b634-6018f6110674)
+ [Mots clés](../cpp/keywords-cpp.md)   
+ 

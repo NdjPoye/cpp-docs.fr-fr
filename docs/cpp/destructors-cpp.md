@@ -1,38 +1,52 @@
 ---
-title: "Destructeurs (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~ (opérateur), spécifier des destructeurs"
-  - "détruire des objets, destructeurs"
-  - "destructeurs, à propos des destructeurs"
-  - "destructeurs, C++"
-  - "objets (C++), détruire"
-  - "Visual C++, destructeurs"
+title: Destructeurs (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [C++], destroying
+- Visual C++, destructors
+- destroying objects, destructors
+- ~ operator, specifying destructors
+- destructors, about destructors
+- destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Destructeurs (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 043143cc0a0a200f83642180b59b9576fefc4975
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Les fonctions « destructeur » sont l'inverse des fonctions constructeur.  Elles sont appelées lorsque les objets sont détruits \(libérés\).  Désignez une fonction en tant que destructeur d'une classe en faisant précéder le nom de classe d'un tilde \(`~`\).  Par exemple, le destructeur de la classe `String` est déclaré : `~String()`.  
-  
- Dans une compilation \/clr, le destructeur a un rôle spécial : libérer les ressources managées et non managées.  Consultez [Destructeurs et finaliseurs dans Visual C\+\+](../misc/destructors-and-finalizers-in-visual-cpp.md) pour plus d'informations.  
-  
- Le destructeur est couramment utilisé pour « nettoyer » un objet devenu inutile.  Prenons la déclaration suivante d'une classe `String` :  
+---
+# <a name="destructors-c"></a>Destructeurs (C++)
+Un destructeur est une fonction membre qui est appelée automatiquement lorsque l’objet est hors de portée ou est détruite explicitement par un appel à `delete`. Un destructeur a le même nom que la classe précédé d’un tilde (`~`). Par exemple, le destructeur de la classe `String` est déclaré : `~String()`. Si vous ne définissez pas un destructeur, le compilateur fournit par défaut ; Pour de nombreuses classes, cela est suffisant. Vous ne devez définir un destructeur personnalisé lors de la classe stocke des handles vers des ressources système qui doivent être libérées ou détenant la mémoire qu’ils pointent.
+
+Prenons la déclaration suivante d'une classe `String` :  
   
 ```  
 // spec1_destructors.cpp  
@@ -74,50 +88,44 @@ int main() {
   
  Dans l'exemple précédent, le destructeur `String::~String` utilise l'opérateur `delete` pour libérer l'espace dynamiquement alloué pour le stockage de texte.  
   
-## Déclaration des destructeurs  
- Les destructeurs sont des fonctions ayant le même nom que la classe, mais précédé d'un tilde \(`~`\).  
+## <a name="delcaring-destructors"></a>Déclaration des destructeurs  
+ Les destructeurs sont des fonctions ayant le même nom que la classe, mais précédé d'un tilde (`~`).  
   
- Le premier type de syntaxe est utilisé pour les destructeurs déclarés ou définis dans une déclaration de classe ; la seconde forme est utilisée pour les destructeurs définis en dehors d'une déclaration de classe.  
+ Plusieurs règles régissent la déclaration des destructeurs. Les destructeurs :  
   
- Plusieurs règles régissent la déclaration des destructeurs.  Les destructeurs :  
+-   n’acceptent pas d’arguments ;  
   
--   n'acceptent pas d'arguments ;  
+-   Ne retournent pas de valeur (ou `void`).  
   
--   ne peuvent spécifier aucun type de retour \(y compris `void`\) ;  
+-   Ne peut pas être déclaré en tant que **const**, `volatile`, ou **statique**. Toutefois, ils peuvent être appelés pour la destruction d’objets déclarés en tant que **const**, `volatile`, ou **statique**.  
   
--   ne peuvent pas retourner de valeur via l'instruction `return` ;  
+-   Peut être déclaré comme **virtuels**. En utilisant des destructeurs virtuels, vous pouvez détruire des objets sans connaître leur type (le destructeur correct de l’objet est appelé via le mécanisme de fonction virtuelle). Notez que les destructeurs peuvent également être déclarés en tant que fonctions virtuelles pures pour les classes abstraites.  
   
--   ne peuvent pas être déclarés comme **const**, `volatile` ou **static**.  Toutefois, ils peuvent être appelés pour la destruction des objets déclarés comme **const**, `volatile` ou **static** ;  
-  
--   ne peuvent pas être déclarés comme **virtual**.  En utilisant des destructeurs virtuels, vous pouvez détruire des objets sans connaître leur type \(le destructeur correct de l'objet est appelé via le mécanisme de fonction virtuelle\).  Notez que les destructeurs peuvent également être déclarés en tant que fonctions virtuelles pures pour les classes abstraites.  
-  
-## Utilisation de destructeurs  
+## <a name="using-destructors"></a>Utilisation de destructeurs  
  Les destructeurs sont appelés lorsque l'un des événements suivants se produit :  
-  
--   Un objet alloué à l'aide de l'opérateur **new** est explicitement libéré aide de l'opérateur **delete**.  Lorsque les objets sont libérés aide de l'opérateur **delete**, la mémoire est libérée pour « l'objet le plus dérivé » ou l'objet qui est un objet complet et non un sous\-objet représentant une classe de base.  Le fonctionnement de cette désallocation pour « l'objet le plus dérivé » est garantie uniquement avec les destructeurs virtuels.  La désallocation peut échouer dans des situations d'héritage multiple où les informations de type ne correspondent pas au type sous\-jacent de l'objet réel.  
-  
--   Un objet \(automatique\) local avec portée de bloc passe hors de portée.  
+
+-   Un objet (automatique) local avec portée de bloc passe hors de portée.  
+
+-   Un objet alloué à l’aide de la **nouveau** opérateur est explicitement libéré aide **supprimer**.   
   
 -   La durée de vie d'un objet temporaire se termine.  
   
 -   Un programme se termine et des objets globaux ou statiques existent.  
   
--   Le destructeur est appelé explicitement à l'aide du nom complet de la fonction destructeur.  \(Pour plus d'informations, consultez [Appels de destructeur explicites](../misc/explicit-destructor-calls.md).\)  
+-   Le destructeur est appelé explicitement à l'aide du nom complet de la fonction destructeur.
   
- Les cas décrits dans la liste précédente garantissent que tous les objets peuvent être détruits avec des méthodes définies par l'utilisateur.  
+ Les destructeurs peuvent librement appeler des fonctions membres de classe et accéder aux données de membres de classe.
   
- Si une classe de base ou une donnée membre possède un destructeur accessible, et si une classe dérivée ne déclare pas de destructeur, le compilateur en génère un.  Ce destructeur généré par le compilateur appelle le destructeur de la classe de base et les destructeurs pour les membres du type dérivé.  Les destructeurs par défaut sont publics.  \(Pour plus d'informations sur l'accessibilité, consultez [Spécificateurs d'accès pour les classes de base](../misc/access-specifiers-for-base-classes.md).\)  
+ Il existe deux restrictions sur l’utilisation de destructeurs :
+ - Vous ne pouvez pas prendre son adresse
+-  classes dérivées n’héritent pas le destructeur de classe de base.
   
- Les destructeurs peuvent librement appeler des fonctions membres de classe et accéder aux données de membres de classe.  Lorsqu'une fonction virtuelle est appelée à partir d'un destructeur, la fonction appelée est la fonction pour la classe en cours de destruction.  \(Pour plus d'informations, consultez [Ordre de destruction](../misc/order-of-destruction.md).\)  
-  
- Il existe deux restrictions sur l'utilisation des destructeurs.  La première restriction est que vous ne pouvez pas prendre l'adresse d'un destructeur.  Le deuxième est que les classes dérivées n'héritent pas de leurs destructeurs de classe de base.  Au lieu de cela, comme expliqué précédemment, elles substituent toujours les destructeurs de classe de base.  
-  
-## Ordre de destruction  
+## <a name="order-of-destruction"></a>Ordre de destruction  
  Lorsqu'un objet bascule hors de portée ou est supprimé, la séquence d'événements de sa suppression complète est la suivante :  
   
 1.  Le destructeur de la classe est appelé et le corps de la fonction destructeur est exécuté.  
   
-2.  Les destructeurs des objets membres non statiques sont appelés dans l'ordre inverse dans lequel ils apparaissent dans la déclaration de classe.  La liste d'initialisation des membres facultative utilisée dans la construction de ces membres n'affecte pas l'ordre de destruction \(ou de \(construction\).  \(Pour plus d'informations sur l'initialisation des membres, consultez [Initialisation des bases et des membres](http://msdn.microsoft.com/fr-fr/2f71377e-2b6b-49da-9a26-18e9b40226a1).\)  
+2.  Les destructeurs des objets membres non statiques sont appelés dans l'ordre inverse dans lequel ils apparaissent dans la déclaration de classe. La liste d’initialisation de membre facultatif utilisée dans la construction de ces membres n’affecte pas l’ordre de construction ou destruction.   
   
 3.  Les destructeurs pour les classes de base non virtuelles sont appelés dans l'ordre inverse de leur déclaration.  
   
@@ -160,10 +168,10 @@ B1 dtor
   
 ```  
   
-### Classes de base virtuelles  
- Les destructeurs pour les classes de base virtuelles sont appelés dans l'ordre inverse d'apparition dans un graphique acyclique dirigé \(balayage à profondeur prioritaire, de gauche à droite, post\-ordre\).  L'illustration suivante représente un graphique d'héritage.  
+### <a name="virtual-base-classes"></a>Classes de base virtuelles  
+ Les destructeurs pour les classes de base virtuelles sont appelés dans l'ordre inverse d'apparition dans un graphique acyclique dirigé (balayage à profondeur prioritaire, de gauche à droite, post-ordre). L'illustration suivante représente un graphique d'héritage.  
   
- ![Graphique d'héritage montrant des classes de base virtuelles](../cpp/media/vc392j1.png "vc392J1")  
+ ![Graphique d’héritage montrant des classes de base virtuelles](../cpp/media/vc392j1.gif "vc392J1")  
 Graphique d'héritage illustrant les classes de base virtuelles  
   
  L'exemple suivant répertorie les titres des classes représentées dans l'illustration.  
@@ -178,15 +186,15 @@ class E : public C, public D, virtual public B
   
  Pour déterminer l'ordre de destruction des classes de base virtuelles d'un objet de type `E`, le compilateur génère une liste en appliquant l'algorithme suivant :  
   
-1.  Balayez le graphique vers la gauche, en démarrant au point le plus élevé dans le graphique \(dans ce cas, `E`\).  
+1.  Balayez le graphique vers la gauche, en démarrant au point le plus élevé dans le graphique (dans ce cas, `E`).  
   
-2.  Exécutez des balayages vers la gauche jusqu'à ce que tous les nœuds aient été consultés.  Notez le nom du nœud actuel.  
+2.  Exécutez des balayages vers la gauche jusqu'à ce que tous les nœuds aient été consultés. Notez le nom du nœud actuel.  
   
-3.  Reprenez le nœud précédent \(en bas et à droite\) pour déterminer si le nœud mémorisé est une classe de base virtuelle.  
+3.  Reprenez le nœud précédent (en bas et à droite) pour déterminer si le nœud mémorisé est une classe de base virtuelle.  
   
-4.  Si le nœud mémorisé est une classe de base virtuelle, analysez la liste pour voir si elle a déjà été entrée.  Si ce n'est pas une classe de base virtuelle, ignorez\-la.  
+4.  Si le nœud mémorisé est une classe de base virtuelle, analysez la liste pour voir si elle a déjà été entrée. Si ce n'est pas une classe de base virtuelle, ignorez-la.  
   
-5.  Si le nœud mémorisé n'est pas encore dans la liste, ajoutez\-le au bas de la liste.  
+5.  Si le nœud mémorisé n'est pas encore dans la liste, ajoutez-le au bas de la liste.  
   
 6.  Balayez le graphique vers le haut et le long du tracé suivant vers la droite.  
   
@@ -210,14 +218,14 @@ class E : public C, public D, virtual public B
   
 5.  Classe de base virtuelle `A`.  
   
- Ce processus crée une liste triée d'entrées uniques.  Aucun nom de classe n'apparaît deux fois.  Une fois la liste construite, elle est parcourue dans l'ordre inverse, et le destructeur de chacune des classes de la liste est appelé du dernier au premier.  
+ Ce processus crée une liste triée d'entrées uniques. Aucun nom de classe n'apparaît deux fois. Une fois la liste construite, elle est parcourue dans l'ordre inverse, et le destructeur de chacune des classes de la liste est appelé du dernier au premier.  
   
- L'ordre de construction ou de destruction est particulièrement important lorsque les constructeurs ou les destructeurs d'une classe reposent sur l'autre composant créé en premier ou persistant plus longtemps \(par exemple, si le destructeur de `A` \(dans l'illustration ci\-dessus\) reposait sur la présence de `B` lors de l'exécution de son code, ou vice versa\).  
+ L'ordre de construction ou de destruction est particulièrement important lorsque les constructeurs ou les destructeurs d'une classe reposent sur l'autre composant créé en premier ou persistant plus longtemps (par exemple, si le destructeur de `A` (dans l'illustration ci-dessus) reposait sur la présence de `B` lors de l'exécution de son code, ou vice versa).  
   
  Ces interdépendances entre les classes dans un graphique d'héritage sont fondamentalement dangereuses car les classes dérivées ultérieurement peuvent modifier le tracé à l'extrême gauche, modifiant ainsi l'ordre de construction et de destruction.  
   
-### Classes de base non virtuelles  
- Les destructeurs pour les classes de base non virtuelles sont appelés dans l'ordre inverse de celui dans lequel les noms de classe de base sont déclarés.  Prenons la déclaration de classe suivante :  
+### <a name="nonvirtual-base-classes"></a>Classes de base non virtuelles  
+ Les destructeurs pour les classes de base non virtuelles sont appelés dans l'ordre inverse de celui dans lequel les noms de classe de base sont déclarés. Prenons la déclaration de classe suivante :  
   
 ```  
 class MultInherit : public Base1, public Base2  
@@ -226,8 +234,8 @@ class MultInherit : public Base1, public Base2
   
  Dans l'exemple précédent, le destructeur de `Base2` est appelé avant le destructeur de `Base1`.  
   
-## Appels de destructeur explicites  
- Appeler un destructeur explicitement est rarement nécessaire.  Toutefois, il peut être utile d'effectuer un nettoyage des objets placés à des adresses absolues.  Ces objets sont couramment alloués à l'aide d'un opérateur **new** défini par l'utilisateur qui prend un argument de positionnement.  L'opérateur **delete** ne peut pas libérer cette mémoire, car elle n'est pas allouée à partir du magasin gratuit \(pour plus d'informations, consultez [Opérateurs new et delete](../cpp/new-and-delete-operators.md)\).  Un appel au destructeur, toutefois, permet d'effectuer un nettoyage approprié.  Pour appeler explicitement le destructeur pour un objet, `s`, de classe `String`, utilisez l'une des instructions suivantes :  
+## <a name="explicit-destructor-calls"></a>Appels de destructeur explicites  
+ Appeler un destructeur explicitement est rarement nécessaire. Toutefois, il peut être utile d'effectuer un nettoyage des objets placés à des adresses absolues. Ces objets sont couramment alloués à l’aide de défini par l’utilisateur **nouveau** opérateur qui accepte un argument de positionnement. Le **supprimer** opérateur ne peut pas libérer cette mémoire, car il n’est pas allouée à partir du magasin gratuit (pour plus d’informations, consultez [le nouveau et supprimer des opérateurs](../cpp/new-and-delete-operators.md)). Un appel au destructeur, toutefois, permet d'effectuer un nettoyage approprié. Pour appeler explicitement le destructeur pour un objet, `s`, de classe `String`, utilisez l'une des instructions suivantes :  
   
 ```  
 s.String::~String();     // Nonvirtual call  
@@ -237,7 +245,5 @@ s.~String();       // Virtual call
 ps->~String();     // Virtual call  
 ```  
   
- La notation pour les appels explicites aux destructeurs, illustrée dans l'exemple précédent, peut être utilisée que le type définisse ou non un destructeur.  Vous pouvez ainsi effectuer ce type d'appels explicites sans savoir si un destructeur est défini pour le type.  Un appel explicite à un destructeur n'a aucun effet lorsqu'aucun destructeur n'est défini.  
-  
-## Voir aussi  
- [Fonctions membres spéciales](../misc/special-member-functions-cpp.md)
+ La notation pour les appels explicites aux destructeurs, illustrée dans l'exemple précédent, peut être utilisée que le type définisse ou non un destructeur. Vous pouvez ainsi effectuer ce type d'appels explicites sans savoir si un destructeur est défini pour le type. Un appel explicite à un destructeur n'a aucun effet lorsqu'aucun destructeur n'est défini.  
+

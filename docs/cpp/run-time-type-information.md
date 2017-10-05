@@ -1,48 +1,65 @@
 ---
-title: "Informations de type au moment de l&#39;ex&#233;cution | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RTTI (option du compilateur)"
-  - "au moment de l'exécution, contrôle de type"
-  - "vérifications à l'exécution, contrôle de type"
-  - "informations de type au moment de l'exécution"
-  - "informations de type, vérification des types au moment de l'exécution"
+title: "Les informations de Type au moment de l’exécution | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs:
+- C++
+helpviewer_keywords:
+- RTTI compiler option
+- run-time type information
+- run time, type checking
+- type information, run-time type checking
+- run-time checks, type checking
 ms.assetid: becbd0e5-0439-4c61-854f-8a74f7160c54
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Informations de type au moment de l&#39;ex&#233;cution
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ec36acfdba274a0eaf36c099da11f4462f2aad70
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Les informations de type au moment de l'exécution \(RTTI\) sont un mécanisme qui permet de déterminer le type d'un objet pendant l'exécution du programme.  RTTI a été ajouté au langage C\+\+ car de nombreux fournisseurs de bibliothèques de classes implémentaient cette fonctionnalité eux\-mêmes.  Cela provoquait des incompatibilités entre les bibliothèques.  Par conséquent, il est devenu évident que la prise en charge des informations de type au moment de l'exécution s'avérait nécessaire au niveau du langage.  
+---
+# <a name="run-time-type-information"></a>Informations de type au moment de l'exécution
+Les informations de type au moment de l'exécution (RTTI) sont un mécanisme qui permet de déterminer le type d'un objet pendant l'exécution du programme. RTTI a été ajouté au langage C++ car de nombreux fournisseurs de bibliothèques de classes implémentaient cette fonctionnalité eux-mêmes. Cela provoquait des incompatibilités entre les bibliothèques. Par conséquent, il est devenu évident que la prise en charge des informations de type au moment de l'exécution s'avérait nécessaire au niveau du langage.  
   
- Pour des raisons de simplicité, cette discussion sur RTTI se limite presque exclusivement aux pointeurs.  Toutefois, les concepts présentés également s'appliquent également aux références.  
+ Pour des raisons de simplicité, cette discussion sur RTTI se limite presque exclusivement aux pointeurs. Toutefois, les concepts présentés également s'appliquent également aux références.  
   
- Il existe trois principaux éléments de langage C\+\+ se rapportant aux informations de type au moment de l'exécution :  
+ Il existe trois principaux éléments de langage C++ se rapportant aux informations de type au moment de l'exécution :  
   
--   L'opérateur [dynamic\_cast](../cpp/dynamic-cast-operator.md).  
+-   Le [dynamic_cast](../cpp/dynamic-cast-operator.md) opérateur.  
   
      Utilisé pour la conversion des types polymorphes.  
   
--   L'opérateur [typeid](../cpp/typeid-operator.md).  
+-   Le [typeid](../cpp/typeid-operator.md) opérateur.  
   
      Utilisé pour identifier le type exact d'un objet.  
   
--   La classe [type\_info](../cpp/type-info-class.md).  
+-   Le [type_info](../cpp/type-info-class.md) classe.  
   
      Utilisée pour stocker les informations de type retournées par l'opérateur `typeid`.  
   
-## Voir aussi  
- [Effectuer un cast](../cpp/casting.md)
+## <a name="see-also"></a>Voir aussi  
+ [Cast](../cpp/casting.md)

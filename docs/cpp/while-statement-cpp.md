@@ -1,48 +1,64 @@
 ---
-title: "while, instruction (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "while_cpp"
-  - "while"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "while (mot clé C++)"
-  - "while (mot clé C++), syntaxe"
+title: while, instruction (C++) | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- while_cpp
+- while
+dev_langs:
+- C++
+helpviewer_keywords:
+- while keyword [C++]
+- while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# while, instruction (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 694852e40699ac7b2663392cb8a4c02218a422a7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Exécute *l'instruction* à plusieurs reprises jusqu'à ce que *l'expression* corresponde à zéro.  
+---
+# <a name="while-statement-c"></a>while, instruction (C++)
+Exécute *instruction* à plusieurs reprises jusqu'à ce que *expression* a la valeur zéro.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
       while ( expression )  
-   statement  
+   statement  
 ```  
   
-## Notes  
- Le test de *l'expression* a lieu avant chaque exécution de la boucle, toutefois une boucle `while` est exécutée plusieurs fois ou pas du tout.  *l'expression* doit être de type intégral, de type pointeur, ou d'un type de classe avec une conversion non équivoque à une intégrale ou un type pointeur.  
+## <a name="remarks"></a>Remarques  
+ Le test de *expression* a lieu avant chaque exécution de la boucle ; par conséquent, un `while` la boucle s’exécute à zéro ou plusieurs fois. *expression* doit être d’un type intégral, un type pointeur, ou d’un type de classe possédant une conversion non ambiguë à un type intégral ou pointeur.  
   
- Une boucle `while` peut également se terminer lorsqu'une instruction [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) ou [return](../cpp/return-statement-cpp.md) est exécutée dans le corps de l'instruction.  Utilisez [Continuer](../cpp/continue-statement-cpp.md) pour terminer l'itération actuelle sans quitter la boucle `while`.  **continue** passe le contrôle à l'itération suivante de la boucle `while`.  
+ A `while` boucle peut également se terminer lorsqu’une [saut](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), ou [retourner](../cpp/return-statement-cpp.md) dans l’instruction corps est exécuté. Utilisez [continuer](../cpp/continue-statement-cpp.md) pour terminer l’itération actuelle sans quitter le `while` boucle. **continuer** passe le contrôle à l’itération suivante de la `while` boucle.  
   
- Le code suivant utilise une boucle `while` pour supprimer des traits de soulignement de fin d'une chaîne :  
+ Le code suivant utilise un `while` boucle pour ajuster à la fin des traits de soulignement à partir d’une chaîne :  
   
 ```  
 // while_statement.cpp  
@@ -71,11 +87,11 @@ int main()
 }  
 ```  
   
- L'état d'arrêt est évalué en haut de la boucle.  S'il n'existe aucun trait de soulignement de fin, la boucle ne s'exécute jamais.  
+ La condition d’arrêt est évaluée en haut de la boucle. S’il n’y a aucune des traits de soulignement à droite, la boucle s’exécute jamais.  
   
-## Voir aussi  
- [Instructions d'itération](../cpp/iteration-statements-cpp.md)   
- [Mots clés C\+\+](../cpp/keywords-cpp.md)   
- [do\-while, instruction \(C\+\+\)](../cpp/do-while-statement-cpp.md)   
- [for, instruction \(C\+\+\)](../cpp/for-statement-cpp.md)   
- [Basé sur une plage, instruction \(C\+\+\)](../cpp/range-based-for-statement-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Instructions d’itération](../cpp/iteration-statements-cpp.md)   
+ [Mots clés](../cpp/keywords-cpp.md)   
+ [do-while, instruction (C++)](../cpp/do-while-statement-cpp.md)   
+ [for, instruction (C++)](../cpp/for-statement-cpp.md)   
+ [Basé sur une plage, instruction (C++)](../cpp/range-based-for-statement-cpp.md)

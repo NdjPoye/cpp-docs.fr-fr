@@ -1,47 +1,63 @@
 ---
-title: "__restrict | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__restrict"
-  - "__restrict_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__restrict (mot clé) (C++)"
+title: __restrict | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __restrict
+- __restrict_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# __restrict
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c0ed875845323d4125a97ca004bb50385f59c53d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Comme le modificateur **\_\_declspec \([restrict](../cpp/restrict.md)\)**, le mot clé `__restrict` indique qu'un symbole n'a pas d'alias dans la portée actuelle.  Le mot clé `__restrict` diffère du modificateur `__declspec ( restrict )` sur les points suivants :  
+---
+# <a name="restrict"></a>__restrict
+Comme le **__declspec ( [restreindre](../cpp/restrict.md) )** modificateur, le `__restrict` mot clé indique qu’un symbole n’est pas un alias dans la portée actuelle. Le mot clé `__restrict` diffère du modificateur `__declspec ( restrict )` sur les points suivants :  
   
 -   Le mot clé `__restrict` est valide uniquement sur des variables, alors que `__declspec ( restrict )` est valide seulement sur des déclarations et des définitions de fonction.  
   
--   `__restrict` est similaire à `restrict` issu de la norme C99, mais `__restrict` peut être utilisé dans les programmes C et C\+\+.  
+-   `__restrict` est similaire à `restrict` issu de la norme C99, mais `__restrict` peut être utilisé dans les programmes C et C++.  
   
--   Lorsque `__restrict` est utilisé, le compilateur ne propage pas la propriété anti\-alias d'une variable.  Autrement dit, si vous assignez une variable `__restrict` à une variable non\-`__restrict`, le compilateur permet toujours à la variable non\-\_\_restrict d'avoir un alias.  Cela diffère du comportement du mot clé `restrict` défini dans la norme C99.  
+-   Lorsque `__restrict` est utilisé, le compilateur ne propage pas la propriété anti-alias d'une variable. Autrement dit, si vous assignez une variable `__restrict` à une variable non-`__restrict`, le compilateur permet toujours à la variable non-__restrict d'avoir un alias. Cela diffère du comportement du mot clé `restrict` défini dans la norme C99.  
   
  En général, si vous influez sur le comportement d'une fonction entière, il est préférable d'utiliser `__declspec ( restrict )` plutôt que le mot clé.  
   
- Dans Visual Studio 2015 et versions ultérieures, `__restrict` peut être utilisé sur les références C\+\+.  
+ Dans Visual Studio 2015 et versions ultérieures, `__restrict` peut être utilisé sur les références C++.  
   
 > [!NOTE]
->  Lorsqu'il est utilisé sur une variable qui possède également le mot clé [volatile](../cpp/volatile-cpp.md), `volatile` est prioritaire.  
+>  Lorsqu’il est utilisé sur une variable qui a également la [volatile](../cpp/volatile-cpp.md) (mot clé), `volatile` est prioritaire.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // __restrict_keyword.c  
@@ -65,5 +81,5 @@ union z {
 };  
 ```  
   
-## Voir aussi  
- [Mots clés C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [Mots clés](../cpp/keywords-cpp.md)

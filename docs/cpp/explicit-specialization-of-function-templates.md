@@ -1,42 +1,59 @@
 ---
-title: "Sp&#233;cialisation explicite de mod&#232;les de fonctions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "déclarer des fonctions, spécialisation du modèle de fonction"
-  - "spécialisation explicite des modèles de fonctions"
-  - "modèles de fonctions, spécialisation"
-  - "substituer, fonctions"
-  - "spécialisation des modèles de fonction"
+title: "Spécialisation explicite des modèles de fonction | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- overriding, functions
+- function templates, specialization
+- explicit specialization of function templates
+- declaring functions, specialization of function template
+- specialization of function templates
 ms.assetid: eb0fcb73-eaed-42a1-9b83-14b055a34bf8
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Sp&#233;cialisation explicite de mod&#232;les de fonctions
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: c5caabae41383edbdc92806249026ce8a0daa5d5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/25/2017
 
-Avec un modèle de fonction, vous pouvez définir un comportement spécial pour un type spécifique en fournissant une spécialisation explicite \(substitution\) du modèle de fonction pour ce type.  Par exemple :  
+---
+# <a name="explicit-specialization-of-function-templates"></a>Spécialisation explicite de modèles de fonctions
+Avec un modèle de fonction, vous pouvez définir un comportement spécial pour un type spécifique en fournissant une spécialisation explicite (substitution) du modèle de fonction pour ce type. Exemple :  
   
-```  
+```cpp
 template<> void MySwap(double a, double b);  
 ```  
   
- Cette déclaration vous permet de définir une fonction différente pour les variables **double**.  Comme les fonctions sans modèle, les conversions de type standard \(comme la promotion d'une variable de type **float** en **double**\) sont appliquées.  
+ Cette déclaration vous permet de définir une fonction différente pour **double** variables. Comme les fonctions sans modèle, les conversions de types standard (telles que la promotion d’une variable de type **float** à **double**) sont appliquées.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
-```  
+```cpp
 // explicit_specialization.cpp  
 template<class T> void f(T t)  
 {  
@@ -60,5 +77,6 @@ int main()
 }  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modèles de fonctions](../cpp/function-templates.md)
+
