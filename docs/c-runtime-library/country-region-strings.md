@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 708651f59ceff638482264e3fc57228e8a1822b2
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 272ce38cee55661a3f4a1eb751c8808b355b59be
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="countryregion-strings"></a>Chaînes de pays et de région
-Les chaînes de pays et de région peuvent être combinés avec une chaîne de langue pour créer une spécification de paramètres régionaux pour les fonctions `setlocale`, `_wsetlocale`, `_create_locale`et `_wcreate_locale` . Pour obtenir la liste des noms de pays/région qui sont pris en charge par les différentes versions du système d’exploitation Windows, consultez les [Informations de référence de l’API NLS (National Language Support)](http://msdn.microsoft.com/goglobal/bb896001.aspx). Dans les listes, la chaîne de pays/région peut être une des valeurs de la colonne **Locale - Language Country/Region** ou une des abréviations de la colonne **Country or Region name abbreviation**.  
+Les chaînes de pays et de région peuvent être combinés avec une chaîne de langue pour créer une spécification de paramètres régionaux pour les fonctions `setlocale`, `_wsetlocale`, `_create_locale`et `_wcreate_locale` . Pour obtenir la liste des noms de pays/région qui sont pris en charge par les différentes versions du système d’exploitation Windows, consultez les [Informations de référence de l’API NLS (National Language Support)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Dans les listes, la chaîne de pays/région peut être une des valeurs de la colonne **Locale - Language Country/Region** ou une des abréviations de la colonne **Country or Region name abbreviation**. Pour plus d’informations sur la prise en charge linguistique dans les systèmes d’exploitation Windows par version, consultez [Appendix A: Product Behavior](http://msdn.microsoft.com/goglobal/bb896001.aspx) dans [MS-LCID] : Informations de référence Windows LCID (Language Code Identifier).  
   
  L’implémentation de la bibliothèque Runtime C prend également en charge les chaînes et abréviations de pays/région supplémentaires suivantes :  
   
@@ -66,7 +66,7 @@ Les chaînes de pays et de région peuvent être combinés avec une chaîne de l
 |south-africa|ZAF|af-ZA|  
 |south-korea|KOR|ko-KR|  
 |trinidad & tobago|TTO|en-TT|  
-|R.-U.|GBR|en-GB|  
+|uk|GBR|en-GB|  
 |united-kingdom|GBR|en-GB|  
 |united-states|USA|fr-FR|  
 |us|USA|fr-FR|  
