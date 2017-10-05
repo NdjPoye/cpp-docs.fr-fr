@@ -15,16 +15,6 @@ caps.latest.revision: 5
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
 translation.priority.mt:
 - cs-cz
 - pl-pl
@@ -37,12 +27,10 @@ ms.contentlocale: fr-fr
 ms.lasthandoff: 05/18/2017
 
 ---
-# Portage et mise à niveau : exemples et études de cas
-<a id="porting-and-upgrading-examples-and-case-studies" class="xliff"></a>
+# <a name="porting-and-upgrading-examples-and-case-studies"></a>Portage et mise à niveau : exemples et études de cas
 Lisez des récits de migrations réussies pour vous faire une idée des types de problèmes que vous pouvez rencontrer pendant la migration d'une version antérieure de Visual C++ vers la version actuelle.  
   
-## Exemples de migrations réussies
-<a id="examples-of-successful-migrations" class="xliff"></a>  
+## <a name="examples-of-successful-migrations"></a>Exemples de migrations réussies  
  À partir de quelques exemples et outils simples, vous verrez ici comment s'est déroulé le processus de migration vers la dernière version de Visual C++. Les problèmes rencontrés pendant ces migrations représentent quelques-uns des types de problèmes les plus courants, à une grande différence près, la taille du code. En effet, nos exemples de code sont beaucoup plus simples et rapides que le code d’application utilisé dans des situations réelles.  
   
 -   [MFC Scribble](../porting/porting-guide-mfc-scribble.md) est un exemple qui utilise les bases de MFC.  
@@ -51,6 +39,5 @@ Lisez des récits de migrations réussies pour vous faire une idée des types de
   
 -   [Spy++](../porting/porting-guide-spy-increment.md) est une application qui inspecte et fournit des informations sur les éléments d’interface utilisateur dans les applications en cours d’exécution.  
   
-## Voir aussi
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Voir aussi  
  [Guide du portage et de la mise à niveau de Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)
