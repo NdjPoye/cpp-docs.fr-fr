@@ -15,14 +15,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
 ms.openlocfilehash: 2ea129ac94cb1ddc7486ba69280dc0390896e088
+ms.contentlocale: fr-fr
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Guide pratique pour signaler un problème avec l’ensemble d’outils Visual C++
@@ -40,7 +37,7 @@ Si vous rencontrez des problèmes avec le compilateur Visual C++, l’éditeur d
   
  Vos rapports sont importants pour nous ainsi que pour d’autres développeurs comme vous. Merci de nous aider à améliorer Visual C++ !  
   
-##  <a name="a-namepreparea-how-to-prepare-your-report"></a><a name="prepare"></a> Comment préparer votre rapport  
+##  <a name="prepare"></a> Comment préparer votre rapport  
  Il est important de créer un rapport de qualité, car il est très difficile de reproduire le problème rencontré sur nos propres ordinateurs sans des informations complètes. Plus votre rapport est exhaustif, plus nous serons en mesure de recréer et diagnostiquer le problème efficacement.  
   
  Au minimum, votre rapport doit contenir les éléments suivants :  
@@ -144,7 +141,7 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
     Help menu, or open the Technical Support help file for more information   
 ```  
   
-####  <a name="a-namebackendcrasha-backend-code-generation-crash"></a><a name="backend_crash"></a> Blocage de serveur principal (génération de code)  
+####  <a name="backend_crash"></a> Blocage de serveur principal (génération de code)  
  Les blocages de serveur principal se produisent pendant la phase de génération de code du compilateur. En règle générale, le compilateur indique [Erreur irrécupérable C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) et peut ne pas faire référence au fichier de code source ni au numéro de ligne associés au problème ; il mentionne souvent un fichier compiler\utc\src\p2\main.c, mais vous pouvez ignorer ce détail.  
   
  Pour ce type de blocage, fournissez une [reproduction de lien](#link_repro) si vous utilisez la génération de code durant l’édition de liens (LTCG) ou une [reproduction prétraitée](#preprocessed_repro) dans le cas contraire. La génération LTCG est activée par l’argument de ligne de commande `/GL` sur cl.exe.  
@@ -217,7 +214,7 @@ CONTEXT:
   
  Pour ce type de blocage, fournissez une [reproduction de lien](#link_repro) si vous utilisez la génération de code durant l’édition de liens (LTCG) ou une [reproduction prétraitée](#preprocessed_repro) dans le cas contraire. La génération LTCG est activée par l’argument de ligne de commande `/GL` sur cl.exe.  
   
-##  <a name="a-namesenda-ways-to-send-your-report"></a><a name="send"></a> Modes d’envoi de votre rapport  
+##  <a name="send"></a> Modes d’envoi de votre rapport  
  Vous disposez de plusieurs moyens pour nous faire parvenir votre rapport. Vous pouvez signaler un bogue sur Microsoft Connect, nous envoyer un e-mail ou utiliser l’outil Signaler un problème intégré à Visual Studio. Le meilleur choix pour votre rapport dépend du type de problème que vous avez rencontré, comment vous souhaitez interagir avec les ingénieurs qui vont étudier votre rapport et si vous souhaitez suivre sa progression ou le partager avec la communauté.  
   
 > [!NOTE]
@@ -268,7 +265,7 @@ Source code and repro steps:
 > [!TIP]
 >  Pour d’autres types de problèmes que vous pouvez rencontrer dans Visual Studio et qui ne sont pas liés à l’ensemble d’outils (par exemple, des problèmes d’interface utilisateur, des fonctionnalités IDE altérées ou des blocages d’ordre général), l’outil Signaler un problème peut s’avérer être un choix particulièrement judicieux en raison de ses fonctionnalités de capture d’écran et de sa capacité à enregistrer les actions de l’interface utilisateur qui aboutissent au problème que vous avez rencontré. Microsoft Connect peut également représenter une option pertinente pour le signalement de ces autres types d’erreurs, mais ne présente pas les fonctionnalités supplémentaires de l’outil Signaler un problème. Vous ne devez jamais signaler ces autres types d’erreurs en envoyant un e-mail à compilercrash@microsoft.com.  
   
-##  <a name="a-namegeneratea-generating-repros"></a><a name="generate"></a> Génération de reproductions  
+##  <a name="generate"></a> Génération de reproductions  
  Une reproduction est un exemple de code complet et autonome qui illustre le problème que vous signalez. Une reproduction n’est **pas** un extrait de code, mais doit être un exemple complet capable de générer et de s’exécuter (ou qui devrait, sans les erreurs produites par le problème que vous signalez). Elle doit contenir toutes les directives #include nécessaires, même pour les en-têtes standard.  
   
  En outre, une bonne reproduction  
@@ -285,7 +282,7 @@ Source code and repro steps:
   
  Vous trouverez ci-dessous des instructions pour générer les différents types de reproductions que vous utiliserez pour signaler différents types de problèmes.  
   
-###  <a name="a-namepreprocessedreproa-preprocessed-repos"></a><a name="preprocessed_repro"></a> Reproductions prétraitées  
+###  <a name="preprocessed_repro"></a> Reproductions prétraitées  
  Une reproduction prétraitée est un fichier source unique qui illustre un problème et a été généré à partir de la sortie du préprocesseur C par le traitement du fichier source d’origine. Ce processus intègre les en-têtes Include pour supprimer les dépendances sur d’autres fichiers sources et d’en-tête, et résout également des macros, des valeurs #ifdef et d’autres commandes de préprocesseur qui pourraient dépendre de votre environnement local.  
   
 > [!NOTE]
@@ -313,7 +310,7 @@ Source code and repro steps:
   
  Enfin, joignez cette reproduction à votre rapport.  
   
-###  <a name="a-namelinkreproa-link-repros"></a><a name="link_repro"></a> Reproductions de lien  
+###  <a name="link_repro"></a> Reproductions de lien  
  Une reproduction de lien est un répertoire unique contenant des artefacts de build qui illustrent collectivement un problème qui se produit durant l’édition de liens, par exemple un blocage de serveur principal impliquant la génération de code durant l’édition de liens (LTCG) ou un blocage d’éditeur de liens ; les artefacts de build inclus sont ceux qui sont nécessaires comme entrée de l’éditeur de liens pour que le problème puisse être reproduit. Les reproductions de lien peuvent être créées facilement en utilisant les fonctionnalités fournies par l’éditeur de liens.  
   
 ##### <a name="to-generate-a-link-repro"></a>Pour générer une reproduction de lien :  
@@ -332,12 +329,7 @@ Source code and repro steps:
   
  Enfin, empaquetez la reproduction en compressant l’ensemble du répertoire dans un fichier .zip ou similaire et attachez-la à votre rapport.  
   
-###  <a name="a-nameotherreprosa-other-repros"></a><a name="other_repros"></a> Autres reproductions  
+###  <a name="other_repros"></a> Autres reproductions  
  Si vous ne pouvez pas réduire le problème à un fichier source unique ou une reproduction prétraitée et que le problème ne nécessite pas une reproduction de lien, nous pouvons examiner un projet IDE. Le code dans le projet doit toujours être minimal et tous les conseils de ce document s’appliquent encore.  
   
  Créez votre reproduction comme un projet IDE minimal, puis empaquetez-la en compressant l’intégralité de la structure de répertoire dans un fichier .zip ou similaire et attachez-la à votre rapport.
-
-
-<!--HONumber=Feb17_HO4-->
-
-
