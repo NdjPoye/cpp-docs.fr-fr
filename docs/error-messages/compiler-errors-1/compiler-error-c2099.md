@@ -19,26 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 74fdc75470600c29029c52e38ab2073e484dbde6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0378426777bc7ce831eee9ecb62170baf5e906b9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2099"></a>Erreur du compilateur C2099
@@ -57,13 +42,13 @@ j = *p;   // C2099 *p is not a constant
 ```  
   
 ## <a name="example"></a>Exemple  
- Erreur C2099 peut également se produire, car le compilateur n’est pas en mesure d’effectuer un repli constant sur une expression sous **/fp : strict** , car les paramètres d’environnement de précision en virgule flottante (consultez [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md) pour plus d’informations) peuvent différer de la compilation et au moment de l’exécution.  
+ L’erreur C2099 peut également se produire si le compilateur ne parvient pas à effectuer un repli de constante sur une expression sous **/fp:strict** , ce qui peut être dû au fait que les paramètres de l’environnement de précision en virgule flottante diffèrent entre le moment de la compilation et celui de l’exécution. Pour plus d’informations, consultez [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md) .  
   
  En cas d’échec du repli de constante, le compilateur appelle l’initialisation dynamique, ce qui n’est pas autorisé en C.  
   
  Pour résoudre cette erreur, compilez le module en tant que fichier .cpp ou simplifiez l’expression.  
   
- Pour plus d’informations, consultez l’article [/fp (Spécifier le comportement de virgule flottante)](../../build/reference/fp-specify-floating-point-behavior.md).  
+ Pour plus d'informations, consultez [/fp (Specify Floating-Point Behavior)](../../build/reference/fp-specify-floating-point-behavior.md).  
   
  L’exemple suivant génère l’erreur C2099.  
   

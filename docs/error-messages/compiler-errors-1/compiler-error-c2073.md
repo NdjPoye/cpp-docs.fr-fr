@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2073 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2073"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2073"
+title: Erreur du compilateur C2073 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2073
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2073
 ms.assetid: 57908234-be7a-4ce9-b0a7-8b1ad621865e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Erreur du compilateur C2073
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 28f44a0a51e5b1ff1c6cb39e8a330c4ac0bd3154
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-'identificateur' : les éléments d'un tableau partiellement initialisé nécessitent un constructeur par défaut  
+---
+# <a name="compiler-error-c2073"></a>Erreur du compilateur C2073
+'identificateur' : les éléments d’un tableau partiellement initialisé doivent posséder un constructeur par défaut  
   
- Trop peu d'initialiseurs ont été spécifiés pour un tableau de types ou de constantes définis par l'utilisateur.  Si un initialiseur explicite et le constructeur correspondant ne sont pas spécifiés pour un membre d'un tableau, un constructeur par défaut doit être fourni.  
+ Trop peu d’initialiseurs ont été spécifiés pour un tableau de types définis par l’utilisateur ou de constantes. Si un initialiseur explicit et le constructeur correspondant ne sont pas spécifiés pour un membre de tableau, un constructeur par défaut doit être fourni.  
   
- L'exemple suivant génère l'erreur C2073 :  
+ L’exemple suivant génère l’erreur C2073 :  
   
 ```  
 // C2073.cpp  

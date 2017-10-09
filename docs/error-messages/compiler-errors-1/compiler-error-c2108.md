@@ -1,37 +1,40 @@
 ---
-title: "Erreur du compilateur C2108 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2108"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2108"
+title: Erreur du compilateur C2108 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2108
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2108
 ms.assetid: c84f0b47-5e2c-47d2-8edb-427a40e17c36
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C2108
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 936c7f53ba112d2fc7bf03d76acac27bd8b4c372
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-l'indice n'est pas de type intégral  
+---
+# <a name="compiler-error-c2108"></a>Erreur du compilateur C2108
+indice n’est pas de type intégral  
   
- L'indice de tableau est une expression non entière.  
+ L’indice de tableau est une expression de type non entier.  
   
-## Exemple  
- L'erreur C2108 peut se produire si vous utilisez incorrectement le pointeur `this` d'un type valeur pour accéder à l'indexeur par défaut de ce type.  Pour plus d'informations, consultez [Sémantique de ce pointeur](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
+## <a name="example"></a>Exemple  
+ C2108 peut se produire si vous utilisez incorrectement le `this` pointeur d’un type de valeur pour l’indexeur de valeur par défaut du type d’accès. Pour plus d’informations, consultez [sémantiques de ce pointeur](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
   
- L'exemple suivant génère l'erreur C2108.  
+ L’exemple suivant génère C2108.  
   
 ```  
 // C2108.cpp  
