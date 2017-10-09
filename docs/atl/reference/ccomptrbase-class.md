@@ -30,25 +30,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 65541d9e6f15bcc56811fa6a5d9d168737131108
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e6bf79ce5de5d19468b3cbb230e16882483dc30
 ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomptrbase-class"></a>Classe de CComPtrBase
@@ -93,11 +79,11 @@ class CComPtrBase
 |----------|-----------------|  
 |[CComPtrBase::operator T *](#operator_t_star)|L’opérateur de cast.|  
 |[CComPtrBase::operator !](#operator_not)|L’opérateur NOT.|  
-|[CComPtrBase::operator se](#operator_amp)|Le s’opérateur.|  
+|[CComPtrBase::operator &](#operator_amp)|Le & (opérateur).|  
 |[CComPtrBase::operator *](#operator_star)|Le * (opérateur).|  
-|[CComPtrBase::operator](#ccomptrbase__operator lt)|Moins-que l’opérateur.|  
+|[CComPtrBase::operator <](#ccomptrbase__operator lt)|Moins-que l’opérateur.|  
 |[CComPtrBase::operator ==](#operator_eq_eq)|L’opérateur d’égalité.|  
-|[CComPtrBase::operator->](#operator_ptr)|L’opérateur de pointeur de membre.|  
+|[CComPtrBase::operator ->](#operator_ptr)|L’opérateur de pointeur de membre.|  
   
 ### <a name="public-data-members"></a>Membres de données publics  
   
@@ -105,7 +91,7 @@ class CComPtrBase
 |----------|-----------------|  
 |[CComPtrBase::p](#p)|La variable de membre de données de pointeur.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette classe fournit la base d’autres pointeurs intelligents qui utilisent des routines de gestion de mémoire COM, tel que [CComQIPtr](../../atl/reference/ccomqiptr-class.md) et [CComPtr](../../atl/reference/ccomptr-class.md). Les classes dérivées ajouter leurs propres constructeurs et des opérateurs, mais s’appuient sur les méthodes fournies par `CComPtrBase`.  
   
 ## <a name="requirements"></a>Spécifications  
@@ -148,7 +134,7 @@ void Attach(T* p2) throw();
  `p2`  
  Le `CComPtrBase` objet prendra possession de ce pointeur.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  **Attacher** appelle [CComPtrBase::Release](#release) sur le serveur existant [CComPtrBase::p](#p) variable membre, puis assigne `p2` à `CComPtrBase::p`. Lorsqu’un `CComPtrBase` objet prend possession du pointeur, il appelle automatiquement `Release` sur le pointeur qui va supprimer le pointeur et tout allouée données si le décompte de références sur l’objet passe à 0.  
   
 ##  <a name="dtor"></a>CComPtrBase :: ~ CComPtrBase  
@@ -192,7 +178,7 @@ HRESULT CoCreateInstance(
 ### <a name="return-value"></a>Valeur de retour  
  En cas d’échec, retourne S_OK sur les cas de réussite, REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING ou E_NOINTERFACE. Consultez [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) et [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) pour obtenir une description de ces erreurs.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Si la première forme de la méthode est appelée, [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386) est utilisé pour récupérer le CLSID. Les deux formes puis appellent [CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
  Dans les versions debug, une erreur d’assertion se produit si [CComPtrBase::p](#p) n’est pas égal à NULL.  
@@ -226,7 +212,7 @@ T* Detach() throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne une copie du pointeur.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Libère la propriété d’un pointeur, définit le [CComPtrBase::p](#p) variable de membre de données avec la valeur NULL et retourne une copie du pointeur.  
   
 ##  <a name="isequalobject"></a>CComPtrBase::IsEqualObject  
@@ -238,7 +224,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
   
 ### <a name="parameters"></a>Paramètres  
  `pOther`  
- Le **IUnknown \*** à comparer.  
+ Le **IUnknown \***  à comparer.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur true si les objets sont identiques, false dans le cas contraire.  
@@ -254,7 +240,7 @@ bool operator!() const throw();
  Retourne true si le `CComHeapPtr` pointeur est égal à NULL, false dans le cas contraire.  
   
 ##  <a name="operator_amp"></a>CComPtrBase::operator&amp;  
- Le s’opérateur.  
+ Le & (opérateur).  
   
 ```
 T** operator&() throw();
@@ -300,7 +286,7 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne la valeur de la [CComPtrBase::p](#p) variable de membre de données.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Utilisez cet opérateur pour appeler une méthode dans une classe vers laquelle pointée le `CComPtrBase` objet. Dans les versions debug, un échec d’assertion se produit si le `CComPtrBase` membre de données pointe sur la valeur NULL.  
   
 ##  <a name="operator_lt"></a>CComPtrBase::operator&lt;  
@@ -334,7 +320,7 @@ operator T*() const throw();
 T* p;
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette variable membre conserve les informations de pointeur.  
   
 ##  <a name="queryinterface"></a>CComPtrBase::QueryInterface  
@@ -367,7 +353,7 @@ template <class Q> HRESULT QueryInterface(Q
 void Release() throw();
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  L’interface est publié, et [CComPtrBase::p](#p) a la valeur NULL.  
   
 ##  <a name="setsite"></a>CComPtrBase::SetSite  
@@ -384,7 +370,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 ### <a name="return-value"></a>Valeur de retour  
  Retourne S_OK en cas de réussite, ou une erreur HRESULT d’échec.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette méthode appelle [AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite).  
   
 ## <a name="see-also"></a>Voir aussi  

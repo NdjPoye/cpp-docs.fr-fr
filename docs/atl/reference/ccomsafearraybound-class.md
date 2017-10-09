@@ -26,28 +26,14 @@ caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 1cc2adef85c902b7ad12b152b35a7ef68e6abacb
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 01198e8de5f2eb1cbe0787bd287820d222875c20
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# <a name="ccomsafearraybound-class"></a>CComSafeArrayBound (classe)
+# <a name="ccomsafearraybound-class"></a>Classe de CComSafeArrayBound
 Cette classe est un wrapper pour un [SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d) structure.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -76,7 +62,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 |[opérateur =](#operator_eq)|Définit le `CComSafeArrayBound` une nouvelle valeur.|  
   
 ## <a name="remarks"></a>Remarques  
- Cette classe est un wrapper pour le **SAFEARRAYBOUND** structure utilisée par [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Il fournit des méthodes pour interroger et définir les limites supérieures et inférieures d’une dimension unique d’un `CComSafeArray` objet et le nombre d’éléments qu’il contient. Un multidimensionnels `CComSafeArray` objet utilise un tableau de `CComSafeArrayBound` objets, un pour chaque dimension. Par conséquent, lorsque vous utilisez des méthodes telles que [GetCount](#getcount), sachez que cette méthode ne retournera pas le nombre total d’éléments dans un tableau multidimensionnel.  
+ Cette classe est un wrapper pour le **SAFEARRAYBOUND** structure utilisée par [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Il fournit des méthodes de recherche et de définir les limites supérieures et inférieures d’une dimension unique d’un `CComSafeArray` objet et le nombre d’éléments qu’il contient. Un multidimensionnels `CComSafeArray` objet utilise un tableau de `CComSafeArrayBound` objets, un pour chaque dimension. Par conséquent, lorsque vous utilisez des méthodes telles que [GetCount](#getcount), sachez que cette méthode ne retournera pas le nombre total d’éléments dans un tableau multidimensionnel.  
   
  **En-tête :** atlsafe.h  
   
@@ -134,7 +120,7 @@ LONG GetUpperBound() const throw();
  Retourne la limite supérieure de la `CComSafeArrayBound` objet.  
   
 ### <a name="remarks"></a>Remarques  
- La limite supérieure varie selon le nombre d’éléments et la valeur de limite inférieure. Par exemple, si la limite inférieure est 0 et le nombre d’éléments est 10, la limite supérieure est automatiquement fixée à 9.  
+ La limite supérieure varie selon le nombre d’éléments et la valeur de limite inférieure. Par exemple, si la limite inférieure est 0 et le nombre d’éléments est de 10, la limite supérieure est automatiquement fixée à 9.  
   
 ##  <a name="operator_eq"></a>CComSafeArrayBound::operator =  
  Définit le `CComSafeArrayBound` une nouvelle valeur.  
@@ -155,7 +141,7 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
  Retourne un pointeur vers le `CComSafeArrayBound` objet.  
   
 ### <a name="remarks"></a>Remarques  
- Le `CComSafeArrayBound` objet peut être assigné à l’aide d’un fichier `CComSafeArrayBound`, ou en fournissant le nombre d’éléments, dans lequel les cas, la limite inférieure est définie sur 0 par défaut.  
+ Le `CComSafeArrayBound` objet peut être assigné à l’aide d’un fichier `CComSafeArrayBound`, ou en fournissant le nombre d’éléments, dans laquelle les cas de la limite inférieure est définie sur 0 par défaut.  
   
 ##  <a name="setcount"></a>CComSafeArrayBound::SetCount  
  Appelez cette méthode pour définir le nombre d’éléments.  
@@ -188,7 +174,7 @@ LONG SetLowerBound(LONG lLowerBound) throw();
 ### <a name="remarks"></a>Remarques  
  Si le tableau est accessible à partir d’un programme Visual C++, il est recommandé que la limite inférieure est défini sur 0. Il peut être préférable d’utiliser une valeur de limite inférieure différente si le tableau doit être utilisé avec d’autres langages, tels que Visual Basic.  
   
- La limite supérieure varie selon le nombre d’éléments et la valeur de limite inférieure. Par exemple, si la limite inférieure est 0 et le nombre d’éléments est 10, la limite supérieure est automatiquement fixée à 9.  
+ La limite supérieure varie selon le nombre d’éléments et la valeur de limite inférieure. Par exemple, si la limite inférieure est 0 et le nombre d’éléments est de 10, la limite supérieure est automatiquement fixée à 9.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

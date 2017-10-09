@@ -22,25 +22,11 @@ caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: ea1d87d3d500fc08f3da16de6820ca003e899419
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 104596d55ee2580cbee3cfc916ad9ef7390ce4c1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlmodule70-structure"></a>Structure de _ATL_MODULE70
@@ -62,13 +48,13 @@ struct _ATL_MODULE70 {
  La taille de la structure utilisée pour le contrôle de version.  
   
  `m_nLockCnt`  
- Décompte de références pour déterminer la durée pendant laquelle le module doit rester actif.  
+ Nombre de références pour déterminer la durée pendant laquelle le module doit rester actif.  
   
  **m_pTermFuncs**  
  Fonctions de pistes qui ont été inscrits pour être appelée lorsque ATL s’arrête.  
   
  **m_csStaticDataInitAndTypeInfo**  
- Utilisé pour coordonner l’accès aux données internes dans les situations multithreads.  
+ Permet de coordonner l’accès aux données internes dans les situations multithreads.  
   
 ## <a name="remarks"></a>Remarques  
  [_ATL_MODULE](atl-typedefs.md#_atl_module) est défini comme un typedef de `_ATL_MODULE70`.  

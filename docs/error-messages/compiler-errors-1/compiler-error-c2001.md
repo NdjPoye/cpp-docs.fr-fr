@@ -1,41 +1,44 @@
 ---
-title: "Erreur du compilateur C2001 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2001"
+title: Erreur du compilateur C2001 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2001
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2001
 ms.assetid: 0c3a7821-d8e5-4398-ab5a-4116d46e8dda
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C2001
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: aedba438451089aa2d71e06da7ce189ab97d4190
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2001"></a>Erreur du compilateur C2001
 saut de ligne dans la constante  
   
- Une constante chaîne ne peut se poursuivre sur une deuxième ligne, sauf si vous :  
+ Une constante de chaîne ne peut pas se poursuivre sur une deuxième ligne, sauf si vous procédez comme suit :  
   
--   terminez la première ligne par une barre oblique inverse ;  
+-   La première ligne d’une barre oblique de fin.  
   
--   fermez la chaîne sur la première ligne par un guillemet double, pour la rouvrir sur la ligne suivante avec un autre guillemet double.  
+-   Fermez la chaîne sur la première ligne par un guillemet double et ouvrez la chaîne sur la ligne suivante avec un autre guillemet double.  
   
- Il ne suffit pas de terminer la première ligne par \\n.  
+ Fin de la première ligne \n n’est pas suffisant.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C2001 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C2001 :  
   
 ```  
 // C2001.cpp  
@@ -51,8 +54,8 @@ int main()
 }  
 ```  
   
-## Exemple  
- Les espaces au début de la ligne suivante après un caractère de continuation de ligne sont inclus dans la constante chaîne.  Aucun des exemples ci\-dessus n'incorpore de caractère de saut de ligne dans la constante chaîne.  Vous pouvez incorporer un caractère de saut de ligne comme indiqué ci\-dessous :  
+## <a name="example"></a>Exemple  
+ Les espaces au début de la ligne suivante après un caractère de continuation de ligne sont inclus dans la constante de chaîne. Aucun des exemples ci-dessus incorporer un caractère de saut de ligne dans la constante de chaîne. Vous pouvez incorporer un caractère de saut de ligne comme indiqué ici :  
   
 ```  
 // C2001b.cpp  

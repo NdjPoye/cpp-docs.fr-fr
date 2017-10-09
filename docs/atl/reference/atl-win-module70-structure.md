@@ -22,25 +22,11 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: 383384c8f08b98592f92b5d38850137c1c0c6d54
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 7f521b418b7d179eb506a5e9df2887addec059ef
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlwinmodule70-structure"></a>Structure de _ATL_WIN_MODULE70
@@ -62,13 +48,13 @@ struct _ATL_WIN_MODULE70 {
  La taille de la structure utilisée pour le contrôle de version.  
   
  `m_csWindowCreate`  
- Utilisé pour sérialiser l’accès au code d’inscription de fenêtre. Utilisé en interne par ATL.  
+ Utilisé pour sérialiser l’accès au code de l’inscription de fenêtre. Utilisé en interne par ATL.  
   
  **m_pCreateWndList**  
  Permet de lier windows à leurs objets. Utilisé en interne par ATL.  
   
  **m_rgWindowClassAtoms**  
- Permet de suivre les enregistrements de classe de fenêtre afin qu’ils puissent être correctement annulées à la fin. Utilisé en interne par ATL.  
+ Utilisé pour effectuer le suivi des inscriptions de classe de fenêtre afin qu’ils puissent être correctement annulées à la fin. Utilisé en interne par ATL.  
   
 ## <a name="remarks"></a>Remarques  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) est défini comme un typedef de `_ATL_WIN_MODULE70`.  

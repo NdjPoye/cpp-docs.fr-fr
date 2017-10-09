@@ -24,29 +24,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: a06af7698afb24c1c2391b762673c7e3633018d4
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 8680fc73480fd95c8b2d613f716868d8162a96c8
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# <a name="celementtraitsbase-class"></a>CElementTraitsBase (classe)
-Cette classe fournit la copie par défaut et les méthodes d’une classe de collection de déplacement.  
+# <a name="celementtraitsbase-class"></a>Classe de CElementTraitsBase
+Cette classe fournit la copie de la valeur par défaut et les méthodes d’une classe de collection de déplacement.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -75,8 +61,8 @@ class CElementTraitsBase
 |[CElementTraitsBase::CopyElements](#copyelements)|Appelez cette méthode pour copier les éléments stockés dans un objet de classe de collection.|  
 |[CElementTraitsBase::RelocateElements](#relocateelements)|Appelez cette méthode pour déplacer des éléments stockés dans un objet de classe de collection.|  
   
-## <a name="remarks"></a>Notes  
- Cette classe de base définit des méthodes pour la copie et déplacement d’éléments dans une classe de collection. Elle est utilisée par les classes [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), et [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
+## <a name="remarks"></a>Remarques  
+ Cette classe de base définit des méthodes pour la copie et déplacement des éléments dans une classe de collection. Il est utilisé par les classes [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), et [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
   
  Pour plus d’informations, consultez [Classes de Collection ATL](../../atl/atl-collection-classes.md).  
   
@@ -141,7 +127,7 @@ static void RelocateElements(
  Le nombre d’éléments à déplacer.  
   
 ### <a name="remarks"></a>Remarques  
- Cette méthode appelle [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), ce qui est suffisant pour la plupart des types de données. Si les objets déplacés contiennent des pointeurs vers des membres de leurs propre, cette méthode devez être remplacée.  
+ Cette méthode appelle [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), ce qui est suffisant pour la plupart des types de données. Si les objets en cours de déplacement contiennent des pointeurs vers leurs propre membres, cette méthode devrez être substituée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

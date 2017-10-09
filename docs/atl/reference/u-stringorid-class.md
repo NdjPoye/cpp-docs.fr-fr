@@ -1,66 +1,93 @@
 ---
-title: "_U_STRINGorID Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL._U_STRINGorID"
-  - "ATL::_U_STRINGorID"
-  - "_U_STRINGorID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_U_STRINGorID class"
-  - "U_STRINGorID class"
+title: Classe de _U_STRINGorID | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL._U_STRINGorID
+- ATL::_U_STRINGorID
+- _U_STRINGorID
+dev_langs:
+- C++
+helpviewer_keywords:
+- _U_STRINGorID class
+- U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _U_STRINGorID Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: b02d539ae2a067c015988a847407bf631b6e8c1a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-Cette classe d'adaptateur d'argument permet des noms de ressources \(`LPCTSTR`s\) ou des identificateurs de ressource \(**uint**s\) à passer à une fonction sans que l'appelant de convertir l'ID d'une chaîne à l'aide de la macro de **MAKEINTRESOURCE** .  
+---
+# <a name="ustringorid-class"></a>Classe de _U_STRINGorID
+Cette classe d’argument d’adaptateur permet à deux noms de ressources ( `LPCTSTR`s) ou l’ID de ressource ( **UINT**s) à passer à une fonction sans nécessiter de l’appelant convertir une chaîne à l’aide de l’ID du **MAKEINTRESOURCE** (macro).  
   
 > [!IMPORTANT]
->  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s'exécutent dans les fenêtres d'exécution.  
+>  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
+```
+class _U_STRINGorID
 ```  
   
-class _U_STRINGorID  
+## <a name="members"></a>Membres  
   
+### <a name="public-constructors"></a>Constructeurs publics  
+  
+|Nom|Description|  
+|----------|-----------------|  
+|[_U_STRINGorID::_U_STRINGorID](#_u_stringorid___u_stringorid)|Constructeur.|  
+  
+### <a name="public-data-members"></a>Membres de données publics  
+  
+|Nom|Description|  
+|----------|-----------------|  
+|[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|L’identificateur de ressource.|  
+  
+## <a name="remarks"></a>Remarques  
+ Cette classe est conçue pour implémenter des wrappers pour l’API de gestion de ressources Windows telles que la [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), et [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) fonctions qui acceptent un `LPCTSTR` argument peut être le nom d’une ressource ou son ID.  
+  
+ La classe définit deux surcharges de constructeur : une accepte un `LPCTSTR` argument et l’autre accepte un **UINT** argument. Le **UINT** argument est converti en un type de ressource compatible avec les fonctions de gestion des ressources de Windows à l’aide de la **MAKEINTRESOURCE** macro et le résultat stocké dans le membre de données de la classe, [m_lpstr](#_u_stringorid__m_lpstr). L’argument de la `LPCTSTR` constructeur est stocké directement, sans conversion.  
+  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** atlwin.h  
+  
+##  <a name="_u_stringorid__m_lpstr"></a>_U_STRINGorID::m_lpstr  
+ La classe contient la valeur passée à un de ses constructeurs comme publique `LPCTSTR` membre de données.  
+  
+```
+LPCTSTR m_lpstr;
 ```  
   
-## Membres  
+##  <a name="_u_stringorid___u_stringorid"></a>_U_STRINGorID::_U_STRINGorID  
+ Le **UINT** constructeur convertit son argument en un type de ressource compatible avec les fonctions de gestion des ressources de Windows à l’aide de la **MAKEINTRESOURCE** macro et le résultat est stocké dans unique de la classe membre de données, [m_lpstr](#_u_stringorid__m_lpstr).  
   
-### Constructeurs publics  
+```
+_U_STRINGorID(UINT nID);  
+_U_STRINGorID(LPCTSTR lpString);
+```  
   
-|Nom|Description|  
-|---------|-----------------|  
-|[\_U\_STRINGorID::\_U\_STRINGorID](../Topic/_U_STRINGorID::_U_STRINGorID.md)|Constructeur.|  
+### <a name="parameters"></a>Paramètres  
+ `nID`  
+ Un ID de ressource.  
   
-### Données membres publiques  
+ `lpString`  
+ Un nom de ressource.  
   
-|Nom|Description|  
-|---------|-----------------|  
-|[\_U\_STRINGorID::m\_lpstr](../Topic/_U_STRINGorID::m_lpstr.md)|L'identificateur de ressource.|  
+### <a name="remarks"></a>Remarques  
+ L’argument de la `LPCTSTR` constructeur est stocké directement, sans conversion.  
   
-## Notes  
- Cette classe est conçue pour implémenter des wrappers à l'API de gestion des ressources windows comme les fonctions de [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), de [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), et de [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) , qui acceptent un argument d' `LPCTSTR` qui peut être le nom d'une ressource ou son ID.  
-  
- La classe définit deux surcharges de constructeur : il reçoit un argument d' `LPCTSTR` et l'autre reçoit un argument de **uint** .  L'argument de **uint** est converti en un type de ressource avec les fonctions de gestion des ressources windows à l'aide de la macro de **MAKEINTRESOURCE** et le résultat stockés dans le membre unique de la classe, [m\_lpstr](../Topic/_U_STRINGorID::m_lpstr.md).  L'argument au constructeur d' `LPCTSTR` est stocké directement sans conversion.  
-  
-## Configuration requise  
- **Header:** atlwin.h  
-  
-## Voir aussi  
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>Voir aussi  
+ [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+

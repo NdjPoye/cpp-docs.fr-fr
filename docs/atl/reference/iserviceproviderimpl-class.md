@@ -22,25 +22,11 @@ caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1742929a31e244e853b426324894e5c8666ebf99
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: ac66d9158466037751566a2fb6de458001503ab0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="iserviceproviderimpl-class"></a>Classe de IServiceProviderImpl
@@ -72,9 +58,9 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
  `IServiceProviderImpl`utilise une carte de service, en commençant par [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) et se terminant par [END_SERVICE_MAP](service-map-macros.md#end_service_map).  
   
- La carte de service contient deux entrées : [SERVICE_ENTRY](service-map-macros.md#service_entry), ce qui indique un id de service spécifié (SID) pris en charge par l’objet, et [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), qui appelle `QueryService` à chaîne à un autre objet.  
+ La carte de service contient deux entrées : [SERVICE_ENTRY](service-map-macros.md#service_entry), ce qui indique un id de service spécifié (SID) pris en charge par l’objet, et [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), qui appelle `QueryService` à chaîne vers un autre objet.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `IServiceProvider`  
   
  `IServiceProviderImpl`  
@@ -113,7 +99,7 @@ STDMETHOD(QueryService)(
 |E_UNEXPECTED|Une erreur inconnue s'est produite.|  
 |E_NOINTERFACE|L’interface demandée ne fait pas partie de ce service, ou le service est inconnu.|  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  `QueryService`Retourne un pointeur indirect vers l’interface demandée dans le service spécifié. L’appelant est responsable de la libération de ce pointeur lorsqu’il n’est plus nécessaire.  
   
  Lorsque vous appelez `QueryService`, vous passez à la fois un identificateur de service ( `guidService`) et un identificateur d’interface ( `riid`). Le `guidService` Spécifie le service auquel vous souhaitez accéder, et le `riid` identifie une interface qui fait partie du service. En retour, vous recevez un pointeur indirect vers l’interface.  

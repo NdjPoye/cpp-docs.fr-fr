@@ -1,46 +1,49 @@
 ---
-title: "or_eq | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "std::or_eq"
-  - "or_eq"
-  - "std.or_eq"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "or_eq (fonction)"
+title: or_eq | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- std::or_eq
+- or_eq
+- std.or_eq
+dev_langs:
+- C++
+helpviewer_keywords:
+- or_eq function
 ms.assetid: 1eb92464-ed58-40d8-a30e-f0a6aa2f4318
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# or_eq
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 385785355c3d5dba5d534a675abe7a47d950b2eb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-Une alternative à l'opérateur &#124;\=.  
+---
+# <a name="oreq"></a>or_eq
+Alternative à l’opérateur &#124;=.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -48,10 +51,10 @@ Une alternative à l'opérateur &#124;\=.
   
 ```  
   
-## Notes  
- La macro génère l'opérateur &#124;\=.  
+## <a name="remarks"></a>Notes  
+ La macro génère l’opérateur&#124;=.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // iso646_oreq.cpp  
@@ -72,7 +75,10 @@ int main( )
 }  
 ```  
   
-  **3**  
-**3**   
-## Configuration requise  
- **En\-tête :** \<iso646.h\>
+```Output  
+3  
+3  
+```  
+  
+## <a name="requirements"></a>Spécifications  
+ **En-tête :** \<iso646.h>

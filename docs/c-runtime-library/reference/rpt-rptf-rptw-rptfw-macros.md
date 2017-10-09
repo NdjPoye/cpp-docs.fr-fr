@@ -99,30 +99,15 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ca0ae546af28c342db2e452bec432ced0437738a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 43efb76381db85f4f1d601cb6d83dd82074e960a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW, macros
-Suit la progression d’une application en générant un rapport de débogage (version debug uniquement). Notez que *n* indique le nombre d’arguments présents dans `args` et peut avoir la valeur 0, 1, 2, 3, 4 ou 5.  
+Suit la progression d’une application en générant un rapport de débogage (version debug uniquement). Notez que  *n*  Spécifie le nombre d’arguments dans `args` et peut être 0, 1, 2, 3, 4 ou 5.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -169,7 +154,7 @@ _RPTFWn(
   
  Les macros `_RPTW` et `_RPTFW` sont des versions à caractères larges de ces macros. Ils sont comparables à `wprintf` et acceptent les chaînes de caractères larges en tant qu’arguments.  
   
- Les macros `_RPT` appellent la fonction [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) pour générer un rapport de débogage avec un message utilisateur. Les macros `_RPTW` appellent la fonction `_CrtDbgReportW` pour générer le même rapport avec des caractères larges. Outre le message utilisateur, les macros `_RPTF` et `_RPTFW` créent un rapport de débogage à partir du fichier source et du numéro de ligne où la macro de rapport a été appelée. Le message utilisateur est créé en remplaçant les arguments `arg`[*n*] dans la chaîne `format`, selon les mêmes règles que celles définies par la fonction [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+ Les macros `_RPT` appellent la fonction [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) pour générer un rapport de débogage avec un message utilisateur. Les macros `_RPTW` appellent la fonction `_CrtDbgReportW` pour générer le même rapport avec des caractères larges. Outre le message utilisateur, les macros `_RPTF` et `_RPTFW` créent un rapport de débogage à partir du fichier source et du numéro de ligne où la macro de rapport a été appelée. Le message utilisateur est créé en substituant le `arg`[*n*] arguments dans le `format` chaîne, en utilisant les mêmes règles définies par le [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) (fonction).  
   
  `_CrtDbgReport` ou `_CrtDbgReportW` génère le rapport de débogage et détermine ses destinations en fonction des modes de rapport actifs et du fichier défini pour `reportType`. Les fonctions [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) et [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) servent à définir les destinations de chaque type de rapport.  
   
