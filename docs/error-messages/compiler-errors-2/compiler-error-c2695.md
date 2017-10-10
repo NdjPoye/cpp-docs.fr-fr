@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2695 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2695"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2695"
+title: Erreur du compilateur C2695 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2695
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2695
 ms.assetid: 3f6f2091-c38b-40ea-ab6c-f1846f5702d7
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Erreur du compilateur C2695
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1ae253ade1093d447616a39e788a80b843290f6a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'fonction1' : la fonction virtuelle de substitution ne diffère de 'fonction2' que par la convention d'appel  
+---
+# <a name="compiler-error-c2695"></a>Erreur du compilateur C2695
+'fonction1' : fonction virtuelle de substitution diffère de 'fonction2' que par la convention d’appel  
   
- La signature d'une fonction dans une classe dérivée ne peut pas substituer une fonction dans une classe de base et modifier la convention d'appel.  
+ La signature d’une fonction dans une classe dérivée ne peut pas substituer une fonction dans une classe de base et modifier la convention d’appel.  
   
- L'exemple suivant génère l'erreur C2695 :  
+ L’exemple suivant génère l’erreur C2695 :  
   
 ```  
 // C2695.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2793 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2793"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2793"
+title: Erreur du compilateur C2793 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2793
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2793
 ms.assetid: ce35f4e8-c357-40ca-95c4-15ff001ad69d
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C2793
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af1f43489d8f12b5923cc46cc197e7b749338c83
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2793"></a>Erreur du compilateur C2793
 'jeton' : jeton inattendu après ' ::', identificateur ou mot clé 'operator' attendu  
   
  Les seuls jetons qui peuvent suivre `__super::` sont un identificateur ou le mot clé `operator`.  
   
- L'exemple suivant génère l'avertissement C2793 :  
+ L’exemple suivant génère l’avertissement C2793 :  
   
 ```  
 // C2793.cpp  

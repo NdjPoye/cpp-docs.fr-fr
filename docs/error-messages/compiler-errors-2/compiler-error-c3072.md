@@ -1,37 +1,40 @@
 ---
-title: "Erreur du compilateur C3072 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3072"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3072"
+title: Erreur du compilateur C3072 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3072
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3072
 ms.assetid: cdd5cb6b-c478-4698-adfa-c40188d34a18
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Erreur du compilateur C3072
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3334edd6f297a61ca62a5fe5a0f8b6cddfef7f80
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-l'opérateur 'opérateur' ne peut pas être appliqué à une instance d'une classe ref  
+---
+# <a name="compiler-error-c3072"></a>Erreur du compilateur C3072
+l’opérateur 'opérateur' ne peut pas être appliqué à une instance d’une classe ref  
   
- Utilisez l'opérateur '`operator`' unaire pour convertir une instance d'une classe ref en un type de handle  
+ Utilisez l’unaire '`operator` ' pour convertir une instance d’une classe ref en type de handle  
   
- Un type CLR exige des opérateurs CLR, et non des opérateurs natifs \(ou standard\).  Pour plus d'informations, consultez [Tracking Reference Operator](../../windows/tracking-reference-operator-cpp-component-extensions.md).  
+ Un type CLR exige des opérateurs CLR, et non des opérateurs natifs (ou standard).  Pour plus d’informations, consultez [opérateur de référence de suivi](../../windows/tracking-reference-operator-cpp-component-extensions.md).  
   
-## Exemple  
- L'exemple suivant génère l'erreur C3072 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C3072.  
   
 ```  
 // C3072.cpp  

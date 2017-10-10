@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2810 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2810"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2810"
+title: Erreur du compilateur C2810 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2810
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2810
 ms.assetid: f63e8f24-d7f6-42ac-904f-72ff49592ba6
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C2810
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 80fdc399c5825b9bd625604e7f4366f98b9ee971
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'interface' : une interface ne peut hériter que d'une autre interface  
+---
+# <a name="compiler-error-c2810"></a>Erreur du compilateur C2810
+'interface' : une interface ne peut hériter que d’une autre interface  
   
- Une [interface](../../cpp/interface.md) ne peut hériter que d'une autre interface et ne peut pas hériter d'une classe ou d'une structure.  
+ Un [interface](../../cpp/interface.md) ne peut hériter que d’une autre interface et ne peut pas hériter d’une classe ou structure.  
   
- L'exemple suivant génère l'erreur C2810 :  
+ L’exemple suivant génère l’erreur C2810 :  
   
 ```  
 // C2810.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2658 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2658"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2658"
+title: "L’erreur C2658 erreur de compilateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2658
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2658
 ms.assetid: 638368e8-7893-4a14-abec-13c768a9543a
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C2658
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 252c543b8ba4dfc470bc1641a3d91c3dfc06177d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'membre' : redéfinition dans un struct\/union anonyme  
+---
+# <a name="compiler-error-c2658"></a>Erreur C2658 erreur de compilateur
+'membre' : redéfinition dans un struct/union anonyme  
   
- Deux déclarations de membre contenues dans des structures ou des unions anonymes avec le même identificateur, mais avec des types différents.  Vous obtiendrez également cette erreur pour les membres ayant le même identificateur et le même type sous [\/Za](../../build/reference/za-ze-disable-language-extensions.md).  
+ Deux structures anonymes ou unions contient des déclarations de membre avec le même identificateur, mais avec des types différents. Sous [/Za](../../build/reference/za-ze-disable-language-extensions.md), vous obtiendrez également cette erreur pour les membres avec le même identificateur et le même type.  
   
- L'exemple suivant génère l'erreur C2658 :  
+ L’exemple suivant génère l’erreur C2658 :  
   
 ```  
 // C2658.cpp  

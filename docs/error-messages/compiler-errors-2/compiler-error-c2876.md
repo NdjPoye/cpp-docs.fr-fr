@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2876 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2876"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2876"
+title: Erreur du compilateur C2876 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2876
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2876
 ms.assetid: 8b674bf1-f9f4-4a8e-8127-e884c1d1708f
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Erreur du compilateur C2876
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 84b5609dab6e8f12c5545c2e5c8d64a173cd41ec
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'class::symbol' : toutes les surcharges ne sont pas accessibles  
+---
+# <a name="compiler-error-c2876"></a>Erreur du compilateur C2876
+'class::symbol' : ne sont pas toutes les surcharges accessibles  
   
- Toutes les formes surchargées d'une fonction dans une classe de base doivent être accessibles à la classe dérivée.  
+ Toutes les formes surchargées d’une fonction dans une classe de base doivent être accessibles à la classe dérivée.  
   
- L'exemple suivant génère l'erreur C2876 :  
+ L’exemple suivant génère l’erreur C2876 :  
   
 ```  
 // C2876.cpp  

@@ -1,37 +1,40 @@
 ---
-title: "Erreur du compilateur C2885 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2885"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2885"
+title: Erreur du compilateur C2885 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2885
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Erreur du compilateur C2885
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a19f209d53d7d0b37cddbf559fa3dc02ee50db7e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'classe::identificateur' : déclaration using non valide au niveau d'une portée qui n'est pas de classe  
+---
+# <a name="compiler-error-c2885"></a>Erreur du compilateur C2885
+'classe::identificateur' : pas une valide à l’aide de déclaration au niveau de portée sans classe  
   
- Vous avez mal utilisé une déclaration [using](../../cpp/using-declaration.md).  
+ Vous avez utilisé un [à l’aide de](../../cpp/using-declaration.md) déclaration de manière incorrecte.  
   
-## Exemple  
- Cette erreur peut être due à la mise en conformité du compilateur pour Visual C\+\+ 2005 : une déclaration `using` pour un type imbriqué n'est désormais plus valide ; vous devez qualifier explicitement chaque référence au type imbriqué, placer le type dans un espace de noms ou créer un typedef.  
+## <a name="example"></a>Exemple  
+ Cette erreur peut être due à la mise en conformité du compilateur pour Visual C++ 2005 : il n’est plus valide une `using` déclaration pour un type imbriqué ; vous devez explicitement qualifier chaque référence au type imbriqué, placer le type dans un nom l’espace, ou créer un typedef.  
   
- L'exemple suivant génère l'erreur C2885 :  
+ L’exemple suivant génère C2885.  
   
 ```  
 // C2885.cpp  
@@ -60,10 +63,10 @@ int main () {
 }  
 ```  
   
-## Exemple  
- Si vous utilisez le mot clé `using` avec un membre de classe, C\+\+ vous impose de définir ce membre à l'intérieur d'une autre classe \(une classe dérivée\).  
+## <a name="example"></a>Exemple  
+ Si vous utilisez le `using` mot clé avec un membre de classe C++, vous devez définir ce membre à l’intérieur d’une autre classe (une classe dérivée).  
   
- L'exemple suivant génère l'erreur C2885 :  
+ L’exemple suivant génère C2885.  
   
 ```  
 // C2885_b.cpp  

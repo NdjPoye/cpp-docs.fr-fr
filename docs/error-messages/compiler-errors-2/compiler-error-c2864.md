@@ -1,35 +1,37 @@
 ---
-title: "Erreur du compilateur C2864 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2864"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2864"
+title: Erreur du compilateur C2864 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2864
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2864
 ms.assetid: d0ca2ad9-90a6-4aef-8511-98a3b414c102
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C2864
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f205aeb886921439360191def0853e33e4eb0fea
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2864"></a>Erreur du compilateur C2864
 'variable' : une donnée membre static avec un initialiseur de classe doit avoir un type entier const non volatile  
   
- Pour initialiser un membre de données `static` qui est défini en tant que `volatile`, non `const`, ou qui n'est pas un type intégral, utilisez une instruction de définition de membre.  Ils ne peuvent pas être initialisés dans une déclaration.  
+ Pour initialiser un membre de données `static` qui est défini en tant que `volatile`, non `const`, ou qui n'est pas un type intégral, utilisez une instruction de définition de membre. Ils ne peuvent pas être initialisés dans une déclaration.  
   
- Cet exemple génère l'erreur C2864 :  
+ Cet exemple génère l’erreur C2864 :  
   
 ```  
 // C2864.cpp  

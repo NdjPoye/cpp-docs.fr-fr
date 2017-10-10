@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 95037372d6e7582bd7f0a1f241c818a314f10ec9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc2c7aeedc68b215c030266311db8dc8bac436ce
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3053"></a>Erreur du compilateur C3053
 'symbole' : 'threadprivate' n’est valide que pour les éléments de données global ou static  
   
- Symboles passés à [threadprivate](../../parallel/openmp/reference/threadprivate.md) doivent être globale ou statique.  
+ Les symboles passés à [threadprivate](../../parallel/openmp/reference/threadprivate.md) doivent être de type global ou static.  
   
  L’exemple suivant génère l’erreur C3053 :  
   

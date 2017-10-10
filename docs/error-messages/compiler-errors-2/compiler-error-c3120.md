@@ -1,32 +1,35 @@
 ---
-title: "Erreur du compilateur C3120 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3120"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3120"
+title: Erreur du compilateur C3120 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3120
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3120
 ms.assetid: 9b6b210f-9948-4517-a4cc-b4aaadebde68
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Erreur du compilateur C3120
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6bdd5f5fe41fa794b536f71b3f88db01de99c646
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'nom\_méthode' : les méthodes d'interface ne peuvent pas gérer une liste d'arguments variable  
+---
+# <a name="compiler-error-c3120"></a>Erreur du compilateur C3120
+'nom_méthode' : les méthodes d’interface ne peut pas prendre une liste d’arguments variables  
   
- Une méthode d'interface ne peut pas gérer une liste d'arguments variable.  La définition d'interface suivante, par exemple, génère C3120 :  
+ Une méthode d’interface ne peut pas prendre une liste d’arguments variable. Par exemple, la définition d’interface suivante génère C3120 :  
   
 ```  
 // C3120.cpp  

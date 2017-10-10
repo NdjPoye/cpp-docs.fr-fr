@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2681 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2681"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2681"
+title: Erreur du compilateur C2681 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2681
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2681
 ms.assetid: eb42da6d-8d2c-43fd-986b-e73e2b004885
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Erreur du compilateur C2681
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9978a520b4682e4e2c7c4856d4e42675be0ab901
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'type' : type d'expression non valide pour 'nom'  
+---
+# <a name="compiler-error-c2681"></a>Erreur du compilateur C2681
+'type' : type d’expression non valide pour le nom  
   
- Un opérateur de casting a essayé d'effectuer une conversion depuis un type non valide.  Par exemple, si vous utilisez l'opérateur [dynamic\_cast](../../cpp/dynamic-cast-operator.md) pour convertir une expression en un type pointeur, l'expression source doit être un pointeur.  
+ Un opérateur de cast a tenté de convertir à partir d’un type non valide. Par exemple, si vous utilisez la [dynamic_cast](../../cpp/dynamic-cast-operator.md) opérateur pour convertir une expression en un type pointeur, l’expression source doit être un pointeur.  
   
- L'exemple suivant génère l'erreur C2681 :  
+ L’exemple suivant génère l’erreur C2681 :  
   
 ```  
 // C2681.cpp  

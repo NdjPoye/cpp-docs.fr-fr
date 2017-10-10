@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2970 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2970"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2970"
+title: Erreur du compilateur C2970 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2970
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2970
 ms.assetid: 21d90348-20d3-438c-b278-efdbfb93a7d2
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C2970
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc125b400a718805af2ee0829100c056fffa29a3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'classe' : paramètre de modèle 'param' : 'arg' : une expression utilisant des objets avec une liaison interne ne peut pas être utilisée comme argument sans type  
+---
+# <a name="compiler-error-c2970"></a>Erreur du compilateur C2970
+'classe' : paramètre de modèle 'param' : 'arg' : une expression utilisant des objets avec une liaison interne ne peut pas être utilisée comme argument sans type  
   
- Vous ne pouvez pas utiliser le nom ou l'adresse d'une variable static comme argument template.  La classe de modèle attend une valeur const pouvant être évaluée au moment de la compilation.  
+ Vous ne pouvez pas utiliser le nom ou l’adresse d’une variable statique comme argument de modèle. La classe de modèle attend une valeur const qui peut être évaluée au moment de la compilation.  
   
- L'exemple suivant génère l'erreur C2970 :  
+ L’exemple suivant génère C2970 :  
   
 ```  
 // C2970.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2680 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2680"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2680"
+title: Erreur du compilateur C2680 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2680
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2680
 ms.assetid: d6f7129e-dd17-4661-b680-18d6b925b1cc
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Erreur du compilateur C2680
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f3a7d58aa7eb126392a0484ce28753c477d6137c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'type' : type de cible non valide pour 'nom'  
+---
+# <a name="compiler-error-c2680"></a>Erreur du compilateur C2680
+'type' : type de cible non valide pour le nom  
   
- Un opérateur de casting a essayé d'effectuer une conversion vers un type qui n'est ni un pointeur ni une référence.  L'opérateur [dynamic\_cast](../../cpp/dynamic-cast-operator.md) ne peut être utilisé que pour les pointeurs ou références.  
+ Un opérateur de cast a tenté de convertir en un type qui n’est pas un pointeur ou une référence. Le [dynamic_cast](../../cpp/dynamic-cast-operator.md) opérateur peut être utilisé uniquement pour les pointeurs ou références.  
   
- L'exemple suivant génère l'erreur C2680 :  
+ L’exemple suivant génère l’erreur C2680 :  
   
 ```  
 // C2680.cpp  
@@ -43,7 +46,7 @@ void g(B b) {
 }  
 ```  
   
- L'erreur C2680 peut également se produire lorsque la cible n'est pas définie :  
+ L’erreur C2680 peut également se produire lorsque la cible n’est pas définie :  
   
 ```  
 // C2680b.cpp  

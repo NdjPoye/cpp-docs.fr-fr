@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2896 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2896"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2896"
+title: Erreur du compilateur C2896 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2896
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2896
 ms.assetid: b600407b-cb05-42e3-9069-2aa6960f0eaa
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C2896
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b60848dcaa06bb41ec290e3fb91a65fda025a8df
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'fonction1' : impossible d'utiliser le modèle de fonction 'fonction2' comme argument de fonction  
+---
+# <a name="compiler-error-c2896"></a>Erreur du compilateur C2896
+'fonction1' : Impossible d’utiliser le modèle de fonction 'fonction2' comme argument  
   
- Un modèle de fonction ne peut pas être un argument dans un autre modèle de fonction.  
+ Un modèle de fonction ne peut pas être un argument à un autre modèle de fonction.  
   
- L'exemple suivant génère l'erreur C2896 :  
+ L’exemple suivant génère l’erreur C2896 :  
   
 ```  
 // C2896.cpp  
@@ -40,7 +43,7 @@ int main() {
 }  
 ```  
   
- L'erreur C2896 peut également se produire lors de l'utilisation de génériques :  
+ L’erreur C2896 peut également se produire lors de l’utilisation de génériques :  
   
 ```  
 // C2896b.cpp  

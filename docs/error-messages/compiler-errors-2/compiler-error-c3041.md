@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: dfcb3f8025f2482a7726f32a13dff7cb611bae74
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: be6182f557b2a9ca0985216935fcea654a3ea36a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3041"></a>Erreur du compilateur C3041
 'variable' : la variable de la clause 'copyprivate' doit être privée dans un contexte englobant  
   
- Une variable passée à [copyprivate](../../parallel/openmp/reference/copyprivate.md) ne peut pas être partagé dans le contexte englobant.  
+ Une variable passée à [copyprivate](../../parallel/openmp/reference/copyprivate.md) ne peut pas être partagée dans le contexte englobant.  
   
  L’exemple suivant génère l’erreur C3041 :  
   

@@ -1,36 +1,39 @@
 ---
-title: "Erreur du compilateur C2682 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2682"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2682"
+title: Erreur du compilateur C2682 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2682
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2682
 ms.assetid: 30c6a7c4-f5f7-4fe8-81a8-c48938521ab4
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Erreur du compilateur C2682
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3df494f5d78a862e260fa4edfe0a2740e4fc8cdd
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-impossible d'utiliser 'opérateur\_casting' pour convertir 'type1' en 'type2'  
+---
+# <a name="compiler-error-c2682"></a>Erreur du compilateur C2682
+Impossible d’utiliser ' opérateur_casting ' pour convertir de 'type1' en 'type2'  
   
- Un opérateur de casting a essayé d'effectuer une conversion entre deux types incompatibles.  Vous ne pouvez pas, par exemple, utiliser l'opérateur [dynamic\_cast](../../cpp/dynamic-cast-operator.md) pour convertir un pointeur en une référence.  L'opérateur `dynamic_cast` ne peut pas être utilisé pour modifier le cast des qualificateurs.  Tous les qualificateurs des types doivent concorder.  
+ Un opérateur de cast a tenté d’effectuer une conversion entre des types incompatibles. Par exemple, vous ne pouvez pas utiliser le [dynamic_cast](../../cpp/dynamic-cast-operator.md) opérateur pour convertir un pointeur vers une référence. Le `dynamic_cast` opérateur ne peut pas être utilisé pour modifier le cast des qualificateurs. Tous les qualificateurs des types doivent correspondre.  
   
- Vous pouvez utiliser l'opérateur `const_cast` pour supprimer des attributs tels que `const`, `volatile` ou `__unaligned`.  
+ Vous pouvez utiliser la `const_cast` opérateur pour supprimer des attributs tels que `const`, `volatile`, ou `__unaligned`.  
   
- L'exemple suivant génère l'erreur C2682 :  
+ L’exemple suivant génère l’erreur C2682 :  
   
 ```  
 // C2682.cpp  
@@ -42,7 +45,7 @@ void g(A* pa) {
 }  
 ```  
   
- L'exemple suivant génère l'erreur C2682 :  
+ L’exemple suivant génère l’erreur C2682 :  
   
 ```  
 // C2682b.cpp  

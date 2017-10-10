@@ -1,5 +1,5 @@
 ---
-title: "C3084 d’erreur du compilateur | Documents Microsoft"
+title: Erreur du compilateur C3084 | Documents Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 7fb05bf2ebf23446de0552fd06092cb75541d49e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a160c807bbc8a44c8073cc66ddacad7c8a398d53
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3084"></a>Erreur du compilateur C3084
-'function' : un finaliseur/destructeur ne peut pas avoir la valeur 'keyword'  
+'function' : un finaliseur/destructeur ne peut pas avoir la valeur 'keyword'  
   
  Un finaliseur ou un destructeur n’a pas été correctement déclaré.  
   

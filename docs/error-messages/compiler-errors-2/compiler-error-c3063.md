@@ -19,25 +19,11 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: ce6a597e0246cee5c62dd6612d48fe4946505e77
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 26d30e56c3e694b39f583b29d8bd378b6dcaee0f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3063"></a>Erreur du compilateur C3063
@@ -46,7 +32,7 @@ l’opérateur 'opérateur' : tous les opérandes doivent avoir le même type �
 Lorsque vous utilisez des opérateurs sur les énumérateurs, les deux opérandes doivent être du type énumération. Pour plus d’informations, consultez [Comment : définir et consommer des énumérateurs dans c++ / CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).  
   
 ## <a name="example"></a>Exemple  
-L’exemple suivant génère l’erreur C3063 et montre comment résoudre le problème :  
+L’exemple suivant génère l’erreur C3063 et montre comment la corriger :  
   
 ```  
 // C3063.cpp  

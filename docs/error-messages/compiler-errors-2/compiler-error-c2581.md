@@ -1,36 +1,38 @@
 ---
-title: "Erreur du compilateur C2581 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2581"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2581"
+title: Erreur du compilateur C2581 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2581
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2581
 ms.assetid: 24a4e4c1-24d3-4e42-b760-7dcaf9740b16
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C2581
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 205d972237a71a05839dbc4236d248a11e6ee53d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'type' : fonction static 'operator \=' non conforme  
+---
+# <a name="compiler-error-c2581"></a>Erreur du compilateur C2581
+'type' : statique ' opérateur =' fonction est non conforme  
   
- L'opérateur d'assignation \(`=`\) est déclaré comme étant `static` de façon incorrecte.  Les opérateurs d'assignation ne peuvent pas être `static`.  Pour plus d'informations, consultez [Opérateurs définis par l'utilisateur](../../dotnet/user-defined-operators-cpp-cli.md).  
+ L’assignation (`=`) opérateur est déclaré incorrectement comme `static`. Opérateurs d’assignation ne peut pas être `static`. Pour plus d’informations, consultez [les opérateurs définis par l’utilisateur (C + c++ / CLI)](../../dotnet/user-defined-operators-cpp-cli.md).  
   
-## Exemple  
- L'exemple suivant génère l'erreur C2581 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C2581.  
   
 ```  
 // C2581.cpp  

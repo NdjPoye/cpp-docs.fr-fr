@@ -1,32 +1,34 @@
 ---
-title: "Erreur du compilateur C2856 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2856"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2856"
+title: Erreur du compilateur C2856 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2856
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2856
 ms.assetid: fe616c51-124e-49e3-9dd8-883ec1660680
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C2856
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 69b2cdf1e7f3000ef26706c937bff33266ea087a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-\#pragma hdrstop ne peut pas se trouver dans un bloc \#if  
+---
+# <a name="compiler-error-c2856"></a>Erreur du compilateur C2856
+\#pragma hdrstop ne peut pas être à l’intérieur d’un bloc #if  
   
- Le pragma `hdrstop` ne peut pas être placé à l'intérieur du corps d'un bloc de compilation conditionnel.  
+ Le `hdrstop` pragma ne peut pas être placé dans le corps d’un bloc de compilation conditionnelle.  
   
- Déplacez l'instruction `#pragma hdrstop` vers une zone qui n'est pas contenue dans un bloc `#if/#endif`.
+ Déplacer le `#pragma hdrstop` instruction dans une zone qui n’est pas contenue dans un `#if/#endif` bloc.

@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2783 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2783"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2783"
+title: Erreur du compilateur C2783 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2783
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2783
 ms.assetid: 1ce94a11-bb8b-4be3-a222-f1f105da74b3
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Erreur du compilateur C2783
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1fff9803fa54d1ea18d0ada78c816067731e8c41
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'déclaration' : impossible de déduire l'argument template pour 'identificateur'  
+---
+# <a name="compiler-error-c2783"></a>Erreur du compilateur C2783
+'déclaration' : Impossible de déduire l’argument template pour 'identificateur'  
   
- Le compilateur ne parvient pas à déterminer un argument template.  Les arguments par défaut ne peuvent pas être utilisés pour déduire un argument template.  
+ Le compilateur ne peut pas déterminer un argument template. Arguments par défaut ne peut pas être utilisées pour déduire un argument template.  
   
- L'exemple suivant génère l'erreur C2783 :  
+ L’exemple suivant génère l’erreur C2783 :  
   
 ```  
 // C2783.cpp  
@@ -44,7 +47,7 @@ int main() {
 }  
 ```  
   
- L'erreur C2783 peut également se produire lors de l'utilisation de génériques :  
+ L’erreur C2783 peut également se produire lors de l’utilisation de génériques :  
   
 ```  
 // C2783b.cpp  
