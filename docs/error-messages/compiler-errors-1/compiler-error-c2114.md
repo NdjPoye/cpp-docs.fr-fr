@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 92699ec282b2bb542edaa503a6585ac92b98d078
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 92ccd57f08254457d4df43284d5222a3f849123f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2114"></a>Erreur du compilateur C2114
-'operator' : pointeur à gauche ; nécessite une valeur intégrale à droite  
+'operator' : pointeur à gauche ; nécessite une valeur intégrale à droite  
   
  L’opérande gauche de `operator` étant un pointeur, l’opérande de droite doit être une valeur entière.

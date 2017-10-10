@@ -1,38 +1,40 @@
 ---
-title: "Erreur du compilateur C2015 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2015"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2015"
+title: Erreur du compilateur C2015 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2015
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2015
 ms.assetid: 8f40af0a-3a5a-4d6a-8ed7-125966e6bfed
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C2015
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4669eec9d8134db6e024257855012eb78dcef95e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2015"></a>Erreur du compilateur C2015
 trop de caractères dans la constante  
   
- Une constante caractère contient plus de deux caractères.  La limite est d'un caractère pour les constantes caractère standard et deux caractères pour les constantes caractère long.  
+ Une constante caractère contient plus de deux caractères. La limite est un caractère pour les constantes caractère standard et deux caractères pour les constantes de caractère de long.  
   
- Une séquence d'échappement, telle que \\t, est convertie en un seul caractère.  
+ Une séquence d’échappement, tels que \t, est convertie en un seul caractère.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C2015 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C2015 :  
   
 ```  
 // C2015.cpp  
@@ -42,8 +44,8 @@ char test1 = 'error';   // C2015
 char test2 = 'e';   // OK  
 ```  
   
-## Exemple  
- L'erreur C2015 peut également se produire en cas d'utilisation d'une extension Microsoft, constantes caractère converties en entiers.  L'exemple suivant génère l'erreur C2015 :  
+## <a name="example"></a>Exemple  
+ L’erreur C2015 peut également se produire lors de l’utilisation d’une extension Microsoft, constantes caractère converties en entiers.  L’exemple suivant génère l’erreur C2015 :  
   
 ```  
 // C2015b.cpp  
