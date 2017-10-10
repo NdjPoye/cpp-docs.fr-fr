@@ -1,32 +1,35 @@
 ---
-title: "Erreur du compilateur C2659 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2659"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2659"
+title: Erreur du compilateur C2659 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2659
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2659
 ms.assetid: b0883600-4d27-4ca7-a931-8ca6bd48654d
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Erreur du compilateur C2659
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ad412a583a0835fab0f295acf928bba0bac1839d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2659"></a>Erreur du compilateur C2659
 'opérateur' : fonction comme opérande gauche  
   
- Une fonction se trouvait sur le côté gauche de l'opérateur spécifié.  En règle générale, cette erreur est due au fait que le compilateur a analysé l'identificateur situé à gauche de l'opérateur en tant que fonction alors que le développeur le destinait à être une variable.  Pour plus d'informations, consultez l'article [Most vexing parse](http://en.wikipedia.org/wiki/Most_vexing_parse) sur Wikipedia.  Cet exemple montre une déclaration de fonction et une définition de variable qui sont faciles à confondre :  
+ Une fonction se trouvait sur le côté gauche de l'opérateur spécifié. En règle générale, cette erreur est due au fait que le compilateur a analysé l'identificateur situé à gauche de l'opérateur en tant que fonction alors que le développeur le destinait à être une variable. Pour plus d’informations, consultez Wikipedia article [analyse plus fâcheux](http://en.wikipedia.org/wiki/Most_vexing_parse). Cet exemple montre une déclaration de fonction et une définition de variable qui sont faciles à confondre :  
   
 ```  
 // C2659a.cpp  
@@ -46,7 +49,7 @@ int main()
   
  Pour résoudre ce problème, modifiez la déclaration de l'identificateur afin qu'il ne soit pas analysé comme une déclaration de fonction.  
   
- L'erreur C2659 peut également se produire lorsque la fonction comporte un type qui ne peut pas être utilisé dans l'expression à gauche de l'opérateur spécifié.  Cet exemple génère l'erreur C2659 lorsque le code assigne un pointeur de fonction à une fonction :  
+ L'erreur C2659 peut également se produire lorsque la fonction comporte un type qui ne peut pas être utilisé dans l'expression à gauche de l'opérateur spécifié. Cet exemple génère l'erreur C2659 lorsque le code assigne un pointeur de fonction à une fonction :  
   
 ```  
 // C2659b.cpp  

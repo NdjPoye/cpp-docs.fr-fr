@@ -1,41 +1,43 @@
 ---
-title: "Erreur du compilateur C2663 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2663"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2663"
+title: Erreur du compilateur C2663 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2663
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2663
 ms.assetid: 1e93e368-fd52-42bf-9908-9b6df467c8c9
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C2663
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a9efe20b4a80b9ff6f337d32acd35320125008dc
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'fonction' : les surcharges de 'nombre' n'ont pas de conversion autorisée pour le pointeur 'this'  
+---
+# <a name="compiler-error-c2663"></a>Erreur du compilateur C2663
+'fonction' : nombre surcharges n’ont pas de conversion autorisée pour le pointeur 'this'  
   
- Le compilateur n'a pas pu convertir `this` en l'une des versions surchargées de la fonction membre.  
+ Le compilateur n’a pas pu convertir `this` à une des versions surchargées de la fonction membre.  
   
- Cette erreur peut être provoquée en appelant une fonction membre non `const` sur un objet `const`.  Résolutions possibles :  
+ Cette erreur peut être provoquée en appelant un non -`const` fonction membre sur une `const` objet.  Solutions possibles :  
   
-1.  Supprimez `const` de la déclaration de l'objet.  
+1.  Supprimer le `const` à partir de la déclaration d’objet.  
   
-2.  Ajoutez `const` à l'une des surcharges de la fonction membre.  
+2.  Ajouter `const` à une des surcharges de fonction membre.  
   
- L'exemple suivant génère l'erreur C2663 :  
+ L’exemple suivant génère l’erreur C2663 :  
   
 ```  
 // C2663.cpp  

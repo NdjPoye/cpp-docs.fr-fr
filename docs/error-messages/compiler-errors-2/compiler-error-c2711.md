@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2711 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2711"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2711"
+title: "L’erreur C2711 erreur de compilateur | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2711
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2711
 ms.assetid: 9df9f808-7419-4e63-abdd-e6538ff0871f
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Erreur du compilateur C2711
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a58a4497e007203119a376e38de82dd91030dfbc
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'fonction' : cette fonction ne peut pas être compilée comme code managé, utilisez \#pragma unmanaged à la place  
+---
+# <a name="compiler-error-c2711"></a>Erreur C2711 erreur de compilateur
+'fonction' : cette fonction ne peut pas être compilé comme code managé, utilisez #pragma unmanaged  
   
- Certaines instructions empêchent le compilateur de générer le code MSIL pour la fonction englobante.  
+ Certaines instructions empêche le compilateur de générer le code MSIL pour la fonction englobante.  
   
- L'exemple suivant génère l'erreur C2711 :  
+ L’exemple suivant génère l’erreur C2711 :  
   
 ```  
 // C2711.cpp  

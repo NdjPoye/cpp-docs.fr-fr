@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2529 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2529"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2529"
+title: Erreur du compilateur C2529 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2529
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2529
 ms.assetid: 73a99e55-b91e-488d-9b72-cc80faaeb436
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C2529
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7c0a693af458818b8c5ac44e160272d8b15fa5f5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'nom' : la référence à une référence n'est pas conforme  
+---
+# <a name="compiler-error-c2529"></a>Erreur du compilateur C2529
+'nom' : référence à une référence non conforme  
   
- Cette erreur peut être résolue en utilisant la syntaxe de pointeur et en déclarant une référence à un pointeur.  
+ Cette erreur peut être corrigée en utilisant la syntaxe de pointeur et de déclaration d’une référence à un pointeur.  
   
- L'exemple suivant génère l'erreur C2529 :  
+ L’exemple suivant génère l’erreur C2529 :  
   
 ```  
 // C2529.cpp  

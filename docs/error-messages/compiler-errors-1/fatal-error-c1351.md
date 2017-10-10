@@ -1,32 +1,35 @@
 ---
-title: "Erreur irr&#233;cup&#233;rable C1351 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1351"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1351"
+title: "Erreur irrécupérable C1351 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1351
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1351
 ms.assetid: 1f8502e4-1049-49c7-bbe3-fa101c79021e
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+author: corob-msft
+ms.author: corob
+manager: ghogen
 robots: noindex,nofollow
-caps.handback.revision: 6
----
-# Erreur irr&#233;cup&#233;rable C1351
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5ad87a957e7ef6329291bcbd1185c427aa04dc8f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-erreur lors du chargement de la dll 'dll' : version non compatible  
+---
+# <a name="fatal-error-c1351"></a>Erreur irrécupérable C1351
+Erreur lors du chargement de la dll 'dll' : version non compatible  
   
- La version de la DLL trouvée est erronée.  
+ Une version incorrecte d’une DLL a été trouvée.  
   
- Ceci indique un problème dans votre installation, vous devez réinstaller la DLL à partir du CD du produit.
+ Cela indique un problème avec votre installation et vous devez réinstaller la DLL à partir du CD-ROM du produit.

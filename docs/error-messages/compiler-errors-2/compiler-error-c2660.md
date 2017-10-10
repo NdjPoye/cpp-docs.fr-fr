@@ -1,42 +1,44 @@
 ---
-title: "Erreur du compilateur&#160;C2660 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2660"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2660"
+title: Erreur du compilateur C2660 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2660
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur&#160;C2660
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1a93046493897b69e4b557607d823566d82070f5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'fonction' : la fonction n'accepte pas de paramètres numériques  
+---
+# <a name="compiler-error-c2660"></a>Erreur du compilateur C2660
+'fonction' : fonction n’accepte pas de paramètres numériques  
   
- La fonction est appelée avec un nombre de paramètres incorrect.  
+ La fonction est appelée avec un nombre incorrect de paramètres.  
   
- L'erreur C2660 peut se produire en cas d'appel accidentel d'une fonction de l'API Windows au lieu d'une fonction membre MFC du même nom.  Pour résoudre ce problème :  
+ L’erreur C2660 peut se produire si vous appelez accidentellement une fonction API Windows plutôt que d’une fonction de membre MFC du même nom. Pour résoudre ce problème :  
   
--   Rectifiez l'appel à la fonction afin qu'il soit conforme au format d'appel d'une fonction membre.  
+-   Ajuster l’appel de fonction pour respecter le format de l’appel de fonction membre.  
   
--   Utilisez l'opérateur de résolution de portée \(`::`\) pour demander au compilateur de rechercher le nom de la fonction dans l'espace de noms global.  
+-   Utilisez l’opérateur de résolution de portée (`::`) pour indiquer au compilateur de rechercher le nom de fonction dans l’espace de noms global.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C2660.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C2660.  
   
 ```  
 // C2660.cpp  
@@ -48,8 +50,8 @@ int main() {
 }  
 ```  
   
-## Exemple  
- L'erreur C2660 peut également se produire si vous essayez d'appeler directement la méthode Dispose d'un type managé.  Pour plus d'informations, consultez [Destructeurs et finaliseurs](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  L'exemple suivant génère l'erreur C2660.  
+## <a name="example"></a>Exemple  
+ L’erreur C2660 peut également se produire si vous essayez d’appeler directement la méthode Dispose d’un type managé. Pour plus d’informations, consultez [destructeurs et finaliseurs](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). L’exemple suivant génère l’erreur C2660.  
   
 ```  
 // C2660_a.cpp  
@@ -69,8 +71,8 @@ int main() {
 }  
 ```  
   
-## Exemple  
- L'erreur C2660 se produit si une classe dérivée masque une fonction.  
+## <a name="example"></a>Exemple  
+ L’erreur C2660 se produit si une classe dérivée masque une fonction.  
   
 ```  
 // C2660b.cpp  
@@ -99,8 +101,8 @@ int main() {
 }  
 ```  
   
-## Exemple  
- L'erreur C2660 peut se produire si vous appelez une propriété indexée de manière incorrecte.  
+## <a name="example"></a>Exemple  
+ L’erreur C2660 peut se produire si vous appelez une propriété indexée de manière incorrecte.  
   
 ```  
 // C2660c.cpp  
@@ -123,8 +125,8 @@ int main() {
 }  
 ```  
   
-## Exemple  
- L'erreur C2660 peut se produire si vous appelez une propriété indexée de manière incorrecte.  
+## <a name="example"></a>Exemple  
+ L’erreur C2660 peut se produire si vous appelez une propriété indexée de manière incorrecte.  
   
 ```  
 // C2660d.cpp  
@@ -145,8 +147,8 @@ int main() {
 }  
 ```  
   
-## Exemple  
- L'erreur C2660 peut se produire si vous définissez un opérateur new dans une classe de modèle, mais si l'opérateur new crée un objet dont le type est différent du type englobant.  
+## <a name="example"></a>Exemple  
+ L’erreur C2660 peut se produire si vous définissez un nouvel opérateur dans une classe de modèle, mais où le nouvel opérateur crée un objet dont le type est autre que le type englobant.  
   
 ```  
 // C2660e.cpp  

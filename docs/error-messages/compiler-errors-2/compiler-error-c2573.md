@@ -19,29 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: d91b5a3fa9fc2b1ce75716e6f014c11857b7f7e2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 169a65a58744cc5963fef0ac74bc9c71985b5876
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2573"></a>Erreur du compilateur C2573
-'class' : impossible de supprimer les pointeurs vers les objets de ce type ; la classe n’a aucune surcharge de non-positionnement pour 'operator delete'.  
+'class' : impossible de supprimer les pointeurs vers les objets de ce type ; la classe n’a aucune surcharge de non-positionnement pour 'operator delete'.  
   
  La classe est dépourvue d’un opérateur delete de non-positionnement.

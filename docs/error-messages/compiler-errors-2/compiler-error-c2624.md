@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2624 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2624"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2624"
+title: Erreur du compilateur C2624 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2624
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2624
 ms.assetid: 32f2ec15-a7cd-4049-a64b-131746d3152b
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Erreur du compilateur C2624
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c70165fc0d57d753dadd2bed207a00e3dd3498aa
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-les classes locales ne peuvent pas être utilisées pour déclarer des variables 'extern'  
+---
+# <a name="compiler-error-c2624"></a>Erreur du compilateur C2624
+les classes locales ne peut pas être utilisés pour déclarer des variables 'extern'  
   
- Une classe ou une structure locale ne peut pas être utilisée pour déclarer des variables `extern`.  
+ Une classe locale ou une structure ne peut pas être utilisé pour déclarer `extern` variables.  
   
- L'exemple suivant génère l'erreur C2624 :  
+ L’exemple suivant génère l’erreur C2624 :  
   
 ```  
 // C2624.cpp  
