@@ -1,34 +1,37 @@
 ---
-title: "Erreur irr&#233;cup&#233;rable C1189 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1189"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1189"
+title: "Erreur irrécupérable C1189 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1189
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1189
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Erreur irr&#233;cup&#233;rable C1189
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6e8d3c9ff44a436688accfe267141390d23c0eb5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-\#error : message d'erreur défini par l'utilisateur  
+---
+# <a name="fatal-error-c1189"></a>Erreur irrécupérable C1189
+\#Erreur : message d’erreur fourni par l’utilisateur  
   
- L'erreur C1189 est générée par la directive `#error`.  Le développeur qui code la directive spécifie le texte du message d'erreur.  Pour plus d'informations, consultez [\#error, directive](../../preprocessor/hash-error-directive-c-cpp.md).  
+ L’erreur C1189 est générée par le `#error` la directive. Le développeur qui code la directive spécifie le texte du message d’erreur. Pour plus d’informations, consultez [#error Directive (C/C++)](../../preprocessor/hash-error-directive-c-cpp.md).  
   
- L'exemple suivant génère l'erreur C1189 :  Dans l'exemple, le développeur émet un message d'erreur personnalisé parce que l'identificateur `_WIN32` n'est pas défini :  
+ L’exemple suivant génère l’erreur C1189. Dans l’exemple, le développeur émet un message d’erreur personnalisé, car le `_WIN32` identificateur n’est pas défini :  
   
 ```  
 // C1189.cpp  
@@ -38,7 +41,7 @@ caps.handback.revision: 13
 #endif  
 ```  
   
- Cette erreur peut également survenir si vous générez un projet ATL à l'aide de l'option du compilateur **\/robust** MILD.  Utilisez le commutateur **\/robust** pour générer uniquement [!INCLUDE[win2kfamily](../../c-runtime-library/includes/win2kfamily_md.md)] et les versions ultérieures de windows.  Pour corriger l'erreur, utilisez l'une des procédures suivantes :  
+ Vous pouvez également voir cette erreur si vous générez un projet ATL à l’aide de la **/ robust** option du compilateur MIDL. Utilisez le **/ robust** commutateur à générer uniquement [!INCLUDE[win2kfamily](../../c-runtime-library/includes/win2kfamily_md.md)] et versions ultérieures de Windows. Pour corriger cette erreur, utilisez une des procédures suivantes :  
   
 -   Modifiez cette ligne dans le fichier dlldatax.c :  
   
@@ -46,13 +49,13 @@ caps.handback.revision: 13
 #define _WIN32_WINNT 0x0400   // for WinNT 4.0 or Windows 95 with DCOM  
 ```  
   
- en :  
+ à :  
   
 ```  
 #define _WIN32_WINNT 0x0500   // for WinNT 4.0 or Windows 95 with DCOM  
 ```  
   
--   Utilisez la page de propriétés **Avancé** dans le dossier de la page de propriétés **MIDL** pour supprimer le commutateur **\/robust**, puis spécifier le commutateur **\/no\_robust**.  Pour plus d'informations, consultez [Pages de propriétés MIDL : Avancé](../../ide/midl-property-pages-advanced.md).  
+-   Utilisez le **avancé** page de propriétés dans le **MIDL** dossier de page de propriété à supprimer le **/ robust** basculer, puis spécifiez le **/no_robust** commutateur non valide. Pour plus d’informations, consultez [Pages de propriétés MIDL : avancé](../../ide/midl-property-pages-advanced.md).  
   
-## Voir aussi  
- [\#define, directive](../../preprocessor/hash-define-directive-c-cpp.md)
+## <a name="see-also"></a>Voir aussi  
+ [#define, directive (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

@@ -1,35 +1,37 @@
 ---
-title: "Compiler Error C2392 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2392"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2392"
+title: Erreur du compilateur C2392 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2392
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2392
 ms.assetid: 98ced473-6383-46ed-b79c-21857d65dcb2
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Compiler Error C2392
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6fa5164028a622b03eb770e24a91c4b07968c3bc
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-'méthode1' : les types de retour covariants ne sont pas pris en charge dans les types managés ou WinRT, dans le cas contraire, 'méthode2' est substitué  
+---
+# <a name="compiler-error-c2392"></a>Erreur du compilateur C2392
+'méthode1' : retours covariants types ne sont pas pris en charge dans managed ou WinRTtypes, le cas contraire, 'méthode2' est substitué  
   
- Les types de retour covariants ne sont pas autorisés pour les fonctions membres Windows Runtime ou lors d'une compilation avec l'option [\/clr \(Compilation pour le Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Types de retour covariants ne sont pas autorisés pour les fonctions membres Windows Runtime ou lors de la compilation avec le [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) option.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant génère l'erreur C2392 et montre comment la corriger.  
   
 ```  

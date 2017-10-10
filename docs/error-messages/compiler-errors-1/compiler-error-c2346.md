@@ -1,43 +1,46 @@
 ---
-title: "Erreur du compilateur C2346 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2346"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2346"
+title: Erreur du compilateur C2346 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2346
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2346
 ms.assetid: 246145be-5645-4cd6-867c-e3bc39e33dca
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Erreur du compilateur C2346
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bf0133aba65b8477bd949cd90b51edbd407bcda7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-'fonction' ne peut pas être compilé comme code natif : raison  
+---
+# <a name="compiler-error-c2346"></a>Erreur du compilateur C2346
+'fonction' ne peut pas être compilée comme code natif : raison  
   
- Le compilateur n'a pas pu compiler une fonction en code MSIL.  
+ Le compilateur n’a pas pu compiler une fonction MSIL.  
   
- Pour plus d’informations, consultez [managé, non managé](../../preprocessor/managed-unmanaged.md) et [\/clr \(Compilation pour le Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Pour plus d’informations, consultez [managé, non managé](../../preprocessor/managed-unmanaged.md) et [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
-### Pour corriger cette erreur  
+### <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Dans la fonction, supprimez le code qui ne peut pas être compilé en code MSIL.  
+1.  Supprimer le code dans la fonction qui ne peuvent pas être compilée en langage MSIL.  
   
-2.  Ne compilez pas le module avec **\/clr**, ni ne marquez la fonction comme non managé avec le pragma non managé.  
+2.  Ne compilez pas le module avec **/CLR**, ou marquez la fonction comme non managé avec le pragma non managé.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C2346 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C2346.  
   
 ```  
 // C2346.cpp  

@@ -41,25 +41,11 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: bd3572d2941f911f10c067a24dd4e7323c3c3f8c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c6d0fde64db90c53e5a745551e378000f898fe7e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>Erreurs du compilateur C2400 à C2499
@@ -68,7 +54,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 > [!NOTE]
 >  Pas chaque [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erreur est documentée dans MSDN. Dans de nombreux cas, le message de diagnostic fournit toutes les informations qui est disponibles. Si vous pensez qu'un message d'erreur nécessite une explication supplémentaire, faites-nous part de vos suggestions. Vous pouvez utiliser le formulaire de commentaires sur cette page, ou accédez à la barre de menus dans Visual Studio et choisissez **aide**, **signaler un bogue**, ou vous pouvez envoyer un rapport de suggestion ou un bogue sur [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
- Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) forum est de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ général](http://go.microsoft.com/fwlink/?LinkId=158194) est de forum de questions sur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
+ Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ général](http://go.microsoft.com/fwlink/?LinkId=158194) est de forum de questions sur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
   
 |Erreur|Message|  
 |-----------|-------------|  
@@ -77,7 +63,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2402](compiler-error-c2402.md)|'*identificateur*' : Registre doit être un index dans '*contexte*'|  
 |[Erreur du compilateur C2403](compiler-error-c2403.md)|'*identificateur*' : Registre doit être une base/un index de '*contexte*'|  
 |[Erreur du compilateur C2404](compiler-error-c2404.md)|'*identificateur*' : Registre non conforme dans '*contexte*'|  
-|[Erreur du compilateur C2405](compiler-error-c2405.md)|référence au type short avec offset non conforme|  
+|[Erreur du compilateur C2405](compiler-error-c2405.md)|référence non conforme au type short avec offset|  
 |[Erreur du compilateur C2406](compiler-error-c2406.md)|'*identificateur*' : nom non défini dans '*contexte*'|  
 |[Erreur du compilateur C2407](compiler-error-c2407.md)|Registre 'float' non conforme dans '*contexte*'|  
 |[Erreur du compilateur C2408](compiler-error-c2408.md)|type non conforme sur l’opérateur PTR dans '*contexte*'|  
@@ -86,8 +72,8 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2411](compiler-error-c2411.md)|'*identificateur*' : membre struct/union non conforme dans '*contexte*'|  
 |[Erreur du compilateur C2412](compiler-error-c2412.md)|'*étiquette*' : redéfinie d’une étiquette pas la casse|  
 |[Erreur du compilateur C2413](compiler-error-c2413.md)|'*identificateur*' : taille d’alignement non conforme|  
-|[Erreur du compilateur C2414](compiler-error-c2414.md)|nombre d'opérandes non conforme|  
-|[Erreur du compilateur C2415](compiler-error-c2415.md)|type d'opérande incorrect|  
+|[Erreur du compilateur C2414](compiler-error-c2414.md)|nombre non conforme d’opérandes|  
+|[Erreur du compilateur C2415](compiler-error-c2415.md)|type d’opérande incorrect|  
 |C2416 d’erreur du compilateur|attribut '*attribut*' ne peut pas être appliqué dans ce contexte|  
 |[Erreur du compilateur C2417](compiler-error-c2417.md)|division par zéro dans '*contexte*'|  
 |[Erreur du compilateur C2418](compiler-error-c2418.md)|Impossible de supprimer le fichier browser : *nom de fichier*|  
@@ -95,7 +81,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2420](compiler-error-c2420.md)|'*identificateur*' : symbole non conforme dans *contexte*|  
 |[Erreur du compilateur C2421](compiler-error-c2421.md)|L’opérateur PTR utilisé avec un Registre dans '*contexte*'|  
 |[Erreur du compilateur C2422](compiler-error-c2422.md)|substitution de segment non conforme dans '*contexte*'|  
-|[Erreur du compilateur C2423](compiler-error-c2423.md)|'*numéro*' : échelle non conforme|  
+|[Erreur du compilateur C2423](compiler-error-c2423.md)|'*nombre*' : échelle non conforme|  
 |[Erreur du compilateur C2424](compiler-error-c2424.md)|'*jeton*' : expression incorrecte dans '*contexte*'|  
 |[Erreur du compilateur C2425](compiler-error-c2425.md)|'*jeton*' : expression non constante dans '*contexte*'|  
 |[Erreur du compilateur C2426](compiler-error-c2426.md)|'*jeton*' : opérateur non conforme dans '*contexte*'|  
@@ -115,12 +101,12 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2440](compiler-error-c2440.md)|'*conversion*' : Impossible de convertir '*type_1*'à'*type_2*'|  
 |[Erreur du compilateur C2441](compiler-error-c2441.md)|'*variable*' : un symbole déclaré avec __declspec (Process) doit être const en/clr : pure en mode|  
 |C2442 d’erreur du compilateur|'*identificateur*' : nested-namespace-definition ne peut pas être inséré ni avoir des attributs|  
-|[Erreur du compilateur C2443](compiler-error-c2443.md)|conflit de taille d'opérande|  
+|[Erreur du compilateur C2443](compiler-error-c2443.md)|conflit de taille d’opérande|  
 |[Erreur du compilateur C2444](compiler-error-c2444.md)|'*identificateur*' : prototype ANSI utilisé, 'type' attendu ' {' ou ';'|  
 |[Erreur du compilateur C2446](compiler-error-c2446.md)|'*opérateur*' : pas de conversion de '*type_1*'à'*type_2*'|  
 |[Erreur du compilateur C2447](compiler-error-c2447.md)|' {': en-tête de fonction manquant (liste formelle de style ancien ?)|  
 |[Erreur du compilateur C2448](compiler-error-c2448.md)|'*identificateur*' : initialiseur de style fonction semble être une définition de fonction|  
-|[Erreur du compilateur C2449](compiler-error-c2449.md)|trouvé '{' au niveau de la portée du fichier (en-tête de fonction manquant ?)|  
+|[Erreur du compilateur C2449](compiler-error-c2449.md)|trouvé ' {' au niveau de la portée du fichier (en-tête de fonction manquant ?)|  
 |[Erreur du compilateur C2450](compiler-error-c2450.md)|expression de type de commutateur '*type*' n’est pas autorisé|  
 |[Erreur du compilateur C2451](compiler-error-c2451.md)|expression conditionnelle de type '*type*' n’est pas autorisé|  
 |[Erreur du compilateur C2452](compiler-error-c2452.md)|'*type*' : type de source non valide pour safe_cast|  
@@ -136,10 +122,10 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2462](compiler-error-c2462.md)|'*identificateur*' : Impossible de définir un type dans une 'new-expression'|  
 |[Erreur du compilateur C2464](compiler-error-c2464.md)|'*type*' : Impossible d’utiliser 'new' pour allouer une référence|  
 |[Erreur du compilateur C2465](compiler-error-c2465.md)|impossible de définir un type anonyme entre parenthèses|  
-|[Erreur du compilateur C2466](compiler-error-c2466.md)|impossible d'allouer un tableau de taille constante 0|  
+|[Erreur du compilateur C2466](compiler-error-c2466.md)|Impossible d’allouer un tableau de taille constante 0|  
 |[Erreur du compilateur C2467](compiler-error-c2467.md)|déclaration d’anonyme non conforme '*user_defined_type*'|  
 |C2468 d’erreur du compilateur|le constructeur ne peut pas être 'constexpr' dans une classe ou un struct avec les classes de base virtuelles|  
-|[Erreur du compilateur C2469](compiler-error-c2469.md)|'new' : impossible d'allouer des objets 'void'|  
+|[Erreur du compilateur C2469](compiler-error-c2469.md)|'new' : Impossible d’allouer des objets 'void'|  
 |[Erreur du compilateur C2470](compiler-error-c2470.md)|'*fonction*' : similaire à une définition de fonction, mais il n’existe aucun paramètre liste ; corps apparent ignoré|  
 |[Erreur du compilateur C2471](compiler-error-c2471.md)|Impossible de mettre à jour la base de données du programme '*nom de fichier*'|  
 |[Erreur du compilateur C2472](compiler-error-c2472.md)|'*fonction*' ne peut pas être généré dans le code managé : '*message*' ; compilez avec /clr pour générer une image mixte|  
@@ -154,14 +140,14 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2482](compiler-error-c2482.md)|'*identificateur*' : l’initialisation dynamique des données locales de thread non autorisées dans le code managé/WINRT|  
 |[Erreur du compilateur C2483](compiler-error-c2483.md)|'*identificateur*' : l’objet avec un destructeur ou un type non agrégé ne peut pas être déclaré avec une durée de stockage de thread dans le code managé/WINRT|  
 |[Erreur du compilateur C2485](compiler-error-c2485.md)|'*identificateur*' : attribut étendu non reconnu|  
-|[Erreur du compilateur C2486](compiler-error-c2486.md)|'__LOCAL_SIZE' uniquement autorisé dans les fonctions ayant l'attribut 'naked'|  
+|[Erreur du compilateur C2486](compiler-error-c2486.md)|'__LOCAL_SIZE' uniquement autorisé dans une fonction avec l’attribut 'naked'|  
 |[Erreur du compilateur C2487](compiler-error-c2487.md)|'*identificateur*' : membre d’une classe d’interface dll ne peut pas être déclaré avec une interface dll|  
 |[Erreur du compilateur C2488](compiler-error-c2488.md)|'*identificateur*' : 'naked' peut uniquement être appliqué aux définitions de fonctions non membres|  
 |[Erreur du compilateur C2489](compiler-error-c2489.md)|'*identificateur*' : variable ou initialisée automatiquement Registre n’est ne pas autorisée au niveau de la portée de la fonction d’une fonction 'naked'|  
 |[Erreur du compilateur C2490](compiler-error-c2490.md)|'*mot clé*' non autorisée dans une fonction avec l’attribut 'naked'|  
 |[Erreur du compilateur C2491](compiler-error-c2491.md)|'*identificateur*' : définition de dllimport *fonction* non autorisée|  
 |[Erreur du compilateur C2492](compiler-error-c2492.md)|'*variable*' : les données avec une durée de stockage de thread ne peuvent pas avoir d’interface dll|  
-|[Erreur du compilateur C2493](compiler-error-c2493.md)|forme de __based non conforme|  
+|[Erreur du compilateur C2493](compiler-error-c2493.md)|forme non conforme de __based|  
 |[Erreur du compilateur C2494](compiler-error-c2494.md)|'*mot clé*' ne peut pas être appelé à partir d’une expression de filtre ou \_ \_bloc finally/finally|  
 |[Erreur du compilateur C2495](compiler-error-c2495.md)|'*identificateur*' : '__declspec(noexcept)' peut uniquement être appliqué aux définitions ou déclarations de fonction|  
 |[Erreur du compilateur C2496](compiler-error-c2496.md)|'*identificateur*' : 'selectany' peut uniquement être appliqué aux éléments de données avec liaison externe|  

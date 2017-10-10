@@ -1,29 +1,32 @@
 ---
-title: "Erreur du compilateur C2446 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2446"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2446"
+title: Erreur du compilateur C2446 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2446
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2446
 ms.assetid: 4f70dd11-6baf-4b92-9a08-f88f65ffa199
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Erreur du compilateur C2446
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d69563b470c0cad6932644f509a5924ec5ed234e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-'opérateur' : pas de conversion de 'type1 en 'type2'  
+---
+# <a name="compiler-error-c2446"></a>Erreur du compilateur C2446
+'opérateur' : aucune conversion de 'type1' en 'type2'  
   
- Le compilateur ne peut pas effectuer la conversion de `type1` vers `type2`.  La conversion peut ne pas être pertinente car elle ne respecte pas la sémantique C\/C\+\+.
+ Le compilateur ne peut pas convertir `type1` à `type2`. La conversion ne peut pas judicieux car il ne respecte pas la sémantique C/C++.

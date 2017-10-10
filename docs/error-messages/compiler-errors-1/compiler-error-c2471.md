@@ -1,38 +1,40 @@
 ---
-title: "Erreur du compilateur C2471 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2471"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2471"
+title: Erreur du compilateur C2471 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2471
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2471
 ms.assetid: a8928b44-20f6-4cbc-9aa5-7e86052a9c6b
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C2471
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d2152f966e7667869579a587dd72df01d0e8b69c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-impossible de mettre à jour la base de données 'fichier' du programme  
+---
+# <a name="compiler-error-c2471"></a>Erreur du compilateur C2471
+Impossible de mettre à jour la base de données du programme 'fichier'  
   
- Le compilateur n'est pas en mesure d'écrire dans le fichier de base de données.  
+ Le compilateur ne peut pas écrire dans le fichier de base de données.  
   
-### Pour corriger le problème  
+### <a name="to-fix-the-problem"></a>Pour corriger ce problème  
   
--   Vérifiez que le disque a suffisamment d'espace disponible.  
+-   Assurez-vous que le disque dispose de suffisamment d’espace disponible.  
   
--   Vérifiez que le fichier n'est pas en lecture seule.  
+-   Assurez-vous que le fichier n’est pas en lecture seule.  
   
--   Assurez\-vous qu'il n'y a aucune violation de partage.
+-   Assurez-vous qu’il n’y a aucune violation de partage.

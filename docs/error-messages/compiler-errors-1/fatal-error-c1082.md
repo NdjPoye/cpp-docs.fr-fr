@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 191dbb8a1c874ed3c5a40cc3d82baddde5dfaa45
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e96c26491a1ca3d5898295c5041b85f50f0bf392
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1082"></a>Erreur irrécupérable C1082
-Impossible de fermer le fichier 'TypeFichier' : 'fichier' : message  
+Impossible de fermer le fichier 'TypeFichier' : 'fichier' : message  
   
  Si le message indique « numéro de fichier incorrect », le fichier était peut-être en cours de fermeture au premier plan alors que la compilation se déroulait en arrière-plan.

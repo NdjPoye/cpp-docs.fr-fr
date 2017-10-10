@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2310 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2310"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2310"
+title: Erreur du compilateur C2310 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2310
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2310
 ms.assetid: 1969c682-b97e-43fb-b9a9-f783e7ff1710
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C2310
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 526ba25418a3d61764eb2ce1fa36c1e5faea00e3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-les gestionnaires catch doivent spécifier un seul type  
+---
+# <a name="compiler-error-c2310"></a>Erreur du compilateur C2310
+gestionnaires catch doivent spécifier un type  
   
- Un gestionnaire catch n'a spécifié aucun type ou en a spécifié plusieurs.  
+ Un gestionnaire catch spécifié aucun type ou plusieurs types.  
   
- L'exemple suivant génère l'erreur C2310 :  
+ L’exemple suivant génère l’erreur C2310 :  
   
 ```  
 // C2310.cpp  

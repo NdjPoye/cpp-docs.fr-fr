@@ -1,36 +1,39 @@
 ---
-title: "Erreur irr&#233;cup&#233;rable C1017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1017"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1017"
+title: "Erreur irrécupérable C1017 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1017
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1017
 ms.assetid: 5542e604-599d-4e36-8f83-1d454c5753c9
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur irr&#233;cup&#233;rable C1017
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 478a0a17ef8e0f0e6cb6589798d901837e7aff75
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="fatal-error-c1017"></a>Erreur irrécupérable C1017
 expression constante entière non valide  
   
- L'expression d'une directive `#if` n'existe pas ou ne correspond pas à une constante.  
+ L’expression dans une `#if` directive n’existe pas ou ne correspond pas à une constante.  
   
- Les constantes définies par `#define` doivent avoir des valeurs qui correspondent à une constante entière si elles sont utilisées dans une directive `#if`, `#elif` ou `#else`.  
+ Constantes définies à l’aide de `#define` doivent avoir des valeurs qui correspondent à une constante entière si elles sont utilisées dans un `#if`, `#elif`, ou `#else` la directive.  
   
- L'exemple suivant génère l'erreur C1017 :  
+ L’exemple suivant génère l’erreur C1017 :  
   
 ```  
 // C1017.cpp  
@@ -39,7 +42,7 @@ expression constante entière non valide
 #endif  
 ```  
   
- Résolution possible :  
+ Résolution possible :  
   
 ```  
 // C1017b.cpp  
@@ -49,9 +52,9 @@ expression constante entière non valide
 #endif  
 ```  
   
- `CONSTANT_NAME` correspondant à une chaîne et non pas à un entier, la directive `#if` génère l'erreur irrécupérable C1017.  
+ Étant donné que `CONSTANT_NAME` prend la valeur en une chaîne et non pas un entier, la `#if` directive génère l’erreur irrécupérable C1017.  
   
- Dans d'autres cas, le préprocesseur évalue une constante indéfinie à zéro.  Ceci peut entraîner des résultats inattendus, comme dans l'exemple suivant.  `YES` n'étant pas défini, il correspond à la valeur zéro.  L'expression `#if` `CONSTANT_NAME` a la valeur false et le code à utiliser sur `YES` est supprimé par le préprocesseur.  Étant donné que la valeur `NO` est également indéfinie \(zéro\), `#elif` `CONSTANT_NAME==NO` a la valeur true \(`0 == 0` ; il en résulte que le préprocesseur quitte le code dans la partie `#elif` de l'instruction, contrairement au comportement prévu.  
+ Dans d’autres cas, le préprocesseur évalue une constante non définie en tant que zéro. Cela peut entraîner des résultats inattendus, comme indiqué dans l’exemple suivant. `YES`n’est pas défini, il correspond à zéro. L’expression `#if` `CONSTANT_NAME` prend la valeur false et le code à utiliser sur `YES` est supprimé par le préprocesseur. `NO`est également non définie (zéro), par conséquent, `#elif` `CONSTANT_NAME==NO` a la valeur true (`0 == 0`), et le préprocesseur laisse le code dans la `#elif` partie de l’instruction — exactement le contraire du comportement prévu.  
   
 ```  
 // C1017c.cpp  
@@ -64,4 +67,4 @@ expression constante entière non valide
 #endif  
 ```  
   
- Pour voir exactement comment le compilateur gère les directives de préprocesseur, utilisez [\/P](../../build/reference/p-preprocess-to-a-file.md), [\/E](../../build/reference/e-preprocess-to-stdout.md) ou [\/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md).
+ Pour voir exactement comment le compilateur gère les directives de préprocesseur, utilisez [/P](../../build/reference/p-preprocess-to-a-file.md), [/E](../../build/reference/e-preprocess-to-stdout.md), ou [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md).

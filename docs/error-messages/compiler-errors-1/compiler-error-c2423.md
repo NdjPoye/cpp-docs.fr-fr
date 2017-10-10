@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2423 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2423"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2423"
+title: Erreur du compilateur C2423 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2423
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2423
 ms.assetid: 8797fb8b-b58b-4add-b6e6-2a9a3cd9084d
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C2423
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 33e555f07a0021c059cfff2372a9689c24f89a02
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2423"></a>Erreur du compilateur C2423
 'nombre' : échelle non conforme  
   
- Le code assembleur inline utilise un numéro autre que 1, 2, 4 ou 8 pour échelonner un registre.  
+ Le code assembleur inline utilise un nombre différent de 1, 2, 4 ou 8 à l’échelle d’un Registre.  
   
- L'exemple suivant génère l'erreur C2423 :  
+ L’exemple suivant génère l’erreur C2423 :  
   
 ```  
 // C2423.cpp  

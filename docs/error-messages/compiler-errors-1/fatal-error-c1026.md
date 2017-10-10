@@ -1,35 +1,38 @@
 ---
-title: "Erreur irr&#233;cup&#233;rable C1026 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1026"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1026"
+title: "Erreur irrécupérable C1026 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1026
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1026
 ms.assetid: 89bb9d40-673a-44aa-a9f4-b42c07b49d44
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Erreur irr&#233;cup&#233;rable C1026
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 187cfc1a59fc40a721be09aef9e78ef36c68f66a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="fatal-error-c1026"></a>Erreur irrécupérable C1026
 dépassement de capacité de la pile de l'analyseur, programme trop complexe  
   
- L'espace requis pour analyser le programme a causé un dépassement de capacité de la pile du compilateur.  
+ L’espace requis pour analyser le programme a provoqué un dépassement de capacité de pile du compilateur.  
   
- Diminuez la complexité des expressions en :  
+ Réduire la complexité des expressions en :  
   
--   Diminuant le niveau d'imbrication des instructions `for` et `switch`.  Placez les instructions les plus fortement imbriquées dans des fonctions séparées.  
+-   Diminution du niveau d’imbrication des `for` et `switch` instructions. Placez les instructions plus profondément imbriquées dans des fonctions séparées.  
   
--   Divisant les expressions longues faisant appel à des opérateurs à virgule ou des appels de fonction.
+-   Avec rupture des expressions longues qui impliquent des appels de fonction ou des opérateurs de virgules.

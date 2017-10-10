@@ -19,26 +19,11 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
-ms.openlocfilehash: 3635ff0ba3280dcca3419caf85795bfaec7ff7ac
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 693f560f066d4957fa50ac413f93c0f56e5062cf
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1201"></a>Erreur irrécupérable C1201
@@ -46,4 +31,4 @@ impossible de continuer après une erreur de syntaxe dans la définition du mod�
   
  Une erreur inattendue s’est produite pendant l’analyse d’une définition de modèle de classe.  
   
- Corrigez les autres erreurs éventuelles et recompilez. Si ce échoue, la note les circonstances de l’erreur, essayez d’isoler le problème et de créer un cas de test reproductible, puis contactez [Microsoft Product Support Services](/visualstudio/ide/talk-to-us).
+ Corrigez les autres erreurs éventuelles et recompilez. Si cela n’aboutit pas, notez les circonstances de l’erreur, essayez d’isoler le problème et de créer un cas de test reproductible, puis contactez les [services de support technique Microsoft](/visualstudio/ide/talk-to-us).
