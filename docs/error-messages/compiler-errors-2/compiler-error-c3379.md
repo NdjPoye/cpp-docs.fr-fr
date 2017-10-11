@@ -19,33 +19,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 16c62e48a0190096e04dc4ccf0c17ca66c2f4094
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e6fa111a525d81c418d3285c05af86b700e8cb08
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3379"></a>Erreur du compilateur C3379
-'classe' : une classe imbriquée ne peut pas avoir de spécificateur d’accès d’un assembly dans le cadre de sa déclaration  
+'classe' : une classe imbriquée ne peut pas avoir de spécificateur d’accès d’assembly dans le cadre de sa déclaration  
   
- Lorsqu’il est appliqué à un type managé, telles que la classe ou structure, le [public](../../cpp/public-cpp.md) et [privé](../../cpp/private-cpp.md) mots clés indiquent si la classe doit être exposée via les métadonnées de l’assembly. `public`ou `private` ne peut pas être appliqué à une classe imbriquée, qui héritera de l’accès à l’assembly de la classe englobante.  
+ Quand il est appliqué à un type managé, telles que la classe ou structure, le [public](../../cpp/public-cpp.md) et [privé](../../cpp/private-cpp.md) mots clés indiquent si la classe doit être exposée via les métadonnées de l’assembly. `public`ou `private` ne peut pas être appliqué à une classe imbriquée, qui héritera de l’accès à l’assembly de la classe englobante.  
   
- Lorsqu’il est utilisé avec [/clr](../../build/reference/clr-common-language-runtime-compilation.md), le `ref` et `value` mots clés indiquent qu’une classe est managée (voir [les Classes et Structs](../../windows/classes-and-structs-cpp-component-extensions.md)).  
+ Lorsqu’il est utilisé avec [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), le `ref` et `value` mots clés indiquent qu’une classe est managée (consultez [les Classes et Structs](../../windows/classes-and-structs-cpp-component-extensions.md)).  
   
  L’exemple suivant génère l’erreur C3379 :  
   

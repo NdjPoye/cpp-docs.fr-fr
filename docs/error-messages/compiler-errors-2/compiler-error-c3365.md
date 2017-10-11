@@ -1,5 +1,5 @@
 ---
-title: "C3365 d’erreur du compilateur | Documents Microsoft"
+title: Erreur du compilateur C3365 | Documents Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 2ad4d2d5b926001fad668b62b6cbf0abe21542c0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2352ff83181fe1127e1faa60829d00f03508bccd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3365"></a>Erreur du compilateur C3365
-opérateur 'operator' : opérandes différents de type 'type1' et 'type2'  
+opérateur 'operator' : opérandes différents de type 'type1' et 'type2'  
   
-Une tentative de composition de délégués avec des types différents a été effectuée.  Consultez la page [Comment : définir et utiliser délègue (C + c++ / CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) pour plus d’informations sur les délégués.  
+Une tentative de composition de délégués avec des types différents a été effectuée.  Consultez [Comment : définir et utiliser délègue (C + c++ / CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) pour plus d’informations sur les délégués.  
   
 ## <a name="example"></a>Exemple  
 L’exemple suivant génère l’erreur C3365 :  

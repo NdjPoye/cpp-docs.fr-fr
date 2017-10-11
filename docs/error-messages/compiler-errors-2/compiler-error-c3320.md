@@ -1,5 +1,5 @@
 ---
-title: "C3320 d’erreur du compilateur | Documents Microsoft"
+title: Erreur du compilateur C3320 | Documents Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 4b4acfe97e38cf13e336b7c58ffc868c69cf7a09
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fbc375682bb42070d49dd08b711926462c17f32b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3320"></a>Erreur du compilateur C3320
 'type' : le type ne peut pas avoir le même nom que la propriété 'name' du module  
   
-Un défini par l’utilisateur type exporté (UDT), qui peut être un struct, classe, enum ou union, ne peut pas avoir le même nom que le paramètre passé à la [module](../../windows/module-cpp.md) propriété du nom de l’attribut.  
+Un défini par l’utilisateur type exporté (UDT), qui peut être struct, class, enum ou union, ne peut pas avoir le même nom que le paramètre passé à la [module](../../windows/module-cpp.md) propriété du nom de l’attribut.  
   
 ## <a name="example"></a>Exemple  
 L’exemple suivant génère l’erreur C3320 :  

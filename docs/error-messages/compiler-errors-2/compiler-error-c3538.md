@@ -1,39 +1,42 @@
 ---
-title: "Erreur du compilateur C3538 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3538"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3538"
+title: Erreur du compilateur C3538 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3538
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Erreur du compilateur C3538
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: da21036ddd4cc8b468f291079e0c475ca1b7c4b3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3538"></a>Erreur du compilateur C3538
 dans une liste de déclarateurs, 'auto' doit toujours être déduit au même type  
   
  Toutes les variables déclarées dans une liste de déclaration ne correspondent pas au même type.  
   
-### Pour corriger cette erreur  
+### <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Assurez\-vous que toutes les déclarations `auto` figurant dans la liste déduisent le même type.  
+1.  Assurez-vous que toutes les déclarations `auto` figurant dans la liste déduisent le même type.  
   
-## Exemple  
- Les instructions suivantes génèrent l'erreur C3538.  Chaque instruction déclare plusieurs variables, mais toutes les utilisations du mot clé `auto` ne déduisent pas le même type.  
+## <a name="example"></a>Exemple  
+ Les instructions suivantes génèrent l'erreur C3538. Chaque instruction déclare plusieurs variables, mais toutes les utilisations du mot clé `auto` ne déduisent pas le même type.  
   
 ```  
 // C3538.cpp  
@@ -53,5 +56,5 @@ int main()
 }  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [auto, mot clé](../../cpp/auto-keyword.md)

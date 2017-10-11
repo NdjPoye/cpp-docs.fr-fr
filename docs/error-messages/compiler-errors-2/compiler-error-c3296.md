@@ -19,34 +19,19 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 75facf4bbc92481db12c3254e2035a39b7310a6b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 734f4e1e337833e26c60d4239a465818d8601ae5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3296"></a>Erreur du compilateur C3296
-'property' : une propriété portant ce nom existe déjà  
+'property' : une propriété portant ce nom existe déjà  
   
  Le compilateur a rencontré plusieurs propriétés portant le même nom. Chaque propriété dans un type doit avoir un nom unique.  
   
- Pour plus d’informations, consultez [propriété](../../windows/property-cpp-component-extensions.md).  
+ Pour plus d'informations, consultez [property](../../windows/property-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant génère l’erreur C3296.  

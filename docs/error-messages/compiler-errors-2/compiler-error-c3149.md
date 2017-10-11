@@ -19,25 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 555b3a7ac8e0d1e5de8eacd763c9ee63101e5b78
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc5abf02a3210ca3d7bd858662e0c02d4f42d75d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3149"></a>Erreur du compilateur C3149
@@ -45,9 +31,9 @@ ms.lasthandoff: 02/24/2017
   
  Une déclaration n’a pas été spécifiée correctement.  
   
- Par exemple, vous pouvez avoir défini un type CLR dans une portée globale et a tenté de créer une variable du type dans le cadre de la définition de. Étant donné que les variables globales de types CLR ne sont pas autorisées, le compilateur génère l’erreur C3149.  
+ Par exemple, peut avoir défini un type CLR dans une portée globale et tenté de créer une variable du type dans le cadre de la définition. Étant donné que les variables globales de types CLR ne sont pas autorisées, le compilateur génère l’erreur C3149.  
   
- Pour résoudre cette erreur, déclarez les variables de types CLR à l’intérieur d’une définition de fonction ou le type.  
+ Pour résoudre cette erreur, déclarez les variables des types CLR à l’intérieur d’une définition de fonction ou type.  
   
  L’exemple suivant génère l’erreur C3149 :  
   
