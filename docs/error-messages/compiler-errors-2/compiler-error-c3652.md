@@ -1,35 +1,37 @@
 ---
-title: "Erreur du compilateur C3652 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3652"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3652"
+title: Erreur du compilateur C3652 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3652
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3652
 ms.assetid: 15d68737-177e-41f1-80e0-7c3e2afdf0fc
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3652
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4bade460d97b8d7dcb38e7d37fa87f2910047c47
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'substitution' : une fonction de substitution explicite doit être virtuelle  
+---
+# <a name="compiler-error-c3652"></a>Erreur du compilateur C3652
+'override' : une fonction de substitution explicite doit être virtuelle  
   
- Une fonction qui réalise une substitution explicite doit être virtuelle.  Pour plus d'informations, consultez [Substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Une fonction qui effectue une substitution explicite doit être virtuelle. Pour plus d’informations, consultez [substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
- L'exemple suivant génère l'erreur C3652 :  
+ L’exemple suivant génère l’erreur C3652 :  
   
 ```  
 // C3652.cpp  

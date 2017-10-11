@@ -1,35 +1,37 @@
 ---
-title: "Avertissement du compilateur (niveaux&#160;1 et 4) C4700 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4700"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4700"
+title: Compilateur avertissement (niveaux 1 et 4) C4700 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4700
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4700
 ms.assetid: 2da0deb4-77dd-4b05-98d3-b78d74ac4ca7
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Avertissement du compilateur (niveaux&#160;1 et 4) C4700
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f41e519a9dbcff3cc5ad4b718003e5964bfc3e85
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-variable locale 'nom' non initialisée utilisée  
+---
+# <a name="compiler-warning-level-1-and-level-4-c4700"></a>Avertissement du compilateur (niveaux 1 et 4) C4700
+variable locale non initialisée 'name' utilisé  
   
- Vous avez utilisé la variable locale *nom* sans lui avoir préalablement assigné une valeur, ce qui peut donner lieu à des résultats imprévisibles.  
+ Vous avez utilisé la variable locale *nom* sans première lui assigner une valeur, ce qui peut entraîner des résultats imprévisibles.  
   
- L'exemple suivant génère l'erreur C4700 :  
+ L’exemple suivant génère l’erreur C4700 :  
   
 ```  
 // C4700.cpp  
@@ -40,7 +42,7 @@ int main() {
 }  
 ```  
   
- Sous [\/clr:safe](../../build/reference/clr-common-language-runtime-compilation.md), il s'agit d'un avertissement de niveau 4.  L'exemple suivant génère l'erreur C4700 :  
+ Sous [/CLR : safe](../../build/reference/clr-common-language-runtime-compilation.md) il s’agit d’un avertissement de niveau 4.  L’exemple suivant génère l’erreur C4700 :  
   
 ```  
 // C4700b.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C3825 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3825"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3825"
+title: Erreur du compilateur C3825 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3825
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3825
 ms.assetid: 18e204a1-f26e-42c6-8d74-2b49cc95f940
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Erreur du compilateur C3825
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c3f8547cee8638fe5cda6c5b0a3d3ff375850406
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'classe' : une classe managée ou WinRT ne peut prendre en charge que des événements managés ou WinRT  
+---
+# <a name="compiler-error-c3825"></a>Erreur du compilateur C3825
+'classe' : managé ou WinRTclass peut uniquement prise en charge géré ou WinRTevents  
   
- Seuls les événements .NET sont pris en charge dans les classes managées.  Seuls les événements Windows Runtime sont pris en charge dans les classes Windows Runtime.  Pour corriger cette erreur dans du code managé, modifiez le paramètre de type de `event_source` et `event_receiver` de `native` à `managed`.  Vous pouvez également supprimer l'attribut.  
+ Seuls les événements .NET sont pris en charge dans les classes managées. Seuls les événements Windows Runtime sont pris en charge dans les classes Windows Runtime. Pour corriger cette erreur dans du code managé, modifiez le paramètre de type de `event_source` et `event_receiver` de `native` à `managed`. Vous pouvez également supprimer l'attribut.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant génère l'erreur C3825 et montre comment la corriger :  
   
 ```  

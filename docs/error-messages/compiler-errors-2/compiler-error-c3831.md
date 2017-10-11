@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 9b0dc2a5da701c94408e79053df721af38cada62
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 27b330e82c952bd02de7499e8dffe548acfe819c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3831"></a>Erreur du compilateur C3831
 'membre' : 'classe' ne peut pas avoir de données membres épinglées ni de fonctions membres retournant un pointeur épingle  
   
- [pin_ptr (C + c++ / CLI)](../../windows/pin-ptr-cpp-cli.md) a été utilisée de manière incorrecte.  
+ [pin_ptr (C + c++ / CLI)](../../windows/pin-ptr-cpp-cli.md) a été utilisé incorrectement.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant génère C3831 :  

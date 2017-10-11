@@ -1,5 +1,5 @@
 ---
-title: "C4936 d’avertissement du compilateur | Documents Microsoft"
+title: Avertissement du compilateur C4936 | Documents Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 58d702067c186eeeea94768a03836b64577961ca
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a4342c749c5db4d66f206209a146ad7d7aef7041
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4936"></a>Avertissement du compilateur C4936
@@ -46,11 +31,11 @@ ce __declspec est pris en charge uniquement lorsqu'il est compilé avec /clr ou 
   
  Le **/CLR : pure** option du compilateur est déconseillée dans Visual Studio 2015.  
   
- A `__declspec` modificateur a été utilisé mais qui `__declspec` modificateur est uniquement valide lors de la compilation avec un de le [/clr](../../build/reference/clr-common-language-runtime-compilation.md) options.  
+ Un modificateur `__declspec` a été utilisé, mais ce modificateur `__declspec` est valide uniquement quand il est compilé avec l’une des options [/clr](../../build/reference/clr-common-language-runtime-compilation.md) .  
   
- Pour plus d’informations, consultez [appdomain](../../cpp/appdomain.md) et [processus](../../cpp/process.md).  
+ Pour plus d’informations, consultez [appdomain](../../cpp/appdomain.md) et [process](../../cpp/process.md).  
   
- C4936 est toujours émis en tant qu’erreur.  Vous pouvez désactiver C4936 avec la [avertissement](../../preprocessor/warning.md) pragma.  
+ C4936 est toujours émis en tant qu’erreur.  Vous pouvez désactiver C4936 avec le pragma [warning](../../preprocessor/warning.md) .  
   
  L’exemple suivant génère l’avertissement C4936 :  
   

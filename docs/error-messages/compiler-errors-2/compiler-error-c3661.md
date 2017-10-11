@@ -1,31 +1,34 @@
 ---
-title: "Erreur du compilateur C3661 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3661"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3661"
+title: Erreur du compilateur C3661 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3661
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3661
 ms.assetid: 50793fd1-1829-4b29-ad0d-094ef2068b43
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C3661
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 45d40adbe1e8dd6abe509e532ba5ccc97b21c4d1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-méthodes à substituer introuvables dans la liste des substitutions explicites  
+---
+# <a name="compiler-error-c3661"></a>Erreur du compilateur C3661
+liste de substitution explicite n’a pas trouvé toutes les méthodes à substituer  
   
- Une substitution explicite a spécifié un ou plusieurs noms de types.  Toutefois, aucune fonction ne possédait la signature nécessaire dans le ou les types qui correspondaient à la signature de la fonction de substitution.  Si vous essayez de substituer en vous basant sur le nom de type, il doit exister une ou plusieurs fonctions virtuelles du ou des types spécifié\(s\) qui correspondent à la signature de la fonction de substitution.  
+ Une substitution explicite a spécifié un ou plusieurs noms de type.  Toutefois, il n’a aucune fonction avec la signature nécessaire dans l’ou les types qui correspondaient à la substitution de signature de fonction.  Si vous essayez de substituer basé sur le nom de type, il doit exister une ou plusieurs fonctions virtuelles dans les types spécifiés qui correspondent à la signature de la fonction de substitution.  
   
- Pour plus d'informations, consultez [Substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).
+ Pour plus d’informations, consultez [substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).

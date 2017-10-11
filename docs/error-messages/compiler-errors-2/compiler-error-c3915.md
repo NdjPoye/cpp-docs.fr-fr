@@ -1,37 +1,40 @@
 ---
-title: "Erreur du compilateur C3915 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3915"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3915"
+title: Erreur du compilateur C3915 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3915
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C3915
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b753abc02e84c8373fe6115a5bf2f2a0719094f3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'type' n'a pas de propriété indexée par défaut \(indexeur de classe\)  
+---
+# <a name="compiler-error-c3915"></a>Erreur du compilateur C3915
+'type' n’a aucune propriété indexée par défaut (indexeur de classe)  
   
- Un type ne possède pas de propriété indexée par défaut.  
+ Un type n’a pas une valeur par défaut, la propriété indexée.  
   
  Pour plus d'informations, consultez [property](../../windows/property-cpp-component-extensions.md).  
   
-## Exemple  
- L'exemple suivant génère l'erreur C3915 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C3915.  
   
 ```  
 // C3915.cpp  
@@ -54,10 +57,10 @@ int main() {
 }  
 ```  
   
-## Exemple  
- L'erreur C3915 peut également se produire si vous essayez d'utiliser un indexeur par défaut dans le même module \(compiland\) que celui où il a été défini avec <xref:System.Reflection.DefaultMemberAttribute>.  
+## <a name="example"></a>Exemple  
+ L’erreur C3915 peut également se produire si vous tentez d’utiliser un indexeur par défaut dans le même compiland dans laquelle il a été défini avec <xref:System.Reflection.DefaultMemberAttribute>.  
   
- L'exemple suivant génère l'erreur C3915 :  
+ L’exemple suivant génère l’erreur C3915.  
   
 ```  
 // C3915_b.cpp  

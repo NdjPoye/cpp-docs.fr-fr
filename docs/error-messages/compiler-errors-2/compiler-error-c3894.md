@@ -1,36 +1,39 @@
 ---
-title: "Erreur du compilateur C3894 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3894"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3894"
+title: Erreur du compilateur C3894 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3894
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3894
 ms.assetid: 6d5ac903-1dea-431d-8e3a-cebca4342983
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Erreur du compilateur C3894
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 46dffabb57e871e1635738434e7efb4812850379
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'var' : l'utilisation comme l\-value des données membre static initonly n'est autorisée que dans le constructeur de classe de la classe 'classe'  
+---
+# <a name="compiler-error-c3894"></a>Erreur du compilateur C3894
+'var' : utilisation comme l-value des données membres static initonly est autorisée uniquement dans le constructeur de classe de la classe 'classe'  
   
- Les données membres static [initonly](../../dotnet/initonly-cpp-cli.md) ne peuvent être utilisées comme l\-value qu'à leur point de déclaration ou dans un constructeur static.  
+ Statique [initonly](../../dotnet/initonly-cpp-cli.md) données membres peuvent uniquement être utilisés comme l-values à leur point de déclaration ou dans un constructeur statique.  
   
- Les données membres initonly de l'instance \(non static\) ne peuvent être utilisées comme l\-value qu'à leur point de déclaration ou dans des constructeurs d'instance \(non static\).  
+ Instance (non statique) les données membres initonly peuvent uniquement être utilisés comme l-values à leur point de déclaration ou dans les constructeurs d’instance (non statique).  
   
- L'exemple suivant génère l'erreur C3894 :  
+ L’exemple suivant génère l’erreur C3894 :  
   
 ```  
 // C3894.cpp  

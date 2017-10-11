@@ -1,34 +1,37 @@
 ---
-title: "Avertissement du compilateur (niveau 1) C4003 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4003"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4003"
+title: Compilateur avertissement (niveau 1) C4003 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4003
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4003
 ms.assetid: 0ed1c285-4428-4c90-8131-86897e31f115
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Avertissement du compilateur (niveau 1) C4003
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0e0ac3c216168ada4f2367adbac509b422aba310
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-nombre de paramètres réels insuffisant pour la macro 'identificateur'  
+---
+# <a name="compiler-warning-level-1-c4003"></a>Compilateur avertissement (niveau 1) C4003
+nombre de paramètres réels insuffisants pour la macro 'identificateur'  
   
- Le nombre de paramètres formels dans la macro dépasse le nombre de paramètres réels de cette macro.  L'expansion macro substitue un texte vide aux paramètres manquants.  
+ Le nombre de paramètres formels dans la définition de macro dépasse le nombre de paramètres réels dans la macro. L’expansion macro substitue un texte vide pour les paramètres manquants.  
   
- L'exemple suivant génère l'erreur C4003 :  
+ L’exemple suivant génère C4003 :  
   
 ```  
 // C4003.cpp  

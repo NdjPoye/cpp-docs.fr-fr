@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C3670 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3670"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3670"
+title: Erreur du compilateur C3670 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3670
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3670
 ms.assetid: d0fa9c6e-8f90-48c7-9066-31b4fa5942eb
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Erreur du compilateur C3670
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 773ee85df3e19245b665521be8d65055ffe3bf17
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'override' : impossible de substituer la méthode de classe de base inaccessible 'méthode'  
+---
+# <a name="compiler-error-c3670"></a>Erreur du compilateur C3670
+'override' : ne peut pas substituer la méthode de classe de base inaccessible 'méthode'  
   
- Une substitution ne peut se produire que sur une fonction dont le niveau d'accès la rend disponible dans un type dérivé.  Pour plus d'informations, consultez [Substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Une substitution ne peut se place sur une fonction dont le niveau d’accès met à disposition dans un type dérivé. Pour plus d’informations, consultez [substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
- L'exemple suivant génère l'erreur C3670 :  
+ L’exemple suivant génère l’erreur C3670 :  
   
 ```  
 // C3670.cpp  

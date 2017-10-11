@@ -19,33 +19,19 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 989f17e8f59afc6a04ed4101204053fc971c6a62
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4d6a255bebeccc0c63ba621a7c5886fd318ffd5f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3808"></a>Erreur du compilateur C3808
-'type' : une classe avec l’attribut ComImport ne peut pas définir le membre 'member', abstrait uniquement ou les fonctions dllimport sont autorisées  
+'type' : une classe avec l’attribut ComImport ne peut pas définir de membre 'membre', abstrait uniquement ou les fonctions dllimport sont autorisées  
   
- Un type dérivé de <xref:System.Runtime.InteropServices.ComImportAttribute>ne peut pas définir `member`.</xref:System.Runtime.InteropServices.ComImportAttribute>  
+ Un type dérivé <xref:System.Runtime.InteropServices.ComImportAttribute> ne peut pas définir `member`.  
   
- Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015.  
+ Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant génère l’erreur C3808 :.  

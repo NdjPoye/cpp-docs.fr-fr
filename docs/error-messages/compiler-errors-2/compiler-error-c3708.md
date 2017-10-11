@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C3708 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3708"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3708"
+title: Erreur du compilateur C3708 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3708
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3708
 ms.assetid: 45e71564-9c7f-437f-98d8-a735ce162ed0
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Erreur du compilateur C3708
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8cc63e34c42f2c8d91c787530680d76e81192569
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'interface' : utilisation incorrecte de 'MotClé' ; doit être membre d'une source d'événements compatible  
+---
+# <a name="compiler-error-c3708"></a>Erreur du compilateur C3708
+'interface' : utilisation incorrecte de 'mot_clé' ; doit être un membre d’une source d’événements compatible  
   
- Pour déclarer une interface en tant qu'événement, la déclaration event doit se trouver dans une source d'événements.  
+ Pour déclarer une interface d’événement, la déclaration d’événement doit être une source d’événement.  
   
- L'exemple suivant génère l'erreur C3708 :  
+ L’exemple suivant génère C3708 :  
   
 ```  
 // C3708.cpp  

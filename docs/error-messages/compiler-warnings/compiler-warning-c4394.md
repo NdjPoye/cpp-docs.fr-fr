@@ -1,39 +1,42 @@
 ---
-title: "Avertissement du compilateur C4394 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4394"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4394"
+title: Avertissement du compilateur C4394 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4394
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4394
 ms.assetid: 5de94de0-17e3-4e7c-92f4-5c3c1b825120
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Avertissement du compilateur C4394
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5b201b95a2ec9d43c904de35ca581efbf31b7526
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'fonction' : un symbole par appdomain ne doit pas être marqué avec \_\_declspec\(dllexport\)  
+---
+# <a name="compiler-warning-c4394"></a>Avertissement du compilateur C4394
+'fonction' : symbole par appdomain ne doit pas être marqué avec __declspec (dllexport)  
   
- Une fonction marquée avec le modificateur [appdomain](../../cpp/appdomain.md) `__declspec` est compilée en code MSIL \(et non natif\), et les tables d'exportation \(modificateur [export](../../windows/export.md) `__declspec`\) ne sont pas prises en charge pour les fonctions managées.  
+ Une fonction marquée avec la [appdomain](../../cpp/appdomain.md) `__declspec` modificateur est compilé en code MSIL (non natif) et les tables d’exportation ([exporter](../../windows/export.md) `__declspec` modificateur) ne sont pas pris en charge pour les fonctions managées.  
   
- Déclarez une fonction managée pour avoir un accès public.  Pour plus d'informations, consultez [Visibilité du type](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) et [Visibilité de membre](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility).  
+ Vous pouvez déclarer une fonction managée d’avoir une accessibilité publique. Pour plus d’informations, consultez [visibilité de Type](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) et [visibilité des membres](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility).  
   
- C4394 est toujours émis en tant qu'erreur.  Vous pouvez désactiver cet avertissement avec `#pragma warning` ou **\/wd** ; consultez [warning](../../preprocessor/warning.md) ou [\/w, \/Wn, \/WX, \/Wall, \/wln, \/wdn, \/wen, \/won \(Niveau d'avertissement\)](../../build/reference/compiler-option-warning-level.md) pour plus d'informations.  
+ C4394 est toujours émis en tant qu’erreur.  Vous pouvez désactiver cet avertissement avec le `#pragma warning` ou **/wd**; consultez [avertissement](../../preprocessor/warning.md) ou [Wn, / W0, /W1, /W2, /W3, / W4, /w1, /w2, /w3, / W4, Wall, /wd, / nous, /wo, /WV., /Won (niveau d’avertissement)](../../build/reference/compiler-option-warning-level.md)pour plus d’informations.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C4394 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C4394.  
   
 ```  
 // C4394.cpp  

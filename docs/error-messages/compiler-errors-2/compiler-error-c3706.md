@@ -1,39 +1,41 @@
 ---
-title: "Erreur du compilateur C3706 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3706"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3706"
+title: Erreur du compilateur C3706 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3706
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3706
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 20f7e14d22e1994213624d88ccab098844aa6ac4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3706"></a>Erreur du compilateur C3706
 'fonction' : doit être une interface COM pour déclencher des événements COM  
   
- L'interface d'événement que vous utilisez pour déclencher des événements COM doit être une interface COM.  Dans cette situation, l'interface doit être définie à l'aide d'un attribut Visual C\+\+ ou être importée à l'aide de [\#import](../../preprocessor/hash-import-directive-cpp.md) à partir d'une bibliothèque de types possédant l'attribut embedded\_idl de \#import.  
+ L’interface d’événement que vous utilisez pour déclencher des événements COM doit être une interface COM. Dans ce cas, l’interface doit être définie à l’aide d’un attribut Visual C++ ou importées à l’aide [#import](../../preprocessor/hash-import-directive-cpp.md) à partir d’une bibliothèque de types possédant l’attribut embedded_idl de #import.  
   
- Notez que les lignes `#include` des fichiers d'en\-tête ATL illustrées dans l'exemple ci\-dessous sont nécessaires pour utiliser les événements COM.  Pour remédier à cette erreur, transformez `IEvents` \(l'interface d'événement\) en une interface COM en appliquant l'un des attributs suivants à la définition de l'interface : [object](../../windows/object-cpp.md), [dual](../../windows/dual.md) ou [dispinterface](../../windows/dispinterface.md).  
+ Notez que le `#include` lignes des fichiers d’en-tête ATL illustrées dans l’exemple ci-dessous sont requises pour l’utilisation des événements COM. Pour corriger cette erreur, rendez `IEvents` (l’interface d’événement) une interface COM en appliquant une de ces attributs à la définition d’interface : [objet](../../windows/object-cpp.md), [double](../../windows/dual.md), ou [ dispinterface](../../windows/dispinterface.md).  
   
- Si une interface provient d'un fichier d'en\-tête généré par MIDL, le compilateur ne la reconnaît pas comme une interface COM.  
+ Si une interface provient d’un fichier d’en-tête généré par MIDL, le compilateur ne la reconnaît pas comme une interface COM.  
   
- L'exemple suivant génère l'erreur C3706 :  
+ L’exemple suivant génère l’erreur C3706 :  
   
 ```  
 // C3706.cpp  

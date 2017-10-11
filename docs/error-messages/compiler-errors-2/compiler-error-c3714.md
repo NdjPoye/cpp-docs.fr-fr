@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C3714 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3714"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3714"
+title: Erreur du compilateur C3714 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3714
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3714
 ms.assetid: 17718f75-5a37-4e42-912b-487e91008a95
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Erreur du compilateur C3714
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7d58e06d99975fd4ccff9ea4bace755ff1d758cb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'méthode' : une méthode de gestionnaire d'événements doit avoir la même convention d'appel que la 'méthode' source  
+---
+# <a name="compiler-error-c3714"></a>Erreur du compilateur C3714
+'méthode' : une méthode de gestionnaire d’événements doit avoir la même convention d’appel en tant que la source 'méthode'  
   
- Vous avez défini une méthode de gestionnaire d'événements qui n'utilise pas la même convention d'appel que la méthode d'événement source.  Pour remédier à cette erreur, donnez à la méthode de gestionnaire d'événements les mêmes conventions d'appel qu'à la méthode d'événement source.  Dans le code ci\-dessous, par exemple, faites concorder les conventions d'appel de `handler1` et `event1` \([\_\_cdecl](../../cpp/cdecl.md) ou [\_\_stdcall](../../cpp/stdcall.md) ou autres\).  La suppression des mots clés de convention d'appel résoudra également le problème et aura pour effet que `event1` et `handler1` prendront par défaut la convention d'appel [thiscall](../../cpp/thiscall.md).  Pour plus d'informations, consultez [Conventions d'appel](../../cpp/calling-conventions.md).  
+ Vous avez défini une méthode de gestionnaire d’événements qui n’utilise pas la même convention d’appel en tant que la méthode d’événement source. Pour corriger cette erreur, donnez à la méthode de gestionnaire d’événements les mêmes conventions d’appel que ceux de la méthode d’événement source. Par exemple, dans le code ci-dessous, vérifiez les conventions d’appel de `handler1` et `event1` correspond à ([__cdecl](../../cpp/cdecl.md) ou [__stdcall](../../cpp/stdcall.md) ou d’autres). Suppression d’appel de mots clés de convention les deux déclarations d’également résoudre le problème et provoquer `event1` et `handler1` à la valeur par défaut pour le [thiscall](../../cpp/thiscall.md) convention d’appel. Consultez [Conventions d’appel](../../cpp/calling-conventions.md) pour plus d’informations.  
   
- L'exemple suivant génère l'erreur C3714 :  
+ L’exemple suivant génère l’erreur C3714 :  
   
 ```  
 // C3714.cpp  

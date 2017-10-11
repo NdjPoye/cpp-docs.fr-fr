@@ -51,25 +51,11 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 16d0f336ec66329d0a92a151e1bc224433b0b03a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 59ac61f0ae50f3a6b1d7170ea0b965c3bb8d0fe2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3000-through-c3099"></a>C3000 des erreurs du compilateur via C3099
@@ -101,12 +87,12 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C3016](compiler-error-c3016.md)|'*identificateur*' : variable d’index de OpenMP 'instruction for' doit avoir un type intégral signé|  
 |[Erreur du compilateur C3017](compiler-error-c3017.md)|forme incorrecte du test de fin dans l'instruction 'for' OpenMP|  
 |[Erreur du compilateur C3018](compiler-error-c3018.md)|'*identificateur*' : OpenMP 'for' test ou l’incrément doit utiliser la variable d’index '*variable*'|  
-|[Erreur du compilateur C3019](compiler-error-c3019.md)|forme incorrecte de l'incrément dans l'instruction 'for' OpenMP|  
+|[Erreur du compilateur C3019](compiler-error-c3019.md)|incrément d’OpenMP 'instruction for' a la forme incorrecte|  
 |[Erreur du compilateur C3020](compiler-error-c3020.md)|'*variable*' : variable d’index OpenMP 'boucle for' ne peut pas être modifié dans le corps de la boucle|  
 |[Erreur du compilateur C3021](compiler-error-c3021.md)|'*argument*' : argument est vide sur OpenMP '*directive*» (directive)|  
 |[Erreur du compilateur C3022](compiler-error-c3022.md)|'*directive*' : type de planification non valide de '*directive*'on OpenMP'*directive*' (directive)|  
 |[Erreur du compilateur C3023](compiler-error-c3023.md)|'*argument*' : jeton inattendu rencontré dans l’argument OpenMP '*directive*' clause|  
-|[Erreur du compilateur C3024](compiler-error-c3024.md)|'schedule(runtime)' : l'expression chunk_size n'est pas autorisée|  
+|[Erreur du compilateur C3024](compiler-error-c3024.md)|'Schedule (Runtime)' : l’expression chunk_size n’est pas autorisée.|  
 |[Erreur du compilateur C3025](compiler-error-c3025.md)|'*clause*' : expression intégrale attendue|  
 |[Erreur du compilateur C3026](compiler-error-c3026.md)|'*clause*' : expression constante doit être positive|  
 |[Erreur du compilateur C3027](compiler-error-c3027.md)|'*clause*' : expression arithmétique ou pointeur attendue|  
@@ -126,7 +112,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C3041](compiler-error-c3041.md)|'*identificateur*' : variable de la clause 'copyprivate' doit être privée dans un contexte englobant|  
 |[Erreur du compilateur C3042](compiler-error-c3042.md)|les clauses 'copyprivate' et 'nowait' ne peut pas apparaître ensemble sur OpenMP '*directive*» (directive)|  
 |[Erreur du compilateur C3043](compiler-error-c3043.md)|la directive 'critical' OpenMP ne peut pas être imbriquée dans une directive 'critical' du même nom|  
-|[Erreur du compilateur C3044](compiler-error-c3044.md)|'section' : uniquement autorisé lors d'une imbrication directe sous une directive 'sections' OpenMP|  
+|[Erreur du compilateur C3044](compiler-error-c3044.md)|'section' : uniquement autorisé une imbrication directe sous une directive 'sections' OpenMP|  
 |[Erreur du compilateur C3045](compiler-error-c3045.md)|Instruction composée attendue à la suite de la directive 'sections' OpenMP. Accolade '{' manquante|  
 |[Erreur du compilateur C3046](compiler-error-c3046.md)|Bloc structuré manquant dans une région '#pragma omp sections' OpenMP|  
 |[Erreur du compilateur C3047](compiler-error-c3047.md)|Le bloc structuré d'une région 'sections' OpenMP doit être précédé de '#pragma omp section'|  
@@ -148,7 +134,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C3063](compiler-error-c3063.md)|opérateur '*opérateur*' : tous les opérandes doivent avoir le même type énumération|  
 |C3064 d’erreur du compilateur|'*identificateur*' : doit être un type simple ou correspondre à ce dernier|  
 |[Erreur du compilateur C3065](compiler-error-c3065.md)|la déclaration de propriété au niveau d'une portée sans classe n'est pas autorisée|  
-|[Erreur du compilateur C3066](compiler-error-c3066.md)|il existe plusieurs manières d'appeler un objet de ce type avec ces arguments|  
+|[Erreur du compilateur C3066](compiler-error-c3066.md)|Il existe plusieurs manières qu’un objet de ce type peut être appelé avec ces arguments|  
 |C3067 d’erreur du compilateur|une liste d’initialiseurs ne peut pas être utilisée avec l’opérateur intégrés]|  
 |[Erreur du compilateur C3068](compiler-error-c3068.md)|'*identificateur*' : une fonction 'naked' ne peut pas contenir des objets qui requièrent un déroulement si une exception C++ s’est produite|  
 |[Erreur du compilateur C3069](compiler-error-c3069.md)|opérateur '*opérateur*' : non autorisé pour le type d’énumération|  
@@ -161,14 +147,14 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C3076](compiler-error-c3076.md)|'*identificateur*' : vous ne pouvez pas incorporer une instance d’un type référence, '*type*», dans un type natif|  
 |[Erreur du compilateur C3077](compiler-error-c3077.md)|'*identificateur*' : un finaliseur ne peut être un membre d’un type référence|  
 |C3078 d’erreur du compilateur|taille du tableau doit être spécifiée dans les nouvelles expressions|  
-|C3079 d’erreur du compilateur|une liste d'initialiseurs ne peut pas être utilisée en tant qu'opérande droit de cet opérateur d'assignation|  
+|C3079 d’erreur du compilateur|une liste d’initialiseurs ne peut pas être utilisée comme opérande de droite de cet opérateur d’assignation|  
 |[Erreur du compilateur C3080](compiler-error-c3080.md)|'*finaliseur*' : un finaliseur ne peut pas avoir de spécificateur de classe de stockage|  
 |C3081 d’erreur du compilateur|Obsolète.|  
 |Erreur du compilateur C3082|Obsolète.|  
 |[Erreur du compilateur C3083](compiler-error-c3083.md)|'*identificateur*' : le symbole à gauche d’un ' ::' doit être un type|  
 |[Erreur du compilateur C3084](compiler-error-c3084.md)|'*identificateur*' : un destructeur/finaliseur ne peut pas être '*mot clé*'|  
 |[Erreur du compilateur C3085](compiler-error-c3085.md)|'*identificateur*' : un constructeur ne peut pas être '*mot clé*'|  
-|C3086 d’erreur du compilateur|impossible de trouver 'std::initializer_list' : vous devez utiliser #include <initializer_list>|  
+|C3086 d’erreur du compilateur|Impossible de trouver 'std::initializer_list' : vous devez #include < initializer_list >|  
 |[Erreur du compilateur C3087](compiler-error-c3087.md)|'*identificateur*' : appel de '*déclaration*' Initialise déjà ce membre|  
 |C3088 d’erreur du compilateur|'*classe*' : constructeur d’attribut doit avoir des arguments formels nommés|  
 |C3089 d’erreur du compilateur|'*identificateur*' : nom du paramètre ne correspond pas de nom de n’importe quel membre de données|  

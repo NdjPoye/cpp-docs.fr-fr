@@ -1,31 +1,33 @@
 ---
-title: "Erreur du compilateur C3920 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3920"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3920"
+title: Erreur du compilateur C3920 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3920
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3920
 ms.assetid: 66e91f28-ed82-4ce2-bf22-c0c74905b1ed
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3920
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2e2bf82de4e32c2b0ae586c78c69ce474947c3ec
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'opérateur' : impossible de définir un opérateur WinRT ou CLR postfixé d'incrémentation\/de décrémentation L'appel de l'opérateur WinRT ou CLR postfixé entraînera l'appel de l'opérateur WinRT ou CLR préfixé correspondant \(op\_Increment\/op\_Decrement\), mais avec la sémantique postfixée  
+---
+# <a name="compiler-error-c3920"></a>Erreur du compilateur C3920
+' opérateur '' : Impossible de définir une incrémentation/de décrémentation suffixée WinRT ou un opérateur CLR appelant le suffixe WinRT ou CLR postfixé entraînera l’appel au préfixe correspondant WinRT ou CLR (opérateur) (op_Increment/op_Decrement), mais avec la sémantique postfixée  
   
  Windows Runtime et le CLR ne prennent pas en charge l'opérateur suffixé et les opérateurs suffixés définis par l'utilisateur ne sont pas autorisés.  Vous pouvez définir un opérateur préfixé afin qu'il soit utilisé à la fois pour les opérations antérieures et postérieures à l'incrémentation.  
   

@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 04807182611beed23bf388d1f42a4fba0a3acea7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 58ffd3f240505d173014f1f9b358b4957a41eaf5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3846"></a>Erreur du compilateur C3846
-'symbole' : Impossible d’importer le symbole de 'assembly2' : car 'symbole' a déjà été importé d’un autre assembly 'assembly1'  
+'symbole' : Impossible d’importer le symbole de 'assembly2' : car 'symbole' a déjà été importé à partir d’un autre assembly 'assembly1'  
   
- Un symbole n’a pas pu être importé à partir d’un assembly référencé car il a été importé précédemment d’un assembly référencé.  
+ Un symbole n’a pas pu être importé à partir d’un assembly référencé, car il a été précédemment importé à partir d’un assembly référencé.  
   
 ## <a name="example"></a>Exemple
 L’exemple suivant génère l’erreur C3846 :  
@@ -56,7 +42,7 @@ public ref struct G
 };  
 ```  
   
- Et puis compilez cela :  
+ Et ensuite, compilez cela :  
   
 ```  
 // C3846b.cpp  

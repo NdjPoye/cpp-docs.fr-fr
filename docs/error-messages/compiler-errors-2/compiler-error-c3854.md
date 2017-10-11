@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C3854 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3854"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3854"
+title: Erreur du compilateur C3854 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3854
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3854
 ms.assetid: 32a9ead0-c6c7-485a-8802-c7b1fe921d3a
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Erreur du compilateur C3854
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 34285e8de195b2b7c516cf665f3b2cbf37039e6d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-l'expression à gauche de '\=' correspond à une fonction.Assignation à une fonction impossible \(une fonction n'est pas une l\-value\)  
+---
+# <a name="compiler-error-c3854"></a>Erreur du compilateur C3854
+expression à gauche de '=' correspond à une fonction. Impossible d’assigner à une fonction (une fonction n’est pas une l-value)  
   
- Une référence ne peut pas être réinitialisée.  L'annulation d'une référence à une fonction donne une fonction, qui est une valeur rvalue, à laquelle l'assignation est impossible.  Par conséquent, vous ne pouvez pas assigner à une fonction par l'intermédiaire d'une référence.  
+ Une référence ne peut pas être réinitialisée. Annulation d’une référence à une fonction génère une fonction, qui est une rvalue, à laquelle vous ne pouvez pas attribuer. Par conséquent, vous ne pouvez pas affecter à travers une référence à une fonction.  
   
- L'exemple suivant génère l'erreur C3854 :  
+ L’exemple suivant génère l’erreur C3854 :  
   
 ```  
 // C3854.cpp  

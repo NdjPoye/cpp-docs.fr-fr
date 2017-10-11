@@ -1,37 +1,39 @@
 ---
-title: "Erreur du compilateur C3900 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3900"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3900"
+title: Erreur du compilateur C3900 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3900
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3900
 ms.assetid: a94cc561-8fa8-4344-9e01-e81ff462fae5
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3900
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 29a2210ec372de6f752091a8eb13a4e5eb4f4aa7
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3900"></a>Erreur du compilateur C3900
 'membre' : non autorisé dans la portée actuelle  
   
- Les blocs de propriété ne peuvent contenir que des déclarations de fonction et des définitions de fonction inline.  Aucun membre autre que des fonctions n'est autorisé dans les blocs de propriété.  Aucun typedef, aucun opérateur ou aucune fonction friend ne sont autorisés.  Pour plus d'informations, consultez [property](../../windows/property-cpp-component-extensions.md).  
+ Blocs de propriété peuvent contenir les déclarations de fonction et des définitions de fonction inline. Aucuns autres fonctions membres ne sont autorisés dans les blocs de propriété. Aucune fonction friend, opérateurs ou typedefs n’est autorisées. Pour plus d'informations, consultez [property](../../windows/property-cpp-component-extensions.md).  
   
- Les définitions d'événement ne peuvent contenir que des méthodes et fonctions d'accès.  
+ Les définitions d’événements ne peuvent contenir que des méthodes d’accès et des fonctions.  
   
- L'exemple suivant génère l'erreur C3900 :  
+ L’exemple suivant génère C3900 :  
   
 ```  
 // C3900.cpp  
@@ -44,7 +46,7 @@ ref class X {
 };  
 ```  
   
- L'exemple suivant génère l'erreur C3900 :  
+ L’exemple suivant génère C3900 :  
   
 ```  
 // C3900b.cpp  

@@ -19,29 +19,14 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 4933afd00f4f88757b4a47beef25e68469942db2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c7f1871fab717146317f97157084efa35655724a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="compiler-warning-level-1-c4030"></a>Avertissement du compilateur (niveau 1) C4030
-**première liste de paramètres formels plus longue que la deuxième liste**  
+# <a name="compiler-warning-level-1-c4030"></a>Avertissement du compilateur (niveau 1) C4030
+**première liste de paramètres formels plus longue que la seconde**  
   
  Une fonction a été redéclarée avec des paramètres formels différents. Le compilateur utilise les paramètres formels fournis dans la première déclaration.

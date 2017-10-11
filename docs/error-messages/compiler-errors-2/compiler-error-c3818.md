@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 51aadb095d035a18249a344a402f51abc839feba
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6fb85a6e4835ca064eea5682ccb8af055302d269
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3818"></a>Erreur du compilateur C3818
-déclaration de propriété de tableau 'Propriété1' ne doit pas surcharger une propriété d’index « property2 »  
+déclaration de propriété de tableau 'Propriété1' ne doit pas surcharger une propriété d’index 'propriété2'  
   
  Une surcharge n’est pas possible pour les propriétés lorsqu’un indexeur et l’autre est une propriété de tableau. 
   
- C3818 est uniquement accessible à l’aide de l’option du compilateur obsolètes **/CLR : oldSyntax**.  
+ C3818 est uniquement accessible à l’aide de l’option du compilateur obsolète **oldSyntax ;**.  
 

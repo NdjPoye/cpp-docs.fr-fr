@@ -19,29 +19,14 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 8825dda56ace4d4b5486ef1b341f8aaf0003ff4b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 72736a9d0a4e0d4a09aca5cb452a82d5261aa1e4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="compiler-warning-level-1-c4027"></a>Avertissement du compilateur (niveau 1) C4027
+# <a name="compiler-warning-level-1-c4027"></a>Avertissement du compilateur (niveau 1) C4027
 fonction déclarée sans liste de paramètres formels  
   
  La déclaration de fonction n’a pas de paramètres formels, mais il existe des paramètres formels dans la définition de fonction ou des paramètres réels dans un appel. Les appels ultérieurs à cette fonction supposent que la fonction accepte des paramètres réels des types détectés dans l’appel ou la définition de fonction.

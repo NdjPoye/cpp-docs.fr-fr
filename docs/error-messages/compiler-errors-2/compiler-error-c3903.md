@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C3903 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3903"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3903"
+title: Erreur du compilateur C3903 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3903
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3903
 ms.assetid: cf47d7ad-a3bd-4f75-a253-71586e7a3be6
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C3903
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 59dcfa1b7829b8367fdefb3fd89f5b9f1d5a7897
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'propriété' : n'a pas de méthode set ou get  
+---
+# <a name="compiler-error-c3903"></a>Erreur du compilateur C3903
+'propriété' : est a pas set ou get (méthode)  
   
- Une propriété doit posséder au moins une méthode `get` ou `set`.  Pour plus d'informations, consultez [property](../../windows/property-cpp-component-extensions.md).  
+ Une propriété doit avoir au moins un `get` ou un `set` (méthode). Pour plus d'informations, consultez [property](../../windows/property-cpp-component-extensions.md).  
   
- L'exemple suivant génère l'erreur C3903 :  
+ L’exemple suivant génère C3903 :  
   
 ```  
 // C3903.cpp  

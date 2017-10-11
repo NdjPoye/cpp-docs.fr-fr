@@ -85,25 +85,11 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 6ef55aa655692e6ecbd1550bb1ace2eca01bdbad
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 535a1d42d9d43022bbf513b72bac18dd5accad82
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2900-through-c2999"></a>Erreurs du compilateur C2900 via C2999
@@ -112,7 +98,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 > [!NOTE]
 >  Pas chaque [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erreur est documentée dans MSDN. Dans de nombreux cas, le message de diagnostic fournit toutes les informations qui est disponibles. Si vous pensez qu'un message d'erreur nécessite une explication supplémentaire, faites-nous part de vos suggestions. Vous pouvez utiliser le formulaire de commentaires sur cette page, ou accédez à la barre de menus dans Visual Studio et choisissez **aide**, **signaler un bogue**, ou vous pouvez envoyer un rapport de suggestion ou un bogue sur [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
- Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ générales](http://go.microsoft.com/fwlink/?LinkId=158194) forum concerne les questions de [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
+ Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ général](http://go.microsoft.com/fwlink/?LinkId=158194) est de forum de questions sur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
   
 |Erreur|Message|  
 |-----------|-------------|  
@@ -140,8 +126,8 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2921](compiler-error-c2921.md)|redéfinition : '*type*' : classe de modèle/générique est en cours de redéclaration comme*déclaration*'|  
 |C2922 d’erreur du compilateur|'*interface*' : une interface WinRT ne peut pas contenir de membres statiques|  
 |[Erreur du compilateur C2923](compiler-error-c2923.md)|'*type*' : '*identificateur*'n’est pas un argument de type modèle/générique valide pour le paramètre'*paramètre*'|  
-|C2924 d’erreur du compilateur|argument de routine __declspec(interrupt) absent dans R2|  
-|C2925 d’erreur du compilateur|la routine __declspec(interrupt) ne peut pas utiliser de virgule flottante|  
+|C2924 d’erreur du compilateur|argument de routine __declspec (Interrupt) absent dans R2|  
+|C2925 d’erreur du compilateur|routine de __declspec (Interrupt) ne peut pas utiliser de virgule flottante|  
 |Erreur du compilateur C2926|'*identificateur*' : un initialiseur de membre par défaut n’est pas autorisé pour un membre d’un struct anonyme au sein d’une union|  
 |[Erreur du compilateur C2927](compiler-error-c2927.md)|'*identificateur*' : un modèle de fonction doit être appelé avec au moins un argument|  
 |[Erreur du compilateur C2928](compiler-error-c2928.md)|instanciation explicite ; '*identificateur*'n’est pas une fonction ou une donnée membre static de la classe de modèle'*classe*'|  
@@ -165,17 +151,17 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2946](compiler-error-c2946.md)|instanciation explicite ; '*type*' n’est pas une spécialisation de classe de modèle|  
 |[Erreur du compilateur C2947](compiler-error-c2947.md)|attendu ' >' pour terminer les arguments template, trouvé '*jeton*'|  
 |[Erreur du compilateur C2948](compiler-error-c2948.md)|instanciation explicite ; spécificateur de classe de stockage '*spécificateur*' non autorisé sur une spécialisation|  
-|C2949 d’erreur du compilateur|thread_local n'est pas pris en charge avec /kernel|  
+|C2949 d’erreur du compilateur|thread_local n’est pas pris en charge avec /kernel|  
 |Erreur du compilateur C2950|Obsolète.|  
 |[Erreur du compilateur C2951](compiler-error-c2951.md)|les déclarations de modèle/générique sont uniquement autorisées au niveau de l’espace de noms global, ou portée de classe|  
 |[Erreur du compilateur C2952](compiler-error-c2952.md)|'*déclaration*' : déclaration de modèle/générique pas de liste de paramètre de modèle/générique|  
 |[Erreur du compilateur C2953](compiler-error-c2953.md)|'*type*' : modèle de classe a déjà été défini|  
-|Erreur du compilateur C2954|argument word de l'instruction hors limites|  
+|Erreur du compilateur C2954|argument word de l’instruction pas dans la plage|  
 |[Erreur du compilateur C2955](compiler-error-c2955.md)|'*type*' : liste d’arguments de modèle/générique requiert l’utilisation de la classe de modèle/générique|  
 |C2956 d’erreur du compilateur|désallocation dimensionnée fonction 'operator delete (void *, size_t)' est choisie comme fonction de désallocation de positionnement.|  
 |[Erreur du compilateur C2957](compiler-error-c2957.md)|'*jeton*' : délimiteur gauche non valide : attendu ' <'|  
 |[Erreur du compilateur C2958](compiler-error-c2958.md)|gauche *délimiteur* trouvée à '*fichier*(*line_number*)' n’a pas été équilibré correctement|  
-|[Erreur du compilateur C2959](compiler-error-c2959.md)|une classe ou fonction générique ne peut pas être membre d'un modèle|  
+|[Erreur du compilateur C2959](compiler-error-c2959.md)|une classe générique ou une fonction ne peut pas être un membre d’un modèle|  
 |C2960 d’erreur du compilateur|Obsolète.|  
 |C2961 d’erreur du compilateur|'*fonction*' : instanciations explicites incohérentes, une instanciation explicite précédente ne spécifiait pas '*argument*'|  
 |[Erreur du compilateur C2962](compiler-error-c2962.md)|Erreur de syntaxe : '*jeton*' : attendu de définition de fonction membre de classe de modèle se terminer par '}'|  
@@ -196,7 +182,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2977](compiler-error-c2977.md)|'*type*' : trop d’arguments de modèle/générique|  
 |[Erreur du compilateur C2978](compiler-error-c2978.md)|Erreur de syntaxe : attendu '*mot_clé1*'ou'*mot Clé2*'; type trouvé'*type*' ; type de non paramètres ne sont pas pris en charge dans les génériques|  
 |[Erreur du compilateur C2979](compiler-error-c2979.md)|les spécialisations explicites ne sont pas prises en charge dans les génériques|  
-|C2980 d’erreur du compilateur|la gestion des exceptions C++ n'est pas prise en charge avec /kernel|  
+|C2980 d’erreur du compilateur|Gestion des exceptions C++ ne sont pas pris en charge avec /kernel|  
 |C2981 d’erreur du compilateur|la forme dynamique de '*mot clé*' n’est pas pris en charge avec /kernel|  
 |C2982 d’erreur du compilateur|'*déclaration*' : différents __declspec(code_seg(...)) utilisé : était '*identificateur1*« maintenant »*identificateur2*'|  
 |C2983 d’erreur du compilateur|'*déclaration*' : toutes les déclarations doivent avoir un __declspec(code_seg(...)) identiques|  
@@ -204,7 +190,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |C2985 d’erreur du compilateur|'*argument*' : l’argument de __declspec(code_seg(...)) doit être une section de texte|  
 |C2986 d’erreur du compilateur|'*identificateur*' : __declspec(code_seg(...)) peut uniquement être appliqué à une classe ou une fonction|  
 |C2987 d’erreur du compilateur|une déclaration ne peut pas comporter simultanément __declspec (code_seg ('*identificateur*')) et __declspec (code_seg ('*valeur*'))|  
-|[Erreur du compilateur C2988](compiler-error-c2988.md)|impossible de reconnaître la définition/déclaration de modèle|  
+|[Erreur du compilateur C2988](compiler-error-c2988.md)|définition/déclaration de modèle non reconnaissable|  
 |[Erreur du compilateur C2989](compiler-error-c2989.md)|'*classe*' : classe de modèle/générique a déjà été déclaré en tant que modèle/générique sans classe|  
 |[Erreur du compilateur C2990](compiler-error-c2990.md)|'*classe*' : classe modèle/générique a déjà été déclaré en tant que classe modèle/générique|  
 |[Erreur du compilateur C2991](compiler-error-c2991.md)|redéfinition du paramètre de modèle/générique '*paramètre*'|  
