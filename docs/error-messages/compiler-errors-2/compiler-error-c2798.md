@@ -1,38 +1,41 @@
 ---
-title: "Erreur du compilateur C2798 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2798"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2798"
+title: Erreur du compilateur C2798 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2798
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2798
 ms.assetid: fb0cd861-b228-4f81-8090-e28344a727e0
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C2798
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bb0a411651cf7c7f614942563baee5f04075fdf3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2798"></a>Erreur du compilateur C2798
 'super::membre' est ambigu  
   
- Plusieurs structures héritées contiennent le membre que vous avez référencé à l'aide de [super](../../cpp/super.md).  Pour corriger cette erreur, vous pouvez au choix :  
+ Plusieurs structures héritées contiennent le membre que vous avez référencé avec [super](../../cpp/super.md). Vous pouvez corriger l’erreur en soit :  
   
--   supprimer B1 ou B2 de la liste d'héritage de D ;  
+-   Supprimer B1 ou B2 à partir de la liste d’héritage de D.  
   
--   modifier le nom des données membres dans B1 ou B2.  
+-   Changement de nom des données membres dans B1 ou B2.  
   
- L'exemple suivant génère l'erreur C2798 :  
+ L’exemple suivant génère l’erreur C2798 :  
   
 ```  
 // C2798.cpp  

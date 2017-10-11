@@ -65,25 +65,11 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: f47a6fe23a8a0bf18f9c5c4399162d836667cab6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 07d87f9828bac1a025f9ac2375c79f29d96a89b4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/28/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>Erreurs du compilateur C2200 à C2299
@@ -99,7 +85,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2200](compiler-error-c2200.md)|'*fonction*' : fonction déjà définie.|  
 |[Erreur du compilateur C2201](compiler-error-c2201.md)|'*identificateur*' : doit avoir une liaison externe pour pouvoir être importé/exporté|  
 |C2202 d’erreur du compilateur|'*fonction*' : une valeur de retour pas tous les chemins d’accès de contrôle|  
-|[Erreur du compilateur C2203](compiler-error-c2203.md)|l'opérateur delete ne peut pas spécifier de limites pour un tableau|  
+|[Erreur du compilateur C2203](compiler-error-c2203.md)|Delete (opérateur) ne peut pas spécifier de limites pour un tableau|  
 |[Erreur du compilateur C2204](compiler-error-c2204.md)|'*type*' : définition de type rencontrée entre parenthèses|  
 |[Erreur du compilateur C2205](compiler-error-c2205.md)|'*identificateur*' : ne peut pas initialiser des variables extern avec une portée de bloc|  
 |[Erreur du compilateur C2206](compiler-error-c2206.md)|'*fonction*' : typedef ne peut pas être utilisé pour la définition de fonction|  
@@ -110,12 +96,12 @@ Les articles de cette partie de la documentation contiennent des informations su
 |C2211 d’erreur du compilateur|Un destructeur non virtuel dans une classe ref dérivée d’une classe ref avec un destructeur public doit également être public|  
 |[Erreur du compilateur C2212](compiler-error-c2212.md)|'*identificateur*' : __based non disponible pour les pointeurs vers des fonctions|  
 |[Erreur du compilateur C2213](compiler-error-c2213.md)|'*identificateur*' : argument non conforme pour __based|  
-|C2214 d’erreur du compilateur|pointeurs basés sur 'void' nécessitent l'utilisation de :>|  
+|C2214 d’erreur du compilateur|les pointeurs basés sur 'void' nécessitent l’utilisation de : >|  
 |C2215 d’erreur du compilateur|'*mot clé*' ne peut pas être utilisé avec ' / arch : SSE'|  
 |[Erreur du compilateur C2216](compiler-error-c2216.md)|'*mot_clé1*'ne peut pas être utilisé avec'*mot Clé2*'|  
 |[Erreur du compilateur C2217](compiler-error-c2217.md)|'*attribute1*'requiert'*attribut2*'|  
 |[Erreur du compilateur C2218](compiler-error-c2218.md)|'*calltype*' ne peut pas être utilisé avec ' / arch : IA32'|  
-|[Erreur du compilateur C2219](compiler-error-c2219.md)|erreur de syntaxe : le qualificateur de type doit figurer après '*'|  
+|[Erreur du compilateur C2219](compiler-error-c2219.md)|Erreur de syntaxe : le qualificateur de type doit être après ' *'|  
 |[Erreur du compilateur C2220](compiler-error-c2220.md)|Avertissement considéré comme une erreur : aucun '*filetype*' fichier généré|  
 |Erreur du compilateur C2221|Obsolète.|  
 |[Erreur du compilateur C2222](compiler-error-c2222.md)|type inattendu '*type*' : une classe de base ou d’un membre était attendu.|  
@@ -148,7 +134,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2249](compiler-error-c2249.md)|'*identificateur*' : aucun chemin accessible vers *accessibilité* *membre* déclaré dans la base virtuelle '*classe*'|  
 |[Erreur du compilateur C2250](compiler-error-c2250.md)|'*identificateur*' : héritage ambigu de *classe*::*membre*'|  
 |[Erreur du compilateur C2251](compiler-error-c2251.md)|espace de noms '*espace de noms*'n’a pas de membre'*identificateur*'-voulez-vous utiliser '*membre*' ?|  
-|[Erreur du compilateur C2252](compiler-error-c2252.md)|l'instanciation explicite d'un modèle peut se faire uniquement dans la portée espace de noms|  
+|[Erreur du compilateur C2252](compiler-error-c2252.md)|une instanciation explicite d’un modèle ne peut se produire au niveau de la portée espace de noms|  
 |[Erreur du compilateur C2253](compiler-error-c2253.md)|'*fonction*' : spécificateur pure ou substitution abstrait uniquement autorisé sur une fonction virtuelle de spécificateur|  
 |[Erreur du compilateur C2254](compiler-error-c2254.md)|'*fonction*' : spécificateur pure ou substitution abstrait spécificateur non autorisé sur une fonction friend|  
 |[Erreur du compilateur C2255](compiler-error-c2255.md)|'*élément*' : non autorisé en dehors d’une définition de classe|  
@@ -175,13 +161,13 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2276](compiler-error-c2276.md)|'*opérateur*' : opération non conforme sur l’expression de fonction membre liée|  
 |[Erreur du compilateur C2277](compiler-error-c2277.md)|'*fonction*' : ne peut pas prendre l’adresse de cette fonction membre|  
 |C2278 d’erreur du compilateur|Obsolète.|  
-|[Erreur du compilateur C2279](compiler-error-c2279.md)|la spécification de l'exception ne peut pas s'afficher dans une déclaration typedef|  
-|[C2280 d’erreur du compilateur](compiler-error-c2280.md)|'*classe*::*fonction*' : tentative de référencement d’une fonction supprimée|  
+|[Erreur du compilateur C2279](compiler-error-c2279.md)|spécification d’exception ne peut pas apparaître dans une déclaration typedef|  
+|[Erreur du compilateur C2280](compiler-error-c2280.md)|'*classe*::*fonction*' : tentative de référencement d’une fonction supprimée|  
 |C2281 d’erreur du compilateur|'*classe*::*fonction*' : une fonction peut uniquement être supprimée sur la première déclaration|  
 |C2282 d’erreur du compilateur|'*fonction1*'ne peut pas substituer'*fonction2*'|  
 |[Erreur du compilateur C2283](compiler-error-c2283.md)|'*identificateur*' : spécificateur pure ou substitution abstrait spécificateur non autorisé sur la classe/struct sans nom|  
 |C2284 d’erreur du compilateur|'*fonction*' : argument non conforme d’une fonction intrinsèque, paramètre *nombre*|  
-|[Erreur du compilateur C2285](compiler-error-c2285.md)|la représentation des pointeurs vers des membres a déjà été déterminée - pragma ignoré|  
+|[Erreur du compilateur C2285](compiler-error-c2285.md)|des pointeurs en représentation sous forme de membres a déjà été déterminée - pragma ignoré|  
 |[Erreur du compilateur C2286](compiler-error-c2286.md)|des pointeurs vers membres '*identificateur*' représentation est déjà définie sur *héritage* -déclaration ignorée|  
 |[Erreur du compilateur C2287](compiler-error-c2287.md)|'*identificateur*' : représentation d’héritage : '*inheritiance*'est moins général que le texte requis'*héritage*'|  
 |C2288 d’erreur du compilateur|Obsolète.|  
@@ -194,6 +180,6 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2295](compiler-error-c2295.md)|séquence d’échappement '*caractère*' : non conforme dans une définition de macro|  
 |[Erreur du compilateur C2296](compiler-error-c2296.md)|'*opérateur*' : non conforme, l’opérande gauche a le type '*type*'|  
 |[Erreur du compilateur C2297](compiler-error-c2297.md)|'*opérateur*' : non conforme, l’opérande droit a le type '*type*'|  
-|[Erreur du compilateur C2298](compiler-error-c2298.md)|appel manquant pour lier le pointeur à la fonction membre|  
+|[Erreur du compilateur C2298](compiler-error-c2298.md)|appel manquant pour lier le pointeur de fonction membre|  
 |[Erreur du compilateur C2299](compiler-error-c2299.md)|'*fonction*' : changement de comportement : une spécialisation explicite ne peut pas être un constructeur de copie ou un opérateur d’assignation de copie|  
 

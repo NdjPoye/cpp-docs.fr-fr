@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2804 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2804"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2804"
+title: Erreur du compilateur C2804 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2804
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2804
 ms.assetid: b066e563-cca4-450c-8ba7-3b0d7a89f3ea
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C2804
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 42669f02fb687c35ee159cb28b852e13281a83f1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2804"></a>Erreur du compilateur C2804
 trop de paramètres pour l'opérateur binaire 'operator opérateur'  
   
- La fonction membre de l'opérateur binaire surchargé est déclarée avec plusieurs paramètres.  Le paramètre de premier opérande d'une fonction membre d'opérateur binaire, dont le type est le type englobant de l'opérateur, est implicite.  
+ La fonction membre de l'opérateur binaire surchargé est déclarée avec plusieurs paramètres. Le paramètre de premier opérande d’une fonction membre d’opérateur binaire, dont le type est le type englobant de l’opérateur, est implicite.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant génère l'erreur C2804 et montre comment la corriger.  
   
 ```  
@@ -46,7 +49,7 @@ int main() {
 }  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant génère l'erreur C2804 et montre comment la corriger.  
   
 ```  

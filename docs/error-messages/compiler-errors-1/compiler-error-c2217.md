@@ -1,41 +1,44 @@
 ---
-title: "Erreur du compilateur C2217 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2217"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2217"
+title: Erreur du compilateur C2217 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2217
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2217
 ms.assetid: 1ce1e3f5-4171-4376-804d-967f7e612935
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C2217
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f1795534af1332859fd1a33a137573df82643b4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2217"></a>Erreur du compilateur C2217
 'attribut1' requiert 'attribut2'  
   
  Le premier attribut de fonction nécessite le deuxième attribut.  
   
-### Pour résoudre le problème en vérifiant les causes possibles suivantes  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Pour corriger en vérifiant les causes possibles suivantes  
   
-1.  La fonction d'interruption \(`__interrupt`\) est déclarée comme `near`.  Les fonctions d'interruption doivent être `far`.  
+1.  Interruption (`__interrupt`) fonction déclarée comme `near`. Interrompre les fonctions doivent être `far`.  
   
-2.  Fonction d'interruption déclarée avec `__stdcall` ou `__fastcall`.  Les fonctions d'interruption doivent utiliser les conventions d'appel C.  
+2.  Fonction d’interruption déclarée avec `__stdcall`, ou `__fastcall`. Fonctions d’interruption doivent conventions d’appel C d’utilisation.  
   
-## Exemple  
- L'erreur C2217 peut également se produire si vous essayez de lier un délégué à une fonction CLR qui accepte un nombre variable d'arguments.  Si la fonction a également une surcharge de tableau param, utilisez\-la à la place.  L'exemple suivant génère l'erreur C2217 :  
+## <a name="example"></a>Exemple  
+ C2217 peut également se produire si vous tentez de lier un délégué à une fonction CLR qui accepte un nombre variable d’arguments. Si la fonction a également la surcharge de tableau param, utilisez à la place. L’exemple suivant génère C2217.  
   
 ```  
 // C2217.cpp  

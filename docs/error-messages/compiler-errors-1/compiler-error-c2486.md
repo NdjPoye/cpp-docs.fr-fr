@@ -1,35 +1,37 @@
 ---
-title: "Erreur du compilateur C2486 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2486"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2486"
+title: Erreur du compilateur C2486 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2486
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2486
 ms.assetid: 436da349-6461-4e32-bfca-4f3e620108e2
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C2486
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b7f54417beefb9bd2c82763464d0e76ed81bf7ed
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-'\_\_LOCAL\_SIZE' uniquement autorisé dans les fonctions ayant l'attribut 'naked'  
+---
+# <a name="compiler-error-c2486"></a>Erreur du compilateur C2486
+'__LOCAL_SIZE' uniquement autorisé dans une fonction avec l’attribut 'naked'  
   
- Dans les fonctions d'assembly inline, le nom `__LOCAL_SIZE` est réservé aux fonctions déclarées avec l'attribut [naked](../../cpp/naked-cpp.md).  
+ Dans les fonctions d’assembly inline, le nom `__LOCAL_SIZE` est réservée pour les fonctions déclarées avec le [naked](../../cpp/naked-cpp.md) attribut.  
   
- L'exemple suivant génère l'erreur C2486 :  
+ L’exemple suivant génère C2486 :  
   
 ```  
 // C2486.cpp  

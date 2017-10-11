@@ -23,29 +23,15 @@ caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 24cee5c74819d9a880bedbcebcce4dabfabae960
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: f6265f6c53133abbe8cd96b67bbbeb7657c98b26
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# <a name="crtthreadtraits-class"></a>CRTThreadTraits (classe)
-Cette classe fournit la fonction de création d’un thread CRT. Utilisez cette classe si le thread utilise des fonctions CRT.  
+# <a name="crtthreadtraits-class"></a>Classe de CRTThreadTraits
+Cette classe fournit la fonction de création d’un thread de CRT. Utilisez cette classe si le thread utilisent des fonctions CRT.  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
@@ -73,7 +59,7 @@ class CRTThreadTraits
   
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)  
   
- Si le thread ne pas utiliser les fonctions CRT, utilisez [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md) à la place.  
+ Si le thread n’utiliseront pas les fonctions CRT, utilisez [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md) à la place.  
   
 ## <a name="requirements"></a>Spécifications  
  **En-tête :** atlbase.h  
@@ -105,16 +91,16 @@ static HANDLE CreateThread(
  Le paramètre à passer à la procédure de thread.  
   
  `dwCreationFlags`  
- La création des indicateurs (0 ou CREATE_SUSPENDED).  
+ La création d’indicateurs (0 ou CREATE_SUSPENDED).  
   
  `pdwThreadId`  
  [out] Adresse de la variable DWORD qui, en cas de réussite, reçoit l’ID de thread du thread nouvellement créé.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne le handle du thread nouvellement créé ou NULL en cas d’échec. Appelez [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pour obtenir des informations d’erreur étendues.  
+ Retourne le handle vers le nouveau thread ou NULL en cas d’échec. Appelez [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pour obtenir des informations d’erreur étendues.  
   
-### <a name="remarks"></a>Notes  
- Consultez la page [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) pour plus d’informations sur les paramètres de cette fonction.  
+### <a name="remarks"></a>Remarques  
+ Consultez [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) pour plus d’informations sur les paramètres de cette fonction.  
   
  Cette fonction appelle [_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) pour créer le thread.  
   

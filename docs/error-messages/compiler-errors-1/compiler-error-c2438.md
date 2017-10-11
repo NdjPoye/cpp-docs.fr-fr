@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2438 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2438"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2438"
+title: Erreur du compilateur C2438 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2438
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2438
 ms.assetid: 3a0ab3ba-d0e4-4d8f-971d-e503397cc827
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C2438
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1771d3c6c241db6430eaa66fece5562a3bc1349a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-'identificateur' : impossible d'initialiser des données de classes static via un constructeur  
+---
+# <a name="compiler-error-c2438"></a>Erreur du compilateur C2438
+'identificateur' : Impossible d’initialiser des données de classes static via un constructeur  
   
- Un constructeur permet d'initialiser un membre statique d'une classe.  Les membres statiques doivent être initialisés dans une définition en dehors de la déclaration de classe.  
+ Un constructeur est utilisé pour initialiser un membre statique d’une classe. Les membres statiques doivent être initialisés dans une définition en dehors de la déclaration de classe.  
   
- L'exemple suivant génère l'erreur C2438 :  
+ L’exemple suivant génère l’erreur C2438 :  
   
 ```  
 // C2438.cpp  

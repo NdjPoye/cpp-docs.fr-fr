@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2694 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2694"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2694"
+title: Erreur du compilateur C2694 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2694
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2694
 ms.assetid: 8dc2cec2-67ae-4e16-8c0c-374425aca8bc
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C2694
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b81a6ee838a1d30928e8cebb8ef581c23644afcf
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'substitution' : la fonction virtuelle de substitution a moins de spécifications d'exception restrictives que la fonction membre virtuelle de classe de base 'base'  
+---
+# <a name="compiler-error-c2694"></a>Erreur du compilateur C2694
+'override' : fonction virtuelle de substitution a des spécifications d’exception moins restrictive que la classe de base 'base' de fonction membre virtuel  
   
- Une fonction virtuelle a été substituée, mais sous [\/Za](../../build/reference/za-ze-disable-language-extensions.md), la fonction de substitution a une [spécification d'exception](../../cpp/exception-specifications-throw-cpp.md) moins restrictive.  
+ Une fonction virtuelle a été substituée, mais sous [/Za](../../build/reference/za-ze-disable-language-extensions.md), la fonction de substitution a moins restrictive [spécification d’exception](../../cpp/exception-specifications-throw-cpp.md).  
   
- L'exemple suivant génère l'erreur C2694 :  
+ L’exemple suivant génère l’erreur C2694 :  
   
 ```  
 // C2694.cpp  

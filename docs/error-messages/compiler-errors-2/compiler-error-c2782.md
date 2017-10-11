@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2782 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2782"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2782"
+title: Erreur du compilateur C2782 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2782
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2782
 ms.assetid: 8b685422-294d-4f64-9f3d-c14eaf03a93d
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Erreur du compilateur C2782
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 125092771675363eb896d3524b8e093493f9719b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'déclaration' : paramètre de modèle 'identificateur' ambigu  
+---
+# <a name="compiler-error-c2782"></a>Erreur du compilateur C2782
+'déclaration' : paramètre de modèle 'identificateur' est ambigu  
   
- Le compilateur ne parvient pas à déterminer le type d'un argument template.  
+ Le compilateur ne peut pas déterminer le type d’un argument de modèle.  
   
- L'exemple suivant génère l'erreur C2782 :  
+ L’exemple suivant génère l’erreur C2782 :  
   
 ```  
 // C2782.cpp  
@@ -42,7 +45,7 @@ int main() {
 }  
 ```  
   
- L'erreur C2782 peut également se produire lors de l'utilisation de génériques :  
+ L’erreur C2782 peut également se produire lors de l’utilisation de génériques :  
   
 ```  
 // C2782b.cpp  

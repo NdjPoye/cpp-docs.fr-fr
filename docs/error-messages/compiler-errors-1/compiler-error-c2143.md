@@ -19,40 +19,25 @@ caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: faa9361da0091ec86628af19a03eadb133ea43cc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31ea645b9dd22fd15bbf4695935482d899a13386
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2143"></a>Erreur du compilateur C2143
-Erreur de syntaxe : absence de 'jeton1' avant 'jeton2'  
+Erreur de syntaxe : manquant 'token1' avant 'token2'  
   
  Le compilateur attendait un jeton spécifique (autrement dit, un élément de langage autre qu’un espace blanc) et trouvé un autre jeton à la place.  
   
- Pour plus d’informations sur cette erreur lorsqu’il se produit lorsque vous utilisez un bloc try de fonction, consultez [l’article de la Base de connaissances 241706](http://support.microsoft.com/kb/241706).  
+ Pour plus d’informations sur cette erreur lorsqu’elle se produit lorsque vous utilisez un bloc try de fonction, consultez [l’article de la Base de connaissances 241706](http://support.microsoft.com/kb/241706).  
   
- Vérifier la [référence du langage C++](../../cpp/cpp-language-reference.md) pour déterminer où le code est syntaxiquement incorrecte. Étant donné que le compilateur peut signaler cette erreur après avoir rencontré la ligne qui provoque le problème, vérifiez à plusieurs lignes de code qui précèdent l’erreur.  
+ Vérifiez le [référence du langage C++](../../cpp/cpp-language-reference.md) pour déterminer où le code est incorrecte. Étant donné que le compilateur peut signaler cette erreur après avoir rencontré la ligne qui provoque le problème, vérifiez à plusieurs lignes de code qui précèdent l’erreur.  
   
- L’erreur C2143 peut se produire dans différentes situations.  
+ C2143 peut se produire dans différentes situations.  
   
- Il peut se produire lorsqu’un opérateur qui peut qualifier un nom (`::`, `->`, et `.`) doit être suivi par le mot clé `template`, comme dans cet exemple :  
+ Il peut se produire lorsqu’un opérateur qui permettre qualifier un nom (`::`, `->`, et `.`) doit être suivi par le mot clé `template`, comme dans cet exemple :  
   
 ```cpp  
 class MyClass  
@@ -65,7 +50,7 @@ class MyClass
   
 ```  
   
- Par défaut, C++ suppose que `Ty::PutFuncType` n’est pas un modèle ; par conséquent, les éléments suivants `<` est interprété comme un inférieur-signe.  Vous devez indiquer au compilateur explicitement que `PutFuncType` est un modèle afin de pouvoir analyser correctement le crochet pointu. Pour corriger cette erreur, utilisez le `template` (mot clé) sur le nom du type dépendants, comme illustré ici :  
+ Par défaut, C++ suppose que `Ty::PutFuncType` n’est pas un modèle ; par conséquent, les éléments suivants `<` est interprété comme un inférieur-signe.  Vous devez indiquer au compilateur explicitement que `PutFuncType` est un modèle afin qu’il peut analyser correctement le crochet angulaire. Pour corriger cette erreur, utilisez le `template` (mot clé) sur le nom du type dépendants, comme illustré ici :  
   
 ```cpp  
 class MyClass  
@@ -78,7 +63,7 @@ class MyClass
   
 ```  
   
- C2143 peut se produire lorsque **/clr** est utilisé et une `using` directive a une erreur de syntaxe :  
+ C2143 peut se produire lorsque **/CLR** est utilisé et un `using` directive a une erreur de syntaxe :  
   
 ```cpp  
 // C2143a.cpp  
@@ -87,7 +72,7 @@ using namespace System.Reflection;   // C2143
 using namespace System::Reflection;  
 ```  
   
- Il peut également se produire lorsque vous essayez de compiler un fichier de code source à l’aide de la syntaxe CLR sans utiliser également **/clr**:  
+ Il peut également se produire lorsque vous essayez de compiler un fichier de code source à l’aide de la syntaxe CLR sans utiliser également **/CLR**:  
   
 ```cpp  
 // C2143b.cpp  
@@ -101,7 +86,7 @@ int main() {
 }  
 ```  
   
- Le premier caractère de non espace blanc qui suit une `if` instruction doit être une parenthèse ouvrante. Le compilateur ne peut pas traduire quoi :  
+ Le premier caractère non espace blanc qui suit une `if` instruction doit être une parenthèse ouvrante. Le compilateur ne peut pas traduire chose :  
   
 ```cpp  
 // C2143c.cpp  
@@ -116,7 +101,7 @@ int main() {
 }  
 ```  
   
- C2143 peut se produire lorsqu’une accolade fermante, parenthèse ou point-virgule est manquant sur la ligne où l’erreur est détectée ou sur une des lignes juste au-dessus :  
+ C2143 peut se produire lorsqu’une accolade fermante, une parenthèse ou un point-virgule est manquant sur la ligne où l’erreur est détectée ou sur une des lignes, juste au-dessus de :  
   
 ```cpp  
 // C2143d.cpp  
@@ -139,7 +124,7 @@ class + {};   // C2143 + is an invalid tag name
 class ValidName {};   // OK  
 ```  
   
- Ou lorsqu’une étiquette n’est pas attachée à une instruction. Si vous devez placer une étiquette par lui-même, par exemple, à la fin d’une instruction composée, attacher à une instruction null :  
+ Ou lorsqu’une étiquette n’est pas attachée à une instruction. Si vous devez placer une étiquette par lui-même, par exemple, à la fin d’une instruction composée, l’attacher à une instruction null :  
   
 ```cpp  
 // C2143f.cpp  
@@ -153,7 +138,7 @@ void func1() {
 }  
 ```  
   
- L’erreur peut se produire lorsqu’un appel non qualifié est fait à un type dans la bibliothèque C++ Standard :  
+ L’erreur peut se produire lorsqu’un appel non qualifié est fait pour un type dans la bibliothèque Standard C++ :  
   
 ```cpp  
 // C2143g.cpp  
@@ -163,7 +148,7 @@ static vector<char> bad;   // C2143
 static std::vector<char> good;   // OK  
 ```  
   
- Ou il manque une `typename` mot clé :  
+ Ou il manque `typename` (mot clé) :  
   
 ```cpp  
 // C2143h.cpp  
@@ -195,7 +180,7 @@ template void PrintType(float i, float j){}   // C2143
 template void PrintType(float i, float j);   // OK  
 ```  
   
- Dans un programme C, les variables doivent être déclarées au début de la fonction, et elles ne peuvent pas être déclarées après que la fonction exécute les instructions de déclaration non.  
+ Dans un programme C, les variables doivent être déclarées au début de la fonction et qu’ils ne peuvent pas être déclarés après que la fonction exécute les instructions de déclaration non.  
   
 ```C  
 // C2143j.c  

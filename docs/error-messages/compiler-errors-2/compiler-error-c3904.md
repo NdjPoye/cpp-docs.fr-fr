@@ -1,41 +1,44 @@
 ---
-title: "Erreur du compilateur C3904 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3904"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3904"
+title: Erreur du compilateur C3904 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3904
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Erreur du compilateur C3904
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31a6f728fdbfb9540245cf85879adef8c1827d2e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'accesseur\_propriété' : doit spécifier 'nombre' paramètre\(s\)  
+---
+# <a name="compiler-error-c3904"></a>Erreur du compilateur C3904
+'accesseur_propriété' : doit spécifier ou des paramètres de nombre  
   
- Vérifiez le nombre de paramètres dans vos méthodes `get` et `set` par rapport aux dimensions de la propriété.  
+ Vérifiez le nombre de paramètres dans votre `get` et `set` méthodes par rapport aux dimensions de la propriété.  
   
--   Le nombre de paramètres de la méthode `get` doit être égal au nombre de dimensions de la propriété ou être nul pour les propriétés non indexées.  
+-   Le nombre de paramètres pour le `get` (méthode) doit être égal au nombre de dimensions de la propriété ou être égal à zéro pour les propriétés non indexées.  
   
--   Le nombre de paramètres de la méthode `set` doit être supérieur de un au nombre de dimensions de la propriété.  
+-   Le nombre de paramètres de la `set` (méthode) doit être supérieur au nombre de dimensions de la propriété.  
   
  Pour plus d'informations, consultez [property](../../windows/property-cpp-component-extensions.md).  
   
-## Exemple  
- L'exemple suivant génère l'erreur C3904 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C3904.  
   
 ```  
 // C3904.cpp  
@@ -55,8 +58,8 @@ ref class X {
 };  
 ```  
   
-## Exemple  
- L'exemple suivant génère l'erreur C3904 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C3904.  
   
 ```  
 // C3904b.cpp  

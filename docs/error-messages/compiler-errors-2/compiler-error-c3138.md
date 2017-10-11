@@ -1,35 +1,37 @@
 ---
-title: "Erreur du compilateur C3138 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3138"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3138"
+title: Erreur du compilateur C3138 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3138
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3138
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0ba06bed1ce02c8a3030720152892e0e35760afa
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'interface' : une interface 'attribut' doit hériter de IDispatch ou d'une interface qui hérite de IDispatch  
+---
+# <a name="compiler-error-c3138"></a>Erreur du compilateur C3138
+'interface' : une interface 'attribut' doit hériter de IDispatch ou d’une interface qui hérite de IDispatch  
   
- Une interface qui possède les attributs [dual](../../windows/dual.md) ou [dispinterface](../../windows/dispinterface.md) n'a pas `IDispatch` comme interface de base directe ou indirecte.  
+ Une interface avec le [double](../../windows/dual.md) ou [dispinterface](../../windows/dispinterface.md) attributs n’a pas `IDispatch` comme interface de base directe ou indirecte.  
   
- L'exemple suivant génère C3138 :  
+ L’exemple suivant génère C3138 :  
   
 ```  
 // C3138.cpp  

@@ -1,43 +1,44 @@
 ---
-title: "ecvt | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "ecvt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ecvt"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "ecvt (fonction)"
+title: ecvt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- ecvt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- ecvt
+dev_langs:
+- C++
+helpviewer_keywords:
+- ecvt function
 ms.assetid: a24fccea-033a-4cc7-b120-4fd0f525a7e3
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# ecvt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8eeea608fe3bb41fbc803d6068f3968836d4d60a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-Cette fonction POSIX est déconseillée.  Utilisez [\_ecvt](../../c-runtime-library/reference/ecvt.md), qui respecte ISO C\+\+ ou le formant [\_ecvt\_s](../../c-runtime-library/reference/ecvt-s.md) plus sécuritaire.
+---
+# <a name="ecvt"></a>ecvt
+Cette fonction POSIX est déconseillée. Utilisez plutôt [_ecvt](../../c-runtime-library/reference/ecvt.md), qui est conforme à la norme ISO C++, ou [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md), qui offre une sécurité améliorée.

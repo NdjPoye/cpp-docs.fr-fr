@@ -1,34 +1,37 @@
 ---
-title: "Compiler Error C3282 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3282"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3282"
+title: Erreur du compilateur C3282 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3282
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3282
 ms.assetid: bac2ac89-c360-4c24-bb81-c20c62ece9ba
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Compiler Error C3282
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 86baad7d8fc0b7dcced75af1453a9695b9b6762c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-les listes de paramètres génériques ne peuvent apparaître que sur les classes, structures ou fonctions managées ou WinRT  
+---
+# <a name="compiler-error-c3282"></a>Erreur du compilateur C3282
+paramètre générique listes peuvent uniquement apparaître sur géré ou WinRTclasses, structures ou fonctions  
   
- Une liste de paramètres génériques a été utilisée de façon incorrecte.  Pour plus d'informations, consultez [Generics](../../windows/generics-cpp-component-extensions.md).  
+ Une liste de paramètres génériques a été utilisée de façon incorrecte.  Pour plus d’informations, consultez [Génériques](../../windows/generics-cpp-component-extensions.md).  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant génère l'erreur C3282 et montre comment la corriger.  
   
 ```  

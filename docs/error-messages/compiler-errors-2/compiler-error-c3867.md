@@ -1,37 +1,40 @@
 ---
-title: "Erreur du compilateur C3867 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3867"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3867"
+title: Erreur du compilateur C3867 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3867
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# Erreur du compilateur C3867
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4f8e4612dc12274c689ec0d4e9406dea74c608f4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'fonction' : liste d'arguments manquante dans l'appel de fonction ; utilisez '&fonction' pour créer un pointeur vers membre  
+---
+# <a name="compiler-error-c3867"></a>Erreur du compilateur C3867
+’fonction’ : liste d’arguments manquante dans l’appel de fonction ; utilisez ’&fonction’ pour créer un pointeur vers membre  
   
  Vous avez essayé de prendre l'adresse d'une fonction membre sans qualifier la fonction membre avec son nom de classe et l'opérateur d'adresse.  
   
- Cette erreur peut également être due à la mise en conformité du compilateur pour Visual C\+\+ 2005 : conformité pointeur vers membre améliorée.  Le code compilé avant Visual C\+\+ 2005 génère désormais l'erreur C3867.  
+ Cette erreur peut également être due à la mise en conformité du compilateur pour Visual C++ 2005 : conformité pointeur vers membre améliorée. Le code compilé avant Visual C++ 2005 génère désormais l'erreur C3867.  
   
-## Exemple  
- L'erreur C3867 peut provenir du compilateur avec une résolution suggérée équivoque.  Si possible, utilisez la classe la plus dérivée.  
+## <a name="example"></a>Exemple  
+ L’erreur C3867 peut provenir du compilateur avec une résolution suggérée équivoque. Si possible, utilisez la classe la plus dérivée.  
   
  L'exemple suivant génère l'erreur C3867 et montre comment la corriger.  
   
@@ -53,7 +56,7 @@ void Derived::Bar() {
 }  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant génère l'erreur C3867 et montre comment la corriger.  
   
 ```  
@@ -84,7 +87,7 @@ int main() {
 }  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant génère l'erreur C3867 et montre comment la corriger.  
   
 ```  
@@ -102,7 +105,7 @@ int main() {
 }  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant génère l'erreur C3867.  
   
 ```  
@@ -125,7 +128,7 @@ public:
 };  
 ```  
   
-## Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant génère l'erreur C3867.  
   
 ```  

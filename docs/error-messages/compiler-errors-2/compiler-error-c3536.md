@@ -1,40 +1,42 @@
 ---
-title: "Erreur du compilateur C3536 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3536"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3536"
+title: Erreur du compilateur C3536 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3536
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3536
 ms.assetid: 8d866075-866b-49eb-9979-ee27b308f7e3
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3536
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 90db065c9a16e72a396bd1c1ae54bb99cdb97153
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-« symbole » : ne peut pas être utilisé avant d'être initialisé  
+---
+# <a name="compiler-error-c3536"></a>Erreur du compilateur C3536
+'symbole' : ne peut pas être utilisée avant d’être initialisée  
   
- Le symbole indiqué ne peut pas être utilisé avant d'être initialisé.  Dans la pratique, cela signifie qu'une variable ne peut pas être utilisée pour s'initialiser.  
+ Le symbole indiqué ne peut pas être utilisé avant d’être initialisée. Dans la pratique, cela signifie qu'une variable ne peut pas être utilisée pour s'initialiser.  
   
-### Pour corriger cette erreur  
+### <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  N'initialisez pas de variable avec elle\-même.  
+1.  N’initialisez pas de variable avec elle-même.  
   
-## Exemple  
- L'exemple suivant donne C3536 parce que chaque variable est initialisée avec elle\-même.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C3536, car chaque variable est initialisée avec elle-même.  
   
 ```  
 // C3536.cpp  
@@ -50,5 +52,5 @@ int main()
 };  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [auto, mot clé](../../cpp/auto-keyword.md)

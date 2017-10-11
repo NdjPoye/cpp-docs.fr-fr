@@ -19,38 +19,23 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 8eb7283942a8a89fc3322983c41c68082b6c5cee
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c43ddf0e336d9964d08939bb7c1dd145caf6c848
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4957"></a>Avertissement du compilateur C4957
-'cast' : le cast explicite de 'cast_from' en 'cast_to' n’est pas vérifiable  
+'cast' : le cast explicite de 'cast_from' en 'cast_to' n’est pas vérifiable  
   
  Un cast aura pour résultat une image non vérifiable.  
   
- Certains casts sont « safe » (par exemple, un `static_cast` qui déclenche des conversions définies par l’utilisateur et un `const_cast`). A [safe_cast](../../windows/safe-cast-cpp-component-extensions.md) est garantie pour produire du code vérifiable.  
+ Certains casts sont « safe » (par exemple, un `static_cast` qui déclenche des conversions définies par l’utilisateur et un `const_cast`). Un [safe_cast](../../windows/safe-cast-cpp-component-extensions.md) garantit la génération d’un code vérifiable.  
   
  Pour plus d’informations, consultez [Code pur et vérifiable (C + c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
- Cet avertissement est émis comme une erreur et peut être désactivé avec le [avertissement](../../preprocessor/warning.md) pragma ou [/wd](../../build/reference/compiler-option-warning-level.md) option du compilateur.  
+ Cet avertissement, qui s’affiche comme une erreur, peut être désactivé avec le pragma [warning](../../preprocessor/warning.md) ou l’option du compilateur [/wd](../../build/reference/compiler-option-warning-level.md) .  
   
  L’exemple suivant génère l’erreur C4957 :  
   

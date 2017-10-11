@@ -1,36 +1,39 @@
 ---
-title: "Erreur du compilateur C2480 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2480"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2480"
+title: Erreur du compilateur C2480 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2480
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2480
 ms.assetid: 1a58d1c2-971b-4084-96fa-f94aa51c02f1
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C2480
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 06f6c536d5756a19e28df7060373512e3e883a41
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-'identificateur' : 'thread' n'est valide que pour les éléments de données d'étendue static  
+---
+# <a name="compiler-error-c2480"></a>Erreur du compilateur C2480
+'identificateur' : 'thread' est uniquement valide pour les éléments de données d’étendue static  
   
- Vous ne pouvez pas utiliser l'attribut `thread` avec une variable automatique, une donnée membre non statique, un paramètre de fonction ou sur des déclarations ou des définitions de fonction.  
+ Vous ne pouvez pas utiliser le `thread` attribut avec une variable automatique, la donnée membre non statique, le paramètre de fonction ou sur des définitions ou déclarations de fonction.  
   
- Utilisez l'attribut `thread` pour les variables globales, les données membres statiques et les variables statiques locales uniquement.  
+ Utilisez le `thread` attribut pour les variables globales, les données membres statiques et les variables statiques locales uniquement.  
   
- L'exemple suivant génère l'erreur C2480 :  
+ L’exemple suivant génère l’erreur C2480 :  
   
 ```  
 // C2480.cpp  

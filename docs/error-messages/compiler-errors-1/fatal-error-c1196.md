@@ -19,29 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 4c99a653e853987e162092cd569292db9ae35d39
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 891f3e6983160898a3acd1202236309150e6bd63
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1196"></a>Erreur irrécupérable C1196
-'identificateur' : l’identificateur trouvé dans la bibliothèque de types 'bibliothèque_types' n’est pas un identificateur C++ valide  
+'identificateur' : l’identificateur trouvé dans la bibliothèque de types 'bibliothèque_types' n’est pas un identificateur C++ valide  
   
  L’un des identificateurs dans votre bibliothèque de types n’est pas un identificateur C++ valide. La bibliothèque de types n’est pas disponible pour une utilisation avec [#import](../../preprocessor/hash-import-directive-cpp.md).

@@ -19,30 +19,16 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 3bb55d094e00400c57617857aa1ac29677f1b72a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5cbe54ebcae8753c0c5b6701ca839202ba7da533
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2865"></a>Erreur du compilateur C2865
 'fonction' : comparaison non conforme pour handle_ou_pointeur  
   
- Vous pouvez comparer les références aux [les Classes et Structs](../../windows/classes-and-structs-cpp-component-extensions.md) ou gérés par les types de référence uniquement pour l’égalité pour voir s’ils font référence au même objet (==) ou à des objets différents ( ! =).  
+ Vous pouvez comparer les références aux [les Classes et Structs](../../windows/classes-and-structs-cpp-component-extensions.md) ou gestion des types de référence uniquement pour l’égalité pour voir s’ils font référence au même objet (==) ou à des objets différents ( ! =).  
   
- Vous ne peut pas les comparer pour les trier car le runtime .NET peut déplacer les objets managés à tout moment, modifier le résultat du test.
+ Impossible de comparer les pour le classement car le runtime .NET peut déplacer des objets managés à tout moment, modifier le résultat du test.

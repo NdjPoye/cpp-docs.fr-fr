@@ -19,29 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 996390f58ca4329d8bf1d4f83edaaa02e678255f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7acbddffb82440ee128bc78218a65d187c2909a9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# <a name="compiler-error-c2083"></a>Erreur du compilateur C2083
+# <a name="compiler-error-c2083"></a>Erreur du compilateur C2083
 comparaison struct/union non conforme  
   
  Une structure ou une union est comparée directement à un autre type défini par l’utilisateur. Cela n’est pas autorisé, sauf si un opérateur de comparaison a été défini ou s’il existe une conversion vers un type scalaire.

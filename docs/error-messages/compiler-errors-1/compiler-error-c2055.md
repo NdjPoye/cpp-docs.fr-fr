@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2055 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2055"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2055"
+title: Erreur du compilateur C2055 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2055
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2055
 ms.assetid: 6cec79cc-6bec-443f-9897-fbf5452718c7
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C2055
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c447d79179f3575230353b3db70717702b542b68
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-liste de paramètres formels attendue, non une liste de types  
+---
+# <a name="compiler-error-c2055"></a>Erreur du compilateur C2055
+liste de paramètres formels attendue, non une liste de type  
   
- Une définition de fonction contient une liste de types de paramètres plutôt qu'une liste de paramètres formels.  C ANSI requiert l'attribution d'un nom aux paramètres formels, sauf s'ils sont du type void, ou remplacés par des points de suspension \(`...`\).  
+ Une définition de fonction contient une liste de type de paramètre au lieu d’une liste de paramètres formels. C ANSI requiert des paramètres formels à être appelé à moins d’être void ou des points de suspension (`...`).  
   
- L'exemple suivant génère l'erreur C2055 :  
+ L’exemple suivant génère l’erreur C2055 :  
   
 ```  
 // C2055.c  

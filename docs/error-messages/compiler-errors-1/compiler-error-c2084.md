@@ -19,25 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 653dc7a4a5d330efc89942fbe4ddd07bff81f770
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a1fe070ffe0988b22484d3eb162377a8723c72ee
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2084"></a>Erreur du compilateur C2084
@@ -52,7 +38,7 @@ fonction '*fonction*' a déjà un corps
 -   `__int32`et `int` étaient considérées comme des types distincts. Le compilateur traite maintenant `__int32` comme synonyme de `int`. Cela signifie que le compilateur détecte plusieurs définitions si une fonction est surchargée sur les deux `__int32` et `int` et génère une erreur.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant génère le C2084 :  
+ L’exemple suivant génère C2084 :  
   
 ```cpp  
 // C2084.cpp  

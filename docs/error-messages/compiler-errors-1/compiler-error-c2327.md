@@ -19,33 +19,19 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 62834115e3ad9c9733326a1bc94e5fa51209f485
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2eefd1e3fb4f23087b0f08bf6a9ff55593d9a961
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2327"></a>Erreur du compilateur C2327
-'symbole' : n’est pas un nom de type, statique ou d’énumérateur  
+'symbole' : n’est pas un nom de type, statique ou énumérateur  
   
- Code au sein d’une classe imbriquée tente d’accéder à un membre de la classe englobante qui n’est pas un nom de type, un membre statique ou un énumérateur.  
+ Le code dans une classe imbriquée tente d’accéder à un membre de la classe englobante qui n’est pas un nom de type, un membre statique ou un énumérateur.  
   
- Lors de la compilation avec **/clr**, une cause fréquente de l’erreur C2327 est une propriété portant le même nom que le type de propriété.  
+ Lors de la compilation avec **/CLR**, une cause fréquente de l’erreur C2327 est une propriété portant le même nom que le type de propriété.  
   
  L’exemple suivant génère l’erreur C2327 :  
   
@@ -66,7 +52,7 @@ public:
 };  
 ```  
   
- L’erreur C2327 peut également se produire si le nom d’un type est masqué par le nom de membre :  
+ L’erreur C2327 peut également se produire si le nom d’un type est masqué par le nom d’un membre :  
   
 ```  
 // C2327b.cpp  
@@ -80,7 +66,7 @@ class S {
 };  
 ```  
   
- L’erreur C2327 peut également se produire dans ce cas, où vous devez spécifier entièrement le type de données du paramètre :  
+ L’erreur C2327 peut également se déclencher dans ce cas, où vous devez spécifier complètement le type de données du paramètre :  
   
 ```  
 // C2327c.cpp  
@@ -129,7 +115,7 @@ namespace NA {
 }  
 ```  
   
-L’exemple suivant montre l’erreur C2327 lorsqu’une propriété a le même nom que le type de propriété :  
+L’exemple suivant illustre l’erreur C2327 lorsqu’une propriété a le même nom que le type de propriété :  
   
 ```  
 // C2327f.cpp  

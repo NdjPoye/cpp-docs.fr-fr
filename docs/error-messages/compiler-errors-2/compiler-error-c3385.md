@@ -1,5 +1,5 @@
 ---
-title: "C3385 d’erreur du compilateur | Documents Microsoft"
+title: Erreur du compilateur C3385 | Documents Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 88eb849cff4eb32db7f7355b276eaefbc7a49ffd
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9fca91679b6e66ffcaefe5bc169a4889f032cf55
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3385"></a>Erreur du compilateur C3385
-'classe::fonction' : une fonction avec un attribut personnalisé DllImport ne peut pas retourner l’instance d’une classe  
+'classe::fonction' : une fonction avec un attribut personnalisé DllImport ne peut pas retourner l’instance d’une classe  
   
  Une fonction définie comme étant dans un fichier .dll spécifié avec l’attribut `DllImport` ne peut pas retourner une instance d’une classe.  
   

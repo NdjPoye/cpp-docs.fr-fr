@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2391 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2391"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2391"
+title: Erreur du compilateur C2391 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2391
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2391
 ms.assetid: 63a9c6b9-03cc-4517-885c-bdcd048643b3
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C2391
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 573cea44b0a39ff3cc0dff4469aa8c5f5a2459e5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-'identificateur' : 'friend' ne peut pas être utilisé dans la définition d'un type  
+---
+# <a name="compiler-error-c2391"></a>Erreur du compilateur C2391
+'identificateur' : 'friend' ne peut pas être utilisé lors de la définition de type  
   
- La déclaration `friend` inclut une déclaration de classe complète.  Une déclaration `friend` peut spécifier une fonction membre ou un spécificateur de type élaboré, mais pas une déclaration de classe complète.  
+ Le `friend` déclaration inclut une déclaration de classe complète. A `friend` déclaration peut spécifier une fonction membre ou un spécificateur de type élaboré, mais pas une déclaration de classe complète.  
   
- L'exemple suivant génère l'erreur C2326 :  
+ L’exemple suivant génère l’erreur C2326 :  
   
 ```  
 // C2391.cpp  

@@ -1,36 +1,38 @@
 ---
-title: "Erreur du compilateur C3672 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3672"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3672"
+title: Erreur du compilateur C3672 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3672
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3672
 ms.assetid: da971041-1766-467a-aecf-1d8655c6cb7a
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3672
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f01237ca5ac90ea3def4a6d2733ef8dd700bf738
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-l'expression pseudo\-destructeur ne peut être utilisée que dans le cadre d'un appel de fonction  
+---
+# <a name="compiler-error-c3672"></a>Erreur du compilateur C3672
+l’expression pseudo-destructeur peut uniquement être utilisée dans le cadre d’un appel de fonction  
   
- Un destructeur a été appelé de façon incorrecte.  Pour plus d'informations, consultez [Destructeurs](../../cpp/destructors-cpp.md).  
+ Un destructeur a été appelé de façon incorrecte.  Pour plus d’informations, consultez [destructeurs](../../cpp/destructors-cpp.md).  
   
-## Exemple  
- L'exemple suivant génère l'erreur C3672 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C3672.  
   
 ```  
 // C3672.cpp  

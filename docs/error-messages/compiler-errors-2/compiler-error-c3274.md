@@ -19,32 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: fa97b32bb88adf056ee32289fa2eb11fd0579a28
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6fc2149b3aac1e3575500ed4ac6c3c1b283f1db4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3274"></a>Erreur du compilateur C3274
 __finally/finally sans try correspondant  
   
- A [__finally](../../cpp/try-finally-statement.md) ou [enfin](../../dotnet/finally.md) instruction a été trouvée sans `try`. Pour résoudre ce problème, supprimez l’instruction `__finally` ou ajoutez une instruction `try` pour `__finally`.  
+ Une instruction [__finally](../../cpp/try-finally-statement.md) ou [finally](../../dotnet/finally.md) sans `try`correspondant a été trouvée. Pour résoudre ce problème, supprimez l’instruction `__finally` ou ajoutez une instruction `try` pour `__finally`.  
   
  L’exemple suivant génère l’erreur C3274 :  
   

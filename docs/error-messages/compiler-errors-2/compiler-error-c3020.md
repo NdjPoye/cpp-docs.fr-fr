@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C3020 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3020"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3020"
+title: Erreur du compilateur C3020 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3020
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Erreur du compilateur C3020
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4da505740eba9b291d8c4139cf9cd6fded70fdfa
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'var' : la variable d'index de la boucle 'for' OpenMP ne peut pas être modifiée dans le corps de la boucle  
+---
+# <a name="compiler-error-c3020"></a>Erreur du compilateur C3020
+'var' : variable d’index OpenMP 'boucle for' ne peut pas être modifié dans le corps de la boucle  
   
- Une boucle `for` OpenMP ne peut pas modifier l'index \(compteur de boucle\) dans le corps de la boucle `for`.  
+ Une OpenMP `for` boucle ne peut pas modifier l’index (compteur de boucle) dans le corps de la `for` boucle.  
   
- L'exemple suivant génère l'erreur C3020 :  
+ L’exemple suivant génère l’erreur C3020 :  
   
 ```  
 // C3020.cpp  
@@ -47,9 +50,9 @@ int main() {
 }  
 ```  
   
- Une variable déclarée avec [lastprivate](../../parallel/openmp/reference/lastprivate.md) ne peut pas être utilisée comme index à l'intérieur d'une boucle parallélisée.  
+ Une variable déclarée avec [lastprivate](../../parallel/openmp/reference/lastprivate.md) ne peut pas être utilisé en tant que l’index à l’intérieur d’une boucle parallélisée.  
   
- L'exemple suivant génère l'erreur C3020 pour la deuxième occurrence de lastprivate, car celle\-ci déclenche l'écriture dans idx\_a dans la partie la plus externe de la boucle\/.  La première occurrence de lastprivate n'entraîne pas d'erreur, car elle déclenche l'écriture dans idx\_a dans la partie la plus externe de la boucle \(techniquement, à l'extrémité de la dernière itération\).  L'exemple suivant génère l'erreur C3020 :  
+ L’exemple suivant sera C3020 pour la deuxième occurrence de lastprivate, car celle-ci déclenche l’écriture dans idx_a au sein de l’extérieur de la boucle. La première lastprivate n’entraîne pas une erreur, car elle déclenche l’écriture dans idx_a plus à l’extérieur de la boucle (techniquement, à la fin de la dernière itération). L’exemple suivant génère l’erreur C3020.  
   
 ```  
 // C3020b.cpp  
@@ -68,7 +71,7 @@ void test(int first, int last)
 }  
 ```  
   
- L'exemple suivant illustre une résolution possible :  
+ L’exemple suivant illustre une résolution possible :  
   
 ```  
 // C3020c.cpp  

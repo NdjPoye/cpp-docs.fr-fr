@@ -1,46 +1,49 @@
 ---
-title: "mbsinit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "mbsinit"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbsinit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mbsinit (fonction)"
+title: mbsinit | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- mbsinit
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- mbsinit
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# mbsinit
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 5b6105de398d50770aecc55cd10f209e6c4521ba
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-Suit l'état d'une conversion de caractères multi\-octets.  
+---
+# <a name="mbsinit"></a>mbsinit
+Suit l'état d'une conversion en caractères multioctets.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -49,19 +52,19 @@ Suit l'état d'une conversion de caractères multi\-octets.
 );  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  `ps`  
- Pointeur vers une variable [mbstate\_t](../../c-runtime-library/standard-types.md).  
+ Pointeur désignant une variable [mbstate_t](../../c-runtime-library/standard-types.md).  
   
-## Valeur de retour  
- Une valeur différente de zéro si `ps` est NULL ou si au milieu d'une conversion.  
+## <a name="return-value"></a>Valeur de retour  
+ Différente de zéro si `ps` est NULL ou que la conversion n’est pas en cours.  
   
-## Notes  
- Lorsque vous utilisez un ANSI fonctions qui prend un pointeur **mbstate\_t** , en passant l'adresse de votre `mbstate_t` renvoie des informations indiquant si le dernier octets dans la mémoire tampon a été converti.  
+## <a name="remarks"></a>Notes  
+ Quand vous utilisez l’une des fonctions ANSI qui acceptent un pointeur **mbstate_t** et que vous passez l’adresse de votre `mbstate_t`, les informations retournées indiquent si le dernier octet de la mémoire tampon a été converti.  
   
- La page de codes appropriée doit être configurée pour prendre en charge les caractères multioctets.  
+ La page de codes appropriée doit être installée pour prendre en charge vos caractères multioctets.  
   
-## Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 // crt_mbsinit.cpp  
@@ -155,7 +158,7 @@ int main(int argc, char* argv[])
 }  
 ```  
   
-## Résultat de l'exemple  
+## <a name="sample-output"></a>Résultat de l'exemple  
   
 ```  
 Locale set to: "Japanese_Japan.932"  
@@ -167,5 +170,5 @@ MB String: AaBbCcxXyYzZ
 WC String: AaBbCcxXyYzZ  
 ```  
   
-## Voir aussi  
- [Classification d'octets](../../c-runtime-library/byte-classification.md)
+## <a name="see-also"></a>Voir aussi  
+ [Classification d’octet](../../c-runtime-library/byte-classification.md)

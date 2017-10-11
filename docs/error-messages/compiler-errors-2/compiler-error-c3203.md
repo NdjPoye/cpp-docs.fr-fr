@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C3203 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3203"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3203"
+title: Erreur du compilateur C3203 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3203
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Erreur du compilateur C3203
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eb8a9272a62080bd567989d90502d0ca2d003a57
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'type' : la classe non spécialisée modèle ou générique ne peut pas être utilisée comme argument modèle ou générique pour le paramètre modèle ou générique 'param' ; type réel attendu  
+---
+# <a name="compiler-error-c3203"></a>Erreur du compilateur C3203
+’type’ : la classe non spécialisée modèle ou générique ne peut pas être utilisée comme argument modèle ou générique pour le paramètre modèle ou générique ’param’ ; type réel attendu  
   
- Vous avez passé un argument non valide à une classe modèle ou générique.  La classe modèle ou générique attend un type en tant que paramètre.  
+ Vous avez passé un argument non valide à une classe modèle ou générique. La classe modèle ou générique attend un type en tant que paramètre.  
   
- Cette erreur peut être due à la mise en conformité du compilateur pour Visual C\+\+ 2005 : un modèle de classe non spécialisé ne peut pas être utilisé comme argument template dans une liste de classes de base.  Pour résoudre l'erreur C3203, ajoutez explicitement le ou les paramètres de type de modèle au nom de la classe de modèle quand vous l'utilisez en tant que paramètre de modèle dans une liste de classes de base.  
+ Cette erreur peut être due à la mise en conformité du compilateur pour Visual C++ 2005 : un modèle de classe non spécialisé ne peut pas être utilisé comme argument template dans une liste de classes de base. Pour résoudre l'erreur C3203, ajoutez explicitement le ou les paramètres de type de modèle au nom de la classe de modèle quand vous l'utilisez en tant que paramètre de modèle dans une liste de classes de base.  
   
 ```  
 // C3203.cpp  

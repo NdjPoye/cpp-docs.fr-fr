@@ -19,29 +19,17 @@ caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: dfbd15b0da6e09b825a1562f006416e975603ab5
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 51f99c8990015c6a9f3d50c31a370df5e3e22dbf
 ms.contentlocale: fr-fr
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="language-strings"></a>Language Strings
-Les fonctions `setlocale` et `_create_locale` peuvent utiliser les langues prises en charge par l’API NLS Windows sur les systèmes d’exploitation qui n’utilisent pas la page de codes Unicode. Pour obtenir la liste des langues prises en charge par la version du système d’exploitation Windows, consultez [National Language Support (NLS) API Reference](http://msdn.microsoft.com/goglobal/bb896001.aspx). La chaîne de langue peut être une des valeurs des colonnes **Langue** et **Abréviation du nom de langue** de la liste des langues prises en charge. L’implémentation de la bibliothèque Runtime C prend également en charge ces chaînes de langue :  
+Les fonctions `setlocale` et `_create_locale` peuvent utiliser les langues prises en charge par l’API NLS Windows sur les systèmes d’exploitation qui n’utilisent pas la page de codes Unicode. Pour obtenir la liste des langues prises en charge par la version du système d’exploitation Windows, consultez [National Language Support (NLS) API Reference](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). La chaîne de langue peut être une des valeurs des colonnes **Langue** et **Abréviation du nom de langue** de la liste des langues prises en charge. Pour plus d’informations sur la prise en charge linguistique par version de système d’exploitation, consultez [Appendix A: Product Behavior](http://msdn.microsoft.com/goglobal/bb896001.aspx) dans [MS-LCID] : Informations de référence Windows LCID (Language Code Identifier).   
+  
+L’implémentation de la bibliothèque Runtime C prend également en charge ces chaînes de langue :  
   
 |Chaîne de langue|Nom des paramètres régionaux équivalents|  
 |---------------------|----------------------------|  

@@ -65,25 +65,11 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: a41480c57b281c7a4fbb1e7697d11b5057b5da48
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31df41ea122c762428e153fe406efba1175c64f2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2500-through-c2599"></a>Erreurs du compilateur C2500 à C2599
@@ -92,7 +78,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 > [!NOTE]
 >  Pas chaque [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erreur est documentée dans MSDN. Dans de nombreux cas, le message de diagnostic fournit toutes les informations qui est disponibles. Si vous pensez qu'un message d'erreur nécessite une explication supplémentaire, faites-nous part de vos suggestions. Vous pouvez utiliser le formulaire de commentaires sur cette page, ou accédez à la barre de menus dans Visual Studio et choisissez **aide**, **signaler un bogue**, ou vous pouvez envoyer un rapport de suggestion ou un bogue sur [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
- Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ générales](http://go.microsoft.com/fwlink/?LinkId=158194) forum concerne les questions de [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
+ Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ général](http://go.microsoft.com/fwlink/?LinkId=158194) est de forum de questions sur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
   
 |Erreur|Message|  
 |-----------|-------------|  
@@ -136,22 +122,22 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2537](compiler-error-C2537.md)|'*spécificateur*' : spécification de liaison non conforme|  
 |Erreur du compilateur C2538|Obsolète.|  
 |Erreur du compilateur C2539|Obsolète.|
-|[Erreur du compilateur C2540](compiler-error-C2540.md)|expression non constante comme limite d'index de tableau|  
+|[Erreur du compilateur C2540](compiler-error-C2540.md)|expression non constante comme limite de tableau|  
 |[Erreur du compilateur C2541](compiler-error-C2541.md)|'*identificateur*' : Impossible de supprimer les objets qui ne sont pas des pointeurs|  
 |[Erreur du compilateur C2542](compiler-error-C2542.md)|'*identificateur*' : objet de classe n’a aucun constructeur pour l’initialisation|  
 |[Erreur du compilateur C2543](compiler-error-C2543.md)|attendu ']' pour l’opérateur « [] »|  
-|[Erreur du compilateur C2544](compiler-error-C2544.md)|attendu ')' pour l'opérateur '()'|  
+|[Erreur du compilateur C2544](compiler-error-C2544.md)|attendu ')' pour l’opérateur '()'|  
 |[Erreur du compilateur C2545](compiler-error-C2545.md)|'*opérateur*' : Impossible de trouver l’opérateur surchargé|  
 |C2546 d’erreur du compilateur|'*identificateur*' : quand un type est défini dans un assembly PIA et un non-PIA l’assembly PIA doit d’abord être référencée|  
 |C2547 d’erreur du compilateur|'*identificateur*' : tous les paramètres d’une méthode publiée doivent être nommés explicitement sur la déclaration|  
 |[Erreur du compilateur C2548](compiler-error-C2548.md)|'*fonction*' : paramètre par défaut pour le paramètre manquant *paramètre*|  
-|[Erreur du compilateur C2549](compiler-error-C2549.md)|une conversion définie par l'utilisateur ne peut pas spécifier de type de retour|  
+|[Erreur du compilateur C2549](compiler-error-C2549.md)|la conversion définie par l’utilisateur ne peut pas spécifier un type de retour|  
 |[Erreur du compilateur C2550](compiler-error-C2550.md)|'*identificateur*' : listes d’initialiseurs de constructeur sont autorisés uniquement sur la définition d’un constructeur|  
 |[Erreur du compilateur C2551](compiler-error-C2551.md)|le type 'void *' nécessite un cast explicite|  
 |[Erreur du compilateur C2552](compiler-error-C2552.md)|'*identificateur*' : pas des agrégats ne peuvent pas être initialisés avec une liste d’initialiseurs|  
-|[Erreur du compilateur C2553](compiler-error-C2553.md)|'*type* *derived_class*::*fonction*' : diffère de type de retour de fonction virtuelle de substitution '*type* *base_class*::*fonction*'|  
+|[Erreur du compilateur C2553](compiler-error-C2553.md)|'*type* *derived_class*::*fonction*' : type de retour de fonction virtuelle de substitution diffère de '*type* *base_ classe*::*fonction*'|  
 |[Erreur du compilateur C2555](compiler-error-C2555.md)|'*derived_class*::*fonction*' : fonction virtuelle de substitution type de retour est différent et n’est pas covariant '*base_class*::*fonction*'|  
-|[Erreur du compilateur C2556](compiler-error-C2556.md)|'*type1* *classe*::*fonction*' : fonction surchargée ne diffère que par le type de retour de '*type2* *classe*::*fonction*'|  
+|[Erreur du compilateur C2556](compiler-error-C2556.md)|'*type1* *classe*::*fonction*' : fonction surchargée ne diffère que par le type de retour de '*type2* *declasse*::*fonction*'|  
 |[Erreur du compilateur C2557](compiler-error-C2557.md)|'*identificateur*' : ne peut pas être initialisés membres privés et protégés sans un constructeur|  
 |[Erreur du compilateur C2558](compiler-error-C2558.md)|la classe*classe*' : aucun constructeur de copie disponible ou le constructeur de copie n’est déclaré 'explicit'|  
 |C2559 d’erreur du compilateur|'*identificateur*' : Impossible de surcharger une fonction membre sans qualificateur ref avec une fonction membre dotée d’un qualificateur ref|  
@@ -167,7 +153,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2569](compiler-error-C2569.md)|'*identificateur*' : enum/union ne peut pas être utilisée comme classe de base|  
 |[Erreur du compilateur C2570](compiler-error-C2570.md)|'*identificateur*' : union ne peut pas avoir de classes de base|  
 |[Erreur du compilateur C2571](compiler-error-C2571.md)|'*identificateur*' : fonction virtuelle ne peut pas figurer dans l’union '*union*'|  
-|[Erreur du compilateur C2572](compiler-error-C2572.md)|'*fonction*' : redéfinition de l’argument par défaut : paramètre *numéro*|  
+|[Erreur du compilateur C2572](compiler-error-C2572.md)|'*fonction*' : redéfinition de l’argument par défaut : paramètre *nombre*|  
 |[Erreur du compilateur C2573](compiler-error-C2573.md)|'*classe*' : ne peut pas supprimer les pointeurs vers les objets de ce type ; la classe n’a aucune surcharge de non-positionnement pour 'operator delete'. Utilisez :: delete ou ajoutez 'opérateur delete(void*)' à la classe|  
 |[Erreur du compilateur C2574](compiler-error-C2574.md)|'*destructeur*' : ne peut pas être déclaré static|  
 |[Erreur du compilateur C2575](compiler-error-C2575.md)|'*identificateur*' : seules les fonctions membres et les bases peuvent être virtuelles|  
@@ -181,7 +167,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C2583](compiler-error-C2583.md)|'*identificateur*' : ' const/volatile' pointeur 'this' est non conforme pour les constructeurs/destructeurs|  
 |[Erreur du compilateur C2584](compiler-error-C2584.md)|'*classe*' : base directe '*base_class2*' n’est pas accessible ; déjà une base de '*base_class1*'|  
 |[Erreur du compilateur C2585](compiler-error-C2585.md)|la conversion explicite vers '*type*' est ambigu|  
-|[Erreur du compilateur C2586](compiler-error-C2586.md)|syntaxe de la conversion définie par l'utilisateur incorrecte : indirections non conformes|  
+|[Erreur du compilateur C2586](compiler-error-C2586.md)|syntaxe de la conversion définie par l’utilisateur incorrecte : indirections non conformes|  
 |[Erreur du compilateur C2587](compiler-error-C2587.md)|'*identificateur*' : utilisation non conforme d’une variable locale comme paramètre par défaut|  
 |[Erreur du compilateur C2588](compiler-error-C2588.md)|' :: ~*identificateur*' : non conforme global de destructeur/finaliseur|  
 |[Erreur du compilateur C2589](compiler-error-C2589.md)|'*identificateur*' : jeton non conforme à droite de ' ::'|  
@@ -193,5 +179,5 @@ Les articles de cette partie de la documentation contiennent des informations su
 |C2595 d’erreur du compilateur|'*identificateur*' WinRT d’un type d’attribut doit être sealed|  
 |C2596 d’erreur du compilateur|'*identificateur*' WinRT d’un champ d’attribut peut être uniquement un 'public enum class', 'int', 'unsigned int', 'bool', 'Platform::Type', 'Platform::String' ou 'Windows : Foundation :: HResult'|  
 |[Erreur du compilateur C2597](compiler-error-C2597.md)|référence non conforme à un membre non statique '*identificateur*'|  
-|[Erreur du compilateur C2598](compiler-error-C2598.md)|les spécifications de la liaison doivent figurer au niveau de la portée globale|  
+|[Erreur du compilateur C2598](compiler-error-C2598.md)|spécification de liaison doit être dans une portée globale|  
 |[Erreur du compilateur C2599](compiler-error-C2599.md)|'*identificateur*' : la déclaration anticipée d’un enum géré/WinRT n’est pas autorisée.|  

@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C3192 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3192"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3192"
+title: Erreur du compilateur C3192 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3192
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3192
 ms.assetid: 8b0083d4-706f-46f6-858a-e1d9af464cf8
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C3192
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f4b1dabfa305bc7d25daab60270ef07579bcf17
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-erreur de syntaxe : '^' n'est pas un opérateur préfixé \(souhaitez\-vous utiliser '\*' ?\)  
+---
+# <a name="compiler-error-c3192"></a>Erreur du compilateur C3192
+Erreur de syntaxe : ' ^' n’est pas un opérateur préfixé (voulez-vous utiliser ' *'?)  
   
  Un handle ne peut pas être utilisé comme opérateur de déréférencement.  
   
- L'exemple suivant génère l'erreur C3192 :  
+ L’exemple suivant génère l’erreur C3192 :  
   
 ```  
 // C3192.cpp  

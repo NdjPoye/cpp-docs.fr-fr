@@ -1,41 +1,44 @@
 ---
-title: "Erreur du compilateur C2041 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2041"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2041"
+title: Erreur du compilateur C2041 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2041
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2041
 ms.assetid: c9a33bb1-f9cf-47d6-bd21-7d867a8c37d5
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Erreur du compilateur C2041
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4102f95b5a48860cba2e9ec79d2d5c22cd1413cf
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-chiffre 'caractère' non conforme pour la base 'numéro'  
+---
+# <a name="compiler-error-c2041"></a>Erreur du compilateur C2041
+chiffre non conforme 'caractère' base 'nombre'  
   
- Le caractère spécifié n'est pas un chiffre valide pour la base \(octal ou hexadécimal\).  
+ Le caractère spécifié n’est pas un chiffre valide pour la base (par exemple, hexadécimal ou octal).  
   
- L'exemple suivant génère l'erreur C2041 :  
+ L’exemple suivant génère l’erreur C2041 :  
   
 ```  
 // C2041.cpp  
 int i = 081;   // C2041  8 is not a base 8 digit  
 ```  
   
- Résolution possible :  
+ Résolution possible :  
   
 ```  
 // C2041b.cpp  

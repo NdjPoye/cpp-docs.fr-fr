@@ -1,39 +1,42 @@
 ---
-title: "Erreur du compilateur C2665 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2665"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2665"
+title: Erreur du compilateur C2665 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2665
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2665
 ms.assetid: a7f99b61-2eae-4f2b-ba75-ea68fd1e8312
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Erreur du compilateur C2665
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5a349df2c60d746b6b090953362c7c6801e1f2a3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'fonction' : aucune des 'nombre1' surcharges ne peut convertir le paramètre 'numéro2' à partir du type 'type'  
+---
+# <a name="compiler-error-c2665"></a>Erreur du compilateur C2665
+'fonction' : aucune des surcharges nombre1 peut convertir le paramètre nombre2 à partir du type 'type'  
   
- Impossible de convertir un paramètre de la fonction surchargée dans le type requis.  Résolutions possibles :  
+ Un paramètre de la fonction surchargée ne peut pas être converti au type requis.  Solutions possibles :  
   
--   Prévoyez un opérateur de conversion.  
+-   Fournissez un opérateur de conversion.  
   
--   Utilisez la conversion explicite.  
+-   Utilisez une conversion explicite.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C2665 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C2665.  
   
 ```  
 // C2665.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2254 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2254"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2254"
+title: Erreur du compilateur C2254 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2254
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2254
 ms.assetid: 49bb3d7e-3bdf-4af6-937c-fa627be412a9
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C2254
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cf8eb577b027b1d6cd4b62b28cb0da785349091f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-'fonction' : spécificateur pure ou spécificateur de substitution abstrait non autorisé sur une fonction friend  
+---
+# <a name="compiler-error-c2254"></a>Erreur du compilateur C2254
+'fonction' : spécificateur pure ou substitution abstrait spécificateur non autorisé sur une fonction friend  
   
- Une fonction `friend` est spécifiée comme fonction virtuelle \(`virtual`\) pure.  
+ A `friend` (fonction) est spécifiée comme pure `virtual`.  
   
- L'exemple suivant génère l'erreur C2254 :  
+ L’exemple suivant génère C2254 :  
   
 ```  
 // C2254.cpp  

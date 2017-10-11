@@ -47,25 +47,11 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 1d63e4faaafe9ba208e17857a8ac60723c6c5cf5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 87910db946d51d740c93134b7085e5af7d3ccadc
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>C3200 d’erreurs du compilateur via C3299
@@ -74,7 +60,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 > [!NOTE]
 >  Pas chaque [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] erreur est documentée dans MSDN. Dans de nombreux cas, le message de diagnostic fournit toutes les informations qui est disponibles. Si vous pensez qu'un message d'erreur nécessite une explication supplémentaire, faites-nous part de vos suggestions. Vous pouvez utiliser le formulaire de commentaires sur cette page, ou accédez à la barre de menus dans Visual Studio et choisissez **aide**, **signaler un bogue**, ou vous pouvez envoyer un rapport de suggestion ou un bogue sur [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
- Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ générales](http://go.microsoft.com/fwlink/?LinkId=158194) forum concerne les questions de [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
+ Vous trouverez une assistance supplémentaire pour les erreurs et avertissements dans les forums publics MSDN. Le [langage Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) est de forum de questions et de discussions sur les [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] syntaxe du langage et du compilateur. Le [Visual C++ général](http://go.microsoft.com/fwlink/?LinkId=158194) est de forum de questions sur [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] qui ne sont pas abordés dans d’autres forums. Vous pouvez également trouver l’aide sur les erreurs et avertissements sur [débordement de pile](http://stackoverflow.com/).  
   
 |Erreur|Message|  
 |-----------|-------------|  
@@ -137,7 +123,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |C3256 d’erreur du compilateur|'*fonction*' : utilisation de la variable ne produit pas une expression constante|  
 |Erreur du compilateur C3257|Obsolète.|  
 |Erreur C3258 n’erreur du compilateur|Obsolète.|  
-|C3259 d’erreur du compilateur|les fonctions 'constexpr' peuvent uniquement avoir une instruction return|  
+|C3259 d’erreur du compilateur|les fonctions 'constexpr' peuvent avoir uniquement une seule instruction return|  
 |C3260 d’erreur du compilateur|'*jeton*' : ignoré jetons inattendus avant avant le corps d’expression lambda|  
 |C3261 d’erreur du compilateur|une fonction qui retourne un tableau managé/WinRT doit avoir des crochets à la fin de la déclaration : '*identificateur*(...) []'|  
 |[Erreur du compilateur C3262](compiler-error-c3262.md)|l’indexation de tableau non valide : *nombre* dimensions spécifiées pour *nombre*-dimensionnel '*type*'|  
@@ -169,7 +155,7 @@ Les articles de cette partie de la documentation contiennent des informations su
 |[Erreur du compilateur C3288](compiler-error-c3288.md)|'*type*' : déréférencement non conforme d’un type de handle|  
 |[Erreur du compilateur C3289](compiler-error-c3289.md)|'*identificateur*' : une propriété triviale ne peut pas être indexée.|  
 |[Erreur du compilateur C3290](compiler-error-c3290.md)|'*type*' : une propriété triviale ne peut pas avoir de type référence|  
-|[Erreur du compilateur C3291](compiler-error-c3291.md)|'default' : ne peut pas être le nom d'une propriété triviale|  
+|[Erreur du compilateur C3291](compiler-error-c3291.md)|'default' : ne peut pas être le nom d’une propriété triviale|  
 |[Erreur du compilateur C3292](compiler-error-c3292.md)|impossible de rouvrir l'espace de noms cli|  
 |[Erreur du compilateur C3293](compiler-error-c3293.md)|'*identificateur*' : utilisez 'default' pour accéder à la propriété par défaut (indexeur) pour la classe*classe*'|  
 |Erreur du compilateur C3294|Obsolète.|  

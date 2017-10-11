@@ -1,36 +1,39 @@
 ---
-title: "Erreur du compilateur C2688 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2688"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2688"
+title: Erreur du compilateur C2688 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2688
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2688
 ms.assetid: 168c9e9d-8f65-4664-af86-db71d3e6ee46
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Erreur du compilateur C2688
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eaacdb4c7404dd370de31ad1bca6c07391279584
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'C2::fgrv' : retours covariants avec l'héritage virtuel ou multiple non pris en charge pour les fonctions varargs  
+---
+# <a name="compiler-error-c2688"></a>Erreur du compilateur C2688
+'C2::fgrv' : retours covariants avec plusieurs ou l’héritage virtuel non pris en charge pour les fonctions varargs  
   
- Les types de retour covariant ne sont pas pris en charge sous Visual C\+\+ lorsqu'une fonction contient des arguments variables.  
+ Types de retour covariants ne sont pas pris en charge dans Visual C++ lorsqu’une fonction contient des arguments variables.  
   
- Pour remédier à cette erreur, définissez vos fonctions pour qu'elles n'utilisent pas d'arguments variables ou alors définissez les mêmes valeurs de retour pour toutes les fonctions virtuelles.  
+ Pour résoudre cette erreur, définissez vos fonctions pour qu’ils ne pas utiliser des arguments de variable ou que les valeurs de retour le même pour toutes les fonctions virtuelles.  
   
- L'exemple suivant génère l'erreur C2688 :  
+ L’exemple suivant génère l’erreur C2688 :  
   
 ```  
 // C2688.cpp  

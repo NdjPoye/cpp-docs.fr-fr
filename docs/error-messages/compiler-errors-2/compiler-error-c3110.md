@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C3110 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3110"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3110"
+title: Erreur du compilateur C3110 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3110
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3110
 ms.assetid: 821dc71f-896e-4b2d-af0e-aa9932934b7b
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Erreur du compilateur C3110
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 573b7bbbe40929d291c10426e7826293e8dfd4bc
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'nom\_fonction' : impossible de surcharger une méthode d'interface COM  
+---
+# <a name="compiler-error-c3110"></a>Erreur du compilateur C3110
+'nom_fonction' : vous ne pouvez pas surcharger une méthode d’interface COM.  
   
- Une interface qui est précédée d'un attribut d'interface tel que :  
+ Une interface qui est précédée d’un attribut d’interface, tel que :  
   
--   [personnalisées](../../windows/custom-cpp.md)  
+-   [personnalisé](../../windows/custom-cpp.md)  
   
 -   [dispinterface](../../windows/dispinterface.md)  
   
@@ -36,7 +39,7 @@ caps.handback.revision: 7
   
 -   [object](../../windows/object-cpp.md)  
   
- ne peut pas être surchargée.  Par exemple :  
+ ne peut pas être surchargé. Exemple :  
   
 ```  
 // C3110.cpp  

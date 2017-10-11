@@ -1,35 +1,37 @@
 ---
-title: "Erreur du compilateur C3723 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3723"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3723"
+title: Erreur du compilateur C3723 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3723
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3723
 ms.assetid: ef0fb1ff-3f9a-4093-a6b6-894d1ab0c4b9
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3723
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6406d664cea17b75fa9ff703ae15e26d7baf042c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'fonction' : impossible de résoudre l'événement  
+---
+# <a name="compiler-error-c3723"></a>Erreur du compilateur C3723
+'fonction' : Impossible de résoudre l’événement  
   
- `function` n'a pas pu résoudre l'événement à appeler.  
+ `function`n’a pas pu résoudre l’événement à appeler.  
   
- L'exemple suivant génère l'erreur C3723 :  
+ L’exemple suivant génère l’erreur C3723 :  
   
 ```  
 // C3723.cpp  
@@ -52,9 +54,9 @@ int main() {
 }  
 ```  
   
- `__hook` et `__unhook` ne sont pas compatibles avec la programmation \/clr.  Utilisez plutôt les opérateurs \+\= et \-\=.  
+ `__hook`et `__unhook` ne sont pas compatibles avec la programmation /clr.  Utilisez les opérateurs += et -= à la place.  
   
- L'exemple suivant génère l'erreur C3723 :  
+ L’exemple suivant génère l’erreur C3723 :  
   
 ```  
 // C3723b.cpp  

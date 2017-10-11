@@ -19,25 +19,11 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: 79987719614dfa3075f9a9090ca1d97f6546ceb3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 89354565f67c8704eee8c8b5f9dcb94523800c63
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1902"></a>Erreur irrécupérable C1902
@@ -45,4 +31,4 @@ incompatibilité de gestionnaire de base de données de programme ; Veuillez v�
   
 Un fichier de base de données de programme (.pdb) a été créé à l’aide d’une version plus récente de mspdb*XXX*.dll que celui que le compilateur a trouvé sur votre système. Cette erreur indique habituellement que mspdbsrv.exe ou mspdbcore.dll sont manquants ou ont des versions différentes de mspdb*XXX*.dll. (Le *XXX* espace réservé dans le mspdb*XXX*nom de fichier .dll change avec chaque version du produit. Par exemple, dans Visual Studio 2015, le nom de fichier est mspdb140.dll.)  
   
-Vérifiez les versions correspondantes de mspdbsrv.exe, mspdbcore.dll et mspdb*XXX*.dll sont installées sur votre système. Assurez-vous que les versions incompatibles n’ont pas été copiées dans le répertoire qui contient les compilateur et les outils link pour votre plateforme cible. Par exemple, vous pouvez avoir copié les fichiers afin de vous pouvez appeler l’outil du compilateur ou un lien à partir de l’invite de commandes sans définir la **chemin d’accès** variable d’environnement en conséquence.
+Vérifiez les versions correspondantes de mspdbsrv.exe, mspdbcore.dll et mspdb*XXX*.dll sont installés sur votre système. Assurez-vous que les versions incompatibles n’ont pas été copiées vers le répertoire qui contient les outils du compilateur et des liens pour votre plateforme cible. Par exemple, vous pourrez avoir copié les fichiers afin de vous pouvez appeler le compilateur ou l’outil link à partir de l’invite de commandes sans définir la **chemin d’accès** variable d’environnement en conséquence.

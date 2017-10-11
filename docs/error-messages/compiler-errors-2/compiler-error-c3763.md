@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C3763 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3763"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3763"
+title: Erreur du compilateur C3763 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3763
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C3763
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 51810524b36a714404ce45a51186bc635dacebd3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'type' : 'retval' et 'out' ne peuvent figurer que sur un type données\-pointeur  
+---
+# <a name="compiler-error-c3763"></a>Erreur du compilateur C3763
+'type' : 'retval' et 'out' ne peut apparaître que sur un type de pointeur de données  
   
- Les attributs [out](../../windows/out-cpp.md) ou [retval](../../windows/retval.md) peuvent seulement apparaître sur des paramètres de type pointeur.  Supprimez l'attribut ou transformez le paramètre en type pointeur.  
+ Le [hors](../../windows/out-cpp.md) ou [retval](../../windows/retval.md) attributs peuvent apparaître uniquement sur les paramètres de type pointeur. Supprimez l’attribut ou modifier le paramètre de type pointeur.  
   
- L'exemple suivant génère l'erreur C3763 :  
+ L’exemple suivant génère l’erreur C3763 :  
   
 ```  
 // C3763.cpp  

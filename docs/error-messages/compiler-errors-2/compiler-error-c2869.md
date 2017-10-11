@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2869 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2869"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2869"
+title: Erreur du compilateur C2869 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2869
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2869
 ms.assetid: 6e30c001-47f3-4101-b9f1-cc542c9fffae
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C2869
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ebdd6a371f20a03db3677f038155c40bfa2e75ab
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'nom' : déjà défini comme espace de noms  
+---
+# <a name="compiler-error-c2869"></a>Erreur du compilateur C2869
+'nom' : a déjà été défini pour être un espace de noms  
   
- Vous ne pouvez pas réutiliser un nom déjà utilisé comme espace de noms.  
+ Vous ne pouvez pas réutiliser un nom déjà utilisé comme un espace de noms.  
   
- L'exemple suivant génère l'erreur C2869 :  
+ L’exemple suivant génère l’erreur C2869 :  
   
 ```  
 // C2869.cpp  

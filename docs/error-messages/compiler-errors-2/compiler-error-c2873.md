@@ -19,28 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 6c4cb41ad915054bb5f597b8b0eee3bf57d876c9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4a4af3997ddf0921227c8e6448491c08e25f9957
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2873"></a>Erreur du compilateur C2873
 'symbole' : symbole ne peut pas être utilisé dans une déclaration using  
   
- A `using` la directive il manque un [espace de noms](../../cpp/namespaces-cpp.md) (mot clé). Le compilateur interprète le code comme un [à l’aide de la déclaration](../../cpp/using-declaration.md) plutôt que [à l’aide de la directive](../../cpp/namespaces-cpp.md#using_directives).
+ A `using` la directive il manque un [espace de noms](../../cpp/namespaces-cpp.md) (mot clé). Le compilateur interprète le code comme un [à l’aide de la déclaration](../../cpp/using-declaration.md) plutôt qu’un [à l’aide de la directive](../../cpp/namespaces-cpp.md#using_directives).

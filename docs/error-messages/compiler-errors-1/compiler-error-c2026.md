@@ -19,33 +19,19 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: c429f81c64b7710b7edc2b8540d98e8c790e4062
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 97937579c12730fecfa89c69d9e7cf51229b5c6c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2026"></a>Erreur du compilateur C2026
 chaîne trop grande, caractères de fin tronqués  
   
- La chaîne était plus longue que la limite de 16380 caractères codés sur un.  
+ La chaîne était supérieure à la limite de 16380 caractères codés sur un octet.  
   
- Avant la concaténation des chaînes adjacentes, une chaîne ne peut pas dépasser 16380 caractères sur un octet.  
+ Avant la concaténation des chaînes adjacentes, une chaîne ne peut pas dépasser 16380 caractères codés sur un octet.  
   
  Une chaîne Unicode d’environ la moitié de cette longueur générerait également cette erreur.  
   
@@ -69,4 +55,4 @@ imagine a really, really "
 ";  
 ```  
   
- Vous pouvez vouloir stocker des littéraux de chaîne de taille exceptionnelle (32 Ko ou plus) dans une ressource personnalisée ou d’un fichier externe. Consultez la page [création d’une ressource personnalisée ou la ressource de données](../../windows/creating-a-new-custom-or-data-resource.md) pour plus d’informations.
+ Vous pouvez vouloir stocker des littéraux de chaîne de taille exceptionnelle (32 Ko ou plus) dans une ressource personnalisée ou d’un fichier externe. Consultez [création d’une ressource personnalisée ou ressource de données](../../windows/creating-a-new-custom-or-data-resource.md) pour plus d’informations.

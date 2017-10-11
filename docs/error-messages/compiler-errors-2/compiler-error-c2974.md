@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2974 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2974"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2974"
+title: Erreur du compilateur C2974 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2974
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2974
 ms.assetid: 1b444260-f2bf-48d7-ab1e-35573d8c4a0e
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Erreur du compilateur C2974
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e24e25816ac646bcf26099abbfa8e681fdd72a6e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-argument 'nombre' non valide, type attendu  
+---
+# <a name="compiler-error-c2974"></a>Erreur du compilateur C2974
+argument de type non valide 'nombre', type attendu  
   
- L'argument générique ou template ne correspond pas à la déclaration générique ou du modèle.  Un type devrait figurer entre les crochets.  Vérifiez la définition générique ou du modèle pour trouver les types corrects.  
+ L’argument générique ou de modèle ne correspond pas à la déclaration générique ou de modèle. Un type doit apparaître entre crochets pointus. Vérifiez la définition générique ou de modèle pour trouver les types corrects.  
   
- L'exemple suivant génère l'erreur C2974 :  
+ L’exemple suivant génère l’erreur C2974 :  
   
 ```  
 // C2974.cpp  
@@ -49,7 +52,7 @@ int main() {
 }  
 ```  
   
- L'erreur C2974 peut également se produire lors de l'utilisation de génériques :  
+ L’erreur C2974 peut également se produire lors de l’utilisation de génériques :  
   
 ```  
 // C2974b.cpp  

@@ -1,5 +1,5 @@
 ---
-title: "C3280 d’erreur du compilateur | Documents Microsoft"
+title: Erreur du compilateur C3280 | Documents Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 47e008992a9f077ad8985d4a5bb6b830ec93930f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4534ac1df55ed5e0810cd0a8d5ce54a5081b929e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3280"></a>Erreur du compilateur C3280
-'class' : une fonction membre d’un type managé ne peut pas être compilée comme fonction non managée  
+'class' : une fonction membre d’un type managé ne peut pas être compilée comme fonction non managée  
   
  Les fonctions membres de classe managée ne peuvent pas être compilées en tant que fonctions non managées.  
   

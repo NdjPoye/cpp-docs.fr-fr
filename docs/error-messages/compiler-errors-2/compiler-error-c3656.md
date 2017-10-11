@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C3656 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3656"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3656"
+title: Erreur du compilateur C3656 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3656
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3656
 ms.assetid: 88965d85-73b0-4b35-8020-0650c9c94cd8
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C3656
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bbb82f1684da4c7a3fe659f3892e7b1004a7f814
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'substitution' : impossible de répéter le spécificateur de substitution  
+---
+# <a name="compiler-error-c3656"></a>Erreur du compilateur C3656
+'override' : substitution spécificateur ne peut pas être répété.  
   
- Un mot clé de substitution explicite ne peut être spécifié qu'à une reprise.  Pour plus d'informations, consultez [Substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Un mot clé de substitution explicite peut uniquement être spécifié qu’une seule fois. Pour plus d’informations, consultez [substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
- L'exemple suivant génère l'erreur C3656 :  
+ L’exemple suivant génère l’erreur C3656 :  
   
 ```  
 // C3656.cpp  

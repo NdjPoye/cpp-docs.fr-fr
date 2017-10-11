@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 74c976fb090533ade91e5debf067371d5d3295c1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cabe753691b3d72ede25f0c25404d73fb63ceba8
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3813"></a>Erreur du compilateur C3813
 une déclaration de propriété ne peut figurer qu'au sein d'une définition de type managé ou WinRT  
   
-A [propriété](../../dotnet/how-to-use-properties-in-cpp-cli.md) peut uniquement être déclaré dans géré ou Windows Runtime type. Les types natifs ne prennent pas en charge le mot clé `property`.  
+A [propriété](../../dotnet/how-to-use-properties-in-cpp-cli.md) peut uniquement être déclaré dans un managé ou Windows Runtime type. Les types natifs ne prennent pas en charge le mot clé `property`.  
   
 ## <a name="example"></a>Exemple  
 L'exemple suivant génère l'erreur C3813 et montre comment la corriger :  

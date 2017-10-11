@@ -1,5 +1,5 @@
 ---
-title: "C3246 d’erreur du compilateur | Documents Microsoft"
+title: Erreur du compilateur C3246 | Documents Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: ac8458487d9ed500420f2e687f8eb7c37bf053da
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 262dc8bde5dcb4c12909c69bce3fa867685245eb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3246"></a>Erreur du compilateur C3246
 'classe' : ne peut pas hériter de 'type', car il a été déclaré comme 'sealed'  
   
-Une classe qui est marquée en tant que [scellé](../../windows/sealed-cpp-component-extensions.md) ne peut pas être la classe de base pour toutes les autres classes.  
+Une classe marquée [sealed](../../windows/sealed-cpp-component-extensions.md) ne peut pas être la classe de base d’autres classes.  
   
 L’exemple suivant génère l’erreur C3246 :  
   

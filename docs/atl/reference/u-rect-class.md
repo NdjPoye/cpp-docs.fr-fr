@@ -22,29 +22,15 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 5a375921fd51b19eb2e9020d3175a56df8549461
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a8c7d4e7b34256d9544cd75dc71dbfb8294db30b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# <a name="urect-class"></a>_U_RECT (classe)
-Permet à cette classe d’adaptateur argument soit `RECT` pointeurs ou références à passer à une fonction qui est implémentée en termes de pointeurs.  
+# <a name="urect-class"></a>Classe _U_RECT
+Cette classe d’argument d’adaptateur permet soit `RECT` pointeurs ou références à passer à une fonction qui est implémentée en termes de pointeurs.  
   
 > [!IMPORTANT]
 >  Cette classe et ses membres ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.  
@@ -85,7 +71,7 @@ LPRECT m_lpRect ;
  The address of the reference argument is stored in the class's single data member, [m_lpRect](#_u_rect__m_lprect).  
   
 ```
-_U_RECT (RECT se rc);  
+_U_RECT (RECT & rc) ;  
 _U_RECT (LPRECT lpRect) ;
 ```  
   

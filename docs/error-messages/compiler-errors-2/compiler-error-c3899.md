@@ -1,37 +1,40 @@
 ---
-title: "Erreur du compilateur C3899 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3899"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3899"
+title: Erreur du compilateur C3899 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3899
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Erreur du compilateur C3899
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c7d9d32b3063dbecde375159ad90eec5bf128d56
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'var' : l'utilisation comme l\-value des données membres initonly n'est pas autorisée directement dans une région parallèle de la classe 'classe'  
+---
+# <a name="compiler-error-c3899"></a>Erreur du compilateur C3899
+'var' : utilisation comme l-value des données membres initonly n’est pas autorisée directement dans une région parallèle de la classe 'classe'  
   
- Les données membres [initonly](../../dotnet/initonly-cpp-cli.md) ne peuvent pas être initialisées à l'intérieur de la partie d'un constructeur qui se situe dans une région [parallel](../../parallel/openmp/reference/parallel.md).  Cela est dû au fait que le compilateur effectue un réadressage interne de ce code, de sorte qu'il ne fait effectivement plus partie du constructeur.  
+ Un [initonly (C + c++ / CLI)](../../dotnet/initonly-cpp-cli.md) membre de données ne peut pas être initialisé à l’intérieur de cette partie d’un constructeur qui se trouve dans un [parallèles](../../parallel/openmp/reference/parallel.md) région.  Il s’agit, car le compilateur effectue un réadressage interne de ce code, tel qu’il efficacement ne fait plus partie du constructeur.  
   
- Pour résoudre ce problème, initialisez les données membres initonly dans le constructeur, mais à l'extérieur de la région parallèle.  
+ Pour résoudre, initialiser le données membres initonly dans le constructeur, mais en dehors de la région parallèle.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C3899 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C3899 :.  
   
 ```  
 // C3899.cpp  

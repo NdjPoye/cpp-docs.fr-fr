@@ -22,29 +22,15 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 347e7bf7cd9173fb2815f44fc052ec23ab4055a6
-ms.openlocfilehash: 7456d441d7b3fb74f404f29c893c492feab10ed9
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e824c2b85e7f80ad93a1f154be7f2e680bd00a9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlbasemodule70-structure"></a>Structure de _ATL_BASE_MODULE70
-Utilisé par n’importe quel projet qui utilise ATL.  
+Utilisé par aucun projet qui utilise ATL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -75,18 +61,18 @@ struct _ATL_BASE_MODULE70 {
  Informations de version du système d’exploitation. Utilisé en interne par ATL.  
   
  **dwAtlBuildVer**  
- Contient la version de l’ATL. Actuellement 0x0700.  
+ Stocke la version d’ATL. Actuellement 0x0700.  
   
  **pguidVer**  
- GUID interne d’ATL.  
+ GUID d’interne d’ATL.  
   
  **m_csResource**  
  Utilisé pour synchroniser l’accès à la **m_rgResourceInstance** tableau. Utilisé en interne par ATL.  
   
  **m_rgResourceInstance**  
- Tableau utilisé pour rechercher des ressources dans toutes les instances de la ressource dont ATL a connaissance. Utilisé en interne par ATL.  
+ Tableau utilisé pour rechercher des ressources dans toutes les instances de ressources dont est prenant en charge ATL. Utilisé en interne par ATL.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) est défini comme un typedef de `_ATL_BASE_MODULE70`.  
   
 ## <a name="requirements"></a>Spécifications  

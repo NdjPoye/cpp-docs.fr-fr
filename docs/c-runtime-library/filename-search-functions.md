@@ -30,26 +30,11 @@ caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c802f99eab05ea59971c69c53f999f1b8f12240f
+ms.translationtype: HT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ee67049241067285f564e59791f408347cc0c747
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="filename-search-functions"></a>Fonctions de recherche de nom de fichier
@@ -114,9 +99,9 @@ Ces fonctions recherchent des noms de fichiers spécifiés et arrêtent ces rech
   
  `_wfindfirst` et `_wfindnext` sont des versions à caractères larges de `_findfirst` et `_findnext`. L’argument de structure des versions à caractères larges a le type de données `_wfinddata_t` , qui est défini dans IO.h et dans Wchar.h. Les champs de ce type de données sont les mêmes que ceux du type de données `_finddata_t` , sauf que dans `_wfinddata_t` , le champ de nom est de type `wchar_t` et non `char`. Sinon, `_wfindfirst` et `_wfindnext` se comportent de la même façon que `_findfirst` et `_findnext`.  
   
- `_findfirst` et `_findnext` utilisent le type de temps 64 bits. Si vous devez utiliser l’ancien type de temps 32 bits, vous pouvez définir `_USE_32BIT_TIME_T`. Les versions de ces fonctions qui ont le suffixe `32` dans leur nom utilisent le type de temps 32 bits et celles avec le suffixe `64` utilisent le type de temps 64 bits.  
+ `_findfirst` et `_findnext` utilisent le type de temps 64 bits. Si vous devez utiliser l’ancien type de temps 32 bits, vous pouvez définir `_USE_32BIT_TIME_T`. Les versions de ces fonctions qui ont le suffixe `32` dans leur nom utilisent le type de temps 32 bits et celles avec le suffixe `64` utilisent le type de temps 64 bits.  
   
- Les fonctions `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`et `_wfindnext32i64` se comportent également de la même façon que les versions de type de temps 32 bits de ces fonctions, mais elles utilisent et retournent des longueurs de fichiers 64 bits. Les fonctions `_findfirst64i32`, `_findnext64i32`, `_wfindfirst64i32`et `_wfindnext64i32` utilisent le type de temps 64 bits, mais des longueurs de fichiers 32 bits. Ces fonctions utilisent des variations appropriées du type `_finddata_t` où les champs ont des types différents pour l’heure et la taille du fichier.  
+ Les fonctions `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`et `_wfindnext32i64` se comportent également de la même façon que les versions de type de temps 32 bits de ces fonctions, mais elles utilisent et retournent des longueurs de fichiers 64 bits. Les fonctions `_findfirst64i32`, `_findnext64i32`, `_wfindfirst64i32`et `_wfindnext64i32` utilisent le type de temps 64 bits, mais des longueurs de fichiers 32 bits. Ces fonctions utilisent des variations appropriées du type `_finddata_t` où les champs ont des types différents pour l’heure et la taille du fichier.  
   
  `_finddata_t` est en fait une macro qui correspond à `_finddata64i32_t` (ou `_finddata32_t` si `_USE_32BIT_TIME_T` est défini). Le tableau suivant récapitule les différentes variations de `_finddata_t`:  
   

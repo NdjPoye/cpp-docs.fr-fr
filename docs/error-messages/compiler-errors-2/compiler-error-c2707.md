@@ -1,43 +1,46 @@
 ---
-title: "Erreur du compilateur C2707 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2707"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2707"
+title: Erreur du compilateur C2707 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2707
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C2707
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 46ca756cf6491506cefc38e34992fa5e3fb67429
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2707"></a>Erreur du compilateur C2707
 'identificateur' : contexte incorrect pour une fonction intrinsèque  
   
- Les fonctions intrinsèques de gestion structurée des exceptions ne sont pas valides dans certains contextes :  
+ Fonctions intrinsèques de gestion des exceptions structurées ne sont pas valides dans certains contextes :  
   
--   `_exception_code()` en dehors d'un filtre d'exception ou d'un bloc `__except` ;  
+-   `_exception_code()`en dehors d’un filtre d’exception ou `__except` bloc  
   
--   `_exception_info()` en dehors d'un filtre d'exception ;  
+-   `_exception_info()`en dehors d’un filtre d’exception  
   
--   `_abnormal_termination()`  en dehors d'un bloc `__finally` ;  
+-   `_abnormal_termination()`à l’extérieur un `__finally` bloc  
   
- Pour corriger l'erreur, vérifiez que les fonctions intrinsèques de gestion des exceptions sont placées dans le contexte adapté.  
+ Pour résoudre cette erreur, assurez-vous que les fonctions intrinsèques de gestion des exceptions sont placées dans le contexte approprié.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C2707 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C2707.  
   
 ```  
 // C2707.cpp  

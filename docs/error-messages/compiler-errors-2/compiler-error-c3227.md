@@ -1,38 +1,40 @@
 ---
-title: "Erreur du compilateur C3227 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3227"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3227"
+title: Erreur du compilateur C3227 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3227
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3227
 ms.assetid: 7939c23a-96c8-43c2-89e9-f217d132d155
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3227
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2f65791d709b5790144cd919bf06b61fd94da973
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'paramètre' : impossible d'utiliser 'MotClé' pour allouer un type générique  
+---
+# <a name="compiler-error-c3227"></a>Erreur du compilateur C3227
+'paramètre' : Impossible d’utiliser 'mot_clé' pour allouer un type générique  
   
- Pour instancier un type, un constructeur approprié est nécessaire.  Toutefois, le compilateur ne peut pas vérifier qu'un constructeur approprié est disponible.  
+ Afin d’instancier un type, un constructeur approprié est requis. Toutefois, le compilateur n’est pas en mesure de s’assurer qu’un constructeur approprié est disponible.  
   
- Vous pouvez utiliser des modèles plutôt que des génériques pour résoudre cette erreur, ou utiliser l'une des différentes méthodes pour créer une instance du type.  
+ Vous pouvez utiliser les modèles au lieu des génériques pour résoudre cette erreur, ou vous pouvez utiliser plusieurs méthodes pour créer une instance du type.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C3227 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C3227 :.  
   
 ```  
 // C3227.cpp  

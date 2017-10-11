@@ -1,35 +1,37 @@
 ---
-title: "Erreur du compilateur C2552 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2552"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2552"
+title: Erreur du compilateur C2552 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2552
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C2552
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0e001837ca3d9ea9e5c5db1770188d030e21d7d9
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2552"></a>Erreur du compilateur C2552
 « identificateur » : les éléments qui ne sont pas des agrégats ne peuvent pas être initialisés avec une liste d'initialiseurs  
   
  Identificateur de l'agrégat a été correctement initialisé.  
   
- Les [Agrégats](../../c-language/initializing-aggregate-types.md) sont définis comme suit :  
+ [Agrégats](../../c-language/initializing-aggregate-types.md) sont définies en tant que :  
   
 -   Tableaux  
   
@@ -43,7 +45,7 @@ manager: "ghogen"
   
     -   Fonctions virtuelles  
   
- De plus, Visual C\+\+ n'autorise pas les types de données dans un agrégat qui contient des constructeurs.  
+ De plus, Visual C++ n'autorise pas les types de données dans un agrégat qui contient des constructeurs.  
   
  Voici les raisons pour lesquelles une erreur C2552 peut se produire lorsqu'une initialisation d'agrégats est tentée sur un type :  
   
@@ -57,7 +59,7 @@ manager: "ghogen"
   
 -   Un type est une classe de référence, ou une interface CLR.  
   
--   Le type a un tableau de dimension non fixée \(tableau nul\) dont les éléments ont des destructeurs.  
+-   Le type a un tableau de dimension non fixée (tableau nul) dont les éléments ont des destructeurs.  
   
  L'exemple suivant génère l'erreur C2552 :  
   

@@ -27,25 +27,11 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ac817cedb4c7ed67e698969b14645f5659aab2ad
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: e9d580a8027e37ce2db5e70b72c4f8cf2a99e516
 ms.contentlocale: fr-fr
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomcontainedobject-class"></a>Classe de CComContainedObject
@@ -86,7 +72,7 @@ class CComContainedObject : public Base
 ## <a name="remarks"></a>Remarques  
  ATL utilise `CComContainedObject` dans les classes [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), et [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject`implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) par délégation à l’objet propriétaire **IUnknown**. (Le propriétaire est l’objet externe d’une agrégation ou de l’objet pour lequel une interface détachable est en cours de création.) `CComContainedObject` appelle `CComObjectRootEx`de `OuterQueryInterface`, `OuterAddRef`, et `OuterRelease`, hérités via `Base`.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Base`  
   
  `CComContainedObject`  
@@ -138,7 +124,7 @@ IUnknown* GetControllingUnknown();
 ### <a name="return-value"></a>Valeur de retour  
  L’objet propriétaire **IUnknown**.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Cette méthode peut être virtuelle si `Base` a déclaré le [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) (macro).  
   
 ##  <a name="queryinterface"></a>CComContainedObject::QueryInterface  

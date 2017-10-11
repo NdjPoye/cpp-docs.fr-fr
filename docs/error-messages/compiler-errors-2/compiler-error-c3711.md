@@ -1,35 +1,37 @@
 ---
-title: "Erreur du compilateur C3711 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3711"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3711"
+title: Erreur du compilateur C3711 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3711
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3711
 ms.assetid: 26d581cc-2153-4ee0-b814-a371184be3e1
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3711
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0cfc4a2ffbbf65f1a1171a256ce08d5f498887a8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'méthode' : une méthode source d'événements non managée doit retourner un type void ou intégral  
+---
+# <a name="compiler-error-c3711"></a>Erreur du compilateur C3711
+'méthode' : une méthode source d’événements non managée doit retourner un type void ou intégral  
   
- Vous avez défini une méthode dans la source d'événements qui n'a pas retourné un type void ou intégral.  Pour remédier à cette erreur, donnez à l'événement et au gestionnaire d'événements un type de retour `void` ou un type intégral tel que `int` ou `long`.  
+ Vous avez défini une méthode dans la source d’événements qui n’a pas retourné void ou un type intégral. Pour corriger cette erreur, vérifiez l’événement et le Gestionnaire d’événements ont un type de retour de `void` ou un type intégral, tel que `int` ou `long`.  
   
- L'exemple suivant génère l'erreur C3711 :  
+ L’exemple suivant génère l’erreur C3711 :  
   
 ```  
 // C3711.cpp  

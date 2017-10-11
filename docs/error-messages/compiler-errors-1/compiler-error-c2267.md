@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2267 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2267"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2267"
+title: Erreur du compilateur C2267 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2267
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2267
 ms.assetid: ea63bebb-6208-4367-8440-39be07f9c360
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C2267
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 42385c64119acfb669c7420ad9d3ba18d6daf60b
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-'fonction' : les fonctions static avec portée de bloc ne sont pas conformes  
+---
+# <a name="compiler-error-c2267"></a>Erreur du compilateur C2267
+'fonction' : les fonctions static avec portée de bloc ne sont pas autorisées  
   
- Une fonction locale est déclarée `static`.  Les fonctions static doivent avoir une portée globale.  
+ Une fonction locale est déclarée `static`. Fonctions statiques doivent ont une portée globale.  
   
- L'exemple suivant génère l'erreur C2267 :  
+ L’exemple suivant génère l’erreur C2267 :  
   
 ```  
 // C2267.cpp  

@@ -19,34 +19,19 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: b0cce511d895aae218c1b2ab04d129173b049983
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ebbcbe30a0c9359116d259c36d702a968b333c9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3767"></a>Erreur du compilateur C3767
-fonctions de candidat 'fonction' n’est pas accessibles  
+fonctions de candidat 'function' n’est pas accessibles  
   
- Une fonction friend définie dans une classe n’est pas supposé être traitée comme si elle était définie et déclarée dans la portée espace de noms global. Il peut, toutefois, être trouvée par une recherche dépendante de l’argument.  
+ Une fonction friend définie dans une classe n’est pas censé être traitée comme si elle était définie et déclaré dans la portée espace de noms global. Il peut, toutefois, être trouvée par une recherche dépendante d’un argument.  
   
- L’erreur C3767 peut également être provoqué par une modification avec rupture : les types natifs sont désormais privés par défaut dans un **/clr** compilation ; consultez [tapez visibilité](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) pour plus d’informations.  
+ L’erreur C3767 peut également être dû à une modification avec rupture : les types natifs sont désormais privés par défaut dans un **/CLR** compilation ; consultez [visibilité de Type](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) pour plus d’informations.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant génère l’erreur C3767 :  
@@ -102,7 +87,7 @@ ref class Der : public Base {
 };  
 ```  
   
- Dans Visual C++ .NET 2002, le compilateur a modifié le mode de que recherche des symboles. Dans certains cas, il recherchait automatiquement des symboles dans un espace de noms spécifié. Maintenant, elle utilise la recherche dépendante de l’argument.  
+ Dans Visual C++ .NET 2002, le compilateur a modifié le mode de que recherche des symboles. Dans certains cas, il recherchait automatiquement des symboles dans un espace de noms spécifié. À présent, il utilise recherche dépendante d’un argument.  
   
  L’exemple suivant génère l’erreur C3767 :  
   
@@ -123,7 +108,7 @@ int main() {
 }  
 ```  
   
- Pour le code qui est valide dans Visual C++ .NET 2003 et Visual C++ .NET 2002, déclarez la fonction friend dans la portée de la classe et définissez-la dans la portée espace de noms :  
+ Pour le code qui est valide dans Visual C++ .NET 2003 et Visual C++ .NET 2002, déclarez la fonction friend dans la portée de la classe et la définir dans la portée espace de noms :  
   
 ```  
 // C3767f.cpp  

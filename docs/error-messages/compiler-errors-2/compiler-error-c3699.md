@@ -1,36 +1,38 @@
 ---
-title: "Erreur du compilateur C3699 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3699"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3699"
+title: Erreur du compilateur C3699 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3699
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3699
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: caabe5d8d9e956081211ef23546f0d720ecdcbd6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'opérateur' : impossible d'utiliser cette indirection sur le type 'type'  
+---
+# <a name="compiler-error-c3699"></a>Erreur du compilateur C3699
+'opérateur' : Impossible d’utiliser cette indirection sur le type 'type'  
   
- Une tentative d'utilisation de l'indirection qui n'est pas autorisée sur `type` a été effectuée.  
+ Tentative d’utilisation de l’indirection qui n’est pas autorisée sur `type`.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C3699 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C3699.  
   
 ```  
 // C3699.cpp  
@@ -43,8 +45,8 @@ int main() {
 }  
 ```  
   
-## Exemple  
- Une propriété triviale ne peut pas posséder de type référence.  Pour plus d'informations, consultez [property](../../windows/property-cpp-component-extensions.md).  L'exemple suivant génère l'erreur C3699 :  
+## <a name="example"></a>Exemple  
+ Une propriété triviale ne peut pas avoir de type référence. Pour plus d'informations, voir [property](../../windows/property-cpp-component-extensions.md) . L’exemple suivant génère C3699.  
   
 ```  
 // C3699_b.cpp  
@@ -55,8 +57,8 @@ ref struct C {
 };  
 ```  
   
-## Exemple  
- L'équivalent d'une syntaxe « pointeur vers pointeur » est un handle vers une référence de suivi.  L'exemple suivant génère l'erreur C3699 :  
+## <a name="example"></a>Exemple  
+ L’équivalent d’une syntaxe « pointeur vers un pointeur » est un handle vers une référence de suivi. L’exemple suivant génère C3699.  
   
 ```  
 // C3699_c.cpp  

@@ -1,35 +1,37 @@
 ---
-title: "Erreur du compilateur C2633 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2633"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2633"
+title: Erreur du compilateur C2633 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2633
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2633
 ms.assetid: a7aceb65-4255-42d6-a8fb-e3cb6c4d2270
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C2633
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: be00f8dd1387aebb68fd4031006ad73e01295263
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'identificateur' : 'inline' est la seule classe de stockage autorisée pour les constructeurs  
+---
+# <a name="compiler-error-c2633"></a>Erreur du compilateur C2633
+'identificateur' : 'inline' est la classe de stockage autorisée uniquement pour les constructeurs  
   
- Un constructeur est déclaré comme classe de stockage autre que inline.  
+ Un constructeur est déclaré comme une classe de stockage autre qu’inline.  
   
- L'exemple suivant génère l'erreur C2633 :  
+ L’exemple suivant génère C2633 :  
   
 ```  
 // C2633.cpp  

@@ -1,35 +1,38 @@
 ---
-title: "Erreur du compilateur C3669 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3669"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3669"
+title: Erreur du compilateur C3669 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3669
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3669
 ms.assetid: be9c7ae4-e96f-47ab-922a-39a3537d5ca6
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Erreur du compilateur C3669
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 56e725bd03ecd1ba4f8ab3d77eeab6633a9ef062
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'membre' : spécificateur de substitution 'override' non autorisé sur les fonctions membres ou les constructeurs static  
+---
+# <a name="compiler-error-c3669"></a>Erreur du compilateur C3669
+'membre' : spécificateur de substitution 'override' pas autorisé sur les fonctions membres statiques ou des constructeurs  
   
- Une substitution n'a pas été spécifiée correctement.  Pour plus d'informations, consultez [Substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Un remplacement a été spécifié correctement. Pour plus d’informations, consultez [substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
-## Exemple  
- L'exemple suivant génère l'erreur C3669 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C3669.  
   
 ```  
 // C3669.cpp  

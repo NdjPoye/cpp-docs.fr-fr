@@ -1,43 +1,44 @@
 ---
-title: "chsize | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "chsize"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "chsize"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "chsize (fonction)"
+title: chsize | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- chsize
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- chsize
+dev_langs:
+- C++
+helpviewer_keywords:
+- chsize function
 ms.assetid: f94d62f6-b539-4cbf-bf99-b81d081b4216
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# chsize
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 065a713e61c4fc1b1b459948a11b68b855591538
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-Cette fonction POSIX est déconseillée.  Utilisez [\_chsize](../../c-runtime-library/reference/chsize.md) qui est conforme à l'ISO C\+\+ ou [\_chsize\_s](../../c-runtime-library/reference/chsize-s.md) dont la sécurité est améliorée.
+---
+# <a name="chsize"></a>chsize
+Cette fonction POSIX est déconseillée. Utilisez plutôt [_chsize](../../c-runtime-library/reference/chsize.md), qui est conforme à la norme ISO C++, ou [_chsize](../../c-runtime-library/reference/chsize-s.md), qui offre une sécurité améliorée.

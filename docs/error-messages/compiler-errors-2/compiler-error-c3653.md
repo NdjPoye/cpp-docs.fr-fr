@@ -1,35 +1,37 @@
 ---
-title: "Erreur du compilateur C3653 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3653"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3653"
+title: Erreur du compilateur C3653 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3653
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3653
 ms.assetid: 316549d7-f7ef-4578-a2ba-57adc8aac527
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3653
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a978ee9fc6e46fb743a663ec89152db80769c8e0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'fonction' : ne peut pas être utilisé comme substitution nommée : fonction substituée introuvable ; n'auriez\-vous pas oublié de nommer la fonction explicitement, à l'aide d'un opérateur :: ?  
+---
+# <a name="compiler-error-c3653"></a>Erreur du compilateur C3653
+'fonction' : ne peut pas être utilisé comme substitution nommée : fonction substituée introuvable ; n’auriez-vous pas oublié de nommer la fonction explicitement, à l’aide un :: opérateur ?  
   
- Une substitution explicite a spécifié une fonction qui n'a été détectée dans aucune interface.  Pour plus d'informations, consultez [Substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Une substitution explicite spécifié à une fonction qui est introuvable dans n’importe quelle interface. Pour plus d’informations, consultez [substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
- L'exemple suivant génère l'erreur C3653 :  
+ L’exemple suivant génère l’erreur C3653 :  
   
 ```  
 // C3653.cpp  

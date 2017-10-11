@@ -31,26 +31,11 @@ caps.latest.revision: 32
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: 232da2506389337f6b37412161492c103db5b971
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 0ae005c2367f891e0b7a91e3f7e45d42d852fb78
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/01/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="crt-library-features"></a>Fonctionnalités de la bibliothèque CRT

@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 2a72db01b88f062f2b8866109cab6375930121ef
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 01fe6b5568da2e55d5ade4eca22a84ea4a0041e7
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3754"></a>Erreur du compilateur C3754
-constructeur délégué : la fonction membre 'fonction' ne peut pas être appelée sur une instance de type 'type'  
+constructeur délégué : fonction membre 'fonction' ne peut pas être appelée sur une instance de type 'type'  
   
- Un appel à une fonction via un pointeur vers un type qui ne contient-elle pas la fonction.  
+ Un appel a été passé à une fonction via un pointeur vers un type qui ne contient pas de la fonction.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant génère l’erreur C3754 :  

@@ -1,36 +1,39 @@
 ---
-title: "Erreur du compilateur C3912 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3912"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3912"
+title: Erreur du compilateur C3912 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3912
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3912
 ms.assetid: 674e050c-11fb-4db1-8bdf-a3e95b41161d
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C3912
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b5198258264688196a1ddc27059ab1f1349048c1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'événement' : l'événement doit être de type délégué  
+---
+# <a name="compiler-error-c3912"></a>Erreur du compilateur C3912
+'événement' : type d’événement doit être un type délégué  
   
- Un événement a été déclaré, mais ne possédait pas le type correct.  
+ Un événement a été déclaré mais n’était pas du type approprié.  
   
- Pour plus d'informations, consultez [event](../../windows/event-cpp-component-extensions.md).  
+ Pour plus d’informations, consultez [événement](../../windows/event-cpp-component-extensions.md).  
   
- L'exemple suivant génère l'erreur C3912 :  
+ L’exemple suivant génère l’erreur C3912 :  
   
 ```  
 // C3912.cpp  

@@ -1,37 +1,40 @@
 ---
-title: "Erreur irr&#233;cup&#233;rable C1085 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1085"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1085"
+title: "Erreur irrécupérable C1085 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1085
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1085
 ms.assetid: f2766365-d09b-4299-8a98-12e5aca98568
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Erreur irr&#233;cup&#233;rable C1085
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 516f67115cb5ef3353d0415ba8d4e244d308b7d2
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-Impossible d'écrire le fichier TypeFichier : 'fichier' : message  
+---
+# <a name="fatal-error-c1085"></a>Erreur irrécupérable C1085
+Impossible d’écrire le fichier TypeFichier : 'fichier' : message  
   
-### Pour résoudre le problème en vérifiant les causes possibles suivantes  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Pour corriger en vérifiant les causes possibles suivantes  
   
-1.  Le lecteur est en lecture seule.  
+1.  Lecteur est en lecture seule.  
   
-2.  Le lecteur est plein.  
+2.  Disque est plein.  
   
 3.  Violation de partage.  
   
-4.  Si le message indique « numéro de fichier incorrect », il est possible que le fichier ait été fermé au premier plan alors que sa compilation se déroulait à l'arrière\-plan.
+4.  Si le message indique « numéro de fichier incorrect », le fichier était peut-être en cours de fermeture au premier plan alors que la compilation se déroulait en arrière-plan.

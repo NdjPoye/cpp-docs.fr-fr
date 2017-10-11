@@ -22,29 +22,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 1d1253b7a7d69024465627cc9fb37fcd2afba693
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 410d34d59da33b6d929abbe2af0798a6cf46238b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits (classe)
-Cette classe fournit des fonctions de comparaison des élément par défaut.  
+# <a name="cdefaultcomparetraits-class"></a>Classe de CDefaultCompareTraits
+Cette classe fournit des fonctions de comparaison élément par défaut.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -89,10 +75,10 @@ static bool CompareElements(const T& element1, const T& element2);
  Le deuxième élément.  
   
 ### <a name="return-value"></a>Valeur de retour  
- Retourne la valeur true si les éléments sont égaux.  
+ Retourne la valeur true si les éléments sont égaux, false dans le cas contraire.  
   
-### <a name="remarks"></a>Notes  
- L’implémentation par défaut de cette fonction est l’égalité ( `==`) (opérateur). Pour les objets autres que les types de données simples, cette fonction peut-être être remplacé.  
+### <a name="remarks"></a>Remarques  
+ L’implémentation par défaut de cette fonction est l’égalité ( `==`) (opérateur). Pour les objets autres que les types de données simple, cette fonction devrez peut-être être remplacée.  
   
 ##  <a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
  Appelez cette fonction pour déterminer l’élément supérieur et inférieur.  
@@ -118,7 +104,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 |`element1` > `element2`|>0|  
   
 ### <a name="remarks"></a>Remarques  
- L’implémentation par défaut de cette fonction utilise le `==`, ** \< **, et ** > ** opérateurs. Pour les objets autres que les types de données simples, cette fonction peut-être être remplacé.  
+ L’implémentation par défaut de cette fonction utilise le `==`,  **\<** , et  **>**  opérateurs. Pour les objets autres que les types de données simple, cette fonction devrez peut-être être remplacée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

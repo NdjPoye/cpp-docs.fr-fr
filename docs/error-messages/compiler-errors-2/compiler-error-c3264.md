@@ -1,5 +1,5 @@
 ---
-title: "C3264 d’erreur du compilateur | Documents Microsoft"
+title: Erreur du compilateur C3264 | Documents Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 36f2edddf639dd7cea11215ae62309516ac78168
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c5dc129754774f5dc8193d7a43bb982a8768c582
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3264"></a>Erreur du compilateur C3264
-'class' : un constructeur de classe ne peut pas avoir de type de retour  
+'class' : un constructeur de classe ne peut pas avoir de type de retour  
   
 Les constructeurs ne peuvent pas avoir de type de retour.  
   

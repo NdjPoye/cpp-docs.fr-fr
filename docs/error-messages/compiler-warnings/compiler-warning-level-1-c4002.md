@@ -19,34 +19,19 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 15bb9910d689cd9b8f05ed6df306f3bdf1f79195
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bb1e3512074b2767977367b30ac5d01dc5758b0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="compiler-warning-level-1-c4002"></a>Avertissement du compilateur (niveau 1) C4002
+# <a name="compiler-warning-level-1-c4002"></a>Avertissement du compilateur (niveau 1) C4002
 trop de paramètres réels pour la macro 'identifier'  
   
  Le nombre de paramètres réels dans la macro dépasse le nombre de paramètres formels dans la définition de macro. Le préprocesseur collecte les paramètres supplémentaires mais les ignore pendant l’expansion macro.  
   
- L’avertissement C4002 peut se produire lors d’une utilisation [Macros Variadic](../../preprocessor/variadic-macros.md).  
+ L’avertissement C4002 peut se produire en cas d’utilisation incorrecte de [Variadic Macros](../../preprocessor/variadic-macros.md).  
   
  L’exemple suivant génère l’avertissement C4002 :  
   

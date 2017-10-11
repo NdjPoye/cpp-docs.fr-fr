@@ -20,25 +20,11 @@ caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d1c3defb1cda8a14ab5557595a28d3d0280fc7ac
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 2546608c3c84a2228fba35bb1470064f64c2212b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atl-structures"></a>Structures d’ATL
@@ -48,19 +34,19 @@ Active Template Library inclut les structures suivantes.
   
 ## <a name="in-this-section"></a>Dans cette section  
  [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)  
- Contient des informations utilisées pour le rendu des différentes cibles, comme une imprimante, un métafichier ou un contrôle ActiveX.  
+ Contient des informations utilisées pour le rendu à différentes cibles, comme une imprimante, un métafichier ou un contrôle ActiveX.  
   
  [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)  
  Contient les données d’instance de classe dans le code de fenêtrage dans ATL.  
   
  [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)  
- Utilisé par n’importe quel projet qui utilise ATL.  
+ Utilisé par aucun projet qui utilise ATL.  
   
  [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)  
- Utilisé par le code lié à COM dans ATL.  
+ Utilisé par le code relatif à COM dans ATL.  
   
  [STRUCTURES _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)  
- Contient des informations de type permet de décrire une méthode ou propriété sur une dispinterface.  
+ Contient des informations de type utilisées pour décrire une méthode ou propriété sur une dispinterface.  
   
  [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)  
  Contient les données utilisées par chaque module ATL.  
@@ -73,17 +59,17 @@ Active Template Library inclut les structures suivantes.
  Fournit les documents de référence pour l'ATL Library, un jeu de classes C++ basées sur modèle qui simplifient la programmation d'objets COM.  
   
  [Fonctions ATL](../../atl/reference/atl-functions.md)  
- Fournit des informations de référence sur les fonctions globales, classées par ordre alphabétique. Inclut des rubriques organiser les fonctions en catégories.  
+ Fournit une documentation de référence sur les fonctions globales organisées par ordre alphabétique. Inclut des rubriques organiser les fonctions en catégories.  
   
  [Variables globales ATL](../../atl/reference/atl-global-variables.md)  
- Fournit des informations de référence sur les variables globales, classées par ordre alphabétique.  
+ Fournit une documentation de référence sur les variables globales organisées par ordre alphabétique.  
   
  [Macros ATL](../../atl/reference/atl-macros.md)  
- Fournit des informations de référence sur les macros, classées par ordre alphabétique. Inclut des rubriques organiser les macros en catégories.  
+ Fournit une documentation de référence sur les macros organisées par ordre alphabétique. Inclut des rubriques organiser les macros en catégories.  
   
  [Typedefs ATL](../../atl/reference/atl-typedefs.md)  
- Fournit des informations de référence sur les typedefs classées par ordre alphabétique  
+ Fournit des informations de référence sur les typedefs organisées par ordre alphabétique  
   
  [ATL (Classes)](../../atl/reference/atl-classes.md)  
- Fournit des informations de référence sur les classes organisées par ordre alphabétique.
+ Fournit une documentation de référence sur les classes organisées par ordre alphabétique.
 

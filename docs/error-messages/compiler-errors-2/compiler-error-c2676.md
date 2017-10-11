@@ -1,35 +1,38 @@
 ---
-title: "Erreur du compilateur C2676 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2676"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2676"
+title: Erreur du compilateur C2676 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2676
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Erreur du compilateur C2676
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ed21b76da0834ff4a2aaa8af647d791fdaac075a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'opérateur' binaire : 'type' ne définit pas cet opérateur ou une conversion vers un type acceptable pour l'opérateur prédéfini  
+---
+# <a name="compiler-error-c2676"></a>Erreur du compilateur C2676
+'opérateur' binaire : 'type' ne définit pas cet opérateur ou une conversion vers un type acceptable pour l’opérateur prédéfini  
   
  Pour utiliser l'opérateur, vous devez le surcharger pour le type spécifié ou définir une conversion vers un type pour lequel l'opérateur est défini.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C2676 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C2676.  
   
 ```  
 // C2676.cpp  
@@ -59,12 +62,12 @@ int main() {
 }  
 ```  
   
-## Exemple  
- L'erreur C2676 peut également se produire si vous essayez d'effectuer des opérations arithmétiques de pointeur sur le pointeur `this` d'un type référence.  
+## <a name="example"></a>Exemple  
+ L’erreur C2676 peut également se produire si vous tentez d’effectuer l’opération arithmétique de pointeur sur le `this` pointeur d’un type référence.  
   
- Le pointeur `this` est de type handle dans un type référence.  Pour plus d'informations, consultez [Sémantique de ce pointeur](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
+ Le `this` pointeur est de type handle dans un type référence. Pour plus d’informations, consultez [sémantiques de ce pointeur](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
   
- L'exemple suivant génère l'erreur C2676 :  
+ L’exemple suivant génère l’erreur C2676.  
   
 ```  
 // C2676_a.cpp  

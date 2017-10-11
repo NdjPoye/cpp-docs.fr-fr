@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C3705 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3705"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3705"
+title: Erreur du compilateur C3705 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3705
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3705
 ms.assetid: 8361017d-5782-4214-a9d7-e9825fd29bc8
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Erreur du compilateur C3705
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ba08854d9d9ac6f0e644a64a80133b1d8b70a167
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'fonction' : impossible de trouver l'interface d'événement  
+---
+# <a name="compiler-error-c3705"></a>Erreur du compilateur C3705
+'fonction' : ne peut pas trouver l’interface de gestion des événements  
   
- Vous devez définir une interface d'événement pour pouvoir utiliser les événements COM.  Notez que les lignes `#include` des fichiers d'en\-tête ATL illustrées dans l'exemple ci\-dessous sont nécessaires pour utiliser les événements COM.  Pour remédier à cette erreur, supprimez les marques de commentaire de la définition de l'interface `IEvents` dans l'exemple de code.  
+ Vous devez définir une interface d’événement pour utiliser des événements COM. Notez que le `#include` lignes des fichiers d’en-tête ATL illustrées dans l’exemple ci-dessous sont requises pour l’utilisation des événements COM. Pour corriger cette erreur, supprimez les commentaires de la définition de la `IEvents` interface dans l’exemple de code.  
   
- L'exemple suivant génère l'erreur C3705 :  
+ L’exemple suivant génère l’erreur C3705 :  
   
 ```  
 // C3705.cpp  

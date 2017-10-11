@@ -1,35 +1,37 @@
 ---
-title: "Erreur du compilateur C2762 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2762"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2762"
+title: Erreur du compilateur C2762 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2762
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2762
 ms.assetid: 8b81a801-fd48-40a1-8bee-0748795b12e4
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C2762
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e121ab82b8e49fb1727e626eea7d060e8def2b8c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2762"></a>Erreur du compilateur C2762
 'classe' : expression non valide comme argument template pour 'argument'  
   
- Lors de l'utilisation de [\/Za](../../build/reference/za-ze-disable-language-extensions.md), le compilateur ne convertira pas une intégrale en pointeur.  
+ Lorsque vous utilisez [/Za](../../build/reference/za-ze-disable-language-extensions.md), le compilateur ne convertira pas un type intégral à un pointeur.  
   
- L'exemple suivant génère l'erreur C2762 :  
+ L’exemple suivant génère l’erreur C2762 :  
   
 ```  
 // C2762.cpp  

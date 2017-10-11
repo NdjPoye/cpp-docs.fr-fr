@@ -19,33 +19,19 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 7420231e64515b556cfe81fc695eda5f75231506
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f45e7617bbf162c23994897c42aab44abeacea88
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2743"></a>Erreur du compilateur C2743
 'type' : Impossible d’intercepter un type natif avec le destructeur __clrcall ou le constructeur de copie  
   
- Un module compilé avec **/clr** essayé d’intercepter une exception de type natif où le de type destructeur ou constructeur de copie utilise `__clrcall` convention d’appel.  
+ Un module compilé avec **/CLR** tenté d’intercepter une exception de type natif où destructeur du type ou le constructeur de copie utilise `__clrcall` convention d’appel.  
   
- Lorsque vous compilez avec **/clr**, la gestion des exceptions s’attend aux fonctions membres dans un type natif soient [__cdecl](../../cpp/cdecl.md) et non [__clrcall](../../cpp/clrcall.md). Les types natifs possédant des fonctions membres à l’aide de `__clrcall` convention d’appel ne peut pas être interceptée dans un module compilé avec **/clr**.  
+ Lors de la compilation avec **/CLR**, la gestion des exceptions attend les fonctions membres dans un type natif soient [__cdecl](../../cpp/cdecl.md) et non [__clrcall](../../cpp/clrcall.md). Les types natifs avec des fonctions de membre à l’aide de `__clrcall` convention d’appel ne peut pas être interceptée dans un module compilé avec **/CLR**.  
   
  Pour plus d’informations, consultez l’article [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   

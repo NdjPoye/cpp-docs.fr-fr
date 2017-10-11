@@ -1,42 +1,45 @@
 ---
-title: "Erreur du compilateur C2530 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2530"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2530"
+title: Erreur du compilateur C2530 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2530
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2530
 ms.assetid: b790a312-48df-4a6a-9e27-be2c5f32f16c
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C2530
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f9438937ad99e66d9e623e1e3703dc6496f8153a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2530"></a>Erreur du compilateur C2530
 'identificateur' : les références doivent être initialisées  
   
- Vous devez initialiser une référence lorsque vous la déclarez, sauf si elle est déjà déclarée :  
+ Vous devez initialiser une référence lorsqu’il a été déclaré, sauf si elle est déjà déclarée :  
   
--   avec le mot clé [extern](../../cpp/using-extern-to-specify-linkage.md) ;  
+-   Avec le mot clé [extern](../../cpp/using-extern-to-specify-linkage.md).  
   
--   en tant que membre d'une classe, d'une structure ou d'une union \(et elle est initialisée dans le constructeur\) ;  
+-   En tant que membre d’une classe, structure ou union (et il est initialisé dans le constructeur).  
   
--   en tant que paramètre d'une déclaration ou d'une définition de fonctions ;  
+-   En tant que paramètre dans une définition ou déclaration de fonction.  
   
--   en tant que type de retour d'une fonction.  
+-   En tant que type de retour d’une fonction.  
   
- L'exemple suivant génère l'erreur C2530 :  
+ L’exemple suivant génère l’erreur C2530 :  
   
 ```  
 // C2530.cpp  

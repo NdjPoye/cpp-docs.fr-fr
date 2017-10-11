@@ -22,29 +22,15 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: 503c2a29cf0e70020b012911c51b056f00562374
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a269820c5a0965553989bc57d7c239aa95e527ef
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlcommodule70-structure"></a>Structure de _ATL_COM_MODULE70
-Utilisé par le code lié à COM dans ATL.  
+Utilisé par le code relatif à COM dans ATL.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,13 +49,13 @@ struct _ATL_COM_MODULE70 {
  La taille de la structure utilisée pour le contrôle de version.  
   
  `m_hInstTypeLib`  
- L’instance de descripteur pour la bibliothèque de types de ce module.  
+ L’instance de la poignée dans la bibliothèque de type pour ce module.  
   
  **m_ppAutoObjMapFirst**  
- Adresse de l’élément de tableau indiquant le début des entrées de mappage d’objet de ce module.  
+ Adresse de l’élément de tableau indiquant le début des entrées de mappage d’objet pour ce module.  
   
  **m_ppAutoObjMapLast**  
- Adresse de l’élément de tableau indiquant la fin des entrées de mappage d’objet de ce module.  
+ Adresse de l’élément de tableau indiquant la fin des entrées de mappage d’objet pour ce module.  
   
  `m_csObjMap`  
  Section critique pour sérialiser l’accès pour les entrées de mappage d’objet. Utilisé en interne par ATL.  

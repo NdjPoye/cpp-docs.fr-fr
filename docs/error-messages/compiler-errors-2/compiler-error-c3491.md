@@ -19,30 +19,15 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: c6087d7be6ac5fce959d7f54c529401d9b57631e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 58458a1ab0b67eb4fa6d38d0be2fb38f6d7496eb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3491"></a>Erreur du compilateur C3491
-'variable' : impossible de modifier une capture par valeur dans une expression lambda non mutable  
+'variable' : impossible de modifier une capture par valeur dans une expression lambda non mutable  
   
  Une expression lambda non mutable ne peut pas modifier la valeur d’une variable capturée par valeur.  
   

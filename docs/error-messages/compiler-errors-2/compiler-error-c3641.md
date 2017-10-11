@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 1f928242a26ed45a48cc9bc19be231e2d0e09a51
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 992e2a5d34b380146a99f6f78145b022eacd21d6
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3641"></a>Erreur du compilateur C3641
 'fonction' : non valide de convention d’appel 'convention_appel' pour la fonction compilée avec/clr : pure ou/CLR : safe  
   
- Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015.  
+ Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015.  
   
- Seuls [__clrcall](../../cpp/clrcall.md) convention d’appel est autorisée avec [/CLR : pure](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Uniquement [__clrcall](../../cpp/clrcall.md) convention d’appel n’est autorisée avec [/CLR : pure](../../build/reference/clr-common-language-runtime-compilation.md).  
   
  L’exemple suivant génère l’erreur C3641 :  
   

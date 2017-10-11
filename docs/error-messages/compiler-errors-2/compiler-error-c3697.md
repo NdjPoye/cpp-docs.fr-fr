@@ -1,35 +1,37 @@
 ---
-title: "Erreur du compilateur C3697 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3697"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3697"
+title: Erreur du compilateur C3697 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3697
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3697
 ms.assetid: 2d3f63c4-b7f8-421d-a7a5-2bf17fd054f9
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3697
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0d14bd3de0fb2ddf6c44babb10c2ec1edcb87a21
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'qualificateur' : impossible d'utiliser ce qualificateur sur '^'  
+---
+# <a name="compiler-error-c3697"></a>Erreur du compilateur C3697
+'identificateur' : Impossible d’utiliser ce qualificateur sur ' ^'  
   
- Le handle de suivi \(^\) a été appliqué à un qualificateur pour lequel il n'est pas prévu.  
+ Le handle de suivi (^) a été appliqué à un qualificateur pour lequel il n’a pas été conçu.  
   
- L'exemple suivant génère l'erreur C3697 :  
+ L’exemple suivant génère l’erreur C3697 :  
   
 ```  
 // C3697.cpp  

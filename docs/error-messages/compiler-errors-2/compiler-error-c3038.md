@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 32a63dcc218d7319b74a4b6941b2b25d6910e4a5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3ddd3aaface0e500dc92778333cd3672398909da
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3038"></a>Erreur du compilateur C3038
 'var' : la variable de la clause 'private' ne peut pas être une variable de réduction dans un contexte englobant  
   
- Variables qui apparaissent dans le [réduction](../../parallel/openmp/reference/reduction.md) clause d’une directive parallèle ne peut pas être spécifiée dans un [privé](../../parallel/openmp/reference/private-openmp.md) clause sur une directive de partage de travail qui est lié à la construction parallèle.  
+ Les variables qui apparaissent dans la clause [reduction](../../parallel/openmp/reference/reduction.md) d’une directive parallèle ne peuvent pas être spécifiées dans une clause [private](../../parallel/openmp/reference/private-openmp.md) d’une directive de partage de travail qui est liée à la construction parallèle.  
   
  L’exemple suivant génère l’erreur C3038 :  
   

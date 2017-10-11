@@ -1,35 +1,38 @@
 ---
-title: "Erreur du compilateur C2179 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2179"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2179"
+title: Erreur du compilateur C2179 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2179
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2179
 ms.assetid: f929bfc6-3964-4e54-87d6-7529b9b6c0b9
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Erreur du compilateur C2179
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c0f311bcdbbdaa721e3897eae0a90ae892cf75d8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-'type' : un argument d'attribut ne peut pas utiliser de paramètres de type  
+---
+# <a name="compiler-error-c2179"></a>Erreur du compilateur C2179
+'type' : un argument d’attribut ne peut pas utiliser les paramètres de type  
   
- Un paramètre de type générique est résolu pendant l'exécution.  Toutefois, un paramètre d'attribut doit être résolu au moment de la compilation.  Par conséquent, vous ne pouvez pas vous utiliser de paramètre de type générique comme argument d'un attribut.  
+ Un paramètre de type générique est résolu pendant l’exécution. Toutefois, un paramètre d’attribut doit être résolu au moment de la compilation. Par conséquent, vous ne pouvez pas utiliser un paramètre de type générique en tant qu’argument à un attribut.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C2179 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C2179.  
   
 ```  
 // C2179.cpp  

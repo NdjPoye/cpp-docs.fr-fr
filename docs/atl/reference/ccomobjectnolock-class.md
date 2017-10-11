@@ -24,29 +24,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 4cf4cad1a3b1a4ac0a21ef76a0eaca35732abf3a
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 5f37deebe0524ef0198e87a989b79d7a7ef49ede
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
-# <a name="ccomobjectnolock-class"></a>CComObjectNoLock (classe)
-Cette classe implémente **IUnknown** pour un objet non regroupées en agrégats, mais ne pas incrémenter le module nombre de verrous dans le constructeur.  
+# <a name="ccomobjectnolock-class"></a>Classe de CComObjectNoLock
+Cette classe implémente **IUnknown** pour un objet brutes et non agrégée, mais ne pas les incrément le module nombre de verrous dans le constructeur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,7 +43,7 @@ class CComObjectNoLock : public Base
   
 #### <a name="parameters"></a>Paramètres  
  `Base`  
- Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), ainsi que toute autre interface souhaitées prendre en charge sur l’objet.  
+ Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), ainsi que de toute autre interface souhaitées prendre en charge sur l’objet.  
   
 ## <a name="members"></a>Membres  
   
@@ -77,11 +63,11 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|Décrémente le décompte de références sur l’objet.|  
   
 ## <a name="remarks"></a>Remarques  
- `CComObjectNoLock`est semblable à [CComObject](../../atl/reference/ccomobject-class.md) dans la mesure où elle implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet non regroupées en agrégats ; Toutefois, `CComObjectNoLock` ne pas incrémenter le verrou du module compte dans le constructeur.  
+ `CComObjectNoLock`est semblable à [CComObject](../../atl/reference/ccomobject-class.md) dans la mesure où il implémente [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) pour un objet brutes et non agrégée ; Toutefois, `CComObjectNoLock` ne pas incrémenter le verrou du module compte dans le constructeur.  
   
- ATL utilise `CComObjectNoLock` en interne pour les fabriques de classes. En règle générale, vous ne serez pas utiliser directement cette classe.  
+ ATL utilise `CComObjectNoLock` en interne pour les fabriques de classes. En règle générale, vous ne serez pas utiliser cette classe directement.  
   
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage  
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage  
  `Base`  
   
  `CComObjectNoLock`  
@@ -108,7 +94,7 @@ CComObjectNoLock(void* = NULL);
   
 ### <a name="parameters"></a>Paramètres  
  **void\***  
- [in] Ce paramètre sans nom n’est pas utilisé. Il existe pour la symétrie avec d’autres **CCom***XXX*`Object`*XXX* constructeurs.  
+ [in] Ce paramètre sans nom n’est pas utilisé. Il existe pour une symétrie avec d’autres **CCom***XXX*`Object`*XXX* constructeurs.  
   
 ##  <a name="dtor"></a>CComObjectNoLock :: ~ CComObjectNoLock  
  Destructeur.  
@@ -130,10 +116,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
   
 ### <a name="parameters"></a>Paramètres  
  `iid`  
- [in] L’identificateur de l’interface demandée.  
+ [in] Identificateur de l’interface demandée.  
   
  `ppvObject`  
- [out] Un pointeur vers le pointeur d’interface identifié par `iid`. Si l’objet ne prend pas en charge cette interface, `ppvObject` a **NULL**.  
+ [out] Un pointeur vers le pointeur d’interface identifié par `iid`. Si l’objet ne prend pas en charge cette interface, `ppvObject` a la valeur **NULL**.  
   
 ### <a name="return-value"></a>Valeur de retour  
  Valeur `HRESULT` standard.  
@@ -146,7 +132,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Valeur de retour  
- Dans les versions debug, **version** retourne une valeur qui peut être utile pour les tests de diagnostic ou de test. Dans les versions non debug **version** retourne toujours 0.  
+ Dans les versions debug, **version** retourne une valeur qui peut être utile pour les tests de diagnostic ou de test. Dans les versions non debug, **version** retourne toujours 0.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la classe](../../atl/atl-class-overview.md)

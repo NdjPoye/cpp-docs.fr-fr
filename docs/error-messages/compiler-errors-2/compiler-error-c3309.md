@@ -19,30 +19,15 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 73ebbcad685faf64034ac58639c2fc63e4d9ad98
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 528ee8dd3925ee989003db8a484041bb2a3a03dd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3309"></a>Erreur du compilateur C3309
-'nom_macro' : le nom du module ne peut pas être une macro ou un mot clé  
+'nom_macro' : le nom du module ne peut pas être une macro ou un mot clé  
   
  La valeur que vous passez à la propriété name de l’attribut de module ne peut pas être un symbole à développer par le préprocesseur. Il doit s’agir d’un littéral de chaîne.  
   

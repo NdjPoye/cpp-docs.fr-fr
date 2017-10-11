@@ -1,36 +1,39 @@
 ---
-title: "Erreur du compilateur C3646 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3646"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3646"
+title: Erreur du compilateur C3646 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3646
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Erreur du compilateur C3646
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0bc9b2601a57e2be98c3a356cbd2ede69dc7be79
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3646"></a>Erreur du compilateur C3646
 'spécificateur' : spécificateur de substitution inconnu  
   
- Le compilateur a détecté un jeton à l'emplacement auquel devait se trouver un spécificateur de substitution, mais le compilateur n'a pas pu le reconnaître.  
+ Le compilateur a détecté un jeton à la position où il s’attendait à trouver un spécificateur de substitution, mais le jeton n’est pas reconnu par le compilateur.  
   
- Pour plus d'informations, consultez [Spécificateurs de substitution](../../windows/override-specifiers-cpp-component-extensions.md).  
+ Pour plus d’informations, consultez [des spécificateurs de substitution](../../windows/override-specifiers-cpp-component-extensions.md).  
   
- L'exemple suivant génère l'erreur C3646 :  
+ L’exemple suivant génère l’erreur C3646 :  
   
 ```  
 // C3646.cpp  

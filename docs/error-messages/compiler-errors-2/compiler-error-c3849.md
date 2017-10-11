@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C3849 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3849"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3849"
+title: Erreur du compilateur C3849 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3849
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Erreur du compilateur C3849
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7fbe46ee4f83dc5477eeb67e0debf14fe4f9fad5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-un appel de style fonction sur une expression de type 'type' perdrait les qualificateurs const et\/ou volatile pour l'ensemble des 'nombre' surcharges d'opérateur disponibles  
+---
+# <a name="compiler-error-c3849"></a>Erreur du compilateur C3849
+appel de style fonction sur une expression de type 'type' perdrait les qualificateurs const et/ou volatiles pour nombre de toutes les surcharges d’opérateur disponibles  
   
- Une variable de type const\-volatile peut uniquement appeler des fonctions membre définies avec des qualifications const\-volatile égales ou supérieures.  
+ Une variable avec un type const-volatile peut uniquement appeler des membres fonctions avec des qualifications const-volatile égales ou supérieures.  
   
- Pour remédier à cette erreur, fournissez une fonction membre appropriée.  Vous ne pouvez pas exécuter une conversion sur un objet qualifié const ou volatile lorsque la conversion entraîne une perte de qualification.  Vous pouvez obtenir des qualificateurs mais vous ne pouvez pas perdre de qualificateurs dans une conversion.  
+ Pour corriger cette erreur, fournissez une fonction membre approprié. Impossible d’exécuter une conversion sur un objet const ou volatile complet lors de la conversion entraîne la perte de qualification. Vous pouvez obtenir des qualificateurs mais vous ne pouvez pas perdre de qualificateurs dans une conversion.  
   
  Les exemples suivants génèrent C3849 :  
   

@@ -1,41 +1,44 @@
 ---
-title: "Erreur du compilateur C3532 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3532"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3532"
+title: Erreur du compilateur C3532 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3532
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Erreur du compilateur C3532
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e78db21d00ea93378358a1147163276fb12bdfd5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'type' : utilisation incorrecte de « auto »  
+---
+# <a name="compiler-error-c3532"></a>Erreur du compilateur C3532
+'type' : utilisation incorrecte de 'auto'  
   
- Le type indiqué ne peut pas être déclaré avec le mot clé `auto`.  Par exemple, vous ne pouvez pas utiliser le mot clé `auto` pour déclarer un tableau ou un type de retour de méthode.  
+ Le type indiqué ne peut pas être déclaré avec le `auto` (mot clé). Par exemple, vous ne pouvez pas utiliser le `auto` mot clé pour déclarer un tableau ou une méthode de type de retour.  
   
-### Pour corriger cette erreur  
+### <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Vérifiez que l'expression d'initialisation donne un type valide.  
+1.  Assurez-vous que l’expression d’initialisation donne un type valide.  
   
-2.  Vérifiez que vous ne déclarez pas un tableau ou un type de retour de méthode.  
+2.  Assurez-vous que vous ne déclarez pas un tableau ou un type de retour de méthode.  
   
-## Exemple  
- L'exemple suivant donne C3532 parce que le mot clé `auto` ne peut pas déclarer un type de retour de méthode.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant donne C3532 parce que le `auto` mot clé ne peut pas déclarer un type de retour de méthode.  
   
 ```  
 // C3532a.cpp  
@@ -43,8 +46,8 @@ caps.handback.revision: 6
 auto f(){}   // C3532  
 ```  
   
-## Exemple  
- L'exemple suivant donne C3532 parce que le mot clé `auto` ne peut pas déclarer de tableau.  
+## <a name="example"></a>Exemple  
+ L’exemple suivant donne C3532 parce que le `auto` mot clé ne peut pas déclarer un tableau.  
   
 ```  
 // C3532b.cpp  
@@ -61,5 +64,5 @@ int main()
 }  
 ```  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [auto, mot clé](../../cpp/auto-keyword.md)

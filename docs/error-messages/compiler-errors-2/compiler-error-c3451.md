@@ -1,40 +1,42 @@
 ---
-title: "Erreur du compilateur C3451 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3451"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3451"
+title: Erreur du compilateur C3451 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3451
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C3451
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c1c0f9de919fbe646eaa6303fa5b1e9fcba886eb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'attribut' : impossible d'appliquer l'attribut non managé à 'type'  
+---
+# <a name="compiler-error-c3451"></a>Erreur du compilateur C3451
+'attribut' : Impossible d’appliquer l’attribut non managé à 'type'  
   
- Un attribut C\+\+ ne peut pas être appliqué à un type CLR.  Pour plus d'informations, consultez [C\+\+ Attributes Reference](../../windows/cpp-attributes-reference.md).  
+ Un attribut C++ ne peut pas être appliqué à un type CLR. Consultez [référence des attributs C++](../../windows/cpp-attributes-reference.md) pour plus d’informations.  
   
- Pour plus d'informations, consultez [User\-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).  
+ Pour plus d'informations, consultez [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).  
   
- Cette erreur peut être due à la mise en conformité du compilateur pour Visual C\+\+ 2005 : l'attribut [uuid](../../windows/uuid-cpp-attributes.md) n'est plus autorisé sur un attribut défini par l'utilisateur à l'aide de la programmation CLR.  Utilisez plutôt <xref:System.Runtime.InteropServices.GuidAttribute>.  
+ Cette erreur peut être due à la mise en conformité du compilateur pour Visual C++ 2005 : la [uuid](../../windows/uuid-cpp-attributes.md) attribut n’est plus autorisé sur un attribut défini par l’utilisateur à l’aide de la programmation CLR. Utilisez plutôt <xref:System.Runtime.InteropServices.GuidAttribute> .  
   
-## Exemple  
- L'exemple suivant génère l'erreur C3451 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C3451.  
   
 ```  
 // C3451.cpp  

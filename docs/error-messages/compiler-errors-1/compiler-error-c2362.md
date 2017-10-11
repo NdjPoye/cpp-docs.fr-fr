@@ -1,36 +1,39 @@
 ---
-title: "Erreur du compilateur C2362 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2362"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2362"
+title: Erreur du compilateur C2362 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2362
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2362
 ms.assetid: 7aafecbc-b3cf-45a6-9ec3-a17e3f222511
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C2362
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e3a921084d696e6cf7abebc75d02d403cbcda2be
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-l'initialisation de 'identificateur' est ignorée par l''étiquette goto'  
+---
+# <a name="compiler-error-c2362"></a>Erreur du compilateur C2362
+l’initialisation de 'identificateur' est ignorée par 'étiquette goto'  
   
- Lors de la compilation à l'aide de [\/Za](../../build/reference/za-ze-disable-language-extensions.md), l'accès à l'étiquette empêche l'initialisation de l'identificateur.  
+ Lors de la compilation avec [/Za](../../build/reference/za-ze-disable-language-extensions.md), l’accès à l’étiquette empêche l’identificateur en cours d’initialisation.  
   
- Vous ne pouvez pas aller au\-delà d'une déclaration avec un initialiseur sauf si la déclaration figure dans un bloc qui n'est pas entré ou si la variable a déjà été initialisée.  
+ Impossible d’aller au-delà d’une déclaration avec un initialiseur, sauf si la déclaration est englobée dans un bloc qui n’est pas entré ou la variable a déjà été initialisée.  
   
- L'exemple suivant génère l'erreur C2326 :  
+ L’exemple suivant génère l’erreur C2326 :  
   
 ```  
 // C2362.cpp  
@@ -42,7 +45,7 @@ label1:;
 }  
 ```  
   
- Résolution possible :  
+ Résolution possible :  
   
 ```  
 // C2362b.cpp  

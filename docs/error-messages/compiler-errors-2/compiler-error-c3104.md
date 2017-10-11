@@ -19,35 +19,21 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 5df018fe26e66ed480ed2464c19c876adfac8dd1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 837ff564bc3b2795bce6de69caa85e1d1dcf2766
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3104"></a>Erreur du compilateur C3104
-argument non conforme pour l'attribut  
+argument d’attribut non conforme  
   
  Vous avez spécifié un argument non valide pour un attribut.  
   
- Consultez la page [Types de paramètre d’attribut](../../windows/attribute-parameter-types-cpp-component-extensions.md) pour plus d’informations.  
+ Consultez [Types de paramètre d’attribut](../../windows/attribute-parameter-types-cpp-component-extensions.md) pour plus d’informations.  
   
- Cette erreur peut être due à la mise en conformité du compilateur pour Visual C++ 2005 : lors du passage de tableaux managés à des attributs personnalisés, le type du tableau n’est plus déduit de la liste d’initialisation d’agrégats. Le compilateur requiert désormais vous permet de spécifier le type de tableau, ainsi que la liste d’initialiseurs.  
+ Cette erreur peut être due à la mise en conformité du compilateur pour Visual C++ 2005 : lors du passage de tableaux managés à des attributs personnalisés, le type du tableau n’est plus déduit à partir de la liste d’initialisation d’agrégats. Le compilateur requiert désormais vous permet de spécifier le type de tableau, ainsi que la liste d’initialiseurs.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant génère l’erreur C3104.  

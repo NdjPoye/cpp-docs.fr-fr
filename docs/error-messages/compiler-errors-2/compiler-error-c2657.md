@@ -1,36 +1,39 @@
 ---
-title: "Erreur du compilateur C2657 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2657"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2657"
+title: Erreur du compilateur C2657 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2657
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2657
 ms.assetid: f7cf29a9-684a-4605-9469-ecfee9ba4b03
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C2657
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2e0e06104458961297a4d0a3de8b7cda756d16ab
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'classe::\*' trouvé\(e\) en début d'instruction \(n'auriez\-vous pas oublié de spécifier un type ?\)  
+---
+# <a name="compiler-error-c2657"></a>Erreur du compilateur C2657
+' classe :: *' trouvé au début d’une instruction (vous avez oublié de spécifier un type ?)  
   
- La ligne commence par un identificateur pointeur vers membre.  
+ Début de la ligne avec un identificateur de pointeur vers membre.  
   
- Cette erreur peut être provoquée par un spécificateur de type manquant dans la déclaration d'un pointeur vers un membre.  
+ Cette erreur peut résulter d’un spécificateur de type manquant dans la déclaration d’un pointeur vers un membre.  
   
- L'exemple suivant génère l'erreur C2657 :  
+ L’exemple suivant génère l’erreur C2657 :  
   
 ```  
 // C2657.cpp  

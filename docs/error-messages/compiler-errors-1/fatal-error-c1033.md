@@ -1,33 +1,36 @@
 ---
-title: "Erreur irr&#233;cup&#233;rable C1033 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1033"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1033"
+title: "Erreur irrécupérable C1033 | Documents Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1033
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1033
 ms.assetid: 09976c03-8450-4cf7-8b43-1b91c2c2b9f9
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur irr&#233;cup&#233;rable C1033
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a0c9c67d23f2d0b957fb3e43844245029efedc64
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/09/2017
 
-impossible d'ouvrir la base de données pdb du programme  
+---
+# <a name="fatal-error-c1033"></a>Erreur irrécupérable C1033
+Impossible d’ouvrir le fichier pdb de base de données de programme  
   
- Cette erreur est peut\-être due à une erreur de disque.  
+ Cette erreur peut résulter d’erreur de disque.  
   
- Dans Visual C\+\+ .NET 2002, les paramètres régionaux de l'utilisateur doivent être définis correctement lorsque le nom du fichier \(ou le chemin d'accès au nom de fichier\) contient des caractères MBCS.  La définition des paramètres régionaux du système n'est pas suffisante ; il faut définir les paramètres régionaux utilisateur afin que les caractères MBCS puissent être traités.  
+ Dans Visual C++ .NET 2002, les paramètres régionaux utilisateur doivent être défini correctement lorsque le nom de fichier (ou le chemin d’accès de répertoire pour le nom de fichier) contient des caractères MBCS. Le fait de définir les paramètres régionaux système ne suffit pas ; vous devez configurer les paramètres régionaux utilisateur pour traiter les caractères MBCS.  
   
- Pour plus d'informations, consultez [http:\/\/support.microsoft.com\/default.aspx?scid\=kb;en\-us;246007](http://support.microsoft.com/default.aspx?scid=kb;en-us;246007).
+ Pour plus d’informations, consultez [http://support.microsoft.com/default.aspx?scid=kb;en-us;246007](http://support.microsoft.com/default.aspx?scid=kb;en-us;246007).

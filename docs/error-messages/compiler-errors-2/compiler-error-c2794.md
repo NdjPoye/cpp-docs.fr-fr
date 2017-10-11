@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C2794 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2794"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2794"
+title: Erreur du compilateur C2794 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2794
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2794
 ms.assetid: d508191c-9044-4c6a-9119-4bca668c0b93
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Erreur du compilateur C2794
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5b25829804bf8cb375507550f339022d09951d35
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'fonction' : n'est membre d'aucune classe de base directe ou indirecte de 'classe'  
+---
+# <a name="compiler-error-c2794"></a>Erreur du compilateur C2794
+'fonction' : n’est pas un membre de n’importe quelle classe de base directe ou indirecte de 'classe'  
   
- Vous avez tenté d'utiliser [super](../../cpp/super.md) pour appeler une fonction membre qui n'existait pas.  
+ Vous avez essayé d’utiliser [super](../../cpp/super.md) pour appeler une fonction membre qui n’existe pas.  
   
- L'exemple suivant génère l'avertissement C2794 :  
+ L’exemple suivant génère C2794  
   
 ```  
 // C2794.cpp  

@@ -1,35 +1,38 @@
 ---
-title: "Erreur du compilateur C3738 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3738"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3738"
+title: Erreur du compilateur C3738 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3738
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3738
 ms.assetid: dd3ee011-e204-4264-bf3a-da32c4ef7038
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C3738
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c143168981ed269a7bf830b4d5f345c1a063c425
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'convention\_appel' : la convention d'appel de l'instanciation explicite doit correspondre à celle du modèle instancié  
+---
+# <a name="compiler-error-c3738"></a>Erreur du compilateur C3738
+'convention_appel' : la convention d’appel de l’instanciation explicite doit correspondre à celle du modèle instancié  
   
- Il est recommandé de ne pas spécifier de convention d'appel sur une instanciation explicite.  Cependant, si cela est nécessaire, les conventions d'appel doivent correspondre.  
+ Il est recommandé que vous ne spécifiez pas une convention d’appel sur une instanciation explicite. Si vous devez, toutefois, les conventions d’appel doivent correspondre.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C3738 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère C3738.  
   
 ```  
 // C3738.cpp  

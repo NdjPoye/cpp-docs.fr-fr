@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: 7f26c189dc1e8b22d328c6fc65c6dd825f4720d7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0003f04a32ff017234607a90162465549092a013
 ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2871"></a>Erreur du compilateur C2871
 'nom' : un espace de noms portant ce nom n’existe pas  
   
-Cette erreur se produit lorsque vous passez un identificateur qui n’est pas un espace de noms à un [à l’aide de](../../cpp/namespaces-cpp.md#using_directives) directive.  
+Cette erreur se produit lorsque vous passez un identificateur qui n’est pas un espace de noms pour un [à l’aide de](../../cpp/namespaces-cpp.md#using_directives) directive.  
   
 ## <a name="example"></a>Exemple  
 L’exemple suivant génère C2871 :  

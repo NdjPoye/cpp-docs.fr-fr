@@ -1,32 +1,34 @@
 ---
-title: "Erreur du compilateur C2616 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2616"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2616"
+title: Erreur du compilateur C2616 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2616
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2616
 ms.assetid: 8d0c02d6-a0b0-4135-b10f-438d67da68c6
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C2616
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 147bc5c9ca186bc88909aa347420ec84cdc4ac70
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'conversion' : impossible de convertir implicitement la non\-lvalue 'type1' en un\(e\) 'type2' qui n'est pas const  
+---
+# <a name="compiler-error-c2616"></a>Erreur du compilateur C2616
+'conversion' : Impossible de convertir implicitement une non-lvalue 'type1' en un 'type2' qui n’est pas const  
   
- Il est impossible d'initialiser une référence à partir d'une non\-lvalue.  
+ Une référence ne peut pas être initialisée à partir d’une non-lvalue.  
   
- Il s'agit d'une erreur sous compatibilité ANSI \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\) et d'un avertissement sous extensions Microsoft \(\/**\/Ze**\).
+ Il s’agit d’une erreur sous compatibilité ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) et un avertissement sous les extensions Microsoft (**/Ze**).

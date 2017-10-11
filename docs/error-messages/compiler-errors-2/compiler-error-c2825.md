@@ -1,37 +1,40 @@
 ---
-title: "Erreur du compilateur C2825 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2825"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2825"
+title: Erreur du compilateur C2825 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2825
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2825
 ms.assetid: c832f1c1-5184-4fc2-9356-12b21daa7af3
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Erreur du compilateur C2825
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ebe700fed581eadbab256c9c4f9e2f71bf1d1585
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-'var' : doit être une classe ou un espace de noms lorsqu'il est suivi par '::'  
+---
+# <a name="compiler-error-c2825"></a>Erreur du compilateur C2825
+var : doit être une classe ou un espace de noms lorsqu’il est suivi par ' ::'  
   
- Échec d'une tentative de former un nom qualifié.  
+ Une tentative a été effectuée pour former un nom qualifié.  
   
- Assurez\-vous, par exemple, que votre code ne contient pas une déclaration de fonction dont le nom de la fonction commence par ::.  
+ Par exemple, assurez-vous que votre code ne contient pas une déclaration de fonction dont le nom de la fonction commence par ::.  
   
-## Exemple  
- L'exemple suivant génère l'erreur C2825 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C2825 :  
   
 ```  
 // C2825.cpp  

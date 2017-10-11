@@ -1,34 +1,37 @@
 ---
-title: "Erreur du compilateur C3655 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3655"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3655"
+title: Erreur du compilateur C3655 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3655
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3655
 ms.assetid: 724919ab-2915-4b61-8794-44648e162d62
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Erreur du compilateur C3655
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6ac13086c64887a916041853db7606aa2e1e532
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3655"></a>Erreur du compilateur C3655
 'fonction' : fonction déjà substituée explicitement  
   
- Une fonction ne peut être substituée explicitement qu'à une reprise.  Pour plus d'informations, consultez [Substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Une fonction ne peut être explicitement substituée qu’une seule fois. Pour plus d’informations, consultez [substitutions explicites](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
- L'exemple suivant génère l'erreur C3655 :  
+ L’exemple suivant génère l’erreur C3655 :  
   
 ```  
 // C3655.cpp  

@@ -1,38 +1,40 @@
 ---
-title: "Erreur du compilateur C2897 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2897"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2897"
+title: Erreur du compilateur C2897 | Documents Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2897
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2897
 ms.assetid: a88349e2-823f-42a0-8660-0653b677afa4
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Erreur du compilateur C2897
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d3aa9ae6c79d3320104d9689f82b894cf2b76d9c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/10/2017
 
-un destructeur\/finaliseur ne peut pas être un modèle de fonction  
+---
+# <a name="compiler-error-c2897"></a>Erreur du compilateur C2897
+un destructeur/finaliseur ne peut pas être un modèle de fonction  
   
- Les destructeurs ou finaliseurs ne peuvent pas être surchargés, il est donc interdit de déclarer un destructeur comme modèle \(ce qui définirait un ensemble de destructeurs\).  
+ Les destructeurs ou finaliseurs ne peuvent pas être surchargés, déclarer un destructeur comme modèle (ce qui est de définir un ensemble de destructeurs) n’est pas autorisée.  
   
- L'exemple suivant génère l'erreur C2897 :  
+ L’exemple suivant génère l’erreur C2897 :  
   
-## Exemple  
- L'exemple suivant génère l'erreur C2897 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C2897.  
   
 ```  
 // C2897.cpp  
@@ -43,8 +45,8 @@ public:
 };  
 ```  
   
-## Exemple  
- L'exemple suivant génère l'erreur C2897 :  
+## <a name="example"></a>Exemple  
+ L’exemple suivant génère l’erreur C2897.  
   
 ```  
 // C2897_b.cpp  
