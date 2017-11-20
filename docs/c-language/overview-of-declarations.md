@@ -1,43 +1,26 @@
 ---
-title: "Vue d&quot;ensemble des déclarations | Microsoft Docs"
+title: "Vue d'ensemble des déclarations | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 33c0d515d06ce8c71106d889080a00964b6c9236
-ms.contentlocale: fr-fr
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: f0ac465ec20d0893add63d8b5791b9445b17f8fb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="overview-of-declarations"></a>Vue d'ensemble des déclarations
 Une « déclaration » spécifie l'interprétation et les attributs d'un ensemble d'identificateurs. Une déclaration qui permet également que le stockage soit réservé pour l'objet ou la fonction nommés par l'identificateur est appelée une « définition ». Les déclarations C pour les variables, fonctions et types présentent la syntaxe suivante :  

@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - complex declarators
 - interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: ae753f1a483c05843797268641c4cc0c5d64c52a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interprétation des déclarateurs plus complexes
 Vous pouvez placer n'importe quel déclarateur entre parenthèses pour spécifier une interprétation particulière d'un « déclarateur complexe ». Un déclarateur complexe est un identificateur qualifié par plusieurs modificateurs de tableau, de pointeur ou de fonction. Vous pouvez appliquer différentes combinaisons de modificateurs de tableau, de pointeur et de fonction à un même identificateur. En général, `typedef` peut être utilisé pour simplifier les déclarations. Consultez [Déclarations typedef](../c-language/typedef-declarations.md).  

@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- for keyword [C]
+dev_langs: C++
+helpviewer_keywords: for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 13d292cebbb8aa3aa6a65fbc41b8b38934732b5f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="for-statement-c"></a>for, instruction (C)
 L’instruction **for** vous permet de répéter une instruction, ou une instruction composée, un nombre de fois spécifié. Le corps d’une instruction **for** est exécuté zéro ou plusieurs fois jusqu’à ce qu’une condition facultative ait la valeur false. Vous pouvez utiliser des expressions facultatives dans l’instruction **for** pour initialiser et modifier des valeurs pendant l’exécution de l’instruction **for**.  

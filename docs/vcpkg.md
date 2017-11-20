@@ -5,22 +5,18 @@ keywords: vcpkg
 author: mikeblome
 ms.author: mblome
 ms.date: 05/30/2017
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
 ms.openlocfilehash: de5825e64abac210561cb8cbe0dc3320a740cbee
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/30/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg : Gestionnaire de package C++ pour Windows 
 vcpkg est un gestionnaire de package en ligne de commande qui simplifie considérablement l’acquisition et l’installation des bibliothèques tierces sur Windows. Si votre projet utilise des bibliothèques tierces, nous vous recommandons d’utiliser vcpkg pour les installer. vcpkg prend en charge les bibliothèques open source et propriétaires. Toutes les bibliothèques du catalogue public vcpkg ont été testées au niveau de la compatibilité avec Visual Studio 2015 et Visual Studio 2017. À compter de mai 2017, plus de 238 bibliothèques sont listées dans le catalogue et la Communauté C++ ajoute régulièrement des bibliothèques supplémentaires.
 
@@ -158,4 +154,3 @@ Une instance de vcpkg comporte les éléments suivants :
   **`--triplet <t>`** Spécifier le triplet de l’architecture cible. (valeur par défaut : `%VCPKG_DEFAULT_TRIPLET%`, voir aussi `vcpkg help triplet`)
 
   **`--vcpkg-root <path>`**Spécifier le répertoire racine de vcpkg (valeur par défaut : `%VCPKG_ROOT%`)
-

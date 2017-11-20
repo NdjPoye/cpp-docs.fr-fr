@@ -1,15 +1,13 @@
 ---
-title: "Indirection et opérateurs d&quot;adresse | Microsoft Docs"
+title: "Indirection et opérateurs d'adresse | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - address-of operator (&)
 - '* operator'
@@ -24,30 +22,15 @@ helpviewer_keywords:
 - '* operator, address-of operator'
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 303166b3c870c8631a66076c526a877a95d24a07
-ms.contentlocale: fr-fr
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 85d2510658bdf534f25ccc3efc29c88da1c93eff
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="indirection-and-address-of-operators"></a>Indirection et opérateurs d'adresse
 L'opérateur d'indirection (**\***) accède à une valeur indirectement, via un pointeur. L’opérande doit être une valeur de pointeur. Le résultat de l'opération est la valeur adressée par l'opérande ; autrement dit, la valeur à l'adresse vers laquelle son opérande pointe. Le type du résultat est le type traité par l'opérande.  

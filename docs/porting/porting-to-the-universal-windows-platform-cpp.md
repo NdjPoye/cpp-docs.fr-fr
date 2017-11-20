@@ -4,49 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 76a4bae07fd93a393084b6f108fead3ec32988f1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: ffd33877602ebb666ffbd11ff76aa973927f307a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portage vers la plateforme Windows universelle (C++)
 Dans cette rubrique, vous trouverez des informations sur la façon de porter du code C++ existant vers la plateforme d’application Windows 10, la plateforme Windows universelle. Le terme *universel* signifie que votre code peut s'exécuter sur tout appareil équipé de Windows 10, notamment les ordinateurs de bureau, les téléphones, les tablettes et les appareils nouvelle génération qui exécutent Windows 10. Vous créez un seul projet et une interface utilisateur XAML unique qui fonctionne correctement sur n’importe quel appareil exécutant Windows 10. Vous pouvez utiliser les fonctionnalités de disposition dynamique de XAML pour permettre à l'interface utilisateur de l'application de s'adapter à différentes tailles d'affichage.  
   
- La documentation du Centre de développement Windows contient un guide de portage d’applications Windows 8.1 vers la plateforme Windows universelle. Consultez [Passer de Windows Runtime 8 à UWP](https://msdn.microsoft.com/windows/uwp/porting/w8x-to-uwp-root). Bien que le guide soit axé essentiellement sur le code C#, la plupart des conseils sont applicables à C++. Les procédures suivantes contiennent des informations plus détaillées.  
+ La documentation du Centre de développement Windows contient un guide de portage d’applications Windows 8.1 vers la plateforme Windows universelle. Consultez [Passer de Windows Runtime 8 à la plateforme Windows universelle](https://msdn.microsoft.com/windows/uwp/porting/w8x-to-uwp-root). Bien que le guide soit axé essentiellement sur le code C#, la plupart des conseils sont applicables à C++. Les procédures suivantes contiennent des informations plus détaillées.  
   
  Cette rubrique contient les procédures suivantes relatives au portage de code vers la plateforme Windows universelle (UWP).  
   
-1.  [Portage d’une application du Windows Store Windows 8.1 vers UWP](#BK_81StoreApp)  
+1.  [Portage d’une application du Windows Store Windows 8.1 vers UWP](#BK_81StoreApp)  
   
-2.  [Portage d’un composant d’exécution Windows 8.1 vers UWP](#BK_81Component)  
+2.  [Portage d'un composant d'exécution Windows 8.1 vers UWP](#BK_81Component)  
   
  Si vous avez une DLL Win32 de bureau classique et que vous souhaitez l’appeler à partir d’une application UWP, c’est également possible. Ces procédures vous permettent de créer une couche d’interface utilisateur UWP pour une application C++ de bureau Windows classique existante ou votre code C++ standard multiplateforme. Consultez [Guide pratique pour utiliser le code C++ existant dans une application de plateforme universelle Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).  
   
@@ -94,7 +76,7 @@ Dans cette rubrique, vous trouverez des informations sur la façon de porter du 
   
 11. Exécutez et déboguez l’application sur un émulateur ou un appareil physique pour chaque type d’appareil pris en charge par votre application. Pour exécuter un émulateur, vous devez exécuter Visual Studio sur un ordinateur physique, et non sur un ordinateur virtuel.  
   
-##  <a name="BK_81Component"></a> Portage d’un composant d’exécution Windows 8.1 vers UWP  
+##  <a name="BK_81Component"></a> Portage d'un composant d'exécution Windows 8.1 vers UWP  
  Si vous avez une DLL ou un composant Windows Runtime qui fonctionne déjà avec les applications du Windows Store Windows 8.1, vous pouvez appliquer cette procédure pour faire en sorte que le composant ou la DLL fonctionne avec la plateforme UWP et Windows 10. La procédure de base consiste à créer un projet et à y copier votre code.  
   
 #### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>Pour porter un composant d'exécution Windows 8.1 vers UWP  
@@ -133,4 +115,3 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 ## <a name="see-also"></a>Voir aussi  
  [Guide du portage de Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)   
  [Développer des applications pour la plateforme universelle Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)
-

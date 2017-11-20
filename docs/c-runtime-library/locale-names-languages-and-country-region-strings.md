@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.strings
-dev_langs:
-- C++
+f1_keywords: c.strings
+dev_langs: C++
 helpviewer_keywords:
 - country/region strings
 - localization, locale
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 54a309b75d5e6b1773b7dd9bb294a1538397fd05
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: HT
-ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
-ms.openlocfilehash: c03ad862cbba1038cfd651156f987cfbaf5b63f7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Chaînes relatives aux noms, aux langues, au pays et à la région
 L'argument *locale* des fonctions `setlocale` et `_create_locale` peut être défini en utilisant les noms de paramètres régionaux, les langages, les codes de pays ou de région, et les pages de codes prises en charge par l'API de NLS Windows. L'argument *locale* prend la forme suivante :  
